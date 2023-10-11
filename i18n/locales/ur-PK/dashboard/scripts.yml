@@ -82,7 +82,6 @@ ur:
           description_short: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں اپنی اسٹار وارز گیم بنائیں۔
           student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں اپنی اسٹار وارز گیم بنائیں۔
         mc:
-          title: Minecraft کوڈ کی گھڑی
           description_short: کوڈ کے ذریعے ایک Minecraft دنیا کو دریافت کریں.
         oceans:
           title: AI فار اوشنز
@@ -1729,3 +1728,7 @@ ur:
             lessonGroup-5:
               display_name: متغیرات
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: ہمارے AI کا ضابطہ اخلاق

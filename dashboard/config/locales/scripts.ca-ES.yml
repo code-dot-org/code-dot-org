@@ -369,6 +369,10 @@ ca:
             que exposin trampes ètiques en una àrea d''Intel·ligència Artificial (IA)
             que trieu. '
           title: El nostre Codi Ètic d'IA
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: El nostre Codi Ètic d'IA
         ai-lab:
           student_description: Utilitzeu aquests nivells per explorar AI Lab i utilitzar-los
             en altres lliçons o activitats. Haureu de crear un compte de Code.org
@@ -9921,7 +9925,7 @@ ca:
           description_short: Explora el món de Minecraft a través del codi
           student_description: Fes servir blocs de codi per portar al Steve o l'Alex
             a una aventura a través d'aquest món de Minecraft
-          title: Hora del Codi amb Minecraft
+          title: 'Minecraft: L''aventurer'
         microbit-2022:
           lesson_groups:
             lessonGroup-2:

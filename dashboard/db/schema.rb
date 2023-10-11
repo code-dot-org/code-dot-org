@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_08_31_145020) do
+ActiveRecord::Schema.define(version: 2023_10_09_175334) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -461,6 +461,21 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
+  create_table "delayed_jobs", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
   create_table "donor_schools", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "nces_id"
@@ -622,20 +637,16 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "learning_goal_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "teacher_id"
-    t.integer "unit_id"
-    t.integer "level_id"
     t.integer "learning_goal_id"
-    t.boolean "ai_sourced"
-    t.date "prompt_version"
+    t.integer "project_id"
+    t.string "project_version"
     t.integer "understanding"
-    t.text "feedback"
-    t.text "context"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "submitted_at"
+    t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
+    t.index ["user_id"], name: "index_learning_goal_ai_evaluations_on_user_id"
   end
 
   create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -646,6 +657,21 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["learning_goal_id", "understanding"], name: "index_learning_goal_evidence_levels_on_lg_id_and_understanding", unique: true
+  end
+
+  create_table "learning_goal_teacher_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "teacher_id", null: false
+    t.integer "learning_goal_id", null: false
+    t.integer "project_id"
+    t.string "project_version"
+    t.integer "understanding"
+    t.text "feedback"
+    t.datetime "submitted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learning_goal_id"], name: "index_learning_goal_teacher_evaluations_on_learning_goal_id"
+    t.index ["user_id", "teacher_id"], name: "index_learning_goal_teacher_evaluations_on_user_and_teacher_id"
   end
 
   create_table "learning_goals", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -1336,6 +1362,7 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.boolean "funded", comment: "Should this workshop's attendees be reimbursed?"
     t.string "funding_type"
     t.text "properties"
+    t.string "module"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id"
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id"
   end
@@ -1710,14 +1737,12 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.string "address_line3", limit: 30, comment: "Location address, street 3"
     t.decimal "latitude", precision: 8, scale: 6, comment: "Location latitude"
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
-    t.string "state_school_id"
     t.string "school_category"
     t.string "last_known_school_year_open", limit: 9
     t.index ["id"], name: "index_schools_on_id", unique: true
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
-    t.index ["state_school_id"], name: "index_schools_on_state_school_id", unique: true
     t.index ["zip"], name: "index_schools_on_zip"
   end
 
@@ -1807,6 +1832,21 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.integer "stage_id", null: false
     t.index ["section_id"], name: "index_section_hidden_stages_on_section_id"
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id"
+  end
+
+  create_table "section_instructors", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "instructor_id", null: false
+    t.integer "section_id", null: false
+    t.integer "invited_by_id"
+    t.datetime "deleted_at"
+    t.integer "status", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["deleted_at"], name: "index_section_instructors_on_deleted_at"
+    t.index ["instructor_id", "section_id"], name: "index_section_instructors_on_instructor_id_and_section_id", unique: true
+    t.index ["instructor_id"], name: "index_section_instructors_on_instructor_id"
+    t.index ["invited_by_id"], name: "index_section_instructors_on_invited_by_id"
+    t.index ["section_id"], name: "index_section_instructors_on_section_id"
   end
 
   create_table "sections", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2276,6 +2316,8 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "section_instructors", "users", column: "instructor_id"
+  add_foreign_key "section_instructors", "users", column: "invited_by_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"

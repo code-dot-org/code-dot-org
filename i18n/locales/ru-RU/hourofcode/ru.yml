@@ -36,6 +36,10 @@ ru:
   africa_campaign_date_full: 1 октября - 18 декабря
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
+  hoc2023_header: Творчество с помощью искусственного интеллекта
+  hoc2023_social_creativity_with_ai_title: Час кода — что вы создадите?
+  hoc2023_social_creativity_with_ai_desc: Используйте компьютерные науки для изучения
+    и изучения искусственного интеллекта!
   hoc2022_header: Учись, играй, твори!
   social_hoc2022_explore_play_create: Информатика помогает учиться, играть и творить!
   codeorg_homepage_hoc2022_body: Исследуйте всселенную, достигайте целей, двигайтесь
@@ -190,6 +194,28 @@ ru:
     новый каталог учебных программ и обновленная страница для преподавателей, на которой
     вы найдете все необходимое!
   in_partnership_with: В партнерстве с
+  shop_code_dot_org_heading: Код магазина.org
+  shop_code_dot_org_desc: Поддерживайте нашу работу и носите это движение с гордостью.
+    Наши головные уборы носили и президент Обама, и знаменитости.
+  spread_the_word_heading: Расскажите всем
+  spread_the_word_desc: Расширьте наше влияние, поделившись Code.org со своей сетью.
+    Узнайте, как вы можете помочь нам привлечь больше преподавателей, учащихся и адвокатов
+    — от социальных сетей до обновлений по электронной почте.
+  follow_us_heading: Подпишитесь на нас в социальных сетях
+  follow_us_desc: Оставайтесь в курсе событий в социальных сетях и делитесь нашими
+    публикациями со своей сетью, чтобы оставаться в курсе событий и повышать осведомленность.
+  facebook: Facebook
+  twitter: Твиттер
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Подпишитесь на электронные письма
+  subscribe_to_emails_desc: Читайте о том, что происходит на Code.org и в сфере образования
+    в области компьютерных наук, в нашем списке рассылки ежеквартально.
+  subscribe_to_emails_intl: Подпишитесь на международные обновления
+  promote_code_dot_org_heading: Продвигайте Code.org
+  promote_code_dot_org_desc: Продвигайте информатику в своем регионе с помощью статистики,
+    цитат и видео.
   afe_partnership_logo_alt: Логотип Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer* ("Инженер будущего компании
     Amazon") – комплексная программа, рассчитанная на период с детства до начала профессиональной
@@ -200,6 +226,25 @@ ru:
   grade_level_label_elementary: Начальная школа
   grade_level_label_middle: Средняя школа
   grade_level_label_high: Средняя школа
+  curricula_title_elementary: Учебные программы начальной школы
+  curricula_desc_elementary: Просмотрите увлекательные бесплатные курсы и занятия,
+    которые приглашают вас изучать компьютерные науки вместе с учениками начальной
+    школы.
+  curricula_title_middle: Учебные программы средней школы
+  curricula_desc_middle: Ознакомьтесь с интересными предложениями, которые позволят
+    вам и вашим ученикам средней школы вместе изучать компьютерные науки.
+  curricula_title_high: Учебные программы средней школы
+  curricula_desc_high: Ознакомьтесь с интересными курсами и занятиями, которые приглашают
+    вас и ваших старшеклассников глубже погрузиться в компьютерные науки.
+  for_administrators_heading: Для администраторов
+  for_administrators_desc: Присоединяйтесь к тысячам школ, которые уже включили информатику
+    в свои учебные программы.
+  for_parents_heading: Для родителей
+  for_parents_desc: Вы можете помочь школе вашего ученика предложить или расширить
+    образование в области компьютерных наук.
+  for_educators_heading: Для преподавателей
+  for_educators_desc: Начните преподавать сегодня, не имея опыта в области компьютерных
+    наук, на наших профессиональных учебных семинарах.
   students_label: Ученики
   teachers_label: Преподаватели
   teacher_label_csf: Преподаватель основ информатики
@@ -209,9 +254,11 @@ ru:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Необходимые материалы:'
   optional_materials: 'Дополнительные материалы:'
+  call_to_action_hold_an_event: Проведите мероприятие
   call_to_action_learn_more: Узнать больше
   call_to_action_watch_now: Смотрите сейчас
   call_to_action_try_activity: Попробуйте активность
+  call_to_action_try_activities: Попробуйте занятия
   call_to_action_explore_unit: Исследуйте подразделение
   call_to_action_explore_curriculum: Изучите учебный план
   call_to_action_explore_curriculum_options: Варианты учебных программ
@@ -226,6 +273,15 @@ ru:
   call_to_action_explore_choice_level: Пример выбора уровня
   call_to_action_explore_collection: Коллекция
   call_to_action_explore_unplugged_lesson: Уроки, не требующие подключения к сети
+  call_to_action_explore_csf: Изучите основы CS
+  call_to_action_explore_csd: Откройте для себя открытия в CS
+  call_to_action_explore_csp: Изучите принципы CS
+  call_to_action_explore_csc: Изучите подключения к CS
+  call_to_action_explore_csa: Изучите компьютерные науки AP® A
+  call_to_action_explore_csa_short: Откройте для себя приложение AP® CSA
+  call_to_action_explore_maker: Изучите учебные программы Maker
+  call_to_action_explore_hoc: Изучите учебные пособия «Час кода»
+  call_to_action_explore_hoc_short: Откройте для себя «Час кода»
   call_to_action_try_app_lab: Попробовать лабораторию приложений
   call_to_action_view_lesson_plan: Смотреть план урока
   call_to_action_self_paced_pl: Начните профессиональное обучение в индивидуальном
@@ -250,6 +306,7 @@ ru:
   call_to_action_resources_tools: Попробовать инструменты для программирования
   call_to_action_sign_up_free: Зарегистрироваться бесплатно
   call_to_action_explore_ai_resources: Посмотреть ресурсы по ИИ
+  call_to_action_explore_ai_curricula: Изучите учебные программы по ИИ
   call_to_action_explore_curriculum_catalog: Посмотреть каталог учебных планов
   call_to_action_see_full_curriculum_catalog: Посмотреть полный каталог учебных планов
   call_to_action_find_self_paced_modules: Найти модули для самостоятельного изучения
@@ -271,6 +328,20 @@ ru:
   call_to_action_notify_available: Уведомить меня, когда будет доступно
   call_to_action_register_early_access: Зарегистрируйтесь для раннего доступа
   call_to_action_open_positions: Смотреть открытые вакансии
+  call_to_action_explore_roles: Изучите открытые роли
+  call_to_action_get_guide: Получите руководство
+  call_to_action_donate_to_cdo: Сделайте пожертвование для Code.org
+  call_to_action_start_fundraiser: Начните сбор средств
+  call_to_action_view_donation_policy: Ознакомьтесь с политикой пожертвований
+  call_to_action_view_donate_bitpay: Пожертвуйте с помощью BitPay
+  call_to_action_make_a_donation: Сделайте пожертвование
+  call_to_action_other_ways_to_give: Другие способы дарить
+  call_to_action_become_partner_usa: Станьте партнером в США
+  call_to_action_become_partner_intl: Станьте международным партнером
+  call_to_action_become_a_volunteer: Станьте волонтером
+  call_to_action_start_translating: Начните переводить
+  call_to_action_learn_about_advocacy: Узнайте о нашей адвокатской деятельности
+  call_to_action_visit_store: Посетите магазин
   aria_label_call_to_action_afe: Узнайте больше об инженере будущего Amazon
   aria_label_call_to_action_teaching_csf: Начните программу профессионального обучения
     «Преподавание основ компьютерных наук»
@@ -376,8 +447,11 @@ ru:
   curriculum_name_csp: Принципы компьютерных наук
   curriculum_name_csc: Связь с информатикой
   curriculum_name_csa: Информатика А
+  curriculum_name_csa_ai: Программная инженерия и компьютерное зрение
   curriculum_name_csc_02: Любой модуль программы "Связь с информатикой"
   curriculum_name_ai: "  ИИ и машинное обучение  "
+  curriculum_name_artificial_intelligence: Искусственный интеллект (AI)
+  curriculum_name_maker: Создатель
   curriculum_name_maker_cp: Создание приложений с помощью устройств (Circuit Playground)
   curriculum_name_maker_microbit: Создание приложений с помощью устройств (micro:bit)
   curriculum_name_creating_apps_with_devices: Создание приложений с устройствами
@@ -388,6 +462,8 @@ ru:
   curriculum_name_interactive_animations_games: Интерактивная анимация и игры
   curriculum_name_design_process: Процесс разработки
   curriculum_name_data_society: Данные и общество
+  curriculum_desc_csf: Бесплатный набор начальных учебных программ, который знакомит
+    учащихся с основополагающими понятиями информатики.
   curriculum_desc_csf_express: Научитесь создавать компьютерные программы, развивайте
     навыки решения задач и выполняйте увлекательные задания! Создавайте игры и творческие
     проекты, делитесь ими с друзьями, семьей и учителями.
@@ -435,6 +511,26 @@ ru:
   curriculum_desc_creating_apps_with_devices: Изучите роль физических устройств в
     вычислительной технике. Разрабатывайте программы, использующие аппаратные входы
     и выходы. Версия этого раздела есть как для micro:bit, так и для Circuit Playground.
+  curriculum_desc_csa: Познакомьте учащихся с разработкой программного обеспечения
+    и объектно-ориентированным дизайном, изучая язык программирования Java в рамках
+    этой бесплатной учебной программы AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Обучение мейкеров продвигает STEM (наука, технологии, инженерия,
+    математика) на шаг вперед, привлекая в класс практический опыт и сотрудничество,
+    помогая обучать решению проблем и критическому мышлению.
+  curriculum_desc_maker_short: Обучение Maker предполагает практический опыт и совместную
+    работу в классе, помогая обучать решению проблем и критическому мышлению.
+  curriculum_desc_csd: Гибкий курс, позволяющий преподавать каждый блок отдельно или
+    в сочетании. Знакомит учащихся с созданием веб-сайтов, приложений, анимаций, игр
+    и физических вычислительных систем.
+  curriculum_desc_csp: Бесплатный вводный курс для средней школы, одобренный AP® CSP,
+    знакомит учащихся с основополагающими концепциями компьютерных наук.
+  curriculum_desc_csa_ai_long: 'Этот модуль CSA, состоящий из двух глав, предлагает
+    старшеклассникам практический опыт работы с профессиональными инструментами разработки
+    программного обеспечения, включая GitHub и GitHub Copilot, и обучает их реальным
+    навыкам разработки программ компьютерного зрения. '
+  curriculum_desc_csa_ai_short: Этот модуль Post-AP® CSA предлагает старшеклассникам
+    практический опыт работы с профессиональными инструментами разработки программного
+    обеспечения.
   collection_hardware: Аппаратное обеспечение
   collection_hardware_desc: Помогает учащимся использовать данные и физические устройства
     для решения задач.
@@ -465,6 +561,7 @@ ru:
   module_label_professional_learning: Профессиональное обучение
   module_label_languages: 'Поддерживаемые языки:'
   module_label_accessibility_features: 'Доступность:'
+  module_label_accessibility_features_full: 'Функции доступности:'
   module_label_educator_tool: Инструмент для преподавателей
   module_label_educator_course: Курс для преподавателей
   module_label_student_tool: Инструмент для учащихся
@@ -472,6 +569,7 @@ ru:
   module_label_student_content_resources: Контент и ресурсы
   module_label_new: Новый
   module_label_coming_soon: Скоро
+  module_label_available_now: Доступно сейчас
   module_label_video_series: Серия видеороликов
   module_label_self_paced: Модуль с самостоятельным темпом
   module_ages_5_10: 5-10
@@ -482,6 +580,8 @@ ru:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: До 12 класса
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -496,11 +596,14 @@ ru:
   module_grade_9_12_teachers: Учителя 9-12
   module_level_beginner: Начинающий
   module_level_intermediate: Средний
+  module_level_advanced: продвинутый
   module_duration_45_mins: 45 минут
+  module_duration_2_weeks: 2 недели
   module_duration_1_hr: 1 час
   module_duration_2_hrs: 2 часа
   module_duration_3_hrs: 3 часа
   module_duration_5_hrs: 5 часов
+  module_duration_5_hrs_plus: 5+ часов
   module_duration_8_hrs: 8 часов
   module_duration_20_hrs: 20 часов
   module_duration_35_hrs: 35 часов
@@ -512,6 +615,7 @@ ru:
   module_duration_school_year: Учебный год
   module_duration_month_quarter: Месяц или квартал
   module_duration_month_semester_year: Месяц, семестр или год
+  module_duration_varies: Зависит
   module_prerequisites_none: Ничего
   module_prerequisites_maker_cp: Доступ к игровой площадке Circuit
   module_prerequisites_maker_microbit: Доступ к микробиту
@@ -582,6 +686,10 @@ ru:
   heading_java_lab: Лаборатория Java
   heading_objects_first: Сначала объекты
   heading_these_lessons_will: 'Эти уроки позволят:'
+  heading_explore_curriculum_catalog: Ознакомьтесь со всеми нашими курсами в каталоге
+    учебных программ
+  heading_csa_ai: Ищете, чем заняться после экзамена AP®?
+  heading_bring_cs_to_students: Познакомьте учащихся с информатикой
   professional_learning_section_desc: 'Получайте необходимую поддержку при подготовке
     к преподаванию. Учителям это нравится: более 90% считают это лучшим профессиональным
     обучением!'
@@ -614,6 +722,23 @@ ru:
   support_and_questions_section_desc: Наша служба поддержки готова ответить на любые
     ваши вопросы о том, как начать преподавание на Code.org. Кроме того, на наших
     форумах учителя делятся между собой полезным опытом.
+  subscribe_form_section_title: Подпишитесь на обновления
+  subscribe_form_section_desc_csa: Подпишитесь, чтобы получать ежемесячные электронные
+    письма о программе AP® Computer Science A от Code.org и получать полезные напоминания,
+    советы и обновления прямо на свой почтовый ящик.
+  subscribe_form_section_desc_csc: Подпишитесь, чтобы получать ежемесячные электронные
+    письма о связях Code.org в области компьютерных наук и получать полезные напоминания,
+    советы и обновления прямо на свой почтовый ящик.
+  subscribe_form_section_desc_csd: Подпишитесь, чтобы получать ежемесячные электронные
+    письма об открытиях Code.org в области компьютерных наук и получать полезные напоминания,
+    советы и обновления прямо на свой почтовый ящик.
+  subscribe_form_section_desc_csf: Подпишитесь, чтобы получать ежемесячные электронные
+    письма об основах компьютерных наук Code.org и получать полезные напоминания,
+    советы и обновления прямо на свой почтовый ящик.
+  subscribe_form_section_desc_csp: Подпишитесь, чтобы получать ежемесячные электронные
+    письма о принципах компьютерных наук Code.org и получать полезные напоминания,
+    советы и обновления прямо на свой почтовый ящик.
+  subscribe_form_section_unsubscribe: Вы можете отказаться от подписки в любое время.
   blockchain_hero_heading: Как работает блокчейн
   blockchain_hero_desc: Погрузитесь в мир блокчейна с помощью нашей новой серии видеороликов
     «Как работает блокчейн» и сопутствующих уроков!
@@ -721,6 +846,9 @@ ru:
     интеллект». Каждый урок сопровождается отдельным видеороликом из серии, позволяющим
     глубже погрузиться в концепции, изложенные в этих видеороликах.
   ai_curriculum_btn_aria_label_04: Изучите уроки «Как работает искусственный интеллект»
+  ai_curriculum_grades_05: 'Уровни обучения: 9-12'
+  ai_curriculum_btn_aria_label_05: Изучите модуль «Программная инженерия и компьютерное
+    зрение»
   ai_carousel_heading: 'Что говорят учителя об искусственном интеллекте с помощью
     Code.org:'
   ai_carousel_quote_01: Этот урок также дал моим ученикам возможность увидеть, что
@@ -850,12 +978,23 @@ ru:
     искусственного интеллекта для оценки учащихся. Благодаря богатому сочетанию теории,
     практических примеров и ресурсов он призван помочь преподавателям ориентироваться
     в среде искусственного интеллекта и улучшить учебный опыт учащихся.
+  ai_pl_101_resources_5: Руководство по обеспечению ответственного подхода к искусственному
+    интеллекту
   ai_pl_101_video_desc_6: 'Узнайте больше о новой технологии, способствующей значительным
     изменениям в искусственном интеллекте, в двух новых видеороликах о больших языковых
     моделях (например, ChatGPT) и генеративном искусственном интеллекте. Узнайте,
     как работают эти новые технологии, непосредственно от экспертов: Миры Мурати,
     технического директора OpenAI, и Кристобаля Валенсуэлы, генерального директора
     RunwayML.'
+  ai_pl_101_llm_slides_title: Большая языковая модель подсказывает преподавателям
+  ai_pl_101_llm_slides_desc: Инструменты для получения наилучших результатов от LLM,
+    таких как ChatGPT, от новичков до продвинутых. Включает подсказки для начинающих
+    игроков, а также продвинутые инструменты для тех, кто хочет максимально раскрыть
+    свой потенциал.
+  ai_pl_101_resources_3: Искусственный интеллект помогает трансформировать обучение
+    учащихся
+  ai_pl_101_resources_section_title: Другие способы узнать об искусственном интеллекте
+  ai_pl_101_resources_guide: 'Сопутствующее руководство:'
   how_ai_works_hero_heading: Как работает искусственный интеллект
   how_ai_works_hero_desc: Погрузитесь в мир искусственного интеллекта с помощью нашей
     серии видеороликов «Как работает ИИ» и сопутствующих уроков!
@@ -1200,20 +1339,18 @@ ru:
     информатику в программу вашей школы, не беспокоясь о стоимости. Именно поэтому
     мы взяли на себя обязательство, чтобы наши учебные программы всегда оставались
     бесплатными!
-  teach_page_free_curriculum_list_heading_01: Увлекательная учебная программа для
-    всех классов
   teach_page_free_curriculum_list_desc_01: Бесплатная, гибкая и увлекательная учебная
     программа, переведенная на более чем 67 языков.
-  teach_page_free_curriculum_list_heading_02: Адаптируемая инновационная учебная программа
   teach_page_free_curriculum_list_desc_02: 'Code.org предлагает множество вариантов:
     от программы, рассчитанной на год, до однократных мероприятий. Кроме того, мы
     ежегодно добавляем нашу учебную программу, пополняя их новыми методиками и практиками,
     и создаем новые предложения для преподавания по актуальным востребованным темам.'
-  teach_page_free_curriculum_list_heading_03: Структурированная учебная программа,
-    соответствующая национальным стандартам
   teach_page_free_curriculum_list_desc_03: Каждая учебная программа соответствует
     как минимум одному набору национальных стандартов, включая CSTA, научные стандарты
     следующего поколения и Common Core.
+  teach_page_free_curriculum_list_desc_04: Предложения на более чем 67 языках
+  teach_page_free_curriculum_list_desc_05: Соответствует хотя бы одному набору национальных
+    стандартов (включая CSTA, NGSS и Common Core)
   teach_page_free_curriculum_heading_02: 'Познакомьтесь с нашими программами для разных
     классов:'
   teach_page_resources_heading: Ресурсы, которые помогут вам на всех этапах
@@ -1279,8 +1416,8 @@ ru:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Лаборатория приложений
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Семинары под руководством фасилитаторов,
+    модули для самостоятельного обучения
   csp_page_curriculum_glance_professional_languages: Русский
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1409,8 +1546,8 @@ ru:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Лаборатория приложений, игровая лаборатория, лаборатория
     искусственного интеллекта, веб-лаборатория
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Семинары под руководством фасилитаторов,
+    модули для самостоятельного обучения
   csd_page_curriculum_glance_professional_languages: Русский
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1560,8 +1697,8 @@ ru:
     Искусство и дизайн, Дизайн приложений
   csf_page_curriculum_glance_devices: Ноутбук, Chromebook, планшет
   csf_page_curriculum_glance_tools: Лаборатория спрайтов, игровая лаборатория
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Семинары под руководством фасилитаторов,
+    модули для самостоятельного обучения
   csf_page_curriculum_glance_languages: арабский, индонезийский, каталонский, упрощенный
     китайский, традиционный китайский, чешский, французский, немецкий, хинди, итальянский,
     японский, корейский, каннада, малайский, маратхи, монгольский, польский, португальский
@@ -1705,6 +1842,66 @@ ru:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Помогите финансировать нашу миссию
+  donate_page_top_desc: Каждое пожертвование способствует миссии Code.org по расширению
+    доступа к образованию в области компьютерных наук. Мы предлагаем вам несколько
+    способов сделать пожертвование и изменить мир к лучшему.
+  donate_page_fundraise_title: Сбор средств для Code.org
+  donate_page_fundraise_desc: Помогите собрать деньги для Code.org! Каждый ученик
+    в каждой школе должен иметь возможность изучать компьютерные науки.
+  donate_page_other_ways_title: Другие способы дарить
+  donate_page_other_ways_desc: Изучите различные способы внесения вклада и найдите
+    вариант, который вам больше всего подходит. Каждый шаг, большой или маленький,
+    продвигает нашу миссию вперед.
+  donate_page_501c3: Code.org зарегистрирована как публичная некоммерческая организация
+    501 (c) (3). Взносы на Code.org не облагаются налогом в той мере, в какой это
+    разрешено законом. Идентификационный налоговый номер Code.org — 46-0858543.
+  donate_page_donation_policy_title: Понимание нашей политики пожертвований
+  donate_page_donation_policy_desc: Узнайте, как мы обрабатываем и распределяем ваши
+    взносы.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Соответствие сотрудников
+  donate_tabs_daf_direct_title: Пожертвуйте через DAF Direct
+  donate_tabs_daf_direct_desc: Сделайте пожертвование через свой фонд, рекомендованный
+    донорами, в Fidelity Charitable, Schwab Charitable или BNY Mellon и порекомендуйте
+    Code.org свой грант через онлайн-форму DAF Direct.
+  donate_tabs_amazon_title: Пожертвуйте через Amazon
+  donate_tabs_amazon_desc: Пожертвуйте напрямую, используя свой аккаунт Amazon. Всего
+    несколькими щелчками мыши внесите свой вклад в миссию Code.org и создайте будущее
+    образования в области компьютерных наук.
+  donate_tabs_bitpay_title: Пожертвуйте криптовалютой через BitPay
+  donate_tabs_bitpay_desc: Откройте для себя будущее пожертвований с помощью криптовалюты.
+    Благодаря BitPay ваша цифровая валюта может напрямую поддерживать усилия Code.org
+    по расширению образования в области компьютерных наук.
+  help_page_top_heading: Как вы можете помочь
+  help_page_top_desc: Поддержите нашу миссию по обеспечению доступности компьютерных
+    наук для каждого ребенка во всем мире. Ваши усилия помогают нам вдохновлять будущих
+    новаторов и преодолевать разрыв в технологическом образовании.
+  help_page_top_subhead: Сделайте пожертвование для Code.org
+  help_page_top_desc_02: Мы работаем над тем, чтобы дать каждому ученику возможность
+    изучать информатику как онлайн, так и в школах, где мы организуем постоянные курсы
+    и готовим учителей. За каждый пожертвованный вами доллар один ребенок знакомится
+    с информатикой.
+  help_page_partners_heading: Станьте партнером
+  help_page_partners_desc: Code.org сотрудничает с другими некоммерческими организациями
+    в качестве партнеров, содействуя распространению компьютерных наук на местном
+    и экологичном уровне. Узнайте больше о нашей программе.
+  help_page_volunteer_heading: Волонтер в классе
+  help_page_volunteer_desc: Станьте волонтером, чтобы преподавать «Час кода» или стать
+    приглашенным докладчиком в местном классе. Зарегистрируйтесь, чтобы узнать о ближайших
+    возможностях.
+  help_page_translate_heading: Помогите нам перевести
+  help_page_translate_desc: Волонтеры перевели наши учебные пособия более чем на 45
+    языков. Помогите нам и дальше расширять наши учебные пособия для учащихся по всему
+    миру!
+  help_page_speak_for_cs_heading: Выступайте за образование в области компьютерных
+    наук
+  help_page_speak_for_cs_desc: Узнайте больше об информационно-пропагандистской деятельности
+    Code.org в США и десяти политиках, которые мы рекомендуем штатам принять, чтобы
+    информатика стала основой для всех учащихся. Кроме того, узнайте, как вы можете
+    способствовать переменам в своем штате.
   hoc_live: "«Час кода» в прямом эфире"
   hoc_live_sign_up_title: Подпишитесь на «Час кода» в прямом эфире
   hoc_live_learn_title: Учитесь с помощью программы «Час кода» в прямом эфире
@@ -2025,9 +2222,9 @@ ru:
     делая это!
   front_join_us_volunteer_header: Волонтеры Часа Кода
   front_join_us_tutorials: Попробуйте новинки этого года!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Отфильтруйте и просмотрите <i>более 200 учебных пособий
+    и планов уроков</i>! Найдите задания для разных предметных областей, для разных
+    потребностей в оборудовании и для учащихся с любым уровнем опыта.
   front_join_us_robotics: Выигрывайте роботов или трассы!
   front_join_us_robotics_link: Вы хотите, чтобы ваши ученики использовали набор роботов
     или физических вычислительных наборов? Наши щедрые партнеры передают наборы 75
@@ -2133,6 +2330,13 @@ ru:
     информатики?
   signup_email_preference_privacy: "(См. нашу политику конфиденциальности)"
   signup_email_preference_yes: Да
+  signup_email_preference_yes_elementary: Да. Присылайте мне новости о ресурсах для
+    начальной школы
+  signup_email_preference_yes_middle: Да. Присылайте мне новости о ресурсах для средней
+    школы
+  signup_email_preference_yes_high: Да. Присылайте мне новости о ресурсах для средней
+    школы
+  signup_email_preference_yes_general: Да. Присылайте мне общие новости
   signup_email_preference_no: Нет
   signup_email_preference_error: Необходимо указать предпочтительный адрес электронной
     почты
@@ -4894,9 +5098,9 @@ ru:
     в зависимости от степени готовности учащихся и адаптирована к потребностям каждого
     учащегося. '
   tutorial_trinket_longdescription: |-
-    Choose from lessons, challenges, and tutorials about the Python programming language.  Make turtle-based animations and solve puzzles, all while learning the basics of this powerful language.
+    Выберите уроки, задания и учебные пособия по языку программирования Python. Создавайте анимации на основе черепах и решайте головоломки, изучая основы этого мощного языка.
 
-    Activities range from block-based programming to real Python code, with activities appropriate for most age levels.  Select lessons available in Spanish, Korean and Chinese!
+    Занятия варьируются от блочного программирования до реального кода на языке Python. Занятия подходят для большинства возрастных групп. Выберите уроки, доступные на испанском, корейском и китайском языках!
   tutorial_frogger_longdescription: Станьте мыслителем в области вычислительной техники.
     Создавайте трехмерные объекты, рисуя двухмерные изображения, которые вы превращаете
     в удивительные трехмерные фигуры. Создавайте трехмерные миры, объединяя только
@@ -5231,9 +5435,9 @@ ru:
     учащихся и преподавателей, имеющих опыт работы с последовательностями, условиями,
     циклами или другими базовыми понятиями программирования.
   tutorial_ozodance_longdescription: |-
-    This teacher-led tutorial introduces students to the concept of coding with the help of Ozobot, a small programmable robot. Students will be learning how to code by creating and programming a dance routine for Ozobot! They will use OzoBlockly, a visual programming language based on Blockly, to program the dance and then have fun see their choreography come alive when Ozobot performs their dance.
+    Это учебное пособие под руководством учителя знакомит учащихся с концепцией программирования с помощью небольшого программируемого робота Ozobot. Учащиеся научатся программировать, создав и запрограммировав танцевальную программу для Ozobot! Они будут программировать танец на языке визуального программирования OzoBlockly на основе Blockly, а затем весело проведут время, наблюдая за тем, как их хореография оживает, когда Ozobot исполнит свой танец.
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by the Ozobot games. The tutorial is designed for grades 1-12 and can be customized to your students' abilities.
+    Для этого урока не требуется опыта программирования или знаний Ozobot. Однако игры Ozobot заинтересуются даже учащимися с некоторым опытом программирования. Учебное пособие предназначено для 1-12 классов и может быть адаптировано к способностям ваших учеников.
   tutorial_codingrobotics_longdescription: Студенты познакомятся с основополагающими
     концепциями программирования и применят новые знания в робототехнике. Работая
     как в Kodable, так и в Wonder Workshop, учащиеся будут использовать знания программирования
@@ -5368,9 +5572,9 @@ ru:
     и его моделирование, а затем создание более сложных конечных автоматов, представляющих
     собой головоломки, гаджеты, веб-страницы и игры.
   tutorial_procolor_longdescription: |-
-    This teacher-led tutorial introduces your students to programming and computational thinking and it also explains what kind of robot Ozobot is. This activity is "unplugged", which means that the coding is not done on a computer or tablet, but on a piece of paper with markers. Students will be giving commands to Ozobot using OzoCodes, which are special color sequences. After learning about how to program Ozobot with markers and paper, students are challenged to solve a maze and help Ozobot find the way to school.
+    Это учебное пособие под руководством учителя познакомит ваших учеников с программированием и вычислительным мышлением, а также объяснит, что такое робот Ozobot. Это упражнение «отключено», что означает, что кодирование выполняется не на компьютере или планшете, а на листе бумаги с маркерами. Учащиеся будут давать команды Ozobot, используя коды OZOcodes, которые представляют собой специальные цветовые последовательности. Узнав, как программировать Ozobot с помощью маркеров и бумаги, перед учениками стоит задача разгадать лабиринт и помочь Озоботу найти дорогу в школу.
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by programming Ozobot. The tutorial is designed for grades K-12 and can be customized to your students' abilities.
+    Для этого урока не требуется опыта программирования или знаний Ozobot. Однако даже учащиеся с некоторым опытом программирования будут заниматься программированием Ozobot. Учебное пособие предназначено для классов K-12 и может быть адаптировано к способностям ваших учеников.
   tutorial_spiralsfinch_longdescription: 'Finch — это небольшой робот, призванный
     вдохновлять и радовать студентов, изучающих компьютерные науки, предоставляя им
     материальное и физическое представление своего кода. В этом упражнении вы научитесь
@@ -5379,9 +5583,9 @@ ru:
     Для этого упражнения вы можете запрограммировать зяблика с помощью Scratch или
     Snap! используя ноутбуки или Chromebook. Вам не нужен предыдущий опыт программирования. '
   tutorial_ozoi_longdescription: |-
-    This tutorial introduces students to programming and computational thinking and it also explains what kind of robot Ozobot is. This activity is "unplugged", which means that the coding is not done on a computer or tablet, but on a piece of paper with markers. Students will be learning about how the robot works and then give commands to Ozobot using OzoCodes, which are special color sequences. After learning about how to program Ozobot with markers and paper, students are challenged to solve a maze and help Ozobot find the way to the store.
+    Это учебное пособие знакомит учащихся с программированием и вычислительным мышлением, а также объясняет, что такое робот Ozobot. Это упражнение «отключено», что означает, что кодирование выполняется не на компьютере или планшете, а на листе бумаги с маркерами. Учащиеся узнают, как работает робот, а затем будут давать команды Ozobot с помощью OZOcodes — специальных цветовых последовательностей. Изучив, как программировать Ozobot с помощью маркеров и бумаги, ученикам предлагается разгадать лабиринт и помочь Ozobot найти дорогу в магазин.
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by programming Ozobot. The tutorial is designed for grades K-12 and can be customized to your students' abilities.
+    Для этого урока не требуется опыта программирования или знаний Ozobot. Однако даже учащиеся с некоторым опытом программирования будут заниматься программированием Ozobot. Учебное пособие предназначено для классов K-12 и может быть адаптировано к способностям ваших учеников.
   tutorial_ticklel_longdescription: Кирпич за кирпичом развивайте свое самое смелое
     воображение LEGO. Собрав несколько кодов в приложении Tickle, вы сможете заставить
     свой LEGO WeDo делать удивительные вещи.
@@ -5590,11 +5794,11 @@ ru:
     Стива в путешествие по этому миру Minecraft.
   tutorial_minecraft-2016_longdescription: Создайте игру Minecraft. Создавайте собственные
     версии цыплят, овец, криперов, зомби и многого другого.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Используя заданный по умолчанию «Vocabulario
+    Robot», учащиеся находят, как управлять режимом, например, выполнять&aacute;конкретные
+    задачи, которые не обсуждались ранее.&iacute;Este segmento ense&ntilde;a los estudiantes
+    la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa
+    abilidad de depuraci&oacute;n.
   tutorial_pixie_longdescription: Учебное пособие «Час кода» с Пикси
   tutorial_play_longdescription: Создайте историю или игру с помощью Лаборатории игр!
     Делайте животных, пиратов, зомби, ниндзя и других персонажей, чтобы они двигались,
@@ -12743,12 +12947,12 @@ ru:
     CS First и Scratch.
   tutorial_googlename _longdescription: Выберите имя и оживите буквы слова с помощью
     кода. Выберите кличку, кличку питомца, животное, вид спорта, место или хобби.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Город Зилла процветает, а музыка витает
+    в воздухе. Ходят слухи, что знаменитый бот Gargantua подключился к сети и отправляет
+    последних токсиботов разрушать город квартал за кварталом.…Возьмите в руки ховерборд
+    с коботом и приготовьтесь двигаться вперёд, двигаться и доводить начатое до конца!
+    Игроки программируют своих коботов-ховерботов на смену полосы движения, обход
+    препятствий и уничтожение множества токсиботов в этой ритмичной игре.
   tutorial_nasachspacejam_longdescription: Создайте солнечную систему, которая действительно
     потрясает! Изучите музыку, астрономию и программирование в этом самостоятельном
     задании (опыт программирования не требуется). Запрограммируйте планеты на создание
@@ -13589,6 +13793,336 @@ ru:
     (в общей сложности 5 недель, включая закрытие офиса по всей организации в конце
     года (например, зимние каникулы), половину рабочего дня по пятницам летом (летние
     пятницы) и другие щедрые льготы.
+  careers_hero_title: Карьера
+  careers_hero_description: Code.org — это некоммерческая организация, деятельность
+    которой направлена на расширение доступа к информатике в школах. Мы уделяем особое
+    внимание расширению участия молодых женщин и недостаточно представленных учащихся.
+  careers_hero_description_under: Помогите нам изменить мир, по одному студенту за
+    раз!
+  careers_vision_title: Наше видение
+  careers_vision_decsription: Наше видение заключается в том, что каждый ученик в
+    каждой школе должен иметь возможность изучать компьютерные науки в рамках основного
+    образования K-12.
+  careers_vision_description_under: Присоединяйтесь к нашей команде, чтобы воплотить
+    эту мечту в реальность!
+  careers_values_title: Наши основные ценности
+  careers_values_first_column_text_1: Мы считаем, что компьютерные науки являются
+    основополагающими для всех студентов
+  careers_values_first_column_text_2: Мы стремимся к равенству, доступу и возможностям
+  careers_values_first_column_text_3: Мы верим в силу коллективного образовательного
+    сообщества
+  careers_values_second_column_text_1: Мы гибки и реагируем на отзывы
+  careers_values_second_column_text_2: Мы действуем честно и прозрачно
+  careers_values_second_column_text_3: Мы считаем, что для достижения широкого эффекта
+    необходимо мыслить масштабно и действовать комплексно.
+  careers_approach_section_title: Наш объединяющий подход
+  careers_approach_section_description: Глобальная роль Code.org в движении компьютерных
+    наук K-12 возможна только благодаря тому, что мы используем объединяющий подход
+    к различным и часто разделенным заинтересованным сторонам. В условиях растущей
+    поляризации идея расширения возможностей для студентов объединяет людей, представляющих
+    весь политический спектр. Члены команды, студенты, преподаватели и сторонники
+    Code.org придерживаются разных точек зрения, и мы рады всем им присоединиться
+    к нашей миссии.
+  careers_aproach_section_description_link: Узнайте больше о подходе Code.org к единству.
+  careers_approach_section_button: Изучите открытые роли
+  careers_principle_section_title: Наши культурные принципы
+  careers_principle_title_1: Наши ученики и преподаватели — наша Полярная звезда
+  careers_principle_description_1: Мы используем наши дары, время и энергию, чтобы
+    донести информатику до тех, кто в ней больше всего нуждается. Это то, что нас
+    объединяет. Это наш самый важный принцип.
+  careers_principle_title_2: Мы трепетно относимся к проблемам и добры друг к другу
+  careers_principle_description_2: Мы по-прежнему сосредоточены на задаче доведения
+    компьютерных наук до учащихся и учителей по всему миру. Мы понимаем, что каждый
+    из нас делает все возможное, чтобы поддерживать нашу миссию и милостиво относиться
+    к ошибкам.
+  careers_principle_title_3: Ищите решения, а не консенсус
+  careers_principle_description_3: Мы сами принимаем решения, независимо от того,
+    предпринимаем ли мы небольшие шаги или большие шаги к достижению желаемых результатов.
+    Владельцы спрашивают и слушают, но обратная связь их не парализует. Мы принимаем
+    и поддерживаем решения владельцев, даже если мы не согласны.
+  careers_principle_title_4: Перенимайте менталитет основателя
+  careers_principle_description_4: Мы зацикливаемся на результатах и сосредотачиваемся
+    на их достижении. Мы погружаемся в детали и усердно работаем. Мы честны, стремимся
+    к гибкости и постоянно оцениваем, идем ли мы на верном пути; мы не боимся менять
+    направление. Этого требует меняющийся мир.
+  careers_principle_title_5: Чемпион по инновациям
+  careers_principle_description_5: Мы мыслим масштабно, рискуем и не боимся потерпеть
+    неудачу. Если мы видим лучший способ достижения наших целей, мы делаем это и поощряем
+    других делать то же самое. Поэтапные решения не помогут изменить мир.
+  careers_principle_title_6: Опорные решения в фактах
+  careers_principle_description_6: Мы используем данные для понимания нашего бизнеса,
+    достижения желаемых результатов и принятия решений. Мы уравновешиваем это тем,
+    что не всегда располагаем данными, необходимыми для принятия мер.
+  careers_principle_title_7: Нашей движущей силой является стремление к росту
+  careers_principle_description_7: Мы с любопытством подходим к каждой задаче. Мы
+    даем отзывы любезно и откровенно; мы получаем обратную связь открыто. Мы учимся
+    на своих ошибках и ищем способы повысить охват и результативность нашей работы.
+  careers_balance_section_title: Наш баланс между работой и личной жизнью
+  careers_balance_section_description: Мы заботимся о своих сотрудниках и стремимся
+    поддерживать всех как на работе, так и за ее пределами. Мы знаем, что потребности
+    у всех разные, поэтому предлагаем комплексный социальный пакет, который обеспечит
+    заботу о вас (и вашей семье).
+  careers_balance_first_column_text_1: Польза для здоровья для вас и вашей семьи
+  careers_balance_first_column_text_2: Щедрый оплачиваемый отпуск и планы отпусков
+  careers_balance_second_column_text_1: Гибкая и благоприятная рабочая среда
+  careers_balance_second_column_text_2: Возможности роста и профессионального обучения
+  careers_openroles_section_title: Открытые роли
+  careers_openroles_section_description: Code.org находится в Сиэтле, но многие члены
+    нашей команды работают удаленно. Дистанционные кандидаты приветствуются и поощряются
+    к подаче заявок.
+  careers_more_info_text: Для получения дополнительной информации о Code.org ознакомьтесь
+    с разделом [Часто задаваемые вопросы] (%{support_url}) или узнайте о [других способах
+    участия в нашей миссии] (%{help_url}).
+  careers_approach_section_title2: Наш подход к разнообразию
+  careers_approach_section_description_1: В Code.org мы рассматриваем различные точки
+    зрения, идеи и опыт. Мы стремимся предоставлять равные возможности всем сотрудникам
+    и кандидатам. Мы не допускаем дискриминации по признаку расы, религии, цвета кожи,
+    национального происхождения, пола, сексуальной ориентации, возраста, семейного
+    положения, статуса ветерана или инвалидности (умственной и физической).
+  careers_approach_section_description_2: Мы обеспечим предоставление инвалидам разумных
+    условий для участия в процессе подачи заявления о приеме на работу или собеседования,
+    выполнения основных трудовых функций и получения других льгот и привилегий при
+    трудоустройстве. Если у вас есть индивидуальные потребности, связанные с инвалидностью,
+    свяжитесь с нами по адресу accommodations@code.org.
+  csa_ai_page_hero_title: Программная инженерия и компьютерное зрение
+  csa_ai_page_hero_description: 'Этот модуль CSA, состоящий из двух глав, предлагает
+    старшеклассникам практический опыт работы с профессиональными инструментами разработки
+    программного обеспечения, включая GitHub и GitHub Copilot, и обучает их реальным
+    навыкам разработки программ компьютерного зрения. '
+  csa_ai_page_video_section_title: Выйдите за пределы мира программных сред Code.org
+  csa_ai_page_video_section_li_1: Узнайте об искусственном интеллекте и его приложениях
+  csa_ai_page_video_section_li_2: Практический опыт работы с профессиональными инструментами
+    разработки программного обеспечения
+  csa_ai_page_video_section_li_3: Изучите отраслевые стандарты
+  csa_ai_page_video_section_li_4: Развивайте критическое мышление
+  csa_ai_page_programming_tools: 'Инструменты программирования: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Ничего
+  csa_ai_page_curriculum_topics: 'Темы: Программирование, Данные, Искусство и дизайн,
+    Игры и анимация'
+  csa_ai_page_curriculum_accessibility_features: Подробнее см. в разделе часто задаваемых
+    вопросов
+  csa_ai_page_curriculum_languages_support: Русский
+  csa_ai_page_article_title_1: Создавайте с помощью второго пилота
+  csa_ai_page_article_description_1: Студенты учатся использовать GitHub Copilot в
+    качестве парного программиста для объяснения существующего кода, поиска и исправления
+    ошибок, а также поиска решений новых проблем.
+  csa_ai_page_article_link_1: Узнайте больше о Copilot
+  csa_ai_page_article_title_2: Создайте свою собственную модель искусственного интеллекта
+  csa_ai_page_article_description_2: Учащиеся обучают собственные модели искусственного
+    интеллекта с помощью Teachable Machine распознавать изображения и жесты с веб-камеры
+    и изучать, как компьютерное зрение влияет на взаимодействие пользователей с приложениями.
+  csa_ai_page_article_link_2: Изучите план урока
+  csa_ai_page_article_title_3: Изучите компьютерное зрение
+  csa_ai_page_article_description_3: Учащиеся внедряют модели искусственного интеллекта,
+    созданные с помощью Teachable Machine, в приложение Java, используя GitHub Copilot,
+    чтобы помочь им модифицировать существующие версии приложений для работы с различными
+    входными данными.
+  csa_ai_page_article_link_3: См. пример
+  csa_ai_page_learn_more_section_title: Узнайте больше об искусственном интеллекте
+  csa_ai_page_learn_more_title: Изучите ИИ 101 для учителей
+  csa_ai_page_learn_more_description: Откройте для себя революционный мир искусственного
+    интеллекта (ИИ) и его преобразующий потенциал в образовании с помощью нашей комплексной
+    серии онлайн-обучения для учителей.
+  csa_ai_page_learn_more_link: Посмотрите серию «Искусственный интеллект 101 для учителей»
+  csa_ai_page_faq_question_01: Каковы предпосылки для этого модуля?
+  csa_ai_page_faq_answer_01_01: 'Прежде чем погрузиться в этот модуль, учащиеся должны
+    иметь начальные знания Java. В частности, они должны разбираться в следующих областях:'
+  csa_ai_page_faq_answer_01_list_01: "**Классы и объекты: ** Учащиеся должны быть
+    знакомы с определением классов и их использованием, а также с созданием объектов
+    и управлением ими."
+  csa_ai_page_faq_answer_01_list_02: "**Написание и вызов методов: ** Учащиеся должны
+    уметь определять методы в классе, понимать параметры методов и возвращаемые типы,
+    а также вызывать методы из объектов или других методов."
+  csa_ai_page_faq_answer_01_list_03: "**1D Arrays и ArrayLists: ** Они должны уметь
+    объявлять, инициализировать и манипулировать одномерными массивами и ArrayLists,
+    включая их итерацию."
+  csa_ai_page_faq_answer_01_list_04: "**Выбор и итерация: ** Очень важна прочная основа
+    условных выражений и циклов."
+  csa_ai_page_faq_question_01_02: В идеале студенты, окончившие AP Computer Science
+    A или курс аналогичной глубины и строгости, должны быть хорошо подготовлены к
+    этому модулю.
+  csa_ai_page_faq_question_02: Как установить программное обеспечение, необходимое
+    для этого модуля?
+  csa_ai_page_faq_answer_02_01: Этот модуль уникален тем, что он предполагает использование
+    стороннего программного обеспечения, а не лабораторий и инструментов Code.org.
+    [Подробнее об установке программного обеспечения читайте здесь] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Как я могу удовлетворить потребности в доступности
+    при преподавании этого модуля?
+  csa_ai_page_faq_answer_03_01: Удовлетворение потребностей в доступности имеет решающее
+    значение для инклюзивной учебной среды. [Подробнее о функциях универсального доступа
+    в программном обеспечении, используемом в этом модуле, читайте здесь] (%{install_url}).
+  csa_ai_page_faq_question_04: Как использовать VS Code на Chromebook?
+  csa_ai_page_faq_answer_04: Использовать VS Code на Chromebook стало проще, особенно
+    благодаря возможности запускать приложения Linux на новых моделях Chromebook.
+    [Подробнее о настройке VS Code на Chromebook читайте здесь] ().%{chromebook_url}
+  csa_ai_page_faq_question_05: Как я могу получить профессиональную подготовку для
+    этого модуля?
+  csa_ai_page_faq_answer_05: В настоящее время этот курс не предусматривает специального
+    профессионального развития. Если вы хотите понять, как использовать искусственный
+    интеллект в своем классе, вы можете [изучить AI 101 для учителей] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: В какое время рекомендуется преподавать этот модуль?
+  csa_ai_page_faq_answer_06_01: Модуль «Программная инженерия и компьютерное зрение»
+    продуманно структурирован таким образом, чтобы обеспечить всестороннее обучение
+    в сжатые сроки. Весь модуль рассчитан на **2 недели обучения**. Большинство уроков
+    рассчитано на **45 минут**, а уроки, на которых учащиеся погружаются в практическую
+    разработку проектов на Java, рассчитаны на **90 минут**. Это продолжительное время
+    дает учащимся широкие возможности для понимания, внедрения и устранения неполадок
+    во время работы.
+  csa_ai_page_faq_answer_06_02: В структуру модуля также заложена преднамеренная гибкость.
+    В зависимости от динамики занятий, вовлеченности учащихся и глубины, на которую
+    вы хотите изучить каждую тему, вы можете регулировать продолжительность обучения.
+    Например, урок «Введение в Copilot», рассчитанный на 45 минут, можно увеличить
+    до 90 минут, если вы хотите глубже изучить, как работают большие языковые модели
+    и инструменты, такие как GitHub Copilot и ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Если у вас есть утвержденная учетная запись учителя,
+    вы можете найти ключи ответов на синей панели «Только для учителей», которая отображается
+    в онлайн-уроках и заданиях. Если вам нужна утвержденная учетная запись учителя,
+    вы можете подать заявку на доступ к защищенным материалам только для учителей
+    (ключи ответов и т. д.) с помощью [этой формы] ().%{form_url}Имейте в виду, что
+    верификация вашей учетной записи может занять 3-5 рабочих дней.
+  csa_ai_page_faq_question_08: Соответствует ли этот модуль стандартам?
+  csa_ai_page_faq_answer_08: Да, учебная программа по программной инженерии и компьютерному
+    зрению соответствует [стандартам CSTA K-12] (%{csta_k12_url}) и «Искусственный
+    интеллект для [Руководства K-12]» ().%{k12_url}
+  csa_ai_page_faq_question_09: Сколько стоит преподавание этого модуля?
+  csa_ai_page_faq_answer_09_01: Наша учебная программа и платформа доступны [бесплатно]
+    (%{no_cost_url}) для преподавания для всех и в любом месте!
+  csa_ai_page_faq_answer_09_02: Кроме того, программное обеспечение и инструменты,
+    используемые в этом модуле, бесплатны. Для версий verified () и [teachers](%{teachers_url})
+    GitHub Copilot бесплатен. [students]%{students_url}
+  csa_ai_page_faq_question_10: Что делать, если установка программного обеспечения
+    не работает?
+  csa_ai_page_faq_answer_10: Проблемы во время установки программного обеспечения
+    могут быть обычным явлением, но для их устранения и устранения можно предпринять
+    систематические шаги. [Ознакомьтесь с некоторыми советами по устранению неполадок
+    здесь] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Наша учебная программа по разработке программного
+    обеспечения и компьютерному зрению была разработана с учетом наших учебных ценностей.
+    При создании этой учебной программы мы руководствовались следующими целями:'
+  csa_ai_page_faq_answer_11_list_01: "**Цель 1: ** Используйте инструменты искусственного
+    интеллекта для генерации, отладки и редактирования кода."
+  csa_ai_page_faq_answer_11_list_02: "**Цель 2: ** Переход от Java Lab к реальным
+    инструментам."
+  csa_ai_page_faq_answer_11_list_03: "**Цель 3: ** Углубить понимание того, как модели
+    искусственного интеллекта обучаются и интегрируются в программы."
+  csa_ai_page_faq_answer_11_02: Дополнительные сведения о ценностях, лежащих в основе
+    нашей работы, см. в разделе [Ценности учебной программы] (%{curriculum_values_url}).
+  video_library_page_main_title: Короткие образовательные видеоролики
+  video_library_page_hero_description: Растущая библиотека образовательных видеороликов
+    Code.org доступна для повторного использования преподавателями по всему миру в
+    Интернете или в классах. Наша цель — расширить наши усилия за пределы нашей собственной
+    учебной программы.
+  video_library_page_title_ai_works: Как работает искусственный интеллект
+  video_library_page_description_ai_works: Эта серия коротких видеороликов познакомит
+    вас с тем, как работает искусственный интеллект и почему это важно. Узнайте о
+    нейронных сетях или о том, как искусственный интеллект обучается, а также углубитесь
+    в такие вопросы, как алгоритмическая предвзятость и этика принятия решений в сфере
+    ИИ.
+  video_library_page_title_computers_work: Как работают компьютеры
+  video_library_page_description_computers_work: Объясняет, что делает компьютер компьютером,
+    как цифровая информация представлена в единицах и нулях, как компьютерные схемы
+    обрабатывают цифровую информацию и как центральный процессор (ЦП) и операционная
+    система управляют входами, выходами, памятью и аппаратным обеспечением компьютера.
+  video_library_page_title_internet_works: Как устроен Интернет
+  video_library_page_description_internet_works: С участием Винта Серфа, изобретателя
+    TCP/IP, Дэвида Карпа, основателя Tumblr, расскажет о HTTP и HTML, принцесса безопасности
+    Google, которая расскажет о SSL и кибербезопасности, а также инженеров из Microsoft,
+    Spotify и Symantec. Эта серия коротких видеороликов о том, как работает Интернет.
+  video_library_page_title_not_hacked: Как не быть взломанным
+  video_library_page_description_not_hacked: Интернет открыт, поэтому все, что в нем
+    происходит, можно увидеть, если он не защищен. В современных странах люди больше
+    обеспокоены взломом, чем любым другим преступлением. Почему? Потому что каждый
+    компьютер или телефон в Интернете регулярно проверяется на уязвимости преступниками,
+    террористами или даже государственными деятелями. Если вы не будете осторожны,
+    кто-то может взломать ваше устройство или учетные записи и даже украсть ваши личные
+    данные или деньги.
+  video_library_page_title_blockchain: Как работает блокчейн
+  video_library_page_description_blockchain: Эта серия, созданная в партнерстве с
+    Coinbase, посвящена отраслевым экспертам и призвана развеять мифы об этой технологии,
+    изучив, что такое блокчейн, как он работает, и его потенциальные социальные последствия
+    — как хорошие, так и плохие.
+  video_library_page_title_careers: Карьера в CS
+  video_library_page_description_careers: Карьера в области компьютерных наук и технологий
+    может быть увлекательной и полезной. Но чем на самом деле занимается человек,
+    работающий в этих областях? В условиях огромного разнообразия профессий и компаний
+    на этот вопрос нет единственного ответа. Посмотрите видео ниже, чтобы познакомиться
+    с некоторыми людьми, творчески решающими серьезные проблемы.
+  video_library_page_title_inspirational: Вдохновляющий
+  video_library_page_description_inspirational: Что изменит информатика в нашем мире?
+    Все? Для кого оно предназначено? Всем! Посмотрите эти видео, чтобы вдохновить
+    и мотивировать вас.
+  video_library_page_footer_description: Ищете что-то еще? На нашем канале Youtube
+    доступно так много отличных видео.
+  video_library_page_footer_cta: Ознакомьтесь со всеми видеороликами Code.org на YouTube
+  video_library_page_computer_work_video_title_1: Знакомство с работой компьютеров
+  video_library_page_computer_work_video_title_2: Бинарные файлы и данные
+  video_library_page_computer_work_video_title_3: Процессор, память, ввод и вывод
+  video_library_page_computer_work_video_title_4: Что делает компьютер компьютером?
+  video_library_page_computer_work_video_title_5: Логика схем
+  video_library_page_computer_work_video_title_6: Аппаратное и программное обеспечение
+  video_library_page_internet_work_video_title_1: Что такое Интернет?
+  video_library_page_internet_work_video_title_2: 'ИНТЕРНЕТ: IP-адреса и DNS'
+  video_library_page_internet_work_video_title_3: 'ИНТЕРНЕТ: HTTP и HTML'
+  video_library_page_internet_work_video_title_4: 'ИНТЕРНЕТ: кибербезопасность и преступность'
+  video_library_page_internet_work_video_title_5: 'ИНТЕРНЕТ: провода, кабели и Wi-Fi'
+  video_library_page_internet_work_video_title_6: 'ИНТЕРНЕТ: пакеты, маршрутизация
+    и надежность'
+  video_library_page_internet_work_video_title_7: 'ИНТЕРНЕТ: шифрование и открытые
+    ключи'
+  video_library_page_internet_work_video_title_8: 'ИНТЕРНЕТ: как работает поиск'
+  video_library_page_cs_video_title_1: Меня зовут Джером, я технолог по дизайну в
+    Meow Wolf
+  video_library_page_cs_video_title_2: Меня зовут Никеша, я аэрокосмический инженер
+    в НАСА
+  video_library_page_cs_video_title_3: Меня зовут Брина, я инженер-программист в Instagram
+  video_library_page_cs_video_title_4: Меня зовут Кинсли, я инженер-программист в
+    Facebook
+  video_library_page_cs_video_title_5: Меня зовут Полина, я специалист по обработке
+    данных в Electronic Arts
+  video_library_page_cs_video_title_6: Меня зовут Данель, я инженер-программист в
+    MBARI
+  video_library_page_cs_video_title_7: Меня зовут Кристофер, я аналитик по безопасности
+    в компании Tanium
+  video_library_page_cs_video_title_8: Меня зовут Федерико, я менеджер технических
+    программ в Microsoft
+  video_library_page_cs_video_title_9: Меня зовут Тесс, я инженер-программист в Google
+  video_library_page_inspirational_video_title_1: Измените облик компьютерных наук
+    (3 мин)
+  video_library_page_inspirational_video_title_2: Нажимайте на себя. Научиться может
+    каждый. (1 мин)
+  video_library_page_inspirational_video_title_3: Вдохновите девушку (2 мин)
+  video_library_page_inspirational_video_title_4: То, чему не научат в большинстве
+    школ (5 мин.)
+  video_library_page_inspirational_video_title_5: Наступил «Час кода» — учиться может
+    каждый (2 минуты)
+  video_library_page_inspirational_video_title_6: Меня зовут Арасели (3 мин)
+  video_library_page_inspirational_video_title_7: Час кода со Стефом Карри (2 минуты)
+  video_library_page_inspirational_video_title_8: Информатика меняет все (5 мин)
+  video_library_page_inspirational_video_title_9: Введение в компьютерные науки (1
+    мин)
+  video_library_page_inspirational_video_title_10: Президент Обама о компьютерных
+    науках (1 мин)
+  video_library_page_inspirational_video_title_11: Научиться может любой (1 мин)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 мин)
+  video_library_page_inspirational_video_title_13: НАСА отмечает «Час кода» (2 минуты)
+  video_library_page_inspirational_video_title_14: Это больше, чем игра (1 мин)
+  video_library_page_inspirational_video_title_15: Творите с помощью компьютерных
+    наук (1 мин)
+  video_library_page_not_hacked_video_title_1: 'Как не быть взломанным: введение'
+  video_library_page_not_hacked_video_title_2: 'Как не быть взломанным: пароли'
+  video_library_page_not_hacked_video_title_3: 'Как не быть взломанным: аутентификация
+    и блокировка устройств'
+  video_library_page_not_hacked_video_title_4: 'Как не быть взломанным: фишинг'
+  video_library_page_not_hacked_video_title_5: 'Как не быть взломанным: веб-сайты
+    и Wi-Fi'
+  video_library_page_not_hacked_video_title_6: 'Как не быть взломанным: обмен сообщениями
+    и загрузки'
+  video_library_page_not_hacked_video_title_7: 'Как не быть взломанным: установите
+    обновления'
   language_code:
     ar: арабский
     az: азербайджанский

@@ -52,6 +52,7 @@ se:
         gender: 'Sohkabealli'
         edit_header: 'Divo kontodieđuid'
         finish_sign_up_header: 'Válbme du kontoásaheami'
+        finish_sign_up_header_error: 'Divo dáid boasttuvuođaid:'
         finish_sign_up_subheader: 'Deavdde dáid dieđuid válbmet ásahit Code.org-konto <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Deavdde dáid dieđuid válbmet ásahit Code.org-konto **%{email}**.'
         finish_sign_up_subheader_provider: 'Deavdde dáid dieđuid válbmet ásahit Code.org-konto <strong>%{provider}</strong>:in <strong>%{email}</strong>.'
@@ -59,6 +60,7 @@ se:
         reset_password_token: "Dat ruovttoluotta bidjat čoavddasáni liŋka maid leat čuvvon"
         error:
           future: ii sáhte nie boahtteáiggis
+        user_type: 'KontoMálle'
         us_state: 'Fylka'
   hello: "Bures máilbmi"
   welcome_back: "Bures boahtin ruovttoluotta, %{name}"

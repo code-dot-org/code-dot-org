@@ -5,36 +5,40 @@ ar:
   language: الإنجليزية
   front_title: انضم إلى أكبر حدث تعليمي في التاريخ، %{campaign_date}
   coming_soon: قريباً
-  campaign_date_start_short: 5 ديسمبر
-  campaign_date_start_long: 5 ديسمبر
-  campaign_date_short: 5 - 11 ديسمبر
-  campaign_date_full: 5 - 11 ديسمبر
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5 - 11 ديسمبر 2022
-  nonus_campaign_date_start_short: 1 أكتوبر
-  nonus_campaign_date_start_long: 1 أكتوبر
+  campaign_date_start_short: 4 دجنبر
+  campaign_date_start_long: 4 دجنبر
+  campaign_date_short: 4-10 ديسمبر
+  campaign_date_full: 4-10 ديسمبر
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 دجنبر 2023
+  nonus_campaign_date_start_short: 5 أكتوبر
+  nonus_campaign_date_start_long: 5 أكتوبر
   nonus_campaign_date_short: 1 أكتوبر - 18 ديسمبر
   nonus_campaign_date_full: 1 أكتوبر - 18 ديسمبر
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
-  latam_campaign_date_start_short: 1 أكتوبر
-  latam_campaign_date_start_long: 1 أكتوبر
+  latam_campaign_date_start_short: 5 أكتوبر
+  latam_campaign_date_start_long: 5 أكتوبر
   latam_campaign_date_short: 1 أكتوبر - 18 ديسمبر
   latam_campaign_date_full: 1 أكتوبر - 18 ديسمبر
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
-  europe_campaign_date_start_short: 1 أكتوبر
-  europe_campaign_date_start_long: 1 أكتوبر
+  europe_campaign_date_start_short: 5 أكتوبر
+  europe_campaign_date_start_long: 5 أكتوبر
   europe_campaign_date_short: 1 أكتوبر - 18 ديسمبر
   europe_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   europe_campaign_date_year: '2021'
   europe_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   africa_campaign_date_start_short: 1 أكتوبر
-  africa_campaign_date_start_long: 1 أكتوبر
+  africa_campaign_date_start_long: 5 أكتوبر
   africa_campaign_date_short: 1 أكتوبر - 18 ديسمبر
   africa_campaign_date_full: 1 أكتوبر - 18 ديسمبر
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
+  hoc2023_header: الإبداع باستخدام الذكاء الاصطناعي
+  hoc2023_social_creativity_with_ai_title: "«ساعة البرمجة» - ما الذي ستقوم بإنشائه؟"
+  hoc2023_social_creativity_with_ai_desc: استخدم علوم الكمبيوتر لاستكشاف الذكاء الاصطناعي
+    والتعرف عليه!
   hoc2022_header: استكشف، العب، ابتكِر!
   social_hoc2022_explore_play_create: استخدم علم الكمبيوتر للاستكشاف واللعب والابتكار!
   codeorg_homepage_hoc2022_body: استكشف الكون، وسجل هدفًا، وقم بإيقاف الحركة - هناك
@@ -169,6 +173,28 @@ ar:
   curriculum_launch_2023_desc: تحديثات لـ CSC و CSP و CSD والمزيد - بالإضافة إلى كتالوج
     المناهج الجديد وصفحة التدريس المعاد تصميمها لمساعدتك في العثور على كل شيء!
   in_partnership_with: بشراكة مع
+  shop_code_dot_org_heading: متجر Code.org
+  shop_code_dot_org_desc: ادعم عملنا وارتدي الحركة بفخر. لقد تم ارتداء قبعاتنا من
+    قبل الرئيس أوباما والمشاهير أيضًا.
+  spread_the_word_heading: نشر المبادرة
+  spread_the_word_desc: قم بتضخيم تأثيرنا من خلال مشاركة Code.org مع شبكتك. من وسائل
+    التواصل الاجتماعي إلى تحديثات البريد الإلكتروني، اكتشف كيف يمكنك مساعدتنا في الوصول
+    إلى المزيد من المعلمين والطلاب والمدافعين.
+  follow_us_heading: تابعنا على وسائل التواصل الاجتماعي
+  follow_us_desc: ابق على اطلاع معنا على وسائل التواصل الاجتماعي وشارك منشوراتنا مع
+    شبكتك للبقاء على اطلاع والمساعدة في زيادة الوعي.
+  facebook: Pseudoloc-بلؤثخخن
+  twitter: Pseudoloc-فصهفثق
+  linked_in: لينكد إن
+  instagram: إينستاجرام
+  tik_tok: تيك توك
+  subscribe_to_emails_heading: اشترك في رسائل البريد الإلكتروني
+  subscribe_to_emails_desc: اقرأ حول ما يحدث في Code.org وفي تعليم علوم الكمبيوتر
+    من خلال التحديثات الفصلية عبر قائمتنا البريدية.
+  subscribe_to_emails_intl: اشترك في التحديثات الدولية
+  promote_code_dot_org_heading: الترويج لموقع Code.org
+  promote_code_dot_org_desc: قم بترويج علوم الكمبيوتر في منطقتك بمساعدة الإحصائيات
+    والاقتباسات ومقاطع الفيديو.
   afe_partnership_logo_alt: شعار أمازون فيوتشر إنجنيير
   afe_partnership_thanks_desc: Amazon Future Engineer هو برنامج شامل من الطفولة إلى
     الحياة المهنية لإلهام وتعليم وتدريب الأطفال والشباب ذوي الدخل المنخفض وغيرهم من
@@ -177,6 +203,24 @@ ar:
   grade_level_label_elementary: المدرسة الابتدائية
   grade_level_label_middle: المرحلة المتوسطة
   grade_level_label_high: المرحلة الثانوية
+  curricula_title_elementary: مناهج المدارس الابتدائية
+  curricula_desc_elementary: استعرض الدورات والأنشطة الممتعة والمجانية التي تدعوك
+    لاستكشاف علوم الكمبيوتر مع طلاب المدارس الابتدائية.
+  curricula_title_middle: مناهج المدارس المتوسطة
+  curricula_desc_middle: تصفح العروض الجذابة التي تمكنك أنت وطلاب المدارس المتوسطة
+    من استكشاف علوم الكمبيوتر معًا.
+  curricula_title_high: مناهج المدرسة الثانوية
+  curricula_desc_high: استعرض الدورات والأنشطة الجذابة التي تدعوك وطلاب المدارس الثانوية
+    للتعمق في علوم الكمبيوتر.
+  for_administrators_heading: بالنسبة للمسؤولين
+  for_administrators_desc: انضم إلى آلاف المدارس التي قامت بالفعل بدمج علوم الكمبيوتر
+    في مناهجها الدراسية.
+  for_parents_heading: لأولياء الأمور
+  for_parents_desc: يمكنك المساعدة في تشجيع مدرسة الطالب على تقديم تعليم علوم الكمبيوتر
+    أو توسيعه.
+  for_educators_heading: للمعلمين
+  for_educators_desc: ابدأ التدريس اليوم - لا حاجة لخبرة في علوم الكمبيوتر - من خلال
+    ورش العمل التعليمية المهنية لدينا.
   students_label: الطلاب
   teachers_label: المعلمون
   teacher_label_csf: مدرس أساسيات علوم الكمبيوتر
@@ -186,9 +230,11 @@ ar:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'المواد المطلوبة:'
   optional_materials: 'مواد اختيارية:'
+  call_to_action_hold_an_event: عقد حدث
   call_to_action_learn_more: اعرف المزيد
   call_to_action_watch_now: شاهد الآن
   call_to_action_try_activity: جرب النشاط
+  call_to_action_try_activities: جرب الأنشطة
   call_to_action_explore_unit: وحدة المستكشف
   call_to_action_explore_curriculum: اكتشف المنهج
   call_to_action_explore_curriculum_options: استكشف خيارات المناهج
@@ -203,6 +249,15 @@ ar:
   call_to_action_explore_choice_level: استكشف مستوى اختيار المثال
   call_to_action_explore_collection: اكتشف المجموعة
   call_to_action_explore_unplugged_lesson: استكشف الدروس غير الموصولة
+  call_to_action_explore_csf: اكتشف أساسيات علوم الكمبيوتر
+  call_to_action_explore_csd: اكتشف اكتشافات علوم الكمبيوتر
+  call_to_action_explore_csp: اكتشف مبادئ علوم الكمبيوتر
+  call_to_action_explore_csc: استكشف اتصالات CS
+  call_to_action_explore_csa: اكتشف علوم الكمبيوتر AP® A
+  call_to_action_explore_csa_short: اكتشف AP® CSA
+  call_to_action_explore_maker: اكتشف مناهج Maker
+  call_to_action_explore_hoc: استكشف دروس «ساعة البرمجة»
+  call_to_action_explore_hoc_short: اكتشف «ساعة البرمجة»
   call_to_action_try_app_lab: جرب مختبر التطبيقات
   call_to_action_view_lesson_plan: عرض خطة الدرس
   call_to_action_self_paced_pl: التعلم المهني الذاتي
@@ -226,6 +281,7 @@ ar:
   call_to_action_resources_tools: جرب أدوات البرمجة
   call_to_action_sign_up_free: سجل مجانًا
   call_to_action_explore_ai_resources: استكشف موارد الذكاء الاصطناعي
+  call_to_action_explore_ai_curricula: استكشف مناهج الذكاء الاصطناعي
   call_to_action_explore_curriculum_catalog: استكشف كتالوج المناهج
   call_to_action_see_full_curriculum_catalog: انظر دليل المناهج الكامل
   call_to_action_find_self_paced_modules: ابحث عن وحدات بوتيرة شخصية
@@ -247,6 +303,20 @@ ar:
   call_to_action_notify_available: أعلمني عندما تكون متاحة
   call_to_action_register_early_access: سجل للوصول المبكر
   call_to_action_open_positions: عرض المراكز المفتوحة
+  call_to_action_explore_roles: استكشف الأدوار المفتوحة
+  call_to_action_get_guide: احصل على الدليل
+  call_to_action_donate_to_cdo: تبرع لموقع Code.org
+  call_to_action_start_fundraiser: ابدأ حملة لجمع التبرعات
+  call_to_action_view_donation_policy: عرض سياسة التبرع
+  call_to_action_view_donate_bitpay: تبرع باستخدام BitPay
+  call_to_action_make_a_donation: قم بالتبرع
+  call_to_action_other_ways_to_give: طرق أخرى للعطاء
+  call_to_action_become_partner_usa: كن شريكًا للولايات المتحدة
+  call_to_action_become_partner_intl: كن شريكًا دوليًا
+  call_to_action_become_a_volunteer: كن متطوعًا
+  call_to_action_start_translating: ابدأ الترجمة
+  call_to_action_learn_about_advocacy: تعرف على المناصرة الخاصة بنا
+  call_to_action_visit_store: قم بزيارة المتجر
   aria_label_call_to_action_afe: تعرف على المزيد حول مهندس المستقبل في أمازون
   aria_label_call_to_action_teaching_csf: ابدأ برنامج التعلم المهني لتدريس أساسيات
     علوم الكمبيوتر
@@ -341,8 +411,11 @@ ar:
   curriculum_name_csp: مبادئ علوم الكمبيوتر
   curriculum_name_csc: روابط علوم الكمبيوتر
   curriculum_name_csa: علوم الكمبيوتر A
+  curriculum_name_csa_ai: Pseudoloc-سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
   curriculum_name_csc_02: أي وحدة من وحدات روابط علوم الكمبيوتر
   curriculum_name_ai: الذكاء الاصطناعي وتعلم الآلة
+  curriculum_name_artificial_intelligence: الذكاء الاصطناعي (AI)
+  curriculum_name_maker: صانع
   curriculum_name_maker_cp: إنشاء تطبيقات باستخدام الأجهزة (Circuit Playground)
   curriculum_name_maker_microbit: إنشاء تطبيقات باستخدام الأجهزة (micro:bit)
   curriculum_name_creating_apps_with_devices: إنشاء تطبيقات باستخدام الأجهزة
@@ -353,6 +426,8 @@ ar:
   curriculum_name_interactive_animations_games: الرسوم المتحركة والألعاب التفاعلية
   curriculum_name_design_process: عملية التصميم
   curriculum_name_data_society: البيانات والمجتمع
+  curriculum_desc_csf: مجموعة مجانية من المناهج الابتدائية التي تعرف الطلاب بالمفاهيم
+    الأساسية لعلوم الكمبيوتر.
   curriculum_desc_csf_express: تعلم كيفية إنشاء برامج الكمبيوتر وتطوير مهارات حل المشكلات
     والعمل من خلال التحديات الممتعة! قم بإنشاء ألعاب ومشاريع إبداعية لمشاركتها مع
     الأصدقاء والعائلة والمعلمين.
@@ -393,6 +468,22 @@ ar:
   curriculum_desc_creating_apps_with_devices: اكتشف دور الأجهزة المادية في الحوسبة.
     تطوير البرامج التي تستخدم مدخلات ومخرجات الأجهزة. يوجد إصدار من هذه الوحدة لكل
     من micro:bit وملعب الدائرة.
+  curriculum_desc_csa: عرّف الطلاب على هندسة البرمجيات والتصميم الموجه للكائنات أثناء
+    تعلمهم لغة برمجة Java في هذا المنهج المجاني لـ AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: يأخذ تعليم المصنّعين STEM (العلوم والتكنولوجيا والهندسة والرياضيات)
+    خطوة إلى الأمام من خلال دعوة الخبرة العملية والتعاون إلى الفصل الدراسي للمساعدة
+    في تعليم حل المشكلات والتفكير النقدي.
+  curriculum_desc_maker_short: يدعو تعليم Maker إلى الخبرة العملية والتعاون في الفصل
+    الدراسي للمساعدة في تعليم حل المشكلات والتفكير النقدي.
+  curriculum_desc_csd: دورة مرنة تسمح بتدريس كل وحدة بمفردها أو مجتمعة. يعرّف الطلاب
+    على إنشاء مواقع الويب والتطبيقات والرسوم المتحركة والألعاب وأنظمة الحوسبة المادية.
+  curriculum_desc_csp: دورة تمهيدية مجانية للمدارس الثانوية معتمدة من AP® CSP تُعرّف
+    الطلاب بالمفاهيم التأسيسية لعلوم الكمبيوتر.
+  curriculum_desc_csa_ai_long: 'تقدم وحدة ما بعد AP CSA المكونة من فصلين لطلاب المدارس
+    الثانوية خبرة عملية في أدوات تطوير البرامج الاحترافية، بما في ذلك GitHub و GitHub
+    Copilot، وتزودهم بمهارات العالم الحقيقي لتطوير برنامج رؤية الكمبيوتر. '
+  curriculum_desc_csa_ai_short: تقدم وحدة Post-AP® CSA لطلاب المدارس الثانوية خبرة
+    عملية مع أدوات تطوير البرامج الاحترافية.
   collection_hardware: التركيز على الأجهزة
   collection_hardware_desc: تُمكّن الطلاب من استخدام البيانات والأجهزة المادية لحل
     المشكلات.
@@ -423,6 +514,7 @@ ar:
   module_label_professional_learning: 'التعلم الاحترافي:'
   module_label_languages: 'اللغات المدعومة:'
   module_label_accessibility_features: 'إمكانية الوصول:'
+  module_label_accessibility_features_full: 'ميزات إمكانية الوصول:'
   module_label_educator_tool: أداة المعلم
   module_label_educator_course: دورة المعلم
   module_label_student_tool: أداة الطالب
@@ -430,6 +522,7 @@ ar:
   module_label_student_content_resources: المحتوى والموارد
   module_label_new: جديد
   module_label_coming_soon: سيتوفر قريبًا
+  module_label_available_now: متاح الآن
   module_label_video_series: سلسلة فيديو
   module_label_self_paced: وحدة ذاتية السرعة
   module_ages_5_10: 5-10
@@ -440,6 +533,8 @@ ar:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: من رياض الأطفال حتى الصف الثاني عشر
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -454,11 +549,14 @@ ar:
   module_grade_9_12_teachers: معلمو الصفوف 9-12
   module_level_beginner: مبتدئ
   module_level_intermediate: المستوى المتوسط
+  module_level_advanced: Pseudoloc-ليرلؤثي
   module_duration_45_mins: 45 دقيقة
+  module_duration_2_weeks: أسبوعان
   module_duration_1_hr: 1 ساعة
   module_duration_2_hrs: 2 ساعة
   module_duration_3_hrs: 3 ساعات
   module_duration_5_hrs: 5 ساعات
+  module_duration_5_hrs_plus: أكثر من 5 ساعات
   module_duration_8_hrs: 8 ساعات
   module_duration_20_hrs: 20 ساعة
   module_duration_35_hrs: 35 ساعة
@@ -470,6 +568,7 @@ ar:
   module_duration_school_year: العام الدراسي
   module_duration_month_quarter: الشهر أو الربع
   module_duration_month_semester_year: الشهر أو الفصل الدراسي أو السنة
+  module_duration_varies: يتباين
   module_prerequisites_none: لا شيء مما سبق
   module_prerequisites_maker_cp: الوصول إلى ملعب الدائرة
   module_prerequisites_maker_microbit: الوصول إلى ميكرو:بت
@@ -530,6 +629,9 @@ ar:
   heading_java_lab: مختبر جافا
   heading_objects_first: الكائنات أولاً
   heading_these_lessons_will: 'ستقوم هذه الدروس بما يلي:'
+  heading_explore_curriculum_catalog: استكشف جميع دوراتنا في كتالوج المناهج
+  heading_csa_ai: هل تبحث عن أشياء للقيام بها بعد اختبار AP®؟
+  heading_bring_cs_to_students: جلب علوم الكمبيوتر للطلاب
   professional_learning_section_desc: احصل على الدعم الذي تحتاجه أثناء الاستعداد للتدريس.
     يحبها المعلمون، حيث صنفها أكثر من 90٪ على أنها أفضل تطوير مهني على الإطلاق!
   professional_learning_section_desc_short: احصل على الدعم الذي تحتاجه أثناء الاستعداد
@@ -558,6 +660,23 @@ ar:
   support_and_questions_section_desc: فريق الدعم لدينا هنا للإجابة على أي أسئلة قد
     تكون لديك حول بدء التدريس باستخدام Code.org. يمكنك أيضًا سؤال المعلمين الآخرين
     عن تجربتهم في منتديات المعلمين لدينا.
+  subscribe_form_section_title: اشترك للحصول على التحديثات
+  subscribe_form_section_desc_csa: اشترك لتلقي رسائل بريد إلكتروني شهرية حول AP® Computer
+    Science A من Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم إرسالها مباشرة
+    إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_desc_csc: اشترك لتلقي رسائل بريد إلكتروني شهرية حول اتصالات
+    علوم الكمبيوتر الخاصة بـ Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم
+    إرسالها مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_desc_csd: اشترك لتلقي رسائل بريد إلكتروني شهرية حول اكتشافات
+    علوم الكمبيوتر في Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم إرسالها
+    مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_desc_csf: اشترك لتلقي رسائل بريد إلكتروني شهرية حول أساسيات
+    علوم الكمبيوتر في Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم إرسالها
+    مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_desc_csp: اشترك لتلقي رسائل بريد إلكتروني شهرية حول مبادئ
+    علوم الكمبيوتر الخاصة بـ Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم
+    إرسالها مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_unsubscribe: يمكنك إلغاء الاشتراك في أي وقت.
   blockchain_hero_heading: كيف تعمل تقنية البلوك تشين
   blockchain_hero_desc: انغمس في عالم بلوكتشين من خلال «كيف تعمل بلوكتشين»، سلسلة
     الفيديو الجديدة والدروس المصاحبة لها!
@@ -657,6 +776,8 @@ ar:
   ai_curriculum_desc_04: تكمل هذه الدروس سلسلة فيديو How AI Works. يتم ربط كل درس
     بفيديو واحد من السلسلة، للتعمق في المفاهيم المقدمة في مقاطع الفيديو.
   ai_curriculum_btn_aria_label_04: استكشف دروس كيف يعمل الذكاء الاصطناعي
+  ai_curriculum_grades_05: 'مستويات الصف: 9-12'
+  ai_curriculum_btn_aria_label_05: استكشف وحدة هندسة البرمجيات ورؤية الكمبيوتر
   ai_carousel_heading: 'ماذا يقول المعلمون عن الذكاء الاصطناعي مع Code.org:'
   ai_carousel_quote_01: كما أتاح هذا الدرس لطلابي الفرصة لرؤية وجود عنصر رأي في أنظمة
     التصنيف. في وقت لاحق، عندما بدأنا نرى كيف يمكن أن ينتهي التحيز في الذكاء الاصطناعي،
@@ -765,11 +886,19 @@ ar:
     واستخدام الأدوات التعليمية للذكاء الاصطناعي والاستفادة من الذكاء الاصطناعي لتقييم
     الطلاب. من خلال مزيج غني من النظرية والأمثلة العملية والموارد، تهدف إلى تمكين
     المعلمين من التنقل في مشهد الذكاء الاصطناعي وتعزيز تجارب تعلم الطلاب.
+  ai_pl_101_resources_5: دليل لضمان اتباع نهج مسؤول للذكاء الاصطناعي
   ai_pl_101_video_desc_6: 'تعرف على المزيد حول التكنولوجيا الجديدة التي تقود التغييرات
     الكبيرة في الذكاء الاصطناعي، والتي تضم مقطعي فيديو جديدين عن نماذج اللغات الكبيرة
     (مثل ChatGPT) والذكاء الاصطناعي التوليدي. استمع إلى كيفية عمل هذه التقنيات الجديدة
     مباشرة من الخبراء: ميرا موراتي، رئيسة قسم التكنولوجيا في OpenAI، وكريستوبل فالينزويلا،
     الرئيس التنفيذي لشركة RunWayML.'
+  ai_pl_101_llm_slides_title: موجهات نموذج اللغة الكبيرة للمعلمين
+  ai_pl_101_llm_slides_desc: أدوات للحصول على أفضل إخراج ممكن من LLMs مثل ChatGPT،
+    من المبتدئين إلى المتقدمين. يتضمن تعليمات البدء لأولئك الذين يغمسون أصابع قدمهم
+    فقط، بالإضافة إلى أدوات متقدمة لأولئك الذين يتطلعون إلى تعظيم إمكاناتهم.
+  ai_pl_101_resources_3: موجهات الذكاء الاصطناعي لتحويل تعلم الطلاب
+  ai_pl_101_resources_section_title: المزيد من الطرق للتعرف على الذكاء الاصطناعي
+  ai_pl_101_resources_guide: 'دليل الرفيق:'
   how_ai_works_hero_heading: كيف يعمل الذكاء الاصطناعي
   how_ai_works_hero_desc: انغمس في عالم الذكاء الاصطناعي من خلال سلسلة مقاطع الفيديو
     «How AI Works» والدروس المصاحبة لها!
@@ -1070,17 +1199,17 @@ ar:
   teach_page_free_curriculum_heading: منهج مجاني وجذاب
   teach_page_free_curriculum_desc: نريد منك إدخال علوم الكمبيوتر إلى مدرستك دون القلق
     بشأن التكلفة. لهذا السبب فإننا نلتزم بتقديم مناهجنا بشكل مجاني إلى الأبد!
-  teach_page_free_curriculum_list_heading_01: منهج جذاب لكل مستوى صف
   teach_page_free_curriculum_list_desc_01: منهج مجاني ومرن وممتع مع عروض بأكثر من
     67 لغة.
-  teach_page_free_curriculum_list_heading_02: منهج مبتكر وقابل للتكيف
   teach_page_free_curriculum_list_desc_02: يقدم Code.org كل شيء من مناهج العام الكامل
     إلى أنشطة الوحدات الفردية. بالإضافة إلى ذلك، نقوم بتحديث مناهجنا سنويًا لدعم أفضل
     الممارسات ومجالات التركيز، وتقديم عروض جديدة لتدريس الموضوعات الحالية المطلوبة.
-  teach_page_free_curriculum_list_heading_03: منهج مُنظم ومصمم وفقًا للمعايير الوطنية
   teach_page_free_curriculum_list_desc_03: يتم تخطيط كل منهج حسب مجموعة واحدة على
     الأقل من المعايير الوطنية، بما في ذلك CSTA، ومعايير علوم الجيل التالي (Next Generation
     Science)، و Common Core.
+  teach_page_free_curriculum_list_desc_04: عروض بأكثر من 67 لغة
+  teach_page_free_curriculum_list_desc_05: تم تعيينه لمجموعة واحدة على الأقل من المعايير
+    الوطنية (بما في ذلك CSTA و NGSS و Common Core)
   teach_page_free_curriculum_heading_02: 'استكشف عروض المناهج لدينا لمستويات الصفوف
     المختلفة:'
   teach_page_resources_heading: موارد تدعمك في كل خطواتك
@@ -1137,8 +1266,8 @@ ar:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: مختبر التطبيقات
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: ورش عمل يقودها الميسرون، وحدات
+    التعلم الذاتي
   csp_page_curriculum_glance_professional_languages: الإنجليزية
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1264,8 +1393,8 @@ ar:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: مختبر التطبيقات، مختبر الألعاب، مختبر الذكاء الاصطناعي،
     مختبر الويب
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: ورش عمل يقودها الميسرون، وحدات
+    التعلم الذاتي
   csd_page_curriculum_glance_professional_languages: الإنجليزية
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1325,10 +1454,10 @@ ar:
     استبدال البنسات بنوع آخر من الوزن من نفس الحجم). تتوفر الأنشطة البديلة إذا لم
     يكن لديك حق الوصول إلى هذه المستلزمات.
   csd_page_faq_answer_04_06: إنشاء تطبيقات باستخدام الأجهزة (الخيار A والخيار B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'الخيار أ: مجموعة الفصول الدراسية من ملاعب الدائرة. تحقق
+    من [code.org/maker/circuitplayground] () لمزيد من التفاصيل.%{url}'
+  csd_page_faq_answer_04_08: 'الخيار B: مجموعة الفصل الدراسي من أجهزة micro:bit. راجع
+    [code.org/maker/microbit] () لمزيد من التفاصيل.%{url}'
   csd_page_faq_answer_04_09: لوازم المصنّع، مثل علب المناديل الفارغة أو لفائف الكرتون
     أو ورق الخدش
   csd_page_faq_answer_04_10: "*ملاحظة: تحتوي وحدة إنشاء التطبيقات مع الأجهزة على خيارين
@@ -1394,8 +1523,8 @@ ar:
     الفن والتصميم, تصميم التطبيقات
   csf_page_curriculum_glance_devices: كمبيوتر محمول، جهاز Chromebook، جهاز لوحي
   csf_page_curriculum_glance_tools: سبرايت لاب، بلاي لاب
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: ورش عمل يقودها الميسرون، وحدات
+    التعلم الذاتي
   csf_page_curriculum_glance_languages: العربية، البهاسا الإندونيسية، الكاتالونية،
     الصينية المبسطة، الصينية التقليدية، التشيكية، الفرنسية، الألمانية، الهندية، الإيطالية،
     اليابانية، الكورية، الكانادية، الماليزية، الماراثية، المنغولية، البولندية، البرتغالية-BR،
@@ -1530,6 +1659,55 @@ ar:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: ساعد في تمويل مهمتنا
+  donate_page_top_desc: كل تبرع يغذي مهمة Code.org لتوسيع الوصول إلى تعليم علوم الكمبيوتر.
+    نقدم لك عدة طرق للتبرع وإحداث فرق.
+  donate_page_fundraise_title: جمع التبرعات لموقع Code.org
+  donate_page_fundraise_desc: ساعد في جمع الأموال لـ Code.org! يجب أن تتاح لكل طالب
+    في كل مدرسة الفرصة لتعلم علوم الكمبيوتر.
+  donate_page_other_ways_title: طرق أخرى للعطاء
+  donate_page_other_ways_desc: استكشف طرقًا متنوعة للمساهمة، وابحث عن الخيار الذي
+    يناسبك بشكل أفضل. كل لفتة، كبيرة كانت أم صغيرة، تدفع مهمتنا إلى الأمام.
+  donate_page_501c3: تم تسجيل Code.org كمنظمة غير ربحية عامة 501 (c) (3). المساهمات
+    في Code.org قابلة للخصم الضريبي إلى الحد الذي يسمح به القانون. رقم التعريف الضريبي
+    لـ Code.org هو 46-0858543.
+  donate_page_donation_policy_title: فهم سياسة التبرع الخاصة بنا
+  donate_page_donation_policy_desc: تعرف على كيفية تعاملنا مع مساهماتك وتخصيصها.
+  donate_tabs_tab_label_daf_direct: DAF دايركت
+  donate_tabs_tab_label_amazon: الأمازون
+  donate_tabs_tab_label_bitpay: بيتباي
+  donate_tabs_tab_label_employee_match: مباراة الموظفين
+  donate_tabs_daf_direct_title: تبرع عبر DAF Direct
+  donate_tabs_daf_direct_desc: تبرع من خلال الصندوق الذي ينصح به المانحون مع Fidelity
+    Charitable أو Schwab Charitable أو BNY Mellon وقم بتقديم توصية المنحة الخاصة بك
+    إلى Code.org من خلال نموذج DAF Direct عبر الإنترنت.
+  donate_tabs_amazon_title: تبرع عبر أمازون
+  donate_tabs_amazon_desc: تبرع مباشرة باستخدام حساب Amazon الخاص بك. من خلال بضع
+    نقرات فقط، يمكنك المساهمة بسلاسة في مهمة Code.org وتمكين مستقبل تعليم علوم الكمبيوتر.
+  donate_tabs_bitpay_title: تبرع بالعملات المشفرة عبر BitPay
+  donate_tabs_bitpay_desc: احتضن مستقبل العطاء باستخدام العملة المشفرة. من خلال BitPay،
+    يمكن لعملتك الرقمية أن تدعم بشكل مباشر مساعي Code.org في توسيع تعليم علوم الكمبيوتر.
+  help_page_top_heading: كيف يمكنك المساعدة
+  help_page_top_desc: ادعم مهمتنا لجعل علوم الكمبيوتر متاحة لكل طفل وفي كل مكان. تساعدنا
+    جهودك في إلهام مبتكري المستقبل وسد فجوة التعليم التكنولوجي.
+  help_page_top_subhead: قم بالتبرع إلى Code.org
+  help_page_top_desc_02: نحن نعمل على منح كل طالب الفرصة لتعلم علوم الكمبيوتر - سواء
+    عبر الإنترنت أو في المدارس، حيث ننشئ دورات دائمة وندرب المعلمين. مقابل كل دولار
+    تتبرع به، يتم تعريف طفل واحد بعلوم الكمبيوتر.
+  help_page_partners_heading: كن شريكًا
+  help_page_partners_desc: تعمل Code.org مع المنظمات غير الربحية الأخرى كشركاء للمساعدة
+    في نشر علوم الكمبيوتر بطريقة محلية ومستدامة. تعرف على المزيد حول برنامجنا.
+  help_page_volunteer_heading: تطوع في فصل دراسي
+  help_page_volunteer_desc: تطوع لتدريس ساعة البرمجة أو كن ضيفًا متحدثًا في فصل دراسي
+    محلي. قم بالتسجيل للاستماع إلى الفرص القريبة منك.
+  help_page_translate_heading: ساعدنا في الترجمة
+  help_page_translate_desc: قام المتطوعون بترجمة دروسنا التعليمية بأكثر من 45 لغة.
+    ساعدنا على الاستمرار في توسيع برامجنا التعليمية للطلاب في جميع أنحاء العالم!
+  help_page_speak_for_cs_heading: تحدث عن تعليم علوم الكمبيوتر
+  help_page_speak_for_cs_desc: تعرف على المزيد حول أعمال المناصرة التي تقوم بها Code.org
+    في جميع أنحاء الولايات المتحدة والسياسات العشر التي نوصي الولايات باعتمادها لجعل
+    علوم الكمبيوتر أساسية لجميع الطلاب. بالإضافة إلى ذلك، اكتشف كيف يمكنك قيادة التغيير
+    في ولايتك.
   hoc_live: أور أوف كود لايف
   hoc_live_sign_up_title: اشترك في برنامج «ساعة البرمجة» المباشر
   hoc_live_learn_title: تعلم مع برنامج «ساعة البرمجة» المباشر
@@ -1941,6 +2119,11 @@ ar:
     دورات Code.org أو الفرص المحلية أو غيرها من أخبار علوم الحاسوب؟
   signup_email_preference_privacy: "(راجع سياسة الخصوصية الخاصة بنا)"
   signup_email_preference_yes: نعم
+  signup_email_preference_yes_elementary: نعم - أرسل لي تحديثات حول موارد المدرسة
+    الابتدائية
+  signup_email_preference_yes_middle: نعم - أرسل لي تحديثات حول موارد المدرسة المتوسطة
+  signup_email_preference_yes_high: نعم - أرسل لي تحديثات حول موارد المدرسة الثانوية
+  signup_email_preference_yes_general: نعم - أرسل لي تحديثات عامة
   signup_email_preference_no: لا
   signup_email_preference_error: البريد الإلكتروني مطلوب
   signup_multiple_event_warning: سنضع اسم مدرستك ومدينتك على الخريطة عند التسجيل.
@@ -12014,12 +12197,11 @@ ar:
     وإبداعك الخاص من خلال منهج CS First ولغة "سكراتش".
   tutorial_googlename _longdescription: اختر اسمًا وأضف الحياة إلى حروف الكلمات باستخدام
     البرمجة. اختر لقبًا أو اسم حيوان أليف أو حيوانًا أو رياضة أو مكانًا أو هواية.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: مدينة زيلا مزدهرة، والموسيقى في الهواء
+    الطلق. تقول الشائعات أن روبوت Gargantua الشهير متصل بالإنترنت ويرسل آخر Toxibots
+    لتحطيم المدينة كتلة تلو الأخرى.…احصل على لوح التزلج cobot الخاص بك واستعد للتحريك
+    وإنهاء ما بدأته! يقوم اللاعبون ببرمجة روبوتات الكوبوت الخاصة بهم لتغيير المسارات
+    وتجنب العقبات وإخراج العديد من Toxibots في هذه اللعبة ذات النمط الإيقاعي.
   tutorial_nasachspacejam_longdescription: قم بإنشاء نظام شمسي رائع حقًا! تعرف على
     الموسيقى وعلم الفلك والترميز في هذا النشاط الموجه ذاتيًا (لا يلزم وجود خبرة في
     الترميز). قم ببرمجة الكواكب لتأليف الموسيقى، وإنشاء نظامك الشمسي الموسيقي الخاص،
@@ -12820,6 +13002,287 @@ ar:
     على مستوى المؤسسة لمدة أسبوعين في نهاية العام المعروف أيضًا باسم عطلة الشتاء)،
     ونصف يوم عمل في أيام الجمعة خلال فصل الصيف المعروف أيضًا باسم أيام الجمعة الصيفية،
     وغيرها من المزايا السخية.
+  careers_hero_title: Pseudoloc-ؤلقثقس
+  careers_hero_description: Code.org هي منظمة غير ربحية مكرسة لتوسيع الوصول إلى علوم
+    الكمبيوتر في المدارس. نحن نركز بشكل خاص على زيادة المشاركة بين الشابات والطلاب
+    ناقصي التمثيل.
+  careers_hero_description_under: ساعدنا في تغيير العالم، طالب واحد في كل مرة!
+  careers_vision_title: رؤيتنا
+  careers_vision_decsription: رؤيتنا هي أن كل طالب في كل مدرسة يجب أن تتاح له الفرصة
+    لتعلم علوم الكمبيوتر كجزء من تعليمه الأساسي K-12.
+  careers_vision_description_under: تعال وانضم إلى فريقنا للمساعدة في جعل هذه الرؤية
+    حقيقة!
+  careers_values_title: قيمنا الأساسية
+  careers_values_first_column_text_1: نعتقد أن علوم الكمبيوتر هي الأساس لجميع الطلاب
+  careers_values_first_column_text_2: نحن ملتزمون بالمساواة والوصول والفرص
+  careers_values_first_column_text_3: نحن نؤمن بقوة مجتمع التعليم التعاوني
+  careers_values_second_column_text_1: نحن رشيقون ومستجيبون للتعليقات
+  careers_values_second_column_text_2: نحن نعمل بنزاهة وشفافية
+  careers_values_second_column_text_3: نعتقد أن التأثير الواسع يتطلب التفكير بشكل
+    كبير والتصرف بشكل كلي
+  careers_approach_section_title: نهجنا الموحد
+  careers_approach_section_description: إن الدور العالمي لـ Code.org في حركة علوم
+    الكمبيوتر K-12 ممكن فقط لأننا نستخدم نهجًا موحدًا عبر أصحاب المصلحة المتنوعين
+    والمنقسمين في كثير من الأحيان. في وقت يزداد فيه الاستقطاب، توحد فكرة زيادة الفرص
+    للطلاب الناس من مختلف الأطياف السياسية. لدى أعضاء فريق Code.org والطلاب والمعلمين
+    والداعمين وجهات نظر متنوعة ومتباينة، وهم جميعًا موضع ترحيب في مهمتنا.
+  careers_aproach_section_description_link: اقرأ المزيد عن نهج Code.org للوحدة.
+  careers_approach_section_button: استكشف الأدوار المفتوحة
+  careers_principle_section_title: مبادئنا الثقافية
+  careers_principle_title_1: طلابنا ومعلمينا هم نجم الشمال لدينا
+  careers_principle_description_1: نحن نستخدم هدايانا ووقتنا وطاقتنا لتقديم علوم الكمبيوتر
+    لأولئك الذين هم في أمس الحاجة إليها. هذا هو ما يوحدنا. هذا هو أهم مبدأ لدينا.
+  careers_principle_title_2: نحن قاسون في المشاكل ولطيفون مع بعضنا البعض
+  careers_principle_description_2: نواصل التركيز على التحدي المتمثل في جلب علوم الكمبيوتر
+    للطلاب والمعلمين على مستوى العالم. نحن ندرك أن كل واحد منا يقدم أفضل نواياه لدعم
+    مهمتنا وإعطاء النعمة عندما نرتكب أخطاء.
+  careers_principle_title_3: ابحث عن الحلول وليس الإجماع
+  careers_principle_description_3: نحن نملك القرارات، سواء باتخاذ خطوات صغيرة أو قفزات
+    كبيرة نحو النتائج التي نسعى إليها. يطلب المالكون التعليقات ويستمعون إليها، لكنهم
+    لا يصابون بالشلل بسبب التعليقات. نحن نقبل وندعم قرارات المالكين، حتى لو اختلفنا.
+  careers_principle_title_4: تبنّي عقلية المؤسس
+  careers_principle_description_4: نحن مهووسون بالنتائج ونركز أفعالنا على قيادتها.
+    نحن نتعمق في التفاصيل ونعمل بجد. نحن صادقون، ونميل إلى الرشاقة، ونقيم باستمرار
+    ما إذا كنا على المسار الصحيح؛ نحن لا نخشى التمحور. تغيير العالم يتطلب ذلك.
+  careers_principle_title_5: بطل الابتكار
+  careers_principle_description_5: نحن نفكر بشكل كبير ونتحمل المخاطر ولا نخشى الفشل.
+    إذا رأينا طريقة أفضل لتحقيق أهدافنا، فإننا نفعل ذلك ونشجع الآخرين على القيام بذلك
+    أيضًا. لن تساعد الحلول الإضافية في تغيير العالم.
+  careers_principle_title_6: ترسيخ القرارات في الحقائق
+  careers_principle_description_6: نحن نستخدم البيانات لفهم أعمالنا وتحديد النتائج
+    المرجوة وتوجيه عملية صنع القرار. نحن نوازن هذا من خلال الاعتراف بأننا لن نحصل
+    دائمًا على البيانات التي نحتاجها من أجل التصرف.
+  careers_principle_title_7: عقلية النمو تغذينا
+  careers_principle_description_7: نحن نتعامل مع كل تحد بفضول. نقدم ملاحظاتك بلطف
+    وصراحة؛ نتلقى التعليقات بصراحة. نتعلم من أخطائنا ونبحث عن طرق لزيادة مدى تأثير
+    عملنا.
+  careers_balance_section_title: التوازن بين العمل والحياة
+  careers_balance_section_description: نحن نهتم بموظفينا ونكرس جهودنا لدعم الجميع
+    في العمل وخارجه. نحن نعلم أن كل شخص لديه احتياجات مختلفة، وهذا هو السبب في أننا
+    نقدم حزمة مزايا شاملة تضمن العناية بك (وعائلتك).
+  careers_balance_first_column_text_1: فوائد صحية لك ولعائلتك
+  careers_balance_first_column_text_2: خطط إجازات وإجازات سخية مدفوعة الأجر
+  careers_balance_second_column_text_1: بيئة عمل مرنة وداعمة
+  careers_balance_second_column_text_2: فرص النمو والتعلم المهني
+  careers_openroles_section_title: الأدوار المفتوحة
+  careers_openroles_section_description: يقع موقع Code.org في سياتل، ولكن العديد من
+    أعضاء فريقنا يعملون عن بُعد. يتم الترحيب بالمرشحين عن بُعد وتشجيعهم على التقديم.
+  careers_more_info_text: لمزيد من المعلومات حول Code.org، راجع [الأسئلة الشائعة]
+    (%{support_url}) أو تعرف على [طرق أخرى للمشاركة في مهمتنا] (%{help_url}).
+  careers_approach_section_title2: نهجنا للتنوع
+  careers_approach_section_description_1: نحن نتبنى وجهات نظر وأفكار وخلفيات متنوعة
+    في Code.org. نحن ملتزمون بتوفير فرصة متساوية لجميع الموظفين والمتقدمين. نحن لا
+    نميز على أساس العرق أو الدين أو اللون أو الأصل القومي أو الجنس أو التوجه الجنسي
+    أو العمر أو الحالة الاجتماعية أو حالة المحاربين القدامى أو حالة الإعاقة (العقلية
+    والجسدية).
+  careers_approach_section_description_2: سوف نضمن توفير تسهيلات معقولة للأفراد ذوي
+    الإعاقة للمشاركة في طلب الوظيفة أو عملية المقابلة، لأداء وظائف الوظيفة الأساسية،
+    والحصول على مزايا وامتيازات التوظيف الأخرى. إذا كانت لديك احتياجات فردية تتعلق
+    بالإعاقة، فيرجى التواصل مع accommodations@code.org.
+  csa_ai_page_hero_title: Pseudoloc-سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
+  csa_ai_page_hero_description: 'تقدم وحدة ما بعد AP CSA المكونة من فصلين لطلاب المدارس
+    الثانوية خبرة عملية في أدوات تطوير البرامج الاحترافية، بما في ذلك GitHub و GitHub
+    Copilot، وتزودهم بمهارات العالم الحقيقي لتطوير برنامج رؤية الكمبيوتر. '
+  csa_ai_page_video_section_title: تخطو إلى ما وراء عالم بيئات برمجة Code.org
+  csa_ai_page_video_section_li_1: تعرف على الذكاء الاصطناعي وتطبيقاته
+  csa_ai_page_video_section_li_2: خبرة عملية مع أدوات تطوير البرامج الاحترافية
+  csa_ai_page_video_section_li_3: تعلم الممارسات المتوافقة مع معايير الصناعة
+  csa_ai_page_video_section_li_4: زراعة التفكير النقدي
+  csa_ai_page_programming_tools: 'أدوات البرمجة: جيثب، جيثب كوبيلوت، VSCode، TensorFlow '
+  csa_ai_page_professional_learning: لا شيء مما سبق
+  csa_ai_page_curriculum_topics: 'المواضيع: البرمجة والبيانات والفن والتصميم والألعاب
+    والرسوم المتحركة'
+  csa_ai_page_curriculum_accessibility_features: راجع قسم الأسئلة الشائعة للحصول على
+    التفاصيل
+  csa_ai_page_curriculum_languages_support: الإنجليزية
+  csa_ai_page_article_title_1: Pseudoloc-اعهم صهف ؤخحمخف
+  csa_ai_page_article_description_1: يتعلم الطلاب كيفية استخدام GitHub Copilot كمبرمج
+    مزدوج لشرح التعليمات البرمجية الحالية والعثور على الأخطاء وإصلاحها وإنشاء حلول
+    للمشاكل الجديدة.
+  csa_ai_page_article_link_1: تعرف على المزيد حول مساعد الطيار
+  csa_ai_page_article_title_2: قم ببناء نموذج الذكاء الاصطناعي الخاص بك
+  csa_ai_page_article_description_2: يقوم الطلاب بتدريب نماذج الذكاء الاصطناعي الخاصة
+    بهم باستخدام Teachable Machine للتعرف على الصور والإيماءات من كاميرا الويب والنظر
+    في كيفية تأثير رؤية الكمبيوتر على طريقة تفاعل المستخدمين مع التطبيقات.
+  csa_ai_page_article_link_2: اكتشف خطة الدرس
+  csa_ai_page_article_title_3: اكتشف رؤية الكمبيوتر
+  csa_ai_page_article_description_3: يقوم الطلاب بتطبيق نماذج الذكاء الاصطناعي التي
+    قاموا بإنشائها باستخدام Teachable Machine في تطبيق Java، باستخدام GitHub Copilot
+    لمساعدتهم على تعديل الإصدارات الحالية من التطبيقات للعمل مع المدخلات المختلفة.
+  csa_ai_page_article_link_3: شاهد مثالاً
+  csa_ai_page_learn_more_section_title: تعرف على المزيد حول الذكاء الاصطناعي
+  csa_ai_page_learn_more_title: اكتشف الذكاء الاصطناعي 101 للمعلمين
+  csa_ai_page_learn_more_description: اكتشف العالم الرائد للذكاء الاصطناعي (AI) وإمكاناته
+    التحويلية في التعليم من خلال سلسلة التعلم الشاملة عبر الإنترنت للمعلمين.
+  csa_ai_page_learn_more_link: شاهد سلسلة الذكاء الاصطناعي 101 للمعلمين
+  csa_ai_page_faq_question_01: ما هي المتطلبات الأساسية لهذه الوحدة؟
+  csa_ai_page_faq_answer_01_01: 'قبل الغوص في هذه الوحدة، يجب أن يمتلك الطلاب معرفة
+    أولية بجافا. وعلى وجه التحديد، ينبغي لهم فهم ما يلي:'
+  csa_ai_page_faq_answer_01_list_01: "** الفئات والكائنات: ** يجب أن يكون الطلاب على
+    دراية بتعريف الفصول الدراسية واستخدامها، بالإضافة إلى إنشاء الكائنات ومعالجتها."
+  csa_ai_page_faq_answer_01_list_02: "** طرق الكتابة والاستدعاء: ** يجب أن يكون الطلاب
+    قادرين على تحديد الأساليب داخل الفصل، وفهم معلمات الطريقة وأنواع الإرجاع، وطرق
+    الاتصال من الكائنات أو الطرق الأخرى."
+  csa_ai_page_faq_answer_01_list_03: "** المصفوفات 1D و ArrayLists: ** يجب أن يكونوا
+    بارعين في الإعلان عن المصفوفات أحادية البعد وقوائم ArrayLists وتهيئتها ومعالجتها،
+    بما في ذلك التكرار من خلالها."
+  csa_ai_page_faq_answer_01_list_04: "** التحديد والتكرار: ** يعد الأساس المتين في
+    العبارات الشرطية والحلقات أمرًا بالغ الأهمية."
+  csa_ai_page_faq_question_01_02: من الناحية المثالية، سيكون الطلاب الذين أكملوا AP
+    Computer Science A أو دورة ذات عمق ودقة مماثلين مستعدين جيدًا لهذه الوحدة.
+  csa_ai_page_faq_question_02: كيف أقوم بتثبيت البرنامج المطلوب لهذه الوحدة؟
+  csa_ai_page_faq_answer_02_01: هذه الوحدة فريدة من نوعها لأنها تتضمن استخدام برامج
+    طرف ثالث بدلاً من مختبرات وأدوات Code.org. [اقرأ المزيد حول تثبيت البرنامج هنا]
+    (%{accessibility_url}).
+  csa_ai_page_faq_question_03: كيف يمكنني دعم احتياجات إمكانية الوصول أثناء تدريس
+    هذه الوحدة؟
+  csa_ai_page_faq_answer_03_01: يعد تلبية احتياجات إمكانية الوصول أمرًا بالغ الأهمية
+    لبيئة تعليمية شاملة. [اقرأ المزيد حول ميزات إمكانية الوصول في البرنامج المستخدم
+    في هذه الوحدة هنا] (%{install_url}).
+  csa_ai_page_faq_question_04: كيف أستخدم VS Code على أجهزة Chromebook؟
+  csa_ai_page_faq_answer_04: أصبح استخدام VS Code على Chromebook أكثر وضوحًا، خاصة
+    مع القدرة على تشغيل تطبيقات Linux على طرازات Chromebook الأحدث. [اقرأ المزيد حول
+    إعداد VS Code على أجهزة Chromebook هنا] (%{chromebook_url}).
+  csa_ai_page_faq_question_05: كيف يمكنني الحصول على التطوير المهني لهذه الوحدة؟
+  csa_ai_page_faq_answer_05: لا يوجد حاليًا تطوير مهني محدد لهذه الدورة. إذا كنت تتطلع
+    إلى فهم كيفية التعامل مع الذكاء الاصطناعي في الفصل الدراسي الخاص بك، فيمكنك [استكشاف
+    AI 101 للمعلمين] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: ما هو التوقيت الموصى به لتدريس هذه الوحدة؟
+  csa_ai_page_faq_answer_06_01: تم تصميم وحدة هندسة البرمجيات ورؤية الكمبيوتر بعناية
+    لتوفير التعلم الشامل في إطار زمني موجز. تم تصميم الوحدة بأكملها لتمتد **أسبوعين
+    من التعليم**. تم تصميم معظم الدروس لمدة **45 دقيقة**، بينما تم تصميم الدروس التي
+    يتعمق فيها الطلاب في تطوير مشروع Java العملي لمدة **90 دقيقة**. يضمن هذا الوقت
+    الممتد للطلاب فرصة كبيرة للفهم والتنفيذ واستكشاف الأخطاء وإصلاحها أثناء عملهم.
+  csa_ai_page_faq_answer_06_02: هناك أيضًا مرونة مقصودة مضمنة في بنية الوحدة. استنادًا
+    إلى ديناميكيات الفصل الدراسي ومشاركة الطلاب والعمق الذي ترغب في استكشاف كل موضوع
+    فيه، يمكنك ضبط المدة. على سبيل المثال، يمكن توسيع درس Intro to Copilot، المصمم
+    كدرس مدته 45 دقيقة، إلى 90 دقيقة إذا كنت ترغب في التعمق في كيفية عمل نماذج وأدوات
+    اللغة الكبيرة مثل GitHub Copilot و ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: باستخدام حساب المعلم المعتمد، يمكنك العثور على مفاتيح
+    الإجابة في لوحة «المعلم» الزرقاء التي تظهر في الدروس والأنشطة عبر الإنترنت. إذا
+    كنت بحاجة إلى حساب مدرس معتمد، يمكنك التقدم للحصول على مواد محمية خاصة بالمعلم
+    فقط (مفاتيح الإجابة، إلخ) من خلال [هذا النموذج] ().%{form_url}يرجى الأخذ في الاعتبار
+    أن الأمر قد يستغرق 3-5 أيام عمل للتحقق من حسابك.
+  csa_ai_page_faq_question_08: هل تم تعيين هذه الوحدة وفقًا للمعايير؟
+  csa_ai_page_faq_answer_08: نعم، تم تعيين منهج هندسة البرمجيات ورؤية الكمبيوتر وفقًا
+    لـ [معايير CSTA K-12] (%{csta_k12_url}) والذكاء الاصطناعي لـ [إرشادات K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: كم يكلف تدريس هذه الوحدة؟
+  csa_ai_page_faq_answer_09_01: مناهجنا ومنصتنا متاحان بـ [بدون تكلفة] (%{no_cost_url})
+    لأي شخص، في أي مكان، للتدريس!
+  csa_ai_page_faq_answer_09_02: بالإضافة إلى ذلك، فإن البرامج والأدوات المستخدمة في
+    هذه الوحدة مجانية. برنامج GitHub Copilot مجاني للتحقق من [teachers](%{teachers_url})
+    و [students](%{students_url}).
+  csa_ai_page_faq_question_10: ماذا أفعل إذا لم يعمل تثبيت البرنامج؟
+  csa_ai_page_faq_answer_10: قد تكون مواجهة المشكلات أثناء تثبيت البرامج أمرًا شائعًا،
+    ولكن هناك خطوات منهجية يمكنك اتباعها لاستكشاف الأخطاء وإصلاحها وحلها. [تحقق من
+    بعض نصائح استكشاف الأخطاء وإصلاحها هنا] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'تم تصميم منهج هندسة البرمجيات ورؤية الكمبيوتر مع
+    وضع قيم المناهج الدراسية في الاعتبار. أدت الأهداف التالية إلى إنشاء هذا المنهج:'
+  csa_ai_page_faq_answer_11_list_01: "** الهدف 1: ** استخدم أدوات الذكاء الاصطناعي
+    لإنشاء التعليمات البرمجية وتصحيحها وتحريرها."
+  csa_ai_page_faq_answer_11_list_02: "** الهدف 2: ** الانتقال من Java Lab إلى أدوات
+    العالم الحقيقي."
+  csa_ai_page_faq_answer_11_list_03: "** الهدف 3: ** تعميق فهم كيفية تدريب نماذج الذكاء
+    الاصطناعي ودمجها في البرامج."
+  csa_ai_page_faq_answer_11_02: لمزيد من المعلومات حول القيم التي وجهت عملنا، يرجى
+    الاطلاع على [قيم المنهج] (%{curriculum_values_url}).
+  video_library_page_main_title: مقاطع فيديو تعليمية قصيرة
+  video_library_page_hero_description: مكتبة Code.org المتنامية من مقاطع الفيديو التعليمية
+    متاحة لإعادة استخدامها من قبل المعلمين في جميع أنحاء العالم، عبر الإنترنت أو في
+    الفصول الدراسية. هدفنا هو تضخيم جهودنا خارج نطاق مناهجنا الدراسية.
+  video_library_page_title_ai_works: كيف يعمل الذكاء الاصطناعي
+  video_library_page_description_ai_works: ستقدم لك هذه السلسلة من مقاطع الفيديو القصيرة
+    كيفية عمل الذكاء الاصطناعي وسبب أهميته. تعرف على الشبكات العصبية، أو كيف يتعلم
+    الذكاء الاصطناعي، وتعمق في قضايا مثل التحيز الخوارزمي وأخلاقيات صنع القرار بالذكاء
+    الاصطناعي.
+  video_library_page_title_computers_work: كيف تعمل أجهزة الكمبيوتر
+  video_library_page_description_computers_work: يشرح ما الذي يجعل الكمبيوتر جهاز
+    كمبيوتر، وكيف يتم تمثيل المعلومات الرقمية في وحدات 1 و 0، وكيف تعمل دوائر الكمبيوتر
+    لمعالجة المعلومات الرقمية، وكيف تتحكم وحدة المعالجة المركزية (CPU) ونظام التشغيل
+    في المدخلات والمخرجات والذاكرة والأجهزة الخاصة بالكمبيوتر.
+  video_library_page_title_internet_works: كيف يعمل الإنترنت
+  video_library_page_description_internet_works: يضم فينت سيرف، مخترع TCP/IP، وديفيد
+    كارب مؤسس Tumblr لشرح HTTP و HTML، وأميرة الأمان من Google لشرح SSL والأمن السيبراني،
+    ومهندسين من Microsoft و Spotify و Symantec. هذه السلسلة من مقاطع الفيديو القصيرة
+    التي تشرح كيفية عمل الإنترنت.
+  video_library_page_title_not_hacked: كيف لا تتعرض للاختراق
+  video_library_page_description_not_hacked: الإنترنت مفتوح، لذلك يمكن رؤية كل ما
+    يحدث عليه ما لم يكن محميًا. في البلدان الحديثة، يشعر الناس بالقلق من التعرض للاختراق
+    أكثر من أي جريمة أخرى. لماذا؟ لأن كل جهاز كمبيوتر أو هاتف على الإنترنت يتم اختباره
+    بانتظام بحثًا عن نقاط الضعف من قبل المجرمين أو الإرهابيين أو حتى الجهات الفاعلة
+    الحكومية. إذا لم تكن حريصًا، فقد يقوم شخص ما باختراق جهازك أو حساباتك، وحتى سرقة
+    هويتك أو أموالك.
+  video_library_page_title_blockchain: كيف تعمل تقنية البلوك تشين
+  video_library_page_description_blockchain: تم تصميم هذه السلسلة بالشراكة مع Coinbase،
+    وتضم خبراء الصناعة وتهدف إلى إزالة الغموض عن هذه التكنولوجيا من خلال استكشاف ماهية
+    بلوكتشين وكيفية عملها وآثارها المجتمعية المحتملة - الجيدة والسيئة على حد سواء.
+  video_library_page_title_careers: وظائف في علوم الكمبيوتر
+  video_library_page_description_careers: يمكن أن تكون الوظائف في علوم الكمبيوتر والتكنولوجيا
+    ممتعة ومجزية. ولكن ماذا يفعل الشخص الذي يعمل في هذه المجالات حقًا؟ مع وجود مجموعة
+    متنوعة من الوظائف والشركات، لا توجد إجابة واحدة فقط على هذا السؤال. شاهد مقاطع
+    الفيديو أدناه لمقابلة بعض الأشخاص الذين يعالجون المشكلات الكبيرة بطرق إبداعية.
+  video_library_page_title_inspirational: مُلهمة
+  video_library_page_description_inspirational: ما الذي سيتغير في علوم الكمبيوتر في
+    عالمنا؟ كل شيء؟ لمن هذا المنتج؟ الجميع! شاهد مقاطع الفيديو هذه لإلهامك وتحفيزك.
+  video_library_page_footer_description: هل تبحث عن شيء آخر؟ لدينا العديد من مقاطع
+    الفيديو الرائعة المتاحة على قناة Youtube الخاصة بنا.
+  video_library_page_footer_cta: استكشف جميع مقاطع فيديو Code.org على YouTube
+  video_library_page_computer_work_video_title_1: Pseudoloc-هىفقيعؤهل اخ ؤخةعفثق صخق
+  video_library_page_computer_work_video_title_2: Pseudoloc-اهىلغ لى يلف
+  video_library_page_computer_work_video_title_3: وحدة المعالجة المركزية والذاكرة
+    والإدخال والإخراج
+  video_library_page_computer_work_video_title_4: ما الذي يجعل الكمبيوتر، الكمبيوتر؟
+  video_library_page_computer_work_video_title_5: منطق الدوائر
+  video_library_page_computer_work_video_title_6: Pseudoloc-القيلقث ىي سبفصلث
+  video_library_page_internet_work_video_title_1: ما هو الإنترنت؟
+  video_library_page_internet_work_video_title_2: 'الإنترنت: عناوين IP و DNS'
+  video_library_page_internet_work_video_title_3: 'الإنترنت: HTTP وHTML'
+  video_library_page_internet_work_video_title_4: 'الإنترنت: الأمن السيبراني والجريمة'
+  video_library_page_internet_work_video_title_5: 'الإنترنت: الأسلاك والكابلات والواي
+    فاي'
+  video_library_page_internet_work_video_title_6: 'الإنترنت: الحزم والتوجيه والموثوقية'
+  video_library_page_internet_work_video_title_7: 'الإنترنت: التشفير والمفاتيح العامة'
+  video_library_page_internet_work_video_title_8: 'الإنترنت: كيف يعمل البحث'
+  video_library_page_cs_video_title_1: اسمي جيروم وأنا تقني تصميم في Meow Wolf.
+  video_library_page_cs_video_title_2: اسمي Nikesha وأنا مهندس طيران في وكالة ناسا.
+  video_library_page_cs_video_title_3: اسمي برينا وأنا مهندسة برمجيات في Instagram
+  video_library_page_cs_video_title_4: اسمي كينسلي وأنا مهندس برمجيات في فيسبوك
+  video_library_page_cs_video_title_5: اسمي بولينا وأنا عالمة بيانات في Electronic
+    Arts
+  video_library_page_cs_video_title_6: اسمي دانيل وأنا مهندس برمجيات في MBARI
+  video_library_page_cs_video_title_7: اسمي كريستوفر وأنا محلل أمني في Tanium
+  video_library_page_cs_video_title_8: اسمي فيديريكو وأنا مدير البرامج الفنية في Microsoft
+  video_library_page_cs_video_title_9: اسمي تيس وأنا مهندس برمجيات في Google
+  video_library_page_inspirational_video_title_1: تغيير وجه علوم الكمبيوتر (3 دقائق)
+  video_library_page_inspirational_video_title_2: ادفع نفسك. يمكن لأي شخص أن يتعلم.
+    (دقيقة واحدة)
+  video_library_page_inspirational_video_title_3: ألهم فتاة (دقيقتان)
+  video_library_page_inspirational_video_title_4: ما لا تعلمه معظم المدارس (5 دقائق)
+  video_library_page_inspirational_video_title_5: ساعة البرمجة هنا - يمكن لأي شخص
+    أن يتعلم (دقيقتان)
+  video_library_page_inspirational_video_title_6: اسمي أراسيلي (3 دقائق)
+  video_library_page_inspirational_video_title_7: ساعة البرمجة مع ستيف كاري (دقيقتان)
+  video_library_page_inspirational_video_title_8: علوم الكمبيوتر تغير كل شيء (5 دقائق)
+  video_library_page_inspirational_video_title_9: مقدمة عن علوم الكمبيوتر (دقيقة واحدة)
+  video_library_page_inspirational_video_title_10: الرئيس أوباما حول علوم الكمبيوتر
+    (دقيقة واحدة)
+  video_library_page_inspirational_video_title_11: كل شخص يمكن أن يتعلم (دقيقة واحدة)
+  video_library_page_inspirational_video_title_12: ما نفتقده في مدرسياتنا (دقيقتان)
+  video_library_page_inspirational_video_title_13: ناسا تحتفل بساعة البرمجة (دقيقتان)
+  video_library_page_inspirational_video_title_14: إنها أكثر من مجرد لعبة (دقيقة واحدة)
+  video_library_page_inspirational_video_title_15: ابتكر باستخدام علوم الكمبيوتر (دقيقة
+    واحدة)
+  video_library_page_not_hacked_video_title_1: 'كيف لا تتعرض للاختراق: مقدمة'
+  video_library_page_not_hacked_video_title_2: 'كيف لا تتعرض للاختراق: كلمات المرور'
+  video_library_page_not_hacked_video_title_3: 'كيف لا تتعرض للاختراق: المصادقة وأقفال
+    الجهاز'
+  video_library_page_not_hacked_video_title_4: 'كيف لا تتعرض للاختراق: التصيد الاحتيالي'
+  video_library_page_not_hacked_video_title_5: 'كيف لا تتعرض للاختراق: مواقع الويب
+    والواي فاي'
+  video_library_page_not_hacked_video_title_6: 'كيف لا تتعرض للاختراق: المراسلة والتنزيلات'
+  video_library_page_not_hacked_video_title_7: 'كيف لا تتعرض للاختراق: قم بتثبيت التحديثات'
   language_code:
     ar: العربية
     az: الأذربيجانية

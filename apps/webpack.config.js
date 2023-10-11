@@ -97,7 +97,7 @@ function devtool({minify} = {}) {
   } else if (process.env.DEBUG_MINIFIED) {
     return 'eval-source-map';
   } else if (process.env.DEV) {
-    return 'inline-cheap-source-map';
+    return 'eval-source-map';
   } else {
     return 'inline-source-map';
   }
@@ -117,7 +117,7 @@ const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
 // Our base webpack config, from which our other webpack configs are derived,
 // including our main config, the karma config, and the storybook config.
 //
-// To find our main webpack config (that runs on e.g. `npm run build`),
+// To find our main webpack config (that runs on e.g. `yarn build`),
 // see `createWepbackConfig()` below. That function extends this config
 // with many more plugins etc.
 const WEBPACK_BASE_CONFIG = {
@@ -266,9 +266,22 @@ const WEBPACK_BASE_CONFIG = {
             },
           ]
         : []),
+      ...(process.env.DEV
+        ? [
+            // Enable source maps locally for Blockly for easier debugging.
+            {
+              test: /(blockly\/.*\.js)$/,
+              use: ['source-map-loader'],
+              enforce: 'pre',
+            },
+          ]
+        : []),
     ],
     noParse: [/html2canvas/],
   },
+  // Ignore spurious warnings from source-map-loader.
+  // It can't find source maps for some Closure modules in Blockly and that is expected.
+  ignoreWarnings: [/Failed to parse source map/],
 };
 
 // FIXME: figure out how to re-enable hot reloading with
@@ -304,7 +317,7 @@ function addPollyfillsToEntryPoints(entries, polyfills) {
  * Generate the primary webpack config for building `apps/`.
  * Extends `WEBPACK_BASE_CONFIG` from above.
  *
- * Invoked by `Gruntfile.js` for `yarn start`, `npm run build`, etc
+ * Invoked by `Gruntfile.js` for `yarn start`, `yarn build`, etc
  *
  * @param {Object} appEntries - defaults to building all apps, to build only one app pass in e.g. `appEntriesFor('maze')`
  * @param {boolean} minify - whether to minify the output

@@ -205,6 +205,19 @@ pl:
             które ujawniają etyczne pułapki w wybranym przez Ciebie obszarze sztucznej
             inteligencji (AI).
           title: Godzina kodowania - Etyka AI
+        ai-ethics-2023:
+          description: Lekcje te wprowadzają uczniów w kwestie etyczne dotyczące sztucznej
+            inteligencji. Uczniowie badają różne tematy i bieżące wydarzenia związane
+            z technologiami sztucznej inteligencji, a następnie proszeni są o refleksję
+            i zajęcie stanowiska na temat tego, jak uważają, że te technologie powinny
+            być wykorzystywane w społeczeństwie.
+          lessons:
+            lesson-1:
+              name: Godzina kodowania - Etyka AI
+            lesson-2:
+              name: Społeczne oddziaływanie generatywnej sztucznej inteligencji
+          name: ai-ethics-2023
+          title: Etyka AI
         ai-lab:
           name: ai-lab
           student_description: Skorzystaj z tych poziomów, aby poznać AI Lab i wykorzystać
@@ -351,6 +364,8 @@ pl:
               name: Czat AI
             lesson-51:
               name: Rubryki AI
+            lesson-52:
+              name: Dance Lab2
           name: wszystkie rzeczy
           student_description: Wszystkie typy poziomów dla testowania UI
           title: Wszystkie te Rzeczy!
@@ -567,6 +582,7 @@ pl:
             podzielić się z innymi. Zalecany dla przedszkola i pierwszej klasy.
           description_audience: W wieku 4-6
           description_short: Kurs 1 jest przeznaczony dla początkujących.
+          name: course1
           student_description: Kurs 1 umożliwia początkującym tworzenie programów
             komputerowych, które pomogą im nauczyć się współpracować z innymi, rozwijać
             umiejętności rozwiązywania problemów i wytrwać przy rozwiązywaniu trudnych
@@ -583,6 +599,7 @@ pl:
           description_audience: Powyżej 6 lat (wymagana umiejętność czytania)
           description_short: Wprowadzenie do informatyki dla uczniów, którzy potrafią
             czytać.
+          name: course2
           student_description: Kurs 2 jest przeznaczony dla uczniów, którzy umieją
             czytać, ale nie mają doświadczenia w programowaniu. W tym kursie uczniowie
             będą tworzyć programy do rozwiązywania problemów oraz interaktywne gry
@@ -599,6 +616,7 @@ pl:
           description_audience: W wieku 8-18
           description_short: Zagłębiaj się w programowanie, tworząc gry i interaktywne
             historie. To jest kontynuacja Kursu 2.
+          name: course3
           student_description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli
             Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania wprowadzone
             w poprzednich kursach, aby tworzyć elastyczne rozwiązania dla bardziej
@@ -2823,6 +2841,8 @@ pl:
             lesson-4:
               name: Zaprojektuj okładkę swojej interaktywnej książki
           name: csc-bookcovers-2023
+        csc-ecosystems:
+          name: csc-ecosystems
         csc-ecosystems-2022:
           name: csc-ecosystems-2022
         csc-ecosystems-2023:
@@ -3799,6 +3819,7 @@ pl:
               display_name: Treści
             cspSurvey:
               display_name: Treści
+          name: csd3-virtual
           student_description: Będziesz programować animacje, sztukę interaktywną
             i gry w Game Lab.Zacznij od prostych kształtów i buduj bardziej wyszukane
             animacje i gry oparte na duszku, używając tych samych koncepcji programowania
@@ -6943,6 +6964,9 @@ pl:
           title: 2021 Zasady informatyki Omówienie głębszego uczenia
         dlp21-overview:
           name: dlp21-overview
+        draft-hoc-dp:
+          name: draft-hoc-dp
+          title: Potańcówka (szkic)
         drafting:
           name: redakcja
           title: Aktualizacje wersji roboczej CSP 2023-24
@@ -7677,6 +7701,13 @@ pl:
           student_description: Samouczki z nauczycielem do opracowania w  Game Lab.  Te
             samouczki wychodzą poza zakres koncepcji ujętych w CSD.
           title: Laboratorium Gier (Game Lab)
+        genai-temp:
+          description: Jednostka tymczasowa do pracy z generatywną AI
+          lessons:
+            lesson-1:
+              name: Tymczasowa lekcja dla Ali
+          name: genai-temp
+          title: "[Temp] Generatywna AI"
         glj-behavior-test:
           title: Gra Lab Jr. Test - Zachowanie
         grade1:
@@ -7935,7 +7966,7 @@ pl:
           description_short: Odkrywaj świat Minecraft poprzez kodowanie.
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę
             w świecie gry Minecraft.
-          title: Godzina Kodowania z Minecraft
+          title: Poszukiwacz przygód z Minecraftem
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -9226,6 +9257,12 @@ pl:
               display_name: Treści
             csd3_2:
               display_name: 'Rozdział 2: Budowanie gier'
+        virtual-pl-csa-summer-2024-day1:
+          name: virtual-pl-csa-summer-2024-day1
+          title: Dzień 1
+        virtual-pl-csa-summer-day2:
+          name: virtual-pl-csa-summer-day2
+          title: Dzień 2
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -9411,6 +9448,16 @@ pl:
             lesson-9:
               name: Przygotowanie na rok
           name: virtual-pl-csd-letni-dzień5
+        virtual-pl-csp-summer-day1-2024:
+          name: virtual-pl-csp-summer-day1-2024
+        virtual-pl-csp-summer-day2:
+          name: virtual-pl-csp-summer-day2
+        virtual-pl-csp-summer-day3:
+          name: virtual-pl-csp-summer-day3
+        virtual-pl-csp-summer-day4:
+          name: virtual-pl-csp-summer-day4
+        virtual-pl-csp-summer-day5:
+          name: virtual-pl-csp-summer-day5
         virustest:
           description_short: 'Użyj Sprite Lab, aby utworzyć symulację epidemii wirusa. '
           lesson_groups:
@@ -9506,12 +9553,20 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 3 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Lekcja modelu'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m3
           title: Moduł 3
         vpl-csd-2023-m4:
           lessons:
             lesson-2:
               name: Moduł CSD 4 Synchroniczny
+            lesson-5:
+              name: 'Sesja synchroniczna 4: Badanie programu nauczania'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m4
           title: Moduł 4
         vpl-csd-2023-m5:

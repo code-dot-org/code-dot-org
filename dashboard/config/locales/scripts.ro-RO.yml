@@ -89,6 +89,10 @@ ro:
         ai-ethics-2021:
           description_audience: Clasele 6-12
           title: Codul nostru de Etică IA
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Codul nostru de Etică IA
         aiml-2021:
           lesson_groups:
             lessonGroup-4:
@@ -3419,7 +3423,7 @@ ro:
           description_short: Exploreaza o lume Minecraft prin cod.
           student_description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau
             Alex intr-o aventura in acest univers Minecraft.
-          title: Ora de Programare Minecraft
+          title: Minecraft Adventurer
         microbit-2023:
           lesson_groups:
             lessonGroup-5:

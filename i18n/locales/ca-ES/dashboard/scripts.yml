@@ -472,7 +472,7 @@ ca:
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           student_description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
         mc:
-          title: Hora del Codi amb Minecraft
+          title: 'Minecraft: L''aventurer'
           description: Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft
           description_short: Explora el món de Minecraft a través del codi
           student_description: Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft
@@ -8071,3 +8071,7 @@ ca:
           title: Mòdul 7
         vpl-csd-2023-m8:
           title: Mòdul 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: El nostre Codi Ètic d'IA

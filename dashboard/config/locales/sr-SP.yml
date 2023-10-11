@@ -10,6 +10,7 @@ sr:
         error:
           future: не може бити у будућности
         finish_sign_up_header: Заврши креирање твог налога
+        finish_sign_up_header_error: 'Молим вас исправите следеће грешке:'
         finish_sign_up_subheader: Попуни следеће информације да би завршио креирање
           Code.org налога за <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Попуни следеће информације да би завршио
@@ -29,6 +30,7 @@ sr:
         personal_email_markdown: Твоја адреса електронске поште [(кликни овде уколико
           немаш електронску пошту)](%{url})
         reset_password_token: Веза за ресетовање шифре коју си пратио
+        user_type: Врста налога
         username: корисничко име
     errors:
       messages:

@@ -1,4 +1,5 @@
 import i18n from '@cdo/locale';
+import CdoFieldDanceAi from './ai/cdoFieldDanceAi';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -84,6 +85,17 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
+    },
+  },
+  danceAi: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const newField = new CdoFieldDanceAi();
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(newField, 'VALUE');
+    },
+    generateCode(block, arg) {
+      return block.getFieldValue(arg.name);
     },
   },
 };

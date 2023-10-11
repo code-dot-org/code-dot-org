@@ -418,22 +418,7 @@
   "https://studio.code.org/s/csd5-2023/lessons/16/levels/1": {
     "display_name": "Sample App",
     "long_instructions": "# Sample App\n\nHere is an example of an app that uses data to help the user solve a problem.  With a partner, play through the app a few times to see how it works.\n\nDiscuss the following questions with your partner:\n\n-   What choice does the app help the user to make? \n-   What data does it use to make that recommendation?\n-   How do you think the creators of the app decided on the algorithm that they use to make the choice?",
-    "teacher_markdown": "Students can see and remix the code to this app at the following URL:\n\n[https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view][0]",
-    "start_html": {
-      "Where should you go on vacation?": "Where should you go on vacation?",
-      "Start": "Start",
-      "What is your favorite food?": "What is your favorite food?",
-      "What is the best superpower?": "What is the best superpower?",
-      "invisibility": "invisibility",
-      "super strength": "super strength",
-      "flying": "flying",
-      "teleport": "teleport",
-      "Which animal do you like the best?": "Which animal do you like the best?",
-      "You should go to the beach!": "You should go to the beach!",
-      "You should go to an amusement park!": "You should go to an amusement park!",
-      "You should go to a national park!": "You should go to a national park!",
-      "You should go to a big city!": "You should go to a big city!"
-    }
+    "teacher_markdown": "Students can see and remix the code to this app at the following URL:\n\n[https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view][0]"
   },
   "https://studio.code.org/s/csd5-2023/lessons/16/levels/2": {
     "dsls": {

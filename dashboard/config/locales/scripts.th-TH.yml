@@ -76,6 +76,10 @@ th:
         ai-ethics-2021:
           description_audience: เกรด 6-12
           title: จรรยาบรรณ AI ของเรา
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: จรรยาบรรณ AI ของเรา
         ai-temp:
           title: AI ทำงานอย่างไร
         aiml-2021:
@@ -2442,7 +2446,7 @@ th:
           description: ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์
           description_short: สำรวจโลก Minecraft ผ่านโค้ด
           student_description: ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์
-          title: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
+          title: การผจญภัยในไมน์คราฟท์
         microbit-2023:
           lesson_groups:
             lessonGroup-5:

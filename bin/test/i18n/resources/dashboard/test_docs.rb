@@ -75,7 +75,7 @@ class I18n::Resources::Dashboard::DocsTest < Minitest::Test
   end
 
   def expected_docs_json_for(env)
-    <<-JSON.strip.gsub(/^ {6}/, '')
+    <<~JSON.strip
       {
         "#{env}": {
           "name": "#{env} Env name",

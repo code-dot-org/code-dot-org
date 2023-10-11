@@ -35,6 +35,10 @@ bs:
   africa_campaign_date_full: 1. oktobar - 18. decembar
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1. oktobar 2022. - 18. decembar 2022
+  hoc2023_header: Kreativnost sa AI
+  hoc2023_social_creativity_with_ai_title: Sat koda - Šta ćete stvoriti?
+  hoc2023_social_creativity_with_ai_desc: Koristite informatiku za istraživanje i
+    učenje o AI!
   hoc2022_header: Istražite, igrajte, kreirajte!
   social_hoc2022_explore_play_create: Koristite informatiku za istraživanje, igru
     i stvaranje!
@@ -108,19 +112,19 @@ bs:
     koju bi računarska nauka mogla igrati u stvaranju pravednijeg svijeta.
   oceans_landing_videos: Video o AI i strojnom učenju
   oceans_behind_the_scenes: 'AI za okeane: Iza kulisa'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Nivoi 2-4 koriste istraniran model koji pruža projekt
+    <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet. </a> Model MobileNet je <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolucijska
+    neuronska mreža</a> koja je obučena na <a href="http://www.image-net.org/">ImageNetu</a>,
+    skupu podataka od preko 14 miliona slika ručno označenih riječima poput “balon”
+    ili “jagoda”. Da bismo ovaj model prilagodili označenim podacima o obuci koje
+    učenik generira u ovoj aktivnosti, koristimo tehniku pod nazivom <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>Svaka slika u skupu podataka o treningu dovodi se u MobileNet, kao
+    piksele, kako bi se dobila lista napomena koje će se najvjerojatnije primijeniti
+    na nju. Zatim, za novu sliku, hranimo je MobileNet i uporedimo njegov rezultirajući
+    popis napomena s onima iz skupa podataka o treningu. Novu sliku klasificiramo
+    istom oznakom (poput “riba” ili “ne riba”) kao slike iz seta treninga sa najsličnijim
+    rezultatima.
   oceans_behind_the_scenes_1_markdown: Nivoi 2-4 koriste predočeni model predviđen
     projektom [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
     Model MobileNet je [konvolucijska neuronska mreža] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -174,6 +178,28 @@ bs:
     novi katalog kurikuluma i redizajnirana stranica Teach koja će vam pomoći da pronađete
     sve!
   in_partnership_with: U partnerstvu sa
+  shop_code_dot_org_heading: Kupujte Code.org
+  shop_code_dot_org_desc: Podržite naš rad i nosite pokret s ponosom. Naše kape su
+    nosili predsjednik Obama i slavne osobe.
+  spread_the_word_heading: Proširi riječ
+  spread_the_word_desc: Pojačajte naš utjecaj dijeljenjem Code.org s vašom mrežom.
+    Od društvenih medija do ažuriranja e-pošte, otkrijte kako nam možete pomoći da
+    dosegnemo više edukatora, studenata i zagovornika.
+  follow_us_heading: Pratite nas na društvenim mrežama
+  follow_us_desc: Budite u toku s nama na društvenim mrežama i podijelite naše postove
+    sa svojom mrežom kako biste ostali informirani i pomogli u podizanju svijesti.
+  facebook: fejsbuk
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Pretplatite se na e-poštu
+  subscribe_to_emails_desc: Pročitajte o tome što se događa na Code.org i u obrazovanju
+    informatike kroz kvartalna ažuriranja putem naše mailing liste.
+  subscribe_to_emails_intl: Pretplatite se na međunarodna ažuriranja
+  promote_code_dot_org_heading: Promovirajte Code.org
+  promote_code_dot_org_desc: Promovirajte informatiku u vašem području uz pomoć statistika,
+    citata i videozapisa.
   afe_partnership_logo_alt: Amazon Future Engineer logotip
   afe_partnership_thanks_desc: Amazon Future Engineer sveobuhvatan je program od djetinjstva
     do karijere za nadahnuće, educiranje i osposobljavanje djece i mladih s niskim
@@ -183,6 +209,24 @@ bs:
   grade_level_label_elementary: Osnovna škola
   grade_level_label_middle: Srednja škola
   grade_level_label_high: Gimnazija
+  curricula_title_elementary: Nastavni planovi i programi osnovnih škola
+  curricula_desc_elementary: Pregledajte zabavne, besplatne kurseve i aktivnosti koje
+    vas pozivaju da istražite informatiku sa učenicima osnovnih škola.
+  curricula_title_middle: Nastavni planovi i programi srednjih škola
+  curricula_desc_middle: Pregledajte zanimljive ponude koje omogućuju vama i vašim
+    učenicima srednjih škola da zajedno istražuju informatiku.
+  curricula_title_high: Srednjoškolski kurikulumi
+  curricula_desc_high: Pregledajte uvjerljive kurseve i aktivnosti koje pozivaju vas
+    i vaše srednjoškolce da dublje kopaju u informatiku.
+  for_administrators_heading: Za administratore
+  for_administrators_desc: Pridružite se hiljadama škola koje su već uključile informatiku
+    u svoj nastavni plan i program.
+  for_parents_heading: Za roditelje
+  for_parents_desc: Možete pomoći da ohrabrite školu vašeg učenika da ponudi ili proširi
+    obrazovanje informatike.
+  for_educators_heading: Za edukatore
+  for_educators_desc: Počnite podučavati danas - nije potrebno iskustvo iz informatike
+    - uz naše radionice profesionalnog učenja.
   students_label: Učenici
   teachers_label: Učitelji
   teacher_label_csf: CS Osnove Učitelj
@@ -192,9 +236,11 @@ bs:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Potrebni materijali:'
   optional_materials: 'Opcionalni materijali:'
+  call_to_action_hold_an_event: Održavanje događaja
   call_to_action_learn_more: Saznaj više
   call_to_action_watch_now: Gledajte sada
   call_to_action_try_activity: Isprobajte aktivnost
+  call_to_action_try_activities: Isprobajte aktivnosti
   call_to_action_explore_unit: Istražite jedinicu
   call_to_action_explore_curriculum: Istražite nastavni plan i program
   call_to_action_explore_curriculum_options: Istražite mogućnosti kurikuluma
@@ -209,6 +255,15 @@ bs:
   call_to_action_explore_choice_level: Istražite nivo izbora primjera
   call_to_action_explore_collection: Istražite kolekciju
   call_to_action_explore_unplugged_lesson: Istražite lekcije iz priključka
+  call_to_action_explore_csf: Istražite osnove CS-a
+  call_to_action_explore_csd: Istražite CS Discoveries
+  call_to_action_explore_csp: Istražite CS principe
+  call_to_action_explore_csc: Istražite CS Connections
+  call_to_action_explore_csa: Istražite AP® Computer Science A
+  call_to_action_explore_csa_short: Istražite AP® CSA
+  call_to_action_explore_maker: Istražite nastavne planove i programe za kavu
+  call_to_action_explore_hoc: Istražite tutorijale Sata koda
+  call_to_action_explore_hoc_short: Istražite Sat koda
   call_to_action_try_app_lab: Isprobajte App Lab
   call_to_action_view_lesson_plan: Pogledaj plan lekcije
   call_to_action_self_paced_pl: Započnite samostalno profesionalno učenje
@@ -232,6 +287,7 @@ bs:
   call_to_action_resources_tools: Isprobajte alate za programiranje
   call_to_action_sign_up_free: Prijavite se besplatno
   call_to_action_explore_ai_resources: Istražite resurse AI
+  call_to_action_explore_ai_curricula: Istražite nastavne planove i programe za AI
   call_to_action_explore_curriculum_catalog: Istražite katalog kurikuluma
   call_to_action_see_full_curriculum_catalog: Pogledajte cijeli Katalog kurikuluma
   call_to_action_find_self_paced_modules: Pronađite samo-tempom modula
@@ -253,6 +309,20 @@ bs:
   call_to_action_notify_available: Obavijesti me kada je dostupan
   call_to_action_register_early_access: Registrujte se za rani pristup
   call_to_action_open_positions: Pogledaj otvorene pozicije
+  call_to_action_explore_roles: Istražite otvorene uloge
+  call_to_action_get_guide: Nabavite vodič
+  call_to_action_donate_to_cdo: Donirajte za Code.org
+  call_to_action_start_fundraiser: Pokrenite prikupljanje sredstava
+  call_to_action_view_donation_policy: Pogledaj politiku donacije
+  call_to_action_view_donate_bitpay: Donirajte uz BitPay
+  call_to_action_make_a_donation: Napravite donaciju
+  call_to_action_other_ways_to_give: Drugi načini davanja
+  call_to_action_become_partner_usa: Postanite partner u Sjedinjenim Američkim Državama
+  call_to_action_become_partner_intl: Postanite međunarodni partner
+  call_to_action_become_a_volunteer: Postanite volonter
+  call_to_action_start_translating: Počnite s prevođenjem
+  call_to_action_learn_about_advocacy: Saznajte više o našem zagovaranju
+  call_to_action_visit_store: Posjetite prodavnicu
   aria_label_call_to_action_afe: Saznajte više o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Pokrenite program profesionalnog učenja
     Osnove računarskih nauka
@@ -361,8 +431,11 @@ bs:
   curriculum_name_csp: Načela računarskih nauka
   curriculum_name_csc: Computer Science Veze
   curriculum_name_csa: AP® Computer Science A
+  curriculum_name_csa_ai: Softverski inženjering & Computer Vision
   curriculum_name_csc_02: Bilo koji modul CS veze
   curriculum_name_ai: AI i mašinsko učenje
+  curriculum_name_artificial_intelligence: Umjetna inteligencija (AI)
+  curriculum_name_maker: Tvorac
   curriculum_name_maker_cp: Kreiranje aplikacija s uređajima (Circuit Playground)
   curriculum_name_maker_microbit: Kreiranje aplikacija s uređajima (micro:bit)
   curriculum_name_creating_apps_with_devices: Kreiranje aplikacija s uređajima
@@ -373,6 +446,8 @@ bs:
   curriculum_name_interactive_animations_games: Interaktivne animacije i igre
   curriculum_name_design_process: Proces projektovanja
   curriculum_name_data_society: Podaci i društvo
+  curriculum_desc_csf: Slobodan skup osnovnih nastavnih planova i programa koji upoznaje
+    studente sa temeljnim konceptima informatike.
   curriculum_desc_csf_express: Naučite stvarati računarske programe, razvijati vještine
     rješavanja problema i raditi kroz zabavne izazove! Napravite igre i kreativne
     projekte za dijeljenje s prijateljima, porodicom i nastavnicima.
@@ -415,6 +490,26 @@ bs:
   curriculum_desc_creating_apps_with_devices: Istražite ulogu fizičkih uređaja u računarstvu.
     Razviti programe koji koriste hardverske ulaze i izlaze. Postoji verzija ove jedinice
     i za micro:bit i Circuit Playground.
+  curriculum_desc_csa: Uvesti studente sa softverskim inženjeringom i objektno orijentiranim
+    dizajnom dok uče programski jezik Java u ovom besplatnom kurikulumu za AP® Computer
+    Science A (AP® CSA).
+  curriculum_desc_maker: Obrazovanje proizvođača uzima STEM (nauka, tehnologija, inženjerstvo,
+    matematika) korak dalje pozivajući praktično iskustvo i suradnju u učionicu kako
+    bi se pomoglo u podučavanju rješavanja problema i kritičkom razmišljanju.
+  curriculum_desc_maker_short: Obrazovanje proizvođača poziva praktično iskustvo i
+    suradnju u učionicu kako bi se pomoglo u podučavanju rješavanja problema i kritičkom
+    razmišljanju.
+  curriculum_desc_csd: Fleksibilan kurs, omogućavajući svakoj jedinici da se podučava
+    sama ili u kombinaciji. Uvodi studente u izgradnju web stranica, aplikacija, animacija,
+    igara i fizičkih računalnih sustava.
+  curriculum_desc_csp: Besplatan, AP® CSP odobren, srednjoškolski uvodni kurs koji
+    upoznaje studente sa temeljnim konceptima informatike.
+  curriculum_desc_csa_ai_long: 'Ovaj CSA modul s dva poglavlja nakon AP nudi srednjoškolcima
+    praktično iskustvo s profesionalnim alatima za razvoj softvera, uključujući GitHub
+    i GitHub Copilot, i daje im vještine iz stvarnog svijeta za razvoj programa računarskog
+    vida. '
+  curriculum_desc_csa_ai_short: Ovaj post-AP® CSA modul nudi srednjoškolcima praktično
+    iskustvo sa profesionalnim alatima za razvoj softvera.
   collection_hardware: Usredotočite se na hardver
   collection_hardware_desc: Omogućuje studentima da koriste podatke i fizičke uređaje
     za rješavanje problema.
@@ -445,6 +540,7 @@ bs:
   module_label_professional_learning: 'Profesionalno učenje:'
   module_label_languages: 'Podržani jezici:'
   module_label_accessibility_features: 'Pristupačnost:'
+  module_label_accessibility_features_full: 'Značajke pristupačnosti:'
   module_label_educator_tool: Alat za edukatore
   module_label_educator_course: Kurs edukatora
   module_label_student_tool: Studentski alat
@@ -452,6 +548,7 @@ bs:
   module_label_student_content_resources: Sadržaj i resursi
   module_label_new: Novi
   module_label_coming_soon: Uskoro
+  module_label_available_now: Dostupno sada
   module_label_video_series: Video serija
   module_label_self_paced: Modul sa samim tempom
   module_ages_5_10: 5-10
@@ -462,6 +559,8 @@ bs:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -476,11 +575,14 @@ bs:
   module_grade_9_12_teachers: 9-12 Nastavnici
   module_level_beginner: Početnik
   module_level_intermediate: Srednji
+  module_level_advanced: Napredno
   module_duration_45_mins: 45 minuta
+  module_duration_2_weeks: 2 sedmice
   module_duration_1_hr: 1 sat
   module_duration_2_hrs: 2 sata
   module_duration_3_hrs: 3 sata
   module_duration_5_hrs: 5 sati
+  module_duration_5_hrs_plus: 5+ sati
   module_duration_8_hrs: 8 sati
   module_duration_20_hrs: 20 sati
   module_duration_35_hrs: 35 sati
@@ -492,6 +594,7 @@ bs:
   module_duration_school_year: Školska godina
   module_duration_month_quarter: Mjesec ili kvartal
   module_duration_month_semester_year: Mjesec, semestar ili godina
+  module_duration_varies: varira
   module_prerequisites_none: Nijedan
   module_prerequisites_maker_cp: Pristup kružnom igralištu
   module_prerequisites_maker_microbit: Pristup micro:bitu
@@ -559,6 +662,9 @@ bs:
   heading_java_lab: Java Lab
   heading_objects_first: Predmeti prvi
   heading_these_lessons_will: 'Ove lekcije će:'
+  heading_explore_curriculum_catalog: Istražite sve naše kurseve u Katalogu kurikuluma
+  heading_csa_ai: Tražite stvari koje treba uraditi nakon AP® ispita?
+  heading_bring_cs_to_students: Dovedite informatiku studentima
   professional_learning_section_desc: Dobijte podršku koja vam je potrebna dok se
     pripremate za podučavanje. Nastavnici ga vole, s preko 90% rangiranja je najbolji
     profesionalni razvoj ikad!
@@ -589,6 +695,23 @@ bs:
   support_and_questions_section_desc: Naš tim za podršku je ovdje da odgovori na sva
     pitanja koja imate o započinjanju nastave s Code.org. Također možete pitati druge
     nastavnike o njihovom iskustvu na našim forumima nastavnika.
+  subscribe_form_section_title: Pretplatite se na ažuriranja
+  subscribe_form_section_desc_csa: Prijavite se za primanje mjesečnih poruka e-pošte
+    o Code.org-ovom AP® Computer Science A i dobiti korisne podsjetnike, savjete i
+    ažuriranja poslane pravo u vaš poštanski sandučić.
+  subscribe_form_section_desc_csc: Prijavite se da biste primali mjesečne poruke e-pošte
+    o Code.org-ovim vezama za informatiku i dobijte korisne podsjetnike, savjete i
+    ažuriranja koja se šalju pravo u vaš poštanski sandučić.
+  subscribe_form_section_desc_csd: Prijavite se za primanje mjesečnih poruka e-pošte
+    o Code.orgovim otkrićima računalnih nauka i dobiti korisne podsjetnike, savjete
+    i ažuriranja poslane pravo u vaš poštanski sandučić.
+  subscribe_form_section_desc_csf: Prijavite se za primanje mjesečnih poruka e-pošte
+    o osnovama računalnih nauka Code.org i dobivajte korisne podsjetnike, savjete
+    i ažuriranja poslane pravo u vaš poštanski sandučić.
+  subscribe_form_section_desc_csp: Prijavite se da biste primali mjesečne e-poruke
+    o Code.org-ovim principima računalnih nauka i dobijte korisne podsjetnike, savjete
+    i ažuriranja koja se šalju direktno u vaš poštanski sandučić.
+  subscribe_form_section_unsubscribe: Možete se odjaviti u bilo kojem trenutku.
   blockchain_hero_heading: Kako funkcionira Blockchain
   blockchain_hero_desc: Zaronite u svijet blockchaina s “Kako funkcionira Blockchain”,
     našom novom video serijom i pratećim lekcijama!
@@ -689,6 +812,9 @@ bs:
   ai_curriculum_desc_04: Ove lekcije dopunjuju video seriju Kako AI radi. Svaka lekcija
     je uparena s jednim videom iz serije, dublje u koncepte uvedene u videozapise.
   ai_curriculum_btn_aria_label_04: Istražite kako AI radi lekcije
+  ai_curriculum_grades_05: 'Razine ocjena: 9-12'
+  ai_curriculum_btn_aria_label_05: Istražite modul Software Engineering & Computer
+    Vision
   ai_carousel_heading: 'Šta nastavnici kažu o AI sa Code.org:'
   ai_carousel_quote_01: Ova lekcija je takođe dala mojim učenicima priliku da vide
     da postoji element mišljenja u klasifikacionim sistemima. Kasnije, kada smo počeli
@@ -804,10 +930,19 @@ bs:
     i korištenje AI obrazovnih alata i iskorištavanje AI za procjenu učenika. Uz bogatu
     mješavinu teorije, praktičnih primjera i resursa, cilj je osnažiti nastavnike
     da se kreću kroz AI krajolik i poboljšaju iskustva učenja učenika.
+  ai_pl_101_resources_5: Vodič za osiguravanje odgovornog pristupa AI
   ai_pl_101_video_desc_6: 'Saznajte više o novoj tehnologiji koja pokreće velike promjene
     u AI, koja sadrži dva nova videozapisa na modelima velikih jezika (poput ChatGPT-a)
     i Generativni AI. Čujte kako ove nove tehnologije djeluju izravno od stručnjaka:
     Mira Murati, CTO OpenAI, i Cristóbal Valenzuela, izvršni direktor RunwayML-a.'
+  ai_pl_101_llm_slides_title: Veliki jezični model traži nastavnike
+  ai_pl_101_llm_slides_desc: Alati za postizanje najboljeg mogućeg izlaza iz LLM-ova
+    poput ChatGPT-a, od početnika do naprednih. Uključuje početne upute za one koji
+    samo upuštaju prste, kao i napredne alate za one koji žele maksimizirati svoj
+    potencijal.
+  ai_pl_101_resources_3: AI traži transformaciju učenja učenika
+  ai_pl_101_resources_section_title: Više načina za učenje o AI
+  ai_pl_101_resources_guide: 'Vodič za pratilje:'
   how_ai_works_hero_heading: Kako AI radi
   how_ai_works_hero_desc: Zaronite u svijet AI s “Kako AI radi”, našom video serijom
     i pratećim lekcijama!
@@ -1135,21 +1270,18 @@ bs:
   teach_page_free_curriculum_desc: Želimo da u svoju školu unesete informatiku bez
     brige o troškovima. Zato smo se obavezali da će naša ponuda kurikuluma zauvijek
     biti slobodna!
-  teach_page_free_curriculum_list_heading_01: Uključivanje nastavnog plana i programa
-    za svaku razinu razreda
   teach_page_free_curriculum_list_desc_01: Besplatan, fleksibilan i zabavan nastavni
     plan i program s ponudama na preko 67 jezika.
-  teach_page_free_curriculum_list_heading_02: Prilagodljiv, inovativan nastavni plan
-    i program
   teach_page_free_curriculum_list_desc_02: Code.org nudi sve, od cjelogodišnjih nastavnih
     planova i programa do pojedinačnih aktivnosti. Osim toga, godišnje ažuriramo naše
     nastavne planove i programe kako bismo podržali najbolje prakse i područja fokusiranja
     i stvorili nove ponude koje podučavaju trenutne teme u potražnji.
-  teach_page_free_curriculum_list_heading_03: Strukturirani nastavni plan i program
-    mapiran prema nacionalnim standardima
   teach_page_free_curriculum_list_desc_03: Svaki nastavni plan i program mapira se
     na najmanje jedan skup nacionalnih standarda, uključujući CSTA, standarde nauke
     sljedeće generacije i zajedničku jezgru.
+  teach_page_free_curriculum_list_desc_04: Ponude na preko 67 jezika
+  teach_page_free_curriculum_list_desc_05: Mapirani na najmanje jedan skup nacionalnih
+    standarda (uključujući CSTA, NGSS i Common Core)
   teach_page_free_curriculum_heading_02: 'Istražite našu ponudu kurikuluma za različite
     nivoe razreda:'
   teach_page_resources_heading: Resursi koji vas podržavaju na svakom koraku
@@ -1210,8 +1342,8 @@ bs:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Radionice pod vodstvom modeatora,
+    moduli sa samim tempom
   csp_page_curriculum_glance_professional_languages: engleski
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1338,8 +1470,8 @@ bs:
     računarstvo, dizajn aplikacija, igre i animacije, umjetnost i dizajn, programiranje
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Laboratorij za igre, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Radionice pod vodstvom modeatora,
+    moduli sa samim tempom
   csd_page_curriculum_glance_professional_languages: engleski
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1402,10 +1534,10 @@ bs:
     (imajte na umu da se novčana jedinica može zamijeniti nekom drugom vrstom težine
     iste veličine). Alternativne aktivnosti su dostupne ako nemate pristup tim zalihama.
   csd_page_faq_answer_04_06: Kreiranje aplikacija s uređajima (opcija A i opcija B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Opcija A: Učionica set Circuit igrališta. Pogledajte
+    [code.org/maker/circuitground] () za više detalja.%{url}'
+  csd_page_faq_answer_04_08: 'Opcija B: Učionica set micro:bit uređaja. Pogledajte
+    [code.org/maker/microbit] () za više detalja.%{url}'
   csd_page_faq_answer_04_09: Pribor za kavu, kao što su prazne kutije za tkivo ili
     kartonske role ili papir za ogrebotine
   csd_page_faq_answer_04_10: "*Napomena: Jedinica Stvaranje aplikacija s uređajima
@@ -1414,12 +1546,11 @@ bs:
     uređaja niti podučavati obje opcije jedinice jer su ekvivalentne i pokrivaju isti
     sadržaj."
   csd_page_faq_question_06: Kako CS Discoveries odgovara ostalim Code.org kursevima?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS Discoveries je osmišljen tako da se prirodno uklapa
+    između naših [CS Fundamentals] (%{csf_url}) kurseva i našeg [CS Principi] () kursa.%{csp_url}Iako
+    je svaki od ovih kurseva osmišljen da bude polazna tačka za računarske nauke,
+    studenti sa prethodnim iskustvom naći će mnoge nove teme koje će istražiti, a
+    oni će ponovo upoznati poznate teme u novim i izazovnijim kontekstima.
   csc_page_top_desc: Uspostavljanje veza između informatike (CS) i drugih predmeta
     poput matematike, jezičke umjetnosti, nauke i društvenih studija.
   csc_page_intro_heading: Podučavajte CS dok pokrivajući osnovne predmetne standarde
@@ -1476,8 +1607,8 @@ bs:
     i dizajn, Dizajn aplikacija
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Radionice pod vodstvom modeatora,
+    moduli sa samim tempom
   csf_page_curriculum_glance_languages: arapski, indonezijski bahasa, katalonski,
     kineski pojednostavljeni, tradicionalni kineski, češki, francuski, njemački, hindski,
     italijanski, japanski, korejski, kannada, malajski, maratski, mongolski, poljski,
@@ -1530,10 +1661,10 @@ bs:
     Naši regionalni partneri nude visokokvalitetne, jednodnevne Code.org radionice
     za pojedine nastavnike ili za školske PD. [Prijavite se za radionicu profesionalnog
     usavršavanja u vašoj blizini] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Pridružite se preko 100.000 nastavnika koji su učestvovali
+    u našim radionicama. Većina naših polaznika radionice kaže: “To je najbolji profesionalni
+    razvoj koji sam ikada prisustvovao.” Zapravo, [90% polaznika bi preporučilo naš
+    program drugim nastavnicima] ()!%{rec_url}'
   csf_page_faq_question_05: Koji je preporučeni vremenski raspored za podučavanje
     CS osnova?
   csf_page_faq_answer_05: Svaki CSF kurs uključuje 13-17 lekcija dizajniranih za 45-minutne
@@ -1542,9 +1673,10 @@ bs:
     da budu iskusni u jedinstvu, dok lekcije za izgradnju vještina učenici mogu dovršiti
     vlastitim tempom.
   csf_page_faq_question_06: Koji materijali su mi potrebni za CS osnove?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Mnoge lekcije imaju brošuru koja vodi učenike kroz aktivnosti.
+    Ovi resursi se mogu ispisati ili dodijeliti digitalno. Neke lekcije zahtijevaju
+    tipične potrepštine i manipulative u učionici. [Posjetite CSF nastavni plan da
+    biste saznali više] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1615,6 +1747,61 @@ bs:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Pomozite financirati našu misiju
+  donate_page_top_desc: Svaka donacija podstiču misiju Code.org da proširi pristup
+    obrazovanju informatike. Nudimo vam nekoliko načina da donirate i napravite razliku.
+  donate_page_fundraise_title: Prikupljanje sredstava za Code.org
+  donate_page_fundraise_desc: Pomozite prikupiti novac za Code.org! Svaki učenik u
+    svakoj školi trebao bi imati priliku učiti informatiku.
+  donate_page_other_ways_title: Drugi načini davanja
+  donate_page_other_ways_desc: Istražite različite metode kako biste doprinijeli i
+    pronađite opciju koja vam najviše odgovara. Svaka gesta, velika ili mala, tjera
+    našu misiju naprijed.
+  donate_page_501c3: Code.org je registrovana kao javna 501 (c) (3) neprofitna organizacija.
+    Doprinosi za Code.org mogu se odbiti od poreza u mjeri dopuštenoj zakonom. Porezni
+    identifikacijski broj Code.org je 46-0858543.
+  donate_page_donation_policy_title: Razumijevanje naše politike donacije
+  donate_page_donation_policy_desc: Saznajte kako postupamo i dodjeljujemo vaše doprinose.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Utakmica zaposlenika
+  donate_tabs_daf_direct_title: Donirajte putem DAF Direct
+  donate_tabs_daf_direct_desc: Donirajte putem svog fonda koji savjetuje donator u
+    Fidelity Charitable, Schwab Charitable ili BNY Mellon i dajte svoju preporuku
+    za grant Code.org putem DAF Direct online obrasca.
+  donate_tabs_amazon_title: Donirajte putem Amazona
+  donate_tabs_amazon_desc: Donirajte izravno koristeći svoj Amazon račun. Sa samo
+    nekoliko klikova, neprimjetno doprinijeti misiji Code.org i osnažiti budućnost
+    obrazovanja informatike.
+  donate_tabs_bitpay_title: Donirajte s Crypto putem BitPaya
+  donate_tabs_bitpay_desc: Prigrlite budućnost davanja kriptovalutom. Kroz BitPay,
+    vaša digitalna valuta može izravno podržati napore Code.org u širenju obrazovanja
+    informatike.
+  help_page_top_heading: Kako možete pomoći
+  help_page_top_desc: Podržite našu misiju da informatiku učinimo dostupnom svakom
+    djetetu, svugdje. Vaši napori pomažu nam da inspiriramo buduće inovatore i premostimo
+    jaz u tehnološkom obrazovanju.
+  help_page_top_subhead: Napravite donaciju za Code.org
+  help_page_top_desc_02: Radimo na tome da svakom učeniku pružimo priliku da uči informatiku
+    - i online i u školama, gdje uspostavljamo stalne kurseve i obučavamo nastavnike.
+    Za svaki dolar koji donirate, jedno dijete se upoznaje sa informatikom.
+  help_page_partners_heading: Postanite partner
+  help_page_partners_desc: Code.org surađuje s drugim neprofitnim organizacijama kao
+    partnerima kako bi pomogli u širenju informatike na lokalni, održiv način. Saznajte
+    više o našem programu.
+  help_page_volunteer_heading: Volontiraj u učionici
+  help_page_volunteer_desc: Volontiraj za podučavanje Sata kodiranja ili biti gostujući
+    govornik u lokalnoj učionici. Prijavite se da biste čuli o mogućnostima u vašoj
+    blizini.
+  help_page_translate_heading: Pomozite nam da prevedemo
+  help_page_translate_desc: Volonteri su preveli naše tutorijale na preko 45 jezika.
+    Pomozite nam da nastavimo širiti naše tutorijale za studente širom svijeta!
+  help_page_speak_for_cs_heading: Govorite za obrazovanje informatike
+  help_page_speak_for_cs_desc: Saznajte više o Code.org-ovom zagovaranju diljem SAD-a
+    i deset pravila koje preporučujemo državama da usvoje kako bi računarska nauka
+    bila osnovana za sve studente. Osim toga, saznajte kako možete voziti promjene
+    u svom stanju.
   hoc_live: Sat koda uživo
   hoc_live_sign_up_title: Prijavite se za Sat koda uživo
   hoc_live_learn_title: Učite sa Sat koda uživo
@@ -1693,8 +1880,8 @@ bs:
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: Pomoć u zaštiti ugroženih Cape Mountain Zebra identificiranjem
     različitih životinja u slikama.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Idite dalje sa <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org kursevima</a>
   codeorg_homepage_hoc2018_dance_heading: Kreirajte svoj vlastiti <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: Sat Kodeksa dolazi...
   codeorg_homepage_hoc2018_header_line2_desktop: Šta ćete <span class="hoc2018-highlight-word">stvoriti?</span>
@@ -2029,6 +2216,13 @@ bs:
     kurseva, lokalnih prilika ili drugih vijesti iz informatike?
   signup_email_preference_privacy: "(Pogledajte našu politiku privatnosti)"
   signup_email_preference_yes: Da
+  signup_email_preference_yes_elementary: Da - Pošaljite mi ažuriranja o resursima
+    osnovne škole
+  signup_email_preference_yes_middle: Da - Pošaljite mi ažuriranja o resursima srednje
+    škole
+  signup_email_preference_yes_high: Da - Pošaljite mi ažuriranja o resursima srednje
+    škole
+  signup_email_preference_yes_general: Da - Pošaljite mi opća ažuriranja
   signup_email_preference_no: Br
   signup_email_preference_error: Potrebna je preferencija e-pošte
   signup_multiple_event_warning: Ako organizujete više događaja, molimo vas da pošaljete
@@ -2141,12 +2335,12 @@ bs:
     ugostiti tokom cijele godine. Sedmica Računarskog Obrazovanja se održava svake
     godine u znak priznanja za rođendana jednog od pionira računarstva <a href='%{grace_hopper}'>
     Admiral Grace Murray Hopper</a> (Decembar 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: Sat kodiranja održava se svake godine tokom [[Sedmice
+    obrazovanja računarskih nauka] (%{csedweek_url}). Tjedan obrazovanja za %{campaign_date_year}
+    računarske nauke bit će %{campaign_date_full}, ali možete ugostiti Sat kodiranja
+    tijekom cijele godine. Sedmica informatičkog obrazovanja održava se svake godine
+    u znak priznanja za rođendan računarskog pionira [Admiral Grace Murray Hopper]
+    (%{grace_hopper}) (9. decembra 1906).
   hoc_faq_why_cs_q: Zašto računarstvo?
   hoc_faq_why_cs_a: "<i>Svakom</i> studentu treba biti pružena prilika da nauči računarstvo
     koje mu/joj pomaže naučiti vještinu rješavanje problema, logike i kreativnosti.
@@ -2193,11 +2387,11 @@ bs:
     href='%{codeorg_url}/learn'>%{partner_url}/learn</a> stranici specifičnom za određeni
     tutorijal. Ne zaboravite također nudimo <a href='%{unplugged_url}'> unplugged
     aktivnosti</a> ako vaša škola ne može omogućiti tutorijal!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org vodiči rade na svim uređajima i preglednicima.
+    Možete vidjeti više informacija o tehnološkim potrebama udžbenik Code.org [here](%{codeorg_url}/educate/it).
+    Tehničke potrebe za vodičima koji nisu Code.org mogu se naći na [%{partner_url}/learn]
+    (%{codeorg_url}/learn) u opisu specifičnog udžbenika. Ne zaboravite da nudimo
+    i [unplugged aktivnosti] (%{unplugged_url}) ako vaša škola ne može primiti tutorijale!
   hoc_faq_need_computers_q: Da li trebam kompjuter za svakog sudionika?
   hoc_faq_need_computers_a: Ne. Imamo Sad Kodiranja tutorijale koji rade na kompjuterima,
     pametnim telefonima, tabletima, a neki uopće ne zahtijevaju upotrebu kompjutera!
@@ -2211,13 +2405,13 @@ bs:
     (unplugged).</b> Nudimo <a href='%{unplugged_url}'> tutorijale koji ne zahtijevaju
     kompjutere.</a></ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Br. Imamo tutorijale Hour of Code koji rade na računarima, pametnim telefonima, tabletima i nekima koji uopće ne zahtijevaju računalo! Možete se pridružiti gdje god se nalazili, sa onim što imate.
 
-    _Here are a few options:_
+    _Evo nekoliko opcija:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Radite u parovima.** [Istraživanja pokazuju] (%{pair_programming_research}) studenti najbolje uče sa [programiranjem parova] (), dijeljenjem računara i zajedničkim radom.%{pair_programming_video}Potaknite svoje učenike da udvostruči.
+    - ** Koristite projektovani zaslon.** Ako imate projektor i ekran za računalo povezano s mrežom, cijela vaša grupa može zajedno raditi sat kodiranja. Gledajte video porcije zajedno i naizmjence rješavajući zagonetke ili odgovaranje na pitanja.
+    - ** Idi unplugged.** Nudimo [tutoriali koji ne zahtijevaju računalo] () uopće.%{unplugged_url}
   hoc_faq_international_q: Ja sam u <country>. Kako da sudjelujem međunarodno?
   hoc_faq_international_a: Sat Kodiranja može organizovati svatko, bilo gdje u svijetu.
     Prošle godine, studenti diljem svijeta pridružili su se Satu Kodiranja. Saznajte
@@ -2254,13 +2448,13 @@ bs:
     tutorijal ili tutorijal sa Annom i Elsom. Srednjoškolac bi trebao biti u mogućnosti
     završiti jedan od ovih tutorijala u 30 minuta i tada pokušati naprednije tutorijale
     u JavaScript-u, poput Khan Academy ili CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Naši vodiči Star Wars i Minecraft izvrsni su za
+    srednjoškolce, posebno verziju Star Wars JavaScript i razinu besplatne igre na
+    oba vodiča. Alternativno, preporučujemo da isprobate jedan od početničkih tutorijala
+    na [%{partner_url}/learn] (%{codeorg_url}/learn) za početak, kao što je udžbenik
+    s Angry Birds ili s Annom i Elsom. Srednjoškolac bi trebao moći završiti jedan
+    od ovih za 30 minuta, a zatim može isprobati napredniji udžbenik u JavaScriptu,
+    kao što su Khan Academy ili CodeHS.
   hoc_faq_scratch_q: Na Satu Kodiranja ću koristit Scratch, ali što ako moji učenici
     koriste iPad umjesto laptopa?
   hoc_faq_scratch_a: Scratch se ne može pokrenuti na tabletima. Ako su vaši učenici
@@ -2268,10 +2462,10 @@ bs:
     čitati). Ako pogledate vodiče na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
     možete pronaći vodiče koji rade na iPadu - od Code.org-a, Tynker-a, Lightbot-a
     ili CodeSpark-a.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch se ne pokreće na tabletima. Ako su vaši učenici
+    mladi, mogu koristiti aplikaciju ScratchJr iPad (za rane čitatelje). Ako pogledate
+    vodiče na [%{partner_url}/learn] (%{codeorg_url}/learn), možete pronaći i druge
+    tutorijale koji rade na iPadima - od Code.org, Tynker, Lightbot ili CodeSpark.
   hoc_faq_count_hoc_q: Kako brojite Sate Kodiranja?
   hoc_faq_map_q: Zašto ne vidim svoju tačku na mapi?
   hoc_faq_map_a: Jako nam je žao što ne vidite Vaš događaj na mapi Sata Kodiranja.
@@ -2351,10 +2545,10 @@ bs:
     s certifikatima</a> na kojoj možete unaprijed isprintati potvrde za cijeli razred.
     Također, možete isprintati <a href='%{codeorg_url}/certificates?course=mc'> posebne
     certifikate</a> za učenike koji uče pomoću Minecraft tutorijala.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Idite na našu [stranicu sa certifikatima] (%{codeorg_url}/certifikati)
+    gdje možete ispisati certifikate za cijeli razred prije vremena. Također možete
+    ispisati [posebne certifikate] (%{codeorg_url}/certifikate? course=mc) za studente
+    koji rade Minecraft tutorial.
   hoc_faq_logo_q: Postoje li ograničenja za korištenje loga ili imena Sata Kodiranja?
   hoc_faq_logo_a: Sat Kodiranja je zaštićena tržišna marka. Ne želimo spriječiti njegovo
     korištenje, ali želimo osigurati da se njegovo korištenje uklapa u nekoliko ograničenja.
@@ -5366,11 +5560,11 @@ bs:
     kroz Minecraft svijet.
   tutorial_minecraft-2016_longdescription: Napravi Minecraft igricu. Osmisli vlastitu
     verziju kokoške, ovce, Creeper-a, zombija i jos više.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Tutorijal Časa Kodiranja sa Pixie
   tutorial_play_longdescription: Osmisli priču ili napravi igru sa Play Lab! Kreiraj
     životinje, gusare, zombije, nindže i mnogo više likova koji se mogu kretati, praviti
@@ -12346,12 +12540,12 @@ bs:
     i Scratch.
   tutorial_googlename _longdescription: Odaberite ime i oživite slova riječi pomoću
     koda. Odaberite nadimak, ime kućnog ljubimca, životinju, sport, mjesto ili hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Grad Zillah napreduje, a muzika je u vazduhu.
+    Priča se da je poznati bot Gargantua online i šalje posljednje Toxibote da smeće
+    gradski blok po blok.…Zgrabite svoj cobot hoverboard i pripremite se za groove,
+    premjestiti, i završiti ono što ste započeli! Igrači programiraju svoje cobot
+    hoverbote kako bi promijenili trake, izbjegavali prepreke i izvadili mnoge Toxibote
+    u ovoj igri u ritmu.
   tutorial_nasachspacejam_longdescription: Stvorite solarni sistem koji stvarno stijene!
     Saznajte više o muzici, astronomiji i kodiranju u ovoj samo-vođenoj aktivnosti
     (nije potrebno iskustvo kodiranja). Programirajte planete za stvaranje glazbe,
@@ -13166,6 +13360,327 @@ bs:
     sastanaka, uzimajući naš PTO (ukupno 5 tjedana, što uključuje zatvaranje ureda
     za 2 tjedna na kraju godine aka Winter Break), poluradni dan petkom tokom ljeta
     ili ljetnih petaka i druge velikodušne pogodnosti.
+  careers_hero_title: Karijere
+  careers_hero_description: Code.org je neprofitna organizacija posvećena proširenju
+    pristupa računarskim naukama u školama. Posebno smo fokusirani na povećanje učešća
+    među mladim ženama i nedovoljno zastupljenim studentima.
+  careers_hero_description_under: Pomozite nam da promijenimo svijet, jedan po jedan
+    učenik!
+  careers_vision_title: Naša vizija
+  careers_vision_decsription: Naša vizija je da svaki učenik u svakoj školi treba
+    da ima priliku da uči informatiku kao dio svog osnovnog K-12 obrazovanja.
+  careers_vision_description_under: Pridružite se našem timu kako biste pomogli da
+    ova vizija postane stvarnost!
+  careers_values_title: Naše temeljne vrijednosti
+  careers_values_first_column_text_1: Vjerujemo da je računarska nauka osnovica za
+    sve studente
+  careers_values_first_column_text_2: Posvećeni smo pravičnosti, pristupu i mogućnostima
+  careers_values_first_column_text_3: Vjerujemo u moć zajedničke obrazovne zajednice
+  careers_values_second_column_text_1: Mi smo okretni i reagiraju na povratne informacije
+  careers_values_second_column_text_2: Djelujemo s integritetom i transparentnošću
+  careers_values_second_column_text_3: Vjerujemo da široki utjecaj zahtijeva veliko
+    razmišljanje i holistički djelovanje
+  careers_approach_section_title: Naš ujedinjujući pristup
+  careers_approach_section_description: Globalna uloga Code.org-a u pokretu informatike
+    K-12 moguća je samo zato što koristimo ujedinjujući pristup među različitim i
+    često podijeljenim dionicima. U vrijeme sve veće polarizacije, ideja povećanja
+    mogućnosti za studente ujedinjuje ljude iz cijelog političkog spektra. Članovi
+    tima, studenti, nastavnici i pristalice Code.org-a imaju različita i različita
+    gledišta i svi su dobrodošli u našoj misiji.
+  careers_aproach_section_description_link: Pročitajte više o pristupu Code.org jedinstvu.
+  careers_approach_section_button: Istražite otvorene uloge
+  careers_principle_section_title: Naši kulturni principi
+  careers_principle_title_1: Naši učenici i nastavnici su naša North Star
+  careers_principle_description_1: Koristimo naše darove, vrijeme i energiju da bismo
+    informatiku donijeli onima kojima je najpotrebnija. To je ono što nas ujedinjuje.
+    Ovo je naš najvažniji princip.
+  careers_principle_title_2: Mi smo teški prema problemima i ljubazni jedni prema
+    drugima
+  careers_principle_description_2: Ostajemo fokusirani na izazov dovođenja informatike
+    studentima i nastavnicima na globalnoj razini. Svjesni smo da svatko od nas donosi
+    najbolje od svojih namjera da podrži našu misiju i daje milost kada griješimo.
+  careers_principle_title_3: Tražiti rješenja, a ne konsenzus
+  careers_principle_description_3: Posjedujemo odluke, bilo da poduzimamo male korake
+    ili velike skokove prema ishodima koje tražimo. Vlasnici traže i slušaju, ali
+    nisu paralizirani povratnim informacijama. Prihvatamo i podržavamo odluke vlasnika,
+    čak i ako se ne slažemo.
+  careers_principle_title_4: Usvojiti mentalitet osnivača
+  careers_principle_description_4: Opsjednuti smo ishodima i fokusiramo svoje akcije
+    na njihovo vođenje. Uronimo u detalje i naporno radimo. Iskreni smo, oslanjamo
+    se na agilnost i neprestano procjenjujemo da li smo na pravom putu; ne bojimo
+    se okretanja. Promjena svijeta to zahtijeva.
+  careers_principle_title_5: Inovacija prvaka
+  careers_principle_description_5: Mislimo veliko, riskiramo i ne bojimo se propasti.
+    Ako vidimo bolji način da ostvarimo svoje ciljeve, to činimo i ohrabrujemo druge
+    da to učine. Inkrementalna rješenja neće pomoći promjeni svijeta.
+  careers_principle_title_6: Sidro odluke u činjenicama
+  careers_principle_description_6: Podatke koristimo za razumijevanje našeg poslovanja,
+    uspostavljanje željenih ishoda i vođenje donošenja odluka. To uravnotežimo prepoznavanjem
+    da nećemo uvijek imati podatke koji su nam potrebni da bismo djelovali.
+  careers_principle_title_7: Mindset rasta nas podstiču
+  careers_principle_description_7: Svakom izazovu pristupamo sa znatiželjom. Mi dajemo
+    povratne informacije ljubazno i iskreno; primamo povratne informacije otvoreno.
+    Učimo na našim greškama i tražimo načine da povećamo domet i uticaj našeg rada.
+  careers_balance_section_title: Naša ravnoteža između posla i života
+  careers_balance_section_description: Mi brinemo o našim zaposlenima i posvećeni
+    smo pružanju podrške svima na poslu i izvan posla. Znamo da svi imaju različite
+    potrebe, zbog čega nudimo cjelovit paket pogodnosti koji će osigurati da se o
+    vama (i vašoj porodici) pobrinete.
+  careers_balance_first_column_text_1: Zdravstvene beneficije za vas i vašu porodicu
+  careers_balance_first_column_text_2: Velikodušan isplatio vrijeme i ostaviti planove
+  careers_balance_second_column_text_1: Fleksibilno, podržavajuće radno okruženje
+  careers_balance_second_column_text_2: Rast i mogućnosti profesionalnog učenja
+  careers_openroles_section_title: Otvorene uloge
+  careers_openroles_section_description: Code.org ima sjedište u Seattleu, ali mnogi
+    članovi našeg tima su udaljeni. Udaljeni kandidati su dobrodošli i ohrabreni da
+    se prijave.
+  careers_more_info_text: Za više informacija o Code.org, pogledajte naša [Često postavljana
+    pitanja] (%{support_url}) ili saznajte više o [drugim načinima uključivanja u
+    našu misiju] ()%{help_url}.
+  careers_approach_section_title2: Naš pristup različitosti
+  careers_approach_section_description_1: Prihvatamo različite perspektive, ideje
+    i pozadine na Code.org. Posvećeni smo pružanju jednake mogućnosti svim zaposlenima
+    i podnosiocima zahtjeva. Mi ne diskriminiramo na osnovu rase, religije, boje,
+    nacionalnog porijekla, pola, seksualne orijentacije, starosti, bračnog statusa,
+    statusa veterana ili invaliditeta (mentalnog i fizičkog) statusa.
+  careers_approach_section_description_2: Osiguraćemo da se osobama sa invaliditetom
+    pruži razuman smještaj za učešće u procesu prijave za posao ili intervjua, za
+    obavljanje osnovnih radnih funkcija i za primanje drugih pogodnosti i privilegija
+    zapošljavanja. Ako imate individualne potrebe vezane za invaliditet, obratite
+    se na accommodations@code.org.
+  csa_ai_page_hero_title: Softverski inženjering & Computer Vision
+  csa_ai_page_hero_description: 'Ovaj CSA modul s dva poglavlja nakon AP nudi srednjoškolcima
+    praktično iskustvo s profesionalnim alatima za razvoj softvera, uključujući GitHub
+    i GitHub Copilot, i daje im vještine iz stvarnog svijeta za razvoj programa računarskog
+    vida. '
+  csa_ai_page_video_section_title: Korak izvan svijeta programskih okruženja Code.org
+  csa_ai_page_video_section_li_1: Saznajte više o AI i njegovim aplikacijama
+  csa_ai_page_video_section_li_2: Praksno iskustvo s profesionalnim alatima za razvoj
+    softvera
+  csa_ai_page_video_section_li_3: Naučite standardne prakse
+  csa_ai_page_video_section_li_4: Njegujte kritičko razmišljanje
+  csa_ai_page_programming_tools: 'Alati za programiranje: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Nijedan
+  csa_ai_page_curriculum_topics: 'tema: Programiranje, Podaci, Umjetnost i dizajn,
+    Igre i animacija'
+  csa_ai_page_curriculum_accessibility_features: Pogledajte odjeljak FAQ za detalje
+  csa_ai_page_curriculum_languages_support: engleski
+  csa_ai_page_article_title_1: Graditi s Copilot
+  csa_ai_page_article_description_1: Studenti uče kako koristiti GitHub Copilot kao
+    programer parova kako bi objasnili postojeći kod, pronašli i ispravili pogreške
+    i generirali rješenja za nove probleme.
+  csa_ai_page_article_link_1: Saznajte više o Copilotu
+  csa_ai_page_article_title_2: Izgradite svoj vlastiti AI model
+  csa_ai_page_article_description_2: Studenti treniraju vlastite AI modele koristeći
+    Teachable Machine kako bi prepoznali slike i geste formirali web kameru i razmotrili
+    kako računarski vid utječe na način na koji korisnici komuniciraju s aplikacijama.
+  csa_ai_page_article_link_2: Istražite plan lekcije
+  csa_ai_page_article_title_3: Istražite računarski vid
+  csa_ai_page_article_description_3: Studenti implementiraju AI modele koje su stvorili
+    pomoću Teachable Machine u Java aplikaciju, koristeći GitHub Copilot kako bi im
+    pomogli da modificiraju postojeće verzije aplikacija za rad s različitim ulazima.
+  csa_ai_page_article_link_3: Pogledajte primjer
+  csa_ai_page_learn_more_section_title: Saznajte više o umjetnoj inteligenciji
+  csa_ai_page_learn_more_title: Istražite AI 101 za nastavnike
+  csa_ai_page_learn_more_description: Otkrijte revolucionarni svijet umjetne inteligencije
+    (AI) i njegov transformativni potencijal u obrazovanju s našom sveobuhvatnom serijom
+    učenja na mreži za nastavnike.
+  csa_ai_page_learn_more_link: Pogledajte seriju AI 101 za nastavnike
+  csa_ai_page_faq_question_01: Koji su preduvjeti za ovaj modul?
+  csa_ai_page_faq_answer_01_01: 'Prije nego što zarone u ovaj modul, studenti bi trebali
+    posjedovati početno znanje o Javi. Konkretno, oni bi trebali shvatiti na:'
+  csa_ai_page_faq_answer_01_list_01: "** Klase i objekti: ** Studenti trebaju biti
+    upoznati sa definiranjem i korištenjem klasa, kao i kreiranjem i manipuliranjem
+    objektima."
+  csa_ai_page_faq_answer_01_list_02: "** Metode pisanja i pozivanja: ** Studenti bi
+    trebali moći definirati metode unutar klase, razumjeti parametre metoda i vrste
+    povratka te metode poziva iz objekata ili drugih metoda."
+  csa_ai_page_faq_answer_01_list_03: "**1D Nizovi i ArrayLists: ** Oni bi trebali
+    biti vještački u deklariranju, inicijalizaciji i manipuliranju jednodimenzionalnim
+    nizova i nizova, uključujući iterating kroz njih."
+  csa_ai_page_faq_answer_01_list_04: "** Izbor i iteracija: ** Čvrsta osnova u uslovnim
+    izjavama i petljama je presudna."
+  csa_ai_page_faq_question_01_02: U idealnom slučaju, studenti koji su završili AP
+    Computer Science A ili kurs slične dubine i strogosti bili bi dobro pripremljeni
+    za ovaj modul.
+  csa_ai_page_faq_question_02: Kako da instaliram softver potreban za ovaj modul?
+  csa_ai_page_faq_answer_02_01: Ovaj modul je jedinstven jer uključuje upotrebu softvera
+    treće strane, a ne Code.org laboratorija i alata. [Više o instaliranju softvera
+    pročitajte ovdje] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Kako mogu podržati potrebe pristupačnosti dok podučavam
+    ovaj modul?
+  csa_ai_page_faq_answer_03_01: Ugostiteljstvo prema potrebama pristupačnosti ključno
+    je za inkluzivno okruženje za učenje. [Više o značajkama pristupačnosti u softveru
+    koji se koristi u ovom modulu pročitajte ovdje] (%{install_url}).
+  csa_ai_page_faq_question_04: Kako da koristim VS kod na Chromebook?
+  csa_ai_page_faq_answer_04: Korištenje VS koda na Chromebooku postalo je jednostavnije,
+    posebno s mogućnošću pokretanja Linux aplikacija na novijim Chromebook modelima.
+    [Pročitajte više o postavljanju VS koda na Chromebook ovdje] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Kako mogu dobiti profesionalni razvoj za ovaj modul?
+  csa_ai_page_faq_answer_05: Trenutno ne postoji specifičan profesionalni razvoj za
+    ovaj kurs. Ako želite razumjeti kako pristupiti umjetnoj inteligenciji u svojoj
+    učionici, možete [istražiti AI 101 za nastavnike] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Koji je preporučeni vremenski raspored za podučavanje
+    ovog modula?
+  csa_ai_page_faq_answer_06_01: Modul softverskog inženjerstva i računarskog vida
+    zamišljeno je strukturiran kako bi pružio sveobuhvatno učenje u konciznom vremenskom
+    okviru. Cijeli modul je dizajniran da traje **2 sedmice instrukcije**. Većina
+    lekcija je prilagođena za **45 minuta**, dok su lekcije na kojima učenici ulaze
+    u praktični razvoj Java projekta osmišljeni za **90 minuta**. Ovo produženo vrijeme
+    osigurava studentima dovoljno prilika da razumiju, implementiraju i rješavaju
+    probleme dok rade.
+  csa_ai_page_faq_answer_06_02: Tu je i namjerna fleksibilnost ugrađena u strukturu
+    modula. Ovisno o dinamici učionice, angažmanu učenika i dubini do koje želite
+    istražiti svaku temu, možete prilagoditi trajanje. Na primjer, lekcija Intro to
+    Copilot, dizajnirana kao lekcija od 45 minuta, može se proširiti na 90 minuta
+    ako želite zaroniti dublje u to koliko veliki jezični modeli i alati poput GitHub
+    Copilot i ChatGPT rade.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Pomoću odobrenog računa nastavnika možete pronaći ključeve
+    odgovora na plavom panelu “Učitelj” Samo koji se prikazuje na mrežnim lekcijama
+    i aktivnostima. Ako vam je potreban odobreni račun nastavnika, možete se prijaviti
+    za pristup zaštićenim materijalima samo za nastavnike (ključevi odgovora itd.)
+    putem [ovaj obrazac] ().%{form_url}Imajte na umu da može potrajati 3-5 radnih
+    dana da potvrdite svoj račun.
+  csa_ai_page_faq_question_08: Da li je ovaj modul mapiran prema standardima?
+  csa_ai_page_faq_answer_08: Da, nastavni plan i program softverskog inženjerstva
+    i računarskog vida mapira se u [CSTA K-12 standardi] (%{csta_k12_url}) i AI za
+    [K-12 smjernice] ().%{k12_url}
+  csa_ai_page_faq_question_09: Koliko košta podučavanje ovog modula?
+  csa_ai_page_faq_answer_09_01: Naš nastavni plan i program i platforma dostupni su
+    na [bez troškova] (%{no_cost_url}) za bilo koga, bilo gdje, za podučavanje!
+  csa_ai_page_faq_answer_09_02: Pored toga, softver i alati koji se koriste u ovom
+    modulu su besplatni. GitHub Copilot je besplatan za verifikovane [teachers]()
+    i ()%{teachers_url}. [students]%{students_url}
+  csa_ai_page_faq_question_10: Šta da radim ako instalacija softvera ne radi?
+  csa_ai_page_faq_answer_10: Suočavanje s problemima tijekom instalacije softvera
+    može biti uobičajeno, ali postoje sistematski koraci koje možete slijediti kako
+    biste ih riješili i riješili. [Ovdje pogledajte neke savjete za rješavanje problema]
+    ()%{troubleshooting_url}.
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Naš programski inženjering & Computer Vision kurikulum
+    osmišljen je s našim vrijednostima kurikuluma na umu. Sljedeći ciljevi vodili
+    su stvaranje ovog nastavnog plana i programa:'
+  csa_ai_page_faq_answer_11_list_01: "** Cilj 1: ** Koristite AI alate za generiranje,
+    uklanjanje pogrešaka i uređivanje koda."
+  csa_ai_page_faq_answer_11_list_02: "** Cilj 2: ** Prijelaz iz Java Lab na alate
+    iz stvarnog svijeta."
+  csa_ai_page_faq_answer_11_list_03: "** Cilj 3: ** Produbite razumijevanje načina
+    na koji su AI modeli obučeni i integrirani u programe."
+  csa_ai_page_faq_answer_11_02: Za više informacija o vrijednostima koje su vodile
+    naš rad, pogledajte naše [vrijednosti kurikuluma] ().%{curriculum_values_url}
+  video_library_page_main_title: Kratki edukativni videozapisi
+  video_library_page_hero_description: Rastuća biblioteka obrazovnih videozapisa Code.org
+    dostupna je za ponovnu upotrebu od strane nastavnika širom svijeta, na mreži ili
+    u učionicama. Naš cilj je pojačati naše napore izvan dosega našeg vlastitog nastavnog
+    plana i programa.
+  video_library_page_title_ai_works: Kako AI radi
+  video_library_page_description_ai_works: Ova serija kratkih videozapisa upoznat
+    će vas s načinom na koji umjetna inteligencija djeluje i zašto je to važno. Saznajte
+    više o neuronskim mrežama ili kako AI uči i istražite pitanja poput algoritamske
+    pristranosti i etike odlučivanja AI.
+  video_library_page_title_computers_work: Kako rade računari
+  video_library_page_description_computers_work: Objašnjava šta računar čini računarom,
+    kako su digitalne informacije predstavljene u 1s i 0s, kako računarski sklopovi
+    rade na manipuliranju digitalnim informacijama i kako centralna procesna jedinica
+    (CPU) i operativni sistem kontroliraju ulaze, izlaze, memoriju i hardver računara.
+  video_library_page_title_internet_works: Kako funkcionira Internet
+  video_library_page_description_internet_works: Uz Vint Cerf, izumitelj TCP/IP-a,
+    David Karp osnivač Tumblr objasniti HTTP i HTML, Googleova sigurnosna princeza
+    objasniti SSL i cyber sigurnost, i inženjeri iz Microsofta, Spotify, i Symantec.
+    Ova serija kratkih videa koji objašnjavaju kako Internet funkcionira.
+  video_library_page_title_not_hacked: Kako se ne hakirati
+  video_library_page_description_not_hacked: Internet je otvoren, tako da se sve što
+    se događa na njemu može vidjeti osim ako nije zaštićeno. U modernim zemljama,
+    ljudi su više zabrinuti da budu hakirani nego zbog bilo kojeg drugog zločina.
+    Zašto? Jer svaki kompjuter ili telefon na Internetu redovno se testira na ranjivosti
+    od strane kriminalaca, terorista ili čak državnih aktera. Ako niste oprezni, neko
+    bi mogao hakirati vaš uređaj ili račune, pa čak i ukrasti vaš identitet ili novac.
+  video_library_page_title_blockchain: Kako funkcionira Blockchain
+  video_library_page_description_blockchain: Napravljena u partnerstvu s Coinbaseom,
+    ova serija sadrži stručnjake iz industrije i ima za cilj demistificirati ovu tehnologiju
+    istražujući što je blockchain, kako funkcionira i njegove potencijalne društvene
+    implikacije - i dobre i loše.
+  video_library_page_title_careers: Karijere u CS
+  video_library_page_description_careers: Karijere u računarstvu i tehnologiji mogu
+    biti zabavne i rewarding. Ali šta zaista radi osoba koja radi na ovim poljima?
+    Uz veliku raznolikost poslova i kompanija, ne postoji samo jedan odgovor na ovo
+    pitanje. Pogledajte videozapise u nastavku kako biste upoznali neke od ljudi koji
+    se bave velikim problemima na kreativne načine.
+  video_library_page_title_inspirational: Inspirativno
+  video_library_page_description_inspirational: Šta će se kompjuterska nauka promeniti
+    u našem svetu? Sve? Za koga je to? Svi! Pogledajte ove videozapise kako biste
+    vas inspirirali i motivirali.
+  video_library_page_footer_description: Tražite nešto drugo? Imamo toliko sjajnih
+    videozapisa dostupnih na našem Youtube kanalu.
+  video_library_page_footer_cta: Istražite sve Code.org videozapise na YouTubeu
+  video_library_page_computer_work_video_title_1: Predstavljamo kako rade računari
+  video_library_page_computer_work_video_title_2: Binarni i podaci
+  video_library_page_computer_work_video_title_3: CPU, memorija, ulaz i izlaz
+  video_library_page_computer_work_video_title_4: Šta čini računar, računar?
+  video_library_page_computer_work_video_title_5: Logika kola
+  video_library_page_computer_work_video_title_6: Hardver i softver
+  video_library_page_internet_work_video_title_1: Što je internet?
+  video_library_page_internet_work_video_title_2: 'INTERNET: IP adrese i DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET: HTTP i HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET: Cybersecurity & Crime'
+  video_library_page_internet_work_video_title_5: 'INTERNET: Žice, kablovi i Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNET: Paketi, usmjeravanje
+    i pouzdanost'
+  video_library_page_internet_work_video_title_7: 'INTERNET: Šifriranje i javni ključevi'
+  video_library_page_internet_work_video_title_8: 'INTERNET: Kako funkcionira pretraga'
+  video_library_page_cs_video_title_1: Moje ime je Jerome i ja sam dizajnerski tehnolog
+    u Meow Wolf
+  video_library_page_cs_video_title_2: Moje ime je Nikesha i ja sam inženjer zrakoplovstva
+    u NASA-i
+  video_library_page_cs_video_title_3: Moje ime je Brina i ja sam softverski inženjer
+    na Instagramu
+  video_library_page_cs_video_title_4: Moje ime je Kinsley i ja sam softverski inženjer
+    na Facebooku
+  video_library_page_cs_video_title_5: Moje ime je Polina i ja sam naučnik podataka
+    u Electronic Arts
+  video_library_page_cs_video_title_6: Moje ime je Danelle i ja sam softverski inženjer
+    u MBARI
+  video_library_page_cs_video_title_7: Moje ime je Christopher i ja sam sigurnosni
+    analitičar u Taniumu
+  video_library_page_cs_video_title_8: Moje ime je Federico i ja sam menadžer tehničkog
+    programa u Microsoftu
+  video_library_page_cs_video_title_9: Moje ime je Tess i ja sam softverski inženjer
+    na Googleu
+  video_library_page_inspirational_video_title_1: Promijenite lice informatike (3
+    min)
+  video_library_page_inspirational_video_title_2: Gurnite se. Svako može naučiti.
+    (1 min)
+  video_library_page_inspirational_video_title_3: Inspirirati djevojku (2 min)
+  video_library_page_inspirational_video_title_4: Ono što većina škola ne podučava
+    (5 min)
+  video_library_page_inspirational_video_title_5: Sat koda je ovdje - Svako može naučiti
+    (2 min)
+  video_library_page_inspirational_video_title_6: Moje ime je Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Sat kodiranja sa Steph Curry (2
+    min)
+  video_library_page_inspirational_video_title_8: Informatika mijenja sve (5 min)
+  video_library_page_inspirational_video_title_9: Intro informatike (1 min)
+  video_library_page_inspirational_video_title_10: Predsjednik Obama o računarstvu
+    (1 min)
+  video_library_page_inspirational_video_title_11: Svako može naučiti (1 min)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_inspirational_video_title_13: NASA slavi Sat kodiranja (2 min)
+  video_library_page_inspirational_video_title_14: To je više od igre (1 min)
+  video_library_page_inspirational_video_title_15: Stvorite S Računarskom Naukom (1
+    min)
+  video_library_page_not_hacked_video_title_1: 'Kako se ne hakirati: Uvod'
+  video_library_page_not_hacked_video_title_2: 'Kako se ne hakirati: Lozinke'
+  video_library_page_not_hacked_video_title_3: 'Kako se ne hakirati: provjera autentičnosti
+    i brave uređaja'
+  video_library_page_not_hacked_video_title_4: 'Kako se ne hakirati: krađe identiteta'
+  video_library_page_not_hacked_video_title_5: 'Kako se ne hakirati: Web stranice
+    i Wifi'
+  video_library_page_not_hacked_video_title_6: 'Kako se ne hakirati: Poruke i preuzimanja'
+  video_library_page_not_hacked_video_title_7: 'Kako se ne hakirati: Instalirajte
+    ažuriranja'
   language_code:
     ar: Arapski
     az: Azerbejdžanski

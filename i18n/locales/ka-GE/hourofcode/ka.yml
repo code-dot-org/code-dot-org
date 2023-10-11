@@ -35,6 +35,10 @@ ka:
   africa_campaign_date_full: 1-31 ოქტომბერი
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1-31 ოქტომბერი, 2021
+  hoc2023_header: კრეატიულობა AI— სთან
+  hoc2023_social_creativity_with_ai_title: კოდის ერთი საათი - რას შექმნით?
+  hoc2023_social_creativity_with_ai_desc: გამოიყენეთ კომპიუტერული მეცნიერება, რომ
+    შეისწავლოთ და გაეცნოთ AI- ს შესახებ!
   hoc2022_header: შეისწავლე, ითამაშე, შექმენი!
   social_hoc2022_explore_play_create: გამოიყენე კომპიუტერული მეცნიერება შესწავლის,
     თამაშის და შექმნისთვის!
@@ -110,32 +114,34 @@ ka:
     როლი კომპიუტერულ მეცნიერებას უფრო სამართლიანი სამყაროს შექმნაში.
   oceans_landing_videos: ვიდეოები AI და მანქანური სწავლების შესახებ
   oceans_behind_the_scenes: 'AI ოკეანეებისთვის: კულისებში'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
+  oceans_behind_the_scenes_1: 2-4 დონეზე იყენებენ <a href="https://www.tensorflow.org/"
+    >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet პროექტის მიერ მოწოდებულ წინასწარ მომზადებულ მოდელს. </a> MobileNet მოდელი
+    არის <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">კონვოლუციური
+    ნერვული ქსელი,</a> რომელიც გაწვრთნილია <a href="http://www.image-net.org/">ImageNet-ზე</a>,
+    14 მილიონზე მეტი სურათის მონაცემთა ნაკრები ხელით ანოტირებული სიტყვებით, როგორიცაა
+    „ბუშტი“ ან „მარწყვი“. იმისათვის, რომ ამ მოდელის მორგება ეტიკეტირებული ტრენინგის
+    მონაცემებით, რომელსაც მოსწავლე გამოიმუშავებს ამ აქტივობაში, ჩვენ ვიყენებთ ტექნიკას
+    სახელწოდებით <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>ტრენინგის მონაცემთა ნაკრების თითოეული სურათი მიეწოდება MobileNet-ს,
+    როგორც პიქსელებს, რათა მიიღოთ ანოტაციების სია, რომლებიც, სავარაუდოდ, ვრცელდება
+    მასზე. შემდეგ, ახალი სურათისთვის, ჩვენ ვაწვდით მას MobileNet- ს და შევადარებთ
+    ანოტაციების ჩამონათვალს ტრენინგის მონაცემთა ნაკრებიდან. ჩვენ ახალ სურათს ვახარისხებთ
+    იმავე ეტიკეტით (მაგალითად, „თევზი“ ან „არა თევზი“), როგორც სურათები სასწავლო ნაკრებიდან
+    ყველაზე მსგავსი შედეგებით.
+  oceans_behind_the_scenes_1_markdown: 2-4 საფეხურები იყენებენ წინასწარ მომზადებულ
+    მოდელს, რომელიც მოწოდებულია [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    პროექტით. MobileNet მოდელი არის [კონვოლუციური ნერვული ქსელი] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks),
+    რომელიც გაწვრთნილია [ImageNet](http://www.image-net.org/), 14 მილიონზე მეტი სურათის
+    მონაცემთა ნაკრები ხელით ანოტირებული სიტყვებით, როგორიცაა „ბუშტი“ ან „მარწყვი“.
+    იმისათვის, რომ ამ მოდელის მორგება მონიშნული სასწავლო მონაცემებით, რომელსაც მოსწავლე
+    გამოიმუშავებს ამ აქტივობაში, ჩვენ ვიყენებთ ტექნიკას სახელწოდებით [გადაცემის სწავლა]
+    (https://en.wikipedia.org/wiki/Transfer_learning). ტრენინგის მონაცემთა ნაკრების
+    თითოეული სურათი მიეწოდება MobileNet-ს, როგორც პიქსელებს, რათა მიიღოთ ანოტაციების
+    სია, რომლებიც, სავარაუდოდ, ვრცელდება მასზე. შემდეგ, ახალი სურათისთვის, ჩვენ ვაწვდით
+    მას MobileNet- ს და შევადარებთ ანოტაციების ჩამონათვალს ტრენინგის მონაცემთა ნაკრებიდან.
+    ჩვენ ახალ სურათს ვახარისხებთ იმავე ეტიკეტით (მაგალითად, „თევზი“ ან „არა თევზი“),
+    როგორც სურათები სასწავლო ნაკრებიდან ყველაზე მსგავსი შედეგებით.
   oceans_behind_the_scenes_2: 6-8 დონეზე გამოიყენეთ <a href="https://en.wikipedia.org/wiki/Support-vector_machine">მხარდაჭერა-ვექტორული
     მანქანა</a> (SVM). ჩვენ ვუყურებთ თევზის თითოეულ კომპონენტს (როგორიცაა თვალები,
     პირი, სხეული) და ვაგროვებთ კომპონენტების ყველა მეტამონაცემს (როგორიცაა კბილების
@@ -180,6 +186,28 @@ ka:
     გეგმების კატალოგი და განახლებული სწავლების გვერდი, რომელიც დაგეხმარებათ იპოვოთ
     ეს ყველაფერი!
   in_partnership_with: პარტნიორობით
+  shop_code_dot_org_heading: მაღაზია კოდი.org
+  shop_code_dot_org_desc: მხარი დაუჭირეთ ჩვენს საქმიანობას და ატარეთ მოძრაობა სიამაყით.
+    ჩვენს ქუდებს ატარებდნენ პრეზიდენტი ობამა და ცნობილი ადამიანებიც.
+  spread_the_word_heading: გაავრცელეთ ინფორმაცია
+  spread_the_word_desc: გააძლიერეთ ჩვენი გავლენა Code.org თქვენს ქსელთან გაზიარებით.
+    სოციალური მედიიდან ელ. ფოსტის განახლებებამდე, აღმოაჩინეთ, თუ როგორ შეგიძლიათ დაგვეხმაროთ
+    მეტი პედაგოგის, სტუდენტისა და ადვოკატის მიღწევაში.
+  follow_us_heading: მოგვყევით სოციალურ მედიაში
+  follow_us_desc: იყავით განახლებული ჩვენთან სოციალურ მედიაში და გაუზიარეთ ჩვენი პოსტები
+    თქვენს ქსელს, რათა იყოთ ინფორმირებული და დაეხმაროთ ცნობიერების ამაღლებას.
+  facebook: ფეისბუქი
+  twitter: ტვიტერი
+  linked_in: LinkedIn
+  instagram: ინსტაგრამი
+  tik_tok: TikTok
+  subscribe_to_emails_heading: ელ. ფოსტის გამოწერა
+  subscribe_to_emails_desc: წაიკითხეთ რა ხდება Code.org— ზე და კომპიუტერულ მეცნიერებათა
+    განათლებაში კვარტალური განახლებების საშუალებით ჩვენი საფოსტო სიის საშუალებით.
+  subscribe_to_emails_intl: გამოიწერეთ საერთაშორისო განახლებები
+  promote_code_dot_org_heading: ხელი შეუწყეთ Code.org
+  promote_code_dot_org_desc: ხელი შეუწყეთ კომპიუტერულ მეცნიერებას თქვენს მხარეში სტატისტიკის,
+    ციტატების და ვიდეოების დახმარებით.
   afe_partnership_logo_alt: ამაზონის მომავალი ინჟინრის ლოგო
   afe_partnership_thanks_desc: Amazon Future Engineer არის ყოვლისმომცველი ბავშვობიდან
     კარიერაში პროგრამა, რომელიც შთააგონებს, ასწავლის და ამზადებს დაბალშემოსავლიან
@@ -189,6 +217,26 @@ ka:
   grade_level_label_elementary: დაწყებითი სკოლა
   grade_level_label_middle: საშუალო სკოლა
   grade_level_label_high: საშუალო სკოლა
+  curricula_title_elementary: დაწყებითი სკოლის სასწავლო გეგმები
+  curricula_desc_elementary: დაათვალიერეთ სახალისო, უფასო კურსები და აქტივობები, რომლებიც
+    გიწვევთ კომპიუტერული მეცნიერების შესასწავლად დაწყებითი სკოლის მოსწავლეებთან ერთად.
+  curricula_title_middle: საშუალო სკოლის სასწავლო გეგმები
+  curricula_desc_middle: დაათვალიერეთ საინტერესო შეთავაზებები, რომლებიც საშუალებას
+    გაძლევთ თქვენ და თქვენს საშუალო სკოლის მოსწავლეებს ერთად შეისწავლონ კომპიუტერული
+    მეცნიერება.
+  curricula_title_high: საშუალო სკოლის სასწავლო გეგმები
+  curricula_desc_high: დაათვალიერეთ დამაჯერებელი კურსები და აქტივობები, რომლებიც გიწვევთ
+    თქვენ და თქვენი საშუალო სკოლის მოსწავლეებს კომპიუტერულ მეცნიერებაში უფრო ღრმად
+    ჩაღრმავებაში.
+  for_administrators_heading: ადმინისტრატორებისთვის
+  for_administrators_desc: შეუერთდით ათასობით სკოლას, რომლებმაც უკვე ჩართეს კომპიუტერული
+    მეცნიერება თავიანთ სასწავლო გეგმაში.
+  for_parents_heading: მშობლებისთვის
+  for_parents_desc: თქვენ შეგიძლიათ დაეხმაროთ თქვენი სტუდენტის სკოლის წახალისებას
+    კომპიუტერული მეცნიერების განათლების შეთავაზების ან გაფართოების მიზნით.
+  for_educators_heading: პედაგოგებისთვის
+  for_educators_desc: დაიწყეთ სწავლება დღესვე - კომპიუტერული მეცნიერების გამოცდილება
+    არ არის საჭირო - ჩვენი პროფესიული სასწავლო სემინარებით.
   students_label: მოსწავლეები
   teachers_label: მასწავლებლები
   teacher_label_csf: CS საფუძვლების მასწავლებელი
@@ -198,9 +246,11 @@ ka:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'საჭირო მასალები:'
   optional_materials: 'პირობითი მასალები:'
+  call_to_action_hold_an_event: ღონისძიების გამართვა
   call_to_action_learn_more: გაიგე მეტი
   call_to_action_watch_now: უყურე ახლა
   call_to_action_try_activity: სცადეთ აქტივობა
+  call_to_action_try_activities: სცადეთ აქტივობები
   call_to_action_explore_unit: გამოიკვლიეთ ერთეული
   call_to_action_explore_curriculum: გამოიკვლიეთ სასწავლო გეგმა
   call_to_action_explore_curriculum_options: გამოიკვლიეთ სასწავლო გეგმის ვარიანტები
@@ -215,6 +265,15 @@ ka:
   call_to_action_explore_choice_level: გამოიკვლიეთ მაგალითის არჩევანის დონე
   call_to_action_explore_collection: გამოიკვლიეთ კოლექცია
   call_to_action_explore_unplugged_lesson: გამოიკვლიეთ გამორთული გაკვეთილები
+  call_to_action_explore_csf: გამოიკვლიეთ CS საფუძვლები
+  call_to_action_explore_csd: გამოიკვლიეთ CS აღმოჩენები
+  call_to_action_explore_csp: გამოიკვლიეთ CS პრინციპები
+  call_to_action_explore_csc: გამოიკვლიეთ CS კავშირები
+  call_to_action_explore_csa: გამოიკვლიეთ AP® კომპიუტერული მეცნიერება A
+  call_to_action_explore_csa_short: გამოიკვლიეთ AP® CSA
+  call_to_action_explore_maker: გამოიკვლიეთ შემქმნელის სასწავლო გეგმები
+  call_to_action_explore_hoc: გამოიკვლიეთ კოდის საათის გაკვეთილები
+  call_to_action_explore_hoc_short: გამოიკვლიეთ კოდის ერთი საათი
   call_to_action_try_app_lab: სცადეთ აპლიკაციის ლაბორატორია
   call_to_action_view_lesson_plan: გაკვეთილის გეგმის ნახვა
   call_to_action_self_paced_pl: დაიწყეთ თვითნაკეთი პროფესიული სწავლება
@@ -238,6 +297,7 @@ ka:
   call_to_action_resources_tools: სცადეთ პროგრამირების ინსტრუმენტები
   call_to_action_sign_up_free: დარეგისტრირდით უფასოდ
   call_to_action_explore_ai_resources: გამოიკვლიეთ AI რესურსები
+  call_to_action_explore_ai_curricula: გამოიკვლიეთ AI სასწავლო გეგმები
   call_to_action_explore_curriculum_catalog: შეისწავლეთ სასწავლო გეგმების კატალოგი
   call_to_action_see_full_curriculum_catalog: იხილეთ კურიკულუმების სრული კატალოგი
   call_to_action_find_self_paced_modules: იპოვნეთ თვითნაკეთი მოდულები
@@ -259,6 +319,20 @@ ka:
   call_to_action_notify_available: შემატყობინე, როდესაც ეს შესაძლებელია
   call_to_action_register_early_access: დარეგისტრირდით ადრეული წვდომისთვის
   call_to_action_open_positions: ღია პოზიციების ნახვა
+  call_to_action_explore_roles: გამოიკვლიეთ ღია როლები
+  call_to_action_get_guide: მიიღეთ სახელმძღვანელო
+  call_to_action_donate_to_cdo: შემოწირეთ Code.org
+  call_to_action_start_fundraiser: დაიწყეთ ფონდის შეგროვება
+  call_to_action_view_donation_policy: იხილეთ შემოწირულობის პოლიტიკა
+  call_to_action_view_donate_bitpay: შემოწირულობა BitPay— ით
+  call_to_action_make_a_donation: შემოწირულობის გაკეთება
+  call_to_action_other_ways_to_give: სხვა გზები მისცეს
+  call_to_action_become_partner_usa: გახდი შეერთებული შტატების პარტნიორი
+  call_to_action_become_partner_intl: გახდი საერთაშორისო პარტნიორი
+  call_to_action_become_a_volunteer: გახდი მოხალისე
+  call_to_action_start_translating: დაიწყეთ თარგმნა
+  call_to_action_learn_about_advocacy: შეიტყვეთ ჩვენი ადვოკატირების შესახებ
+  call_to_action_visit_store: ეწვიეთ მაღაზიას
   aria_label_call_to_action_afe: შეიტყვეთ მეტი ამაზონის მომავალი ინჟინრის შესახებ
   aria_label_call_to_action_teaching_csf: დაიწყეთ კომპიუტერული მეცნიერების საფუძვლების
     სწავლების პროფესიული სასწავლო პროგრამა
@@ -368,8 +442,11 @@ ka:
   curriculum_name_csp: კომპიუტერული მეცნიერების პრინციპები
   curriculum_name_csc: კომპიუტერულ მეცნიერებათა კავშირები
   curriculum_name_csa: AP® კომპიუტერული მეცნიერება A
+  curriculum_name_csa_ai: პროგრამული ინჟინერია და კომპიუტერული ხედვა
   curriculum_name_csc_02: ნებისმიერი CS კავშირის მოდული
   curriculum_name_ai: AI & მანქანური სწავლება
+  curriculum_name_artificial_intelligence: ხელოვნური ინტელექტი (AI)
+  curriculum_name_maker: Maker
   curriculum_name_maker_cp: პროგრამების შექმნა მოწყობილობებით (წრიული მოედანი)
   curriculum_name_maker_microbit: 'პროგრამების შექმნა მოწყობილობებით (მიკრო: ბიტი)'
   curriculum_name_creating_apps_with_devices: პროგრამების შექმნა მოწყობილობებით
@@ -380,6 +457,8 @@ ka:
   curriculum_name_interactive_animations_games: ინტერაქტიული ანიმაციები და თამაშები
   curriculum_name_design_process: დიზაინის პროცესი
   curriculum_name_data_society: მონაცემები და საზოგადოება
+  curriculum_desc_csf: ელემენტარული სასწავლო გეგმების უფასო ნაკრები, რომელიც სტუდენტებს
+    აცნობს კომპიუტერული მეცნიერების ფუნდამენტურ კონცეფციებს.
   curriculum_desc_csf_express: ისწავლეთ კომპიუტერული პროგრამების შექმნა, პრობლემების
     გადაჭრის უნარების განვითარება და სახალისო გამოწვევების გადალახვა! შექმენით თამაშები
     და კრეატიული პროექტები მეგობრებთან, ოჯახთან და მასწავლებლებთან გასაზიარებლად.
@@ -428,6 +507,27 @@ ka:
     როლი გამოთვლებში. პროგრამების შემუშავება, რომლებიც იყენებენ აპარატურულ საშუალებებსა
     და შედეგებს. ამ ერთეულის ვერსია არსებობს როგორც მიკრო: ბიტისთვის, ასევე წრიული
     სათამაშო მოედნისთვის.'
+  curriculum_desc_csa: გააცანით სტუდენტებს პროგრამული უზრუნველყოფის ინჟინერია და ობიექტზე
+    ორიენტირებული დიზაინი, სანამ ისინი სწავლობენ Java პროგრამირების ენას ამ უფასო
+    სასწავლო გეგმაში AP® კომპიუტერული მეცნიერებისთვის A (AP® CSA).
+  curriculum_desc_maker: შემქმნელთა განათლება STEM- ს (მეცნიერება, ტექნოლოგია, ინჟინერია,
+    მათემატიკა) ნაბიჯს გადადგამს პრაქტიკული გამოცდილებისა და თანამშრომლობით კლასში,
+    რათა დაეხმაროს პრობლემის გადაჭრისა და კრიტიკული აზროვნების სწავლებას.
+  curriculum_desc_maker_short: შემქმნელთა განათლება იწვევს პრაქტიკულ გამოცდილებას
+    და თანამშრომლობას კლასში, რათა დაეხმაროს პრობლემის გადაჭრისა და კრიტიკული აზროვნების
+    სწავლებას.
+  curriculum_desc_csd: მოქნილი კურსი, რომელიც საშუალებას აძლევს თითოეულ ერთეულს ისწავლოს
+    მარტო ან კომბინირებული. აცნობს სტუდენტებს ვებსაიტების, აპების, ანიმაციების, თამაშებისა
+    და ფიზიკური გამოთვლითი სისტემების შექმნას.
+  curriculum_desc_csp: უფასო, AP® CSP მოწონებული, საშუალო სკოლის შესავალი კურსი, რომელიც
+    სტუდენტებს აცნობს კომპიუტერული მეცნიერების ფუნდამენტურ კონცეფციებს.
+  curriculum_desc_csa_ai_long: 'ეს ორთავიანი პოსტ-AP CSA მოდული საშუალო სკოლის მოსწავლეებს
+    სთავაზობს პრაქტიკულ გამოცდილებას პროგრამული უზრუნველყოფის შემუშავების პროფესიონალური
+    ინსტრუმენტებით, მათ შორის GitHub და GitHub Copilot, და აძლევს მათ რეალურ სამყაროში
+    არსებულ უნარებს კომპიუტერული ხედვის პროგრამის შემუშავებისთვის. '
+  curriculum_desc_csa_ai_short: ეს Post-AP® CSA მოდული საშუალო სკოლის მოსწავლეებს
+    სთავაზობს პრაქტიკულ გამოცდილებას პროგრამული უზრუნველყოფის შემუშავების პროფესიონალური
+    ინსტრუმენტებით.
   collection_hardware: ფოკუსირება აპარატურაზე
   collection_hardware_desc: აძლევს სტუდენტებს უფლებას გამოიყენონ მონაცემები და ფიზიკური
     მოწყობილობები პრობლემების გადასაჭრელად.
@@ -459,6 +559,7 @@ ka:
   module_label_professional_learning: 'პროფესიული სწავლება:'
   module_label_languages: 'მხარდაჭერილი ენები:'
   module_label_accessibility_features: 'ხელმისაწვდომობა:'
+  module_label_accessibility_features_full: 'ხელმისაწვდომობის მახასიათებლები:'
   module_label_educator_tool: განმანათლებლის ინსტრუმენტი
   module_label_educator_course: პედაგოგის კურსი
   module_label_student_tool: სტუდენტური ინსტრუმენტი
@@ -466,6 +567,7 @@ ka:
   module_label_student_content_resources: შინაარსი და რესურსები
   module_label_new: ახალი
   module_label_coming_soon: მალე
+  module_label_available_now: ხელმისაწვდომია ახლა
   module_label_video_series: ვიდეო სერიები
   module_label_self_paced: თვითმმართველობის paced მოდული
   module_ages_5_10: 5-10
@@ -476,6 +578,8 @@ ka:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: კ-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -490,11 +594,14 @@ ka:
   module_grade_9_12_teachers: 9-12 პედაგოგები
   module_level_beginner: დამწყები
   module_level_intermediate: შუალედური
+  module_level_advanced: მოწინავე
   module_duration_45_mins: 45 წუთი
+  module_duration_2_weeks: 2 კვირა
   module_duration_1_hr: 1 საათი
   module_duration_2_hrs: 2 საათი
   module_duration_3_hrs: 3 საათი
   module_duration_5_hrs: 5 საათი
+  module_duration_5_hrs_plus: 5+ საათი
   module_duration_8_hrs: 8 საათი
   module_duration_20_hrs: 20 საათი
   module_duration_35_hrs: 35 საათი
@@ -506,6 +613,7 @@ ka:
   module_duration_school_year: სასწავლო წელი
   module_duration_month_quarter: თვე ან კვარტალი
   module_duration_month_semester_year: თვე, სემესტრი ან წელი
+  module_duration_varies: მერყეობს
   module_prerequisites_none: არცერთი
   module_prerequisites_maker_cp: მიკროსქემის სათამაშო მოედანზე წვდომა
   module_prerequisites_maker_microbit: წვდომა მიკრო:ბიტზე
@@ -575,6 +683,10 @@ ka:
   heading_java_lab: ჯავის ლაბორატორია
   heading_objects_first: ობიექტები პირველი
   heading_these_lessons_will: 'ეს გაკვეთილები იქნება:'
+  heading_explore_curriculum_catalog: გამოიკვლიეთ ჩვენი ყველა კურსი სასწავლო გეგმების
+    კატალოგში
+  heading_csa_ai: ეძებთ საქმეებს AP® გამოცდის შემდეგ?
+  heading_bring_cs_to_students: მოიყვანეთ კომპიუტერული მეცნიერება სტუდენტებს
   professional_learning_section_desc: მიიღეთ საჭირო მხარდაჭერა, როდესაც სწავლებისთვის
     ემზადებით. მასწავლებლებს უყვართ ის, 90% -ზე მეტი კი მას საუკეთესო პროფესიულ განვითარებად
     აფასებს ოდესმე!
@@ -608,6 +720,23 @@ ka:
     ნებისმიერ შეკითხვას, რომელიც შეიძლება გქონდეთ Code.org— ით სწავლების დაწყების
     შესახებ. თქვენ ასევე შეგიძლიათ ჰკითხოთ სხვა მასწავლებლებს მათი გამოცდილების შესახებ
     ჩვენს მასწავლებელთა ფორუმებზე.
+  subscribe_form_section_title: გამოიწერეთ განახლებები
+  subscribe_form_section_desc_csa: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის AP® კომპიუტერული მეცნიერების A— ს შესახებ და მიიღეთ სასარგებლო შეხსენებები,
+    რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_desc_csc: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის კომპიუტერული მეცნიერების კავშირების შესახებ და მიიღოთ სასარგებლო
+    შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_desc_csd: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის კომპიუტერული მეცნიერების აღმოჩენების შესახებ და მიიღეთ სასარგებლო
+    შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_desc_csf: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის კომპიუტერული მეცნიერების საფუძვლების შესახებ და მიიღეთ სასარგებლო
+    შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_desc_csp: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის კომპიუტერული მეცნიერების პრინციპების შესახებ და მიიღოთ სასარგებლო
+    შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_unsubscribe: ნებისმიერ დროს შეგიძლიათ გააუქმოთ გამოწერა.
   blockchain_hero_heading: როგორ მუშაობს ბლოკჩეინი
   blockchain_hero_desc: ჩაყვინთეთ ბლოკჩეინის სამყაროში „როგორ მუშაობს ბლოკჩეინი“,
     ჩვენი ახალი ვიდეო სერიით და თანმხლები გაკვეთილებით!
@@ -714,6 +843,9 @@ ka:
     გაკვეთილი დაწყვილებულია სერიიდან ერთ ვიდეოსთან, რომელიც უფრო ღრმად იძირება ვიდეოებში
     დანერგილ კონცეფციებში.
   ai_curriculum_btn_aria_label_04: გამოიკვლიეთ როგორ მუშაობს AI გაკვეთილები
+  ai_curriculum_grades_05: 'კლასის დონეები: 9-12'
+  ai_curriculum_btn_aria_label_05: გამოიკვლიეთ პროგრამული ინჟინერიისა და კომპიუტერული
+    ხედვის მოდული
   ai_carousel_heading: 'რას ამბობენ მასწავლებლები AI— ს შესახებ Code.org— ით:'
   ai_carousel_quote_01: ამ გაკვეთილმა ასევე მისცა ჩემს სტუდენტებს შესაძლებლობა დაენახათ,
     რომ კლასიფიკაციის სისტემებში არსებობს აზრის ელემენტი. მოგვიანებით, როდესაც ჩვენ
@@ -834,11 +966,20 @@ ka:
     ხელოვნური ინტელექტის გამოყენებაზე. თეორიის, პრაქტიკული მაგალითებისა და რესურსების
     მდიდარი ნაზავით, ის მიზნად ისახავს მასწავლებლების გაძლიერებას ხელოვნური ინტელექტის
     ლანდშაფტში ნავიგაციისთვის და სტუდენტების სწავლის გამოცდილების გაღრმავებაში.
+  ai_pl_101_resources_5: გზამკვლევი AI— ს მიმართ პასუხისმგებელი მიდგომის უზრუნველსაყოფად
   ai_pl_101_video_desc_6: 'შეიტყვეთ მეტი ახალი ტექნოლოგიის შესახებ, რომელიც განაპირობებს
     AI— ს დიდ ცვლილებებს, რომელშიც წარმოდგენილია ორი ახალი ვიდეო დიდი ენის მოდელებზე
     (როგორიცაა ChatGPT) და Generative AI. მოუსმინეთ, თუ როგორ მუშაობს ეს ახალი ტექნოლოგიები
     უშუალოდ ექსპერტებისგან: მირა მურატი, OpenAI— ს CTO და RunwayML— ის აღმასრულებელი
     დირექტორი კრისტობალ ვალენზუელა.'
+  ai_pl_101_llm_slides_title: დიდი ენის მოდელის მოთხოვნები პედაგოგებისთვის
+  ai_pl_101_llm_slides_desc: ინსტრუმენტები LLMS— დან საუკეთესო გამოსავლის მისაღებად,
+    როგორიცაა ChatGPT, დამწყებიდან მოწინავემდე. მოიცავს დამწყებ მოთხოვნებს მათთვის,
+    ვინც უბრალოდ თითების თითებს იჭერს, ასევე მოწინავე ინსტრუმენტებს მათთვის, ვინც
+    ცდილობს მაქსიმალურად გაზარდოს თავისი პოტენციალი.
+  ai_pl_101_resources_3: AI მოთხოვნა სტუდენტის სწავლის გარდაქმნისთვის
+  ai_pl_101_resources_section_title: AI— ს შესახებ გაცნობის მეტი გზა
+  ai_pl_101_resources_guide: 'კომპანიონი სახელმძღვანელო:'
   how_ai_works_hero_heading: როგორ მუშაობს AI
   how_ai_works_hero_desc: ჩაყვინთეთ ხელოვნური ინტელექტის სამყაროში „როგორ მუშაობს
     AI“, ჩვენი ვიდეო სერიებით და თანმხლები გაკვეთილებით!
@@ -1177,21 +1318,19 @@ ka:
   teach_page_free_curriculum_desc: ჩვენ გვინდა, რომ თქვენს სკოლაში კომპიუტერული მეცნიერება
     შემოიტანოთ ხარჯზე ფიქრის გარეშე. სწორედ ამიტომ, ჩვენ ვალდებულნი ვართ, რომ ჩვენი
     სასწავლო გეგმის შეთავაზებები სამუდამოდ უფასო იყოს!
-  teach_page_free_curriculum_list_heading_01: სასწავლო გეგმის ჩართვა ყველა კლასის
-    დონისთვის
   teach_page_free_curriculum_list_desc_01: უფასო, მოქნილი და სახალისო სასწავლო გეგმა
     შეთავაზებებით 67-ზე მეტ ენაზე.
-  teach_page_free_curriculum_list_heading_02: ადაპტირებადი, ინოვაციური სასწავლო გეგმა
   teach_page_free_curriculum_list_desc_02: Code.org გთავაზობთ ყველაფერს მთელი წლის
     სასწავლო გეგმებიდან დაწყებული ერთეულ აქტივობებამდე. გარდა ამისა, ჩვენ ყოველწლიურად
     ვაახლებთ ჩვენს სასწავლო გეგმებს საუკეთესო პრაქტიკისა და ფოკუსირების სფეროების
     მხარდასაჭერად და ვქმნით ახალ შეთავაზებებს, რომლებიც ასწავლიან მიმდინარე მოთხოვნილ
     თემებს.
-  teach_page_free_curriculum_list_heading_03: სტრუქტურირებული სასწავლო გეგმა, რომელიც
-    შედგენილია ეროვნულ სტანდარტებთან
   teach_page_free_curriculum_list_desc_03: თითოეული სასწავლო გეგმა ასახულია ეროვნული
     სტანდარტების მინიმუმ ერთ კომპლექტზე, მათ შორის CSTA, შემდეგი თაობის მეცნიერების
     სტანდარტები და საერთო ბირთვი.
+  teach_page_free_curriculum_list_desc_04: შეთავაზებები 67 -ზე მეტ ენაზე
+  teach_page_free_curriculum_list_desc_05: ასახულია ეროვნული სტანდარტების მინიმუმ
+    ერთ კომპლექტზე (მათ შორის CSTA, NGSS და Common Core)
   teach_page_free_curriculum_heading_02: 'გამოიკვლიეთ ჩვენი სასწავლო გეგმის შეთავაზებები
     სხვადასხვა კლასის დონისთვის:'
   teach_page_resources_heading: რესურსები, რომლებიც მხარს გიჭერთ ყოველ ნაბიჯზე
@@ -1253,8 +1392,8 @@ ka:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: აპლიკაციის ლაბორატორია
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: ფასილიტატორის ხელმძღვანელობით
+    სემინარები, თვითნაკეთი მოდულები
   csp_page_curriculum_glance_professional_languages: ქართული
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1383,8 +1522,8 @@ ka:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: აპლიკაციის ლაბორატორია, თამაშის ლაბორატორია, AI
     ლაბორატორია, ვებ ლაბორატორია
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: ფასილიტატორის ხელმძღვანელობით
+    სემინარები, თვითნაკეთი მოდულები
   csd_page_curriculum_glance_professional_languages: ქართული
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1452,10 +1591,10 @@ ka:
     ხელმისაწვდომია, თუ ამ მარაგებზე წვდომა არ გაქვთ.
   csd_page_faq_answer_04_06: პროგრამების შექმნა მოწყობილობებით (ვარიანტი A და ვარიანტი
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'ვარიანტი A: წრიული სათამაშო მოედნების საკლასო კომპლექტი.
+    დამატებითი ინფორმაციისთვის იხილეთ [code.org/maker/circuit მოედანი] ().%{url}'
+  csd_page_faq_answer_04_08: 'ვარიანტი B: საკლასო კომპლექტი მიკრო: bit მოწყობილობები.
+    შეამოწმეთ [code.org/maker/microbit] () დამატებითი ინფორმაციისთვის.%{url}'
   csd_page_faq_answer_04_09: Maker წყაროები, როგორიცაა ცარიელი ქსოვილის ყუთები ან
     მუყაოს რულონები ან ნულიდან ქაღალდი
   csd_page_faq_answer_04_10: "* შენიშვნა: პროგრამების შექმნა მოწყობილობებით ერთეულს
@@ -1529,8 +1668,8 @@ ka:
     ხელოვნება და დიზაინი, აპლიკაციის დიზაინი
   csf_page_curriculum_glance_devices: ლეპტოპი, Chromebook, ტაბლეტი
   csf_page_curriculum_glance_tools: Sprite ლაბორატორია, თამაში ლაბორატორია
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: ფასილიტატორის ხელმძღვანელობით
+    სემინარები, თვითნაკეთი მოდულები
   csf_page_curriculum_glance_languages: არაბული, Bahasa Indonesian, Catalán, ჩინური
     გამარტივებული, ჩინური ტრადიციული, ჩეხური, ფრანგული, გერმანული, ჰინდი, იტალიური,
     იაპონური, კორეული, კანადა, Malay, Marathi, Mongolian, პოლონური, პორტუგალიური-BR,
@@ -1598,9 +1737,10 @@ ka:
     პროექტის დონე, რომელიც შექმნილია უნისონში გამოცდილებისთვის, ხოლო უნარების განვითარების
     გაკვეთილები შეიძლება დაასრულონ სტუდენტებმა საკუთარი ტემპით.
   csf_page_faq_question_06: რა მასალები მჭირდება CS საფუძვლებისთვის?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: ბევრ გაკვეთილს აქვს სახელმძღვანელოები, რომლებიც მოსწავლეებს
+    უხელმძღვანელებენ აქტივობებში. ამ რესურსების დაბეჭდვა ან მინიჭება შესაძლებელია
+    ციფრულად. ზოგიერთი გაკვეთილი მოითხოვს საკლასო ოთახის ტიპურ მარაგს და მანიპულატორებს.
+    [ეწვიეთ CSF სილაბუსს მეტის გასაგებად] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1671,6 +1811,64 @@ ka:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: დახმარება დააფინანსოს ჩვენი მისია
+  donate_page_top_desc: ყოველი შემოწირულობა ხელს უწყობს Code.org-ის მისიას გააფართოვოს
+    წვდომა კომპიუტერულ მეცნიერებათა განათლებაზე. ჩვენ გთავაზობთ რამდენიმე გზას შემოწირულობისა
+    და განსხვავების შესაქმნელად.
+  donate_page_fundraise_title: ფონდების მოძიება Code.org— სთვის
+  donate_page_fundraise_desc: დახმარება ამაღლება ფული Code.org! ყველა სკოლაში ყველა
+    მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს კომპიუტერული მეცნიერება.
+  donate_page_other_ways_title: სხვა გზები მისცეს
+  donate_page_other_ways_desc: გამოიკვლიეთ მრავალფეროვანი მეთოდები წვლილის შეტანისთვის
+    და იპოვეთ თქვენთვის შესაფერისი ვარიანტი. ყველა ჟესტი, დიდი თუ პატარა, წინ მიიწევს
+    ჩვენს მისიას.
+  donate_page_501c3: Code.org რეგისტრირებულია როგორც საჯარო 501 (გ) (3) არაკომერციული
+    ორგანიზაცია. Code.org— ში შენატანები გამოიქვითება გადასახადებით კანონით ნებადართული
+    ზომით. Code.org— ის საგადასახადო საიდენტიფიკაციო ნომერია 46-0858543.
+  donate_page_donation_policy_title: ჩვენი შემოწირულობის პოლიტიკის გააზრება
+  donate_page_donation_policy_desc: შეიტყვეთ იმის შესახებ, თუ როგორ ვამუშავებთ და
+    გამოვყოფთ თქვენს წვლილს.
+  donate_tabs_tab_label_daf_direct: DAF პირდაპირი
+  donate_tabs_tab_label_amazon: ამაზონი
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: თანამშრომელთა მატჩი
+  donate_tabs_daf_direct_title: შემოწირულობა DAF Direct— ის საშუალებით
+  donate_tabs_daf_direct_desc: შემოწირეთ თქვენი დონორების მიერ შემოთავაზებული ფონდის
+    მეშვეობით Fidelity Charitable, Schwab Charitable ან BNY Mellon და გააკეთეთ თქვენი
+    საგრანტო რეკომენდაცია Code.org— ზე DAF Direct ონლაინ ფორმის საშუალებით.
+  donate_tabs_amazon_title: შემოწირულობა ამაზონის საშუალებით
+  donate_tabs_amazon_desc: შემოწირეთ პირდაპირ თქვენი Amazon ანგარიშის გამოყენებით.
+    მხოლოდ რამდენიმე დაწკაპუნებით, შეუფერხებლად შეუწყეთ ხელი Code.org— ის მისიას და
+    გააძლიერეთ კომპიუტერული მეცნიერების განათლების მომავალი.
+  donate_tabs_bitpay_title: შემოწირულობა Crypto-ით BitPay-ის საშუალებით
+  donate_tabs_bitpay_desc: მიიღეთ კრიპტოვალუტით გაცემის მომავალი. BitPay-ის საშუალებით
+    თქვენს ციფრულ ვალუტას შეუძლია პირდაპირ მხარი დაუჭიროს Code.org-ის მცდელობებს კომპიუტერული
+    მეცნიერების განათლების გაფართოებაში.
+  help_page_top_heading: როგორ შეგიძლია დახმარება
+  help_page_top_desc: მხარი დაუჭირეთ ჩვენს მისიას, რომ კომპიუტერული მეცნიერება ხელმისაწვდომი
+    გახდეს ყველა ბავშვისთვის, ყველგან. თქვენი ძალისხმევა გვეხმარება შთააგონოთ მომავალი
+    ინოვატორები და გადავალახოთ ტექნიკური განათლების ხარვეზი.
+  help_page_top_subhead: გააკეთეთ შემოწირულობა Code.org— ზე
+  help_page_top_desc_02: ჩვენ ვმუშაობთ, რომ თითოეულ სტუდენტს მივცეთ შესაძლებლობა ისწავლოს
+    კომპიუტერული მეცნიერება - როგორც ონლაინ, ასევე სკოლებში, სადაც ვქმნით მუდმივ კურსებს
+    და ვამზადებთ მასწავლებლებს. ყოველი დოლარისთვის, რომელსაც თქვენ შემოწირავთ, ერთი
+    ბავშვი ეცნობა კომპიუტერულ მეცნიერებას.
+  help_page_partners_heading: გახდი პარტნიორი
+  help_page_partners_desc: Code.org მუშაობს სხვა არაკომერციულ ორგანიზაციებთან, როგორც
+    პარტნიორები, რათა დაეხმაროს კომპიუტერული მეცნიერების გავრცელებას ადგილობრივ, მდგრად
+    რეჟიმში. შეიტყვეთ მეტი ჩვენი პროგრამის შესახებ.
+  help_page_volunteer_heading: მოხალისე საკლასო ოთახში
+  help_page_volunteer_desc: მოხალისე ასწავლეთ კოდის საათი ან იყავით სტუმარი სპიკერი
+    ადგილობრივ საკლასო ოთახში. დარეგისტრირდით, რომ გაიგოთ თქვენს მახლობლად არსებული
+    შესაძლებლობების შესახებ.
+  help_page_translate_heading: დაგვეხმარეთ თარგმნა
+  help_page_translate_desc: მოხალისეებმა თარგმნეს ჩვენი გაკვეთილები 45-ზე მეტ ენაზე.
+    დაგვეხმარეთ გავაგრძელოთ ჩვენი გაკვეთილების გაფართოება სტუდენტებისთვის მთელს მსოფლიოში!
+  help_page_speak_for_cs_heading: ისაუბრეთ კომპიუტერული მეცნიერების განათლებაზე
+  help_page_speak_for_cs_desc: შეიტყვეთ მეტი Code.org— ის ადვოკატირების მუშაობის შესახებ
+    აშშ — ს მასშტაბით და ათი პოლიტიკის შესახებ, რომელსაც ჩვენ ვურჩევთ სახელმწიფოებს,
+    რომ კომპიუტერული მეცნიერება გახდეს საფუძველი ყველა სტუდენტისთვის. გარდა ამისა,
+    გაარკვიეთ, თუ როგორ შეგიძლიათ მართოთ ცვლილებები თქვენს სახელმწიფოში.
   hoc_live: კოდის ერთი საათი Live
   hoc_live_sign_up_title: დარეგისტრირდით კოდის ერთი საათის პირდაპირ ეთერში
   hoc_live_learn_title: ისწავლეთ კოდის ერთი საათით პირდაპირ ეთერში
@@ -1749,8 +1947,8 @@ ka:
   ai_activity_zooniverse: ზოონივერსი - სნაფშოტი მთის ზებრა
   ai_activity_zooniverse_desc: დაეხმარეთ გადაშენების პირას მყოფი კეიპის მთის ზებრას
     დაცვაში სურათებში სხვადასხვა ცხოველების იდენტიფიცირებით.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: წავიდეთ შემდგომი ერთად <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org კურსები</a>
   codeorg_homepage_hoc2018_dance_heading: შექმენით თქვენი საკუთარი <span class="highlight-word">Dance&nbsp;პარტია</span>
   codeorg_homepage_hoc2018_header_line1: კოდის საათი მოდის...
   codeorg_homepage_hoc2018_header_line2_desktop: რას შექმნით <span class="hoc2018-highlight-word">?</span>
@@ -2092,6 +2290,13 @@ ka:
     კურსების, ადგილობრივი შესაძლებლობების ან კომპიუტერული მეცნიერების სამყაროს შესახებ?
   signup_email_preference_privacy: "(ნახეთ ჩვენი კონფიდენციალურობის პოლიტიკა)"
   signup_email_preference_yes: დიახ
+  signup_email_preference_yes_elementary: დიახ - გამომიგზავნე განახლებები დაწყებითი
+    სკოლის რესურსების შესახებ
+  signup_email_preference_yes_middle: დიახ - გამომიგზავნე განახლებები საშუალო სკოლის
+    რესურსებზე
+  signup_email_preference_yes_high: დიახ - გამომიგზავნე განახლებები საშუალო სკოლის
+    რესურსების შესახებ
+  signup_email_preference_yes_general: დიახ - გამომიგზავნე ზოგადი განახლებები
   signup_email_preference_no: არა
   signup_email_preference_error: ელ. ფოსტის უპირატესობაა საჭირო
   signup_multiple_event_warning: თუ რამდნიმე ღონისძიებას ატარებთ, ყოველისთვის უნიკალური
@@ -5606,11 +5811,11 @@ ka:
     სტივი Minecraft-ის სამყაროში.
   tutorial_minecraft-2016_longdescription: შექმენით Minecraft-ის თამაში. შექმენით
     ქათმების, ცხვრების, ქრიფერების, ზომბების და სხვა არსებების საკუთარი ვერსიები.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: საშუალო გამოყენება „ლექსიკა Robot“ წინასწარ
+    განსაზღვრული, სტუდენტები, რომლებიც აღწერილია n როგორც guiarse de llevar მოდის
+    cabo tareas espec ficas ცოდვა, რომ ეს არის წინასწარ&aacute;განკარგულება.&iacute;ეს
+    სეგმენტი ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos
+    y შემთხვევები, როგორც როგორც como la valiosa დეპურაციური შესაძლებლობები n.&iacute;&oacute;
   tutorial_pixie_longdescription: კოდის ერთი საათის ტუტორიალი პიქსისთან ერთად
   tutorial_play_longdescription: შექმენით ამბავი ან თამაში სათამაშო ლაბორატორიის საშუალებით!
     შექმენით ცხოველები, მეკობრეები, ზომბები, ნინძები და მრავალი სხვა პერსონაჟი. ამოძრავეთ
@@ -11650,11 +11855,12 @@ ka:
     ცხოვრება პროგრამა.
   tutorial_itchtenacity_longdescription: ეს პროექტირება პროგრამა და Scratch სიმულატორი
     რობოტი, რომელიც limpia las aguas marinas.
-  tutorial_kcjskiing_longdescription: 'It''s all fun and games until someone crashes
-    into a tree… or IS that the fun part? Strap on those skis and bend at the knees
-    as you guide your character down a hill of frozen obstacles using code in this
-    Scratch activity. Design the course, add movement and sensing, plus a bit of collision-interaction
-    and boom - you''ve got yourself a mountain of fun. '
+  tutorial_kcjskiing_longdescription: 'ეს ყველაფერი სახალისო და თამაშია მანამ, სანამ
+    ვინმე ხეს არ დაეჯახება… თუ ეს სახალისო ნაწილია? Strap იმ თხილამურები და წარმართონ
+    იმ მუხლებზე, როგორც თქვენ გაუძღვება თქვენი ხასიათი ქვემოთ გორაზე გაყინული დაბრკოლებები
+    გამოყენებით კოდი ამ Scratch საქმიანობაში. შეიმუშავეთ კურსი, დაამატეთ მოძრაობა
+    და ზონდირება, პლუს ცოტა შეჯახება-ურთიერთქმედება და ბუმი - თქვენ თვითონ მოხვდით
+    გართობის მთაში. '
   tutorial_groksecurity_longdescription: განათავსეთ თქვენი კიბერ-დამცავი ქუდი ამ მოკლე
     შესავალში, რომ იყოთ უსაფრთხო ინტერნეტში. თქვენ გაეცნობით უსაფრთხო პაროლებს, ფიშინგს,
     უსაფრთხოების პარამეტრებს, სოციალურ მედიას და სხვას!
@@ -12769,12 +12975,12 @@ ka:
   tutorial_googlename _longdescription: შეარჩიეთ სახელი და გააცოცხლეთ სიტყვის ასოები
     კოდის გამოყენებით. შეარჩიეთ მეტსახელი, შინაური ცხოველის სახელი, ცხოველი, სპორტი,
     ადგილი ან ჰობი.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City აყვავდება და მუსიკა ჰაერშია.
+    ჭორები ამბობენ, რომ ცნობილი Gargantua ბოტი არის ონლაინ რეჟიმში და აგზავნის ბოლო
+    Toxibots- ს ქალაქის ბლოკის ბლოკად გადასაყრელად.…აიღეთ თქვენი კობოტის ჰოვერბორდი
+    და მოემზადეთ გროვისთვის, გადაადგილებისთვის და დაასრულეთ ის, რაც დაიწყეთ! მოთამაშეები
+    პროგრამირებენ თავიანთ კობოტ ჰოვერბოტებს, რათა შეცვალონ ზოლები, თავიდან აიცილონ
+    დაბრკოლებები და აიღონ ბევრი ტოქსიბოტი ამ რიტმის სტილის თამაშში.
   tutorial_nasachspacejam_longdescription: შექმენით მზის სისტემა, რომელიც ნამდვილად
     ქანდება! გაეცანით მუსიკას, ასტრონომიას და კოდირებას ამ თვითმართვადი საქმიანობაში
     (კოდირების გამოცდილება არ არის საჭირო). პროგრამა პლანეტები, რათა მუსიკა, შექმნა
@@ -13608,6 +13814,346 @@ ka:
     ვიღებთ ჩვენს PTO- ს (სულ 5 კვირა, რომელიც მოიცავს ორგ-კვირიან ოფისის დახურვას
     წლის ბოლოს, ანუ ზამთრის არდადეგები), ნახევარი სამუშაო დღე პარასკევს ზაფხულის განმავლობაში,
     ანუ ზაფხულის პარასკევს, და სხვა კეთილშობილური სარგებელი.
+  careers_hero_title: კარიერა
+  careers_hero_description: Code.org არის არაკომერციული ორგანიზაცია, რომელიც ეძღვნება
+    სკოლებში კომპიუტერულ მეცნიერებებზე წვდომის გაფართოებას. ჩვენ განსაკუთრებით ორიენტირებული
+    ვართ ახალგაზრდა ქალებსა და ნაკლებად წარმოდგენილ სტუდენტებს შორის მონაწილეობის
+    გაზრდაზე.
+  careers_hero_description_under: დაგვეხმარეთ სამყაროს შეცვლაში, ერთ ჯერზე ერთი სტუდენტი!
+  careers_vision_title: ჩვენი ხედვა
+  careers_vision_decsription: ჩვენი ხედვაა, რომ ყველა სკოლაში ყველა მოსწავლეს უნდა
+    ჰქონდეს შესაძლებლობა ისწავლოს კომპიუტერული მეცნიერება, როგორც მათი ძირითადი K-12
+    განათლების ნაწილი.
+  careers_vision_description_under: შემოუერთდით ჩვენს გუნდს, რათა დაგეხმაროთ ამ ხედვის
+    რეალობად ქცევაში!
+  careers_values_title: ჩვენი ძირითადი ღირებულებები
+  careers_values_first_column_text_1: ჩვენ გვჯერა, რომ კომპიუტერული მეცნიერება ფუნდამენტურია
+    ყველა სტუდენტისთვის
+  careers_values_first_column_text_2: ჩვენ მზად ვართ თანასწორობის, წვდომისა და შესაძლებლობებისკენ
+  careers_values_first_column_text_3: ჩვენ გვჯერა ერთობლივი განათლების საზოგადოების
+    ძალის
+  careers_values_second_column_text_1: ჩვენ ვართ სწრაფი და რეაგირება კავშირი
+  careers_values_second_column_text_2: ჩვენ ვიმოქმედებთ მთლიანობითა და გამჭვირვალობით
+  careers_values_second_column_text_3: ჩვენ გვჯერა, რომ ფართო გავლენა მოითხოვს დიდ
+    აზროვნებას და ჰოლისტიკური მოქმედებას
+  careers_approach_section_title: ჩვენი გამაერთიანებელი მიდგომა
+  careers_approach_section_description: Code.org— ის გლობალური როლი K-12 კომპიუტერული
+    მეცნიერების მოძრაობაში მხოლოდ იმიტომ არის შესაძლებელი, რომ ჩვენ ვიყენებთ გამაერთიანებელ
+    მიდგომას მრავალფეროვან და ხშირად დაყოფილ დაინტერესებულ მხარეებში. მზარდი პოლარიზაციის
+    დროს, სტუდენტებისთვის შესაძლებლობების გაზრდის იდეა აერთიანებს ადამიანებს მთელი
+    პოლიტიკური სპექტრიდან. Code.org— ის გუნდის წევრებს, სტუდენტებს, მასწავლებლებს
+    და მხარდამჭერებს აქვთ მრავალფეროვანი და განსხვავებული შეხედულებები და ისინი ყველა
+    მისასალმებელია ჩვენს მისიაში.
+  careers_aproach_section_description_link: წაიკითხეთ მეტი Code.org-ის მიდგომის შესახებ
+    ერთიანობისადმი.
+  careers_approach_section_button: გამოიკვლიეთ ღია როლები
+  careers_principle_section_title: ჩვენი კულტურული პრინციპები
+  careers_principle_title_1: ჩვენი სტუდენტები და მასწავლებლები ჩვენი ჩრდილოეთ ვარსკვლავი
+    არიან
+  careers_principle_description_1: ჩვენ ვიყენებთ ჩვენს საჩუქრებს, დროსა და ენერგიას
+    კომპიუტერული მეცნიერების მიტანისთვის მათთვის, ვისაც ეს ყველაზე მეტად სჭირდება.
+    ეს არის ის, რაც გვაერთიანებს. ეს არის ჩვენი ყველაზე მნიშვნელოვანი პრინციპი.
+  careers_principle_title_2: ჩვენ გვიჭირს პრობლემები და კეთილგანწყობილი ერთმანეთის
+    მიმართ
+  careers_principle_description_2: ჩვენ ფოკუსირებული ვართ კომპიუტერული მეცნიერების
+    სტუდენტებისა და მასწავლებლებისთვის გლობალურად შემოტანის გამოწვევაზე. ჩვენ ვაღიარებთ,
+    რომ თითოეულ ჩვენგანს მოაქვს საუკეთესო ჩვენი განზრახვა, მხარი დაუჭიროს ჩვენს მისიას
+    და მივცეთ მადლი, როდესაც შეცდომებს ვუშვებთ.
+  careers_principle_title_3: ეძებეთ გადაწყვეტილებები და არა კონსენსუსი
+  careers_principle_description_3: ჩვენ ვფლობთ გადაწყვეტილებებს, იქნება ეს მცირე ნაბიჯების
+    გადადგმა თუ დიდი ნახტომი იმ შედეგებისკენ, რასაც ჩვენ ვეძებთ. მფლობელები ითხოვენ
+    და უსმენენ, მაგრამ უკუკავშირით პარალიზებული არ არიან. ჩვენ ვიღებთ და მხარს ვუჭერთ
+    მფლობელების გადაწყვეტილებებს, მაშინაც კი, თუ არ ვეთანხმებით.
+  careers_principle_title_4: დამფუძნებლის მენტალიტეტის მიღება
+  careers_principle_description_4: ჩვენ შეპყრობილნი ვართ შედეგებზე და ვაქცევთ ჩვენს
+    ქმედებებს მათ მართვაზე. ჩვენ დეტალებში ჩავუღრმავდებით და ბევრს ვიმუშავებთ. ჩვენ
+    გულწრფელები ვართ, ვეყრდნობით სისწრაფეს და მუდმივად ვაფასებთ, თუ გზაზე ვართ; ჩვენ
+    არ გვეშინია ბრუნვის. სამყაროს შეცვლა ამას მოითხოვს.
+  careers_principle_title_5: ჩემპიონი ინოვაცია
+  careers_principle_description_5: ჩვენ ვფიქრობთ, რომ დიდია, რისკავს და არ გვეშინია
+    წარუმატებლობის. თუ ჩვენ ვხედავთ უკეთეს გზას ჩვენი მიზნების მისაღწევად, ჩვენ ამას
+    ვაკეთებთ და სხვებსაც ვურჩევთ ამის გაკეთებას. დამატებითი გადაწყვეტილებები არ დაეხმარება
+    სამყაროს შეცვლას.
+  careers_principle_title_6: წამყვანის გადაწყვეტილებები ფაქტებში
+  careers_principle_description_6: ჩვენ ვიყენებთ მონაცემებს ჩვენი ბიზნესის გასაგებად,
+    სასურველი შედეგების დასადგენად და გადაწყვეტილების მიღების წარმართვისთვის. ჩვენ
+    ამას ვაბალანსებთ იმის აღიარებით, რომ ყოველთვის არ გვექნება საჭირო მონაცემები,
+    რომ ვიმოქმედოთ.
+  careers_principle_title_7: ზრდის აზროვნება გვაწვდის
+  careers_principle_description_7: თითოეულ გამოწვევას ცნობისმოყვარეობით ვუდგებით.
+    ჩვენ ვაძლევთ უკუკავშირს გულწრფელად და გულწრფელად; ჩვენ ვიღებთ გამოხმაურებას ღიად.
+    ჩვენ ვსწავლობთ ჩვენს შეცდომებზე და ვეძებთ გზებს, რომ გავზარდოთ ჩვენი მუშაობის
+    მიღწევა და გავლენა.
+  careers_balance_section_title: ჩვენი სამუშაო და ცხოვრების ბალანსი
+  careers_balance_section_description: ჩვენ ვზრუნავთ ჩვენს თანამშრომლებზე და მზად
+    ვართ მხარი დავუჭიროთ ყველას, როგორც სამსახურში, ასევე სამუშაოს გარეთ. ჩვენ ვიცით,
+    რომ ყველას განსხვავებული მოთხოვნილებები აქვს, რის გამოც ჩვენ გთავაზობთ ჰოლისტიკური
+    შეღავათების პაკეტს, რომელიც უზრუნველყოფს თქვენზე (და თქვენს ოჯახზე) ზრუნვას.
+  careers_balance_first_column_text_1: ჯანმრთელობის სარგებელი თქვენთვის და თქვენი
+    ოჯახისთვის
+  careers_balance_first_column_text_2: გულუხვი ანაზღაურებადი დრო და დატოვეთ გეგმები
+  careers_balance_second_column_text_1: მოქნილი, დამხმარე სამუშაო გარემო
+  careers_balance_second_column_text_2: ზრდისა და პროფესიული სწავლის შესაძლებლობები
+  careers_openroles_section_title: ღია როლები
+  careers_openroles_section_description: Code.org დაფუძნებულია სიეტლში, მაგრამ ჩვენი
+    გუნდის ბევრი წევრი დისტანციურია. დისტანციური კანდიდატები მისასალმებელია და წახალისებულია
+    განაცხადონ.
+  careers_more_info_text: Code.org— ის შესახებ დამატებითი ინფორმაციისთვის იხილეთ ჩვენი
+    [ხშირად დასმული კითხვები] (%{support_url}) ან გაეცანით [ჩვენს მისიაში ჩართვის
+    სხვა გზებს] (%{help_url}).
+  careers_approach_section_title2: ჩვენი მიდგომა მრავალფეროვნებისადმი
+  careers_approach_section_description_1: ჩვენ ვიღებთ მრავალფეროვან პერსპექტივებს,
+    იდეებს და ფონს Code.org— ზე. ჩვენ მზად ვართ თანაბარი შესაძლებლობა მივცეთ ყველა
+    თანამშრომელს და განმცხადებელს. ჩვენ არ ვაკეთებთ დისკრიმინაციას რასის, რელიგიის,
+    ფერის, ეროვნული წარმომავლობის, სქესის, სექსუალური ორიენტაციის, ასაკის, ოჯახური
+    მდგომარეობის, ვეტერანის სტატუსის ან ინვალიდობის (გონებრივი და ფიზიკური) სტატუსის
+    საფუძველზე.
+  careers_approach_section_description_2: ჩვენ უზრუნველვყოფთ, რომ შეზღუდული შესაძლებლობის
+    მქონე პირებს მიეცათ გონივრული განსახლება სამუშაოს განაცხადის ან გასაუბრების პროცესში
+    მონაწილეობის მისაღებად, აუცილებელი სამუშაო ფუნქციების შესასრულებლად და დასაქმების
+    სხვა შეღავათებისა და პრივილეგიების მისაღებად. თუ თქვენ გაქვთ შეზღუდული შესაძლებლობის
+    მქონე პირთა ინდივიდუალური საჭიროებები, გთხოვთ, დაუკავშირდეთ accommodations@code.org.
+  csa_ai_page_hero_title: პროგრამული ინჟინერია და კომპიუტერული ხედვა
+  csa_ai_page_hero_description: 'ეს ორთავიანი პოსტ-AP CSA მოდული საშუალო სკოლის მოსწავლეებს
+    სთავაზობს პრაქტიკულ გამოცდილებას პროგრამული უზრუნველყოფის შემუშავების პროფესიონალური
+    ინსტრუმენტებით, მათ შორის GitHub და GitHub Copilot, და აძლევს მათ რეალურ სამყაროში
+    არსებულ უნარებს კომპიუტერული ხედვის პროგრამის შემუშავებისთვის. '
+  csa_ai_page_video_section_title: ნაბიჯი მიღმა სამყაროში Code.org პროგრამირების გარემოში
+  csa_ai_page_video_section_li_1: შეიტყვეთ AI და მისი პროგრამების შესახებ
+  csa_ai_page_video_section_li_2: პრაქტიკული გამოცდილება პროფესიონალური პროგრამული
+    უზრუნველყოფის დამუშავების ინსტრუმენტებთან
+  csa_ai_page_video_section_li_3: ისწავლეთ ინდუსტრიის სტანდარტული პრაქტიკა
+  csa_ai_page_video_section_li_4: განავითარეთ კრიტიკული აზროვნება
+  csa_ai_page_programming_tools: 'პროგრამირების ინსტრუმენტები: გიტუბი, გიტუბის კოპილოტი,
+    VSCode, ტენსორის ნაკადი '
+  csa_ai_page_professional_learning: არცერთი
+  csa_ai_page_curriculum_topics: 'თემები: პროგრამირება, მონაცემები, ხელოვნება და დიზაინი,
+    თამაშები და ანიმაცია'
+  csa_ai_page_curriculum_accessibility_features: დეტალებისთვის იხილეთ FAQ განყოფილება
+  csa_ai_page_curriculum_languages_support: ქართული
+  csa_ai_page_article_title_1: აშენების ერთად Copilot
+  csa_ai_page_article_description_1: სტუდენტები სწავლობენ როგორ გამოიყენონ GitHub
+    Copilot, როგორც წყვილი პროგრამისტი არსებული კოდის ასახსნელად, შეცდომების საპოვნელად
+    და გამოსასწორებლად და ახალი პრობლემების გადაწყვეტის შესაქმნელად.
+  csa_ai_page_article_link_1: შეიტყვეთ მეტი კოპილოტის შესახებ
+  csa_ai_page_article_title_2: შექმენით თქვენი საკუთარი AI მოდელი
+  csa_ai_page_article_description_2: სტუდენტები ავარჯიშებენ საკუთარ AI მოდელებს Teachable
+    Machine-ის გამოყენებით, რათა ამოიცნონ სურათები და ჟესტები ვებკამერიდან და განიხილონ,
+    თუ როგორ მოქმედებს კომპიუტერის ხედვა მომხმარებლების ურთიერთქმედებაზე apps.
+  csa_ai_page_article_link_2: შეისწავლეთ გაკვეთილის გეგმა
+  csa_ai_page_article_title_3: გამოიკვლიეთ კომპიუტერული ხედვა
+  csa_ai_page_article_description_3: სტუდენტები ახორციელებენ AI მოდელებს, რომლებიც
+    მათ შექმნეს Teachable Machine— ით Java აპში, GitHub Copilot— ის გამოყენებით, რათა
+    დაეხმარონ მათ შეცვალონ არსებული ვერსიები apps მუშაობა სხვადასხვა საშუალებებით.
+  csa_ai_page_article_link_3: იხილეთ მაგალითი
+  csa_ai_page_learn_more_section_title: შეიტყვეთ მეტი ხელოვნური ინტელექტის შესახებ
+  csa_ai_page_learn_more_title: გამოიკვლიეთ AI 101 მასწავლებლებისთვის
+  csa_ai_page_learn_more_description: აღმოაჩინეთ ხელოვნური ინტელექტის (AI) ინოვაციური
+    სამყარო და მისი ტრანსფორმაციული პოტენციალი განათლებაში ჩვენი ყოვლისმომცველი ონლაინ
+    სწავლების სერიით მასწავლებლებისთვის.
+  csa_ai_page_learn_more_link: უყურეთ AI 101 მასწავლებელთა სერიას
+  csa_ai_page_faq_question_01: რა არის წინაპირობები ამ მოდულისთვის?
+  csa_ai_page_faq_answer_01_01: 'ამ მოდულში ჩასვლამდე სტუდენტებს უნდა ჰქონდეთ ჯავის
+    საწყისი დონის ცოდნა. კერძოდ, მათ უნდა გაითვალისწინონ:'
+  csa_ai_page_faq_answer_01_list_01: "**კლასები და ობიექტები: ** მოსწავლეებმა უნდა
+    იცოდნენ კლასების განსაზღვრა და გამოყენება, ასევე ობიექტების შექმნა და მანიპულირება."
+  csa_ai_page_faq_answer_01_list_02: "**წერისა და დარეკვის მეთოდები: ** მოსწავლეებს
+    უნდა შეეძლოთ განსაზღვრონ მეთოდები კლასში, გაიგონ მეთოდის პარამეტრები და დაბრუნების
+    ტიპები და ზარის მეთოდები საგნებიდან ან სხვა მეთოდებიდან."
+  csa_ai_page_faq_answer_01_list_03: "**1D მასივები და მასივების სიები: ** ისინი უნდა
+    ფლობდნენ ერთგანზომილებიანი მასივებისა და მასივების სიების გამოცხადებას, ინიციალიზაციას
+    და მანიპულირებას, მათ შორის მათ გამეორებას."
+  csa_ai_page_faq_answer_01_list_04: "**შერჩევა და გამეორება: ** მყარი საფუძველი პირობით
+    განცხადებებსა და მარყუჟებში გადამწყვეტია."
+  csa_ai_page_faq_question_01_02: იდეალურ შემთხვევაში, სტუდენტები, რომლებმაც დაასრულეს
+    AP კომპიუტერული მეცნიერება A ან მსგავსი სიღრმისა და სიმკაცრის კურსი, კარგად მომზადდებიან
+    ამ მოდულისთვის.
+  csa_ai_page_faq_question_02: როგორ დავაყენო ამ მოდულისთვის საჭირო პროგრამული უზრუნველყოფა?
+  csa_ai_page_faq_answer_02_01: ეს მოდული უნიკალურია, რადგან ის მოიცავს მესამე მხარის
+    პროგრამული უზრუნველყოფის გამოყენებას და არა Code.org ლაბორატორიებსა და ინსტრუმენტებს.
+    [დაწვრილებით პროგრამული უზრუნველყოფის დაყენების შესახებ აქ] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: როგორ შემიძლია მხარი დავუჭირო ხელმისაწვდომობის საჭიროებებს
+    ამ მოდულის სწავლებისას?
+  csa_ai_page_faq_answer_03_01: ხელმისაწვდომობის საჭიროებების დაკმაყოფილება გადამწყვეტია
+    ინკლუზიური სასწავლო გარემოსთვის. [წაიკითხეთ მეტი ამ მოდულში გამოყენებული პროგრამული
+    უზრუნველყოფის ხელმისაწვდომობის მახასიათებლების შესახებ აქ] ()%{install_url}.
+  csa_ai_page_faq_question_04: როგორ გამოვიყენო VS კოდი Chromebook-ებზე?
+  csa_ai_page_faq_answer_04: VS კოდის გამოყენება Chromebook-ზე უფრო მარტივი გახდა,
+    განსაკუთრებით Linux-ის გაშვების შესაძლებლობით apps Chromebook-ის ახალ მოდელებზე.
+    [წაიკითხეთ მეტი Chromebook-ებზე VS კოდის დაყენების შესახებ აქ] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: როგორ მივიღო პროფესიული განვითარება ამ მოდულისთვის?
+  csa_ai_page_faq_answer_05: ამჟამად არ არსებობს კონკრეტული პროფესიული განვითარება
+    ამ კურსისთვის. თუ თქვენ ეძებთ იმის გაგებას, თუ როგორ უნდა მიუახლოვდეთ ხელოვნურ
+    ინტელექტს თქვენს კლასში, შეგიძლიათ [შეისწავლოთ AI 101 მასწავლებლებისთვის] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: რა არის რეკომენდებული დრო ამ მოდულის სწავლებისთვის?
+  csa_ai_page_faq_answer_06_01: პროგრამული ინჟინერიისა და კომპიუტერული ხედვის მოდული
+    გააზრებულად არის სტრუქტურირებული, რათა უზრუნველყოს ყოვლისმომცველი სწავლება მოკლე
+    ვადებში. მთელი მოდული შექმნილია ** 2 კვირის ინსტრუქციისთვის**. გაკვეთილების უმეტესობა
+    მორგებულია **45 წუთის განმავლობაში**, ხოლო გაკვეთილები, სადაც სტუდენტები იძიებენ
+    ჯავის პროექტის პრაქტიკულ შემუშავებას, გათვლილია **90 წუთის განმავლობაში**. ეს
+    გახანგრძლივებული დრო უზრუნველყოფს სტუდენტებს ჰქონდეთ საკმარისი შესაძლებლობა გაიგონ,
+    განახორციელონ და მოაგვარონ პრობლემები მუშაობისას.
+  csa_ai_page_faq_answer_06_02: მოდულის სტრუქტურაში ასევე არის ჩადებული განზრახ მოქნილობა.
+    დამოკიდებულია კლასის დინამიკაზე, სტუდენტთა ჩართულობასა და სიღრმეზე, რომელზეც გსურთ
+    შეისწავლოთ თითოეული თემა, შეგიძლიათ შეცვალოთ ხანგრძლივობა. მაგალითად, კოპილოტის
+    შესავალი გაკვეთილი, რომელიც შექმნილია 45 წუთიანი გაკვეთილის სახით, შეიძლება გაფართოვდეს
+    90 წუთამდე, თუ გსურთ უფრო ღრმად ჩაძიროთ, თუ რამდენად მუშაობს დიდი ენის მოდელები
+    და ინსტრუმენტები, როგორიცაა GitHub Copilot და ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: დამტკიცებული მასწავლებლის ანგარიშით შეგიძლიათ იპოვოთ
+    პასუხის გასაღებები ლურჯ „მასწავლებლის“ პანელში, რომელიც ნაჩვენებია ონლაინ გაკვეთილებსა
+    და აქტივობებში. თუ თქვენ გჭირდებათ დამტკიცებული მასწავლებლის ანგარიში, შეგიძლიათ
+    მიმართოთ მხოლოდ მასწავლებლის დაცულ მასალებზე წვდომას (პასუხის გასაღებები და ა.%{form_url}გაითვალისწინეთ,
+    რომ თქვენი ანგარიშის გადამოწმებას შეიძლება 3-5 სამუშაო დღე დასჭირდეს.
+  csa_ai_page_faq_question_08: არის თუ არა ეს მოდული სტანდარტებთან შესაბამისობაში?
+  csa_ai_page_faq_answer_08: დიახ, პროგრამული ინჟინერიისა და კომპიუტერული ხედვის სასწავლო
+    გეგმა ასახულია [CSTA K-12 სტანდარტები] (%{csta_k12_url}) და AI [K-12 სახელმძღვანელო]
+    ().%{k12_url}
+  csa_ai_page_faq_question_09: რა ღირს ამ მოდულის სწავლება?
+  csa_ai_page_faq_answer_09_01: ჩვენი სასწავლო გეგმა და პლატფორმა ხელმისაწვდომია [უფასოდ]
+    (%{no_cost_url}) ყველასთვის, ნებისმიერ ადგილას, ასწავლოს!
+  csa_ai_page_faq_answer_09_02: გარდა ამისა, ამ მოდულში გამოყენებული პროგრამული უზრუნველყოფა
+    და ინსტრუმენტები უფასოა. GitHub Copilot უფასოა დამოწმებული [teachers](%{teachers_url})
+    და (). [students]%{students_url}
+  csa_ai_page_faq_question_10: რა ვქნა, თუ პროგრამული უზრუნველყოფის ინსტალაცია არ
+    მუშაობს?
+  csa_ai_page_faq_answer_10: პროგრამული უზრუნველყოფის ინსტალაციის დროს პრობლემების
+    მოგვარება შეიძლება ჩვეულებრივი იყოს, მაგრამ არსებობს სისტემატური ნაბიჯები, რომელთა
+    გადადგმაც შეგიძლიათ პრობლემების გადასაჭრელად და მათი გადასაჭრელად. [გაეცანით პრობლემების
+    მოგვარების რამდენიმე რჩევას აქ] ().%{troubleshooting_url}
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'ჩვენი პროგრამული ინჟინერიისა და კომპიუტერული ხედვის
+    სასწავლო გეგმა შეიქმნა ჩვენი სასწავლო გეგმის ღირებულებების გათვალისწინებით. შემდეგი
+    მიზნები ხელმძღვანელობდა ამ სასწავლო გეგმის შექმნას:'
+  csa_ai_page_faq_answer_11_list_01: "**მიზანი 1: ** გამოიყენეთ AI ინსტრუმენტები კოდის
+    გენერირებისთვის, გამართვისა და რედაქტირებისთვის."
+  csa_ai_page_faq_answer_11_list_02: "**მიზანი 2: ** გადასვლა ჯავის ლაბორატორიიდან
+    რეალურ ინსტრუმენტებზე."
+  csa_ai_page_faq_answer_11_list_03: "**მიზანი 3: ** გაიღრმავეთ გაგება იმის შესახებ,
+    თუ როგორ არის მომზადებული და ინტეგრირებული AI მოდელები პროგრამებში."
+  csa_ai_page_faq_answer_11_02: დამატებითი ინფორმაციისთვის იმ ღირებულებების შესახებ,
+    რომლებიც ხელმძღვანელობდნენ ჩვენს საქმიანობას, იხილეთ ჩვენი [სასწავლო გეგმის ღირებულებები]
+    (%{curriculum_values_url}).
+  video_library_page_main_title: საგანმანათლებლო მოკლე ვიდეოები
+  video_library_page_hero_description: Code.org— ის საგანმანათლებლო ვიდეოების მზარდი
+    ბიბლიოთეკა ხელმისაწვდომია მასწავლებლების მიერ მსოფლიოში, ინტერნეტით ან საკლასო
+    ოთახებში. ჩვენი მიზანია გავაძლიეროთ ჩვენი ძალისხმევა ჩვენი სასწავლო გეგმის მიღმა.
+  video_library_page_title_ai_works: როგორ მუშაობს AI
+  video_library_page_description_ai_works: მოკლე ვიდეოების ეს სერია გაგაცნობთ, თუ
+    როგორ მუშაობს ხელოვნური ინტელექტი და რატომ არის ეს მნიშვნელოვანი. გაეცანით ნერვულ
+    ქსელებს, ან როგორ სწავლობს AI და გაეცანით ისეთ საკითხებს, როგორიცაა ალგორითმული
+    მიკერძოება და AI გადაწყვეტილების მიღების ეთიკა.
+  video_library_page_title_computers_work: როგორ მუშაობს კომპიუტერები
+  video_library_page_description_computers_work: განმარტავს, თუ რა ხდის კომპიუტერს
+    კომპიუტერს, როგორ არის წარმოდგენილი ციფრული ინფორმაცია 1-იან და 0-ებში, როგორ
+    მუშაობს კომპიუტერული სქემები ციფრული ინფორმაციის მანიპულირებისთვის და როგორ აკონტროლებს
+    ცენტრალური დამუშავების ერთეული (CPU) და ოპერაციული სისტემა შეყვანებს, შედეგებს,
+    მეხსიერებას და ტექნიკას. კომპიუტერი.
+  video_library_page_title_internet_works: როგორ მუშაობს ინტერნეტი
+  video_library_page_description_internet_works: Vint Cerf- ის, TCP/IP- ის გამომგონებლის,
+    დევიდ კარპის, Tumblr- ის დამფუძნებლის, HTTP- ისა და HTML- ის ახსნის, Google- ის
+    უსაფრთხოების პრინცესა SSL და კიბერუსაფრთხოების ასახსნელად და Microsoft- ის, Spotify-
+    ისა და Symantec- ის ინჟინრები. მოკლე ვიდეოების ეს სერია, რომელიც განმარტავს, თუ
+    როგორ მუშაობს ინტერნეტი.
+  video_library_page_title_not_hacked: როგორ არ უნდა გატეხილიყო
+  video_library_page_description_not_hacked: ინტერნეტი ღიაა, ამიტომ ყველაფერი, რაც
+    მასზე ხდება, ჩანს, თუ ის არ არის დაცული. თანამედროვე ქვეყნებში ხალხი უფრო მეტად
+    აწუხებს გატაცებას, ვიდრე ნებისმიერი სხვა დანაშაული. რატომ? იმის გამო, რომ ინტერნეტში
+    ყველა კომპიუტერი ან ტელეფონი რეგულარულად იტესტება დამნაშავეების, ტერორისტების
+    ან თუნდაც სახელმწიფო აქტორების მიერ მოწყვლადობაზე. თუ ფრთხილად არ ხართ, ვინმეს
+    შეუძლია გატეხოს თქვენი მოწყობილობა ან ანგარიშები და მოიპაროს თქვენი პირადობა ან
+    თქვენი ფული.
+  video_library_page_title_blockchain: როგორ მუშაობს ბლოკჩეინი
+  video_library_page_description_blockchain: Coinbase-თან პარტნიორობით შექმნილი ეს
+    სერია შეიცავს ინდუსტრიის ექსპერტებს და მიზნად ისახავს ამ ტექნოლოგიის დემისტიფიკაციას
+    იმის შესწავლით, თუ რა არის ბლოკჩეინი, როგორ მუშაობს და მისი პოტენციური საზოგადოებრივი
+    შედეგები - კარგიც და ცუდიც.
+  video_library_page_title_careers: კარიერა CS- ში
+  video_library_page_description_careers: კარიერა კომპიუტერულ მეცნიერებასა და ტექნოლოგიაში
+    შეიძლება იყოს სახალისო და მომგებიანი. მაგრამ რას აკეთებს ადამიანი, რომელიც მუშაობს
+    ამ სფეროებში? სამუშაოებისა და კომპანიების მრავალფეროვნებით, ამ კითხვაზე მხოლოდ
+    ერთი პასუხი არ არის. უყურეთ ქვემოთ მოცემულ ვიდეოებს, რათა შეხვდეთ ზოგიერთ ადამიანს,
+    რომლებიც შემოქმედებით გზებს აგვარებენ დიდ პრობლემებს.
+  video_library_page_title_inspirational: ინსპირაციული
+  video_library_page_description_inspirational: რას შეცვლის კომპიუტერული მეცნიერება
+    ჩვენს სამყაროში? ყველაფერი? ვისთვის არის ის? ყველას! უყურეთ ამ ვიდეოებს, რომ შთააგონოთ
+    და მოტივაცია მოგცეთ.
+  video_library_page_footer_description: სხვა რამეს ეძებთ? ამდენი შესანიშნავი ვიდეო
+    გვაქვს ხელმისაწვდომი ჩვენს Youtube არხზე.
+  video_library_page_footer_cta: გამოიკვლიეთ Code.org— ის ყველა ვიდეო YouTube— ზე
+  video_library_page_computer_work_video_title_1: გაცნობა როგორ კომპიუტერები მუშაობა
+  video_library_page_computer_work_video_title_2: ორობითი და მონაცემები
+  video_library_page_computer_work_video_title_3: CPU, მეხსიერება, შეყვანა და გამომავალი
+  video_library_page_computer_work_video_title_4: რა ხდის კომპიუტერს, კომპიუტერს?
+  video_library_page_computer_work_video_title_5: ლოგიკური სქემები
+  video_library_page_computer_work_video_title_6: აპარატურა და პროგრამული უზრუნველყოფა
+  video_library_page_internet_work_video_title_1: რა არის ინტერნეტი?
+  video_library_page_internet_work_video_title_2: 'ინტერნეტი: IP მისამართები და DNS'
+  video_library_page_internet_work_video_title_3: 'ინტერნეტი: HTTP და HTML'
+  video_library_page_internet_work_video_title_4: 'ინტერნეტი: კიბერუსაფრთხოება და
+    დანაშაული'
+  video_library_page_internet_work_video_title_5: 'ინტერნეტი: სადენები, კაბელები და
+    Wifi'
+  video_library_page_internet_work_video_title_6: 'ინტერნეტი: პაკეტები, მარშრუტიზაცია
+    და საიმედოობა'
+  video_library_page_internet_work_video_title_7: 'ინტერნეტი: დაშიფვრა და საზოგადოებრივი
+    გასაღებები'
+  video_library_page_internet_work_video_title_8: 'ინტერნეტი: როგორ მუშაობს ძებნა'
+  video_library_page_cs_video_title_1: მე მქვია ჯერომი და მე ვარ Meow Wolf- ის დიზაინის
+    ტექნოლოგი
+  video_library_page_cs_video_title_2: მე მქვია ნიკეშა და NASA- ს კოსმოსური ინჟინერი
+    ვარ
+  video_library_page_cs_video_title_3: მე მქვია ბრინა და მე ვარ პროგრამული ინჟინერი
+    Instagram- ში
+  video_library_page_cs_video_title_4: მე მქვია კინსლი და მე ვარ პროგრამული უზრუნველყოფის
+    ინჟინერი Facebook- ზე
+  video_library_page_cs_video_title_5: მე მქვია პოლინა და ვარ მონაცემთა მეცნიერი Electronic
+    Arts-ში
+  video_library_page_cs_video_title_6: მე მქვია დანელი და მე ვარ პროგრამული უზრუნველყოფის
+    ინჟინერი MBARI- ში
+  video_library_page_cs_video_title_7: მე მქვია კრისტოფერი და ვარ Tanium— ის უსაფრთხოების
+    ანალიტიკოსი
+  video_library_page_cs_video_title_8: მე მქვია ფედერიკო და ვარ Microsoft- ის ტექნიკური
+    პროგრამის მენეჯერი
+  video_library_page_cs_video_title_9: მე მქვია ტესი და მე ვარ პროგრამული უზრუნველყოფის
+    ინჟინერი Google- ში
+  video_library_page_inspirational_video_title_1: შეცვალეთ კომპიუტერული მეცნიერების
+    სახე (3 წთ)
+  video_library_page_inspirational_video_title_2: დააყენე საკუთარი თავი. ყველას შეუძლია
+    ისწავლოს. (1 წთ)
+  video_library_page_inspirational_video_title_3: გააჩინოს გოგონა (2 წთ)
+  video_library_page_inspirational_video_title_4: რას არ ასწავლიან სკოლების უმეტესობაში
+    (5 წთ)
+  video_library_page_inspirational_video_title_5: კოდის ერთი საათი აქ არის - ყველას
+    შეუძლია ისწავლოს (2 წთ)
+  video_library_page_inspirational_video_title_6: ჩემი სახელია არაკელი (3 წთ)
+  video_library_page_inspirational_video_title_7: კოდის საათი სტეფ კურისთან ერთად
+    (2 წთ)
+  video_library_page_inspirational_video_title_8: კომპიუტერული მეცნიერება ყველაფერს
+    ცვლის (5 წთ)
+  video_library_page_inspirational_video_title_9: კომპიუტერული მეცნიერების შესავალი
+    (1 წთ)
+  video_library_page_inspirational_video_title_10: პრეზიდენტი ობამა კომპიუტერულ მეცნიერებაში
+    (1 წთ)
+  video_library_page_inspirational_video_title_11: ნებისმიერს შეუძლია სწავლა (1 წთ)
+  video_library_page_inspirational_video_title_12: Lo Que Falta ენ ნუესტრა ესკუელასი
+    (2 წთ)
+  video_library_page_inspirational_video_title_13: NASA აღნიშნავს კოდის საათს (2 წთ)
+  video_library_page_inspirational_video_title_14: ეს უფრო მეტია, ვიდრე თამაში (1
+    წთ)
+  video_library_page_inspirational_video_title_15: შექმენით კომპიუტერული მეცნიერებით
+    (1 წთ)
+  video_library_page_not_hacked_video_title_1: 'როგორ არ უნდა გატეხილიყო: შესავალი'
+  video_library_page_not_hacked_video_title_2: 'როგორ არ უნდა გატეხილიყო: პაროლები'
+  video_library_page_not_hacked_video_title_3: 'როგორ არ უნდა გატეხილიყო: ავთენტიფიკაცია
+    და მოწყობილობის საკეტები'
+  video_library_page_not_hacked_video_title_4: 'როგორ არ უნდა გატეხილიყო: ფიშინგი'
+  video_library_page_not_hacked_video_title_5: 'როგორ არ უნდა გატეხილიყო: ვებსაიტები
+    და Wifi'
+  video_library_page_not_hacked_video_title_6: 'როგორ არ უნდა გატეხილიყო: შეტყობინებები
+    და ჩამოტვირთვები'
+  video_library_page_not_hacked_video_title_7: 'როგორ არ უნდა გატეხილიყო: დააინსტალირეთ
+    განახლებები'
   language_code:
     ar: არაბული
     az: აზერბაიჯანული

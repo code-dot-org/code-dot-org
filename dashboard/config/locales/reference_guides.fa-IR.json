@@ -22,7 +22,7 @@
           "content": ""
         },
         "csd-2022/app-lab": {
-          "display_name": "آزمایشگاه نرم افزار",
+          "display_name": "لابراتوار اپ",
           "content": ""
         },
         "csd-2022/applab-overview": {
@@ -154,7 +154,7 @@
           "content": ""
         },
         "csd-2022/game-lab": {
-          "display_name": "کارگاه بازی سازی",
+          "display_name": "لابراتوار بازی",
           "content": ""
         },
         "csd-2022/game-lab-overview": {
@@ -459,7 +459,7 @@
         },
         "csd-2022/which-type-of-chart": {
           "display_name": "",
-          "content": ""
+          "content": "[][0]"
         }
       }
     }

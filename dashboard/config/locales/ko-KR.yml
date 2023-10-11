@@ -10,6 +10,7 @@ ko:
         error:
           future: 오늘 이전 날짜만 가능합니다.
         finish_sign_up_header: 계정 만들기를 마칩니다.
+        finish_sign_up_header_error: '다음 오류를 수정해주세요:'
         finish_sign_up_subheader: "<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면
           밑에 있는 빈 곳에 정보를 입력 하세요."
         finish_sign_up_subheader_markdown: "**%{email}**을 위해 Code.org 계정을 만들려면 밑에
@@ -29,6 +30,7 @@ ko:
         personal_email_markdown: 개인 이메일 주소 [(만약 이메일 주소가 없다면 여기를 클릭하십시오)](%{url})
         reset_password_token: 팔로우했던 재설정 비밀번호 링크
         us_state: 주
+        user_type: 계정 유형
         username: username
         verified_teacher: 인증된 교사
     errors:

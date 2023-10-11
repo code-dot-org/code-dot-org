@@ -86,6 +86,10 @@ hi:
         ai-ethics-2021:
           description_audience: ग्रेड्स 6-12
           title: हमारी AI आचार संहिता
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: हमारी AI आचार संहिता
         ai-temp:
           title: AI कैसे काम करता है
         aiml-2021:
@@ -5071,7 +5075,7 @@ hi:
           description_short: कोड के जरिए Minecraft की दुनिया का पता लगाएँ
           student_description: इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव
             या एलेक्स को ले जाने के लिए कोड ब्लॉक का उपयोग करें
-          title: Minecraft आवर ऑफ़ कोड
+          title: Minecraft एडवेंचरर
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -5998,6 +6002,10 @@ hi:
           lesson_groups:
             csd3_2:
               display_name: 'अध्याय 2: गेम्स बनाना'
+        virtual-pl-csa-summer-2024-day1:
+          title: दिन 1
+        virtual-pl-csa-summer-day2:
+          title: दिन 2
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
