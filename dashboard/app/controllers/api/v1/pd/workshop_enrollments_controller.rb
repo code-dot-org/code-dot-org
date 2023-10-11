@@ -41,7 +41,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
 
     enrollment_email = params[:email]
-    user = User.find_by_email_or_hashed_email enrollment_email
+    user = (User.find_by_email_or_hashed_email enrollment_email) || (User.all.find {|u| u.email_for_enrollments == enrollment_email})
 
     # See if a previous enrollment exists for this email
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
