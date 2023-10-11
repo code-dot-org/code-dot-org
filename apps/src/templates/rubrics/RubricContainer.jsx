@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
@@ -44,6 +44,7 @@ export default function RubricContainer({
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
+  const [aiEvaluation, setAiEvaluations] = useState(null);
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
@@ -68,6 +69,53 @@ export default function RubricContainer({
         setIsSubmittingToStudent(false);
         setErrorSubmitting(true);
       });
+  };
+
+  useEffect(() => {
+    if (!!studentLevelInfo && teacherHasEnabledAi) {
+      const studentId = studentLevelInfo.user_id;
+      const rubricId = rubric.id;
+      const dataUrl = `/rubrics/${rubricId}/get_ai_evaluations?student_id=${studentId}`;
+
+      fetch(dataUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          setAiEvaluations(data);
+        })
+        .catch(error => {
+          console.log(
+            'There was a problem with the fetch operation:',
+            error.message
+          );
+        });
+    }
+  }, [rubric.id, studentLevelInfo, teacherHasEnabledAi]);
+
+  const getAiUnderstanding = learningGoalId => {
+    if (!!aiEvaluation) {
+      const aiInfo = aiEvaluation.find(
+        item => item.learning_goal_id === learningGoalId
+      );
+      return aiInfo?.understanding;
+    } else {
+      return null;
+    }
+  };
+
+  const getAiConfidence = learningGoalId => {
+    if (!!aiEvaluation) {
+      const aiInfo = aiEvaluation.find(
+        item => item.learning_goal_id === learningGoalId
+      );
+      return aiInfo?.confidence;
+    } else {
+      return null;
+    }
   };
 
   return (
@@ -129,6 +177,8 @@ export default function RubricContainer({
               canProvideFeedback={canProvideFeedback}
               reportingData={reportingData}
               studentLevelInfo={studentLevelInfo}
+              aiUnderstanding={getAiUnderstanding(lg.id)}
+              aiConfidence={getAiConfidence(lg.id)}
             />
           ))}
         </div>
