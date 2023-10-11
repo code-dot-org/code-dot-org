@@ -112,7 +112,7 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   private def get_openai_evaluations(code, prompt, rubric, examples)
-    uri = URI.parse("#{CDO.ai_proxy_url}/assessment")
+    uri = URI.parse("#{CDO.ai_proxy_origin}/assessment")
     form_data = {
       "model" => "gpt-4-0613",
       "code" => code,

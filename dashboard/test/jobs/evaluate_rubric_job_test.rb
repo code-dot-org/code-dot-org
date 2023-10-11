@@ -157,9 +157,9 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
         'Grade' => 'Extensive Evidence'
       }
     ]
-    ai_proxy_url = 'http://fake-ai-proxy-url'
-    CDO.stubs(:ai_proxy_url).returns(ai_proxy_url)
-    uri = URI.parse("#{ai_proxy_url}/assessment")
+    ai_proxy_origin = 'http://fake-ai-proxy-origin'
+    CDO.stubs(:ai_proxy_origin).returns(ai_proxy_origin)
+    uri = URI.parse("#{ai_proxy_origin}/assessment")
     HTTParty.stubs(:post).with(
       uri,
       body: URI.encode_www_form(expected_form_data),
