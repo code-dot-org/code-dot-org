@@ -36,6 +36,10 @@ po:
   africa_campaign_date_full: 1º de outubro de 2022 - 18 de dezembro de 2022
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
+  hoc2023_header: Criatividade com IA
+  hoc2023_social_creativity_with_ai_title: Hour of Code - O que você vai criar?
+  hoc2023_social_creativity_with_ai_desc: Use a ciência da computação para explorar
+    e aprender sobre IA!
   hoc2022_header: Explore, jogue, crie!
   social_hoc2022_explore_play_create: Use a ciência da computação para explorar, jogar
     e criar!
@@ -183,6 +187,29 @@ po:
     um novo Catálogo de Currículos e uma página de Ensino redesenhada para o ajudar
     a encontrar tudo!
   in_partnership_with: Em parceria com
+  shop_code_dot_org_heading: Compre Code.org
+  shop_code_dot_org_desc: Apoie nosso trabalho e use o movimento com orgulho. Nossos
+    chapéus também foram usados pelo presidente Obama e por celebridades.
+  spread_the_word_heading: Espalha a Palavra
+  spread_the_word_desc: Amplifique nosso impacto compartilhando o Code.org com sua
+    rede. Das mídias sociais às atualizações por e-mail, descubra como você pode nos
+    ajudar a alcançar mais educadores, estudantes e defensores.
+  follow_us_heading: Siga-nos nas redes sociais
+  follow_us_desc: Mantenha-se atualizado conosco nas redes sociais e compartilhe nossas
+    postagens com sua rede para se manter informado e ajudar a aumentar a conscientização.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Inscrever-se para receber e-mails
+  subscribe_to_emails_desc: Leia sobre o que está acontecendo na Code.org e no ensino
+    de ciência da computação por meio de atualizações trimestrais em nossa lista de
+    e-mails.
+  subscribe_to_emails_intl: Inscreva-se para receber atualizações internacionais
+  promote_code_dot_org_heading: Promova a Code.org
+  promote_code_dot_org_desc: Promova a ciência da computação em sua área com a ajuda
+    de estatísticas, citações e vídeos.
   afe_partnership_logo_alt: Logotipo do Amazon Future Engineer
   afe_partnership_thanks_desc: O Amazon Future Engineer é um programa abrangente da
     infância à carreira para inspirar, educar e formar crianças e jovens de baixo
@@ -202,6 +229,15 @@ po:
   curricula_title_high: Currículos do ensino médio
   curricula_desc_high: Explore os cursos e atividades interessantes que convidam você
     e seus alunos do ensino médio a se aprofundarem na ciência da computação.
+  for_administrators_heading: Para administradores
+  for_administrators_desc: Junte-se às milhares de escolas que já incorporaram a ciência
+    da computação em seus currículos.
+  for_parents_heading: Para os pais
+  for_parents_desc: Você pode ajudar a incentivar a escola do seu aluno a oferecer
+    ou expandir o ensino de ciência da computação.
+  for_educators_heading: Para educadores
+  for_educators_desc: Comece a ensinar hoje mesmo, sem precisar de experiência em
+    ciência da computação, com nossos workshops de aprendizado profissional.
   students_label: Alunos
   teachers_label: Professores
   teacher_label_csf: Professor de Fundamentos de Ciências Informáticas
@@ -211,10 +247,11 @@ po:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Materiais necessários:'
   optional_materials: 'Materiais opcionais:'
-  call_to_action_explore_roles: Explore as vagas abertas
+  call_to_action_hold_an_event: Realize um evento
   call_to_action_learn_more: Saiba mais
   call_to_action_watch_now: Assista agora
   call_to_action_try_activity: Experimente a atividade
+  call_to_action_try_activities: Experimente atividades
   call_to_action_explore_unit: Explorar a unidade
   call_to_action_explore_curriculum: Explore o currículo
   call_to_action_explore_curriculum_options: Explore as opções de currículo
@@ -283,11 +320,20 @@ po:
   call_to_action_notify_available: Notifique-me quando disponível
   call_to_action_register_early_access: Registre-se para acesso antecipado
   call_to_action_open_positions: Exibir vagas abertas
+  call_to_action_explore_roles: Explore as vagas abertas
   call_to_action_get_guide: Obtenha o guia
   call_to_action_donate_to_cdo: Doe a Code.org
   call_to_action_start_fundraiser: Comece uma campanha de arrecadação de fundos
   call_to_action_view_donation_policy: Veja a política de doações
   call_to_action_view_donate_bitpay: Doe com BitPay
+  call_to_action_make_a_donation: Faça uma doação
+  call_to_action_other_ways_to_give: Outras formas de doar
+  call_to_action_become_partner_usa: Torne-se um parceiro dos Estados Unidos
+  call_to_action_become_partner_intl: Torne-se um parceiro internacional
+  call_to_action_become_a_volunteer: Torne-se um voluntário
+  call_to_action_start_translating: Comece a traduzir
+  call_to_action_learn_about_advocacy: Saiba mais sobre nossa defesa
+  call_to_action_visit_store: Visite a loja
   aria_label_call_to_action_afe: Saiba mais sobre o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Inicie o programa de aprendizagem profissional
     Teaching Computer Science Fundamentals
@@ -643,6 +689,7 @@ po:
   heading_explore_curriculum_catalog: Explore todos os nossos cursos no Catálogo de
     Currículos
   heading_csa_ai: Procurando coisas para fazer após o exame AP®?
+  heading_bring_cs_to_students: Leve a ciência da computação aos estudantes
   professional_learning_section_desc: Obtenha o apoio que precisa para se preparar
     para o ensino. Os professores adoram, com mais de 90% classificando-o como o melhor
     desenvolvimento profissional de todos os tempos!
@@ -926,6 +973,7 @@ po:
     Com uma rica mistura de teoria, exemplos práticos e recursos, o objetivo é capacitar
     os educadores a navegar no cenário da IA e aprimorar as experiências de aprendizado
     dos alunos.
+  ai_pl_101_resources_5: Guia para garantir uma abordagem responsável à IA
   ai_pl_101_video_desc_6: 'Saiba mais sobre a nova tecnologia que impulsiona as grandes
     mudanças na IA, apresentando dois novos vídeos sobre modelos de grande linguagem
     (como o ChatGPT) e a IA generativa. Ouça como essas novas tecnologias funcionam
@@ -937,6 +985,8 @@ po:
     quem está começando, bem como ferramentas avançadas para quem quer maximizar seu
     potencial.
   ai_pl_101_resources_3: Avisos de IA para transformar o aprendizado dos alunos
+  ai_pl_101_resources_section_title: Mais maneiras de aprender sobre IA
+  ai_pl_101_resources_guide: 'Guia complementar:'
   how_ai_works_hero_heading: Como a IA funciona
   how_ai_works_hero_desc: Mergulhe no mundo da IA com “Como a IA funciona”, nossa
     série de vídeos e as aulas que a acompanham!
@@ -1828,6 +1878,32 @@ po:
   donate_tabs_bitpay_desc: Abrace o futuro das doações com criptomoedas. Por meio
     do BitPay, sua moeda digital pode apoiar diretamente os esforços da Code.org na
     expansão do ensino de ciência da computação.
+  help_page_top_heading: Como você pode ajudar
+  help_page_top_desc: Apoie nossa missão de tornar a ciência da computação acessível
+    para todas as crianças, em qualquer lugar. Seus esforços nos ajudam a inspirar
+    futuros inovadores e preencher a lacuna na educação tecnológica.
+  help_page_top_subhead: Faça uma doação para a Code.org
+  help_page_top_desc_02: Estamos trabalhando para dar a cada aluno a oportunidade
+    de aprender ciência da computação — tanto on-line quanto nas escolas, onde estabelecemos
+    cursos permanentes e treinamos professores. Para cada dólar que você doa, uma
+    criança é apresentada à ciência da computação.
+  help_page_partners_heading: Torne-se um parceiro
+  help_page_partners_desc: A Code.org trabalha com outras organizações sem fins lucrativos
+    como parceiras para ajudar a difundir a ciência da computação de forma local e
+    sustentável. Saiba mais sobre nosso programa.
+  help_page_volunteer_heading: Seja voluntário em uma sala de aula
+  help_page_volunteer_desc: Seja voluntário para ensinar a Hora do Código ou seja
+    palestrante convidado em uma sala de aula local. Inscreva-se para saber mais sobre
+    oportunidades perto de você.
+  help_page_translate_heading: Ajude-nos a traduzir
+  help_page_translate_desc: Voluntários traduziram nossos tutoriais em mais de 45
+    idiomas. Ajude-nos a continuar expandindo nossos tutoriais para estudantes de
+    todo o mundo!
+  help_page_speak_for_cs_heading: Fale pela educação em ciência da computação
+  help_page_speak_for_cs_desc: Saiba mais sobre o trabalho de defesa da Code.org nos
+    EUA e as dez políticas que recomendamos que os estados adotem para tornar a ciência
+    da computação fundamental para todos os estudantes. Além disso, descubra como
+    você pode promover mudanças em seu estado.
   hoc_live: Hora do Código ao vivo
   hoc_live_sign_up_title: Inscreva-se no Hour of Code Live
   hoc_live_learn_title: Aprenda com o Hour of Code Live
@@ -14138,6 +14214,11 @@ po:
   video_library_page_inspirational_video_title_11: Qualquer um pode aprender (1 min)
   video_library_page_inspirational_video_title_12: O que falta em nossas escolas (2
     min)
+  video_library_page_inspirational_video_title_13: NASA celebra a Hora do Código (2
+    min)
+  video_library_page_inspirational_video_title_14: É mais do que um jogo (1 min)
+  video_library_page_inspirational_video_title_15: Crie com ciência da computação
+    (1 min)
   video_library_page_not_hacked_video_title_1: 'Como não ser hackeado: introdução'
   video_library_page_not_hacked_video_title_2: 'Como não ser hackeado: senhas'
   video_library_page_not_hacked_video_title_3: 'Como não ser invadido: autenticação

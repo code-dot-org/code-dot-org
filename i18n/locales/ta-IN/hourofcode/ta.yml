@@ -6,36 +6,40 @@ ta:
   front_title: சரித்திரத்திலேயே மிகப்பெரிய கற்றுக் கொள்ளும் நிகழ்வில் இணையுங்கள்,
     %{campaign_date}
   coming_soon: விரைவில் வரவிருக்கிறது
-  campaign_date_start_short: டிச. 5
-  campaign_date_start_long: டிசம்பர் 6
-  campaign_date_short: டிச. 5-11
-  campaign_date_full: டிசம்பர் 5-11
-  campaign_date_year: '2022'
-  campaign_date_full_year: டிசம்பர் 5-11, 2022
+  campaign_date_start_short: டிச. 4
+  campaign_date_start_long: டிசம்பர் 4
+  campaign_date_short: டிச. 4-10
+  campaign_date_full: டிசம்பர் 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: டிசம்பர் 4-10, 2023
   nonus_campaign_date_start_short: அக்., 1
   nonus_campaign_date_start_long: அக்டோபர் 1
   nonus_campaign_date_short: அக்., 1 - டிச .18
   nonus_campaign_date_full: அக்டோபர் 1 - டிசம்பர் 18
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: அக்டோபர் 1, 2022 - டிசம்பர் 18, 2022
   latam_campaign_date_start_short: அக்., 1
   latam_campaign_date_start_long: அக்டோபர் 1
   latam_campaign_date_short: அக்., 1 - டிச .18
   latam_campaign_date_full: அக்டோபர் 1 - டிசம்பர் 18
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: அக்டோபர் 1, 2022 - டிசம்பர் 18, 2022
   europe_campaign_date_start_short: அக் .10
   europe_campaign_date_start_long: அக்டோபர் 10
   europe_campaign_date_short: அக்., 10-25
   europe_campaign_date_full: அக்டோபர் 10-25
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: அக்டோபர் 10-25, 2020
   africa_campaign_date_start_short: அக்., 1
   africa_campaign_date_start_long: அக்டோபர் 1
   africa_campaign_date_short: அக். 1-31
   africa_campaign_date_full: அக்டோபர் 1-31
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: அக்டோபர் 1-31, 2020
+  hoc2023_header: AI உடன் படைப்பாற்றல்
+  hoc2023_social_creativity_with_ai_title: குறியீடு ஹவர் - நீங்கள் என்ன உருவாக்கும்?
+  hoc2023_social_creativity_with_ai_desc: AI பற்றி ஆராய மற்றும் அறிய கணினி அறிவியல்
+    பயன்படுத்தவும்!
   hoc2022_header: ஆராயுங்கள், விளையாடுங்கள், உருவாக்குங்கள்!
   social_hoc2022_explore_play_create: ஆராயவும், விளையாடவும், உருவாக்கவும் கணினி அறிவியலைப்
     பயன்படுத்தவும்!
@@ -188,6 +192,31 @@ ta:
     - பிளஸ் ஒரு புதிய பாடத்திட்டம் பட்டியல் மற்றும் மறுவடிவமைப்பு கற்றல் பக்கத்தை
     நீங்கள் கண்டுபிடிக்க உதவும்!
   in_partnership_with: உடன் இணைந்து
+  shop_code_dot_org_heading: கடை கோட்.org
+  shop_code_dot_org_desc: எங்கள் வேலைக்கு ஆதரவு அளித்து பெருமையுடன் இயக்கத்தை அணியுங்கள்.
+    எங்கள் தொப்பிகள் ஜனாதிபதி ஒபாமா மற்றும் பிரபலங்கள் கூட அணிந்து வருகின்றன.
+  spread_the_word_heading: இது குறித்து பரப்புங்கள்
+  spread_the_word_desc: உங்கள் நெட்வொர்க்குடன் Code.org ஐ பகிர்ந்து கொள்வதன் மூலம்
+    எங்கள் தாக்கத்தை அதிகரிக்கவும். சமூக ஊடகங்களிலிருந்து மின்னஞ்சல் புதுப்பிப்புகளுக்கு,
+    மேலும் கல்வியாளர்கள், மாணவர்கள், மற்றும் வக்கீல்கள் ஆகியவற்றை எவ்வாறு அடைய உதவலாம்
+    என்பதைக் கண்டறியவும்.
+  follow_us_heading: சமூக ஊடகங்களில் எங்களை பின்பற்றவும்
+  follow_us_desc: சமூக ஊடகங்களில் எங்களுடன் தேதி வரை தங்கியிருங்கள் மற்றும் உங்கள்
+    நெட்வொர்க்குடன் எங்கள் இடுகைகளை பகிர்ந்து கொள்ளுங்கள் மற்றும் விழிப்புணர்வை அதிகரிக்க
+    உதவவும்.
+  facebook: முகநூல்
+  twitter: ட்விட்டர்
+  linked_in: லிங்க்ட்இன்
+  instagram: படவரி
+  tik_tok: TikTok
+  subscribe_to_emails_heading: மின்னஞ்சல்களுக்கு குழுசேர்
+  subscribe_to_emails_desc: Code.org மற்றும் கணினி அறிவியல் கல்வியில் என்ன நடக்கிறது
+    என்பதைப் பற்றிப் படிக்கவும் காலாண்டு மேம்படுத்தல்கள் மூலம் எங்கள் அஞ்சல் பட்டியல்
+    வழியாக.
+  subscribe_to_emails_intl: சர்வதேச புதுப்பிப்புகளுக்கு குழுசேர்
+  promote_code_dot_org_heading: விளம்பரக் குறியீடு.org
+  promote_code_dot_org_desc: புள்ளிவிவரங்கள், மேற்கோள்கள் மற்றும் வீடியோக்களின் உதவியுடன்
+    உங்கள் பகுதியில் கணினி அறிவியலை ஊக்குவிக்கவும்.
   afe_partnership_logo_alt: அமேசான் எதிர்கால பொறியாளர் லோகோ
   afe_partnership_thanks_desc: அமேசான் எதிர்கால பொறியியலாளர் என்பது கணினி அறிவியலில்
     வேலைவாய்ப்புகளைத் தொடர குறைந்த வருமானம் மற்றும் பிற பின்தங்கிய குழந்தைகள் மற்றும்
@@ -206,6 +235,15 @@ ta:
   curricula_title_high: உயர்நிலைப் பள்ளி ஊராட்சி
   curricula_desc_high: கணினி விஞ்ஞானத்தில் ஆழமாக தோண்டுவதற்கு உங்களையும் உங்கள் உயர்நிலைப்
     பள்ளி மாணவர்களையும் அழைக்கும் கட்டாய படிப்புகள் மற்றும் நடவடிக்கைகளைத் தேடவும்.
+  for_administrators_heading: நிர்வாகிகளுக்கு
+  for_administrators_desc: ஏற்கனவே கணினி அறிவியல் தங்கள் பாடத்திட்டத்தில் இணைத்துக்
+    கொண்ட ஆயிரக்கணக்கான பள்ளிகளில் சேர.
+  for_parents_heading: பெற்றோர்களுக்கு
+  for_parents_desc: நீங்கள் வழங்க அல்லது கணினி அறிவியல் கல்வி விரிவாக்க உங்கள் மாணவர்
+    பள்ளி ஊக்குவிக்க உதவ முடியும்.
+  for_educators_heading: பயிற்றுவிப்பாளர்களுக்கு
+  for_educators_desc: இன்று கற்பிப்பதைத் தொடங்குங்கள் — கணினி அறிவியல் அனுபவம் அவசியமில்லாதது
+    - எங்களது தொழில்முறை கற்றல் பட்டறைகளுடன்.
   students_label: மாணவர்கள்
   teachers_label: ஆசிரியர்கள்
   teacher_label_csf: சிஎஸ் அடிப்படைகள் ஆசிரியர்
@@ -215,10 +253,11 @@ ta:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'தேவையான பொருட்கள்:'
   optional_materials: 'விருப்பப் பொருட்கள்:'
-  call_to_action_explore_roles: திறந்த வேடங்களை ஆராய்ந்து
+  call_to_action_hold_an_event: ஒரு நிகழ்வை நடத்த
   call_to_action_learn_more: மேலும் அறிக
   call_to_action_watch_now: இப்பொழுது பார்
   call_to_action_try_activity: செயல்பாட்டை முயற்சிக்கவும்
+  call_to_action_try_activities: நடவடிக்கைகளை முயற்சிக்கவும்
   call_to_action_explore_unit: 'அலகை ஆராயுங்கள் '
   call_to_action_explore_curriculum: பாடத்திட்டத்தை ஆராயுங்கள்
   call_to_action_explore_curriculum_options: பாடத்திட்டத்தின் விருப்பங்களை ஆராயுங்கள்
@@ -287,11 +326,20 @@ ta:
   call_to_action_notify_available: கிடைக்கும் போது எனக்கு தெரிவி
   call_to_action_register_early_access: ஆரம்ப அணுகல் பதிவு
   call_to_action_open_positions: திறந்த நிலைகளைக் காண்க
+  call_to_action_explore_roles: திறந்த வேடங்களை ஆராய்ந்து
   call_to_action_get_guide: வழிகாட்டி கிடைக்கும்
   call_to_action_donate_to_cdo: Code.org க்கு நன்கொடை
   call_to_action_start_fundraiser: நிதிதிரட்டல் தொடங்கவும்
   call_to_action_view_donation_policy: நன்கொடை கொள்கை காண்க
   call_to_action_view_donate_bitpay: BitPay உடன் நன்கொடை
+  call_to_action_make_a_donation: நன்கொடை
+  call_to_action_other_ways_to_give: கொடுக்க மற்ற வழிகள்
+  call_to_action_become_partner_usa: ஐக்கிய அமெரிக்க கூட்டாளியாக
+  call_to_action_become_partner_intl: ஒரு சர்வதேச பங்குதாரர் ஆக
+  call_to_action_become_a_volunteer: ஒரு தன்னார்வ ஆக
+  call_to_action_start_translating: மொழிபெயர்ப்பைத் தொடங்குங்கள்
+  call_to_action_learn_about_advocacy: எங்கள் வக்கீல் பற்றி அறியுங்கள்
+  call_to_action_visit_store: கடைக்குச் செல்லவும்
   aria_label_call_to_action_afe: அமேசான் எதிர்கால பொறியாளர் பற்றி மேலும் அறிக
   aria_label_call_to_action_teaching_csf: கற்பித்தல் கணினி அறிவியல் அடிப்படைகள் தொழில்முறை
     கற்றல் திட்டத்தைத் தொடங்கவும்
@@ -644,6 +692,7 @@ ta:
   heading_explore_curriculum_catalog: பாடத்திட்டத்தின் பட்டியல் எங்கள் படிப்புகள்
     அனைத்தையும் ஆராயுங்கள்
   heading_csa_ai: ஆந்திர® தேர்வில் பிறகு செய்ய விஷயங்களை தேடுவது?
+  heading_bring_cs_to_students: மாணவர்களுக்கு கணினி அறிவியலை கொண்டு வாருங்கள்
   professional_learning_section_desc: நீங்கள் கற்பிக்கத் தயாராகுங்கள் உங்களுக்கு தேவையான
     ஆதரவைப் பெறுங்கள். ஆசிரியர்கள் அதை விரும்புகிறேன், படிதல் 90% எப்போதும் அது சிறந்த
     தொழில்முறை வளர்ச்சி தரவரிசை!
@@ -920,6 +969,7 @@ ta:
     ஆகியவற்றில் கவனம் செலுத்துகிறது. கோட்பாடு, நடைமுறை உதாரணங்கள் மற்றும் வளங்கள்
     நிறைந்த கலவையுடன், AI நிலப்பரப்புக்கு செல்லவும், மாணவர் கற்றல் அனுபவங்களை மேம்படுத்தவும்
     கல்வியாளர்களை அதிகாரம் செய்வதை நோக்கமாகக் கொண்டுள்ளது.
+  ai_pl_101_resources_5: AI க்கு ஒரு பொறுப்பான அணுகுமுறையை உறுதிப்படுத்துவதற்கான வழிகாட்டி
   ai_pl_101_video_desc_6: 'AI இல் பெரிய மாற்றங்களை ஓட்டும் புதிய தொழில்நுட்பத்தைப்
     பற்றி மேலும் அறியவும், பெரிய மொழி மாதிரிகள் (ChatGPT போன்ற) மற்றும் ஜெனரேடிவ்
     AI இல் இரண்டு புதிய வீடியோக்களை இடம்பெறும். இந்த புதிய தொழில்நுட்பங்கள் வல்லுநர்களிடமிருந்து
@@ -931,6 +981,8 @@ ta:
     நனைத்தல் அந்த கேட்கும் அடங்கும், அதே போல் அவர்களின் திறனை அதிகரிக்க தேடும் மேம்பட்ட
     கருவிகள்.
   ai_pl_101_resources_3: மாணவர் கற்றலை மாற்றியமைக்கும் AI கேட்கிறது
+  ai_pl_101_resources_section_title: AI பற்றி அறிய மேலும் வழிகள்
+  ai_pl_101_resources_guide: 'தோழமை வழிகாட்டி:'
   how_ai_works_hero_heading: AI எவ்வாறு செயல்படுகிறது
   how_ai_works_hero_desc: AI உலகில் டைவ் “எப்படி AI படைப்புகள்,” எங்கள் வீடியோ தொடர்
     மற்றும் அதனுடன் பாடங்கள்!
@@ -1809,6 +1861,32 @@ ta:
   donate_tabs_bitpay_desc: Cryptocurrency கொண்டு கொடுக்கும் எதிர்காலத்தை தழுவி. BitPay
     மூலம், உங்கள் டிஜிட்டல் நாணயம் நேரடியாக கணினி அறிவியல் கல்வி விரிவடைவதில் Code.org
     முயற்சிகளை ஆதரிக்க முடியும்.
+  help_page_top_heading: நீங்கள் எப்படி உதவ முடியும்
+  help_page_top_desc: எல்லா இடங்களிலும், ஒவ்வொரு குழந்தைக்கும் கணினி விஞ்ஞானத்தை அணுகுவதற்கு
+    எங்கள் பணியை ஆதரிக்கவும். உங்கள் முயற்சிகள் எதிர்கால கண்டுபிடிப்பாளர்களை ஊக்குவிக்கும்
+    மற்றும் தொழில்நுட்ப கல்வி இடைவெளியை பாலம் செய்ய உதவுகின்றன.
+  help_page_top_subhead: Code.org க்கு நன்கொடை வழங்கவும்
+  help_page_top_desc_02: ஒவ்வொரு மாணவருக்கும் கணினி அறிவியல் கற்றுக்கொள்வதற்கான வாய்ப்பை
+    வழங்குவதற்கு நாங்கள் வேலை செய்கிறோம் - ஆன்லைன் மற்றும் பள்ளிகளில், நாங்கள் நிரந்தர
+    படிப்புகள் மற்றும் பயிற்சி ஆசிரியர்களை நிறுவுகிறோம். நீங்கள் நன்கொடை ஒவ்வொரு டாலருக்கும்,
+    ஒரு குழந்தை கணினி அறிவியல் அறிமுகப்படுத்தப்பட்டது.
+  help_page_partners_heading: ஒரு பங்குதாரர் ஆக
+  help_page_partners_desc: Code.org ஒரு உள்ளூர், நிலையான பாணியில் கணினி அறிவியல் பரவ
+    உதவும் கூட்டாளிகளாக மற்ற இலாப நோக்கமற்ற நிறுவனங்களுடன் வேலை செய்கிறது. எங்கள்
+    திட்டம் பற்றி மேலும் அறிய.
+  help_page_volunteer_heading: வகுப்பறையில் தொண்டர்
+  help_page_volunteer_desc: கோட் ஹவர் கற்று அல்லது ஒரு உள்ளூர் வகுப்பறையில் விருந்தினர்
+    பேச்சாளராக இருக்க தன்னார்வ. உங்களுக்கு அருகில் உள்ள வாய்ப்புகளைப் பற்றி கேட்க
+    பதிவு செய்க.
+  help_page_translate_heading: மொழிபெயர்க்க உதவுங்கள்
+  help_page_translate_desc: தன்னார்வலர்கள் 45 க்கும் மேற்பட்ட மொழிகளில் எங்கள் பயிற்சிகளை
+    மொழிபெயர்த்துள்ளனர். எங்களுக்கு உலகம் முழுவதும் மாணவர்கள் எங்கள் பயிற்சிகள் விரிவாக்க
+    தொடர்ந்து உதவும்!
+  help_page_speak_for_cs_heading: கணினி அறிவியல் கல்விக்காக பேசுங்கள்
+  help_page_speak_for_cs_desc: அமெரிக்க முழுவதும் Code.org இன் வாதிடும் பணி மற்றும்
+    அனைத்து மாணவர்களுக்கும் கணினி அறிவியல் அடித்தளத்தை உருவாக்க மாநிலங்கள் தத்தெடுக்க
+    பரிந்துரைக்கின்ற பத்து கொள்கைகள் பற்றி மேலும் அறியவும். பிளஸ், நீங்கள் உங்கள்
+    மாநிலத்தில் மாற்றம் ஓட்ட முடியும் என்பதை கண்டுபிடிக்க.
   hoc_live: கோட் லைவ் நேரம்
   hoc_live_sign_up_title: மணிநேர நேரத்திற்கு பதிவுபெறுக
   hoc_live_learn_title: மணிநேர குறியீட்டைக் கற்றுக்கொள்ளுங்கள்
@@ -14371,6 +14449,12 @@ ta:
     நிமிடம்)
   video_library_page_inspirational_video_title_12: லோ க்யூ ஃபால்டா என் நியூஸ்ட்ராஸ்
     எஸ்குலேஸ் (2 நிமிடம்)
+  video_library_page_inspirational_video_title_13: நாசா கோட் ஹவர் கொண்டாடுகிறது (2
+    நிமிடம்)
+  video_library_page_inspirational_video_title_14: அது ஒரு விளையாட்டு விட தான் (1
+    நிமிடம்)
+  video_library_page_inspirational_video_title_15: கணினி அறிவியல் உடன் உருவாக்கவும்
+    (1 நிமிடம்)
   video_library_page_not_hacked_video_title_1: 'எப்படி ஹேக் செய்ய முடியாது: அறிமுகம்'
   video_library_page_not_hacked_video_title_2: 'எப்படி ஹேக் செய்யக்கூடாது: கடவுச்சொற்கள்'
   video_library_page_not_hacked_video_title_3: 'ஹேக் செய்ய எப்படி இல்லை: அங்கீகாரம்

@@ -5,19 +5,19 @@ vi:
   language: Tiếng Việt
   front_title: Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}
   coming_soon: Sắp diễn ra
-  campaign_date_start_short: Ngày 5 tháng 12
-  campaign_date_start_long: Ngày 6 tháng 12
-  campaign_date_short: Ngày 5-11 tháng 12
-  campaign_date_full: Ngày 5-11 tháng 12
-  campaign_date_year: '2022'
-  campaign_date_full_year: Ngày 5-11 tháng 12 năm 2022
+  campaign_date_start_short: Ngày 4 tháng 12
+  campaign_date_start_long: Ngày 4 tháng 12
+  campaign_date_short: Ngày 4-10 tháng 12
+  campaign_date_full: Ngày 4-10 tháng 12
+  campaign_date_year: '2023'
+  campaign_date_full_year: Ngày 4-10 tháng 12 năm 2023
   nonus_campaign_date_start_short: ngày 1 tháng 10
   nonus_campaign_date_start_long: 'ngày 1 tháng 10
 
     '
   nonus_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
   nonus_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm 2022
   latam_campaign_date_start_short: ngày 1 tháng 10
   latam_campaign_date_start_long: 'ngày 1 tháng 10
@@ -43,6 +43,10 @@ vi:
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm
     2022
+  hoc2023_header: Sáng tạo với AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Bạn sẽ tạo ra những gì?
+  hoc2023_social_creativity_with_ai_desc: Sử dụng khoa học máy tính để khám phá và
+    tìm hiểu về AI!
   hoc2022_header: Khám phá, vui chơi, sáng tạo!
   social_hoc2022_explore_play_create: Sử dụng khoa học máy tính để khám phá, vui chơi
     và sáng tạo!
@@ -187,6 +191,32 @@ vi:
     Danh mục giáo trình mới và trang Đào tạo được thiết kế lại để giúp bạn tìm thấy
     tất cả khóa học!
   in_partnership_with: Sản phẩm hợp tác với
+  shop_code_dot_org_heading: Mua sắm Code.org
+  shop_code_dot_org_desc: Hỗ trợ công việc của chúng tôi và mặc phong trào với niềm
+    tự hào. Những chiếc mũ của chúng tôi đã được Tổng thống Obama và những người nổi
+    tiếng đội.
+  spread_the_word_heading: Truyền tải thông điệp
+  spread_the_word_desc: Tăng cường tác động của chúng tôi bằng cách chia sẻ Code.org
+    với mạng của bạn. Từ phương tiện truyền thông xã hội đến cập nhật email, hãy khám
+    phá cách bạn có thể giúp chúng tôi tiếp cận nhiều nhà giáo dục, sinh viên và người
+    ủng hộ hơn.
+  follow_us_heading: Theo dõi chúng tôi trên phương tiện truyền thông xã hội
+  follow_us_desc: Luôn cập nhật với chúng tôi trên phương tiện truyền thông xã hội
+    và chia sẻ bài đăng của chúng tôi với mạng của bạn để được thông báo và giúp nâng
+    cao nhận thức.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Đăng ký email
+  subscribe_to_emails_desc: Đọc về những gì đang xảy ra tại Code.org và trong giáo
+    dục khoa học máy tính thông qua cập nhật hàng quý qua danh sách gửi thư của chúng
+    tôi.
+  subscribe_to_emails_intl: Theo dõi các bản cập nhật quốc tế
+  promote_code_dot_org_heading: Quảng bá Code.org
+  promote_code_dot_org_desc: Quảng bá khoa học máy tính trong khu vực của bạn với
+    sự trợ giúp của số liệu thống kê, trích dẫn và video.
   afe_partnership_logo_alt: Logo Kỹ sư tương lai của Amazon
   afe_partnership_thanks_desc: Kỹ sư tương lai của Amazon là chương trình đào tạo
     toàn diện từ giai đoạn nhỏ tuổi đến khi xây dựng sự nghiệp nhằm truyền cảm hứng,
@@ -206,6 +236,15 @@ vi:
   curricula_title_high: Chương trình giảng dạy trung học
   curricula_desc_high: Duyệt qua các khóa học và hoạt động hấp dẫn mời bạn và học
     sinh trung học của bạn tìm hiểu sâu hơn về khoa học máy tính.
+  for_administrators_heading: Dành cho quản trị viên
+  for_administrators_desc: Tham gia cùng hàng ngàn trường đã kết hợp khoa học máy
+    tính vào chương trình giảng dạy của họ.
+  for_parents_heading: Đối với phụ huynh
+  for_parents_desc: Bạn có thể giúp khuyến khích trường học của học sinh cung cấp
+    hoặc mở rộng giáo dục khoa học máy tính.
+  for_educators_heading: Đối với nhà giáo dục
+  for_educators_desc: Bắt đầu giảng dạy ngay hôm nay - không cần kinh nghiệm khoa
+    học máy tính - với các hội thảo học tập chuyên nghiệp của chúng tôi.
   students_label: Học sinh, sinh viên
   teachers_label: Giáo viên
   teacher_label_csf: Nguyên tắc cơ bản của KHMT cho Giáo viên
@@ -215,10 +254,11 @@ vi:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Tài liệu bắt buộc:'
   optional_materials: 'Tài liệu không bắt buộc:'
-  call_to_action_explore_roles: Khám phá các vai trò mở
+  call_to_action_hold_an_event: Tổ chức một sự kiện
   call_to_action_learn_more: Tìm hiểu thêm
   call_to_action_watch_now: Xem ngay
   call_to_action_try_activity: Thử hoạt động
+  call_to_action_try_activities: Thử các hoạt động
   call_to_action_explore_unit: Khám phá đơn vị
   call_to_action_explore_curriculum: Khám phá chương trình giảng dạy
   call_to_action_explore_curriculum_options: Khám phá các lựa chọn giáo trình
@@ -289,11 +329,20 @@ vi:
   call_to_action_notify_available: Thông báo cho tôi khi có sẵn
   call_to_action_register_early_access: Đăng ký để truy cập sớm
   call_to_action_open_positions: Xem các vị trí đang mở
+  call_to_action_explore_roles: Khám phá các vai trò mở
   call_to_action_get_guide: Nhận hướng dẫn
   call_to_action_donate_to_cdo: Quyên góp cho Code.org
   call_to_action_start_fundraiser: Bắt đầu gây quỹ
   call_to_action_view_donation_policy: Xem chính sách quyên góp
   call_to_action_view_donate_bitpay: Đóng góp với BitPay
+  call_to_action_make_a_donation: Đóng góp
+  call_to_action_other_ways_to_give: Những cách khác để cung cấp
+  call_to_action_become_partner_usa: Trở thành đối tác Hoa Kỳ
+  call_to_action_become_partner_intl: Trở thành đối tác quốc tế
+  call_to_action_become_a_volunteer: Trở thành một tình nguyện viên
+  call_to_action_start_translating: Bắt đầu dịch
+  call_to_action_learn_about_advocacy: Tìm hiểu về sự vận động của chúng tôi
+  call_to_action_visit_store: Ghé thăm cửa hàng
   aria_label_call_to_action_afe: Tìm hiểu thêm về Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Bắt đầu chương trình Teaching Computer Science
     Fundamentals Professional learning
@@ -644,6 +693,7 @@ vi:
   heading_explore_curriculum_catalog: Khám phá tất cả các khóa học của chúng tôi trong
     Danh mục chương trình giảng dạy
   heading_csa_ai: Tìm kiếm những việc cần làm sau kỳ thi AP®?
+  heading_bring_cs_to_students: Mang khoa học máy tính đến với sinh viên
   professional_learning_section_desc: Nhận được sự hỗ trợ mà bạn cần trong quá trình
     chuẩn bị giảng dạy. Các thầy cô giáo rất yêu thích chương trình này, trong đó
     hơn 90% giáo viên xếp hạng chương trình này là bước bồi dưỡng chuyên môn tuyệt
@@ -926,6 +976,7 @@ vi:
     trộn phong phú của lý thuyết, ví dụ thực tế và tài nguyên, nó nhằm mục đích trao
     quyền cho các nhà giáo dục điều hướng bối cảnh AI và nâng cao trải nghiệm học
     tập của học sinh.
+  ai_pl_101_resources_5: Hướng dẫn đảm bảo cách tiếp cận có trách nhiệm với AI
   ai_pl_101_video_desc_6: 'Tìm hiểu thêm về công nghệ mới thúc đẩy những thay đổi
     lớn trong AI, bao gồm hai video mới về Mô hình ngôn ngữ lớn (như ChatGPT) và AI
     thế hệ. Nghe cách các công nghệ mới này hoạt động trực tiếp từ các chuyên gia:
@@ -936,6 +987,8 @@ vi:
     những người chỉ cần nhúng ngón chân vào, cũng như các công cụ tiên tiến cho những
     người muốn tối đa hóa tiềm năng của họ.
   ai_pl_101_resources_3: Lời nhắc AI để chuyển đổi việc học của học sinh
+  ai_pl_101_resources_section_title: Các cách khác để tìm hiểu về AI
+  ai_pl_101_resources_guide: 'Hướng dẫn đồng hành:'
   how_ai_works_hero_heading: Cách thức hoạt động của AI
   how_ai_works_hero_desc: Đi sâu vào thế giới AI với “Cách thức hoạt động của AI”,
     loạt video của chúng tôi và các bài học kèm theo!
@@ -1822,6 +1875,33 @@ vi:
   donate_tabs_bitpay_desc: Nắm bắt tương lai của việc cho đi với tiền điện tử. Thông
     qua BitPay, đồng tiền kỹ thuật số của bạn có thể hỗ trợ trực tiếp những nỗ lực
     của Code.org trong việc mở rộng giáo dục khoa học máy tính.
+  help_page_top_heading: Làm thế nào bạn có thể giúp
+  help_page_top_desc: Hỗ trợ sứ mệnh của chúng tôi để làm cho khoa học máy tính có
+    thể truy cập được cho mọi trẻ em, ở mọi nơi. Những nỗ lực của bạn giúp chúng tôi
+    truyền cảm hứng cho các nhà đổi mới trong tương lai và thu hẹp khoảng cách giáo
+    dục công nghệ.
+  help_page_top_subhead: Đóng góp cho Code.org
+  help_page_top_desc_02: Chúng tôi đang làm việc để cung cấp cho mọi học sinh cơ hội
+    học khoa học máy tính - cả trực tuyến VÀ trong các trường học, nơi chúng tôi thiết
+    lập các khóa học cố định và đào tạo giáo viên. Cứ mỗi đô la bạn quyên góp, một
+    đứa trẻ được giới thiệu về khoa học máy tính.
+  help_page_partners_heading: Trở thành đối tác
+  help_page_partners_desc: Code.org làm việc với các tổ chức phi lợi nhuận khác với
+    tư cách là đối tác để giúp truyền bá khoa học máy tính theo cách địa phương, bền
+    vững. Tìm hiểu thêm về chương trình của chúng tôi.
+  help_page_volunteer_heading: Tình nguyện viên trong một lớp học
+  help_page_volunteer_desc: Tình nguyện viên dạy Giờ Lập trình hoặc trở thành diễn
+    giả khách mời trong một lớp học địa phương. Đăng ký để nghe về các cơ hội gần
+    bạn.
+  help_page_translate_heading: Giúp chúng tôi dịch
+  help_page_translate_desc: Các tình nguyện viên đã dịch các hướng dẫn của chúng tôi
+    bằng hơn 45 ngôn ngữ. Hãy giúp chúng tôi tiếp tục mở rộng các hướng dẫn của chúng
+    tôi cho sinh viên trên toàn thế giới!
+  help_page_speak_for_cs_heading: Lên tiếng cho giáo dục khoa học máy tính
+  help_page_speak_for_cs_desc: Tìm hiểu thêm về công việc vận động của Code.org trên
+    khắp Hoa Kỳ và mười chính sách mà chúng tôi khuyến nghị các tiểu bang áp dụng
+    để làm cho khoa học máy tính trở thành nền tảng cho tất cả học sinh. Thêm vào
+    đó, tìm hiểu làm thế nào bạn có thể thúc đẩy sự thay đổi trong tiểu bang của bạn.
   hoc_live: Giờ lập trình trực tiếp
   hoc_live_sign_up_title: Đăng ký Giờ lập trình trực tiếp
   hoc_live_learn_title: Học với Giờ lập trình trực tiếp
@@ -14228,6 +14308,9 @@ vi:
     (1 phút)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 phút)
+  video_library_page_inspirational_video_title_13: NASA kỷ niệm Giờ lập trình (2 phút)
+  video_library_page_inspirational_video_title_14: Nó Hơn Một Trò Chơi (1 phút)
+  video_library_page_inspirational_video_title_15: Tạo bằng Khoa học Máy tính (1 phút)
   video_library_page_not_hacked_video_title_1: 'Làm thế nào để không bị hack: Giới
     thiệu'
   video_library_page_not_hacked_video_title_2: 'Làm thế nào để không bị hack: Mật

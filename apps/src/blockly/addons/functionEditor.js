@@ -46,6 +46,7 @@ export default class FunctionEditor {
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       toolbox: options.toolbox,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
+      renderer: Blockly.getMainWorkspace().options.renderer,
       move: {
         drag: false,
         scrollbars: {
@@ -56,6 +57,10 @@ export default class FunctionEditor {
       },
       trashcan: false, // Don't use default trashcan.
     });
+
+    // Disable blocks that aren't attached. We don't want these to generate
+    // code in the hidden workspace.
+    this.editorWorkspace.addChangeListener(Blockly.Events.disableOrphans);
 
     // Close handler
     document
@@ -129,13 +134,7 @@ export default class FunctionEditor {
    * @param {Procedure} procedure The procedure to show.
    */
   showForFunction(procedure, procedureType) {
-    // We disable events while clearing the workspace in order to skip
-    // propogating those events to the other workspaces. We would be propogating
-    // delete events, but we aren't actually deleting the blocks, just removing them
-    // from the editor workspace.
-    Blockly.Events.disable();
-    this.editorWorkspace.clear();
-    Blockly.Events.enable();
+    this.clearEditorWorkspace();
 
     this.nameInput.value = procedure.getName();
 
@@ -373,5 +372,27 @@ export default class FunctionEditor {
     if (blockToUpdate) {
       blockToUpdate.description = this.block.description;
     }
+  }
+
+  // Clear the editor workspace to prepare for a new function definition.
+  clearEditorWorkspace() {
+    if (this.block) {
+      const topBlocks = this.editorWorkspace.getTopBlocks();
+      // Find all blocks that are not attached to the procedure definition.
+      const orphanedBlocks = topBlocks.filter(
+        block => block.id !== this.block.id
+      );
+
+      // Dispose of all non-procedure-definition top blocks (aka orphaned blocks)
+      // and propagate the delete event to the hidden workspace.
+      orphanedBlocks.forEach(block => block.dispose(false));
+    }
+
+    // Now call clear() to have Blockly handle the rest of the workspace clearing.
+    // Also disable events here to ensure we don't delete the procedure model or the
+    // procedure definition.
+    Blockly.Events.disable();
+    this.editorWorkspace.clear();
+    Blockly.Events.enable();
   }
 }

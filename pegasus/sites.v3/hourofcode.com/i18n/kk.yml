@@ -5,36 +5,40 @@ kk:
   language: Ағылшын тілі
   front_title: Тарихтағы ең ірі үйрену оқиғасына қосылыңыз, 7-13 желтоқсан, 2015
   coming_soon: Жақында болады
-  campaign_date_start_short: 7 желтоқсан
-  campaign_date_start_long: Желтоқсанның 5-і
-  campaign_date_short: 5-11желтоқсан
-  campaign_date_full: 5-11 желтоқсан
-  campaign_date_year: '2016'
-  campaign_date_full_year: Желтоқсан 5-11, 2016
+  campaign_date_start_short: 4 желтоқсан
+  campaign_date_start_long: 4 желтоқсан
+  campaign_date_short: 4-10 желтоқсан
+  campaign_date_full: 4-10 желтоқсан
+  campaign_date_year: '2023'
+  campaign_date_full_year: Желтоқсан 4-10, 2023
   nonus_campaign_date_start_short: 1 қазан
   nonus_campaign_date_start_long: 1 қазан
   nonus_campaign_date_short: 1 қазан - 18 желтоқсан
   nonus_campaign_date_full: 1 қазан - 18 желтоқсан
-  nonus_campaign_date_year: '2016'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: Қазан 1, 2022 - Желтоқсан 18, 2022
   latam_campaign_date_start_short: 1 қазан
   latam_campaign_date_start_long: 1 қазан
   latam_campaign_date_short: 1 қазан - 18 желтоқсан
   latam_campaign_date_full: 1 қазан - 18 желтоқсан
-  latam_campaign_date_year: '2016'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: Қазан 1, 2022 - Желтоқсан 18, 2022
   europe_campaign_date_start_short: 1 қазан
   europe_campaign_date_start_long: 1 қазан
   europe_campaign_date_short: 1 қазан - 18 желтоқсан
   europe_campaign_date_full: 1 қазан - 18 желтоқсан
-  europe_campaign_date_year: '2016'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: Қазан 1, 2022 - Желтоқсан 18, 2022
   africa_campaign_date_start_short: 1 қазан
   africa_campaign_date_start_long: 1 қазан
   africa_campaign_date_short: 1 қазан - 18 желтоқсан
   africa_campaign_date_full: 1 қазан - 18 желтоқсан
-  africa_campaign_date_year: '2016'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: Қазан 1, 2022 - Желтоқсан 18, 2022
+  hoc2023_header: АИ-мен шығармашылық
+  hoc2023_social_creativity_with_ai_title: Код сағаты - Сіз не жасайсыз?
+  hoc2023_social_creativity_with_ai_desc: AI туралы зерттеу және білу үшін информатиканы
+    қолданыңыз!
   hoc2022_header: Зерттеңіз, ойнаңыз, жасаңыз!
   social_hoc2022_explore_play_create: Зерттеу, ойнау және жасау үшін информатиканы
     пайдаланыңыз!
@@ -181,6 +185,29 @@ kk:
     жаңа оқу жоспарының каталогы және барлығын табуға көмектесу үшін қайта жасалған
     “Оқыту” беті!
   in_partnership_with: Серіктестікте
+  shop_code_dot_org_heading: Code.org дүкенін сатып алыңыз
+  shop_code_dot_org_desc: Біздің жұмысымызды қолдаңыз және қозғалысты мақтанышпен
+    киіңіз. Біздің шляпаларды президент Обама да, атақты адамдар да киген.
+  spread_the_word_heading: Жариялау
+  spread_the_word_desc: Code.org желісімен бөлісу арқылы әсерімізді күшейтіңіз. Әлеуметтік
+    желілерден электрондық пошта жаңартуларына дейін бізге көбірек тәрбиешілерге,
+    студенттерге және адвокаттарға қалай көмектесуге болатынын біліңіз.
+  follow_us_heading: Бізді әлеуметтік желілерде бақылаңыз
+  follow_us_desc: Әлеуметтік желілерде бізден хабардар болыңыз және хабардар болуға
+    көмектесу және хабардар болу үшін жазбаларымызды желіңізбен бөлісіңіз.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: ТикТок
+  subscribe_to_emails_heading: Электрондық пошталарға жазылыңыз
+  subscribe_to_emails_desc: Code.org сайтында және информатика бойынша білім беруде
+    не болып жатқанын тоқсан сайынғы жаңартулар арқылы біздің тарату тізіміміз арқылы
+    оқыңыз.
+  subscribe_to_emails_intl: Халықаралық жаңартуларға жазылыңыз
+  promote_code_dot_org_heading: Код.org-ты жарнамалау
+  promote_code_dot_org_desc: Статистиканың, дәйексөздердің және бейнелердің көмегімен
+    өз аймағыңызда информатиканы насихаттаңыз.
   afe_partnership_logo_alt: Amazon болашақ инженері логотипі
   afe_partnership_thanks_desc: Amazon Future Engineer — табысы төмен және басқа да
     қолайсыз балалар мен жастарды информатика саласында мансапқа ұмтылуға шабыттандыруға,
@@ -199,6 +226,15 @@ kk:
   curricula_title_high: Орта мектептің оқу бағдарламалары
   curricula_desc_high: Сізді және сіздің жоғары сынып оқушыларыңызды информатиканы
     тереңірек зерттеуге шақыратын тартымды курстар мен әрекеттерді шолыңыз.
+  for_administrators_heading: Әкімшілер үшін
+  for_administrators_desc: Информатиканы оқу бағдарламасына енгізген мыңдаған мектептерге
+    қосылыңыз.
+  for_parents_heading: Ата-аналарға
+  for_parents_desc: Сіз өзіңіздің оқушыңыздың мектебін информатика бойынша білім беруді
+    ұсынуға немесе кеңейтуге ынталандыруға көмектесе аласыз.
+  for_educators_heading: Мұғалімдерге
+  for_educators_desc: Бүгін оқытуды бастаңыз - информатика тәжірибесі қажет емес -
+    біздің кәсіби оқыту семинарларымыздан.
   students_label: Оқушылар
   teachers_label: Мұғалімдер
   teacher_label_csf: CS негіздері мұғалімі
@@ -208,10 +244,11 @@ kk:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Қажетті материалдар:'
   optional_materials: 'Қосымша материалдар:'
-  call_to_action_explore_roles: Ашық рөлдерді зерттеңіз
+  call_to_action_hold_an_event: Іс-шара өткізілсін
   call_to_action_learn_more: Көбірек біліңіз
   call_to_action_watch_now: Қазір қараңыз
   call_to_action_try_activity: Әрекетті байқап көріңіз
+  call_to_action_try_activities: Іс-шараларды қолданып көріңіз
   call_to_action_explore_unit: Құрылғыны зерттеңіз
   call_to_action_explore_curriculum: Оқу жоспарын зерттеңіз
   call_to_action_explore_curriculum_options: Оқу жоспарының нұсқаларын зерттеңіз
@@ -280,11 +317,20 @@ kk:
   call_to_action_notify_available: Қол жетімді болған кезде маған хабарлаңыз
   call_to_action_register_early_access: Ерте қол жеткізу үшін тіркеліңіз
   call_to_action_open_positions: Ашық позицияларды қарау
+  call_to_action_explore_roles: Ашық рөлдерді зерттеңіз
   call_to_action_get_guide: Нұсқаулықты алыңыз
   call_to_action_donate_to_cdo: Code.org сайтына қайырымдылық
   call_to_action_start_fundraiser: Фандрайзерді бастаңыз
   call_to_action_view_donation_policy: Қайырымдылық саясатын қарау
   call_to_action_view_donate_bitpay: BitPay арқылы қайырымдылық
+  call_to_action_make_a_donation: Қайырымдылық жасаңыз
+  call_to_action_other_ways_to_give: Берудің басқа тәсілдері
+  call_to_action_become_partner_usa: Америка Құрама Штаттарының серіктесі болыңыз
+  call_to_action_become_partner_intl: Халықаралық серіктес болыңыз
+  call_to_action_become_a_volunteer: Ерікті болыңыз
+  call_to_action_start_translating: Аударманы бастаңыз
+  call_to_action_learn_about_advocacy: Біздің адвокатурамыз туралы біліңіз
+  call_to_action_visit_store: Дүкенге барыңыз
   aria_label_call_to_action_afe: Amazon болашақ инженері туралы көбірек біліңіз
   aria_label_call_to_action_teaching_csf: Информатика негіздерін оқытудың кәсіби бағдарламасын
     бастаңыз
@@ -631,6 +677,7 @@ kk:
   heading_explore_curriculum_catalog: Оқу жоспарлары каталогындағы барлық курстарымызды
     зерттеңіз
   heading_csa_ai: AP® емтиханынан кейін не істеу керек екенін іздеп жүрсіз бе?
+  heading_bring_cs_to_students: Оқушыларға информатиканы әкеліңіз
   professional_learning_section_desc: Оқуға дайындалу кезінде сізге қажет қолдауды
     алыңыз. Мұғалімдер оны жақсы көреді, 90% -дан астамы оны ең жақсы кәсіби даму
     деп бағалайды!
@@ -904,6 +951,7 @@ kk:
     практикалық мысалдардың және ресурстардың бай үйлесімімен ол мұғалімдерге AI пейзажын
     шарлауға және студенттердің оқу тәжірибесін жақсартуға мүмкіндік беруді мақсат
     етеді.
+  ai_pl_101_resources_5: АИ -ге жауапты көзқарасты қамтамасыз ету бойынша нұсқаулық
   ai_pl_101_video_desc_6: 'Үлкен тілдік модельдер (ChatGPT сияқты) және Generative
     AI туралы екі жаңа бейнені қамтитын AI жүйесіндегі үлкен өзгерістерді басқаратын
     жаңа технология туралы көбірек біліңіз. Бұл жаңа технологиялардың тікелей сарапшылардан
@@ -915,6 +963,8 @@ kk:
     арналған стартер нұсқауларын, сондай-ақ әлеуетін барынша арттырғысы келетіндерге
     арналған жетілдірілген құралдарды қамтиды.
   ai_pl_101_resources_3: AI студенттердің оқуын өзгертуге шақырады
+  ai_pl_101_resources_section_title: AI туралы білудің басқа жолдары
+  ai_pl_101_resources_guide: 'Серіктес нұсқаулығы:'
   how_ai_works_hero_heading: AI қалай жұмыс істейді
   how_ai_works_hero_desc: "“AI қалай жұмыс істейді”, біздің бейне сериямыз және ілеспе
     сабақтармен AI әлеміне еніңіз!"
@@ -1771,6 +1821,30 @@ kk:
   donate_tabs_bitpay_desc: Криптовалютамен берудің болашағын қабылдаңыз. BitPay арқылы
     сіздің цифрлық валютаңыз Code.org сайтының информатика білімін кеңейтудегі талпыныстарын
     тікелей қолдай алады.
+  help_page_top_heading: Сіз қалай көмектесе аласыз
+  help_page_top_desc: Информатиканы әр балаға, барлық жерде қол жетімді ету миссиямызды
+    қолдаңыз. Сіздің күш-жігеріңіз бізге болашақ инноваторларды шабыттандыруға және
+    технологиялық білімнен алшақтықты жоюға көмектеседі.
+  help_page_top_subhead: Code.org сайтына қайырымдылық жасаңыз
+  help_page_top_desc_02: Біз әрбір оқушыға информатиканы онлайн режимінде де, мектептерде
+    де үйренуге мүмкіндік беру үшін жұмыс істеп жатырмыз, онда біз тұрақты курстар
+    құрамыз және мұғалімдерді оқытамыз. Сіз берген әр доллар үшін бір бала информатикамен
+    танысады.
+  help_page_partners_heading: Серіктес болыңыз
+  help_page_partners_desc: Code.org басқа коммерциялық емес ұйымдармен серіктес ретінде
+    информатиканы жергілікті, тұрақты түрде таратуға көмектесу үшін жұмыс істейді.
+    Біздің бағдарлама туралы көбірек біліңіз.
+  help_page_volunteer_heading: Сыныптағы волонтер
+  help_page_volunteer_desc: Код сағатын үйретуге немесе жергілікті сыныпта қонақ спикер
+    болуға ерікті. Жақын мүмкіндіктер туралы есту үшін тіркеліңіз.
+  help_page_translate_heading: Аударуға көмектесіңіз
+  help_page_translate_desc: Еріктілер біздің оқулықтарымызды 45-тен астам тілге аударды.
+    Дүние жүзіндегі студенттерге арналған оқулықтарымызды кеңейтуді жалғастыруға көмектесіңіз!
+  help_page_speak_for_cs_heading: Информатикадан білім алу үшін сөйлеңіз
+  help_page_speak_for_cs_desc: Code.org -тың АҚШ-тағы ақпараттық-түсіндіру жұмысы
+    туралы және біз барлық студенттер үшін информатиканы негізді ету үшін штаттарға
+    ұсынатын он саясат туралы көбірек біліңіз. Сонымен қатар, сіздің күйіңізде өзгерісті
+    қалай басқаруға болатындығын біліңіз.
   hoc_live: Тікелей код сағаты
   hoc_live_sign_up_title: Кодтың сағатына тіркеліңіз
   hoc_live_learn_title: Кодтың бір сағатымен тікелей эфирде үйреніңіз
@@ -13853,6 +13927,10 @@ kk:
   video_library_page_inspirational_video_title_11: Әркім үйрене алады(1 мин)
   video_library_page_inspirational_video_title_12: Lo Que Falta және Nuestras Escuelas
     (2 мин)
+  video_library_page_inspirational_video_title_13: NASA код сағатын атап өтеді (2
+    мин)
+  video_library_page_inspirational_video_title_14: Бұл ойыннан да көп (1 мин)
+  video_library_page_inspirational_video_title_15: Информатикамен жасау (1 мин)
   video_library_page_not_hacked_video_title_1: 'Қалай бұзылмауға болады: кіріспе'
   video_library_page_not_hacked_video_title_2: 'Қалай бұзбауға болады: парольдер'
   video_library_page_not_hacked_video_title_3: 'Қалай бұзылмауға болады: аутентификация

@@ -22,7 +22,6 @@
   }
 }
 
-
 @keyframes center-to-left {
   0% {
     left: 50%;
@@ -183,7 +182,7 @@
 
     .outputsArea {
       position: absolute;
-      width: calc(100% - 120px);
+      width: calc(100% - 340px);
       margin-left: 120px;
       height: 270px;
       top: 60px;
@@ -203,6 +202,15 @@
       .explanation {
         max-height: 60px;
       }
+    }
+
+    .previewArea {
+      position: absolute;
+      height: 100%;
+      right: 0;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
     }
 
     .buttonsArea {
