@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import ProgramExecutor from '../lab2/ProgramExecutor';
 import moduleStyles from './ai-visualization-preview.module.scss';
 
-interface AiPreviewProps {
+interface AiVisualizationPreviewProps {
   blocks: BlockSvg[];
 }
 
@@ -12,9 +12,9 @@ const PREVIEW_DIV_ID = 'ai-preview';
 /**
  * Previews the output of the AI block in Dance Party.
  */
-const AiVisualizationPreview: React.FunctionComponent<AiPreviewProps> = ({
-  blocks,
-}) => {
+const AiVisualizationPreview: React.FunctionComponent<
+  AiVisualizationPreviewProps
+> = ({blocks}) => {
   // Generate setup code for previewing the given blocks.
   const generateSetupCode = useCallback((): string => {
     if (blocks.length === 0) {
