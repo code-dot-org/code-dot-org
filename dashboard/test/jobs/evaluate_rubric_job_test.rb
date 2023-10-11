@@ -105,9 +105,9 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     bucket = {
       'teaching_assistant/lessons/fake-lesson-s3-name/system_prompt.txt' => 'fake-system-prompt',
       'teaching_assistant/lessons/fake-lesson-s3-name/standard_rubric.csv' => 'fake-standard-rubric',
-      'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.json' => 'fake-example-1',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.js' => 'fake-code-1',
       'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.tsv' => 'fake-response-1',
-      'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.json' => 'fake-example-2',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.js' => 'fake-code-2',
       'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.tsv' => 'fake-response-2',
     }
 
@@ -132,6 +132,21 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   private def stub_get_openai_evaluations
+    expected_examples = [
+      ['fake-code-1', 'fake-response-1'],
+      ['fake-code-2', 'fake-response-2']
+    ]
+    expected_form_data = {
+      "model" => "gpt-4-0613",
+      "code" => 'fake-code',
+      "prompt" => 'fake-system-prompt',
+      "rubric" => 'fake-standard-rubric',
+      "examples" => expected_examples.to_json,
+      "remove-comments" => "1",
+      "num-responses" => "3",
+      "num-passing-grades" => "2",
+      "temperature" => "0.2"
+    }
     fake_ai_evaluations = [
       {
         'Key Concept' => 'learning-goal-1',
@@ -142,7 +157,15 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
         'Grade' => 'Extensive Evidence'
       }
     ]
-    HTTParty.stubs(:post).returns(stub(body: {data: fake_ai_evaluations}.to_json, success?: true))
+    ai_proxy_url = 'http://fake-ai-proxy-url'
+    CDO.stubs(:ai_proxy_url).returns(ai_proxy_url)
+    uri = URI.parse("#{ai_proxy_url}/assessment")
+    HTTParty.stubs(:post).with(
+      uri,
+      body: URI.encode_www_form(expected_form_data),
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      timeout: 120
+    ).returns(stub(body: {data: fake_ai_evaluations}.to_json, success?: true))
   end
 
   # verify the job wrote the expected LearningGoalAiEvaluations to the database
