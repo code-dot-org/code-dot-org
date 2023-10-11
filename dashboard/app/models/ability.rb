@@ -198,7 +198,7 @@ class Ability
           s.user_id == user.id || s.instructors.include?(user)
         end
         can :destroy, SectionInstructor do |si|
-          can? :manage, si.section
+          can?(:manage, si.section) && si.instructor_id != si.section.user_id
         end
         can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher

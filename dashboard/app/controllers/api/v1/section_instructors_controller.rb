@@ -57,9 +57,6 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   # Removes an instructor from the section (soft-deleting the record).
   # DELETE /section_instructors/:id
   def destroy
-    # Can't remove the section owner
-    return head :forbidden if @section_instructor.instructor_id == @section_instructor.section.user_id
-
     @section_instructor.status = :removed
     @section_instructor.save!
     @section_instructor.destroy!
