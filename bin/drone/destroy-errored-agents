@@ -15,9 +15,16 @@ set -e
 # ```
 # drone server ls -l | grep error | awk '{print $1}' | xargs -tL1 drone server destroy`
 # ```
+#
+# Potential upgrades:
+# - publish exeuction events and count of servers destroyed to CloudWatch
+# - publish execution events to Slack
+# - convert to a Rake task for consistency
 
 export DRONE_SERVER=https://drone.cdn-code.org
 export DRONE_AUTOSCALER=https://drone.cdn-code.org:8443
+
+
 
 # Check if DRONE_TOKEN is valid
 if ! output=$(drone server ls 2>&1); then
