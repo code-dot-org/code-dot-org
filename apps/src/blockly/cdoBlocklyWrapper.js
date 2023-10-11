@@ -351,11 +351,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return undefined;
   };
 
-  // CDO Blockly always generates code for events.
-  blocklyWrapper.shouldGenerateCodeForEvent = function (_) {
-    return true;
-  };
-
   return blocklyWrapper;
 }
 

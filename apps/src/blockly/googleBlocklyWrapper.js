@@ -738,19 +738,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.mainBlockSpace;
   };
 
-  blocklyWrapper.shouldGenerateCodeForEvent = function (event) {
-    const codeChangeEvents = [
-      Blockly.Events.BLOCK_CHANGE,
-      Blockly.Events.BLOCK_CREATE,
-      Blockly.Events.BLOCK_DELETE,
-      Blockly.Events.BLOCK_MOVE,
-    ];
-    return (
-      !Blockly.mainBlockSpace.isDragging() &&
-      codeChangeEvents.includes(event.type)
-    );
-  };
-
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);
