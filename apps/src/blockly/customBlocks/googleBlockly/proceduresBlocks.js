@@ -126,6 +126,10 @@ export const editButtonHandler = function () {
 // This extension adds an edit button to the end of a procedure call block.
 const editButton = function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
+  // If we are in the modal function editor, don't add the button, due to an issue with Blockly
+  // not being able to handle us clearing the block right after it has been clicked.
+  // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
+  // remove the check on functionEditor.isOpen().
   if (
     useModalFunctionEditor &&
     this.inputList.length &&
