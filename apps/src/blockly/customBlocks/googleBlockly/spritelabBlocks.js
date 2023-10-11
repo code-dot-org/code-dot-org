@@ -28,12 +28,9 @@ export const blocks = {
       });
 
       block.appendDummyInput(INPUTS.FLYOUT).appendField(flyoutField, flyoutKey);
-      // TODO: How can we confirm that this can be the default for all blocks?
       if (block.getInput(INPUTS.STACK)) {
-        // TODO: Confirm with Maribeth this is the best way to do this
         block.moveInputBefore(INPUTS.FLYOUT, INPUTS.STACK);
       }
-
       return flyoutField;
     };
 
@@ -83,7 +80,9 @@ export const blocks = {
   ) {
     // In the function editor, this call prevents a dummy input from being used as a
     // row separator between the function definition in the mini-toolbox.
-    this.setInputsInline(!renderingInFunctionEditor);
+    if (!renderingInFunctionEditor) {
+      this.setInputsInline(true);
+    }
 
     // We set the inputs to align left so that if the flyout is larger than the
     // inputs will be aligned with the left edge of the block.

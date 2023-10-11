@@ -22,7 +22,6 @@ const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
 export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a function (aka procedure) with no return value.
-    // When we migrated Sprite Lab, When using the modal function editor, the name field is an uneditable label.
     type: 'procedures_defnoreturn',
     message0: '%1 %2 %3 %4',
     message1: '%1',
@@ -143,6 +142,7 @@ GoogleBlockly.Extensions.register('modal_procedures_mini_toolbox', function () {
   const flyoutToggleButton =
     Blockly.customBlocks.initializeMiniToolbox.bind(this)();
 
+  // The only blocks in the toolbox are a comment (for functions) or a comment + "this sprite" block (for behaviors)
   const miniToolboxBlocks = ['gamelab_comment'];
   if (this.type === 'behavior_definition') {
     miniToolboxBlocks.push('sprite_parameter_get');
