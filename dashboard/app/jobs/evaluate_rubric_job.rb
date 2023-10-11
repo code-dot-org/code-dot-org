@@ -39,12 +39,13 @@ class EvaluateRubricJob < ApplicationJob
     code, project_version = read_user_code(channel_id)
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    examples = read_examples(lesson_s3_name)
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
     ai_evaluations =
       CDO.ai_proxy_url.present? ?
-        get_openai_evaluations(code, prompt, ai_rubric) :
+        get_openai_evaluations(code, prompt, ai_rubric, examples) :
         get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
 
     validate_evaluations(ai_evaluations, rubric)
@@ -92,13 +93,29 @@ class EvaluateRubricJob < ApplicationJob
     AWS::S3.create_client.get_object(bucket: bucket, key: key)[:body].read
   end
 
-  private def get_openai_evaluations(code, prompt, rubric)
+  private def read_examples(lesson_s3_name)
+    bucket = 'cdo-ai'
+    prefix = "teaching_assistant/lessons/#{lesson_s3_name}/examples/"
+    response = AWS::S3.create_client.list_objects_v2(bucket: bucket, prefix: prefix)
+    file_names = response.contents.map(&:key)
+    file_names = file_names.map {|name| name.gsub(prefix, '')}
+    js_files = file_names.select {|name| name.end_with?('.js')}
+    js_files.map do |file_name|
+      base_name = file_name.gsub('.js', '')
+      code = AWS::S3.create_client.get_object(bucket: bucket, key: "#{prefix}#{file_name}")[:body].read
+      response = AWS::S3.create_client.get_object(bucket: bucket, key: "#{prefix}#{base_name}.tsv")[:body].read
+      [code, response]
+    end
+  end
+
+  private def get_openai_evaluations(code, prompt, rubric, examples)
     uri = URI.parse("#{CDO.ai_proxy_url}/assessment")
     form_data = {
       "model" => "gpt-4-0613",
       "code" => code,
       "prompt" => prompt,
       "rubric" => rubric,
+      "examples" => examples.to_json,
       "remove-comments" => "1",
       "num-responses" => "3",
       "num-passing-grades" => "2",
