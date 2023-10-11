@@ -75,7 +75,7 @@ export interface ChipsProps {
  * * (?) implementation of component approved by design team;
  * * (?) has storybook, covered with stories and documentation;
  * * (?) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/.jsx)
+ * * (see apps/test/unit/componentLibrary/ChipsTest.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Wip```
@@ -94,7 +94,7 @@ const MultiSelectGroup: React.FunctionComponent<ChipsProps> = ({
   const inputName = `${name}[]`;
 
   return (
-    <div className={styles.MultiSelectGroup}>
+    <div className={styles.multiSelectGroup}>
       <fieldset>
         {label && <label className={styles.typographyLabel}>{label}</label>}
 
