@@ -48,6 +48,17 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('TODO:ADD_COTEACHER').length).to.equal(1);
   });
 
+  it('updates caret direction when Advanced Settings is clicked', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
+    wrapper
+      .find('Button')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
+  });
+
   it('renders advanced settings', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -59,15 +70,15 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
   });
 
-  it('updates caret direction when Advacned Settings is clicked', () => {
+  it('updates caret direction when Advanced Settings is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
     wrapper
       .find('Button')
-      .at(0)
+      .at(1)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
+    expect(wrapper.find('Button').at(1).props().icon).to.equal('caret-down');
   });
 
   it('validates the form when save is clicked', () => {
@@ -84,7 +95,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(2)
+      .last()
       .simulate('click', {preventDefault: () => {}});
 
     expect(reportSpy).to.have.been.called.once;
@@ -111,7 +122,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(2)
+      .last()
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
@@ -142,7 +153,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(2)
+      .last()
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
@@ -179,7 +190,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(2)
+      .last()
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
@@ -209,9 +220,9 @@ describe('SectionsSetUpContainer', () => {
 
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    wrapper
-      .find('Button')
-      .at(1)
+    const buttons = wrapper.find('Button');
+    buttons
+      .at(buttons.length - 2)
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
