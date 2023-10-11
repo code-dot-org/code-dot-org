@@ -406,8 +406,8 @@ class User < ApplicationRecord
       user: self,
       status: 'accepted'
     ).order(application_year: :desc).first&.form_data_hash
-    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : nil
-    alternate_email ? alternate_email : email
+    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
+    alternate_email&.empty? ? email : alternate_email
   end
 
   # assign a course to a facilitator that is qualified to teach it

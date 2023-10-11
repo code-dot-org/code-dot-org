@@ -144,7 +144,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     application.update(form_data_hash: new_form_data_hash)
     app_alt_email = application.form_data_hash['alternateEmail']
 
-    assert_nil app_alt_email
+    assert app_alt_email.empty?
 
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
