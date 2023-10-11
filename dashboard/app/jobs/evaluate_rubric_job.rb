@@ -44,10 +44,7 @@ class EvaluateRubricJob < ApplicationJob
     ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     examples = read_examples(lesson_s3_name)
 
-    ai_evaluations =
-      CDO.ai_proxy_url.present? ?
-        get_openai_evaluations(code, prompt, ai_rubric, examples) :
-        get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
+    ai_evaluations = get_openai_evaluations(code, prompt, ai_rubric, examples)
 
     validate_evaluations(ai_evaluations, rubric)
 
@@ -144,16 +141,7 @@ class EvaluateRubricJob < ApplicationJob
     actual_learning_goals = evaluations.map {|evaluation| evaluation['Key Concept']}
     unexpected_learning_goals = actual_learning_goals - expected_learning_goals
     unless unexpected_learning_goals.empty?
-      raise "Unexpected learning goals: #{unexpected_learning_goals.inspect}"
-    end
-  end
-
-  private def get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
-    rubric.learning_goals.map do |learning_goal|
-      {
-        'Key Concept' => learning_goal.learning_goal,
-        'Grade' => understanding_s
-      }
+      raise "Unexpected learning goals: #{unexpected_learning_goals.inspect} (expected: #{expected_learning_goals.inspect})"
     end
   end
 

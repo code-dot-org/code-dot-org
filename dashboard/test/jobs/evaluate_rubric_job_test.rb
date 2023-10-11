@@ -26,6 +26,8 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_lesson_s3_data
 
+    stub_get_openai_evaluations
+
     # run the job
     perform_enqueued_jobs do
       EvaluateRubricJob.perform_later(user_id: @student.id, script_level_id: @script_level.id)
@@ -127,6 +129,20 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     )
 
     EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
+  end
+
+  private def stub_get_openai_evaluations
+    fake_ai_evaluations = [
+      {
+        'Key Concept' => 'learning-goal-1',
+        'Grade' => 'Extensive Evidence'
+      },
+      {
+        'Key Concept' => 'learning-goal-2',
+        'Grade' => 'Extensive Evidence'
+      }
+    ]
+    HTTParty.stubs(:post).returns(stub(body: {data: fake_ai_evaluations}.to_json, success?: true))
   end
 
   # verify the job wrote the expected LearningGoalAiEvaluations to the database
