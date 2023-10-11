@@ -13,9 +13,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1'
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2'
     assert_equal 2, @rubric.learning_goals.count
-
-    # Don't actually talk to S3
-    AWS::S3.stubs :create_client
   end
 
   test "job succeeds on ai-enabled level" do
@@ -27,9 +24,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_project_source_data(channel_id)
 
-    # stub lesson S3 lookups
-    s3_client = Aws::S3::Client.new(stub_responses: true)
-    stub_lesson_s3_data(s3_client)
+    stub_lesson_s3_data
+
+    # run the job
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(user_id: @student.id, script_level_id: @script_level.id)
+    end
 
     verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
   end
@@ -81,8 +81,13 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
-  # stub out the calls to fetch project data from S3
+  # stub out the calls to fetch project data from S3. Because the call to S3
+  # is deep inside SourceBucket, we stub out the entire SourceBucket class
+  # rather than stubbing the S3 calls directly.
   private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    # Don't actually talk to S3 when running SourceBucket.new
+    AWS::S3.stubs :create_client
+
     fake_main_json = {source: code}.to_json
     fake_source_data = {
       status: 'FOUND',
@@ -92,7 +97,9 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 
-  private def stub_lesson_s3_data(s3_client)
+  # stub out the s3 calls made from the job via read_file_from_s3 and read_examples.
+  private def stub_lesson_s3_data
+    s3_client = Aws::S3::Client.new(stub_responses: true)
     bucket = {
       'teaching_assistant/lessons/fake-lesson-s3-name/system_prompt.txt' => 'fake-system-prompt',
       'teaching_assistant/lessons/fake-lesson-s3-name/standard_rubric.csv' => 'fake-standard-rubric',
@@ -102,15 +109,15 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.tsv' => 'fake-response-2',
     }
 
-    proc = ->(context) do
-      obj = bucket[context.params[:key]]
-      if obj
+    s3_client.stub_responses(
+      :get_object,
+      ->(context) do
+        key = context.params[:key]
+        obj = bucket[key]
+        raise "NoSuchKey: #{key}" unless obj
         {body: StringIO.new(obj)}
-      else
-        raise "NoSuchKey: #{context.params[:key]}"
       end
-    end
-    s3_client.stub_responses(:get_object, proc)
+    )
 
     s3_client.stub_responses(
       :list_objects_v2,
@@ -120,11 +127,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     )
 
     EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
-
-    # run the job
-    perform_enqueued_jobs do
-      EvaluateRubricJob.perform_later(user_id: @student.id, script_level_id: @script_level.id)
-    end
   end
 
   # verify the job wrote the expected LearningGoalAiEvaluations to the database

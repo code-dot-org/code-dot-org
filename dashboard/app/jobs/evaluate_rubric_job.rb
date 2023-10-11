@@ -64,7 +64,8 @@ class EvaluateRubricJob < ApplicationJob
     UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
   end
 
-  def s3_client
+  # The client for s3 access made directly by this job, not via SourceBucket.
+  private def s3_client
     @s3_client ||= AWS::S3.create_client
   end
 
