@@ -2,6 +2,8 @@
 // while the workspace is dragging. This enables the preview to update as soon as
 // a block is dragged, and for a new block to not be enabled until it is attached
 // to the main block.
+// Copied and modified from:
+// https://github.com/google/blockly/blob/1e3b5b4c76f24d2274ef4947c1fcf657f0058f11/core/events/utils.ts#L523
 export function disableOrphans(blockEvent) {
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
