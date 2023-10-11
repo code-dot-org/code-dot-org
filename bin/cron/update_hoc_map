@@ -27,7 +27,9 @@ CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 def main
   geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
 
-  skipped = 0
+  nil_org_name = 0
+  nil_location = 0
+  not_approved_no_city = 0
 
   DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
     data = JSON.parse(form[:data])
@@ -40,12 +42,16 @@ def main
     # In order to be placed on the map, all events require an organization name,
     # processed location, and city. With the exception that approved special events
     # don't need a city so we can show events like the Cocos Keeling Islands.
-    if data['organization_name_s'].nil? || processed_data['location_p'].nil?
-      skipped += 1
+    if data['organization_name_s'].nil?
+      nil_org_name += 1
+      next
+    end
+    if processed_data['location_p'].nil?
+      nil_location += 1
       next
     end
     if form[:review] != "approved" && processed_data['location_city_s'].nil?
-      skipped += 1
+      not_approved_no_city += 1
       next
     end
 
@@ -87,7 +93,9 @@ def main
     "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"hoc\" --force #{file.path}"
   )
   upload_successful = false
-  puts "Num skipped: #{skipped}"
+  puts "Num skipped due to nil organization_name: #{nil_org_name}"
+  puts "Num skipped due to nil location: #{nil_location}"
+  puts "Num skipped due to not approved nil city: #{not_approved_no_city}"
   if tippecanoe_status.success?
     puts "SUCCESS"
     upload_successful = upload_maptiles(tiles.path, 'hoctiles')
