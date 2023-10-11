@@ -163,6 +163,14 @@ export default function RubricContent({
           </div>
         </div>
       )}
+      {!studentLevelInfo && rubricLevel?.position && (
+        <Heading5>
+          {i18n.lessonNumbered({
+            lessonNumber: lesson.position,
+            lessonName: lesson.name,
+          })}
+        </Heading5>
+      )}
       <div className={style.learningGoalContainer}>
         {rubric.learningGoals.map(lg => (
           <LearningGoal
