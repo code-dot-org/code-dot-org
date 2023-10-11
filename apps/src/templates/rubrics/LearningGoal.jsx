@@ -224,6 +224,13 @@ export default function LearningGoal({
               {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
             </BodyThreeText>
           )}
+          {submittedEvaluation?.feedback && (
+            <FontAwesome
+              icon="message"
+              className="fa-regular"
+              title={i18n.feedback()}
+            />
+          )}
         </div>
       </summary>
       {/*TODO: Pass through data to child component*/}
