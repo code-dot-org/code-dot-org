@@ -122,8 +122,8 @@ export default class FunctionEditor {
     this.hide();
   }
 
-  isOpen() {
-    return this.dom.style.display === 'block';
+  getWorkspaceId() {
+    return this.editorWorkspace.id;
   }
 
   // TODO

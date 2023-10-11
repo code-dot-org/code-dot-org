@@ -129,12 +129,12 @@ const editButton = function () {
   // If we are in the modal function editor, don't add the button, due to an issue with Blockly
   // not being able to handle us clearing the block right after it has been clicked.
   // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
-  // remove the check on functionEditor.isOpen().
+  // remove the check on functionEditor workspace id.
   if (
     useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
-    !Blockly.functionEditor.isOpen()
+    this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
