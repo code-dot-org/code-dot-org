@@ -35,6 +35,10 @@ hy:
   africa_campaign_date_full: Հոկտեմբերի 1 - Դեկտեմբերի 18
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 2022թ. հոկտեմբերի 1 - 18 դեկտեմբերի, 2022թ.
+  hoc2023_header: Ստեղծագործականություն AI- ի հետ
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Ինչ կարող եք ստեղծել.
+  hoc2023_social_creativity_with_ai_desc: 'Օգտագործեք համակարգչային գիտություն ՝ AI-
+    ի մասին ուսումնասիրելու և սովորելու համար:'
   hoc2022_header: Ուսումնասիրել, Խաղալ, Ստեղծել!
   social_hoc2022_explore_play_create: Օգտագործեք համակարգչային գիտություն է ուսումնասիրել,
     խաղալ, եւ ստեղծել!
@@ -189,6 +193,29 @@ hy:
   curriculum_launch_2023_desc: Թարմացումները CSC, CSP, CSD, եւ ավելի - գումարած նոր
     ուսումնական կատալոգ եւ redesigned Դասավանդել էջը, որոնք կօգնեն ձեզ գտնել այն ամենը!
   in_partnership_with: հետ համագործակցությամբ
+  shop_code_dot_org_heading: Խանութ Code.org
+  shop_code_dot_org_desc: 'Աջակցեք մեր աշխատանքին և հպարտությամբ հագեք շարժումը: Մեր
+    գլխարկներ են կրել նախագահ Օբաման եւ celebrities էլ.'
+  spread_the_word_heading: Տարածել բառը
+  spread_the_word_desc: 'Ուժեղացրեք մեր ազդեցությունը `կիսելով Code.org- ը ձեր ցանցի
+    հետ: From սոցիալական լրատվամիջոցների էլեկտրոնային փոստի թարմացումները, բացահայտել,
+    թե ինչպես Դուք կարող եք օգնել մեզ հասնել ավելի մանկավարժներ, ուսանողներ, եւ փաստաբաններ.'
+  follow_us_heading: Հետևեք մեզ սոցիալական ցանցերում
+  follow_us_desc: Մնալ մինչեւ օրս մեզ հետ սոցիալական լրատվամիջոցների եւ կիսվել մեր
+    գրառումները ձեր ցանցի մնալ տեղեկացված եւ օգնել քշել իրազեկությունը.
+  facebook: Ֆեյսբուք
+  twitter: Թվիթեր
+  linked_in: LinkedIn
+  instagram: Ինստագրամ
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Բաժանորդագրվել էլ.
+  subscribe_to_emails_desc: 'Կարդացեք այն մասին, թե ինչ է կատարվում Code.org- ում
+    և համակարգչային գիտության կրթության մեջ եռամսյակային թարմացումների միջոցով մեր
+    փոստային ցուցակի միջոցով:'
+  subscribe_to_emails_intl: Բաժանորդագրվեք միջազգային թարմացումներին
+  promote_code_dot_org_heading: Խթանել Code.org
+  promote_code_dot_org_desc: Նպաստել համակարգչային գիտության ձեր տարածքում օգնությամբ
+    վիճակագրության, մեջբերում, եւ տեսանյութեր.
   afe_partnership_logo_alt: Amazon Ապագա Ինժեներ լոգոն
   afe_partnership_thanks_desc: 'Amazon Future Engineer- ը մանկությունից կարիերայի
     համապարփակ ծրագիր է `ոգեշնչելու, կրթելու և վերապատրաստելու ցածր եկամուտ ունեցող
@@ -209,6 +236,15 @@ hy:
   curricula_desc_high: 'Փնտրեք այն համոզիչ դասընթացներն ու գործողությունները, որոնք
     հրավիրում են ձեզ և ձեր ավագ դպրոցի աշակերտներին ավելի խորը փորել համակարգչային
     գիտության մեջ:'
+  for_administrators_heading: Ադմինիստրատորների համար
+  for_administrators_desc: 'Միացեք այն հազարավոր դպրոցներին, ովքեր արդեն համակարգչային
+    գիտություն են մտցրել իրենց ուսումնական ծրագրում:'
+  for_parents_heading: Ծնողների համար
+  for_parents_desc: Դուք կարող եք օգնել խրախուսել ձեր աշակերտի դպրոցը առաջարկել կամ
+    ընդլայնել համակարգչային գիտության կրթությունը.
+  for_educators_heading: Մանկավարժների համար
+  for_educators_desc: 'Սկսեք դասավանդել այսօր `համակարգչային գիտության ոչ մի փորձ
+    անհրաժեշտ չէ, մեր մասնագիտական ուսուցման սեմինարների միջոցով:'
   students_label: Ուսանողներ
   teachers_label: Ուսուցիչները
   teacher_label_csf: CS հիմունքների ուսուցիչ
@@ -218,10 +254,11 @@ hy:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: Պահանջվող նյութեր.
   optional_materials: Լրացուցիչ նյութեր.
-  call_to_action_explore_roles: Բացահայտեք բաց դերերը
+  call_to_action_hold_an_event: Անցկացնել միջոցառում
   call_to_action_learn_more: Իմանալ ավելին
   call_to_action_watch_now: Դիտեք հիմա
   call_to_action_try_activity: Փորձեք գործունեություն
+  call_to_action_try_activities: Փորձեք գործունեությունը
   call_to_action_explore_unit: Ուսումնասիրել միավորը
   call_to_action_explore_curriculum: Ուսումնասիրել ուսումնական ծրագիրը
   call_to_action_explore_curriculum_options: Ուսումնասիրեք ուսումնական ծրագրի ընտրանքները
@@ -291,11 +328,20 @@ hy:
   call_to_action_notify_available: Ծանուցել ինձ, երբ առկա
   call_to_action_register_early_access: Գրանցվել վաղ մուտք գործելու համար
   call_to_action_open_positions: Դիտել բաց դիրքերը
+  call_to_action_explore_roles: Բացահայտեք բաց դերերը
   call_to_action_get_guide: Ստացեք ուղեցույցը
   call_to_action_donate_to_cdo: Նվիրաբերեք Code.org կայքին
   call_to_action_start_fundraiser: Սկսել դրամահավաք
   call_to_action_view_donation_policy: Դիտել նվիրատվության քաղաքականությունը
   call_to_action_view_donate_bitpay: Նվիրատվություն BitPay- ի հետ
+  call_to_action_make_a_donation: Կատարել նվիրատվություն
+  call_to_action_other_ways_to_give: Այլ եղանակներ տալ
+  call_to_action_become_partner_usa: Դառնալ Միացյալ Նահանգների գործընկեր
+  call_to_action_become_partner_intl: Դառնալ միջազգային գործընկեր
+  call_to_action_become_a_volunteer: Դարձեք կամավոր
+  call_to_action_start_translating: Սկսեք թարգմանել
+  call_to_action_learn_about_advocacy: Իմացեք մեր շահերի պաշտպանության մասին
+  call_to_action_visit_store: Այցելեք խանութ
   aria_label_call_to_action_afe: Իմացեք ավելին Amazon- ի ապագա ինժեների մասին
   aria_label_call_to_action_teaching_csf: Սկսեք դասավանդման համակարգչային գիտության
     հիմունքներ մասնագիտական ուսուցման ծրագիր
@@ -652,6 +698,7 @@ hy:
   heading_explore_curriculum_catalog: Ուսումնասիրեք մեր բոլոր դասընթացները ուսումնական
     կատալոգում
   heading_csa_ai: Փնտրում բաներ անել հետո AP® քննության?
+  heading_bring_cs_to_students: Համակարգչային գիտություն բերեք ուսանողներին
   professional_learning_section_desc: 'Ստացեք այն աջակցությունը, որը ձեզ հարկավոր
     է, երբ պատրաստվում եք սովորեցնել: Ուսուցիչները սիրում են այն, ավելի քան 90% դասակարգելով
     այն լավագույն մասնագիտական զարգացումը երբեւէ!'
@@ -936,6 +983,7 @@ hy:
     համար AI- ի օգտագործման վրա: Տեսության, գործնական օրինակների և ռեսուրսների հարուստ
     խառնուրդով այն նպատակ ունի ուսուցիչներին հզորացնել AI լանդշաֆտը նավարկելու և ուսանողների
     ուսման փորձը բարելավելու համար:'
+  ai_pl_101_resources_5: AI- ի նկատմամբ պատասխանատու մոտեցման ապահովման ուղեցույց
   ai_pl_101_video_desc_6: 'Իմացեք ավելին AI- ի մեծ փոփոխությունների նոր տեխնոլոգիայի
     մասին, որում ներկայացված են երկու նոր տեսանյութ Large Language Models (ինչպես
     ChatGPT) և Generative AI- ի վերաբերյալ: Լսեք, թե ինչպես են այս նոր տեխնոլոգիաները
@@ -947,6 +995,8 @@ hy:
     նրանց համար, ովքեր պարզապես լող իրենց ոտք ունեցող մարդիկ, ինչպես նաեւ առաջադեմ
     գործիքներ նրանց համար, ովքեր փնտրում են առավելագույնի հասցնել իրենց ներուժը.'
   ai_pl_101_resources_3: AI- ն հուշում է ուսանողների ուսուցման վերափոխման համար
+  ai_pl_101_resources_section_title: AI- ի մասին սովորելու ավելի շատ եղանակներ
+  ai_pl_101_resources_guide: 'Ուղեկից ուղեցույց:'
   how_ai_works_hero_heading: Ինչպես է աշխատում AI- ն
   how_ai_works_hero_desc: 'Սուզվել AI- ի աշխարհում ՝ “Ինչպես է գործում AI- ն”, մեր
     տեսանյութերի շարքը և ուղեկցող դասերը:'
@@ -1842,6 +1892,32 @@ hy:
   donate_tabs_bitpay_desc: Ընդգրկել ապագան տալու հետ cryptocurrency. Միջոցով BitPay,
     Ձեր թվային արժույթը կարող է ուղղակիորեն աջակցել Code.org ի ձեռնարկումները ընդլայնման
     համակարգչային գիտության կրթության.
+  help_page_top_heading: Ինչպես կարող եք օգնել
+  help_page_top_desc: 'Աջակցեք մեր առաքելությանը համակարգչային գիտությունը հասանելի
+    դարձնել յուրաքանչյուր երեխայի համար, ամենուր: Ձեր ջանքերն օգնում են մեզ ոգեշնչել
+    ապագա նորարարներին և կամրջել տեխնոլոգիական կրթության բացը:'
+  help_page_top_subhead: Կատարեք նվիրատվություն Code.org կայքում
+  help_page_top_desc_02: 'Մենք աշխատում ենք յուրաքանչյուր աշակերտի հնարավորություն
+    տալ սովորել համակարգչային գիտություն՝ ինչպես առցանց, այնպես էլ դպրոցներում, որտեղ
+    մենք մշտական դասընթացներ ենք կազմակերպում և վերապատրաստում ուսուցիչներին։ Յուրաքանչյուր
+    դոլարի համար դուք նվիրաբերում եք, մեկ երեխա ներկայացվում է համակարգչային գիտություն:'
+  help_page_partners_heading: Դարձեք գործընկեր
+  help_page_partners_desc: 'Code.org աշխատում է այլ շահույթ չհետապնդող կազմակերպությունների,
+    ինչպես նաեւ գործընկերների օգնել տարածել համակարգչային գիտության տեղական, կայուն
+    նորաձեւության. Իմացեք ավելին մեր ծրագրի մասին:'
+  help_page_volunteer_heading: Կամավոր դասարանում
+  help_page_volunteer_desc: 'Կամավոր սովորեցնել օրենսգրքի ժամը կամ լինել հյուր խոսնակ
+    տեղական դասարանում: Հաղորդագրություն փակցնելուց համար պետք է լսել հնարավորությունների
+    մոտ ձեզ.'
+  help_page_translate_heading: Օգնեք մեզ թարգմանել
+  help_page_translate_desc: 'Կամավորները թարգմանել են մեր ձեռնարկները ավելի քան 45
+    լեզուներով: Օգնեք մեզ շարունակել ընդլայնել մեր ձեռնարկները ուսանողների համար ամբողջ
+    աշխարհում:'
+  help_page_speak_for_cs_heading: Խոսեք համակարգչային գիտության կրթության համար
+  help_page_speak_for_cs_desc: 'Իմացեք ավելին Code.org- ի շահերի պաշտպանության աշխատանքների
+    մասին ԱՄՆ-ում և այն տասը քաղաքականության մասին, որոնք մենք առաջարկում ենք պետություններին
+    որդեգրել ՝ համակարգչային գիտությունը հիմնարար դարձնելու համար բոլոր ուսանողների
+    համար: Գումարած, պարզել, թե ինչպես Դուք կարող եք քշել փոփոխություն ձեր պետության.'
   hoc_live: Ուղիղ օրենսգրքի ժամ
   hoc_live_sign_up_title: Գրանցվեք Code Live ժամի համար
   hoc_live_learn_title: Սովորեք Code Live ժամի հետ
@@ -14224,6 +14300,11 @@ hy:
     (1 րոպե)
   video_library_page_inspirational_video_title_12: Լո Կե Ֆալտա Ու Նուեստրաս Էսկուելաս
     (2 րոպե)
+  video_library_page_inspirational_video_title_13: NASA- ն նշում է օրենսգրքի ժամը
+    (2 րոպե)
+  video_library_page_inspirational_video_title_14: Դա ավելին է, քան խաղը (1 րոպե)
+  video_library_page_inspirational_video_title_15: Ստեղծել համակարգչային գիտության
+    (1 րոպե)
   video_library_page_not_hacked_video_title_1: Ինչպես չկոտրվել. Ներածություն
   video_library_page_not_hacked_video_title_2: Ինչպես չկոտրվել. Գաղտնաբառերը
   video_library_page_not_hacked_video_title_3: Ինչպես չկոտրվել. Նույնականացման և սարքի

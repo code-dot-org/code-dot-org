@@ -2255,10 +2255,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/dance-party@npm:1.0.7":
-  version: 1.0.7
-  resolution: "@code-dot-org/dance-party@npm:1.0.7"
-  checksum: 9c3d1be2707cb03060478c8eb005ca99abd5da5e173f8ff1137fb9df247c76fa4c034fc76d99dee7df31abf31792dc3d22dc25ab53e48055a6de41e391bc8801
+"@code-dot-org/dance-party@npm:1.0.8":
+  version: 1.0.8
+  resolution: "@code-dot-org/dance-party@npm:1.0.8"
+  checksum: c1a3a444243475f04a797b31a37d5e32d7643b8be3371bfeb98baafc84bafcc3e065a69f95afdb4616c83306b449036ef9385b7aff1aa8dca47bb4353b35f673
   languageName: node
   linkType: hard
 
@@ -7659,7 +7659,7 @@ __metadata:
     "@code-dot-org/artist": 0.2.1
     "@code-dot-org/blockly": 4.0.14
     "@code-dot-org/craft": 0.2.2
-    "@code-dot-org/dance-party": 1.0.7
+    "@code-dot-org/dance-party": 1.0.8
     "@code-dot-org/johnny-five": 2.1.0-cdo.3
     "@code-dot-org/js-interpreter": 1.3.13
     "@code-dot-org/js-numbers": 0.1.0-cdo.0
@@ -7879,6 +7879,7 @@ __metadata:
     slate: ^0.81.0
     slate-react: ^0.81.0
     sortabular: ^1.6.0
+    source-map-loader: ^4.0.1
     sprintf-js: ^1.0.3
     storybook-addon-rtl: ^0.5.0
     stream-browserify: ^3.0.0
@@ -15591,7 +15592,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
+"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2, iconv-lite@npm:^0.6.3":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
   dependencies:
@@ -25601,6 +25602,19 @@ es6-shim@latest:
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
   checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
+  languageName: node
+  linkType: hard
+
+"source-map-loader@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "source-map-loader@npm:4.0.1"
+  dependencies:
+    abab: ^2.0.6
+    iconv-lite: ^0.6.3
+    source-map-js: ^1.0.2
+  peerDependencies:
+    webpack: ^5.72.1
+  checksum: 4ddca8b03dc61f406effd4bffe70de4b87fef48bae6f737017b2dabcbc7d609133325be1e73838e9265331de28039111d729fcbb8bce88a6018a816bef510eb1
   languageName: node
   linkType: hard
 

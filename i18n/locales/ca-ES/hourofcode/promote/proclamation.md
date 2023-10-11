@@ -4,55 +4,55 @@ title: Resolució de la mostra de suport de la Setmana de l'Educació de les Ci�
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Resolució de la Setmana de l'Educació Informàtica de la mostra
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### A continuació es mostra el llenguatge per a una resolució de mostres de suport a la Setmana de l'Educació de les Ciències de la Computació i els seus objectius que poden ser utilitzats pels legisladors estatals i locals.
 
 * * *
 
-#### **RESOLUTION**  
+#### **Resolució**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Recolzant els objectius i ideals de “Computer Science Education Week”
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Mentre que la Setmana de l'Educació de les Ciències de la Computació posa de manifest el paper crucial que té la informàtica en la transformació de la nostra societat i com la informàtica permet la innovació i crea oportunitats econòmiques;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Mentre que la tecnologia informàtica és una part integral de la cultura moderna i està transformant com les persones interactuen entre si i el món que els envolta;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Mentre que la informàtica està transformant la indústria, creant nous camps de comerç, impulsant la innovació en tots els camps de la ciència i impulsant la productivitat en els sectors econòmics establerts;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Mentre que el camp de la informàtica és un tema fundacional que sustenta el sector de les tecnologies de la informació de la nostra economia, que és un contribuent important a la producció econòmica dels Estats Units;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Mentre que l'alfabetització en intel·ligència artificial es refereix als coneixements, habilitats i actituds associades al funcionament de la intel·ligència artificial, inclosos els conceptes fonamentals de la informàtica, i com utilitzar la intel·ligència artificial de manera segura, responsable i ètica;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Mentre que el camp de la informàtica, inclosa la intel·ligència artificial, són tecnologies amb el poder de transformar fonamentalment gairebé tots els sectors de l'economia dels Estats Units;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Mentre que el lideratge tecnològic en totes les àrees de la informàtica, inclosa la intel·ligència artificial, és un imperatiu econòmic i de seguretat nacional;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Mentre que les perspectives per als treballs d'informàtica són brillants amb més de 500.000 posicions de computació oberta a tot el país;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Mentre que proporcionar als estudiants l'oportunitat de participar en activitats d'informàtica d'alta qualitat els exposa a les riques oportunitats que el camp ofereix i proporciona habilitats de pensament crític que els serviran al llarg de la seva vida;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Mentre que tots els estudiants mereixen una preparació exhaustiva en l'educació informàtica, incloent l'accés als professors qualificats, tecnologia i currículum adequat per a l'edat necessaris per aprendre ciències de la computació en els nivells elemental i secundari d'educació;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Mentre que l'educació en ciències de la computació té reptes per abordar, incloent la millora de l'accés als cursos d'informàtica per a tots els estudiants, i proporcionar un desenvolupament professional per als professors de ciències de la computació;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Mentre que participar en una Hora del Codi durant la Setmana de l'Educació de les Ciències de la Computació pot servir per desmitificar el camp de la informàtica i animar a més estudiants a cursar estudis superiors d'informàtica;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Mentre que el camp de la informàtica té importants barreres d'equitat per abordar, incloent l'atracció i la conservació d'un camp de candidats diversos en raça, ètnia i gènere en tots els nivells i branques;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Mentre que Grace Murray Hopper, una de les primeres dones en el camp de la informàtica, va dissenyar nous llenguatges de programació i va ser pionera en estàndards per als sistemes informàtics que van establir les bases per a molts avenços en ciències de la computació; i
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Mentre que la setmana de {{ campaign_date/start_long }}, en honor a l'aniversari de Grace Hopper, es designa com 'Computer Science Education Week': Ara, per tant, ja sigui <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Resolt, Que el (CASA O SENAT, ESTAT, COMTAT, CIUTAT O CONSELL ESCOLAR) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) dóna suport a la designació de la Setmana de l'Educació de les Ciències de la Computació ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) anima escoles, educadors, pares i responsables polítics a participar en la Setmana de l'Educació de les Ciències de la Computació permetent als seus estudiants participar en l'Hora del Codi;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) anima les escoles, professors, investigadors, universitats, líders empresarials i responsables polítics a identificar mecanismes perquè els professors rebin un desenvolupament professional d'avantguarda per proporcionar experiències d'aprenentatge sostenibles en ciències de la computació en tots els nivells educatius i animar els estudiants a estar exposats als conceptes de ciències de la computació;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) fomenta oportunitats, fins i tot a través dels programes existents, per a estudiants i estudiants de grups racials i ètnics poc representats en ciències de la computació.
 
 {{ signup_button }}

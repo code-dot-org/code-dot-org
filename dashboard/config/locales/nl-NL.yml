@@ -277,6 +277,8 @@ nl:
     none: Wil ik liever niet zeggen
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
   hello: Hallo wereld
+  hidden_stage: Jouw leraar had jou hier niet verwacht. Vraag je leraar welke les
+    je zou moeten doen.
   hoc_download:
     download_in_Chinese: 'Download in het Chinees:'
     download_in_Croatian: 'Download in het Kroatisch:'

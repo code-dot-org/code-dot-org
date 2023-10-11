@@ -4,6 +4,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 
 describe('LearningGoal', () => {
@@ -36,12 +37,18 @@ describe('LearningGoal', () => {
           aiEnabled: true,
         }}
         teacherHasEnabledAi={true}
+        aiConfidence={50}
+        aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
     expect(wrapper.find('AiAssessment').props().studentName).to.equal(
       studentLevelInfo.name
+    );
+    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(50);
+    expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
+      3
     );
     expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
   });
@@ -164,5 +171,40 @@ describe('LearningGoal', () => {
       }
     );
     sendEventSpy.restore();
+  });
+
+  it('shows feedback in disabled textbox when available', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: 1,
+        }}
+      />
+    );
+    expect(wrapper.find('textarea').props().value).to.equal('test feedback');
+    expect(wrapper.find('textarea').props().disabled).to.equal(true);
+  });
+
+  it('shows understanding in header if submittedEvaluation contains understand', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.LIMITED,
+        }}
+      />
+    );
+    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+      'Limited Evidence'
+    );
   });
 });

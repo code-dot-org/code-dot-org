@@ -540,11 +540,11 @@ If you run into an error message about `Could not find MIME type database in the
 
 If bundle install fails with an error referencing `eventmachine`, try
 
-- `gem install eventmachine -v ‘[VERSION]’ -- --with-openssl-dir=$(brew --prefix libressl)`
+- `gem install eventmachine -v [VERSION] -- --with-openssl-dir=$(brew --prefix libressl)`
 
 Where [VERSION] is the current version of eventmachine in Gemfile.lock. For example:
 
-- `gem install eventmachine -v ‘1.2.7’ -- --with-openssl-dir=$(brew --prefix libressl)`
+- `gem install eventmachine -v 1.2.7 -- --with-openssl-dir=$(brew --prefix libressl)`
 
 #### Xcode Set Up
 
