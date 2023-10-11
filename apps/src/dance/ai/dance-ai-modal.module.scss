@@ -93,9 +93,9 @@
       pointer-events: none;
 
       .prompt {
-        margin-left: 140px;
         display: flex;
         align-items: center;
+        justify-content: center;
         font-size: 18px;
         margin-top: 14px;
 
@@ -155,7 +155,7 @@
         .bot {
           width: 110px;
           position: absolute;
-          transform: translateX(-50px);
+          transform: translateX(-50%);
 
           &AppearCentered {
             left: 50%;
@@ -170,6 +170,14 @@
           &Left {
             left: 5%;
           }
+        }
+
+        .botBeam {
+          top: 140px;
+          left: 50%;
+          width: 100px;
+          position: absolute;
+          transform: translateX(-50%);
         }
       }
 
