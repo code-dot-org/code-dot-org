@@ -22,9 +22,9 @@ export DRONE_AUTOSCALER=https://drone.cdn-code.org:8443
 # Check if DRONE_TOKEN is valid
 if ! output=$(drone server ls 2>&1); then
     echo "$output"
-    echo -e "\nError executing \`drone server ls\`. Ensure DRONE_TOKEN is set correctly."
-    echo "For more information, see the 'Drone Continuous Integration System' document in the Engineering Drive."
-    echo "Obtain your DRONE_TOKEN from https://drone.cdn-code.org/account"
+    echo -e "\nError executing \`drone server ls\`. Ensure DRONE_TOKEN is set correctly.\n"
+    echo -e "\texport DRONE_TOKEN=<your_drone_token>"
+    echo -e "\nObtain your DRONE_TOKEN from https://drone.cdn-code.org/account. For more information, see the 'Drone Continuous Integration System' document in the Engineering Drive.\n"
     exit 1
 fi
 
