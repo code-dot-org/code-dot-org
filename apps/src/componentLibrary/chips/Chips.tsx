@@ -94,7 +94,7 @@ const MultiSelectGroup: React.FunctionComponent<ChipsProps> = ({
   const inputName = `${name}[]`;
 
   return (
-    <div className={styles.multiSelectGroup}>
+    <div className={styles.multiSelectGroup} data-testid={`chips-${name}`}>
       <fieldset>
         {label && <label className={styles.typographyLabel}>{label}</label>}
 

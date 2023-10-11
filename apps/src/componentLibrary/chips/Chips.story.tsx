@@ -37,6 +37,7 @@ const SingleTemplate: Story<ChipsProps> = args => <Chips {...args} />;
 //   </>
 // );
 
+let values: string[] = [];
 export const DefaultChips = SingleTemplate.bind({});
 DefaultChips.args = {
   label: 'Chips label',
@@ -46,8 +47,8 @@ DefaultChips.args = {
     {value: 'chip1', label: 'Chip1'},
     {value: 'chip1', label: 'Chip1'},
   ],
-  values: [],
-  setValues: () => null,
+  values: values,
+  setValues: (newValues: string[]) => (values = newValues),
   invalidMessage: 'test',
 };
 //
