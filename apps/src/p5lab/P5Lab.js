@@ -406,9 +406,9 @@ export default class P5Lab {
       if (this.isBlockly) {
         this.currentCode = Blockly.getWorkspaceCode();
         this.studioApp_.addChangeHandler(e => {
-          if (!Blockly.shouldGenerateCodeForEvent(e)) {
-            return;
-          }
+          // if (!Blockly.shouldGenerateCodeForEvent(e)) {
+          //   return;
+          // }
           const newCode = Blockly.getWorkspaceCode();
           if (newCode !== this.currentCode) {
             this.currentCode = newCode;
