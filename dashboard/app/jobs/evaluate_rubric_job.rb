@@ -39,9 +39,11 @@ class EvaluateRubricJob < ApplicationJob
 
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
-    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
-    ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    examples = read_examples(lesson_s3_name)
+
+    s3_client = AWS::S3.create_client
+    prompt = read_file_from_s3(s3_client, lesson_s3_name, 'system_prompt.txt')
+    ai_rubric = read_file_from_s3(s3_client, lesson_s3_name, 'standard_rubric.csv')
+    examples = read_examples(s3_client, lesson_s3_name)
 
     ai_evaluations =
       CDO.ai_proxy_url.present? ?
@@ -87,23 +89,23 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def read_file_from_s3(lesson_s3_name, key_suffix)
+  private def read_file_from_s3(s3_client, lesson_s3_name, key_suffix)
     bucket = 'cdo-ai'
     key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
-    AWS::S3.create_client.get_object(bucket: bucket, key: key)[:body].read
+    s3_client.get_object(bucket: bucket, key: key)[:body].read
   end
 
-  private def read_examples(lesson_s3_name)
+  private def read_examples(s3_client, lesson_s3_name)
     bucket = 'cdo-ai'
     prefix = "teaching_assistant/lessons/#{lesson_s3_name}/examples/"
-    response = AWS::S3.create_client.list_objects_v2(bucket: bucket, prefix: prefix)
+    response = s3_client.list_objects_v2(bucket: bucket, prefix: prefix)
     file_names = response.contents.map(&:key)
     file_names = file_names.map {|name| name.gsub(prefix, '')}
     js_files = file_names.select {|name| name.end_with?('.js')}
     js_files.map do |file_name|
       base_name = file_name.gsub('.js', '')
-      code = AWS::S3.create_client.get_object(bucket: bucket, key: "#{prefix}#{file_name}")[:body].read
-      response = AWS::S3.create_client.get_object(bucket: bucket, key: "#{prefix}#{base_name}.tsv")[:body].read
+      code = s3_client.get_object(bucket: bucket, key: "#{prefix}#{file_name}")[:body].read
+      response = s3_client.get_object(bucket: bucket, key: "#{prefix}#{base_name}.tsv")[:body].read
       [code, response]
     end
   end
