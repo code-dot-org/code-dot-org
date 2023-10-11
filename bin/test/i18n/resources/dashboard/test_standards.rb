@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::Standards do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out Standards resource' do
-  #     I18n::Resources::Dashboard::Standards::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::Standards.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out Standards resource' do
+      I18n::Resources::Dashboard::Standards::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::Standards.sync_out
+    end
+  end
 end
