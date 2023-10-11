@@ -1,5 +1,6 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {createAndCenterDefinitionBlock} from './proceduresBlocks';
@@ -7,13 +8,11 @@ import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
-import experiments from '@cdo/apps/util/experiments';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
-export const useModalFunctionEditor =
-  window.appOptions?.level?.useModalFunctionEditor;
-export const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
+const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
+const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
   experiments.MODAL_FUNCTION_EDITOR
 );
 
