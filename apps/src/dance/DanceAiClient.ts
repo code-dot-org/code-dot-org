@@ -1,6 +1,6 @@
-import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cachedpalettemap.json';
-import UntypedCachedBackgrounds from '@cdo/static/dance/ai/model/cachedbackgroundmap.json';
-import UntypedCachedForegrounds from '@cdo/static/dance/ai/model/cachedforegroundmap.json';
+import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
+import UntypedCachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
+import UntypedCachedForegrounds from '@cdo/static/dance/ai/model/cached-spacy-foreground-map.json';
 
 // Custom types for vector mapping JSONs to play nice with Typescript
 type EmojiAssociation = {
@@ -80,13 +80,9 @@ export default function cachedAi(input: string) {
     backgroundEffect: finalBackground,
     backgroundColor: finalColor,
     foregroundEffect: finalForeground,
-    dancers: {
-      type: 'frogs',
-      count: Math.floor(Math.random() * 5),
-      layout: 'circle',
-    },
   };
 
+  console.log(cachedAiResponse);
   return JSON.stringify(cachedAiResponse);
 }
 
