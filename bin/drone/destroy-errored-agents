@@ -1,0 +1,46 @@
+#!/bin/bash
+
+set -e
+
+# This script will terminate all drone agents that are in 'error' state. This
+# happens occasionally, and we have not been able to pin down the exact reason
+# why. This was created when we were using the following versions, and may not
+# be needed if future bugfixes resolve this issue.
+#
+# - drone/autoscaler:1.8.2
+# - drone/drone:1.9.0
+#
+# If it's too fancy for you, you can always run the following command.
+#
+# ```
+# drone server ls -l | grep error | awk '{print $1}' | xargs -tL1 drone server destroy`
+# ```
+#
+# Potential upgrades:
+# - publish exeuction events and count of servers destroyed to CloudWatch
+# - publish execution events to Slack
+# - convert to a Rake task for consistency
+
+export DRONE_SERVER=https://drone.cdn-code.org
+export DRONE_AUTOSCALER=https://drone.cdn-code.org:8443
+
+
+
+# Check if DRONE_TOKEN is valid
+if ! output=$(drone server ls 2>&1); then
+    echo "$output"
+    echo -e "\nError executing \`drone server ls\`. Ensure DRONE_TOKEN is set correctly.\n"
+    echo -e "\texport DRONE_TOKEN=<your_drone_token>"
+    echo -e "\nObtain your DRONE_TOKEN from https://drone.cdn-code.org/account. For more information, see the 'Drone Continuous Integration System' document in the Engineering Drive.\n"
+    exit 1
+fi
+
+# Get the total count of drone agents and those in error state
+total_count=$(drone server ls -l | tail -n +2 | wc -l)
+error_ids=$(drone server ls -l | grep error | awk '{print $1}')
+
+# Calculate error count, considering empty string as zero
+error_count=$(if [ -z "$error_ids" ]; then echo 0; else echo "$error_ids" | wc -l; fi)
+
+echo "Terminating ${error_count} of ${total_count} drone agents that were in 'error' state"
+[ -z "$error_ids" ] || echo "$error_ids" | xargs -tL1 drone server destroy
