@@ -42,19 +42,19 @@ export default class FunctionEditor {
 
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
-      renderer: options.renderer,
-      toolbox: options.toolbox,
-      theme: Blockly.cdoUtils.getUserTheme(options.theme),
+      comments: false, // Disables Blockly's built-in comment functionality.
       move: {
         drag: false,
         scrollbars: {
-          vertical: true,
           horizontal: false,
+          vertical: true,
         },
         wheel: true,
       },
+      renderer: options.renderer,
+      theme: Blockly.cdoUtils.getUserTheme(options.theme),
+      toolbox: options.toolbox,
       trashcan: false, // Don't use default trashcan.
-      comments: false, // Disables Blockly's built-in comment functionality.
     });
 
     // Close handler

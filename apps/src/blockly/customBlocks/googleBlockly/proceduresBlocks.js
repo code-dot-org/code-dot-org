@@ -66,7 +66,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
-      'modal_procedures_mini_toolbox',
+      'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
@@ -137,16 +137,17 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   }
 });
 
-// This extension renders a mini toolbox for the modal function editor.
-GoogleBlockly.Extensions.register('modal_procedures_mini_toolbox', function () {
+// This extension renders function and behavior definitions as mini toolboxes
+// The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
+GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
   const flyoutToggleButton =
     Blockly.customBlocks.initializeMiniToolbox.bind(this)();
 
-  // The only blocks in the toolbox are a comment (for functions) or a comment + "this sprite" block (for behaviors)
   const miniToolboxBlocks = ['gamelab_comment'];
   if (this.type === 'behavior_definition') {
     miniToolboxBlocks.push('sprite_parameter_get');
   }
+
   Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
     miniToolboxBlocks,
     flyoutToggleButton,

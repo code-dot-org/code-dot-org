@@ -68,7 +68,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'behaviors_block_frame',
-      'modal_procedures_mini_toolbox',
+      'procedure_def_mini_toolbox',
     ],
     mutator: 'behavior_def_mutator',
   },

@@ -80,9 +80,7 @@ export const blocks = {
   ) {
     // In the function editor, this call prevents a dummy input from being used as a
     // row separator between the function definition in the mini-toolbox.
-    if (!renderingInFunctionEditor) {
-      this.setInputsInline(true);
-    }
+    this.setInputsInline(true);
 
     // We set the inputs to align left so that if the flyout is larger than the
     // inputs will be aligned with the left edge of the block.
