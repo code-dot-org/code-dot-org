@@ -19,15 +19,29 @@
   --neutral_dark: #292F36;
   --orange: #ffa400; /* legacy color */
   /* Typography */
-  --main-font-regular: "Gotham 4r", sans-serif;
-  --main-font-italics: "Gotham 4i", sans-serif;
-  --main-font-bold: "Gotham 5r", sans-serif;
-  --main-font-extra-bold: "Gotham 7r", sans-serif;
-  --main-font-bold-italics: "Gotham 7i", sans-serif;
+  --barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', sans-serif;
+  --barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', sans-serif;
+  --main-font: 'Metropolis', sans-serif;
+  --thin-font-weight: 100;
+  --extra-light-font-weight: 200;
+  --light-font-weight: 300;
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
+  --semi-bold-font-weight: 600;
+  --bold-font-weight: 700;
+  --extra-bold-font-weight: 800;
+  --black-font-weight: 900;
 }
 
+html {
+  height: 100%;
+}
+
+
 body {
-  font-family: var(--main-font-regular);
+  background-color: #fff;
+  height: 100%;
+  font-family: var(--main-font);
   font-size: 14px;
   line-height: 22px;
   color: var(--neutral_dark);
@@ -36,7 +50,8 @@ body {
 
 h1,
 .heading-xxl {
-  font-family: var(--main-font-extra-bold);
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   font-size: 2rem;
   line-height: 1.16;
   margin: 1.75em 0 0.5em 0;
@@ -44,7 +59,8 @@ h1,
 
 h2,
 .heading-xl {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1.5rem;
   line-height: 1.24;
   margin: 1em 0 0.5em 0;
@@ -53,7 +69,8 @@ h2,
 
 h3,
 .heading-lg {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1.125rem;
   line-height: 1.28;
   margin-bottom: 0.5em;
@@ -61,7 +78,8 @@ h3,
 
 h4,
 .heading-md {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
   line-height: 1.32;
   margin-bottom: 0.5em;
@@ -69,7 +87,8 @@ h4,
 
 h5,
 .heading-sm {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
   line-height: 1.40;
   margin-bottom: 0.5em;
@@ -77,7 +96,8 @@ h5,
 
 h6,
 .heading-xs {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
   line-height: 1.48;
   margin-bottom: 0.5em;
@@ -114,14 +134,16 @@ p {
 
 figcaption,
 .video_caption_link {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 0.875rem;
   margin: 0.5em 0 1em;
   line-height: 1.4;
 }
 
 .overline-one {
-  font-family: var(--main-font-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.875rem;
@@ -130,7 +152,8 @@ figcaption,
 }
 
 .overline-two {
-  font-family: var(--main-font-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.75rem;
@@ -139,7 +162,8 @@ figcaption,
 }
 
 .overline-three {
-  font-family: var(--main-font-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.625rem;
@@ -152,7 +176,8 @@ hr {
 }
 
 a {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   transition: all .2s ease-in-out;
 }
 
@@ -184,18 +209,20 @@ blockquote p {
 }
 
 strong {
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: normal;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 em {
-  font-family: 'Gotham 4i', sans-serif;
-  font-style: normal;
+  font-family: var(--main-font);
+  font-style: italic;
 }
 
 strong em,
 em strong {
-  font-family: 'Gotham 7i', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
+  font-style: italic;
 }
 
 ul {
@@ -493,9 +520,9 @@ button {
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
-  font-weight: normal;
   letter-spacing: normal;
   margin: 0;
   padding: 0.5rem 1rem;
@@ -556,12 +583,13 @@ button:hover {
 a.lines_of_code_link {
   color:white;
   text-decoration:none;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 
 label {
-  font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 .required {
