@@ -23,6 +23,9 @@ require_relative 'upload_to_mapbox'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
+SPECIFIC_SCHOOL_ID = 7_067_343
+SPECIFIC_SCHOOL_ID_STR = '7067343'
+
 CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 def main
   geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
@@ -43,16 +46,39 @@ def main
     # processed location, and city. With the exception that approved special events
     # don't need a city so we can show events like the Cocos Keeling Islands.
     if data['organization_name_s'].nil?
+      if form[:id] == SPECIFIC_SCHOOL_ID || form[:id] == SPECIFIC_SCHOOL_ID_STR
+        puts 'SKIPPED ON ORG NAME'
+        puts JSON.parse(data)
+      end
       nil_org_name += 1
       next
     end
     if processed_data['location_p'].nil?
+      if form[:id] == SPECIFIC_SCHOOL_ID || form[:id] == SPECIFIC_SCHOOL_ID_STR
+        puts 'SKIPPED ON LOCATION'
+        puts JSON.parse(processed_data)
+      end
       nil_location += 1
       next
     end
     if form[:review] != "approved" && processed_data['location_city_s'].nil?
+      if form[:id] == SPECIFIC_SCHOOL_ID || form[:id] == SPECIFIC_SCHOOL_ID_STR
+        puts 'SKIPPED ON CITY AND APPROVAL'
+        puts JSON.parse(processed_data)
+        puts form[:review]
+      end
       not_approved_no_city += 1
       next
+    end
+
+    if form[:id] == SPECIFIC_SCHOOL_ID || form[:id] == SPECIFIC_SCHOOL_ID_STR
+      puts 'NOT SKIPPED'
+      puts data['organization_name_s']
+      puts processed_data['location_p']
+      puts form[:review]
+      puts processed_data['location_city_s']
+      puts JSON.parse(data)
+      puts JSON.parse(processed_data)
     end
 
     organization_name =
