@@ -1,4 +1,4 @@
-@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+@import 'color', 'font', 'typography', 'breakpoints';
 
 // Variables
 $border-radius: 4px;
@@ -163,7 +163,8 @@ input[type=submit] {
   padding: .625rem 1rem;
   margin: 0.5rem 0;
   font-size: 1rem;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $main-font;
+  font-weight: $semi-bold-font-weight;
   line-height: 1.2;
   text-decoration: none;
   text-align: center;
@@ -586,7 +587,7 @@ form {
     padding: 0.5rem;
     border: 1px solid;
     border-radius: $border-radius;
-    font-family: $gotham-regular, sans-serif;
+    font-family: $main-font;
     font-size: 1rem;
     transition: all ease-in-out .2s;
 
