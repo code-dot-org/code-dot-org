@@ -125,7 +125,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         inputLibrary.items.find((item: AiModalItem) => item.id === input).name
     );
     const request = `${promptString} ${inputNames.join(', ')}.`;
-    startAi(inputs, request);
+    startAi(request);
     setMode(Mode.GENERATING);
   };
 
@@ -137,7 +137,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     } else {
       responseJsonString = DanceAiClient(value);
     }
-    const response = JSON.parse(responseJsonString);
+    const result = JSON.parse(responseJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
     // explanation, since we don't want it becoming part of the code.
@@ -158,8 +158,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     // The block value will be set to this JSON.
     setResultJson(fullResultJson);
 
-    // The user will see this explanation.
-    setResultExplanation(result.explanation);
+    // Deprecating as we no longer generate an LLM explanation
+    //setResultExplanation(result.explanation);
   };
 
   /**
