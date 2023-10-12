@@ -182,12 +182,12 @@
   gap: 4px;
 
   border-radius: 30px;
-  border: 1px solid $product_affirmative_default;
-  background: $light_affirmative_100;
+  border: 1px solid $product_information_default;
+  background: $lightest_cyan;
 }
 
 p.aiTokenText {
-  color: $product_affirmative_default;
+  color: $product_information_default;
   margin-bottom: 0;
 }
 
@@ -241,9 +241,7 @@ p.aiTokenText {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.25rem;
   align-self: stretch;
-  padding: 0 12px 0 28px;
 
   span {
     font-size: 0.875rem;
