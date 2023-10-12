@@ -1,38 +1,4 @@
-@import 'font';
-
-/*
-  Note: do not inline the contents of this file, as @import statements do not work when inlined.
-  FontAwesome icons will fail to load.
-
-  If you are changing the location of these files,
-  see readme in the top-level shared/css directory for more detail on manual steps to take when uploading new files.
-*/
-
-/* FontAwesome font */
-@import url($font-awesome-core-url);
-@import url($font-awesome-brands-url);
-@import url($font-awesome-solid-url);
-@import url($font-awesome-regular-url);
-@import url($font-awesome-v4-fonts-url);
-@import url($font-awesome-v4-shims-url);
-
-/* Barlow font - used for headings */
-@font-face {
-  font-family: 'Barlow Semi Condensed Semibold';
-  font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf') format('truetype'),
-local('?');
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed Medium';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf') format('truetype'), local('?');
-}
-
-/* Metropolis font - used for body text
+/* Metropolis font
 
   100 – Thin
   200 – Extra Light (Ultra Light)
