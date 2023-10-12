@@ -1,5 +1,6 @@
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
+import fontConstants from '@cdo/apps/fontConstants';
 
 // Constants for React tables
 
@@ -39,7 +40,7 @@ export const tableLayoutStyles = {
     textAlign: 'inherit',
   },
   link: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     textDecoration: 'none',
   },

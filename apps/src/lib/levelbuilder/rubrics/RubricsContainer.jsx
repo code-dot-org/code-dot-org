@@ -146,6 +146,7 @@ export default function RubricsContainer({
       setSaveNotificationText,
       rubric,
       learningGoalList,
+      setLearningGoalList,
       selectedLevelForAssessment,
       lessonId
     );
@@ -188,7 +189,7 @@ export default function RubricsContainer({
           <RubricEditor
             learningGoalList={learningGoalList}
             addNewConcept={addNewConceptHandler}
-            deleteItem={deleteLearningGoal}
+            deleteLearningGoal={deleteLearningGoal}
             updateLearningGoal={updateLearningGoal}
           />
           <div style={styles.bottomRow}>

@@ -9,6 +9,7 @@ import orderBy from 'lodash/orderBy';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import {studentOverviewDataPropType} from './assessmentDataShapes';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
@@ -275,11 +276,11 @@ const styles = {
   },
   headerLabels: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   studentNameColumn: {
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
 };
 

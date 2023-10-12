@@ -6,6 +6,7 @@ import {lessonOfBonusLevels} from './shapes';
 import LessonExtrasNotification from './LessonExtrasNotification';
 import Button from '@cdo/apps/templates/Button';
 import BonusLevels from './BonusLevels';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class LessonExtras extends React.Component {
   static propTypes = {
@@ -93,9 +94,7 @@ const styles = {
   subHeader: {
     fontSize: 24,
     color: 'rgb(91, 103, 112)',
-    fontFamily: 'Gotham 4r',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    ...fontConstants['main-font-regular'],
     paddingTop: 10,
     paddingBottom: 20,
   },

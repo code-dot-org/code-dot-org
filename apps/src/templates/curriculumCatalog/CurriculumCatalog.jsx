@@ -26,8 +26,6 @@ const CurriculumCatalog = ({
     useState(false);
   const [expandedCardKey, setExpandedCardKey] = useState(null);
 
-  const isQuickViewDisplayed = true;
-
   useEffect(() => {
     const expandedCardFound = filteredCurricula.some(
       co => expandedCardKey === co['key']
@@ -129,7 +127,6 @@ const CurriculumCatalog = ({
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
-                  quickViewDisplayed={isQuickViewDisplayed}
                   deviceCompatibility={device_compatibility}
                   description={description}
                   professionalLearningProgram={professional_learning_program}
