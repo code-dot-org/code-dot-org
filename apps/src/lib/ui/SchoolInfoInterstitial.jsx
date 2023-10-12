@@ -13,6 +13,7 @@ import SchoolInfoInputs, {
 import firehoseClient from '../util/firehose';
 import {combineReducers, createStore} from 'redux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const FIREHOSE_EVENTS = {
   // Interstitial is displayed to the teacher.
@@ -384,7 +385,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,

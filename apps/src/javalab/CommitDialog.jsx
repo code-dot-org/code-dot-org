@@ -11,6 +11,7 @@ import CommitDialogBody from './CommitDialogBody';
 import {setCommitSaveStatus} from '@cdo/apps/javalab/redux/javalabRedux';
 import {CompileStatus} from './constants';
 import {BackpackAPIContext} from './BackpackAPIContext';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const PADDING = 8;
 
@@ -305,7 +306,7 @@ const styles = {
     fontSize: 32,
   },
   footerMessageTitle: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
   },
   footerMessageText: {
