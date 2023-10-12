@@ -1,8 +1,8 @@
 import {
   saveRubricToTable,
   SAVING_TEXT,
-  SAVE_COMPLETED_TEXT,
   RUBRIC_PATH,
+  SAVE_COMPLETED_TEXT,
 } from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import sinon from 'sinon';
@@ -60,17 +60,24 @@ describe('rubricHelperTest.js', () => {
     ],
   };
 
-  it('shows notification of updated rubric', async () => {
-    const setSaveNotificationText = sinon.stub();
-    const mockFetch = sinon.stub(global, 'fetch');
+  it('shows notification of saving updates to an exisiting rubric', async () => {
+    const setSaveNotificationText = sinon.spy();
+    const setLearningGoalList = sinon.spy();
+
+    const mockFetch = sinon.stub(window, 'fetch');
     mockFetch.returns(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
+
+    const mockTimeout = sinon.stub(window, 'setTimeout').callsFake((f, n) => {
+      f();
+    });
 
     await saveRubricToTable(
       setSaveNotificationText,
       rubricInfo,
       learningGoalList,
+      setLearningGoalList,
       selectedLevelForAssessment,
       lessonId
     );
@@ -88,12 +95,15 @@ describe('rubricHelperTest.js', () => {
       setSaveNotificationText.getCall(1),
       SAVE_COMPLETED_TEXT
     );
+    sinon.assert.calledWithExactly(setSaveNotificationText.getCall(2), '');
+    sinon.assert.calledOnceWithExactly(mockTimeout, sinon.match.any, 8500);
     sinon.restore();
   });
 
   it('redirects when creating a new rubric', async () => {
     const setSaveNotificationText = sinon.stub();
-    const mockFetch = sinon.stub(global, 'fetch');
+    const setLearningGoalList = sinon.stub();
+    const mockFetch = sinon.stub(window, 'fetch');
     mockFetch.returns(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
@@ -102,6 +112,7 @@ describe('rubricHelperTest.js', () => {
       setSaveNotificationText,
       null,
       learningGoalList,
+      setLearningGoalList,
       selectedLevelForAssessment,
       lessonId
     );
