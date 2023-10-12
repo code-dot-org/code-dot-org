@@ -29,6 +29,9 @@ describe('EvidenceLevels', () => {
     );
     const lastEvidenceLevel =
       DEFAULT_PROPS.evidenceLevels[DEFAULT_PROPS.evidenceLevels.length - 1];
+    expect(wrapper.find('BodyThreeText').at(0).props().children).to.equal(
+      lastEvidenceLevel.teacherDescription
+    );
     expect(wrapper.find('Memo(RadioButton)').at(0).prop('label')).to.equal(
       UNDERSTANDING_LEVEL_STRINGS[lastEvidenceLevel.understanding]
     );
@@ -49,6 +52,9 @@ describe('EvidenceLevels', () => {
       DEFAULT_PROPS.evidenceLevels[DEFAULT_PROPS.evidenceLevels.length - 1];
     expect(wrapper.find('BodyThreeText').at(0).props().children).to.equal(
       UNDERSTANDING_LEVEL_STRINGS[lastEvidenceLevel.understanding]
+    );
+    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
+      lastEvidenceLevel.teacherDescription
     );
   });
 });

@@ -16,12 +16,16 @@ export default function EvidenceLevels({
   radioButtonCallback,
   submittedEvaluation,
 }) {
+  const sortedEvidenceLevels = () => {
+    const newArray = [...evidenceLevels];
+    return newArray.sort((a, b) => b.understanding - a.understanding);
+  };
   if (canProvideFeedback) {
     const radioGroupName = `evidence-levels-${learningGoalKey}`;
     return (
       <div className={style.evidenceLevelSet}>
         <Heading6>{i18n.assignARubricScore()}</Heading6>
-        {evidenceLevels.toReversed().map(evidenceLevel => (
+        {sortedEvidenceLevels().map(evidenceLevel => (
           <div
             key={evidenceLevel.id}
             className={classNames(
@@ -53,7 +57,7 @@ export default function EvidenceLevels({
     return (
       <div className={style.evidenceLevelSet}>
         <Heading6>{i18n.rubricScores()}</Heading6>
-        {evidenceLevels.toReversed().map(evidenceLevel => (
+        {sortedEvidenceLevels().map(evidenceLevel => (
           <div
             key={evidenceLevel.id}
             className={classNames(style.evidenceLevelOption, {
