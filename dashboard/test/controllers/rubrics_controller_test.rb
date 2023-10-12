@@ -105,8 +105,8 @@ class RubricsControllerTest < ActionController::TestCase
     rubric = create :rubric
     learning_goal1 = create :learning_goal, rubric: rubric
     learning_goal2 = create :learning_goal, rubric: rubric
-    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, understanding: 1
-    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, understanding: 2
+    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, requester: teacher, understanding: 1
+    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, requester: teacher,  understanding: 2
 
     get :get_ai_evaluations, params: {
       id: rubric.id,
@@ -125,7 +125,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in teacher
 
     learning_goal = create :learning_goal
-    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher
 
     get :get_ai_evaluations, params: {
       id: learning_goal.rubric.id,
@@ -142,9 +142,9 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in teacher
 
     learning_goal = create :learning_goal
-    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, understanding: 1
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher, understanding: 1
     travel 1.minute do
-      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, understanding: 2
+      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher, understanding: 2
     end
 
     get :get_ai_evaluations, params: {
