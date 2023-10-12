@@ -454,8 +454,7 @@ export const asyncLoadCoteacherInvite = () => dispatch => {
   fetchJSON('/api/v1/section_instructors')
     .then(sectionInstructors => {
       // Find the oldest invite.
-      const coteacherInvite = _.find(
-        sectionInstructors,
+      const coteacherInvite = sectionInstructors.find(
         instructor => instructor.status === 'invited'
       );
 
