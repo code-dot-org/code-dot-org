@@ -29,6 +29,7 @@ module I18n
       end
 
       def self.sync_out
+        BaseContent.sync_out
         Blocks.sync_out
         CourseContent.sync_out
         CourseOfferings.sync_out

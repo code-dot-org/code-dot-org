@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::BaseContent do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out BaseContent resource' do
-  #     I18n::Resources::Dashboard::BaseContent::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::BaseContent.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out BaseContent resource' do
+      I18n::Resources::Dashboard::BaseContent::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::BaseContent.sync_out
+    end
+  end
 end

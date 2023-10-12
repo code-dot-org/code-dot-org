@@ -31,6 +31,7 @@ describe I18n::Resources::Dashboard do
     it 'sync-out Dashboard resources' do
       execution_sequence = sequence('execution')
 
+      I18n::Resources::Dashboard::BaseContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Blocks.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseOfferings.expects(:sync_out).in_sequence(execution_sequence)
