@@ -3,6 +3,7 @@
 
 #songSelection.in.collapse
   %p
-    %a.select_none{href: '#'} Do not limit song selection
-    (shift-click or cmd-click to select multiple).
+    Click to
+    %a.select_none{href: '#'} not limit song selection
+  %p (shift-click or cmd-click to select multiple).
   = f.select :song_selection, @level.class.hoc_songs, {}, {size: 12, multiple: true}
