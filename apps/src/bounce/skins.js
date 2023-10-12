@@ -139,7 +139,6 @@ var CONFIGS = {
       'Portland Trail Blazers',
       'Sacramento Kings',
       'San Antonio Spurs',
-      'San Antonio Stars',
       'Seattle Storm',
       'Toronto Raptors',
       'Utah Jazz',
