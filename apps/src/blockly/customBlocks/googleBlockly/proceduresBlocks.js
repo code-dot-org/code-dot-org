@@ -98,6 +98,19 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     mutator: 'procedure_caller_mutator',
   },
+  {
+    type: 'gamelab_comment',
+    message0: '%1',
+    args0: [
+      {
+        type: 'field_input',
+        name: 'COMMENT',
+        text: '',
+      },
+    ],
+    previousStatement: null,
+    nextStatement: null,
+  },
 ]);
 
 // Respond to the click of a call block's edit button
@@ -140,14 +153,19 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
 // This extension renders function and behavior definitions as mini toolboxes
 // The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
 GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
-  const flyoutToggleButton =
-    Blockly.customBlocks.initializeMiniToolbox.bind(this)(true);
-
-  const miniToolboxBlocks = ['gamelab_comment'];
+  // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
+  let miniToolboxBlocks = [];
   if (this.type === 'behavior_definition') {
     miniToolboxBlocks.push('sprite_parameter_get');
   }
 
+  // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
+  if (!miniToolboxBlocks.length) {
+    return;
+  }
+
+  const flyoutToggleButton =
+    Blockly.customBlocks.initializeMiniToolbox.bind(this)(true);
   Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
     miniToolboxBlocks,
     flyoutToggleButton,
