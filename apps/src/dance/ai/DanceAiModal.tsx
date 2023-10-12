@@ -399,8 +399,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         >
           {mode === Mode.RESULTS && (
             <Typist
-              startDelay={1500}
-              avgTypingDelay={20}
+              startDelay={100}
+              avgTypingDelay={0}
               cursor={{show: false}}
               onTypingDone={() => {
                 setTypingDone(true);
