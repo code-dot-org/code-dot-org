@@ -1,9 +1,9 @@
-import {BlockSvg} from 'blockly';
+import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
 import React, {useCallback, useEffect, useRef} from 'react';
 import ProgramExecutor from '../lab2/ProgramExecutor';
-import moduleStyles from './ai-preview.module.scss';
+import moduleStyles from './ai-visualization-preview.module.scss';
 
-interface AiPreviewProps {
+interface AiVisualizationPreviewProps {
   blocks: BlockSvg[];
 }
 
@@ -12,7 +12,9 @@ const PREVIEW_DIV_ID = 'ai-preview';
 /**
  * Previews the output of the AI block in Dance Party.
  */
-const AiPreview: React.FunctionComponent<AiPreviewProps> = ({blocks}) => {
+const AiVisualizationPreview: React.FunctionComponent<
+  AiVisualizationPreviewProps
+> = ({blocks}) => {
   // Generate setup code for previewing the given blocks.
   const generateSetupCode = useCallback((): string => {
     if (blocks.length === 0) {
@@ -53,6 +55,7 @@ const AiPreview: React.FunctionComponent<AiPreviewProps> = ({blocks}) => {
   }, [blocks, generateSetupCode]);
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const blockPreviewContainerRef = useRef<HTMLDivElement>(null);
 
   // HACK: P5 Play hardcodes the canvas size to 400x400 no matter what the container
   // size is. This forces the canvas size to match the container size (200x200).
@@ -67,12 +70,14 @@ const AiPreview: React.FunctionComponent<AiPreviewProps> = ({blocks}) => {
   }, [containerRef]);
 
   return (
-    <div
-      id={PREVIEW_DIV_ID}
-      className={moduleStyles.previewVisualization}
-      ref={containerRef}
-    />
+    <div>
+      <div
+        id={PREVIEW_DIV_ID}
+        className={moduleStyles.previewVisualization}
+        ref={containerRef}
+      />
+    </div>
   );
 };
 
-export default AiPreview;
+export default AiVisualizationPreview;
