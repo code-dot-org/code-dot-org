@@ -33,6 +33,8 @@ module I18n
         CourseContent.sync_out
         CourseOfferings.sync_out
         Courses.sync_out
+        CurriculumContent.sync_out
+        Docs.sync_out
       end
     end
   end

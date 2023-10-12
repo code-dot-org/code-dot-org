@@ -3,7 +3,7 @@ require_relative '../../../i18n/resources/dashboard'
 
 describe I18n::Resources::Dashboard do
   describe '.sync_in' do
-    it 'sync-in Resources resources' do
+    it 'sync-in Dashboard resources' do
       execution_sequence = sequence('execution')
 
       I18n::Resources::Dashboard::Blocks.expects(:sync_in).in_sequence(execution_sequence)
@@ -28,13 +28,15 @@ describe I18n::Resources::Dashboard do
   end
 
   describe '.sync_out' do
-    it 'sync-out Resources resources' do
+    it 'sync-out Dashboard resources' do
       execution_sequence = sequence('execution')
 
       I18n::Resources::Dashboard::Blocks.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseOfferings.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Courses.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::CurriculumContent.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::Docs.expects(:sync_out).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_out
     end
