@@ -86,34 +86,23 @@ export default function initializeBlocklyXml(blocklyWrapper) {
  */
 export function addMutationToMiniToolboxBlocks(blockElement) {
   const miniflyoutAttribute = blockElement.getAttribute('miniflyout');
-  if (!miniflyoutAttribute) {
-    return; // Not a miniflyout block
+  const existingMutationElement = blockElement.querySelector('mutation');
+  if (!miniflyoutAttribute || existingMutationElement) {
+    // The block is the wrong type or has somehow already been processed.
+    return;
   }
   // The default icon is a '+' symbol which represents a currently-closed flyout.
   const useDefaultIcon = miniflyoutAttribute === 'open' ? 'false' : 'true';
-  // We don't expect a mutation to exist yet, but check just in case.
-  const existingMutationElement = blockElement.querySelector('mutation');
 
-  if (!existingMutationElement) {
-    // The mutation element does not exist, so create it.
-    const newMutationElement =
-      blockElement.ownerDocument.createElement('mutation');
+  // The mutation element does not exist, so create it.
+  const newMutationElement =
+    blockElement.ownerDocument.createElement('mutation');
 
-    // Create new mutation attribute based on original block attribute.
-    newMutationElement.setAttribute('useDefaultIcon', useDefaultIcon);
+  // Create new mutation attribute based on original block attribute.
+  newMutationElement.setAttribute('useDefaultIcon', useDefaultIcon);
 
-    // Place mutator before fields, values, and other nested blocks.
-    blockElement.insertBefore(newMutationElement, blockElement.firstChild);
-  } else {
-    // The mutation element already exists, inspect it.
-    const existingUseDefaultIcon =
-      existingMutationElement.getAttribute('useDefaultIcon');
-
-    // If the useDefaultIcon attribute is not set, set it based on the block attribute.
-    if (existingUseDefaultIcon === null) {
-      existingMutationElement.setAttribute('useDefaultIcon', useDefaultIcon);
-    }
-  }
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(newMutationElement, blockElement.firstChild);
 
   // Remove the miniflyout attribute from the parent block element.
   blockElement.removeAttribute('miniflyout');
