@@ -21,6 +21,7 @@ namespace :rds do
 
   desc 'Delete CLUSTER_ID'
   timed_task_with_logging :delete_cluster do
+    raise StandardError.new("CLUSTER_ID environment variable is required.") unless ENV['CLUSTER_ID'].present?
     Cdo::RDS.delete_cluster(ENV['CLUSTER_ID'])
   end
 end
