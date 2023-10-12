@@ -77,5 +77,4 @@ ImageUploadModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   cancelUpload: PropTypes.func.isRequired,
   confirmUploadWarning: PropTypes.func.isRequired,
-  isTeacher: PropTypes.bool.isRequired,
 };
