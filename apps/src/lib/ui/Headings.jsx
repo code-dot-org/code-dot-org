@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 import React, {Component} from 'react';
 import color from '../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const baseHeadingStyle = {
   display: 'block',
-  fontFamily: '"Gotham 5r", sans-serif',
-  fontWeight: 'normal',
+  ...fontConstants['main-font-semi-bold'],
   margin: '10px 0',
   color: color.dark_charcoal,
 };
 
 export const h1Style = {
   ...baseHeadingStyle,
-  fontFamily: '"Gotham 7r", sans-serif',
+  ...fontConstants['main-font-bold'],
   fontSize: 32,
   lineHeight: '48px',
 };
@@ -23,6 +23,7 @@ export class Heading1 extends Component {
   static propTypes = {
     style: PropTypes.object,
   };
+
   render() {
     return <h1 {...this.props} style={{...h1Style, ...this.props.style}} />;
   }
@@ -30,7 +31,7 @@ export class Heading1 extends Component {
 
 export const h2Style = {
   ...baseHeadingStyle,
-  fontFamily: '"Gotham 4r", sans-serif',
+  ...fontConstants['main-font-regular'],
   fontSize: 24,
   lineHeight: '48px',
 };
@@ -39,6 +40,7 @@ export class Heading2 extends Component {
   static propTypes = {
     style: PropTypes.object,
   };
+
   render() {
     return <h2 {...this.props} style={{...h2Style, ...this.props.style}} />;
   }
@@ -46,7 +48,7 @@ export class Heading2 extends Component {
 
 export const h3Style = {
   ...baseHeadingStyle,
-  fontFamily: '"Gotham 5r", sans-serif',
+  ...fontConstants['main-font-semi-bold'],
   fontSize: 16,
   lineHeight: '24px',
 };
@@ -63,6 +65,7 @@ export class Heading3 extends Component {
     style: PropTypes.object,
     isRebranded: PropTypes.bool,
   };
+
   render() {
     const {isRebranded, style, ...restProps} = this.props;
     const headingStyles = {

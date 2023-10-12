@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
 import {connect} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const INITIAL_STATE = {
   sectionCode: '',
@@ -152,14 +153,13 @@ const styles = {
     boxSizing: 'border-box',
   },
   heading: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 20,
-    fontWeight: 'bold',
     backgroundColor: color.white,
     color: color.neutral_dark,
   },
   details: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 14,
     marginTop: 5,
     color: color.neutral_dark,
