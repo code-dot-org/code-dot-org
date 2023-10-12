@@ -13122,6 +13122,14 @@ en:
           lessons:
             lesson-2:
               name: CSD Module 6 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: Conclusions and Connections'
+            lesson-4:
+              name: 'Synchronous Session 3: Differentiation'
+            lesson-5:
+              name: 'Synchronous Session 4: Supporting Equity'
+            lesson-6:
+              name: 'Synchronous Session 5: Wrap Up'
           lesson_groups: {}
           name: vpl-csd-2023-m6
           title: Module 6
