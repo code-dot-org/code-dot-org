@@ -2454,6 +2454,14 @@ columns:
     comment:
   - *32
   - *33
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: requester_id
+    sql_type_metadata: *2
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
   learning_goal_evidence_levels:
   - *27
   - &57 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -8948,6 +8956,19 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: learning_goal_ai_evaluations
+    name: index_learning_goal_ai_evaluations_on_requester_id
+    unique: false
+    columns:
+    - requester_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   learning_goal_evidence_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_evidence_levels
@@ -12763,7 +12784,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20231009175334
+version: 20231011075239
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
