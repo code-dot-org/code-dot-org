@@ -238,6 +238,6 @@ class TestRDS < Minitest::Test
       cluster_id = ''
       Cdo::RDS.delete_cluster(cluster_id)
     end
-    assert_equal 'CLUSTER_ID environment variable is required.', empty_exception.message
+    assert_equal 'cluster_id is required', empty_exception.message
   end
 end
