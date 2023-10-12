@@ -82,7 +82,6 @@ export default function cachedAi(input: string) {
     foregroundEffect: finalForeground,
   };
 
-  console.log(cachedAiResponse);
   return JSON.stringify(cachedAiResponse);
 }
 
