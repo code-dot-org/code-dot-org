@@ -7,12 +7,17 @@ import {asyncLoadCoteacherInvite} from '@cdo/apps/templates/teacherDashboard/tea
 import Button from '../Button';
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import DCDO from '@cdo/apps/dcdo';
+
+export const showCoteacherInviteNotification = coteacherInvite => {
+  return !!coteacherInvite && DCDO.get('show-coteacher-ui', false);
+};
 
 const CoteacherInviteNotification = ({
   asyncLoadCoteacherInvite,
   coteacherInvite,
 }) => {
-  if (!coteacherInvite) {
+  if (!showCoteacherInviteNotification(coteacherInvite)) {
     return null;
   }
 
