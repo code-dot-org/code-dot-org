@@ -42,11 +42,8 @@ class EvaluateRubricJob < ApplicationJob
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
 
-    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
-    ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    examples = read_examples(lesson_s3_name)
-
-    ai_evaluations = get_openai_evaluations(code, prompt, ai_rubric, examples)
+    openai_params = get_openai_params(lesson_s3_name, code)
+    ai_evaluations = get_openai_evaluations(openai_params)
 
     validate_evaluations(ai_evaluations, rubric)
 
@@ -111,22 +108,24 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def get_openai_evaluations(code, prompt, rubric, examples)
-    uri = URI.parse("#{CDO.ai_proxy_origin}/assessment")
-    form_data = {
-      "model" => "gpt-4-0613",
+  private def get_openai_params(lesson_s3_name, code)
+    params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
+    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
+    rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    examples = read_examples(lesson_s3_name)
+    params.merge(
       "code" => code,
       "prompt" => prompt,
       "rubric" => rubric,
       "examples" => examples.to_json,
-      "remove-comments" => "1",
-      "num-responses" => "3",
-      "num-passing-grades" => "2",
-      "temperature" => "0.2"
-    }
+    )
+  end
+
+  private def get_openai_evaluations(openai_params)
+    uri = URI.parse("#{CDO.ai_proxy_origin}/assessment")
     response = HTTParty.post(
       uri,
-      body: URI.encode_www_form(form_data),
+      body: URI.encode_www_form(openai_params),
       headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
       timeout: 120
     )
