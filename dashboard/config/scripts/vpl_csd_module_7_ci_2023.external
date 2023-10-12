@@ -4,19 +4,20 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Lesson 3: Updating Screen Elements
-**Estimated Time: 20 minutes**
+# Creating Apps with Devices - Lesson 4: Updating Screen Elements
 
-## Revisiting App Lab
+> ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/3" target="blank">U6AL4 Lesson Plan: Updating Screen Elements</a> (Circuit Playground)
+> ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/3" target="blank">U6BL4 Lesson Plan: Updating Screen Elements</a> (micro:bit)
 
-We have engaged with App Lab in previous modules for the "Interactive Animations and Games" & "The Design Process" units. In this section, you will continue to explore App Lab in Code Studio with Lesson 3: Updating Screen Elements. Let’s put on our “teacher hat” here as we identify the level types students will encounter in Lesson 3. Then, we will wear our "student hat" during the investigation that follows for Lesson 3 in order to prepare supporting students as they engage with App Lab.
+## App Lab
 
-**Note:** You may feel more comfortable with App Lab if you have taught or plan to teach the Design Process unit. If you need more practice using App Lap, consider taking more time during the next levels as well as going back to levels from the Design Process unit on code studio. Share any questions you want your facilitator to address in the synchronous workshop in the “Questions from Asynchronous Work” slide.
+##### Let's revisit App Lab and put on our “teacher hat” here as we identify the level types students will encounter in Lesson 4. Then, we will wear our "student hat" during the following investigation in order to prepare supporting students as they engage with App Lab.
 
+###### **Note:** You may feel more comfortable with App Lab if you have taught or plan to teach the Design Process unit. If you need more practice using App Lap, consider taking more time during the next levels as well as going back to levels from the Design Process unit on code studio. Share any questions you want your facilitator to address in the synchronous workshop in the “Questions from Asynchronous Work” slide.
 
 ## Level Types in Lesson 3
 
-Let's read about the different level types included in Lesson 3.  
+##### Let's read about the different level types included in Lesson 4.  
 
 * **Predict Level - Level 1** 
 	* Students read working code, discuss the code with a partner, and then predict what the code will do before running it themselves. 
