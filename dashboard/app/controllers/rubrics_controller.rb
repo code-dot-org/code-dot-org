@@ -1,9 +1,9 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations]
-  load_resource only: [:get_teacher_evaluations]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
+  load_resource only: [:get_teacher_evaluations, :run_ai_evaluations_for_user]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -83,6 +83,23 @@ class RubricsController < ApplicationController
         group_by(&:learning_goal_id).
         map {|_, eval_list| eval_list.max_by(&:submitted_at)}
     render json: teacher_evaluations.map(&:summarize_for_participant)
+  end
+
+  def run_ai_evaluations_for_user
+    permitted_params = params.transform_keys(&:underscore).permit(:id, :user_id)
+
+    user = User.find(permitted_params[:user_id]) || current_user
+    return head :forbidden unless user && (user.student_of?(current_user) || user == current_user)
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
+    return head :forbidden unless is_ai_experiment_enabled
+
+    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    return head :bad_request unless is_level_ai_enabled
+
+    EvaluateRubricJob.perform_later(user_id: user.id, script_level_id: script_level.id)
+    return head :ok
   end
 
   private
