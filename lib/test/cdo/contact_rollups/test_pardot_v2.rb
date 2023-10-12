@@ -72,7 +72,7 @@ class PardotV2Test < Minitest::Test
 
     # Eagerly send a batch-create request
     pardot_writer = PardotV2.new
-    submitted, errors = pardot_writer.batch_create_prospects contact[:email], contact[:data], true
+    submitted, errors = pardot_writer.batch_create_prospects(contact[:email], contact[:data], eager_submit: true)
 
     expected_submissions = [{email: contact[:email], db_Opt_In: 'Yes'}]
     assert_equal expected_submissions, submitted
@@ -136,7 +136,7 @@ class PardotV2Test < Minitest::Test
     # Eagerly submit an update request
     submissions, errors = pardot_writer.batch_update_prospects(
       *contact.values_at(:email, :pardot_id, :old_prospect_data, :new_contact_data),
-      true
+      eager_submit: true
     )
 
     expected_submissions = [

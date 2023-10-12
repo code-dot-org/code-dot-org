@@ -59,7 +59,7 @@ class Slack
 
   # @param channel_name [String] The channel to fetch the topic.
   # @return [String | nil] The existing topic, nil if not found.
-  def self.get_topic(channel_name, use_channel_map = false)
+  def self.get_topic(channel_name, use_channel_map: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
@@ -77,7 +77,7 @@ class Slack
   # @param use_channel_map [Boolean] Whether to look up channel_name in
   #   CHANNEL_MAP.
   # @return [Boolean] Whether the topic was successfully updated.
-  def self.update_topic(channel_name, new_topic, use_channel_map = false)
+  def self.update_topic(channel_name, new_topic, use_channel_map: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end

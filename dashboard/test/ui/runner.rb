@@ -40,7 +40,7 @@ COMMIT_HASH = RakeUtils.git_revision
 LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
-LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
+LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
 # Run a set of UI/Eyes tests according to the provided options.
