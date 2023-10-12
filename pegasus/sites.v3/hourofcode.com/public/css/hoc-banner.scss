@@ -96,7 +96,8 @@ section.banner {
   }
 
   h2 {
-    font-family: $gotham-regular;
+    font-family: var(--main-font);
+    font-weight: var(--regular-font-weight);
     font-size: 1.2em;
     line-height: 1.4;
     margin: 1em auto 2em;
@@ -120,7 +121,7 @@ section.banner {
   a {
     color: $neutral-white;
     text-decoration: underline;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
 
     &.ctabuttonatag {
       text-decoration: none;

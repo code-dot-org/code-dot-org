@@ -8,10 +8,11 @@ import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {BlockSvg} from 'blockly/core';
+import {BlockSvg, Workspace} from 'blockly/core';
 import {doAi} from './utils';
+import AiVisualizationPreview from './AiVisualizationPreview';
+import AiBlockPreview from './AiBlockPreview';
 import {AiOutput} from '../types';
-import AiPreview from './AiPreview';
 const Typist = require('react-typist').default;
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
@@ -157,16 +158,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
    * Generates blocks from the AI result in the main workspace, and attaches
    * them to each other.
    */
-  const generateBlocksFromResult = (): [BlockSvg, BlockSvg] => {
+  const generateBlocksFromResult = (
+    workspace: Workspace
+  ): [BlockSvg, BlockSvg] => {
     const params = JSON.parse(resultJson);
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
-      Blockly.getMainWorkspace().newBlock(
-        'Dancelab_setForegroundEffect'
-      ) as BlockSvg,
-      Blockly.getMainWorkspace().newBlock(
-        'Dancelab_setBackgroundEffectWithPalette'
-      ) as BlockSvg,
+      workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
+      workspace.newBlock('Dancelab_setBackgroundEffectWithPalette') as BlockSvg,
     ];
 
     // Foreground block.
@@ -183,7 +182,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleConvertBlocks = () => {
-    const blocksSvg = generateBlocksFromResult();
+    const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -416,7 +415,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
         {showPreview && (
           <div id="preview-area" className={moduleStyles.previewArea}>
-            <AiPreview blocks={generateBlocksFromResult()} />
+            <AiVisualizationPreview
+              blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
+            />
+            <AiBlockPreview
+              generateBlocksFromResult={generateBlocksFromResult}
+            />
           </div>
         )}
 
