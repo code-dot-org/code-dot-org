@@ -141,110 +141,110 @@ describe('Design System - Chips', () => {
     expect(spyOnChange).to.have.been.calledThrice;
   });
 
-  // it('Chips - doesn`t check chip on click if disabled', async () => {
-  //   const user = userEvent.setup();
-  //   const spyOnChange = sinon.spy();
-  //
-  //   let values = [];
-  //   const setValues = newValues => {
-  //     values = newValues;
-  //     spyOnChange(newValues);
-  //   };
-  //
-  //   const {rerender} = render(
-  //     <Chips
-  //       name="test-chips"
-  //       values={values}
-  //       options={options}
-  //       setValues={setValues}
-  //       label="Chips label"
-  //       disabled={true}
-  //     />
-  //   );
-  //
-  //   const chips = screen.getByTestId('chips-test-chips');
-  //   expect(chips).to.exist;
-  //
-  //   let chip1 = screen.getByDisplayValue('chip1');
-  //   let chip2 = screen.getByDisplayValue('chip2');
-  //   let chip3 = screen.getByDisplayValue('chip3');
-  //
-  //   expect(chip1.checked).to.be.false;
-  //   expect(chip1.disabled).to.be.true;
-  //   expect(chip2.checked).to.be.false;
-  //   expect(chip2.disabled).to.be.true;
-  //   expect(chip3.checked).to.be.false;
-  //   expect(chip3.disabled).to.be.true;
-  //
-  //   await user.click(chip1);
-  //
-  //   rerender(
-  //     <Chips
-  //       name="test-chips"
-  //       values={values}
-  //       options={options}
-  //       setValues={setValues}
-  //       label="Chips label"
-  //       disabled={true}
-  //     />
-  //   );
-  //
-  //   chip1 = screen.getByDisplayValue('chip1');
-  //   chip2 = screen.getByDisplayValue('chip2');
-  //   chip3 = screen.getByDisplayValue('chip3');
-  //
-  //   expect(chip1.checked).to.be.false;
-  //   expect(chip1.disabled).to.be.true;
-  //   expect(chip2.checked).to.be.false;
-  //   expect(chip2.disabled).to.be.true;
-  //   expect(chip3.checked).to.be.false;
-  //   expect(spyOnChange).to.not.have.been.called;
-  //
-  //   await user.click(chip2);
-  //
-  //   rerender(
-  //     <Chips
-  //       name="test-chips"
-  //       values={values}
-  //       options={options}
-  //       setValues={setValues}
-  //       label="Chips label"
-  //       disabled={true}
-  //     />
-  //   );
-  //
-  //   chip1 = screen.getByDisplayValue('chip1');
-  //   chip2 = screen.getByDisplayValue('chip2');
-  //   chip3 = screen.getByDisplayValue('chip3');
-  //
-  //   expect(chip1.checked).to.be.false;
-  //   expect(chip1.disabled).to.be.true;
-  //   expect(chip2.checked).to.be.false;
-  //   expect(chip2.disabled).to.be.true;
-  //   expect(chip3.checked).to.be.false;
-  //   expect(spyOnChange).to.not.have.been.called;
-  //
-  //   await user.click(chip1);
-  //
-  //   rerender(
-  //     <Chips
-  //       name="test-chips"
-  //       values={values}
-  //       options={options}
-  //       setValues={setValues}
-  //       label="Chips label"
-  //       disabled={true}
-  //     />
-  //   );
-  //
-  //   chip1 = screen.getByDisplayValue('chip1');
-  //   chip2 = screen.getByDisplayValue('chip2');
-  //   chip3 = screen.getByDisplayValue('chip3');
-  //
-  //   expect(chip1.checked).to.be.false;
-  //   expect(chip2.checked).to.be.false;
-  //   expect(chip2.disabled).to.be.true;
-  //   expect(chip3.checked).to.be.false;
-  //   expect(spyOnChange).to.not.have.been.called;
-  // });
+  it('Chips - doesn`t check chip on click if disabled', async () => {
+    const user = userEvent.setup();
+    const spyOnChange = sinon.spy();
+
+    let values = [];
+    const setValues = newValues => {
+      values = newValues;
+      spyOnChange(newValues);
+    };
+
+    const {rerender} = render(
+      <Chips
+        name="test-chips"
+        values={values}
+        options={options}
+        setValues={setValues}
+        label="Chips label"
+        disabled={true}
+      />
+    );
+
+    const chips = screen.getByTestId('chips-test-chips');
+    expect(chips).to.exist;
+
+    let chip1 = screen.getByDisplayValue('chip1');
+    let chip2 = screen.getByDisplayValue('chip2');
+    let chip3 = screen.getByDisplayValue('chip3');
+
+    expect(chip1.checked).to.be.false;
+    expect(chip1.disabled).to.be.true;
+    expect(chip2.checked).to.be.false;
+    expect(chip2.disabled).to.be.true;
+    expect(chip3.checked).to.be.false;
+    expect(chip3.disabled).to.be.true;
+
+    await user.click(chip1);
+
+    rerender(
+      <Chips
+        name="test-chips"
+        values={values}
+        options={options}
+        setValues={setValues}
+        label="Chips label"
+        disabled={true}
+      />
+    );
+
+    chip1 = screen.getByDisplayValue('chip1');
+    chip2 = screen.getByDisplayValue('chip2');
+    chip3 = screen.getByDisplayValue('chip3');
+
+    expect(chip1.checked).to.be.false;
+    expect(chip1.disabled).to.be.true;
+    expect(chip2.checked).to.be.false;
+    expect(chip2.disabled).to.be.true;
+    expect(chip3.checked).to.be.false;
+    expect(spyOnChange).to.not.have.been.called;
+
+    await user.click(chip2);
+
+    rerender(
+      <Chips
+        name="test-chips"
+        values={values}
+        options={options}
+        setValues={setValues}
+        label="Chips label"
+        disabled={true}
+      />
+    );
+
+    chip1 = screen.getByDisplayValue('chip1');
+    chip2 = screen.getByDisplayValue('chip2');
+    chip3 = screen.getByDisplayValue('chip3');
+
+    expect(chip1.checked).to.be.false;
+    expect(chip1.disabled).to.be.true;
+    expect(chip2.checked).to.be.false;
+    expect(chip2.disabled).to.be.true;
+    expect(chip3.checked).to.be.false;
+    expect(spyOnChange).to.not.have.been.called;
+
+    await user.click(chip1);
+
+    rerender(
+      <Chips
+        name="test-chips"
+        values={values}
+        options={options}
+        setValues={setValues}
+        label="Chips label"
+        disabled={true}
+      />
+    );
+
+    chip1 = screen.getByDisplayValue('chip1');
+    chip2 = screen.getByDisplayValue('chip2');
+    chip3 = screen.getByDisplayValue('chip3');
+
+    expect(chip1.checked).to.be.false;
+    expect(chip2.checked).to.be.false;
+    expect(chip2.disabled).to.be.true;
+    expect(chip3.checked).to.be.false;
+    expect(spyOnChange).to.not.have.been.called;
+  });
 });

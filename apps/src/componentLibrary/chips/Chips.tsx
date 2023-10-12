@@ -1,6 +1,8 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import _ from 'lodash';
-// import i18n from '@cdo/locale';
+const commonI18n = require('@cdo/locale');
+
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import styles from './chip.module.scss';
 
 export interface ChipProps {
@@ -9,9 +11,8 @@ export interface ChipProps {
   value: string;
   checked: boolean;
   required: boolean;
+  disabled?: boolean;
   onCheckedChange: (checked: boolean) => void;
-  // TODO:
-  invalidMessage?: string;
 }
 
 export const Chip: React.FunctionComponent<ChipProps> = ({
@@ -20,39 +21,41 @@ export const Chip: React.FunctionComponent<ChipProps> = ({
   value,
   checked,
   required,
+  disabled,
   onCheckedChange,
 }) => {
+  const inputRef = useRef<HTMLInputElement>(null);
   const uniqueId = `multi-${_.uniqueId()}`;
 
   useEffect(() => {
     // Reset validity on every render so it gets checked again.
     // Otherwise, removing the `required` attribute doesn't work as expected.
-    const input = document.querySelector(
-      `input#${uniqueId}`
-    ) as HTMLInputElement;
+    const input = inputRef.current;
     if (input) {
       input.setCustomValidity('');
     }
-  });
+  }, [inputRef]);
 
   return (
     <div>
       <input
+        ref={inputRef}
         id={uniqueId}
         type="checkbox"
         name={name}
         value={value}
         checked={checked}
         required={required}
+        disabled={disabled}
         onChange={e => {
           onCheckedChange(e.target.checked);
           // Reset validity so it gets checked again.
           e.target.setCustomValidity('');
         }}
         onInvalid={e => {
-          // TODO: Uncomment this
-          // props.invalidMessage
-          // e.target.setCustomValidity(i18n.chooseAtLeastOne());
+          (e.target as HTMLInputElement).setCustomValidity(
+            commonI18n.chooseAtLeastOne()
+          );
         }}
       />
       <label htmlFor={uniqueId}>{label}</label>
@@ -64,17 +67,18 @@ export interface ChipsProps {
   label?: string;
   name: string;
   required?: boolean;
+  disabled?: boolean;
   options: {value: string; label: string}[];
   values: string[];
   setValues: (values: string[]) => void;
-  invalidMessage?: string;
+  size?: ComponentSizeXSToL;
 }
 
 // NOTE: The `name` will show up in the DOM with an appended `[]`, so Rails
 // natively understands it as an array. Set `required` to `true` if you want
 // the user to have to select at least one of the options to proceed.
 // You probably want `values` to start out as an empty array.
-// TODO: add disabled, add different sizes
+// TODO: add different sizes
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
@@ -88,13 +92,15 @@ export interface ChipsProps {
  * Design System: Chips Component.
  * Can be used to render chips or as a part of bigger/more complex components (e.g. some forms).
  */
-const MultiSelectGroup: React.FunctionComponent<ChipsProps> = ({
+const Chips: React.FunctionComponent<ChipsProps> = ({
   label,
   name,
   required,
+  disabled,
   options,
   values,
   setValues,
+  size = 'm',
 }) => {
   const inputName = `${name}[]`;
 
@@ -116,6 +122,7 @@ const MultiSelectGroup: React.FunctionComponent<ChipsProps> = ({
             // are `checked`, or `false` if at least one of the options is
             // `checked`.
             required={required ? values.length === 0 : false}
+            disabled={disabled}
             onCheckedChange={checked => {
               if (checked) {
                 // Add this value to the `values` array.
@@ -132,15 +139,4 @@ const MultiSelectGroup: React.FunctionComponent<ChipsProps> = ({
   );
 };
 
-// function MultiSelectButton2({}) {}
-//
-// MultiSelectButton2.propTypes = {
-//   label: PropTypes.string.isRequired,
-//   name: PropTypes.string.isRequired,
-//   value: PropTypes.string.isRequired,
-//   checked: PropTypes.bool.isRequired,
-//   required: PropTypes.bool.isRequired,
-//   onCheckedChange: PropTypes.func.isRequired,
-// };
-
-export default MultiSelectGroup;
+export default Chips;

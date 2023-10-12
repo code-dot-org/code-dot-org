@@ -1,16 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Meta, Story} from '@storybook/react';
 
 import {Chips, ChipsProps} from './index';
 
-//
-// import {
-//   RadioButton,
-//   RadioButtonProps,
-//   RadioButtonsGroup,
-//   RadioButtonsGroupProps,
-// } from './index';
-//
 export default {
   title: 'DesignSystem/Chips Component',
   /**
@@ -30,15 +22,18 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: Story<ChipsProps> = args => <Chips {...args} />;
+const SingleTemplate: Story<ChipsProps> = args => {
+  const [values, setValues] = useState([]);
 
-// const MultipleTemplate: Story<RadioButtonsGroupProps> = args => (
-//   <>
-//     <RadioButtonsGroup {...args} />
-//   </>
-// );
+  return (
+    <Chips
+      {...args}
+      values={values}
+      setValues={setValues as (values: string[]) => void}
+    />
+  );
+};
 
-let values: string[] = ['chip2'];
 export const DefaultChips = SingleTemplate.bind({});
 DefaultChips.args = {
   label: 'Chips label',
@@ -51,37 +46,23 @@ DefaultChips.args = {
     {value: 'chip4', label: 'Chip4'},
     {value: 'chip5', label: 'Chip5'},
   ],
-  values: values,
-  setValues: (newValues: string[]) => (values = newValues),
-  invalidMessage: 'test',
 };
-//
-// export const DefaultRadioButtonGroup = MultipleTemplate.bind({});
-// DefaultRadioButtonGroup.args = {
-//   radioButtons: [
-//     {name: 'radio1', label: 'RadioButton 1', value: 'radio1'},
-//     {name: 'radio2', label: 'RadioButton 2', value: 'radio2'},
-//   ],
-// };
-//
-// export const DisabledRadioButton = MultipleTemplate.bind({});
-// DisabledRadioButton.args = {
-//   defaultValue: 'test-disabled-checked',
-//   radioButtons: [
-//     {
-//       name: 'test-disabled',
-//       value: 'test-disabled',
-//       label: 'Disabled radioButton',
-//       disabled: true,
-//     },
-//     {
-//       name: 'test-disabled-checked',
-//       value: 'test-disabled-checked',
-//       label: 'Disabled checked radioButton',
-//       disabled: true,
-//     },
-//   ],
-// };
+
+export const DisabledChips = SingleTemplate.bind({});
+DisabledChips.args = {
+  name: 'test-chips',
+  required: true,
+  disabled: true,
+  options: [
+    {value: 'chip1', label: 'Chip1'},
+    {value: 'chip2', label: 'Chip2'},
+    {value: 'chip3', label: 'Chip3'},
+    {value: 'chip4', label: 'Chip4'},
+    {value: 'chip5', label: 'Chip5'},
+  ],
+  // invalidMessage: 'test',
+};
+
 //
 // export const SizesOfRadioButton = MultipleTemplate.bind({});
 // SizesOfRadioButton.args = {
