@@ -146,11 +146,17 @@ export default class FunctionEditor {
       Blockly.getHiddenDefinitionWorkspace()
     );
 
+    console.log({existingProcedureBlock});
+
     if (existingProcedureBlock) {
+      // if (existingProcedureBlock.description) {
+      //   this.convertDescriptionToCommentBlock(existingProcedureBlock);
+      // }
       // If we already have stored data about the procedure, use that.
       const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
       );
+      console.log({existingData});
       // Disable events here so we don't copy an existing block into the hidden definition
       // workspace.
       Blockly.Events.disable();
@@ -395,4 +401,6 @@ export default class FunctionEditor {
     this.editorWorkspace.clear();
     Blockly.Events.enable();
   }
+
+  convertDescriptionToCommentBlock(block) {}
 }
