@@ -152,17 +152,13 @@ export default class FunctionEditor {
       Blockly.getHiddenDefinitionWorkspace()
     );
 
-    console.log({existingProcedureBlock});
-
     if (existingProcedureBlock) {
-      // if (existingProcedureBlock.description) {
-      //   this.convertDescriptionToCommentBlock(existingProcedureBlock);
-      // }
       // If we already have stored data about the procedure, use that.
       const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
       );
-      console.log({existingData});
+      this.convertDescriptionToCommentBlock(existingData);
+
       // Disable events here so we don't copy an existing block into the hidden definition
       // workspace.
       Blockly.Events.disable();
@@ -408,5 +404,23 @@ export default class FunctionEditor {
     Blockly.Events.enable();
   }
 
-  convertDescriptionToCommentBlock(block) {}
+  convertDescriptionToCommentBlock(serializedBlock) {
+    if (serializedBlock.extraState?.description) {
+      const existingStack = serializedBlock.inputs?.STACK;
+      const newStack = {
+        block: {
+          fields: {COMMENT: serializedBlock.extraState.description},
+          type: 'gamelab_comment',
+        },
+      };
+
+      if (!serializedBlock.inputs) {
+        serializedBlock.inputs = {};
+      } else if (existingStack) {
+        newStack.block.next = existingStack;
+      }
+      serializedBlock.inputs.STACK = newStack;
+      serializedBlock.extraState.description = undefined;
+    }
+  }
 }
