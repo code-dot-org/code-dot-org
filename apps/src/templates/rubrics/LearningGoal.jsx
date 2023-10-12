@@ -22,6 +22,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
+const invalidUnderstanding = -1;
+
 export default function LearningGoal({
   learningGoal,
   teacherHasEnabledAi,
@@ -35,7 +37,8 @@ export default function LearningGoal({
   const [errorAutosaving, setErrorAutosaving] = useState(false);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
-  const [displayUnderstanding, setDisplayUnderstanding] = useState(-1);
+  const [displayUnderstanding, setDisplayUnderstanding] =
+    useState(invalidUnderstanding);
   const teacherFeedback = useRef('');
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
@@ -114,7 +117,7 @@ export default function LearningGoal({
           if (json.understanding >= 0 && json.understanding !== null) {
             setDisplayUnderstanding(json.understanding);
           } else {
-            setDisplayUnderstanding(-1);
+            setDisplayUnderstanding(invalidUnderstanding);
           }
         })
         .catch(error => console.log(error));
@@ -153,12 +156,16 @@ export default function LearningGoal({
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && <AiToken />}
           {/*TODO: Display status of feedback*/}
-          {canProvideFeedback && aiEnabled && displayUnderstanding === -1 && (
-            <BodyThreeText>{i18n.approve()}</BodyThreeText>
-          )}
-          {canProvideFeedback && !aiEnabled && displayUnderstanding === -1 && (
-            <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
-          )}
+          {canProvideFeedback &&
+            aiEnabled &&
+            displayUnderstanding === invalidUnderstanding && (
+              <BodyThreeText>{i18n.approve()}</BodyThreeText>
+            )}
+          {canProvideFeedback &&
+            !aiEnabled &&
+            displayUnderstanding === invalidUnderstanding && (
+              <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
+            )}
           {displayUnderstanding >= 0 && (
             <BodyThreeText>
               {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
