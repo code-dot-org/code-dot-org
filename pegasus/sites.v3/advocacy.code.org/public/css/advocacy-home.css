@@ -65,7 +65,8 @@
 }
 
 .banner h1 {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   font-size: 36px;
   margin-top: 220px;
   margin-bottom: 10px;
