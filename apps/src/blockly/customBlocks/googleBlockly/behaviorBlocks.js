@@ -1,9 +1,7 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
-import {createAndCenterDefinitionBlock} from './proceduresBlocks';
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
@@ -11,9 +9,9 @@ import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
-const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
-  experiments.MODAL_FUNCTION_EDITOR
-);
+
+// TODO: Remove once creating behaviors is enabled with the function editor.
+const SHOW_NEW_BEHAVIOR_BUTTON = false;
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -33,10 +31,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type:
-          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
-            ? 'field_label'
-            : 'field_input',
+        type: useModalFunctionEditor ? 'field_label' : 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -160,11 +155,6 @@ GoogleBlockly.Extensions.registerMutator(
 export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
-  const newBehaviorButton = {
-    kind: 'button',
-    text: msg.createBlocklyBehavior(),
-    callbackKey: 'createNewBehavior',
-  };
   const behaviorDefinitionBlock = {
     kind: 'block',
     type: 'behavior_definition',
@@ -173,16 +163,15 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     },
   };
 
-  // TODO: Replace this with a call to open the behavior editor with a new block
-  const createNewBehavior = () =>
-    createAndCenterDefinitionBlock(behaviorDefinitionBlock);
-
   // If the modal function editor is enabled, we render a button to open the editor
   // Otherwise, we render a "blank" behavior definition block
   if (functionEditorOpen) {
-    // No-op -- cannot create new behaviors while the modal editor is open
-  } else if (useModalFunctionEditor) {
-    workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
+    // No-op - cannot create new behaviors while the modal editor is open
+  } else if (useModalFunctionEditor && SHOW_NEW_BEHAVIOR_BUTTON) {
+    const newBehaviorButton = getNewBehaviorButtonWithCallback(
+      workspace,
+      behaviorDefinitionBlock
+    );
     blockList.push(newBehaviorButton);
   }
 
@@ -271,3 +260,25 @@ function simplifyBlockStateForFlyout(block) {
 
   return modifiedBlock;
 }
+
+const getNewBehaviorButtonWithCallback = (
+  workspace,
+  behaviorDefinitionBlock
+) => {
+  const callbackKey = 'newBehaviorCallback';
+  const callback = createNewBehavior;
+
+  workspace.registerButtonCallback(callbackKey, callback);
+
+  return {
+    kind: 'button',
+    text: msg.createBlocklyBehavior(),
+    // TODO: Remove the alternate callback key once we're using the new function editor
+    callbackKey,
+  };
+};
+
+const createNewBehavior = () => {
+  // TODO: Refactor Blockly.functionEditor.newProcedureCallback to work with behaviors too.
+  console.warn('Creating behaviors is not currently supported');
+};

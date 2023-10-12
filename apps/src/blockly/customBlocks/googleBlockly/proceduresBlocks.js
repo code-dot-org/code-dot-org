@@ -1,18 +1,12 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 
-const BLOCK_OFFSET = 16;
-
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
-const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
-  experiments.MODAL_FUNCTION_EDITOR
-);
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -32,10 +26,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type:
-          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
-            ? 'field_label'
-            : 'field_input',
+        type: useModalFunctionEditor ? 'field_label' : 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -105,21 +96,9 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 
 // Respond to the click of a call block's edit button
 export const editButtonHandler = function () {
-  if (modalFunctionEditorExperimentEnabled) {
-    const procedure = this.getSourceBlock().getProcedureModel();
-    if (procedure) {
-      Blockly.functionEditor.showForFunction(procedure);
-    }
-  } else {
-    // If we aren't using the new modal function editor yet, just center the block that
-    // was clicked.
-    const workspace = this.getSourceBlock().workspace;
-    const name = this.getSourceBlock().getFieldValue('NAME');
-    const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
-    if (definition) {
-      workspace.centerOnBlock(definition.id);
-      definition.select();
-    }
+  const procedure = this.getSourceBlock().getProcedureModel();
+  if (procedure) {
+    Blockly.functionEditor.showForFunction(procedure);
   }
 };
 
@@ -256,18 +235,9 @@ const getNewFunctionButtonWithCallback = (
   workspace,
   functionDefinitionBlock
 ) => {
-  let callbackKey, callback;
-  if (modalFunctionEditorExperimentEnabled) {
-    callbackKey = 'newProcedureCallback';
-    callback = Blockly.functionEditor.newProcedureCallback;
-  } else {
-    callbackKey = 'createAndCenterFunctionDefinitionBlock';
-    // Everything here is place-holder code that should be replaced with a
-    // call to open the behavior editor with a new defintion block.
-    // Until then, we just create a block under all existing blocks on the
-    // main workspace.
-    callback = () => createAndCenterDefinitionBlock(functionDefinitionBlock);
-  }
+  const callbackKey = 'newProcedureCallback';
+  const callback = Blockly.functionEditor.newProcedureCallback;
+
   workspace.registerButtonCallback(callbackKey, callback);
 
   return {
@@ -276,34 +246,4 @@ const getNewFunctionButtonWithCallback = (
     // TODO: Remove the alternate callback key once we're using the new function editor
     callbackKey,
   };
-};
-
-const getLowestBlockBottomY = () => {
-  let lowestBlockBottomY = 0;
-  Blockly.getMainWorkspace()
-    .getTopBlocks()
-    .forEach(block => {
-      const blockY = block.getRelativeToSurfaceXY().y;
-      const blockBottomY = blockY + block.getHeightWidth().height;
-      if (blockBottomY > lowestBlockBottomY) {
-        lowestBlockBottomY = blockBottomY;
-      }
-    });
-  return lowestBlockBottomY;
-};
-
-// Creates a new definition block under all existing blocks on the main workspace,
-// scrolls to the block, and selects it
-export const createAndCenterDefinitionBlock = blockState => {
-  const newDefinitionBlock = Blockly.serialization.blocks.append(
-    {...blockState, x: BLOCK_OFFSET, y: getLowestBlockBottomY() + BLOCK_OFFSET},
-    Blockly.getMainWorkspace()
-  );
-
-  // Close the open toolbox flyout
-  Blockly.getMainWorkspace().hideChaff();
-
-  // Scroll to the new block and select it.
-  Blockly.getMainWorkspace().centerOnBlock(newDefinitionBlock.id);
-  newDefinitionBlock.select();
 };

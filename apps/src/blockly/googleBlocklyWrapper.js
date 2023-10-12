@@ -61,7 +61,6 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import experiments from '@cdo/apps/util/experiments';
 
 const options = {
   contextMenu: true,
@@ -699,12 +698,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
 
-    if (
-      options.useModalFunctionEditor &&
-      experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
-    ) {
-      // If the modal function editor is enabled for this level and
-      // the dcdo flag is on, initialize the modal function editor.
+    if (options.useModalFunctionEditor) {
+      // If the modal function editor is enabled for this level,
+      // initialize the modal function editor.
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(opt_options);
     }
