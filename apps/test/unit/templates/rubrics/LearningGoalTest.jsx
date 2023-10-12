@@ -190,6 +190,20 @@ describe('LearningGoal', () => {
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
   });
 
+  it('shows editable textbox for feedback when the teacher can provide feedback', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        canProvideFeedback={true}
+        studentLevelInfo={studentLevelInfo}
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+      />
+    );
+    expect(wrapper.find('textarea').props().disabled).to.equal(false);
+  });
+
   it('shows understanding in header if submittedEvaluation contains understand', () => {
     const wrapper = shallow(
       <LearningGoal

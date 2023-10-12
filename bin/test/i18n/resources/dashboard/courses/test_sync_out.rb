@@ -194,7 +194,7 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
     end
 
     it 'fixes course urls' do
-      expected_crowdin_file_content = <<-YAML.gsub(/^ {8}/, '')
+      expected_crowdin_file_content = <<~YAML
         ---
         en:
           data:
