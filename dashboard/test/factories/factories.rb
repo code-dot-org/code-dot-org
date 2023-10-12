@@ -1839,6 +1839,7 @@ FactoryBot.define do
   factory :learning_goal_ai_evaluation do
     association :learning_goal
     association :user, factory: :student
+    association :requester, factory: :teacher
     understanding {0}
   end
 end
