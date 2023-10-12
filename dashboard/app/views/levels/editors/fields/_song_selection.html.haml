@@ -1,11 +1,8 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#songSelection"}}
-  Song Selection
+  Limit Song Selection
 
 #songSelection.in.collapse
   %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
+    %a.select_none{href: '#'} Do not limit song selection
     (shift-click or cmd-click to select multiple).
   = f.select :song_selection, @level.class.hoc_songs, {}, {size: 12, multiple: true}
