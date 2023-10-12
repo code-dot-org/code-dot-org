@@ -199,6 +199,14 @@ h2.studentName {
   margin-bottom: 8px;
 }
 
+.submittedFeedback {
+  display: flex;
+  width: 170px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .learningGoalExpanded {
   padding: 1rem;
   display: flex;
