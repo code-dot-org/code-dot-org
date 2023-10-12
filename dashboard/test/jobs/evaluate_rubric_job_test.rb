@@ -13,6 +13,9 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1'
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2'
     assert_equal 2, @rubric.learning_goals.count
+
+    # Don't actually talk to S3 when running SourceBucket.new
+    AWS::S3.stubs :create_client
   end
 
   test "job succeeds on ai-enabled level" do
@@ -87,9 +90,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   # is deep inside SourceBucket, we stub out the entire SourceBucket class
   # rather than stubbing the S3 calls directly.
   private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
-    # Don't actually talk to S3 when running SourceBucket.new
-    AWS::S3.stubs :create_client
-
     fake_main_json = {source: code}.to_json
     fake_source_data = {
       status: 'FOUND',
