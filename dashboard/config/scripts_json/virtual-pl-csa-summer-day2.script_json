@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-06 16:59:27 UTC",
+    "serialized_at": "2023-10-11 21:46:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -312,6 +312,18 @@
       }
     },
     {
+      "key": "1a3da648-bfbd-43d4-8de3-89459585694d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a3da648-bfbd-43d4-8de3-89459585694d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day2"
+      }
+    },
+    {
       "key": "b6beb452-3ed5-4211-9a35-cee13bc832c6",
       "position": 1,
       "properties": {
@@ -332,6 +344,18 @@
         "lesson_activity.key": "03a88c90-3cac-4bbf-99a2-b84e5b7cb065",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day2"
+      }
+    },
+    {
+      "key": "bf2eeba0-2bb7-47f8-97d8-adbaaa82755d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf2eeba0-2bb7-47f8-97d8-adbaaa82755d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csa-summer-day2"
       }
     }
@@ -398,6 +422,28 @@
       }
     },
     {
+      "key": "ace7e365-f921-41c6-9722-bb8d10e6ceb9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "ace7e365-f921-41c6-9722-bb8d10e6ceb9",
+        "lesson_activity.key": "1a3da648-bfbd-43d4-8de3-89459585694d"
+      }
+    },
+    {
+      "key": "f917a4d8-e6b4-4171-9a64-da5f4c0aa2d8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Investigation Jigsaw"
+      },
+      "seeding_key": {
+        "activity_section.key": "f917a4d8-e6b4-4171-9a64-da5f4c0aa2d8",
+        "lesson_activity.key": "1a3da648-bfbd-43d4-8de3-89459585694d"
+      }
+    },
+    {
       "key": "04a60e77-a1df-4005-8257-f07ed31c6beb",
       "position": 1,
       "properties": {
@@ -416,13 +462,311 @@
         "activity_section.key": "c39e97ed-4d2d-4050-98f8-705bc2a2db81",
         "lesson_activity.key": "03a88c90-3cac-4bbf-99a2-b84e5b7cb065"
       }
+    },
+    {
+      "key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477",
+      "position": 1,
+      "properties": {
+        "name": "Asychronous Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477",
+        "lesson_activity.key": "bf2eeba0-2bb7-47f8-97d8-adbaaa82755d"
+      }
+    },
+    {
+      "key": "0573e29f-6391-408d-b259-f5dc40471416",
+      "position": 2,
+      "properties": {
+        "progression_name": "Module 2 Wrap-up"
+      },
+      "seeding_key": {
+        "activity_section.key": "0573e29f-6391-408d-b259-f5dc40471416",
+        "lesson_activity.key": "bf2eeba0-2bb7-47f8-97d8-adbaaa82755d"
+      }
+    },
+    {
+      "key": "c0dd369f-86fc-4e80-803d-b56c9efe1bd8",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c0dd369f-86fc-4e80-803d-b56c9efe1bd8",
+        "lesson_activity.key": "bf2eeba0-2bb7-47f8-97d8-adbaaa82755d"
+      }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Asynchronous Part 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2-async1intro"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "ace7e365-f921-41c6-9722-bb8d10e6ceb9"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day2-async1intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation Jigsaw"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async1jigsaw1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "f917a4d8-e6b4-4171-9a64-da5f4c0aa2d8"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day2_async1jigsaw1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation Jigsaw"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async1jigsaw"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "f917a4d8-e6b4-4171-9a64-da5f4c0aa2d8"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day2_async1jigsaw"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2-async2intro"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day2-async2intro"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async2frq"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day2_async2frq"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async2swyk"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day2_async2swyk"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async2U2overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day2_async2U2overview"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 2 Wrap-up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async2wrapup"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "0573e29f-6391-408d-b259-f5dc40471416"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day2_async2wrapup"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day2-async1intro",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2-async1intro"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "ace7e365-f921-41c6-9722-bb8d10e6ceb9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day2_async1jigsaw1",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async1jigsaw1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "f917a4d8-e6b4-4171-9a64-da5f4c0aa2d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day2_async1jigsaw",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async1jigsaw"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "f917a4d8-e6b4-4171-9a64-da5f4c0aa2d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day2-async2intro",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2-async2intro"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day2_async2frq",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async2frq"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day2_async2swyk",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async2swyk"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day2_async2U2overview",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async2U2overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "e37cdbcd-475e-4675-acd5-f3ab8c17c477"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day2_async2wrapup",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day2_async2wrapup"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day2",
+        "activity_section.key": "0573e29f-6391-408d-b259-f5dc40471416"
+      }
+    }
   ],
   "resources": [
     {
