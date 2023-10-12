@@ -92,6 +92,7 @@ class EvaluateRubricJob < ApplicationJob
     _owner_id, project_id = storage_decrypt_channel_id(channel_id)
 
     # record the ai evaluations to the database
+    # TODO: pass along and update the 'requester' to the correct id
     ActiveRecord::Base.transaction do
       ai_evaluations.each do |evaluation|
         learning_goal = rubric.learning_goals.all.find {|lg| lg.learning_goal == evaluation['Key Concept']}
@@ -99,6 +100,7 @@ class EvaluateRubricJob < ApplicationJob
         LearningGoalAiEvaluation.create!(
           user_id: user.id,
           learning_goal_id: learning_goal.id,
+          requester_id: user.id,
           project_id: project_id,
           project_version: project_version,
           understanding: understanding
