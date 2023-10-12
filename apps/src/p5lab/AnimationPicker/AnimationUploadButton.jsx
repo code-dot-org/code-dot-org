@@ -36,7 +36,8 @@ export function UnconnectedAnimationUploadButton({
   // to share their project if they upload -- we also save this state to their project and don't show the warning again.
   const updateWarningState = () => {
     project.setInRestrictedShareMode(true);
-    // redux setting, for use in share/remix
+    // keep track of whether a user has entered restricted share mode in redux
+    // so that we can restrict sharing/remixing appropriately
     refreshInRestrictedShareMode();
   };
 
