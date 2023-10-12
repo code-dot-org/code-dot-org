@@ -224,6 +224,23 @@ class Section < ApplicationRecord
     end
   end
 
+  after_save :ensure_owner_is_active_instructor
+  def ensure_owner_is_active_instructor
+    return if user.blank?
+
+    si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
+    if si.blank?
+      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
+    elsif si.deleted?
+      si.restore
+      si.status = :active
+      si.save!
+    elsif si.status != 'active'
+      si.status = :active
+      si.save!
+    end
+  end
+
   # return a version of self.students in which all students' names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
