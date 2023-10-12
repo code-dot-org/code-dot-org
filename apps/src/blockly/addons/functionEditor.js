@@ -2,8 +2,8 @@ import {
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
-import {flyoutCategory as functionsFlyoutCategory} from '../customBlocks/googleBlockly/proceduresBlocks';
-import {flyoutCategory as behaviorsFlyoutCategory} from '../customBlocks/googleBlockly/behaviorBlocks';
+import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
 import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_CLOSE_ID,
@@ -11,9 +11,9 @@ import {
   MODAL_EDITOR_NAME_INPUT_ID,
   MODAL_EDITOR_DESCRIPTION_INPUT_ID,
 } from './functionEditorConstants';
+import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 
-// This class is a work in progress. It is used for the modal function editor,
-// which is used by Sprite Lab and Artist.
+// This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
   constructor(
     opt_msgOverrides,
@@ -60,7 +60,7 @@ export default class FunctionEditor {
 
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
-    this.editorWorkspace.addChangeListener(Blockly.Events.disableOrphans);
+    this.editorWorkspace.addChangeListener(disableOrphans);
 
     // Close handler
     document
@@ -122,6 +122,10 @@ export default class FunctionEditor {
     this.hide();
   }
 
+  getWorkspaceId() {
+    return this.editorWorkspace.id;
+  }
+
   // TODO
   renameParameter(oldName, newName) {}
 
@@ -132,8 +136,10 @@ export default class FunctionEditor {
    * Show the given procedure in the function editor. Either load from
    * the procedure workspace if it already exists, or create a new block.
    * @param {Procedure} procedure The procedure to show.
+   * @param {string} procedureType The type of procedure to show. Only used if the
+   * procedure does not already exist.
    */
-  showForFunction(procedure) {
+  showForFunction(procedure, procedureType) {
     this.clearEditorWorkspace();
 
     this.nameInput.value = procedure.getName();
@@ -163,7 +169,7 @@ export default class FunctionEditor {
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
         kind: 'block',
-        type: 'procedures_defnoreturn',
+        type: procedureType,
         extraState: {
           procedureId: procedure.getId(),
         },
@@ -206,7 +212,7 @@ export default class FunctionEditor {
     return name;
   }
 
-  newProcedureCallback = () => {
+  newProcedureCallback = procedureType => {
     const name = this.getNameForNewFunction();
     const hiddenProcedure = new ObservableProcedureModel(
       Blockly.getHiddenDefinitionWorkspace(),
@@ -242,7 +248,7 @@ export default class FunctionEditor {
     this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
     Blockly.Events.enable();
 
-    this.showForFunction(hiddenProcedure);
+    this.showForFunction(hiddenProcedure, procedureType);
   };
 
   handleDelete() {
