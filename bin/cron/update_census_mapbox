@@ -56,15 +56,10 @@ def main
     "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"census\" --force #{file.path}"
   )
   upload_successful = false
-  puts 'Output'
-  puts stderr
-  puts tippecanoe_status
   if tippecanoe_status.success?
-    puts 'SUCCESS'
     upload_successful = upload_maptiles(tiles.path, CDO.mapbox_upload_tileset)
   end
   unless tippecanoe_status.success? && upload_successful
-    puts 'FAIL'
     Honeybadger.notify(
       error_message: "Updating Census map on Mapbox failed",
       error_class: "Census Map Update Failure",
