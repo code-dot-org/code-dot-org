@@ -22,6 +22,7 @@
 #  index_lti_integrations_on_platform_id  (platform_id)
 #
 class LtiIntegration < ApplicationRecord
+  acts_as_paranoid
   validates :platform_id, uniqueness: true
   validates :issuer, presence: true
   validates :client_id, presence: true
@@ -31,6 +32,8 @@ class LtiIntegration < ApplicationRecord
   validates :access_token_url, presence: true
 
   before_create :set_uuid
+
+  has_many :lti_deployments, dependent: :destroy
 
   def set_uuid
     self.platform_id = SecureRandom.uuid
