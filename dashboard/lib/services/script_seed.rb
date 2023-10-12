@@ -36,7 +36,6 @@ module Services
     # @return [String] the JSON representation
     def self.serialize_seeding_json(script)
       script = Unit.with_seed_models.find(script.id)
-      script.reload
 
       # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
       my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
