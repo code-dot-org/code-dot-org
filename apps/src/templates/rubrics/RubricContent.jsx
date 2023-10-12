@@ -121,7 +121,7 @@ export default function RubricContent({
     <div className={style.rubricContent}>
       <div>
         {!!studentLevelInfo && (
-          <Heading2 style={{marginBottom: '8px'}}>
+          <Heading2 className={style.studentName}>
             {studentLevelInfo.name}
           </Heading2>
         )}

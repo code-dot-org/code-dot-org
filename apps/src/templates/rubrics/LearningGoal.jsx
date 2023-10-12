@@ -234,7 +234,7 @@ export default function LearningGoal({
         </div>
       </summary>
       {/*TODO: Pass through data to child component*/}
-      <div className={style.expandedBorder}>
+      <div>
         {teacherHasEnabledAi && !!studentLevelInfo && (
           <div className={style.openedAiAssessment}>
             <AiAssessment
