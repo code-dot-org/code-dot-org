@@ -476,7 +476,7 @@ es:
           description_short: Aprende a programar droides y crea tu propio juego de La guerra de las galaxias en una galaxia muy, muy lejana.
           student_description: Aprende a programar droides y crea tu propio juego de La guerra de las galaxias en una galaxia muy, muy lejana.
         mc:
-          title: Hora de Code de Minecraft
+          title: Aventurero de Minecraft
           description: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
           description_short: Explora un mundo de Minecraft, a través de Code.
           student_description: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
@@ -7859,3 +7859,7 @@ es:
           lessons:
             lesson-1:
               name: Nuestro Código Ético de la Inteligencia Artificial
+        virtual-pl-csa-summer-2024-day1:
+          title: Día 1
+        virtual-pl-csa-summer-day2:
+          title: Día 2

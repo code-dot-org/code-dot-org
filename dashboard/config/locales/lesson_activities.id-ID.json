@@ -11805,7 +11805,7 @@
           "name": "Pemanasan"
         },
         "4e77b45e-308c-45c5-88f1-af38ef19c3e0": {
-          "name": "Jaringan Saraf"
+          "name": "Neural Networks"
         },
         "cf922df8-aba4-4407-8d84-3209452aef00": {
           "name": "Penutupan"
@@ -11820,7 +11820,7 @@
           "name": "Penutupan"
         },
         "9ed44af4-506a-4faf-94b6-fd4e7b8bcd8c": {
-          "name": "(Opsional) Aktivitas Ekstensi"
+          "name": "(Opsional) Kegiatan Ekstensi"
         },
         "5cd25d57-e922-4ed0-893d-516bcae6c4d2": {
           "name": "Pemanasan"
@@ -11832,7 +11832,7 @@
           "name": "Penutupan"
         },
         "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d": {
-          "name": "(Opsional) Aktivitas GAN"
+          "name": "(Opsional) Kegiatan GAN"
         },
         "f9582c25-a034-4e8d-b042-69dba2874ab3": {
           "name": "Pemanasan"
@@ -11862,10 +11862,10 @@
           "name": "Data Pelatihan dan Bias"
         },
         "792cc1d7-8c32-478d-ab2f-49ef09d3e832": {
-          "name": "Bagaimana Jaringan Neural Bekerja"
+          "name": "Cara Kerja Neural Networks"
         },
         "7ce479b3-0fe8-4697-8f6f-9ae87a524b37": {
-          "name": "Bagaimana Computer Vision Bekerja"
+          "name": "Cara Kerja Computer Vision"
         },
         "fbfdf89d-c6bb-464e-9a2a-246c34f33b55": {
           "name": "Apakah AI Memiliki Kreativitas Dan Imajinasi"

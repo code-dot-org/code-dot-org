@@ -1,0 +1,25 @@
+%h3.special_heading{:style=>'margin-top: 20px'}
+  =I18n.t :gender
+
+- percentBoys = 51
+- percentGirls = 100 - percentBoys
+- ['girls', 'boys'].each do |gender|
+  - colorClass = "color_#{gender}"
+  - backgroundColorClass = "backgroundcolor_#{gender}"
+  - percent = gender == "boys" ? percentBoys : percentGirls
+  - pixelwidth = percent * 2.6
+
+  %div{:style=>'position: relative; width: 100%'}
+
+    %div{:style=>"float:left; position:absolute", :class=>"#{colorClass}"}
+      =I18n.t gender.to_sym
+
+    %div{:style=>'float:left; margin-left: 0px; width: 100%; position: absolute; left: 0; padding-left: 50px; padding-right: 90px;box-sizing: border-box'}
+      %div{:style=>"width:100%; position: relative"}
+        %div{:style=>"display: inline-block;  background-color: rgb(91,99,114); width: 100%; height: 22px; border-radius: 5px 5px 5px 5px; position: absolute;"} &nbsp;
+        %div{:style=>"display: inline-block; position: absolute; top: 0px; width: #{percent}%; height: 22px; border-radius: 5px 5px 5px 5px;", :class=>"#{backgroundColorClass}"} &nbsp;
+
+    %div{:style=>"float:right; position:absolute; right: 40px; color: grey; font-size: 18px"}
+      = "#{percent}%"
+
+  %div{:style=>'height:30px'}

@@ -37,16 +37,10 @@ class TeacherSections extends Component {
       hiddenStudentSectionIds,
     } = this.props;
 
-    const hasSections =
-      this.props.studentSectionIds?.length > 0 ||
-      this.props.plSectionIds?.length > 0;
-
     return (
       <div id="classroom-sections">
         <ContentContainer heading={i18n.createSection()}>
-          {this.props.asyncLoadComplete && (
-            <SetUpSections hasSections={hasSections} />
-          )}
+          <SetUpSections />
           {!this.props.asyncLoadComplete && (
             <Spinner size="large" style={styles.spinner} />
           )}

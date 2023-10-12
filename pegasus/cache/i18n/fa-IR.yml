@@ -45,8 +45,9 @@ fa-IR:
   appinventor_platformtext: مرورگرهای مدرن + آندروید
   appinventor_shortdescription: برنامه خودت را بساز( فقط آندروید)
   applab_gradelevel: سنین سیزده به بالا
-  applab_name: آزمایشگاه نرم افزار
+  applab_name: لابراتوار اپ
   applab_tile_start_tutorial: شروع
+  aquatic_name: 'ماین‌کرفت: سفر آبی'
   arduino_beyond_gradelevel: دبیرستان +
   arduino_beyond_longdescription: Arduino یک پلت فرم مشهور است که طراحی شده تا به
     طراحان و هنرمندان اجازه دهد با سنسور های واقعی،LED ها، buzzer ها و چیز های بیشتری
@@ -61,7 +62,7 @@ fa-IR:
   artist_name: هنرمند
   artist_shortdescription: با نقاش چند عکس و طرح باحال بکش!
   beginner: مبتدی
-  beyond_an_hour: فراتر از یک ساعت کد نویسی
+  beyond_an_hour: فراتر از ساعت کدنویسی
   beyond_hoc: فراتر از یک ساعت
   beyond_hour_message: همینطور با <a href='http://studio.code.org'>دوره های دیگر</a>
     ادامه دهید، یا گزینه های بیشتری را در مورد <a href='/learn/beyond'>یادگیری فراتر
@@ -154,7 +155,7 @@ fa-IR:
   class_submission_out_of_school_multi-week_workshop: کارگاه چند هفته ای
   class_submission_out_of_school_other: موارد دیگر خارج از مدرسه
   class_submission_out_of_school_summer_camp: اردوی تابستانه
-  classicmaze_name: هزارتوی کلاسیک
+  classicmaze_name: ماز معروف و قدیمی
   code_hoc_coming: ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   codea_beyond_gradelevel: دبیرستان +
@@ -244,7 +245,7 @@ fa-IR:
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
     شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس
     است.
-  codeintl_name: هزارتوی کلاسیک
+  codeintl_name: ماز معروف و قدیمی
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   codemonkey_gradelevel: مدارس راهنمایی به بالا
@@ -272,7 +273,7 @@ fa-IR:
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
     شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس
     است.
-  codeorg_name: هزارتوی کلاسیک
+  codeorg_name: ماز معروف و قدیمی
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeorg_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   codespark_gradelevel: دبستان
@@ -338,7 +339,7 @@ fa-IR:
   course2_gradelevel: سنین 6 به بالا (خواندن لازم است)
   course2_name: دوره 2
   course3_gradelevel: سنین 8 به بالا (پس از دوره 2)
-  course3_name: دورۀ 3
+  course3_name: دوره 3
   course4_gradelevel: سنین 10 به بالا (پس از دوره 3)
   course4_name: دوره 4
   coursea-2017_gradelevel: سنین 4 تا 7
@@ -346,36 +347,36 @@ fa-IR:
   coursea-2019_gradelevel: سنین 4 تا 7
   coursea-2020_gradelevel: سنین 4 تا 7
   coursea-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   coursea-2021_gradelevel: سنین 4 تا 7
   coursea-2021_name: دوره A ‏(2021)
   coursea-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   coursea-2022_gradelevel: سنین 4 تا 7
   coursea-2022_name: دوره A ‏(2022)
   coursea-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   coursea_gradelevel: سنین 4 تا 7
   courseb-2017_gradelevel: سنین 5-8
   courseb-2018_gradelevel: سنین 5-8
   courseb-2019_gradelevel: سنین 5-8
   courseb-2020_gradelevel: سنین 5-8
   courseb-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   courseb-2021_gradelevel: سنین 5-8
   courseb-2021_name: دوره B ‏(2021)
   courseb-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   courseb-2022_gradelevel: سنین 5-8
   courseb-2022_name: دوره B ‏(2022)
   courseb-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   courseb_gradelevel: سنین 5-8
   coursec-2017_gradelevel: سنین 6-10
   coursec-2018_gradelevel: سنین 6-10
@@ -583,7 +584,7 @@ fa-IR:
   dashboard_navigation_section_teacher_progress: پیشرفت دوره ی شما
   dashboard_navigation_student: 'دانش آموز: %{student_name}'
   dashboard_navigation_view_assessments: ارزیابی
-  dashboard_navigation_view_progress: پیشرفت
+  dashboard_navigation_view_progress: روند
   dashboard_navigation_view_stats: آمار
   dashboard_overview: مرور کلی
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
@@ -600,7 +601,7 @@ fa-IR:
   dashboard_progress_submitted: ثبت شده
   dashboard_puzzle: پازل
   dashboard_puzzle_solving: 'حل پازل:'
-  dashboard_question: سوال
+  dashboard_question: سؤال
   dashboard_sections_account_creation_question: چه کسی یک حساب کاربری دانش آموزی ساخته
     است؟
   dashboard_sections_choose_secret: اگر شما می خواهید به دانش آموزان خود حساب کاربری
@@ -637,7 +638,7 @@ fa-IR:
   dashboard_sections_switch_section: بخش تعویض
   dashboard_sections_table_code: بخش کد
   dashboard_sections_table_course: دوره
-  dashboard_sections_table_grade: درجه
+  dashboard_sections_table_grade: مقطع تحصیلی
   dashboard_sections_table_pairing_allowed: برنامه نویسی اشتراکی
   dashboard_sections_table_secret: نوع ورود
   dashboard_sections_table_section: بخش
@@ -664,7 +665,7 @@ fa-IR:
     <b>تصویر</b> تغییر دهید.
   dashboard_students_print_info: کارت های اطلاعات ورود دانش آموزان خود راه چاپ نمایید.
   dashboard_students_print_page: چاپ این صفحه
-  dashboard_students_progress: پیشرفت
+  dashboard_students_progress: روند
   dashboard_students_reset_picture: شما در هر زمان میتوانید عکس محرمانه هر دانش آموز
     را تغییر دهید با انتخاب <b>نمایش محرمانه</b> و سپس <b>تغییر محرمانه</b>. با انجام
     این کار، یک عکس محرمانه جدید برای استفاده آن دانش آموز در هنگام ورودش به سیستم
@@ -681,7 +682,7 @@ fa-IR:
     اشتراک بگذارید:'
   dashboard_students_total_lines: خطوطی از کد
   dashboard_students_url: آدرس اینترنتی
-  dashboard_submission_in_progress: در حال پیش رفت
+  dashboard_submission_in_progress: در حال اجرا
   dashboard_submission_submitted: ثبت‌شده
   dashboard_teacher: دبیر
   dashboard_teacher_worksheet: ورقه کار معلم
@@ -742,9 +743,9 @@ fa-IR:
     به اشتراک بگذاری!
   frozen_name: کدنویسی با آنا و السا
   frozen_platformtext: مرورگرهای جدید +تبلت
-  frozen_shortdescription: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
-    و زیبایی یخ را کشف می کنند استفاده کنیم.
-  gamelab_name: کارگاه بازی سازی
+  frozen_shortdescription: بیایید از کدنویسی استفاده کنیم تا به آنا و السا در کشف
+    جادو و زیبایی یخ‌ها بپیوندیم.
+  gamelab_name: لابراتوار بازی
   gender: جنسیت
   get_a_certificate_message: ما گواهی تحصیل و اطلاعات در مورد چگونگی <a/> یادگیری
     فراتراز یک ساعت <'a href='/learn/beyond> را برای شما ارسال خواهیم کرد
@@ -817,7 +818,7 @@ fa-IR:
   header_legal_tos: شرایط
   header_my_dashboard: دَشبورد من
   header_professional_learning: یادگیری پیشرفته
-  header_project_gallery: پروژه ها
+  header_project_gallery: پروژه‌ها
   header_report_bug: گزارش مشکل
   header_sections: بخش‌ها
   header_stats: آمار
@@ -828,7 +829,7 @@ fa-IR:
   help_recruit_coders: به ما در پیدا کردنِ برنامه‌نویس‌های بیشتر برای گروهتان کمک
     کنید!
   help_translate: کمک به ما در ترجمه.
-  hero_name: 'ماینکرافت: سفر قهرمانان'
+  hero_name: 'ماین‌کرفت: سفر قهرمانان'
   hoc2014_everyone: همه
   hoc2014_heading: به <a href="http://hourofcode.com">ساعتِ کدنویسی</a> بپیوندید <br/>از
     8 تا 14 دسامبر  2014<br/>
@@ -850,11 +851,14 @@ fa-IR:
     ساعت برنامه‌نویسی و نسخه ویژه خلاقیت خودت، هر چیزی که ممکن است باشد، شروع کن.
     ویدیو را مشاهده کن.
   hoc2018_dance_amazon_about_future_engineer_button: بیشتر بیاموزید
+  hoc2018_dance_keep_on_dancing_box_title: به رقصیدن ادامه دهید
   hoc2018_dance_party_box_title: مهمانی رقص
   hoc2018_dance_party_button: شروع
   hoc2018_dance_party_main_heading: مهمانی رقص
   hoc2018_dance_teacher_resources_tile1_button: طرح درس
-  hoc2018_dance_teacher_resources_tile2_button: فعالیت کلاسی
+  hoc2018_dance_teacher_resources_tile2_button: فعالیت بدون کامپیوتر
+  hoc2018_dance_teacher_resources_tile2_title: مهمانی رقص بدون کامپیوتر
+  hoc2018_mc_adventurer_title: ماجراجوی ماین‌کرفت
   hoc2018_mc_aquatic_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
     داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
   hoc2018_mc_back: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!
@@ -863,6 +867,7 @@ fa-IR:
   hoc2018_mc_continue_learning: ادامه یادگیری با ماینکرافت.
   hoc2018_mc_designer_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی
     ماینکرافت شما
+  hoc2018_mc_designer_title: طراح ماین‌کرفت
   hoc2018_mc_educators_box2_button: دانلود
   hoc2018_mc_go_to_mc_education: رفتن به آموزش Minecraft
   hoc2018_mc_hero_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
@@ -988,7 +993,7 @@ fa-IR:
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_blurb_students: تمام آموزش های ما را کشف کنید
   homepage_slot_text_course4: دوره 4
-  homepage_slot_text_flappy: کدنویسی Flappy
+  homepage_slot_text_flappy: کدنویسی فلاپی
   homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_hoc: ساعتی با کدنویسی
   homepage_slot_text_link_buy: شرکت کنید
@@ -1023,7 +1028,7 @@ fa-IR:
   hour_of_code: ساعت کد نویسی
   hourofcode_gradelevel: سنین 4 تا 104
   hourofcode_longdescription: جا نگهدار برای code.org/hoc جدید
-  hourofcode_name: هزارتوی کلاسیک
+  hourofcode_name: ماز معروف و قدیمی
   hourofcode_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   hourofcode_shortcode: کد
   hourofcode_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
@@ -1113,7 +1118,7 @@ fa-IR:
     fuzzfamily مقدمه ای بر منطق برنامه نویسی برای کودکان 5 سال به بالا است. معلم باید
     بازی را توضیح دهد، سپس دانش آموزان برنامه یک شریک را می نویسند تا درس یک مانع
     ساده را کامل کنند. '
-  kodableunplugged_platformtext: Unuplugged
+  kodableunplugged_platformtext: بدون کامپیوتر
   kodableunplugged_shortdescription: یک تمرین بدون اتصال جالب
   kodu_beyond_gradelevel: سنین بالای 8
   kodu_beyond_longdescription: Kodu به کودکان اجازه می دهد بازی ها را با استفاده از
@@ -1201,17 +1206,21 @@ fa-IR:
     حرکات جدید آموزش بدهد خودتان هم بیشتر یاد بگیرید!
   mc_gradelevel: سنین 4 تا 104
   mc_longdescription: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
+  mc_name: ساعت برنامه‌نویسی ماین‌کرفت
   mc_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   mc_shortdescription: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین
     کرافت
+  minecraft_adventurer: ماجراجوی ماین‌کرفت
   minecraft_adventurer_button: شروع
   minecraft_agent_button: شروع
   minecraft_agent_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
     داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
+  minecraft_designer: طراح ماین‌کرفت
   minecraft_designer_button: شروع
   minecraft_designer_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی
     ماینکرافت شما
-  minecraft_name: ماینکرفت
+  minecraft_name: ماین‌کرفت
+  minecraft_subtitle: ساعت برنامه‌نویسی ماین‌کرفت
   mobile_devices: آموزش هایی برای دستگاه های همراه
   monstercoding_gradelevel: سنین 5 تا 13
   monstercoding_platformtext: مرورگرهای وب مدرن, iOS, اندروید
@@ -1269,7 +1278,7 @@ fa-IR:
   playlab_longdescription: با Play Lab یک داستان خلق کنید یا یک بازی بسازید! حیوانات،
     دزدان دریایی، زامبی ها، نینجا ها، و شخصیت های بسیار بیشتری را مجبور به حرکت کنید،
     صدا بسازید، امتیاز بگیرید، و حتی گلوله های آتشی پرتاب کنید!
-  playlab_name: آزمایشگاه بازی
+  playlab_name: لابراتوار بازی
   playlab_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   playlab_shortdescription: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
   pocketcode_beyond_gradelevel: مدارس راهنمایی به بالا
@@ -1280,6 +1289,7 @@ fa-IR:
   pocketcode_beyond_platformtext: نرم افزار موبایل
   pocketcode_beyond_shortdescription: سعی کنید برای یجاد یک بازی بر روی گوشی های هوشمند
     و به اشتراک گذاری با دوستان !
+  pre-express-2022_name: دوره اکسپرس برای پیش دبستانیها (2022)
   previous: قبلی
   print_all: همه چیز را پرینت بگیرید
   print_ice_art: هنر یخیتان را پرینت بگیرید
@@ -1307,7 +1317,7 @@ fa-IR:
     بازی کردن گونه های مختلف سنگ، کاغذ، قیچی، و مشاهده ی نتایج به عنوان تجربه های
     مدل سازی متفاوت، بیاموزند مدل سازی و شبیه سازی چگونه کار می کند.
   projguts_name: سنگ، کاغذ، قیچی
-  projguts_platformtext: Unuplugged
+  projguts_platformtext: بدون کامپیوتر
   projguts_shortdescription: مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان
     کنید
   quorum_gradelevel: مدارس راهنمایی به بالا
@@ -1384,12 +1394,12 @@ fa-IR:
   starwars_blocks_description: استفاده از کشیدن و رها کردن بلوک.
   starwars_blocks_specs: بسیاری از زبان | مرورگرهای مدرن, تلفن های هوشمند, تبلت |
     سنین 6-106
-  starwars_blocks_title: بلوک ها
+  starwars_blocks_title: بلوک‌ها
   starwars_gradelevel: سنین 4 تا 104
   starwars_javascript_description: استفاده از کشیدن و رها کردن بلوک و جاوا اسکریپت.
   starwars_javascript_specs: فقط انگلیسی | مرورگرهای مدرن | سنین 11 +
   starwars_javascript_title: ویژوال بیسیک
-  starwars_name: 'جنگ ستارگان: ساختمان کهکشان با کد'
+  starwars_name: 'جنگ ستارگان: ساختن یک کهکشان با کد'
   starwars_platform_text: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   starwars_platformtext: مرورگرهای جدید +تبلت
   stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک
@@ -1447,7 +1457,7 @@ fa-IR:
   thinkersmith2_longdescription: دانش آموزان درباره ی نمایش و ذخیره ی حروف در منطق
     دودویی، با عملکرد روشن و خاموش می آموزند. در پایان، بچه های کلاس می توانند حرف
     اول اسم و فامیلشان را کد کنند تا با خودشان به خانه ببرند.
-  thinkersmith2_platformtext: Unuplugged
+  thinkersmith2_platformtext: بدون کامپیوتر
   thinkersmith2_shortdescription: یادبگیریم  که کامپیوتر ها چگونه از 0 ها و 1ها برای
     نشان دادن اطلاعات استفاده میکنند.
   thinkersmith_gradelevel: همه‌ی سنین
@@ -1458,13 +1468,13 @@ fa-IR:
     من" برای فعایت گروهی بهترین عملکرد را دارد و یک کتاب کار آموزگار برای استفاده
     ی کلاسی دارد.
   thinkersmith_name: دوستان رباتی من
-  thinkersmith_platformtext: Unuplugged
+  thinkersmith_platformtext: بدون کامپیوتر
   thinkersmith_shortdescription: آموزش بدون اتصال برای یک گروه با هیچ وسیله ای
   thinkersmithspanish_longdescription: با استفاده از "واژگان رباتی" از پیش تعیین شده
     دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون
     این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار
     ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.
-  thinkersmithspanish_platformtext: Unuplugged
+  thinkersmithspanish_platformtext: بدون کامپیوتر
   third_party_curriculum: برنامه آموزشی
   third_party_gradelevel_2to8: رده ی سنی  2-8
   third_party_gradelevel_4to12: رده ی سنی 4-12
@@ -1601,14 +1611,14 @@ fa-IR:
   user_header_create: 'ایجاد '
   user_header_dance: مهمانی رقص
   user_header_flappy: فلاپی
-  user_header_gamelab: کارگاه بازی سازی
+  user_header_gamelab: لابراتوار بازی
   user_header_label: سلام %{username}
   user_header_logout: خروج
-  user_header_minecraft: ماینکرفت
-  user_header_playlab: آزمایشگاه بازی
+  user_header_minecraft: ماین‌کرفت
+  user_header_playlab: لابراتوار بازی
   user_header_settings: حساب کاربری من
   user_header_signin: ورود
-  user_header_spritelab: آزمایشگاه اسپرایت
+  user_header_spritelab: لابراتوار اسپرایت
   user_header_team: تیم
   user_header_view_all: مشاهده همه پروژه‌ها...
   user_header_view_my_projects: پروژه های من را ببینید

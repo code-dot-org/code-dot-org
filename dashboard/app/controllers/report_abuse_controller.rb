@@ -1,6 +1,8 @@
 require 'json'
 require 'httparty'
 
+UNKNOWN_ACCOUNT_ZENDESK_REPORT_EMAIL = 'automated_abuse_report@code.org'
+
 class ZendeskError < StandardError
   attr_reader :error_details
 
@@ -41,9 +43,15 @@ class ReportAbuseController < ApplicationController
       name = current_user&.name
       email = current_user&.email
       age = current_user&.age
-      abuse_url = CDO.studio_url(params[:abuse_url]) # reformats url
+      abuse_url = CDO.studio_url(params[:abuse_url], CDO.default_scheme)
 
-      send_abuse_report(name, email, age, abuse_url) if email
+      # submit abuse reports from
+      # signed out users (nil) and student accounts (blank string)
+      # under generic email
+      if email.nil? || email == ''
+        email = UNKNOWN_ACCOUNT_ZENDESK_REPORT_EMAIL
+      end
+      send_abuse_report(name, email, age, abuse_url)
       update_abuse_score
 
       return head :ok

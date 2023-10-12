@@ -9,6 +9,7 @@ export async function saveRubricToTable(
   setSaveNotificationText,
   rubric,
   learningGoalList,
+  setLearningGoalList,
   selectedLevelForAssessment,
   lessonId
 ) {
@@ -21,7 +22,9 @@ export async function saveRubricToTable(
     ? document.querySelector('meta[name="csrf-token"]').attributes['content']
         .value
     : null;
-  const learningGoalListAsData = removeNewIds(transformKeys(learningGoalList));
+  const learningGoalListAsData = resetPositionsOfLearningGoals(
+    removeNewIds(transformKeys(learningGoalList))
+  );
 
   const rubric_data = {
     levelId: selectedLevelForAssessment,
@@ -42,10 +45,9 @@ export async function saveRubricToTable(
     if (!rubric) {
       navigateToHref(data.redirectUrl);
     } else {
+      setLearningGoalList(data.learningGoals);
       setSaveNotificationText(SAVE_COMPLETED_TEXT);
-      setTimeout(() => {
-        setSaveNotificationText('');
-      }, 8500);
+      clearNotification(setSaveNotificationText);
     }
   } catch (err) {
     console.error('Error saving rubric:' + err);
@@ -103,6 +105,25 @@ function removeNewIds(keyConceptList) {
     }
   });
   return keyConceptList;
+}
+
+function resetPositionsOfLearningGoals(keyConceptList) {
+  let position = 1;
+  keyConceptList.forEach(keyConcept => {
+    if (keyConceptList._delete) {
+      keyConcept.position = -1;
+    } else {
+      keyConcept.position = position;
+      position++;
+    }
+  });
+  return keyConceptList;
+}
+
+function clearNotification(setSaveNotificationText) {
+  setTimeout(() => {
+    setSaveNotificationText('');
+  }, 8500);
 }
 
 export const styles = {

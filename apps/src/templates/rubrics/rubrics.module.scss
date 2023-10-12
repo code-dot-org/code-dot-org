@@ -143,10 +143,10 @@
 }
 
 .learningGoalHeaderLeftSide {
+  @include main-font-semi-bold;
   display: flex;
   align-items: center;
   gap: 16px;
-  font-family: $gotham-bold;
 
   // TODO: [DES-321] remove span styles
   span {
@@ -182,12 +182,12 @@
   gap: 4px;
 
   border-radius: 30px;
-  border: 1px solid $product_affirmative_default;
-  background: $light_affirmative_100;
+  border: 1px solid $product_information_default;
+  background: $lightest_cyan;
 }
 
 p.aiTokenText {
-  color: $product_affirmative_default;
+  color: $product_information_default;
   margin-bottom: 0;
 }
 
@@ -196,12 +196,10 @@ p.aiTokenText {
 }
 
 .learningGoalExpanded {
-  border-top: 1px solid $neutral_dark40;
-  padding: 1.25rem 1rem;
-
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
   align-self: stretch;
 }
 
@@ -214,8 +212,8 @@ p.aiTokenText {
   // This is body three styles but the typography components don't work well with markdown support
   // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
   div {
+    @include main-font-regular;
     color: $neutral-dark;
-    font-family: $gotham-regular, sans-serif;
     font-size: 0.875rem;
     line-height: 1.54;
   }
@@ -225,31 +223,34 @@ p.aiTokenText {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
   align-self: stretch;
   flex: 1;
+
+  h6 {
+    margin-bottom: 0;
+  }
 }
 
 .evidenceLevelOption {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.25rem;
   align-self: stretch;
 
   span {
+    @include main-font-semi-bold;
     font-size: 0.875rem;
-    font-family: $gotham-bold;
     line-height: 154%;
   }
 
-  p {
+  p, h6 {
     margin-bottom: 0;
   }
 }
 
 .evidenceLevelLabel {
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
@@ -259,6 +260,12 @@ p.aiTokenText {
   padding-left: 2rem;
 }
 
+.submittedEvaluationEvidenceLevel {
+  border-radius: 4px;
+  border-width: 0;
+  background: $light_primary_100;
+}
+
 .studentLearningGoalContainer {
   margin: 20px;
 }
@@ -266,6 +273,62 @@ p.aiTokenText {
 p.errorMessage {
   color: $product_negative_default;
   margin-bottom: 0;
+}
+
+.infoTipIcon {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  color: gray;
+}
+
+.openedAiAssessment {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.aiAssessmentBlock {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.greenAiAssessment {
+  align-items: left;
+  border: 1px solid $product_affirmative_default;
+  background-color: $light_affirmative_100;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.redAiAssessment {
+  align-items: left;
+  border: 1px solid $product_negative_default;
+  background-color: $product_negative_light;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.noAiAssessment {
+  align-items: left;
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
 }
 
 .inputTextbox {

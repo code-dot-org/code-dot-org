@@ -18,6 +18,7 @@ dashboard/brakeman_security_report.htm
 jsconfig.json
 /bin/i18n/*_credentials.yml
 /bin/i18n/crowdin/*files_to_sync_out.json
+/bin/test/coverage
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
@@ -39,6 +40,7 @@ npm-debug.log
 /apps/src/applab/sharedApplabGoalBlocks.js
 /apps/src/p5lab/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
+/apps/src/fontConstants.js
 /apps/storybook-deploy
 /apps/yarn-error.log
 /aws/.code-studio-built

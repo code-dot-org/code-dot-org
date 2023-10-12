@@ -238,7 +238,7 @@ it:
           description_short: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
           student_description: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
         mc:
-          title: L'Ora del Codice con Minecraft
+          title: Un'avventura con Minecraft
           description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex.
           description_short: Esplora il mondo di Minecraft attraverso il codice.
           student_description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex.
@@ -410,22 +410,10 @@ it:
             practice:
               display_name: Pratiche d'insegnante
         basketball:
-          title: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
-          description_short: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
-          description: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
-          student_description: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
+          title: Scegli la tua squadra e fai una partita di basket
+          description_short: Scegli la tua squadra e fai una partita di basket
+          description: Scegli la tua squadra e fai una partita di basket
+          student_description: Scegli la tua squadra e fai una partita di basket
           name: pallacanestro
         csd2-2017:
           title: Unità 2 - Sviluppo Web ('17-'18)
@@ -4497,3 +4485,7 @@ it:
           lessons:
             lesson-1:
               name: Il nostro codice etico sulla IA
+        virtual-pl-csa-summer-2024-day1:
+          title: 1° giorno
+        virtual-pl-csa-summer-day2:
+          title: 2° giorno

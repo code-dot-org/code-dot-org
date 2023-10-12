@@ -4,9 +4,12 @@ import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 
 describe('LearningGoal', () => {
+  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
+
   it('renders EvidenceLevels', () => {
     const wrapper = shallow(
       <LearningGoal
@@ -23,6 +26,46 @@ describe('LearningGoal', () => {
       [{understanding: 1, teacherDescription: 'test'}]
     );
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
+  });
+
+  it('renders AiAssessment when teacher has AiEnabled and the learning goal can be tested by AI', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+          aiEnabled: true,
+        }}
+        teacherHasEnabledAi={true}
+        aiConfidence={50}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+      />
+    );
+    expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
+    expect(wrapper.find('AiAssessment').props().studentName).to.equal(
+      studentLevelInfo.name
+    );
+    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(50);
+    expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
+      3
+    );
+    expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
+  });
+
+  it('does not renders AiAssessment when teacher has disabled ai', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+          aiEnabled: true,
+        }}
+        teacherHasEnabledAi={false}
+        studentLevelInfo={studentLevelInfo}
+      />
+    );
+    expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
   });
 
   it('renders tips', () => {
@@ -162,5 +205,53 @@ describe('LearningGoal', () => {
     wrapper.update();
     expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
     wrapper.unmount();
+
+  it('shows feedback in disabled textbox when available', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: 1,
+        }}
+      />
+    );
+    expect(wrapper.find('textarea').props().value).to.equal('test feedback');
+    expect(wrapper.find('textarea').props().disabled).to.equal(true);
+  });
+
+  it('shows editable textbox for feedback when the teacher can provide feedback', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        canProvideFeedback={true}
+        studentLevelInfo={studentLevelInfo}
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+      />
+    );
+    expect(wrapper.find('textarea').props().disabled).to.equal(false);
+  });
+
+  it('shows understanding in header if submittedEvaluation contains understand', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.LIMITED,
+        }}
+      />
+    );
+    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+      'Limited Evidence'
+    );
   });
 });

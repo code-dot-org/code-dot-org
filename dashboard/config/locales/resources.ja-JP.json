@@ -5571,12 +5571,12 @@
           "type": "スライド"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-adaptations/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5619,7 +5619,7 @@
           "type": "スライド"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
@@ -5709,12 +5709,12 @@
           "type": "スライド"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5736,25 +5736,25 @@
         },
         "ecosystems/csc-ecosystems/2023": {
           "name": "海洋生態系をシミュレーション",
-          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
+          "url": "https://docs.google.com/presentation/d/1ayQIGpQG49ED1S3f-URp97DibYgpFH8YCx9SPmYSxhA/",
           "type": "スライド"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
-          "name": "乱獲を理解する記事",
+          "name": "乱獲を理解するための記事",
           "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
           "type": "資源"
         },
         "ecologist_s_notebook/csc-ecosystems/2023": {
-          "name": "エコロジストノート",
+          "name": "生態学者ノート",
           "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5814,12 +5814,12 @@
           "type": "資源"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5902,12 +5902,12 @@
           "url": "/s/csc-タイムカプセル-2023/ボキャブ"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-timecapsule/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -6005,12 +6005,12 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -8870,7 +8870,7 @@
           "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "AI の仕組み-トレーニングデータとバイアス",
+          "name": "AIの仕組み - 訓練データとバイアス",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ビデオ"
         },
@@ -8930,11 +8930,11 @@
           "type": "資源"
         },
         "eliza_activity_guide/how-ai-works/2023": {
-          "name": "(オプション) Eliza アクティビティガイド",
+          "name": "(任意) イライザアクティビティガイド",
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "ジェネレーティブLLM",
+          "name": "生成LLM",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "スライド"
         },
@@ -8949,38 +8949,38 @@
           "type": "ビデオ"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
-          "name": "[Key] 語彙とビデオガイド",
+          "name": "[Key] ボキャブラリーと動画ガイド",
           "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
           "type": "アンサーキー"
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
-          "name": "動画と語彙ガイド",
+          "name": "動画とボキャブラリーガイド",
           "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] 書面による音声シミュレーターアクティビティガイド",
+          "name": "[見本] 筆記ボイスシミュレーターアクティビティガイド",
           "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
-          "name": "手書き音声シミュレータガイド",
+          "name": "筆記ボイスシミュレータガイド",
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
-          "name": "筆記音声シミュレータユーザーガイド",
+          "name": "筆記ボイスシミュレータユーザーガイド",
           "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
           "type": "資源"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
-          "name": "(オプション) GAN ゲームアクティビティガイド",
+          "name": "(任意) GAN ゲームアクティビティガイド",
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
         },
         "generative_images/how-ai-works/2023": {
-          "name": "ジェネレーティブ・イメージ",
+          "name": "生成画像",
           "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
           "type": "スライド"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] ジェネレーティブ・イメージズ・アクティビティ・ガイド",
+          "name": "[Key] 生成画像アクティビティ・ガイド",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
           "type": "アンサーキー"
         },
@@ -8990,11 +8990,11 @@
           "type": "ビデオ"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] ノイズの多い画像アクティビティ",
+          "name": "[見本] ノイズ画像アクティビティ",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "ノイジー・イメージ・ウィジェットのアクティビティ・ガイド",
+          "name": "ノイズ画像ウィジェットのアクティビティガイド",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
@@ -9003,7 +9003,7 @@
           "type": "資源"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
-          "name": "動画と語彙ガイド",
+          "name": "動画とボキャブラリーガイド",
           "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
         },
         "algorithmic_bias/how-ai-works/2023": {
@@ -9017,12 +9017,12 @@
           "type": "ビデオ"
         },
         "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
-          "name": "画像トリミングアルゴリズムに関する学習内容の共有 (Twitter)",
+          "name": "画像トリミングアルゴリズムに関する学習の共有（Twitter）",
           "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
           "type": "資源"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
-          "name": "Twitterは、画像トリミングアルゴリズムに偏りがあったため、廃止していると言っています（CNN）",
+          "name": "Twitter 社、画像トリミングアルゴリズムに偏りあり、廃止へ（CNN）",
           "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "資源"
         },
@@ -9085,11 +9085,11 @@
           "type": "ビデオ"
         },
         "vocabulary_matching/how-ai-works/2023": {
-          "name": "語彙マッチング",
+          "name": "ボキャブラリーマッチング",
           "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
-          "name": "[Key] 語彙マッチング",
+          "name": "[Key] ボキャブラリーマッチング",
           "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
           "type": "アンサーキー"
         },

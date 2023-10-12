@@ -5,12 +5,12 @@ ur:
   language: انگلش
   front_title: تاریخ میں ہونے والی تدریس کی سب سے بڑی تقریب میں شامل ہوجائیے، %{campaign_date}
   coming_soon: جلد آ رہا ہے
-  campaign_date_start_short: 5 دسمبر
-  campaign_date_start_long: دسمبر 5
-  campaign_date_short: دسمبر 5 - 11
-  campaign_date_full: 5 تا 11 دسمبر
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11، دسمبر 2022
+  campaign_date_start_short: 4 دسمبر
+  campaign_date_start_long: دسمبر 4
+  campaign_date_short: دسمبر 4-10
+  campaign_date_full: 4 تا 10 دسمبر
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10، دسمبر 2023
   nonus_campaign_date_start_short: اکتوبر 1
   nonus_campaign_date_start_long: اکتوبر 1
   nonus_campaign_date_short: 1 اکتوبر - 18 دسمبر
@@ -21,20 +21,24 @@ ur:
   latam_campaign_date_start_long: اکتوبر 1
   latam_campaign_date_short: 1 اکتوبر - 18 دسمبر
   latam_campaign_date_full: 1 اکتوبر - 18 دسمبر
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   europe_campaign_date_start_short: اکتوبر 1
   europe_campaign_date_start_long: اکتوبر 1
   europe_campaign_date_short: 1 اکتوبر - 18 دسمبر
   europe_campaign_date_full: 1 اکتوبر - 18 دسمبر
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   africa_campaign_date_start_short: اکتوبر 1
   africa_campaign_date_start_long: اکتوبر 1
   africa_campaign_date_short: 1 اکتوبر - 18 دسمبر
   africa_campaign_date_full: 1 اکتوبر - 18 دسمبر
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
+  hoc2023_header: AI کے ساتھ تخلیقی
+  hoc2023_social_creativity_with_ai_title: کوڈ کا گھنٹہ - آپ کیا تخلیق کریں گے؟
+  hoc2023_social_creativity_with_ai_desc: AI کے بارے میں جاننے اور جاننے کے لئے کمپیوٹر
+    سائنس کا استعمال کریں!
   hoc2022_header: کھوجیں، کھیلیں، تخلیق کریں!
   social_hoc2022_explore_play_create: کمپیوٹر سائنس کا استعمال کرتے ہوئے کھوجیں، کھیلیں،
     اور تخلیق کریں۔
@@ -174,6 +178,28 @@ ur:
     نصاب کا ایک نیا کیٹلاگ اور دوبارہ ڈیزائن کردہ تدریسی صفحہ بھی موجود ہے جو تمام
     چیزیں تلاش کرنے میں آپ کی مدد کرے گا!
   in_partnership_with: شراکت داری ہمراہ
+  shop_code_dot_org_heading: دکان Cod.org
+  shop_code_dot_org_desc: ہمارے کام کی حمایت کریں اور فخر کے ساتھ تحریک پہنیں. ہماری
+    ٹوپیاں صدر اوباما اور مشہور شخصیات نے بھی پہنی ہیں۔
+  spread_the_word_heading: اس بات کو عام کریں
+  spread_the_word_desc: اپنے نیٹ ورک کے ساتھ Code.org کا اشتراک کرکے ہمارے اثرات کو
+    بڑھائیں. سوشل میڈیا سے ای میل اپ ڈیٹس تک، دریافت کریں کہ آپ مزید اساتذہ، طالب
+    علموں اور وکالوں تک پہنچنے میں ہماری مدد کیسے کرسکتے ہیں.
+  follow_us_heading: سوشل میڈیا پر ہمیں فالو کریں
+  follow_us_desc: سوشل میڈیا پر ہمارے ساتھ تازہ رہیں اور باخبر رہنے اور بیداری کو
+    چلانے میں مدد کرنے کے لئے اپنے نیٹ ورک کے ساتھ ہماری پوسٹس کا اشتراک کریں.
+  facebook: فیس بک
+  twitter: ٹویٹر۔
+  linked_in: لنکڈاِن
+  instagram: انسٹاگرام
+  tik_tok: TikTok
+  subscribe_to_emails_heading: ای میلز کو سبسکرائب کریں
+  subscribe_to_emails_desc: Code.org میں اور کمپیوٹر سائنس کی تعلیم میں کیا ہو رہا
+    ہے کے بارے میں پڑھیں ہماری میلنگ لسٹ کے ذریعے سہ ماہی اپ ڈیٹس کے ذریعے.
+  subscribe_to_emails_intl: بین الاقوامی اپ ڈیٹس کو سبسکرائب کریں
+  promote_code_dot_org_heading: Code.org کو فروغ دیں
+  promote_code_dot_org_desc: اعداد و شمار، اقتباسات، اور ویڈیوز کی مدد سے اپنے علاقے
+    میں کمپیوٹر سائنس کو فروغ دیں.
   afe_partnership_logo_alt: Amazon Future Engineer کا لوگو
   afe_partnership_thanks_desc: Amazon Future Engineer ایک ایسا جامع پروگرام ہے جو
     بچپن سے پیشہ ورانہ زندگی تک مختلف امور کا احاطہ کرتا ہے، یہ قلیل آمدنی اور دیگر
@@ -193,6 +219,15 @@ ur:
   curricula_title_high: ہائی اسکول کا نصاب
   curricula_desc_high: مجبور کورسز اور سرگرمیوں کو براؤز کریں جو آپ کو اور آپ کے ہائی
     اسکول کے طالب علموں کو کمپیوٹر سائنس میں گہری کھودنے کے لئے مدعو کرتے ہیں.
+  for_administrators_heading: منتظمین کے لیے
+  for_administrators_desc: ان ہزاروں اسکولوں میں شامل ہوں جنہوں نے کمپیوٹر سائنس کو
+    پہلے ہی اپنے نصاب میں شامل کر لیا ہے۔
+  for_parents_heading: برائے والدین
+  for_parents_desc: آپ اپنے طالب علم کے اسکول کو کمپیوٹر سائنس کی تعلیم پیش کرنے یا
+    بڑھانے کے لئے حوصلہ افزائی کر سکتے ہیں.
+  for_educators_heading: برائے ایجوکیٹرز
+  for_educators_desc: آج تدریس شروع کریں - کوئی کمپیوٹر سائنس کا تجربہ ضروری نہیں
+    ہے - ہمارے پیشہ ورانہ سیکھنے کے ورکشاپس کے ساتھ.
   students_label: طلباء
   teachers_label: استاد
   teacher_label_csf: CS کی بنیادی تعلمیات کے استاد
@@ -202,10 +237,11 @@ ur:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'مطلوبہ امواد:'
   optional_materials: 'اختیاری امواد:'
-  call_to_action_explore_roles: کھلے کردار تلاش کریں
+  call_to_action_hold_an_event: ایک ایونٹ منعقد کریں
   call_to_action_learn_more: مزید جانیں
   call_to_action_watch_now: اب دیکھیے
   call_to_action_try_activity: سرگرمی کی کوشش کریں
+  call_to_action_try_activities: سرگرمیاں آزمائیں
   call_to_action_explore_unit: یونٹ دریافت کریں
   call_to_action_explore_curriculum: نصاب دریافت کریں
   call_to_action_explore_curriculum_options: نصاب کے اختیارات دریافت کریں
@@ -274,11 +310,20 @@ ur:
   call_to_action_notify_available: دستیاب ہونے پر مجھے مطلع کریں
   call_to_action_register_early_access: ابتدائی رسائی کے لئے رجسٹر کریں
   call_to_action_open_positions: کھلی پوزیشنز دیکھیں
+  call_to_action_explore_roles: کھلے کردار تلاش کریں
   call_to_action_get_guide: گائیڈ حاصل کریں
   call_to_action_donate_to_cdo: Code.org کو عطیہ
   call_to_action_start_fundraiser: فنڈ جمع کرنے والا شروع کریں
   call_to_action_view_donation_policy: عطیہ پالیسی دیکھیں
   call_to_action_view_donate_bitpay: Bitpay کے ساتھ عطیہ
+  call_to_action_make_a_donation: عطیہ بنائیں
+  call_to_action_other_ways_to_give: دینے کے دیگر طریقے
+  call_to_action_become_partner_usa: ریاست ہائے متحدہ امریکہ کے شراکت دار بنیں
+  call_to_action_become_partner_intl: بین الاقوامی پارٹنر بنیں
+  call_to_action_become_a_volunteer: رضاکارانہ بنیں
+  call_to_action_start_translating: ترجمہ شروع کریں
+  call_to_action_learn_about_advocacy: ہماری وکالت کے بارے میں جانیں
+  call_to_action_visit_store: اسٹور ملاحظہ کریں
   aria_label_call_to_action_afe: ایمیزون مستقبل انجینئر کے بارے میں مزید جانیں
   aria_label_call_to_action_teaching_csf: تدریس کمپیوٹر سائنس کے بنیادی اصول پیشہ
     ورانہ سیکھنے کا پروگرام شروع کریں
@@ -628,6 +673,7 @@ ur:
   heading_these_lessons_will: 'یہ سبق کریں گے:'
   heading_explore_curriculum_catalog: نصاب کیٹلاگ میں ہمارے تمام کورسز کو تلاش کریں
   heading_csa_ai: AP® امتحان کے بعد چیزوں کی تلاش میں ہیں؟
+  heading_bring_cs_to_students: طالب علموں کو کمپیوٹر سائنس لائیں
   professional_learning_section_desc: تدریس کی تیاری کے دوران ضروری معاونت حاصل کریں۔
     اساتذہ کو یہ بے حد پسند ہے، جن میں سے 90% سے زیادہ اسے بہترین پیشہ ورانہ ترقی
     گردانتے ہیں!
@@ -904,6 +950,7 @@ ur:
     مرکوز کرتا ہے. نظریہ، عملی مثالیں، اور وسائل کے ایک امیر مرکب کے ساتھ، اس کا مقصد
     AI زمین کی تزئین کی تزئین کی تشہیر اور طالب علم سیکھنے کے تجربات کو بڑھانے کے
     لئے اساتذہ کو بااختیار بنانا ہے.
+  ai_pl_101_resources_5: اے آئی کے ذمہ دار نقطہ نظر کو یقینی بنانے کے لئے گائیڈ
   ai_pl_101_video_desc_6: 'AI میں بڑی تبدیلیوں کو ڈرائیونگ کرنے والی نئی ٹیکنالوجی
     کے بارے میں مزید جانیں، بڑے زبان کے ماڈلز (جیسے چیٹ جی پی ٹی) اور جنریٹری AI پر
     دو نئے ویڈیوز کی خاصیت ہے. سنیں کہ یہ نئی ٹیکنالوجیز ماہرین سے براہ راست کس طرح
@@ -915,6 +962,8 @@ ur:
     اشارے شامل ہیں جو صرف ان کی انگلیوں کو ڈوبنے کے ساتھ ساتھ ان کی صلاحیت کو زیادہ
     سے زیادہ کرنے کے لئے اعلی درجے کے اوزار بھی شامل ہیں.
   ai_pl_101_resources_3: طالب علم سیکھنے کو تبدیل کرنے کے لئے AI اشارے
+  ai_pl_101_resources_section_title: AI کے بارے میں جاننے کے مزید طریقے
+  ai_pl_101_resources_guide: 'ساتھی گائیڈ:'
   how_ai_works_hero_heading: AI کیسے کام کرتا ہے
   how_ai_works_hero_desc: اے آئی کی دنیا میں “کس طرح اے کام کرتا ہے،” ہماری ویڈیو
     سیریز اور سبق کے ساتھ ساتھ!
@@ -1785,6 +1834,31 @@ ur:
   donate_tabs_bitpay_desc: cryptocurrency کے ساتھ دینے کے مستقبل کو اپنائیں. BitPay
     کے ذریعے، آپ کی ڈیجیٹل کرنسی براہ راست کمپیوٹر سائنس کی تعلیم کو بڑھانے میں Code.org
     کی کوششوں کی حمایت کر سکتی ہے.
+  help_page_top_heading: آپ کس طرح مدد کر سکتے ہیں
+  help_page_top_desc: کمپیوٹر سائنس کو ہر بچے کے لئے قابل رسائی بنانے کے لئے ہمارے
+    مشن کی حمایت کریں، ہر جگہ. آپ کی کوششیں مستقبل کے جدت پسندوں کو متاثر کرنے اور
+    ٹیک تعلیم کے فرق کو پلانے میں ہماری مدد کرتی ہیں۔
+  help_page_top_subhead: Code.org کو عطیہ بنائیں
+  help_page_top_desc_02: ہم ہر طالب علم کو کمپیوٹر سائنس سیکھنے کا موقع دینے کے لئے
+    کام کر رہے ہیں — دونوں آن لائن اور اسکولوں میں، جہاں ہم مستقل کورس قائم کرتے ہیں
+    اور اساتذہ کی تربیت کرتے ہیں. ہر ڈالر کے لئے جو آپ عطیہ کرتے ہیں، ایک بچہ کمپیوٹر
+    سائنس میں متعارف کرایا جاتا ہے.
+  help_page_partners_heading: پارٹنر بنیں
+  help_page_partners_desc: Code.org دیگر غیر منافع بخش تنظیموں کے ساتھ شراکت دار کے
+    طور پر کام کرتا ہے تاکہ کمپیوٹر سائنس کو مقامی، پائیدار فیشن میں پھیلانے میں مدد
+    مل سکے۔ ہمارے پروگرام کے بارے میں مزید جانیں.
+  help_page_volunteer_heading: ایک کلاس روم میں رضاکار
+  help_page_volunteer_desc: رضاکارانہ طور پر گھنٹہ کوڈ کی تعلیم دیں یا مقامی کلاس
+    روم میں مہمان اسپیکر بنائیں۔ اپنے قریب کے مواقع کے بارے میں سننے کے لیے سائن اپ
+    کریں۔
+  help_page_translate_heading: ترجمہ کرنے میں ہماری مدد کریں
+  help_page_translate_desc: رضاکاروں نے 45 زبانوں میں ہمارے سبق کا ترجمہ کیا ہے. دنیا
+    بھر کے طالب علموں کے لئے ہمارے سبق کو بڑھانے کے لئے جاری رکھنے میں ہماری مدد کریں!
+  help_page_speak_for_cs_heading: کمپیوٹر سائنس کی تعلیم کے لیے بولیں
+  help_page_speak_for_cs_desc: امریکہ بھر میں Code.org کی وکالت کے کام اور دس پالیسیوں
+    کے بارے میں مزید جانیں جو ہم ریاستوں کو تمام طالب علموں کے لئے کمپیوٹر سائنس کو
+    بنیادی بنانے کے لئے اپنانے کی سفارش کرتے ہیں. پلس، معلوم کریں کہ آپ اپنی ریاست
+    میں تبدیلی کیسے چلا سکتے ہیں.
   hoc_live: کوڈ کا گھنٹے لائیو
   hoc_live_sign_up_title: لائیو کوڈ کے گھنٹے کے لئے سائن اپ کریں
   hoc_live_learn_title: لائیو کوڈ کے گھنٹے کے ساتھ سیکھیں
@@ -14124,6 +14198,11 @@ ur:
   video_library_page_inspirational_video_title_11: کوئی بھی سیکھ سکتا ہے (1 منٹ)
   video_library_page_inspirational_video_title_12: لو کوے فالٹا این نیوسٹراس ایسکویلاس
     (2 منٹ)
+  video_library_page_inspirational_video_title_13: ناسا نے کوڈ کے گھنٹے کا جشن منایا
+    (2 منٹ)
+  video_library_page_inspirational_video_title_14: یہ ایک کھیل سے زیادہ ہے (1 منٹ)
+  video_library_page_inspirational_video_title_15: کمپیوٹر سائنس کے ساتھ بنائیں (1
+    منٹ)
   video_library_page_not_hacked_video_title_1: 'ہیک کرنے کے لئے کس طرح نہیں: تعارف'
   video_library_page_not_hacked_video_title_2: 'ہیک کرنے کے لئے کس طرح نہیں: پاس ورڈ'
   video_library_page_not_hacked_video_title_3: 'ہیک کرنے کے لئے کس طرح نہیں: توثیق

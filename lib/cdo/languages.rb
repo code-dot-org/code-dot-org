@@ -5,6 +5,10 @@ require 'cdo/cache_method'
 class Languages
   using CacheMethod
 
+  cached def self.all
+    table.select.to_a
+  end
+
   cached def self.get_crowdin_languages
     table.select(:crowdin_code_s, :crowdin_name_s).where("crowdin_code_s != 'en'").to_a
   end

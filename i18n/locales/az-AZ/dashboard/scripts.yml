@@ -436,7 +436,7 @@ az:
           description_short: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
           student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada Ulduz Müharibələri oyunu düzəldin.
         mc:
-          title: Maynkraft Kod Saatı
+          title: Minecraft Macəraçısı
           description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın.
           description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
           student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft dünyasında bir macəra yaşadın.
@@ -2848,6 +2848,8 @@ az:
               display_name: Məzmun
             lessonGroup-2:
               display_name: Məzmun
+        dance-unplugged:
+          title: Sərbəst Rəqs Şənliyi fəaliyyəti
         poetry:
           name: poeziya
           title: Kompüter Elmləri və Şeir
@@ -3852,6 +3854,10 @@ az:
           lessons:
             lesson-9:
               name: Qur
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüter görməsi'
+          title: Proqram təminatı mühəndisliyi və kompüter görməsi
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -4023,3 +4029,7 @@ az:
           title: Modul 7
         vpl-csd-2023-m8:
           title: Modul 8
+        virtual-pl-csa-summer-2024-day1:
+          title: Gün 1
+        virtual-pl-csa-summer-day2:
+          title: Gün 2

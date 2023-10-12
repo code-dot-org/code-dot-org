@@ -2846,18 +2846,26 @@
         },
         "csd3-2021/Sprites": {
           "name": "Sprite",
+          "overview": "**Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar um grande volume de informações em nossos programas?**\n\nPara criar imagens mais interessantes e detalhadas, os alunos são apresentados ao objeto sprite. A lição começa com uma discussão sobre as várias informações que os programas devem monitorar e, em seguida, apresenta os sprites como uma forma de acompanhar essas informações. Os alunos, então, aprendem a como atribuir uma imagem a cada sprite, o que aumentará muito a complexidade do que eles podem passar a desenhar na tela.",
+          "purpose": "Acompanhar muitas formas e as diferentes variáveis que controlam os diferentes aspectos dessas formas pode ser muito complexo. Haverá muitas variáveis com nomes diferentes. Em resposta, os cientistas da computação criaram algo chamado **objeto**, que permite que um nome de variável controle a forma e todos os seus aspectos. No Game Lab, usamos um certo tipo de objeto chamado **sprite**. Um sprite é apenas um retângulo com **propriedades** para controlar sua aparência. As propriedades são as variáveis anexadas a um sprite. Você pode acessá-los por meio de**notação de pontos**.\n\nUsando a Aba de Animação, os alunos podem criar ou importar imagens para serem usadas com seus sprites. Posteriormente, esses sprites se tornarão uma ferramenta útil para criar animações, pois suas propriedades podem ser alteradas e atualizadas ao longo de um programa.",
           "student_overview": "**Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar muitas informações em nossos programas?**\n\nHoje você aprenderá sobre sprites, que não só irão lhe mostrar uma forma de acompanhar várias informações em seus programas, mas também permitirão que você crie imagens mais interessantes e divertidas!"
         },
         "csd3-2021/Sprite Properties": {
           "name": "Propriedades do Sprite",
+          "overview": "**Pergunta do Dia: Como podemos usar as propriedades dos sprites para alterar sua aparência na tela?**\n\nOs alunos ampliam sua compreensão dos sprites interagindo com as suas propriedades. Os alunos começam com uma análise do que é um sprite e depois passam para o Game Lab para praticar mais com sprites, usando suas propriedades para modificar sua aparência. Em seguida, eles refletem sobre as conexões entre propriedades e variáveis.",
+          "purpose": "Na última lição, quando os alunos foram apresentados aos sprites, eles se concentraram principalmente em criar um sprite e atribuir a ele uma animação. Esta lição começa a investigar o que torna os sprites uma construção de programação tão poderosa: que eles têm propriedades que podem ser modificadas à medida que um programa é executado. Isso estabelece a base para muito do que os alunos farão no resto da unidade em termos de acesso e manipulação de propriedades de sprites para criar comportamentos interessantes em seus programas.",
           "student_overview": "**Pergunta do Dia: Como podemos usar as propriedades do sprite para mudar sua aparência na tela?**\n\nNesta lição, você continuará trabalhando com sprites, usando suas propriedades para alterar sua aparência. "
         },
         "csd3-2021/Text": {
           "name": "Texto",
+          "overview": "**Pergunta do Dia: Como podemos usar ferramentas de texto para melhorar nossas cenas e animações?**\n\nEsta lição apresenta os comandos de texto do Game Lab, dando aos alunos mais prática no uso do plano cartesiano e dos parâmetros. No início da aula, os alunos devem legendar um desenho animado criado no Game Lab. Em seguida, eles vão para o Code Studio, onde praticam a colocação de texto na tela e o controle de outras propriedades do texto, como tamanho. Os alunos que concluírem a avaliação mais cedo podem passar a aprender sobre blocos mais desafiadores relacionados às propriedades do texto.",
+          "purpose": "Esta lição apresenta o texto que os alunos precisarão quando começarem a criar programas mais complexos (por exemplo, jogos com placares). Esse é o último tipo de elemento que os alunos colocarão na tela. Depois disso, os alunos se concentrarão em como podem controlar o movimento e as interações desses elementos.",
           "student_overview": "**Pergunta do dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\nNesta lição, você aprenderá a usar os comandos de texto do Laboratório de Jogos para adicionar legendas às suas cenas. "
         },
         "csd3-2021/Mini-Project: Captioned Scenes": {
           "name": "Miniprojeto - Cenas legendadas",
+          "overview": "**Pergunta do Dia: Como podemos usar o Game Lab para expressar nossa criatividade?**\n\nDepois de uma rápida revisão do código que aprenderam até agora, os alunos são apresentados ao primeiro projeto criativo da unidade. Usando o processo de resolução de problemas como modelo, os alunos definem a cena que desejam criar, se preparam pensando nos diferentes códigos de que precisarão, testam seu plano no Game Lab e depois refletem sobre o que criaram. Eles também têm a chance de compartilhar suas criações com seus colegas.",
+          "purpose": "Esta lição é uma oportunidade para os alunos sejam mais criativos com o que aprenderam. Alguns alunos podem passar mais tempo na aba de animação desenhando do que programando. Incentive os alunos a dedicarem tempo às partes da atividade que lhes interessam, desde que atendam aos requisitos da tarefa.\n\nA natureza aberta desta lição também oferece flexibilidade para o professor decidir quanto tempo os alunos devem dedicar ao trabalho, dependendo das demandas do cronograma da implementação específica do curso.",
           "student_overview": "**Pergunta do dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2021/The Draw Loop": {
@@ -3033,7 +3041,8 @@
           "name": "ASCII e Representações Binárias"
         },
         "csd5-2021/Representing Images": {
-          "name": "Representando Imagens"
+          "name": "Representando Imagens",
+          "overview": "**Pergunta do dia: Qual sistema os computadores usam para representar imagens?**\n\nNesta lição, os alunos aprendem como os computadores representam imagens. Para começar a lição, eles consideram o desafio de transformar toda a complexidade da visão em um padrão binário. Por meio de uma série de imagens que mostram como essa transformação é feita, os alunos são apresentados ao conceito de dividir imagens em quadrados ou “pixels”, que podem ser ativados ou desativados individualmente para criar a imagem inteira. Em seguida, os alunos fazem um pequeno conjunto de desafios usando o Pixelation Widget para desenhar imagens em preto e branco. Os quebra-cabeças foram criados para destacar alguns dos desafios de representar imagens dessa forma. No final, os alunos fazem conexões entre o sistema de representação de imagens e o sistema de representação de texto que aprenderam na lição anterior."
         },
         "csd5-2021/Representing Numbers": {
           "name": "Representando Números"
@@ -3784,7 +3793,7 @@
         },
         "coursef-2021/AI for Oceans": {
           "name": "IA para oceanos",
-          "overview": "Nesta aula **exploratória**, os alunos treinarão um modelo de aprendizado de máquina classificando peixes e outros objetos.",
+          "overview": "Nesta lição **exploratória**, os alunos treinarão um modelo de machine learning classificando peixes e outros objetos.",
           "purpose": "Esta lição foi projetada para apresentar rapidamente aos alunos o aprendizado de máquina, um tipo de inteligência artificial. Os alunos explorarão como os dados de treinamento são usados para permitir que um modelo de aprendizado de máquina classifique novos dados. Os alunos devem ter uma experiência positiva durante o tutorial e, mais importante, devem estar motivados a continuar aprendendo ciência da computação. ",
           "student_overview": "Classifique objetos como “peixes” ou “não peixes” para tentar remover o lixo do oceano. Em seguida, expanda seu conjunto de dados de treinamento para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, escolha seus próprios rótulos para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que deve, então, ser capaz de rotular novas imagens sozinho."
         },
@@ -4324,21 +4333,30 @@
         },
         "csd3-2022/Sprites": {
           "name": "Sprite",
+          "overview": "**Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar um grande volume de informações em nossos programas?**\n\nPara criar imagens mais interessantes e detalhadas, os alunos são apresentados ao objeto sprite. A lição começa com uma discussão sobre as várias informações que os programas devem monitorar e, em seguida, apresenta os sprites como uma forma de acompanhar essas informações. Os alunos, então, aprendem a como atribuir uma imagem a cada sprite, o que aumentará muito a complexidade do que eles podem passar a desenhar na tela.",
+          "preparation": "-   (Opcional) Imprima uma cópia do guia de atividades para cada aluno\n-   Consulte o[0] fórum na [\"Sala dos Professores\"] para os professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros colegas\n-   Se você estiver ensinando virtualmente, considere verificar nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "Acompanhar muitas formas e as diferentes variáveis que controlam os diferentes aspectos dessas formas pode ser muito complexo. Haverá muitas variáveis com nomes diferentes. Em resposta, os cientistas da computação criaram algo chamado **objeto**, que permite que um nome de variável controle a forma e todos os seus aspectos. No Game Lab, usamos um certo tipo de objeto chamado **sprite**. Um sprite é apenas um retângulo com **propriedades** para controlar sua aparência. As propriedades são as variáveis anexadas a um sprite. Você pode acessá-los por meio de**notação de pontos**.\n\nUsando a Aba de Animação, os alunos podem criar ou importar imagens para serem usadas com seus sprites. Posteriormente, esses sprites se tornarão uma ferramenta útil para criar animações, pois suas propriedades podem ser alteradas e atualizadas ao longo de um programa.",
           "student_overview": "**Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar muitas informações em nossos programas?**\n\nHoje você aprenderá sobre sprites, que não só irão lhe mostrar uma forma de acompanhar várias informações em seus programas, mas também permitirão que você crie imagens mais interessantes e divertidas!"
         },
         "csd3-2022/Sprite Properties": {
           "name": "Propriedades do Sprite",
+          "overview": "**Pergunta do Dia: Como podemos usar as propriedades dos sprites para alterar sua aparência na tela?**\n\nOs alunos ampliam sua compreensão dos sprites interagindo com as suas propriedades. Os alunos começam com uma análise do que é um sprite e depois passam para o Game Lab para praticar mais com sprites, usando suas propriedades para modificar sua aparência. Em seguida, eles refletem sobre as conexões entre propriedades e variáveis.",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "Na última lição, quando os alunos foram apresentados aos sprites, eles se concentraram principalmente em criar um sprite e atribuir a ele uma animação. Esta lição começa a investigar o que torna os sprites uma construção de programação tão poderosa: que eles têm propriedades que podem ser modificadas à medida que um programa é executado. Isso estabelece a base para muito do que os alunos farão no resto da unidade em termos de acesso e manipulação de propriedades de sprites para criar comportamentos interessantes em seus programas.",
           "student_overview": "**Pergunta do Dia: Como podemos usar as propriedades do sprite para mudar sua aparência na tela?**\n\nNesta lição, você continuará trabalhando com sprites, usando suas propriedades para alterar sua aparência. "
         },
         "csd3-2022/Text": {
           "name": "Texto",
+          "overview": "**Pergunta do Dia: Como podemos usar ferramentas de texto para melhorar nossas cenas e animações?**\n\nEsta lição apresenta os comandos de texto do Game Lab, dando aos alunos mais prática no uso do plano cartesiano e dos parâmetros. No início da aula, os alunos devem legendar um desenho animado criado no Game Lab. Em seguida, eles vão para o Code Studio, onde praticam a colocação de texto na tela e o controle de outras propriedades do texto, como tamanho. Os alunos que concluírem a avaliação mais cedo podem passar a aprender sobre blocos mais desafiadores relacionados às propriedades do texto.",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "Esta lição apresenta o texto que os alunos precisarão quando começarem a criar programas mais complexos (por exemplo, jogos com placares). Esse é o último tipo de elemento que os alunos colocarão na tela. Depois disso, os alunos se concentrarão em como podem controlar o movimento e as interações desses elementos.",
           "student_overview": "**Pergunta do Dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\nNesta lição, você aprenderá a usar os comandos de texto do Game Lab para adicionar legendas às suas cenas. "
         },
         "csd3-2022/Mini-Project - Captioned Scenes": {
           "name": "Miniprojeto - Cenas legendadas",
+          "overview": "**Pergunta do Dia: Como podemos usar o Game Lab para expressar nossa criatividade?**\n\nDepois de uma rápida revisão do código que aprenderam até agora, os alunos são apresentados ao primeiro projeto criativo da unidade. Usando o processo de resolução de problemas como modelo, os alunos definem a cena que desejam criar, se preparam pensando nos diferentes códigos de que precisarão, testam seu plano no Game Lab e depois refletem sobre o que criaram. Eles também têm a chance de compartilhar suas criações com seus colegas.",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "Esta lição é uma oportunidade para os alunos sejam mais criativos com o que aprenderam. Alguns alunos podem passar mais tempo na aba de animação desenhando do que programando. Incentive os alunos a dedicarem tempo às partes da atividade que lhes interessam, desde que atendam aos requisitos da tarefa.\n\nA natureza aberta desta lição também oferece flexibilidade para o professor decidir quanto tempo os alunos devem dedicar ao trabalho, dependendo das demandas do cronograma da implementação específica do curso.",
           "student_overview": "**Pergunta do Dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2022/The Draw Loop": {
@@ -4539,6 +4557,7 @@
         },
         "csd5-2022/Representing Images": {
           "name": "Representando Imagens",
+          "overview": "**Pergunta do dia: Qual sistema os computadores usam para representar imagens?**\n\nNesta lição, os alunos aprendem como os computadores representam imagens. Para começar a lição, eles consideram o desafio de transformar toda a complexidade da visão em um padrão binário. Por meio de uma série de imagens que mostram como essa transformação é feita, os alunos são apresentados ao conceito de dividir imagens em quadrados ou “pixels”, que podem ser ativados ou desativados individualmente para criar a imagem inteira. Em seguida, os alunos fazem um pequeno conjunto de desafios usando o Pixelation Widget para desenhar imagens em preto e branco. Os quebra-cabeças foram criados para destacar alguns dos desafios de representar imagens dessa forma. No final, os alunos fazem conexões entre o sistema de representação de imagens e o sistema de representação de texto que aprenderam na lição anterior.",
           "student_overview": "**Pergunta do Dia: Que sistema os computadores usam para representar imagens?**\n\nNesta lição, você continuará explorando como é possível criar sistemas para representar informações usando o sistema binário, desta vez focando em imagens!"
         },
         "csd5-2022/Representing Numbers": {
@@ -5255,7 +5274,7 @@
         },
         "coursef-2022/AI For Oceans": {
           "name": "IA para oceanos",
-          "overview": "Nesta aula **exploratória**, os alunos treinarão um modelo de aprendizado de máquina classificando peixes e outros objetos.",
+          "overview": "Nesta lição **exploratória**, os alunos treinarão um modelo de machine learning classificando peixes e outros objetos.",
           "purpose": "Esta lição foi projetada para apresentar rapidamente aos alunos o aprendizado de máquina, um tipo de inteligência artificial. Os alunos explorarão como os dados de treinamento são usados para permitir que um modelo de aprendizado de máquina classifique novos dados. Os alunos devem ter uma experiência positiva durante o tutorial e, mais importante, devem estar motivados a continuar aprendendo ciência da computação. ",
           "student_overview": "Classifique objetos como “peixes” ou “não peixes” para tentar remover o lixo do oceano. Em seguida, expanda seu conjunto de dados de treinamento para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, escolha seus próprios rótulos para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que deve, então, ser capaz de rotular novas imagens sozinho."
         },
@@ -5987,7 +6006,8 @@
           "name": "ASCII e Representações Binárias"
         },
         "csd5-2023/Representing Images": {
-          "name": "Representando Imagens"
+          "name": "Representando Imagens",
+          "overview": "Nesta lição, os alunos aprendem como os computadores representam imagens. Para começar a lição, eles consideram o desafio de transformar toda a complexidade da visão em um padrão binário. Por meio de uma série de imagens que mostram como essa transformação é feita, os alunos são apresentados ao conceito de dividir imagens em quadrados ou “pixels”, que podem ser ativados ou desativados individualmente para criar a imagem inteira. Em seguida, os alunos fazem um pequeno conjunto de desafios usando o Pixelation Widget para desenhar imagens em preto e branco. Os quebra-cabeças foram criados para destacar alguns dos desafios de representar imagens dessa forma. No resumo, os alunos fazem conexões entre o sistema para representar imagens e o sistema para representar o texto que aprenderam na lição anterior.\n\n\\*\\*Pergunta do dia: \\*\\* Qual sistema os computadores usam para representar imagens?"
         },
         "csd5-2023/Representing Numbers": {
           "name": "Representando Números",
@@ -6662,7 +6682,7 @@
         },
         "coursef-2023/AI For Oceans": {
           "name": "IA para oceanos",
-          "overview": "Nesta aula **exploratória**, os alunos treinarão um modelo de aprendizado de máquina classificando peixes e outros objetos.",
+          "overview": "Nesta lição **exploratória**, os alunos treinarão um modelo de machine learning classificando peixes e outros objetos.",
           "purpose": "Esta lição foi projetada para apresentar rapidamente aos alunos o aprendizado de máquina, um tipo de inteligência artificial. Os alunos explorarão como os dados de treinamento são usados para permitir que um modelo de aprendizado de máquina classifique novos dados. Os alunos devem ter uma experiência positiva durante o tutorial e, mais importante, devem estar motivados a continuar aprendendo ciência da computação. ",
           "student_overview": "Classifique objetos como “peixes” ou “não peixes” para tentar remover o lixo do oceano. Em seguida, expanda seu conjunto de dados de treinamento para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, escolha seus próprios rótulos para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que deve, então, ser capaz de rotular novas imagens sozinho."
         },
@@ -6951,35 +6971,35 @@
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
           "name": "Introdução ao Machine Learning",
-          "overview": "Esta lição gira em torno de [Como a IA funciona: o que é aprendizado de máquina?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) vídeo da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos são apresentados a uma forma de inteligência artificial chamada aprendizado de máquina e como eles podem usar o Processo de Solução de Problemas para ajudar a treinar um robô para resolver problemas. Eles participam de três atividades de aprendizado de máquina em que um robô - AI Bot - está aprendendo a detectar padrões em peixes.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
+          "overview": "Esta lição gira em torno do vídeo [Como a IA funciona: O que é Aprendizado de Máquina?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos são apresentados a uma forma de inteligência artificial chamada machine learning e como eles podem usar o Processo de Resolução de Problemas para ajudar a treinar um robô para resolver problemas. Eles participam de três atividades de machine learning em que um robô - AI Bot - está aprendendo a detectar padrões em peixes.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
           "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano"
         },
         "how-ai-works-2023/Computer Vision": {
-          "name": "Visão computacional",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: visão computacional] da série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como a visão computacional funciona. Eles primeiro examinam as ilusões de ótica para identificar as características do desenho que seus olhos notaram. Os alunos assistem a um vídeo explicando a visão computacional e como um computador “vê”. Eles projetam um algoritmo que usa uma rede para decidir qual número a tela de sete segmentos está exibindo. Finalmente, os alunos testam seu algoritmo.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do guia de atividades da Computer Vision Network para cada grupo\n-   (Opcional) Imprima cópias do Seven Segment Display Manipulative",
-          "student_overview": "Saiba como a visão computacional funciona projetando um algoritmo para detectar números."
+          "name": "Visão Computacional",
+          "overview": "Esta lição gira em torno do vídeo [Como a IA funciona: Visão Computacional](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como a visão computacional funciona. Eles primeiro examinam as ilusões de ótica para identificar as características do desenho que seus olhos notaram. Os alunos assistem a um vídeo explicando a visão computacional e como um computador “vê”. Eles projetam um algoritmo que usa uma rede para decidir qual número a tela de sete segmentos está exibindo. Finalmente, os alunos testam seu algoritmo.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima cópias do guia de atividades da Rede de VIsão Computacional para cada grupo\n-   (Opcional) Imprima cópias do Display Manipulativo de Sete Segmentos ",
+          "student_overview": "Aprenda como a visão computacional funciona projetando um algoritmo para detectar números."
         },
         "how-ai-works-2023/Neural Networks": {
-          "name": "Redes neurais",
+          "name": "Redes Neurais",
           "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: redes neurais] da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como as redes neurais funcionam. Primeiro, eles discutem um exemplo de experiência que recomenda coisas para você. Em seguida, eles usam um widget que recomenda vídeos com base em uma pessoa. Os alunos assistem a um vídeo explicando as redes neurais. Eles usam um widget atualizado para ajustar os pesos de cada pessoa. Por fim, os alunos discutem a necessidade de perspectivas diversas ao criar sistemas de recomendação.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
           "preparation": "-   Imprima cópias do recurso WeTube Content Creators para cada aluno\n-   Imprima cópias do guia de atividades da Rede Neural para cada aluno",
           "student_overview": "Saiba como as redes neurais funcionam ajustando os pesos de um sistema de recomendação para ajustar as saídas."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
-          "name": "Chatbots e modelos de linguagem grande (LLMs)",
+          "name": "Chatbots e Modelos de Linguagem Grande (LLMs)",
           "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: chatbots e grandes modelos de linguagem] da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de linguagem grande (LLMs) geram novo texto. O texto que os LLMs geram parece que um humano pode tê-lo escrito porque grandes modelos de linguagem são construídos com base em grandes corpos de texto, como a Wikipedia. Nesta lição, os alunos aprendem o que é um LLM e como ele funciona e, em seguida, usam um LLM para cocriar um texto com IA. Finalmente, a aula termina com uma discussão sobre se os LLMs são inteligentes ou criativos.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
           "preparation": "-   Imprima cópias do guia de atividades para cada aluno",
           "student_overview": "Os Large Language Models (LLMs) são inteligentes ou criativos? Decida você mesmo, ao trabalhar com eles, criar algo e saiba mais sobre como eles funcionam!"
         },
         "how-ai-works-2023/Generative Images": {
-          "name": "Imagens generativas",
+          "name": "Imagens Generativas",
           "overview": "Esta lição gira em torno de [Como a IA funciona: criatividade e imaginação?](https://www.youtube.com/watch?v=X994dDnmRmY) vídeo da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de difusão geram imagens. A IA de difusão converte uma imagem em ruído e treina uma IA para reverter o processo. Nesta lição, os alunos aprendem como a IA pode gerar imagens e, em seguida, exploram um widget de IA de difusão. Por fim, a aula termina com uma discussão sobre se esses modelos são criativos ou não.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
           "preparation": "-   Imprima cópias do guia de atividades para cada aluno",
           "student_overview": "Saiba como a IA pode gerar imagens explorando um widget de IA de difusão."
         },
         "how-ai-works-2023/Algorithmic Bias": {
-          "name": "Viés algorítmico",
+          "name": "Viés Algorítmico",
           "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: acesso igual e viés algorítmico] da [série de vídeos Como a IA funciona].[1]Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos praticarão o recorte de imagens para descobrir o viés subjacente ao algoritmo de recorte do Twitter. Em seguida, os alunos lerão e assistirão a um vídeo sobre a descoberta desse algoritmo tendencioso. Por fim, os alunos discutirão maneiras de reconhecer e reduzir o preconceito, além de analisar a resposta do Twitter às alegações de preconceito em seu algoritmo de recorte.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
           "preparation": "-   Conclua você mesmo a atividade do widget de recorte para ver o que seus alunos vivenciarão com o widget e quais perguntas ou problemas eles poderão abordar.\n-   Assista às partes do vídeo [“Estamos automatizando o racismo?”](https://youtu.be/Ok5sKLXqynQ) referenciado no plano de aula.\n-   Leia os dois artigos na seção de links abaixo.",
           "student_overview": "Nesta lição, você trabalhará no recorte de imagens e discutirá os desafios e preconceitos envolvidos em ensinar uma máquina a cortar uma imagem."
@@ -6990,7 +7010,7 @@
           "student_overview": "Pesquise de forma colaborativa sobre a ética da IA e crie um código de conduta compartilhável."
         },
         "how-ai-works-2023/How AI Works In a Day": {
-          "name": "Como a IA funciona em um dia",
+          "name": "Como a IA Funciona Em um Dia",
           "overview": "⚠️ Esta lição é destinada a salas de aula que desejam mostrar toda a [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) em um único dia\\*\\*. Não se destina a ser ensinado em sequência com as outras lições desta unidade, que apresenta cada vídeo um dia de cada vez.\n\nOs alunos acompanham cada vídeo combinando o vocabulário do vídeo e respondendo a uma pergunta de reflexão sobre cada vídeo. O plano de aula e os slides são muito esparsos e abertos para permitir a improvisação e a personalização de acordo com sua sala de aula.",
           "preparation": "-   Imprima o guia de atividades\n-   Projete os slides em um projetor de vídeo"
         },

@@ -36,3 +36,6 @@ export const DancelabReservedWords = [
   'everySecondsRange',
   'everyVerseChorus',
 ];
+
+export const ASSET_BASE =
+  'https://curriculum.code.org/images/sprites/dance_20191106/';

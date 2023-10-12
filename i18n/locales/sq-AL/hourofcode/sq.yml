@@ -35,6 +35,10 @@ sq:
   africa_campaign_date_full: 1 tetor - 18 dhjetor
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
+  hoc2023_header: Kreativiteti me AI
+  hoc2023_social_creativity_with_ai_title: Ora e Kodimit - Çfarë do të krijoni?
+  hoc2023_social_creativity_with_ai_desc: Përdorni shkencat kompjuterike për të eksploruar
+    dhe mësuar rreth AI!
   hoc2022_header: Eksploro, Luaj, Krijo!
   social_hoc2022_explore_play_create: 'Perdorni shekncat kompjuterike, te eksploroni,
     luani dhe krijoni! '
@@ -177,6 +181,28 @@ sq:
     katalog të ri të kurrikulës dhe faqe të ridizajnuar Teach për t'ju ndihmuar të
     gjeni të gjitha!
   in_partnership_with: Në partneritet me
+  shop_code_dot_org_heading: Dyqani Code.org
+  shop_code_dot_org_desc: Mbështetni punën tonë dhe vishni lëvizjen me krenari. Kapelet
+    tona janë veshur nga Presidenti Obama dhe të famshëm gjithashtu.
+  spread_the_word_heading: Përhape fjalën
+  spread_the_word_desc: Përforcojeni ndikimin tonë duke ndarë Code.org me rrjetin
+    tuaj. Nga mediat sociale deri te azhurnimet me email, zbuloni se si mund të na
+    ndihmoni të arrijmë më shumë edukatorë, studentë dhe avokatë.
+  follow_us_heading: Na ndiqni në mediat sociale
+  follow_us_desc: Qëndroni të azhurnuar me ne në mediat sociale dhe ndani postimet
+    tona me rrjetin tuaj për të qëndruar të informuar dhe për të ndihmuar në ndërgjegjësimin.
+  facebook: Facebook
+  twitter: Cicëroj
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Regjistrohu për email
+  subscribe_to_emails_desc: Lexoni për atë që po ndodh në Code.org dhe në edukimin
+    e shkencave kompjuterike përmes azhurnimeve tremujore përmes listës sonë të postimeve.
+  subscribe_to_emails_intl: Regjistrohuni për përditësimet
+  promote_code_dot_org_heading: Promovoni Code.org
+  promote_code_dot_org_desc: Promovoni shkencat kompjuterike në zonën tuaj me ndihmën
+    e statistikave, kuotave dhe videove.
   afe_partnership_logo_alt: Logoja e Inxhinierit të së
   afe_partnership_thanks_desc: Amazon Future Engineer është një program gjithëpërfshirës
     i fëmijërisë në karrierë për të frymëzuar, edukuar dhe trajnuar fëmijët dhe të
@@ -195,6 +221,15 @@ sq:
   curricula_title_high: Kurrikulat e shkollës së mesme
   curricula_desc_high: Shfletoni kurset dhe aktivitetet bindëse që ju ftojnë ju dhe
     nxënësit tuaj të shkollës së mesme të gërmoni më thellë në shkencat kompjuterike.
+  for_administrators_heading: Për administratorët
+  for_administrators_desc: Bashkohuni me mijëra shkolla që kanë përfshirë tashmë shkencat
+    kompjuterike në kurrikulën e tyre.
+  for_parents_heading: Për prindërit
+  for_parents_desc: Ju mund të ndihmoni në inkurajimin e shkollës së nxënësit tuaj
+    për të ofruar ose zgjeruar edukimin e shkencave
+  for_educators_heading: Për mësuesit
+  for_educators_desc: Filloni të mësoni sot - nuk ka përvojë të nevojshme të shkencave
+    kompjuterike - me punëtoritë tona të të mësuarit
   students_label: Nxënësit
   teachers_label: Mësimdhënësit
   teacher_label_csf: CS Bazat Mësues
@@ -204,10 +239,11 @@ sq:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Materialet e kërkuara:'
   optional_materials: 'Materialet opsionale:'
-  call_to_action_explore_roles: Eksploroni role të hapura
+  call_to_action_hold_an_event: Mbajeni një ngjarje
   call_to_action_learn_more: Mëso më shumë
   call_to_action_watch_now: Shikoni tani
   call_to_action_try_activity: Provoni aktivitetin
+  call_to_action_try_activities: Provoni aktivitete
   call_to_action_explore_unit: Eksploroni njësinë
   call_to_action_explore_curriculum: Eksploro kurrikulën
   call_to_action_explore_curriculum_options: Eksploroni mundësitë e
@@ -276,11 +312,20 @@ sq:
   call_to_action_notify_available: Më njoftoni kur është në dispozicion
   call_to_action_register_early_access: Regjistrohu për akses të hershëm
   call_to_action_open_positions: Shikoni pozicionet e hapura
+  call_to_action_explore_roles: Eksploroni role të hapura
   call_to_action_get_guide: Merrni udhëzuesin
   call_to_action_donate_to_cdo: Dhuroni për Code.org
   call_to_action_start_fundraiser: Filloni një mbledhje fondesh
   call_to_action_view_donation_policy: Shikoni politikën e dhurimit
   call_to_action_view_donate_bitpay: Dhuroni me BitPay
+  call_to_action_make_a_donation: Bëni një donacion
+  call_to_action_other_ways_to_give: Mënyra të tjera për të dhënë
+  call_to_action_become_partner_usa: Bëhuni një partner i Shteteve të Bashkuara
+  call_to_action_become_partner_intl: Bëhuni një partner ndërkombëtar
+  call_to_action_become_a_volunteer: Bëhuni vullnetar
+  call_to_action_start_translating: Filloni përkthimin
+  call_to_action_learn_about_advocacy: Mësoni rreth avokimit tonë
+  call_to_action_visit_store: Vizitoni dyqanin
   aria_label_call_to_action_afe: Mësoni më shumë rreth Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Filloni programin e mësimdhënies së Shkencave
     Kompjuterike Bazat e
@@ -631,6 +676,7 @@ sq:
   heading_explore_curriculum_catalog: Eksploroni të gjitha kurset tona në Katalogun
     e Kurrikulave
   heading_csa_ai: Duke kërkuar për gjëra për të bërë pas provimit AP®?
+  heading_bring_cs_to_students: Sillni shkenca kompjuterike për studentët
   professional_learning_section_desc: Merrni mbështetjen që ju nevojitet ndërsa përgatiteni
     për të dhënë mësim. Mësuesit e duan atë, me mbi 90% duke e renditur atë zhvillimin
     më të mirë profesional ndonjëherë!
@@ -915,6 +961,7 @@ sq:
     studentëve. Me një përzierje të pasur të teorisë, shembujve praktikë dhe burimeve,
     ajo synon të fuqizojë edukatorët për të lundruar në peizazhin e AI dhe për të
     përmirësuar përvojat e të mësuarit të studentëve.
+  ai_pl_101_resources_5: Udhëzues për të siguruar një qasje të përgjegjshme ndaj
   ai_pl_101_video_desc_6: 'Mësoni më shumë rreth teknologjisë së re që nxit ndryshimet
     e mëdha në AI, duke shfaqur dy video të reja në modelet e gjuhës së madhe (si
     ChatGPT) dhe AI gjeneruese. Dëgjoni se si funksionojnë këto teknologji të reja
@@ -926,6 +973,8 @@ sq:
     për ata që thjesht zhyten gishtërinjtë e tyre, si dhe mjete të përparuara për
     ata që kërkojnë të maksimizojnë potencialin e tyre.
   ai_pl_101_resources_3: AI bën thirrje për transformimin e të mësuarit të studentëve
+  ai_pl_101_resources_section_title: Më shumë mënyra për të mësuar rreth AI
+  ai_pl_101_resources_guide: 'Udhëzues shoqërues:'
   how_ai_works_hero_heading: Si funksionon AI
   how_ai_works_hero_desc: Zhytuni në botën e AI me “Si funksionon AI”, seritë tona
     të videove dhe mësimet shoqëruese!
@@ -1798,6 +1847,31 @@ sq:
   donate_tabs_bitpay_desc: Përqafoni të ardhmen e dhënies me cryptocurrency. Përmes
     BitPay, monedha juaj dixhitale mund të mbështesë drejtpërdrejt përpjekjet e Code.org
     në zgjerimin e edukimit të shkencave kompjuterike.
+  help_page_top_heading: Si mund të ndihmoni
+  help_page_top_desc: Mbështetni misionin tonë për ta bërë shkencën kompjuterike të
+    arritshme për çdo fëmijë, kudo. Përpjekjet tuaja na ndihmojnë të frymëzojmë inovatorët
+    e ardhshëm dhe të kapërcejmë hendekun e arsimit teknolog
+  help_page_top_subhead: Bëni një donacion për Code.org
+  help_page_top_desc_02: Ne jemi duke punuar për t'i dhënë çdo nxënësi mundësinë për
+    të mësuar shkenca kompjuterike - si në internet dhe në shkolla, ku krijojmë kurse
+    të përhershme dhe trajnojmë mësuesit. Për çdo dollar që dhuroni, një fëmijë futet
+    në shkencat kompjuterike.
+  help_page_partners_heading: Bëhuni një partner
+  help_page_partners_desc: Code.org punon me organizata të tjera jofitimprurëse si
+    partnerë për të ndihmuar në përhapjen e shkencave kompjuterike në një mënyrë lokale,
+    të qëndrueshme. Mësoni më shumë rreth programit tonë
+  help_page_volunteer_heading: Vullnetarë në një klasë
+  help_page_volunteer_desc: Vullnetar për të dhënë mësim Orën e Kodimit ose të jetë
+    një folës i ftuar në një klasë lokale. Regjistrohuni për të dëgjuar për mundësitë
+    pranë jush.
+  help_page_translate_heading: Na ndihmoni të përkthejmë
+  help_page_translate_desc: Vullnetarët kanë përkthyer tutorialet tona në mbi 45 gjuhë.
+    Na ndihmoni të vazhdojmë të zgjerojmë udhëzimet tona për studentët në mbarë botën!
+  help_page_speak_for_cs_heading: Flisni për edukimin e shkencave kompjuterike
+  help_page_speak_for_cs_desc: Mësoni më shumë rreth punës së avokimit të Code.org
+    në të gjithë SHBA dhe dhjetë politikat që ne rekomandojmë që shtetet të miratojnë
+    për t'i bërë shkencat kompjuterike themelore për të gjithë studentët. Plus, zbuloni
+    se si mund të nxisni ndryshimin në gjendjen tuaj.
   hoc_live: Ora e kodit të drejtpërdrejtë
   hoc_live_sign_up_title: Regjistrohuni për Orën e Kodit Live
   hoc_live_learn_title: Mësoni me Orën e Kodit Live
@@ -14157,6 +14231,10 @@ sq:
   video_library_page_inspirational_video_title_11: Çdokush mund të mësojë (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA feston orën e kodimit (2 min)
+  video_library_page_inspirational_video_title_14: Është më shumë se një lojë (1 min)
+  video_library_page_inspirational_video_title_15: Krijo Me Shkenca Kompjuterike (1
+    min)
   video_library_page_not_hacked_video_title_1: 'Si të mos merrni Hacked: Hyrje'
   video_library_page_not_hacked_video_title_2: 'Si të mos merrni Hacked: Fjalëkalimet'
   video_library_page_not_hacked_video_title_3: 'Si të mos merrni Hacked: Vërtetimi
