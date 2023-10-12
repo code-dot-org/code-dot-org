@@ -155,7 +155,7 @@ export default function LearningGoal({
             name="teacherFeedback"
             value={displayFeedback}
             onChange={handleFeedbackChange}
-            disabled={!studentLevelInfo}
+            disabled={!canProvideFeedback}
           />
         </label>
         {isAutosaving ? (
@@ -279,11 +279,7 @@ const AiToken = () => {
     <div>
       {' '}
       <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
-        <ExtraStrongText>
-          {i18n.artificialIntelligenceAbbreviation()}
-        </ExtraStrongText>
-
-        <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
+        <ExtraStrongText>{i18n.usesAi()}</ExtraStrongText>
       </BodyFourText>
     </div>
   );
