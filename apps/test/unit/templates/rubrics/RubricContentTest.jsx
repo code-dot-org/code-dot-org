@@ -3,10 +3,10 @@ import {expect} from '../../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
 import {act} from 'react-dom/test-utils';
 
-describe('RubricContainer', () => {
+describe('RubricContent', () => {
   const defaultRubric = {
     learningGoals: [
       {
@@ -45,7 +45,7 @@ describe('RubricContainer', () => {
 
   it('shows learning goals with correct props when viewing student work on assessment level', () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{name: 'Grace Hopper', timeSpent: 706}}
       />
@@ -68,7 +68,7 @@ describe('RubricContainer', () => {
 
   it('shows learning goals with correct props when viewing student work on non assessment level', () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{name: 'Grace Hopper', timeSpent: 706}}
         currentLevelName="non_assessment_level"
@@ -92,7 +92,7 @@ describe('RubricContainer', () => {
 
   it('shows learning goals with correct props when not viewing student work', () => {
     const wrapper = shallow(
-      <RubricContainer {...defaultProps} studentLevelInfo={null} />
+      <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
     const renderedLearningGoals = wrapper.find('LearningGoal');
     expect(renderedLearningGoals).to.have.lengthOf(2);
@@ -110,23 +110,31 @@ describe('RubricContainer', () => {
     );
   });
 
-  it('shows level title', () => {
-    // mount is needed in order for text() to work
-    const wrapper = mount(
-      <RubricContainer
+  it('shows level title when teacher is viewing student work', () => {
+    const wrapper = shallow(
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
         }}
       />
     );
-    expect(wrapper.text()).to.include('Lesson 3: Data Structures');
+    expect(wrapper.find('Heading5').at(0).props().children).to.equal(
+      'Lesson 3: Data Structures'
+    );
+  });
+
+  it('shows level title when teacher is not viewing student work', () => {
+    const wrapper = shallow(<RubricContent {...defaultProps} />);
+    expect(wrapper.find('Heading5').at(0).props().children).to.equal(
+      'Lesson 3: Data Structures'
+    );
   });
 
   it('shows student data if provided', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
@@ -145,7 +153,7 @@ describe('RubricContainer', () => {
   it('handles missing student data', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
@@ -161,7 +169,7 @@ describe('RubricContainer', () => {
   it('doesnt show student level data if not on level for evaluation', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
@@ -177,7 +185,7 @@ describe('RubricContainer', () => {
 
   it('shows submit button if has student data and on level for evaluation', () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         rubric={defaultRubric}
         currentLevelName="test_level"
         studentLevelInfo={{name: 'Grace Hopper'}}
@@ -189,7 +197,7 @@ describe('RubricContainer', () => {
 
   it('handles successful submit button click', async () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         rubric={defaultRubric}
         teacherHasEnabledAi
         currentLevelName="test_level"
@@ -217,7 +225,7 @@ describe('RubricContainer', () => {
 
   it('handles error on submit button click', async () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         rubric={defaultRubric}
         teacherHasEnabledAi
         studentLevelInfo={{name: 'Grace Hopper'}}
@@ -245,7 +253,7 @@ describe('RubricContainer', () => {
     );
 
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
@@ -274,7 +282,7 @@ describe('RubricContainer', () => {
 
   it('does not pass down AI analysis to components when teacher has disabled AI', () => {
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         teacherHasEnabledAi={false}
         studentLevelInfo={{
