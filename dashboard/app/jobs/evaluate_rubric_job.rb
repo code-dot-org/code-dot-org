@@ -14,6 +14,8 @@ class EvaluateRubricJob < ApplicationJob
     raise
   end
 
+  S3_AI_BUCKET = 'cdo-ai'.freeze
+
   # 2D Map from unit name and level name, to the name of the lesson files in S3
   # which will be used for AI evaluation.
   # TODO: This is a temporary solution. After the pilot, we should at least make
@@ -91,22 +93,20 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   private def read_file_from_s3(lesson_s3_name, key_suffix)
-    bucket = 'cdo-ai'
     key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
-    s3_client.get_object(bucket: bucket, key: key)[:body].read
+    s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
   end
 
   private def read_examples(lesson_s3_name)
-    bucket = 'cdo-ai'
     prefix = "teaching_assistant/lessons/#{lesson_s3_name}/examples/"
-    response = s3_client.list_objects_v2(bucket: bucket, prefix: prefix)
+    response = s3_client.list_objects_v2(bucket: S3_AI_BUCKET, prefix: prefix)
     file_names = response.contents.map(&:key)
     file_names = file_names.map {|name| name.gsub(prefix, '')}
     js_files = file_names.select {|name| name.end_with?('.js')}
     js_files.map do |file_name|
       base_name = file_name.gsub('.js', '')
-      code = s3_client.get_object(bucket: bucket, key: "#{prefix}#{file_name}")[:body].read
-      response = s3_client.get_object(bucket: bucket, key: "#{prefix}#{base_name}.tsv")[:body].read
+      code = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{file_name}")[:body].read
+      response = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{base_name}.tsv")[:body].read
       [code, response]
     end
   end
