@@ -1170,6 +1170,8 @@ az:
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
     title: Code.org da qeydiyyatdan keçin
     us_state: dövlət
+    us_state_dropdown_options:
+      other: Mən burada qeyd olunmayan yerdə yaşayıram
     user_type: Siz tələbə yoxsa müəllimsiniz?
     user_type_button: Hesab növünü yeniləyin
     user_type_label: Hesab Növü

@@ -34,7 +34,6 @@ module I18n
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
-      Services::I18n::CurriculumSyncUtils.sync_out
       puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
       I18nScriptUtils.with_synchronous_stdout do
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
@@ -142,11 +141,9 @@ module I18n
               plugins << 'resourceLink'
               plugins << 'vocabularyDefinition'
             elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
-              plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+              next # moved to I18n::Resources::Dashboard::CurriculumContent::SyncOut#restore_file_content
             elsif original_path.starts_with? "i18n/locales/original/docs"
-              plugins << 'visualCodeBlock'
-              plugins << 'link'
-              plugins << 'resourceLink'
+              next # moved to I18n::Resources::Dashboard::Docs::SyncOut
             elsif I18n::Resources::Apps::Labs::REDACTABLE_LABS.include?(File.basename(original_path, '.json'))
               next # moved to I18n::Resources::Apps::Labs::SyncOut#restore_crawding_locale_files
             end
@@ -224,26 +221,6 @@ module I18n
           else
             I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
           end
-        end
-
-        ### Docs
-        Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
-          # Each programming environment file gets merged into programming_environments.{locale}.json
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          loc_data = JSON.parse(File.read(loc_file))
-          next if loc_data.empty?
-
-          programming_env = File.basename(loc_file, '.json')
-          destination = "dashboard/config/locales/programming_environments.#{locale}.json"
-          programming_env_data = File.exist?(destination) ?
-                                   I18nScriptUtils.parse_file(destination).dig(locale, "data", "programming_environments") || {} :
-                                   {}
-          programming_env_data[programming_env] = loc_data[programming_env]
-          # JSON files in this directory need the root key to be set to the locale
-          programming_env_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'programming_environments', programming_env_data)
-          I18nScriptUtils.sanitize_data_and_write(programming_env_data, destination)
         end
 
         ### Standards

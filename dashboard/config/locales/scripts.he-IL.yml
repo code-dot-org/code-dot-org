@@ -1746,6 +1746,8 @@ he:
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
           student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
           title: המשיכו לרקוד
+        dance-unplugged:
+          title: מסיבת ריקודים ללא מחשב
         dani-june-2020-test:
           lesson_groups:
             cspSurvey:

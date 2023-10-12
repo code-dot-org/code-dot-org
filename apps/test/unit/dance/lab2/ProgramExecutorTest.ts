@@ -78,6 +78,7 @@ describe('ProgramExecutor', () => {
 
     programExecutor = new ProgramExecutor(
       'container',
+      () => 'code',
       () => undefined,
       false,
       false,

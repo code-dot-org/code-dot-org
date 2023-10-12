@@ -9358,8 +9358,8 @@ ar-SA:
           الصيد بالشباك. \n\n</div>\n\n\n##** إذا كان هناك الكثير أو القليل جدًا من
           كائن حي واحد في السلسلة الغذائية، فهناك تأثيرات على النظام البيئي بأكمله.**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: يجب تعديل كل من عمليات محاكاة النظام البيئي هذه. اختر نظامًا
-          بيئيًا، وقم بتشغيل المحاكاة لمراقبة المشكلة، واضبط الكود لإصلاحه.
+        description: يجب تعديل كل عمليات محاكاة النظام البيئي هذه. اختر نظامًا بيئيًا،
+          وقم بتشغيل المحاكاة لمراقبة المشكلة، واضبط الكود لإصلاحه.
         display_name: اختر نظامًا بيئيًا!
       csc_ecosystems_conditionals_overview:
         markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## بعد ذلك ستضيف رمزًا
@@ -9392,7 +9392,7 @@ ar-SA:
         - text: |-
             ابدأ موسم الصيد وموسم عدم الصيد
             ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: ضع حدود الصيد! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        - text: ضع حدودًا للصيد! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
         title: قم بمطابقة الكود مع الصورة
       csc_ecosystems_matching_conditionals:
         answers:
