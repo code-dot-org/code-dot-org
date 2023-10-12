@@ -98,19 +98,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     mutator: 'procedure_caller_mutator',
   },
-  {
-    type: 'gamelab_comment',
-    message0: '%1',
-    args0: [
-      {
-        type: 'field_input',
-        name: 'COMMENT',
-        text: '',
-      },
-    ],
-    previousStatement: null,
-    nextStatement: null,
-  },
 ]);
 
 // Respond to the click of a call block's edit button
