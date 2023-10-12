@@ -35,6 +35,10 @@ ps:
   africa_campaign_date_full: د اکتوبر 1 - دسمبر 18
   africa_campaign_date_year: ۲۰۲۲
   africa_campaign_date_full_year: د اکتوبر په 1، 2022 - د دسمبر په 18، 2022
+  hoc2023_header: د AI سره خلاقیت
+  hoc2023_social_creativity_with_ai_title: د کوډ ساعت - تاسو به څه جوړ کړئ؟
+  hoc2023_social_creativity_with_ai_desc: د AI په اړه د سپړلو او زده کړې لپاره د کمپیوټر
+    ساینس وکاروئ!
   hoc2022_header: سپړنه، لوبه وکړئ، جوړ کړئ!
   social_hoc2022_explore_play_create: د سپړلو، لوبې کولو، او رامینځته کولو لپاره د
     کمپیوټر ساینس وکاروئ!
@@ -172,6 +176,28 @@ ps:
     د نوي نصاب کتلاګ او بیا ډیزاین شوی د ښوونې پا pageه ترڅو تاسو سره د دې ټولو موندلو
     کې مرسته وکړي!
   in_partnership_with: په ملګرتیا کې
+  shop_code_dot_org_heading: دوکان کوډ.org
+  shop_code_dot_org_desc: زموږ د کار ملاتړ وکړئ او حرکت په ویاړ سره واغوندئ. زموږ
+    خولۍ د ولسمشر اوباما او نامتو شخصیتونو لخوا هم اغوستې دي.
+  spread_the_word_heading: کلمه خپره کړئ
+  spread_the_word_desc: د خپلې شبکې سره د Code.org شریکولو له لارې زموږ اغیز پراخه
+    کړئ. له ټولنیزو رسنیو څخه تر بریښنالیک تازه معلوماتو پورې، ومومئ چې تاسو څنګه
+    کولی شئ موږ سره نورو ښوونکو، زده کونکو او مدافعینو ته رسیدو کې مرسته وکړئ.
+  follow_us_heading: موږ په ټولنیزو رسنیو کې تعقیب کړئ
+  follow_us_desc: په ټولنیزو رسنیو کې زموږ سره تازه اوسئ او زموږ پوسټونه له خپلې شبکې
+    سره شریک کړئ ترڅو خبر پاتې شئ او د پوهاوي چلولو کې مرسته وکړئ.
+  facebook: فېسبوک
+  twitter: ټویټر
+  linked_in: لینک شوی
+  instagram: انسټاګرم
+  tik_tok: ټیک ټک
+  subscribe_to_emails_heading: بریښنالیکونو کې ګډون وکړئ
+  subscribe_to_emails_desc: زموږ د بریښنالیک لیست له لارې د درې میاشتنۍ تازه معلوماتو
+    له لارې په Code.org او د کمپیوټر ساینس زده کړې کې د څه پیښیدو په اړه ولولئ.
+  subscribe_to_emails_intl: نړیوالو تازه معلوماتو ته ګډون وکړئ
+  promote_code_dot_org_heading: کوډ.org ته وده ورکړئ
+  promote_code_dot_org_desc: د احصایو، نرخونو، او ویډیوګانو په مرسته ستاسو په سیمه
+    کې د کمپیوټر ساینس ته وده ورکړئ.
   afe_partnership_logo_alt: د ایمیزون راتلونکي انجنیر لوګو
   afe_partnership_thanks_desc: د ایمیزون فیوچر انجینر د ماشومتوب څخه تر مسلک پورې
     هراړخیز برنامه ده چې د ټیټ عاید لرونکي او نورو بې وزلو ماشومانو او ځوانانو ته
@@ -190,6 +216,15 @@ ps:
   curricula_title_high: د لیسې نصاب
   curricula_desc_high: زړه راښکونکي کورسونه او فعالیتونه براوز کړئ چې تاسو او ستاسو
     د عالي ښوونځي زده کونکو ته بلنه درکوي چې د کمپیوټر ساینس ته ژور کیندنه وکړي.
+  for_administrators_heading: د مدیرانو لپاره
+  for_administrators_desc: د زرګونو ښوونځیو سره یوځای شئ چې دمخه یې د کمپیوټر ساینس
+    په خپل نصاب کې شامل کړی دی.
+  for_parents_heading: د مور او پلار لپاره
+  for_parents_desc: تاسو کولی شئ د کمپیوټر ساینس زده کړې وړاندیز یا پراختیا لپاره
+    د خپل زده کونکي ښوونځي هڅولو کې مرسته وکړئ.
+  for_educators_heading: د ښوونکو لپاره
+  for_educators_desc: نن ورځ تدریس پیل کړئ - د کمپیوټر ساینس تجربه اړین ندي - زموږ
+    د مسلکي زده کړې ورکشاپونو سره.
   students_label: زده کونکي
   teachers_label: ښوونکي
   teacher_label_csf: د CS اساسات ښوونکی
@@ -199,10 +234,11 @@ ps:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'اړین توکي:'
   optional_materials: 'اختیاري توکي:'
-  call_to_action_explore_roles: خلاص رولونه وپلټئ
+  call_to_action_hold_an_event: یوه پیښه ونیسئ
   call_to_action_learn_more: نور زده کړئ
   call_to_action_watch_now: اوس وګورئ
   call_to_action_try_activity: د فعالیت هڅه وکړئ
+  call_to_action_try_activities: فعالیتونه هڅه وکړئ
   call_to_action_explore_unit: واحد وپلټئ
   call_to_action_explore_curriculum: نصاب وپلټئ
   call_to_action_explore_curriculum_options: د نصاب اختیارونه وپلټئ
@@ -271,11 +307,20 @@ ps:
   call_to_action_notify_available: ما ته خبر ورکړئ کله چې شتون ولري
   call_to_action_register_early_access: د لومړني لاسرسي لپاره راجستر کړئ
   call_to_action_open_positions: خلاص پوستونه وګورئ
+  call_to_action_explore_roles: خلاص رولونه وپلټئ
   call_to_action_get_guide: لارښود ترلاسه کړئ
   call_to_action_donate_to_cdo: Code.org ته مرسته وکړئ
   call_to_action_start_fundraiser: یو تمویل کونکی پیل کړئ
   call_to_action_view_donation_policy: د بسپنه ورکولو پالیسي وګورئ
   call_to_action_view_donate_bitpay: د BitPay سره مرسته وکړئ
+  call_to_action_make_a_donation: مرسته وکړئ
+  call_to_action_other_ways_to_give: د ورکولو نورې لارې
+  call_to_action_become_partner_usa: د متحده ایالاتو شریک شئ
+  call_to_action_become_partner_intl: یو نړیوال ملګری شئ
+  call_to_action_become_a_volunteer: رضاکار شئ
+  call_to_action_start_translating: ژباړل پیل کړئ
+  call_to_action_learn_about_advocacy: زموږ د وکالت په اړه زده کړه وکړئ
+  call_to_action_visit_store: پلورنځي څخه لیدنه وکړئ
   aria_label_call_to_action_afe: د ایمیزون راتلونکي انجینر په اړه نور معلومات زده
     کړئ
   aria_label_call_to_action_teaching_csf: د کمپیوټر ساینس اساساتو د مسلکي زده کړې
@@ -604,6 +649,7 @@ ps:
   heading_these_lessons_will: 'دا درسونه به:'
   heading_explore_curriculum_catalog: زموږ ټول کورسونه د نصاب کتلاګ کې وپلټئ
   heading_csa_ai: د AP® ازموینې وروسته د ترسره کولو شیانو په لټه کې یاست؟
+  heading_bring_cs_to_students: زده کونکو ته د کمپیوټر ساینس راوړئ
   professional_learning_section_desc: هغه ملاتړ ترلاسه کړئ چې تاسو ورته اړتیا لرئ
     لکه څنګه چې تاسو ښوونې ته چمتو کوئ. ښوونکي له دې سره مینه لري، د 90 over څخه ډیر
     دا د تل غوره مسلکي پرمختګ سره درجه بندي کوي!
@@ -869,6 +915,7 @@ ps:
     کارولو، او د زده کونکو ارزونې لپاره AI ګټه پورته کولو باندې تمرکز کوي. د تیوري،
     عملي مثالونو، او سرچینو بډایه ترکیب سره، دا هدف د ښوونکو ځواک ورکول دي ترڅو د
     AI منظره وګرځوي او د زده کونکو زده کړې تجربې ته وده ورکړي.
+  ai_pl_101_resources_5: AI ته د مسؤل چلند ډاډ ترلاسه کولو لارښود
   ai_pl_101_video_desc_6: 'د نوي ټیکنالوژۍ په اړه نور معلومات زده کړئ چې په AI کې
     لوی بدلونونه رامینځته کوي، د لوی ژبې ماډلونو (لکه ChatGPT) او جنریټری AI کې دوه
     نوي ویډیوګانې وړاندې کوي. واورئ چې دا نوې ټیکنالوژي څنګه مستقیم د متخصصینو څخه
@@ -879,6 +926,8 @@ ps:
     دي چې یوازې د خپلو ګوتو ګوتو کې ډوبوي، په بیله بیا د هغو کسانو لپاره پرمختللي
     وسیلې چې د دوی احتمالي اعظمي کولو په لټه کې دي.
   ai_pl_101_resources_3: AI د زده کونکو زده کړې بدلولو لپاره هڅونه
+  ai_pl_101_resources_section_title: د AI په اړه د زده کړې نورې لارې
+  ai_pl_101_resources_guide: 'د ملګري لارښود:'
   how_ai_works_hero_heading: AI څنګه کار کوي
   how_ai_works_hero_desc: د AI نړۍ ته د «AI څنګه کار کوي» سره ډوب کړئ، زموږ د ویډیو
     لړۍ او ورسره درسونه!
@@ -1700,6 +1749,30 @@ ps:
   donate_tabs_bitpay_desc: د کریپټو کارنسي سره د ورکولو راتلونکي غیږ کې ونیسئ. د BitPay
     له لارې، ستاسو ډیجیټل اسعار کولی شي په مستقیم ډول د کمپیوټر ساینس زده کړې پراخولو
     کې د Code.org هڅو ملاتړ وکړي.
+  help_page_top_heading: تاسو څنګه مرسته کولی شئ
+  help_page_top_desc: زموږ د ماموریت ملاتړ وکړئ ترڅو د کمپیوټر ساینس د هر ماشوم، هرچیرې
+    لپاره د لاسرسي وړ کړي. ستاسو هڅې موږ سره مرسته کوي چې راتلونکي نوښتګر وهڅوي او
+    د تخنیکي زده کړې تشه کمه کړي.
+  help_page_top_subhead: Code.org ته بسپنه ورکړئ
+  help_page_top_desc_02: موږ کار کوو چې هر زده کونکي ته فرصت ورکړو چې د کمپیوټر ساینس
+    زده کړي - دواړه آنلاین او په ښوونځیو کې، چیرې چې موږ دایمي کورسونه رامینځته کوو
+    او ښوونکي وروزو. د هر ډالر لپاره چې تاسو یې مرسته کوئ، یو ماشوم د کمپیوټر ساینس
+    ته معرفي کیږي.
+  help_page_partners_heading: ملګری شئ
+  help_page_partners_desc: Code.org د نورو غیر انتفاعي سازمانونو سره د شریکانو په
+    توګه کار کوي ترڅو په محلي، دوامداره فیشن کې د کمپیوټر ساینس خپرولو کې مرسته وکړي.
+    زموږ د برنامې په اړه نور معلومات زده کړئ.
+  help_page_volunteer_heading: په ټولګي کې داوطلب
+  help_page_volunteer_desc: رضاکار چې د کوډ ساعت درس ورکړي یا په محلي ټولګي کې د میلمه
+    وینا کونکي وي. تاسو ته نږدې د فرصتونو په اړه اوریدلو لپاره لاسلیک وکړئ.
+  help_page_translate_heading: موږ سره په ژباړلو کې مرسته وکړئ
+  help_page_translate_desc: رضاکارانو زموږ درسونه په 45 ژبو کې ژباړلي دي. موږ سره
+    مرسته وکړئ چې په ټوله نړۍ کې د زده کونکو لپاره زموږ ښوونې پراخولو ته دوام ورکړئ!
+  help_page_speak_for_cs_heading: د کمپیوټر ساینس زده کړې لپاره خبرې وکړئ
+  help_page_speak_for_cs_desc: په متحده ایالاتو کې د Code.org د مدافع کار په اړه نور
+    معلومات زده کړئ او هغه لس پالیسۍ چې موږ یې وړاندیز کوو چې دولتونه یې د ټولو زده
+    کونکو لپاره د کمپیوټر ساینس بنسټیز کړي. جمع، ومومئ چې تاسو څنګه کولی شئ په خپل
+    دولت کې بدلون بدل کړئ.
   hoc_live: د ژوند کوډ ساعت
   hoc_live_sign_up_title: د ژوند کوډ ساعت لپاره لاسلیک وکړئ
   hoc_live_learn_title: د ژوند کوډ ساعت سره زده کړئ
@@ -13480,6 +13553,10 @@ ps:
   video_library_page_inspirational_video_title_11: هرڅوک کولی شي زده کړي (1 دقیقې)
   video_library_page_inspirational_video_title_12: لو کیو فالټا این نیوسټراس اسکولیس
     (2 دقیقې)
+  video_library_page_inspirational_video_title_13: ناسا د کوډ ساعت لمانځي (2 دقیقې)
+  video_library_page_inspirational_video_title_14: دا د لوبې څخه ډیر دی (1 دقیقې)
+  video_library_page_inspirational_video_title_15: د کمپیوټر ساینس سره جوړ کړئ (1
+    دقیقې)
   video_library_page_not_hacked_video_title_1: 'څنګه هیک نه شئ: پیژندنه'
   video_library_page_not_hacked_video_title_2: 'څنګه هیک نه شئ: پاسورډونه'
   video_library_page_not_hacked_video_title_3: 'څنګه هیک نه شئ: تصدیق او د وسیلې لاکونه'

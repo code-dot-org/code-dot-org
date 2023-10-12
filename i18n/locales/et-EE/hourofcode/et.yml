@@ -35,6 +35,10 @@ et:
   africa_campaign_date_full: 1. oktoober - 18. detsember
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1. oktoober 2022 - 18. detsember 2022
+  hoc2023_header: Loovus tehisintellektiga
+  hoc2023_social_creativity_with_ai_title: Kooditund - Mida te loote?
+  hoc2023_social_creativity_with_ai_desc: Kasutage arvutiteadust, et uurida ja õppida
+    AI!
   hoc2022_header: uurida, mängida, luua!
   social_hoc2022_explore_play_create: Kasutage arvutiteadust, et uurida, mängida ja
     luua!
@@ -175,6 +179,28 @@ et:
     õppekavakataloog ja ümber kujundatud Õpetajate leht, mis aitavad teil seda kõike
     leida!
   in_partnership_with: Koostöös
+  shop_code_dot_org_heading: Pood Code.org
+  shop_code_dot_org_desc: Toetage meie tööd ja kandke liikumist uhkusega. Meie mütsid
+    on kandnud president Obama ja kuulsused ka.
+  spread_the_word_heading: Levita infot
+  spread_the_word_desc: Võimendage meie mõju, jagades Code.org oma võrguga. Avastage
+    sotsiaalmeediast kuni meiliteenuste uuendusteni, kuidas saate aidata meil jõuda
+    rohkemate haridustöötajate, õpilaste ja toetajateni.
+  follow_us_heading: Jälgi meid sotsiaalmeedias
+  follow_us_desc: Olge meiega kursis sotsiaalmeedias ja jagage meie postitusi oma
+    võrgustikuga, et olla kursis ja teadlikkuse tõstmiseks.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Telli e-kirjad
+  subscribe_to_emails_desc: Loe, mis toimub Code.org ja infotehnoloogia hariduses
+    läbi kvartali uuendused meie postitusnimekirja kaudu.
+  subscribe_to_emails_intl: Telli rahvusvahelised uuendused
+  promote_code_dot_org_heading: Edendada Code.org
+  promote_code_dot_org_desc: Reklaamige arvutiteadust oma piirkonnas statistika, hinnapakkumiste
+    ja videote abil.
   afe_partnership_logo_alt: Amazon Future Engineer logo
   afe_partnership_thanks_desc: Amazon Future Engineer on terviklik lapsepõlvest karjääri
     programm, mis inspireerib, harida ja koolitada madala sissetulekuga ja teisi ebasoodsas
@@ -193,6 +219,15 @@ et:
   curricula_title_high: Keskkooli õppekavad
   curricula_desc_high: Sirvige kaalukaid kursusi ja tegevusi, mis kutsuvad teid ja
     teie keskkooliõpilasi arvutiteadusesse sügavamale kaevama.
+  for_administrators_heading: Administraatoritele
+  for_administrators_desc: Liitu tuhandeid koole, kes on juba inkorporeeritud infotehnoloogia
+    oma õppekava.
+  for_parents_heading: Vanematele
+  for_parents_desc: Võite aidata julgustada oma õpilase kooli pakkuda või laiendada
+    infotehnoloogia haridus.
+  for_educators_heading: Haridustöötajatele
+  for_educators_desc: Alusta täna õpetamist — arvutiteaduse kogemusi pole vaja — meie
+    professionaalsete õppetöötubade abil.
   students_label: Õpilased
   teachers_label: Õpetajad
   teacher_label_csf: CS põhialuste õpetaja
@@ -202,10 +237,11 @@ et:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Nõutavad materjalid:'
   optional_materials: 'Valikulised materjalid:'
-  call_to_action_explore_roles: Avatud rollide uurimine
+  call_to_action_hold_an_event: Sündmuse hoidmine
   call_to_action_learn_more: Rohkem lugemist
   call_to_action_watch_now: Vaadake kohe
   call_to_action_try_activity: Proovige tegevust
+  call_to_action_try_activities: Proovige tegevusi
   call_to_action_explore_unit: Avasta üksus
   call_to_action_explore_curriculum: Tutvu õppekavaga
   call_to_action_explore_curriculum_options: Tutvu õppekava suvanditega
@@ -274,11 +310,20 @@ et:
   call_to_action_notify_available: Teavita mind, kui see on saadaval
   call_to_action_register_early_access: Registreeri varajase juurdepääsu saamiseks
   call_to_action_open_positions: Vaata avatud positsioone
+  call_to_action_explore_roles: Avatud rollide uurimine
   call_to_action_get_guide: Hankige juhend
   call_to_action_donate_to_cdo: Anneta Code.org
   call_to_action_start_fundraiser: Alusta loobus
   call_to_action_view_donation_policy: Vaata annetuse poliitikat
   call_to_action_view_donate_bitpay: Anneta BitPayga
+  call_to_action_make_a_donation: Tee annetus
+  call_to_action_other_ways_to_give: Muud võimalused anda
+  call_to_action_become_partner_usa: Hakka Ameerika Ühendriikide partneriks
+  call_to_action_become_partner_intl: Hakka rahvusvaheliseks partneriks
+  call_to_action_become_a_volunteer: Hakka vabatahtlikuks
+  call_to_action_start_translating: Alusta tõlkimist
+  call_to_action_learn_about_advocacy: Lugege meie propageerimise kohta
+  call_to_action_visit_store: Külasta poodi
   aria_label_call_to_action_afe: Lisateave Amazon Future Engineeri kohta
   aria_label_call_to_action_teaching_csf: Alusta õpetamine arvutiteaduse alused professionaalne
     õppe programm
@@ -605,6 +650,7 @@ et:
   heading_these_lessons_will: 'Need õppetunnid:'
   heading_explore_curriculum_catalog: Tutvuge kõigi meie kursuste õppekavakataloogis
   heading_csa_ai: Kas otsite asju teha pärast AP® eksamit?
+  heading_bring_cs_to_students: Tooge arvutiteadus õpilastele
   professional_learning_section_desc: Hankige toetus, mida vajate, kui valmistate
     õpetama. Õpetajad armastavad seda, üle 90% pingerida see parim professionaalne
     areng kunagi!
@@ -868,6 +914,7 @@ et:
     hindamisele ja kasutamisele ning AI võimendamisele õpilaste hindamiseks. Rikkaliku
     segu teooria, praktilisi näiteid ja ressursse, selle eesmärk on anda õpetajatele
     jõudu liikuda AI maastiku ja suurendada õpilaste õpikogemusi.
+  ai_pl_101_resources_5: Juhend vastutustundliku lähenemisviisi tagamiseks AI
   ai_pl_101_video_desc_6: 'Lisateavet uue tehnoloogia sõidu suuri muutusi AI, featuring
     kaks uut videot Large Language Mudelid (nagu ChatGPT) ja generatiivne AI. Kuulge,
     kuidas need uued tehnoloogiad töötavad otse ekspertidelt: Mira Murati, OpenAI
@@ -878,6 +925,8 @@ et:
     oma varbad, samuti täiustatud tööriistad neile, kes soovivad maksimeerida oma
     potentsiaali.
   ai_pl_101_resources_3: AI küsib üliõpilaste õppe muutmist
+  ai_pl_101_resources_section_title: Rohkem võimalusi õppida tehisintellekti
+  ai_pl_101_resources_guide: 'Kaaslane juhend:'
   how_ai_works_hero_heading: Kuidas tehisintellekt toimib
   how_ai_works_hero_desc: Sukelduge AI maailma „Kuidas AI töötab”, meie video seeria
     ja sellega kaasnevad õppetunnid!
@@ -1698,6 +1747,29 @@ et:
   donate_tabs_bitpay_desc: Omaks tuleviku andes koos cryptocurrency. Läbi BitPay,
     oma digitaalse valuuta saab otseselt toetada Code.org püüab laiendada infotehnoloogia
     haridus.
+  help_page_top_heading: Kuidas saate aidata
+  help_page_top_desc: Toetage meie missiooni teha arvutiteadus kättesaadavaks igale
+    lapsele, kõikjal. Teie jõupingutused aitavad meil inspireerida tulevasi uuendajaid
+    ja kõrvaldada tehnoloogilise hariduse lõhe.
+  help_page_top_subhead: Tee annetuse Code.org
+  help_page_top_desc_02: Töötame selle nimel, et anda igale õpilasele võimalus õppida
+    arvutiteadust — nii veebis kui ka koolides, kus me loome alalised kursused ja
+    õpetajate koolitamine. Iga dollari eest, mida annete, tutvustatakse arvutiteadusele
+    ühte last.
+  help_page_partners_heading: Hakka partneriks
+  help_page_partners_desc: Code.org töötab teiste mittetulundusühingutega partneritega,
+    et aidata arvutiteadust levitada kohalikul, jätkusuutlikul moel. Lisateave meie
+    programmi kohta.
+  help_page_volunteer_heading: Vabatahtlik klassiruumis
+  help_page_volunteer_desc: Vabatahtlik õpetada koodetund või olla külalisesineja
+    kohalikus klassiruumis. Registreeru, et kuulda teie läheduses asuvatest võimalustest.
+  help_page_translate_heading: Aidake meil tõlkida
+  help_page_translate_desc: Vabatahtlikud on tõlkinud meie õpetused enam kui 45 keeles.
+    Aidake meil jätkata meie õpetuste laiendamist üliõpilastele üle maailma!
+  help_page_speak_for_cs_heading: Räägi üles infotehnoloogia haridus
+  help_page_speak_for_cs_desc: Lisateave Code.org propageerimise töö kohta kogu USAs
+    ja kümne poliitika kohta, mida soovitame riikidel vastu võtta, et muuta arvutiteadus
+    kõigile õpilastele aluseks. Plus, teada, kuidas saate sõita muutus oma riigi.
   hoc_live: Tund kood Live
   hoc_live_sign_up_title: Registreeru kood Hour Live
   hoc_live_learn_title: Õppige kooditund Live
@@ -13334,6 +13406,9 @@ et:
   video_library_page_inspirational_video_title_11: Igaüks võib õppida (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta Et Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA tähistab kooditundi (2 min)
+  video_library_page_inspirational_video_title_14: See on rohkem kui mäng (1 min)
+  video_library_page_inspirational_video_title_15: Loo arvutiteadusega (1 min)
   video_library_page_not_hacked_video_title_1: 'Kuidas mitte saada häkkinud: Sissejuhatus'
   video_library_page_not_hacked_video_title_2: 'Kuidas mitte saada häkkinud: Paroolid'
   video_library_page_not_hacked_video_title_3: 'Kuidas mitte saada häkkinud: autentimine

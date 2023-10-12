@@ -5,6 +5,9 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Eventos do Acelerômetro"
         },
+        "csd-2022/animation-tab": {
+          "display_name": "Aba de Animação"
+        },
         "csd-2022/app-lab": {
           "display_name": "Laboratório de Aplicativo"
         },

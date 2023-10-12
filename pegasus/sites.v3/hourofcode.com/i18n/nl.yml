@@ -36,6 +36,10 @@ nl:
   africa_campaign_date_full: 1 oktober - 18 december
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
+  hoc2023_header: Creativiteit met AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Wat ga jij maken?
+  hoc2023_social_creativity_with_ai_desc: Gebruik computerwetenschap om AI te ontdekken
+    en te leren kennen!
   hoc2022_header: Ontdek, speel, creëer!
   social_hoc2022_explore_play_create: Gebruik informatica om te ontdekken, te spelen
     en te creëren!
@@ -181,6 +185,28 @@ nl:
   curriculum_launch_2023_desc: Updates voor CSC, CSP, CSD en meer, plus een nieuwe
     leerplancatalogus en een opnieuw ontworpen Teach-pagina zodat je alles kunt vinden!
   in_partnership_with: In samenwerking met
+  shop_code_dot_org_heading: Koop Code.org
+  shop_code_dot_org_desc: Steun ons werk en draag de beweging met trots. Onze hoeden
+    zijn ook gedragen door president Obama en beroemdheden.
+  spread_the_word_heading: Vertel het verder
+  spread_the_word_desc: Vergroot onze impact door Code.org te delen met je netwerk.
+    Van sociale media tot e-mailupdates, ontdek hoe je ons kunt helpen meer docenten,
+    studenten en belangenbehartigers te bereiken.
+  follow_us_heading: Volg ons op sociale media
+  follow_us_desc: Blijf op de hoogte van ons op sociale media en deel onze berichten
+    met je netwerk om op de hoogte te blijven en het bewustzijn te vergroten.
+  facebook: Facebook
+  twitter: tjilpen
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Abonneer je op e-mails
+  subscribe_to_emails_desc: Lees meer over wat er gebeurt op Code.org en in het informaticaonderwijs
+    door middel van driemaandelijkse updates via onze mailinglijst.
+  subscribe_to_emails_intl: Abonneer u op internationale updates
+  promote_code_dot_org_heading: Promoot Code.org
+  promote_code_dot_org_desc: Promoot informatica in uw omgeving met behulp van statistieken,
+    citaten en video's.
   afe_partnership_logo_alt: Amazon Future Engineer-logo
   afe_partnership_thanks_desc: Amazon Future Engineer is een uitgebreid programma
     van kind tot carrière om kinderen en jongeren met een laag inkomen en andere kansarme
@@ -199,6 +225,15 @@ nl:
   curricula_title_high: Curricula voor middelbare scholen
   curricula_desc_high: Bekijk de boeiende cursussen en activiteiten die jou en je
     middelbare scholieren uitnodigen om dieper in de informatica te duiken.
+  for_administrators_heading: Voor beheerders
+  for_administrators_desc: Sluit je aan bij de duizenden scholen die informatica al
+    in hun curriculum hebben opgenomen.
+  for_parents_heading: Voor ouders
+  for_parents_desc: Je kunt de school van je leerling helpen om informaticaonderwijs
+    aan te bieden of uit te breiden.
+  for_educators_heading: Voor leerkrachten
+  for_educators_desc: Begin vandaag nog met lesgeven — ervaring op het gebied van
+    informatica is niet nodig — met onze professionele leerworkshops.
   students_label: Leerlingen
   teachers_label: Leraren
   teacher_label_csf: Docent CS Fundamentals
@@ -208,10 +243,11 @@ nl:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Benodigde materialen:'
   optional_materials: 'Optionele materialen:'
-  call_to_action_explore_roles: Ontdek openstaande rollen
+  call_to_action_hold_an_event: Een evenement houden
   call_to_action_learn_more: Meer informatie
   call_to_action_watch_now: Nu kijken
   call_to_action_try_activity: Activiteit proberen
+  call_to_action_try_activities: Activiteiten uitproberen
   call_to_action_explore_unit: Eenheid verkennen
   call_to_action_explore_curriculum: Ontdek het curriculum
   call_to_action_explore_curriculum_options: Bekijk de opties voor het curriculum
@@ -281,11 +317,20 @@ nl:
   call_to_action_notify_available: Laat het me weten als het beschikbaar is
   call_to_action_register_early_access: Registreer voor vroege toegang
   call_to_action_open_positions: Bekijk openstaande vacatures
+  call_to_action_explore_roles: Ontdek openstaande rollen
   call_to_action_get_guide: Verkrijg de gids
   call_to_action_donate_to_cdo: Doneer aan Code.org
   call_to_action_start_fundraiser: Een inzamelingsactie starten
   call_to_action_view_donation_policy: Donatiebeleid bekijken
   call_to_action_view_donate_bitpay: Doneer met BitPay
+  call_to_action_make_a_donation: Doe een donatie
+  call_to_action_other_ways_to_give: Andere manieren om te geven
+  call_to_action_become_partner_usa: Word een partner van de Verenigde Staten
+  call_to_action_become_partner_intl: Word een internationale partner
+  call_to_action_become_a_volunteer: Vrijwilliger worden
+  call_to_action_start_translating: Begin met vertalen
+  call_to_action_learn_about_advocacy: Meer informatie over onze belangenbehartiging
+  call_to_action_visit_store: Bezoek de winkel
   aria_label_call_to_action_afe: Meer informatie over Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start het professionele leerprogramma Teaching
     Computer Science Fundamentals
@@ -629,6 +674,7 @@ nl:
   heading_these_lessons_will: 'Deze lessen zullen:'
   heading_explore_curriculum_catalog: Bekijk al onze cursussen in de Curriculumcatalogus
   heading_csa_ai: Op zoek naar dingen om te doen na het AP® -examen?
+  heading_bring_cs_to_students: Informatica naar studenten brengen
   professional_learning_section_desc: Krijg de ondersteuning die je nodig hebt terwijl
     je je voorbereidt om les te geven. Leraren vinden het geweldig, meer dan 90% vindt
     het de beste professionele ontwikkeling ooit!
@@ -907,6 +953,8 @@ nl:
     van studenten. Met een rijke mix van theorie, praktische voorbeelden en hulpmiddelen
     is het bedoeld om docenten in staat te stellen door het AI-landschap te navigeren
     en de leerervaringen van studenten te verbeteren.
+  ai_pl_101_resources_5: Gids voor het waarborgen van een verantwoorde benadering
+    van AI
   ai_pl_101_video_desc_6: 'Lees meer over de nieuwe technologie die de grote veranderingen
     in AI aanstuurt, waaronder twee nieuwe video''s over grote taalmodellen (zoals
     ChatGPT) en Generative AI. Luister rechtstreeks van de experts hoe deze nieuwe
@@ -918,6 +966,9 @@ nl:
     net hun tenen erin hebben gestoken, evenals geavanceerde tools voor diegenen die
     hun potentieel willen maximaliseren.
   ai_pl_101_resources_3: AI-vragen om het leren van studenten te transformeren
+  ai_pl_101_resources_section_title: Meer manieren om meer te weten te komen over
+    AI
+  ai_pl_101_resources_guide: 'Begeleidende gids:'
   how_ai_works_hero_heading: Hoe AI werkt
   how_ai_works_hero_desc: Duik in de wereld van AI met „How AI Works”, onze videoserie
     en bijbehorende lessen!
@@ -1787,6 +1838,32 @@ nl:
   donate_tabs_bitpay_desc: Omarm de toekomst van doneren met cryptocurrency. Via BitPay
     kan uw digitale valuta rechtstreeks de inspanningen van Code.org ondersteunen
     om het informaticaonderwijs uit te breiden.
+  help_page_top_heading: Hoe je kunt helpen
+  help_page_top_desc: Steun onze missie om informatica toegankelijk te maken voor
+    elk kind, overal. Uw inspanningen helpen ons om toekomstige innovators te inspireren
+    en de kloof in technisch onderwijs te overbruggen.
+  help_page_top_subhead: Doe een donatie aan Code.org
+  help_page_top_desc_02: We werken eraan om elke student de kans te geven om informatica
+    te leren — zowel online ALS op scholen, waar we permanente cursussen opzetten
+    en leraren opleiden. Voor elke dollar die je doneert, maakt één kind kennis met
+    de informatica.
+  help_page_partners_heading: Partner worden
+  help_page_partners_desc: Code.org werkt samen met andere non-profitorganisaties
+    als partners om computerwetenschap te helpen verspreiden op een lokale, duurzame
+    manier. Meer informatie over ons programma.
+  help_page_volunteer_heading: Doe vrijwilligerswerk in een klaslokaal
+  help_page_volunteer_desc: Doe vrijwilligerswerk om les te geven in het Hour of Code
+    of wees gastspreker in een lokaal klaslokaal. Meld je aan om op de hoogte te blijven
+    van mogelijkheden bij jou in de buurt.
+  help_page_translate_heading: Help ons met vertalen
+  help_page_translate_desc: Vrijwilligers hebben onze tutorials vertaald in meer dan
+    45 talen. Help ons om onze tutorials voor studenten over de hele wereld verder
+    uit te breiden!
+  help_page_speak_for_cs_heading: Spreek je uit voor informaticaonderwijs
+  help_page_speak_for_cs_desc: Lees meer over de belangenbehartiging van Code.org
+    in de VS en de tien beleidsmaatregelen die we staten aanbevelen om computerwetenschap
+    fundamenteel te maken voor alle studenten. Ontdek bovendien hoe u verandering
+    in uw staat kunt bewerkstelligen.
   hoc_live: Hour of Code live
   hoc_live_sign_up_title: Meld je aan voor Hour of Code Live
   hoc_live_learn_title: Leer met Hour of Code Live
@@ -13938,6 +14015,11 @@ nl:
   video_library_page_inspirational_video_title_11: Iederen Kan Het Leren (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA viert het uur van de code
+    (2 min)
+  video_library_page_inspirational_video_title_14: Het is meer dan een spel (1 min)
+  video_library_page_inspirational_video_title_15: Creëren met computerwetenschap
+    (1 min)
   video_library_page_not_hacked_video_title_1: 'Hoe je niet gehackt wordt: introductie'
   video_library_page_not_hacked_video_title_2: 'Hoe u niet gehackt wordt: wachtwoorden'
   video_library_page_not_hacked_video_title_3: 'Hoe u niet gehackt wordt: authenticatie

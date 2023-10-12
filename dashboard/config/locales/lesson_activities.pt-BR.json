@@ -12012,7 +12012,7 @@
           "name": "Aquecimento"
         },
         "4e77b45e-308c-45c5-88f1-af38ef19c3e0": {
-          "name": "Redes neurais"
+          "name": "Redes Neurais"
         },
         "cf922df8-aba4-4407-8d84-3209452aef00": {
           "name": "Fechamento"
@@ -12090,10 +12090,10 @@
           "name": "Como funciona a IA"
         },
         "265a85af-f85f-48e3-b17d-79dc9a229695": {
-          "name": "O que é aprendizado de máquina?"
+          "name": "O que é Machine Learning?"
         },
         "15ce8356-ae91-4918-9c0b-2c9e456efa4c": {
-          "name": "Dados e preconceitos de treinamento"
+          "name": "Dados de Treinamento e Vieses"
         },
         "792cc1d7-8c32-478d-ab2f-49ef09d3e832": {
           "name": "Como funcionam as redes neurais"

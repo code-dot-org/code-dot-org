@@ -36,6 +36,7 @@
     "abalone": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Përcaktoni moshën e kërmillit të detit."
         },
         "description": "Ky grup i të dhënave përmban atribute të ndryshme kërmijsh të ndryshëm, një lloj kërmijsh detarë. Qëllimi është të parashikohet numri i unazave në guaskën e kërmillit, i cili është një tregues i moshës së tij."
@@ -776,6 +777,7 @@
     "heart": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Diagnostifikoni nëse dikush mund të jetë në rrezik për sëmundje të zemrës bazuar në faktorë të ndryshëm."
         },
         "description": "Një grup i të dhënave të rezultateve të testeve për pacientët me sëmundje të zemrës, i përdorur për të parashikuar nëse dikush mund të ketë apo jo sëmundje të zemrës."
@@ -980,6 +982,7 @@
     "jeans": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Parashikoni çmimin e një palë xhinse bazuar në atë për kë janë, madhësinë e xhepave, etj."
         },
         "description": "Ky grup të dhënash përmban të dhëna matëse për markat e njohura të xhinseve."
@@ -1502,6 +1505,7 @@
     "movies": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Për shembull, përcaktoni arkën e një filmi sipas buxhetit ose zhanrit të tij."
         },
         "description": "Një grup të dhënash filmash të publikuar nga 1986-2016, me numra të arkëtarëve, vlerësime, rezultate në IMDB dhe më shumë."
@@ -1625,6 +1629,7 @@
     "nutrition": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Për shembull, përcaktoni sa kalori ka një ushqim nga përmbajtja e tij ushqyese."
         },
         "description": "Një grup të dhënash i përpiluar nga USDA për përmbajtje të ndryshme ushqimore dhe përmbajtjen e tyre ushqyese: kalori, minerale, vitamina dhe shumë më tepër."
@@ -2251,6 +2256,7 @@
     "songs": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Parashikoni sa hit i madh ishte një këngë bazuar në zhanrin e saj dhe faktorë të tjerë."
         },
         "description": "Një përzgjedhje e rastësishme e këngëve të njohura me informacione të tabelës Billboard Top 100, si dhe karakteristika të tjera."
@@ -2297,6 +2303,10 @@
     },
     "student_alcohol_consumption": {
       "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "[empty string]"
+        },
         "description": "Përmban përgjigje individuale ndaj një studimi social të nxënësve të shkollave të mesme portugeze, duke ndjekur informacionin social, gjinor dhe studimor."
       },
       "fields": {

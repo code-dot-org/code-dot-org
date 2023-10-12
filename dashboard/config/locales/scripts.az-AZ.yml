@@ -1370,9 +1370,13 @@ az:
             lesson-5:
               name: Təsadüfi Cavablar Almaq Üçün Massivlərdən İstifadə Edin
         csa-software-engineering:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüter görməsi'
           lessons:
             lesson-9:
               name: Qur
+          title: Proqram təminatı mühəndisliyi və kompüter görməsi
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -3457,6 +3461,8 @@ az:
           student_description: Genişləndirilmiş layihə ideyaları ilə ilk saatdan kənara
             çıxın.
           title: Rəqs etməyə davam edin
+        dance-unplugged:
+          title: Sərbəst Rəqs Şənliyi fəaliyyəti
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -4109,7 +4115,7 @@ az:
           description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
           student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə
             bu Maynkraft dünyasında bir macəra yaşadın.
-          title: Maynkraft Kod Saatı
+          title: Minecraft Macəraçısı
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4647,6 +4653,10 @@ az:
               display_name: Məzmun
             csd3_2:
               display_name: '2-ci fəsil: Oyunlar yaratmaq'
+        virtual-pl-csa-summer-2024-day1:
+          title: Gün 1
+        virtual-pl-csa-summer-day2:
+          title: Gün 2
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:

@@ -5,17 +5,17 @@ te:
   language: ఆంగ్ల
   front_title: చరిత్రలోనే అతిపెద్ద ఈవెంట్‌లో చేరండి, %{campaign_date}
   coming_soon: త్వరలోనే వస్తుంది
-  campaign_date_start_short: డిసె. 5
-  campaign_date_start_long: డిసెంబరు 5
-  campaign_date_short: డిసె. 5-11
-  campaign_date_full: డిసెంబరు 5-11
-  campaign_date_year: '2022'
-  campaign_date_full_year: డిసెంబరు 5-11, 2022
+  campaign_date_start_short: డిసె. 4
+  campaign_date_start_long: డిసెంబరు 4
+  campaign_date_short: డిసె. 4-10
+  campaign_date_full: డిసెంబరు 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: డిసెంబరు 4-10, 2023
   nonus_campaign_date_start_short: అక్టోబర్ 1
   nonus_campaign_date_start_long: అక్టోబర్ 1
   nonus_campaign_date_short: అక్టో. 1- డిసె. 18
   nonus_campaign_date_full: అక్టోబర్ 1 - డిసెంబర్ 18
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: అక్టోబర్ 1, 2022 - డిసెంబర్ 18, 2022
   latam_campaign_date_start_short: అక్టోబర్ 1
   latam_campaign_date_start_long: అక్టోబర్ 1
@@ -35,6 +35,10 @@ te:
   africa_campaign_date_full: అక్టోబర్ 1 - డిసెంబర్ 18
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: అక్టోబర్ 1, 2022 - డిసెంబర్ 18, 2022
+  hoc2023_header: AI తో సృజనాత్మకత
+  hoc2023_social_creativity_with_ai_title: కోడ్ యొక్క గంట - మీరు ఏమి సృష్టిస్తారు?
+  hoc2023_social_creativity_with_ai_desc: AI గురించి అన్వేషించడానికి మరియు తెలుసుకోవడానికి
+    కంప్యూటర్ సైన్స్ ఉపయోగించండి!
   hoc2022_header: అన్వేషించండి, ఆడండి, సృష్టించండి!
   social_hoc2022_explore_play_create: అన్వేషించడానికి, ఆడటానికి మరియు సృష్టించడానికి
     కంప్యూటర్ సైన్సును ఉపయోగించుకోండి!
@@ -182,6 +186,28 @@ te:
     క్రొత్త పాఠ్యాంశ ప్రణాళికా కాటలాగ్ మరియు పునఃరూపకల్పన చేసిన బోధనా పేజీ అన్నింటినీ
     కనుగొనడంలో మీకు సహాయపడుతుంది!
   in_partnership_with: వీరి భాగస్వామ్యంతో
+  shop_code_dot_org_heading: షాప్ Code.org
+  shop_code_dot_org_desc: మా పనికి మద్దతు ఇవ్వండి మరియు ఉద్యమాన్ని అహంకారంతో ధరించండి.
+    మా టోపీలను అధ్యక్షుడు ఒబామా మరియు ప్రముఖులు కూడా ధరించారు.
+  spread_the_word_heading: ఈ విషయాన్ని ప్రచారం చేయండి
+  spread_the_word_desc: మీ నెట్వర్క్తో Code.org ని భాగస్వామ్యం చేయడం ద్వారా మా ప్రభావాన్ని
+    విస్తరించండి. సోషల్ మీడియా నుండి ఇమెయిల్ నవీకరణల వరకు, ఎక్కువ మంది అధ్యాపకులు,
+    విద్యార్థులు మరియు న్యాయవాదులను చేరుకోవడంలో మీరు మాకు ఎలా సహాయపడతారో కనుగొనండి.
+  follow_us_heading: సోషల్ మీడియాలో మమ్మల్ని అనుసరించండి
+  follow_us_desc: సోషల్ మీడియాలో మాతో తాజాగా ఉండండి మరియు సమాచారం ఇవ్వడానికి మరియు
+    అవగాహన పెంచడానికి మా పోస్ట్లను మీ నెట్వర్క్తో భాగస్వామ్యం చేయండి.
+  facebook: ఫేస్బుక్
+  twitter: ట్విట్టర్
+  linked_in: లింక్డ్ఇన్
+  instagram: ఇన్స్టాగ్రామ్
+  tik_tok: టిక్టాక్
+  subscribe_to_emails_heading: ఇమెయిల్లకు సభ్యత్వాన్ని పొందండి
+  subscribe_to_emails_desc: మా మెయిలింగ్ జాబితా ద్వారా త్రైమాసిక నవీకరణల ద్వారా Code.org
+    లో మరియు కంప్యూటర్ సైన్స్ విద్యలో ఏమి జరుగుతుందో చదవండి.
+  subscribe_to_emails_intl: అంతర్జాతీయ నవీకరణలకు సభ్యత్వాన్ని పొందండి
+  promote_code_dot_org_heading: కోడ్. ఆర్గ్ను ప్రోత్సహించండి
+  promote_code_dot_org_desc: గణాంకాలు, కోట్స్ మరియు వీడియోల సహాయంతో మీ ప్రాంతంలో కంప్యూటర్
+    సైన్స్ను ప్రోత్సహించండి.
   afe_partnership_logo_alt: అమెజాన్ ఫ్యూచర్ ఇంజనీర్ లోగో
   afe_partnership_thanks_desc: అమెజాన్ ఫ్యూచర్ ఇంజనీర్ అనేది, కంప్యూటర్ సైన్సులో వృత్తులను
     కొనసాగించడానికి గాను అల్పాదాయ వర్గాల మరియు ఇతర వెనుకబడిన వర్గాల పిల్లలు మరియు
@@ -201,6 +227,15 @@ te:
   curricula_title_high: హై స్కూల్ కరికులం
   curricula_desc_high: కంప్యూటర్ సైన్స్లో లోతుగా త్రవ్వడానికి మిమ్మల్ని మరియు మీ హైస్కూల్
     విద్యార్థులను ఆహ్వానించే బలవంతపు కోర్సులు మరియు కార్యకలాపాలను బ్రౌజ్ చేయండి.
+  for_administrators_heading: నిర్వాహకుల కోసం
+  for_administrators_desc: కంప్యూటర్ సైన్స్ను ఇప్పటికే తమ పాఠ్యాంశాల్లో చేర్చిన వేలాది
+    పాఠశాలల్లో చేరండి.
+  for_parents_heading: తల్లిదండ్రుల కోసం
+  for_parents_desc: కంప్యూటర్ సైన్స్ విద్యను అందించడానికి లేదా విస్తరించడానికి మీ
+    విద్యార్థి పాఠశాలను ప్రోత్సహించడంలో మీరు సహాయపడవచ్చు.
+  for_educators_heading: బోధకుల కోసం
+  for_educators_desc: ఈ రోజు బోధనను ప్రారంభించండి - కంప్యూటర్ సైన్స్ అనుభవం అవసరం
+    లేదు - మా ప్రొఫెషనల్ లెర్నింగ్ వర్క్షాప్లతో.
   students_label: విద్యార్థులు
   teachers_label: టీచర్లు
   teacher_label_csf: CS ప్రాథమికాంశాల టీచర్
@@ -210,10 +245,11 @@ te:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'కావలసిన సామాగ్రి:'
   optional_materials: 'ఐచ్ఛిక సామాగ్రి:'
-  call_to_action_explore_roles: బహిరంగ పాత్రలను అన్వేషించండి
+  call_to_action_hold_an_event: ఈవెంట్ను పట్టుకోండి
   call_to_action_learn_more: మరింత తెలుసుకోండి
   call_to_action_watch_now: ఇప్పుడే చూడండి
   call_to_action_try_activity: కార్యాచరణను ప్రయత్నించండి
+  call_to_action_try_activities: కార్యకలాపాలను ప్రయత్నించండి
   call_to_action_explore_unit: యూనిట్ను అన్వేషించండి
   call_to_action_explore_curriculum: పాఠ్యాంశాలను అన్వేషించండి
   call_to_action_explore_curriculum_options: పాఠ్యాంశాల ఐచ్ఛికాలను అన్వేషించండి
@@ -282,11 +318,20 @@ te:
   call_to_action_notify_available: అందుబాటులో ఉన్నప్పుడు నాకు తెలియజేయండి
   call_to_action_register_early_access: ప్రారంభ ప్రాప్యత కోసం నమోదు చేయండి
   call_to_action_open_positions: ఓపెన్ పొజిషన్లను చూడండి
+  call_to_action_explore_roles: బహిరంగ పాత్రలను అన్వేషించండి
   call_to_action_get_guide: గైడ్ పొందండి
   call_to_action_donate_to_cdo: Code.org కు విరాళం ఇవ్వండి
   call_to_action_start_fundraiser: నిధుల సమీకరణ ప్రారంభించండి
   call_to_action_view_donation_policy: విరాళం విధానాన్ని చూడండి
   call_to_action_view_donate_bitpay: BitPay తో విరాళం ఇవ్వండి
+  call_to_action_make_a_donation: విరాళం ఇవ్వండి
+  call_to_action_other_ways_to_give: ఇవ్వడానికి ఇతర మార్గాలు
+  call_to_action_become_partner_usa: యునైటెడ్ స్టేట్స్ భాగస్వామి అవ్వండి
+  call_to_action_become_partner_intl: అంతర్జాతీయ భాగస్వామి అవ్వండి
+  call_to_action_become_a_volunteer: వాలంటీర్ అవ్వండి
+  call_to_action_start_translating: అనువదించడం ప్రారంభించండి
+  call_to_action_learn_about_advocacy: మా న్యాయవాద గురించి తెలుసుకోండి
+  call_to_action_visit_store: దుకాణాన్ని సందర్శించండి
   aria_label_call_to_action_afe: అమెజాన్ ఫ్యూచర్ ఇంజనీర్ గురించి మరింత తెలుసుకోండి
   aria_label_call_to_action_teaching_csf: టీచింగ్ కంప్యూటర్ సైన్స్ ఫండమెంటల్స్ ప్రొఫెషనల్
     లెర్నింగ్ ప్రోగ్రామ్ను ప్రారంభించండి
@@ -636,6 +681,7 @@ te:
   heading_these_lessons_will: 'ఈ పాఠాలు రెడీ:'
   heading_explore_curriculum_catalog: కరికులం కాటలాగ్లో మా కోర్సులన్నింటినీ అన్వేషించండి
   heading_csa_ai: AP® పరీక్ష తర్వాత చేయవలసిన పనుల కోసం చూస్తున్నారా?
+  heading_bring_cs_to_students: కంప్యూటర్ సైన్స్ విద్యార్థులకు తీసుకురండి
   professional_learning_section_desc: మీరు బోధించడానికి సిద్ధమవుతుండగా మీకు అవసరమైన
     మద్దతు పొందండి. దానిని 90% పైగా ర్యాంకింగ్ చేస్తూ అత్యుత్తమ వృత్తిపరమైన అభివృద్ధితో
     ఉపాధ్యాయులు దీన్ని ఇష్టపడతారు!
@@ -904,6 +950,7 @@ te:
     సిద్ధాంతం, ఆచరణాత్మక ఉదాహరణలు మరియు వనరుల యొక్క గొప్ప సమ్మేళనంతో, AI ప్రకృతి దృశ్యాన్ని
     నావిగేట్ చేయడానికి మరియు విద్యార్థుల అభ్యాస అనుభవాలను మెరుగుపరచడానికి అధ్యాపకులను
     శక్తివంతం చేయడం దీని లక్ష్యం.
+  ai_pl_101_resources_5: AI కి బాధ్యతాయుతమైన విధానాన్ని నిర్ధారించడానికి గైడ్
   ai_pl_101_video_desc_6: 'పెద్ద భాషా నమూనాలు (చాట్జిపిటి వంటివి) మరియు జనరేటివ్ AI
     లలో రెండు కొత్త వీడియోలను కలిగి ఉన్న AI లో పెద్ద మార్పులను నడిపించే కొత్త టెక్నాలజీ
     గురించి మరింత తెలుసుకోండి. ఈ కొత్త సాంకేతికతలు నిపుణుల నుండి నేరుగా ఎలా పనిచేస్తాయో
@@ -914,6 +961,8 @@ te:
     వారికి స్టార్టర్ ప్రాంప్ట్లు, అలాగే వారి సామర్థ్యాన్ని పెంచుకోవాలనుకునే వారికి
     అధునాతన సాధనాలు ఉన్నాయి.
   ai_pl_101_resources_3: విద్యార్థుల అభ్యాసాన్ని మార్చడానికి AI ప్రాంప్ట్ చేస్తుంది
+  ai_pl_101_resources_section_title: AI గురించి తెలుసుకోవడానికి మరిన్ని మార్గాలు
+  ai_pl_101_resources_guide: 'కంపానియన్ గైడ్:'
   how_ai_works_hero_heading: AI ఎలా పనిచేస్తుంది
   how_ai_works_hero_desc: "“హౌ AI వర్క్స్” తో AI ప్రపంచంలోకి ప్రవేశించండి, మా వీడియో
     సిరీస్ మరియు దానితో పాటు పాఠాలు!"
@@ -1771,6 +1820,32 @@ te:
   donate_tabs_bitpay_desc: క్రిప్టోకరెన్సీతో ఇచ్చే భవిష్యత్తును స్వీకరించండి. BitPay
     ద్వారా, మీ డిజిటల్ కరెన్సీ కంప్యూటర్ సైన్స్ విద్యను విస్తరించడంలో Code.org యొక్క
     ప్రయత్నాలకు నేరుగా మద్దతు ఇవ్వగలదు.
+  help_page_top_heading: మీరు ఎలా సహాయపడగలరు
+  help_page_top_desc: ప్రతి బిడ్డకు, ప్రతిచోటా కంప్యూటర్ సైన్స్ను అందుబాటులో ఉంచాలనే
+    మా మిషన్కు మద్దతు ఇవ్వండి. మీ ప్రయత్నాలు భవిష్యత్ ఆవిష్కర్తలను ప్రేరేపించడానికి
+    మరియు టెక్ విద్య అంతరాన్ని తగ్గించడానికి మాకు సహాయపడతాయి.
+  help_page_top_subhead: Code.org కు విరాళం ఇవ్వండి
+  help_page_top_desc_02: ప్రతి విద్యార్థికి కంప్యూటర్ సైన్స్ నేర్చుకునే అవకాశాన్ని
+    ఇవ్వడానికి మేము కృషి చేస్తున్నాము - ఆన్లైన్ మరియు పాఠశాలల్లో, మేము శాశ్వత కోర్సులను
+    ఏర్పాటు చేసి ఉపాధ్యాయులకు శిక్షణ ఇస్తాము. మీరు దానం చేసే ప్రతి డాలర్కు, ఒక బిడ్డను
+    కంప్యూటర్ సైన్స్కు పరిచయం చేస్తారు.
+  help_page_partners_heading: భాగస్వామి అవ్వండి
+  help_page_partners_desc: Code.org ఇతర లాభాపేక్షలేని సంస్థలతో భాగస్వాములుగా పనిచేస్తుంది,
+    కంప్యూటర్ సైన్స్ను స్థానిక, స్థిరమైన పద్ధతిలో వ్యాప్తి చేయడంలో సహాయపడుతుంది. మా
+    ప్రోగ్రామ్ గురించి మరింత తెలుసుకోండి.
+  help_page_volunteer_heading: తరగతి గదిలో వాలంటీర్
+  help_page_volunteer_desc: అవర్ ఆఫ్ కోడ్ నేర్పడానికి లేదా స్థానిక తరగతి గదిలో అతిథి
+    వక్తగా ఉండటానికి వాలంటీర్. మీకు సమీపంలో ఉన్న అవకాశాల గురించి వినడానికి సైన్ అప్
+    చేయండి.
+  help_page_translate_heading: అనువదించడానికి మాకు సహాయపడండి
+  help_page_translate_desc: వాలంటీర్లు మా ట్యుటోరియల్లను 45 కి పైగా భాషలలో అనువదించారు.
+    ప్రపంచవ్యాప్తంగా ఉన్న విద్యార్థుల కోసం మా ట్యుటోరియల్లను విస్తరించడం కొనసాగించడంలో
+    మాకు సహాయపడండి!
+  help_page_speak_for_cs_heading: కంప్యూటర్ సైన్స్ విద్య కోసం మాట్లాడండి
+  help_page_speak_for_cs_desc: యుఎస్ అంతటా Code.org యొక్క న్యాయవాద పని గురించి మరియు
+    విద్యార్థులందరికీ కంప్యూటర్ సైన్స్ ఫౌండేషన్గా మార్చడానికి రాష్ట్రాలు అనుసరించాలని
+    మేము సిఫార్సు చేస్తున్న పది విధానాల గురించి మరింత తెలుసుకోండి. అదనంగా, మీరు మీ
+    రాష్ట్రంలో మార్పును ఎలా నడపవచ్చో తెలుసుకోండి.
   hoc_live: కోడ్ లైవ్ యొక్క గంట
   hoc_live_sign_up_title: అవర్ ఆఫ్ కోడ్ లైవ్ కోసం సైన్ అప్ చేయండి
   hoc_live_learn_title: అవర్ ఆఫ్ కోడ్ లైవ్తో నేర్చుకోండి
@@ -13941,6 +14016,10 @@ te:
   video_library_page_inspirational_video_title_11: ఎవరైనా నేర్చుకోవచ్చు (1నిమి)
   video_library_page_inspirational_video_title_12: లో క్యూ ఫాల్టా ఎన్ న్యూస్ట్రస్
     ఎస్క్యూలాస్ (2 నిమి)
+  video_library_page_inspirational_video_title_13: నాసా అవర్ కోడ్ (2 నిమి) జరుపుకుంటుంది
+  video_library_page_inspirational_video_title_14: ఇది ఆట కంటే ఎక్కువ (1 నిమి)
+  video_library_page_inspirational_video_title_15: కంప్యూటర్ సైన్స్ తో సృష్టించు
+    (1 min)
   video_library_page_not_hacked_video_title_1: 'ఎలా హ్యాక్ చేయకూడదు: పరిచయం'
   video_library_page_not_hacked_video_title_2: 'ఎలా హ్యాక్ చేయకూడదు: పాస్వర్డ్లు'
   video_library_page_not_hacked_video_title_3: 'ఎలా హ్యాక్ చేయకూడదు: ప్రామాణీకరణ మరియు

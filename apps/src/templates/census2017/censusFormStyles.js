@@ -1,4 +1,5 @@
 import color from '../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export const styles = {
   formHeading: {
@@ -13,7 +14,7 @@ export const styles = {
   },
   question: {
     fontSize: 16,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
     paddingTop: 10,
     paddingBottom: 5,
@@ -24,24 +25,24 @@ export const styles = {
   },
   pledge: {
     fontSize: 18,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     color: color.charcoal,
     paddingBottom: 10,
     paddingTop: 10,
     marginLeft: 18,
   },
   share: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
   },
   otherCS: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
     marginRight: 20,
     marginLeft: 20,
   },
   option: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
     float: 'left',
     width: '80%',
@@ -49,7 +50,7 @@ export const styles = {
     marginLeft: 20,
   },
   dropdown: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
     height: 30,
     width: 120,
@@ -57,7 +58,7 @@ export const styles = {
     marginTop: 5,
   },
   shareDropdown: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
     height: 30,
     width: 50,
@@ -65,14 +66,14 @@ export const styles = {
     marginTop: 5,
   },
   schoolNotFoundDropdown: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
     height: 30,
     marginTop: 5,
     width: 250,
   },
   wideDropdown: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
     height: 30,
   },
@@ -83,27 +84,27 @@ export const styles = {
     marginLeft: 18,
   },
   checkboxOption: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
     marginLeft: 20,
   },
   input: {
     height: 40,
     width: 250,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     padding: 5,
   },
   inputInline: {
     height: 25,
     width: 390,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     padding: 5,
     maxWidth: '80%',
   },
   textArea: {
     height: 100,
     width: '100%',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     padding: 5,
   },
   firstQuestion: {
@@ -121,14 +122,14 @@ export const styles = {
   },
   errors: {
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.red,
     paddingTop: 5,
     paddingBottom: 5,
   },
   asterisk: {
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.red,
   },
   leftMargin: {

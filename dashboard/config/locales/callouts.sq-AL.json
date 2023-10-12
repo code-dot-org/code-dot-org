@@ -20,11 +20,29 @@
         "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "Ju jeni tani në Modalitetin e Dizajnit."
         },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
+          "": "[empty string]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
+          "": "[empty string]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "": "[empty string]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "": "[empty string]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2023": {
+          "": "[empty string]"
+        },
         "CSD U3 Random add_2021": {
           "CSD_U3_butterfly": "Shikoni me kujdes këtë kod."
         },
         "CSD U3 Random add_2022": {
           "CSD_U3_butterfly": "Shikoni me kujdes këtë kod."
+        },
+        "CSD U3 rect_2023": {
+          "": "[empty string]"
         },
         "CSD U6 - Accelerometer - PB_2023": {
           "CSD U6L12.5 - increase_steps": "Rritni hapat këtu!",
@@ -383,6 +401,10 @@
         },
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "Shikoni këtu për blloqet “të gjitha rosat”"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Kliko këtu për të zgjeruar bllokun. ",
+          "pointerlocation": "Tërhiqni një bllok subjekti këtu."
         },
         "CourseF_outbreak2_-2022-2": {
           "minitoolbox": "Kliko këtu për të zgjeruar bllokun. ",
@@ -917,7 +939,7 @@
         },
         "courseC_maze_programming7_2021": {
           "courseC_maze_programming7_1": "Kjo është enigma juaj e parë sfiduese! Këto janë menduar të jenë të vështira dhe mund të kërkojnë disa përpjekje.",
-          "courseC_maze_programming7_2": "Këto blloqe janë guri dhe nuk mund të hidhen larg."
+          "courseC_maze_programming7_2": "Këto blloqe janë të bëra nga guri dhe nuk mund të hidhen larg."
         },
         "courseC_starWars_loops22022": {
           "courseC_starWars_loops2": "Ju keni vetëm një nga këto blloqe në dispozicion në këtë enigmë."
@@ -1226,13 +1248,13 @@
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_events_choice_penguin": {
-          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+          "whenToWhile": "Mundohuni të ndryshoni when në while."
         },
         "courseF_events_choice_penguin_-2022-2": {
-          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+          "whenToWhile": "Mundohuni të ndryshoni when në while."
         },
         "courseF_events_choice_penguin_2023": {
-          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+          "whenToWhile": "Mundohuni të ndryshoni when në while."
         },
         "courseF_events_conflict": {
           "stops_block": "Blloqe të reja këtu!"
@@ -1292,13 +1314,13 @@
           "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
         },
         "courseF_sprites_behaviors": {
-          "behaviors_category": "Kliko këtu për të hapur kategorinë e sjelljeve."
+          "behaviors_category": "Kliko këtu për të hapur kategorinë e Sjelljeve."
         },
         "courseF_sprites_behaviors_-2022-2": {
-          "behaviors_category": "Kliko këtu për të hapur kategorinë e sjelljeve."
+          "behaviors_category": "Kliko këtu për të hapur kategorinë e Sjelljeve."
         },
         "courseF_sprites_behaviors_2023": {
-          "behaviors_category": "Kliko këtu për të hapur kategorinë e sjelljeve."
+          "behaviors_category": "Kliko këtu për të hapur kategorinë e Sjelljeve."
         },
         "courseF_sprites_make": {
           "sprites_category": "Kliko këtu për të hapur kategorinë Sprites."

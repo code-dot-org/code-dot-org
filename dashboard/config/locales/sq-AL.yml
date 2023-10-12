@@ -137,7 +137,7 @@ sq:
         nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
         mundet që të mos funksionojë.
       weblab_unsupported_locale_storage: Ju mund të hasni probleme duke përdorur Web
-        Lab në modalitetin e Shfletimit Privat. Ju lutemi ringarkoni projektin tuaj
+        Lab në modalitetin e shfletimit privat. Ju lutemi ringarkoni projektin tuaj
         në gjendje normal. Na vjen keq për shqetësimin.
   confirm: Konfirmo
   continue: Vazhdo
@@ -499,7 +499,7 @@ sq:
       about_partners: Partnerët
       about_team: Ekipi i plotë
       about_us: Rreth nesh
-      course_catalog: Katalogu i kursit
+      course_catalog: Katalogu i kurseve
       educate_beyond: Përtej Code.org
       educate_community: Komuniteti Online
       educate_elementary: Shkolla Fillore
@@ -544,7 +544,7 @@ sq:
       puzzle_map: Fazat
     user:
       already_registered: Jeni i rregistruar?
-      applab: Laboratori i Aplikacioneve
+      applab: App Lab
       artist: Artisti
       bounce: Hidhu
       calc: Llogarit

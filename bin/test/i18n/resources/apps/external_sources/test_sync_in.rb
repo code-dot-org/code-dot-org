@@ -58,7 +58,7 @@ class I18n::Resources::Apps::ExternalSources::SyncInTest < Minitest::Test
     )
     File.expects(:write).with(
       expected_dataset_file_path,
-      <<-JSON.strip.gsub(/^ {8}/, '')
+      <<~JSON.strip
         {
           "fields": {
             "field-id": {
