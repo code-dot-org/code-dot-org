@@ -42,10 +42,14 @@ section.banner.homepage {
     }
   }
 
-  p.heading-md {
+  p.hoc-label {
     color: #00FFF5;
     font-size: 2.375rem;
     margin-bottom: 0.5rem;
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 1.875rem;
+    }
   }
 
   .wrapper {
