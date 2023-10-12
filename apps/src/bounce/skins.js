@@ -119,6 +119,7 @@ var CONFIGS = {
       'Houston Rockets',
       'Indiana Fever',
       'Indiana Pacers',
+      'Las Vegas Aces',
       'Los Angeles Clippers',
       'Los Angeles Lakers',
       'Los Angeles Sparks',
