@@ -29,14 +29,13 @@ class RubricsController < ApplicationController
     end
   end
 
-  # TODO (Kaitie): Update the update action
   # TODO(KT) [AITT-163]: add notice that rubric was successfully updated
   # PATCH /rubrics/:rubric_id
   def update
     @rubric = Rubric.find(params[:id])
     @lesson = @rubric.lesson
     if @rubric.update(rubric_params)
-      render json: @rubric
+      render json: @rubric.summarize_for_rubric_edit
     else
       render action: 'edit'
     end
