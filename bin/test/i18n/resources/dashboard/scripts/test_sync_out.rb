@@ -1,8 +1,8 @@
 require_relative '../../../../test_helper'
-require_relative '../../../../../i18n/resources/dashboard/courses/sync_out'
+require_relative '../../../../../i18n/resources/dashboard/scripts/sync_out'
 
-describe I18n::Resources::Dashboard::Courses::SyncOut do
-  let(:described_class) {I18n::Resources::Dashboard::Courses::SyncOut}
+describe I18n::Resources::Dashboard::Scripts::SyncOut do
+  let(:described_class) {I18n::Resources::Dashboard::Scripts::SyncOut}
   let(:described_instance) {described_class.new}
   let(:malformed_i18n_reporter) {stub}
 
@@ -10,9 +10,9 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
   let(:i18n_locale) {'expected_i18n_locale'}
   let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
 
-  let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'dashboard/courses.yml')}
-  let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'dashboard/courses.yml')}
-  let(:i18n_backup_file_path) {CDO.dir('i18n/locales/original/dashboard/courses.yml')}
+  let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'dashboard/scripts.yml')}
+  let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'dashboard/scripts.yml')}
+  let(:i18n_backup_file_path) {CDO.dir('i18n/locales/original/dashboard/scripts.yml')}
 
   around do |test|
     FakeFS.with_fresh {test.call}
@@ -33,9 +33,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
     let(:expect_localization_restoration) do
       described_class.any_instance.expects(:restore_localization).with(language)
     end
-    let(:expect_localization_urls_fixing) do
-      described_class.any_instance.expects(:fix_localization_urls).with(language)
-    end
     let(:expect_malformed_i18n_reporting) do
       described_class.any_instance.expects(:report_malformed_i18n).with(language)
     end
@@ -50,7 +47,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
       I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
 
       described_class.any_instance.stubs(:restore_localization)
-      described_class.any_instance.stubs(:fix_localization_urls)
       described_class.any_instance.stubs(:report_malformed_i18n)
       described_class.any_instance.stubs(:distribute_localization)
       I18nScriptUtils.stubs(:move_file)
@@ -63,7 +59,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
       execution_sequence = sequence('execution')
 
       expect_localization_restoration.in_sequence(execution_sequence)
-      expect_localization_urls_fixing.in_sequence(execution_sequence)
       expect_malformed_i18n_reporting.in_sequence(execution_sequence)
       expect_localization_distribution.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
@@ -78,11 +73,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
 
       it 'does not restore localization' do
         expect_localization_restoration.never
-        perform_sync_out
-      end
-
-      it 'does not fix localization urls' do
-        expect_localization_urls_fixing.never
         perform_sync_out
       end
 
@@ -109,11 +99,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
 
       it 'does not restore localization' do
         expect_localization_restoration.never
-        perform_sync_out
-      end
-
-      it 'does not fix localization urls' do
-        expect_localization_urls_fixing.never
         perform_sync_out
       end
 
@@ -160,44 +145,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
     end
   end
 
-  describe '#fix_localization_urls' do
-    let(:fix_localization_urls) {described_instance.send(:fix_localization_urls, language)}
-
-    let(:crowdin_file_data) do
-      {
-        'en' => {
-          'data' => {
-            'resources' => {
-              'resource_key' => {
-                'url' => ' <https://test.example> '
-              }
-            }
-          }
-        }
-      }
-    end
-
-    before do
-      FileUtils.mkdir_p File.dirname(crowdin_file_path)
-      File.write crowdin_file_path, YAML.dump(crowdin_file_data)
-    end
-
-    it 'fixes course urls' do
-      expected_crowdin_file_content = <<~YAML
-        ---
-        en:
-          data:
-            resources:
-              resource_key:
-                url: https://test.example
-      YAML
-
-      fix_localization_urls
-
-      assert_equal expected_crowdin_file_content, File.read(crowdin_file_path)
-    end
-  end
-
   describe '#report_malformed_i18n' do
     let(:report_malformed_1i8n) {described_instance.send(:report_malformed_i18n, language)}
 
@@ -216,7 +163,7 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
 
     it 'distributes localization of the language' do
       I18nScriptUtils.expects(:sanitize_file_and_write).with(
-        crowdin_file_path, CDO.dir("dashboard/config/locales/courses.#{i18n_locale}.yml")
+        crowdin_file_path, CDO.dir("dashboard/config/locales/scripts.#{i18n_locale}.yml")
       ).once
 
       distribute_localization_of_language
