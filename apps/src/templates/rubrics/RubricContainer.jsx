@@ -72,6 +72,7 @@ export default function RubricContainer({
         studentLevelInfo={studentLevelInfo}
         teacherHasEnabledAi={teacherHasEnabledAi}
         canProvideFeedback={canProvideFeedback}
+        onLevelForEvaluation={onLevelForEvaluation}
         reportingData={reportingData}
         visible={selectedTab === TAB_NAMES.RUBRIC}
       />

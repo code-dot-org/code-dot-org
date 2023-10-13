@@ -37,6 +37,7 @@ export default function RubricContent({
   rubric,
   teacherHasEnabledAi,
   canProvideFeedback,
+  onLevelForEvaluation,
   reportingData,
   visible,
 }) {
@@ -117,7 +118,6 @@ export default function RubricContent({
     }
   };
 
-  //const classNames = visible ? style.visibleRubricContent : style.hiddenRuricContent;
   return (
     <div
       className={classnames(style.rubricContent, {
@@ -127,7 +127,7 @@ export default function RubricContent({
     >
       <div>
         {!!studentLevelInfo && (
-          <Heading2 style={{marginBottom: '8px'}}>
+          <Heading2 className={style.studentName}>
             {studentLevelInfo.name}
           </Heading2>
         )}
@@ -140,7 +140,7 @@ export default function RubricContent({
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
             <div className={style.levelAndStudentDetails}>
-              {canProvideFeedback && (
+              {onLevelForEvaluation && (
                 <div className={style.studentMetadata}>
                   {studentLevelInfo.timeSpent && (
                     <BodyThreeText className={style.singleMetadatum}>
@@ -164,7 +164,7 @@ export default function RubricContent({
                   )}
                 </div>
               )}
-              {!canProvideFeedback && rubricLevel?.position && (
+              {!onLevelForEvaluation && rubricLevel?.position && (
                 <BodyThreeText>
                   {i18n.feedbackAvailableOnLevel({
                     levelPosition: rubricLevel.position,
@@ -219,6 +219,7 @@ export default function RubricContent({
 }
 
 RubricContent.propTypes = {
+  onLevelForEvaluation: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
   reportingData: reportingDataShape,

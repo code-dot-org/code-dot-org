@@ -39,6 +39,7 @@ describe('RubricContent', () => {
     teacherHasEnabledAi: true,
     studentLevelInfo: {},
     canProvideFeedback: true,
+    onLevelForEvaluation: true,
     visible: true,
   };
 
@@ -73,6 +74,7 @@ describe('RubricContent', () => {
         {...defaultProps}
         studentLevelInfo={{name: 'Grace Hopper', timeSpent: 706}}
         canProvideFeedback={false}
+        onLevelForEvaluation={false}
       />
     );
     const renderedLearningGoals = wrapper.find('LearningGoal');
@@ -181,6 +183,7 @@ describe('RubricContent', () => {
           attempts: 6,
         }}
         canProvideFeedback={false}
+        onLevelForEvaluation={false}
       />
     );
     expect(wrapper.text()).to.include('Grace Hopper');
