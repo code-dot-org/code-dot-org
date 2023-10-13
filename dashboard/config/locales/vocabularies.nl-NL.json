@@ -376,6 +376,34 @@
           "word": "Programma",
           "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
         },
+        "input/csd/2023": {
+          "word": "Invoer"
+        },
+        "copyright/csd/2023": {
+          "word": "Copyright"
+        },
+        "debugging/csd/2023": {
+          "word": "Debugging",
+          "definition": "Problemen in een algoritme of programma opsporen en oplossen."
+        },
+        "program/csd/2023": {
+          "word": "Programma"
+        },
+        "variable/csd/2023": {
+          "word": "Variabele"
+        },
+        "conditionals/csd/2023": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstractie"
+        },
+        "function/csd/2023": {
+          "word": "Functie"
+        },
+        "user_interface/csd/2023": {
+          "word": "Gebruikersinterface"
+        },
         "debugging/coursea/2023": {
           "word": "Debugging",
           "definition": "Problemen in een algoritme of programma opsporen en oplossen."

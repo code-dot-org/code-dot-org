@@ -1049,6 +1049,14 @@ StudioApp.prototype.setupChangeHandlers = function () {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
     Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      // If we have a hidden definition workspace, run change listeners on it too.
+      // This ensures code changes in the hidden workspace trigger updates.
+      Blockly.addChangeListener(
+        Blockly.getHiddenDefinitionWorkspace(),
+        runAllHandlers
+      );
+    }
   } else {
     this.editor.on('change', runAllHandlers);
     // Droplet doesn't automatically bubble up aceEditor changes
@@ -2119,7 +2127,6 @@ StudioApp.prototype.configureDom = function (config) {
       // Modify the arrangement of toolbox blocks so categories align left
       if (config.level.edit_blocks === TOOLBOX_EDIT_MODE) {
         this.blockYCoordinateInterval = 80;
-        config.blockArrangement = {category: {x: 20}};
       }
       // Enable if/else, param & var editing in levelbuilder, regardless of level setting
       config.level.disableIfElseEditing = false;

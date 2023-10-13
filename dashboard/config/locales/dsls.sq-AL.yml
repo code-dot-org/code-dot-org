@@ -479,7 +479,7 @@ sq-AL:
 
           Krijoni një zingjir që përfaqëson emrin tuaj në një sistem që kompjuterët e kuptojnë!
 
-          ! [] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD CSS project RGB_2021:
         description: Shikoni se si mund të merrni edhe më shumë ngjyra duke përdorur
           kodet RGB.
@@ -498,7 +498,24 @@ sq-AL:
           të kaluara. Ju mund t'i përdorni ato për të rishikuar stilet që mund të
           dëshironi për webfaqen tuaj.
         display_name: Rishikimi i CSS
+      CSD CSS project Review_2023:
+        description: Këtu janë disa atribute CSS që ju mund të keni parë në dy mësime
+          të kaluara. Ju mund t'i përdorni ato për të rishikuar stilet që mund të
+          dëshironi për webfaqen tuaj.
+        display_name: Rishikimi i CSS
       CSD End of Unit Survey - Unit 1 - IntroMD_2022:
+        markdown: |
+          ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+        teacher_markdown: |-
+          **Anketat e fundit të njësisë për mësimdhënës:** Përderisa nxënësit plotësojnë anketën, ne do ta vlersonim nëse edhe ju do ta plotësonit anketën për mësimdhënës
+
+          ## [Kliko këtu për anketën e mësimdhënësve]
+          (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+      CSD End of Unit Survey - Unit 1 - IntroMD_2023:
         markdown: |
           ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
 
@@ -518,10 +535,17 @@ sq-AL:
         description: Shikoni një ose më shumë nga këto blloqe shtesë që mund të përdorni
           për t'i bërë fotot tuaja më interesante.
         display_name: Sfidat e Formave dhe Parametrave
+      CSD Games Parameters challenge_2023:
+        description: Shikoni një ose më shumë nga këto blloqe shtesë që mund të përdorni
+          për t'i bërë fotot tuaja më interesante.
+        display_name: Sfidat e Formave dhe Parametrave
       CSD Games Properties challenge_2021:
         description: Provoni këto sfida të reja me atributet e sprite
         display_name: 'Sfidat: Atributet e Sprite'
       CSD Games Properties challenge_2022:
+        description: Provoni këto sfida të reja me atributet e sprite
+        display_name: 'Sfidat: Atributet e Sprite'
+      CSD Games Properties challenge_2023:
         description: Provoni këto sfida të reja me atributet e sprite
         display_name: 'Sfidat: Atributet e Sprite'
       CSD Games Properties multi predict_2021:
@@ -558,15 +582,38 @@ sq-AL:
         questions:
         - text: Çfarë do të tregojë programi?
         title: Pozicionimi i Sprite të Bletës
+      CSD Games Properties multi predict_2023:
+        answers:
+        - correct: true
+          text: një sprite blete në mes të ekranit
+        - correct: true
+          text: një sprite blete në këndin e poshtëm të djathtë
+        - correct: true
+          text: dy sprites bletësh, një në mes dhe një në këndin e poshtëm të djathtë
+        - correct: true
+          text: tre sprites bletësh, të gjitha në vende të ndryshme
+        - correct: true
+          text: Asgjë, do të ketë një gabim
+        content1: Shikoni kodin më poshtë dhe parashikoni se ku do të shfaqet bleta
+          sprite.
+        questions:
+        - text: Çfarë do të tregojë programi?
+        title: Pozicionimi i Sprite të Bletës
       CSD Games Properties practice_2021:
         description: Provoni atributet e sprite që keni mësuar këtu
       CSD Games Properties practice_2022:
+        description: Provoni atributet e sprite që keni mësuar këtu
+      CSD Games Properties practice_2023:
         description: Provoni atributet e sprite që keni mësuar këtu
       CSD Games Sprites Challenges_2021:
         description: Provoni këto sfida shtesë që do t'ju ndihmojnë t'i bëni sprites
           tuaj edhe më të veçantë.
         display_name: 'Sfidat: Sprites dhe Animacione'
       CSD Games Sprites Challenges_2022:
+        description: Provoni këto sfida shtesë që do t'ju ndihmojnë t'i bëni sprites
+          tuaj edhe më të veçantë.
+        display_name: 'Sfidat: Sprites dhe Animacione'
+      CSD Games Sprites Challenges_2023:
         description: Provoni këto sfida shtesë që do t'ju ndihmojnë t'i bëni sprites
           tuaj edhe më të veçantë.
         display_name: 'Sfidat: Sprites dhe Animacione'
@@ -578,9 +625,15 @@ sq-AL:
         description: Përdorni aftësitë tuaja të reja për sprite dhe për animacion
           për të përfunduar këto nivele.
         display_name: Krijimi i sprites dhe animacioneve
+      CSD Games Sprites practice_2023:
+        description: Përdorni aftësitë tuaja të reja për sprite dhe për animacion
+          për të përfunduar këto nivele.
+        display_name: Krijimi i sprites dhe animacioneve
       CSD Games parameters practice_2021:
         display_name: Praktika me parametrat
       CSD Games parameters practice_2022:
+        display_name: Praktika me parametrat
+      CSD Games parameters practice_2023:
         display_name: Praktika me parametrat
       CSD Games variables challenge_2021:
         description: Zgjeroni aftësitë tuaja të variablave me këto sfida.
@@ -588,11 +641,18 @@ sq-AL:
       CSD Games variables challenge_2022:
         description: Zgjeroni aftësitë tuaja të variablave me këto sfida.
         display_name: 'Sfidat e Variablave '
+      CSD Games variables challenge_2023:
+        description: Zgjeroni aftësitë tuaja të variablave me këto sfida.
+        display_name: 'Sfidat e Variablave '
       CSD Games variables practice_2021:
         description: Zgjidhni nga aktivitetet e mëposhtme për të praktikuar duke përdorur
           variabla.
         display_name: Praktika e variablave
       CSD Games variables practice_2022:
+        description: Zgjidhni nga aktivitetet e mëposhtme për të praktikuar duke përdorur
+          variabla.
+        display_name: Praktika e variablave
+      CSD Games variables practice_2023:
         description: Zgjidhni nga aktivitetet e mëposhtme për të praktikuar duke përdorur
           variabla.
         display_name: Praktika e variablave
@@ -610,6 +670,11 @@ sq-AL:
           dëshironi për faqen tuaj të internetit.
         display_name: Rishikim i HTML
       CSD HTML project Review_2022:
+        description: Këtu janë disa etiketa HTML që mund t'i keni parë në dy mësime
+          të kaluara. Ju mund t'i përdorni ato për të shqyrtuar etiketat që mund të
+          dëshironi për faqen tuaj të internetit.
+        display_name: Rishikim i HTML
+      CSD HTML project Review_2023:
         description: Këtu janë disa etiketa HTML që mund t'i keni parë në dy mësime
           të kaluara. Ju mund t'i përdorni ato për të shqyrtuar etiketat që mund të
           dëshironi për faqen tuaj të internetit.
@@ -644,7 +709,15 @@ sq-AL:
         - correct: true
         - correct: true
         - correct: true
+      CSD Header Size MC_2018_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
       CSD Student End of Unit Survey - Unit 1_2022:
+        title: 'Anketa e Fundit të Njësisë së CS Discoveries! '
+      CSD Student End of Unit Survey - Unit 1_2023:
         title: 'Anketa e Fundit të Njësisë së CS Discoveries! '
       CSD U1 IOSP match:
         answers:
@@ -682,6 +755,62 @@ sq-AL:
         - {}
         - text: Përpunimi
         title: Pyetja 2
+      CSD U1 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+      CSD U1 MC Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+          text: Muzikë
+        - correct: true
+          text: Lokacioni
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: Input
+        - {}
+        - text: Përpunimi
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Përgatit
+        - text: Reflekto
+        - text: Provoni
+        - text: Përcakto
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -783,10 +912,17 @@ sq-AL:
         description: Ka shumë mënyra të ndryshme për të stiluar tekstin. Përdorni
           sfidat më poshtë për të marrë ide të reja për faqen tuaj të internetit.
         display_name: Sfidat dhe kodi shtesë
+      CSD U2 CSS challenge_pilot_2023:
+        description: Ka shumë mënyra të ndryshme për të stiluar tekstin. Përdorni
+          sfidat më poshtë për të marrë ide të reja për faqen tuaj të internetit.
+        display_name: Sfidat dhe kodi shtesë
       CSD U2 CSS practice_pilot_2021:
         description: Provoni shkathtësitë tuaja të reja në këto sfida të ndryshme!
         display_name: Stilimi i tekstit me CSS
       CSD U2 CSS practice_pilot_2022:
+        description: Provoni shkathtësitë tuaja të reja në këto sfida të ndryshme!
+        display_name: Stilimi i tekstit me CSS
+      CSD U2 CSS practice_pilot_2023:
         description: Provoni shkathtësitë tuaja të reja në këto sfida të ndryshme!
         display_name: Stilimi i tekstit me CSS
       CSD U2 Design Project:
@@ -821,13 +957,30 @@ sq-AL:
           <div style="float: left; text-align:center;"><strong>Instrumente Muzikore</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
           <div style="float: left; text-align:center;"><strong>Klubi i riciklimit</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
           <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Expression Exemplars_2018_2019_pilot_2023:
+        markdown: |
+          # Shembuj Personal Website
+
+          Klikoni webfaqet më poshtë për të parë webfaqet personale që nxënësit e tjerë kanë bërë.
+
+          ## Shembuj
+
+          <div style="float: left; text-align:center;"><strong>Qeni më i lezetshëm</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Udhëtimi im</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumente Muzikore</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Klubi i riciklimit</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
       CSD U2 Image challenge_pilot_2021:
         description: Gjeni një sfidë shtesë ose një lloj të ri të kodit këtu.
       CSD U2 Image challenge_pilot_2022:
         description: Gjeni një sfidë shtesë ose një lloj të ri të kodit këtu.
+      CSD U2 Image challenge_pilot_2023:
+        description: Gjeni një sfidë shtesë ose një lloj të ri të kodit këtu.
       CSD U2 Image practice_pilot_2021:
         description: Praktikoni shkathtësitë tuaja të reja këtu.
       CSD U2 Image practice_pilot_2022:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
+      CSD U2 Image practice_pilot_2023:
         description: Praktikoni shkathtësitë tuaja të reja këtu.
       CSD U2 L1 Overview:
         content1: përshkrimi këtu
@@ -843,6 +996,102 @@ sq-AL:
         content1: përshkrimi këtu
       CSD U2 Lesson 6 Overview:
         content1: përshkrimi këtu
+      CSD U2 MC Q10_2023:
+        answers:
+        - correct: true
+          text: Ditëlindja juaj
+        - correct: true
+          text: Adresa juaj
+        - correct: true
+        - correct: true
+          text: Emri juaj
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - correct: true
+          text: HTML
+        - correct: true
+          text: CSS
+        - correct: true
+        - correct: true
+          text: Titull
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+        title: Pyetja 1
+      CSD U2 MC Q7_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: ngjyra
+        - {}
+        - {}
       CSD U2 Sample CSS layout_2021:
         markdown: "# Shembuj të webfaqeve\n\nKlikoni në webfaqen më poshtë për të
           zbuluar disa lloje të reja të stilimit për faqet tuaja.\n\n|Shembulli 1
@@ -853,6 +1102,15 @@ sq-AL:
           PM.png)] (https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)
           |\n\n\n"
       CSD U2 Sample CSS layout_2022:
+        markdown: "# Shembuj të webfaqeve\n\nKlikoni në webfaqen më poshtë për të
+          zbuluar disa lloje të reja të stilimit për faqet tuaja.\n\n|Shembulli 1
+          | Shembulli 2 | Shembulli3| \n|-|-|-| | | \n[![] (https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)
+          | [! [] (https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13
+          PM.png)] (https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)
+          | [! [] (https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47
+          PM.png)] (https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)
+          |\n\n\n"
+      CSD U2 Sample CSS layout_2023:
         markdown: "# Shembuj të webfaqeve\n\nKlikoni në webfaqen më poshtë për të
           zbuluar disa lloje të reja të stilimit për faqet tuaja.\n\n|Shembulli 1
           | Shembulli 2 | Shembulli3| \n|-|-|-| | | \n[![] (https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)
@@ -875,6 +1133,13 @@ sq-AL:
           Klikoni webfaqen më poshtë për të zbuluar disa lloje të reja stili për faqet tuaja.
 
           [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMmDt_2LwRya
+      CSD U2 Sample CSS text_2023:
+        markdown: |-
+          # Shembull i webfaqes
+
+          Klikoni webfaqen më poshtë për të zbuluar disa lloje të reja stili për faqet tuaja.
+
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMmDt_2LwRya
       CSD U2 Sample classes_2021:
         markdown: |
           # Shembull i webfaqes
@@ -883,6 +1148,13 @@ sq-AL:
 
           [! [] (https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
       CSD U2 Sample classes_2022:
+        markdown: |
+          # Shembull i webfaqes
+
+          Klikoni webfaqen më poshtë për të zbuluar disa mënyra të reja për të stiluar elementët
+
+          [! [] (https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+      CSD U2 Sample classes_2023:
         markdown: |
           # Shembull i webfaqes
 
@@ -1180,12 +1452,27 @@ sq-AL:
           [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https.orgkSpWTwTp tohzsZGRmBxRTtV6cA/ )
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https.org-5R_5FC- LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
+      CSD U2 Top Websites_2018_2019_pilot_2023:
+        markdown: |-
+          # Webfaqe për zgjidhjen e problemeve
+
+          Këtu janë disa webfaqe që janë krijuar për të zgjidhur një problem. Zgjedhni dy vende dhe përdorni ato për të plotësuar udhëzuesin e aktivitetit.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https. vq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margjina: 10px">](https.orgKlHS/Jjjjjjjjjjjjjql8500000000318585.png Rz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https.orgkSpWTwTp tohzsZGRmBxRTtV6cA/ )
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https.org-5R_5FC- LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: përshkrimi këtu
       CSD U2 expand project_2018:
         content1: përshkrimi këtu
       CSD U2 expand project_2018_2019:
         content1: përshkrimi këtu
+      CSD U2 hyperlinks practice_2023:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
       CSD U2 image debug match:
         answers:
         - {}
@@ -1200,6 +1487,33 @@ sq-AL:
         - {}
         - {}
       CSD U2 image debug match_2022:
+        answers:
+        - text: https://images.code.org/9e5367ff3c78372af28a4518cfb3aaa8-image-1648053867494.png
+        - text: https://images.code.org/993c973fa31b14cb6827eb7cb6d53c40-image-1648053902975.png
+        - text: https://images.code.org/41b12f31a9084638e4625fecaff916d5-image-1648054026831.png
+        - text: https://images.code.org/030d30152c42faf0891259af025b9884-image-1648054068540.png
+        - text: https://images.code.org/eb2e2f9a15688cc4b2d80f4c401223b1-image-1648054098000.png
+        markdown: |
+          # Përputhja
+
+          **Secili prej artikujve më poshtë ka një bug. Përputhni përshkrimin me gabimin e saktë**
+
+          ## A:! [] (https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47%20PM.png)
+
+          ## B:! [] (https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40%20PM.png)
+
+          ## C:! [] (https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01%20PM.png)
+
+          ## D:! [] (https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24%20PM.png)
+
+          ## E:! [] (https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png)
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: Etiketa e imazhit është e pasaktë dhe mungon një atribut `src`
+        - {}
+      CSD U2 image debug match_2023:
         answers:
         - text: https://images.code.org/9e5367ff3c78372af28a4518cfb3aaa8-image-1648053867494.png
         - text: https://images.code.org/993c973fa31b14cb6827eb7cb6d53c40-image-1648053902975.png
@@ -1245,16 +1559,25 @@ sq-AL:
       CSD U2 layout style challenge_pilot_2022:
         description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
         display_name: Elementet e stilimit
+      CSD U2 layout style challenge_pilot_2023:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Elementet e stilimit
       CSD U2 layout style practice_pilot_2021:
         description: Praktikoni shkathtësitë tuaja të reja këtu.
         display_name: Elementet e stilimit
       CSD U2 layout style practice_pilot_2022:
         description: Praktikoni shkathtësitë tuaja të reja këtu.
         display_name: Elementet e stilimit
+      CSD U2 layout style practice_pilot_2023:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
+        display_name: Elementet e stilimit
       CSD U2 links challenge_2021:
         description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
         display_name: Krijimi i links
       CSD U2 links challenge_2022:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Krijimi i links
+      CSD U2 links challenge_2023:
         description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
         display_name: Krijimi i links
       CSD U2 lists match:
@@ -1360,6 +1683,42 @@ sq-AL:
           text-align:center;\"><strong>Haikus</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs\"
           target=\"_new \"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png\"
           alt=\"Faqja e mostrës Haiku\"></a></div>"
+      CSD U2 project guide_2018_2019_pilot_2023:
+        content1: përshkrimi këtu
+        markdown: "# Webaqja juaj personale \n\nNë disa nivele të ardhshme, ju do
+          të plotësoni dhe publikoni webfaqen tuaj personale. Ky është shansi juaj
+          për të ndarë idetë tuaja me botën dhe gjithashtu për të treguar të gjitha
+          gjërat që keni mësuar.\n\nDo t'ju duhet...\n\n* Udhëzuesi juaj i përfunduar
+          i projektit\n* Imazhet që keni shkarkuar\n* Rubrika e projektit\n\nKëtu
+          janë gjërat që keni mësuar...\n\n* Si të përdorni HTML për të strukturuar
+          përmbajtjen e faqes tuaj\n* Si të përdorni CSS për të stiluar tekstin, ngjyrat
+          dhe paraqitjen e faqes tuaj\n* Si ta formatoni kodin tuaj për ta bërë më
+          të lehtë leximin\n* Si të korrigjoni kodin HTML dhe CSS\n* Si të përdorni
+          imazhet në mënyrë të përgjegjshme\n* Si të mbroni informacionin tuaj personal
+          në internet\n\n## Shembuj\n\n<div style=\"float: left; text-align:center;\"><strong>Qeni
+          më i lezetshëm</strong><br /><a href=\"https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png\"
+          alt=\"Faqja e mostrës së qenit\"></a></div>\n<div style=\"float: left; text-align:center;\"><strong>Udhëtimi
+          im</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0
+          \" target=\"_new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png\"
+          alt=\"Faqja e shembullit të udhëtimit\"></a></div>\n<div style=\"float:
+          left; text-align:center;\"><strong>Instrumente muzikore</strong><br /><a
+          href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png\"
+          alt=\"Faqja e mostrës së instrumentit\"></a></div>\n<div style=\"float:
+          left; text-align:center;\"><strong>Klubi i riciklimit</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png\"
+          alt=\"Riciklimi i faqes së mostrës\"></a></div>\n<div style=\"float: left;
+          text-align:center;\"><strong>Haikus</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs\"
+          target=\"_new \"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png\"
+          alt=\"Faqja e mostrës Haiku\"></a></div>"
+      CSD U2L2 - Chal_2023:
+        description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
+          e mëposhtme.
+      CSD U2L2 - Prac_2023:
+        description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
+          e mëposhtme.
+        display_name: Nivelet e praktikës
       CSD U3 - Design a Game 1 - ExampleChoice_2022:
         description: |-
           Tani që keni të gjitha aftësitë që ju nevojiten, është koha për të bërë lojën tuaj!
@@ -1374,7 +1733,19 @@ sq-AL:
           Me një partner, mendoni disa ide të ndryshme për lojën tuaj. Ju mund të mendoni për lojërat që keni parë tashmë, ose të shikoni disa lojëra më shumë shembull për t'ju dhënë ide.
 
           Pasi të keni vendosur në një lloj loje me partnerin tuaj, plotësoni Udhëzuesin e Projektit me prapaskena, variablat, spritet dhe funksionet që do t'ju duhet për të bërë lojën. Ju do të kaloni nivelet e ardhshme duke krijuar lojën tuaj.
+      CSD U3 - Design a Game 1 - ExampleChoice_2023:
+        description: |-
+          Tani që keni të gjitha aftësitë që ju nevojiten, është koha për të bërë lojën tuaj!
+
+          Me një partner, mendoni disa ide të ndryshme për lojën tuaj. Ju mund të mendoni për lojërat që keni parë tashmë, ose të shikoni disa lojëra më shumë shembull për t'ju dhënë ide.
+
+          Pasi të keni vendosur në një lloj loje me partnerin tuaj, plotësoni Udhëzuesin e Projektit me prapaskena, variablat, spritet dhe funksionet që do t'ju duhet për të bërë lojën. Ju do të kaloni nivelet e ardhshme duke krijuar lojën tuaj.
+        display_name: Krijo lojën tënde
       CSD U3 - Interactive Card - ExampleChoice_2022:
+        description: Në nivelet e ardhshme, ju do të plotësoni kartolinën tuaj interaktive.
+          Këtu janë disa shembuj për t'ju dhënë disa ide.
+        display_name: Karta Juaj Interaktive
+      CSD U3 - Interactive Card - ExampleChoice_2023:
         description: Në nivelet e ardhshme, ju do të plotësoni kartolinën tuaj interaktive.
           Këtu janë disa shembuj për t'ju dhënë disa ide.
         display_name: Karta Juaj Interaktive
@@ -1443,6 +1814,19 @@ sq-AL:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021:
         markdown: |
           # Planifikoni Projektin Tuaj
@@ -1453,6 +1837,15 @@ sq-AL:
           * A përdor të njëjtat variabla për të ruajtur informacione?
           * A janë funksionet që përshkruan të njëjta me funksionet që përshkruat ju?
       CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022:
+        markdown: |
+          # Planifikoni Projektin Tuaj
+
+          Hidhini një sy udhëzuesit të projektit, i cili tashmë është plotësuar për ju.
+
+          * A përshkruan udhëzuesi i projektit të njëjtat sprite që keni menduar?
+          * A përdor të njëjtat variabla për të ruajtur informacione?
+          * A janë funksionet që përshkruan të njëjta me funksionet që përshkruat ju?
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2023:
         markdown: |
           # Planifikoni Projektin Tuaj
 
@@ -1516,6 +1909,20 @@ sq-AL:
         questions:
         - {}
         title: titull
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        markdown: "# Shprehjet Boolean\n\n**Shprehje Boolean ** - një shprehje që
+          mund të vlerësojë vetëm në `TRUE` ose `FALSE` \n\n# Parashikoni \n\nLexoni
+          kodin më poshtë. Ka disa simbole të reja në të cilat ju nuk i keni mësuar
+          ende. Mendoni pak se çfarë do të thonë dhe përpiquni t'i përgjigjeni pyetjes
+          vijuese\n"
+        questions:
+        - {}
+        title: titull
       CSD U3 Card Examples_2018:
         content1: përshkrimi këtu
       CSD U3 Card Examples_2018_2019:
@@ -1552,6 +1959,12 @@ sq-AL:
         - correct: true
         - correct: true
         - correct: true
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
       CSD U3 Keypress Matching:
         answers:
         - {}
@@ -1576,6 +1989,142 @@ sq-AL:
         - {}
         - {}
         questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 MC Q10_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - correct: true
+        - correct: true
+          text: '1'
+        - correct: true
+          text: '5'
+        - correct: true
+          text: '6'
+        - correct: true
+          text: '100'
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+        title: Pyetja 1
+      CSD U3 MC Q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - {}
+        - {}
+        - text: gjatësia
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
         - {}
         - {}
         - {}
@@ -1612,6 +2161,14 @@ sq-AL:
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -2033,16 +2590,34 @@ sq-AL:
         - {}
         - {}
         - {}
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: Përputhni imazhin me kodin që do të prodhojë.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 drawing challenges_2021:
         description: Provoni disa sfida!
         display_name: Vizatimi i sfidave
       CSD U3 drawing challenges_2022:
         description: Provoni disa sfida!
         display_name: Vizatimi i sfidave
+      CSD U3 drawing challenges_2023:
+        description: Provoni disa sfida!
+        display_name: Vizatimi i sfidave
       CSD U3 drawing practice choice_2021:
         description: Bëni shumë praktikë!
         display_name: Ushtrime
       CSD U3 drawing practice choice_2022:
+        description: Bëni shumë praktikë!
+        display_name: Ushtrime
+      CSD U3 drawing practice choice_2023:
         description: Bëni shumë praktikë!
         display_name: Ushtrime
       CSD U3 game intro:
@@ -2103,6 +2678,90 @@ sq-AL:
           ## Reflektoni
 
           Pas përfundimit të projektit tuaj, ju duhet të reflektoni nëse loja juaj doli si keni planifikuar dhe mënyrat se si mund ta përmirësoni procesin tuaj për herën tjetër.
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: përshkrimi këtu
+        markdown: |
+          # Ndërtoni një platformë kërcyese
+
+          Ndërsa ndërtoni platfomëen kërcyese, ju do të përdorni procesin e zgjidhjes së problemeve.
+
+          ## Përcaktoni
+
+          Problemi është përcaktuar qartë për këtë lojë, sepse tashmë keni parë versionin shembull. Megjithatë, ju mund të dëshironi të bëni disa ndryshime. Sigurohuni që çdo veçori e re për lojën tuaj të jetë e përcaktuar qartë.
+
+          ## Përgatitja
+
+          Para se të filloni të kodoni, duhet të plotësoni një udhëzues projekti. Do t'ju bëjë gati dhe do ta bëjë kodimin shumë më të lehtë.
+
+          ## Provoni
+
+          Ju do të provoni planin tuaj kur të filloni të kodoni. Mos harroni të gjitha burimet tuaja, të tilla si dokumentacioni dhe tab-in për Ndihmë dhe Këshillë, ndërsa filloni të kodoni.
+
+          ## Reflektoni
+
+          Pas përfundimit të projektit tuaj, ju duhet të reflektoni nëse loja juaj doli si keni planifikuar dhe mënyrat se si mund ta përmirësoni procesin tuaj për herën tjetër.
+      CSD U4 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - correct: true
+          text: Buton
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+        title: Pyetja 1
+      CSD U4 MC Q8_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+          text: Jepni feedback-un tuaj
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -2264,6 +2923,84 @@ sq-AL:
         content1: përshkrimi këtu
       CSD U5 L13 SFLP Interpreting Data:
         content1: përshkrimi këtu
+      CSD U5 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: përshkrimi këtu
       CSD U5 crosstab warmup_2018:
@@ -2441,27 +3178,69 @@ sq-AL:
         - correct: true
         questions:
         - {}
+      CSD U6 - Accelerometer - Prac_2023a_2023:
+        display_name: Nivelet e praktikës
       CSD U6 - Accelerometer - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Accelerometer - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Board Inputs - Prac_2023:
         display_name: Nivelet e praktikës
       CSD U6 - Board Inputs - Prac_2222:
         display_name: Nivelet e praktikës
+      CSD U6 - Board Inputs - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Board Outputs - Prac_2023:
+        display_name: Nivelet e praktikës
       CSD U6 - Board Outputs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Board Outputs - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Color LEDs - Prac_2023a_2023:
         display_name: Nivelet e praktikës
       CSD U6 - Color LEDs - Prac_2222:
         display_name: Nivelet e praktikës
+      CSD U6 - Combine Inputs - Prac_2023a_2023:
+        display_name: Nivelet e praktikës
       CSD U6 - Combine Inputs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Combine Inputs - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Functions - Prac_2023a_2023:
         display_name: Nivelet e praktikës
       CSD U6 - Functions - Prac_2222:
         display_name: Nivelet e praktikës
+      CSD U6 - Functions - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Physical Input - Prac_2023:
+        display_name: Nivelet e praktikës
       CSD U6 - Physical Input - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Physical Input - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Physical Output - Prac_2023:
         display_name: Nivelet e praktikës
       CSD U6 - Physical Output - Prac_2222:
         display_name: Nivelet e praktikës
+      CSD U6 - Physical Output - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Screen Inputs - Prac_2023:
+        display_name: Nivelet e praktikës
       CSD U6 - Screen Inputs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Screen Inputs - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Screen Outputs - Prac_2023:
         display_name: Nivelet e praktikës
       CSD U6 - Screen Outputs - Prac_2222:
         display_name: Nivelet e praktikës
+      CSD U6 - Screen Outputs - Prac_mb2022:
+        display_name: Nivelet e praktikës
+      CSD U6 - Sensors - Prac_2023a_2023:
+        display_name: Nivelet e praktikës
       CSD U6 - Sensors - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Sensors - Prac_mb2022:
         display_name: Nivelet e praktikës
       CSD U6 LED create intro:
         content1: përshkrimi këtu
@@ -2471,6 +3250,136 @@ sq-AL:
         content1: përshkrimi këtu
       CSD U6 LED create intro_2021:
         content1: përshkrimi këtu
+      CSD U6 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+          text: Buton
+        - correct: true
+          text: Temperaturë
+        - correct: true
+          text: Akselerometri
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - correct: true
+        - correct: true
+          text: Buton
+        - correct: true
+          text: Temperaturë
+        - correct: true
+          text: Akselerometri
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - correct: true
@@ -2543,7 +3452,23 @@ sq-AL:
         - correct: true
         questions:
         - {}
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -2803,11 +3728,19 @@ sq-AL:
         description: Këtu janë disa kode shtesë HTML për të provuar, dhe një zonë
           Luaj Falas për t'i përdorur ato.
         display_name: Titujt HTML
+      CSD Web Headings challenge_2023:
+        description: Këtu janë disa kode shtesë HTML për të provuar, dhe një zonë
+          Luaj Falas për t'i përdorur ato.
+        display_name: Titujt HTML
       CSD Web Headings practice_2021:
         description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
           e mëposhtme.
         display_name: Titujt HTML
       CSD Web Headings practice_2022:
+        description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
+          e mëposhtme.
+        display_name: Titujt HTML
+      CSD Web Headings practice_2023:
         description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
           e mëposhtme.
         display_name: Titujt HTML
@@ -2833,6 +3766,9 @@ sq-AL:
           <div style="float: left; text-align:center;"><strong>Instrumente muzikore</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target=" _new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Faqja e mostrës së instrumentit"></a></div>
           <div style="float: left; text-align:center;"><strong>Klubi i riciklimit</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target=" _new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Riciklimi i faqes së mostrës"></a></div>
           <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/PPGOslHhH0Od4yEOHHdnjLT4-x4yfDMStUTlMUZy6Cc" target="_new "><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Faqja e mostrës Haiku"></a></div>
+      CSD Web Sample Pages_2023:
+        content1: Shikoni përmes këtyre shembujve të webfaqeve dhe vendosni se çfarë
+          qëllimi u shërbejnë krijuesve dhe vizitorëve të tyre.
       CSD games cake challenge choice_2021:
         description: |2-
 
@@ -2845,10 +3781,19 @@ sq-AL:
           Bëjeni vetë
           Ju sapo keni kaluar nëpër planin e dikujt tjetër për krijimin e një loje, kështu që tani është koha ta bëni vetë. Cilat karakteristika ose sfida shtesë dëshironi të krijoni?
         display_name: Sfidat
+      CSD games cake challenge choice_2023:
+        description: |2-
+
+          Bëjeni vetë
+          Ju sapo keni kaluar nëpër planin e dikujt tjetër për krijimin e një loje, kështu që tani është koha ta bëni vetë. Cilat karakteristika ose sfida shtesë dëshironi të krijoni?
+        display_name: Sfidat
       CSD games collisions challenge choice_2021:
         description: Provoni këto blloqe dhe sfida të reja me përplasje.
         display_name: Sfidat e Përplasjes
       CSD games collisions challenge choice_2022:
+        description: Provoni këto blloqe dhe sfida të reja me përplasje.
+        display_name: Sfidat e Përplasjes
+      CSD games collisions challenge choice_2023:
         description: Provoni këto blloqe dhe sfida të reja me përplasje.
         display_name: Sfidat e Përplasjes
       CSD games collisions practice choice_2021:
@@ -2857,10 +3802,16 @@ sq-AL:
       CSD games collisions practice choice_2022:
         description: Praktikoni duke përdorur blloqet e reja të goditjeve.
         display_name: Praktikë me Përplasje
+      CSD games collisions practice choice_2023:
+        description: Praktikoni duke përdorur blloqet e reja të goditjeve.
+        display_name: Praktikë me Përplasje
       CSD games functions challenge choice_2021:
         description: Përmirësoni lojën tuaj dhe provoni këto sfida me funksione.
         display_name: Sfidat e Funksioneve
       CSD games functions challenge choice_2022:
+        description: Përmirësoni lojën tuaj dhe provoni këto sfida me funksione.
+        display_name: Sfidat e Funksioneve
+      CSD games functions challenge choice_2023:
         description: Përmirësoni lojën tuaj dhe provoni këto sfida me funksione.
         display_name: Sfidat e Funksioneve
       CSD games functions practice choice_2021:
@@ -2871,16 +3822,26 @@ sq-AL:
         description: Praktikoni përdorimin e funksioneve dhe mësoni më shumë rreth
           asaj që i bën ato kaq të dobishme.
         display_name: Praktikimi i Funksioneve
+      CSD games functions practice choice_2023:
+        description: Praktikoni përdorimin e funksioneve dhe mësoni më shumë rreth
+          asaj që i bën ato kaq të dobishme.
+        display_name: Praktikimi i Funksioneve
       CSD games istouching challenge choice_2021:
         description: Provoni këto blloqe dhe sfida të reja me përplasje.
         display_name: Sfidat e Përplasjes
       CSD games istouching challenge choice_2022:
         description: Provoni këto blloqe dhe sfida të reja me përplasje.
         display_name: Sfidat e Përplasjes
+      CSD games istouching challenge choice_2023:
+        description: Provoni këto blloqe dhe sfida të reja me përplasje.
+        display_name: Sfidat e Përplasjes
       CSD games istouching practice choice_2021:
         description: Praktikoni duke përdorur zbulimin e përplasjes me këto aktivitete.
         display_name: Praktika e Përplasjes
       CSD games istouching practice choice_2022:
+        description: Praktikoni duke përdorur zbulimin e përplasjes me këto aktivitete.
+        display_name: Praktika e Përplasjes
+      CSD games istouching practice choice_2023:
         description: Praktikoni duke përdorur zbulimin e përplasjes me këto aktivitete.
         display_name: Praktika e Përplasjes
       CSD games movement2 challenge choice_2021:
@@ -2891,10 +3852,17 @@ sq-AL:
         description: Provoni këto blloqe të reja dhe sfida me shpejtësinë dhe modelin
           kundërpërgjigjës.
         display_name: Sfida të Lëvizjeve Komplekse të Sprite
+      CSD games movement2 challenge choice_2023:
+        description: Provoni këto blloqe të reja dhe sfida me shpejtësinë dhe modelin
+          kundërpërgjigjës.
+        display_name: Sfida të Lëvizjeve Komplekse të Sprite
       CSD games movement2 practice choice_2021:
         description: Praktikoni duke përdorur mënyrat e reja për të lëvizur spritet.
         display_name: Praktika e Lëvizjeve të Sprite
       CSD games movement2 practice choice_2022:
+        description: Praktikoni duke përdorur mënyrat e reja për të lëvizur spritet.
+        display_name: Praktika e Lëvizjeve të Sprite
+      CSD games movement2 practice choice_2023:
         description: Praktikoni duke përdorur mënyrat e reja për të lëvizur spritet.
         display_name: Praktika e Lëvizjeve të Sprite
       CSD games platform challenge choice_2021:
@@ -2903,10 +3871,16 @@ sq-AL:
       CSD games platform challenge choice_2022:
         description: Përmirësoni lojën tuaj me këto sfida!
         display_name: Sfidat
+      CSD games platform challenge choice_2023:
+        description: Përmirësoni lojën tuaj me këto sfida!
+        display_name: Sfidat
       CSD games random challenge_2021:
         description: Provoni këto sfida shtesë me numra të rastësishëm.
         display_name: 'Sfidat: Numrat e rastësishëm'
       CSD games random challenge_2022:
+        description: Provoni këto sfida shtesë me numra të rastësishëm.
+        display_name: 'Sfidat: Numrat e rastësishëm'
+      CSD games random challenge_2023:
         description: Provoni këto sfida shtesë me numra të rastësishëm.
         display_name: 'Sfidat: Numrat e rastësishëm'
       CSD games random practice_2021:
@@ -2915,10 +3889,16 @@ sq-AL:
       CSD games random practice_2022:
         description: Provoni aftësitë tuaja të reja në këto nivele.
         display_name: Praktikoni me numra të rastësishëm
+      CSD games random practice_2023:
+        description: Provoni aftësitë tuaja të reja në këto nivele.
+        display_name: Praktikoni me numra të rastësishëm
       CSD games velocity challenge choice_2021:
         description: Provoni këto blloqe dhe sfida të reja me drejtimin.
         display_name: Sfidat e drejtimit
       CSD games velocity challenge choice_2022:
+        description: Provoni këto blloqe dhe sfida të reja me drejtimin.
+        display_name: Sfidat e drejtimit
+      CSD games velocity challenge choice_2023:
         description: Provoni këto blloqe dhe sfida të reja me drejtimin.
         display_name: Sfidat e drejtimit
       CSD games velocity practice choice_2021:
@@ -2927,10 +3907,16 @@ sq-AL:
       CSD games velocity practice choice_2022:
         description: Praktikoni përdorimin e blloqeve të drejtimit me këto aktivitete.
         display_name: Praktika e Drejtimit
+      CSD games velocity practice choice_2023:
+        description: Praktikoni përdorimin e blloqeve të drejtimit me këto aktivitete.
+        display_name: Praktika e Drejtimit
       CSD web classes challenge_2021:
         description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
         display_name: Përdorimi i klasave
       CSD web classes challenge_2022:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Përdorimi i klasave
+      CSD web classes challenge_2023:
         description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
         display_name: Përdorimi i klasave
       CSD web classes practice_2021:
@@ -2939,10 +3925,16 @@ sq-AL:
       CSD web classes practice_2022:
         description: Praktikoni shkathtësitë tuaja të reja këtu.
         display_name: Përdorimi i klasave
+      CSD web classes practice_2023:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
+        display_name: Përdorimi i klasave
       CSD web conditionals challenge choice_2021:
         description: Provoni këto sfida me kushte.
         display_name: Sfidat e Kushteve
       CSD web conditionals challenge choice_2022:
+        description: Provoni këto sfida me kushte.
+        display_name: Sfidat e Kushteve
+      CSD web conditionals challenge choice_2023:
         description: Provoni këto sfida me kushte.
         display_name: Sfidat e Kushteve
       CSD web conditionals practice choice_2021:
@@ -2951,10 +3943,16 @@ sq-AL:
       CSD web conditionals practice choice_2022:
         description: Praktikoni përdorimin e booleanëve dhe kushteve me këto aktivitete.
         display_name: 'Praktikimi i Kushteve '
+      CSD web conditionals practice choice_2023:
+        description: Praktikoni përdorimin e booleanëve dhe kushteve me këto aktivitete.
+        display_name: 'Praktikimi i Kushteve '
       CSD web draw loop challenge choice_2021:
         description: Provoni këto sfida të draw loop.
         display_name: Sfidat e Draw Loop
       CSD web draw loop challenge choice_2022:
+        description: Provoni këto sfida të draw loop.
+        display_name: Sfidat e Draw Loop
+      CSD web draw loop challenge choice_2023:
         description: Provoni këto sfida të draw loop.
         display_name: Sfidat e Draw Loop
       CSD web draw loop practice choice_2021:
@@ -2963,10 +3961,16 @@ sq-AL:
       CSD web draw loop practice choice_2022:
         description: Provoni të përdorni draw loop me këto aktivitete.
         display_name: Ushtrime
+      CSD web draw loop practice choice_2023:
+        description: Provoni të përdorni draw loop me këto aktivitete.
+        display_name: Ushtrime
       CSD web keyboard challenge choice_2021:
         description: Provoni këto blloqe dhe sfida të reja me input të tastierës.
         display_name: Sfida e Input të Tastierës
       CSD web keyboard challenge choice_2022:
+        description: Provoni këto blloqe dhe sfida të reja me input të tastierës.
+        display_name: Sfida e Input të Tastierës
+      CSD web keyboard challenge choice_2023:
         description: Provoni këto blloqe dhe sfida të reja me input të tastierës.
         display_name: Sfida e Input të Tastierës
       CSD web keyboard practice choice_2021:
@@ -2975,10 +3979,16 @@ sq-AL:
       CSD web keyboard practice choice_2022:
         description: Praktikoni futjen e tastierës me këto aktivitete.
         display_name: Praktika e Inputit të Tastierës
+      CSD web keyboard practice choice_2023:
+        description: Praktikoni futjen e tastierës me këto aktivitete.
+        display_name: Praktika e Inputit të Tastierës
       CSD web mouse challenge choice_2021:
         description: Provoni këto blloqe dhe sfida të reja me input të mausit.
         display_name: Sfidat e Mausit
       CSD web mouse challenge choice_2022:
+        description: Provoni këto blloqe dhe sfida të reja me input të mausit.
+        display_name: Sfidat e Mausit
+      CSD web mouse challenge choice_2023:
         description: Provoni këto blloqe dhe sfida të reja me input të mausit.
         display_name: Sfidat e Mausit
       CSD web mouse practice choice_2021:
@@ -2986,6 +3996,10 @@ sq-AL:
           me këto aktivitete.
         display_name: Input të mausit dhe praktika if/else
       CSD web mouse practice choice_2022:
+        description: Praktikoni input të tastierës dhe përdorimin e deklaratave të
+          kushtëzuara me këto aktivite.
+        display_name: Input të mausit dhe praktika if/else
+      CSD web mouse practice choice_2023:
         description: Praktikoni input të tastierës dhe përdorimin e deklaratave të
           kushtëzuara me këto aktivite.
         display_name: Input të mausit dhe praktika if/else
@@ -2997,10 +4011,17 @@ sq-AL:
         description: Shtoni më shumë në skenën tuaj të peshkut ose krijoni diçka të
           re.
         display_name: Sfidat e Lëvizjes Sprite
+      CSD web movement challenge choice_2023:
+        description: Shtoni më shumë në skenën tuaj të peshkut ose krijoni diçka të
+          re.
+        display_name: Sfidat e Lëvizjes Sprite
       CSD web movement practice choice_2021:
         description: Provoni të përdorni draw loop me këto aktivitete.
         display_name: Ushtrime
       CSD web movement practice choice_2022:
+        description: Provoni të përdorni draw loop me këto aktivitete.
+        display_name: Ushtrime
+      CSD web movement practice choice_2023:
         description: Provoni të përdorni draw loop me këto aktivitete.
         display_name: Ushtrime
       CSD web text challenge choice_2021:
@@ -3009,10 +4030,16 @@ sq-AL:
       CSD web text challenge choice_2022:
         description: Provoni këto blloqe dhe sfida të reja.
         display_name: Sfidat e tekstit
+      CSD web text challenge choice_2023:
+        description: Provoni këto blloqe dhe sfida të reja.
+        display_name: Sfidat e tekstit
       CSD web text practice choice_2021:
         description: Provoni aftësitë tuaja të tekstit në këto aktivitete.
         display_name: Ushtrime
       CSD web text practice choice_2022:
+        description: Provoni aftësitë tuaja të tekstit në këto aktivitete.
+        display_name: Ushtrime
+      CSD web text practice choice_2023:
         description: Provoni aftësitë tuaja të tekstit në këto aktivitete.
         display_name: Ushtrime
       CSDU6 Innovation_2021:
@@ -3135,6 +4162,25 @@ sq-AL:
         display_name: Praktika e Artistit
       CourseF_outbreak_story:
         content1: përshkrimi këtu
+        markdown: |-
+          # Përhapja: Kodoni simulimin tuaj
+
+          ## Mirë se vini në Qytetin e përbindshave!
+          Qyteti i përbindshave ishte zakonisht një vend i lumtur dhe i shëndetshëm. Përbindëshat e qytetit përbindësh pëlqenin të enden përreth për të vizituar miqtë e tyre.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.code.org/ cbd34e1-imazh -1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-16031333896503"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-16031333896503"><img src="%rcsdthng" "https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/13f76eeb38 1-image-1603133896503.png " style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src /images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b575896503.png" style="width:8%"> <img src="https://images.code.org/3b575896503 age-1603133896503.png" style=" width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://im ... 3133896503.png" style="width:8% ">
+
+          Një ditë, një nga përbindëshat filloi të ndihej i sëmurë. Përbindëshi kishte kapur një **virus**! Një virus është një mikrob i vogël që mund t'ju bëjë të sëmureni. Përbindëshat e tjerë nuk ishin shumë të shqetësuar. Ata vazhduan të vizitonin miqtë e tyre.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.code.org/ cbd34e1-imazh -1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-16031333896503"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-16031333896503"><img src="%rcsdthng" "https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/13f76eeb38 1-image-1603133896503.png " style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img: /images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b575896503.png" style="width:8%"> <img src="https://images.code.org/3b575896503 age-1603133896503.png" style=" width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://im ... 3133896503.png" style="width:8% ">
+
+          Menjëherë pas kësaj, dy monstra të tjerë u sëmurën. Ishte i njëjti virus! Duket se ata e morën virusin nga shoku i tyre.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.code.org/ cbd34e1-imazh -1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-16031333896503"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-16031333896503"><img src="%rcsdthng" "https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/af496501 9d-image-1603134238257.png " style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img: /images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b57eeb3481 image-1603133896503.png" style=" width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://im ... 3133896503.png" style="width:8% ">
+
+          Virusi u përhap ngadalë te përbindëshat e tjerë që ishin afër. Përbindëshat e shëndetshëm filluan të shqetësoheshin se të gjithë do të sëmureshin. Përbindëshat e sëmurë filluan të shqetësoheshin se do t'i jepnin virusin të gjithë të tjerëve.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.code.org/ cbd34e1-imazh -1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-16031333896503"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-16031333896503"><img src="%rcsdthng" "https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/a42947410449700 39d-image-1603134238257.png " style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-160
       CourseF_outbreak_story2:
         content1: përshkrimi këtu
         markdown: |-
@@ -3832,7 +4878,29 @@ sq-AL:
           **Anketat e mësimdhënësve në fund të njësisë:** Ndërsa nxënësit tuaj plotësojnë anketën, ne do t'ju vlerësonim të plotësoni një anketë të shpejtë të mësimdhënësve
 
           ## [Kliko këtu për Anketën e Mësimdhënësve](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
+      Student End of Unit Survey - Intro+TeacherMD_csd2_2023:
+        markdown: |
+          ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+        teacher_markdown: |-
+          **Anketat e mësimdhënësve në fund të njësisë:** Ndërsa nxënësit tuaj plotësojnë anketën, ne do t'ju vlerësonim të plotësoni një anketë të shpejtë të mësimdhënësve
+
+          ## [Kliko këtu për Anketën e Mësimdhënësve](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
       Student End of Unit Survey - Intro+TeacherMD_csd3-2022:
+        markdown: |
+          ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+        teacher_markdown: |-
+          **Anketat e mësimdhënësve në fund të njësisë:** Ndërsa nxënësit tuaj plotësojnë anketën, ne do t'ju vlerësonim të plotësoni një anketë të shpejtë të mësimdhënësve
+
+          ## [Kliko këtu për Anketën e Mësimdhënësve](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3)
+      Student End of Unit Survey - Intro+TeacherMD_csd3_2023:
         markdown: |
           ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
 
@@ -3850,6 +4918,13 @@ sq-AL:
           <small>
           <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
           </small>
+      Student End of Unit Survey - Intro+TeacherMD_csd4_2023:
+        markdown: |
+          ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
       Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
         markdown: |
           ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
@@ -3857,7 +4932,25 @@ sq-AL:
           <small>
           <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
           </small>
+      Student End of Unit Survey - Intro+TeacherMD_csd5_2023:
+        markdown: |
+          ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
       Student End of Unit Survey - Intro+TeacherMD_csd6-2022:
+        markdown: |
+          ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+        teacher_markdown: |-
+          **Anketat e mësimdhënësve në fund të njësisë:** Ndërsa nxënësit tuaj plotësojnë anketën, ne do t'ju vlerësonim të plotësoni një anketë të shpejtë të mësimdhënësve
+
+          ## [Kliko këtu për Anketën e Mësimdhënësve](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6)
+      Student End of Unit Survey - Intro+TeacherMD_csd6_2023:
         markdown: |
           ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
 
@@ -3879,7 +4972,116 @@ sq-AL:
           **Anketat e mësimdhënësve në fund të njësisë:** Ndërsa nxënësit tuaj plotësojnë anketën, ne do t'ju vlerësonim të plotësoni një anketë të shpejtë të mësimdhënësve
 
           ## [Kliko këtu për Anketën e Mësimdhënësve](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3)
+      Student End of Unit Survey - Intro+TeacherMD_csd7_2023:
+        markdown: |
+          ### Ju lutemi ndani pak kohë për t'iu përgjigjur këtyre **tri pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+        teacher_markdown: |-
+          **Anketat e mësimdhënësve në fund të njësisë:** Ndërsa nxënësit tuaj plotësojnë anketën, ne do t'ju vlerësonim të plotësoni një anketë të shpejtë të mësimdhënësve
+
+          ## [Kliko këtu për Anketën e Mësimdhënësve](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3)
       Student End of Unit Survey - Q1_2022:
+        answers:
+        - correct: true
+          text: 'Të gjitha konceptet '
+        - correct: true
+          text: Shumicën e koncepteve, por jo të gjitha
+        - correct: true
+          text: rreth gjysmën e koncepteve, por jo të gjitha
+        - correct: true
+          text: disa nga konceptet, por jo shumicën e tyre
+        - correct: true
+          text: Shumë pak ose asnjë nga konceptet
+        questions:
+        - text: Duke menduar për atë që kam mësuar në këtë njësi, mendoj se e kuptoj...
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - correct: true
+          text: 'Të gjitha konceptet '
+        - correct: true
+          text: Shumicën e koncepteve, por jo të gjitha
+        - correct: true
+          text: rreth gjysmën e koncepteve, por jo të gjitha
+        - correct: true
+          text: disa nga konceptet, por jo shumicën e tyre
+        - correct: true
+          text: Shumë pak ose asnjë nga konceptet
+        questions:
+        - text: Duke menduar për atë që kam mësuar në këtë njësi, mendoj se e kuptoj...
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - correct: true
+          text: 'Të gjitha konceptet '
+        - correct: true
+          text: Shumicën e koncepteve, por jo të gjitha
+        - correct: true
+          text: rreth gjysmën e koncepteve, por jo të gjitha
+        - correct: true
+          text: disa nga konceptet, por jo shumicën e tyre
+        - correct: true
+          text: Shumë pak ose asnjë nga konceptet
+        questions:
+        - text: Duke menduar për atë që kam mësuar në këtë njësi, mendoj se e kuptoj...
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - correct: true
+          text: 'Të gjitha konceptet '
+        - correct: true
+          text: Shumicën e koncepteve, por jo të gjitha
+        - correct: true
+          text: rreth gjysmën e koncepteve, por jo të gjitha
+        - correct: true
+          text: disa nga konceptet, por jo shumicën e tyre
+        - correct: true
+          text: Shumë pak ose asnjë nga konceptet
+        questions:
+        - text: Duke menduar për atë që kam mësuar në këtë njësi, mendoj se e kuptoj...
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - correct: true
+          text: 'Të gjitha konceptet '
+        - correct: true
+          text: Shumicën e koncepteve, por jo të gjitha
+        - correct: true
+          text: rreth gjysmën e koncepteve, por jo të gjitha
+        - correct: true
+          text: disa nga konceptet, por jo shumicën e tyre
+        - correct: true
+          text: Shumë pak ose asnjë nga konceptet
+        questions:
+        - text: Duke menduar për atë që kam mësuar në këtë njësi, mendoj se e kuptoj...
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - correct: true
+          text: 'Të gjitha konceptet '
+        - correct: true
+          text: Shumicën e koncepteve, por jo të gjitha
+        - correct: true
+          text: rreth gjysmën e koncepteve, por jo të gjitha
+        - correct: true
+          text: disa nga konceptet, por jo shumicën e tyre
+        - correct: true
+          text: Shumë pak ose asnjë nga konceptet
+        questions:
+        - text: Duke menduar për atë që kam mësuar në këtë njësi, mendoj se e kuptoj...
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - correct: true
+          text: 'Të gjitha konceptet '
+        - correct: true
+          text: Shumicën e koncepteve, por jo të gjitha
+        - correct: true
+          text: rreth gjysmën e koncepteve, por jo të gjitha
+        - correct: true
+          text: disa nga konceptet, por jo shumicën e tyre
+        - correct: true
+          text: Shumë pak ose asnjë nga konceptet
+        questions:
+        - text: Duke menduar për atë që kam mësuar në këtë njësi, mendoj se e kuptoj...
+      Student End of Unit Survey - Q1_copy6_2023:
         answers:
         - correct: true
           text: 'Të gjitha konceptet '
@@ -3912,17 +5114,162 @@ sq-AL:
         questions:
         - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
             kompjuterike.
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
+            kompjuterike.
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
+            kompjuterike.
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
+            kompjuterike.
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
+            kompjuterike.
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
+            kompjuterike.
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
+            kompjuterike.
+      Student End of Unit Survey - Q2_copy6_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
+            kompjuterike.
       Student End of Unit Survey_csd2-2022:
+        title: Anketa në fund të njësisë!
+      Student End of Unit Survey_csd2_2023:
         title: Anketa në fund të njësisë!
       Student End of Unit Survey_csd3-2022:
         title: Anketa në fund të njësisë!
+      Student End of Unit Survey_csd3_2023:
+        title: Anketa në fund të njësisë!
       Student End of Unit Survey_csd4-2022:
+        title: Anketa në fund të njësisë!
+      Student End of Unit Survey_csd4_2023:
         title: Anketa në fund të njësisë!
       Student End of Unit Survey_csd5-2022:
         title: Anketa në fund të njësisë!
+      Student End of Unit Survey_csd5_2023:
+        title: Anketa në fund të njësisë!
       Student End of Unit Survey_csd6-2022:
         title: Anketa në fund të njësisë!
+      Student End of Unit Survey_csd6_2023:
+        title: Anketa në fund të njësisë!
       Student End of Unit Survey_csd7-2022:
+        title: Anketa në fund të njësisë!
+      Student End of Unit Survey_csd7_2023:
         title: Anketa në fund të njësisë!
       Submittable Multi:
         answers:
@@ -3980,7 +5327,7 @@ sq-AL:
           njerëzit të bëjnë gjëra të tilla si biseda me shokët, dëgjoni muzikë, të
           kryeni blejrje, ose thjesht shfletoni webfaqe.\n* Është e rëndësishme që
           programuesit të kuptojnë nevojat e të tjerëve dhe të dizajnojnë aplikacione
-          me ta në mendje!\n\n! [] (https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+          me ta në mendje!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -4000,6 +5347,24 @@ sq-AL:
         questions:
         - text: Unë kuptoj dhe mund të shpjegoj konceptet e AI dhe Machine Learning
       aiml-ch1-pulse-survey-q1_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë kuptoj dhe mund të shpjegoj konceptet e AI dhe Machine Learning
+      aiml-ch1-pulse-survey-q1_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -4055,6 +5420,25 @@ sq-AL:
         questions:
         - text: Unë e di se si të krijoj aplikacione për të zgjidhur një problem ose
             për interesat e mia
+      aiml-ch1-pulse-survey-q2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë e di se si të krijoj aplikacione për të zgjidhur një problem ose
+            për interesat e mia
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -4074,6 +5458,24 @@ sq-AL:
         questions:
         - text: Mua më pëlqen shkenca kompjuterike.
       aiml-ch1-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      aiml-ch1-pulse-survey-q3_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -4127,6 +5529,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
+      aiml-ch1-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
       aiml-ch1-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -4163,9 +5583,29 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
       aiml-ch1-pulse-survey_2021:
         title: Anketa e shpejtë e AI dhe Machine Learning!
       aiml-ch1-pulse-survey_2022:
+        title: Anketa e shpejtë e AI dhe Machine Learning!
+      aiml-ch1-pulse-survey_2023:
         title: Anketa e shpejtë e AI dhe Machine Learning!
       aiml-intro-pulse-survey-q1_2021:
         answers:
@@ -4180,6 +5620,18 @@ sq-AL:
         questions:
         - text: Çfarë përvojash të mëparshme keni pasur me shkencat kompjuterike?
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - correct: true
+          text: Kjo është e para që po mësoj për shkencat kompjuterike
+        - correct: true
+          text: 'Unë kam bërë aktivitete më të vogla të shkencave kompjuterike (për
+            shembull: një orë kod) por kjo është ora ime e parë më e gjatë'
+        - correct: true
+          text: Unë tashmë kam mbajtur orë ose kam bërë mësime më të gjata në internet
+            në shkencat kompjuterike
+        questions:
+        - text: Çfarë përvojash të mëparshme keni pasur me shkencat kompjuterike?
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
           text: Kjo është e para që po mësoj për shkencat kompjuterike
@@ -4215,6 +5667,18 @@ sq-AL:
             në Al dhe Machine Learning
         questions:
         - text: Çfarë përvojash të mëparshme keni pasur me AI dhe Machine Learning?
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - correct: true
+          text: Kjo është hera e parë që po mësoj për AI dhe Machine Learning
+        - correct: true
+          text: 'Unë kam bërë aktivitete më të vogla të Al (për shembull: një orë
+            kod) por kjo është ora ime e parë më e gjata '
+        - correct: true
+          text: Unë tashmë kam mbajtur orë ose kam bërë mësime më të gjata në internet
+            në Al dhe Machine Learning
+        questions:
+        - text: Çfarë përvojash të mëparshme keni pasur me AI dhe Machine Learning?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -4234,6 +5698,24 @@ sq-AL:
         questions:
         - text: Unë kuptoj dhe mund të shpjegoj konceptet e AI dhe Machine Learning
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë kuptoj dhe mund të shpjegoj konceptet e AI dhe Machine Learning
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -4289,6 +5771,25 @@ sq-AL:
         questions:
         - text: Unë e di se si të krijoj aplikacione për të zgjidhur një problem ose
             për interesat e mia
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë e di se si të krijoj aplikacione për të zgjidhur një problem ose
+            për interesat e mia
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -4325,9 +5826,29 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Mua më pëlqen shkenca kompjuterike.
+      aiml-intro-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
       aiml-intro-pulse-survey_2021:
         title: Anketa e shpejtë e AI dhe Machine Learning!
       aiml-intro-pulse-survey_2022:
+        title: Anketa e shpejtë e AI dhe Machine Learning!
+      aiml-intro-pulse-survey_2023:
         title: Anketa e shpejtë e AI dhe Machine Learning!
       aiml-pulse-check-survey-1-levelgroup Ch2_2021:
         title: Sondazhi i Shpejtë i Shkencave Kompjuterike!
@@ -4460,6 +5981,25 @@ sq-AL:
         questions:
         - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
             kompjuterike.
+      be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë me të vërtetë mund të jem vetvetja në këtë klasë të shkencave
+            kompjuterike.
       behaviors 1 predict:
         answers:
         - correct: true
@@ -4514,6 +6054,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - correct: true
@@ -4533,6 +6091,42 @@ sq-AL:
         questions:
         - text: Unë jam i bindur se kam aftësinë për të mësuar shkenca kompjuterike.
       confident-ability-to-learn_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë jam i bindur se kam aftësinë për të mësuar shkenca kompjuterike.
+      confident-ability-to-learn_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë jam i bindur se kam aftësinë për të mësuar shkenca kompjuterike.
+      confident-ability-to-learn_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -4584,6 +6178,14 @@ sq-AL:
         questions:
         - text: A ju inkurajoi një këshilltar në shkollë që të merrni këtë klasë?
       counselor_encourage_2022:
+        answers:
+        - correct: true
+          text: po
+        - correct: true
+          text: jo
+        questions:
+        - text: A ju inkurajoi një këshilltar në shkollë që të merrni këtë klasë?
+      counselor_encourage_2023:
         answers:
         - correct: true
           text: po
@@ -4790,7 +6392,7 @@ sq-AL:
             4 herë 3 bënë 12!
           text: '20'
         questions:
-        - text: Shikoni nga afër kodin më poshtë. Sa kunguj do të mbledhë fermeri
+        - text: Shikoni nga afër kodin më poshtë. Sa kunguj do të mbledhë fermerja
             pasi të klikoni "Ekzekuto"?
       courseC_multi_maze_debugging8_predict1:
         answers:
@@ -4869,8 +6471,8 @@ sq-AL:
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - correct: true
-          feedback: E pasaktë. Së pari, Scrat kthen drejtimin e gabuar, pastaj scrat
-            nuk ecën përpara mjaftueshëm për të arritur te lajthia.
+          feedback: E pasaktë. Së pari, Scrat kthehet në drejtimin e gabuar, pastaj
+            Scrat nuk ecën përpara mjaftueshëm për të arritur te lajthia.
           text: Scrat do të arrijë te lajthia. Nuk ka gabime në kod.
         - correct: true
           feedback: E saktë! Së pari, Scrat kthehet në drejtimin e gabuar, pastaj
@@ -4954,16 +6556,16 @@ sq-AL:
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - correct: true
-          feedback: I pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
+          feedback: E pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
           text: Zogu do të përfundojë një hap më larg nga derri.
         - correct: true
           feedback: E saktë!
-          text: Zogu do të arrijë deri tek derri.
+          text: Zogu do të arrijë deri te derri.
         - correct: true
-          feedback: I pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
+          feedback: E pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
           text: Zogu do të vrapojë në TNT.
         - correct: true
-          feedback: I pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
+          feedback: E pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
           text: Zogu do të vrapojë në mur.
         questions:
         - text: Lexoni me shumë kujdes kodin e mëposhtëm. Çfarë do të ndodhë kur klikoni
@@ -5202,7 +6804,7 @@ sq-AL:
         display_name: Shembuj të Projektit
       courseD_EOC_examples_2021:
         description: Ju jeni gati për të filluar projektin tuaj përfundimtar. Para
-          se të filloni kaloni ca kohë duke parë projektet shembull.
+          se të filloni kaloni ca kohë duke parë shembujt e projekteve.
         display_name: Shembuj të Projektit
       courseD_multi_artist_binary8_predict1:
         answers:
@@ -5616,7 +7218,7 @@ sq-AL:
         - correct: true
           feedback: E pasaktë. Bleta përsërit veprimin e përsëritur të ecjes përpara
             dhe mbledhjes së nektarit, duke e lejuar atë të zgjidhë enigmën.
-          text: Bleta do të kthejë drejtimin e gabuar.
+          text: Bleta do të kthehet në drejtimin e gabuar.
         questions:
         - text: Shikoni nga afër nested loops. Çfarë do të ndodhë kur klikoni "Ekzekuto"?
       courseD_multi_bee_nestedLoops2_predict12022_2023:
@@ -5632,7 +7234,7 @@ sq-AL:
         - correct: true
           feedback: E pasaktë. Bleta përsërit veprimin e përsëritur të ecjes përpara
             dhe mbledhjes së nektarit, duke e lejuar atë të zgjidhë enigmën.
-          text: Bleta do të kthejë drejtimin e gabuar.
+          text: Bleta do të kthehet në drejtimin e gabuar.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -5690,7 +7292,7 @@ sq-AL:
         - correct: true
           feedback: E pasaktë. Bleta përsërit veprimin e përsëritur të ecjes përpara
             dhe mbledhjes së nektarit, duke e lejuar atë të zgjidhë enigmën.
-          text: Bleta do të kthejë drejtimin e gabuar.
+          text: Bleta do të kthehet në drejtimin e gabuar.
         questions:
         - text: Shikoni nga afër nested loops. Çfarë do të ndodhë kur klikoni "Run"?
       courseD_multi_bee_nestedLoops9_predict2:
@@ -6805,9 +8407,9 @@ sq-AL:
         display_name: Praktika me evente
         teacher_markdown: |-
           # Përmbledhje e nivelit të zgjedhjes
-          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënëssit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) dëshirojnë.
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) dëshirojnë.
 
-          Ju mund të përdorni përshkrimet e mëposhtme për t'i ndihmuar studentët të zgjedhin vetë zgjedhjet, ose për të vendosur pritshmëri rreth numrit të nënniveleve që duhet të plotësojnë.
+          Ju mund të përdorni përshkrimet e mëposhtme për t'i ndihmuar nxënësit të zgjedhin vetë zgjedhjet, ose për të vendosur pritshmëri rreth numrit të nënniveleve që duhet të plotësojnë.
 
           |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Blast Off!|Mësoni të fluturoni|Bëni një rrotullim me fuçi|Tkurruni dhe Rrituni|Shfryni peshkun!|Pinguini në lëvizje|
           |-|-|-|-|-|-|-|
@@ -6930,16 +8532,18 @@ sq-AL:
         - text: 'Bëni një parashikim: Pas të shtypni Ekzekuto, çfarë do të ndodhë
             kur klikoni një nga spritet?'
       courseF_intro_apps:
-        description: Mirë se vini në CS Fundamentals! Të gjitha këto projekte janë
-          krijuar me Sprite Lab. Provoni ato tani për të parë se çfarë është e mundur.
-          Deri në fund të këtij kursi, ju do të jeni në gjendje të bëni projektet
-          tuaja si këto ... dhe më shumë!
+        description: Mirë se vini në Bazat e shkencave kompjuterike! Të gjitha këto
+          projekte janë krijuar me Sprite Lab. Provoni ato tani për të parë se çfarë
+          është e mundur. Në fund të këtij kursi, ju do të jeni në gjendje të bëni
+          projektet tuaja si këto... dhe më shumë!
         display_name: Aplikacionet Sprite Lab
-        teacher_markdown: |-
-          # Përmbledhje e nivelit të zgjedhjes
-          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) të pëlqejnë.
-
-          Zgjedhjet këtu i çojnë nxënësit në mostrat e aplikacioneve që mund të eksplorojnë. Ky aktivitet synon të koordinohet me fletën punuese "Eksplorimi i aplikacioneve", që gjendet në [planin e mësimit] (.././).
+        teacher_markdown: "# Përmbledhje e nivelit të zgjedhjes\nNivelet e zgjedhjes
+          ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit
+          duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë
+          sa më shumë që ata (ose ju) të pëlqejnë.\n\nZgjedhjet këtu i çojnë nxënësit
+          në mostrat e aplikacioneve që mund të eksplorojnë. Ky aktivitet synon të
+          koordinohet me fletën punuese \"Eksplorimi i aplikacioneve\", që gjendet
+          në [planin e mësimit] (.././). "
       courseF_intro_apps2022_2022_pilot_-2022-2:
         description: Të gjitha këto projekte janë krijuar me Sprite Lab. Provoni ato
           tani për të parë se çfarë është e mundur. Deri në fund të këtij kursi, ju
@@ -8768,6 +10372,42 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csd-post-survey-markdown-with-link-to-survey_2022:
         markdown: |+
           # CS Discoveries Post-Course Survey
@@ -8928,6 +10568,50 @@ sq-AL:
         - correct: true
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - correct: true
+          text: Po
+        - correct: true
+          text: Jo
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: përshkrimi këtu
       csd-post-survey-unit2-preamble:
@@ -9084,6 +10768,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Mua më pëlqen shkenca kompjuterike.
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
@@ -9193,6 +10895,24 @@ sq-AL:
         questions:
         - text: Mua më pëlqen shkenca kompjuterike.
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -9337,6 +11057,24 @@ sq-AL:
         questions:
         - text: Mua më pëlqen shkenca kompjuterike.
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -9516,6 +11254,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Mua më pëlqen shkenca kompjuterike.
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
@@ -9660,7 +11416,43 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Mua më pëlqen shkenca kompjuterike.
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -9894,6 +11686,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
@@ -10003,6 +11813,24 @@ sq-AL:
         questions:
         - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -10147,6 +11975,24 @@ sq-AL:
         questions:
         - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -10326,6 +12172,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
@@ -10470,7 +12334,43 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë kam aftësinë për të mësuar shkenca kompjuterike.
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -10704,6 +12604,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Më pëlqen kjo klasë e shkencave kompjuterike.
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Më pëlqen kjo klasë e shkencave kompjuterike.
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
@@ -10813,6 +12731,24 @@ sq-AL:
         questions:
         - text: Më pëlqen kjo klasë e shkencave kompjuterike.
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Më pëlqen kjo klasë e shkencave kompjuterike.
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -10957,6 +12893,24 @@ sq-AL:
         questions:
         - text: Më pëlqen kjo klasë e shkencave kompjuterike.
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Më pëlqen kjo klasë e shkencave kompjuterike.
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -11136,6 +13090,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Më pëlqen kjo klasë e shkencave kompjuterike.
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Më pëlqen kjo klasë e shkencave kompjuterike.
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
@@ -11280,7 +13252,43 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Më pëlqen kjo klasë e shkencave kompjuterike.
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Më pëlqen kjo klasë e shkencave kompjuterike.
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Më pëlqen kjo klasë e shkencave kompjuterike.
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -11514,6 +13522,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
@@ -11623,6 +13649,24 @@ sq-AL:
         questions:
         - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -11767,6 +13811,24 @@ sq-AL:
         questions:
         - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -11946,6 +14008,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
@@ -12090,7 +14170,43 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Ndihem rehat në këtë klasë të shkencave kompjuterike.
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -12324,6 +14440,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
@@ -12433,6 +14567,24 @@ sq-AL:
         questions:
         - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -12577,6 +14729,24 @@ sq-AL:
         questions:
         - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -12756,6 +14926,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
@@ -12900,7 +15088,43 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -13032,6 +15256,76 @@ sq-AL:
           <small>
           <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
           </small>
+      csd-pulse-check-survey-preamble_2019_pilot_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy1_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd1_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd2_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd3_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd4_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd5_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd6_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy3_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
       csd-pulse-check-survey-preamble_2021:
         markdown: |
           ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
@@ -13046,7 +15340,35 @@ sq-AL:
           <small>
           <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
           </small>
+      csd-pulse-check-survey-preamble_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_2023a_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
       csd-pulse-check-survey-preamble_2222:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_copy1_2023:
+        markdown: |
+          ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
+
+          <small>
+          <em>Code.org e merr seriozisht privatësinë tuaj.</em> Përgjigjet tuaja do të mbahen këtu <strong>anonime</strong>. Mësimdhënësi juaj mund të shohë përgjigjet për të gjithë klasën, por pa emra të bashkangjitur.
+          </small>
+      csd-pulse-check-survey-preamble_mb2022:
         markdown: |
           ### Ju lutemi merrni një moment për t'iu përgjigjur këtyre pesë pyetjeve të shpejta**.
 
@@ -13073,7 +15395,7 @@ sq-AL:
         markdown: |-
           # Ndiqni Gjurmët Digjitale
 
-          ## Çfarë informacioni është në rregull të kesh në gjurmën tënde digjitale?
+          ## Çfarë informacioni është OK të kesh në gjurmën tënde digjitale?
       csf_password_power-up:
         content1: përshkrimi këtu
       csf_password_power-up2022:
@@ -13082,18 +15404,12 @@ sq-AL:
         content1: përshkrimi këtu
       csf_password_power-up_2021:
         content1: përshkrimi këtu
-        markdown: |-
-          # Fuqizoje fjalëkalimin tënd
-
-          ## Këshilla për fjalëkalimin për t'u mbajtur mend
-
-          * Filloni me një **frazë** që mbahet lehtë në mend
-          * Vetëm **prindërit** tuaj duhet ta dinë fjalëkalimin tuaj.
-          * Asnjëherë mos përdorni asnjë informacion **privat** të identitetit në fjalëkalimin tuaj.
-          * Krijoni fjalëkalime me të paktën **tetë ** karaktere.
-          * Përdorni shkronja, numra dhe **simbole** në fjalëkalimin tuaj.
-
-          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+        markdown: "# Fuqizoje fjalëkalimin tënd\n\n## Këshilla për t'u mbajtur mend
+          fjalëkalimin \n\n* Filloni me një **frazë** që mbahet lehtë në mend\n* Vetëm
+          **prindërit** tuaj duhet ta dinë fjalëkalimin tuaj.\n* Asnjëherë mos përdorni
+          asnjë informacion **privat** të identitetit në fjalëkalimin tuaj.\n* Krijoni
+          fjalëkalime me të paktën **tetë ** karaktere.\n* Përdorni shkronja, numra
+          dhe **simbole** në fjalëkalimin tuaj.\n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
       csf_putting_a_stop_to_online_meanness:
         content1: përshkrimi këtu
         markdown: |-
@@ -13516,6 +15832,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      csp-post-survey-2017-q22_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csp-post-survey-2017-q23:
         answers:
         - correct: true
@@ -13908,21 +16242,53 @@ sq-AL:
           e mësimdhënësit dhe të nxënësve.\n\n\n*Ju lutemi ndihmoni duke i bërë nxënësit
           tuaj të kontribuojnë në këtë grup të dhënash jetike. Zërat e tyre bëjnë
           diferencën! "
+      csp-pre-survey-2017 preamble 1_2023:
+        markdown: "### **Kjo anketë është anonime**\n\n* Kjo anketë e shkurtër duhet
+          të marrë **10 minuta ose më pak** për t'u përfunduar.\n* Code.org e merr
+          shumë seriozisht privatësinë tuaj.\n* Përgjigjet tuaja këtu do të mbahen
+          **anonime**.\n\nMësimdhënësi juaj do të shohë përgjigjet e përmbledhura
+          për të gjithë klasën, por nuk do të jetë në gjendje t'i identifikojë përgjigjet
+          tuaja individuale. Ne e bëjmë këtë sepse duam që ju të **të jeni sa më të
+          hapur dhe të sinqertë**. Ne kujdesemi për përvojën tuaj në kurs dhe ne bëjmë
+          përmirësime bazuar në atë që thoni.\n\n***\n### Shkolla në përgjithësi### "
+        teacher_markdown: "Praktika më e mirë është t'i lini nxënësit të plotësojnë
+          këtë anketë **përpara** se të angazhohen në ndonjë aktivitet në klasë. Shumica
+          e mësimdhënësve e bëjnë këtë si pjesë e një dite të konfigurimit të teknologjisë
+          fillestare të klasës.\n\nJu do të jeni në gjendje të shihni rezultatet anonime
+          të anketimit për nxënësit tuaj.\n\nPse është kjo anketë këtu?\n* Qëllimi
+          kryesor i këtij kursi është të zgjerojë pjesëmarrjen në shkencat kompjuterike.\n*
+          Ne përpiqemi të matim se si qëndrimet dhe besimet e nxënësve në lidhje me
+          shkencat kompjuterike mund të ndryshojnë gjatë kursit përmes anketave para
+          dhe pas.\n* Plotësimi i tij na ndihmon gjithashtu të kuptojmë përmirësime
+          të rëndësishme që mund të bëjmë në kurrikulë për të përmirësuar përvojën
+          e mësimdhënësit dhe të nxënësve.\n\n\n*Ju lutemi ndihmoni duke i bërë nxënësit
+          tuaj të kontribuojnë në këtë grup të dhënash jetike. Zërat e tyre bëjnë
+          diferencën! "
       csp-pre-survey-2017 preamble 2 cs in general_2021:
         markdown: Shkenca kompjuterike në përgjithësi
       csp-pre-survey-2017 preamble 2 cs in general_2022:
+        markdown: Shkenca kompjuterike në përgjithësi
+      csp-pre-survey-2017 preamble 2 cs in general_copy2_2023:
         markdown: Shkenca kompjuterike në përgjithësi
       csp-pre-survey-2017 preamble 3 this class_2021:
         markdown: "### Shkenca kompjuterike në të ardhmen"
       csp-pre-survey-2017 preamble 3 this class_2022:
         markdown: "### Shkenca kompjuterike në të ardhmen"
+      csp-pre-survey-2017 preamble 3 this class_copy2_2023:
+        markdown: "### Shkenca kompjuterike në të ardhmen"
       csp-pre-survey-2017 preamble 4 the future_2021:
         markdown: "### Shkenca kompjuterike në të ardhmen"
       csp-pre-survey-2017 preamble 4 the future_2022:
         markdown: "### Shkenca kompjuterike në të ardhmen"
+      csp-pre-survey-2017 preamble 4 the future_2023:
+        markdown: "### Shkenca kompjuterike në të ardhmen"
       csp-pre-survey-2017 preamble 5 demographics_2021:
         markdown: "### Sfondi juaj në shkencat kompjuterike"
       csp-pre-survey-2017 preamble 5 demographics_2022:
+        markdown: "### Sfondi juaj në shkencat kompjuterike"
+      csp-pre-survey-2017 preamble 5 demographics_2023:
+        markdown: "### Sfondi juaj në shkencat kompjuterike"
+      csp-pre-survey-2017 preamble 5 demographics_mb2022:
         markdown: "### Sfondi juaj në shkencat kompjuterike"
       csp-pre-survey-2017-q1:
         answers:
@@ -13997,6 +16363,24 @@ sq-AL:
         questions:
         - text: Mua më pëlqen shkenca kompjuterike.
       csp-pre-survey-2017-q10_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      csp-pre-survey-2017-q10_copy2_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -14158,6 +16542,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -14266,6 +16668,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -14321,6 +16741,24 @@ sq-AL:
         questions:
         - {}
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -14446,6 +16884,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -14554,6 +17010,42 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -14645,6 +17137,42 @@ sq-AL:
         questions:
         - {}
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -15022,6 +17550,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -15077,6 +17623,42 @@ sq-AL:
         questions:
         - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë dua të marr më shumë klasa të shkencave kompjuterike në të ardhmen.
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -15230,6 +17812,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -15307,6 +17907,60 @@ sq-AL:
         questions:
         - {}
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -15540,9 +18194,36 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       csp_unit_assessment_overview:
         content1: përshkrimi këtu
       curriculum-how-challenging:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -15599,7 +18280,46 @@ sq-AL:
         questions:
         - text: A keni mësuar ndonjëherë ndonjë shkencë kompjuterike <em>jashtë shkollës</em>
             më parë? (nëse po, ju lutemi zgjedhni përvojën tuaj më të fundit)
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - correct: true
+          text: Po, një program pas shkollës
+        - correct: true
+          text: Po, aktivitete të pavarura në internet
+        - correct: true
+          text: Po, një kamp ose program veror
+        - correct: true
+          text: Jo, kurrë nuk kam bërë shkenca kompjuterike jashtë shkollës
+        questions:
+        - text: A keni mësuar ndonjëherë ndonjë shkencë kompjuterike <em>jashtë shkollës</em>
+            më parë? (nëse po, ju lutemi zgjedhni përvojën tuaj më të fundit)
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - correct: true
+          text: Po, një program pas shkollës
+        - correct: true
+          text: Po, aktivitete të pavarura në internet
+        - correct: true
+          text: Po, një kamp ose program veror
+        - correct: true
+          text: Jo, kurrë nuk kam bërë shkenca kompjuterike jashtë shkollës
+        questions:
+        - text: A keni mësuar ndonjëherë ndonjë shkencë kompjuterike <em>jashtë shkollës</em>
+            më parë? (nëse po, ju lutemi zgjedhni përvojën tuaj më të fundit)
       ever-learned-cs_2022:
+        answers:
+        - correct: true
+          text: Po, unë mora një klasë
+        - correct: true
+          text: Po, disa aktivitete, por jo një klasë të plotë
+        - correct: true
+          text: Nuk jam i/e sigurt
+        - correct: true
+          text: Definitivisht jo
+        questions:
+        - text: A keni mësuar ndonjëherë ndonjë shkencë kompjuterike <em>në shkollë</em>
+            më parë?
+      ever-learned-cs_2023:
         answers:
         - correct: true
           text: Po, unë mora një klasë
@@ -15644,6 +18364,15 @@ sq-AL:
         - text: A ju inkurajoi një anëtar i familjes, si një prind, vëlla ose kushëri,
             të merrni këtë klasë?
       family_encourage_2022:
+        answers:
+        - correct: true
+          text: po
+        - correct: true
+          text: jo
+        questions:
+        - text: A ju inkurajoi një anëtar i familjes, si një prind, vëlla ose kushëri,
+            të merrni këtë klasë?
+      family_encourage_2023:
         answers:
         - correct: true
           text: po
@@ -15911,6 +18640,480 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - text: Jam i interesuar të mësoj shkenca kompjuterike.
+      interested-in-learning-cs_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Jam i interesuar të mësoj shkenca kompjuterike.
+      interested-in-learning-cs_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Jam i interesuar të mësoj shkenca kompjuterike.
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - correct: true
+          text: Kjo është e para që po mësoj për shkencat kompjuterike
+        - correct: true
+          text: 'Unë kam bërë aktivitete më të vogla të shkencave kompjuterike (për
+            shembull: një orë kod) por kjo është ora ime e parë më e gjatë'
+        - correct: true
+          text: Unë tashmë kam mbajtur orë ose kam bërë mësime më të gjata në internet
+            në shkencat kompjuterike
+        questions:
+        - text: Çfarë përvojash të mëparshme keni pasur me shkencat kompjuterike?
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - correct: true
+          text: Kjo është e para që po mësoj për shkencat kompjuterike
+        - correct: true
+          text: 'Unë kam bërë aktivitete më të vogla të shkencave kompjuterike (për
+            shembull: një orë kod) por kjo është ora ime e parë më e gjatë'
+        - correct: true
+          text: Unë tashmë kam mbajtur orë ose kam bërë mësime më të gjata në internet
+            në shkencat kompjuterike
+        questions:
+        - text: Çfarë përvojash të mëparshme keni pasur me shkencat kompjuterike?
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - correct: true
+          text: Kjo është e para që po mësoj për shkencat kompjuterike
+        - correct: true
+          text: 'Unë kam bërë aktivitete më të vogla të shkencave kompjuterike (për
+            shembull: një orë kod) por kjo është ora ime e parë më e gjatë'
+        - correct: true
+          text: Unë tashmë kam mbajtur orë ose kam bërë mësime më të gjata në internet
+            në shkencat kompjuterike
+        questions:
+        - text: Çfarë përvojash të mëparshme keni pasur me shkencat kompjuterike?
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - correct: true
+          text: Kjo është e para që po mësoj për shkencat kompjuterike
+        - correct: true
+          text: 'Unë kam bërë aktivitete më të vogla të shkencave kompjuterike (për
+            shembull: një orë kod) por kjo është ora ime e parë më e gjatë'
+        - correct: true
+          text: Unë tashmë kam mbajtur orë ose kam bërë mësime më të gjata në internet
+            në shkencat kompjuterike
+        questions:
+        - text: Çfarë përvojash të mëparshme keni pasur me shkencat kompjuterike?
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - correct: true
+          text: Kjo është e para që po mësoj për shkencat kompjuterike
+        - correct: true
+          text: 'Unë kam bërë aktivitete më të vogla të shkencave kompjuterike (për
+            shembull: një orë kod) por kjo është ora ime e parë më e gjatë'
+        - correct: true
+          text: Unë tashmë kam mbajtur orë ose kam bërë mësime më të gjata në internet
+            në shkencat kompjuterike
+        questions:
+        - text: Çfarë përvojash të mëparshme keni pasur me shkencat kompjuterike?
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - correct: true
+          text: Kjo është e para që po mësoj për shkencat kompjuterike
+        - correct: true
+          text: 'Unë kam bërë aktivitete më të vogla të shkencave kompjuterike (për
+            shembull: një orë kod) por kjo është ora ime e parë më e gjatë'
+        - correct: true
+          text: Unë tashmë kam mbajtur orë ose kam bërë mësime më të gjata në internet
+            në shkencat kompjuterike
+        questions:
+        - text: Çfarë përvojash të mëparshme keni pasur me shkencat kompjuterike?
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Mua më pëlqen shkenca kompjuterike.
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -15929,12 +19132,19 @@ sq-AL:
         display_name: Praktikoni personalizimin e aplikacioneve tuaja
       ml-customize apps-practice choice_2022:
         display_name: Praktikoni personalizimin e aplikacioneve tuaja
+      ml-customize apps-practice choice_2023:
+        display_name: Praktikoni personalizimin e aplikacioneve tuaja
       ml-good data-isaac data:
         markdown: |
           ! [] (https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
 
           ## [Kliko këtu] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) për të krijuar një kopje të të dhënave të Isakut
       ml-good data-isaac data_2022:
+        markdown: |
+          ! [] (https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Kliko këtu] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) për të krijuar një kopje të të dhënave të Isakut
+      ml-good data-isaac data_2023:
         markdown: |
           ! [] (https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
 
@@ -15949,12 +19159,22 @@ sq-AL:
           ! [] (https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
 
           ## [Kliko këtu] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) për të krijuar një kopje të të dhënave të Kimit
+      ml-good data-kim data_2023:
+        markdown: |
+          ! [] (https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Kliko këtu] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) për të krijuar një kopje të të dhënave të Kimit
       ml-good data-kim survey:
         markdown: |
           ! [] (https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
 
           ## [Kliko këtu] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) për të marrë sondazhin e Kimit
       ml-good data-kim survey_2022:
+        markdown: |
+          ! [] (https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Kliko këtu] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) për të marrë sondazhin e Kimit
+      ml-good data-kim survey_2023:
         markdown: |
           ! [] (https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
 
@@ -15969,6 +19189,15 @@ sq-AL:
 
           <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
       ml-model card-medical-1_2022:
+        markdown: |
+          # Rekomanduesi ER V1
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2023:
         markdown: |
           # Rekomanduesi ER V1
 
@@ -16003,6 +19232,19 @@ sq-AL:
           <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
 
           ! [] ()
+      ml-model card-medical-2_2023:
+        markdown: |
+          # Northern Lights ER Priority
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ! [] ()
       ml-model card-medical-3-2021:
         markdown: |
           # Al rekomanduesi mjeksor
@@ -16021,11 +19263,24 @@ sq-AL:
           <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
 
           <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2023:
+        markdown: |
+          # Al rekomanduesi mjeksor
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
       ml-models in applab-choice parent:
         description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
           e mëposhtme.
         display_name: Praktika e kartës model
       ml-models in applab-choice parent_2022:
+        description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
+          e mëposhtme.
+        display_name: Praktika e kartës model
+      ml-models in applab-choice parent_2023:
         description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
           e mëposhtme.
         display_name: Praktika e kartës model
@@ -16039,12 +19294,22 @@ sq-AL:
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
           ## [Click Here](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) to take the Shoe Recommendation Survey
+      ml-models-shoe survey_2023:
+        markdown: |-
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Click Here](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) to take the Shoe Recommendation Survey
       ml-plan survey-copy form:
         markdown: |
           # Kopjoni një Formular të Google
 
           ## [Kliko këtu] (https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) për të krijuar një kopje të një modeli të sondazhit që do të përdorim sot
       ml-plan survey-copy form_2022:
+        markdown: |
+          # Kopjoni një Formular të Google
+
+          ## [Kliko këtu] (https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) për të krijuar një kopje të një modeli të sondazhit që do të përdorim sot
+      ml-plan survey-copy form_2023:
         markdown: |
           # Kopjoni një Formular të Google
 
@@ -16069,9 +19334,21 @@ sq-AL:
 
           <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
 
+      ml-use model card-pet model card_2023:
+        markdown: |+
+          # Karta e modelit të rekomanduesit të kafshëve shtëpiake
+
+          **Me një partner: ** Si mund të dalloni ndryshimin midis veçorive kategorike dhe veçorive numerike në kartën e modelit?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
       ml-use models applab-practice choice-2021:
         display_name: Praktikoni me modelet në App Lab
       ml-use models applab-practice choice_2022:
+        display_name: Praktikoni me modelet në App Lab
+      ml-use models applab-practice choice_2023:
         display_name: Praktikoni me modelet në App Lab
       naturally-better-at-cs:
         answers:
@@ -16127,6 +19404,24 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      naturally-better-at-cs_copy2_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       outbreak_freeplay_choice:
         display_name: Lojë Falas
       outbreak_story:
@@ -16142,6 +19437,24 @@ sq-AL:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - correct: true
           text: Pajtohem fuqimisht
@@ -16636,6 +19949,18 @@ sq-AL:
         - correct: true
         questions:
         - {}
+      reasons-took-course-csd_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       same-ability:
         answers:
         - correct: true
@@ -16670,6 +19995,14 @@ sq-AL:
           text: jo
         questions:
         - text: A ju ka inkurajuar dikush tjetër në shkollë për të marrë këtë klasë?
+      someone_else_encourage_2023:
+        answers:
+        - correct: true
+          text: po
+        - correct: true
+          text: jo
+        questions:
+        - text: A ju ka inkurajuar dikush tjetër në shkollë për të marrë këtë klasë?
       taken-other-code-org:
         answers:
         - correct: true
@@ -16697,6 +20030,14 @@ sq-AL:
         questions:
         - text: A ju inkurajoi një mësues në shkollë për të marrë këtë klasë?
       teacher_encourage_2022:
+        answers:
+        - correct: true
+          text: po
+        - correct: true
+          text: jo
+        questions:
+        - text: A ju inkurajoi një mësues në shkollë për të marrë këtë klasë?
+      teacher_encourage_2023:
         answers:
         - correct: true
           text: po
@@ -16804,6 +20145,42 @@ sq-AL:
           text: Nuk pajtohem fuqishëm
         questions:
         - {}
+      will-be-myself-in-cs_2023:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - {}
       worried-less-capable:
         answers:
         - correct: true
@@ -16842,6 +20219,25 @@ sq-AL:
         - text: Unë jam i shqetësuar se unë do të shihem nga të tjerët si më pak i
             aftë në këtë klasë.
       worried-seen-incapable_2022:
+        answers:
+        - correct: true
+          text: Pajtohem fuqimisht
+        - correct: true
+          text: Pajtohem
+        - correct: true
+          text: Pajtohem pjesërisht
+        - correct: true
+          text: Asnjënra
+        - correct: true
+          text: Pjesërisht nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem
+        - correct: true
+          text: Nuk pajtohem fuqishëm
+        questions:
+        - text: Unë jam i shqetësuar se unë do të shihem nga të tjerët si më pak i
+            aftë në këtë klasë.
+      worried-seen-incapable_2023:
         answers:
         - correct: true
           text: Pajtohem fuqimisht

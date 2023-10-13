@@ -10,6 +10,7 @@ it:
         error:
           future: non può essere in futuro
         finish_sign_up_header: Completa la creazione del tuo account
+        finish_sign_up_header_error: 'Per favore correggi i seguenti errori:'
         finish_sign_up_subheader: Compila i seguenti dati per terminare la creazione
           del tuo account Code.org per <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Compila i seguenti dati per terminare la
@@ -33,6 +34,7 @@ it:
         reset_password_token: Il link per la reimpostazione della password che hai
           usato
         us_state: Stato
+        user_type: Tipo di account
         username: Nome utente
         verified_teacher: Insegnante Verificato
     errors:

@@ -35,6 +35,10 @@ ca:
   africa_campaign_date_full: De l'1 d'octubre al 18 de desembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 d'octubre de 2022 - 18 de desembre de 2022
+  hoc2023_header: Creativitat amb IA
+  hoc2023_social_creativity_with_ai_title: Hora del Codi - Què crearàs?
+  hoc2023_social_creativity_with_ai_desc: Utilitzeu la informàtica per explorar i
+    aprendre sobre IA!
   hoc2022_header: Explora, juga i crea!
   social_hoc2022_explore_play_create: Utilitza les ciències informàtiques per explorar,
     jugar i crear!
@@ -179,6 +183,29 @@ ca:
   curriculum_launch_2023_desc: Actualitzacions de CSC, CSP, CSD, i molt més — a més
     d'un nou catàleg curricular i redissenyat Teach pàgina per ajudar a trobar tot!
   in_partnership_with: En col·laboració amb
+  shop_code_dot_org_heading: Botiga Code.org
+  shop_code_dot_org_desc: Recolza el nostre treball i llueix el moviment amb orgull.
+    Els nostres barrets han estat usats pel president Obama i les celebritats també.
+  spread_the_word_heading: Corre la veu
+  spread_the_word_desc: Amplifica el nostre impacte compartint Code.org amb la teva
+    xarxa. Des de les xarxes socials fins a les actualitzacions de correu electrònic,
+    descobreix com ens pots ajudar a arribar a més educadors, estudiants i defensors.
+  follow_us_heading: Segueix-nos a les xarxes socials
+  follow_us_desc: Estigueu al dia amb nosaltres a les xarxes socials i compartiu les
+    nostres publicacions amb la vostra xarxa per mantenir-vos informats i ajudar-vos
+    a conscienciar.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Subscriu-te a correus electrònics
+  subscribe_to_emails_desc: Llegiu sobre el que passa a Code.org i a l'educació informàtica
+    mitjançant actualitzacions trimestrals a través de la nostra llista de correu.
+  subscribe_to_emails_intl: Subscriu-te a actualitzacions internacionals
+  promote_code_dot_org_heading: Promocionar Code.org
+  promote_code_dot_org_desc: Promoure la informàtica en la seva àrea amb l'ajuda de
+    estadístiques, cites, i vídeos.
   afe_partnership_logo_alt: Logotip de Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer és un programa complet de la
     infància a la carrera per inspirar, educar i entrenar nens i joves de baixos ingressos
@@ -197,6 +224,15 @@ ca:
   curricula_title_high: Curricula de secundària
   curricula_desc_high: Navegueu pels cursos i activitats convincents que us conviden
     a vosaltres i als vostres estudiants de secundària a aprofundir en la informàtica.
+  for_administrators_heading: Per a administradors
+  for_administrators_desc: Uneix-te als milers d'escoles que ja han incorporat la
+    informàtica al seu currículum.
+  for_parents_heading: Per a les famílies
+  for_parents_desc: Vostè pot ajudar a animar l'escola del seu estudiant a oferir
+    o ampliar l'educació en ciències de la computació.
+  for_educators_heading: Per a educadors
+  for_educators_desc: Comenceu a ensenyar avui —no cal experiència informàtica— amb
+    els nostres tallers d'aprenentatge professional.
   students_label: Estudiants
   teachers_label: Professors
   teacher_label_csf: CS Fonaments Professor
@@ -206,10 +242,11 @@ ca:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Materials necessaris:'
   optional_materials: 'Materials opcionals:'
-  call_to_action_explore_roles: Explora rols oberts
+  call_to_action_hold_an_event: Celebrar un esdeveniment
   call_to_action_learn_more: Saber-ne més
   call_to_action_watch_now: Veure ara
   call_to_action_try_activity: Prova l'activitat
+  call_to_action_try_activities: Provar activitats
   call_to_action_explore_unit: Explora la unitat
   call_to_action_explore_curriculum: Explora currículum
   call_to_action_explore_curriculum_options: Explora les opcions curriculars
@@ -279,7 +316,20 @@ ca:
   call_to_action_notify_available: Aviseu-me quan estigui disponible
   call_to_action_register_early_access: Registrar-se per a l'accés anticipat
   call_to_action_open_positions: Veure posicions obertes
+  call_to_action_explore_roles: Explora rols oberts
   call_to_action_get_guide: Aconsegueix la guia
+  call_to_action_donate_to_cdo: Fes una donació a Code.org
+  call_to_action_start_fundraiser: Iniciar una recaptació de fons
+  call_to_action_view_donation_policy: Veure política de donacions
+  call_to_action_view_donate_bitpay: Fes una donació amb BitPay
+  call_to_action_make_a_donation: Fes un donatiu
+  call_to_action_other_ways_to_give: Altres formes de donar
+  call_to_action_become_partner_usa: Converteix-te en soci dels Estats Units
+  call_to_action_become_partner_intl: Converteix-te en un soci internacional
+  call_to_action_become_a_volunteer: Fes-te voluntari
+  call_to_action_start_translating: Comenceu a traduir
+  call_to_action_learn_about_advocacy: Coneix la nostra promoció
+  call_to_action_visit_store: Visita la botiga
   aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
     d''''Ensenyament de Fonaments de Ciències Informàtiques '
@@ -389,6 +439,7 @@ ca:
   curriculum_name_csp: Principis de la Informàtica
   curriculum_name_csc: Connexions Informàtiques
   curriculum_name_csa: Ciències Informàtiques A
+  curriculum_name_csa_ai: Enginyeria del Programari i Visió per Computador
   curriculum_name_csc_02: Qualsevol Mòdul de Connexió CS
   curriculum_name_ai: AI i aprenentatge automàtic
   curriculum_name_artificial_intelligence: Intel·ligència Artificial (IA)
@@ -469,6 +520,13 @@ ca:
     jocs i sistemes de computació física.
   curriculum_desc_csp: Gratuït, aprovat per AP® CSP, curs d'introducció a l'escola
     secundària que introdueix els estudiants en els conceptes fundacionals de la informàtica.
+  curriculum_desc_csa_ai_long: 'Aquest mòdul CSA post-AP de dos capítols ofereix als
+    estudiants de secundària experiència pràctica amb eines professionals de desenvolupament
+    de programari, incloent GitHub i GitHub Copilot, i els imparteix amb les habilitats
+    del món real per desenvolupar un programa de visió per computador. '
+  curriculum_desc_csa_ai_short: Aquest mòdul Post-AP® CSA ofereix als estudiants de
+    secundària experiència pràctica amb eines professionals de desenvolupament de
+    programari.
   collection_hardware: Centrar-se en el maquinari
   collection_hardware_desc: Capta els estudiants a utilitzar dades i dispositius físics
     per resoldre problemes.
@@ -543,6 +601,7 @@ ca:
   module_duration_2_hrs: 2 hores
   module_duration_3_hrs: 3 hores
   module_duration_5_hrs: 5 hores
+  module_duration_5_hrs_plus: 5+ hores
   module_duration_8_hrs: 8 hores
   module_duration_20_hrs: 20 hores
   module_duration_35_hrs: 35 hores
@@ -625,6 +684,8 @@ ca:
   heading_objects_first: Objectes primer
   heading_these_lessons_will: 'Aquestes lliçons seran:'
   heading_explore_curriculum_catalog: Explora tots els nostres cursos al Catàleg Curricular
+  heading_csa_ai: Busques coses a fer després de l'examen AP®?
+  heading_bring_cs_to_students: Apropar la informàtica als estudiants
   professional_learning_section_desc: Obteniu el suport que necessiteu mentre us prepareu
     per ensenyar. Als professors els encanta, amb més del 90% que el classifica el
     millor desenvolupament professional de la història!
@@ -657,6 +718,23 @@ ca:
     a qualsevol pregunta que pugueu tenir sobre començar a ensenyar amb Code.org.
     També podeu preguntar a altres professors sobre la seva experiència en els nostres
     fòrums de professors.
+  subscribe_form_section_title: Subscriu-te per actualitzacions
+  subscribe_form_section_desc_csa: Registreu-vos per rebre correus electrònics mensuals
+    sobre AP® Computer Science A de Code.org i obteniu recordatoris útils, consells
+    i actualitzacions enviades directament a la safata d'entrada.
+  subscribe_form_section_desc_csc: Registreu-vos per rebre correus electrònics mensuals
+    sobre les connexions informàtiques de Code.org i obteniu recordatoris útils, consells
+    i actualitzacions enviades a la vostra safata d'entrada.
+  subscribe_form_section_desc_csd: Registreu-vos per rebre correus electrònics mensuals
+    sobre els descobriments de ciències de la computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviats directament a la safata d'entrada.
+  subscribe_form_section_desc_csf: Registreu-vos per rebre correus electrònics mensuals
+    sobre els fonaments de ciències de la computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviats directament a la safata d'entrada.
+  subscribe_form_section_desc_csp: Registreu-vos per rebre correus electrònics mensuals
+    sobre els principis de Ciències de la Computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviades directament a la safata d'entrada.
+  subscribe_form_section_unsubscribe: Pots donar-te de baixa en qualsevol moment.
   blockchain_hero_heading: Com funciona la Cadena de blocs
   blockchain_hero_desc: Submergeix-te en el món de la cadena de blocs amb "Com funciona
     la Cadena de blocs", la nostra nova sèrie de vídeos i les lliçons que l'acompanyen!
@@ -762,6 +840,9 @@ ca:
     Cada lliçó es combina amb un sol vídeo de la sèrie, aprofundint en els conceptes
     introduïts en els vídeos.
   ai_curriculum_btn_aria_label_04: Explora Com funciona la IA lliçons
+  ai_curriculum_grades_05: 'Nivells de grau: 9-12'
+  ai_curriculum_btn_aria_label_05: Explora el mòdul d'Enginyeria del Programari i
+    Visió per Computador
   ai_carousel_heading: 'Què diuen els professors sobre IA amb Code.org:'
   ai_carousel_quote_01: Aquesta lliçó també va donar als meus estudiants l'oportunitat
     de veure que hi ha un element d'opinió en els sistemes de classificació. Més tard,
@@ -889,6 +970,7 @@ ca:
     dels estudiants. Amb una rica barreja de teoria, exemples pràctics i recursos,
     pretén capacitar els educadors per navegar pel paisatge de la IA i millorar les
     experiències d'aprenentatge dels estudiants.
+  ai_pl_101_resources_5: Guia per garantir un enfocament responsable de la IA
   ai_pl_101_video_desc_6: 'Obteniu més informació sobre la nova tecnologia que impulsa
     els grans canvis en la IA, amb dos nous vídeos sobre Models de Llengua Gran (com
     ChatGPT) i Generative AI. Escolta com funcionen aquestes noves tecnologies directament
@@ -898,6 +980,9 @@ ca:
     com ChatGPT, des de principiant fins avançat. Inclou indicacions d'arrencada per
     a aquells que acaben de submergir els dits dels peus, així com eines avançades
     per a aquells que busquen maximitzar el seu potencial.
+  ai_pl_101_resources_3: AI demana per transformar l'aprenentatge dels estudiants
+  ai_pl_101_resources_section_title: Més maneres d'aprendre sobre IA
+  ai_pl_101_resources_guide: 'Guia acompanyant:'
   how_ai_works_hero_heading: Com funciona la IA
   how_ai_works_hero_desc: Submergeix-te en el món de la IA amb “How AI Works”, la
     nostra sèrie de vídeos i lliçons d'acompanyament!
@@ -1316,8 +1401,8 @@ ca:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csp_page_curriculum_glance_professional_languages: Català
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1445,8 +1530,8 @@ ca:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Laboratori d'aplicacions, Laboratori de jocs,
     AI Lab, Laboratori web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csd_page_curriculum_glance_professional_languages: Català
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1598,8 +1683,8 @@ ca:
     Disseny, Disseny d'Apps
   csf_page_curriculum_glance_devices: portàtil, Chromebook, tauleta
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csf_page_curriculum_glance_languages: àrab, indonesi, català, xinès simplificat,
     xinès tradicional, txec, francès, alemany, hindi, italià, japonès, coreà, kannada,
     malai, marathi, mongol, polonès, portuguès-br, romanès, rus, eslovac, tagalog,
@@ -1741,6 +1826,63 @@ ca:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Ajudeu a finançar la nostra missió
+  donate_page_top_desc: Cada donació alimenta la missió de Code.org d'ampliar l'accés
+    a l'educació en ciències de la computació. T'oferim diverses maneres de fer donacions
+    i marcar la diferència.
+  donate_page_fundraise_title: Fundraise per Code.org
+  donate_page_fundraise_desc: Ajuda a recaptar diners per Code.org! Tots els estudiants
+    de totes les escoles han de tenir l'oportunitat d'aprendre ciències de la computació.
+  donate_page_other_ways_title: Altres formes de donar
+  donate_page_other_ways_desc: Explora diversos mètodes per contribuir, i troba l'opció
+    que més et convingui. Cada gest, gran o petit, impulsa la nostra missió cap endavant.
+  donate_page_501c3: Code.org està registrat com una organització pública 501 (c)
+    (3) sense ànim de lucre. Les contribucions a Code.org són fiscalment deduïbles
+    en la mesura permesa per la llei. El número d'identificació fiscal de Code.org
+    és 46-0858543.
+  donate_page_donation_policy_title: Comprendre la nostra política de donacions
+  donate_page_donation_policy_desc: Coneix com gestionem i destinem les teves aportacions.
+  donate_tabs_tab_label_daf_direct: DAF Directe
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Partit de l'empleat
+  donate_tabs_daf_direct_title: Donar a través de DAF Direct
+  donate_tabs_daf_direct_desc: Fes una donació a través del teu fons aconsellat per
+    donants amb Fidelity Charitable, Schwab Charitable o BNY Mellon i fes la teva
+    recomanació de subvenció a Code.org a través del formulari en línia DAF Direct.
+  donate_tabs_amazon_title: Fes una donació a través d'Amazon
+  donate_tabs_amazon_desc: Fes una donació directament amb el teu compte d'Amazon.
+    Amb només uns pocs clics, contribuir perfectament a la missió de Code.org i potenciar
+    el futur de l'educació en ciències de la computació.
+  donate_tabs_bitpay_title: Fes una donació amb Crypto a través de BitPay
+  donate_tabs_bitpay_desc: Abraçar el futur de donar amb moneda digital. A través
+    de BitPay, la seva moneda digital pot donar suport directament als esforços de
+    Code.org en l'expansió de l'educació en ciències de la computació.
+  help_page_top_heading: Com pots ajudar
+  help_page_top_desc: Donar suport a la nostra missió de fer que la informàtica sigui
+    accessible per a tots els nens i nenes, a tot arreu. Els vostres esforços ens
+    ajuden a inspirar futurs innovadors i superar la bretxa educativa tecnològica.
+  help_page_top_subhead: Fes una donació a Code.org
+  help_page_top_desc_02: Estem treballant per donar a tots els estudiants l'oportunitat
+    d'aprendre informàtica, tant en línia com a les escoles, on establim cursos permanents
+    i formem professors. Per cada dòlar que doneu, un nen s'introdueix a la informàtica.
+  help_page_partners_heading: Fes-te soci
+  help_page_partners_desc: Code.org treballa amb altres organitzacions sense ànim
+    de lucre com a socis per ajudar a difondre la informàtica d'una manera local i
+    sostenible. Obteniu més informació sobre el nostre programa.
+  help_page_volunteer_heading: Voluntari en una aula
+  help_page_volunteer_desc: Voluntari per ensenyar l'Hora del Codi o ser un orador
+    convidat en una aula local. Registra't per escoltar sobre oportunitats a prop
+    teu.
+  help_page_translate_heading: Ajuda'ns a traduir
+  help_page_translate_desc: Els voluntaris han traduït els nostres tutorials en més
+    de 45 idiomes. Ajuda'ns a seguir ampliant les nostres tutories per a estudiants
+    de tot el món!
+  help_page_speak_for_cs_heading: Parlar per a l'educació en ciències de la computació
+  help_page_speak_for_cs_desc: Obteniu més informació sobre el treball d'incidència
+    de Code.org a tots els Estats Units i les deu polítiques que recomanem que els
+    estats adoptin per fer que la informàtica sigui fundacional per a tots els estudiants.
+    A més, esbrineu com podeu conduir el canvi en el vostre estat.
   hoc_live: Hora de Codi en viu
   hoc_live_sign_up_title: Registra't per Hora de Codi en viu
   hoc_live_learn_title: Aprèn amb Hour of Code Live
@@ -14133,6 +14275,11 @@ ca:
   video_library_page_inspirational_video_title_11: Qualsevol pot aprendre (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: La NASA celebra l'hora del codi
+    (2 min)
+  video_library_page_inspirational_video_title_14: És més que un joc (1 min)
+  video_library_page_inspirational_video_title_15: Crear amb Ciències de la Computació
+    (1 min)
   video_library_page_not_hacked_video_title_1: 'Com no ser hackejat: Introducció'
   video_library_page_not_hacked_video_title_2: 'Com no ser hackejat: contrasenyes'
   video_library_page_not_hacked_video_title_3: 'Com no ser hackejat: autenticació

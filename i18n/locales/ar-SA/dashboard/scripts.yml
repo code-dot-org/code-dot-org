@@ -474,7 +474,7 @@ ar:
           description_short: تعلم برمجة الإنسان الآلي، و اصنع لعبتك حرب النجوم في مجرة بعيدة، بعيدة جدا.
           student_description: تعلم برمجة الإنسان الآلي، و اصنع لعبتك حرب النجوم في مجرة بعيدة، بعيدة جدا.
         mc:
-          title: ساعة من البرمجة مع ماين كرافت
+          title: مغامر في Minecraft
           description: استخدم القطع البرمجية لأخذ ستيف و ألكس في مغامرة في عالم ماين كرافت.
           description_short: استكشف عالم Minecraft عن طريق الكود.
           student_description: استخدم القطع البرمجية لأخذ ستيف و ألكس في مغامرة في عالم ماين كرافت.
@@ -8547,3 +8547,7 @@ ar:
           lessons:
             lesson-1:
               name: مدونة أخلاقيات الذكاء الاصطناعي الخاصة بنا
+        virtual-pl-csa-summer-2024-day1:
+          title: اليوم 1
+        virtual-pl-csa-summer-day2:
+          title: اليوم 2

@@ -3,7 +3,7 @@
   "config": {
     "style": "world_blocks",
     "func": "ai",
-    "blockText": "use AI to {VALUE}",
+    "blockText": "use AI {VALUE}",
     "color": [
       0,
       0.9,
@@ -12,8 +12,7 @@
     "args": [
       {
         "name": "VALUE",
-        "type": "String",
-        "field": true
+        "customInput": "danceAi"
       }
     ]
   }

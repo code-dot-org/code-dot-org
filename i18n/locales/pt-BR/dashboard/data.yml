@@ -394,6 +394,7 @@ pt:
         csd_gamelab_draw_1: Desenho no Game Lab - Parte 1
         csd_gamelab_draw_2: Desenho no Game Lab - Parte 2
         csd_gamelab_drawloop: Introdução ao Draw Loop
+        csd_gamelab_sprites_1: Introdução aos Sprites
         csd_gamelab_velocity: Velocidade
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
@@ -559,7 +560,7 @@ pt:
         csf_my_online_neighborhood_2020: Minha Vizinhança Online
         csf_follow_the_digital_trail: Siga o Trilha Digital
         csf_private_and_personal_information: Informações Privadas e Pessoais
-        csd_what_computers_are: O que é um computador?
+        csd_what_computers_are: O que é um Computador?
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_teamwork_and_disagreement: Trabalho em equipe - Lidar com discordâncias
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
@@ -623,7 +624,7 @@ pt:
         csd_app_lab_events: Eventos do CSD App Lab
         PL_CSD_Unit4_AppTesting: Teste de protótipo em papel
         csd_u6_circuit_playground: Computação Física
-        csd_u6_input_output: Entrada e saída
+        csd_u6_input_output: Entrada e Saída
         CSA-PL-for-loops: Para loops em Java
         CSA-PL-variables: Criando variáveis em Java
         PL_CS_Journeys_Overview: Jornada de CC
@@ -739,6 +740,7 @@ pt:
         csc_bookcovers_intro: Codificando Capas de Livros
         what-is-creativity: O que é criatividade?
         code-break: Faça uma quebra de código
+        se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução às Lições'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

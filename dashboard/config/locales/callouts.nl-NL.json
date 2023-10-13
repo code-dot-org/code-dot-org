@@ -17,8 +17,40 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "Werd het scherm groen? Als dat zo is, klik op 'Afsluiten'. Anders, klik op 'Herstellen', verander je code en klik opnieuw op 'Start'."
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "Werd het scherm groen? Als dat zo is, klik op 'Afsluiten'. Anders, klik op 'Herstellen', verander je code en klik opnieuw op 'Start'."
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "Werd het scherm groen? Als dat zo is, klik op 'Afsluiten'. Anders, klik op 'Herstellen', verander je code en klik opnieuw op 'Start'."
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Je bent nu in Ontwerp Mode"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "Je bent nu in Ontwerp Mode"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
+          "AppLabHoCFinal11": "Je bent nu in Ontwerp Mode"
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Wijzig het nummer hier"
@@ -36,6 +68,9 @@
           "grid": "Klik hier om het raster te tonen."
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Klik hier om het raster te tonen."
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "Klik hier om het raster te tonen."
         },
         "CSD U3 Variables Predict Where X_2018": {
@@ -70,11 +105,19 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
@@ -86,11 +129,19 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
@@ -102,11 +153,19 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
@@ -150,6 +209,10 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
@@ -158,11 +221,19 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
@@ -210,11 +281,19 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
@@ -226,11 +305,19 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
@@ -242,11 +329,19 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
@@ -258,10 +353,20 @@
           "CSD_U3_rect_c1": "Hier is de code",
           "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
         },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "Hier is de code"
+        },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Wijzig het nummer hier"
         },
         "CSD web text explore_2022": {
+          "CSD_U3_variables": "Wijzig het nummer hier"
+        },
+        "CSD web text explore_2023": {
           "CSD_U3_variables": "Wijzig het nummer hier"
         },
         "Course 4 Artist 4": {
@@ -917,24 +1022,31 @@
           "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
         },
         "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming7": {
@@ -1071,11 +1183,35 @@
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "Gebruik dit blok om een enkele schat op te rapen."
         },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2023": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
         "courseD_playLab_condFP": {
           "courseD_playLab_condFP_1": "We hebben de blokken in categorieën verdeeld, zodat we je meer instructies kunnen geven om mee te spelen.  Klik hier om te zien waar alle blokken gebleven zijn."
         },
         "courseD_playLab_condFP_2018": {
           "courseD_playLab_condFP_1": "We hebben de blokken in categorieën verdeeld, zodat we je meer instructies kunnen geven om mee te spelen.  Klik hier om te zien waar alle blokken gebleven zijn."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen."

@@ -1517,6 +1517,9 @@
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Királyi csata eseményekkel"
         },
+        "ai-ethics-2023/lesson-1": {
+          "student_overview": "Együttműködve kutasson az AI etikájáról, és hozzon létre egy megosztható magatartási kódexet."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Állati adaptációk Bevezetés",
           "overview": "Ebben a**készségépítés** leckében a diákok megtanulják spritek létrehozását és animálását, valamint események felhasználásával interaktívvá teszik őket. \n\nA hallgatók egy eseményalapú ok-okozati modellt kódolnak a Sprite Lab-ban, hogy bemutassák, hogyan élnek túl a fajok azáltal, hogy idővel alkalmazkodnak környezetükhöz. Interaktív modelleket és szimulációkat használnak a való világban, hogy segítsenek a mérnököknek és tudósoknak azonosítani a mintákat, megérteni a természetet, előrejelzéseket készíteni a jövőbeli változásokról, és megoldásokat tervezni a nagyobb zavarokra való felkészüléshez és/vagy leküzdéshez. \n\nA diákok csoportokban tárják fel az evolúció, az alkalmazkodás, a migráció, a természetes szelekció és a túlélés példáit. ",
@@ -1674,6 +1677,106 @@
           "preparation": "-   Készítsen elő egy számítógépet hallgatónként.\n-   Diákonként készítsen egy példányt a**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Ossza meg</a>alkalmazását** kiadványt.\n-   Győződjön meg arról, hogy a hallgatók kéznél vannak eredeti versük másolata ehhez a leckéhez.  \n-   Ossza fel az osztályt párokra a Poetry Pair-Share tevékenységhez.\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)), hogy felfedezze ezt a leckét.\n\n##### Opcionális\n\n-   Különösen távoktatáshoz: Határozza meg, hogy be kell-e állítania egy digitális dokumentumot vagy megosztott online helyet az egyes hallgatók alkalmazás URL-jének közzétételéhez (lásd a tanár sablonját a „Linkek” részben). ",
           "purpose": "A kreatív folyamat fontos szempontja a versművészeti projektek megosztása társaikkal. Lehetővé teszi a diákok számára, hogy visszajelzést kapjanak, együttműködjenek másokkal, tükrözzék saját munkájukat, és megünnepeljék teljesítményüket. Ha megosztják munkájukat másokkal, a diákok kreatív gondolkodókként növekedhetnek és fejlődhetnek, és fontos kommunikációs és interperszonális készségeket fejleszthetnek.",
           "student_overview": "Ossza meg új verses alkalmazásait barátaival! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Bevezetés a problémamegoldásba",
+          "preparation": "**Minden csoportnak**\n\n-   2 lap aufólia, mindkettő 13x13 cm méretben.\n-   1 tároló, amiben elfér 7-13 cm víz\n-   Több papírtörlő vagy rongyok, amiket a tárol alá lehet helyezni\n-   15 penny\n-   1 másolat a tevékenységi útmutatóról\n\n**A tanároknak**\n\n-   1 tároló, amiben elfér 7-13 cm víz\n-   50 penny\n-   Extra papírtörlő vagy rongyok\n-   Nézze meg a [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) fórumot az ellenőrzött tanárok számára, hogy további stratégiákat vagy forrásokat találjon, amelyeket tanártársaik is megosztottak.\n-   Ha virtuálisan tanít, fontolja meg a [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ünk megnézését."
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Mi az a számítógép?"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2023/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2023/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "CSS osztályok"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Oldalak összekapcsolása"
+        },
+        "csd3-2023/Variables": {
+          "name": "változók"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Véletlen számok"
+        },
+        "csd3-2023/Sprites": {
+          "name": "sprite-ok"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Sprite tulajdonságok"
+        },
+        "csd3-2023/Text": {
+          "name": "szöveg"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Feltételek"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Sebesség"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Ütközések"
+        },
+        "csd3-2023/Functions": {
+          "name": "Függvények"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Táblás események"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Színes LED-ek"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Zene Készítése"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Függvények"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Táblás események"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Függvények"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Online környezetem biztonsága",
@@ -1998,7 +2101,7 @@
           "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
         },
         "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Minecraft Kódolás órája tervező",
+          "name": "Minecraft Kódolás Órája tervező",
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra.",
           "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
         },

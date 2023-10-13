@@ -5,7 +5,7 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
-import {SongData, SongMetadata} from './types';
+import {SongData, SongMetadata, AiOutput} from './types';
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
 import {
@@ -16,11 +16,14 @@ import {
   unloadSong,
   loadSongMetadata,
 } from './songs';
+import GoogleBlockly from 'blockly/core';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
+  currentAiModalField?: GoogleBlockly.Field;
+  aiOutput?: AiOutput;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
@@ -30,6 +33,8 @@ const initialState: DanceState = {
   selectedSong: 'macklemore90',
   songData: {},
   runIsStarting: false,
+  currentAiModalField: undefined,
+  aiOutput: AiOutput.AI_BLOCK,
   isRunning: false,
   currentSongMetadata: undefined,
 };
@@ -150,6 +155,15 @@ const danceSlice = createSlice({
     setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
       state.currentSongMetadata = action.payload;
     },
+    setCurrentAiModalField: (
+      state,
+      action: PayloadAction<GoogleBlockly.Field | undefined>
+    ) => {
+      state.currentAiModalField = action.payload;
+    },
+    setAiOutput: (state, action: PayloadAction<AiOutput>) => {
+      state.aiOutput = action.payload;
+    },
   },
 });
 
@@ -158,5 +172,7 @@ export const {
   setSelectedSong,
   setRunIsStarting,
   setCurrentSongMetadata,
+  setCurrentAiModalField,
+  setAiOutput,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

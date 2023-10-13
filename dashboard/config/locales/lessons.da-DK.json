@@ -434,6 +434,27 @@
         "express-2022/Dance Party": {
           "name": "Dance Party"
         },
+        "csd3-2023/Variables": {
+          "name": "Variabler"
+        },
+        "csd3-2023/Sprites": {
+          "name": "figure"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Betingelser"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funktioner"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funktioner"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funktioner"
+        },
         "coursea-2023/Happy Maps": {
           "name": "Glade Kort"
         },

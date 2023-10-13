@@ -2,8 +2,8 @@
   "sq-AL": {
     "data": {
       "course_offerings": {
-        "20-hour": "Hyrje e pershpejtuar ne kurset e shkencave kompjuterike",
-        "aiml": "IA dhe Mësimi i Makinerisë",
+        "20-hour": "Hyrje e përshpejtuar në kursin CS",
+        "aiml": "IA dhe Mësimi i Makinave",
         "algebra": "Shkenëa Kompjuterike në Algjebër",
         "applab-intro": "Hyrje në App Lab",
         "aquatic": "Minecraft: Udhëtimi ujor",
@@ -48,7 +48,7 @@
         "infinity": "Larmishmeria e lojrave ne laboratorin e Disney",
         "jigsaw": "Jigsaw",
         "k5-onlinepd": "Mësimi i Bazave të Shkencave Kompjuterike",
-        "mc": "Ora e Kodimit Minecraft",
+        "mc": "Aventurieri Minecraft",
         "minecraft": "Dizenjo Minecraft-in e Orës së Kodimit",
         "oceans": "IA për oqeanet",
         "outbreak-csc": "Shpërthimi",

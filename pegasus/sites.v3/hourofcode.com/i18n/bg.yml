@@ -36,6 +36,10 @@ bg:
   africa_campaign_date_full: 1 октомври - декември 18
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 октомври 2022 г. - 18 декември 2022 г.
+  hoc2023_header: Творчество с AI
+  hoc2023_social_creativity_with_ai_title: Час на кода - Какво ще създадете?
+  hoc2023_social_creativity_with_ai_desc: Използвайте компютърни науки, за да изследвате
+    и да научите повече за AI!
   hoc2022_header: Разгледайте, играйте, създайте!
   social_hoc2022_explore_play_create: Използвайте компютърни науки, за да изследвате,
     играете и създавате!
@@ -183,6 +187,28 @@ bg:
     на учебните програми и преработена страница за обучение, за да ви помогне да намерите
     всичко!
   in_partnership_with: В партньорство с
+  shop_code_dot_org_heading: Магазин Код.org
+  shop_code_dot_org_desc: Подкрепете нашата работа и носете движението с гордост.
+    Нашите шапки са били носени от президента Обама и известни личности също.
+  spread_the_word_heading: Разпространение на новината
+  spread_the_word_desc: Увеличете нашето въздействие, като споделяте Code.org с вашата
+    мрежа. От социалните медии до актуализациите по имейл, открийте как можете да
+    ни помогнете да достигнем до повече преподаватели, студенти и застъпници.
+  follow_us_heading: Следвайте ни в социалните медии
+  follow_us_desc: Бъдете в крак с нас в социалните медии и споделяйте нашите публикации
+    с вашата мрежа, за да бъдете информирани и да помогнете за повишаване на осведомеността.
+  facebook: Фейсбук
+  twitter: Туитър
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: ТикТок
+  subscribe_to_emails_heading: Абонирайте се за имейли
+  subscribe_to_emails_desc: Прочетете за това, което се случва в Code.org и в обучението
+    по компютърни науки чрез тримесечни актуализации чрез нашия пощенски списък.
+  subscribe_to_emails_intl: Абонирайте се за международни актуализации
+  promote_code_dot_org_heading: Насърчаване на Code.org
+  promote_code_dot_org_desc: Насърчавайте компютърните науки във вашия район с помощта
+    на статистики, цитати и видеоклипове.
   afe_partnership_logo_alt: Лого на бъдещия инженер на Amazon
   afe_partnership_thanks_desc: Amazon Future Engineer е цялостна програма за детство
     към кариера, която вдъхновява, образова и обучава деца и млади хора с ниски доходи
@@ -201,6 +227,15 @@ bg:
   curricula_title_high: Учебни програми за гимназия
   curricula_desc_high: Разгледайте завладяващите курсове и дейности, които канят вас
     и вашите ученици от гимназията да копаете по-дълбоко в компютърните науки.
+  for_administrators_heading: За администратори
+  for_administrators_desc: Присъединете се към хилядите училища, които вече са включили
+    компютърни науки в учебната си програма.
+  for_parents_heading: За родителите
+  for_parents_desc: Можете да помогнете да насърчите училището на ученика си да предлага
+    или разширява образованието по компютърни науки.
+  for_educators_heading: За преподаватели
+  for_educators_desc: Започнете да преподавате днес - не е необходим опит в областта
+    на компютърните науки - с нашите професионални учебни семинари.
   students_label: Ученици
   teachers_label: Учители
   teacher_label_csf: CS Основи учител
@@ -210,10 +245,11 @@ bg:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Необходими материали:'
   optional_materials: 'Допълнителни материали:'
-  call_to_action_explore_roles: Разгледайте отворените роли
+  call_to_action_hold_an_event: Провеждане на събитие
   call_to_action_learn_more: Научи повече
   call_to_action_watch_now: Гледайте сега
   call_to_action_try_activity: Опитайте дейност
+  call_to_action_try_activities: Опитайте дейности
   call_to_action_explore_unit: Разгледайте единица
   call_to_action_explore_curriculum: Разгледайте учебната програма
   call_to_action_explore_curriculum_options: Разгледайте опциите за учебна програма
@@ -282,7 +318,20 @@ bg:
   call_to_action_notify_available: Уведоми ме, когато е налична
   call_to_action_register_early_access: Регистрирайте се за ранен достъп
   call_to_action_open_positions: Преглед на отворени позиции
+  call_to_action_explore_roles: Разгледайте отворените роли
   call_to_action_get_guide: Вземете ръководството
+  call_to_action_donate_to_cdo: Дарете на Code.org
+  call_to_action_start_fundraiser: Започнете набиране на средства
+  call_to_action_view_donation_policy: Вижте политиката за дарения
+  call_to_action_view_donate_bitpay: Дарете с BitPay
+  call_to_action_make_a_donation: Направете дарение
+  call_to_action_other_ways_to_give: Други начини за даване
+  call_to_action_become_partner_usa: Станете партньор на САЩ
+  call_to_action_become_partner_intl: Станете международен партньор
+  call_to_action_become_a_volunteer: Станете доброволец
+  call_to_action_start_translating: Започнете да превеждате
+  call_to_action_learn_about_advocacy: Научете повече за нашето застъпничество
+  call_to_action_visit_store: Посетете магазина
   aria_label_call_to_action_afe: Научете повече за бъдещия инженер на Amazon
   aria_label_call_to_action_teaching_csf: Започнете обучението по компютърни науки
     Основи на професионалното обучение
@@ -393,6 +442,7 @@ bg:
   curriculum_name_csp: Принципи на компютърните науки
   curriculum_name_csc: Компютърни науки връзки
   curriculum_name_csa: AP® Компютърни науки A
+  curriculum_name_csa_ai: Софтуерно инженерство и компютърна визия
   curriculum_name_csc_02: Всеки модул за свързване на CS
   curriculum_name_ai: AI и машинно обучение
   curriculum_name_artificial_intelligence: Изкуствен интелект (AI)
@@ -472,6 +522,12 @@ bg:
     анимации, игри и физически изчислителни системи.
   curriculum_desc_csp: Безплатен, AP® CSP одобрен, въвеждащ курс в гимназията, който
     запознава учениците с основополагащите концепции на компютърните науки.
+  curriculum_desc_csa_ai_long: 'Този модул от две глави след AP CSA предлага на учениците
+    от гимназията практически опит с професионални инструменти за разработка на софтуер,
+    включително GitHub и GitHub Copilot, и им придава реални умения за разработване
+    на програма за компютърно зрение. '
+  curriculum_desc_csa_ai_short: Този пост-AP® CSA модул предлага на учениците от гимназията
+    практически опит с професионални инструменти за разработка на софтуер.
   collection_hardware: Фокусирайте се върху хардуера
   collection_hardware_desc: Дава възможност на учениците да използват данни и физически
     устройства за решаване на проблеми.
@@ -546,6 +602,7 @@ bg:
   module_duration_2_hrs: 2 часа
   module_duration_3_hrs: 3 часа
   module_duration_5_hrs: 5 часа
+  module_duration_5_hrs_plus: 5+ часа
   module_duration_8_hrs: 8 часа
   module_duration_20_hrs: 20 часа
   module_duration_35_hrs: 35 часа
@@ -629,6 +686,8 @@ bg:
   heading_these_lessons_will: 'Тези уроци ще:'
   heading_explore_curriculum_catalog: Разгледайте всички наши курсове в каталога на
     учебните програми
+  heading_csa_ai: Търсите неща за вършене след изпита AP®?
+  heading_bring_cs_to_students: Донесете компютърни науки на учениците
   professional_learning_section_desc: Получете подкрепата, от която се нуждаете, докато
     се подготвяте да преподавате. Учителите го обичат, като над 90% го класират за
     най-доброто професионално развитие досега!
@@ -661,6 +720,23 @@ bg:
   support_and_questions_section_desc: Нашият екип за поддръжка е тук, за да отговори
     на всички въпроси, които може да имате за започване на преподаване с Code.org.
     Можете също така да попитате други учители за техния опит в нашите форуми за учители.
+  subscribe_form_section_title: Абонирайте се за актуализации
+  subscribe_form_section_desc_csa: Регистрирайте се, за да получавате месечни имейли
+    за AP® Computer Science A на Code.org и получавайте полезни напомняния, съвети
+    и актуализации, изпратени директно до вашата пощенска кутия.
+  subscribe_form_section_desc_csc: Регистрирайте се, за да получавате месечни имейли
+    за Computer Science Connections на Code.org и получавайте полезни напомняния,
+    съвети и актуализации, изпратени директно до вашата пощенска кутия.
+  subscribe_form_section_desc_csd: Регистрирайте се, за да получавате месечни имейли
+    относно откритията за компютърни науки на Code.org и получавайте полезни напомняния,
+    съвети и актуализации, изпратени директно до вашата пощенска кутия.
+  subscribe_form_section_desc_csf: Регистрирайте се, за да получавате месечни имейли
+    за основите на компютърните науки на Code.org и да получавате полезни напомняния,
+    съвети и актуализации, изпратени директно до вашата пощенска кутия.
+  subscribe_form_section_desc_csp: Регистрирайте се, за да получавате месечни имейли
+    относно принципите на компютърните науки на Code.org и получавайте полезни напомняния,
+    съвети и актуализации, изпратени директно до вашата пощенска кутия.
+  subscribe_form_section_unsubscribe: Можете да се отпишете по всяко време.
   blockchain_hero_heading: Как работи блокчейн
   blockchain_hero_desc: Потопете се в света на блокчейн с „Как работи блокчейн“, нашата
     нова видео серия и съпътстващи уроци!
@@ -767,6 +843,9 @@ bg:
     е съчетан с едно видео от поредицата, гмуркайки се по-дълбоко в концепциите, въведени
     във видеоклиповете.
   ai_curriculum_btn_aria_label_04: Разгледайте как AI работи уроците
+  ai_curriculum_grades_05: 'Клас нива: 9-12'
+  ai_curriculum_btn_aria_label_05: Разгледайте модула за софтуерно инженерство и компютърно
+    виждане
   ai_carousel_heading: 'Какво казват учителите за AI с Code.org:'
   ai_carousel_quote_01: Този урок също даде възможност на моите ученици да видят,
     че има елемент на мнение в системите за класификация. По-късно, когато започнахме
@@ -892,6 +971,7 @@ bg:
     на AI за оценка на учениците. С богата комбинация от теория, практически примери
     и ресурси, тя има за цел да даде възможност на преподавателите да се ориентират
     в пейзажа на ИИ и да подобрят опита за учене на учениците.
+  ai_pl_101_resources_5: Ръководство за осигуряване на отговорен подход към AI
   ai_pl_101_video_desc_6: 'Научете повече за новата технология, движеща големите промени
     в AI, включваща два нови видеоклипа на големи езикови модели (като ChatGPT) и
     Generative AI. Чуйте как тези нови технологии работят директно от експертите:
@@ -902,6 +982,9 @@ bg:
     от LLMs като ChatGPT, от начинаещи до напреднали. Включва стартови подкани за
     тези, които просто потапят пръстите на краката си, както и усъвършенствани инструменти
     за тези, които искат да увеличат максимално потенциала си.
+  ai_pl_101_resources_3: AI подсказва за трансформиране на ученето на учениците
+  ai_pl_101_resources_section_title: Още начини да научите повече за AI
+  ai_pl_101_resources_guide: 'Ръководство за спътник:'
   how_ai_works_hero_heading: Как работи AI
   how_ai_works_hero_desc: Потопете се в света на AI с „Как работи AI“, нашата видео
     серия и съпътстващи уроци!
@@ -1317,8 +1400,8 @@ bg:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Лаборатория за приложения
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Работилници, ръководени от фасилитатори,
+    Самостоятелни модули
   csp_page_curriculum_glance_professional_languages: Български
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1446,8 +1529,8 @@ bg:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Лаборатория за приложения, Лаборатория за игри,
     AI лаборатория, уеб лаборатория
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Работилници, ръководени от фасилитатори,
+    Самостоятелни модули
   csd_page_curriculum_glance_professional_languages: Български
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1594,8 +1677,8 @@ bg:
     и дизайн, App Design
   csf_page_curriculum_glance_devices: Лаптоп, Chromebook, таблет
   csf_page_curriculum_glance_tools: Спрайт Лаборатория, Играй Лаборатория
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Работилници, ръководени от фасилитатори,
+    Самостоятелни модули
   csf_page_curriculum_glance_languages: арабски, индонезийски бахаса, каталански,
     китайски опростен, традиционен китайски, чешки, френски, немски, хинди, италиански,
     японски, корейски, каннада, малайски, маратхи, монголски, полски, Portuguese-BR,
@@ -1737,6 +1820,64 @@ bg:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Помощ за финансирането на нашата мисия
+  donate_page_top_desc: Всяко дарение подхранва мисията на Code.org да разшири достъпа
+    до обучение по компютърни науки. Ние предлагаме няколко начина, по които можете
+    да дарите и да направите разлика.
+  donate_page_fundraise_title: Набиране на средства за Code.org
+  donate_page_fundraise_desc: Помощ за набиране на пари за Code.org! Всеки ученик
+    във всяко училище трябва да има възможност да учи компютърни науки.
+  donate_page_other_ways_title: Други начини за даване
+  donate_page_other_ways_desc: Разгледайте различни методи за принос и намерете опцията,
+    която ви подхожда най-добре. Всеки жест, голям или малък, задвижва мисията ни
+    напред.
+  donate_page_501c3: Code.org е регистрирана като обществена организация с нестопанска
+    цел 501 (c) (3). Вноските в Code.org подлежат на данъчно приспадане до степента,
+    разрешена от закона. Данъчният идентификационен номер на Code.org е 46-0858543.
+  donate_page_donation_policy_title: Разбиране на нашата политика за дарения
+  donate_page_donation_policy_desc: Научете как се справяме и разпределяме вашите
+    вноски.
+  donate_tabs_tab_label_daf_direct: DAF Директен
+  donate_tabs_tab_label_amazon: Амазонка
+  donate_tabs_tab_label_bitpay: БитПей
+  donate_tabs_tab_label_employee_match: Съвпадение на служителите
+  donate_tabs_daf_direct_title: Дарете чрез DAF Direct
+  donate_tabs_daf_direct_desc: Дарете чрез вашия дарителски фонд с благотворителна
+    програма Fidelity, Schwab Charitable или BNY Mellon и направете препоръката си
+    за безвъзмездна помощ към Code.org чрез онлайн формата DAF Direct.
+  donate_tabs_amazon_title: Дарете чрез Amazon
+  donate_tabs_amazon_desc: Дарете директно с помощта на вашия акаунт в Amazon. Само
+    с няколко кликвания безпроблемно допринасяйте за мисията на Code.org и овластяване
+    на бъдещето на обучението по компютърни науки.
+  donate_tabs_bitpay_title: Дарете с крипто чрез BitPay
+  donate_tabs_bitpay_desc: Прегърнете бъдещето на даването с криптовалута. Чрез BitPay
+    вашата цифрова валута може директно да подкрепи начинанията на Code.org в разширяването
+    на образованието по компютърни науки.
+  help_page_top_heading: Как можете да помогнете
+  help_page_top_desc: Подкрепете нашата мисия да направим компютърните науки достъпни
+    за всяко дете, навсякъде. Вашите усилия ни помагат да вдъхновим бъдещите новатори
+    и да преодолеем разликата в технологичното образование.
+  help_page_top_subhead: Направете дарение на Code.org
+  help_page_top_desc_02: Работим, за да дадем възможност на всеки ученик да учи компютърни
+    науки — както онлайн, така и в училищата, където установяваме постоянни курсове
+    и обучаваме учители. За всеки долар, който дарите, едно дете се запознава с компютърните
+    науки.
+  help_page_partners_heading: Станете партньор
+  help_page_partners_desc: Code.org работи с други организации с нестопанска цел като
+    партньори, за да помогне за разпространението на компютърните науки по местен,
+    устойчив начин. Научете повече за нашата програма.
+  help_page_volunteer_heading: Доброволец в класна стая
+  help_page_volunteer_desc: Доброволец да преподава Часът на кода или да бъде гост
+    лектор в местна класна стая. Регистрирайте се, за да чуете за възможностите близо
+    до вас.
+  help_page_translate_heading: Помогнете ни да преведем
+  help_page_translate_desc: Доброволците преведоха нашите уроци на над 45 езика. Помогнете
+    ни да продължим да разширяваме нашите уроци за студенти по целия свят!
+  help_page_speak_for_cs_heading: Говорете за компютърни науки образование
+  help_page_speak_for_cs_desc: Научете повече за застъпническата работа на Code.org
+    в САЩ и десетте политики, които препоръчваме държавите да приемат, за да направят
+    компютърните науки основополагащи за всички студенти. Плюс това, разберете как
+    можете да управлявате промяната във вашето състояние.
   hoc_live: Час на кода на живо
   hoc_live_sign_up_title: Регистрирайте се за Час на кода на живо
   hoc_live_learn_title: Научете с Час на кода на живо
@@ -13916,6 +14057,10 @@ bg:
   video_library_page_inspirational_video_title_11: Всеки може да се научи (1 мин.)
   video_library_page_inspirational_video_title_12: Ло Ке Фалта Ен Нуестрас Ескуела
     (2 мин)
+  video_library_page_inspirational_video_title_13: НАСА празнува Часа на кода (2 мин)
+  video_library_page_inspirational_video_title_14: Това е повече от игра (1 мин)
+  video_library_page_inspirational_video_title_15: Създаване с компютърни науки (1
+    мин)
   video_library_page_not_hacked_video_title_1: 'Как да не се хакнат: Въведение'
   video_library_page_not_hacked_video_title_2: 'Как да не се хакнат: Пароли'
   video_library_page_not_hacked_video_title_3: 'Как да не се хакнат: Удостоверяване

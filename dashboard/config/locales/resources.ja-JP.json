@@ -5539,13 +5539,44 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ビデオ"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "スライド"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "スライド"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "ビデオ"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "資源"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "資源"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "資源"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "資源"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "資源"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "ビデオ"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "スライド"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-adaptations/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5588,7 +5619,7 @@
           "type": "スライド"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
@@ -5678,12 +5709,12 @@
           "type": "スライド"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5705,25 +5736,25 @@
         },
         "ecosystems/csc-ecosystems/2023": {
           "name": "海洋生態系をシミュレーション",
-          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
+          "url": "https://docs.google.com/presentation/d/1ayQIGpQG49ED1S3f-URp97DibYgpFH8YCx9SPmYSxhA/",
           "type": "スライド"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
-          "name": "乱獲を理解する記事",
+          "name": "乱獲を理解するための記事",
           "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
           "type": "資源"
         },
         "ecologist_s_notebook/csc-ecosystems/2023": {
-          "name": "エコロジストノート",
+          "name": "生態学者ノート",
           "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5783,12 +5814,12 @@
           "type": "資源"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5871,12 +5902,12 @@
           "url": "/s/csc-タイムカプセル-2023/ボキャブ"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/csc-timecapsule/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -5974,12 +6005,12 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "CS 接続ランディングページ",
+          "name": "CS コネクションランディングページ",
           "url": "https://code.org/educate/csc",
           "type": "資源"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "CSC 拡張接続ブックリスト",
+          "name": "CSC 拡張コネクションブックリスト",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "資源"
         },
@@ -6080,6 +6111,1360 @@
         "poem_app_example/poetry/2023": {
           "name": "ポエムアプリの例",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "資源"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "先生用フォーラム"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "The Problem Solving Process"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "問題解決入門",
+          "type": "スライド"
+        },
+        "problem_solving_process/csd/2023": {
+          "name": "問題解決プロセス"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "name": "問題解決プロセス",
+          "type": "ビデオ"
+        },
+        "problem_solving_process_2/csd/2023": {
+          "name": "問題解決プロセス"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "ビデオ"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "The Problem Solving Process",
+          "type": "スライド"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "The Problem Solving Process"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "問題解決の探求",
+          "type": "スライド"
+        },
+        "solving_problems/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "ビデオ"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "コンピューターとは"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "スライド"
+        },
+        "input_and_output/csd/2023": {
+          "name": "入出力"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "入出力"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "入出力",
+          "type": "スライド"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "スライド"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "スライド"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "ビデオ"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "アプリと問題解決"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "資源"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "アプリと問題解決",
+          "type": "ピア ・ レビュー"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "アプリと問題解決",
+          "type": "ルーブリック"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "復習"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "プロジェクト - アプリの提案",
+          "type": "スライド"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "スライド"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "スライド"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "スライド"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "スライド"
+        },
+        "tangrams/csd/2023": {
+          "type": "資源"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "スライド"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "name": "ウェブページの探索",
+          "type": "スライド"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "資源"
+        },
+        "web_design_template/csd/2023": {
+          "type": "資源"
+        },
+        "html_tags/csd/2023": {
+          "type": "資源"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "HTML入門",
+          "type": "スライド"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "ビデオ"
+        },
+        "pair_programming/csd/2023": {
+          "name": "ペアプログラミング",
+          "type": "ビデオ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "ビデオ"
+        },
+        "formatting_html/csd/2023": {
+          "type": "資源"
+        },
+        "headings/csd/2023": {
+          "type": "スライド"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "type": "資源"
+        },
+        "lists/csd/2023": {
+          "name": "リスト",
+          "type": "資源"
+        },
+        "video_debugging/csd/2023": {
+          "name": "ビデオ: デバッグ",
+          "type": "ビデオ"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": " ペアプログラミング",
+          "type": "ビデオ"
+        },
+        "html_web_page/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "ピア ・ レビュー"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "プロジェクトガイド"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "name": "ミニプロジェクト: HTML ウェブページ",
+          "type": "スライド"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "資源"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "デジタルフットプリント",
+          "type": "スライド"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "社会的な警告"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "社会的な警告"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "CSS - パート 1 はじめに",
+          "type": "ビデオ"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "CSS - パート 2 はじめに",
+          "type": "ビデオ"
+        },
+        "style_sheets/csd/2023": {
+          "type": "資源"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "CSSを使用したテキストのスタイル設定",
+          "type": "スライド"
+        },
+        "text_properties/csd/2023": {
+          "type": "資源"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "name": "ミニプロジェクト: 個人的なスタイル",
+          "type": "スライド"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "ピア ・ レビュー"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "プロジェクトガイド"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "ビデオ"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "知的財産",
+          "type": "スライド"
+        },
+        "creative_commons_search/csd/2023": {
+          "type": "資源"
+        },
+        "images_in_html/csd/2023": {
+          "type": "資源"
+        },
+        "using_images/csd/2023": {
+          "name": "画像の使用",
+          "type": "スライド"
+        },
+        "websites_for_expression/csd/2023": {
+          "name": "表現のためのウェブサイト",
+          "type": "スライド"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "CSSを使用した要素のスタイル設定",
+          "type": "スライド"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "プロジェクトガイド"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "スライド"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "ピア ・ レビュー"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "プロジェクトガイド"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "資源"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "name": "プロジェクト - 個人ウェブページ",
+          "type": "スライド"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "ウェブサイトの公開",
+          "type": "ビデオ"
+        },
+        "websites_for_a_purpose/csd/2023": {
+          "name": "ある目的のためのウェブサイト"
+        },
+        "websites_for_a_purpose_1/csd/2023": {
+          "name": "ある目的のためのウェブサイト"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "name": "ある目的のためのウェブサイト",
+          "type": "スライド"
+        },
+        "team_problem_solving/csd/2023": {
+          "name": "チームの問題解決",
+          "type": "スライド"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": " ビデオ: 不一致の管理",
+          "type": "ビデオ"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "ビデオ: チームワーク",
+          "type": "ビデオ"
+        },
+        "sources_and_research/csd/2023": {
+          "name": "出典と調査",
+          "type": "スライド"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "検索のしくみ",
+          "type": "ビデオ"
+        },
+        "classes/csd/2023": {
+          "name": "クラス",
+          "type": "資源"
+        },
+        "css_classes/csd/2023": {
+          "type": "スライド"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "プロジェクトガイド"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "スライド"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "hyperlinks/csd/2023": {
+          "type": "資源"
+        },
+        "linking_pages/csd/2023": {
+          "name": "ページのリンク",
+          "type": "スライド"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "name": "プロジェクト - ある目的のためのウェブサイト",
+          "type": "スライド"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "name": "ピアレビューと最後の仕上げ",
+          "type": "スライド"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "プロジェクトガイド"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "ピア ・ レビュー"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "スライド"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "資源"
+        },
+        "plotting_shapes/csd/2023": {
+          "name": "形状のプロット",
+          "type": "スライド"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "ゲームラボでの描画",
+          "type": "スライド"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "ビデオ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "ビデオ"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "資源"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "資源"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "スライド"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "ビデオ"
+        },
+        "naming_variables/csd/2023": {
+          "type": "資源"
+        },
+        "variables/csd/2023": {
+          "name": "変数（へんすう）",
+          "type": "資源"
+        },
+        "variables_1/csd/2023": {
+          "name": "変数（へんすう）",
+          "type": "ビデオ"
+        },
+        "variables_2/csd/2023": {
+          "name": "変数（へんすう）",
+          "type": "スライド"
+        },
+        "random_numbers/csd/2023": {
+          "type": "資源"
+        },
+        "random_numbers_1/csd/2023": {
+          "type": "スライド"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "スライド"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "資源"
+        },
+        "robot_faces/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "animation_tab/csd/2023": {
+          "type": "資源"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "ビデオ"
+        },
+        "sprites/csd/2023": {
+          "name": "スプライト",
+          "type": "資源"
+        },
+        "sprites_1/csd/2023": {
+          "name": "スプライト",
+          "type": "スライド"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "[アニメーション] タブ",
+          "type": "ビデオ"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "スプライトのプロパティ",
+          "type": "資源"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "スプライトのプロパティ",
+          "type": "スライド"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "スプライトのプロパティ",
+          "type": "ビデオ"
+        },
+        "text/csd/2023": {
+          "name": "テキスト",
+          "type": "スライド"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "スライド"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "ビデオ"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "ビデオ"
+        },
+        "the_draw_loop/csd/2023": {
+          "type": "資源"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "type": "スライド"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "スプライトの動き",
+          "type": "ビデオ"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "スプライトの動き",
+          "type": "スライド"
+        },
+        "animated_scene/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "name": "ミニプロジェクト- アニメーション",
+          "type": "スライド"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "ブール式",
+          "type": "ビデオ"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "資源"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "条件文",
+          "type": "ビデオ"
+        },
+        "conditionals/csd/2023": {
+          "name": "条件",
+          "type": "スライド"
+        },
+        "if_statements/csd/2023": {
+          "type": "資源"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "キーボード入力",
+          "type": "スライド"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "資源"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "If/Else 文",
+          "type": "ビデオ"
+        },
+        "mouse_input/csd/2023": {
+          "name": "マウスの入力",
+          "type": "スライド"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "資源"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "資源"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "プロジェクト - インタラクティブカード",
+          "type": "スライド"
+        },
+        "velocity/csd/2023": {
+          "name": "速度",
+          "type": "ビデオ"
+        },
+        "velocity_1/csd/2023": {
+          "name": "速度",
+          "type": "資源"
+        },
+        "velocity_2/csd/2023": {
+          "name": "速度",
+          "type": "スライド"
+        },
+        "collision_detection_1/csd/2023": {
+          "type": "資源"
+        },
+        "collision_detection_2/csd/2023": {
+          "type": "スライド"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "name": "ミニプロジェクト- サイドスクローラー",
+          "type": "スライド"
+        },
+        "side_scroller/csd/2023": {
+          "name": "スライドスクローラー",
+          "type": "ルーブリック"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "スライドスクローラー"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "複雑なスプライトの動き",
+          "type": "スライド"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "速度とカウンターパターン",
+          "type": "資源"
+        },
+        "collisions/csd/2023": {
+          "name": "衝突",
+          "type": "スライド"
+        },
+        "flyer_game/csd/2023": {
+          "name": "フライヤーゲーム",
+          "type": "ルーブリック"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "フライヤーゲーム"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "name": "ミニプロジェクト- フライヤーゲーム",
+          "type": "スライド"
+        },
+        "functions/csd/2023": {
+          "name": "関数(かんすう) ",
+          "type": "ビデオ"
+        },
+        "functions_1/csd/2023": {
+          "name": "関数(かんすう) ",
+          "type": "資源"
+        },
+        "functions_2/csd/2023": {
+          "name": "関数(かんすう) ",
+          "type": "スライド"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "ゲームデザインプロセス",
+          "type": "スライド"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "ゲームデザインプロセスの使用",
+          "type": "スライド"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "資源"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "プロジェクト - ゲームの設計",
+          "type": "スライド"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "スライド"
+        },
+        "understanding_your_user/csd/2023": {
+          "name": "ユーザーを理解する",
+          "type": "スライド"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "ビデオ"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "スライド"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "スライド"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "資源"
+        },
+        "user_interfaces/csd/2023": {
+          "name": "ユーザーインターフェイス",
+          "type": "スライド"
+        },
+        "feedback_and_testing/csd/2023": {
+          "name": "フィードバックとテスト",
+          "type": "スライド"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "資源"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "資源"
+        },
+        "identifying_user_needs/csd/2023": {
+          "name": "ユーザーのニーズの特定",
+          "type": "スライド"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "紙のプロトタイプ",
+          "type": "ルーブリック"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "name": "プロジェクト - 紙のプロトタイプ",
+          "type": "スライド"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "name": "優れたアプリの設計",
+          "type": "スライド"
+        },
+        "market_research/csd/2023": {
+          "name": "市場調査"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "資源"
+        },
+        "market_research_1/csd/2023": {
+          "name": "市場調査"
+        },
+        "market_research_2/csd/2023": {
+          "name": "市場調査",
+          "type": "スライド"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "スライド"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "スライド"
+        },
+        "design_mode/csd/2023": {
+          "name": "設計モード",
+          "type": "資源"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "資源"
+        },
+        "prototype_testing/csd/2023": {
+          "name": " プロトタイプテスト",
+          "type": "スライド"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "ビデオ"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "スライド"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "ビデオ"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "資源"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "スライド"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "ビデオ"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "ビデオ"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "スライド"
+        },
+        "changing_screens/csd/2023": {
+          "type": "資源"
+        },
+        "importing_screens/csd/2023": {
+          "type": "資源"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "スライド"
+        },
+        "multi-screen_apps/csd/2023": {
+          "name": "マルチスクリーンアプリ",
+          "type": "資源"
+        },
+        "responding_to_user_input/csd/2023": {
+          "name": "ユーザー情報に返答",
+          "type": "資源"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "アプリのテスト",
+          "type": "スライド"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "スライド"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "スライド"
+        },
+        "app_presentation/csd/2023": {
+          "name": "アプリのプレゼンテーション",
+          "type": "ルーブリック"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "アプリのプレゼンテーション"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "name": "プロジェクト - アプリのプレゼンテーション",
+          "type": "スライド"
+        },
+        "meals_data/csd/2023": {
+          "type": "資源"
+        },
+        "representation_matters/csd/2023": {
+          "name": "表現が重要"
+        },
+        "representation_matters_1/csd/2023": {
+          "name": "表現が重要"
+        },
+        "representation_matters_2/csd/2023": {
+          "name": "表現が重要",
+          "type": "スライド"
+        },
+        "patterns_and_representation/csd/2023": {
+          "name": "パターンと表現",
+          "type": "スライド"
+        },
+        "representing_information/csd/2023": {
+          "name": "情報の表現"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "name": "ASCIIとバイナリ表現",
+          "type": "スライド"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "ascii_text/csd/2023": {
+          "type": "資源"
+        },
+        "representing_images/csd/2023": {
+          "name": "画像の表現",
+          "type": "スライド"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "ビデオ"
+        },
+        "representing_numbers/csd/2023": {
+          "name": "数値の表現"
+        },
+        "representing_numbers_1/csd/2023": {
+          "name": "数値の表現",
+          "type": "スライド"
+        },
+        "combining_representations/csd/2023": {
+          "name": "表現を組み合わせる",
+          "type": "スライド"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "データの秘密を守る",
+          "type": "スライド"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "スライド"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "スライド"
+        },
+        "structuring_data/csd/2023": {
+          "name": "データの構造化"
+        },
+        "structuring_data_1/csd/2023": {
+          "name": "データの構造化",
+          "type": "スライド"
+        },
+        "interpreting_data/csd/2023": {
+          "name": "データの解釈"
+        },
+        "interpreting_data_1/csd/2023": {
+          "name": "データの解釈"
+        },
+        "interpreting_data_2/csd/2023": {
+          "name": "データの解釈",
+          "type": "資源"
+        },
+        "interpreting_data_3/csd/2023": {
+          "name": "データの解釈",
+          "type": "スライド"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "name": "データを使った決定"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "name": "データを使った決定",
+          "type": "スライド"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "資源"
+        },
+        "automating_data_decisions/csd/2023": {
+          "name": "データ決定の自動化"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "name": "データ決定の自動化",
+          "type": "資源"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "name": "データ決定の自動化"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "name": "データ決定の自動化",
+          "type": "スライド"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "ビデオ"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "name": "現実世界のデータ"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "name": "現実世界のデータ"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "ビデオ"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "name": "ビッグデータによる問題解決",
+          "type": "スライド"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "ビデオ"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "スライド"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "ビデオ: 社会への影響",
+          "type": "ビデオ"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "ビデオ: 機械学習",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ビデオ"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "ビデオ:トレーニングデータとバイアス",
+          "type": "ビデオ"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "ピア ・ レビュー"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "プロジェクトガイド"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "name": "プロジェクト - 推奨事項の作成",
+          "type": "スライド"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "資源"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "スライド"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "資源"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "ビデオ"
+        },
+        "physical_output/csd/2023": {
+          "type": "資源"
+        },
+        "the_circuit_playground/csd/2023": {
+          "name": "サーキット プレイグラウンド",
+          "type": "スライド"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "資源"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "スライド"
+        },
+        "board_events/csd/2023": {
+          "name": "ボードイベント",
+          "type": "資源"
+        },
+        "board_events_1/csd/2023": {
+          "name": "ボードイベント",
+          "type": "スライド"
+        },
+        "physical_input/csd/2023": {
+          "name": "物理的な入力",
+          "type": "資源"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "ビデオ"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "ビデオ"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "資源"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "スライド"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "スライド"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "color_leds/csd/2023": {
+          "name": "カラーLED",
+          "type": "スライド"
+        },
+        "color_lights/csd/2023": {
+          "type": "資源"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "スライド"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "資源"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "スライド"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "ビデオ"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "資源"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "スライド"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "資源"
+        },
+        "board_sensors/csd/2023": {
+          "type": "スライド"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "資源"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "資源"
+        },
+        "accelerometer/csd/2023": {
+          "name": "加速度計",
+          "type": "スライド"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "加速度計イベント",
+          "type": "資源"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "資源"
+        },
+        "arrays/csd/2023": {
+          "type": "資源"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Introduction to Arrays",
+          "type": "ビデオ"
+        },
+        "making_music/csd/2023": {
+          "type": "スライド"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "資源"
+        },
+        "playing_notes/csd/2023": {
+          "name": "音符で遊ぶ",
+          "type": "資源"
+        },
+        "producing_output/csd/2023": {
+          "type": "資源"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "パラメーター付き関数",
+          "type": "ビデオ"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "スライド"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "資源"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "資源"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "スライド"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "資源"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "スライド"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "name": "プロジェクト: イノベーションのプロトタイプ",
+          "type": "スライド"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "先生用フォーラム"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "スライド"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "スライド"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "資源"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "資源"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "資源"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "スライド"
+        },
+        "board_events_2/csd/2023": {
+          "name": "ボードイベント",
+          "type": "スライド"
+        },
+        "board_events_3/csd/2023": {
+          "name": "ボードイベント",
+          "type": "資源"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "資源"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "ビデオ"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "スライド"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "スライド"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "スライド"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "スライド"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "資源"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "スライド"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "スライド"
+        },
+        "data_change_events/csd/2023": {
+          "type": "資源"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "資源"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "資源"
+        },
+        "accelerometer_1/csd/2023": {
+          "name": "加速度計",
+          "type": "スライド"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "加速度計イベント",
+          "type": "資源"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "資源"
+        },
+        "functions_3/csd/2023": {
+          "name": "関数(かんすう) ",
+          "type": "スライド"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "スライド"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "資源"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "スライド"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "資源"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "スライド"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "name": "プロジェクト: イノベーションのプロトタイプ",
+          "type": "スライド"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "The Problem Solving Process"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ビデオ"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "スライド"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "スライド"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "スライド"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "資源"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "人工知能を見る",
+          "type": "ビデオ"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "ビデオ"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "スライド"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "資源"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "スライド"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "資源"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "資源"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "AI ラボの紹介",
+          "type": "スライド"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "AI ラボの紹介",
+          "type": "ビデオ"
+        },
+        "selecting_features/csd/2023": {
+          "type": "資源"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "AI ラボでのトレーニングとテスト",
+          "type": "ビデオ"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "資源"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "資源"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "スライド"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "人工知能（AI）：トレーニングデータとバイアス",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "ビデオ"
+        },
+        "model_cards/csd/2023": {
+          "type": "スライド"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "AI ラボのモデルカード",
+          "type": "ビデオ"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "スライド"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "資源"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "ビデオ"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "スライド"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "資源"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "numerical_models/csd/2023": {
+          "type": "スライド"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "アンサーキー"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "AI ラボの数値データ",
+          "type": "スライド"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "AI ラボの数値データ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "AI ラボの数値データ",
+          "type": "ビデオ"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "資源"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "スライド"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "スライド"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "ビデオ"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "スライド"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "スライド"
+        },
+        "issue_statements/csd/2023": {
+          "type": "スライド"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "資源"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "ビデオ"
+        },
+        "survey_planning/csd/2023": {
+          "name": "データ収集の設計",
+          "type": "スライド"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "ビデオ"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "スライド"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "ビデオ"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "スライド"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "スライド"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "資源"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "スライド"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "ルーブリック"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "資源"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "資源"
         },
         "all_resources/coursea/2023": {
@@ -7485,7 +8870,7 @@
           "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "AI の仕組み-トレーニングデータとバイアス",
+          "name": "AIの仕組み - 訓練データとバイアス",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ビデオ"
         },
@@ -7545,11 +8930,11 @@
           "type": "資源"
         },
         "eliza_activity_guide/how-ai-works/2023": {
-          "name": "(オプション) Eliza アクティビティガイド",
+          "name": "(任意) イライザアクティビティガイド",
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "ジェネレーティブLLM",
+          "name": "生成LLM",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "スライド"
         },
@@ -7564,38 +8949,38 @@
           "type": "ビデオ"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
-          "name": "[Key] 語彙とビデオガイド",
+          "name": "[Key] ボキャブラリーと動画ガイド",
           "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
           "type": "アンサーキー"
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
-          "name": "動画と語彙ガイド",
+          "name": "動画とボキャブラリーガイド",
           "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] 書面による音声シミュレーターアクティビティガイド",
+          "name": "[見本] 筆記ボイスシミュレーターアクティビティガイド",
           "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
-          "name": "手書き音声シミュレータガイド",
+          "name": "筆記ボイスシミュレータガイド",
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
-          "name": "筆記音声シミュレータユーザーガイド",
+          "name": "筆記ボイスシミュレータユーザーガイド",
           "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
           "type": "資源"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
-          "name": "(オプション) GAN ゲームアクティビティガイド",
+          "name": "(任意) GAN ゲームアクティビティガイド",
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
         },
         "generative_images/how-ai-works/2023": {
-          "name": "ジェネレーティブ・イメージ",
+          "name": "生成画像",
           "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
           "type": "スライド"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] ジェネレーティブ・イメージズ・アクティビティ・ガイド",
+          "name": "[Key] 生成画像アクティビティ・ガイド",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
           "type": "アンサーキー"
         },
@@ -7605,11 +8990,11 @@
           "type": "ビデオ"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] ノイズの多い画像アクティビティ",
+          "name": "[見本] ノイズ画像アクティビティ",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "ノイジー・イメージ・ウィジェットのアクティビティ・ガイド",
+          "name": "ノイズ画像ウィジェットのアクティビティガイド",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
@@ -7618,7 +9003,7 @@
           "type": "資源"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
-          "name": "動画と語彙ガイド",
+          "name": "動画とボキャブラリーガイド",
           "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
         },
         "algorithmic_bias/how-ai-works/2023": {
@@ -7632,12 +9017,12 @@
           "type": "ビデオ"
         },
         "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
-          "name": "画像トリミングアルゴリズムに関する学習内容の共有 (Twitter)",
+          "name": "画像トリミングアルゴリズムに関する学習の共有（Twitter）",
           "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
           "type": "資源"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
-          "name": "Twitterは、画像トリミングアルゴリズムに偏りがあったため、廃止していると言っています（CNN）",
+          "name": "Twitter 社、画像トリミングアルゴリズムに偏りあり、廃止へ（CNN）",
           "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "資源"
         },
@@ -7700,11 +9085,11 @@
           "type": "ビデオ"
         },
         "vocabulary_matching/how-ai-works/2023": {
-          "name": "語彙マッチング",
+          "name": "ボキャブラリーマッチング",
           "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
-          "name": "[Key] 語彙マッチング",
+          "name": "[Key] ボキャブラリーマッチング",
           "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
           "type": "アンサーキー"
         },

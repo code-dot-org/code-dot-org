@@ -19,7 +19,7 @@ km:
         step:
           title: ជំហាន
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
           student_description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
         CSDU3-Draft:
@@ -60,6 +60,8 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        minecraft:
+          title: Minecraft Designer
         coursee-draft:
           lesson_groups:
             end_of_course_project:
@@ -371,7 +373,7 @@ km:
         coursed-2019:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -396,7 +398,7 @@ km:
           description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
@@ -420,7 +422,7 @@ km:
         coursec-2019:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -433,7 +435,7 @@ km:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -441,7 +443,7 @@ km:
         courseb-2019:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -452,7 +454,7 @@ km:
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -562,7 +564,7 @@ km:
         csl-vn:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -642,7 +644,7 @@ km:
         time4cs-control-unit-1:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
@@ -654,7 +656,7 @@ km:
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
@@ -685,7 +687,7 @@ km:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -693,7 +695,7 @@ km:
         courseb-2020:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -701,7 +703,7 @@ km:
         coursec-2020:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -711,7 +713,7 @@ km:
         coursed-2020:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -745,7 +747,7 @@ km:
           description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
@@ -765,7 +767,7 @@ km:
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -807,7 +809,7 @@ km:
         courseb-2021:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -817,7 +819,7 @@ km:
         coursec-2021:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -828,7 +830,7 @@ km:
         coursed-2021:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -868,7 +870,7 @@ km:
             csf_warmup:
               display_name: ការចាប់ផ្តើម
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
@@ -890,7 +892,7 @@ km:
           description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -934,6 +936,8 @@ km:
           lesson_groups:
             lessonGroup-2:
               display_name: មេរៀន
+        dance-unplugged:
+          title: Dance Party Unplugged
         ai-ethics-2021:
           description_audience: ថ្នាក់ទី ៦ដល់ទី១២
         2022drafting:
@@ -951,7 +955,7 @@ km:
         coursea-2022:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -962,7 +966,7 @@ km:
         express-2022:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
             lessonGroup-9:
@@ -999,7 +1003,7 @@ km:
         courseb-2022:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -1009,7 +1013,7 @@ km:
         coursec-2022:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -1019,7 +1023,7 @@ km:
         coursed-2022:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -1109,7 +1113,7 @@ km:
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -1121,7 +1125,7 @@ km:
         express-2023:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
             lessonGroup-9:
@@ -1143,7 +1147,7 @@ km:
         coursea-2023:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -1154,7 +1158,7 @@ km:
         courseb-2023:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -1164,7 +1168,7 @@ km:
         coursec-2023:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
@@ -1174,7 +1178,7 @@ km:
         coursed-2023:
           lesson_groups:
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -1237,20 +1241,20 @@ km:
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
         nevada-standards-aligned-kindergarten-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
             lessonGroup-6:
@@ -1260,7 +1264,7 @@ km:
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
             lessonGroup-5:
@@ -1268,7 +1272,7 @@ km:
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-6:
               display_name: ប្រតិបត្តិដដែលៗ
             lessonGroup-8:

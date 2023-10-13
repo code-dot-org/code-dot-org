@@ -5,36 +5,39 @@ zh:
   language: English
   front_title: 加入史上最大的學習活動， %{campaign_date}
   coming_soon: 即將推出
-  campaign_date_start_short: 12月5日
-  campaign_date_start_long: 12月5日
-  campaign_date_short: 12月5日11日
-  campaign_date_full: 12 月 5 日 - 11 日
-  campaign_date_year: '2022'
-  campaign_date_full_year: 2022年12月5-11日
+  campaign_date_start_short: 12月4日
+  campaign_date_start_long: 12月4日
+  campaign_date_short: 12月4日10日
+  campaign_date_full: 12 月 4 日 - 10 日
+  campaign_date_year: '2023'
+  campaign_date_full_year: 2023年12月4-10日
   nonus_campaign_date_start_short: 十月一日
   nonus_campaign_date_start_long: 拾月壹日
   nonus_campaign_date_short: 10 月 1 日 - 12 月 18 日
   nonus_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   latam_campaign_date_start_short: 十月一日
   latam_campaign_date_start_long: 拾月壹日
   latam_campaign_date_short: 10 月 1 日 - 12 月 18 日
   latam_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   europe_campaign_date_start_short: 十月一日
   europe_campaign_date_start_long: 拾月壹日
   europe_campaign_date_short: 10 月 1 日 - 12 月 18 日
   europe_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   africa_campaign_date_start_short: 十月一日
   africa_campaign_date_start_long: 拾月壹日
   africa_campaign_date_short: 10 月 1 日 - 12 月 18 日
   africa_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
+  hoc2023_header: 人工智能創造力
+  hoc2023_social_creativity_with_ai_title: 一小時玩程式-你會創造什麼？
+  hoc2023_social_creativity_with_ai_desc: 利用計算機科學探索和學習 AI！
   hoc2022_header: 探索，玩耍，創造！
   social_hoc2022_explore_play_create: 使用電腦科學來探索、玩耍和創造！
   codeorg_homepage_hoc2022_body: 探索宇宙，進球得分，跳舞 — 嘗試電腦科學的方法如此之多。
@@ -122,6 +125,22 @@ zh:
   curriculum_launch_2023_title: 不可思議的課程内容更新
   curriculum_launch_2023_desc: CSC、CSP、CSD等内容更新，還有全新的課程目錄和重新設計的教學頁面，協助您找到所有內容！
   in_partnership_with: 合作夥伴：
+  shop_code_dot_org_heading: 商店代碼.
+  shop_code_dot_org_desc: 支持我們的工作，自豪地穿上運動。我們的帽子也被奧巴馬總統和名人戴過。
+  spread_the_word_heading: 傳播這個訊息
+  spread_the_word_desc: 透過與您的網路分享 Code.org 來擴大我們的影響力。從社交媒體到電子郵件更新，了解如何幫助我們接觸更多教育工作者，學生和倡導者。
+  follow_us_heading: 在社交媒體上關注我們
+  follow_us_desc: 在社交媒體上與我們保持最新消息，並與您的網絡分享我們的帖子，以保持最新消息並幫助提高知名度。
+  facebook: Pseudoloc-弗诶伊比哦开
+  twitter: Pseudoloc-提尔提提儿
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: 提克托克
+  subscribe_to_emails_heading: 訂閱電子郵件
+  subscribe_to_emails_desc: 透過我們的郵件清單，透過每季更新，閱讀 Code.org 和電腦科學教育的情況。
+  subscribe_to_emails_intl: 訂閱國際更新
+  promote_code_dot_org_heading: 促進代碼.
+  promote_code_dot_org_desc: 借助統計信息，報價和視頻，促進您所在地區的計算機科學。
   afe_partnership_logo_alt: 亞馬遜未來工程師徽標
   afe_partnership_thanks_desc: 亞馬遜未來工程師徽標是一項從童年到職業生涯的全面計劃，旨在激勵、教育和培訓低收入和其他弱勢兒童和年輕人從事計算機科學事業。[瞭解我們的合作夥伴關係](%{afe_url})。
   grade_level: 年級
@@ -134,6 +153,12 @@ zh:
   curricula_desc_middle: 瀏覽引人入勝的產品，讓您和您的初中學生一起探索電腦科學。
   curricula_title_high: 高中課程
   curricula_desc_high: 瀏覽引人注目的課程和活動，邀請您和您的高中生更深入地了解計算機科學。
+  for_administrators_heading: 對於管理員
+  for_administrators_desc: 加入數以千計的學校，他們已經將計算機科學納入他們的課程。
+  for_parents_heading: 致家長
+  for_parents_desc: 您可以幫助鼓勵學生的學校提供或擴展計算機科學教育。
+  for_educators_heading: 致教師
+  for_educators_desc: 通過我們的專業學習工作坊，立即開始教學-無需計算機科學經驗。
   students_label: 學生
   teachers_label: 教師
   teacher_label_csf: 計算機科學基礎教師
@@ -143,10 +168,11 @@ zh:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 所需材料：
   optional_materials: 可選材料：
-  call_to_action_explore_roles: 探索開放角色
+  call_to_action_hold_an_event: 舉辦活動
   call_to_action_learn_more: 進一步學習
   call_to_action_watch_now: 立即觀看
   call_to_action_try_activity: 試用活動
+  call_to_action_try_activities: 嘗試活動
   call_to_action_explore_unit: 探索單位
   call_to_action_explore_curriculum: 探索課程
   call_to_action_explore_curriculum_options: 探索課程選項
@@ -215,7 +241,20 @@ zh:
   call_to_action_notify_available: 有貨時通知我
   call_to_action_register_early_access: 註冊以取得早期存取
   call_to_action_open_positions: 查看未平倉職位
+  call_to_action_explore_roles: 探索開放角色
   call_to_action_get_guide: 取得指南
+  call_to_action_donate_to_cdo: 捐款給我們
+  call_to_action_start_fundraiser: 開始籌款活動
+  call_to_action_view_donation_policy: 查看捐款政策
+  call_to_action_view_donate_bitpay: 使用比特支付捐款
+  call_to_action_make_a_donation: 捐款
+  call_to_action_other_ways_to_give: 其他給予方式
+  call_to_action_become_partner_usa: 成為美國合作夥伴
+  call_to_action_become_partner_intl: 成為國際合作夥伴
+  call_to_action_become_a_volunteer: 成為義工
+  call_to_action_start_translating: 開始翻譯
+  call_to_action_learn_about_advocacy: 了解我們的倡導
+  call_to_action_visit_store: 參觀商店
   aria_label_call_to_action_afe: 進一步了解亞馬遜未來工程師
   aria_label_call_to_action_teaching_csf: 開始教學計算機科學基礎知識專業學習計劃
   aria_label_call_to_action_teaching_csd: 啟動計算機科學發現教學專業學習計劃
@@ -288,6 +327,7 @@ zh:
   curriculum_name_csp: 計算機科學原理
   curriculum_name_csc: 計算機科學聯繫
   curriculum_name_csa: 計算機科學A
+  curriculum_name_csa_ai: Pseudoloc-丝哦提尔儿伊伊娜艾娜伊儿娜 &西哦屁吾伊儿维艾艾哦
   curriculum_name_csc_02: 任何計算機科學聯繫模組
   curriculum_name_ai: "  AI 和機器學習  "
   curriculum_name_artificial_intelligence: 人工智慧 (AI)
@@ -322,6 +362,9 @@ zh:
   curriculum_desc_maker_short: 創客教育邀請實踐經驗和協作進入課堂，以幫助教授解決問題和批判性思維。
   curriculum_desc_csd: 靈活的課程，允許單獨或組合教授每個單元。向學生介紹建立網站、應用程式、動畫、遊戲和實體運算系統。
   curriculum_desc_csp: 免費的 AP® CSP 認可的高中入門課程，向學生介紹計算機科學的基礎概念。
+  curriculum_desc_csa_ai_long: '這個兩章的 AP 後 CSA 單元為高中生提供實際操作經驗，包括 GitHub 和 GitHub Copilot
+    等專業軟體開發工具，並賦予他們開發電腦視覺程式的真實技能。 '
+  curriculum_desc_csa_ai_short: 這個 Post-AP® CSA 模塊為高中生提供專業軟件開發工具的實踐經驗。
   collection_hardware: 聚焦硬體
   collection_hardware_desc: 讓學生能夠使用數據和實體裝置來解決問題。
   collection_design_purpose: 聚焦有目標的設計
@@ -389,6 +432,7 @@ zh:
   module_duration_2_hrs: 2 小時
   module_duration_3_hrs: 3 小時
   module_duration_5_hrs: 5 小時
+  module_duration_5_hrs_plus: 5 小時以上
   module_duration_8_hrs: 8 小時
   module_duration_20_hrs: 20 小時
   module_duration_35_hrs: 三十五小時
@@ -454,6 +498,8 @@ zh:
   heading_objects_first: 對象優先
   heading_these_lessons_will: 這些課程將：
   heading_explore_curriculum_catalog: 在課程目錄中探索我們所有的課程
+  heading_csa_ai: 尋找 AP® 考試後要做的事情嗎？
+  heading_bring_cs_to_students: 將計算機科學帶給學生
   professional_learning_section_desc: 在準備教學時獲得所需的支援。老師喜歡它，超過90％的老師將其評為有史以來最好的職業發展！
   professional_learning_section_desc_short: 在準備教學時獲得所需的支援。
   professional_learning_section_desc_self_paced: 及時的支持，讓你可以根據自己的日程安排充滿信心地準備教學。
@@ -468,6 +514,13 @@ zh:
   no_devices_section_desc: 計算機科學教育並不一定要在螢幕前進行，設備訪問不應該成為學習計算機科學概念的障礙。
   support_and_questions_section_subhead: 還有問題嗎？找我們！我們隨時提供幫助。
   support_and_questions_section_desc: 我們的支援團隊隨時為你解答關於開始使用Code.org進行教學的任何問題。你還可以在我們的教師論壇上向其他老師詢問他們的經驗。
+  subscribe_form_section_title: 訂閱更新
+  subscribe_form_section_desc_csa: 註冊即可每月收到有關 Code.org AP® 計算機科學 A 的電子郵件，並直接將有用的提醒事項，提示和更新發送到您的收件箱。
+  subscribe_form_section_desc_csc: 註冊以接收每月有關 Code.org 電腦科學連線的電子郵件，並直接傳送至您的收件匣，取得實用的提醒事項、秘訣和更新資訊。
+  subscribe_form_section_desc_csd: 註冊即可每月接收有關 Code.org 電腦科學發現的電子郵件，並直接將有用的提醒事項、提示和更新直接傳送到您的收件匣。
+  subscribe_form_section_desc_csf: 註冊即可每月接收有關 Code.org 電腦科學基礎知識的電子郵件，並直接將有用的提醒事項、提示和更新發送到您的收件匣。
+  subscribe_form_section_desc_csp: 註冊以每月接收有關 Code.org 電腦科學原理的電子郵件，並直接將有用的提醒事項、提示和更新發送到您的收件匣。
+  subscribe_form_section_unsubscribe: 您可以隨時取消訂閱。
   blockchain_hero_heading: 區塊鏈如何運作
   blockchain_hero_desc: 通過我們的新視頻系列和隨附課程「區塊鏈如何工作」深入探索區塊鏈的世界！
   blockchain_intro_heading: 了解區塊鏈如何運作
@@ -539,6 +592,8 @@ zh:
   ai_curriculum_title_04: AI 如何運作
   ai_curriculum_desc_04: 這些課程補充了 AI 如何工作的視頻系列。每節課都會與系列影片中的單一影片配對，深入了解影片中介紹的概念。
   ai_curriculum_btn_aria_label_04: 探索 AI 如何運作課程
+  ai_curriculum_grades_05: 年級等級：9 至 12 年級
+  ai_curriculum_btn_aria_label_05: 探索軟體工程與電腦視覺模組
   ai_carousel_heading: 老師對於人工智慧與 Code.org 的評論：
   ai_carousel_quote_01: 這節課還讓我的學生有機會看到分類系統中存在意見要素。後來，當我們開始看到偏見如何在 AI 中結束時，我能夠將它們拉回來並提醒他們，用於訓練模型的數據是基於選擇的。
   ai_carousel_quote_02: 我的學生了解到他們幾乎每天都在經歷的技術進步時，他們不必只是成為消費者。他們實際上可以是創作者！
@@ -605,10 +660,14 @@ zh:
   ai_pl_101_video_title_5: 將 AI 帶入課堂
   ai_pl_101_video_desc_5: 本課程重點介紹有關 AI 的教學，評估和利用 AI 教育工具，以及利用 AI 進行學生評估。它融合了豐富的理論、實務範例和資源，旨在讓教育工作者能夠導航
     AI 環境並增強學生的學習體驗。
+  ai_pl_101_resources_5: 確保負責任的人工智慧方法指南
   ai_pl_101_video_desc_6: 深入瞭解推動人工智慧重大變革的新技術，其中包含兩個有關大型語言模型 (如 ChatGPT) 和生成 AI 的新影片。聽聽這些新技術如何直接從專家那裡工作：OpenAI
     的首席技術官 Mira Murati 和 RunwayML 首席執行官克里斯托瓦爾·瓦倫蘇埃拉。
   ai_pl_101_llm_slides_title: 教育工作者的大語言模型提示
   ai_pl_101_llm_slides_desc: 從 ChatGPT 等 LMS 獲得最佳輸出的工具，從初學者到高級。包括那些只是浸入腳趾的人的入門提示，以及為那些希望最大限度地發揮潛力的人提供高級工具。
+  ai_pl_101_resources_3: AI 提示改變學生學習
+  ai_pl_101_resources_section_title: 更多瞭解 AI 的方式
+  ai_pl_101_resources_guide: 同伴指南：
   how_ai_works_hero_heading: AI 如何運作
   how_ai_works_hero_desc: 通過我們的視頻系列視頻和隨附的課程「AI 如何工作」深入人工智能世界！
   how_ai_works_intro_desc: 這一系列的短片和隨附的課堂內課程將向您和您的學生介紹人工智慧的運作方式以及其重要性。您可以根據主題選擇個別課程，在一個班級中探索整個系列主題，或教授所有
@@ -832,8 +891,7 @@ zh:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: 應用實驗室
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: 主持人主導工作坊、自主進度模組
   csp_page_curriculum_glance_professional_languages: English
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -953,8 +1011,7 @@ zh:
   csd_page_curriculum_glance_topics: 人工智能、數據、網頁設計、物理計算、應用程式設計、遊戲和動畫、藝術和設計、編程
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: 應用實驗室，遊戲實驗室，人工智慧實驗室，網頁實驗室
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: 主持人主導工作坊、自主進度模組
   csd_page_curriculum_glance_professional_languages: English
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1025,8 +1082,7 @@ zh:
   csf_page_curriculum_glance_topics: 編程、互聯網、遊戲和動畫、美術和設計、應用程式設計
   csf_page_curriculum_glance_devices: 筆記本電腦, Chromebook, 平板電腦
   csf_page_curriculum_glance_tools: 精靈圖實驗室，遊戲實驗室
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: 主持人主導工作坊、自主進度模組
   csf_page_curriculum_glance_languages: 阿拉伯文、印尼文、加泰隆尼亞文、簡體中文、繁體中文、捷克文、法文、德文、印地文、義大利文、日文、韓文、卡納達文、馬來文、馬拉地文、蒙古文、波蘭文、巴西葡萄牙文、羅馬尼亞文、俄文、斯洛伐克文、他加祿文、泰米爾文、泰文、土耳其文、烏克蘭文、拉美西班牙文、烏爾都文、西班牙西班牙文、烏茲別克文、越南文
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
@@ -1126,6 +1182,39 @@ zh:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: 幫助資助我們的使命
+  donate_page_top_desc: 每筆捐款都能推動 Code.org 擴大獲得電腦科學教育機會的使命。我們為您提供幾種捐贈和有所作為的方式。
+  donate_page_fundraise_title: 為 Code.org 籌款
+  donate_page_fundraise_desc: 協助為 Code.org 籌集資金！每所學校的每個學生都應該有機會學習計算機科學。
+  donate_page_other_ways_title: 其他給予方式
+  donate_page_other_ways_desc: 探索各種貢獻方法，並找到最適合您的選項。每一個手勢，無論大或小，都推動了我們的使命向前。
+  donate_page_501c3: Code.org 註冊為公共 501 (c) (3) 非營利組織。在法律允許的範圍內，對 Code.org 的貢獻可以扣稅。代碼組織的稅務識別號碼是
+    46-0858543。
+  donate_page_donation_policy_title: 了解我們的捐款政策
+  donate_page_donation_policy_desc: 了解我們如何處理和分配您的捐款。
+  donate_tabs_tab_label_daf_direct: DAF 直通
+  donate_tabs_tab_label_amazon: 亞馬遜
+  donate_tabs_tab_label_bitpay: 比特支付
+  donate_tabs_tab_label_employee_match: 員工匹配
+  donate_tabs_daf_direct_title: 透過 DAF 直接捐款
+  donate_tabs_daf_direct_desc: 透過您向富達慈善、嘉信慈善或紐約梅隆銀行捐款的捐款基金，並透過 DAF Direct 網上表格向 Code.org
+    提出您的撥款建議。
+  donate_tabs_amazon_title: 通過亞馬遜捐贈
+  donate_tabs_amazon_desc: 使用您的亞馬遜帳戶直接捐款。只要按幾下滑鼠，就能順暢地為 Code.org 的使命做出貢獻，並為電腦科學教育的未來提供支援。
+  donate_tabs_bitpay_title: 透過 BitPay 以加密貨幣捐款
+  donate_tabs_bitpay_desc: 擁抱加密貨幣捐贈的未來。通過 BitPay，您的數字貨幣可以直接支持 Code.org 在擴展計算機科學教育方面的努力。
+  help_page_top_heading: 您可以如何提供幫助
+  help_page_top_desc: 支持我們的使命，使計算機科學可以在任何地方為每個孩子訪問。您的努力有助於我們啟發未來的創新者，並彌合科技教育差距。
+  help_page_top_subhead: 捐款給科德。
+  help_page_top_desc_02: 我們正在努力為每個學生提供學習計算機科學的機會-無論是在線還是在學校中，我們都可以在那裡建立永久性課程並培訓教師。您捐贈的每一美元，就會有一個孩子接觸到計算機科學。
+  help_page_partners_heading: 成為合作夥伴
+  help_page_partners_desc: Code.org 與其他非營利組織合作，成為合作夥伴，協助以當地、可持續的方式傳播電腦科學。進一步了解我們的計劃。
+  help_page_volunteer_heading: 義工, 在, a, 教室
+  help_page_volunteer_desc: 志願者教導一小時玩程式，或在當地教室擔任嘉賓講者。註冊以了解您附近的機會。
+  help_page_translate_heading: 幫助我們翻譯
+  help_page_translate_desc: 志願者已經將我們的教程翻譯成超過 45 種語言。幫助我們繼續為世界各地的學生擴展我們的教程！
+  help_page_speak_for_cs_heading: 講話, 為, 計算機科學, 教育
+  help_page_speak_for_cs_desc: 深入瞭解 Code.org 在美國各地的倡導工作，以及我們建議各州採取的十項政策，讓所有學生都能獲得電腦科學基礎。另外，了解如何推動您所在州的變化。
   hoc_live: 一小時玩程式直播
   hoc_live_sign_up_title: 註冊以取得「一小時玩程式」直播
   hoc_live_learn_title: 透過一小時玩程式直播來學習
@@ -9247,6 +9336,9 @@ zh:
   video_library_page_inspirational_video_title_10: 奧巴馬總統談計算機科學（1 分鐘）
   video_library_page_inspirational_video_title_11: 任何人都可以學習（1 分鐘）
   video_library_page_inspirational_video_title_12: 羅闕法爾塔恩努埃斯庫埃斯庫塞拉斯（2 分鐘）
+  video_library_page_inspirational_video_title_13: 美國太空總署慶祝一小時玩程式（2 分鐘）
+  video_library_page_inspirational_video_title_14: 不只是一場比賽 (1 分鐘)
+  video_library_page_inspirational_video_title_15: 利用計算機科學創造（1 分鐘）
   video_library_page_not_hacked_video_title_1: 如何不被黑客攻擊：簡介
   video_library_page_not_hacked_video_title_2: 如何不被黑客攻擊：密碼
   video_library_page_not_hacked_video_title_3: 如何不被黑客入侵：身份驗證和設備鎖定

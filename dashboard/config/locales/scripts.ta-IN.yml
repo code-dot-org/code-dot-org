@@ -1999,7 +1999,7 @@ ta:
           description_short: குறியீடு மூலம் Minecraft உலகத்தை ஆராயுங்கள்.
           student_description: இந்த மின்கிராஃப்ட் உலகில் ஒரு சாகச பயணத்தில் ஸ்டீவ்
             அல்லது அலெக்ஸை அழைத்துச் செல்ல குறியீடு தொகுதிகள் பயன்படுத்தவும்.
-          title: Minecraft Hour of Code
+          title: மைன்கிராஃப்டு சாகசவீரர்
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -2011,6 +2011,7 @@ ta:
             Minecraft உயிரினங்களை நிரல் செய்யவும்.
           student_description: உங்கள் சொந்த Minecraft பதிப்பில் விலங்குகள் மற்றும்
             பிற Minecraft உயிரினங்களை நிரல் செய்யவும்.
+          title: மைன்கிராஃப்டு வடிவமைப்பாளர்
         netsim:
           title: இணைய மாதிரி
         nevada-standards-aligned-fifth-grade-2023:

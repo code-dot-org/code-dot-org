@@ -2311,13 +2311,15 @@
           "name": "Vendosja e një STOP për padrejtësitë në internet",
           "overview": " [![edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org) \n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum) \n\nInterneti është i mbushur me lloj-lloj njerëzish interesant, por ndonjëherë disa prej tyre mund të jenë të këqij me njëri-tjetrin. Me këtë lojë me role, ndihmojini nxënësit tuaj të kuptojnë pse shpesh është më e lehtë të jesh keqdashës në komunik online në internet sesa në takim fizik dhe si të merreni me padrejtësitë në internet kur i hasni ato.",
           "preparation": "-   Rishikoni materialet udhëzuese.\n-   Printoni fletushkat për secilin nxënës.\n-   Përgatitni lapsa ose markera me ngjyra për nxënësit.",
-          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve kryengritës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit."
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve kryengritës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit.",
+          "student_overview": "Në këtë mësim, do të mësoni rreth poshtërësisë dhe çfarë të bëni nëse e takoni atë në internet."
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "name": "Shokët e mi robotik",
           "overview": "Në këtë mësim të **vendosjes së kontekstit**, nxënësit do të përdorin një sërë simbolesh për të udhëzuar një “robot” për të grumbulluar gota në modele të ndryshme. Nxënësit do të marrin pjesë me radhë si robot, duke iu përgjigjur vetëm algoritmit të përcaktuar nga shokët/shoqet e tyre.",
           "preparation": "-   Përgatit nga një model me 20 gota letre (ose trapezoide prej letrës) për secilin grup prej 2-3 nxënësish.\n-   Shfaq simbolet nga **\\*Çelësi i simboleve** ku nxënësit mund të referohen gjatë gjithë mësimit.\n-   (Opsionale) Shtyp nga një **\\*Ide për grumbullimin e kupave** për secilin grup prej 2-3 nxënësish.\n-   Sigurohu që secili nxënës të ketë një ditar reflektimi.",
-          "purpose": "Ky mësim i shkëputur bashkon klasën si një ekip me një detyrë të thjeshtë për t'u përfunduar: merrni një “robot” për të grumbulluar gota në një dizajn specifik. Ky aktivitet paraqet bazat për programimin që nxënësit do të bëjnë gjatë gjithë kursit pasi mësojnë rëndësinë e përcaktimit të një algoritmi të komunikuar qartë."
+          "purpose": "Ky mësim i shkëputur bashkon klasën si një ekip me një detyrë të thjeshtë për t'u përfunduar: merrni një “robot” për të grumbulluar gota në një dizajn specifik. Ky aktivitet paraqet bazat për programimin që nxënësit do të bëjnë gjatë gjithë kursit pasi mësojnë rëndësinë e përcaktimit të një algoritmi të komunikuar qartë.",
+          "student_overview": "Në këtë mësim, ju do të pretendoni se shokët e klasës tuaj janë robotë dhe do t'i programoni ata për të ndërtuar modele të kupave të grumbulluara."
         },
         "coursec-2021/Programming in Maze": {
           "name": "Programimi me Angry Birds",
@@ -2405,7 +2407,7 @@
         "coursec-2021/Binary Bracelets": {
           "name": "Binary Bracelets (Zinxhirët binarë)",
           "overview": "Ky mësim **eksplorues** prezanton konceptin e Binarëve, që është mënyra se si kompjuterët sot ruajnë të gjitha llojet e informacionit.",
-          "preparation": "-   (Opsionale) Shikoni videon **\\\\ \\*Mësimi në veprim**.\n-   Mbledhni markera për zingjirët. Dekorime të tjera si rruaza dhe fije shumëngjyrëshe janë opsionale.\n-   Printoni nga një **\\\\ \\*fletë punuese** dhe nga një vlerësim \\*\\*\\\\ \\*për secilin nxënës.\n-   (Opsionale) Shkruani një mesazh të shkurtër në tabelë në formë binare.",
+          "preparation": "-   (Opsionale) Shikoni videon **\\\\ \\*Mësimi në veprim**.\n-   Mbledhni markera për zinxhirët. Dekorime të tjera si rruaza dhe fije shumëngjyrëshe janë opsionale.\n-   Printoni nga një **\\\\ \\*fletë punuese** dhe nga një vlerësim \\*\\*\\\\ \\*për secilin nxënës.\n-   (Opsionale) Shkruani një mesazh të shkurtër në tabelë në formë binare.",
           "purpose": "Në këtë mësim nxënësit do të mësojnë se si informacioni përfaqësohet në një mënyrë të tillë që një kompjuter mund ta interpretojë dhe ruajë atë. Kur mësojnë numrat binar, nxënësit do të kenë mundësinë të shkruajnë kode dhe t'i ndajnë ato me shokët si mesazhe sekrete. Kjo pastaj mund të lidhet përsëri me mënyrën se si kompjuterët lexojnë një program, e përkthejnë atë në formë binare, përdorin informacionin në një farë mënyre, pastaj përgjigjen përsëri në një mënyrë që njerëzit mund ta kuptojnë. Për shembull, kur shkruajmë një fjali në një dokument, pastaj shtypni ruaj, një kompjuter përkthen fjalinë në formë binare, ruan informacionin, pastaj poston një mesazh që tregon se dokumenti është ruajtur.",
           "student_overview": "Krijoni zinxhirin tuaj binar dhe mësoni se si kompjuterët kujtojnë informacionin!"
         },
@@ -3954,13 +3956,15 @@
           "name": "Vendosja e një STOP për padrejtësitë në internet",
           "overview": " [\\[Edukimi i Logjikës së Përgjithshme\\]\\[1\\]](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi i Logjikës së Përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInterneti është i mbushur me lloj-lloj njerëzish interesantë, por ndonjëherë disa prej tyre mund të jenë të këqij me njëri-tjetrin. Me këtë lojë me role, ndihmoni nxënësit tuaj të kuptojnë pse shpesh është më e lehtë të jesh keqdashës në komunik online në internet sesa në takim fizik dhe si të trajtoni padrejtësitë në internet kur i hasni ato.",
           "preparation": "-   Rishiko materialet udhëzuese.\n-   Printo fletushkat për secilin nxënës.\n-   Sill në klasë një kafshë pellushi ose lodër.",
-          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Cyberbullying, Dramën Digjitale dhe Gjuhën e Urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të mbështetësve për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë në internet."
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Cyberbullying, Dramën Digjitale dhe Gjuhën e Urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të mbështetësve për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë në internet.",
+          "student_overview": "Në këtë mësim, do të mësoni rreth poshtërësisë dhe çfarë të bëni nëse e takoni atë në internet."
         },
         "coursec-2022/My Robotic Friends Jr": {
           "name": "Shokët e mi robotik",
           "overview": "Në këtë mësim **përcaktimi i kontekstit**, nxënësit do të përdorin një sërë simbolesh për të udhëzuar një “robot” për të grumbulluar gota në modele të ndryshme. Nxënësit do të marrin pjesë me radhë si robot, duke iu përgjigjur vetëm algoritmit të përcaktuar nga shokët/shoqet e tyre.",
           "preparation": "-   Përgatit nga një model me 20 gota letre (ose trapezoide prej letrës) për secilin grup prej 2-3 nxënësish.\n-   Shfaq simbolet nga **\\*Çelësi i simboleve** ku nxënësit mund të referohen gjatë gjithë mësimit.\n-   (Opsionale) Shtyp një **\\*Ide për grumbullimin e kupave** për një grup prej 2-3 nxënësish.",
-          "purpose": "Ky mësim i shkëputur bashkon klasën si një ekip me një detyrë të thjeshtë për t'u përfunduar: merrni një “robot” për të grumbulluar gota në një dizajn specifik. Ky aktivitet paraqet bazat për programimin që nxënësit do të bëjnë gjatë gjithë kursit pasi mësojnë rëndësinë e përcaktimit të një algoritmi të komunikuar qartë."
+          "purpose": "Ky mësim i shkëputur bashkon klasën si një ekip me një detyrë të thjeshtë për t'u përfunduar: merrni një “robot” për të grumbulluar gota në një dizajn specifik. Ky aktivitet paraqet bazat për programimin që nxënësit do të bëjnë gjatë gjithë kursit pasi mësojnë rëndësinë e përcaktimit të një algoritmi të komunikuar qartë.",
+          "student_overview": "Në këtë mësim, ju do të pretendoni se shokët e klasës tuaj janë robotë dhe do t'i programoni ata për të ndërtuar modele të kupave të grumbulluara."
         },
         "coursec-2022/Programming with Angry Birds": {
           "name": "Programimi me Angry Birds",
@@ -4677,6 +4681,9 @@
           "purpose": "Në këto aktivitete online, nxënësit do të mësojnë të përdorin eventet në Play Lab. Ata do të fillojnë duke trajnuar kalorësin të lëvizë kur shtypet një tast i shigjetës, më pas do të përfundojnë me mundësinë për të shfaqur pjesën tjetër të shkathtësive që kanë mësuar gjatë këtij kursi, duke përfshirë sekuencën dhe ciklin, si pjesë e enigmës përfundimtare të lojës së lirë.",
           "student_overview": "Përdorni eventet për të krijuar një histori ose për të bërë një lojë interaktive."
         },
+        "ai-ethics-2023/lesson-1": {
+          "student_overview": "Hulumtoni në mënyrë bashkëpunuese rreth etikës së AI dhe krijoni një kod sjelljeje të përbashkët."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Përshtatjet e kafshëve Hyrje",
           "overview": "Në këtë mësim të ndërtimit të aftësive, studentët do të mësojnë të krijojnë dhe të gjallërojnë spritet dhe të përdorin ngjarjet për t'i bërë ato interaktive. \n\nStudentët do të kodojnë një model shkak-pasojë të bazuar në ngjarje në Sprite Lab për të demonstruar se si speciet mbijetojnë duke u përshtatur me mjediset e tyre me kalimin e kohës. Modelet interaktive dhe simulimet përdoren në botën reale për të ndihmuar inxhinierët dhe shkencëtarët të identifikojnë modelet, të kuptojnë natyrën, të bëjnë parashikime për ndryshimet e ardhshme dhe të projektojnë zgjidhje për t'u përgatitur dhe/ose luftuar ndërprerjet e mëdha. \n\nStudentët do të eksplorojnë shembuj të evolucionit, përshtatjes, migrimit, përzgjedhjes natyrore dhe mbijetesës në grupe. ",
@@ -4834,6 +4841,484 @@
           "preparation": "-   Përgatitni një kompjuter për student.\n-   Përgatitni një kopje të fletëdokumentit</a>\\*\\*<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Share Your App \\*\\* për student.\n-   Sigurohuni që studentët të kenë një kopje të poemës së tyre origjinale të dobishëm për këtë mësim.  \n-   Ndani klasën në çifte për aktivitetin e Poezisë Pair-Share.\n-   Konsideroni këto opsione të lidhura të zgjerimit ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) për të eksploruar pas këtij mësimi.\n\n##### Opsionale\n\n-   Sidomos për mësimdhënien në distancë: Përcaktoni nëse keni nevojë të vendosni një dokument dixhital ose hapësirë të përbashkët në internet për të postuar URL-në e aplikacionit të secilit student (shih modelin e mësuesit në “Lidhjet”). ",
           "purpose": "Ndarja e projekteve të tyre të artit me poezi me kolegët është një aspekt i rëndësishëm i procesit krijues. Kjo i lejon studentët të marrin reagime, të bashkëpunojnë me të tjerët, të reflektojnë mbi punën e tyre dhe të festojnë arritjet e tyre. Duke ndarë punën e tyre me të tjerët, studentët mund të rriten dhe përmirësohen si mendimtarë krijues dhe të zhvillojnë aftësi të rëndësishme komunikimi dhe ndërpersonale.",
           "student_overview": "Ndani aplikacionet tuaja të reja të poezisë me miqtë tuaj! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "preparation": "**Për secilin grup**\n\n-   2 fletë fletë alumini, 5x5 inç gjatësi secila\n-   1 enë që mund të mbajë 3-5 inç ujë\n-   Disa faculeta ose lecka që mund të vendosen nën enë\n-   15 monedha\n-   Një kopje të udhëzuesit të aktivitetit\n\n**Për mësimdhënësin**\n\n-   1 enë që mund të mbajë 3-5 inç ujë\n-   50 monedha\n-   Faculeta ose lecka shtesë\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse jeni duke mbajtur mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) "
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "preparation": "Për çdo nxënës\n\n-   Printoni një kopje të Udhëzuesit të Veprimtarisë\n\nPër klasën\n\n-   Letër poster\n-   Shënues/lapsa me ngjyra\n\nPër Mësimdhënësin\n\n-   Kontrolloni forumin [\"Salla e Mësuesve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) për mësues të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësat e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "preparation": "-   Printoni udhëzuesin e aktivitetit për secilin nxënës\n-   Letër gërvishtëse për problemin e Festës së Ditëlindjes\n-   Poster për të regjistruar strategjitë për përcaktimin e problemeve në përfundimin e diskutimit\n-   Kontrolloni forumin [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë\n-   Nëse jeni duke mësuar virtualisht, merrni parasysh kontrollin tonë [Modifikimet Virtuale të Mësimit](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/What is a Computer?": {
+          "preparation": "**Për secilin grup**\n\n-   Shtypni kopje të udhëzuesit të aktivitetit. Vini re se ka dy grupe fotografish, por secilit grup i duhet vetëm një grup i vetëm.\n-   Gërshërë (nëse nuk do të keni kohë për të prerë fotot para klasës)\n-   Letër poster\n-   Markera ose lapsa me ngjyra\n-   Ngjiteni ose ngjitni për të bashkangjitur fotot\n\n**Për mësimdhënësin**\n\n-   Kontrolloni forumin [\"Salla e Mësuesve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Inputet dhe Outputet",
+          "preparation": "-   Përgatitni kopje të udhëzuesit të veprimtarisë\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Processing": {
+          "name": "Përpunimi"
+        },
+        "csd1-2023/Storage": {
+          "preparation": "-   Përgatitni kopje të udhëzuesit të veprimtarisë\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "preparation": "-   Përgatitni kopje të udhëzuesit të veprimtarisë\n-   Kontrolloni forumin [r apps_and_problem_solving/csd/2023] për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) "
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Hyrje në zgjidhjen e problemeve - Tavolina prej gazetave (Mësimi alternativ 1)",
+          "preparation": "**Për secilin grup**\n\n-   2 gazeta të plota për çdo grup \n-   1 rrotull shiriti për secilin grup nxënësish\n-   Një kopje të udhëzuesit të aktivitetit\n\n**Për mësimdhënësin**\n\n-   10-20 libra me peshë të ngjashme.\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësuesit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Hyrje në zgjidhjen e problemeve - Ura me Spageti (Mësimi Alternativ 1)",
+          "preparation": "**Për secilin grup**\n\n-   1 kile spageti të thata (rreth 1 kuti)\n-   1 ngjitës\n-   Një kopje të udhëzuesit të aktivitetit\n\n**Për mësimdhënësin**\n\n-   10-20 libra me përmasa dhe peshë të ngjashme\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Hyrje në zgjidhjen e problemeve - Kulla e letrës (Mësimi alternativ 1)",
+          "preparation": "**Për secilin grup**\n\n-   20 fletë letre, 8,5 x 11 inç\n-   Hapësirë për të ndërtuar kullën e tyre\n-   Një kopje të udhëzuesit të aktivitetit\n\n**Për mësimdhënësin**\n\n-   Letër shtesë\n-   Kohëmatësi\n-   Vizore\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Eksplorimi i zgjidhjes së problemeve - Tema e Kafshëve (Mësimi Alternativ 3)",
+          "assessment_opportunities": "1.  **Zbatojnë procesin e zgjidhjes së problemeve për t'iu qasur një sërë problemesh**\n\n     Në faqen 5 të Udhëzuesit të Veprimtarisë, kontrolloni grafikun për t'u siguruar që nxënësit po ndërmarrin hapa të arsyeshëm për secilën nga problemet.\n\n2.  \\*\\*Vlerësojnë se sa i mirëpërcaktuar është një problem dhe përdorin strategji për të përcaktuar problemin më saktë \\*\\*\n\n     Për pyetjen e fundit në faqen 5 të Udhëzuesit të Veprimtarisë, sigurohuni që nxënësit të kenë të paktën një pyetje ose strategji që do të ishte një mënyrë efektive për të përcaktuar më mirë një problem.",
+          "preparation": "-   Shtypni udhëzuesin e veprimtarisë për secilin nxënës\n-   Përgatitni puzzle për nxënësit, ose printoni një fletë me format dhe merrni gërshërë për secilin grup.\n-   Poster për të regjistruar strategjitë për përcaktimin e problemeve në diskutimin përmbyllës\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Eksplorimi i zgjidhjes së problemeve - Tema e Lojërave (Mësimi Alternativ 3)",
+          "preparation": "-   Printoni udhëzuesin e veprimtarisë për secilin nxënës\n-   Letër gërvishtëse për problemin e Garës me stafetë me partner\n-   Poster për të regjistruar strategjitë për përcaktimin e problemeve në diskutimin përmbyllës\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësuesit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Eksplorimi i webfaqeve",
+          "preparation": "-   Shtypni një kopje të udhëzuesit të aktivitetit për secilin grup të përbërë nga tre nxënës.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Hyrje në HTML",
+          "preparation": "-   Shqyrtimi i niveleve të Code Studio\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Headings": {
+          "preparation": "-   Kini gati ditarët e nxënësve për t'u kthyer.\n-   Nëse dëshironi të përdorni një grafikë spirancë (anchor chart), përgatitni letër posteri për ta bërë këtë si një klasë të tërë.\n-   Kontrolloni forumin e \"Dhomës së mësuesve\" për mësues të verifikuar për të gjetur strategji ose burime shtesë të ndarë nga kolegët mësues.\n-   Nëse po mësoni virtualisht, konsideroni të kontrolloni modifikimet e mësimit virtual të ofruara nga një platformë tjetër."
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "Mini-projekti: Webfaqja HTML",
+          "preparation": "-   Shtypni një kopje të udhëzuesit të projektit për secilin grup të përbërë nga tre nxënës.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Gjurmë digjitale",
+          "preparation": "-   Shtypni një kopje të udhëzuesit të aktivitetit \"Hetimi i profileve sociale\" për secilin nxënës (ose çdo grup nëse nxënësit janë ndarë në grupe)\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "**Pyetja e ditës: Si mund të siguroheni që informacioni juaj privat të mbetet privat?**\n\nNë këtë mësim, ju do të mendoni për informacionin personal që zgjidhni të ndani në mënyrë digjitale përmes webfaqeve të ndryshme, aplikacioneve dhe mediave sociale. "
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Stilimi i tekstit me CSS",
+          "preparation": "-   Krijoni një poster të ri të titulluar **Tiparet e CSS** nëse nxënësit nuk do të jenë duke përditësuar shënimet e tyre me ato tipare\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "Mini-projekti: Stili juaj personal",
+          "preparation": "-   Shtypni një kopje të udhëzuesit të projektit për secilin grup të përbërë nga tre nxënës.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Pronë intelektuale",
+          "preparation": "-   Rishikoni Creative Commons videon përmbledhëse. Mund të ndodh që ju duhet ta shkarkoni para orës nëse Youtube është i bllokuar.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Using Images": {
+          "name": "Duke përdorur imazhe"
+        },
+        "csd2-2023/Websites for Expression": {
+          "name": "Webfaqe për shprehje",
+          "preparation": "-   Përgatitni ditaret dhe printoni kopje të udhëzuesit të aktivitetit\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Elementet e stilimit me CSS"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "Webfaqja juaj - Përgatitja",
+          "preparation": "-   Shtypni një kopje të udhëzuesit të aktivitetit për secilin nxënës.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "Projekti - Webfaqja personale",
+          "preparation": "-   Sigurohuni që studentët kanë qasje në udhëzuesin e projektit nga mësimi i kaluar.\n-   Printoni kopje të dokumenteve të reflektimit dhe të komenteve të kolegëve.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "Webfaqet për një qëllim"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Zgjidhja e problemeve në grup"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Burimet dhe hulumtimet",
+          "preparation": "-   Printoni një kopje të udhëzuesit të aktivitetit të gjuetisë në internet për secilën palë studentësh, ose përgatituni për të projektuar pyetjet në klasë.\n-   Krijoni një poster bosh të titulluar **Lista e kontrollit të besueshmërisë** dhe vendoseni në mur.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Planning a Multi-Page Site": {
+          "name": "Planifikimi i një webfaqe me shumë faqe"
+        },
+        "csd2-2023/Linking Pages": {
+          "preparation": "-   Sigurohuni që nxënësit të kenë qasje në planet e tyre për webfaqet e tyre nga mësimi i mëparshëm.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Projekti - Webfaqe për një qëllim"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "Rishikimi i kolegëve dhe ndryshimet përfundimtare",
+          "preparation": "-   Printoni nga një kopje të udhëzuesit për çdo nxënës.\n-   Nëse jeni duke dhënë mësim virtualisht, kontrolloni [Modifikimet e njësive virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Vizatimi i Formave"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Vizatim në Game Lab",
+          "preparation": "-   Pergaditeni projektorin ose paisjet e tjera që ju ndihmojnë ta shfaqni videon ne klasë \n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview) "
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "preparation": "-   Rishikoni sekuencat e  nivelit në Code Studio\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Variables": {
+          "name": "variabla",
+          "preparation": "-   Rishikoni nivelet e avancimit në Code Studio\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Random Numbers": {
+          "preparation": "-   Rishikoni nivelet e avancimit në Code Studio\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2023/Mini-Project - Captioned Scenes": {
+          "name": "Mini Projekt - Skena me titra"
+        },
+        "csd3-2023/The Draw Loop": {
+          "preparation": "-   Printoni dhe mblidhni manipuluesit\n-   Përgatitni videon\n-   Kontrolloni[0] forumin [\"Salloni i Mësuesit\"] për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë\n-   Nëse jeni duke mësuar virtualisht, konsideroni të kontrolloni [Modifikimet Virtuale të Mësimit](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Animation": {
+          "name": "Mini-Projekt - Animacion"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Kushtet"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "Inputi nga mausi"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Projekti - Karta Interaktive",
+          "preparation": "-   Shtypni një kopje të udhëzuesit të projektit për secilin nxënës.\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/project-hub-interactive-card-interactive-animations-and-games-lesson-17/36208) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Collision Detection": {
+          "preparation": "-   Shtypni kopjet e udhëzuesit të aktivitetit në mënyrë që çdo çift nxënësish të ketë një pjesë A dhe një pjesë B\n-   Kontrolloni[0] forumin [\"Salloni i mësuesve\"] për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë\n-   Nëse jeni duke mësuar virtualisht, konsideroni të kontrolloni [Modifikimet Virtuale të Mësimit](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Side Scroller": {
+          "name": "Mini-Projekti - Loja Side Scroller"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Lëvizje Komplekse të Sprite"
+        },
+        "csd3-2023/Mini-Project - Flyer Game": {
+          "name": "Mini-Projekti- Loja e Fluturimit "
+        },
+        "csd3-2023/Functions": {
+          "name": "funksione"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Procesi i Dizajnimit të Lojës",
+          "preparation": "-   Shtypni kopjet e udhëzuesit të projektit nëse do t'u jepni nxënësve kopje fizike. Ju lutemi vini re se ky udhëzues i projektit është plotësuar qëllimisht. (Shih shënimet në Planin e Mësimit.)\n-   Kontrolloni[0] forumin [\"Salloni i Mësuesit\"] për mësimdhënësve të verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë\n-   Nëse jeni duke mësuar virtualisht, merrni parasysh kontrollin tonë [Modifikimet Virtuale të Mësimit](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Përdorimi i Procesit të Dizajnit të Lojës",
+          "preparation": "-   Shtypni një kopje të udhëzuesit të projektit për secilin nxënës ose çift nxënësish\n-   Kontrolloni forumin [\"Salla e mësimdhënësve\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë\n-   Nëse po jepni mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet e mësimeve virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Projekti - Dizajnoni një lojë",
+          "preparation": "-   Shtypni kopjet e udhëzuesit të projektit, një për secilin nxënës/çift nxënësish\n\n-   Shtypni kopjet e rubrikës, një për secilin nxënës/çift nxënësish\n\n-   Shtypni kopjet e udhëzuesit të rishikimit të kolegëve, një për secilin nnxënës/çift nxënësish \n\n-   Rishikoni lojërat shembuj në Code Studio\n\n-   Kontrolloni[0] forumin [\"Teacher's Lounge\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë\n\n-   Nëse jeni duke dhënë mësim virtualisht, merrni parasysh të kontrolloni [Modifikimet Virtuale të Mësimit](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Hyrje në App Lab"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "The Circuit Playground (Qark lojërash)",
+          "overview": "Në këtë mësim nxënësit marrin mundësinë e tyre të parë për të shkruar programe që përdorin Circuit Playground. Pas inspektimit të parë të pllakës vizualisht dhe hipotezimit të funksionaliteteve të mundshme, nxënësit lëvizin në internet ku do të mësojnë të shkruajnë aplikacione që kontrollojnë një LED dhe përdorin një sirenë për të bërë tinguj. Duke kombinuar ekranet e App Lab me Circuit Playgrounds, nxënësit gradualisht mund të fillojnë të integrojnë elementët e pllakës si një pajisje dalëse ndërsa mbështeten në App Lab për hyrjen e përdoruesit.\n\n**Pyetja e ditës:** Çfarë rezultatesh mund të kontrolloj në Circuit Playground?",
+          "preparation": "-   Sigurohuni që kompjuterët e nxënësve të kenë driver-ët dhe softuerin e nevojshëm për t'u lidhur me Playground Circuit ([detajet këtu](//studio.code.org/maker/setup))\n-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të njihni Circuit Playground, pllaka me qarqe që do të përdoret në të gjithë pjesën tjetër të kësaj njësie. "
+        },
+        "csd6a-2023/Updating Screen Elements": {
+          "name": "Përditësimi i elementeve të ekranit",
+          "overview": "Nxënësit tashmë duhet të jenë të njohur me programimin në App Lab, posaçërisht duke përdorur Modalitetin e Dizajnit për të krijuar elementë të ekranit dhe duke përdorur blloqe `onEvent' për të krijuar ngjarje me klikime. Për të zgjeruar llojet e aplikacioneve që nxënësit mund të bëjnë dhe për t'i inkurajuar ata të mendojnë në mënyra të reja se si përdoruesit ndërveprojnë me aplikacionet, ne prezantojmë blloqet`setProperty() `dhe`setText() 'që lejojnë përdoruesit të ndryshojnë tiparet dhe përmbajtjen e elementeve të ndryshëm të UI. Në këtë mësim nxënësit eksplorojnë se si mund të përdorin ngjarjet për të përditësuar elementet në ekran\n\n**Pyetja e ditës:** Si mund të përditësoni elementet e dizajnit të një aplikacioni?",
+          "preparation": "-   Nxënësit nuk kanë nevojë për terrenet e Circuit Playground për këtë mësim, dhe ne rekomandojmë mësimin pa pajisje për të shmangur shpërqendrimet\n-   Kontrolloni forumin [\"Salloni i mësuesve\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të filloni të ndërtoni aplikacione që lejojnë shumë ndërveprim dhe funksionalitet të përdoruesit"
+        },
+        "csd6a-2023/Board Events": {
+          "overview": "Ky mësim i kalon nxënësit nga konsiderimi i Playground Circuit si një pajisje dalëse dhe në vend të kësaj prezanton butonat dhe ndërprerësat si mjete për hyrje. Duke filluar me butonat e harduerit dhe ndërprerësin, nxënësit mësojnë të përdorin [\\`onBoardEevent() \\`(#f78183)](/docs/applab/onBoardEvent/), në mënyrë analoge me [\\`onEvent()\\` (#fff176)](/docs/applab/onEvent/), në mënyrë që të marrin hyrje nga terrenet e tyre të qarkut.\n\n**Pyetja e ditës:** Si mund të ndërveprojë përdoruesi me circuit playground për të dhëna?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të mësoni se si të përdorni butonat e harduerit të Circuit Playground dhe kaloni i cili do të japë hyrjen e Playground Circuit."
+        },
+        "csd6a-2023/Variables and If Statements": {
+          "name": "Variablat dhe NËSE deklaratat",
+          "overview": "Në këtë mësim, nxënësit njihen me variablat, modelin e kundërt dhe deklaratat nëse-deklaratat. Nxënësit do t'i përdorin këto koncepte në kontekstin e programimit të sheshit të lojërave të qarkut dhe krijimit të sjelljeve më komplekse të hyrjes/daljes, siç është numërimi i numrit të shtypjeve të butonave para se të ketë shesh lojërash qarku të bëjë zhurmë. Konceptet në këtë mësim përdoren për të bërë aplikacione më komplekse dhe përmbushëse në mësimet e ardhshme, dhe nxënësit mund të kenë nevojë t'i referohen videove dhe shembujve në këtë mësim pasi vazhdojnë të zotërojnë këto koncepte.\n\n**Pyetja e ditës:** Si mund të krijoj programe më komplekse që mbajnë gjurmët e informacionit dhe marrin vendime?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Mësoni të bëni programe më komplekse që mbajnë gjurmët e informacionit dhe marrin vendime, duke përdorur variabla dhe nëse-deklarata."
+        },
+        "csd6a-2023/Mini-Project: Field Collector App": {
+          "name": "Mini-Projekti: Aplikacioni për koleksionim në fusha",
+          "overview": "Në këtë mini-projekt, nxënësit do të përdorin Circuit Playground për të mbledhur të dhëna, pastaj përdorin App Lab për të analizuar të dhënat që janë mbledhur. Kjo është e ngjashme me punën në terren të shkencës qytetare ose aplikacionet e sondazhit ku një person mbledh të dhëna në një pajisje “në terren”, pastaj kthehet në një vend qendror për të parë dhe analizuar të dhënat (të tilla si katalogimi i specieve të rrezikuara në të egra). Nxënësit do të përdorin variablat dhe ngjarjet për të mbledhur të dhëna nga circuit playground, më pas do të përdorin deklaratat nëse-deklaratat për të marrë vendime ose rekomandime bazuar në të dhënat e mbledhura.\n\n**Pyetja e ditës:** Si mund të përdor ngjarjet dhe variablat për të krijuar një aplikacion që mbledh dhe analizon të dhënat?",
+          "preparation": "-   Rishikoni udhëzuesin dhe rubrikën e projektit për të kuptuar qëllimin e projektit.\n-   Rishikoni projektet shembullore si shembuj të asaj që nxënësit mund të krijojnë.\n-   (Opsionale) Ju mund të vendosni të tregoni një nga këto projekte për nxënësit për të ndihmuar në nxitjen e ideve.\n-   Kontrolloni forumin [\"Salloni i Mësuesve\"] [0]  për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Krijoni një aplikacion që përdor Circuit Playground për të mbledhur të dhëna për një qëllim specifik, pastaj ka një aplikacion për të analizuar të dhënat që janë mbledhur"
+        },
+        "csd6a-2023/Color LEDs": {
+          "overview": "Në këtë mësim, nxënësit mësojnë se si të përdorin LED me 10 ngjyra në sheshin e lojërave të qarkut. Nxënësit do të kontrollojnë ngjyrën dhe intensitetin e secilit LED, pastaj do të përdorin atë që kanë mësuar për të programuar modelet e dritës për të krijuar një shfaqje të lehta në shesh lojërash të tyre të qarkut.\n\n**Pyetja e ditës:** Si mund të përdorni LEDs me ngjyrë në një aplikacion?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të mësoni se si të përdorni dhe kontrolloni LED-të me ngjyrë në qarkun e lojërave."
+        },
+        "csd6a-2023/Getting Screen Inputs": {
+          "name": "Marrja e hyrjeve të ekranit",
+          "overview": "Nxënësit mësojnë të përdorin disa elementë të rinj të dizajnit - inputet e tekstit, zbritjet dhe rrëshqitësit - në mënyrë që ata të mund të marrin hyrjen e përdoruesit nga ekrani i aplikacioneve të tyre. Ky mësim gjithashtu i prezanton nxënësit me blloqet getProperty dhe getText, të cilat u lejojnë atyre të kenë qasje në hyrjen e tyre të përdoruesit në kodin e tyre. Nxënësit së pari praktikojnë duke përdorur këto mjete për të përcaktuar se çfarë përdoruesi ka të dhëna në elementë të ndryshëm të ndërfaqes së përdoruesit. Nxënësit më vonë përdorin getProperty dhe setProperty së bashku me modelin e kundërt për t'i bërë elementët të lëvizin nëpër ekran. Një shkaktar i ri i ngjarjes, ndryshimi, prezantohet gjithashtu për të përfaqësuar kur një zbritje ose slider ndryshon vlerat.\n\n**Pyetja e ditës:** Si mund ta përdorim ekranin e aplikacionit për hyrjen e përdoruesit?",
+          "preparation": "-   Nxënësit nuk kanë nevojë për terrenet e Circuit Playground për këtë mësim, dhe ne rekomandojmë mësimin pa pajisje.\n-   Kontrolloni forumin [\"Salloni i mësuesve\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të mësoni se si të përdorni elemente të dizajnit si kutitë e tekstit ose dropdowns për të marrë hyrjen e përdoruesit nga ekrani"
+        },
+        "csd6a-2023/Combining Inputs and Outputs": {
+          "name": "Kombinimi i hyrjeve dhe daljeve",
+          "overview": "Në këtë mësim, nxënësit kombinojnë hyrjet dhe daljet në të dy circuit playground dhe ekranin e aplikacionit. Për shembull, nxënësit mund të përdorin dropdowns ose rrëshqitësit për të bërë LEDs të ndryshojnë në qarkun e lojërave. Ose, nxënësit mund të përdorin butonat në qark për të përditësuar elementet në ekran. Ky mësim gjithashtu shtrihet se si nxënësit përdorin variablat dhe deklaratat nëse-për të marrë vendime më komplekse bazuar në hyrjen e përdoruesit. Nuk ka komanda të reja kodimi ose karakteristika të circuit playground në këtë mësim, por nxënësit po kombinojnë shumë elemente nga mësimet e mëparshme në mënyra të reja.\n\n**Pyetja e ditës:** Si mund të përdor hyrjet dhe daljet nga të dy circuit playground dhe ekranin e aplikacionit?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   (Opsionale) konsideroni përgatitjen e materialeve të jashtme referuese nga mësimet e mëparshme për nxënësit, të tilla si një Wall Word ose Paketë Reference, që nxënësit mund të kenë qasje.\n-   Kontrolloni forumin [\"Salloni i Mësuesve\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Kombinojnë inputet dhe outputet nga ekrani dhe Circuit Playground për të bërë aplikacione komplekse"
+        },
+        "csd6a-2023/Project: Human Device Interaction": {
+          "name": "Projekti: Ndërveprimi i pajisjes me njeriun",
+          "overview": "Në këtë projekt, nxënësit krijojnë një aplikacion që kontrollon Circuit Playground në mënyrë që të ndërveprojë me mjedisin fizik rreth tij, të ngjashme me shumë aplikacione të telefonave inteligjentë që përdoren për të kontrolluar pajisjet në një shtëpi, makinë ose shkollë. Nxënësit përdorin materiale fizike për të ndihmuar në hartimin e pajisjes së tyre fizike, pastaj krijojnë një aplikacion që lejon përdoruesin të ndërveprojë me pajisjen fizike ose të ndryshojë cilësimet. ",
+          "preparation": "-   Rishikoni udhëzuesin dhe rubrikën e projektit për të kuptuar qëllimin e projektit.\n-   Rishikoni shembujt e disa projekteve të asaj që nxënësit mund të krijojnë.\n-   (Opsionale) Ju mund të vendosni të tregoni një nga këto projekte për nxënësit për të ndihmuar në nxitjen e ideve.\n-   Mblidhni materiale prototipike, të tilla si:\n    -   Materiali strukturor (kartoni, letër ndërtimi, etj)\n    -   Materiali lidhës (shirit, ngjitës, ngjitës i nxehtë, etj)\n    -   Mjetet e ndërtimit (gërshërë, staplers, etj)\n    -   Materiale të tjera (gota, kapëse lidhëse, pllaka letre, etj)\n-   Kontrolloni [\"Salloni i mësuesit\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) forum për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë"
+        },
+        "csd6a-2023/Board Sensors": {
+          "name": "Sensorët e pllakës(board)",
+          "overview": "Në këtë mësim, nxënësit eksplorojnë se si tre sensorët (tingulli, drita dhe temperatura) mund të përdoren për të shkruar programe që i përgjigjen ndryshimeve në mjedis. Përdorimi i këtyre sensorëve shënon një tranzicion në aspektin se si përdoruesit ndërveprojnë me një program. Duke përdorur sensorë si hyrje, përdoruesi i një aplikacioni nuk ka pse të ndërveprojë drejtpërdrejt me të fare, ose mund të ndërveprojë pa e kuptuar se po e bëjnë këtë.\n\n**Pyetja e ditës:** Si mund të përdor sensorët për të detektuar ndryshime në mjedis?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Konsideroni të keni disa elektrik dore ose burime të tjera të dritës në dorë për testimin e sensorit të dritës\n-   Konsideroni të keni zhurmë ose bilbila ose instrumente të vogla në dorë për testimin e sensorit të zërit\n-   Kontrolloni forumin [\"Lounge Mësuesit\"] [0] për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Eksplorojnë sensorët në Playground Circuit dhe shkruajnë programe që i përgjigjen mjedisit."
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Akselerometri",
+          "overview": "Në këtë mësim, nxënësit do të eksplorojnë akselerometrin dhe aftësitë e tij. Ata do të njihen me ngjarjet dhe tiparet e tij, si dhe do të krijojnë programe të shumta duke përdorur akselerometrin e ngjashëm me ato që ka të ngjarë të hasin në aplikacionet e botës reale.\n\n**Pyetja e ditës:** Si mund të përdor akselerometrin për të krijuar aplikacione?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të eksploroni akselerometrin dhe aftësitë e tij. "
+        },
+        "csd6a-2023/Making Music": {
+          "overview": "Në këtë mësim nxënësit do të përdorin zhurmën në masën e saj të plotë duke prodhuar tinguj, shënime dhe këngë me sirenë. Nxënësit fillojnë me një rishikim të shkurtër të parametrave të frekuencës dhe kohëzgjatjes së sirenës, pastaj kalojnë në konceptin e notave. Notat i lejojnë nxënësit të kufizojnë veten në frekuencat që përdoren në muzikën perëndimore dhe të sigurojnë një shtresë abstraksioni që i ndihmon ata të kuptojnë se cilat frekuenca mund të tingëllojnë mirë së bashku. Pasi nxënësit të jenë në gjendje të luajnë nota në sirenë, ata përdorin vargje për të mbajtur dhe luajtur sekuenca notash, duke formuar këngë të thjeshta.\n\n**Pyetja e ditës:** Si mund ta përdor burinë për të luajtur nota muzikore ose këngë?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të përdorni funksionin e burisë së Circuit Playground në masën e tij të plotë duke prodhuar tinguj, shënime dhe këngë. "
+        },
+        "csd6a-2023/Functions": {
+          "name": "funksione",
+          "overview": "Ky mësim i prezanton nxënësit me funksionet si mënyrë për të organizuar dhe grupuar blloqe të përsëritura të kodit së bashku, siç është ndryshimi i të gjitha LED-ve në të kuqe ose blu. Pastaj, nxënësit mësojnë se si të përdorin parametrat në funksionet e tyre si një mënyrë për të përgjithësuar sjelljet për të punuar për kontekste të ndryshme - për shembull, duke ndryshuar të gjitha LEDs në një ngjyrë të caktuar sesa gjithmonë duke i ndryshuar ato të kuqe ose blu. Nxënësit do t'i përdorin këto koncepte në mësimet e ardhshme, dhe mund të jetë e nevojshme të kthehen në këtë mësim për të referuar burimet dhe videot.\n\n**Pyetja e ditës:** Si mund të përdor funksionet për të organizuar dhe thjeshtësuar kodin tim?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të mësoni se si të krijoni dhe telefononi funksione, pastaj të mësoni se si të përdorni parametrat për t'i bërë funksione të dobishme në shumë situata të ndryshme"
+        },
+        "csd6a-2023/Mini-Project: Interactive Art": {
+          "name": "Mini-Projekti: Art Interaktiv",
+          "overview": "Në këtë mësim, nxënësit krijojnë një pjesë të veprave artistike interaktive duke përdorur sensorët në qark dhe materialet fizike. Nxënësit eksplorojnë se si Circuit Playground mund të shtojë materialet fizike për të krijuar një përvojë interaktive. Ky projekt nuk përdor ekranin e App Lab përveç për të ndihmuar në korrigjimin e gabimeve - përndryshe, përdoruesit ndërveprojnë vetëm me vetë veprën fizike të artit.",
+          "preparation": "-   Rishikoni udhëzuesin dhe rubrikën e projektit për të kuptuar qëllimin e projektit.\n-   Rishikoni shembujt e disa projekteve të asaj që nxënësit mund të krijojnë.\n-   (Opsionale) Ju mund të vendosni të tregoni një nga këto projekte për nxënësit për të ndihmuar në nxitjen e ideve.\n-   Mblidhni materiale prototipike, të tilla si:\n    -   Materiali strukturor (kartoni, letër ndërtimi, etj)\n    -   Materiali lidhës (shirit, ngjitës, ngjitës i nxehtë, etj)\n    -   Mjetet e ndërtimit (gërshërë, staplers, etj)\n    -   Materiale të tjera (gota, kapëse lidhëse, pllaka letre, etj)\n-   Kontrolloni [\"Salloni i mësuesit\"](https://forum.code.org/t/project-hub-interactive-art-physical-computing-lesson-15/36217) forum për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Krijojnë një pjesë të veprave artistike interaktive duke përdorur një shesh lojërash qark dhe materiale fizike"
+        },
+        "csd6a-2023/Physical Outputs and LEDs": {
+          "name": "Daljet fizike dhe LEDs",
+          "overview": "Në këtë mësim, nxënësit mësojnë se si të bashkëngjitin LED të jashtëm në qark dhe të përdorin kodin për të ndezur këto LED. Kjo u lejon nxënësve të krijojnë pajisje më fleksibile që imitojnë produktet e botës reale. Ky mësim kërkon disa materiale të jashtme, si dhe protokolle sigurie për të siguruar që nxënësit të mos dëmtojnë aksidentalisht qarkun e tyre. \n\n**Pyetja e ditës:** Si mund të përdor LED të jashtëm për të krijuar prototipa fizike?",
+          "preparation": "-   Përgatitja e materialeve të instalimeve elektrike të qarkut, të tilla si:\n    -   Tela aligator clip (të përfshira në setin e klasës Circuit Playground)\n    -   LEDs (të përfshira në setin e klasës Circuit Playground)\n    -   materiale të tjera përçueshëm (tela, clips letër, fletë metalike, etj)\n    -   (opsionale) butona dhe ndërprerës\n-   Kontrolloni [\"Lounge mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të mësoni të përdorni tela për të krijuar pajisje me LED të jashtëm dhe të shtoni kodin për të kontrolluar këto drita."
+        },
+        "csd6a-2023/Physical Inputs and Buttons": {
+          "name": "Inputet fizike dhe butonat",
+          "overview": "Në këtë mësim, nxënësit mësojnë se si të lidhin telat e jashtëm për të krijuar ngjarje hyrëse kur telat prekin, duke simuluar një shtypje butoni. Nxënësit mësojnë të përdorin kodin për të njohur këto ngjarje të butonave të jashtëm për të bërë ndryshime në aplikacionin e tyre. Kjo u lejon nxënësve të krijojnë pajisje më fleksibile që imitojnë produktet e botës reale. Ky mësim kërkon disa materiale të jashtme, si dhe protokolle sigurie për të siguruar që nxënësit të mos dëmtojnë aksidentalisht qarkun.\n\n**Pyetja e ditës:** Si mund të përdor butonat e jashtëm për të krijuar prototipa fizik?",
+          "preparation": "-   Përgatitja e materialeve të instalimeve elektrike të qarkut, të tilla si:\n    -   Tela aligator clip (të përfshira në setin e klasës Circuit Playground)\n    -   LEDs (të përfshira në setin e klasës Circuit Playground)\n    -   materiale të tjera përçueshëm (tela, clips letër, fletë metalike, etj)\n    -   (opsionale) butona dhe ndërprerës\n-   Kontrolloni [\"Lounge mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Mësoni se si të lidhni telat e jashtëm për të krijuar ngjarje hyrëse kur telat prekin, duke simuluar një shtyp butoni"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "name": "Projekti - Prototipi dhe Inovacioni",
+          "overview": "Në këtë projekt përfundimtar për kursin, nxënësit ndahen në ekipe për të zhvilluar dhe testuar një prototip për një pajisje inovative informatike bazuar në Circuit Playground. Duke përdorur hyrjet dhe rezultatet e disponueshme në tabelë, grupet do të krijojnë programe që lejojnë ndërveprime interesante dhe unike të përdoruesve. ",
+          "preparation": "-   Mblidhni materiale për prototipim fizik, p.sh.\n    -   Karton\n    -   Gërshërë\n    -   Shirit\n    -   Ngjitës\n    -   Petë\n-   Shtypni një kopje të udhëzuesit të projektit për secilën palë të nxënësve\n-   Shtypni një kopje të fletës së rishikimit të kolegëve për secilin nxënës\n-   Shtypni një kopje të rubrikës për secilin nxënës\n-   Kontrolloni forumin [\"Salloni i mësuesve\"] [0] për mësuesit e verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësuesit e tjerë",
+          "purpose": "Ky mësim është kulmi i njësisë 6 dhe u ofron nxënësve një mundësi për të ndërtuar një projekt Maker Toolkit të tyre nga themeli. Ky projekt është një mundësi për të shfaqur aftësitë teknike, por ata gjithashtu do të duhet të demonstrojnë bashkëpunim, reagime konstruktive të bashkëmoshatarëve dhe zgjidhje përsëritëse të problemeve ndërsa hasin pengesa gjatë rrugës. Ky projekt duhet të drejtohet nga nxënësit sa herë që është e mundur dhe të sigurojë një përfundim fuqizues dhe të paharrueshëm në njësinë përfundimtare të CS Discoveries.",
+          "student_overview": "Në këtë projekt përfundimtar, ju do të sfidoheni të zhvilloni dhe provoni një prototip për një pajisje që ndërvepron me botën fizike përmes llojeve të ndryshme të hyrjes dhe daljes dhe lejon ndërveprime interesante dhe unike të përdoruesve. "
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Hyrje në App Lab"
+        },
+        "csd6b-2023/Updating Screen Elements": {
+          "name": "Përditësimi i elementeve të ekranit",
+          "overview": "Nxënësit tashmë duhet të jenë të njohur me programimin në App Lab, posaçërisht duke përdorur Modalitetin e Dizajnit për të krijuar elementë të ekranit dhe duke përdorur blloqe `onEvent' për të krijuar ngjarje me klikime. Për të zgjeruar llojet e aplikacioneve që nxënësit mund të bëjnë dhe për t'i inkurajuar ata të mendojnë në mënyra të reja se si përdoruesit ndërveprojnë me aplikacionet, ne prezantojmë blloqet`setProperty() `dhe`setText() 'që lejojnë përdoruesit të ndryshojnë tiparet dhe përmbajtjen e elementeve të ndryshëm të UI. Në këtë mësim nxënësit eksplorojnë se si mund të përdorin ngjarjet për të përditësuar elementet në ekran\n\n**Pyetja e ditës:** Si mund të përditësoni elementet e dizajnit të një aplikacioni?",
+          "student_overview": "Në këtë mësim, ju do të filloni të ndërtoni aplikacione që lejojnë shumë ndërveprim dhe funksionalitet të përdoruesit"
+        },
+        "csd6b-2023/Board Events": {
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë"
+        },
+        "csd6b-2023/Variables and If Statements": {
+          "name": "Variablat dhe NËSE deklaratat",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Mësoni të bëni programe më komplekse që mbajnë gjurmët e informacionit dhe marrin vendime, duke përdorur variabla dhe nëse-deklarata."
+        },
+        "csd6b-2023/Mini-Project: Field Collector App": {
+          "name": "Mini-Projekti: Aplikacioni për koleksionim në fusha",
+          "preparation": "-   Rishikoni udhëzuesin dhe rubrikën e projektit për të kuptuar qëllimin e projektit.\n-   Rishikoni projektet shembullore si shembuj të asaj që nxënësit mund të krijojnë.\n-   (Opsionale) Ju mund të vendosni të tregoni një nga këto projekte për nxënësit për të ndihmuar në nxitjen e ideve.\n-   Kontrolloni forumin [\"Salloni i Mësuesve\"] [0]  për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë"
+        },
+        "csd6b-2023/Getting Screen Inputs": {
+          "name": "Marrja e hyrjeve të ekranit",
+          "overview": "Nxënësit mësojnë të përdorin disa elementë të rinj të dizajnit - inputet e tekstit, zbritjet dhe rrëshqitësit - në mënyrë që ata të mund të marrin hyrjen e përdoruesit nga ekrani i aplikacioneve të tyre. Ky mësim gjithashtu i prezanton nxënësit me blloqet getProperty dhe getText, të cilat u lejojnë atyre të kenë qasje në hyrjen e tyre të përdoruesit në kodin e tyre. Nxënësit së pari praktikojnë duke përdorur këto mjete për të përcaktuar se çfarë përdoruesi ka të dhëna në elementë të ndryshëm të ndërfaqes së përdoruesit. Nxënësit më vonë përdorin getProperty dhe setProperty së bashku me modelin e kundërt për t'i bërë elementët të lëvizin nëpër ekran. Një shkaktar i ri i ngjarjes, ndryshimi, prezantohet gjithashtu për të përfaqësuar kur një zbritje ose slider ndryshon vlerat.\n\n**Pyetja e ditës:** Si mund ta përdorim ekranin e aplikacionit për hyrjen e përdoruesit?",
+          "student_overview": "Në këtë mësim, ju do të mësoni se si të përdorni elemente të dizajnit si kutitë e tekstit ose dropdowns për të marrë hyrjen e përdoruesit nga ekrani"
+        },
+        "csd6b-2023/Combining Inputs and Outputs": {
+          "name": "Kombinimi i hyrjeve dhe daljeve",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   (Opsionale) konsideroni përgatitjen e materialeve të jashtme referuese nga mësimet e mëparshme për nxënësit, të tilla si një Wall Word ose Paketë Reference, që nxënësit mund të kenë qasje.\n-   Kontrolloni forumin [\"Salloni i Mësuesve\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë"
+        },
+        "csd6b-2023/Project: Human Device Interaction": {
+          "name": "Projekti: Ndërveprimi i pajisjes me njeriun",
+          "preparation": "-   Rishikoni udhëzuesin dhe rubrikën e projektit për të kuptuar qëllimin e projektit.\n-   Rishikoni shembujt e disa projekteve të asaj që nxënësit mund të krijojnë.\n-   (Opsionale) Ju mund të vendosni të tregoni një nga këto projekte për nxënësit për të ndihmuar në nxitjen e ideve.\n-   Mblidhni materiale prototipike, të tilla si:\n    -   Materiali strukturor (kartoni, letër ndërtimi, etj)\n    -   Materiali lidhës (shirit, ngjitës, ngjitës i nxehtë, etj)\n    -   Mjetet e ndërtimit (gërshërë, staplers, etj)\n    -   Materiale të tjera (gota, kapëse lidhëse, pllaka letre, etj)\n-   Kontrolloni [\"Salloni i mësuesit\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) forum për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë"
+        },
+        "csd6b-2023/Board Sensors": {
+          "name": "Sensorët e pllakës(board)"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Akselerometri",
+          "overview": "Në këtë mësim, nxënësit do të eksplorojnë akselerometrin dhe aftësitë e tij. Ata do të njihen me ngjarjet dhe tiparet e tij, si dhe do të krijojnë programe të shumta duke përdorur akselerometrin e ngjashëm me ato që ka të ngjarë të hasin në aplikacionet e botës reale.\n\n**Pyetja e ditës:** Si mund të përdor akselerometrin për të krijuar aplikacione?",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të eksploroni akselerometrin dhe aftësitë e tij. "
+        },
+        "csd6b-2023/Functions": {
+          "name": "funksione",
+          "preparation": "-   Përgatitni një pllakë dhe kabllo USB për secilën palë nxënësish\n-   Kontrolloni forumin [\"Lounge Mësuesit\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Në këtë mësim, ju do të mësoni se si të krijoni dhe telefononi funksione, pastaj të mësoni se si të përdorni parametrat për t'i bërë funksione të dobishme në shumë situata të ndryshme"
+        },
+        "csd6b-2023/Physical Outputs and LEDs": {
+          "name": "Daljet fizike dhe LEDs",
+          "student_overview": "Në këtë mësim, ju do të mësoni të përdorni tela për të krijuar pajisje me LED të jashtëm dhe të shtoni kodin për të kontrolluar këto drita."
+        },
+        "csd6b-2023/Physical Inputs and Buttons": {
+          "name": "Inputet fizike dhe butonat",
+          "student_overview": "Mësoni se si të lidhni telat e jashtëm për të krijuar ngjarje hyrëse kur telat prekin, duke simuluar një shtyp butoni"
+        },
+        "csd6b-2023/Project - Prototype an Innovation": {
+          "name": "Projekti - Prototipi dhe Inovacioni",
+          "preparation": "-   Mblidhni materiale për prototipim fizik, p.sh.\n    -   Karton\n    -   Gërshërë\n    -   Shirit\n    -   Ngjitës\n    -   Petë\n-   Shtypni një kopje të udhëzuesit të projektit për secilën palë të nxënësve\n-   Shtypni një kopje të fletës së rishikimit të kolegëve për secilin nxënës\n-   Shtypni një kopje të rubrikës për secilin nxënës\n-   Kontrolloni forumin [\"Salloni i mësuesve\"] [0] për mësuesit e verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësuesit e tjerë"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Hyrje në App Lab"
+        },
+        "csd7-2023/Introduction to Machine Learning": {
+          "name": "Hyrje në Mësimin e Makinerisë",
+          "overview": "Në këtë mësim nxënësit njihen me një formë të inteligjencës artificiale të quajtur “machine learning” dhe se si ata mund të përdorin Procesin e Zgjidhjes së Problemeve për të ndihmuar në trajnimin e një roboti për t'i zgjidhur problemet. Ata marrin pjesë në tre aktivitete të mësimit të makinerive ku një robot - A.I. Bot - po mëson se si të zbulojë modelet në peshk.\n\n\\*\\*Pyetja e ditës: \\*\\* Si mund ta përdorim procesin e zgjidhjes së problemeve për të zgjidhur një problem me machine learning?",
+          "preparation": "-   Rishikoni nivelet e Code Studio përpara mësimit\n-   Printoni kopje të udhëzuesit të veprimtarisë për çdo nxënës\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Mësoni bazat e të mësuarit në makinë duke ndihmuar AI Bot t'a njohë peshkun për të pastruar oqeanin"
+        },
+        "csd7-2023/Types of Machine Learning": {
+          "name": "Llojet e mësimit të makinerisë",
+          "overview": "Në këtë mësim nxënësit do të marrin në konsideratë se si krijojnë modele \"mendore\" kur mësojnë koncepte të reja dhe se si ato mund të jenë të ngjashme me një model \"të mësuarit me makinë\". Ata marrin pjesë në një aktivitet të modelit të ngjyrave për të simuluar ndërtimin e një modeli të mësimit të makinerive pa ndihmë, më pas ata luajnë një lojë të quajtur \"Green Glass Door\" si një shembull i mësimit të mbikëqyrur dhe së fundi, ata do të renditin disa skenarë në \"të mbikëqyrur\" ose \"të pambikëqyrur\". ” të mësuarit.\n\n**Pyetja e ditës:** Cilat janë llojet e ndryshme të mësimit të makinerive?",
+          "preparation": "-   Rishikoni të gjitha materialet për mësimin e sotëm.\n-   Kontrolloni forumin [\"Teacher's Lounge\"] [0]për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "purpose": "-   Rishikoni nivelet e Code Studio para mësimit në mënyrë që të dini se si të luani lojën e quajtur “Dera e Qelqit të Gjelbër”\n-   Shtypni ose përgatituni të ndani kopjet në internet të udhëzuesit të aktivitetit për secilin nxënës",
+          "student_overview": "Mësoni dy lloje të ndryshme të Machine Learning - të mësuarit me mbikëqyrje dhe pa mbikëqyrje. Pastaj krahasoni se si Machine Learning mund të jetë i ngjashëm ose i ndryshëm me atë se si njerëzit mësojnë."
+        },
+        "csd7-2023/Innovations in AI": {
+          "name": "Inovacionet në IA",
+          "assessment_opportunities": "1.  **Përshkruani se si Inteligjenca Artificiale po ndikon në shoqëri**\n\n    Shihni udhëzuesin e aktivitetit për këtë mësim si një mënyrë për të matur çdo hap të procesit të zgjidhjes së problemeve.",
+          "overview": "Në këtë mësim nxënësit eksplorojnë një aplikacion të IA të quajtur Duke parë IA dhe shqyrtojnë se si po mbështet njerëzit me shikim të dobët. Pastaj nxënsëit hulumtojnë shembuj të tjerë se si IA po ndikon në shoqëri duke u fokusuar në përdoruesit që ndikohen nga shembujt që gjejnë. Në fund nxënësit ndajnë zbulimet e tyre me njëri-tjetrin.\n\n\\*\\*Pyetja e ditës: \\*\\* Si po ndihmon IA në zgjidhjen e problemeve në të gjithë botën?",
+          "preparation": "-   Printoni kopje të udhëzuesit të aktivitetit për secilin nxënës\n-   Përgatituni për shpërndarjen digjiitale të burimit të Zonave të Kërkimit të Al për nxënësit. \n-   Kontrolloni forumin [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Hulumtoni shembuj të ndryshëm se si Inteligjenca Artificiale po përdoret për të zgjidhur problemet në botë."
+        },
+        "csd7-2023/Patterns in Data": {
+          "name": "Modelet në të dhëna",
+          "overview": "Në këtë mësim nxënësit do të shqyrtojnë disa aplikacione që marrin vendime në lidhje me atë që këpucë duhet të veshin, në fund të fundit duke ndërtuar deri në një kuptim se si të mësuarit e makinës mund të ndihmojë në marrjen e këtij vendimi. Nxënësit udhëhiqen në përfundimin se anketimi i përdoruesve të tyre mund t'i ndihmojë ata të marrin vendimin më të mirë duke kërkuar modele në të dhëna dhe duke i bazuar vendimet e tyre në këto modele.\n\n**Pyetja e ditës:** Cilat strategji përdorin modelet kompjuterike për të marrë vendime?",
+          "preparation": "-   Rishikoni nivelet e Code Studio përpara mësimit\n-   Printoni kopje të udhëzuesit të veprimtarisë për çdo nxënës\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Eksploroni tre mënyra të ndryshme se si kompjuterët mund të bëjnë rekomandime dhe sa të rëndësishme mund të jenë të dhënat në marrjen e vendimeve."
+        },
+        "csd7-2023/Classification Models": {
+          "name": "Modelet e klasifikimit",
+          "overview": "Në këtë mësim nxënësit do të marrin pjesë në një aktivitet të shkëputur duke simuluar një nga algoritmet e Machine Learning që përdorin kompjuterët për të ndarë të dhënat në grupe për të ndihmuar në marrjen e vendimeve. Nxënësit do të kenë për detyrë të ndihmojnë një kompjuter të mësojë të klasifikojë ushqimin si pemë ose perime, të ndërtojnë grafik 20 pemë të ndryshme në dy akse duke krahasuar “ëmbëlsinë” me “të lehtë për t'u ngrënë”, dhe pastaj të përpiqen të ndajnë të dhënat në grupe - një zonë e pemëve dhe një zonë e perimeve.\n\n\\*\\*Pyetja e ditës: \\*\\* Si mësojnë kompjuterët të klasifikojnë të dhënat?",
+          "preparation": "-   Rishikoni të gjitha materialet për mësimin e sotëm.\n\n-   Pritini kartat e pemëve dhe perimeve - një grup letrash për secilin grup \n\n-   Sundimtar ose i drejtë për secilin nxënës\n\n-   Kontrolloni [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) për mësuesit e verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësuesit e tjerë",
+          "student_overview": "Mësoni si të krijoni një Machine Learning duke ndihmuar një kompjuter të klasifikojë ushqimet si pemë ose perime"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "overview": "Në këtë mësim nxënësit do të zhyten në mjetin e AI Lab për herë të parë, ku ata zgjedhin veçoritë për të trajnuar një model që parashikon një etiketë të caktuar. Ata fillojnë duke eksploruar AI Lab dhe duke trajnuar një model për të njohur format. Pastaj ata pretendojnë se janë punësuar nga disa restorante të cilët dëshirojnë të bëjnë rekomandime për klientët e rinj bazuar në të dhënat e sondazhit që janë mbledhur, të kalojnë nëpër secilën grup të të dhënave dhe të përdorin mjetet e vizualizimit të të dhënave për të identifikuar tiparet me marrëdhënie të larta në të dhëna.\n\n**Pyetja e ditës:** Si mund ta përdorim mësimin makinerik për të bërë rekomandime?",
+          "preparation": "-   Rishikoni nivelet e Code Studio përpara mësimit\n-   Printoni kopje të udhëzuesit të veprimtarisë për çdo nxënës\n-   Printoni ose përgatitni të shpërndani online kopje të aktivitetit të udhëzimit për secilin nxënës\n-   Kontrolloni forumin [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Mësoni se si të përdorni AI Lab për të trajnuar modelet e Machine Learning të tilla si të njohin format ose si të bëni rekomandime ushqimore për një restorant."
+        },
+        "csd7-2023/Importing Models in App Lab": {
+          "name": "Importimi i modeleve në App Lab",
+          "overview": "Në këtë mësim nxënësit njihen me importimin e modeleve të tyre në App Lab dhe lidhjen e modelit të tyre me ekranet e tyre. Ato ndihmojnë në krijimin e një aplikacioni rekomandimi librash dhe mësojnë se si të shtojnë një ekran Mirë se Vini dhe evente në kodin. Ky mësim supozon se nxënësit tashmë janë të njohur me App Lab - për klasat që nuk e kanë parë App Lab më parë merrni parasysh zgjatjen e këtij mësimi dhe përfshirjen e videove ose aktiviteteve shtesë që rekomandohen në planin e mësimit.\n\n\\*\\*Pyetja e ditës: \\*\\* Si mund të krijoj një aplikacion duke përdorur Machine Learning?",
+          "preparation": "-   Rishikoni nivelet e Code Studio para mësimit në mënyrë që të njiheni me importimin e një modeli në App Lab\n-   Vendosni nëse dëshironi të siguroni burime shtesë për nxënësit që të njihen me App Lab, siç përshkruhet në planin e mësimit.\n-   Kontrolloni forumin [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Mësoni si të importoni një model në App Lab për të ndihmuar në krijimin e një aplikacioni Rekomandimi i librit për një klasë të shkollës së mesme."
+        },
+        "csd7-2023/Model Cards": {
+          "name": "Modelet e kartave",
+          "overview": "Në këtë mësim, nxënësit do të hetojnë një model për paragjykim dhe do të prezantohen me një Kartë Modeli, e cila është një mënyrë për të përfaqësuar informacion të rëndësishëm në lidhje me një model të trajnuar që mund të ndihmojë në zbulimin e paragjykimeve. Ata do të hetojnë një aplikacion Prioriteti Mjekësor, i cili ndihmon një spital të vendosë se sa shpejt do të shikojë pacientët bazuar në simptomat e tyre. Ndërsa nxënësit kalojnë nëpër aktivitet, ata e kuptojnë se aplikacioni është i njëanshëm bazuar në informacionin personal dhe shqyrtojnë se si mund të ndodhë kjo.\n\n**Pyetja e ditës:** Si mund të vlerësojmë modelet e të mësuarit makinerik pasi të jenë trajnuar?",
+          "preparation": "-   Rishikoni nivelet e Code Studio para mësimit\n-   Parashikoni se si do ta drejtoni diskutimin mbi paragjykimet racore dhe gjinore duke pasur parasysh se disa nxënës mund të kenë përvoja të ngjashme me ato të diskutuara në këtë mësim.\n-   Kontrolloni forumin [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) për mësuesit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Ndihmoni të vendosni se cili model duhet të përdorë një spital për sistemin e prioritizimit të dhomës së urgjencës dhe të përcaktoni se cilat modele përfshijnë paragjykime të paqëllimshme. Ju gjithashtu do të mësoni se si Kartat Model mund të ndihmojnë në vlerësimin dhe analizimin e modeleve të Machine Learning."
+        },
+        "csd7-2023/Saving Models in AI Lab": {
+          "name": "Ruajtja e modeleve në Al Lab",
+          "overview": "Nxënësit e përfundojnë procesin e plotë të trajnimit dhe ruajtjen e një modeli pastaj importimin në App Lab. Për herë të parë, nxënësit janë në gjendje të zgjedhin etiketën që dëshirojnë të parashikojnë dhe të kalojnë kohë duke vendosur tiparet që do të përdorin për të ndihmuar në parashikimin e etiketës së tyre të zgjedhjes. Nxënësit gjithashtu krijojnë një kartë modeli për modelet e tyre në mënyrë që t'i ruajnë ato dhe ta importojnë atë në App Lab\n\n\\*\\*Pyetja e ditës: \\*\\* Si mund t'i përdor Kartat Model për të dokumentuar vendimet e mia kur trajnoni një model të Machine Learning?",
+          "preparation": "-   Rishikoni nivelet e Code Studio përpara mësimit që të familjarizoheni me hetimin e kolonave në Al Lab dhe trajnimin e modelit të tyre\n-   Printoni kopje të udhëzuesit të veprimtarisë për çdo nxënës\n-   Kontrolloni forumin [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198)  për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Ndihmoni të trajnoni disa modele për të ndihmuar një kopsht zoologjik të krijojë aplikacione edukative për klientët e tyre. Ju do të krijoni Modele të kartave për secilin nga modelet tuaja, pastaj importoni njërën prej tyre në App Lab për të krijuar një aplikacion."
+        },
+        "csd7-2023/Model Cards in App Lab": {
+          "name": "Kartat e modelit në App Lab",
+          "overview": "Në këtë mësim, nxënësit praktikojnë importimin e modeleve të tyre në App Lab, këtë herë duke përfshirë modele që kanë të dhëna numerike dhe përdorimin e kartave model për të ndihmuar në përmirësimin e përvojës së përdoruesit të plotësimit të formularit të tyre. Ata më pas do të mësojnë se si të shikojnë kartën e modelit brenda App Lab dhe ta përdorin këtë për të shtuar më shumë elementë përshkrues në një aplikacion. Tjetra, ata përqendrohen në përmirësimin e përvojës së përdoruesit duke shtuar tekst informativ për të ndihmuar përdoruesit në plotësimin e formularit dhe duke shtuar një stil në aplikacionin e tyre për të përmirësuar përvojën e përdoruesit.\n\n**Pyetja e ditës:** Si mund të përdor një kartë modeli për të përmirësuar aplikacionin tim?",
+          "preparation": "-   Rishikoni nivelet e Code Studio para mësimit\n-   Kontrolloni[0] forumin [\"Teacher's Lounge\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësuesit e tjerë",
+          "student_overview": "Mësoni si të përdorni Kartat Model për të përmirësuar një aplikacion për të mësuar makinerinë dhe si të përditësoni ekranin përfundimtar bazuar në parashikimin e modelit."
+        },
+        "csd7-2023/Numerical Models": {
+          "name": "Modele numerike",
+          "overview": "Në këtë mësim nxënësit marrin pjesë në një aktivitet të shkëputur që simulon një sulm zombiesh. Nxënësit duhet të parashikojnë se cilat pjesë të qytetit kanë sasinë më të vogël të zombies duke përdorur të dhëna nga një qytet fqinj. Nxënësit do të përdorin shkallë të ngjashmërisë dhe mesataret për të bërë parashikime në lidhje me numrin e zombies në një vend të caktuar. Pastaj nxënësit shpëtohen dhe arrijnë të krahasojnë parashikimet e tyre me numrat aktualë si një mënyrë për të diskutuar se si saktësia është e ndryshme për të dhënat numerike në krahasim me të dhënat kategorike.\n\n\\*\\*Pyetja e ditës: \\*\\* Si mësojnë kompjuterët të bëjnë parashikime me të dhëna numerike?",
+          "preparation": "-   Rishikoni të gjitha materialet për mësimin e sotëm.\n-   Shtypni ose përgatituni për të ndarë në internet udhëzuesin e aktivitetit - një për nxënës ose grup.\n-   Kontrolloni[0] forumin [\"Teacher's Lounge\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Zombies kanë pushtuar qytetin tuaj dhe ju duhet të përdorni të dhëna për të parashikuar se cilat pjesë të qytetit kanë sasinë më të vogël të zombies kështu që ju mund t'i dërgoni njerëzit drejt sigurisë."
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "overview": "Në këtë mësim nxënësit do të njihen me të dhënat numerike të cilat përfaqësojnë një sërë vlerash. Nxënësve u paraqitet një skenar ku çdo veçori dhe etiketë përfaqësohet me të dhëna numerike dhe ata mësojnë të përdorin mjetet e reja të vizualizimit të të dhënave brenda AI Lab për të ndihmuar në gjetjen e modeleve.\n\n\\*\\*Pyetja e ditës: \\*\\* Si mund të përdorim AI Lab për të parashikuar të dhëna numerike?",
+          "preparation": "-   Kontrolloni[0] forumin [\"Teacher's Lounge\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Përdorni AI Lab dhe të dhëna numerike për të bërë parashikime rreth skenarëve të botës reale"
+        },
+        "csd7-2023/Customizing Apps": {
+          "name": "Përshtatja e aplikacioneve",
+          "overview": "Në këtë mësim, nxënësit do të eksplorojnë se si të personalizojnë kodin e aplikacionit të tyre për të bërë ndryshime shtesë në dizajnin e aplikacionit të tyre. Ata do të fillojnë duke eksploruar një aplikacion me një ekran dhe më pas do të praktikojnë zgjerimin e aplikacionit në dy ekrane dhe përditësimin e kodit për të përdorur elementët e rinj të modalitetit të dizajnit. Pas kësaj, nxënësit ndihmojnë në krijimin e një aplikacioni Driver Alert që kërkon ndryshime në kod duke përdorur elementë të rinj të modalitetit të dizajnit. Duke përdorur aftësitë nga ky mësim, ata do të jenë në gjendje të krijojnë aplikacione me shumë ekrane ku pyetjet mund të shfaqen në ekrane të shumta në vend të një ekrani të vetëm.\n\n**Pyetja e ditës:** Si mund ta rregulloj kodin për një aplikacion të mësimit të makinës?",
+          "preparation": "-   Rishikoni nivelet e Code Studio para mësimit për t'u njohur me ndryshimin e elementit të hyrjes \n-   Kontrolloni[0] forumin [\"Salloni i Mësuesit\"] për mësimdhënësit e verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Mësoni se si të editoni kodin për një aplikacion të të mësuarit makinerik duke ndihmuar në krijimin e një sistemi alarmi për shoferin ku secili sensor është në një ekran të ndryshëm të aplikacionit."
+        },
+        "csd7-2023/AI Code of Ethics": {
+          "name": "Kodi i Etikës së AI",
+          "overview": "Në grupe të vogla nxënësit kryejnë kërkime duke përdorur artikuj dhe video që ekspozojnë kurthe etike në një zonë të Inteligjencës Artificiale (AI) sipas zgjedhjes së tyre. Më pas secili grup zhvillon të paktën një parim të orientuar drejt zgjidhjes që adreson zonën e tyre të zgjedhur. Këto parime pastaj mblidhen në një burim të gjerë “Kodi ynë i Etikës së AI” (p.sh. një prezantim, dokument ose faqe në internet) për krijuesit e AI dhe ligjvënësit kudo.\n\n\\*\\*Pyetja e ditës: \\*\\* Cilat janë udhëzimet që mund të përdorim për të krijuar aplikacione etike të Machine Learning?",
+          "preparation": "-   Përgatituni për të ndarë një doracak për secilin grup në internet **Zonat e Kërkimit të Etikës AI**\n-   Shtypni ose përgatituni për të ndarë një doracak për secilin grup në internet **Reflektimi i Kërkimit të Etikës AI**\n-   Përgatitni një dokument të përbashkët në internet, prezantim me slide, shabllon video ose ndonjë formë tjetër të medias që do të përdoret për të përbërë burimin “Kodi ynë i Etikës së AI” të klasës suaj.\n-   Kontrolloni[0] forumin [\"Salloni i Mësimdhënësve\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Çfarë do të thotë që inteligjenca artificiale të përdoret në mënyrë etike? Në këtë mësim ju do të ndihmoni në krijimin e një Kodi Etik të AI dhe shembuj kërkimorë të inteligjencës artificiale që po e ndjekin ose nuk po e ndjekin kodin tuaj të etikës."
+        },
+        "csd7-2023/Project: Make a Machine Learning App": {
+          "name": "Projekti: Bëni një aplikacion për të mësuarit makinerik",
+          "overview": "Në këtë projekt një ose dy ditor, nxënësit aplikojnë aftësitë e tyre nga njësia e deritanishme dhe krijojnë një aplikacion për të mësuar makinerinë duke përdorur të dhëna të botës reale. Nxënësit janë të pajisur me disa të dhëna të botës reale nga një shumëllojshmëri e konteksteve, dhe ata zgjedhin se cilat dataset ata do të donin për të hetuar. Ata trajnojnë dhe ruajnë modelin e tyre, pastaj bëjnë një aplikacion të thjeshtë App Lab që përdor modelin. Ky mini-projekt është një mundësi për të vlerësuar se sa mirë nxënësit mund të përdorin veçoritë për të krijuar modele të sakta të mësimit të makinës dhe sa mirë mund të krijojnë aplikacione që përdorin mësimin e makinës.\n\n**Pyetja e ditës:** A mund të përdor të dhëna të botës reale për të krijuar një aplikacion që përdor mësimin e makinës?",
+          "preparation": "-   Rishikoni nivelet e Code Studio përpara mësimit\n-   Printoni kopje të udhëzuesit të veprimtarisë për çdo nxënës\n-   Kontrolloni forumin [\"Salla e Mësimdhënësve\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) për mësimdhënës të verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Zgjidhni nga disa grupe të të dhënave në botën reale për të trajnuar një model dhe për të krijuar një aplikacion që përdor të mësuarit makinerik"
+        },
+        "csd7-2023/Issue Statements": {
+          "name": "Deklarata e çështjes",
+          "overview": "Kjo është dita e parë e një serie prej pesë ditësh të mësimeve që përgatisin nxënësit për projektin final. Në këtë mësim, nxënësit takojnë një ekip nxënësish imagjinar që dëshirojnë të përdorin të mësuarit makinerik për të adresuar një çështje në komunitetin e tyre. Nxënësit marrin pjesë në një fushatë brainstorm duke përdorur strategjinë e \"5 Pyetjeve,\" pastaj ata ndihmojnë të vlerësojnë idetë që ekipi tjetër i nxënësve ka propozuar. Hapat që nxënësit ndjekin në këtë mësim janë identikë me hapat që ata do të ndjekin në projektin final.\n\n**Pyetja e Dites:** Si mund të përdoret Machine Learning për të adresuar një çështje në komunitetin tuaj?\"",
+          "preparation": "-   Kontrolloni[0] forumin [\"Teacher's Lounge\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Duke punuar me një ekip të nxënësve nga një shkollë tjetër, zhvilloni ide se si mund të përdoret Machine Learning për të adresuar një çështje në komunitetin tuaj."
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Planifikimi i sondazhit",
+          "overview": "Kjo është e dyta në një sekuencë pesë-ditore të mësimeve që përgatisin nxënësit për projektin përfundimtar. Në këtë mësim, nxënësit mësojnë se ekipi tjetër i nxënësve do të donte të krijonte një aplikacion rekomandues të klubit bazuar në klubet në shkollën e tyre. Nxënësit imagjinojnë se cilat pyetje do të ishin më të dobishme për të ndihmuar në marrjen e këtij rekomandimi, atëherë ata mësojnë se si të përdorin një shabllon të Formës Google për të krijuar një anketë. Hapat që nxënësit marrin në këtë mësim janë identikë me hapat që nxënësit do të ndërmarrin në projektin e tyre përfundimtar.\n\n**Pyetja e ditës:** Si mund të krijoj një anketë për të mbledhur të dhëna për një aplikacion për të mësuar makinerinë?",
+          "preparation": "-   Shtypni kopjet e udhëzuesit të aktivitetit për secilin student\n-   Rishikoni videon se si të përdorni një shabllon për të krijuar një Formular të Google\n-   Kontrolloni[0] forumin [\"Salloni i Mësimdhënësve\"] për mësimdhënësit e verifikuar për të gjetur strategji ose burime shtesë të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Ndihmoni ekipin tjetër të nxënësve të zhvillojnë pyetje që do të ishin të dobishme për të krijuar një aplikacion për të mësuarit makinerik, pastaj mësoni se si të përdorni Google Forms për të krijuar një sondazh për të mbledhur të dhëna."
+        },
+        "csd7-2023/Survey Data in AI Lab": {
+          "name": "Të dhënat numerike në laboratorin e AI",
+          "overview": "Kjo është e treta në një sekuencë pesë-ditore të mësimeve që përgatisin nxënësit për projektin përfundimtar. Në këtë mësim nxënësit mësojnë se si të shikojnë të dhënat e sondazhit në Google Sheets dhe t'i ruajnë të dhënat në kompjuterin e tyre si një dosje csv. Pastaj, ata ngarkojnë të dhënat e ruajtura në AI Lab dhe shqyrtojnë rezultatet e sondazhit nga një prej nxënësve për të trajnuar një model duke përdorur të dhënat e tyre. Pastaj, nxënësit përdorin Google Sheets për të ekzaminuar të dhënat nga një nxënës tjetër ku të dhënat kanë gabime dhe më pas përpiqen të rregullojnë gabimet. Hapat që nxënësit marrin në këtë mësim janë identikë me hapat që nxënësit do të ndërmarrin në projektin e tyre përfundimtar dhe strategjitë e zgjidhjes së problemeve që ata zhvillojnë do t'i ndihmojnë ata të kapërcejnë sfidat në projektin e tyre përfundimtar.\n\n**Pyetja e ditës**: Si mund të importoj të dhëna në AI Lab për të trajnuar një model të të mësuarit makinerik?",
+          "preparation": "-   Kontrolloni[0] forumin [\"Teacher's Lounge\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Mësoni si të shkarkoni të dhënat e sondazhit dhe t'i përdorni ato në AI Lab për të trajnuar një model. Aftësitë në këtë mësim janë të rëndësishme për përfundimin e mësimit përfundimtar në këtë njësi."
+        },
+        "csd7-2023/Troubleshooting Models": {
+          "name": "Modelet e zgjidhjes së problemeve",
+          "overview": "Kjo është e katërta e një sekuence pesë-ditore të mësimeve që përgatisin nxënësit për projektin përfundimtar. Në këtë mësim nxënësit shqyrtojnë të dhënat e sondazhit nga anëtarët e tjerë të ekipit të nxënësve dhe analizojnë pse modelet e tyre nuk po funksionojnë si duhet. Në shqyrtimin e të dhënave nxënësit zhvillojnë strategji për shmangien e këtyre çështjeve në të ardhmen dhe strategjitë për përballimin e këtyre çështjeve nëse ato ndodhin përsëri. Këto janë aftësi që nxënësit do t'i përdorin në projektin përfundimtar ndërsa zhvillojnë sondazhet e tyre dhe mbledhin të dhëna.\n\n**Pyetja e Ditës**: Cilat janë strategjitë për t'u siguruar që të dhënat tona gjenerojnë një model të saktë?",
+          "preparation": "-   Kontrolloni[0] forumin [\"Teacher's Lounge\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Ndihmoni nxënësit nga ekipi tjetër të analizojnë të dhënat e tyre të sondazhit dhe të përcaktojnë pse nuk janë në gjendje të marrin modele të sakta _ose_ ata nuk janë në gjendje të krijojnë modele të përdorshme kur testohen."
+        },
+        "csd7-2023/Creating an App": {
+          "name": "Krijimi i një aplikacioni",
+          "overview": "Kjo është e pesta e një sekuence pesë-ditore të mësimeve që përgatisin nxënësit për projektin përfundimtar. Në këtë mësim nxënësit importojnë aplikacionin e rekomanduesit të klubit në App Lab dhe fillojnë të personalizojnë aplikacionin. Nxënësit shtojnë një ekran të mirëpritur dhe përditësojnë përshkrimet e secilës veçori, atëherë ata mund të vendosin se si dëshirojnë të personalizojnë më tej aplikacionin. Hapat që nxënësit marrin në këtë mësim janë identikë me hapat që nxënësit do të ndërmarrin në projektin e tyre përfundimtar.\n\n**Pyetja e ditës**: Si mund të krijoj një aplikacion miqësor, të lehtë për t'a përdorur aplikacionin e të mësuarit makinerik?",
+          "preparation": "-   Kontrolloni[0] forumin [\"Teacher's Lounge\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Modeli më në fund është gati! Tani është koha për të importuar modelin në App Lab dhe për të ndërtuar aplikacionin përfundimtar të Rekomanduesit të Klubit!"
+        },
+        "csd7-2023/Project - Design an AI App": {
+          "name": "Projekti - Dizajnoni një aplikacion AI",
+          "overview": "Për të përfunduar këtë njësi, nxënësit zhvillojnë një aplikacion AI që adreson çështjen sociale të interesit të tyre. Nxënësit ndjekin një udhëzues të projektit për të përfunduar këtë aktivitet shumëditor. Në hapin e parë, nxënësit përgatisin të dhënat që do të përdorin për të trajnuar modelin e tyre në AI Lab. Pas trajnimit, testimit dhe gjenerimit të një karte modeli, ata eksportojnë modelin e tyre në App Lab për zhvillim. Këtu ata përdorin modelin e tyre për të krijuar një aplikacion miqësor për përdoruesit. Nxënësit kryejnë një rishikim nga kolegët dhe bëjnë çdo azhurnim të nevojshëm për projektet e tyre ndërsa reflektojnë mbi rezultatin.\n\n**Pyetja e ditës:** Si mund të krijoj një aplikacion AI që zgjidh një problem në komunitetin tim?",
+          "preparation": "-   Shtypni kopjet e Udhëzuesit të Projektit.\n-   Shtypni kopjet e Rubrikës.\n-   Shtypni kopjet e Udhëzuesit të Rishikimit të Peer.\n-   Kontrolloni[0] forumin [\"Salloni i Mësimdhënësve\"] për mësimdhënësit e verifikuar për të gjetur strategji shtesë ose burime të ndara nga mësimdhënësit e tjerë",
+          "student_overview": "Krijojnë një aplikacion që përdor mësimin e makinës për të zgjidhur një problem në komunitetin tuaj"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Siguria në Lagjen Time në Internet",
@@ -5021,13 +5506,15 @@
           "name": "Vendosja e një STOP për padrejtësitë në internet",
           "overview": " [![edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org) \n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum) \n\nInterneti është i mbushur me lloj-lloj njerëzish interesant, por ndonjëherë disa prej tyre mund të jenë të këqij me njëri-tjetrin. Me këtë lojë me role, ndihmojini nxënësit tuaj të kuptojnë pse shpesh është më e lehtë të jesh keqdashës në komunik online në internet sesa në takim fizik dhe si të merreni me padrejtësitë në internet kur i hasni ato.",
           "preparation": "-   Rishikoni materialet udhëzuese.\n-   Printoni fletushkat për secilin nxënës.\n-   Përgatitni lapsa ose markera me ngjyra për nxënësit.",
-          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve kryengritës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit."
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, median dhe teknologjinë. Ky mësim fokusohet në ngacmimet kibernetike, dramat digjitale dhe gjuhën e urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të njerëzve kryengritës për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë e internetit.",
+          "student_overview": "Në këtë mësim, do të mësoni rreth poshtërësisë dhe çfarë të bëni nëse e takoni atë në internet."
         },
         "coursec-2023/My Robotic Friends Jr": {
           "name": "Shokët e mi robotik",
           "overview": "Në këtë mësim **përcaktimi i kontekstit**, nxënësit do të përdorin një sërë simbolesh për të udhëzuar një “robot” për të grumbulluar gota në modele të ndryshme. Nxënësit do të marrin pjesë me radhë si robot, duke iu përgjigjur vetëm algoritmit të përcaktuar nga shokët/shoqet e tyre.",
           "preparation": "-   Përgatit nga një model me 20 gota letre (ose trapezoide prej letrës) për secilin grup prej 2-3 nxënësish.\n-   Shfaq simbolet nga **\\*Çelësi i simboleve** ku nxënësit mund të referohen gjatë gjithë mësimit.\n-   (Opsionale) Shtyp një **\\*Ide për grumbullimin e kupave** për një grup prej 2-3 nxënësish.",
-          "purpose": "Ky mësim i shkëputur bashkon klasën si një ekip me një detyrë të thjeshtë për t'u përfunduar: merrni një “robot” për të grumbulluar gota në një dizajn specifik. Ky aktivitet paraqet bazat për programimin që nxënësit do të bëjnë gjatë gjithë kursit pasi mësojnë rëndësinë e përcaktimit të një algoritmi të komunikuar qartë."
+          "purpose": "Ky mësim i shkëputur bashkon klasën si një ekip me një detyrë të thjeshtë për t'u përfunduar: merrni një “robot” për të grumbulluar gota në një dizajn specifik. Ky aktivitet paraqet bazat për programimin që nxënësit do të bëjnë gjatë gjithë kursit pasi mësojnë rëndësinë e përcaktimit të një algoritmi të komunikuar qartë.",
+          "student_overview": "Në këtë mësim, ju do të pretendoni se shokët e klasës tuaj janë robotë dhe do t'i programoni ata për të ndërtuar modele të kupave të grumbulluara."
         },
         "coursec-2023/Programming with Angry Birds": {
           "name": "Programimi me Angry Birds",

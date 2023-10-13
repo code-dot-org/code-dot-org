@@ -2846,6 +2846,13 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ვიდეო"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "ვიდეო"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "ვიდეო"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "CS კავშირების სადესანტო გვერდი",
           "url": "https://code.org/educate/csc"
@@ -3294,6 +3301,530 @@
         "poem_app_example/poetry/2023": {
           "name": "ლექსების აპლიკაციის მაგალითი",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "პროებლემების გადაჭრის პროცესი"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "შესავალი პრობლემების გადაწყვეტაში"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "პროებლემების გადაჭრის პროცესი"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "პროებლემების გადაჭრის პროცესი"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "რა არის კომპიუტერი?"
+        },
+        "input_and_output/csd/2023": {
+          "name": "შესაყვანი და გამოსაყვანი ინფორმაცია"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "შესაყვანი და გამოსაყვანი ინფორმაცია"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "შესაყვანი და გამოსაყვანი ინფორმაცია"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა",
+          "type": "თანატოლის კომენტარი"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა",
+          "type": "რუბრიკა"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "არეკვლა"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "პროექტი - შემოგვთავაზეთ აპლიკაცია"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "შესავალი HTML-ში"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "pair_programming/csd/2023": {
+          "name": "პროგრამირება წყვილებში",
+          "type": "ვიდეო"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "lists/csd/2023": {
+          "name": "სიები"
+        },
+        "video_debugging/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "html_web_page/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "ციფრული ნაკვალევი"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "შესავალი CSS-ში - ნაწილი 1",
+          "type": "ვიდეო"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "შესავალი CSS-ში - ნაწილი 2",
+          "type": "ვიდეო"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "ტექსტის გასტილვა CSS-ით"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "ინტელექტუალური ქონება"
+        },
+        "images_in_html/csd/2023": {
+          "name": "სურათები HTML-ში"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "ელემენტების გასტილვა CSS-ით"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "როგორ მუშაობს ძებნა",
+          "type": "ვიდეო"
+        },
+        "classes/csd/2023": {
+          "name": "კლასები"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "ხატვა თამაშების ლაბორატორიაში"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "variables/csd/2023": {
+          "name": "ცვლადები"
+        },
+        "variables_1/csd/2023": {
+          "name": "ცვლადები",
+          "type": "ვიდეო"
+        },
+        "variables_2/csd/2023": {
+          "name": "ცვლადები"
+        },
+        "robot_faces/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "sprites/csd/2023": {
+          "name": "სპრაიტები"
+        },
+        "sprites_1/csd/2023": {
+          "name": "სპრაიტები"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "ანიმაციის ტაბი",
+          "type": "ვიდეო"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "text/csd/2023": {
+          "name": "ტექსტი"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "the_draw_loop/csd/2023": {
+          "name": "ხატვის ციკლი"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "name": "ხატვის ციკლი"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "სპრაიტების მოძრაობა",
+          "type": "ვიდეო"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "სპრაიტების მოძრაობა"
+        },
+        "animated_scene/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "ბულის ტიპის გამოთქმები",
+          "type": "ვიდეო"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "პირობითი დებულებები",
+          "type": "ვიდეო"
+        },
+        "conditionals/csd/2023": {
+          "name": "პირობითი ბრძანებები"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "კლავიატურიდან შეყვანილი ინფორმაცია"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "„თუ/სხვაგვარად“ დებულებები",
+          "type": "ვიდეო"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "პროექტი - ინტერაქტიული ბარათი"
+        },
+        "velocity/csd/2023": {
+          "name": "სიჩქარე",
+          "type": "ვიდეო"
+        },
+        "velocity_1/csd/2023": {
+          "name": "სიჩქარე"
+        },
+        "velocity_2/csd/2023": {
+          "name": "სიჩქარე"
+        },
+        "collision_detection/csd/2023": {
+          "name": "შეჯახების აღმოჩენა"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "შეჯახების აღმოჩენა"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "შეჯახების აღმოჩენა"
+        },
+        "side_scroller/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "სპრაიტების რთული მოძრაობა"
+        },
+        "collisions/csd/2023": {
+          "name": "შეჯახებები"
+        },
+        "flyer_game/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "functions/csd/2023": {
+          "name": "ფუნქციები",
+          "type": "ვიდეო"
+        },
+        "functions_1/csd/2023": {
+          "name": "ფუნქციები"
+        },
+        "functions_2/csd/2023": {
+          "name": "ფუნქციები"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "თამაშის დიზაინის პროცესი"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "თამაშის დიზაინის პროცესის გამოყენება"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "პროექტი - შექმენით თამაშის დიზაინი"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "identifying_user_needs/csd/2023": {
+          "name": "მომხმარებლის მოთხოვნილებების განსაზღვრა"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "ქაღალდის პროტოტიპები",
+          "type": "რუბრიკა"
+        },
+        "design_mode/csd/2023": {
+          "name": "დიზაინის რეჟიმი"
+        },
+        "prototype_testing/csd/2023": {
+          "name": "პროტოტიპების ტესტირება"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "აპლიკაციების ტესტირება"
+        },
+        "app_presentation/csd/2023": {
+          "name": "აპლიკაციის პრეზენტაცია",
+          "type": "რუბრიკა"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "აპლიკაციის პრეზენტაცია"
+        },
+        "representing_information/csd/2023": {
+          "name": "ინფორმაციის წარმოდგენა"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "representing_numbers/csd/2023": {
+          "name": "რიცხვების წარმოდგენა"
+        },
+        "representing_numbers_1/csd/2023": {
+          "name": "რიცხვების წარმოდგენა"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "interpreting_data/csd/2023": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "interpreting_data_1/csd/2023": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "interpreting_data_2/csd/2023": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "interpreting_data_3/csd/2023": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "name": "გადაწყვეტილების მიღება მონაცემებთან ერთად"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "name": "გადაწყვეტილების მიღება მონაცემებთან ერთად"
+        },
+        "automating_data_decisions/csd/2023": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "name": "მონაცემები რეალურ ცხოვრებაში"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "name": "მონაცემები რეალურ ცხოვრებაში"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "video_machine_learning/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "თანატოლის კომენტარი"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "physical_input/csd/2023": {
+          "name": "ფიზიკურად შეყვანილი ინფორმაცია"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "შესავალი მასივებში",
+          "type": "ვიდეო"
+        },
+        "making_music/csd/2023": {
+          "name": "მუსიკის შექმნა"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "ფუნქციები პარამეტრებით",
+          "type": "ვიდეო"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "functions_3/csd/2023": {
+          "name": "ფუნქციები"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "პროებლემების გადაჭრის პროცესი"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "AI-ს დანახვა",
+          "type": "ვიდეო"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "AI ლაბორატორიის შესავალი"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "AI ლაბორატორიის შესავალი",
+          "type": "ვიდეო"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "ტრენინგი და ტესტირება AI ლაბორატორიაში",
+          "type": "ვიდეო"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "მოდელის ბარათები AI ლაბორატორიაში",
+          "type": "ვიდეო"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "რიცხვითი მონაცემები AI ლაბში",
+          "type": "ვიდეო"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "რუბრიკა"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "ვიდეო"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "რუბრიკა"
         },
         "all_resources/coursea/2023": {
           "url": "/s/კურსი-2023/რესურსები"

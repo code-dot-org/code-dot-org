@@ -1250,17 +1250,20 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "인공지능"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "적응",
           "definition": "환경에서 더 잘 살아남기 위한 유기체의 변화"
         },
         "code/csc-adaptations/2023": {
           "word": "코드",
-          "definition": "(v) 컴퓨터에 대한 지침을 작성하려면"
+          "definition": "(동사) 컴퓨터에 쓰이는 명령문을 작성하다"
         },
         "event/csc-adaptations/2023": {
           "word": "이벤트 ",
-          "definition": "어떤 일이 일어나도록 하는 행동"
+          "definition": "어떤 일이 일어나도록 하는 동작"
         },
         "evolution/csc-adaptations/2023": {
           "word": "진화",
@@ -1316,51 +1319,51 @@
         },
         "code/csc-ecosystems/2023": {
           "word": "코드",
-          "definition": "(v) 컴퓨터에 대한 지침을 작성하려면"
+          "definition": "(동사) 컴퓨터에 쓰이는 명령문을 작성하다"
         },
         "condition/csc-ecosystems/2023": {
           "word": "조건",
-          "definition": "액션을 허용하기 전에 프로그램이 참인지 확인하는 것"
+          "definition": "작업을 실행하기 전에 프로그램이 참과 거짓 여부를 확인하는 것"
         },
         "conditionals/csc-ecosystems/2023": {
-          "word": "조건",
-          "definition": "특정 조건에서만 실행되는 명령문"
+          "word": "조건문",
+          "definition": "특정 조건이 충족되어야 실행하는 명령문"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "생태계",
-          "definition": "상호 작용하는 유기체와 환경의 생물학적 공동체"
+          "definition": "상호작용하는 생물과 환경의 생물학적 복합체계"
         },
         "event/csc-ecosystems/2023": {
           "word": "이벤트 ",
-          "definition": "어떤 일이 일어나도록 하는 행동"
+          "definition": "어떤 일이 일어나도록 하는 동작"
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "남획",
-          "definition": "번식 가능한 속도보다 빠른 물고기 제거"
+          "definition": "번식 속도를 능가하는 속도로 물고기를 잡는 것"
         },
         "simulation/csc-ecosystems/2023": {
           "word": "시뮬레이션",
-          "definition": "연구 목적의 컴퓨터 모델."
+          "definition": "연구 목적의 컴퓨터 모델"
         },
         "debug/csc-ecosystems/2023": {
           "word": "디버그",
-          "definition": "코드에서 오류 또는 문제를 찾고 수정합니다."
+          "definition": "코드에서 오류 또는 문제를 찾아 수정함"
         },
         "variable/csc-ecosystems/2023": {
           "word": "변수",
-          "definition": "값을 저장할 수 있는 컨테이너입니다. "
+          "definition": "값을 저장할 수 있는 컨테이너"
         },
         "ecologist/csc-ecosystems/2023": {
           "word": "생태학자",
-          "definition": "동물과 식물이 환경과 어떻게 상호 작용하는지 연구하는 과학자."
+          "definition": "동식물이 환경과 상호 작용하는 방법을 연구하는 과학자"
         },
         "energy/csc-ecosystems/2023": {
           "word": "에너지",
-          "definition": "생산자에서 소비자에게 먹이 그물에 있는 유기체 간에 전달됩니다.유기체는 복잡한 작업을 수행하는 데 에너지를 사용합니다."
+          "definition": "먹이 그물망에서 생산자가 소비자로 전달하는 것. 에너지는 생물이 활동하고 복잡한 작업을 수행하는 데 사용된다."
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "먹이 사슬 ",
-          "definition": "먹는 음식 순서대로, 생산자에서 소비자로, 먹이에서 포식자로 연결된 유기체 그룹."
+          "definition": "생산자에서 소비자로, 먹이에서 포식자 순으로 먹이의 순서대로 연결된 생물"
         },
         "code/csc-mappinglandmarks/2023": {
           "word": "코드",
@@ -1467,6 +1470,108 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "새로운 시를 시험해보고 다른 사람들로부터 건설적인 피드백을 받을 수 있는 안전하고 창의적인 공간"
+        },
+        "computer/csd/2023": {
+          "word": "컴퓨터"
+        },
+        "input/csd/2023": {
+          "word": "입력"
+        },
+        "processing/csd/2023": {
+          "word": "프로세싱"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "디지털 발자국"
+        },
+        "copyright/csd/2023": {
+          "word": "저작권",
+          "definition": "문학적, 예술적, 음악적 소재를 인쇄 또는 출판, 공연, 촬영, 기록하고 또한 다른 이에게 그렇게 하도록 허가할 배타적 법적 권리."
+        },
+        "bug/csd/2023": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "debugging/csd/2023": {
+          "word": "디버깅",
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
+        },
+        "program/csd/2023": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "variable/csd/2023": {
+          "word": "변수",
+          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
+        },
+        "sprite/csd/2023": {
+          "word": "스프라이트"
+        },
+        "condition/csd/2023": {
+          "word": "조건"
+        },
+        "conditionals/csd/2023": {
+          "word": "조건"
+        },
+        "abstraction/csd/2023": {
+          "word": "추상화"
+        },
+        "function/csd/2023": {
+          "word": "함수"
+        },
+        "user/csd/2023": {
+          "word": "사용자",
+          "definition": "소프트웨어 및 하드웨어를 포함하여, 객체를 사용하는 이"
+        },
+        "user_interface/csd/2023": {
+          "word": "사용자 인터페이스"
+        },
+        "machine_learning/csd/2023": {
+          "word": "머신 러닝",
+          "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
+        },
+        "features/csd/2023": {
+          "word": "특징",
+          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
+        },
+        "label/csd/2023": {
+          "word": "라벨",
+          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
+        },
+        "model/csd/2023": {
+          "word": "모델",
+          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
+        },
+        "supervised_learning/csd/2023": {
+          "word": "지도형 학습",
+          "definition": "사람이 모델에게 예를 가지고 학습하도록 교육시킬 때"
+        },
+        "training/csd/2023": {
+          "word": "교육",
+          "definition": "모델이 학습할 수 있도록 모델에게 예를 제공"
+        },
+        "unsupervised_learning/csd/2023": {
+          "word": "비지도 학습",
+          "definition": "라벨이 없는 데이터에서 패턴 찾기"
+        },
+        "categorical_data/csd/2023": {
+          "word": "범주형 데이터",
+          "definition": "그룹으로 분리할 수 있는 데이터"
+        },
+        "classification/csd/2023": {
+          "word": "분류",
+          "definition": "다른 특징을 기반으로 카테고리 예측"
+        },
+        "bias/csd/2023": {
+          "word": "편향",
+          "definition": "결정이 어떤 것에는 유리하게 이루어지고 어떤 것에는 우선순위를 낮추거나 제외시키는 경우"
+        },
+        "numerical_data/csd/2023": {
+          "word": "수치 데이터",
+          "definition": "셀 수 있거나 또는 측정할 수 있는 데이터"
+        },
+        "ethics/csd/2023": {
+          "word": "윤리",
+          "definition": "좋은 행동을 위한 지침."
         },
         "algorithm/coursea/2023": {
           "word": "알고리즘",

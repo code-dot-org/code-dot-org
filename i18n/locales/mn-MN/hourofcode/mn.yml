@@ -5,40 +5,44 @@ mn:
   language: Англи хэл
   front_title: Түүхэн дэх хамгийн том сургалтын арга хэмжээнд нэгдээрэй, %{campaign_date}
   coming_soon: Тун удахгүй
-  campaign_date_start_short: 12-р сарын 5
-  campaign_date_start_long: оны арванхоёрдугаар сарын 5
-  campaign_date_short: 12-р сарын 5-11
-  campaign_date_full: Арванхоёрдугаар сарын 5-11
-  campaign_date_year: '2022'
-  campaign_date_full_year: Арванхоёрдугаар сар 5-11, 2022
+  campaign_date_start_short: 12-р сарын 4
+  campaign_date_start_long: оны арванхоёрдугаар сарын 4
+  campaign_date_short: 12-р сарын 4-10
+  campaign_date_full: Арванхоёрдугаар сарын 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: Арванхоёрдугаар сар 4-10, 2023
   nonus_campaign_date_start_short: Аравдугаар сарын 1
   nonus_campaign_date_start_long: Аравдугаар сарын 1
   nonus_campaign_date_short: Аравдугаар сарын 1 - 12-р сарын 18
   nonus_campaign_date_full: Аравдугаар сарын 1 - 12 сарын 18
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: Аравдугаар сар 1, 2022 - Арванхоёрдугаар сарын 18,
     2022
   latam_campaign_date_start_short: Аравдугаар сарын 1
   latam_campaign_date_start_long: Аравдугаар сарын 1
   latam_campaign_date_short: Аравдугаар сарын 1 - 12-р сарын 18
   latam_campaign_date_full: Аравдугаар сарын 1 - 12 сарын 18
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: Аравдугаар сар 1, 2022 - Арванхоёрдугаар сарын 18,
     2022
   europe_campaign_date_start_short: Аравдугаар сарын 1
   europe_campaign_date_start_long: Аравдугаар сарын 1
   europe_campaign_date_short: Аравдугаар сарын 1 - 12-р сарын 18
   europe_campaign_date_full: Аравдугаар сарын 1 - 12 сарын 18
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: Аравдугаар сар 1, 2022 - Арванхоёрдугаар сарын 18,
     2022
   africa_campaign_date_start_short: Аравдугаар сарын 1
   africa_campaign_date_start_long: Аравдугаар сарын 1
   africa_campaign_date_short: Аравдугаар сарын 1 - 12-р сарын 18
   africa_campaign_date_full: Аравдугаар сарын 1 - 12 сарын 18
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: Аравдугаар сар 1, 2022 - Арванхоёрдугаар сарын 18,
     2022
+  hoc2023_header: AI нь бүтээлч
+  hoc2023_social_creativity_with_ai_title: Кодын цаг - Та юу үүсгэх вэ?
+  hoc2023_social_creativity_with_ai_desc: АИ-ийн талаар судлах, сурахын тулд компьютерийн
+    шинжлэх ухааныг ашигла!
   hoc2022_header: Судлах, Тоглох, Бүтээх!
   social_hoc2022_explore_play_create: Ашиглах компьютерийн шинжлэх ухаан судлах, тоглох,
     ба бий болгох!
@@ -189,6 +193,30 @@ mn:
   curriculum_launch_2023_desc: CSC, CSP, CSD болон бусад шинэчлэлтүүд - Сургалтын
     хөтөлбөрийн шинэ каталог, шинэчилсэн Teach хуудсыг бүгдийг нь олоход туслах болно!
   in_partnership_with: хамтран
+  shop_code_dot_org_heading: Code.org дэлгүүр
+  shop_code_dot_org_desc: Бидний ажлыг дэмжиж, хөдөлгөөнийг бахархалтайгаар өмс. Манай
+    малгайг Ерөнхийлөгч Обама болон алдартнууд ч бас өмсдөг.
+  spread_the_word_heading: Үгийг тараана
+  spread_the_word_desc: Code.org-ийг сүлжээтэйгээ хуваалцах замаар бидний нөлөөллийг
+    өсгөөрэй. Олон нийтийн мэдээллийн хэрэгслээс имэйлийн шинэчлэлтүүд хүртэл илүү
+    олон сурган хүмүүжүүлэгчид, оюутнууд, өмгөөлөгчдөд хүрэхэд бидэнд хэрхэн тусалж
+    болохыг олж мэдээрэй.
+  follow_us_heading: Олон нийтийн мэдээллийн хэрэгслээр биднийг дагаарай
+  follow_us_desc: Олон нийтийн мэдээллийн хэрэгслээр бидэнтэй хамт байгаарай, мэдээлэлтэй
+    байх, мэдлэгийг жолоодоход туслахын тулд сүлжээндээ бичлэгээ хуваалцаарай.
+  facebook: Фэйсбүүк
+  twitter: Твиттер
+  linked_in: LinkedIn
+  instagram: Инстаграм
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Имэйлд бүртгүүлэх
+  subscribe_to_emails_desc: Code.org болон компьютерийн шинжлэх ухааны боловсролд
+    болж буй зүйлсийн талаар улирлын шинэчлэлтүүдээр дамжуулан манай захидлын жагсаалтаар
+    дамжуулан уншина уу.
+  subscribe_to_emails_intl: Олон улсын шинэчлэлтүүдийг захиалах
+  promote_code_dot_org_heading: Code.org-ийг сурталчлах
+  promote_code_dot_org_desc: Статистик, ишлэл, видео бичлэгийн тусламжтайгаар өөрийн
+    нутагт компьютерийн шинжлэх ухааныг сурталчлах.
   afe_partnership_logo_alt: Амазоны ирээдүйн инженер лого
   afe_partnership_thanks_desc: Амазоны ирээдүйн инженер нь бага орлоготой болон бусад
     эмзэг бүлгийн хүүхэд, залуучуудыг компьютерийн шинжлэх ухааны чиглэлээр ажил мэргэжил
@@ -207,6 +235,15 @@ mn:
   curricula_title_high: Ахлах сургууль Crack
   curricula_desc_high: Та болон ахлах сургуулийн сурагчдыг компьютерийн шинжлэх ухаанд
     гүн гүнзгий ухахыг урьсан хичээл, үйл ажиллагаануудыг үзээрэй.
+  for_administrators_heading: Администраторуудын хувьд
+  for_administrators_desc: Компьютерийн шинжлэх ухааныг сургалтын хөтөлбөртөө аль
+    хэдийн оруулсан мянга мянган сургуулиудтай нэгдээрэй.
+  for_parents_heading: Эцэг эхчүүдэд
+  for_parents_desc: Та оюутны сургуулиа компьютерийн шинжлэх ухааны боловсролыг санал
+    болгох эсвэл өргөжүүлэхэд нь урамшуулан дэмжихэд тусалж чадна.
+  for_educators_heading: Сурган хүмүүжүүлэгчдэд
+  for_educators_desc: Өнөөдөр зааж эхэл - шаардлагатай компьютерийн шинжлэх ухааны
+    туршлага байхгүй - манай мэргэжлийн сургалтын семинар нь.
   students_label: Оюутнууд
   teachers_label: Багш нар
   teacher_label_csf: CS багш үндэс
@@ -216,10 +253,11 @@ mn:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Шаардлагатай материал:'
   optional_materials: 'Нэмэлт материал:'
-  call_to_action_explore_roles: Нээлттэй үүргийг судлах
+  call_to_action_hold_an_event: Үйл явдал зохион байгтун
   call_to_action_learn_more: Илүү ихийг олж мэдэх
   call_to_action_watch_now: Одоо үзэх
   call_to_action_try_activity: Үйл ажиллагааг туршиж үзээрэй
+  call_to_action_try_activities: Үйл ажиллагааг туршиж үзээрэй
   call_to_action_explore_unit: Нэгж судлах
   call_to_action_explore_curriculum: Сургалтын хөтөлбөрийг судлах
   call_to_action_explore_curriculum_options: Сургалтын хөтөлбөрийн сонголтуудыг судлах
@@ -289,7 +327,20 @@ mn:
   call_to_action_notify_available: Боломжтой бол надад мэдэгдээрэй
   call_to_action_register_early_access: Эрт нэвтрэхийн тулд бүртгүүлэх
   call_to_action_open_positions: Нээлттэй байрлалыг харах
+  call_to_action_explore_roles: Нээлттэй үүргийг судлах
   call_to_action_get_guide: Гарын авлагыг авах
+  call_to_action_donate_to_cdo: Code.org руу хандив өгөх
+  call_to_action_start_fundraiser: нь хандивын арга эхлэх
+  call_to_action_view_donation_policy: Хандивын бодлогыг харах
+  call_to_action_view_donate_bitpay: BitPay нь хандивлах
+  call_to_action_make_a_donation: Хандив хийх
+  call_to_action_other_ways_to_give: Өгөх бусад арга замууд
+  call_to_action_become_partner_usa: АНУ-ын түнш болох
+  call_to_action_become_partner_intl: Олон улсын түнш болох
+  call_to_action_become_a_volunteer: Сайн дурын ажилтан болох
+  call_to_action_start_translating: Орчуулж эхлэх
+  call_to_action_learn_about_advocacy: Бидний өмгөөллийн талаар олж мэдэх
+  call_to_action_visit_store: Дэлгүүрт зочилно уу
   aria_label_call_to_action_afe: Амазоны ирээдүйн инженер талаар илүү ихийг олж мэдэх
   aria_label_call_to_action_teaching_csf: Заах Компьютерийн шинжлэх ухааны үндэс мэргэжлийн
     сургалтын хөтөлбөрийг эхлүүлэх
@@ -396,6 +447,7 @@ mn:
   curriculum_name_csp: Компьютерийн шинжлэх ухааны зарчим
   curriculum_name_csc: Компьютерийн шинжлэх ухааны холболтууд
   curriculum_name_csa: AP® Компьютерийн шинжлэх ухаан A
+  curriculum_name_csa_ai: Програм хангамжийн инженерчлэл ба компьютерийн алсын хараа
   curriculum_name_csc_02: Аливаа CS холболтуудын модуль
   curriculum_name_ai: AI & Машины сургалтын
   curriculum_name_artificial_intelligence: Хиймэл оюун ухаан (AI)
@@ -472,6 +524,12 @@ mn:
     системийг бий болгодог.
   curriculum_desc_csp: Үнэгүй, AP® CSP нь оюутнуудад компьютерийн шинжлэх ухааны үндсэн
     ойлголтуудыг танилцуулдаг ахлах сургуулийн танилцуулах сургалт.
+  curriculum_desc_csa_ai_long: 'Энэхүү хоёр бүлгийн дараах AP-ийн CSA модуль нь ахлах
+    сургуулийн сурагчдад GitHub, GitHub Copilot зэрэг мэргэжлийн програм хангамж хөгжүүлэх
+    хэрэгслүүдтэй туршлага хуримтлуулж, компьютерийн алсын хараатай програм хөгжүүлэх
+    бодит ур чадварыг өгдөг. '
+  curriculum_desc_csa_ai_short: Энэхүү POST-AP® CSA модуль нь ахлах ангийн сурагчдад
+    мэргэжлийн програм хангамж хөгжүүлэх хэрэгслээр туршлага хуримтлуулдаг.
   collection_hardware: Тоног төхөөрөмж дээр анхаарлаа төвлөрүүл
   collection_hardware_desc: Оюутнуудад асуудлыг шийдвэрлэхийн тулд өгөгдөл, физик
     төхөөрөмж ашиглах боломжийг олгодог.
@@ -546,6 +604,7 @@ mn:
   module_duration_2_hrs: 2 цаг
   module_duration_3_hrs: 3 цаг
   module_duration_5_hrs: 5 цаг
+  module_duration_5_hrs_plus: 5+ цаг
   module_duration_8_hrs: 8 цаг
   module_duration_20_hrs: 20 цаг
   module_duration_35_hrs: 35 цаг
@@ -624,6 +683,8 @@ mn:
   heading_these_lessons_will: 'Эдгээр хичээлүүд нь:'
   heading_explore_curriculum_catalog: Сургалтын хөтөлбөрийн каталогид манай бүх хичээлийг
     судлаарай
+  heading_csa_ai: AP® шалгалтын дараа хийх зүйлийг хайж байна уу?
+  heading_bring_cs_to_students: Оюутнуудад компьютерийн шинжлэх ухааныг авчрах
   professional_learning_section_desc: Заах бэлтгэлээ базааж байхдаа хэрэгтэй дэмжлэгээ
     аваарай. Багш нар үүнийг хайрладаг бөгөөд 90% -иас дээш нь хамгийн сайн мэргэжлийн
     хөгжлийг эрэмбэлдэг!
@@ -656,6 +717,20 @@ mn:
   support_and_questions_section_desc: Манай дэмжлэгийн баг Code.org-ээс багшилж эхлэх
     талаар асууж болох бүх асуултанд хариулахаар ирлээ. Та бусад багш нараас манай
     багш нарын форум дээр туршлагын талаар асууж болно.
+  subscribe_form_section_title: Шинэчлэлтүүдийг захиалах
+  subscribe_form_section_desc_csa: Code.org-ийн AP® Computer Science A-ийн талаар
+    сар бүр имэйл хүлээн авахын тулд гарын үсэг зурж, таны ирсэн мэйлд зөв илгээгдсэн
+    сануулга, зөвлөмж, шинэчлэлтүүдийг аваарай.
+  subscribe_form_section_desc_csc: Code.org-ийн Computer Science Connections-ийн талаар
+    сар бүр имэйл хүлээн авахын тулд бүртгүүлнэ үү.
+  subscribe_form_section_desc_csd: Code.org-ийн Компьютерийн шинжлэх ухааны нээлтүүдийн
+    талаар сар бүр имэйл хүлээн авахын тулд бүртгүүлнэ үү.
+  subscribe_form_section_desc_csf: Code.org-ийн Computer Science Fundamentals-ийн
+    талаар сар бүр имэйл хүлээн авахын тулд бүртгүүлнэ үү.
+  subscribe_form_section_desc_csp: Code.org-ийн Компьютерийн шинжлэх ухааны зарчмуудын
+    талаар сар бүр имэйл хүлээн авахын тулд гарын үсэг зурж, таны ирсэн мэйлд зөв
+    илгээсэн сануулга, зөвлөмж, шинэчлэлтүүдийг аваарай.
+  subscribe_form_section_unsubscribe: Та ямар ч үед бүртгэлээс хасах боломжтой.
   blockchain_hero_heading: Блокчейн хэрхэн ажилладаг
   blockchain_hero_desc: нь blockchain ертөнцөд шумбах “Хэрхэн Blockchain ажил,” Манай
     шинэ видео цуврал болон дагалдах хичээл!
@@ -762,6 +837,9 @@ mn:
     цувралыг нэмэгдүүлдэг. Хичээл бүрийг цувралаас нэг видеотой хослуулж, видеонууд
     дээр танилцуулсан ойлголтуудыг гүнзгийрүүлэн судлах болно.
   ai_curriculum_btn_aria_label_04: AI хичээл хэрхэн ажилладаг талаар судлах
+  ai_curriculum_grades_05: 'Ангийн түвшин: 9-12'
+  ai_curriculum_btn_aria_label_05: Програм хангамжийн инженерчлэл ба компьютерийн
+    алсын хараатай модулийг судлах
   ai_carousel_heading: 'Багш нар Code.org-тай AI-ийн талаар юу гэж хэлдэг вэ:'
   ai_carousel_quote_01: Энэ хичээл нь миний оюутнуудад ангиллын системд үзэл бодлын
     элемент байгааг харах боломжийг олгосон юм. Хожим нь бид AI дээр хэвийх утгыг
@@ -879,6 +957,7 @@ mn:
     боловсролын арга хэрэгслийг ашиглах,, оюутны үнэлгээ AI хөшүүрэг. онолын баялаг
     хольц нь, практик жишээ,, нөөц, Энэ нь AI ландшафтыг жолоодож, оюутны сургалтын
     туршлагыг сайжруулах багш нарыг чадавхжуулах зорилготой.
+  ai_pl_101_resources_5: АИ-д хариуцлагатай хандах хандлагыг хангах гарын авлага
   ai_pl_101_video_desc_6: 'Том хэлний загварууд (ChatGPT гэх мэт) болон Generative
     AI дээрх хоёр шинэ видеог багтаасан AI-ийн томоохон өөрчлөлтийг жолоодох шинэ
     технологийн талаар илүү ихийг олж мэдээрэй. Эдгээр шинэ технологиуд хэрхэн ажилладаг
@@ -889,6 +968,9 @@ mn:
     эхлэн суралцагчаас дэвшилтэт хүртэл. Зөвхөн хөлийнхөө хурууг дүрэх хүмүүст зориулсан
     гарааны сануулгыг багтаасан болно, түүнчлэн тэдний боломжийг нэмэгдүүлэхийн тулд
     хайж буй хүмүүст зориулсан дэвшилтэт хэрэгслүүд.
+  ai_pl_101_resources_3: Оюутны сургалтыг өөрчлөх хиймэл оюун ухааны сануулга
+  ai_pl_101_resources_section_title: АИ-ийн талаар сурах илүү олон арга замууд
+  ai_pl_101_resources_guide: 'Хамтрагчийн гарын авлага:'
   how_ai_works_hero_heading: AI хэрхэн ажилладаг вэ
   how_ai_works_hero_desc: "“AI хэрхэн ажилладаг вэ”, манай видео цуврал болон дагалдах
     хичээлүүдээр хиймэл оюун ухааны ертөнцөд шумбах!"
@@ -1302,8 +1384,8 @@ mn:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Апп Лаб
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Сургагч багшийн удирдсан семинар,
+    өөрөө хурдтай модулиуд
   csp_page_curriculum_glance_professional_languages: Англи хэл
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1431,8 +1513,8 @@ mn:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Апп лаборатори, Тоглоомын лаборатори, AI лаборатори,
     Вэб лаборатори
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Сургагч багшийн удирдсан семинар,
+    өөрөө хурдтай модулиуд
   csd_page_curriculum_glance_professional_languages: Англи хэл
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1576,8 +1658,8 @@ mn:
     ба Дизайн, Апп дизайн
   csf_page_curriculum_glance_devices: Зөөврийн компьютер, Chromebook, Таблет
   csf_page_curriculum_glance_tools: Спрайт Лаб, Тоглоомын лаборатори
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Сургагч багшийн удирдсан семинар,
+    өөрөө хурдтай модулиуд
   csf_page_curriculum_glance_languages: Араб хэл, Индонезийн Bahasa, Catalan, БНХАУ-ын
     хялбаршуулсан, Хятадын уламжлалт, Чех, Францын, Германы, Хинди хэл, Италийн, Япон,
     БНСУ-ын, Каннада, Малай хэл, Марати хэл, Монгол Улсын, Польшийн, Португаль-BR,
@@ -1713,6 +1795,65 @@ mn:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Бидний эрхэм зорилгыг санхүүжүүлэхэд тусална уу
+  donate_page_top_desc: Хандив бүр Code.org-ийн компьютерийн шинжлэх ухааны боловсролын
+    хүртээмжийг өргөжүүлэхэд чиглэгддэг. Бид танд хандив өгч, өөрчлөлт хийх хэд хэдэн
+    арга замыг санал болгож байна.
+  donate_page_fundraise_title: Code.org-д зориулсан хөрөнгө босгох
+  donate_page_fundraise_desc: Code.org-д мөнгө босгоход тусална уу! Сургууль бүрийн
+    оюутан бүр компьютерийн шинжлэх ухааныг сурах боломжтой байх ёстой.
+  donate_page_other_ways_title: Өгөх бусад арга замууд
+  donate_page_other_ways_desc: Хувь нэмэр оруулах янз бүрийн аргыг судалж, хамгийн
+    сайн тохирсон сонголтыг олоорой. Том эсвэл жижиг дохио зангаа бүр бидний эрхэм
+    зорилгыг урагшлуулдаг.
+  donate_page_501c3: Code.org нь олон нийтийн 501 (c) (3) ашгийн бус байгууллагаар
+    бүртгэгдсэн байдаг. Code.org-д оруулсан хувь нэмэр нь хуулиар зөвшөөрөгдсөн хэмжээгээр
+    татвараас хасагдана. Code.org-ийн татварын дугаар 46-0858543 байна.
+  donate_page_donation_policy_title: Хандивын бодлогыг ойлгох нь
+  donate_page_donation_policy_desc: Бид таны оруулсан хувь нэмрийг хэрхэн зохицуулж,
+    хуваарилах талаар олж мэдээрэй.
+  donate_tabs_tab_label_daf_direct: Шууд DAF
+  donate_tabs_tab_label_amazon: Амазоны
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Ажилчдын тоглолт
+  donate_tabs_daf_direct_title: DAF Шууд дамжуулан Хандивлах
+  donate_tabs_daf_direct_desc: Хандивлагчийн зөвлөсөн сангаараа дамжуулан хандив өргөж,
+    Fidelity Charitable, Schwab Charitable, BNY Mellon зэрэг DAF Direct онлайн хэлбэрээр
+    дамжуулан Code.org-т буцалтгүй тусламжийн зөвлөмжийг гаргана уу.
+  donate_tabs_amazon_title: Амазоноор дамжуулан хандив өгөх
+  donate_tabs_amazon_desc: Амазоны дансаа ашиглан шууд хандивлаарай. Хэдхэн товшилтоор
+    Code.org-ийн эрхэм зорилгод хувь нэмрээ оруулж, компьютерийн шинжлэх ухааны боловсролын
+    ирээдүйг хүчирхэгжүүлэх болно.
+  donate_tabs_bitpay_title: BitPay-ээр дамжуулан криптогоор хандив өргөөрэй
+  donate_tabs_bitpay_desc: cryptocurrency нь өгөх ирээдүйг баяртайгаар хүлээн авах.
+    BitPay-ээр дамжуулан таны дижитал валют нь Code.org-ийн компьютерийн шинжлэх ухааны
+    боловсролыг өргөжүүлэхэд чиглэсэн үйл ажиллагааг шууд дэмжиж чадна.
+  help_page_top_heading: Та хэрхэн тусалж чадах вэ
+  help_page_top_desc: Компьютерийн шинжлэх ухааныг хүүхэд бүрт хүртээмжтэй болгох
+    эрхэм зорилгоо дэмжиж, хаа сайгүй. Таны хүчин чармайлт ирээдүйн шинийг санаачлагчдад
+    урам зориг өгч, технологийн боловсролын зөрүүг арилгахад тусалдаг.
+  help_page_top_subhead: Code.org-д хандив өргөх
+  help_page_top_desc_02: Бид оюутан бүрт компьютерийн шинжлэх ухааныг сурах боломжийг
+    олгохын тулд ажиллаж байна - онлайн болон сургуулиудад аль алинд нь, бид байнгын
+    курс байгуулж, багш нарыг сургах. Таны хандивласан доллар бүрт нэг хүүхдийг компьютерийн
+    шинжлэх ухаанд нэвтрүүлдэг.
+  help_page_partners_heading: Түнш болох
+  help_page_partners_desc: Code.org нь орон нутгийн, тогтвортой загвараар компьютерийн
+    шинжлэх ухааныг түгээн дэлгэрүүлэхэд туслах зорилгоор бусад ашгийн бус байгууллагуудтай
+    хамтран ажилладаг. Манай хөтөлбөрийн талаар илүү ихийг олж мэдэх.
+  help_page_volunteer_heading: Ангид сайн дурын ажилтан
+  help_page_volunteer_desc: Сайн дурын ажилтан Кодын цагийг заах эсвэл орон нутгийн
+    ангид зочин илтгэгч байх. Ойролцоох боломжуудын талаар сонсохын тулд бүртгүүлнэ
+    үү.
+  help_page_translate_heading: Орчуулга хийхэд бидэнд тусална уу
+  help_page_translate_desc: Сайн дурынхан манай хичээлийг 45 гаруй хэл дээр орчуулсан.
+    Дэлхий даяар оюутнуудад зориулсан хичээлээ үргэлжлүүлэн өргөжүүлэхэд бидэнд тусална
+    уу!
+  help_page_speak_for_cs_heading: Компьютерийн шинжлэх ухааны боловсролын талаар ярих
+  help_page_speak_for_cs_desc: Code.org-ийн АНУ даяар сурталчлах ажил, бүх оюутнуудад
+    компьютерийн шинжлэх ухааны үндэс суурийг бий болгохын тулд муж улсуудаас санал
+    болгож буй арван бодлогын талаар илүү ихийг олж мэдэх. Дээрээс нь, та өөрийн муж
+    дахь өөрчлөлтийг хэрхэн жолоодож болохыг олж мэдээрэй.
   hoc_live: Амьд кодын цаг
   hoc_live_sign_up_title: Шууд кодын цагт бүртгүүлнэ үү
   hoc_live_learn_title: Код Live цагийн хамт суралц
@@ -13740,6 +13881,11 @@ mn:
     шинжлэх ухааны талаар (1 мин)
   video_library_page_inspirational_video_title_11: Хэн ч сурч болно (1 мин)
   video_library_page_inspirational_video_title_12: Фалта ба Нуэстрас Скуэлас (2 мин)
+  video_library_page_inspirational_video_title_13: НАСА-гийн Кодын цагийг тэмдэглэж
+    байна (2 мин)
+  video_library_page_inspirational_video_title_14: Энэ бол тоглоомоос илүү (1 мин)
+  video_library_page_inspirational_video_title_15: Компьютерийн шинжлэх ухаан нь бий
+    болгох (1 мин)
   video_library_page_not_hacked_video_title_1: 'Хэрхэн хакердахгүй байх вэ: Танилцуулга'
   video_library_page_not_hacked_video_title_2: 'Хэрхэн үгүй биш хакерджээ авах: Нууц
     үг'

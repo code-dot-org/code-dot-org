@@ -89,6 +89,15 @@
         "code/poetry/2023": {
           "word": "Код"
         },
+        "input/csd/2023": {
+          "word": "Влез"
+        },
+        "variable/csd/2023": {
+          "word": "Променлива"
+        },
+        "function/csd/2023": {
+          "word": "Функција"
+        },
         "data/coursec/2023": {
           "word": "Податоци"
         },

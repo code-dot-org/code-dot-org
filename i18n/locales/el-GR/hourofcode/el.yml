@@ -36,6 +36,10 @@ el:
   africa_campaign_date_full: 1 Οκτωβρίου - 18 Δεκεμβρίου
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 Οκτωβρίου 2022 - 18 Δεκεμβρίου 2022
+  hoc2023_header: Δημιουργικότητα με AI
+  hoc2023_social_creativity_with_ai_title: Ώρα του Κώδικα - Τι θα δημιουργήσετε;
+  hoc2023_social_creativity_with_ai_desc: Χρησιμοποιήστε την επιστήμη των υπολογιστών
+    για να εξερευνήσετε και να μάθετε για το AI!
   hoc2022_header: Εξερευνήστε, Παίξτε, Δημιουργήστε!
   social_hoc2022_explore_play_create: Χρησιμοποιήστε την εποστήμη των υπολογιστών
     για να εξερευνήσετε, να παίξετε και να δημιουργήσετε!
@@ -193,6 +197,31 @@ el:
     Κατάλογος Προγράμματος Σπουδών και επανασχεδιασμένη σελίδα Teach για να σας βοηθήσει
     να τα βρείτε όλα!
   in_partnership_with: Σε συνεργασία με
+  shop_code_dot_org_heading: Αγοράστε το Code.org
+  shop_code_dot_org_desc: Υποστηρίξτε τη δουλειά μας και φορέστε το κίνημα με υπερηφάνεια.
+    Τα καπέλα μας έχουν φορεθεί από τον Πρόεδρο Ομπάμα και διασημότητες επίσης.
+  spread_the_word_heading: Διάδωσέ το
+  spread_the_word_desc: Ενισχύστε τον αντίκτυπό μας κοινοποιώντας το Code.org με το
+    δίκτυό σας. Από τα μέσα κοινωνικής δικτύωσης έως τις ενημερώσεις μέσω email, ανακαλύψτε
+    πώς μπορείτε να μας βοηθήσετε να προσεγγίσουμε περισσότερους εκπαιδευτικούς, Φοιτητές,
+    και υποστηρικτές.
+  follow_us_heading: Ακολουθήστε μας στα μέσα κοινωνικής δικτύωσης
+  follow_us_desc: Μείνετε ενημερωμένοι μαζί μας στα μέσα κοινωνικής δικτύωσης και
+    μοιραστείτε τις αναρτήσεις μας με το δίκτυό σας για να μείνετε ενημερωμένοι και
+    να βοηθήσετε στην ευαισθητοποίηση.
+  facebook: Facebook
+  twitter: Κελάδημα
+  linked_in: LinkedIn
+  instagram: Ίνσταγκραμ
+  tik_tok: Τικ Τ
+  subscribe_to_emails_heading: Εγγραφείτε σε μηνύματα ηλεκτρονικού ταχυδρομείου
+  subscribe_to_emails_desc: Διαβάστε για το τι συμβαίνει στο Code.org και στην εκπαίδευση
+    της επιστήμης των υπολογιστών μέσω τριμηνιαίων ενημερώσεων μέσω της λίστας αλληλογραφίας
+    μας.
+  subscribe_to_emails_intl: Εγγραφείτε σε διεθνείς ενημερώσεις
+  promote_code_dot_org_heading: Προώθηση του Code.org
+  promote_code_dot_org_desc: Προωθήστε την επιστήμη των υπολογιστών στην περιοχή σας
+    με τη βοήθεια στατιστικών, εισαγωγικών και βίντεο.
   afe_partnership_logo_alt: Amazon Future Engineer logo
   afe_partnership_thanks_desc: Το Amazon Future Engineer είναι ένα ολοκληρωμένο πρόγραμμα
     παιδικής ηλικίας που εμπνέει, εκπαιδεύει και καταρτίζει παιδιά και νέους από οικογένειες
@@ -214,6 +243,15 @@ el:
   curricula_desc_high: Περιηγηθείτε στα συναρπαστικά μαθήματα και δραστηριότητες που
     προσκαλούν εσάς και τους μαθητές γυμνασίου σας να εμβαθύνετε στην επιστήμη των
     υπολογιστών.
+  for_administrators_heading: Για διαχειριστές
+  for_administrators_desc: Γίνετε μέλος των χιλιάδων σχολείων που έχουν ήδη ενσωματώσει
+    την επιστήμη των υπολογιστών στο πρόγραμμα σπουδών τους.
+  for_parents_heading: Για τους γονείς
+  for_parents_desc: Μπορείτε να βοηθήσετε να ενθαρρύνετε το σχολείο του μαθητή σας
+    να προσφέρει ή να επεκτείνει την εκπαίδευση στην επιστήμη των υπολογιστών.
+  for_educators_heading: Για εκπαιδευτικούς
+  for_educators_desc: Ξεκινήστε να διδάσκετε σήμερα - δεν απαιτείται εμπειρία επιστήμης
+    υπολογιστών - με τα επαγγελματικά εργαστήρια μάθησης.
   students_label: Μαθητές
   teachers_label: Δάσκαλοι
   teacher_label_csf: Δάσκαλος βασικών αρχών CS
@@ -223,10 +261,11 @@ el:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Απαιτούμενα υλικά:'
   optional_materials: 'Προαιρετικά υλικά:'
-  call_to_action_explore_roles: Εξερευνήστε ανοιχτούς ρόλους
+  call_to_action_hold_an_event: Πραγματοποιήστε μια εκδήλωση
   call_to_action_learn_more: Μάθετε περισσότερα
   call_to_action_watch_now: Παρακολουθήστε τώρα
   call_to_action_try_activity: Δοκιμάστε τη δραστηριότητα
+  call_to_action_try_activities: Δοκιμάστε δραστηριότητες
   call_to_action_explore_unit: Εξερεύνηση μονάδας
   call_to_action_explore_curriculum: Εξερευνήστε το πρόγραμμα σπουδών
   call_to_action_explore_curriculum_options: Εξερευνήστε τις επιλογές προγράμματος
@@ -299,7 +338,20 @@ el:
   call_to_action_notify_available: Ειδοποιήστε με όταν είναι διαθέσιμο
   call_to_action_register_early_access: Εγγραφείτε για έγκαιρη πρόσβαση
   call_to_action_open_positions: Προβολή ανοιχτών θέσεων
+  call_to_action_explore_roles: Εξερευνήστε ανοιχτούς ρόλους
   call_to_action_get_guide: Πάρτε τον οδηγό
+  call_to_action_donate_to_cdo: Δωρεά στο Code.org
+  call_to_action_start_fundraiser: Ξεκινήστε έναν έρανο
+  call_to_action_view_donation_policy: Δείτε την πολιτική δωρεών
+  call_to_action_view_donate_bitpay: Δωρεά με το BitPay
+  call_to_action_make_a_donation: Κάντε μια δωρεά
+  call_to_action_other_ways_to_give: Άλλοι τρόποι να δώσετε
+  call_to_action_become_partner_usa: Γίνετε εταίρος των Ηνωμένων Πολιτειών
+  call_to_action_become_partner_intl: Γίνετε διεθνής εταίρος
+  call_to_action_become_a_volunteer: Γίνε εθελοντής
+  call_to_action_start_translating: Ξεκινήστε τη μετάφραση
+  call_to_action_learn_about_advocacy: Μάθετε για την υπεράσπισή μας
+  call_to_action_visit_store: Επισκεφθείτε το κατάστημα
   aria_label_call_to_action_afe: Μάθετε περισσότερα για τον Μηχανικό Μελλοντικού της
     Amazon
   aria_label_call_to_action_teaching_csf: Ξεκινήστε το πρόγραμμα επαγγελματικής μάθησης
@@ -411,6 +463,7 @@ el:
   curriculum_name_csp: Αρχές Επιστήμης Υπολογιστών
   curriculum_name_csc: Συνδέσεις Επιστήμης Υπολογιστών
   curriculum_name_csa: AP® Επιστήμη Υπολογιστών A
+  curriculum_name_csa_ai: Μηχανική Λογισμικού & Όραμα Υπολογιστών
   curriculum_name_csc_02: Οποιαδήποτε ενότητα συνδέσεων CS
   curriculum_name_ai: Al και η Μηχανική Μάθηση
   curriculum_name_artificial_intelligence: Τεχνητή Νοημοσύνη (AI)
@@ -493,6 +546,12 @@ el:
     κινούμενων σχεδίων, παιχνιδιών και φυσικών υπολογιστικών συστημάτων.
   curriculum_desc_csp: Δωρεάν, εγκεκριμένο από το AP® CSP, εισαγωγικό μάθημα γυμνασίου
     που εισάγει τους μαθητές στις θεμελιώδεις έννοιες της επιστήμης των υπολογιστών.
+  curriculum_desc_csa_ai_long: 'Αυτή η ενότητα δύο κεφαλαίων μετά το AP CSA προσφέρει
+    στους μαθητές γυμνασίου πρακτική εμπειρία με επαγγελματικά εργαλεία ανάπτυξης
+    λογισμικού, συμπεριλαμβανομένων των GitHub και GitHub Copilot, και τους μεταδίδει
+    τις πραγματικές δεξιότητες για την ανάπτυξη ενός προγράμματος όρασης υπολογιστή. '
+  curriculum_desc_csa_ai_short: Αυτή η ενότητα Post-AP® CSA προσφέρει στους μαθητές
+    γυμνασίου πρακτική εμπειρία με επαγγελματικά εργαλεία ανάπτυξης λογισμικού.
   collection_hardware: Εστίαση στο υλικό
   collection_hardware_desc: Δίνει τη δυνατότητα στους μαθητές να χρησιμοποιούν δεδομένα
     και φυσικές συσκευές για την επίλυση προβλημάτων.
@@ -569,6 +628,7 @@ el:
   module_duration_2_hrs: 2 ώρες
   module_duration_3_hrs: 3 ώρες
   module_duration_5_hrs: 5 ώρες
+  module_duration_5_hrs_plus: 5+ ώρες
   module_duration_8_hrs: 8 ώρες
   module_duration_20_hrs: 20 ώρες
   module_duration_35_hrs: 35 ώρες
@@ -654,6 +714,8 @@ el:
   heading_these_lessons_will: 'Αυτά τα μαθήματα θα:'
   heading_explore_curriculum_catalog: Εξερευνήστε όλα τα μαθήματά μας στον Κατάλογο
     Προγραμμάτων Σπουδών
+  heading_csa_ai: Ψάχνετε πράγματα που πρέπει να κάνετε μετά την εξέταση AP®?
+  heading_bring_cs_to_students: Φέρτε την επιστήμη των υπολογιστών στους μαθητές
   professional_learning_section_desc: Λάβετε την υποστήριξη που χρειάζεστε καθώς προετοιμάζεστε
     να διδάξετε. Οι εκπαιδευτικοί το λατρεύουν, με πάνω από 90% να το κατατάσσουν
     ως την καλύτερη επαγγελματική εξέλιξη όλων των εποχών!
@@ -689,6 +751,28 @@ el:
     σε οποιεσδήποτε ερωτήσεις μπορεί να έχετε σχετικά με την έναρξη της διδασκαλίας
     με το Code.org. Μπορείτε επίσης να ρωτήσετε άλλους εκπαιδευτικούς για την εμπειρία
     τους στα φόρουμ εκπαιδευτικών μας.
+  subscribe_form_section_title: Εγγραφείτε για ενημερώσεις
+  subscribe_form_section_desc_csa: Εγγραφείτε για να λαμβάνετε μηνιαία μηνύματα ηλεκτρονικού
+    ταχυδρομείου σχετικά με το AP® Computer Science A του Code.org και λάβετε χρήσιμες
+    υπενθυμίσεις, συμβουλές και ενημερώσεις που αποστέλλονται απευθείας στα εισερχόμενά
+    σας.
+  subscribe_form_section_desc_csc: Εγγραφείτε για να λαμβάνετε μηνιαία μηνύματα ηλεκτρονικού
+    ταχυδρομείου σχετικά με το Computer Science Connections του Code.org και λάβετε
+    χρήσιμες υπενθυμίσεις, συμβουλές και ενημερώσεις που αποστέλλονται απευθείας στα
+    εισερχόμενά σας.
+  subscribe_form_section_desc_csd: Εγγραφείτε για να λαμβάνετε μηνιαία μηνύματα ηλεκτρονικού
+    ταχυδρομείου σχετικά με τις Ανακαλύψεις Επιστήμης Υπολογιστών του Code.org και
+    λάβετε χρήσιμες υπενθυμίσεις, συμβουλές και ενημερώσεις που αποστέλλονται απευθείας
+    στα εισερχόμενά σας.
+  subscribe_form_section_desc_csf: Εγγραφείτε για να λαμβάνετε μηνιαία μηνύματα ηλεκτρονικού
+    ταχυδρομείου σχετικά με τις Βασικές Αρχές Επιστήμης Υπολογιστών του Code.org και
+    λάβετε χρήσιμες υπενθυμίσεις, συμβουλές και ενημερώσεις που αποστέλλονται απευθείας
+    στα εισερχόμενά σας.
+  subscribe_form_section_desc_csp: Εγγραφείτε για να λαμβάνετε μηνιαία μηνύματα ηλεκτρονικού
+    ταχυδρομείου σχετικά με τις Αρχές Επιστήμης Υπολογιστών του Code.org και λάβετε
+    χρήσιμες υπενθυμίσεις, συμβουλές και ενημερώσεις που αποστέλλονται απευθείας στα
+    εισερχόμενά σας.
+  subscribe_form_section_unsubscribe: Μπορείτε να διαγραφείτε ανά πάσα στιγμή.
   blockchain_hero_heading: Πώς λειτουργεί το Blockchain
   blockchain_hero_desc: Βουτήξτε στον κόσμο του blockchain με το «Πώς λειτουργεί το
     Blockchain», τη νέα μας σειρά βίντεο και τα συνοδευτικά μαθήματα!
@@ -800,6 +884,9 @@ el:
     Κάθε μάθημα συνδυάζεται με ένα μόνο βίντεο από τη σειρά, καταδύεται βαθύτερα στις
     έννοιες που εισάγονται στα βίντεο.
   ai_curriculum_btn_aria_label_04: Εξερευνήστε πώς λειτουργεί τα μαθήματα AI
+  ai_curriculum_grades_05: 'Επίπεδα βαθμού: 9-12'
+  ai_curriculum_btn_aria_label_05: Εξερευνήστε την ενότητα Μηχανική Λογισμικού & Όραμα
+    Υπολογιστών
   ai_carousel_heading: 'Τι λένε οι εκπαιδευτικοί για το AI με το Code.org:'
   ai_carousel_quote_01: Αυτό το μάθημα έδωσε επίσης στους μαθητές μου την ευκαιρία
     να δουν ότι υπάρχει ένα στοιχείο γνώμης στα συστήματα ταξινόμησης. Αργότερα, όταν
@@ -933,6 +1020,8 @@ el:
     θεωρίας, πρακτικών παραδειγμάτων και πόρων, στοχεύει να δώσει τη δυνατότητα στους
     εκπαιδευτικούς να περιηγηθούν στο τοπίο της τεχνητής νοημοσύνης και να βελτιώσουν
     τις μαθησιακές εμπειρίες των μαθητών.
+  ai_pl_101_resources_5: Οδηγός για τη διασφάλιση μιας υπεύθυνης προσέγγισης στην
+    τεχνητή νοημοσύνη
   ai_pl_101_video_desc_6: 'Μάθετε περισσότερα σχετικά με τη νέα τεχνολογία που οδηγεί
     τις μεγάλες αλλαγές στην τεχνητή νοημοσύνη, με δύο νέα βίντεο σε μοντέλα μεγάλων
     γλωσσών (όπως το ChatGPT) και Generative AI. Ακούστε πώς αυτές οι νέες τεχνολογίες
@@ -943,6 +1032,9 @@ el:
     ChatGPT, από αρχάριους έως προχωρημένους. Περιλαμβάνει προτροπές εκκίνησης για
     όσους απλώς βυθίζουν τα δάχτυλα των ποδιών τους, καθώς και προηγμένα εργαλεία
     για όσους θέλουν να μεγιστοποιήσουν τις δυνατότητές τους.
+  ai_pl_101_resources_3: Προτροπές AI για μετασχηματισμό της μάθησης των μαθητών
+  ai_pl_101_resources_section_title: Περισσότεροι τρόποι για να μάθετε για το AI
+  ai_pl_101_resources_guide: 'Συνοδευτικός οδηγός:'
   how_ai_works_hero_heading: Πώς λειτουργεί το AI
   how_ai_works_hero_desc: Βουτήξτε στον κόσμο της τεχνητής νοημοσύνης με το «How AI
     Works», τη σειρά βίντεο και τα συνοδευτικά μαθήματα!
@@ -1379,8 +1471,8 @@ el:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Εργαστήριο εφαρμογών
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Εργαστήρια καθοδηγούμενα από διαμεσολαβητές,
+    Αυτορυθμισμένες Ενότητες
   csp_page_curriculum_glance_professional_languages: ελληνικά
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1509,8 +1601,8 @@ el:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Εργαστήριο εφαρμογών, εργαστήριο παιχνιδιών, εργαστήριο
     AI, εργαστήριο Ιστού
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Εργαστήρια καθοδηγούμενα από διαμεσολαβητές,
+    Αυτορυθμισμένες Ενότητες
   csd_page_curriculum_glance_professional_languages: ελληνικά
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1666,8 +1758,8 @@ el:
     σχέδια, Τέχνη και Σχεδιασμός, Σχεδιασμός εφαρμογών
   csf_page_curriculum_glance_devices: Φορητός υπολογιστής, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Εργαστήρια καθοδηγούμενα από διαμεσολαβητές,
+    Αυτορυθμισμένες Ενότητες
   csf_page_curriculum_glance_languages: Αραβικά, Μπαχάσα Ινδονησιακά, Καταλανικά,
     Κινέζικα Απλοποιημένα, Παραδοσιακά Κινέζικα, Τσέχικα, Γαλλικά, Γερμανικά, Χίντι,
     Ιταλικά, Ιαπωνικά, Κορεάτικα, Κανάντα, Μαλαισιανά, Μαράθι, Μογγολικά, Πολωνικά,
@@ -1817,6 +1909,66 @@ el:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Βοηθήστε στη χρηματοδότηση της αποστολής μας
+  donate_page_top_desc: Κάθε δωρεά τροφοδοτεί την αποστολή της Code.org να επεκτείνει
+    την πρόσβαση στην εκπαίδευση στην επιστήμη των υπολογιστών. Προσφέρουμε διάφορους
+    τρόπους για να κάνετε δωρεά και να κάνετε τη διαφορά.
+  donate_page_fundraise_title: Συγκέντρωση χρημάτων για το Code.org
+  donate_page_fundraise_desc: Βοηθήστε να συγκεντρώσετε χρήματα για το Code.org! Κάθε
+    μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να μάθει την επιστήμη των
+    υπολογιστών.
+  donate_page_other_ways_title: Άλλοι τρόποι να δώσετε
+  donate_page_other_ways_desc: Εξερευνήστε διάφορες μεθόδους για να συνεισφέρετε και
+    βρείτε την επιλογή που σας ταιριάζει καλύτερα. Κάθε χειρονομία, μεγάλη ή μικρή,
+    προωθεί την αποστολή μας προς τα εμπρός.
+  donate_page_501c3: Το Code.org είναι εγγεγραμμένο ως δημόσιος μη κερδοσκοπικός οργανισμός
+    501 (c) (3). Οι συνεισφορές στο Code.org εκπίπτουν από το φόρο στο βαθμό που επιτρέπεται
+    από το νόμο. Ο αριθμός φορολογικού μητρώου του Code.org είναι 46-0858543.
+  donate_page_donation_policy_title: Κατανόηση της Πολιτικής Δωρεών μας
+  donate_page_donation_policy_desc: Μάθετε πώς χειριζόμαστε και κατανέμουμε τις συνεισφορές
+    σας.
+  donate_tabs_tab_label_daf_direct: DAF Άμεση
+  donate_tabs_tab_label_amazon: Αμαζόνιος
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Ταίριασμα εργαζομένων
+  donate_tabs_daf_direct_title: Δωρεά μέσω DAF Direct
+  donate_tabs_daf_direct_desc: Δωρίστε μέσω του ταμείου που σας συμβουλεύει ο δωρητής
+    με το Fidelity Charitable, το Schwab Charitable ή το BNY Mellon και κάντε τη σύσταση
+    επιχορήγησης στο Code.org μέσω της ηλεκτρονικής φόρμας DAF Direct.
+  donate_tabs_amazon_title: Δωρεά μέσω του Amazon
+  donate_tabs_amazon_desc: Δωρίστε απευθείας χρησιμοποιώντας τον λογαριασμό σας στο
+    Amazon. Με λίγα μόνο κλικ, συμβάλλετε απρόσκοπτα στην αποστολή του Code.org και
+    ενδυναμώστε το μέλλον της εκπαίδευσης στην επιστήμη των υπολογιστών.
+  donate_tabs_bitpay_title: Δωρεά με Crypto μέσω BitPay
+  donate_tabs_bitpay_desc: Αγκαλιάστε το μέλλον της προσφοράς με κρυπτογράφηση. Μέσω
+    του BitPay, το ψηφιακό σας νόμισμα μπορεί να υποστηρίξει άμεσα τις προσπάθειες
+    του Code.org στην επέκταση της εκπαίδευσης στην επιστήμη των υπολογιστών.
+  help_page_top_heading: Πώς μπορείτε να βοηθήσετε
+  help_page_top_desc: Υποστηρίξτε την αποστολή μας να κάνουμε την επιστήμη των υπολογιστών
+    προσβάσιμη για κάθε παιδί, παντού. Οι προσπάθειές σας μας βοηθούν να εμπνεύσουμε
+    μελλοντικούς καινοτόμους και να γεφυρώσουμε το χάσμα της τεχνολογικής εκπαίδευσης.
+  help_page_top_subhead: Κάντε μια δωρεά στο Code.org
+  help_page_top_desc_02: Εργαζόμαστε για να δώσουμε σε κάθε μαθητή την ευκαιρία να
+    μάθει την επιστήμη των υπολογιστών - τόσο διαδικτυακά όσο και σε σχολεία, όπου
+    δημιουργούμε μόνιμα μαθήματα και εκπαιδεύουμε καθηγητές. Για κάθε δολάριο που
+    δωρίζετε, ένα παιδί εισάγεται στην επιστήμη των υπολογιστών.
+  help_page_partners_heading: Γίνε συνεργάτης
+  help_page_partners_desc: Το Code.org συνεργάζεται με άλλους μη κερδοσκοπικούς οργανισμούς
+    ως συνεργάτες για να βοηθήσει στη διάδοση της επιστήμης των υπολογιστών με τοπικό,
+    βιώσιμο τρόπο. Μάθετε περισσότερα για το πρόγραμμά μας.
+  help_page_volunteer_heading: Εθελοντής σε μια τάξη
+  help_page_volunteer_desc: Εθελοντής για να διδάξετε την Ώρα του Κώδικα ή να γίνετε
+    προσκεκλημένος ομιλητής σε μια τοπική τάξη. Εγγραφείτε για να μάθετε για ευκαιρίες
+    κοντά σας.
+  help_page_translate_heading: Βοηθήστε μας να μεταφράσουμε
+  help_page_translate_desc: Οι εθελοντές έχουν μεταφράσει τα σεμινάρια μας σε περισσότερες
+    από 45 Γλώσσες. Βοηθήστε μας να συνεχίσουμε να επεκτείνουμε τα σεμινάρια μας για
+    μαθητές σε όλο τον κόσμο!
+  help_page_speak_for_cs_heading: Μιλήστε για την εκπαίδευση στην επιστήμη των υπολογιστών
+  help_page_speak_for_cs_desc: Μάθετε περισσότερα σχετικά με το έργο υπεράσπισης του
+    Code.org στις ΗΠΑ και τις δέκα πολιτικές που προτείνουμε να υιοθετήσουν τα κράτη
+    για να καταστήσουν την επιστήμη των υπολογιστών θεμελιώδη για όλους τους μαθητές.
+    Επιπλέον, μάθετε πώς μπορείτε να οδηγήσετε την αλλαγή στην πολιτεία σας.
   hoc_live: Ώρα του Κώδικα Ζωντανά
   hoc_live_sign_up_title: Εγγραφείτε για την Ώρα του Κώδικα Ζωντανά
   hoc_live_learn_title: Μάθετε με την Ώρα του Κώδικα Ζωντανά
@@ -14727,6 +14879,12 @@ el:
     λεπτό)
   video_library_page_inspirational_video_title_12: Λο Κε Φάλτα και Νουέστρας Εσκούελας
     (2 λεπτά)
+  video_library_page_inspirational_video_title_13: Η NASA γιορτάζει την ώρα του κώδικα
+    (2 λεπτά)
+  video_library_page_inspirational_video_title_14: Είναι κάτι περισσότερο από ένα
+    παιχνίδι (1 λεπτό)
+  video_library_page_inspirational_video_title_15: Δημιουργία με την Επιστήμη των
+    Υπολογιστών (1 λεπτό)
   video_library_page_not_hacked_video_title_1: 'Πώς να μην παραβιαστείτε: Εισαγωγή'
   video_library_page_not_hacked_video_title_2: 'Πώς να μην παραβιαστεί: Κωδικοί πρόσβασης'
   video_library_page_not_hacked_video_title_3: 'Πώς να μην παραβιαστεί: Έλεγχος ταυτότητας

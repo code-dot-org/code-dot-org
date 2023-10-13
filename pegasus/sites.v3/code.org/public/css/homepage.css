@@ -137,7 +137,8 @@ body.modal-open .supreme-container{
 }
 
 #homepage .hero-message {
-  font-family: 'Gotham 5r', sans-serif !important;
+  font-family: var(--main-font) !important;
+  font-weight: var(--semi-bold-font-weight) !important;
   font-size: 44px;
   line-height: 44px;
   color: #00ADBC;
@@ -156,7 +157,8 @@ body.modal-open .supreme-container{
 }
 
 #homepage .hero-message-codebytes a {
-  font-family: 'Gotham 5r', sans-serif !important;
+  font-family: var(--main-font) !important;
+  font-weight: var(--semi-bold-font-weight) !important;
 }
 
 .codebytes-img {
@@ -298,13 +300,13 @@ body.modal-open .supreme-container{
 
 .curriculum-banner a {
   color: var(--neutral_white) !important;
-  font-family: 'Gotham 4r', sans-serif !important;
+  font-family: var(--main-font) !important;
   text-decoration: underline !important;
 }
 
 .curriculum-link {
   color: var(--neutral_white) !important;
-  font-family: 'Gotham 4r', sans-serif !important;
+  font-family: var(--main-font) !important;
   text-decoration: underline !important;
 }
 
@@ -317,14 +319,15 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions #title {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 26px;
   color: var(--neutral_white);
   line-height: 30px;
 }
 
 #homepage #actions #subtitle {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   font-size: 16px;
   color: var(--neutral_white);
   margin: 15px 0 5px 0;
@@ -356,7 +359,6 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions .herohocbutton {
-  font-weight: bold;
   font-size: 18px;
   min-width: 230px;
   height: 40px;
@@ -367,7 +369,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions .herolink-white {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   font-weight: 500;
   font-size: 18px;
   color: var(--neutral_white);
@@ -425,14 +427,14 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions #volunteeraction {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   font-size: 16px;
   color: var(--neutral_white);
   margin-top: 30px;
 }
 
 #homepage #actions #volunteeraction a {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   font-size: 16px;
   color: var(--neutral_white);
   text-decoration: none;
@@ -473,12 +475,13 @@ body.modal-open .supreme-container{
   padding: 10px;
   font-size: 18px;
   text-align: left;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   text-align: center;
 }
 
 #homepage .quarterslot .slotbox .headerbox .header {
-  font-family: 'Gotham 7r', sans-serif
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
 }
 
 #homepage .quarterslot .slotbox .headerbox .sentence {
@@ -521,12 +524,13 @@ body.modal-open .supreme-container{
   padding: 10px;
   font-size: 18px;
   text-align: left;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   text-align: center
 }
 
 #homepage .quarterslot-links .headerbox .header {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);;
 }
 
 #homepage .quarterslot-links .headerbox .sentence {
@@ -547,7 +551,7 @@ body.modal-open .supreme-container{
 
 #homepage .quarterslot-links .thelinks .link {
   font-size: 16px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   color: var(--neutral_white);
   text-decoration: none;
 }
@@ -572,7 +576,8 @@ body.modal-open .supreme-container{
   padding: 10px;
   font-size: 20px;
   text-align: left;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-align: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -674,8 +679,8 @@ body.modal-open .supreme-container{
 .statistics a .stats-number {
   text-align: center;
   color: var(--neutral_dark);
-  font-family: 'Gotham 4r', sans-serif;
-  font-weight: 900;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-decoration: none;
 }
 
@@ -685,7 +690,8 @@ body.modal-open .supreme-container{
   text-align: center;
   padding-top: 12px;
   color: var(--neutral_dark);
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 
 .statistics a .stats-number:hover {
@@ -729,13 +735,14 @@ body.modal-open .supreme-container{
   font-size: 1.25em;
   line-height: 1.4em;
   padding-bottom: 0px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #homepage .vertical-stack .text strong {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-weight: normal;
 }
 
@@ -768,7 +775,8 @@ body.modal-open .supreme-container{
     }
       #homepage .csa .text:nth-of-type(2) {
         font-size: 32px;
-        font-family: 'Gotham 7r', sans-serif;
+        font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);;
         margin: 0 0 .75em;
       }
         #homepage .csa .text:nth-of-type(3) {

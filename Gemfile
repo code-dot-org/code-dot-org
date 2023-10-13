@@ -90,6 +90,7 @@ group :development, :test do
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
   gem 'brakeman'
+  gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
@@ -113,6 +114,7 @@ group :development, :test do
   gem 'rinku'
   gem 'rspec', require: false
   gem 'selenium-webdriver', '~> 4.0'
+  gem 'simplecov', '~> 0.22.0', require: false
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 5.2'
@@ -349,3 +351,5 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.2.1'
+
+gem "delayed_job_active_record", "~> 4.1"

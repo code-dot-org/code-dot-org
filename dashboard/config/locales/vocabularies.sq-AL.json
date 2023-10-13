@@ -1599,6 +1599,190 @@
         "poetry_circle/poetry/2023": {
           "definition": "Një hapësirë e sigurt dhe krijuese për të provuar poezi të reja dhe për të marrë reagime konstruktive nga të tjerët"
         },
+        "computer/csd/2023": {
+          "word": "Kompjuter",
+          "definition": "Një makinë që punon me informacion."
+        },
+        "input/csd/2023": {
+          "word": "Input",
+          "definition": "informacionin që kompjuterët marrin nga përdoruesit, pajisjet ose kompjuterët e tjerë"
+        },
+        "output/csd/2023": {
+          "word": "Output",
+          "definition": "informacionin që kompjuterët u japin përdoruesve, pajisjeve ose kompjuterëve të tjerë"
+        },
+        "processing/csd/2023": {
+          "word": "Përpunimi",
+          "definition": "Puna e të menduarit që bëjnë kompjuterët për ta kthyer input-in në output."
+        },
+        "storage/csd/2023": {
+          "word": "Ruajtje",
+          "definition": "Ruajtja e informacionit për t'u përdorur në të ardhmen"
+        },
+        "html/csd/2023": {
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, një gjuhë e përdorur për të krijuar webfaqe"
+        },
+        "html_element/csd/2023": {
+          "word": "Element i HTML-së",
+          "definition": "Një pjesë e një webfaqeje, e shënuar nga një etiketë hapëse dhe shpesh e mbyllur me një etiketë mbyllëse"
+        },
+        "html_tag/csd/2023": {
+          "word": "Etiketë e HTML-it",
+          "definition": "Grupi i veçantë i karaktereve që tregon fillimin dhe mbarimin e një elementi të HTML-së dhe llojin e atij elementi"
+        },
+        "website_content/csd/2023": {
+          "word": "Përmbajtja e webfaqes",
+          "definition": "Teksti dhe imazhet në një webfaqe"
+        },
+        "website_structure/csd/2023": {
+          "word": "Struktura e webfaqes",
+          "definition": "Mënyra se si organizohet përmbajtja e një webfaqe"
+        },
+        "heading/csd/2023": {
+          "word": "Titull",
+          "definition": "Një përmbledhje për një dokument ose pjesë të një dokumenti."
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Gjurmë digjitale",
+          "definition": "Informacioni i mbledhur në lidhje me një individ nëpër webfaqe të shumta në internet."
+        },
+        "css/csd/2023": {
+          "word": "CSS",
+          "definition": "Cascading Style Sheets; një gjuhë e përdorur për të përshkruar se si duhet të stilizohen elementet e HTML-së"
+        },
+        "css_selector/csd/2023": {
+          "word": "Përzgjedhës i CSS-së",
+          "definition": "pjesë e një rregulloreje të CSS-së që përcakton se tek cilat elemente të HTML-së duhet të aplikohet stili"
+        },
+        "copyright/csd/2023": {
+          "word": "E drejta e autorit",
+          "definition": "të drejtën ekskluzive ligjore për të shtypur, publikuar, interpretuar, filmuar ose regjistruar materiale letrare, artistike ose muzikore, dhe për të autorizuar të tjerët të bëjnë të njëjtën gjë"
+        },
+        "relevant/csd/2023": {
+          "word": "Relevant",
+          "definition": "lidhur ngushtë me një temë"
+        },
+        "search_engine/csd/2023": {
+          "word": "Makina e kërkimit",
+          "definition": "Një program që kërkon artikuj në World Wide Web."
+        },
+        "trustworthy/csd/2023": {
+          "word": "I besueshëm",
+          "definition": "i vërtetë dhe i sinqertë "
+        },
+        "css_class/csd/2023": {
+          "word": "Klasa CSS",
+          "definition": "Një identifikues që lejon elemente të shumta në një dokument HTML të stilohen në të njëjtën mënyrë"
+        },
+        "bug/csd/2023": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
+        },
+        "debugging/csd/2023": {
+          "word": "Debugging",
+          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "program/csd/2023": {
+          "word": "Programi",
+          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "parameter/csd/2023": {
+          "word": "Parametri",
+          "definition": "Informacion shtesë i dhënë si input në një bllok për të personalizuar funksionalitetin e tij"
+        },
+        "variable/csd/2023": {
+          "word": "Variabël",
+          "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite",
+          "definition": "Një karakter në ekran me atributet që përshkruajnë vendndodhjen, lëvizjen dhe pamjen e tij."
+        },
+        "dot_notation/csd/2023": {
+          "word": "Pikë shënimi",
+          "definition": "mënyra se si atributet e sprites përdoren në Game Lab, duke lidhur sprite dhe atributin me një pikë."
+        },
+        "property/csd/2023": {
+          "word": "Parametrat",
+          "definition": "Një emërtim për një karakteristikë të një sprite, siç është vendndodhja dhe pamja e tij"
+        },
+        "boolean_expression/csd/2023": {
+          "word": "Shprehja Boolean",
+          "definition": "në programim, një shprehje që vlerëson të Vërtetë ose të Pavërtetën. "
+        },
+        "condition/csd/2023": {
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
+        },
+        "conditionals/csd/2023": {
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraksioni",
+          "definition": "një paraqitje i thjeshtuar e diçkaje më komplekse. Abstraksionet ju lejojnë të fshehni detaje për t'ju ndihmuar të menaxhoni kompleksitetin, të përqendroheni në konceptet përkatëse dhe të arsyetoni për problemet në një nivel më të lartë."
+        },
+        "function/csd/2023": {
+          "word": "Funksion",
+          "definition": "Një pjesë e emëruar e udhëzimeve të programimit."
+        },
+        "user/csd/2023": {
+          "word": "Përdorues",
+          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
+        },
+        "circuit/csd/2023": {
+          "word": "Qark",
+          "definition": "Një pajisje që siguron një rrugë për rrjedhjen e një rryme elektrike, shpesh duke modifikuar atë rrymë. Në kompjuter, qarqet lejojnë operacione të thjeshta logjike dhe matematikore duke përdorur energji elektrike."
+        },
+        "machine_learning/csd/2023": {
+          "word": "Mësimi i Makinave",
+          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
+        },
+        "features/csd/2023": {
+          "word": "Karakteristikat",
+          "definition": "Inputet që një model përdor për të marrë vendime"
+        },
+        "label/csd/2023": {
+          "word": "Emërtimi",
+          "definition": "outputi që po përpiqeni të vendosni ose parashikoni me një model"
+        },
+        "model/csd/2023": {
+          "word": "Modeli",
+          "definition": "një program kompjuterik i dizajnuar për të marrë një vendim"
+        },
+        "supervised_learning/csd/2023": {
+          "word": "Të mësuarit me mbikëqyrje",
+          "definition": "Kur një njeri stërvit një model për të mësuar me shembuj"
+        },
+        "training/csd/2023": {
+          "word": "Trajnimi",
+          "definition": "dhënja e shembujve një modeli në mënyrë që të mund të mësojë"
+        },
+        "unsupervised_learning/csd/2023": {
+          "word": "Të mësuarit pa mbikëqyrje",
+          "definition": "Gjetja e modeleve në të dhëna që nuk kanë asnjë etiketë"
+        },
+        "categorical_data/csd/2023": {
+          "word": "Të dhëna kategorike",
+          "definition": "Të dhënat që mund të ndahen në grupe"
+        },
+        "classification/csd/2023": {
+          "word": "Klasifikimi",
+          "definition": "Parashikimi i një kategorie bazuar në karakteristika të tjera"
+        },
+        "bias/csd/2023": {
+          "word": "Njëanshmëria",
+          "definition": "Kur një vendim favorizon disa gjëra dhe i jep më pak prioritet ose përjashton të tjerat"
+        },
+        "numerical_data/csd/2023": {
+          "word": "Të dhëna numerike",
+          "definition": "të dhëna që mund të numërohen ose maten"
+        },
+        "ethics/csd/2023": {
+          "word": "Etika",
+          "definition": "udhëzime për sjellje të mirë"
+        },
         "algorithm/coursea/2023": {
           "word": "Algoritëm",
           "definition": "Një listë hapash për të përfunduar një detyrë."

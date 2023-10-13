@@ -8,9 +8,20 @@
         "CSD U1 storage outfit_2022": {
           "green": "سبز"
         },
+        "CSD U1 storage outfit_2023": {
+          "green": "سبز"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "سبز",
+          "red": "قرمز"
+        },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "سبز",
           "red": "قرمز"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "آبی",
+          "green": "سبز"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "آبی",

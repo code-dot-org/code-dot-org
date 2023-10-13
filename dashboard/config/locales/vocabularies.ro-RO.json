@@ -1145,6 +1145,9 @@
           "word": "Eveniment",
           "definition": "O acțiune care face ca ceva să se întâmple."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Inteligența artificială"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptare",
           "definition": "O schimbare a unui organism pentru a supraviețui mai bine mediului său"
@@ -1362,6 +1365,58 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Un spațiu sigur și creativ pentru a testa noi poezii și pentru a obține feedback constructiv de la alții"
+        },
+        "computer/csd/2023": {
+          "word": "Computer"
+        },
+        "input/csd/2023": {
+          "word": "Intrare"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Amprenta digitală"
+        },
+        "copyright/csd/2023": {
+          "word": "Drept de autor",
+          "definition": "dreptul legal exclusiv de a tipări, publica, interpreta, filma sau înregistra opere literare, artistice sau muzicale și de a autoriza pe alții să facă acest lucru"
+        },
+        "bug/csd/2023": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "debugging/csd/2023": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "program/csd/2023": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "variable/csd/2023": {
+          "word": "Variabilă",
+          "definition": "O etichetă pentru un fragment de informație utilizat într-un program."
+        },
+        "sprite/csd/2023": {
+          "word": "Spiriduș"
+        },
+        "condition/csd/2023": {
+          "word": "Condiție"
+        },
+        "conditionals/csd/2023": {
+          "word": "Condiţionale"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstractizare"
+        },
+        "function/csd/2023": {
+          "word": "Funcţie"
+        },
+        "user/csd/2023": {
+          "word": "Utilizator",
+          "definition": "O persoană care utilizează un obiect, inclusiv software și hardware."
+        },
+        "machine_learning/csd/2023": {
+          "word": "Învățare Automată",
+          "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
         },
         "algorithm/coursea/2023": {
           "word": "Algoritm",

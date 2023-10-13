@@ -8,6 +8,7 @@ import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * A set of one or more levels that are part of the same progression
@@ -117,7 +118,7 @@ const styles = {
   },
   text: {
     display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     letterSpacing: -0.12,
   },

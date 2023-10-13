@@ -27,7 +27,7 @@ nav: how_to_nav
 
 <a id="how-to-video"></a>
 
-## 1. آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -113,7 +113,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ایکٹیویٹی کے لیے اسٹوڈینٹس کو ہدایات دیں
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- ایک وائٹ بورڈ پر سبق لنک لکھیں. اپنے منتخب ٹیوٹوریل کے لئے [معلومات پر درج لنک تلاش کریں]({{ urls/learn }}).
 
 :اگر آپ کے اسٹوڈینٹس مشکلات پیش آئیں تو کہیں
 
@@ -153,6 +153,6 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ### آور-آف-کوڈ کے بعد کیا ہو گا?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+کمپیوٹر سائنس کو کوڈ کے گھنٹہ کے ساتھ ختم کرنے کی ضرورت نہیں ہے! [اپنے اسکول اور طالب علموں](/beyond) کو CS لانے کا طریقہ سیکھیں.
 
 {{ signup_button }}

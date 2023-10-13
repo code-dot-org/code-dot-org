@@ -980,6 +980,7 @@ pt:
         csd_gamelab_drawloop: Introdução ao Draw Loop
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_gamelab_if_else: Declarações Se/Senão
+        csd_gamelab_sprites_1: Introdução aos Sprites
         csd_gamelab_velocity: Velocidade
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_ml_ethics_ai: 'Ética e IA '
@@ -996,14 +997,14 @@ pt:
         csd_u6_call_define_functions: 'CSD: Chamando e definindo funções'
         csd_u6_circuit_playground: Computação Física
         csd_u6_if_statements: 'CSD: Declarações If'
-        csd_u6_input_output: Entrada e saída
+        csd_u6_input_output: Entrada e Saída
         csd_u6_variables_part2: Variáveis - Parte 2
         csd_weblab_css_1: Introdução para CSS - Parte 1
         csd_weblab_css_2: Introdução para CSS - Parte 2
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
         csd_weblab_intro_3: Introdução para o Laboratório Web - Parte 3
-        csd_what_computers_are: O que é um computador?
+        csd_what_computers_are: O que é um Computador?
         csd_what_computers_do: O que os computadores fazem?
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
         csf21pilot_prompts: 'Sprite Lab: texto e instruções'
@@ -1140,6 +1141,8 @@ pt:
         rough_poemart_events: v1Eventos de Arte de Poema
         rough_poemart_imagery: v1 Imagens de Arte de Poema
         rough_poemart_intro: v1 Introdução à Arte de Poema
+        se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução
+          às Lições'
         songwriting_with_functions: Lição offline em Ação - Composição de músicas
           com funções
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'

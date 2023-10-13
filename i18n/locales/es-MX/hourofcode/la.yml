@@ -35,6 +35,10 @@ la:
   africa_campaign_date_full: Octubre 1-31
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Octubre 1-31, 2020
+  hoc2023_header: Creatividad con IA
+  hoc2023_social_creativity_with_ai_title: Hora del Código - ¿Qué vas a crear?
+  hoc2023_social_creativity_with_ai_desc: "¡Usa la informática para explorar y aprender
+    sobre la IA!"
   hoc2022_header: "¡Explora, Juega y Crea!"
   social_hoc2022_explore_play_create: "¡Utiliza las ciencias de la computación para
     explorar, jugar y crear!"
@@ -184,6 +188,29 @@ la:
     un nuevo Catálogo Curricular y rediseñamos la página de docentes para puedas encontrarlo
     todo en un solo lugar. '
   in_partnership_with: En colaboración con
+  shop_code_dot_org_heading: Comprar Code.org
+  shop_code_dot_org_desc: Apoya nuestro trabajo y lleva el movimiento con orgullo.
+    Nuestros sombreros han sido usados por el presidente Obama y celebridades también.
+  spread_the_word_heading: Correr la voz
+  spread_the_word_desc: Amplifica nuestro impacto compartiendo Code.org con tu red.
+    Desde las redes sociales hasta las actualizaciones por correo electrónico, descubre
+    cómo puedes ayudarnos a llegar a más educadores, estudiantes y defensores.
+  follow_us_heading: Síguenos en las redes sociales
+  follow_us_desc: Mantente al día con nosotros en las redes sociales y comparte nuestras
+    publicaciones con tu red para mantenerte informado y ayudar a generar conciencia.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Suscribirse a correos electrónicos
+  subscribe_to_emails_desc: Lea sobre lo que está sucediendo en Code.org y en educación
+    en ciencias de la computación a través de actualizaciones trimestrales a través
+    de nuestra lista de correo.
+  subscribe_to_emails_intl: Suscribirse a actualizaciones internacionales
+  promote_code_dot_org_heading: Promocionar Code.org
+  promote_code_dot_org_desc: Promociona la informática en tu área con la ayuda de
+    estadísticas, cotizaciones y videos.
   afe_partnership_logo_alt: Logo de Amazon Future Engineers
   afe_partnership_thanks_desc: Amazon Future Engineer* es un programa que abarca desde
     la niñez hasta la carrera profesional, diseñado para inspirar, educar y formar
@@ -202,6 +229,15 @@ la:
   curricula_title_high: Currículos de Preparatoria
   curricula_desc_high: Explore los cursos y actividades convincentes que lo invitan
     a usted y a sus estudiantes de secundaria a profundizar en la informática.
+  for_administrators_heading: Para administradores
+  for_administrators_desc: Únete a las miles de escuelas que ya han incorporado la
+    informática a su plan de estudios.
+  for_parents_heading: Para padres
+  for_parents_desc: Puedes ayudar a alentar a la escuela de tu alumno a ofrecer o
+    ampliar la educación en ciencias de la computación.
+  for_educators_heading: Para docentes
+  for_educators_desc: Comienza a enseñar hoy mismo, sin necesidad de experiencia en
+    informática, con nuestros talleres de aprendizaje profesional.
   students_label: Estudiantes
   teachers_label: Docentes
   teacher_label_csf: Profesor de CS Fundamentals
@@ -211,10 +247,11 @@ la:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Materiales requeridos:'
   optional_materials: 'Materiales opcionales:'
-  call_to_action_explore_roles: Explora roles abiertos
+  call_to_action_hold_an_event: Celebrar un evento
   call_to_action_learn_more: Conoce más
   call_to_action_watch_now: Mira
   call_to_action_try_activity: Prueba la actividad
+  call_to_action_try_activities: Probar actividades
   call_to_action_explore_unit: Explora la unidad
   call_to_action_explore_curriculum: Explora el currículum
   call_to_action_explore_curriculum_options: Explora las opciones curriculares
@@ -283,7 +320,20 @@ la:
   call_to_action_notify_available: Notificarme cuando esté disponible
   call_to_action_register_early_access: Inscríbase para acceso anticipado
   call_to_action_open_positions: Ver posiciones abiertas
+  call_to_action_explore_roles: Explora roles abiertos
   call_to_action_get_guide: Obtener la guía
+  call_to_action_donate_to_cdo: Donar a Code.org
+  call_to_action_start_fundraiser: Iniciar una recaudación de fondos
+  call_to_action_view_donation_policy: Ver política de donaciones
+  call_to_action_view_donate_bitpay: Dona con BitPay
+  call_to_action_make_a_donation: Hacer una donación
+  call_to_action_other_ways_to_give: Otras formas de dar
+  call_to_action_become_partner_usa: Conviértase en socio de Estados Unidos
+  call_to_action_become_partner_intl: Conviértase en socio internacional
+  call_to_action_become_a_volunteer: Conviértete en voluntario
+  call_to_action_start_translating: Empezar a traducir
+  call_to_action_learn_about_advocacy: Conoce nuestra abogacía
+  call_to_action_visit_store: Visita la tienda
   aria_label_call_to_action_afe: Aprenda más sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Iniciar el programa de aprendizaje profesional
     de Enseñanza de Fundamentos de Ciencias de la Computación
@@ -394,6 +444,7 @@ la:
   curriculum_name_csp: Principios de Informática
   curriculum_name_csc: Conexiones a las Ciencias de la Computación
   curriculum_name_csa: AP® Informática A
+  curriculum_name_csa_ai: Ingeniería de Software y Visión por Computación
   curriculum_name_csc_02: Cualquier módulo de conexiones CS
   curriculum_name_ai: IA y aprendizaje automático
   curriculum_name_artificial_intelligence: Inteligencia Artificial (IA)
@@ -474,6 +525,13 @@ la:
   curriculum_desc_csp: Curso introductorio gratuito a la escuela secundaria avalado
     por AP® CSP que introduce a los estudiantes en los conceptos fundamentales de
     la informática.
+  curriculum_desc_csa_ai_long: 'Este módulo CSA post-AP de dos capítulos ofrece a
+    los estudiantes de secundaria experiencia práctica con herramientas profesionales
+    de desarrollo de software, incluyendo GitHub y GitHub Copilot, y les imparte las
+    habilidades del mundo real para desarrollar un programa de visión por computadora. '
+  curriculum_desc_csa_ai_short: Este módulo CSA post-AP® ofrece a los estudiantes
+    de secundaria experiencia práctica con herramientas profesionales de desarrollo
+    de software.
   collection_hardware: Enfoque en hardware
   collection_hardware_desc: Permite a los estudiantes utilizar datos y dispositivos
     físicos para resolver problemas.
@@ -549,6 +607,7 @@ la:
   module_duration_2_hrs: 2 horas
   module_duration_3_hrs: 3 horas
   module_duration_5_hrs: 5 horas
+  module_duration_5_hrs_plus: 5+ horas
   module_duration_8_hrs: 8 horas
   module_duration_20_hrs: 20 horas
   module_duration_35_hrs: 35 horas
@@ -631,6 +690,8 @@ la:
   heading_these_lessons_will: 'Estas lecciones:'
   heading_explore_curriculum_catalog: Explora todos nuestros cursos en el Catálogo
     Curricular
+  heading_csa_ai: "¿Buscas cosas que hacer después del examen AP®?"
+  heading_bring_cs_to_students: Llevar ciencias de la computación a los estudiantes
   professional_learning_section_desc: 'Obtén el apoyo que necesitas mientras te preparas
     para enseñar. A los docentes les encanta: ¡más del 90 % lo considera el mejor
     desarrollo profesional!'
@@ -665,6 +726,27 @@ la:
     responder a cualquier pregunta que puedas tener sobre cómo empezar a enseñar con
     Code.org. También puedes preguntar a otros docentes sobre su experiencia en nuestros
     foros de docentes.
+  subscribe_form_section_title: Suscríbete para recibir actualizaciones
+  subscribe_form_section_desc_csa: Regístrese para recibir correos electrónicos mensuales
+    sobre AP® Computer Science A de Code.org y reciba útiles recordatorios, consejos
+    y actualizaciones enviadas directamente a su bandeja de entrada.
+  subscribe_form_section_desc_csc: Regístrese para recibir correos electrónicos mensuales
+    sobre las conexiones de ciencias de la computación de Code.org y reciba útiles
+    recordatorios, consejos y actualizaciones enviadas directamente a su bandeja de
+    entrada.
+  subscribe_form_section_desc_csd: Regístrese para recibir correos electrónicos mensuales
+    sobre los descubrimientos de ciencias de la computación de Code.org y reciba útiles
+    recordatorios, consejos y actualizaciones enviadas directamente a su bandeja de
+    entrada.
+  subscribe_form_section_desc_csf: Regístrese para recibir correos electrónicos mensuales
+    sobre los Fundamentos de Ciencias de la Computación de Code.org y reciba útiles
+    recordatorios, consejos y actualizaciones enviadas directamente a su bandeja de
+    entrada.
+  subscribe_form_section_desc_csp: Regístrese para recibir correos electrónicos mensuales
+    sobre los Principios de Ciencias de la Computación de Code.org y reciba útiles
+    recordatorios, consejos y actualizaciones enviadas directamente a su bandeja de
+    entrada.
+  subscribe_form_section_unsubscribe: Puedes darte de baja en cualquier momento.
   blockchain_hero_heading: Cómo funciona la Blockchain
   blockchain_hero_desc: "¡Sumérgete en el mundo de blockchain con “Cómo funciona Blockchain”,
     nuestra nueva serie de videos y lecciones acompañantes!"
@@ -775,6 +857,9 @@ la:
     la IA. Cada lección se empareja con un solo video de la serie, profundizando en
     los conceptos introducidos en los videos.
   ai_curriculum_btn_aria_label_04: Explore las lecciones de Cómo Funciona la IA
+  ai_curriculum_grades_05: 'Niveles de Grado: 9-12'
+  ai_curriculum_btn_aria_label_05: Explore el módulo de Ingeniería de Software y Visión
+    por Computación
   ai_carousel_heading: 'Lo que dicen los docentes sobre la IA y Code.org:'
   ai_carousel_quote_01: Esta lección también dio a mis estudiantes la oportunidad
     de ver que hay un elemento de opinión en los sistemas de clasificación. Más tarde,
@@ -905,6 +990,7 @@ la:
     Con una rica combinación de teoría, ejemplos prácticos y recursos, tiene como
     objetivo capacitar a los educadores para que naveguen por el panorama de la IA
     y mejoren las experiencias de aprendizaje de los estudiantes.
+  ai_pl_101_resources_5: Guía para garantizar un enfoque responsable de la IA
   ai_pl_101_video_desc_6: 'Conoce más sobre la nueva tecnología que impulsa los grandes
     cambios en la IA, presentando dos nuevos videos sobre Modelos de Lenguaje Grande
     (como ChatGPT) e IA Generativa. Escuche cómo funcionan estas nuevas tecnologías
@@ -915,6 +1001,10 @@ la:
     LLM como ChatGPT, desde principiantes hasta avanzados. Incluye indicaciones de
     inicio para quienes solo sumerjan sus dedos de los pies, así como herramientas
     avanzadas para aquellos que buscan maximizar su potencial.
+  ai_pl_101_resources_3: Instrucción de IA para transformar el aprendizaje de los
+    estudiantes
+  ai_pl_101_resources_section_title: Más formas de aprender sobre la IA
+  ai_pl_101_resources_guide: 'Guía acompañante:'
   how_ai_works_hero_heading: Cómo funciona la Inteligencia Artificial
   how_ai_works_hero_desc: "¡Sumérgete en el mundo de la IA con “Cómo funciona la IA”,
     nuestra serie de videos y lecciones acompañantes!"
@@ -1322,7 +1412,7 @@ la:
   csp_page_curriculum_glance_devices: Ordenador portátil, Chromebook
   csp_page_curriculum_glance_tools: Laboratorio de aplicaciones
   csp_page_curriculum_glance_professional_learning: Talleres dirigidos por facilitadores,
-    módulos a tu propio ritmo
+    módulos autodidactas
   csp_page_curriculum_glance_professional_languages: Inglés
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1451,7 +1541,7 @@ la:
   csd_page_curriculum_glance_devices: Ordenador portátil, Chromebook
   csd_page_curriculum_glance_tools: Laboratorio de aplicaciones, juegos, IA, web
   csd_page_curriculum_glance_professional_learning: Talleres dirigidos por facilitadores,
-    módulos a tu propio ritmo
+    módulos autodidactas
   csd_page_curriculum_glance_professional_languages: Inglés
   csd_page_curriculum_glance_professional_accessibility_features: Texto a voz, subtítulos,
     lector inmersivo
@@ -1616,7 +1706,7 @@ la:
   csf_page_curriculum_glance_devices: Ordenador portátil, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, laboratorio de juegos
   csf_page_curriculum_glance_professional_learning: Talleres dirigidos por facilitadores,
-    módulos a tu propio ritmo
+    módulos autodidactas
   csf_page_curriculum_glance_languages: Alemán, árabe, bahasa indonesio, catalán,
     chino simplificado, chino tradicional, checo, coreano, eslovaco, esloveno, español,
     francés, hindi, italiano, japonés, kannada, malayo, marathi, mongol, neerlandés,
@@ -1772,6 +1862,65 @@ la:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Ayuda a financiar nuestra misión
+  donate_page_top_desc: Cada donación alimenta la misión de Code.org de ampliar el
+    acceso a la educación en informática. Ofrecemos varias formas de donar y marcar
+    la diferencia.
+  donate_page_fundraise_title: Recaudar fondos para Code.org
+  donate_page_fundraise_desc: "¡Ayuda a recaudar dinero para Code.org! Todo estudiante
+    en cada escuela debe tener la oportunidad de aprender ciencias de la computación."
+  donate_page_other_ways_title: Otras formas de dar
+  donate_page_other_ways_desc: Explora diversos métodos para contribuir y encuentra
+    la opción que más te convenga. Cada gesto, grande o pequeño, propulsor nuestra
+    misión hacia adelante.
+  donate_page_501c3: Code.org está registrado como una organización pública 501 (c)
+    (3) sin fines de lucro. Las contribuciones a Code.org son deducibles de impuestos
+    en la medida permitida por la ley. El número de identificación fiscal de Code.org
+    es 46-0858543.
+  donate_page_donation_policy_title: Comprensión de nuestra Política de Donación
+  donate_page_donation_policy_desc: Conoce cómo manejamos y asignamos tus contribuciones.
+  donate_tabs_tab_label_daf_direct: DAF Directo
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Employee Match
+  donate_tabs_daf_direct_title: Dona vía DAF Direct
+  donate_tabs_daf_direct_desc: Done a través de su fondo asesorado por donantes con
+    Fidelity Charitable, Schwab Charitable o BNY Mellon y haga su recomendación de
+    subvención a Code.org a través del formulario en línea de DAF Direct.
+  donate_tabs_amazon_title: Dona vía Amazon
+  donate_tabs_amazon_desc: Dona directamente usando tu cuenta de Amazon. Con solo
+    unos pocos clics, contribuya sin problemas a la misión de Code.org y potencie
+    el futuro de la educación en ciencias de la computación.
+  donate_tabs_bitpay_title: Dona con Crypto vía BitPay
+  donate_tabs_bitpay_desc: Abraza el futuro de dar con la criptomoneda. A través de
+    BitPay, su moneda digital puede apoyar directamente los esfuerzos de Code.org
+    en expandir la educación en ciencias de la computación.
+  help_page_top_heading: Cómo puedes ayudar
+  help_page_top_desc: Apoya nuestra misión de hacer que la informática sea accesible
+    para todos los niños, en todas partes. Tus esfuerzos nos ayudan a inspirar a futuros
+    innovadores y a cerrar la brecha de la educación tecnológica.
+  help_page_top_subhead: Haz una donación a Code.org
+  help_page_top_desc_02: Estamos trabajando para dar a cada estudiante la oportunidad
+    de aprender ciencias de la computación, tanto en línea como en las escuelas, donde
+    establecemos cursos permanentes y formamos maestros. Por cada dólar que donas,
+    un niño es introducido a la informática.
+  help_page_partners_heading: Conviértase en socio
+  help_page_partners_desc: Code.org trabaja con otras organizaciones sin fines de
+    lucro como socios para ayudar a difundir la informática de manera local y sostenible.
+    Conoce más sobre nuestro programa.
+  help_page_volunteer_heading: Voluntariado en un aula
+  help_page_volunteer_desc: Sea voluntario para enseñar la Hora del Código o ser orador
+    invitado en un aula local. Regístrate para conocer las oportunidades cercanas
+    a ti.
+  help_page_translate_heading: Ayúdanos a traducir
+  help_page_translate_desc: Los voluntarios han traducido nuestros tutoriales en más
+    de 45 idiomas. ¡Ayúdanos a seguir ampliando nuestras tutorías para estudiantes
+    de todo el mundo!
+  help_page_speak_for_cs_heading: Habla por la educación en ciencias de la computación
+  help_page_speak_for_cs_desc: Obtenga más información sobre el trabajo de defensa
+    de Code.org en los Estados Unidos y las diez políticas que recomendamos que adopten
+    los estados para que la informática sea una base para todos los estudiantes. Además,
+    descubre cómo puedes impulsar el cambio en tu estado.
   hoc_live: Hora del Código En Vivo
   hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
   hoc_live_learn_title: Aprende con la Hora del Código En Vivo
@@ -14283,6 +14432,11 @@ la:
   video_library_page_inspirational_video_title_11: Todos pueden aprender (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Fena En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA Celebra Hora del Código (2
+    min)
+  video_library_page_inspirational_video_title_14: Es Más Que Un Juego (1 min)
+  video_library_page_inspirational_video_title_15: Crear con Ciencias de la Computación
+    (1 min)
   video_library_page_not_hacked_video_title_1: 'Cómo no ser pirateado: Introducción'
   video_library_page_not_hacked_video_title_2: 'Cómo no ser pirateado: contraseñas'
   video_library_page_not_hacked_video_title_3: 'Cómo no ser pirateado: autenticación

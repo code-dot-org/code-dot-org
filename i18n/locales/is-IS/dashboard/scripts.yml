@@ -267,7 +267,7 @@ is:
           description_short: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
         mc:
-          title: Klukkustund kóðunar með Minecraft
+          title: Minecraft Könnuður
           description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
           description_short: Kannaðu Minecraft heim með kóða
           student_description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim.
@@ -2513,6 +2513,8 @@ is:
               display_name: Innihald
             lessonGroup-2:
               display_name: Innihald
+        dance-unplugged:
+          title: Danspartý án tölvu
         spelling-bee:
           title: Stafsetning
         csa5-exemplars:
