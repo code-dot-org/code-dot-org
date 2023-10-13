@@ -61,8 +61,9 @@ class Section < ApplicationRecord
   belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
-  has_many :section_instructors, -> {where(status: :active)}
-  has_many :instructors, through: :section_instructors, class_name: 'User'
+  has_many :section_instructors
+  has_many :active_section_instructors, -> {where(status: :active)}, through: :section_instructors
+  has_many :instructors, through: :active_section_instructors, class_name: 'User'
 
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
@@ -378,11 +379,14 @@ class Section < ApplicationRecord
         students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorSerializer).as_json
+
       {
         id: id,
         name: name,
         createdAt: created_at,
         teacherName: teacher.name,
+        sectionInstructors: serialized_section_instructors,
         linkToProgress: "#{base_url}#{id}/progress",
         assignedTitle: title,
         linkToAssigned: link_to_assigned,
