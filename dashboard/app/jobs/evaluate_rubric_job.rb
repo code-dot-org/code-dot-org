@@ -47,7 +47,10 @@ class EvaluateRubricJob < ApplicationJob
 
     validate_evaluations(ai_evaluations, rubric)
 
-    write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
+    ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
+    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+
+    write_ai_evaluations(user, merged_evaluations, rubric, channel_id, project_version)
   end
 
   def self.ai_enabled?(script_level)
@@ -144,6 +147,14 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+    ai_evaluations.map do |evaluation|
+      learning_goal = evaluation['Key Concept']
+      confidence_level = ai_confidence_levels[learning_goal]
+      evaluation.merge('Confidence' => confidence_s_to_i(confidence_level))
+    end
+  end
+
   private def write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
     _owner_id, project_id = storage_decrypt_channel_id(channel_id)
 
@@ -159,7 +170,8 @@ class EvaluateRubricJob < ApplicationJob
           requester_id: user.id,
           project_id: project_id,
           project_version: project_version,
-          understanding: understanding
+          understanding: understanding,
+          ai_confidence: evaluation['Confidence']
         )
       end
     end
@@ -178,5 +190,11 @@ class EvaluateRubricJob < ApplicationJob
     else
       raise "Unexpected understanding: #{understanding}"
     end
+  end
+
+  private def confidence_s_to_i(confidence_level)
+    confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
+    raise "Unexpected confidence level: #{confidence_level}" unless confidence_levels.include?(confidence_level)
+    LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
   end
 end
