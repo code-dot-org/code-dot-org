@@ -18,12 +18,18 @@ const CachedForegrounds: CachedMapping = UntypedCachedForegrounds;
 
 // Output: JSON containing {backgroundColor:string, backgroundEffect:string, foregroundEffect:string}
 // ToDo: Break down into helper functions for each step rather than repeat code for each field
+
+// Note: I discovered that cachedAi only returns the highest value of the vector associated with the
+// second emoji. Every time, it will return a palette, background, and foreground that only
+// consider the second emoji. The first and third emojis are ignored. See inline explanation.
 export default function cachedAi(input: string) {
+  // sample input: 'Generate a scene using this mood: romantic, party, silly.'
   const inputWords: string[] = input.split(',');
   const trimmedInput: string[] = inputWords.map(value => value.trim());
-  const inputPaletteVectors: {[key: string]: any} = {};
-  const inputBackgroundVectors: {[key: string]: any} = {};
-  const inputForegroundVectors: {[key: string]: any} = {};
+  // sample trimmedInput: ['Generate a scene using this mood: romantic', 'party', 'silly.']
+  const inputPaletteVectors: {[key: string]: {[key: string]: number[]}} = {};
+  const inputBackgroundVectors: {[key: string]: {[key: string]: number[]}} = {};
+  const inputForegroundVectors: {[key: string]: {[key: string]: number[]}} = {};
 
   const {emojiAssociations: paletteAssociations, output: palettes} =
     CachedPalettes;
@@ -31,9 +37,11 @@ export default function cachedAi(input: string) {
     CachedBackgrounds;
   const {emojiAssociations: foregroundAssociations, output: foregrounds} =
     CachedForegrounds;
-
   // Pull individual association vectors for each input emoji
   trimmedInput.forEach(value => {
+    // first pass is skipped in all three cases because none of the json have a key with the format 'Generate a scene using this mood: romantic'
+    // second pass works and inserts the values for 'party'
+    // third pass is also skipped. I ran out of time to learn why, but I believe the second pass overwrites some value that is referenced by Object.prorotype.hasOwnProperty.call
     if (Object.prototype.hasOwnProperty.call(paletteAssociations, value)) {
       inputPaletteVectors[value] = paletteAssociations[value];
     }
@@ -44,6 +52,7 @@ export default function cachedAi(input: string) {
       inputForegroundVectors[value] = foregroundAssociations[value];
     }
   });
+  // at this point, each vector has only the second emoji's values in it.
 
   // Sum word-association vectors of all input words
   const sumPaletteAssociation: number[] = sumAssociationVectors(
@@ -86,7 +95,7 @@ export default function cachedAi(input: string) {
 }
 
 function sumAssociationVectors(
-  inputVectors: {[key: string]: any},
+  inputVectors: {[key: string]: {[key: string]: number[]}},
   outputLength: number
 ) {
   const summedOutput: number[] = new Array(outputLength).fill(0);
