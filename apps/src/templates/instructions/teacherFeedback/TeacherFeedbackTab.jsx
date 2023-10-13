@@ -17,6 +17,7 @@ const TeacherFeedbackTab = ({
   serverLevelId,
   teacher,
   innerRef,
+  allowUnverified,
 }) => {
   // If the teacher isn't viewing student work then display feedback tab content
   // if there is a rubric or feedback has been given to the user
@@ -35,6 +36,7 @@ const TeacherFeedbackTab = ({
           serverScriptId={serverScriptId}
           serverLevelId={serverLevelId}
           teacher={teacher}
+          allowUnverified={allowUnverified}
         />
       )}
       {renderReadonlyFeedback && (
@@ -59,6 +61,7 @@ TeacherFeedbackTab.propTypes = {
   latestFeedback: teacherFeedbackShape,
   token: PropTypes.string,
   innerRef: PropTypes.func,
+  allowUnverified: PropTypes.bool.isRequired,
 };
 
 export default TeacherFeedbackTab;

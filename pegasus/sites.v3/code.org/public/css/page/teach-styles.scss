@@ -92,7 +92,7 @@ section.pl-offerings {
   padding-bottom: 0;
 
   p {
-    font-family: $gotham-regular !important;
+    font-family: $main-font !important;
   }
 
   @media (max-width: 1279px) {
@@ -101,15 +101,7 @@ section.pl-offerings {
 }
 
 .carousel {
-  &__next {
-    position: absolute;
-    right: -100vh;
-  }
-
-  &__prev {
-    position: absolute;
-    left: -100vw;
-  }
+  margin-bottom: 2rem;
 
   .action-block {
     height: 525px;
@@ -129,6 +121,7 @@ section.pl-offerings {
       width: 300%;
       display: flex;
     }
+
     .slide {
       display: flex;
       justify-content: start;
@@ -140,57 +133,16 @@ section.pl-offerings {
         margin: 0;
       }
     }
+
     .action-block {
       min-width: 230px;
     }
   }
-  @media (min-width: 800px) {
+
+  @media (min-width: 900px) {
     .slide {
       .action-block {
         width: 31%;
-      }
-    }
-  }
-  @media (min-width: 1280px) {
-    &__prev {
-      position: absolute;
-      top: calc(50% - 20px);
-      left: -90px;
-      background: none;
-      border: none;
-      transform: translateY(-50%);
-      transition: .3s;
-      padding: 0;
-      width: 55px;
-
-      &:hover {
-        background: none;
-        opacity: .8;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-
-    &__next {
-      position: absolute;
-      top: calc(50% - 20px);
-      right: -90px;
-      background: none;
-      border: none;
-      transform: translateY(-50%);
-      transition: .3s;
-      padding: 0;
-      width: 55px;
-
-      &:hover {
-        background: none;
-        opacity: .8;
-      }
-
-      img {
-        width: 100%;
       }
     }
   }

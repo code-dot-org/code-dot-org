@@ -23,6 +23,7 @@
 #  funded              :boolean
 #  funding_type        :string(255)
 #  properties          :text(65535)
+#  module              :string(255)
 #
 # Indexes
 #
@@ -131,7 +132,7 @@ class Pd::Workshop < ApplicationRecord
   # Whether enrollment in this workshop requires an application
   def require_application?
     courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
-    subjects = ACADEMIC_YEAR_SUBJECTS.push(SUBJECT_SUMMER_WORKSHOP)
+    subjects = [SUBJECT_SUMMER_WORKSHOP]
     courses.include?(course) && subjects.include?(subject) &&
       regional_partner && regional_partner.link_to_partner_application.blank?
   end
@@ -202,7 +203,7 @@ class Pd::Workshop < ApplicationRecord
 
   scope :in_year, ->(year) do
     scheduled_start_on_or_after(Date.new(year)).
-    scheduled_start_on_or_before(Date.new(year + 1))
+      scheduled_start_on_or_before(Date.new(year + 1))
   end
 
   # Filters to workshops that are scheduled on or after today and have not yet ended

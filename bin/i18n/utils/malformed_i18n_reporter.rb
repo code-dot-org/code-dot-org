@@ -38,21 +38,14 @@ module I18n
 
       def report
         return if worksheet_data.empty?
-
-        google_drive&.update_worksheet(SPREADSHEET_NAME, locale, [WORKSHEET_HEADERS, *worksheet_data])
-
+        Google::Drive.new.update_worksheet(SPREADSHEET_NAME, locale, [WORKSHEET_HEADERS, *worksheet_data])
+      rescue StandardError => exception
+        puts "Failed to upload malformed restorations for #{locale} because #{exception.message}"
+      ensure
         clear_worksheet_data
-      rescue
-        puts "Failed to upload malformed restorations for #{locale}"
       end
 
       private
-
-      def google_drive
-        return @google_drive if defined? @google_drive
-
-        @google_drive = CDO.gdrive_export_secret && Google::Drive.new(service_account_key: CDO.gdrive_export_secret)
-      end
 
       def update_worksheet_data(key, file_name, translation)
         worksheet_data << [key, file_name, translation]
@@ -69,7 +62,7 @@ module I18n
       end
 
       def collect_malformed_translations(key, file_name, translation)
-        return if translation.empty?
+        return if translation.nil? || translation.empty?
 
         case translation
         when Hash

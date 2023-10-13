@@ -34,8 +34,29 @@ module Cdo::CloudFormation
       end
     end
 
+    # Prepare (package) a Lambda that uses node runtime to be deployed by CloudFormation
+    # by installing dependencies, zipping the Lambda directory, uploading to S3, and returning the S3 URI to
+    # populate the `AWS::Lambda::Function` `Code` Property.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
+    def package_node_lambda(relative_directory)
+      install_node_dependencies(relative_directory)
+      return zip_directory(relative_directory)
+    end
+
+    # Install npm packages used by a lambda to prepare the directory the lambda is in for being zipped and uploaded.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
+    def install_node_dependencies(relative_directory)
+      absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
+      Dir.chdir(absolute_directory) do
+        # Use the `ci` parameter to only install the versions identified in the lock file.
+        # Use `--only=prod` to skip dev dependencies.
+        RakeUtils.npm_install 'ci --only=prod'
+      end
+    end
+
     # Zip a directory containing a Lambda's source code and dependencies, upload to S3, and return the S3 location
     # to assist in populating the `Code` Property of a CloudFormation template `AWS::Lambda::Function` Resource.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
     # @param relative_directory [String] Name of Lambda directory relative to `/aws/cloudformation/lambdas`.
     # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
     # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
@@ -102,14 +123,6 @@ module Cdo::CloudFormation
         RakeUtils.yarn_install '--production'
       end
       lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')
-    end
-
-    def ruby_zip(name)
-      dir = aws_dir('lambda', name)
-      Dir.chdir(dir) do
-        RakeUtils.bundle_install '--deployment'
-        lambda_zip("#{name}.rb", 'vendor', key_prefix: 'lambdarb')
-      end
     end
 
     # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.

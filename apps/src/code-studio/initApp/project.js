@@ -774,6 +774,11 @@ var projects = (module.exports = {
         }
       } else if (current) {
         this.sourceHandler.setInitialLevelSource(currentSources.source);
+        if (currentSources.hiddenDefinitions) {
+          sourceHandler.setInitialHiddenDefinitions(
+            currentSources.hiddenDefinitions
+          );
+        }
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.legacyShareStyle && this.getStandaloneApp()) {

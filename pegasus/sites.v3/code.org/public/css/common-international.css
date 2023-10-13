@@ -106,12 +106,14 @@
 }
 .course-carousel .slide h2 {
   font-size: 18px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin: 0 0 .333em 0;
 }
 .course-carousel .slide h3 {
   font-size: 14px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin: 0 0 .857em 0;
 }
 .course-carousel .slide p {
@@ -154,7 +156,8 @@
   padding: 10px 20px;
   margin: 0;
   font-size: 18px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -372,7 +375,8 @@
 .share-buttons button {
   width: auto;
   height: auto;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin: 10px 10px 0 0;
 }
 .share-buttons button i {

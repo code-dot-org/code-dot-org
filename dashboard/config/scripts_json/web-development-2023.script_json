@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "web-development",
-    "serialized_at": "2023-05-17 16:29:42 UTC",
+    "serialized_at": "2023-10-09 17:39:13 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3605,7 +3605,7 @@
       "key": "0118ebc2-543f-4e6d-8ab9-46c8d562ad32",
       "position": 8,
       "properties": {
-        "description": "**Image Hunt**\n\nThe last portion of the guide prompts students to find images of their choosing and identify the licenses under which they were published.\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n- [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdditionally, [this guide from the Harvard Law School Library](https://guides.library.harvard.edu/c.php?g=310751&p=2072816) has a variety of search engines that could be used for creative commons images. This may be overwhelming for students, but it could be a good resource for specific situations or to find additional search engines that are available at your school.\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.\n\n**Share:** Allow students to share the images and licenses that they have found, whether the images could be included on a student web site, and if so, what rules the student would need to follow to use the image."
+        "description": "**Image Hunt**\n\nThe last portion of the guide prompts students to find images of their choosing and identify the licenses under which they were published.\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n- [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdditionally, [this guide from the Harvard Law School Library](https://guides.library.harvard.edu/law/pd-cc) has a variety of search engines that could be used for creative commons images. This may be overwhelming for students, but it could be a good resource for specific situations or to find additional search engines that are available at your school.\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.\n\n**Share:** Allow students to share the images and licenses that they have found, whether the images could be included on a student web site, and if so, what rules the student would need to follow to use the image."
       },
       "seeding_key": {
         "activity_section.key": "0118ebc2-543f-4e6d-8ab9-46c8d562ad32",
@@ -4381,7 +4381,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/web-development/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [Extra Code in Challenge Levels](https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing) as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -10576,6 +10576,18 @@
       }
     },
     {
+      "name": "Web Development - Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing",
+      "key": "web_development_-_extra_code_in_challenge_levels",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_development_-_extra_code_in_challenge_levels"
+      }
+    },
+    {
       "name": "Website for a Purpose",
       "url": "https://docs.google.com/document/d/19ObCznDrFTz93q15fq3SMUkURiVgTuchLbFninlj3ww/edit",
       "key": "website_for_a_purpose",
@@ -11122,12 +11134,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
         "resource.key": "peer_review_-_personal_website"
       }
     },
@@ -11183,6 +11189,12 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "publishing_your_website"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "web_development_-_extra_code_in_challenge_levels"
       }
     },
     {
@@ -12776,6 +12788,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

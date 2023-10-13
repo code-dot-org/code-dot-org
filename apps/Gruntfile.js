@@ -2,7 +2,6 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var os = require('os');
 var _ = require('lodash');
 var sass = require('sass');
 
@@ -12,49 +11,12 @@ var checkEntryPoints = require('./script/checkEntryPoints');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const offlineWebpackConfig = require('./webpackOffline.config');
+const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
+
+// Review every couple of years to see if an increase improves test performance
+const MEM_PER_KARMA_PROCESS_MB = 4300;
 
 module.exports = function (grunt) {
-  process.env.mocha_entry = grunt.option('entry') || '';
-  if (process.env.mocha_entry) {
-    if (
-      path.resolve(process.env.mocha_entry).indexOf('/apps/test/integration') >
-      -1
-    ) {
-      throw new Error('Cannot use karma:entry to run integration tests');
-    }
-    const isDirectory = fs
-      .lstatSync(path.resolve(process.env.mocha_entry))
-      .isDirectory();
-    const loadContext = isDirectory
-      ? `let testsContext = require.context(${JSON.stringify(
-          path.resolve(process.env.mocha_entry)
-        )}, true, /\\.[j|t]sx?$/);`
-      : '';
-    const runTests = isDirectory
-      ? 'testsContext.keys().forEach(testsContext);'
-      : `require('${path.resolve(process.env.mocha_entry)}');`;
-    const file = `/* eslint-disable */
-// Auto-generated from Gruntfile.js
-import '@babel/polyfill/noConflict';
-import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-16';
-import enzyme from 'enzyme';
-enzyme.configure({adapter: new Adapter()});
-import { throwOnConsoleErrorsEverywhere } from './util/throwOnConsole';
-${loadContext}
-describe('entry tests', () => {
-  throwOnConsoleErrorsEverywhere();
-
-  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
-  // https://codedotorg.atlassian.net/browse/XTEAM-377
-  // throwOnConsoleWarningsEverywhere();
-
-  ${runTests}
-});
-`;
-    fs.writeFileSync('test/entry-tests.js', file);
-  }
-
   var config = {};
 
   /**
@@ -398,146 +360,35 @@ describe('entry tests', () => {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
-  var junitReporterBaseConfig = {
-    outputDir: envConstants.CIRCLECI
-      ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
-      : '',
-  };
+  grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
+  grunt.registerTask('karma start', () => {
+    // Forward select grunt command-line flags to `karma start`
+    const KARMA_CLI_FLAGS = VALID_KARMA_CLI_FLAGS.flatMap(arg =>
+      grunt.option(arg) ? [`--${arg}`, grunt.option(arg)] : []
+    );
 
-  // Workaround for https://github.com/ryanclark/karma-webpack/issues/498.
-  // This is the default karma-webpack output directory, but we define it here
-  // so we can configure webpack's output.publicPath and karma's options.files
-  // so that bundled files will be properly served.
-  // this is the source of the following warning, which can be ignored:
-  // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
-  const webpackOutputBasePath = path.join(os.tmpdir(), '_karma_webpack_');
-  const webpackOutputPath =
-    webpackOutputBasePath + Math.floor(Math.random() * 1000000);
-  const webpackOutputPublicPath = '/webpack_output/';
+    console.log(chalk.green(`>> npx karma start ${KARMA_CLI_FLAGS.join(' ')}`));
+    child_process.spawnSync('npx', ['karma', 'start', ...KARMA_CLI_FLAGS], {
+      stdio: 'inherit',
+      env: {
+        ...process.env,
+        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}`,
+      },
+    });
+  });
 
-  config.karma = {
-    options: {
-      configFile: 'karma.conf.js',
-      singleRun: !envConstants.WATCH,
-      files: [
-        {
-          pattern: 'test/audio/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: 'test/integration/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: 'test/storybook/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: 'test/unit/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: 'test/util/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
-        {pattern: 'build/**/*', watched: false, included: false, nocache: true},
-        {
-          pattern: 'static/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: `${webpackOutputPath}/**/*`,
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-      ],
-      proxies: {
-        // configure karma server to serve files from the source tree for
-        // various paths (the '/base' prefix points to the apps directory where
-        // karma.conf.js is located)
-        '/blockly/media/': '/base/static/',
-        '/lib/blockly/media/': '/base/static/',
-        '/v3/assets/': '/base/test/integration/assets/',
-        '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
-
-        // requests to the webpack output public path should be served from the
-        // webpack output path where bundled assets are written
-        [webpackOutputPublicPath]: '/absolute/' + webpackOutputPath + '/',
-      },
-
-      webpack: {
-        output: {
-          path: webpackOutputPath,
-          publicPath: webpackOutputPublicPath,
-        },
-      },
-      client: {
-        mocha: {
-          timeout: 14000,
-          grep: grunt.option('grep'),
-        },
-      },
-    },
-    unit: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/unit',
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'unit.xml',
-      }),
-      files: [{src: ['test/unit-tests.js'], watched: false}],
-    },
-    integration: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/integration',
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'integration.xml',
-      }),
-      files: [{src: ['test/integration-tests.js'], watched: false}],
-    },
-    storybook: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/storybook',
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'storybook.xml',
-      }),
-      files: [{src: ['test/storybook-tests.js'], watched: false}],
-    },
-    entry: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/entry',
-      },
-      files: [{src: ['test/entry-tests.js'], watched: false}],
-      preprocessors: {
-        'test/entry-tests.js': ['webpack', 'sourcemap'],
-      },
-    },
-  };
+  grunt.registerTask('preconcatForKarma', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'exec:generateSharedConstants',
+    'newer:copy:static',
+  ]);
 
   config.clean = {
     build: ['build'],
-    // The karma-webpack-backed unit tests generate several hundred megabytes
-    // worth of assets in /tmp/ on each run which will accumulate indefinitely
-    // on our persistent test server unless we clean them up.
-    unitTest: {
+    karma: {
       options: {force: true},
-      src: [webpackOutputBasePath + '*'],
+      src: ['build/karma'],
     },
   };
 
@@ -764,7 +615,7 @@ describe('entry tests', () => {
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync(
-      'npx firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
+      'yarn run firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
     );
   });
 
@@ -791,13 +642,6 @@ describe('entry tests', () => {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
-  grunt.registerTask('preconcat', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'exec:generateSharedConstants',
-    'newer:copy:static',
-  ]);
-
   grunt.registerTask('dev', [
     'prebuild',
     'newer:sass',
@@ -805,17 +649,8 @@ describe('entry tests', () => {
     'postbuild',
   ]);
 
-  grunt.registerTask('unitTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'exec:generateSharedConstants',
-    'karma:unit',
-    'clean:unitTest',
-  ]);
-
-  grunt.registerTask('storybookTest', ['karma:storybook']);
-
-  grunt.registerTask('integrationTest', ['preconcat', 'karma:integration']);
-
   grunt.registerTask('default', ['rebuild', 'test']);
 };
+
+// Exported for matching use in `run-tests-in-parallel.sh`
+module.exports.MEM_PER_KARMA_PROCESS_MB = MEM_PER_KARMA_PROCESS_MB;

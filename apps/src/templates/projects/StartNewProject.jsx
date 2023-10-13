@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import fontConstants from '@cdo/apps/fontConstants';
 import NewProjectButtons from './NewProjectButtons';
 import i18n from '@cdo/locale';
 import Button from '../Button';
@@ -146,7 +147,7 @@ const styles = {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 16,
-    fontFamily: '"Gotham 4r"',
+    ...fontConstants['main-font-regular'],
     color: color.neutral_dark,
     marginBottom: -10,
   },

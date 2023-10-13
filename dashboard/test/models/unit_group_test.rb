@@ -140,7 +140,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, seeded_unit_group.participant_audience
     assert_equal Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, seeded_unit_group.instructor_audience
     course_version = seeded_unit_group.course_version
-    assert_not_nil course_version
+    refute_nil course_version
     assert_equal '2021', course_version.key
     assert_equal 'family', course_version.course_offering&.key
     assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, course_version.published_state
@@ -1177,5 +1177,18 @@ class UnitGroupTest < ActiveSupport::TestCase
     filepath = "#{Rails.root}/test/fixtures/#{unit_group_name}.course"
     UnitGroup.load_from_path(filepath)
     assert UnitGroup.find_by_name(unit_group_name)
+  end
+
+  test 'supported_locale_codes' do
+    csx = create(:unit_group, name: 'csx-2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csx1 = create(:script, name: 'csx1', supported_locales: ['it-IT', 'en-GB', 'zh-TW', 'tlh'])
+    csx2 = create(:script, name: 'csx2', supported_locales: ['it-IT', 'tlh', 'zh-TW', 'es-MX'])
+    csx3 = create(:script, name: 'csx3', supported_locales: ['it-IT', 'en-GB', 'zh-TW'])
+
+    create(:unit_group_unit, position: 1, unit_group: csx, script: csx1)
+    create(:unit_group_unit, position: 2, unit_group: csx, script: csx2)
+    create(:unit_group_unit, position: 3, unit_group: csx, script: csx3)
+
+    assert_equal ['en-US', 'it-IT', 'zh-TW'], csx.supported_locale_codes
   end
 end

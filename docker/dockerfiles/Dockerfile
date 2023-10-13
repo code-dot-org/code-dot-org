@@ -5,7 +5,7 @@
 
 
 #########################################################
-FROM ubuntu:18.04 as base
+FROM ubuntu:20.04 as base
 #########################################################
 # multi-stage build for parallel compiling node & ruby: 
 # see: https://docs.docker.com/build/building/multi-stage/
@@ -47,7 +47,7 @@ RUN groupadd --gid 3434 ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
 
 #########################################################
-FROM ubuntu:18.04 as node
+FROM ubuntu:20.04 as node
 #########################################################
 # compile node to /build, this layer is merged at the end
 #########################################################
@@ -66,14 +66,14 @@ RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
     tar -xzf node-v18.16.0.tar.gz && \
     rm node-v18.16.0.tar.gz && \
     cd node-v18.16.0 && \
-    # C and CXX flags needed for ubuntu <=18.04: see https://github.com/nodesource/distributions/issues/1392
-    C=/usr/bin/gcc-8 CXX=/usr/bin/g++-8 \
     ./configure && \
     make -j `nproc` && \
     make install PREFIX=/build && \
     cd .. && \
     rm -r node-v18.16.0
 
+# Enable Corepack, for Yarn support
+RUN PATH=/build/bin corepack enable
 
 #########################################################
 FROM base as rbenv
@@ -157,12 +157,6 @@ RUN service mysql start && \
     echo "CREATE USER 'readonly'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
     echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
     service mysql stop
-
-# install yarn
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-    apt-get update && \
-    apt-get install -y yarn=1.22.19-1
 
 # we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
 RUN add-apt-repository ppa:git-core/ppa && \

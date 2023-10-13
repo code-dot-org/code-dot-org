@@ -35,6 +35,12 @@ section.bg-primary-light {
   }
 }
 
+// Hide random whitespace at the bottom
+//  of the page from legacy code
+.container_responsive_full_width > .desktop-feature {
+  display: none;
+}
+
 // Show elements based on screen size
 .show-desktop {
   display: block;
@@ -87,6 +93,8 @@ i.fa-fw {
   &.align-items-start { align-items: flex-start; }
   &.wrap { flex-wrap: wrap; }
   &.wrap-reverse { flex-wrap: wrap-reverse; }
+  &.gap-1 { gap: 1rem }
+  &.gap-2 { gap: 2rem }
 }
 
 // Grid container
@@ -155,15 +163,12 @@ input[type=submit] {
   padding: .625rem 1rem;
   margin: 0.5rem 0;
   font-size: 1rem;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   line-height: 1.2;
   text-decoration: none;
   text-align: center;
   transition: all ease-in-out .2s;
-
-  @media screen and (max-width: $width-sm) {
-    font-size: 0.875rem;
-  }
 
   &:hover {
     color: white;
@@ -175,6 +180,10 @@ input[type=submit] {
 
   &:focus {
     @include focus-outline;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   &:disabled {
@@ -214,6 +223,13 @@ a.link-button {
       gap: 0 .75rem;
     }
   }
+}
+
+// Button wrapper for side-by-side buttons
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 // Basic hero banner
@@ -269,7 +285,7 @@ ul {
       }
 
       i {
-        font-size: 1.875rem;
+        font-size: 2rem;
       }
 
       h3 {
@@ -443,6 +459,26 @@ ol.steps-list {
   margin: unset;
   padding: unset;
 
+  &.four-col {
+    li {
+      width: 20%;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &.three-col {
+    li {
+      width: 28%;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+  }
+
   li {
     padding-left: 0 !important;
     text-indent: 0 !important;
@@ -450,12 +486,7 @@ ol.steps-list {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    width: 20%;
     margin: 3rem 0 2.5rem;
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-    }
 
     a.link-button,
     button,
@@ -562,6 +593,7 @@ form {
     display: block;
     text-align: left;
     font-size: 1rem;
+    font-weight: var(--semi-bold-font-weight);
   }
 
   input, select {
@@ -571,7 +603,8 @@ form {
     padding: 0.5rem;
     border: 1px solid;
     border-radius: $border-radius;
-    font-family: $gotham-regular, sans-serif;
+    font-family: var(--main-font);
+    font-weight: var(--regular-font-weight);
     font-size: 1rem;
     transition: all ease-in-out .2s;
 
@@ -726,6 +759,41 @@ form {
   }
 }
 
+// Editorial cards
+// See code.org/teach and code.org/help for examples
+.editorial-cards-wrapper {
+  display: grid;
+  margin-top: 4rem;
+  gap: 2.5rem;
+
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flex-container {
+    gap: 1.5rem;
+    flex-direction: column;
+
+    &.self-paced-english {
+      gap: 1.3rem;
+
+      @media screen and (max-width: $width-md) {
+        gap: 0;
+      }
+    }
+  }
+
+  img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+  }
+
+  p {
+    @include body-three;
+  }
+}
+
 // Carousels
 // Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
 .carousel-wrapper {
@@ -733,6 +801,45 @@ form {
 
   @media screen and (max-width: $width-sm) {
     padding-bottom: 1rem;
+  }
+
+  // Carousel with prev and next button navigation
+  button.carousel__prev,
+  button.carousel__next {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 1280px) {
+    button.carousel__prev {
+      position: absolute;
+      left: -3.5rem;
+    }
+
+    button.carousel__next {
+      position: absolute;
+      right: -3.5rem;
+    }
+
+    button.carousel__prev,
+    button.carousel__next {
+      display: block !important;
+      top: calc(50% - 50px);
+      background: none;
+      border: none;
+      transform: translateY(-50%);
+      transition: .3s;
+      padding: 0;
+      width: 1.75rem;
+
+      &:hover {
+        background: none;
+        opacity: .8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   // Set a min-height inline on the .carousel div
@@ -786,6 +893,10 @@ form {
 
       &:focus {
         @include focus-outline;
+
+        &:not(:focus-visible) {
+          outline: none;
+        }
       }
     }
   }
@@ -925,12 +1036,8 @@ form {
 // See code.org/teach for an example
 section.quote {
   background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
-  background-size: 15%;
+  background-size: 12rem;
   background-color: $neutral-dark;
-
-  @media screen and (max-width: $width-sm) {
-    background-size: 50%;
-  }
 
   p {
     font-size: 1.25rem;
@@ -1019,10 +1126,9 @@ section.quote {
   }
 }
 
-// Resources tabs section
-// Works with resources_tabs.haml partial
-// See code.org/teach for an example
-.resources-tabs{
+// Tabs section
+// See code.org/teach or code.org/donate for examples
+.tabs-section{
   margin-top: 2rem;
   min-height: 408px;
 
@@ -1030,6 +1136,7 @@ section.quote {
     border-bottom: 6px solid $brand_primary_default;
     margin: 0 0 3rem;
     align-items: end;
+    gap: 0.25rem;
 
     button.tab {
       color: $neutral_dark;
@@ -1043,6 +1150,7 @@ section.quote {
       cursor: pointer;
       white-space: normal;
       height: -webkit-fit-content;
+      flex: 1;
 
       &:hover {
         background-color: $neutral_dark10;
@@ -1062,11 +1170,13 @@ section.quote {
         background-color: $neutral_dark10;
         color: $neutral_dark;
       }
-    }
-  }
 
-  div.content {
-    text-align: left;
+      // Use this class to hide a tab
+      // - see computer-vision.haml and tabs-section.js for an example
+      &.hide {
+        display: none;
+      }
+    }
   }
 
   // Hides tab content
@@ -1084,11 +1194,16 @@ section.quote {
   }
 
   &.show-tablet-and-mobile {
-    height: unset;
+    height: unset !important;
+    min-height: unset !important;
 
     details {
       padding-left: 0;
       padding-right: 0;
+
+      &:hover {
+        background: none;
+      }
 
       summary {
         @include heading-md;
@@ -1159,4 +1274,56 @@ section.quote {
       }
     }
   }
+}
+
+// Subscribe form
+// See code.org/csf for an example
+.subscribe-form {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 22%;
+  background-color: $neutral_dark;
+  border-radius: $border-radius;
+  padding: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding: 1rem;
+  }
+
+  .text-wrapper {
+    width: 48%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+
+    h2, p {
+      color: $neutral-white;
+    }
+  }
+
+  figure {
+    background: $neutral_light;
+    border-radius: $border-radius;
+    padding: 1rem 0 0;
+
+    @media screen and (max-width: $width-sm) {
+      iframe {
+        height: 500px !important;
+      }
+    }
+  }
+}
+
+// Action wrapper
+// See code.org/donate for example
+.action-wrapper {
+  background: url("/images/banners/banner-bg-lines-neutral-light.png") center repeat;
+  background-size: 10rem;
+  background-color: $brand_primary_default;
+  border-radius: $border-radius;
+  padding: 2rem;
 }
