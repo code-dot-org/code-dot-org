@@ -24,7 +24,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     // Block for defining a function (aka procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
     type: BLOCK_TYPES.procedureDefinition,
-    message0: '%1 %2 %3 %4',
+    message0: '%1 %2 %3 %4 %5 %6 %7',
     message1: '%1',
     args0: [
       {
@@ -48,6 +48,19 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       {
         type: 'input_dummy',
         name: 'TOP',
+      },
+      useModalFunctionEditor && {
+        type: 'field_label',
+        text: `${msg.description()}: `,
+        name: 'DESCRIPTION_LABEL',
+      },
+      useModalFunctionEditor && {
+        type: 'field_input',
+        name: 'DESCRIPTION',
+        text: '',
+      },
+      useModalFunctionEditor && {
+        type: 'input_dummy',
       },
     ],
     args1: [

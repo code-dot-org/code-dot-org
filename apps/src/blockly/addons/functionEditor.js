@@ -157,8 +157,6 @@ export default class FunctionEditor {
       const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
       );
-      this.convertDescriptionToCommentBlock(existingData);
-
       // Disable events here so we don't copy an existing block into the hidden definition
       // workspace.
       Blockly.Events.disable();
@@ -167,6 +165,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
       Blockly.Events.enable();
+      this.convertCommentToDescription(this.block);
     } else {
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
@@ -404,23 +403,12 @@ export default class FunctionEditor {
     Blockly.Events.enable();
   }
 
-  convertDescriptionToCommentBlock(serializedBlock) {
-    if (serializedBlock.extraState?.description) {
-      const existingStack = serializedBlock.inputs?.STACK;
-      const newStack = {
-        block: {
-          fields: {COMMENT: serializedBlock.extraState.description},
-          type: 'gamelab_comment',
-        },
-      };
-
-      if (!serializedBlock.inputs) {
-        serializedBlock.inputs = {};
-      } else if (existingStack) {
-        newStack.block.next = existingStack;
-      }
-      serializedBlock.inputs.STACK = newStack;
-      serializedBlock.extraState.description = undefined;
+  convertCommentToDescription(definitionBlock) {
+    if (definitionBlock.description) {
+      definitionBlock.inputList[1].fieldRow[1].setValue(
+        definitionBlock.description
+      );
+      definitionBlock.description = undefined;
     }
   }
 }
