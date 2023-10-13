@@ -69,6 +69,8 @@ def get_social_metadata_for_page(request)
   # Important:
   #   - image should always come before video
   #   - description should always come before description_twitter
+  #   - to apply an image that shows up specifically on Twitter,
+  #     use the "image_twitter" key after the "image" key
   social_tags = {
     "code.org" => {
       "default" => {
@@ -297,10 +299,12 @@ def get_social_metadata_for_page(request)
     case name
     when :image
       output["og:image"] = "https://#{request.host}#{value[:path]}"
-      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
+      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}" unless social_tag_set.include?(:image_twitter)
       output["og:image:width"] = value[:width]
       output["og:image:height"] = value[:height]
       output["twitter:card"] = "photo"
+    when :image_twitter
+      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
     when :video
       output["og:video:url"] = "http://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:secure_url"] = "https://youtube.com/v/#{value[:youtube_key]}"

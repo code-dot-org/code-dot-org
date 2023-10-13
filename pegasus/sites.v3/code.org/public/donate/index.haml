@@ -58,3 +58,5 @@ theme: responsive_full_width
 %section.seals
   .wrapper
     = view :about_seals
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::DONATE_PAGE_VISITED_EVENT

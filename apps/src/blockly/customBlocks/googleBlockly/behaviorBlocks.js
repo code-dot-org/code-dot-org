@@ -1,11 +1,12 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
+import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {createAndCenterDefinitionBlock} from './proceduresBlocks';
-import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
+import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -20,7 +21,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a behavior (a type of procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
-    type: 'behavior_definition',
+    type: BLOCK_TYPES.behaviorDefinition,
     message0: '%1 %2 %3 %4 %5',
     message1: '%1',
     args0: [
@@ -69,11 +70,12 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_set_no_return_helper',
       'behaviors_block_frame',
       'procedure_def_mini_toolbox',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'behavior_def_mutator',
   },
   {
-    type: 'gamelab_behavior_get',
+    type: BLOCK_TYPES.behaviorGet,
     message0: '%1 %2',
     args0: [
       {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
@@ -93,11 +95,12 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'behavior_get_mutator',
   },
   {
-    type: 'sprite_parameter_get',
+    type: BLOCK_TYPES.spriteParameterGet,
     message0: '%1',
     args0: [
       {
@@ -115,6 +118,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   },
 ]);
 
+// Mutators and Extensions
 GoogleBlockly.Extensions.registerMutator(
   'behavior_def_mutator',
   behaviorDefMutator
@@ -161,15 +165,21 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   };
   const behaviorDefinitionBlock = {
     kind: 'block',
-    type: 'behavior_definition',
+    type: BLOCK_TYPES.behaviorDefinition,
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
   };
 
-  // TODO: Replace this with a call to open the behavior editor with a new block
-  const createNewBehavior = () =>
-    createAndCenterDefinitionBlock(behaviorDefinitionBlock);
+  const createNewBehavior = function () {
+    if (modalFunctionEditorExperimentEnabled) {
+      Blockly.functionEditor.newProcedureCallback(
+        BLOCK_TYPES.behaviorDefinition
+      );
+    } else {
+      createAndCenterDefinitionBlock(behaviorDefinitionBlock);
+    }
+  };
 
   // If the modal function editor is enabled, we render a button to open the editor
   // Otherwise, we render a "blank" behavior definition block
@@ -178,8 +188,6 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   } else if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
     blockList.push(newBehaviorButton);
-  } else {
-    blockList.push(behaviorDefinitionBlock);
   }
 
   blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
@@ -194,7 +202,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   workspaces.forEach(workspace => {
     const behaviorBlocks = workspace
       .getTopBlocks()
-      .filter(topBlock => topBlock.type === 'behavior_definition');
+      .filter(topBlock => topBlock.type === BLOCK_TYPES.behaviorDefinition);
     behaviorBlocks.forEach(block =>
       allBehaviors.push({
         name: block.getFieldValue('NAME'),
@@ -206,7 +214,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   allBehaviors.sort(nameComparator).forEach(({name, id}) => {
     blockList.push({
       kind: 'block',
-      type: 'gamelab_behavior_get',
+      type: BLOCK_TYPES.behaviorGet,
       extraState: {
         name,
         id,

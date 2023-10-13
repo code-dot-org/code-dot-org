@@ -8,9 +8,11 @@ import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {BlockSvg} from 'blockly/core';
+import {BlockSvg, Workspace} from 'blockly/core';
 import {doAi} from './utils';
-import AiPreview from './AiPreview';
+import AiVisualizationPreview from './AiVisualizationPreview';
+import AiBlockPreview from './AiBlockPreview';
+import {AiOutput} from '../types';
 const Typist = require('react-typist').default;
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
@@ -57,6 +59,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
+  );
+
+  const aiOutput = useSelector(
+    (state: {dance: DanceState}) => state.dance.aiOutput
   );
 
   const [showPreview, setShowPreview] = useState<boolean>(false);
@@ -152,16 +158,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
    * Generates blocks from the AI result in the main workspace, and attaches
    * them to each other.
    */
-  const generateBlocksFromResult = (): [BlockSvg, BlockSvg] => {
+  const generateBlocksFromResult = (
+    workspace: Workspace
+  ): [BlockSvg, BlockSvg] => {
     const params = JSON.parse(resultJson);
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
-      Blockly.getMainWorkspace().newBlock(
-        'Dancelab_setForegroundEffect'
-      ) as BlockSvg,
-      Blockly.getMainWorkspace().newBlock(
-        'Dancelab_setBackgroundEffectWithPalette'
-      ) as BlockSvg,
+      workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
+      workspace.newBlock('Dancelab_setBackgroundEffectWithPalette') as BlockSvg,
     ];
 
     // Foreground block.
@@ -177,8 +181,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     return blocksSvg;
   };
 
-  const convertBlocks = () => {
-    const blocksSvg = generateBlocksFromResult();
+  const handleConvertBlocks = () => {
+    const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -217,7 +221,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   };
 
-  const handleDoneClick = () => {
+  const handleUseClick = () => {
     dispatch(setCurrentAiModalField(undefined));
   };
 
@@ -411,7 +415,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
         {showPreview && (
           <div id="preview-area" className={moduleStyles.previewArea}>
-            <AiPreview blocks={generateBlocksFromResult()} />
+            <AiVisualizationPreview
+              blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
+            />
+            <AiBlockPreview
+              generateBlocksFromResult={generateBlocksFromResult}
+            />
           </div>
         )}
 
@@ -439,20 +448,26 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {((mode === Mode.RESULTS && typingDone) ||
             mode === Mode.RESULTS_FINAL) && (
             <div>
-              <Button
-                id="convert"
-                text={'Convert'}
-                onClick={convertBlocks}
-                color={Button.ButtonColor.brandSecondaryDefault}
-                className={moduleStyles.button}
-              />
-              <Button
-                id="done"
-                text={'Use'}
-                onClick={handleDoneClick}
-                color={Button.ButtonColor.brandSecondaryDefault}
-                className={moduleStyles.button}
-              />
+              {(aiOutput === AiOutput.GENERATED_BLOCKS ||
+                aiOutput === AiOutput.BOTH) && (
+                <Button
+                  id="convert"
+                  text={'Convert'}
+                  onClick={handleConvertBlocks}
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  className={moduleStyles.button}
+                />
+              )}
+              {(aiOutput === AiOutput.AI_BLOCK ||
+                aiOutput === AiOutput.BOTH) && (
+                <Button
+                  id="use"
+                  text={'Use'}
+                  onClick={handleUseClick}
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  className={moduleStyles.button}
+                />
+              )}
             </div>
           )}
         </div>

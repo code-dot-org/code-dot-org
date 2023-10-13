@@ -13,6 +13,7 @@ import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReview
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const CodeReviewTimelineReview = ({
   review,
@@ -161,7 +162,7 @@ const styles = {
     marginRight: '10px',
   },
   codeReviewTitle: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     lineHeight: '14px',
     marginBottom: '4px',
   },
@@ -181,6 +182,6 @@ const styles = {
     margin: '10px 0',
   },
   note: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
 };

@@ -37,12 +37,18 @@ describe('LearningGoal', () => {
           aiEnabled: true,
         }}
         teacherHasEnabledAi={true}
+        aiConfidence={50}
+        aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
     expect(wrapper.find('AiAssessment').props().studentName).to.equal(
       studentLevelInfo.name
+    );
+    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(50);
+    expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
+      3
     );
     expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
   });
@@ -182,6 +188,21 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
+    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
+  });
+
+  it('shows editable textbox for feedback when the teacher can provide feedback', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        canProvideFeedback={true}
+        studentLevelInfo={studentLevelInfo}
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+      />
+    );
+    expect(wrapper.find('textarea').props().disabled).to.equal(false);
   });
 
   it('shows understanding in header if submittedEvaluation contains understand', () => {

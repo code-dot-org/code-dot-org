@@ -30,6 +30,8 @@ export default function LearningGoal({
   canProvideFeedback,
   reportingData,
   studentLevelInfo,
+  aiUnderstanding,
+  aiConfidence,
   submittedEvaluation,
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -153,7 +155,7 @@ export default function LearningGoal({
             name="teacherFeedback"
             value={displayFeedback}
             onChange={handleFeedbackChange}
-            disabled={!studentLevelInfo}
+            disabled={!canProvideFeedback}
           />
         </label>
         {isAutosaving ? (
@@ -217,26 +219,36 @@ export default function LearningGoal({
           {canProvideFeedback && (
             <BodyThreeText>{i18n.needsApproval()}</BodyThreeText>
           )}
-          {submittedEvaluation?.understanding && (
-            <BodyThreeText>
-              {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
-            </BodyThreeText>
-          )}
+          <div className={style.submittedFeedback}>
+            {submittedEvaluation?.understanding && (
+              <BodyThreeText>
+                {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
+              </BodyThreeText>
+            )}
+            {submittedEvaluation?.feedback && (
+              <FontAwesome
+                icon="message"
+                className="fa-regular"
+                title={i18n.feedback()}
+              />
+            )}
+          </div>
         </div>
       </summary>
       {/*TODO: Pass through data to child component*/}
-      <div className={style.expandedBorder}>
+      <div>
         {teacherHasEnabledAi && !!studentLevelInfo && (
           <div className={style.openedAiAssessment}>
             <AiAssessment
               isAiAssessed={learningGoal.aiEnabled}
               studentName={studentLevelInfo.name}
-              aiConfidence={50}
-              aiUnderstandingLevel={1}
+              aiConfidence={aiConfidence}
+              aiUnderstandingLevel={aiUnderstanding}
             />
           </div>
         )}
         <div className={style.learningGoalExpanded}>
+          {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
             learningGoalKey={learningGoal.key}
             evidenceLevels={learningGoal.evidenceLevels}
@@ -254,7 +266,6 @@ export default function LearningGoal({
             </div>
           )}
           {!!studentLevelInfo && renderAutoSaveTextbox()}
-          {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
         </div>
       </div>
     </details>
@@ -267,6 +278,8 @@ LearningGoal.propTypes = {
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
+  aiUnderstanding: PropTypes.number,
+  aiConfidence: PropTypes.number,
   submittedEvaluation: submittedEvaluationShape,
 };
 
@@ -275,11 +288,7 @@ const AiToken = () => {
     <div>
       {' '}
       <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
-        <ExtraStrongText>
-          {i18n.artificialIntelligenceAbbreviation()}
-        </ExtraStrongText>
-
-        <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
+        <ExtraStrongText>{i18n.usesAi()}</ExtraStrongText>
       </BodyFourText>
     </div>
   );
