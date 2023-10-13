@@ -379,7 +379,17 @@ export default class FunctionEditor {
         definitionBlock.description
       );
       definitionBlock.description = undefined;
-      this.updateHiddenDefinitionDescription();
+      // Also update the description of the hidden definition block.
+      // Events don't run on custom properties such as description.
+      const topBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks();
+      const blockToUpdate = topBlocks.find(
+        topBlock =>
+          topBlock.getProcedureModel().getId() ===
+          this.block.getProcedureModel().getId()
+      );
+      if (blockToUpdate) {
+        blockToUpdate.description = undefined;
+      }
     }
   }
 }
