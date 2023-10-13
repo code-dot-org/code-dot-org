@@ -34,7 +34,7 @@ export const Chip: React.FunctionComponent<ChipProps> = ({
     if (input) {
       input.setCustomValidity('');
     }
-  }, [inputRef]);
+  }, [inputRef, onCheckedChange]);
 
   return (
     <div>
