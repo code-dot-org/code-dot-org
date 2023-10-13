@@ -5,7 +5,7 @@ import Button from '@cdo/apps/templates/Button';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
-import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
+import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BlockSvg, Workspace} from 'blockly/core';
@@ -38,63 +38,6 @@ type AiModalReturnedItem = {
   available: boolean;
 };
 
-interface FadeInProps {
-  text: string;
-  onComplete: () => void;
-}
-
-function getRandomInt(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-const FadeIn: React.FunctionComponent<FadeInProps> = ({text, onComplete}) => {
-  const [currentTick, setCurrentTick] = useState(0);
-  const [done, setDone] = useState(false);
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      if (!done) {
-        setCurrentTick(currentTick => currentTick + 1);
-      }
-    }, 1000 / 15);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  React.useEffect(() => {
-    if (currentTick >= text.length) {
-      setDone(true);
-      onComplete();
-    }
-  }, [currentTick]);
-
-  const getRandomCharacter = () => {
-    const characters =
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    return characters[getRandomInt(0, characters.length - 1)];
-  };
-
-  const outputText = text.split('').map((character, index) => {
-    return index - 5 > currentTick
-      ? ' '
-      : character === ' '
-      ? ' '
-      : index > currentTick
-      ? getRandomCharacter()
-      : character;
-  });
-
-  return (
-    <pre className={classNames(moduleStyles.pre, moduleStyles.code)}>
-      {outputText.map(character => {
-        return character;
-      })}
-    </pre>
-  );
-};
-
 interface DanceAiProps {
   onClose: () => void;
 }
@@ -111,7 +54,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
   const [resultJson, setResultJson] = useState<string>('');
-  const [resultExplanation, setResultExplanation] = useState<string>('');
   const [typingDone, setTypingDone] = useState<boolean>(false);
 
   const currentAiModalField = useSelector(
@@ -206,9 +148,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     // The block value will be set to this JSON.
     setResultJson(fullResultJson);
-
-    // The user will see this explanation.
-    setResultExplanation(result.explanation);
   };
 
   /**
@@ -282,36 +221,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     dispatch(setCurrentAiModalField(undefined));
   };
 
-  const formatJsonString = (jsonString: string) => {
-    return jsonString
-      .replace(/":/g, '": ')
-      .replace(/","/g, '", "')
-      .replace(/,"/g, ', "');
-  };
-
-  // We might or might not wrap this with Typist.  Typist doesn't seem to cope
-  // with this being a separate functional component.
-  const resultsComponent = (mode === Mode.RESULTS ||
-    mode === Mode.RESULTS_FINAL) && (
-    <div>
-      <FadeIn
-        text={`ai(${formatJsonString(resultJson)})`}
-        onComplete={() => {
-          setTypingDone(true);
-          currentAiModalField?.setValue(resultJson);
-          setShowPreview(true);
-        }}
-      />
-    </div>
-  );
-
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
       onClose={onClose}
       initialFocus={false}
     >
-      <div id="inner-area" className={moduleStyles.innerArea}>
+      <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
         <div id="text-area" className={moduleStyles.textArea}>
           <StrongText>
             {' '}
@@ -453,10 +369,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           }}
         >
           {(mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL) && (
-            <div>
-              <Heading5>Code</Heading5>
-              {resultsComponent}
-            </div>
+            <AiBlockPreview
+              generateBlocksFromResult={generateBlocksFromResult}
+              onComplete={() => {
+                currentAiModalField?.setValue(resultJson);
+                setShowPreview(true);
+                setMode(Mode.RESULTS_FINAL);
+                setTypingDone(true);
+              }}
+            />
           )}
         </div>
 
@@ -464,9 +385,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           <div id="preview-area" className={moduleStyles.previewArea}>
             <AiVisualizationPreview
               blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
-            />
-            <AiBlockPreview
-              generateBlocksFromResult={generateBlocksFromResult}
             />
           </div>
         )}
