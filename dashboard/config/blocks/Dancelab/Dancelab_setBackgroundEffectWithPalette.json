@@ -26,14 +26,6 @@
             "\"quads\""
           ],
           [
-            "Blooming Petals",
-            "\"blooming_petals\""
-          ],
-          [
-            "Clouds",
-            "\"clouds\""
-          ],
-          [
             "Colors",
             "\"color_cycle\""
           ],
@@ -52,10 +44,6 @@
           [
             "Flowers",
             "\"flowers\""
-          ],
-          [
-            "Frosted Grid",
-            "\"frosted_grid\""
           ],
           [
             "Growing Stars",
@@ -122,10 +110,6 @@
             "\"disco\""
           ],
           [
-            "Starburst",
-            "\"starburst\""
-          ],
-          [
             "Stars",
             "\"stars\""
           ],
@@ -139,10 +123,6 @@
         "name": "PALETTE",
         "options": [
           [
-            "Autumn",
-            "\"autumn\""
-          ],
-          [
             "Black and White",
             "\"rave\""
           ],
@@ -153,10 +133,6 @@
           [
             "Electronic",
             "\"electronic\""
-          ],
-          [
-            "Grayscale",
-            "\"grayscale\""
           ],
           [
             "Ice Cream",
@@ -171,44 +147,8 @@
             "\"neon\""
           ],
           [
-            "Ocean",
-            "\"ocean\""
-          ],
-          [
-            "Rainbow",
-            "\"rainbow\""
-          ],
-          [
-            "Roses",
-            "\"roses\""
-          ],
-          [
-            "Sky",
-            "\"sky\""
-          ],
-          [
-            "Spring",
-            "\"spring\""
-          ],
-          [
-            "Summer",
-            "\"summer\""
-          ],
-          [
-            "Sunrise",
-            "\"sunrise\""
-          ],
-          [
-            "Sunset",
-            "\"sunset\""
-          ],
-          [
             "Tropical",
             "\"tropical\""
-          ],
-          [
-            "Twinkling",
-            "\"twinkling\""
           ],
           [
             "Vintage",
@@ -217,10 +157,6 @@
           [
             "Warm",
             "\"warm\""
-          ],   
-          [
-            "Winter",
-            "\"winter\""
           ]
         ]
       }
