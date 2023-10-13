@@ -143,10 +143,10 @@
 }
 
 .learningGoalHeaderLeftSide {
+  @include main-font-semi-bold;
   display: flex;
   align-items: center;
   gap: 16px;
-  font-family: $gotham-bold;
 
   // TODO: [DES-321] remove span styles
   span {
@@ -195,16 +195,11 @@ p.aiTokenText {
   color: $product_affirmative_default;
 }
 
-.expandedBorder {
-  border-top: 1px solid $neutral_dark40;
-}
-
 .learningGoalExpanded {
-  padding: 1.25rem 1rem;
-
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.25rem;
   align-self: stretch;
 }
 
@@ -217,8 +212,8 @@ p.aiTokenText {
   // This is body three styles but the typography components don't work well with markdown support
   // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
   div {
+    @include main-font-regular;
     color: $neutral-dark;
-    font-family: $gotham-regular, sans-serif;
     font-size: 0.875rem;
     line-height: 1.54;
   }
@@ -228,7 +223,7 @@ p.aiTokenText {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
   align-self: stretch;
   flex: 1;
 
@@ -244,8 +239,8 @@ p.aiTokenText {
   align-self: stretch;
 
   span {
+    @include main-font-semi-bold;
     font-size: 0.875rem;
-    font-family: $gotham-bold;
     line-height: 154%;
   }
 
@@ -255,7 +250,7 @@ p.aiTokenText {
 }
 
 .evidenceLevelLabel {
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
@@ -290,7 +285,7 @@ p.errorMessage {
 }
 
 .openedAiAssessment {
-  padding: 1.25rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .aiAssessmentBlock {
