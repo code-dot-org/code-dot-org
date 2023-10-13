@@ -704,7 +704,6 @@ export default function teacherSections(state = initialState, action) {
     if (Object.keys(action.sections).length === 1) {
       selectedSectionId = action.sections[0].id;
     }
-    console.log('lfm-l', sections);
 
     sections.forEach(section => {
       // SET_SECTIONS is called in two different contexts. On some pages it is called

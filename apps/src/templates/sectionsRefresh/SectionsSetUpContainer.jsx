@@ -345,16 +345,14 @@ export default function SectionsSetUpContainer({
         sectionCourse={sections[0].course}
         initialParticipantType={sections[0].participantType}
       />
+
       <div
         className={classnames(
           moduleStyles.containerWithMarginTop,
           moduleStyles.withBorderTop
         )}
       >
-        {DCDO.get(
-          'show-coteacher-ui',
-          true /*TODO: change this to false before merging */
-        ) && renderCoteacherSection()}
+        {DCDO.get('show-coteacher-ui', false) && renderCoteacherSection()}
         {renderAdvancedSettings()}
       </div>
       <div
