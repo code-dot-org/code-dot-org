@@ -232,7 +232,6 @@ class Hamburger
 
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
-    header_links = []
 
     any_teacher_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
@@ -245,10 +244,7 @@ class Hamburger
     any_student_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
       {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
-    ]
-
-    en_student = [
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"},
       {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
     ]
 
@@ -263,22 +259,12 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-about"}
     ]
 
-    about_intl = [
-      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/international/about"), id: "header-non-en-about"}
-    ]
-
     if options[:user_type] == "teacher"
-      header_links = any_teacher_links
+      any_teacher_links
     elsif options[:user_type] == "student"
-      header_links = any_student_links
-      if options[:language] == "en"
-        header_links.concat(en_student)
-      else
-        header_links.concat(about_intl)
-      end
+      any_student_links
     else
-      header_links = signed_out_links
+      signed_out_links
     end
-    header_links
   end
 end

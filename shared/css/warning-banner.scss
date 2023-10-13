@@ -24,7 +24,7 @@
   }
 
   a, a:visited {
-    font-family: $gotham-extra-bold;
+    @include main-font-bold;
     color: white;
     text-decoration: underline;
   }

@@ -188,6 +188,21 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
+    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
+  });
+
+  it('shows editable textbox for feedback when the teacher can provide feedback', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        canProvideFeedback={true}
+        studentLevelInfo={studentLevelInfo}
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+      />
+    );
+    expect(wrapper.find('textarea').props().disabled).to.equal(false);
   });
 
   it('shows understanding in header if submittedEvaluation contains understand', () => {
