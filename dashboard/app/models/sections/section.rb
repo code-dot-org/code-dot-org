@@ -379,7 +379,7 @@ class Section < ApplicationRecord
         students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
-      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorSerializer).as_json
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
 
       {
         id: id,
