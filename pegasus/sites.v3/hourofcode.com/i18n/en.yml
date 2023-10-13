@@ -41,6 +41,8 @@
   africa_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
   hoc2023_header: "Creativity with AI"
+  hoc2023_hero_desc_homepage: "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed."
+  hoc2023_hero_desc_learn_page: "This year, we're taking Hour of Code to new heights by offering coding opportunities that encompass both artificial intelligence (AI) and non-AI components."
   hoc2023_social_creativity_with_ai_title: "Hour of Code - What will you create?"
   hoc2023_social_creativity_with_ai_desc: "Use computer science to explore and learn about AI!"
 
@@ -8661,6 +8663,14 @@
   video_library_page_not_hacked_video_title_5: "How Not To Get Hacked: Websites and Wifi"
   video_library_page_not_hacked_video_title_6: "How Not To Get Hacked: Messaging and Downloads"
   video_library_page_not_hacked_video_title_7: "How Not To Get Hacked: Install Updates"
+
+  thank_you_page_main_title: "Thank You for Helping to Build a Movement"
+  thank_you_page_description: "The Code.org Advocacy Coalition wishes to thank the hundreds of thousands of local champions and advocates, including teachers, community members, researchers, nonprofits, universities, corporations, and government institutions who have supported the vision that every student in every school deserves the opportunity to learn computer science. Thank you for your support of this movement."
+  thank_you_page_members_section_title: "And to all the members of the Code.org Advocacy Coalition:"
+  thank_you_page_individual_organization_title: "Thank you to the following individuals and organizations for their contributions to this report:"
+  thank_you_page_individual_organization_description: "Computer science education supervisors at each state education agency, College Board, Della Cronin, Stuart Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit"
+  thank_you_page_teachers_students_title: "Thank you to the students and teachers quoted in this report:"
+  thank_you_page_teachers_students_description: "Tess Campion, Willa Campion, Jamie Delerme, Cindy Noriega, Tara Vodopich"
 
   about_us_page_title: "About Us"
   about_us_page_hero_description: "Code.org® is an education innovation nonprofit dedicated to the vision that every student in every school has the opportunity to learn computer science as part of their core K-12 education. We expand access to computer science in schools, with a focus on increasing participation by young women and students from other underrepresented groups.  The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also organizes the annual [Hour of Code](%{hour_url}) campaign, which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Microsoft, Amazon, Google and [many others.](%{others_url})"

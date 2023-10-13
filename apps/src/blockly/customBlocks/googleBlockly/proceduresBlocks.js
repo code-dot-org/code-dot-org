@@ -32,10 +32,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type:
-          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
-            ? 'field_label'
-            : 'field_input',
+        type: 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -83,6 +80,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
+      'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
@@ -137,7 +135,7 @@ export const editButtonHandler = function () {
 };
 
 // This extension adds an edit button to the end of a procedure call block.
-const editButton = function () {
+GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
   // If we are in the modal function editor, don't add the button, due to an issue with Blockly
   // not being able to handle us clearing the block right after it has been clicked.
@@ -156,9 +154,30 @@ const editButton = function () {
     });
     this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
   }
-};
+});
 
-GoogleBlockly.Extensions.register('procedures_edit_button', editButton);
+// This extension renders function and behavior definitions as mini toolboxes
+// The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
+GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
+  // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
+  let miniToolboxBlocks = [];
+  if (this.type === 'behavior_definition') {
+    miniToolboxBlocks.push('sprite_parameter_get');
+  }
+
+  // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
+  if (!miniToolboxBlocks.length) {
+    return;
+  }
+
+  const flyoutToggleButton =
+    Blockly.customBlocks.initializeMiniToolbox.bind(this)(true);
+  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+    miniToolboxBlocks,
+    flyoutToggleButton,
+    true
+  );
+});
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
