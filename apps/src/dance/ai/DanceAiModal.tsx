@@ -218,6 +218,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleUseClick = () => {
+    currentAiModalField?.setValue(resultJson);
     dispatch(setCurrentAiModalField(undefined));
   };
 
@@ -360,19 +361,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        <div
-          id="outputs-area"
-          className={moduleStyles.outputsArea}
-          style={{
-            zIndex:
-              mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL ? 1 : 0,
-          }}
-        >
+        <div id="outputs-area" className={moduleStyles.outputsArea}>
           {(mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL) && (
             <AiBlockPreview
               generateBlocksFromResult={generateBlocksFromResult}
               onComplete={() => {
-                currentAiModalField?.setValue(resultJson);
                 setShowPreview(true);
                 setMode(Mode.RESULTS_FINAL);
                 setTypingDone(true);

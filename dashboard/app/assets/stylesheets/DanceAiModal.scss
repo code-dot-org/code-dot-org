@@ -73,31 +73,44 @@
   }
 }
 
+// Fade in for 1 second after a 6 second delay.
+@keyframes appear6 {
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #ai-modal-inner-area {
   #outputs-area {
     // First block
     .blocklyWorkspace .blocklyPath {
-      animation: appear1 1s;
+      animation: appear2 3s;
     }
 
     // Second block
     .blocklyBlockCanvas g g .blocklyPath {
-      animation: appear2 2s;
+      animation: appear3 4s;
     }
 
     // First block's text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(3) {
-      animation: appear3 3s;
+      animation: appear4 5s;
     }
 
     // Second block's first text
     .blocklyBlockCanvas g .blocklyNonEditableText {
-      animation: appear4 4s;
+      animation: appear5 6s;
     }
 
     // Second block's second text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(4) {
-      animation: appear5 5s;
+      animation: appear6 7s;
     }
   }
 
