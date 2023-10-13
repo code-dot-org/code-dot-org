@@ -288,7 +288,7 @@ Resources:
       VpcConfig:
         SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
         SubnetIds: <%=subnets.to_json%>
-  SQLUserRole:
+  SQLUserLambdaRole:
     Type: AWS::IAM::Role
     Properties:
       <%=service_role 'lambda'%>
