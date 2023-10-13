@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-22 16:52:58 UTC",
+    "serialized_at": "2023-10-12 19:10:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -768,6 +768,22 @@
       },
       "seeding_key": {
         "activity_section.key": "392b93ec-439c-4a80-aaf6-48ae5b698061",
+        "lesson_activity.key": "cbf6a5b5-c565-4dfe-a0fa-4b2ad12ccbf2"
+      }
+    },
+    {
+      "key": "436a40e5-eed1-4426-a166-a177257461cd",
+      "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<div style=\"column-count: 2; column-gap: 20px; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always; width: 180%\">\n     <b>Create Perfomance Task Written Response Practice</b> [Optional]\n    </br>\n    </br>\n    In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n    </br>\n    </br>\n    Sample Prompt: <i> Describe an app that would be an example of a computing innovation. Give an example of who a potential user of such an app might be. </i>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <img src=\"https://images.code.org/3f77c8efade39dc50d301f0751f767b7-writtenResponse3.png\" alt=\"\" style=\"display: block; margin: auto; float: right;\"/>\n    </p>\n</div>\n</br>\n<div style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g22e15123a99_0_388\" target=\"_blank\">Unit Journal Template</a>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <a href=\"https://docs.google.com/presentation/d/1xY6xy7DvL08rFXBkBLij6BE6t2gNpS_IbpQPVGAJ4jk\" target=\"_blank\">Exemplar Response for Instructors</a>\n    </p>\n </div>"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "436a40e5-eed1-4426-a166-a177257461cd",
         "lesson_activity.key": "cbf6a5b5-c565-4dfe-a0fa-4b2ad12ccbf2"
       }
     },
