@@ -130,7 +130,18 @@ theme: responsive_full_width
           %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml-2023")}
             =hoc_s(:call_to_action_self_paced_pl)
 
-= view :section_divider_line
+
+%section.bg-neutral-light
+  .wrapper{style: "display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap"}
+    %figure.col-45
+      %img{src: "/images/ai/pl/101/TeachAI.png", alt: "", style: "width: 100%"}
+    .text-wrapper.col-50
+      %h2{style: "margin-top: 0"}
+        =hoc_s(:teach_ai_title)
+      %p
+        =hoc_s(:teach_ai_description)
+      %a.link-button{href: "teachai.org/toolkit"}
+        =hoc_s(:teach_ai_button_label)
 
 %section#ai-videos
   .wrapper

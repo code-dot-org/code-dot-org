@@ -102,3 +102,21 @@ h2 {
   text-align: center;
   margin-top: 0px;
 }
+
+.tech-ai-container {
+  background-color: #032D83;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 15px;
+}
+
+@media(max-width: 969px) {
+  .tech-ai-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .tech-ai-container p {
+    text-align: center;
+  }
+}
