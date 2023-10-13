@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 import {putRecord} from '../lib/util/firehose';
 import color from '../util/color';
 import Button from './Button';
@@ -193,12 +194,12 @@ const styles = {
   paragraph: {
     marginBottom: 10,
     fontSize: 14,
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     lineHeight: '22px',
     color: color.neutral_dark,
   },
   label: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     cursor: 'pointer',
   },
   radio: {
@@ -214,13 +215,13 @@ const styles = {
     marginBottom: 16,
     fontSize: 24,
     lineHeight: '26px',
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     color: color.neutral_dark,
   },
   button: {
     marginLeft: 7,
     marginRight: 7,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     lineHeight: '30px',
     borderWidth: 2,
     borderStyle: 'solid',
@@ -231,7 +232,7 @@ const styles = {
     marginRight: 7,
     marginTop: 5,
     boxShadow: 'none',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.neutral_dark,
     lineHeight: '30px',
     borderWidth: 2,

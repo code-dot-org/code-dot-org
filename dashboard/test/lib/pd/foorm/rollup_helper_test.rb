@@ -84,8 +84,8 @@ module Pd::Foorm
         }
       }
 
-      assert_not_empty question_details[:general]
-      assert_not_empty question_details[:facilitator]
+      refute_empty question_details[:general]
+      refute_empty question_details[:facilitator]
       assert_equal expected_facilitator_question.with_indifferent_access, question_details.with_indifferent_access[:facilitator]
     end
 

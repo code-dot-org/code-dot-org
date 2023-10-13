@@ -62,6 +62,7 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import experiments from '@cdo/apps/util/experiments';
+import {disableOrphans} from './eventHandlers';
 
 const options = {
   contextMenu: true,
@@ -668,7 +669,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
-      workspace.addChangeListener(Blockly.Events.disableOrphans);
+      workspace.addChangeListener(disableOrphans);
     }
 
     document.dispatchEvent(

@@ -1,0 +1,23 @@
+name 'virtual-pl-csa-summer-day3-async2intro'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 3, Asynchronous Part 2
+
+##### Welcome! This asynchronous module is designed to prepare you for your role with more information about the assigments and the support available to you.
+
+
+## In this module, you will:
+
+* ##### Identify industry practices in Code.org's CSA curriculum.
+* ##### Build an assessment plan for your students.
+* ##### Provide feedback for day 3.
+
+### **Suggested time:** 50 minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+MARKDOWN

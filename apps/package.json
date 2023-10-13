@@ -310,6 +310,7 @@
     "selectize": "^0.12.4",
     "slate": "^0.81.0",
     "slate-react": "^0.81.0",
+    "source-map-loader": "^4.0.1",
     "stream-browserify": "^3.0.0",
     "survey-react": "^1.9.28",
     "timers-browserify": "^2.0.12",
@@ -318,5 +319,6 @@
     "usb": "^2.8.1",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }

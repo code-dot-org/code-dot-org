@@ -9000,7 +9000,7 @@ tr:
           description_short: Minecraft dünyasını kodlamayla keşfet
           student_description: Steve ya da Alex'i Minecraft dünyasında bir maceraya
             çıkarmak için kod blokları kullan.
-          title: Minecraft Kod Saati
+          title: Minecraft Maceracısı
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -10221,6 +10221,10 @@ tr:
               display_name: İçerik
             csd3_2:
               display_name: 'Bölüm 2: Oyun geliştirme'
+        virtual-pl-csa-summer-2024-day1:
+          title: Gün 1
+        virtual-pl-csa-summer-day2:
+          title: Gün 2
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
