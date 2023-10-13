@@ -24,14 +24,15 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "supported_locales": [
-        "it-IT"
+        "it-IT",
+        "sk-SK"
       ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-31 17:35:13 UTC",
+    "serialized_at": "2023-10-12 18:24:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
