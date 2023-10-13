@@ -284,7 +284,7 @@ Resources:
       Runtime: nodejs18.x
       MemorySize: 1024
       Timeout: 30
-      Role: !GetAtt SQLUserRole.Arn
+      Role: !GetAtt SQLUserLambdaRole.Arn
       VpcConfig:
         SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
         SubnetIds: <%=subnets.to_json%>
