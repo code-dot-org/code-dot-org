@@ -27,7 +27,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
       if (refTimer.current) {
         clearInterval(refTimer.current);
       }
-    }, 6000);
+    }, 7000);
 
     return () => {
       if (refTimer.current) {
