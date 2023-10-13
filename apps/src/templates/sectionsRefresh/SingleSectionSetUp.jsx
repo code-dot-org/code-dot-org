@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGroup';
+// import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGroup';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import Chips from '@cdo/apps/componentLibrary/chips';
 
 export default function SingleSectionSetUp({
   sectionNum,
@@ -35,12 +36,24 @@ export default function SingleSectionSetUp({
           />
         </label>
       </div>
+      {/*{participantType === ParticipantAudience.student && (*/}
+      {/*  <div className={moduleStyles.containerWithMarginTop}>*/}
+      {/*    <MultiSelectGroup*/}
+      {/*      label={i18n.chooseGrades()}*/}
+      {/*      name="grades"*/}
+      {/*      required={true}*/}
+      {/*      options={gradeOptions}*/}
+      {/*      values={section.grade || []}*/}
+      {/*      setValues={g => updateSection('grade', g)}*/}
+      {/*    />*/}
+      {/*  </div>*/}
+      {/*)}*/}
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
-          <MultiSelectGroup
+          <Chips
             label={i18n.chooseGrades()}
             name="grades"
-            // required={true}
+            required={true}
             options={gradeOptions}
             values={section.grade || []}
             setValues={g => updateSection('grade', g)}

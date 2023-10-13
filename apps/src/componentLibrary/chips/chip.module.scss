@@ -48,7 +48,7 @@
     background-color: $neutral_dark10;
   }
 
-  fieldset div input[type="checkbox"]:focus + label {
+  fieldset div input[type="checkbox"]:focus-visible + label {
     outline: 2px solid $brand_primary_default;
     outline-offset: 2px;
   }
@@ -59,7 +59,7 @@
     color: $neutral_white;
   }
 
-  fieldset div input[type="checkbox"]:checked:focus + label {
+  fieldset div input[type="checkbox"]:checked:focus-visible + label {
     outline: 2px solid $brand_primary_default;
     outline-offset: 2px;
   }
