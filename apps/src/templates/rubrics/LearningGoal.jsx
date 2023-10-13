@@ -258,7 +258,7 @@ export default function LearningGoal({
             learningGoalKey={learningGoal.key}
             evidenceLevels={learningGoal.evidenceLevels}
             canProvideFeedback={canProvideFeedback}
-            understanding={understandingLevel.current}
+            understanding={displayUnderstanding}
             radioButtonCallback={radioButtonCallback}
             submittedEvaluation={submittedEvaluation}
           />

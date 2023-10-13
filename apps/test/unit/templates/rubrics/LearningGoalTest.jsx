@@ -205,6 +205,7 @@ describe('LearningGoal', () => {
     wrapper.update();
     expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
     wrapper.unmount();
+  });
 
   it('shows feedback in disabled textbox when available', () => {
     const wrapper = shallow(
