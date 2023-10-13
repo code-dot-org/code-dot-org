@@ -34,17 +34,17 @@ module Cdo::CloudFormation
       end
     end
 
-    # Prepare (package) a CloudFormation custom Resource Lambda that uses node runtime to be deployed by CloudFormation
+    # Prepare (package) a Lambda that uses node runtime to be deployed by CloudFormation
     # by installing dependencies, zipping the Lambda directory, uploading to S3, and returning the S3 URI to
     # populate the `AWS::Lambda::Function` `Code` Property.
-    # Assumes CloudFormation custom Resource Lambdas are in `/aws/cloudformation/lambdas/`.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
     def package_node_lambda(relative_directory)
       install_node_dependencies(relative_directory)
       return zip_directory(relative_directory)
     end
 
     # Install npm packages used by a lambda to prepare the directory the lambda is in for being zipped and uploaded.
-    # Assumes CloudFormation custom Resource Lambdas are in `/aws/cloudformation/lambdas/`.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
     def install_node_dependencies(relative_directory)
       absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
       Dir.chdir(absolute_directory) do
@@ -56,7 +56,7 @@ module Cdo::CloudFormation
 
     # Zip a directory containing a Lambda's source code and dependencies, upload to S3, and return the S3 location
     # to assist in populating the `Code` Property of a CloudFormation template `AWS::Lambda::Function` Resource.
-    # Assumes CloudFormation custom Resource Lambdas are in `/aws/cloudformation/lambdas/`.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
     # @param relative_directory [String] Name of Lambda directory relative to `/aws/cloudformation/lambdas`.
     # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
     # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
