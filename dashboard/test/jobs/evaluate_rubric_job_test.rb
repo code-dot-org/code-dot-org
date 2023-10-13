@@ -14,7 +14,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2'
     assert_equal 2, @rubric.learning_goals.count
 
-    # Don't actually talk to S3
+    # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
   end
 
@@ -26,6 +26,10 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     channel_id = channel_token.channel
 
     stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data
+
+    stub_get_openai_evaluations
 
     # run the job
     perform_enqueued_jobs do
@@ -75,12 +79,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
     @rubric.destroy
 
-    # create a project
-    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
-    channel_id = channel_token.channel
-
-    stub_project_source_data(channel_id)
-
     exception = assert_raises ActiveRecord::RecordNotFound do
       EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
     end
@@ -88,7 +86,9 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
-  # stub out the calls to fetch project data from S3
+  # stub out the calls to fetch project data from S3. Because the call to S3
+  # is deep inside SourceBucket, we stub out the entire SourceBucket class
+  # rather than stubbing the S3 calls directly.
   private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
     fake_main_json = {source: code}.to_json
     fake_source_data = {
@@ -97,6 +97,75 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       version_id: version_id
     }
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
+  end
+
+  # stub out the s3 calls made from the job via read_file_from_s3 and read_examples.
+  private def stub_lesson_s3_data
+    s3_client = Aws::S3::Client.new(stub_responses: true)
+    bucket = {
+      'teaching_assistant/lessons/fake-lesson-s3-name/system_prompt.txt' => 'fake-system-prompt',
+      'teaching_assistant/lessons/fake-lesson-s3-name/standard_rubric.csv' => 'fake-standard-rubric',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.js' => 'fake-code-1',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.tsv' => 'fake-response-1',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.js' => 'fake-code-2',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.tsv' => 'fake-response-2',
+    }
+
+    s3_client.stub_responses(
+      :get_object,
+      ->(context) do
+        key = context.params[:key]
+        obj = bucket[key]
+        raise "NoSuchKey: #{key}" unless obj
+        {body: StringIO.new(obj)}
+      end
+    )
+
+    s3_client.stub_responses(
+      :list_objects_v2,
+      {
+        contents: bucket.keys.map {|key| {key: key}}
+      }
+    )
+
+    EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
+  end
+
+  private def stub_get_openai_evaluations
+    expected_examples = [
+      ['fake-code-1', 'fake-response-1'],
+      ['fake-code-2', 'fake-response-2']
+    ]
+    expected_form_data = {
+      "model" => "gpt-4-0613",
+      "code" => 'fake-code',
+      "prompt" => 'fake-system-prompt',
+      "rubric" => 'fake-standard-rubric',
+      "examples" => expected_examples.to_json,
+      "remove-comments" => "1",
+      "num-responses" => "3",
+      "num-passing-grades" => "2",
+      "temperature" => "0.2"
+    }
+    fake_ai_evaluations = [
+      {
+        'Key Concept' => 'learning-goal-1',
+        'Grade' => 'Extensive Evidence'
+      },
+      {
+        'Key Concept' => 'learning-goal-2',
+        'Grade' => 'Extensive Evidence'
+      }
+    ]
+    ai_proxy_origin = 'http://fake-ai-proxy-origin'
+    CDO.stubs(:ai_proxy_origin).returns(ai_proxy_origin)
+    uri = URI.parse("#{ai_proxy_origin}/assessment")
+    HTTParty.stubs(:post).with(
+      uri,
+      body: URI.encode_www_form(expected_form_data),
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      timeout: 120
+    ).returns(stub(body: {data: fake_ai_evaluations}.to_json, success?: true))
   end
 
   # verify the job wrote the expected LearningGoalAiEvaluations to the database
