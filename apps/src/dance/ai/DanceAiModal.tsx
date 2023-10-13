@@ -11,7 +11,8 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BlockSvg, Workspace} from 'blockly/core';
 import {doAi} from './utils';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import DanceAiClient from '../DanceAiClient';
+// import DanceAiClient from '../DanceAiClient';
+import {chooseEffects} from './DanceAiClient2';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import {AiOutput} from '../types';
@@ -124,18 +125,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       input =>
         inputLibrary.items.find((item: AiModalItem) => item.id === input).name
     );
-    const request = `${promptString} ${inputNames.join(', ')}.`;
-    startAi(request);
+    startAi(inputNames);
     setMode(Mode.GENERATING);
   };
 
-  const startAi = async (value: string) => {
-    let responseJsonString: any;
+  const startAi = async (inputNames: Array<string>) => {
+    const request = `${promptString} ${inputNames.join(', ')}.`;
+    let responseJsonString: string;
     // Default to using cached response, otherwise contact OpenAI directly
     if (queryParams('ai-model') === 'llm') {
-      responseJsonString = await doAi(value);
+      responseJsonString = await doAi(request);
     } else {
-      responseJsonString = DanceAiClient(value);
+      // let responseJsonString2 = DanceAiClient(request);
+      responseJsonString = chooseEffects(inputNames);
     }
     const result = JSON.parse(responseJsonString);
 
@@ -159,7 +161,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setResultJson(fullResultJson);
 
     // Deprecating as we no longer generate an LLM explanation
-    //setResultExplanation(result.explanation);
+    setResultExplanation('');
   };
 
   /**
