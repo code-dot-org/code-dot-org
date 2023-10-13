@@ -188,6 +188,7 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
+    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
   });
 
   it('shows editable textbox for feedback when the teacher can provide feedback', () => {
