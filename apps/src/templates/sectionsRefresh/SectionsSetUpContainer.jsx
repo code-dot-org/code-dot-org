@@ -285,13 +285,13 @@ export default function SectionsSetUpContainer({
   };
 
   const renderCoteacherSection = () => {
-    const tooltip = () => (
+    const tooltip = (
       <span>
         <span data-tip data-for="tooltip" style={styles.tooltipSpan}>
           <FontAwesome icon="info-circle" style={styles.tooltipIcon} />
         </span>
         <ReactTooltip id="tooltip" effect="solid">
-          <p>tooltip text</p>
+          <p>{i18n.coteacherAddTooltip()}</p>
         </ReactTooltip>
       </span>
     );
@@ -299,11 +299,11 @@ export default function SectionsSetUpContainer({
     return renderExpandableSection(
       () => (
         <div>
-          Coteachers
-          {tooltip()}
+          {i18n.coteacherAdd()}
+          {tooltip}
         </div>
       ),
-      () => <div>coteacher stuff here</div>,
+      () => <div>{i18n.coteacherAddInfo()}</div>,
       isCoteacherOpen,
       toggleIsCoteacherOpen
     );
