@@ -336,12 +336,6 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:create, :edit, :new, :update] do
-      member do
-        post 'submit_evaluations'
-      end
-    end
-
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
         get 'quick_assign_course_offerings'
@@ -927,6 +921,14 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
+
         resources :ml_models, only: [:show, :destroy] do
           collection do
             get 'names'
@@ -1046,7 +1048,15 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :learning_goal_evaluations, only: [:create, :update] do
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        post 'submit_evaluations'
+      end
+    end
+
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
       collection do
         get :get_evaluation
         post :get_or_create_evaluation

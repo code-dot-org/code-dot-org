@@ -1,0 +1,22 @@
+name 'virtual-pl-csa-summer-day3-async1intro'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 3, Asynchronous Part 1
+
+##### Welcome! This activity is meant to give you a solid foundation on parameterized constructors and will help you understand the content in the lessons you investigate.
+
+## In this module, you will:
+
+* ##### Explore the lesson plan and additional resources for your assigned lesson.
+* ##### Complete the THIRD lesson investigation guide in your activity packet.
+* ##### Create a slide for you to share out your findings.  
+
+### **Suggested time:** 50 minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+MARKDOWN

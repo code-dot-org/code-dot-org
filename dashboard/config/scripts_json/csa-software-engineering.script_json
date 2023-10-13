@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-09-14 19:38:00 UTC",
+    "serialized_at": "2023-10-13 00:59:58 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3588,6 +3588,18 @@
       }
     },
     {
+      "name": "Alternatives to VS Code and GitHub Copilot",
+      "url": "https://docs.google.com/document/d/1aTwNnWY0wfDP3trPgFO2Jpnh2xrIJJqcIKHdgmH4s6A/edit?usp=sharing",
+      "key": "alternatives_to_vs_code_and_github_copilot",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "alternatives_to_vs_code_and_github_copilot"
+      }
+    },
+    {
       "name": "BinaryBazaar App",
       "url": "https://docs.google.com/document/d/1Obs0IoQ4IPKmAbOJCAqA86VfqQaykMnAs9OageySJWI/edit?usp=sharing",
       "key": "binarybazaar_app",
@@ -4522,6 +4534,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "alternatives_to_vs_code_and_github_copilot",
+        "script.name": "csa-software-engineering"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "software_engineering_computer_vision_overview",
