@@ -222,6 +222,27 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     dispatch(setCurrentAiModalField(undefined));
   };
 
+  const handleStartOverClick = () => {
+    setMode(Mode.SELECT_INPUTS);
+    setInputs([]);
+    setCurrentInputSlot(0);
+    setTypingDone(false);
+    setResultJson('');
+    setShowPreview(false);
+  };
+
+  let showConvertButton = false;
+  let showUseButton = false;
+
+  if ((mode === Mode.RESULTS && typingDone) || mode === Mode.RESULTS_FINAL) {
+    if (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH) {
+      showConvertButton = true;
+    }
+    if (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH) {
+      showUseButton = true;
+    }
+  }
+
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
@@ -382,7 +403,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           </div>
         )}
 
-        <div className={moduleStyles.buttonsArea}>
+        <div id="buttons-area" className={moduleStyles.buttonsArea}>
+          {mode === Mode.RESULTS_FINAL && (
+            <Button
+              id="start-over"
+              text={'Start over'}
+              onClick={handleStartOverClick}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonLeft
+              )}
+            />
+          )}
+
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
               id="select-all-sections"
@@ -403,30 +437,23 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {((mode === Mode.RESULTS && typingDone) ||
-            mode === Mode.RESULTS_FINAL) && (
-            <div>
-              {(aiOutput === AiOutput.GENERATED_BLOCKS ||
-                aiOutput === AiOutput.BOTH) && (
-                <Button
-                  id="convert"
-                  text={'Convert'}
-                  onClick={handleConvertBlocks}
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                  className={moduleStyles.button}
-                />
-              )}
-              {(aiOutput === AiOutput.AI_BLOCK ||
-                aiOutput === AiOutput.BOTH) && (
-                <Button
-                  id="use"
-                  text={'Use'}
-                  onClick={handleUseClick}
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                  className={moduleStyles.button}
-                />
-              )}
-            </div>
+          {showConvertButton && (
+            <Button
+              id="convert"
+              text={'Convert'}
+              onClick={handleConvertBlocks}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={moduleStyles.button}
+            />
+          )}
+          {showUseButton && (
+            <Button
+              id="use"
+              text={'Use'}
+              onClick={handleUseClick}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={moduleStyles.button}
+            />
           )}
         </div>
       </div>

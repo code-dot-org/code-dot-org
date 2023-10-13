@@ -212,8 +212,8 @@
       height: 44px;
       margin-top: auto;
       display: flex;
-      align-items: flex-end;
-      flex-direction: column;
+      justify-content: flex-end;
+      flex-direction: row;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -221,6 +221,10 @@
 
       .button {
         font-size: 16px;
+
+        &Left {
+          margin-right: auto;
+        }
       }
     }
   }
