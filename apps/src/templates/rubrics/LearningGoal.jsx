@@ -219,15 +219,24 @@ export default function LearningGoal({
           {canProvideFeedback && (
             <BodyThreeText>{i18n.needsApproval()}</BodyThreeText>
           )}
-          {submittedEvaluation?.understanding && (
-            <BodyThreeText>
-              {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
-            </BodyThreeText>
-          )}
+          <div className={style.submittedFeedback}>
+            {submittedEvaluation?.understanding && (
+              <BodyThreeText>
+                {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
+              </BodyThreeText>
+            )}
+            {submittedEvaluation?.feedback && (
+              <FontAwesome
+                icon="message"
+                className="fa-regular"
+                title={i18n.feedback()}
+              />
+            )}
+          </div>
         </div>
       </summary>
       {/*TODO: Pass through data to child component*/}
-      <div className={style.expandedBorder}>
+      <div>
         {teacherHasEnabledAi && !!studentLevelInfo && (
           <div className={style.openedAiAssessment}>
             <AiAssessment
@@ -239,6 +248,7 @@ export default function LearningGoal({
           </div>
         )}
         <div className={style.learningGoalExpanded}>
+          {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
             learningGoalKey={learningGoal.key}
             evidenceLevels={learningGoal.evidenceLevels}
@@ -256,7 +266,6 @@ export default function LearningGoal({
             </div>
           )}
           {!!studentLevelInfo && renderAutoSaveTextbox()}
-          {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
         </div>
       </div>
     </details>
