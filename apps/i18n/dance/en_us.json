@@ -1,9 +1,9 @@
 {
-  "aiDanceFeedbackAiBlockNoParameters": "Choose 3 emojis that match the mood and prompt AI to Generate your stage.",
-  "aiDanceFeedbackAiBlockNotConnectedSetup": "Make sure to connect the `Use AI` block to the setup block.",
+ "aiDanceFeedbackAiBlockNoParameters": "Choose 3 emojis that match the mood of the song and prompt AI to generate your stage.",
+  "aiDanceFeedbackAiBlockNotConnectedSetup": "Make sure to connect the `Use AI` block to the `setup` block.",
   "aiDanceFeedbackAiBlockNotConnectedUpArrowEvent": "Make sure to connect the `Use AI` block to the `when up pressed` event block.",
   "aiDanceFeedbackAiConvertToBlocks": "Click on the `Use AI` block to convert it into background and foreground code blocks.",
-  "aiDanceFeedbackConnectPressArrowEvent": "Make sure to press your “up arrow” key or the orange ^ button after clicking Run.",
+  "aiDanceFeedbackConnectPressArrowEvent": "Make sure to press your “up arrow” key or the orange ^ button after pressing *\"Run\"*.",
   "aiDanceFeedbackNoAiBlock": "Drag out the `Use AI` block from the toolbox.",
   "aiDanceFeedbackTinkerAiBlock": "Make sure to choose a new background or foreground effect.",
   "danceFeedbackDidntPress": "Make sure to press the arrow keys while your dance is running.",
