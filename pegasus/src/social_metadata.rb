@@ -65,7 +65,7 @@ def get_social_metadata_for_page(request)
     ai_how_ai_works: {path: "/shared/images/social-media/ai-how-ai-works-social.png", width: 1200, height: 630},
     hoc_2023_social: {path: "/shared/images/social-media/hoc2023_social.png", width: 1200, height: 630},
     videos_page: {path: "/shared/images/social-media/videos-page.png", width: 1200, height: 630},
-    ten_years: {path: "/shared/images/social-media/10-years.png", width: 1200, height: 630},
+    ten_years: {path: "/shared/images/social-media/10years-social.png", width: 1200, height: 630},
   }
 
   # Important:
