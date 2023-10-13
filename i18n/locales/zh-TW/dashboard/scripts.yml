@@ -470,7 +470,7 @@ zh-TW:
           description_short: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
           student_description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
         mc:
-          title: 一小時玩 Minecraft
+          title: Minecraft 探險家
           description: 使用程式積木，幫助 Steve 或 Alex 在 Minecraft 裡完成探險。
           description_short: 透過程式碼探索 Minecraft 世界。
           student_description: 使用程式積木，幫助 Steve 或 Alex 在 Minecraft 裡完成探險。
@@ -8274,3 +8274,11 @@ zh-TW:
           title: 模組 7
         vpl-csd-2023-m8:
           title: 模組 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: 我們的 AI 道德守則
+        virtual-pl-csa-summer-2024-day1:
+          title: 第 1 天
+        virtual-pl-csa-summer-day2:
+          title: 第 2 天

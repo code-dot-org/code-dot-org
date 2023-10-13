@@ -65,7 +65,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "تکرار کن تا زمان�
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "تکرار کن در حالی که";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "تا زمانی که یک مقدار ناصحیح است، چند عبارت را انجام بده.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مقدار صحیح است، چند عبارت را انجام بده.";
-Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کن";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کنید";
 Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "تابع زیر را تعریف کنید و دوباره تلاش کنید.";
 Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعریف";
 Blockly.Msg.DELETE = "پاک کردن";
@@ -289,7 +289,7 @@ Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL = "http://fa.wikipedia.org/wiki/روی
 Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP = "اجرای تابع تعریف‌شده توسط کاربر «%1» و استفاده از خروجی آن.";
 Blockly.Msg.PROCEDURES_CREATE_DO = "ساختن «%1»";
 Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL = "http://fa.wikipedia.org/wiki/رویه_(علوم_رایانه)";
-Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "یه کاری بکن";
+Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "یک کاری بکنید";
 Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE = "به";
 Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP = "تابعی بدون هیچ خروجی می سازد.";
 Blockly.Msg.PROCEDURES_DEFRETURN_HELPURL = "http://fa.wikipedia.org/wiki/%D8%B1%D9%88%DB%8C%D9%87_%28%D8%B9%D9%84%D9%88%D9%85_%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D9%87%29";
@@ -366,7 +366,7 @@ Blockly.Msg.TEXT_TEXT_TOOLTIP = "یک حرف، کلمه یا خطی از متن.
 Blockly.Msg.TEXT_TRIM_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Trimming_%28removing%29_spaces";
 Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "تراشیدن فاصله‌ها از هر دو طرف";
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "تراشیدن فاصله‌ها از طرف چپ";
-Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "حذف فاصله‌های طرف چپ";
+Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "حذف کردن فاصله‌ها از سمت راست";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "یک کپی از متن که فاصله های هر دو طرف آن حذف شده را برمیگرداند.";
 Blockly.Msg.UNUSED_CODE = "کد استفاده نشده";
 Blockly.Msg.VARIABLE = "متغیر";

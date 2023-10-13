@@ -150,12 +150,23 @@ module ScriptConstants
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
       HOW_AI_WORKS_2023_NAME = 'how-ai-works-2023'.freeze,
+      AI_ETHICS_2023_NAME = 'ai-ethics-2023'.freeze,
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
+    ],
+    csd_2023: [
+      CSD1_2023_NAME = 'csd1-2023'.freeze,
+      CSD2_2023_NAME = 'csd2-2023'.freeze,
+      CSD3_2023_NAME = 'csd3-2023'.freeze,
+      CSD4_2023_NAME = 'csd4-2023'.freeze,
+      CSD5_2023_NAME = 'csd5-2023'.freeze,
+      CSD6A_2023_NAME = 'csd6a-2023'.freeze,
+      CSD6B_2023_NAME = 'csd6b-2023'.freeze,
+      CSD7_2023_NAME = 'csd7-2023'.freeze,
     ],
     csd_2022: [
       CSD1_2022_NAME = 'csd1-2022'.freeze,
@@ -290,6 +301,30 @@ module ScriptConstants
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
+  TRANSLATEABLE_UNITS = [
+    *CATEGORIES[:csd],
+    *CATEGORIES[:csd_2018],
+    *CATEGORIES[:csd_2019],
+    *CATEGORIES[:csd_2021],
+    *CATEGORIES[:csd_2022],
+    *CATEGORIES[:csd_2023],
+
+    *CATEGORIES[:csf],
+    *CATEGORIES[:csf_2018],
+    *CATEGORIES[:csf_2019],
+    *CATEGORIES[:csf_2020],
+    *CATEGORIES[:csf_2021],
+    *CATEGORIES[:csf_2022],
+    *CATEGORIES[:csf_2023],
+    *CATEGORIES[:csf_international],
+
+    *CATEGORIES[:hoc],
+    *CATEGORIES[:twenty_hour],
+    *ADDITIONAL_I18N_UNITS,
+    *TRANSLATEABLE_CSC_UNITS,
+    JIGSAW_NAME,
+  ].freeze
+
   def self.csf_next_course_recommendation(course_name)
     # These course names without years in them should be mapped statically to their recommendation.
     static_mapping = {
@@ -331,24 +366,11 @@ module ScriptConstants
     return nil
   end
 
-  def self.i18n?(script)
-    ScriptConstants.unit_in_category?(:csf_international, script) ||
-      ScriptConstants.unit_in_category?(:csf, script) ||
-      ScriptConstants.unit_in_category?(:csf_2018, script) ||
-      ScriptConstants.unit_in_category?(:csf_2019, script) ||
-      ScriptConstants.unit_in_category?(:csf_2020, script) ||
-      ScriptConstants.unit_in_category?(:csf_2021, script) ||
-      ScriptConstants.unit_in_category?(:csf_2022, script) ||
-      ScriptConstants.unit_in_category?(:csf_2023, script) ||
-      ScriptConstants.unit_in_category?(:csd, script) ||
-      ScriptConstants.unit_in_category?(:csd_2018, script) ||
-      ScriptConstants.unit_in_category?(:csd_2019, script) ||
-      ScriptConstants.unit_in_category?(:csd_2021, script) ||
-      ScriptConstants.unit_in_category?(:csd_2022, script) ||
-      ScriptConstants.unit_in_category?(:twenty_hour, script) ||
-      ScriptConstants.unit_in_category?(:hoc, script) ||
-      script == JIGSAW_NAME ||
-      TRANSLATEABLE_CSC_UNITS.include?(script) ||
-      ADDITIONAL_I18N_UNITS.include?(script)
+  # Checks if the unit is translatable
+  #
+  # @param unit_name [String] the Unit name
+  # @return [true, false]
+  def self.i18n?(unit_name)
+    TRANSLATEABLE_UNITS.include?(unit_name)
   end
 end

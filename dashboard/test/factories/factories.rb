@@ -596,6 +596,12 @@ FactoryBot.define do
     end
   end
 
+  factory :section_instructor do
+    instructor {create(:teacher)}
+    section {create(:section)}
+    status {:active}
+  end
+
   factory :game do
     sequence(:name) {|n| "game#{n}.com"}
     app {"maze"}
@@ -1085,6 +1091,12 @@ FactoryBot.define do
         create :activity_section, lesson_activity: activity
       end
     end
+
+    trait :with_lesson_group do
+      after(:create) do |lesson|
+        create(:lesson_group, script: lesson.script, lessons: [lesson]) unless lesson.lesson_group
+      end
+    end
   end
 
   factory :resource do
@@ -1518,16 +1530,6 @@ FactoryBot.define do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     name {"A seattle public school"}
     with_district
-
-    state_school_id {School.construct_state_school_id(state, school_district.try(:id), id)}
-
-    trait :without_state_school_id do
-      state_school_id {nil}
-    end
-
-    trait :with_invalid_state_school_id do
-      state_school_id {"123456789"}
-    end
   end
 
   factory :private_school, parent: :school_common do
@@ -1823,7 +1825,7 @@ FactoryBot.define do
       after(:create) do |learning_goal, evaluator|
         evaluator.num_evaluations.times do
           create(
-            :learning_goal_evaluation,
+            :learning_goal_teacher_evaluation,
             learning_goal: learning_goal,
             teacher: evaluator.teacher,
             user: evaluator.student
@@ -1839,7 +1841,17 @@ FactoryBot.define do
     teacher_description {"Description for teacher"}
   end
 
-  factory :learning_goal_evaluation do
+  factory :learning_goal_teacher_evaluation do
     association :learning_goal
+    association :teacher, factory: :teacher
+    association :user, factory: :student
+    understanding {0}
+  end
+
+  factory :learning_goal_ai_evaluation do
+    association :learning_goal
+    association :user, factory: :student
+    association :requester, factory: :teacher
+    understanding {0}
   end
 end

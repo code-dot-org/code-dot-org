@@ -16,6 +16,6 @@
   "resetFailure": "بازنشانی آزمایشگاه وب انجام نشد: {message}.",
   "toggleInspectorOn": "بازرس: خاموش",
   "toggleInspectorOff": "بازرس: روشن",
-  "troubleshootingSupport": "برای اطلاعات بیشتر، لطفاً به مقاله پشتیبانی ما [\"Troubleshooting Web Lab problems\"][0] مراجعه کنید.",
+  "troubleshootingSupport": "برای اطلاعات بیشتر، لطفاً به مقاله پشتیبانی ما [\"Troubleshooting Web Lab problems\"]({url}) مراجعه کنید.",
   "uploadError": "خطای آپلود"
 }

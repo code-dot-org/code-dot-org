@@ -271,6 +271,47 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "name": "тегерек тарткыла"
+          },
+          "draw a house": {
+            "name": "саат тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "узундугу",
+              "repeat": "кайталоо"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a square": {
+            "name": "чарчы тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a star": {
+            "name": "жылдыз тарткыла",
+            "parameters": {
+              "length": "узундугу",
+              "points": "упай"
+            }
+          },
+          "draw a triangle": {
+            "name": "үч бурчтук тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "бирдеме кылуу"
@@ -440,6 +481,47 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "тегерек тарткыла"
+          },
+          "draw a house": {
+            "name": "саат тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "узундугу",
+              "repeat": "кайталоо"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a square": {
+            "name": "чарчы тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a star": {
+            "name": "жылдыз тарткыла",
+            "parameters": {
+              "length": "узундугу",
+              "points": "упай"
+            }
+          },
+          "draw a triangle": {
+            "name": "үч бурчтук тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "тегерек тарткыла"
@@ -482,6 +564,47 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "тегерек тарткыла"
+          },
+          "draw a house": {
+            "name": "саат тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "узундугу",
+              "repeat": "кайталоо"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a square": {
+            "name": "чарчы тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          },
+          "draw a star": {
+            "name": "жылдыз тарткыла",
+            "parameters": {
+              "length": "узундугу",
+              "points": "упай"
+            }
+          },
+          "draw a triangle": {
+            "name": "үч бурчтук тарткыла",
+            "parameters": {
+              "length": "узундугу"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
             "name": "тегерек тарткыла"
           },
@@ -978,6 +1101,11 @@
             "name": "бирдеме кылуу"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
         "courseE_artist_concept1": {
           "do something": {
             "name": "бирдеме кылуу"
@@ -1041,6 +1169,11 @@
             "name": "бирдеме кылуу"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "чарчы тарткыла"
@@ -1067,6 +1200,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "чарчы тарткыла"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "чарчы тарткыла"
           }
@@ -1102,6 +1240,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "жылдыз тарткыла"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "жылдыз тарткыла"
           }
@@ -1147,6 +1290,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "жылдыз тарткыла"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "жылдыз тарткыла"
           }
@@ -1206,6 +1354,11 @@
             "name": "бирдеме кылуу"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "бирдеме кылуу"
@@ -1246,6 +1399,14 @@
             "name": "чарчы тарткыла"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          },
+          "draw a square": {
+            "name": "чарчы тарткыла"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "бирдеме кылуу"
@@ -1271,6 +1432,11 @@
             "name": "бирдеме кылуу"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "бирдеме кылуу"
@@ -1292,6 +1458,11 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "бирдеме кылуу"
           }
@@ -1326,6 +1497,11 @@
             "name": "бирдеме кылуу"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "бирдеме кылуу"
@@ -1352,6 +1528,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "бирдеме кылуу"
           }
@@ -1386,6 +1567,11 @@
             "name": "бирдеме кылуу"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "чарчы тарткыла"
@@ -1412,6 +1598,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "чарчы тарткыла"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "чарчы тарткыла"
           }
@@ -1452,6 +1643,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "бирдеме кылуу"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "бирдеме кылуу"
           }
@@ -1517,6 +1713,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "оюнду бүтүр"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "оюнду бүтүр"
           }

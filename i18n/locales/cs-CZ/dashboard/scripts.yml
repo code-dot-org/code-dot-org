@@ -487,7 +487,7 @@ cs:
           student_description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
           name: starwarsblocks
         mc:
-          title: Hodina kódu s Minecraftem
+          title: Minecraft Adventurer
           description: Vezmi pomocí kódu Steva nebo Alex za dobrodružstvím po světě Minecraft.
           description_short: Prozkoumej svět Minecraftu pomocí kódu
           student_description: Vezmi pomocí kódu Steva nebo Alex za dobrodružstvím po světě Minecraft.
@@ -8189,3 +8189,7 @@ cs:
           title: Modul 7
         vpl-csd-2023-m8:
           title: Modul 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Náš etický kodex umělé inteligence

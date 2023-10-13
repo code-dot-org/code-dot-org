@@ -6,36 +6,40 @@ th:
   front_title: เข้าร่วมเป็นส่วนหนึ่งของกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์
     ณ วันที่ %{campaign_date}
   coming_soon: เร็วๆ นี้
-  campaign_date_start_short: 5 ธ.ค.
-  campaign_date_start_long: 5 ธันวาคม
-  campaign_date_short: 5 - 11 ธ.ค.
-  campaign_date_full: 5 - 11 ธันวาคม
-  campaign_date_year: '2565'
-  campaign_date_full_year: 5 - 11 ธันวาคม 2565
-  nonus_campaign_date_start_short: 1 ตุลาคม
+  campaign_date_start_short: 4 ธ.ค.
+  campaign_date_start_long: 4 ธันวาคม
+  campaign_date_short: 4 - 10 ธ.ค.
+  campaign_date_full: 4 - 10 ธันวาคม
+  campaign_date_year: '2566'
+  campaign_date_full_year: 4 - 10 ธันวาคม 2566
+  nonus_campaign_date_start_short: 5 ตุลาคม
   nonus_campaign_date_start_long: 1 ตุลาคม
   nonus_campaign_date_short: 1 ต.ค. - 18 ธ.ค.
   nonus_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
-  nonus_campaign_date_year: '2565'
+  nonus_campaign_date_year: '2566'
   nonus_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
-  latam_campaign_date_start_short: 1 ตุลาคม
+  latam_campaign_date_start_short: 5 ตุลาคม
   latam_campaign_date_start_long: 1 ตุลาคม
   latam_campaign_date_short: 1 ต.ค. - 18 ธ.ค.
   latam_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
-  latam_campaign_date_year: '2565'
+  latam_campaign_date_year: '2566'
   latam_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
-  europe_campaign_date_start_short: 1 ตุลาคม
+  europe_campaign_date_start_short: 5 ตุลาคม
   europe_campaign_date_start_long: 1 ตุลาคม
   europe_campaign_date_short: 1 ต.ค. - 18 ธ.ค.
   europe_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
-  europe_campaign_date_year: '2565'
+  europe_campaign_date_year: '2566'
   europe_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
-  africa_campaign_date_start_short: 1 ตุลาคม
+  africa_campaign_date_start_short: 5 ตุลาคม
   africa_campaign_date_start_long: 1 ตุลาคม
   africa_campaign_date_short: 1 ต.ค. - 18 ธ.ค.
   africa_campaign_date_full: 1 ตุลาคม - 18 ธันวาคม
-  africa_campaign_date_year: '2565'
+  africa_campaign_date_year: '2566'
   africa_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
+  hoc2023_header: ความคิดสร้างสรรค์ด้วย AI
+  hoc2023_social_creativity_with_ai_title: ชั่วโมงของรหัส - สิ่งที่คุณจะสร้าง?
+  hoc2023_social_creativity_with_ai_desc: ใช้วิทยาการคอมพิวเตอร์เพื่อสำรวจและเรียนรู้เกี่ยวกับ
+    AI!
   hoc2022_header: สำรวจ เล่น สร้าง!
   social_hoc2022_explore_play_create: ใช้วิทยาการคอมพิวเตอร์เพื่อสำรวจ เล่น และสร้าง!
   codeorg_homepage_hoc2022_body: สำรวจจักรวาล ยิงประตู ทำลายการเคลื่อนไหว — มีหลายวิธีที่จะลองใช้วิทยาการคอมพิวเตอร์
@@ -152,6 +156,23 @@ th:
   curriculum_launch_2023_desc: อัปเดตเป็น CSC, CSP, CSD และอื่นๆ — พร้อมแค็ตตาล็อกหลักสูตรใหม่
     และหน้า Teach ที่ออกแบบใหม่เพื่อช่วยให้คุณค้นหาข้อมูลทั้งหมดได้!
   in_partnership_with: ด้วยความร่วมมือกับ
+  shop_code_dot_org_heading: รหัสร้านค้า.org
+  shop_code_dot_org_desc: สนับสนุนการทำงานของเราและสวมใส่การเคลื่อนไหวด้วยความภาคภูมิใจหมวกของเราได้รับการสวมใส่โดยประธานาธิบดีโอบามาและคนดังเกินไป
+  spread_the_word_heading: กระจายคำ
+  spread_the_word_desc: ขยายผลกระทบของเราด้วยการแชร์ Code.org กับเครือข่ายของคุณตั้งแต่โซเชียลมีเดียไปจนถึงการอัปเดตทางอีเมล
+    ค้นพบวิธีที่คุณสามารถช่วยให้เราเข้าถึงนักการศึกษา นักเรียน และผู้สนับสนุนได้มากขึ้น
+  follow_us_heading: ติดตามเราบนโซเชียลมีเดีย
+  follow_us_desc: ติดตามข่าวสารล่าสุดกับเราบนโซเชียลมีเดียและแชร์โพสต์ของเรากับเครือข่ายของคุณเพื่อรับทราบข้อมูลและช่วยกระตุ้นการรับรู้
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: อินสตาแกรม
+  tik_tok: ติ๊กต๊อก
+  subscribe_to_emails_heading: สมัครรับข่าวสารทางอีเมล
+  subscribe_to_emails_desc: อ่านข้อมูลเกี่ยวกับสิ่งที่เกิดขึ้นที่ Code.org และด้านวิทยาการคอมพิวเตอร์ผ่านการปรับปรุงรายไตรมาสผ่านทางรายชื่อผู้รับจดหมายของเรา
+  subscribe_to_emails_intl: สมัครรับข่าวสารจากต่างประเทศ
+  promote_code_dot_org_heading: โปรโมท Code.org
+  promote_code_dot_org_desc: ส่งเสริมวิทยาการคอมพิวเตอร์ในพื้นที่ของคุณด้วยความช่วยเหลือของสถิติคำพูดและวิดีโอ
   afe_partnership_logo_alt: โลโก้ Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer เป็นโปรแกรมสำหรับเด็กสู่อาชีพที่ครอบคลุมเพื่อสร้างแรงบันดาลใจ
     ให้ความรู้ และฝึกอบรมเด็กที่ด้อยโอกาสและเยาวชนอื่นๆ เพื่อประกอบอาชีพด้านวิทยาการคอมพิวเตอร์
@@ -160,6 +181,19 @@ th:
   grade_level_label_elementary: โรงเรียนประถมศึกษา
   grade_level_label_middle: ระดับมัธยมศึกษาตอนต้น
   grade_level_label_high: โรงเรียนมัธยม
+  curricula_title_elementary: หลักสูตรประถมศึกษา
+  curricula_desc_elementary: เรียกดูหลักสูตรสนุก ๆ และกิจกรรมฟรีที่เชิญชวนให้คุณสำรวจวิทยาการคอมพิวเตอร์กับนักเรียนระดับประถมศึกษาของคุณ
+  curricula_title_middle: หลักสูตรระดับมัธยมศึกษาตอนต้น
+  curricula_desc_middle: เรียกดูข้อเสนอที่น่าสนใจที่ทำให้คุณและนักเรียนระดับมัธยมศึกษาตอนต้นของคุณสำรวจวิทยาการคอมพิวเตอร์ร่วมกัน
+  curricula_title_high: หลักสูตรระดับมัธยมศึกษาตอนปลาย
+  curricula_desc_high: เรียกดูหลักสูตรและกิจกรรมที่น่าสนใจที่เชิญคุณและนักเรียนมัธยมปลายของคุณให้เจาะลึกเข้าไปในวิทยาการคอมพิวเตอร์
+  for_administrators_heading: สำหรับผู้ดูแลระบบ
+  for_administrators_desc: เข้าร่วมกับโรงเรียนหลายพันแห่งที่ได้นำวิทยาการคอมพิวเตอร์มาใช้แล้วในหลักสูตรของพวกเขา
+  for_parents_heading: สำหรับผู้ปกครอง
+  for_parents_desc: คุณสามารถช่วยกระตุ้นให้โรงเรียนของนักเรียนเสนอหรือขยายการศึกษาด้านวิทยาการคอมพิวเตอร์
+  for_educators_heading: สำหรับครู
+  for_educators_desc: เริ่มสอนในวันนี้ — ไม่จำเป็นต้องมีประสบการณ์ด้านวิทยาการคอมพิวเตอร์
+    — ด้วยเวิร์คช็อปการเรียนรู้แบบมืออาชีพของเรา
   students_label: นักเรียน
   teachers_label: ครู
   teacher_label_csf: ผู้สอนพื้นฐานด้านวิทยาการคอมพิวเตอร์
@@ -169,9 +203,11 @@ th:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'อุปกรณ์ที่จำเป็น:'
   optional_materials: 'อุปกรณ์เสริม:'
+  call_to_action_hold_an_event: จัดกิจกรรม
   call_to_action_learn_more: เรียน​รู้​เพิ่ม​เติม
   call_to_action_watch_now: รับชมเลย
   call_to_action_try_activity: ลองทำกิจกรรม
+  call_to_action_try_activities: ลองทำกิจกรรม
   call_to_action_explore_unit: สำรวจหน่วย
   call_to_action_explore_curriculum: สำรวจหลักสูตร
   call_to_action_explore_curriculum_options: สำรวจตัวเลือกหลักสูตร
@@ -186,6 +222,15 @@ th:
   call_to_action_explore_choice_level: สำรวจตัวอย่างระดับการเลือก
   call_to_action_explore_collection: สำรวจคอลเลกชัน
   call_to_action_explore_unplugged_lesson: สำรวจบทเรียนที่ถอดปลั๊ก
+  call_to_action_explore_csf: สำรวจข้อมูลพื้นฐานด้านบริการลูกค้า
+  call_to_action_explore_csd: สำรวจการค้นพบด้าน CS
+  call_to_action_explore_csp: สำรวจหลักการบริการลูกค้า
+  call_to_action_explore_csc: สำรวจการเชื่อมต่อ CS
+  call_to_action_explore_csa: สำรวจวิทยาการคอมพิวเตอร์ AP® A
+  call_to_action_explore_csa_short: สำรวจ AP® CSA
+  call_to_action_explore_maker: สำรวจหลักสูตรของผู้ผลิต
+  call_to_action_explore_hoc: สำรวจบทเรียนชั่วโมงของโค้ด
+  call_to_action_explore_hoc_short: สำรวจชั่วโมงแห่งโค้ด
   call_to_action_try_app_lab: ทดลองใช้ App Lab
   call_to_action_view_lesson_plan: ดูแผนการเรียน
   call_to_action_self_paced_pl: เริ่มต้นการเรียนรู้แบบมืออาชีพด้วยตนเอง
@@ -209,6 +254,7 @@ th:
   call_to_action_resources_tools: ลองใช้เครื่องมือการเขียนโปรแกรม
   call_to_action_sign_up_free: ลงทะเบียนฟรี
   call_to_action_explore_ai_resources: สำรวจทรัพยากร AI
+  call_to_action_explore_ai_curricula: สำรวจหลักสูตร AI
   call_to_action_explore_curriculum_catalog: สำรวจแคตตาล็อกหลักสูตร
   call_to_action_see_full_curriculum_catalog: ดูแคตตาล็อกหลักสูตรฉบับเต็ม
   call_to_action_find_self_paced_modules: ค้นหาโมดูลแบบกำหนดจังหวะเอง
@@ -230,6 +276,20 @@ th:
   call_to_action_notify_available: แจ้งให้ฉันทราบเมื่อพร้อมใช้งาน
   call_to_action_register_early_access: ลงทะเบียนเพื่อเข้าใช้งานก่อนเวลา
   call_to_action_open_positions: ดูตำแหน่งที่เปิดอยู่
+  call_to_action_explore_roles: สำรวจบทบาทที่เปิดอยู่
+  call_to_action_get_guide: รับคู่มือ
+  call_to_action_donate_to_cdo: บริจาคให้ Code.org
+  call_to_action_start_fundraiser: เริ่มการระดมทุน
+  call_to_action_view_donation_policy: ดูนโยบายการบริจาค
+  call_to_action_view_donate_bitpay: ร่วมบริจาคด้วย BitPay
+  call_to_action_make_a_donation: ทำการบริจาค
+  call_to_action_other_ways_to_give: วิธีอื่น ๆ ในการให้
+  call_to_action_become_partner_usa: ร่วมเป็นพันธมิตรในสหรัฐอเมริกา
+  call_to_action_become_partner_intl: ร่วมเป็นพันธมิตรระหว่างประเทศ
+  call_to_action_become_a_volunteer: เป็นอาสาสมัคร
+  call_to_action_start_translating: เริ่มแปล
+  call_to_action_learn_about_advocacy: เรียนรู้เกี่ยวกับการสนับสนุนของเรา
+  call_to_action_visit_store: เยี่ยมชมร้านค้า
   aria_label_call_to_action_afe: เรียนรู้เพิ่มเติมเกี่ยวกับวิศวกรในอนาคตของ Amazon
   aria_label_call_to_action_teaching_csf: เริ่มการสอนหลักสูตรวิชาชีพความรู้พื้นฐานวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csd: เริ่มการเรียนการสอนโปรแกรมการเรียนรู้วิชาชีพวิทยาการคอมพิวเตอร์
@@ -304,8 +364,11 @@ th:
   curriculum_name_csp: หลักการวิทยาการคอมพิวเตอร์
   curriculum_name_csc: การเชื่อมต่อวิทยาการคอมพิวเตอร์
   curriculum_name_csa: วิทยาการคอมพิวเตอร์ A
+  curriculum_name_csa_ai: วิศวกรรมซอฟต์แวร์ & วิสัยทัศน์คอมพิวเตอร์
   curriculum_name_csc_02: โมดูลการเชื่อมต่อวิทยาการคอมพิวเตอร์ใดๆ
   curriculum_name_ai: "  AI และการเรียนรู้ของระบบขั้นสูง  "
+  curriculum_name_artificial_intelligence: ปัญญาประดิษฐ์ (AI)
+  curriculum_name_maker: ผู้ผลิต
   curriculum_name_maker_cp: การสร้างแอปด้วยอุปกรณ์ (สนามเด็กเล่น)
   curriculum_name_maker_microbit: 'การสร้างแอปด้วยอุปกรณ์ (ไมโคร: บิต)'
   curriculum_name_creating_apps_with_devices: การสร้างแอปด้วยอุปกรณ์
@@ -316,6 +379,7 @@ th:
   curriculum_name_interactive_animations_games: แอนิเมชั่นและเกมแบบโต้ตอบ
   curriculum_name_design_process: ขั้นตอนการออกแบบ
   curriculum_name_data_society: ข้อมูลและสังคม
+  curriculum_desc_csf: ชุดหลักสูตรประถมศึกษาฟรีที่แนะนำนักเรียนให้รู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์
   curriculum_desc_csf_express: เรียนรู้การสร้างโปรแกรมคอมพิวเตอร์ พัฒนาทักษะการแก้ปัญหา
     และทำงานผ่านความท้าทายที่สนุกสนาน! สร้างเกมและโปรเจ็กต์ที่สร้างสรรค์เพื่อแชร์กับเพื่อนๆ
     ครอบครัว และผู้สอน
@@ -349,6 +413,17 @@ th:
   curriculum_desc_creating_apps_with_devices: สำรวจบทบาทของอุปกรณ์ทางกายภาพในการคำนวณ
     พัฒนาโปรแกรมที่ใช้อินพุตและเอาต์พุตของฮาร์ดแวร์ มีเวอร์ชั่นของยูนิตนี้สำหรับทั้งแบบ
     micro:bit และ Circuit Playground
+  curriculum_desc_csa: แนะนำนักเรียนให้รู้จักกับวิศวกรรมซอฟต์แวร์และการออกแบบเชิงวัตถุในขณะที่พวกเขาเรียนรู้ภาษาการเขียนโปรแกรมภาษาจาวาในหลักสูตรฟรีสำหรับ
+    AP® Computer Science A (AP® CSA) นี้
+  curriculum_desc_maker: Maker education ยกระดับเทคโนโลยี STEM (Science, Technology,
+    Engineering, Mathematics) ด้วยการเชิญชวนประสบการณ์จริงและการทำงานร่วมกันเข้ามาในห้องเรียนเพื่อช่วยสอนการแก้ปัญหาและการคิดเชิงวิพากษ์
+  curriculum_desc_maker_short: การศึกษาของ Maker เชิญประสบการณ์จริงและการทำงานร่วมกันเข้ามาในห้องเรียนเพื่อช่วยสอนการแก้ปัญหาและการคิดเชิงวิพากษ์วิจารณ์
+  curriculum_desc_csd: หลักสูตรที่ยืดหยุ่นทำให้แต่ละหน่วยสามารถสอนคนเดียวหรือรวมกันได้แนะนำนักเรียนในการสร้างเว็บไซต์
+    แอป ภาพเคลื่อนไหว เกม และระบบคอมพิวเตอร์ทางกายภาพ
+  curriculum_desc_csp: Free, AP® CSP ได้รับการรับรองหลักสูตรเบื้องต้นระดับมัธยมศึกษาตอนปลายที่แนะนำนักเรียนให้รู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์
+  curriculum_desc_csa_ai_long: 'โมดูลแบบ Post-AP CSA แบบสองบทนี้มอบประสบการณ์จริงสำหรับนักเรียนระดับมัธยมศึกษาตอนปลายด้วยเครื่องมือพัฒนาซอฟต์แวร์ระดับมืออาชีพ
+    รวมถึง GitHub และ GitHub Copilot และมอบทักษะในโลกแห่งความเป็นจริงในการพัฒนาโปรแกรมคอมพิวเตอร์วิทัศน์ '
+  curriculum_desc_csa_ai_short: โมดูล Post-AP® CSA นี้มอบประสบการณ์จริงให้กับนักเรียนมัธยมปลายด้วยเครื่องมือพัฒนาซอฟต์แวร์ระดับมืออาชีพ
   collection_hardware: มุ่งเน้นไปที่ฮาร์ดแวร์
   collection_hardware_desc: ช่วยให้นักเรียนใช้ข้อมูลและอุปกรณ์ทางกายภาพในการแก้ปัญหา
   collection_design_purpose: มุ่งเน้นไปที่การออกแบบที่มีวัตถุประสงค์
@@ -376,6 +451,7 @@ th:
   module_label_professional_learning: 'การเรียนรู้แบบมืออาชีพ:'
   module_label_languages: 'ภาษาที่รองรับ:'
   module_label_accessibility_features: 'ตัวช่วยการเข้าถึง:'
+  module_label_accessibility_features_full: 'คุณสมบัติการช่วยการเข้าถึง:'
   module_label_educator_tool: เครื่องมือนักการศึกษา
   module_label_educator_course: หลักสูตรนักการศึกษา
   module_label_student_tool: เครื่องมือนักเรียน
@@ -383,6 +459,7 @@ th:
   module_label_student_content_resources: เนื้อหาและแหล่งข้อมูล
   module_label_new: ใหม่
   module_label_coming_soon: เร็ว ๆ นี้
+  module_label_available_now: พร้อมให้บริการแล้ว
   module_label_video_series: วีดีโอชุด
   module_label_self_paced: โมดูลที่ปรับได้เอง
   module_ages_5_10: 5-10
@@ -393,6 +470,8 @@ th:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: เค-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -407,11 +486,14 @@ th:
   module_grade_9_12_teachers: ผู้สอน 9-12
   module_level_beginner: ผู้เริ่มต้น
   module_level_intermediate: ระดับกลาง
+  module_level_advanced: ขั้นสูง
   module_duration_45_mins: 45 นาที
+  module_duration_2_weeks: 2 สัปดาห์
   module_duration_1_hr: 1 ชั่วโมง
   module_duration_2_hrs: 2 ชั่วโมง
   module_duration_3_hrs: 3 ชั่วโมง
   module_duration_5_hrs: 5 ชั่วโมง
+  module_duration_5_hrs_plus: 5 ชั่วโมงขึ้นไป
   module_duration_8_hrs: 8 ชั่วโมง
   module_duration_20_hrs: 20 ชั่วโมง
   module_duration_35_hrs: 35 ชั่วโมง
@@ -423,6 +505,7 @@ th:
   module_duration_school_year: ปีการศึกษา
   module_duration_month_quarter: เดือนหรือไตรมาส
   module_duration_month_semester_year: เดือน ภาคการศึกษา หรือปี
+  module_duration_varies: แตกต่างกันไป
   module_prerequisites_none: ไม่มี
   module_prerequisites_maker_cp: การเดินทางไปยังสนามเด็กเล่นในสนามแข่งรถ
   module_prerequisites_maker_microbit: 'การเข้าถึงไมโคร: บิต'
@@ -482,6 +565,9 @@ th:
   heading_java_lab: จาวาแลป
   heading_objects_first: วัตถุก่อน
   heading_these_lessons_will: 'บทเรียนเหล่านี้จะ:'
+  heading_explore_curriculum_catalog: สำรวจหลักสูตรทั้งหมดของเราในแคตตาล็อกหลักสูตร
+  heading_csa_ai: กำลังมองหาสิ่งที่ต้องทำหลังจากการสอบ AP®?
+  heading_bring_cs_to_students: นำวิทยาการคอมพิวเตอร์มาให้นักเรียน
   professional_learning_section_desc: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
     ผู้สอนชอบมัน โดยกว่า 90% ให้คะแนนว่าเป็นการพัฒนาทางวิชาชีพที่ดีที่สุด!
   professional_learning_section_desc_short: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
@@ -503,6 +589,18 @@ th:
   support_and_questions_section_desc: ทีมสนับสนุนของเราอยู่ที่นี่เพื่อตอบคำถามใด ๆ
     ที่คุณอาจมีเกี่ยวกับการเริ่มต้นการสอนด้วย Code.org นอกจากนี้คุณยังสามารถสอบถามผู้สอนคนอื่นๆ
     เกี่ยวกับประสบการณ์ของพวกเขาในฟอรั่มผู้สอนของเรา
+  subscribe_form_section_title: สมัครรับข้อมูลอัปเดต
+  subscribe_form_section_desc_csa: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับ Code.org®
+    Computer Science A ของ Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ซึ่งส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_desc_csc: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับ Connections
+    Computer Science ของ Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ซึ่งส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_desc_csd: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับการค้นพบวิทยาการคอมพิวเตอร์ของ
+    Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ที่ส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_desc_csf: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์ของ
+    Code.org และรับการเตือนความจำ เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ที่ส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_desc_csp: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับ Computer
+    Science Principles ของ Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ที่ส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_unsubscribe: คุณสามารถยกเลิกการสมัครได้ตลอดเวลา
   blockchain_hero_heading: วิธีการทำงานของบล็อกเชน
   blockchain_hero_desc: ดำดิ่งสู่โลกของบล็อกเชนด้วย “วิธีการทำงานของ Blockchain” วิดีโอชุดใหม่ของเราและบทเรียนประกอบ!
   blockchain_intro_heading: ดูว่าบล็อกเชนทำงานอย่างไร
@@ -587,6 +685,8 @@ th:
   ai_curriculum_desc_04: บทเรียนเหล่านี้เสริมชุดวิดีโอ How AI Worksแต่ละบทเรียนจะจับคู่กับวิดีโอเดียวจากซีรีส์,
     เจาะลึกเข้าไปในแนวคิดที่แนะนำในวิดีโอ.
   ai_curriculum_btn_aria_label_04: เรียนรู้วิธีการทำงานของ AI
+  ai_curriculum_grades_05: 'ระดับเกรด: 9-12'
+  ai_curriculum_btn_aria_label_05: สำรวจโมดูลวิศวกรรมซอฟต์แวร์และวิสัยทัศน์คอมพิวเตอร์
   ai_carousel_heading: 'สิ่งที่ครูพูดเกี่ยวกับ AI ด้วย Code.org:'
   ai_carousel_quote_01: บทเรียนนี้ยังทำให้นักเรียนของฉันมีโอกาสที่จะเห็นว่ามีองค์ประกอบของความเห็นในระบบการจัดหมวดหมู่ต่อมาเมื่อเราเริ่มเห็นว่าอคติสามารถจบลงใน
     AI ผมก็สามารถดึงพวกเขากลับมาและเตือนพวกเขาว่าข้อมูลที่ใช้ในการฝึกอบรมแบบจำลองของพวกเขาขึ้นอยู่กับทางเลือก
@@ -676,10 +776,19 @@ th:
     AI และการใช้ประโยชน์จากปัญญาประดิษฐ์ในการประเมินนักเรียนด้วยการผสมผสานกันอย่างลงตัวของทฤษฎี
     ตัวอย่างในทางปฏิบัติ และทรัพยากร โดยมีจุดมุ่งหมายที่จะช่วยให้นักการศึกษาสามารถสำรวจภูมิทัศน์ของ
     AI และเพิ่มประสบการณ์การเรียนรู้ของนักเรียน
+  ai_pl_101_resources_5: คำแนะนำในการสร้างความมั่นใจในแนวทางที่มีความรับผิดชอบต่อปัญญาประดิษฐ์ของ
+    AI
   ai_pl_101_video_desc_6: 'เรียนรู้เพิ่มเติมเกี่ยวกับเทคโนโลยีใหม่ที่ขับเคลื่อนการเปลี่ยนแปลงครั้งใหญ่ใน
     AI โดยมีวิดีโอใหม่สองเรื่องเกี่ยวกับโมเดลภาษาขนาดใหญ่ (เช่น ChatGPT) และ Generative
     AIรับฟังวิธีที่เทคโนโลยีใหม่เหล่านี้ทำงานโดยตรงจากผู้เชี่ยวชาญ: Mira Murati, CTO
     ของ OpenAI และ Cristóbal Valenzuela CEO ของ RunwayML'
+  ai_pl_101_llm_slides_title: รูปแบบภาษาขนาดใหญ่พร้อมท์สำหรับนักการศึกษา
+  ai_pl_101_llm_slides_desc: เครื่องมือสำหรับการแสดงผลที่ดีที่สุดจาก LLM เช่น ChatGPT
+    ตั้งแต่เริ่มต้นจนถึงขั้นสูงรวมถึงคำแนะนำเริ่มต้นสำหรับผู้ที่เพียงแค่จุ่มนิ้วเท้าของพวกเขาใน
+    เช่นเดียวกับเครื่องมือขั้นสูงสำหรับผู้ที่ต้องการเพิ่มศักยภาพของพวกเขา
+  ai_pl_101_resources_3: AI แจ้งให้เปลี่ยนการเรียนรู้ของนักเรียน
+  ai_pl_101_resources_section_title: วิธีเพิ่มเติมในการเรียนรู้เกี่ยวกับ AI
+  ai_pl_101_resources_guide: 'คู่มือผู้ร่วมเดินทาง:'
   how_ai_works_hero_heading: AI ทำงานอย่างไร
   how_ai_works_hero_desc: ดำดิ่งสู่โลกของ AI ด้วย “วิธีการทำงานของ AI” วิดีโอซีรี่ส์และบทเรียนประกอบของเรา!
   how_ai_works_intro_desc: ชุดวิดีโอสั้นและบทเรียนในชั้นเรียนนี้จะแนะนำคุณและนักเรียนของคุณถึงวิธีการทำงานของปัญญาประดิษฐ์
@@ -929,16 +1038,16 @@ th:
   teach_page_free_curriculum_heading: หลักสูตรฟรีที่น่าสนใจ
   teach_page_free_curriculum_desc: เราต้องการให้คุณนำวิทยาการคอมพิวเตอร์มาที่โรงเรียนของคุณโดยไม่ต้องกังวลเรื่องค่าใช้จ่าย
     นั่นเป็นเหตุผลที่เรามุ่งมั่นที่จะนำเสนอหลักสูตรของเราฟรีตลอดไป!
-  teach_page_free_curriculum_list_heading_01: หลักสูตรที่น่าสนใจสำหรับทุกระดับชั้น
   teach_page_free_curriculum_list_desc_01: หลักสูตรฟรี ยืดหยุ่น และสนุกสนานพร้อมการนำเสนอมากถึง
     67 ภาษา
-  teach_page_free_curriculum_list_heading_02: หลักสูตรที่ปรับเปลี่ยนได้และเป็นนวัตกรรมใหม่
   teach_page_free_curriculum_list_desc_02: Code.org มีทุกอย่างตั้งแต่หลักสูตรทั้งปีไปจนถึงกิจกรรมหน่วยเดียว
     นอกจากนี้ เราอัปเดตหลักสูตรของเราทุกปีเพื่อสนับสนุนแนวทางปฏิบัติที่ดีที่สุดและประเด็นที่มุ่งเน้น
     และสร้างข้อเสนอใหม่ที่สอนหัวข้อที่เป็นที่ต้องการในปัจจุบัน
-  teach_page_free_curriculum_list_heading_03: หลักสูตรที่มีโครงสร้างสอดคล้องกับมาตรฐานระดับชาติ
   teach_page_free_curriculum_list_desc_03: แต่ละหลักสูตรได้รับการเชื่อมโยงกับมาตรฐานระดับชาติอย่างน้อยหนึ่งชุด
     รวมถึง CSTA, Next Generation Science Standards และ Common Core
+  teach_page_free_curriculum_list_desc_04: บริการกว่า 67 ภาษา
+  teach_page_free_curriculum_list_desc_05: แมปกับมาตรฐานระดับชาติอย่างน้อยหนึ่งชุด
+    (รวมถึง CSTA, NGSS และ Common Core)
   teach_page_free_curriculum_heading_02: 'สำรวจข้อเสนอหลักสูตรของเราสำหรับระดับชั้นต่างๆ:'
   teach_page_resources_heading: แหล่งข้อมูลที่สนับสนุนคุณในทุกขั้นตอน
   teach_page_resources_desc: ลงทะเบียนบัญชี Code.org ช่วยให้คุณเข้าถึงเนื้อหาที่จะช่วยให้คุณสอนวิทยาการคอมพิวเตอร์ได้อย่างมั่นใจ
@@ -986,8 +1095,8 @@ th:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: การประชุมเชิงปฏิบัติการนำของผู้อำนวยการ,
+    โมดูลที่ก้าวขึ้นเอง
   csp_page_curriculum_glance_professional_languages: ภาษาอังกฤษ
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1111,8 +1220,8 @@ th:
     ออกแบบแอป, เกมและแอนิเมชั่น, ศิลปะและการออกแบบ, การเขียนโปรแกรม
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: การประชุมเชิงปฏิบัติการนำของผู้อำนวยการ,
+    โมดูลที่ก้าวขึ้นเอง
   csd_page_curriculum_glance_professional_languages: ภาษาอังกฤษ
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1226,8 +1335,8 @@ th:
     ศิลปะและการออกแบบ, การออกแบบแอป
   csf_page_curriculum_glance_devices: แล็ปท็อป, โครมบุ๊ค, แท็บเล็ต
   csf_page_curriculum_glance_tools: แล็บสไปรท์, เพลย์แล็บ
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: การประชุมเชิงปฏิบัติการนำของผู้อำนวยการ,
+    โมดูลที่ก้าวขึ้นเอง
   csf_page_curriculum_glance_languages: ภาษาอาหรับ, บาฮาซาอินโดนีเซีย, คาตาลาน, จีนตัวย่อ,
     จีนดั้งเดิม, เช็ก, ฝรั่งเศส, เยอรมัน, ฮินดี, อิตาลี, ญี่ปุ่น, เกาหลี, กันนาดา,
     มลายู, มราฐี, มองโกเลีย, โปแลนด์, โปรตุเกส, รัสเซีย, สโลวัก, ตากาล็อก, ทมิฬ, ไทย,
@@ -1349,6 +1458,49 @@ th:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: ช่วยสนับสนุนพันธกิจของเรา
+  donate_page_top_desc: ทุกการบริจาคเป็นเชื้อเพลิงพันธกิจของ Code.org ในการขยายการเข้าถึงการศึกษาด้านวิทยาการคอมพิวเตอร์เรามีหลายวิธีให้คุณบริจาคและสร้างความแตกต่าง
+  donate_page_fundraise_title: การระดมทุนสำหรับ Code.org
+  donate_page_fundraise_desc: ช่วยระดมเงินสำหรับ Code.org!นักเรียนทุกคนในโรงเรียนทุกคนควรมีโอกาสที่จะเรียนรู้วิทยาการคอมพิวเตอร์
+  donate_page_other_ways_title: วิธีอื่น ๆ ในการให้
+  donate_page_other_ways_desc: สำรวจวิธีการที่หลากหลายในการมีส่วนร่วม และค้นหาตัวเลือกที่เหมาะสมกับคุณที่สุดทุกท่าทาง
+    ไม่ว่าใหญ่หรือเล็ก ขับเคลื่อนภารกิจของเราไปข้างหน้า
+  donate_page_501c3: Code.org ได้รับการจดทะเบียนเป็นสาธารณะ 501 (ค) (3) องค์กรไม่แสวงหาผลกำไรเงินสมทบ
+    Code.org สามารถนำไปลดหย่อนภาษีได้เท่าที่กฎหมายอนุญาตหมายเลขประจำตัวผู้เสียภาษีของ
+    Code.org คือ 46-0858543
+  donate_page_donation_policy_title: ทำความเข้าใจนโยบายการบริจาคของเรา
+  donate_page_donation_policy_desc: เรียนรู้เกี่ยวกับวิธีที่เราจัดการและจัดสรรการมีส่วนร่วมของคุณ
+  donate_tabs_tab_label_daf_direct: DAF โดยตรง
+  donate_tabs_tab_label_amazon: อเมซอน
+  donate_tabs_tab_label_bitpay: บิตเพย์
+  donate_tabs_tab_label_employee_match: ตรงกับพนักงาน
+  donate_tabs_daf_direct_title: บริจาคผ่านทาง DAF Direct
+  donate_tabs_daf_direct_desc: บริจาคผ่านกองทุนที่ผู้บริจาคแนะนำของคุณกับ Fidelity
+    Charitable, Schwab Charitable หรือ BNY Mellon และทำการแนะนำเงินทุนของคุณไปยัง
+    Code.org ผ่านแบบฟอร์มออนไลน์ DAF Direct
+  donate_tabs_amazon_title: บริจาคผ่านอเมซอน
+  donate_tabs_amazon_desc: บริจาคโดยตรงโดยใช้บัญชี Amazon ของคุณด้วยการคลิกเพียงไม่กี่ครั้ง
+    คุณก็สามารถมีส่วนร่วมในพันธกิจของ Code.org ได้อย่างราบรื่นและช่วยเพิ่มอนาคตของการศึกษาด้านวิทยาการคอมพิวเตอร์
+  donate_tabs_bitpay_title: บริจาคเงินด้วยสกุลเงินดิจิทัลผ่าน BitPay
+  donate_tabs_bitpay_desc: ก้าวสู่อนาคตของการให้ด้วยสกุลเงินดิจิทัลผ่าน BitPay สกุลเงินดิจิทัลของคุณโดยตรงสามารถสนับสนุนความพยายามของ
+    Code.org ในการขยายการศึกษาวิทยาการคอมพิวเตอร์
+  help_page_top_heading: วิธีที่คุณสามารถช่วย
+  help_page_top_desc: สนับสนุนภารกิจของเราที่จะทำให้วิทยาการคอมพิวเตอร์สามารถเข้าถึงได้สำหรับเด็กทุกคนในทุกที่ความพยายามของคุณช่วยให้เราสร้างแรงบันดาลใจให้กับนักสร้างสรรค์นวัตกรรมในอนาคต
+    และเชื่อมช่องว่างด้านการศึกษาด้านเทคโนโลยี
+  help_page_top_subhead: ทำการบริจาคเพื่อ Code.org
+  help_page_top_desc_02: เรากำลังทำงานเพื่อเปิดโอกาสให้นักเรียนทุกคนได้เรียนรู้วิทยาการคอมพิวเตอร์
+    ทั้งทางออนไลน์และในโรงเรียน ซึ่งเราสร้างหลักสูตรถาวรและฝึกอบรมครูสำหรับเงินที่คุณบริจาคทุก,
+    เด็กคนหนึ่งได้รับการแนะนำให้รู้จักกับวิทยาการคอมพิวเตอร์.
+  help_page_partners_heading: ร่วมเป็นพาร์ทเนอร์
+  help_page_partners_desc: Code.org ทำงานร่วมกับองค์กรไม่แสวงหากำไรอื่น ๆ ในฐานะพันธมิตรเพื่อช่วยกระจายวิทยาการคอมพิวเตอร์ในรูปแบบท้องถิ่นที่ยั่งยืนเรียนรู้เพิ่มเติมเกี่ยวกับโปรแกรมของเรา
+  help_page_volunteer_heading: อาสาสมัครในห้องเรียน
+  help_page_volunteer_desc: อาสาสมัครที่จะสอน Hour of Code หรือเป็นวิทยากรในห้องเรียนท้องถิ่นลงทะเบียนเพื่อรับทราบเกี่ยวกับโอกาสใกล้คุณ
+  help_page_translate_heading: ช่วยเราแปล
+  help_page_translate_desc: อาสาสมัครได้แปลบทเรียนของเราในกว่า 45 ภาษาช่วยให้เรายังคงขยายบทเรียนของเราสำหรับนักเรียนทั่วโลกต่อไป!
+  help_page_speak_for_cs_heading: พูดขึ้นเพื่อการศึกษาวิทยาการคอมพิวเตอร์
+  help_page_speak_for_cs_desc: เรียนรู้เพิ่มเติมเกี่ยวกับงานสนับสนุนของ Code.org ทั่วประเทศสหรัฐอเมริกาและนโยบาย
+    10 ข้อที่เราแนะนำให้รัฐนำมาใช้เพื่อสร้างพื้นฐานด้านวิทยาการคอมพิวเตอร์สำหรับนักเรียนทุกคนพลัส,
+    หาวิธีที่คุณสามารถขับรถการเปลี่ยนแปลงในรัฐของคุณ.
   hoc_live: ชั่วโมงของรหัสสด
   hoc_live_sign_up_title: ลงทะเบียนสำหรับ Hour of Code สด
   hoc_live_learn_title: เรียนรู้กับชั่วโมงของรหัสสด
@@ -1418,8 +1570,8 @@ th:
   ai_activity_zooniverse: Zooniverse - สแน็ปช็อตม้าลายภูเขา
   ai_activity_zooniverse_desc: ช่วยปกป้องม้าลายภูเขาเคปที่ใกล้สูญพันธุ์ได้ด้วยการระบุถึงสัตว์ชนิดต่าง
     ๆ ที่อยู่ในภาพ
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: ไปต่อกับหลักสูตร <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: สร้างของคุณเอง <span class="highlight-word">เต้นรำ&nbsp;ปาร์ตี้</span>
   codeorg_homepage_hoc2018_header_line1: ชั่วโมงแห่งประมวลกฎหมายกำลังจะมาถึง...
   codeorg_homepage_hoc2018_header_line2_desktop: สิ่งที่คุณจะ <span class="hoc2018-highlight-word">สร้าง?</span>
@@ -1735,6 +1887,10 @@ th:
     Code.org โอกาสในท้องถิ่นหรือข่าววิทยาศาสตร์คอมพิวเตอร์อื่น ๆ ได้หรือไม่
   signup_email_preference_privacy: "(ดูนโยบายความเป็นส่วนตัวของเรา)"
   signup_email_preference_yes: ใช่
+  signup_email_preference_yes_elementary: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลระดับประถมศึกษาให้ฉัน
+  signup_email_preference_yes_middle: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลของโรงเรียนมัธยมศึกษาตอนต้นให้ฉัน
+  signup_email_preference_yes_high: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลของโรงเรียนมัธยม
+  signup_email_preference_yes_general: ใช่ - ส่งการอัปเดตทั่วไปมาให้ฉัน
   signup_email_preference_no: ไม่ใช่
   signup_email_preference_error: ต้องมีการกำหนดลักษณะอีเมล
   signup_multiple_event_warning: เราจะใส่ชื่อโรงเรียนและเมืองของคุณบนแผนที่เมื่อคุณลงทะเบียนหากคุณกำลังโฮสต์หลายกิจกรรม
@@ -2025,8 +2181,8 @@ th:
     ครู"
   stats_student: "“ฉันรู้ว่านี่เป็นโอกาส</b> ครั้งในชีวิต <b>” - มาเรียนา Alzate,
     เกรด 5"
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+  stats_michael: "“ฉันไม่ <b>เคย</b> เห็นนักเรียนของฉันตื่นเต้นกับการเรียนรู้” - Michael
+    Clark ครู"
   resources_how_to: คู่มือแนะนำสำหรับครู
   resources_how_to_events: คู่มือแนะนำกิจกรรมต่างๆ
   resources_how_to_districts: คู่มือแนะนำอำเภอ
@@ -2148,8 +2304,8 @@ th:
   learn_banner_beyond: ต้องการเรียนรู้ต่อไปหรือไม่?  <a id='learn_banner_beyond'>ไปไกลกว่าหนึ่งชั่วโมง</a>
   learn_banner_beyond_markdown: "  อยากเรียนไปเรื่อยๆ รึเปล่า [เกินชั่วโมง](%{url})
     \ "
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers: 'ครู: <a id=''teacher_banner_host''>โฮสต์หนึ่งชั่วโมง</a>
+    หรือ <a id=''teacher_banner_howto''>อ่านคู่มือวิธีการ</a>'
   learn_banner_teachers_markdown: "  ผู้สอน: [จัดกิจกรรมหนึ่งชั่วโมง](%{host_url})
     หรือ[อ่านวิธีดำเนินการ](%{howto_url})  "
   tutorial_dance2019_name: Dance Party 2019
@@ -4224,11 +4380,11 @@ th:
     Minecraft นี้
   tutorial_minecraft-2016_longdescription: สร้างเกม Minecraftสร้างรุ่นของคุณเองของไก่,
     แกะ, ไม้เลื้อย, ซอมบี้และอื่น ๆ
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el USO เดอยกเลิก “คำศัพท์หุ่นยนต์”
+    predefinido, ลอส estudiantes descubrir&aacute;n como guiarse de Modo ตาลเดอ llevar
+    Cabo tareas espec Ficas บาป ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;ลอ estudiantes ลา conexi&oacute;n entre s&iacute;mbolos Y acciones
+    เป็น como ลา valiosa habilidad เด depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: ชั่วโมงของการกวดวิชารหัสกับ Pixie
   tutorial_play_longdescription: สร้างเรื่องราวหรือสร้างเกมด้วย Play Lab!ทำให้สัตว์โจรสลัดซอมบี้นินจาและตัวละครอื่น
     ๆ อีกมากมายย้ายให้เสียงจุดคะแนนและแม้กระทั่งโยนบั้งไฟ!
@@ -9998,12 +10154,10 @@ th:
     หมุน ทำงานกับเพื่อนสนิท และทำคะแนนโดยการแตะวัตถุในเกมในโค้ดฮีโร่ของคุณ อวดพลังพิเศษของฮีโร่และความคิดสร้างสรรค์ของคุณเองด้วย
     CS First และ Scratch
   tutorial_googlename _longdescription: เลือกชื่อและนำตัวอักษรของคำที่จะมีชีวิตโดยใช้รหัสเลือกชื่อเล่นชื่อสัตว์เลี้ยงสัตว์กีฬาสถานที่หรืองานอดิเรก
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City เป็นที่เจริญรุ่งเรือง, และเพลงอยู่ในอากาศ.มีข่าวลือว่า
+    บอทขนาดมหึมาอันโด่งดังกำลังออนไลน์ และส่งท็อกซิบอทตัวสุดท้ายไปทำลายเมืองทีละบล็อก…คว้า
+    hoverboard cobot ของคุณและเตรียมพร้อมที่จะร่อง ย้าย และจบสิ่งที่คุณเริ่มต้น!ผู้เล่นโปรแกรม
+    hoverbots cobot ของพวกเขาเพื่อเปลี่ยนเลนหลีกเลี่ยงอุปสรรคและนำออก Toxibots จำนวนมากในเกมจังหวะสไตล์นี้
   tutorial_nasachspacejam_longdescription: สร้างระบบสุริยะที่หินจริงๆ!เรียนรู้เกี่ยวกับดนตรี
     ดาราศาสตร์ และการเขียนโค้ดในกิจกรรมที่แนะนำด้วยตนเอง (ไม่จำเป็นต้องมีประสบการณ์การเขียนโค้ด)ดาวเคราะห์
     โปรแกรม ที่จะทำให้ เพลง, การสร้าง ระบบสุริยะ ดนตรี ของคุณเอง สมบูรณ์ด้วย ท่วงทำนอง
@@ -10709,6 +10863,258 @@ th:
     การ PTO ของเรา (รวม 5 สัปดาห์ซึ่งรวมถึงการปิดสำนักงานทั้งองค์กรสิ้นปีในช่วงปลายปีหรือวันหยุดฤดูหนาว),
     ครึ่งวันทำการในวันศุกร์ในช่วงฤดูร้อนหรือที่เรียกว่า Summer Fridays และผลประโยชน์อื่น
     ๆ ใจกว้าง
+  careers_hero_title: การประกอบอาชีพ
+  careers_hero_description: Code.org เป็นองค์กรไม่แสวงหากำไรที่อุทิศตนเพื่อขยายการเข้าถึงวิทยาการคอมพิวเตอร์ในโรงเรียนเรามุ่งเน้นไปที่การเพิ่มการมีส่วนร่วมของเยาวชนหญิงและนักเรียนที่ด้อยโอกาส
+  careers_hero_description_under: ช่วยเราเปลี่ยนโลก นักเรียนคนละคน
+  careers_vision_title: วิสัยทัศน์ของเรา
+  careers_vision_decsription: วิสัยทัศน์ของเราคือนักเรียนทุกคนในทุกโรงเรียนควรมีโอกาสได้เรียนรู้วิทยาการคอมพิวเตอร์ซึ่งเป็นส่วนหนึ่งของการศึกษาหลักของ
+    K-12
+  careers_vision_description_under: มาร่วมทีมของเราเพื่อช่วยให้วิสัยทัศน์นี้เป็นจริง!
+  careers_values_title: ค่านิยมหลักของเรา
+  careers_values_first_column_text_1: เราเชื่อว่าวิทยาการคอมพิวเตอร์เป็นพื้นฐานสำหรับนักเรียนทุกคน
+  careers_values_first_column_text_2: เรามุ่งมั่นที่จะทุน การเข้าถึงและโอกาส
+  careers_values_first_column_text_3: เราเชื่อมั่นในพลังของชุมชนการศึกษาร่วมกัน
+  careers_values_second_column_text_1: เรามีความคล่องตัวและตอบสนองต่อข้อเสนอแนะ
+  careers_values_second_column_text_2: เราดำเนินการด้วยความซื่อสัตย์สุจริตและโปร่งใส
+  careers_values_second_column_text_3: เราเชื่อว่าผลกระทบในวงกว้างต้องคิดให้ใหญ่และแสดงออกอย่างองค์รวม
+  careers_approach_section_title: แนวทางการรวมกลุ่มของเรา
+  careers_approach_section_description: บทบาทระดับโลกของ Code.org ในการเคลื่อนไหววิทยาการคอมพิวเตอร์
+    K-12 เป็นไปได้เพียงเพราะเราใช้วิธีการแบบครบวงจรข้ามผู้มีส่วนได้เสียที่หลากหลายและมักจะแบ่งออกในช่วงเวลาของการเพิ่มโพลาไรซ์ความคิดของการเพิ่มโอกาสสำหรับนักศึกษารวมคนจากทั่วสเปกตรัมทางการเมืองสมาชิกในทีม
+    นักเรียน ครู และผู้สนับสนุนของ Code.org มีมุมมองที่หลากหลายและแตกต่างกันและพวกเขาทั้งหมดยินดีต้อนรับในภารกิจของเรา
+  careers_aproach_section_description_link: อ่านเพิ่มเติมเกี่ยวกับวิธีการของ Code.org
+    เพื่อความสามัคคี
+  careers_approach_section_button: สำรวจบทบาทที่เปิดอยู่
+  careers_principle_section_title: หลักการทางวัฒนธรรมของเรา
+  careers_principle_title_1: นักเรียนและครูของเราเป็นดาวเหนือของเรา
+  careers_principle_description_1: เราใช้ของขวัญ เวลา และพลังงานของเรา เพื่อนำวิทยาการคอมพิวเตอร์มาสู่ผู้ที่ต้องการมันมากที่สุดนี่คือสิ่งที่รวมเรานี่คือหลักการที่สำคัญที่สุดของเรา
+  careers_principle_title_2: เราลำบากกับปัญหาและใจดีต่อกันและกัน
+  careers_principle_description_2: เรามุ่งเน้นไปที่ความท้าทายในการนำวิทยาการคอมพิวเตอร์ไปสู่นักเรียนและครูทั่วโลกเราตระหนักดีว่าเราแต่ละคนนำความตั้งใจที่ดีที่สุดของเราที่จะสนับสนุนพันธกิจของเราและให้พระคุณเมื่อเราทำผิดพลาด
+  careers_principle_title_3: หาทางแก้ไข ไม่ใช่ฉันทามติ
+  careers_principle_description_3: เราตัดสินใจเอง, ไม่ว่าจะเป็นขั้นตอนเล็ก ๆ หรือก้าวกระโดดใหญ่ที่มีต่อผลลัพธ์ที่เรากำลังมองหา.เจ้าของขอและฟัง,
+    แต่ไม่ได้เป็นอัมพาตโดยข้อเสนอแนะ.เรายอมรับและสนับสนุนการตัดสินใจของเจ้าของ, แม้ว่าเราจะไม่เห็นด้วย.
+  careers_principle_title_4: นำความคิดของผู้ก่อตั้ง
+  careers_principle_description_4: เราหมกมุ่นอยู่กับผลลัพธ์และมุ่งเน้นการกระทำของเราในการผลักดันพวกเขา.เราดำน้ำในรายละเอียดและทำงานอย่างหนัก.เราซื่อสัตย์
+    พิงความว่องไว และประเมินอย่างต่อเนื่องว่าเราอยู่ในเส้นทางหรือไม่ เราไม่กลัวที่จะหมุนการเปลี่ยนโลกต้องการมัน
+  careers_principle_title_5: นวัตกรรม Champion
+  careers_principle_description_5: เราคิดว่าใหญ่เสี่ยงและไม่กลัวที่จะล้มเหลวหากเราเห็นวิธีที่ดีกว่าในการบรรลุเป้าหมายของเรา
+    เราทำและสนับสนุนให้ผู้อื่นทำเช่นนั้นด้วยการแก้ปัญหาที่เพิ่มขึ้นจะไม่ช่วยเปลี่ยนโลก
+  careers_principle_title_6: การตัดสินใจ Anchor ในข้อเท็จจริง
+  careers_principle_description_6: เราใช้ข้อมูลเพื่อทำความเข้าใจธุรกิจของเรา สร้างผลลัพธ์ที่ต้องการ
+    และเป็นแนวทางในการตัดสินใจเราปรับสมดุลนี้โดยการตระหนักว่าเราไม่เคยมีข้อมูลที่เราต้องการเพื่อดำเนินการ
+  careers_principle_title_7: ความคิดการเติบโตเป็นเชื้อเพลิงให้เรา
+  careers_principle_description_7: เราเข้าใกล้ความท้าทายแต่ละอย่างด้วยความอยากรู้อยากเห็นเราให้คำติชมด้วยความกรุณาและตรงไปตรงมา
+    เราได้รับการตอบรับอย่างเปิดเผยเราเรียนรู้จากความผิดพลาดของเราและมองหาวิธีที่จะเพิ่มการเข้าถึงและผลกระทบของการทำงานของเรา
+  careers_balance_section_title: สมดุลระหว่างการทำงานและชีวิตของเรา
+  careers_balance_section_description: เราใส่ใจในพนักงานของเราและทุ่มเทให้กับการสนับสนุนทุกคนทั้งในที่ทำงานและนอกที่ทำงานเรารู้ว่าทุกคนมีความต้องการที่แตกต่างกัน,
+    ซึ่งเป็นเหตุผลที่เรานำเสนอแพคเกจผลประโยชน์แบบองค์รวมที่จะให้แน่ใจว่าคุณ (และครอบครัวของคุณ)
+    ได้รับการดูแล.
+  careers_balance_first_column_text_1: ประโยชน์ด้านสุขภาพสำหรับคุณและครอบครัวของคุณ
+  careers_balance_first_column_text_2: เวลาจ่ายเงินใจกว้างออกและออกจากแผน
+  careers_balance_second_column_text_1: สภาพแวดล้อมการทำงานที่ยืดหยุ่นและสนับสนุน
+  careers_balance_second_column_text_2: การเติบโตและโอกาสในการเรียนรู้ทางวิชาชีพ
+  careers_openroles_section_title: เปิดบทบาท
+  careers_openroles_section_description: Code.org ตั้งอยู่ในซีแอตเทิล แต่สมาชิกในทีมของเราหลายคนห่างไกลผู้สมัครจากระยะไกลได้รับการต้อนรับและสนับสนุนให้ใช้
+  careers_more_info_text: สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Code.org โปรดดู [คำถามที่พบบ่อย]
+    (%{support_url}) หรือเรียนรู้เกี่ยวกับ [วิธีอื่นๆ ในการเข้าร่วมภารกิจของเรา] ()%{help_url}
+  careers_approach_section_title2: แนวทางสู่ความหลากหลายของเรา
+  careers_approach_section_description_1: เราเปิดรับมุมมอง ความคิด และภูมิหลังที่หลากหลายที่
+    Code.orgเรามุ่งมั่นที่จะให้โอกาสที่เท่าเทียมกันแก่พนักงานและผู้สมัครทุกคนเราไม่เลือกปฏิบัติบนพื้นฐานของเชื้อชาติ
+    ศาสนา สีผิว ชาติกำเนิด เพศ รสนิยมทางเพศ อายุ สถานภาพการสมรส สถานภาพทหารผ่านศึก
+    หรือความพิการ (จิตใจและทางกายภาพ)
+  careers_approach_section_description_2: เพื่อให้มั่นใจว่าบุคคลทุพพลภาพจะได้รับที่พักที่เหมาะสมเพื่อเข้าร่วมในการสมัครงานหรือขั้นตอนการสัมภาษณ์
+    เพื่อปฏิบัติงานที่จำเป็นและจะได้รับสิทธิประโยชน์และสิทธิประโยชน์อื่น ๆ จากการจ้างงานหากคุณมีความต้องการส่วนบุคคลที่เกี่ยวข้องกับความพิการ
+    กรุณาติดต่อที่ accommodations@code.org
+  csa_ai_page_hero_title: วิศวกรรมซอฟต์แวร์ & วิสัยทัศน์คอมพิวเตอร์
+  csa_ai_page_hero_description: 'โมดูลแบบ Post-AP CSA แบบสองบทนี้มอบประสบการณ์จริงสำหรับนักเรียนระดับมัธยมศึกษาตอนปลายด้วยเครื่องมือพัฒนาซอฟต์แวร์ระดับมืออาชีพ
+    รวมถึง GitHub และ GitHub Copilot และมอบทักษะในโลกแห่งความเป็นจริงในการพัฒนาโปรแกรมคอมพิวเตอร์วิทัศน์ '
+  csa_ai_page_video_section_title: ก้าวไกลกว่าโลกของสภาพแวดล้อมการเขียนโปรแกรม Code.org
+  csa_ai_page_video_section_li_1: เรียนรู้เกี่ยวกับ AI และแอพพลิเคชั่น
+  csa_ai_page_video_section_li_2: ประสบการณ์จริงกับเครื่องมือพัฒนาซอฟต์แวร์ระดับมืออาชีพ
+  csa_ai_page_video_section_li_3: เรียนรู้แนวทางปฏิบัติตามมาตรฐานอุตสาหกรรม
+  csa_ai_page_video_section_li_4: ปลูกฝังความคิดเชิงวิพากษ์
+  csa_ai_page_programming_tools: 'เครื่องมือการเขียนโปรแกรม: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: ไม่มี
+  csa_ai_page_curriculum_topics: 'หัวข้อ: การเขียนโปรแกรม, ข้อมูล, ศิลปะและการออกแบบ,
+    เกมและภาพเคลื่อนไหว'
+  csa_ai_page_curriculum_accessibility_features: ดูรายละเอียดในส่วน FAQ
+  csa_ai_page_curriculum_languages_support: ภาษาอังกฤษ
+  csa_ai_page_article_title_1: สร้างด้วยนักบินคู่นักบิน
+  csa_ai_page_article_description_1: นักเรียนจะได้เรียนรู้วิธีใช้ GitHub Copilot เป็นโปรแกรมเมอร์คู่เพื่ออธิบายโค้ดที่มีอยู่
+    ค้นหาและแก้ไขข้อผิดพลาด และสร้างวิธีแก้ไขปัญหาใหม่ๆ
+  csa_ai_page_article_link_1: เรียนรู้เพิ่มเติมเกี่ยวกับ Copilot
+  csa_ai_page_article_title_2: สร้างโมเดล AI ของคุณเอง
+  csa_ai_page_article_description_2: นักเรียนฝึกฝนโมเดล AI ของตนเองโดยใช้ Teachable
+    Machine เพื่อจดจำภาพและท่าทางในรูปแบบเว็บแคม และพิจารณาว่าวิสัยทัศน์ของคอมพิวเตอร์มีผลต่อวิธีที่ผู้ใช้โต้ตอบกับแอปอย่างไร
+  csa_ai_page_article_link_2: สำรวจแผนการเรียน
+  csa_ai_page_article_title_3: สำรวจวิสัยทัศน์ของคอมพิวเตอร์
+  csa_ai_page_article_description_3: นักเรียนใช้โมเดล AI ที่สร้างด้วย Teachable Machine
+    ลงในแอป Java โดยใช้ GitHub Copilot เพื่อช่วยในการปรับเปลี่ยนแอปเวอร์ชันที่มีอยู่เพื่อทำงานกับอินพุตต่างๆ
+  csa_ai_page_article_link_3: ดูตัวอย่าง
+  csa_ai_page_learn_more_section_title: เรียนรู้เพิ่มเติมเกี่ยวกับปัญญาประดิษฐ์
+  csa_ai_page_learn_more_title: สำรวจ AI 101 สำหรับครู
+  csa_ai_page_learn_more_description: ค้นพบโลกที่ก้าวล้ำของ Artificial Intelligence
+    (AI) และศักยภาพในการเปลี่ยนแปลงการศึกษาด้วยชุดการเรียนรู้ออนไลน์ที่ครอบคลุมของเราสำหรับครู
+  csa_ai_page_learn_more_link: ดูซีรี่ส์ AI 101 สำหรับครู
+  csa_ai_page_faq_question_01: ข้อกำหนดเบื้องต้นสำหรับโมดูลนี้คืออะไร?
+  csa_ai_page_faq_answer_01_01: 'ก่อนที่จะดำน้ำในโมดูลนี้นักเรียนควรมีความรู้รายการระดับของ
+    Javaโดยเฉพาะอย่างยิ่ง, พวกเขาควรจะเข้าใจใน:'
+  csa_ai_page_faq_answer_01_list_01: "**ชั้นเรียนและวัตถุ: ** นักเรียนควรมีความคุ้นเคยกับการกำหนดและการใช้ชั้นเรียน
+    รวมทั้งการสร้างและจัดการวัตถุ"
+  csa_ai_page_faq_answer_01_list_02: "**การเขียนและวิธีการโทร: ** นักเรียนควรจะสามารถที่จะกำหนดวิธีการภายในชั้นเรียนเข้าใจพารามิเตอร์วิธีการและประเภทผลตอบแทนและวิธีการเรียกจากวัตถุหรือวิธีการอื่น
+    ๆ"
+  csa_ai_page_faq_answer_01_list_03: "**1D อาร์เรย์และ ArrayLists: ** พวกเขาควรจะมีความเชี่ยวชาญในการประกาศเริ่มต้นและการจัดการอาร์เรย์หนึ่งมิติและ
+    ArrayLists รวมทั้งการทำซ้ำผ่านพวกเขา"
+  csa_ai_page_faq_answer_01_list_04: "**การเลือกและการย้ำ: ** รากฐานที่มั่นคงในงบเงื่อนไขและลูปเป็นสิ่งสำคัญ."
+  csa_ai_page_faq_question_01_02: จะเป็นการดีที่นักเรียนที่จบ AP วิทยาการคอมพิวเตอร์
+    A หรือหลักสูตรของความลึกและความรุนแรงที่คล้ายกันจะได้รับการเตรียมความพร้อมสำหรับโมดูลนี้
+  csa_ai_page_faq_question_02: ฉันจะติดตั้งซอฟต์แวร์ที่จำเป็นสำหรับโมดูลนี้ได้อย่างไร?
+  csa_ai_page_faq_answer_02_01: โมดูลนี้มีเอกลักษณ์เฉพาะเพราะมันเกี่ยวข้องกับการใช้ซอฟต์แวร์ของบุคคลที่สามมากกว่าห้องปฏิบัติการและเครื่องมือของ
+    Code.org[อ่านเพิ่มเติมเกี่ยวกับการติดตั้งซอฟต์แวร์ที่นี่] (%{accessibility_url})
+  csa_ai_page_faq_question_03: ฉันจะสนับสนุนความต้องการในการเข้าถึงในขณะที่สอนโมดูลนี้ได้อย่างไร?
+  csa_ai_page_faq_answer_03_01: การจัดเลี้ยงเพื่อตอบสนองความต้องการการเข้าถึงเป็นสิ่งสำคัญสำหรับสภาพแวดล้อมการเรียนรู้รวม[อ่านเพิ่มเติมเกี่ยวกับคุณสมบัติการช่วยการเข้าถึงในซอฟต์แวร์ที่ใช้ในโมดูลนี้ที่นี่]
+    ()%{install_url}
+  csa_ai_page_faq_question_04: ฉันจะใช้ VS Code บน Chromebook ได้อย่างไร
+  csa_ai_page_faq_answer_04: การใช้โค้ด VS บน Chromebook กลายเป็นเรื่องที่ตรงไปตรงมามากขึ้น
+    โดยเฉพาะความสามารถในการเรียกใช้แอป Linux บน Chromebook รุ่นที่ใหม่กว่า[อ่านเพิ่มเติมเกี่ยวกับการตั้งค่ารหัส
+    VS บน Chromebook ได้ที่นี่] ()%{chromebook_url}
+  csa_ai_page_faq_question_05: ฉันจะได้รับการพัฒนาวิชาชีพสำหรับโมดูลนี้ได้อย่างไร?
+  csa_ai_page_faq_answer_05: ขณะนี้ยังไม่มีการพัฒนาวิชาชีพเฉพาะสำหรับหลักสูตรนี้หากคุณกำลังมองหาที่จะเข้าใจวิธีการใช้ปัญญาประดิษฐ์ในห้องเรียนของคุณ
+    คุณสามารถ [สำรวจ AI 101 for Teachers] (%{ai_101_url})
+  csa_ai_page_faq_question_06: ระยะเวลาที่แนะนำสำหรับการสอนโมดูลนี้คืออะไร?
+  csa_ai_page_faq_answer_06_01: โมดูล Software Engineering & Computer Vision มีโครงสร้างอย่างพิถีพิถันเพื่อให้การเรียนรู้ที่ครอบคลุมในกรอบเวลาที่รัดกุมโมดูลทั้งหมดได้รับการออกแบบให้ครอบคลุม**2
+    สัปดาห์ของการเรียนการสอน**.บทเรียนส่วนใหญ่จะปรับแต่งสำหรับ**45 นาที** ในขณะที่บทเรียนที่นักเรียนเจาะลึกในการพัฒนาโครงการ
+    Java แบบฝึกหัดได้รับการออกแบบมาสำหรับ**90 นาที**ระยะเวลาที่ขยายออกไปนี้จะช่วยให้นักเรียนมีโอกาสที่เพียงพอในการทำความเข้าใจ
+    นำไปใช้ และแก้ไขปัญหาขณะที่พวกเขาทำงาน
+  csa_ai_page_faq_answer_06_02: นอกจากนี้ยังมีความยืดหยุ่นโดยเจตนาที่สร้างขึ้นในโครงสร้างของโมดูล.คุณสามารถปรับระยะเวลาได้
+    ทั้งนี้ขึ้นอยู่กับพลวัตของห้องเรียน การมีส่วนร่วมของนักเรียน และความลึกที่คุณต้องการสำรวจแต่ละหัวข้อตัวอย่างเช่น
+    บทเรียนบทนำสู่คูพิลโลน (Intro to Copilot) ที่ออกแบบมาเป็นบทเรียน 45 นาที สามารถขยายได้ถึง
+    90 นาที หากคุณต้องการเจาะลึกว่าโมเดลภาษาและเครื่องมือต่างๆ เช่น GitHub Copilot
+    และ ChatGPT ทำงานได้อย่างลึกซึ้ง
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: ด้วยบัญชีครูที่ได้รับการอนุมัติคุณสามารถค้นหาคีย์คำตอบในแผงสีฟ้า
+    “ครู” เท่านั้นที่แสดงในบทเรียนออนไลน์และกิจกรรมหากคุณต้องการบัญชีครูที่ได้รับการอนุมัติคุณสามารถสมัครเพื่อเข้าถึงเนื้อหาเฉพาะครูที่ได้รับการป้องกัน
+    (คีย์คำตอบ ฯลฯ) ผ่าน [แบบฟอร์มนี้] ()%{form_url}โปรดทราบว่าอาจใช้เวลาประมาณ 3-5
+    วันทำการในการยืนยันบัญชีของคุณ
+  csa_ai_page_faq_question_08: เป็นโมดูลนี้แมปกับมาตรฐาน?
+  csa_ai_page_faq_answer_08: ใช่ หลักสูตรวิศวกรรมซอฟต์แวร์และคอมพิวเตอร์วิชั่นชั่นถูกแมปเข้ากับ
+    [มาตรฐาน CSTA K-12] (%{csta_k12_url}) และ AI สำหรับ [K-12 Guidelines] ()%{k12_url}
+  csa_ai_page_faq_question_09: มีค่าใช้จ่ายเท่าไรในการสอนโมดูลนี้?
+  csa_ai_page_faq_answer_09_01: หลักสูตรและแพลตฟอร์มของเราพร้อมให้บริการโดยไม่มีค่าใช้จ่าย
+    (%{no_cost_url}) สำหรับทุกคน ทุกที่ เพื่อสอน!
+  csa_ai_page_faq_answer_09_02: นอกจากนี้ซอฟต์แวร์และเครื่องมือที่ใช้ในโมดูลนี้ไม่มีค่าใช้จ่ายGitHub
+    Copilot ฟรีสำหรับการตรวจสอบ [teachers](%{teachers_url}) และ [students]()%{students_url}
+  csa_ai_page_faq_question_10: ฉันจะทำอย่างไรหากการติดตั้งซอฟต์แวร์ไม่ทำงาน
+  csa_ai_page_faq_answer_10: ปัญหาที่พบในระหว่างการติดตั้งซอฟต์แวร์อาจเป็นเรื่องปกติ
+    แต่มีขั้นตอนที่เป็นระบบที่คุณสามารถปฏิบัติตามเพื่อแก้ไขปัญหาและแก้ไขได้[ดูเคล็ดลับการแก้ไขปัญหาบางอย่างที่นี่]
+    (%{troubleshooting_url})
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'หลักสูตรวิศวกรรมซอฟต์แวร์และคอมพิวเตอร์วิชั่นของเราได้รับการออกแบบโดยคำนึงถึงคุณค่าของหลักสูตรของเราเป้าหมายต่อไปนี้นำไปสู่การสร้างหลักสูตรนี้:'
+  csa_ai_page_faq_answer_11_list_01: "**เป้าหมายที่ 1: ** ใช้เครื่องมือ AI เพื่อสร้าง
+    แก้จุดบกพร่อง และแก้ไขโค้ด"
+  csa_ai_page_faq_answer_11_list_02: "**เป้าหมายที่ 2: ** การเปลี่ยนจาก Java Lab เป็นเครื่องมือในโลกแห่งความจริง"
+  csa_ai_page_faq_answer_11_list_03: "**เป้าหมายที่ 3: ** เข้าใจอย่างลึกซึ้งถึงวิธีการฝึกอบรมและบูรณาการโมเดล
+    AI เข้ากับโปรแกรมต่างๆ"
+  csa_ai_page_faq_answer_11_02: สำหรับข้อมูลเพิ่มเติมเกี่ยวกับค่านิยมที่เป็นแนวทางในการทำงานของเรา
+    โปรดดูที่ [ค่าหลักสูตร] ()%{curriculum_values_url}ของเรา
+  video_library_page_main_title: วิดีโอสั้นเพื่อการศึกษา
+  video_library_page_hero_description: ห้องสมุดวิดีโอการศึกษาที่กำลังเติบโตของ Code.org
+    มีให้สำหรับนักการศึกษาทั่วโลก ออนไลน์ หรือในห้องเรียนเป้าหมายของเราคือการขยายความพยายามของเรา
+    นอกเหนือจากการเข้าถึงหลักสูตรของเราเอง
+  video_library_page_title_ai_works: AI ทำงานอย่างไร
+  video_library_page_description_ai_works: ชุดวิดีโอสั้น ๆ นี้จะแนะนำคุณถึงวิธีการทำงานของปัญญาประดิษฐ์และทำไมมันสำคัญเรียนรู้เกี่ยวกับเครือข่ายประสาทหรือวิธีที่
+    AI เรียนรู้และเจาะลึกประเด็นต่างๆ เช่น อัลกอริทึมความลำเอียงและจริยธรรมของการตัดสินใจ
+    AI
+  video_library_page_title_computers_work: วิธีการทำงานของคอมพิวเตอร์
+  video_library_page_description_computers_work: อธิบายสิ่งที่ทำให้คอมพิวเตอร์เป็นคอมพิวเตอร์
+    วิธีการแสดงข้อมูลดิจิทัลในหน่วยที่ 1 และ 0 วิธีการทำงานของวงจรคอมพิวเตอร์เพื่อจัดการกับข้อมูลดิจิทัล
+    และวิธีการที่หน่วยประมวลผลกลาง (CPU) และระบบปฏิบัติการควบคุมอินพุต เอาต์พุต หน่วยความจำ
+    และฮาร์ดแวร์ของคอมพิวเตอร์
+  video_library_page_title_internet_works: อินเทอร์เน็ตทำงานอย่างไร
+  video_library_page_description_internet_works: มี Vint Cerf ผู้ประดิษฐ์ TCP/IP เดวิด
+    คาร์พ ผู้ก่อตั้ง Tumblr เพื่ออธิบาย HTTP และ HTML, เจ้าหญิงรักษาความปลอดภัยของ
+    Google เพื่ออธิบาย SSL และความปลอดภัยทางไซเบอร์และวิศวกรจาก Microsoft, Spotify
+    และ Symantecชุดของวิดีโอสั้น ๆ ที่อธิบายวิธีการทำงานของอินเทอร์เน็ต.
+  video_library_page_title_not_hacked: วิธีไม่รับการถูกแฮ็ก
+  video_library_page_description_not_hacked: อินเทอร์เน็ตเปิดอยู่ดังนั้นทุกอย่างที่เกิดขึ้นจะสามารถมองเห็นได้เว้นแต่จะได้รับการป้องกันในประเทศสมัยใหม่คนมีความกังวลมากขึ้นเกี่ยวกับการถูกแฮ็กมากกว่าเกี่ยวกับอาชญากรรมอื่น
+    ๆทำไม?เพราะคอมพิวเตอร์หรือโทรศัพท์ทุกเครื่องบนอินเทอร์เน็ตถูกทดสอบหาช่องโหว่โดยอาชญากร
+    ผู้ก่อการร้าย หรือแม้แต่นักแสดงของรัฐถ้าคุณไม่ระวัง ใครบางคนอาจแฮ็คอุปกรณ์หรือบัญชีของคุณ
+    และแม้แต่ขโมยข้อมูลประจำตัวหรือเงินของคุณ
+  video_library_page_title_blockchain: วิธีการทำงานของบล็อกเชน
+  video_library_page_description_blockchain: ชุดนี้จัดทำขึ้นโดยความร่วมมือกับ Coinbase
+    โดยมีผู้เชี่ยวชาญในอุตสาหกรรมและมีจุดมุ่งหมายที่จะทำลายความลึกลับของเทคโนโลยีนี้ด้วยการสำรวจว่าบล็อกเชนคืออะไร
+    วิธีการทำงาน และผลกระทบทางสังคมที่อาจเกิดขึ้นได้ ทั้งดีและไม่ดี
+  video_library_page_title_careers: ร่วมงานในบริการลูกค้า
+  video_library_page_description_careers: อาชีพในวิทยาการคอมพิวเตอร์และเทคโนโลยีสามารถสนุกและให้รางวัลได้แต่คนที่ทำงานในสาขาเหล่านี้จริงๆทำอะไรได้บ้างด้วยความหลากหลายของงานและบริษัท,
+    ไม่มีเพียงหนึ่งคำตอบสำหรับคำถามนี้.ดูวิดีโอด้านล่างเพื่อพบกับผู้คนบางคนที่กำลังแก้ไขปัญหาใหญ่ด้วยวิธีที่สร้างสรรค์
+  video_library_page_title_inspirational: สร้างแรงบันดาลใจ
+  video_library_page_description_inspirational: วิทยาศาสตร์คอมพิวเตอร์จะเปลี่ยนแปลงอะไรในโลกของเรา?ทุกอย่างเลยเหรอมันสำหรับใคร?ทุกคน!ดูวิดีโอเหล่านี้เพื่อสร้างแรงบันดาลใจและสร้างแรงจูงใจให้คุณ
+  video_library_page_footer_description: กำลังหาอย่างอื่นอยู่ใช่ไหมเรามีวิดีโอที่ยอดเยี่ยมมากมายที่มีอยู่ในช่อง
+    Youtube ของเรา
+  video_library_page_footer_cta: สำรวจวิดีโอ Code.org ทั้งหมดบน YouTube
+  video_library_page_computer_work_video_title_1: แนะนำวิธีการทำงานของคอมพิวเตอร์
+  video_library_page_computer_work_video_title_2: ไบนารีและข้อมูล
+  video_library_page_computer_work_video_title_3: CPU, หน่วยความจำ, อินพุต และเอาต์พุต
+  video_library_page_computer_work_video_title_4: สิ่งที่ทำให้คอมพิวเตอร์, คอมพิวเตอร์?
+  video_library_page_computer_work_video_title_5: วงจรลอจิก
+  video_library_page_computer_work_video_title_6: ฮาร์ดแวร์และซอฟต์แวร์
+  video_library_page_internet_work_video_title_1: อินเทอร์เน็ตคืออะไร
+  video_library_page_internet_work_video_title_2: 'อินเทอร์เน็ต: ที่อยู่ IP และ DNS'
+  video_library_page_internet_work_video_title_3: 'อินเทอร์เน็ต: HTTP และ HTML'
+  video_library_page_internet_work_video_title_4: 'อินเทอร์เน็ต: การรักษาความปลอดภัยทางไซเบอร์และอาชญากรรม'
+  video_library_page_internet_work_video_title_5: 'อินเทอร์เน็ต: สายไฟ, สายเคเบิล,
+    และ Wifi'
+  video_library_page_internet_work_video_title_6: 'อินเทอร์เน็ต: แพ็คเก็ต การกำหนดเส้นทาง
+    และความน่าเชื่อถือ'
+  video_library_page_internet_work_video_title_7: 'อินเทอร์เน็ต: การเข้ารหัสและคีย์สาธารณะ'
+  video_library_page_internet_work_video_title_8: 'อินเทอร์เน็ต: วิธีการทำงานของการค้นหา'
+  video_library_page_cs_video_title_1: ฉันชื่อเจอโรม และฉันเป็นนักเทคโนโลยีการออกแบบที่
+    Meow Wolf
+  video_library_page_cs_video_title_2: ฉันชื่อ Nikesha และฉันเป็นวิศวกรการบินและอวกาศที่นาซ่า
+  video_library_page_cs_video_title_3: ฉันชื่อ Brina และฉันเป็นวิศวกรซอฟต์แวร์ที่
+    Instagram
+  video_library_page_cs_video_title_4: ฉันชื่อ Kinsley และฉันเป็นวิศวกรซอฟต์แวร์ที่
+    Facebook
+  video_library_page_cs_video_title_5: ชื่อของฉันคือ Polina และฉันเป็นนักวิทยาศาสตร์ข้อมูลที่
+    Electronic Arts
+  video_library_page_cs_video_title_6: ฉันชื่อ Danelle และฉันเป็นวิศวกรซอฟต์แวร์ที่
+    MBARI
+  video_library_page_cs_video_title_7: ฉันชื่อคริสโตเฟอร์ และฉันเป็นนักวิเคราะห์ความปลอดภัยที่เทเนี่ยม
+  video_library_page_cs_video_title_8: ฉันชื่อ Federico และฉันเป็นผู้จัดการโปรแกรมด้านเทคนิคที่
+    Microsoft
+  video_library_page_cs_video_title_9: ฉันชื่อ Tess และฉันเป็นวิศวกรซอฟต์แวร์ที่ Google
+  video_library_page_inspirational_video_title_1: เปลี่ยนโฉมหน้าของวิทยาการคอมพิวเตอร์
+    (3 นาที)
+  video_library_page_inspirational_video_title_2: ผลักดันตัวเองทุกคนสามารถเรียนรู้
+    (1 นาที)
+  video_library_page_inspirational_video_title_3: สร้างแรงบันดาลใจให้สาว (2 นาที)
+  video_library_page_inspirational_video_title_4: สิ่งที่โรงเรียนส่วนใหญ่ไม่สอน (5
+    นาที)
+  video_library_page_inspirational_video_title_5: ชั่วโมงแห่งรหัสอยู่ที่นี่ - ทุกคนสามารถเรียนรู้
+    (2 นาที)
+  video_library_page_inspirational_video_title_6: ฉันชื่อ อาราคลีย์ (3 นาที)
+  video_library_page_inspirational_video_title_7: ชั่วโมงโค๊ดกับแกงกะหรี่สเตฟ (2 นาที)
+  video_library_page_inspirational_video_title_8: วิทยาการคอมพิวเตอร์กำลังเปลี่ยนแปลงทุกอย่าง
+    (5 นาที)
+  video_library_page_inspirational_video_title_9: บทนำด้านวิทยาการคอมพิวเตอร์ (1 นาที)
+  video_library_page_inspirational_video_title_10: ประธานาธิบดีโอบามาด้านวิทยาการคอมพิวเตอร์
+    (1 นาที)
+  video_library_page_inspirational_video_title_11: ทุกคนสามารถเรียนรู้ (1 นาที)
+  video_library_page_inspirational_video_title_12: โลเกฟัลตา เอน นูเอสตราส เอสคูเอลาส
+    (2 นาที)
+  video_library_page_inspirational_video_title_13: นาซ่าฉลองชั่วโมงแห่งประมวลกฎหมาย
+    (2 นาที)
+  video_library_page_inspirational_video_title_14: มันเป็นมากกว่าเกม (1 นาที)
+  video_library_page_inspirational_video_title_15: สร้างสรรค์ด้วยวิทยาการคอมพิวเตอร์
+    (1 นาที)
+  video_library_page_not_hacked_video_title_1: 'วิธีที่จะไม่ได้รับการแฮ็ก: บทนำ'
+  video_library_page_not_hacked_video_title_2: 'วิธีที่จะไม่ได้รับการแฮ็ก: รหัสผ่าน'
+  video_library_page_not_hacked_video_title_3: 'วิธีการไม่ได้รับการแฮ็ก: การรับรองความถูกต้องและล็อคอุปกรณ์'
+  video_library_page_not_hacked_video_title_4: 'วิธีไม่ถูกแฮ็ก: ฟิชชิ่ง'
+  video_library_page_not_hacked_video_title_5: 'วิธีการไม่รับ hacked: เว็บไซต์และ
+    Wifi'
+  video_library_page_not_hacked_video_title_6: 'วิธีไม่ถูกแฮ็ก: การส่งข้อความและการดาวน์โหลด'
+  video_library_page_not_hacked_video_title_7: 'วิธีการไม่ได้รับการแฮ็ก: ติดตั้งโปรแกรมปรับปรุง'
   language_code:
     ar: ตัวอารบิก
     az: เกี่ยวกับอาเซอร์ไบจัน

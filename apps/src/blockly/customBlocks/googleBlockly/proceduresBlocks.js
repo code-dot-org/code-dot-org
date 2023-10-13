@@ -2,11 +2,11 @@ import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
+import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 const BLOCK_OFFSET = 16;
-
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
@@ -23,7 +23,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a function (aka procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
-    type: 'procedures_defnoreturn',
+    type: BLOCK_TYPES.procedureDefinition,
     message0: '%1 %2 %3 %4',
     message1: '%1',
     args0: [
@@ -76,7 +76,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   },
   {
     // Block for calling a procedure with no return value.
-    type: 'procedures_callnoreturn',
+    type: BLOCK_TYPES.procedureCall,
     message0: '%1 %2',
     args0: [
       {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
@@ -126,10 +126,15 @@ export const editButtonHandler = function () {
 // This extension adds an edit button to the end of a procedure call block.
 const editButton = function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
+  // If we are in the modal function editor, don't add the button, due to an issue with Blockly
+  // not being able to handle us clearing the block right after it has been clicked.
+  // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
+  // remove the check on functionEditor workspace id.
   if (
     useModalFunctionEditor &&
     this.inputList.length &&
-    !this.workspace.isFlyout
+    !this.workspace.isFlyout &&
+    this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
@@ -198,7 +203,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // Note: Blockly.Msg was undefined when this code was extracted into global scope
   const functionDefinitionBlock = {
     kind: 'block',
-    type: 'procedures_defnoreturn',
+    type: BLOCK_TYPES.procedureDefinition,
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
@@ -226,7 +231,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   workspaces.forEach(workspace => {
     const procedureBlocks = workspace
       .getTopBlocks()
-      .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
+      .filter(topBlock => topBlock.type === BLOCK_TYPES.procedureDefinition);
     procedureBlocks.forEach(block => {
       allFunctions.push({
         name: block.getFieldValue('NAME'),
@@ -259,7 +264,10 @@ const getNewFunctionButtonWithCallback = (
   let callbackKey, callback;
   if (modalFunctionEditorExperimentEnabled) {
     callbackKey = 'newProcedureCallback';
-    callback = Blockly.functionEditor.newProcedureCallback;
+    callback = () =>
+      Blockly.functionEditor.newProcedureCallback(
+        BLOCK_TYPES.procedureDefinition
+      );
   } else {
     callbackKey = 'createAndCenterFunctionDefinitionBlock';
     // Everything here is place-holder code that should be replaced with a

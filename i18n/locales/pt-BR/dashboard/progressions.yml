@@ -30,20 +30,20 @@ pt:
       'App Project: Linking Screens': 'Projeto do Aplicativo: Vinculando Telas'
       'App Project: Screen Design': 'Projeto do Aplicativo: Design da Tela'
       'App Project: Screen Import': 'Projeto do Aplicativo: Importação de Tela'
-      'App: Choose a Kid''s Movie': 'Aplicativo: Escolha um Filme Infantil'
-      'App: Friend Finder': 'App: Localizador de Amigos'
-      'App: Guess the Number': 'Aplicativo: Adivinhe o Número'
-      'App: How Many Countries': 'Aplicativos: Quantos Países'
-      'App: Improved Pet App': 'Aplicativo: Aplicativo Melhorado para Pets'
-      'App: Is It Your Birthday?': 'Aplicativo: É seu aniversário?'
-      'App: My Famous Birthday': 'Aplicativo: Meu Aniversário Famoso'
-      'App: National Parks': 'Aplicativo: Parques Nacionais'
-      'App: Outfit Picker': 'Aplicativo: Selecionador de Look'
-      'App: Pet Chooser': 'App: Selecionador de Pet'
-      'App: Stamp Notebook': 'Aplicativo: Caderno de Selos'
-      'App: Story Creator': 'App: Criador de Histórias'
-      'App: The Fastest Finger': 'Aplicativo: O Dedo Mais Rápido'
-      'App: Where Should I Live?': 'Aplicativo: Onde eu Devo Morar?'
+      'App: Choose a Kid''s Movie': 'Aplicativo: Choose a Kid''s Movie'
+      'App: Friend Finder': 'Aplicativo: Friend Finder'
+      'App: Guess the Number': 'Aplicativo: Guess the Number'
+      'App: How Many Countries': 'Aplicativos: How Many Countries'
+      'App: Improved Pet App': 'Aplicativo: Pets Aprimorado'
+      'App: Is It Your Birthday?': 'Aplicativo: Is It Your Birthday?'
+      'App: My Famous Birthday': 'Aplicativo: My Famous Birthday'
+      'App: National Parks': 'Aplicativo: National Parks'
+      'App: Outfit Picker': 'Aplicativo: Outfit Picker'
+      'App: Pet Chooser': 'Aplicativo: Pet Chooser'
+      'App: Stamp Notebook': 'Aplicativo: Stamp Notebook'
+      'App: Story Creator': 'Aplicativo: Story Creator'
+      'App: The Fastest Finger': 'Aplicativo: The Fastest Finger'
+      'App: Where Should I Live?': 'Aplicativo: Where Should I Live?'
       Arrays: Vetores
       Artist Intro with JR Hildebrand: Introdução do Artista com JR Hildebrand
       Artist Intro with JR Hildebrande: Introdução do Artista com JR Hildebrande
@@ -75,7 +75,7 @@ pt:
       Bunny Jumper: Coelho Saltador
       Button Circuits: Circuitos de Botão
       Buttons and Switch: Botões e Interruptor
-      CS Discoveries Post-Course Survey: Pesquisa pós-curso da CS Discoveries
+      CS Discoveries Post-Course Survey: Pesquisa Pós-curso do Descobertas da CC
       CS Discoveries Post-course Survey: Pesquisa Pós-curso do CS Discoveries
       CSS Classes: Classes CSS
       CSS Text Properties: Propriedades CSS de Texto
@@ -97,6 +97,7 @@ pt:
       Changing Screens: Mudando Telas
       Changing Sensor Scale: Alterando a escala do Sensor
       Check Your Work: Verifique Seu Trabalho
+      Check for Understanding: Verifique a compreensão
       Check-In Survey: Pesquisa de verificação
       Checking for a Winner: Verificando um Vencedor
       'Choice Levels: Customize Your App': 'Níveis de escolha: personalize seu aplicativo'
@@ -175,7 +176,7 @@ pt:
       Emotion Machine Example: Exemplo de Máquina de Emoção
       End of Course Projects: Projetos de conclusão de curso
       End-Of-Unit Survey: Pesquisa de Fim de Unidade
-      End-of-Unit Survey: Pesquisa de Fim de Unidade
+      End-of-Unit Survey: Pesquisa de Conclusão de Unidade
       Escape Room Example: Exemplo de Sala de Escape
       Event Types: Tipos de Eventos
       Events: Eventos
@@ -266,6 +267,7 @@ pt:
       Intro to Sprites: Introdução a Sprites
       Intro to Variables: Introdução a Variáveis
       Introducing Sprite Lab: Introdução ao Sprite Lab
+      Introduction: Introdução
       Introduction to Arrays: Introdução a Arrays
       Introduction to Game Lab: Introdução ao Laboratório de Jogos
       Introduction to Variables: Introdução a Variáveis
@@ -280,7 +282,7 @@ pt:
       Layout Properties: Propriedades do Layout
       Layout with CSS: Layout com CSS
       Learning from Simulations: Aprendizado através de simulações
-      Lesson Extras: Lição Extras
+      Lesson Extras: Extras da Lição
       Lesson Overview: Visão geral da aula
       Levels: Níveis
       Light Show: Show de Luzes
@@ -376,9 +378,9 @@ pt:
       Random Numbers: Números Aleatórios
       Raspado Recommender: Recomendador Raspado
       Reading Sensors: Sensores de Leitura
-      Recognizing Expressions: Reconhecendo expressões
-      Recognizing Fish: Reconhecendo peixes
-      Recognizing Fish Features: Reconhecendo as características dos peixes
+      Recognizing Expressions: Reconhecendo Expressões
+      Recognizing Fish: Reconhecendo Peixes
+      Recognizing Fish Features: Reconhecendo as Características dos Peixes
       Recognizing Shapes: Reconhecendo formas
       Reflection: Reflexão
       Repeat Blocks: Blocos de Repetição
@@ -423,6 +425,7 @@ pt:
       Setting Properties: Propriedades de Configuração
       Shapes and Parameters: Formas e Parâmetros
       Shapes and the Draw Loop: Formas e o Laço de Desenho
+      Share Out: Compartilhar
       Share Your App: Compartilhe Seu App
       Share Your Pages: Compartilhe Suas Páginas
       Share Your Stylesheets: Compartilhe Suas Folhas de Estilo
@@ -465,6 +468,7 @@ pt:
       Train an AI to Clean the Ocean: Treine uma IA para limpar o oceano
       UI Element Properties: Propriedades do Elemento de UI
       Ultimate Shoe Recommender: Recomendador definitivo de calçado
+      Unplugged Activity: Atividade off-line
       Updating Your Prototype: Atualizando seu Protótipo
       Upload Your Images: Carregue suas imagens
       User Interface: Interface do Usuário

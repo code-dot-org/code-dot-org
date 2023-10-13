@@ -2,22 +2,10 @@
   "include": [
     "./src/**/*.ts",
     "./src/**/*.tsx",
-    // Include all folders with .js and .jsx files that ts files reference.
-    // If you need to import a .js or .jsx file into a .ts or .tsx file, you
-    // can add its folder here to enable the syntax:
-    // import {component} from "folder/component";
-    "./src/music/**/*.js*",
-    "./src/aichat/**/*.js*",
-    "./src/lab2/**/*.js*",
-    "./src/*.js*",
-    "./src/javalab/**/*.js",
-    "./src/lib/util/**/*.js",
-    "./src/util/**/*.js*",
-    "./src/templates/**/*.js*",
-    "./src/code-studio/pd/components/*.js*",
-    "./src/code-studio/*.js",
     "./test/**/*.ts",
     "./test/**/*.tsx",
+    "./src/**/*.js",
+    "./src/**/*.jsx",
   ],
   "compilerOptions": {
     "jsx": "react",

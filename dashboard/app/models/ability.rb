@@ -64,7 +64,7 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      LearningGoalEvaluation
+      LearningGoalTeacherEvaluation
     ]
     cannot :index, Level
 
@@ -111,7 +111,7 @@ class Ability
 
       can :create, CodeReview do |code_review, project|
         code_review.user_id == user.id &&
-        project.owner_id == user.id
+          project.owner_id == user.id
       end
       can :edit, CodeReview, user_id: user.id
       can :index_code_reviews, Project do |project|
@@ -177,13 +177,13 @@ class Ability
             level_to_view.id
 
           if user != user_to_assume &&
-            !user_to_assume.student_of?(user) &&
-            can?(:code_review, user_to_assume) &&
-            CodeReview.open_reviews.find_by(
-              user_id: user_to_assume.id,
-              script_id: script_level.script_id,
-              project_level_id: project_level_id
-            )
+              !user_to_assume.student_of?(user) &&
+              can?(:code_review, user_to_assume) &&
+              CodeReview.open_reviews.find_by(
+                user_id: user_to_assume.id,
+                script_id: script_level.script_id,
+                project_level_id: project_level_id
+              )
             can_view_as_user_for_code_review = true
           end
         end
@@ -192,7 +192,15 @@ class Ability
       end
 
       if user.teacher?
-        can :manage, Section, user_id: user.id
+        can :manage, Section do |s|
+          # This s.user_id == user.id check will become unnecessary once we know
+          # there's a SectionInstructor object for every section's creator/owner
+          s.user_id == user.id || s.instructors.include?(user)
+        end
+        can :destroy, SectionInstructor do |si|
+          can?(:manage, si.section) && si.instructor_id != si.section.user_id
+        end
+        can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher
         can :manage, User do |u|
           user.students.include?(u)
@@ -212,7 +220,7 @@ class Ability
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
-        can :manage, LearningGoalEvaluation, teacher_id: user.id
+        can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
       end
 
       if user.facilitator?
@@ -377,8 +385,8 @@ class Ability
     # levelbuilder permission will mimic levelbuilder_mode instead of production
     # by default.
     if user.persisted? &&
-      user.permission?(UserPermission::LEVELBUILDER) &&
-      (Rails.application.config.levelbuilder_mode || rack_env?(:test))
+        user.permission?(UserPermission::LEVELBUILDER) &&
+        (Rails.application.config.levelbuilder_mode || rack_env?(:test))
       can :manage, [
         Block,
         SharedBlocklyFunction,

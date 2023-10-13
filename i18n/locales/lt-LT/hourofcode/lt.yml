@@ -35,6 +35,10 @@ lt:
   africa_campaign_date_full: Spalio 1 d. - gruodžio 18 d
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 2022 m. Spalio 1 d. - 2022 m. Gruodžio 18 d
+  hoc2023_header: Kūrybiškumas su AI
+  hoc2023_social_creativity_with_ai_title: Kodo valanda - ką sukursite?
+  hoc2023_social_creativity_with_ai_desc: Naudokite kompiuterių mokslą, kad galėtumėte
+    tyrinėti ir sužinoti apie AI!
   hoc2022_header: Naršyti, žaisti, kurti!
   social_hoc2022_explore_play_create: Naudokite kompiuterių mokslą, kad galėtumėte
     tyrinėti, žaisti ir kurti!
@@ -110,19 +114,20 @@ lt:
     vaidmenį kompiuterių mokslas galėtų atlikti kuriant teisingesnį pasaulį.
   oceans_landing_videos: Vaizdo įrašai apie AI ir mašininį mokymąsi
   oceans_behind_the_scenes: 'AI vandenynams: užkulisiuose'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: 2-4 lygiai naudoja iš anksto apmokytą modelį, kurį teikia
+    “ <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet” projektas. </a> “MobileNet” modelis yra <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvoliucinis
+    neuroninis tinklas,</a> kuris buvo apmokytas “ <a href="http://www.image-net.org/">ImageNet”,
+    duomenų rinkinyje, kuriame yra daugiau nei 14 milijonų vaizdų</a>, užrašytų žodžiais,
+    tokiais kaip “balionas” ar “braškė”. Norėdami pritaikyti šį modelį su pažymėtais
+    mokymo duomenimis, kuriuos studentas sukuria šioje veikloje, mes naudojame techniką,
+    vadinamą <a href="https://en.wikipedia.org/wiki/Transfer_learning">“Transfer Learning”.</a>Kiekvienas
+    mokymo duomenų rinkinio vaizdas yra tiekiamas “MobileNet”, kaip pikseliai, kad
+    būtų galima gauti anotacijų, kurios greičiausiai bus taikomos jam, sąrašą. Tada,
+    norėdami gauti naują vaizdą, mes jį pateikiame “MobileNet” ir palyginame jo gautą
+    anotacijų sąrašą su mokymo duomenų rinkinio pateiktomis pastabomis. Mes klasifikuojame
+    naują vaizdą su ta pačia etikete (pvz., “Žuvis” ar “ne žuvis”) kaip vaizdus iš
+    treniruočių rinkinio su panašiausiais rezultatais.
   oceans_behind_the_scenes_1_markdown: 2-4 lygiuose naudojamas iš anksto apmokytas
     modelis, kurį teikia [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     projektas. “MobileNet” modelis yra [konvoliucinis neuroninis tinklas] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks),
@@ -179,6 +184,28 @@ lt:
     mokymo programų katalogas ir pertvarkytas “Teach” puslapis, kuris padės jums viską
     rasti!
   in_partnership_with: Bendradarbiaujant su
+  shop_code_dot_org_heading: Parduotuvė Code.org
+  shop_code_dot_org_desc: Palaikykite mūsų darbą ir dėvėkite judėjimą su pasididžiavimu.
+    Mūsų skrybėles dėvėjo prezidentas Obama ir įžymybės.
+  spread_the_word_heading: Skleiskite žodį
+  spread_the_word_desc: Sustiprinkite mūsų poveikį bendrindami Code.org su savo tinklu.
+    Nuo socialinės žiniasklaidos iki el. pašto atnaujinimų sužinokite, kaip galite
+    padėti mums pasiekti daugiau pedagogų, studentų ir advokatų.
+  follow_us_heading: Sekite mus socialiniuose tinkluose
+  follow_us_desc: Būkite atnaujinta su mumis socialinėje žiniasklaidoje ir pasidalykite
+    mūsų įrašais su savo tinklu, kad būtumėte informuojami ir padėtumėte informuoti.
+  facebook: Facebook
+  twitter: "„Twitter“"
+  linked_in: "„LinkedIn“"
+  instagram: "„Instagram“"
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Prenumeruoti el. Laiškus
+  subscribe_to_emails_desc: Skaitykite apie tai, kas vyksta Code.org ir informatikos
+    švietimo per ketvirčio atnaujinimus per mūsų adresų sąrašą.
+  subscribe_to_emails_intl: Prenumeruoti tarptautinius atnaujinimus
+  promote_code_dot_org_heading: Skatinti Code.org
+  promote_code_dot_org_desc: Reklamuokite kompiuterių mokslą savo vietovėje naudodamiesi
+    statistika, citatomis ir vaizdo įrašais.
   afe_partnership_logo_alt: "“Amazon” ateities inžinieriaus logotipas"
   afe_partnership_thanks_desc: "“Amazon Future Engineer” yra išsami vaikystės iki
     karjeros programa, skirta įkvėpti, šviesti ir mokyti mažas pajamas gaunančius
@@ -188,6 +215,24 @@ lt:
   grade_level_label_elementary: Pradinė mokykla
   grade_level_label_middle: Vidurinė mokykla
   grade_level_label_high: Vidurinė mokykla
+  curricula_title_elementary: Pradinės mokyklos mokymo programos
+  curricula_desc_elementary: Naršykite linksmus, nemokamus kursus ir užsiėmimus, kurie
+    kviečia jus tyrinėti informatiką su pradinių klasių mokiniais.
+  curricula_title_middle: Vidurinės mokyklos mokymo programos
+  curricula_desc_middle: Naršykite patrauklius pasiūlymus, kurie leidžia jums ir jūsų
+    vidurinės mokyklos mokiniams kartu tyrinėti informatiką.
+  curricula_title_high: Vidurinės mokyklos mokymo programos
+  curricula_desc_high: Naršykite įtikinamus kursus ir veiklą, kviečiančią jus ir jūsų
+    aukštųjų mokyklų studentus gilintis į informatiką.
+  for_administrators_heading: Administratoriams
+  for_administrators_desc: Prisijunkite prie tūkstančių mokyklų, kurios jau įtraukė
+    kompiuterių mokslą į savo mokymo programą.
+  for_parents_heading: Tėvams
+  for_parents_desc: Galite padėti paskatinti savo mokinio mokyklą pasiūlyti ar išplėsti
+    informatikos išsilavinimą.
+  for_educators_heading: Pedagogams
+  for_educators_desc: Pradėkite mokyti šiandien - nereikia informatikos patirties
+    - naudodamiesi mūsų profesionaliais mokymosi seminarais.
   students_label: Moksleiviams
   teachers_label: Mokytojams
   teacher_label_csf: CS Pagrindai Mokytojas
@@ -197,9 +242,11 @@ lt:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Reikalingos medžiagos:'
   optional_materials: 'Pasirenkamos medžiagos:'
+  call_to_action_hold_an_event: Surengti renginį
   call_to_action_learn_more: Sužinokite daugiau
   call_to_action_watch_now: Žiūrėti dabar
   call_to_action_try_activity: Pabandykite veiklą
+  call_to_action_try_activities: Išbandykite veiklą
   call_to_action_explore_unit: Naršyti vienetą
   call_to_action_explore_curriculum: Naršyti mokymo programą
   call_to_action_explore_curriculum_options: Naršyti mokymo programos galimybes
@@ -214,6 +261,15 @@ lt:
   call_to_action_explore_choice_level: Naršyti pavyzdžio pasirinkimo lygį
   call_to_action_explore_collection: Naršyti kolekciją
   call_to_action_explore_unplugged_lesson: Naršykite atjungtas pamokas
+  call_to_action_explore_csf: Naršyti CS pagrindai
+  call_to_action_explore_csd: Naršyti CS atradimus
+  call_to_action_explore_csp: Naršyti CS principus
+  call_to_action_explore_csc: Naršykite CS ryšius
+  call_to_action_explore_csa: Naršyti AP® Computer Science A
+  call_to_action_explore_csa_short: Naršykite AP® CSA
+  call_to_action_explore_maker: Naršyti Maker mokymo programas
+  call_to_action_explore_hoc: Naršyti valandą kodo vadovėliai
+  call_to_action_explore_hoc_short: Naršyti Kodo valandą
   call_to_action_try_app_lab: Išbandykite “App Lab”
   call_to_action_view_lesson_plan: Peržiūrėti pamokų planą
   call_to_action_self_paced_pl: Pradėkite savarankišką profesinį mokymąsi
@@ -237,6 +293,7 @@ lt:
   call_to_action_resources_tools: Išbandykite programavimo įrankius
   call_to_action_sign_up_free: Užsiregistruokite nemokamai
   call_to_action_explore_ai_resources: Naršykite AI išteklius
+  call_to_action_explore_ai_curricula: Naršyti AI mokymo programas
   call_to_action_explore_curriculum_catalog: Naršykite mokymo programų katalogą
   call_to_action_see_full_curriculum_catalog: Žiūrėti visą mokymo programų katalogą
   call_to_action_find_self_paced_modules: Raskite savaiminio tempo modulius
@@ -258,6 +315,20 @@ lt:
   call_to_action_notify_available: Praneškite man, kai bus
   call_to_action_register_early_access: Registruotis ankstyvai prieigai
   call_to_action_open_positions: Peržiūrėti atviras pozicijas
+  call_to_action_explore_roles: Naršykite atvirus vaidmenis
+  call_to_action_get_guide: Gaukite vadovą
+  call_to_action_donate_to_cdo: Paaukokite Code.org
+  call_to_action_start_fundraiser: Pradėkite lėšų rinkėją
+  call_to_action_view_donation_policy: Peržiūrėti donorystės politiką
+  call_to_action_view_donate_bitpay: Paaukokite naudodami “BitPay”
+  call_to_action_make_a_donation: Padaryti donorystę
+  call_to_action_other_ways_to_give: Kiti būdai duoti
+  call_to_action_become_partner_usa: Tapkite Jungtinių Valstijų partneriu
+  call_to_action_become_partner_intl: Tapkite tarptautiniu partneriu
+  call_to_action_become_a_volunteer: Tapk savanoriu
+  call_to_action_start_translating: Pradėkite versti
+  call_to_action_learn_about_advocacy: Sužinokite apie mūsų propagavimą
+  call_to_action_visit_store: Apsilankykite parduotuvėje
   aria_label_call_to_action_afe: Sužinokite daugiau apie “Amazon Future Engineer”
   aria_label_call_to_action_teaching_csf: Pradėkite “Teaching Computer Science Fundamentals”
     profesinio mokymosi programą
@@ -367,8 +438,11 @@ lt:
   curriculum_name_csp: Kompiuterių mokslo principai
   curriculum_name_csc: Kompiuterių mokslo jungtys
   curriculum_name_csa: AP® Kompiuterių Mokslas
+  curriculum_name_csa_ai: Programinės įrangos inžinerija ir kompiuterių vizija
   curriculum_name_csc_02: Bet koks CS jungčių modulis
   curriculum_name_ai: AI ir mašinų mokymasis
+  curriculum_name_artificial_intelligence: Dirbtinis intelektas (AI)
+  curriculum_name_maker: Kūrėjas
   curriculum_name_maker_cp: Programėlių kūrimas su įrenginiais (“Circuit Playground”)
   curriculum_name_maker_microbit: Programėlių kūrimas naudojant įrenginius (micro:bit)
   curriculum_name_creating_apps_with_devices: Programėlių kūrimas su įrenginiais
@@ -379,6 +453,8 @@ lt:
   curriculum_name_interactive_animations_games: Interaktyvios animacijos ir žaidimai
   curriculum_name_design_process: Projektavimo procesas
   curriculum_name_data_society: Duomenys ir visuomenė
+  curriculum_desc_csf: Laisvas pradinių mokymo programų rinkinys, supažindinantis
+    studentus su pagrindinėmis informatikos koncepcijomis.
   curriculum_desc_csf_express: Išmokite kurti kompiuterines programas, lavinti problemų
     sprendimo įgūdžius ir dirbti per įdomius iššūkius! Kurkite žaidimus ir kūrybinius
     projektus, kad galėtumėte pasidalinti su draugais, šeima ir mokytojais.
@@ -424,6 +500,25 @@ lt:
   curriculum_desc_creating_apps_with_devices: Naršyti fizinių prietaisų vaidmenį skaičiavimo.
     Kurti programas, kurios naudoja aparatūros įvestis ir išvestis. Yra šio įrenginio
     versija tiek “micro:bit”, tiek “Circuit Playground”.
+  curriculum_desc_csa: Supažindinkite studentus su programinės įrangos inžinerija
+    ir objektiniu dizainu, kol jie mokosi “Java” programavimo kalbos šioje nemokamoje
+    mokymo programoje, skirtoje “AP® Computer Science A” (AP® CSA).
+  curriculum_desc_maker: "“Maker” švietimas STEM (mokslas, technologijos, inžinerija,
+    matematika) žengia dar vieną žingsnį, pakviesdamas praktinę patirtį ir bendradarbiavimą
+    klasėje, kad padėtų išmokyti problemų sprendimo ir kritinio mąstymo."
+  curriculum_desc_maker_short: Kūrėjo ugdymas kviečia praktinę patirtį ir bendradarbiavimą
+    klasėje, kad padėtų išmokyti problemų sprendimo ir kritinio mąstymo.
+  curriculum_desc_csd: Lankstus kursas, leidžiantis kiekvienam vienetui mokyti atskirai
+    arba kartu. Supažindina studentus su svetainių, programų, animacijų, žaidimų ir
+    fizinių skaičiavimo sistemų kūrimu.
+  curriculum_desc_csp: Nemokamas, AP® CSP patvirtinamas, vidurinės mokyklos įvadinis
+    kursas, supažindinantis studentus su pagrindinėmis informatikos sąvokomis.
+  curriculum_desc_csa_ai_long: 'Šis dviejų skyrių “Post-AP CSA” modulis siūlo aukštųjų
+    mokyklų studentams praktinę patirtį su profesionaliais programinės įrangos kūrimo
+    įrankiais, įskaitant “GitHub” ir “GitHub Copilot”, ir suteikia jiems realaus pasaulio
+    įgūdžių kurti kompiuterinės vizijos programą. '
+  curriculum_desc_csa_ai_short: Šis Post-AP® CSA modulis siūlo aukštųjų mokyklų studentams
+    praktinę patirtį su profesionaliais programinės įrangos kūrimo įrankiais.
   collection_hardware: Dėmesys aparatinei įrangai
   collection_hardware_desc: Įgalina studentus naudoti duomenis ir fizinius įrenginius
     problemoms spręsti.
@@ -454,6 +549,7 @@ lt:
   module_label_professional_learning: 'Profesinis mokymasis:'
   module_label_languages: 'Palaikomos kalbos:'
   module_label_accessibility_features: 'Prieinamumas:'
+  module_label_accessibility_features_full: 'Pritaikymo neįgaliesiems funkcijos:'
   module_label_educator_tool: Pedagogo įrankis
   module_label_educator_course: Pedagogo kursas
   module_label_student_tool: Studentų įrankis
@@ -461,6 +557,7 @@ lt:
   module_label_student_content_resources: Turinys ir ištekliai
   module_label_new: Nauja
   module_label_coming_soon: Netrukus
+  module_label_available_now: Prieinama dabar
   module_label_video_series: Vaizdo įrašų serija
   module_label_self_paced: Savarankiškas modulis
   module_ages_5_10: 5-10
@@ -471,6 +568,8 @@ lt:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -485,11 +584,14 @@ lt:
   module_grade_9_12_teachers: 9-12 Mokytojai
   module_level_beginner: Pradedantysis
   module_level_intermediate: Tarpinis
+  module_level_advanced: Išplėstinė
   module_duration_45_mins: 45 minutės
+  module_duration_2_weeks: 2 savaites
   module_duration_1_hr: 1 valanda
   module_duration_2_hrs: 2 valandos
   module_duration_3_hrs: 3 valandos
   module_duration_5_hrs: 5 valandos
+  module_duration_5_hrs_plus: 5+ valandos
   module_duration_8_hrs: 8 valandos
   module_duration_20_hrs: 20 valandų
   module_duration_35_hrs: 35 valandos
@@ -501,6 +603,7 @@ lt:
   module_duration_school_year: Mokslo metai
   module_duration_month_quarter: Mėnuo ar ketvirtis
   module_duration_month_semester_year: Mėnuo, semestras ar metai
+  module_duration_varies: Skiriasi
   module_prerequisites_none: Nė vienas
   module_prerequisites_maker_cp: Prieiga prie “Circuit Playground”
   module_prerequisites_maker_microbit: Prieiga prie mikro:bit
@@ -566,6 +669,10 @@ lt:
   heading_java_lab: "“Java Lab”"
   heading_objects_first: Objektai pirmiausia
   heading_these_lessons_will: 'Šios pamokos bus:'
+  heading_explore_curriculum_catalog: Išnagrinėkite visus mūsų kursus mokymo programų
+    kataloge
+  heading_csa_ai: Ieškote dalykų, kuriuos reikia padaryti po AP® egzamino?
+  heading_bring_cs_to_students: Atneškite kompiuterių mokslą studentams
   professional_learning_section_desc: Gaukite reikiamą paramą, kai ruošiatės mokyti.
     Mokytojai mėgsta tai, su daugiau nei 90% reitingą tai geriausias profesinis tobulėjimas
     kada nors!
@@ -597,6 +704,23 @@ lt:
   support_and_questions_section_desc: Mūsų palaikymo komanda yra čia, kad atsakytų
     į visus klausimus, kuriuos galite turėti apie pradedant mokymą su Code.org. Taip
     pat galite paklausti kitų mokytojų apie jų patirtį mūsų mokytojų forumuose.
+  subscribe_form_section_title: Prenumeruoti atnaujinimus
+  subscribe_form_section_desc_csa: Prisiregistruokite, kad gautumėte mėnesinius el.
+    Laiškus apie Code.org AP® Computer Science A ir gaukite naudingų priminimų, patarimų
+    ir atnaujinimų, siunčiamų tiesiai į gautuosius.
+  subscribe_form_section_desc_csc: Prisiregistruokite, kad gautumėte mėnesinius el.
+    Laiškus apie “Code.org” kompiuterių mokslo ryšius ir gaukite naudingų priminimų,
+    patarimų ir naujinimų, siunčiamų tiesiai į gautuosius.
+  subscribe_form_section_desc_csd: Prisiregistruokite, kad gautumėte mėnesinius el.
+    Laiškus apie “Code.org” kompiuterių mokslo atradimus ir gaukite naudingų priminimų,
+    patarimų ir atnaujinimų, siunčiamų tiesiai į gautuosius.
+  subscribe_form_section_desc_csf: Prisiregistruokite, kad gautumėte mėnesinius el.
+    Laiškus apie “Code.org” kompiuterių mokslo pagrindus ir gaukite naudingų priminimų,
+    patarimų ir atnaujinimų, siunčiamų tiesiai į gautuosius.
+  subscribe_form_section_desc_csp: Prisiregistruokite, kad gautumėte mėnesinius el.
+    Laiškus apie “Code.org” kompiuterių mokslo principus ir gaukite naudingų priminimų,
+    patarimų ir atnaujinimų, siunčiamų tiesiai į gautuosius.
+  subscribe_form_section_unsubscribe: Galite atsisakyti prenumeratos bet kuriuo metu.
   blockchain_hero_heading: Kaip veikia “Blockchain”
   blockchain_hero_desc: Pasinerkite į “blockchain” pasaulį naudodamiesi “Kaip veikia
     “Blockchain”, mūsų nauja vaizdo įrašų serija ir pridedamomis pamokomis!
@@ -702,6 +826,9 @@ lt:
     Kiekviena pamoka yra suporuota su vienu vaizdo įrašu iš serijos, gilinantis į
     vaizdo įrašuose įvestas sąvokas.
   ai_curriculum_btn_aria_label_04: Naršykite, kaip veikia AI pamokos
+  ai_curriculum_grades_05: 'Klasės lygiai: 9-12'
+  ai_curriculum_btn_aria_label_05: Naršykite programinės įrangos inžinerijos ir kompiuterinės
+    vizijos modulį
   ai_carousel_heading: 'Ką mokytojai sako apie AI su Code.org:'
   ai_carousel_quote_01: Ši pamoka taip pat suteikė galimybę mano mokiniams pamatyti,
     kad klasifikavimo sistemose yra nuomonės elementas. Vėliau, kai pradėjome matyti,
@@ -820,11 +947,20 @@ lt:
     vertinimui. Turėdamas turtingą teorijos, praktinių pavyzdžių ir išteklių mišinį,
     juo siekiama suteikti pedagogams galimybes naršyti AI kraštovaizdį ir pagerinti
     studentų mokymosi patirtį.
+  ai_pl_101_resources_5: Atsakingo požiūrio į AI užtikrinimo vadovas
   ai_pl_101_video_desc_6: 'Sužinokite daugiau apie naują technologiją, kuri skatina
     didelius AI pokyčius, kuriuose yra du nauji vaizdo įrašai dideliuose kalbų modeliuose
     (pvz., “ChatGPT”) ir “Generative AI”. Išgirskite, kaip šios naujos technologijos
     veikia tiesiogiai iš ekspertų: Mira Murati, “Openai” CTO, ir Cristóbal Valenzuela,
     “RunWayML” generalinis direktorius.'
+  ai_pl_101_llm_slides_title: Didelis kalbos modelio raginimai pedagogams
+  ai_pl_101_llm_slides_desc: Įrankiai, skirti gauti geriausią įmanomą išvestį iš LLM,
+    pvz., “ChatGPT”, nuo pradedančiųjų iki pažengusių. Apima starterio raginimus tiems,
+    kurie tiesiog panardina kojų pirštus, taip pat pažangias priemones tiems, kurie
+    nori maksimaliai padidinti savo potencialą.
+  ai_pl_101_resources_3: AI paragina pertvarkyti studentų mokymąsi
+  ai_pl_101_resources_section_title: Daugiau būdų sužinoti apie AI
+  ai_pl_101_resources_guide: 'Kompaniono vadovas:'
   how_ai_works_hero_heading: Kaip veikia dirbtinis intelektas
   how_ai_works_hero_desc: Pasinerkite į AI pasaulį naudodami “Kaip veikia AI”, mūsų
     vaizdo įrašų seriją ir papildomas pamokas!
@@ -1148,20 +1284,18 @@ lt:
   teach_page_free_curriculum_desc: Mes norime, kad jūs atneštumėte kompiuterių mokslą
     į savo mokyklą, nesijaudindami dėl išlaidų. Štai kodėl mes įsipareigojome, kad
     mūsų mokymo programos pasiūlymai būtų laisvi amžinai!
-  teach_page_free_curriculum_list_heading_01: Įtraukianti mokymo programa kiekvienam
-    lygio lygiui
   teach_page_free_curriculum_list_desc_01: Nemokama, lanksti ir linksma mokymo programa
     su pasiūlymais daugiau nei 67 kalbomis.
-  teach_page_free_curriculum_list_heading_02: Pritaikoma, novatoriška mokymo programa
   teach_page_free_curriculum_list_desc_02: Code.org siūlo viską nuo pilnų metų mokymo
     programų iki vieno vieneto veiklos. Be to, mes kasmet atnaujiname savo mokymo
     programas, kad palaikytume geriausią praktiką ir dėmesio sritis, ir sukurtume
     naujus pasiūlymus, kurie moko dabartines paklausias temas.
-  teach_page_free_curriculum_list_heading_03: Struktūrizuota mokymo programa, suderinta
-    su nacionaliniais standartais
   teach_page_free_curriculum_list_desc_03: Kiekviena mokymo programa yra suderinta
     su bent vienu nacionalinių standartų rinkiniu, įskaitant CSTA, naujos kartos mokslo
     standartus ir bendrą branduolį.
+  teach_page_free_curriculum_list_desc_04: Pasiūlymai daugiau nei 67 kalbomis
+  teach_page_free_curriculum_list_desc_05: Pritaikytas bent vienam nacionalinių standartų
+    rinkiniui (įskaitant CSTA, NGSS ir bendrą branduolį)
   teach_page_free_curriculum_heading_02: 'Naršykite mūsų mokymo programų pasiūlymus
     skirtingiems lygio lygiams:'
   teach_page_resources_heading: Ištekliai, kurie palaiko jus kiekviename žingsnyje
@@ -1223,8 +1357,8 @@ lt:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: "“App Lab”"
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Fasilitatoriaus vadovaujami seminarai,
+    savarankiški moduliai
   csp_page_curriculum_glance_professional_languages: Lietuvių
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1352,8 +1486,8 @@ lt:
     Programavimas
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: "“App Lab”, “Game Lab”, “AI Lab”, “Web Lab”"
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Fasilitatoriaus vadovaujami seminarai,
+    savarankiški moduliai
   csd_page_curriculum_glance_professional_languages: Lietuvių
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1417,10 +1551,10 @@ lt:
     dėmesį, kad centus galima pakeisti kitu tokio paties dydžio svoriu). Alternatyvi
     veikla yra prieinama, jei neturite prieigos prie šių prekių.
   csd_page_faq_answer_04_06: Programėlių kūrimas naudojant įrenginius (A ir B parinktis)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'A variantas: Circuit Playgrounds klasės rinkinys. Patikrinkite
+    [code.org/maker/circuitplayground] () daugiau informacijos.%{url}'
+  csd_page_faq_answer_04_08: 'B variantas: “Micro:bit” įrenginių klasėje rinkinys.
+    Patikrinkite [code.org/maker/microbit] () daugiau informacijos.%{url}'
   csd_page_faq_answer_04_09: Maker reikmenys, pvz., Tuščios audinių dėžutės arba kartono
     ritiniai arba įbrėžimams popieriaus
   csd_page_faq_answer_04_10: "* Pastaba: Programėlių kūrimas su įrenginiais vienetas
@@ -1493,8 +1627,8 @@ lt:
   csf_page_curriculum_glance_devices: Nešiojamas kompiuteris, “Chromebook”, planšetinis
     kompiuteris
   csf_page_curriculum_glance_tools: "“Sprite Lab”, “Play Lab”"
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Fasilitatoriaus vadovaujami seminarai,
+    savarankiški moduliai
   csf_page_curriculum_glance_languages: arabiškas, indoneziečių, katalonų, kinų supaprastinta,
     kinų tradicinė, čekų, prancūzų, vokiečių, hindi, italų, japonų, korėjiečių, kanadų,
     malajų, marati, mongolų, lenkas, portugalų-br, rumunų, rusų, slovakų, tagalogų,
@@ -1545,19 +1679,20 @@ lt:
     mokslą savo klasėje. Mūsų regioniniai partneriai siūlo aukštos kokybės, vienos
     dienos Code.org seminarus atskiriems mokytojams arba PD mokykloje. [Užsiregistruokite
     į profesinio tobulėjimo seminarą šalia jūsų] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Prisijunkite prie daugiau nei 100 000 mokytojų, dalyvavusių
+    mūsų seminaruose. Dauguma mūsų dirbtuvių dalyvių sako: “Tai geriausias profesinis
+    tobulėjimas, kuriame aš kada nors dalyvavau”. Tiesą sakant, [90% dalyvių rekomenduotų
+    mūsų programą kitiems mokytojams] ()!%{rec_url}'
   csf_page_faq_question_05: Koks yra rekomenduojamas CS pagrindų mokymo laikas?
   csf_page_faq_answer_05: Kiekviename CSF kurse yra 13-17 pamokų, skirtų 45 minučių
     laikotarpiams. Visiems mokiniams rekomenduojame pereiti iš pamokos į pamoką mokytojo
     nustatytu tempu. Yra daug mokytojų vadovaujamų projektų lygių, skirtų būti patyrę
     sutartinai, o įgūdžių ugdymo pamokas mokiniai gali baigti savo tempu.
   csf_page_faq_question_06: Kokios medžiagos man reikia CS pagrindams?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Daugelyje pamokų yra dalomoji medžiaga, kuri veda mokinius
+    per veiklą. Šie ištekliai gali būti atspausdinti arba priskirti skaitmeniniu būdu.
+    Kai kurios pamokos reikalauja tipiškų klasių reikmenų ir manipuliacijų. [Aplankykite
+    CSF Syllabus sužinoti daugiau] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1628,13 +1763,70 @@ lt:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Pagalba finansuoti mūsų misiją
+  donate_page_top_desc: Kiekvienas donorystės kuras Code.org misija plėsti prieigą
+    prie informatikos švietimo. Mes siūlome keletą būdų, kaip jums paaukoti ir pakeisti.
+  donate_page_fundraise_title: Lėšų surinkimas už Code.org
+  donate_page_fundraise_desc: Pagalba surinkti pinigų Code.org! Kiekvienas kiekvienos
+    mokyklos studentas turėtų turėti galimybę mokytis informatikos.
+  donate_page_other_ways_title: Kiti būdai duoti
+  donate_page_other_ways_desc: Naršykite įvairius metodus, kaip prisidėti, ir raskite
+    jums tinkamiausią variantą. Kiekvienas gestas, didelis ar mažas, stumia mūsų misiją
+    į priekį.
+  donate_page_501c3: Code.org yra įregistruota kaip viešoji 501 (c) (3) ne pelno organizacija.
+    Įmokos į Code.org yra atskaitomos mokesčių tiek, kiek leidžiama pagal įstatymus.
+    Code.org mokesčių identifikavimo numeris yra 46-0858543.
+  donate_page_donation_policy_title: Mūsų donorystės politikos supratimas
+  donate_page_donation_policy_desc: Sužinokite apie tai, kaip mes tvarkome ir paskirstome
+    jūsų įnašus.
+  donate_tabs_tab_label_daf_direct: DAF Tiesioginis
+  donate_tabs_tab_label_amazon: "„Amazon“"
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Darbuotojų rungtynės
+  donate_tabs_daf_direct_title: Paaukokite per DAF Direct
+  donate_tabs_daf_direct_desc: Paaukokite per savo donorų patartą fondą su “Fidelity
+    Charitable”, “Schwab Charitable” arba “BNY Mellon” ir pateikite savo dotacijos
+    rekomendaciją “Code.org” per “DAF Direct” internetinę formą.
+  donate_tabs_amazon_title: Paaukokite per “Amazon”
+  donate_tabs_amazon_desc: Paaukokite tiesiogiai naudodami savo “Amazon” paskyrą.
+    Vos keliais paspaudimais sklandžiai prisidėkite prie Code.org misijos ir įgalinti
+    informatikos švietimo ateitį.
+  donate_tabs_bitpay_title: Paaukokite naudodami “Crypto” per “BitPay”
+  donate_tabs_bitpay_desc: Apkabinti duoti ateitį su cryptocurrency. Per “BitPay”
+    jūsų skaitmeninė valiuta gali tiesiogiai palaikyti “Code.org” pastangas plėsti
+    informatikos išsilavinimą.
+  help_page_top_heading: Kaip galite padėti
+  help_page_top_desc: Palaikykite mūsų misiją, kad kompiuterių mokslas būtų prieinamas
+    kiekvienam vaikui visur. Jūsų pastangos padeda mums įkvėpti būsimus novatorius
+    ir panaikinti technologijų švietimo spragą.
+  help_page_top_subhead: Padarykite auką Code.org
+  help_page_top_desc_02: Mes siekiame suteikti kiekvienam mokiniui galimybę mokytis
+    informatikos — tiek internete, tiek mokyklose, kur steigiame nuolatinius kursus
+    ir rengiame mokytojus. Už kiekvieną jūsų paaukojamą dolerį vienas vaikas supažindinamas
+    su informatika.
+  help_page_partners_heading: Tapti partneriu
+  help_page_partners_desc: Code.org bendradarbiauja su kitomis ne pelno organizacijomis
+    kaip partnerėmis, kad padėtų skleisti kompiuterių mokslą vietiniu, tvariu mada.
+    Sužinokite daugiau apie mūsų programą.
+  help_page_volunteer_heading: Savanoris klasėje
+  help_page_volunteer_desc: Savanoris mokyti Kodekso valandą arba būti kviestiniu
+    pranešėju vietos klasėje. Užsiregistruokite, kad išgirstumėte apie galimybes šalia
+    jūsų.
+  help_page_translate_heading: Padėkite mums išversti
+  help_page_translate_desc: Savanoriai išvertė mūsų vadovėlius daugiau nei 45 kalbomis.
+    Padėkite mums toliau plėsti savo vadovėlius studentams visame pasaulyje!
+  help_page_speak_for_cs_heading: Kalbėkite už informatikos švietimą
+  help_page_speak_for_cs_desc: Sužinokite daugiau apie “Code.org” propagavimo darbą
+    visoje JAV ir dešimt politikos sričių, kurias rekomenduojame valstybėms priimti,
+    kad kompiuterių mokslas taptų pagrindiniu visiems studentams. Be to, sužinokite,
+    kaip galite paskatinti pokyčius savo būsenoje.
   hoc_live: Valanda Code Live
   hoc_live_sign_up_title: Užsiregistruokite “Hour of Code Live”
   hoc_live_learn_title: Sužinokite su “Code Live” valanda
-  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
-    of all ages and abilities, including those without computers, are welcome. Join
-    our mailing list to receive recordings of the episodes and resources to continue
-    learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_sign_up_message: Sužinokite realiu laiku kartu su ypatingais svečiais!
+    Laukiami įvairaus amžiaus ir gebėjimų studentai, įskaitant tuos, kurie be kompiuterių.
+    Prisijunkite prie mūsų pašto adresų sąrašo, kad gautumėte epizodų įrašus ir išteklius,
+    kad galėtumėte tęsti mokymąsi namuose. Žiūrėti ankstesnius epizodus [here]().%{episodes_url}
   hoc_live_learn_message: Sužinokite pagrindines kompiuterių mokslo sąvokas kartu
     su specialiais svečiais! Įvairaus amžiaus ir gebėjimų studentus, įskaitant neturinčius
     kompiuterių, kviečiame į mūsų virtualias dirbtuves. Tęskite mokymąsi namuose per
@@ -1706,8 +1898,8 @@ lt:
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: Padėkite apsaugoti nykstantį Cape Mountain Zebra, nustatydami
     skirtingus gyvūnus vaizduose.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Eikite toliau su <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org kursais</a>
   codeorg_homepage_hoc2018_dance_heading: Sukurkite savo <span class="highlight-word">Šokių&nbsp;Šalis</span>
   codeorg_homepage_hoc2018_header_line1: Artėja Kodo valanda...
   codeorg_homepage_hoc2018_header_line2_desktop: Ką sukursite <span class="hoc2018-highlight-word">?</span>
@@ -1919,7 +2111,7 @@ lt:
   whats_next_how_to_promote: "<a href='/promote/resources'>Kaip reklamuoti</a>kodo
     valandą"
   whats_next_how_to_promote_link: "<a href='/promote'>Kaip reklamuoti</a>kodo valandą"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Pabandykite vadovėliai</a>"
   whats_next_try_button: Pabandykite vadovėliai
   n_have_learned_an_hoc: "<h1>Pabandykite</h1><h2>Valanda kodas</h2><h3># tarnavo</h3>"
   anybody_can_learn: Bet kas gali išmokti.
@@ -1940,9 +2132,9 @@ lt:
   front_join_us_header: 'Kiekvienas gali išmokti pagrindus ir tai daryti žaisdamas! '
   front_join_us_volunteer_header: Savanoriai Kodekso valandai
   front_join_us_tutorials: Pasirinkite savo valandos kodo pamoką!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Filtruokite ir naršykite <i>daugiau nei 200 vadovėlių
+    ir pamokų planų!</i>Raskite veiklą skirtingoms dalykinėms sritims, keliems aparatinės
+    įrangos poreikiams ir studentams bet kuriame patirties lygmenyje.
   front_join_us_robotics: Laimėk robotus ar grandines!
   front_join_us_robotics_link: Ar norite, kad robotų ar fizinių skaičiavimo rinkinių
     rinkinys būtų naudojamas su savo mokiniais? Mūsų dosnūs partneriai dovanoja rinkinius
@@ -1975,7 +2167,7 @@ lt:
   front_join_us_sign_up: 'Užsiregistruoti    '
   front_join_us_host: Organizuokite
   front_join_us_support: Paremkite
-  front_join_us_more_info: For more information, please visit <a href='https://code.org'>code.org</a>.
+  front_join_us_more_info: Norėdami gauti daugiau informacijos, apsilankykite <a href='https://code.org'>code.org</a>.
   front_join_us_code_info: Norėdami gauti daugiau informacijos, apsilankykite code.org
   front_join_us_n_students_served: "# tarnavo."
   front_join_us_challenge: Laimėk vaizdo pokalbį savo klasėje su garsenybe!
@@ -2046,6 +2238,13 @@ lt:
     vietines galimybes ar kitas informatikos naujienas?
   signup_email_preference_privacy: "(Žr. Mūsų privatumo politiką)"
   signup_email_preference_yes: Taip
+  signup_email_preference_yes_elementary: Taip - Siųskite man atnaujinimus apie pradinės
+    mokyklos išteklius
+  signup_email_preference_yes_middle: Taip - Siųskite man atnaujinimus apie Vidurinės
+    mokyklos išteklius
+  signup_email_preference_yes_high: Taip - Siųskite man atnaujinimus apie vidurinės
+    mokyklos išteklius
+  signup_email_preference_yes_general: Taip - Siųskite man bendrus atnaujinimus
   signup_email_preference_no: Ne
   signup_email_preference_error: Reikalinga el. Pašto pirmenybė
   signup_multiple_event_warning: Jūsų mokyklos pavadinimą ir miestą įrašysime į žemėlapį,
@@ -2136,13 +2335,13 @@ lt:
     už palaikymą @codeorg)'
   hoc_faq_title: DUK
   hoc_faq_what_is_hoc_q: Kas yra "Programavimo valanda"?
-  hoc_faq_what_is_hoc_a: The Hour of Code started as a one-hour introduction to computer
-    science, designed to demystify "code", to show that anybody can learn the basics,
-    and to broaden participation in the field of computer science. It has since become
-    a worldwide effort to celebrate computer science, starting with 1-hour coding
-    activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
-    and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
-    partners</a> and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a: Kodo valanda prasidėjo kaip vienos valandos informatikos
+    įvadas, skirtas demystifikuoti “kodą”, parodyti, kad kas nors gali išmokti pagrindus
+    ir išplėsti dalyvavimą informatikos srityje. Nuo to laiko tai tapo pasaulinėmis
+    pastangomis švęsti kompiuterių mokslą, pradedant 1 valandos kodavimo veikla, bet
+    plečiasi ir baigiant visomis bendruomenės pastangomis. Peržiūrėkite <a href='%{tutorials}'>vadovėlius
+    ir veiklą.</a>Šią tradicinę kampaniją remia daugiau kaip <a href='%{partners}'>400
+    partnerių</a> ir 200 000 pedagogų visame pasaulyje.
   hoc_faq_what_is_hoc_a_markdown: Kodo valanda prasidėjo kaip vienos valandos informatikos
     įvadas, skirtas demystifikuoti “kodą”, parodyti, kad kas nors gali išmokti pagrindus
     ir išplėsti dalyvavimą informatikos srityje. Nuo to laiko tai tapo pasaulinėmis
@@ -2204,36 +2403,39 @@ lt:
     Mes taip pat turime galimybių kiekvienam amžiui ir patirties lygiui, nuo darželio
     ir iki. Pradėkite planuoti savo renginį skaitydami mūsų [kaip vadovauti] (%{howto}).
   hoc_faq_devices_q: Kokius prietaisus turėčiau naudoti savo studentams?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: Code.org vadovėliai veikia visuose įrenginiuose ir naršyklėse.
+    Jūs galite pamatyti daugiau informacijos apie Code.org anketa pamoka tech poreikius
+    čia. <a href='%{codeorg_url}/educate/it'></a>Technika poreikius ne Code.org samouczków
+    galima rasti <a href='%{codeorg_url}/learn'>%{partner_url}/learn pamoka konkretus
+    aprašymas</a> . Nepamirškite, kad mes taip pat siūlome <a href='%{unplugged_url}'>unplugged
+    veiklą,</a> jei jūsų mokykla negali sutalpinti vadovėliai!
+  hoc_faq_devices_a_markdown: Code.org vadovėliai veikia visuose įrenginiuose ir naršyklėse.
+    Jūs galite pamatyti daugiau informacijos apie Code.org anketa pamoka technologijų
+    poreikius [here](/educate/it).%{codeorg_url}Technika poreikius ne Code.org samouczków
+    galima rasti [%{partner_url}/learn] (%{codeorg_url}/learn) į pamoka konkretaus
+    aprašymo. Nepamirškite, mes taip pat siūlome [unplugged veikla] (%{unplugged_url}),
+    jei jūsų mokykla negali sutalpinti vadovėliai!
   hoc_faq_need_computers_q: Ar kiekvienam dalyviui reikia kompiuterio?
-  hoc_faq_need_computers_a: No. We have Hour of Code tutorials that work on PCs, smartphones,
-    tablets, and some that require no computer at all! You can join wherever you are,
-    with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work
-    in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students
-    learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing
-    a computer and working together. Encourage your students to double up. <li><b>Use
-    a projected screen.</b> If you have a projector and screen for a Web-connected
-    computer, your entire group can do an Hour of Code together. Watch video portions
-    together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b>
-    We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at
-    all. </ul>
+  hoc_faq_need_computers_a: Ne. Mes turime “Hour of Code” vadovėlių, kurie veikia
+    asmeniniuose kompiuteriuose, išmaniuosiuose telefonuose, planšetiniuose kompiuteriuose
+    ir kai kuriuose, kuriems nereikia kompiuterio! Galite prisijungti visur, kur esate,
+    su viskuo, ką turite. <p><i>Štai keletas variantų:</i> <br> <ul> <li><b>Darbas
+    poromis.</b> <a href='%{pair_programming_research}'>Tyrimai rodo, kad</a> studentai
+    geriausiai mokosi programuodami <a href='%{pair_programming_video}'>porą</a>,
+    dalindamiesi kompiuteriu ir dirbdami kartu. Skatinkite savo mokinius padvigubinti.
+    <li><b>Naudokite projektuojamą ekraną.</b> Jei turite projektorių ir ekraną, skirtą
+    prie interneto prijungtam kompiuteriui, visa jūsų grupė kartu gali atlikti “Hour
+    of Code”. Žiūrėkite vaizdo porcijas kartu ir paeiliui spręskite galvosūkius ar
+    atsakydami į klausimus. <li><b>Eiti atjungtas.</b> Mes siūlome <a href='%{unplugged_url}'>samouczków,
+    kad nereikia kompiuterio</a> ne visiems. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Ne. Mes turime “Hour of Code” vadovėlių, kurie veikia asmeniniuose kompiuteriuose, išmaniuosiuose telefonuose, planšetiniuose kompiuteriuose ir kai kuriuose, kuriems nereikia kompiuterio! Galite prisijungti visur, kur esate, su viskuo, ką turite.
 
-    _Here are a few options:_
+    _Štai keletas variantų:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Darbas poromis.** [Tyrimai rodo] (%{pair_programming_research}) mokiniai geriausiai mokosi naudodamiesi [poros programavimu] (%{pair_programming_video}), dalydamiesi kompiuteriu ir dirbdami kartu. Skatinkite savo mokinius padvigubinti.
+    - **Naudokite projektuojamą ekraną.** Jei turite projektorių ir ekraną prie interneto prijungtam kompiuteriui, visa jūsų grupė kartu gali atlikti “Hour of Code”. Žiūrėkite vaizdo porcijas kartu ir paeiliui spręskite galvosūkius ar atsakydami į klausimus.
+    - **Eiti unplugged.** Mes siūlome [vadovėliai, kuriems nereikia kompiuterio] () ne visi.%{unplugged_url}
   hoc_faq_international_q: Aš esu <country>. Kaip dalyvauti tarptautiniu mastu?
   hoc_faq_international_a: Kiekvienas gali organizuoti “Hour of Code” renginį bet
     kurioje pasaulio vietoje. Praėjusiais metais studentai visame pasaulyje prisijungė
@@ -2242,10 +2444,10 @@ lt:
     bet kurioje pasaulio vietoje. Praėjusiais metais studentai visame pasaulyje prisijungė
     prie Kodekso valandos. Sužinokite daugiau [here](%{promote}).
   hoc_faq_tutorial_q: Kaip aš galiu padaryti “Hour of Code” pamoką?
-  hoc_faq_tutorial_a: If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see
-    our guidelines and instructions</a>. We'd like to host a variety of engaging options,
-    but the primary goal is to optimize the experience for students and teachers who
-    are new to computer science.
+  hoc_faq_tutorial_a: Jei jus domina tapti mokymo partneriu, <a href='/tutorial-guidelines'>peržiūrėkite
+    mūsų gaires ir instrukcijas</a>. Norėtume surengti įvairias patrauklias galimybes,
+    tačiau pagrindinis tikslas yra optimizuoti studentų ir mokytojų, kurie yra nauji
+    informatikos srityje, patirtį.
   hoc_faq_tutorial_a_markdown: Jei jus domina tapti mokymo partneriu, [žr. mūsų gaires
     ir instrukcijas] (%{tutorial_guidelines}). Norėtume surengti įvairias patrauklias
     galimybes, tačiau pagrindinis tikslas yra optimizuoti studentų ir mokytojų, kurie
@@ -2372,9 +2574,9 @@ lt:
     course=mc) studentams, atliekantiems “Minecraft” pamoką.
   hoc_faq_logo_q: Ar yra apribojimų, kaip galiu naudoti “Hour of Code” logotipą ar
     pavadinimą?
-  hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
-    but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
-    guidelines for usage</a>.
+  hoc_faq_logo_a: Kodo valanda yra prekės ženklas. Nenorime užkirsti kelio jo naudojimui,
+    tačiau norime įsitikinti, kad jo naudojimas atitinka keletą ribų. Žr. <a href='%{logo_url}'>šias
+    naudojimo</a>gaires.
   hoc_faq_logo_a_markdown: Kodo valanda yra prekės ženklas. Nenorime užkirsti kelio
     jo naudojimui, tačiau norime įsitikinti, kad jo naudojimas atitinka keletą ribų.
     Žr. [šios naudojimo rekomendacijos] (%{logo_url}).
@@ -2399,8 +2601,8 @@ lt:
     - Nina Nichols Peery, mokytoja"
   stats_student: "“Aš žinojau, kad tai buvo <b>kartą per visą gyvenimą</b> galimybė.”
     - Mariana Alzate, 5-asis greideris"
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+  stats_michael: "“Aš <b>niekada niekada</b> nemačiau savo mokinių taip susijaudinęs
+    apie mokymąsi”. - Michaelas Clarkas, mokytojas"
   resources_how_to: Patarimai mokytojams
   resources_how_to_events: Renginys, kaip vadovauti
   resources_how_to_districts: Kaip vadovauti rajonams
@@ -2529,10 +2731,10 @@ lt:
   learn_banner_beyond: Norite toliau mokytis?  <a id='learn_banner_beyond'>Peržengti
     valandą</a>
   learn_banner_beyond_markdown: Norite toliau mokytis? [Peržengti valandą] (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'Mokytojai: <a id=''teacher_banner_host''>priimkite valandą</a>
+    arba <a id=''teacher_banner_howto''>perskaitykite “How-To Guide”</a>'
+  learn_banner_teachers_markdown: 'Mokytojai: [Priimančioji valandą] (%{host_url})
+    arba [skaityti “How-To Guide”] ()%{howto_url}'
   tutorial_dance2019_name: Šokių vakarėlis
   tutorial_danceparty_name: Šokių vakarėlis
   tutorial_chibitronics_name: 'Chibitronika: apšviesta istorija'
@@ -5407,11 +5609,11 @@ lt:
     ar Steve'ą į nuotykius per šį “Minecraft” pasaulį.
   tutorial_minecraft-2016_longdescription: Sukurkite “Minecraft” žaidimą. Sukurkite
     savo vištienos, avių, vijoklių, zombių ir dar daugiau versijas.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
     ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Valanda kodo pamoka su Pixie
   tutorial_play_longdescription: Sukurkite istoriją arba sukurkite žaidimą su “Play
     Lab”! Padaryti gyvūnai, piratai, zombiai, Ninjas, ir daug daugiau simbolių judėti,
@@ -12507,12 +12709,12 @@ lt:
   tutorial_googlename _longdescription: Pasirinkite vardą ir atneškite žodžio raides
     į gyvenimą naudodami kodą. Pasirinkite slapyvardį, augintinio vardą, gyvūną, sportą,
     vietą ar hobį.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: "“Zillah City” klesti, o muzika sklando
+    ore. Gandai tai, garsus Gargantiua botas yra internete ir siunčia paskutinius
+    “Toxibots”, kad šiukšliadėžė miesto bloką.…Grab savo Cobot hoverboard ir pasiruoškite
+    griovelį, judėti, ir pribaigti tai, ką pradėjote! Žaidėjai programuoja savo “cobot”
+    hoverbotus, kad pakeistų juostas, išvengtų kliūčių ir ištrauktų daugybę “Toxibots”
+    šiame ritmo stiliaus žaidime."
   tutorial_nasachspacejam_longdescription: Sukurkite saulės sistemą, kuri tikrai akmenis!
     Sužinokite apie muziką, astronomiją ir kodavimą šioje savarankiškoje veikloje
     (nereikia kodavimo patirties). Programos planetų kurti muziką, sukurti savo muzikinę
@@ -13339,6 +13541,334 @@ lt:
     biuro uždarymą metų pabaigoje dar žinomas kaip žiemos pertrauka), pusę darbo dienos
     penktadieniais vasaros metu, dar žinomas kaip vasaros penktadieniais, ir kitų
     dosnių privalumų.
+  careers_hero_title: Karjera
+  careers_hero_description: Code.org yra ne pelno organizacija, skirta plėsti prieigą
+    prie kompiuterių mokslo mokyklose. Ypač daug dėmesio skiriame jaunų moterų ir
+    nepakankamai atstovaujamų studentų dalyvavimui.
+  careers_hero_description_under: Padėkite mums pakeisti pasaulį, vienas studentas
+    vienu metu!
+  careers_vision_title: Mūsų vizija
+  careers_vision_decsription: Mūsų vizija yra ta, kad kiekvienas kiekvienos mokyklos
+    mokinys turėtų galimybę mokytis informatikos kaip pagrindinio K-12 ugdymo dalį.
+  careers_vision_description_under: Prisijunkite prie mūsų komandos, kad padėtumėte
+    šią viziją paversti realybe!
+  careers_values_title: Mūsų pagrindinės vertybės
+  careers_values_first_column_text_1: Mes tikime, kad kompiuterių mokslas yra pagrindinis
+    visiems studentams
+  careers_values_first_column_text_2: Esame įsipareigoję siekti nuosavo kapitalo,
+    prieigos ir galimybių
+  careers_values_first_column_text_3: Tikime bendradarbiaujančio švietimo bendruomenės
+    galia
+  careers_values_second_column_text_1: Esame judrūs ir reaguoja į atsiliepimus
+  careers_values_second_column_text_2: Mes veikiame sąžiningai ir skaidriai
+  careers_values_second_column_text_3: Manome, kad dėl plataus poveikio reikia galvoti
+    apie didelį ir veikti holistiškai
+  careers_approach_section_title: Mūsų vienijantis požiūris
+  careers_approach_section_description: Code.org pasaulinis vaidmuo K-12 kompiuterių
+    mokslo judėjime yra įmanomas tik todėl, kad mes naudojame vienijantį požiūrį įvairiose
+    ir dažnai suskirstytose suinteresuotosiose šalyse. Didėjant poliarizacijai, studentų
+    galimybių didinimo idėja vienija žmones iš viso politinio spektro. Code.org komandos
+    nariai, studentai, mokytojai ir rėmėjai turi skirtingus požiūrius, ir jie visi
+    yra laukiami mūsų misijoje.
+  careers_aproach_section_description_link: Skaitykite daugiau apie Code.org požiūrį
+    į vienybę.
+  careers_approach_section_button: Naršykite atvirus vaidmenis
+  careers_principle_section_title: Mūsų kultūros principai
+  careers_principle_title_1: Mūsų studentai ir mokytojai yra mūsų Šiaurės žvaigždė
+  careers_principle_description_1: Mes naudojame savo dovanas, laiką ir energiją,
+    kad informatika būtų naudojama tiems, kuriems to labiausiai reikia. Tai mus vienija.
+    Tai yra svarbiausias mūsų principas.
+  careers_principle_title_2: Mes sunkiai susiduriame su problemomis ir malonūs vieni
+    kitiems
+  careers_principle_description_2: Mes sutelkiame dėmesį į uždavinį, kad kompiuterių
+    mokslas būtų mokamas studentams ir mokytojams visame pasaulyje. Mes pripažįstame,
+    kad kiekvienas iš mūsų duoda geriausius savo ketinimus palaikyti savo misiją ir
+    suteikti malonę, kai darome klaidas.
+  careers_principle_title_3: Ieškokite sprendimų, o ne sutarimo
+  careers_principle_description_3: Mes turime sprendimus, nesvarbu, ar imamės mažų
+    žingsnių, ar didelių šuolių link rezultatų, kurių siekiame. Savininkai prašo ir
+    klauso, bet nėra paralyžiuoti atsiliepimais. Mes priimame ir palaikome savininkų
+    sprendimus, net jei nesutinkame.
+  careers_principle_title_4: Priimkite įkūrėjo mentalitetą
+  careers_principle_description_4: Mes apsėsti apie rezultatus ir sutelkti savo veiksmus
+    vairavimo juos. Mes pasinerti į detales ir sunkiai dirbti. Mes esame sąžiningi,
+    liesos į judrumą ir nuolat vertiname, ar einame kelyje; mes nebijome pasisukti.
+    Keisti pasaulį to reikalauja.
+  careers_principle_title_5: Čempionų naujovės
+  careers_principle_description_5: Mes manome, kad dideli, rizikuojame ir nebijome
+    žlugti. Jei matome geresnį būdą pasiekti savo tikslus, mes tai darome ir skatiname
+    kitus tai daryti. Papildomi sprendimai nepadės pakeisti pasaulio.
+  careers_principle_title_6: Inkaro sprendimai faktais
+  careers_principle_description_6: Mes naudojame duomenis, kad suprastume savo verslą,
+    nustatytume norimus rezultatus ir vadovautume sprendimų priėmimui. Mes subalansuojame
+    tai pripažindami, kad ne visada turėsime duomenis, kurių mums reikia norint veikti.
+  careers_principle_title_7: Augimo mąstysena skatina mus
+  careers_principle_description_7: Mes kreipiamės į kiekvieną iššūkį su smalsumu.
+    Mes teikiame grįžtamąjį ryšį maloniai ir atvirai; grįžtamąjį ryšį gauname atvirai.
+    Mes mokomės iš savo klaidų ir ieškome būdų, kaip padidinti mūsų darbo pasiekiamumą
+    ir poveikį.
+  careers_balance_section_title: Mūsų darbo ir asmeninio gyvenimo pusiausvyra
+  careers_balance_section_description: Mes rūpinamės savo darbuotojais ir esame pasiryžę
+    paremti visus tiek darbe, tiek už darbo ribų. Mes žinome, kad kiekvienas turi
+    skirtingus poreikius, todėl siūlome holistinį išmokų paketą, kuris užtikrins,
+    kad jumis (ir jūsų šeima) būtų pasirūpinta.
+  careers_balance_first_column_text_1: Nauda sveikatai jums ir jūsų šeimai
+  careers_balance_first_column_text_2: Dosnus apmokamas laikas atostogų ir atostogų
+    planai
+  careers_balance_second_column_text_1: Lanksti, palaikanti darbo aplinka
+  careers_balance_second_column_text_2: Augimas ir profesinio mokymosi galimybės
+  careers_openroles_section_title: Atviri vaidmenys
+  careers_openroles_section_description: Code.org yra įsikūrusi Sietle, tačiau daugelis
+    mūsų komandos narių yra nutolę. Nuotoliniai kandidatai yra laukiami ir skatinami
+    kreiptis.
+  careers_more_info_text: Norėdami gauti daugiau informacijos apie Code.org, peržiūrėkite
+    mūsų [Dažnai užduodamus klausimus] (%{support_url}) arba sužinokite apie [kitus
+    būdus, kaip įsitraukti į mūsų misiją] ()%{help_url}.
+  careers_approach_section_title2: Mūsų požiūris į įvairovę
+  careers_approach_section_description_1: Mes aprėpiame įvairias perspektyvas, idėjas
+    ir fonus Code.org. Esame įsipareigoję suteikti vienodas galimybes visiems darbuotojams
+    ir pareiškėjams. Mes nediskriminuojame dėl rasės, religijos, spalvos, tautinės
+    kilmės, lyties, seksualinės orientacijos, amžiaus, šeimyninės padėties, veterano
+    statuso ar negalios (psichinės ir fizinės) padėties.
+  careers_approach_section_description_2: Užtikrinsime, kad asmenims su negalia būtų
+    suteiktas tinkamas apgyvendinimas dalyvauti darbo paraiškos ar pokalbio procese,
+    atlikti esmines darbo funkcijas ir gauti kitas darbo išmokas bei privilegijas.
+    Jei turite individualių poreikių, susijusių su negalia, susisiekite su accommodations@code.org.
+  csa_ai_page_hero_title: Programinės įrangos inžinerija ir kompiuterių vizija
+  csa_ai_page_hero_description: 'Šis dviejų skyrių “Post-AP CSA” modulis siūlo aukštųjų
+    mokyklų studentams praktinę patirtį su profesionaliais programinės įrangos kūrimo
+    įrankiais, įskaitant “GitHub” ir “GitHub Copilot”, ir suteikia jiems realaus pasaulio
+    įgūdžių kurti kompiuterinės vizijos programą. '
+  csa_ai_page_video_section_title: Žingsnis už Code.org programavimo aplinkų pasaulio
+    ribų
+  csa_ai_page_video_section_li_1: Sužinokite apie AI ir jo programas
+  csa_ai_page_video_section_li_2: Hands-on patirtis su profesionalių programinės įrangos
+    kūrimo įrankiai
+  csa_ai_page_video_section_li_3: Sužinokite pramonės standartines praktikas
+  csa_ai_page_video_section_li_4: Ugdykite kritinį mąstymą
+  csa_ai_page_programming_tools: 'Programavimo įrankiai: “Github”, “Github Copilot”,
+    “VSCode”, “TensorFlow” '
+  csa_ai_page_professional_learning: Nė vienas
+  csa_ai_page_curriculum_topics: 'Temos: Programavimas, Duomenys, Menas ir dizainas,
+    Žaidimai ir animacija'
+  csa_ai_page_curriculum_accessibility_features: Išsamesnės informacijos ieškokite
+    DUK skyriuje
+  csa_ai_page_curriculum_languages_support: Lietuvių
+  csa_ai_page_article_title_1: Sukurkite su “Copilot”
+  csa_ai_page_article_description_1: Studentai mokosi, kaip naudoti “GitHub Copilot”
+    kaip poros programuotoją, kad paaiškintų esamą kodą, rastų ir pašalintų klaidas
+    bei generuotų naujų problemų sprendimus.
+  csa_ai_page_article_link_1: Sužinokite daugiau apie “Copilot”
+  csa_ai_page_article_title_2: Sukurkite savo AI modelį
+  csa_ai_page_article_description_2: Studentai moko savo AI modelius naudodami “Teachable
+    Machine”, kad atpažintų vaizdus ir gestus, suformuotų internetinę kamerą ir apsvarstytų,
+    kaip kompiuterio matymas daro įtaką vartotojų sąveikai su programomis.
+  csa_ai_page_article_link_2: Naršykite pamokos planą
+  csa_ai_page_article_title_3: Naršyti kompiuterio viziją
+  csa_ai_page_article_description_3: Studentai diegia AI modelius, kuriuos jie sukūrė
+    naudodami “Teachable Machine”, į “Java” programą, naudodami “GitHub Copilot”,
+    kad padėtų jiems modifikuoti esamas programų versijas, kad galėtų dirbti su skirtingais
+    įėjimais.
+  csa_ai_page_article_link_3: Žr. Pavyzdį
+  csa_ai_page_learn_more_section_title: Sužinokite daugiau apie dirbtinį intelektą
+  csa_ai_page_learn_more_title: Naršykite AI 101 mokytojams
+  csa_ai_page_learn_more_description: Atraskite novatorišką dirbtinio intelekto (AI)
+    pasaulį ir jo transformacinį potencialą švietime naudodami mūsų išsamią internetinę
+    mokymosi seriją mokytojams.
+  csa_ai_page_learn_more_link: Žiūrėkite “AI 101 for Teachers” seriją
+  csa_ai_page_faq_question_01: Kokios yra šio modulio prielaidos?
+  csa_ai_page_faq_answer_01_01: 'Prieš nardydami į šį modulį, studentai turėtų turėti
+    pradinio lygio žinių apie “Java”. Tiksliau, jie turėtų suvokti:'
+  csa_ai_page_faq_answer_01_list_01: "** Klasės ir objektai: ** Studentai turėtų būti
+    susipažinę su klasių nustatymu ir naudojimu, taip pat objektų kūrimu ir manipuliavimu."
+  csa_ai_page_faq_answer_01_list_02: "** Rašymo ir skambinimo metodai: ** Studentai
+    turėtų sugebėti apibrėžti metodus klasėje, suprasti metodo parametrus ir grąžinimo
+    tipus bei skambinti metodais iš objektų ar kitų metodų."
+  csa_ai_page_faq_answer_01_list_03: "** 1D masyvai ir masyvų sąrašai: ** Jie turėtų
+    būti įgudę deklaruoti, inicijuoti ir manipuliuoti vienmačiais masyvais ir masyvais,
+    įskaitant kartojimą per juos."
+  csa_ai_page_faq_answer_01_list_04: "** Atranka ir iteracija: ** Tvirtas pagrindas
+    sąlyginiuose pareiškimuose ir kilpose yra labai svarbus."
+  csa_ai_page_faq_question_01_02: Idealiu atveju studentai, baigę AP Computer Science
+    A arba panašaus gylio ir griežtumo kursą, būtų gerai pasirengę šiam moduliui.
+  csa_ai_page_faq_question_02: Kaip įdiegti šiam moduliui reikalingą programinę įrangą?
+  csa_ai_page_faq_answer_02_01: Šis modulis yra unikalus, nes jis apima trečiosios
+    šalies programinės įrangos naudojimą, o ne Code.org laboratorijas ir įrankius.
+    [Daugiau apie programinės įrangos diegimą skaitykite čia] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Kaip galiu palaikyti pritaikymo neįgaliesiems poreikius
+    mokant šį modulį?
+  csa_ai_page_faq_answer_03_01: Prieinamumo poreikių užtikrinimas yra labai svarbus
+    integracinio mokymosi aplinkai. [Daugiau apie pritaikymo neįgaliesiems funkcijas
+    šiame modulyje naudojamoje programinėje įrangoje skaitykite čia] (%{install_url}).
+  csa_ai_page_faq_question_04: Kaip naudoti VS kodą “Chromebook”?
+  csa_ai_page_faq_answer_04: "“VS Code” naudojimas “Chromebook” tapo paprastesnis,
+    ypač turint galimybę paleisti “Linux” programas naujesniuose “Chromebook” modeliuose.
+    [Skaitykite daugiau apie VS kodo nustatymą “Chromebook” čia] ().%{chromebook_url}"
+  csa_ai_page_faq_question_05: Kaip galiu gauti šio modulio profesinį tobulėjimą?
+  csa_ai_page_faq_answer_05: Šiuo metu nėra specifinio profesinio tobulėjimo šiam
+    kursui. Jei norite suprasti, kaip kreiptis į dirbtinį intelektą savo klasėje,
+    galite [ištirti AI 101 mokytojams] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Koks yra rekomenduojamas šio modulio mokymo laikas?
+  csa_ai_page_faq_answer_06_01: Programinės įrangos inžinerijos ir kompiuterinės vizijos
+    modulis yra apgalvotai struktūrizuotas, kad būtų užtikrintas išsamus mokymasis
+    per glaustą laikotarpį. Visas modulis suprojektuotas taip, kad truktu**2 savaičių
+    instrukcija**. Dauguma pamokų yra pritaikytos ** 45 minutėms**, o pamokos, kuriose
+    mokiniai gilinasi į praktinį “Java” projekto kūrimą, yra skirtos ** 90 minučių**.
+    Šis ilgesnis laikas užtikrina, kad studentai turi daug galimybių suprasti, įgyvendinti
+    ir pašalinti triktis, kaip jie dirba.
+  csa_ai_page_faq_answer_06_02: Modulio struktūroje taip pat yra tyčinis lankstumas.
+    Priklausomai nuo klasės dinamikos, studentų įsitraukimo ir gylio, kuriuo norėtumėte
+    ištirti kiekvieną temą, galite pakoreguoti trukmę. Pavyzdžiui, “Intro to Copilot”
+    pamoka, sukurta kaip 45 minučių pamoka, gali būti išplėsta iki 90 minučių, jei
+    norite pasinerti giliau į tai, kaip veikia dideli kalbos modeliai ir įrankiai,
+    tokie kaip “GitHub Copilot” ir “ChatGPT”.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Turėdami patvirtintą mokytojo paskyrą, atsakymo raktus
+    galite rasti mėlyname “Mokytojas” Tik skydelyje, kuris rodomas internetinėse pamokose
+    ir veikloje.Jei jums reikia patvirtintos mokytojo paskyros, galite kreiptis dėl
+    prieigos prie apsaugotos tik mokytojui skirtos medžiagos (atsakymo raktų ir kt.)
+    Per [šią formą] ().%{form_url}Atminkite, kad paskyros patvirtinimas gali užtrukti
+    3—5 darbo dienas.
+  csa_ai_page_faq_question_08: Ar šis modulis yra suderintas su standartais?
+  csa_ai_page_faq_answer_08: Taip, programinės įrangos inžinerijos ir kompiuterinės
+    vizijos mokymo programa yra priskirta [CSTA K-12 standartams] (%{csta_k12_url})
+    ir AI [K-12 gairėms] ().%{k12_url}
+  csa_ai_page_faq_question_09: Kiek kainuoja mokyti šį modulį?
+  csa_ai_page_faq_answer_09_01: Mūsų mokymo programa ir platforma yra prieinama [be
+    išlaidų] (%{no_cost_url}) visiems, bet kur, mokyti!
+  csa_ai_page_faq_answer_09_02: Be to, šiame modulyje naudojama programinė įranga
+    ir įrankiai yra nemokami. GitHub Copilot yra nemokama patikrinti [teachers](%{teachers_url})
+    ir (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Ką daryti, jei programinės įrangos diegimas neveikia?
+  csa_ai_page_faq_answer_10: Programinės įrangos diegimo metu problemos gali būti
+    įprastos, tačiau yra sistemingų veiksmų, kuriuos galite atlikti norėdami jas pašalinti
+    ir išspręsti. [Peržiūrėkite keletą trikčių šalinimo patarimų čia] ().%{troubleshooting_url}
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Mūsų programinės įrangos inžinerijos ir kompiuterinės
+    vizijos mokymo programa buvo sukurta atsižvelgiant į mūsų mokymo programų vertybes.
+    Šie tikslai buvo sukurti šią mokymo programą:'
+  csa_ai_page_faq_answer_11_list_01: "** 1 tikslas: ** Naudokite AI įrankius, kad
+    generuotumėte, derintumėte ir redaguotumėte kodą."
+  csa_ai_page_faq_answer_11_list_02: "** 2 tikslas: ** Perėjimas nuo “Java Lab” prie
+    realaus pasaulio įrankių."
+  csa_ai_page_faq_answer_11_list_03: "** 3 tikslas: ** Pagilinkite supratimą apie
+    tai, kaip dirbtinio intelekto modeliai yra mokomi ir integruojami į programas."
+  csa_ai_page_faq_answer_11_02: Norėdami gauti daugiau informacijos apie vertybes,
+    kuriomis vadovaujamasi mūsų darbe, žr. Mūsų [mokymo programos vertybės] ().%{curriculum_values_url}
+  video_library_page_main_title: Mokomieji trumpi vaizdo įrašai
+  video_library_page_hero_description: Code.org auganti mokomųjų vaizdo įrašų biblioteka
+    yra prieinama pakartotinai naudoti pedagogams visame pasaulyje, internete arba
+    klasėse. Mūsų tikslas yra sustiprinti savo pastangas, viršijančias mūsų pačių
+    mokymo programos pasiekiamumą.
+  video_library_page_title_ai_works: Kaip veikia dirbtinis intelektas
+  video_library_page_description_ai_works: Ši trumpų vaizdo įrašų serija supažindins
+    jus su dirbtiniu intelektu ir kodėl tai svarbu. Sužinokite apie neuroninius tinklus
+    arba tai, kaip mokosi AI, ir pasinerkite į tokias problemas kaip algoritminis
+    šališkumas ir AI sprendimų priėmimo etika.
+  video_library_page_title_computers_work: Kaip veikia kompiuteriai
+  video_library_page_description_computers_work: Paaiškina, kas daro kompiuterį kompiuteriu,
+    kaip skaitmeninė informacija pateikiama 1 ir 0 s, kaip kompiuterio grandinės veikia
+    manipuliuojant skaitmenine informacija, ir kaip centrinis apdorojimo įrenginys
+    (CPU) ir operacinė sistema valdo kompiuterio įėjimus, išėjimus, atmintį ir aparatinę
+    įrangą.
+  video_library_page_title_internet_works: Kaip veikia internetas
+  video_library_page_description_internet_works: Įrengtas Vint Cerf, TCP/IP išradėjas,
+    Davidas Karpas, “Tumblr” įkūrėjas, paaiškinantis HTTP ir HTML, “Google” saugumo
+    princesė paaiškinti SSL ir kibernetinį saugumą, ir inžinieriai iš “Microsoft”,
+    “Spotify” ir “Symantec”. Ši trumpų vaizdo įrašų serija, paaiškinanti, kaip veikia
+    internetas.
+  video_library_page_title_not_hacked: Kaip ne gauti nulaužė
+  video_library_page_description_not_hacked: Internetas yra atviras, todėl viską,
+    kas jame vyksta, galima pamatyti, nebent jis būtų apsaugotas. Šiuolaikinėse šalyse
+    žmonės labiau nerimauja dėl įsilaužimo nei dėl bet kokio kito nusikaltimo. Kodėl?
+    Nes kiekvienas kompiuteris ar telefonas internete reguliariai tikrinamas dėl nusikaltėlių,
+    teroristų ar net valstybės veikėjų pažeidžiamumo. Jei nesate atsargūs, kas nors
+    gali nulaužti jūsų įrenginį ar sąskaitas ir net pavogti jūsų tapatybę ar pinigus.
+  video_library_page_title_blockchain: Kaip veikia “Blockchain”
+  video_library_page_description_blockchain: Pagaminta bendradarbiaujant su “Coinbase”,
+    šioje serijoje yra pramonės ekspertų ir siekiama demystifikuoti šią technologiją,
+    tyrinėjant, kas yra “blockchain”, kaip ji veikia, ir galimas visuomenės pasekmes
+    - tiek geras, tiek blogas.
+  video_library_page_title_careers: Karjera CS
+  video_library_page_description_careers: Kompiuterių mokslo ir technologijų karjera
+    gali būti linksma ir maloni. Bet ką iš tikrųjų daro žmogus, dirbantis šiose srityse?
+    Su daugybe darbo vietų ir įmonių, yra ne tik vienas atsakymas į šį klausimą. Žiūrėkite
+    toliau pateiktus vaizdo įrašus, kad susipažintumėte su kai kuriais žmonėmis, kurie
+    kūrybiškai sprendžia dideles problemas.
+  video_library_page_title_inspirational: Įkvepiantis
+  video_library_page_description_inspirational: Ką pakeis kompiuterių mokslas mūsų
+    pasaulyje? Viskas? Kam jis skirtas? Visi! Žiūrėkite šiuos vaizdo įrašus, kad įkvėptumėte
+    ir motyvuotumėte jus.
+  video_library_page_footer_description: Ieškote kažko kito? Mes turime tiek daug
+    puikių vaizdo įrašų, kuriuos galima rasti mūsų “Youtube” kanale.
+  video_library_page_footer_cta: Naršykite visus Code.org vaizdo įrašus “YouTube”
+  video_library_page_computer_work_video_title_1: Pristatome, kaip veikia kompiuteriai
+  video_library_page_computer_work_video_title_2: Dvejetainiai ir duomenys
+  video_library_page_computer_work_video_title_3: CPU, atmintis, įvestis ir išvestis
+  video_library_page_computer_work_video_title_4: Kas daro kompiuterį, kompiuterį?
+  video_library_page_computer_work_video_title_5: Logikos grandinės
+  video_library_page_computer_work_video_title_6: Techninė įranga ir programinė įranga
+  video_library_page_internet_work_video_title_1: Kas yra internetas?
+  video_library_page_internet_work_video_title_2: 'INTERNETAS: IP adresai ir DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNETAS: HTTP ir HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNETAS: kibernetinis saugumas
+    ir nusikaltimai'
+  video_library_page_internet_work_video_title_5: 'INTERNETAS: Laidai, kabeliai ir
+    “WiFi”'
+  video_library_page_internet_work_video_title_6: 'INTERNETAS: paketai, maršruto parinkimas
+    ir patikimumas'
+  video_library_page_internet_work_video_title_7: 'INTERNETAS: šifravimas ir viešieji
+    raktai'
+  video_library_page_internet_work_video_title_8: 'INTERNETAS: Kaip veikia paieška'
+  video_library_page_cs_video_title_1: Mano vardas Jeronimas, o aš esu “Meow Wolf”
+    dizaino technologas
+  video_library_page_cs_video_title_2: Mano vardas Nikesha, o aš esu NASA aviacijos
+    ir kosmoso inžinierius
+  video_library_page_cs_video_title_3: Mano vardas yra Brina ir aš esu “Instagram”
+    programinės įrangos inžinierius
+  video_library_page_cs_video_title_4: Mano vardas yra Kinsley ir aš esu programinės
+    įrangos inžinierius “Facebook”
+  video_library_page_cs_video_title_5: Mano vardas Polina ir aš esu “Electronic Arts”
+    duomenų mokslininkas
+  video_library_page_cs_video_title_6: Mano vardas yra Danelle ir aš esu MBARI programinės
+    įrangos inžinierius
+  video_library_page_cs_video_title_7: Mano vardas yra Christopheris ir aš esu “Tanium”
+    saugumo analitikas
+  video_library_page_cs_video_title_8: Mano vardas yra Federico ir aš esu “Microsoft”
+    techninių programų vadovas
+  video_library_page_cs_video_title_9: Mano vardas yra Tess ir aš esu “Google” programinės
+    įrangos inžinierius
+  video_library_page_inspirational_video_title_1: Keisti kompiuterių mokslo veidą
+    (3 min.)
+  video_library_page_inspirational_video_title_2: Stumkite save. Mokytis gali bet
+    kas. (1 min.)
+  video_library_page_inspirational_video_title_3: Įkvėpti merginą (2 min.)
+  video_library_page_inspirational_video_title_4: Ko nemoko dauguma mokyklų (5 min.)
+  video_library_page_inspirational_video_title_5: Kodo valanda yra čia - bet kas gali
+    išmokti (2 min.)
+  video_library_page_inspirational_video_title_6: Mano vardas Aracely (3 min.)
+  video_library_page_inspirational_video_title_7: Kodo valanda su Steph Curry (2 min.)
+  video_library_page_inspirational_video_title_8: Kompiuterių mokslas viską keičia
+    (5 min.)
+  video_library_page_inspirational_video_title_9: Kompiuterių mokslo intro (1 min.)
+  video_library_page_inspirational_video_title_10: Prezidentas Obama informatikos
+    klausimais (1 min.)
+  video_library_page_inspirational_video_title_11: Kiekvienas gali išmokti (1 min.)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min.)
+  video_library_page_inspirational_video_title_13: NASA švenčia Kodo valandą (2 min.)
+  video_library_page_inspirational_video_title_14: Tai daugiau nei žaidimas (1 min.)
+  video_library_page_inspirational_video_title_15: Kurti naudojant kompiuterių mokslą
+    (1 min.)
+  video_library_page_not_hacked_video_title_1: 'Kaip ne įsilaužti: Įvadas'
+  video_library_page_not_hacked_video_title_2: 'Kaip ne įsilaužti: slaptažodžiai'
+  video_library_page_not_hacked_video_title_3: 'Kaip neįsilaužti: autentifikavimas
+    ir įrenginio užraktai'
+  video_library_page_not_hacked_video_title_4: 'Kaip ne įsilaužti: sukčiavimas'
+  video_library_page_not_hacked_video_title_5: 'Kaip neįsilaužti: svetainės ir “Wifi”'
+  video_library_page_not_hacked_video_title_6: 'Kaip neįsilaužti: pranešimų siuntimas
+    ir atsisiuntimai'
+  video_library_page_not_hacked_video_title_7: 'Kaip ne gauti nulaužė: Įdiekite atnaujinimus'
   language_code:
     ar: arabiškas
     az: Azerbaidžaniečių

@@ -6,7 +6,7 @@ title: Hour of Code How-to Guide for After-school
 
 # Korleis undervise Kodetimen på AKS/SFO og fritidsklubbar
 
-### Join the movement and introduce your students to computer science with these steps.
+### Bli med i bevegelsen og introduser studentene dine for informatikk med disse trinnene.
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 

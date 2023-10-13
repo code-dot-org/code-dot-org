@@ -38,6 +38,7 @@ ky:
         current_password: 'Учурдагы сырсөз'
         locale: 'Тили'
         age: 'Жашы'
+        finish_sign_up_header_error: 'Кийинки каталарды оңдогула:'
   submit: Кошуу
   cancel: "Жок кыл"
   okay: "Окай"

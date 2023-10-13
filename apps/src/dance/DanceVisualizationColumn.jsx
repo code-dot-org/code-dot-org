@@ -1,4 +1,6 @@
 import React from 'react';
+import {getStore} from '../redux';
+import {setCurrentAiModalField} from './danceRedux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -8,13 +10,11 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import AgeDialog, {
-  ageDialogSelectedOver13,
-  songFilterOn,
-} from '../templates/AgeDialog';
-import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
+import AgeDialog from '../templates/AgeDialog';
+import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
+import DanceAiModal from './ai/DanceAiModal';
 
-const SongSelector = Radium(
+export const SongSelector = Radium(
   class extends React.Component {
     static propTypes = {
       enableSongSelection: PropTypes.bool,
@@ -70,10 +70,11 @@ class DanceVisualizationColumn extends React.Component {
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
+    currentAiModalField: PropTypes.object,
   };
 
   state = {
-    filterOn: this.getFilterStatus(),
+    filterOn: getFilterStatus(this.props.userType, this.props.under13),
   };
 
   /*
@@ -82,31 +83,6 @@ class DanceVisualizationColumn extends React.Component {
   turnFilterOff = () => {
     this.setState({filterOn: false});
   };
-
-  /*
-    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
-   */
-  getFilterStatus() {
-    const {userType, under13} = this.props;
-
-    // Check if song filter override is triggered and initialize song filter to true.
-    const songFilter = songFilterOn();
-    if (songFilter) {
-      return true;
-    }
-
-    // userType - 'teacher', 'student', 'unknown' - signed out users.
-    // If the user is signed out . . .
-    if (userType === 'unknown') {
-      // Query session key set from user selection in age dialog.
-      // Return false (no filter), if user is over 13.
-      return !ageDialogSelectedOver13();
-    }
-
-    // User is signed in (student or teacher) and the filter override is not turned on.
-    // Return true (filter should be turned on) if the user is under 13. Teachers assumed over13.
-    return under13;
-  }
 
   render() {
     const filenameToImgUrl = {
@@ -156,6 +132,11 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
+          {this.props.currentAiModalField && (
+            <DanceAiModal
+              onClose={() => getStore().dispatch(setCurrentAiModalField(false))}
+            />
+          )}
         </div>
       </div>
     );
@@ -196,4 +177,5 @@ export default connect(state => ({
   under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
+  currentAiModalField: state.dance.currentAiModalField,
 }))(DanceVisualizationColumn);

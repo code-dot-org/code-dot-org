@@ -35,6 +35,10 @@ si:
   africa_campaign_date_full: ඔක්තෝම්බර් 1 - 31
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: 2021 ඔක්තෝම්බර් 1 - 31
+  hoc2023_header: AI සමඟ නිර්මාණශීලීත්වය
+  hoc2023_social_creativity_with_ai_title: කේත පැය - ඔබ නිර්මාණය කරන්නේ කුමක්ද?
+  hoc2023_social_creativity_with_ai_desc: AI ගැන ගවේෂණය කිරීමට සහ ඉගෙන ගැනීමට පරිගණක
+    විද්යාව භාවිතා කරන්න!
   hoc2022_header: ගවේෂණය කරන්න, සෙල්ලම් කරන්න, සාදන්න!
   social_hoc2022_explore_play_create: ගවේෂණය කිරීමට, සෙල්ලම් කිරීමට සහ නිර්මාණය කිරීමට
     පරිගණක විද්යාව භාවිතා කරන්න!
@@ -104,19 +108,21 @@ si:
     ඉටු කළ හැකි කාර්යභාරය තේරුම් ගැනීමට සිසුන්ට උපකාර කිරීමට සම්පත්.
   oceans_landing_videos: AI සහ යන්ත්ර ඉගෙනීම පිළිබඳ වීඩියෝ
   oceans_behind_the_scenes: 'සාගර සඳහා AI: දර්ශන පිටුපස'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: මට්ටම් 2-4 <a href="https://www.tensorflow.org/" ></a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobileNet ව්යාපෘතිය මගින් සපයන ලද පෙර පුහුණු ආකෘතියක් භාවිතා කරයි.
+    </a> MobileNet ආකෘතියක් යනු <a href="http://www.image-net.org/">ImageNet හි පුහුණු
+    කර ඇති <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">සංවාලිත
+    ස්නායු</a> ජාලයකි. එය රූප මිලියන 14 කට අධික දත්ත සමුදායක් වන අතර එය “බැලූන්” හෝ
+    “ස්ට්රෝබෙරි” වැනි වචන සමඟ අතින් අමුණා</a>ඇත. මෙම ක්රියාකාරකම තුළ ශිෂ්යයා ජනනය
+    කරන ලේබල් කරන ලද පුහුණු දත්ත සමඟ මෙම ආකෘතිය රිසිකරණය කිරීම සඳහා, අපි Transfer
+    Learning නම් <a href="https://en.wikipedia.org/wiki/Transfer_learning">තාක්ෂණයක්
+    භාවිතා කරමු.</a>පුහුණු දත්ත සමුදායේ සෑම රූපයක්ම MobileNet වෙත පෝෂණය වේ, පික්සල්
+    ලෙස, එයට අදාළ වීමට බොහෝ දුරට ඉඩ ඇති විවරණයන් ලැයිස්තුවක් ලබා ගැනීම සඳහා. ඉන්පසු,
+    නව රූපයක් සඳහා, අපි එය MobileNet වෙත පෝෂණය කර එහි ප්රති ing ලයක් ලෙස පුහුණු දත්ත
+    සමුදාය වෙතින් එම විවරණ ලැයිස්තුව සංසන්දනය කරමු. අපි නව රූපය එකම ලේබලය සමඟ වර්ගීකරණය
+    කරමු (“මාළු” හෝ “මාළු නොවේ” වැනි) වඩාත්ම සමාන ප්රති. ල සහිත පුහුණු කට්ටලයේ රූප
+    ලෙස.
   oceans_behind_the_scenes_1_markdown: 2-4 මට්ටම් [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     ව්යාපෘතිය මගින් සපයන ලද පෙර පුහුණු ආකෘතියක් භාවිතා කරයි. මොබයිල් නෙට් ආකෘතියක්
@@ -131,13 +137,12 @@ si:
     ලෙස පුහුණු දත්ත සමුදාය වෙතින් එම විවරණ ලැයිස්තුව සංසන්දනය කරමු. අපි නව රූපය එකම
     ලේබලය සමඟ වර්ගීකරණය කරමු (“මාළු” හෝ “මාළු නොවේ” වැනි) වඩාත්ම සමාන ප්රති. ල සහිත
     පුහුණු කට්ටලයේ රූප ලෙස.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: මට්ටම් 6-8 <a href="https://en.wikipedia.org/wiki/Support-vector_machine">ආධාරක-දෛශික
+    යන්ත්රයක් (SVM) භාවිතා කරයි.</a> අපි මාළු එක් එක් සංරචකය දෙස (එවැනි ඇස්, මුඛය,
+    ශරීරය ලෙස) සහ එක් එක් මාළු සඳහා සංඛ්යා දෛශික බවට සංරචක (එවැනි දත් සංඛ්යාව, ශරීර
+    හැඩය ලෙස) සඳහා පාරදත්ත සියලු එකලස්. SVM පුහුණු කිරීම සඳහා අපි මෙම දෛශික භාවිතා
+    කරමු. පුහුණු දත්ත මත පදනම්ව, SVM හැකි සියලුම මසුන්ගේ “අවකාශය” කොටස් දෙකකට වෙන්
+    කරයි, එය අප ඉගෙන ගැනීමට උත්සාහ කරන පංතිවලට අනුරූප වේ (“නිල්” හෝ “නිල් නොවේ” වැනි).
   oceans_behind_the_scenes_2_markdown: මට්ටම් 6-8 [ආධාරක-දෛශික යන්ත්රයක්] (https://en.wikipedia.org/wiki/Support-vector_machine)
     (SVM) භාවිතා කරයි. අපි මාළු එක් එක් සංරචකය දෙස (එවැනි ඇස්, මුඛය, ශරීරය ලෙස) සහ
     එක් එක් මාළු සඳහා සංඛ්යා දෛශික බවට සංරචක (එවැනි දත් සංඛ්යාව, ශරීර හැඩය ලෙස) සඳහා
@@ -171,6 +176,28 @@ si:
     පද්ධති, CSD, හා වඩා — ප්ලස් නව විෂයමාලා නාමාවලි එකක් සහ ප්රතිනිර්මාණය ඉගැන්වීම්
     පිටුව ඔබ ඒ සියල්ල සොයා ගැනීමට උදව් කිරීමට!
   in_partnership_with: සමඟ සහයෝගයෙන්
+  shop_code_dot_org_heading: සාප්පු කේත
+  shop_code_dot_org_desc: අපගේ කාර්යයට සහාය වීම සහ ව්යාපාරය ආඩම්බරයෙන් පැළඳීම. අපගේ
+    තොප්පි ජනාධිපති ඔබාමා සහ කීර්තිමත් පුද්ගලයින් ද පැළඳ සිටී.
+  spread_the_word_heading: අරාංචිය පතුරවන්න
+  spread_the_word_desc: Code.org ඔබේ ජාලය සමඟ බෙදා ගැනීමෙන් අපගේ බලපෑම වැඩි කරන්න.
+    සමාජ මාධ්යවල සිට විද්යුත් තැපැල් යාවත්කාලීන කිරීම් දක්වා, තවත් අධ්යාපන ators යින්,
+    සිසුන් සහ නීති oc යින් වෙත ළඟා වීමට ඔබට අපට උදව් කළ හැකි ආකාරය සොයා ගන්න.
+  follow_us_heading: සමාජ මාධ්යවල අපව අනුගමනය කරන්න
+  follow_us_desc: සමාජ මාධ්යවල අප සමඟ යාවත්කාලීනව සිටින්න. දැනුවත්ව සිටීමට සහ දැනුවත්භාවය
+    ඇති කිරීමට සහ දැනුවත්භාවය ඇති කිරීමට අපගේ සටහන් ඔබේ ජාලය සමඟ බෙදා ගන්න.
+  facebook: ෆේස්බුක්
+  twitter: ට්විටර්
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: ටික්ටොක්
+  subscribe_to_emails_heading: ඊමේල් වලට දායක වන්න
+  subscribe_to_emails_desc: Code.org හි සහ පරිගණක විද්යා අධ්යාපනයේ සිදුවන්නේ කුමක්ද
+    යන්න ගැන කියවන්න අපගේ තැපැල් ලැයිස්තුව හරහා කාර්තුමය යාවත්කාලීන කිරීම් හරහා.
+  subscribe_to_emails_intl: ජාත්යන්තර යාවත්කාලීන කිරීම් සඳහා දායක වන්න
+  promote_code_dot_org_heading: Code.org ප්රවර්ධනය කරන්න
+  promote_code_dot_org_desc: සංඛ්යාන, උපුටා දැක්වීම් සහ වීඩියෝ ආධාරයෙන් ඔබේ ප්රදේශයේ
+    පරිගණක විද්යාව ප්රවර්ධනය කරන්න.
   afe_partnership_logo_alt: ඇමසන් අනාගත ඉංජිනේරු ලාංඡනය
   afe_partnership_thanks_desc: ඇමේසන් අනාගත ඉංජිනේරු ආස්වාදයක් පුළුල් ළමා-කිරීමට වෘත්තීය
     වැඩසටහන වේ, දැනුවත්, හා පරිගණක විද්යාව වෘත්තීමය ජීවිතය ඇරැඹීමට අඩු ආදායම් හා අනෙකුත්
@@ -180,6 +207,24 @@ si:
   grade_level_label_elementary: මූලික පාසල
   grade_level_label_middle: මැද පාසල
   grade_level_label_high: උසස් පාසල
+  curricula_title_elementary: මූලික පාසල් විෂය මාලාව
+  curricula_desc_elementary: ඔබේ ප්රාථමික පාසල් සිසුන් සමඟ පරිගණක විද්යාව ගවේෂණය කිරීමට
+    ඔබට ආරාධනා කරන විනෝදජනක, නොමිලේ පා courses මාලා සහ ක්රියාකාරකම් පිරික්සන්න.
+  curricula_title_middle: මැද පාසල් විෂය මාලාව
+  curricula_desc_middle: පරිගණක විද්යාව ගවේෂණය කිරීමට ඔබට සහ ඔබේ මධ්යම පාසල් සිසුන්ට
+    හැකි වන ආකර්ෂණීය පිරිනැමීම් පිරික්සන්න.
+  curricula_title_high: උසස් පාසල් විෂය මාලාව
+  curricula_desc_high: පරිගණක විද්යාවට ගැඹුරට හාරා බැලීමට ඔබට සහ ඔබේ උසස් පාසැල් සිසුන්ට
+    ආරාධනා කරන බලගතු පා courses මාලා සහ ක්රියාකාරකම් පිරික්සන්න.
+  for_administrators_heading: පරිපාලකයින් සඳහා
+  for_administrators_desc: දැනටමත් පරිගණක විද්යාව ඔවුන්ගේ විෂය මාලාවට ඇතුළත් කර ඇති
+    පාසල් දහස් ගණනක් සමඟ සම්බන්ධ වන්න.
+  for_parents_heading: දෙමාපියන් හට
+  for_parents_desc: පරිගණක විද්යා අධ්යාපනය ලබා දීමට හෝ පුළුල් කිරීමට ඔබේ ශිෂ්යයාගේ
+    පාසල දිරිමත් කිරීමට ඔබට උදව් කළ හැකිය.
+  for_educators_heading: අධ්‍යාපකයින් හට
+  for_educators_desc: අද ඉගැන්වීම ආරම්භ කරන්න - අවශ්ය පරිගණක විද්යා අත්දැකීම් නොමැත
+    - අපගේ වෘත්තීය ඉගෙනුම් වැඩමුළු සමඟ.
   students_label: සිසුන්
   teachers_label: ගුරුවරුන්
   teacher_label_csf: CS ගුරු මූලධර්ම
@@ -189,9 +234,11 @@ si:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'අවශ්ය ද්රව්ය:'
   optional_materials: 'විකල්ප ද්රව්ය:'
+  call_to_action_hold_an_event: සිදුවීමක් පැවැත්වීමට
   call_to_action_learn_more: තවත් ඉගෙන ගන්න
   call_to_action_watch_now: දැන් නරඹන්න
   call_to_action_try_activity: ක්රියාකාරකම් උත්සාහ කරන්න
+  call_to_action_try_activities: ක්රියාකාරකම් උත්සාහ කරන්න
   call_to_action_explore_unit: ඒකකය ගවේෂණය කරන්න
   call_to_action_explore_curriculum: විෂය මාලාව ගවේෂණය කරන්න
   call_to_action_explore_curriculum_options: විෂයමාලා විකල්ප ගවේෂණය කරන්න
@@ -206,6 +253,15 @@ si:
   call_to_action_explore_choice_level: උදාහරණ තේරීමේ මට්ටම ගවේෂණය කරන්න
   call_to_action_explore_collection: එකතුව ගවේෂණය කරන්න
   call_to_action_explore_unplugged_lesson: ප්ලග් නොකළ පාඩම් ගවේෂණය කරන්න
+  call_to_action_explore_csf: CS මූලධර්ම ගවේෂණය කරන්න
+  call_to_action_explore_csd: CS සොයාගැනීම් ගවේෂණය කරන්න
+  call_to_action_explore_csp: CS මූලධර්ම ගවේෂණය කරන්න
+  call_to_action_explore_csc: CS සම්බන්ධතා ගවේෂණය කරන්න
+  call_to_action_explore_csa: AP® පරිගණක විද්යාව ගවේෂණය කරන්න
+  call_to_action_explore_csa_short: AP® CSA ගවේෂණය කරන්න
+  call_to_action_explore_maker: විෂයමාලා සාදන්නා ගවේෂණය කරන්න
+  call_to_action_explore_hoc: කේත නිබන්ධන පැය ගවේෂණය කරන්න
+  call_to_action_explore_hoc_short: කේත පැය ගවේෂණය කරන්න
   call_to_action_try_app_lab: යෙදුම් විද්යාගාරය උත්සාහ කරන්න
   call_to_action_view_lesson_plan: පාඩම් සැලැස්ම බලන්න
   call_to_action_self_paced_pl: ස්වයං මට්ටමේ වෘත්තීය ඉගෙනීම ආරම්භ කරන්න
@@ -229,6 +285,7 @@ si:
   call_to_action_resources_tools: ක්රමලේඛන මෙවලම් අත්හදා බලන්න
   call_to_action_sign_up_free: නොමිලේ ලියාපදිංචි වන්න
   call_to_action_explore_ai_resources: AI සම්පත් ගවේෂණය කරන්න
+  call_to_action_explore_ai_curricula: AI විෂය ගවේෂණය කරන්න
   call_to_action_explore_curriculum_catalog: විෂයමාලා නාමාවලිය ගවේෂණය කරන්න
   call_to_action_see_full_curriculum_catalog: සම්පූර්ණ විෂයමාලා නාමාවලිය බලන්න
   call_to_action_find_self_paced_modules: ස්වයං-වේගවත් මොඩියුල සොයා ගන්න
@@ -250,6 +307,20 @@ si:
   call_to_action_notify_available: ලබා ගත හැකි විට මට දැනුම් දෙන්න
   call_to_action_register_early_access: මුල් ප්රවේශය සඳහා ලියාපදිංචි වන්න
   call_to_action_open_positions: විවෘත තනතුරු බලන්න
+  call_to_action_explore_roles: විවෘත භූමිකාවන් ගවේෂණය කරන්න
+  call_to_action_get_guide: මාර්ගෝපදේශය ලබා ගන්න
+  call_to_action_donate_to_cdo: Code.org වෙත පරිත්යාග කරන්න
+  call_to_action_start_fundraiser: අරමුදල් සම්පාදකයෙකු ආරම්භ කරන්න
+  call_to_action_view_donation_policy: පරිත්යාග ප්රතිපත්තිය බලන්න
+  call_to_action_view_donate_bitpay: බිට්පේ සමඟ පරිත්යාග කරන්න
+  call_to_action_make_a_donation: පරිත්යාගයක් කරන්න
+  call_to_action_other_ways_to_give: දීමට වෙනත් ක්රම
+  call_to_action_become_partner_usa: එක්සත් ජනපද හවුල්කරුවෙකු වන්න
+  call_to_action_become_partner_intl: ජාත්යන්තර හවුල්කරුවෙකු වන්න
+  call_to_action_become_a_volunteer: ස්වේච්ඡා සේවකයෙකු වන්න
+  call_to_action_start_translating: පරිවර්තනය ආරම්භ කරන්න
+  call_to_action_learn_about_advocacy: අපගේ උපදේශකත්වය ගැන ඉගෙන ගන්න
+  call_to_action_visit_store: ගබඩාවට පිවිසෙන්න
   aria_label_call_to_action_afe: ඇමේසන් අනාගත ඉංජිනේරු ගැන තව දැනගන්න
   aria_label_call_to_action_teaching_csf: ඉගැන්වීමේ පරිගණක විද්යා මූලධර්ම වෘත්තීය
     ඉගෙනුම් වැඩසටහන ආරම්භ කරන්න
@@ -354,8 +425,11 @@ si:
   curriculum_name_csp: පරිගණක විද්යා මූලධර්ම
   curriculum_name_csc: පරිගණක විද්යා සම්බන්ධතා
   curriculum_name_csa: AP® පරිගණක විද්යාව A
+  curriculum_name_csa_ai: මෘදුකාංග ඉංජිනේරු සහ පරිගණක දැක්ම
   curriculum_name_csc_02: ඕනෑම CS සම්බන්ධතා මොඩියුලය
   curriculum_name_ai: AI සහ ඉගෙනුම් යන්ත්ර
+  curriculum_name_artificial_intelligence: කෘතිම බුද්ධිය (AI)
+  curriculum_name_maker: සාදන්නා
   curriculum_name_maker_cp: උපාංග සමඟ යෙදුම් නිර්මාණය කිරීම (පරිපථ ක්රීඩා පිටිය)
   curriculum_name_maker_microbit: 'උපාංග සමඟ යෙදුම් නිර්මාණය කිරීම (ක්ෂුද්ර: බිට්)'
   curriculum_name_creating_apps_with_devices: උපාංග සමඟ යෙදුම් නිර්මාණය කිරීම
@@ -366,6 +440,8 @@ si:
   curriculum_name_interactive_animations_games: අන්තර් ක්රියාකාරී සජීවිකරණ සහ ක්රීඩා
   curriculum_name_design_process: සැලසුම් ක්රියාවලිය
   curriculum_name_data_society: දත්ත සහ සමාජය
+  curriculum_desc_csf: පරිගණක විද්යාවේ පදනම් සංකල්ප සඳහා සිසුන් හඳුන්වා දෙන මූලික
+    විෂය මාලාවක් නොමිලේ.
   curriculum_desc_csf_express: පරිගණක වැඩසටහන් නිර්මාණය කිරීමට, ගැටළු විසඳීමේ කුසලතා
     වර්ධනය කිරීමට සහ විනෝදජනක අභියෝග හරහා වැඩ කිරීමට ඉගෙන ගන්න! මිතුරන්, පවුලේ අය
     සහ ගුරුවරුන් සමඟ බෙදා ගැනීමට ක්රීඩා සහ නිර්මාණාත්මක ව්යාපෘති කරන්න.
@@ -408,6 +484,25 @@ si:
   curriculum_desc_creating_apps_with_devices: 'පරිගණකකරණයේ භෞතික උපාංගවල කාර්යභාරය
     ගවේෂණය කරන්න. දෘඩාංග යෙදවුම් සහ ප්රතිදානයන් භාවිතා කරන වැඩසටහන් සංවර්ධනය කරන්න.
     මයික්රෝ: බිට් සහ පරිපථ ක්රීඩා පිටිය යන දෙකටම මෙම ඒකකයේ අනුවාදයක් ඇත.'
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) සඳහා මෙම නිදහස් විෂය මාලාවේ
+    ජාවා ක්රමලේඛන භාෂාව ඉගෙන ගන්නා අතරතුර මෘදුකාංග ඉංජිනේරු විද්යාව සහ වස්තු-අභිමුඛ
+    සැලසුම් සඳහා සිසුන් හඳුන්වා දෙන්න.
+  curriculum_desc_maker: මේකර් අධ්යාපනය STEM (විද්යාව, තාක්ෂණය, ඉංජිනේරු, ගණිතය) තවත්
+    පියවරක් ඉදිරියට ගෙන යන්නේ ගැටළු විසඳීම සහ විවේචනාත්මක චින්තනය ඉගැන්වීමට උපකාර
+    කිරීම සඳහා අත්දැකීම් සහ සහයෝගීතාවය පන්ති කාමරයට ආරාධනා කිරීමෙනි.
+  curriculum_desc_maker_short: ගැටළු විසඳීම සහ විවේචනාත්මක චින්තනය ඉගැන්වීමට උපකාර
+    කිරීම සඳහා නිෂ්පාදක අධ්යාපනය පන්ති කාමරයට අත්දැකීම් සහ සහයෝගීතාවයට ආරාධනා කරයි.
+  curriculum_desc_csd: නම්යශීලී පා course මාලාවක්, එක් එක් ඒකකය තනිවම හෝ ඒකාබද්ධ කිරීමට
+    ඉඩ ලබා දේ. වෙබ් අඩවි, යෙදුම්, සජීවිකරණ, ක්රීඩා සහ භෞතික පරිගණක පද්ධති තැනීම සඳහා
+    සිසුන්ට හඳුන්වා දෙයි.
+  curriculum_desc_csp: පරිගණක විද්යාවේ පදනම් සංකල්ප සඳහා සිසුන් හඳුන්වා දෙන නොමිලේ,
+    AP® CSP අනුමත, උසස් පාසැල් හඳුන්වාදීමේ පා course මාලාවක්.
+  curriculum_desc_csa_ai_long: 'පරිච්ඡේද දෙකක පශ්චාත්-ඒපී CSA මොඩියුලය උසස් පාසැල්
+    සිසුන්ට GitHub සහ GitHub Copilot ඇතුළු වෘත්තීය මෘදුකාංග සංවර්ධන මෙවලම් සමඟ අත්දැකීම්
+    ලබා දෙන අතර පරිගණක දර්ශන වැඩසටහනක් සංවර්ධනය කිරීම සඳහා ඔවුන්ට සැබෑ ලෝක කුසලතා
+    ලබා දෙයි. '
+  curriculum_desc_csa_ai_short: මෙම පශ්චාත්-AP® CSA මොඩියුලය උසස් පාසැල් සිසුන්ට වෘත්තීය
+    මෘදුකාංග සංවර්ධන මෙවලම් සමඟ අත්දැකීම් ලබා දෙයි.
   collection_hardware: දෘඩාංග කෙරෙහි අවධානය යොමු කරන්න
   collection_hardware_desc: ගැටළු විසඳීම සඳහා දත්ත සහ භෞතික උපාංග භාවිතා කිරීමට සිසුන්ට
     බලය ලබා දෙයි.
@@ -438,6 +533,7 @@ si:
   module_label_professional_learning: 'වෘත්තීය ඉගෙනුම්:'
   module_label_languages: 'සහාය දක්වන භාෂා:'
   module_label_accessibility_features: 'ප්රවේශ්යතාව:'
+  module_label_accessibility_features_full: 'ප්රවේශ්යතා විශේෂාංග:'
   module_label_educator_tool: අධ්යාපනඥ මෙවලම
   module_label_educator_course: අධ්යාපනඥ පාඨමාලාව
   module_label_student_tool: ශිෂ්ය මෙවලම
@@ -445,6 +541,7 @@ si:
   module_label_student_content_resources: අන්තර්ගතය සහ සම්පත්
   module_label_new: නව
   module_label_coming_soon: ඉක්මනින් පැමිණේ
+  module_label_available_now: දැන් ලබාගත හැකිය
   module_label_video_series: වීඩියෝ මාලාව
   module_label_self_paced: ස්වයං-වේග මොඩියුලය
   module_ages_5_10: 5-10
@@ -455,6 +552,8 @@ si:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -469,11 +568,14 @@ si:
   module_grade_9_12_teachers: 9-12 ගුරුවරුන්
   module_level_beginner: ආධුනිකයා
   module_level_intermediate: අතරමැදි
+  module_level_advanced: උසස්
   module_duration_45_mins: විනාඩි 45
+  module_duration_2_weeks: සති 2 යි
   module_duration_1_hr: පැය 1 යි
   module_duration_2_hrs: පැය 2 යි
   module_duration_3_hrs: පැය 3 යි
   module_duration_5_hrs: පැය 5 යි
+  module_duration_5_hrs_plus: 5+ පැය
   module_duration_8_hrs: පැය 8
   module_duration_20_hrs: පැය 20 යි
   module_duration_35_hrs: පැය 35
@@ -485,6 +587,7 @@ si:
   module_duration_school_year: පාසල් වර්ෂය
   module_duration_month_quarter: මාසය හෝ කාර්තුව
   module_duration_month_semester_year: මාසික, අධ්යයන වාරය, හෝ වර්ෂය
+  module_duration_varies: වෙනස් වේ
   module_prerequisites_none: කිසිවක් නැත
   module_prerequisites_maker_cp: සංචාරක ක්රීඩා පිටියකට ප්රවේශය
   module_prerequisites_maker_microbit: 'මයික්රෝ: බිට් එකක් වෙත ප්රවේශය'
@@ -553,6 +656,10 @@ si:
   heading_java_lab: ජාවා විද්යාගාරය
   heading_objects_first: වස්තූන් පළමුව
   heading_these_lessons_will: 'මෙම පාඩම්:'
+  heading_explore_curriculum_catalog: විෂයමාලා නාමාවලිය අපගේ සියලු පා courses මාලා
+    ගවේෂණය කරන්න
+  heading_csa_ai: AP® විභාගයෙන් පසු කළ යුතු දේවල් සොයනවාද?
+  heading_bring_cs_to_students: සිසුන්ට පරිගණක විද්යාව ගෙන එන්න
   professional_learning_section_desc: ඔබ ඉගැන්වීමට සූදානම් වන විට ඔබට අවශ්ය සහාය ලබා
     ගන්න. ගුරුවරුන් එයට ආදරය කරන අතර 90% කට වඩා එය හොඳම වෘත්තීය සංවර්ධනය ලෙස ශ්රේණිගත
     කර ඇත!
@@ -583,6 +690,23 @@ si:
   support_and_questions_section_desc: Code.org සමඟ ඉගැන්වීම ආරම්භ කිරීම පිළිබඳව ඔබට
     ඇති ඕනෑම ප්රශ්නයකට පිළිතුරු දීමට අපගේ සහායක කණ්ඩායම මෙහි සිටී. අපගේ ගුරු සංසදවල
     ඔවුන්ගේ අත්දැකීම් පිළිබඳව වෙනත් ගුරුවරුන්ගෙන් විමසන්න.
+  subscribe_form_section_title: යාවත්කාලීන කිරීම් සඳහා දායක වන්න
+  subscribe_form_section_desc_csa: Code.org හි AP® පරිගණක විද්යාව A පිළිබඳ මාසික ඊමේල්
+    ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම්, ඉඟි සහ යාවත්කාලීන කිරීම්
+    ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_desc_csc: Code.org හි පරිගණක විද්යා සම්බන්ධතා පිළිබඳ මාසික
+    ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම්, ඉඟි සහ යාවත්කාලීන
+    කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_desc_csd: Code.org හි පරිගණක විද්යා සොයාගැනීම් ගැන මාසික
+    ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම් ලබා ගන්න, ඉඟි, සහ යාවත්කාලීන
+    කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_desc_csf: Code.org හි පරිගණක විද්යා මූලධර්ම පිළිබඳ මාසික
+    ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම් ලබා ගන්න, ඉඟි, සහ යාවත්කාලීන
+    කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_desc_csp: Code.org හි පරිගණක විද්යා මූලධර්ම පිළිබඳ මාසික
+    ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම් ලබා ගන්න, ඉඟි, සහ යාවත්කාලීන
+    කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_unsubscribe: ඔබට ඕනෑම වේලාවක දායකත්වයෙන් ඉවත් විය හැකිය.
   blockchain_hero_heading: බ්ලොක්චේන් ක්රියා කරන ආකාරය
   blockchain_hero_desc: අපගේ නව වීඩියෝ මාලාව සහ ඒ සමඟ ඇති පාඩම් “බ්ලොක්චේන් ක්රියා
     කරන ආකාරය” සමඟ බ්ලොක්චේන් ලෝකයට කිමිදෙන්න!
@@ -685,6 +809,9 @@ si:
     පාඩමක්ම මාලාවේ තනි වීඩියෝවක් සමඟ යුගලනය කර ඇති අතර වීඩියෝවල හඳුන්වා දී ඇති සංකල්ප
     වලට ගැඹුරට කිමිදේ.
   ai_curriculum_btn_aria_label_04: AI පාඩම් ක්රියා කරන ආකාරය ගවේෂණය කරන්න
+  ai_curriculum_grades_05: 'ශ්රේණියේ මට්ටම්: 9-12'
+  ai_curriculum_btn_aria_label_05: මෘදුකාංග ඉංජිනේරු සහ පරිගණක දර්ශන මොඩියුලය ගවේෂණය
+    කරන්න
   ai_carousel_heading: 'Code.org සමඟ AI ගැන ගුරුවරුන් පවසන දේ:'
   ai_carousel_quote_01: මෙම පාඩම මගේ සිසුන්ට වර්ගීකරණ පද්ධතිවල මතයේ අංගයක් ඇති බව
     දැකීමට අවස්ථාව ලබා දුන්නේය. පසුව, AI හි නැඹුරුව අවසන් වන්නේ කෙසේදැයි බැලීමට පටන්
@@ -803,11 +930,20 @@ si:
     ප්රායෝගික උදාහරණ සහ සම්පත් වල පොහොසත් සම්මිශ්රණයක් සහිතව, AI භූ දර්ශනය සැරිසැරීමට
     සහ ශිෂ්ය ඉගෙනුම් අත්දැකීම් වැඩි දියුණු කිරීමට අධ්යාපන ators යින් සවිබල ගැන්වීම
     අරමුණු කරයි.
+  ai_pl_101_resources_5: AI සඳහා වගකිවයුතු ප්රවේශයක් සහතික කිරීම සඳහා මාර්ගෝපදේශය
   ai_pl_101_video_desc_6: 'AI හි විශාල වෙනස්කම් ඇති කරන නව තාක්ෂණය ගැන තව දැනගන්න,
     විශාල භාෂා ආකෘති (ChatGPT වැනි) සහ උත්පාදක AI පිළිබඳ නව වීඩියෝ දෙකක් ඇතුළත් වේ.
     මෙම නව තාක්ෂණයන් විශේෂ experts යින්ගෙන් කෙලින්ම ක්රියා කරන්නේ කෙසේදැයි අසන්න:
     ඕපන් ඒඅයි හි සීටීඕ මිරා මුරාටි සහ RunwayML හි ප්රධාන විධායක නිලධාරී ක්රිස්ටෝබල්
     වැලෙන්සියුලා.'
+  ai_pl_101_llm_slides_title: අධ්යාපනඥයින් සඳහා විශාල භාෂා ආකෘති විමසුම්
+  ai_pl_101_llm_slides_desc: ආරම්භක සිට උසස් දක්වා චැට්ජීපීටී වැනි එල්එල්එම් වලින්
+    හැකි හොඳම ප්රතිදානය ලබා ගැනීම සඳහා මෙවලම්. හුදෙක් ඔවුන්ගේ ඇඟිලි ලන අය සඳහා ආරම්භක
+    විමසුම් ඇතුළත්, මෙන්ම ඔවුන්ගේ හැකියාවන් උපරිම අස්වැන්නක් ලබා ගැනීමට බලා අය සඳහා
+    උසස් මෙවලම්.
+  ai_pl_101_resources_3: ශිෂ්ය ඉගෙනීම පරිවර්තනය කිරීම සඳහා AI විමසයි
+  ai_pl_101_resources_section_title: AI ගැන ඉගෙන ගැනීමට තවත් ක්රම
+  ai_pl_101_resources_guide: 'සහායක මාර්ගෝපදේශය:'
   how_ai_works_hero_heading: AI ක්රියා කරන ආකාරය
   how_ai_works_hero_desc: අපගේ වීඩියෝ මාලාව සහ ඒ සමඟ ඇති පාඩම් “AI ක්රියා කරන ආකාරය”
     සමඟ AI ලෝකයට කිමිදෙන්න!
@@ -1129,20 +1265,18 @@ si:
   teach_page_free_curriculum_heading: නිදහස්, නිරත විෂයමාලා
   teach_page_free_curriculum_desc: පිරිවැය ගැන කරදර නොවී පරිගණක විද්යාව ඔබේ පාසලට
     ගෙන ඒමට අපට අවශ්යය. ඒ නිසා අපි අපේ විෂය නිර්දේශ පූජා සදහටම නිදහස් වීම කැප කර ඇත!
-  teach_page_free_curriculum_list_heading_01: සෑම ශ්‍රේණි මට්ටමකටම විෂය මාලා සම්බන්ධ
-    කර ගැනීම
   teach_page_free_curriculum_list_desc_01: භාෂා 67 කට අධික සංඛ්යාවක පිරිනැමීම් සහිත
     නිදහස්, නම්යශීලී හා විනෝදජනක විෂය මාලා.
-  teach_page_free_curriculum_list_heading_02: අනුවර්තනය කළ හැකි, නව්ය විෂය මාලාව
   teach_page_free_curriculum_list_desc_02: Code.org පූර්ණ කාලීන විෂයමාලා සිට තනි ඒකක
     ක්රියාකාරකම් දක්වා සියල්ල ඉදිරිපත් කරයි. ප්ලස්, හොඳම භාවිතයන් සහ අවධානය යොමු කරන
     ක්ෂේත්රයන්ට සහාය වීම සඳහා අපි වාර්ෂිකව අපගේ විෂය මාලාව යාවත්කාලීන කරන අතර වර්තමාන
     ඉල්ලුමට සරිලන මාතෘකා උගන්වන නව පිරිනැමීම් නිර්මාණය කරමු.
-  teach_page_free_curriculum_list_heading_03: ව්යුහගත විෂයමාලා ජාතික ප්රමිතීන්ට අනුව
-    සිතියම් ගත කර ඇත
   teach_page_free_curriculum_list_desc_03: සෑම විෂය මාලාවක්ම CSTA, ඊළඟ පරම්පරාවේ විද්යා
     ප්රමිති සහ පොදු හරය ඇතුළුව අවම වශයෙන් එක් ජාතික ප්රමිති කට්ටලයකට සිතියම් ගත කර
     ඇත.
+  teach_page_free_curriculum_list_desc_04: භාෂා 67 කට අධික සංඛ්යාවකින් පිරිනැමීම්
+  teach_page_free_curriculum_list_desc_05: අවම වශයෙන් එක් ජාතික ප්රමිති කට්ටලයකට (CSA,
+    NGSS සහ පොදු හරය ඇතුළුව) සිතියම් ගත කර ඇත
   teach_page_free_curriculum_heading_02: 'විවිධ ශ්රේණි මට්ටම් සඳහා අපගේ විෂයමාලා පිරිනැමීම්
     ගවේෂණය කරන්න:'
   teach_page_resources_heading: මාර්ගයේ සෑම පියවරකටම ඔබට සහාය වන සම්පත්
@@ -1201,8 +1335,8 @@ si:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: යෙදුම් විද්යාගාරය
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: පහසුකම්-LED වැඩමුළු, ස්වයං-වේග
+    මොඩියුල
   csp_page_curriculum_glance_professional_languages: English
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1328,8 +1462,8 @@ si:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: යෙදුම් විද්යාගාරය, ගේම් විද්යාගාරය, AI විද්යාගාරය,
     වෙබ් විද්යාගාරය
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: පහසුකම්-LED වැඩමුළු, ස්වයං-වේග
+    මොඩියුල
   csd_page_curriculum_glance_professional_languages: English
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1393,10 +1527,10 @@ si:
     වෙනත් ආකාරයක බරකින් ප්රතිස්ථාපනය කළ හැකි බව සලකන්න). ඔබට මෙම සැපයුම් සඳහා ප්රවේශය
     නොමැති නම් විකල්ප ක්රියාකාරකම් තිබේ.
   csd_page_faq_answer_04_06: උපාංග සමඟ යෙදුම් නිර්මාණය කිරීම (විකල්ප A සහ විකල්ප B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'විකල්ප A: පරිපථ ක්රීඩා පිටි පන්ති කාමර කට්ටලය. වැඩි
+    විස්තර සඳහා [code.org/maker/circuitක්රීඩා පිටිය] () බලන්න.%{url}'
+  csd_page_faq_answer_04_08: 'විකල්ප B: ක්ෂුද්ර: බිට් උපාංග වල පන්ති කාමර කට්ටලය.
+    වැඩි විස්තර සඳහා [code.org/maker/microbit] () බලන්න.%{url}'
   csd_page_faq_answer_04_09: හිස් පටක පෙට්ටි හෝ කාඩ්බෝඩ් රෝල් හෝ සීරීම් කඩදාසි වැනි
     සාදන්නා සැපයුම්
   csd_page_faq_answer_04_10: "* සටහන: උපාංග ඒකකය සමඟ යෙදුම් නිර්මාණය කිරීම ක්රියාත්මක
@@ -1404,12 +1538,12 @@ si:
     භාවිතා කරන අයට එකක්. ගුරුවරුන් උපාංග කට්ටල දෙකම මිලදී නොගත යුතුය, නැතහොත් ඒකක
     විකල්ප දෙකම සමාන වන අතර එකම අන්තර්ගතය ආවරණය කරයි."
   csd_page_faq_question_06: CS සොයාගැනීම් අනෙක් Code.org පා. මාලා සමඟ ගැලපෙන්නේ කෙසේද?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS සොයාගැනීම් අපගේ [CS මූලධර්ම] (%{csf_url}) පා courses
+    මාලා සහ අපගේ [CS මූලධර්ම] () පා. මාලාව අතර ස්වාභාවිකවම ගැලපෙන පරිදි නිර්මාණය කර
+    ඇත.%{csp_url}මෙම පා courses මාලා එක් එක් පරිගණක විද්යාව සඳහා වයසට සුදුසු පිවිසුම්
+    ස්ථානයක් ලෙස නිර්මාණය කර ඇති අතර, පෙර අත්දැකීම් ඇති සිසුන් ගවේෂණය කිරීමට බොහෝ
+    නව මාතෘකා සොයා ගනු ඇත, ඔවුන් නවකතාව හා වඩා අභියෝගාත්මක සන්දර්භයන් තුළ හුරුපුරුදු
+    මාතෘකා නැවත පිවිසෙනු ඇත.
   csc_page_top_desc: පරිගණක විද්යාව (CS) සහ ගණිතය, භාෂා කලා, විද්යාව සහ සමාජ අධ්යයන
     වැනි වෙනත් විෂයයන් අතර සම්බන්ධතා ඇති කරන්න.
   csc_page_intro_heading: මූලික විෂය ප්රමිතීන් ආවරණය වන අතරම CS උගන්වන්න
@@ -1468,8 +1602,8 @@ si:
     චිත්ර සහ නිර්මාණ, යෙදුම් නිර්මාණය
   csf_page_curriculum_glance_devices: ලැප්ටොප්, ක්රෝම්බුක්, කුඩා
   csf_page_curriculum_glance_tools: ස්ප්රයිට් විද්යාගාරය, ප්ලේ විද්යාගාරය
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: පහසුකම්-LED වැඩමුළු, ස්වයං-වේග
+    මොඩියුල
   csf_page_curriculum_glance_languages: අරාබි, බාසා ඉන්දුනීසියානු, කැටලාන්, චීන සරල,
     චීන සාම්ප්රදායික, චෙක්, ප්රංශ, ජර්මානු, හින්දි, ඉතාලි, ජපන්, කොරියානු, කන්නඩ,
     මැලේ, මරාති, මොන්ගෝලියානු, පෝලන්ත, පෘතුගීසි-බීආර්, රුමේනියානු, රුසියානු, ස්ලෝවැක්,
@@ -1524,10 +1658,10 @@ si:
     අපගේ කලාපීය හවුල්කරුවන් තනි ගුරුවරුන් සඳහා හෝ පාසැල් පුරා පීඩී සඳහා උසස් තත්ත්වයේ,
     එක්දින Code.org වැඩමුළු ඉදිරිපත් කරයි. [ඔබ අසල වෘත්තීය සංවර්ධන වැඩමුළුවක් සඳහා
     ලියාපදිංචි වන්න] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: අපගේ වැඩමුළුවලට සහභාගී වූ 100,000 කට අධික ගුරුවරුන් සමඟ
+    සම්බන්ධ වන්න. අපගේ වැඩමුළුවට සහභාගී වූ බහුතරයක් පවසන්නේ, 'එය මම මෙතෙක් සහභාගී
+    වූ හොඳම වෘත්තීය සංවර්ධනයයි. ' ඇත්ත වශයෙන්ම, [සහභාගී වන්නන්ගෙන් 90% ක් අපගේ වැඩසටහන
+    වෙනත් ගුරුවරුන්ට නිර්දේශ කරනු ඇත] ()!%{rec_url}
   csf_page_faq_question_05: CS මූලධර්ම ඉගැන්වීම සඳහා නිර්දේශිත වේලාව කුමක්ද?
   csf_page_faq_answer_05: සෑම CSF පා course මාලාවකටම මිනිත්තු 45 ක කාලයක් සඳහා නිර්මාණය
     කර ඇති පාඩම් 13-17 ඇතුළත් වේ. ගුරුවරයා විසින් නියම කරන ලද වේගයකින් පාඩමේ සිට පාඩම
@@ -1535,9 +1669,10 @@ si:
     නිර්මාණය කර ඇති අතර නිපුණතා ගොඩනැගීමේ පාඩම් සිසුන්ට තමන්ගේම වේගයකින් සම්පූර්ණ
     කළ හැකිය.
   csf_page_faq_question_06: CS මූලධර්ම සඳහා මට අවශ්ය ද්රව්ය මොනවාද?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: බොහෝ පාඩම් වල ක්රියාකාරකම් හරහා සිසුන්ට මග පෙන්වන අත්පත්රිකා
+    ඇත. මෙම සම්පත් ඩිජිටල් ලෙස මුද්රණය කළ හැකිය. සමහර පාඩම් සාමාන්ය පන්ති කාමර සැපයුම්
+    සහ හැසිරවීම සඳහා කැඳවුම් කරයි. [වැඩිදුර දැන ගැනීම සඳහා CSF විෂය නිර්දේශය වෙත පිවිසෙන්න]
+    ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1608,6 +1743,62 @@ si:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: අපගේ මෙහෙවර සඳහා අරමුදල් සපයන්න
+  donate_page_top_desc: සෑම පරිත්යාගයක්ම පරිගණක විද්යා අධ්යාපනයට ප්රවේශය පුළුල් කිරීම
+    සඳහා Code.org හි මෙහෙවර ඉන්ධන සපයයි. පරිත්යාග කිරීමට සහ වෙනසක් කිරීමට අපි ඔබට
+    ක්රම කිහිපයක් ඉදිරිපත් කරමු.
+  donate_page_fundraise_title: Code.org සඳහා අරමුදල් රැස්කිරීම
+  donate_page_fundraise_desc: Code.org සඳහා මුදල් රැස් කිරීමට උදව් කරන්න! සෑම පාසලකම
+    සෑම සිසුවෙකුටම පරිගණක විද්යාව ඉගෙන ගැනීමට අවස්ථාව තිබිය යුතුය.
+  donate_page_other_ways_title: දීමට වෙනත් ක්රම
+  donate_page_other_ways_desc: දායක වීමට විවිධ ක්රම ගවේෂණය කරන්න, සහ ඔබට වඩාත් ගැලපෙන
+    විකල්පය සොයා ගන්න. විශාල හෝ කුඩා සෑම අභිනයක්ම අපගේ මෙහෙවර ඉදිරියට ගෙන යයි.
+  donate_page_501c3: Code.org පොදු 501 (ඇ) (3) ලාභ නොලබන සංවිධානයක් ලෙස ලියාපදිංචි
+    කර ඇත. Code.org සඳහා දායකත්වය නීතියෙන් අවසර දී ඇති ප්රමාණයට බදු අඩු කළ හැකිය.
+    Code.org හි බදු හඳුනාගැනීමේ අංකය 46-0858543 වේ.
+  donate_page_donation_policy_title: අපගේ පරිත්යාග ප්රතිපත්තිය අවබෝධ කර ගැනීම
+  donate_page_donation_policy_desc: අපි හැසිරවිය යුතු ආකාරය සහ ඔබේ දායකත්වය වෙන් කරන
+    ආකාරය ගැන ඉගෙන ගන්න.
+  donate_tabs_tab_label_daf_direct: DAF සෘජු
+  donate_tabs_tab_label_amazon: ඇමසන්
+  donate_tabs_tab_label_bitpay: බිට්පේ
+  donate_tabs_tab_label_employee_match: සේවක තරගය
+  donate_tabs_daf_direct_title: DAF සෘජු හරහා පරිත්යාග කරන්න
+  donate_tabs_daf_direct_desc: විශ්වාසනීය පුණ්යාධාර, ෂ්වාබ් පුණ්යාධාර හෝ බීඑන්වයි
+    මෙලන් සමඟ පරිත්යාගශීලී උපදෙස් දෙන අරමුදල හරහා පරිත්යාග කර ඔබේ ප්රදාන නිර්දේශය
+    DAF සෘජු මාර්ගගත පෝරමය හරහා Code.org වෙත ඉදිරිපත් කරන්න.
+  donate_tabs_amazon_title: ඇමේසන් හරහා පරිත්යාග කරන්න
+  donate_tabs_amazon_desc: ඔබගේ ඇමසන් ගිණුම භාවිතා කර කෙලින්ම පරිත්යාග කරන්න. ක්ලික්
+    කිරීම් කිහිපයක් සමඟ, Code.org හි මෙහෙවරට බාධාවකින් තොරව දායක වන අතර පරිගණක විද්යා
+    අධ්යාපනයේ අනාගතය සවිබල ගැන්වීම.
+  donate_tabs_bitpay_title: බිට්පේ හරහා ක්රිප්ටෝ සමඟ පරිත්යාග කරන්න
+  donate_tabs_bitpay_desc: Cryptocurrency සමඟ ලබා දීමේ අනාගතය වැලඳ ගන්න. BitPay හරහා,
+    ඔබේ ඩිජිටල් මුදල් වලට පරිගණක විද්යා අධ්යාපනය පුළුල් කිරීමේ Code.org හි ප්රයත්නයන්
+    සඳහා සෘජුවම සහාය විය හැකිය.
+  help_page_top_heading: ඔබට උදව් කළ හැකි ආකාරය
+  help_page_top_desc: සෑම දරුවෙකුටම පරිගණක විද්යාව සෑම තැනකම ප්රවේශ විය හැකි බවට පත්
+    කිරීමේ අපගේ මෙහෙවරට සහාය වන්න. ඔබගේ උත්සාහයන් අනාගත නවෝත්පාදකයින් දිරිගැන්වීමට
+    සහ තාක්ෂණික අධ්යාපන පරතරය පියවා ගැනීමට අපට උපකාරී වේ.
+  help_page_top_subhead: Code.org වෙත පරිත්යාගයක් කරන්න
+  help_page_top_desc_02: සෑම සිසුවෙකුටම පරිගණක විද්යාව ඉගෙන ගැනීමට අවස්ථාව ලබා දීමට
+    අපි කටයුතු කරමු - මාර්ගගතව සහ පාසල්වල, අපි ස්ථිර පා courses මාලා පිහිටුවා ගුරුවරුන්
+    පුහුණු කරමු. ඔබ පරිත්යාග කරන සෑම ඩොලරයක් සඳහාම, එක් දරුවෙකු පරිගණක විද්යාවට හඳුන්වා
+    දෙනු ලැබේ.
+  help_page_partners_heading: හවුල්කරුවෙකු වන්න
+  help_page_partners_desc: Code.org දේශීය, තිරසාර විලාසිතාවකින් පරිගණක විද්යාව ව්යාප්ත
+    කිරීමට උපකාර කිරීම සඳහා හවුල්කරුවන් ලෙස වෙනත් ලාභ නොලබන සංවිධාන සමඟ කටයුතු කරයි.
+    අපගේ වැඩසටහන ගැන තව දැනගන්න.
+  help_page_volunteer_heading: පන්ති කාමරයක ස්වේච්ඡාවෙන් ඉදිරිපත් වීම
+  help_page_volunteer_desc: පැය සංග්රහයේ ඉගැන්වීමට හෝ දේශීය පන්ති කාමරයක ආගන්තුක කථිකයෙකු
+    වීමට ස්වේච්ඡාවෙන් ඉදිරිපත් වන්න. ඔබ අසල ඇති අවස්ථා ගැන ඇසීමට ලියාපදිංචි වන්න.
+  help_page_translate_heading: පරිවර්තනය කිරීමට අපට උදව් කරන්න
+  help_page_translate_desc: ස්වේච්ඡා සේවකයන් අපගේ නිබන්ධන භාෂා 45 කට අධික සංඛ්යාවකින්
+    පරිවර්තනය කර ඇත. ලොව පුරා සිසුන් සඳහා අපගේ නිබන්ධන පුළුල් කිරීමට දිගටම අපට උදව්
+    කරන්න!
+  help_page_speak_for_cs_heading: පරිගණක විද්යා අධ්යාපනය සඳහා කතා කරන්න
+  help_page_speak_for_cs_desc: එක්සත් ජනපදය පුරා Code.org හි උපදේශන කටයුතු සහ සියලුම
+    සිසුන් සඳහා පරිගණක විද්යාව පදනම් කර ගැනීම සඳහා රාජ්යයන් විසින් නිර්දේශ කරන ප්රතිපත්ති
+    දහය ගැන තව දැනගන්න. ප්ලස්, ඔබේ ප්රාන්තයේ වෙනසක් ඇති කරන්නේ කෙසේදැයි සොයා බලන්න.
   hoc_live: සජීවී Hour of Code වැඩසටහන
   hoc_live_sign_up_title: සජීවී Hour of Code වැඩසටහන සඳහා ලියාපදිංචි වෙන්න
   hoc_live_learn_title: සජීවී කේත පැය සමඟ ඉගෙන ගන්න
@@ -1684,8 +1875,8 @@ si:
   ai_activity_zooniverse: Zooniverse - ස්නැප්ෂොට් කන්ද සීබ්රා
   ai_activity_zooniverse_desc: රූපවල ඇති විවිධ සතුන් හඳුනා ගැනීමෙන් වඳවීමේ තර්ජනයට
     ලක්ව ඇති කේප් මවුන්ටන් සීබ්රා ආරක්ෂා කිරීමට උදව් වන්න.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
+    පා. මාලා සමඟ තවදුරටත් යන්න</a>
   codeorg_homepage_hoc2018_dance_heading: ඔබේම <span class="highlight-word">නර්තන&nbsp;පක්ෂය</span>සාදන්න
   codeorg_homepage_hoc2018_header_line1: Hour of Code ළඟදීම...
   codeorg_homepage_hoc2018_header_line2_desktop: ඔබ <span class="hoc2018-highlight-word">නිර්මාණය
@@ -1975,8 +2166,8 @@ si:
     හැඳින්වීමක් වන අතර, ඕනෑම කෙනෙකුට මූලික කරුණු ඉගෙන ගත හැකි බව පෙන්වීමට විනෝදජනක
     නිබන්ධන භාවිතා කරයි. මෙම බිම් මට්ටමේ ව්යාපාරයට ලොව පුරා හවුල්කරුවන් 400 කට අධික
     සංඛ්යාවක් සහ 200,000 අධ්යාපනඥයින්ගේ සහාය ලැබේ.
-  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
-    to plan an event for your class."
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[අපගේ කෙසේද මග පෙන්වීම කියවන්න] (%{howto_guide_url})
+    ඔබේ පන්තිය සඳහා සිදුවීමක් සැලසුම් කිරීමට."
   hoc_homepage_highlights_heading: කේත ඉස්මතු කිරීම් පැය
   hoc_homepage_organized_by: සංග්රහයේ පැය [Code.org](%{codeorg_url}) විසින් සංවිධානය
     කර ඇත.
@@ -2026,6 +2217,13 @@ si:
     හැකිද?
   signup_email_preference_privacy: "(අපගේ රහස්යතා ප්රතිපත්තිය බලන්න)"
   signup_email_preference_yes: ඔව්
+  signup_email_preference_yes_elementary: ඔව් - ප්රාථමික පාසල් සම්පත් පිළිබඳ යාවත්කාලීන
+    කිරීම් මට එවන්න
+  signup_email_preference_yes_middle: ඔව් - මැද පාසල් සම්පත් පිළිබඳ යාවත්කාලීන කිරීම්
+    මට එවන්න
+  signup_email_preference_yes_high: ඔව් - උසස් පාසැල් සම්පත් පිළිබඳ යාවත්කාලීන කිරීම්
+    මට එවන්න
+  signup_email_preference_yes_general: ඔව් - මට සාමාන්ය යාවත්කාලීන කිරීම් එවන්න
   signup_email_preference_no: නැහැ
   signup_email_preference_error: විද්යුත් තැපැල් මනාපය අවශ්ය වේ
   signup_multiple_event_warning: ඔබ විසින් වැඩසටහන් කීපයක් සංවිධානය කරන්නේ නම් සෑම
@@ -2185,11 +2383,12 @@ si:
     සුදුසුකම් මෙතනින් බලන්න. අප විසින් පරිගණක අවශ්‍ය නැතිව ඉගෙන ගත හැකි <a href='%{unplugged_url}'>පාඩම්
     කිහිපයක්ම</a> ඉදිරිපත් කර ඇත. ඔබේ පාසලට මෙම තාක්ශණික අවශ්‍යතා නොමැතිනම් මේවා බලන්න
     ඔබට පුලුවන්!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org නිබන්ධන සියලුම උපාංග සහ බ්රව්සර් මත ක්රියා
+    කරයි. Code.org හි නිබන්ධන තාක්ෂණික අවශ්යතා [here]පිළිබඳ වැඩි විස්තර ඔබට දැක ගත
+    හැකිය (/educate/it).%{codeorg_url}Code.org නොවන නිබන්ධන සඳහා තාක්ෂණික අවශ්යතා
+    [%{partner_url}/learn] (%{codeorg_url}/ඉගෙන ගන්න) නිබන්ධනයේ විශේෂිත විස්තරයෙන්
+    සොයාගත හැකිය. අපි ද ඉදිරිපත් අමතක කරන්න එපා [unplugged ක්රියාකාරකම්] (%{unplugged_url})
+    ඔබේ පාසල් නිබන්ධන පහසුකම් නොහැකි නම්!
   hoc_faq_need_computers_q: සෑම සභාගිවන්නෙකුටම පරිගණකයක් තිබිය යුතුද?
   hoc_faq_need_computers_a: පාඩම් පරිගණක, ස්මාට්ෆෝන් සහ ටැබ්ලට් වල වැඩ කරන අතර ඇතැම්
     පාඩම් මාලා සඳහා මෙම කිසිදු උපකරණයක් අවශ්‍යම නැහැ. ඔබට ඕනෑම තැනක සිට ඕනෑම දෙයකින්
@@ -2200,13 +2399,13 @@ si:
     එක්ව වැඩසටහනට එකතු විය හැක.<li><b>මෙවිට සියලු දෙනාට එක්ව වැඩසටහනට එකතු විය හැක</b>මේවා
     <a href='%{unplugged_url}'>මෙතනින්</a> බලාගත හැක</ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    නැත. පරිගණක, ස්මාර්ට්ෆෝන්, ටැබ්ලට් සහ පරිගණකයක් අවශ්ය නොවන සමහර පරිගණකවල වැඩ කරන පැය කේත නිබන්ධන අප සතුව ඇත! ඔබ කොතැනක සිටියත්, ඔබ සතුව ඇති ඕනෑම දෙයක් සමඟ සම්බන්ධ විය හැකිය.
 
-    _Here are a few options:_
+    _මෙන්න විකල්ප කිහිපයක්:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - ** යුගල වැඩ කරන්න.** [පර්යේෂණ පෙන්වයි] (%{pair_programming_research}) සිසුන් [යුගල ක්රමලේඛනය] සමඟ හොඳින් ඉගෙන ගනී (), පරිගණකයක් බෙදා ගැනීම සහ එකට වැඩ කිරීම.%{pair_programming_video}දෙගුණ කිරීමට ඔබේ සිසුන් දිරිමත් කරන්න.
+    - ** ප්රක්ෂේපිත තිරයක් භාවිතා කරන්න.** ඔබ වෙබ්-සම්බන්ධිත පරිගණකයක් සඳහා ප්රොජෙක්ටරයක් සහ තිරයක් තිබේ නම්, ඔබේ මුළු කණ්ඩායමම එකට Hour of Code එකක් කළ හැකිය. වීඩියෝ කොටස් එකට නරඹා ප්රහේලිකා විසඳීම හෝ ප්රශ්නවලට පිළිතුරු දීම හැරීම් ගන්න.
+    - ** unplugged.** අපි පිරිනමන්නෙමු [පරිගණකයක් අවශ්ය නොවන නිබන්ධන] () කිසිසේත්.%{unplugged_url}
   hoc_faq_international_q: මගේ රට වන්නේ <country>යි. මම ජාත්‍යන්තරව සහභාගී වන්නේ කෙසේද?
   hoc_faq_international_a: ඕනෑම අයෙකුට ලෝකේ ඕනෑම තැනක Hour of Code වැඩසටහනක් සංවිධානය
     කරන්න පුලුවන්. අන්තිම අවුරුද්දේ ලෝකේ පුරාම සිසුන් බොහෝ පිරිසක් මේ සඳහා සහභාගී
@@ -2256,10 +2455,10 @@ si:
     හැක. <a href='%{codeorg_url}/learn'>%{partner_url}මෙතනින්</a> ඔබට අයි පෑඩ් වල
     භාවිතා කල හැකි වෙනත් පාඩම් බලා ගත හැක. - Code.org, Tynker, Lightbot, හෝ CodeSpark
     වෙතින්.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: සීරීම් ටැබ්ලට් මත ක්රියාත්මක නොවේ. ඔබේ සිසුන් තරුණ නම්,
+    ඔවුන් ScratchJr iPad යෙදුම භාවිතා කළ හැකිය (මුල් පාඨකයින් සඳහා). ඔබ [%{partner_url}/learn]
+    (%{codeorg_url}/learn) පිළිබඳ නිබන්ධන දෙස බැලුවහොත්, ඔබට අයිපැඩ් මත වැඩ කරන වෙනත්
+    නිබන්ධන සොයාගත හැකිය - Code.org, Tinker, Lightbot, හෝ CodesPark වෙතින්.
   hoc_faq_count_hoc_q: Hour of Code ඔබ ගණන් කරනේ කෙසේද?
   hoc_faq_map_q: මාසටහන් කල ස්ථාන සිතියමේ පෙන්වන්නැතේ ඇයි?
   hoc_faq_map_a: අප ඔබේ වැඩසටහන මෙම සිතියමේ නොපෙන්වීම පිලිබඳ කණගාටු වන්නෙමු. දහස්
@@ -2492,10 +2691,10 @@ si:
   learn_banner_beyond: දිගටම ඉගෙන ගැනීමට අවශ්යද?  <a id='learn_banner_beyond'>පැයකට
     ඔබ්බට යන්න</a>
   learn_banner_beyond_markdown: දිගටම ඉගෙන ගැනීමට අවශ්යද? [පැයකට එහා යන්න] (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'ගුරුවරුන්: පැයක් <a id=''teacher_banner_host''>සත්කාරකත්වය</a>
+    හෝ කෙසේද යන්න මාර්ගෝපදේශය <a id=''teacher_banner_howto''>කියවන්න</a>'
+  learn_banner_teachers_markdown: 'ගුරුවරුන්: [පැයක් සත්කාරකත්වය] (%{host_url}) හෝ
+    [කෙසේද මාර්ගෝපදේශය කියවන්න] ()%{howto_url}'
   tutorial_dance2019_name: නර්තන පක්ෂය
   tutorial_danceparty_name: නර්තන පක්ෂය
   tutorial_chibitronics_name: 'චිබිට්රොනික්ස්: ආලෝකමත් කතාව'
@@ -5360,11 +5559,11 @@ si:
     ත්රාසජනක ගමනක් යාමට කේත කුට්ටි භාවිතා කරන්න.
   tutorial_minecraft-2016_longdescription: Minecraft ක්රීඩාවක් සාදන්න. කුකුළු මස්,
     බැටළුවන්, Creepers, පිල්ලියක් සහ තවත් බොහෝ දේ ඔබේම අනුවාදයන් සාදන්න.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “වොග්ලේගාරියෝ රොබෝ”
+    පූර්වගාමිඩෝ, ලොස් එස්ටූඩියන්ටෙස් ඩෙස්කුබ්රිර්&aacute;එන් කොමෝ ගයියාර්සේ ඩි මෝඩෝ
+    ටල් ඩි ලෙවාර් අ කබෝ ටෙස්ටෙට්ස් එස්පෙක් ෆිකාස් sin ser estas discutidas Previamente.&iacute;Este
+    segmento ense&ntilde;a los estudiantes ලා conexi&oacute;n entre s&iacute;mbolos
+    y acciones as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Pixie සමඟ කේත නිබන්ධනයේ පැය
   tutorial_play_longdescription: කතාවක් සාදන්න හෝ Play Lab සමඟ ක්රීඩාවක් කරන්න! සතුන්
     සාදන්න, මුහුදු කොල්ලකරුවන්, පිල්ලියන්ට, නින්ජාස්, තවත් බොහෝ චරිත චලනය කරන්න, ශබ්ද
@@ -12412,12 +12611,12 @@ si:
   tutorial_googlename _longdescription: නමක් තෝරාගෙන කේත භාවිතයෙන් වචනයේ අකුරු ජීවිතයට
     ගෙන එන්න. අන්වර්ථ නාමයක්, සුරතල් සතෙකුගේ නමක්, සතෙකු, ක්රීඩාවක්, ස්ථානයක් හෝ විනෝදාංශයක්
     තෝරන්න.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: සිල්ලා නගරය දියුණු වෙමින් පවතින අතර සංගීතය
+    වාතයේ පවතී. කටකතා එහි ඇත, සුප්රසිද්ධ ගාර්ගන්ටුවා බොට් මාර්ගගතව ඇති අතර අවසාන ටොක්සිබොට්ස්
+    නගරය අවහිර කිරීමෙන් කුණු කූඩයට යවයි.…ඔබේ cobot hoverboard පැහැරගැනීමට හා රෝදයට
+    සූදානම් ලබා, ගමන්, සහ ලකුණු ඔබ ආරම්භ කළ දේ අවසන්! ක්රීඩකයින් ඔවුන්ගේ කොබොට් හොවර්බොට්
+    වැඩසටහන්ගත කරන්නේ මංතීරු වෙනස් කිරීමට, බාධක වළක්වා ගැනීමට සහ මෙම රිද්මයානුකූල
+    විලාසිතාවේ ක්රීඩාවේදී බොහෝ ටොක්සිබෝට් ඉවත් කිරීමට ය.
   tutorial_nasachspacejam_longdescription: සැබවින්ම පාෂාණ සෞරග්රහ මණ්ඩලයක් සාදන්න!
     මෙම ස්වයං මඟ පෙන්වන ක්රියාකාරකම් තුළ සංගීතය, තාරකා විද්යාව සහ කේතීකරණය ගැන ඉගෙන
     ගන්න (කේතීකරණ අත්දැකීම් අවශ්ය නොවේ). සංගීතය සෑදීම සඳහා වැඩසටහන් ග්රහලෝක, ඔබේම
@@ -13233,6 +13432,335 @@ si:
     අතර පැහැදිලි සීමාවන් සඳහා වගකිව යුතු. අපගේ PTO (සති 5 ක් එකතුව, වසර අවසානයේ සති
     2 ක කාර්යාල වසා දැමීමක් ඇතුළත් වේ. ශීත Break තු විවේකය), ගිම්හානයේදී සිකුරාදා
     දිනවල අඩක් වැඩ කරන දිනය හෝ ගිම්හාන සිකුරාදා සහ වෙනත් ත්යාගශීලී ප්රතිලාභ.
+  careers_hero_title: වෘත්තීන්
+  careers_hero_description: Code.org යනු පාසල්වල පරිගණක විද්යාවට ප්රවේශය පුළුල් කිරීම
+    සඳහා කැපවී සිටින ලාභ නොලබන සංවිධානයකි. තරුණ කාන්තාවන් සහ අඩු නියෝජනය කරන සිසුන්
+    අතර සහභාගීත්වය වැඩි කිරීම කෙරෙහි අපි විශේෂයෙන් අවධානය යොමු කරමු.
+  careers_hero_description_under: ලෝකය වෙනස් කිරීමට අපට උදව් කරන්න, වරකට එක් සිසුවෙක්!
+  careers_vision_title: අපගේ දැක්ම
+  careers_vision_decsription: අපගේ දැක්ම වන්නේ සෑම පාසලකම සිටින සෑම සිසුවෙකුටම ඔවුන්ගේ
+    මූලික K-12 අධ්යාපනයේ කොටසක් ලෙස පරිගණක විද්යාව ඉගෙන ගැනීමට අවස්ථාව තිබිය යුතු
+    බවයි.
+  careers_vision_description_under: මෙම දැක්ම යථාර්ථයක් බවට පත් කිරීමට අපගේ කණ්ඩායමට
+    එක්වන්න!
+  careers_values_title: අපගේ මූලික සාරධර්ම
+  careers_values_first_column_text_1: පරිගණක විද්යාව සියලුම සිසුන් සඳහා පදනම් වන බව
+    අපි විශ්වාස කරමු
+  careers_values_first_column_text_2: අපි සමානාත්මතාව, ප්රවේශය සහ අවස්ථාව සඳහා කැපවී
+    සිටිමු
+  careers_values_first_column_text_3: සහයෝගී අධ්යාපන ප්රජාවක බලය ගැන අපි විශ්වාස කරමු
+  careers_values_second_column_text_1: අපි කඩිසර සහ ප්රතිපෝෂණයට ප්රතිචාර දක්වන්නෙමු
+  careers_values_second_column_text_2: අපි අඛණ්ඩතාව සහ විනිවිදභාවය සමඟ ක්රියා කරමු
+  careers_values_second_column_text_3: පුළුල් බලපෑමක් විශාල ලෙස සිතීම සහ සාකල්යයෙන්
+    ක්රියා කිරීම අවශ්ය බව අපි විශ්වාස කරමු
+  careers_approach_section_title: අපගේ එක්සත් කිරීමේ ප්රවේශය
+  careers_approach_section_description: K-12 පරිගණක විද්යා ව්යාපාරයේ Code.org හි ගෝලීය
+    භූමිකාව කළ හැක්කේ විවිධ හා බොහෝ විට බෙදී ඇති පාර්ශවකරුවන් හරහා ඒකාබද්ධ කිරීමේ
+    ප්රවේශයක් අප භාවිතා කරන බැවිනි. වැඩි ධ්රැවාන්තගත වීමක් අවස්ථාවේ දී, සිසුන් සඳහා
+    අවස්ථාව වැඩි කිරීමේ අදහස දේශපාලන වර්ණාවලිය හරහා ජනතාව එක්සත්. Code.org හි කණ්ඩායම්
+    සාමාජිකයින්, සිසුන්, ගුරුවරුන් සහ ආධාරකරුවන්ට විවිධාකාර හා වෙනස් දෘෂ්ටි කෝණයන්
+    ඇති අතර, ඔවුන් සියල්ලන්ම අපගේ මෙහෙවරට සාදරයෙන් පිළිගනිමු.
+  careers_aproach_section_description_link: ගැන වැඩිදුර කියවන්න සමගිය සඳහා Code.org
+    හි ප්රවේශය.
+  careers_approach_section_button: විවෘත භූමිකාවන් ගවේෂණය කරන්න
+  careers_principle_section_title: අපේ සංස්කෘතික මූලධර්ම
+  careers_principle_title_1: අපේ සිසුන් හා ගුරුවරුන් අපේ උතුරු ස්ටාර්
+  careers_principle_description_1: පරිගණක විද්යාව වඩාත්ම අවශ්ය අයට ගෙන ඒමට අපි අපගේ
+    තෑගි, කාලය සහ ශක්තිය භාවිතා කරමු. අපව එක්සත් කරන්නේ මෙයයි. මෙය අපගේ වැදගත්ම මූලධර්මයයි.
+  careers_principle_title_2: අපි එකිනෙකාට ගැටලු සහ කරුණාවන්ත මත වෙහෙස මහන්සි වී සිටිමු
+  careers_principle_description_2: ගෝලීය වශයෙන් සිසුන්ට සහ ගුරුවරුන්ට පරිගණක විද්යාව
+    ගෙන ඒමේ අභියෝගය කෙරෙහි අපි අවධානයෙන් සිටිමු. අප සෑම කෙනෙකුම අපගේ මෙහෙවරට සහයෝගය
+    දැක්වීමට සහ අප වැරදි කරන විට කරුණාව ලබා දීමට අපගේ අභිප්රායන් හොඳම දේ ගෙන එන බව
+    අපි හඳුනා ගනිමු.
+  careers_principle_title_3: විසඳුම් සෙවීම මිස සම්මුතියක් නොවේ
+  careers_principle_description_3: අප උත්සාහ කරන ප්රති come ල සඳහා කුඩා පියවර හෝ විශාල
+    පිම්මක් ගත්තද තීරණ අප සතුව ඇත. අයිතිකරුවන් ඉල්ලා සිටින අතර සවන් දෙන්න, නමුත් ප්රතිපෝෂණ
+    මගින් අංශභාග නොකෙරේ. අපි එකඟ නොවුනත් අයිතිකරුවන්ගේ තීරණ අපි පිළිගෙන සහාය දෙමු.
+  careers_principle_title_4: ආරම්භකයාගේ මානසිකත්වය අනුගමනය කරන්න
+  careers_principle_description_4: අපි ප්රති come ල ගැන උමතු වන අතර ඒවා ධාවනය කිරීම
+    කෙරෙහි අපගේ ක්රියාවන් අවධානය යොමු කරමු. අපි විස්තර වලට කිමිදෙනවා වෙහෙස මහන්සි
+    වී වැඩ කරන්නෙමු. අපි අවංක, ක්රියාශීලී බවට හේත්තු, අපි මාර්ගයේ ඉන්නේ නම් දිගින්
+    දිගටම තක්සේරු; අපි හැරීම බිය නැත. ලෝකය වෙනස් කිරීම එය ඉල්ලා සිටී.
+  careers_principle_title_5: ශූර නව්යකරණය
+  careers_principle_description_5: අපි විශාල යැයි සිතමු, අවදානම් ගන්න, අසමත් වීමට
+    බිය නොවෙමු. අපගේ අරමුණු ඉටු කර ගැනීම සඳහා වඩා හොඳ ක්රමයක් අප දුටුවහොත්, අපි එය
+    කරන අතර අන් අයද එසේ කිරීමට දිරිමත් කරමු. වර්ධක විසඳුම් ලෝකය වෙනස් කිරීමට උපකාරී
+    නොවේ.
+  careers_principle_title_6: කරුණු නැංගුරම් තීරණ
+  careers_principle_description_6: අපගේ ව්යාපාරය අවබෝධ කර ගැනීමට, අපේක්ෂිත ප්රති come
+    ල ස්ථාපිත කිරීමට සහ තීරණ ගැනීමට මග පෙන්වීමට අපි දත්ත භාවිතා කරමු. ක්රියා කිරීම
+    සඳහා අපට අවශ්ය දත්ත සැමවිටම නොමැති බව හඳුනා ගැනීමෙන් අපි මෙය සමතුලිත කරමු.
+  careers_principle_title_7: වර්ධන මානසිකත්වය අපට ඉන්ධන ලබා දෙයි
+  careers_principle_description_7: අපි සෑම අභියෝගයක්ම කුතුහලයෙන් යුතුව ළඟා වෙමු. අපි
+    කාරුණිකව හා අපේක්ෂාකාරීව ප්රතිචාර ලබා දෙන්නෙමු; අපට ප්රතිපෝෂණය විවෘතව ලැබේ. අපගේ
+    වැරදි වලින් අපි ඉගෙන ගන්නා අතර අපගේ කාර්යයේ ප්රවේශය හා බලපෑම වැඩි කිරීමට ක්රම
+    සොයමු.
+  careers_balance_section_title: අපගේ වැඩ-ජීවිත සමතුලිතතාවය
+  careers_balance_section_description: අපි අපගේ සේවකයින් ගැන සැලකිලිමත් වන අතර රැකියාවේදී
+    සහ රැකියාවෙන් පිටත සෑම කෙනෙකුටම සහාය වීමට කැපවී සිටිමු. සෑම කෙනෙකුටම විවිධ අවශ්යතා
+    ඇති බව අපි දනිමු, ඒ නිසා ඔබ (සහ ඔබේ පවුල) රැකබලා ගන්නා බවට සහතික වන සාකල්ය ප්රතිලාභ
+    පැකේජයක් අපි ලබා දෙන්නෙමු.
+  careers_balance_first_column_text_1: ඔබට සහ ඔබේ පවුලේ අයට සෞඛ්ය ප්රතිලාභ
+  careers_balance_first_column_text_2: ත්යාගශීලී ගෙවන කාලය සහ නිවාඩු සැලසුම්
+  careers_balance_second_column_text_1: නම්යශීලී, ආධාරක වැඩ පරිසරය
+  careers_balance_second_column_text_2: වර්ධනය සහ වෘත්තීය ඉගෙනුම් අවස්ථා
+  careers_openroles_section_title: විවෘත භූමිකාවන්
+  careers_openroles_section_description: Code.org සියැටල් හි පිහිටා ඇත, නමුත් අපගේ
+    කණ්ඩායම් සාමාජිකයින් බොහෝ දෙනෙක් දුරස්ථ ය. දුරස්ථ අපේක්ෂකයින් සාදරයෙන් පිළිගන්නා
+    අතර අයදුම් කිරීමට දිරිමත් කරනු ලැබේ.
+  careers_more_info_text: Code.org පිළිබඳ වැඩි විස්තර සඳහා, අපගේ බලන්න [නිතර අසනු
+    ලබන ප්රශ්න] (%{support_url}) හෝ [අපගේ මෙහෙවරට සම්බන්ධ වීමට වෙනත් ක්රම] () ගැන
+    ඉගෙන ගන්න.%{help_url}
+  careers_approach_section_title2: විවිධත්වය සඳහා අපගේ ප්රවේශය
+  careers_approach_section_description_1: Code.org හි අපි විවිධ දෘෂ්ටිකෝණයන්, අදහස්
+    සහ පසුබිම් වැලඳ ගනිමු. සියලුම සේවකයින්ට සහ අයදුම්කරුවන්ට සමාන අවස්ථාවක් ලබා දීමට
+    අපි කැපවී සිටිමු. ජාතිය, ආගම, වර්ණය, ජාතික සම්භවය, ස්ත්රී පුරුෂ භාවය, ලිංගික දිශානතිය,
+    වයස, විවාහක තත්ත්වය, ප්රවීණ තත්ත්වය හෝ ආබාධිත (මානසික හා ශාරීරික) තත්ත්වය මත පදනම්ව
+    අපි වෙනස්කම් නොකරමු.
+  careers_approach_section_description_2: ආබාධ සහිත පුද්ගලයින්ට රැකියා අයදුම්පත හෝ
+    සම්මුඛ පරීක්ෂණ ක්රියාවලියට සහභාගී වීමට, අත්යවශ්ය රැකියා කාර්යයන් ඉටු කිරීමට සහ
+    රැකියාවේ වෙනත් ප්රතිලාභ සහ වරප්රසාද ලබා ගැනීමට සාධාරණ නවාතැන් පහසුකම් ලබා දෙන
+    බවට අපි සහතික වෙමු. ඔබට ආබාධිතභාවයකට අදාළ පුද්ගල අවශ්යතා තිබේ නම්, කරුණාකර accommodations@code.org
+    වෙත ළඟා වන්න.
+  csa_ai_page_hero_title: මෘදුකාංග ඉංජිනේරු සහ පරිගණක දැක්ම
+  csa_ai_page_hero_description: 'පරිච්ඡේද දෙකක පශ්චාත්-ඒපී CSA මොඩියුලය උසස් පාසැල්
+    සිසුන්ට GitHub සහ GitHub Copilot ඇතුළු වෘත්තීය මෘදුකාංග සංවර්ධන මෙවලම් සමඟ අත්දැකීම්
+    ලබා දෙන අතර පරිගණක දර්ශන වැඩසටහනක් සංවර්ධනය කිරීම සඳහා ඔවුන්ට සැබෑ ලෝක කුසලතා
+    ලබා දෙයි. '
+  csa_ai_page_video_section_title: Code.org ක්රමලේඛන පරිසරයන් ලෝකයෙන් ඔබ්බට
+  csa_ai_page_video_section_li_1: AI සහ එහි යෙදුම් ගැන ඉගෙන ගන්න
+  csa_ai_page_video_section_li_2: වෘත්තීය මෘදුකාංග සංවර්ධන මෙවලම් සමඟ අත්දැකීම්
+  csa_ai_page_video_section_li_3: කර්මාන්ත සම්මත භාවිතයන් ඉගෙන ගන්න
+  csa_ai_page_video_section_li_4: විවේචනාත්මක චින්තනය වගා
+  csa_ai_page_programming_tools: 'ක්රමලේඛන මෙවලම්: ගිතුබ්, ගිතුබ් කොපිලොට්, වීඑස්කෝඩ්,
+    ටෙන්සෝෆ්ලෝ '
+  csa_ai_page_professional_learning: කිසිවක් නැත
+  csa_ai_page_curriculum_topics: 'මාතෘකා: වැඩසටහන්කරණය, දත්ත, චිත්ර සහ නිර්මාණ, ක්රීඩා
+    සහ සජීවිකරණය'
+  csa_ai_page_curriculum_accessibility_features: විස්තර සඳහා නිතර අසන ප්රශ්න කොටස
+    බලන්න
+  csa_ai_page_curriculum_languages_support: English
+  csa_ai_page_article_title_1: කොපිලොට් සමඟ ගොඩනඟන්න
+  csa_ai_page_article_description_1: පවත්නා කේතය පැහැදිලි කිරීමට, දෝෂ සොයා ගැනීමට
+    සහ නිවැරදි කිරීමට සහ නව ගැටළු වලට විසඳුම් ජනනය කිරීමට යුගල ක්රමලේඛකයෙකු ලෙස GitHub
+    Copilot භාවිතා කරන්නේ කෙසේදැයි සිසුන් ඉගෙන ගනී.
+  csa_ai_page_article_link_1: කොපිලොට් ගැන තව දැනගන්න
+  csa_ai_page_article_title_2: ඔබේම AI ආකෘතියක් සාදන්න
+  csa_ai_page_article_description_2: වෙබ් කැමරාවක් සාදන රූප සහ අභිනයන් හඳුනා ගැනීමට
+    ඉගැන්විය හැකි යන්ත්රය භාවිතා කරමින් සිසුන් තමන්ගේම AI ආකෘති පුහුණු කරන අතර පරිශීලකයින්
+    යෙදුම් සමඟ අන්තර් ක්රියා කරන ආකාරය පරිගණක දර්ශනය බලපාන්නේ කෙසේද යන්න සලකා බලන්න.
+  csa_ai_page_article_link_2: පාඩම් සැලැස්ම ගවේෂණය කරන්න
+  csa_ai_page_article_title_3: පරිගණක දර්ශනය ගවේෂණය කරන්න
+  csa_ai_page_article_description_3: සිසුන්ට ඉගැන්විය හැකි යන්ත්රය සමඟ නිර්මාණය කරන
+    ලද AI මාදිලි ජාවා යෙදුමකට ක්රියාත්මක කරයි, GitHub Copilot භාවිතා කරමින් විවිධ
+    යෙදවුම් සමඟ වැඩ කිරීම සඳහා පවතින යෙදුම් අනුවාදයන් වෙනස් කිරීමට ඔවුන්ට උදව් කරයි.
+  csa_ai_page_article_link_3: උදාහරණයක් බලන්න
+  csa_ai_page_learn_more_section_title: කෘතිම බුද්ධිය ගැන තව දැනගන්න
+  csa_ai_page_learn_more_title: ගුරුවරුන් සඳහා AI 101 ගවේෂණය කරන්න
+  csa_ai_page_learn_more_description: ගුරුවරුන් සඳහා අපගේ පුළුල් මාර්ගගත ඉගෙනුම් මාලාව
+    සමඟ කෘතිම බුද්ධියේ (AI) සහ අධ්යාපනයේ එහි පරිවර්තනීය විභවය සොයා ගන්න.
+  csa_ai_page_learn_more_link: ගුරු මාලාව සඳහා AI 101 නරඹන්න
+  csa_ai_page_faq_question_01: මෙම මොඩියුලය සඳහා පූර්වාවශ්යතා මොනවාද?
+  csa_ai_page_faq_answer_01_01: 'මෙම මොඩියුලය තුළට කිමිදීමට පෙර සිසුන්ට ජාවා පිළිබඳ
+    ප්රවේශ මට්ටමේ දැනුමක් තිබිය යුතුය. විශේෂයෙන්, ඔවුන් ග්රහණය කර ගත යුතුය:'
+  csa_ai_page_faq_answer_01_list_01: "** පන්ති සහ වස්තූන්: ** සිසුන් පන්ති නිර්වචනය
+    හා භාවිතා කිරීමට මෙන්ම වස්තූන් නිර්මාණය හා හැසිරවීමට හුරු විය යුතුය."
+  csa_ai_page_faq_answer_01_list_02: "** ලිවීමේ හා කැඳවීමේ ක්රම: ** සිසුන්ට පන්තියක්
+    තුළ ක්රම නිර්වචනය කිරීමට, ක්රම පරාමිතීන් සහ ආපසු වර්ග තේරුම් ගැනීමට සහ වස්තූන්
+    හෝ වෙනත් ක්රම වලින් ඇමතුම් ක්රම ලබා ගත හැකිය."
+  csa_ai_page_faq_answer_01_list_03: "** 1D අරා සහ අරා ලැයිස්තු: ** ඒවා හරහා නැවත
+    ක්රියාත්මක කිරීම ඇතුළුව ඒක මාන අරා සහ අරා ලැයිස්තු ප්රකාශ කිරීම, ආරම්භ කිරීම සහ
+    හැසිරවීම පිළිබඳ ප්රවීණ විය යුතුය."
+  csa_ai_page_faq_answer_01_list_04: "** තේරීම සහ පුනරාවර්තනය: ** කොන්දේසි සහිත ප්රකාශ
+    සහ වළළු වල ශක්තිමත් පදනමක් ඉතා වැදගත් වේ."
+  csa_ai_page_faq_question_01_02: ඉතා මැනවින්, පුද්ගල නාශක පරිගණක විද්යා A හෝ ඒ හා
+    සමාන ගැඹුර හා දෘඪ පාඨමාලාවක් සම්පූර්ණ කළ සිසුන් මෙම මොඩියුලය සඳහා හොඳින් සූදානම්
+    වනු ඇත.
+  csa_ai_page_faq_question_02: මෙම මොඩියුලය සඳහා අවශ්ය මෘදුකාංග ස්ථාපනය කරන්නේ කෙසේද?
+  csa_ai_page_faq_answer_02_01: මෙම මොඩියුලය අද්විතීය වන්නේ එයට Code.org විද්යාගාර
+    සහ මෙවලම් වලට වඩා තෙවන පාර්ශවීය මෘදුකාංග භාවිතා කිරීමයි. [මෘදුකාංගය ස්ථාපනය කිරීම
+    ගැන වැඩිදුර කියවන්න මෙහි] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: මෙම මොඩියුලය උගන්වන අතරතුර ප්රවේශ්යතා අවශ්යතා සඳහා
+    සහාය වන්නේ කෙසේද?
+  csa_ai_page_faq_answer_03_01: ඇතුළත් ඉගෙනුම් පරිසරයක් සඳහා ප්රවේශවීමේ අවශ්යතා සපුරාලීම
+    ඉතා වැදගත් වේ. [මෙම මොඩියුලයේ භාවිතා කරන මෘදුකාංගයේ ප්රවේශ්යතා ලක්ෂණ ගැන වැඩිදුර
+    කියවන්න] (%{install_url}).
+  csa_ai_page_faq_question_04: Chromebooks හි VS කේතය භාවිතා කරන්නේ කෙසේද?
+  csa_ai_page_faq_answer_04: Chromebook මත VS කේතය භාවිතා කිරීම වඩාත් සරල වී ඇත, විශේෂයෙන්
+    නව ක්රෝම්බුක් මාදිලිවල ලිනක්ස් යෙදුම් ධාවනය කිරීමේ හැකියාව ඇත. [Chromebooks හි
+    VS කේතය සැකසීම ගැන වැඩිදුර කියවන්න මෙහි] ().%{chromebook_url}
+  csa_ai_page_faq_question_05: මෙම මොඩියුලය සඳහා වෘත්තීය සංවර්ධනය ලබා ගන්නේ කෙසේද?
+  csa_ai_page_faq_answer_05: මෙම පා. මාලාව සඳහා දැනට නිශ්චිත වෘත්තීය සංවර්ධනයක් නොමැත.
+    ඔබේ පන්ති කාමරයේ කෘතිම බුද්ධිය වෙත ළඟා වන්නේ කෙසේද යන්න තේරුම් ගැනීමට ඔබ බලාපොරොත්තු
+    වන්නේ නම් ඔබට [ගුරුවරුන් සඳහා AI 101 ගවේෂණය කරන්න] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: මෙම මොඩියුලය ඉගැන්වීම සඳහා නිර්දේශිත වේලාව කුමක්ද?
+  csa_ai_page_faq_answer_06_01: මෘදුකාංග ඉංජිනේරු සහ පරිගණක දර්ශන මොඩියුලය සංක්ෂිප්ත
+    කාල රාමුවක් තුළ පුළුල් ඉගෙනීමක් ලබා දීම සඳහා කල්පනාකාරීව ව්යුහගත කර ඇත. සම්පූර්ණ
+    මොඩියුලය සැලසුම් කර ඇත්තේ සති 2 ක උපදෙස්** දක්වා විහිදෙන ලෙසයි. බොහෝ පාඩම් සකස්
+    කර ඇත්තේ **45 මිනිත්තුවට** සඳහා වන අතර සිසුන් ජාවා ව්යාපෘති සංවර්ධනය පිළිබඳව සොයා
+    බැලීමට පාඩම් මිනිත්තු 90 ක් සඳහා නිර්මාණය කර ඇත. මෙම දීර් time කාලය සිසුන්ට තේරුම්
+    ගැනීමට ප්රමාණවත් අවස්ථාවක් ඇති බව සහතික කරයි, ක්රියාත්මක කරන්න, ඔවුන් වැඩ කරන
+    විට දෝශ නිරාකරණය කරන්න.
+  csa_ai_page_faq_answer_06_02: මොඩියුලයේ ව්යුහයට හිතාමතාම නම්යශීලී බවක් ද ඇත. පන්ති
+    කාමර ගතිකතාවයන්, ශිෂ්ය ක්රියාකාරිත්වය සහ එක් එක් මාතෘකාව ගවේෂණය කිරීමට ඔබ කැමති
+    ගැඹුර මත පදනම්ව, ඔබට කාල සීමාව වෙනස් කළ හැකිය. උදාහරණයක් ලෙස, මිනිත්තු 45 ක පාඩමක්
+    ලෙස නිර්මාණය කර ඇති Intro to Copilot පාඩම, GitHub Copilot සහ ChatGPT වැනි විශාල
+    භාෂා ආකෘති සහ මෙවලම් කෙතරම් ගැඹුරට කිමිදීමට ඔබට අවශ්ය නම් මිනිත්තු 90 ක් දක්වා
+    පුළුල් කළ හැකිය.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: අනුමත ගුරු ගිණුමක් සමඟ, ඔබට නිල් පැහැයෙන් පිළිතුරු යතුරු
+    සොයාගත හැකිය “ගුරු” මාර්ගගත පාඩම් සහ ක්රියාකාරකම් වල පෙන්වන පැනලය පමණි. ඔබට අනුමත
+    ගුරු ගිණුමක් අවශ්ය නම්, ඔබට [මෙම පෝරමය] (පිළිතුරු යතුරු ආදිය) හරහා ආරක්ෂිත ගුරු
+    පමණක් ද්රව්ය (පිළිතුරු යතුරු ආදිය) වෙත ප්රවේශය සඳහා ඉල්ලුම් කළ හැකිය.%{form_url}ඔබගේ
+    ගිණුම සත්යාපනය කිරීමට ව්යාපාරික දින 3-5 ක් ගතවනු ඇති බව කරුණාකර මතක තබා ගන්න.
+  csa_ai_page_faq_question_08: මෙම මොඩියුලය ප්රමිතීන්ට සිතියම් ගත කර තිබේද?
+  csa_ai_page_faq_answer_08: ඔව්, මෘදුකාංග ඉංජිනේරු සහ පරිගණක විෂන් විෂය මාලාව [CSTA
+    K-12 ප්රමිති] (%{csta_k12_url}) සහ AI සඳහා [K-12 මාර්ගෝපදේශ] () සිතියම් ගත කර
+    ඇත.%{k12_url}
+  csa_ai_page_faq_question_09: මෙම මොඩියුලය ඉගැන්වීමට කොපමණ මුදලක් වැය වේද?
+  csa_ai_page_faq_answer_09_01: අපගේ විෂය මාලාව සහ වේදිකාව ඕනෑම කෙනෙකුට, ඕනෑම තැනක,
+    ඉගැන්වීමට [වියදමකින් තොරව] (%{no_cost_url}) ලබා ගත හැකිය!
+  csa_ai_page_faq_answer_09_02: මීට අමතරව, මෙම මොඩියුලයේ භාවිතා කරන මෘදුකාංග සහ මෙවලම්
+    නොමිලේ වේ. GitHub Copilot සත්යාපිත [teachers]() සහ ()%{teachers_url}සඳහා නොමිලේ
+    වේ. [students]%{students_url}
+  csa_ai_page_faq_question_10: මෘදුකාංග ස්ථාපනය ක්රියාත්මක නොවන්නේ නම් මා කුමක් කළ
+    යුතුද?
+  csa_ai_page_faq_answer_10: මෘදුකාංග ස්ථාපනය කිරීමේදී ගැටළු වලට මුහුණ දීම පොදු විය
+    හැකි නමුත් ඒවා නිරාකරණය කර විසඳීමට ඔබට අනුගමනය කළ හැකි ක්රමානුකූල පියවර තිබේ.
+    [දෝශ නිරාකරණ ඉඟි කිහිපයක් මෙතැනින් බලන්න] ().%{troubleshooting_url}
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'අපගේ මෘදුකාංග ඉංජිනේරු සහ පරිගණක දැක්ම විෂය මාලාව
+    නිර්මාණය කර ඇත්තේ අපගේ විෂය මාලා වටිනාකම් මනසේ තබාගෙන ය. මෙම විෂය මාලාව නිර්මාණය
+    කිරීමට පහත සඳහන් අරමුණු මඟ පෙන්වන ලදී:'
+  csa_ai_page_faq_answer_11_list_01: "** ඉලක්කය 1: ** කේතය ජනනය කිරීමට, නිදොස් කිරීමට
+    සහ සංස්කරණය කිරීමට AI මෙවලම් භාවිතා කරන්න."
+  csa_ai_page_faq_answer_11_list_02: "** ඉලක්කය 2: ** ජාවා විද්යාගාරයේ සිට තථ්ය-ලෝක
+    මෙවලම් වෙත සංක්රමණය වීම."
+  csa_ai_page_faq_answer_11_list_03: "** ඉලක්කය 3: ** AI ආකෘති පුහුණු කර වැඩසටහන්
+    සමඟ ඒකාබද්ධ කරන ආකාරය පිළිබඳ අවබෝධය ගැඹුරු කරන්න."
+  csa_ai_page_faq_answer_11_02: අපගේ කාර්යයට මඟ පෙන්වූ සාරධර්ම පිළිබඳ වැඩි විස්තර
+    සඳහා කරුණාකර අපගේ [විෂයමාලා අගයන්] බලන්න (%{curriculum_values_url}).
+  video_library_page_main_title: අධ්යාපනික කෙටි වීඩියෝ
+  video_library_page_hero_description: Code.org හි වැඩෙන අධ්යාපනික වීඩියෝ පුස්තකාලය
+    ලොව පුරා, මාර්ගගතව හෝ පන්ති කාමරවල අධ්යාපන ators යින් විසින් නැවත භාවිතා කිරීම
+    සඳහා ලබා ගත හැකිය. අපගේ අරමුණ වන්නේ අපගේ ම විෂය මාලාව ගේ ළඟා ඔබ්බට අපගේ උත්සාහයන්
+    වැඩි කිරීමට ය.
+  video_library_page_title_ai_works: AI ක්රියා කරන ආකාරය
+  video_library_page_description_ai_works: කෘතිම බුද්ධිය ක්රියා කරන ආකාරය සහ එය වැදගත්
+    වන්නේ ඇයිද යන්න මෙම කෙටි වීඩියෝ මාලාව ඔබට හඳුන්වා දෙනු ඇත. ස්නායුක ජාල ගැන ඉගෙන
+    ගන්න, හෝ AI ඉගෙන ගන්නා ආකාරය සහ ඇල්ගොරිතම නැඹුරුව සහ AI තීරණ ගැනීමේ ආචාර ධර්ම
+    වැනි ගැටළු පිළිබඳව සොයා බලන්න.
+  video_library_page_title_computers_work: පරිගණක ක්රියා කරන ආකාරය
+  video_library_page_description_computers_work: පරිගණකයක් පරිගණකයක් බවට පත් කරන්නේ
+    කුමක් ද, ඩිජිටල් තොරතුරු 1s සහ 0s වලින් නිරූපණය වන්නේ කෙසේද, ඩිජිටල් තොරතුරු හැසිරවීමට
+    පරිගණක පරිපථ ක්රියා කරන ආකාරය සහ මධ්යම සැකසුම් ඒකකය (CPU) සහ මෙහෙයුම් පද්ධතිය
+    පරිගණකයක යෙදවුම්, ප්රතිදානයන්, මතකය සහ දෘඩාංග පාලනය කරන්නේ කෙසේද යන්න පැහැදිලි
+    කරයි.
+  video_library_page_title_internet_works: අන්තර්ජාලය ක්රියා කරන ආකාරය
+  video_library_page_description_internet_works: TCP/IP හි නව නිපැයුම්කරු වන වින්ට්
+    සර්ෆ්, HTTP සහ HTML පැහැදිලි කිරීම සඳහා Tumblr හි නිර්මාතෘ ඩේවිඩ් කාප්, SSL සහ
+    සයිබර් ආරක්ෂණ පැහැදිලි කිරීම සඳහා ගූගල් ආරක්ෂක කුමරිය සහ මයික්රොසොෆ්ට්, Spotify
+    සහ Symantec හි ඉංජිනේරුවන්. අන්තර්ජාලය ක්රියා කරන ආකාරය පැහැදිලි කරන මෙම කෙටි
+    වීඩියෝ මාලාව.
+  video_library_page_title_not_hacked: හැක් කර නොගන්නේ කෙසේද
+  video_library_page_description_not_hacked: අන්තර්ජාලය විවෘතව ඇත, එබැවින් එය ආරක්ෂා
+    කර ඇත්නම් මිස එය සිදුවන සෑම දෙයක්ම දැකිය හැකිය. නූතන රටවල, වෙනත් ඕනෑම අපරාධයකට
+    වඩා අනවසරයෙන් ඇතුළුවීම ගැන මිනිසුන් කනස්සල්ලට පත්ව සිටිති. ඇයි? අන්තර්ජාලයේ ඇති
+    සෑම පරිගණකයක්ම හෝ දුරකථනයක්ම අපරාධකරුවන්, ත්රස්තවාදීන් හෝ රාජ්ය නළුවන් විසින්
+    අවදානම් සඳහා නිරන්තරයෙන් පරීක්ෂා කරනු ලැබේ. ඔබ පරෙස්සම් නොවන්නේ නම්, යමෙකුට ඔබගේ
+    උපාංගය හෝ ගිණුම් හැක් කළ හැකි අතර ඔබේ අනන්යතාවය හෝ මුදල් සොරකම් කළ හැකිය.
+  video_library_page_title_blockchain: බ්ලොක්චේන් ක්රියා කරන ආකාරය
+  video_library_page_description_blockchain: Coinbase සමඟ එක්ව සාදන ලද, මෙම ලිපි මාලාවේ
+    කර්මාන්ත විශේෂ experts යන් දක්වයි සහ බ්ලොක්චේන් යනු කුමක්ද, එය ක්රියා කරන ආකාරය
+    සහ එහි විභව සමාජ ඇඟවුම් ගවේෂණය කිරීමෙන් මෙම තාක්ෂණය demystify කිරීම අරමුණු කරයි
+    - හොඳ සහ නරක යන දෙකම.
+  video_library_page_title_careers: CS දී වෘත්තීන්
+  video_library_page_description_careers: පරිගණක විද්යාව හා තාක්ෂණය වෘත්තීන් විනෝදාත්මක
+    හා ප්රතිලාභදායක විය හැක. නමුත් මෙම ක්ෂේත්රවල වැඩ කරන පුද්ගලයෙකු සැබවින්ම කරන්නේ
+    කුමක්ද? රැකියා සහ සමාගම් විශාල ප්රමාණයක් සමඟ, මෙම ප්රශ්නයට එක් පිළිතුරක් පමණක්
+    නොමැත. නිර්මාණාත්මක ආකාරවලින් විශාල ගැටළු වලට මුහුණ දෙන පුද්ගලයින් කිහිප දෙනෙකු
+    හමුවීමට පහත වීඩියෝ නරඹන්න.
+  video_library_page_title_inspirational: දේවානුභාවයෙන්
+  video_library_page_description_inspirational: අපේ ලෝකයේ පරිගණක විද්යාව වෙනස් වන්නේ
+    කුමක් ද? හැම දෙයක්ම? එය කවුද? හැමෝම! ඔබව පෙලඹවීමට සහ පෙළඹවීමට මෙම වීඩියෝ නරඹන්න.
+  video_library_page_footer_description: වෙනත් දෙයක් සොයනවාද? අපගේ යූ ටියුබ් නාලිකාවේ
+    විශිෂ්ට වීඩියෝ රාශියක් අප සතුව ඇත.
+  video_library_page_footer_cta: යූ ටියුබ් හි සියලුම Code.org වීඩියෝ ගවේෂණය කරන්න
+  video_library_page_computer_work_video_title_1: පරිගණක ක්රියා කරන ආකාරය හඳුන්වා
+    දීම
+  video_library_page_computer_work_video_title_2: ද්විමය හා දත්ත
+  video_library_page_computer_work_video_title_3: CPU, මතකය, ආදානය සහ ප්රතිදානය
+  video_library_page_computer_work_video_title_4: පරිගණකයක්, පරිගණකයක් බවට පත් කරන්නේ
+    කුමක්ද?
+  video_library_page_computer_work_video_title_5: තාර්කික පරිපථ
+  video_library_page_computer_work_video_title_6: දෘඩාංග හා මෘදුකාංග
+  video_library_page_internet_work_video_title_1: අන්තර්ජාලය යනු කුමක්ද?
+  video_library_page_internet_work_video_title_2: 'අන්තර්ජාලය: IP ලිපින සහ DNS'
+  video_library_page_internet_work_video_title_3: 'අන්තර්ජාලය: HTTP සහ HTML'
+  video_library_page_internet_work_video_title_4: 'අන්තර්ජාලය: සයිබර් ආරක්ෂණ සහ අපරාධ'
+  video_library_page_internet_work_video_title_5: 'අන්තර්ජාලය: වයර්, කේබල්ස් සහ වයිෆයි'
+  video_library_page_internet_work_video_title_6: 'අන්තර්ජාලය: පැකට්, මාර්ගගත කිරීම
+    සහ විශ්වසනීයත්වය'
+  video_library_page_internet_work_video_title_7: 'අන්තර්ජාලය: ගුප්ත කේතනය සහ පොදු
+    යතුරු'
+  video_library_page_internet_work_video_title_8: 'අන්තර්ජාලය: සෙවීම ක්රියා කරන්නේ
+    කෙසේද'
+  video_library_page_cs_video_title_1: මගේ නම ජෙරොම් වන අතර මම මීව් වුල්ෆ් හි නිර්මාණ
+    තාක්ෂණ විද්යා ologist යෙක්
+  video_library_page_cs_video_title_2: මගේ නම Nikesha වන අතර මම නාසා ආයතනයේ ගගන ඉංජිනේරු
+    ඉන්නේ
+  video_library_page_cs_video_title_3: මගේ නම බ්රිනා වන අතර මම ඉන්ස්ටග්රෑම් හි මෘදුකාංග
+    ඉංජිනේරුවෙක්
+  video_library_page_cs_video_title_4: මගේ නම කිංස්ලි වන අතර මම ෆේස්බුක් හි මෘදුකාංග
+    ඉංජිනේරුවෙක්
+  video_library_page_cs_video_title_5: මගේ නම Polina වන අතර මම ඉලෙක්ට්රොනික කලා දත්ත
+    විද්යාඥයෙක් ඉන්නේ
+  video_library_page_cs_video_title_6: මගේ නම ඩැනෙල් වන අතර මම MBARI හි මෘදුකාංග ඉංජිනේරුවෙක්
+  video_library_page_cs_video_title_7: මගේ නම ක්රිස්ටෝපර් වන අතර මම ටැනියම් හි ආරක්ෂක
+    විශ්ලේෂක වෙමි
+  video_library_page_cs_video_title_8: මගේ නම ෆෙඩරිකෝ වන අතර මම මයික්රොසොෆ්ට් හි තාක්ෂණික
+    වැඩසටහන් කළමනාකරුවෙකි
+  video_library_page_cs_video_title_9: මගේ නම ටෙස් වන අතර මම ගූගල් හි මෘදුකාංග ඉංජිනේරුවෙක්
+  video_library_page_inspirational_video_title_1: පරිගණක විද්යා මුහුණ වෙනස් (විනාඩි
+    3)
+  video_library_page_inspirational_video_title_2: ඔබම තල්ලු කරන්න. ඕනෑම කෙනෙකුට ඉගෙන
+    ගත හැකිය. (මිනිත්තු 1)
+  video_library_page_inspirational_video_title_3: ගැහැණු ළමයෙකු ආස්වාදයක් ලබා ගන්න
+    (මිනිත්තු 2)
+  video_library_page_inspirational_video_title_4: බොහෝ පාසල් වල උගන්වනු නොලබන දේ (විනාඩි
+    5යි)
+  video_library_page_inspirational_video_title_5: කේතය පැය මෙන්න - ඕනෑම කෙනෙකුට ඉගෙන
+    ගත හැකිය (මිනිත්තු 2)
+  video_library_page_inspirational_video_title_6: මගේ නම අරසීලි (මිනිත්තු 3)
+  video_library_page_inspirational_video_title_7: ස්ටෙප් කරි සමඟ කේතයේ පැය (මිනිත්තු
+    2)
+  video_library_page_inspirational_video_title_8: පරිගණක විද්යාව සෑම දෙයක්ම වෙනස්
+    වේ (5 යි)
+  video_library_page_inspirational_video_title_9: පරිගණක විද්යා හැදින්වීම (විනාඩි
+    1)
+  video_library_page_inspirational_video_title_10: පරිගණක විද්යාව පිළිබඳ ජනාධිපති
+    ඔබාමා (මිනිත්තු 1)
+  video_library_page_inspirational_video_title_11: ඕනෑම කෙනෙකුට ඉගෙනගන්න පුළුවම් (මිනිත්තු
+    1)
+  video_library_page_inspirational_video_title_12: ලෝ ක්වා ෆෝල්ටා ඒන් නියුස්ට්රාස්
+    එස්කියුලස් (මිනිත්තු 2)
+  video_library_page_inspirational_video_title_13: නාසා ආයතනය සංග්රහයේ පැය සමරයි (මිනිත්තු
+    2)
+  video_library_page_inspirational_video_title_14: එය ක්රීඩාවකට වඩා වැඩි ය (මිනිත්තු
+    1)
+  video_library_page_inspirational_video_title_15: පරිගණක විද්යා සමග නිර්මාණය (1 යි)
+  video_library_page_not_hacked_video_title_1: 'කොහොමද කපා කොටා ඝාතනය ලබා ගැනීමට නොවේ:
+    හැඳින්වීම'
+  video_library_page_not_hacked_video_title_2: 'හැක් කර නොගන්නේ කෙසේද: මුරපද'
+  video_library_page_not_hacked_video_title_3: 'හැක් කර නොගන්නේ කෙසේද: සත්යාපනය සහ
+    උපාංග අගුල්'
+  video_library_page_not_hacked_video_title_4: 'හැක් කර නොගන්නේ කෙසේද: තතුබෑම්'
+  video_library_page_not_hacked_video_title_5: 'හැක් කර නොගන්නේ කෙසේද: වෙබ් අඩවි සහ
+    වයිෆයි'
+  video_library_page_not_hacked_video_title_6: 'හැක් කර නොගන්නේ කෙසේද: පණිවිඩ යැවීම
+    සහ බාගැනීම්'
+  video_library_page_not_hacked_video_title_7: 'හැක් කර නොගන්නේ කෙසේද: යාවත්කාලීන
+    කිරීම් ස්ථාපනය කරන්න'
   language_code:
     ar: අරාබි
     az: අසර්බයිජාන

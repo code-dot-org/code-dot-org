@@ -1,5 +1,9 @@
 ---
 zu:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_header_error: 'Please correct the following errors:'
   cancel: Hoxisa
   continue: Qhubeka
   copy: Kopisha

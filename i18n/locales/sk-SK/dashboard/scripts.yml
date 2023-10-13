@@ -155,7 +155,7 @@ sk:
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
         mc:
-          title: Minecraft Hodina Kódu
+          title: 'Minecraft: Dobrodruh'
           description: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
           description_short: Preskúmaj Minecraft svet prostredníctvom kódu.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
@@ -3274,6 +3274,10 @@ sk:
             lessonGroup-3:
               display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
           title: Umelá inteligencia a strojové učenie
+        csc-ecosystems:
+          name: csc-ecosystems
+        csc-ecosystems-2022:
+          name: csc-ecosystems-2022
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -3548,6 +3552,11 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Vyučujeme CS Connections
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Naprogramuj si vlastný ekosystém
+          title: Simulácia morského ekosystému (2023)
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
