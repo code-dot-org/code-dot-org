@@ -304,15 +304,15 @@ Resources:
               -
                 Effect: Allow
                 Action: 'secretsmanager:GetSecretValue'
-                Resource: 'arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_admin-??????'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_admin-??????"
               -
                 Effect: Allow
                 Action: 'secretsmanager:GetSecretValue'
-                Resource: 'arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_writer-??????'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_writer-??????"
               -
                 Effect: Allow
                 Action: 'secretsmanager:GetSecretValue'
-                Resource: 'arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_reader-??????'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_reader-??????"
       PermissionsBoundary: !ImportValue IAM-DevPermissions
 
   LambdaSecurityGroup:
