@@ -1519,6 +1519,9 @@
   hoc_homepage_highlights_heading: 'Hour of Code highlights'
   hoc_homepage_organized_by: 'The Hour of Code is organized by [Code.org](%{codeorg_url}).'
 
+  hoc_events_heading: "Register to Host an Hour of Code"
+  hoc_events_jump_to_map: "Jump to Hour of Code map"
+
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
   signup_registration_not_required_markdown: "You don't need to register to participate! The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url}) or read our [How-to guide](%{howto_guide_url}) to plan an event for your class."
@@ -1609,6 +1612,7 @@
   map_legend_cs_tech_jam: 'Special Event'
   map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   map_warning_markdown: "A full list of the events can be viewed on the [events page.](%{events_url})"
+  map_view_all_events: "See a full list of events [here](%{events_url})."
 
   meta_tag_og_title: 'Hour of Code: Join the Movement'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
