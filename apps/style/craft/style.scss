@@ -1167,6 +1167,10 @@ $height-to-width: math.div(434, 477);
     color: $lighter_gray;
   }
 
+  .show-code summary:hover {
+  color: $dark_charcoal;
+  }
+
   #show-code,
   #feedbackButtons,
   #puzzleRatingButtons,
