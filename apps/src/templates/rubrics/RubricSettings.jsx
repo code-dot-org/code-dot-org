@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
@@ -9,25 +9,8 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
-import Toggle from '@cdo/apps/componentLibrary/toggle';
 
-export default function RubricSettings({
-  canProvideFeedback,
-  teacherHasEnabledAi,
-  updateTeacherAiSetting,
-  visible,
-}) {
-  const [updatingAiFeaturesSetting, setUpdatingAiFeaturesSetting] =
-    useState(false);
-
-  useEffect(() => {
-    if (updatingAiFeaturesSetting) {
-      // TODO request update to ai features setting
-      setUpdatingAiFeaturesSetting(false);
-      updateTeacherAiSetting(!teacherHasEnabledAi);
-    }
-  }, [updatingAiFeaturesSetting, teacherHasEnabledAi, updateTeacherAiSetting]);
-
+export default function RubricSettings({canProvideFeedback, visible}) {
   return (
     <div
       className={classnames(style.settings, {
@@ -52,17 +35,6 @@ export default function RubricSettings({
           />
         </div>
       )}
-      <div className={style.aiFeaturesOptions}>
-        <BodyTwoText>
-          <StrongText>{i18n.artificialIntelligenceFeatures()}</StrongText>
-        </BodyTwoText>
-        <Toggle
-          label={i18n.useAiFeatures()}
-          checked={teacherHasEnabledAi}
-          onChange={() => setUpdatingAiFeaturesSetting(true)}
-          disabled={updatingAiFeaturesSetting}
-        />
-      </div>
     </div>
   );
 }

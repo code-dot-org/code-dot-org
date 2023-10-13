@@ -48,11 +48,13 @@ export default function RubricContainer({
             isSelected={selectedTab === TAB_NAMES.RUBRIC}
             onClick={() => setSelectedTab(TAB_NAMES.RUBRIC)}
           />
-          <HeaderTab
-            text={i18n.settings()}
-            isSelected={selectedTab === TAB_NAMES.SETTINGS}
-            onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
-          />
+          {canProvideFeedback && teacherHasEnabledAi && (
+            <HeaderTab
+              text={i18n.settings()}
+              isSelected={selectedTab === TAB_NAMES.SETTINGS}
+              onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
+            />
+          )}
         </div>
         <div className={style.rubricHeaderRightSide}>
           <button
