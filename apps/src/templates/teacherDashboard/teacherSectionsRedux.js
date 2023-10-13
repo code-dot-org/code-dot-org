@@ -1298,6 +1298,7 @@ export function serverSectionFromSection(section) {
     course_id: section.courseId,
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
+    section_instructors: section.sectionInstructors,
   };
 }
 
