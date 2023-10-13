@@ -113,6 +113,7 @@ module I18n
 
       # Prepare some collection literals
       resource_and_vocab_paths = [
+        'i18n/locales/original/dashboard/courses.yml',
         'i18n/locales/original/dashboard/scripts.yml',
       ]
 
@@ -138,8 +139,7 @@ module I18n
             # Everything else is differentiated only by the plugins used
             plugins = []
             if resource_and_vocab_paths.include? original_path
-              plugins << 'resourceLink'
-              plugins << 'vocabularyDefinition'
+              next
             elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
               next # moved to I18n::Resources::Dashboard::CurriculumContent::SyncOut#restore_file_content
             elsif original_path.starts_with? "i18n/locales/original/docs"
@@ -202,6 +202,7 @@ module I18n
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/progressions.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/variable_names.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/courses.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/scripts.yml')
 
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
