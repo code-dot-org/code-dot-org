@@ -163,7 +163,8 @@ input[type=submit] {
   padding: .625rem 1rem;
   margin: 0.5rem 0;
   font-size: 1rem;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   line-height: 1.2;
   text-decoration: none;
   text-align: center;
@@ -592,6 +593,7 @@ form {
     display: block;
     text-align: left;
     font-size: 1rem;
+    font-weight: var(--semi-bold-font-weight);
   }
 
   input, select {
@@ -601,7 +603,8 @@ form {
     padding: 0.5rem;
     border: 1px solid;
     border-radius: $border-radius;
-    font-family: $gotham-regular, sans-serif;
+    font-family: var(--main-font);
+    font-weight: var(--regular-font-weight);
     font-size: 1rem;
     transition: all ease-in-out .2s;
 

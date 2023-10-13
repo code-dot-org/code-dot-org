@@ -1091,6 +1091,12 @@ FactoryBot.define do
         create :activity_section, lesson_activity: activity
       end
     end
+
+    trait :with_lesson_group do
+      after(:create) do |lesson|
+        create(:lesson_group, script: lesson.script, lessons: [lesson]) unless lesson.lesson_group
+      end
+    end
   end
 
   factory :resource do
@@ -1845,6 +1851,7 @@ FactoryBot.define do
   factory :learning_goal_ai_evaluation do
     association :learning_goal
     association :user, factory: :student
+    association :requester, factory: :teacher
     understanding {0}
   end
 end
