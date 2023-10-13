@@ -119,7 +119,7 @@ export default function RubricContent({
 
   //const classNames = visible ? style.visibleRubricContent : style.hiddenRuricContent;
   return (
-    <div 
+    <div
       className={classnames(style.rubricContent, {
         [style.visbleRubricContent]: visible,
         [style.hiddenRubricContent]: !visible,
@@ -140,7 +140,7 @@ export default function RubricContent({
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
             <div className={style.levelAndStudentDetails}>
-              {onLevelForEvaluation && (
+              {canProvideFeedback && (
                 <div className={style.studentMetadata}>
                   {studentLevelInfo.timeSpent && (
                     <BodyThreeText className={style.singleMetadatum}>
@@ -164,7 +164,7 @@ export default function RubricContent({
                   )}
                 </div>
               )}
-              {!onLevelForEvaluation && rubricLevel?.position && (
+              {!canProvideFeedback && rubricLevel?.position && (
                 <BodyThreeText>
                   {i18n.feedbackAvailableOnLevel({
                     levelPosition: rubricLevel.position,
