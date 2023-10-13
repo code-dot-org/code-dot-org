@@ -1,6 +1,6 @@
-require 'cdo/firehose'
-
 class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
+  load_and_authorize_resource only: [:destroy, :accept, :decline]
+
   # Returns list of current user's SectionInstructor records
   # GET /section_instructors
   def index
@@ -10,9 +10,9 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   end
 
   # Returns SectionInstructor records for the given section
-  # GET /section_instructors/:id
+  # GET /section_instructors/:section_id
   def show
-    section = Section.find(params.require(:id))
+    section = Section.find(params.require(:section_id))
     authorize! :manage, section
     section_instructors = SectionInstructor.where(section: section)
 
@@ -27,11 +27,12 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
 
     # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
     # for a total of 6)
-    return head :bad_request if section.instructors.length >= 6
+    if SectionInstructor.where(section: section).count >= 6
+      return render json: {error: 'section full'}, status: :bad_request
+    end
 
-    instructor = User.find_by(email: params.require(:email))
+    instructor = User.find_by(email: params.require(:email), user_type: :teacher)
     return head :not_found if instructor.blank?
-    return head :bad_request unless instructor.teacher?
 
     si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: section)
 
@@ -40,10 +41,10 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
       si.really_destroy!
     # Can't re-add someone who is already an instructor (or invited/declined)
     elsif si.present?
-      return head :bad_request
+      return render json: {error: 'already invited'}, status: :bad_request
     end
 
-    si = SectionInstructor.create(
+    si = SectionInstructor.create!(
       section: section,
       instructor: instructor,
       status: :invited,
@@ -56,15 +57,9 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   # Removes an instructor from the section (soft-deleting the record).
   # DELETE /section_instructors/:id
   def destroy
-    si = SectionInstructor.find(params.require(:id))
-    authorize! :manage, si.section
-
-    # Can't remove the section owner
-    return head :forbidden if si.instructor_id == si.section.user_id
-
-    si.status = :removed
-    si.save!
-    si.destroy!
+    @section_instructor.status = :removed
+    @section_instructor.save!
+    @section_instructor.destroy!
 
     head :no_content
   end
@@ -72,23 +67,21 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   # Accept one's own pending co-instructor invitation
   # PUT /section_instructors/:id/accept
   def accept
-    resolve_invitation params.require(:id), :active
+    resolve_invitation :active
   end
 
   # Decline one's own pending co-instructor invitation
   # PUT /section_instructors/:id/decline
   def decline
-    resolve_invitation params.require(:id), :declined
+    resolve_invitation :declined
   end
 
-  private def resolve_invitation(invitation_id, new_status)
-    si = SectionInstructor.find(invitation_id)
-    return head :forbidden if si.instructor_id != current_user.id
-    return head :bad_request unless si.status == 'invited'
+  private def resolve_invitation(new_status)
+    return head :bad_request unless @section_instructor.status == 'invited'
 
-    si.status = new_status
-    si.save!
+    @section_instructor.status = new_status
+    @section_instructor.save!
 
-    render json: si, serializer: Api::V1::SectionInstructorSerializer
+    render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
   end
 end
