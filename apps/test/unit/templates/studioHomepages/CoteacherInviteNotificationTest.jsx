@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedCoteacherInviteNotification as CoteacherInviteNotification} from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import DCDO from '@cdo/apps/dcdo';
 
 describe('CoteacherInviteNotification', () => {
   const defaultProps = {
@@ -18,13 +19,31 @@ describe('CoteacherInviteNotification', () => {
   };
 
   it('renders nothing if there is no coteacher invite', () => {
+    DCDO.set('show-coteacher-ui', true);
     const wrapper = shallow(
       <CoteacherInviteNotification {...defaultProps} coteacherInvite={null} />
     );
     expect(wrapper.find(Notification).length).to.equal(0);
   });
 
-  it('renders notification if there is a coteacher invite', () => {
+  it('renders nothing if flag is off', () => {
+    DCDO.set('show-coteacher-ui', false);
+    const wrapper = shallow(
+      <CoteacherInviteNotification {...defaultProps} coteacherInvite={null} />
+    );
+    expect(wrapper.find(Notification).length).to.equal(0);
+  });
+
+  it('renders nothing if flag is not set', () => {
+    DCDO.reset();
+    const wrapper = shallow(
+      <CoteacherInviteNotification {...defaultProps} coteacherInvite={null} />
+    );
+    expect(wrapper.find(Notification).length).to.equal(0);
+  });
+
+  it('renders notification if there is a coteacher invite and flag is on', () => {
+    DCDO.set('show-coteacher-ui', true);
     const wrapper = shallow(<CoteacherInviteNotification {...defaultProps} />);
     const notification = wrapper.find(Notification);
     expect(notification.length).to.equal(1);
