@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require_relative 'test_helper'
+require_relative '../../test_helper'
 require 'cdo/aws/rds'
 
 class TestRDS < Minitest::Test
@@ -227,5 +226,18 @@ class TestRDS < Minitest::Test
     }
 
     Cdo::RDS.delete_cluster(@cluster_to_delete_id, 1, 0)
+  end
+
+  def test_delete_cluster_cluster_id_required
+    required_exception = assert_raises StandardError do
+      Cdo::RDS.delete_cluster
+    end
+    assert_equal 'wrong number of arguments (given 0, expected 1..3)', required_exception.message
+
+    empty_exception = assert_raises StandardError do
+      cluster_id = ''
+      Cdo::RDS.delete_cluster(cluster_id)
+    end
+    assert_equal 'cluster_id is required', empty_exception.message
   end
 end
