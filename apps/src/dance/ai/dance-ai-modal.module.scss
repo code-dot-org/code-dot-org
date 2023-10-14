@@ -36,13 +36,13 @@
     left: calc(50% - 65px);
   }
   100% {
-    left: calc(50% + 60px);
+    left: calc(50% + 65px);
   }
 }
 
 @keyframes center-to-left {
   0% {
-    left: calc(50% + 60px);
+    left: calc(50% + 65px);
   }
   100% {
     left: 10%;
@@ -182,7 +182,7 @@
 
           &ScanLeftToRight {
             animation: scan-left-to-right 2.5s;
-            left: calc(50% + 60px);
+            left: calc(50% + 65px);
           }
 
           &CenterToLeft {
@@ -195,6 +195,7 @@
           }
 
           .image {
+            position: relative;
             width: 110px;
           }
 
