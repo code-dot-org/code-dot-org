@@ -36,7 +36,7 @@ export default class CdoFieldImage extends GoogleBlockly.FieldImage {
   }
 
   shouldAllowImageChange() {
-    return this.allowImageChange;
+    return this.allowImageChange !== false;
   }
 
   /**
