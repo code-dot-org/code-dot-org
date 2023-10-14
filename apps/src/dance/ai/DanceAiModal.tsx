@@ -7,7 +7,6 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BlockSvg, Workspace} from 'blockly/core';
 import {doAi} from './utils';
 import AiVisualizationPreview from './AiVisualizationPreview';
@@ -350,34 +349,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             mode === Mode.RESULTS ||
             mode === Mode.RESULTS_FINAL) && (
             <div className={moduleStyles.botContainer}>
-              {mode === Mode.GENERATING && resultJson === '' && (
-                <img src={aiBotBeam} className={moduleStyles.botBeam} />
-              )}
-              <img
-                src={aiBotBorder}
+              <div
                 className={classNames(
                   moduleStyles.bot,
                   mode === Mode.SELECT_INPUTS
                     ? moduleStyles.botAppearCentered
                     : mode === Mode.GENERATING
-                    ? moduleStyles.botAppearCentered
+                    ? moduleStyles.botScanLeftToRight
                     : mode === Mode.RESULTS
                     ? moduleStyles.botCenterToLeft
                     : mode === Mode.RESULTS_FINAL
                     ? moduleStyles.botLeft
                     : undefined
                 )}
-              />
-            </div>
-          )}
-
-          {mode === Mode.GENERATING && resultJson === '' && (
-            <div className={moduleStyles.spinner}>
-              <FontAwesome
-                title={undefined}
-                icon="spinner"
-                className={classNames('fa-pulse', 'fa-3x')}
-              />
+              >
+                {mode === Mode.GENERATING && resultJson === '' && (
+                  <img src={aiBotBeam} className={moduleStyles.beam} />
+                )}
+                <img src={aiBotBorder} className={moduleStyles.image} />
+              </div>
             </div>
           )}
         </div>
