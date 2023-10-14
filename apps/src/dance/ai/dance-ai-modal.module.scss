@@ -31,6 +31,24 @@
   }
 }
 
+@keyframes scan-left-to-right {
+  0% {
+    left: calc(50% - 65px);
+  }
+  100% {
+    left: calc(50% + 60px);
+  }
+}
+
+@keyframes center-to-left {
+  0% {
+    left: calc(50% + 60px);
+  }
+  100% {
+    left: 10%;
+  }
+}
+
 .dialog {
   max-width: initial !important;
   width: 800px !important;
@@ -154,13 +172,17 @@
         flex: 0 0 140px;
 
         .bot {
-          width: 110px;
           position: absolute;
           transform: translateX(-50%);
 
           &AppearCentered {
-            left: 50%;
+            left: calc(50% - 65px);
             animation: appear 2s;
+          }
+
+          &ScanLeftToRight {
+            animation: scan-left-to-right 2.5s;
+            left: calc(50% + 60px);
           }
 
           &CenterToLeft {
@@ -171,21 +193,19 @@
           &Left {
             left: 10%;
           }
-        }
 
-        .botBeam {
-          top: 140px;
-          left: 50%;
-          width: 100px;
-          position: absolute;
-          transform: translateX(-50%);
-        }
-      }
+          .image {
+            width: 110px;
+          }
 
-      .spinner {
-        position: absolute;
-        top: 60px;
-        left: calc(50% + 100px);
+          .beam {
+            top: 140px;
+            left: 50%;
+            width: 100px;
+            position: absolute;
+            transform: translateX(-50%);
+          }
+        }
       }
     }
 

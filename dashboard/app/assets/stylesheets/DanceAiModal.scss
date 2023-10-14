@@ -93,13 +93,13 @@
       animation: appear2 3s;
     }
 
-    // Second block
-    .blocklyBlockCanvas g g .blocklyPath {
+    // First block's text
+    .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(3) {
       animation: appear3 4s;
     }
 
-    // First block's text
-    .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(3) {
+    // Second block
+    .blocklyBlockCanvas g g .blocklyPath {
       animation: appear4 5s;
     }
 
