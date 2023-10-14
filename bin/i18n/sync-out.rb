@@ -203,6 +203,7 @@ module I18n
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/variable_names.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/courses.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/scripts.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/shared_functions.yml')
 
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
