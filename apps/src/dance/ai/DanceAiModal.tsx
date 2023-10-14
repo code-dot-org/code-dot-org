@@ -372,7 +372,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        <div id="outputs-area" className={moduleStyles.outputsArea}>
+        <div
+          id={mode === Mode.RESULTS ? 'outputs-area-fade-in' : 'outputs-area'}
+          className={moduleStyles.outputsArea}
+        >
           {(mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL) && (
             <AiBlockPreview
               generateBlocksFromResult={generateBlocksFromResult}
