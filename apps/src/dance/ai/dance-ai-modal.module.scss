@@ -49,6 +49,15 @@
   }
 }
 
+@keyframes right-to-center {
+  0% {
+    left: 83%
+  }
+  100% {
+    left: 45%;
+  }
+}
+
 .dialog {
   max-width: initial !important;
   width: 800px !important;
@@ -197,6 +206,7 @@
           .image {
             position: relative;
             width: 110px;
+            animation: appear1 0.5s;
           }
 
           .beam {
@@ -205,6 +215,7 @@
             width: 100px;
             position: absolute;
             transform: translateX(-50%);
+            animation: appear1 0.25s;
           }
         }
       }
@@ -218,6 +229,22 @@
       height: 270px;
       top: 60px;
       left: 0;
+
+      .blockPreview {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 45%;
+        top: 60px;
+
+        &Right {
+          left: 83%;
+        }
+
+        &RightToCenter {
+          animation: right-to-center 2s;
+          left: 45%;
+        }
+      }
     }
 
     .previewArea {
@@ -227,6 +254,13 @@
       display: flex;
       align-items: center;
       margin-top: 10px;
+      animation: appear1 2s;
+    }
+
+    .generatingArea {
+      position: absolute;
+      top: 40px;
+      width: 100%;
     }
 
     .buttonsArea {
