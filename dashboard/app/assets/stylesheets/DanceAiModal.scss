@@ -87,30 +87,30 @@
 }
 
 #ai-modal-inner-area {
-  #outputs-area-fade-in {
+  #fade-in {
     // First block
     .blocklyWorkspace .blocklyPath {
-      animation: appear2 3s;
+      animation: appear0 1s;
     }
 
     // First block's text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(3) {
-      animation: appear3 4s;
+      animation: appear1 2s;
     }
 
     // Second block
     .blocklyBlockCanvas g g .blocklyPath {
-      animation: appear4 5s;
+      animation: appear2 3s;
     }
 
     // Second block's first text
     .blocklyBlockCanvas g .blocklyNonEditableText {
-      animation: appear5 6s;
+      animation: appear3 4s;
     }
 
     // Second block's second text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(4) {
-      animation: appear6 7s;
+      animation: appear4 5s;
     }
   }
 
