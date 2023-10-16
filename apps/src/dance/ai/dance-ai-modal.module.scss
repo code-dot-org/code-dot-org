@@ -11,10 +11,7 @@
 
 // Fade in for 1 seconds after a 1 second delay.
 @keyframes appear1 {
-  0% {
-    opacity: 0;
-  }
-  50% {
+  0%, 50% {
     opacity: 0;
   }
   100% {
@@ -31,8 +28,9 @@
   }
 }
 
+// 0.5 second pause, then scan over 2.5 seconds
 @keyframes scan-left-to-right {
-  0% {
+  0%, 16.6% {
     left: calc(50% - 65px);
   }
   100% {
@@ -190,7 +188,7 @@
           }
 
           &ScanLeftToRight {
-            animation: scan-left-to-right 2.5s;
+            animation: scan-left-to-right 3s;
             left: calc(50% + 65px);
           }
 
@@ -209,13 +207,18 @@
             animation: appear1 0.5s;
           }
 
-          .beam {
+          .beamImage {
             top: 140px;
             left: 50%;
             width: 100px;
             position: absolute;
             transform: translateX(-50%);
             animation: appear1 0.25s;
+            display: none;
+
+            &Visible {
+              display: block;
+            }
           }
         }
       }

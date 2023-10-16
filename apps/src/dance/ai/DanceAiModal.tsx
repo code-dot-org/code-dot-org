@@ -377,9 +377,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     : undefined
                 )}
               >
-                {mode === Mode.PROCESSING && resultJson === '' && (
-                  <img src={aiBotBeam} className={moduleStyles.beam} />
-                )}
+                <img
+                  src={aiBotBeam}
+                  className={classNames(
+                    moduleStyles.beamImage,
+                    mode === Mode.PROCESSING &&
+                      resultJson === '' &&
+                      moduleStyles.beamImageVisible
+                  )}
+                />
                 <img src={aiBotBorder} className={moduleStyles.image} />
               </div>
             </div>
