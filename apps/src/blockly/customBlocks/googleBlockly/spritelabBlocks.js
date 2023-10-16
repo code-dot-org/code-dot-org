@@ -31,7 +31,11 @@ export const blocks = {
       // By default, the flyout is added after the stack input (at the bottom of the block).
       // This flag is used by behavior and function definitions, mainly in the modal function editor,
       // to add the flyout before the stack input (at the top of the block).
-      if (renderToolboxBeforeStack) {
+      if (
+        renderToolboxBeforeStack &&
+        block.getInput(INPUTS.FLYOUT) &&
+        block.getInput(INPUTS.STACK)
+      ) {
         block.moveInputBefore(INPUTS.FLYOUT, INPUTS.STACK);
       }
       return flyoutField;
