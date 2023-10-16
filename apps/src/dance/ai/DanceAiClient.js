@@ -38,6 +38,7 @@ export function chooseEffects(emojis) {
  * @returns: an object describing the value with the highest weight.
  */
 function chooseHighestSum(valueMap, chosenEmojis) {
+  const minimumPossibleValue = -3;
   return Object.keys(valueMap[chosenEmojis[0]]).reduce(
     (highest, effect) => {
       let sum =
@@ -47,7 +48,7 @@ function chooseHighestSum(valueMap, chosenEmojis) {
 
       return sum > highest.value ? {title: effect, value: sum} : highest;
     },
-    {title: '', value: -4}
+    {title: '', value: minimumPossibleValue - 1}
   );
 }
 
