@@ -32,6 +32,7 @@ const AiGeneratingView: React.FunctionComponent<AiGeneratingViewProps> = ({
     return () => {
       if (refTimer.current) {
         clearInterval(refTimer.current);
+        refTimer.current = null;
       }
     };
   }, [done]);

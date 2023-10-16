@@ -29,6 +29,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
         onComplete();
         if (refTimer.current) {
           clearTimeout(refTimer.current);
+          refTimer.current = null;
         }
       },
       fadeIn ? 5000 : 2500

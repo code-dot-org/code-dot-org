@@ -1,3 +1,11 @@
+/* This file generates CSS that will be used to animate the Blockly blocks
+ * in the DanceAiModal's UI.  We need it to be CSS so that the styling can
+ * be applied to Blockly blocks that we are embedding.  The CSS selectors
+ * are highly-specific to the current version of Blockly, and to the blocks
+ * that we are embedding, and will likely need to be updated in case any of
+ * these things change.
+ */
+
 // Fade in for 1 second after a 0 second delay.
 @keyframes appear0 {
   0% {
