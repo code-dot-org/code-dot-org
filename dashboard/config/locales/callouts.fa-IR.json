@@ -5,11 +5,17 @@
         "4-5 Bee Conditionals 2": {
           "4_5_Bee_Conditionals_2_1": "به یاد داشته باشید که بررسی کنید هر ابری یک گل دارد یا خیر. اصلاً لازم نیست کندو را بررسی کنید."
         },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "آیا صفحه‌نمایش سبز شد؟ اگر چنین است، «پایان» را بزنید. در غیر اینصورت، «بازنشانی» را بزنید، کد خود را تغییر دهید و دوباره «اجرا» را بزنید."
+        },
         "AppLab Intro 7 - Change Screen Color_2023": {
           "applab_hoc_finish": "آیا صفحه‌نمایش سبز شد؟ اگر چنین است، «پایان» را بزنید. در غیر اینصورت، «بازنشانی» را بزنید، کد خود را تغییر دهید و دوباره «اجرا» را بزنید."
         },
         "AppLab Intro 7 - Change Screen Color_mb2022": {
           "applab_hoc_finish": "آیا صفحه‌نمایش سبز شد؟ اگر چنین است، «پایان» را بزنید. در غیر اینصورت، «بازنشانی» را بزنید، کد خود را تغییر دهید و دوباره «اجرا» را بزنید."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "اکنون در حالت طراحی هستید."
         },
         "AppLab Intro 7 - thisOrThatAddButton_2023": {
           "AppLabHoCFinal11": "اکنون در حالت طراحی هستید."
@@ -220,6 +226,25 @@
           "new_block_3": "بلوک جدید!",
           "new_block_4": "بلوک جدید!"
         },
+        "Dance_Party_01": {
+          "dance_callout_01": "این بلوک را به برنامه خود اضافه کنید!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "این بلوک را به برنامه خود اضافه کنید!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "این بلوک را به برنامه خود اضافه کنید!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "رقصنده جدید خود را اینجا اضافه کنید"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "بلوک جدید!",
+          "dance_callout_11_b": "بلوک جدید!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "برای بلوک‌های «همه اردک‌ها»، اینجا را ببینید"
+        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "برای گذاشتن یادداشت برای خود یا معلمتان در مورد نحوه عملکرد کد، از این بلوک استفاده کنید."
         },
@@ -265,6 +290,12 @@
         },
         "Infinity_repeat": {
           "Infinity_repeat_callout": "بلوک های حرکت را داخل اینجا قرار دهید"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "وقتی آماده شدید، روی «اجرا» بزنید تا برنامه خود را امتحان کنید."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "برای شروع حرکت، روی «اجرا» ضربه بزنید."
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "این حلقه «تکرار» است! روی آن در فضای کاری کلیک کنید و کدی را که می‌خواهید بارها و بارها اجرا کنید اضافه کنید."
@@ -537,6 +568,348 @@
           "courseE_artist_functions_challenge2_callout1": "با افزودن کد بیشتر به پایین، این برنامه را ادامه دهید.",
           "courseE_artist_functions_challenge2_callout2": "اگر این طرح را دوست ندارید، آن را به هر چیزی که می‌خواهید تغییر دهید!"
         },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "؟"
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_artist_loops42022_2023": {
+          "courseA_artist_loops4_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این پازل استفاده کنید."
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "این عدد به این معنی است که فقط یکی از این نوع بلوک‌ها را می‌توان در پاسخ نهایی استفاده کرد."
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "این عدد به این معنی است که فقط یکی از این نوع بلوک‌ها را می‌توان در پاسخ نهایی استفاده کرد."
+        },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "این عدد به این معنی است که فقط یکی از این نوع بلوک‌ها را می‌توان در پاسخ نهایی استفاده کرد."
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "این عدد به این معنی است که فقط یکی از این نوع بلوک‌ها را می‌توان در پاسخ نهایی استفاده کرد."
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "این عدد به این معنی است که فقط یکی از این نوع بلوک‌ها را می‌توان در پاسخ نهایی استفاده کرد."
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "این عدد به این معنی است که فقط یکی از این نوع بلوک‌ها را می‌توان در پاسخ نهایی استفاده کرد."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "این عدد به این معنی است که فقط یکی از این نوع بلوک‌ها را می‌توان در پاسخ نهایی استفاده کرد."
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "آیا می‌دانستید هر زمان که نیاز داشته باشید می‌توانید خط را پاک کنید؟"
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "آیا می‌دانستید هر زمان که نیاز داشته باشید می‌توانید خط را پاک کنید؟"
+        },
+        "courseA_artist_loops82022_2023": {
+          "courseA_artist_loops8_1": "آیا می‌دانستید هر زمان که نیاز داشته باشید می‌توانید خط را پاک کنید؟"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "آیا می‌دانستید هر زمان که نیاز داشته باشید می‌توانید خط را پاک کنید؟"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "آیا می‌دانستید هر زمان که نیاز داشته باشید می‌توانید خط را پاک کنید؟"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "آیا می‌دانستید هر زمان که نیاز داشته باشید می‌توانید خط را پاک کنید؟"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "آیا می‌دانستید که هر زمان که نیاز داشته باشید می‌توانید خط را پاک کنید؟"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_collector_loops3_2018": {
+          "gradek_adventurer_loops2_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_collector_loops3_2019": {
+          "gradek_adventurer_loops2_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این پازل استفاده کنید."
+        },
+        "courseA_collector_loops3_2023": {
+          "gradek_adventurer_loops2_1": "این عدد به شما می‌گوید که چه تعداد از این بلوک‌ها را می‌توانید در این معما استفاده کنید."
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. اینجا جایی است که بلوک‌های اضافی برای تکمیل پازل‌های خود پیدا خواهید کرد."
+        },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "این یک فراخوان است"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "این یک فراخوان است"
+        },
+        "courseA_playLab_events42022_2023": {
+          "courseA_playlab_events4_callout1": "این یک فراخوان است"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "این یک فراخوان است"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "این یک فراخوان است"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "این یک فراخوان است"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "این یک فراخوان است"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "برای تغییر جهت پیکان رویداد، اینجا را کلیک کنید."
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "برای تغییر جهت پیکان رویداد، اینجا را کلیک کنید."
+        },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "برای تغییر جهت پیکان رویداد، اینجا را کلیک کنید."
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "برای تغییر جهت پیکان رویداد، اینجا را کلیک کنید."
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "برای تغییر جهت پیکان رویداد، اینجا را کلیک کنید."
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "برای تغییر جهت پیکان رویداد، اینجا را کلیک کنید."
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "برای تغییر جهت پیکان رویداد، اینجا را کلیک کنید."
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "این به شما اجازه می‌دهد صدای «تصادفی» انتخاب کنید، به این معنی که تا زمانی که آن را نشنیده باشید نمی‌دانید چه چیزی قرار است دریافت کنید!"
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "این به شما اجازه می‌دهد صدای «تصادفی» انتخاب کنید، به این معنی که تا زمانی که آن را نشنیده باشید نمی‌دانید چه چیزی قرار است دریافت کنید!"
+        },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "این به شما اجازه می‌دهد صدای «تصادفی» انتخاب کنید، به این معنی که تا زمانی که آن را نشنیده باشید نمی‌دانید چه چیزی قرار است دریافت کنید!"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "این به شما اجازه می‌دهد صدای «تصادفی» انتخاب کنید، به این معنی که تا زمانی که آن را نشنیده باشید نمی‌دانید چه چیزی قرار است دریافت کنید!"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "این به شما اجازه می‌دهد صدای «تصادفی» انتخاب کنید، به این معنی که تا زمانی که آن را نشنیده باشید نمی‌دانید چه چیزی قرار است دریافت کنید!"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "این به شما اجازه می‌دهد صدای «تصادفی» انتخاب کنید، به این معنی که تا زمانی که آن را نشنیده باشید نمی‌دانید چه چیزی قرار است دریافت کنید!"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "این به شما اجازه می‌دهد صدای «تصادفی» انتخاب کنید، به این معنی که تا زمانی که آن را نشنیده باشید نمی‌دانید چه چیزی قرار است دریافت کنید!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. اینجا جایی است که بلوک‌های اضافی برای تکمیل پازل‌های خود پیدا خواهید کرد."
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "تنها یکی از این بلوک‌ها در جعبه ابزار وجود دارد. چگونه از آن استفاده خواهید کرد؟"
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "تنها یکی از این بلوک‌ها در جعبه ابزار وجود دارد. چگونه از آن استفاده خواهید کرد؟"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "تنها یکی از این بلوک‌ها در جعبه ابزار وجود دارد. چگونه از آن استفاده خواهید کرد؟"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "تنها یکی از این بلوک‌ها در جعبه ابزار وجود دارد. چگونه از آن استفاده خواهید کرد؟"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "تنها یکی از این بلوک‌ها در جعبه ابزار وجود دارد. چگونه از آن استفاده خواهید کرد؟"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "تنها یکی از این بلوک‌ها در جعبه ابزار وجود دارد. چگونه از آن استفاده خواهید کرد؟"
+        },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "تنها یکی از این بلوک‌ها در جعبه ابزار وجود دارد. چگونه از آن استفاده خواهید کرد؟"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "از این بلوک برای جمع‌آوری گنج استفاده کنید."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseB_maze_seq1_2023": {
+          "courseB_maze_seq1": "در صورت نیاز به راهنمایی، روی لامپ کلیک کنید!"
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "برای تغییر جهت، از پیکان کشویی سبزرنگ استفاده کنید."
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "برای تغییر جهت، از پیکان کشویی سبزرنگ استفاده کنید."
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "برای تغییر جهت، از پیکان کشویی سبزرنگ استفاده کنید."
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "برای تغییر جهت، از پیکان کشویی سبزرنگ استفاده کنید."
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "برای تغییر جهت، از پیکان کشویی سبزرنگ استفاده کنید."
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "برای تغییر جهت، از پیکان کشویی سبزرنگ استفاده کنید."
+        },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "برای تغییر جهت، از پیکان کشویی سبزرنگ استفاده کنید."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "برای رفتن به مرحله بعد، بازیگر را به این پرچم برسانید."
         },
@@ -544,6 +917,9 @@
           "courseE_playLab_scaffold3_1": "برای رفتن به مرحله بعد، بازیگر را به این پرچم برسانید."
         },
         "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "برای رفتن به مرحله بعد، بازیگر را به این پرچم برسانید."
+        },
+        "courseC19_playLab_EOC3_2021": {
           "courseE_playLab_scaffold3_1": "برای رفتن به مرحله بعد، بازیگر را به این پرچم برسانید."
         },
         "courseC19_playLab_EOC3_2023": {
@@ -564,6 +940,9 @@
         "courseC_PlayLab_events8_2020": {
           "courseC_PlayLab_events8_callout1": "از این بلوک هنگامی که ودلز و چامپ لمس می‌کنند، استفاده کنید!"
         },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "از این بلوک هنگام لمس Waddles و Chomp، استفاده کنید!"
+        },
         "courseC_PlayLab_events8_2023": {
           "courseC_PlayLab_events8_callout1": "از این بلوک هنگامی که ودلز و چامپ لمس می‌کنند، استفاده کنید!"
         },
@@ -581,6 +960,9 @@
         },
         "courseC_PlayLab_events_challenge1_2020": {
           "courseC_PlayLab_events_challenge1_1": "این بلوک به شما امکان می‌دهد بازیگران را به قسمت‌های مختلف فضای بازی منتقل کنید."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "این بلوک به شما این امکان را می‌دهد تا بازیگران را به قسمت‌های مختلف فضای بازی حرکت دهید."
         },
         "courseC_PlayLab_events_challenge1_2023": {
           "courseC_PlayLab_events_challenge1_1": "این بلوک به شما امکان می‌دهد بازیگران را به قسمت‌های مختلف فضای بازی منتقل کنید."
@@ -684,6 +1066,9 @@
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_callout1": "عدد چهار روی کدو تنبل به شما می‌گوید که چهار کدو تنبل برای چیدن موجود است."
         },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "عدد چهار روی کدو تنبل به شما می‌گوید که چهار کدو تنبل برای چیدن موجود است."
+        },
         "courseC_harvester_loops1_2023": {
           "courseC_harvester_loops1_callout1": "عدد چهار روی کدو تنبل به شما می‌گوید که چهار کدو تنبل برای چیدن موجود است."
         },
@@ -709,6 +1094,9 @@
           "courseC_maze_debugging9_2019_1": "بلوک‌ها را از جعبه ابزار به فضای کاری خود بکشانید."
         },
         "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "بلوک‌ها را از جعبه ابزار به فضای کاری خود بکشانید."
+        },
+        "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "بلوک‌ها را از جعبه ابزار به فضای کاری خود بکشانید."
         },
         "courseC_maze_debugging9_2023": {
@@ -971,6 +1359,9 @@
         "courseD_maze_intro4_2020": {
           "courseC_maze_programming4_1": "این محدوده بلوک شماست. به شما می‌گوید که چه تعداد از این بلوک‌ها برای استفاده باقی مانده است."
         },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "این سقف بلوک شماست. به شما می‌گوید که چه تعداد از این بلوک‌ها برای استفاده باقی مانده است."
+        },
         "courseD_maze_intro4_2023": {
           "courseC_maze_programming4_1": "این محدوده بلوک شماست. به شما می‌گوید که چه تعداد از این بلوک‌ها برای استفاده باقی مانده است."
         },
@@ -981,6 +1372,9 @@
           "": "روی این بلوک‌ها شماره وجود ندارد. می‌توانید هر تعداد که می‌خواهید استفاده کنید!"
         },
         "courseD_maze_intro5a_2020": {
+          "": "روی این بلوک‌ها شماره وجود ندارد. می‌توانید هر تعداد که می‌خواهید استفاده کنید!"
+        },
+        "courseD_maze_intro5a_2021": {
           "": "روی این بلوک‌ها شماره وجود ندارد. می‌توانید هر تعداد که می‌خواهید استفاده کنید!"
         },
         "courseD_maze_intro5a_2023": {
@@ -1001,6 +1395,9 @@
         "courseD_maze_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
         },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
         "courseD_maze_ramp1_2023": {
           "grade2_CaringForNewPet_0_1": "پس از اتصال همه بلوک‌ها، «اجرا» را فشار دهید تا برنامه شروع شود."
         },
@@ -1018,6 +1415,9 @@
         },
         "courseD_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "این جعبه ابزار است. اینجا جایی است که بلوک‌های اضافی برای تکمیل پازل‌های خود پیدا خواهید کرد."
         },
         "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "این جعبه ابزار است. جایی که بلوک‌های اضافی را برای تکمیل معماهای خود پیدا خواهید کرد."
@@ -1037,6 +1437,10 @@
           "stone_block_2": "بلوک‌های خاکستری را نمی‌توان دور انداخت."
         },
         "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "می‌توانید بلوک‌های اضافی را به داخل جعبه ابزار بکشانید تا دور بیندازید.",
+          "stone_block_2": "بلوک‌های خاکستری را نمی‌توان دور انداخت."
+        },
+        "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "می‌توانید بلوک‌های اضافی را به داخل جعبه ابزار بکشانید تا دور بیندازید.",
           "stone_block_2": "بلوک‌های خاکستری را نمی‌توان دور انداخت."
         },
@@ -1069,6 +1473,9 @@
           "": "روی این بلوک‌ها شماره وجود ندارد. می‌توانید هر تعداد که می‌خواهید استفاده کنید!"
         },
         "courseD_maze_ramp5_2020": {
+          "": "روی این بلوک‌ها شماره وجود ندارد. می‌توانید هر تعداد که می‌خواهید استفاده کنید!"
+        },
+        "courseD_maze_ramp5_2021": {
           "": "روی این بلوک‌ها شماره وجود ندارد. می‌توانید هر تعداد که می‌خواهید استفاده کنید!"
         },
         "courseD_maze_ramp5_2023": {
@@ -1740,8 +2147,26 @@
         "courseF_variables_predict_2023": {
           "variablesPredict": "به کد زیر این نقطه دقت کنید."
         },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "پس از چسباندن همه بلوک‌ها به هم، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "پس از چسباندن همه بلوک‌ها به هم، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "پس از چسباندن همه بلوک‌ها به هم، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "پس از چسباندن همه بلوک‌ها به هم، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "پس از چسباندن همه بلوک‌ها به هم، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "پس از چسباندن همه بلوک‌ها به هم، «اجرا» را فشار دهید تا برنامه شروع شود."
+        },
         "coursee_helloworld_events": {
-          "hello_world_click_hint": "این بلوک رویداد را به فضای کاری خود اضافه کنید."
+          "hello_world_click_hint": "این بلوک رویداد را به فضای‌کار خود اضافه کنید."
         },
         "coursee_helloworld_events_2023": {
           "hello_world_click_hint": "این بلوک رویداد را به فضای کاری خود اضافه کنید."
@@ -1753,8 +2178,8 @@
           "costumes_tab": "برای اضافه کردن لباس به پروژه خود اینجا را کلیک کنید."
         },
         "coursee_helloworld_say": {
-          "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
-          "hello_world_say": "با استفاده از این بلوک را به جن صحبت می کنند."
+          "hello_world_make_sprite": "از این بلوک برای ایجاد یک اسپرایت استفاده کنید.",
+          "hello_world_say": "با استفاده از این بلوک اسپرایت‌ها را وادار به سخن گفتن کنید."
         },
         "coursee_helloworld_say_2023": {
           "hello_world_make_sprite": "از این بلوک برای ایجاد یک جن استفاده کنید.",
@@ -2066,6 +2491,56 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "بلوک جدید!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "بلوک جدید!"
+        },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "بلوک جدید!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "run_button": "انیمیشن خود را با این دکمه تست کنید."
+        },
+        "poetry_hoc_backgroundEffects_2023": {
+          "run_button": "انیمیشن خود را با این دکمه تست کنید."
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "بلوک جدید!",
+          "poetry_foreground": "بلوک جدید!"
+        },
+        "poetry_hoc_events1_2023": {
+          "poetry_event": "بلوک جدید!",
+          "poetry_foreground": "بلوک جدید!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "بلوک جدید!"
+        },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "بلوک جدید!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "بلوک جدید!",
+          "poetry_sound": "بلوک جدید!"
+        },
+        "poetry_hoc_sounds_2023": {
+          "poetry_music": "بلوک جدید!",
+          "poetry_sound": "بلوک جدید!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "بلوک جدید!",
+          "poetry_sprite_stops": "بلوک جدید!"
+        },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "بلوک جدید!",
+          "poetry_sprite_stops": "بلوک جدید!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "بلوک جدید!",
+          "poetry_set_sprite": "بلوک جدید!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
+          "poetry_remove_sprite": "بلوک جدید!",
+          "poetry_set_sprite": "بلوک جدید!"
         }
       }
     }
