@@ -275,7 +275,6 @@ const getNewFunctionButtonWithCallback = (
   return {
     kind: 'button',
     text: msg.createBlocklyFunction(),
-    // TODO: Remove the alternate callback key once we're using the new function editor
     callbackKey,
   };
 };
