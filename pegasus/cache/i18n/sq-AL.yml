@@ -836,7 +836,7 @@ sq-AL:
   header_report_bug: Raporto një problem
   header_sections: Seksionet
   header_stats: statistikat
-  header_teach: Mësoj
+  header_teach: Mësoni
   header_tutorials: Tutoriale
   hello: Pershendetje Botë
   help_recruit: Na ndihmo te rekrutojmë më shumë kodues!
@@ -1712,7 +1712,7 @@ sq-AL:
   user_header_my_projects: Projektet e mia
   user_header_playlab: Play Lab
   user_header_settings: Llogaria ime
-  user_header_signin: Futu
+  user_header_signin: Kyçu
   user_header_spritelab: Sprite Lab
   user_header_team: Skuadra
   user_header_view_all: Shiko të gjitha projektet...
