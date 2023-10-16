@@ -66,6 +66,26 @@
         outline: 2px solid $light_primary_500;
         outline-offset: 2px;
       }
+
+      //Disabled styles
+      &:has(input[type="checkbox"]:disabled) {
+        color: $light_gray_200;
+        border-color: $light_gray_200;
+
+        &:hover {
+          cursor: not-allowed;
+          background-color: $light_white;
+        }
+
+        &:active {
+          padding: 8px 12px;
+          border: 1px solid $light_gray_200;
+        }
+      }
+      &:has(input[type="checkbox"]:disabled:checked) {
+        background-color: $light_gray_200;
+        color: $light_white;
+      }
     }
   }
 
