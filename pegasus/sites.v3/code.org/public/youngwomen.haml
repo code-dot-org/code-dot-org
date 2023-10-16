@@ -19,8 +19,9 @@ theme: responsive_full_width
 %section.intro
   .wrapper
     .flex-container.justify-space-between.wrap-reverse
-      %figure.img-wrapper.rounded-corners.col-45
-      .text-wrapper.col-50
+      %div.col-50
+        = view :display_video_thumbnail, id: "intro_csf", video_code: "t7sJiOOP12Y", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/young-women-in-cs/young-women-in-cs-v1.mp4"
+      .text-wrapper.col-45{style: "margin-bottom: 1rem"}
         %h2=hoc_s(:heading_cs_ambassador_program)
         %p.heading-xs
           =hoc_s(:cs_ambassador_subhead)

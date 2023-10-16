@@ -160,15 +160,19 @@ input[type=submit] {
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .625rem 1rem;
+  padding: .75rem 1rem;
   margin: 0.5rem 0;
   font-size: 1rem;
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
-  line-height: 1.2;
+  line-height: 1.05;
   text-decoration: none;
   text-align: center;
   transition: all ease-in-out .2s;
+
+  @media screen and (max-width: $width-sm) {
+    line-height: 1.2;
+  }
 
   &:hover {
     color: white;
