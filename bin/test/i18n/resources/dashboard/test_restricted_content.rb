@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::RestrictedContent do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out RestrictedContent resource' do
-  #     I18n::Resources::Dashboard::RestrictedContent::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::RestrictedContent.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out RestrictedContent resource' do
+      I18n::Resources::Dashboard::RestrictedContent::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::RestrictedContent.sync_out
+    end
+  end
 end

@@ -38,6 +38,7 @@ module I18n
         DataContent.sync_out
         DeviseContent.sync_out
         Docs.sync_out
+        RestrictedContent.sync_out
         Scripts.sync_out
         SharedFunctions.sync_out
         Standards.sync_out
