@@ -46,37 +46,39 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal enrollment, found_enrollment
   end
 
-  test 'resolve_user' do
-    # Enrollment using application alternate email
-    teacher1 = create :teacher
-    workshop = create :workshop, course: COURSE_CSD
-    application = create :pd_teacher_application, user: teacher1, pd_workshop_id: workshop.id, course: 'csd', status: 'accepted'
-    enrollment_with_alt_email = build :pd_enrollment, email: teacher1.email_for_enrollments
-
-    assert_equal enrollment_with_alt_email.email, application.form_data_hash['alternateEmail']
-    assert_nil enrollment_with_alt_email.user
-    assert_equal teacher1, enrollment_with_alt_email.resolve_user
-
-    # Enrollment using user email
-    teacher2 = create :teacher
-    enrollment_with_email = build :pd_enrollment, email: teacher2.email_for_enrollments
-
-    assert_equal enrollment_with_email.email, teacher2.email
-    assert_nil enrollment_with_email.user
-    assert_equal teacher2, enrollment_with_email.resolve_user
-
-    # Enrollment using user
-    teacher3 = create :teacher
-    enrollment_with_user = build :pd_enrollment, user: teacher3
-
-    assert_equal teacher3, enrollment_with_user.user
-    assert_equal teacher3, enrollment_with_user.resolve_user
-
-    # Enrollment with no user
+  test 'resolve_user returns nil for no user' do
     enrollment_with_no_user = build :pd_enrollment
 
     assert_nil enrollment_with_no_user.user
     assert_nil enrollment_with_no_user.resolve_user
+  end
+
+  test 'resolve_user returns user using explicitly defined user' do
+    teacher = create :teacher
+    enrollment_with_user = build :pd_enrollment, user: teacher
+
+    assert_equal teacher, enrollment_with_user.user
+    assert_equal teacher, enrollment_with_user.resolve_user
+  end
+
+  test 'resolve_user returns user using user email' do
+    teacher = create :teacher
+    enrollment_with_email = build :pd_enrollment, email: teacher.email_for_enrollments
+
+    assert_equal enrollment_with_email.email, teacher.email
+    assert_nil enrollment_with_email.user
+    assert_equal teacher, enrollment_with_email.resolve_user
+  end
+
+  test 'resolve_user returns user using application alternate email' do
+    teacher = create :teacher
+    workshop = create :workshop, course: COURSE_CSD
+    application = create :pd_teacher_application, user: teacher, pd_workshop_id: workshop.id, course: 'csd', status: 'accepted'
+    enrollment_with_alt_email = build :pd_enrollment, email: teacher.email_for_enrollments, application_id: application.id
+
+    assert_equal enrollment_with_alt_email.email, application.form_data_hash['alternateEmail']
+    assert_nil enrollment_with_alt_email.user
+    assert_equal teacher, enrollment_with_alt_email.resolve_user
   end
 
   test 'autoupdate_user_field called on validation' do

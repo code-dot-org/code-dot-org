@@ -41,7 +41,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
 
     enrollment_email = params[:email]
-    user = (User.find_by_email_or_hashed_email enrollment_email) || (User.all.find {|u| u.email_for_enrollments == enrollment_email})
+    app_id = params[:application_id]
+    user = (User.find_by_email_or_hashed_email enrollment_email) || (app_id && User.find(Pd::Application::TeacherApplication.find(app_id)&.user_id))
 
     # See if a previous enrollment exists for this email
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
@@ -59,6 +60,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       ActiveRecord::Base.transaction do
         enrollment = ::Pd::Enrollment.new workshop: @workshop
         enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
+        enrollment.update!(application_id: app_id) if app_id
 
         user&.update_school_info(enrollment.school_info)
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now

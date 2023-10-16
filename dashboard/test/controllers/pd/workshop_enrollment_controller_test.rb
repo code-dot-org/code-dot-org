@@ -140,7 +140,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
 
     application = create :pd_teacher_application, user: teacher, status: 'accepted'
     new_form_data_hash = application.form_data_hash
-    new_form_data_hash['alternateEmail'] = nil
+    new_form_data_hash['alternateEmail'] = ''
     application.update(form_data_hash: new_form_data_hash)
     app_alt_email = application.form_data_hash['alternateEmail']
 

@@ -297,18 +297,16 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     refute_equal teacher.email, app_alt_email
     assert_equal teacher.email_for_enrollments, app_alt_email
 
-    teacher_params = enrollment_test_params.merge(
+    params = enrollment_test_params.merge(
       {
         email: app_alt_email,
-        email_confirmation: app_alt_email
-      }
-    )
-    post :create, params: teacher_params.merge(
-      {
+        email_confirmation: app_alt_email,
         workshop_id: @workshop.id,
-        school_info: school_info_params
+        school_info: school_info_params,
+        application_id: application.id
       }
     )
+    post :create, params: params
 
     assert_response :success
 

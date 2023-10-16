@@ -101,6 +101,7 @@ export default class EnrollForm extends React.Component {
   static propTypes = {
     workshop_id: PropTypes.number.isRequired,
     workshop_course: PropTypes.string,
+    application_id: PropTypes.number,
     first_name: PropTypes.string,
     email: PropTypes.string,
     onSubmissionComplete: PropTypes.func,
@@ -257,6 +258,7 @@ export default class EnrollForm extends React.Component {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
+      application_id: this.props.application_id,
       school_info: schoolInfo,
       role: this.role(),
       describe_role: this.state.describe_role,
