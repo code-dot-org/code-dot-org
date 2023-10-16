@@ -11,5 +11,3 @@ cookbook 'nginx_test', path: './test/cookbooks/nginx_test'
 # (https://github.com/zuazo/ssl_certificate-cookbook/pull/46) by vzDevelopment
 # (forked to our own project purely to ensure stability).
 cookbook 'ssl_certificate', github: 'code-dot-org/ssl_certificate-cookbook', branch: 'add_provider-issue_45'
-
-cookbook 'sudo-user', path: '../sudo-user'
