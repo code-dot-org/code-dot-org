@@ -10,6 +10,8 @@ import classNames from 'classnames';
 import {BlockSvg, Workspace} from 'blockly/core';
 import {doAi} from './utils';
 import AiGeneratingView from './AiGeneratingView';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import {AiOutput} from '../types';
@@ -72,7 +74,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
-    console.log(currentValue);
 
     if (currentValue) {
       setMode(Mode.RESULTS_FINAL);
@@ -125,8 +126,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       input =>
         inputLibrary.items.find((item: AiModalItem) => item.id === input).name
     );
-    const request = `${promptString} ${inputNames.join(', ')}.`;
-    startAi(inputs, request);
+
+    startAi(inputNames);
     setMode(Mode.PROCESSING);
   };
 
@@ -134,9 +135,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.GENERATING);
   };
 
-  const startAi = async (inputs: string[], value: string) => {
-    const resultJsonString = await doAi(value);
-    const result = JSON.parse(resultJsonString);
+  const startAi = async (inputNames: Array<string>) => {
+    const request = `${promptString} ${inputNames.join(', ')}.`;
+    let responseJsonString: string;
+    // Default to using cached response, otherwise contact OpenAI directly
+    if (queryParams('ai-model') === 'llm') {
+      responseJsonString = await doAi(request);
+    } else {
+      responseJsonString = chooseEffects(inputNames);
+    }
+    const result = JSON.parse(responseJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
     // explanation, since we don't want it becoming part of the code.
