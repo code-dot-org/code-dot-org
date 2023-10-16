@@ -19,11 +19,11 @@ module I18n
         DataContent.sync_in
         DeviseContent.sync_in
         Docs.sync_in
+        RestrictedContent.sync_in
         Scripts.sync_in
         SharedFunctions.sync_in
         Standards.sync_in
 
-        I18nScriptUtils.copy_file File.join(ORIGIN_I18N_DIR_PATH, 'restricted.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'restricted.yml')
         I18nScriptUtils.copy_file File.join(ORIGIN_I18N_DIR_PATH, 'slides.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'slides.yml')
         I18nScriptUtils.copy_file File.join(ORIGIN_I18N_DIR_PATH, 'unplugged.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'unplugged.yml')
       end
