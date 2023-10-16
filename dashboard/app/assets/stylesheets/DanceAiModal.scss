@@ -6,101 +6,48 @@
  * these things change.
  */
 
-// Fade in for 1 second after a 0 second delay.
-@keyframes appear0 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// Create an animation that delays for $delay seconds and then fades in
+// over the course of $duration seconds.
+@mixin appear($name, $delay, $duration) {
+  $start_percent: #{100 * ($delay / ($delay + $duration))};
 
-// Fade in for 1 second after a 1 second delay.
-@keyframes appear1 {
-  0%, 50% {
-    opacity: 0;
+  @keyframes #{$name} {
+    0%, #{$start_percent}% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  100% {
-    opacity: 1;
-  }
-}
 
-// Fade in for 1 second after a 2 second delay.
-@keyframes appear2 {
-  0%, 66% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-// Fade in for 1 second after a 3 second delay.
-@keyframes appear3 {
-  0%, 75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-// Fade in for 1 second after a 4 second delay.
-@keyframes appear4 {
-  0%, 80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-// Fade in for 1 second after a 5 second delay.
-@keyframes appear5 {
-  0%, 83% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-// Fade in for 1 second after a 6 second delay.
-@keyframes appear6 {
-  0%, 85% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: #{$name} #{$delay + $duration}s;
 }
 
 #ai-modal-inner-area {
   #fade-in {
     // First block
     .blocklyWorkspace .blocklyPath {
-      animation: appear0 1s;
+      @include appear("appear0", 0, 1);
     }
 
     // First block's text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(3) {
-      animation: appear1 2s;
+      @include appear("appear1", 1, 1);
     }
 
     // Second block
     .blocklyBlockCanvas g g .blocklyPath {
-      animation: appear2 3s;
+      @include appear("appear2", 2, 1);
     }
 
     // Second block's first text
     .blocklyBlockCanvas g .blocklyNonEditableText {
-      animation: appear3 4s;
+      @include appear("appear3", 3, 1);
     }
 
     // Second block's second text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(4) {
-      animation: appear4 5s;
+      @include appear("appear1", 4, 1);
     }
   }
 
