@@ -18,6 +18,6 @@
   = f.label :default_song, 'Default Song'
   = f.select :default_song, options_for_select(@level.class.hoc_songs, selectedSongMap[@level.default_song] ? @level.default_song : fallbackDefaultSong)
 
-%p Currently chosen default song (may not match actual default if song selection was limited):
+%p Previously chosen default song (may not match actual default if song selection was limited):
 
 = songMap[@level.default_song][0]
