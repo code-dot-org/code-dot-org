@@ -635,11 +635,15 @@ Dance.prototype.execute = async function () {
       userBlockTypes.push(block.type);
     });
   return new Promise((resolve, reject) => {
-    this.nativeAPI.play(userBlockTypes, songMetadata, success => {
-      this.performanceData_.lastRunButtonDelay =
-        performance.now() - this.performanceData_.lastRunButtonClick;
-      success ? resolve() : reject();
-    });
+    this.nativeAPI.play(
+      songMetadata,
+      success => {
+        this.performanceData_.lastRunButtonDelay =
+          performance.now() - this.performanceData_.lastRunButtonClick;
+        success ? resolve() : reject();
+      },
+      userBlockTypes
+    );
   });
 };
 
