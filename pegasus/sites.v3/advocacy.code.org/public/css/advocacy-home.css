@@ -105,18 +105,29 @@ h2 {
 
 .teach-ai-container {
   background-color: #032D83;
+  margin: 3rem auto 4rem;
+  padding: 1.5rem;
+  border-radius: 4px;
   display: flex;
   align-items: center;
-  gap: 40px;
-  padding: 15px;
+  gap: 2rem;
+}
+
+.teach-ai-container img {
+  width: 260px;
 }
 
 @media(max-width: 969px) {
   .teach-ai-container {
     flex-direction: column;
-    padding: 10px;
+    gap: 1rem;
   }
+
   .teach-ai-container p {
     text-align: center;
+  }
+
+  .teach-ai-container img {
+    width: 60%;
   }
 }

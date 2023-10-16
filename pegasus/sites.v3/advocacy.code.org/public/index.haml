@@ -48,16 +48,17 @@ video_player: false
     = view :interactive_map, use_url: false, advocacy_variation: true
 
     .clear{style: "clear:both"}
-    .teach-ai-container{style: "width: 95%; margin: 0 auto; margin-top: 40px"}
-      %img{src: "/images/teach-ai-logo.svg", alt: "", style: "width: 30%"}
-      .teach-ai-text
-        %p{style: "color: #FFF; font-size: 14px; font-weight: bold;"}
+
+    .teach-ai-container
+      %img{src: "/images/teach-ai-logo.svg", alt: ""}
+      .teach-ai-text{style: "text-align: center"}
+        %p.heading-sm{style: "color: white;"}
           =hoc_s(:teach_ai_title)
-        %p{style: "color: #FFF; font-size: 12px;"}
+        %p{style: "color: white; margin-bottom: 0"}
           =hoc_s(:teach_ai_description)
       %a.link-button.has-external-link{style: "flex: 0 0 auto;", href: "https://teachai.org/toolkit", target: "_blank", rel: "noopener noreferrer"}
         =hoc_s(:teach_ai_button_label)
-      .clear
+
     %h2
       Drive the change in your state
 
