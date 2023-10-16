@@ -613,16 +613,19 @@ Dance.prototype.execute = async function () {
   const charactersReferenced = this.initInterpreter();
 
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
-  this.nativeAPI.setUserBlocksWithNextBlock(
-    Blockly.getMainWorkspace().getAllBlocks()
-  );
-
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
 
+  const userBlocks = [];
+  Blockly.getMainWorkspace()
+    .getAllBlocks()
+    .forEach(block => {
+      userBlocks.push(block.type);
+    });
+  const userBlocksString = `var userBlocks = ${JSON.stringify(userBlocks)};\n`;
   this.nativeAPI.registerValidation(
-    utils.getValidationCallback(this.level.validationCode)
+    utils.getValidationCallback(userBlocksString + this.level.validationCode)
   );
 
   // songMetadataPromise will resolve immediately if the request which populates
