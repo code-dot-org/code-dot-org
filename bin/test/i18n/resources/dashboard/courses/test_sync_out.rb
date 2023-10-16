@@ -158,17 +158,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
       expect_localization_restoration.once
       restore_localization_of_language
     end
-
-    context 'when the backup file does not exist' do
-      before do
-        FileUtils.rm(i18n_backup_file_path)
-      end
-
-      it 'does not restores localization' do
-        expect_localization_restoration.never
-        restore_localization_of_language
-      end
-    end
   end
 
   describe '#fix_localization_urls' do

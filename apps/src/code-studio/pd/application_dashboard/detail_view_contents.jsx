@@ -15,6 +15,7 @@ import {
 /* eslint-enable no-restricted-imports */
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   RegionalPartnerDropdown,
   UNMATCHED_PARTNER_VALUE,
@@ -1032,7 +1033,7 @@ const styles = {
     width: 'auto',
   },
   lockedStatus: {
-    fontFamily: '"Gotham 7r"',
+    ...fontConstants['main-font-bold'],
     marginTop: 10,
   },
   caption: {

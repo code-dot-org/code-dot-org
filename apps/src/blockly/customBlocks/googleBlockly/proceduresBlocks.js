@@ -1,9 +1,9 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
+import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
-
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
@@ -17,7 +17,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a function (aka procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
-    type: 'procedures_defnoreturn',
+    type: BLOCK_TYPES.procedureDefinition,
     message0: '%1 %2 %3 %4',
     message1: '%1',
     args0: [
@@ -26,7 +26,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type: useModalFunctionEditor ? 'field_label' : 'field_input',
+        type: 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -61,13 +61,14 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
+      'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
   },
   {
     // Block for calling a procedure with no return value.
-    type: 'procedures_callnoreturn',
+    type: BLOCK_TYPES.procedureCall,
     message0: '%1 %2',
     args0: [
       {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
@@ -103,12 +104,17 @@ export const editButtonHandler = function () {
 };
 
 // This extension adds an edit button to the end of a procedure call block.
-const editButton = function () {
+GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
+  // If we are in the modal function editor, don't add the button, due to an issue with Blockly
+  // not being able to handle us clearing the block right after it has been clicked.
+  // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
+  // remove the check on functionEditor workspace id.
   if (
     useModalFunctionEditor &&
     this.inputList.length &&
-    !this.workspace.isFlyout
+    !this.workspace.isFlyout &&
+    this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
@@ -117,9 +123,30 @@ const editButton = function () {
     });
     this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
   }
-};
+});
 
-GoogleBlockly.Extensions.register('procedures_edit_button', editButton);
+// This extension renders function and behavior definitions as mini toolboxes
+// The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
+GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
+  // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
+  let miniToolboxBlocks = [];
+  if (this.type === 'behavior_definition') {
+    miniToolboxBlocks.push('sprite_parameter_get');
+  }
+
+  // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
+  if (!miniToolboxBlocks.length) {
+    return;
+  }
+
+  const flyoutToggleButton =
+    Blockly.customBlocks.initializeMiniToolbox.bind(this)(true);
+  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+    miniToolboxBlocks,
+    flyoutToggleButton,
+    true
+  );
+});
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
@@ -177,7 +204,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // Note: Blockly.Msg was undefined when this code was extracted into global scope
   const functionDefinitionBlock = {
     kind: 'block',
-    type: 'procedures_defnoreturn',
+    type: BLOCK_TYPES.procedureDefinition,
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
@@ -205,7 +232,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   workspaces.forEach(workspace => {
     const procedureBlocks = workspace
       .getTopBlocks()
-      .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
+      .filter(topBlock => topBlock.type === BLOCK_TYPES.procedureDefinition);
     procedureBlocks.forEach(block => {
       allFunctions.push({
         name: block.getFieldValue('NAME'),
@@ -235,9 +262,21 @@ const getNewFunctionButtonWithCallback = (
   workspace,
   functionDefinitionBlock
 ) => {
-  const callbackKey = 'newProcedureCallback';
-  const callback = Blockly.functionEditor.newProcedureCallback;
-
+  let callbackKey, callback;
+  if (modalFunctionEditorExperimentEnabled) {
+    callbackKey = 'newProcedureCallback';
+    callback = () =>
+      Blockly.functionEditor.newProcedureCallback(
+        BLOCK_TYPES.procedureDefinition
+      );
+  } else {
+    callbackKey = 'createAndCenterFunctionDefinitionBlock';
+    // Everything here is place-holder code that should be replaced with a
+    // call to open the behavior editor with a new defintion block.
+    // Until then, we just create a block under all existing blocks on the
+    // main workspace.
+    callback = () => createAndCenterDefinitionBlock(functionDefinitionBlock);
+  }
   workspace.registerButtonCallback(callbackKey, callback);
 
   return {
