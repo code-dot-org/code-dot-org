@@ -11,8 +11,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BlockSvg, Workspace} from 'blockly/core';
 import {doAi} from './utils';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-// import DanceAiClient from '../DanceAiClient';
-import {chooseEffects} from './DanceAiClient2';
+import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import {AiOutput} from '../types';
@@ -72,7 +71,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
-    console.log(currentValue);
 
     if (currentValue) {
       setMode(Mode.RESULTS_FINAL);
@@ -136,7 +134,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     if (queryParams('ai-model') === 'llm') {
       responseJsonString = await doAi(request);
     } else {
-      // let responseJsonString2 = DanceAiClient(request);
       responseJsonString = chooseEffects(inputNames);
     }
     const result = JSON.parse(responseJsonString);
