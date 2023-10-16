@@ -99,7 +99,11 @@ export const blocks = {
     // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
     const lastInput = this.inputList[this.inputList.length - 1];
     // Force add a dummy input at the end of the block, if needed.
-    if (lastInput.type !== Blockly.inputTypes.DUMMY) {
+    if (
+      ![Blockly.inputTypes.DUMMY, Blockly.inputTypes.STATEMENT].includes(
+        lastInput.type
+      )
+    ) {
       this.appendDummyInput();
     }
 

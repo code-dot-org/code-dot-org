@@ -106,6 +106,9 @@ export default class BlockSvgFrame {
   }
 
   render(svgGroup, isRtl, minWidthAdjustment) {
+    if (!svgGroup) {
+      return;
+    }
     // Remove ourselves from the DOM and calculate the size of our
     // container, then insert ourselves into the container.
     // We do this because otherwise, the value returned by
