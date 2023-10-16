@@ -263,20 +263,13 @@ const getNewFunctionButtonWithCallback = (
   functionDefinitionBlock
 ) => {
   let callbackKey, callback;
-  if (modalFunctionEditorExperimentEnabled) {
-    callbackKey = 'newProcedureCallback';
-    callback = () =>
-      Blockly.functionEditor.newProcedureCallback(
-        BLOCK_TYPES.procedureDefinition
-      );
-  } else {
-    callbackKey = 'createAndCenterFunctionDefinitionBlock';
-    // Everything here is place-holder code that should be replaced with a
-    // call to open the behavior editor with a new defintion block.
-    // Until then, we just create a block under all existing blocks on the
-    // main workspace.
-    callback = () => createAndCenterDefinitionBlock(functionDefinitionBlock);
-  }
+
+  callbackKey = 'newProcedureCallback';
+  callback = () =>
+    Blockly.functionEditor.newProcedureCallback(
+      BLOCK_TYPES.procedureDefinition
+    );
+
   workspace.registerButtonCallback(callbackKey, callback);
 
   return {

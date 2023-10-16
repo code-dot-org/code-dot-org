@@ -11,9 +11,6 @@ import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
 
-// TODO: Remove once creating behaviors is enabled with the function editor.
-const SHOW_NEW_BEHAVIOR_BUTTON = false;
-
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -172,7 +169,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // Otherwise, we render a "blank" behavior definition block
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
-  } else if (useModalFunctionEditor && SHOW_NEW_BEHAVIOR_BUTTON) {
+  } else if (useModalFunctionEditor) {
     const newBehaviorButton = getNewBehaviorButtonWithCallback(
       workspace,
       behaviorDefinitionBlock
@@ -271,9 +268,9 @@ const getNewBehaviorButtonWithCallback = (
   behaviorDefinitionBlock
 ) => {
   const callbackKey = 'newBehaviorCallback';
-  const callback = createNewBehavior;
-
-  workspace.registerButtonCallback(callbackKey, callback);
+  workspace.registerButtonCallback(callbackKey, () => {
+    Blockly.functionEditor.newProcedureCallback(BLOCK_TYPES.behaviorDefinition);
+  });
 
   return {
     kind: 'button',
@@ -281,9 +278,4 @@ const getNewBehaviorButtonWithCallback = (
     // TODO: Remove the alternate callback key once we're using the new function editor
     callbackKey,
   };
-};
-
-const createNewBehavior = () => {
-  // TODO: Refactor Blockly.functionEditor.newProcedureCallback to work with behaviors too.
-  console.warn('Creating behaviors is not currently supported');
 };
