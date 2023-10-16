@@ -1,0 +1,22 @@
+name 'virtual-pl-csa-summer-day5-async1intro'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 5, Asynchronous Part 1
+
+##### Welcome! This asynchronous module is designed to prepare you for recruiting students in your class and supporting them academically. 
+
+## In this module, you will:
+
+* ##### Take time to plan your year.
+* ##### Plan for your next steps.
+
+
+### **Suggested time:** 40 minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+MARKDOWN
