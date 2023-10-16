@@ -132,15 +132,15 @@ theme: responsive_full_width
 
 
 %section.bg-neutral-light
-  .wrapper{style: "display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap"}
-    %figure.col-45
+  .wrapper{style: "display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 1rem"}
+    %figure.col-45{style: "margin-bottom: 1 rem"}
       %img{src: "/images/ai/pl/101/TeachAI.png", alt: "", style: "width: 100%"}
     .text-wrapper.col-50
-      %h2{style: "margin-top: 0"}
+      %h2
         =hoc_s(:teach_ai_title)
       %p
         =hoc_s(:teach_ai_description)
-      %a.link-button{href: "teachai.org/toolkit"}
+      %a.link-button.has-external-link{href: "https://teachai.org/toolkit", target: "_blank", rel: "noopener noreferrer"}
         =hoc_s(:teach_ai_button_label)
 
 %section#ai-videos

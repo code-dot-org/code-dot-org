@@ -103,7 +103,7 @@ h2 {
   margin-top: 0px;
 }
 
-.tech-ai-container {
+.teach-ai-container {
   background-color: #032D83;
   display: flex;
   align-items: center;
@@ -112,11 +112,11 @@ h2 {
 }
 
 @media(max-width: 969px) {
-  .tech-ai-container {
+  .teach-ai-container {
     flex-direction: column;
     padding: 10px;
   }
-  .tech-ai-container p {
+  .teach-ai-container p {
     text-align: center;
   }
 }
