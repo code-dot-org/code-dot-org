@@ -33,7 +33,8 @@ a.ee_link:link, a.ee_link:visited {
 
 button.ee_button {
   font-size: 20px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   height: 45px;
   padding-left: 20px;
   padding-right: 20px;
@@ -86,7 +87,8 @@ h1.ee_congrats_header {
 }
 
 .count h1 {
-  color: white; font-size: 56px; line-height: 56px; font-family: 'Gotham 5r', sans-serif; margin: 0px;
+  color: white; font-size: 56px; line-height: 56px; font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight); margin: 0px;
 }
 
 @media screen and (max-width: 320px)
@@ -97,14 +99,15 @@ h1.ee_congrats_header {
 }
 
 .count h2 {
-  color: white; font-size: 36px; line-height: 36px; font-family: 'Gotham 5r', sans-serif; margin-top:5px; margin-bottom: 0px;
+  color: white; font-size: 36px; line-height: 36px; font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight); margin-top:5px; margin-bottom: 0px;
 }
 .count h3 {
-  color: white; font-size: 32px; line-height: 32px;   font-family: 'Gotham 4r', sans-serif;
+  color: white; font-size: 32px; line-height: 32px;   font-family: var(--main-font);
   margin-top:5px; margin-bottom:0px;
 }
 .count h4 {
-  color: white; font-size: 26px; line-height: 26px; font-family: 'Gotham 4r', sans-serif;margin-top:15px;
+  color: white; font-size: 26px; line-height: 26px; font-family: var(--main-font); margin-top:15px;
 }
 
 button {
@@ -136,7 +139,7 @@ button {
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   font-size: 14px;
   font-weight: normal;
   height: 34px;

@@ -308,7 +308,7 @@ class ContactRollupsProcessed < ApplicationRecord
     # US state in schools table is in abbreviation, must convert it back to state name.
     school_state = extract_field_latest_value contact_data, 'dashboard.schools', 'state'
     if school_state
-      state_name = get_us_state_from_abbr(school_state, true) || school_state
+      state_name = get_us_state_from_abbr(school_state, include_dc: true) || school_state
       return {state: state_name}
     end
 

@@ -1,7 +1,5 @@
 import _ from 'lodash';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
-
-import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
@@ -47,10 +45,7 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
     hiddenDefinitionSource,
     Blockly.getHiddenDefinitionWorkspace()
   );
-  if (
-    experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR) &&
-    Blockly.functionEditor
-  ) {
+  if (Blockly.functionEditor) {
     Blockly.functionEditor.setUpEditorWorkspaceProcedures();
   }
 }
@@ -74,10 +69,7 @@ function prepareSourcesForWorkspaces(source, hiddenDefinitions) {
     parseSourceAndHiddenDefinitions(source, hiddenDefinitions);
 
   const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
-  if (
-    Blockly.useModalFunctionEditor &&
-    experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
-  ) {
+  if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
   }
   moveHiddenProcedures(

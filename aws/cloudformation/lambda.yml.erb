@@ -273,6 +273,48 @@ Resources:
             - "ec2:DescribeImages"
             Resource: '*'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+
+  SQLUserLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Custom CloudFormation Resource: Create/Update/Delete a SQL User and its permissions in a MySQL database.'
+      FunctionName: !Sub "SQLUser-CloudFormation-Custom-Resource-${AWS::StackName}"
+      Code: <%=package_node_lambda 'sql-user' %>
+      Handler: index.handler
+      Runtime: nodejs18.x
+      MemorySize: 1024
+      Timeout: 30
+      Role: !GetAtt SQLUserLambdaRole.Arn
+      VpcConfig:
+        SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
+        SubnetIds: <%=subnets.to_json%>
+  SQLUserLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'lambda'%>
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole'
+      Policies:
+        - PolicyName: GetDBCredentials
+          PolicyDocument:
+            Statement:
+              # Grant this Lambda permission to every Stack's database credential Secrets.
+              -
+                Effect: Allow
+                Action: 'secretsmanager:GetSecretValue'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_admin-??????"
+              -
+                Effect: Allow
+                Action: 'secretsmanager:GetSecretValue'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_writer-??????"
+              -
+                Effect: Allow
+                Action: 'secretsmanager:GetSecretValue'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_reader-??????"
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+
   LambdaSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
