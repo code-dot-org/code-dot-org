@@ -8,7 +8,11 @@
 
 // Create an animation that delays for $delay seconds and then fades in
 // over the course of $duration seconds.
-@mixin appear($name, $delay, $duration) {
+@mixin appear($index) {
+  $name: appear-#{$index};
+  $delay: $index;
+  $duration: 1;
+
   $start_percent: #{100 * ($delay / ($delay + $duration))};
 
   @keyframes #{$name} {
@@ -27,27 +31,27 @@
   #fade-in {
     // First block
     .blocklyWorkspace .blocklyPath {
-      @include appear("appear0", 0, 1);
+      @include appear(0);
     }
 
     // First block's text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(3) {
-      @include appear("appear1", 1, 1);
+      @include appear(1);
     }
 
     // Second block
     .blocklyBlockCanvas g g .blocklyPath {
-      @include appear("appear2", 2, 1);
+      @include appear(2);
     }
 
     // Second block's first text
     .blocklyBlockCanvas g .blocklyNonEditableText {
-      @include appear("appear3", 3, 1);
+      @include appear(3);
     }
 
     // Second block's second text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(4) {
-      @include appear("appear1", 4, 1);
+      @include appear(4);
     }
   }
 
