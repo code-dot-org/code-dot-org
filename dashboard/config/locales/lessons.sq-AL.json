@@ -650,6 +650,12 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Bleta Gërmëzuese"
         },
+        "K5-OnlinePD/Planning": {
+          "name": "Planifikimi"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Hapat e ardhshme"
+        },
         "csd1-2019/Input and Output": {
           "name": "Inputet dhe Outputet"
         },
@@ -1081,6 +1087,30 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Një betejë mbretërore me Evente"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sekuencimi"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cikle"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Ngjarje"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Kushtet"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "funksione"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "variabla"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Për Ciklet"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Siguria në Lagjen Time në Internet"
@@ -3053,6 +3083,12 @@
           "preparation": "-   Luaj nëpër enigma për të gjetur ndonjë fushë problematike të mundshme për klasën tuaj.\n-   (Opsionale) Zgjedhni disa enigma për t'i bërë në grup me klasën tuaj.\n-   Sigurohuni që çdo nxënës të ketë një ditar reflektimi.",
           "purpose": "Në këto aktivitete online, nxënësit do të mësojnë të përdorin eventet në Play Lab. Ata do të fillojnë duke trajnuar kalorësin të lëvizë kur shtypet një tast i shigjetës, më pas do të përfundojnë me mundësinë për të shfaqur pjesën tjetër të shkathtësive që kanë mësuar gjatë këtij kursi, duke përfshirë sekuencën dhe ciklin, si pjesë e enigmës përfundimtare të lojës së lirë.",
           "student_overview": "Përdorni eventet për të krijuar një histori ose për të bërë një lojë interaktive."
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planifikimi"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Hapat e ardhshme"
         },
         "csd1-2022/Intro to Problem Solving": {
           "assessment_opportunities": "1.  **Komunikojnë dhe bashkpunojnë me shokët e klasës në mënyrë që të zgjidhin një problem**\n\n    Në pyetjen e diskutimit përmbyllës rreth bashkëpunimit, kontrolloni për avantazhet e bashkëpunimit në zgjidhjen e problemeve dhe mund të rendisni strategjitë e duhura për tejkalimin e sfidave. Kjo praktikë do të përforcohet gjatë gjithë njësisë dhe kursit.\n2.  **Përmirësojnë në mënyrë të përsëritur një zgjidhje për një problem**\n\n    Në Udhëzuesin e Aktiviteteve, kontrolloni për pikat e forta dhe të dobëta në dizajnin origjinal të studentëve dhe lidhjen me ndryshimet e duhura për përsëritjen e ardhshme të projektit.\n3.  **Identifikojnë strategji të ndryshme të përdorura për të zgjidhur një problem**\n\n    Në Udhëzuesin e Aktivitetit, kontrolloni për strategjitë për tejkalimin e sfidave në aktivitet. Ju gjithashtu mund të kontrolloni \"anët e forta\" të modeleve të tyre që nxënësit rendisin si pjesë e zhvillimit të planit të tyre në faqen e dytë të udhëzuesit.",
@@ -6268,9 +6304,6 @@
           "overview": "⚠️ Ky mësim është menduar për klasat që duan të tregojnë të gjithë [Si funksionon AI seri video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) në një ditë të vetme\\*\\*. Nuk ka për qëllim të mësohet në rend me mësimet e tjera në këtë njësi, e cila prezanton çdo video një ditë në një kohë.\n\nStudentët ndjekin së bashku me secilën video duke përputhur fjalorin nga videoja, pastaj duke iu përgjigjur një pyetjeje reflektimi për secilën video. Plani i mësimit dhe diapozitivët janë shumë të rrallë dhe të hapur për të lejuar improvizim dhe personalizim për t'iu përshtatur klasës tuaj.",
           "preparation": "-   Shtypni udhëzuesin e aktivitetit\n-   Projektoni diapozitivët në një projektor video"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Ora e Kodit 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Hyrje në App Lab",
           "overview": "Ky udhezues eshte i dizaqjnuar qe te prezentoje shkurtimisht App Lab si forme programimi dhe nje vegel e fuqishme per ndertimin dhe shperndarjen e aplikacioneve. Vete udhezuesi i meson studenteve te krijojne dhe kontrollojne butonat, tekstin, imazhet, tingujt dhe ekranet ne JavaScript duke perdorur blloqe ose tekst. Ne fund te udhezuesit, nxenesit do te kene kohe qe te vazhdojne me projektin e tyre ne tri aplikacione: \"Zgjedh Avanturen tende\", \"Karta Pershendetese\", ose aplikacion per \"Kuiz Personaliteti\" \n\nAta mund poashtu te vazhdojne te ndertojne me shume projekte ne faqen e code.org/applab\n\nZbavitu duke kompletuar Oren tende te Kodit me App Lab! \n\n**Pershtatja ne moshe** ky udhezues eshte i dizajnuar per nxenesit e moshes 13 vjeqare. Pasi qe i lejon nxenesit te ngarkojne foto dhe tinguj, nxenesit e rinje nuk duihet ta perdorin kete program pa mbikqyrje. Per te mbrojtur privatesine e nxeneseve, nese nxenesit tuaj jane nen moshen 13 vjeqare, ata nuk do te mund ta perdorin kete tutorial nese nuk i aktivizoni atyre llogarite e tyre ne menyre qe ata te mund t'a perdorin. ",
@@ -6406,10 +6439,10 @@
           "student_overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Së pari, studentët klasifikojnë objektet si \"peshk\" ose \"jo peshk\" për të tentuar të heqin plehrat nga oqeani. Më pas, studentët do të duhet të zgjerojnë grupin e të dhënave të tyre të trajnimit për të përfshirë krijesa të tjera detare që i përkasin ujit. Në pjesën e dytë të aktivitetit, studentët do të zgjedhin etiketat e tyre për t'i aplikuar në imazhet e peshkut të krijuar rastësisht. Këto të dhëna trajnimi përdoren për një model të mësimit të makinerive që më pas duhet të jetë në gjendje të etiketojë imazhet e reja vetë."
         },
         "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "- Luaj nëpër enigma për të gjetur ndonjë fushë problematike të mundshme për klasën tuaj.\n- Sigurohuni që çdo nxënës të ketë një ditar reflektimi.",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Kodimi i një simulimi",
+          "overview": "Në këtë mësim, nxënësit e të gjitha moshave marrin një përvojë hyrëse me kodimin dhe shkencën kompjuterike në një mjedis të sigurt dhe mbështetës. Ky mësim kombinon **ndërtimin e aftësive** rreth ngjarjeve me një **mini-projekt** ku studentët mund të ndërtojnë simulimin e tyre kompjuterik në Sprite Lab. Studentët do të studiojnë simulimin për të kuptuar se sa shpejt mund të përhapet një virus dhe çfarë mund të bëhet për ta ngadalësuar atë.",
+          "preparation": "#### Një javë përpara orës suaj të kodit\n\n-   Rishikoni [Udhëzuesin e Edukatorit të Orës së Kodit](https://hourofcode.com/us/how-to) dhe [Praktikat më të mira nga Edukatorët e Suksesshëm](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) në mënyrë që të filloni të planifikoni ngjarjen tuaj të Orës së Kodit.\n\n-   [Regjistrojeni ngjarjen tuaj të Orës së Kodit](https://hourofcode.com/us) nëse dëshironi të merrni mbështetje në klasë, postera me zbritje ose të merrni pjesë në dhuratën e robotikës (vetëm në SHBA).\n\n-   Rishikoni dhe plotësoni vetë tutorialin në internet: [Dance Party](https://studio.code.org/s/outbreak/)\n\n-   Sigurohuni që ta provoni fillimisht përpara se t'u kërkoni studentëve tuaj ta plotësojnë atë.\n\n-   Kontrolloni teknologjinë tuaj dhe vendosni nëse keni nevojë të zgjidhni ndonjë problem përpara Orës së Kodit.\n\n#### Një ditë para orës suaj të kodit\n\n-   Çdo student që përfundon aktivitetin duhet të marrë një [certifikatë](https://studio.code.org/certificates/batch). Printoni një për të gjithë paraprakisht për ta bërë më të lehtë këtë në fund të Orës së Kodit.\n\n-   (me dëshirë) Inkurajoni nxënësit të sjellin kufje për t'i përdorur gjatë aktivitetit.",
+          "purpose": "Në këtë mësim, studentët do të ndjekin udhëzimet për të koduar modelin e tyre të simulimit. Njohuritë e mëparshme të studentëve për shpërthimet e viruseve në botën reale do të zbatohen në një skenar fiktiv."
         },
         "playlab/Play Lab": {
           "name": "Play Lab",
@@ -6490,7 +6523,7 @@
           "name": "Muzikë"
         },
         "20-hour/Introduction to Computer Science": {
-          "name": "Hyrje në Shkencë Kompjuterike"
+          "name": "Hyrje në Shkencat Kompjuterike"
         },
         "20-hour/The Maze": {
           "name": "Labirinti"
@@ -6788,6 +6821,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Sfidë Ekstreme- Gjithëpërfshirëse"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ora e Kodit 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw",
