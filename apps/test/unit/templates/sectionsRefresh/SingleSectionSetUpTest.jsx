@@ -34,7 +34,7 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    const multiSelectGroup = wrapper.find('MultiSelectGroup');
+    const multiSelectGroup = wrapper.find('Chips');
     expect(multiSelectGroup.length).to.equal(1);
     expect(multiSelectGroup.prop('name')).to.eq('grades');
     expect(multiSelectGroup.prop('required')).to.eq(true);
