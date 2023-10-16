@@ -63,7 +63,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
               name: 'DESCRIPTION_LABEL',
             },
             {
-              type: 'field_multilinetext',
+              type: 'field_input',
               name: 'DESCRIPTION',
               text: '',
             },
