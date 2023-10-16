@@ -59,6 +59,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [resultJson, setResultJson] = useState<string>('');
   const [generatingNodesDone, setGeneratingNodesDone] =
     useState<boolean>(false);
+  const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
 
@@ -129,6 +130,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     startAi(inputNames);
     setMode(Mode.PROCESSING);
+    setTimeout(() => {
+      setProcessingDone(true);
+    }, 4000);
   };
 
   const handleGenerateClick = () => {
@@ -245,6 +249,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setTypingDone(false);
     setResultJson('');
     setShowPreview(false);
+    setProcessingDone(false);
     setGeneratingNodesDone(false);
     setGeneratingDone(false);
   };
@@ -273,9 +278,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             {' '}
             {mode === Mode.SELECT_INPUTS
               ? 'Choose three emoji for the mood of the stage.'
-              : mode === Mode.PROCESSING && resultJson === ''
+              : mode === Mode.PROCESSING && !processingDone
               ? 'The AI is processing your input.'
-              : mode === Mode.PROCESSING && resultJson !== ''
+              : mode === Mode.PROCESSING && processingDone
               ? 'The AI is ready to generate a stage!'
               : mode === Mode.GENERATING
               ? 'The AI is generating results.'
@@ -330,7 +335,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           }}
         >
           {(mode === Mode.SELECT_INPUTS ||
-            (mode === Mode.PROCESSING && resultJson === '')) && (
+            (mode === Mode.PROCESSING && !processingDone)) && (
             <div className={moduleStyles.prompt}>
               {Array.from(Array(SLOT_COUNT).keys()).map(index => {
                 return (
@@ -390,7 +395,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                   className={classNames(
                     moduleStyles.beamImage,
                     mode === Mode.PROCESSING &&
-                      resultJson === '' &&
+                      !processingDone &&
                       moduleStyles.beamImageVisible
                   )}
                 />
@@ -477,7 +482,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {mode === Mode.PROCESSING && resultJson !== '' && (
+          {mode === Mode.PROCESSING && processingDone && (
             <Button
               id="done"
               text={'Generate'}
