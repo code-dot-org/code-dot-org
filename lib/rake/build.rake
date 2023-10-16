@@ -111,7 +111,11 @@ namespace :build do
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
         ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-        RakeUtils.system 'bin/delayed_job', 'restart'
+        if rack_env?(:adhoc)
+          RakeUtils.system 'bin/delayed_job', '-n', '5', 'restart'
+        else
+          RakeUtils.system 'bin/delayed_job', 'restart'
+        end
 
         # Commit dsls.en.yml changes on staging
         dsls_file = dashboard_dir('config/locales/dsls.en.yml')
