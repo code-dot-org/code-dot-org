@@ -510,9 +510,7 @@ Resources:
       ResourceSignal:
         Timeout: PT4H
     Properties:
-      # Temporarily hardcode the Ubuntu 20 image just for production-daemon, so we can gradually roll out the update.
-      # TODO (infra): finish updating all environments, and restore this line to always just use IMAGE_ID
-      ImageId: <%=rack_env?(:production) ? IMAGE_ID : 'ami-0261755bbcb8c4a84'%>
+      ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
@@ -586,9 +584,7 @@ Resources:
     DeletionPolicy: Retain
     CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
     Properties:
-      # Temporarily hardcode the Ubuntu 20 image just for this server, so we can gradually roll out the update.
-      # TODO (infra): finish updating all environments, and restore this line to again reference IMAGE_ID
-      ImageId: 'ami-0261755bbcb8c4a84'
+      ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
