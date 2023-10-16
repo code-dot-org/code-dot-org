@@ -10,6 +10,7 @@ import {
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
+import _ from 'lodash';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -377,19 +378,17 @@ export default class FunctionEditor {
   // under definitionBlock.description, move it to the description field
   // of the block, and delete the description property from the definition block.
   // If the block does not have a description field, don't move the description.
-  moveDescriptionToBlockField(definitionBlock) {
-    if (
-      definitionBlock.description &&
-      definitionBlock.inputList &&
-      definitionBlock.inputList[1]?.fieldRow &&
-      definitionBlock.inputList[1].fieldRow[1]
-    ) {
-      definitionBlock.inputList[1].fieldRow[1].setValue(
-        definitionBlock.description
-      );
-      definitionBlock.description = undefined;
-      // Also update the description of the hidden definition block.
-      // Events don't run on custom properties such as description.
+  moveDescriptionToBlockField() {
+    const descriptionDestinationExists = _.has(
+      this.block,
+      'inputList[1].fieldRow[1]'
+    );
+    if (this.block.description && descriptionDestinationExists) {
+      this.block.inputList[1].fieldRow[1].setValue(this.block.description);
+      delete this.block.description;
+      // Also delete the description of the hidden definition block.
+      // The new value will be propogated as an event, but
+      // events don't run on custom properties such as description.
       const topBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks();
       const blockToUpdate = topBlocks.find(
         topBlock =>
@@ -397,7 +396,7 @@ export default class FunctionEditor {
           this.block.getProcedureModel().getId()
       );
       if (blockToUpdate) {
-        blockToUpdate.description = undefined;
+        delete blockToUpdate.description;
       }
     }
   }

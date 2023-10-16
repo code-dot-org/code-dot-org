@@ -66,6 +66,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
               // TODO: Once we upgrade to Blockly v10 and the below issue has been fixed
               // by Blockly, change this to field_multilinetext
               // https://github.com/google/blockly/issues/7209
+              // https://codedotorg.atlassian.net/browse/CT-130
               type: 'field_input',
               name: 'DESCRIPTION',
               text: '',
