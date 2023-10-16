@@ -36,6 +36,7 @@ module I18n
         Courses.sync_out
         CurriculumContent.sync_out
         DataContent.sync_out
+        DeviseContent.sync_out
         Docs.sync_out
         Scripts.sync_out
         SharedFunctions.sync_out

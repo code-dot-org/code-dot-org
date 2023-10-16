@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::DeviseContent do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out DeviseContent resource' do
-  #     I18n::Resources::Dashboard::DeviseContent::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::DeviseContent.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out DeviseContent resource' do
+      I18n::Resources::Dashboard::DeviseContent::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::DeviseContent.sync_out
+    end
+  end
 end
