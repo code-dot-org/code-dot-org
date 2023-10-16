@@ -22,36 +22,45 @@ export default function CertificateBatch({
 
   return (
     <div style={styles.wrapper}>
-      <h1>{i18n.printBatchCertificates()}</h1>
-      <div style={styles.imageWrapper}>
-        <img src={imageUrl} width={240} height={170} />
-        <span style={styles.instructions}>
-          <SafeMarkdown markdown={i18n.enterCertificateNames({courseTitle})} />
-          {i18n.wantBlankCertificateTemplate()}{' '}
-          <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
-        </span>
+      <div style={styles.headerContainer}>
+        <h1 style={styles.header}>{i18n.printBatchCertificates()}</h1>
       </div>
-      <br />
-      <form
-        action="/print_certificates/batch"
-        method="post"
-        className={'batch-certificate-form'}
-      >
-        <RailsAuthenticityToken />
-        <input name="courseName" value={courseName} type="hidden" />
-        <textarea
-          cols="40"
-          name="studentNames"
-          rows="10"
-          style={styles.textarea}
-          value={studentNames}
-          onChange={onChange}
-        />
-        <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
-        <button type="submit" style={styles.submit} id="submit-button">
-          {i18n.printCertificates()}
-        </button>
-      </form>
+      <div style={styles.certificateContainer}>
+        <div style={styles.imageWrapper}>
+          <img src={imageUrl} width={460} height={391} />
+          <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
+        </div>
+        <div style={styles.entryContainer}>
+          <span style={styles.instructions}>
+            <SafeMarkdown
+              markdown={i18n.enterCertificateNames({courseTitle})}
+            />
+            <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>
+          </span>
+
+          <br />
+          <form
+            action="/print_certificates/batch"
+            method="post"
+            className={'batch-certificate-form'}
+          >
+            <RailsAuthenticityToken />
+            <input name="courseName" value={courseName} type="hidden" />
+            <textarea
+              cols="40"
+              name="studentNames"
+              rows="10"
+              style={styles.textarea}
+              value={studentNames}
+              onChange={onChange}
+            />
+            <button type="submit" style={styles.submit} id="submit-button">
+              {i18n.printCertificates()}
+            </button>
+            {i18n.wantBlankCertificateTemplate()}{' '}
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
@@ -66,10 +75,7 @@ const styles = {
     lineHeight: '22px',
     color: 'dimgray',
   },
-  imageWrapper: {
-    display: 'flex',
-    alignItems: 'center',
-  },
+  imageWrapper: {},
   certificate: {
     float: 'left',
   },
@@ -84,6 +90,15 @@ const styles = {
   submit: {
     background: color.orange,
     color: color.white,
+  },
+  header: {
+    color: color.black,
+  },
+  headerContainer: {
+    margin: '50px 0 50px 0',
+  },
+  certificateContainer: {
+    display: 'flex',
   },
 };
 
