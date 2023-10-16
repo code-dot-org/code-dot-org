@@ -392,7 +392,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
-**(!)** If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
+If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
 make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
 and run it if you haven't.
 
