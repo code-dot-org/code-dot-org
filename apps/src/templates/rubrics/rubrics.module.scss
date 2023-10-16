@@ -8,6 +8,7 @@
 
   height: 60px;
   width: 60px;
+  background-size: 60px;
   padding: 0;
 
   border-width: 0;
@@ -305,6 +306,11 @@ p.errorMessage {
   display: flex;
   gap: 16px;
   position: relative;
+}
+
+.aiBotImg {
+  width: 42px;
+  height: 68px;
 }
 
 .greenAiAssessment {
