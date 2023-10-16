@@ -28,6 +28,7 @@ module Cdo::CloudFormation
     CHEF_BIN = '/usr/local/bin/chef-cdo-app'
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
     # Temporarily introduce per-environment differences, so we can gradually roll out this update.
+    # TODO (infra): finish updating all environments, and return this to a single case.
     # Use Ubuntu 20 (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517) just in staging and test
     # Use Ubuntu 18 (ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1) everywhere else
     IMAGE_ID = ENV['IMAGE_ID'] || (rack_env?(:staging, :test) ? 'ami-0261755bbcb8c4a84' : 'ami-07d0cf3af28718ef8')
