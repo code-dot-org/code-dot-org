@@ -1,16 +1,16 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
 import {
-  oldDanceBackgroundEffects,
-  newDanceBackgroundEffects,
-  oldDanceColorPalettes,
+  commonDanceBackgroundEffects,
+  aiEditionDanceBackgroundEffects,
+  commonDanceColorPalettes,
   poetryColorPalettes,
   danceForegroundEffects,
 } from '@cdo/apps/dance/constants';
 
 const doAi = async (input: string) => {
-  const danceBackgroundEffects = `${oldDanceBackgroundEffects}, ${newDanceBackgroundEffects}`;
-  const danceBackgroundColors = `${oldDanceColorPalettes}, ${poetryColorPalettes}`;
+  const danceBackgroundEffects = `${commonDanceBackgroundEffects}, ${aiEditionDanceBackgroundEffects}`;
+  const danceBackgroundColors = `${commonDanceColorPalettes}, ${poetryColorPalettes}`;
   const danceExampleJson =
     '{backgroundColor: "vintage", backgroundEffect: "diamonds", foregroundEffect: "hearts_red"}';
   const numWords = 40;

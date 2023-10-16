@@ -40,13 +40,13 @@ export const DancelabReservedWords = [
 export const ASSET_BASE =
   'https://curriculum.code.org/images/sprites/dance_20191106/';
 
-export const oldDanceBackgroundEffects =
+export const commonDanceBackgroundEffects =
   'circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars';
 
-export const newDanceBackgroundEffects =
+export const aiEditionDanceBackgroundEffects =
   'starburst, blooming_petals, frosted_grid, clouds';
 
-export const oldDanceColorPalettes =
+export const commonDanceColorPalettes =
   'rave, cool, electronic, iceCream, neon, tropical, vintage, warm';
 
 export const poetryColorPalettes =
