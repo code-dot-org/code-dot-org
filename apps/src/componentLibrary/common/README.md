@@ -11,14 +11,14 @@ This package contains all ComponentLibrary (DSCO) common design constants, token
 
 ### SCSS
 
-## [mixins](styles/_mixins.scss)
+## [mixins](styles/mixins.scss)
 
 Common mixins.
 
-Example usage:
+Usage example:
 
 ```scss
-@import "@cdo/apps/componentLibrary/common/mixins";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 
 .custom-link-text {

@@ -1,9 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 import _ from 'lodash';
-const commonI18n = require('@cdo/locale');
 
+const commonI18n = require('@cdo/locale');
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import styles from './chip.module.scss';
+import moduleStyles from './chip.module.scss';
 
 export interface ChipProps {
   label: string;
@@ -38,27 +38,31 @@ export const Chip: React.FunctionComponent<ChipProps> = ({
 
   return (
     <div>
-      <input
-        ref={inputRef}
-        id={uniqueId}
-        type="checkbox"
-        name={name}
-        value={value}
-        checked={checked}
-        required={required}
-        disabled={disabled}
-        onChange={e => {
-          onCheckedChange(e.target.checked);
-          // Reset validity so it gets checked again.
-          e.target.setCustomValidity('');
-        }}
-        onInvalid={e => {
-          (e.target as HTMLInputElement).setCustomValidity(
-            commonI18n.chooseAtLeastOne()
-          );
-        }}
-      />
-      <label htmlFor={uniqueId}>{label}</label>
+      <label className={moduleStyles.chip}>
+        <input
+          ref={inputRef}
+          id={uniqueId}
+          type="checkbox"
+          name={name}
+          value={value}
+          checked={checked}
+          required={required}
+          disabled={disabled}
+          onChange={e => {
+            onCheckedChange(e.target.checked);
+            // Reset validity so it gets checked again.
+            e.target.setCustomValidity('');
+          }}
+          onInvalid={e => {
+            (e.target as HTMLInputElement).setCustomValidity(
+              commonI18n.chooseAtLeastOne()
+            );
+          }}
+        />
+        {label}
+      </label>
+
+      {/*<label htmlFor={uniqueId}></label>*/}
     </div>
   );
 };
@@ -105,9 +109,9 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   const inputName = `${name}[]`;
 
   return (
-    <div className={styles.multiSelectGroup} data-testid={`chips-${name}`}>
+    <div className={moduleStyles.chips} data-testid={`chips-${name}`}>
       <fieldset>
-        {label && <label className={styles.typographyLabel}>{label}</label>}
+        {label && <label className={moduleStyles.groupLabel}>{label}</label>}
 
         {options.map(option => (
           <Chip
