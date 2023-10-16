@@ -1097,6 +1097,18 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Hláskovací včelka"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Začínáme"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Základy informatiky"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Plánování"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Další kroky"
+        },
         "csd1-2019/The Problem Solving Process": {
           "name": "Proces řešení problémů"
         },
@@ -1546,6 +1558,33 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Královská bitva s událostmi"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sekvence"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cykly"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Události"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Podmínky"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projekty k ukončení kurzu"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkce"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Proměnné"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Cykly \"For\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratoř Sprite"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Bezpečnost v mém online sousedství"
@@ -2964,6 +3003,18 @@
           "preparation": "-   Přehrávejte hádanky a najděte případné problémové oblasti pro vaši třídu.\n-   (Volitelné) Vyberte si několik hádanek, které budete řešit ve skupině se svou třídou.\n-   Ujistěte se, že každý student má deník reflexí.",
           "purpose": "V této online aktivitě se studenti naučí používat události v Play Lab. Začnou tím, že naučí rytíře pohybovat se po stisknutí klávesy se šipkou, a na závěr budou mít příležitost předvést v rámci závěrečné volné hry ostatní dovednosti, které se naučili v průběhu tohoto kurzu, včetně sekvencí a cyklů.",
           "student_overview": "Použijte události k vytvoření příběhu nebo vyrobení interaktivní hry."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Začínáme"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Základy informatiky"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Plánování"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Další kroky"
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "Proces řešení problémů"
@@ -5047,9 +5098,6 @@
           "overview": "⚠️ Tato lekce je určena pro učebny, které chtějí ukázat celou sérii videí [Jak AI funguje](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) za **jediný den**. Není určen k tomu, aby byl vyučován postupně s ostatními lekcemi v této jednotce, který zavádí každé video jeden den po druhém.\n\nStudenti sledují každé video porovnáním slovní zásoby z videa, poté odpovídají na reflexní otázku o každém videu. Plán lekce a snímky jsou velmi řídké a otevřené, aby umožnily improvizaci a přizpůsobení tak, aby vyhovovaly vaší třídě.",
           "preparation": "-   Vytiskněte průvodce aktivitou\n-   Promítání snímků na videoprojektor"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hodina kódu 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Úvod do App Lab",
           "overview": "Smyslem tohoto kurzu je rychle představit programovací prostřední App Labu coby výkonný nástroj na vytváření a sdílení aplikací. Studenti se v něm naučí vytvářet a ovládat tlačítka, text, obrázky, zvuky a obrazovky v JavaScriptu pomocí bloků i textu. Na konci kurzu budou mít čas rozšířit projekt, který začali vytvářet, na aplikaci – na výběr mají aplikace „Volba vlastního dobrodružství“, „Přáníčko“ a „Osobnostní kvíz”. Můžou se také pustit do vytváření dalších projektů, které najdou na stránce code.org/applab. \n\nUžijte si Hodinu kódu s App Labem!\n\n**Věk:** Kurz je navržený pro studenty od 13 let. Studenti mají dovoleno nahrávat vlastní zvuky a obrázky, což by mladší žáci neměli dělat bez vašeho dohledu. Upozornění ohledně ochrany soukromí žáků: Pokud dětem ještě nebylo 13 let, budou moct tento kurz používat teprve poté, co jim v části pro správu nastavíte účty.",
@@ -5220,9 +5268,10 @@
           "student_overview": "Shrnutí výukového kurzu: Nejprve studenti zařadí předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé části aktivity budou studenti vybírat své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato cvičná data se používají pro model strojového učení, který by měl být schopen označovat nové obrázky sám od sebe."
         },
         "outbreak/Outbreak": {
-          "overview": "Tato lekce kombinuje **rozvíjení dovedností** u událostí s **miniprojektem**, kde si studenti vyzkoušejí vytváření vlastní počítačové simulace v Laboratoři sprajtů. Bližší prozkoumání simulace má studentům ukázat, jak rychle se může šířit virus a jakými prostředky je možné toto šíření zpomalit. ",
-          "preparation": "- Přehrávejte třídě úlohy a najděte potenciální problémové oblasti.\n- Ujistěte se, že každý student má deník reflexí.",
-          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. ",
+          "name": "Naprogramování simulace",
+          "overview": "V téhle lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce kombinuje **získávání dovedností** s událostmi v **miniprojektech**, kde si studenti vytvoří vlastní počítačovou simulaci ve Sprite Labu. Prostudují si simulaci, aby pochopili, jak rychle se může šířit virus a jakým způsobem je možné toto šíření zpomalit. ",
+          "preparation": "#### Jeden týden před Hodinou kódu\n\n-   Než začnete plánovat událost Hodina kódu, podívejte se na [Průvodce Hodinou kódu pro vyučující](https://hourofcode.com/us/how-to) a [Doporučené postupy od úspěšných pedagogů](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n\n-   Pokud máte zájem o podporu pro třídu, plakáty se slevou, nebo se chcete zúčastnit akce o robotice (jen USA), [zaregistrujte svoji událost Hodina kódu](https://hourofcode.com/us).\n\n-   Nejdřív si projděte a sami absolvujte online kurz: [Epidemie](https://studio.code.org/s/outbreak/)\n\n-   Než studentům kurz zadáte, sami si ho vyzkoušejte. \n\n-   Ověřte si, že máte vyhovující technologie, a ujistěte se, že před zahájením Hodiny kódu není potřeba vyřešit nějaké problémy.\n\n#### Jeden den před Hodinou kódu\n\n-   Každý student, který aktivitu dokončí, by měl obdržet [certifikát](https://studio.code.org/certificates/batch). Vytiskněte certifikáty pro všechny studenty dopředu, ať se tím na konci Hodiny kódu nemusíte zdržovat.\n\n-   (nepovinné) Doporučte studentům, aby si na tuto aktivitu přinesli vlastní sluchátka.",
+          "purpose": "V této lekci studenti podle návodu naprogramují svůj vlastní simulační model. Jejich předchozí znalosti o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. ",
           "student_overview": "Do Města příšerek přišel virus! Naučte se vytvořit simulátor viru a pomozte příšerkám znovu se uzdravit."
         },
         "playlab/Play Lab": {
@@ -5264,18 +5313,6 @@
           "preparation": "-   Otestujte náš Widget na kompresi textu\n-   Projděte si tipy pro učitele a rozhodněte se, které možnosti chcete použít",
           "purpose": "Základní princip komprese je vyvinutí metody nebo protokolu, jak pomocí menšího počtu bitů reprezentovat původní informaci. Způsob, jakým v této lekci reprezentujeme komprimovaná data, tedy pomocí „slovníku“ opakujících se vzorů textu, se podobá [schématu komprese LZW](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), ale je potřeba poznamenat, že LZW se od toho, co studenti budou dělat v této lekci, trochu liší. Studenti si vymyslí svoji vlastní metodu. Schéma LZW se nepoužívá jen pro text (soubory zip), ale také se souborovým formátem GIF ke kompresi obrázků.",
           "student_overview": "V určitém bodě narazíme na hranici fyzických možností ohledně rychlosti posílání bitů. Pokud chceme posílat větší množství informací rychleji, musíme najít způsob, jak reprezentovat stejnou informaci pomocí menšího množství bitů – musíme komprimovat data. "
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routery a adresy"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pakety a spolehlivost"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget počítadla kilometrů"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Studie nálady"
         },
         "allthethings/Jigsaw": {
           "name": "Skládačka"
@@ -5637,12 +5674,27 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extrémní výzva - souhrnná"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hodina kódu 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Skládačka",
           "overview": "Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.",
           "preparation": "-   Další obsah k tématu online bezpečnost najdete na webu společnosti [Common Sense Education](https://www.commonsense.org/education/digital-citizenship).",
           "purpose": "Hlavním cílem této lekce je prohloubit zkušenosti studentů s počítači. Tím, že si studenti osvojí nejzákladnější funkce ovládání počítače, jako je klikání a přetahování, vytvoří se ve třídě rovnější podmínky pro práci na budoucích zadáních. Tato lekce je také skvělou příležitostí k představení základní terminologie počítačového hardwaru – a k seznámení žáků s myší, trackpadem nebo dotykovou obrazovkou – podle toho, jaké zařízení používáte.",
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routery a adresy"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakety a spolehlivost"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget počítadla kilometrů"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Studie nálady"
         }
       }
     }
