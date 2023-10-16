@@ -43,7 +43,7 @@ export const ASSET_BASE =
 export const commonDanceBackgroundEffects =
   'circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars';
 
-export const aiEditionDanceBackgroundEffects =
+export const extraAiEditionDanceBackgroundEffects =
   'starburst, blooming_petals, frosted_grid, clouds';
 
 export const commonDanceColorPalettes =
