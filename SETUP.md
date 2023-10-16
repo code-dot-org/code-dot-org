@@ -392,6 +392,13 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
+**(!)** If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
+make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
+and run it if you haven't.
+
+<details>
+<summary>If that didn't help - do following:</summary>
+
 Simply run (if you're having issues only with part of gems in the command - you can run it with just needed gems)
 ```
 bundle update libv8 mini_racer
@@ -409,6 +416,18 @@ libv8-node (15.14.0.0)
 mini_racer (0.4.0)
   libv8-node (~> 15.14.0.0)
 ```
+
+FINALLY
+
+To prevent Gemfile.lock changes from constantly appearing in your commits - run following commands:
+```
+git update-index --assume-unchanged Gemfile.lock
+git update-index --no-assume-unchanged Gemfile.lock
+git ls-files -v | grep '^[[:lower:]]'
+```
+</details>
+
+
 
 Then run the following commands to successfully complete a bundle install:
 
