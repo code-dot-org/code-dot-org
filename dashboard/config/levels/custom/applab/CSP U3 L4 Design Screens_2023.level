@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-10-19T18:15:47.000Z",
   "level_num": "custom",
@@ -12,7 +13,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Do This\r\n\r\n* Look at the user interface design in your planning guide\r\n* Recreate the screens here\r\n* You can upload images to your app by clicking \"Choose...\" next to the \"image\" category in Design Mode.\r\n\r\n\r\n**Note:** You are not doing any programming yet on your app. You will start that in Lesson 8.\r\n\r\n###Finding Images\r\nThe following are some websites you can find images.\r\n\r\n* [Unsplash](https://unsplash.com/)\r\n\r\n* [pixabay](https://pixabay.com/)\r\n\r\n* [Pexels](https://www.pexels.com/)\r\n\r\n* [FreeImages](https://www.freeimages.com/)\r\n\r\n* [Free-Images.com](https://free-images.com/)\r\n",
+    "long_instructions": "# Do This\r\n\r\n* Look at the user interface design in your planning guide\r\n* Recreate the screens here\r\n* You can upload images to your app by clicking \"Choose...\" next to the \"image\" category in Design Mode.\r\n\r\n\r\n**Note:** You are not doing any programming yet on your app. You will start that in Lesson 7.\r\n\r\n###Finding Images\r\nThe following are some websites you can find images.\r\n\r\n* [Unsplash](https://unsplash.com/)\r\n\r\n* [pixabay](https://pixabay.com/)\r\n\r\n* [Pexels](https://www.pexels.com/)\r\n\r\n* [FreeImages](https://www.freeimages.com/)\r\n\r\n* [Free-Images.com](https://free-images.com/)\r\n",
     "mini_rubric": "false",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "false",
@@ -39,11 +40,13 @@
     "validation_enabled": "false",
     "name_suffix": "_2023",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:15:47.841+00:00\",\"changed\":[\"cloned from \\\"CSP U3 L4 Design Screens2022\\\"\"],\"cloned_from\":\"CSP U3 L4 Design Screens2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:15:47.841+00:00\",\"changed\":[\"cloned from \\\"CSP U3 L4 Design Screens2022\\\"\"],\"cloned_from\":\"CSP U3 L4 Design Screens2022\"},{\"changed_at\":\"2023-10-13 19:41:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
