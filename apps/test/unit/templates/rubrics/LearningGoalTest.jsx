@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -171,6 +171,40 @@ describe('LearningGoal', () => {
       }
     );
     sendEventSpy.restore();
+  });
+
+  it('displays Evaluate when AI is disabled and no understanding has been selected', () => {
+    const wrapper = mount(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: false,
+          evidenceLevels: [],
+        }}
+        teacherHasEnabledAi
+        canProvideFeedback
+      />
+    );
+    wrapper.update();
+    expect(wrapper.find('BodyThreeText').text()).to.include('Evaluate');
+    wrapper.unmount();
+  });
+
+  it('displays Approve when AI is enabled and no understanding has been selected', () => {
+    const wrapper = mount(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: true,
+          evidenceLevels: [],
+        }}
+        teacherHasEnabledAi
+        canProvideFeedback
+      />
+    );
+    wrapper.update();
+    expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
+    wrapper.unmount();
   });
 
   it('shows feedback in disabled textbox when available', () => {
