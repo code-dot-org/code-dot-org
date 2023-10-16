@@ -196,6 +196,7 @@
 
   call_to_action_hold_an_event: "Hold an event"
   call_to_action_register_event: "Register your event"
+  call_to_action_register_your_hoc: "Register your Hour of Code"
   call_to_action_select_activity: "Select an activity"
   call_to_action_start_activity: "Start an activity"
   call_to_action_get_certificates: "Get certificates"
@@ -1515,6 +1516,7 @@
   hoc_homepage_join_the_movement_description: 'Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October.'
   hoc_homepage_what_is_hoc_subhead: 'One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round.'
   hoc_homepage_what_is_hoc_description: 'The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This grassroots campaign is supported by over 400 partners and 200,000 educators worldwide.'
+  hoc_homepage_registration_desc: "Your class or group can join millions around the world doing the Hour of Code! Registration for the annual Computer Science Education Week celebration begins in October. Though, Hour of Code is available year-round."
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url}) to plan an event for your class."
   hoc_homepage_highlights_heading: 'Hour of Code highlights'
   hoc_homepage_organized_by: 'The Hour of Code is organized by [Code.org](%{codeorg_url}).'
@@ -1612,7 +1614,7 @@
   map_legend_cs_tech_jam: 'Special Event'
   map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   map_warning_markdown: "A full list of the events can be viewed on the [events page.](%{events_url})"
-  map_view_all_events: "See a full list of events [here](%{events_url})."
+  map_view_all_events: "See a full list of Hour of Code events [here](%{events_url})."
 
   meta_tag_og_title: 'Hour of Code: Join the Movement'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
