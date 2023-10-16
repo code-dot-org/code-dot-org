@@ -246,6 +246,7 @@ export default function SectionsSetUpContainer({
   };
 
   const renderExpandableSection = (
+    sectionId,
     sectionTitle,
     sectionContent,
     isOpen,
@@ -254,7 +255,7 @@ export default function SectionsSetUpContainer({
     return (
       <div className={moduleStyles.withBorderBottom}>
         <Button
-          id="uitest-expandable-settings"
+          id={sectionId}
           className={moduleStyles.advancedSettingsButton}
           styleAsText
           icon={caret(isOpen)}
@@ -269,6 +270,7 @@ export default function SectionsSetUpContainer({
 
   const renderAdvancedSettings = () => {
     return renderExpandableSection(
+      'uitest-expandable-settings',
       () => i18n.advancedSettings(),
       () => (
         <AdvancedSettingToggles
@@ -297,6 +299,7 @@ export default function SectionsSetUpContainer({
     );
 
     return renderExpandableSection(
+      'uitest-expandable-coteacher',
       () => (
         <div>
           {i18n.coteacherAdd()}
