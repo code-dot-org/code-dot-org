@@ -3,7 +3,7 @@
   "config": {
     "func": "ai",
     "inline": true,
-    "blockText": "{IMAGE}set AI stage {VALUE}",
+    "blockText": "{IMAGE}generate {VALUE} stage",
     "color": [
       216,
       0.13,
