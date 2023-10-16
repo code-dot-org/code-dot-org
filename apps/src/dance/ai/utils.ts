@@ -10,7 +10,7 @@ import {
 
 const doAi = async (input: string) => {
   const danceBackgroundEffects = `${oldDanceBackgroundEffects}, ${newDanceBackgroundEffects}`;
-  const danceBackgroundColors = `${poetryColorPalettes}, ${oldDanceColorPalettes}`;
+  const danceBackgroundColors = `${oldDanceColorPalettes}, ${poetryColorPalettes}`;
   const danceExampleJson =
     '{backgroundColor: "vintage", backgroundEffect: "diamonds", foregroundEffect: "hearts_red"}';
   const numWords = 40;
