@@ -32,6 +32,8 @@ export default function RubricSettings({canProvideFeedback, visible}) {
             color={Button.ButtonColor.brandSecondaryDefault}
             onClick={() => console.log('Run AI Asssessment Not Implemented')}
             style={{margin: 0}}
+            // TODO: hook up call to run AI assessment
+            disabled
           />
         </div>
       )}
