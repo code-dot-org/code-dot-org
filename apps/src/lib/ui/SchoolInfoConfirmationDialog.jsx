@@ -6,6 +6,7 @@ import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {getStore} from '../../redux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export const styles = {
   button: {
@@ -24,7 +25,7 @@ export const styles = {
   },
   intro: {
     fontSize: 18,
-    fontFamily: "'Gotham 5r', sans-serif",
+    ...fontConstants['main-font-semi-bold'],
     color: color.charcoal,
     paddingRight: 20,
   },
@@ -118,7 +119,7 @@ class SchoolInfoConfirmationDialog extends Component {
           __useDeprecatedTag
           style={isRTL ? styles.buttonRTL : styles.button}
           text={i18n.yes()}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           onClick={this.handleClickYes}
           id="yes-button"
         />

@@ -3,7 +3,10 @@ require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
+require 'dynamic_config/dcdo'
+
 include TimedTaskWithLogging
+
 namespace :build do
   desc 'Builds apps.'
   timed_task_with_logging :apps do
@@ -11,8 +14,8 @@ namespace :build do
       # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
       if !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
-        File.exist?(commit_hash) &&
-        File.read(commit_hash) == calculate_apps_commit_hash
+          File.exist?(commit_hash) &&
+          File.read(commit_hash) == calculate_apps_commit_hash
 
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
@@ -25,6 +28,11 @@ namespace :build do
       npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
+
+      if rack_env?(:staging) && DCDO.get('deploy_storybook', false)
+        ChatClient.log 'Deploying <b>storybook</b>...'
+        RakeUtils.system 'npm run storybook:deploy'
+      end
     end
   end
 
@@ -78,15 +86,32 @@ namespace :build do
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
         # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
         if (rack_env?(:development) || ENV['CI']) && CDO.skip_seed_all
-          ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n"\
-              "Until you manually run 'rake seed:all' or disable this flag, you won't\n"\
-              "see changes to: videos, concepts, levels, scripts, prize providers, \n "\
+          ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
+              "Until you manually run 'rake seed:all' or disable this flag, you won't\n" \
+              "see changes to: videos, concepts, levels, scripts, prize providers, \n " \
               "callouts, hints, secret words, or secret pictures."
         else
           ChatClient.log 'Seeding <b>dashboard</b>...'
           ChatClient.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
         end
+
+        # Restart Active Job workers before restarting dashboard server so that:
+        # 1. the order of the restarts will be consistent between production and
+        # other environments, and
+        # 2. the server code which is queueing new jobs does not need to be
+        # backward compatible (although the job code itself still does).
+        #
+        # When making breaking changes to a job's api contract, the best
+        # practice is to update the job (in a backward compatible manner) in a
+        # first deploy, then update the code which calls it in a separate
+        # deploy, similarly to how we sequence deploys with database migrations
+        # or seeding changes.
+        #
+        # The sequencing described here is the best for mitigating any issues
+        # that may arise when that best practice is not followed.
+        ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
+        RakeUtils.system 'bin/delayed_job', 'restart'
 
         # Commit dsls.en.yml changes on staging
         dsls_file = dashboard_dir('config/locales/dsls.en.yml')
@@ -97,12 +122,12 @@ namespace :build do
           RakeUtils.git_push
         end
 
-        if rack_env?(:staging)
-          # This step will only complete successfully if we succeed in
-          # generating all curriculum PDFs.
-          ChatClient.log "Generating missing pdfs..."
-          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
-        end
+        # if rack_env?(:staging)
+        #  This step will only complete successfully if we succeed in
+        #  generating all curriculum PDFs.
+        #  ChatClient.log "Generating missing pdfs..."
+        #  RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        # end
       end
 
       # Skip asset precompile in development.

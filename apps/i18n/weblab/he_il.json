@@ -1,7 +1,7 @@
 {
   "addCSSButton": "הוסף CSS",
-  "addImageButton": "הוסף תמונה",
   "addHTMLButton": "הוסף HTML",
+  "addImageButton": "הוסף תמונה",
   "closeFullscreenPreview": "סגור תצוגה מקדימה של מסך מלא",
   "currentProjectCapacity": "{currentMegabytes}מגה-בייט של {totalMegabytes}מגה-בייט בשימוש",
   "disallowedHtml": "הקובץ \"{filename}\" מכיל רכיבי HTML שאינם מורשים: `{disallowedTags}`. הם יוסרו כאשר תיבת דו-שיח זו תיסגר.",
@@ -14,8 +14,8 @@
   "reset": "אפס את מעבדת האינטרנט",
   "resetComplete": "איפוס מעבדת האינטרנט הושלם",
   "resetFailure": "איפוס מעבדת האינטרנט נכשלה: {message}.",
-  "toggleInspectorOn": "מפקח: כבוי",
   "toggleInspectorOff": "מפקח: ב",
+  "toggleInspectorOn": "מפקח: כבוי",
   "troubleshootingSupport": "אנא עיין במאמר התמיכה שלנו [\"פתרון בעיות במעבדת האינטרנט\"]({url}) לקבלת מידע נוסף.",
   "uploadError": "שגיאת העלאה"
 }

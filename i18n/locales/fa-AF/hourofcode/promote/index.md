@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: گسترش کلمه
 ---
 
 {{ signup_button }}

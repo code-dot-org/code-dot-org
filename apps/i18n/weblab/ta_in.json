@@ -1,7 +1,7 @@
 {
   "addCSSButton": "CSS ஐ சேர்",
-  "addImageButton": "படத்தைச் சேர்",
   "addHTMLButton": "HTML ஐ சேர்",
+  "addImageButton": "படத்தைச் சேர்",
   "closeFullscreenPreview": "மூடு முழுத்திரை முன்னோட்டத்தை",
   "currentProjectCapacity": "{currentMegabytes}MB இன் {totalMegabytes}MB பயன்படுத்தப்பட்டது",
   "disallowedHtml": "கோப்பு \"{filename}\" அனுமதிக்கப்படாத HTML உறுப்புகளைக் கொண்டுள்ளது: `{disallowedTags}`. இந்த உரையாடல் மூடப்படும் போது அவை அகற்றப்படும்.",
@@ -14,7 +14,7 @@
   "reset": "வலை லேப் மீட்டமை",
   "resetComplete": "வலை லேப் மீட்டமை முழுமையான",
   "resetFailure": "வலை லேப் மீட்டமைக்க தோல்வி: {message}.",
-  "toggleInspectorOn": "இன்ஸ்பெக்டர்: ஆஃப்",
   "toggleInspectorOff": "இன்ஸ்பெக்டர்: ஆன்",
+  "toggleInspectorOn": "இன்ஸ்பெக்டர்: ஆஃப்",
   "uploadError": "பதிவேற்ற பிழை"
 }

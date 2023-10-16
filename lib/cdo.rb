@@ -103,7 +103,7 @@ module Cdo
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
-        (ENV['CI'] && host.include?('localhost'))
+          (ENV['CI'] && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
         host += ":#{port}"
       end
@@ -322,4 +322,4 @@ module Cdo
     end
   end
 end
-CDO ||= Cdo::Impl.instance
+CDO = Cdo::Impl.instance

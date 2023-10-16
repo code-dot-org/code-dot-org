@@ -222,7 +222,7 @@ module Pd::Application
         application = create :pd_teacher_application, status: 'incomplete'
         assert_nil application.applied_at
 
-        tomorrow = Date.tomorrow.to_time
+        tomorrow = Time.zone.tomorrow.to_time
         next_day = tomorrow + 1.day
 
         Timecop.freeze(tomorrow) do
@@ -278,7 +278,7 @@ module Pd::Application
       assert_equal application, email.application
       assert_equal 'test_email', email.email_type
       assert_equal application.status, email.application_status
-      assert_not_nil email.sent_at
+      refute_nil email.sent_at
     end
 
     test 'record status change with user' do

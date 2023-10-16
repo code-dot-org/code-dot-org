@@ -12,7 +12,7 @@ def there_can_be_only_one_pid(name)
     rescue Errno::ESRCH
       File.delete(pidfile)
       exists = false
-    rescue ::Exception   # for example on EPERM (process exists but does not belong to us)
+    rescue Exception   # for example on EPERM (process exists but does not belong to us)
       exists = true
     end
     raise "#{pidfile} => #{oldpid} is running" if exists

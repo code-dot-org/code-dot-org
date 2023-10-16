@@ -1,0 +1,18 @@
+name 'vpl-csa-module-1-wrap-up_2023'
+editor_experiment ''
+display_name 'CSA Module 1 Overview'
+
+title 'Module 1: CSA Virtual Professional Learning'
+markdown <<MARKDOWN
+# Wrap up
+
+You just finished the first module of the asynchronous post-work!  We hope to see you at the next synchronous call with your cohort.  During this call you will:
+
+* Check in with other members of your cohort and collaboratively address challenges in your classrooms
+* Use The Theater, a package used in Java Lab to create animations and sounds
+* Read documentation from The Theater to create your own animation
+* Learn about the Unit 4 project where students create their own animation to illustrate data
+
+See you there!
+
+MARKDOWN

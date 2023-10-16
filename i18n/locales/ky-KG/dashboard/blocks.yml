@@ -5,19 +5,11 @@ ky:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': орто
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': орто
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -149,20 +141,12 @@ ky:
         options:
           SPEED:
             '1': кадимки
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: баары
           SPEED:
             '1': кадимки
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -326,9 +310,7 @@ ky:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': орто
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -362,10 +344,7 @@ ky:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': орто
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -378,10 +357,7 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
           SIZE:
-            '25': extra small
-            '50': small
             '75': орто
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -390,11 +366,7 @@ ky:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': кадимки
-            '7': fast
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -600,16 +572,10 @@ ky:
         options:
           PORTION:
             '1': баары
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': баары
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

@@ -2,245 +2,12 @@
   "ro-RO": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Laboratorul de web",
-          "description": "Editor HTML/CSS bazat pe web.",
-          "categories": {
-            "css_properties": {
-              "name": "Proprietăți CSS"
-            }
-          }
-        },
-        "gamelab": {
-          "name": "Game Lab",
-          "description": "Game Lab este un mediu de programare în care puteți realiza jocuri și animații interesante. Desenează-ți personajele, codează cu blocuri sau JavaScript pentru a-l face să funcționeze, apoi distribuie-ți jocul în câteva secunde.",
-          "categories": {
-            "game_lab": {
-              "name": "Game Lab",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Spiriduș"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Spiriduș"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Negru şi alb"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Redă fişierul audio MP3 din link-ul specificat."
-                },
-                "showMobileControls": {
-                  "content": "Modifică comenzile mobile vizibile sub spațiul de joc.",
-                  "short_description": "Modifică comenzile mobile vizibile sub spațiul de joc."
-                }
-              }
-            },
-            "sprites": {
-              "name": "Spiriduși",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spirală"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "Înălțimea sprite."
-                },
-                "sprite.width": {
-                  "return_value": "Lățimea sprite."
-                }
-              }
-            },
-            "groups": {
-              "name": "Grupuri",
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Spiriduș"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Spiriduș"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Spiriduș"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Culoare"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Culoare"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Desen",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Stea"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "name": "Control",
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Numărul de milisecunde între fiecare execuție a funcției."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Numărul de milisecunde de așteptat înainte de a executa funcția."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematică",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Numărul minim returnat"
-                    },
-                    "max": {
-                      "description": "Numărul maxim returnat"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Numărul minim returnat"
-                    },
-                    "max": {
-                      "description": "Numărul maxim returnat"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variabile",
-              "expressions": {
-                "assign_x": {
-                  "short_description": "Atribuie o valoare unei variabile existente. De exemplu, x = 0;"
-                },
-                "declareAssign_x": {
-                  "short_description": "Declara si atribuie o valoare initiala unei variabile."
-                },
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Șirul de căutat."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Șirul de căutat."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "Lungimea șirului"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funcţii"
-            }
-          }
-        },
         "applab": {
-          "name": "Laboratului Aplicației",
-          "description": "App Lab este un mediu de programare în care poți crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.",
           "categories": {
-            "ui_controls": {
-              "name": "controale UI",
-              "expressions": {
-                "button": {
-                  "short_description": "Creează un buton pe ecran afișând textul furnizat și referit de id-ul dat la locația implicită (0,0)."
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Să ne micșorăm și să ne mărim"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funcţie"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Redă fişierul audio MP3 din link-ul specificat."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "Proprietatea de a schimba."
-                    }
-                  },
-                  "short_description": "Setează o proprietate la o valoare nouă pentru elementul specificat."
-                },
-                "setScreen": {
-                  "short_description": "Setează ecranul la ID-ul de ecran dat."
-                },
-                "showElement": {
-                  "short_description": "Afișează elementul cu id-ul furnizat."
-                },
-                "textLabel": {
-                  "short_description": "Creează o etichetă text pe ecran afișând textul furnizat și referit de id-ul dat la locația implicită (0,0)."
-                }
-              }
+            "advanced": {
+              "name": "Avansat"
             },
             "canvas": {
-              "name": "Canvas",
               "expressions": {
                 "circle": {
                   "palette_params": {
@@ -304,17 +71,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "Înălțimea dreptunghiului de încadrare pentru a captura datele imaginii."
+                    },
+                    "width": {
+                      "description": "Lățimea dreptunghiului de încadrare pentru a captura datele imaginii."
+                    },
                     "x": {
                       "description": "Poziția x în pixeli pentru a începe captura."
                     },
                     "y": {
                       "description": "Poziția y în pixeli pentru a începe captura."
-                    },
-                    "width": {
-                      "description": "Lățimea dreptunghiului de încadrare pentru a captura datele imaginii."
-                    },
-                    "height": {
-                      "description": "Înălțimea dreptunghiului de încadrare pentru a captura datele imaginii."
                     }
                   }
                 },
@@ -346,22 +113,25 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "Înălţimea verticală în pixeli a dreptunghiului."
+                    },
+                    "width": {
+                      "description": "Lățimea orizontală în pixeli a dreptunghiului."
+                    },
                     "x": {
                       "description": "Poziția x în pixeli din colțul din stânga sus al dreptunghiului."
                     },
                     "y": {
                       "description": "Poziția y în pixeli din colțul din stânga sus al dreptunghiului."
-                    },
-                    "width": {
-                      "description": "Lățimea orizontală în pixeli a dreptunghiului."
-                    },
-                    "height": {
-                      "description": "Înălţimea verticală în pixeli a dreptunghiului."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "Cantitatea de alfa (opacitate) (de la 0 la 255) pentru a seta în pixel."
+                    },
                     "imageData": {
                       "type": "obiect"
                     },
@@ -370,15 +140,15 @@
                     },
                     "y": {
                       "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
-                    },
-                    "alphaValue": {
-                      "description": "Cantitatea de alfa (opacitate) (de la 0 la 255) pentru a seta în pixel."
                     }
                   },
                   "short_description": "Setează cantitatea de alfa (opacitate) (variind de la 0 la 255) în culoarea pixelului situat la poziţia x şi y dată în datele de imagine date."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "Cantitatea de albastru (de la 0 la 255) pentru a seta în pixel."
+                    },
                     "imageData": {
                       "type": "obiect"
                     },
@@ -387,15 +157,15 @@
                     },
                     "y": {
                       "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
-                    },
-                    "blueValue": {
-                      "description": "Cantitatea de albastru (de la 0 la 255) pentru a seta în pixel."
                     }
                   },
                   "short_description": "Setează cantitatea de albastru (variind de la 0 la 255) în culoarea pixelului situat la poziția dată x și y în datele de imagine date la cantitatea de intrare BlueValue."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "Cantitatea de verde (de la 0 la 255) pentru a seta în pixel."
+                    },
                     "imageData": {
                       "type": "obiect"
                     },
@@ -404,35 +174,32 @@
                     },
                     "y": {
                       "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
-                    },
-                    "greenValue": {
-                      "description": "Cantitatea de verde (de la 0 la 255) pentru a seta în pixel."
                     }
                   },
                   "short_description": "Setează cantitatea de verde (variind de la 0 la 255) în culoarea pixelului situat în poziţia x şi y dată în datele de imagine date la valoarea de intrare GreenValue."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "Opțional. Cantitatea de opacitate (de la 0 la 255) pentru a seta în pixel. Valori implicite la 255 (opacitate completă)."
+                    },
+                    "blue": {
+                      "description": "Cantitatea de albastru (de la 0 la 255) pentru a seta în pixel."
+                    },
+                    "green": {
+                      "description": "Cantitatea de verde (de la 0 la 255) pentru a seta în pixel."
+                    },
                     "imageData": {
                       "type": "obiect"
+                    },
+                    "red": {
+                      "description": "Cantitatea de roșu (de la 0 la 255) pentru a seta în pixel."
                     },
                     "x": {
                       "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
                     },
                     "y": {
                       "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
-                    },
-                    "red": {
-                      "description": "Cantitatea de roșu (de la 0 la 255) pentru a seta în pixel."
-                    },
-                    "green": {
-                      "description": "Cantitatea de verde (de la 0 la 255) pentru a seta în pixel."
-                    },
-                    "blue": {
-                      "description": "Cantitatea de albastru (de la 0 la 255) pentru a seta în pixel."
-                    },
-                    "alpha": {
-                      "description": "Opțional. Cantitatea de opacitate (de la 0 la 255) pentru a seta în pixel. Valori implicite la 255 (opacitate completă)."
                     }
                   }
                 },
@@ -441,22 +208,55 @@
                     "imageData": {
                       "type": "obiect"
                     },
+                    "redValue": {
+                      "description": "Cantitatea de roșu (de la 0 la 255) pentru a seta în pixel."
+                    },
                     "x": {
                       "description": "Poziția x în pixeli începând din colțul din stânga sus al imaginii."
                     },
                     "y": {
                       "description": "Poziția y în pixeli începând din colțul din stânga sus al imaginii."
-                    },
-                    "redValue": {
-                      "description": "Cantitatea de roșu (de la 0 la 255) pentru a seta în pixel."
                     }
                   },
                   "short_description": "Setează cantitatea de roșu (variind de la 0 la 255) în culoarea pixelului situat la poziția dată x și y în datele date de imagine la cantitatea de intrare RedValue."
                 }
-              }
+              },
+              "name": "Canvas"
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Valoarea returnată de funcția setTimeout pentru a anula."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numărul de milisecunde între fiecare execuție a funcției."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numărul de milisecunde de așteptat înainte de a executa funcția."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funcţie"
+                    }
+                  }
+                }
+              },
+              "name": "Control"
             },
             "data": {
-              "name": "Date",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -481,11 +281,11 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
-                    "tableName": {
-                      "description": "Numele tabelului pentru a prelua înregistrările de la."
-                    },
                     "options": {
                       "type": "obiect"
+                    },
+                    "tableName": {
+                      "description": "Numele tabelului pentru a prelua înregistrările de la."
                     }
                   }
                 },
@@ -545,10 +345,41 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "Date"
+            },
+            "functions": {
+              "name": "Funcţii"
+            },
+            "maker": {
+              "name": "Producător"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numărul maxim returnat"
+                    },
+                    "min": {
+                      "description": "Numărul minim returnat"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numărul maxim returnat"
+                    },
+                    "min": {
+                      "description": "Numărul minim returnat"
+                    }
+                  }
+                }
+              },
+              "name": "Matematică"
             },
             "turtle": {
-              "name": "Broască țestoasă",
               "expressions": {
                 "arcLeft": {
                   "short_description": "Mută broasca țestoasă înainte și spre stânga într-un arc neted, circular."
@@ -611,74 +442,59 @@
                 "turnTo": {
                   "short_description": "Schimbă direcția țestoasei la un anumit unghi. 0 este în sus, 90 este dreapta, 180 este în jos și 270 este lăsat."
                 }
-              }
+              },
+              "name": "Broască țestoasă"
             },
-            "control": {
-              "name": "Control",
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "Valoarea returnată de funcția setTimeout pentru a anula."
-                    }
-                  }
+                "button": {
+                  "short_description": "Creează un buton pe ecran afișând textul furnizat și referit de id-ul dat la locația implicită (0,0)."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Numărul de milisecunde între fiecare execuție a funcției."
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Să ne micșorăm și să ne mărim"
                     }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Numărul de milisecunde de așteptat înainte de a executa funcția."
-                    }
-                  }
-                },
-                "timedLoop": {
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Funcţie"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematică",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Numărul minim returnat"
-                    },
-                    "max": {
-                      "description": "Numărul maxim returnat"
-                    }
-                  }
                 },
-                "randomNumber": {
+                "playSound": {
+                  "short_description": "Redă fişierul audio MP3 din link-ul specificat."
+                },
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "Numărul minim returnat"
-                    },
-                    "max": {
-                      "description": "Numărul maxim returnat"
+                    "property": {
+                      "description": "Proprietatea de a schimba."
                     }
-                  }
+                  },
+                  "short_description": "Setează o proprietate la o valoare nouă pentru elementul specificat."
+                },
+                "setScreen": {
+                  "short_description": "Setează ecranul la ID-ul de ecran dat."
+                },
+                "showElement": {
+                  "short_description": "Afișează elementul cu id-ul furnizat."
+                },
+                "textLabel": {
+                  "short_description": "Creează o etichetă text pe ecran afișând textul furnizat și referit de id-ul dat la locația implicită (0,0)."
                 }
-              }
+              },
+              "name": "controale UI"
             },
             "variables": {
-              "name": "Variabile",
               "expressions": {
-                "declareAssign_x": {
-                  "short_description": "Declara si atribuie o valoare initiala unei variabile."
+                "addPair": {
+                  "return_value": "Nici unul"
                 },
                 "declareAssign_list_123": {
                   "short_description": "Declarați și atribuiți o matrice unei variabile"
+                },
+                "declareAssign_x": {
+                  "short_description": "Declara si atribuie o valoare initiala unei variabile."
                 },
                 "includes": {
                   "palette_params": {
@@ -694,81 +510,222 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "Nici unul"
+                "length": {
+                  "return_value": "Lungimea șirului"
+                }
+              },
+              "name": "Variabile"
+            }
+          },
+          "description": "App Lab este un mediu de programare în care poți crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.",
+          "name": "Laboratului Aplicației"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numărul de milisecunde între fiecare execuție a funcției."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Numărul de milisecunde de așteptat înainte de a executa funcția."
+                    }
+                  }
+                }
+              },
+              "name": "Control"
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stea"
+                    }
+                  }
+                }
+              },
+              "name": "Desen"
+            },
+            "functions": {
+              "name": "Funcţii"
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Negru şi alb"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Redă fişierul audio MP3 din link-ul specificat."
+                },
+                "showMobileControls": {
+                  "content": "Modifică comenzile mobile vizibile sub spațiul de joc.",
+                  "short_description": "Modifică comenzile mobile vizibile sub spațiul de joc."
+                }
+              },
+              "name": "Game Lab"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Spiriduș"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Culoare"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Culoare"
+                    }
+                  }
+                }
+              },
+              "name": "Grupuri"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numărul maxim returnat"
+                    },
+                    "min": {
+                      "description": "Numărul minim returnat"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Numărul maxim returnat"
+                    },
+                    "min": {
+                      "description": "Numărul minim returnat"
+                    }
+                  }
+                }
+              },
+              "name": "Matematică"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirală"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Înălțimea sprite."
+                },
+                "sprite.width": {
+                  "return_value": "Lățimea sprite."
+                }
+              },
+              "name": "Spiriduși"
+            },
+            "variables": {
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Atribuie o valoare unei variabile existente. De exemplu, x = 0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "Declara si atribuie o valoare initiala unei variabile."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Șirul de căutat."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Șirul de căutat."
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "Lungimea șirului"
                 }
-              }
-            },
-            "functions": {
-              "name": "Funcţii"
-            },
-            "advanced": {
-              "name": "Avansat"
-            },
-            "maker": {
-              "name": "Producător"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Laborator Sprite",
-          "description": "Sprite Lab este un mediu de programare Blockly în care puteți crea proiecte interactive.",
-          "categories": {
-            "sprites": {
-              "name": "Spiriduși"
-            },
-            "world": {
-              "name": "Lume"
-            },
-            "location": {
-              "name": "Locaţii"
-            },
-            "actions": {
-              "name": "Acţiuni"
-            },
-            "events": {
-              "name": "Evenimente"
-            },
-            "behaviors": {
-              "name": "Comportamente"
-            },
-            "loops": {
-              "name": "Bucle"
-            },
-            "variables": {
+              },
               "name": "Variabile"
-            },
-            "math": {
-              "name": "Matematică"
-            },
-            "logic": {
-              "name": "Logică"
-            },
-            "functions": {
-              "name": "Funcţii"
-            },
-            "text": {
-              "name": "Text"
-            },
-            "comments": {
-              "name": "Comentarii"
             }
-          }
+          },
+          "description": "Game Lab este un mediu de programare în care puteți realiza jocuri și animații interesante. Desenează-ți personajele, codează cu blocuri sau JavaScript pentru a-l face să funcționeze, apoi distribuie-ți jocul în câteva secunde.",
+          "name": "Game Lab"
         },
         "javalab": {
-          "name": "Laboratorul Java",
           "categories": {
-            "java_lab_shortcuts": {
-              "name": "Comenzi rapide Java Lab"
+            "control_structures": {
+              "name": "Structuri de control"
+            },
+            "data_structures": {
+              "name": "Structuri de date"
             },
             "general": {
               "name": "Bazele Java"
             },
-            "org_code_theater": {
-              "name": "org.code.teatru"
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_lab_shortcuts": {
+              "name": "Comenzi rapide Java Lab"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "java_util": {
+              "name": "java.util"
             },
             "org_code_media": {
               "name": "org.code.media"
@@ -776,22 +733,65 @@
             "org_code_neighborhood": {
               "name": "org.code.neighborhood"
             },
-            "java_io": {
-              "name": "java.io"
-            },
-            "java_util": {
-              "name": "java.util"
-            },
-            "java_lang": {
-              "name": "java.lang"
-            },
-            "control_structures": {
-              "name": "Structuri de control"
-            },
-            "data_structures": {
-              "name": "Structuri de date"
+            "org_code_theater": {
+              "name": "org.code.teatru"
             }
-          }
+          },
+          "name": "Laboratorul Java"
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Acţiuni"
+            },
+            "behaviors": {
+              "name": "Comportamente"
+            },
+            "comments": {
+              "name": "Comentarii"
+            },
+            "events": {
+              "name": "Evenimente"
+            },
+            "functions": {
+              "name": "Funcţii"
+            },
+            "location": {
+              "name": "Locaţii"
+            },
+            "logic": {
+              "name": "Logică"
+            },
+            "loops": {
+              "name": "Bucle"
+            },
+            "math": {
+              "name": "Matematică"
+            },
+            "sprites": {
+              "name": "Spiriduși"
+            },
+            "text": {
+              "name": "Text"
+            },
+            "variables": {
+              "name": "Variabile"
+            },
+            "world": {
+              "name": "Lume"
+            }
+          },
+          "description": "Sprite Lab este un mediu de programare Blockly în care puteți crea proiecte interactive.",
+          "name": "Laborator Sprite"
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "name": "Proprietăți CSS"
+            }
+          },
+          "description": "Editor HTML/CSS bazat pe web.",
+          "name": "Laboratorul de web"
         }
       }
     }

@@ -18,7 +18,6 @@ fil:
             '0.75': maliit
             '1.00': katamtaman
             '2.00': malaki
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         text: itakda ang laki ng {SPRITE} sa {SIZE}
         options:
@@ -27,7 +26,6 @@ fil:
             '0.75': maliit
             '1.00': katamtaman
             '2.00': malaki
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "Ang {GROUP} ay maghahalinhinan bawat {N} measure \nsa pagitan ng {MOVE1} at {MOVE2}"
         options:
@@ -1006,8 +1004,6 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: gawin ang {EFFECT} effect
         options:
@@ -1024,8 +1020,6 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Makipag-ugnay sa {VAR1} gamit ang {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1528,11 +1522,9 @@ fil:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': mabagal
             '5': normal
             '7': mabilis
-            '9': extra fast
       gamelab_setTint:
         text: baguhin ang kulay ng {THIS} sa {COLOR}
       gamelab_setupScoreboard:
@@ -2008,14 +2000,10 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2221,7 +2209,6 @@ fil:
         text: kapag lumalabas ang linya {N}.
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2281,16 +2268,10 @@ fil:
         options:
           PORTION:
             '1': lahat
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': lahat
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} sabihin ang {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2412,7 +2393,6 @@ fil:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

@@ -12,7 +12,7 @@ CERT_NAME_AREA_HEIGHT = 80
 class CertificateImage
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_certificate_image2(image_path, name, params={})
+  def self.create_certificate_image2(image_path, name, params = {})
     # Load the certificate template
     background = Magick::Image.read(image_path).first
     font = "Times bold"
@@ -39,7 +39,7 @@ class CertificateImage
   # If no width is given, then the text is bound to the width of the background image.
   # @param [Integer] height in pixels of the bounding box for the text.
   # If no height is given, then the text is bound to the height of the background image.
-  def self.apply_text(image, text, pointsize, font, color, x_offset, y_offset, width=nil, height=nil)
+  def self.apply_text(image, text, pointsize, font, color, x_offset, y_offset, width = nil, height = nil)
     # If there is no text, don't try to render it.
     return if text.nil? || text.strip.empty?
     # If there is no background image, there is nothing to do.
@@ -141,7 +141,7 @@ class CertificateImage
 
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_course_certificate_image(name, course=nil, donor_name=nil, course_title=nil, default_random_donor: false)
+  def self.create_course_certificate_image(name, course = nil, donor_name = nil, course_title = nil, default_random_donor: false)
     name = ' ' if name.blank?
 
     course ||= ScriptConstants::HOC_NAME

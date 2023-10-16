@@ -5,19 +5,11 @@ et:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': keskmine
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': keskmine
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -905,9 +897,7 @@ et:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': keskmine
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -956,10 +946,7 @@ et:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': keskmine
-            '100': large
       gamelab_setProp:
         text: muuda {SPRITE} {PROPERTY} {VAL}
         options:
@@ -976,10 +963,7 @@ et:
           PROPERTY:
             '"scale"': suurus
           SIZE:
-            '25': extra small
-            '50': small
             '75': keskmine
-            '100': large
       gamelab_setSizes:
         text: muuda {SPRITE} {PROPERTY} {N}%
         options:
@@ -990,11 +974,9 @@ et:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': aeglane
             '5': tavaline
             '7': kiire
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1275,16 +1257,10 @@ et:
         options:
           PORTION:
             '1': kõik
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': kõik
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

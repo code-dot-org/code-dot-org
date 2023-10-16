@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -15,6 +18,9 @@ class StudentTable extends React.Component {
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     sectionId: PropTypes.number,
     unitName: PropTypes.string,
+
+    // provided by redux
+    isSortedByFamilyName: PropTypes.bool,
   };
 
   getRowLink = studentId => {
@@ -36,6 +42,24 @@ class StudentTable extends React.Component {
     const isSelected = selectedUserId === id;
     return isSelected ? [styles.tr, styles.selected] : styles.tr;
   };
+
+  componentDidMount() {
+    this.sortStudents();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isSortedByFamilyName !== this.props.isSortedByFamilyName) {
+      this.sortStudents();
+    }
+  }
+
+  sortStudents() {
+    const {students, isSortedByFamilyName} = this.props;
+    isSortedByFamilyName
+      ? students.sort(stringKeyComparator(['familyName', 'name']))
+      : students.sort(stringKeyComparator(['name', 'familyName']));
+    this.setState({students});
+  }
 
   render() {
     const {students, onSelectUser, selectedUserId, levelsWithProgress} =
@@ -69,7 +93,7 @@ class StudentTable extends React.Component {
                     />
                   )}
                   <div style={styles.name}>
-                    {student.name}
+                    {`${student.name} ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
@@ -108,7 +132,7 @@ const styles = {
     padding: 1,
   },
   selected: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     color: color.white,
     backgroundColor: color.light_cyan,
   },
@@ -130,4 +154,7 @@ const styles = {
   },
 };
 
-export default Radium(StudentTable);
+export const UnconnectedStudentTable = Radium(StudentTable);
+export default connect(state => ({
+  isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
+}))(UnconnectedStudentTable);

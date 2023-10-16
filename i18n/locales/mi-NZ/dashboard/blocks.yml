@@ -5,19 +5,11 @@ mi:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': wawaenga
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': wawaenga
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} tinihiaia wāhanga e {N}
@@ -438,26 +430,6 @@ mi:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
@@ -1153,9 +1125,7 @@ mi:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': wawaenga
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1199,10 +1169,7 @@ mi:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': wawaenga
-            '100': large
       gamelab_setProp:
         text: whakarite te {SPRITE} {PROPERTY} ki te {VAL}
         options:
@@ -1217,10 +1184,7 @@ mi:
           PROPERTY:
             '"scale"': te rahi
           SIZE:
-            '25': extra small
-            '50': small
             '75': wawaenga
-            '100': large
       gamelab_setSizes:
         text: whakarite te {SPRITE} {PROPERTY} ki te {N}%
         options:
@@ -1231,11 +1195,9 @@ mi:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': pōturi
             '5': noa
             '7': tere
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1492,7 +1454,6 @@ mi:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1530,16 +1491,10 @@ mi:
         options:
           PORTION:
             '1': katoa
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': katoa
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:
@@ -1652,7 +1607,6 @@ mi:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

@@ -25,6 +25,8 @@ import {
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
   tabletAndNoDeviceShownCurricula,
+  csdAndHocShownCurricula,
+  translatedCurricula,
   multipleFiltersAppliedShownCurricula,
   allFiltersAppliedShownCurricula,
   noGradesCurriculum,
@@ -41,6 +43,7 @@ describe('CurriculumCatalog', () => {
     isEnglish: false,
     languageNativeName: 'sampleLanguageNativeName',
     isSignedOut: true,
+    isInUS: true,
   };
   let store;
 
@@ -140,7 +143,7 @@ describe('CurriculumCatalog', () => {
   it('filtering by grade level shows any shown course that supports one of the selected grades', () => {
     renderDefault();
 
-    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
@@ -155,7 +158,7 @@ describe('CurriculumCatalog', () => {
 
     // Filters for all courses for kindergarten and/or grade 2
     expect(
-      screen.getAllByText('Learn more', {
+      screen.getAllByText('Quick View', {
         exact: false,
       }).length
     ).to.equal(gradesKAnd2ShownCurricula.length);
@@ -167,7 +170,7 @@ describe('CurriculumCatalog', () => {
   it('filtering by duration shows any shown course that is one of the selected durations', () => {
     renderDefault();
 
-    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
@@ -179,7 +182,7 @@ describe('CurriculumCatalog', () => {
 
     // Filters for all week-long courses
     expect(
-      screen.getAllByText('Learn more', {
+      screen.getAllByText('Quick View', {
         exact: false,
       }).length
     ).to.equal(weeklongShownCurricula.length);
@@ -191,7 +194,7 @@ describe('CurriculumCatalog', () => {
   it('filtering by topic shows any course with at least 1 of the selected topics', () => {
     renderDefault();
 
-    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
@@ -204,7 +207,7 @@ describe('CurriculumCatalog', () => {
 
     // Filters for all courses with the physical_computing topic
     expect(
-      screen.getAllByText('Learn more', {
+      screen.getAllByText('Quick View', {
         exact: false,
       }).length
     ).to.equal(physicalCompShownCurricula.length);
@@ -216,7 +219,7 @@ describe('CurriculumCatalog', () => {
   it('filtering by Interdisciplinary topic shows any course labeled with school subjects', () => {
     renderDefault();
 
-    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
@@ -229,7 +232,7 @@ describe('CurriculumCatalog', () => {
 
     // Filters for all courses with school subjects
     expect(
-      screen.getAllByText('Learn more', {
+      screen.getAllByText('Quick View', {
         exact: false,
       }).length
     ).to.equal(nonNullSchoolSubjectShownCurricula.length);
@@ -241,7 +244,7 @@ describe('CurriculumCatalog', () => {
   it('filtering by device compatibility shows any course with at least 1 of the selected devices', () => {
     renderDefault();
 
-    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
@@ -256,7 +259,7 @@ describe('CurriculumCatalog', () => {
 
     // Filters for all courses compatible with chromebooks and tablets
     expect(
-      screen.getAllByText('Learn more', {
+      screen.getAllByText('Quick View', {
         exact: false,
       }).length
     ).to.equal(tabletAndNoDeviceShownCurricula.length);
@@ -265,10 +268,63 @@ describe('CurriculumCatalog', () => {
     });
   });
 
+  it('filtering by marketing initiative shows any course with at least 1 of the selected initiatives', () => {
+    renderDefault();
+
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+
+    // Select "CSD" and "HOC" in marketing initiative filter
+    const csdFilterCheckbox = screen.getByDisplayValue('csd');
+    fireEvent.click(csdFilterCheckbox);
+    assert(csdFilterCheckbox.checked);
+    const hocFilterCheckbox = screen.getByDisplayValue('hoc');
+    fireEvent.click(hocFilterCheckbox);
+    assert(hocFilterCheckbox.checked);
+
+    // Filters for all courses from CSD and HOC.
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(csdAndHocShownCurricula.length);
+    csdAndHocShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('filtering by translated shows any course translated in the users locale', () => {
+    renderDefault();
+
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+
+    // Toggle translated filter
+    const translatedToggle = screen.getByLabelText(
+      'Only show curricula available in sampleLanguageNativeName'
+    );
+    fireEvent.click(translatedToggle);
+    assert(translatedToggle.checked);
+
+    // Filters for all courses translated in the users locale
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(translatedCurricula.length);
+    translatedCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
   it('filtering by each filter shows subset of courses that match the filters', () => {
     renderDefault();
 
-    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
@@ -304,7 +360,7 @@ describe('CurriculumCatalog', () => {
     // - Physical Computing or Interdisciplinary topics
     // - Tablets or No Device
     expect(
-      screen.getAllByText('Learn more', {
+      screen.getAllByText('Quick View', {
         exact: false,
       }).length
     ).to.equal(multipleFiltersAppliedShownCurricula.length);
@@ -316,7 +372,7 @@ describe('CurriculumCatalog', () => {
   it('applying every curricula filter only filters out courses that have null for one of the filtered properties', () => {
     renderDefault();
 
-    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
@@ -332,7 +388,7 @@ describe('CurriculumCatalog', () => {
 
     // With every filter applied
     expect(
-      screen.getAllByText('Learn more', {
+      screen.getAllByText('Quick View', {
         exact: false,
       }).length
     ).to.equal(allFiltersAppliedShownCurricula.length);
@@ -360,7 +416,7 @@ describe('CurriculumCatalog', () => {
     assert(noDeviceFilterCheckbox.checked);
 
     // Does not show any Curriculum Catalog Cards
-    expect(screen.queryAllByText('Learn more', {exact: false}).length).to.equal(
+    expect(screen.queryAllByText('Quick View', {exact: false}).length).to.equal(
       0
     );
 
@@ -382,7 +438,7 @@ describe('CurriculumCatalog', () => {
       renderWithUrlParams('');
 
       expect(
-        screen.getAllByText('Learn more', {
+        screen.getAllByText('Quick View', {
           exact: false,
         }).length
       ).to.equal(allShownCurricula.length);
@@ -395,7 +451,7 @@ describe('CurriculumCatalog', () => {
       renderWithUrlParams('?fakeKey=fakeValue');
 
       expect(
-        screen.getAllByText('Learn more', {
+        screen.getAllByText('Quick View', {
           exact: false,
         }).length
       ).to.equal(allShownCurricula.length);
@@ -408,7 +464,7 @@ describe('CurriculumCatalog', () => {
       renderWithUrlParams('?duration=');
 
       expect(
-        screen.getAllByText('Learn more', {
+        screen.getAllByText('Quick View', {
           exact: false,
         }).length
       ).to.equal(allShownCurricula.length);
@@ -421,7 +477,7 @@ describe('CurriculumCatalog', () => {
       renderWithUrlParams('?duration=fakeValue');
 
       expect(
-        screen.getAllByText('Learn more', {
+        screen.getAllByText('Quick View', {
           exact: false,
         }).length
       ).to.equal(allShownCurricula.length);
@@ -434,7 +490,7 @@ describe('CurriculumCatalog', () => {
       renderWithUrlParams('?duration=week');
 
       expect(
-        screen.getAllByText('Learn more', {
+        screen.getAllByText('Quick View', {
           exact: false,
         }).length
       ).to.equal(weeklongShownCurricula.length);
@@ -449,7 +505,7 @@ describe('CurriculumCatalog', () => {
       );
 
       expect(
-        screen.getAllByText('Learn more', {
+        screen.getAllByText('Quick View', {
           exact: false,
         }).length
       ).to.equal(gradesKAnd2ShownCurricula.length);
@@ -464,7 +520,7 @@ describe('CurriculumCatalog', () => {
       );
 
       expect(
-        screen.getAllByText('Learn more', {
+        screen.getAllByText('Quick View', {
           exact: false,
         }).length
       ).to.equal(multipleFiltersAppliedShownCurricula.length);
@@ -529,6 +585,23 @@ describe('CurriculumCatalog', () => {
 
       assert(!replacedLocation.includes('lesson'));
       assert(replacedLocation.includes('duration=week'));
+    });
+
+    it('params update when translated toggle is flipped', () => {
+      renderWithUrlParams('');
+      const translatedToggle = screen.getByLabelText(
+        'Only show curricula available in sampleLanguageNativeName'
+      );
+
+      // Toggle "translated" on
+      fireEvent.click(translatedToggle);
+      assert(translatedToggle.checked);
+      assert(replacedLocation.includes('translated=true'));
+
+      // Toggle "translated" off
+      fireEvent.click(translatedToggle);
+      assert(!translatedToggle.checked);
+      assert(replacedLocation.includes('translated=false'));
     });
   });
 });

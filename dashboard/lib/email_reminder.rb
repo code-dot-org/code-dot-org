@@ -1,6 +1,7 @@
 require 'stringio'
 require 'cdo/aws/metrics'
 require 'cdo/chat_client'
+require 'policies/child_account'
 
 class EmailReminder
   include Rails.application.routes.url_helpers
@@ -36,7 +37,7 @@ class EmailReminder
       select(:id).
       where(created_at: @max_reminder_age..@min_reminder_age).
       where(reminders_sent: ...MAX_LIFETIME_REMINDERS).
-      where("JSON_EXTRACT(users.properties, '$.child_account_compliance_state') != ?", User::ChildAccountCompliance::PERMISSION_GRANTED)
+      where("JSON_EXTRACT(users.properties, '$.child_account_compliance_state') != ?", Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
 
     CDO.log.info "Found #{reqs.length} requests needing reminders"
     reqs
@@ -57,16 +58,14 @@ class EmailReminder
 
   # Send emails for all requests that need reminders.
   def send_all_reminder_emails
-    begin
-      find_requests_needing_reminder.find_each do |request|
-        send_permission_reminder_email request.id
-        @num_reminders_sent += 1
-      end
-    rescue StandardError => exception
-      CDO.log.info exception.message
-    ensure
-      report_results
+    find_requests_needing_reminder.find_each do |request|
+      send_permission_reminder_email request.id
+      @num_reminders_sent += 1
     end
+  rescue StandardError => exception
+    CDO.log.info exception.message
+  ensure
+    report_results
   end
 
   private
@@ -125,8 +124,8 @@ class EmailReminder
   end
 
   def prefixed(message)
-    "*Parent Permission Email Reminders*" \
-    " <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/email_reminder.rb|(source)>" \
+    "*Parent Permission Email Reminders* " \
+    "<https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/email_reminder.rb|(source)>" \
     "\n#{message}"
   end
 end

@@ -264,7 +264,7 @@
         {
           "type": "checkbox",
           "name": "race_eth",
-          "title": "Which of the following best represents your racial or ethnic background? Please select all that apply.",
+          "title": "Which of the following best represents your racial or ethnic background? Please select all that apply. (optional)",
           "choices": [
             {
               "value": "white",

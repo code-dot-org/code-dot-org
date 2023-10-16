@@ -68,21 +68,21 @@ hi:
         csd-2023:
           title: कंप्यूटर साइंस के अन्वेषण
     resources:
-      curriculum/csd/2020:
-        name: पाठ्यक्रम
-      teacher_forum/csd/2020:
-        name: अध्यापक फोरम
       curriculum/csd/2017:
         name: पाठ्यक्रम
       teacher_forum_6/csd/2017:
+        name: अध्यापक फोरम
+      curriculum/csd/2018:
+        name: पाठ्यक्रम
+      teacher_forum_6/csd/2018:
         name: अध्यापक फोरम
       curriculum/csd/2019:
         name: पाठ्यक्रम
       teacher_forum/csd/2019:
         name: अध्यापक फोरम
+      curriculum/csd/2020:
+        name: पाठ्यक्रम
+      teacher_forum/csd/2020:
+        name: अध्यापक फोरम
       getting_started_with_csd/csd/2021:
         name: CSD के साथ प्रारंभ करना
-      curriculum/csd/2018:
-        name: पाठ्यक्रम
-      teacher_forum_6/csd/2018:
-        name: अध्यापक फोरम

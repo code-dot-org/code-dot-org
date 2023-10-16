@@ -1,5 +1,14 @@
 import {assert, expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
@@ -239,6 +248,13 @@ describe('Applab Exporter,', function () {
 
     stashedCookieKey = window.userNameCookieKey;
     window.userNameCookieKey = 'CoolUser';
+    stubRedux();
+    registerReducers({pageConstants: pageConstantsReducer});
+    getStore().dispatch(
+      setPageConstants({
+        isCurriculumLevel: true,
+      })
+    );
   });
 
   afterEach(function () {
@@ -246,6 +262,7 @@ describe('Applab Exporter,', function () {
     window.fetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
+    restoreRedux();
   });
 
   describe("when assets can't be fetched,", function () {

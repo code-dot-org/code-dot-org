@@ -10,7 +10,7 @@ theme: responsive_full_width
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
       %h1{style: "color: white"}=hoc_s(:blockchain_hero_heading)
-      %p{style: "color: white"}=hoc_s(:blockchain_hero_desc)
+      %p.body-one{style: "color: white"}=hoc_s(:blockchain_hero_desc)
     %figure
       %img{src: "/images/banners/blockchain-laptop-silver.png", alt: ""}
     .clear
@@ -30,27 +30,13 @@ theme: responsive_full_width
       %img{src: "/images/blockchain-works-logo.png", alt: "", style: "width: 100%"}
     .clear
     .video-series
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/MjibPL4tGqo", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_01)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/10wYLCnDHao", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_02)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/It_Ivgm5wQA", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_03)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/3EwkfUz_BPs", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_04)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/d9rKkk3oVdY", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_05)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/WzxbwEQRJPo", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_06)}
-      %figure.video-responsive
-        %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/C3C_JfG8cNg", allowFullScreen: "true", frameborder: "0", title: hoc_s(:blockchain_video_title_07)}
+      = view :"blockchain/blockchain_vid_01_intro"
+      = view :"blockchain/blockchain_vid_02_why"
+      = view :"blockchain/blockchain_vid_03_hood"
+      = view :"blockchain/blockchain_vid_04_beyond"
+      = view :"blockchain/blockchain_vid_05_marketplace"
+      = view :"blockchain/blockchain_vid_06_scam"
+      = view :"blockchain/blockchain_vid_07_impact"
 
 = view :section_divider_line
 
@@ -121,7 +107,7 @@ theme: responsive_full_width
           %img{src: "/images/blockchain-coinbase-learn.png", alt: ""}
           %p=hoc_s(:blockchain_resources_01_desc)
         .content-footer
-          %a{href: "https://www.coinbase.com/learn", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_01_button_label)}}
+          %a{href: "https://www.coinbase.com/learn", class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_01_button_label)}}
             =hoc_s(:call_to_action_learn_more)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -129,7 +115,7 @@ theme: responsive_full_width
           %img{src: "/images/blockchain-resource-image-generic.png", alt: ""}
           %p=hoc_s(:blockchain_resources_02_desc)
         .content-footer
-          %a{href: "https://www.youtube.com/@WhiteboardCrypto/featured", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_02_button_label)}}
+          %a{href: "https://www.youtube.com/@WhiteboardCrypto/featured", class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_02_button_label)}}
             =hoc_s(:call_to_action_watch_now)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -137,5 +123,5 @@ theme: responsive_full_width
           %img{src: "/images/blockchain-coinbase-hoc-activity.png", alt: ""}
           %p=hoc_s(:blockchain_resources_03_desc)
         .content-footer
-          %a{href: "https://coinbase.github.io/memorygame/story.html", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_03_button_label)}}
+          %a{href: "https://coinbase.github.io/memorygame/story.html", class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_03_button_label)}}
             =hoc_s(:call_to_action_try_activity)

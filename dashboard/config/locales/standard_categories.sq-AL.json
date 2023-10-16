@@ -2,14 +2,23 @@
   "sq-AL": {
     "data": {
       "standard_categories": {
+        "BI-5": {
+          "description": "AI mund të ndikojë në shoqëri në mënyra pozitive dhe negative"
+        },
         "CT": {
           "description": "Te menduarit kompjuterik"
         },
-        "L": {
-          "description": "Gjuha"
+        "D2.Geo": {
+          "description": "Gjeografi"
+        },
+        "D2.His": {
+          "description": "Histori"
         },
         "F": {
           "description": "funksione"
+        },
+        "L": {
+          "description": "Gjuha"
         }
       }
     }

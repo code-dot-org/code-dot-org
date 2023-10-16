@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-# Temporarily support both Ruby 2.7 and 3.0 until we've fully transitioned from
-# the former to the latter
-# TODO infra: pin us to ruby 3 once all persistent managed servers get updated
-ruby '>= 2.7', '< 3.1'
+ruby '3.0.5'
 
 gem 'berkshelf'
 gem 'chef', '17.6.18'

@@ -1,0 +1,8 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#validations-container"}}
+  Validations
+
+#validations-container.in.collapse
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_validations.js'),
+        data: {validations: @level.level_data["validations"].to_json, levelname: @level.name, appname: @level.game&.app}}

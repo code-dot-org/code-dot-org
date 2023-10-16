@@ -1,5 +1,5 @@
-@import "color.scss";
-@import "./music-view.module.scss";
+@import 'color.scss';
+@import './music-view.module.scss';
 
 .timeline {
   border-radius: $default-border-radius;
@@ -23,6 +23,7 @@
     background-color: $neutral_dark90;
     height: 24px;
     border-bottom: solid $default-spacing $dark_black;
+    cursor: pointer;
   }
 
   .barLineContainer {
@@ -36,6 +37,7 @@
       top: 4px;
       left: 6px;
       color: $neutral_dark20;
+      cursor: pointer;
 
       &Current {
         color: $neutral_light;
@@ -146,6 +148,10 @@
     top: 0;
     width: 1px;
     height: 100%;
-    border-left: 3px yellow solid;
+    border-left: 3px $neutral_dark20 solid;
+
+    &Playing {
+      border-left: 3px yellow solid;
+    }
   }
 }

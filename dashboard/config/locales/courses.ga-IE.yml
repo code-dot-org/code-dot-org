@@ -3,52 +3,42 @@ ga:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Foras Feasa ar an Ríomheolaíocht
-          title: Foras Feasa ar an Ríomheolaíocht ('17-'18)
-          version_title: "'17-'18"
-          description_student: I bhfómhar na bliana 2016, sheol an College Board a
-            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
-            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
-            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
-            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
-            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
-            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
-            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
-          description_teacher: I bhfómhar na bliana 2016, sheol an College Board a
-            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
-            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
-            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
-            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
-            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
-            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
-            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
-          description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
-        csd-2017:
-          assignment_family_title: Fionnachtana sa Ríomheolaíocht
-          title: Fionnachtana sa Ríomheolaíocht ('17-'18)
-          version_title: "'17-'18"
-          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
-            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
-            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
-            cumarsáide, réitithe fadhbanna, agus spraoi.
-          description_teacher: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
-            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
-            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
-            cumarsáide, réitithe fadhbanna, agus spraoi.
-          description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
-            féin a chruthú.
         allthethingscourse:
-          title: cúrsauilechuimsitheach
           description_short: Seo é cúrsa ina bhfuil chuile rud
           description_student: Seo é cúrsa ina bhfuil chuile rud agus a bhfuil cur
             síos níos faide air do na daltaí
           description_teacher: Seo é cúrsa ina bhfuil chuile rud agus a bhfuil cur
             síos níos faide air do na múinteoirí
+          title: cúrsauilechuimsitheach
+        csd-2017:
+          assignment_family_title: Fionnachtana sa Ríomheolaíocht
+          description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú.
+          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
+          description_teacher: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
+          title: Fionnachtana sa Ríomheolaíocht ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Fionnachtana sa Ríomheolaíocht
+          description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú.
+          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
+          description_teacher: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
           title: Fionnachtana sa Ríomheolaíocht ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
             féin a chruthú.
           description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
@@ -59,67 +49,8 @@ ga:
             Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
             féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
             cumarsáide, réitithe fadhbanna, agus spraoi.
-        csp-2018:
-          assignment_family_title: Foras Feasa ar an Ríomheolaíocht
-          title: Foras Feasa ar an Ríomheolaíocht ('18-'19)
-          version_title: "'18-'19"
-          description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
-          description_student: I bhfómhar na bliana 2016, sheol an College Board a
-            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
-            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
-            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
-            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
-            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
-            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
-            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
-          description_teacher: I bhfómhar na bliana 2016, sheol an College Board a
-            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
-            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
-            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
-            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
-            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
-            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
-            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
-        csp-2019:
-          title: Foras Feasa ar an Ríomheolaíocht ('19-'20)
-          version_title: "'19-'20"
-          description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
-          description_student: I bhfómhar na bliana 2016, sheol an College Board a
-            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
-            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
-            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
-            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
-            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
-            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
-            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
-          description_teacher: I bhfómhar na bliana 2016, sheol an College Board a
-            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
-            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
-            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
-            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
-            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
-            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
-            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
-        csd-2019:
           title: Fionnachtana sa Ríomheolaíocht ('19-'20)
           version_title: "'19-'20"
-          description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
-            féin a chruthú.
-          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
-            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
-            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
-            cumarsáide, réitithe fadhbanna, agus spraoi.
-          description_teacher: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
-            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
-            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
-            cumarsáide, réitithe fadhbanna, agus spraoi.
-        csd-pilot:
-          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
-            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
-            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
-            cumarsáide, réitithe fadhbanna, agus spraoi.
-        csp-2020:
-          description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
         csd-2020:
           description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
             féin a chruthú.
@@ -131,30 +62,99 @@ ga:
             Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
             féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
             cumarsáide, réitithe fadhbanna, agus spraoi.
+        csd-2023:
+          title: Fionnachtana sa Ríomheolaíocht
+        csd-pilot:
+          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
+        csp-2017:
+          assignment_family_title: Foras Feasa ar an Ríomheolaíocht
+          description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
+          description_student: I bhfómhar na bliana 2016, sheol an College Board a
+            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
+            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
+            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
+            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
+            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
+            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
+            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
+          description_teacher: I bhfómhar na bliana 2016, sheol an College Board a
+            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
+            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
+            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
+            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
+            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
+            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
+            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
+          title: Foras Feasa ar an Ríomheolaíocht ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Foras Feasa ar an Ríomheolaíocht
+          description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
+          description_student: I bhfómhar na bliana 2016, sheol an College Board a
+            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
+            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
+            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
+            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
+            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
+            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
+            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
+          description_teacher: I bhfómhar na bliana 2016, sheol an College Board a
+            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
+            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
+            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
+            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
+            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
+            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
+            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
+          title: Foras Feasa ar an Ríomheolaíocht ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
+          description_student: I bhfómhar na bliana 2016, sheol an College Board a
+            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
+            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
+            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
+            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
+            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
+            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
+            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
+          description_teacher: I bhfómhar na bliana 2016, sheol an College Board a
+            chúrsa AP® is nuaí, AP Computer Science Principles (Foras Feasa ar an
+            Ríomheolaíocht). Tugann an cúrsa seo buneolas ar choincheapa tábhachtacha
+            sa ríomheolaíocht do na daltaí, agus tugann sé orthu machnamh a dhéanamh
+            ar na bealaí a imríonn ríomhairí agus teicneolaíocht tionchar ar an domhan.
+            Dearadh AP Computer Science Principles chun an chéad ghlúin eile de cheannródaithe
+            sa ríomhaireacht a chothú, agus daoine ó ghúpaí gannionadaíochta a spreagadh
+            le huirlisí ríthábhachtacha ríomhaireachta agus le deiseanna ildisciplíneacha.
+          title: Foras Feasa ar an Ríomheolaíocht ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
         csp-2021:
           description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
-        mike-test:
-          title: Buntús na Ríomheolaíochta
         csp-2022:
           description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
         csp-2023:
           description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
-        csd-2023:
-          title: Fionnachtana sa Ríomheolaíocht
+        mike-test:
+          title: Buntús na Ríomheolaíochta
     resources:
-      curriculum/csd/2020:
-        name: Curaclam
-      teacher_forum/csd/2020:
-        name: Fóram do Mhúinteoirí
       curriculum/csd/2017:
         name: Curaclam
-      teacher_forum_6/csd/2017:
-        name: Fóram do Mhúinteoirí
+      curriculum/csd/2018:
+        name: Curaclam
       curriculum/csd/2019:
+        name: Curaclam
+      curriculum/csd/2020:
         name: Curaclam
       teacher_forum/csd/2019:
         name: Fóram do Mhúinteoirí
-      curriculum/csd/2018:
-        name: Curaclam
+      teacher_forum/csd/2020:
+        name: Fóram do Mhúinteoirí
+      teacher_forum_6/csd/2017:
+        name: Fóram do Mhúinteoirí
       teacher_forum_6/csd/2018:
         name: Fóram do Mhúinteoirí

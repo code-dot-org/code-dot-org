@@ -438,13 +438,16 @@ describe('Artist', () => {
           blockSpaceToDom() {
             return parseElement(oldXml);
           },
+          domToText(dom) {
+            return new XMLSerializer().serializeToString(dom);
+          },
         },
         mainBlockSpace: {
           clear() {},
         },
         cdoUtils: {
-          loadBlocksToWorkspace(blockspace, dom) {
-            newDom = dom;
+          loadBlocksToWorkspace(blockspace, str) {
+            newDom = parseElement(str);
           },
         },
       };

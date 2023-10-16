@@ -1,4 +1,3 @@
-import {Triggers} from '../constants';
 import {BlockTypes} from './blockTypes';
 import {
   EXTRA_SOUND_INPUT_PREFIX,
@@ -7,15 +6,6 @@ import {
   SOUND_VALUE_TYPE,
   TRACK_NAME_FIELD,
 } from './constants';
-
-export const dynamicTriggerExtension = function () {
-  this.getInput('trigger').appendField(
-    new Blockly.FieldDropdown(function () {
-      return Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]);
-    }),
-    'trigger'
-  );
-};
 
 export const getDefaultTrackNameExtension = player =>
   function () {

@@ -6,56 +6,56 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Dasturlash Soati yig'ilishi yoki tadbirini qanday tashkil qilish mumkin
 
-### Get your entire school or community involved in an Hour of Code!
+### Butun maktab yoki jamoangizni Dasturlash soatiga jalb qiling!
 
 * * *
 
-## 1. Prepare for your event
+## 1. Tadbiringizga tayyorgarlik ko'ring
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Joy, sana va vaqtni belgilang.
+- Mahalliy xokimingiz, Senat aʼzosi, viloyat xokimi yoki nufuzli ishbilarmonga [maktub](https://hourofcode.com/promote/resources#sample-emails) yuboring va ularni nutq soz'lashga taklif qiling. Qoʻshimcha maʼlumot olish uchun Dasturlash soati tadbiri davomida saylangan amaldorni qabul qilish bo'yicha[yo'riqnomamizni]({{ localized_files/elected_official }}) koʻrib chiqing.
+- Mahalliy yangiliklar teleradiostansiyasi, gazeta, ta'lim/texnologiya bloggerlari kabi, ommaviy axborot vositalari/matbuotni taklif qiling. Yordam olish uchun [matbuot to‘plami]({{ promote/press_kit_url }})ga qarang.
 
-## 2. During your event
+## 2. Tadbiringiz davomida
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Tadbiringizni [bizning ilhomlantiruvchi video roliklarimizdan]({{ promote/videos }}) biri bilan boshlang.
+- Ushbu [statistik ma'lumotlar va infojadvallardan]({{ promote/stats_url }}) foydalanib, kompyuter fanlarining ahamiyati haqida qisqacha kirish ma'lumotini bering.   
       
     
-- **Other event ideas**: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+- **Tadbirlar uchun boshqa g'oyalar**: 
+    - Mahalliy sanoat liderlarini Kompyuter fanlari bilan bog'liq ishini muhokama qilish uchun taklif qiling.
+    - Mahalliy siyosatchini taklif qiling va talabalar unga kodlashni o'rgatishlarini so'rang.
+    - Bir guruh o‘quvchilardan offlayn (kompyutersiz) mashg'ulotni namoyish etishlarini so‘rang.
+    - Bir guruh talabalardan direktorga yoki bir guruh o'qituvchilarga dasturlashni o'rgatishlarini so'rang.
+    - Agar sizning maktabingiz allaqachon kompyuter fanlaridan dars berayotgan bo'lsa, talabalarga demo loyihalarni taqdim eting.
 
-## 3. Share how it went
+## 3. U qanday o'tganini baham ko'ring
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+Tadbiringiz suratlarini Facebook va Twitter’da baham ko‘ring va **#HourOfCode** xeshtegidan foydalaning.
 
 * * *
 
-## Example plan for a school assembly or event
+## Maktab yig'ilishi yoki tadbiri uchun namunaviy reja
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Tadbir:** Maktab miqyosida Kompyuter Fanlari Ta'lim Haftasini boshlash yig'ilishi
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Sana:** {{ campaign_date/start_short }} (Kompyuter Fanlari Ta'lim Haftasining boshlanishi)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**O'tkazilish vaqti:** Maktab kuni davomida. Ertalabda tadbirni o'tkazish afzalroq. Taxminan 1 soat.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**O'tkazilish yoyi:** Maktab yig'ilishlar zali (masalan, teatr, sportzal, kefeteria)
 
-## Run of Show
+## Tadbir dasturi
 
-| Time             | Action                                                                                                                                |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives. |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!             |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                   |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                     |
+| Vaqti               | Faoliyat                                                                                                                                                                     |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 gacha | Tadbirni [bizning ilhomlantiruvchi video roliklarimizdan]({{ promote/videos }}) biri bilan boshlang.                                                                         |
+| 10:05 - 10:15 gacha | Direktor kompyuter fanlarining ahamiyati haqida qisqacha kirish ma'lumotini beradi. Ushbu [statistik ma'lumotlar va infojadvallardan]({{ promote/stats_url }}) foydalaning.  |
+| 10:15 - 10:30 gacha | Maxsus taklif etilgan mehmon to'plagan tajribasi va yangi texnologiya va kompyuter fanlari ularning kundalik hayotida qanday muhim rol o'ynashi haqida gapirib o'tadi.       |
+| 10:30 - 10:40 gacha | O'quvchilar maktab uchun "Dasturlash soati" demo taqdimotini o'tkazadilar. Qiziqarli burilish: ulardan direktor, siyosatchi yoki boshqa o'quvchilarga dars berishni so'rang! |
+| 10:40 - 11:00 gacha | O'quvchilar offlayn (kompyutersiz) mashg'ulotni va kompyuter fanlarini qanday o'rgatish mumkinligini namoyish etadilar.                                                      |
+| 11:00 - 11:05 gacha | Maktab miqyosida tadbirni o'tkazishga yordam bergan o'qituvchi yakuniy so'z bilan nutq so'zlaydi.                                                                            |
 
 {{ signup_button }}

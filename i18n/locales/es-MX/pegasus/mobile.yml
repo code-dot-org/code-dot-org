@@ -1539,6 +1539,7 @@
   header_stats: "Estadísticas"
   header_help_us: "Ayúdanos"
   header_about: "Acerca de"
+  header_incubator: "Incubadora"
   header_teacher_community: "Comunidad de docentes"
   header_help_support: 'Ayuda y soporte '
   header_report_bug: "Reportar un error"
@@ -1614,7 +1615,7 @@
   hoc_overview_dance_subtitle: "Programa una Fiesta de baile y compártela con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!"
   hoc_overview_dance_2019_subtitle: "Programa una Fiesta de baile para compartir con tus amigos. Con Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers, ¡y muchos más!"
   hoc_overview_dance_2022_subtitle: "Programa una Fiesta de Baile para compartir con tus amigos. Con Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música de la película de Disney“Encanto,” and more!"
-  hoc_overview_hello_world_2022_subtitle: "Elige entre cuatro temas divertidos para codificar personajes interactivos en un mundo creado por ti."
+  hoc_overview_hello_world_2022_subtitle: "Elige entre seis temas divertidos para programar personajes interactivos en un mundo creado por ti."
   hoc_overview_hello_world_2022_alt_text: "Astronauta animado y animalitos flotando alrededor de una ilustración de la tierra"
   hoc_overview_title: "Actividades de la Hora del Código de Code.org"
   hoc_overview_subtitle: "La <a href=\"https://hourofcode.com\">Hora del Código</a> es un movimiento global que llega a decenas de millones de estudiantes en más 180 países. Cualquier persona, en cualquier lugar del mundo, puede organizar una Hora del Código o probar uno de los más de 200 tutoriales de una hora, disponibles en más de 45 idiomas."
@@ -1653,7 +1654,7 @@
   hoc2018_mc_download_adventurer: "Descarga la versión sin conexión del Aventurero de Minecraft."
   hoc2018_mc_educators: "Para educadores"
   hoc2018_mc_educators_box1_title: "Programa con Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition cuenta con un plan de estudios, entrenamiento y programación en Minecraft que sigue los estándares.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition cuenta con un plan de estudios, entrenamiento y programación en Minecraft que sigue los estándares."
   hoc2018_mc_educators_box1_button: "Comenzar"
   hoc2018_mc_educators_box2_title: "Descarga la guía para facilitadores"
   hoc2018_mc_educators_box2_desc: "Este kit de herramientas te ayudará a organizar una Hora del Código y que tus estudiantes se interesen en las ciencias de la computación."
@@ -1761,7 +1762,7 @@
   hoc2018_mc_with_microsoft: "En colaboración con"
   hoc2018_mc_thank_microsoft: "Agradecemos a Microsoft por el apoyo a nuestra visión y misión centradas en asegurar que cada niño tenga la oportunidad de aprender ciencias de la computación y las habilidades para tener éxito en el siglo XXI."
   hoc2019_mc_mee_title: "Minecraft AI for Good"
-  hoc2019_mc_mee_description1: 'El nuevo tutorial para Minecraft de la Hora del Código ya está disponible en Minecraft: Education Edition para Windows, Mac y iPad. ¡Aprende los conceptos básicos de programar y explorar la inteligencia artificial con tus estudiantes!'
+  hoc2019_mc_mee_description1: "El nuevo tutorial para Minecraft de la Hora del Código ya está disponible en Minecraft: Education Edition para Windows, Mac y iPad. ¡Aprende los conceptos básicos de programar y explorar la inteligencia artificial con tus estudiantes!"
   hoc2019_mc_mee_description2: "Accede a recursos gratuitos que incluyen un plan de lecciones, videos, un plan de estudios en ciencias de la computación y entrenamientos para docentes."
   hoc2019_mc_more_coding_resources: "Más recursos para la programación"
   hoc2019_dance_previous_versions: "¿Estás buscando una versión anterior de Fiesta de baile?  \nHaz clic aquí para iniciar [Parte 1](%{dance_2018_link}) y [Parte 2](%{dance_extras_2018_link}) del último año."
@@ -1774,18 +1775,18 @@
   page_not_available_description: "Lo sentimos, la página que solicitó ya no está disponible en esta dirección. Si todavía necesita acceso, envíe un correo electrónico a [support@code.org](%{support_email_link})."
   page_not_available_button: "Volver a la página de inicio"
   hoc2020_mc_available_code_org: "Disponible en Code.org"
-  hoc2020_mc_available_mee: 'Disponible en Minecraft: Edición de Educación'
+  hoc2020_mc_available_mee: "Disponible en Minecraft: Edición de Educación"
   hoc2020_mc_mee_title: "Minecraft Historia de Dos Pueblos"
-  hoc2020_mc_mee_description: 'El nuevo tutorial de Minecraft "Hora del Código" ya está disponible en Minecraft: Edición Educativa para Windows, Mac, Chromebook y iPad. Aprende los fundamentos de la codificación y explora la diversidad y la inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de igualdad y formación para profesores.'
+  hoc2020_mc_mee_description: "El nuevo tutorial de Minecraft \"Hora del Código\" ya está disponible en Minecraft: Edición Educativa para Windows, Mac, Chromebook y iPad. Aprende los fundamentos de la codificación y explora la diversidad y la inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de igualdad y formación para profesores."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: '¡Viaja en el tiempo y aprende a codificar! El nuevo tutorial de Minecraft Hour of Code ya está disponible en Minecraft: Education Edition para Windows, Mac, Chromebook y iPad. Empieza con los recursos gratuitos para educadores, formaciones y vídeos.'
+  hoc2021_mc_mee_description: "¡Viaja en el tiempo y aprende a codificar! El nuevo tutorial de Minecraft Hour of Code ya está disponible en Minecraft: Education Edition para Windows, Mac, Chromebook y iPad. Empieza con los recursos gratuitos para educadores, formaciones y vídeos."
   hoc2021_mc_mee_villages_title: "Historia de Dos Pueblos"
-  hoc2021_mc_mee_villages_description: 'Aprende los fundamentos de la codificación y explora la diversidad y la inclusión con tus alumnos en Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Aprende los fundamentos de la codificación y explora la diversidad y la inclusión con tus alumnos en Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "Inteligencia Artificial para el Bienestar"
-  hoc2021_mc_mee_ai_description: 'Explora la Inteligencia Artificial con tus alumnos y aprende a codificar en Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Explora la Inteligencia Artificial con tus alumnos y aprende a codificar en Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Finca de escape de Minecraft"
   hoc2022_mc_mee_description: '¡Escapa de la misteriosa mansión al amanecer y gana un millón de esmeraldas! El nuevo tutorial de la Hora del código de Minecraft ya está disponible en Minecraft: Education Edition para Windows, Mac, Chromebook, iPad y dispositivos móviles. Comience con recursos, capacitaciones y videos gratuitos para educadores. '
-  hoc2022_mc_mee_timecraft_description: 'Viaja al pasado para salvar el futuro en esta lección de programación gratuita en Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Viaja al pasado para salvar el futuro en esta lección de programación gratuita en Minecraft: Education Edition."
   footer_powered_by_aws: "Impulsado por Amazon Web Services"
   footer_built_on_github: "Creado en GitHub de Microsoft"
   codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras mini-lecciones en vivo de CodeBytes!"
@@ -1834,7 +1835,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
   ai_zooniverse_description: "Ayuda a proteger a la Cebra de Montaña de El Cabo en peligro de extinción identificando los diferentes animales en las imágenes."
   ai_audience: "Audiencia"
-  ai_minecraft_description: 'Accede a recursos gratuitos que incluyen un plan de clases, vídeos, un plan de estudios de informática y formación para profesores. (Requiere Minecraft: Education Edition)'
+  ai_minecraft_description: "Accede a recursos gratuitos que incluyen un plan de clases, vídeos, un plan de estudios de informática y formación para profesores. (Requiere Minecraft: Education Edition)"
   ai_k_12_audience: "K-12 (se requiere saber leer)"
   ai_microsoft_workshop: "Talleres virtuales gratuitos de Microsoft"
   ai_microsoft_workshop_description: "Despierta la curiosidad con talleres gratuitos de STEM y codificación."

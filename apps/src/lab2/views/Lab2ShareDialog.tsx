@@ -11,9 +11,10 @@ import popupWindow from '@cdo/apps/code-studio/popup-window';
 const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
   shareUrl,
 }) => {
-  const isProjectLevel = useSelector(
-    (state: {lab: LabState}) => state.lab.isProjectLevel
-  );
+  const isProjectLevel =
+    useSelector(
+      (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
+    ) || false;
   const appType = useSelector(
     (state: {lab: LabState}) => state.lab.channel?.projectType
   );

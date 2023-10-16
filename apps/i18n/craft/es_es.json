@@ -1,9 +1,9 @@
 {
   "absolute": "absoluto",
+  "agentDiamondPathCongrats": "¡Felicidades, has encontrado el camino de los diamantes! ¡Y ya has recogido {count, plural, one {1 diamante} other {# diamantes}}!",
   "agentGenericFailureMessage": "¡Sigue programando! Acuérdate de utilizar El Agente como ayuda.",
   "agentTooFewBlocksFailureMessage": "Intenta añadir sólo un bloque cada vez para llevar al Agente al lugar correcto.",
   "at": "en",
-  "agentDiamondPathCongrats": "¡Felicidades, has encontrado el camino de los diamantes! ¡Y ya has recogido {count, plural, one {1 diamante} other {# diamantes}}!",
   "blockActionAdd": "añadir",
   "blockActionAttack": "atacar",
   "blockActionClone": "clonar bloques",

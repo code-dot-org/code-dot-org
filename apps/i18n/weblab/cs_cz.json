@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Přidat CSS",
-  "addImageButton": "Přidat obrázek",
   "addHTMLButton": "Přidat HTML",
+  "addImageButton": "Přidat obrázek",
   "closeFullscreenPreview": "Zavřít náhled na celou obrazovku",
   "currentProjectCapacity": "{currentMegabytes}MB z {totalMegabytes}MB použito",
   "disallowedHtml": "Soubor \"{filename}\" obsahuje HTML prvky, které nejsou povoleny: `{disallowedTags}`. Po zavření tohoto dialogu budou odstraněny.",
@@ -14,8 +14,8 @@
   "reset": "Obnovit webovou laboratoř",
   "resetComplete": "Reset webové laboratoře dokončen",
   "resetFailure": "Obnovení webové laboratoře se nezdařilo: {message}.",
-  "toggleInspectorOn": "Inspektor: Vypnuto",
   "toggleInspectorOff": "Inspektor: Na",
+  "toggleInspectorOn": "Inspektor: Vypnuto",
   "troubleshootingSupport": "Další informace naleznete v článku podpory [\"Troubleshooting Web Lab problems\"]({url}) .",
   "uploadError": "Chyba nahrávání"
 }

@@ -26,18 +26,9 @@ my:
         text: "ညာဘက္က workspace ျဖစ္ျပီး toolbox ထဲက block ေတြကို program တည္ေဆာက္ဖုိ႔အတြက္ ဆြဲထည့္ဖုိ႔ပါ။ block ကိုဖ်က္ခ်င္တယ္ဆုိရင္ အစြန္မွာရွိတဲ့ အမိႈက္ပံုးထဲကို ဆြဲထည့္လုိက္ပါ။"
       10:
         text: "Block တစ္ခုမွာ instruction တစ္ခုပါတယ္။ \"move forward ေရွ႔သုိ ့\" ဆုိတဲ့ block ကို workspace ထဲဆြဲထည့္လုိက္ျပီး \"Run Program\" ကိုႏွိပ္လုိက္ရင္ ဌက္ကေလးက maze ေပၚကို တစ္ေနရာေရြ ႔သြားမွာျဖစ္တယ္။"
-      11:
-      12:
-      13:
     function:
-      1:
-      2:
-      3:
-      4:
       5:
         text: "Let's put the \"fun\" back in \"FUNction!\""
     loop_while:
       1:
         text: "Hi, I'm Makinde! Let's learn about the \"while block.\""
-      2:
-      3:

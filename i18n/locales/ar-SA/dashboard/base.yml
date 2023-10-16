@@ -53,6 +53,7 @@ ar:
         gender: 'الجنس'
         edit_header: 'تعديل تفاصيل الحساب'
         finish_sign_up_header: 'إكمال إنشاء حسابك'
+        finish_sign_up_header_error: 'الرجاء تصحيح الأخطاء التالية:'
         finish_sign_up_subheader: 'املأ المعلومات التالية لإكمال إنشاء حساب على Code.org لـ <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'املأ المعلومات التالية لإكمال إنشاء حساب على Code.org لـ **%{email}**.'
         finish_sign_up_subheader_provider: 'املأ المعلومات التالية لإكمال إنشاء حساب على Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ ar:
         reset_password_token: "رابط إعادة تعيين كلمة المرور الذي اتبعته"
         error:
           future: لا يمكن أن يكون في المستقبل
+        user_type: 'نوع الحساب'
         us_state: 'الولاية'
   beta: "تجريبي"
   hello: "مرحباً بالعالم"
@@ -1284,3 +1286,4 @@ ar:
     binary: "ثنائي"
     hexadecimal: "نظام سداسي عشري"
     pixel_format_header: "صيغة البيكسل"
+

@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import Notification from '../Notification';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -55,20 +55,22 @@ export const UnconnectedTeacherHomepage = ({
   hasFeedback,
   showIncubatorBanner,
   currentUserId,
+  showDeprecatedCalcAndEvalWarning,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
+
+  /* We are hiding the AFE banner to free up space on the Teacher Homepage as of September 2023).
+   * When we want to show the AFE banner again remove the next line and uses of 'shouldShowAFEBanner'.
+   */
+  const shouldShowAFEBanner = false;
 
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
    * when we want to show the Census banner again set this to true
    */
   const showPLBanner = false;
 
-  /* We are hiding the Census banner to free up space on the Teacher Homepage (May 2023)
-   * when we want to show the Census banner again remove the next line
-   */
-  showCensusBanner = false;
   const [displayCensusBanner, setDisplayCensusBanner] =
     useState(showCensusBanner);
   const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
@@ -153,7 +155,7 @@ export const UnconnectedTeacherHomepage = ({
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
-  const showAFEBanner = isEnglish && afeEligible;
+  const showAFEBanner = shouldShowAFEBanner && isEnglish && afeEligible;
 
   // Send one analytics event when a teacher logs in. Use session storage to determine
   // whether they've just logged in.
@@ -172,14 +174,22 @@ export const UnconnectedTeacherHomepage = ({
     <div>
       <HeaderBanner
         headingText={i18n.homepageHeading()}
-        short={true}
         backgroundUrl={backgroundUrl}
+        backgroundImageStyling={{backgroundPosition: '90% 30%'}}
       />
       <div className={'container main'}>
         <ProtectedStatefulDiv ref={flashes} />
+        {showDeprecatedCalcAndEvalWarning && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.deprecatedCalcAndEvalWarning()}
+            details={i18n.deprecatedCalcAndEvalDetails()}
+            dismissible={false}
+          />
+        )}
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
-        {isEnglish && specialAnnouncement && (
+        {specialAnnouncement && (
           <MarketingAnnouncementBanner
             announcement={specialAnnouncement}
             marginBottom="30px"
@@ -206,7 +216,7 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
-            buttonColor={Button.ButtonColor.orange}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -217,7 +227,7 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
-            buttonColor={Button.ButtonColor.orange}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -325,6 +335,7 @@ UnconnectedTeacherHomepage.propTypes = {
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
   currentUserId: PropTypes.number,
+  showDeprecatedCalcAndEvalWarning: PropTypes.bool,
 };
 
 const styles = {

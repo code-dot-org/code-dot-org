@@ -9,6 +9,7 @@ import Button from '../../Button';
 import {connect} from 'react-redux';
 import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
 import {cstaStandardsURL} from './standardsConstants';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /*
 Dialog that show the first time a teacher goes to the
@@ -81,7 +82,7 @@ class StandardsIntroDialog extends Component {
             __useDeprecatedTag
             text={i18n.gotIt()}
             onClick={this.dismissStandardsDialog}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-intro-button"
             disabled={this.state.pending}
             isPending={this.state.pending}
@@ -98,7 +99,7 @@ const styles = {
     color: color.dark_charcoal,
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   dialog: {
     paddingLeft: 20,

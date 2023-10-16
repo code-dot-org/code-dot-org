@@ -1,6 +1,6 @@
 require 'pd/certificate_renderer'
 
-class Pd::WorkshopMailer < ActionMailer::Base
+class Pd::WorkshopMailer < ApplicationMailer
   include Rails.application.routes.url_helpers
 
   default bcc: MailerConstants::PLC_EMAIL_LOG
@@ -99,7 +99,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_enrollment_reminder(enrollment, days_before: nil)
+  def teacher_enrollment_reminder(enrollment, options = nil)
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @organizer = @workshop.organizer
@@ -107,7 +107,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
     @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
-    @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
+    @is_first_pre_survey_email = options.nil? ? true : options[:days_before] == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
     # Facilitator training workshops use a different email address
     if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
@@ -320,7 +320,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   private def teacher_enrollment_subject(workshop)
-    if Pd::Workshop::COURSE_ADMIN_COUNSELOR == workshop.course
+    if workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
       if @is_first_pre_survey_email
@@ -337,7 +337,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   private def detail_change_notification_subject(workshop)
-    if Pd::Workshop::COURSE_ADMIN_COUNSELOR == workshop.course
+    if workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
       "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
       'Details for your upcoming Code.org workshop have changed'

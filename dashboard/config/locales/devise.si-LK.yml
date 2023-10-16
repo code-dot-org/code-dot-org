@@ -58,6 +58,27 @@ si:
         ආකරය පිලිබඳ උපදෙස් ඔබගේ ඊ මේල් ලිපිනය වෙත ලැබෙනු ඇත.
       unlocked: ඔබගේ ගිණුම සක්‍රිය කරන ලදි. ඉදිරියට යාමට ඇතුලු වන්න.
   errors:
+    invitations:
+      edit:
+        header: ඔබේ මුරපදය සකසන්න
+        submit_button: මගේ මුරපදය සකසන්න
+      invitation_removed: ඔබගේ ආරාධනය ඉවත් කර ඇත.
+      invitation_token_invalid: ලබා දී ඇති ආරාධනා සංකේතය වලංගු නොවේ!
+      new:
+        header: ආරාධනා කරන්න
+        submit_button: ආරාධනා කරන්න
+      no_invitations_remaining: ආරාධනා ඉතිරිව නැත
+      send_instructions: "%{email} වෙත ඇරයුමක් යවන ලදි."
+      updated: "ඔබගේ මුර-පදය සාර්ථක ලෙස වෙනස් කරන ලදී. \nදැන් ඔබ පිවිස ඇත."
+    mailer:
+      invitation_instructions:
+        accept: ආරාධනය පිලිගන්න
+        hello: හෙලෝ %{email}
+        ignore: ඔබට ඇරයුම පිලිගැනීමට අවශ්‍ය නැතිනම් මෙය නොසලකා හරින්න. <br /> ඔබ ඉහත
+          සබඳතාවය වෙත ගොස් මුර පදය වෙනස් කරන තුරු ඔබගේ ගිණුම ඇතුලත් නොවන බවට සලකන්න.
+        someone_invited_you: කිසිවකු විසින් ඔබව %{url} වෙත ඇරයුම් කර ඇත. පහත සඳහන්
+          සබඳතාවය මගින් ඔබට එය පිලිගත හැකිය.
+        subject: ආරාධන උපදෙස්
     messages:
       already_confirmed: ඊ මේල් ලිපිනය මේ වන විටත් තහවුරු කරගෙන ඇත. කරුණාකර නැවත ඇතුලත්
         වීමට බලන්න
@@ -66,24 +87,3 @@ si:
       expired: කල් ඉකුත්වී ඇත, කරුණාකර අලුත් එකක් ඉල්ලන්න
       not_found: සොයා ගත නොහැක
       not_locked: අගුලුදා නැත
-    invitations:
-      send_instructions: "%{email} වෙත ඇරයුමක් යවන ලදි."
-      invitation_token_invalid: ලබා දී ඇති ආරාධනා සංකේතය වලංගු නොවේ!
-      updated: "ඔබගේ මුර-පදය සාර්ථක ලෙස වෙනස් කරන ලදී. \nදැන් ඔබ පිවිස ඇත."
-      no_invitations_remaining: ආරාධනා ඉතිරිව නැත
-      invitation_removed: ඔබගේ ආරාධනය ඉවත් කර ඇත.
-      new:
-        header: ආරාධනා කරන්න
-        submit_button: ආරාධනා කරන්න
-      edit:
-        header: ඔබේ මුරපදය සකසන්න
-        submit_button: මගේ මුරපදය සකසන්න
-    mailer:
-      invitation_instructions:
-        subject: ආරාධන උපදෙස්
-        hello: හෙලෝ %{email}
-        someone_invited_you: කිසිවකු විසින් ඔබව %{url} වෙත ඇරයුම් කර ඇත. පහත සඳහන්
-          සබඳතාවය මගින් ඔබට එය පිලිගත හැකිය.
-        accept: ආරාධනය පිලිගන්න
-        ignore: ඔබට ඇරයුම පිලිගැනීමට අවශ්‍ය නැතිනම් මෙය නොසලකා හරින්න. <br /> ඔබ ඉහත
-          සබඳතාවය වෙත ගොස් මුර පදය වෙනස් කරන තුරු ඔබගේ ගිණුම ඇතුලත් නොවන බවට සලකන්න.

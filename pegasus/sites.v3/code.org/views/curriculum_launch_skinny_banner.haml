@@ -1,0 +1,13 @@
+- if !!DCDO.get('curriculum-launch-skinny-banner', false)
+  = inline_css 'generated/banners-curriculum-launch-2023.css'
+
+  .curriculum-banner-skinny
+    %a{href: CDO.studio_url("/catalog")}
+      .wrapper
+        %img{src: "/images/banners/banner-curriculum-catalog-illustration-black.png", alt: ""}
+        .text-wrapper
+          %h1=hoc_s(:curriculum_launch_2023_title)
+          %p=hoc_s(:curriculum_launch_2023_desc)
+        .button-wrapper
+          %button=hoc_s(:call_to_action_learn_more)
+  .clear

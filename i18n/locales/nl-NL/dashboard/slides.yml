@@ -474,9 +474,6 @@ nl:
         text: "Gebruik je hart om te groeien en groeien, en om jezelf een gezonde gloed te geven, en om een valentijn te maken, zeg tegen iemand dat je de mijne zal zijn! Gebruik je hart als je online bent, voel wat goed is en altijd aardig, en respecteer je vrienden, door eerlijk en aardig te zijn op het internet. Van je hoofd tot aan je tenen, wacht, denk na. Van je voeten tot je neus, wacht en denk online!"
       3:
         text: "Gebruik je armen om je huisdier te knuffelen, om te zorgen dat je kleren niet nat worden, om je favoriete trui te dragen en om je te helpen vliegen en te laten geloven. Gebruik je armen als je online bent, om een pauze te nemen en je technologie achter te laten en om een boom te vinden om in te klimmen. Van je hoofd tot aan je tenen, wacht en denk na. Van je voeten tot je neus, wacht en denk online!"
-      4:
-      5:
-      6:
     C2_digital_footprint_v2:
       1:
         text: "Elke keer als je online gaat, laat je een vingerafdruk achter die kan worden opgezocht, gekopieerd, gedeeld, uitgezonden, maar niet kan worden verwijderd. Wat voor vingerafdruk wil jij achterlaten?"
@@ -525,23 +522,16 @@ nl:
       2:
         text: "Er is een \"Wanneer pijl' blok en de \"beweeg acteur\" blok. Je kan deze blokken samenhangen om de acteurs te bewegen met behulp van de pijltjsetoetsen."
     C2_relay_programming:
-      1:
-      2:
       3:
         text: "Programmeurs gebruiken debuggen veel om problemen in hun algoritme of code te vinden en op te lossen. Er zijn veel manieren om problemen te debuggen. Een van de makkelijkste manieren is om stap voor stap door de code te gaan totdat je de plek vindt waar iets fout gaat en daarna het probleem op te lossen."
-      4:
     C2_zuck_repeat_loop:
       1:
         text: "Iets waar computers heel goed in zijn is het herhalen van commando's. Mensen worden het constant herhalen van dezelfde opdracht snel beu. Computers kunnen dezelfde opdracht miljoenen of zelfs miljarden keren nauwkeurig uitvoeren zonder verveeld te raken."
       2:
         text: "Dus het duurt bijvoorbeeld erg lang om alle e-mails te schrijven als ik iedereen op Facebook een fijne verjaardag wil wensen door ze een email te sturen. Echter kan ik met een paar regels code een systeem maken dat naar iedereen op Facebook een e-mail stuurt om ze een fijne verjaardag te wensen. Dit is dus wat loops zijn, en waarom ze waardevol zijn, iets wat computers erg goed kunnen."
-      3:
-      4:
-      5:
     C3_artist_functions:
       1:
         text: "Een van de fantastische dingen in program,eren is dat als je een computer hebt geleerd om een bepaalde actie uit te voeren, je die functie opnieuw kunt aanroepen. Je kunt deze een naam geven die je vervolgens kunt aanroepen. Het is alsof je de taal uitbreidt."
-      2:
     C3_artist_intro:
       1:
         text: "Je zou niet eens kunnen starten in de race als je geen mensen hebt die kunnen programmeren! Je hebt ze nodig omdat de race-auto's zoveel gegevens produceren en die informatie moet verwerkt worden om de prestaties te kunnen verbeteren."
@@ -572,14 +562,11 @@ nl:
         text: "Je gaat je eigen bounce-spelletje maken dat je kunt delen met je vrienden!. Hoe cool!"
       2:
         text: "Om te beginnen moeten we de batjes aasluiten op de pijltjes toetsen van ons toetsenbord."
-      3:
     C3_maze_conditionals:
-      1:
       2:
         text: "Het als-blok helpt de zombie een beslissing te maken. Het controleert iets. Laten we bijvoorbeeld een blok maken dat zegt of er een pad naar links is, en er een 'draai linksom'-commando in zetten. We vertellen de zombie om om zich heen te kijken, te kijken of er links een pad is en in dat geval te draaien."
       3:
         text: "Dan gebruiken we het 'ga vooruit'-blok in deze herhaling om hem zo lang hij wil vooruit te laten gaan. Als er een bocht is zegt het als-blok dat hij moet draaien. Je kunt zien dat als we dat doen, als we naar links draaien en anders vooruit gaan, we ons doel bereiken."
-      4:
     C3_playlab_create_game:
       1:
         text: "Tot nu toe maakte je een animatie of verhaal dat telkens hetzelfde deed wanneer je het uitvoert. Nu kan je een interactief spel maken dat je daadwerkelijk kan spelen."
@@ -588,9 +575,6 @@ nl:
     C4_function_edit:
       1:
         text: "Een van de fantastische dingen in program,eren is dat als je een computer hebt geleerd om een bepaalde actie uit te voeren, je die functie opnieuw kunt aanroepen. Je kunt deze een naam geven die je vervolgens kunt aanroepen. Het is alsof je de taal uitbreidt."
-      2:
-      3:
-      4:
     C4_intro:
       1:
         text: "Meestal programmeer je alleen met tekst, maar wij gebruiken Blockly die gebruik maakt van blokken die je kunt zien, slepen en neerzetten om een programma te schrijven. Stiekem maak je nog steeds code. Om te beginnen gaan we een programma schrijven om deze Angry Bird door het doolhof helpen, om naar het boze varkens te gaan, die de eieren hebben gestolen."
@@ -603,37 +587,14 @@ nl:
       5:
         text: "Als je een blok wilt weghalen, verwijder die dan uit de stapel en sleep het naar de prullenmand. Als je dan op \"uitvoeren\" drukt, kun je op de herstelknop drukken om de vogel opnieuw te laten beginnen. Kom op, pak de varkens!"
     starwars_events:
-      1:
-      2:
-      3:
       4:
         text: "Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik, een pijltjestoets of een tik op het scherm."
-      5:
-      6:
-      7:
-      8:
-      9:
     starwars_blocks_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
       9:
         text: "Als je een blok weg wilt halen, dan sleep je hem gewoon terug naar de gereedschapskist."
-      10:
     starwars_blocks_events:
-      1:
-      2:
-      3:
       4:
         text: "Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik, een pijltjestoets of een tik op het scherm."
-      5:
-      6:
-      7:
     mc_intro:
       1:
         text: "Mijn naam is Jens Bergensten, maar ik ben beter bekend als Jeb. Ik ben de hoofdontwikkelaar van Minecraft, hier bij Mojang in Stockholm. Volgens mij was ik elf of misschien twaalf toen ik begon met programmeren omdat ik games wilde maken. Een vriend van mijn vader zei dat ik om games te kunnen maken moest leren programmeren. Zo ben ik begonnen. Ik houd van ontwerpen en onderzoeken hoe games in elkaar zitten. Dat vind ik echt het leukste aan Minecraft."
@@ -702,31 +663,19 @@ nl:
       4:
         text: "Nu kun je maken wat je maar wilt. Veel plezier!"
     gumball_intro:
-      1:
-      2:
-      3:
       4:
         text: "Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma uitgevoerd. De instructies voor elk level worden onderaan weergegeven."
-      5:
       6:
         text: "De witte ruimte rechts is de werkruimte en daar bouwen we ons programma."
       7:
         text: "Om te beginnen, moet je blokken koppelen aan het oranje \"when run\" blok. Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele lijn ziet, en dan zullen ze samengekoppelt worden."
-      8:
-      9:
     iceage_intro:
-      1:
-      2:
-      3:
       4:
         text: "Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma uitgevoerd. De instructies voor elk level worden onderaan weergegeven."
-      5:
       6:
         text: "De witte ruimte rechts is de werkruimte en daar bouwen we ons programma."
       7:
         text: "Om te beginnen, moet je blokken koppelen aan het oranje \"when run\" blok. Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele lijn ziet, en dan zullen ze samengekoppelt worden."
-      8:
-      9:
     mc_2016_intro:
       1:
         text: "Hallo, mijn naam is Jens en ik ben de lead creative Designer van Minecraft In het komende uur ga jij je eigen Minecraft spel maken. Het lijkt op Minecraft maar de wereld staat stil. De schapen bewegen niet, de kippen leggen geen eieren en de zombies staan stil. Jij moet nu code gaan toevoegen om de Minecraft wereld te laten werken."
@@ -773,29 +722,11 @@ nl:
       2:
         text: "Als je klaar bent met het maken van je spel, kies delen, dan krijg je een link die je kan delen met je vrienden, of om je spel op je telefoon te spelen. Veel plezier! Ik kijk er naar uit om jouw versie van Minecraft te gaan spelen."
     mc_2017_agent_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:
-      10:
       11:
         text: "Als je vergeten bent wat je moet doen dan staan de instructies voor elk niveau boven aan de pagina."
-      12:
     hoc_dance_events_2019:
-      1:
-      2:
-      3:
       4:
         text: "Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik, een pijltjestoets of een tik op het scherm."
-      5:
-      6:
-      7:
-      8:
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'

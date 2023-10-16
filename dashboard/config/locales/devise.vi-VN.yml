@@ -62,6 +62,30 @@ vi:
       unlocked: Tài khoản của bạn đã được mở khóa thành công. Xin vui lòng đăng nhập
         để tiếp tục.
   errors:
+    invitations:
+      edit:
+        header: đặt lại mật khẩu của bạn
+        submit_button: đặt lại mật khẩu của tôi
+      invitation_removed: lời mời của bạn đã được gỡ bỏ.
+      invitation_token_invalid: Dấu hiệu lời mời được cung cấp không hợp lệ!
+      new:
+        header: gửi lời mời
+        submit_button: gửi một lời mời
+      no_invitations_remaining: không có lời mời còn lại
+      send_instructions: 'một thư mời đã được gửi tới %{email}.
+
+        '
+      updated: mật khẩu đã đặt lại thành công. bạn đã đăng nhập.
+    mailer:
+      invitation_instructions:
+        accept: chấp nhận lời mời
+        hello: xin chào %{email}
+        ignore: nếu bạn không muốn chấp nhận lời mời, hãy bỏ qua thư này.<br/> tài
+          khoản của bạn sẽ không được tạo cho đến khi bạn truy cập đường link trên
+          và đặt lại mật khẩu.
+        someone_invited_you: ai đó đã mời bạn tới %{url}, bạn có thể chấp nhận nó
+          qua đường link dưới đây.
+        subject: hướng đẫn mời
     messages:
       already_confirmed: đã được xác nhận, hãy thử đăng nhập
       confirmation_period_expired: cần được xác nhận nhận trong khoảng %{period},
@@ -69,27 +93,3 @@ vi:
       expired: đã hết hạn, xin vui lòng yêu cầu cái mới
       not_found: không tìm thấy
       not_locked: đã không bị khóa
-    invitations:
-      send_instructions: 'một thư mời đã được gửi tới %{email}.
-
-'
-      invitation_token_invalid: Dấu hiệu lời mời được cung cấp không hợp lệ!
-      updated: mật khẩu đã đặt lại thành công. bạn đã đăng nhập.
-      no_invitations_remaining: không có lời mời còn lại
-      invitation_removed: lời mời của bạn đã được gỡ bỏ.
-      new:
-        header: gửi lời mời
-        submit_button: gửi một lời mời
-      edit:
-        header: đặt lại mật khẩu của bạn
-        submit_button: đặt lại mật khẩu của tôi
-    mailer:
-      invitation_instructions:
-        subject: hướng đẫn mời
-        hello: xin chào %{email}
-        someone_invited_you: ai đó đã mời bạn tới %{url}, bạn có thể chấp nhận nó
-          qua đường link dưới đây.
-        accept: chấp nhận lời mời
-        ignore: nếu bạn không muốn chấp nhận lời mời, hãy bỏ qua thư này.<br/> tài
-          khoản của bạn sẽ không được tạo cho đến khi bạn truy cập đường link trên
-          và đặt lại mật khẩu.

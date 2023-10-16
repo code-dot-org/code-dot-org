@@ -27,7 +27,7 @@ it:
       Alternative Datasets: Insiemi di dati (dataset) alternativi
       Analog Sensors: Sensori analogici
       Animate Your Scene: Animare la Tua Scena
-      App Lab Intro - Video: 'App di Introduzione al Laboratorio: video'
+      App Lab Intro - Video: Introduzione a Sviluppo App - Video
       'App Project: Bugs and Features': 'App Project: Malfunzionamenti e Funzionalità'
       'App Project: Linking Screens': 'App Project: Linking Screens'
       'App Project: Screen Design': 'Progetto app: progettazione della schermata'
@@ -71,7 +71,7 @@ it:
       Booleans and Comparison Operators: Condizioni logiche (o espressioni booleane) e operatori di confronto
       Build a Platform Jumper: Costruisci un gioco di salto tra piattaforme
       Build a Screen: Costruire una Schermata
-      Building a UI with Design Mode: Creare un'UI con la Modalità Design
+      Building a UI with Design Mode: Creare un'UI con la Modalità interfaccia 
       Building an App: Creazione di un'app
       'Bunny ': 'Flipper'
       Button Circuits: Circuiti con i pulsanti
@@ -94,12 +94,13 @@ it:
       Changing Screens: Modificare le schermate
       Changing Sensor Scale: Modificare la scala del sensore
       Check Your Work: Controlla il tuo lavoro
+      Check for Understanding: Verifica la comprensione
       Check-In Survey: Sondaggio di ingresso
       Checking for a Winner: Alla ricerca di un vincitore
       'Choice Levels: Customize Your App': 'Esercizi di scelta: personalizza la tua app'
       Choose Your Own Adventure: Scegli La Tua Avventura
       Choosing Good IDs: Scegliere Buoni ID
-      'Circuit Playground: Introduction': 'Circuito parco giochi: Introduzione'
+      'Circuit Playground: Introduction': 'Circuit Playground: Introduzione'
       Circuits and Logic: Circuiti e logica
       Club Datasets: Insieme di dati del club
       Code Prediction: Prevedere il programma
@@ -165,7 +166,7 @@ it:
       Emotion Machine Example: Esempio di macchina delle emozioni
       End of Course Projects: Progetto di Fine Corso
       End-Of-Unit Survey: Sondaggio di Fine Unità
-      End-of-Unit Survey: Sondaggio di Fine Unità
+      End-of-Unit Survey: Sondaggio di fine unità
       Escape Room Example: Esempio di Escape Room
       Events: Eventi
       Events and Linking Screens: Eventi e collegare schermate
@@ -235,7 +236,7 @@ it:
       Ice Age Loops: Cicli dell'Era Glaciale
       If Statements: Istruzioni condizionali
       If-Else Statements: Istruzioni condizionali Se/Altrimenti
-      Images and Sounds: Immagini e Suoni
+      Images and Sounds: Immagini e suoni
       Images in HTML: Immagini in HTML
       Import Your Model: Importa il tuo modello
       Import a Model: Importa un modello
@@ -257,10 +258,11 @@ it:
       Intro to Sprites: Introduzione agli Sprite
       Intro to Variables: Introduzione alle Variabili
       Introducing Sprite Lab: Introduzione al Laboratorio dei personaggi
+      Introduction: Introduzione
       Introduction to Arrays: Introduzione alle matrici (array)
       Introduction to Game Lab: Introduzione a Sviluppo Giochi
       Introduction to Variables: Introduzione alle variabili
-      Investigate: Investiga
+      Investigate: Indaga
       Isaac's Survey Data: Dati del sondaggio di Isaac
       Iteration and Parameters: Iterazione e Parametri
       Keep On Dancing!: Continua A Danzare!
@@ -287,7 +289,7 @@ it:
       Make Your Sprites: Crea i tuoi personaggi
       Make a Prediction: Fai una previsione
       Make an Interactive Card: Crea una cartolina interattiva
-      Make it Interactive: Rendilo Interattivo
+      Make it Interactive: Rendi interattivo ciò che hai realizzato
       Make it Your Own: Personalizzalo
       Making Music: Fare musica
       Making Scenes: Creare Scene
@@ -340,7 +342,7 @@ it:
       New Shapes: Nuove Forme
       Orientation: Orientamento
       Overview: Panoramica
-      'Overview: Design Mode': 'Panoramica: Modalità Design'
+      'Overview: Design Mode': 'Panoramica: Modalità interfaccia '
       'Overview: If Statements': 'Panoramica: Istruzioni If'
       'Overview: Images': 'Panoramica: Immagini'
       'Overview: onEvent': 'Panoramica: onEvent'
@@ -435,7 +437,8 @@ it:
       Setup: Configurazione
       Shapes and Parameters: Forme e Parametri
       Shapes and the Draw Loop: Forme e Cicli Infiniti
-      Share Your App: Condividi la Tua App
+      Share Out: Condividi
+      Share Your App: Condividi la tua app
       Share Your Pages: Condividi le tue pagine
       Share Your Stylesheets: Condividi i tuoi fogli di stile
       Shoe Recommendation Survey: Sondaggio sul suggeritore di scarpe
@@ -484,6 +487,7 @@ it:
       UI Element Properties: Proprietà Elemento UI
       Ultimate Shoe Recommender: Suggeritore di scarpe definitivo
       Unit 5 Lesson 1 Overview: Panoramica Lezione 1, Unità 5
+      Unplugged Activity: Attività tradizionale
       Updating Your Prototype: Aggiornamento del tuo prototipo
       Upload Your Images: Carica le tue immagini
       User Interface: Interfaccia Utente
@@ -501,11 +505,11 @@ it:
       Velocity and the Counter Pattern: Velocità e Schema di Conteggio
       Video: Video
       Video - Encryption and Public Keys: 'Video: Crittografia e Chiavi Pubbliche'
-      Video - Functions: 'Video: Funzioni'
+      Video - Functions: Video - Funzioni
       Video - If Statements: Video - Istruzioni condizionali `If`
-      Video - Introduction to Arrays: 'Video: Introduzione agli Insiemi'
+      Video - Introduction to Arrays: Video - Introduzione alle matrici (array)
       'Video - Maze Intro: Programming with Blocks': 'Video - Introduzione al labirinto: programmare con i blocchi'
-      Video - Parameters: 'Video: Parametri'
+      Video - Parameters: Video - Parametri
       Video - The Counter Pattern: Video - Lo schema a contatore
       Video - Variables: Video - Variabili
       'Video:  Debugging with the Step Button': 'Video - Correggere gli errori con il pulsante "Fai un passo"'
@@ -535,7 +539,7 @@ it:
       'Video: Drawing in Game Lab - Part 1': 'Video: disegnare in Sviluppo Giochi - Parte 1'
       'Video: Drawing in Game Lab - Part 2': 'Video: disegnare in Sviluppo Giochi - Parte 2'
       'Video: Events': 'Video - Eventi'
-      'Video: Events in App Lab': 'Video: Eventi nell''App Lab'
+      'Video: Events in App Lab': 'Video: Eventi in Sviluppo App'
       'Video: Follow The Digital Trail': 'Video - Segui le tue tracce digitali'
       'Video: For Loops': 'Video - Cicli con contatore'
       'Video: Functions': 'Video: funzioni'
@@ -610,7 +614,7 @@ it:
       'Video: The Collector': 'Video - La collezionista'
       'Video: The Harvester': 'Video - La contadina'
       'Video: Training Data & Bias': 'Video - Dati di apprendimento e distorsioni'
-      'Video: Training Data and Bias': 'Video: dati di apprendimento e pregiudizi (o bias)'
+      'Video: Training Data and Bias': 'Video: dati di apprendimento e distorsioni (bias)'
       'Video: Unplugged Variables in Envelopes': 'Video - Variabili nelle buste - Attività tradizionale'
       'Video: Using the Repeat Block': 'Video - Usare i blocchi di ripetizione'
       'Video: Variables in Artist': 'Video - Variabili con l''artista'

@@ -58,6 +58,23 @@ sr:
       unlocked: Ваш налог је успешно активиран. Молимо вас да се пријавите како бих
         наставили.
   errors:
+    invitations:
+      edit:
+        header: Постави своју шифру
+        submit_button: Постави моју лозинку
+      invitation_removed: Твоја позивница је уклоњена.
+      new:
+        header: Пошаљите позивницу
+        submit_button: Пошаљите позивницу
+      no_invitations_remaining: Нема више позивница
+      send_instructions: Позивница је послата преко електронске поште на %{email}.
+    mailer:
+      invitation_instructions:
+        accept: Прихвати позивницу
+        hello: Здраво %{email}
+        someone_invited_you: Неко вас је позвао на %{url}, можете прихватити позив
+          преко везе испод.
+        subject: Упутство за позивнице
     messages:
       already_confirmed: Већ је потврђен, молимо вас покушајте да се пријавите(улогујете)
       confirmation_period_expired: мора да буде потврђен у року од  %{period}, молимо
@@ -65,20 +82,3 @@ sr:
       expired: истекао је, молимо вас затражите нови
       not_found: није пронађено
       not_locked: није било(био,била) закључано
-    invitations:
-      send_instructions: Позивница је послата преко електронске поште на %{email}.
-      no_invitations_remaining: Нема више позивница
-      invitation_removed: Твоја позивница је уклоњена.
-      new:
-        header: Пошаљите позивницу
-        submit_button: Пошаљите позивницу
-      edit:
-        header: Постави своју шифру
-        submit_button: Постави моју лозинку
-    mailer:
-      invitation_instructions:
-        subject: Упутство за позивнице
-        hello: Здраво %{email}
-        someone_invited_you: Неко вас је позвао на %{url}, можете прихватити позив
-          преко везе испод.
-        accept: Прихвати позивницу

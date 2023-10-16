@@ -7,6 +7,7 @@ import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/Curriculum
 import {
   elementarySchoolCourseOffering,
   highSchoolCourseOfferings,
+  noRecommendedVersionsOfferings,
 } from './CourseOfferingsTestData';
 import i18n from '@cdo/locale';
 
@@ -56,6 +57,21 @@ describe('QuickAssignTable', () => {
       target: {value: 'Computer Science A', checked: true},
     });
     expect(updateSpy).to.have.been.called;
+  });
+
+  it('correctly falls back when a course has no recommended version', () => {
+    const updateSpy = sinon.spy();
+    const wrapper = setUpMount({
+      updateCourse: updateSpy,
+      courseOfferings: noRecommendedVersionsOfferings,
+    });
+
+    const radio = wrapper.find('input');
+    expect(updateSpy).not.to.have.been.called;
+    radio.simulate('change', {
+      target: {value: 'Computer Science A', checked: true},
+    });
+    expect(updateSpy).to.have.been.calledWith(sinon.match({versionId: 373}));
   });
 
   it('automatically checks correct radio button if course is already assigned', () => {

@@ -1,8 +1,8 @@
 ---
-title: Thanks for signing up to host an Hour of Code!
+title: Հաղորդագրություն փակցնելուց համար պետք է գրանցվեք ժամը Code!
 ---
 
-# Thanks for signing up to host an Hour of Code!
+# Հաղորդագրություն փակցնելուց համար պետք է գրանցվեք ժամը Code!
 
 <br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

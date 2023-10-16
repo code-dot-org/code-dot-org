@@ -1,15 +1,15 @@
 {
-  "selectDataset": "사용하고자 하는 데이터 세트를 선택합니다.",
-  "uploadedDataset": "방금 데이터세트를 업로드했습니다.",
-  "selectedDataset": "방금 데이터세트를 선택했습니다.",
-  "dataDisplayLabel": "예측할 열을 하나 선택합니다.",
   "dataDisplayFeatures": "예측에 도움이 되는 하나 이상의 열을 입력으로 선택합니다.",
-  "selectedFeatureNumerical": "숫자 기능을 선택했습니다.",
-  "selectedFeatureCategorical": "범주형 기능을 선택했습니다.",
-  "trainModel": "모델을 학습 중입니다.",
+  "dataDisplayLabel": "예측할 열을 하나 선택합니다.",
   "generateResults": "모델을 테스트 중입니다.",
+  "modelSummary": "모델을 성공적으로 학습시키고 저장했습니다. 모델 세부 정보를 검토하고 마침을 클릭하여 학습된 모델을 App Lab에서 사용하십시오.",
   "results": "결과를 검토하세요.",
   "resultsDetails": "결과에 대한 세부 정보가 표시되고 있습니다.",
   "saveModel": "학습된 모델을 App Lab에서 사용할 수 있도록 저장합니다.",
-  "modelSummary": "모델을 성공적으로 학습시키고 저장했습니다. 모델 세부 정보를 검토하고 마침을 클릭하여 학습된 모델을 App Lab에서 사용하십시오."
+  "selectDataset": "사용하고자 하는 데이터 세트를 선택합니다.",
+  "selectedDataset": "방금 데이터세트를 선택했습니다.",
+  "selectedFeatureCategorical": "범주형 기능을 선택했습니다.",
+  "selectedFeatureNumerical": "숫자 기능을 선택했습니다.",
+  "trainModel": "모델을 학습 중입니다.",
+  "uploadedDataset": "방금 데이터세트를 업로드했습니다."
 }

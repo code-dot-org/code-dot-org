@@ -1,6 +1,7 @@
 ---
 title: Code.org in Farsi
 theme: responsive_full_width
+set_dir: true
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
@@ -12,8 +13,8 @@ theme: responsive_full_width
     %div.flex-container.justify-space-between.wrap
       %div.col-60{style: "margin-bottom: 1rem"}
         %h2.heading-lg=hoc_s(:farsi_page_top_heading_02)
-        %p.body-two=hoc_s(:farsi_page_top_desc)
-        %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
+        %p.body-three=hoc_s(:farsi_page_top_desc)
+        %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer"}
           =hoc_s(:call_to_action_support_farsi)
       %div.col-33{style: "float:right"}
         %img{src: "/images/farsi/farsi-page-students.jpg", alt: "", style: "width: 100%"}
@@ -22,9 +23,9 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:farsi_page_global_heading)
-    %p.body-two=hoc_s(:farsi_page_global_desc_01)
-    %p.body-two=hoc_s(:farsi_page_global_desc_02)
-    %p.body-two=hoc_s(:farsi_page_global_desc_03)
+    %p.body-three=hoc_s(:farsi_page_global_desc_01)
+    %p.body-three=hoc_s(:farsi_page_global_desc_02)
+    %p.body-three=hoc_s(:farsi_page_global_desc_03)
 
 %section
   .wrapper
@@ -63,7 +64,7 @@ theme: responsive_full_width
       %li Anonymous (3)
     %hr.dark
     %p=hoc_s(:farsi_page_supporters_desc_02)
-    %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
+    %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s(:call_to_action_support_farsi)
 
 %section.bg-neutral-light
@@ -82,15 +83,17 @@ theme: responsive_full_width
     %h2=hoc_s(:farsi_page_support_heading)
     %h3.heading-sm{style: "margin-bottom: 1rem"}
       =hoc_s(:farsi_page_support_heading_02)
-    %p=hoc_s(:farsi_page_support_get_updates, markdown: :inline, locals: {form_url: "http://go.pardot.com/l/153401/2022-05-31/pq1716"})
+    %p.has-external-link
+      =hoc_s(:farsi_page_support_get_updates, markdown: :inline, locals: {form_url: "http://go.pardot.com/l/153401/2022-05-31/pq1716"})
     %iframe.col-50{allowtransparency: "true", frameborder: "0", height: "325", scrolling: "yes", src: "http://go.pardot.com/l/153401/2022-05-31/pq1716", style: "overflow:hidden; float: none;", type: "text/html", width: "100%"}
-    %p=hoc_s(:farsi_page_support_contact_us, markdown: :inline, locals: {contact_link: "https://forms.gle/fMb9z7Wy2Qrjrowb7"})
-    %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
+    %p.has-external-link
+      =hoc_s(:farsi_page_support_contact_us, markdown: :inline, locals: {contact_link: "https://forms.gle/fMb9z7Wy2Qrjrowb7"})
+    %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s(:call_to_action_donate_online)
 
 %section
   .wrapper
     %h2.heading-sm
       =hoc_s(:farsi_page_compliance_heading)
-    %p.body-two
+    %p.body-three
       =hoc_s(:farsi_page_compliance_desc)

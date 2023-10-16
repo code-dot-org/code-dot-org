@@ -16,21 +16,21 @@ th:
         csd-2023:
           title: การค้นพบของวิทยาการคอมพิวเตอร์
     resources:
-      curriculum/csd/2020:
-        name: หลักสูตร
-      teacher_forum/csd/2020:
-        name: ฟอรัมผู้สอน
       curriculum/csd/2017:
         name: หลักสูตร
       teacher_forum_6/csd/2017:
+        name: ฟอรัมผู้สอน
+      curriculum/csd/2018:
+        name: หลักสูตร
+      teacher_forum_6/csd/2018:
         name: ฟอรัมผู้สอน
       curriculum/csd/2019:
         name: หลักสูตร
       teacher_forum/csd/2019:
         name: ฟอรัมผู้สอน
+      curriculum/csd/2020:
+        name: หลักสูตร
+      teacher_forum/csd/2020:
+        name: ฟอรัมผู้สอน
       getting_started_with_csd/csd/2021:
         name: การเริ่มต้นใช้งาน CSD
-      curriculum/csd/2018:
-        name: หลักสูตร
-      teacher_forum_6/csd/2018:
-        name: ฟอรัมผู้สอน

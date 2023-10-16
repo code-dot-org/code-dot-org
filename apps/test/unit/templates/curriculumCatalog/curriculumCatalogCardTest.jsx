@@ -62,6 +62,7 @@ describe('CurriculumCatalogCard', () => {
       pathToCourse: '/s/course',
       scriptId: 1,
       isSignedOut: true,
+      onQuickViewClick: () => {},
     };
   });
 
@@ -248,10 +249,9 @@ describe('CurriculumCatalogCard', () => {
   it('renders Quick View button with descriptive label', () => {
     renderCurriculumCard();
 
-    const link = screen.getByRole('link', {
-      name: new RegExp(`View details about ${defaultProps.courseDisplayName}`),
-    });
-    expect(link).to.have.property('href').to.contain(defaultProps.pathToCourse);
+    screen.getByLabelText(
+      new RegExp(`View details about ${defaultProps.courseDisplayName}`)
+    );
   });
 
   it('renders Assign button with descriptive label', () => {

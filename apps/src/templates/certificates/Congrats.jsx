@@ -5,7 +5,6 @@ import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import styleConstants from '../../styleConstants';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../../util/color';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
@@ -33,23 +32,6 @@ export default function Congrats(props) {
    */
   const renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
-    // In order to remove the certificate links remove or comment the following section -------------------------------
-    if (language === 'ko') {
-      extraLinkText =
-        '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
-      if (/oceans/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2023-1-oceans.png');
-      } else if (/dance/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2023-1-dance.png');
-      } else if (/frozen/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2023-1-frozen.png');
-      } else if (/hero/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2023-1-hero.png');
-      } else {
-        extraLinkText = null;
-      }
-    }
-    // End of section to be removed or commented ----------------------------------------------------------------------
     // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.

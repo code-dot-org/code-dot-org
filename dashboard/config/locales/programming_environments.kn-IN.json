@@ -2,203 +2,8 @@
   "kn-IN": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "ವೆಬ್ ಲ್ಯಾಬ್"
-        },
-        "gamelab": {
-          "name": "ಗೇಮ್ ಲ್ಯಾಬ್",
-          "categories": {
-            "game_lab": {
-              "name": "ಗೇಮ್ ಲ್ಯಾಬ್",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ಸ್ಪ್ರೈಟ್"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ಸ್ಪ್ರೈಟ್"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ URL ನಿಂದ MP3 ಧ್ವನಿ ಫೈಲ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತದೆ."
-                },
-                "showMobileControls": {
-                  "content": "ಆಟದ ಸ್ಥಳದ ಕೆಳಗೆ ಗೋಚರಿಸುವ ಮೊಬೈಲ್ ನಿಯಂತ್ರಣಗಳನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ.",
-                  "short_description": "ಆಟದ ಸ್ಥಳದ ಕೆಳಗೆ ಗೋಚರಿಸುವ ಮೊಬೈಲ್ ನಿಯಂತ್ರಣಗಳನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ."
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "sprite.height": {
-                  "return_value": "ಸ್ಪ್ರೈಟ್ನ ಎತ್ತರ."
-                },
-                "sprite.width": {
-                  "return_value": "ಸ್ಪ್ರೈಟ್ನ ಅಗಲ."
-                }
-              }
-            },
-            "groups": {
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ಸ್ಪ್ರೈಟ್"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ಸ್ಪ್ರೈಟ್"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ಸ್ಪ್ರೈಟ್"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "ಬಣ್ಣ"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "ಬಣ್ಣ"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "ಡ್ರಾಯಿಂಗ್‌"
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ಕಾರ್ಯದ ಪ್ರತಿ ಮರಣದಂಡನೆಯ ನಡುವೆ ಮಿಲಿಸೆಕೆಂಡುಗಳ ಸಂಖ್ಯೆ."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ಕಾರ್ಯವನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸುವ ಮೊದಲು ಕಾಯಬೇಕಾದ ಮಿಲಿಸೆಕೆಂಡುಗಳ ಸಂಖ್ಯೆ."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "ಗಣಿತ",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
-                    },
-                    "max": {
-                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
-                    },
-                    "max": {
-                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "ವೇರಿಯಬಲ್‌ಗಳು",
-              "expressions": {
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "ಹುಡುಕಲು ಸ್ಟ್ರಿಂಗ್."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "ಹುಡುಕಲು ಸ್ಟ್ರಿಂಗ್."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "ಸ್ಟ್ರಿಂಗ್ನ ಉದ್ದ"
-                }
-              }
-            },
-            "functions": {
-              "name": "ಕಾರ್ಯಗಳು"
-            }
-          }
-        },
         "applab": {
-          "name": "ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್",
-          "description": "ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಸರವಾಗಿದ್ದು, ನೀವು ಸರಳವಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಮಾಡಬಹುದು. ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಿ, ಬ್ಲಾಕ್‌ಗಳೊಂದಿಗೆ ಕೋಡ್ ಅಥವಾ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಕೆಲಸ ಮಾಡಲು, ನಂತರ ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಳದಲ್ಲಿ (0,0) ನೀಡಲಾದ ಐಡಿ ಒದಗಿಸಿದ ಮತ್ತು ಉಲ್ಲೇಖಿಸಲಾದ ಪಠ್ಯವನ್ನು ಪ್ರದರ್ಶಿಸುವ ಪರದೆಯ ಮೇಲೆ ಬಟನ್ ಅನ್ನು ರಚಿಸುತ್ತದೆ."
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "ಸಂಕುಚಿಸಿ ಮತ್ತು ಬೆಳೆಯಿರಿ"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "ಫಂಕ್ಷನ್ "
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ URL ನಿಂದ MP3 ಧ್ವನಿ ಫೈಲ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತದೆ."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "ಬದಲಾಗಬೇಕಾದ ಆಸ್ತಿ."
-                    }
-                  },
-                  "short_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಅಂಶಕ್ಕಾಗಿ ಆಸ್ತಿಯನ್ನು ಹೊಸ ಮೌಲ್ಯಕ್ಕೆ ಹೊಂದಿಸುತ್ತದೆ."
-                },
-                "setScreen": {
-                  "short_description": "ಕೊಟ್ಟಿರುವ ಸ್ಕ್ರೀನ್ಐಡಿಗೆ ಪರದೆಯನ್ನು ಹೊಂದಿಸುತ್ತದೆ."
-                },
-                "showElement": {
-                  "short_description": "ಒದಗಿಸಿದ ID ಯೊಂದಿಗೆ ಅಂಶವನ್ನು ತೋರಿಸುತ್ತದೆ."
-                },
-                "textLabel": {
-                  "short_description": "ಡೀಫಾಲ್ಟ್ ಸ್ಥಳದಲ್ಲಿ (0,0) ನೀಡಲಾದ ಐಡಿ ಒದಗಿಸಿದ ಮತ್ತು ಉಲ್ಲೇಖಿಸಲಾದ ಪಠ್ಯವನ್ನು ಪ್ರದರ್ಶಿಸುವ ಪರದೆಯ ಮೇಲೆ ಪಠ್ಯ ಲೇಬಲ್ ಅನ್ನು ರಚಿಸುತ್ತದೆ."
-                }
-              }
-            },
             "canvas": {
               "expressions": {
                 "circle": {
@@ -254,17 +59,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "ಚಿತ್ರದ ಡೇಟಾವನ್ನು ಸೆರೆಹಿಡಿಯಲು ಬೌಂಡಿಂಗ್ ಆಯತದ ಎತ್ತರ."
+                    },
+                    "width": {
+                      "description": "ಚಿತ್ರ ಡೇಟಾವನ್ನು ಸೆರೆಹಿಡಿಯಲು ಬೌಂಡಿಂಗ್ ಆಯತದ ಅಗಲ."
+                    },
                     "x": {
                       "description": "ಕ್ಯಾಪ್ಚರ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿ x ಸ್ಥಾನ."
                     },
                     "y": {
                       "description": "ಸೆರೆಹಿಡಿಯುವಿಕೆಯನ್ನು ಪ್ರಾರಂಭಿಸಲು ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿ y ಸ್ಥಾನ."
-                    },
-                    "width": {
-                      "description": "ಚಿತ್ರ ಡೇಟಾವನ್ನು ಸೆರೆಹಿಡಿಯಲು ಬೌಂಡಿಂಗ್ ಆಯತದ ಅಗಲ."
-                    },
-                    "height": {
-                      "description": "ಚಿತ್ರದ ಡೇಟಾವನ್ನು ಸೆರೆಹಿಡಿಯಲು ಬೌಂಡಿಂಗ್ ಆಯತದ ಎತ್ತರ."
                     }
                   }
                 },
@@ -290,102 +95,133 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "ಆಯತದ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿ ಲಂಬ ಎತ್ತರ."
+                    },
+                    "width": {
+                      "description": "ಆಯತದ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿ ಸಮತಲ ಅಗಲ."
+                    },
                     "x": {
                       "description": "ಆಯತದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿ x ಸ್ಥಾನ."
                     },
                     "y": {
                       "description": "ಆಯತದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿ y ಸ್ಥಾನ."
-                    },
-                    "width": {
-                      "description": "ಆಯತದ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿ ಸಮತಲ ಅಗಲ."
-                    },
-                    "height": {
-                      "description": "ಆಯತದ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿ ಲಂಬ ಎತ್ತರ."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಆಲ್ಫಾ (ಅಪಾರದರ್ಶಕತೆ) ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
+                    },
                     "x": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ x ಸ್ಥಾನ."
                     },
                     "y": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ y ಸ್ಥಾನ."
-                    },
-                    "alphaValue": {
-                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಆಲ್ಫಾ (ಅಪಾರದರ್ಶಕತೆ) ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
                     }
                   },
                   "short_description": "ಕೊಟ್ಟಿರುವ ಇಮೇಜ್ ಡೇಟಾದಲ್ಲಿ ಕೊಟ್ಟಿರುವ x ಮತ್ತು y ಸ್ಥಾನದಲ್ಲಿರುವ ಪಿಕ್ಸೆಲ್ನ ಬಣ್ಣದಲ್ಲಿ ಆಲ್ಫಾ (ಅಪಾರದರ್ಶಕತೆ) ಪ್ರಮಾಣವನ್ನು (0 ರಿಂದ 255 ರವರೆಗೆ) ಹೊಂದಿಸುತ್ತದೆ."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ನೀಲಿ ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
+                    },
                     "x": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ x ಸ್ಥಾನ."
                     },
                     "y": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ y ಸ್ಥಾನ."
-                    },
-                    "blueValue": {
-                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ನೀಲಿ ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
                     }
                   },
                   "short_description": "ನೀಡಲಾದ ಇಮೇಜ್ ಡೇಟಾದಲ್ಲಿ ನೀಡಲಾದ x ಮತ್ತು y ಸ್ಥಾನದಲ್ಲಿರುವ ಪಿಕ್ಸೆಲ್ನ ಬಣ್ಣದಲ್ಲಿ ನೀಲಿ ಪ್ರಮಾಣವನ್ನು (0 ರಿಂದ 255 ರವರೆಗೆ) ಬ್ಲೂವಾನ್ಯೂ ಇನ್ಪುಟ್ ಮೊತ್ತಕ್ಕೆ ಹೊಂದಿಸುತ್ತದೆ."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಹಸಿರು ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
+                    },
                     "x": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ x ಸ್ಥಾನ."
                     },
                     "y": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ y ಸ್ಥಾನ."
-                    },
-                    "greenValue": {
-                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಹಸಿರು ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
                     }
                   },
                   "short_description": "GreenValue ಇನ್ಪುಟ್ ಮೊತ್ತಕ್ಕೆ ಕೊಟ್ಟಿರುವ ಇಮೇಜ್ ಡೇಟಾದಲ್ಲಿ ಕೊಟ್ಟಿರುವ x ಮತ್ತು y ಸ್ಥಾನದಲ್ಲಿ ಇರುವ ಪಿಕ್ಸೆಲ್ನ ಬಣ್ಣದಲ್ಲಿ ಹಸಿರು ಪ್ರಮಾಣವನ್ನು (0 ರಿಂದ 255 ವರೆಗೆ) ಹೊಂದಿಸುತ್ತದೆ."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "ಐಚ್ಛಿಕ. ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಅಪಾರದರ್ಶಕತೆಯ ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ). 255 ಗೆ ಡೀಫಾಲ್ಟ್ಗಳು (ಪೂರ್ಣ ಅಪಾರದರ್ಶಕತೆ)."
+                    },
+                    "blue": {
+                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ನೀಲಿ ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
+                    },
+                    "green": {
+                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಹಸಿರು ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
+                    },
+                    "red": {
+                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಕೆಂಪು ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
+                    },
                     "x": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ x ಸ್ಥಾನ."
                     },
                     "y": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ y ಸ್ಥಾನ."
-                    },
-                    "red": {
-                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಕೆಂಪು ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
-                    },
-                    "green": {
-                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಹಸಿರು ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
-                    },
-                    "blue": {
-                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ನೀಲಿ ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
-                    },
-                    "alpha": {
-                      "description": "ಐಚ್ಛಿಕ. ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಅಪಾರದರ್ಶಕತೆಯ ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ). 255 ಗೆ ಡೀಫಾಲ್ಟ್ಗಳು (ಪೂರ್ಣ ಅಪಾರದರ್ಶಕತೆ)."
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
+                    "redValue": {
+                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಕೆಂಪು ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
+                    },
                     "x": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ x ಸ್ಥಾನ."
                     },
                     "y": {
                       "description": "ಚಿತ್ರದ ಮೇಲಿನ ಎಡ ಮೂಲೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಪಿಕ್ಸೆಲ್ಗಳಲ್ಲಿನ y ಸ್ಥಾನ."
-                    },
-                    "redValue": {
-                      "description": "ಪಿಕ್ಸೆಲ್ನಲ್ಲಿ ಹೊಂದಿಸಲು ಕೆಂಪು ಪ್ರಮಾಣ (0 ರಿಂದ 255 ರವರೆಗೆ)."
                     }
                   },
                   "short_description": "ಕೊಟ್ಟಿರುವ ಇಮೇಜ್ ಡೇಟಾದಲ್ಲಿ ಕೊಟ್ಟಿರುವ x ಮತ್ತು y ಸ್ಥಾನದಲ್ಲಿರುವ ಪಿಕ್ಸೆಲ್ನ ಬಣ್ಣದಲ್ಲಿ ಕೆಂಪು ಪ್ರಮಾಣವನ್ನು (0 ರಿಂದ 255 ರವರೆಗೆ) RedValue ಇನ್ಪುಟ್ ಮೊತ್ತಕ್ಕೆ ಹೊಂದಿಸುತ್ತದೆ."
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "ರದ್ದುಗೊಳಿಸಲು SetTimeout ಕಾರ್ಯದಿಂದ ಮೌಲ್ಯವನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ಕಾರ್ಯದ ಪ್ರತಿ ಮರಣದಂಡನೆಯ ನಡುವೆ ಮಿಲಿಸೆಕೆಂಡುಗಳ ಸಂಖ್ಯೆ."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ಕಾರ್ಯವನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸುವ ಮೊದಲು ಕಾಯಬೇಕಾದ ಮಿಲಿಸೆಕೆಂಡುಗಳ ಸಂಖ್ಯೆ."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ಫಂಕ್ಷನ್ "
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "ಡೇಟಾ",
               "expressions": {
                 "drawChartFromRecords": {
                   "palette_params": {
@@ -436,7 +272,36 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "ಡೇಟಾ"
+            },
+            "functions": {
+              "name": "ಕಾರ್ಯಗಳು"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    },
+                    "min": {
+                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    },
+                    "min": {
+                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
+                    }
+                  }
+                }
+              },
+              "name": "ಗಣಿತ"
             },
             "turtle": {
               "expressions": {
@@ -503,75 +368,59 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "ರದ್ದುಗೊಳಿಸಲು SetTimeout ಕಾರ್ಯದಿಂದ ಮೌಲ್ಯವನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ."
-                    }
-                  }
+                "button": {
+                  "short_description": "ಪೂರ್ವನಿಯೋಜಿತ ಸ್ಥಳದಲ್ಲಿ (0,0) ನೀಡಲಾದ ಐಡಿ ಒದಗಿಸಿದ ಮತ್ತು ಉಲ್ಲೇಖಿಸಲಾದ ಪಠ್ಯವನ್ನು ಪ್ರದರ್ಶಿಸುವ ಪರದೆಯ ಮೇಲೆ ಬಟನ್ ಅನ್ನು ರಚಿಸುತ್ತದೆ."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ಕಾರ್ಯದ ಪ್ರತಿ ಮರಣದಂಡನೆಯ ನಡುವೆ ಮಿಲಿಸೆಕೆಂಡುಗಳ ಸಂಖ್ಯೆ."
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "ಸಂಕುಚಿಸಿ ಮತ್ತು ಬೆಳೆಯಿರಿ"
                     }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ಕಾರ್ಯವನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸುವ ಮೊದಲು ಕಾಯಬೇಕಾದ ಮಿಲಿಸೆಕೆಂಡುಗಳ ಸಂಖ್ಯೆ."
-                    }
-                  }
-                },
-                "timedLoop": {
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "ಫಂಕ್ಷನ್ "
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "ಗಣಿತ",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
-                    },
-                    "max": {
-                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
-                    }
-                  }
                 },
-                "randomNumber": {
+                "playSound": {
+                  "short_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ URL ನಿಂದ MP3 ಧ್ವನಿ ಫೈಲ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತದೆ."
+                },
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
-                    },
-                    "max": {
-                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    "property": {
+                      "description": "ಬದಲಾಗಬೇಕಾದ ಆಸ್ತಿ."
                     }
-                  }
+                  },
+                  "short_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಅಂಶಕ್ಕಾಗಿ ಆಸ್ತಿಯನ್ನು ಹೊಸ ಮೌಲ್ಯಕ್ಕೆ ಹೊಂದಿಸುತ್ತದೆ."
+                },
+                "setScreen": {
+                  "short_description": "ಕೊಟ್ಟಿರುವ ಸ್ಕ್ರೀನ್ಐಡಿಗೆ ಪರದೆಯನ್ನು ಹೊಂದಿಸುತ್ತದೆ."
+                },
+                "showElement": {
+                  "short_description": "ಒದಗಿಸಿದ ID ಯೊಂದಿಗೆ ಅಂಶವನ್ನು ತೋರಿಸುತ್ತದೆ."
+                },
+                "textLabel": {
+                  "short_description": "ಡೀಫಾಲ್ಟ್ ಸ್ಥಳದಲ್ಲಿ (0,0) ನೀಡಲಾದ ಐಡಿ ಒದಗಿಸಿದ ಮತ್ತು ಉಲ್ಲೇಖಿಸಲಾದ ಪಠ್ಯವನ್ನು ಪ್ರದರ್ಶಿಸುವ ಪರದೆಯ ಮೇಲೆ ಪಠ್ಯ ಲೇಬಲ್ ಅನ್ನು ರಚಿಸುತ್ತದೆ."
                 }
               }
             },
             "variables": {
-              "name": "ವೇರಿಯಬಲ್‌ಗಳು",
               "expressions": {
+                "addPair": {
+                  "return_value": "ಯಾವುದೂ ಅಲ್ಲ"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "ವೇರಿಯೇಬಲ್ಗೆ ಒಂದು ಶ್ರೇಣಿಯನ್ನು ಘೋಷಿಸಿ ಮತ್ತು ನಿಯೋಜಿಸಿ"
+                },
                 "declareAssign_object": {
                   "examples": {
                     "Choose Your Own Adventure": {
                       "name": "ನಿಮ್ಮ ಸ್ವಂತ ಸಾಹಸವನ್ನು ಆರಿಸಿ"
                     }
                   }
-                },
-                "declareAssign_list_123": {
-                  "short_description": "ವೇರಿಯೇಬಲ್ಗೆ ಒಂದು ಶ್ರೇಣಿಯನ್ನು ಘೋಷಿಸಿ ಮತ್ತು ನಿಯೋಜಿಸಿ"
                 },
                 "includes": {
                   "palette_params": {
@@ -587,18 +436,169 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "ಯಾವುದೂ ಅಲ್ಲ"
+                "length": {
+                  "return_value": "ಸ್ಟ್ರಿಂಗ್ನ ಉದ್ದ"
+                }
+              },
+              "name": "ವೇರಿಯಬಲ್‌ಗಳು"
+            }
+          },
+          "description": "ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಸರವಾಗಿದ್ದು, ನೀವು ಸರಳವಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಮಾಡಬಹುದು. ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಿ, ಬ್ಲಾಕ್‌ಗಳೊಂದಿಗೆ ಕೋಡ್ ಅಥವಾ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಕೆಲಸ ಮಾಡಲು, ನಂತರ ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ.",
+          "name": "ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ಕಾರ್ಯದ ಪ್ರತಿ ಮರಣದಂಡನೆಯ ನಡುವೆ ಮಿಲಿಸೆಕೆಂಡುಗಳ ಸಂಖ್ಯೆ."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ಕಾರ್ಯವನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸುವ ಮೊದಲು ಕಾಯಬೇಕಾದ ಮಿಲಿಸೆಕೆಂಡುಗಳ ಸಂಖ್ಯೆ."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "ಡ್ರಾಯಿಂಗ್‌"
+            },
+            "functions": {
+              "name": "ಕಾರ್ಯಗಳು"
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ URL ನಿಂದ MP3 ಧ್ವನಿ ಫೈಲ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತದೆ."
+                },
+                "showMobileControls": {
+                  "content": "ಆಟದ ಸ್ಥಳದ ಕೆಳಗೆ ಗೋಚರಿಸುವ ಮೊಬೈಲ್ ನಿಯಂತ್ರಣಗಳನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ.",
+                  "short_description": "ಆಟದ ಸ್ಥಳದ ಕೆಳಗೆ ಗೋಚರಿಸುವ ಮೊಬೈಲ್ ನಿಯಂತ್ರಣಗಳನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ."
+                }
+              },
+              "name": "ಗೇಮ್ ಲ್ಯಾಬ್"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ಸ್ಪ್ರೈಟ್"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ಬಣ್ಣ"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ಬಣ್ಣ"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    },
+                    "min": {
+                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ಮರಳಿದೆ"
+                    },
+                    "min": {
+                      "description": "ಕನಿಷ್ಠ ಸಂಖ್ಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ"
+                    }
+                  }
+                }
+              },
+              "name": "ಗಣಿತ"
+            },
+            "sprites": {
+              "expressions": {
+                "sprite.height": {
+                  "return_value": "ಸ್ಪ್ರೈಟ್ನ ಎತ್ತರ."
+                },
+                "sprite.width": {
+                  "return_value": "ಸ್ಪ್ರೈಟ್ನ ಅಗಲ."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "ಹುಡುಕಲು ಸ್ಟ್ರಿಂಗ್."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "ಹುಡುಕಲು ಸ್ಟ್ರಿಂಗ್."
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "ಸ್ಟ್ರಿಂಗ್ನ ಉದ್ದ"
                 }
-              }
-            },
-            "functions": {
-              "name": "ಕಾರ್ಯಗಳು"
+              },
+              "name": "ವೇರಿಯಬಲ್‌ಗಳು"
             }
-          }
+          },
+          "name": "ಗೇಮ್ ಲ್ಯಾಬ್"
+        },
+        "javalab": {
+          "name": "ಜಾವಾ ಲ್ಯಾಬ್"
         },
         "spritelab": {
           "categories": {
@@ -608,25 +608,25 @@
             "events": {
               "name": "ಈವೆಂಟ್‌ಗಳು"
             },
+            "logic": {
+              "name": "ಲಾಜಿಕ್"
+            },
             "loops": {
               "name": "ಲೂಪ್‌ಗಳು"
-            },
-            "variables": {
-              "name": "ವೇರಿಯಬಲ್‌ಗಳು"
             },
             "math": {
               "name": "ಗಣಿತ"
             },
-            "logic": {
-              "name": "ಲಾಜಿಕ್"
-            },
             "text": {
               "name": "ಪಠ್ಯ"
+            },
+            "variables": {
+              "name": "ವೇರಿಯಬಲ್‌ಗಳು"
             }
           }
         },
-        "javalab": {
-          "name": "ಜಾವಾ ಲ್ಯಾಬ್"
+        "weblab": {
+          "name": "ವೆಬ್ ಲ್ಯಾಬ್"
         }
       }
     }

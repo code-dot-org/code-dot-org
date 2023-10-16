@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-03 21:02:03 UTC",
+    "serialized_at": "2023-08-06 18:11:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -665,8 +665,25 @@
       }
     },
     {
-      "key": "a28e32af-10b4-4479-bac7-c2ff13a320ea",
+      "key": "9eac88d2-6b1d-4175-8789-bc12073d624a",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 5 Journal ([Digital](https://docs.google.com/presentation/d/1H_vpLZDbLmd1jfx8Wy75bvALx9PCp2RqemNsudasHOQ/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/18C7FBK6jBrZh_AH9U5R6y_YRTTuX9PxOFA5lR6BuRwQ/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9eac88d2-6b1d-4175-8789-bc12073d624a",
+        "lesson_activity.key": "d6e85240-d9e6-4c88-9445-eac9f3430aec"
+      }
+    },
+    {
+      "key": "a28e32af-10b4-4479-bac7-c2ff13a320ea",
+      "position": 2,
       "properties": {
         "description": "Welcome to Unit 5: Data! In this unit, we are going to learn how to organize and visualize data to answer questions. We'll make charts, look for patterns, and consider the impact that data collection has on our world. \n\nLet's get things started by asking some questions.",
         "remarks": true
@@ -678,7 +695,7 @@
     },
     {
       "key": "0dd3d653-fdc9-48bc-8bf3-bf83a9a88e8d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What types of data visualizations do you know of? Why do we visualize data?*\n\n**Discussion Goal:** Use this discussion to gauge some of the prior knowledge your students hold about data visualizations. Push students to think about how data visualizations help people answer questions, observe patterns, and generate new ideas and questions."
       },
@@ -1340,7 +1357,7 @@
       "key": "1f6d55ae-b277-4deb-b636-b2ea7d7d9db3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/OjUEFHo3Yw0)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [Exploring Two Columns](https://docs.google.com/document/d/12GkfXmELZiGPppfigSKRlgbPuizaYpXniW0lAFu8A08/edit), ideally in digital form.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/OjUEFHo3Yw0)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_two_columns/csp/2023], ideally in digital form.",
         "name": "Making Crosstab Charts",
         "tips": [
           {
@@ -1502,7 +1519,7 @@
       "key": "30756f7e-cc96-45aa-84ce-5513ac8aa588",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each pair a copy of the [Big, Open, and Crowdsourced Data](https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit)",
+        "description": "**Distribute:** Give each pair a copy of the [r big_open_and_crowdsourced_data/csp/2023]",
         "tips": [
           {
             "type": "teachingTip",
@@ -1579,7 +1596,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\r\n\r\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \r\n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\r\n\r\n\r\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\r\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \r\n"
+            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\n\n* [Teachable Machine](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\n\n\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \n"
           }
         ]
       },
@@ -2071,15 +2088,16 @@
       }
     },
     {
-      "key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
+      "key": "dd5c2030-7b15-4193-b063-0c8d5a7d89ca",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the rubric\n\n**Do This:** Collected completed Project Guides from students. \n\n---\n\n## Assessment: Project\n    \nAssess using the rubric on the final page of the Project Guide.",
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
         "duration": "10",
-        "name": "Wrap Up"
+        "name": "Wrap Up",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
+        "activity_section.key": "dd5c2030-7b15-4193-b063-0c8d5a7d89ca",
         "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
       }
     },
@@ -2087,9 +2105,21 @@
       "key": "49026f1c-af6f-4c34-a150-e5f76b7eca7d",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Five in order to generate clues for the students.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "49026f1c-af6f-4c34-a150-e5f76b7eca7d",
+        "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
+      }
+    },
+    {
+      "key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the rubric\n\n**Do This:** Collected completed Project Guides from students. \n\n---\n\n## Assessment: Project\n    \nAssess using the rubric on the final page of the Project Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "f10327b1-2755-4e3a-9007-89c78f32bb58",
         "lesson_activity.key": "948e6807-b2c9-42bc-b03f-ae57ffd8060f"
       }
     },
@@ -3220,24 +3250,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp5-2022/resources",
-      "key": "all_resources_4",
+      "url": "/s/csp5-2023/resources",
+      "key": "all_resources_16",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_4"
+        "resource.key": "all_resources_16"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp5-2022/standards",
-      "key": "all_standards_4",
+      "url": "/s/csp5-2023/standards",
+      "key": "all_standards_16",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_4"
+        "resource.key": "all_standards_16"
       }
     },
     {
@@ -3267,14 +3297,37 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit Five",
+      "url": "https://drive.google.com/file/d/1xJhhRnad5IqXy8AnNkuS5WzflVj6SeF1/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_five",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1xJhhRnad5IqXy8AnNkuS5WzflVj6SeF1",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_five"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
       "properties": {
         "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "course_vocabulary"
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -3301,6 +3354,18 @@
       },
       "seeding_key": {
         "resource.key": "csp_u9_project_guide_-_tell_a_data_story"
+      }
+    },
+    {
+      "name": "CSP Unit 5 - Data",
+      "url": "https://docs.google.com/presentation/d/1Ocs-BeSnKsCKjCRhk43YR4cwGo8EzdEAYmT-Okz88Yc/edit?usp=sharing",
+      "key": "csp_unit_5_-_data",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_data"
       }
     },
     {
@@ -3615,6 +3680,30 @@
       }
     },
     {
+      "name": "Unit 5 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/1H_vpLZDbLmd1jfx8Wy75bvALx9PCp2RqemNsudasHOQ/edit?usp=drive_link",
+      "key": "unit_5_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 5 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/18C7FBK6jBrZh_AH9U5R6y_YRTTuX9PxOFA5lR6BuRwQ/edit?usp=drive_link",
+      "key": "unit_5_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_journal_interactive_notebook_"
+      }
+    },
+    {
       "name": "What's Going On in This Graph?",
       "url": "https://www.nytimes.com/2020/06/10/learning/over-60-new-york-times-graphs-for-students-to-analyze.html",
       "key": "what_s_going_on_in_this_graph_",
@@ -3745,7 +3834,25 @@
     {
       "seeding_key": {
         "lesson.key": "Learning from Data",
+        "resource.key": "csp_unit_5_-_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
         "resource.key": "learning_from_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
+        "resource.key": "unit_5_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
+        "resource.key": "unit_5_journal_interactive_notebook_"
       }
     },
     {
@@ -3758,6 +3865,18 @@
       "seeding_key": {
         "lesson.key": "Machine Learning",
         "resource.key": "csp_unit_5_-_lesson_7_-_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_five"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Tell a Data Story Part 1",
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -3800,13 +3919,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_4",
+        "resource.key": "all_resources_16",
         "script.name": "csp5-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_4",
+        "resource.key": "all_standards_16",
         "script.name": "csp5-2023"
       }
     },
@@ -3833,16 +3952,154 @@
         "resource.key": "teacher_forum",
         "script.name": "csp5-2023"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_journal_digital_",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_journal_interactive_notebook_",
+        "script.name": "csp5-2023"
+      }
     }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "citizen_science",
+      "word": "Citizen Science",
+      "definition": "scientific research conducted in whole or part by distributed individuals, many of whom may not be scientists, who contribute relevant data to research using their own computing devices.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "citizen_science"
+      }
+    },
+    {
+      "key": "cleaning_data",
+      "word": "Cleaning Data",
+      "definition": "a process that makes the data uniform without changing its meaning (e.g., replacing all equivalent abbreviations, spellings, and capitalizations with the same word).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cleaning_data"
+      }
+    },
+    {
+      "key": "correlation",
+      "word": "Correlation",
+      "definition": "a relationship between two pieces of data, typically referring to the amount that one varies in relation to the other.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "correlation"
+      }
+    },
+    {
+      "key": "crowdsourcing",
+      "word": "Crowdsourcing",
+      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "crowdsourcing"
+      }
+    },
+    {
+      "key": "data_bias",
+      "word": "Data Bias",
+      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "key": "data_filtering",
+      "word": "Data Filtering",
+      "definition": "choosing a smaller subset of a data set to use for analysis, for example by eliminating / keeping only certain rows in a table",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_filtering"
+      }
+    },
+    {
+      "key": "information",
+      "word": "Information",
+      "definition": "the collection of facts and patterns extracted from data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "information"
+      }
+    },
+    {
+      "key": "metadata",
+      "word": "Metadata",
+      "definition": "data about data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "metadata"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big, Open, and Crowdsourced Data",
+        "vocabulary.key": "citizen_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big, Open, and Crowdsourced Data",
+        "vocabulary.key": "crowdsourcing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "vocabulary.key": "correlation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "vocabulary.key": "cleaning_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "vocabulary.key": "data_filtering"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
+        "vocabulary.key": "information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
+        "vocabulary.key": "metadata"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -4519,6 +4776,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

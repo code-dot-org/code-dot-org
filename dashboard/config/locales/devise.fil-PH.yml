@@ -64,6 +64,29 @@ fil:
       unlocked: Ang iyong  account ay matagumpay na nai-unlock. Mangyaring mag-sign
         in upang magpatuloy.
   errors:
+    invitations:
+      edit:
+        header: Magtakda ng iyong password
+        submit_button: Magtakda ng aking password
+      invitation_removed: Ang iyong imbitasyon ay tinanggal.
+      invitation_token_invalid: Ang token ng imbistasyon na binigay ay hindi balido!
+      new:
+        header: Magpadala ng Imbitasyon
+        submit_button: Magpadala ng Imbitasyon
+      no_invitations_remaining: Walang natirang mga paanyaya
+      send_instructions: May paanyayang email ang pinadala kay %{email}.
+      updated: Ang iyong password ay matagumpay na natakda. Ikaw ay nakasign-in na
+        ngayon.
+    mailer:
+      invitation_instructions:
+        accept: Tanggapin ang imbitasyon
+        hello: Hello %{email}
+        ignore: Kung hindi mo gustong tanggapin ang imbitasyon, huwag mo lang pansinin
+          ang email na ito.<br/>Ang iyoung account ay hindi malikha hangga't hindi
+          mo na bisita ang link sa taas at natakda ang iyong password.
+        someone_invited_you: May isang tao na nag-imbita sa iyo sa %{url}, maari mo
+          itong tanggapin sa pamamagitan ng link sa baba.
+        subject: Mga tagubilin sa imbitasyon
     messages:
       already_confirmed: ay na-nakumpirma, mangyaring subukang mag-sign in
       confirmation_period_expired: ay kinakailangan na kumpirmahin sa loob ng %{period}
@@ -71,26 +94,3 @@ fil:
       expired: ay nag-expire, mangyaring humingi ng isa pa
       not_found: hindi nahanap
       not_locked: ay hindi na lock
-    invitations:
-      send_instructions: May paanyayang email ang pinadala kay %{email}.
-      invitation_token_invalid: Ang token ng imbistasyon na binigay ay hindi balido!
-      updated: Ang iyong password ay matagumpay na natakda. Ikaw ay nakasign-in na
-        ngayon.
-      no_invitations_remaining: Walang natirang mga paanyaya
-      invitation_removed: Ang iyong imbitasyon ay tinanggal.
-      new:
-        header: Magpadala ng Imbitasyon
-        submit_button: Magpadala ng Imbitasyon
-      edit:
-        header: Magtakda ng iyong password
-        submit_button: Magtakda ng aking password
-    mailer:
-      invitation_instructions:
-        subject: Mga tagubilin sa imbitasyon
-        hello: Hello %{email}
-        someone_invited_you: May isang tao na nag-imbita sa iyo sa %{url}, maari mo
-          itong tanggapin sa pamamagitan ng link sa baba.
-        accept: Tanggapin ang imbitasyon
-        ignore: Kung hindi mo gustong tanggapin ang imbitasyon, huwag mo lang pansinin
-          ang email na ito.<br/>Ang iyoung account ay hindi malikha hangga't hindi
-          mo na bisita ang link sa taas at natakda ang iyong password.

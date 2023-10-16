@@ -80,6 +80,11 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
     defaultVisualAppearance: 'strong',
   },
   {
+    displayName: 'ExtraStrongText',
+    semanticTag: 'strong',
+    defaultVisualAppearance: 'extra-strong',
+  },
+  {
     displayName: 'Figcaption',
     semanticTag: 'figcaption',
     defaultVisualAppearance: 'figcaption',
@@ -130,5 +135,6 @@ export const {
   OverlineThreeText,
   EmText,
   StrongText,
+  ExtraStrongText,
   Figcaption,
 } = generateComponents(typographyElementsToGenerate);

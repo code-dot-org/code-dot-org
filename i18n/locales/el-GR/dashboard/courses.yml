@@ -35,27 +35,27 @@ el:
         csd-2023:
           title: Ανακαλύψεις στην επιστήμη υπολογιστών
     resources:
-      curriculum/csd/2020:
-        name: Πρόγραμμα σπουδών
-      teacher_forum/csd/2020:
-        name: Φόρουμ Καθηγητών
       curriculum/csd/2017:
         name: Πρόγραμμα σπουδών
       teacher_forum_6/csd/2017:
         name: Φόρουμ Καθηγητών
-      all_standards_7/csd/2022:
-        name: Όλα τα Πρότυπα
-      curriculum/csd/2019:
-        name: Πρόγραμμα σπουδών
-      teacher_forum/csd/2019:
-        name: Φόρουμ Καθηγητών
-      all_standards_2/csd/2023:
-        name: Όλα τα Πρότυπα
-      all_standards_1/csd/2021:
-        name: Όλα τα Πρότυπα
-      getting_started_with_csd/csd/2021:
-        name: Πρώτα βήματα με το CSD
       curriculum/csd/2018:
         name: Πρόγραμμα σπουδών
       teacher_forum_6/csd/2018:
         name: Φόρουμ Καθηγητών
+      curriculum/csd/2019:
+        name: Πρόγραμμα σπουδών
+      teacher_forum/csd/2019:
+        name: Φόρουμ Καθηγητών
+      curriculum/csd/2020:
+        name: Πρόγραμμα σπουδών
+      teacher_forum/csd/2020:
+        name: Φόρουμ Καθηγητών
+      all_standards_1/csd/2021:
+        name: Όλα τα Πρότυπα
+      getting_started_with_csd/csd/2021:
+        name: Πρώτα βήματα με το CSD
+      all_standards_7/csd/2022:
+        name: Όλα τα Πρότυπα
+      all_standards_2/csd/2023:
+        name: Όλα τα Πρότυπα

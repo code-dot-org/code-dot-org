@@ -255,18 +255,16 @@ module Pd::Application
 
     # Include additional text for all the multi-select fields that have the option
     def full_answers
-      @full_answers ||= begin
-        sanitized_form_data_hash.tap do |hash|
-          additional_text_fields.each do |field_name, option, additional_text_field_name|
-            next unless hash.key? field_name
+      @full_answers ||= sanitized_form_data_hash.tap do |hash|
+        additional_text_fields.each do |field_name, option, additional_text_field_name|
+          next unless hash.key? field_name
 
-            option ||= OTHER_WITH_TEXT
-            additional_text_field_name ||= "#{field_name}_other".to_sym
-            hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
-            hash.delete additional_text_field_name
-          end
-        end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
-      end
+          option ||= OTHER_WITH_TEXT
+          additional_text_field_name ||= "#{field_name}_other".to_sym
+          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+          hash.delete additional_text_field_name
+        end
+      end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data

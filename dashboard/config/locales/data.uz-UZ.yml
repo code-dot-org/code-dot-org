@@ -1,82 +1,205 @@
 ---
 uz:
   data:
-    game:
-      name:
-        Unplug1: Informatikaga kirish
-        Maze: Labirint
-        Multi: Turli variantlar tanlash
-        Unplug2: Dasturiy fikrlash
-        Unplug3: Katakchali varaqda dasturlash
-        Artist: Rassom
-        Unplug4: Algoritmlar
-        Artist2: Rassom 2
-        Unplug5: Funksiyalar
-        Farmer: Fermer
-        Unplug6: Shartli bayonotlar
-        Artist3: Rassom 3
-        Unplug7: Musiqa yozish
-        Farmer2: Fermer 2
-        Unplug8: Abstraksiya
-        Artist4: Rassom 4
-        Unplug9: Estafetali dasturlash
-        Farmer3: Fermer 3
-        Unplug10: Internet
-        Artist5: Rassom 5
-        Unplug11: Yakun
-        MazeEC: Labirint
-        Bounce: Sakrash
-        Flappy: Pirilloq qushcha
-        Jigsaw: Topishmoq
-        MazeStep: Labirint qadam holati
-        Wordsearch: So‘z izlash
-        Webapp: Ilovalar laboratoriyasi
-        ArtistEC: Rassom
-        TextMatch: So‘z Mos
-        StudioEC: Play Lab - O‘yin laboratoriyasi
-        Applab: Ilovalar laboratoriyasi
-        NetSim: Internet simulyator
-        Custom: Rassom
-        CustomStudio: Play Lab - O‘yin laboratoriyasi
-        Gamelab: O‘yin laboratoriyasi
-        Spritelab: Sprite Lab
-    trophy:
-      name:
-        Bronze: Bronza
-        Silver: Kumush
-        Gold: Oltin
+    callout:
+      text:
+        Infinity_move_collide_callout: Ushbu hodisa yuz berganda tovush chiqsin.
+        Infinity_move_directions_callout: Yuqoriga o‘q bosilganda qaysi blok Baymaksni
+          siljitladi?
+        Infinity_move_directions_callout_arrow: Rul bilan boshqarish uchun ushbu o‘qlardan
+          foydalaning
+        Infinity_move_right_runbutton: Bu yerga siljitish blokini qo‘shing
+        Infinity_repeat_callout: '"Move" bloklarini bu yerda joylashtiring'
+        actions_category: Asboblar qutisi yangi ko‘rinishga ega bo‘ldi! "Amallar"
+          bloklari ham endi shu yerda.
+        add_and_drag_parameter: Parametr nomini bu yerda yozing, qo‘shish tugmachasini
+          bosing va keyin uni funksiya ta'rifiga torting
+        arrows_move_actor: Aktyorni harakatga keltirish uchun o‘qlardan foydalaning
+        bee_for_loop: Asalarilar to‘plashi kerak bo‘lgan eng ko‘p nektarni bu yerga
+          torting
+        category_explanation: Sizda o‘sha bir xil bloklar mavjud, ammo ular endi toifalarda
+          joylashtirilgan
+        change_here: O‘zgarishni shu yerda qiling
+        craft_callout_moveforward: Ushbu kod lavani tekshiradi, oldinga siljish uchun
+          buyruq qo‘sha olasizmi?
+        craft_callout_preplaced: Sizga boshlash uchun bu yerga bir nechta bloklarni
+          oldindan joylashtirdik
+        craft_callout_preplaced_house: Ushbu kod uyingizni qurishni boshlaydi. Siz
+          buni tugata olasizmi?
+        craft_drag_block_callout: '"moveForward();" blokini olib boshqa bloklar pastiga
+          biriktiring.'
+        craft_inside_repeat: Bloklarni bu yerga joylashtirish orqali amallarni takrorlang
+        craft_run_button_callout: Dasturingizni sinab ko‘rish uchun "Ishga tushirish"
+          tugmachasini bosing
+        craft_what_is_iron: Bu temirni qazib oling!
+        create_function: '"Funksiyalar" oynasini ochish uchun bu yerni bosing, so‘ng
+          "Funksiya yaratish" tugmasini bosing.'
+        degrees_per_side: Har bir burchak o‘lchamini gradusda olish uchun 360 ni tomonlar
+          soniga bo‘ling.
+        drag_blocks: '"move" blokini olib boshqa blok pastiga biriktiring.'
+        draw_square_hint: 'Maslahat: Siz oxirgi jumboqda yaratgan kvadrat yasash siklidan
+          foydalaning.'
+        edit_add_parameter: Funksiyangizga parametr qo‘shish uchun tahrirlash tugmachasini
+          bosing
+        edit_draw_square: Funksiyani tahrirlash va siklni qo‘shish uchun bu tugmadan
+          foydalaning.
+        edit_function: Funksiyani tahrirlash uchun shu yerni bosing.
+        edit_get_nectar: Funksiyani tahrirlash va ari nektar olish uchun yo‘nalishni
+          o‘zgartirish uchun ushbu tugmani ishlating.
+        fill_in_actor: '"???" har bir aktyorga mos keladigan raqamlar (1, 2 va 3)
+          bilan to‘ldiring'
+        frozen_circle_function_in_circle_turn: Har bir doirani yaratgandan so‘ng burilishni
+          unutmang.
+        frozen_circle_function_with_parameter_circle: '"Doira yaratish" blokidan foydalaning
+          va o‘lchamini o‘zgartiring.'
+        frozen_create_square: Kvadrat yaratish uchun bu yerga ko‘proq bloklarni ulang
+        frozen_diamond_repeat: Ushbu shaklni yaratish uchun takroriy blokdan foydalaning.
+        frozen_snowflake_branch: '"Snowflake shoxini yaratish" blokidan foydalaning'
+        function_editor_draw_square: Bu funksiyangiz ta'rifi. Ushbu bloklar har safar
+          "kvadrat chizish" blokidan foydalanganda ishlaydi
+        get_nectar: Yangi "nektar olish" blokidan foydalaning.
+        gray_block_explanation: Kulrang bloklarni o‘chirib bo‘lmaydi. Jumboqni baribir
+          hal qila olasizmi?
+        house_hint: Rasm hali uyga o‘xshamasa ham yonom emas. Biz buni keyingi jumboqda
+          tuzatamiz.
+        if_bee_nectar: '"if" ("Agar") blokidan foydalanib, asalarilar nektar olishini
+          belgilang'
+        if_else_bee: '"If / else" blokidan foydalaning, asalarilar guldan nektar olsin
+          va gul bo‘lmasa asal joylasin.'
+        instructions_repeat_explanation: Har bir jumboq uchun ko‘rsatmalar bu yerda
+          takrorlangan
+        jigsaw_click: Blokni bosing!
+        length_parameter: Ushbu funksiya "uzunlik" parametridan foydalanishi uchun
+          yangilay olasizmi?
+        logic_category: '"If/else" blokini topish uchun "Mantiq" oynasini oching.'
+        move_elsa_forward: Elzani oldinga siljitish uchun "Move Forward" ("Oldinga
+          siljitish") blokini torting va "When Run" ("Ishga tushirilganda") blokining
+          ostiga qo‘ying
+        name_function: Funksiyangiz nomini shu yerda yozing
+        place_counter_variable: Hisoblagich o‘zgaruvchisini ushbu blok ichiga torting
+        place_length_variable: Savol belgilarini almashtirish uchun uzunlik o‘zgaruvchisini
+          bu yerga torting
+        place_variable: O‘zgaruvchingizni ushbu blok ichiga torting
+        playlab_add_blocks: Bloklaringizni bu yerga qo‘shing
+        playlab_add_move: Ushbu takroriy blok ichiga "siljitish" bloklarini qo‘shing
+        playlab_add_score: Bu yerga ball blokini qo‘shing
+        playlab_arrow_keys: Ishga tushirish tugmachasini bosib, jodugarni harakatlantirish
+          uchun bulardan foydalaning
+        playlab_drag_say: '"Say" blokini bu yerga torting va "salom" yozing'
+        playlab_move_girl: Tennischi qizni harakatlantirish uchun "o‘ngga siljish"
+          blokidan foydalaning
+        playlab_play_sound: |2-
+
+          Bu yerda "ovozni ijro etish" blokini qo‘shing
+        playlab_use_twice: Ushbu blokdan ikki marta foydalaning va aktyor raqamini
+          o‘zgartirishni unutmang
+        repeat: Buyruqlarni takrorlash uchun sikl ichiga bloklar qo‘ying
+        repeat_blocks: '"Takrorlash" blokidan foydalaning va ish joyidagi bloklarni
+          u bilan o‘rang'
+        repeat_blocks_1: "(1) Ushbu blokdan foydalaning va uni ish joyidagi kulrang
+          bloklar atrofiga qo‘ying"
+        repeat_blocks_2: (2) "Takrorlash" blokini bu yerga ko‘chiring va ichiga kulrang
+          bloklarni joylashtiring
+        repeat_full_circle: To‘liq aylana qilish uchun zombi necha marta harakatlanishi
+          kerakligini kiriting
+        replace_questions: '"???" o‘rnini raqam bilan almashtirish uchun dropdaun
+          menyudan foydalaning.'
+        replace_questions_degree: '"???" o‘rnini burilish uchun to‘g‘ri daraja bilan
+          almashtirish uchun dropdaun menyudan foydalaning.'
+        right_arrow_fireball: Olovli to‘plarni otish uchun o‘ng o‘qdan foydalaning
+        run: Dasturingizni sinab ko‘rish uchun "Ishga tushirish" tugmachasini bosing
+        set_length: '"Uzunlik"ni to‘g‘ri qiymatga o‘rnatish uchun ushbu blokdan foydalaning.'
+        set_sides: Jumboqni yechish uchun ushbu blok yordamida "sides" ("tomonlar")ga
+          kerak bo‘lgan son qo‘ying.
+        set_sprite_image: Ushbu hikoyada aktyordan foydalanish uchun "when story starts"
+          ("Hikoya boshlanganda") blokiga "tasvirga aktyorni o‘rnatish" blokini biriktriring
+        set_variable: O‘zgaruvchini o‘rnatish uchun raqamli blokni bu yerga torting
+        show_code_explanation: Siz tayyorlayotgan dastur kodini ko‘rish uchun shu
+          yerni bosing
+        snowflake_dropdown: Ushbu dropdaun menyudan turli xil qor parchalarini yaratish
+          uchun foydalaning!
+        studio_say_text: Ushbu tirnoqlar ichida aktyoringiz aytmoqchi bo‘lgan narsani
+          yozing
+        turn_elsa: Elzani burish uchun "Burilish" blokidan foydalaning. Dropdaun menyudagi
+          raqam Elzaning burilish burchagini aniqlaydi
+        watch_again: Videoni qayta ko‘rish uchun bu yerni bosing
+        which_equation: Qaysi tenglama ko‘proq tomonlari bo‘lgan shakllar uchun tomonni
+          qisqartiradi?
+        write_draw_square_function: Kvadrat chizadigan bloklarni asboblar qutisidan
+          bu yerga torting
+        write_draw_triangle_function: Uchburchak chizadigan bloklarni asboblar qutisidan
+          bu yerga torting
     concept:
       description:
-        sequence: Ketma-ketlik
+        function: Funksiyalar
         if: Agar bloki
         if_else: Agar-bo‘lmasa bloki
+        loop_for: Sanovchi blok
         loop_times: Marta takrorlash blok
         loop_until: "-gacha takrorlash blok"
         loop_while: Toki bloki
-        loop_for: Sanovchi blok
-        function: Funksiyalar
         parameters: Funksiyalar (parameterlari bilan)
+        sequence: Ketma-ketlik
+    game:
+      name:
+        Applab: Ilovalar laboratoriyasi
+        Artist: Rassom
+        Artist2: Rassom 2
+        Artist3: Rassom 3
+        Artist4: Rassom 4
+        Artist5: Rassom 5
+        ArtistEC: Rassom
+        Bounce: Sakrash
+        Custom: Rassom
+        CustomStudio: Play Lab - O‘yin laboratoriyasi
+        Farmer: Fermer
+        Farmer2: Fermer 2
+        Farmer3: Fermer 3
+        Flappy: Pirilloq qushcha
+        Gamelab: O‘yin laboratoriyasi
+        Jigsaw: Topishmoq
+        Maze: Labirint
+        MazeEC: Labirint
+        MazeStep: Labirint qadam holati
+        Multi: Turli variantlar tanlash
+        NetSim: Internet simulyator
+        Spritelab: Sprite Lab
+        StudioEC: Play Lab - O‘yin laboratoriyasi
+        TextMatch: So‘z Mos
+        Unplug1: Informatikaga kirish
+        Unplug10: Internet
+        Unplug11: Yakun
+        Unplug2: Dasturiy fikrlash
+        Unplug3: Katakchali varaqda dasturlash
+        Unplug4: Algoritmlar
+        Unplug5: Funksiyalar
+        Unplug6: Shartli bayonotlar
+        Unplug7: Musiqa yozish
+        Unplug8: Abstraksiya
+        Unplug9: Estafetali dasturlash
+        Webapp: Ilovalar laboratoriyasi
+        Wordsearch: So‘z izlash
     level:
       instructions:
-        maze_2_2: 'Quloqsiz cho‘chqachani tutishda yordam berolasizmi? Keraklicha
-          “oldinga siljish” bloklarini tagma-tag taxlab, “Ishga tushirish” tugmasini
-          bosib, menga uni tutishga ko‘maklashing. '
+        Custom_builder: Siz yaratmoqchi bo‘lgan darajani chizish uchun bloklarni asboblar
+          qutisidan ish joyiga torting. Tayyor bo‘lgach, "Ishga tushirish" tugmasini
+          bosing.
+        applab_ec_simple: Asboblar qutisidagi bloklardan foydalanib, o‘z ilovangizni
+          yarating.
+        jigsaw_1: Blokni bosing
+        jigsaw_10: Bloklarni tartibga solib rasm hosil qiling
+        jigsaw_11: Ushbu bloklarni raqamlar bo‘yicha tartibda joylashtiring
+        jigsaw_12: Ushbu bloklarni raqamlar bo‘yicha tartibda joylashtiring
+        jigsaw_13: Jumboqni tuzating!
+        jigsaw_2: Blokni mo‘ljalga tortib boring
+        jigsaw_3: Bloklarni tartibga solib rasm hosil qiling
+        jigsaw_4: Bloklarni tartibga solib rasm hosil qiling
+        jigsaw_5: Bloklarni tartibga solib rasm hosil qiling
+        jigsaw_6: Bloklarni tartibga solib rasm hosil qiling
+        jigsaw_7: Bloklarni tartibga solib rasm hosil qiling
+        jigsaw_8: Bloklarni tartibga solib rasm hosil qiling
+        jigsaw_9: Bloklarni tartibga solib rasm hosil qiling
         maze_2_1: Bu cho‘chqacha asablarimni o‘ynayapti. Uni tutishga yordam bering!
-        maze_2_2_5: Mani yo‘lak bo‘ylab yurgizib, ahmoq cho‘chqachani tutishimga ko‘maklashing.
-          TNT bombacha va patimni yulinishidan ehtiyot bo‘ling!
-        maze_2_3: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
-        maze_2_4: O‘zingizni bosib, jin urgur cho‘chqachani topishga yordamlashing.
-          Aks holda mening qonim qaynaydi!
-        maze_2_5: Ahmoq cho‘chqachaga 2 ta blok orqali yetish imkoni bor. Qandayligini
-          sezgandirsiz?
-        maze_2_6: Mani uchta blok orqali yashil buzg‘unchiga olib boring.
-        maze_2_7: Iloji boricha kamroq blok ishlatib, meni qing‘ir cho‘chqachani tutishga
-          yordamlashing. Bir necha marta "marta takrorlash" blokini ishlatib ko‘ring.
-        maze_2_8: Kulrang blok siz uni o‘chira olmasligingizni bildiradi. Boshqotirmani
-          3 marta takrorlaydigan kulrang blok amali ichida 3 ta blok joylab yechishga
-          harakat qilib ko‘ring.
-        maze_2_9: Endi yangi "... maguncha takrorla" blokchasi yordamida bajaring.
-          Bu blok cho‘chqachani tutmaguncha takrorlanaveradi.
         maze_2_10: Xo‘sh, yana bitta mashq qilib ko‘ramiz — bunisini 4 ta blok ishlatib
           bajarish kerak.
         maze_2_11: Hurmatli dasturchi. Men zombiman. Judayam ochman. Men... kungaboqarga...
@@ -100,9 +223,308 @@ uz:
         maze_2_19: Faqat 3 ta blokdan foydalanib, qiyinroq masalani yecha olasanmi?
           Agar eplay olsang, undan keyin qancha uzun bo‘lmasin men har qanday egri
           yo‘llardan yura olaman.
+        maze_2_2: 'Quloqsiz cho‘chqachani tutishda yordam berolasizmi? Keraklicha
+          “oldinga siljish” bloklarini tagma-tag taxlab, “Ishga tushirish” tugmasini
+          bosib, menga uni tutishga ko‘maklashing. '
+        maze_2_2_5: Mani yo‘lak bo‘ylab yurgizib, ahmoq cho‘chqachani tutishimga ko‘maklashing.
+          TNT bombacha va patimni yulinishidan ehtiyot bo‘ling!
+        maze_2_3: Meni yashil maxluqcha tomon boshqaring! (TNT bombachaga tega ko‘rmang)
+        maze_2_4: O‘zingizni bosib, jin urgur cho‘chqachani topishga yordamlashing.
+          Aks holda mening qonim qaynaydi!
+        maze_2_5: Ahmoq cho‘chqachaga 2 ta blok orqali yetish imkoni bor. Qandayligini
+          sezgandirsiz?
+        maze_2_6: Mani uchta blok orqali yashil buzg‘unchiga olib boring.
+        maze_2_7: Iloji boricha kamroq blok ishlatib, meni qing‘ir cho‘chqachani tutishga
+          yordamlashing. Bir necha marta "marta takrorlash" blokini ishlatib ko‘ring.
+        maze_2_8: Kulrang blok siz uni o‘chira olmasligingizni bildiradi. Boshqotirmani
+          3 marta takrorlaydigan kulrang blok amali ichida 3 ta blok joylab yechishga
+          harakat qilib ko‘ring.
+        maze_2_9: Endi yangi "... maguncha takrorla" blokchasi yordamida bajaring.
+          Bu blok cho‘chqachani tutmaguncha takrorlanaveradi.
+        maze_3_1: Men o‘sha cho‘chqa oldiga borishim kerak! Ko‘chirish uchun bir necha
+          marta move() funksiyasini chaqirish kerak. Shunda men tuxumimni qaytarib
+          olishim mumkin bo‘ladi.
+        maze_3_2: Menga shunday dastur yozingki, men cho‘chqagacha yetib olay.
+        maze_3_3: Cho‘chqaga qanday borishim kerak? TNT qutisiga tushib ketmasligimga
+          ishonch hosil qiling!
+        maze_3_4: Voh! Meni TNT atrofida o‘tkazib, cho‘chqaga olib boradigan dastur
+          yozing.
+        maze_karel_1_1: Salom, men fermerman. Fermer xo‘jaligimdagi dalani tekislash
+          uchun yordamingizga muhtojman va shundan so‘ng dala ekin ekishga tayyor
+          bo‘ladi!"  Loy yig‘ilgan uyumga o‘ting va uni olib tashlash uchun `remove`
+          bo‘lagidan foydalaning.
+        maze_karel_1_10: Men kech qoldim, qorong‘i tushdi va plitkalar qanchalik katta
+          ekanligini aniqlay olmayman. Endi men blokda ishlatadigan barcha variantlarga
+          ega emasman. Meni maydon bo‘ylab olib boring va agar plitka bo‘lsa, uni
+          olib tashlang.
+        maze_karel_1_11: 'Tashqarida hali ham qorong‘i. Meni maydon bo‘ylab harakatlantiring.
+          Agar uyum bo‘lsa, uni olib tashlang va agar teshik bo‘lsa, uni to‘ldiring.
+          Maslahat: "agar" blokidagi variantlarning ochiladigan menyusidan foydalaning.'
+        maze_karel_1_2: Keyin meni teshikka olib boring va `fill` bo‘lagidan foydalanib,
+          IKKITA belkurak bilan teshikni to‘ldiring.
+        maze_karel_1_3: Meni loy uyumiga oboring va necha marta belkurakda loyni olib
+          tashlashim kerakligini menga ayting, iloji boricha kamroq bloklardan foydalanib.
+        maze_karel_1_4: 'Menga to‘rtta loy uyumini olib tashlashga yordam bera olasizmi?
+          Maslahat: agar iloji bo‘lsa, takroriy blokdan foydalaning.'
+        maze_karel_1_5: 'Bu teshiklarning barchasini 5 ta belkurak loy bilan to‘ldirishga
+          yordam bering. Maslahat: "while" blokining ichiga "takrorlash" blokini qo‘yishingiz
+          mumkin.'
+        maze_karel_1_6: Iloji boricha kamroq bloklardan foydalanib, barcha uyumlarni
+          tozalang. "While" blokidagi ochiladigan menyuda yangi variantlar menga plitka
+          yoki teshik ustida turganligimni bildiradi.
+        maze_karel_1_7: Vau, chindan ham chuqur teshik topdim! Bunga qancha belkurak
+          loy kerakligini bilmayman. Siz uni yerga teng bo‘lguncha to‘ldiradigan dastur
+          yozishingiz mumkinmi?
+        maze_karel_1_8: Iloji boricha kamroq bloklardan foydalanib, maydonning oxiridagi
+          teshikni to‘ldirishga yordam bering.
+        maze_karel_1_9: 'Meni bu loy uyumlarini olib tashlashga majbur qiling. Iloji
+          boricha kamroq bloklardan foydalanishga harakat qiling. Maslahat: "while"
+          blokidan foydalanishga harakat qiling.'
+        maze_karel_2_1: 'Menga barcha uyumlarni olib tashlashga va yerdagi barcha
+          teshiklarni to‘ldirishga yordam beradigan bloklardan foydalanishga harakat
+          qiling. Juda ko‘p bloklardan foydalanish o‘rniga sikldan foydalanishga harakat
+          qiling. Maslahat: boshqa siklning ichiga sikl qo‘yishingiz mumkin.'
+        maze_karel_2_10: Menga maydon bo‘ylab harakatlantiring va barcha uyumlarni
+          olib tashlashga va barcha teshiklarni to‘ldirishga yordam berish uchun ushbu
+          ikkita funksiyadan foydalaning.
+        maze_karel_2_2: Biz "to‘ldirish 5" deb nomlangan o‘z blokimizni aniqladik,
+          u endi funksiyalar toifasiga kiradi. Menga ushbu teshikni to‘ldirishga yordam
+          berish uchun undan foydalaning.
+        maze_karel_2_3: Menga barcha teshiklarni to‘ldirish uchun yangi "to‘ldirish
+          5" funksional blokidan foydalaning. Vazifalar toifasidan "to‘ldirish 5"
+          blokini olishingiz kerak bo‘ladi.
+        maze_karel_2_4: 7 belkurak loyni olib tashlaydigan yangi funksiyani aniqlang.
+          Keyin undan barcha uyumlarni olib tashlashga yordam beradigan dastur yozish
+          uchun foydalaning.
+        maze_karel_2_5: Uyumdan 6 ta belkurak loyni olib tashlaydigan yangi funksiya
+          yarating va undan barcha uyumlarni tekislashimga yordam berish uchun foydalaning.
+        maze_karel_2_6: Menga uyumni tekislash va teshikni to‘ldirishda yordam berish
+          uchun ikkita yangi funksiya - "to‘ldirish 8" va "olib tashlash 8"dan foydalaning.
+        maze_karel_2_7: Mening dalamda sigir bor! Menga sigirdan qochishga va uyumni
+          olib tashlashga yordam beradigan yangi funksiyani yozing. Barcha bloklaringizni
+          yangi funksiya ichiga qo‘ying.
+        maze_karel_2_8: Ushbu yangi funksiya - "sigirdan saqlaning va 1ni olib tashlang"dan
+          foydalaning, u menga barcha uyumlarni olib tashlashga yordam beradi.
+        maze_karel_2_9: Xo‘sh, bu yerda vertikal ustundagi 4 xil uyumni tozalaydigan
+          funksiya. Ushbu funksiyani sikl ichiga qo‘yishga harakat qiling, shunda
+          siz bir nechta yangi bloklardan foydalanib, barcha loy uyumlarini olib tashlaysiz.
+        maze_karel_debug_function_1: Barcha uyumlarni olib tashlashim uchun ushbu
+          dasturda nimani o‘zgartirish kerak?
+        maze_karel_debug_function_2: Maydonimni tekislashim uchun ushbu dasturni sozlay
+          olasizmi?
+        maze_karel_debug_function_3: Ushbu dasturni shunday tahrirlangki, men maydonimdagi
+          barcha uyumlarni olib tashlay.
+        maze_karel_debug_if: Yordam bering! Mening maydonim butunlay tekis bo‘lishi
+          uchun dasturni tuzating.
+        maze_karel_debug_if_else: Ushbu dasturni shunday sozlangki, men barcha teshiklarni
+          to‘ldirib, barcha uyumlarni olib tashlay.
+        maze_karel_debug_repeat: Ushbu dasturni men uchun de-bug qilingki, mening
+          maydonim chiroyli va tekis bo‘lsin.
+        maze_karel_debug_seq_1: Nosozliklarni tuzatishga xush kelibsiz! Mening kodim
+          to‘g'ri ishlamayapti. Siz dalamni tekislab, ekishga tayyor bo‘lishim uchun
+          muammoni aniqlab, uni tuzatib bera olasizmi?
+        maze_karel_debug_seq_2: Ushbu dasturda nima xato? Qanday qilib uni tuzatishingiz
+          kerak, shunda men bu uyumni olib tashlashim mumkin bo‘ladimi?
+        maze_karel_debug_while: Teshikni to‘ldirishimga yordam berish uchun ushbu
+          dasturni qanday o‘zgartirish kerak?
+        maze_wordsearch_k_1: SHARQ so‘zini yozish uchun meni harakatlantiring
+        maze_wordsearch_k_13: DEBUG so‘zini yozish uchun meni bir tomonga, keyin boshqasiga
+          harakatlantiring
+        maze_wordsearch_k_15: ABOVE so‘zini yozish uchun meni bir tomonga, keyin boshqasiga
+          harakatlantiring
+        maze_wordsearch_k_16: BELOW so‘zini yozish uchun meni bir tomonga, keyin boshqasiga
+          harakatlantiring
+        maze_wordsearch_k_2: JANUB so‘zini yozish uchun meni harakatlantiring
+        maze_wordsearch_k_20: Bu sinov! STORY so‘zini yozish uchun meni bir tomonga,
+          keyin boshqasiga harakatlantiring
+        maze_wordsearch_k_3: G‘ARB so‘zini yozish uchun meni harakatlantiring
+        maze_wordsearch_k_4: SHIMOL so‘zini yozish uchun meni harakatlantiring
+        maze_wordsearch_k_6: JUMP so‘zini yozish uchun meni Sharqqa, keyin Janubga
+          ko‘chiring
+        maze_wordsearch_k_9: CODE so‘zini yozish uchun meni bir tomonga, keyin boshqasiga
+          harakatlantiring
+        mazestep_1: Bu yerda labirint qadami tavsifi
+        mazestep_2: Bu yerda labirint qadami tavsifi
+        mazestep_3: Bu yerda labirint qadami tavsifi
+        mazestep_4: Bu yerda labirint qadami tavsifi
+        mazestep_5: Bu yerda labirint qadami tavsifi
+        studio_c2_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
+        studio_c2_10: Fonni va Waddles tezligini o‘zgartirish uchun bloklar qo‘sha
+          olasizmi va keyin uni ball yig'guncha o‘qlar bilan harakatga keltira olasizmi?
+        studio_c2_11: O‘z hikoyangizni yarating. Tugatgandan so‘ng, do‘stlaringizga
+          telefonda hikoyangizni sinab ko‘rishga ruxsat berish uchun Finish tugmasini
+          bosing.
+        studio_c2_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin biron
+          bir narsani aytishiga majbur qila olasizmi?
+        studio_c2_3: Ushbu itni mushuk oldiga olib borish uchun dastur yoza olasizmi?
+        studio_c2_4: Siz itni mushukka olib boradigan va it unga yetib borganida mushuk
+          "salom" deb aytadigan dastur yoza olasizmi?
+        studio_c2_5: Sakkizoyoq bosilganda "salom" deyish uchun dastur yoza olasizmi?
+        studio_c2_6: Endi Waddles-ni barcha maqsadlarga erishish uchun yuqoriga /
+          pastga / chapga / o‘ngga tugmalari bilan harakatlantiradigan dastur yoza
+          olasizmi?
+        studio_c2_7: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashiga imkon
+          beradi. Ushbu dinozavrni bir necha marta yuqoriga va pastga siljitish uchun
+          bloklarni biriktira olasizmi?'
+        studio_c2_8: Waddles dinozavrga duch kelsa "Ouch!" deb aytishi va "urish"
+          ovozini chiqarishi uchun uni o‘qlar bilan harakatlantira olasizmi?
+        studio_c2_9: Waddles sakkizoyo‘qqa duch kelganda ball to‘plash uchun blok
+          qo‘sha olasizmi, keyin uni ball yig'guncha o‘qlar bilan harakatga keltira
+          olasizmi?
+        studio_c3_game_1: Sakkizoyoq bosilganda "salom" deyish uchun dastur yoza olasizmi?
+        studio_c3_game_2: Endi Waddles-ni barcha maqsadlarga erishish uchun yuqoriga
+          / pastga / chapga / o‘ngga tugmalari bilan harakatlantiradigan dastur yoza
+          olasizmi?
+        studio_c3_game_3: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashiga
+          imkon beradi. Ushbu dinozavrni bir necha marta yuqoriga va pastga siljitish
+          uchun bloklarni biriktira olasizmi?'
+        studio_c3_game_4: Waddles dinozavrga duch kelsa "Ouch!" deb aytishi va "urish"
+          ovozini chiqarishi uchun uni o‘qlar bilan harakatlantira olasizmi?
+        studio_c3_game_5: Waddles sakkizoyo‘qqa duch kelganda ball to‘plash uchun
+          blok qo‘sha olasizmi, keyin uni ball yig'guncha o‘qlar bilan harakatga keltira
+          olasizmi?
+        studio_c3_game_6: Fonni va Waddles tezligini o‘zgartirish uchun bloklar qo‘sha
+          olasizmi va keyin uni ball yig'guncha o‘qlar bilan harakatga keltira olasizmi?
+        studio_c3_game_7: O‘z o‘yiningizni yarating. Tugatgandan so‘ng, do‘stlaringizga
+          telefonda o‘yiningizn sinab ko‘rishga ruxsat berish uchun Finish tugmasini
+          bosing.
+        studio_c3_story_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
+        studio_c3_story_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin
+          biron bir narsani aytishiga majbur qila olasizmi?
+        studio_c3_story_3: Ushbu itni mushuk oldiga olib borish uchun dastur yoza
+          olasizmi?
+        studio_c3_story_4: Siz itni mushukka olib boradigan va it unga yetib borganida
+          mushuk "salom" deb aytadigan dastur yoza olasizmi?
+        studio_c3_story_5: Sakkizoyoqni xursand qilish uchun blok qo‘sha olasizmi?
+        studio_c3_story_6: O‘z hikoyangizni yarating. Tugatgandan so‘ng, do‘stlaringizga
+          telefonda hikoyangizni sinab ko‘rishga ruxsat berish uchun Finish tugmasini
+          bosing.
+        studio_ec_sandbox: O‘z o‘yiningizni yarating. Tugatgandan so‘ng, do‘stlaringizga
+          telefonda o‘yiningizn sinab ko‘rishga ruxsat berish uchun Finish tugmasini
+          bosing.
+        studio_full_sandbox: O‘z o‘yiningizni yarating. Tugatgandan so‘ng, do‘stlaringizga
+          telefonda o‘yiningizn sinab ko‘rishga ruxsat berish uchun Finish tugmasini
+          bosing.
+        studio_gumball_click_hello: Antonga "Tayyorlik, diqqat, start!" deb poyga
+          boshlanganligini e'lon qilishda yordam bera olasizmi? Dasturingizni sinab
+          ko‘rish uchun, Ishga tushirish tugmachasini bosgandan so‘ng Antonni bosishni
+          unutmang!
+        studio_gumball_free_play: O‘zingizning o‘yiningizni yoki hikoyangizni yarating.
+          Tugatgandan so‘ng, Do‘stlaringizga telefonda, planshetda yoki kompyuterda
+          o‘yiningizni sinab ko‘rishga ruxsat berish uchun Finish tugmasini bosing!
+        studio_gumball_hello1: Anais yangi do‘stlar orttirmoqchi. "Say" blokini ish
+          maydoniga tortib, ichiga "salom" so‘zini yozib, unga salomlashishga yordam
+          bera olasizmi?
+        studio_gumball_hello2: Darvin (aktyor 1) va uning ukasi Gumball (aktyor 2)
+          maktabga yo‘l olishmoqda. "actor say" blokini ikki marta ishlatib, bir-birlariga
+          salom berishga yordam bering.
+        studio_gumball_join_food_fight: Oziq-ovqat kurashiga qo‘shiling! Banan Jo
+          (aktyor 1) Antonga (aktyor 2) ovqat tashlashi uchun "aktyor buyumini o‘ngga
+          tashlash" buyrug‘idan foydalaning! Anton urishganda uning kayfiyatini g'azablangan
+          qilib qo‘ying.
+        studio_gumball_move_events: Darvin bayroq yig‘ish musobaqasida! Voqealarning
+          har biriga "ko‘chirish" blokini biriktirib, uning atrofida yugurishiga yordam
+          bering. Tugatgandan so‘ng, Ishga tushirish tugmachasini bosing va barcha
+          bayroqlarni yig‘ishga harakat qiling.
+        studio_gumball_move_to_actor: Gumball (1-aktyor) va Darvin (2-aktyor) dala
+          kuniga kechikishdi! Gumballga "move actor" bloki yordamida Darvin tomon
+          200 piksel pastga harakatlanishiga yordam bering. Keyin, aktyor bir-birlarini
+          topganda ovozni ijro etish uchun "when actor touches" blokini hodisasiga
+          ulang.
+        studio_gumball_move_to_flag: Banan Jou dala kuni o‘tkaziladigan musobaqada
+          g‘olib chiqmoqchi! Unga "siljitish" blokidan foydalangan holda so‘nggi 200
+          pikseldan o‘tishga yordam bering.
+        studio_gumball_repeat: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashga
+          imkon beradi. Gumballga chapga va o‘ngga qayta-qayta harakat qilib, poyga
+          uchun isinishga yordam beradigan bloklarni biriktira olasizmi?'
+        studio_gumball_sound_and_points: Biz Antonni (aktyor 2) chap va o‘ngga harakatlanishini
+          ta'minlaydigan kodning aksariyat qismini, shuningdek Banan Jo (aktyor 1)
+          ni ekran atrofida harakatlantirish kodini taqdim etdik. Siz kodni yakunlab,
+          "aktyor teginganda" hodisasiga bloklar qo‘sha olasizmi, bunda Banan Jo va
+          Anton to‘qnashganda ikkasi ham ovoz chiqarib, ball olishi kerak? O‘yinni
+          o‘ynash uchun Run tugmasini bosing.
+        studio_gumball_warn_food_fight: Darvin shunchaki ovqat kurashidan qutulib
+          qoldi! Orqa fonni "belgilar"ga o‘zgartiring va Darvinning tezligini tezlashtiring,
+          so‘ngra Run tugmachasini bosib, ogohlantirish uchun Penni-ga olib boring.
+        studio_iceage_click_hello: Sid bosilganda do‘stlarini chaqirishi uchun yordam
+          bera olasizmi? Ishga tushirgandan so‘ng uni bosishni unutmang.
+        studio_iceage_free_play: O‘z o‘yiningizni yoki hikoyangizni yaratish uchun
+          vaqt keldi! Tugatgandan so‘ng, Do‘stlaringizga telefonda, planshetda yoki
+          kompyuterda o‘yiningizni sinab ko‘rishga ruxsat berish uchun Finish tugmasini
+          bosing!
+        studio_iceage_hello1: Sid barchani yangi sarguzasht uchun yig‘ishni istaydi.
+          "Say" blokini ish maydoniga tortib, ichkariga "salom" so‘zini yozib, unga
+          "salom" aytishga yordam bera olasizmi?
+        studio_iceage_hello2: Menni (aktyor 1) Sidni topdi (aktyor 2) va uni sarguzashtga
+          taklif qilmoqchi. "actor say" blokini ikki marta ishlatib, bir-birlariga
+          salom berishga yordam bering.
+        studio_iceage_move_events: Skrat hanuzgacha yong‘oqlarni qidirmoqda! Hodisalarning
+          har biriga "siljitish" blokini biriktirib, har bir o‘q tugmachasi uchun
+          ishlash yo‘nalishini o‘zgartirib, uning atrofida aylanib yurishiga yordam
+          bering. So‘ng, Ishga tushirish tugmachasini bosing va barcha shoxli daraxtlarni
+          yig‘ishga harakat qiling.
+        studio_iceage_move_to_actor: Diego (aktyor 1) Menni (aktyor 2)ni qidirmoqda.
+          "Aktyorni siljitish" bloki yordamida Diegoga 200 piksel pastga Manniga o‘tishga
+          yordam bering. Keyin, aktyor bir-birlarini topganda ovozni ijro etish uchun
+          blokni "aktyor tegganda" hodisasiga ulang.
+        studio_iceage_move_to_flag: Skrat emanyong‘og‘ini qidirmoqda! Unga "siljitish"
+          blokidan foydalangan holda 200 pikselga o‘tishga yordam bering.
+        studio_iceage_repeat: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashga
+          imkon beradi. Siz Buvijonga chapga va o‘ngga bir necha marta harakat qilib
+          mashq qilishiga yordam beradigan bloklarni biriktira olasizmi?'
+        studio_iceage_sound_and_points: Biz Grannini chapga va o‘ngga harakatlantirish,
+          shuningdek Sidni ekran bo‘ylab harakatlantirish kodlarini taqdim etdik.
+          Siz Sid va Granni to‘qnashganda ikkalasi ham ovoz chiqarib, ball yig'adigan
+          qilib "aktyor tegganda" hodisaga bloklar qo‘sha olasizmi? O‘ynash uchun
+          Run tugmasini bosing.
+        studio_iceage_throw_hearts: Sid buvisi Granniga uni sevishini bildirgisi keladi.
+          Sidga (aktyor 1) Granni (aktyor 2) ga yurak otishini buyurish uchun "actor
+          throw" buyrug‘idan foydalaning! Yuraklar urilganda, Grannyning kayfiyatini
+          xursand qiling.
+        studio_iceage_warn_ice_age: Hamma tezroq harakat qilishi kerak, chunki muzlik
+          davri kelmoqda! Fonni muzli fonga o‘zgartiring va Sidni tezlashtiring, so‘ngra
+          Run tugmasini bosib, uni ogohlantirish uchun Diegoga olib boring.
+        studio_k1_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
+        studio_k1_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin biron
+          bir narsani aytishiga majbur qila olasizmi?
+        studio_k1_3: Ushbu itni mushuk oldiga olib borish uchun dastur yoza olasizmi?
+        studio_k1_4: Itni mushuk tomon harakatlantiring, u yerga etib borgach, mushuk
+          "salom" deb aytsin.
+        studio_k1_5: Sakkizoyoqni xursand qilish uchun blok qo‘sha olasizmi?
+        studio_k1_6: O‘zingizning hikoyangizni yarating! Mushuk va it bilan o‘ynang
+          va ularga har xil gaplarni ayttiring.
+        studio_playlab_1: Waddles "salom" demoqchi - unga yordam bera olasizmi?
+        studio_playlab_10: O‘z o‘yiningizni yarating. Tugatgandan so‘ng, do‘stlaringizga
+          telefonda o‘yiningizn sinab ko‘rishga ruxsat berish uchun Finish tugmasini
+          bosing.
+        studio_playlab_2: Cave Boy (aktyor 1) va Yasemin (aktyor 2) bir-birlariga
+          "salom" demoqchi. "Say" blokini ikki marta ishlatib, ularga yordam bera
+          olasizmi?
+        studio_playlab_3: Tennischi qiz bayroqqa yetishiga yordam bera olasizmi?
+        studio_playlab_4: Siz Tennischi bola (aktyor 1) Tennischi qiz (aktyor 2)ga
+          yetib borishi va u yerga yetib borganida ovoz ijro etishiga yordam bera
+          olasizmi?
+        studio_playlab_5: '"Spacebot"ga bosilganda u "yer yuzidagi odamlarga salom"
+          deyishga yordam bera olasizmi? Ishga tushirish tugmachasini bosgandan so‘ng,
+          uni bosishni unutmang'
+        studio_playlab_6: Yuqoriga / pastga / o‘ngga / chapga o‘q tugmachalari orqali
+          Jodugarga barcha sehrli o‘tli sharlarga yetishi uchun yordam bera olasizmi?
+        studio_playlab_7: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashiga
+          imkon beradi. Ushbu Sehrgarni bir necha marta o‘ngga va chapga siljitish
+          uchun bloklarni biriktira olasizmi?'
+        studio_playlab_8: Yakkashox sehrgarga duch kelganda ball to‘plash uchun blok
+          va ovozni chalish uchun blok qo‘sha olasizmi, keyin uni ball yig'guncha
+          o‘qlar bilan harakatga keltira olasizmi?
+        studio_playlab_9: Ushbu o‘zga sayyoralik bosqin uchun fonni o‘rnating va Spacebot-ga
+          tezligini o‘zgartirib, o‘zga sayyoralikga tezroq yetib borishiga yordam
+          bering. Keyin uni Spacebot-ga o‘tish uchun o‘q tugmachalari bilan harakatlantiring
+          va boshqalarni ogohlantiring
         turtle_1_1: Salom, men rassomman. Men barcha narsani chiza olishim uchun sen
           kod yozishing mumkin. Meni rasmdagi kulrang chiziqlar uztidan chizishim
           uchun bir nechta bloklarni ishlat.
+        turtle_1_10: 'Siz buni amalladingiz! Endi xohlagan narsangizni chizing. Ba''zi
+          qiziqarli g‘oyalar: tayoqcha, qorparchasi yoki spiral. Shuningdek, yangi
+          "kenglikni o‘rnatish" blokini sinab ko‘ring. Zavqlaning!'
         turtle_1_2: 'Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o‘zing
           yoqtirgan rangni tanla.'
         turtle_1_3: 3 ta blok ishlatib, to‘rtburchak yasang.
@@ -124,69 +546,13 @@ uz:
           safar har xil bo‘ladi.
         turtle_1_9: Aylana chizish uchun savol belgilarini qaysi raqam bilan almashtirishni
           aniqlay olasizmi?
-        turtle_1_10: 'Siz buni amalladingiz! Endi xohlagan narsangizni chizing. Ba''zi
-          qiziqarli g‘oyalar: tayoqcha, qorparchasi yoki spiral. Shuningdek, yangi
-          "kenglikni o‘rnatish" blokini sinab ko‘ring. Zavqlaning!'
-        turtle_4_1: 'Uchta blok bilan uchburchakni (qirralari 100 pikselli) chizishingiz
-          mumkinmi? Maslahat: "takrorlash" blokidan foydalaning.'
-        turtle_4_2: Ushbu uchburchaklarni chizish uchun dasturning o‘rtasiga "90 daraja
-          o‘ngga burilish" blokini qo‘shing.
-        turtle_4_3: Yaxshi, mana siz bitta uchburchak chizish uchun yozgan kodingiz.
-          Chiroyli gul yasash uchun "takrorlash" va "burilish" bloklarini qo‘sha olasizmi?
-        turtle_4_4: 'Mana, avvalgi jumboqdagi xuddi o‘sha kod, lekin har bir uchburchak
-          chizilganidan keyin atigi 36 darajaga burilgan. Buni necha marta takrorlash
-          kerak? (Maslahat: 360 daraja burilgandan so‘ng chizma to‘liq aylana bo‘ladi)'
-        turtle_4_5: 'Mana avvalgi jumboqdagi xuddi o‘sha kod, lekin burilishlarni
-          36 marta takrorlang. Burilishlar necha daraja bo‘lishi kerak? (Maslahat:
-          360 daraja burilgandan so‘ng chizma to‘liq aylana bo‘ladi)'
-        turtle_4_6: Faqat 3 ta blokdan foydalanib, qirralari 20 pikselli kvadrat chizishingiz
-          mumkinmi?
-        turtle_4_7: 'Bu yerda oxirgi jumboqdagi kvadrat chizish uchun kod. Narvon
-          singari 10 ta qo‘shni kvadratni chizish uchun uni takrorlay olasizmi? Maslahat:
-          sizga yana 2 ta blok kerak bo‘ladi.'
-        turtle_4_8: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun yana 2
-          ta blok qo‘sha olasizmi?
-        turtle_4_9: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun necha
-          daraja burish kerak? (Ehtimol, siz bir necha marta taxmin qilishingiz kerak)
-        turtle_4_10: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun necha
-          marta takrorlash kerak?
-        turtle_4_11: Turli naqshlar yasash uchun "burilish" va "takrorlash" bloklaridagi
-          raqamlarni o‘zgartirishga harakat qiling. Yoki xohlagan narsani chizish
-          uchun kodning qolgan qismini o‘zgartirib ko‘ring.
-        maze_karel_1_1: Salom, men fermerman. Fermer xo‘jaligimdagi dalani tekislash
-          uchun yordamingizga muhtojman va shundan so‘ng dala ekin ekishga tayyor
-          bo‘ladi!"  Loy yig‘ilgan uyumga o‘ting va uni olib tashlash uchun `remove`
-          bo‘lagidan foydalaning.
-        maze_karel_1_2: Keyin meni teshikka olib boring va `fill` bo‘lagidan foydalanib,
-          IKKITA belkurak bilan teshikni to‘ldiring.
-        maze_karel_1_3: Meni loy uyumiga oboring va necha marta belkurakda loyni olib
-          tashlashim kerakligini menga ayting, iloji boricha kamroq bloklardan foydalanib.
-        maze_karel_1_4: 'Menga to‘rtta loy uyumini olib tashlashga yordam bera olasizmi?
-          Maslahat: agar iloji bo‘lsa, takroriy blokdan foydalaning.'
-        maze_karel_1_5: 'Bu teshiklarning barchasini 5 ta belkurak loy bilan to‘ldirishga
-          yordam bering. Maslahat: "while" blokining ichiga "takrorlash" blokini qo‘yishingiz
-          mumkin.'
-        maze_karel_1_6: Iloji boricha kamroq bloklardan foydalanib, barcha uyumlarni
-          tozalang. "While" blokidagi ochiladigan menyuda yangi variantlar menga plitka
-          yoki teshik ustida turganligimni bildiradi.
-        maze_karel_1_7: Vau, chindan ham chuqur teshik topdim! Bunga qancha belkurak
-          loy kerakligini bilmayman. Siz uni yerga teng bo‘lguncha to‘ldiradigan dastur
-          yozishingiz mumkinmi?
-        maze_karel_1_8: Iloji boricha kamroq bloklardan foydalanib, maydonning oxiridagi
-          teshikni to‘ldirishga yordam bering.
-        maze_karel_1_9: 'Meni bu loy uyumlarini olib tashlashga majbur qiling. Iloji
-          boricha kamroq bloklardan foydalanishga harakat qiling. Maslahat: "while"
-          blokidan foydalanishga harakat qiling.'
-        maze_karel_1_10: Men kech qoldim, qorong‘i tushdi va plitkalar qanchalik katta
-          ekanligini aniqlay olmayman. Endi men blokda ishlatadigan barcha variantlarga
-          ega emasman. Meni maydon bo‘ylab olib boring va agar plitka bo‘lsa, uni
-          olib tashlang.
-        maze_karel_1_11: 'Tashqarida hali ham qorong‘i. Meni maydon bo‘ylab harakatlantiring.
-          Agar uyum bo‘lsa, uni olib tashlang va agar teshik bo‘lsa, uni to‘ldiring.
-          Maslahat: "agar" blokidagi variantlarning ochiladigan menyusidan foydalaning.'
         turtle_2_1: 'Salom. Men zombi rassomman. Men rasm chizishni yaxshi ko‘raman!
           Menga maxsus rangdagi kvadrat chizishga yordam bering. Muhim eslatma: sizda
           bir xil bloklar mavjud, ammo ular endi toifalarda joylashtirilgan.'
+        turtle_2_10: Turli spirallar bilan tajriba o‘tkazishga harakat qilish uchun
+          kod namunalari. Agar siz burilish miqdorini o‘zgartirsangiz nima bo‘ladi?
+          Yoki siklda tasodifiy rangni o‘rnatasizmi? O‘zingizga yoqqan narsani chizib
+          oling.
         turtle_2_2: Yangi bloklarni aniqlashga imkon beradigan funksiyalardan foydalanishga
           xush kelibsiz! Kichik 50x50 yashil kvadrat chizish uchun "Vazifalar" toifasida
           joylashgan yangi "kvadrat chizish" blokini sinab ko‘ring.
@@ -214,42 +580,13 @@ uz:
         turtle_2_9: Balandligi 110, 100, 90, 80 va 70 gacha bo‘lgan qor odamlar oilasini
           chizish uchun "for" siklidan foydalaning. Qor odamlari bir-biridan 60 piksel
           masofada joylashgan bo‘lishi kerak.
-        turtle_2_10: Turli spirallar bilan tajriba o‘tkazishga harakat qilish uchun
-          kod namunalari. Agar siz burilish miqdorini o‘zgartirsangiz nima bo‘ladi?
-          Yoki siklda tasodifiy rangni o‘rnatasizmi? O‘zingizga yoqqan narsani chizib
-          oling.
-        maze_karel_2_1: 'Menga barcha uyumlarni olib tashlashga va yerdagi barcha
-          teshiklarni to‘ldirishga yordam beradigan bloklardan foydalanishga harakat
-          qiling. Juda ko‘p bloklardan foydalanish o‘rniga sikldan foydalanishga harakat
-          qiling. Maslahat: boshqa siklning ichiga sikl qo‘yishingiz mumkin.'
-        maze_karel_2_2: Biz "to‘ldirish 5" deb nomlangan o‘z blokimizni aniqladik,
-          u endi funksiyalar toifasiga kiradi. Menga ushbu teshikni to‘ldirishga yordam
-          berish uchun undan foydalaning.
-        maze_karel_2_3: Menga barcha teshiklarni to‘ldirish uchun yangi "to‘ldirish
-          5" funksional blokidan foydalaning. Vazifalar toifasidan "to‘ldirish 5"
-          blokini olishingiz kerak bo‘ladi.
-        maze_karel_2_4: 7 belkurak loyni olib tashlaydigan yangi funksiyani aniqlang.
-          Keyin undan barcha uyumlarni olib tashlashga yordam beradigan dastur yozish
-          uchun foydalaning.
-        maze_karel_2_5: Uyumdan 6 ta belkurak loyni olib tashlaydigan yangi funksiya
-          yarating va undan barcha uyumlarni tekislashimga yordam berish uchun foydalaning.
-        maze_karel_2_6: Menga uyumni tekislash va teshikni to‘ldirishda yordam berish
-          uchun ikkita yangi funksiya - "to‘ldirish 8" va "olib tashlash 8"dan foydalaning.
-        maze_karel_2_7: Mening dalamda sigir bor! Menga sigirdan qochishga va uyumni
-          olib tashlashga yordam beradigan yangi funksiyani yozing. Barcha bloklaringizni
-          yangi funksiya ichiga qo‘ying.
-        maze_karel_2_8: Ushbu yangi funksiya - "sigirdan saqlaning va 1ni olib tashlang"dan
-          foydalaning, u menga barcha uyumlarni olib tashlashga yordam beradi.
-        maze_karel_2_9: Xo‘sh, bu yerda vertikal ustundagi 4 xil uyumni tozalaydigan
-          funksiya. Ushbu funksiyani sikl ichiga qo‘yishga harakat qiling, shunda
-          siz bir nechta yangi bloklardan foydalanib, barcha loy uyumlarini olib tashlaysiz.
-        maze_karel_2_10: Menga maydon bo‘ylab harakatlantiring va barcha uyumlarni
-          olib tashlashga va barcha teshiklarni to‘ldirishga yordam berish uchun ushbu
-          ikkita funksiyadan foydalaning.
         turtle_3_1: Ushbu jumboq sizga "kvadrat chizish" va "aylana chizish" funksiyalari
           qanday aniqlanganligini ko‘rsatadi. Funksiyani aniqlash uning bloklarini
           ishlatmaydi. Haqiqatan ham kvadrat chizish uchun "kvadrat chizish" blokini
           tortib olishingiz kerak.
+        turtle_3_10: Siz ko‘p narsalarni bilib oldingiz! Endi undan kerakli narsani
+          chizish uchun foydalaning. Yulduz yoki spiral yoki chiroyli qorparcha chizishga
+          harakat qiling.
         turtle_3_2: Misol uchun "kvadrat chizish" funksiyasidan foydalanib, "uchburchak
           chizish" funksiyasini yarating va undan foydalaning.
         turtle_3_3: 'Mushuklar atrofida uchburchak to‘siqlar va sigir atrofidagi to‘rtburchak
@@ -272,28 +609,32 @@ uz:
           funksiyadan foydalaning.'
         turtle_3_9: '"Uyni chizish" funksiyasini yordamsiz qayta tiklay olasizmi?
           Sinab ko‘ring va keyin bir qator uylarni chizib oling.'
-        turtle_3_10: Siz ko‘p narsalarni bilib oldingiz! Endi undan kerakli narsani
-          chizish uchun foydalaning. Yulduz yoki spiral yoki chiroyli qorparcha chizishga
-          harakat qiling.
-        maze_karel_debug_seq_1: Nosozliklarni tuzatishga xush kelibsiz! Mening kodim
-          to‘g'ri ishlamayapti. Siz dalamni tekislab, ekishga tayyor bo‘lishim uchun
-          muammoni aniqlab, uni tuzatib bera olasizmi?
-        maze_karel_debug_seq_2: Ushbu dasturda nima xato? Qanday qilib uni tuzatishingiz
-          kerak, shunda men bu uyumni olib tashlashim mumkin bo‘ladimi?
-        maze_karel_debug_repeat: Ushbu dasturni men uchun de-bug qilingki, mening
-          maydonim chiroyli va tekis bo‘lsin.
-        maze_karel_debug_while: Teshikni to‘ldirishimga yordam berish uchun ushbu
-          dasturni qanday o‘zgartirish kerak?
-        maze_karel_debug_if: Yordam bering! Mening maydonim butunlay tekis bo‘lishi
-          uchun dasturni tuzating.
-        maze_karel_debug_if_else: Ushbu dasturni shunday sozlangki, men barcha teshiklarni
-          to‘ldirib, barcha uyumlarni olib tashlay.
-        maze_karel_debug_function_1: Barcha uyumlarni olib tashlashim uchun ushbu
-          dasturda nimani o‘zgartirish kerak?
-        maze_karel_debug_function_2: Maydonimni tekislashim uchun ushbu dasturni sozlay
-          olasizmi?
-        maze_karel_debug_function_3: Ushbu dasturni shunday tahrirlangki, men maydonimdagi
-          barcha uyumlarni olib tashlay.
+        turtle_4_1: 'Uchta blok bilan uchburchakni (qirralari 100 pikselli) chizishingiz
+          mumkinmi? Maslahat: "takrorlash" blokidan foydalaning.'
+        turtle_4_10: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun necha
+          marta takrorlash kerak?
+        turtle_4_11: Turli naqshlar yasash uchun "burilish" va "takrorlash" bloklaridagi
+          raqamlarni o‘zgartirishga harakat qiling. Yoki xohlagan narsani chizish
+          uchun kodning qolgan qismini o‘zgartirib ko‘ring.
+        turtle_4_2: Ushbu uchburchaklarni chizish uchun dasturning o‘rtasiga "90 daraja
+          o‘ngga burilish" blokini qo‘shing.
+        turtle_4_3: Yaxshi, mana siz bitta uchburchak chizish uchun yozgan kodingiz.
+          Chiroyli gul yasash uchun "takrorlash" va "burilish" bloklarini qo‘sha olasizmi?
+        turtle_4_4: 'Mana, avvalgi jumboqdagi xuddi o‘sha kod, lekin har bir uchburchak
+          chizilganidan keyin atigi 36 darajaga burilgan. Buni necha marta takrorlash
+          kerak? (Maslahat: 360 daraja burilgandan so‘ng chizma to‘liq aylana bo‘ladi)'
+        turtle_4_5: 'Mana avvalgi jumboqdagi xuddi o‘sha kod, lekin burilishlarni
+          36 marta takrorlang. Burilishlar necha daraja bo‘lishi kerak? (Maslahat:
+          360 daraja burilgandan so‘ng chizma to‘liq aylana bo‘ladi)'
+        turtle_4_6: Faqat 3 ta blokdan foydalanib, qirralari 20 pikselli kvadrat chizishingiz
+          mumkinmi?
+        turtle_4_7: 'Bu yerda oxirgi jumboqdagi kvadrat chizish uchun kod. Narvon
+          singari 10 ta qo‘shni kvadratni chizish uchun uni takrorlay olasizmi? Maslahat:
+          sizga yana 2 ta blok kerak bo‘ladi.'
+        turtle_4_8: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun yana 2
+          ta blok qo‘sha olasizmi?
+        turtle_4_9: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun necha
+          daraja burish kerak? (Ehtimol, siz bir necha marta taxmin qilishingiz kerak)
         turtle_5_1: Ushbu dasturni ishlatib ko‘ring. Nima bo‘lishini ko‘rish uchun
           o‘zgarishlarni amalga osamaralig. Uning qanday ishlashini aniqlay olasizmi?
           Yoki uni o‘chirib tashlashingiz va butunlay boshqacha narsalar bilan almashtirishingiz
@@ -318,246 +659,183 @@ uz:
           o‘zgarishlarni amalga osamaralig. Uning qanday ishlashini aniqlay olasizmi?
           Yoki uni o‘chirib tashlashingiz va butunlay boshqacha narsalar bilan almashtirishingiz
           mumkin)
-        maze_3_1: Men o‘sha cho‘chqa oldiga borishim kerak! Ko‘chirish uchun bir necha
-          marta move() funksiyasini chaqirish kerak. Shunda men tuxumimni qaytarib
-          olishim mumkin bo‘ladi.
-        maze_3_2: Menga shunday dastur yozingki, men cho‘chqagacha yetib olay.
-        maze_3_3: Cho‘chqaga qanday borishim kerak? TNT qutisiga tushib ketmasligimga
-          ishonch hosil qiling!
-        maze_3_4: Voh! Meni TNT atrofida o‘tkazib, cho‘chqaga olib boradigan dastur
-          yozing.
-        Custom_builder: Siz yaratmoqchi bo‘lgan darajani chizish uchun bloklarni asboblar
-          qutisidan ish joyiga torting. Tayyor bo‘lgach, "Ishga tushirish" tugmasini
-          bosing.
-        jigsaw_1: Blokni bosing
-        jigsaw_2: Blokni mo‘ljalga tortib boring
-        jigsaw_3: Bloklarni tartibga solib rasm hosil qiling
-        jigsaw_4: Bloklarni tartibga solib rasm hosil qiling
-        jigsaw_5: Bloklarni tartibga solib rasm hosil qiling
-        jigsaw_6: Bloklarni tartibga solib rasm hosil qiling
-        jigsaw_7: Bloklarni tartibga solib rasm hosil qiling
-        jigsaw_8: Bloklarni tartibga solib rasm hosil qiling
-        jigsaw_9: Bloklarni tartibga solib rasm hosil qiling
-        jigsaw_10: Bloklarni tartibga solib rasm hosil qiling
-        jigsaw_11: Ushbu bloklarni raqamlar bo‘yicha tartibda joylashtiring
-        jigsaw_12: Ushbu bloklarni raqamlar bo‘yicha tartibda joylashtiring
-        jigsaw_13: Jumboqni tuzating!
-        mazestep_1: Bu yerda labirint qadami tavsifi
-        mazestep_2: Bu yerda labirint qadami tavsifi
-        mazestep_3: Bu yerda labirint qadami tavsifi
-        mazestep_4: Bu yerda labirint qadami tavsifi
-        mazestep_5: Bu yerda labirint qadami tavsifi
-        studio_c2_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
-        studio_c2_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin biron
-          bir narsani aytishiga majbur qila olasizmi?
-        studio_c2_3: Ushbu itni mushuk oldiga olib borish uchun dastur yoza olasizmi?
-        studio_c2_4: Siz itni mushukka olib boradigan va it unga yetib borganida mushuk
-          "salom" deb aytadigan dastur yoza olasizmi?
-        studio_c2_5: Sakkizoyoq bosilganda "salom" deyish uchun dastur yoza olasizmi?
-        studio_c2_6: Endi Waddles-ni barcha maqsadlarga erishish uchun yuqoriga /
-          pastga / chapga / o‘ngga tugmalari bilan harakatlantiradigan dastur yoza
-          olasizmi?
-        studio_c2_7: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashiga imkon
-          beradi. Ushbu dinozavrni bir necha marta yuqoriga va pastga siljitish uchun
-          bloklarni biriktira olasizmi?'
-        studio_c2_8: Waddles dinozavrga duch kelsa "Ouch!" deb aytishi va "urish"
-          ovozini chiqarishi uchun uni o‘qlar bilan harakatlantira olasizmi?
-        studio_c2_9: Waddles sakkizoyo‘qqa duch kelganda ball to‘plash uchun blok
-          qo‘sha olasizmi, keyin uni ball yig'guncha o‘qlar bilan harakatga keltira
-          olasizmi?
-        studio_c2_10: Fonni va Waddles tezligini o‘zgartirish uchun bloklar qo‘sha
-          olasizmi va keyin uni ball yig'guncha o‘qlar bilan harakatga keltira olasizmi?
-        studio_c2_11: O‘z hikoyangizni yarating. Tugatgandan so‘ng, do‘stlaringizga
-          telefonda hikoyangizni sinab ko‘rishga ruxsat berish uchun Finish tugmasini
-          bosing.
-        studio_c3_story_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
-        studio_c3_story_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin
-          biron bir narsani aytishiga majbur qila olasizmi?
-        studio_c3_story_3: Ushbu itni mushuk oldiga olib borish uchun dastur yoza
-          olasizmi?
-        studio_c3_story_4: Siz itni mushukka olib boradigan va it unga yetib borganida
-          mushuk "salom" deb aytadigan dastur yoza olasizmi?
-        studio_c3_story_5: Sakkizoyoqni xursand qilish uchun blok qo‘sha olasizmi?
-        studio_c3_story_6: O‘z hikoyangizni yarating. Tugatgandan so‘ng, do‘stlaringizga
-          telefonda hikoyangizni sinab ko‘rishga ruxsat berish uchun Finish tugmasini
-          bosing.
-        studio_c3_game_1: Sakkizoyoq bosilganda "salom" deyish uchun dastur yoza olasizmi?
-        studio_c3_game_2: Endi Waddles-ni barcha maqsadlarga erishish uchun yuqoriga
-          / pastga / chapga / o‘ngga tugmalari bilan harakatlantiradigan dastur yoza
-          olasizmi?
-        studio_c3_game_3: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashiga
-          imkon beradi. Ushbu dinozavrni bir necha marta yuqoriga va pastga siljitish
-          uchun bloklarni biriktira olasizmi?'
-        studio_c3_game_4: Waddles dinozavrga duch kelsa "Ouch!" deb aytishi va "urish"
-          ovozini chiqarishi uchun uni o‘qlar bilan harakatlantira olasizmi?
-        studio_c3_game_5: Waddles sakkizoyo‘qqa duch kelganda ball to‘plash uchun
-          blok qo‘sha olasizmi, keyin uni ball yig'guncha o‘qlar bilan harakatga keltira
-          olasizmi?
-        studio_c3_game_6: Fonni va Waddles tezligini o‘zgartirish uchun bloklar qo‘sha
-          olasizmi va keyin uni ball yig'guncha o‘qlar bilan harakatga keltira olasizmi?
-        studio_c3_game_7: O‘z o‘yiningizni yarating. Tugatgandan so‘ng, do‘stlaringizga
-          telefonda o‘yiningizn sinab ko‘rishga ruxsat berish uchun Finish tugmasini
-          bosing.
-        studio_playlab_1: Waddles "salom" demoqchi - unga yordam bera olasizmi?
-        studio_playlab_2: Cave Boy (aktyor 1) va Yasemin (aktyor 2) bir-birlariga
-          "salom" demoqchi. "Say" blokini ikki marta ishlatib, ularga yordam bera
-          olasizmi?
-        studio_playlab_3: Tennischi qiz bayroqqa yetishiga yordam bera olasizmi?
-        studio_playlab_4: Siz Tennischi bola (aktyor 1) Tennischi qiz (aktyor 2)ga
-          yetib borishi va u yerga yetib borganida ovoz ijro etishiga yordam bera
-          olasizmi?
-        studio_playlab_5: '"Spacebot"ga bosilganda u "yer yuzidagi odamlarga salom"
-          deyishga yordam bera olasizmi? Ishga tushirish tugmachasini bosgandan so‘ng,
-          uni bosishni unutmang'
-        studio_playlab_6: Yuqoriga / pastga / o‘ngga / chapga o‘q tugmachalari orqali
-          Jodugarga barcha sehrli o‘tli sharlarga yetishi uchun yordam bera olasizmi?
-        studio_playlab_7: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashiga
-          imkon beradi. Ushbu Sehrgarni bir necha marta o‘ngga va chapga siljitish
-          uchun bloklarni biriktira olasizmi?'
-        studio_playlab_8: Yakkashox sehrgarga duch kelganda ball to‘plash uchun blok
-          va ovozni chalish uchun blok qo‘sha olasizmi, keyin uni ball yig'guncha
-          o‘qlar bilan harakatga keltira olasizmi?
-        studio_playlab_9: Ushbu o‘zga sayyoralik bosqin uchun fonni o‘rnating va Spacebot-ga
-          tezligini o‘zgartirib, o‘zga sayyoralikga tezroq yetib borishiga yordam
-          bering. Keyin uni Spacebot-ga o‘tish uchun o‘q tugmachalari bilan harakatlantiring
-          va boshqalarni ogohlantiring
-        studio_playlab_10: O‘z o‘yiningizni yarating. Tugatgandan so‘ng, do‘stlaringizga
-          telefonda o‘yiningizn sinab ko‘rishga ruxsat berish uchun Finish tugmasini
-          bosing.
-        studio_iceage_hello1: Sid barchani yangi sarguzasht uchun yig‘ishni istaydi.
-          "Say" blokini ish maydoniga tortib, ichkariga "salom" so‘zini yozib, unga
-          "salom" aytishga yordam bera olasizmi?
-        studio_iceage_hello2: Menni (aktyor 1) Sidni topdi (aktyor 2) va uni sarguzashtga
-          taklif qilmoqchi. "actor say" blokini ikki marta ishlatib, bir-birlariga
-          salom berishga yordam bering.
-        studio_iceage_move_to_flag: Skrat emanyong‘og‘ini qidirmoqda! Unga "siljitish"
-          blokidan foydalangan holda 200 pikselga o‘tishga yordam bering.
-        studio_iceage_move_to_actor: Diego (aktyor 1) Menni (aktyor 2)ni qidirmoqda.
-          "Aktyorni siljitish" bloki yordamida Diegoga 200 piksel pastga Manniga o‘tishga
-          yordam bering. Keyin, aktyor bir-birlarini topganda ovozni ijro etish uchun
-          blokni "aktyor tegganda" hodisasiga ulang.
-        studio_iceage_repeat: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashga
-          imkon beradi. Siz Buvijonga chapga va o‘ngga bir necha marta harakat qilib
-          mashq qilishiga yordam beradigan bloklarni biriktira olasizmi?'
-        studio_iceage_click_hello: Sid bosilganda do‘stlarini chaqirishi uchun yordam
-          bera olasizmi? Ishga tushirgandan so‘ng uni bosishni unutmang.
-        studio_iceage_move_events: Skrat hanuzgacha yong‘oqlarni qidirmoqda! Hodisalarning
-          har biriga "siljitish" blokini biriktirib, har bir o‘q tugmachasi uchun
-          ishlash yo‘nalishini o‘zgartirib, uning atrofida aylanib yurishiga yordam
-          bering. So‘ng, Ishga tushirish tugmachasini bosing va barcha shoxli daraxtlarni
-          yig‘ishga harakat qiling.
-        studio_iceage_sound_and_points: Biz Grannini chapga va o‘ngga harakatlantirish,
-          shuningdek Sidni ekran bo‘ylab harakatlantirish kodlarini taqdim etdik.
-          Siz Sid va Granni to‘qnashganda ikkalasi ham ovoz chiqarib, ball yig'adigan
-          qilib "aktyor tegganda" hodisaga bloklar qo‘sha olasizmi? O‘ynash uchun
-          Run tugmasini bosing.
-        studio_iceage_warn_ice_age: Hamma tezroq harakat qilishi kerak, chunki muzlik
-          davri kelmoqda! Fonni muzli fonga o‘zgartiring va Sidni tezlashtiring, so‘ngra
-          Run tugmasini bosib, uni ogohlantirish uchun Diegoga olib boring.
-        studio_iceage_throw_hearts: Sid buvisi Granniga uni sevishini bildirgisi keladi.
-          Sidga (aktyor 1) Granni (aktyor 2) ga yurak otishini buyurish uchun "actor
-          throw" buyrug‘idan foydalaning! Yuraklar urilganda, Grannyning kayfiyatini
-          xursand qiling.
-        studio_iceage_free_play: O‘z o‘yiningizni yoki hikoyangizni yaratish uchun
-          vaqt keldi! Tugatgandan so‘ng, Do‘stlaringizga telefonda, planshetda yoki
-          kompyuterda o‘yiningizni sinab ko‘rishga ruxsat berish uchun Finish tugmasini
-          bosing!
-        studio_gumball_hello1: Anais yangi do‘stlar orttirmoqchi. "Say" blokini ish
-          maydoniga tortib, ichiga "salom" so‘zini yozib, unga salomlashishga yordam
-          bera olasizmi?
-        studio_gumball_hello2: Darvin (aktyor 1) va uning ukasi Gumball (aktyor 2)
-          maktabga yo‘l olishmoqda. "actor say" blokini ikki marta ishlatib, bir-birlariga
-          salom berishga yordam bering.
-        studio_gumball_move_to_flag: Banan Jou dala kuni o‘tkaziladigan musobaqada
-          g‘olib chiqmoqchi! Unga "siljitish" blokidan foydalangan holda so‘nggi 200
-          pikseldan o‘tishga yordam bering.
-        studio_gumball_move_to_actor: Gumball (1-aktyor) va Darvin (2-aktyor) dala
-          kuniga kechikishdi! Gumballga "move actor" bloki yordamida Darvin tomon
-          200 piksel pastga harakatlanishiga yordam bering. Keyin, aktyor bir-birlarini
-          topganda ovozni ijro etish uchun "when actor touches" blokini hodisasiga
-          ulang.
-        studio_gumball_repeat: '"Abadiy takrorlash" bloki kodni doimiy ravishda ishlashga
-          imkon beradi. Gumballga chapga va o‘ngga qayta-qayta harakat qilib, poyga
-          uchun isinishga yordam beradigan bloklarni biriktira olasizmi?'
-        studio_gumball_click_hello: Antonga "Tayyorlik, diqqat, start!" deb poyga
-          boshlanganligini e'lon qilishda yordam bera olasizmi? Dasturingizni sinab
-          ko‘rish uchun, Ishga tushirish tugmachasini bosgandan so‘ng Antonni bosishni
-          unutmang!
-        studio_gumball_move_events: Darvin bayroq yig‘ish musobaqasida! Voqealarning
-          har biriga "ko‘chirish" blokini biriktirib, uning atrofida yugurishiga yordam
-          bering. Tugatgandan so‘ng, Ishga tushirish tugmachasini bosing va barcha
-          bayroqlarni yig‘ishga harakat qiling.
-        studio_gumball_sound_and_points: Biz Antonni (aktyor 2) chap va o‘ngga harakatlanishini
-          ta'minlaydigan kodning aksariyat qismini, shuningdek Banan Jo (aktyor 1)
-          ni ekran atrofida harakatlantirish kodini taqdim etdik. Siz kodni yakunlab,
-          "aktyor teginganda" hodisasiga bloklar qo‘sha olasizmi, bunda Banan Jo va
-          Anton to‘qnashganda ikkasi ham ovoz chiqarib, ball olishi kerak? O‘yinni
-          o‘ynash uchun Run tugmasini bosing.
-        studio_gumball_warn_food_fight: Darvin shunchaki ovqat kurashidan qutulib
-          qoldi! Orqa fonni "belgilar"ga o‘zgartiring va Darvinning tezligini tezlashtiring,
-          so‘ngra Run tugmachasini bosib, ogohlantirish uchun Penni-ga olib boring.
-        studio_gumball_join_food_fight: Oziq-ovqat kurashiga qo‘shiling! Banan Jo
-          (aktyor 1) Antonga (aktyor 2) ovqat tashlashi uchun "aktyor buyumini o‘ngga
-          tashlash" buyrug‘idan foydalaning! Anton urishganda uning kayfiyatini g'azablangan
-          qilib qo‘ying.
-        studio_gumball_free_play: O‘zingizning o‘yiningizni yoki hikoyangizni yarating.
-          Tugatgandan so‘ng, Do‘stlaringizga telefonda, planshetda yoki kompyuterda
-          o‘yiningizni sinab ko‘rishga ruxsat berish uchun Finish tugmasini bosing!
-        studio_full_sandbox: O‘z o‘yiningizni yarating. Tugatgandan so‘ng, do‘stlaringizga
-          telefonda o‘yiningizn sinab ko‘rishga ruxsat berish uchun Finish tugmasini
-          bosing.
-        studio_k1_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
-        studio_k1_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin biron
-          bir narsani aytishiga majbur qila olasizmi?
-        studio_k1_3: Ushbu itni mushuk oldiga olib borish uchun dastur yoza olasizmi?
-        studio_k1_4: Itni mushuk tomon harakatlantiring, u yerga etib borgach, mushuk
-          "salom" deb aytsin.
-        studio_k1_5: Sakkizoyoqni xursand qilish uchun blok qo‘sha olasizmi?
-        studio_k1_6: O‘zingizning hikoyangizni yarating! Mushuk va it bilan o‘ynang
-          va ularga har xil gaplarni ayttiring.
-        maze_wordsearch_k_1: SHARQ so‘zini yozish uchun meni harakatlantiring
-        maze_wordsearch_k_2: JANUB so‘zini yozish uchun meni harakatlantiring
-        maze_wordsearch_k_3: G‘ARB so‘zini yozish uchun meni harakatlantiring
-        maze_wordsearch_k_4: SHIMOL so‘zini yozish uchun meni harakatlantiring
-        maze_wordsearch_k_6: JUMP so‘zini yozish uchun meni Sharqqa, keyin Janubga
-          ko‘chiring
-        maze_wordsearch_k_9: CODE so‘zini yozish uchun meni bir tomonga, keyin boshqasiga
-          harakatlantiring
-        maze_wordsearch_k_13: DEBUG so‘zini yozish uchun meni bir tomonga, keyin boshqasiga
-          harakatlantiring
-        maze_wordsearch_k_15: ABOVE so‘zini yozish uchun meni bir tomonga, keyin boshqasiga
-          harakatlantiring
-        maze_wordsearch_k_16: BELOW so‘zini yozish uchun meni bir tomonga, keyin boshqasiga
-          harakatlantiring
-        maze_wordsearch_k_20: Bu sinov! STORY so‘zini yozish uchun meni bir tomonga,
-          keyin boshqasiga harakatlantiring
-        applab_ec_simple: Asboblar qutisidagi bloklardan foydalanib, o‘z ilovangizni
-          yarating.
-        turtle_ec_1_2: 'Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o‘zing
-          yoqtirgan rangni tanla.'
         turtle_ec_1_10: 'Siz buni amalladingiz! Endi xohlagan narsangizni chizing.
           Ba''zi qiziqarli g‘oyalar: tayoqcha, qorparchasi yoki spiral. Shuningdek,
           yangi "penWidth" blokini sinab ko‘ring. Zavqlaning!'
-        studio_ec_sandbox: O‘z o‘yiningizni yarating. Tugatgandan so‘ng, do‘stlaringizga
-          telefonda o‘yiningizn sinab ko‘rishga ruxsat berish uchun Finish tugmasini
-          bosing.
+        turtle_ec_1_2: 'Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o‘zing
+          yoqtirgan rangni tanla.'
+    trophy:
+      name:
+        Bronze: Bronza
+        Gold: Oltin
+        Silver: Kumush
     video:
       name:
-        maze_intro: Labirint. Kirish
-        artist_intro: Rassom. Kirish
-        farmer_intro: Fermer. Kirish
-        flappy_intro: Flappy. Kirish
-        loop_times: Marta takrorlash blok
-        loop_until: "-gacha takrorlash blok"
-        if: Agar bloki
-        if_else: If/else bloki
-        if_else_scrat: If/else bloki
-        function: Funksiyalar
-        loop_while: While (...guncha) bloki
-        loop_for: Sanovchi blok
-        parameters: Funksiyalar (parameterlari bilan)
-        hoc_wrapup: Dasturlash soatini yakunlash
+        C1_artist_intro: Rassom. Kirish
+        C1_bee_level_intro: Asalari darajalari. Kirish
+        C1_bee_loops: Asalari. Sikllar
+        C1_bigevent_unplugged: Katta hodisa
+        C1_building_foundation: Poydevor qurish
+        C1_getting_loopy: Sikllashtirish
+        C1_going_places_safely: Joylarga xavfsiz borish
+        C1_happy_maps_unplugged: Xursand Xaritalar
+        C1_maze_debugging: 'Labirint: Debugging'
+        C1_maze_intro_sequencing: Labirint ketma-ketliklari. Kirish
+        C1_maze_loops: Labirint. Sikllar
+        C1_moveitmoveit_unplugged: Move It, Move It (Harakatlan)
+        C1_pair_programming: Juftlikda dasturlash
+        C1_planting_seed: Urug‘ ekish
+        C1_playlab_storytelling: Play Lab - hikoya yarating
+        C1_spelling_bee_intro: Talaffuz qiluvchi asalari. Kirish
+        C1_zuck_repeat_loop: Labirint. Sikllar
+        C2_artist_debugging: Rassom. Debugging
+        C2_artist_intro: Rassom. Kirish
+        C2_artist_loops: Rassom. Sikllar
+        C2_bee_conditionals: Asalari. Shartli bayonotlar
+        C2_bee_debugging: Asalari. Debugging
+        C2_bee_loops: Asalari. Sikllar
+        C2_binary_bracelets: Ikkilik bilakuzuklar
+        C2_conditionals_with_cards: Shartli bayonotlar
+        C2_digital_footprint: Raqamli izlaringiz
+        C2_digital_footprint_v2: Raqamli izlaringiz
+        C2_graph_paper: Katakchali varaqda dasturlash
+        C2_maze_intro: Labirint. Kirish
+        C2_paper_airplanes: Qog‘oz Samolyotlar
+        C2_playlab_createstory: Play Lab - hikoya yarating
+        C2_relay_programming: Estafetali dasturlash
+        C2_zuck_repeat_loop: Labirint. Sikllar
+        C3_artist_functions: Rassom. Funksiyalar
+        C3_artist_intro: Rassom. Kirish
+        C3_artist_nested_loops: Ichma-ich sikllar
+        C3_bee_conditionals: Asalari. Shartli bayonotlar
+        C3_bee_debugging: Asalari. Debugging
+        C3_bee_functions: Asalari. Funksiyalar
+        C3_bee_nested_loops: Ichma-ich sikllar
+        C3_bounce: Sakrash
+        C3_computational_thinking: Dasturiy fikrlash
+        C3_crowdsourcing: Kraudsorsing
+        C3_dice_race: Dice Race - Shashqoltoshli poyga
+        C3_farmer_while: While sikllari
+        C3_functional_suncatchers: Funksional "quyosh ovchilari"
+        C3_internet: Internet
+        C3_maze_conditionals: Labirint. Shartli bayonotlar
+        C3_maze_level_4: Labirint. Sikllar
+        C3_playlab_create_game: Play Lab - hikoya yarating
+        C3_songwriting_with_parameters: Parametrlar bilan qo‘shiq yozish
+        C4_bee_conditional: Asalari. Shartli bayonotlar
+        C4_conditionals: Shartli bayonotlar
+        C4_for_loops: For sikllari
+        C4_for_loops_bee: For sikllari
+        C4_for_loops_no_bee: For sikllari
+        C4_function_create: Funksiyalar yaratish
+        C4_function_edit: Funksiyalarni tahrirlash
+        C4_function_parameters: Funksiyalar (parameterlari bilan)
+        C4_intro: Kirish
+        C4_loops_zombie: Sikllar
+        C4_math_artist: Rassomni matematika bilan dasturlash
+        C4_unplugged_algorithms: Tangramlar bilan Algoritmlar
+        C4_unplugged_binary: Binarli
+        C4_unplugged_forloops: For sikllari
+        C4_unplugged_madlibs: '"Mad Glibs" o‘yini'
+        C4_unplugged_parameters: Parametrlar bilan qo‘shiq yozish
+        C4_unplugged_variables: Konvertlardagi o‘zgaruvchilar
+        C4_variables_artist: O‘zgaruvchilar - Rassom
+        C4_variables_playlab: O‘zgaruvchilar - Play Lab
+        CDEF_Video_SpritesInAction: Spraytlar amalda
+        CSA-PL-1d-arrays-new-values: 1D massivlarda qiymatlarni kiritish
+        CSA-PL-Printing-in-Java: Java-da chop etish
+        CSA-PL-conditionals: Java-da shartli bayonotlar
+        CSA-PL-debugging-22: Java laboratoriyasida disk raskadrovka
+        CSA-PL-debugging-temp: Java laboratoriyasida nosozliklarni tuzatishga kirish
+          - temp
+        CSA-PL-first-program: Java-da dastur yozish
+        CSA-PL-for-loops: Java-da looplar uchun
+        CSA-PL-intro-to-arrays: Bir o'lchovli (1D) massivlar
+        CSA-PL-intro-to-java-lab: Java laboratoriyasi asoslari
+        CSA-PL-multi-selection-statements: Ko'p tanlovli bayonotlar
+        CSA-PL-two-way-selection: Ikki tomonlama tanlov
+        CSA-PL-variables: Java-da o'zgaruvchilar yaratish
+        CSD_Unit6_InteractiveArtExemplar: Interaktiv san'at namunalari
+        CSD_u6_variables_part1: 'CSD: O''zgaruvchilar'
+        CSF-Teaching-Problem-Solving: CSF o‘qitish muammolarini hal qilish
+        CSF_EF_cs_matters: Kompyuter fanlari ahamiyatli
+        CSF_Going_Places_Safely: Mening onlayn qo‘shnilarim
+        CSF_Power_of_Words: So‘zning kuchi
+        CSF_SpriteLabIntro_CDEF: Bu Sprite Lab
+        CSF_SpriteLab_Intro_v2: Sprite laboratoriyasi bilan tanishish
+        CSF_SpriteLab_SpritesInAction_CDEF: Spraytlar amalda
+        CSF_SpriteLab_SpritesInAction_v2: Spraytlar amalda
+        CSF_Spritelab_MakeSprite_CDEF: Sprite Lab-da sprayt qanday yaratiladi
+        CSF_Spritelab_MakeSprite_v2: Sprite qanday qilinadi
+        CSF_StarWars_ProjectIntro: Star Wars loyihasiga kirish
+        CSF_Super_Digital_Citizen: Super Raqamli Fuqarolik
+        CSF_a_b_artist_loops: Rassom bilan sikllar
+        CSF_artist_angles: Rassom bilan burchaklar
+        CSF_bb8_loops_C-F: BB-8 bilan sikllar
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_collector_k1_blocks: 'CS asoslari: Kollektor'
+        CSF_collector_repeat_loops: Kollektor. Takroriy sikllar
+        CSF_collector_text_blocks: 'CS asoslari: Kollektor'
+        CSF_create_functions: Funksiyalar yaratish
+        CSF_debugging_k1_blocks: Nosozliklarni bartaraf etish (Debugging)
+        CSF_debugging_text_blocks: Nosozliklarni bartaraf etish (Debugging)
+        CSF_harvester_loops_K1: Terimchi (Harvester) bilan sikllar
+        CSF_harvester_skinOverview_K-1: Terimchi (Harvester)
+        CSF_if_allskins: If bloki
+        CSF_ifelse_allskins: If/Else bloklaridan foydalanish
+        CSF_ifelseifelse_allskins: If/ElseIf/Else bloklaridan foydalanish
+        CSF_loops_AB: Sikllar
+        CSF_maze_intro_k1_blocks: Code Studio. Kirish
+        CSF_maze_intro_text_blocks: Code Studio. Kirish
+        CSF_my_robotic_friends: My Robotic Friends
+        CSF_scrat_loops_CF: Muz davridagi sikllar
+        CSF_scrat_loops_K1: Muz davridagi sikllar
+        CSF_skinOverview_Harvester: Terimchi (Harvester)
+        CSF_stevie_big_project: Stivi va Katta loyiha
+        CSF_unspotted_bugs: Belgilanmagan baglar
+        CSF_zuck_loops_short: '"Repeat" sikllari'
+        CS_Changing_Everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
+        Getting_Started_BasicFeatures: Code.org ning asosiy xususiyatlari
+        Gettting_Started_ClassSection: Sinf bo'limini yaratish
+        Gettting_Started_Progress: Taraqqiyot, fikr va baholash
+        Gettting_Started_StudentExperience: Talabalar tajribasi
+        MC_2018_loops: 'Minecraft: Voyage Aquatic Repeat Until (...gacha takrorlash)'
+        PL-Video-21: Code.org professional ta'limiga xush kelibsiz!
+        PL_CSD_CircuitPlayground_Overview: O'chirish maydonchasi haqida umumiy ma'lumot
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: O'chirish maydonchasi birligi
+          haqida umumiy ma'lumot
+        PL_CSD_CircuitPlayground_Setup: O'chirish Playground Setup
+        PL_CSD_MicroBit_Intro: 'Mikrofonga kirish: bit'
+        PL_CSD_TeacherTips_Advise: O'qituvchilarga maslahatlar - yangi o'qituvchilarga
+          maslahat
+        PL_CSD_TeacherTips_Debugging: O'qituvchi uchun maslahatlar - disk raskadrovka
+        PL_CSD_TeacherTips_IntroToCSD: O'qituvchi uchun maslahatlar - CS kashfiyotlariga
+          kirish
+        PL_CSD_TeacherTips_LeadLearner: O'qituvchi uchun maslahatlar - etakchi o'quvchi
+        PL_CSD_TeacherTips_PairProgramming: O'qituvchi uchun maslahatlar - juftlik
+          dasturlash
+        PL_CSD_TeacherTips_ProblemSolvingProcess: O'qituvchi maslahatlari - muammolarni
+          hal qilish jarayoni
+        PL_CSD_Unit4_AppTesting: Qog'oz prototipini sinovdan o'tkazish
+        PL_CSP_EIPMOverview: EIPM darslari bo'yicha qo'llanma
+        PL_CSP_TeacherTips_APExam: 'O''qituvchi maslahatlari: AP imtihoniga tayyorgarlik'
+        PL_CSP_TeacherTips_Advice: 'O''qituvchi uchun maslahatlar: Yangi CS o''qituvchilariga
+          maslahat'
+        PL_CSP_TeacherTips_Debugging: 'O''qituvchi maslahatlari: disk raskadrovka
+          bo''yicha yordam'
+        PL_CSP_TeacherTips_EIPM: 'O''qituvchi uchun maslahatlar: EIPM jarayoni'
+        PL_CSP_TeacherTips_IntroToCSP: 'O''qituvchi uchun maslahatlar: CS tamoyillariga
+          kirish'
+        PL_CSP_TeacherTips_LeadLearner: 'O''qituvchi maslahatlari: Qanday qilib etakchi
+          o''quvchi bo''lish kerak'
+        PL_CS_Journeys_Overview: CS sayohatlari
+        PL_Equity_in_CS_Education: CS ta'limida kapital
+        PL_overview_CSD: Kompyuter fanlari kashfiyotlari nima?
+        PL_overview_CSP: Kompyuter fanlari tamoyillari nima?
         Unplug1: CS nima?
+        Unplug10: Internet
+        Unplug11: Yakun
         Unplug2: Dasturiy fikrlash
         Unplug3: Katakchali varaqda dasturlash
         Unplug4: Algoritmlar
@@ -566,166 +844,210 @@ uz:
         Unplug7: Qo'shiq yozish
         Unplug8: Abstraksiya
         Unplug9: Estafetali dasturlash
-        Unplug10: Internet
-        Unplug11: Yakun
-        C1_happy_maps_unplugged: Xursand Xaritalar
-        C1_moveitmoveit_unplugged: Move It, Move It (Harakatlan)
-        C1_bigevent_unplugged: Katta hodisa
-        C1_getting_loopy: Sikllashtirish
-        C1_pair_programming: Juftlikda dasturlash
-        C1_maze_intro_sequencing: Labirint ketma-ketliklari. Kirish
-        C1_maze_debugging: 'Labirint: Debugging'
-        C1_bee_level_intro: Asalari darajalari. Kirish
-        C1_artist_intro: Rassom. Kirish
-        C1_spelling_bee_intro: Talaffuz qiluvchi asalari. Kirish
-        C1_zuck_repeat_loop: Labirint. Sikllar
-        C1_bee_loops: Asalari. Sikllar
-        C1_maze_loops: Labirint. Sikllar
-        C1_playlab_storytelling: Play Lab - hikoya yarating
-        C1_planting_seed: Urug‘ ekish
-        C1_building_foundation: Poydevor qurish
-        C1_going_places_safely: Joylarga xavfsiz borish
-        C2_maze_intro: Labirint. Kirish
-        C2_artist_intro: Rassom. Kirish
-        C2_zuck_repeat_loop: Labirint. Sikllar
-        C2_artist_loops: Rassom. Sikllar
-        C2_artist_debugging: Rassom. Debugging
-        C2_bee_loops: Asalari. Sikllar
-        C2_bee_debugging: Asalari. Debugging
-        C2_bee_conditionals: Asalari. Shartli bayonotlar
-        C2_playlab_createstory: Play Lab - hikoya yarating
-        C2_graph_paper: Katakchali varaqda dasturlash
-        C2_conditionals_with_cards: Shartli bayonotlar
-        C2_binary_bracelets: Ikkilik bilakuzuklar
-        C2_relay_programming: Estafetali dasturlash
-        C2_paper_airplanes: Qog‘oz Samolyotlar
-        C2_digital_footprint: Raqamli izlaringiz
-        C2_digital_footprint_v2: Raqamli izlaringiz
-        C3_maze_level_4: Labirint. Sikllar
-        C3_artist_intro: Rassom. Kirish
-        C3_artist_functions: Rassom. Funksiyalar
-        C3_bee_functions: Asalari. Funksiyalar
-        C3_bee_conditionals: Asalari. Shartli bayonotlar
-        C3_maze_conditionals: Labirint. Shartli bayonotlar
-        C3_artist_nested_loops: Ichma-ich sikllar
-        C3_farmer_while: While sikllari
-        C3_bee_nested_loops: Ichma-ich sikllar
-        C3_bee_debugging: Asalari. Debugging
-        C3_bounce: Sakrash
-        C3_playlab_create_game: Play Lab - hikoya yarating
-        C3_computational_thinking: Dasturiy fikrlash
-        C3_dice_race: Dice Race - Shashqoltoshli poyga
-        C3_internet: Internet
-        C3_crowdsourcing: Kraudsorsing
-        C3_functional_suncatchers: Funksional "quyosh ovchilari"
-        C3_songwriting_with_parameters: Parametrlar bilan qo‘shiq yozish
-        C4_intro: Kirish
-        C4_loops_zombie: Sikllar
-        C4_bee_conditional: Asalari. Shartli bayonotlar
-        C4_variables_artist: O‘zgaruvchilar - Rassom
-        C4_variables_playlab: O‘zgaruvchilar - Play Lab
-        C4_for_loops: For sikllari
-        C4_for_loops_bee: For sikllari
-        C4_for_loops_no_bee: For sikllari
-        C4_math_artist: Rassomni matematika bilan dasturlash
-        C4_function_edit: Funksiyalarni tahrirlash
-        C4_function_create: Funksiyalar yaratish
-        C4_function_parameters: Funksiyalar (parameterlari bilan)
-        C4_conditionals: Shartli bayonotlar
-        C4_unplugged_algorithms: Tangramlar bilan Algoritmlar
-        C4_unplugged_madlibs: '"Mad Glibs" o‘yini'
-        C4_unplugged_variables: Konvertlardagi o‘zgaruvchilar
-        C4_unplugged_forloops: For sikllari
-        C4_unplugged_parameters: Parametrlar bilan qo‘shiq yozish
-        C4_unplugged_binary: Binarli
-        CSF_a_b_artist_loops: Rassom bilan sikllar
-        CSF_artist_angles: Rassom bilan burchaklar
-        CSF_collector_k1_blocks: 'CS asoslari: Kollektor'
-        CSF_collector_repeat_loops: Kollektor. Takroriy sikllar
-        CSF_collector_text_blocks: 'CS asoslari: Kollektor'
-        CSF_create_functions: Funksiyalar yaratish
-        CSF_debugging_k1_blocks: Nosozliklarni bartaraf etish (Debugging)
-        CSF_debugging_text_blocks: Nosozliklarni bartaraf etish (Debugging)
-        CSF_EF_cs_matters: Kompyuter fanlari ahamiyatli
-        CSF_maze_intro_k1_blocks: Code Studio. Kirish
-        CSF_maze_intro_text_blocks: Code Studio. Kirish
-        CSF_my_robotic_friends: My Robotic Friends
-        CSF_Power_of_Words: So‘zning kuchi
-        CSF_Super_Digital_Citizen: Super Raqamli Fuqarolik
-        CSF_stevie_big_project: Stivi va Katta loyiha
-        CSF_unspotted_bugs: Belgilanmagan baglar
-        CSF_zuck_loops_short: '"Repeat" sikllari'
-        frozen_intro: Dasturlash soati. Kirish
-        frozen_loops: Sikllar bilan tanishish
-        frozen_functions: Funksiyalar bilan tanishish
-        playlab_intro: Play Lab bilan tanishish
-        playlab_events: Play Lab Hodisalar
-        playlab_repeat_forever: Play Lab abadiy takrorlash
-        tutorial_puzzle_challenge: Puzzle Challenge uchun yo‘riqnoma
-        infinity_playlab_intro: Play Lab - Kirish
-        infinity_playlab_events: Play Lab - Hodisalar
-        infinity_playlab_repeat_forever: Play Lab - Abadiy takrorlash
-        csd_concept_how_computers_work: Kompyuterlar qanday ishlashi haqida tushuncha
-        csd_concept_computer: 'Kompyuterlar qanday ishlaydi: Kompyuterni kompyuter
-          qiladigan nima?'
+        applab_hoc_designmode: App Laboratoriyasida Dastrulash soati - Design Mode
+        applab_hoc_onevent: App Laboratoriyasida Dastrulash soati - onEvent
+        applab_hoc_setproperty: App Laboratoriyasida Dastrulash soati - setProperty
+        applab_hoc_share: App Laboratoriyasida Dastrulash soati - Ulashish
+        applab_hoc_welcome: App Laboratoriyasida Dastrulash soati - Xush kelibsiz
+        applab_intro_designmode: App Lab - Dizayn rejimi
+        applab_intro_events: App Lab - Interfaollik qo‘shish
+        applab_intro_share: App Lab - Ilovangizni ulashing
+        applab_intro_sounds: App Lab - Rasmlar va tovushlar
+        applab_intro_welcome: App Lab - Boshlash
+        artist_intro: Rassom. Kirish
+        c_and_c_digital_sharing: Raqamli Ulashish
+        c_and_c_great_to_create: Yaratish va Adolatli bo‘lish yaxshi.
+        code-break: Dasturlash tanaffusini qiling
+        codebreak_e01: 'Code Break 1.0: Hill Harper bilan algoritmlar'
+        codebreak_e02: 'Code Break 2.0: Mark Cuban va Lindsi Skott bilan prototiplar'
+        codebreak_e03: 'Code Break 3.0: Eshton Kutcher va Mia Gil Epner bilan shifrlash'
+        codebreak_e04: 'Code Break 4.0: Mayk Kriger df Alice Keeler bilan Raqamli
+          ma''lumot'
+        codebreak_e05: 'Code Break 5.0: Bill Geyts bilan Simulatsiya va ma''lumotlar'
+        codebreak_e06: 'Code Break 6.0: Kigan-Maykl Key va Vint Serf bilan Internet'
+        codebreak_e07: 'Code Break 7.0: Sal Khan va Flo Von bilan Shartli operatorlar'
+        codebreak_e08: 'Code Break 8.0: Yara Shahidi va Fuzzy Khosrowshahi bilan O‘zgaruvchilar '
+        codebreak_e09: 'Code Break 9.0: Maklemor va Skott Forstall bilan Hodisalar'
+        codebreak_e10: 'Code Break 10.0: Kat Grem va Keyt Park bilan birgalikda sun''iy
+          intellekt'
+        codebreak_e11: 'Code Break 11.0: Susan Woykiki va Chayna Enn Makleyn bilan
+          Abstraksiya'
+        codebreak_e12: 'Code Break 12.0: Aloe Blak, Bret Teylor va Paola Meyia Minaya
+          bilan Hardware - Uskunalar'
+        conditionals_with_cards: Kompyutersiz dars amaliyoti - Kartalar bilan shartli
+          bayonotlar
+        cs-principles-intro-to-objects: 'CS tamoyillari: obyektlarga kirish'
+        csa-alias-video: Teng va taxalluslar
+        csa-day-in-pm-pl: Loyiha menejeri nima qiladi?
+        csa-equals-video: Equals () usuli
+        csa-example-solution-1: 'Namuna echimini jonli kodlash '
+        csa-multi-select-pl: Java-da ko'p tanlovli bayonotlar
+        csa-pl-calling-methods: Java-da qo'ng'iroq qilish usullari
+        csa-pl-compareTo: CompareTo () usuli
+        csa-pl-creating-objects: Ob'ektlarni yaratish
+        csa-pl-documentation: Java laboratoriyasida hujjatlar
+        csa-pl-equals-book: Kitob sinfi uchun equals () usulini yozish
+        csa-pl-intro-to-equality: Tenglikka kirish
+        csa-pl-intro-to-equals-method: ".equals () usuliga kirish"
+        csa-pl-intro-to-oop: Ob'ektga yo'naltirilgan dasturlashga kirish
+        csa-pl-intro-to-pm: Loyiha boshqaruviga kirish
+        csa-pl-intro-to-strings: Java-da Strings-ga kirish
+        csa-pl-vocab-pm: Loyihani boshqarish lug'ati
+        csa-pl-vpl-m1-unit-3: 3-bo'limda dasturiy ta'minot muhandisligi
+        csa-pl-welcome-to-Neighborhood: The Neighborniyaga xush kelibsiz
+        csa-user-stories: Dasturiy injiniringi bo'yicha foydalanuvchi hikoyalari
+        csa_accessor_methods: 'CSA: Accessor usullari'
+        csa_calling_methods: 'CSA: Qo''ng''iroq usullari'
+        csa_casting: 'CSA: to''qimalarining'
+        csa_column_major_traversal: 'CSA: Ustun-Major Traversal'
+        csa_conditional_statements: 'CSA: Shartli bayonotlar'
+        csa_constructors: 'CSA: Konstruktorlar'
+        csa_creating_a_scanner_object: 'CSA: Brauzer ob''ektini yaratish'
+        csa_creating_objects: 'CSA: Ob''ektlarni yaratish'
+        csa_creating_variables: 'CSA: O''zgaruvchilarni yaratish'
+        csa_enhanced_for_loops: 'CSA: ko''chadan uchun Kengaytirilgan'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: ko''chadan va 2D massivlar uchun
+          kengaytirilgan'
+        csa_equals_and_aliases: 'CSA: Teng va taxalluslar'
+        csa_for_loops: 'CSA: Looplar uchun'
+        csa_images_and_pixels: 'CSA: Rasmlar va piksellar'
+        csa_inheritance: 'CSA: meros'
+        csa_instance_variables_and_attributes: 'CSA: Instance o''zgaruvchilari va
+          atributlari'
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D massivdagi qiymatlarni o''zgartirish'
+        csa_multi-selection_statements: 'CSA: Ko''p tanlovli bayonotlar'
+        csa_mutator_methods: 'CSA: Mutator usullari'
+        csa_nested_loops: 'CSA: Ichki ilmoqlar'
+        csa_object_oriented_programming: 'CSA: Ob''ektga yo''naltirilgan dasturlash'
+        csa_one_dimensional_arrays: 'CSA: Bir o''lchovli (1D) massivlar'
+        csa_overloaded_constructors: 'CSA: Haddan tashqari yuklangan konstruktorlar'
+        csa_polymorphism: 'CSA: Polimorfizm'
+        csa_printing_in_java: 'CSA: Java-da chop etish'
+        csa_private_methods: 'CSA: Xususiy usullar'
+        csa_random_numbers: 'CSA: Tasodifiy raqamlar'
+        csa_recursion: 'CSA: rekursiya'
+        csa_remving_data_from_an_arraylist: 'CSA: ArrayList-dan ma''lumotlarni olib
+          tashlash'
+        csa_row_major_traversal: 'CSA: Qator-asosiy o''tish'
+        csa_scanner_class_methods: 'CSA: Skaner sinfi usullari'
+        csa_searching_algorithms: 'CSA: algoritmlarni qidirish'
+        csa_software_engineering_code_reviews: 'CSA: Dasturiy ta''minot muhandisligi
+          - Kodni ko''rib chiqish'
+        csa_sorting_algorithms: 'CSA: Saralash algoritmlari'
+        csa_static_methods: 'CSA: Statik usullar'
+        csa_static_variables: 'CSA: Statik o''zgaruvchilar'
+        csa_the_arraylist_class: 'CSA: ArrayList klassi'
+        csa_the_equals_method: 'CSA: Equals () usuli'
+        csa_the_tostring_method: 'CSA: ToString () usuli'
+        csa_two_dimensional_arrays: 'CSA: Ikki o''lchovli (2D) massivlar'
+        csa_two_way_selection_and_not: 'CSA: Ikki tomonlama tanlov va YO''Q'
+        csa_welcome_to_the_theater: 'CSA: Teatrga xush kelibsiz'
+        csa_while_loops: 'CSA: Looplar'
+        csa_working_with_2d_array_elements: 'CSA: 2D qator elementlari bilan ishlash'
+        csa_working_with_arraylist_data: 'CSA: ArrayList ma''lumotlari bilan ishlash'
+        csa_wrapper_classes_part_1: 'CSA: Wrapper sinflari 1-qism'
+        csa_wrapper_classes_part_2: 'CSA: Wrapper Sinflar 2-qism'
+        csa_writing_a_method: 'CSA: Usul yozish'
+        csc-ecosystems-intro: Ekotizimlar Kirish
+        csc-event-short-intro: Voqealar Qisqa Kirish
+        csc-poem-art-intro: Kirish videosi
+        csc-poem-art-outro: Videoni uzing
+        csc-sprite-lab-pixel-editor: O'zingizning Sprite-ni chizing
+        csc-starquilts-intro: 'CSC: Yulduzli ko''rpa-ko''rpa'
+        csc_animal_adaptations_intro: Hayvonlarning moslashuvi Kirish
+        csc_fm_pilot: Funktsiya mashinalari (uchuvchi)
+        csc_fm_pilot_v2: 'Funktsiya mashinalari Kirish '
+        csc_timecapsule_intro: Vaqt kapsulasi bilan tanishish
+        csd_app_lab_design_mode: CSD App laboratoriyasini loyihalash rejimi
+        csd_app_lab_events: CSD App Lab tadbirlari
+        csd_applab_arrays: Massivlar bilan tanishish
+        csd_applab_designmode: 'CS kashfiyotlari: App laboratoriyasi - dizayn rejimi'
+        csd_applab_designmode_short: App Lab - Dizayn rejimi
+        csd_applab_loops: App Lab-da sikllar
+        csd_applab_parameters: Funksiyalar (parameterlari bilan)
         csd_concept_binary_data: 'Kompyuterlar qanday ishlaydi: Binarlik va ma''lumotlar'
         csd_concept_circuits_logic: 'Kompyuterlar qanday ishlaydi: Sxemalar va mantiq'
+        csd_concept_computer: 'Kompyuterlar qanday ishlaydi: Kompyuterni kompyuter
+          qiladigan nima?'
+        csd_concept_hardware_software: 'Kompyuterlar qanday ishlaydi: Hardware & Software'
+        csd_concept_how_computers_work: Kompyuterlar qanday ishlashi haqida tushuncha
         csd_concept_memory_cpu_input_output: 'Kompyuterlar qanday ishlaydi: Xotira,
           CPU, kirish va chiqish qurilmalari'
-        csd_concept_hardware_software: 'Kompyuterlar qanday ishlaydi: Hardware & Software'
         csd_concept_search: Qidiruv qanday ishlaydi
+        csd_debugging: Nosozliklarni bartaraf etish (Debugging)
         csd_external_amazon_data: Hayotimizni o‘zgartirish uchun Amazon tavsiyalari
           tizimlarida qanday qilib katta ma'lumotlar ishlatiladi
         csd_external_netflix_data: Netflix teleko‘rsatuv va kino tavsiyalarini qanday
           tayyorlaydi?
         csd_external_waze_data: Nima uchun juda ko‘p foydalanuvchilar Waze bilan ovora?
         csd_gamelab_animation_tab: Animatsiya yorlig‘i
+        csd_gamelab_booleans: Mantiqiy ifodalar
+        csd_gamelab_conditional_statements: Shartli bayonotlar
+        csd_gamelab_functions: Funksiylarni chaqirish va aniqlash
+        csd_gamelab_if_else: If/Else bayonotlari
         csd_gamelab_velocity: Tezlik
-        csd_weblab_intro_1: Web Lab-ga kirish - 1-qism
-        csd_weblab_intro_2: Web Lab-ga kirish - 2-qism
+        csd_how_teamwork_works: Jamoa bo‘lib ishlash qanday ishlaydi
+        csd_ml_ethics_ai: 'Etika va AI '
+        csd_ml_import_model: AI modelini import qilish
+        csd_ml_intro_ai_lab_july2021: 6-dars
+        csd_ml_intro_to_ai_lab: 6-dars
+        csd_ml_model_cards_july2021: AI laboratoriyasidagi model kartalar
+        csd_ml_numerical_ai_lab: AI laboratoriyasidagi raqamli ma'lumotlar
+        csd_ml_training_testing_ai_lan: AI laboratoriyasida o'qitish va sinov
+        csd_pair_programming: Juftlikda dasturlash
+        csd_problem_solving_process: Muammoni yechish jarayoni
+        csd_sprite_properties: Sprait hususiyatlari
+        csd_teamwork_and_disagreement: Jamoada ishlash - kelishmovchiliklarni hal
+          qilish
+        csd_u6_call_define_functions: 'CSD: Qo''ng''iroq qilish va funktsiyalarni
+          aniqlash'
+        csd_u6_circuit_playground: Jismoniy Hisoblash
+        csd_u6_if_statements: 'CSD: Agar bayonotlar'
+        csd_u6_input_output: Input and Output
+        csd_u6_variables_part2: O'zgaruvchilar - hisoblagich namunasi
         csd_weblab_css_1: CSS-ga kirish - 1-qism
         csd_weblab_css_2: CSS-ga kirish - 2-qism
+        csd_weblab_intro_1: Web Lab-ga kirish - 1-qism
+        csd_weblab_intro_2: Web Lab-ga kirish - 2-qism
         csd_weblab_intro_3: Web Lab-ga kirish - 3-qism
+        csd_what_computers_are: Kompyuter nima?
+        csd_what_computers_do: Kompyuterlar nima qiladi?
+        csf21pilot_events: 'Sprite laboratoriyasi: harakatdagi spritlar'
+        csf21pilot_prompts: 'Sprite laboratoriyasi: matn va ko''rsatmalar'
+        csf_follow_the_digital_trail: Raqamli izdan yuring
+        csf_lots_of_sprites: 'Sprite laboratoriyasi: ko''plab spritlar'
+        csf_my_online_neighborhood_2020: Mening onlayn qo‘shnilarim
+        csf_private_and_personal_information: Maxfiy va Shaxsiy ma'lumotlar
+        csp-pd-welcome: Oilamizga xush kelibsiz!
         csp_applab_functions: Funksiyalar bilan tanishish
         csp_applab_functions_parameters: Funksiyalar (parameterlari bilan)
         csp_applab_loops: Sikllar
+        csp_applab_parameters: Funksiyalar (parameterlari bilan)
         csp_cs_is_changing_everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
-        starwars_intro: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Kirish'
-        starwars_typing: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - JavaScript'
-        starwars_events: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Hodisalar'
-        starwars_congrats: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Tabriklar'
-        starwars_blocks_intro: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Kirish'
-        starwars_blocks_events: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Hodisalar'
-        starwars_blocks_congrats: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Tabriklar'
-        mc_intro: Minecraft - Kirish
-        mc_repeat: Minecraft - Takrorlash
-        mc_if_statements: Minecraft - Shartli bayonotlar
-        mc_congrats_share: Minecraft - Tabriklar
-        mc_congrats_no_share: Minecraft - Tabriklar
-        gumball_intro: Gumball Dasturlash soati - Kirish
+        csp_defining_calling_functions: Funktsiyalarni aniqlash va chaqirish
+        csp_global_vs_local: Global va mahalliy o'zgaruvchilarni disk raskadrovka
+        csp_tutorial_datatab: Ilova laboratoriyasidagi ma'lumotlar yorlig'i
+        csp_tutorial_datavis1: App Laboratoriyasida ma'lumotlarni vizualizatsiya qilish
+          vositasi - 1 qism
+        csp_tutorial_datavis2: App Laboratoriyasida ma'lumotlarni vizualizatsiya qilish
+          vositasi - 2-qism
+        csp_tutorial_libraries: App Laboratoriyasidagi kutubxonalar
+        elem_pd_2: Boshlang‘ich maktab uchun informatika - PD video 2/2
+        enter_your_own_poem: O'z she'ringizni kiriting
+        farmer_intro: Fermer. Kirish
+        flappy_intro: Flappy. Kirish
+        frozen_functions: Funksiyalar bilan tanishish
+        frozen_intro: Dasturlash soati. Kirish
+        frozen_loops: Sikllar bilan tanishish
+        function: Funksiyalar
         gumball_events: Gumball Dasturlash soati - Hodisalar
+        gumball_intro: Gumball Dasturlash soati - Kirish
         gumball_repeat: Gumball Dasturlash soati - Takroriy bayonotlar (Repeat)
-        iceage_intro: Muzlik davri Dasturlash soati - Kirish
-        iceage_events: Muzlik davri Dasturlash soati - Hodisalar
-        iceage_repeat: Muzlik davri Dasturlash soati - Takroriy bayonotlar (Repeat)
-        mc_2016_intro: Minecraft Dasturlash soati - Kirish
-        mc_2016_loops: Minecraft Dasturlash soati - Sikllar
-        mc_2016_events: Minecraft Dasturlash soati - Hodisalar
-        mc_2016_spawn: Minecraft Dasturlash soati - Yaratish
-        mc_2016_congrats: Minecraft Dasturlash soati - Tabriklash
-        applab_hoc_welcome: App Laboratoriyasida Dastrulash soati - Xush kelibsiz
-        applab_hoc_setproperty: App Laboratoriyasida Dastrulash soati - setProperty
-        applab_hoc_onevent: App Laboratoriyasida Dastrulash soati - onEvent
-        applab_hoc_designmode: App Laboratoriyasida Dastrulash soati - Design Mode
-        applab_hoc_share: App Laboratoriyasida Dastrulash soati - Ulashish
-        mc_2017_agent_intro: Minecraft Dasturlash soati - Agent
-        mc_2017_repeat: Minecraft Dasturlash soati - Takroriy sikllar
-        mc_2017_functions: Minecraft Dasturlash soati - Funksiyalar
-        mc_2017_congratulations: Minecraft Dasturlash soati - Tabriklash
-        mc_2017_puzzle_1: Minecraft Dasturlash soati - Agent
-        mc_2017_puzzle_3: Minecraft Dasturlash soati - Takroriy sikllar
-        mc_2017_puzzle_8: Minecraft Dasturlash soati - Funksiyalar
-        mc_2017_puzzle_12: Minecraft Dasturlash soati - Freeplay
+        hello_world_congrats: Salom Dunyo - Sen Xohlaganingni Qilma
+        hello_world_events: Salom Dunyo - Tadbirlar bilan dasturlash
+        hello_world_intro: Salom dunyo - Sprite laboratoriyasiga xush kelibsiz
+        hint_videos_d_11_11_first: 'Video yordam: D.11.11 Birinchi'
+        hint_videos_d_11_11_last: 'Video yordam: D.11.11 Oxirgi'
         hint_videos_d_11_3_first: 'Video yordam: D.11.3 Birinchi'
         hint_videos_d_11_3_last: 'Video yordam: D.11.3 Oxirgi'
         hint_videos_d_11_4_first: 'Video yordam: D.11.4 Birinchi'
@@ -738,432 +1060,112 @@ uz:
         hint_videos_d_11_7_last: 'Video yordam: D.11.7 Oxirgi'
         hint_videos_d_11_9_first: 'Video yordam: D.11.9 Birinchi'
         hint_videos_d_11_9_last: 'Video yordam: D.11.9 Oxirgi'
-        hint_videos_d_11_11_first: 'Video yordam: D.11.11 Birinchi'
-        hint_videos_d_11_11_last: 'Video yordam: D.11.11 Oxirgi'
-        applab_intro_welcome: App Lab - Boshlash
-        applab_intro_events: App Lab - Interfaollik qo‘shish
-        applab_intro_sounds: App Lab - Rasmlar va tovushlar
-        applab_intro_designmode: App Lab - Dizayn rejimi
-        applab_intro_share: App Lab - Ilovangizni ulashing
-        csd_applab_arrays: Massivlar bilan tanishish
-        CSF_skinOverview_Harvester: Terimchi (Harvester)
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: BB-8 bilan sikllar
-        CSF_harvester_skinOverview_K-1: Terimchi (Harvester)
-        CSF_harvester_loops_K1: Terimchi (Harvester) bilan sikllar
-        CSF_scrat_loops_K1: Muz davridagi sikllar
-        CSF_scrat_loops_CF: Muz davridagi sikllar
-        CSF_if_allskins: If bloki
-        CSF_ifelse_allskins: If/Else bloklaridan foydalanish
-        CSF_ifelseifelse_allskins: If/ElseIf/Else bloklaridan foydalanish
-        CSF_loops_AB: Sikllar
-        csd_gamelab_booleans: Mantiqiy ifodalar
-        csd_gamelab_conditional_statements: Shartli bayonotlar
-        csd_gamelab_if_else: If/Else bayonotlari
-        CSF_SpriteLabIntro_CDEF: Bu Sprite Lab
-        CSF_Spritelab_MakeSprite_CDEF: Sprite Lab-da sprayt qanday yaratiladi
-        CDEF_Video_SpritesInAction: Spraytlar amalda
-        CSF_SpriteLab_SpritesInAction_CDEF: Spraytlar amalda
-        CSF_StarWars_ProjectIntro: Star Wars loyihasiga kirish
-        mc_2018_intro: 'Minecraft: Voyage Aquatic. Kirish'
-        MC_2018_loops: 'Minecraft: Voyage Aquatic Repeat Until (...gacha takrorlash)'
-        mc_2018_conditionals: 'Minecraft: Voyage Aquatic. Shartli bayonotlar'
-        mc_2018_closing: 'Minecraft: Voyage Aquatic. Tabriklash'
-        hoc_dance_warmup: Raqs bazmi - Qizdirish
-        hoc_dance_events: Dance Party - Hodisalar
-        hoc_dance_properties: Dance Party - Xususiyatlar
         hoc_dance_congrats: Raqs bazmi - Davom etish!
-        c_and_c_great_to_create: Yaratish va Adolatli bo‘lish yaxshi.
-        c_and_c_digital_sharing: Raqamli Ulashish
-        teaching_csf_how_it_works: 'CS asoslarini o‘qitish: Kurs qanday ishlaydi'
-        elem_pd_2: Boshlang‘ich maktab uchun informatika - PD video 2/2
-        what_is_cs: Informatika nima?
-        repeat_block: Takrorlash blokidan foydalanish
+        hoc_dance_congrats_2019: Raqs bazmi - Davom etish!
+        hoc_dance_events: Dance Party - Hodisalar
+        hoc_dance_events_2019: Dance Party - Hodisalar
+        hoc_dance_measures_2019: Raqs bazmi - O‘lchovlar
+        hoc_dance_properties: Dance Party - Xususiyatlar
+        hoc_dance_properties_2019: Dance Party - Xususiyatlar
+        hoc_dance_warmup: Raqs bazmi - Qizdirish
+        hoc_dance_warmup_2019: Raqs bazmi - Qizdirish
+        hoc_wrapup: Dasturlash soatini yakunlash
+        how-to-k5-workshops: 'Code.org CS asoslari: bolalar sinov qildi, o‘qituvchilar
+          tasdiqladi'
+        iceage_events: Muzlik davri Dasturlash soati - Hodisalar
+        iceage_intro: Muzlik davri Dasturlash soati - Kirish
+        iceage_repeat: Muzlik davri Dasturlash soati - Takroriy bayonotlar (Repeat)
+        if: Agar bloki
+        if_else: If/else bloki
+        if_else_scrat: If/else bloki
+        infinity_playlab_events: Play Lab - Hodisalar
+        infinity_playlab_intro: Play Lab - Kirish
+        infinity_playlab_repeat_forever: Play Lab - Abadiy takrorlash
         lesson_planning: Darsni rejalashtirish
+        loop_for: Sanovchi blok
+        loop_times: Marta takrorlash blok
+        loop_until: "-gacha takrorlash blok"
+        loop_while: While (...guncha) bloki
+        maze_intro: Labirint. Kirish
+        mc_2016_congrats: Minecraft Dasturlash soati - Tabriklash
+        mc_2016_events: Minecraft Dasturlash soati - Hodisalar
+        mc_2016_intro: Minecraft Dasturlash soati - Kirish
+        mc_2016_loops: Minecraft Dasturlash soati - Sikllar
+        mc_2016_spawn: Minecraft Dasturlash soati - Yaratish
+        mc_2017_agent_intro: Minecraft Dasturlash soati - Agent
+        mc_2017_congratulations: Minecraft Dasturlash soati - Tabriklash
+        mc_2017_functions: Minecraft Dasturlash soati - Funksiyalar
+        mc_2017_puzzle_1: Minecraft Dasturlash soati - Agent
+        mc_2017_puzzle_12: Minecraft Dasturlash soati - Freeplay
+        mc_2017_puzzle_3: Minecraft Dasturlash soati - Takroriy sikllar
+        mc_2017_puzzle_8: Minecraft Dasturlash soati - Funksiyalar
+        mc_2017_repeat: Minecraft Dasturlash soati - Takroriy sikllar
+        mc_2018_closing: 'Minecraft: Voyage Aquatic. Tabriklash'
+        mc_2018_conditionals: 'Minecraft: Voyage Aquatic. Shartli bayonotlar'
+        mc_2018_intro: 'Minecraft: Voyage Aquatic. Kirish'
+        mc_congrats_no_share: Minecraft - Tabriklar
+        mc_congrats_share: Minecraft - Tabriklar
+        mc_if_statements: Minecraft - Shartli bayonotlar
+        mc_intro: Minecraft - Kirish
+        mc_repeat: Minecraft - Takrorlash
+        oceans_machine_learning: Mashinalar o‘rganishi
+        oceans_societal_implications: Ijtimoiy ta'sir
+        oceans_training_data: Trening ma'lumorlari
         opd_closing: 'CS asoslarini o‘qitish: Yopish va keyingi qadamlar'
-        why_unplugged_lessons: '"Kompyutersiz" bo‘lish'
-        writing_first_program: Ilk kompyuter dasturingizni yarating
-        conditionals_with_cards: Kompyutersiz dars amaliyoti - Kartalar bilan shartli
-          bayonotlar
+        outbreak_events: 'Epilasyon Simulator: Voqealar'
+        outbreak_intro: 'Kasallik simulyatsiyasi: Kirish'
+        outbreak_outro: 'Epilasyon Simulator: Bepul o''yin'
+        outbreak_scientist: 'Epilasyon simulyatori: olim kabi o''ylash'
+        parameters: Funksiyalar (parameterlari bilan)
+        playlab_2021: Play Lab bilan tanishish
+        playlab_2021_reader: Play Lab bilan tanishish
+        playlab_events: Play Lab Hodisalar
+        playlab_intro: Play Lab bilan tanishish
+        playlab_repeat_forever: Play Lab abadiy takrorlash
+        poemart_celebration: She'r san'ati bayrami
+        poemart_events: She'r san'ati tadbirlari
+        poemart_imagery: She'r san'ati tasviri
+        poemart_intro: She'r san'atiga kirish
+        poembot-playtest-events: PoemBot Playtest tadbirlari
+        poembot-playtest-intro: PoemBot Playtest Kirish
+        poembot-playtest-sprites: PoemBot Playtest Sprites
+        poetry_module_conditionals: Shartlar - She'riyat bilan kodlash
+        poetry_module_multichoiceprompts: Ko'p tanlovli takliflar - she'riyat bilan
+          kodlash
+        poetry_module_planningapp: She'r generatori ilovasini rejalashtirish - she'r
+          bilan kodlash
+        poetry_module_textandvariables: Matn va o'zgaruvchilar - she'riyat bilan kodlash
+        poetry_module_variables: O'zgaruvchilar - She'riyat bilan kodlash
+        repeat_block: Takrorlash blokidan foydalanish
+        rough_poemart_congrats: v1 She'r san'ati bilan tabriklaymiz
+        rough_poemart_events: v1 She'r San'at Tadbirlar
+        rough_poemart_imagery: v1 She'r badiiy tasviri
+        rough_poemart_intro: v1 She'r Art Intro
         songwriting_with_functions: Kompyutersiz dars amaliyoti - Funksiyalar bilan
           qo‘shiq yozish
-        what_is_an_event: Hodisa nima?
+        star_quilts_intro_to_artist: 'Yulduzli ko''rpa-ko''rpa: rassomga kirish'
+        starquilts_intro_artist: Yulduzli choyshablarga kirish
+        starwars_blocks_congrats: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Tabriklar'
+        starwars_blocks_events: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Hodisalar'
+        starwars_blocks_intro: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Kirish'
+        starwars_congrats: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Tabriklar'
+        starwars_events: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Hodisalar'
+        starwars_intro: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - Kirish'
+        starwars_typing: 'Yulduzlar Jangi: Kod bilan Galaktika qurish - JavaScript'
         teaching_cs_pair_programming: 'CS asoslarini o‘qitish: Juftlikda dasturlash'
+        teaching_csf_how_it_works: 'CS asoslarini o‘qitish: Kurs qanday ishlaydi'
         teaching_problem_solving: 'CS asoslarini o‘qitish: Muammolarni hal qilishni
           o‘rgatish'
-        csd_applab_designmode: 'CS kashfiyotlari: App laboratoriyasi - dizayn rejimi'
-        csd_pair_programming: Juftlikda dasturlash
-        csd_gamelab_functions: Funksiylarni chaqirish va aniqlash
-        csd_applab_parameters: Funksiyalar (parameterlari bilan)
-        csd_applab_loops: App Lab-da sikllar
-        csd_problem_solving_process: Muammoni yechish jarayoni
-        CSF_Going_Places_Safely: Mening onlayn qo‘shnilarim
-        CSF_SpriteLab_Intro_v2: Sprite laboratoriyasi bilan tanishish
-        CSF_Spritelab_MakeSprite_v2: Sprite qanday qilinadi
-        CSF_SpriteLab_SpritesInAction_v2: Spraytlar amalda
-        csd_debugging: Nosozliklarni bartaraf etish (Debugging)
-        csd_applab_designmode_short: App Lab - Dizayn rejimi
-        csp-pd-welcome: Oilamizga xush kelibsiz!
-        CSF-Teaching-Problem-Solving: CSF o‘qitish muammolarini hal qilish
+        tutorial_puzzle_challenge: Puzzle Challenge uchun yo‘riqnoma
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video
           - Ma'lumotlar bloki
         u7-libraries-explanation: 'App Lab: O‘z bloklaringizni yarating - kutubxonalardan
           foydalanish'
-        how-to-k5-workshops: 'Code.org CS asoslari: bolalar sinov qildi, o‘qituvchilar
-          tasdiqladi'
+        upload_sprites_backgrounds: Maxsus spritlar va fonlarni yuklash
+        what-is-creativity: Ijodkorlik nima?
+        what_is_an_event: Hodisa nima?
+        what_is_cs: Informatika nima?
         why-should-teach-unplugged-activities: 'Ko‘p so‘raladigan savollar: Nega men
           "kompyutersiz" mashg‘ulotlarda dars berishim kerak?'
-        cs-principles-intro-to-objects: 'CS tamoyillari: obyektlarga kirish'
-        oceans_machine_learning: Mashinalar o‘rganishi
-        oceans_training_data: Trening ma'lumorlari
-        oceans_societal_implications: Ijtimoiy ta'sir
-        hoc_dance_congrats_2019: Raqs bazmi - Davom etish!
-        hoc_dance_warmup_2019: Raqs bazmi - Qizdirish
-        hoc_dance_events_2019: Dance Party - Hodisalar
-        hoc_dance_measures_2019: Raqs bazmi - O‘lchovlar
-        hoc_dance_properties_2019: Dance Party - Xususiyatlar
-        csd_what_computers_do: Kompyuterlar nima qiladi?
-        csf_my_online_neighborhood_2020: Mening onlayn qo‘shnilarim
-        csf_follow_the_digital_trail: Raqamli izdan yuring
-        csf_private_and_personal_information: Maxfiy va Shaxsiy ma'lumotlar
-        csd_what_computers_are: Kompyuter nima?
-        codebreak_e01: 'Code Break 1.0: Hill Harper bilan algoritmlar'
-        codebreak_e02: 'Code Break 2.0: Mark Cuban va Lindsi Skott bilan prototiplar'
-        codebreak_e03: 'Code Break 3.0: Eshton Kutcher va Mia Gil Epner bilan shifrlash'
-        codebreak_e04: 'Code Break 4.0: Mayk Kriger df Alice Keeler bilan Raqamli
-          ma''lumot'
-        codebreak_e05: 'Code Break 5.0: Bill Geyts bilan Simulatsiya va ma''lumotlar'
-        csd_how_teamwork_works: Jamoa bo‘lib ishlash qanday ishlaydi
-        csd_teamwork_and_disagreement: Jamoada ishlash - kelishmovchiliklarni hal
-          qilish
-        codebreak_e06: 'Code Break 6.0: Kigan-Maykl Key va Vint Serf bilan Internet'
-        codebreak_e07: 'Code Break 7.0: Sal Khan va Flo Von bilan Shartli operatorlar'
-        codebreak_e08: 'Code Break 8.0: Yara Shahidi va Fuzzy Khosrowshahi bilan O‘zgaruvchilar '
-        codebreak_e09: 'Code Break 9.0: Maklemor va Skott Forstall bilan Hodisalar'
-        codebreak_e10: 'Code Break 10.0: Kat Grem va Keyt Park bilan birgalikda sun''iy
-          intellekt'
-        codebreak_e11: 'Code Break 11.0: Susan Woykiki va Chayna Enn Makleyn bilan
-          Abstraksiya'
-        codebreak_e12: 'Code Break 12.0: Aloe Blak, Bret Teylor va Paola Meyia Minaya
-          bilan Hardware - Uskunalar'
-        csf21pilot_events: 'Sprite laboratoriyasi: harakatdagi spritlar'
-        csf21pilot_prompts: 'Sprite laboratoriyasi: matn va ko''rsatmalar'
-        csd_ml_intro_to_ai_lab: 6-dars
-        csd_ml_import_model: AI modelini import qilish
-        csf_lots_of_sprites: 'Sprite laboratoriyasi: ko''plab spritlar'
-        playlab_2021: Play Lab bilan tanishish
-        playlab_2021_reader: Play Lab bilan tanishish
-        csp_defining_calling_functions: Funktsiyalarni aniqlash va chaqirish
-        csp_tutorial_datatab: Ilova laboratoriyasidagi ma'lumotlar yorlig'i
-        csp_tutorial_libraries: App Laboratoriyasidagi kutubxonalar
-        PL-Video-21: Code.org professional ta'limiga xush kelibsiz!
-        csp_tutorial_datavis1: App Laboratoriyasida ma'lumotlarni vizualizatsiya qilish
-          vositasi - 1 qism
-        csp_tutorial_datavis2: App Laboratoriyasida ma'lumotlarni vizualizatsiya qilish
-          vositasi - 2-qism
-        csd_ml_intro_ai_lab_july2021: 6-dars
-        csd_ml_training_testing_ai_lan: AI laboratoriyasida o'qitish va sinov
-        csd_ml_model_cards_july2021: AI laboratoriyasidagi model kartalar
-        csd_ml_numerical_ai_lab: AI laboratoriyasidagi raqamli ma'lumotlar
-        Gettting_Started_Progress: Taraqqiyot, fikr va baholash
-        Gettting_Started_ClassSection: Sinf bo'limini yaratish
-        Gettting_Started_StudentExperience: Talabalar tajribasi
-        Getting_Started_BasicFeatures: Code.org ning asosiy xususiyatlari
-        PL_overview_CSD: Kompyuter fanlari kashfiyotlari nima?
-        PL_CSD_TeacherTips_Advise: O'qituvchilarga maslahatlar - yangi o'qituvchilarga
-          maslahat
-        PL_CSD_TeacherTips_IntroToCSD: O'qituvchi uchun maslahatlar - CS kashfiyotlariga
-          kirish
-        PL_CSD_TeacherTips_ProblemSolvingProcess: O'qituvchi maslahatlari - muammolarni
-          hal qilish jarayoni
-        PL_CSD_TeacherTips_PairProgramming: O'qituvchi uchun maslahatlar - juftlik
-          dasturlash
-        PL_CSD_TeacherTips_Debugging: O'qituvchi uchun maslahatlar - disk raskadrovka
-        PL_CSD_TeacherTips_LeadLearner: O'qituvchi uchun maslahatlar - etakchi o'quvchi
-        poembot-playtest-intro: PoemBot Playtest Kirish
-        poembot-playtest-sprites: PoemBot Playtest Sprites
-        poembot-playtest-events: PoemBot Playtest tadbirlari
-        hello_world_intro: Salom dunyo - Sprite laboratoriyasiga xush kelibsiz
-        hello_world_events: Salom Dunyo - Tadbirlar bilan dasturlash
-        hello_world_congrats: Salom Dunyo - Sen Xohlaganingni Qilma
-        csp_global_vs_local: Global va mahalliy o'zgaruvchilarni disk raskadrovka
-        rough_poemart_intro: v1 She'r Art Intro
-        rough_poemart_events: v1 She'r San'at Tadbirlar
-        rough_poemart_imagery: v1 She'r badiiy tasviri
-        rough_poemart_congrats: v1 She'r san'ati bilan tabriklaymiz
-        poetry_module_variables: O'zgaruvchilar - She'riyat bilan kodlash
-        poetry_module_textandvariables: Matn va o'zgaruvchilar - she'riyat bilan kodlash
-        poetry_module_planningapp: She'r generatori ilovasini rejalashtirish - she'r
-          bilan kodlash
-        poetry_module_multichoiceprompts: Ko'p tanlovli takliflar - she'riyat bilan
-          kodlash
-        poetry_module_conditionals: Shartlar - She'riyat bilan kodlash
-        poemart_intro: She'r san'atiga kirish
-        poemart_events: She'r san'ati tadbirlari
-        poemart_imagery: She'r san'ati tasviri
-        poemart_celebration: She'r san'ati bayrami
-        csd_u6_variables_part2: O'zgaruvchilar - hisoblagich namunasi
-        csd_ml_ethics_ai: 'Etika va AI '
-        outbreak_intro: 'Kasallik simulyatsiyasi: Kirish'
-        outbreak_events: 'Epilasyon Simulator: Voqealar'
-        outbreak_scientist: 'Epilasyon simulyatori: olim kabi o''ylash'
-        outbreak_outro: 'Epilasyon Simulator: Bepul o''yin'
-        PL_overview_CSP: Kompyuter fanlari tamoyillari nima?
-        PL_CSP_EIPMOverview: EIPM darslari bo'yicha qo'llanma
-        CSA-PL-debugging-temp: Java laboratoriyasida nosozliklarni tuzatishga kirish
-          - temp
-        csd_app_lab_design_mode: CSD App laboratoriyasini loyihalash rejimi
-        csd_app_lab_events: CSD App Lab tadbirlari
-        PL_CSD_Unit4_AppTesting: Qog'oz prototipini sinovdan o'tkazish
-        csd_u6_circuit_playground: Jismoniy Hisoblash
-        csd_u6_input_output: Input and Output
-        CSA-PL-for-loops: Java-da looplar uchun
-        CSA-PL-variables: Java-da o'zgaruvchilar yaratish
-        PL_CS_Journeys_Overview: CS sayohatlari
-        CSA-PL-intro-to-java-lab: Java laboratoriyasi asoslari
-        CSA-PL-first-program: Java-da dastur yozish
-        CSD_u6_variables_part1: 'CSD: O''zgaruvchilar'
-        csd_u6_if_statements: 'CSD: Agar bayonotlar'
-        csc-poem-art-intro: Kirish videosi
-        csc-poem-art-outro: Videoni uzing
-        csd_u6_call_define_functions: 'CSD: Qo''ng''iroq qilish va funktsiyalarni
-          aniqlash'
-        csp_applab_parameters: Funksiyalar (parameterlari bilan)
-        starquilts_intro_artist: Yulduzli choyshablarga kirish
-        CSA-PL-intro-to-arrays: Bir o'lchovli (1D) massivlar
-        CSA-PL-1d-arrays-new-values: 1D massivlarda qiymatlarni kiritish
-        CSA-PL-conditionals: Java-da shartli bayonotlar
-        CSA-PL-two-way-selection: Ikki tomonlama tanlov
-        CSA-PL-Printing-in-Java: Java-da chop etish
-        CSA-PL-multi-selection-statements: Ko'p tanlovli bayonotlar
-        PL_CSP_TeacherTips_Advice: 'O''qituvchi uchun maslahatlar: Yangi CS o''qituvchilariga
-          maslahat'
-        PL_CSP_TeacherTips_IntroToCSP: 'O''qituvchi uchun maslahatlar: CS tamoyillariga
-          kirish'
-        PL_CSP_TeacherTips_Debugging: 'O''qituvchi maslahatlari: disk raskadrovka
-          bo''yicha yordam'
-        PL_CSP_TeacherTips_LeadLearner: 'O''qituvchi maslahatlari: Qanday qilib etakchi
-          o''quvchi bo''lish kerak'
-        PL_CSP_TeacherTips_APExam: 'O''qituvchi maslahatlari: AP imtihoniga tayyorgarlik'
-        PL_CSP_TeacherTips_EIPM: 'O''qituvchi uchun maslahatlar: EIPM jarayoni'
-        PL_CSD_CircuitPlayground_Overview: O'chirish maydonchasi haqida umumiy ma'lumot
-        CSA-PL-debugging-22: Java laboratoriyasida disk raskadrovka
-        CSD_Unit6_InteractiveArtExemplar: Interaktiv san'at namunalari
-        CS_Changing_Everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
-        csa-alias-video: Teng va taxalluslar
-        csa-equals-video: Equals () usuli
-        csa-user-stories: Dasturiy injiniringi bo'yicha foydalanuvchi hikoyalari
-        csa-pl-vpl-m1-unit-3: 3-bo'limda dasturiy ta'minot muhandisligi
-        csa-pl-intro-to-equality: Tenglikka kirish
-        csa-pl-intro-to-equals-method: ".equals () usuliga kirish"
-        csa-pl-equals-book: Kitob sinfi uchun equals () usulini yozish
-        csa-multi-select-pl: Java-da ko'p tanlovli bayonotlar
-        csc_timecapsule_intro: Vaqt kapsulasi bilan tanishish
-        PL_Equity_in_CS_Education: CS ta'limida kapital
-        csc_fm_pilot: Funktsiya mashinalari (uchuvchi)
-        csc_fm_pilot_v2: 'Funktsiya mashinalari Kirish '
-        csc-sprite-lab-pixel-editor: O'zingizning Sprite-ni chizing
-        csa-pl-intro-to-strings: Java-da Strings-ga kirish
-        csa-pl-compareTo: CompareTo () usuli
-        csc-event-short-intro: Voqealar Qisqa Kirish
-        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: O'chirish maydonchasi birligi
-          haqida umumiy ma'lumot
-        csa-day-in-pm-pl: Loyiha menejeri nima qiladi?
-        csa-pl-intro-to-pm: Loyiha boshqaruviga kirish
-        PL_CSD_CircuitPlayground_Setup: O'chirish Playground Setup
-        csa_object_oriented_programming: 'CSA: Ob''ektga yo''naltirilgan dasturlash'
-        csa_creating_objects: 'CSA: Ob''ektlarni yaratish'
-        csa_calling_methods: 'CSA: Qo''ng''iroq usullari'
-        csa_while_loops: 'CSA: Looplar'
-        csa_inheritance: 'CSA: meros'
-        csa_writing_a_method: 'CSA: Usul yozish'
-        csa_software_engineering_code_reviews: 'CSA: Dasturiy ta''minot muhandisligi
-          - Kodni ko''rib chiqish'
-        csa_conditional_statements: 'CSA: Shartli bayonotlar'
-        csa_printing_in_java: 'CSA: Java-da chop etish'
-        csa_two_way_selection_and_not: 'CSA: Ikki tomonlama tanlov va YO''Q'
-        csa-pl-intro-to-oop: Ob'ektga yo'naltirilgan dasturlashga kirish
-        csa-pl-welcome-to-Neighborhood: The Neighborniyaga xush kelibsiz
-        csa-pl-calling-methods: Java-da qo'ng'iroq qilish usullari
-        csa-pl-creating-objects: Ob'ektlarni yaratish
-        csa_accessor_methods: 'CSA: Accessor usullari'
-        csa_constructors: 'CSA: Konstruktorlar'
-        csa_creating_a_scanner_object: 'CSA: Brauzer ob''ektini yaratish'
-        csa_creating_variables: 'CSA: O''zgaruvchilarni yaratish'
-        csa_instance_variables_and_attributes: 'CSA: Instance o''zgaruvchilari va
-          atributlari'
-        csa_mutator_methods: 'CSA: Mutator usullari'
-        csa_overloaded_constructors: 'CSA: Haddan tashqari yuklangan konstruktorlar'
-        csa_the_tostring_method: 'CSA: ToString () usuli'
-        csa_scanner_class_methods: 'CSA: Skaner sinfi usullari'
-        csa_for_loops: 'CSA: Looplar uchun'
-        csa_enhanced_for_loops: 'CSA: ko''chadan uchun Kengaytirilgan'
-        csa_modifying_values_in_a_1d_array: 'CSA: 1D massivdagi qiymatlarni o''zgartirish'
-        csa_nested_loops: 'CSA: Ichki ilmoqlar'
-        csa_one_dimensional_arrays: 'CSA: Bir o''lchovli (1D) massivlar'
-        csa_polymorphism: 'CSA: Polimorfizm'
-        csa_casting: 'CSA: to''qimalarining'
-        csa_equals_and_aliases: 'CSA: Teng va taxalluslar'
-        csa_multi-selection_statements: 'CSA: Ko''p tanlovli bayonotlar'
-        csa_random_numbers: 'CSA: Tasodifiy raqamlar'
-        csa_static_methods: 'CSA: Statik usullar'
-        csa_static_variables: 'CSA: Statik o''zgaruvchilar'
-        csa_the_equals_method: 'CSA: Equals () usuli'
-        csa_welcome_to_the_theater: 'CSA: Teatrga xush kelibsiz'
-        enter_your_own_poem: O'z she'ringizni kiriting
-        csa-example-solution-1: 'Namuna echimini jonli kodlash '
-        csd_sprite_properties: Sprait hususiyatlari
-        csa-pl-documentation: Java laboratoriyasida hujjatlar
-        csc-starquilts-intro: 'CSC: Yulduzli ko''rpa-ko''rpa'
-        csa-pl-vocab-pm: Loyihani boshqarish lug'ati
-        csc-ecosystems-intro: Ekotizimlar Kirish
-        PL_CSD_MicroBit_Intro: 'Mikrofonga kirish: bit'
-        csc_animal_adaptations_intro: Hayvonlarning moslashuvi Kirish
-        csa_two_dimensional_arrays: 'CSA: Ikki o''lchovli (2D) massivlar'
-        csa_working_with_2d_array_elements: 'CSA: 2D qator elementlari bilan ishlash'
-        csa_row_major_traversal: 'CSA: Qator-asosiy o''tish'
-        csa_column_major_traversal: 'CSA: Ustun-Major Traversal'
-        csa_enhanced_for_loops_and_2d_arrays: 'CSA: ko''chadan va 2D massivlar uchun
-          kengaytirilgan'
-        csa_images_and_pixels: 'CSA: Rasmlar va piksellar'
-        csa_wrapper_classes_part_1: 'CSA: Wrapper sinflari 1-qism'
-        csa_wrapper_classes_part_2: 'CSA: Wrapper Sinflar 2-qism'
-        csa_the_arraylist_class: 'CSA: ArrayList klassi'
-        csa_working_with_arraylist_data: 'CSA: ArrayList ma''lumotlari bilan ishlash'
-        csa_remving_data_from_an_arraylist: 'CSA: ArrayList-dan ma''lumotlarni olib
-          tashlash'
-        csa_private_methods: 'CSA: Xususiy usullar'
-        csa_recursion: 'CSA: rekursiya'
-        csa_searching_algorithms: 'CSA: algoritmlarni qidirish'
-        csa_sorting_algorithms: 'CSA: Saralash algoritmlari'
-        star_quilts_intro_to_artist: 'Yulduzli ko''rpa-ko''rpa: rassomga kirish'
-        upload_sprites_backgrounds: Maxsus spritlar va fonlarni yuklash
-    callout:
-      text:
-        drag_blocks: '"move" blokini olib boshqa blok pastiga biriktiring.'
-        run: Dasturingizni sinab ko‘rish uchun "Ishga tushirish" tugmachasini bosing
-        watch_again: Videoni qayta ko‘rish uchun bu yerni bosing
-        gray_block_explanation: Kulrang bloklarni o‘chirib bo‘lmaydi. Jumboqni baribir
-          hal qila olasizmi?
-        show_code_explanation: Siz tayyorlayotgan dastur kodini ko‘rish uchun shu
-          yerni bosing
-        instructions_repeat_explanation: Har bir jumboq uchun ko‘rsatmalar bu yerda
-          takrorlangan
-        category_explanation: Sizda o‘sha bir xil bloklar mavjud, ammo ular endi toifalarda
-          joylashtirilgan
-        set_sprite_image: Ushbu hikoyada aktyordan foydalanish uchun "when story starts"
-          ("Hikoya boshlanganda") blokiga "tasvirga aktyorni o‘rnatish" blokini biriktriring
-        studio_say_text: Ushbu tirnoqlar ichida aktyoringiz aytmoqchi bo‘lgan narsani
-          yozing
-        jigsaw_click: Blokni bosing!
-        move_elsa_forward: Elzani oldinga siljitish uchun "Move Forward" ("Oldinga
-          siljitish") blokini torting va "When Run" ("Ishga tushirilganda") blokining
-          ostiga qo‘ying
-        turn_elsa: Elzani burish uchun "Burilish" blokidan foydalaning. Dropdaun menyudagi
-          raqam Elzaning burilish burchagini aniqlaydi
-        replace_questions: '"???" o‘rnini raqam bilan almashtirish uchun dropdaun
-          menyudan foydalaning.'
-        replace_questions_degree: '"???" o‘rnini burilish uchun to‘g‘ri daraja bilan
-          almashtirish uchun dropdaun menyudan foydalaning.'
-        repeat_blocks: '"Takrorlash" blokidan foydalaning va ish joyidagi bloklarni
-          u bilan o‘rang'
-        repeat_blocks_1: "(1) Ushbu blokdan foydalaning va uni ish joyidagi kulrang
-          bloklar atrofiga qo‘ying"
-        repeat_blocks_2: (2) "Takrorlash" blokini bu yerga ko‘chiring va ichiga kulrang
-          bloklarni joylashtiring
-        snowflake_dropdown: Ushbu dropdaun menyudan turli xil qor parchalarini yaratish
-          uchun foydalaning!
-        degrees_per_side: Har bir burchak o‘lchamini gradusda olish uchun 360 ni tomonlar
-          soniga bo‘ling.
-        set_sides: Jumboqni yechish uchun ushbu blok yordamida "sides" ("tomonlar")ga
-          kerak bo‘lgan son qo‘ying.
-        set_length: '"Uzunlik"ni to‘g‘ri qiymatga o‘rnatish uchun ushbu blokdan foydalaning.'
-        which_equation: Qaysi tenglama ko‘proq tomonlari bo‘lgan shakllar uchun tomonni
-          qisqartiradi?
-        get_nectar: Yangi "nektar olish" blokidan foydalaning.
-        actions_category: Asboblar qutisi yangi ko‘rinishga ega bo‘ldi! "Amallar"
-          bloklari ham endi shu yerda.
-        draw_square_hint: 'Maslahat: Siz oxirgi jumboqda yaratgan kvadrat yasash siklidan
-          foydalaning.'
-        edit_function: Funksiyani tahrirlash uchun shu yerni bosing.
-        create_function: '"Funksiyalar" oynasini ochish uchun bu yerni bosing, so‘ng
-          "Funksiya yaratish" tugmasini bosing.'
-        house_hint: Rasm hali uyga o‘xshamasa ham yonom emas. Biz buni keyingi jumboqda
-          tuzatamiz.
-        edit_draw_square: Funksiyani tahrirlash va siklni qo‘shish uchun bu tugmadan
-          foydalaning.
-        edit_get_nectar: Funksiyani tahrirlash va ari nektar olish uchun yo‘nalishni
-          o‘zgartirish uchun ushbu tugmani ishlating.
-        logic_category: '"If/else" blokini topish uchun "Mantiq" oynasini oching.'
-        length_parameter: Ushbu funksiya "uzunlik" parametridan foydalanishi uchun
-          yangilay olasizmi?
-        frozen_diamond_repeat: Ushbu shaklni yaratish uchun takroriy blokdan foydalaning.
-        frozen_circle_function_in_circle_turn: Har bir doirani yaratgandan so‘ng burilishni
-          unutmang.
-        frozen_circle_function_with_parameter_circle: '"Doira yaratish" blokidan foydalaning
-          va o‘lchamini o‘zgartiring.'
-        frozen_snowflake_branch: '"Snowflake shoxini yaratish" blokidan foydalaning'
-        frozen_create_square: Kvadrat yaratish uchun bu yerga ko‘proq bloklarni ulang
-        playlab_drag_say: '"Say" blokini bu yerga torting va "salom" yozing'
-        playlab_use_twice: Ushbu blokdan ikki marta foydalaning va aktyor raqamini
-          o‘zgartirishni unutmang
-        playlab_move_girl: Tennischi qizni harakatlantirish uchun "o‘ngga siljish"
-          blokidan foydalaning
-        playlab_play_sound: |2-
-
-          Bu yerda "ovozni ijro etish" blokini qo‘shing
-        playlab_arrow_keys: Ishga tushirish tugmachasini bosib, jodugarni harakatlantirish
-          uchun bulardan foydalaning
-        playlab_add_move: Ushbu takroriy blok ichiga "siljitish" bloklarini qo‘shing
-        playlab_add_score: Bu yerga ball blokini qo‘shing
-        playlab_add_blocks: Bloklaringizni bu yerga qo‘shing
-        set_variable: O‘zgaruvchini o‘rnatish uchun raqamli blokni bu yerga torting
-        place_variable: O‘zgaruvchingizni ushbu blok ichiga torting
-        bee_for_loop: Asalarilar to‘plashi kerak bo‘lgan eng ko‘p nektarni bu yerga
-          torting
-        place_counter_variable: Hisoblagich o‘zgaruvchisini ushbu blok ichiga torting
-        function_editor_draw_square: Bu funksiyangiz ta'rifi. Ushbu bloklar har safar
-          "kvadrat chizish" blokidan foydalanganda ishlaydi
-        change_here: O‘zgarishni shu yerda qiling
-        write_draw_square_function: Kvadrat chizadigan bloklarni asboblar qutisidan
-          bu yerga torting
-        write_draw_triangle_function: Uchburchak chizadigan bloklarni asboblar qutisidan
-          bu yerga torting
-        edit_add_parameter: Funksiyangizga parametr qo‘shish uchun tahrirlash tugmachasini
-          bosing
-        add_and_drag_parameter: Parametr nomini bu yerda yozing, qo‘shish tugmachasini
-          bosing va keyin uni funksiya ta'rifiga torting
-        fill_in_actor: '"???" har bir aktyorga mos keladigan raqamlar (1, 2 va 3)
-          bilan to‘ldiring'
-        repeat: Buyruqlarni takrorlash uchun sikl ichiga bloklar qo‘ying
-        if_bee_nectar: '"if" ("Agar") blokidan foydalanib, asalarilar nektar olishini
-          belgilang'
-        if_else_bee: '"If / else" blokidan foydalaning, asalarilar guldan nektar olsin
-          va gul bo‘lmasa asal joylasin.'
-        repeat_full_circle: To‘liq aylana qilish uchun zombi necha marta harakatlanishi
-          kerakligini kiriting
-        place_length_variable: Savol belgilarini almashtirish uchun uzunlik o‘zgaruvchisini
-          bu yerga torting
-        arrows_move_actor: Aktyorni harakatga keltirish uchun o‘qlardan foydalaning
-        right_arrow_fireball: Olovli to‘plarni otish uchun o‘ng o‘qdan foydalaning
-        name_function: Funksiyangiz nomini shu yerda yozing
-        Infinity_move_right_runbutton: Bu yerga siljitish blokini qo‘shing
-        Infinity_move_directions_callout: Yuqoriga o‘q bosilganda qaysi blok Baymaksni
-          siljitladi?
-        Infinity_move_directions_callout_arrow: Rul bilan boshqarish uchun ushbu o‘qlardan
-          foydalaning
-        Infinity_move_collide_callout: Ushbu hodisa yuz berganda tovush chiqsin.
-        Infinity_repeat_callout: '"Move" bloklarini bu yerda joylashtiring'
-        craft_run_button_callout: Dasturingizni sinab ko‘rish uchun "Ishga tushirish"
-          tugmachasini bosing
-        craft_drag_block_callout: '"moveForward();" blokini olib boshqa bloklar pastiga
-          biriktiring.'
-        craft_callout_preplaced: Sizga boshlash uchun bu yerga bir nechta bloklarni
-          oldindan joylashtirdik
-        craft_inside_repeat: Bloklarni bu yerga joylashtirish orqali amallarni takrorlang
-        craft_callout_preplaced_house: Ushbu kod uyingizni qurishni boshlaydi. Siz
-          buni tugata olasizmi?
-        craft_what_is_iron: Bu temirni qazib oling!
-        craft_callout_moveforward: Ushbu kod lavani tekshiradi, oldinga siljish uchun
-          buyruq qo‘sha olasizmi?
+        why_unplugged_lessons: '"Kompyutersiz" bo‘lish'
+        writing_first_program: Ilk kompyuter dasturingizni yarating

@@ -731,6 +731,8 @@ el:
         csa_sorting_algorithms: 'CSA: Αλγόριθμοι Ταξινόμησης'
         star_quilts_intro_to_artist: 'Αστέρια παπλώματα: Εισαγωγή στον Καλλιτέχνη'
         upload_sprites_backgrounds: Αποστολή προσαρμοσμένων sprites και φόντα
+        what-is-creativity: Τι είναι Δημιουργικότητα;
+        code-break: Κάντε ένα Διάλειμμα με Κώδικα
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

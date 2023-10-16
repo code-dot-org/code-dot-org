@@ -59,31 +59,31 @@ sl:
         minutah prejeli e-pošto z navodilom kako odkleniti vaš račun.
       unlocked: Vaš račun je bil uspešno odklenjen. Če želite nadaljevati, se vpišite.
   errors:
+    invitations:
+      edit:
+        header: Nastavite svoje geslo
+        submit_button: Nastavi moje geslo
+      invitation_removed: Vaše povabilo je bilo odstranjeno.
+      invitation_token_invalid: Vabilo ni veljavno!
+      new:
+        header: Pošlji povabilo
+        submit_button: Pošlji povabilo
+      no_invitations_remaining: Ni preostalih povabil
+      send_instructions: Na naslov %{email} je bilo poslano vabilo.
+      updated: Geslo je bilo uspešno določeno. Sedaj ste vpisani.
+    mailer:
+      invitation_instructions:
+        accept: Sprejmite vabilo
+        hello: Pozdravljeni %{email}
+        ignore: Če ne želite sprejeti povabila, prosim ignorirajte ta email.<br />Vaš
+          račun ne bo narejen dokler ne dostopate preko zgornje povezave in nastavite
+          svojega gesla.
+        someone_invited_you: Nekdo vas je povabil na %{url}. Vabilo lahko sprejmete
+          na spodnji povezavi.
+        subject: Navodila za vabila
     messages:
       already_confirmed: je že bil potrjen, zato se zdaj poskusite vpisati
       confirmation_period_expired: mora biti potrjen v %{period}, zahtevajte novega
       expired: je potekel čas za potrditev, zato vas prosimo, da zahtevate novega
       not_found: ni mogoče najti
       not_locked: ni bil zaklenjen
-    invitations:
-      send_instructions: Na naslov %{email} je bilo poslano vabilo.
-      invitation_token_invalid: Vabilo ni veljavno!
-      updated: Geslo je bilo uspešno določeno. Sedaj ste vpisani.
-      no_invitations_remaining: Ni preostalih povabil
-      invitation_removed: Vaše povabilo je bilo odstranjeno.
-      new:
-        header: Pošlji povabilo
-        submit_button: Pošlji povabilo
-      edit:
-        header: Nastavite svoje geslo
-        submit_button: Nastavi moje geslo
-    mailer:
-      invitation_instructions:
-        subject: Navodila za vabila
-        hello: Pozdravljeni %{email}
-        someone_invited_you: Nekdo vas je povabil na %{url}. Vabilo lahko sprejmete
-          na spodnji povezavi.
-        accept: Sprejmite vabilo
-        ignore: Če ne želite sprejeti povabila, prosim ignorirajte ta email.<br />Vaš
-          račun ne bo narejen dokler ne dostopate preko zgornje povezave in nastavite
-          svojega gesla.

@@ -1,7 +1,7 @@
 {
   "addCSSButton": "CSS нэмэх",
-  "addImageButton": "Зураг нэмэх",
   "addHTMLButton": "HTML нэмэх",
+  "addImageButton": "Зураг нэмэх",
   "closeFullscreenPreview": "Бүрэн дэлгэцийн урьдчилж харах",
   "currentProjectCapacity": "{currentMegabytes}MB буюу {totalMegabytes}MB ашигласан",
   "disallowedHtml": "“{filename}\" файл нь зөвшөөрөгдөөгүй HTML элементүүдийг агуулдаг: `{disallowedTags}`. Энэ харилцах цонх хаалттай үед тэд устгагдах болно.",
@@ -14,8 +14,8 @@
   "reset": "Вэб лабораторийг дахин тохируулах",
   "resetComplete": "Вэб Lab иж бүрэн анхны байдалд нь оруулж",
   "resetFailure": "Вэб Lab анхны байдалд нь оруулж чадсангүй: {message}.",
-  "toggleInspectorOn": "Байцаагч: Off",
   "toggleInspectorOff": "Байцаагч: -нд",
+  "toggleInspectorOn": "Байцаагч: Off",
   "troubleshootingSupport": "Манай дэмжлэг нийтлэл үзнэ үү [\"Алдааг олж засварлах нь Web Lab асуудлууд\"]({url}) Дэлгэрэнгүй мэдээллийг.",
   "uploadError": "Байршуулах алдаа"
 }

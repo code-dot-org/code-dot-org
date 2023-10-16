@@ -40,6 +40,7 @@ class Music < Blockly
     submittable
     background
     level_data
+    validations
   )
 
   def self.create_from_level_builder(params, level_params)

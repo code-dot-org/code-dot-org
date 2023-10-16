@@ -185,7 +185,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:exit_survey).once.returns(mock_mail)
 
     enrollment.send_exit_survey
-    assert_not_nil enrollment.reload.survey_sent_at
+    refute_nil enrollment.reload.survey_sent_at
   end
 
   test 'send_exit_survey tries to send email and, if unsuccessful, does not update survey_sent_at' do
@@ -655,7 +655,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'update scholarship status for csf workshop' do
-    workshop = create :workshop, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     # initially creates scholarship info with YES_CDO status
     assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
@@ -670,7 +670,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'scholarship info automatically created when enrolling in csf workshop' do
-    workshop = create :workshop, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
 
     # initially creates scholarship info with YES_CDO status

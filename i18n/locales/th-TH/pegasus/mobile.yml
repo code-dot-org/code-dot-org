@@ -1217,6 +1217,7 @@
   header_stats: "สถิติ"
   header_help_us: "ช่วยเรา"
   header_about: "เกี่ยวกับ"
+  header_incubator: "ตู้บ่มเพาะเชื้อ"
   header_teacher_community: "ชุมชนครูผู้สอน"
   header_help_support: 'การช่วยเหลือและสนับสนุน '
   header_report_bug: "รายงานปัญหา"
@@ -1348,22 +1349,22 @@
   page_not_found_button: "กลับไปที่หน้าแรก"
   hoc2018_mc_with_microsoft: "ด้วยความร่วมมือกับ: "
   hoc2018_mc_thank_microsoft: "เราขอขอบคุณ Microsoft ที่ให้การสนับสนุนวิสัยทัศน์และภารกิจของเราที่มีขึ้นเพื่อสร้างหลักประกันว่าเด็กทุกคนจะมีโอกาสได้ทำความรู้จักกับวิทยาการคอมพิวเตอร์และทักษะเพื่อความสำเร็จในศตวรรษที่ 21  "
-  hoc2019_mc_mee_description1: 'บทเรียนใหม่ "ชั่วโมงของการเขียนโค้ดตอนไมน์คราฟท์" มีให้ลองด้วยตัวเองแล้วภายใน Minecraft: Education Edition สำหรับ Windows, Mac และ iPad แนะนำให้ศึกษาพื้นฐานของการเขียนโค้ดและปัญญาประดิษฐ์ไปพร้อม ๆ กับนักเรียนของคุณ!'
+  hoc2019_mc_mee_description1: "บทเรียนใหม่ \"ชั่วโมงของการเขียนโค้ดตอนไมน์คราฟท์\" มีให้ลองด้วยตัวเองแล้วภายใน Minecraft: Education Edition สำหรับ Windows, Mac และ iPad แนะนำให้ศึกษาพื้นฐานของการเขียนโค้ดและปัญญาประดิษฐ์ไปพร้อม ๆ กับนักเรียนของคุณ!"
   hoc2019_mc_more_coding_resources: "แหล่งข้อมูลการเขียนโค้ดเพิ่มเติม"
   hoc2019_dance_previous_versions: "อยากจะเห็นเกมปาร์ตี้เต้นรำเวอร์ชั่นเก่าใช่รึเปล่า  \nคลิกที่นี่เพื่อเริ่มต้น [ส่วนที่ 1](%{dance_2018_link}) และ [ส่วนที่ 2](%{dance_extras_2018_link}) จากปี 2018"
   page_not_available_button: "กลับไปที่หน้าแรก"
   hoc2020_mc_available_code_org: "พร้อมให้เรียนรู้แล้วบน Code.org"
-  hoc2020_mc_available_mee: 'พร้อมให้เรียนรู้แล้วใน Minecraft: Education Edition'
-  hoc2020_mc_mee_description: 'บทช่วยสอนชั่วโมงเขียนโค้ดตอนไมน์คราฟท์ใหม่รวมอยู่ใน Minecraft: Education Edition สำหรับ Windows, Mac, Chromebook และ iPad เรียบร้อยแล้ว ลองศึกษาพื้นฐานของการเขียนโค้ดและทำความเข้าใจเรื่องความหลากหลายและการมีส่วนร่วมไปพร้อมกับนักเรียนของคุณ! เข้าถึงแหล่งข้อมูลต่าง ๆ ได้ฟรี ไม่ว่าจะเป็นแผนการเรียนการสอน วิดีโอ หลักสูตรของวิทยาการคอมพิวเตอร์  บทเรียนเรื่องความเท่าเทียม และการฝึกอบรมผู้สอน'
+  hoc2020_mc_available_mee: "พร้อมให้เรียนรู้แล้วใน Minecraft: Education Edition"
+  hoc2020_mc_mee_description: "บทช่วยสอนชั่วโมงเขียนโค้ดตอนไมน์คราฟท์ใหม่รวมอยู่ใน Minecraft: Education Edition สำหรับ Windows, Mac, Chromebook และ iPad เรียบร้อยแล้ว ลองศึกษาพื้นฐานของการเขียนโค้ดและทำความเข้าใจเรื่องความหลากหลายและการมีส่วนร่วมไปพร้อมกับนักเรียนของคุณ! เข้าถึงแหล่งข้อมูลต่าง ๆ ได้ฟรี ไม่ว่าจะเป็นแผนการเรียนการสอน วิดีโอ หลักสูตรของวิทยาการคอมพิวเตอร์  บทเรียนเรื่องความเท่าเทียม และการฝึกอบรมผู้สอน"
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'เดินทางย้อนเวลา และเรียนรู้เรื่องโค้ด! บทช่วยสอนของชั่วโมงเขียนโค้ดตอนไมน์คราฟท์ใหม่ตอนนี้เปิดให้ศึกษาแล้วใน Minecraft: Education Edition สำหรับ Windows, Mac, Chromebook และ iPad ลองดูโดยใช้แหล่งข้อมูล การฝึกอบรมและวิดีโอฟรีสำหรับนักการศึกษา'
+  hoc2021_mc_mee_description: "เดินทางย้อนเวลา และเรียนรู้เรื่องโค้ด! บทช่วยสอนของชั่วโมงเขียนโค้ดตอนไมน์คราฟท์ใหม่ตอนนี้เปิดให้ศึกษาแล้วใน Minecraft: Education Edition สำหรับ Windows, Mac, Chromebook และ iPad ลองดูโดยใช้แหล่งข้อมูล การฝึกอบรมและวิดีโอฟรีสำหรับนักการศึกษา"
   hoc2021_mc_mee_villages_title: "Tale of Two Villages"
-  hoc2021_mc_mee_villages_description: 'ลองศึกษาพื้นฐานของการเขียนโค้ดและทำความเข้าใจเรื่องความหลากหลายและการมีส่วนร่วมไปพร้อมกับผู้เรียนของคุณใน Minecraft: Education Edition'
+  hoc2021_mc_mee_villages_description: "ลองศึกษาพื้นฐานของการเขียนโค้ดและทำความเข้าใจเรื่องความหลากหลายและการมีส่วนร่วมไปพร้อมกับผู้เรียนของคุณใน Minecraft: Education Edition"
   hoc2021_mc_mee_ai_title: "AI For Good"
-  hoc2021_mc_mee_ai_description: 'ดูเรื่องปัญญาประดิษฐ์ไปพร้อม ๆ กับผู้เรียนของคุณ และเรียนรู้วิธีเขียนโค้ดจากภายใน Minecraft: Education Edition'
+  hoc2021_mc_mee_ai_description: "ดูเรื่องปัญญาประดิษฐ์ไปพร้อม ๆ กับผู้เรียนของคุณ และเรียนรู้วิธีเขียนโค้ดจากภายใน Minecraft: Education Edition"
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'หลบหนีคฤหาสน์ลึกลับในยามรุ่งอรุณและรับมรกตนับล้าน! บทช่วยสอน Minecraft Hour of Code ใหม่พร้อมใช้งานแล้วใน Minecraft: Education Edition สำหรับ Windows, Mac, Chromebook, Ipad และมือถือ เริ่มต้นใช้งานแหล่งข้อมูล การฝึกอบรม และวิดีโอสำหรับนักการศึกษาฟรี'
-  hoc2022_mc_mee_timecraft_description: 'ย้อนเวลากลับไปเพื่อกอบกู้อนาคตในบทเรียนการเขียนโค้ดฟรีใน Minecraft: Education Edition'
+  hoc2022_mc_mee_timecraft_description: "ย้อนเวลากลับไปเพื่อกอบกู้อนาคตในบทเรียนการเขียนโค้ดฟรีใน Minecraft: Education Edition"
   footer_powered_by_aws: "ขับเคลื่อนระบบด้วย Amazon Web Services"
   codebytes_skinny_banner_english_only: "ภาษาอังกฤษเท่านั้น"
   footer_privacy_policy: "นโยบายความเป็นส่วนตัว"
@@ -1405,7 +1406,7 @@
   ai_zooniverse: "Zooniverse - สแน็ปช็อตม้าลายภูเขา"
   ai_zooniverse_description: "ช่วยปกป้องม้าลายภูเขาเคปที่ใกล้สูญพันธุ์ได้ด้วยการระบุถึงสัตว์ชนิดต่าง ๆ ที่อยู่ในภาพ"
   ai_audience: "ผู้ฟัง"
-  ai_minecraft_description: 'เข้าถึงแหล่งข้อมูลต่าง ๆ ได้ฟรี ไม่ว่าจะเป็นแผนการเรียนการสอน วิดีโอ หลักสูตรของวิทยาการคอมพิวเตอร์ และการฝึกอบรมผู้สอน (จำเป็นต้องมี Minecraft: Education Edition)'
+  ai_minecraft_description: "เข้าถึงแหล่งข้อมูลต่าง ๆ ได้ฟรี ไม่ว่าจะเป็นแผนการเรียนการสอน วิดีโอ หลักสูตรของวิทยาการคอมพิวเตอร์ และการฝึกอบรมผู้สอน (จำเป็นต้องมี Minecraft: Education Edition)"
   ai_k_12_audience: "K-12 (ต้องอ่านได้)"
   ai_microsoft_workshop: "เวิร์คช็อปเสมือนจริงฟรีจาก Microsoft"
   ai_microsoft_workshop_description: "จุดกระแสความสนใจด้วยเวิร์คช็อปฟรีทั้งในส่วนของ STEM และการเขียนโค้ด"

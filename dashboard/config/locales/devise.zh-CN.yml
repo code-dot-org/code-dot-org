@@ -44,30 +44,30 @@ zh-CN:
       send_paranoid_instructions: 如果您的帐户存在，您将在几分钟内收到一封关于如何解锁的电子邮件。
       unlocked: 你的账户已经被成功解除锁定。请登录以继续。
   errors:
+    invitations:
+      edit:
+        header: 设置您你的密码
+        submit_button: 设置我的密码
+      invitation_removed: 您的邀请已经被取消了。
+      invitation_token_invalid: 提供的邀请令牌无效！
+      new:
+        header: 发送邀请
+        submit_button: 发送一个邀请
+      no_invitations_remaining: 没有剩余的邀请
+      send_instructions: 一封邀请电子邮件已经发送至%{email}。
+      updated: |2-
+
+        您的密码已经设置成功。您现在已经在登录状态了。
+    mailer:
+      invitation_instructions:
+        accept: 接受邀请
+        hello: 你好 %{email}
+        ignore: 如果您不想接受邀请，请忽略这封电子邮件。<br/>您的账户将不会被创建除非访问上面的链接并设置您的密码。
+        someone_invited_you: 有人邀请你去%{url}，你可以通过下面的链接接受它。
+        subject: 邀请说明
     messages:
       already_confirmed: 已经验证，请登录
       confirmation_period_expired: 需要在%{period} 内被确认，请发送一个新的请求。
       expired: 已过期，请申请一个新的
       not_found: 找不到
       not_locked: 未被锁定
-    invitations:
-      send_instructions: 一封邀请电子邮件已经发送至%{email}。
-      invitation_token_invalid: 提供的邀请令牌无效！
-      updated: |2-
-
-        您的密码已经设置成功。您现在已经在登录状态了。
-      no_invitations_remaining: 没有剩余的邀请
-      invitation_removed: 您的邀请已经被取消了。
-      new:
-        header: 发送邀请
-        submit_button: 发送一个邀请
-      edit:
-        header: 设置您你的密码
-        submit_button: 设置我的密码
-    mailer:
-      invitation_instructions:
-        subject: 邀请说明
-        hello: 你好 %{email}
-        someone_invited_you: 有人邀请你去%{url}，你可以通过下面的链接接受它。
-        accept: 接受邀请
-        ignore: 如果您不想接受邀请，请忽略这封电子邮件。<br/>您的账户将不会被创建除非访问上面的链接并设置您的密码。

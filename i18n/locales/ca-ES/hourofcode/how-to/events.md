@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Hora del Codi Esdeveniment How-To
 ---
 
 {{ signup_button }}

@@ -703,6 +703,7 @@ th:
         csa_sorting_algorithms: 'CSA: ขั้นตอนวิธีการเรียงลำดับ'
         star_quilts_intro_to_artist: 'ผ้าห่มดาว: แนะนำศิลปิน'
         upload_sprites_backgrounds: การอัปโหลดสไปรท์และพื้นหลังแบบกำหนดเอง
+        what-is-creativity: ความคิดสร้างสรรค์คืออะไร
     callout:
       text:
         drag_blocks: ลากบล็อก “ย้าย” และสแนปไว้ด้านล่างบล็อกอื่น

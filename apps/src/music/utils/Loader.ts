@@ -5,10 +5,8 @@ import MusicLibrary, {
   LibraryJson,
   LibraryValidator,
 } from '../player/MusicLibrary';
-
+import {baseAssetUrl} from '../constants';
 const AppConfig = require('../appConfig').default;
-
-export const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
 /**
  * Loads a sound library JSON file.
@@ -35,7 +33,7 @@ export const loadLibrary = async (
       : 'music-library';
 
     const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
-      baseUrl + libraryFilename + '.json',
+      baseAssetUrl + libraryFilename + '.json',
       {},
       LibraryValidator
     );

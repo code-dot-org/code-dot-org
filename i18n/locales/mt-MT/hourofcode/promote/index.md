@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: Ifrex il-kelma
 ---
 
 {{ signup_button }}

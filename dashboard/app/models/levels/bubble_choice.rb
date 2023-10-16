@@ -80,7 +80,7 @@ class BubbleChoice < DSLDefined
   # @return [Hash]
   def summarize(script_level: nil, user: nil, should_localize: false)
     ActiveRecord::Base.connected_to(role: :reading) do
-      user_id = user ? user.id : nil
+      user_id = user&.id
       summary = {
         id: id.to_s,
         display_name: display_name,
@@ -123,6 +123,7 @@ class BubbleChoice < DSLDefined
   # @return [Array]
   def summarize_sublevels(script_level: nil, user_id: nil, should_localize: false)
     summary = []
+    localized_properties = %i[display_name short_instructions long_instructions]
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
 
@@ -164,7 +165,7 @@ class BubbleChoice < DSLDefined
       end
 
       if should_localize
-        %i[display_name short_instructions long_instructions].each do |property|
+        localized_properties.each do |property|
           localized_value = I18n.t(level.name, scope: [:data, property], default: nil, smart: true)
           level_info[property] = localized_value unless localized_value.nil?
         end

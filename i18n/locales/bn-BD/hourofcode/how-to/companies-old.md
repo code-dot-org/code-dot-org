@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: কিভাবে একটি ঘন্টা কোড হোস্ট - কোম্পানি
 ---
 
 {{ signup_button }}

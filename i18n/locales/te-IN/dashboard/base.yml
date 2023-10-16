@@ -53,6 +53,7 @@ te:
         gender: 'లింగం'
         edit_header: 'ఖాతా వివరాలను సవరించండి'
         finish_sign_up_header: 'మీ ఖాతాను సృష్టించడం ముగించండి'
+        finish_sign_up_header_error: "\nదయచేసి క్రింది లోపాలను సరిచేయండి:"
         finish_sign_up_subheader: 'కోడ్.ఆర్గ్ ఖాతాను సృష్టించడం పూర్తి చేయడానికి కింది సమాచారాన్ని పూరించండి<strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'కోడ్.ఆర్గ్ ఖాతాను సృష్టించడం పూర్తి చేయడానికి కింది సమాచారాన్ని పూరించండి**%{email}**.'
         finish_sign_up_subheader_provider: "\nకోడ్.ఆర్గ్ ఖాతాను సృష్టించడం పూర్తి చేయడానికి కింది సమాచారాన్ని పూరించండి <strong>%{provider}</strong> కోసం <strong>%{email}</strong>."
@@ -60,6 +61,7 @@ te:
         reset_password_token: "మీరు అనుసరించిన పాస్‌వర్డ్ లింక్‌ను రీసెట్ చేయండి"
         error:
           future: భవిష్యత్తులో ఉండకూడదు
+        user_type: 'ఖాతా రకం'
         us_state: 'రాష్ట్రం'
   beta: "బేట"
   hello: "హలో ప్రపంచం"
@@ -1247,3 +1249,4 @@ te:
     binary: "బైనరీ"
     hexadecimal: "హెక్సాడెసిమల్"
     pixel_format_header: "పిక్సెల్ ఫార్మాట్"
+

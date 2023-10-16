@@ -2,211 +2,10 @@
   "te-IN": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "name": "గేమ్ ల్యాబ్",
-          "categories": {
-            "game_lab": {
-              "name": "గేమ్ ల్యాబ్",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "స్ప్రైట్"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "స్ప్రైట్"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "బ్లాక్ అండ్ వైట్"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "పేర్కొన్న URL నుండి MP3 సౌండ్ ఫైల్ను ప్లే చేస్తుంది."
-                },
-                "showMobileControls": {
-                  "content": "ప్లే స్పేస్ క్రింద కనిపించే మొబైల్ నియంత్రణలను మారుస్తుంది.",
-                  "short_description": "ప్లే స్పేస్ క్రింద కనిపించే మొబైల్ నియంత్రణలను మారుస్తుంది."
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "స్పైరల్"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "స్ప్రైట్ యొక్క ఎత్తు."
-                },
-                "sprite.width": {
-                  "return_value": "స్ప్రైట్ యొక్క వెడల్పు."
-                }
-              }
-            },
-            "groups": {
-              "name": "గుంపులు",
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "స్ప్రైట్"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "స్ప్రైట్"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "స్ప్రైట్"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "రంగు"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "రంగు"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "డ్రాయింగ్",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "స్టార్"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ఫంక్షన్ యొక్క ప్రతి అమలు మధ్య మిల్లీసెకన్ల సంఖ్య."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ఫంక్షన్ను అమలు చేయడానికి ముందు వేచి ఉండాల్సిన మిల్లీసెకన్ల సంఖ్య."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "మఠం",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "కనీస సంఖ్య తిరిగి వచ్చింది"
-                    },
-                    "max": {
-                      "description": "గరిష్ట సంఖ్య తిరిగి వచ్చింది"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "కనీస సంఖ్య తిరిగి వచ్చింది"
-                    },
-                    "max": {
-                      "description": "గరిష్ట సంఖ్య తిరిగి వచ్చింది"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "వేరియబుల్స్",
-              "expressions": {
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "శోధించడానికి స్ట్రింగ్."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "శోధించడానికి స్ట్రింగ్."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "స్ట్రింగ్ యొక్క పొడవు"
-                }
-              }
-            },
-            "functions": {
-              "name": "విధులు"
-            }
-          }
-        },
         "applab": {
-          "name": "యాప్ ల్యాబ్",
-          "description": "యాప్ ల్యాబ్ అనేది ప్రోగ్రామింగ్ వాతావరణం, ఇక్కడ మీరు సాధారణ అనువర్తనాలను తయారు చేయవచ్చు. అనువర్తనాన్ని రూపొందించండి, బ్లాక్లతో కోడ్ చేయండి లేదా జావాస్క్రిప్ట్ పని చేయడానికి, ఆపై మీ అనువర్తనాన్ని సెకన్లలో భాగస్వామ్యం చేయండి.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "డిఫాల్ట్ స్థానం (0,0) వద్ద ఇచ్చిన ఐడి ద్వారా అందించబడిన మరియు ప్రస్తావించబడిన వచనాన్ని ప్రదర్శించే తెరపై ఒక బటన్ను సృష్టిస్తుంది."
-                },
-                "playSound": {
-                  "short_description": "పేర్కొన్న URL నుండి MP3 సౌండ్ ఫైల్ను ప్లే చేస్తుంది."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "మార్చడానికి ఆస్తి."
-                    }
-                  },
-                  "short_description": "పేర్కొన్న మూలకం కోసం ఒక కొత్త విలువ ఒక ఆస్తి అమర్చుతుంది."
-                },
-                "setScreen": {
-                  "short_description": "ఇచ్చిన స్క్రీన్ఐడికి స్క్రీన్ను సెట్ చేస్తుంది."
-                },
-                "showElement": {
-                  "short_description": "అందించిన id తో మూలకాన్ని చూపుతుంది."
-                },
-                "textLabel": {
-                  "short_description": "డిఫాల్ట్ స్థానం (0,0) వద్ద ఇచ్చిన ఐడి అందించిన మరియు ప్రస్తావించబడిన వచనాన్ని ప్రదర్శించే తెరపై టెక్స్ట్ లేబుల్ను సృష్టిస్తుంది."
-                }
-              }
+            "advanced": {
+              "name": "అత్యాధునికమైన"
             },
             "canvas": {
               "expressions": {
@@ -263,17 +62,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "చిత్రం డేటాను సంగ్రహించడానికి సరిహద్దు దీర్ఘచతురస్రం యొక్క ఎత్తు."
+                    },
+                    "width": {
+                      "description": "చిత్రం డేటాను సంగ్రహించడానికి సరిహద్దు దీర్ఘచతురస్రం యొక్క వెడల్పు."
+                    },
                     "x": {
                       "description": "సంగ్రహాన్ని ప్రారంభించడానికి పిక్సెల్లలో x స్థానం."
                     },
                     "y": {
                       "description": "సంగ్రహణను ప్రారంభించడానికి పిక్సెల్లలో y స్థానం."
-                    },
-                    "width": {
-                      "description": "చిత్రం డేటాను సంగ్రహించడానికి సరిహద్దు దీర్ఘచతురస్రం యొక్క వెడల్పు."
-                    },
-                    "height": {
-                      "description": "చిత్రం డేటాను సంగ్రహించడానికి సరిహద్దు దీర్ఘచతురస్రం యొక్క ఎత్తు."
                     }
                   }
                 },
@@ -299,102 +98,126 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "దీర్ఘచతురస్రం యొక్క పిక్సెల్లలో నిలువు ఎత్తు."
+                    },
+                    "width": {
+                      "description": "దీర్ఘచతురస్రం యొక్క పిక్సెల్లలో క్షితిజ సమాంతర వెడల్పు."
+                    },
                     "x": {
                       "description": "దీర్ఘచతురస్రం యొక్క ఎగువ ఎడమ మూలలో పిక్సెల్లలో x స్థానం."
                     },
                     "y": {
                       "description": "దీర్ఘచతురస్రం యొక్క ఎగువ ఎడమ మూలలో పిక్సెల్లలో y స్థానం."
-                    },
-                    "width": {
-                      "description": "దీర్ఘచతురస్రం యొక్క పిక్సెల్లలో క్షితిజ సమాంతర వెడల్పు."
-                    },
-                    "height": {
-                      "description": "దీర్ఘచతురస్రం యొక్క పిక్సెల్లలో నిలువు ఎత్తు."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "పిక్సెల్ లో సెట్ చేయడానికి ఆల్ఫా (అస్పష్టత) మొత్తం (0 నుండి 255 వరకు)."
+                    },
                     "x": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో x స్థానం."
                     },
                     "y": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో y స్థానం."
-                    },
-                    "alphaValue": {
-                      "description": "పిక్సెల్ లో సెట్ చేయడానికి ఆల్ఫా (అస్పష్టత) మొత్తం (0 నుండి 255 వరకు)."
                     }
                   },
                   "short_description": "ఇచ్చిన ఇమేజ్ డేటాలో ఇచ్చిన x మరియు y స్థానం వద్ద ఉన్న పిక్సెల్ రంగులో ఆల్ఫా (అస్పష్టత) (0 నుండి 255 వరకు) మొత్తాన్ని సెట్ చేస్తుంది."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "నీలం మొత్తం (0 నుండి 255 వరకు) పిక్సెల్ లో సెట్."
+                    },
                     "x": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో x స్థానం."
                     },
                     "y": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో y స్థానం."
-                    },
-                    "blueValue": {
-                      "description": "నీలం మొత్తం (0 నుండి 255 వరకు) పిక్సెల్ లో సెట్."
                     }
                   },
                   "short_description": "ఇచ్చిన ఇమేజ్ డేటాలో ఇచ్చిన x మరియు y స్థానం వద్ద ఉన్న పిక్సెల్ రంగులో నీలం మొత్తాన్ని (0 నుండి 255 వరకు) BlueValue ఇన్పుట్ మొత్తానికి సెట్ చేస్తుంది."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "ఆకుపచ్చ మొత్తం పిక్సెల్ లో సెట్ (0 255 నుండి)."
+                    },
                     "x": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో x స్థానం."
                     },
                     "y": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో y స్థానం."
-                    },
-                    "greenValue": {
-                      "description": "ఆకుపచ్చ మొత్తం పిక్సెల్ లో సెట్ (0 255 నుండి)."
                     }
                   },
                   "short_description": "గ్రీన్ వాల్యూ ఇన్పుట్ మొత్తానికి ఇచ్చిన ఇమేజ్ డేటాలో ఇచ్చిన x మరియు y స్థానం వద్ద ఉన్న పిక్సెల్ రంగులో ఆకుపచ్చ మొత్తాన్ని (0 నుండి 255 వరకు) సెట్ చేస్తుంది."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "ఐచ్ఛికం. అస్పష్టత మొత్తం పిక్సెల్ లో సెట్ (0 255 నుండి). 255 (పూర్తి అస్పష్టత) కు డిఫాల్ట్లు."
+                    },
+                    "blue": {
+                      "description": "నీలం మొత్తం (0 నుండి 255 వరకు) పిక్సెల్ లో సెట్."
+                    },
+                    "green": {
+                      "description": "ఆకుపచ్చ మొత్తం పిక్సెల్ లో సెట్ (0 255 నుండి)."
+                    },
+                    "red": {
+                      "description": "ఎరుపు మొత్తం (0 255 నుండి) పిక్సెల్ లో సెట్."
+                    },
                     "x": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో x స్థానం."
                     },
                     "y": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో y స్థానం."
-                    },
-                    "red": {
-                      "description": "ఎరుపు మొత్తం (0 255 నుండి) పిక్సెల్ లో సెట్."
-                    },
-                    "green": {
-                      "description": "ఆకుపచ్చ మొత్తం పిక్సెల్ లో సెట్ (0 255 నుండి)."
-                    },
-                    "blue": {
-                      "description": "నీలం మొత్తం (0 నుండి 255 వరకు) పిక్సెల్ లో సెట్."
-                    },
-                    "alpha": {
-                      "description": "ఐచ్ఛికం. అస్పష్టత మొత్తం పిక్సెల్ లో సెట్ (0 255 నుండి). 255 (పూర్తి అస్పష్టత) కు డిఫాల్ట్లు."
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
+                    "redValue": {
+                      "description": "ఎరుపు మొత్తం (0 255 నుండి) పిక్సెల్ లో సెట్."
+                    },
                     "x": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో x స్థానం."
                     },
                     "y": {
                       "description": "చిత్రం యొక్క ఎగువ ఎడమ మూలలో నుండి ప్రారంభమయ్యే పిక్సెల్లలో y స్థానం."
-                    },
-                    "redValue": {
-                      "description": "ఎరుపు మొత్తం (0 255 నుండి) పిక్సెల్ లో సెట్."
                     }
                   },
                   "short_description": "RedValue ఇన్పుట్ మొత్తానికి ఇచ్చిన ఇమేజ్ డేటాలో ఇచ్చిన x మరియు y స్థానం వద్ద ఉన్న పిక్సెల్ రంగులో ఎరుపు మొత్తాన్ని (0 నుండి 255 వరకు) సెట్ చేస్తుంది."
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "రద్దు చేయడానికి setTimeout ఫంక్షన్ ద్వారా తిరిగి వచ్చిన విలువ."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ఫంక్షన్ యొక్క ప్రతి అమలు మధ్య మిల్లీసెకన్ల సంఖ్య."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ఫంక్షన్ను అమలు చేయడానికి ముందు వేచి ఉండాల్సిన మిల్లీసెకన్ల సంఖ్య."
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "డేటా",
               "expressions": {
                 "drawChartFromRecords": {
                   "palette_params": {
@@ -438,7 +261,36 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "డేటా"
+            },
+            "functions": {
+              "name": "విధులు"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "గరిష్ట సంఖ్య తిరిగి వచ్చింది"
+                    },
+                    "min": {
+                      "description": "కనీస సంఖ్య తిరిగి వచ్చింది"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "గరిష్ట సంఖ్య తిరిగి వచ్చింది"
+                    },
+                    "min": {
+                      "description": "కనీస సంఖ్య తిరిగి వచ్చింది"
+                    }
+                  }
+                }
+              },
+              "name": "మఠం"
             },
             "turtle": {
               "expressions": {
@@ -505,59 +357,38 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "రద్దు చేయడానికి setTimeout ఫంక్షన్ ద్వారా తిరిగి వచ్చిన విలువ."
-                    }
-                  }
+                "button": {
+                  "short_description": "డిఫాల్ట్ స్థానం (0,0) వద్ద ఇచ్చిన ఐడి ద్వారా అందించబడిన మరియు ప్రస్తావించబడిన వచనాన్ని ప్రదర్శించే తెరపై ఒక బటన్ను సృష్టిస్తుంది."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ఫంక్షన్ యొక్క ప్రతి అమలు మధ్య మిల్లీసెకన్ల సంఖ్య."
-                    }
-                  }
+                "playSound": {
+                  "short_description": "పేర్కొన్న URL నుండి MP3 సౌండ్ ఫైల్ను ప్లే చేస్తుంది."
                 },
-                "setTimeout": {
+                "setProperty": {
                   "palette_params": {
-                    "ms": {
-                      "description": "ఫంక్షన్ను అమలు చేయడానికి ముందు వేచి ఉండాల్సిన మిల్లీసెకన్ల సంఖ్య."
+                    "property": {
+                      "description": "మార్చడానికి ఆస్తి."
                     }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "మఠం",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "కనీస సంఖ్య తిరిగి వచ్చింది"
-                    },
-                    "max": {
-                      "description": "గరిష్ట సంఖ్య తిరిగి వచ్చింది"
-                    }
-                  }
+                  },
+                  "short_description": "పేర్కొన్న మూలకం కోసం ఒక కొత్త విలువ ఒక ఆస్తి అమర్చుతుంది."
                 },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "కనీస సంఖ్య తిరిగి వచ్చింది"
-                    },
-                    "max": {
-                      "description": "గరిష్ట సంఖ్య తిరిగి వచ్చింది"
-                    }
-                  }
+                "setScreen": {
+                  "short_description": "ఇచ్చిన స్క్రీన్ఐడికి స్క్రీన్ను సెట్ చేస్తుంది."
+                },
+                "showElement": {
+                  "short_description": "అందించిన id తో మూలకాన్ని చూపుతుంది."
+                },
+                "textLabel": {
+                  "short_description": "డిఫాల్ట్ స్థానం (0,0) వద్ద ఇచ్చిన ఐడి అందించిన మరియు ప్రస్తావించబడిన వచనాన్ని ప్రదర్శించే తెరపై టెక్స్ట్ లేబుల్ను సృష్టిస్తుంది."
                 }
               }
             },
             "variables": {
-              "name": "వేరియబుల్స్",
               "expressions": {
+                "addPair": {
+                  "return_value": "ఏదీ కాదు"
+                },
                 "declareAssign_list_123": {
                   "short_description": "వేరియబుల్కు శ్రేణిని ప్రకటించండి మరియు కేటాయించండి"
                 },
@@ -575,38 +406,207 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "ఏదీ కాదు"
-                },
                 "length": {
                   "return_value": "స్ట్రింగ్ యొక్క పొడవు"
                 }
+              },
+              "name": "వేరియబుల్స్"
+            }
+          },
+          "description": "యాప్ ల్యాబ్ అనేది ప్రోగ్రామింగ్ వాతావరణం, ఇక్కడ మీరు సాధారణ అనువర్తనాలను తయారు చేయవచ్చు. అనువర్తనాన్ని రూపొందించండి, బ్లాక్లతో కోడ్ చేయండి లేదా జావాస్క్రిప్ట్ పని చేయడానికి, ఆపై మీ అనువర్తనాన్ని సెకన్లలో భాగస్వామ్యం చేయండి.",
+          "name": "యాప్ ల్యాబ్"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ఫంక్షన్ యొక్క ప్రతి అమలు మధ్య మిల్లీసెకన్ల సంఖ్య."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ఫంక్షన్ను అమలు చేయడానికి ముందు వేచి ఉండాల్సిన మిల్లీసెకన్ల సంఖ్య."
+                    }
+                  }
+                }
               }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "స్టార్"
+                    }
+                  }
+                }
+              },
+              "name": "డ్రాయింగ్"
             },
             "functions": {
               "name": "విధులు"
             },
-            "advanced": {
-              "name": "అత్యాధునికమైన"
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "బ్లాక్ అండ్ వైట్"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "పేర్కొన్న URL నుండి MP3 సౌండ్ ఫైల్ను ప్లే చేస్తుంది."
+                },
+                "showMobileControls": {
+                  "content": "ప్లే స్పేస్ క్రింద కనిపించే మొబైల్ నియంత్రణలను మారుస్తుంది.",
+                  "short_description": "ప్లే స్పేస్ క్రింద కనిపించే మొబైల్ నియంత్రణలను మారుస్తుంది."
+                }
+              },
+              "name": "గేమ్ ల్యాబ్"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "స్ప్రైట్"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "రంగు"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "రంగు"
+                    }
+                  }
+                }
+              },
+              "name": "గుంపులు"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "గరిష్ట సంఖ్య తిరిగి వచ్చింది"
+                    },
+                    "min": {
+                      "description": "కనీస సంఖ్య తిరిగి వచ్చింది"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "గరిష్ట సంఖ్య తిరిగి వచ్చింది"
+                    },
+                    "min": {
+                      "description": "కనీస సంఖ్య తిరిగి వచ్చింది"
+                    }
+                  }
+                }
+              },
+              "name": "మఠం"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "స్పైరల్"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "స్ప్రైట్ యొక్క ఎత్తు."
+                },
+                "sprite.width": {
+                  "return_value": "స్ప్రైట్ యొక్క వెడల్పు."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "శోధించడానికి స్ట్రింగ్."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "శోధించడానికి స్ట్రింగ్."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "స్ట్రింగ్ యొక్క పొడవు"
+                }
+              },
+              "name": "వేరియబుల్స్"
             }
-          }
+          },
+          "name": "గేమ్ ల్యాబ్"
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "ప్రపంచం"
-            },
-            "location": {
-              "name": "స్థానాలు"
-            },
-            "events": {
-              "name": "ఈవెంట్లు"
-            },
             "behaviors": {
               "name": "ప్రవర్తన"
             },
             "comments": {
               "name": "వ్యాఖ్యలు"
+            },
+            "events": {
+              "name": "ఈవెంట్లు"
+            },
+            "location": {
+              "name": "స్థానాలు"
+            },
+            "world": {
+              "name": "ప్రపంచం"
             }
           }
         },

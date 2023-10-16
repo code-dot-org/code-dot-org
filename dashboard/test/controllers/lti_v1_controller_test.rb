@@ -21,7 +21,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     JWT.encode(payload, @key)
   end
 
-  def create_jwt_and_stub(payload, raises_error=false)
+  def create_jwt_and_stub(payload, raises_error = false)
     if raises_error
       LtiV1Controller.any_instance.stubs(:get_decoded_jwt).raises JWT::DecodeError
     else
@@ -30,7 +30,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     create_jwt(payload)
   end
 
-  def get_valid_payload(aud_is_array=false)
+  def get_valid_payload(aud_is_array = false)
     # an example redirect URI, any URI should work here.
     target_link_uri = CDO.studio_url('/', CDO.default_scheme)
     aud = if aud_is_array
@@ -45,7 +45,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       iat: 1.day.ago.to_i,
       iss: @integration.issuer,
       nonce: @nonce,
-      'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri
+      'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
+      'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest'
     }
   end
 
@@ -104,8 +105,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal parsed_url[:response_mode], 'form_post'
     assert_equal parsed_url[:prompt], 'none'
     assert_equal parsed_url[:login_hint], login_hint
-    assert_not_nil parsed_url[:state]
-    assert_not_nil parsed_url[:nonce]
+    refute_nil parsed_url[:state]
+    refute_nil parsed_url[:nonce]
   end
 
   test 'auth - given no params, return unauthorized' do
@@ -159,6 +160,15 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized
+  end
+
+  test 'auth - LTI Resource Type wrong' do
+    payload = get_valid_payload
+    payload[:'https://purl.imsglobal.org/spec/lti/claim/message_type'] = 'file'
+    LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload
+    jwt = create_jwt(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_response :not_acceptable
   end
 
   test 'auth - error raised in decoding jwt' do

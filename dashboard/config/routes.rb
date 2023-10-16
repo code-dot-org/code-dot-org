@@ -41,6 +41,7 @@ Dashboard::Application.routes.draw do
     get "/musiclab", to: redirect("/projectbeats", status: 302)
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
@@ -200,6 +201,7 @@ Dashboard::Application.routes.draw do
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
+      get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
       omniauth_callbacks: 'omniauth_callbacks',
@@ -597,12 +599,16 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
 
+    # OAuth endpoints
+    get '/oauth/jwks', to: 'oauth_jwks#jwks'
+
     get '/notes/:key', to: 'notes#index'
 
     resources :zendesk_session, only: [:index]
 
     post '/report_abuse', to: 'report_abuse#report_abuse'
     get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    post '/report_abuse_pop_up', to: 'report_abuse#report_abuse_pop_up'
 
     get '/too_young', to: 'too_young#index'
 
@@ -915,6 +921,14 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
+
         resources :ml_models, only: [:show, :destroy] do
           collection do
             get 'names'
@@ -1034,6 +1048,21 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        post 'submit_evaluations'
+      end
+    end
+
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
+      collection do
+        get :get_evaluation
+        post :get_or_create_evaluation
+      end
+    end
+
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
@@ -1058,6 +1087,8 @@ Dashboard::Application.routes.draw do
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
 
     get '/get_token', to: 'authenticity_token#get_token'
+
+    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:

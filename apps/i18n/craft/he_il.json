@@ -1,9 +1,9 @@
 {
   "absolute": "ערך מוחלט",
+  "agentDiamondPathCongrats": "מזל טוב, מצאת את הדרך ליהלום! אספת עד עכשיו {count, plural,one {יהלום אחד}other {# יהלומים}}!",
   "agentGenericFailureMessage": "המשיכו לקודד! זכרו להשתמש בסוכן לעזרה.",
   "agentTooFewBlocksFailureMessage": "נסו להוסיף רק בלוק אחד בכל זמן כדי להביא את הסוכן למקום הנכון.",
   "at": "ב",
-  "agentDiamondPathCongrats": "מזל טוב, מצאת את הדרך ליהלום! אספת עד עכשיו {count, plural,one {יהלום אחד}other {# יהלומים}}!",
   "blockActionAdd": "הוסף",
   "blockActionAttack": "תקוף",
   "blockActionClone": "העתק בלוקים",

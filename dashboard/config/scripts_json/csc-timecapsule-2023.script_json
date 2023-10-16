@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-06-30 15:45:49 UTC",
+    "serialized_at": "2023-07-25 22:13:52 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1729,6 +1729,62 @@
       }
     },
     {
+      "name": "Resource List for All Lessons",
+      "url": "/s/csc-timecapsule-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "Standards in Coding a Time Capsule",
+      "url": "/s/csc-timecapsule-2023/standards",
+      "key": "all_standards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "Vocabulary in Coding a Time Capsule",
+      "url": "/s/csc-timecapsule-2023/vocab",
+      "key": "all_vocab",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "all_vocab"
+      }
+    },
+    {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
+      }
+    },
+    {
       "name": "Enter Your Own Poem",
       "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
       "key": "enter_your_own_poem",
@@ -1751,6 +1807,18 @@
       },
       "seeding_key": {
         "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "name": "Helpful Hints for teachers and learners",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
       }
     },
     {
@@ -2035,7 +2103,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocab",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-timecapsule-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-timecapsule-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

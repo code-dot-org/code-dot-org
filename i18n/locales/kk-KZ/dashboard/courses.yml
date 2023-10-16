@@ -8,11 +8,11 @@ kk:
         csp-2018:
           assignment_family_title: AP® Информатика қағидалары
     resources:
-      curriculum/csd/2020:
-        name: Оқу бағдарламасы
       curriculum/csd/2017:
+        name: Оқу бағдарламасы
+      curriculum/csd/2018:
         name: Оқу бағдарламасы
       curriculum/csd/2019:
         name: Оқу бағдарламасы
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Оқу бағдарламасы

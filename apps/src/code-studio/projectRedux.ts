@@ -1,6 +1,6 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
-interface ProjectReduxState {
+export interface ProjectState {
   showProjectUpdatedAt: boolean;
   projectUpdatedStatus: keyof typeof projectUpdatedStatuses;
   projectUpdatedAt: string | undefined;
@@ -31,10 +31,12 @@ export const workspaceAlertTypes = {
   notification: 'notification',
 } as const;
 
-const initialState: ProjectReduxState = {
+const initialState: ProjectState = {
   showProjectUpdatedAt: false,
   projectUpdatedStatus: projectUpdatedStatuses.default,
   projectUpdatedAt: undefined,
+  // This is the legacy project name. The lab2 project
+  // name is part of lab2Redux, in the channel.
   projectName: '',
   projectNameFailure: undefined,
   showTryAgainDialog: false,

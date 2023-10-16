@@ -707,6 +707,8 @@ hi:
         csa_sorting_algorithms: 'CSA: सॉर्टिंग एल्गोरिदम'
         star_quilts_intro_to_artist: 'स्टार क्विल्ट्स: इंट्रो टू आर्टिस्ट'
         upload_sprites_backgrounds: कस्टम स्प्राइट्स और बैकग्राउंड अपलोड करना
+        what-is-creativity: रचनात्मकता क्या है?
+        code-break: एक कोड ब्रेक लें
     callout:
       text:
         drag_blocks: '"मूव करें" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें'

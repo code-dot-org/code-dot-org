@@ -17,7 +17,6 @@ pt:
             '0.75': pequeno
             '1.00': médio
             '2.00': grande
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,6 @@ pt:
             '0.75': pequeno
             '1.00': médio
             '2.00': grande
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} alterna a cada {N} medida entre {MOVE1} e {MOVE2}"
         options:
@@ -1004,8 +1002,6 @@ pt:
         options:
           INPUT1:
             '1': suco de limão
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: criar efeito {EFFECT} efeito
         options:
@@ -1022,8 +1018,6 @@ pt:
         options:
           INPUT1:
             '1': suco de limão
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Comunique {VAR1} com {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1523,11 +1517,9 @@ pt:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': devagar
             '5': normal
             '7': rápido
-            '9': extra fast
       gamelab_setTint:
         text: mudar a cor de {THIS} para {COLOR}
       gamelab_setupScoreboard:
@@ -1990,14 +1982,10 @@ pt:
         options:
           INPUT1:
             '1': suco de limão
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': suco de limão
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2223,7 +2211,6 @@ pt:
         text: quando a linha {N} aparecer
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2479,7 +2466,6 @@ pt:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

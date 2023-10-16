@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2023-06-28 15:14:14 UTC",
+    "serialized_at": "2023-08-16 15:30:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6659,7 +6659,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursea-2022/resources",
+      "url": "/s/coursea-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6670,7 +6670,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursea-2022/standards",
+      "url": "/s/coursea-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6681,7 +6681,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursea-2022/vocab",
+      "url": "/s/coursea-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -6749,6 +6749,31 @@
       },
       "seeding_key": {
         "resource.key": "cs_fundamentals_main_activity_tips"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "name": "CSF Course Syllabus",
+      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+      "key": "csf_course_syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_syllabus"
       }
     },
     {
@@ -7052,6 +7077,18 @@
       }
     },
     {
+      "name": "Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+      "key": "teaching_and_learning_strategies",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies"
+      }
+    },
+    {
       "name": "The Big Event",
       "url": "https://youtu.be/u0WV9shCoak",
       "key": "the_big_event",
@@ -7116,6 +7153,18 @@
       }
     },
     {
+      "name": "Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview\t",
+      "key": "values_and_philosophy_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "values_and_philosophy_1"
+      }
+    },
+    {
       "name": "Wiggles-Go Noodle",
       "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
       "key": "wiggles-go_noodle",
@@ -7155,6 +7204,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Happy Loops",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Happy Loops",
         "resource.key": "feeling_faces_emotion_image"
       }
@@ -7181,6 +7242,12 @@
       "seeding_key": {
         "lesson.key": "Happy Loops",
         "resource.key": "happy_map_game_pieces_bonus_pack"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Happy Maps",
+        "resource.key": "csf_course_a_lesson_slides"
       }
     },
     {
@@ -7222,6 +7289,12 @@
     {
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
         "resource.key": "getting_started_-_creating_a_class_section"
       }
     },
@@ -7253,6 +7326,12 @@
       "seeding_key": {
         "lesson.key": "Loops with Laurel",
         "resource.key": "unplugged_blockly_blocks_grades_k-1_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "resource.key": "csf_course_a_lesson_slides"
       }
     },
     {
@@ -7300,6 +7379,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
         "resource.key": "csf_lesson_recommendations"
       }
     },
@@ -7330,6 +7415,12 @@
     {
       "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
         "resource.key": "csf_lesson_recommendations"
       }
     },
@@ -7348,6 +7439,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
         "resource.key": "feeling_faces_-_emotion_image_1"
       }
     },
@@ -7355,6 +7452,12 @@
       "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Scrat",
+        "resource.key": "csf_course_a_lesson_slides"
       }
     },
     {
@@ -7373,6 +7476,12 @@
       "seeding_key": {
         "lesson.key": "Programming with Scrat",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "resource.key": "csf_course_a_lesson_slides"
       }
     },
     {
@@ -7408,6 +7517,12 @@
     {
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
         "resource.key": "pair_programming"
       }
     },
@@ -7421,6 +7536,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "resource.key": "wiggles_-_gonoodle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Big Event Jr",
+        "resource.key": "csf_course_a_lesson_slides"
       }
     },
     {
@@ -7487,6 +7608,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csf_course_syllabus",
+        "script.name": "coursea-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "debugging_guide",
         "script.name": "coursea-2023"
       }
@@ -7506,6 +7633,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "coursea-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies",
+        "script.name": "coursea-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "values_and_philosophy_1",
         "script.name": "coursea-2023"
       }
     }
@@ -8378,6 +8517,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

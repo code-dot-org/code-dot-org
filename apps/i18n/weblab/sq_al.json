@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Shto CSS",
-  "addImageButton": "Shto imazhin",
   "addHTMLButton": "Shto HTML",
+  "addImageButton": "Shto imazhin",
   "closeFullscreenPreview": "Mbyllni pamjen paraprake në",
   "currentProjectCapacity": "{currentMegabytes}MB e {totalMegabytes}MB të përdorura",
   "disallowedHtml": "Skedari \"{filename}\" përmban elemente HTML që nuk lejohen: `{disallowedTags}`. Ato do të hiqen kur ky dialog të mbyllet.",
@@ -14,8 +14,8 @@
   "reset": "Rivendos Web Lab",
   "resetComplete": "Rivendosja e plotë e laboratorit në",
   "resetFailure": "Dështoi në rivendosjen e Web Lab: {message}.",
-  "toggleInspectorOn": "Inspektori: Off",
   "toggleInspectorOff": "Inspektori: Në",
+  "toggleInspectorOn": "Inspektori: Off",
   "troubleshootingSupport": "Ju lutemi shikoni artikullin tonë të mbështetjes [\"Zgjidhja e problemeve të Web Lab\"]({url}) për më shumë informacion.",
   "uploadError": "Gabim në ngarkim"
 }

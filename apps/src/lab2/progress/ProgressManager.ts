@@ -1,27 +1,29 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {ProjectLevelData} from '@cdo/apps/lab2/types';
+import {ProjectLevelData, Condition} from '@cdo/apps/lab2/types';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
 export abstract class Validator {
   abstract shouldCheckConditions(): boolean;
   abstract checkConditions(): void;
-  abstract conditionsMet(conditions: string[]): boolean;
+  abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
 }
 
 // The current progress validation state.
 export interface ValidationState {
+  hasConditions: boolean;
   satisfied: boolean;
   message: string | null;
 }
 
-export const initialValidationState: ValidationState = {
+export const getInitialValidationState: () => ValidationState = () => ({
+  hasConditions: false,
   satisfied: false,
   message: null,
-};
+});
 
 export default class ProgressManager {
   private levelData: ProjectLevelData | undefined;
@@ -32,16 +34,18 @@ export default class ProgressManager {
   constructor(onProgressChange: () => void) {
     this.levelData = undefined;
     this.onProgressChange = onProgressChange;
-    this.currentValidationState = initialValidationState;
+    this.currentValidationState = getInitialValidationState();
   }
 
   /**
    * Update the ProgressManager with level data for a new level.
    * Resets validation status internally.
    */
-  onLevelChange(levelData: ProjectLevelData) {
+  onLevelChange(levelData?: ProjectLevelData) {
     this.levelData = levelData;
-    this.resetValidation();
+    this.resetValidation(
+      (levelData?.validations && levelData.validations.length > 0) || false
+    );
   }
 
   setValidator(validator: Validator) {
@@ -92,14 +96,17 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  private resetValidation() {
+  private resetValidation(hasConditions: boolean) {
     if (this.validator) {
       // Give the lab the chance to clear accumulated satisfied conditions.
       this.validator.clear();
     }
 
-    this.currentValidationState.satisfied = false;
-    this.currentValidationState.message = null;
+    this.currentValidationState = {
+      hasConditions,
+      satisfied: false,
+      message: null,
+    };
 
     this.onProgressChange();
   }

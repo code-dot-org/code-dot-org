@@ -71,7 +71,7 @@ class FindResourceDialog extends Component {
               e.preventDefault();
               this.props.handleConfirm(this.state.selectedResourceKey);
             }}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </LessonEditorDialog>

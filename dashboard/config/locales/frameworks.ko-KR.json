@@ -2,35 +2,35 @@
   "ko-KR": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "CSTA K-12 컴퓨터 과학 표준 (2017)"
-        },
-        "csp2021": {
-          "name": "CSP 개념 프레임워크"
-        },
-        "csta2011": {
-          "name": "CSTA K-12 컴퓨터 과학 기준 (2011)"
-        },
-        "ccela": {
-          "name": "커몬 코어 (Common Core) 영어 기준"
-        },
-        "ngss": {
-          "name": "차세대 과학 표준"
-        },
-        "ccmath": {
-          "name": "커몬 코어 (Common Core) 수학 기준"
-        },
-        "iste": {
-          "name": "학생들을 위한 ISTE 기준"
+        "ai4k12-2021": {
+          "name": "AI4K12 국가 가이드라인 2021"
         },
         "c3ss": {
           "name": "C3 사회 연구 표준"
         },
+        "ccela": {
+          "name": "커몬 코어 (Common Core) 영어 기준"
+        },
+        "ccmath": {
+          "name": "커몬 코어 (Common Core) 수학 기준"
+        },
         "csa": {
           "name": "CSA 개념적 프레임워크"
         },
-        "ai4k12-2021": {
-          "name": "AI4K12 국가 가이드라인 2021"
+        "csp2021": {
+          "name": "CSP 개념 프레임워크"
+        },
+        "csta": {
+          "name": "CSTA K-12 컴퓨터 과학 표준 (2017)"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 컴퓨터 과학 기준 (2011)"
+        },
+        "iste": {
+          "name": "학생들을 위한 ISTE 기준"
+        },
+        "ngss": {
+          "name": "차세대 과학 표준"
         }
       }
     }

@@ -1,58 +1,58 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: وضوح نمونه حمایتی هفته آموزش علوم کامپیوتر و ساعت کد
 ---
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# قطعنامه هفته آموزش و پرورش نمونه علوم کامپیوتر
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### در زیر زبان برای یک قطعنامه نمونه حمایت از علوم کامپیوتر هفته آموزش و پرورش و اهداف آن است که می تواند توسط قانون گذاران ایالتی و محلی استفاده می شود.
 
 * * *
 
-#### **RESOLUTION**  
+#### **قطعنامه**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### حمایت از اهداف و آرمان های هفته آموزش علوم کامپیوتر
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+در حالی که هفته آموزش علوم کامپیوتر نقش مهمی که علم کامپیوتر در تبدیل جامعه ما و چگونه علم کامپیوتر را قادر می سازد نوآوری و ایجاد فرصت های اقتصادی برجسته;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+در حالی که تکنولوژی رایانه بخشی جدایی ناپذیر از فرهنگ مدرن است و نحوه تعامل مردم با یکدیگر و جهان اطرافشان را تغییر می دهد؛
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+در حالی که علم کامپیوتر در حال تبدیل صنعت، ایجاد زمینه های جدید تجارت، رانندگی نوآوری در تمام زمینه های علم، و تقویت بهره وری در بخش های اقتصادی تاسیس شده است؛
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+در حالی که رشته علوم کامپیوتر یک موضوع بنیادی است که زیربنای بخش فناوری اطلاعات اقتصاد ما است، که سهم قابل توجهی در تولید اقتصادی ایالات متحده دارد؛
 
-Whereas the field of computer science is a foundational science for the digital age;
+در حالی که سواد هوش مصنوعی به دانش، مهارت ها و نگرش های مرتبط با نحوه عملکرد هوش مصنوعی اشاره دارد، از جمله مفاهیم اساسی در علوم رایانه و نحوه استفاده از هوش مصنوعی با خیال راحت، مسئولانه و اخلاقی؛
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+در حالی که حوزه علوم کامپیوتر، از جمله هوش مصنوعی، فناوریهایی هستند که توانایی تغییر بنیادی تقریبا تمام بخشهای اقتصاد ایالات متحده را دارند؛
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+در حالی که رهبری تکنولوژی در تمام زمینه های علوم کامپیوتر، از جمله هوش مصنوعی، یک ضرورت اقتصادی و امنیت ملی است؛
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+در حالی که چشم انداز برای مشاغل علوم کامپیوتر روشن است با بیش از 500،000 موقعیت محاسبات باز در سراسر کشور؛
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+در حالی که ارائه دانش آموزان فرصت برای شرکت در فعالیت های علوم کامپیوتر با کیفیت بالا آنها را در معرض فرصت های غنی این زمینه ارائه می دهد و مهارت های تفکر انتقادی است که آنها را در طول زندگی خود خدمت می کنند فراهم می کند.
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+در حالی که همه دانش آموزان سزاوار آمادگی کامل در آموزش علوم کامپیوتر، از جمله دسترسی به معلمان واجد شرایط، فن آوری، و برنامه درسی مناسب سن مورد نیاز برای یادگیری علوم کامپیوتر در سطوح ابتدایی و متوسطه آموزش و پرورش؛
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+در حالی که آموزش علوم کامپیوتر چالش هایی برای رسیدگی به, از جمله بهبود دسترسی به دوره های علوم کامپیوتر برای همه دانش آموزان, و ارائه توسعه حرفه ای برای معلمان علوم کامپیوتر;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+در حالی که شرکت در یک ساعت از کد در طول هفته آموزش علوم کامپیوتر می تواند در خدمت به رفع ابهام در زمینه علوم کامپیوتر و تشویق دانش آموزان بیشتر به انجام مطالعات بیشتر در علوم کامپیوتر;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+در حالی که رشته علوم کامپیوتر دارای موانع عدالت قابل توجهی برای رسیدگی است، از جمله جذب و حفظ زمینه ای از نامزدها متنوع در نژاد، قومیت و جنسیت در تمام سطوح و شاخه ها؛
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+در حالی که گریس موری هاپر، یکی از اولین زنان در زمینه علوم کامپیوتر، زبان های برنامه نویسی جدید را مهندسی کرد و استانداردهای پیشگام برای سیستم های کامپیوتری را پایه گذاری کرد که پایه و اساس بسیاری از پیشرفت ها در علوم کامپیوتر بود؛ و
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+در حالی که هفته {{ campaign_date/start_long }}، به افتخار تولد گریس هاپر، به عنوان «هفته آموزش علوم کامپیوتر» تعیین شده است: در حال حاضر، بنابراین، <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+حل و فصل, که (مجلس سنا, دولت, شهرستان, شهرستان و یا مدرسه هیئت مدیره) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) پشتیبانی از تعیین هفته آموزش علوم کامپیوتر ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) تشویق مدارس، مربیان، والدین و سیاست گذاران برای شرکت در هفته آموزش علوم کامپیوتر با فعال کردن دانش آموزان خود را به شرکت در ساعت از کد.
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) تشویق مدارس، معلمان، محققان، دانشگاه ها، رهبران کسب و کار، و سیاست گذاران برای شناسایی مکانیزم برای معلمان برای دریافت پیشرفته توسعه حرفه ای برای ارائه تجارب یادگیری پایدار در علوم کامپیوتر در تمام سطوح آموزشی و تشویق دانش آموزان به در معرض مفاهیم علوم کامپیوتر می شود.
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) فرصت ها، از جمله از طریق برنامه های موجود، برای دانش آموزان دختر و دانش آموزان از گروه های نژادی و قومی کمتر در علوم کامپیوتر را تشویق می کند.
 
 {{ signup_button }}

@@ -1,4 +1,4 @@
-import {logWarning, reportLoadTime} from '../utils/MusicMetrics';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
@@ -46,7 +46,11 @@ export default class SamplePlayer {
     this.groupPath = '';
   }
 
-  initialize(library: MusicLibrary, bpm: number) {
+  initialize(
+    library: MusicLibrary,
+    bpm: number,
+    updateLoadProgress: (value: number) => void
+  ) {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
@@ -73,10 +77,11 @@ export default class SamplePlayer {
       // Use a delay value of a half of a beat
       delayTimeSeconds: secondsPerBeat / 2,
       reportSoundLibraryLoadTime: (loadTimeMs: number) => {
-        reportLoadTime('SoundLibraryLoadTime', loadTimeMs, [
+        Lab2MetricsReporter.reportLoadTime('SoundLibraryLoadTime', loadTimeMs, [
           {name: 'Library', value: library.name},
         ]);
       },
+      updateLoadProgress: updateLoadProgress,
     });
 
     this.groupPath = library.groups[0].path;
@@ -88,15 +93,23 @@ export default class SamplePlayer {
     return this.isInitialized;
   }
 
-  startPlayback(sampleEventList: SampleEvent[]) {
+  /**
+   * Start playback with the given sample events.
+   * @param sampleEventList samples to play
+   * @param playTimeOffsetSeconds the number of seconds to offset playback by.
+   */
+  startPlayback(
+    sampleEventList: SampleEvent[],
+    playTimeOffsetSeconds?: number
+  ) {
     if (!this.isInitialized) {
       this.logUninitialized();
       return;
     }
 
     this.stopPlayback();
-
-    this.startPlayingAudioTime = soundApi.GetCurrentAudioTime();
+    this.startPlayingAudioTime =
+      soundApi.GetCurrentAudioTime() - (playTimeOffsetSeconds || 0);
     this.isPlaying = true;
 
     this.playSamples(sampleEventList);
@@ -235,6 +248,6 @@ export default class SamplePlayer {
   }
 
   private logUninitialized() {
-    logWarning('Sample player not initialized.');
+    Lab2MetricsReporter.logWarning('Sample player not initialized.');
   }
 }

@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2023-04-07 00:35:25 UTC",
+    "serialized_at": "2023-08-16 15:00:19 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6508,6 +6508,19 @@
       }
     },
     {
+      "name": "CSF Course B Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/17S-nTFeB0eFK2TU_x7ExRvJKK4kUM01Mumvr22h9wmw/template/preview",
+      "key": "csf_course_b_lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17S-nTFeB0eFK2TU_x7ExRvJKK4kUM01Mumvr22h9wmw/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
+    {
       "name": "Curriculum Guide",
       "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
       "key": "curriculum_guide",
@@ -6963,6 +6976,12 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "resource.key": "csf_course_b_lesson_slides"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Digital Trails",
@@ -8248,5 +8267,14 @@
         "opportunity_standard.shortcode": "K-2-ETS1-2"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

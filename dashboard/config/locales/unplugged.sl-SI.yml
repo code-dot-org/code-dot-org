@@ -2,8 +2,179 @@
 sl:
   data:
     unplugged:
+      BigEvent:
+        desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
+          računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
+          učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.
+        title: Veliki dogodek
+      BigEvent_2018:
+        desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
+          računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
+          učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.
+        title: Veliki dogodek
+      BigEvent_2019:
+        desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
+          računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
+          učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.
+        title: Veliki dogodek
+      BinaryImages:
+        title: Binarne slike
+      BinaryImages_2018:
+        title: Binarne slike
+      BinaryImages_2019:
+        title: Binarne slike
+      Booleans:
+        desc: Logične vrednosti so četrti in zadnji podatkovni tip, ki se ga boš naučil
+          v tem tečaju. V tej dejavnosti se boš spoznal z logičnimi vrednostmi, kaj
+          so in kako nam lahko pomagajo pri pisanju funkcij, ki so logične.
+        title: Logične vrednosti in logika
+      BuildingAFoundation:
+        desc: Učenci so zgradili skulpturo le z uporabo sestavin, ki so jih imeli
+          na voljo. Skulpture morajo ustrezati določenim zahtevam (doseči določeno
+          višino ali prenesti določeno težo). Učenci so se pogovorili o pomembnosti
+          vztrajanja, ko se stvari zakomplicirajo.
+        title: Graditi temelje
+      ComputationalThinking:
+        desc: Učenci uporabijo korake računalniškega razmišljanja (dekompozicija,
+          iskanje vzorcev, abstrakcija, algoritem), da ugotovijo kako igrati igro,
+          za katero nimajo navodil.
+        title: Računalniško razmišljanje
+      Conditionals:
+        title: Pogoji
+      Conditionals_2018:
+        title: Pogoji
+      Conditionals_2019:
+        title: Pogoji
+      Crowdsourcing:
+        desc: Učenci uporabljajo "crowdsourcing", tehniko reševanja problemov v računalništvu,
+          da bi dokončali nalogo kot razred, kar je bolj učinkovito kot če bi učenec
+          poskušal nalogo rešiti sam.
+        title: Crowdsourcing
+      DiceRace:
+        desc: Ta lekcija bo priklicala načine, na katere uporabljamo algoritme v vsakdanjem
+          življenju. Kot del tega bodo učenci identificirali in zapisali algoritem
+          za igro s kocko.
+        title: 'Življenjski algoritmi: Igra s kocko'
+      DigitalCitizenship:
+        desc: Učenci raziskujejo razliko med zasebnimi in osebnimi podatki, da bi
+          znali razločiti, kaj je varno deliti na internetu in kaj ne.
+        title: Digitalno državljanstvo
+      EnvelopeVariables:
+        desc: Spremenljivke omogočajo veliko svobode pri računalništvu.  Ta lekcija
+          pomaga razložiti, kaj so spremenljivke in kako jih lahko uporabljamo na
+          različne načine. To dejanje uporabite pred (ali v povezavi z) lekcijo o
+          abstrakciji, da učenci res osvojijo to idejo.
+        title: Spremeljivke v ovojnicah
+      ForLoopFun:
+        title: Zabava s "for" zankami
+      FunctionalSuncatchers:
+        desc: Učenci sestavijo algoritem s spremenljivkami in funkcijami (kosi kode,
+          ki jih želimo uporabiti večkrat), da sestavijo lovilce svetlobe s pomočjo
+          nitk in koraldic.
+        title: Funkcionalni lovilci svetlobe
+      GettingLoopy:
+        desc: Ta lekcija uvaja koncept programiranja zank (ponavljajočih navodil)
+          s pomočjo plesa. Učenci se bodo naučili preproste koreografije, potem pa
+          dobili navodilo, da jo ponovijo.
+      GettingLoopy_2018:
+        desc: Ta lekcija uvaja koncept programiranja zank (ponavljajočih navodil)
+          s pomočjo plesa. Učenci se bodo naučili preproste koreografije, potem pa
+          dobili navodilo, da jo ponovijo.
+      GettingLoopy_2019:
+        desc: Ta lekcija uvaja koncept programiranja zank (ponavljajočih navodil)
+          s pomočjo plesa. Učenci se bodo naučili preproste koreografije, potem pa
+          dobili navodilo, da jo ponovijo.
+      GoingPlacesSafely:
+        desc: Internet je močno, ampak včasih nevarno mesto. Učitelji predstavijo,
+          kako ostati varen, medtem ko navigiraš po internetu.
+        title: Kako varno potovati
+      GoingPlacesSafely_2018:
+        desc: Internet je močno, ampak včasih nevarno mesto. Učitelji predstavijo,
+          kako ostati varen, medtem ko navigiraš po internetu.
+        title: Kako varno potovati
+      GoingPlacesSafely_2019:
+        desc: Internet je močno, ampak včasih nevarno mesto. Učitelji predstavijo,
+          kako ostati varen, medtem ko navigiraš po internetu.
+        title: Kako varno potovati
+      GraphPaperProgramming:
+        desc: Učenci bodo napisali algoritem (zaporedje navodil) z uporabo nabora
+          vnaprej pripravljenih ukazov in z njim usmerjali sošolce, ki bodo reproducirali
+          risbo.
+        title: Obarvajmo kvadratke
+      GraphPaperProgramming_2018:
+        desc: Učenci bodo napisali algoritem (zaporedje navodil) z uporabo nabora
+          vnaprej pripravljenih ukazov in z njim usmerjali sošolce, ki bodo reproducirali
+          risbo.
+        title: Obarvajmo kvadratke
+      GraphPaperProgramming_2019:
+        desc: Učenci bodo napisali algoritem (zaporedje navodil) z uporabo nabora
+          vnaprej pripravljenih ukazov in z njim usmerjali sošolce, ki bodo reproducirali
+          risbo.
+        title: Obarvajmo kvadratke
+      Internet:
+        desc: Učenci z uporabo papirja pošiljajo sporočila, ki predstavljajo različne
+          internetne metode prenosa.
+        title: Internet
+      MoveIt:
+        desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
+          lik skozi labirint z enim ukazom.
+        title: Dajmo, dajmo
+      MoveItMoveIt_2018:
+        title: Premakni se, premakni
+      MoveItMoveIt_2019:
+        title: Premakni se, premakni
+      PaperPlanes:
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
+          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
+        title: 'Življenjski algoritmi: Papirnata letala'
+      PaperPlanes_2018:
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
+          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
+        title: 'Življenjski algoritmi: Papirnata letala'
+      PaperPlanes_2019:
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
+          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
+        title: 'Življenjski algoritmi: Papirnata letala'
+      PlantASeed:
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
+          računalništva in kako so algoritmi bistveni del računalništva.
+        title: 'Življenjski algoritmi: Zasadi seme'
+      PlantASeed_2018:
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
+          računalništva in kako so algoritmi bistveni del računalništva.
+        title: 'Življenjski algoritmi: Zasadi seme'
+      PlantASeed_2019:
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
+          računalništva in kako so algoritmi bistveni del računalništva.
+        title: 'Življenjski algoritmi: Zasadi seme'
+      RelayProgramming:
+        title: Relejsko programiranje
+      RelayProgramming_2018:
+        title: Relejsko programiranje
+      RelayProgramming_2018_2019:
+        title: Relejsko programiranje
+      SongwritingParameters:
+        desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju
+          in klicanju funkcije.
+        title: Napiši pesem
+      SongwritingWithParameters:
+        title: Pisanje pesmi s parametri
+      TangramAlgorithms:
+        title: Tangram algoritmi
       Unplug1:
         title: Uvod v računalništvo
+      Unplug10:
+        desc: V tej lekciji se bodo učenci pretvarjali, da letijo skozi internet in
+          se med tem učili o spletnih naslovih, IP naslovih in DNS-u.
+        title: Internet
+      Unplug11:
+        title: Zaključek
       Unplug2:
         title: Računalniško razmišljanje
       Unplug3:
@@ -20,289 +191,118 @@ sl:
         title: Abstrakcija
       Unplug9:
         title: Relejsko programiranje
-      Unplug10:
-        title: Internet
-        desc: V tej lekciji se bodo učenci pretvarjali, da letijo skozi internet in
-          se med tem učili o spletnih naslovih, IP naslovih in DNS-u.
-      Unplug11:
-        title: Zaključek
       UnplugHappyMaps:
+        desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
+          lik skozi labirint z enim ukazom.
         title: Veseli zemljevidi
+      UnplugHappyMaps_2018:
         desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
           lik skozi labirint z enim ukazom.
-      MoveIt:
-        title: Dajmo, dajmo
+        title: Veseli zemljevidi
+      UnplugHappyMaps_2019:
         desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
           lik skozi labirint z enim ukazom.
-      PlantASeed:
-        title: 'Življenjski algoritmi: Zasadi seme'
-        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
-          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
-          računalništva in kako so algoritmi bistveni del računalništva.
-      BuildingAFoundation:
-        title: Graditi temelje
-        desc: Učenci so zgradili skulpturo le z uporabo sestavin, ki so jih imeli
-          na voljo. Skulpture morajo ustrezati določenim zahtevam (doseči določeno
-          višino ali prenesti določeno težo). Učenci so se pogovorili o pomembnosti
-          vztrajanja, ko se stvari zakomplicirajo.
-      GettingLoopy:
-        desc: Ta lekcija uvaja koncept programiranja zank (ponavljajočih navodil)
-          s pomočjo plesa. Učenci se bodo naučili preproste koreografije, potem pa
-          dobili navodilo, da jo ponovijo.
-      RelayProgramming:
-        title: Relejsko programiranje
-      Conditionals:
-        title: Pogoji
-      BigEvent:
-        title: Veliki dogodek
+        title: Veseli zemljevidi
+      courseABC_unplugged_bigEvent:
         desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
           računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
           učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.
-      GoingPlacesSafely:
-        title: Kako varno potovati
+        title: Veliki dogodek
+      courseAB_unplugged_plantASeed:
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
+          računalništva in kako so algoritmi bistveni del računalništva.
+        title: 'Življenjski algoritmi: Zasadi seme'
+      courseA_unplugged_goingPlacesSafely:
         desc: Internet je močno, ampak včasih nevarno mesto. Učitelji predstavijo,
           kako ostati varen, medtem ko navigiraš po internetu.
-      GraphPaperProgramming:
-        title: Obarvajmo kvadratke
-        desc: Učenci bodo napisali algoritem (zaporedje navodil) z uporabo nabora
-          vnaprej pripravljenih ukazov in z njim usmerjali sošolce, ki bodo reproducirali
-          risbo.
-      PaperPlanes:
-        title: 'Življenjski algoritmi: Papirnata letala'
-        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
-          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
-          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
-      ComputationalThinking:
-        title: Računalniško razmišljanje
-        desc: Učenci uporabijo korake računalniškega razmišljanja (dekompozicija,
-          iskanje vzorcev, abstrakcija, algoritem), da ugotovijo kako igrati igro,
-          za katero nimajo navodil.
-      FunctionalSuncatchers:
-        title: Funkcionalni lovilci svetlobe
-        desc: Učenci sestavijo algoritem s spremenljivkami in funkcijami (kosi kode,
-          ki jih želimo uporabiti večkrat), da sestavijo lovilce svetlobe s pomočjo
-          nitk in koraldic.
-      SongwritingParameters:
-        title: Napiši pesem
-        desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju
-          in klicanju funkcije.
-      DiceRace:
-        title: 'Življenjski algoritmi: Igra s kocko'
-        desc: Ta lekcija bo priklicala načine, na katere uporabljamo algoritme v vsakdanjem
-          življenju. Kot del tega bodo učenci identificirali in zapisali algoritem
-          za igro s kocko.
-      Internet:
-        title: Internet
-        desc: Učenci z uporabo papirja pošiljajo sporočila, ki predstavljajo različne
-          internetne metode prenosa.
-      Crowdsourcing:
-        title: Crowdsourcing
-        desc: Učenci uporabljajo "crowdsourcing", tehniko reševanja problemov v računalništvu,
-          da bi dokončali nalogo kot razred, kar je bolj učinkovito kot če bi učenec
-          poskušal nalogo rešiti sam.
-      DigitalCitizenship:
-        title: Digitalno državljanstvo
-        desc: Učenci raziskujejo razliko med zasebnimi in osebnimi podatki, da bi
-          znali razločiti, kaj je varno deliti na internetu in kaj ne.
-      TangramAlgorithms:
-        title: Tangram algoritmi
-      EnvelopeVariables:
-        title: Spremeljivke v ovojnicah
-        desc: Spremenljivke omogočajo veliko svobode pri računalništvu.  Ta lekcija
-          pomaga razložiti, kaj so spremenljivke in kako jih lahko uporabljamo na
-          različne načine. To dejanje uporabite pred (ali v povezavi z) lekcijo o
-          abstrakciji, da učenci res osvojijo to idejo.
-      ForLoopFun:
-        title: Zabava s "for" zankami
-      SongwritingWithParameters:
-        title: Pisanje pesmi s parametri
-      BinaryImages:
-        title: Binarne slike
-      Booleans:
-        title: Logične vrednosti in logika
-        desc: Logične vrednosti so četrti in zadnji podatkovni tip, ki se ga boš naučil
-          v tem tečaju. V tej dejavnosti se boš spoznal z logičnimi vrednostmi, kaj
-          so in kako nam lahko pomagajo pri pisanju funkcij, ki so logične.
+        title: Kako varno potovati
+      courseA_unplugged_happyMaps:
+        desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
+          lik skozi labirint z enim ukazom.
+        title: Veseli zemljevidi
       courseB_unplugged_MRF:
         title: Dejavnost brez prijave
+      courseB_unplugged_MRF_2018:
+        title: Moji robotski prijatelji
+      courseB_unplugged_MRF_2019:
+        title: Moji robotski prijatelji
       courseB_unplugged_loopyMRF:
         title: Dejavnost brez prijave
       courseC_Unplugged_ScreenOutTheMean:
         title: Dejavnost brez prijave
-      courseD_unplugged_digitalCitizenship:
+      courseC_Unplugged_ScreenOutTheMean_2018:
         title: Dejavnost brez prijave
-      courseF_unplugged_powerOfWords:
+      courseC_Unplugged_ScreenOutTheMean_2019:
         title: Dejavnost brez prijave
-      courseAB_unplugged_plantASeed:
-        title: 'Življenjski algoritmi: Zasadi seme'
-        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
-          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
-          računalništva in kako so algoritmi bistveni del računalništva.
-      courseA_unplugged_happyMaps:
-        title: Veseli zemljevidi
-        desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
-          lik skozi labirint z enim ukazom.
-      courseA_unplugged_goingPlacesSafely:
-        title: Kako varno potovati
-        desc: Internet je močno, ampak včasih nevarno mesto. Učitelji predstavijo,
-          kako ostati varen, medtem ko navigiraš po internetu.
-      courseABC_unplugged_bigEvent:
-        title: Veliki dogodek
-        desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
-          računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
-          učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.
       courseC_unplugged_buildingAFoundation:
-        title: Graditi temelje
         desc: Učenci so zgradili skulpturo le z uporabo sestavin, ki so jih imeli
           na voljo. Skulpture morajo ustrezati določenim zahtevam (doseči določeno
           višino ali prenesti določeno težo). Učenci so se pogovorili o pomembnosti
           vztrajanja, ko se stvari zakomplicirajo.
-      courseC_unplugged_paperPlanes:
-        title: 'Življenjski algoritmi: Papirnata letala'
-        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
-          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
-          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
+        title: Graditi temelje
       courseC_unplugged_gettingLoopy:
         desc: Ta lekcija uvaja koncept programiranja zank (ponavljajočih navodil)
           s pomočjo plesa. Učenci se bodo naučili preproste koreografije, potem pa
           dobili navodilo, da jo ponovijo.
+      courseC_unplugged_paperPlanes:
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
+          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
+        title: 'Življenjski algoritmi: Papirnata letala'
+      courseD_unplugged_binaryImages:
+        title: Binarne slike
+      courseD_unplugged_conditionalsCards:
+        title: Pogojniki s kartami
+      courseD_unplugged_digitalCitizenship:
+        title: Dejavnost brez prijave
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Dejavnost brez prijave
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Dejavnost brez prijave
       courseD_unplugged_graphPaperProgramming:
-        title: Obarvajmo kvadratke
         desc: Učenci bodo napisali algoritem (zaporedje navodil) z uporabo nabora
           vnaprej pripravljenih ukazov in z njim usmerjali sošolce, ki bodo reproducirali
           risbo.
+        title: Obarvajmo kvadratke
       courseD_unplugged_relayProgramming:
         title: Relejsko programiranje
-      courseD_unplugged_conditionalsCards:
-        title: Pogojniki s kartami
-      courseD_unplugged_binaryImages:
-        title: Binarne slike
+      courseE_unplugged_crowdsourcing:
+        desc: Učenci uporabljajo "crowdsourcing", tehniko reševanja problemov v računalništvu,
+          da bi dokončali nalogo kot razred, kar je bolj učinkovito kot če bi učenec
+          poskušal nalogo rešiti sam.
+        title: Crowdsourcing
       courseE_unplugged_diceRace:
         desc: Ta lekcija bo priklicala načine, na katere uporabljamo algoritme v vsakdanjem
           življenju. Kot del tega bodo učenci identificirali in zapisali algoritem
           za igro s kocko.
-      courseE_unplugged_songwritingParameters:
-        title: Pisanje pesmi s parametri
-        desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju
-          in klicanju funkcije.
       courseE_unplugged_internet:
-        title: Internet
         desc: Učenci z uporabo papirja pošiljajo sporočila, ki predstavljajo različne
           internetne metode prenosa.
-      courseE_unplugged_crowdsourcing:
-        title: Crowdsourcing
-        desc: Učenci uporabljajo "crowdsourcing", tehniko reševanja problemov v računalništvu,
-          da bi dokončali nalogo kot razred, kar je bolj učinkovito kot če bi učenec
-          poskušal nalogo rešiti sam.
+        title: Internet
       courseE_unplugged_songwriting:
-        title: Napiši pesem
         desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju
           in klicanju funkcije.
-      courseF_unplugged_tangrams:
-        title: Tangram algoritmi
+        title: Napiši pesem
+      courseE_unplugged_songwritingParameters:
+        desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju
+          in klicanju funkcije.
+        title: Pisanje pesmi s parametri
       courseF_unplugged_envelopeVariables:
-        title: Spremeljivke v ovojnicah
         desc: Spremenljivke omogočajo veliko svobode pri računalništvu.  Ta lekcija
           pomaga razložiti, kaj so spremenljivke in kako jih lahko uporabljamo na
           različne načine. To dejanje uporabite pred (ali v povezavi z) lekcijo o
           abstrakciji, da učenci res osvojijo to idejo.
+        title: Spremeljivke v ovojnicah
       courseF_unplugged_forLoopFun:
         title: Zabava s "for" zankami
+      courseF_unplugged_powerOfWords:
+        title: Dejavnost brez prijave
       courseF_unplugged_songwritingParameters:
         title: Pisanje pesmi s parametri
-      courseB_unplugged_MRF_2018:
-        title: Moji robotski prijatelji
-      PlantASeed_2018:
-        title: 'Življenjski algoritmi: Zasadi seme'
-        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
-          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
-          računalništva in kako so algoritmi bistveni del računalništva.
-      UnplugHappyMaps_2018:
-        title: Veseli zemljevidi
-        desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
-          lik skozi labirint z enim ukazom.
-      GoingPlacesSafely_2018:
-        title: Kako varno potovati
-        desc: Internet je močno, ampak včasih nevarno mesto. Učitelji predstavijo,
-          kako ostati varen, medtem ko navigiraš po internetu.
-      BigEvent_2018:
-        title: Veliki dogodek
-        desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
-          računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
-          učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.
-      GraphPaperProgramming_2018:
-        title: Obarvajmo kvadratke
-        desc: Učenci bodo napisali algoritem (zaporedje navodil) z uporabo nabora
-          vnaprej pripravljenih ukazov in z njim usmerjali sošolce, ki bodo reproducirali
-          risbo.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Dejavnost brez prijave
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Dejavnost brez prijave
-      Conditionals_2018:
-        title: Pogoji
-      BinaryImages_2018:
-        title: Binarne slike
-      PaperPlanes_2018:
-        title: 'Življenjski algoritmi: Papirnata letala'
-        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
-          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
-          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
-      GettingLoopy_2018:
-        desc: Ta lekcija uvaja koncept programiranja zank (ponavljajočih navodil)
-          s pomočjo plesa. Učenci se bodo naučili preproste koreografije, potem pa
-          dobili navodilo, da jo ponovijo.
-      MoveItMoveIt_2018:
-        title: Premakni se, premakni
-      RelayProgramming_2018:
-        title: Relejsko programiranje
-      courseB_unplugged_MRF_2019:
-        title: Moji robotski prijatelji
-      Conditionals_2019:
-        title: Pogoji
-      GraphPaperProgramming_2019:
-        title: Obarvajmo kvadratke
-        desc: Učenci bodo napisali algoritem (zaporedje navodil) z uporabo nabora
-          vnaprej pripravljenih ukazov in z njim usmerjali sošolce, ki bodo reproducirali
-          risbo.
-      RelayProgramming_2018_2019:
-        title: Relejsko programiranje
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Dejavnost brez prijave
-      BinaryImages_2019:
-        title: Binarne slike
-      GettingLoopy_2019:
-        desc: Ta lekcija uvaja koncept programiranja zank (ponavljajočih navodil)
-          s pomočjo plesa. Učenci se bodo naučili preproste koreografije, potem pa
-          dobili navodilo, da jo ponovijo.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Dejavnost brez prijave
-      BigEvent_2019:
-        title: Veliki dogodek
-        desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
-          računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
-          učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.
-      PaperPlanes_2019:
-        title: 'Življenjski algoritmi: Papirnata letala'
-        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
-          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
-          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
-      PlantASeed_2019:
-        title: 'Življenjski algoritmi: Zasadi seme'
-        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
-          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
-          računalništva in kako so algoritmi bistveni del računalništva.
-      UnplugHappyMaps_2019:
-        title: Veseli zemljevidi
-        desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
-          lik skozi labirint z enim ukazom.
-      GoingPlacesSafely_2019:
-        title: Kako varno potovati
-        desc: Internet je močno, ampak včasih nevarno mesto. Učitelji predstavijo,
-          kako ostati varen, medtem ko navigiraš po internetu.
-      MoveItMoveIt_2019:
-        title: Premakni se, premakni
-      timeforcs_demo_crowdsourcing:
-        title: Crowdsourcing
+      courseF_unplugged_tangrams:
+        title: Tangram algoritmi
       timeforcs_demo_conditionals:
         title: Pogoji
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing

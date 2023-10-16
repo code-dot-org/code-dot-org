@@ -1,9 +1,5 @@
 ---
 title: Ресурси для вчителя - MINECRAFT
-nav: hoc_teacher_resources_nav
-video_player: true
-theme: responsive
-style_min: true
 ---
 
 # Година коду MINECRAFT
@@ -17,10 +13,10 @@ style_min: true
 ### Плани уроків:
 
 - [План уроку MINECRAFT](/files/minecraft-lp.pdf)
-- [Лист відповідей та поради для вчителя для Години коду Minecraft "Voyage Aquatic"](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Лист відповідей та поради для вчителя для Години коду Minecraft "Adventurer"](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Лист відповідей та поради для вчителя для Години коду Minecraft "Designer"](/files/minecraft-designer-answer-sheet.pdf)
-- [Додаткові виклики](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [Лист відповідей та поради для вчителя для Години коду Minecraft "Підводна подорож"](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Лист відповідей та поради для вчителя для Години коду Minecraft "Пригоди"](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Лист відповідей та поради для вчителя для Години коду Minecraft "Розробник"](/files/minecraft-designer-answer-sheet.pdf)
+- [Додаткові завдання](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
 ### Завдання для поглиблення знань:
 

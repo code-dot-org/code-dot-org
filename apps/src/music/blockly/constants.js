@@ -1,6 +1,5 @@
 // Extensions & Mutator Names
 
-export const DYNAMIC_TRIGGER_EXTENSION = 'dynamic_trigger_extension';
 export const DEFAULT_TRACK_NAME_EXTENSION = 'default_track_name_extension';
 export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
 

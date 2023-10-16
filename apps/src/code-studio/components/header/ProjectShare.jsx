@@ -1,9 +1,10 @@
 import React from 'react';
 import i18n from '@cdo/locale';
 import {shareProject} from '../../headerShare';
-import {styles} from './EditableProjectName';
+import styles from './project-header.module.scss';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
+import classNames from 'classnames';
 
 export default class ProjectShare extends React.Component {
   shareProject = () => {
@@ -24,9 +25,14 @@ export default class ProjectShare extends React.Component {
     return (
       <button
         type="button"
-        className="project_share header_button header_button_light no-mc"
+        className={classNames(
+          styles.buttonSpacing,
+          'project_share',
+          'header_button',
+          'header_button_light',
+          'no-mc'
+        )}
         onClick={this.shareProject}
-        style={styles.buttonSpacing}
       >
         {i18n.share()}
       </button>

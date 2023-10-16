@@ -1,10 +1,10 @@
 ---
-title: Contact International Partners
+title: Contacte International Partners
 ---
 
 {{ signup_button }}
 
-# Contact International Partners
+# Contacte International Partners
 
 Code.org treballa amb moltes organitzacions d'arreu del món per fer de l'Hora del Codi un moviment realment internacional. Tu també pots tenir un paper protagonista per aconseguir que més gent del teu país s'impliqui! Si sou en un dels països següents, poseu-vos en contacte amb el soci que apareix a la llista i connecteu-vos amb la vostra hora de codi local.
 

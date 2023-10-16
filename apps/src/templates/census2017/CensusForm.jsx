@@ -714,7 +714,7 @@ class CensusForm extends Component {
           <Button
             id="submit-button"
             onClick={() => this.validateSubmission()}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.submit()}
             size={Button.ButtonSize.large}
             style={{marginTop: '10px'}}

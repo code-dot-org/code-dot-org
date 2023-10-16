@@ -2,230 +2,10 @@
   "ja-JP": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "ウェッブ ラボ"
-        },
-        "gamelab": {
-          "name": "ゲーム ラボ",
-          "categories": {
-            "game_lab": {
-              "name": "ゲーム ラボ",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "スプライト"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "スプライト"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "白黒"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
-                },
-                "showMobileControls": {
-                  "content": "プレイスペースの下に表示されるモバイルコントロールを変更します。",
-                  "short_description": "プレイスペースの下に表示されるモバイルコントロールを変更します。"
-                }
-              }
-            },
-            "sprites": {
-              "name": "スプライト",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "スパイラル"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "スプライトの高さ。"
-                },
-                "sprite.width": {
-                  "return_value": "スプライトの幅。"
-                }
-              }
-            },
-            "groups": {
-              "name": "グループ",
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "スプライト"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "スプライト"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "スプライト"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "色"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "色"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "グラフィック",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "星"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "関数の各実行間のミリ秒数。"
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "関数を実行する前に待機するミリ秒数。"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "計算(けいさん)",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
-                    },
-                    "max": {
-                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
-                    },
-                    "max": {
-                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "変数（へんすう）",
-              "expressions": {
-                "declareAssign_x": {
-                  "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
-                },
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "検索する文字列。"
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "検索する文字列。"
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "文字列の長さ"
-                }
-              }
-            },
-            "functions": {
-              "name": "関数(かんすう) "
-            }
-          }
-        },
         "applab": {
-          "name": "アプリ ラボ",
-          "description": "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "指定した ID によって提供および参照されるテキストをデフォルトの場所 (0,0) に表示するボタンを画面上に作成します。"
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "小さくしたり大きくしたり"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "関数（かんすう）"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "変更するプロパティ。"
-                    }
-                  },
-                  "short_description": "指定された要素の新しい値にプロパティを設定します。"
-                },
-                "setScreen": {
-                  "short_description": "スクリーンを指定された ScreenID に設定します。"
-                },
-                "showElement": {
-                  "short_description": "指定された ID の要素を表示します。"
-                },
-                "textLabel": {
-                  "short_description": "指定されたIDによって提供および参照されたテキストをデフォルトの場所 (0,0) に表示するテキストラベルを画面上に作成します。"
-                }
-              }
+            "advanced": {
+              "name": "高度"
             },
             "canvas": {
               "expressions": {
@@ -291,17 +71,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "画像データをキャプチャする境界矩形の高さ。"
+                    },
+                    "width": {
+                      "description": "画像データをキャプチャする境界矩形の幅。"
+                    },
                     "x": {
                       "description": "キャプチャを開始する x の位置 (ピクセル単位)。"
                     },
                     "y": {
                       "description": "キャプチャを開始する y 位置 (ピクセル単位)。"
-                    },
-                    "width": {
-                      "description": "画像データをキャプチャする境界矩形の幅。"
-                    },
-                    "height": {
-                      "description": "画像データをキャプチャする境界矩形の高さ。"
                     }
                   }
                 },
@@ -333,22 +113,25 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "長方形の垂直方向の高さ (ピクセル単位)。"
+                    },
+                    "width": {
+                      "description": "長方形の水平幅 (ピクセル単位)。"
+                    },
                     "x": {
                       "description": "長方形の左上隅の x 位置 (ピクセル単位)。"
                     },
                     "y": {
                       "description": "長方形の左上隅の y 位置 (ピクセル単位)。"
-                    },
-                    "width": {
-                      "description": "長方形の水平幅 (ピクセル単位)。"
-                    },
-                    "height": {
-                      "description": "長方形の垂直方向の高さ (ピクセル単位)。"
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "ピクセルに設定するアルファ (不透明度) の量 (0 ～ 255)。"
+                    },
                     "imageData": {
                       "type": "オブジェクトを返します"
                     },
@@ -357,15 +140,15 @@
                     },
                     "y": {
                       "description": "画像の左上隅から始まるピクセル単位の y 位置。"
-                    },
-                    "alphaValue": {
-                      "description": "ピクセルに設定するアルファ (不透明度) の量 (0 ～ 255)。"
                     }
                   },
                   "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色のアルファ (不透明度) の量 (0 から 255 の範囲) を設定します。"
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "ピクセルに設定する青の量 (0 から 255)。"
+                    },
                     "imageData": {
                       "type": "オブジェクトを返します"
                     },
@@ -374,15 +157,15 @@
                     },
                     "y": {
                       "description": "画像の左上隅から始まるピクセル単位の y 位置。"
-                    },
-                    "blueValue": {
-                      "description": "ピクセルに設定する青の量 (0 から 255)。"
                     }
                   },
                   "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色の青の量 (0 から 255 の範囲) を BlueValue 入力量に設定します。"
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "ピクセルに設定する緑の量 (0 から 255)。"
+                    },
                     "imageData": {
                       "type": "オブジェクトを返します"
                     },
@@ -391,35 +174,32 @@
                     },
                     "y": {
                       "description": "画像の左上隅から始まるピクセル単位の y 位置。"
-                    },
-                    "greenValue": {
-                      "description": "ピクセルに設定する緑の量 (0 から 255)。"
                     }
                   },
                   "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色の緑の量 (0 から 255 の範囲) を GreenValue 入力量に設定します。"
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "[オプション]。ピクセルに設定する不透明度の量 (0 ～ 255)。デフォルトは 255 (完全不透明) です。"
+                    },
+                    "blue": {
+                      "description": "ピクセルに設定する青の量 (0 から 255)。"
+                    },
+                    "green": {
+                      "description": "ピクセルに設定する緑の量 (0 から 255)。"
+                    },
                     "imageData": {
                       "type": "オブジェクトを返します"
+                    },
+                    "red": {
+                      "description": "ピクセルに設定する赤の量 (0 から 255)。"
                     },
                     "x": {
                       "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
                     },
                     "y": {
                       "description": "画像の左上隅から始まるピクセル単位の y 位置。"
-                    },
-                    "red": {
-                      "description": "ピクセルに設定する赤の量 (0 から 255)。"
-                    },
-                    "green": {
-                      "description": "ピクセルに設定する緑の量 (0 から 255)。"
-                    },
-                    "blue": {
-                      "description": "ピクセルに設定する青の量 (0 から 255)。"
-                    },
-                    "alpha": {
-                      "description": "[オプション]。ピクセルに設定する不透明度の量 (0 ～ 255)。デフォルトは 255 (完全不透明) です。"
                     }
                   }
                 },
@@ -428,22 +208,53 @@
                     "imageData": {
                       "type": "オブジェクトを返します"
                     },
+                    "redValue": {
+                      "description": "ピクセルに設定する赤の量 (0 から 255)。"
+                    },
                     "x": {
                       "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
                     },
                     "y": {
                       "description": "画像の左上隅から始まるピクセル単位の y 位置。"
-                    },
-                    "redValue": {
-                      "description": "ピクセルに設定する赤の量 (0 から 255)。"
                     }
                   },
                   "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色の赤の量 (0 から 255 の範囲) を RedValue 入力量に設定します。"
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "setTimeout 関数によって返される値をキャンセルします。"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "関数の各実行間のミリ秒数。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "関数を実行する前に待機するミリ秒数。"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "関数（かんすう）"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "データ",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -468,11 +279,11 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
-                    "tableName": {
-                      "description": "レコードを取得するテーブルの名前。"
-                    },
                     "options": {
                       "type": "オブジェクトを返します"
+                    },
+                    "tableName": {
+                      "description": "レコードを取得するテーブルの名前。"
                     }
                   }
                 },
@@ -532,7 +343,36 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "データ"
+            },
+            "functions": {
+              "name": "関数(かんすう) "
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    },
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    },
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    }
+                  }
+                }
+              },
+              "name": "計算(けいさん)"
             },
             "turtle": {
               "expressions": {
@@ -599,66 +439,53 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "setTimeout 関数によって返される値をキャンセルします。"
-                    }
-                  }
+                "button": {
+                  "short_description": "指定した ID によって提供および参照されるテキストをデフォルトの場所 (0,0) に表示するボタンを画面上に作成します。"
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "関数の各実行間のミリ秒数。"
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "小さくしたり大きくしたり"
                     }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "関数を実行する前に待機するミリ秒数。"
-                    }
-                  }
-                },
-                "timedLoop": {
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "関数（かんすう）"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "計算(けいさん)",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
-                    },
-                    "max": {
-                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
-                    }
-                  }
                 },
-                "randomNumber": {
+                "playSound": {
+                  "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
+                },
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
-                    },
-                    "max": {
-                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    "property": {
+                      "description": "変更するプロパティ。"
                     }
-                  }
+                  },
+                  "short_description": "指定された要素の新しい値にプロパティを設定します。"
+                },
+                "setScreen": {
+                  "short_description": "スクリーンを指定された ScreenID に設定します。"
+                },
+                "showElement": {
+                  "short_description": "指定された ID の要素を表示します。"
+                },
+                "textLabel": {
+                  "short_description": "指定されたIDによって提供および参照されたテキストをデフォルトの場所 (0,0) に表示するテキストラベルを画面上に作成します。"
                 }
               }
             },
             "variables": {
-              "name": "変数（へんすう）",
               "expressions": {
+                "addPair": {
+                  "return_value": "設定なし"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "配列を宣言して変数に代入する"
+                },
                 "declareAssign_object": {
                   "examples": {
                     "Choose Your Own Adventure": {
@@ -668,9 +495,6 @@
                 },
                 "declareAssign_x": {
                   "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
-                },
-                "declareAssign_list_123": {
-                  "short_description": "配列を宣言して変数に代入する"
                 },
                 "includes": {
                   "palette_params": {
@@ -686,68 +510,244 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "設定なし"
+                "length": {
+                  "return_value": "文字列の長さ"
+                }
+              },
+              "name": "変数（へんすう）"
+            }
+          },
+          "description": "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。",
+          "name": "アプリ ラボ"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "関数の各実行間のミリ秒数。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "関数を実行する前に待機するミリ秒数。"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "星"
+                    }
+                  }
+                }
+              },
+              "name": "グラフィック"
+            },
+            "functions": {
+              "name": "関数(かんすう) "
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "白黒"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
+                },
+                "showMobileControls": {
+                  "content": "プレイスペースの下に表示されるモバイルコントロールを変更します。",
+                  "short_description": "プレイスペースの下に表示されるモバイルコントロールを変更します。"
+                }
+              },
+              "name": "ゲーム ラボ"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "色"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "色"
+                    }
+                  }
+                }
+              },
+              "name": "グループ"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    },
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    },
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    }
+                  }
+                }
+              },
+              "name": "計算(けいさん)"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "スパイラル"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "スプライトの高さ。"
+                },
+                "sprite.width": {
+                  "return_value": "スプライトの幅。"
+                }
+              },
+              "name": "スプライト"
+            },
+            "variables": {
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "検索する文字列。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "検索する文字列。"
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "文字列の長さ"
                 }
-              }
-            },
-            "functions": {
-              "name": "関数(かんすう) "
-            },
-            "advanced": {
-              "name": "高度"
+              },
+              "name": "変数（へんすう）"
             }
-          }
+          },
+          "name": "ゲーム ラボ"
+        },
+        "javalab": {
+          "name": "Javaラボ"
         },
         "spritelab": {
-          "name": "スプライト ラボ",
           "categories": {
-            "sprites": {
-              "name": "スプライト"
-            },
-            "world": {
-              "name": "世界"
-            },
-            "location": {
-              "name": "場所"
-            },
             "actions": {
               "name": "うごき"
-            },
-            "events": {
-              "name": "イベント"
             },
             "behaviors": {
               "name": "行動"
             },
-            "loops": {
-              "name": "くりかえし"
+            "comments": {
+              "name": "コメント"
             },
-            "variables": {
-              "name": "変数（へんすう）"
-            },
-            "math": {
-              "name": "計算(けいさん)"
-            },
-            "logic": {
-              "name": "ロジック"
+            "events": {
+              "name": "イベント"
             },
             "functions": {
               "name": "関数(かんすう) "
             },
+            "location": {
+              "name": "場所"
+            },
+            "logic": {
+              "name": "ロジック"
+            },
+            "loops": {
+              "name": "くりかえし"
+            },
+            "math": {
+              "name": "計算(けいさん)"
+            },
+            "sprites": {
+              "name": "スプライト"
+            },
             "text": {
               "name": "テキスト"
             },
-            "comments": {
-              "name": "コメント"
+            "variables": {
+              "name": "変数（へんすう）"
+            },
+            "world": {
+              "name": "世界"
             }
-          }
+          },
+          "name": "スプライト ラボ"
         },
-        "javalab": {
-          "name": "Javaラボ"
+        "weblab": {
+          "name": "ウェッブ ラボ"
         }
       }
     }

@@ -117,6 +117,7 @@ export default class CensusMapReplacement extends Component {
   static propTypes = {
     onTakeSurveyClick: PropTypes.func.isRequired,
     school: PropTypes.object,
+    tileset: PropTypes.string.isRequired,
   };
 
   map = undefined;
@@ -205,15 +206,15 @@ export default class CensusMapReplacement extends Component {
     var _this = this;
 
     this.map.on('load', function () {
-      _this.map.addSource('censustiles', {
+      _this.map.addSource(_this.props.tileset, {
         type: 'vector',
-        url: 'mapbox://codeorg.censustiles',
+        url: `mapbox://codeorg.${_this.props.tileset}`,
       });
 
       _this.map.addLayer({
         id: 'census-schools',
         type: 'circle',
-        source: 'censustiles',
+        source: _this.props.tileset,
         'source-layer': 'census',
         layout: {
           visibility: 'visible',
@@ -241,7 +242,7 @@ export default class CensusMapReplacement extends Component {
       _this.map.addLayer({
         id: 'census-schools-teaching-cs',
         type: 'symbol',
-        source: 'censustiles',
+        source: _this.props.tileset,
         'source-layer': 'census',
         layout: {
           'icon-image': 'marker-15-green',
@@ -330,7 +331,7 @@ export default class CensusMapReplacement extends Component {
           return;
         }
         flying = false;
-        const features = _this.map.querySourceFeatures('censustiles', {
+        const features = _this.map.querySourceFeatures(_this.props.tileset, {
           sourceLayer: 'census',
           filter: ['all', ['==', 'school_id', school.nces_id]],
         });

@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Pilih set data yang ingin anda gunakan.",
-  "uploadedDataset": "Anda baru sahaja memuat naik set data.",
-  "selectedDataset": "Anda baru sahaja memilih set data.",
-  "dataDisplayLabel": "Pilih satu lajur untuk diramalkan.",
   "dataDisplayFeatures": "Pilih satu atau lebih lajur sebagai input untuk membantu membuat ramalan.",
-  "selectedFeatureNumerical": "Anda hanya memilih ciri berangka.",
-  "selectedFeatureCategorical": "Anda hanya memilih ciri kategori.",
-  "trainModel": "Model anda sedang dilatih.",
+  "dataDisplayLabel": "Pilih satu lajur untuk diramalkan.",
   "generateResults": "Model anda sedang diuji.",
+  "modelSummary": "Anda telah berjaya melatih dan menyelamatkan model anda. Semak butiran model anda dan klik Selesai untuk menggunakan model terlatih anda dalam App Lab.",
   "results": "Semak keputusannya.",
   "resultsDetails": "Butiran keputusan sedang ditunjukkan.",
   "saveModel": "Simpan model terlatih untuk digunakan dalam App Lab.",
-  "modelSummary": "Anda telah berjaya melatih dan menyelamatkan model anda. Semak butiran model anda dan klik Selesai untuk menggunakan model terlatih anda dalam App Lab."
+  "selectDataset": "Pilih set data yang ingin anda gunakan.",
+  "selectedDataset": "Anda baru sahaja memilih set data.",
+  "selectedFeatureCategorical": "Anda hanya memilih ciri kategori.",
+  "selectedFeatureNumerical": "Anda hanya memilih ciri berangka.",
+  "trainModel": "Model anda sedang dilatih.",
+  "uploadedDataset": "Anda baru sahaja memuat naik set data."
 }

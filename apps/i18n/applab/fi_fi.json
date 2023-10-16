@@ -7,7 +7,6 @@
   "catProcedures": "Funktiot",
   "catText": "teksti",
   "catVariables": "Muuttujat",
-  "designWorkspaceHeader": "Työtila: ",
   "designElementEvent_input": "Syöte",
   "designElementProperty_fitImage_none": "Ei yhtään",
   "designElementProperty_text": "teksti",
@@ -17,6 +16,7 @@
   "designElementProperty_zOrder": "syvyys",
   "designElementTheme_classic": "Klassinen",
   "designElementTheme_default": "Oletus",
+  "designWorkspaceHeader": "Työtila: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param3": "leveys",
   "dropletBlock_drawImage_param4": "korkeus",
@@ -30,7 +30,7 @@
   "nextLevel": "Onneksi olkoon! Olet suorittanut tämän pulman.",
   "no": "Ei",
   "numBlocksNeeded": "Pulman voi ratkaista %1 lohkolla.",
-  "repeatForever": "toista jatkuvasti",
   "repeatDo": "tee",
+  "repeatForever": "toista jatkuvasti",
   "yes": "Kyllä"
 }

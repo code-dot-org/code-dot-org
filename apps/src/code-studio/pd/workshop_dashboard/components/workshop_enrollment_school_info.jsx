@@ -5,7 +5,7 @@ import {Button, Table} from 'react-bootstrap'; // eslint-disable-line no-restric
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
-import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
+import ScholarshipDropdown from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
 import {WorkshopAdmin, ProgramManager} from '../permission';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';

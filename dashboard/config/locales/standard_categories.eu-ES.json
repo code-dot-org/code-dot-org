@@ -5,11 +5,11 @@
         "CT": {
           "description": "Pentsamendu konputazionala"
         },
-        "L": {
-          "description": "Hizkuntza"
-        },
         "F": {
           "description": "Funtzioak"
+        },
+        "L": {
+          "description": "Hizkuntza"
         }
       }
     }

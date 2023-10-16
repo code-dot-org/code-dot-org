@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2023-08-01T17:54:16.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# CSD App Lab Design Mode\r\n\r\nVideo shown here same as in Lesson 14:  Design Mode in App Lab, Lesson 1.\r\n\r\n\r\n## Overview \r\n\r\nThe purpose of this video is to give students a quick tour of design mode in App Lab. Students should know how to switch to design mode and recognize various elements that can be added in design mode.  \r\n\r\n## Questions to Consider\r\nAs you are watching the video, consider the following questions. \r\n\r\n* Where in App Lab can you design the user interface of your app?\r\n* What are some types of elements that you can add to your app?\r\n\r\n<a href=\"https://youtu.be/jiX1dST2PCw\" target=\"blank\">![](https://images.code.org/6a8d4326e7b1a94fe7ba72845e9d5437-image-1657222950657.png)</a>\r\n\r\n##Reflection\r\n\r\nRespond to the following prompts in the text box below.\r\n\r\n* What about starting to use App Lab may be challenging for students? \r\n* What kind of supports may students need in the beginning?\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24296,
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-01T17:54:16.911+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 4 Video Reflection_2022\\\"\"],\"cloned_from\":\"VPL - CSD Module 4 Video Reflection_2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

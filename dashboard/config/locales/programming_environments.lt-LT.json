@@ -2,16 +2,96 @@
   "lt-LT": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "name": "Žaidimų laboratorija",
+        "applab": {
           "categories": {
-            "game_lab": {
-              "name": "Žaidimų laboratorija",
+            "control": {
               "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Komanda"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Komanda"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Komandų kūrimas"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Didžiausias grąžintas skaičius"
+                    },
+                    "min": {
+                      "description": "Mažiausias grąžintas skaičius"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Didžiausias grąžintas skaičius"
+                    },
+                    "min": {
+                      "description": "Mažiausias grąžintas skaičius"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Komanda"
+                    }
+                  }
+                },
                 "playSound": {
                   "short_description": "Groja MP3 garso failą iš pasirinkto URL."
                 }
               }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Nė vienas"
+                }
+              },
+              "name": "Kintamieji"
+            }
+          },
+          "description": "App Lab yra programavimo aplinka, su kuria galima sukurti paprastas programėles. Kurti galima su blokeliais arba su JavaScript, o po to ja pasidalinti su draugais.",
+          "name": "App Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "functions": {
+              "name": "Komandų kūrimas"
+            },
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "Groja MP3 garso failą iš pasirinkto URL."
+                }
+              },
+              "name": "Žaidimų laboratorija"
             },
             "groups": {
               "expressions": {
@@ -32,115 +112,35 @@
               }
             },
             "math": {
-              "name": "Matematika",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Mažiausias grąžintas skaičius"
-                    },
                     "max": {
                       "description": "Didžiausias grąžintas skaičius"
+                    },
+                    "min": {
+                      "description": "Mažiausias grąžintas skaičius"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "Mažiausias grąžintas skaičius"
-                    },
                     "max": {
                       "description": "Didžiausias grąžintas skaičius"
+                    },
+                    "min": {
+                      "description": "Mažiausias grąžintas skaičius"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matematika"
             },
             "variables": {
               "name": "Kintamieji"
-            },
-            "functions": {
-              "name": "Komandų kūrimas"
             }
-          }
-        },
-        "applab": {
-          "name": "App Lab",
-          "description": "App Lab yra programavimo aplinka, su kuria galima sukurti paprastas programėles. Kurti galima su blokeliais arba su JavaScript, o po to ja pasidalinti su draugais.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Komanda"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Groja MP3 garso failą iš pasirinkto URL."
-                }
-              }
-            },
-            "data": {
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Komanda"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Komanda"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematika",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Mažiausias grąžintas skaičius"
-                    },
-                    "max": {
-                      "description": "Didžiausias grąžintas skaičius"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Mažiausias grąžintas skaičius"
-                    },
-                    "max": {
-                      "description": "Didžiausias grąžintas skaičius"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Kintamieji",
-              "expressions": {
-                "addPair": {
-                  "return_value": "Nė vienas"
-                }
-              }
-            },
-            "functions": {
-              "name": "Komandų kūrimas"
-            }
-          }
+          },
+          "name": "Žaidimų laboratorija"
         },
         "spritelab": {
           "categories": {
@@ -150,23 +150,23 @@
             "events": {
               "name": "Įvykiai"
             },
-            "loops": {
-              "name": "Kartojimas"
-            },
-            "variables": {
-              "name": "Kintamieji"
-            },
-            "math": {
-              "name": "Matematika"
+            "functions": {
+              "name": "Komandų kūrimas"
             },
             "logic": {
               "name": "Logika"
             },
-            "functions": {
-              "name": "Komandų kūrimas"
+            "loops": {
+              "name": "Kartojimas"
+            },
+            "math": {
+              "name": "Matematika"
             },
             "text": {
               "name": "Tekstas"
+            },
+            "variables": {
+              "name": "Kintamieji"
             }
           }
         }

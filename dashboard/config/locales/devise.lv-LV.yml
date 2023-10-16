@@ -59,6 +59,12 @@ lv:
         e-pastu ar instrukcijām kā atslēgt savu kontu.
       unlocked: Tavs konts ir atslēgts veiksmīgi. Lūdzu pieraksties lai turpinātu.
   errors:
+    invitations:
+      send_instructions: Ielūguma e-pasts ir nosūtīts uz %{email}.
+    mailer:
+      invitation_instructions:
+        accept: Apstiprināt ielūgumu
+        subject: Ielūguma instrukcijas
     messages:
       already_confirmed: jau ir apstiprināts, lūdzu mēģini pierakstīties
       confirmation_period_expired: 'ir jāapstiprina periodā: %{period}, lūdzu pieprasi
@@ -66,9 +72,3 @@ lv:
       expired: ir iztecējis, lūdzu pieprasi jaunu
       not_found: nav atrasts
       not_locked: nav slēgts
-    invitations:
-      send_instructions: Ielūguma e-pasts ir nosūtīts uz %{email}.
-    mailer:
-      invitation_instructions:
-        subject: Ielūguma instrukcijas
-        accept: Apstiprināt ielūgumu

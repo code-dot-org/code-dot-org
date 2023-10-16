@@ -2,35 +2,35 @@
   "pt-PT": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Padrões de Ciência da Computação CSTA K-12 (2017)"
-        },
-        "csp2021": {
-          "name": "Estrutura conceitual do CSP"
+        "ai4k12-2021": {
+          "name": "Diretrizes nacionais AI4K12 2021"
         },
         "c3ss": {
           "name": "Padrões de Estudos Sociais C3"
         },
-        "csta2011": {
-          "name": "Padrões de Ciência da Computação CSTA K-12 (2011)"
-        },
         "ccela": {
           "name": "Padrões básicos comuns de artes da língua inglesa"
-        },
-        "ngss": {
-          "name": "Padrões científicos da próxima geração"
-        },
-        "csa": {
-          "name": "Estrutura conceitual do CSA"
         },
         "ccmath": {
           "name": "Padrões matemáticos básicos comuns"
         },
-        "ai4k12-2021": {
-          "name": "Diretrizes nacionais AI4K12 2021"
+        "csa": {
+          "name": "Estrutura conceitual do CSA"
+        },
+        "csp2021": {
+          "name": "Estrutura conceitual do CSP"
+        },
+        "csta": {
+          "name": "Padrões de Ciência da Computação CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "Padrões de Ciência da Computação CSTA K-12 (2011)"
         },
         "iste": {
           "name": "Padrões ISTE para estudantes"
+        },
+        "ngss": {
+          "name": "Padrões científicos da próxima geração"
         }
       }
     }

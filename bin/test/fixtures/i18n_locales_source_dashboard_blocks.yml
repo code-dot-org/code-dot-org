@@ -1,0 +1,11 @@
+---
+en:
+  data:
+    blocks:
+      dashboard_config_blocks:
+        text: '{TEST_TYPE} | {TEST_OPTIONS_1} | {TEST_OPTIONS_1}'
+        options:
+          TEST_OPTIONS_1:
+            '"Test_1"': Test_1
+          TEST_OPTIONS_2:
+            '"Test_2"': Test_2

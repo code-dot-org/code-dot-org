@@ -1,57 +1,17 @@
-@use "color.scss";
+@use 'color.scss';
 
-.catalogFiltersContainer {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  max-width: 60em;
-  margin: 1em auto;
-
-  button {
-    margin: 0;
-  }
-}
-
-.catalogLanguageFilterRow {
-  display: flex;
-  justify-content: space-between;
-  max-width: 60em;
-  margin: 1em auto;
-
-  p {
-    margin: 1em 0;
-  }
-
-  i {
-    margin: auto 0.25em;
-    font-size: 1.75em;
-  }
-
-  span {
-    font-size: 16px;
-  }
-}
-
-.catalogLanguageFilterRowNumAvailable {
-  display: flex;
-  flex: start;
-}
-
-button.catalogClearFiltersButton {
-  font-size: 16px;
-  margin-left: auto;
-}
+$container-width: 309px;
 
 .catalogContentContainer {
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto 1em auto;
 }
 
 .catalogContentCards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $container-width);
   justify-content: center;
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 .catalogContentNoResults {

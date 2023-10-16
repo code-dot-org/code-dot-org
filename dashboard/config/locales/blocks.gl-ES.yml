@@ -9,13 +9,13 @@ gl:
       Dancelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_changePropEachBy:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -23,8 +23,8 @@ gl:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_getTime:
         options:
           UNIT:
@@ -84,23 +84,23 @@ gl:
       Dancelab_setProp:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_setPropEach:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_setPropRandom:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_setPropRandomEach:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_setVisible:
         options:
           VISIBILITY:
@@ -112,164 +112,36 @@ gl:
       Dancelab_startMapping:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_startMappingEach:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_stopMapping:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_stopMappingEach:
         options:
           PROPERTY:
-            '"scale"': tamaño
             '"height"': altura
+            '"scale"': tamaño
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': arriba
-            '"left"': esquerda
             '"down"': abaixo
+            '"enter"': introduza
+            '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
-            '"enter"': introduza
+            '"up"': arriba
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"hearts"': corazóns
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': segundos
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-            '"speed"': velocidade
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-      gamelab_everyInterval:
-        options:
-          UNIT:
-            '"seconds"': segundos
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-            '"speed"': velocidade
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': segundos
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': arriba
-            '"down"': abaixo
-            '"left"': esquerda
-            '"right"': dereita
-            '"space"': espazo
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-          KEY:
-            '"up"': arriba
-            '"down"': abaixo
-            '"left"': esquerda
-            '"right"': dereita
-            '"space"': espazo
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': dereita
-            '90': abaixo
-            '180': esquerda
-            '270': arriba
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': dereita
-            '"left"': esquerda
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": triture
-            "'sound://category_animals/cat.mp3'": gato
-            "'sound://category_animals/dog.mp3'": can
-            "'sound://category_digital/jump_7.mp3'": saltar
-      gamelab_randColor:
-        text: cor aleatoria
-      gamelab_randomColor:
-        text: cor aleatoria
-      gamelab_repeatForever:
-        text: Repetir para sempre
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cova
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco
-              da vella
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': baixa
-              a auga
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-            '"speed"': velocidade
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"height"': altura
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': dereita
-            '"left"': esquerda
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': arriba
-            '"down"': abaixo
-            '"left"': esquerda
-            '"right"': dereita
-            '"space"': espazo
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': arriba
-            '"down"': abaixo
-            '"left"': esquerda
-            '"right"': dereita
-            '"space"': espazo
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -327,8 +199,8 @@ gl:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': dereita
             '"left"': esquerda
+            '"right"': dereita
       Mikelab_sprite:
         options:
           LOCATION:
@@ -337,37 +209,37 @@ gl:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': frecha cara arriba
+            '"a"': A
+            '"d"': D
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
-            '"w"': O
-            '"a"': A
             '"s"': S
-            '"d"': D
+            '"up"': frecha cara arriba
+            '"w"': O
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': frecha cara arriba
+            '"a"': A
+            '"d"': D
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
-            '"w"': O
-            '"a"': A
             '"s"': S
-            '"d"': D
+            '"up"': frecha cara arriba
+            '"w"': O
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': si
             '"no"': non
+            '"yes"': si
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': frecha cara arriba
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
+            '"up"': frecha cara arriba
       Poetry_addFrame:
         options:
           BRUSH:
@@ -410,18 +282,18 @@ gl:
       binary_move:
         options:
           DIR:
-            '"up"': arriba
             '"down"': abaixo
             '"left"': esquerda
             '"right"': dereita
+            '"up"': arriba
       binary_whenKey:
         options:
           KEY:
-            '"up"': arriba
             '"down"': abaixo
             '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
+            '"up"': arriba
       craft_ifPath:
         options:
           DIR:
@@ -429,8 +301,8 @@ gl:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": area
             "'planksOak'": táboas de carballo
+            "'sand'": area
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -439,6 +311,134 @@ gl:
         text: avance
       craft_placeTorch:
         text: coloque a antorcha
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"speed"': velocidade
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"speed"': velocidade
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+            '"up"': arriba
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+          KEY:
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+            '"up"': arriba
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dereita
+            '180': esquerda
+            '270': arriba
+            '90': abaixo
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': esquerda
+            '"right"': dereita
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/cat.mp3'": gato
+            "'sound://category_animals/dog.mp3'": can
+            "'sound://category_collect/clicky_crunch.mp3'": triture
+            "'sound://category_digital/jump_7.mp3'": saltar
+      gamelab_randColor:
+        text: cor aleatoria
+      gamelab_randomColor:
+        text: cor aleatoria
+      gamelab_repeatForever:
+        text: Repetir para sempre
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cova
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco
+              da vella
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': baixa
+              a auga
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"speed"': velocidade
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': altura
+            '"scale"': tamaño
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': esquerda
+            '"right"': dereita
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+            '"up"': arriba
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+            '"up"': arriba
       storylab_setForegroundEffect2:
         options:
           EFFECT:

@@ -2,14 +2,11 @@
   "pt-BR": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Normas de ciência da computação CSTA K-12 (2017)"
+        "ai4k12-2021": {
+          "name": "Diretrizes Nacionais AI4K12 2021"
         },
-        "csp2021": {
-          "name": "Estrutura conceitual de CSP"
-        },
-        "csta2011": {
-          "name": "Normas CSTA K-12 para Ciência da Computação (2011)"
+        "c3ss": {
+          "name": "Padrões de Estudos Sociais C3"
         },
         "ccela": {
           "name": "Normas de Língua e Literatura Inglesa do Núcleo Comum"
@@ -17,20 +14,23 @@
         "ccmath": {
           "name": "Normas de Matemática do Núcleo Comum"
         },
+        "csa": {
+          "name": "Estrutura conceitual do CSA"
+        },
+        "csp2021": {
+          "name": "Estrutura conceitual de CSP"
+        },
+        "csta": {
+          "name": "Normas de ciência da computação CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "Normas CSTA K-12 para Ciência da Computação (2011)"
+        },
         "iste": {
           "name": "Normas ISTE para Estudantes"
         },
-        "ai4k12-2021": {
-          "name": "Diretrizes Nacionais AI4K12 2021"
-        },
-        "c3ss": {
-          "name": "Padrões de Estudos Sociais C3"
-        },
         "ngss": {
           "name": "Padrões científicos da próxima geração"
-        },
-        "csa": {
-          "name": "Estrutura conceitual do CSA"
         }
       }
     }

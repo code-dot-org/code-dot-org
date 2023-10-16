@@ -2,11 +2,11 @@
   "zh-CN": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "主要理念"
-        },
         "CSD U2 Heading Test_2018": {
           "rubric_performance_level_2": "所有内容都包含在标签中，以合乎逻辑的方式使用段落和标题标签。"
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "主要理念"
         }
       }
     }

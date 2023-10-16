@@ -1,7 +1,7 @@
 {
   "addCSSButton": "CSS əlavə et",
-  "addImageButton": "Şəkil əlavə et",
   "addHTMLButton": "HTML əlavə et",
+  "addImageButton": "Şəkil əlavə et",
   "closeFullscreenPreview": "Tam ekran önizləməsini bağlayın",
   "currentProjectCapacity": "{currentMegabytes}MB {totalMegabytes}MB istifadə",
   "disallowedHtml": "Fayl \"{filename}\" icazə verilməyən HTML elementlərini ehtiva edir: `{disallowedTags}`. Bu dialoq bağlandıqda onlar silinəcəkdir.",
@@ -14,8 +14,8 @@
   "reset": "Veb Laboratoriyasını sıfırlayın",
   "resetComplete": "Veb Laboratoriyası Sıfırlama Tamamlandı",
   "resetFailure": "Web Lab sıfırlanmadı: {message}.",
-  "toggleInspectorOn": "Müfəttiş:Qapalı",
   "toggleInspectorOff": "Müfəttiş: Açıq",
+  "toggleInspectorOn": "Müfəttiş:Qapalı",
   "troubleshootingSupport": "Daha çox məlumat üçün dəstək məqaləmizə [\"Veb Laboratoriyası problemlərinin aradan qaldırılması\"]({url}) baxın.",
   "uploadError": "Yükləmə Xətası"
 }

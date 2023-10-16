@@ -218,7 +218,7 @@ export default class AnimationPickerBody extends React.Component {
           <Button
             text={msg.done()}
             onClick={onAnimationSelectionComplete}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         )}
         <h1 style={dialogStyles.title}>
@@ -288,7 +288,7 @@ export default class AnimationPickerBody extends React.Component {
               className="ui-test-selector-done-button"
               text={msg.done()}
               onClick={onAnimationSelectionComplete}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
         )}

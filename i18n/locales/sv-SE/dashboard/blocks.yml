@@ -2163,18 +2163,12 @@ sv:
         options:
           PORTION:
             '1': alla
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           RATE:
             '"immediately"': omedelbart
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': alla
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} säger {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2326,7 +2320,6 @@ sv:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

@@ -16,13 +16,13 @@ te:
         csd-2023:
           title: కంప్యూటర్ సైన్స్ అన్వేషణలు
     resources:
-      teacher_forum/csd/2020:
-        name: ఉపాధ్యాయ ఫోరం
       teacher_forum_6/csd/2017:
+        name: ఉపాధ్యాయ ఫోరం
+      teacher_forum_6/csd/2018:
         name: ఉపాధ్యాయ ఫోరం
       teacher_forum/csd/2019:
         name: ఉపాధ్యాయ ఫోరం
+      teacher_forum/csd/2020:
+        name: ఉపాధ్యాయ ఫోరం
       getting_started_with_csd/csd/2021:
         name: CSD తో ప్రారంభించుట
-      teacher_forum_6/csd/2018:
-        name: ఉపాధ్యాయ ఫోరం

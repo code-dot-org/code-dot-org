@@ -7,12 +7,12 @@
   "catProcedures": "ফাংশনগুলি",
   "catText": "পাঠ",
   "catVariables": "চলকগুলো",
-  "designWorkspaceHeader": "কর্মপরিসর:",
   "designElementProperty_text": "পাঠ",
   "designElementProperty_textAlignment_left": "বামে",
   "designElementProperty_textAlignment_right": "ডানে",
   "designElementProperty_zOrder": "গভীরতা",
   "designElementTheme_classic": "কালজয়ী",
+  "designWorkspaceHeader": "কর্মপরিসর:",
   "dropletBlock_drawImage_param1": "এক্স",
   "dropletBlock_drawImage_param3": "চওড়া",
   "dropletBlock_drawImage_param4": "উচ্চতা",
@@ -27,7 +27,7 @@
   "nextLevel": "অভিনন্দন! আপনি এই ধাঁধা সম্পন্ন করেছেন।",
   "no": "না",
   "numBlocksNeeded": "এই ধাঁধাটি %1 ব্লক দিয়ে সমাধান করা যেতে পারে।",
-  "repeatForever": "সবসময় পুনরাবৃত্তি করুন",
   "repeatDo": "করা",
+  "repeatForever": "সবসময় পুনরাবৃত্তি করুন",
   "yes": "\"হ্যাঁ\""
 }

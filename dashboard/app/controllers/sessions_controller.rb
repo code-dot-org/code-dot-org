@@ -1,3 +1,5 @@
+require 'policies/child_account'
+
 class SessionsController < Devise::SessionsController
   include UsersHelper
 
@@ -62,9 +64,19 @@ class SessionsController < Devise::SessionsController
     # If the student isn't signed in, go to the login page
     return redirect_to new_user_session_path unless current_user
 
+    # If the user is compliant with the Child Account Policy, redirect them to
+    # /home
+    redirect_to home_path if Policies::ChildAccount.compliant? current_user
+
     # Basic defaults. If the @pending_email is empty, the request was never sent
     @pending_email = ''
     @request_date = DateTime.now
+
+    # Disallow the student's email address (unless a parent is creating the account)
+    @disallowed_email = ''
+    unless current_user.parent_created_account?
+      @disallowed_email = current_user.hashed_email
+    end
 
     # Determine the deletion date as the creation time of the account + 7 days
     @delete_date = current_user.created_at.since(7.days)

@@ -46,14 +46,11 @@ const DEFAULT_NAME = 'acting';
 
 const blockXml = `<xml>
   <block type="behavior_definition">
-    <title id=${DEFAULT_NAME} name="NAME">${DEFAULT_NAME}</title>
+    <title id="${DEFAULT_NAME}" name="NAME">${DEFAULT_NAME}</title>
   </block>
 </xml>`;
 
-Blockly.cdoUtils.loadBlocksToWorkspace(
-  Blockly.mainBlockSpace,
-  Blockly.Xml.textToDom(blockXml)
-);
+Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, blockXml);
 const block = Blockly.mainBlockSpace.getTopBlocks()[0];
 const name = getInput('name').value || DEFAULT_NAME;
 

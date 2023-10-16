@@ -2,13 +2,13 @@
 en-GB:
   data:
     unplugged:
+      ComputationalThinking:
+        title: Computational Thinking
       Unplug1:
-        title: Introduction to Computer Science
         desc: Este contenido presenta el concepto de las Ciencias de la Computación
           y explica lo que ellos realizan.
+        title: Introduction to Computer Science
       Unplug2:
         title: Computational Thinking
       Unplug7:
         title: Song Writing
-      ComputationalThinking:
-        title: Computational Thinking

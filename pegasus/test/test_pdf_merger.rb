@@ -81,7 +81,7 @@ class PDFMergerTest < Minitest::Test
 
   def delete_outfiles
     @output_files.each do |output_filename|
-      File.delete(output_filename) if File.exist?(output_filename)
+      FileUtils.rm_f(output_filename)
     end
   end
 

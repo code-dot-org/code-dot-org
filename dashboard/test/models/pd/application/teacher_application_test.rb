@@ -14,7 +14,7 @@ module Pd::Application
       assert_nil teacher_application.application_guid
 
       teacher_application.save!
-      assert_not_nil teacher_application.application_guid
+      refute_nil teacher_application.application_guid
     end
 
     test 'existing guid is preserved' do
@@ -103,7 +103,7 @@ module Pd::Application
 
     test 'accepted_at updates times' do
       today = Time.zone.today.to_time
-      tomorrow = Date.tomorrow.to_time
+      tomorrow = Time.zone.tomorrow.to_time
       application = create :pd_teacher_application
       assert_nil application.accepted_at
 
@@ -180,7 +180,7 @@ module Pd::Application
 
       application.update_user_school_info!
       refute_equal original_user_school_info_id, user.school_info_id
-      assert_not_nil user.school_info_id
+      refute_nil user.school_info_id
     end
 
     test 'update_user_school_info does nothing when user has no school info and does not have enough info for new school' do
@@ -216,7 +216,15 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i, location_address: %w(tba TBA tba)[i - 1]}
+      addresses = %w(tba TBA tba)
+      workshops = (1..3).map do |i|
+        create(
+          :workshop,
+          num_sessions: 2,
+          sessions_from: Time.zone.today + i,
+          location_address: addresses[i - 1]
+        )
+      end
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,

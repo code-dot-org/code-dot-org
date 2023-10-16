@@ -1,9 +1,9 @@
 {
   "absolute": "absolute",
+  "agentDiamondPathCongrats": "Maligayang bati, nakakita ka ng dyamanteng daan! Ikaw ay nakakoleka{count, plural, one {1 diamond} other {# diamonds}}  sa ngayon! ",
   "agentGenericFailureMessage": "Manatiling mag-code! Tandaang gumamit sa Ang Ahenta para tumulong.",
   "agentTooFewBlocksFailureMessage": "Subukang magdagdag ng isang bloke lang sa isang beses para madala Ang Ahente sa tamang lugar.",
   "at": "sa",
-  "agentDiamondPathCongrats": "Maligayang bati, nakakita ka ng dyamanteng daan! Ikaw ay nakakoleka{count, plural, one {1 diamond} other {# diamonds}}  sa ngayon! ",
   "blockActionAdd": "magdagdag",
   "blockActionAttack": "atakihin",
   "blockActionClone": "i-clone ang mga bloke",

@@ -7,19 +7,11 @@ ga:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': tamall
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': tamall
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "malartaíodh gach {GROUP} idir {MOVE1} \nagus {MOVE2} gach {N} tomhas"
         options:
@@ -446,26 +438,6 @@ ga:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': eachtrán
             '"BEAR"': béar
@@ -1198,9 +1170,7 @@ ga:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': tamall
-            '100': large
       gamelab_mirrorSprite:
         text: aghaidh {SPRITE} {DIRECTION}
         options:
@@ -1270,10 +1240,7 @@ ga:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': tamall
-            '100': large
       gamelab_setProp:
         text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
         options:
@@ -1290,10 +1257,7 @@ ga:
           PROPERTY:
             '"scale"': méid
           SIZE:
-            '25': extra small
-            '50': small
             '75': tamall
-            '100': large
       gamelab_setSizes:
         text: 'socraigh {PROPERTY} do {SPRITE}: {N}%'
         options:
@@ -1304,11 +1268,9 @@ ga:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': mall
             '5': gnáthmhód
             '7': sciobtha
-            '9': extra fast
       gamelab_setTint:
         text: athraigh dath {THIS} go {COLOR}
       gamelab_showTitleScreen:
@@ -1708,7 +1670,6 @@ ga:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1755,16 +1716,10 @@ ga:
         options:
           PORTION:
             '1': uile
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': uile
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -1892,7 +1847,6 @@ ga:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

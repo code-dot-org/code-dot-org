@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Uair an Chóid Conas-Chun Ceantair
 ---
 
 {{ signup_button }}

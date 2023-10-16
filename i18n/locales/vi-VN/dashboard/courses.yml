@@ -67,21 +67,21 @@ vi:
         csd-2023:
           title: Những khám phá Khoa học Máy tính
     resources:
-      curriculum/csd/2020:
-        name: Chương trình
-      teacher_forum/csd/2020:
-        name: Diễn đàn giáo viên
       curriculum/csd/2017:
         name: Chương trình
       teacher_forum_6/csd/2017:
+        name: Diễn đàn giáo viên
+      curriculum/csd/2018:
+        name: Chương trình
+      teacher_forum_6/csd/2018:
         name: Diễn đàn giáo viên
       curriculum/csd/2019:
         name: Chương trình
       teacher_forum/csd/2019:
         name: Diễn đàn giáo viên
+      curriculum/csd/2020:
+        name: Chương trình
+      teacher_forum/csd/2020:
+        name: Diễn đàn giáo viên
       getting_started_with_csd/csd/2021:
         name: Bắt đầu Khám phá KHMT
-      curriculum/csd/2018:
-        name: Chương trình
-      teacher_forum_6/csd/2018:
-        name: Diễn đàn giáo viên

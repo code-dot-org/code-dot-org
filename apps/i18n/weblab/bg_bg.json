@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Добави CSS",
-  "addImageButton": "Добави Изображение",
   "addHTMLButton": "Добави HTML",
+  "addImageButton": "Добави Изображение",
   "closeFullscreenPreview": "Затвори прегледа на цял екран",
   "currentProjectCapacity": "{currentMegabytes}MB от {totalMegabytes}MB използвани",
   "disallowedHtml": "Файлът \"{filename}\" съдържа HTML елементи, които не са разрешени: `{disallowedTags}`. Те ще бъдат премахнати при затваряне на този диалог.",
@@ -14,8 +14,8 @@
   "reset": "Нулиране на Web Lab",
   "resetComplete": "Нулиране на Web Lab Завършено",
   "resetFailure": "Неуспешно нулиране на Web Lab: {message}.",
-  "toggleInspectorOn": "Инспектор: Изключен",
   "toggleInspectorOff": "Инспектор: Включен",
+  "toggleInspectorOn": "Инспектор: Изключен",
   "troubleshootingSupport": "За повече информация вижте нашата статия за поддръжка [\"Отстраняване на проблеми в Web Lab\"]({url}).",
   "uploadError": "Грешка при Качване"
 }

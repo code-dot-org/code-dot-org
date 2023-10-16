@@ -1,5 +1,5 @@
 module.exports = {
-  ignoreFiles: ['./build/**/*.scss'],
+  ignoreFiles: ['./build/**/*.scss', './storybook-deploy/*'],
   extends: ['stylelint-config-standard', 'stylelint-config-standard-scss'],
   rules: {
     'media-feature-range-notation': 'prefix',

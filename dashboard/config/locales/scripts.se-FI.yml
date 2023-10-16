@@ -3,89 +3,152 @@ se:
   data:
     script:
       name:
+        20-hour:
+          description: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema
+            vuođđodoahpagiid kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča
+            kurssaid 2-4 vai beasat oažžut ollislaš vásáhusa!
+          description_audience: Ahki 10-18
+          description_short: Dát 20 diibmosaš kursa gokčá informatihka ja prográmmerema
+            vuođđodoahpagiid kurssain 2-4.
+          student_description: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema
+            vuođđodoahpagiid kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča
+            kurssaid 2-4 vai beasat oažžut ollislaš vásáhusa!
+          title: Jođanis Láidehus CS:kursii
+        AlgebraA:
+          description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
+          description_short: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
+          student_description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
+        AlgebraB:
+          description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
+          description_short: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
+          student_description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
+          title: 'DihtorDiehta Algebra:s: Kursa B'
+        CSF_Secret_Sample:
+          description_audience: Ahki 8-18
+        CSF_Secret_Sample_Story:
+          description_audience: Ahki 8-18+
+        Course4pre:
+          description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan
+            Kursa 2 ja 3.
+          description_short: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai
+            leat čađahan Kursa 2 ja 3.
+          student_description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai
+            leat čađahan Kursa 2 ja 3.
+          title: Kursa 4  Eavttut
+        Hour of Code:
+          description: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat figuraid
+            Angy Bird:as, Šattut Zombiid vuostá!
+          description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu
+            somas figuraid.
+          student_description: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat figuraid
+            Angy Bird:as, Šattut Zombiid vuostá!
+          title: Kodendiibmu 2013
+        MikeTest:
+          description_audience: Ahki 8-98
+        Special Fun:
+          description_audience: Ahki 10-18
+        SpecialSeries:
+          description_audience: Ahki 10-18
+        afterschool1:
+          description_audience: Agit 7-13
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        algebra:
+          description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in.
+          description_short: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in.
+          student_description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in.
+        alltheplcthings:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Musihkka
+        andrea-test:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        artist:
+          description: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
+          description_short: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
+          student_description: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
+          title: Dáiddár
+        artistExemplar:
+          description_audience: Ahki 8-18
+        asUnplugged:
+          description_audience: Ahki 6-13
+        basketball:
+          description: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
+          description_short: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
+          student_description: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
+          title: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
+        classic-hoc-impact-study:
+          description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu
+            somas figuraid.
         course1:
-          title: Kursa 1
           description: Álgge Kurssa 1:in ovdalaš lohkkiide. Oahppit galget ráhkadit
             dihtorprográmmaid mat veahkehit sin oahppat ovttasbargat earáiguin. Ovdánahttit
             čuolbmačoavdingálggaid, ja čađahit váddásit bargguid. Loahpas kurssa oahppit
             ráhkadit alcces heivehuvvon spealu dahje muitalusa maid sáhttet juogadit.
             Ávžžuhuvvo geavahuvvot mánáidskuvlla dásiide, guđajahkásaččaide.
-          description_short: Láidehus dihtordiehtagii aittoálgi lohkkiide.
           description_audience: Agit 4-6
+          description_short: Láidehus dihtordiehtagii aittoálgi lohkkiide.
           student_description: Álgge Kurssa 1:in ovdalaš lohkkiide. Oahppit galget
             ráhkadit dihtorprográmmaid mat veahkehit sin oahppat ovttasbargat earáiguin.
             Ovdánahttit čuolbmačoavdingálggaid, ja čađahit váddásit bargguid. Loahpas
             kurssa oahppit ráhkadit alcces heivehuvvon spealu dahje muitalusa maid
             sáhttet juogadit. Ávžžuhuvvo geavahuvvot mánáidskuvlla dásiide, guđajahkásaččaide.
+          title: Kursa 1
         course2:
-          title: Kursa 2
           description: Kursa 2 lea heivehuvvon ohppiide geat máhttet lohkat ja geain
             ii leat ovdalaččas prográmmeren hárjáneapmi. Dán kurssas galget oahppit
             ráhkadit prográmmaid čoavdin dihte čuolmmaid, ja ovdánahttit interaktiiva
             spealuid dahje muitalusaid maid sáhttet juogadit earáiguin. Evttohuvvon
             2.-5 klássaide.
-          description_short: Láidehus dihtordiehtagii ohppiide geat máhttet lohkat.
           description_audience: Ahki 6+ (lohkan gáibiduvvo)
+          description_short: Láidehus dihtordiehtagii ohppiide geat máhttet lohkat.
           student_description: Kursa 2 lea heivehuvvon ohppiide geat máhttet lohkat
             ja geain ii leat ovdalaččas prográmmeren hárjáneapmi. Dán kurssas galget
             oahppit ráhkadit prográmmaid čoavdin dihte čuolmmaid, ja ovdánahttit interaktiiva
             spealuid dahje muitalusaid maid sáhttet juogadit earáiguin. Evttohuvvon
             2.-5 klássaide.
+          title: Kursa 2
         course3:
-          title: Kursa 3
           description: Kursa 3 lea ráhkaduvvon ohppiide geat leat čađahan Kursa 2.
             Oahppit čiekŋudit fáttáide mat leat ovddit kurssain leamaš ráhkadan dihte
             fleksibelit čovdosiid kompleaksa čuolmmaide. Kurssa loahpas oahppit ráhkadit
             interaktiiva muitalusaid ja spealuid maid sáhttet juogadit váikko geainna.
             Ávžžuhuvvon 4.-5. klássaide.
+          description_audience: Ahki 8-18
           description_short: Oažžut čiekŋalit ipmárdusa prográmmeremii seammás go
             hukset spealuid ja interaktiiva muitalusaid. Dát lea čuovvoleapmi Kursa
             2:ii.
-          description_audience: Ahki 8-18
           student_description: Kursa 3 lea ráhkaduvvon ohppiide geat leat čađahan
             Kursa 2. Oahppit čiekŋudit fáttáide mat leat ovddit kurssain leamaš ráhkadan
             dihte fleksibelit čovdosiid kompleaksa čuolmmaide. Kurssa loahpas oahppit
             ráhkadit interaktiiva muitalusaid ja spealuid maid sáhttet juogadit váikko
             geainna. Ávžžuhuvvon 4.-5. klássaide.
-        playlab:
-          title: Speallan-lab
-          description: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
-          description_short: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
-          student_description: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
-        artist:
-          title: Dáiddár
-          description: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
-          description_short: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
-          student_description: Tevdne kulas govaid ja ráhkat daid Dáiddariin!
-        hourofcode:
-          title: Klassikalaš Labirynta
-          description: Geahččal  dihtordiehtaga vuođđoáššiid mas geavahat figuraid
-            Angy Bird:as, Šattut Zombiid vuostá, ja Scrat:a Jiekŋaáiggis.
-          description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu
-            somas figuraid.
-          student_description: Geahččal  dihtordiehtaga vuođđoáššiid mas geavahat
-            figuraid Angy Bird:as, Šattut Zombiid vuostá, ja Scrat:a Jiekŋaáiggis.
-        frozen:
-          title: Kode Annain ja Elsain
-          description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja čábbodaga
-            Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid luistiiguin
-            ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
-          student_description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid
-            ja čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid
-            luistiiguin ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit
-            iežat olbmaiguin!
+          title: Kursa 3
         course4:
-          title: Kursa 4
           description: Kursa 4 lea ráhkaduvvon ohppiide geat leat čađahan Kursa 2
             ja 3. Oahppit galget oahppat movt čoavdit bargobihtáid mat šaddet váddáseappot
             ja váddáseappot seammás go ohppet ovttastahttit máŋga doahpaga maiguin
             čoavdit juohke hástalusa. Go dán kurssa lea čađahan, de oahppit galget
             máhttit ráhkadit prográmmaid mas sáhttet čájehit eanet gálggaid, nu go
             mohkiid ja funkšuvnnaid main leat paramehterat. Evttohuvvon 4.-8. klássaide.
+          description_audience: Ahki 9-18
           description_short: Ráhkat eanet kompleaksa prográmmaid mas geavahat doahpagiid
             mohkiide ja funkšuvnnaide main leat paramehterat. Dát lea čuovvoleapmi
             Kursa 3:ii.
-          description_audience: Ahki 9-18
           student_description: Kursa 4 lea ráhkaduvvon ohppiide geat leat čađahan
             Kursa 2 ja 3. Oahppit galget oahppat movt čoavdit bargobihtáid mat šaddet
             váddáseappot ja váddáseappot seammás go ohppet ovttastahttit máŋga doahpaga
@@ -93,980 +156,40 @@ se:
             galget máhttit ráhkadit prográmmaid mas sáhttet čájehit eanet gálggaid,
             nu go mohkiid ja funkšuvnnaid main leat paramehterat. Evttohuvvon 4.-8.
             klássaide.
-        Course4pre:
-          title: Kursa 4  Eavttut
-          description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan
-            Kursa 2 ja 3.
-          description_short: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai
-            leat čađahan Kursa 2 ja 3.
-          student_description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai
-            leat čađahan Kursa 2 ja 3.
-        algebra:
-          description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in.
-          description_short: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in.
-          student_description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in.
-        infinity:
-          title: Disney Infinitiija Speallan-lab
-          description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney
-            Infinitiija figurat leat mielde.
-          description_short: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas
-            Disney Infinitiija figurat leat mielde.
-          student_description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu
-            mas Disney Infinitiija figurat leat mielde.
-        20-hour:
-          title: Jođanis Láidehus CS:kursii
-          description: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema
-            vuođđodoahpagiid kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča
-            kurssaid 2-4 vai beasat oažžut ollislaš vásáhusa!
-          description_short: Dát 20 diibmosaš kursa gokčá informatihka ja prográmmerema
-            vuođđodoahpagiid kurssain 2-4.
-          description_audience: Ahki 10-18
-          student_description: Dát 20 diibmosaš kursa gokčá  DihtorDiehtaga ja prográmmerema
-            vuođđodoahpagiid kurssain 2-4. Kursa sáhttá geavahit agiin 10-18. Geahča
-            kurssaid 2-4 vai beasat oažžut ollislaš vásáhusa!
-        events:
-          title: Dáhpáhusaid
-          description: Dáhpáhusaid
-          description_short: Dáhpáhusaid
-          student_description: Dáhpáhusaid
-        flappy:
-          title: Flappy Koda
-          description: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal min
-            Flappy Koda neavvaga!
-          description_short: Čále iežat Flappy spealu!
-          student_description: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal
-            min Flappy Koda neavvaga!
-        jigsaw:
-          description: Geahččal Bihttáspealu neavvaga.
-          description_short: Geahččal Bihttáspealu neavvaga.
-          student_description: Geahččal Bihttáspealu neavvaga.
-        step:
-          description: Dásiid mielde neava
-          description_short: Dásiid mielde neava
-          student_description: Dásiid mielde neava
-        Hour of Code:
-          title: Kodendiibmu 2013
-          description: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat figuraid
-            Angy Bird:as, Šattut Zombiid vuostá!
-          description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu
-            somas figuraid.
-          student_description: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat figuraid
-            Angy Bird:as, Šattut Zombiid vuostá!
-        text-compression:
-          title: TeakstaKomprimeren
-        allthethings:
-          lessons:
-            lesson-49:
-              name: Musihkka
-        asUnplugged:
-          description_audience: Ahki 6-13
-        afterschool1:
-          description_audience: Agit 7-13
-        vigenere:
-          description: Geavat Vigenere Cipher Widget suokkardallat dieđuid krypteremiin
-            ja dekryptermiin.
-          description_short: Geavat Vigenere Cipher Widget suokkardallat dieđuid krypteremiin
-            ja dekryptermiin.
-          student_description: Geavat Vigenere Cipher Widget suokkardallat dieđuid
-            krypteremiin ja dekryptermiin.
-        frequency_analysis:
-          description_short: Geavat Frekveansa Analysa Widget analyseret bustáva frekveanssaid
-            teavsttas mas buohtastahtát dáid vurdojuvvon frekveanssaiguin. Crack Shift
-            ja Lonuhan Cipherat.
-        Special Fun:
-          description_audience: Ahki 10-18
-        SpecialSeries:
-          description_audience: Ahki 10-18
-        iceage:
-          title: Jiekŋaáiggi Speallan-lab
-          description: Ráhkat muitalusa dahje spealu Jiekŋaáiggi Speallan-labbain
-          description_short: Ráhkat muitalusa dahje spealu Jiekŋaáiggi Speallan-labbain
-          student_description: Ráhkat muitalusa dahje spealu Jiekŋaáiggi Speallan-labbain
-        gumball:
-          title: Gumball Speallan-lab
-          description: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
-          description_short: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
-          student_description: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
-        starwars:
-          description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu
-            galaksii mii lea guhkkin, guhkkin eret.
-          description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
-            spealu galaksii mii lea guhkkin, guhkkin eret.
-          student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
-            spealu galaksii mii lea guhkkin, guhkkin eret.
-        starwarsblocks:
-          description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu
-            galaksii mii lea guhkkin, guhkkin eret.
-          description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
-            spealu galaksii mii lea guhkkin, guhkkin eret.
-          student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
-            spealu galaksii mii lea guhkkin, guhkkin eret.
-        mc:
-          description_short: Guorahala Minecraft máilmmi kodemiin.
-        oceans:
-          title: AI Mearaide
-          description: Oahpa movt AI ja mašiidnaoahppan sáhttá geavahuvvot čujuhit
-            máilmmi váttisvuođaide.
-          description_short: Oahpa movt AI ja mašiidnaoahppan sáhttá geavahuvvot čujuhit
-            máilmmi váttisvuođaide.
-          student_description: Oahpa movt AI ja mašiidnaoahppan sáhttá geavahuvvot
-            čujuhit máilmmi váttisvuođaide.
-        cspunit6:
-          description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
-        AlgebraA:
-          description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
-          description_short: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
-          student_description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
-        AlgebraB:
-          title: 'DihtorDiehta Algebra:s: Kursa B'
-          description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
-          description_short: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
-          student_description: Oahpa Funkšuvnnalaš Prográmmerema Algebra:in
-        csp1-2017:
-          title: CSP Unit 1 - Interneahtta ('17-'18)
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csp1_1:
-              display_name: 'Kapihtal 1: Ovddastahte ja Fievrret Informašuvnna'
-            csp1_2:
-              display_name: 'Kapihtal 2: Fuomáš Interneahta'
-        csp2-2017:
-          title: CSP Unit 2 - Digitála Informašuvdna ('17-'18)
-          lesson_groups:
-            csp2_1:
-              display_name: 'Kapihtal 1: Kode ja Komprimere Kompleaksa Informašuvnna'
-            csp2_2:
-              display_name: 'Kapihtal 2: Manipulere ja Visuálisere Data'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp3-2017:
-          title: CSP Unit 3 - Láidehus Prográmmeremii ('17-'18)
-          lesson_groups:
-            csp3_1:
-              display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp4-2017:
-          title: CSP Unit 4 - Stuora Data ja Personsuodjalus ('17-'18)
-          lesson_groups:
-            csp4_1:
-              display_name: 'Kapihtal 1: Stuora Data Máilbmi ja Krypteren'
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp5-2017:
-          title: CSP Unit 5 - Hukse App:id ('17-'18)
-          lesson_groups:
-            csp5_1:
-              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
-            csp5_2:
-              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        CSF_Secret_Sample:
-          description_audience: Ahki 8-18
-        cspunit1-support:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        cspexam1-mWU7ilDYM9:
-          description_short: Dán máŋggaválljen árvvoštallamis leat jearagaldagat mat
-            gokčet DihtorDiehtaga 7 stuora idea. Dát lea 1. oassi guovtti-oassásaš
-            50 jearaldateksámenis.
-        cspexam2-AKwgAh1ac5:
-          description_short: Dán máŋggaválljen árvvoštallamis leat jearagaldagat mat
-            gokčet DihtorDiehtaga 7 stuora idea. Dát lea 2. oassi guovtti-oassásaš
-            50 jearaldateksámenis.
-        CSF_Secret_Sample_Story:
-          description_audience: Ahki 8-18+
-        MikeTest:
-          description_audience: Ahki 8-98
-        artistExemplar:
-          description_audience: Ahki 8-18
-        teachercon:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        gradeKinder:
-          description_audience: Ahki 5-18
-        grade4:
-          description_audience: Ahki 9-99
-        grade1:
-          description_audience: Ahki 5-18
-        grade5:
-          description_audience: Ahki 10-110
-        grade3:
-          description_audience: Ahki 5-18
-        alltheplcthings:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        csd3-2017:
-          title: CSD Unit 3 - Animašuvnnat ja Spealut ('17-'18)
-          description_short: Programmeren
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csd_survey:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        grade2:
-          description_audience: Ahki 5-18
-        csd1-2017:
-          title: CSD Unit 1 - ČuolbmaČoavdin ('17-'18)
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csd1_1:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            csd1_2:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csp-online-test:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        csp1-support:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        basketball:
-          title: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
-          description_short: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
-          description: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
-          student_description: Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu
-        csd2-2017:
-          title: CSD Unit 2 - Web Ovdánahttin ('17-'18)
-          lesson_groups:
-            csd2_1:
-              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
-            csd2_2:
-              display_name: 'Kapihtal 2: Stylen ja CSS'
-            csd_survey:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp2-support:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        csd4-2017:
-          title: CSD Unit 4 - DesignenProseassa ('17-'18)
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-            csd_survey:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        minecraft:
-          description_short: Programmere elliid dahje eará Minecraft heakkalaččaid
-            du iežat Minecraft-veršuvnnas.
-          description: Programmere elliid dahje eará Minecraft heakkalaččaid du iežat
-            Minecraft-veršuvnnas.
-          student_description: Programmere elliid dahje eará Minecraft heakkalaččaid
-            du iežat Minecraft-veršuvnnas.
-        coursea-draft:
-          description_short: Láidehus dihtordiehtagii aittoálgi lohkkiide.
-        courseb-draft:
-          description_short: Láidehus dihtordiehtagii aittoálgi lohkkiide.
-        coursee-draft:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        coursef-draft:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        classic-hoc-impact-study:
-          description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu
-            somas figuraid.
-        hoc-impact-study:
-          description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu
-            somas figuraid.
-        csp3-support:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        csp4-support:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp5-support:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            practice:
-              display_name: OahpahanHárjehallamat
-        csppostap-2017:
-          description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd6-2017:
-          lesson_groups:
-            csd_survey:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csd3-draft:
-          title: 'CSD Unit 3 - Programmeren: Animašuvnnat ja Spealut'
-          description_short: Animašuvnnat ja Spealut
-        csd5-2017:
-          lesson_groups:
-            csd_survey:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        fmscsd3preview:
-          title: CSD - Tevdnet SpeallanLáb:as
-        csppostsurvey:
-          title: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
-          description_audience: CSP Oahppit
-          description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
-        csp-post-survey:
-          title: CSP Oahppi Maŋŋil kurssa Iskkadeapmi ('17-'18)
-          description_audience: CSP Oahppit
-          description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        cspnovice:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp1-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp2-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp3-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp4-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp5-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd1-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd6-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd5-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd4-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd3-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd2-dlp:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        express-2017:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp3-research-mxghyt:
-          lesson_groups:
-            csp3_1:
-              display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd4-draft:
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-        csp3-a:
-          lesson_groups:
-            csp3_1:
-              display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
-        new-express:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd4-old:
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-        csp3-staging:
-          lesson_groups:
-            csp3_1:
-              display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-        csp-explore-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp-create-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd3-1819draft:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd3-2018:
-          title: CSD Unit 3 - Animašuvnnat ja Spealut ('18-'19)
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd2-2018:
-          title: CSD Unit 2 - Web Ovdánahttin ('18-'19)
-          lesson_groups:
-            csd2_1:
-              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
-            csd2_2:
-              display_name: 'Kapihtal 2: Stylen ja CSS'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd6-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp1-2018:
-          title: CSP Unit 1 - Interneahtta ('18-'19)
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csp1_1:
-              display_name: 'Kapihtal 1: Ovddastahte ja Fievrret Informašuvnna'
-            csp1_2:
-              display_name: 'Kapihtal 2: Fuomáš Interneahta'
-        csd1-2018:
-          title: CSD Unit 1 - ČuolbmaČoavdin ('18-'19)
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csd1_1:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            csd1_2:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csd4-2018:
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd5-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp2-2018:
-          lesson_groups:
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-        csp3-2018:
-          lesson_groups:
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp-explore-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp-create-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp4-2018:
-          lesson_groups:
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp5-2018:
-          lesson_groups:
-            csp5_1:
-              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
-            csp5_2:
-              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csppostap-2018:
-          description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd1-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd2-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd3-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd4-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd5-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd6-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp1-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp2-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp3-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp4-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp5-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp-explore-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp-create-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd-post-survey:
-          lesson_groups:
-            csd_survey:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csd-novice-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd-apprentice-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp-novice-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp-apprentice-18:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        fit-test:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        coursef-2019:
-          lesson_groups:
-            csf_internet:
-              display_name: Interneahtta
-            csf_sprites:
-              display_name: Sprite:at
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        coursee-2019:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        express-2019:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-        csd1-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csd1_1:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            csd1_2:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        andrea-test:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
-        csp-mid-survey:
-          description_audience: CSP Oahppit
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
+          title: Kursa 4
         coursea-2019:
           lesson_groups:
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
-        pre-express-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-        csd2-2019:
-          title: CSD Unit 2 - Web Ovdánahttin ('19-'20)
-          lesson_groups:
-            csd2_1:
-              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
-            csd2_2:
-              display_name: 'Kapihtal 2: Stylen ja CSS'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd3-2019:
-          title: CSD Unit 3 - Animašuvnnat ja Spealut ('19-'20)
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd4-2019:
-          title: CSD Unit 4 - DesignenProseassa ('19-'20)
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd5-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd6-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp1-2019:
-          title: CSP Unit 1 - Interneahtta ('19-'20)
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csp1_1:
-              display_name: 'Kapihtal 1: Ovddastahte ja Fievrret Informašuvnna'
-            csp1_2:
-              display_name: 'Kapihtal 2: Fuomáš Interneahta'
-        csp2-2019:
-          title: CSP Unit 2 - Digitála Informašuvdna ('19-'20)
-          lesson_groups:
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp3-2019:
-          title: CSP Unit 3 - Láidehus Prográmmeremii ('19-'20)
-          lesson_groups:
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp4-2019:
-          title: CSP Unit 4 - Stuora Data ja Personsuodjalus ('19-'20)
-          lesson_groups:
-            cspAssessment:
-              display_name: Kapihtal Árvvoštallan
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp5-2019:
-          title: CSP Unit 5 - Hukse App:id ('19-'20)
-          lesson_groups:
-            csp5_1:
-              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
-            csp5_2:
-              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp-explore-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp-create-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csppostap-2019:
-          description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp1-pilot:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        time4csdemo:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-        csd-post-survey-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp-post-survey-2018:
-          title: CSP Oahppi Maŋŋil kurssa Iskkadeapmi ('18-'19)
-          description_audience: CSP Oahppit
-          description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        fit2019-novice:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        fit2019-apprentice:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd1-pilot:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csd1_1:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            csd1_2:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csd2-pilot:
-          lesson_groups:
-            csd2_1:
-              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
-            csd2_2:
-              display_name: 'Kapihtal 2: Stylen ja CSS'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd3-pilot:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp3-pilot:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csl-vn:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csd4-pilot:
-          lesson_groups:
-            csd1_2:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-        k5-onlinepd-2019:
-          lesson_groups:
-            k5_getting_started:
-              display_name: Álgge
-            k5_next_steps:
-              display_name: Boahttevaš Lávkkit
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-            csf_sprites:
-              display_name: Sprite:at
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-            csf_sprites:
-              display_name: Sprite:at
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        csp4-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp5-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp7-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csd2-2020:
-          title: CSD Unit 2 - Web Ovdánahttin ('20-'21)
-          lesson_groups:
-            csd2_1:
-              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
-            csd2_2:
-              display_name: 'Kapihtal 2: Stylen ja CSS'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd1-2020:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csd1_1:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            csd1_2:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csd4-2020:
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd5-2020:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd6-2020:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd3-2020:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            cspSurvey:
-              display_name: Iskkadeapmi
         coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursea-draft:
+          description_short: Láidehus dihtordiehtagii aittoálgi lohkkiide.
+        courseb-2019:
           lesson_groups:
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
@@ -1078,711 +201,13 @@ se:
               display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        coursee-2020:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_sprites:
-              display_name: Sprite:at
-        express-2020:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-        pre-express-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-        csp1-2020:
-          title: CSP Unit 1 - Digitála Informašuvdna ('20-'21)
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp2-2020:
-          title: CSP Unit 2 - Interneahtta ('20-'21)
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp3-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp6-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp9-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp10-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csd2-virtual:
-          lesson_groups:
-            csd2_1:
-              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
-            csd2_2:
-              display_name: 'Kapihtal 2: Stylen ja CSS'
-        virtual-holding-place:
-          lesson_groups:
-            content:
-              display_name: Sisdoallu
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-        csp5-virtual-part2:
-          lesson_groups:
-            csp5_1:
-              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
-            csp5_2:
-              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
-        k5-onlinepd-2020:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Álgge
-            k5_next_steps_1:
-              display_name: Boahttevaš Lávkkit
-        dani-june-2020-test:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csp5_1:
-              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
-        csd3-virtual:
-          lesson_groups:
-            csd3_1:
-              display_name: Sisdoallu
-            csd3_2:
-              display_name: Sisdoallu
-            cspSurvey:
-              display_name: Sisdoallu
-        ui-test-script-in-course-2017:
-          lesson_groups:
-            lg_1:
-              display_name: Sisdoallu
-        ui-test-script-in-course-2019:
-          lesson_groups:
-            lg_1:
-              display_name: Sisdoallu
-        ui-test-versioned-script-2017:
-          lesson_groups:
-            lg_1:
-              display_name: Sisdoallu
-        ui-test-versioned-script-2019:
-          lesson_groups:
-            lg_1:
-              display_name: Sisdoallu
-        csd1-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csd1_1:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            csd1_2:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csd2-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd3-2021:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd4-2021:
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd5-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd6-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp1-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp2-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Iskkadeapmi
-        csp5-2021:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp6-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp7-2021:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Iskkadeapmi
-        csp8-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ráhkat PT
-            lessonGroup-3:
-              display_name: Iskkadeapmi
-        csp9-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Iskkadeapmi
-        csp10-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Iskkadeapmi
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
         courseb-2021:
           lesson_groups:
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            lessonGroup-6:
-              display_name: Digitála Stáhtaborgárvuohta
-        coursee-2021:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        coursef-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Sprite:at
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            lessonGroup-7:
-              display_name: Digitála Stáhtaborgárvuohta
-        express-2021:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-            lessonGroup-9:
-              display_name: Dáhpáhusaid
-        pre-express-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-        csf-2021-pilot:
-          lesson_groups:
-            Sprites:
-              display_name: Sprite:at
-        csd4-preview-2021:
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csdSurvey:
-              display_name: Iskkadeapmi
-        csd5-preview-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Sisdoallu
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        haikubot-pilot:
-          lesson_groups:
-            Lesson 3:
-              display_name: Lekšuvdna 3
-            Lesson 4:
-              display_name: Lekšuvdna 4
-            Lesson 5:
-              display_name: Lekšuvdna 5
-        csp-post-survey-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Iskkadeapmi
-          description_audience: CSP Oahppit
-          description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
-        aiml-2021:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        csd7-2021:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: Sisdoallu
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: Sisdoallu
-            content:
-              display_name: Sisdoallu
-            lesson_group:
-              display_name: Sisdoallu
-            lessonGroup-2:
-              display_name: Sisdoallu
-        spritelab-effects-challenge:
-          name: spritelab-effekte-Herausforderung
-          title: Herausforderung Sprite-Effekt
-          description_audience: Sprite Lab für mittlere/fortgeschrittene Benutzer
-          description_short: Nimm die Herausforderung an und erstelle deinen eigenen
-            Sprite-Effekt mit Sprite Lab!
-        spelling-bee:
-          title: Stávengilvu
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sprite:at
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
-        express-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-            lessonGroup-9:
-              display_name: Dáhpáhusaid
-        csp1-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp5-2022:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
         courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
-        csp6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp7-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ráhkat PT
-            lessonGroup-3:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp9-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp10-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitála Stáhtaborgárvuohta
-            csf_events:
-              display_name: Dáhpáhusaid
-        coursee-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-            csf_digcit:
-              display_name: Digitála Stáhtaborgárvuohta
-        coursef-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: Sprite:at
-            lessonGroup-7:
-              display_name: Digitála Stáhtaborgárvuohta
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-            lessonGroup-5:
-              display_name: Iskkadeapmi
-        pre-express-2022:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        cs4all-invasive-species:
-          lessons:
-            lesson-21:
-              name: Álgge
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digitála Stáhtaborgárvuohta
-            ramp_up:
-              display_name: Sprite:at
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-            lessonGroup-5:
-              display_name: Iskkadeapmi
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csd1-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-            csd1_1:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            csd1_2:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csd2-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd3-2022:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            csd3_2:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd4-2022:
-          lesson_groups:
-            csd4_1:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            csd4_2:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd5-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csd7-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        csd6-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Iskkadeapmi
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-            lessonGroup-5:
-              display_name: Iskkadeapmi
-        csa1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Iskkadeapmi
-            lessonGroup-3:
-              display_name: Sisdoallu
-        csa2-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisdoallu
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            lessonGroup-3:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csd4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-        csd3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-        csp1-2023:
-          lesson_groups:
-            cspSurvey:
-              display_name: Iskkadeapmi
-        csp5-2023:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp7-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ráhkat PT
-            lessonGroup-3:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp9-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        csp10-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Maŋŋil Kurssa Iskkadeapmi
-        microbit-2022:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        microbit-temp:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        pre-express-2023:
-          lesson_groups:
-            csf_events:
-              display_name: Dáhpáhusaid
-        express-2023:
-          lesson_groups:
-            csf_sprites:
-              display_name: Sprite:at
-            lessonGroup-9:
-              display_name: Dáhpáhusaid
-        coursea-2023:
           lesson_groups:
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
@@ -1794,182 +219,152 @@ se:
               display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+        courseb-draft:
+          description_short: Láidehus dihtordiehtagii aittoálgi lohkkiide.
+        coursec-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
         coursec-2023:
           lesson_groups:
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
-        coursed-2023:
+        coursed-2019:
           lesson_groups:
-            lessonGroup-6:
+            csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
             csf_events:
               display_name: Dáhpáhusaid
+        coursed-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursed-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursed-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
         coursee-2023:
           lesson_groups:
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
             csf_sprites:
               display_name: Sprite:at
-        problem-solving-computing-2023:
+        coursee-draft:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            lessonGroup-3:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        web-development-2023:
+            content:
+              display_name: Sisdoallu
+        coursef-2019:
           lesson_groups:
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        interactive-games-animations-2023:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_internet:
+              display_name: Interneahtta
+            csf_sprites:
+              display_name: Sprite:at
+        coursef-2020:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        design-process-2023:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
+        coursef-2021:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        data-society-2023:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
+            ramp_up:
+              display_name: Sprite:at
+        coursef-2022:
           lesson_groups:
-            lessonGroup-4:
-              display_name: Iskkadeapmi
-        aiml-2023:
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
+            ramp_up:
+              display_name: Sprite:at
+        coursef-2022-pilot:
           lesson_groups:
-            lessonGroup-5:
-              display_name: Iskkadeapmi
-        focus-on-creativity1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-        focus-on-creativity3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-        focus-on-hardware1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            lessonGroup-3:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        focus-on-data1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-        focus-on-design-with-purpose1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-        focus-on-design-with-purpose3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-        focus-on-coding1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-        focus-on-coding3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-        focus-on-impact-in-society1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-        focus-on-impact-in-society2-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-        microbit-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-            lessonGroup-5:
-              display_name: Iskkadeapmi
-        devices-2023:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Iskkadeapmi
-        focus-on-creativity4b-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        focus-on-hardware3b-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        focus-on-design-with-purpose4b-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        focus-on-coding4b-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        csd6b-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        pl-csd-summer-day2:
-          lessons:
-            lesson-10:
-              name: Loahpat
-        pl-csd-summer-day4:
-          lessons:
-            lesson-12:
-              name: Loahpat
-        virtual-pl-csd-summer-day1:
-          lessons:
-            lesson-12:
-              name: Loahpat
-        virtual-pl-csd-summer-day2:
-          lessons:
-            lesson-10:
-              name: Loahpat
-        virtual-pl-csd-summer-day3:
-          lessons:
-            lesson-12:
-              name: Loahpat
-        virtual-pl-csd-summer-day4:
-          lessons:
-            lesson-13:
-              name: Loahpat
-        csd-post-survey-2023:
-          title: Maŋŋil Kurssa Iskkadeapmi
-        focus-on-data-post-survey-2023:
-          title: Maŋŋil Kurssa Iskkadeapmi
-        focus-on-impact-in-society-post-survey-2023:
-          title: Maŋŋil Kurssa Iskkadeapmi
-        focus-on-coding-post-survey-2023:
-          title: Maŋŋil Kurssa Iskkadeapmi
-        focus-on-design-with-purpose-post-survey-2023:
-          title: Maŋŋil Kurssa Iskkadeapmi
-        focus-on-hardware-post-survey-2023:
-          title: Maŋŋil Kurssa Iskkadeapmi
-        focus-on-creativity-post-survey-2023:
-          title: Maŋŋil Kurssa Iskkadeapmi
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
+            ramp_up:
+              display_name: Sprite:at
         coursef-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Digitála Stáhtaborgárvuohta
             lessonGroup-3:
               display_name: Sprite:at
+        coursef-draft:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Álgge
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -1994,3 +389,1655 @@ se:
           lesson_groups:
             lessonGroup-3:
               display_name: Klássat
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+            lessonGroup-3:
+              display_name: Sisdoallu
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Sisdoallu
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Sisdoallu
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            lesson group:
+              display_name: Sisdoallu
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lesson_group:
+              display_name: Sisdoallu
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        csd1-2017:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 1 - ČuolbmaČoavdin ('17-'18)
+        csd1-2018:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 1 - ČuolbmaČoavdin ('18-'19)
+        csd1-2019:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd1-2020:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd1-2021:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd1-2022:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd1-pilot:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd2-2017:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
+            csd2_2:
+              display_name: 'Kapihtal 2: Stylen ja CSS'
+            csd_survey:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+          title: CSD Unit 2 - Web Ovdánahttin ('17-'18)
+        csd2-2018:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
+            csd2_2:
+              display_name: 'Kapihtal 2: Stylen ja CSS'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 2 - Web Ovdánahttin ('18-'19)
+        csd2-2019:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
+            csd2_2:
+              display_name: 'Kapihtal 2: Stylen ja CSS'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 2 - Web Ovdánahttin ('19-'20)
+        csd2-2020:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
+            csd2_2:
+              display_name: 'Kapihtal 2: Stylen ja CSS'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 2 - Web Ovdánahttin ('20-'21)
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd2-pilot:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
+            csd2_2:
+              display_name: 'Kapihtal 2: Stylen ja CSS'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd2-virtual:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapihtal 1: Web Sisdoallu ja HTML'
+            csd2_2:
+              display_name: 'Kapihtal 2: Stylen ja CSS'
+        csd3-1819draft:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd3-2017:
+          description_short: Programmeren
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            csd_survey:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 3 - Animašuvnnat ja Spealut ('17-'18)
+        csd3-2018:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 3 - Animašuvnnat ja Spealut ('18-'19)
+        csd3-2019:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 3 - Animašuvnnat ja Spealut ('19-'20)
+        csd3-2020:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd3-2021:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd3-2022:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd3-draft:
+          description_short: Animašuvnnat ja Spealut
+          title: 'CSD Unit 3 - Programmeren: Animašuvnnat ja Spealut'
+        csd3-pilot:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd3-virtual:
+          lesson_groups:
+            csd3_1:
+              display_name: Sisdoallu
+            csd3_2:
+              display_name: Sisdoallu
+            cspSurvey:
+              display_name: Sisdoallu
+        csd4-2017:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            csd_survey:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+          title: CSD Unit 4 - DesignenProseassa ('17-'18)
+        csd4-2018:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd4-2019:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSD Unit 4 - DesignenProseassa ('19-'20)
+        csd4-2020:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd4-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd4-2022:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        csd4-preview-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            csd4_2:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            csdSurvey:
+              display_name: Iskkadeapmi
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-2017:
+          lesson_groups:
+            csd_survey:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd5-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd6-2017:
+          lesson_groups:
+            csd_survey:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csd6-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd6-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd6-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd6-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csd6-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: Sprite:at
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp-explore-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp-mid-survey:
+          description_audience: CSP Oahppit
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        csp-post-survey:
+          description_audience: CSP Oahppit
+          description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Oahppi Maŋŋil kurssa Iskkadeapmi ('17-'18)
+        csp-post-survey-2018:
+          description_audience: CSP Oahppit
+          description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Oahppi Maŋŋil kurssa Iskkadeapmi ('18-'19)
+        csp-post-survey-2020:
+          description_audience: CSP Oahppit
+          description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Iskkadeapmi
+        csp1-2017:
+          lesson_groups:
+            csp1_1:
+              display_name: 'Kapihtal 1: Ovddastahte ja Fievrret Informašuvnna'
+            csp1_2:
+              display_name: 'Kapihtal 2: Fuomáš Interneahta'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 1 - Interneahtta ('17-'18)
+        csp1-2018:
+          lesson_groups:
+            csp1_1:
+              display_name: 'Kapihtal 1: Ovddastahte ja Fievrret Informašuvnna'
+            csp1_2:
+              display_name: 'Kapihtal 2: Fuomáš Interneahta'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 1 - Interneahtta ('18-'19)
+        csp1-2019:
+          lesson_groups:
+            csp1_1:
+              display_name: 'Kapihtal 1: Ovddastahte ja Fievrret Informašuvnna'
+            csp1_2:
+              display_name: 'Kapihtal 2: Fuomáš Interneahta'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 1 - Interneahtta ('19-'20)
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+          title: CSP Unit 1 - Digitála Informašuvdna ('20-'21)
+        csp1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+        csp10-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp2-2017:
+          lesson_groups:
+            csp2_1:
+              display_name: 'Kapihtal 1: Kode ja Komprimere Kompleaksa Informašuvnna'
+            csp2_2:
+              display_name: 'Kapihtal 2: Manipulere ja Visuálisere Data'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 2 - Digitála Informašuvdna ('17-'18)
+        csp2-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+        csp2-2019:
+          lesson_groups:
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 2 - Digitála Informašuvdna ('19-'20)
+        csp2-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+          title: CSP Unit 2 - Interneahtta ('20-'21)
+        csp2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        csp3-2017:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 3 - Láidehus Prográmmeremii ('17-'18)
+        csp3-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp3-2019:
+          lesson_groups:
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 3 - Láidehus Prográmmeremii ('19-'20)
+        csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp3-research-mxghyt:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp3-staging:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kapihtal 1: Prográmmere Gielaid ja Algoritmmaid'
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        csp4-2017:
+          lesson_groups:
+            csp4_1:
+              display_name: 'Kapihtal 1: Stuora Data Máilbmi ja Krypteren'
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 4 - Stuora Data ja Personsuodjalus ('17-'18)
+        csp4-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp4-2019:
+          lesson_groups:
+            cspAssessment:
+              display_name: Kapihtal Árvvoštallan
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 4 - Stuora Data ja Personsuodjalus ('19-'20)
+        csp4-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        csp5-2017:
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            csp5_2:
+              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 5 - Hukse App:id ('17-'18)
+        csp5-2018:
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            csp5_2:
+              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp5-2019:
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            csp5_2:
+              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
+            cspSurvey:
+              display_name: Iskkadeapmi
+          title: CSP Unit 5 - Hukse App:id ('19-'20)
+        csp5-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp5-2021:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp5-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp5-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        csp5-virtual-part2:
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            csp5_2:
+              display_name: 'Kapihtal 2: Prográmmeren Dáta Struktuvrraiguin'
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csp7-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Iskkadeapmi
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Iskkadeapmi
+        csp8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+        csp9-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        cspexam1-mWU7ilDYM9:
+          description_short: Dán máŋggaválljen árvvoštallamis leat jearagaldagat mat
+            gokčet DihtorDiehtaga 7 stuora idea. Dát lea 1. oassi guovtti-oassásaš
+            50 jearaldateksámenis.
+        cspexam2-AKwgAh1ac5:
+          description_short: Dán máŋggaválljen árvvoštallamis leat jearagaldagat mat
+            gokčet DihtorDiehtaga 7 stuora idea. Dát lea 2. oassi guovtti-oassásaš
+            50 jearaldateksámenis.
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        csppostap-2017:
+          description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csppostap-2018:
+          description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csppostap-2019:
+          description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csppostsurvey:
+          description_audience: CSP Oahppit
+          description_short: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
+          title: CSP Oahppi Maŋŋil kurssa Iskkadeapmi
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        cspunit6:
+          description_short: Oahpa čohkket ja geavahit data Lab-app App:ain.
+        dani-june-2020-test:
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kapihtal 1: Dáhpáhus Stivrejuvvon Prográmmeren'
+            cspSurvey:
+              display_name: Iskkadeapmi
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        events:
+          description: Dáhpáhusaid
+          description_short: Dáhpáhusaid
+          student_description: Dáhpáhusaid
+          title: Dáhpáhusaid
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        express-2019:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+        express-2020:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+        express-2021:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        express-2022:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        flappy:
+          description: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal min
+            Flappy Koda neavvaga!
+          description_short: Čále iežat Flappy spealu!
+          student_description: Háliidat go čállit iežat spealu 10 minuvttas? Geahččal
+            min Flappy Koda neavvaga!
+          title: Flappy Koda
+        fmscsd3preview:
+          title: CSD - Tevdnet SpeallanLáb:as
+        focus-on-coding-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-creativity-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-data-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-hardware-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-impact-in-society-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+        frequency_analysis:
+          description_short: Geavat Frekveansa Analysa Widget analyseret bustáva frekveanssaid
+            teavsttas mas buohtastahtát dáid vurdojuvvon frekveanssaiguin. Crack Shift
+            ja Lonuhan Cipherat.
+        frozen:
+          description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja čábbodaga
+            Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid luistiiguin
+            ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
+          student_description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid
+            ja čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid
+            luistiiguin ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit
+            iežat olbmaiguin!
+          title: Kode Annain ja Elsain
+        grade1:
+          description_audience: Ahki 5-18
+        grade2:
+          description_audience: Ahki 5-18
+        grade3:
+          description_audience: Ahki 5-18
+        grade4:
+          description_audience: Ahki 9-99
+        grade5:
+          description_audience: Ahki 10-110
+        gradeKinder:
+          description_audience: Ahki 5-18
+        gumball:
+          description: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
+          description_short: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
+          student_description: Ráhkat muitalusa dahje spealu Gumball Speallan-lab:in
+          title: Gumball Speallan-lab
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lekšuvdna 3
+            Lesson 4:
+              display_name: Lekšuvdna 4
+            Lesson 5:
+              display_name: Lekšuvdna 5
+        hoc-impact-study:
+          description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu
+            somas figuraid.
+        hourofcode:
+          description: Geahččal  dihtordiehtaga vuođđoáššiid mas geavahat figuraid
+            Angy Bird:as, Šattut Zombiid vuostá, ja Scrat:a Jiekŋaáiggis.
+          description_short: Geahččal dihtordiehtaga vuođđoáššiid mas geavahat ollu
+            somas figuraid.
+          student_description: Geahččal  dihtordiehtaga vuođđoáššiid mas geavahat
+            figuraid Angy Bird:as, Šattut Zombiid vuostá, ja Scrat:a Jiekŋaáiggis.
+          title: Klassikalaš Labirynta
+        iceage:
+          description: Ráhkat muitalusa dahje spealu Jiekŋaáiggi Speallan-labbain
+          description_short: Ráhkat muitalusa dahje spealu Jiekŋaáiggi Speallan-labbain
+          student_description: Ráhkat muitalusa dahje spealu Jiekŋaáiggi Speallan-labbain
+          title: Jiekŋaáiggi Speallan-lab
+        infinity:
+          description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney
+            Infinitiija figurat leat mielde.
+          description_short: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas
+            Disney Infinitiija figurat leat mielde.
+          student_description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu
+            mas Disney Infinitiija figurat leat mielde.
+          title: Disney Infinitiija Speallan-lab
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        jigsaw:
+          description: Geahččal Bihttáspealu neavvaga.
+          description_short: Geahččal Bihttáspealu neavvaga.
+          student_description: Geahččal Bihttáspealu neavvaga.
+        k5-onlinepd-2019:
+          lesson_groups:
+            k5_getting_started:
+              display_name: Álgge
+            k5_next_steps:
+              display_name: Boahttevaš Lávkkit
+        k5-onlinepd-2020:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Álgge
+            k5_next_steps_1:
+              display_name: Boahttevaš Lávkkit
+        mc:
+          description_short: Guorahala Minecraft máilmmi kodemiin.
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        minecraft:
+          description: Programmere elliid dahje eará Minecraft heakkalaččaid du iežat
+            Minecraft-veršuvnnas.
+          description_short: Programmere elliid dahje eará Minecraft heakkalaččaid
+            du iežat Minecraft-veršuvnnas.
+          student_description: Programmere elliid dahje eará Minecraft heakkalaččaid
+            du iežat Minecraft-veršuvnnas.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-6:
+              display_name: Dáhpáhusaid
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-5:
+              display_name: Dáhpáhusaid
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+        new-express:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+        oceans:
+          description: Oahpa movt AI ja mašiidnaoahppan sáhttá geavahuvvot čujuhit
+            máilmmi váttisvuođaide.
+          description_short: Oahpa movt AI ja mašiidnaoahppan sáhttá geavahuvvot čujuhit
+            máilmmi váttisvuođaide.
+          student_description: Oahpa movt AI ja mašiidnaoahppan sáhttá geavahuvvot
+            čujuhit máilmmi váttisvuođaide.
+          title: AI Mearaide
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Loahpat
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Loahpat
+        playlab:
+          description: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
+          description_short: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
+          student_description: Ráhkat muitalusa dahje ráhkat spealu Speallan-lab:ain!
+          title: Speallan-lab
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        spelling-bee:
+          title: Stávengilvu
+        spritelab-effects-challenge:
+          description_audience: Sprite Lab für mittlere/fortgeschrittene Benutzer
+          description_short: Nimm die Herausforderung an und erstelle deinen eigenen
+            Sprite-Effekt mit Sprite Lab!
+          name: spritelab-effekte-Herausforderung
+          title: Herausforderung Sprite-Effekt
+        starwars:
+          description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu
+            galaksii mii lea guhkkin, guhkkin eret.
+          description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+            spealu galaksii mii lea guhkkin, guhkkin eret.
+          student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+            spealu galaksii mii lea guhkkin, guhkkin eret.
+          title: 'Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)'
+        starwarsblocks:
+          description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu
+            galaksii mii lea guhkkin, guhkkin eret.
+          description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+            spealu galaksii mii lea guhkkin, guhkkin eret.
+          student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
+            spealu galaksii mii lea guhkkin, guhkkin eret.
+        step:
+          description: Dásiid mielde neava
+          description_short: Dásiid mielde neava
+          student_description: Dásiid mielde neava
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitála Stáhtaborgárvuohta
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            practice:
+              display_name: OahpahanHárjehallamat
+        text-compression:
+          title: TeakstaKomprimeren
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+            csf_sprites:
+              display_name: Sprite:at
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+            csf_sprites:
+              display_name: Sprite:at
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Sisdoallu
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Sisdoallu
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Sisdoallu
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Sisdoallu
+        vigenere:
+          description: Geavat Vigenere Cipher Widget suokkardallat dieđuid krypteremiin
+            ja dekryptermiin.
+          description_short: Geavat Vigenere Cipher Widget suokkardallat dieđuid krypteremiin
+            ja dekryptermiin.
+          student_description: Geavat Vigenere Cipher Widget suokkardallat dieđuid
+            krypteremiin ja dekryptermiin.
+        virtual-holding-place:
+          lesson_groups:
+            content:
+              display_name: Sisdoallu
+            csd3_2:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-12:
+              name: Loahpat
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Loahpat
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Loahpat
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Loahpat
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi

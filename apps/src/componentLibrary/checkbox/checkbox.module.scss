@@ -2,6 +2,10 @@
 
 // Checkbox common styles
 .label {
+  display: flex;
+  gap: 8px;
+  align-items: start;
+
   i {
     vertical-align: bottom;
 
@@ -15,7 +19,8 @@
   }
 
   span {
-    margin-left: 8px;
+    margin-bottom: 0;
+    line-height: initial;
   }
 
   input[type="checkbox"] {
@@ -32,13 +37,14 @@
 
     &:indeterminate + i::before {
       content: "\e404";
-      color: $neutral_dark;
+      color: $neutral_white;
+      background: $light_primary_500;
       border: 2px solid $light_primary_500;
       border-radius: 4px;
     }
 
     // Focus styles
-    &:focus {
+    &:focus-visible {
       + i::before {
         outline: 2px solid $light_primary_500;
         outline-offset: 2px;

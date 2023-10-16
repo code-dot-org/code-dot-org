@@ -119,6 +119,7 @@ var currentSources = {
   selectedPoem: null,
   inRestrictedShareMode: false,
   teacherHasConfirmedUploadWarning: false,
+  hiddenDefinitions: null,
 };
 
 /**
@@ -146,6 +147,7 @@ function unpackSources(data) {
     libraries: data.libraries,
     inRestrictedShareMode: data.inRestrictedShareMode,
     teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
+    hiddenDefinitions: data.hiddenDefinitions,
   };
 }
 
@@ -722,6 +724,11 @@ var projects = (module.exports = {
           if (currentSources.source) {
             sourceHandler.setInitialLevelSource(currentSources.source);
           }
+          if (currentSources.hiddenDefinitions) {
+            sourceHandler.setInitialHiddenDefinitions(
+              currentSources.hiddenDefinitions
+            );
+          }
         } else {
           this.setName('My Project');
         }
@@ -767,6 +774,11 @@ var projects = (module.exports = {
         }
       } else if (current) {
         this.sourceHandler.setInitialLevelSource(currentSources.source);
+        if (currentSources.hiddenDefinitions) {
+          sourceHandler.setInitialHiddenDefinitions(
+            currentSources.hiddenDefinitions
+          );
+        }
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.legacyShareStyle && this.getStandaloneApp()) {
@@ -1320,6 +1332,7 @@ var projects = (module.exports = {
             this.sourceHandler.inRestrictedShareMode();
           const teacherHasConfirmedUploadWarning =
             this.sourceHandler.teacherHasConfirmedUploadWarning();
+          const hiddenDefinitions = this.sourceHandler.getHiddenDefinitions();
           callback({
             source,
             html,
@@ -1330,6 +1343,7 @@ var projects = (module.exports = {
             libraries,
             inRestrictedShareMode,
             teacherHasConfirmedUploadWarning,
+            hiddenDefinitions,
           });
         })
         .catch(error => callback({error}))

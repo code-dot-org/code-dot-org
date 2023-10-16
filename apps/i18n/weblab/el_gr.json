@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Προσθήκη CSS",
-  "addImageButton": "Προσθήκη εικόνας",
   "addHTMLButton": "Προσθήκη HTML",
+  "addImageButton": "Προσθήκη εικόνας",
   "closeFullscreenPreview": "Κλείσιμο προεπισκόπησης πλήρους οθόνης",
   "currentProjectCapacity": "{currentMegabytes}MB από {totalMegabytes}MB που χρησιμοποιούνται",
   "errorSavingProject": "Κάτι δεν λειτούργησε κατά την αυτόματη αποθήκευση του έργου σας. Ελέγξτε τη σύνδεσή σας στο Internet και δοκιμάστε να αποθηκεύσετε με μη αυτόματο τρόπο. Εάν αυτό το πρόβλημα παραμένει, δοκιμάστε να φορτώσετε ξανά τη σελίδα για να ξεκινήσετε από την αρχή.",
@@ -13,8 +13,8 @@
   "reset": "Επαναφορά Εργαστηρίου Ιστού",
   "resetComplete": "Ολοκληρώθηκε η επαναφορά του Εργαστηρίου Ιστού",
   "resetFailure": "Αποτυχία επαναφοράς του Web Lab: {message}.",
-  "toggleInspectorOn": "Επιθεωρητής: Off",
   "toggleInspectorOff": "Επιθεωρητής: Στις",
+  "toggleInspectorOn": "Επιθεωρητής: Off",
   "troubleshootingSupport": "Ανατρέξτε στο άρθρο υποστήριξης [\"Αντιμετώπιση προβλημάτων Web Lab\"]({url}) για περισσότερες πληροφορίες.",
   "uploadError": "Σφάλμα αποστολής"
 }

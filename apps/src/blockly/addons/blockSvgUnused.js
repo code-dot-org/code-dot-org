@@ -23,7 +23,7 @@ export default class BlockSvgUnused extends BlockSvgFrame {
 }
 
 // Added as a change listener in the wrapper.
-// When a block is clicked, dragged or deleted, we remove any "Unused clock" frame.
+// When a block is clicked, dragged or deleted, we remove any "Unused block" frame.
 export function onBlockClickDragDelete(event) {
   if (
     event.type === Blockly.Events.CLICK ||

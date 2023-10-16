@@ -125,7 +125,7 @@ Then /^I append gamelab code to draw a ninja$/ do
     var aceEditor = __TestInterface.getDroplet().aceEditor;
     aceEditor.navigateFileEnd();
     aceEditor.textInput.focus();
-    aceEditor.onTextInput(\"#{code}\");
+    aceEditor.onTextInput("#{code}");
   SCRIPT
 
   @browser.execute_script(script)

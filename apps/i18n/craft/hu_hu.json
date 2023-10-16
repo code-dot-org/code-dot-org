@@ -1,9 +1,9 @@
 {
   "absolute": "abszolútérték",
+  "agentDiamondPathCongrats": "Gratulálunk, megtaláltad a gyémántutat! Eddig {count, plural, one {1 diamond} other {# diamonds}}ot találtál!",
   "agentGenericFailureMessage": "Kódolj tovább! És ne feledd igénybe venni az Agent segítségét.",
   "agentTooFewBlocksFailureMessage": "Próbálj egyszerre egy blokkot hozzáadni, hogy az Agent a megfelelő helyre jusson.",
   "at": "nál",
-  "agentDiamondPathCongrats": "Gratulálunk, megtaláltad a gyémántutat! Eddig {count, plural, one {1 diamond} other {# diamonds}}ot találtál!",
   "blockActionAdd": "add hozzá",
   "blockActionAttack": "támadás",
   "blockActionClone": "blokkok klónozása",

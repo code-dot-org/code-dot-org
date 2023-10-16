@@ -153,7 +153,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     }
   end
 
-  private def render_unsuccessful(error_message, options={})
+  private def render_unsuccessful(error_message, options = {})
     render json: options.merge({workshop_enrollment_status: error_message}),
       status: :bad_request
   end

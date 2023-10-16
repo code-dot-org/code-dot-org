@@ -59,6 +59,28 @@ pl:
         e-mail ze wskazówkami, jak odblokować swoje konto.
       unlocked: Twoje konto zostało pomyślnie odblokowane. Zaloguj się, aby kontynuować.
   errors:
+    invitations:
+      edit:
+        header: Ustaw swoje hasło
+        submit_button: Ustaw moje hasło
+      invitation_removed: Twoje zaproszenie zostało usunięte.
+      invitation_token_invalid: Przesłany znacznik (token) zaproszenia nie jest ważny!
+      new:
+        header: Wyślij zaproszenie
+        submit_button: Wyślij zaproszenie
+      no_invitations_remaining: Nie ma żadnego zaproszenia
+      send_instructions: Zaproszenie mailem zostało wysłane do %{email}.
+      updated: Twoje hasło zostało zmienione. Jesteś teraz zalogowany.
+    mailer:
+      invitation_instructions:
+        accept: Przyjmij zaproszenie
+        hello: Witaj %{email}
+        ignore: Jeśli nie chcesz przyjąć zaproszenia, zignoruj ten mail. <br /> Twoje
+          konto nie zostanie utworzone, dopóki nie przejdziesz pod wskazany powyżej
+          link i nie ustalisz hasła.
+        someone_invited_you: Ktoś zaprosił Cię do %{url}, możesz przyjąć to zaproszenie
+          korzystając z linku poniżej.
+        subject: Instrukcje zaproszenia
     messages:
       already_confirmed: zostało już potwierdzone, spróbuj zalogować się
       confirmation_period_expired: musi być potwierdzone w ciągu %{period}, poproś
@@ -66,25 +88,3 @@ pl:
       expired: wygasło, poproś o nowe
       not_found: nie znaleziono
       not_locked: nie było zablokowane
-    invitations:
-      send_instructions: Zaproszenie mailem zostało wysłane do %{email}.
-      invitation_token_invalid: Przesłany znacznik (token) zaproszenia nie jest ważny!
-      updated: Twoje hasło zostało zmienione. Jesteś teraz zalogowany.
-      no_invitations_remaining: Nie ma żadnego zaproszenia
-      invitation_removed: Twoje zaproszenie zostało usunięte.
-      new:
-        header: Wyślij zaproszenie
-        submit_button: Wyślij zaproszenie
-      edit:
-        header: Ustaw swoje hasło
-        submit_button: Ustaw moje hasło
-    mailer:
-      invitation_instructions:
-        subject: Instrukcje zaproszenia
-        hello: Witaj %{email}
-        someone_invited_you: Ktoś zaprosił Cię do %{url}, możesz przyjąć to zaproszenie
-          korzystając z linku poniżej.
-        accept: Przyjmij zaproszenie
-        ignore: Jeśli nie chcesz przyjąć zaproszenia, zignoruj ten mail. <br /> Twoje
-          konto nie zostanie utworzone, dopóki nie przejdziesz pod wskazany powyżej
-          link i nie ustalisz hasła.

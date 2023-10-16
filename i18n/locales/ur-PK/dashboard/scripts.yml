@@ -82,7 +82,6 @@ ur:
           description_short: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں اپنی اسٹار وارز گیم بنائیں۔
           student_description: ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں اپنی اسٹار وارز گیم بنائیں۔
         mc:
-          title: Minecraft کوڈ کی گھڑی
           description_short: کوڈ کے ذریعے ایک Minecraft دنیا کو دریافت کریں.
         oceans:
           title: AI فار اوشنز
@@ -1660,3 +1659,76 @@ ur:
           lessons:
             lesson-4:
               name: ڈیٹا
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: ڈیٹا
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+            lessonGroup-6:
+              display_name: ڈیٹا
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: ڈیٹا
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+            lessonGroup-6:
+              display_name: ایونٹس/واقعات
+            lessonGroup-8:
+              display_name: ڈیٹا
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: کمپیوٹنگ سسٹمز
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-4:
+              display_name: لوپس
+            lessonGroup-5:
+              display_name: ایونٹس/واقعات
+            lessonGroup-6:
+              display_name: ڈیٹا
+            lessonGroup-8:
+              display_name: کمپیوٹنگ سسٹمز
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ڈیجیٹل شہریت
+            lessonGroup-6:
+              display_name: لوپس
+            lessonGroup-7:
+              display_name: ڈیٹا
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: گھوںسلا لوپس
+            lessonGroup-4:
+              display_name: افعال
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: شرائط
+            lessonGroup-5:
+              display_name: متغیرات
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: ہمارے AI کا ضابطہ اخلاق

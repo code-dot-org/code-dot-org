@@ -1,143 +1,17 @@
 {
-  "navigateForward": "Tovább",
-  "navigateBack": "Vissza",
-  "tryAgain": "Próbáld újra",
-  "navigateDone": "Kész",
-  "saveProgress": "Mentés",
-  "correctAnswer": "Helyes",
-  "incorrectAnswer": "Helytelen",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Leírás",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Leírás",
+  "correctAnswer": "Helyes",
   "dataCardLastUpdated": "Legutóbb frissítve",
-  "predictButton": "Előrejelzés",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "kor"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "időjárás"
+        "Height": {
+          "id": "Magasság"
         },
-        "day": {
-          "id": "nap"
-        },
-        "shoe": {
-          "id": "cipő"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "hagyma"
-        },
-        "avocado": {
-          "id": "avokádó"
-        },
-        "corn": {
-          "id": "kukorica"
-        },
-        "beans": {
-          "id": "babok"
-        },
-        "lime": {
-          "id": "Lime"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "gombák"
-        },
-        "lobster": {
-          "id": "homár"
-        },
-        "bacon": {
-          "id": "szalonna"
-        },
-        "cheese": {
-          "id": "sajt"
-        },
-        "meat": {
-          "id": "hús"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "szín"
-        },
-        "music": {
-          "id": "zene"
-        },
-        "food": {
-          "id": "étel"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "kor"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Kategória"
-        },
-        "Description": {
-          "id": "Leírás"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "eper"
-        },
-        "lime": {
-          "id": "Lime"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "méret"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "paradicsom"
-        },
-        "avocado": {
-          "id": "avokádó"
-        },
-        "chicken": {
-          "id": "csirke"
-        },
-        "fruit": {
-          "id": "gyümölcs"
-        },
-        "beans": {
-          "id": "babok"
-        },
-        "cheese": {
-          "id": "sajt"
+        "Length": {
+          "id": "Hossz"
         }
       }
     },
@@ -151,36 +25,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "iskola"
-        },
-        "age": {
-          "id": "kor"
-        },
-        "health": {
-          "id": "egészség"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "csirke"
-        },
-        "lamb": {
-          "id": "bárány\n"
-        },
-        "onion": {
-          "id": "hagyma"
-        },
-        "cheese": {
-          "id": "sajt"
+        "banana": {
+          "id": "banán"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "kor"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "szín"
+        },
+        "food": {
+          "id": "étel"
+        },
+        "music": {
+          "id": "zene"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Kor"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "kor"
@@ -197,63 +76,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Ország"
+        },
+        "Dance": {
+          "id": "Tánc"
+        },
+        "Music": {
+          "id": "Zene"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "kor"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Eredmény"
-        },
         "Country": {
           "id": "Ország"
         },
         "Name": {
           "id": "Név"
         },
+        "Score": {
+          "id": "Eredmény"
+        },
         "Star": {
           "id": "Csillag"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Művész"
+        "cheese": {
+          "id": "sajt"
+        },
+        "chicken": {
+          "id": "csirke"
+        },
+        "lamb": {
+          "id": "bárány\n"
+        },
+        "onion": {
+          "id": "hagyma"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "emberek"
+        "Category": {
+          "id": "Kategória"
         },
-        "rhino": {
-          "id": "orrszarvú"
-        },
-        "elephant": {
-          "id": "Elefánt"
-        },
-        "alligator": {
-          "id": "aligátor"
-        },
-        "trees": {
-          "id": "fák"
-        }
-      },
-      "name": "Szafari"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Hossz"
-        },
-        "Height": {
-          "id": "Magasság"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Tengeri"
+        "Description": {
+          "id": "Leírás"
         }
       }
     },
@@ -262,59 +143,101 @@
         "avocado": {
           "id": "avokádó"
         },
-        "onion": {
-          "id": "hagyma"
-        },
         "ginger": {
           "id": "gyömbér"
+        },
+        "onion": {
+          "id": "hagyma"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Zene"
+        "bacon": {
+          "id": "szalonna"
         },
-        "Dance": {
-          "id": "Tánc"
+        "cheese": {
+          "id": "sajt"
         },
-        "Country": {
-          "id": "Ország"
+        "lobster": {
+          "id": "homár"
         },
-        "Internet": {
-          "id": "Internet"
+        "meat": {
+          "id": "hús"
         },
-        "Writing": {
-          "id": "Írás"
-        },
-        "Achievements": {
-          "id": "Eredmények"
-        },
-        "Age": {
-          "id": "Kor",
-          "description": "Kor"
-        },
-        "Height": {
-          "id": "Magasság",
-          "description": "Magasság"
-        },
-        "Gender": {
-          "id": "Nem",
-          "description": "Nem"
+        "mushrooms": {
+          "id": "gombák"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "banán"
+        "lime": {
+          "id": "Lime"
+        },
+        "strawberry": {
+          "id": "eper"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Kor"
+        "alligator": {
+          "id": "aligátor"
+        },
+        "elephant": {
+          "id": "Elefánt"
+        },
+        "people": {
+          "id": "emberek"
+        },
+        "rhino": {
+          "id": "orrszarvú"
+        },
+        "trees": {
+          "id": "fák"
+        }
+      },
+      "name": "Szafari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokádó"
+        },
+        "beans": {
+          "id": "babok"
+        },
+        "cheese": {
+          "id": "sajt"
+        },
+        "chicken": {
+          "id": "csirke"
+        },
+        "fruit": {
+          "id": "gyümölcs"
+        },
+        "tomato": {
+          "id": "paradicsom"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokádó"
+        },
+        "beans": {
+          "id": "babok"
+        },
+        "corn": {
+          "id": "kukorica"
+        },
+        "lime": {
+          "id": "Lime"
+        },
+        "onion": {
+          "id": "hagyma"
         }
       }
     },
@@ -325,18 +248,95 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Zene"
+        "size": {
+          "id": "méret"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "nap"
+        },
+        "shoe": {
+          "id": "cipő"
+        },
+        "weather": {
+          "id": "időjárás"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Művész"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "kor"
+        },
+        "health": {
+          "id": "egészség"
+        },
+        "school": {
+          "id": "iskola"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Eredmények"
+        },
+        "Age": {
+          "description": "Kor",
+          "id": "Kor"
+        },
+        "Country": {
+          "id": "Ország"
         },
         "Dance": {
           "id": "Tánc"
         },
-        "Country": {
-          "id": "Ország"
+        "Gender": {
+          "description": "Nem",
+          "id": "Nem"
+        },
+        "Height": {
+          "description": "Magasság",
+          "id": "Magasság"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Zene"
+        },
+        "Writing": {
+          "id": "Írás"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Tengeri"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Helytelen",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Vissza",
+  "navigateDone": "Kész",
+  "navigateForward": "Tovább",
+  "predictButton": "Előrejelzés",
+  "saveProgress": "Mentés",
+  "tryAgain": "Próbáld újra"
 }

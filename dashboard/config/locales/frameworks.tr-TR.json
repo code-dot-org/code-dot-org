@@ -2,35 +2,35 @@
   "tr-TR": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "CSTA K-12 Bilgisayar Bilimi Standartları (2017)"
-        },
-        "csp2021": {
-          "name": "BBP Kavramsal Çerçeve"
-        },
-        "csta2011": {
-          "name": "CSTA K-12 Bilgisayar Bilimi Standartları (2011)"
-        },
-        "ccela": {
-          "name": "Ortak Temel İngilizce Dil Sanatları Standartları"
-        },
-        "ngss": {
-          "name": "Yeni Nesil Bilim Standartları"
-        },
-        "ccmath": {
-          "name": "Ortak Temel Matematik Standartları"
-        },
-        "iste": {
-          "name": "Öğrenciler için ISTE Standartları"
+        "ai4k12-2021": {
+          "name": "AI4K12 Ulusal Yönergeler 2021"
         },
         "c3ss": {
           "name": "C3 Sosyal Bilgiler Standartları"
         },
+        "ccela": {
+          "name": "Ortak Temel İngilizce Dil Sanatları Standartları"
+        },
+        "ccmath": {
+          "name": "Ortak Temel Matematik Standartları"
+        },
         "csa": {
           "name": "CSA Kavramsal Çerçeve"
         },
-        "ai4k12-2021": {
-          "name": "AI4K12 Ulusal Yönergeler 2021"
+        "csp2021": {
+          "name": "BBP Kavramsal Çerçeve"
+        },
+        "csta": {
+          "name": "CSTA K-12 Bilgisayar Bilimi Standartları (2017)"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Bilgisayar Bilimi Standartları (2011)"
+        },
+        "iste": {
+          "name": "Öğrenciler için ISTE Standartları"
+        },
+        "ngss": {
+          "name": "Yeni Nesil Bilim Standartları"
         }
       }
     }

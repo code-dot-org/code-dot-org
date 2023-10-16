@@ -5,19 +5,11 @@ my:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': အလယ်အလတ်
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': အလယ်အလတ်
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -94,10 +86,10 @@ my:
             "{x: 300, y: 200}": ညာဘက်သို့
       Dancelab_layoutSprites:
         options:
-          GROUP:
-            sprites: အားလုံး
           FORMAT:
             '"diamond"': စိန်
+          GROUP:
+            sprites: အားလုံး
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -138,20 +130,12 @@ my:
         options:
           SPEED:
             '1': ပုံမှန်
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: အားလုံး
           SPEED:
             '1': ပုံမှန်
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -226,177 +210,17 @@ my:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': အပေါ်သို့
-            '"left"': ဘယ်ဘက်သို့
             '"down"': အောက်သို့
+            '"left"': ဘယ်ဘက်သို့
             '"right"': ညာဘက်သို့
             '"space"': အာကာသ
+            '"up"': အပေါ်သို့
             '"x"': "×"
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"hearts"': အသည်းနှလုံးများ
             '"rain"': မိုးရွာသည်
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': စက္ကန့်ပိုင်း
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': အရွယ်အစား
-            '"x"': xပုံစံ
-            '"y"': yပုံစံ
-            '"speed"': အရှိန်
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': အချိန်
-            '"while"': စဉ်တွင်
-      gamelab_everyInterval:
-        options:
-          UNIT:
-            '"seconds"': စက္ကန့်ပိုင်း
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': အရွယ်အစား
-            '"x"': xပုံစံ
-            '"y"': yပုံစံ
-            '"speed"': အရှိန်
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': စက္ကန့်ပိုင်း
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': အပေါ်သို့
-            '"down"': အောက်သို့
-            '"left"': ဘယ်ဘက်သို့
-            '"right"': ညာဘက်သို့
-            '"space"': အာကာသ
-            '"x"': "×"
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': အချိန်
-            '"while"': စဉ်တွင်
-          KEY:
-            '"up"': အပေါ်သို့
-            '"down"': အောက်သို့
-            '"left"': ဘယ်ဘက်သို့
-            '"right"': ညာဘက်သို့
-            '"space"': အာကာသ
-            '"x"': "×"
-      gamelab_makeBurst:
-        options:
-          EFFECT:
-            '"rain"': မိုးရွာသည်
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': ညာဘက်သို့
-            '90': အောက်သို့
-            '180': ဘယ်ဘက်သို့
-            '270': အပေါ်သို့
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': small
-            '50': အလယ်အလတ်
-            '100': large
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ညာဘက်သို့
-            '"left"': ဘယ်ဘက်သို့
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_animals/cat.mp3'": ကြောင်
-            "'sound://category_animals/cow.mp3'": နွား
-            "'sound://category_animals/sheep.mp3'": သိုး
-            "'sound://category_animals/chicken.mp3'": ကြက်ကလေး
-            "'sound://category_animals/dog.mp3'": ခွေး
-            "'sound://category_digital/jump_7.mp3'": ခုန်ပါ
-      gamelab_randColor:
-        text: ကျဘန်းအရောင်
-      gamelab_randomColor:
-        text: ကျဘန်းအရောင်
-      gamelab_repeatForever:
-        text: ထာဝရ ပြန်လုပ်ပါ။
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': လှိုဏ်ဂူပုံစံ
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': မြို့
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': သဲကန္တာရ
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': သက်တံ့
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ရေအောက်
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ဆောင်းဥတု
-            undefined: ဘာမှမရှိ
-      gamelab_setDefaultSpriteSize:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': အလယ်အလတ်
-            '100': large
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': အရွယ်အစား
-            '"x"': xပုံစံ
-            '"y"': yပုံစံ
-            '"speed"': အရှိန်
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': အရွယ်အစား
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': အလယ်အလတ်
-            '100': large
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': အရွယ်အစား
-      gamelab_setSpeed_dropdown:
-        options:
-          SIZE:
-            '1': extra slow
-            '3': slow
-            '5': ပုံမှန်
-            '7': fast
-            '9': extra fast
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': အချိန်
-            '"while"': စဉ်တွင်
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': ညာဘက်သို့
-            '"left"': ဘယ်ဘက်သို့
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': အပေါ်သို့
-            '"down"': အောက်သို့
-            '"left"': ဘယ်ဘက်သို့
-            '"right"': ညာဘက်သို့
-            '"space"': အာကာသ
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': အပေါ်သို့
-            '"down"': အောက်သို့
-            '"left"': ဘယ်ဘက်သို့
-            '"right"': ညာဘက်သို့
-            '"space"': အာကာသ
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -420,12 +244,12 @@ my:
             '"all"': အားလုံး
       Mikelab_groupChangePropBy:
         options:
-          SELECT:
-            '"all"': အားလုံး
           PROPERTY:
             '"scale"': အရွယ်အစား
             '"x"': xပုံစံ
             '"y"': yပုံစံ
+          SELECT:
+            '"all"': အားလုံး
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -455,12 +279,12 @@ my:
             '"all"': အားလုံး
       Mikelab_groupSetProp:
         options:
-          SELECT:
-            '"all"': အားလုံး
           PROPERTY:
             '"scale"': အရွယ်အစား
             '"x"': xပုံစံ
             '"y"': yပုံစံ
+          SELECT:
+            '"all"': အားလုံး
       Mikelab_groupSetTint:
         options:
           SELECT:
@@ -486,8 +310,8 @@ my:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': ညာဘက်သို့
             '"left"': ဘယ်ဘက်သို့
+            '"right"': ညာဘက်သို့
       Mikelab_sprite:
         options:
           LOCATION:
@@ -496,28 +320,28 @@ my:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': မြှားအပေါ်ဘက်သို့
+            '"a"': က
+            '"d"': ဃ
             '"down"': မြှားအောက်ဘက်သို့
             '"left"': မြှားဘယ်ဘက်သို့
             '"right"': မြှားညာဘက်သို့
-            '"a"': က
-            '"d"': ဃ
+            '"up"': မြှားအပေါ်ဘက်သို့
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': မြှားအပေါ်ဘက်သို့
+            '"a"': က
+            '"d"': ဃ
             '"down"': မြှားအောက်ဘက်သို့
             '"left"': မြှားဘယ်ဘက်သို့
             '"right"': မြှားညာဘက်သို့
-            '"a"': က
-            '"d"': ဃ
+            '"up"': မြှားအပေါ်ဘက်သို့
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': မြှားအပေါ်ဘက်သို့
             '"down"': မြှားအောက်ဘက်သို့
             '"left"': မြှားဘယ်ဘက်သို့
             '"right"': မြှားညာဘက်သို့
+            '"up"': မြှားအပေါ်ဘက်သို့
       Poetry_addFrame:
         options:
           BRUSH:
@@ -553,31 +377,25 @@ my:
         options:
           PORTION:
             '1': အားလုံး
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': အားလုံး
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:
-            '"up"': အပေါ်သို့
             '"down"': အောက်သို့
             '"left"': ဘယ်ဘက်သို့
             '"right"': ညာဘက်သို့
+            '"up"': အပေါ်သို့
       binary_whenKey:
         options:
           KEY:
-            '"up"': အပေါ်သို့
             '"down"': အောက်သို့
             '"left"': ဘယ်ဘက်သို့
             '"right"': ညာဘက်သို့
             '"space"': အာကာသ
+            '"up"': အပေါ်သို့
       craft_ifPath:
         options:
           DIR:
@@ -585,14 +403,162 @@ my:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": သဲ
             "'planksOak'": ၀က်သစ်ချပင်ကြမ်းခင်းပျဉ်ချပ်များ
+            "'sand'": သဲ
       craft_ifStandingOnLimit:
         options:
           TYPE:
             "'sand'": သဲ
       craft_placeTorch:
         text: မီးတိုင်ကိုထားပါ
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
+            '"speed"': အရှိန်
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+            '"while"': စဉ်တွင်
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
+            '"speed"': အရှိန်
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': အောက်သို့
+            '"left"': ဘယ်ဘက်သို့
+            '"right"': ညာဘက်သို့
+            '"space"': အာကာသ
+            '"up"': အပေါ်သို့
+            '"x"': "×"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+            '"while"': စဉ်တွင်
+          KEY:
+            '"down"': အောက်သို့
+            '"left"': ဘယ်ဘက်သို့
+            '"right"': ညာဘက်သို့
+            '"space"': အာကာသ
+            '"up"': အပေါ်သို့
+            '"x"': "×"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': မိုးရွာသည်
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ညာဘက်သို့
+            '180': ဘယ်ဘက်သို့
+            '270': အပေါ်သို့
+            '90': အောက်သို့
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '50': အလယ်အလတ်
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': ဘယ်ဘက်သို့
+            '"right"': ညာဘက်သို့
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/cat.mp3'": ကြောင်
+            "'sound://category_animals/chicken.mp3'": ကြက်ကလေး
+            "'sound://category_animals/cow.mp3'": နွား
+            "'sound://category_animals/dog.mp3'": ခွေး
+            "'sound://category_animals/sheep.mp3'": သိုး
+            "'sound://category_digital/jump_7.mp3'": ခုန်ပါ
+      gamelab_randColor:
+        text: ကျဘန်းအရောင်
+      gamelab_randomColor:
+        text: ကျဘန်းအရောင်
+      gamelab_repeatForever:
+        text: ထာဝရ ပြန်လုပ်ပါ။
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': မြို့
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': လှိုဏ်ဂူပုံစံ
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': သဲကန္တာရ
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': သက်တံ့
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ရေအောက်
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ဆောင်းဥတု
+            undefined: ဘာမှမရှိ
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '75': အလယ်အလတ်
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
+            '"speed"': အရှိန်
+            '"x"': xပုံစံ
+            '"y"': yပုံစံ
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
+          SIZE:
+            '75': အလယ်အလတ်
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': အရွယ်အစား
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '5': ပုံမှန်
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+            '"while"': စဉ်တွင်
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': ဘယ်ဘက်သို့
+            '"right"': ညာဘက်သို့
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': အောက်သို့
+            '"left"': ဘယ်ဘက်သို့
+            '"right"': ညာဘက်သို့
+            '"space"': အာကာသ
+            '"up"': အပေါ်သို့
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': အောက်သို့
+            '"left"': ဘယ်ဘက်သို့
+            '"right"': ညာဘက်သို့
+            '"space"': အာကာသ
+            '"up"': အပေါ်သို့
       storylab_setForegroundEffect2:
         options:
           EFFECT:

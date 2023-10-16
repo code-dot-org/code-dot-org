@@ -64,6 +64,28 @@ fr:
       unlocked: Ton compte a été déverrouillé avec succès. Merci de te connecter pour
         continuer.
   errors:
+    invitations:
+      edit:
+        header: Définis ton mot de passe
+        submit_button: Définir mon mot de passe
+      invitation_removed: Ton invitation a été supprimée.
+      invitation_token_invalid: Le jeton d'invitation fourni n'est pas valide !
+      new:
+        header: Envoie l'invitation
+        submit_button: Envoie une invitation
+      no_invitations_remaining: Pas d'invitations restantes
+      send_instructions: Un e-mail d'invitation a été envoyé à %{email}.
+      updated: Ton mot de passe a été défini avec succès. Tu es maintenant connecté.
+    mailer:
+      invitation_instructions:
+        accept: Accepter l'invitation
+        hello: Bonjour %{email}
+        ignore: Si tu ne veux pas accepter l'invitation, merci d’ignorer cet e-mail.<br
+          />Ton compte ne sera pas créé avant que tu n’accèdes au lien ci-dessus et
+          définisses ton mot de passe.
+        someone_invited_you: Quelqu'un t’a invité à %{url}, tu peux accepter à partir
+          du lien ci-dessous.
+        subject: Instructions pour l’invitation
     messages:
       already_confirmed: a déjà été confirmé, essaie de te connecter
       confirmation_period_expired: doit être confirmé dans %{period}, merci d’en demander
@@ -71,25 +93,3 @@ fr:
       expired: a expiré, merci d’en demander un nouveau
       not_found: non trouvé
       not_locked: n'a pas été verrouillé
-    invitations:
-      send_instructions: Un e-mail d'invitation a été envoyé à %{email}.
-      invitation_token_invalid: Le jeton d'invitation fourni n'est pas valide !
-      updated: Ton mot de passe a été défini avec succès. Tu es maintenant connecté.
-      no_invitations_remaining: Pas d'invitations restantes
-      invitation_removed: Ton invitation a été supprimée.
-      new:
-        header: Envoie l'invitation
-        submit_button: Envoie une invitation
-      edit:
-        header: Définis ton mot de passe
-        submit_button: Définir mon mot de passe
-    mailer:
-      invitation_instructions:
-        subject: Instructions pour l’invitation
-        hello: Bonjour %{email}
-        someone_invited_you: Quelqu'un t’a invité à %{url}, tu peux accepter à partir
-          du lien ci-dessous.
-        accept: Accepter l'invitation
-        ignore: Si tu ne veux pas accepter l'invitation, merci d’ignorer cet e-mail.<br
-          />Ton compte ne sera pas créé avant que tu n’accèdes au lien ci-dessus et
-          définisses ton mot de passe.

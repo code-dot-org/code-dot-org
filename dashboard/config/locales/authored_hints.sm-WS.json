@@ -52,11 +52,11 @@
           "courseD_maze_ramp7_a": "Toe faaaoga poloka e faaalu ai poloka taitasi poo avatu ma toe avatu ni faailo se tele "
         },
         "courseD_video_nestedLoopsArtist": {
+          "courseD_artist_ramp12_a": "E faapefea ona tutusa lenei ma le tafafa? E faapefea ona eseese?",
+          "courseD_artist_ramp12_c": "Ina ia tusi itu taitasi, e manaomia ona faaalu i luma le 100 pixels, ona liliu lea i le 120 tikeri. E fia itu e te manaomia?",
           "courseE_artist_ramp8_a": "A fia tusi o se itu, faaaoga le poloka o le 'move forward by 100 pixels', ma sui le 100 i le 200. ",
           "courseE_artist_ramp8_b": "A fia tusi o itu e 4, tuu le poloka o le 'move forward by 100 pixels', i totonu o le lio toe taamilo ma taumafai e faatulaga le lio ina ia mafai ona tusi faafa le ata",
-          "courseE_artist_ramp8_c": "O lou lio e tatau ona iai poloka se lua i totonu o le lio: 'move foward' ma le 'turn right by 90 degrees'.",
-          "courseD_artist_ramp12_a": "E faapefea ona tutusa lenei ma le tafafa? E faapefea ona eseese?",
-          "courseD_artist_ramp12_c": "Ina ia tusi itu taitasi, e manaomia ona faaalu i luma le 100 pixels, ona liliu lea i le 120 tikeri. E fia itu e te manaomia?"
+          "courseE_artist_ramp8_c": "O lou lio e tatau ona iai poloka se lua i totonu o le lio: 'move foward' ma le 'turn right by 90 degrees'."
         },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_a": "A fia tusi o se itu, faaaoga le poloka o le 'move forward by 100 pixels', ma sui le 100 i le 200. ",

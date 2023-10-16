@@ -28,8 +28,15 @@ const CheckboxDropdown = ({
     handleClearAll(name);
   }, [name, handleClearAll]);
 
+  // Collapse dropdown if 'Escape' is pressed
+  const onKeyDown = e => {
+    if (e.keyCode === 27) {
+      e.currentTarget.classList.remove('open');
+    }
+  };
+
   return (
-    <div id={`${name}-dropdown`} className="dropdown">
+    <div id={`${name}-dropdown`} className="dropdown" onKeyDown={onKeyDown}>
       <button
         id={`${name}-dropdown-button`}
         type="button"

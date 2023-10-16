@@ -2,122 +2,59 @@
   "zh-TW": {
     "data": {
       "standard_categories": {
-        "DA": {
-          "description": "數據和分析"
-        },
-        "DAT-1": {
-          "description": "電腦表示數據的方式與為使用者解釋和顯示數據的方式不同。程式被用來將數據轉換成人們更容易理解的表示形式。"
-        },
-        "IOC-2": {
-          "description": "使用電腦創新可能會危及你的個人安全和身份。"
-        },
-        "DAT-1.D": {
-          "description": "比較數據壓縮算法，以確定在特定背景中哪種演算法最佳。"
-        },
-        "IOC-2.B": {
-          "description": "解釋計算資源如何被保護和如何被濫用。"
-        },
-        "CD": {
-          "description": "電腦與通訊裝置"
-        },
-        "CI": {
-          "description": "社群、全球與倫理影響"
-        },
-        "CL": {
-          "description": "協同合作"
-        },
-        "CPP": {
-          "description": "運算練習與程式設計"
-        },
-        "CT": {
-          "description": "計算機式思維"
-        },
-        "L": {
-          "description": "語言"
-        },
-        "RI": {
-          "description": "閱讀資訊文件"
-        },
-        "RL": {
-          "description": "閱讀文獻"
-        },
-        "SL": {
-          "description": "說話與聆聽"
-        },
-        "W": {
-          "description": "寫作"
-        },
-        "C": {
-          "description": "隧道"
-        },
-        "F": {
-          "description": "函式"
-        },
-        "G": {
-          "description": "幾何"
-        },
-        "MP": {
-          "description": "數學實務"
-        },
-        "NBT": {
-          "description": "數字和十進字運算"
-        },
-        "OA": {
-          "description": "運算與代數思維"
-        },
         "1": {
           "description": "學生展現出創意思維、建構知識，以及使用科技來開發創新產品與流程。"
         },
         "2": {
           "description": "學生會使用數位媒體與環境一起溝通和合作，包括遠端合作，以支援個人學習並協助別人學習。"
         },
+        "3": {
+          "description": "學生使用數字工具來收集，評估和使用信息。"
+        },
+        "3-A-i": {
+          "description": "學習的本質-人與機器"
+        },
+        "3-A-ii": {
+          "description": "學習的本質-在數據中尋找模式"
+        },
+        "3-A-iii": {
+          "description": "學習的本質-訓練模型"
+        },
+        "3-A-iv": {
+          "description": "學習的本質-建設與使用推理者"
+        },
+        "3-A-v": {
+          "description": "學習的性質-調整內部表現"
+        },
+        "3-A-vi": {
+          "description": "學習的本質-從經驗中學習"
+        },
+        "3-B-i": {
+          "description": "神經網絡-神經網絡的結構"
+        },
+        "3-B-ii": {
+          "description": "神經網絡-重量調整"
+        },
+        "3-C-i": {
+          "description": "資料集-功能集"
+        },
+        "3-C-ii": {
+          "description": "資料集-大型資料集"
+        },
+        "3-C-iii": {
+          "description": "數據集-偏差"
+        },
         "4": {
           "description": "學生運用批判思維技巧，計畫與進行研究、管理專案、解決問題，並使用適當的數位工具和資源做出知情的決定。"
+        },
+        "5": {
+          "description": "學生了解與科技相關的人類、文化和社會問題，並實踐法律和道德行為。"
         },
         "6": {
           "description": "學生展現出對技術概念、系統和運行的良好理解。"
         },
-        "AP": {
-          "description": "算法和編程"
-        },
-        "CS": {
-          "description": "計算系統"
-        },
-        "IC": {
-          "description": "作出推論和合理的結論"
-        },
-        "NI": {
-          "description": "網路與網際網路"
-        },
         "AAP-1": {
           "description": "為了找到可泛化問題的具體解決方案，程序員以多種方式表示和組織數據。"
-        },
-        "AAP-2": {
-          "description": "語句進行排序和組合在程序中的方式確定計算結果。程序納入迭代和選擇結構來表示重複，並做出決定來處理不同的輸入值。"
-        },
-        "AAP-3": {
-          "description": "程序員將問題分解成更小，更易於管理的部分。透過建立程序和利用參數，程式設計人員可以概括可重複使用的程序。程序可讓程式設計人員利用已經測試過的現有程式碼，讓程式設計師能更快速且更有信心地撰寫程式。"
-        },
-        "AAP-4": {
-          "description": "存在計算機無法解決的問題，即使計算機可以解決問題，也可能無法在合理的時間內解決問題。"
-        },
-        "CRD-1": {
-          "description": "透過協同合作整合多個觀點，可改善開發的運算創新。"
-        },
-        "CRD-2": {
-          "description": "開發人員使用以使用者為中心的迭代設計流程進行創造和創新，該流程結合了實施/反饋週期，並為實驗和冒險提供了足夠的空間。"
-        },
-        "CSN-1": {
-          "description": "計算機系統和網絡有助於數據的傳輸方式。"
-        },
-        "CSN-2": {
-          "description": "平行和分散式運算可運用多部電腦來更快速地解決複雜問題或處理大型資料集。"
-        },
-        "DAT-2": {
-          "description": "程序可以用來處理數據，這允許用戶發現信息並創建新的知識。"
-        },
-        "IOC-1": {
-          "description": "雖然程序通常旨在達到特定目的，但它們可能會產生意想不到的後果"
         },
         "AAP-1.A": {
           "description": "用變量表示一個值。"
@@ -130,6 +67,9 @@
         },
         "AAP-1.D": {
           "description": "對於數據抽象： \na. 使用列表來存儲多個元素來開發數據抽象。\nb、說明使用資料抽象如何管理程式碼中的複雜性。"
+        },
+        "AAP-2": {
+          "description": "語句進行排序和組合在程序中的方式確定計算結果。程序納入迭代和選擇結構來表示重複，並做出決定來處理不同的輸入值。"
         },
         "AAP-2.A": {
           "description": "表示使用排序而不使用編程語言的算法。"
@@ -179,6 +119,9 @@
         "AAP-2.P": {
           "description": "對於二進位搜尋演算法：\na. 決定在資料集中尋找值所需的反覆次數。 \nb、解釋完成二進制搜索所需的要求。"
         },
+        "AAP-3": {
+          "description": "程序員將問題分解成更小，更易於管理的部分。透過建立程序和利用參數，程式設計人員可以概括可重複使用的程序。程序可讓程式設計人員利用已經測試過的現有程式碼，讓程式設計師能更快速且更有信心地撰寫程式。"
+        },
         "AAP-3.A": {
           "description": "對於程序呼叫：\na. 撰寫陳述式以呼叫程序。\nb. 判斷程序呼叫的結果或效果。"
         },
@@ -197,329 +140,65 @@
         "AAP-3.F": {
           "description": "對於模擬：\na. 解釋如何使用電腦來表示現實世界的現象或結果。 \nb. 將模擬與真實世界環境的使用進行比較。"
         },
+        "AAP-4": {
+          "description": "存在計算機無法解決的問題，即使計算機可以解決問題，也可能無法在合理的時間內解決問題。"
+        },
         "AAP-4.A": {
           "description": "判斷演算法的效率：\na. 說明在合理時間內執行的演算法與未在合理時間內執行的演算法之間的差異。 \nb. 識別啟發式解決方案可能更合適的情況。"
         },
         "AAP-4.B": {
           "description": "解釋計算機科學中不可判定的問題的存在。"
         },
-        "CRD-1.A": {
-          "description": "說明如何透過協同合作來改善運算創新。"
+        "AP": {
+          "description": "算法和編程"
         },
-        "CRD-1.B": {
-          "description": "解釋運算創新是如何由一群人開發的。"
+        "APR": {
+          "description": "具有多項式和有理表達式的算術"
         },
-        "CRD-1.C": {
-          "description": "在協作過程中展示有效的人際交往能力"
+        "BF": {
+          "description": "建築功能"
         },
-        "CRD-2.A": {
-          "description": "描述運算創新的目的。"
+        "BI-1": {
+          "description": "計算機使用傳感器感知世界"
         },
-        "CRD-2.B": {
-          "description": "解釋程序或代碼段如何運作。"
+        "BI-2": {
+          "description": "代理保持世界的代表性，並將其用於推理"
         },
-        "CRD-2.C": {
-          "description": "識別輸入（S）到一個程序。"
+        "BI-3": {
+          "description": "電腦可以從數據中學習"
         },
-        "CRD-2.D": {
-          "description": "識別程式產生的輸出。"
+        "BI-4": {
+          "description": "智能代理需要多種知識才能與人類自然互動"
         },
-        "CRD-2.E": {
-          "description": "使用開發過程開發程序開發程序。"
+        "BI-5": {
+          "description": "人工智能能以積極和消極的方式影響社會"
         },
-        "CRD-2.F": {
-          "description": "設計一個程序和它的用戶界面。"
+        "C": {
+          "description": "隧道"
         },
-        "CRD-2.G": {
-          "description": "透過撰寫文件描述程式碼區段或程式的用途。"
+        "CC": {
+          "description": "計數和基數"
         },
-        "CRD-2.H": {
-          "description": "確認從其他來源使用的程式碼區段。"
+        "CD": {
+          "description": "電腦與通訊裝置"
         },
-        "CRD-2.I": {
-          "description": "對於演算法或程式中的錯誤： \na. 識別錯誤。 \nb. 更正錯誤。"
+        "CED": {
+          "description": "建立方程式"
         },
-        "CRD-2.J": {
-          "description": "識別輸入和相應的預期輸出或行為，可用於檢查演算法或程式的正確性。"
+        "CI": {
+          "description": "社群、全球與倫理影響"
         },
-        "CSN-1.A": {
-          "description": "說明運算裝置如何在網路中協同運作。"
+        "CL": {
+          "description": "協同合作"
         },
-        "CSN-1.B": {
-          "description": "解釋互聯網的工作原理。"
+        "CN": {
+          "description": "複數系統"
         },
-        "CSN-1.C": {
-          "description": "說明如何透過封包透過網際網路傳送資料。"
-        },
-        "CSN-1.D": {
-          "description": "描述互聯網和萬維網之間的差異。"
-        },
-        "CSN-2.A": {
-          "description": "比較使用循序、平行和分散式運算的問題解決方案。"
-        },
-        "CSN-2.B": {
-          "description": "確定順序和並行解決方案的效率。"
-        },
-        "CSN-2.C": {
-          "description": "說明平行與分散式運算的優點與挑戰。"
-        },
-        "DAT-1.A": {
-          "description": "說明如何使用位元來表示資料。"
-        },
-        "DAT-1.B": {
-          "description": "解釋使用位來表示數據的後果。"
-        },
-        "DAT-1.C": {
-          "description": "對於二進制數：\na. 計算正整數（基數為 10）的二進制（基數 2）等效，反之亦然。 \nb. 比較並排序二進位數字。"
-        },
-        "DAT-2.A": {
-          "description": "描述可以從數據中提取哪些信息。"
-        },
-        "DAT-2.B": {
-          "description": "描述可從中繼資料擷取哪些資訊。"
-        },
-        "DAT-2.C": {
-          "description": "找出與處理資料相關的挑戰。"
-        },
-        "DAT-2.D": {
-          "description": "使用程序從數據中提取信息。"
-        },
-        "DAT-2.E": {
-          "description": "說明如何使用程式從資料中獲得洞察力和知識。"
-        },
-        "IOC-1.A": {
-          "description": "解釋計算系統的倫理和社會影響"
-        },
-        "IOC-1.B": {
-          "description": "說明在電腦系統上收集及儲存個人資料所帶來的私隱風險。"
-        },
-        "IOC-1.C": {
-          "description": "描述造成數位鴻溝的問題。"
-        },
-        "IOC-1.D": {
-          "description": "解釋運算創新中如何存在偏見。"
-        },
-        "IOC-1.E": {
-          "description": "說明人們如何大規模參與解決問題的過程。"
-        },
-        "IOC-1.F": {
-          "description": "解釋如何使用電腦可引起法律和道德問題。"
-        },
-        "IOC-2.A": {
-          "description": "描述在電腦系統上收集和儲存個人資料所帶來的隱私風險。"
-        },
-        "IOC-2.C": {
-          "description": "說明如何獲得未經授權的存取運算資源。"
-        },
-        "D1": {
-          "description": "開發問題和計劃查詢"
-        },
-        "D3.Sources": {
-          "description": "收集和評估來源"
-        },
-        "D3.Claims": {
-          "description": "發展索賠和使用證據"
-        },
-        "D4.Conclusions": {
-          "description": "溝通和批評結論"
-        },
-        "D4.Action": {
-          "description": "採取知情行動"
-        },
-        "D2.Civ": {
-          "description": "公民"
-        },
-        "D2.Eco": {
-          "description": "經濟學"
-        },
-        "RF": {
-          "description": "閱讀基礎技巧"
-        },
-        "RH": {
-          "description": "閱讀歷史/社會"
-        },
-        "RST": {
-          "description": "閱讀科學/技術"
-        },
-        "WHST": {
-          "description": "寫入HS/T"
-        },
-        "ESS": {
-          "description": "地球與空間科學"
-        },
-        "ETS": {
-          "description": "科學中的工程"
-        },
-        "LS": {
-          "description": "生命科學"
-        },
-        "PS": {
-          "description": "物理科學"
-        },
-        "ESS1": {
-          "description": "地球在宇宙中的位置"
-        },
-        "ESS2": {
-          "description": "地球系統"
-        },
-        "ESS3": {
-          "description": "地球和人類活動"
-        },
-        "ETS1": {
-          "description": "工程設計"
-        },
-        "LS1": {
-          "description": "從分子到生物體：結構與過程"
-        },
-        "LS2": {
-          "description": "生態系統：相互作用，能源和動力"
-        },
-        "LS3": {
-          "description": "遺傳：特質的繼承和變異"
-        },
-        "LS4": {
-          "description": "生物進化：統一與多樣性"
-        },
-        "PS1": {
-          "description": "物質及其相互作用"
-        },
-        "PS2": {
-          "description": "運動和穩定性：力量和相互作用"
-        },
-        "PS3": {
-          "description": "能源"
-        },
-        "PS4": {
-          "description": "Wave 及其在信息傳輸技術中的應用"
-        },
-        "MOD-1": {
-          "description": "有些物件或概念經常表示，程式設計人員可以利用已經測試過的現有程式碼來繪製，讓他們能夠更快速地撰寫解決方案，更有信心"
-        },
-        "MOD-2": {
-          "description": "程序員使用代碼來表示物理對象或非物理概念，無論是真實的還是想像的，通過基於 attirbutes 和/或對象或概念的行為定義一個類"
-        },
-        "MOD-3": {
-          "description": "當多個類包含共同的屬性和行為時，程序員創建一個新的類，其中包含形成層次的共享屬性和行為。在階層中的最高級別進行的修改應用于子類別。"
-        },
-        "VAR-1": {
-          "description": "為了找到可泛化問題的具體解決方案，程序員在其代碼中包含變量，以便相同的算法使用不同的輸入值運行"
-        },
-        "VAR-2": {
-          "description": "為了管理資料中的大量資料或複雜關係，程式設計人員撰寫程式碼，將資料分組成單一資料結構，而不會為每個值建立個別變數。"
+        "CO": {
+          "description": "一致性"
         },
         "CON-1": {
           "description": "在運算式中對變數和運算子進行排序和組合的方式決定了計算結果。"
-        },
-        "CON-2": {
-          "description": "程序員將迭代和選擇納入代碼中，作為一種為計算機提供指令來處理許多可能輸入值中的每一個的方式"
-        },
-        "MOD-1.A": {
-          "description": "呼叫系統類別方法，將輸出產生至主控台。"
-        },
-        "MOD-1.B": {
-          "description": "解釋一個類和一個對象之間的關係。"
-        },
-        "MOD-1.C": {
-          "description": "使用其簽名識別正確的構造函數被調用。"
-        },
-        "MOD-1.D": {
-          "description": "創建對象：a. 通過調用不帶參數的構造函數來創建對象。b. 通過調用具有參數的構造函數來創建對象。"
-        },
-        "MOD-1.E": {
-          "description": "調用不帶參數的非靜態 void 方法。"
-        },
-        "MOD-1.F": {
-          "description": "使用參數調用非靜態 void 方法"
-        },
-        "MOD-1.G": {
-          "description": "使用或不帶參數調用非靜態非 void 方法"
-        },
-        "MOD-1.H": {
-          "description": "調用靜態方法。"
-        },
-        "MOD-2.A": {
-          "description": "指定類別、資料、建構函式和方法的存取權限和可見性條件約束。"
-        },
-        "MOD-2.B": {
-          "description": "定義實例變量的屬性通過一個類的構造函數進行初始化。"
-        },
-        "MOD-2.C": {
-          "description": "去除程序代碼的功能和使用通過註釋。"
-        },
-        "MOD-2.D": {
-          "description": "通過非 void 方法定義對象的行為，而不寫在一個類中的準備。"
-        },
-        "MOD-2.E": {
-          "description": "通過無效方法定義對象的行為，帶或不寫在一個類中的參數。"
-        },
-        "MOD-2.F": {
-          "description": "通過非 void 方法與寫在類中的參數定義對象的行為。"
-        },
-        "MOD-2.G": {
-          "description": "通過靜態方法定義一個類的行為。"
-        },
-        "MOD-2.H": {
-          "description": "定義屬於該類的靜態變量。"
-        },
-        "MOD-3.A": {
-          "description": "指定執行個體變數的私有可見性，以封裝物件的屬性。"
-        },
-        "MOD-3.B": {
-          "description": "建立從子類別到父類別的繼承關係。"
-        },
-        "MOD-3.C": {
-          "description": "定義父類別的參考變數，以指派給相同階層中子類別的物件。"
-        },
-        "MOD-3.D": {
-          "description": "在繼承關係中調用方法。"
-        },
-        "MOD-3.E": {
-          "description": "透過繼承呼叫 Object 類別方法。"
-        },
-        "VAR-1.A": {
-          "description": "創建字符串文字"
-        },
-        "VAR-1.B": {
-          "description": "為特定規格識別最合適的資料類型類別"
-        },
-        "VAR-1.C": {
-          "description": "聲明正確類型的變量來表示原始數據"
-        },
-        "VAR-1.D": {
-          "description": "定義正確類型的變量以表示參考數據。"
-        },
-        "VAR-1.E": {
-          "description": "對於字符串類：a. 創建字符串對象。b. 調用字符串方法。"
-        },
-        "VAR-1.F": {
-          "description": "b. 呼叫整數方法。c. 建立雙重物件。c. 建立雙重物件。d. 呼叫 Double 方法。"
-        },
-        "VAR-1.G": {
-          "description": "解釋哪裡可以在程序代碼中使用變量。"
-        },
-        "VAR-1.H": {
-          "description": "評估使用關鍵字 this 的對象引用表達式。"
-        },
-        "VAR-2.A": {
-          "description": "使用一維（1D）數組對象表示相關基本或對象引用數據的集合。"
-        },
-        "VAR-2.B": {
-          "description": "遍歷一維數組中的元素。"
-        },
-        "VAR-2.C": {
-          "description": "遍歷使用增強的 for 循環一維數組對象中的元素。"
-        },
-        "VAR-2.D": {
-          "description": "使用 ArrayList 物件代表相關物件參考資料目錄的集合。"
-        },
-        "VAR-2.E": {
-          "description": "針對陣列清單物件：• 使用 for 或 while 迴圈進行周遊。• 使用增強的 for 迴圈進行周遊。"
-        },
-        "VAR-2.F": {
-          "description": "使用二維 (2D) 陣列物件來表示相關原始或物件參考資料的集合。"
-        },
-        "VAR-2.G": {
-          "description": "對於 2D 陣列物件：• 使用巢狀 for 迴圈進行周遊。• 使用巢狀增強了 for 迴圈的周遊。"
         },
         "CON-1.A": {
           "description": "評估程序代碼中的算術表達式"
@@ -544,6 +223,9 @@
         },
         "CON-1.H": {
           "description": "使用程式碼中的布林運算式比較物件參照。"
+        },
+        "CON-2": {
+          "description": "程序員將迭代和選擇納入代碼中，作為一種為計算機提供指令來處理許多可能輸入值中的每一個的方式"
         },
         "CON-2.A": {
           "description": "使用條件陳述式來表示分支邏輯程序。"
@@ -596,29 +278,173 @@
         "CON-2.Q": {
           "description": "應用遞歸算法對數組或 ArrayList 對象的元素進行排序。"
         },
-        "APR": {
-          "description": "具有多項式和有理表達式的算術"
-        },
-        "BF": {
-          "description": "建築功能"
-        },
-        "CC": {
-          "description": "計數和基數"
-        },
-        "CED": {
-          "description": "建立方程式"
-        },
-        "CN": {
-          "description": "複數系統"
-        },
-        "CO": {
-          "description": "一致性"
-        },
         "CP": {
           "description": "條件概率和概率規則"
         },
+        "CPP": {
+          "description": "運算練習與程式設計"
+        },
+        "CRD-1": {
+          "description": "透過協同合作整合多個觀點，可改善開發的運算創新。"
+        },
+        "CRD-1.A": {
+          "description": "說明如何透過協同合作來改善運算創新。"
+        },
+        "CRD-1.B": {
+          "description": "解釋運算創新是如何由一群人開發的。"
+        },
+        "CRD-1.C": {
+          "description": "在協作過程中展示有效的人際交往能力"
+        },
+        "CRD-2": {
+          "description": "開發人員使用以使用者為中心的迭代設計流程進行創造和創新，該流程結合了實施/反饋週期，並為實驗和冒險提供了足夠的空間。"
+        },
+        "CRD-2.A": {
+          "description": "描述運算創新的目的。"
+        },
+        "CRD-2.B": {
+          "description": "解釋程序或代碼段如何運作。"
+        },
+        "CRD-2.C": {
+          "description": "識別輸入（S）到一個程序。"
+        },
+        "CRD-2.D": {
+          "description": "識別程式產生的輸出。"
+        },
+        "CRD-2.E": {
+          "description": "使用開發過程開發程序開發程序。"
+        },
+        "CRD-2.F": {
+          "description": "設計一個程序和它的用戶界面。"
+        },
+        "CRD-2.G": {
+          "description": "透過撰寫文件描述程式碼區段或程式的用途。"
+        },
+        "CRD-2.H": {
+          "description": "確認從其他來源使用的程式碼區段。"
+        },
+        "CRD-2.I": {
+          "description": "對於演算法或程式中的錯誤： \na. 識別錯誤。 \nb. 更正錯誤。"
+        },
+        "CRD-2.J": {
+          "description": "識別輸入和相應的預期輸出或行為，可用於檢查演算法或程式的正確性。"
+        },
+        "CS": {
+          "description": "計算系統"
+        },
+        "CSN-1": {
+          "description": "計算機系統和網絡有助於數據的傳輸方式。"
+        },
+        "CSN-1.A": {
+          "description": "說明運算裝置如何在網路中協同運作。"
+        },
+        "CSN-1.B": {
+          "description": "解釋互聯網的工作原理。"
+        },
+        "CSN-1.C": {
+          "description": "說明如何透過封包透過網際網路傳送資料。"
+        },
+        "CSN-1.D": {
+          "description": "描述互聯網和萬維網之間的差異。"
+        },
+        "CSN-2": {
+          "description": "平行和分散式運算可運用多部電腦來更快速地解決複雜問題或處理大型資料集。"
+        },
+        "CSN-2.A": {
+          "description": "比較使用循序、平行和分散式運算的問題解決方案。"
+        },
+        "CSN-2.B": {
+          "description": "確定順序和並行解決方案的效率。"
+        },
+        "CSN-2.C": {
+          "description": "說明平行與分散式運算的優點與挑戰。"
+        },
+        "CT": {
+          "description": "計算機式思維"
+        },
+        "D1": {
+          "description": "開發問題和計劃查詢"
+        },
+        "D2.Civ": {
+          "description": "公民"
+        },
+        "D2.Eco": {
+          "description": "經濟學"
+        },
+        "D3.Claims": {
+          "description": "發展索賠和使用證據"
+        },
+        "D3.Sources": {
+          "description": "收集和評估來源"
+        },
+        "D4.Action": {
+          "description": "採取知情行動"
+        },
+        "D4.Conclusions": {
+          "description": "溝通和批評結論"
+        },
+        "DA": {
+          "description": "數據和分析"
+        },
+        "DAT-1": {
+          "description": "電腦表示數據的方式與為使用者解釋和顯示數據的方式不同。程式被用來將數據轉換成人們更容易理解的表示形式。"
+        },
+        "DAT-1.A": {
+          "description": "說明如何使用位元來表示資料。"
+        },
+        "DAT-1.B": {
+          "description": "解釋使用位來表示數據的後果。"
+        },
+        "DAT-1.C": {
+          "description": "對於二進制數：\na. 計算正整數（基數為 10）的二進制（基數 2）等效，反之亦然。 \nb. 比較並排序二進位數字。"
+        },
+        "DAT-1.D": {
+          "description": "比較數據壓縮算法，以確定在特定背景中哪種演算法最佳。"
+        },
+        "DAT-2": {
+          "description": "程序可以用來處理數據，這允許用戶發現信息並創建新的知識。"
+        },
+        "DAT-2.A": {
+          "description": "描述可以從數據中提取哪些信息。"
+        },
+        "DAT-2.B": {
+          "description": "描述可從中繼資料擷取哪些資訊。"
+        },
+        "DAT-2.C": {
+          "description": "找出與處理資料相關的挑戰。"
+        },
+        "DAT-2.D": {
+          "description": "使用程序從數據中提取信息。"
+        },
+        "DAT-2.E": {
+          "description": "說明如何使用程式從資料中獲得洞察力和知識。"
+        },
         "EE": {
           "description": "表達式和方程式"
+        },
+        "ESS": {
+          "description": "地球與空間科學"
+        },
+        "ESS1": {
+          "description": "地球在宇宙中的位置"
+        },
+        "ESS2": {
+          "description": "地球系統"
+        },
+        "ESS3": {
+          "description": "地球和人類活動"
+        },
+        "ETS": {
+          "description": "科學中的工程"
+        },
+        "ETS1": {
+          "description": "工程設計"
+        },
+        "F": {
+          "description": "函式"
+        },
+        "G": {
+          "description": "幾何"
         },
         "GMD": {
           "description": "幾何量測與尺寸"
@@ -626,14 +452,68 @@
         "GPE": {
           "description": "使用方程式表示幾何屬性"
         },
+        "IC": {
+          "description": "運算的影響"
+        },
         "ID": {
           "description": "解讀分類和定量數據"
         },
         "IF": {
           "description": "解釋函數"
         },
+        "IOC-1": {
+          "description": "雖然運算創新通常是為了達到特定目的而設計，但它們可能會產生意想不到的後果。"
+        },
+        "IOC-1.A": {
+          "description": "解釋運算創新的效果如何既有益又有害。"
+        },
+        "IOC-1.B": {
+          "description": "說明運算創新如何產生超出其預期目的的的影響。"
+        },
+        "IOC-1.C": {
+          "description": "描述造成數位鴻溝的問題。"
+        },
+        "IOC-1.D": {
+          "description": "解釋運算創新中如何存在偏見。"
+        },
+        "IOC-1.E": {
+          "description": "說明人們如何大規模參與解決問題的過程。"
+        },
+        "IOC-1.F": {
+          "description": "解釋如何使用電腦可引起法律和道德問題。"
+        },
+        "IOC-2": {
+          "description": "使用電腦創新可能會危及你的個人安全和身份。"
+        },
+        "IOC-2.A": {
+          "description": "描述在電腦系統上收集和儲存個人資料所帶來的隱私風險。"
+        },
+        "IOC-2.B": {
+          "description": "解釋計算資源如何被保護和如何被濫用。"
+        },
+        "IOC-2.C": {
+          "description": "說明如何獲得未經授權的存取運算資源。"
+        },
+        "L": {
+          "description": "語言"
+        },
         "LE": {
           "description": "線性、二次和指數模型 ★"
+        },
+        "LS": {
+          "description": "生命科學"
+        },
+        "LS1": {
+          "description": "從分子到生物體：結構與過程"
+        },
+        "LS2": {
+          "description": "生態系統：相互作用，能源和動力"
+        },
+        "LS3": {
+          "description": "遺傳：特質的繼承和變異"
+        },
+        "LS4": {
+          "description": "生物進化：統一與多樣性"
         },
         "MD": {
           "description": "使用概率做出決定"
@@ -641,11 +521,110 @@
         "MG": {
           "description": "用幾何圖形塑型"
         },
+        "MOD-1": {
+          "description": "有些物件或概念經常表示，程式設計人員可以利用已經測試過的現有程式碼來繪製，讓他們能夠更快速地撰寫解決方案，更有信心"
+        },
+        "MOD-1.A": {
+          "description": "呼叫系統類別方法，將輸出產生至主控台。"
+        },
+        "MOD-1.B": {
+          "description": "解釋一個類和一個對象之間的關係。"
+        },
+        "MOD-1.C": {
+          "description": "使用其簽名識別正確的構造函數被調用。"
+        },
+        "MOD-1.D": {
+          "description": "創建對象：a. 通過調用不帶參數的構造函數來創建對象。b. 通過調用具有參數的構造函數來創建對象。"
+        },
+        "MOD-1.E": {
+          "description": "調用不帶參數的非靜態 void 方法。"
+        },
+        "MOD-1.F": {
+          "description": "使用參數調用非靜態 void 方法"
+        },
+        "MOD-1.G": {
+          "description": "使用或不帶參數調用非靜態非 void 方法"
+        },
+        "MOD-1.H": {
+          "description": "調用靜態方法。"
+        },
+        "MOD-2": {
+          "description": "程序員使用代碼來表示物理對象或非物理概念，無論是真實的還是想像的，通過基於 attirbutes 和/或對象或概念的行為定義一個類"
+        },
+        "MOD-2.A": {
+          "description": "指定類別、資料、建構函式和方法的存取權限和可見性條件約束。"
+        },
+        "MOD-2.B": {
+          "description": "定義實例變量的屬性通過一個類的構造函數進行初始化。"
+        },
+        "MOD-2.C": {
+          "description": "去除程序代碼的功能和使用通過註釋。"
+        },
+        "MOD-2.D": {
+          "description": "通過非 void 方法定義對象的行為，而不寫在一個類中的準備。"
+        },
+        "MOD-2.E": {
+          "description": "通過無效方法定義對象的行為，帶或不寫在一個類中的參數。"
+        },
+        "MOD-2.F": {
+          "description": "通過非 void 方法與寫在類中的參數定義對象的行為。"
+        },
+        "MOD-2.G": {
+          "description": "通過靜態方法定義一個類的行為。"
+        },
+        "MOD-2.H": {
+          "description": "定義屬於該類的靜態變量。"
+        },
+        "MOD-3": {
+          "description": "當多個類包含共同的屬性和行為時，程序員創建一個新的類，其中包含形成層次的共享屬性和行為。在階層中的最高級別進行的修改應用于子類別。"
+        },
+        "MOD-3.A": {
+          "description": "指定執行個體變數的私有可見性，以封裝物件的屬性。"
+        },
+        "MOD-3.B": {
+          "description": "建立從子類別到父類別的繼承關係。"
+        },
+        "MOD-3.C": {
+          "description": "定義父類別的參考變數，以指派給相同階層中子類別的物件。"
+        },
+        "MOD-3.D": {
+          "description": "在繼承關係中調用方法。"
+        },
+        "MOD-3.E": {
+          "description": "透過繼承呼叫 Object 類別方法。"
+        },
+        "MP": {
+          "description": "數學實務"
+        },
+        "NBT": {
+          "description": "數字和十進字運算"
+        },
         "NF": {
           "description": "數量和操作-分數"
         },
+        "NI": {
+          "description": "網路與網際網路"
+        },
         "NS": {
           "description": "數字系統"
+        },
+        "OA": {
+          "description": "運算與代數思維"
+        },
+        "PS": {
+          "description": "物理科學"
+        },
+        "PS1": {
+          "description": "物質及其相互作用"
+        },
+        "PS2": {
+          "description": "運動和穩定性：力量和相互作用"
+        },
+        "PS3": {
+          "description": "能源"
+        },
+        "PS4": {
+          "description": "Wave 及其在信息傳輸技術中的應用"
         },
         "Q": {
           "description": "數量"
@@ -653,11 +632,29 @@
         "REI": {
           "description": "推理與方程和不等式"
         },
+        "RF": {
+          "description": "閱讀基礎技巧"
+        },
+        "RH": {
+          "description": "閱讀歷史/社會"
+        },
+        "RI": {
+          "description": "閱讀資訊文件"
+        },
+        "RL": {
+          "description": "閱讀文獻"
+        },
         "RN": {
           "description": "實數系統"
         },
         "RP": {
           "description": "比率和比例關係"
+        },
+        "RST": {
+          "description": "閱讀科學/技術"
+        },
+        "SL": {
+          "description": "說話與聆聽"
         },
         "SP": {
           "description": "統計和概率"
@@ -671,62 +668,65 @@
         "TF": {
           "description": "三角函數"
         },
+        "VAR-1": {
+          "description": "為了找到可泛化問題的具體解決方案，程序員在其代碼中包含變量，以便相同的算法使用不同的輸入值運行"
+        },
+        "VAR-1.A": {
+          "description": "創建字符串文字"
+        },
+        "VAR-1.B": {
+          "description": "為特定規格識別最合適的資料類型類別"
+        },
+        "VAR-1.C": {
+          "description": "聲明正確類型的變量來表示原始數據"
+        },
+        "VAR-1.D": {
+          "description": "定義正確類型的變量以表示參考數據。"
+        },
+        "VAR-1.E": {
+          "description": "對於字符串類：a. 創建字符串對象。b. 調用字符串方法。"
+        },
+        "VAR-1.F": {
+          "description": "b. 呼叫整數方法。c. 建立雙重物件。c. 建立雙重物件。d. 呼叫 Double 方法。"
+        },
+        "VAR-1.G": {
+          "description": "解釋哪裡可以在程序代碼中使用變量。"
+        },
+        "VAR-1.H": {
+          "description": "評估使用關鍵字 this 的對象引用表達式。"
+        },
+        "VAR-2": {
+          "description": "為了管理資料中的大量資料或複雜關係，程式設計人員撰寫程式碼，將資料分組成單一資料結構，而不會為每個值建立個別變數。"
+        },
+        "VAR-2.A": {
+          "description": "使用一維（1D）數組對象表示相關基本或對象引用數據的集合。"
+        },
+        "VAR-2.B": {
+          "description": "遍歷一維數組中的元素。"
+        },
+        "VAR-2.C": {
+          "description": "遍歷使用增強的 for 循環一維數組對象中的元素。"
+        },
+        "VAR-2.D": {
+          "description": "使用 ArrayList 物件代表相關物件參考資料目錄的集合。"
+        },
+        "VAR-2.E": {
+          "description": "針對陣列清單物件：• 使用 for 或 while 迴圈進行周遊。• 使用增強的 for 迴圈進行周遊。"
+        },
+        "VAR-2.F": {
+          "description": "使用二維 (2D) 陣列物件來表示相關原始或物件參考資料的集合。"
+        },
+        "VAR-2.G": {
+          "description": "對於 2D 陣列物件：• 使用巢狀 for 迴圈進行周遊。• 使用巢狀增強了 for 迴圈的周遊。"
+        },
         "VM": {
           "description": "向量和矩陣數量"
         },
-        "BI-1": {
-          "description": "計算機使用傳感器感知世界"
+        "W": {
+          "description": "寫作"
         },
-        "BI-2": {
-          "description": "代理保持世界的代表性，並將其用於推理"
-        },
-        "BI-3": {
-          "description": "電腦可以從數據中學習"
-        },
-        "BI-4": {
-          "description": "智能代理需要多種知識才能與人類自然互動"
-        },
-        "BI-5": {
-          "description": "人工智能能以積極和消極的方式影響社會"
-        },
-        "3-A-i": {
-          "description": "學習的本質-人與機器"
-        },
-        "3-A-ii": {
-          "description": "學習的本質-在數據中尋找模式"
-        },
-        "3-A-iii": {
-          "description": "學習的本質-訓練模型"
-        },
-        "3-A-iv": {
-          "description": "學習的本質-建設與使用推理者"
-        },
-        "3-A-v": {
-          "description": "學習的性質-調整內部表現"
-        },
-        "3-A-vi": {
-          "description": "學習的本質-從經驗中學習"
-        },
-        "3-B-i": {
-          "description": "神經網絡-神經網絡的結構"
-        },
-        "3-B-ii": {
-          "description": "神經網絡-重量調整"
-        },
-        "3-C-i": {
-          "description": "資料集-功能集"
-        },
-        "3-C-ii": {
-          "description": "資料集-大型資料集"
-        },
-        "3-C-iii": {
-          "description": "數據集-偏差"
-        },
-        "3": {
-          "description": "學生使用數字工具來收集，評估和使用信息。"
-        },
-        "5": {
-          "description": "學生了解與科技相關的人類、文化和社會問題，並實踐法律和道德行為。"
+        "WHST": {
+          "description": "寫入HS/T"
         }
       }
     }

@@ -76,6 +76,8 @@ require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
+require 'policies/child_account'
+require 'services/child_account'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -102,6 +104,7 @@ class User < ApplicationRecord
   #     child account policy.
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
+  #   ai_rubrics_disabled: Turns off AI assessment for a User.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -134,9 +137,11 @@ class User < ApplicationRecord
     gender_third_party_input
     child_account_compliance_state
     child_account_compliance_state_last_updated
+    child_account_compliance_lock_out_date
     us_state
     country_code
     family_name
+    ai_rubrics_disabled
   )
 
   attr_accessor(
@@ -184,7 +189,9 @@ class User < ApplicationRecord
     TYPE_STUDENT = 'student'.freeze,
     TYPE_TEACHER = 'teacher'.freeze
   ].freeze
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
+
+  validates_presence_of :user_type
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
@@ -268,6 +275,10 @@ class User < ApplicationRecord
   end
 
   validate :validate_us_state, on: :create
+
+  before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
+    Services::ChildAccount.lock_out(self)
+  end
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
@@ -555,6 +566,19 @@ class User < ApplicationRecord
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
+  before_save :strip_display_family_names
+  def strip_display_family_names
+    self.name = name.strip if name && will_save_change_to_name?
+    self.family_name = family_name.strip if family_name && will_save_change_to_properties?
+  end
+
+  validate :no_family_name_for_teachers
+  def no_family_name_for_teachers
+    if family_name && (teacher? || sections_as_pl_participant.any?)
+      errors.add(:family_name, "can't be set for teachers or PL participants")
+    end
+  end
+
   before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
@@ -788,6 +812,7 @@ class User < ApplicationRecord
     user.provider = auth.provider
     user.uid = auth.uid
     user.name = name_from_omniauth auth.info.name
+    user.family_name = auth.info.family_name if auth.info.family_name.present?
     user.user_type = params['user_type'] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
@@ -1027,6 +1052,10 @@ class User < ApplicationRecord
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
 
+    # Remove family name, in case it was set on the student account.
+    # Must do this before updating user_type, to prevent validation failure.
+    self.family_name = nil
+
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
     # teachers do not need another adult to have access to their account.
@@ -1041,12 +1070,6 @@ class User < ApplicationRecord
         new_attributes[:email] = email
       end
       update!(new_attributes)
-
-      # Remove family name, in case it was set on the student account.
-      if DCDO.get('family-name-features', false)
-        self.family_name = nil
-        save!
-      end
 
       self
     end
@@ -1189,7 +1212,7 @@ class User < ApplicationRecord
   #   3: {}
   # }
   def self.user_levels_by_user_by_level(users, script)
-    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
     UserLevel.where(
       script_id: script.id,
       user_id: users.map(&:id)
@@ -1556,7 +1579,7 @@ class User < ApplicationRecord
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-  def self.send_reset_password_instructions(attributes={})
+  def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
     if attributes[:email].blank?
       user = User.new
@@ -1691,9 +1714,9 @@ class User < ApplicationRecord
   # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
-    where("assigned_at").
-    order(assigned_at: :desc).
-    first
+      where("assigned_at").
+      order(assigned_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user was most recently
@@ -1712,9 +1735,9 @@ class User < ApplicationRecord
   # in.
   def user_script_with_most_recent_progress
     user_scripts.
-    where("last_progress_at").
-    order(last_progress_at: :desc).
-    first
+      where("last_progress_at").
+      order(last_progress_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user made the most recent
@@ -1733,7 +1756,7 @@ class User < ApplicationRecord
   # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
-    user_script_with_most_recent_progress[:last_progress_at]
+      user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Check if the user's most recently assigned script is associated with at least
@@ -1958,10 +1981,10 @@ class User < ApplicationRecord
       script = Unit.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Unit::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result >= ActivityConstants::BEST_PASS_RESULT &&
-        script_valid &&
-        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
-        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
+          new_result >= ActivityConstants::BEST_PASS_RESULT &&
+          script_valid &&
+          HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+          AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
@@ -2057,7 +2080,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
+      family_name: family_name,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2196,6 +2219,11 @@ class User < ApplicationRecord
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
+  end
+
+  # Returns true when the parent email matches the account email.
+  def parent_created_account?
+    student? && parent_email.present? && hashed_email == User.hash_email(parent_email)
   end
 
   # Temporary: Allow single-auth students to add a parent email so it's possible
@@ -2338,19 +2366,12 @@ class User < ApplicationRecord
     return true
   end
 
-  # Updates the child_account_compliance_state attribute to the given state.
-  # @param {String} new_state - A constant from User::ChildAccountCompliance
-  def update_child_account_compliance(new_state)
-    self.child_account_compliance_state = new_state
-    self.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
-  end
-
   # When creating an account, we want to look for any channels that got created
   # for this user before they signed in, and if any of them are in our Applab HOC
   # course, we will create a UserScript entry so that they get a course card
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
-  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
     # applab-intro is not seeded in our minimal test env used on test/circle. We
     # should be able to handle this gracefully
     script = begin
@@ -2680,54 +2701,5 @@ class User < ApplicationRecord
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
     end
-  end
-
-  # Is this user compliant with our Child Account Policy(cap)?
-  # For students under-13, in Colorado, with a personal email login: we require
-  # parent permission before the student can start using their account.
-  def child_account_policy_compliant?
-    return true unless parent_permission_required?
-    child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
-  end
-
-  # The individual US State child account policy configuration
-  # max_age: the oldest age of the child at which this policy applies.
-  CHILD_ACCOUNT_STATE_POLICY = {
-    'CO' => {
-      max_age: 12
-    }
-  }.freeze
-
-  # Check if parent permission is required for this account according to our
-  # Child Account Policy.
-  def parent_permission_required?
-    return false unless us_state
-    policy = CHILD_ACCOUNT_STATE_POLICY[us_state]
-    return false unless policy
-    return false unless age.to_i <= policy[:max_age].to_i
-    personal_account?
-  end
-
-  # Does the user login using credentials they personally control?
-  # For example, some accounts are created and owned by schools (Clever).
-  def personal_account?
-    return false if sponsored?
-    # List of credential types which we believe schools have ownership of.
-    school_owned_types = [AuthenticationOption::CLEVER]
-    # Does the user have an authentication method which is not controlled by
-    # their school? The presence of at least one authentication method which
-    # is owned by the student/parent means this is a "personal account".
-    authentication_options.any? do |option|
-      school_owned_types.exclude?(option.credential_type)
-    end
-  end
-
-  # Values for the `child_account_compliance_state` attribute
-  module ChildAccountCompliance
-    # The student's account has been used to issue a request to a parent.
-    REQUEST_SENT = 's'.freeze
-
-    # The student's account has been approved by their parent.
-    PERMISSION_GRANTED = 'g'.freeze
   end
 end

@@ -25,6 +25,19 @@ export default class MusicLibrary {
     }
   }
 
+  getDefaultSound(): string | undefined {
+    const firstGroup: FolderGroup = this.groups[0];
+
+    // Return the specified default sound if there is one.
+    if (firstGroup?.defaultSound) {
+      return firstGroup?.defaultSound;
+    }
+
+    // The fallback is the first non-instrument/kit folder's first sound.
+    const firstFolder = firstGroup?.folders.find(group => !group.type);
+    return `${firstFolder?.path}/${firstFolder?.sounds[0].src}`;
+  }
+
   getSoundForId(id: string): SoundData | null {
     const splitId = id.split('/');
     const path = splitId[0];
@@ -133,6 +146,7 @@ export interface SoundData {
   note?: number;
   restricted?: boolean;
   sequence?: SampleSequence;
+  preview?: boolean;
 }
 
 export interface SoundFolder {
@@ -150,6 +164,7 @@ interface FolderGroup {
   path: string;
   bpm?: number;
   key?: string;
+  defaultSound?: string;
   folders: SoundFolder[];
 }
 

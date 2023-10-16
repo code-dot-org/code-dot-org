@@ -32,7 +32,7 @@ class AwsS3IntegrationTest < Minitest::Test
     assert_equal Encoding::BINARY, value.encoding
     assert_equal 256, value.bytesize
     bytes = value.codepoints
-    (0..255).each do |i|
+    256.times do |i|
       assert_equal i, bytes[i]
     end
 

@@ -65,7 +65,9 @@ en:
         age: 'Age'
         gender: 'Gender'
         edit_header: 'Edit Account Details'
+        ai_settings_header: 'AI Settings'
         finish_sign_up_header: 'Finish creating your account'
+        finish_sign_up_header_error: 'Please correct the following errors:'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Fill out the following information to finish creating a Code.org account for **%{email}**.'
         finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
@@ -73,7 +75,9 @@ en:
         reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
+        user_type: 'Account Type'
         us_state: 'State'
+        ai_rubrics_disabled: 'Disable AI Rubric Feature'
 
   beta: "beta"
   hello: "Hello world"
@@ -1214,13 +1218,16 @@ en:
         israel: 'Israel'
         jamaica: 'Jamaica'
         kenya: 'Kenya'
+        kosovo: 'Kosovo'
         malaysia: 'Malaysia'
         maldives: 'Maldives'
         mexico: 'Mexico'
         mongolia: 'Mongolia'
         new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        philippines: 'Philippines'
         portugal: 'Portugal'
+        puerto_rico: 'Puerto Rico'
         slovakia: 'Slovakia'
         south_korea: 'South Korea'
         spain: 'Spain'
@@ -1318,6 +1325,7 @@ en:
       workshops_k5: 'K-5 Workshops'
       summer_workshops_612: '6-12 Summer Workshops'
       virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
+      unsupported: 'Unsupported'
   cookie_banner:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
@@ -1338,6 +1346,7 @@ en:
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
       confirm_login: 'Select "Confirm" to log in with your Google account.'
+    setup_page_title: 'Maker Setup'
   parent_email_banner:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
@@ -1373,3 +1382,7 @@ en:
     binary: "Binary"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Pixel Format"
+  course_deprecated:
+    title: "Heads up! This curriculum is no longer available, but Code.org has newer options available for you."
+    button: "View new curriculum"
+

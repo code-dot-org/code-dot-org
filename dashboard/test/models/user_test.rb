@@ -159,7 +159,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
@@ -172,7 +172,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -186,7 +186,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     assert_equal original_school_info, user.school_info
     refute_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 1
   end
@@ -199,7 +199,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -212,7 +212,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -392,14 +392,14 @@ class UserTest < ActiveSupport::TestCase
   test 'cannot create user when a user with the same credentials exists' do
     User.create(@good_data_google_classroom_import)
     duplicate_user = User.create(@good_data_google_classroom_import)
-    assert_not_empty(duplicate_user.errors)
+    refute_empty(duplicate_user.errors)
     assert(duplicate_user.errors[:uid])
   end
 
   test 'cannot create user when an non-migrated user with the same credentials exists' do
     User.create(@good_data_google_classroom_import).demigrate_from_multi_auth
     duplicate_user = User.create(@good_data_google_classroom_import)
-    assert_not_empty(duplicate_user.errors)
+    refute_empty(duplicate_user.errors)
     assert(duplicate_user.errors[:uid])
   end
 
@@ -572,6 +572,24 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "saving user strips display name and family name" do
+    user = create :student, name: '  test name  ', family_name: '  test fam name  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name'
+    assert_equal user.family_name, 'test fam name'
+
+    user.name = '  test name 2  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name 2'
+
+    user.family_name = '  test fam name 2  '
+    user.save
+    user.reload
+    assert_equal user.family_name, 'test fam name 2'
+  end
+
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       assert_creates(User) do
@@ -695,14 +713,14 @@ class UserTest < ActiveSupport::TestCase
                   password: 'xxxxxxxx', provider: 'manual'
       )
     end
-    assert_not_nil user.errors[:email]
+    refute_nil user.errors[:email]
   end
 
   # FND-1130: This test will no longer be required
   test "teacher with no email created after 2016-06-14 should be invalid" do
     user = create :teacher, :without_email
     assert user.invalid?
-    assert_not_empty user.errors[:email]
+    refute_empty user.errors[:email]
   end
 
   # FND-1130: This test will no longer be required
@@ -2360,8 +2378,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_teacher given valid params should delete family_name property' do
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     family_name = 'TestFamName'
     user = User.create(@good_data.merge({family_name: family_name}))
     user.reload
@@ -2372,8 +2388,6 @@ class UserTest < ActiveSupport::TestCase
 
     user.reload
     assert_nil user.family_name
-
-    DCDO.unstub(:get)
   end
 
   def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
@@ -2387,7 +2401,7 @@ class UserTest < ActiveSupport::TestCase
     parent_email_params = @good_parent_email_params
     User.create(@good_data.merge(parent_email_params))
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -2395,7 +2409,7 @@ class UserTest < ActiveSupport::TestCase
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in: 'no'})
     User.create(@good_data.merge(parent_email_params))
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -2408,7 +2422,7 @@ class UserTest < ActiveSupport::TestCase
     user.update!(parent_email_params)
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
     # There should now be an email preference because the user was updated with a parent_email.
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -3477,7 +3491,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal(['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
     end
 
     test "it does not return pl scripts that are in returned pl courses" do
@@ -3487,7 +3501,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal(['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
     end
 
     test "it optionally does not return primary course in returned student courses" do
@@ -3509,7 +3523,7 @@ class UserTest < ActiveSupport::TestCase
 
       assert_equal 1, courses_and_scripts.length
 
-      assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
+      assert_equal(['testcourse'], courses_and_scripts.map {|cs| cs[:name]})
     end
   end
 
@@ -3690,7 +3704,7 @@ class UserTest < ActiveSupport::TestCase
   test 'new users require a password if no authentication provided' do
     assert_raises(ActiveRecord::RecordInvalid) do
       user = create :user, password: nil
-      assert !user.errors[:password].empty?
+      refute user.errors[:password].empty?
     end
   end
 
@@ -3906,7 +3920,7 @@ class UserTest < ActiveSupport::TestCase
       @pl_script.reload
     end
 
-    def put_participant_in_section(participant, instructor, script, unit_group=nil, participant_type='student')
+    def put_participant_in_section(participant, instructor, script, unit_group = nil, participant_type = 'student')
       section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grades: participant_type == 'student' ? ['9'] : ['pl']
       Follower.create!(section_id: section.id, student_user_id: participant.id, user: instructor)
       section
@@ -4791,14 +4805,30 @@ class UserTest < ActiveSupport::TestCase
     family_name = 'TestFamilyName'
     user.family_name = family_name
 
-    assert_nil(user.summarize[:family_name])
-
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     assert(user.summarize.key?(:family_name))
     assert_equal(family_name, user.summarize[:family_name])
+  end
 
-    DCDO.unstub(:get)
+  test 'family name is not allowed on pl participants' do
+    user = create :user
+    family_name = 'TestFamilyName'
+
+    pl_section = create :section, :teacher_participants, user_id: @teacher.id
+    Follower.create!(section_id: pl_section.id, student_user_id: user.id)
+
+    assert(user.valid?)
+
+    user.family_name = family_name
+
+    refute(user.valid?)
+  end
+
+  test 'family name is not allowed on teachers' do
+    user = create :teacher
+    family_name = 'TestFamilyName'
+    user.family_name = family_name
+
+    refute(user.valid?)
   end
 
   test 'school_info_school returns the school associated with the user' do
@@ -4924,5 +4954,18 @@ class UserTest < ActiveSupport::TestCase
   test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
     teacher = create :teacher
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
+  end
+
+  test "given a noncompliant child account, that account is locked out" do
+    student = create :non_compliant_child
+    student.save!
+    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
+    refute_empty student.child_account_compliance_lock_out_date
+  end
+
+  test "given a compliant child account, that account is NOT locked out" do
+    student = create :non_compliant_child, :with_parent_permission
+    student.save!
+    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
   end
 end

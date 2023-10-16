@@ -62,7 +62,7 @@ ky:
         SpecialSeries:
           description_audience: 10-18 жаштагылар
         mc:
-          title: Minecraft код сааты
+          title: Minecraft тентек
         CSF_Secret_Sample:
           description_audience: 8-18 жаштагылар
         CSF_Secret_Sample_Story:
@@ -597,4 +597,38 @@ ky:
         coursef-2023:
           lesson_groups:
             lessonGroup-4:
+              display_name: Өзгөрмөлөр
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+            lessonGroup-6:
+              display_name: Окуялар
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+            lessonGroup-5:
+              display_name: Окуялар
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Циклдер
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Функциялар
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Шартуулар
+            lessonGroup-5:
               display_name: Өзгөрмөлөр

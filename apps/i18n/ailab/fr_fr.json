@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Sélectionnez l'ensemble de données que vous souhaitez utiliser.",
-  "uploadedDataset": "Vous venez de charger un jeu de données.",
-  "selectedDataset": "Vous venez de sélectionner un jeu de données.",
-  "dataDisplayLabel": "Choisissez une colonne à prévoir.",
   "dataDisplayFeatures": "Choisissez une ou plusieurs colonnes comme entrées pour faciliter la prédiction.",
-  "selectedFeatureNumerical": "Vous venez de sélectionner une fonction numérique.",
-  "selectedFeatureCategorical": "Vous venez de sélectionner une fonctionnalité catégorielle.",
-  "trainModel": "Votre modèle est en cours de formation.",
+  "dataDisplayLabel": "Choisissez une colonne à prévoir.",
   "generateResults": "Votre modèle est en cours de test.",
+  "modelSummary": "Vous avez correctement entraîné et enregistré votre modèle. Vérifiez les détails de votre modèle et cliquez sur Terminer pour utiliser votre modèle entraîné dans App Lab.",
   "results": "Passez en revue les résultats.",
   "resultsDetails": "Les détails des résultats sont affichés.",
   "saveModel": "Enregistrez le modèle entraîné pour l'utiliser dans App Lab.",
-  "modelSummary": "Vous avez correctement entraîné et enregistré votre modèle. Vérifiez les détails de votre modèle et cliquez sur Terminer pour utiliser votre modèle entraîné dans App Lab."
+  "selectDataset": "Sélectionnez l'ensemble de données que vous souhaitez utiliser.",
+  "selectedDataset": "Vous venez de sélectionner un jeu de données.",
+  "selectedFeatureCategorical": "Vous venez de sélectionner une fonctionnalité catégorielle.",
+  "selectedFeatureNumerical": "Vous venez de sélectionner une fonction numérique.",
+  "trainModel": "Votre modèle est en cours de formation.",
+  "uploadedDataset": "Vous venez de charger un jeu de données."
 }

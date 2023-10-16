@@ -455,7 +455,7 @@ describe('MultipleSectionsAssigner', () => {
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 
-    wrapper.find('.select-all-sections').simulate('click');
+    wrapper.find('#select-all-sections').simulate('click');
     const allSections = wrapper.find('Checkbox');
     for (let i = 0; i < allSections.length; i++) {
       expect(allSections.at(i).props().checked).to.be.true;

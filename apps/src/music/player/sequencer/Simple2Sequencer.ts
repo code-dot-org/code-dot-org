@@ -1,9 +1,10 @@
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
-import {logWarning} from '../../utils/MusicMetrics';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
 import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
+import {FunctionEvents} from '../interfaces/FunctionEvents';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
 import MusicLibrary from '../MusicLibrary';
@@ -13,20 +14,6 @@ interface SequenceFrame {
   measure: number;
   together: boolean;
   lastMeasures: number[];
-}
-
-/**
- * This is very similar to {@link FunctionContext}, but also contains
- * all playback events that occur in the function. This model will be
- * useful for timeline rendering, but as of now is only used within this
- * class.
- */
-interface FunctionEvents {
-  name: string;
-  uniqueInvocationId: number;
-  playbackEvents: PlaybackEvent[];
-  startMeasure: number;
-  endMeasure: number;
 }
 
 interface SkipFrame {
@@ -128,6 +115,7 @@ export default class Simple2Sequencer extends Sequencer {
       startMeasure: this.getCurrentMeasure(),
       endMeasure: this.getCurrentMeasure(),
       playbackEvents: [],
+      calledFunctionIds: [],
     };
 
     this.functionStack.push(uniqueId);
@@ -145,6 +133,13 @@ export default class Simple2Sequencer extends Sequencer {
     const lastFunctionId = this.functionStack.pop();
     if (lastFunctionId !== undefined) {
       this.functionMap[lastFunctionId].endMeasure = this.getCurrentMeasure();
+
+      if (this.functionStack.length > 0) {
+        // Add the called function to the list of functions that its caller called.
+        this.functionMap[
+          this.functionStack[this.functionStack.length - 1]
+        ].calledFunctionIds.push(lastFunctionId);
+      }
     }
 
     this.effectsStack.pop();
@@ -171,7 +166,7 @@ export default class Simple2Sequencer extends Sequencer {
   // Move to the next child of a play_random block.
   nextRandom() {
     if (this.randomStack.length === 0) {
-      logWarning(
+      Lab2MetricsReporter.logWarning(
         'Invalid state; tried to call nextRandom() without active random context'
       );
       return;
@@ -204,7 +199,7 @@ export default class Simple2Sequencer extends Sequencer {
   playSound(id: string, blockId: string) {
     const soundData = this.library.getSoundForId(id);
     if (soundData === null) {
-      logWarning('Could not find sound with ID: ' + id);
+      Lab2MetricsReporter.logWarning('Could not find sound with ID: ' + id);
       return;
     }
 
@@ -291,7 +286,7 @@ export default class Simple2Sequencer extends Sequencer {
   private addNewEvent<T extends PlaybackEvent>(event: T) {
     const currentFunctionId = this.getCurrentFunctionId();
     if (currentFunctionId === null) {
-      logWarning('Invalid state: no current function ID');
+      Lab2MetricsReporter.logWarning('Invalid state: no current function ID');
       return;
     }
     const currentFunction = this.functionMap[currentFunctionId];

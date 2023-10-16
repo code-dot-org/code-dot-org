@@ -118,7 +118,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
           disabled={isTextEmpty(commentText)}
           onClick={handleSubmit}
           text={javalabMsg.submit()}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           style={styles.submitButton}
         />
       </div>

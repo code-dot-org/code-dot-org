@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Siegħa tal-Kodiċi Kif-To għad-Distretti
 ---
 
 {{ signup_button }}

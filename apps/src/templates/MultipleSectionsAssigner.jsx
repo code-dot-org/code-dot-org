@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import classnames from 'classnames';
 
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -195,26 +194,20 @@ const MultipleSectionsAssigner = ({
 
   return (
     <AccessibleDialog onClose={onClose}>
-      <div
-        tabIndex="0"
-        className={classnames(
-          'uitest-confirm-assignment-dialog',
-          moduleStyle.modalHeader
-        )}
-      >
+      <div tabIndex="0" className={moduleStyle.modalHeader}>
         <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
       </div>
       <div className={moduleStyle.sectionsDirections}>
         <BodyTwoText>{sectionDirections}</BodyTwoText>
       </div>
-      <div
-        className={classnames(
-          'uitest-confirm-assignment-dialog',
-          moduleStyle.sectionList
-        )}
-      >
+      <div className={moduleStyle.sectionList}>
         <Heading5>{i18n.yourSectionsList()}</Heading5>
-        <div className={moduleStyle.sectionListOptionsContainer}>
+        <div
+          role="region"
+          aria-label={i18n.sectionSelectionLabel()}
+          className={moduleStyle.sectionListOptionsContainer}
+          tabIndex="0"
+        >
           {sections &&
             sections.map(
               section =>
@@ -233,15 +226,13 @@ const MultipleSectionsAssigner = ({
                 )
             )}
         </div>
-        <a
-          className={classnames(
-            moduleStyle.selectAllOptions,
-            'select-all-sections'
-          )}
+        <Button
+          id="select-all-sections"
+          text={i18n.selectAll()}
           onClick={selectAllHandler}
-        >
-          {i18n.selectAll()}
-        </a>
+          styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
       </div>
 
       <div className={moduleStyle.buttonContainer}>

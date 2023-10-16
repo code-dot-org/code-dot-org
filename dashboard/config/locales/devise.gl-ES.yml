@@ -61,6 +61,27 @@ gl:
       unlocked: A tua conta foi desbloqueada con éxito. Por favor, Inscríbete para
         continuar.
   errors:
+    invitations:
+      edit:
+        header: Define o teu contrasinal
+        submit_button: Definir contrasinal
+      invitation_removed: O teu convite foi removido.
+      invitation_token_invalid: O teu convite non é válido!
+      new:
+        header: Enviar convite
+        submit_button: Enviar un convite
+      no_invitations_remaining: Ningún convite restante
+      send_instructions: Foi enviado un convite por e-mail para %{email}.
+      updated: O teu contrasinal foi alterado e iniciaches sesión con éxito.
+    mailer:
+      invitation_instructions:
+        accept: Aceptar convite
+        hello: Ola, %{email}!
+        ignore: Se non queres aceptar o convite, ignora este e-mail.<br />A túa conta
+          non se creará até que accedas á ligazón de enriba e metas o teu contrasinal.
+        someone_invited_you: Alguén te convidou para o %{url}. Para aceptares o convite,
+          accede á seguinte ligazón.
+        subject: Instrucións da invitación
     messages:
       already_confirmed: xa foi confirmado, por favor, tenta entrar
       confirmation_period_expired: ten que ser confirmado dentro de %{period}. Por
@@ -68,24 +89,3 @@ gl:
       expired: caducou, por favor pide unha nova
       not_found: non encontrado
       not_locked: non foi bloqueado
-    invitations:
-      send_instructions: Foi enviado un convite por e-mail para %{email}.
-      invitation_token_invalid: O teu convite non é válido!
-      updated: O teu contrasinal foi alterado e iniciaches sesión con éxito.
-      no_invitations_remaining: Ningún convite restante
-      invitation_removed: O teu convite foi removido.
-      new:
-        header: Enviar convite
-        submit_button: Enviar un convite
-      edit:
-        header: Define o teu contrasinal
-        submit_button: Definir contrasinal
-    mailer:
-      invitation_instructions:
-        subject: Instrucións da invitación
-        hello: Ola, %{email}!
-        someone_invited_you: Alguén te convidou para o %{url}. Para aceptares o convite,
-          accede á seguinte ligazón.
-        accept: Aceptar convite
-        ignore: Se non queres aceptar o convite, ignora este e-mail.<br />A túa conta
-          non se creará até que accedas á ligazón de enriba e metas o teu contrasinal.

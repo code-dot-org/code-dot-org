@@ -82,6 +82,22 @@ const optionsList = [
     type: 'string',
     description: 'Set a specific key by name (i.e. "C", "C#", "D", etc)',
   },
+  {
+    name: 'skip-controls-enabled',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Disable skip controls.'},
+      {value: 'true', description: 'Enable skip controls.'},
+    ],
+  },
+  {
+    name: 'keyboard-shortcuts-enabled',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Disable keyboard shortcuts.'},
+      {value: 'true', description: 'Enable keyboard shortcuts.'},
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {

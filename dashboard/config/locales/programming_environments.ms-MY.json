@@ -2,227 +2,10 @@
   "ms-MY": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Makmal Web"
-        },
-        "gamelab": {
-          "name": "Makmal Permainan",
-          "categories": {
-            "game_lab": {
-              "name": "Makmal Permainan",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Peperi"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Peperi"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Hitam dan Putih"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Memainkan fail bunyi MP3 daripada URL yang ditentukan."
-                },
-                "showMobileControls": {
-                  "content": "Mengubah kawalan mudah alih yang kelihatan di bawah ruang permainan.",
-                  "short_description": "Mengubah kawalan mudah alih yang kelihatan di bawah ruang permainan."
-                }
-              }
-            },
-            "sprites": {
-              "name": "Jin",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Lingkaran"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "Ketinggian sprite."
-                },
-                "sprite.width": {
-                  "return_value": "Lebar sprite."
-                }
-              }
-            },
-            "groups": {
-              "name": "Kumpulan",
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Peperi"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Peperi"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Peperi"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Warna"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Warna"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Lukisan",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Gerakan Bintang"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Bilangan milisaat antara setiap pelaksanaan fungsi."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Bilangan milisaat menunggu sebelum melaksanakan fungsi."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematik",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Minimum nombor yang kembali"
-                    },
-                    "max": {
-                      "description": "Nombor maksimum yang dipulangkan"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Minimum nombor yang kembali"
-                    },
-                    "max": {
-                      "description": "Nombor maksimum yang dipulangkan"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Pemboleh ubah",
-              "expressions": {
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Rentetan untuk dicari."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Rentetan untuk dicari."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "Panjang rentetan"
-                }
-              }
-            },
-            "functions": {
-              "name": "Fungsi"
-            }
-          }
-        },
         "applab": {
-          "name": "Makmal Aplikasi",
-          "description": "App Lab ialah persekitaran pengaturcaraan di mana anda boleh membuat aplikasi mudah. Reka apl, kod dengan blok atau JavaScript untuk menjadikannya berfungsi, kemudian kongsi apl anda dalam beberapa saat.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "Membuat butang pada layar yang menampilkan teks yang disediakan dan dirujuk oleh id yang diberikan di lokasi lalai (0,0)."
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Mengecil dan Membesar"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "Fungsi"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Memainkan fail bunyi MP3 daripada URL yang ditentukan."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "Harta untuk berubah."
-                    }
-                  },
-                  "short_description": "Menetapkan properti ke nilai baru untuk elemen yang ditentukan."
-                },
-                "setScreen": {
-                  "short_description": "Tetapkan layar ke screenID yang diberikan."
-                },
-                "showElement": {
-                  "short_description": "Menunjukkan elemen dengan id yang disediakan."
-                },
-                "textLabel": {
-                  "short_description": "Membuat label teks pada layar yang menampilkan teks yang disediakan dan dirujuk oleh id yang diberikan di lokasi lalai (0,0)."
-                }
-              }
+            "advanced": {
+              "name": "Lanjutan"
             },
             "canvas": {
               "expressions": {
@@ -288,17 +71,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "Ketinggian segi empat tepat yang melompat-lompat untuk menangkap data imej."
+                    },
+                    "width": {
+                      "description": "Lebar segi empat tepat untuk menangkap data imej."
+                    },
                     "x": {
                       "description": "Kedudukan x dalam piksel untuk memulakan tangkapan."
                     },
                     "y": {
                       "description": "Kedudukan y dalam piksel untuk memulakan tangkapan."
-                    },
-                    "width": {
-                      "description": "Lebar segi empat tepat untuk menangkap data imej."
-                    },
-                    "height": {
-                      "description": "Ketinggian segi empat tepat yang melompat-lompat untuk menangkap data imej."
                     }
                   }
                 },
@@ -330,22 +113,25 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "Ketinggian menegak dalam piksel segi empat tepat."
+                    },
+                    "width": {
+                      "description": "Lebar mendatar dalam piksel segi empat tepat."
+                    },
                     "x": {
                       "description": "Kedudukan x dalam piksel sudut kiri atas segi empat tepat."
                     },
                     "y": {
                       "description": "Kedudukan y dalam piksel sudut kiri atas segi empat tepat."
-                    },
-                    "width": {
-                      "description": "Lebar mendatar dalam piksel segi empat tepat."
-                    },
-                    "height": {
-                      "description": "Ketinggian menegak dalam piksel segi empat tepat."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "Jumlah alpha (opacity) (dari 0 hingga 255) untuk ditetapkan dalam piksel."
+                    },
                     "imageData": {
                       "type": "objek"
                     },
@@ -354,15 +140,15 @@
                     },
                     "y": {
                       "description": "Kedudukan y dalam piksel bermula dari sudut kiri atas imej."
-                    },
-                    "alphaValue": {
-                      "description": "Jumlah alpha (opacity) (dari 0 hingga 255) untuk ditetapkan dalam piksel."
                     }
                   },
                   "short_description": "Menetapkan jumlah alpha (opacity) (antara 0 hingga 255) dalam warna piksel yang terletak pada kedudukan x dan y yang diberikan dalam data imej yang diberikan."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "Jumlah biru (dari 0 hingga 255) untuk ditetapkan dalam piksel."
+                    },
                     "imageData": {
                       "type": "objek"
                     },
@@ -371,15 +157,15 @@
                     },
                     "y": {
                       "description": "Kedudukan y dalam piksel bermula dari sudut kiri atas imej."
-                    },
-                    "blueValue": {
-                      "description": "Jumlah biru (dari 0 hingga 255) untuk ditetapkan dalam piksel."
                     }
                   },
                   "short_description": "Menetapkan jumlah biru (antara 0 hingga 255) dalam warna piksel yang terletak pada kedudukan x dan y yang diberikan dalam data imej yang diberikan kepada jumlah input BlueValue."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "Jumlah hijau (dari 0 hingga 255) untuk ditetapkan dalam piksel."
+                    },
                     "imageData": {
                       "type": "objek"
                     },
@@ -388,35 +174,32 @@
                     },
                     "y": {
                       "description": "Kedudukan y dalam piksel bermula dari sudut kiri atas imej."
-                    },
-                    "greenValue": {
-                      "description": "Jumlah hijau (dari 0 hingga 255) untuk ditetapkan dalam piksel."
                     }
                   },
                   "short_description": "Menetapkan jumlah hijau (antara 0 hingga 255) dalam warna piksel yang terletak pada kedudukan x dan y yang diberikan dalam data imej yang diberikan kepada jumlah input GreenValue."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "Pilihan. Jumlah kelegapan (dari 0 hingga 255) untuk ditetapkan dalam piksel. Lalai ke 255 (kelegapan penuh)."
+                    },
+                    "blue": {
+                      "description": "Jumlah biru (dari 0 hingga 255) untuk ditetapkan dalam piksel."
+                    },
+                    "green": {
+                      "description": "Jumlah hijau (dari 0 hingga 255) untuk ditetapkan dalam piksel."
+                    },
                     "imageData": {
                       "type": "objek"
+                    },
+                    "red": {
+                      "description": "Jumlah merah (dari 0 hingga 255) untuk ditetapkan dalam piksel."
                     },
                     "x": {
                       "description": "Kedudukan x dalam piksel bermula dari sudut kiri atas imej."
                     },
                     "y": {
                       "description": "Kedudukan y dalam piksel bermula dari sudut kiri atas imej."
-                    },
-                    "red": {
-                      "description": "Jumlah merah (dari 0 hingga 255) untuk ditetapkan dalam piksel."
-                    },
-                    "green": {
-                      "description": "Jumlah hijau (dari 0 hingga 255) untuk ditetapkan dalam piksel."
-                    },
-                    "blue": {
-                      "description": "Jumlah biru (dari 0 hingga 255) untuk ditetapkan dalam piksel."
-                    },
-                    "alpha": {
-                      "description": "Pilihan. Jumlah kelegapan (dari 0 hingga 255) untuk ditetapkan dalam piksel. Lalai ke 255 (kelegapan penuh)."
                     }
                   }
                 },
@@ -425,22 +208,53 @@
                     "imageData": {
                       "type": "objek"
                     },
+                    "redValue": {
+                      "description": "Jumlah merah (dari 0 hingga 255) untuk ditetapkan dalam piksel."
+                    },
                     "x": {
                       "description": "Kedudukan x dalam piksel bermula dari sudut kiri atas imej."
                     },
                     "y": {
                       "description": "Kedudukan y dalam piksel bermula dari sudut kiri atas imej."
-                    },
-                    "redValue": {
-                      "description": "Jumlah merah (dari 0 hingga 255) untuk ditetapkan dalam piksel."
                     }
                   },
                   "short_description": "Menetapkan jumlah merah (antara 0 hingga 255) dalam warna piksel yang terletak pada kedudukan x dan y yang diberikan dalam data imej yang diberikan kepada jumlah input RedValue."
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Nilai yang dikembalikan oleh fungsi setTimeout untuk membatalkan."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Bilangan milisaat antara setiap pelaksanaan fungsi."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Bilangan milisaat menunggu sebelum melaksanakan fungsi."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fungsi"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Data",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -465,11 +279,11 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
-                    "tableName": {
-                      "description": "Nama jadual untuk mengambil rekod dari."
-                    },
                     "options": {
                       "type": "objek"
+                    },
+                    "tableName": {
+                      "description": "Nama jadual untuk mengambil rekod dari."
                     }
                   }
                 },
@@ -529,7 +343,36 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "Data"
+            },
+            "functions": {
+              "name": "Fungsi"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Nombor maksimum yang dipulangkan"
+                    },
+                    "min": {
+                      "description": "Minimum nombor yang kembali"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Nombor maksimum yang dipulangkan"
+                    },
+                    "min": {
+                      "description": "Minimum nombor yang kembali"
+                    }
+                  }
+                }
+              },
+              "name": "Matematik"
             },
             "turtle": {
               "expressions": {
@@ -596,75 +439,59 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "Nilai yang dikembalikan oleh fungsi setTimeout untuk membatalkan."
-                    }
-                  }
+                "button": {
+                  "short_description": "Membuat butang pada layar yang menampilkan teks yang disediakan dan dirujuk oleh id yang diberikan di lokasi lalai (0,0)."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Bilangan milisaat antara setiap pelaksanaan fungsi."
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Mengecil dan Membesar"
                     }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Bilangan milisaat menunggu sebelum melaksanakan fungsi."
-                    }
-                  }
-                },
-                "timedLoop": {
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Fungsi"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematik",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Minimum nombor yang kembali"
-                    },
-                    "max": {
-                      "description": "Nombor maksimum yang dipulangkan"
-                    }
-                  }
                 },
-                "randomNumber": {
+                "playSound": {
+                  "short_description": "Memainkan fail bunyi MP3 daripada URL yang ditentukan."
+                },
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "Minimum nombor yang kembali"
-                    },
-                    "max": {
-                      "description": "Nombor maksimum yang dipulangkan"
+                    "property": {
+                      "description": "Harta untuk berubah."
                     }
-                  }
+                  },
+                  "short_description": "Menetapkan properti ke nilai baru untuk elemen yang ditentukan."
+                },
+                "setScreen": {
+                  "short_description": "Tetapkan layar ke screenID yang diberikan."
+                },
+                "showElement": {
+                  "short_description": "Menunjukkan elemen dengan id yang disediakan."
+                },
+                "textLabel": {
+                  "short_description": "Membuat label teks pada layar yang menampilkan teks yang disediakan dan dirujuk oleh id yang diberikan di lokasi lalai (0,0)."
                 }
               }
             },
             "variables": {
-              "name": "Pemboleh ubah",
               "expressions": {
+                "addPair": {
+                  "return_value": "Tiada"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Mengisytiharkan dan menetapkan array untuk pembolehubah"
+                },
                 "declareAssign_object": {
                   "examples": {
                     "Choose Your Own Adventure": {
                       "name": "Pilih Pengembaraan Anda Sendiri"
                     }
                   }
-                },
-                "declareAssign_list_123": {
-                  "short_description": "Mengisytiharkan dan menetapkan array untuk pembolehubah"
                 },
                 "includes": {
                   "palette_params": {
@@ -680,68 +507,241 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "Tiada"
+                "length": {
+                  "return_value": "Panjang rentetan"
+                }
+              },
+              "name": "Pemboleh ubah"
+            }
+          },
+          "description": "App Lab ialah persekitaran pengaturcaraan di mana anda boleh membuat aplikasi mudah. Reka apl, kod dengan blok atau JavaScript untuk menjadikannya berfungsi, kemudian kongsi apl anda dalam beberapa saat.",
+          "name": "Makmal Aplikasi"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Bilangan milisaat antara setiap pelaksanaan fungsi."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Bilangan milisaat menunggu sebelum melaksanakan fungsi."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Gerakan Bintang"
+                    }
+                  }
+                }
+              },
+              "name": "Lukisan"
+            },
+            "functions": {
+              "name": "Fungsi"
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Hitam dan Putih"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Memainkan fail bunyi MP3 daripada URL yang ditentukan."
+                },
+                "showMobileControls": {
+                  "content": "Mengubah kawalan mudah alih yang kelihatan di bawah ruang permainan.",
+                  "short_description": "Mengubah kawalan mudah alih yang kelihatan di bawah ruang permainan."
+                }
+              },
+              "name": "Makmal Permainan"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Warna"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Warna"
+                    }
+                  }
+                }
+              },
+              "name": "Kumpulan"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Nombor maksimum yang dipulangkan"
+                    },
+                    "min": {
+                      "description": "Minimum nombor yang kembali"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Nombor maksimum yang dipulangkan"
+                    },
+                    "min": {
+                      "description": "Minimum nombor yang kembali"
+                    }
+                  }
+                }
+              },
+              "name": "Matematik"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Lingkaran"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Ketinggian sprite."
+                },
+                "sprite.width": {
+                  "return_value": "Lebar sprite."
+                }
+              },
+              "name": "Jin"
+            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Rentetan untuk dicari."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Rentetan untuk dicari."
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "Panjang rentetan"
                 }
-              }
-            },
-            "functions": {
-              "name": "Fungsi"
-            },
-            "advanced": {
-              "name": "Lanjutan"
+              },
+              "name": "Pemboleh ubah"
             }
-          }
+          },
+          "name": "Makmal Permainan"
+        },
+        "javalab": {
+          "name": "Java Lab"
         },
         "spritelab": {
-          "name": "Sprite Lab",
           "categories": {
-            "sprites": {
-              "name": "Jin"
-            },
-            "world": {
-              "name": "Dunia"
-            },
-            "location": {
-              "name": "Lokasi"
-            },
             "actions": {
               "name": "Tindakan"
-            },
-            "events": {
-              "name": "Acara-acara"
             },
             "behaviors": {
               "name": "Tingkah laku"
             },
-            "loops": {
-              "name": "Gelung"
+            "comments": {
+              "name": "Komen"
             },
-            "variables": {
-              "name": "Pemboleh ubah"
-            },
-            "math": {
-              "name": "Matematik"
-            },
-            "logic": {
-              "name": "Logik"
+            "events": {
+              "name": "Acara-acara"
             },
             "functions": {
               "name": "Fungsi"
             },
+            "location": {
+              "name": "Lokasi"
+            },
+            "logic": {
+              "name": "Logik"
+            },
+            "loops": {
+              "name": "Gelung"
+            },
+            "math": {
+              "name": "Matematik"
+            },
+            "sprites": {
+              "name": "Jin"
+            },
             "text": {
               "name": "teks"
             },
-            "comments": {
-              "name": "Komen"
+            "variables": {
+              "name": "Pemboleh ubah"
+            },
+            "world": {
+              "name": "Dunia"
             }
-          }
+          },
+          "name": "Sprite Lab"
         },
-        "javalab": {
-          "name": "Java Lab"
+        "weblab": {
+          "name": "Makmal Web"
         }
       }
     }

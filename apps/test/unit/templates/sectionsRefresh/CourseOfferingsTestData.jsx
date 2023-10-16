@@ -811,3 +811,123 @@ export const plCourseOfferings = {
     ],
   },
 };
+
+export const noRecommendedVersionsOfferings = {
+  high: {
+    Course: {
+      'Year Long': [
+        {
+          id: 73,
+          key: 'csa',
+          display_name: 'Computer Science A',
+          course_versions: [
+            [
+              370,
+              {
+                id: 370,
+                key: '2019',
+                version_year: '19-20',
+                content_root_id: 32,
+                name: 'Informática A (19-20)',
+                path: '/courses/csa-2019',
+                type: 'UnitGroup',
+                is_stable: true,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  173: {
+                    id: 173,
+                    name: "Programación Orientada a Objetos ('19-'20)",
+                    path: '/s/csa1-2019',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: true,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+            [
+              373,
+              {
+                id: 373,
+                key: '2022',
+                version_year: '22-23',
+                content_root_id: 32,
+                name: 'Informática A (22-23)',
+                path: '/courses/csa-2022',
+                type: 'UnitGroup',
+                is_stable: true,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  173: {
+                    id: 173,
+                    name: "Programación Orientada a Objetos ('22-'23)",
+                    path: '/s/csa1-2022',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: true,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+            [
+              377,
+              {
+                id: 377,
+                key: '2020',
+                version_year: '',
+                content_root_id: 36,
+                name: 'Piloto de CSA',
+                path: '/courses/csa-pilot',
+                type: 'UnitGroup',
+                is_stable: false,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  177: {
+                    id: 177,
+                    name: 'Programación Orientada a Objetos *',
+                    path: '/s/csa1-pilot',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: false,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+            [
+              775,
+              {
+                id: 775,
+                key: '2023',
+                version_year: '23-24',
+                content_root_id: 62,
+                name: 'Informática A (23-24)',
+                path: '/courses/csa-2023',
+                type: 'UnitGroup',
+                is_stable: false,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  174: {
+                    id: 174,
+                    name: 'Programación Orientada a Objetos *',
+                    path: '/s/csa1-2023',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: false,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+          ],
+        },
+      ],
+    },
+  },
+};

@@ -1,7 +1,7 @@
 {
   "addCSSButton": "CSS ekle",
-  "addImageButton": "Görsel ekle",
   "addHTMLButton": "HTML Ekle",
+  "addImageButton": "Görsel ekle",
   "closeFullscreenPreview": "Tam ekran önizlemesini kapat",
   "currentProjectCapacity": "{totalMegabytes}MB 'dan {currentMegabytes}MB  kullanıldı",
   "disallowedHtml": "“{filename}\" dosyası izin verilmeyen HTML öğelerini içerir: `{disallowedTags}`. Bu iletişim kutusu kapatıldığında bunlar kaldırılacaktır.",
@@ -14,8 +14,8 @@
   "reset": "Web Laboratuarını Sıfırla",
   "resetComplete": "Web Laboratuvarı SıfırlamaTamamlandı",
   "resetFailure": "Web Laboratuvarı sıfırlanamadı: {message}.",
-  "toggleInspectorOn": "Müfettiş: Kapalı",
   "toggleInspectorOff": "Müfettiş: Açık",
+  "toggleInspectorOn": "Müfettiş: Kapalı",
   "troubleshootingSupport": "Daha fazla bilgi için lütfen [\"Web Lab sorunlarını giderme\"]({url}) destek makalemize bakın.",
   "uploadError": "Yükleme Hatası"
 }

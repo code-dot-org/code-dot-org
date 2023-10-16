@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+title: Сонгогдсон албан тушаалтнуудад зориулсан код хэвлэлийн цаг
 ---
 
 {{ signup_button }}

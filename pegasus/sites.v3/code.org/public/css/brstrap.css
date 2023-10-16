@@ -9,10 +9,7 @@
   .container_responsive { width: 100%; margin: 0 auto; padding-left: 10px; padding-right: 10px}
 
   .jumbo { font-size: 45px; }
-  .container_responsive h1 { font-size: 20px; margin-top: 1em; margin-bottom: .5em; }
-  .container_responsive h2 { font-size: 18px; }
-  .container_responsive h3 { font-size: 16px; }
-  .container_responsive h4 { font-size: 14px; }
+  .container_responsive h1 { margin-top: 0; }
   .container_responsive .solid-block-header * { font-size: 20px; }
   .container_responsive .solid-block-subtitle { font-size: 14px; line-height: 1em; padding-right: 10px; padding-bottom: 10px; }
 
@@ -76,7 +73,7 @@
 
   .desktop-pad-right { padding-right: 30px; }
 
-  .container_responsive { width: 970px; margin: 0 auto; max-width: none !important; }
+  .container_responsive { width: 960px; margin: 0 auto; max-width: none !important; }
 
   .tile-container-responsive { display: flex; flex-direction: row; justify-content: space-between; }
   .tile-container-responsive > * { margin-right: 20px; }

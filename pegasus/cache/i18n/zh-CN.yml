@@ -1,307 +1,1121 @@
 ---
 zh-CN:
-  hour_of_code: 编程一小时
-  hello: 世界你好
-  'yes': 对
-  'no': 不
-  select_language: 请选择您的语言
-  upgrade_ie_message: Code.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到新版本的浏览器。
-  upgrade_ie_message_csedweek: CSEdWeek.org 将很快停止对 Internet Explorer 8、9 和 10 的支持。请升级到新版本的浏览器。
-  upgrade_ie_link: 了解详情
-  en: 计算机科学
+  20-hour_name: 加速课程
+  AlgebraA_name: 计算机代数 课程A
+  AlgebraB_name: 计算机代数 课程 B
+  accelerated_gradelevel: 10-18 岁
+  accelerated_name: 加速课程
+  account_sign_up_child_accept_terms: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
+  account_sign_up_email_opt_in: 我们可以通过电子邮件向您发送有关课程、本地的机会以及其他计算机科学新闻吗？（大约每月一次）
+  ai_activity: 活动
+  ai_aiedu_intro: aiEDU：人工智能简介
+  ai_aiedu_intro_description: AI入门是一个免费、创新、与文化相关的课程，学生可以在其中培养关于人工智能的概念，以及如何在现实生活中使用它。
+  ai_and_ethics: 人工智能与道德
+  ai_and_ethics_tile_description: 学生们思考人工智能的道德含义，然后共同努力，为世界各地的 AI 创作者和立法者创建 “AI 道德准则”
+    资源。
+  ai_audience: 观众
+  ai_cognimates: Cognimates
+  ai_cognimates_description: 一个用于构建游戏、编程机器人和训练的 AI 教育平台。
+  ai_description: 描述
+  ai_ecs: ECS：人工智能 (AI)
+  ai_ecs_description: 探索计算机科学（ECS）课程的新的替代课程单元。
+  ai_elements: 人工智能的要素
+  ai_elements_description: Reaktor 和赫尔辛基大学创建的一系列免费在线课程。
+  ai_ethics_lesson_plan: 人工智能与道德课程计划
+  ai_ethics_panel_description_1: 与我们最喜欢的 AI 专家一起深入了解！本次小组讨论涉及算法偏见和工作的未来等重要问题。与我们的配对
+  ai_ethics_panel_description_2: 很好地介绍人工智能的伦理学！
+  ai_ethics_panel_header: 探索人工智能伦理小组讨论
+  ai_for_oceans: 海洋环保中的人工智能
+  ai_for_oceans_lesson_plan: 课程计划
+  ai_for_oceans_tile_description: 通过训练人工智能检测垃圾来帮助人工智能清洁海洋！了解训练数据和偏见，以及人工智能如何解决世界问题。查看
+  ai_google: 使用谷歌进行 AI 实验
+  ai_google_description: 开始通过图片、绘图、语言、音乐等探索机器学习。
+  ai_ibm_machine_learning_for_kids: IBM：面向儿童的机器学习
+  ai_in_partnership_with: '与以下机构合作: '
+  ai_k_12_audience: K-12（需要阅读）
+  ai_machine_learning_for_kids: 儿童机器学习
+  ai_machine_learning_for_kids_description: 使用文本、数字或图像训练机器学习模型，然后使用它在 Scratch 中制作游戏。
+  ai_microsoft_thanks: 我们感谢微软支持我们的理想和使命，以确保每个儿童有机会学习计算机科学和在21世纪取得成功的技能。
+  ai_microsoft_workshop: 微软的免费虚拟研讨会
+  ai_microsoft_workshop_description: 通过免费 STEM 和编码研讨会激发好奇心。
+  ai_minecraft_description: 获取免费资源，包括课程计划、视频、计算机科学课程和教师培训。（需要我的世界：教育版）
+  ai_quick_draw: 快点，画画！
+  ai_quick_draw_description: 神经网络能学会识别涂鸦吗？
+  ai_seeing_ai: 看见 AI
+  ai_seeing_ai_description: 一个免费的应用程序，用多种语言讲述你周围的世界。
+  ai_teachable_machine: 可教的机器
+  ai_teachable_machine_description: 训练计算机识别自己的图像、声音和姿势。
+  ai_try_activity: 尝试活动
+  ai_zooniverse: Zooniverse-快照山斑马
+  ai_zooniverse_description: 通过识别图像中的不同动物来帮助保护濒临灭绝的开普山斑马。
+  algebra_name: 代数课程中的计算机科学
+  alice_beyond_gradelevel: 中学及以上
+  alice_beyond_longdescription: 采用创新的编程环境，以支持创建三维动画，爱丽丝项目提供教学和学习计算式思维技巧的工具和材料，适合不同年龄和年级来学习如何解决问题和计算机编程。
+  alice_beyond_platformtext: Windows 或 Mac（需要安装）
+  alice_beyond_shortdescription: 在三维环境里教编程
+  all_ages: 所有年龄
+  allcancode_gradelevel: 年龄段 5-10
+  allcancode_longdescription: 学生们玩一款基于原型的故事冒险游戏。他们指导马可-游戏里的主人公——由编程一小时使用的可视化编程语言的形式，通过给他分步骤的指导，最终通过每一关。他们不知不觉会了解到测序命令模块、
+    迭代和条件。
+  allcancode_name: 运行马可！
+  allcancode_platformtext: 现代网络浏览器、 iOS
+  allcancode_shortdescription: 身临其境的游戏指导马可学习可视化编程语言。
+  anybody_can_learn: 任何人都可以学习。
+  app_lab_documentation: 应用程序实验室文档
+  app_lab_tutorials: 应用程序实验室说明
+  appinventor_beyond_gradelevel: 中学及以上
+  appinventor_beyond_longdescription: 娱乐、 简短的影片教案引导您在您的安卓手机或平板电脑上完成建立三个简单的应用程序。它设计给新手和专家，此《编程一小时》活动让你在你了解编程之前，开始建构自己的应用程序。想像一下与朋友分享您自己创造的应用程序！这些活动适合个人自学和教师带领的班级课程。
+  appinventor_beyond_name: AppInventor 编程一小时
+  appinventor_beyond_platformtext: 现代浏览器 + 安卓
+  appinventor_beyond_shortdescription: 做你自己的安卓应用程序！
+  appinventor_gradelevel: 中学及以上
+  appinventor_longdescription: 娱乐、 简短的影片教案引导您在您的安卓手机或平板电脑上完成建立三个简单的应用程序。它设计给新手和专家，此《编程一小时》活动让你在你了解编程之前，开始建构自己的应用程序。想像一下与朋友分享您自己创造的应用程序！这些活动适合个人自学和教师带领的班级课程。
+  appinventor_name: AppInventor 编程一小时
+  appinventor_platformtext: 现代浏览器 + 安卓系统
+  appinventor_shortdescription: 做你自己的安卓应用程序!
+  applab-intro_name: 应用程序实验室简介
+  applab_gradelevel: 13岁以上
+  applab_name: 应用实验室
+  applab_shortdescription_congrats: 应用实验室是一个可以让你使用简单的应用程序的编程环境。用代码块或 JavaScript来设计应用程序，然后马上分享您的应用程序。
+  applab_tile_start_tutorial: 开始
+  applab_tile_subtitle: 应用实验室简介（13岁以上）
+  applab_tile_teacher_guide: 查看教师指南
+  applab_tile_title: 应用实验室简介 （13岁以上）
+  aquatic_name: "《我的世界》：水上航行"
+  arduino_beyond_gradelevel: 高中或以上
+  arduino_beyond_longdescription: Arduino是一个流行的平台，让艺术家和设计师使用真实的传感器、LED灯、蜂鸣器等等。Sparkfun
+    的虚拟环境会教你在浏览器中写出 Arduino 代码。
+  arduino_beyond_name: Arduino 与 Sparkfun
+  arduino_beyond_platformtext: 网络浏览器，然后购买套件
+  arduino_beyond_shortdescription: 使用 Sparkfun 的数字沙盘来学习 Arduino。
+  are_you_teacher: 你是老师吗？
+  artist_gradelevel: 适合年龄 8 岁以上
+  artist_name: 小艺术家
+  artist_shortdescription: 和小艺术家一起设计出很酷的图形！
+  basketball_name: 进行一场篮球赛
+  beginner: 初学者
+  beyond_an_hour: 超越一小时代码
+  beyond_hoc: 一小时之后
+  beyond_hour_message: 请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过 <a href='/learn/beyond'>一小时以外的编程</a>查看更多的选择。
+  beyond_hour_message_markdown: 继续我们的[其他课程](http://studio.code.org)，或查看更多选项[一小时之外](/Learn/beyond)。
+  beyond_submission: 想要提交一小时学编程的教程吗？请参阅标准和提交表单。
+  bitsbox_gradelevel: 小学
+  bitsbox_longdescription: 定制您自己的虚拟平板电脑，然后编写一系列的 App 来使用及分享。让非常小的孩子透过简单体验来使用真正 Javascript，成为可能的事，您会达到比您想到还远。
+  bitsbox_name: Bitsbox - 制作游戏
+  bitsbox_platformtext: 现代网络浏览器
+  bitsbox_shortdescription: 使用真正 JavaScript 代码写 一连串的应用程序来玩和共享.
+  blockly_gradelevel: 所有年龄
+  blockly_longdescription: 您有网际网路连线很慢（或根本不存在）的电脑吗？下载模块化的自学教案，Code.org 教案的前辈元老— — 一个3兆字节的压缩文件档案可以载入到任何一台电脑上或存在一个U盘上使用。
+  blockly_name: 模块化
+  blockly_platformtext: 仅限现代浏览器
+  blockly_shortdescription: 下载一个压缩文件，离线学习。
+  boxisland_gradelevel: 小学
+  boxisland_longdescription: 在盒子岛上旅行，帮助阿宽收集散落在荒野中的所有时钟！在这套课件里你将学习关于算法、 序列、 循环和条件的基础知识！
+  boxisland_name: 盒子岛
+  boxisland_platformtext: 安卓、iOS
+  boxisland_shortdescription: 与勇敢的阿宽在盒子岛上共赴编程之旅。
+  boy: 男孩
+  boys: 男孩
+  boys_team: 男生队
+  california_button: 学习更多内容
+  california_heading: 邀请您的学校开展计算机科学教育。
+  california_text: 任何一个老师都可以利用我们的<a href='http://studio.code.org/'>免费课程</a>做教材。任何小学都有能力<a
+    href='http://code.org/educate/k5'>教导计算机科学</a>。要求您的高中<a href='http://code.org/educate/districts'>与我们合作。
+  careers_page_more: 更多由科技人士拍摄的的<a href='%{careers_url}' target='_blank'>鼓舞人心的视频</a>
+  careers_page_more_markdown: 更多由科技人士拍摄的的[鼓舞人心的视频](%{careers_url})
+  cargobot_beyond_gradelevel: 适合年龄 8 岁以上
+  cargobot_beyond_longdescription: Cargo-Bot 是一种益智游戏，你教机器人如何移动箱子。听起来很简单，对不对？它拥有36个巧妙复杂的关卡，魔幻的音乐和令人惊叹的图形。你甚至可以录下解决方案，并在视频网站上和你的朋友分享。
+  cargobot_beyond_shortdescription: 在你的 iPad 上写一个机器人手臂的程序
+  carousel_heading_3rd_party: 第三方教程
+  carousel_heading_apps_games: 制作你自己的应用或游戏
+  carousel_heading_beginners: K-8教程
+  carousel_heading_beyond_beginners: 适合初学者：从基于模块的编码开始
+  carousel_heading_beyond_devices: 手机和平板电脑的应用
+  carousel_heading_beyond_javascript: 学习JavaScript
+  carousel_heading_beyond_languages: 学习其他编程语言
+  carousel_heading_beyondblocks: 超越模块编程 - 学习一门编程语言
+  carousel_heading_codeorg: Code.org 提供的教程
+  carousel_heading_codeorg_any_device: Code.org 的教程（适合所有的设备！）
+  carousel_heading_desktop: 学习电脑编程
+  carousel_heading_devices: 为手机和平板电脑定制的教程应用
+  carousel_heading_domestic: 英文教程可用
+  carousel_heading_ide: 在教师中流行的平台
+  carousel_heading_international: 合作伙伴的教程
+  carousel_heading_javascript: 教 JavaScript 的教程
+  carousel_heading_languages: 用其他编程语言所写的教程
+  carousel_heading_mobtabelem: 为手机和平板准备的
+  carousel_heading_nointernet: 网络不给力？在电脑上安装这些应用吧。
+  carousel_heading_online_university: 可选的在线大学课程
+  carousel_heading_prereader: 为还不能阅读的学生
+  carousel_heading_robots: 学习使用机器人和硬件进行编程
+  carousel_heading_third_party: 第三方教程
+  carousel_heading_university: 在线大学课程
+  carousel_heading_unplugged: 没有设备或互联网接入？试试’离线‘计算机科学课程
+  carousel_heading_webpages: 学习如何制作网页
+  cded_sign_up: 注册
+  cded_try_it: 体验一下
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
+  city: 城市
+  class_submission_in_school: 在学校
+  class_submission_in_school_ap_computer_science: AP 计算机科学
+  class_submission_in_school_daily_programming_course: 日常编程课程
+  class_submission_in_school_exploring_computer_science: 探索计算机科学
+  class_submission_in_school_full_university_cs_curriculum: 正规大学计算机课程
+  class_submission_in_school_other: 校园内其他活动
+  class_submission_in_school_programming_integrated_in_other_classes: 在其他课程(如数学，科学等)
+    中加入编程
+  class_submission_in_school_robotics_club: 机器人俱乐部
+  class_submission_in_school_summer_school_cs_program: 暑期学校电脑科学培训项目
+  class_submission_languages_other: 其他语言
+  class_submission_level_college: 大学
+  class_submission_level_elementary: 小学
+  class_submission_level_high_school: 高中
+  class_submission_level_middle_school: 中学
+  class_submission_level_preschool: 学前班
+  class_submission_level_vocational: 职业级
+  class_submission_online: 在线
+  class_submission_online_other: 其他在线
+  class_submission_online_programming_class: 在线编程课
+  class_submission_online_teacher_resource: 在线教师资源
+  class_submission_out_of_school: 校外
+  class_submission_out_of_school_afterschool_program: 课后课程
+  class_submission_out_of_school_all-day_workshop: 全日制课程（最长一周）
+  class_submission_out_of_school_multi-week_workshop: 多周课程
+  class_submission_out_of_school_other: 其他校外活动
+  class_submission_out_of_school_summer_camp: 夏令营
+  classicmaze_name: 经典迷宫
+  code_hoc_coming: 编程一小时就在这里 — — 12 月 8-14 日 ！
+  code_sign_up: 注册以便在计算机科学教育周期间参加
+  codea_beyond_gradelevel: 高中或以上
+  codea_beyond_longdescription: iPad 上的 Codea 可以让你创建游戏和模拟&mdash; 或是你的任何可视化想法。使用 iPad
+    的功能, 如多点触摸及加速度, 来把你的想法变成交互式创作。我们认为 Codea 是最美丽的代码编辑器，而且很容易用。Codea 的设计目的是让你触摸你的代码。想要更改号码吗？只需点击并拖动它。颜色或图像如何呢？触碰启动可视化编辑器，让你看到你想要的效果。
+  codea_beyond_shortdescription: 在你的 iPad 上创建应用程序
+  codeavengers_beyond_gradelevel: 中学及以上
+  codeavengers_beyond_longdescription: 了解如何编写游戏程序，应用程序和网站。通过专家设计对初学者难度适当的水平，简单易懂的说明，当你需要时并有很大的帮助。我们的
+    HTML，CSS 和 JavaScript 课程包括代码的挑战和修改游戏，让学习变得有趣和高效，适合所有年龄的人。
+  codeavengers_beyond_name: 学习网站程序设计
+  codeavengers_beyond_platformtext: 现代的网络浏览器
+  codeavengers_beyond_shortdescription: 学习做游戏代码和网站
+  codeavengers_gradelevel: 中学及以上
+  codeavengers_longdescription: 使用 JavaScript 语言建立的2个玩家、10个简短任务的二维由上而下的游​​戏。当您建立一个问答游戏与朋友分享时，能持续学习程式设计的一些基础知识（变量和如果语句）。在到达班级排行榜榜首的过程中赚取积分和徽章。
+  codeavengers_name: 用 JavaScript 创建一个游戏
+  codeavengers_platformtext: 现代网络浏览器
+  codeavengers_shortdescription: 在网页浏览器中学习 JavaScript 编程
+  codebytes_skinny_banner_description: '加入我们 CodeBytes 计算机科学教育周的每日课程，20分钟的交互式计算机科学课程。每天两次流媒体直播，CodeBytes
+    是学生参与虚拟 #HourOfCode 的好方法！'
+  codebytes_skinny_banner_english_only: 仅英语
+  codebytes_skinny_banner_learn: 更多信息请访问 [code.org/codebytes](%{code_bytes_url})。
+  codebytes_skinny_banner_title: 加入我们12月7-11日的 CodeBytes 直播迷你课程！
+  codecademy_beyond_gradelevel: 高中
+  codecademy_beyond_longdescription: Codecademy 通过 JavaScript，以互动式的学生引导介绍的基础电脑科学课程，千万个来自世界各地的学生已使用过。我们已经准备了简单的《编程一小时》经验，附测验、幻灯片，及给学生一个完整的专案为结束。
+  codecademy_beyond_platformtext: 现代的网络浏览器。iOS、安卓应用程序
+  codecademy_beyond_shortdescription: 在网页浏览器中学习 JavaScript 编程
+  codecademy_gradelevel: 高中
+  codecademy_longdescription: Codecademy 透过 JavaScript ，以互动式，学生引导介绍的基础电脑科学课程，千万个来自世界各地的学生已使用过。我们已经准备了简单的《编程一小时》经验，附测验、
+    幻灯片，及给学生一个完整的专案为结束。
+  codecademy_platformtext: 现代的网络浏览器。iOS、安卓应用程序
+  codecademy_shortdescription: 在网页浏览器中学习 JavaScript 编程
+  codecombat_beyond_gradelevel: 中学及以上
+  codecombat_beyond_longdescription: 像一个巫师一样，使用代码来像法术一样控制你的英雄来走出迷宫，打败食人魔，诱骗敌人，拯救盟友!
+    这个 HTML5 网站游戏让初学者学习 JavaScript。
+  codecombat_beyond_platformtext: 基于网络的（Firefox、Chrome、Safari、IE9 +）
+  codecombat_beyond_shortdescription: 玩游戏和学习 JavaScript 来取胜
+  codecombat_gradelevel: 中学及以上
+  codecombat_longdescription: 在这个史诗般的编程游戏中打败食人魔来学会 Python 或 JavaScript！
+  codecombat_platformtext: 现代的网络浏览器。（后续课程需要 $$）
+  codecombat_shortdescription: 在这个史诗般的编程游戏中打败食人魔来学会 Python 或 JavaScript ！
+  codehs_beyond_gradelevel: 高中
+  codehs_beyond_longdescription: 与卡雷尔小狗学习编程，一个有趣、方便和直观的编码基础知识介绍，给一台电脑命令就像给一隻狗命令。最好由一名教师主导，但也可以独立完成。[注：需要付费]
+  codehs_beyond_name: 同小狗卡莱尔一起学编程
+  codehs_beyond_platformtext: 现代的浏览器 (需要 $$)
+  codehs_beyond_shortdescription: 使用一个有趣的视觉环境来学习 JavaScript 编程
+  codehs_gradelevel: 高中
+  codehs_longdescription: 程式设计的概念就是给予一台电脑命令，就像给一只狗的命令一般。用卡莱尔&mdash;学习如何编写程式码; 用有趣、
+    易懂及视觉化介绍方式来教授没有任何基础的初学者基本程式设计概念，例如命令、功能等。自学教案是针对学生设计，但教师可以注册以使用教师工具并追踪学生的成效!
+  codehs_name: 同小狗卡莱尔一起学编程
+  codehs_platformtext: 现代的浏览器。（后续课程需要 $$）
+  codehs_shortdescription: 与小狗卡莱尔一起开始编程，一个有趣的编程介绍！
+  codeintl_gradelevel: 适合年龄 4 岁以上
+  codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
+  codeintl_name: 经典迷宫
+  codeintl_platformtext: 现代浏览器、智能手机、平板电脑
+  codeintl_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
+  codemonkey_gradelevel: 中学及以上
+  codemonkey_longdescription: '代码猴是一个线上的游戏，用真正的程式语言教授程式码编写！学生设计程式让一只猴子抓住香蕉，而它在每个级别会稍微增加复杂程度。他们在解决问题时获得星星分数并点击一下就可以分享. '
+  codemonkey_name: 代码猴
+  codemonkey_platformtext: 现代网络浏览器
+  codemonkey_shortdescription: 学生们编写一只抓住香蕉的猴子。
+  codeorg_beyond_gradelevel: 适合年龄 4 岁以上
+  codeorg_beyond_longdescription: 通过拖放编程来学习计算机科学的基本概念。这里有3个完整的课程，每课包含15-20个章节，有些是不用电脑的课堂活动。这些像游戏一样的自学课程，有由比尔•盖茨和马克•扎克伯格主演的视频教程，还有愤怒的小鸟和植物大战僵尸的场景。从中你可以学到重复循环、条件、基本算法、函数和变量。
+  codeorg_beyond_name: 介绍电脑科学（8年级）
+  codeorg_beyond_platformtext: 现代的浏览器、平板电脑
+  codeorg_beyond_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
+  codeorg_gradelevel: 适合年龄 4 岁以上
+  codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
+  codeorg_name: 经典迷宫
+  codeorg_platformtext: 现代浏览器、智能手机、平板电脑
+  codeorg_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
+  codespark_gradelevel: 小学
+  codespark_longdescription: 示例是有趣的，孩子们能明白的方式来学习程序设计的方法。设计可爱的人物来解决难题，并为生活带来一个虚拟的世界。这场比赛是"不需言语的"，所以任何人都可以玩！
+  codespark_name: The Foos （欢迎学龄前读者）
+  codespark_platformtext: iOS、安卓（或网络浏览器）
+  codespark_shortdescription: The Foos 是一种有趣的，孩子也能玩的学习编程的游戏。
+  codesters_gradelevel: 12-14 岁
+  codesters_longdescription: '开发您自己的游戏、 动画并使用 Python 进行艺术编程。一旦你完成了，与朋友分享！在 Python（每天都被软件公司使用的真正编程语言）
+    中，我们拖、放工具包，让它简单易学！尝试设计一场篮球比赛，编排一套舞蹈，或者设计动画卡片！ '
+  codesters_platformtext: 现代网络浏览器
+  codesters_shortdescription: 开发您自己的游戏、 动画并使用 Python 进行艺术编程。
+  compatibility_hide_this_warning: 隐藏此警告
+  compatibility_unsupported_browser: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
+    target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。
+  compatibility_unsupported_browser_markdown: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
+    target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。
   computer_science_edweek: 计算机科学教育周
-  csedweek_dates: 2018年12月3-9日
+  condcards_gradelevel: 年龄 8-12
+  condcards_longdescription: 在这个"不插电"的活动中，使用一副扑克牌学习演算法和条件式叙述。学生以团队模式进行这项活动，每一团队需要一副牌.
+  condcards_name: 用 扑克牌 的 条件子句
+  condcards_platformtext: 离线的
+  condcards_shortdescription: 用一副扑克学习算法
+  congrats_guest_speaker_cta: 找到的特邀演讲者
+  congrats_guest_speaker_desc: 现在既然你的学生们已经完成了一门计算机科学课程，你可以考虑庆祝一下，并通过邀请一个演讲嘉宾到你的教室，将我们学的课程与现实世界联系起来。你可以利用我们的“志愿者地图”去邀请当地的志愿者参观你的教室，你也可以在任意城市里寻找愿意远程辅导你的学生的计算机科学的学生或者专业的技术人员。
+  congrats_guest_speaker_title: 为你的班级找到了一位演讲人
+  congrats_next_tutorials_desc: 尝试这些简短的1小时教程，或尝试 <a href="%{current_path}/next"> 合作伙伴教程</a>。
+  congrats_next_tutorials_title: 接下来尝试下一级的课程
+  congrats_third_party_title: 在这些应用和网站上使用你的新技能
+  congratulations: 恭喜你！
+  congratulations_on_completing_course: 恭喜，完成了%{course}。
+  congratulations_on_completing_hoc: 恭喜你完成编程一小时。
+  congratulations_volunteer: 恭喜你： 现在你已经尝试了编程一小时，<a href="https://code.org/volunteer">在教室里报名做志愿者</a>，帮助学生了解编程一小时！
+  contact_form_label_email: 您的电子邮件地址
+  contact_form_label_message: 短信
+  contact_form_label_submit: 发送消息
+  contact_form_label_topic: 主题
+  contact_form_topic_contribution: 慈善捐款
+  contact_form_topic_other: 其他
+  contact_form_topic_outside_us: 我是在美国境外
+  contact_form_topic_parent: 我是家长
+  contact_form_topic_partner: 我想成为合作伙伴
+  contact_form_topic_press: 新闻/媒体（采访或演讲）
+  contact_form_topic_student: 我是学生
+  contact_form_topic_teacher: 我的老师或教育家
+  continue_learning_body: 你有很多的选择。你可以在线，或在当地学校或夏令营学习。
+  continue_learning_header: 继续学习
+  country: 国家
+  course1_gradelevel: 4 - 6岁
+  course1_name: '课程 1:'
+  course2_gradelevel: 6-18岁
+  course2_name: 课程2
+  course2_shortdescription_congrats: 对于具有基本阅读能力的学生来说，本课程是基于课程1。 学生将创造程序来解决问题和开发他们可以分享的互动式游戏或者故事。建议2-5年级。
+  course3_gradelevel: 8-18 岁
+  course3_name: 课程 3
+  course3_shortdescription_congrats: 准备好到下一级别了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时，
+    学生将创造可以与任何人分享的的交互式故事和游戏。 建议4-5年级学习。
+  course4_gradelevel: 10-18 岁
+  course4_name: 课程 4
+  course4_shortdescription_congrats: 准备好继续了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时，
+    学生将创造可以与任何人分享的的交互式故事和游戏。 建议4-8年级。
+  coursea-2017_gradelevel: 年龄 4-7
+  coursea-2017_name: 课程 A （2017）
+  coursea-2017_shortdescription_congrats: 为学前学生准备的计算机科学介绍
+  coursea-2018_gradelevel: 年龄 4-7
+  coursea-2018_name: 课程 A （2018）
+  coursea-2018_shortdescription_congrats: 为学前学生准备的计算机科学介绍
+  coursea-2019_gradelevel: 年龄 4-7
+  coursea-2019_name: 课程 A (2019)
+  coursea-2019_shortdescription_congrats: 为学前学生准备的计算机科学介绍
+  coursea-2020_gradelevel: 年龄 4-7
+  coursea-2020_name: 课程 A (2019)
+  coursea-2020_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  coursea-2021_gradelevel: 年龄 4-7
+  coursea-2021_name: A 课程 (2021)
+  coursea-2021_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  coursea-2022_gradelevel: 年龄 4-7
+  coursea-2022_name: A 课程 (2022)
+  coursea-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  coursea-draft_name: 课程 A
+  coursea_gradelevel: 年龄 4-7
+  coursea_name: 课程 A
+  coursea_shortdescription_congrats: 为学前学生准备的计算机科学介绍
+  courseb-2017_gradelevel: 年龄 5-8
+  courseb-2017_name: 课程 B （2017）
+  courseb-2017_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
+  courseb-2018_gradelevel: 年龄 5-8
+  courseb-2018_name: 课程 B （2018）
+  courseb-2018_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
+  courseb-2019_gradelevel: 年龄 5-8
+  courseb-2019_name: 课程 B (2019)
+  courseb-2019_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
+  courseb-2020_gradelevel: 年龄 5-8
+  courseb-2020_name: 课程 B (2019)
+  courseb-2020_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  courseb-2021_gradelevel: 年龄 5-8
+  courseb-2021_name: B 课程 (2021)
+  courseb-2021_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  courseb-2022_gradelevel: 年龄 5-8
+  courseb-2022_name: B 课程 (2022)
+  courseb-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+  courseb-draft_name: 课程 B
+  courseb_gradelevel: 年龄 5-8
+  courseb_name: 课程 B
+  courseb_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
+  coursec-2017_gradelevel: 年龄 6-10
+  coursec-2017_name: 课程 C （2017）
+  coursec-2017_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+  coursec-2018_gradelevel: 年龄 6-10
+  coursec-2018_name: 课程 C （2018）
+  coursec-2018_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+  coursec-2019_gradelevel: 年龄 6-10
+  coursec-2019_name: 课程 C (2019)
+  coursec-2019_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+  coursec-2020_gradelevel: 年龄 6-10
+  coursec-2020_name: 课程 C (2019)
+  coursec-2020_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+  coursec-2021_gradelevel: 年龄 6-10
+  coursec-2021_name: C 课程 (2021)
+  coursec-2021_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+  coursec-2022_gradelevel: 年龄 6-10
+  coursec-2022_name: C 课程 (2022)
+  coursec-2022_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+  coursec-draft_name: 课程 C
+  coursec_gradelevel: 年龄 6-10
+  coursec_name: 课程 C
+  coursec_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+  coursed-2017_gradelevel: 8年级以上
+  coursed-2017_name: 课程 D （2017）
+  coursed-2017_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
+  coursed-2018_gradelevel: 8年级以上
+  coursed-2018_name: 新的课程D脚本
+  coursed-2018_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
+  coursed-2019_gradelevel: 8年级以上
+  coursed-2019_name: 课程 D (2019)
+  coursed-2019_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
+  coursed-2020_gradelevel: 8年级以上
+  coursed-2020_name: 课程 D (2019)
+  coursed-2020_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+  coursed-2021_gradelevel: 8年级以上
+  coursed-2021_name: 课程 D （2021）
+  coursed-2021_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+  coursed-2022_gradelevel: 8年级以上
+  coursed-2022_name: 课程 D （2021）
+  coursed-2022_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+  coursed-draft_name: 课程 D
+  coursed_gradelevel: 8年级以上
+  coursed_name: 课程 D
+  coursed_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
+  coursee-2017_gradelevel: 年龄 8-12
+  coursee-2017_name: 课程 E （2017）
+  coursee-2017_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
+  coursee-2018_gradelevel: 年龄 8-12
+  coursee-2018_name: 课程 E （2018）
+  coursee-2018_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
+  coursee-2019_gradelevel: 年龄 8-12
+  coursee-2019_name: 课程 E (2019)
+  coursee-2019_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
+  coursee-2020_gradelevel: 年龄 8-12
+  coursee-2020_name: 课程 E (2019)
+  coursee-2020_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+  coursee-2021_gradelevel: 年龄 8-12
+  coursee-2021_name: E 课程 (2021)
+  coursee-2021_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+  coursee-2022_gradelevel: 年龄 8-12
+  coursee-2022_name: E 课程 (2022)
+  coursee-2022_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+  coursee-draft_name: 课程 E
+  coursee_gradelevel: 年龄 8-12
+  coursee_name: 课程 E
+  coursee_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
+  coursef-2017_gradelevel: 年龄 9-13
+  coursef-2017_name: 课程 F （2017）
+  coursef-2017_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+  coursef-2018_gradelevel: 年龄 9-13
+  coursef-2018_name: 课程 F （2018）
+  coursef-2018_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+  coursef-2019_gradelevel: 年龄 9-13
+  coursef-2019_name: 课程 F （2019）
+  coursef-2019_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+  coursef-2020_gradelevel: 年龄 9-13
+  coursef-2020_name: 课程 F （2019）
+  coursef-2020_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+  coursef-2021_gradelevel: 年龄 9-13
+  coursef-2021_name: F 课程 (2021)
+  coursef-2021_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+  coursef-2022_gradelevel: 年龄 9-13
+  coursef-2022_name: F 课程 (2022)
+  coursef-2022_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+  coursef-draft_name: 课程 F
+  coursef_gradelevel: 年龄 9-13
+  coursef_name: 课程 F
+  coursef_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+  coursera_beyond_gradelevel: 大学
+  coursera_beyond_longdescription: 斯坦福大学的 CS 101（免费！）课堂的导师是尼克 • 帕兰蒂 。CS101 专门向毫无经验的学生们教导计算机学的根本概念。您可以通过玩和试探简短的代码来领悟到计算机的潜能和限度。通过
+    CS 101，您也能够意识到今日计算机界的背景，了解什么叫计算机，什么叫硬件、什么叫软件、和什么叫互联网。参与这趟课程除了懂得使用浏览器之外无需任何经验，。
+  coursera_beyond_name: 斯坦福大学 CS 101 课程
+  coursera_beyond_platformtext: 现代的浏览器
+  coursera_beyond_shortdescription: 从 CS101 开始
+  create_art_with_zombie: 或用僵尸来做高级的艺术
+  cs_for_good: CS 为好
+  cs_for_good_tile_description: 激发学生深入思考计算机科学在创造一个更加公平和可持续发展的世界中可以发挥的作用的资源。
+  csd2_name: 单元 2：网页开发
+  csd3_name: 单元 3：动画和游戏
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">编程一小时</a>即将来临。邀请所有的老师和组织领导们<a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
   csedweek_banner_teachers_text: 你是计算机科学课的老师吗？看看其他的计算机科学教育周的资料吧
-  n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
-  try_hoc_num_served: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有 %{num} 次参与</h3>"
-  try_hoc_num_served_markdown: |-
-    # 尝试\
-    \
-    ##《编程一小时》\
-    \
-    ###%{num}人参与 #Try an
-  anybody_can_learn: 任何人都可以学习。
-  learn_now: 现在开始学习
-  petition_message: 任何学校的任何学生都应有机会学习计算机科学
-  petition_sign_message: '如果同意，签名并像其他 #人一样加入邮件列表。'
-  petition_sign_message_num: 如果同意，请签名并像另外%{num}人一起加入邮件列表。
-  petition_join_others: '加入另外 # 人'
-  petition_join_others_num: 与 %{num} 人一起加入
-  name: 姓名
-  email: 电子邮件
-  zipcode: 邮政编码或国家
-  submit: 提交
-  twentyhours_heading: 看看我们对计算机科学课程的简介
-  twentyhours_text: 完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。
-  og_title: 'Code.org: 任何人都可以学习'
-  og_title_soon: 编程一小时活动即将开始
-  og_title_here: "《编程一小时》在这里！"
-  og_description: 每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。
-  og_description_celeb: 试试这个新的教程，为你或你的班级赢得与名人视频聊天的机会。
-  csedweek_og_title: 计算机科学教育周
-  csedweek_og_description: 计算机科学是每个学生要学习的基础课程。
-  csedweek_og_description_soon: 编程一小时会在2018年12月3至9日来临。计算机科学是每个学生都要学习的基础课程。
-  csedweek_og_description_here: 编程一小时来了。计算机科学是每个学生都要学习的基础课程。
-  hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
-  hoc2014_students: 学生
-  hoc2014_try: 试一试
-  hoc2014_teachers: 教师
-  hoc2014_host: 举办它
-  hoc2014_everyone: 每个人
-  hoc2014_support: 支持它 &#x25BE;
-  hoc2014_whatishoc: 什么是编程一小时？
+  csedweek_dates: 2018年12月3-9日
   csedweek_map_header: "#CSEdWeek/ 编程一小时是一个世界性的活动"
   csedweek_map_header_num: 全世界已有 %{num} 次计算机科学教育周 / 《编程一小时》活动
-  csedweek_map_signup: 登记参加活动
-  csedweek_map_search_placeholder: 搜索编程一小时的活动
-  csedweek_map_search_search: 搜索
-  csedweek_map_search_reset: 重置
-  csedweek_map_legend_title: 图例
-  csedweek_map_legend_event: 编程一小时活动
   csedweek_map_legend_cs_tech_jam: 特别活动
-  cded_sign_up: 注册
-  cded_try_it: 体验一下
-  try_now: 现在就试试
-  california_heading: 邀请您的学校开展计算机科学教育。
-  california_text: 任何一个老师都可以利用我们的<a href='http://studio.code.org/'>免费课程</a>做教材。任何小学都有能力<a
-    href='http://code.org/educate/k5'>教导计算机科学</a>。要求您的高中<a href='http://code.org/educate/districts'>与我们合作。
-  california_button: 学习更多内容
-  flappy_heading: 为 Code.org 放飞生日
-  flappy_text: Code.org 1 岁了。 <br/> <br/>制作属于你您自己 <b>像素鸟</b> 游戏和我们一起庆祝吧。用代码编写您自己的规则，并与朋友分享
-    ！
-  view_english_site: 查看英语网站
-  non_english_tutorials: 翻译成多种语言的教程：
-  write_your_first_program: 编写你的第一个计算机程序
-  learn_cs_concepts: 用拖放式编程软件学习计算机科学的基本概念。这是一个类似游戏的教程，其中包括由比尔 · 盖茨、 马克 · 扎克伯格、 愤怒的小鸟和植物大战僵尸参与的视频讲座。学习重复，如果语句和基本算法。
-  all_ages: 所有年龄
-  beginner: 初学者
-  n_participants: "# 位参与者"
-  go: 出发
-  thank_you_: 谢谢！
-  congratulations: 恭喜你！
-  congratulations_on_completing_hoc: 恭喜你完成编程一小时。
-  congratulations_volunteer: 恭喜你： 现在你已经尝试了编程一小时，<a href="https://code.org/volunteer">在教室里报名做志愿者</a>，帮助学生了解编程一小时！
-  congratulations_on_completing_course: 恭喜，完成了%{course}。
-  congrats_next_tutorials_title: 接下来尝试下一级的课程
-  congrats_next_tutorials_desc: 尝试这些简短的1小时教程，或尝试 <a href="%{current_path}/next"> 合作伙伴教程</a>。
-  get_a_certificate_of_achievement: 获取结业证书
-  view_course: 查看课程
-  view_unit: 查看单元
-  make_app: 创建一个应用
-  congrats_guest_speaker_title: 为你的班级找到了一位演讲人
-  congrats_guest_speaker_desc: 现在既然你的学生们已经完成了一门计算机科学课程，你可以考虑庆祝一下，并通过邀请一个演讲嘉宾到你的教室，将我们学的课程与现实世界联系起来。你可以利用我们的“志愿者地图”去邀请当地的志愿者参观你的教室，你也可以在任意城市里寻找愿意远程辅导你的学生的计算机科学的学生或者专业的技术人员。
-  congrats_guest_speaker_cta: 找到的特邀演讲者
-  congrats_third_party_title: 在这些应用和网站上使用你的新技能
-  third_party_gradelevel_kto8: 8年级
-  third_party_gradelevel_kto2: 2年级
-  third_party_gradelevel_2to8: 2-8年级
-  third_party_gradelevel_4to12: 4-12 年级
-  third_party_gradelevel_5to12: 5-12年级
-  third_party_gradelevel_6plus: 6年级以上
-  third_party_gradelevel_8plus: 8年级以上
-  third_party_platform_all: 平台：网络，ipad和安卓系统
-  third_party_platform_mobile: 平台：iPad & 安卓
-  third_party_platform_web: 平台：网络
-  third_party_price_varies: 价格：根据方案变化
-  third_party_price_free: 价格：免费
-  third_party_price_299: 价格：2.99美元／下载
-  third_party_price_individual: 个人价格：免费试用 & 25 美元/月
-  third_party_price_school: 学校价格：免费计划 或者2500美元以上的Pro
-  third_party_tynker_desc: Tynker 的创意计算平台帮助孩子愉快的，直观和富有想象力的养成计算机思维和培养编程技巧。我们创新的可视化编程语言，交互式自学课程，和游戏为基础的编程活动提供了一个简单的方式介绍编程并且让孩子学会创新和创造。
-  third_party_tynker_btn_curriculum: 早期的读者尝试 Tynker 课程
-  third_party_tynker_btn_site: 访问 Tynker
-  third_party_scratchjr_desc: Scratch Jr. 是一种能够让孩子（5-7岁）创造他们自己的互动故事和游戏的介绍性编程语言。孩子只要将图形化的编程块扣合在一起，就能让角色移动、跳跃、跳舞和唱歌。孩子可以在编辑器中修改角色，可以添加他们自己的声音，甚至可以插入他们自己的照片——然后用编程块使他们的角色活灵活现。
-  third_party_scratchjr_btn_curriculum: 下载 Scratch Jr. 的课程
-  third_party_scratchjr_btn_site: 访问 Scratch Jr.
-  third_party_scratch_desc: 在 Scratch 中，你可以通过编程的方式来设计你自己的互动故事、游戏和动画，还可以在在线社区与他人分享你的创作。Scratch帮助年轻人学会创造性思考、系统性学习以及协同工作——这是21世纪生活的基本技能。
-  third_party_scratch_btn_curriculum: 下载 Scratch Jr. 的课程
-  third_party_scratch_btn_forum: Scratch 教育家论坛
-  third_party_scratch_btn_site: 访问 Scratch
-  third_party_lightbot_desc: 在 Lightbot 上，学生们必须通过给机器人编写命令程序来解决难题。学生可以在浏览器中（需要 Flash
-    Player），或在 Android 或 iOS 设备上玩游戏。学生们在 Lightbot 中玩“基本”级别的初始集时，他们将学会如何让计算机做一系列的基本命令，以及获得编写计算机程序的一般过程。
-  third_party_lightbot_btn_curriculum: 下载 Lightbot 课程
-  third_party_lightbot_btn_site: 访问 Lightbot
-  third_party_khan_desc: 学习怎么使用 JavaScript & ProcessingJS 去编辑绘画，动漫和游戏的程序，或者学习怎么使用
-    HTML & CSS 去创建网页。你可以任意分享你的创作，也可以通过探索别人的创作从中互相学习。
-  third_party_khan_btn_learn: 与 Khan Academy 一起学习 CS
-  third_party_khan_btn_forum: Khan 学院 CS 论坛
-  third_party_appinv_desc: MIT App Inventor 是一款以模块为基础的的编程工具，可以让包括新手在内的所有人来进行编程并且创建功能齐全的安卓应用程序。第一次使用
-    App Inventor 的用户可以在一小时内创建并且运行自制的应用，相比传统的编程语言，可以更快速的制作功能更加复杂的应用程序。
-  third_party_appinv_btn_curriculum: 下载 App Inventor 2 课程
-  third_party_appinv_btn_forum: App Inventor 2 论坛
-  third_party_appinv_btn_site: 访问 App Inventor 2
-  third_party_codehs_desc: CodeHS 采用视频短片、示例代码和丰富的编程练习来介绍模块式编程，使编码充满了乐趣，并且很适合初学者。对于学校和教师，CodeHS
-    提供课程，教学工具和产品设计 。自学者则可以通过网上的导师们得到帮助。
-  third_party_codehs_btn_try: 介绍CS，了解更多关于学校的。
-  third_party_codecademy_desc: 我们是从下到上重新思考教育。该网站已经重新考虑几乎一切 - 电子商务，社交网络，医疗保健等。我们正在建设世界所需要的教育
-    - 第一个真正的网络教育。
-  third_party_codecademy_btn_curriculum: 下载 Codecademy 课程
-  third_party_codecademy_btn_site: 访问 Codecademy
-  third_party_organization: 组织
-  third_party_curriculum: 课程
-  third_party_pricing: 定价
-  third_party_cost_free: 学生和教师免费
-  third_party_cost_5permonth: 每节课每月5美元
-  third_party_cost_299: 每次下载2.99美元
-  third_party_cost_free_399: 免费试用，每间教室399美元
-  third_party_cost_free_2: 免费试用，每位学生2美元
-  third_party_cost_free_10: 免费试用，每月9.99美元
-  third_party_desc_5_4to8: 大约有5课时，面向4到8年级。
-  third_party_desc_10to12_kto3: 大约有10-12课时，面向3年级。
-  third_party_desc_11_kto5: 大约有11课时，面向5年级。
-  third_party_desc_10to12_kto5: 大约有10-12课时，面向5年级。
-  third_party_desc_40_4to8: 超过40课时， 面向4-8年级。
-  third_party_desc_dozens_kto8: 数十个课时，面向8年级。
-  third_party_desc_10to15_3to12: 10到15课时，面向3到12年级。
-  third_party_desc_25to40_3to12: 25到40课时，面向3到12年级。
-  third_party_desc_20_2to8: 大约有20课时，面向2到8年级。
-  third_party_desc_7to22_5to12: 7到22课时，面向5到12年级
-  third_party_desc_20_4to12: 超过20课时， 面向4到12年级
+  csedweek_map_legend_event: 编程一小时活动
+  csedweek_map_legend_title: 图例
+  csedweek_map_search_placeholder: 搜索编程一小时的活动
+  csedweek_map_search_reset: 重置
+  csedweek_map_search_search: 搜索
+  csedweek_map_signup: 登记参加活动
+  csedweek_og_description: 计算机科学是每个学生要学习的基础课程。
+  csedweek_og_description_here: 编程一小时来了。计算机科学是每个学生都要学习的基础课程。
+  csedweek_og_description_soon: 编程一小时会在2018年12月3至9日来临。计算机科学是每个学生都要学习的基础课程。
+  csedweek_og_title: 计算机科学教育周
+  csfirst_gradelevel: 9-14 岁
+  csfirst_longdescription: 编写一个关于两个人物在海上的故事。动画处理水，并定制不同风景来添加这个故事的吸引力。用编程来讲这个故事！
+  csfirst_name: 计算机科学当先
+  csfirst_platformtext: 现代网络浏览器
+  csfirst_shortdescription: 两个人物的故事在海上的动画。添加你自己的风格！
+  dance_box_higher_power_line_1: 为酷玩乐队的“更高的力量”编一支舞蹈，你就有机会看到乐队的现场表演！
+  dance_box_higher_power_line_2: 查看<a href="%{path}">code.org/coldplay</a>了解更多信息。
+  dashboard_action_cancel: 取消
+  dashboard_action_confirm: 要删除吗？
+  dashboard_action_delete: 刪除
+  dashboard_action_delete_no: 不
+  dashboard_action_delete_yes: 对
+  dashboard_action_done: 完成
+  dashboard_action_print_certificates: 打印证书
+  dashboard_announce_hoc_scaling_progress: 呀！我们正经历着编程一小时的访问高峰期。本周我们暂时无法保存任何进度存档, 但本周之前的进度存档仍然是安全的。
+  dashboard_announce_learn_more_button: 了解详情
+  dashboard_assessments_answers: 所有评估的答案
+  dashboard_assessments_none: 多数教师通过“查看进度”标签来知道学生的进度。如果你想给进行学生额外的评估，你可以在课程计划中找到推荐的问题和领域。这些都是
+    Code.org 之外的资源。
+  dashboard_assessments_none_part2: 如果你在教中学或高中课程，Code.org 提供的部分评估问题可帮助你的学生用于准备 AP
+    考试。若要使用这些评估，首先将课程分配到课堂，然后在上面的列表中选择课程，你将会在此处看到学生的答案。
+  dashboard_assessments_summaries: 评估总结
+  dashboard_assessments_view: 查看评价：
+  dashboard_classroom_strategies: 教师的课堂策略
+  dashboard_correctness: 正确性
+  dashboard_correctness_correct: 正确。
+  dashboard_correctness_free_response: 自由响应
+  dashboard_correctness_incorrect: 错误
+  dashboard_correctness_unsubmitted: 未提交
+  dashboard_course1: 课程 1：
+  dashboard_course2: 课程 2：
+  dashboard_course3: 课程 3：
+  dashboard_course4: '课程 4： '
+  dashboard_course_csina: 代数中的计算机科学
+  dashboard_course_csina_desc: Code.org 与 Bootstrap 教程合作，开发一套通过计算机编程教授代数和几何概念的课程。
+  dashboard_course_csins: 理科中的计算机科学
+  dashboard_course_csins_desc: Code.org 与 GUTS 项目合作交付计算机科学概念导论，范围包括建模与仿真。
+  dashboard_course_csp: AP® 计算机科学原则
+  dashboard_course_csp_desc: Code.org 设计了严谨、 紧密和容易接受的课程，专门探索计算相关的基本思想。
+  dashboard_course_ecs: 探索计算机科学
+  dashboard_course_ecs_desc: '计算机科学探索是为期一年的课程，由 6 个部分组成: 人机交互、 解决问题的能力、 网页设计、 编程、
+    计算和数据分析以及机器人。'
+  dashboard_coursea: '课程 A： '
+  dashboard_courseb: '课程 B： '
+  dashboard_coursec: '课程 C： '
+  dashboard_coursed: '课程 D： '
+  dashboard_coursee: '课程 E： '
+  dashboard_coursef: '课程 F： '
+  dashboard_curriculum: 课程
+  dashboard_curriculum_apcsa: 'Java的AP计算机科学： '
+  dashboard_curriculum_csd: '计算机科学探索： '
+  dashboard_curriculum_csina: 代数中的计算机科学：
+  dashboard_curriculum_csins: 科学中的计算机科学：
+  dashboard_curriculum_csp: 计算机科学原理：
+  dashboard_curriculum_ecs: 探索计算机科学：
+  dashboard_curriculum_high_title: 高中教育资源
+  dashboard_curriculum_k5_title: K-5 教育人才资源
+  dashboard_curriculum_middle_title: 初中教育资源
+  dashboard_curriculum_overview: K-5课程概述
+  dashboard_debugging: 调试：
+  dashboard_download_csv: 下载 CSV
+  dashboard_error_none_selected: 你没有选择任何要转移的学生，请至少选择一个学生。
+  dashboard_error_other_section: 如果你要在自己管理的单元中调整学生，可以从下拉菜单选择你要调的单元。如果你要将学生调整到其他教师负责的单元，请选择”其它单元”。
+  dashboard_express: '快速课程： '
+  dashboard_faq: 常见的问题
+  dashboard_faq_k5: K-5 组的常见问题
+  dashboard_filter_all: 全部
+  dashboard_filter_by_stage: 按阶段筛选 ︰
+  dashboard_framework: 框架
+  dashboard_glossary: 词汇表
+  dashboard_grade_k: 学龄前
+  dashboard_grade_other: 其他
+  dashboard_high_courses: 为期一年的高中课程
+  dashboard_high_courses_desc: 通过面向现有教学人员提供这一新领域的培训，我们的高中组项目能帮助学区提供全年计算机科学类编写课程。注册开发专业研讨会，申请与
+    Code.org <a href="/educate/districts">建立全区域合作伙伴关系</a>。
+  dashboard_hoc_courses: "《编程一小时》适合所有年龄的人。"
+  dashboard_hoc_courses_desc: 和你的学生一同尝试任何这些不到 1 小时的辅导！
+  dashboard_hoc_courses_desc_and_cta: 与你的学生一起尝试这些简短的一个小时的辅导。在计算机科学教育周期间<a href="https://hourofcode.com">加入编程一小时活动</a>。
+  dashboard_implementation_guide: 实施指南
+  dashboard_k5_courses: 适合K-5的20小时课程
+  dashboard_k5_courses_desc: 这些课程有可以让学生自学并自己控制进度的网上教程，也有根本不需要电脑的“脱机”教程。每一个课程都大约有20节课，可能会分为几个章节和单元。即使是幼儿园的学龄前学生都可以参加。我们在美国各地提供了专业、高质量的免费学习研讨会。<a
+    href="/professional-development-workshops">看看你附近的课程吧！</a>
+  dashboard_landing_available_courses: 这些是目前可供您和您的学生使用的课程。
+  dashboard_landing_available_title: 可用课程
+  dashboard_landing_classroom_resources: 你的教室的资源
+  dashboard_landing_educator_blog: 阅读有关新闻和我们在教育家博客的材料的更新
+  dashboard_landing_inspire: 用海报、 视频和更多东西来激励你的学生。
+  dashboard_landing_loading: 正在载入...​​​
+  dashboard_landing_more_tutorials: 想看更多教程吗？
+  dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">我们的合作伙伴提供了更多的教程</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探索其他语言如C++，Ruby，Python！
+  dashboard_landing_new_beta: 新功能！K-5 学生可以尝试我们的 beta 实验版课程。
+  dashboard_landing_new_k5courses: 新功能！K-5 学生可以尝试我们的课程。
+  dashboard_landing_news_title: K-5 教育家资料（只限英文版）
+  dashboard_landing_office_hours: 面对面问问题！请访问我们每月的视频办公时间。
+  dashboard_landing_print_certificates: 为完成此课程的学生打印证书
+  dashboard_landing_print_progress: 打印你的进展
+  dashboard_landing_progress_biggest: 这是您主要课程的进度。
+  dashboard_landing_progress_title: 主要课程进度
+  dashboard_landing_report_bug: 请求一个功能或报告一个漏洞。
+  dashboard_landing_students_manage: 查看和管理您的学生
+  dashboard_landing_students_title: 您的学生
+  dashboard_landing_teacher_forum: 加入一个专业学习的团体。
+  dashboard_landing_title: 教师主页
+  dashboard_landing_useful_links: 其他有用的链接
+  dashboard_landing_video: 观看此视频
+  dashboard_landing_video_library: 使用来自计算机科学概念的视频库里的视频。
+  dashboard_landing_video_player: 在你的学校测试我们新的视频。
+  dashboard_landing_view_as_student: 以学生身份查看本网站
+  dashboard_landing_view_progress: 查看%{biggest_section}的进度
+  dashboard_landing_watch_video: 浏览新的功能！
+  dashboard_landing_welcome: 欢迎您来到我们最新改进的教师控制台。
+  dashboard_lesson_plans: 课程计划
+  dashboard_login_none: 电子邮件
+  dashboard_login_picture: 图片
+  dashboard_login_word: 单词
+  dashboard_middle_courses: 20小时的中学课程
+  dashboard_middle_courses_desc: 在中学数学和理科范围内，我们中学课程使用计算机科学及编程，作为一种工具来教导数学和科学理念。注册开发专业研讨会，申请与
+    Code.org <a href="/educate/districts">建立全区域合作伙伴关系</a>。
+  dashboard_multi_correct: "# 道多选题正确"
+  dashboard_multi_correct_percent: "% 道多选题正确"
+  dashboard_multi_count: "# 道多选题"
+  dashboard_navigation_add_students: 添加学生
+  dashboard_navigation_all_sections: 学生账户和进度
+  dashboard_navigation_home_page: 教师主页
+  dashboard_navigation_lesson_plans_resources: 教案标准
+  dashboard_navigation_manage_students: 管理学生
+  dashboard_navigation_section: 学习小组：%{section_name}
+  dashboard_navigation_section_community: 支持
+  dashboard_navigation_section_lesson_plans: 课程计划及资源
+  dashboard_navigation_section_pd: 职业发展
+  dashboard_navigation_section_speakers: 计算机科学 <br/> 特邀演讲人
+  dashboard_navigation_section_student_progress: 学生账户和进度
+  dashboard_navigation_section_teacher_progress: 您的课程进度
+  dashboard_navigation_student: 学生：%{student_name}
+  dashboard_navigation_view_assessments: 评估
+  dashboard_navigation_view_assessments_surveys: 评估/调查
+  dashboard_navigation_view_progress: 进度
+  dashboard_navigation_view_stats: 统计信息
+  dashboard_navigation_view_text_responses: 文字回应
+  dashboard_overview: 概览
+  dashboard_percent: 百分比
+  dashboard_pre-express: '学前儿童的快速课程： '
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">点击这里</a>以获取我们的隐私文件，您可以跟您的学生共享此文件或打印分发给他们的。
+  dashboard_progress_completed_perfect: 完美完成
+  dashboard_progress_completed_too_many_blocks: 完成，使用了太多模块
+  dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
+  dashboard_progress_in_progress: 正在进行
+  dashboard_progress_not_completed: 未完成
+  dashboard_progress_not_started: 未开始
+  dashboard_progress_pair_programming: 结对编程
+  dashboard_progress_student_in_script: "%{student_name} 的 %{script_name} 进度信息在"
+  dashboard_progress_submitted: 已提交
+  dashboard_progress_view: 查看进度 ︰
+  dashboard_puzzle: 关卡
+  dashboard_puzzle_solving: 解决难题：
+  dashboard_question: 问题
+  dashboard_response: 回答
+  dashboard_responses_none: 我们的大多数课程是为较小年纪的孩子设计的，不要求学生用文本回答问题，所以，你不会在这里看到任何文本答案。给初中或高中学生的课程里，通过在上面的下拉框中选择，你能分配给他们的开放式的文本问题。
+  dashboard_responses_view: 查看文本响应 ︰
+  dashboard_sections_account_creation_question: 由谁创建学生的帐户？
+  dashboard_sections_assign_activity: 指派课程
+  dashboard_sections_assign_hoc_script_desc: 参与编程一小时？
+  dashboard_sections_assign_hoc_script_msg: 请注意，在12月3日至11日期间，由于无法预测的网站访问量，我们不能保存课程进度。但课程中其它部分还可以使用。你也许仍需要给学生分派课程、颁发证书。（大多数教师会事先<a
+    href='%{certificate_url}'>打印</a>这些证书。）在本周之外的其它时间里，学生进度和报告会正常保存。
+  dashboard_sections_both_sections: 你想要学生两个部分都参加吗？
+  dashboard_sections_choose_secret: 如果您想要给您的学生提供帐户，请为那个学习小组选择一种<b>单词</b>或<b>图片</b>的密码类型。
+  dashboard_sections_close: 关闭
+  dashboard_sections_code_placeholder: 6 个字符的代码（ABCDEF）
+  dashboard_sections_email_question: 所有的学生都有一个有效的电子邮件地址吗？
+  dashboard_sections_enter_code: 输入此节代码︰
+  dashboard_sections_jumbotron_instruction: 创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。
+  dashboard_sections_login_type_explanation: 此表可以帮助解释您想要为学习小组选择哪种登录类型，<b>图片，词语或电子邮件</b>。
+  dashboard_sections_move_students: 转移学生
+  dashboard_sections_move_students_desc: 选择学生转到新的小组。转移的学生不会清除他们的进展。
+  dashboard_sections_move_to_section: 移动到此节︰
+  dashboard_sections_name: 小组名称：
+  dashboard_sections_new_google_section: 从谷歌课堂导入小组
+  dashboard_sections_new_section: 新的学习小组
+  dashboard_sections_no_move: 不，我想移动学生到新小组中。
+  dashboard_sections_one_per_teacher: 对每一位老师来说，学生仅能在一个学习小组中。你的学生想加入一个新的学习小组，他就要离开原来的小组。
+  dashboard_sections_other_section: 其他老师
+  dashboard_sections_password_account_creation: 学生创建的文本密码
+  dashboard_sections_password_question: 学生用什么作为密码？
+  dashboard_sections_picture_account_creation: 由 Code.org 分配的图片
+  dashboard_sections_print_secrets: 然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。
+  dashboard_sections_secret_none: 如果您希望您的学生自主管理他们自己的账户，包括选择他们自己的密码，请选择<b>无</b>加密类型。
+  dashboard_sections_secret_picture: "<b>图片</b> 允许您为每位学生设置一幅秘密图片，适用于年幼的还无法使用键盘输入密码的学生。"
+  dashboard_sections_secret_word: "<b>单词</b> 允许您为每位学生设置一个单词密语。"
+  dashboard_sections_sign_in_main: http://code.org 之后单击 "登录"
+  dashboard_sections_sign_in_question: 学生从哪里登录账户？
+  dashboard_sections_sign_in_unique: 在“管理学生”选项卡上列出的单独的网页
+  dashboard_sections_switch_section: 切换学习小组
+  dashboard_sections_table_code: 小组代码
+  dashboard_sections_table_course: 课程：
+  dashboard_sections_table_grade: 年级
+  dashboard_sections_table_pairing_allowed: 结对编程
+  dashboard_sections_table_secret: 登录类型
+  dashboard_sections_table_section: 单元
+  dashboard_sections_table_stage_extras: 此阶段的额外资源
+  dashboard_sections_table_students: 学生
+  dashboard_sections_word_account_creation: 由 Code.org 分配的简单的词
+  dashboard_sections_yes_both: 是的，我想要复制学生到本小组和新小组中
+  dashboard_sequence: 序列
+  dashboard_stage: 阶段
+  dashboard_standards: 标准
+  dashboard_status: 状态
+  dashboard_student: 学生
+  dashboard_student_worksheet: 学生工作表
+  dashboard_students_add_multiple: 输入或粘贴学生的名字，每行一个：
+  dashboard_students_completed_levels: 已完成的关卡
+  dashboard_students_female: 女性
+  dashboard_students_join_link: 告诉您的学生来创建他们自己的账号并在此加入您的学习小组
+  dashboard_students_male: 男性
+  dashboard_students_name: '姓名： '
+  dashboard_students_new_google_classroom_section: 如果要添加学生，请转到<a href='http://classroom.google.com'
+    target='_blank'>谷歌课堂</a>然后点击<b>Sync students from Google Classroom</b>。
+  dashboard_students_new_section: 您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。
+  dashboard_students_no_email: 如果您的学生没有电子邮件地址，或您想为其创建帐户，请将学习小组的密钥类型更改为 <b>单词</b> 或
+    <b>图片</b>。
+  dashboard_students_print_info: 打印出包含学生登录信息的卡片
+  dashboard_students_print_page: 打印此页面
+  dashboard_students_progress: 进度
+  dashboard_students_reset_picture: 您可以通过选择<b>显示密钥</b>以及<b>重置密钥</b>来随时重置学生的秘密图片。该学生再次登录时系统将生成新的秘密图片供其使用。
+  dashboard_students_reset_word: '您可以通过选择<b>显示密钥</b>以及<b>重置密钥</b>来随时重置学生的密语。该学生再次登录时系统将生成新的一对单词密语供其使用。 '
+  dashboard_students_secret_picture: 这一节使用<b>图片</b>作为密钥的类型。即您的每位学生都有一张密钥图片来代替密码用于登录。学生需要它来完成上面的登录。
+  dashboard_students_secret_picture_title: 秘密图片
+  dashboard_students_secret_word: 这一节使用<b>图片</b>作为密钥的类型。即您的每位学生都有一张密钥图片来代替密码用于登录。学生需要它来完成上面的登录。
+  dashboard_students_secret_word_title: 密语
+  dashboard_students_share_section: 让您的学生点击<a href=%{join_url}>%{join_url}</a>，并且输入代码(%{section_code})。
+  dashboard_students_share_section_secondary: 或者，将这个小组的登录页面共享给你的学生：
+  dashboard_students_signin_card: 访问%{join_url}，并输入%{section_code}
+  dashboard_students_total_lines: 代码行数
+  dashboard_students_url: URL
+  dashboard_submission_in_progress: 进行中
+  dashboard_submission_submitted: 已提交
+  dashboard_submission_timestamp: 提交时间戳
+  dashboard_surveys_answers: 调查
+  dashboard_teacher: 老师
+  dashboard_teacher_worksheet: 教师工作表
+  dashboard_tools: '工具集： '
+  dashboard_unplugged: 如果你没有电脑，可以在你的教室<a href='%{unplugged_url}'>试试这些离线的教程。</a>
+  dashboard_unplugged_markdown: 如果你没有电脑，可以在你的教室试试这些[离线的教程](%{unplugged_url})。
+  dashboard_view_all_lesson_plans: 下载1-4课的完整教案
+  download_offline: 下载离线版本。
+  educator_notes: 教育家笔记
+  edx_beyond_gradelevel: 大学
+  edx_beyond_longdescription: CS50x 是哈佛大学的基础计算机学课程，主要目的是为了把计算机学和编程领域介绍给所有学生们，包括非修读计算机学和对于编程领域毫无经验的人士。课程包括以下主题：抽象化、算法、数据结构、封装、资源管理、安全系统、软件工程，和网络开发。学生们也会学习软件语言，例如
+    C 、PHP 和 JavaScript 加 SQL、CSS、和 HTML。在哈佛校园内，CS50x 是大学中人数第二多的课程。
+  edx_beyond_name: 哈佛大学 CS50 课堂
+  edx_beyond_platformtext: 现代的浏览器
+  edx_beyond_shortdescription: 哈佛大学最受欢迎的课程
+  email: 电子邮件
+  en: 计算机科学
+  enter_certificate_names: 输入最多 30 个名字，**每行一个**。会生成可打印的个性化 %{script_name} 证书。
+  enter_country: 如果在美国以外，请输入国家
   enter_valid_age: 请选择一个有效的年龄
   enter_valid_email: 请输入一个有效的电子邮件地址
+  express-2018_name: 速学课程 （2018）
+  express-2019_name: 速学课程 (2019)
+  express-2020_name: 速学课程 (2019)
+  express-2021_name: 快速课程 (2021)
+  express-2022_name: 快速课程 (2022)
+  express_name: 快速课程
+  finch_beyond_gradelevel: 适合年龄 8 岁以上
+  finch_beyond_longdescription: 芬奇是一个用于计算机科学教育的新机器人。它的是卡耐基梅隆大学创建实验室四年研究的结果。芬奇的设计目的是提供一个吸引人的编程艺术介绍。它支持超过始终编程语言和环境，包括一些适合年仅8岁学生的编程环境。达芬奇的设计也让学生能够用它写出丰富的互动程序。
+  finch_beyond_platformtext: 机器人购买
+  finch_beyond_shortdescription: 为计算机科学教育用的机器人
+  flappy-impact-study_name: 带调查的 Flappy Code
+  flappy_gradelevel: 6岁以上
+  flappy_heading: 为 Code.org 放飞生日
+  flappy_longdescription: 使用拖放式的程式语言设计你自己 Flappy 游戏，并可自定义它不同的外观（Flappy鲨鱼、Flappy圣诞老人、或任何角色）。只要点击一下，就可将游戏加到您的手机中。
+  flappy_name: 制作一个Flappy类游戏
+  flappy_platformtext: 现代浏览器、智能手机、平板电脑
+  flappy_shortcode: 拍翅膀
+  flappy_shortdescription: 用 Flappy Bird、鲨鱼、或潜艇制作你自己的游戏
+  flappy_text: Code.org 1 岁了。 <br/> <br/>制作属于你您自己 <b>像素鸟</b> 游戏和我们一起庆祝吧。用代码编写您自己的规则，并与朋友分享
+    ！
+  footer_about: 关于
+  footer_blog: 博客
+  footer_built_on_github: 在微软的 GitHub 上构建
+  footer_cookie_notice: Cookie通知
+  footer_donate: 捐赠
+  footer_partners: 合作伙伴
+  footer_powered_by_aws: 亚马逊网络服务（Amazon Web Services）和“由AWS提供支持”徽标是Amazon.com，Inc.，或者其在美国/其他国家内的附属公司的商标。
+  footer_privacy_policy: 隐私政策
+  footer_privacy_policy_updated: 隐私政策（已更新）
+  footer_store: 商店
+  footer_support: 支持
+  footer_terms: 条款
+  frozen_gradelevel: 适合年龄 8 岁以上
+  frozen_longdescription: 让我们用代码与安娜和艾莎一起探索神奇而又美丽的冰雪世界。你将能创造雪花，溜冰，以及冬季仙境，你还可与朋友分享它们！
+  frozen_name: 和安娜、爱莎一起编程
+  frozen_platformtext: 现代浏览器 + 平板电脑
+  frozen_shortdescription: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
+  game_lab_documentation: 游戏实验室文档
+  game_lab_tutorials: 游戏实验室说明
+  gamelab_name: 游戏实验室
+  gender: 性别
   get_a_certificate_message: '我们会向您发送证书和有关的信息 关于如何<a href=''/learn/beyond''> 学习 1小时
     以外 </a> '
   get_a_certificate_message_after: 请通过单击以下载或打印证书。现在，请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过
     <a href='/learn/beyond'>《一小时以外编程》</a>查看更多的选择。
   get_a_certificate_message_after_markdown: 点击以打印或下载认证书。现在继续学校我们[其他课程](http://studio.code.org)，或在[一小时之外](/learn/beyond)查看更多选择。
-  thanks_for_submitting: 感谢提交！
-  if_you_enjoyed: 如果你喜欢这个课程，让你的朋友也试一试！我们想要全世界都来学习。
-  personalize_certificate: 个性化你的证书
-  print_batch_certificates: 批量打印证书
-  print_certificates: 打印证书
-  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
-  print_ice_art_from_frozen: 打印来自冰雪奇缘的冰雪艺术家
-  want_a_blank_certificate_template: 需要空白证书模板来填写学生的名字？
-  landscape_recommended_certificates: 打印证书时，推荐选择 **风景**。
-  print_one_here_certificates: 打印一份。
-  enter_certificate_names: 输入最多 30 个名字，**每行一个**。会生成可打印的个性化 %{script_name} 证书。
-  share_achievement: 分享你的成绩
-  beyond_hour_message: 请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过 <a href='/learn/beyond'>一小时以外的编程</a>查看更多的选择。
-  beyond_hour_message_markdown: 继续我们的[其他课程](http://studio.code.org)，或查看更多选项[一小时之外](/Learn/beyond)。
-  leaderboards_for_hoc: 编程一小时的排行榜。
-  support_url: http://support.code.org/
-  country: 国家
-  city: 城市
-  gender: 性别
-  boys: 男孩
-  girls: 女孩
-  give_my_hour: 把我的一小时给：
-  girls_team: 女孩队
-  boys_team: 男生队
-  tell_the_world: 告诉全世界 ！
-  thanks_for_voting: 感谢你的投票 ！
-  share_on_facebook: 在 Facebook 上分享
-  share_on_twitter: 在 Twitter 上分享
-  beyond_an_hour: 超越一小时代码
+  get_a_certificate_of_achievement: 获取结业证书
   get_started: 开始
-  i_agree: 我同意
-  participant_select: "-请选择-"
-  participant_student: 学生
-  participant_parent: 家长
-  participant_educator: 教师
-  participant_engineer: 软件工程师
-  participant_other: 以上都不是
-  print_all: 打印所有
-  print_ice_art: 打印您的冰艺术
-  create_art_with_zombie: 或用僵尸来做高级的艺术
-  i_am_a: 我是
-  never_spam: 我们绝不会发送垃圾邮件
-  enter_country: 如果在美国以外，请输入国家
-  used_infrequent_updates: 仅用于少有的更新
-  privacy_practices_children: 请阅读我们对于孩子们的隐私政策
-  petition_thankyou: 谢谢你在请愿书上签名
-  continue_learning_header: 继续学习
-  continue_learning_body: 你有很多的选择。你可以在线，或在当地学校或夏令营学习。
-  learn_code_studio: 尝试 Code.org 的课程
-  learn_next_level: 尝试另一个 Code.org 课程
-  learn_online: 请尝试其他在线课程
-  learn_classes: 查找本地的课程
-  learn_back_to_minecraft: 通过《我的世界》不断学习
-  hoc_is_here: 12月5日至11日，#HourOfCode又来了。 https://youtu.be/KsOIlDT145A.
-  just_did_hoc: '我刚刚完成了 #HourOfCode —— 来看看吧！ @codeorg'
-  just_did_course1: 我刚完成课程1-来看看吧！ @codeorg
-  just_did_course2: 我刚完成课程2-来看看吧！ @codeorg
-  just_did_course3: 我刚完成课程3-来看看吧！ @codeorg
-  just_did_course4: 我刚完成课程4-来看看吧！ @codeorg
-  just_did_coursea: 我刚完成了课程A - 来看看吧！ @codeorg
-  just_did_courseb: 我刚完成了课程B - 来看看吧！ @codeorg
-  just_did_coursec: 我刚完成了课程C - 来看看吧！ @codeorg
-  just_did_coursed: 我刚完成了课程D - 来看看吧！ @codeorg
-  just_did_coursee: 我刚完成了课程E - 来看看吧！ @codeorg
-  just_did_coursef: 我刚完成了课程F - 来看看吧！ @codeorg
-  just_did_accelerated: 我刚完成加速课程- 来看看！ @codeorg
-  just_did_hoc_donor: 我刚刚参加了#HourOfCode - 来看看吧！（感谢 %{donor_twitter} 支持 @codeorg)
-  just_did_course_donor: 我刚完成 %{course} - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg
-  twitter_teach_cs: 90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。
-  twitter_cs_foundational: 计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。
-  learn_hoc: 学习编程一小时
-  beyond_hoc: 一小时之后
-  what_gender: 你的性别是什么？
   girl: 女孩
-  boy: 男孩
-  help_recruit_coders: 帮助我们招募更多的程序员来到你的团队 ！
+  girls: 女孩
+  girls_team: 女孩队
+  give_my_hour: 把我的一小时给：
+  go: 出发
+  google_sign_in_instruct: 从那里，他们应该选择"使用谷歌帐户登录"选项：
+  groklearning_beyond_gradelevel: 中学及以上
+  groklearning_beyond_longdescription: 给没有编程经验的人的 Python 编程语言入门课程. 我们独特搭配介绍和挑战的内容将带给你对
+    Python 编程一个透彻的了解. 我们给来自不同背景和不同年龄的学生教这些内容. 我们相信它会适合你。
+  groklearning_beyond_name: 学习 Python 程式设计
+  groklearning_beyond_platformtext: 现代网络浏览器
+  groklearning_beyond_shortdescription: 基本的 python 编程简介
+  groklearning_gradelevel: 中学及以上
+  groklearning_longdescription: 使用Python 程式设计语言来构建叫做"伊丽莎"的聊天机器人，并让她扮演一个精神治疗医师。你将教导伊丽莎如何说话和说正确的内容。她可以误导你的朋友，让他们误以为她是一个人而不是一台电脑吗？
+  groklearning_name: 聊天机器人医生爱丽莎
+  groklearning_platformtext: 现代网络浏览器
+  groklearning_shortdescription: 教聊天机器人“爱丽莎”如何聊天来让你的朋友们认为她是真人！
+  gumball_name: 口香糖
+  hacketyhack_beyond_gradelevel: 高中
+  hacketyhack_beyond_longdescription: 哈克将教你入门编程的基础。不需要有编程经验！使用哈克，你将学习到 Ruby 编程语言。Ruby
+    是一种用于各种计算机程序，包括电脑应用程序和网站。[注：需要电脑安装软件]
+  hacketyhack_beyond_name: 学习 Ruby
+  hacketyhack_beyond_platformtext: 桌面安装
+  hacketyhack_beyond_shortdescription: 从基础学习 Ruby
+  header_about: 关于
+  header_about_contact: 联系我们
+  header_about_donors: 捐助者
+  header_about_evaluation: 评估
+  header_about_faqs: 常见问答
+  header_about_jobs: 职业机会
+  header_about_leadership: 管理团队
+  header_about_news: 新闻室
+  header_about_partners: 合作伙伴
+  header_about_team: 全体成员
+  header_about_us: 关于我们
+  header_course_catalog: 课程分类
+  header_courses: 课程
+  header_documentation: 使用文档
+  header_educate_beyond: Code.org 意外的内容
+  header_educate_community: 在线社区
+  header_educate_elementary: 小学
+  header_educate_high: 高中
+  header_educate_hoc: 编程一小时
+  header_educate_inspire: 鼓舞学生
+  header_educate_middle: 中学
+  header_educate_overview: 教育工作者概述
+  header_educate_partner: 与我们合作
+  header_educate_requirements: 技术要求
+  header_educate_tools: 工具和视频
+  header_help_support: '帮助和支持 '
+  header_help_us: 帮助我们
+  header_home: 首页
+  header_incubator: 孵化器
+  header_learn: 学习
+  header_legal: 隐私与法律
+  header_legal_privacy: 隐私政策
+  header_legal_tos: 使用条款
+  header_my_dashboard: 我的控制面板
+  header_professional_learning: 专业学习
+  header_project_gallery: 项目
+  header_report_abuse: 举报滥用
+  header_report_bug: 报告错误
+  header_screen_reader_hamburger: 菜单
+  header_screen_reader_help: 帮助菜单
+  header_sections: 小组
+  header_stats: 统计信息
+  header_teach: 教学
+  header_teacher_community: 教师社区
+  header_tutorials: 教程
+  hello: 世界你好
   help_recruit: 帮助我们招募更多的程序员 ！
-  lines_of_code: 至今已经写了<b>#行代码</b>。
-  lines_of_code_alt: 学生们写了<b>#</b>行代码
-  who_has_done_hoc: '谁完成了 #HourOfCode ？ @codeorg'
-  who_has_done_hoc_donor: '谁为 #HourOfCode作了贡献？（感谢%{donor_twitter} 支持 @codeorg）'
+  help_recruit_coders: 帮助我们招募更多的程序员来到你的团队 ！
+  help_translate: 帮助我们翻译
+  hero_name: "《我的世界》: 英雄之旅"
+  hoc-encryption_name: 简单加密
+  hoc-impact-study_name: 带调查的经典迷宫
+  hoc2014_everyone: 每个人
+  hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
+  hoc2014_host: 举办它
+  hoc2014_students: 学生
+  hoc2014_support: 支持它 &#x25BE;
+  hoc2014_teachers: 教师
+  hoc2014_try: 试一试
+  hoc2014_try_frozen: 来自冰雪奇缘的艺术家安娜及爱莎。
+  hoc2014_try_new_tutorial: 试试我们新的测试版的编程一小时教程
+  hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
+  hoc2014_try_scrat: 愤怒的小鸟、植物大战僵尸和斯奎特
+  hoc2014_whatishoc: 什么是编程一小时？
+  hoc2018_aquatic_video1: "《我的世界》水上航行 - 简介"
+  hoc2018_aquatic_video2: "《我的世界》水上航行 - 循环"
+  hoc2018_aquatic_video3: "《我的世界》水上航行 - 条件"
+  hoc2018_aquatic_video4: "《我的世界》水上航行 - 祝贺"
+  hoc2018_creativity: 创造力
+  hoc2018_creativity_courses: 进一步了解 Code.org 课程
+  hoc2018_creativity_courses_link: 进一步了解 <a href="https://studio.code.org/courses">Code.org
+    课程</a>
+  hoc2018_creativity_create: 创建
+  hoc2018_creativity_hoc_about: '今年，编程一小时都与创造力有关。 '
+  hoc2018_creativity_hoc_coming: 编程一小时就要来了…
+  hoc2018_creativity_homepage: 放飞想象，孕育创新。从编程一小时和你自己的创意品牌开始，无论它可能是什么。请观看我们的视频。
+  hoc2018_creativity_social_media: 今年的#编程一小时#都与创造力有关。我已经参加了！你呢？
+  hoc2018_creativity_social_media_2: 今年的#编程一小时#都与创造力有关。你会创造什么？
+  hoc2018_creativity_what_will_you_create: 你将创建什么？
+  hoc2018_dance_amazon_about_future_engineer_button: 了解详情
+  hoc2018_dance_amazon_about_future_engineer_description: 了解亚马逊幼儿园的职业项目来发展计算机科学教育。查找如何参与我们的夏令营，高中计算机科学课程，奖学金和实习项目。
+  hoc2018_dance_amazon_about_future_engineer_title: 关于亚马逊未来工程师
+  hoc2018_dance_amazon_funding_title: 为你的计算机科学学位筹资
+  hoc2018_dance_amazon_future_engineer_footer: "* 在本教程中用到其音乐的艺术家不赞助或认可亚马逊为他们的音乐使用
+    Code.org 的版权。\n\n"
+  hoc2018_dance_amazon_internships_button: 查找实习项目
+  hoc2018_dance_amazon_internships_description: 2019 年夏季亚马逊未来工程师实习申请已开始。实习生将与经理、技术导师以及其他实习生一起来为亚马逊客户创造新功能和服务。实习岗位位于美国和加拿大。
+  hoc2018_dance_amazon_internships_title: 加入亚马逊实习生
+  hoc2018_dance_amazon_k8_programs_title: K-8 项目
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: 了解更多关于亚马逊未来工程师
+  hoc2018_dance_amazon_scholarship_programs_button: 立即申请
+  hoc2018_dance_amazon_scholarship_programs_description: 亚马逊为成功完成或注册了 AP 计算机科学课程，并希望在美国学习4年计算机学位的低收入学生提供每年10000美元的奖学金。
+  hoc2018_dance_amazon_scholarship_programs_title: 奖学金项目
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: 如果您是法国的学生或教师，请访问[亚马逊未来工程师-法国](%{amazon_future_engineer_france_link})
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: 亚马逊未来工程师是一个全面的儿童对职业计划,
+    以激励, 教育和培训低收入和其他处境不利的儿童和青年从事计算机科学的职业。<a href='%{amazon_future_engineer_link}'
+    target='_blank'>了解更多</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: 亚马逊未来工程师*
+    是一个全面的儿童对职业计划，以激励、教育和培训低收入和其他处境不利的儿童和青年从事计算机科学的职业。[了解更多](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: '与以下机构合作: '
+  hoc2018_dance_amazon_try_coding_this_summer_button: 加入宿营
+  hoc2018_dance_amazon_try_coding_this_summer_description: 参与亚马逊未来工程师的免费、有趣的、包容的计算机科学营!
+    2019年夏季，美国多个地点的幼儿园至8年级的学生可参加夏令营。
+  hoc2018_dance_amazon_try_coding_this_summer_title: 这个夏天试试编程
+  hoc2018_dance_create_your_own_dance_title: 创建自己的舞会
+  hoc2018_dance_featured_student_creations_title: 精选的学生作品
+  hoc2018_dance_keep_on_dancing_box_title: 继续跳舞
+  hoc2018_dance_keep_on_dancing_button: 超越
+  hoc2018_dance_keep_on_dancing_description: 通过扩展项目创意，超越第一个小时。
+  hoc2018_dance_keep_on_dancing_specs: 语言 | 格式 | 13岁以上
+  hoc2018_dance_measure: 小节
+  hoc2018_dance_measure_colon: 小节：
+  hoc2018_dance_party_box_description: 写出一个舞会代码，分享给你的朋友们！
+  hoc2018_dance_party_box_title: 舞蹈派对
+  hoc2018_dance_party_button: 开始
+  hoc2018_dance_party_landing_title: 舞蹈
+  hoc2018_dance_party_main_heading: 舞蹈派对
+  hoc2018_dance_party_specs: 语言 | 格式 | 6-106岁
+  hoc2018_dance_party_subheading: 帮助翻译舞蹈派对
+  hoc2018_dance_teacher_resources_tile1_button: 课程计划
+  hoc2018_dance_teacher_resources_tile1_description: 课程计划、证书和音乐筛选。
+  hoc2018_dance_teacher_resources_tile2_button: 线下的活动
+  hoc2018_dance_teacher_resources_tile2_description: 不需要计算机！你的班级可以通过在一起编排舞会来学习编码的概念。
+  hoc2018_dance_teacher_resources_tile2_title: 离线舞会
+  hoc2018_dance_teacher_resources_title: 教师资源
+  hoc2018_dance_video1: 舞蹈派对 - 简介
+  hoc2018_dance_video2: 舞蹈派对 - 事件
+  hoc2018_dance_video3: 舞蹈派对 - 属性
+  hoc2018_dance_video4: 舞蹈派对 - 祝贺
+  hoc2018_dance_video_title_what_is_creativity: 什么是创造力?
+  hoc2018_dance_videos_section_heading: 获得灵感
+  hoc2018_dance_view_creativity_video_playlist: 什么是创造力？查看完整系列
+  hoc2018_homepage: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！
+  hoc2018_mc_adventurer_description: 编写代码来带领Alex或Steve开启一段冒险之旅。
+  hoc2018_mc_adventurer_title: "《我的世界》大冒险"
+  hoc2018_mc_aquatic_announcement: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！请尝试2018年全新《我的世界》活动，《我的世界》水上航行！现在就注册班级。
+  hoc2018_mc_aquatic_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_aquatic_title: "《我的世界》：水上航行"
+  hoc2018_mc_back: "《我的世界》编程一小时的全新的活动回来了！"
+  hoc2018_mc_back_journey: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_careers_more: 更多由科技人士拍摄的的<a href='%{careers_url}' target='_blank'>鼓舞人心的视频</a>
+  hoc2018_mc_continue_learning: 继续在《我的世界》 学习。
+  hoc2018_mc_designer_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
+  hoc2018_mc_designer_title: "《我的世界》造物主"
+  hoc2018_mc_details: 多种语言|最新的浏览器或平板电脑|2年级以上
+  hoc2018_mc_download_adventurer: 下载离线版《我的世界》大冒险
+  hoc2018_mc_educators: 给教育工作者
+  hoc2018_mc_educators_box1_button: 开始
+  hoc2018_mc_educators_box1_desc: "《我的世界：教育版》在《我的世界》中提供了标准的教案，培训和代码。"
+  hoc2018_mc_educators_box1_title: 在《我的世界》编程
+  hoc2018_mc_educators_box2_button: 下载
+  hoc2018_mc_educators_box2_desc: 工具包可以帮助你主持编程一小时活动，并将学生吸引到计算机科学中来。
+  hoc2018_mc_educators_box2_title: 下载主持人指南
+  hoc2018_mc_educators_box3_button: 找到工场
+  hoc2018_mc_educators_box3_desc: 加入你附近微软商店的免费编程一小时工场。所有技能级别，年龄在6岁以上。
+  hoc2018_mc_educators_box3_title: 参加免费的学生工场
+  hoc2018_mc_educators_box4_button: 探索资源
+  hoc2018_mc_educators_box4_desc: 从微软带来改变社区的数字技能和计算机科学教育资源。
+  hoc2018_mc_educators_box4_title: 更多计算机科学资源
+  hoc2018_mc_go_to_mc_education: 前往《我的世界》 教育
+  hoc2018_mc_hero_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_hero_title: "《我的世界：英雄之旅》"
+  hoc2018_mc_homepage_give_flight: 放飞想象，孕育创新。从编程一小时和自己的创意品牌开始，无论它是什么。
+  hoc2018_mc_homepage_hoc_coming: 编程一小时活动即将开始...
+  hoc2018_mc_homepage_join_us: 加入我们
+  hoc2018_mc_homepage_try_it: 试一试
+  hoc2018_mc_homepage_watch_video: 观看视频
+  hoc2018_mc_homepage_what_create: 你将创建什么？
+  hoc2018_mc_journey: 用代码在《我的世界》中旅行。
+  hoc2018_mc_minecraft_education: "《我的世界》 教育"
+  hoc2018_mc_no_internet: 没有互联网吗？
+  hoc2018_mc_page_title: 编程一小时《我的世界》教程
+  hoc2018_mc_short_description: 用你的创造力和解决问题的技能来找到财宝，并用代码来探索水下世界。
+  hoc2018_mc_short_description_shorter: 用你的创造力和解决问题的技能来用代码探索并构建水下世界。
+  hoc2018_mc_start: 开始
+  hoc2018_mc_teacher_guide: 查看教师指南
+  hoc2018_mc_thank_microsoft: 我们感谢微软支持我们的理想和使命，以确保每个儿童有机会学习计算机科学和在21世纪取得成功的技能。
+  hoc2018_mc_video_1min: 1分钟
+  hoc2018_mc_video_2min: 2分钟
+  hoc2018_mc_video_3min: 3分钟
+  hoc2018_mc_video_5min: 5分钟
+  hoc2018_mc_video_title_anybody_can_learn: 任何人都可以学习
+  hoc2018_mc_video_title_cs_intro: 计算机科学简介
+  hoc2018_mc_video_title_cs_is_everything: 计算机科学正在改变一切
+  hoc2018_mc_video_title_hoc_is_here: 编程一小时来了——任何人都可以学会
+  hoc2018_mc_video_title_inspire_girl: 鼓励女生参与
+  hoc2018_mc_video_title_my_name_is_aracely: 我叫阿拉丝莉
+  hoc2018_mc_video_title_obama: 奥巴马总统和计算机科学
+  hoc2018_mc_video_title_schools_dont_teach: 大部分学校没有教的内容
+  hoc2018_mc_video_title_sports: 突破自我。任何人都可以学会。
+  hoc2018_mc_video_title_steph_curry: 和 Steph Curry 一起编程一小时
+  hoc2018_mc_videos_more: 更多由榜样人物和明星出演的<a href='%{inspiring_videos_playlist}'>鼓舞人心的视频</a>
+  hoc2018_mc_watch_videos: 在开始之前，看一段鼓舞人心的视频
+  hoc2018_mc_with_microsoft: '与以下机构合作: '
+  hoc2019_dance_previous_versions: |-
+    虚招以前版本的舞蹈派对？
+    电机这里打开去年的[第一部分](%{dance_2018_link})和[第二部分](%{dance_extras_2018_link})。
+  hoc2019_mc_aquatic_description: 用代码来游览并构建水下世界。
+  hoc2019_mc_mee_description1: 新的《我的世界》编程一小时教程已经可用，可在《我的世界》教育版（Windows，Mac，和 iPad）上找到。和学生一起学习编程基础，探索人工智能！
+  hoc2019_mc_mee_description2: 访问免费资源，包括：课程计划、视频、计算机科学教案，以及教师培训。
+  hoc2019_mc_mee_title: "《我的世界》人工智能让世界更美好"
+  hoc2019_mc_more_coding_resources: 更多编程资源
+  hoc2020_mc_available_code_org: 在Code.org可用
+  hoc2020_mc_available_mee: 在《我的世界：教育版》可用
+  hoc2020_mc_mee_description: 新的“Minecraft编程一小时课程”现在可以在Windows、Mac、Chromebook和iPad上的Minecraft：教育版中使用。学习编程的基础知识、探索多样性、融入您的学生！免费获取资源，包括课程计划、视频、计算机科学课程、公平课程和教师培训。
+  hoc2020_mc_mee_title: Minecraft中两个村庄的故事
+  hoc2021_mc_mee_ai_description: 与学生一起探索 AI，并在 Minecraft：教育版中学习编程。
+  hoc2021_mc_mee_ai_title: 人工智能为行善
+  hoc2021_mc_mee_description: 新的“Minecraft编程一小时课程”现在可以在Windows、Mac、Chromebook和iPad上的Minecraft：教育版中使用。开始使用免费的教育工作者资源、培训和视频。
+  hoc2021_mc_mee_title: 我的世界 TimeCraft
+  hoc2021_mc_mee_villages_description: 在 Minecraft：教育版中学习编程基础知识，与学生一起探索多样性和包容性。
+  hoc2021_mc_mee_villages_title: 两个村庄的故事
+  hoc2022_banner_description: 探索宇宙，进球得分，跳舞 — 尝试计算机科学的方法如此之多！
+  hoc2022_banner_title: 探索，玩耍，创造！
+  hoc2022_cta_primary: 看看有什么新内容
+  hoc2022_cta_secondary: 尝试更多活动
+  hoc2022_landing_page_banner_alt_left: 一个外星人在太空中的土星旁跳舞
+  hoc2022_landing_page_banner_alt_right: 一个机器人在太空中起飞的火箭前盘带足球
+  hoc2022_landing_page_create_description: 做一些怪异而美妙的东西！
+  hoc2022_landing_page_create_title: 创建
+  hoc2022_landing_page_explore_description: 用计算机科学打开通往新世界的大门！
+  hoc2022_landing_page_explore_title: 发现
+  hoc2022_landing_page_play_description: 上场得分！
+  hoc2022_landing_page_play_title: 玩
+  hoc2022_mc_educators_box3_button: '马上注册 '
+  hoc2022_mc_educators_box3_desc_markdown: '使用这个按需提供的[免费课程](%{free_course_link})或为整个班级注册与客座老师一起进行的实时编程一小时研讨会。在12月6日至11日的CSEW期间多次提供。 '
+  hoc2022_mc_educators_box4_button: 继续学习
+  hoc2022_mc_educators_box4_desc: 在专业开发的支持下，通过200小时的计算机科学课程（从模块到python），激发K-12学生对STEM的热情。
+  hoc2022_mc_mee_description: '在黎明前逃离神秘的豪宅，赚取一百万颗翡翠！新鲜出炉的我的世界编程一小时教程现已在《我的世界：教育版》中推出，适用于Windows、Mac、Chromebook、Ipad和移动设备。开始使用免费的教育工作者资源、培训和视频。 '
+  hoc2022_mc_mee_timecraft_description: 在《我的世界：教育版》的这个免费编程课中，进行时间旅行，拯救未来。
+  hoc2022_mc_mee_title: 我的世界逃生庄园
+  hoc2022_nasa_banner_description: 美国东部时间12月5日上午10点，在NASA STEM的YouTub频道上首播。
+  hoc2022_nasa_banner_heading: 加入NASA并观看关于太空计算机科学的《编程一小时》特别节目！
+  hoc2022_nasa_webb_alt_text: NASA詹姆斯·韦伯望远镜的插图
+  hoc_is_here: 12月5日至11日，#HourOfCode又来了。 https://youtu.be/KsOIlDT145A.
   hoc_leaderboards: 编程一小时排行榜
-  students_and_lines: "%{students} 位学生完成了编程一小时并且写了 %{lines} 行的代码。"
-  start_hoc: 现在就开始“编程一小时”吧
-  contact_form_topic_press: 新闻/媒体（采访或演讲）
-  stats_nina: '"每一天学生们都如此100%的参与。"——尼娜尼科尔斯佩里，老师'
-  stats_student: '"我知道这是一个<b>千载难逢</b> 的机会。"——马里亚纳.阿尔泽特，五年级学生'
-  stats_michael: "“我<b>从来没有</b>见到我的学生们抱有如此大的学习热情。”——弗兰克. 马丁内斯，教师"
-  stats_nina_markdown: "“每一天学生们都如此 ——100%的参与。”——尼娜・尼科尔斯・佩里，老师"
-  stats_student_markdown: "“我认识到这是一个**千载难逢**的机会。”——马里亚纳・阿尔泽特，五年级学生"
-  stats_michael_markdown: "“我**从不曾**见到我的学生们抱有如此大的学习热情。”——弗兰克・马丁内斯，教师。"
-  studiobar_title: 探索 <a href='http://studio.code.org'>Code.org 的课程</a>
-  studiobar_title_nolink: 探索 Code.org 的课程
-  studiobar_elementary_title: 初级课程
-  studiobar_elementary_body: 为 K&#8209;5 所制的三个新课程
-  studiobar_dance_title: 舞蹈派对
-  studiobar_dance_body: 创建并分享你自己的跳舞派对
-  studiobar_hoc_title: 编程一小时
-  studiobar_hoc_body: 和愤怒的小鸟一起学习代码知识
-  studiobar_flappy_title: 飞扬的代码
-  studiobar_flappy_body: 创造自己的 Flappy 游戏并与别人分享
-  studiobar_teacher_title: 为教师所制
-  studiobar_teacher_body: 在您的教室内介绍 Code.org
-  studiobar_frozen_title: 编程一小时
-  studiobar_frozen_body: 与安娜和埃莎创建一个冬季仙境
-  studiobar_donate_title: 捐赠
-  studiobar_donate_body: 你捐的每一美元让一个孩子学习
-  studiobar_shop_title: 商店
-  studiobar_shop_body: 突破束缚，骄傲的戴上我们的标志。
-  homepage_stats_students: 在 Code.org 上有账号的美国学生
-  homepage_stats_female: 我们的女性学生
-  homepage_stats_teachers: 使用 Code.org 的教师
-  homepage_stats_hourofcodde: 全世界已经尝试了编程一小时的学生
-  homepage_stats_policy: 国家改变了政策来支持计算机科学
-  homepage_stats_title: 我们正在有所作为
-  homepage_hero_text_malala: |-
-    &ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;
-    诺贝尔和平奖得主马拉拉
-  homepage_hero_text_susan: |-
-    &ldquo;如果你能改变技术，你可以改变世界。&rdquo;
-    苏珊，YouTube 首席执行官
+  hoc_overview_dance_2019_subtitle: 编写舞蹈派对，并与朋友分享。精选了 Katy Perry、Shawn Mendes、Panic!
+    At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj，以及其他 34 名明星的豪华阵容！
+  hoc_overview_dance_2022_subtitle: 编写一个舞蹈派对与你的朋友分享。里面有碧昂丝、哈利·史泰尔斯、丽佐、纳斯小子、塞莱娜·戈麦斯、迪士尼魔法满屋的音乐等等！
+  hoc_overview_dance_subtitle: 写出你自己的舞会代码，分享给你的朋友们。精选 Katy Perry、Madonna、J. Balvin、Sia、Keith
+    Urban、Ciara 等 25 个！
+  hoc_overview_dance_title: 舞蹈派对
+  hoc_overview_hello_world_2022_alt_text: 动画化漂浮在地球插图周围的宇航员和动物角色
+  hoc_overview_hello_world_2022_subtitle: 从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。
+  hoc_overview_more_resources: 有关如何参与远程教室的更多资源，请参见[虚拟 [编程一小时》](https://hourofcode.com/us/how-to/virtual）举办指南。对于那些缺乏技术条件或网络连接的学生，请共享这个[线下《编程一小时》活动]包（https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf）。
+  hoc_overview_partner_activities_body: 编程一小时由 code. org 和合作伙伴联合开发，网站提供 500 多项计算机科学活动，适合所有年龄与经验水平。
+  hoc_overview_partner_activities_link: 查看活动
+  hoc_overview_partner_activities_title: 更多合作伙伴的活动
+  hoc_overview_start_tutorial: 开始
+  hoc_overview_subtitle: <a href="https://hourofcode.com">编程一小时</a>是一个全球性的活动，在全球 180
+    多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试有 500 多个、支持45种语言的编程一小时教程。
+  hoc_overview_subtitle_markdown: "[编程一小时](https://hourofcode.com)是一个全球性的活动，在全球 180
+    多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试支持45种语言的500+多个编程一小时课程。"
+  hoc_overview_title: 来自 Code.org 的编程一小时活动
+  hoc_overview_view_teacher_guide: 查看教师指南
+  homepage_action_text_codevideo: 观看视频
+  homepage_action_text_girlvideo: 鼓励女生参与
+  homepage_action_text_hoc: 编程一小时提供给每一个学生
+  homepage_action_text_join_us: 加入我们
+  homepage_action_text_learn: 开始学习
+  homepage_action_text_num_served: "# 次参与"
+  homepage_action_text_sign_up: 注册
+  homepage_action_text_signpetition: 在请愿书上签名
+  homepage_action_text_teachervideo: 观看视频
+  homepage_action_text_try_it: 试一试
+  homepage_action_text_volunteers: 我们需要技术志愿者
+  homepage_action_text_watchvideo: 观看视频
+  homepage_action_text_wincelebritychat: 赢得与名人聊天的机会
+  homepage_banner_20k_teachers: 两万名老师经过训练后，正在课堂上传授计算机科学。
+  homepage_banner_20k_teachers_link: 了解详情
+  homepage_banner_40k_teachers_link: 了解详情
+  homepage_banner_congress: 美国领导人正在呼吁国会拨款给12年级的计算机科学课程。
+  homepage_banner_congress_link: 添加您的支持
+  homepage_banner_emailprivacy: 我们正在对如何支持学生的隐私做一项重要的改进。
+  homepage_banner_emailprivacy_link: 阅读更多
+  homepage_banner_link_prizes: '加入史上最大的学习盛会 '
+  homepage_banner_privacy_link: 了解详情
+  homepage_banner_text_link: 了解详情
+  homepage_banner_text_main: Code.org 和大学理事会是一个以增加电脑科学的多样性的联盟。
+  homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
+  homepage_below_hero_announcement_link_text: 了解详情
+  homepage_below_hero_announcement_text: 我们尊重您的隐私，为此我们对隐私政策进行了一些更新，并将从 5 月 25 日起生效。
+  homepage_csa_body: 在我们以公平为导向的课程中，为学生提供与现实世界相连的创意项目。
+  homepage_csa_subhead: 一个新方法-
+  homepage_csa_title: AP®计算机科学A
+  homepage_diversity_pledge: 承诺多样性
+  homepage_donors_donate: 捐赠
+  homepage_donors_seall: 查看全部
+  homepage_gallery_header: 已创建超过%{project_count}百万个Code.org项目
+  homepage_header_donors: Code.org 感谢各位支持者
+  homepage_hero_hoc_is_coming: 编程一小时活动即将开始
+  homepage_hero_hoc_is_here: "《编程一小时》在这里"
+  homepage_hero_text_bosh: |-
+    &ldquo;如果你学习编程，你就可以选择自己人生的方向&rdquo;
+    克里斯 波什
   homepage_hero_text_fistbump: |-
     &ldquo;别总是玩电话，写上面的程序吧。&rdquo;
     奥巴马总统
-  homepage_hero_text_sheryl: "&ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo;
-    \n谢丽尔，Facebook 首席运营官说"
+  homepage_hero_text_malala: |-
+    &ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;
+    诺贝尔和平奖得主马拉拉
   homepage_hero_text_satya: "&ldquo;计算机科学可以打开这个世界里最好的机会&rdquo; \n萨提亚，微软首席执行官"
   homepage_hero_text_satya_new: |-
     &ldquo;计算机科学给予了学生创建未来世界的力量。&rdquo;
     萨提亚，微软首席执行官
-  homepage_hero_text_bosh: |-
-    &ldquo;如果你学习编程，你就可以选择自己人生的方向&rdquo;
-    克里斯 波什
+  homepage_hero_text_sheryl: "&ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo;
+    \n谢丽尔，Facebook 首席运营官说"
+  homepage_hero_text_stat_loc: 八百五十万女孩已经在 Code.org 里注册学习了。
+  homepage_hero_text_stat_served: '编程一小时：已有 #served 次参与'
+  homepage_hero_text_stat_students: 'Code.org 有 #student_count 个学生帐户'
   homepage_hero_text_student1: |-
     &ldquo;这些技能已经改变了我的未来。更不用说，这其实和玩差不多。&rdquo;
     卢娜，七年级
@@ -317,1630 +1131,817 @@ zh-CN:
   homepage_hero_text_student5: |-
     &ldquo;计算机科学，不是别人的，是你的。它就在这里，快开始吧。&rdquo;
     杰拉尔多，老师
+  homepage_hero_text_susan: |-
+    &ldquo;如果你能改变技术，你可以改变世界。&rdquo;
+    苏珊，YouTube 首席执行官
   homepage_hero_text_teacher1: |-
     &ldquo;编码火花讲求创意、 灵感和创新 &mdash; 这些是任何职业都不可或缺的。&rdquo;
     弗洛雷萨，老师
   homepage_hero_text_teacher2: |-
     &ldquo;我所有的学生都参与并投入到了这个课程。&rdquo;
     亚当，老师
-  homepage_hero_text_stat_loc: 八百五十万女孩已经在 Code.org 里注册学习了。
-  homepage_hero_text_stat_students: 'Code.org 有 #student_count 个学生帐户'
-  homepage_hero_text_stat_served: '编程一小时：已有 #served 次参与'
-  homepage_hero_hoc_is_coming: 编程一小时活动即将开始
-  homepage_hero_hoc_is_here: "《编程一小时》在这里"
-  homepage_slot_text_hoc: 编程一小时
-  homepage_slot_text_frozen: 与安娜与埃尔莎一起来玩冰雪奇缘
-  homepage_slot_text_teacher: 教师的仪表板
-  homepage_slot_text_studio: 我们的所有教程
-  homepage_slot_text_course4: 课程 4
-  homepage_slot_text_shop: 商店
-  homepage_slot_text_flappy: 飞扬的代码
-  homepage_action_text_hoc: 编程一小时提供给每一个学生
-  homepage_action_text_num_served: "# 次参与"
-  homepage_action_text_join_us: 加入我们
-  homepage_action_text_sign_up: 注册
-  homepage_action_text_try_it: 试一试
-  homepage_action_text_volunteers: 我们需要技术志愿者
-  homepage_action_text_codevideo: 观看视频
-  homepage_action_text_teachervideo: 观看视频
-  homepage_action_text_watchvideo: 观看视频
-  homepage_action_text_girlvideo: 鼓励女生参与
-  homepage_action_text_learn: 开始学习
-  homepage_action_text_signpetition: 在请愿书上签名
-  homepage_action_text_wincelebritychat: 赢得与名人聊天的机会
+  homepage_higher_power_body: 与舞蹈派对一起创作，获得观看乐队现场表演的机会。
   homepage_signpetition_dropdown: 我同意 &#x25BE;
   homepage_signpetition_dropdown_text: 我同意
-  homepage_diversity_pledge: 承诺多样性
-  homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
-  homepage_banner_link_prizes: '加入史上最大的学习盛会 '
-  homepage_banner_text_main: Code.org 和大学理事会是一个以增加电脑科学的多样性的联盟。
-  homepage_banner_text_link: 了解详情
-  homepage_banner_privacy_link: 了解详情
-  homepage_banner_20k_teachers: 两万名老师经过训练后，正在课堂上传授计算机科学。
-  homepage_banner_20k_teachers_link: 了解详情
-  homepage_banner_congress: 美国领导人正在呼吁国会拨款给12年级的计算机科学课程。
-  homepage_banner_congress_link: 添加您的支持
-  homepage_banner_emailprivacy: 我们正在对如何支持学生的隐私做一项重要的改进。
-  homepage_banner_emailprivacy_link: 阅读更多
-  homepage_banner_40k_teachers_link: 了解详情
-  homepage_slot_text_title_hoc: 编程一小时
+  homepage_slot_text_blurb_advocates: 支持我们的工作
+  homepage_slot_text_blurb_at_home: 这些资源使它变得容易
+  homepage_slot_text_blurb_educators: 教导你的学生
   homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
   homepage_slot_text_blurb_hoc_2022: 探索，玩耍，创造!
-  homepage_slot_text_link_hoc: 来试试“编程一小时”项目！
-  homepage_slot_text_link_about_hoc: 关于《编程一小时》
-  homepage_slot_text_link_host: 举办一次“编程一小时”活动
-  homepage_slot_text_link_hocserved: "# 次参与"
-  homepage_solot_text_link_volunteer: 成为编程一小时志愿者
-  homepage_slot_text_title_students: 学生
   homepage_slot_text_blurb_students: 探索我们所有的教程
   homepage_slot_text_blurb_students_courses: 探索我们的课程
-  homepage_slot_text_link_codestudio: 尝试代码工作室
-  homepage_slot_text_link_local: 找一个当地的班级
-  homepage_slot_text_link_othercourses: 其他在线的课程
-  homepage_slot_text_title_educators: 教育工作者
-  homepage_slot_text_blurb_educators: 教导你的学生
-  homepage_slot_text_link_elementary: 小学
-  homepage_slot_text_link_middle: 中学
-  homepage_slot_text_link_high: 高中
-  homepage_slot_text_link_k5: K-5 年级的课程
-  homepage_slot_text_link_fullcurriculum: 请看我们完整的课程大纲
-  homepage_slot_text_link_pd: 职业发展培训
-  homepage_slot_text_title_advocates: 倡导
-  homepage_slot_text_blurb_advocates: 支持我们的工作
-  homepage_slot_text_link_stats: 请看统计信息
-  homepage_slot_text_link_buy: 加入进来
-  homepage_slot_text_link_donate: 捐赠
-  homepage_slot_text_link_shop: T 恤，帽子，还有更多的东西
-  homepage_slot_text_link_thebadguys: "《坏蛋联盟》编程"
+  homepage_slot_text_course4: 课程 4
+  homepage_slot_text_flappy: 飞扬的代码
+  homepage_slot_text_frozen: 与安娜与埃尔莎一起来玩冰雪奇缘
+  homepage_slot_text_hoc: 编程一小时
+  homepage_slot_text_link_about_hoc: 关于《编程一小时》
   homepage_slot_text_link_administrators: 带到您的学校或地区
-  homepage_gallery_header: 已创建超过%{project_count}百万个Code.org项目
-  homepage_header_donors: Code.org 感谢各位支持者
-  homepage_donors_seall: 查看全部
-  homepage_donors_donate: 捐赠
-  homepage_below_hero_announcement_text: 我们尊重您的隐私，为此我们对隐私政策进行了一些更新，并将从 5 月 25 日起生效。
-  homepage_below_hero_announcement_link_text: 了解详情
-  homepage_higher_power_body: 与舞蹈派对一起创作，获得观看乐队现场表演的机会。
+  homepage_slot_text_link_buy: 加入进来
+  homepage_slot_text_link_code_break: 观看代码小憩
+  homepage_slot_text_link_codestudio: 尝试代码工作室
+  homepage_slot_text_link_do_hoc: 做一次“编程一小时”
+  homepage_slot_text_link_donate: 捐赠
+  homepage_slot_text_link_elementary: 小学
+  homepage_slot_text_link_express_course: 尝试速成课程
+  homepage_slot_text_link_fullcurriculum: 请看我们完整的课程大纲
+  homepage_slot_text_link_high: 高中
+  homepage_slot_text_link_hoc: 来试试“编程一小时”项目！
+  homepage_slot_text_link_hocserved: "# 次参与"
+  homepage_slot_text_link_host: 举办一次“编程一小时”活动
+  homepage_slot_text_link_k5: K-5 年级的课程
+  homepage_slot_text_link_local: 找一个当地的班级
+  homepage_slot_text_link_middle: 中学
+  homepage_slot_text_link_othercourses: 其他在线的课程
+  homepage_slot_text_link_pd: 职业发展培训
+  homepage_slot_text_link_shop: T 恤，帽子，还有更多的东西
+  homepage_slot_text_link_stats: 请看统计信息
+  homepage_slot_text_link_thebadguys: "《坏蛋联盟》编程"
+  homepage_slot_text_shop: 商店
+  homepage_slot_text_studio: 我们的所有教程
+  homepage_slot_text_teacher: 教师的仪表板
+  homepage_slot_text_title_advocates: 倡导
+  homepage_slot_text_title_at_home: '在家学习
+
+    '
+  homepage_slot_text_title_educators: 教育工作者
+  homepage_slot_text_title_hoc: 编程一小时
+  homepage_slot_text_title_students: 学生
+  homepage_solot_text_link_volunteer: 成为编程一小时志愿者
+  homepage_stats_female: 我们的女性学生
+  homepage_stats_hourofcodde: 全世界已经尝试了编程一小时的学生
+  homepage_stats_policy: 国家改变了政策来支持计算机科学
+  homepage_stats_students: 在 Code.org 上有账号的美国学生
+  homepage_stats_teachers: 使用 Code.org 的教师
+  homepage_stats_title: 我们正在有所作为
   homepage_thebadguys_body: 与狼蛛女士、沃尔夫先生和其他坏家伙一起编写一段冒险故事！
-  homepage_csa_subhead: 一个新方法-
-  homepage_csa_title: AP®计算机科学A
-  homepage_csa_body: 在我们以公平为导向的课程中，为学生提供与现实世界相连的创意项目。
-  contact_form_topic_student: 我是学生
-  contact_form_topic_parent: 我是家长
-  contact_form_topic_teacher: 我的老师或教育家
-  contact_form_topic_outside_us: 我是在美国境外
-  contact_form_topic_contribution: 慈善捐款
-  contact_form_topic_partner: 我想成为合作伙伴
-  contact_form_topic_other: 其他
-  contact_form_label_topic: 主题
-  contact_form_label_email: 您的电子邮件地址
-  contact_form_label_message: 短信
-  contact_form_label_submit: 发送消息
-  class_submission_in_school: 在学校
-  class_submission_in_school_daily_programming_course: 日常编程课程
-  class_submission_in_school_ap_computer_science: AP 计算机科学
-  class_submission_in_school_full_university_cs_curriculum: 正规大学计算机课程
-  class_submission_in_school_robotics_club: 机器人俱乐部
-  class_submission_in_school_programming_integrated_in_other_classes: 在其他课程(如数学，科学等)
-    中加入编程
-  class_submission_in_school_summer_school_cs_program: 暑期学校电脑科学培训项目
-  class_submission_in_school_exploring_computer_science: 探索计算机科学
-  class_submission_in_school_other: 校园内其他活动
-  class_submission_out_of_school: 校外
-  class_submission_out_of_school_summer_camp: 夏令营
-  class_submission_out_of_school_afterschool_program: 课后课程
-  class_submission_out_of_school_all-day_workshop: 全日制课程（最长一周）
-  class_submission_out_of_school_multi-week_workshop: 多周课程
-  class_submission_out_of_school_other: 其他校外活动
-  class_submission_online: 在线
-  class_submission_online_programming_class: 在线编程课
-  class_submission_online_teacher_resource: 在线教师资源
-  class_submission_online_other: 其他在线
-  class_submission_level_preschool: 学前班
-  class_submission_level_elementary: 小学
-  class_submission_level_middle_school: 中学
-  class_submission_level_high_school: 高中
-  class_submission_level_college: 大学
-  class_submission_level_vocational: 职业级
-  class_submission_languages_other: 其他语言
-  videos_more: 更多由榜样人物和明星出演的<a href='%{inspiring_videos_playlist}'>鼓舞人心的视频</a>
-  videos_more_markdown: 更多由榜样和名人拍摄的[鼓舞人心的视频](%{inspiring_videos_playlist})
-  careers_page_more: 更多由科技人士拍摄的的<a href='%{careers_url}' target='_blank'>鼓舞人心的视频</a>
-  careers_page_more_markdown: 更多由科技人士拍摄的的[鼓舞人心的视频](%{careers_url})
-  playlab_choose_theme: 选择你的游戏实验室主题
-  playlab_classic_title: 经典
-  playlab_gumball_title: 阿甘妙世界
-  playlab_iceage_title: 冰河世纪-即将推出
-  playlab_iceage_title_live: 冰河世纪
-  starwars_subtitle: 用代码来建立一个星系
-  starwars_javascript_title: JavaScript
-  starwars_javascript_description: 使用拖放块和 JavaScript。
-  starwars_javascript_specs: 英语 | 现代浏览器 | 11岁以上
-  starwars_blocks_title: 模块
-  starwars_blocks_description: 使用拖放块。
-  starwars_blocks_specs: 多语言 | 最新浏览器、智能手机、平板电脑 | 适用年龄6岁以上
-  starwars_platform_text: 最新的浏览器，智能手机，平板电脑
-  mc_name: 我的世界 编程一小时
-  mc_longdescription: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
-  mc_shortdescription: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
+  hopscotch_beyond_gradelevel: 中学及以上
+  hopscotch_beyond_longdescription: iPad 上的"Hopscotch"自学编程语言教程。学生们能够在 iPad 上创建自己的游戏。不仅可以自己独立学习，每个
+    iPad 上也可以最多三个人一起学习。
+  hopscotch_beyond_name: Hopscotch：在你的 iPad 上设计程序
+  hopscotch_beyond_shortdescription: 在 iPad 上学习可视化编程
+  host_an_hour: 举办编程一小时活动
+  hour_of_code: 编程一小时
+  hourofcode_gradelevel: 6岁以上
+  hourofcode_longdescription: 新 code.org/hoc 的占位符
+  hourofcode_name: 经典迷宫
+  hourofcode_platformtext: 现代浏览器、智能手机、平板电脑
+  hourofcode_shortcode: 代码
+  hourofcode_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
+  how_ai_works: AI 的工作原理
+  how_ai_works_tile_description: 观看这一系列短片，了解 AI 的工作原理以及它为何如此重要。由微软首席执行官萨蒂亚·纳德拉和各种各样的专家组成。
+  how_to_teach_hoc: 如何教授代码一小时
+  i_agree: 我同意
+  i_am_a: 我是
+  iceage_name: 冰河世纪
+  if_you_enjoyed: 如果你喜欢这个课程，让你的朋友也试一试！我们想要全世界都来学习。
+  imagine_cup_junior: 想象一下杯少年
+  imagine_cup_junior_tile_description: 这项全球性的 “人工智能为善” 挑战向学生介绍了微软的 AI in Good 计划，使他们能够利用人工智能的力量解决世界上的问题。
+  infinity_gradelevel: 适合年龄 6 岁以上
+  infinity_name: 无限发挥游戏实验室
+  infinity_shortdescription: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
+  joining_section: 加入你的小组（只能加入一次）
+  joining_section_instruct_account: 用他们的 Code.org 帐户登录。
+  joining_section_instruct_button: 一旦他们按下"好的"按钮，他们就会被添加到您的小组。
+  joining_section_instruct_code: 导航到 %{code_org_url} 并键入其小组代码：%{section_code}。
+  joining_section_instruct_website: 如果他们尚未注册，先创建一个 Code.org 帐户。他们可以在  https://studio.code.org/users/sign_up
+    完成注册。请注意，他们可以使用电子邮件地址和密码注册，或通过点击以下其中一个按钮来使用谷歌、Facebook、或微软账号来进行注册：
+  joining_section_overview: 如果学生尚未加入您的小组，请要求他们执行以下步骤。请注意, 他们只需要这样做一次。通过加入您的小组，学生将能够看到分配给他们的课程，而您能够在他们登录后跟踪他们的作业完成进度。
+  just_did_accelerated: 我刚完成加速课程- 来看看！ @codeorg
+  just_did_course1: 我刚完成课程1-来看看吧！ @codeorg
+  just_did_course2: 我刚完成课程2-来看看吧！ @codeorg
+  just_did_course3: 我刚完成课程3-来看看吧！ @codeorg
+  just_did_course4: 我刚完成课程4-来看看吧！ @codeorg
+  just_did_course_donor: 我刚完成 %{course} - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg
+  just_did_coursea: 我刚完成了课程A - 来看看吧！ @codeorg
+  just_did_courseb: 我刚完成了课程B - 来看看吧！ @codeorg
+  just_did_coursec: 我刚完成了课程C - 来看看吧！ @codeorg
+  just_did_coursed: 我刚完成了课程D - 来看看吧！ @codeorg
+  just_did_coursee: 我刚完成了课程E - 来看看吧！ @codeorg
+  just_did_coursef: 我刚完成了课程F - 来看看吧！ @codeorg
+  just_did_hoc: '我刚刚完成了 #HourOfCode —— 来看看吧！ @codeorg'
+  just_did_hoc_donor: 我刚刚参加了#HourOfCode - 来看看吧！（感谢 %{donor_twitter} 支持 @codeorg)
+  khan_beyond_gradelevel: 中学及以上
+  khan_beyond_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
+  khan_beyond_name: 学习电脑程序设计
+  khan_beyond_platformtext: 现代的网络浏览器
+  khan_beyond_shortdescription: 学习如何在 JavaScript 中作画
+  khan_gradelevel: 中学及以上
+  khan_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
+  khan_name: JavaScript 简介
+  khan_platformtext: 现代网络浏览器
+  khan_shortdescription: 学习如何在 JavaScript 中作画
+  khanes_gradelevel: 中学及以上
+  khanes_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
+  khanes_name: JavaScript 简介
+  khanes_platformtext: 现代网络浏览器
+  khanes_shortdescription: 学习如何在 JavaScript 中作画
+  khanfr_gradelevel: 中学及以上
+  khanfr_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
+  khanfr_name: JavaScript 简介
+  khanfr_platformtext: 现代网络浏览器
+  khanfr_shortdescription: 学习如何在 JavaScript 中作画
+  khanhe_gradelevel: 中学及以上
+  khanhe_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
+  khanhe_name: JavaScript 简介
+  khanhe_platformtext: 现代网络浏览器
+  khanhe_shortdescription: 学习如何在 JavaScript 中作画
+  khanpl_gradelevel: 中学及以上
+  khanpl_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
+  khanpl_name: JavaScript 简介
+  khanpl_platformtext: 现代网络浏览器
+  khanpl_shortdescription: 学习如何在 JavaScript 中作画
+  khanpt_gradelevel: 中学及以上
+  khanpt_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
+  khanpt_name: JavaScript 简介
+  khanpt_platformtext: 现代网络浏览器
+  khanpt_shortdescription: 学习如何在 JavaScript 中作画
+  kidsruby_beyond_gradelevel: 年龄 12 岁或以上
+  kidsruby_beyond_longdescription: |-
+    做出有趣的游戏，或使用 Ruby 来做作业！只用告诉你的父母或老师你正在学习 Ruby 编程...;)
+    可以免费在任何计算机上使用。[注：需要安装桌面软件]
+  kidsruby_beyond_platformtext: 桌面安装
+  kidsruby_beyond_shortdescription: 学习使用 Ruby 编程
+  kodable_beyond_gradelevel: 小学
+  kodable_beyond_longdescription: Kodable 是一个自我引导的 iPad 游戏，为5岁以上的孩子介绍程式设计的基础知识。最好有老师或家长的陪伴，但不是必需的。
+  kodable_beyond_name: Kodable
+  kodable_beyond_shortdescription: 一个有趣的、教授计算机编程概念的 iPad 游戏
+  kodable_gradelevel: 小学
+  kodable_longdescription: Kodable 是一个自我引导的 iPad 游戏，为5岁以上的孩子介绍程式设计的基础知识。最好有老师或家长的陪伴，但不是必需的。
+  kodable_name: Kodable （欢迎学龄前读者）
+  kodable_shortdescription: 一个有趣的、教授计算机编程概念的 iPad 游戏
+  kodableunplugged_gradelevel: 适合年龄 8-13岁
+  kodableunplugged_longdescription: '使用普通纸的设计，fuzzFamily Frenzy 教导5岁以上的孩子的程式设计逻辑。老师应解释这个游戏，然后学生结伴来完成一个简单的障碍课程。 '
+  kodableunplugged_platformtext: 离线的
+  kodableunplugged_shortdescription: 一个有趣的不用电脑的活动
+  kodu_beyond_gradelevel: 适合年龄 8 岁以上
+  kodu_beyond_longdescription: Kodu 让孩子们通过一个简单的可视化编程语来言创建PC和 Xbox 上的游戏。Kodu 可以用来教创造力，解决问题，讲故事，以及编程。任何人都可以使用
+    Kodu 制作游戏，幼儿以及成人，没有设计或编程技能。PC 的 Kodu 可免费下载。Xbox的 Kudo 也是在美国的 Xbox 市场有售，在独立游戏频道里面约需要5美元。
+  kodu_beyond_shortdescription: 设计一个三维的游戏世界
+  landscape_recommended_certificates: 打印证书时，推荐选择 **风景**。
+  leaderboards_for_hoc: 编程一小时的排行榜。
+  learn_are_you_educator: 你是一名教育工作者吗？学习<a href="http://hourofcode.com/resources/how-to">如何教授编程一小时</a>
+  learn_back_to_minecraft: 通过《我的世界》不断学习
+  learn_banner_desc: "《编程一小时》是一个全球性的活动，有180 多个国家的超过 1 亿学生在参与。任何人，任何地方都可以组织编程一小时活动。帮助我们给每个学生学习计算机科学的机会
+    ！组织者可以按照我们的 <a href='%{how_to_url}' target='_blank'> 操作指南</a> 来教授编程一小时，用 <a href='%{videos_url}'
+    target='_blank'>这些视频</a>来激发学生的热情。"
+  learn_banner_title: 加入《编程一小时》
+  learn_classes: 查找本地的课程
+  learn_code_studio: 尝试 Code.org 的课程
+  learn_cs_concepts: 用拖放式编程软件学习计算机科学的基本概念。这是一个类似游戏的教程，其中包括由比尔 · 盖茨、 马克 · 扎克伯格、 愤怒的小鸟和植物大战僵尸参与的视频讲座。学习重复，如果语句和基本算法。
+  learn_educator_resources_button: 教育资源
+  learn_educator_resources_description: 学习如何教授编程一小时
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">找到当地志愿者</a>为你的编程一小时课程提供帮助
+  learn_footer_all_tutorials: 查看<a href="https://code.org/learn">编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a
+    href="https://hourofcode.com/activity-guidelines">请点击这里。</a>
+  learn_hoc: 学习编程一小时
+  learn_hoc_prizes: 了解更多关于每个教育者的奖项
+  learn_how_to_hoc: 按照<a href="https://hourofcode.com/how-to">我们的指南</a>教授编程一小时
+  learn_inspirational_videos: 通过展示<a href="https://code.org/educate/inspire">这些视频</a>启发学生
+  learn_more: 现在就试试
+  learn_next_level: 尝试另一个 Code.org 课程
+  learn_now: 现在开始学习
+  learn_online: 请尝试其他在线课程
+  learn_sign_up_button: 注册
+  learn_sign_up_description: 报名参与在计算机科学教育周期间的编程一小时活动。
+  learn_teacher_led_lesson_plans: 得到<a href="https://code.org/teacher-led">发起编程一小时教案的老师给你的</a>启发
+  learn_videos_before_hoc: 在你启动编程一小时代码小时活动之前观看一段励志视频
+  learn_videos_show: 在你的课堂上播放这段鼓舞人心的视频
+  learn_videos_watch: 在课堂上观看这段鼓舞人心的视频
+  lego_beyond_gradelevel: 中学及以上
+  lego_beyond_longdescription: 使用乐高积木块来创建可定制和可编程的机器人。
+  lego_beyond_platformtext: 机器人购买
+  lego_beyond_shortdescription: 构建和编程一个机器人
+  lightbot_beyond_gradelevel: 所有年龄
+  lightbot_beyond_longdescription: 从非常基本的程式设计开始学习核心程式设计逻辑，适合年纪为4岁以上，操作系统可使用 iOS 或安卓系统（或网络浏览器）。学习如何排列命令、找出模式、使用过程与利用循环！
+  lightbot_beyond_platformtext: iOS、安卓（或网络浏览器）
+  lightbot_beyond_shortdescription: 用一个游戏来教授编程概念
+  lightbot_gradelevel: 所有年龄
+  lightbot_longdescription: 引导 Lightbot 点亮所有蓝色瓷砖！ Lightbot 是一个益智游戏，通过编程的游戏机制，让玩家获得基本编码的实际理解。学会顺序控制，编写过程，并利用循环来通过关卡。适合所有年龄。
+  lightbot_platformtext: 所有浏览器及iOS、安卓系统或游戏主机
+  lightbot_shortdescription: 对 Lightbot 编程以使用过程和循环来通过关卡！
+  lightbotintl_gradelevel: 所有年龄
+  lightbotintl_longdescription: 从非常基本的程式设计开始学习核心程式设计逻辑，适合年纪为4岁以上，操作系统可使用 iOS 或安卓系统(或网络浏览器)。学习如何排列命令、
+    找出模式、 使用过程与利用循环！
+  lightbotintl_platformtext: iOS，Android（或浏览器）
+  lightbotintl_shortdescription: 用一个游戏来教授编程概念
+  lines_of_code: 至今已经写了<b>#行代码</b>。
+  lines_of_code_alt: 学生们写了<b>#</b>行代码
+  login_cards: 登录卡
+  lynda_beyond_gradelevel: 高中或以上
+  lynda_beyond_longdescription: 学习如何编写，创建和构建 Web 应用程序，从面向对象编程基础的 C 和 C++ 中，到如何编写 Java。我们的开发教程，可以帮助你学习，发展和创造移动应用程序，用
+    PHP 和 MySQL 数据库，开始使用统计处理语言 R 等等。[注：需要付款]
+  lynda_beyond_name: 在线编程课程
+  lynda_beyond_platformtext: 基于网络的（需要 $$）
+  lynda_beyond_shortdescription: 几十个在线程序设计程的课程
+  make_app: 创建一个应用
+  makeschool_beyond_gradelevel: 高中
+  makeschool_beyond_longdescription: 懂一点 ObjectiveC 吗？学习在一个小时内做一个 iPhone 游戏！我们将引导你完成整个过程，编码、测试，并在浏览器玩你的游戏，然后在
+    Facebook 上给朋友们去尝试！无需有事先的 iPhone 开发经验。你必须明白什么是变量，方法和对象。
+  makeschool_beyond_name: 在你的浏览器中创建一个 iPhone 游戏！
+  makeschool_beyond_platformtext: 现代的网络浏览器
+  makeschool_beyond_shortdescription: 学会在一小时内做一个 iPhone 游戏
+  makeschool_gradelevel: 高中
+  makeschool_longdescription: 学习如何使用适合初学者的一门新编程语言——Swift 来制作一个 iPhone 游戏！开发一个以博&eacute;宝贝为背景的动作类游戏，并通过编写代码来教你的小怪兽新的招式。你将学会如何使用变量，函数和对象来帮助你的怪兽赢得胜利！
+  makeschool_name: 在你的浏览器中创建一个 iPhone 游戏！
+  makeschool_platformtext: 现代的网络浏览器
+  makeschool_shortdescription: 写一个 iPhone 游戏！学习编写代码来教你的怪物做新的动作!
   mc_gradelevel: 6岁以上
+  mc_longdescription: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
+  mc_name: 我的世界 编程一小时
   mc_platformtext: 最新的浏览器，智能手机，平板电脑
+  mc_shortdescription: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
   mc_specs: 多语言 | 最新浏览器和平板电脑 | 适用年龄6岁以上
-  minecraft_agent: "《我的世界：英雄之旅》"
-  minecraft_designer: "《我的世界》造物主"
   minecraft_adventurer: "《我的世界》大冒险"
-  minecraft_tutorials: 编程一小时《我的世界》教程
-  minecraft_specs: 多种语言|最新的浏览器或平板电脑|2年级以上
-  minecraft_start_tutorial: 开始教程
-  minecraft_agent_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
-  minecraft_agent_button: 开始
-  minecraft_designer_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
-  minecraft_designer_button: 开始
-  minecraft_adventurer_description: 编写代码来带领Alex或Steve开启一段冒险之旅。
   minecraft_adventurer_button: 开始
-  minecraft_no_internet: 没有互联网吗？
-  minecraft_download_adventurer: 下载离线版《我的世界》大冒险
-  minecraft_subtitle: 我的世界 编程一小时
-  minecraft_store_camps: 在微软商店里有免费的《我的世界》 编程一小时学习
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>注册
-    </a> 在澳大利亚、加拿大、波多黎各或美国的微软商店里的免费《我的世界》编程一小时研讨会。学习代码是如何通过每一个人以及群体的创造力，来解决问题、并带来乐趣。"
-  minecraft_host_event: 主持 《我的世界》 编程一小时活动
-  minecraft_teach_resources: 教师资源和课程计划。
-  minecraft_leader_guide: 下载资源以帮助您计划和主导活动。
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'> 下载 </a>
-    帮助各种年龄学生的快速入门指南和演示文稿。"
-  minecraft_join_online_training: 准备好了举行自己的《我的世界》编程一小时活动，但不知道如何开始吗？查看我们的<a href='%{minecraft_webinar_url}',
-    target='_blank'>按需提供的网络研讨会</a>。你能学到最佳实践，获得直接能用的主持人材料，以及由《我的世界》团队提供的的新英雄旅行的演练。在计算机科学周（12月4-10）日之前准备好你在编程一小时要提供给年轻人的材料。
+  minecraft_adventurer_description: 编写代码来带领Alex或Steve开启一段冒险之旅。
+  minecraft_agent: "《我的世界：英雄之旅》"
+  minecraft_agent_button: 开始
+  minecraft_agent_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
   minecraft_continue_learning: 大众计算机科学：微软商店上的编程一小时以外课程
   minecraft_continue_learning_description: 不要求计算机科学的经验！确保所有青年都能学习通过计算机科学教育获得的宝贵技能。加入我们在微软商店，参加免费的三个系列之一的学习。这1小时的工作室学习将让您体验在一个有趣的和无压力的环境下编程,
     熟悉的关键计算机科学概念, 并为您在您社区或课堂上领导学习编程一小时打好基础。你能行！<a href='%{minecraft_continue_learning_url}',
     target='_blank'>现在注册</a>。
+  minecraft_designer: "《我的世界》造物主"
+  minecraft_designer_button: 开始
+  minecraft_designer_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
+  minecraft_download_adventurer: 下载离线版《我的世界》大冒险
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'> 下载 </a>
+    帮助各种年龄学生的快速入门指南和演示文稿。"
   minecraft_future: 帮助所有的年轻人为未来做好准备
   minecraft_future_description: 了解其他学校和非营利组织如何将数字技能，从数字素养，计算机科学教育，带到他们的社区。考虑不同的模型，获取提示和技巧，<a
     href='%{minecraft_future_url}', target='_blank'>访问他们发现最有价值的资源</a>。
-  minecraft_og_designer: "《我的世界》回来了，并且为编程一小时带来一个新活动。用您自己的《我的世界》版本来编程动物和其它生物。"
+  minecraft_host_event: 主持 《我的世界》 编程一小时活动
+  minecraft_join_online_training: 准备好了举行自己的《我的世界》编程一小时活动，但不知道如何开始吗？查看我们的<a href='%{minecraft_webinar_url}',
+    target='_blank'>按需提供的网络研讨会</a>。你能学到最佳实践，获得直接能用的主持人材料，以及由《我的世界》团队提供的的新英雄旅行的演练。在计算机科学周（12月4-10）日之前准备好你在编程一小时要提供给年轻人的材料。
+  minecraft_leader_guide: 下载资源以帮助您计划和主导活动。
+  minecraft_name: 我的世界
+  minecraft_no_internet: 没有互联网吗？
   minecraft_og_agent: "《我的世界》回到编程一小时，你就是英雄！通过编写程序来趟《我的世界》旅行吧。"
-  sports_page_title: "《编程一小时》运动"
-  sports_og_title: 突破自我。任何人都可以学会。
-  sports_og_description: 冠军和金牌得主鼓励你尝试《编程一小时》。编写你自己的运动会。
-  sports_title: 用代码编写你自己的体育赛事
-  sports_watch_video: 观看视频
-  sports_video_title: 推动自己。任何人都可以学会。
-  sports_select_theme: 选择你的教程主题
-  sports_basketball_title: 进行一场篮球赛
+  minecraft_og_designer: "《我的世界》回来了，并且为编程一小时带来一个新活动。用您自己的《我的世界》版本来编程动物和其它生物。"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>注册
+    </a> 在澳大利亚、加拿大、波多黎各或美国的微软商店里的免费《我的世界》编程一小时研讨会。学习代码是如何通过每一个人以及群体的创造力，来解决问题、并带来乐趣。"
+  minecraft_specs: 多种语言|最新的浏览器或平板电脑|2年级以上
+  minecraft_start_tutorial: 开始教程
+  minecraft_store_camps: 在微软商店里有免费的《我的世界》 编程一小时学习
+  minecraft_subtitle: 我的世界 编程一小时
+  minecraft_teach_resources: 教师资源和课程计划。
+  minecraft_tile_alt: "《我的世界》中的两个角色：史蒂夫和亚历克斯，背景是一个带珊瑚、海豚和海带的水生我的世界场景"
+  minecraft_tutorials: 编程一小时《我的世界》教程
+  mobile_devices: 用于移动设备的教程
+  monstercoding_gradelevel: 适合年龄 5-13
+  monstercoding_longdescription: 由怪物编码提供的神秘岛编程要求设计了充满乐趣的几个关键的编程概念教给孩子们自学。以每个模块为基础，构建活动，使用彩色动画的图形，音频说明，为孩子们介绍功能、
+    布尔值、 循环、 如果/否则语句和数组。
+  monstercoding_name: 神秘岛编程探索
+  monstercoding_platformtext: 现代网络浏览器、iOS、安卓系统
+  monsterocding_shortdescription: 儿童专用彩色自学编程游戏。
+  more_resources_educators: 给教师和教育工作者们的更多资源
+  mozilla_beyond_gradelevel: 年龄 12 岁或以上
+  mozilla_beyond_longdescription: Thimble 使创建和分享你自己做的网页非常简单。在您的浏览器里撰写和编辑 HTML 和 CSS，并且可以随时预览结果。只需点击一下就可以托管和分享你完成的项目。适合初学者和专家。
+  mozilla_beyond_platformtext: 现代的网络浏览器
+  mozilla_beyond_shortdescription: 创建和共享网页
+  n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
+  n_participants: "# 位参与者"
+  name: 姓名
+  never_spam: 我们绝不会发送垃圾邮件
+  next: 下一项
+  'no': 不
+  no_internet: 没有互联网吗？
+  non_english_tutorials: 翻译成多种语言的教程：
+  og_description: 每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。
+  og_description_celeb: 试试这个新的教程，为你或你的班级赢得与名人视频聊天的机会。
+  og_title: 'Code.org: 任何人都可以学习'
+  og_title_here: "《编程一小时》在这里！"
+  og_title_soon: 编程一小时活动即将开始
+  older_systems: 能在旧一点的系统上运行的教程
+  older_systems_subheading: 这些应该能在较旧的网页浏览器上运行。若要访问所有教程，请升级到 <a href="http://browsehappy.com/"target="_blank">
+    最新的网页浏览器。</a>
+  outbreak_tile_alt: 模拟病毒如何通过一群紫色怪物传播。
+  outbreak_tile_subtitle: 有病毒感染了怪物城！编写一个爆发模拟器，并预测怪物城的邻居会发生什么。
+  outbreak_tile_title: 疫情爆发
+  page_not_available_button: 返回主页
+  page_not_available_description: 很抱歉，您请求的页面在此地址已不可用。如果您仍然需要访问，请发送电子邮件到[support@code.org](%{support_email_link})。
+  page_not_available_title: 网页不可用
+  page_not_found_button: 返回主页
+  page_not_found_description: 您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。
+  page_not_found_header: 404：找不到页面
+  page_not_found_title: 找不到页面
+  participant_educator: 教师
+  participant_engineer: 软件工程师
+  participant_other: 以上都不是
+  participant_parent: 家长
+  participant_select: "-请选择-"
+  participant_student: 学生
+  participants: 参与者
+  personalize_certificate: 个性化你的证书
+  petition_age: 年龄
+  petition_join_others: '加入另外 # 人'
+  petition_join_others_num: 与 %{num} 人一起加入
+  petition_message: 任何学校的任何学生都应有机会学习计算机科学
+  petition_sign_message: '如果同意，签名并像其他 #人一样加入邮件列表。'
+  petition_sign_message_num: 如果同意，请签名并像另外%{num}人一起加入邮件列表。
+  petition_thankyou: 谢谢你在请愿书上签名
+  playlab_choose_theme: 选择你的游戏实验室主题
+  playlab_classic_title: 经典
+  playlab_gradelevel: 适合年龄 6 岁以上
+  playlab_gumball_title: 阿甘妙世界
+  playlab_iceage_title: 冰河世纪-即将推出
+  playlab_iceage_title_live: 冰河世纪
+  playlab_longdescription: 用游戏实验室创作一个故事或制作一个游戏！使动物，海盗，僵尸，忍者和许多别的角色，动起来，发出声音，记录得分甚至是发射火球。
+  playlab_name: 游戏实验室
+  playlab_platformtext: 现代浏览器，智能手机，平板电脑
+  playlab_shortdescription: 通过游戏实验室创建故事或制作游戏！
+  pocketcode_beyond_gradelevel: 中学及以上
+  pocketcode_beyond_longdescription: 用 "口袋编程" 在你的智能手机上创建你自己的游戏！帮助跳伞员史蒂夫交付他的包裹。你可以与朋友和其他用户试用分享！
+  pocketcode_beyond_name: Pocket 程式码
+  pocketcode_beyond_platformtext: 移动应用程序
+  pocketcode_beyond_shortdescription: 在你的智能手机上创建一个游戏，并与朋友分享！
+  pre-express-2018_name: 学前儿童的速学课程（2018）
+  pre-express-2019_name: 学前儿童的速学课程（2019）
+  pre-express-2020_name: 学前儿童的速学课程（2020）
+  pre-express-2021_name: 学前儿童的速学课程（2021）
+  pre-express-2022_name: 学前儿童快捷课程（2022）
+  pre-express_name: 学前儿童的速学课程
+  previous: 前一项
+  print_all: 打印所有
+  print_batch_certificates: 批量打印证书
+  print_certificates: 打印证书
+  print_ice_art: 打印您的冰艺术
+  print_ice_art_from_frozen: 打印来自冰雪奇缘的冰雪艺术家
+  print_login_cards: 打印登录卡
+  print_one_here_certificates: 打印一份。
+  privacy_doc_explanation: 单击此处可为您的学生共享或打印我们的隐私文档。
+  privacy_practices_children: 请阅读我们对于孩子们的隐私政策
+  processing_beyond_gradelevel: 高中
+  processing_beyond_longdescription: Processing 是一种编程语言，也包括开发环境和在线社区。自2001年以来，通过可视化的技术，Processing
+    提升了软件代码的可读性。最初创建时，它作为一个软件的草稿本和可视化计算机编程教学，现在 Processing 演变成了一个专业人士的开发工具。今天，有数以万计的学生，艺术家，设计师，研究者和爱好者使用
+    Processing 来学习，制造原型和产品。
+  processing_beyond_name: 处理过程
+  processing_beyond_platformtext: 现代网络浏览器
+  processing_beyond_shortdescription: 学习处理语言
+  processing_gradelevel: 高中
+  processing_longdescription: 使用程式语言处理器，在视觉艺术的情境中介绍程式设计。简短的影片课程介绍引导设计互动式绘图程式的编写程式码练习
+  processing_name: 用代码来画画
+  processing_platformtext: 现代网络浏览器
+  processing_shortdescription: 一个关于语言处理的一小时教程
+  projguts_gradelevel: 适合年龄10-13岁
+  projguts_longdescription: 这次"不插电"活动由一群学生玩不同版本的剪刀石头布的游戏，以协助学生学习如何建模与模拟运作原理，并查看不同的模型的实验结果。
+  projguts_name: 石头、剪子、布
+  projguts_platformtext: 离线的
+  projguts_shortdescription: 尝试用石头、剪子、布来建模和模拟
+  quorum_gradelevel: 中学及以上
+  quorum_longdescription: 本教案可供视障人士透过辅助器阅读与流览。玛丽是一名生物学实验室的程序设计师，与她一起学习 Quorum 程序语言。本教案包含在线示例活动的自学式课程。
+  quorum_name: 无障碍程序设计(使用屏幕阅读器来辅助)
+  quorum_platformtext: 支持最新的网页浏览器。支持屏幕阅读器
+  quorum_shortdescription: 加入玛丽学习 Quorum 编程语言的引导学习之旅。
+  reset_student_password: 重置学生密码
+  reset_student_password_email: 如果您的学生使用他们的电子邮件地址和密码创建了 Code.org 帐户（而不是通过他们的 Google、Facebook、Microsoft
+    或Clever 帐户登录），您可以在"管理学生"选项卡中单击"密码" 栏下的"重设密码"按钮来重置其密码。
+  reset_student_password_instructions: 您可以通过进入"管理学生"选项卡，单击"密码"栏下的"显示密码"按钮，然后单击"重置密码"按钮来重置任何学生的密码<word/picture>。
+  review_lesson_plan: 阅读课程计划和其他教师资源。
+  robomind_beyond_gradelevel: 8-13岁
+  robomind_beyond_longdescription: 学生通过控制虚拟机器人来学习编程的基础知识。在线课程包括完全独立的短演示、电影、测验和自动导引、提示来帮助编程练习。
+  robomind_beyond_name: 给一个虚拟机器人编程
+  robomind_beyond_platformtext: 现代的网络浏览器、移动网络
+  robomind_beyond_shortdescription: 为一个虚拟机器人编写代码
+  robomind_gradelevel: 适合年龄 8-13岁
+  robomind_longdescription: 学生用控制自己的虚拟机器人来学习编程的基础知识。在线课程是完全独立的短演示、电影、测验和自动导引/提示来帮助编程练习。
+  robomind_name: 用程序设计出虚拟机器人
+  robomind_platformtext: 现代的网络浏览器，移动网络
+  robomind_shortdescription: 为一个虚拟机器人编写代码
+  robomindnl_gradelevel: 8-13岁
+  robomindnl_longdescription: 学生用控制自己的虚拟机器人来学习编程的基础知识。在线课程是完全独立的短演示、电影、测验和自动导引/提示来帮助编程练习。
+  robomindnl_name: 用程序设计出虚拟机器人
+  robomindnl_platformtext: 现代的网络浏览器、移动网络
+  robomindnl_shortdescription: 为一个虚拟机器人编写代码
+  scratch_beyond_gradelevel: 适合年龄 8 岁以上
+  scratch_beyond_longdescription: 通过 Scratch 平台，你可以创建您自己的互动游戏、 故事、 动画 &mdash; 把它们分享给你的朋友。从动画化你的名字，创建一个生日贺卡或者制作简单的乒乓游戏来开始吧！
+  scratch_beyond_name: 用编程发挥创意
+  scratch_beyond_platformtext: 任何浏览器
+  scratch_beyond_shortdescription: 创造互动游戏、故事和动画。
+  scratch_gradelevel: 适合年龄 8 岁以上
+  scratch_longdescription: 通过 Scratch 平台，你可以创建您自己的互动游戏、 故事、 动画 &mdash; 把它们分享给你的朋友。从动画化你的名字，创建一个生日贺卡或者制作简单的乒乓游戏来开始吧！
+  scratch_name: 用编程发挥创意
+  scratch_platformtext: 仅用于桌面网络浏览器 （不能在平板电脑用）
+  scratch_shortdescription: 创造互动游戏、故事和动画。
+  scratchjr_beyond_gradelevel: 小学
+  scratchjr_beyond_longdescription: ScratchJr 是一个入门的编程语言块，使儿童能够创建他们自己的互动故事和游戏。儿童扣合在一起的图形化编程块，使人物移动，跳跃，舞蹈，唱歌。
+  scratchjr_beyond_name: ScratchJR 适合学龄前读者
+  scratchjr_beyond_shortdescription: '使用 ScratchJr 来创建交互式故事和游戏. '
+  see_more_activities: 尝试更多活动
+  select_language: 请选择您的语言
+  share_achievement: 分享你的成绩
+  share_on_facebook: 在 Facebook 上分享
+  share_on_twitter: 在 Twitter 上分享
+  sign_in_instruct_button: 点击 "登录" 按钮。
+  sign_in_instruct_code: 输入他们的小组代码：%{section_code}。
+  sign_in_instruct_name: 选择他们的显示名称
+  sign_in_instruct_secret: 选择他们的秘钥 %{secret}。
+  sign_in_instruct_website: 跳转至 %{code_org_url}
+  sign_in_overview: '您的学生可以通过以下步骤来登录他们的 Code.org 帐户:'
+  sign_in_overview_cards: 学生可以在下面的登录卡中找到所有这些信息, 包括他们的秘钥 %{secret}。
+  signing_in: 正在登录
+  signing_in_single_instruct: 您的学生可以通过访问 https://code.org/，点击右上角的"登录"按钮来登录他们的 Code.org
+    帐户。
+  speak_another_language: 使用另一种语言？
+  sphero_beyond_gradelevel: 适合年龄 8 岁以上
+  sphero_beyond_longdescription: 无论你是教育工作者或者是父母，SPRK 课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。
+  sphero_beyond_platformtext: 机器人购买
+  sphero_beyond_shortdescription: SPRK 课程给孩子们提供了一个有趣的机器人编程速成班，同时也会提高数学和科学技能。
   sports_all_sports_title: 为你自己的运动编写代码
-  sports_featured_athletes: 查看热门运动员
-  sports_athletes_title: 热门运动员
-  sports_athlete_Draymond: 德雷蒙德 · 格林，来自金州勇士队，奥运会金牌得主、NBA总冠军。
-  sports_athlete_Serena: 小威廉姆斯，奥运会金牌得主和网球冠军。
-  sports_athlete_Russell: 拉塞尔 · 奥康，超级碗冠军和 NFL 球员，来自丹佛野马队。
-  sports_athlete_Sergio: 塞尔吉奥 · 拉莫斯，世界杯冠军和足球球员，来自皇家马德里。
-  sports_athlete_Sue: 苏 · 伯德，奥运会金牌得主、WNBA总冠军，来自西雅图风暴队。
   sports_athlete_Alana: 阿兰娜 · 比亚特，金牌得主、WNBA全明星，来自洛杉矶火花队。
   sports_athlete_Angelo: 安杰洛 · 马修斯，斯里兰卡板球队队长。
-  sports_athlete_Nneka: 妮卡 · 欧古米克，金牌得主、WNBA总冠军、2016最有价值球员，来自洛杉矶火花队。
   sports_athlete_Carmelo: 卡梅罗 · 安东尼，奥运金牌得主和 NBA 全明星，来自纽约尼克斯。
+  sports_athlete_Chris: 克里斯 · 波什，奥运会金牌得主和NBA 总冠军，来自迈阿密热火队。
+  sports_athlete_Draymond: 德雷蒙德 · 格林，来自金州勇士队，奥运会金牌得主、NBA总冠军。
+  sports_athlete_Erika: 艾瑞卡 · 奥利维拉，马拉松冠军。
+  sports_athlete_Harrison: 哈里森 · 巴恩斯，奥运金牌得主、NBA 总冠军，来自达拉斯小牛队。
+  sports_athlete_John: 约翰 · 乔治，NBA 全明星，来自华盛顿奇才队。
+  sports_athlete_Marcelo: 马塞洛，足球冠军，来自皇家马德里俱乐部和巴西国家队。
   sports_athlete_Marco: 马科 · 贝里内利，NBA 总冠军，来自夏洛特黄蜂队。
   sports_athlete_Neymar: 内马尔，奥运会金牌得主、足球运动员，来自巴塞罗那足球俱乐部和巴西国家队。
+  sports_athlete_Nneka: 妮卡 · 欧古米克，金牌得主、WNBA总冠军、2016最有价值球员，来自洛杉矶火花队。
+  sports_athlete_Russell: 拉塞尔 · 奥康，超级碗冠军和 NFL 球员，来自丹佛野马队。
   sports_athlete_Sarah: 萨拉 · 奎塔 · Offringa，帆板运动冠军。
-  sports_athlete_Marcelo: 马塞洛，足球冠军，来自皇家马德里俱乐部和巴西国家队。
-  sports_athlete_Erika: 艾瑞卡 · 奥利维拉，马拉松冠军。
-  sports_athlete_John: 约翰 · 乔治，NBA 全明星，来自华盛顿奇才队。
-  sports_athlete_Chris: 克里斯 · 波什，奥运会金牌得主和NBA 总冠军，来自迈阿密热火队。
-  sports_athlete_Harrison: 哈里森 · 巴恩斯，奥运金牌得主、NBA 总冠军，来自达拉斯小牛队。
-  watch_inspirational_videos: 在开始之前，看一段鼓舞人心的视频
-  video_title_cs_is_everything: 计算机科学正在改变一切
-  video_title_inspire_girl: 鼓励女生参与
-  video_title_cs_intro: 计算机科学简介
-  video_title_schools_dont_teach: 大部分学校没有教的内容
-  video_title_obama: 奥巴马总统和计算机科学
-  video_title_hoc_is_here: 编程一小时来了——任何人都可以学会
-  video_title_anybody_can_learn: 任何人都可以学习
-  video_title_steph_curry: 和 Steph Curry 一起编程一小时
-  video_title_draymond_green: 和 Draymond Green 一起编程一小时
-  video_title_russell_okung: 和 Russell Okung 一起编程一小时
-  video_title_real_madrid: 和 Real Madrid 一起编程一小时
-  video_title_marco_belinelli: 和 Marco Belinelli 一起编程一小时
-  video_title_chris_bosh: Chris Bosh 和计算机科学
-  video_title_my_name_is_aracely: 我叫阿拉丝莉
-  video_title_change_face_of_cs: 改变计算机科学的面貌
-  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
+  sports_athlete_Serena: 小威廉姆斯，奥运会金牌得主和网球冠军。
+  sports_athlete_Sergio: 塞尔吉奥 · 拉莫斯，世界杯冠军和足球球员，来自皇家马德里。
+  sports_athlete_Sue: 苏 · 伯德，奥运会金牌得主、WNBA总冠军，来自西雅图风暴队。
+  sports_athletes_title: 热门运动员
+  sports_basketball_title: 进行一场篮球赛
+  sports_featured_athletes: 查看热门运动员
+  sports_name: 用代码编写你自己的体育赛事
+  sports_og_description: 冠军和金牌得主鼓励你尝试《编程一小时》。编写你自己的运动会。
+  sports_og_title: 突破自我。任何人都可以学会。
+  sports_page_title: "《编程一小时》运动"
+  sports_select_theme: 选择你的教程主题
+  sports_title: 用代码编写你自己的体育赛事
+  sports_video_title: 推动自己。任何人都可以学会。
+  sports_watch_video: 观看视频
+  sprite_lab_documentation: 精灵图实验室文档
+  sprite_lab_tutorials: 精灵图实验室教程
+  start_hoc: 现在就开始“编程一小时”吧
+  starwars_blocks_description: 使用拖放块。
+  starwars_blocks_specs: 多语言 | 最新浏览器、智能手机、平板电脑 | 适用年龄6岁以上
+  starwars_blocks_title: 模块
+  starwars_gradelevel: 6岁以上
+  starwars_javascript_description: 使用拖放块和 JavaScript。
+  starwars_javascript_specs: 英语 | 现代浏览器 | 11岁以上
+  starwars_javascript_title: JavaScript
+  starwars_longdescription: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
+  starwars_name: '星球大战: 用代码构建一个星系'
+  starwars_platform_text: 最新的浏览器，智能手机，平板电脑
+  starwars_platformtext: 现代浏览器 + 平板电脑
+  starwars_shortdescription: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
+  starwars_subtitle: 用代码来建立一个星系
+  starwarsblocks_name: 星球大战(块)
+  stats_hoc_2013_heading: 在去年的编程一小时活动中的惊人数据。在一周之内：
+  stats_hoc_2013_image_alt: 2013年编程一小时统计数据
+  stats_michael: "“我<b>从来没有</b>见到我的学生们抱有如此大的学习热情。”——弗兰克. 马丁内斯，教师"
+  stats_michael_markdown: "“我**从不曾**见到我的学生们抱有如此大的学习热情。”——弗兰克・马丁内斯，教师。"
+  stats_nina: '"每一天学生们都如此100%的参与。"——尼娜尼科尔斯佩里，老师'
+  stats_nina_markdown: "“每一天学生们都如此 ——100%的参与。”——尼娜・尼科尔斯・佩里，老师"
+  stats_student: '"我知道这是一个<b>千载难逢</b> 的机会。"——马里亚纳.阿尔泽特，五年级学生'
+  stats_student_markdown: "“我认识到这是一个**千载难逢**的机会。”——马里亚纳・阿尔泽特，五年级学生"
+  students_and_lines: "%{students} 位学生完成了编程一小时并且写了 %{lines} 行的代码。"
+  studiobar_dance_body: 创建并分享你自己的跳舞派对
+  studiobar_dance_title: 舞蹈派对
+  studiobar_donate_body: 你捐的每一美元让一个孩子学习
+  studiobar_donate_title: 捐赠
+  studiobar_elementary_body: 为 K&#8209;5 所制的三个新课程
+  studiobar_elementary_title: 初级课程
+  studiobar_flappy_body: 创造自己的 Flappy 游戏并与别人分享
+  studiobar_flappy_title: 飞扬的代码
+  studiobar_frozen_body: 与安娜和埃莎创建一个冬季仙境
+  studiobar_frozen_title: 编程一小时
+  studiobar_hoc_body: 和愤怒的小鸟一起学习代码知识
+  studiobar_hoc_title: 编程一小时
+  studiobar_shop_body: 突破束缚，骄傲的戴上我们的标志。
+  studiobar_shop_title: 商店
+  studiobar_teacher_body: 在您的教室内介绍 Code.org
+  studiobar_teacher_title: 为教师所制
+  studiobar_title: 探索 <a href='http://studio.code.org'>Code.org 的课程</a>
+  studiobar_title_nolink: 探索 Code.org 的课程
+  submit: 提交
+  support_url: http://support.code.org/
+  syncing_students: 同步您的学生信息
+  syncing_students_instructions: 如果您的 Code.org 小组与您在 Google 教室中的学生名单不够新，请点击"管理学生"标签上的"从
+    Google 教室同步学生信息" 按钮：
+  teach_led_lesson_plans: 由老师引导的教案
+  teacherled_gradelevel: 5岁以上年龄组
+  teacherled_longdescription: 如今，成千上万的教育工作者已经尝试了编程一小时，许多课堂更有创意、减少那些千篇一律、只教授计算机科学的基本知识的活动。为了帮助教师找到灵感，我们收集和策划老师引导的课时，为编程一小时的老学员设计不同主题领域的活动计划。
+  teacherled_name: 由老师引导的教案
+  teacherled_platformtext: 现代浏览器、智能手机、平板电脑
+  teacherled_shortdescription: 从这些课件中得到启发，设计您自己的编程一小时活动。
+  teachers_notes: 老师的笔记
+  teachers_notes_hoc: 教师：请阅读这些重要的教育者说明
+  teachingtree_beyond_gradelevel: 大学
+  teachingtree_beyond_longdescription: TeachingTree 是一个开放的平台，任何人都可以组织教育内容。我们的目标是为学生快速存取他们所需要的精确的剪辑，以便了解各个概念。鼓励每个人帮助添加视频或标记概念。
+  teachingtree_beyond_name: 网上大学课程
+  teachingtree_beyond_platformtext: 基于网络的
+  teachingtree_beyond_shortdescription: 在线知识： 快速、 不受约束
+  tell_the_world: 告诉全世界 ！
+  texasinstruments_gradelevel: 13-16 岁
+  texasinstruments_longdescription: '10 分钟编程活动可以用在课堂上，来激发学生编程的兴趣，让他们经常把 TI 技术教材放在书包里。
+    使用 TI-84 &#8482;+学习基本的编码。并且开始编程，只需 10 分钟 — — 不需要任何经验!  '
+  texasinstruments_name: 编程十分钟
+  texasinstruments_platformtext: TI 图形计算器
+  texasinstruments_shortdescription: 使用 TI-84&#8482; +计算器。
+  text-compression_name: 文本压缩
+  thank_you_: 谢谢！
+  thanks_for_submitting: 感谢提交！
+  thanks_for_voting: 感谢你的投票 ！
+  thinkersmith2_gradelevel: 适合年龄 8 岁以上
+  thinkersmith2_longdescription: 学生以学习如何在二进制档案中表示和储存字母。结束时，他们可以把自己名字的编码带回家。
+  thinkersmith2_platformtext: 离线的
+  thinkersmith2_shortdescription: 了解计算机如何使用 0 和 1 来表示信息
+  thinkersmith_gradelevel: 所有年龄
+  thinkersmith_longdescription: 使用预先定义的"机器人词汇"学生可不需事先讨论，就能理解如何引导对方完成特定任务。这门课教孩子符号和行为之间的关联，以及非常宝贵的调试技能。
+    "我的机器人朋友"以分组进行活动是最佳的，其包括课堂使用的教师手册。
+  thinkersmith_name: 我的机器人朋友
+  thinkersmith_platformtext: 离线的
+  thinkersmith_shortdescription: 为没有设备的小组设计的离线教程
+  thinkersmithspanish_platformtext: 离线的
+  third_party_appinv_btn_curriculum: 下载 App Inventor 2 课程
+  third_party_appinv_btn_forum: App Inventor 2 论坛
+  third_party_appinv_btn_site: 访问 App Inventor 2
+  third_party_appinv_desc: MIT App Inventor 是一款以模块为基础的的编程工具，可以让包括新手在内的所有人来进行编程并且创建功能齐全的安卓应用程序。第一次使用
+    App Inventor 的用户可以在一小时内创建并且运行自制的应用，相比传统的编程语言，可以更快速的制作功能更加复杂的应用程序。
+  third_party_codecademy_btn_curriculum: 下载 Codecademy 课程
+  third_party_codecademy_btn_site: 访问 Codecademy
+  third_party_codecademy_desc: 我们是从下到上重新思考教育。该网站已经重新考虑几乎一切 - 电子商务，社交网络，医疗保健等。我们正在建设世界所需要的教育
+    - 第一个真正的网络教育。
+  third_party_codehs_btn_try: 介绍CS，了解更多关于学校的。
+  third_party_codehs_desc: CodeHS 采用视频短片、示例代码和丰富的编程练习来介绍模块式编程，使编码充满了乐趣，并且很适合初学者。对于学校和教师，CodeHS
+    提供课程，教学工具和产品设计 。自学者则可以通过网上的导师们得到帮助。
+  third_party_cost_299: 每次下载2.99美元
+  third_party_cost_5permonth: 每节课每月5美元
+  third_party_cost_free: 学生和教师免费
+  third_party_cost_free_10: 免费试用，每月9.99美元
+  third_party_cost_free_2: 免费试用，每位学生2美元
+  third_party_cost_free_399: 免费试用，每间教室399美元
+  third_party_curriculum: 课程
+  third_party_desc_10to12_kto3: 大约有10-12课时，面向3年级。
+  third_party_desc_10to12_kto5: 大约有10-12课时，面向5年级。
+  third_party_desc_10to15_3to12: 10到15课时，面向3到12年级。
+  third_party_desc_11_kto5: 大约有11课时，面向5年级。
+  third_party_desc_20_2to8: 大约有20课时，面向2到8年级。
+  third_party_desc_20_4to12: 超过20课时， 面向4到12年级
+  third_party_desc_25to40_3to12: 25到40课时，面向3到12年级。
+  third_party_desc_40_4to8: 超过40课时， 面向4-8年级。
+  third_party_desc_5_4to8: 大约有5课时，面向4到8年级。
+  third_party_desc_7to22_5to12: 7到22课时，面向5到12年级
+  third_party_desc_dozens_kto8: 数十个课时，面向8年级。
+  third_party_gradelevel_2to8: 2-8年级
+  third_party_gradelevel_4to12: 4-12 年级
+  third_party_gradelevel_5to12: 5-12年级
+  third_party_gradelevel_6plus: 6年级以上
+  third_party_gradelevel_8plus: 8年级以上
+  third_party_gradelevel_kto2: 2年级
+  third_party_gradelevel_kto8: 8年级
+  third_party_khan_btn_forum: Khan 学院 CS 论坛
+  third_party_khan_btn_learn: 与 Khan Academy 一起学习 CS
+  third_party_khan_desc: 学习怎么使用 JavaScript & ProcessingJS 去编辑绘画，动漫和游戏的程序，或者学习怎么使用
+    HTML & CSS 去创建网页。你可以任意分享你的创作，也可以通过探索别人的创作从中互相学习。
+  third_party_lightbot_btn_curriculum: 下载 Lightbot 课程
+  third_party_lightbot_btn_site: 访问 Lightbot
+  third_party_lightbot_desc: 在 Lightbot 上，学生们必须通过给机器人编写命令程序来解决难题。学生可以在浏览器中（需要 Flash
+    Player），或在 Android 或 iOS 设备上玩游戏。学生们在 Lightbot 中玩“基本”级别的初始集时，他们将学会如何让计算机做一系列的基本命令，以及获得编写计算机程序的一般过程。
+  third_party_organization: 组织
+  third_party_platform_all: 平台：网络，ipad和安卓系统
+  third_party_platform_mobile: 平台：iPad & 安卓
+  third_party_platform_web: 平台：网络
+  third_party_price_299: 价格：2.99美元／下载
+  third_party_price_free: 价格：免费
+  third_party_price_individual: 个人价格：免费试用 & 25 美元/月
+  third_party_price_school: 学校价格：免费计划 或者2500美元以上的Pro
+  third_party_price_varies: 价格：根据方案变化
+  third_party_pricing: 定价
+  third_party_scratch_btn_curriculum: 下载 Scratch Jr. 的课程
+  third_party_scratch_btn_forum: Scratch 教育家论坛
+  third_party_scratch_btn_site: 访问 Scratch
+  third_party_scratch_desc: 在 Scratch 中，你可以通过编程的方式来设计你自己的互动故事、游戏和动画，还可以在在线社区与他人分享你的创作。Scratch帮助年轻人学会创造性思考、系统性学习以及协同工作——这是21世纪生活的基本技能。
+  third_party_scratchjr_btn_curriculum: 下载 Scratch Jr. 的课程
+  third_party_scratchjr_btn_site: 访问 Scratch Jr.
+  third_party_scratchjr_desc: Scratch Jr. 是一种能够让孩子（5-7岁）创造他们自己的互动故事和游戏的介绍性编程语言。孩子只要将图形化的编程块扣合在一起，就能让角色移动、跳跃、跳舞和唱歌。孩子可以在编辑器中修改角色，可以添加他们自己的声音，甚至可以插入他们自己的照片——然后用编程块使他们的角色活灵活现。
+  third_party_submission: 想提交一门课程并列在这里吗？<a href="%{submission_url}">请查看标准，并填写申请表。</a>
+  third_party_tynker_btn_curriculum: 早期的读者尝试 Tynker 课程
+  third_party_tynker_btn_site: 访问 Tynker
+  third_party_tynker_desc: Tynker 的创意计算平台帮助孩子愉快的，直观和富有想象力的养成计算机思维和培养编程技巧。我们创新的可视化编程语言，交互式自学课程，和游戏为基础的编程活动提供了一个简单的方式介绍编程并且让孩子学会创新和创造。
+  top_hoc_tutorial_applab_alt_text: 一只用食指触碰触屏平板电脑的棕色手，在蓝色背景下发射星星和光线
+  touchdevelop_beyond_gradelevel: 高中
+  touchdevelop_beyond_longdescription: TouchDevelop 可以让你在 iPad、iPhone、安卓、PC、苹果机、Windows
+    手机上创建应用程序。即使在您的手机或平板电脑上，我们用可触摸的编辑器使编码有乐趣！
+  touchdevelop_beyond_platformtext: 现代的浏览器、智能手机、所有的设备
+  touchdevelop_beyond_shortdescription: 直接在你的手机、平板电脑或笔记本电脑上写应用程序
+  touchdevelop_gradelevel: 高中
+  touchdevelop_longdescription: '这个触屏编辑器将引导您创建像素艺术品、解决小熊谜题，或者创作你自己的跳跳鸟游戏。 '
+  touchdevelop_platformtext: 现代的浏览器、智能手机、所有的设备
+  touchdevelop_shortdescription: '在您的手机上解谜，编写游戏，和学习编程。 '
+  try_an_activity: 尝试一个活动
+  try_hoc_num_served: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有 %{num} 次参与</h3>"
+  try_hoc_num_served_markdown: |-
+    # 尝试\
+    \
+    ##《编程一小时》\
+    \
+    ###%{num}人参与 #Try an
+  try_it_yourself: 自己试一试！
+  try_now: 现在就试试
+  twentyhours_heading: 看看我们对计算机科学课程的简介
+  twentyhours_text: 完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。
+  twitter_cs_foundational: 计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。
+  twitter_teach_cs: 90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。
+  tynker_beyond_gradelevel: 适合年龄 5-13
+  tynker_beyond_longdescription: Tynker 使学习编程轻松有趣。它让代码变成了可视化的图像。孩子们通过排列模块来创造游戏和手机应用程序。通过它，不需要了解编程语法，孩子们马上就可以把想法转变为动画的故事和数学艺术。这也是渐进式学习。当孩子们学习了基础知识，Tynker
+    会引入更高级的概念，包括语法驱动编程.
+  tynker_beyond_name: 在家学习电脑程序设计
+  tynker_beyond_platformtext: 现代网络浏览器（需要 $$）
+  tynker_beyond_shortdescription: 一个有趣的4-8年级学生的课程
+  tynker_gradelevel: 适合年龄 5-13
+  tynker_longdescription: 建立你自己的游戏并与朋友分享！解决有趣的编码谜题，学习各个阶段的编程概念。以动画人物，多层次的丰富的道具来个性化你的游戏。应用物理概念让你的游戏更加真实。代码可以同时以模块或
+    Javascript 的形式呈现。在 iPad 或 安卓平板电脑上玩你的游戏。有十多个有趣的活动可供选择 ！
+  tynker_name: 创造你自己的游戏
+  tynker_platformtext: 现代网络浏览器
+  tynker_shortdescription: 通过解决有趣的谜题和创造你自己的移动端游戏来学习编程。
+  tynkerapp_gradelevel: 适合年龄 5-13
+  tynkerapp_longdescription: 通过解决有趣的代码谜题来学习编程。使用主题图案，10个以上的游戏包和可自定义的角色来轻松地创作游戏和故事。不需要连接互联网。你也可以在网页上查看你的作品。
+  tynkerapp_name: Tynker - 用于平板电脑
+  tynkerapp_platformtext: iPad、安卓平板电脑
+  tynkerapp_shortdescription: '通过解决有趣的代码谜题来学习编程。 '
+  udacity_beyond_gradelevel: 大学
+  udacity_beyond_longdescription: |-
+    在这个过程中，你会学到计算机科学的关键概念，并学习如何构建网络爬虫，编写自己的计算机程序。
+    这门课程不需要事先编程知识。欢迎初学者！在这个课程结束时，你会学到计算机科学和足够的编程关键概念来编写 Python 程序来解决你自己的问题。本课程将会让你准备好升到中级计算的课程.
+  udacity_beyond_platformtext: 现代的浏览器
+  udacity_beyond_shortdescription: 从 CS101 开始
+  udemy_beyond_gradelevel: 高中或以上
+  udemy_beyond_longdescription: 无论你从来没有见过一行代码还是你以代码为生，Udemy 有由专业导师教的课程适合你。[注：需要付款]
+  udemy_beyond_name: 在线编程课程
+  udemy_beyond_platformtext: 基于网络的
+  udemy_beyond_shortdescription: 几十个在线程序设计程的课程
+  upgrade_ie_link: 了解详情
+  upgrade_ie_message: Code.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到新版本的浏览器。
+  upgrade_ie_message_csedweek: CSEdWeek.org 将很快停止对 Internet Explorer 8、9 和 10 的支持。请升级到新版本的浏览器。
+  used_infrequent_updates: 仅用于少有的更新
+  user_header_applab: '程序实验室 '
+  user_header_artist: '小艺术家 '
+  user_header_create: '创建 '
+  user_header_dance: 舞蹈派对
+  user_header_flappy: Flappy Bird
+  user_header_gamelab: 游戏实验室
+  user_header_label: 你好%{username}
+  user_header_logout: 注销
+  user_header_minecraft: 我的世界
+  user_header_my_projects: 我的项目
+  user_header_playlab: 游戏实验室
+  user_header_settings: 帐户设置
+  user_header_signin: 登录
+  user_header_spritelab: 精灵图实验室
+  user_header_team: 团队
+  user_header_view_all: 查看所有项目……
+  user_header_view_my_projects: 查看我的项目
+  user_header_view_project_gallery: 查看项目库
   video_1min: 1分钟
   video_2min: 2分钟
   video_3min: 3分钟
   video_5min: 5分钟
-  speak_another_language: 使用另一种语言？
-  help_translate: 帮助我们翻译
-  no_internet: 没有互联网吗？
-  download_offline: 下载离线版本。
-  are_you_teacher: 你是老师吗？
-  review_lesson_plan: 阅读课程计划和其他教师资源。
-  volunteer_engineer_submission_title: 激励学生和志愿者
-  volunteer_engineer_submission_subtitle_generic: '2015年12月7-13日，约有10万名教师在他们的课堂上主办编程一小时活动。他（她）们需要你的帮助！ '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 个老师们需要志愿者。<br>%{num_volunteers}
-    个志愿者已经报名了。加入他们的行列。"
+  video_title_anybody_can_learn: 任何人都可以学习
+  video_title_change_face_of_cs: 改变计算机科学的面貌
+  video_title_chris_bosh: Chris Bosh 和计算机科学
+  video_title_cs_intro: 计算机科学简介
+  video_title_cs_is_everything: 计算机科学正在改变一切
+  video_title_draymond_green: 和 Draymond Green 一起编程一小时
+  video_title_hoc_is_here: 编程一小时来了——任何人都可以学会
+  video_title_inspire_girl: 鼓励女生参与
+  video_title_latam_hoc: Lo Que Falta En Nuestras Escuelas
+  video_title_marco_belinelli: 和 Marco Belinelli 一起编程一小时
+  video_title_my_name_is_aracely: 我叫阿拉丝莉
+  video_title_obama: 奥巴马总统和计算机科学
+  video_title_real_madrid: 和 Real Madrid 一起编程一小时
+  video_title_russell_okung: 和 Russell Okung 一起编程一小时
+  video_title_schools_dont_teach: 大部分学校没有教的内容
+  video_title_steph_curry: 和 Steph Curry 一起编程一小时
+  videos_more: 更多由榜样人物和明星出演的<a href='%{inspiring_videos_playlist}'>鼓舞人心的视频</a>
+  videos_more_markdown: 更多由榜样和名人拍摄的[鼓舞人心的视频](%{inspiring_videos_playlist})
+  view_all_sections: 查看所有小组
+  view_course: 查看课程
+  view_english_site: 查看英语网站
+  view_lesson_plan: 查看课程计划
+  view_named_section: 查看%{section_name}
+  view_resources: 查看资源
+  view_section: 查看小组
+  view_unit: 查看单元
+  volunteer_engineer_submission_checkbox_after_hoc: 我有兴趣做一年的志愿者
+  volunteer_engineer_submission_checkbox_age_18_plus: 我保证，我已满18周岁。
+  volunteer_engineer_submission_checkbox_contact: 我同意教师们可以就志愿者服务机会联系我 （注:您的电子邮件地址不会泄漏）
+  volunteer_engineer_submission_commitment_annually: 每年2-3 次
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 每周 5 小时
+  volunteer_engineer_submission_commitment_monthly: 每个月几小时
+  volunteer_engineer_submission_commitment_more: 更多
+  volunteer_engineer_submission_commitment_now_and_then: 从现在开始
+  volunteer_engineer_submission_commitment_one_hr_per_week: 每周 1 小时
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 每周 3 小时
+  volunteer_engineer_submission_commitment_uncertain: 不确定
+  volunteer_engineer_submission_commitment_weekly: 每周几个小时
+  volunteer_engineer_submission_distance_16: 10 英里
+  volunteer_engineer_submission_distance_24: 15 英里
+  volunteer_engineer_submission_distance_32: 20 英里
+  volunteer_engineer_submission_distance_8: 5 英里
+  volunteer_engineer_submission_distance_80: 50英里
+  volunteer_engineer_submission_experience_software_professional: 软件专业人士
+  volunteer_engineer_submission_experience_tech_company: 科技公司非工程师人士
+  volunteer_engineer_submission_experience_university_student_or_researcher: 大学计算机科学专业的学生
+  volunteer_engineer_submission_experience_unspecified: 未指定
+  volunteer_engineer_submission_field_company: 公司（或大学）
+  volunteer_engineer_submission_field_company_placeholder: 公司（或大学）
+  volunteer_engineer_submission_field_description: 描述
+  volunteer_engineer_submission_field_description_desc: 写明你在计算机科学方面的经验以及你想以什么方式作为一名志愿者，为当地的教师提供帮助。
+  volunteer_engineer_submission_field_description_placeholder: 写明经验和/或参与方式。如果你能讲除英语以外的语言，请一定要在这里列出。
+  volunteer_engineer_submission_field_email: 电子邮件地址
+  volunteer_engineer_submission_field_email_desc: 您的电子邮件地址决不公开，但我们会把教师们的请求转发给你。
+  volunteer_engineer_submission_field_email_placeholder: 电子邮件地址
+  volunteer_engineer_submission_field_email_preference: 我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？
+  volunteer_engineer_submission_field_email_preference_no: 不
+  volunteer_engineer_submission_field_email_preference_privacy: "（请参阅我们的隐私政策）"
+  volunteer_engineer_submission_field_email_preference_yes: 对
+  volunteer_engineer_submission_field_experience_level: 经验水平
+  volunteer_engineer_submission_field_facebook: Facebook 个人资料
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/你的姓名
+  volunteer_engineer_submission_field_linkedin: 领英帐号
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/你的姓名
+  volunteer_engineer_submission_field_location: 所在地区
+  volunteer_engineer_submission_field_location_desc: 您所在的位置将被用作教师寻找附近志愿者的参考，并且会以大头针的形式标注在地图上。可仅输入城市或邮编来保护隐私。
+  volunteer_engineer_submission_field_location_flexibility: 编程一小时活动中我可以帮助......（请选择所有适用项）
+  volunteer_engineer_submission_field_location_placeholder: 邮编、城市和省/国家或街道地址
+  volunteer_engineer_submission_field_name: 姓名
+  volunteer_engineer_submission_field_name_placeholder: 姓名
+  volunteer_engineer_submission_field_time_commitment: 能贡献的时间
+  volunteer_engineer_submission_final_paragraph: 作为志愿者，你将被在地图中标示出来，以便当地教师与你联系，讨论编程一小时活动或其他志愿者服务的机会。我们决不泄漏您的电子邮件和确切地址。但是其他信息（包括大概位置）将在当地教师中共享。
+  volunteer_engineer_submission_header_private: 信息保密，决不公开。
+  volunteer_engineer_submission_header_shared: 在志愿者地图上与教师们共享的信息
   volunteer_engineer_submission_intro_background: 编程一小时是一次全球范围的活动，尝试在一个小时的时间里为数以千万计的
     180 多个国家的学生介绍计算机科学方面的知识。请在计算机科学教育周（12 月 7-13 日）积极参与本次活动。
+  volunteer_engineer_submission_intro_guide: 进一步了解<a href="%{volunteer_guide}">志愿者项目</a>。
+  volunteer_engineer_submission_intro_guide_markdown: 更多了解我们的[志愿者计划](%{volunteer_guide})。
+  volunteer_engineer_submission_intro_links: 需要找志愿者吗？用<a href="%{volunteer_local}">志愿者地图</a>找到本地的志愿者。
+  volunteer_engineer_submission_intro_links_markdown: 需要找志愿者吗？用[志愿者地图](%{volunteer_local})找到本地的志愿者。
   volunteer_engineer_submission_intro_recruit: '这些教师希望有<span style="font-family: ''Gotham
     7r'', sans-serif;"> 热衷于计算机科学教育的人士</span> 能在课堂上提供帮助，或者能够通过讲述计算机科学能够实现的诸多功能、可能性（也可以通过视频聊天的方式讨论）<span
     style="font-family: ''Gotham 7r'', sans-serif;">激发</span>他们学生的热情。'
   volunteer_engineer_submission_intro_recruit_markdown: 教师们希望有**热衷于计算机科学教育**的人士能在课堂上提供帮助，或者能够通过讲述计算机科学能够实现的诸多功能、可能性（也可以通过视频聊天的方式讨论）
     **激发**学生的热情。
-  volunteer_engineer_submission_intro_guide: 进一步了解<a href="%{volunteer_guide}">志愿者项目</a>。
-  volunteer_engineer_submission_intro_guide_markdown: 更多了解我们的[志愿者计划](%{volunteer_guide})。
   volunteer_engineer_submission_intro_signup: 如果您是计算机科学专业的学生或软件专家，请输入以下信息。必须18岁以上才能申请成为志愿者。注意，填写的所有信息都会在<a
     href="/volunteer/local">志愿者地图</a>中公开给所有人。用<span class="form-required-field"> *</span>标记的字段是必填项。
   volunteer_engineer_submission_intro_signup_markdown: 如果您是计算机科学专业的学生或软件专家，请输入以下信息。必须18岁以上才能申请成为志愿者。注意，填写的所有信息都会在[志愿者地图](/自愿者/本地)中向所有人公开。用
     _*_ 标记的字段是必填项。
-  volunteer_engineer_submission_intro_links: 需要找志愿者吗？用<a href="%{volunteer_local}">志愿者地图</a>找到本地的志愿者。
-  volunteer_engineer_submission_intro_links_markdown: 需要找志愿者吗？用[志愿者地图](%{volunteer_local})找到本地的志愿者。
-  volunteer_engineer_submission_update_information: 更新你的信息
-  volunteer_engineer_submission_header_shared: 在志愿者地图上与教师们共享的信息
-  volunteer_engineer_submission_field_name: 姓名
-  volunteer_engineer_submission_field_name_placeholder: 姓名
-  volunteer_engineer_submission_field_company: 公司（或大学）
-  volunteer_engineer_submission_field_company_placeholder: 公司（或大学）
-  volunteer_engineer_submission_field_experience_level: 经验水平
-  volunteer_engineer_submission_field_location: 所在地区
-  volunteer_engineer_submission_field_location_desc: 您所在的位置将被用作教师寻找附近志愿者的参考，并且会以大头针的形式标注在地图上。可仅输入城市或邮编来保护隐私。
-  volunteer_engineer_submission_field_location_placeholder: 邮编、城市和省/国家或街道地址
-  volunteer_engineer_submission_field_location_flexibility: 编程一小时活动中我可以帮助......（请选择所有适用项）
-  volunteer_engineer_submission_checkbox_after_hoc: 我有兴趣做一年的志愿者
-  volunteer_engineer_submission_field_time_commitment: 能贡献的时间
-  volunteer_engineer_submission_field_linkedin: 领英帐号
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/你的姓名
-  volunteer_engineer_submission_field_facebook: Facebook 个人资料
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/你的姓名
-  volunteer_engineer_submission_field_description: 描述
-  volunteer_engineer_submission_field_description_desc: 写明你在计算机科学方面的经验以及你想以什么方式作为一名志愿者，为当地的教师提供帮助。
-  volunteer_engineer_submission_field_description_placeholder: 写明经验和/或参与方式。如果你能讲除英语以外的语言，请一定要在这里列出。
-  volunteer_engineer_submission_header_private: 信息保密，决不公开。
-  volunteer_engineer_submission_field_email: 电子邮件地址
-  volunteer_engineer_submission_field_email_desc: 您的电子邮件地址决不公开，但我们会把教师们的请求转发给你。
-  volunteer_engineer_submission_field_email_placeholder: 电子邮件地址
-  volunteer_engineer_submission_field_email_preference: 我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？
-  volunteer_engineer_submission_field_email_preference_privacy: "（请参阅我们的隐私政策）"
-  volunteer_engineer_submission_field_email_preference_yes: 对
-  volunteer_engineer_submission_field_email_preference_no: 不
-  volunteer_engineer_submission_final_paragraph: 作为志愿者，你将被在地图中标示出来，以便当地教师与你联系，讨论编程一小时活动或其他志愿者服务的机会。我们决不泄漏您的电子邮件和确切地址。但是其他信息（包括大概位置）将在当地教师中共享。
-  volunteer_engineer_submission_checkbox_contact: 我同意教师们可以就志愿者服务机会联系我 （注:您的电子邮件地址不会泄漏）
-  volunteer_engineer_submission_checkbox_age_18_plus: 我保证，我已满18周岁。
-  volunteer_engineer_submission_submit: 提交
-  volunteer_engineer_submission_thankyou: 非常感谢！你的志愿者信息已成功提交。老师们会用<a href="%{url}">这张地图</a>来搜索并联系更多像你一样的志愿者。48小时内你的信息就会正确的出现在地图上。
-  volunteer_engineer_submission_thankyou_markdown: 非常感谢！你的志愿者信息已成功提交。老师们会用[这张地图](%{url})来搜索并联系像你一样的志愿者。48小时内你的信息就会正确的出现在地图上。
-  volunteer_engineer_submission_commitment_uncertain: 不确定
-  volunteer_engineer_submission_commitment_one_hr_per_week: 每周 1 小时
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 每周 3 小时
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 每周 5 小时
-  volunteer_engineer_submission_commitment_now_and_then: 从现在开始
-  volunteer_engineer_submission_commitment_annually: 每年2-3 次
-  volunteer_engineer_submission_commitment_monthly: 每个月几小时
-  volunteer_engineer_submission_commitment_weekly: 每周几个小时
-  volunteer_engineer_submission_commitment_more: 更多
+  volunteer_engineer_submission_location_flexibility_curriculum: 为开源课程项目做出贡献
   volunteer_engineer_submission_location_flexibility_onsite: 到学校访问（一到两个小时的班级或学校活动）
   volunteer_engineer_submission_location_flexibility_remote: 远程回答问题（通过短视频会议）
-  volunteer_engineer_submission_location_flexibility_curriculum: 为开源课程项目做出贡献
-  volunteer_engineer_submission_experience_unspecified: 未指定
-  volunteer_engineer_submission_experience_tech_company: 科技公司非工程师人士
-  volunteer_engineer_submission_experience_university_student_or_researcher: 大学计算机科学专业的学生
-  volunteer_engineer_submission_experience_software_professional: 软件专业人士
-  volunteer_engineer_submission_distance_8: 5 英里
-  volunteer_engineer_submission_distance_16: 10 英里
-  volunteer_engineer_submission_distance_24: 15 英里
-  volunteer_engineer_submission_distance_32: 20 英里
-  volunteer_engineer_submission_distance_80: 50英里
-  volunteer_engineer_submission_num_volunteers_5: 5 名志愿者
   volunteer_engineer_submission_num_volunteers_10: 10 名志愿者
   volunteer_engineer_submission_num_volunteers_25: 25 名志愿者
+  volunteer_engineer_submission_num_volunteers_5: 5 名志愿者
   volunteer_engineer_submission_num_volunteers_50: 50 名志愿者
+  volunteer_engineer_submission_submit: 提交
+  volunteer_engineer_submission_subtitle_generic: '2015年12月7-13日，约有10万名教师在他们的课堂上主办编程一小时活动。他（她）们需要你的帮助！ '
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 个老师们需要志愿者。<br>%{num_volunteers}
+    个志愿者已经报名了。加入他们的行列。"
+  volunteer_engineer_submission_thankyou: 非常感谢！你的志愿者信息已成功提交。老师们会用<a href="%{url}">这张地图</a>来搜索并联系更多像你一样的志愿者。48小时内你的信息就会正确的出现在地图上。
+  volunteer_engineer_submission_thankyou_markdown: 非常感谢！你的志愿者信息已成功提交。老师们会用[这张地图](%{url})来搜索并联系像你一样的志愿者。48小时内你的信息就会正确的出现在地图上。
+  volunteer_engineer_submission_title: 激励学生和志愿者
+  volunteer_engineer_submission_type_task_mentor: 我正在寻找一位导师，帮助我备课，以使我能与我的学生写代码。
   volunteer_engineer_submission_type_task_onsite: 我邀请你访问我的课堂提供技术帮助和激励故事
   volunteer_engineer_submission_type_task_remote: 我邀请你通过 Skype 参与我的课堂，说几句对孩子们富有启示的话
-  volunteer_engineer_submission_type_task_mentor: 我正在寻找一位导师，帮助我备课，以使我能与我的学生写代码。
-  petition_age: 年龄
-  dashboard_announce_hoc_scaling_progress: 呀！我们正经历着编程一小时的访问高峰期。本周我们暂时无法保存任何进度存档, 但本周之前的进度存档仍然是安全的。
-  dashboard_announce_learn_more_button: 了解详情
-  dashboard_landing_title: 教师主页
-  dashboard_landing_welcome: 欢迎您来到我们最新改进的教师控制台。
-  dashboard_landing_video: 观看此视频
-  dashboard_landing_watch_video: 浏览新的功能！
-  dashboard_landing_view_as_student: 以学生身份查看本网站
-  dashboard_landing_students_title: 您的学生
-  dashboard_landing_students_manage: 查看和管理您的学生
-  dashboard_landing_news_title: K-5 教育家资料（只限英文版）
-  dashboard_landing_new_beta: 新功能！K-5 学生可以尝试我们的 beta 实验版课程。
-  dashboard_landing_new_k5courses: 新功能！K-5 学生可以尝试我们的课程。
-  dashboard_landing_useful_links: 其他有用的链接
-  dashboard_landing_classroom_resources: 你的教室的资源
-  dashboard_landing_office_hours: 面对面问问题！请访问我们每月的视频办公时间。
-  dashboard_landing_print_certificates: 为完成此课程的学生打印证书
-  dashboard_landing_educator_blog: 阅读有关新闻和我们在教育家博客的材料的更新
-  dashboard_landing_video_player: 在你的学校测试我们新的视频。
-  dashboard_landing_progress_title: 主要课程进度
-  dashboard_landing_progress_biggest: 这是您主要课程的进度。
-  dashboard_landing_view_progress: 查看%{biggest_section}的进度
-  dashboard_landing_print_progress: 打印你的进展
-  dashboard_landing_available_title: 可用课程
-  dashboard_landing_available_courses: 这些是目前可供您和您的学生使用的课程。
-  dashboard_landing_more_tutorials: 想看更多教程吗？
-  dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">我们的合作伙伴提供了更多的教程</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探索其他语言如C++，Ruby，Python！
-  dashboard_landing_inspire: 用海报、 视频和更多东西来激励你的学生。
-  dashboard_landing_video_library: 使用来自计算机科学概念的视频库里的视频。
-  dashboard_landing_report_bug: 请求一个功能或报告一个漏洞。
-  dashboard_landing_teacher_forum: 加入一个专业学习的团体。
-  dashboard_hoc_courses: "《编程一小时》适合所有年龄的人。"
-  dashboard_hoc_courses_desc: 和你的学生一同尝试任何这些不到 1 小时的辅导！
-  dashboard_hoc_courses_desc_and_cta: 与你的学生一起尝试这些简短的一个小时的辅导。在计算机科学教育周期间<a href="https://hourofcode.com">加入编程一小时活动</a>。
-  dashboard_k5_courses: 适合K-5的20小时课程
-  dashboard_k5_courses_desc: 这些课程有可以让学生自学并自己控制进度的网上教程，也有根本不需要电脑的“脱机”教程。每一个课程都大约有20节课，可能会分为几个章节和单元。即使是幼儿园的学龄前学生都可以参加。我们在美国各地提供了专业、高质量的免费学习研讨会。<a
-    href="/professional-development-workshops">看看你附近的课程吧！</a>
-  dashboard_middle_courses: 20小时的中学课程
-  dashboard_middle_courses_desc: 在中学数学和理科范围内，我们中学课程使用计算机科学及编程，作为一种工具来教导数学和科学理念。注册开发专业研讨会，申请与
-    Code.org <a href="/educate/districts">建立全区域合作伙伴关系</a>。
-  dashboard_high_courses: 为期一年的高中课程
-  dashboard_high_courses_desc: 通过面向现有教学人员提供这一新领域的培训，我们的高中组项目能帮助学区提供全年计算机科学类编写课程。注册开发专业研讨会，申请与
-    Code.org <a href="/educate/districts">建立全区域合作伙伴关系</a>。
-  dashboard_course_csina: 代数中的计算机科学
-  dashboard_course_csina_desc: Code.org 与 Bootstrap 教程合作，开发一套通过计算机编程教授代数和几何概念的课程。
-  dashboard_course_csins: 理科中的计算机科学
-  dashboard_course_csins_desc: Code.org 与 GUTS 项目合作交付计算机科学概念导论，范围包括建模与仿真。
-  dashboard_course_ecs: 探索计算机科学
-  dashboard_course_ecs_desc: '计算机科学探索是为期一年的课程，由 6 个部分组成: 人机交互、 解决问题的能力、 网页设计、 编程、
-    计算和数据分析以及机器人。'
-  dashboard_course_csp: AP® 计算机科学原则
-  dashboard_course_csp_desc: Code.org 设计了严谨、 紧密和容易接受的课程，专门探索计算相关的基本思想。
-  dashboard_landing_loading: 正在载入...​​​
-  dashboard_action_cancel: 取消
-  dashboard_action_delete: 刪除
-  dashboard_action_delete_yes: 对
-  dashboard_action_delete_no: 不
-  dashboard_action_confirm: 要删除吗？
-  dashboard_action_done: 完成
-  dashboard_action_print_certificates: 打印证书
-  dashboard_assessments_view: 查看评价：
-  dashboard_assessments_none: 多数教师通过“查看进度”标签来知道学生的进度。如果你想给进行学生额外的评估，你可以在课程计划中找到推荐的问题和领域。这些都是
-    Code.org 之外的资源。
-  dashboard_assessments_none_part2: 如果你在教中学或高中课程，Code.org 提供的部分评估问题可帮助你的学生用于准备 AP
-    考试。若要使用这些评估，首先将课程分配到课堂，然后在上面的列表中选择课程，你将会在此处看到学生的答案。
-  dashboard_assessments_summaries: 评估总结
-  dashboard_assessments_answers: 所有评估的答案
-  dashboard_surveys_answers: 调查
-  dashboard_percent: 百分比
-  dashboard_filter_by_stage: 按阶段筛选 ︰
-  dashboard_filter_all: 全部
-  dashboard_download_csv: 下载 CSV
-  dashboard_navigation_home_page: 教师主页
-  dashboard_navigation_section_student_progress: 学生账户和进度
-  dashboard_navigation_section_teacher_progress: 您的课程进度
-  dashboard_navigation_section_lesson_plans: 课程计划及资源
-  dashboard_navigation_section_community: 支持
-  dashboard_navigation_section_pd: 职业发展
-  dashboard_navigation_section_speakers: 计算机科学 <br/> 特邀演讲人
-  dashboard_navigation_all_sections: 学生账户和进度
-  dashboard_navigation_view_progress: 进度
-  dashboard_navigation_view_text_responses: 文字回应
-  dashboard_navigation_view_assessments: 评估
-  dashboard_navigation_view_assessments_surveys: 评估/调查
-  dashboard_navigation_add_students: 添加学生
-  dashboard_navigation_manage_students: 管理学生
-  dashboard_navigation_lesson_plans_resources: 教案标准
-  dashboard_navigation_view_stats: 统计信息
-  dashboard_navigation_section: 学习小组：%{section_name}
-  dashboard_navigation_student: 学生：%{student_name}
-  dashboard_progress_not_started: 未开始
-  dashboard_progress_in_progress: 正在进行
-  dashboard_progress_not_completed: 未完成
-  dashboard_progress_completed_too_many_blocks: 完成，使用了太多模块
-  dashboard_progress_completed_perfect: 完美完成
-  dashboard_progress_furthest_level_attempted: 尝试过最远的关卡
-  dashboard_progress_submitted: 已提交
-  dashboard_progress_view: 查看进度 ︰
-  dashboard_progress_student_in_script: "%{student_name} 的 %{script_name} 进度信息在"
-  dashboard_progress_pair_programming: 结对编程
-  dashboard_responses_view: 查看文本响应 ︰
-  dashboard_responses_none: 我们的大多数课程是为较小年纪的孩子设计的，不要求学生用文本回答问题，所以，你不会在这里看到任何文本答案。给初中或高中学生的课程里，通过在上面的下拉框中选择，你能分配给他们的开放式的文本问题。
-  dashboard_sections_new_section: 新的学习小组
-  dashboard_sections_new_google_section: 从谷歌课堂导入小组
-  dashboard_sections_jumbotron_instruction: 创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。
-  dashboard_sections_table_section: 单元
-  dashboard_sections_table_secret: 登录类型
-  dashboard_sections_table_grade: 年级
-  dashboard_sections_table_course: 课程：
-  dashboard_sections_table_pairing_allowed: 结对编程
-  dashboard_sections_table_stage_extras: 此阶段的额外资源
-  dashboard_sections_table_students: 学生
-  dashboard_sections_table_code: 小组代码
-  dashboard_sections_name: 小组名称：
-  dashboard_sections_choose_secret: 如果您想要给您的学生提供帐户，请为那个学习小组选择一种<b>单词</b>或<b>图片</b>的密码类型。
-  dashboard_sections_secret_word: "<b>单词</b> 允许您为每位学生设置一个单词密语。"
-  dashboard_sections_secret_picture: "<b>图片</b> 允许您为每位学生设置一幅秘密图片，适用于年幼的还无法使用键盘输入密码的学生。"
-  dashboard_sections_secret_none: 如果您希望您的学生自主管理他们自己的账户，包括选择他们自己的密码，请选择<b>无</b>加密类型。
-  dashboard_sections_print_secrets: 然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。
-  dashboard_sections_switch_section: 切换学习小组
-  dashboard_sections_close: 关闭
-  dashboard_sections_move_students_desc: 选择学生转到新的小组。转移的学生不会清除他们的进展。
-  dashboard_sections_one_per_teacher: 对每一位老师来说，学生仅能在一个学习小组中。你的学生想加入一个新的学习小组，他就要离开原来的小组。
-  dashboard_sections_move_to_section: 移动到此节︰
-  dashboard_sections_enter_code: 输入此节代码︰
-  dashboard_sections_code_placeholder: 6 个字符的代码（ABCDEF）
-  dashboard_sections_other_section: 其他老师
-  dashboard_sections_both_sections: 你想要学生两个部分都参加吗？
-  dashboard_sections_yes_both: 是的，我想要复制学生到本小组和新小组中
-  dashboard_sections_no_move: 不，我想移动学生到新小组中。
-  dashboard_sections_move_students: 转移学生
-  dashboard_sections_assign_hoc_script_desc: 参与编程一小时？
-  dashboard_sections_assign_hoc_script_msg: 请注意，在12月3日至11日期间，由于无法预测的网站访问量，我们不能保存课程进度。但课程中其它部分还可以使用。你也许仍需要给学生分派课程、颁发证书。（大多数教师会事先<a
-    href='%{certificate_url}'>打印</a>这些证书。）在本周之外的其它时间里，学生进度和报告会正常保存。
-  dashboard_sections_assign_activity: 指派课程
-  dashboard_error_none_selected: 你没有选择任何要转移的学生，请至少选择一个学生。
-  dashboard_error_other_section: 如果你要在自己管理的单元中调整学生，可以从下拉菜单选择你要调的单元。如果你要将学生调整到其他教师负责的单元，请选择”其它单元”。
-  dashboard_students_add_multiple: 输入或粘贴学生的名字，每行一个：
-  dashboard_students_new_google_classroom_section: 如果要添加学生，请转到<a href='http://classroom.google.com'
-    target='_blank'>谷歌课堂</a>然后点击<b>Sync students from Google Classroom</b>。
-  dashboard_students_new_section: 您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。
-  dashboard_students_name: '姓名： '
-  dashboard_students_progress: 进度
-  dashboard_students_male: 男性
-  dashboard_students_female: 女性
-  dashboard_students_completed_levels: 已完成的关卡
-  dashboard_students_total_lines: 代码行数
-  dashboard_students_share_section: 让您的学生点击<a href=%{join_url}>%{join_url}</a>，并且输入代码(%{section_code})。
-  dashboard_students_share_section_secondary: 或者，将这个小组的登录页面共享给你的学生：
-  dashboard_students_print_info: 打印出包含学生登录信息的卡片
-  dashboard_students_secret_picture_title: 秘密图片
-  dashboard_students_secret_picture: 这一节使用<b>图片</b>作为密钥的类型。即您的每位学生都有一张密钥图片来代替密码用于登录。学生需要它来完成上面的登录。
-  dashboard_students_reset_picture: 您可以通过选择<b>显示密钥</b>以及<b>重置密钥</b>来随时重置学生的秘密图片。该学生再次登录时系统将生成新的秘密图片供其使用。
-  dashboard_students_secret_word_title: 密语
-  dashboard_students_secret_word: 这一节使用<b>图片</b>作为密钥的类型。即您的每位学生都有一张密钥图片来代替密码用于登录。学生需要它来完成上面的登录。
-  dashboard_students_reset_word: '您可以通过选择<b>显示密钥</b>以及<b>重置密钥</b>来随时重置学生的密语。该学生再次登录时系统将生成新的一对单词密语供其使用。 '
-  dashboard_students_join_link: 告诉您的学生来创建他们自己的账号并在此加入您的学习小组
-  dashboard_students_no_email: 如果您的学生没有电子邮件地址，或您想为其创建帐户，请将学习小组的密钥类型更改为 <b>单词</b> 或
-    <b>图片</b>。
-  dashboard_students_print_page: 打印此页面
-  dashboard_students_signin_card: 访问%{join_url}，并输入%{section_code}
-  dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">点击这里</a>以获取我们的隐私文件，您可以跟您的学生共享此文件或打印分发给他们的。
-  dashboard_curriculum_k5_title: K-5 教育人才资源
-  dashboard_curriculum_middle_title: 初中教育资源
-  dashboard_curriculum_high_title: 高中教育资源
-  dashboard_lesson_plans: 课程计划
-  dashboard_view_all_lesson_plans: 下载1-4课的完整教案
-  dashboard_course1: 课程 1：
-  dashboard_course2: 课程 2：
-  dashboard_course3: 课程 3：
-  dashboard_course4: '课程 4： '
-  dashboard_coursea: '课程 A： '
-  dashboard_courseb: '课程 B： '
-  dashboard_coursec: '课程 C： '
-  dashboard_coursed: '课程 D： '
-  dashboard_coursee: '课程 E： '
-  dashboard_coursef: '课程 F： '
-  dashboard_pre-express: '学前儿童的快速课程： '
-  dashboard_express: '快速课程： '
-  dashboard_unplugged: 如果你没有电脑，可以在你的教室<a href='%{unplugged_url}'>试试这些离线的教程。</a>
-  dashboard_unplugged_markdown: 如果你没有电脑，可以在你的教室试试这些[离线的教程](%{unplugged_url})。
-  dashboard_tools: '工具集： '
-  dashboard_curriculum: 课程
-  dashboard_curriculum_overview: K-5课程概述
-  dashboard_overview: 概览
-  dashboard_sequence: 序列
-  dashboard_framework: 框架
-  dashboard_standards: 标准
-  dashboard_implementation_guide: 实施指南
-  dashboard_glossary: 词汇表
-  dashboard_classroom_strategies: 教师的课堂策略
-  dashboard_debugging: 调试：
-  dashboard_puzzle_solving: 解决难题：
-  dashboard_student_worksheet: 学生工作表
-  dashboard_teacher_worksheet: 教师工作表
-  dashboard_curriculum_csina: 代数中的计算机科学：
-  dashboard_curriculum_csins: 科学中的计算机科学：
-  dashboard_curriculum_csp: 计算机科学原理：
-  dashboard_curriculum_ecs: 探索计算机科学：
-  dashboard_curriculum_csd: '计算机科学探索： '
-  dashboard_curriculum_apcsa: 'Java的AP计算机科学： '
-  dashboard_grade_k: 学龄前
-  dashboard_grade_other: 其他
-  dashboard_login_word: 单词
-  dashboard_login_picture: 图片
-  dashboard_login_none: 电子邮件
-  dashboard_stage: 阶段
-  dashboard_puzzle: 关卡
-  dashboard_question: 问题
-  dashboard_response: 回答
-  dashboard_correctness: 正确性
-  dashboard_correctness_free_response: 自由响应
-  dashboard_correctness_unsubmitted: 未提交
-  dashboard_correctness_correct: 正确。
-  dashboard_correctness_incorrect: 错误
-  dashboard_submission_submitted: 已提交
-  dashboard_submission_in_progress: 进行中
-  dashboard_status: 状态
-  dashboard_multi_correct: "# 道多选题正确"
-  dashboard_multi_count: "# 道多选题"
-  dashboard_multi_correct_percent: "% 道多选题正确"
-  dashboard_submission_timestamp: 提交时间戳
-  stats_hoc_2013_heading: 在去年的编程一小时活动中的惊人数据。在一周之内：
-  stats_hoc_2013_image_alt: 2013年编程一小时统计数据
-  dashboard_teacher: 老师
-  dashboard_student: 学生
-  dashboard_sections_email_question: 所有的学生都有一个有效的电子邮件地址吗？
-  dashboard_sections_account_creation_question: 由谁创建学生的帐户？
-  dashboard_sections_password_question: 学生用什么作为密码？
-  dashboard_sections_picture_account_creation: 由 Code.org 分配的图片
-  dashboard_sections_word_account_creation: 由 Code.org 分配的简单的词
-  dashboard_sections_sign_in_question: 学生从哪里登录账户？
-  dashboard_sections_sign_in_unique: 在“管理学生”选项卡上列出的单独的网页
-  dashboard_sections_sign_in_main: http://code.org 之后单击 "登录"
-  dashboard_sections_password_account_creation: 学生创建的文本密码
-  dashboard_sections_login_type_explanation: 此表可以帮助解释您想要为学习小组选择哪种登录类型，<b>图片，词语或电子邮件</b>。
-  dashboard_faq: 常见的问题
-  dashboard_faq_k5: K-5 组的常见问题
-  code_hoc_coming: 编程一小时就在这里 — — 12 月 8-14 日 ！
-  code_sign_up: 注册以便在计算机科学教育周期间参加
-  host_an_hour: 举办编程一小时活动
-  learn_banner_title: 加入《编程一小时》
-  learn_banner_desc: "《编程一小时》是一个全球性的活动，有180 多个国家的超过 1 亿学生在参与。任何人，任何地方都可以组织编程一小时活动。帮助我们给每个学生学习计算机科学的机会
-    ！组织者可以按照我们的 <a href='%{how_to_url}' target='_blank'> 操作指南</a> 来教授编程一小时，用 <a href='%{videos_url}'
-    target='_blank'>这些视频</a>来激发学生的热情。"
-  learn_more: 现在就试试
-  learn_sign_up_description: 报名参与在计算机科学教育周期间的编程一小时活动。
-  learn_sign_up_button: 注册
-  learn_videos_watch: 在课堂上观看这段鼓舞人心的视频
-  learn_videos_show: 在你的课堂上播放这段鼓舞人心的视频
-  learn_videos_before_hoc: 在你启动编程一小时代码小时活动之前观看一段励志视频
-  learn_educator_resources_description: 学习如何教授编程一小时
-  learn_educator_resources_button: 教育资源
-  learn_are_you_educator: 你是一名教育工作者吗？学习<a href="http://hourofcode.com/resources/how-to">如何教授编程一小时</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">找到当地志愿者</a>为你的编程一小时课程提供帮助
-  learn_teacher_led_lesson_plans: 得到<a href="https://code.org/teacher-led">发起编程一小时教案的老师给你的</a>启发
-  learn_how_to_hoc: 按照<a href="https://hourofcode.com/how-to">我们的指南</a>教授编程一小时
-  learn_hoc_prizes: 了解更多关于每个教育者的奖项
-  learn_inspirational_videos: 通过展示<a href="https://code.org/educate/inspire">这些视频</a>启发学生
-  hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
-  hoc2014_try_new_tutorial: 试试我们新的测试版的编程一小时教程
-  hoc2014_try_scrat: 愤怒的小鸟、植物大战僵尸和斯奎特
-  hoc2014_try_frozen: 来自冰雪奇缘的艺术家安娜及爱莎。
-  carousel_heading_codeorg: Code.org 提供的教程
-  carousel_heading_codeorg_any_device: Code.org 的教程（适合所有的设备！）
-  carousel_heading_3rd_party: 第三方教程
-  carousel_heading_third_party: 第三方教程
-  carousel_heading_international: 合作伙伴的教程
-  carousel_heading_domestic: 英文教程可用
-  carousel_heading_beginners: K-8教程
-  carousel_heading_beyond_beginners: 适合初学者：从基于模块的编码开始
-  carousel_heading_javascript: 教 JavaScript 的教程
-  carousel_heading_beyond_javascript: 学习JavaScript
-  carousel_heading_unplugged: 没有设备或互联网接入？试试’离线‘计算机科学课程
-  carousel_heading_devices: 为手机和平板电脑定制的教程应用
-  carousel_heading_beyond_devices: 手机和平板电脑的应用
-  carousel_heading_languages: 用其他编程语言所写的教程
-  carousel_heading_beyond_languages: 学习其他编程语言
-  carousel_heading_apps_games: 制作你自己的应用或游戏
-  carousel_heading_university: 在线大学课程
-  carousel_heading_online_university: 可选的在线大学课程
-  carousel_heading_webpages: 学习如何制作网页
-  carousel_heading_robots: 学习使用机器人和硬件进行编程
-  carousel_heading_ide: 在教师中流行的平台
-  carousel_heading_desktop: 学习电脑编程
-  carousel_heading_mobtabelem: 为手机和平板准备的
-  carousel_heading_prereader: 为还不能阅读的学生
-  carousel_heading_beyondblocks: 超越模块编程 - 学习一门编程语言
-  carousel_heading_nointernet: 网络不给力？在电脑上安装这些应用吧。
-  educator_notes: 教育家笔记
-  teach_led_lesson_plans: 由老师引导的教案
-  learn_footer_all_tutorials: 查看<a href="https://code.org/learn">编程一小时教程的完整列表</a>。了解我们编程一小时教程的标准和提交指南，<a
-    href="https://hourofcode.com/activity-guidelines">请点击这里。</a>
-  how_to_teach_hoc: 如何教授代码一小时
-  more_resources_educators: 给教师和教育工作者们的更多资源
-  beyond_submission: 想要提交一小时学编程的教程吗？请参阅标准和提交表单。
-  third_party_submission: 想提交一门课程并列在这里吗？<a href="%{submission_url}">请查看标准，并填写申请表。</a>
-  participants: 参与者
-  teachers_notes: 老师的笔记
-  teachers_notes_hoc: 教师：请阅读这些重要的教育者说明
-  previous: 前一项
-  next: 下一项
-  older_systems: 能在旧一点的系统上运行的教程
-  older_systems_subheading: 这些应该能在较旧的网页浏览器上运行。若要访问所有教程，请升级到 <a href="http://browsehappy.com/"target="_blank">
-    最新的网页浏览器。</a>
-  mobile_devices: 用于移动设备的教程
-  frozen_name: 和安娜、爱莎一起编程
-  starwars_name: '星球大战: 用代码构建一个星系'
-  codeorg_name: 经典迷宫
-  codeintl_name: 经典迷宫
-  khan_name: JavaScript 简介
-  khanes_name: JavaScript 简介
-  khanpt_name: JavaScript 简介
-  khanhe_name: JavaScript 简介
-  khanfr_name: JavaScript 简介
-  khanpl_name: JavaScript 简介
-  tynker_name: 创造你自己的游戏
-  scratch_name: 用编程发挥创意
-  thinkersmith_name: 我的机器人朋友
-  condcards_name: 用 扑克牌 的 条件子句
-  codehs_name: 同小狗卡莱尔一起学编程
-  codemonkey_name: 代码猴
-  codeavengers_name: 用 JavaScript 创建一个游戏
-  processing_name: 用代码来画画
-  robomind_name: 用程序设计出虚拟机器人
-  groklearning_name: 聊天机器人医生爱丽莎
-  quorum_name: 无障碍程序设计(使用屏幕阅读器来辅助)
-  codespark_name: The Foos （欢迎学龄前读者）
-  kodable_name: Kodable （欢迎学龄前读者）
-  tynkerapp_name: Tynker - 用于平板电脑
-  robomindnl_name: 用程序设计出虚拟机器人
-  flappy_name: 制作一个Flappy类游戏
-  bitsbox_name: Bitsbox - 制作游戏
-  makeschool_name: 在你的浏览器中创建一个 iPhone 游戏！
-  appinventor_name: AppInventor 编程一小时
-  blockly_name: 模块化
-  projguts_name: 石头、剪子、布
-  hourofcode_name: 经典迷宫
-  playlab_name: 游戏实验室
-  infinity_name: 无限发挥游戏实验室
-  artist_name: 小艺术家
-  monstercoding_name: 神秘岛编程探索
-  allcancode_name: 运行马可！
-  csfirst_name: 计算机科学当先
-  boxisland_name: 盒子岛
-  texasinstruments_name: 编程十分钟
-  teacherled_name: 由老师引导的教案
-  course1_name: '课程 1:'
-  course2_name: 课程2
-  course3_name: 课程 3
-  course4_name: 课程 4
-  coursea-draft_name: 课程 A
-  coursea_name: 课程 A
-  courseb-draft_name: 课程 B
-  courseb_name: 课程 B
-  coursec-draft_name: 课程 C
-  coursec_name: 课程 C
-  coursed-draft_name: 课程 D
-  coursed_name: 课程 D
-  coursee-draft_name: 课程 E
-  coursee_name: 课程 E
-  coursef-draft_name: 课程 F
-  coursef_name: 课程 F
-  coursea-2017_name: 课程 A （2017）
-  courseb-2017_name: 课程 B （2017）
-  coursec-2017_name: 课程 C （2017）
-  coursed-2017_name: 课程 D （2017）
-  coursee-2017_name: 课程 E （2017）
-  coursef-2017_name: 课程 F （2017）
-  coursea-2018_name: 课程 A （2018）
-  courseb-2018_name: 课程 B （2018）
-  coursec-2018_name: 课程 C （2018）
-  coursed-2018_name: 新的课程D脚本
-  coursee-2018_name: 课程 E （2018）
-  coursef-2018_name: 课程 F （2018）
-  coursea-2019_name: 课程 A (2019)
-  courseb-2019_name: 课程 B (2019)
-  coursec-2019_name: 课程 C (2019)
-  coursed-2019_name: 课程 D (2019)
-  coursee-2019_name: 课程 E (2019)
-  coursef-2019_name: 课程 F （2019）
-  coursea-2020_name: 课程 A (2019)
-  courseb-2020_name: 课程 B (2019)
-  coursec-2020_name: 课程 C (2019)
-  coursed-2020_name: 课程 D (2019)
-  coursee-2020_name: 课程 E (2019)
-  coursef-2020_name: 课程 F （2019）
-  coursea-2021_name: A 课程 (2021)
-  courseb-2021_name: B 课程 (2021)
-  coursec-2021_name: C 课程 (2021)
-  coursed-2021_name: 课程 D （2021）
-  coursee-2021_name: E 课程 (2021)
-  coursef-2021_name: F 课程 (2021)
-  coursea-2022_name: A 课程 (2022)
-  courseb-2022_name: B 课程 (2022)
-  coursec-2022_name: C 课程 (2022)
-  coursed-2022_name: 课程 D （2021）
-  coursee-2022_name: E 课程 (2022)
-  coursef-2022_name: F 课程 (2022)
-  express-2018_name: 速学课程 （2018）
-  pre-express-2018_name: 学前儿童的速学课程（2018）
-  express-2019_name: 速学课程 (2019)
-  pre-express-2019_name: 学前儿童的速学课程（2019）
-  express-2020_name: 速学课程 (2019)
-  pre-express-2020_name: 学前儿童的速学课程（2020）
-  express-2021_name: 快速课程 (2021)
-  pre-express-2021_name: 学前儿童的速学课程（2021）
-  express-2022_name: 快速课程 (2022)
-  pre-express-2022_name: 学前儿童快捷课程（2022）
-  csd2_name: 单元 2：网页开发
-  csd3_name: 单元 3：动画和游戏
-  accelerated_name: 加速课程
-  express_name: 快速课程
-  pre-express_name: 学前儿童的速学课程
-  20-hour_name: 加速课程
-  algebra_name: 代数课程中的计算机科学
-  AlgebraA_name: 计算机代数 课程A
-  AlgebraB_name: 计算机代数 课程 B
-  gumball_name: 口香糖
-  classicmaze_name: 经典迷宫
-  iceage_name: 冰河世纪
-  minecraft_name: 我的世界
-  starwarsblocks_name: 星球大战(块)
-  hoc-impact-study_name: 带调查的经典迷宫
-  flappy-impact-study_name: 带调查的 Flappy Code
-  hoc-encryption_name: 简单加密
-  text-compression_name: 文本压缩
-  applab_name: 应用实验室
-  gamelab_name: 游戏实验室
-  basketball_name: 进行一场篮球赛
-  sports_name: 用代码编写你自己的体育赛事
-  applab_gradelevel: 13岁以上
-  applab_shortdescription_congrats: 应用实验室是一个可以让你使用简单的应用程序的编程环境。用代码块或 JavaScript来设计应用程序，然后马上分享您的应用程序。
-  codeorg_gradelevel: 适合年龄 4 岁以上
-  codeintl_gradelevel: 适合年龄 4 岁以上
-  khan_gradelevel: 中学及以上
-  khanes_gradelevel: 中学及以上
-  khanpt_gradelevel: 中学及以上
-  khanhe_gradelevel: 中学及以上
-  khanfr_gradelevel: 中学及以上
-  khanpl_gradelevel: 中学及以上
-  tynker_gradelevel: 适合年龄 5-13
-  scratch_gradelevel: 适合年龄 8 岁以上
-  lightbot_gradelevel: 所有年龄
-  thinkersmith_gradelevel: 所有年龄
-  condcards_gradelevel: 年龄 8-12
-  lightbotintl_gradelevel: 所有年龄
-  codehs_gradelevel: 高中
-  codecademy_gradelevel: 高中
-  codecombat_gradelevel: 中学及以上
-  codemonkey_gradelevel: 中学及以上
-  codeavengers_gradelevel: 中学及以上
-  processing_gradelevel: 高中
-  robomind_gradelevel: 适合年龄 8-13岁
-  groklearning_gradelevel: 中学及以上
-  quorum_gradelevel: 中学及以上
-  codespark_gradelevel: 小学
-  kodable_gradelevel: 小学
-  tynkerapp_gradelevel: 适合年龄 5-13
-  robomindnl_gradelevel: 8-13岁
-  flappy_gradelevel: 6岁以上
-  bitsbox_gradelevel: 小学
-  makeschool_gradelevel: 高中
-  touchdevelop_gradelevel: 高中
-  appinventor_gradelevel: 中学及以上
-  blockly_gradelevel: 所有年龄
-  thinkersmith2_gradelevel: 适合年龄 8 岁以上
-  kodableunplugged_gradelevel: 适合年龄 8-13岁
-  projguts_gradelevel: 适合年龄10-13岁
-  hourofcode_gradelevel: 6岁以上
-  frozen_gradelevel: 适合年龄 8 岁以上
-  starwars_gradelevel: 6岁以上
-  playlab_gradelevel: 适合年龄 6 岁以上
-  infinity_gradelevel: 适合年龄 6 岁以上
-  artist_gradelevel: 适合年龄 8 岁以上
-  monstercoding_gradelevel: 适合年龄 5-13
-  allcancode_gradelevel: 年龄段 5-10
-  csfirst_gradelevel: 9-14 岁
-  boxisland_gradelevel: 小学
-  codesters_gradelevel: 12-14 岁
-  texasinstruments_gradelevel: 13-16 岁
-  teacherled_gradelevel: 5岁以上年龄组
-  course1_gradelevel: 4 - 6岁
-  course2_gradelevel: 6-18岁
-  course3_gradelevel: 8-18 岁
-  course4_gradelevel: 10-18 岁
-  coursea_gradelevel: 年龄 4-7
-  courseb_gradelevel: 年龄 5-8
-  coursec_gradelevel: 年龄 6-10
-  coursed_gradelevel: 8年级以上
-  coursee_gradelevel: 年龄 8-12
-  coursef_gradelevel: 年龄 9-13
-  coursea-2017_gradelevel: 年龄 4-7
-  courseb-2017_gradelevel: 年龄 5-8
-  coursec-2017_gradelevel: 年龄 6-10
-  coursed-2017_gradelevel: 8年级以上
-  coursee-2017_gradelevel: 年龄 8-12
-  coursef-2017_gradelevel: 年龄 9-13
-  coursea-2018_gradelevel: 年龄 4-7
-  courseb-2018_gradelevel: 年龄 5-8
-  coursec-2018_gradelevel: 年龄 6-10
-  coursed-2018_gradelevel: 8年级以上
-  coursee-2018_gradelevel: 年龄 8-12
-  coursef-2018_gradelevel: 年龄 9-13
-  coursea-2019_gradelevel: 年龄 4-7
-  courseb-2019_gradelevel: 年龄 5-8
-  coursec-2019_gradelevel: 年龄 6-10
-  coursed-2019_gradelevel: 8年级以上
-  coursee-2019_gradelevel: 年龄 8-12
-  coursef-2019_gradelevel: 年龄 9-13
-  coursea-2020_gradelevel: 年龄 4-7
-  courseb-2020_gradelevel: 年龄 5-8
-  coursec-2020_gradelevel: 年龄 6-10
-  coursed-2020_gradelevel: 8年级以上
-  coursee-2020_gradelevel: 年龄 8-12
-  coursef-2020_gradelevel: 年龄 9-13
-  coursea-2021_gradelevel: 年龄 4-7
-  courseb-2021_gradelevel: 年龄 5-8
-  coursec-2021_gradelevel: 年龄 6-10
-  coursed-2021_gradelevel: 8年级以上
-  coursee-2021_gradelevel: 年龄 8-12
-  coursef-2021_gradelevel: 年龄 9-13
-  coursea-2022_gradelevel: 年龄 4-7
-  courseb-2022_gradelevel: 年龄 5-8
-  coursec-2022_gradelevel: 年龄 6-10
-  coursed-2022_gradelevel: 8年级以上
-  coursee-2022_gradelevel: 年龄 8-12
-  coursef-2022_gradelevel: 年龄 9-13
-  accelerated_gradelevel: 10-18 岁
-  codeorg_platformtext: 现代浏览器、智能手机、平板电脑
-  codeintl_platformtext: 现代浏览器、智能手机、平板电脑
-  thinkersmithspanish_platformtext: 离线的
-  khan_platformtext: 现代网络浏览器
-  khanes_platformtext: 现代网络浏览器
-  khanpt_platformtext: 现代网络浏览器
-  khanhe_platformtext: 现代网络浏览器
-  khanfr_platformtext: 现代网络浏览器
-  khanpl_platformtext: 现代网络浏览器
-  tynker_platformtext: 现代网络浏览器
-  scratch_platformtext: 仅用于桌面网络浏览器 （不能在平板电脑用）
-  lightbot_platformtext: 所有浏览器及iOS、安卓系统或游戏主机
-  thinkersmith_platformtext: 离线的
-  condcards_platformtext: 离线的
-  lightbotintl_platformtext: iOS，Android（或浏览器）
-  codehs_platformtext: 现代的浏览器。（后续课程需要 $$）
-  codecademy_platformtext: 现代的网络浏览器。iOS、安卓应用程序
-  codecombat_platformtext: 现代的网络浏览器。（后续课程需要 $$）
-  codemonkey_platformtext: 现代网络浏览器
-  codeavengers_platformtext: 现代网络浏览器
-  processing_platformtext: 现代网络浏览器
-  robomind_platformtext: 现代的网络浏览器，移动网络
-  groklearning_platformtext: 现代网络浏览器
-  quorum_platformtext: 支持最新的网页浏览器。支持屏幕阅读器
-  codespark_platformtext: iOS、安卓（或网络浏览器）
-  tynkerapp_platformtext: iPad、安卓平板电脑
-  robomindnl_platformtext: 现代的网络浏览器、移动网络
-  flappy_platformtext: 现代浏览器、智能手机、平板电脑
-  bitsbox_platformtext: 现代网络浏览器
-  makeschool_platformtext: 现代的网络浏览器
-  touchdevelop_platformtext: 现代的浏览器、智能手机、所有的设备
-  appinventor_platformtext: 现代浏览器 + 安卓系统
-  blockly_platformtext: 仅限现代浏览器
-  thinkersmith2_platformtext: 离线的
-  kodableunplugged_platformtext: 离线的
-  projguts_platformtext: 离线的
-  hourofcode_platformtext: 现代浏览器、智能手机、平板电脑
-  frozen_platformtext: 现代浏览器 + 平板电脑
-  starwars_platformtext: 现代浏览器 + 平板电脑
-  playlab_platformtext: 现代浏览器，智能手机，平板电脑
-  monstercoding_platformtext: 现代网络浏览器、iOS、安卓系统
-  allcancode_platformtext: 现代网络浏览器、 iOS
-  csfirst_platformtext: 现代网络浏览器
-  boxisland_platformtext: 安卓、iOS
-  codesters_platformtext: 现代网络浏览器
-  texasinstruments_platformtext: TI 图形计算器
-  teacherled_platformtext: 现代浏览器、智能手机、平板电脑
-  codeorg_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
-  codeintl_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
-  khan_shortdescription: 学习如何在 JavaScript 中作画
-  khanes_shortdescription: 学习如何在 JavaScript 中作画
-  khanpt_shortdescription: 学习如何在 JavaScript 中作画
-  khanhe_shortdescription: 学习如何在 JavaScript 中作画
-  khanfr_shortdescription: 学习如何在 JavaScript 中作画
-  khanpl_shortdescription: 学习如何在 JavaScript 中作画
-  tynker_shortdescription: 通过解决有趣的谜题和创造你自己的移动端游戏来学习编程。
-  scratch_shortdescription: 创造互动游戏、故事和动画。
-  lightbot_shortdescription: 对 Lightbot 编程以使用过程和循环来通过关卡！
-  thinkersmith_shortdescription: 为没有设备的小组设计的离线教程
-  condcards_shortdescription: 用一副扑克学习算法
-  lightbotintl_shortdescription: 用一个游戏来教授编程概念
-  codehs_shortdescription: 与小狗卡莱尔一起开始编程，一个有趣的编程介绍！
-  codecademy_shortdescription: 在网页浏览器中学习 JavaScript 编程
-  codecombat_shortdescription: 在这个史诗般的编程游戏中打败食人魔来学会 Python 或 JavaScript ！
-  codemonkey_shortdescription: 学生们编写一只抓住香蕉的猴子。
-  codeavengers_shortdescription: 在网页浏览器中学习 JavaScript 编程
-  processing_shortdescription: 一个关于语言处理的一小时教程
-  robomind_shortdescription: 为一个虚拟机器人编写代码
-  groklearning_shortdescription: 教聊天机器人“爱丽莎”如何聊天来让你的朋友们认为她是真人！
-  quorum_shortdescription: 加入玛丽学习 Quorum 编程语言的引导学习之旅。
-  codespark_shortdescription: The Foos 是一种有趣的，孩子也能玩的学习编程的游戏。
-  kodable_shortdescription: 一个有趣的、教授计算机编程概念的 iPad 游戏
-  tynkerapp_shortdescription: '通过解决有趣的代码谜题来学习编程。 '
-  robomindnl_shortdescription: 为一个虚拟机器人编写代码
-  flappy_shortdescription: 用 Flappy Bird、鲨鱼、或潜艇制作你自己的游戏
-  bitsbox_shortdescription: 使用真正 JavaScript 代码写 一连串的应用程序来玩和共享.
-  makeschool_shortdescription: 写一个 iPhone 游戏！学习编写代码来教你的怪物做新的动作!
-  touchdevelop_shortdescription: '在您的手机上解谜，编写游戏，和学习编程。 '
-  appinventor_shortdescription: 做你自己的安卓应用程序!
-  blockly_shortdescription: 下载一个压缩文件，离线学习。
-  thinkersmith2_shortdescription: 了解计算机如何使用 0 和 1 来表示信息
-  kodableunplugged_shortdescription: 一个有趣的不用电脑的活动
-  projguts_shortdescription: 尝试用石头、剪子、布来建模和模拟
-  hourofcode_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
-  frozen_shortdescription: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
-  starwars_shortdescription: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
-  playlab_shortdescription: 通过游戏实验室创建故事或制作游戏！
-  infinity_shortdescription: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
-  artist_shortdescription: 和小艺术家一起设计出很酷的图形！
-  monsterocding_shortdescription: 儿童专用彩色自学编程游戏。
-  allcancode_shortdescription: 身临其境的游戏指导马可学习可视化编程语言。
-  csfirst_shortdescription: 两个人物的故事在海上的动画。添加你自己的风格！
-  boxisland_shortdescription: 与勇敢的阿宽在盒子岛上共赴编程之旅。
-  codesters_shortdescription: 开发您自己的游戏、 动画并使用 Python 进行艺术编程。
-  texasinstruments_shortdescription: 使用 TI-84&#8482; +计算器。
-  teacherled_shortdescription: 从这些课件中得到启发，设计您自己的编程一小时活动。
-  course2_shortdescription_congrats: 对于具有基本阅读能力的学生来说，本课程是基于课程1。 学生将创造程序来解决问题和开发他们可以分享的互动式游戏或者故事。建议2-5年级。
-  course3_shortdescription_congrats: 准备好到下一级别了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时，
-    学生将创造可以与任何人分享的的交互式故事和游戏。 建议4-5年级学习。
-  course4_shortdescription_congrats: 准备好继续了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时，
-    学生将创造可以与任何人分享的的交互式故事和游戏。 建议4-8年级。
-  coursea_shortdescription_congrats: 为学前学生准备的计算机科学介绍
-  courseb_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
-  coursec_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
-  coursed_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
-  coursee_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
-  coursef_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
-  coursea-2017_shortdescription_congrats: 为学前学生准备的计算机科学介绍
-  courseb-2017_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
-  coursec-2017_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
-  coursed-2017_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
-  coursee-2017_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
-  coursef-2017_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
-  coursea-2018_shortdescription_congrats: 为学前学生准备的计算机科学介绍
-  courseb-2018_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
-  coursec-2018_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
-  coursed-2018_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
-  coursee-2018_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
-  coursef-2018_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
-  coursea-2019_shortdescription_congrats: 为学前学生准备的计算机科学介绍
-  courseb-2019_shortdescription_congrats: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
-  coursec-2019_shortdescription_congrats: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
-  coursed-2019_shortdescription_congrats: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
-  coursee-2019_shortdescription_congrats: 在课程C&D中快速覆盖概念，然后继续使用函数。
-  coursef-2019_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
-  coursea-2020_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
-  courseb-2020_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
-  coursec-2020_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
-  coursed-2020_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
-  coursee-2020_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
-  coursef-2020_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
-  coursea-2021_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
-  courseb-2021_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
-  coursec-2021_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
-  coursed-2021_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
-  coursee-2021_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
-  coursef-2021_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
-  coursea-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
-  courseb-2022_shortdescription_congrats: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
-  coursec-2022_shortdescription_congrats: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
-  coursed-2022_shortdescription_congrats: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
-  coursee-2022_shortdescription_congrats: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
-  coursef-2022_shortdescription_congrats: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
-  codeorg_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
-  codeintl_longdescription: 通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。
-  khan_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
-  khanes_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
-  khanpt_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
-  khanhe_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
-  khanfr_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
-  khanpl_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
-  tynker_longdescription: 建立你自己的游戏并与朋友分享！解决有趣的编码谜题，学习各个阶段的编程概念。以动画人物，多层次的丰富的道具来个性化你的游戏。应用物理概念让你的游戏更加真实。代码可以同时以模块或
-    Javascript 的形式呈现。在 iPad 或 安卓平板电脑上玩你的游戏。有十多个有趣的活动可供选择 ！
-  scratch_longdescription: 通过 Scratch 平台，你可以创建您自己的互动游戏、 故事、 动画 &mdash; 把它们分享给你的朋友。从动画化你的名字，创建一个生日贺卡或者制作简单的乒乓游戏来开始吧！
-  lightbot_longdescription: 引导 Lightbot 点亮所有蓝色瓷砖！ Lightbot 是一个益智游戏，通过编程的游戏机制，让玩家获得基本编码的实际理解。学会顺序控制，编写过程，并利用循环来通过关卡。适合所有年龄。
-  thinkersmith_longdescription: 使用预先定义的"机器人词汇"学生可不需事先讨论，就能理解如何引导对方完成特定任务。这门课教孩子符号和行为之间的关联，以及非常宝贵的调试技能。
-    "我的机器人朋友"以分组进行活动是最佳的，其包括课堂使用的教师手册。
-  condcards_longdescription: 在这个"不插电"的活动中，使用一副扑克牌学习演算法和条件式叙述。学生以团队模式进行这项活动，每一团队需要一副牌.
-  lightbotintl_longdescription: 从非常基本的程式设计开始学习核心程式设计逻辑，适合年纪为4岁以上，操作系统可使用 iOS 或安卓系统(或网络浏览器)。学习如何排列命令、
-    找出模式、 使用过程与利用循环！
-  codehs_longdescription: 程式设计的概念就是给予一台电脑命令，就像给一只狗的命令一般。用卡莱尔&mdash;学习如何编写程式码; 用有趣、
-    易懂及视觉化介绍方式来教授没有任何基础的初学者基本程式设计概念，例如命令、功能等。自学教案是针对学生设计，但教师可以注册以使用教师工具并追踪学生的成效!
-  codecademy_longdescription: Codecademy 透过 JavaScript ，以互动式，学生引导介绍的基础电脑科学课程，千万个来自世界各地的学生已使用过。我们已经准备了简单的《编程一小时》经验，附测验、
-    幻灯片，及给学生一个完整的专案为结束。
-  codecombat_longdescription: 在这个史诗般的编程游戏中打败食人魔来学会 Python 或 JavaScript！
-  codemonkey_longdescription: '代码猴是一个线上的游戏，用真正的程式语言教授程式码编写！学生设计程式让一只猴子抓住香蕉，而它在每个级别会稍微增加复杂程度。他们在解决问题时获得星星分数并点击一下就可以分享. '
-  codeavengers_longdescription: 使用 JavaScript 语言建立的2个玩家、10个简短任务的二维由上而下的游​​戏。当您建立一个问答游戏与朋友分享时，能持续学习程式设计的一些基础知识（变量和如果语句）。在到达班级排行榜榜首的过程中赚取积分和徽章。
-  processing_longdescription: 使用程式语言处理器，在视觉艺术的情境中介绍程式设计。简短的影片课程介绍引导设计互动式绘图程式的编写程式码练习
-  robomind_longdescription: 学生用控制自己的虚拟机器人来学习编程的基础知识。在线课程是完全独立的短演示、电影、测验和自动导引/提示来帮助编程练习。
-  groklearning_longdescription: 使用Python 程式设计语言来构建叫做"伊丽莎"的聊天机器人，并让她扮演一个精神治疗医师。你将教导伊丽莎如何说话和说正确的内容。她可以误导你的朋友，让他们误以为她是一个人而不是一台电脑吗？
-  quorum_longdescription: 本教案可供视障人士透过辅助器阅读与流览。玛丽是一名生物学实验室的程序设计师，与她一起学习 Quorum 程序语言。本教案包含在线示例活动的自学式课程。
-  codespark_longdescription: 示例是有趣的，孩子们能明白的方式来学习程序设计的方法。设计可爱的人物来解决难题，并为生活带来一个虚拟的世界。这场比赛是"不需言语的"，所以任何人都可以玩！
-  kodable_longdescription: Kodable 是一个自我引导的 iPad 游戏，为5岁以上的孩子介绍程式设计的基础知识。最好有老师或家长的陪伴，但不是必需的。
-  tynkerapp_longdescription: 通过解决有趣的代码谜题来学习编程。使用主题图案，10个以上的游戏包和可自定义的角色来轻松地创作游戏和故事。不需要连接互联网。你也可以在网页上查看你的作品。
-  robomindnl_longdescription: 学生用控制自己的虚拟机器人来学习编程的基础知识。在线课程是完全独立的短演示、电影、测验和自动导引/提示来帮助编程练习。
-  flappy_longdescription: 使用拖放式的程式语言设计你自己 Flappy 游戏，并可自定义它不同的外观（Flappy鲨鱼、Flappy圣诞老人、或任何角色）。只要点击一下，就可将游戏加到您的手机中。
-  bitsbox_longdescription: 定制您自己的虚拟平板电脑，然后编写一系列的 App 来使用及分享。让非常小的孩子透过简单体验来使用真正 Javascript，成为可能的事，您会达到比您想到还远。
-  makeschool_longdescription: 学习如何使用适合初学者的一门新编程语言——Swift 来制作一个 iPhone 游戏！开发一个以博&eacute;宝贝为背景的动作类游戏，并通过编写代码来教你的小怪兽新的招式。你将学会如何使用变量，函数和对象来帮助你的怪兽赢得胜利！
-  touchdevelop_longdescription: '这个触屏编辑器将引导您创建像素艺术品、解决小熊谜题，或者创作你自己的跳跳鸟游戏。 '
-  appinventor_longdescription: 娱乐、 简短的影片教案引导您在您的安卓手机或平板电脑上完成建立三个简单的应用程序。它设计给新手和专家，此《编程一小时》活动让你在你了解编程之前，开始建构自己的应用程序。想像一下与朋友分享您自己创造的应用程序！这些活动适合个人自学和教师带领的班级课程。
-  blockly_longdescription: 您有网际网路连线很慢（或根本不存在）的电脑吗？下载模块化的自学教案，Code.org 教案的前辈元老— — 一个3兆字节的压缩文件档案可以载入到任何一台电脑上或存在一个U盘上使用。
-  thinkersmith2_longdescription: 学生以学习如何在二进制档案中表示和储存字母。结束时，他们可以把自己名字的编码带回家。
-  kodableunplugged_longdescription: '使用普通纸的设计，fuzzFamily Frenzy 教导5岁以上的孩子的程式设计逻辑。老师应解释这个游戏，然后学生结伴来完成一个简单的障碍课程。 '
-  projguts_longdescription: 这次"不插电"活动由一群学生玩不同版本的剪刀石头布的游戏，以协助学生学习如何建模与模拟运作原理，并查看不同的模型的实验结果。
-  hourofcode_longdescription: 新 code.org/hoc 的占位符
-  frozen_longdescription: 让我们用代码与安娜和艾莎一起探索神奇而又美丽的冰雪世界。你将能创造雪花，溜冰，以及冬季仙境，你还可与朋友分享它们！
-  starwars_longdescription: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
-  playlab_longdescription: 用游戏实验室创作一个故事或制作一个游戏！使动物，海盗，僵尸，忍者和许多别的角色，动起来，发出声音，记录得分甚至是发射火球。
-  monstercoding_longdescription: 由怪物编码提供的神秘岛编程要求设计了充满乐趣的几个关键的编程概念教给孩子们自学。以每个模块为基础，构建活动，使用彩色动画的图形，音频说明，为孩子们介绍功能、
-    布尔值、 循环、 如果/否则语句和数组。
-  allcancode_longdescription: 学生们玩一款基于原型的故事冒险游戏。他们指导马可-游戏里的主人公——由编程一小时使用的可视化编程语言的形式，通过给他分步骤的指导，最终通过每一关。他们不知不觉会了解到测序命令模块、
-    迭代和条件。
-  csfirst_longdescription: 编写一个关于两个人物在海上的故事。动画处理水，并定制不同风景来添加这个故事的吸引力。用编程来讲这个故事！
-  boxisland_longdescription: 在盒子岛上旅行，帮助阿宽收集散落在荒野中的所有时钟！在这套课件里你将学习关于算法、 序列、 循环和条件的基础知识！
-  codesters_longdescription: '开发您自己的游戏、 动画并使用 Python 进行艺术编程。一旦你完成了，与朋友分享！在 Python（每天都被软件公司使用的真正编程语言）
-    中，我们拖、放工具包，让它简单易学！尝试设计一场篮球比赛，编排一套舞蹈，或者设计动画卡片！ '
-  texasinstruments_longdescription: '10 分钟编程活动可以用在课堂上，来激发学生编程的兴趣，让他们经常把 TI 技术教材放在书包里。
-    使用 TI-84 &#8482;+学习基本的编码。并且开始编程，只需 10 分钟 — — 不需要任何经验!  '
-  teacherled_longdescription: 如今，成千上万的教育工作者已经尝试了编程一小时，许多课堂更有创意、减少那些千篇一律、只教授计算机科学的基本知识的活动。为了帮助教师找到灵感，我们收集和策划老师引导的课时，为编程一小时的老学员设计不同主题领域的活动计划。
-  codeorg_beyond_name: 介绍电脑科学（8年级）
-  khan_beyond_name: 学习电脑程序设计
-  tynker_beyond_name: 在家学习电脑程序设计
-  scratch_beyond_name: 用编程发挥创意
-  kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR 适合学龄前读者
-  hopscotch_beyond_name: Hopscotch：在你的 iPad 上设计程序
-  pocketcode_beyond_name: Pocket 程式码
-  groklearning_beyond_name: 学习 Python 程式设计
-  hacketyhack_beyond_name: 学习 Ruby
-  robomind_beyond_name: 给一个虚拟机器人编程
-  makeschool_beyond_name: 在你的浏览器中创建一个 iPhone 游戏！
-  appinventor_beyond_name: AppInventor 编程一小时
-  codehs_beyond_name: 同小狗卡莱尔一起学编程
-  udemy_beyond_name: 在线编程课程
-  lynda_beyond_name: 在线编程课程
-  edx_beyond_name: 哈佛大学 CS50 课堂
-  coursera_beyond_name: 斯坦福大学 CS 101 课程
-  teachingtree_beyond_name: 网上大学课程
-  w3schools_beyond_name: 学习 HTML
-  codeavengers_beyond_name: 学习网站程序设计
-  arduino_beyond_name: Arduino 与 Sparkfun
-  processing_beyond_name: 处理过程
-  codeorg_beyond_gradelevel: 适合年龄 4 岁以上
-  khan_beyond_gradelevel: 中学及以上
-  tynker_beyond_gradelevel: 适合年龄 5-13
-  scratch_beyond_gradelevel: 适合年龄 8 岁以上
-  lightbot_beyond_gradelevel: 所有年龄
-  codecademy_beyond_gradelevel: 高中
-  kodable_beyond_gradelevel: 小学
-  scratchjr_beyond_gradelevel: 小学
-  hopscotch_beyond_gradelevel: 中学及以上
-  pocketcode_beyond_gradelevel: 中学及以上
-  groklearning_beyond_gradelevel: 中学及以上
-  hacketyhack_beyond_gradelevel: 高中
-  robomind_beyond_gradelevel: 8-13岁
-  makeschool_beyond_gradelevel: 高中
-  appinventor_beyond_gradelevel: 中学及以上
-  touchdevelop_beyond_gradelevel: 高中
-  codehs_beyond_gradelevel: 高中
-  udemy_beyond_gradelevel: 高中或以上
-  lynda_beyond_gradelevel: 高中或以上
-  edx_beyond_gradelevel: 大学
-  coursera_beyond_gradelevel: 大学
-  udacity_beyond_gradelevel: 大学
-  teachingtree_beyond_gradelevel: 大学
-  kodu_beyond_gradelevel: 适合年龄 8 岁以上
-  cargobot_beyond_gradelevel: 适合年龄 8 岁以上
-  kidsruby_beyond_gradelevel: 年龄 12 岁或以上
+  volunteer_engineer_submission_update_information: 更新你的信息
   w3schools_beyond_gradelevel: 年龄 12 岁或以上
-  codeavengers_beyond_gradelevel: 中学及以上
-  mozilla_beyond_gradelevel: 年龄 12 岁或以上
-  codecombat_beyond_gradelevel: 中学及以上
-  codea_beyond_gradelevel: 高中或以上
-  lego_beyond_gradelevel: 中学及以上
-  finch_beyond_gradelevel: 适合年龄 8 岁以上
-  arduino_beyond_gradelevel: 高中或以上
-  processing_beyond_gradelevel: 高中
-  alice_beyond_gradelevel: 中学及以上
-  sphero_beyond_gradelevel: 适合年龄 8 岁以上
-  codeorg_beyond_platformtext: 现代的浏览器、平板电脑
-  khan_beyond_platformtext: 现代的网络浏览器
-  tynker_beyond_platformtext: 现代网络浏览器（需要 $$）
-  scratch_beyond_platformtext: 任何浏览器
-  lightbot_beyond_platformtext: iOS、安卓（或网络浏览器）
-  codecademy_beyond_platformtext: 现代的网络浏览器。iOS、安卓应用程序
-  pocketcode_beyond_platformtext: 移动应用程序
-  groklearning_beyond_platformtext: 现代网络浏览器
-  hacketyhack_beyond_platformtext: 桌面安装
-  robomind_beyond_platformtext: 现代的网络浏览器、移动网络
-  makeschool_beyond_platformtext: 现代的网络浏览器
-  appinventor_beyond_platformtext: 现代浏览器 + 安卓
-  touchdevelop_beyond_platformtext: 现代的浏览器、智能手机、所有的设备
-  codehs_beyond_platformtext: 现代的浏览器 (需要 $$)
-  udemy_beyond_platformtext: 基于网络的
-  lynda_beyond_platformtext: 基于网络的（需要 $$）
-  edx_beyond_platformtext: 现代的浏览器
-  coursera_beyond_platformtext: 现代的浏览器
-  udacity_beyond_platformtext: 现代的浏览器
-  teachingtree_beyond_platformtext: 基于网络的
-  kidsruby_beyond_platformtext: 桌面安装
-  w3schools_beyond_platformtext: 现代的网络浏览器
-  codeavengers_beyond_platformtext: 现代的网络浏览器
-  mozilla_beyond_platformtext: 现代的网络浏览器
-  codecombat_beyond_platformtext: 基于网络的（Firefox、Chrome、Safari、IE9 +）
-  lego_beyond_platformtext: 机器人购买
-  finch_beyond_platformtext: 机器人购买
-  arduino_beyond_platformtext: 网络浏览器，然后购买套件
-  processing_beyond_platformtext: 现代网络浏览器
-  alice_beyond_platformtext: Windows 或 Mac（需要安装）
-  sphero_beyond_platformtext: 机器人购买
-  codeorg_beyond_shortdescription: 与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！
-  khan_beyond_shortdescription: 学习如何在 JavaScript 中作画
-  tynker_beyond_shortdescription: 一个有趣的4-8年级学生的课程
-  scratch_beyond_shortdescription: 创造互动游戏、故事和动画。
-  lightbot_beyond_shortdescription: 用一个游戏来教授编程概念
-  codecademy_beyond_shortdescription: 在网页浏览器中学习 JavaScript 编程
-  kodable_beyond_shortdescription: 一个有趣的、教授计算机编程概念的 iPad 游戏
-  scratchjr_beyond_shortdescription: '使用 ScratchJr 来创建交互式故事和游戏. '
-  hopscotch_beyond_shortdescription: 在 iPad 上学习可视化编程
-  pocketcode_beyond_shortdescription: 在你的智能手机上创建一个游戏，并与朋友分享！
-  groklearning_beyond_shortdescription: 基本的 python 编程简介
-  hacketyhack_beyond_shortdescription: 从基础学习 Ruby
-  robomind_beyond_shortdescription: 为一个虚拟机器人编写代码
-  makeschool_beyond_shortdescription: 学会在一小时内做一个 iPhone 游戏
-  appinventor_beyond_shortdescription: 做你自己的安卓应用程序！
-  touchdevelop_beyond_shortdescription: 直接在你的手机、平板电脑或笔记本电脑上写应用程序
-  codehs_beyond_shortdescription: 使用一个有趣的视觉环境来学习 JavaScript 编程
-  udemy_beyond_shortdescription: 几十个在线程序设计程的课程
-  lynda_beyond_shortdescription: 几十个在线程序设计程的课程
-  edx_beyond_shortdescription: 哈佛大学最受欢迎的课程
-  coursera_beyond_shortdescription: 从 CS101 开始
-  udacity_beyond_shortdescription: 从 CS101 开始
-  teachingtree_beyond_shortdescription: 在线知识： 快速、 不受约束
-  kodu_beyond_shortdescription: 设计一个三维的游戏世界
-  cargobot_beyond_shortdescription: 在你的 iPad 上写一个机器人手臂的程序
-  kidsruby_beyond_shortdescription: 学习使用 Ruby 编程
-  w3schools_beyond_shortdescription: 学习做网站
-  codeavengers_beyond_shortdescription: 学习做游戏代码和网站
-  mozilla_beyond_shortdescription: 创建和共享网页
-  codecombat_beyond_shortdescription: 玩游戏和学习 JavaScript 来取胜
-  codea_beyond_shortdescription: 在你的 iPad 上创建应用程序
-  lego_beyond_shortdescription: 构建和编程一个机器人
-  finch_beyond_shortdescription: 为计算机科学教育用的机器人
-  arduino_beyond_shortdescription: 使用 Sparkfun 的数字沙盘来学习 Arduino。
-  processing_beyond_shortdescription: 学习处理语言
-  alice_beyond_shortdescription: 在三维环境里教编程
-  sphero_beyond_shortdescription: SPRK 课程给孩子们提供了一个有趣的机器人编程速成班，同时也会提高数学和科学技能。
-  codeorg_beyond_longdescription: 通过拖放编程来学习计算机科学的基本概念。这里有3个完整的课程，每课包含15-20个章节，有些是不用电脑的课堂活动。这些像游戏一样的自学课程，有由比尔•盖茨和马克•扎克伯格主演的视频教程，还有愤怒的小鸟和植物大战僵尸的场景。从中你可以学到重复循环、条件、基本算法、函数和变量。
-  khan_beyond_longdescription: 在用代码创造有趣的图画的同时学习基础的 JavaScript 编程知识。独自完成或者和你的同学一起做！
-  tynker_beyond_longdescription: Tynker 使学习编程轻松有趣。它让代码变成了可视化的图像。孩子们通过排列模块来创造游戏和手机应用程序。通过它，不需要了解编程语法，孩子们马上就可以把想法转变为动画的故事和数学艺术。这也是渐进式学习。当孩子们学习了基础知识，Tynker
-    会引入更高级的概念，包括语法驱动编程.
-  scratch_beyond_longdescription: 通过 Scratch 平台，你可以创建您自己的互动游戏、 故事、 动画 &mdash; 把它们分享给你的朋友。从动画化你的名字，创建一个生日贺卡或者制作简单的乒乓游戏来开始吧！
-  lightbot_beyond_longdescription: 从非常基本的程式设计开始学习核心程式设计逻辑，适合年纪为4岁以上，操作系统可使用 iOS 或安卓系统（或网络浏览器）。学习如何排列命令、找出模式、使用过程与利用循环！
-  codecademy_beyond_longdescription: Codecademy 通过 JavaScript，以互动式的学生引导介绍的基础电脑科学课程，千万个来自世界各地的学生已使用过。我们已经准备了简单的《编程一小时》经验，附测验、幻灯片，及给学生一个完整的专案为结束。
-  kodable_beyond_longdescription: Kodable 是一个自我引导的 iPad 游戏，为5岁以上的孩子介绍程式设计的基础知识。最好有老师或家长的陪伴，但不是必需的。
-  scratchjr_beyond_longdescription: ScratchJr 是一个入门的编程语言块，使儿童能够创建他们自己的互动故事和游戏。儿童扣合在一起的图形化编程块，使人物移动，跳跃，舞蹈，唱歌。
-  hopscotch_beyond_longdescription: iPad 上的"Hopscotch"自学编程语言教程。学生们能够在 iPad 上创建自己的游戏。不仅可以自己独立学习，每个
-    iPad 上也可以最多三个人一起学习。
-  pocketcode_beyond_longdescription: 用 "口袋编程" 在你的智能手机上创建你自己的游戏！帮助跳伞员史蒂夫交付他的包裹。你可以与朋友和其他用户试用分享！
-  groklearning_beyond_longdescription: 给没有编程经验的人的 Python 编程语言入门课程. 我们独特搭配介绍和挑战的内容将带给你对
-    Python 编程一个透彻的了解. 我们给来自不同背景和不同年龄的学生教这些内容. 我们相信它会适合你。
-  hacketyhack_beyond_longdescription: 哈克将教你入门编程的基础。不需要有编程经验！使用哈克，你将学习到 Ruby 编程语言。Ruby
-    是一种用于各种计算机程序，包括电脑应用程序和网站。[注：需要电脑安装软件]
-  robomind_beyond_longdescription: 学生通过控制虚拟机器人来学习编程的基础知识。在线课程包括完全独立的短演示、电影、测验和自动导引、提示来帮助编程练习。
-  makeschool_beyond_longdescription: 懂一点 ObjectiveC 吗？学习在一个小时内做一个 iPhone 游戏！我们将引导你完成整个过程，编码、测试，并在浏览器玩你的游戏，然后在
-    Facebook 上给朋友们去尝试！无需有事先的 iPhone 开发经验。你必须明白什么是变量，方法和对象。
-  appinventor_beyond_longdescription: 娱乐、 简短的影片教案引导您在您的安卓手机或平板电脑上完成建立三个简单的应用程序。它设计给新手和专家，此《编程一小时》活动让你在你了解编程之前，开始建构自己的应用程序。想像一下与朋友分享您自己创造的应用程序！这些活动适合个人自学和教师带领的班级课程。
-  touchdevelop_beyond_longdescription: TouchDevelop 可以让你在 iPad、iPhone、安卓、PC、苹果机、Windows
-    手机上创建应用程序。即使在您的手机或平板电脑上，我们用可触摸的编辑器使编码有乐趣！
-  codehs_beyond_longdescription: 与卡雷尔小狗学习编程，一个有趣、方便和直观的编码基础知识介绍，给一台电脑命令就像给一隻狗命令。最好由一名教师主导，但也可以独立完成。[注：需要付费]
-  udemy_beyond_longdescription: 无论你从来没有见过一行代码还是你以代码为生，Udemy 有由专业导师教的课程适合你。[注：需要付款]
-  lynda_beyond_longdescription: 学习如何编写，创建和构建 Web 应用程序，从面向对象编程基础的 C 和 C++ 中，到如何编写 Java。我们的开发教程，可以帮助你学习，发展和创造移动应用程序，用
-    PHP 和 MySQL 数据库，开始使用统计处理语言 R 等等。[注：需要付款]
-  edx_beyond_longdescription: CS50x 是哈佛大学的基础计算机学课程，主要目的是为了把计算机学和编程领域介绍给所有学生们，包括非修读计算机学和对于编程领域毫无经验的人士。课程包括以下主题：抽象化、算法、数据结构、封装、资源管理、安全系统、软件工程，和网络开发。学生们也会学习软件语言，例如
-    C 、PHP 和 JavaScript 加 SQL、CSS、和 HTML。在哈佛校园内，CS50x 是大学中人数第二多的课程。
-  coursera_beyond_longdescription: 斯坦福大学的 CS 101（免费！）课堂的导师是尼克 • 帕兰蒂 。CS101 专门向毫无经验的学生们教导计算机学的根本概念。您可以通过玩和试探简短的代码来领悟到计算机的潜能和限度。通过
-    CS 101，您也能够意识到今日计算机界的背景，了解什么叫计算机，什么叫硬件、什么叫软件、和什么叫互联网。参与这趟课程除了懂得使用浏览器之外无需任何经验，。
-  udacity_beyond_longdescription: |-
-    在这个过程中，你会学到计算机科学的关键概念，并学习如何构建网络爬虫，编写自己的计算机程序。
-    这门课程不需要事先编程知识。欢迎初学者！在这个课程结束时，你会学到计算机科学和足够的编程关键概念来编写 Python 程序来解决你自己的问题。本课程将会让你准备好升到中级计算的课程.
-  teachingtree_beyond_longdescription: TeachingTree 是一个开放的平台，任何人都可以组织教育内容。我们的目标是为学生快速存取他们所需要的精确的剪辑，以便了解各个概念。鼓励每个人帮助添加视频或标记概念。
-  kodu_beyond_longdescription: Kodu 让孩子们通过一个简单的可视化编程语来言创建PC和 Xbox 上的游戏。Kodu 可以用来教创造力，解决问题，讲故事，以及编程。任何人都可以使用
-    Kodu 制作游戏，幼儿以及成人，没有设计或编程技能。PC 的 Kodu 可免费下载。Xbox的 Kudo 也是在美国的 Xbox 市场有售，在独立游戏频道里面约需要5美元。
-  cargobot_beyond_longdescription: Cargo-Bot 是一种益智游戏，你教机器人如何移动箱子。听起来很简单，对不对？它拥有36个巧妙复杂的关卡，魔幻的音乐和令人惊叹的图形。你甚至可以录下解决方案，并在视频网站上和你的朋友分享。
-  kidsruby_beyond_longdescription: |-
-    做出有趣的游戏，或使用 Ruby 来做作业！只用告诉你的父母或老师你正在学习 Ruby 编程...;)
-    可以免费在任何计算机上使用。[注：需要安装桌面软件]
   w3schools_beyond_longdescription: 学西在自己的计算机上创建的网站。在一天内了解服务器的基础支持。学习如何添加数据库到您的网站上。
-  codeavengers_beyond_longdescription: 了解如何编写游戏程序，应用程序和网站。通过专家设计对初学者难度适当的水平，简单易懂的说明，当你需要时并有很大的帮助。我们的
-    HTML，CSS 和 JavaScript 课程包括代码的挑战和修改游戏，让学习变得有趣和高效，适合所有年龄的人。
-  mozilla_beyond_longdescription: Thimble 使创建和分享你自己做的网页非常简单。在您的浏览器里撰写和编辑 HTML 和 CSS，并且可以随时预览结果。只需点击一下就可以托管和分享你完成的项目。适合初学者和专家。
-  codecombat_beyond_longdescription: 像一个巫师一样，使用代码来像法术一样控制你的英雄来走出迷宫，打败食人魔，诱骗敌人，拯救盟友!
-    这个 HTML5 网站游戏让初学者学习 JavaScript。
-  codea_beyond_longdescription: iPad 上的 Codea 可以让你创建游戏和模拟&mdash; 或是你的任何可视化想法。使用 iPad
-    的功能, 如多点触摸及加速度, 来把你的想法变成交互式创作。我们认为 Codea 是最美丽的代码编辑器，而且很容易用。Codea 的设计目的是让你触摸你的代码。想要更改号码吗？只需点击并拖动它。颜色或图像如何呢？触碰启动可视化编辑器，让你看到你想要的效果。
-  lego_beyond_longdescription: 使用乐高积木块来创建可定制和可编程的机器人。
-  finch_beyond_longdescription: 芬奇是一个用于计算机科学教育的新机器人。它的是卡耐基梅隆大学创建实验室四年研究的结果。芬奇的设计目的是提供一个吸引人的编程艺术介绍。它支持超过始终编程语言和环境，包括一些适合年仅8岁学生的编程环境。达芬奇的设计也让学生能够用它写出丰富的互动程序。
-  arduino_beyond_longdescription: Arduino是一个流行的平台，让艺术家和设计师使用真实的传感器、LED灯、蜂鸣器等等。Sparkfun
-    的虚拟环境会教你在浏览器中写出 Arduino 代码。
-  processing_beyond_longdescription: Processing 是一种编程语言，也包括开发环境和在线社区。自2001年以来，通过可视化的技术，Processing
-    提升了软件代码的可读性。最初创建时，它作为一个软件的草稿本和可视化计算机编程教学，现在 Processing 演变成了一个专业人士的开发工具。今天，有数以万计的学生，艺术家，设计师，研究者和爱好者使用
-    Processing 来学习，制造原型和产品。
-  alice_beyond_longdescription: 采用创新的编程环境，以支持创建三维动画，爱丽丝项目提供教学和学习计算式思维技巧的工具和材料，适合不同年龄和年级来学习如何解决问题和计算机编程。
-  sphero_beyond_longdescription: 无论你是教育工作者或者是父母，SPRK 课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。
-  compatibility_hide_this_warning: 隐藏此警告
-  compatibility_unsupported_browser: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
-    target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。
-  compatibility_unsupported_browser_markdown: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
-    target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。
-  hourofcode_shortcode: 代码
-  flappy_shortcode: 拍翅膀
-  header_home: 首页
-  header_my_dashboard: 我的控制面板
-  header_courses: 课程
-  header_course_catalog: 课程分类
-  header_project_gallery: 项目
-  header_sections: 小组
-  header_professional_learning: 专业学习
-  header_educate_overview: 教育工作者概述
-  header_educate_elementary: 小学
-  header_educate_middle: 中学
-  header_educate_high: 高中
-  header_educate_hoc: 编程一小时
-  header_educate_partner: 与我们合作
-  header_educate_beyond: Code.org 意外的内容
-  header_educate_inspire: 鼓舞学生
-  header_educate_community: 在线社区
-  header_educate_requirements: 技术要求
-  header_educate_tools: 工具和视频
-  header_about_us: 关于我们
-  header_about_leadership: 管理团队
-  header_about_donors: 捐助者
-  header_about_partners: 合作伙伴
-  header_about_team: 全体成员
-  header_about_news: 新闻室
-  header_about_evaluation: 评估
-  header_about_jobs: 职业机会
-  header_about_contact: 联系我们
-  header_about_faqs: 常见问答
-  header_learn: 学习
-  header_teach: 教学
-  header_stats: 统计信息
-  header_help_us: 帮助我们
-  header_about: 关于
-  header_teacher_community: 教师社区
-  header_help_support: '帮助和支持 '
-  header_report_bug: 报告错误
-  header_report_abuse: 举报滥用
-  header_legal: 隐私与法律
-  header_legal_privacy: 隐私政策
-  header_legal_tos: 使用条款
-  header_tutorials: 教程
-  header_screen_reader_hamburger: 菜单
-  header_screen_reader_help: 帮助菜单
-  app_lab_documentation: 应用程序实验室文档
-  app_lab_tutorials: 应用程序实验室说明
-  game_lab_documentation: 游戏实验室文档
-  game_lab_tutorials: 游戏实验室说明
-  sprite_lab_documentation: 精灵图实验室文档
-  sprite_lab_tutorials: 精灵图实验室教程
-  header_documentation: 使用文档
-  user_header_label: 你好%{username}
-  user_header_team: 团队
-  user_header_my_projects: 我的项目
-  user_header_settings: 帐户设置
-  user_header_logout: 注销
-  user_header_signin: 登录
-  user_header_create: '创建 '
-  user_header_applab: '程序实验室 '
-  user_header_artist: '小艺术家 '
-  user_header_gamelab: 游戏实验室
-  user_header_playlab: 游戏实验室
-  user_header_dance: 舞蹈派对
-  user_header_spritelab: 精灵图实验室
-  user_header_minecraft: 我的世界
-  user_header_flappy: Flappy Bird
-  user_header_view_all: 查看所有项目……
-  user_header_view_project_gallery: 查看项目库
-  user_header_view_my_projects: 查看我的项目
-  view_all_sections: 查看所有小组
-  view_section: 查看小组
-  view_named_section: 查看%{section_name}
-  privacy_doc_explanation: 单击此处可为您的学生共享或打印我们的隐私文档。
-  signing_in: 正在登录
-  sign_in_overview: '您的学生可以通过以下步骤来登录他们的 Code.org 帐户:'
-  sign_in_instruct_website: 跳转至 %{code_org_url}
-  sign_in_instruct_code: 输入他们的小组代码：%{section_code}。
-  sign_in_instruct_name: 选择他们的显示名称
-  sign_in_instruct_secret: 选择他们的秘钥 %{secret}。
-  sign_in_instruct_button: 点击 "登录" 按钮。
-  sign_in_overview_cards: 学生可以在下面的登录卡中找到所有这些信息, 包括他们的秘钥 %{secret}。
-  reset_student_password: 重置学生密码
-  reset_student_password_instructions: 您可以通过进入"管理学生"选项卡，单击"密码"栏下的"显示密码"按钮，然后单击"重置密码"按钮来重置任何学生的密码<word/picture>。
-  login_cards: 登录卡
-  print_login_cards: 打印登录卡
-  joining_section: 加入你的小组（只能加入一次）
-  joining_section_overview: 如果学生尚未加入您的小组，请要求他们执行以下步骤。请注意, 他们只需要这样做一次。通过加入您的小组，学生将能够看到分配给他们的课程，而您能够在他们登录后跟踪他们的作业完成进度。
-  joining_section_instruct_website: 如果他们尚未注册，先创建一个 Code.org 帐户。他们可以在  https://studio.code.org/users/sign_up
-    完成注册。请注意，他们可以使用电子邮件地址和密码注册，或通过点击以下其中一个按钮来使用谷歌、Facebook、或微软账号来进行注册：
-  joining_section_instruct_account: 用他们的 Code.org 帐户登录。
-  joining_section_instruct_code: 导航到 %{code_org_url} 并键入其小组代码：%{section_code}。
-  joining_section_instruct_button: 一旦他们按下"好的"按钮，他们就会被添加到您的小组。
-  signing_in_single_instruct: 您的学生可以通过访问 https://code.org/，点击右上角的"登录"按钮来登录他们的 Code.org
-    帐户。
-  reset_student_password_email: 如果您的学生使用他们的电子邮件地址和密码创建了 Code.org 帐户（而不是通过他们的 Google、Facebook、Microsoft
-    或Clever 帐户登录），您可以在"管理学生"选项卡中单击"密码" 栏下的"重设密码"按钮来重置其密码。
-  syncing_students: 同步您的学生信息
-  syncing_students_instructions: 如果您的 Code.org 小组与您在 Google 教室中的学生名单不够新，请点击"管理学生"标签上的"从
-    Google 教室同步学生信息" 按钮：
-  google_sign_in_instruct: 从那里，他们应该选择"使用谷歌帐户登录"选项：
-  hero_name: "《我的世界》: 英雄之旅"
-  applab-intro_name: 应用程序实验室简介
-  applab_tile_title: 应用实验室简介 （13岁以上）
-  applab_tile_subtitle: 应用实验室简介（13岁以上）
-  applab_tile_start_tutorial: 开始
-  applab_tile_teacher_guide: 查看教师指南
-  aquatic_name: "《我的世界》：水上航行"
-  account_sign_up_email_opt_in: 我们可以通过电子邮件向您发送有关课程、本地的机会以及其他计算机科学新闻吗？（大约每月一次）
-  account_sign_up_child_accept_terms: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
-  hoc_overview_dance_title: 舞蹈派对
-  hoc_overview_dance_subtitle: 写出你自己的舞会代码，分享给你的朋友们。精选 Katy Perry、Madonna、J. Balvin、Sia、Keith
-    Urban、Ciara 等 25 个！
-  hoc_overview_dance_2019_subtitle: 编写舞蹈派对，并与朋友分享。精选了 Katy Perry、Shawn Mendes、Panic!
-    At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj，以及其他 34 名明星的豪华阵容！
-  hoc_overview_dance_2022_subtitle: 编写一个舞蹈派对与你的朋友分享。里面有碧昂丝、哈利·史泰尔斯、丽佐、纳斯小子、塞莱娜·戈麦斯、迪士尼魔法满屋的音乐等等！
-  hoc_overview_hello_world_2022_subtitle: 从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。
-  hoc_overview_hello_world_2022_alt_text: 动画化漂浮在地球插图周围的宇航员和动物角色
-  hoc_overview_title: 来自 Code.org 的编程一小时活动
-  hoc_overview_subtitle: <a href="https://hourofcode.com">编程一小时</a>是一个全球性的活动，在全球 180
-    多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试有 500 多个、支持45种语言的编程一小时教程。
-  hoc_overview_subtitle_markdown: "[编程一小时](https://hourofcode.com)是一个全球性的活动，在全球 180
-    多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试支持45种语言的500+多个编程一小时课程。"
-  hoc_overview_partner_activities_title: 更多合作伙伴的活动
-  hoc_overview_partner_activities_body: 编程一小时由 code. org 和合作伙伴联合开发，网站提供 500 多项计算机科学活动，适合所有年龄与经验水平。
-  hoc_overview_partner_activities_link: 查看活动
-  hoc_overview_start_tutorial: 开始
-  hoc_overview_more_resources: 有关如何参与远程教室的更多资源，请参见[虚拟 [编程一小时》](https://hourofcode.com/us/how-to/virtual）举办指南。对于那些缺乏技术条件或网络连接的学生，请共享这个[线下《编程一小时》活动]包（https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf）。
-  hoc_overview_view_teacher_guide: 查看教师指南
-  hoc2018_creativity: 创造力
-  hoc2018_creativity_create: 创建
-  hoc2018_creativity_hoc_coming: 编程一小时就要来了…
-  hoc2018_creativity_what_will_you_create: 你将创建什么？
-  hoc2018_creativity_homepage: 放飞想象，孕育创新。从编程一小时和你自己的创意品牌开始，无论它可能是什么。请观看我们的视频。
-  hoc2018_creativity_hoc_about: '今年，编程一小时都与创造力有关。 '
-  hoc2018_creativity_social_media: 今年的#编程一小时#都与创造力有关。我已经参加了！你呢？
-  hoc2018_creativity_social_media_2: 今年的#编程一小时#都与创造力有关。你会创造什么？
-  hoc2018_creativity_courses: 进一步了解 Code.org 课程
-  hoc2018_creativity_courses_link: 进一步了解 <a href="https://studio.code.org/courses">Code.org
-    课程</a>
-  hoc2018_homepage: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！
-  hoc2018_mc_page_title: 编程一小时《我的世界》教程
-  hoc2018_mc_details: 多种语言|最新的浏览器或平板电脑|2年级以上
-  hoc2018_mc_aquatic_announcement: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！请尝试2018年全新《我的世界》活动，《我的世界》水上航行！现在就注册班级。
-  hoc2018_mc_aquatic_title: "《我的世界》：水上航行"
-  hoc2018_mc_aquatic_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
-  hoc2019_mc_aquatic_description: 用代码来游览并构建水下世界。
-  hoc2018_mc_hero_title: "《我的世界：英雄之旅》"
-  hoc2018_mc_hero_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
-  hoc2018_mc_designer_title: "《我的世界》造物主"
-  hoc2018_mc_designer_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
-  hoc2018_mc_adventurer_title: "《我的世界》大冒险"
-  hoc2018_mc_adventurer_description: 编写代码来带领Alex或Steve开启一段冒险之旅。
-  hoc2018_mc_start: 开始
-  hoc2018_mc_no_internet: 没有互联网吗？
-  hoc2018_mc_download_adventurer: 下载离线版《我的世界》大冒险
-  hoc2018_mc_educators: 给教育工作者
-  hoc2018_mc_educators_box1_title: 在《我的世界》编程
-  hoc2018_mc_educators_box1_desc: "《我的世界：教育版》在《我的世界》中提供了标准的教案，培训和代码。"
-  hoc2018_mc_educators_box1_button: 开始
-  hoc2018_mc_educators_box2_title: 下载主持人指南
-  hoc2018_mc_educators_box2_desc: 工具包可以帮助你主持编程一小时活动，并将学生吸引到计算机科学中来。
-  hoc2018_mc_educators_box2_button: 下载
-  hoc2018_mc_educators_box3_title: 参加免费的学生工场
-  hoc2018_mc_educators_box3_desc: 加入你附近微软商店的免费编程一小时工场。所有技能级别，年龄在6岁以上。
-  hoc2018_mc_educators_box3_button: 找到工场
-  hoc2022_mc_educators_box3_desc_markdown: '使用这个按需提供的[免费课程](%{free_course_link})或为整个班级注册与客座老师一起进行的实时编程一小时研讨会。在12月6日至11日的CSEW期间多次提供。 '
-  hoc2022_mc_educators_box3_button: '马上注册 '
-  hoc2018_mc_educators_box4_title: 更多计算机科学资源
-  hoc2018_mc_educators_box4_desc: 从微软带来改变社区的数字技能和计算机科学教育资源。
-  hoc2018_mc_educators_box4_button: 探索资源
-  hoc2022_mc_educators_box4_desc: 在专业开发的支持下，通过200小时的计算机科学课程（从模块到python），激发K-12学生对STEM的热情。
-  hoc2022_mc_educators_box4_button: 继续学习
-  hoc2018_mc_watch_videos: 在开始之前，看一段鼓舞人心的视频
-  hoc2018_mc_videos_more: 更多由榜样人物和明星出演的<a href='%{inspiring_videos_playlist}'>鼓舞人心的视频</a>
-  hoc2018_mc_careers_more: 更多由科技人士拍摄的的<a href='%{careers_url}' target='_blank'>鼓舞人心的视频</a>
-  hoc2018_mc_video_1min: 1分钟
-  hoc2018_mc_video_2min: 2分钟
-  hoc2018_mc_video_3min: 3分钟
-  hoc2018_mc_video_5min: 5分钟
-  hoc2018_mc_video_title_steph_curry: 和 Steph Curry 一起编程一小时
-  hoc2018_mc_video_title_sports: 突破自我。任何人都可以学会。
-  hoc2018_mc_video_title_cs_is_everything: 计算机科学正在改变一切
-  hoc2018_mc_video_title_inspire_girl: 鼓励女生参与
-  hoc2018_mc_video_title_cs_intro: 计算机科学简介
-  hoc2018_mc_video_title_schools_dont_teach: 大部分学校没有教的内容
-  hoc2018_mc_video_title_obama: 奥巴马总统和计算机科学
-  hoc2018_mc_video_title_hoc_is_here: 编程一小时来了——任何人都可以学会
-  hoc2018_mc_video_title_anybody_can_learn: 任何人都可以学习
-  hoc2018_mc_video_title_my_name_is_aracely: 我叫阿拉丝莉
-  hoc2018_mc_homepage_hoc_coming: 编程一小时活动即将开始...
-  hoc2018_mc_homepage_what_create: 你将创建什么？
-  hoc2018_mc_homepage_give_flight: 放飞想象，孕育创新。从编程一小时和自己的创意品牌开始，无论它是什么。
-  hoc2018_mc_homepage_watch_video: 观看视频
-  hoc2018_mc_homepage_join_us: 加入我们
-  hoc2018_mc_homepage_try_it: 试一试
-  hoc2018_mc_back: "《我的世界》编程一小时的全新的活动回来了！"
-  hoc2018_mc_back_journey: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
-  hoc2018_mc_teacher_guide: 查看教师指南
-  hoc2018_mc_minecraft_education: "《我的世界》 教育"
-  hoc2018_mc_continue_learning: 继续在《我的世界》 学习。
-  hoc2018_mc_go_to_mc_education: 前往《我的世界》 教育
-  hoc2018_mc_short_description: 用你的创造力和解决问题的技能来找到财宝，并用代码来探索水下世界。
-  hoc2018_mc_short_description_shorter: 用你的创造力和解决问题的技能来用代码探索并构建水下世界。
-  hoc2018_mc_journey: 用代码在《我的世界》中旅行。
-  hoc2018_dance_party_main_heading: 舞蹈派对
-  hoc2018_dance_party_landing_title: 舞蹈
-  hoc2018_dance_party_subheading: 帮助翻译舞蹈派对
-  hoc2018_dance_create_your_own_dance_title: 创建自己的舞会
-  hoc2018_dance_party_box_title: 舞蹈派对
-  hoc2018_dance_party_box_description: 写出一个舞会代码，分享给你的朋友们！
-  hoc2018_dance_party_specs: 语言 | 格式 | 6-106岁
-  hoc2018_dance_party_button: 开始
-  hoc2018_dance_keep_on_dancing_box_title: 继续跳舞
-  hoc2018_dance_keep_on_dancing_description: 通过扩展项目创意，超越第一个小时。
-  hoc2018_dance_keep_on_dancing_specs: 语言 | 格式 | 13岁以上
-  hoc2018_dance_keep_on_dancing_button: 超越
-  hoc2018_dance_teacher_resources_title: 教师资源
-  hoc2018_dance_teacher_resources_tile1_description: 课程计划、证书和音乐筛选。
-  hoc2018_dance_teacher_resources_tile1_button: 课程计划
-  hoc2018_dance_teacher_resources_tile2_title: 离线舞会
-  hoc2018_dance_teacher_resources_tile2_description: 不需要计算机！你的班级可以通过在一起编排舞会来学习编码的概念。
-  hoc2018_dance_teacher_resources_tile2_button: 线下的活动
-  hoc2018_dance_featured_student_creations_title: 精选的学生作品
-  hoc2018_dance_videos_section_heading: 获得灵感
-  hoc2018_dance_video_title_what_is_creativity: 什么是创造力?
-  hoc2018_dance_view_creativity_video_playlist: 什么是创造力？查看完整系列
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: '与以下机构合作: '
-  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: 亚马逊未来工程师是一个全面的儿童对职业计划,
-    以激励, 教育和培训低收入和其他处境不利的儿童和青年从事计算机科学的职业。<a href='%{amazon_future_engineer_link}'
-    target='_blank'>了解更多</a>
-  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: 亚马逊未来工程师*
-    是一个全面的儿童对职业计划，以激励、教育和培训低收入和其他处境不利的儿童和青年从事计算机科学的职业。[了解更多](%{amazon_future_engineer_link})
-  hoc2018_dance_amazon_sponsor_section_france_link_markdown: 如果您是法国的学生或教师，请访问[亚马逊未来工程师-法国](%{amazon_future_engineer_france_link})
-  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: 了解更多关于亚马逊未来工程师
-  hoc2018_dance_amazon_about_future_engineer_title: 关于亚马逊未来工程师
-  hoc2018_dance_amazon_about_future_engineer_description: 了解亚马逊幼儿园的职业项目来发展计算机科学教育。查找如何参与我们的夏令营，高中计算机科学课程，奖学金和实习项目。
-  hoc2018_dance_amazon_about_future_engineer_button: 了解详情
-  hoc2018_dance_amazon_try_coding_this_summer_title: 这个夏天试试编程
-  hoc2018_dance_amazon_try_coding_this_summer_description: 参与亚马逊未来工程师的免费、有趣的、包容的计算机科学营!
-    2019年夏季，美国多个地点的幼儿园至8年级的学生可参加夏令营。
-  hoc2018_dance_amazon_try_coding_this_summer_button: 加入宿营
-  hoc2018_dance_amazon_scholarship_programs_title: 奖学金项目
-  hoc2018_dance_amazon_scholarship_programs_description: 亚马逊为成功完成或注册了 AP 计算机科学课程，并希望在美国学习4年计算机学位的低收入学生提供每年10000美元的奖学金。
-  hoc2018_dance_amazon_scholarship_programs_button: 立即申请
-  hoc2018_dance_amazon_internships_title: 加入亚马逊实习生
-  hoc2018_dance_amazon_internships_description: 2019 年夏季亚马逊未来工程师实习申请已开始。实习生将与经理、技术导师以及其他实习生一起来为亚马逊客户创造新功能和服务。实习岗位位于美国和加拿大。
-  hoc2018_dance_amazon_internships_button: 查找实习项目
-  hoc2018_dance_amazon_k8_programs_title: K-8 项目
-  hoc2018_dance_amazon_funding_title: 为你的计算机科学学位筹资
-  hoc2018_dance_amazon_future_engineer_footer: "* 在本教程中用到其音乐的艺术家不赞助或认可亚马逊为他们的音乐使用
-    Code.org 的版权。\n\n"
-  hoc2018_dance_measure: 小节
-  hoc2018_dance_measure_colon: 小节：
-  hoc2018_aquatic_video1: "《我的世界》水上航行 - 简介"
-  hoc2018_aquatic_video2: "《我的世界》水上航行 - 循环"
-  hoc2018_aquatic_video3: "《我的世界》水上航行 - 条件"
-  hoc2018_aquatic_video4: "《我的世界》水上航行 - 祝贺"
-  hoc2018_dance_video1: 舞蹈派对 - 简介
-  hoc2018_dance_video2: 舞蹈派对 - 事件
-  hoc2018_dance_video3: 舞蹈派对 - 属性
-  hoc2018_dance_video4: 舞蹈派对 - 祝贺
-  dance_box_higher_power_line_1: 为酷玩乐队的“更高的力量”编一支舞蹈，你就有机会看到乐队的现场表演！
-  dance_box_higher_power_line_2: 查看<a href="%{path}">code.org/coldplay</a>了解更多信息。
-  page_not_found_title: 找不到页面
-  page_not_found_header: 404：找不到页面
-  page_not_found_description: 您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。
-  page_not_found_button: 返回主页
-  hoc2018_mc_with_microsoft: '与以下机构合作: '
-  hoc2018_mc_thank_microsoft: 我们感谢微软支持我们的理想和使命，以确保每个儿童有机会学习计算机科学和在21世纪取得成功的技能。
-  hoc2019_mc_mee_title: "《我的世界》人工智能让世界更美好"
-  hoc2019_mc_mee_description1: 新的《我的世界》编程一小时教程已经可用，可在《我的世界》教育版（Windows，Mac，和 iPad）上找到。和学生一起学习编程基础，探索人工智能！
-  hoc2019_mc_mee_description2: 访问免费资源，包括：课程计划、视频、计算机科学教案，以及教师培训。
-  hoc2019_mc_more_coding_resources: 更多编程资源
-  hoc2019_dance_previous_versions: |-
-    虚招以前版本的舞蹈派对？
-    电机这里打开去年的[第一部分](%{dance_2018_link})和[第二部分](%{dance_extras_2018_link})。
-  homepage_slot_text_title_at_home: '在家学习
-
-'
-  homepage_slot_text_blurb_at_home: 这些资源使它变得容易
-  homepage_slot_text_link_code_break: 观看代码小憩
-  homepage_slot_text_link_do_hoc: 做一次“编程一小时”
-  homepage_slot_text_link_express_course: 尝试速成课程
-  page_not_available_title: 网页不可用
-  page_not_available_description: 很抱歉，您请求的页面在此地址已不可用。如果您仍然需要访问，请发送电子邮件到[support@code.org](%{support_email_link})。
-  page_not_available_button: 返回主页
-  hoc2020_mc_available_code_org: 在Code.org可用
-  hoc2020_mc_available_mee: 在《我的世界：教育版》可用
-  hoc2020_mc_mee_title: Minecraft中两个村庄的故事
-  hoc2020_mc_mee_description: 新的“Minecraft编程一小时课程”现在可以在Windows、Mac、Chromebook和iPad上的Minecraft：教育版中使用。学习编程的基础知识、探索多样性、融入您的学生！免费获取资源，包括课程计划、视频、计算机科学课程、公平课程和教师培训。
-  hoc2021_mc_mee_title: 我的世界 TimeCraft
-  hoc2021_mc_mee_description: 新的“Minecraft编程一小时课程”现在可以在Windows、Mac、Chromebook和iPad上的Minecraft：教育版中使用。开始使用免费的教育工作者资源、培训和视频。
-  hoc2021_mc_mee_villages_title: 两个村庄的故事
-  hoc2021_mc_mee_villages_description: 在 Minecraft：教育版中学习编程基础知识，与学生一起探索多样性和包容性。
-  hoc2021_mc_mee_ai_title: 人工智能为行善
-  hoc2021_mc_mee_ai_description: 与学生一起探索 AI，并在 Minecraft：教育版中学习编程。
-  hoc2022_mc_mee_title: 我的世界逃生庄园
-  hoc2022_mc_mee_description: '在黎明前逃离神秘的豪宅，赚取一百万颗翡翠！新鲜出炉的我的世界编程一小时教程现已在《我的世界：教育版》中推出，适用于Windows、Mac、Chromebook、Ipad和移动设备。开始使用免费的教育工作者资源、培训和视频。 '
-  hoc2022_mc_mee_timecraft_description: 在《我的世界：教育版》的这个免费编程课中，进行时间旅行，拯救未来。
-  footer_powered_by_aws: 亚马逊网络服务（Amazon Web Services）和“由AWS提供支持”徽标是Amazon.com，Inc.，或者其在美国/其他国家内的附属公司的商标。
-  footer_built_on_github: 在微软的 GitHub 上构建
-  codebytes_skinny_banner_title: 加入我们12月7-11日的 CodeBytes 直播迷你课程！
-  codebytes_skinny_banner_description: '加入我们 CodeBytes 计算机科学教育周的每日课程，20分钟的交互式计算机科学课程。每天两次流媒体直播，CodeBytes
-    是学生参与虚拟 #HourOfCode 的好方法！'
-  codebytes_skinny_banner_english_only: 仅英语
-  codebytes_skinny_banner_learn: 更多信息请访问 [code.org/codebytes](%{code_bytes_url})。
-  footer_privacy_policy: 隐私政策
-  footer_privacy_policy_updated: 隐私政策（已更新）
-  footer_about: 关于
-  footer_partners: 合作伙伴
-  footer_blog: 博客
-  footer_donate: 捐赠
-  footer_store: 商店
-  footer_support: 支持
-  footer_terms: 条款
-  ai_for_oceans: 海洋环保中的人工智能
-  ai_for_oceans_lesson_plan: 课程计划
-  ai_for_oceans_tile_description: 通过训练人工智能检测垃圾来帮助人工智能清洁海洋！了解训练数据和偏见，以及人工智能如何解决世界问题。查看
-  how_ai_works: AI 的工作原理
-  how_ai_works_tile_description: 观看这一系列短片，了解 AI 的工作原理以及它为何如此重要。由微软首席执行官萨蒂亚·纳德拉和各种各样的专家组成。
+  w3schools_beyond_name: 学习 HTML
+  w3schools_beyond_platformtext: 现代的网络浏览器
+  w3schools_beyond_shortdescription: 学习做网站
+  want_a_blank_certificate_template: 需要空白证书模板来填写学生的名字？
+  watch_inspirational_videos: 在开始之前，看一段鼓舞人心的视频
   watch_the_videos: 观看视频
-  ai_and_ethics: 人工智能与道德
-  ai_and_ethics_tile_description: 学生们思考人工智能的道德含义，然后共同努力，为世界各地的 AI 创作者和立法者创建 “AI 道德准则”
-    资源。
-  view_lesson_plan: 查看课程计划
-  ai_in_partnership_with: '与以下机构合作: '
-  ai_microsoft_thanks: 我们感谢微软支持我们的理想和使命，以确保每个儿童有机会学习计算机科学和在21世纪取得成功的技能。
-  ai_ethics_panel_header: 探索人工智能伦理小组讨论
-  ai_ethics_panel_description_1: 与我们最喜欢的 AI 专家一起深入了解！本次小组讨论涉及算法偏见和工作的未来等重要问题。与我们的配对
-  ai_ethics_lesson_plan: 人工智能与道德课程计划
-  ai_ethics_panel_description_2: 很好地介绍人工智能的伦理学！
-  cs_for_good: CS 为好
-  cs_for_good_tile_description: 激发学生深入思考计算机科学在创造一个更加公平和可持续发展的世界中可以发挥的作用的资源。
-  view_resources: 查看资源
-  imagine_cup_junior: 想象一下杯少年
-  imagine_cup_junior_tile_description: 这项全球性的 “人工智能为善” 挑战向学生介绍了微软的 AI in Good 计划，使他们能够利用人工智能的力量解决世界上的问题。
-  ai_activity: 活动
-  ai_description: 描述
-  ai_seeing_ai: 看见 AI
-  ai_seeing_ai_description: 一个免费的应用程序，用多种语言讲述你周围的世界。
-  ai_quick_draw: 快点，画画！
-  ai_quick_draw_description: 神经网络能学会识别涂鸦吗？
-  ai_teachable_machine: 可教的机器
-  ai_teachable_machine_description: 训练计算机识别自己的图像、声音和姿势。
-  ai_google: 使用谷歌进行 AI 实验
-  ai_google_description: 开始通过图片、绘图、语言、音乐等探索机器学习。
-  ai_zooniverse: Zooniverse-快照山斑马
-  ai_zooniverse_description: 通过识别图像中的不同动物来帮助保护濒临灭绝的开普山斑马。
-  ai_audience: 观众
-  ai_minecraft_description: 获取免费资源，包括课程计划、视频、计算机科学课程和教师培训。（需要我的世界：教育版）
-  ai_k_12_audience: K-12（需要阅读）
-  ai_microsoft_workshop: 微软的免费虚拟研讨会
-  ai_microsoft_workshop_description: 通过免费 STEM 和编码研讨会激发好奇心。
-  ai_machine_learning_for_kids: 儿童机器学习
-  ai_machine_learning_for_kids_description: 使用文本、数字或图像训练机器学习模型，然后使用它在 Scratch 中制作游戏。
-  ai_ibm_machine_learning_for_kids: IBM：面向儿童的机器学习
-  ai_ecs: ECS：人工智能 (AI)
-  ai_ecs_description: 探索计算机科学（ECS）课程的新的替代课程单元。
-  ai_aiedu_intro: aiEDU：人工智能简介
-  ai_aiedu_intro_description: AI入门是一个免费、创新、与文化相关的课程，学生可以在其中培养关于人工智能的概念，以及如何在现实生活中使用它。
-  ai_elements: 人工智能的要素
-  ai_elements_description: Reaktor 和赫尔辛基大学创建的一系列免费在线课程。
-  ai_cognimates: Cognimates
-  ai_cognimates_description: 一个用于构建游戏、编程机器人和训练的 AI 教育平台。
-  ai_try_activity: 尝试活动
-  outbreak_tile_title: 疫情爆发
-  outbreak_tile_subtitle: 有病毒感染了怪物城！编写一个爆发模拟器，并预测怪物城的邻居会发生什么。
-  outbreak_tile_alt: 模拟病毒如何通过一群紫色怪物传播。
-  footer_cookie_notice: Cookie通知
-  top_hoc_tutorial_applab_alt_text: 一只用食指触碰触屏平板电脑的棕色手，在蓝色背景下发射星星和光线
-  minecraft_tile_alt: "《我的世界》中的两个角色：史蒂夫和亚历克斯，背景是一个带珊瑚、海豚和海带的水生我的世界场景"
-  hoc2022_banner_title: 探索，玩耍，创造！
-  hoc2022_banner_description: 探索宇宙，进球得分，跳舞 — 尝试计算机科学的方法如此之多！
-  hoc2022_cta_primary: 看看有什么新内容
-  hoc2022_cta_secondary: 尝试更多活动
-  hoc2022_landing_page_explore_title: 发现
-  hoc2022_landing_page_explore_description: 用计算机科学打开通往新世界的大门！
-  hoc2022_landing_page_play_title: 玩
-  hoc2022_landing_page_play_description: 上场得分！
-  hoc2022_landing_page_create_title: 创建
-  hoc2022_landing_page_create_description: 做一些怪异而美妙的东西！
-  hoc2022_landing_page_banner_alt_left: 一个外星人在太空中的土星旁跳舞
-  hoc2022_landing_page_banner_alt_right: 一个机器人在太空中起飞的火箭前盘带足球
-  try_it_yourself: 自己试一试！
-  try_an_activity: 尝试一个活动
-  see_more_activities: 尝试更多活动
-  hoc2022_nasa_webb_alt_text: NASA詹姆斯·韦伯望远镜的插图
-  hoc2022_nasa_banner_heading: 加入NASA并观看关于太空计算机科学的《编程一小时》特别节目！
-  hoc2022_nasa_banner_description: 美国东部时间12月5日上午10点，在NASA STEM的YouTub频道上首播。
+  what_gender: 你的性别是什么？
+  who_has_done_hoc: '谁完成了 #HourOfCode ？ @codeorg'
+  who_has_done_hoc_donor: '谁为 #HourOfCode作了贡献？（感谢%{donor_twitter} 支持 @codeorg）'
+  write_your_first_program: 编写你的第一个计算机程序
+  'yes': 对
+  zipcode: 邮政编码或国家

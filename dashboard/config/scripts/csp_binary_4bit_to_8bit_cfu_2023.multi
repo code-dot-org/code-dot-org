@@ -4,8 +4,8 @@ title 'Moving from 4-bits to 8-bits'
 question 'Two schools are merging and to adapt to the increased size of the student body, the school is changing its system for keeping track of all student IDs from a system that uses 4-bit binary numbers to one that uses 8-bit binary numbers (AKA 1 byte). Which of the following best describes what effect this change will have?'
 
 wrong 'The 8-bit system will be able to represent twice as many values as the 4-bit system.'
-right 'The 8-bit system will be able to represent eight times as many values as the 4-bit system.'
-wrong 'The 8-bit system will be able to represent ten times as many values as the 4-bit system.'
+right 'The 8-bit system will be able to represent sixteen times as many values as the 4-bit system.'
+wrong 'The 8-bit system will be able to represent eight times as many values as the 4-bit system.'
 wrong 'The 8-bit system will be able to represent the same number of values as the 4-bit system, it will just include more zeros.'
 
 allow_multiple_attempts true

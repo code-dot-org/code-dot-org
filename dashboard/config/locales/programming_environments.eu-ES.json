@@ -2,25 +2,107 @@
   "eu-ES": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
-        },
-        "gamelab": {
-          "name": "Jolas laborategia",
+        "applab": {
           "categories": {
-            "game_lab": {
-              "name": "Jolas laborategia",
+            "advanced": {
+              "name": "Aurreratua"
+            },
+            "control": {
               "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funtzioa"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funtzioa"
+                    }
+                  }
+                }
+              },
+              "name": "Datu"
+            },
+            "functions": {
+              "name": "Funtzioak"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Itzulitako zenbaki maximoa"
+                    },
+                    "min": {
+                      "description": "Itzulitako balio minimoa"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Itzulitako zenbaki maximoa"
+                    },
+                    "min": {
+                      "description": "Itzulitako balio minimoa"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funtzioa"
+                    }
+                  }
+                },
                 "playSound": {
                   "short_description": "Zehaztutako URL batetik MP3 soinu fitxategia erreproduzitzen du."
                 }
               }
             },
-            "sprites": {
-              "name": "Pertsonaiak"
+            "variables": {
+              "name": "Aldagaiak"
+            }
+          },
+          "name": "App laborategia"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Bota"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Funtzioak"
+            },
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "Zehaztutako URL batetik MP3 soinu fitxategia erreproduzitzen du."
+                }
+              },
+              "name": "Jolas laborategia"
             },
             "groups": {
-              "name": "Taldeak",
               "expressions": {
                 "setColorEach": {
                   "palette_params": {
@@ -36,175 +118,93 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Bota"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Taldeak"
             },
             "math": {
-              "name": "Matematika",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Itzulitako balio minimoa"
-                    },
                     "max": {
                       "description": "Itzulitako zenbaki maximoa"
+                    },
+                    "min": {
+                      "description": "Itzulitako balio minimoa"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "Itzulitako balio minimoa"
-                    },
                     "max": {
                       "description": "Itzulitako zenbaki maximoa"
+                    },
+                    "min": {
+                      "description": "Itzulitako balio minimoa"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matematika"
+            },
+            "sprites": {
+              "name": "Pertsonaiak"
             },
             "variables": {
-              "name": "Aldagaiak",
               "expressions": {
                 "assign_x": {
                   "short_description": "Lehenago erazagututako aldagai bati balio bat esleitzen dio."
                 }
-              }
-            },
-            "functions": {
-              "name": "Funtzioak"
-            }
-          }
-        },
-        "applab": {
-          "name": "App laborategia",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funtzioa"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Zehaztutako URL batetik MP3 soinu fitxategia erreproduzitzen du."
-                }
-              }
-            },
-            "data": {
-              "name": "Datu",
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funtzioa"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funtzioa"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematika",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Itzulitako balio minimoa"
-                    },
-                    "max": {
-                      "description": "Itzulitako zenbaki maximoa"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Itzulitako balio minimoa"
-                    },
-                    "max": {
-                      "description": "Itzulitako zenbaki maximoa"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
+              },
               "name": "Aldagaiak"
-            },
-            "functions": {
-              "name": "Funtzioak"
-            },
-            "advanced": {
-              "name": "Aurreratua"
             }
-          }
+          },
+          "name": "Jolas laborategia"
         },
         "spritelab": {
           "categories": {
-            "sprites": {
-              "name": "Pertsonaiak"
-            },
-            "world": {
-              "name": "Mundua"
-            },
-            "location": {
-              "name": "Kokalekuak"
-            },
             "actions": {
               "name": "Ekintzak"
-            },
-            "events": {
-              "name": "Gertaerak"
             },
             "behaviors": {
               "name": "Jokabideak"
             },
-            "loops": {
-              "name": "Itzuliak"
+            "comments": {
+              "name": "Iruzkinak"
             },
-            "variables": {
-              "name": "Aldagaiak"
-            },
-            "math": {
-              "name": "Matematika"
-            },
-            "logic": {
-              "name": "Logika"
+            "events": {
+              "name": "Gertaerak"
             },
             "functions": {
               "name": "Funtzioak"
             },
+            "location": {
+              "name": "Kokalekuak"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "loops": {
+              "name": "Itzuliak"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "sprites": {
+              "name": "Pertsonaiak"
+            },
             "text": {
               "name": "Testua"
             },
-            "comments": {
-              "name": "Iruzkinak"
+            "variables": {
+              "name": "Aldagaiak"
+            },
+            "world": {
+              "name": "Mundua"
             }
           }
+        },
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

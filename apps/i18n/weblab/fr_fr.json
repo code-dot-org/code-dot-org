@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Ajouter du CSS",
-  "addImageButton": "Ajouter une image",
   "addHTMLButton": "Ajouter du code HTML",
+  "addImageButton": "Ajouter une image",
   "closeFullscreenPreview": "Fermer l'aperçu en plein écran",
   "currentProjectCapacity": "{currentMegabytes}Mo sur {totalMegabytes}Mo utilisés",
   "disallowedHtml": "Le fichier « {filename} » contient des éléments HTML qui ne sont pas autorisés : `{disallowedTags}`. Ils seront supprimés lorsque cette boîte de dialogue sera fermée.",
@@ -14,8 +14,8 @@
   "reset": "Réinitialiser Web Lab",
   "resetComplete": "Réinitialisation du Web Lab terminée",
   "resetFailure": "Impossible de réinitialiser Web Lab : {message}.",
-  "toggleInspectorOn": "Inspecteur : Désactivé",
   "toggleInspectorOff": "Inspecteur : activé",
+  "toggleInspectorOn": "Inspecteur : Désactivé",
   "troubleshootingSupport": "Consultez notre article de support [\"Résolution des problèmes du Web Lab\"]({url}) pour plus d'informations.",
   "uploadError": "Erreur lors du chargement"
 }

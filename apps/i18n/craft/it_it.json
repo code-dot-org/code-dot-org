@@ -1,9 +1,9 @@
 {
   "absolute": "assoluto",
+  "agentDiamondPathCongrats": "Congratulazioni, hai trovato il sentiero dei dimanti! Finora hai raccolto {count, plural, one {1 diamond} other {# diamonds}}!",
   "agentGenericFailureMessage": "Continua a programmare! Ricorda di usare l'Agente per farti aiutare.",
   "agentTooFewBlocksFailureMessage": "Prova ad aggiungere solo un blocco alla volta per portare l'Agente nel punto giusto.",
   "at": "a",
-  "agentDiamondPathCongrats": "Congratulazioni, hai trovato il sentiero dei dimanti! Finora hai raccolto {count, plural, one {1 diamond} other {# diamonds}}!",
   "blockActionAdd": "aggiungi",
   "blockActionAttack": "attacca",
   "blockActionClone": "clona blocchi",

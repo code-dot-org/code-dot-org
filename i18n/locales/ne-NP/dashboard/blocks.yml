@@ -5,19 +5,11 @@ ne:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': medium
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': medium
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -534,9 +526,7 @@ ne:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': medium
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -570,10 +560,7 @@ ne:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': medium
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -585,10 +572,7 @@ ne:
           PROPERTY:
             '"scale"': size
           SIZE:
-            '25': extra small
-            '50': small
             '75': medium
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:

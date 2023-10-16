@@ -61,6 +61,28 @@ ar:
         رسالة عبر البريد الإلكتروني والتي تحتوي على إرشادات حول كيفية إلغاء تأمينه.
       unlocked: تم إلغاء تأمين حسابك بنجاح. الرجاء تسجيل الدخول للاستمرار.
   errors:
+    invitations:
+      edit:
+        header: تعيين كلمة المرور الخاصة بك
+        submit_button: تعيين كلمة المرور الخاصة بي
+      invitation_removed: تم إزالة دعوتك.
+      invitation_token_invalid: رمز الدعوة المقدمة غير صالح!
+      new:
+        header: إرسال دعوة
+        submit_button: إرسال دعوة
+      no_invitations_remaining: لم يتبقى أية دعوات
+      send_instructions: تم إرسال دعوى بالبريد الإلكتروني إلى %{email}.
+      updated: تم تعيين كلمة المرور الخاصة بك بنجاح. يمكنك الآن تسجيل الدخول.
+    mailer:
+      invitation_instructions:
+        accept: قبول الدعوة
+        hello: مرحباً %{email}
+        ignore: إذا كنت لا ترغب في قبول الدعوة، الرجاء تجاهل هذا البريد الإلكتروني.
+          <br /> لن يتم إنشاء حسابك حتى تقوم بالوصول إلى الرابط أعلاه وتعيين كلمة
+          المرور الخاصة بك.
+        someone_invited_you: قام شخص ما بدعوتك إلى %{url}، يمكنك قبولها من خلال الرابط
+          الموجود أدناه.
+        subject: تعليمات الدعوة
     messages:
       already_confirmed: تم التأكيد من قبل، الرجاء محاولة تسجيل الدخول
       confirmation_period_expired: يحتاج للتأكيد خلال %{period}، الرجاء إرسال طلب
@@ -68,25 +90,3 @@ ar:
       expired: قد انتهت صلاحيته، الرجاء إرسال طلب جديد
       not_found: غير موجود
       not_locked: لم يكن مؤمناً
-    invitations:
-      send_instructions: تم إرسال دعوى بالبريد الإلكتروني إلى %{email}.
-      invitation_token_invalid: رمز الدعوة المقدمة غير صالح!
-      updated: تم تعيين كلمة المرور الخاصة بك بنجاح. يمكنك الآن تسجيل الدخول.
-      no_invitations_remaining: لم يتبقى أية دعوات
-      invitation_removed: تم إزالة دعوتك.
-      new:
-        header: إرسال دعوة
-        submit_button: إرسال دعوة
-      edit:
-        header: تعيين كلمة المرور الخاصة بك
-        submit_button: تعيين كلمة المرور الخاصة بي
-    mailer:
-      invitation_instructions:
-        subject: تعليمات الدعوة
-        hello: مرحباً %{email}
-        someone_invited_you: قام شخص ما بدعوتك إلى %{url}، يمكنك قبولها من خلال الرابط
-          الموجود أدناه.
-        accept: قبول الدعوة
-        ignore: إذا كنت لا ترغب في قبول الدعوة، الرجاء تجاهل هذا البريد الإلكتروني.
-          <br /> لن يتم إنشاء حسابك حتى تقوم بالوصول إلى الرابط أعلاه وتعيين كلمة
-          المرور الخاصة بك.

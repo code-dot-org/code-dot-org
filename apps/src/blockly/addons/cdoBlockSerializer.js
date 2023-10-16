@@ -1,4 +1,10 @@
 import GoogleBlockly from 'blockly/core';
+import {PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {partitionBlocksByType} from './cdoUtils';
+
+// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
+// we would need to send that property from the backend and save it in lab2Redux.
+const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
 
 const unknownBlockState = {type: 'unknown', enabled: false};
 
@@ -13,10 +19,24 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
    * @param {Blockly.Workspace} workspace - The workspace to deserialize into.
    */
   load(stateToLoad, workspace) {
-    const blockStates = stateToLoad['blocks'];
+    // Procedure definitions should be loaded ahead of call blocks, so that the
+    // procedures map is updated correctly.
+    const blockStates = partitionBlocksByType(
+      stateToLoad['blocks'],
+      PROCEDURE_DEFINITION_TYPES,
+      false
+    );
 
     for (const blockState of blockStates) {
       try {
+        if (
+          useModalFunctionEditor &&
+          PROCEDURE_DEFINITION_TYPES.includes(blockState.type)
+        ) {
+          // Ensure that procedure definitions can be moved/edited on the main workspace.
+          blockState.movable = true;
+          blockState.editable = true;
+        }
         GoogleBlockly.serialization.blocks.append(blockState, workspace, {
           recordUndo: Blockly.Events.getRecordUndo(),
         });

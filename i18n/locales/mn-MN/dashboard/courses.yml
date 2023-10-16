@@ -68,19 +68,19 @@ mn:
         csd-2023:
           title: Компьютерын шинжлэх ухааны нээлтүүд
     resources:
-      curriculum/csd/2020:
-        name: Сургалтын хөтөлбөр
-      teacher_forum/csd/2020:
-        name: Багш нарын форум
       curriculum/csd/2017:
         name: Сургалтын хөтөлбөр
       teacher_forum_6/csd/2017:
+        name: Багш нарын форум
+      curriculum/csd/2018:
+        name: Сургалтын хөтөлбөр
+      teacher_forum_6/csd/2018:
         name: Багш нарын форум
       curriculum/csd/2019:
         name: Сургалтын хөтөлбөр
       teacher_forum/csd/2019:
         name: Багш нарын форум
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Сургалтын хөтөлбөр
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: Багш нарын форум

@@ -1,9 +1,8 @@
 import {fetchSignedCookies} from '@cdo/apps/utils';
 import WebAudio from './soundSub';
-
+import {baseAssetUrl} from '../constants';
 var soundList = [];
 
-var baseSoundUrl;
 var restrictedSoundUrlPath;
 
 var audioSoundBuffers = [];
@@ -26,16 +25,20 @@ var audioSystem = null;
  *   {
  *     delayTimeSeconds: number, // Delay time used in the delay effect
  *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *     updateLoadProgress: progress: number => void // Callback to report loading progress
  *     reportSoundLibraryLoadTime: loadTimeMs: number => void // Optional callback to report sound library load time
  *   }
  */
 export function InitSound(desiredSounds, options) {
   // regular web version.
-  baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
   restrictedSoundUrlPath = '/restricted/musiclab/';
   audioSystem = new WebAudio(options);
 
-  LoadSounds(desiredSounds, options.reportSoundLibraryLoadTime);
+  LoadSounds(
+    desiredSounds,
+    options.updateLoadProgress,
+    options.reportSoundLibraryLoadTime
+  );
 }
 
 export function LoadSoundFromBuffer(id, buffer) {
@@ -51,7 +54,11 @@ export function GetCurrentAudioTime() {
   return audioSystem?.getCurrentTime();
 }
 
-async function LoadSounds(desiredSounds, reportSoundLibraryLoadTime) {
+async function LoadSounds(
+  desiredSounds,
+  updateLoadProgress,
+  reportSoundLibraryLoadTime
+) {
   const soundLoadStartTime = Date.now();
   soundList = desiredSounds;
 
@@ -72,7 +79,7 @@ async function LoadSounds(desiredSounds, reportSoundLibraryLoadTime) {
   let soundsToLoad = 0;
   for (let i = 0; i < soundList.length; i++) {
     const sound = soundList[i];
-    const basePath = sound.restricted ? restrictedSoundUrlPath : baseSoundUrl;
+    const basePath = sound.restricted ? restrictedSoundUrlPath : baseAssetUrl;
     if (sound.restricted && !canLoadRestrictedContent) {
       // Skip loading restricted songs if we can't load restricted content.
       continue;
@@ -90,6 +97,9 @@ async function LoadSounds(desiredSounds, reportSoundLibraryLoadTime) {
           const loadTimeMs = Date.now() - soundLoadStartTime;
           reportSoundLibraryLoadTime(loadTimeMs);
         }
+        updateLoadProgress(
+          (soundList.length - soundsToLoad) / soundList.length
+        );
       }
     );
   }

@@ -1,10 +1,10 @@
 {
-  "startButton": "دەستپێبکە",
   "filterGrades": "Salxwendin",
-  "filterGradesPre": "Auto-Xwendekar",
   "filterGrades9": "پلەی +٩",
+  "filterGradesPre": "Auto-Xwendekar",
+  "filterProgrammingLanguage": "زمان",
+  "filterProgrammingLanguageOther": "هی تر",
   "filterStudentExperienceBeginner": "سەرەتایی",
   "filterTopicsMath": "بیرکاری",
-  "filterProgrammingLanguage": "زمان",
-  "filterProgrammingLanguageOther": "هی تر"
+  "startButton": "دەستپێبکە"
 }

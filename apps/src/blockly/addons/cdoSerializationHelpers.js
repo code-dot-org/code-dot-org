@@ -1,5 +1,6 @@
 import BlockSvgUnused from './blockSvgUnused';
-import {WORKSPACE_PADDING} from '../constants';
+import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
+import {partitionBlocksByType} from './cdoUtils';
 import {frameSizes} from './cdoConstants';
 
 const {HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} = frameSizes;
@@ -47,7 +48,7 @@ export function addPositionsToState(xmlBlocks, blockIdMap) {
   xmlBlocks.forEach(xmlBlock => {
     const blockJson = blockIdMap.get(xmlBlock.blockly_block.id);
     if (blockJson) {
-      // Do not change values if xmlBlock values are NaN (unspecified in XML)
+      // Note: If xmlBlock values are NaN, they will be ignored and blockJson values will be used
       blockJson.x = xmlBlock.x || blockJson.x;
       blockJson.y = xmlBlock.y || blockJson.y;
     }
@@ -57,14 +58,9 @@ export function addPositionsToState(xmlBlocks, blockIdMap) {
 /**
  * Position blocks on a workspace (if they do not already have positions)
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
- * @param {function} [positionBlock] - moves a single block using the current cursor coordinates
- * @param {Array<block>} [blocks] - an array of block objects
+ * @param {Map} [blockOrderMap] - specifies an original order of blocks from XML
  */
-export function positionBlocksOnWorkspace(
-  workspace,
-  positionBlock = positionBlockWithCursor,
-  blocks = workspace.getTopBlocks(SORT_BY_POSITION)
-) {
+export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
   if (!workspace.rendered) {
     return;
   }
@@ -81,8 +77,18 @@ export function positionBlocksOnWorkspace(
   // If the workspace is RTL, horizontally mirror the starting position.
   cursor.x = workspace.RTL ? width - cursor.x : cursor.x;
 
-  blocks.forEach(block => {
-    positionBlock(block, cursor);
+  const topBlocks = workspace.getTopBlocks(SORT_BY_POSITION);
+
+  const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
+  // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
+  const orderedBlocksSetupFirst = partitionBlocksByType(
+    orderedBlocks,
+    SETUP_TYPES,
+    false
+  );
+
+  orderedBlocksSetupFirst.forEach(block => {
+    positionBlockWithCursor(block, cursor);
   });
 }
 
@@ -153,29 +159,6 @@ export function isBlockLocationUnset(block) {
 }
 
 /**
- * Initializes a block's position so that it can be repositioned with the cursor.
- * @param {object} block - and objecting containing the block to be moved and x/y coordinates
- * @param {Blockly.block} block.blockly_block - the actual Blockly block to be moved
- * @param {number} [block.x] - an x-coordinate from the XML serialization
- * @param {number} [block.y] - a y-coordinate frmo the XML serialization
- * @param {object} cursor - a location for moving a block
- */
-export function positionBlockXmlHelper(block, cursor) {
-  const isRTL = block.blockly_block.RTL;
-  const {viewWidth = 0} = block.blockly_block.workspace.getMetrics();
-  let {x, y} = block;
-  x = isNaN(x) ? 0 : x;
-  y = isNaN(y) ? 0 : y;
-
-  block.blockly_block.moveTo({
-    x: isRTL ? viewWidth - x : x,
-    y: y,
-  });
-
-  positionBlockWithCursor(block.blockly_block, cursor);
-}
-
-/**
  * Adds an svg frame around a block to signal that it is unused.
  * @param {Blockly.Block} block - a Blockly block
  */
@@ -184,4 +167,24 @@ function addUnusedFrame(block) {
     block.unusedSvg_ = new BlockSvgUnused(block);
     block.unusedSvg_.render(block.svgGroup_, block.RTL);
   }
+}
+
+/**
+ * Reorders an array of blocks based on the given blockOrderMap.
+ * If the blockOrderMap is invalid (null or size mismatch), returns the original array.
+ *
+ * @param {Array} blocks - The array of blocks to be reordered.
+ * @param {Map} blockOrderMap - A map with block index as key and the desired order index as value.
+ * @returns {Array} The reordered array of blocks or the original array if blockOrderMap is invalid.
+ */
+function reorderBlocks(blocks, blockOrderMap) {
+  if (!blockOrderMap || blockOrderMap.size !== blocks.length) {
+    return blocks;
+  }
+  const orderedBlocks = new Array(blocks.length);
+  blocks.forEach((block, index) => {
+    orderedBlocks[blockOrderMap.get(index)] = block;
+  });
+
+  return orderedBlocks;
 }

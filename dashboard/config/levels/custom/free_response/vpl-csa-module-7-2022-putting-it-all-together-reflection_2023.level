@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2023-08-01T16:34:35.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Putting it all together\r\n\r\nNow that we have looked at the Unit 7 project and the work of project managers, let's put it all together. \r\n\r\n## Do this: \r\n* Review the  <a href=\"https://docs.google.com/document/u/1/d/15-8bqe4r22hJGkvqq0C4d9v8TdeaYI2zM9AKb-pLowI/view\" target=\"blank\">Project Planning Guide</a>.\r\n* Compare it to what you know about project management \r\n\r\n\r\n## Reflect:\r\n* How does this project look or feel different from prior projects in the curriculum?\r\n* What project management skills do you see students developing or practicing in the Unit 7 project?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24299,
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:34:35.200+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-module-7-2022-putting-it-all-together-reflection_-f\\\"\"],\"cloned_from\":\"vpl-csa-module-7-2022-putting-it-all-together-reflection_-f\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

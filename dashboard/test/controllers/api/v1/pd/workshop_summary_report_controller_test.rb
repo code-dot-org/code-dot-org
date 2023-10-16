@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestCase
   freeze_time
 
   EXPECTED_COMMON_FIELDS = %w(
@@ -223,7 +223,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     response = JSON.parse(@response.body)
     assert_equal 4, response.count
     unpaid_report = response.find {|row| row['workshop_id'] == unpaid_workshop.id}
-    assert_not_nil unpaid_report
+    refute_nil unpaid_report
     refute unpaid_report['qualified']
     assert_nil unpaid_report['payment_total']
   end

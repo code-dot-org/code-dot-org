@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
@@ -31,6 +32,7 @@ class SectionLoginInfo extends React.Component {
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
       loginType: PropTypes.string.isRequired,
+      code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,
   };
@@ -61,8 +63,6 @@ class SectionLoginInfo extends React.Component {
         {section.loginType === SectionLoginType.email && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
-            // TODO: define this prop
-            // eslint-disable-next-line react/prop-types
             sectionCode={section.code}
             sectionId={section.id}
           />
@@ -365,7 +365,7 @@ const styles = {
     padding: 10,
     margin: 8,
     float: 'left',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: 'dimgray',
     pageBreakInside: 'avoid',
   },

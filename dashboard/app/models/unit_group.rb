@@ -500,6 +500,26 @@ class UnitGroup < ApplicationRecord
     end
   end
 
+  def supported_locale_codes
+    locales = default_unit_group_units.first&.script&.supported_locales || []
+    locales = locales.filter do |locale|
+      default_unit_group_units.all? do |unit_group_unit|
+        unit_group_unit.script.supported_locales&.include?(locale)
+      end
+    end
+    locales += ['en-US']
+    locales.sort.uniq
+  end
+
+  def supported_locale_names
+    supported_locale_codes.map {|l| Unit.locale_native_name_map[l] || l}.uniq
+  end
+
+  def self.locale_native_name_map
+    locales = Dashboard::Application::LOCALES.select {|_, data| data.is_a?(Hash)}
+    locales.reduce({}) {|acc, (locale_code, data)| acc.merge({locale_code => data[:native]})}
+  end
+
   # @param family_name [String] The family name for a course family.
   # @param user [User]
   # @return [UnitGroup] Returns the latest version in a course family that the user is assigned to.
@@ -542,8 +562,7 @@ class UnitGroup < ApplicationRecord
     user.
       user_scripts.
       where(script_id: unit_ids).
-      select(&:version_warning_dismissed).
-      any?
+      any?(&:version_warning_dismissed)
   end
 
   @@course_cache = nil

@@ -52,7 +52,7 @@ def page_load(wait = true, blank_tab: false)
     unless blank_tab
       wait_until do
         (url = @browser.current_url) != '' &&
-           url != 'about:blank' &&
+          url != 'about:blank' &&
           @browser.execute_script('return document.readyState;') == 'complete'
       end
     end
@@ -96,6 +96,20 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   navigate_to replace_hostname(url)
+end
+
+And /^I take note of the current loaded page$/ do
+  # Remember this page
+  @current_page_body = @browser.find_element(:css, 'body')
+end
+
+Then /^I wait until I am on a different page than I noted before$/ do
+  # When we've seen a page before, look for a different page
+  if @current_page_body
+    wait_until do
+      @current_page_body != @browser.find_element(:css, 'body')
+    end
+  end
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -409,10 +423,10 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   # editor is open, the first if it isn't
   @browser.execute_script(
     "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {"\
-      "bubbles: true,"\
-      "cancelable: true,"\
-      "view: window"\
+    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {" \
+      "bubbles: true," \
+      "cancelable: true," \
+      "view: window" \
     "}))"
   )
 rescue
@@ -426,10 +440,10 @@ And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # Escaping those gives us \\\\ per-character
   category_selector = "#\\\\:#{id}\\\\.label"
   @browser.execute_script(
-    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {"\
-      "bubbles: true,"\
-      "cancelable: true,"\
-      "view: window"\
+    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {" \
+      "bubbles: true," \
+      "cancelable: true," \
+      "view: window" \
     "}))"
   )
 rescue
@@ -548,7 +562,7 @@ When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
 end
 
 When /^I type '([^']*)' into "([^"]*)"$/ do |input_text, selector|
-  type_into_selector("\'#{input_text}\'", selector)
+  type_into_selector("'#{input_text}'", selector)
 end
 
 When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|

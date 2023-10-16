@@ -2,122 +2,59 @@
   "ro-RO": {
     "data": {
       "standard_categories": {
-        "DA": {
-          "description": "Date & Analiză"
-        },
-        "DAT-1": {
-          "description": "Modul în care computerul reprezintă date este diferite de modul în care datele sunt interpretate și afișate pentru utilizator. Programele sunt utilizate pentru traducerea datelor într-o reprezentare, care este mai ușoară de înțeles pentru oameni."
-        },
-        "IOC-2": {
-          "description": "Utilizarea inovațiilor informatice poate implica riscuri pentru siguranța și identitatea personală."
-        },
-        "DAT-1.D": {
-          "description": "Să compare algoritmii de comprimare a datelor pentru a determina care este mai bun într-un anumit context."
-        },
-        "IOC-2.B": {
-          "description": "Să explice cum resursele informatice pot fi protejate și pot fi utilizate în mod greșit."
-        },
-        "CD": {
-          "description": "Computere & Dispozitive de Comunicare"
-        },
-        "CI": {
-          "description": "Impacturi la nivel de Comunitate, Global și Etic"
-        },
-        "CL": {
-          "description": "Colaborare"
-        },
-        "CPP": {
-          "description": "Practică de Calcul & Programare "
-        },
-        "CT": {
-          "description": "Gândire Computațională"
-        },
-        "L": {
-          "description": "Limbă"
-        },
-        "RI": {
-          "description": "Citire Informațională"
-        },
-        "RL": {
-          "description": "Să citească Literatură"
-        },
-        "SL": {
-          "description": "Vorbit & Ascultat"
-        },
-        "W": {
-          "description": "Scriere"
-        },
-        "C": {
-          "description": "Cercuri"
-        },
-        "F": {
-          "description": "Funcţii"
-        },
-        "G": {
-          "description": "Geometrie"
-        },
-        "MP": {
-          "description": "Practici Matematice"
-        },
-        "NBT": {
-          "description": "Numere și Operațiuni În Baza Zece"
-        },
-        "OA": {
-          "description": "Operațiuni și Gândire Algebrică"
-        },
         "1": {
           "description": "Elevii demonstrează gândire creativă, construiesc cunoștințe și dezvoltă produse și procese inovative, utilizând tehnologia."
         },
         "2": {
           "description": "Elevii utilizează metode și medii digitale pentru a comunica și lucra în colaborare, inclusiv de la distanță, pentru sprijinirea învățării individuale și pentru a contribui la învățarea celorlalți."
         },
+        "3": {
+          "description": "Elevii aplică instrumente digitale pentru a aduna, evalua și utiliza informații."
+        },
+        "3-A-i": {
+          "description": "Natura învățării - oameni vs mașini"
+        },
+        "3-A-ii": {
+          "description": "Natura învățării - găsirea tiparelor în date"
+        },
+        "3-A-iii": {
+          "description": "Natura învățării - formarea unui model"
+        },
+        "3-A-iv": {
+          "description": "Natura învățării - constructinv vs folosind un raționament"
+        },
+        "3-A-v": {
+          "description": "Natura învățării - ajustarea reprezentărilor interne"
+        },
+        "3-A-vi": {
+          "description": "Natura învățării - învățarea din experiență"
+        },
+        "3-B-i": {
+          "description": "Rețele neuronale - structura unei rețele neuronale"
+        },
+        "3-B-ii": {
+          "description": "Rețele neuronale - reglarea greutății"
+        },
+        "3-C-i": {
+          "description": "Seturi de date - seturi de caracteristici"
+        },
+        "3-C-ii": {
+          "description": "Seturi de date - seturi mari de date"
+        },
+        "3-C-iii": {
+          "description": "Seturi de date - bias"
+        },
         "4": {
           "description": "Studenții utilizează aptitudinile de gândire critică pentru planificarea și conducerea cercetării, gestionării proiectelor, rezolvă probleme și iau decizii informate utilizând instrumentele și resursele digitale adecvate."
+        },
+        "5": {
+          "description": "Elevii înțeleg problemele umane, culturale și sociale legate de tehnologie și practică comportamentul juridic și etic."
         },
         "6": {
           "description": "Elevii demonstrează o înțelegere solidă a conceptelor gehnologice, sistemelor și operațiilor."
         },
-        "AP": {
-          "description": "Algoritmi & Programare"
-        },
-        "CS": {
-          "description": "Sisteme de calcul"
-        },
-        "IC": {
-          "description": "Efectuarea de deducții și justificarea concluziilor"
-        },
-        "NI": {
-          "description": "Rețele și Internet"
-        },
         "AAP-1": {
           "description": "Pentru a găsi soluții specifice la probleme generalizabile, programatorii reprezintă și organizează datele în mai multe moduri."
-        },
-        "AAP-2": {
-          "description": "Modul în care declarațiile sunt secvențiate și combinate într-un program determină rezultatul calculat. Programele încorporează construcții de iterație și selecție pentru a reprezenta repetarea și pentru a lua decizii pentru a gestiona valori variate de intrare."
-        },
-        "AAP-3": {
-          "description": "Programatorii descompun problemele în piese mai mici și mai ușor de gestionat. Prin crearea de proceduri și valorificarea parametrilor, programatorii generalizează procesele care pot fi reutilizate. Procedurile permit programatorilor să se bazeze pe codul existent care a fost deja testat, permițând programatorilor să scrie programe mai rapid și cu mai multă încredere."
-        },
-        "AAP-4": {
-          "description": "Există probleme pe care computerul nu le poate rezolva și chiar și atunci când computerul poate rezolva o problemă, este posibil să nu poată face acest lucru într-o perioadă rezonabilă de timp."
-        },
-        "CRD-1": {
-          "description": "Incorporarea mai multor perspective prin colaborare imbunatateste inovatiile de calcul dezvoltate."
-        },
-        "CRD-2": {
-          "description": "Dezvoltatorii creează și inovează folosind un proces de proiectare iterativ care este axat pe utilizator, care încorporează cicluri de implementare/feedback și care lasă loc amplu pentru experimentare și asumare de riscuri."
-        },
-        "CSN-1": {
-          "description": "Sistemele și rețelele informatice facilitează modul în care sunt transferate datele."
-        },
-        "CSN-2": {
-          "description": "Calculul paralel și distribuit utilizează mai multe computere pentru a rezolva mai rapid probleme complexe sau pentru a procesa seturi mari de date."
-        },
-        "DAT-2": {
-          "description": "Programele pot fi utilizate pentru procesarea datelor, ceea ce permite utilizatorilor să descopere informații și să creeze noi cunoștințe."
-        },
-        "IOC-1": {
-          "description": "În timp ce programele sunt de obicei concepute pentru a atinge un anumit scop, ele pot avea consecințe nedorite"
         },
         "AAP-1.A": {
           "description": "Reprezintă o valoare cu o variabilă."
@@ -130,6 +67,9 @@
         },
         "AAP-1.D": {
           "description": "Pentru abstractizarea datelor: \na. Dezvoltați abstractizarea datelor utilizând liste pentru a stoca mai multe elemente.\nb. Explicați modul în care utilizarea abstractizării datelor gestionează complexitatea codului programului."
+        },
+        "AAP-2": {
+          "description": "Modul în care declarațiile sunt secvențiate și combinate într-un program determină rezultatul calculat. Programele încorporează construcții de iterație și selecție pentru a reprezenta repetarea și pentru a lua decizii pentru a gestiona valori variate de intrare."
         },
         "AAP-2.A": {
           "description": "Exprimați un algoritm care utilizează secvențierea fără a utiliza un limbaj de programare."
@@ -176,6 +116,9 @@
         "AAP-2.P": {
           "description": "Pentru algoritmii binari de căutare:\na. Determinați numărul de iterații necesare pentru a găsi o valoare într-un set de date. \nb. Explicați cerințele necesare pentru a finaliza o căutare binară."
         },
+        "AAP-3": {
+          "description": "Programatorii descompun problemele în piese mai mici și mai ușor de gestionat. Prin crearea de proceduri și valorificarea parametrilor, programatorii generalizează procesele care pot fi reutilizate. Procedurile permit programatorilor să se bazeze pe codul existent care a fost deja testat, permițând programatorilor să scrie programe mai rapid și cu mai multă încredere."
+        },
         "AAP-3.A": {
           "description": "Pentru apeluri de procedură:\na. Scrieți declarații pentru a apela proceduri.\nb. Determinați rezultatul sau efectul unui apel de procedură."
         },
@@ -194,329 +137,65 @@
         "AAP-3.F": {
           "description": "Pentru simulări:\na. Explicați modul în care computerele pot fi folosite pentru a reprezenta fenomene sau rezultate din lumea reală. \nb. Comparați utilizarea simulărilor cu contexte din lumea reală."
         },
+        "AAP-4": {
+          "description": "Există probleme pe care computerul nu le poate rezolva și chiar și atunci când computerul poate rezolva o problemă, este posibil să nu poată face acest lucru într-o perioadă rezonabilă de timp."
+        },
         "AAP-4.A": {
           "description": "Pentru determinarea eficienței unui algoritm:\na. Explicați diferența dintre algoritmii care rulează în timp rezonabil și cei care nu rulează în timp rezonabil. \nb. Identificarea situațiilor în care o soluție euristică poate fi mai adecvată."
         },
         "AAP-4.B": {
           "description": "Explicați existența unor probleme indecisibile în informatică."
         },
-        "CRD-1.A": {
-          "description": "Explicați modul în care inovațiile de calcul sunt îmbunătățite prin colaborare."
+        "AP": {
+          "description": "Algoritmi & Programare"
         },
-        "CRD-1.B": {
-          "description": "Explicați modul în care inovațiile de calcul sunt dezvoltate de grupuri de oameni."
+        "APR": {
+          "description": "Aritmetică cu polinoame și expresii raționale"
         },
-        "CRD-1.C": {
-          "description": "Demonstrați abilități interpersonale eficiente în timpul colaborării."
+        "BF": {
+          "description": "Funcții de construcție"
         },
-        "CRD-2.A": {
-          "description": "Descrieți scopul unei inovații de calcul."
+        "BI-1": {
+          "description": "Calculatoarele percep lumea folosind senzori"
         },
-        "CRD-2.B": {
-          "description": "Explicați cum funcționează un program sau un segment de cod."
+        "BI-2": {
+          "description": "Agenții mențin reprezentări ale lumii și le folosesc pentru raționament"
         },
-        "CRD-2.C": {
-          "description": "Identificați intrările (intrările) unui program."
+        "BI-3": {
+          "description": "Calculatoarele pot învăța din date"
         },
-        "CRD-2.D": {
-          "description": "Identificați rezultatele produse de un program."
+        "BI-4": {
+          "description": "Agenții inteligenți necesită multe tipuri de cunoștințe pentru a interacționa în mod natural cu oamenii"
         },
-        "CRD-2.E": {
-          "description": "Dezvoltați un program utilizând un proces de dezvoltare."
+        "BI-5": {
+          "description": "AI poate avea un impact asupra societății atât în moduri pozitive, cât și negative"
         },
-        "CRD-2.F": {
-          "description": "Proiectați un program și interfața sa de utilizator."
+        "C": {
+          "description": "Cercuri"
         },
-        "CRD-2.G": {
-          "description": "Descrieți scopul unui segment de cod sau al unui program prin scrierea documentației."
+        "CC": {
+          "description": "Numărarea și Cardinalitatea"
         },
-        "CRD-2.H": {
-          "description": "Recunoașteți segmentele de cod utilizate din alte surse."
+        "CD": {
+          "description": "Computere & Dispozitive de Comunicare"
         },
-        "CRD-2.I": {
-          "description": "Pentru erori într-un algoritm sau program: \na. Identificați eroarea. \nb. Corectați eroarea."
+        "CED": {
+          "description": "Crearea ecuațiilor"
         },
-        "CRD-2.J": {
-          "description": "Identificați intrările și ieșirea sau comportamentele așteptate corespunzătoare care pot fi utilizate pentru a verifica corectitudinea unui algoritm sau a unui program."
+        "CI": {
+          "description": "Impacturi la nivel de Comunitate, Global și Etic"
         },
-        "CSN-1.A": {
-          "description": "Explicați modul în care dispozitivele de calcul funcționează împreună într-o rețea."
+        "CL": {
+          "description": "Colaborare"
         },
-        "CSN-1.B": {
-          "description": "Explicați cum funcționează Internetul."
+        "CN": {
+          "description": "Sistemul de numere complexe"
         },
-        "CSN-1.C": {
-          "description": "Explicați modul în care datele sunt trimise prin Internet prin pachete."
-        },
-        "CSN-1.D": {
-          "description": "Descrieți diferențele dintre Internet și World Wide Web."
-        },
-        "CSN-2.A": {
-          "description": "Comparați soluțiile de probleme care utilizează calcul secvențial, paralel și distribuit."
-        },
-        "CSN-2.B": {
-          "description": "Determinați eficiența soluțiilor secvențiale și paralele."
-        },
-        "CSN-2.C": {
-          "description": "Descrieți beneficiile și provocările calculelor paralele și distribuite."
-        },
-        "DAT-1.A": {
-          "description": "Explicați modul în care datele pot fi reprezentate folosind biți."
-        },
-        "DAT-1.B": {
-          "description": "Explicați consecințele utilizării biților pentru a reprezenta date."
-        },
-        "DAT-1.C": {
-          "description": "Pentru numerele binare:\na. Calculați echivalentul binar (baza 2) al unui număr întreg pozitiv (baza 10) și invers. \nb. Comparați și comandați numere binare."
-        },
-        "DAT-2.A": {
-          "description": "Descrieți ce informații pot fi extrase din date."
-        },
-        "DAT-2.B": {
-          "description": "Descrieți ce informații pot fi extrase din metadate."
-        },
-        "DAT-2.C": {
-          "description": "Identificați provocările asociate procesării datelor."
-        },
-        "DAT-2.D": {
-          "description": "Extrageți informații din date utilizând un program."
-        },
-        "DAT-2.E": {
-          "description": "Explicați modul în care programele pot fi utilizate pentru a obține informații și cunoștințe din date."
-        },
-        "IOC-1.A": {
-          "description": "Explicați implicațiile etice și sociale ale sistemelor de calcul"
-        },
-        "IOC-1.B": {
-          "description": "Explicați riscurile la adresa vieții private cauzate de colectarea și stocarea datelor cu caracter personal pe sistemele informatice."
-        },
-        "IOC-1.C": {
-          "description": "Descrieți problemele care contribuie la decalajul digital."
-        },
-        "IOC-1.D": {
-          "description": "Explicați modul în care există părtinire în inovațiile de calcul."
-        },
-        "IOC-1.E": {
-          "description": "Explicați modul în care oamenii participă la procesele de rezolvare a problemelor la scară."
-        },
-        "IOC-1.F": {
-          "description": "Explicați modul în care utilizarea calculelor ar putea ridica preocupări juridice și etice."
-        },
-        "IOC-2.A": {
-          "description": "Descrieți riscurile la adresa vieții private cauzate de colectarea și stocarea datelor cu caracter personal pe un sistem informatic."
-        },
-        "IOC-2.C": {
-          "description": "Explicați modul în care se obține accesul neautorizat la resursele de calcul."
-        },
-        "D1": {
-          "description": "Dezvoltarea Întrebări și întrebări de planificare"
-        },
-        "D3.Sources": {
-          "description": "Colectarea și evaluarea surselor"
-        },
-        "D3.Claims": {
-          "description": "Dezvoltarea revendicărilor și utilizarea dovezilor"
-        },
-        "D4.Conclusions": {
-          "description": "Comunicarea și criticarea concluziilor"
-        },
-        "D4.Action": {
-          "description": "Luând măsuri informate"
-        },
-        "D2.Civ": {
-          "description": "Civici"
-        },
-        "D2.Eco": {
-          "description": "Economie"
-        },
-        "RF": {
-          "description": "Citirea competențelor fundamentale"
-        },
-        "RH": {
-          "description": "Istoria lecturilor/Studii sociale"
-        },
-        "RST": {
-          "description": "Citirea Știință/Tehnică"
-        },
-        "WHST": {
-          "description": "Scrierea HS/S/T"
-        },
-        "ESS": {
-          "description": "Știința Pământului și Spațiului"
-        },
-        "ETS": {
-          "description": "Inginerie în științe"
-        },
-        "LS": {
-          "description": "Știința vieții"
-        },
-        "PS": {
-          "description": "Categorie: Științe fizice"
-        },
-        "ESS1": {
-          "description": "Locul Pământului în Univers"
-        },
-        "ESS2": {
-          "description": "Sistemele Pământului"
-        },
-        "ESS3": {
-          "description": "Pământul și activitatea umană"
-        },
-        "ETS1": {
-          "description": "Proiectare inginerească"
-        },
-        "LS1": {
-          "description": "De la molecule la organisme: structuri și procese"
-        },
-        "LS2": {
-          "description": "Ecosisteme: interacțiuni, energie și dinamică"
-        },
-        "LS3": {
-          "description": "Ereditate: Moștenirea și variația trăsăturilor"
-        },
-        "LS4": {
-          "description": "Evoluția biologică: unitate și diversitate"
-        },
-        "PS1": {
-          "description": "Materia și interacțiunile sale"
-        },
-        "PS2": {
-          "description": "Mișcare și stabilitate: Forțe și interacțiuni"
-        },
-        "PS3": {
-          "description": "Energie"
-        },
-        "PS4": {
-          "description": "Valurile și aplicațiile lor în tehnologii în transferul de informații"
-        },
-        "MOD-1": {
-          "description": "Unele obiecte sau concepte sunt atât de frecvent reprezentate încât programatorii se pot baza pe codul existent care a fost deja testat, permițându-le să scrie soluții mai rapid și cu un grad mai mare de încredere"
-        },
-        "MOD-2": {
-          "description": "Programatorii folosesc codul pentru a reprezenta un obiect fizic sau un concept nonfizic, real sau imaginat, prin definirea unei clase bazate pe attirbutele si/sau comportamentele obiectului sau conceptului"
-        },
-        "MOD-3": {
-          "description": "Când clasele mulitple conțin atribute și comportamente comune, programatorii creează o nouă clasă care conține atributele și comportamentele partajate formând o ierahie. Modificările efectuate la cel mai înalt nivel al ierarhiei se aplică subclaselor."
-        },
-        "VAR-1": {
-          "description": "Pentru a găsi soluții specifice la probleme generalizabile, programatorii includ variabile în codul lor, astfel încât același algoritm să ruleze folosind valori de intrare diferite"
-        },
-        "VAR-2": {
-          "description": "Pentru a gestiona cantități mari de date sau relații complexe în date, programatorii scriu cod care grupează datele împreună într-o singură structură de date wihtout creând variabile individuale pentru fiecare valoare."
+        "CO": {
+          "description": "Congruență"
         },
         "CON-1": {
           "description": "Modul în care variabilele și operatorii sunt secvențiate și combinate într-o expresie determină rezultatul calculat."
-        },
-        "CON-2": {
-          "description": "Programatorii încorporează iterația și selecția în cod ca modalitate de a furniza instrucțiuni computerului pentru a procesa fiecare dintre numeroasele valori posibile de intrare"
-        },
-        "MOD-1.A": {
-          "description": "Apel Metode de clasă de sistem pentru a genera ieșire la consola."
-        },
-        "MOD-1.B": {
-          "description": "Explicați relația dintre o clasă și un obiect."
-        },
-        "MOD-1.C": {
-          "description": "Identificați, folosind semnătura sa, constructorul corect apelat."
-        },
-        "MOD-1.D": {
-          "description": "Pentru crearea obiectului: a. Creați obiecte apelând constructori fără parametri. b. Creați obiecte apelând constructori cu parametri."
-        },
-        "MOD-1.E": {
-          "description": "Apelați metode nule non-statice fără parametri."
-        },
-        "MOD-1.F": {
-          "description": "Apelați metode nule non-statice cu parametri"
-        },
-        "MOD-1.G": {
-          "description": "Apelați metode non-statice non-nule cu sau fără parametri"
-        },
-        "MOD-1.H": {
-          "description": "Apelați metode statice."
-        },
-        "MOD-2.A": {
-          "description": "Desemnați constrângerile de acces și vizibilitate pentru clase, date, constructori și metode."
-        },
-        "MOD-2.B": {
-          "description": "Definiți variabilele de instanță pentru atributele care urmează să fie inițializate prin constructorii unei clase."
-        },
-        "MOD-2.C": {
-          "description": "Desribe funcționalitatea și utilizarea codului de program prin comentarii."
-        },
-        "MOD-2.D": {
-          "description": "Definiți comportamentele unui obiect prin metode non-nule fără prametere scrise într-o clasă."
-        },
-        "MOD-2.E": {
-          "description": "Definiți comportamentele unui obiect prin metode nule cu sau fără parametri scriși într-o clasă."
-        },
-        "MOD-2.F": {
-          "description": "Definiți comportamentele unui obiect prin metode non-nule cu parametrii scriși într-o clasă."
-        },
-        "MOD-2.G": {
-          "description": "Definiți comportamentele unei clase prin metode statice."
-        },
-        "MOD-2.H": {
-          "description": "Definiți variabilele statice care aparțin clasei."
-        },
-        "MOD-3.A": {
-          "description": "Desemnați vizibilitatea privată a variabilelor de instanță pentru a încapsula atributele unui obiect."
-        },
-        "MOD-3.B": {
-          "description": "Creați o relație de moștenire de la o subclasă la superclasă."
-        },
-        "MOD-3.C": {
-          "description": "Definiți variabilele de referință ale unei superclase care urmează să fie atribuite unui obiect dintr-o subclasă din aceeași ierarhie."
-        },
-        "MOD-3.D": {
-          "description": "Metode de apel într-o relație de moștenire."
-        },
-        "MOD-3.E": {
-          "description": "Apel Metode de clasă obiect prin moștenire."
-        },
-        "VAR-1.A": {
-          "description": "Creați literali de șir"
-        },
-        "VAR-1.B": {
-          "description": "Identificați cea mai potrivită categorie de tip de date pentru o anumită specificație"
-        },
-        "VAR-1.C": {
-          "description": "Declarați variabilele tipurilor corecte pentru a reprezenta date primitive"
-        },
-        "VAR-1.D": {
-          "description": "Definiți variabilele tipurilor corecte pentru a reprezenta datele de referință."
-        },
-        "VAR-1.E": {
-          "description": "Pentru clasa String: a. Creați obiecte String. b. Metode de șir de apeluri."
-        },
-        "VAR-1.F": {
-          "description": "Pentru clasele de înveliș: a. Creați obiecte întregi. b. Apelați metode întregi. c. Creați obiecte duble. d. Metode de apel Double."
-        },
-        "VAR-1.G": {
-          "description": "Explicați unde pot fi utilizate variabilele în codul programului."
-        },
-        "VAR-1.H": {
-          "description": "Evaluați expresiile de referință obiect care utilizează cuvântul cheie acest lucru."
-        },
-        "VAR-2.A": {
-          "description": "Reprezintă colecții de date de referință primitive sau obiect înrudite folosind obiecte unidimensionale (1D) matrice."
-        },
-        "VAR-2.B": {
-          "description": "Traversați elementele într-o matrice 1D."
-        },
-        "VAR-2.C": {
-          "description": "Traversați elementele într-un obiect matrice 1D folosind o buclă îmbunătățită pentru."
-        },
-        "VAR-2.D": {
-          "description": "Reprezintă colecții de date de referință obiect corelate folosind obiecte ArrayList."
-        },
-        "VAR-2.E": {
-          "description": "Pentru obiectele ArrayList: • Traversa folosind o buclă pentru sau în timp. • Traversa folosind o buclă îmbunătățită pentru."
-        },
-        "VAR-2.F": {
-          "description": "Reprezintă colecții de date de referință primitive sau obiecte conexe utilizând obiecte matrice bidimensionale (2D)."
-        },
-        "VAR-2.G": {
-          "description": "Pentru obiecte matrice 2D: • Traverse folosind imbricate pentru bucle. • Traverse folosind imbricate îmbunătățite pentru bucle."
         },
         "CON-1.A": {
           "description": "Evaluați expresiile aritmetice într-un cod de program"
@@ -541,6 +220,9 @@
         },
         "CON-1.H": {
           "description": "Comparați referințele obiectelor folosind expresii booleene în codul programului."
+        },
+        "CON-2": {
+          "description": "Programatorii încorporează iterația și selecția în cod ca modalitate de a furniza instrucțiuni computerului pentru a procesa fiecare dintre numeroasele valori posibile de intrare"
         },
         "CON-2.A": {
           "description": "Reprezintă procesele logice ramificate utilizând instrucțiuni condiționale."
@@ -593,29 +275,173 @@
         "CON-2.Q": {
           "description": "Aplicați algoritmi recursivi pentru a sorta elemente de obiecte matrice sau ArrayList."
         },
-        "APR": {
-          "description": "Aritmetică cu polinoame și expresii raționale"
-        },
-        "BF": {
-          "description": "Funcții de construcție"
-        },
-        "CC": {
-          "description": "Numărarea și Cardinalitatea"
-        },
-        "CED": {
-          "description": "Crearea ecuațiilor"
-        },
-        "CN": {
-          "description": "Sistemul de numere complexe"
-        },
-        "CO": {
-          "description": "Congruență"
-        },
         "CP": {
           "description": "Probabilitatea condiționată și regulile probabilității"
         },
+        "CPP": {
+          "description": "Practică de Calcul & Programare "
+        },
+        "CRD-1": {
+          "description": "Incorporarea mai multor perspective prin colaborare imbunatateste inovatiile de calcul dezvoltate."
+        },
+        "CRD-1.A": {
+          "description": "Explicați modul în care inovațiile de calcul sunt îmbunătățite prin colaborare."
+        },
+        "CRD-1.B": {
+          "description": "Explicați modul în care inovațiile de calcul sunt dezvoltate de grupuri de oameni."
+        },
+        "CRD-1.C": {
+          "description": "Demonstrați abilități interpersonale eficiente în timpul colaborării."
+        },
+        "CRD-2": {
+          "description": "Dezvoltatorii creează și inovează folosind un proces de proiectare iterativ care este axat pe utilizator, care încorporează cicluri de implementare/feedback și care lasă loc amplu pentru experimentare și asumare de riscuri."
+        },
+        "CRD-2.A": {
+          "description": "Descrieți scopul unei inovații de calcul."
+        },
+        "CRD-2.B": {
+          "description": "Explicați cum funcționează un program sau un segment de cod."
+        },
+        "CRD-2.C": {
+          "description": "Identificați intrările (intrările) unui program."
+        },
+        "CRD-2.D": {
+          "description": "Identificați rezultatele produse de un program."
+        },
+        "CRD-2.E": {
+          "description": "Dezvoltați un program utilizând un proces de dezvoltare."
+        },
+        "CRD-2.F": {
+          "description": "Proiectați un program și interfața sa de utilizator."
+        },
+        "CRD-2.G": {
+          "description": "Descrieți scopul unui segment de cod sau al unui program prin scrierea documentației."
+        },
+        "CRD-2.H": {
+          "description": "Recunoașteți segmentele de cod utilizate din alte surse."
+        },
+        "CRD-2.I": {
+          "description": "Pentru erori într-un algoritm sau program: \na. Identificați eroarea. \nb. Corectați eroarea."
+        },
+        "CRD-2.J": {
+          "description": "Identificați intrările și ieșirea sau comportamentele așteptate corespunzătoare care pot fi utilizate pentru a verifica corectitudinea unui algoritm sau a unui program."
+        },
+        "CS": {
+          "description": "Sisteme de calcul"
+        },
+        "CSN-1": {
+          "description": "Sistemele și rețelele informatice facilitează modul în care sunt transferate datele."
+        },
+        "CSN-1.A": {
+          "description": "Explicați modul în care dispozitivele de calcul funcționează împreună într-o rețea."
+        },
+        "CSN-1.B": {
+          "description": "Explicați cum funcționează Internetul."
+        },
+        "CSN-1.C": {
+          "description": "Explicați modul în care datele sunt trimise prin Internet prin pachete."
+        },
+        "CSN-1.D": {
+          "description": "Descrieți diferențele dintre Internet și World Wide Web."
+        },
+        "CSN-2": {
+          "description": "Calculul paralel și distribuit utilizează mai multe computere pentru a rezolva mai rapid probleme complexe sau pentru a procesa seturi mari de date."
+        },
+        "CSN-2.A": {
+          "description": "Comparați soluțiile de probleme care utilizează calcul secvențial, paralel și distribuit."
+        },
+        "CSN-2.B": {
+          "description": "Determinați eficiența soluțiilor secvențiale și paralele."
+        },
+        "CSN-2.C": {
+          "description": "Descrieți beneficiile și provocările calculelor paralele și distribuite."
+        },
+        "CT": {
+          "description": "Gândire Computațională"
+        },
+        "D1": {
+          "description": "Dezvoltarea Întrebări și întrebări de planificare"
+        },
+        "D2.Civ": {
+          "description": "Civici"
+        },
+        "D2.Eco": {
+          "description": "Economie"
+        },
+        "D3.Claims": {
+          "description": "Dezvoltarea revendicărilor și utilizarea dovezilor"
+        },
+        "D3.Sources": {
+          "description": "Colectarea și evaluarea surselor"
+        },
+        "D4.Action": {
+          "description": "Luând măsuri informate"
+        },
+        "D4.Conclusions": {
+          "description": "Comunicarea și criticarea concluziilor"
+        },
+        "DA": {
+          "description": "Date & Analiză"
+        },
+        "DAT-1": {
+          "description": "Modul în care computerul reprezintă date este diferite de modul în care datele sunt interpretate și afișate pentru utilizator. Programele sunt utilizate pentru traducerea datelor într-o reprezentare, care este mai ușoară de înțeles pentru oameni."
+        },
+        "DAT-1.A": {
+          "description": "Explicați modul în care datele pot fi reprezentate folosind biți."
+        },
+        "DAT-1.B": {
+          "description": "Explicați consecințele utilizării biților pentru a reprezenta date."
+        },
+        "DAT-1.C": {
+          "description": "Pentru numerele binare:\na. Calculați echivalentul binar (baza 2) al unui număr întreg pozitiv (baza 10) și invers. \nb. Comparați și comandați numere binare."
+        },
+        "DAT-1.D": {
+          "description": "Să compare algoritmii de comprimare a datelor pentru a determina care este mai bun într-un anumit context."
+        },
+        "DAT-2": {
+          "description": "Programele pot fi utilizate pentru procesarea datelor, ceea ce permite utilizatorilor să descopere informații și să creeze noi cunoștințe."
+        },
+        "DAT-2.A": {
+          "description": "Descrieți ce informații pot fi extrase din date."
+        },
+        "DAT-2.B": {
+          "description": "Descrieți ce informații pot fi extrase din metadate."
+        },
+        "DAT-2.C": {
+          "description": "Identificați provocările asociate procesării datelor."
+        },
+        "DAT-2.D": {
+          "description": "Extrageți informații din date utilizând un program."
+        },
+        "DAT-2.E": {
+          "description": "Explicați modul în care programele pot fi utilizate pentru a obține informații și cunoștințe din date."
+        },
         "EE": {
           "description": "Expresii și ecuații"
+        },
+        "ESS": {
+          "description": "Știința Pământului și Spațiului"
+        },
+        "ESS1": {
+          "description": "Locul Pământului în Univers"
+        },
+        "ESS2": {
+          "description": "Sistemele Pământului"
+        },
+        "ESS3": {
+          "description": "Pământul și activitatea umană"
+        },
+        "ETS": {
+          "description": "Inginerie în științe"
+        },
+        "ETS1": {
+          "description": "Proiectare inginerească"
+        },
+        "F": {
+          "description": "Funcţii"
+        },
+        "G": {
+          "description": "Geometrie"
         },
         "GMD": {
           "description": "Măsurarea și dimensiunea geometrică"
@@ -623,14 +449,68 @@
         "GPE": {
           "description": "Exprimarea proprietăților geometrice cu ecuații"
         },
+        "IC": {
+          "description": "Impactul computerelor"
+        },
         "ID": {
           "description": "Interpretarea datelor categorice și cantitative"
         },
         "IF": {
           "description": "Funcții de interpretare"
         },
+        "IOC-1": {
+          "description": "În timp ce inovațiile de calcul sunt de obicei concepute pentru a atinge un scop specific, acestea pot avea consecințe nedorite."
+        },
+        "IOC-1.A": {
+          "description": "Explicați modul în care un efect al unei inovații de calcul poate fi atât benefic, cât și dăunător."
+        },
+        "IOC-1.B": {
+          "description": "Explicați modul în care o inovație informatică poate avea un impact dincolo de scopul propus."
+        },
+        "IOC-1.C": {
+          "description": "Descrieți problemele care contribuie la decalajul digital."
+        },
+        "IOC-1.D": {
+          "description": "Explicați modul în care există părtinire în inovațiile de calcul."
+        },
+        "IOC-1.E": {
+          "description": "Explicați modul în care oamenii participă la procesele de rezolvare a problemelor la scară."
+        },
+        "IOC-1.F": {
+          "description": "Explicați modul în care utilizarea calculelor ar putea ridica preocupări juridice și etice."
+        },
+        "IOC-2": {
+          "description": "Utilizarea inovațiilor informatice poate implica riscuri pentru siguranța și identitatea personală."
+        },
+        "IOC-2.A": {
+          "description": "Descrieți riscurile la adresa vieții private cauzate de colectarea și stocarea datelor cu caracter personal pe un sistem informatic."
+        },
+        "IOC-2.B": {
+          "description": "Să explice cum resursele informatice pot fi protejate și pot fi utilizate în mod greșit."
+        },
+        "IOC-2.C": {
+          "description": "Explicați modul în care se obține accesul neautorizat la resursele de calcul."
+        },
+        "L": {
+          "description": "Limbă"
+        },
         "LE": {
           "description": "Modele liniare, pătratice și exponențiale ★"
+        },
+        "LS": {
+          "description": "Știința vieții"
+        },
+        "LS1": {
+          "description": "De la molecule la organisme: structuri și procese"
+        },
+        "LS2": {
+          "description": "Ecosisteme: interacțiuni, energie și dinamică"
+        },
+        "LS3": {
+          "description": "Ereditate: Moștenirea și variația trăsăturilor"
+        },
+        "LS4": {
+          "description": "Evoluția biologică: unitate și diversitate"
         },
         "MD": {
           "description": "Utilizarea probabilității de a lua decizii"
@@ -638,11 +518,110 @@
         "MG": {
           "description": "Modelare cu geometrie"
         },
+        "MOD-1": {
+          "description": "Unele obiecte sau concepte sunt atât de frecvent reprezentate încât programatorii se pot baza pe codul existent care a fost deja testat, permițându-le să scrie soluții mai rapid și cu un grad mai mare de încredere"
+        },
+        "MOD-1.A": {
+          "description": "Apel Metode de clasă de sistem pentru a genera ieșire la consola."
+        },
+        "MOD-1.B": {
+          "description": "Explicați relația dintre o clasă și un obiect."
+        },
+        "MOD-1.C": {
+          "description": "Identificați, folosind semnătura sa, constructorul corect apelat."
+        },
+        "MOD-1.D": {
+          "description": "Pentru crearea obiectului: a. Creați obiecte apelând constructori fără parametri. b. Creați obiecte apelând constructori cu parametri."
+        },
+        "MOD-1.E": {
+          "description": "Apelați metode nule non-statice fără parametri."
+        },
+        "MOD-1.F": {
+          "description": "Apelați metode nule non-statice cu parametri"
+        },
+        "MOD-1.G": {
+          "description": "Apelați metode non-statice non-nule cu sau fără parametri"
+        },
+        "MOD-1.H": {
+          "description": "Apelați metode statice."
+        },
+        "MOD-2": {
+          "description": "Programatorii folosesc codul pentru a reprezenta un obiect fizic sau un concept nonfizic, real sau imaginat, prin definirea unei clase bazate pe attirbutele si/sau comportamentele obiectului sau conceptului"
+        },
+        "MOD-2.A": {
+          "description": "Desemnați constrângerile de acces și vizibilitate pentru clase, date, constructori și metode."
+        },
+        "MOD-2.B": {
+          "description": "Definiți variabilele de instanță pentru atributele care urmează să fie inițializate prin constructorii unei clase."
+        },
+        "MOD-2.C": {
+          "description": "Desribe funcționalitatea și utilizarea codului de program prin comentarii."
+        },
+        "MOD-2.D": {
+          "description": "Definiți comportamentele unui obiect prin metode non-nule fără prametere scrise într-o clasă."
+        },
+        "MOD-2.E": {
+          "description": "Definiți comportamentele unui obiect prin metode nule cu sau fără parametri scriși într-o clasă."
+        },
+        "MOD-2.F": {
+          "description": "Definiți comportamentele unui obiect prin metode non-nule cu parametrii scriși într-o clasă."
+        },
+        "MOD-2.G": {
+          "description": "Definiți comportamentele unei clase prin metode statice."
+        },
+        "MOD-2.H": {
+          "description": "Definiți variabilele statice care aparțin clasei."
+        },
+        "MOD-3": {
+          "description": "Când clasele mulitple conțin atribute și comportamente comune, programatorii creează o nouă clasă care conține atributele și comportamentele partajate formând o ierahie. Modificările efectuate la cel mai înalt nivel al ierarhiei se aplică subclaselor."
+        },
+        "MOD-3.A": {
+          "description": "Desemnați vizibilitatea privată a variabilelor de instanță pentru a încapsula atributele unui obiect."
+        },
+        "MOD-3.B": {
+          "description": "Creați o relație de moștenire de la o subclasă la superclasă."
+        },
+        "MOD-3.C": {
+          "description": "Definiți variabilele de referință ale unei superclase care urmează să fie atribuite unui obiect dintr-o subclasă din aceeași ierarhie."
+        },
+        "MOD-3.D": {
+          "description": "Metode de apel într-o relație de moștenire."
+        },
+        "MOD-3.E": {
+          "description": "Apel Metode de clasă obiect prin moștenire."
+        },
+        "MP": {
+          "description": "Practici Matematice"
+        },
+        "NBT": {
+          "description": "Numere și Operațiuni În Baza Zece"
+        },
         "NF": {
           "description": "Număr și operații - fracții"
         },
+        "NI": {
+          "description": "Rețele și Internet"
+        },
         "NS": {
           "description": "Sistemul de numere"
+        },
+        "OA": {
+          "description": "Operațiuni și Gândire Algebrică"
+        },
+        "PS": {
+          "description": "Categorie: Științe fizice"
+        },
+        "PS1": {
+          "description": "Materia și interacțiunile sale"
+        },
+        "PS2": {
+          "description": "Mișcare și stabilitate: Forțe și interacțiuni"
+        },
+        "PS3": {
+          "description": "Energie"
+        },
+        "PS4": {
+          "description": "Valurile și aplicațiile lor în tehnologii în transferul de informații"
         },
         "Q": {
           "description": "Cantități"
@@ -650,11 +629,29 @@
         "REI": {
           "description": "Raționament cu ecuații și inegalități"
         },
+        "RF": {
+          "description": "Citirea competențelor fundamentale"
+        },
+        "RH": {
+          "description": "Istoria lecturilor/Studii sociale"
+        },
+        "RI": {
+          "description": "Citire Informațională"
+        },
+        "RL": {
+          "description": "Să citească Literatură"
+        },
         "RN": {
           "description": "Sistemul de numere reale"
         },
         "RP": {
           "description": "Rapoarte și relații proporționale"
+        },
+        "RST": {
+          "description": "Citirea Știință/Tehnică"
+        },
+        "SL": {
+          "description": "Vorbit & Ascultat"
         },
         "SP": {
           "description": "Statistici și Probabilitate"
@@ -668,62 +665,65 @@
         "TF": {
           "description": "Funcții trigonometrice"
         },
+        "VAR-1": {
+          "description": "Pentru a găsi soluții specifice la probleme generalizabile, programatorii includ variabile în codul lor, astfel încât același algoritm să ruleze folosind valori de intrare diferite"
+        },
+        "VAR-1.A": {
+          "description": "Creați literali de șir"
+        },
+        "VAR-1.B": {
+          "description": "Identificați cea mai potrivită categorie de tip de date pentru o anumită specificație"
+        },
+        "VAR-1.C": {
+          "description": "Declarați variabilele tipurilor corecte pentru a reprezenta date primitive"
+        },
+        "VAR-1.D": {
+          "description": "Definiți variabilele tipurilor corecte pentru a reprezenta datele de referință."
+        },
+        "VAR-1.E": {
+          "description": "Pentru clasa String: a. Creați obiecte String. b. Metode de șir de apeluri."
+        },
+        "VAR-1.F": {
+          "description": "Pentru clasele de înveliș: a. Creați obiecte întregi. b. Apelați metode întregi. c. Creați obiecte duble. d. Metode de apel Double."
+        },
+        "VAR-1.G": {
+          "description": "Explicați unde pot fi utilizate variabilele în codul programului."
+        },
+        "VAR-1.H": {
+          "description": "Evaluați expresiile de referință obiect care utilizează cuvântul cheie acest lucru."
+        },
+        "VAR-2": {
+          "description": "Pentru a gestiona cantități mari de date sau relații complexe în date, programatorii scriu cod care grupează datele împreună într-o singură structură de date wihtout creând variabile individuale pentru fiecare valoare."
+        },
+        "VAR-2.A": {
+          "description": "Reprezintă colecții de date de referință primitive sau obiect înrudite folosind obiecte unidimensionale (1D) matrice."
+        },
+        "VAR-2.B": {
+          "description": "Traversați elementele într-o matrice 1D."
+        },
+        "VAR-2.C": {
+          "description": "Traversați elementele într-un obiect matrice 1D folosind o buclă îmbunătățită pentru."
+        },
+        "VAR-2.D": {
+          "description": "Reprezintă colecții de date de referință obiect corelate folosind obiecte ArrayList."
+        },
+        "VAR-2.E": {
+          "description": "Pentru obiectele ArrayList: • Traversa folosind o buclă pentru sau în timp. • Traversa folosind o buclă îmbunătățită pentru."
+        },
+        "VAR-2.F": {
+          "description": "Reprezintă colecții de date de referință primitive sau obiecte conexe utilizând obiecte matrice bidimensionale (2D)."
+        },
+        "VAR-2.G": {
+          "description": "Pentru obiecte matrice 2D: • Traverse folosind imbricate pentru bucle. • Traverse folosind imbricate îmbunătățite pentru bucle."
+        },
         "VM": {
           "description": "Cantități vectoriale și matrice"
         },
-        "BI-1": {
-          "description": "Calculatoarele percep lumea folosind senzori"
+        "W": {
+          "description": "Scriere"
         },
-        "BI-2": {
-          "description": "Agenții mențin reprezentări ale lumii și le folosesc pentru raționament"
-        },
-        "BI-3": {
-          "description": "Calculatoarele pot învăța din date"
-        },
-        "BI-4": {
-          "description": "Agenții inteligenți necesită multe tipuri de cunoștințe pentru a interacționa în mod natural cu oamenii"
-        },
-        "BI-5": {
-          "description": "AI poate avea un impact asupra societății atât în moduri pozitive, cât și negative"
-        },
-        "3-A-i": {
-          "description": "Natura învățării - oameni vs mașini"
-        },
-        "3-A-ii": {
-          "description": "Natura învățării - găsirea tiparelor în date"
-        },
-        "3-A-iii": {
-          "description": "Natura învățării - formarea unui model"
-        },
-        "3-A-iv": {
-          "description": "Natura învățării - constructinv vs folosind un raționament"
-        },
-        "3-A-v": {
-          "description": "Natura învățării - ajustarea reprezentărilor interne"
-        },
-        "3-A-vi": {
-          "description": "Natura învățării - învățarea din experiență"
-        },
-        "3-B-i": {
-          "description": "Rețele neuronale - structura unei rețele neuronale"
-        },
-        "3-B-ii": {
-          "description": "Rețele neuronale - reglarea greutății"
-        },
-        "3-C-i": {
-          "description": "Seturi de date - seturi de caracteristici"
-        },
-        "3-C-ii": {
-          "description": "Seturi de date - seturi mari de date"
-        },
-        "3-C-iii": {
-          "description": "Seturi de date - bias"
-        },
-        "3": {
-          "description": "Elevii aplică instrumente digitale pentru a aduna, evalua și utiliza informații."
-        },
-        "5": {
-          "description": "Elevii înțeleg problemele umane, culturale și sociale legate de tehnologie și practică comportamentul juridic și etic."
+        "WHST": {
+          "description": "Scrierea HS/S/T"
         }
       }
     }

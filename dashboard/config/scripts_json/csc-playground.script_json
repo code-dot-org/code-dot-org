@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "playground",
-    "serialized_at": "2023-01-10 23:59:38 UTC",
+    "serialized_at": "2023-09-22 19:26:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1572,10 +1573,34 @@
     },
     {
       "chapter": 45,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "kjf_test_landmarks_2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "4789b720-e7e6-44ff-9fe3-327a4d7c5e75"
+      },
+      "level_keys": [
+        "kjf_test_landmarks_2"
+      ]
+    },
+    {
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "harvester_playground_functions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1592,11 +1617,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "laurel_playground_functions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1613,11 +1641,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "laurel_playground_abw"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2165,6 +2196,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "kjf_test_landmarks_2",
+        "script_level.level_keys": [
+          "kjf_test_landmarks_2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "4789b720-e7e6-44ff-9fe3-327a4d7c5e75"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "harvester_playground_functions",
         "script_level.level_keys": [
           "harvester_playground_functions"
@@ -2228,6 +2271,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

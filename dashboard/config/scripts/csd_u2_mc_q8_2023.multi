@@ -14,7 +14,7 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 **Content: Unit 2 Lesson 6, 11**
 
-The font size in `<h1>` is smaller than the font size in `<p>`, and the color is blue in `<p>`.
+The size of `<h1>` is smaller than the size of `<p>`. Since `<h1>` is normally larger than `<p>`, this must mean there are rules in the CSS that change the font-size of one or both of these tags. In addition, `<p>` is the color blue.
 MARKDOWN
 
 allow_multiple_attempts true

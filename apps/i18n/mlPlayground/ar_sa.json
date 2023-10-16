@@ -1,55 +1,17 @@
 {
-  "navigateForward": "الاستمرار",
-  "navigateBack": "العودة",
-  "tryAgain": "حاول مرة أخرى",
-  "navigateDone": "إنهاء",
-  "saveProgress": "حفظ\n",
-  "correctAnswer": "صحيح",
-  "incorrectAnswer": "غير صحيح",
-  "modelCardPossibleValuesMinimum": "على الاقل ",
-  "modelCardPossibleValuesMaximum": "الأكبر",
-  "columnInspectorDescription": "وصف",
-  "columnDetailsMinimumValue": "على الاقل ",
   "columnDetailsMaximumValue": "الأكبر",
+  "columnDetailsMinimumValue": "على الاقل ",
+  "columnInspectorDescription": "وصف",
+  "correctAnswer": "صحيح",
   "dataCardLastUpdated": "آخر تحديث",
-  "uniqueOptionsWarningNotice": "ملاحظة",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "العمر"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "الطقس"
+        "Height": {
+          "id": "الارتفاع"
         },
-        "day": {
-          "id": "يوم"
-        },
-        "shoe": {
-          "id": "حذاء"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "بصل"
-        },
-        "avocado": {
-          "id": "أفوكادو"
-        },
-        "corn": {
-          "id": "ذُرة"
-        },
-        "beans": {
-          "id": "فاصولياء "
-        },
-        "lime": {
-          "id": "ليمون أخضر"
+        "Length": {
+          "id": "الطول"
         }
       }
     },
@@ -57,97 +19,6 @@
       "fields": {
         "Month": {
           "id": "شهر"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "فطر"
-        },
-        "lobster": {
-          "id": "سلطعون"
-        },
-        "bacon": {
-          "id": "لحم مقدد"
-        },
-        "cheese": {
-          "id": "ابتسامة"
-        },
-        "meat": {
-          "id": "لحم"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "لون"
-        },
-        "music": {
-          "id": "موسيقى"
-        },
-        "food": {
-          "id": "طعام"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "العمر"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "الفئة"
-        },
-        "Description": {
-          "id": "وصف"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "فراولة"
-        },
-        "lime": {
-          "id": "ليمون أخضر"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "جوانب"
-        },
-        "size": {
-          "id": "الحجم"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "طماطم"
-        },
-        "avocado": {
-          "id": "أفوكادو"
-        },
-        "chicken": {
-          "id": "دجاجة"
-        },
-        "fruit": {
-          "id": "فاكهة"
-        },
-        "beans": {
-          "id": "فاصولياء "
-        },
-        "cheese": {
-          "id": "ابتسامة"
         }
       }
     },
@@ -161,36 +32,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "مدرسة"
-        },
-        "age": {
-          "id": "العمر"
-        },
-        "health": {
-          "id": "صحة"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "دجاجة"
-        },
-        "lamb": {
-          "id": "خروف"
-        },
-        "onion": {
-          "id": "بصل"
-        },
-        "cheese": {
-          "id": "ابتسامة"
+        "banana": {
+          "id": "موزة"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "العمر"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "لون"
+        },
+        "food": {
+          "id": "طعام"
+        },
+        "music": {
+          "id": "موسيقى"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "العمر"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "العمر"
@@ -207,63 +83,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "الدولة"
+        },
+        "Dance": {
+          "id": "الرقص"
+        },
+        "Music": {
+          "id": "الموسيقى"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "العمر"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "مجموع النقاط"
-        },
         "Country": {
           "id": "الدولة"
         },
         "Name": {
           "id": "الاسم"
         },
+        "Score": {
+          "id": "مجموع النقاط"
+        },
         "Star": {
           "id": "الركل"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "الرسام"
+        "cheese": {
+          "id": "ابتسامة"
+        },
+        "chicken": {
+          "id": "دجاجة"
+        },
+        "lamb": {
+          "id": "خروف"
+        },
+        "onion": {
+          "id": "بصل"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "أشخاص"
+        "Category": {
+          "id": "الفئة"
         },
-        "rhino": {
-          "id": "وحيد القرن"
-        },
-        "elephant": {
-          "id": "فيل"
-        },
-        "alligator": {
-          "id": "تمساح"
-        },
-        "trees": {
-          "id": "أشجار"
-        }
-      },
-      "name": "سفاري"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "الطول"
-        },
-        "Height": {
-          "id": "الارتفاع"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "ماينكرافت "
+        "Description": {
+          "id": "وصف"
         }
       }
     },
@@ -272,59 +150,101 @@
         "avocado": {
           "id": "أفوكادو"
         },
-        "onion": {
-          "id": "بصل"
-        },
         "ginger": {
           "id": "زنجبيل"
+        },
+        "onion": {
+          "id": "بصل"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "الموسيقى"
+        "bacon": {
+          "id": "لحم مقدد"
         },
-        "Dance": {
-          "id": "الرقص"
+        "cheese": {
+          "id": "ابتسامة"
         },
-        "Country": {
-          "id": "الدولة"
+        "lobster": {
+          "id": "سلطعون"
         },
-        "Internet": {
-          "id": "الإنترنت"
+        "meat": {
+          "id": "لحم"
         },
-        "Writing": {
-          "id": "الكتابة"
-        },
-        "Achievements": {
-          "id": "الإنجازات"
-        },
-        "Age": {
-          "id": "العمر",
-          "description": "العمر"
-        },
-        "Height": {
-          "id": "الارتفاع",
-          "description": "الارتفاع"
-        },
-        "Gender": {
-          "id": "الجنس",
-          "description": "الجنس"
+        "mushrooms": {
+          "id": "فطر"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "موزة"
+        "lime": {
+          "id": "ليمون أخضر"
+        },
+        "strawberry": {
+          "id": "فراولة"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "العمر"
+        "alligator": {
+          "id": "تمساح"
+        },
+        "elephant": {
+          "id": "فيل"
+        },
+        "people": {
+          "id": "أشخاص"
+        },
+        "rhino": {
+          "id": "وحيد القرن"
+        },
+        "trees": {
+          "id": "أشجار"
+        }
+      },
+      "name": "سفاري"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "أفوكادو"
+        },
+        "beans": {
+          "id": "فاصولياء "
+        },
+        "cheese": {
+          "id": "ابتسامة"
+        },
+        "chicken": {
+          "id": "دجاجة"
+        },
+        "fruit": {
+          "id": "فاكهة"
+        },
+        "tomato": {
+          "id": "طماطم"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "أفوكادو"
+        },
+        "beans": {
+          "id": "فاصولياء "
+        },
+        "corn": {
+          "id": "ذُرة"
+        },
+        "lime": {
+          "id": "ليمون أخضر"
+        },
+        "onion": {
+          "id": "بصل"
         }
       }
     },
@@ -338,18 +258,98 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "الموسيقى"
+        "sides": {
+          "id": "جوانب"
+        },
+        "size": {
+          "id": "الحجم"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "يوم"
+        },
+        "shoe": {
+          "id": "حذاء"
+        },
+        "weather": {
+          "id": "الطقس"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "الرسام"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "العمر"
+        },
+        "health": {
+          "id": "صحة"
+        },
+        "school": {
+          "id": "مدرسة"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "الإنجازات"
+        },
+        "Age": {
+          "description": "العمر",
+          "id": "العمر"
+        },
+        "Country": {
+          "id": "الدولة"
         },
         "Dance": {
           "id": "الرقص"
         },
-        "Country": {
-          "id": "الدولة"
+        "Gender": {
+          "description": "الجنس",
+          "id": "الجنس"
+        },
+        "Height": {
+          "description": "الارتفاع",
+          "id": "الارتفاع"
+        },
+        "Internet": {
+          "id": "الإنترنت"
+        },
+        "Music": {
+          "id": "الموسيقى"
+        },
+        "Writing": {
+          "id": "الكتابة"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "ماينكرافت "
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "غير صحيح",
+  "modelCardPossibleValuesMaximum": "الأكبر",
+  "modelCardPossibleValuesMinimum": "على الاقل ",
+  "navigateBack": "العودة",
+  "navigateDone": "إنهاء",
+  "navigateForward": "الاستمرار",
+  "saveProgress": "حفظ\n",
+  "tryAgain": "حاول مرة أخرى",
+  "uniqueOptionsWarningNotice": "ملاحظة"
 }

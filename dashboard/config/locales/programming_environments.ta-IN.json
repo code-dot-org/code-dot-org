@@ -2,236 +2,8 @@
   "ta-IN": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "வலை ஆய்வகம்"
-        },
-        "gamelab": {
-          "name": "விளையாட்டு லேப்",
-          "categories": {
-            "game_lab": {
-              "name": "விளையாட்டு லேப்",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ஸ்பிரைட்"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ஸ்பிரைட்"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "கருப்பு வெள்ளை"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "குறிப்பிட்ட URL இலிருந்து MP3 ஒலி கோப்பை இயக்குகிறது."
-                },
-                "showMobileControls": {
-                  "content": "நாடகம் விண்வெளி கீழே தெரியும் மொபைல் கட்டுப்பாடுகள் மாற்றுகிறது.",
-                  "short_description": "நாடகம் விண்வெளி கீழே தெரியும் மொபைல் கட்டுப்பாடுகள் மாற்றுகிறது."
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "ஸ்பைரல்"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "மனிதனின் உயரம்."
-                },
-                "sprite.width": {
-                  "return_value": "மனிதனின் அகலம்."
-                }
-              }
-            },
-            "groups": {
-              "name": "குழுக்கள்",
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ஸ்பிரைட்"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ஸ்பிரைட்"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "ஸ்பிரைட்"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "நிறம்"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "நிறம்"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "வரைதல்",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "ஸ்டார்"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "செயல்பாடு ஒவ்வொரு மரணதண்டனை இடையே மில்லி விநாடிகள் எண்ணிக்கை."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "செயல்பாடு இயக்கும் முன் காத்திருக்க மில்லி விநாடிகள் எண்ணிக்கை."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "கணிதம்",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "குறைந்தபட்ச எண் திரும்பியது"
-                    },
-                    "max": {
-                      "description": "அதிகபட்ச எண் திரும்பியது"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "குறைந்தபட்ச எண் திரும்பியது"
-                    },
-                    "max": {
-                      "description": "அதிகபட்ச எண் திரும்பியது"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "மாறிலிகள்",
-              "expressions": {
-                "assign_x": {
-                  "short_description": "ஏற்கெனவே விதிக்கப்பட்ட மாறினிக்கு ஒரு மதிப்பை வழங்குகிறது"
-                },
-                "declareNoAssign_x": {
-                  "short_description": "வழங்கப்பட்ட பெயருடன் ஒரு மாறினியை அறிவிக்கும்."
-                },
-                "declareAssign_x": {
-                  "short_description": "ஒரு மாறினிக்கு தொடக்க மதிப்பை அறிவித்து ஒதுக்கீடு செய்யும்"
-                },
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "தேட சரம்."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "தேட சரம்."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "சரம் நீளம்"
-                }
-              }
-            },
-            "functions": {
-              "name": "செயல்பாடுகள்"
-            }
-          }
-        },
         "applab": {
-          "name": "ஆப் லேப்",
-          "description": "ஆப் லேப் என்பது நீங்கள் எளிமையான செயலிகளை செய்வதறகு ஏற்ற ஒரு புரோகிராமிங் சூழல் ஆகும். ஒரு செயலியை வடிவமைக்கவும், பிளாக்கு கோடுகள் உடன் அல்லது ஜாவாஸ்கிரிப்ட் கொண்டு அதை செயல்படுத்தவும், பின்பு சில நொடிகளில் அதை பகிரவும்.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "இயல்புநிலை இடத்தில் கொடுக்கப்பட்ட ஐடி வழங்கப்பட்ட மற்றும் குறிப்பிடப்பட்ட உரை காண்பிக்கும் திரையில் ஒரு பொத்தானை உருவாக்குகிறது (0,0)."
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "சுருக்கவும் மற்றும் வளரவும் "
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "இயக்கி"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "குறிப்பிட்ட URL இலிருந்து MP3 ஒலி கோப்பை இயக்குகிறது."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "மாற்ற சொத்து."
-                    }
-                  },
-                  "short_description": "குறிப்பிட்ட உறுப்பு ஒரு புதிய மதிப்பு ஒரு சொத்து அமைக்கிறது."
-                },
-                "setScreen": {
-                  "short_description": "கொடுக்கப்பட்ட ScreenID க்கு திரையை அமைக்கிறது."
-                },
-                "showElement": {
-                  "short_description": "வழங்கப்பட்ட ஐடியுடன் உறுப்பு காட்டுகிறது."
-                },
-                "textLabel": {
-                  "short_description": "இயல்புநிலை இடத்தில் கொடுக்கப்பட்ட ஐடி வழங்கப்பட்ட மற்றும் குறிப்பிடப்பட்ட உரை காண்பிக்கும் திரையில் ஒரு உரை லேபிள் உருவாக்குகிறது (0,0)."
-                }
-              }
-            },
             "canvas": {
               "expressions": {
                 "circle": {
@@ -287,17 +59,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "படத் தரவைப் பிடிக்க பவுண்டிங் செவ்வகத்தின் உயரம்."
+                    },
+                    "width": {
+                      "description": "படத் தரவை கைப்பற்ற பிணைப்புச் செவ்வகத்தின் அகலம்."
+                    },
                     "x": {
                       "description": "பிக்சல்களில் x நிலையை பிடிப்பு தொடங்க."
                     },
                     "y": {
                       "description": "பிக்சல்களில் y நிலையை பிடிப்பு தொடங்க."
-                    },
-                    "width": {
-                      "description": "படத் தரவை கைப்பற்ற பிணைப்புச் செவ்வகத்தின் அகலம்."
-                    },
-                    "height": {
-                      "description": "படத் தரவைப் பிடிக்க பவுண்டிங் செவ்வகத்தின் உயரம்."
                     }
                   }
                 },
@@ -323,102 +95,133 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "செவ்வகத்தின் பிக்சல்களில் செங்குத்து உயரம்."
+                    },
+                    "width": {
+                      "description": "செவ்வகத்தின் பிக்சல்களில் கிடைமட்ட அகலம்."
+                    },
                     "x": {
                       "description": "செவ்வகத்தின் மேல் இடது மூலையின் பிக்சல்களில் x நிலை."
                     },
                     "y": {
                       "description": "செவ்வகத்தின் மேல் இடது மூலையில் பிக்சல்களில் y நிலை."
-                    },
-                    "width": {
-                      "description": "செவ்வகத்தின் பிக்சல்களில் கிடைமட்ட அகலம்."
-                    },
-                    "height": {
-                      "description": "செவ்வகத்தின் பிக்சல்களில் செங்குத்து உயரம்."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "பிக்சலில் அமைக்க ஆல்பா (ஒளிபுத் தன்மை) (0 முதல் 255 வரை) அளவு."
+                    },
                     "x": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் x நிலையை."
                     },
                     "y": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் y நிலையை."
-                    },
-                    "alphaValue": {
-                      "description": "பிக்சலில் அமைக்க ஆல்பா (ஒளிபுத் தன்மை) (0 முதல் 255 வரை) அளவு."
                     }
                   },
                   "short_description": "கொடுக்கப்பட்ட படத் தரவுகளில் கொடுக்கப்பட்ட x மற்றும் y நிலையில் அமைந்துள்ள பிக்சலின் நிறத்தில் ஆல்பா (ஒளிபுத் தன்மை) (0 முதல் 255 வரையிலான) அளவை அமைக்கிறது."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "பிக்சலில் அமைக்க நீல அளவு (0 முதல் 255 வரை)."
+                    },
                     "x": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் x நிலையை."
                     },
                     "y": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் y நிலையை."
-                    },
-                    "blueValue": {
-                      "description": "பிக்சலில் அமைக்க நீல அளவு (0 முதல் 255 வரை)."
                     }
                   },
                   "short_description": "கொடுக்கப்பட்ட படத் தரவில் கொடுக்கப்பட்ட x மற்றும் y நிலையில் அமைந்துள்ள பிக்சலின் நிறத்தில் நீல அளவு (0 முதல் 255 வரையிலான) அளவை BlueValue உள்ளீடு தொகைக்கு அமைக்கிறது."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "பிக்சலில் அமைக்க பச்சை அளவு (0 முதல் 255 வரை)."
+                    },
                     "x": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் x நிலையை."
                     },
                     "y": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் y நிலையை."
-                    },
-                    "greenValue": {
-                      "description": "பிக்சலில் அமைக்க பச்சை அளவு (0 முதல் 255 வரை)."
                     }
                   },
                   "short_description": "கொடுக்கப்பட்ட படத் தரவுகளில் கொடுக்கப்பட்ட x மற்றும் y நிலையில் அமைந்துள்ள பிக்சலின் நிறத்தில் பச்சை அளவு (0 முதல் 255 வரை) அமைக்கிறது."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "விருப்ப. பிக்சலில் அமைக்க ஒளிபான அளவு (0 முதல் 255 வரை). 255 (முழு ஒளிபுகா) க்கு இயல்புநிலை."
+                    },
+                    "blue": {
+                      "description": "பிக்சலில் அமைக்க நீல அளவு (0 முதல் 255 வரை)."
+                    },
+                    "green": {
+                      "description": "பிக்சலில் அமைக்க பச்சை அளவு (0 முதல் 255 வரை)."
+                    },
+                    "red": {
+                      "description": "பிக்சலில் அமைக்க சிவப்பு அளவு (0 முதல் 255 வரை)."
+                    },
                     "x": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் x நிலையை."
                     },
                     "y": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் y நிலையை."
-                    },
-                    "red": {
-                      "description": "பிக்சலில் அமைக்க சிவப்பு அளவு (0 முதல் 255 வரை)."
-                    },
-                    "green": {
-                      "description": "பிக்சலில் அமைக்க பச்சை அளவு (0 முதல் 255 வரை)."
-                    },
-                    "blue": {
-                      "description": "பிக்சலில் அமைக்க நீல அளவு (0 முதல் 255 வரை)."
-                    },
-                    "alpha": {
-                      "description": "விருப்ப. பிக்சலில் அமைக்க ஒளிபான அளவு (0 முதல் 255 வரை). 255 (முழு ஒளிபுகா) க்கு இயல்புநிலை."
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
+                    "redValue": {
+                      "description": "பிக்சலில் அமைக்க சிவப்பு அளவு (0 முதல் 255 வரை)."
+                    },
                     "x": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் x நிலையை."
                     },
                     "y": {
                       "description": "படத்தின் மேல் இடது மூலையில் இருந்து தொடங்கி பிக்சல்களில் y நிலையை."
-                    },
-                    "redValue": {
-                      "description": "பிக்சலில் அமைக்க சிவப்பு அளவு (0 முதல் 255 வரை)."
                     }
                   },
                   "short_description": "கொடுக்கப்பட்ட படத் தரவில் கொடுக்கப்பட்ட x மற்றும் y நிலையில் அமைந்துள்ள பிக்சலின் நிறத்தில் சிவப்பு அளவு (0 முதல் 255 வரையிலான) RedValue உள்ளீட்டுத் தொகைக்கு அமைக்கிறது."
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "SetTimeOutout செயல்பாடு திரும்பிய மதிப்பு ரத்து செய்ய."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "செயல்பாடு ஒவ்வொரு மரணதண்டனை இடையே மில்லி விநாடிகள் எண்ணிக்கை."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "செயல்பாடு இயக்கும் முன் காத்திருக்க மில்லி விநாடிகள் எண்ணிக்கை."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "இயக்கி"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "தகவல்கள்",
               "expressions": {
                 "drawChartFromRecords": {
                   "palette_params": {
@@ -469,7 +272,36 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "தகவல்கள்"
+            },
+            "functions": {
+              "name": "செயல்பாடுகள்"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    },
+                    "min": {
+                      "description": "குறைந்தபட்ச எண் திரும்பியது"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    },
+                    "min": {
+                      "description": "குறைந்தபட்ச எண் திரும்பியது"
+                    }
+                  }
+                }
+              },
+              "name": "கணிதம்"
             },
             "turtle": {
               "expressions": {
@@ -536,68 +368,52 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "SetTimeOutout செயல்பாடு திரும்பிய மதிப்பு ரத்து செய்ய."
-                    }
-                  }
+                "button": {
+                  "short_description": "இயல்புநிலை இடத்தில் கொடுக்கப்பட்ட ஐடி வழங்கப்பட்ட மற்றும் குறிப்பிடப்பட்ட உரை காண்பிக்கும் திரையில் ஒரு பொத்தானை உருவாக்குகிறது (0,0)."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "செயல்பாடு ஒவ்வொரு மரணதண்டனை இடையே மில்லி விநாடிகள் எண்ணிக்கை."
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "சுருக்கவும் மற்றும் வளரவும் "
                     }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "செயல்பாடு இயக்கும் முன் காத்திருக்க மில்லி விநாடிகள் எண்ணிக்கை."
-                    }
-                  }
-                },
-                "timedLoop": {
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "இயக்கி"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "கணிதம்",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "குறைந்தபட்ச எண் திரும்பியது"
-                    },
-                    "max": {
-                      "description": "அதிகபட்ச எண் திரும்பியது"
-                    }
-                  }
                 },
-                "randomNumber": {
+                "playSound": {
+                  "short_description": "குறிப்பிட்ட URL இலிருந்து MP3 ஒலி கோப்பை இயக்குகிறது."
+                },
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "குறைந்தபட்ச எண் திரும்பியது"
-                    },
-                    "max": {
-                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    "property": {
+                      "description": "மாற்ற சொத்து."
                     }
-                  }
+                  },
+                  "short_description": "குறிப்பிட்ட உறுப்பு ஒரு புதிய மதிப்பு ஒரு சொத்து அமைக்கிறது."
+                },
+                "setScreen": {
+                  "short_description": "கொடுக்கப்பட்ட ScreenID க்கு திரையை அமைக்கிறது."
+                },
+                "showElement": {
+                  "short_description": "வழங்கப்பட்ட ஐடியுடன் உறுப்பு காட்டுகிறது."
+                },
+                "textLabel": {
+                  "short_description": "இயல்புநிலை இடத்தில் கொடுக்கப்பட்ட ஐடி வழங்கப்பட்ட மற்றும் குறிப்பிடப்பட்ட உரை காண்பிக்கும் திரையில் ஒரு உரை லேபிள் உருவாக்குகிறது (0,0)."
                 }
               }
             },
             "variables": {
-              "name": "மாறிலிகள்",
               "expressions": {
-                "declareNoAssign_x": {
-                  "short_description": "வழங்கப்பட்ட பெயருடன் ஒரு மாறினியை அறிவிக்கும்."
+                "addPair": {
+                  "return_value": "எதுவுமில்லை"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "அறிவிக்க மற்றும் ஒரு மாறி ஒரு வரிசை ஒதுக்க"
                 },
                 "declareAssign_object": {
                   "examples": {
@@ -609,8 +425,8 @@
                 "declareAssign_x": {
                   "short_description": "ஒரு மாறினிக்கு தொடக்க மதிப்பை அறிவித்து ஒதுக்கீடு செய்யும்"
                 },
-                "declareAssign_list_123": {
-                  "short_description": "அறிவிக்க மற்றும் ஒரு மாறி ஒரு வரிசை ஒதுக்க"
+                "declareNoAssign_x": {
+                  "short_description": "வழங்கப்பட்ட பெயருடன் ஒரு மாறினியை அறிவிக்கும்."
                 },
                 "includes": {
                   "palette_params": {
@@ -626,53 +442,237 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "எதுவுமில்லை"
+                "length": {
+                  "return_value": "சரம் நீளம்"
+                }
+              },
+              "name": "மாறிலிகள்"
+            }
+          },
+          "description": "ஆப் லேப் என்பது நீங்கள் எளிமையான செயலிகளை செய்வதறகு ஏற்ற ஒரு புரோகிராமிங் சூழல் ஆகும். ஒரு செயலியை வடிவமைக்கவும், பிளாக்கு கோடுகள் உடன் அல்லது ஜாவாஸ்கிரிப்ட் கொண்டு அதை செயல்படுத்தவும், பின்பு சில நொடிகளில் அதை பகிரவும்.",
+          "name": "ஆப் லேப்"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "செயல்பாடு ஒவ்வொரு மரணதண்டனை இடையே மில்லி விநாடிகள் எண்ணிக்கை."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "செயல்பாடு இயக்கும் முன் காத்திருக்க மில்லி விநாடிகள் எண்ணிக்கை."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ஸ்டார்"
+                    }
+                  }
+                }
+              },
+              "name": "வரைதல்"
+            },
+            "functions": {
+              "name": "செயல்பாடுகள்"
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "கருப்பு வெள்ளை"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "குறிப்பிட்ட URL இலிருந்து MP3 ஒலி கோப்பை இயக்குகிறது."
+                },
+                "showMobileControls": {
+                  "content": "நாடகம் விண்வெளி கீழே தெரியும் மொபைல் கட்டுப்பாடுகள் மாற்றுகிறது.",
+                  "short_description": "நாடகம் விண்வெளி கீழே தெரியும் மொபைல் கட்டுப்பாடுகள் மாற்றுகிறது."
+                }
+              },
+              "name": "விளையாட்டு லேப்"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ஸ்பிரைட்"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "நிறம்"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "நிறம்"
+                    }
+                  }
+                }
+              },
+              "name": "குழுக்கள்"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    },
+                    "min": {
+                      "description": "குறைந்தபட்ச எண் திரும்பியது"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "அதிகபட்ச எண் திரும்பியது"
+                    },
+                    "min": {
+                      "description": "குறைந்தபட்ச எண் திரும்பியது"
+                    }
+                  }
+                }
+              },
+              "name": "கணிதம்"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "ஸ்பைரல்"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "மனிதனின் உயரம்."
+                },
+                "sprite.width": {
+                  "return_value": "மனிதனின் அகலம்."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "assign_x": {
+                  "short_description": "ஏற்கெனவே விதிக்கப்பட்ட மாறினிக்கு ஒரு மதிப்பை வழங்குகிறது"
+                },
+                "declareAssign_x": {
+                  "short_description": "ஒரு மாறினிக்கு தொடக்க மதிப்பை அறிவித்து ஒதுக்கீடு செய்யும்"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "வழங்கப்பட்ட பெயருடன் ஒரு மாறினியை அறிவிக்கும்."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "தேட சரம்."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "தேட சரம்."
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "சரம் நீளம்"
                 }
-              }
-            },
-            "functions": {
-              "name": "செயல்பாடுகள்"
+              },
+              "name": "மாறிலிகள்"
             }
-          }
+          },
+          "name": "விளையாட்டு லேப்"
+        },
+        "javalab": {
+          "name": "ஜாவா லேப்"
         },
         "spritelab": {
-          "name": "ஸ்பிரைட் லேப்",
           "categories": {
-            "world": {
-              "name": "உலகம்"
-            },
             "actions": {
               "name": "செயல்கள்"
             },
             "events": {
               "name": "நிகழ்வுகள்"
             },
-            "loops": {
-              "name": "சுழற்சிகள்"
-            },
-            "variables": {
-              "name": "மாறிலிகள்"
-            },
-            "math": {
-              "name": "கணிதம்"
+            "functions": {
+              "name": "செயல்பாடுகள்"
             },
             "logic": {
               "name": "தர்க்கம்"
             },
-            "functions": {
-              "name": "செயல்பாடுகள்"
+            "loops": {
+              "name": "சுழற்சிகள்"
+            },
+            "math": {
+              "name": "கணிதம்"
             },
             "text": {
               "name": "உரை"
+            },
+            "variables": {
+              "name": "மாறிலிகள்"
+            },
+            "world": {
+              "name": "உலகம்"
             }
-          }
+          },
+          "name": "ஸ்பிரைட் லேப்"
         },
-        "javalab": {
-          "name": "ஜாவா லேப்"
+        "weblab": {
+          "name": "வலை ஆய்வகம்"
         }
       }
     }

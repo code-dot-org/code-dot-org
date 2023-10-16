@@ -62,13 +62,11 @@ module Cdo
     # @return [Concurrent::Promises::Future<String>] Resolved value
     def get(key)
       key = key.to_s
-      @values[key] ||= begin
-        client_promise.then do |client|
-          parse_json(get_secret_value(client, key))
-        rescue => exception
-          exception.message << " Key: #{key}"
-          raise
-        end
+      @values[key] ||= client_promise.then do |client|
+        parse_json(get_secret_value(client, key))
+      rescue => exception
+        exception.message << " Key: #{key}"
+        raise
       end
     end
 

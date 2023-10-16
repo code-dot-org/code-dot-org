@@ -36,22 +36,22 @@ Alkalmazottaid bátorításához és osztálytermekhez való csatlakozásukról 
 ## 3. Válassz tevékenységet
 Minden korosztály számára kínálunk a partnereink által elkészített <a href={{ urls/learn }}">1 óra hosszú, mókás gyakorlatok</a>. Próbáld ki őket!
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+A **Kódolás órája tevékenységek** minimális felkészülési időt igényelnek, és önállóan elvégezhetőek - így a résztvevők a saját tempójukban és tudásszintjük szerint dolgozhatnak.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+## 4. Tervezd meg, hogy milyen technikai feltételekre van szükség - a számítógép opcionális dolog
 
-A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számítógépek kellenek. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számítógépek kellenek. De **nem** szükséges minden tanuló számára számítógépet biztosítani. A programot akár számítógépek nélkül is meg lehet valósítani.
 
-**Plan Ahead!** Do the following before your event starts:
+**Tervezz előre!** Végezd el a következőket az esemény előtt:
 
-- Test activities on computers or devices. Győződj meg arról, hogy megfelelően működnek a böngészőben, a videókkal és hangokkal egyetemben.
+- Teszteld a tevékenységeket a számítógépeken vagy az eszközökön. Győződj meg arról, hogy megfelelően működnek a böngészőben, a videókkal és hangokkal egyetemben.
 - Biztosíts fejhallgatót, vagy kérd meg a résztvevőket, hogy hozzanak magukkal sajátot, ha úgy döntesz, hogy hanganyag használatával szeretnéd a gyakorlatokat még jobbá tenni.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ha a részvevők összedolgoznak, akkor tudnak egymásnak segíteni és kevésbé támaszkodnak a tanárra. Megláthatják azt, hogy az informatika közösségépítő hatású, és együttműködésre sarkall.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Nem áll rendelkezésre elegendő eszköz?** Alkalmazd a [társas programozást](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ha a részvevők összedolgoznak, akkor tudnak egymásnak segíteni és kevésbé támaszkodnak a tanárra. Megláthatják azt, hogy az informatika közösségépítő hatású, és együttműködésre sarkall.
+- **Nem elég gyors az internet?** Játszd le a videókat az esemény elején, így nem kell minden résztvevőnek letöltenie a saját videóját. Vagy próbáld ki a számítógép nélküli vagy az internet nélküli tevékenységeket.
 
-## 5.  Start your Hour of Code off with an inspiring video
+## 5.  Indítsd a Kódolás óráját egy inspiráló videóval!
 Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, valamint megvitatja, hogy a számítógépes tudomány milyen hatással van életünk minden részére. Oszd meg másokkal az inspirációt azáltal, hogy elmondod miért is foglalkozol az informatikával! Mondd el, hogy mi a te szereped a vállalatnál, ha még nem ismerne eléggé a környezeted!
 
 **Mutass egy inspiráló videót az alábbiak közül:**
@@ -72,7 +72,7 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 ## 6. Kódolj!
 **Közvetlen részvétel**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
+- Írja fel a tevékenység linkjét a táblára. Keresd meg a linket a [kiválasztott tevékenységről szóló tájékoztatóban]({{ urls/learn }}) a résztvevők száma alatt.
 - Fiatal tanulóknak töltsd be előre a bemutatókat, vagy mentsd el a könyvjelzők közé, hogy megtalálják.
 
 **Ha valaki megakad, nehézségbe ütközik, akkor az alábbiakat érdemes reagálni:**

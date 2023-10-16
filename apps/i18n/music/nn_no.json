@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "spel lyd",
   "blockly_blockPlaySoundAtMeasureTooltip": "spel lyd",
+  "blockly_blockPlaySoundTooltip": "spel lyd",
   "blockly_blockRepeatTooltip": "gjenta",
   "blockly_blockWhenRun": "når den køyrer",
   "blockly_blockWhenRunTooltip": "når den køyrer",
@@ -10,10 +10,10 @@
   "blockly_toolboxCategoryLogic": "Logikk",
   "blockly_toolboxCategoryMath": "Matematikk",
   "blockly_toolboxCategoryVariables": "Variablar",
+  "continue": "Hald fram",
   "feedback": "Tilbakemelding",
-  "share": "Del",
-  "startOver": "Start på nytt",
   "panelHeaderInstructions": "Instruksjonar",
   "panelHeaderWorkspace": "Arbeidsområde: ",
-  "continue": "Hald fram"
+  "share": "Del",
+  "startOver": "Start på nytt"
 }

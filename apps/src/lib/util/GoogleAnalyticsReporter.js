@@ -145,10 +145,10 @@ class GoogleAnalyticsReporter {
    * Public function exposed to track custom events in Google Analytics
    */
   trackEvent(category_value, action_name, dimensions) {
-    if (this.isGoogleAnalyticsUniversalEnabled) {
+    if (googleAnalyticsReporter.isGoogleAnalyticsUniversalEnabled) {
       ga('send', 'event', category_value, action_name, dimensions);
     }
-    if (this.isGoogleAnalytics4Enabled) {
+    if (googleAnalyticsReporter.isGoogleAnalytics4Enabled) {
       gtag('event', action_name, {
         eventCategory: category_value,
         dimensions,
