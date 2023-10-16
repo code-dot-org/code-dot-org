@@ -38,6 +38,7 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::Courses.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CurriculumContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::DataContent.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::DeviseContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Docs.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Scripts.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::SharedFunctions.expects(:sync_out).in_sequence(execution_sequence)
