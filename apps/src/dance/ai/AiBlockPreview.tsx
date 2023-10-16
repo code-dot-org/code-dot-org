@@ -21,7 +21,6 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
 
   const [done, setDone] = useState<boolean>(false);
 
-  // Update currentTick using a timer.
   useEffect(() => {
     refTimer.current = window.setTimeout(
       () => {
