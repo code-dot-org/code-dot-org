@@ -697,6 +697,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
+    // The hidden definition workspace is not rendered, so do not try to add
+    // svg frames around the definitions.
+    hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
 

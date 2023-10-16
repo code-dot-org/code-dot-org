@@ -55,21 +55,23 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         type: 'input_dummy',
         name: 'TOP',
       },
-      ...(useModalFunctionEditor && [
-        {
-          type: 'field_label',
-          text: `${msg.description()}: `,
-          name: 'DESCRIPTION_LABEL',
-        },
-        {
-          type: 'field_input',
-          name: 'DESCRIPTION',
-          text: '',
-        },
-        {
-          type: 'input_dummy',
-        },
-      ]),
+      ...(useModalFunctionEditor
+        ? [
+            {
+              type: 'field_label',
+              text: `${msg.description()}: `,
+              name: 'DESCRIPTION_LABEL',
+            },
+            {
+              type: 'field_input',
+              name: 'DESCRIPTION',
+              text: '',
+            },
+            {
+              type: 'input_dummy',
+            },
+          ]
+        : []),
     ],
     args1: [
       {
