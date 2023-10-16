@@ -258,16 +258,18 @@ export default function LearningGoal({
 
       {/*TODO: Pass through data to child component*/}
       <div>
-        {teacherHasEnabledAi && !!studentLevelInfo && (
-          <div className={style.openedAiAssessment}>
-            <AiAssessment
-              isAiAssessed={learningGoal.aiEnabled}
-              studentName={studentLevelInfo.name}
-              aiConfidence={aiConfidence}
-              aiUnderstandingLevel={aiUnderstanding}
-            />
-          </div>
-        )}
+        {teacherHasEnabledAi &&
+          !!studentLevelInfo &&
+          aiUnderstanding !== undefined && (
+            <div className={style.openedAiAssessment}>
+              <AiAssessment
+                isAiAssessed={learningGoal.aiEnabled}
+                studentName={studentLevelInfo.name}
+                aiConfidence={aiConfidence}
+                aiUnderstandingLevel={aiUnderstanding}
+              />
+            </div>
+          )}
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
