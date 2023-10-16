@@ -16,7 +16,7 @@ const INPUTS = {
 export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
-  initializeMiniToolbox(renderToolboxBeforeStack = false) {
+  initializeMiniToolbox(miniToolboxBlocks, renderToolboxBeforeStack = false) {
     // Function to create the flyout
     const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);

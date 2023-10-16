@@ -157,8 +157,9 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
     return;
   }
 
-  const flyoutToggleButton =
-    Blockly.customBlocks.initializeMiniToolbox.bind(this)(true);
+  const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
+    this
+  )(undefined, true);
   Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
     miniToolboxBlocks,
     flyoutToggleButton,
