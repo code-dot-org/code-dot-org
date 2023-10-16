@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-10 17:07:48 UTC",
+    "serialized_at": "2023-10-13 20:09:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -192,6 +192,23 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csp-summer-day2"
       }
+    },
+    {
+      "key": "Asynchronous Part 2",
+      "name": "Asynchronous Part 1",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**Purpose:**\nIn this activity, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum..\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Learn how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2"
+      }
     }
   ],
   "lesson_activities": [
@@ -366,6 +383,18 @@
         "lesson_activity.key": "db9843e6-1337-4933-917c-9930a1c3ada7",
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2"
+      }
+    },
+    {
+      "key": "5f26768b-7259-454e-abc8-dea3c112b22b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f26768b-7259-454e-abc8-dea3c112b22b",
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day2"
       }
     }
@@ -1160,6 +1189,17 @@
         "activity_section.key": "6b2c65d1-2023-48a8-b434-9cf04e12e223",
         "lesson_activity.key": "db9843e6-1337-4933-917c-9930a1c3ada7"
       }
+    },
+    {
+      "key": "8ea4bbf1-c11d-4594-801b-73fd7439290a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ea4bbf1-c11d-4594-801b-73fd7439290a",
+        "lesson_activity.key": "5f26768b-7259-454e-abc8-dea3c112b22b"
+      }
     }
   ],
   "script_levels": [
@@ -1169,6 +1209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -1191,6 +1234,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -1213,6 +1259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -1235,6 +1284,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -1257,6 +1309,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1279,6 +1334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2"
+        ],
         "progression": "Sampling an Analog Image: Challenge C"
       },
       "bonus": false,
@@ -1301,6 +1359,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data2022_2"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1323,6 +1384,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling_2"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1345,6 +1409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -1367,6 +1434,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression2022_2"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1389,6 +1459,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1411,6 +1484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_3"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -1433,6 +1509,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_3"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -1455,6 +1534,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_3"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1469,6 +1551,50 @@
       },
       "level_keys": [
         "U1L11 CPS CFU Cell Phone_3"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-Context1"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2",
+        "activity_section.key": "8ea4bbf1-c11d-4594-801b-73fd7439290a"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-Context1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources3_1"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2",
+        "activity_section.key": "8ea4bbf1-c11d-4594-801b-73fd7439290a"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day2-UsingResources3_1"
       ]
     }
   ],
@@ -1639,6 +1765,30 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csp-summer-day2",
         "activity_section.key": "e89f3b4f-b6ce-40fc-bdd3-94f370295cf2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-Context1",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-Context1"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2",
+        "activity_section.key": "8ea4bbf1-c11d-4594-801b-73fd7439290a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day2-UsingResources3_1",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources3_1"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2",
+        "activity_section.key": "8ea4bbf1-c11d-4594-801b-73fd7439290a"
       }
     }
   ],
