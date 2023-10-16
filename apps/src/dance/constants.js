@@ -50,7 +50,7 @@ export const oldDanceColorPalettes =
   'rave, cool, electronic, iceCream, neon, tropical, vintage, warm';
 
 export const poetryColorPalettes =
-  'blooming_petals, clouds, frosted_grid, starburst';
+  'grayscale, sky, ocean, sunrise, sunset, spring, summer, autumn, winter, twinkling, rainbow, roses';
 
 export const danceForegroundEffects =
   'bubbles, confetti, hearts_red, music_notes, pineapples, pizzas, smiling_poop, rain, floating_rainbows, smile_face, spotlight, color_lights, raining_tacos';
