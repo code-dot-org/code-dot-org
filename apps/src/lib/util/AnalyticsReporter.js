@@ -31,7 +31,7 @@ class AnalyticsReporter {
     const identifyObj = new Identify();
     const formattedUserId = this.formatUserId(userId);
     // enabledExperiments sometimes has duplicates
-    const uniqueExperiments = [...new Set(enabledExperiments)];
+    const uniqueExperiments = [...new Set(enabledExperiments)].sort();
     setUserId(formattedUserId);
     identifyObj.set('userType', userType);
     identifyObj.set('signInState', !!userId);
