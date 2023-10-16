@@ -14,6 +14,5 @@
 #  index_lti_deployments_on_lti_integration_id  (lti_integration_id)
 #
 class LtiDeployment < ApplicationRecord
-  acts_as_paranoid
   belongs_to :lti_integration
 end

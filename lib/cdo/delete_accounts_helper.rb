@@ -428,7 +428,7 @@ class DeleteAccountsHelper
 
     user.destroy
 
-    purge_lti_user_identities(user.id)
+    purge_lti_user_identities(user)
     purge_teacher_feedbacks(user.id)
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
