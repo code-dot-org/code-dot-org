@@ -15,6 +15,8 @@
 
 #defaultSong.in.collapse
   %p Please note - If you are limiting songs in the Limit Song Selection input, the Default Song must be one of those songs.
+  If not, the first song in the list of selected songs will be used as the default song.
+  %p
   = f.label :default_song, 'Default Song'
   = f.select :default_song, options_for_select(@level.class.hoc_songs, selectedSongMap[@level.default_song] ? @level.default_song : fallbackDefaultSong)
 
