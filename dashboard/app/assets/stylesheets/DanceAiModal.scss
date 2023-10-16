@@ -10,10 +10,7 @@
 
 // Fade in for 1 second after a 1 second delay.
 @keyframes appear1 {
-  0% {
-    opacity: 0;
-  }
-  50% {
+  0%, 50% {
     opacity: 0;
   }
   100% {
@@ -23,10 +20,7 @@
 
 // Fade in for 1 second after a 2 second delay.
 @keyframes appear2 {
-  0% {
-    opacity: 0;
-  }
-  66% {
+  0%, 66% {
     opacity: 0;
   }
   100% {
@@ -36,10 +30,7 @@
 
 // Fade in for 1 second after a 3 second delay.
 @keyframes appear3 {
-  0% {
-    opacity: 0;
-  }
-  75% {
+  0%, 75% {
     opacity: 0;
   }
   100% {
@@ -49,10 +40,7 @@
 
 // Fade in for 1 second after a 4 second delay.
 @keyframes appear4 {
-  0% {
-    opacity: 0;
-  }
-  80% {
+  0%, 80% {
     opacity: 0;
   }
   100% {
@@ -62,10 +50,7 @@
 
 // Fade in for 1 second after a 5 second delay.
 @keyframes appear5 {
-  0% {
-    opacity: 0;
-  }
-  83% {
+  0%, 83% {
     opacity: 0;
   }
   100% {
@@ -75,10 +60,7 @@
 
 // Fade in for 1 second after a 6 second delay.
 @keyframes appear6 {
-  0% {
-    opacity: 0;
-  }
-  85% {
+  0%, 85% {
     opacity: 0;
   }
   100% {
