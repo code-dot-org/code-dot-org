@@ -121,7 +121,7 @@ export default function RubricContent({
   return (
     <div
       className={classnames(style.rubricContent, {
-        [style.visbleRubricContent]: visible,
+        [style.visibleRubricContent]: visible,
         [style.hiddenRubricContent]: !visible,
       })}
     >
