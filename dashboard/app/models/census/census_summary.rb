@@ -56,8 +56,7 @@ class Census::CensusSummary < ApplicationRecord
   # Loads/merges the data from a CSV into the table.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
-  # @param is_dry_run [Boolean] Allows testing of importing a CSV by rolling back any changes.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, is_dry_run: false)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
     entries_skipped = 0
 
     census_summaries = CSV.read(filename, **options).each do |row|
@@ -78,9 +77,6 @@ class Census::CensusSummary < ApplicationRecord
         db_entry.update!(parsed)
       end
     end
-
-    # Raise an error so that the db transaction rolls back
-    raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if is_dry_run
 
     CDO.log.info "#{entries_skipped} census summaries skipped due to no school_id match in database."
     CDO.log.info "Census summaries seeding: done processing #{filename}.\n"
