@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-10 17:14:36 UTC",
+    "serialized_at": "2023-10-16 19:37:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -193,6 +193,23 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csp-summer-day3"
       }
+    },
+    {
+      "key": "Asynchronous Part 1",
+      "name": "Asynchronous Part 2",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 37 minutes",
+        "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3"
+      }
     }
   ],
   "lesson_activities": [
@@ -367,6 +384,18 @@
         "lesson_activity.key": "2a7fb24c-dc9f-423b-9098-cf5750ea148f",
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day3"
+      }
+    },
+    {
+      "key": "e7574344-6fcc-452f-9659-eec9d1f1b97f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7574344-6fcc-452f-9659-eec9d1f1b97f",
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day3"
       }
     }
@@ -1087,6 +1116,17 @@
         "activity_section.key": "9c9010ca-7fcd-4ce0-9aef-8b2f43e333c7",
         "lesson_activity.key": "2a7fb24c-dc9f-423b-9098-cf5750ea148f"
       }
+    },
+    {
+      "key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf",
+        "lesson_activity.key": "e7574344-6fcc-452f-9659-eec9d1f1b97f"
+      }
     }
   ],
   "script_levels": [
@@ -1096,6 +1136,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU paths_1"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1118,6 +1161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast_1"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -1140,6 +1186,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_1"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1162,6 +1211,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP works_1"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1184,6 +1236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers_1"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -1206,6 +1261,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Routers2022_1"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1228,6 +1286,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Redundancy_1"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1242,6 +1303,94 @@
       },
       "level_keys": [
         "U2L3 CSP CFU Redundancy_1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-P2-Context1_2"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-P2-Context1_2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1_2"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-Context4_1_2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context3_1_2"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-Context3_1_2"
       ]
     }
   ],
@@ -1328,6 +1477,54 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csp-summer-day3",
         "activity_section.key": "9c9010ca-7fcd-4ce0-9aef-8b2f43e333c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-P2-Context1_2",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-P2-Context1_2"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-Context4_1_2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1_2"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-Context3_1_2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context3_1_2"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
       }
     }
   ],

@@ -1,0 +1,28 @@
+name 'virtual-pl-csp-summer-day2-P2-Context1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 2, Asynchronous Part 2
+
+##### Welcome! In this asynchronous module, you will wrap up a few loose ends from the last two days and prepare form tomorrow. 
+
+<img src="https://images.code.org/54406d71f9b74b706efb2d75cedd6619-image-1649859864319.22.50 AM.png" alt="Image of solving the diversity problem begining in K-12" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 20px;">
+
+## In this module, you will:
+
+* ##### Begin to think about yourself and your position as a CS teacher
+* ##### Get an overview of what you didn’t cover in Unit 1
+* ##### Be introduced to Unit 2.
+
+### **Suggested time:** 55 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+
+
+MARKDOWN
