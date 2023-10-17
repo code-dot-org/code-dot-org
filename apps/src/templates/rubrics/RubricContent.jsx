@@ -16,6 +16,7 @@ import {
 import LearningGoal from './LearningGoal';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import classnames from 'classnames';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -35,11 +36,11 @@ export default function RubricContent({
   studentLevelInfo,
   rubric,
   teacherHasEnabledAi,
-  currentLevelName,
+  canProvideFeedback,
+  onLevelForEvaluation,
   reportingData,
+  visible,
 }) {
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
-  const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
@@ -118,7 +119,12 @@ export default function RubricContent({
   };
 
   return (
-    <div className={style.rubricContent}>
+    <div
+      className={classnames(style.rubricContent, {
+        [style.visibleRubricContent]: visible,
+        [style.hiddenRubricContent]: !visible,
+      })}
+    >
       <div>
         {!!studentLevelInfo && (
           <Heading2 className={style.studentName}>
@@ -213,9 +219,11 @@ export default function RubricContent({
 }
 
 RubricContent.propTypes = {
-  currentLevelName: PropTypes.string,
+  onLevelForEvaluation: PropTypes.bool,
+  canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
+  visible: PropTypes.bool,
 };
