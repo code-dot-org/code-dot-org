@@ -53,7 +53,7 @@
       Description: !Sub "Database credentials for ${AWS::StackName} writer user."
 <% if database -%>
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "application-writer"}'
+        SecretStringTemplate: !Sub '{"username": "writer"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
@@ -67,7 +67,7 @@
       Description: !Sub "Database credentials for ${AWS::StackName} reader user."
 <% if database -%>
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "readonly"}'
+        SecretStringTemplate: !Sub '{"username": "reader"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
@@ -109,38 +109,6 @@
       Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_endpoint_proxy_reporting'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>
-
-  SQLUserLambda:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: 'Custom CloudFormation Resource: Create/Update/Delete a SQL User and its permissions in a MySQL database.'
-      FunctionName: !Sub "SQLUser-CloudFormation-Custom-Resource-${AWS::StackName}"
-      Code: <%=zip_directory 'sql-user' %>
-      Handler: index.handler
-      Runtime: nodejs18.x
-      MemorySize: 1024
-      Timeout: 30
-      Role: !GetAtt SQLUserRole.Arn
-      VpcConfig:
-        SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
-        SubnetIds: <%=subnets.to_json%>
-  SQLUserRole:
-    Type: AWS::IAM::Role
-    Properties:
-      <%=service_role 'lambda'%>
-      Path: /
-      ManagedPolicyArns:
-        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
-        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole'
-      Policies:
-        # TODO: Provision a Policy and use it in both the SQL User and DBProxy Roles.
-        - PolicyName: GetDBCredentials
-          PolicyDocument:
-            Statement:
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretAdmin}
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretWriter}
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretReader}
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
 
 <% if database-%>
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
@@ -218,55 +186,50 @@
         # exceed 5% of the total database connection capacity of a reader instance.
         MaxConnectionsPercent: 5
 
-  WriterSQLUser:
-    Type: 'Custom::SQLUser'
-<%  unless rack_env?(:production)%>
+  WriterSQLUser: <%= lambda_fn 'SQLUserLambda', {
     # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
     # SQL user.
-    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
-<%  end -%>
-    Properties:
-      ServiceToken: !GetAtt SQLUserLambda.Arn
-      DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
-      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
-      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
-      # Credentials (username and password) for the SQL User this Resource is provisioning.
-      DBCredentialSecret: !Ref DatabaseSecretWriter
-      Privileges:
-        - SELECT
-        - INSERT
-        - UPDATE
-        - DELETE
-        - CREATE
-        - DROP
-        - REFERENCES
-        - INDEX
-        - ALTER
-        - CREATE TEMPORARY TABLES
-        - LOCK TABLES
-        - EXECUTE
-        - CREATE VIEW
-        - SHOW VIEW
-        - CREATE ROUTINE
-        - ALTER ROUTINE
-        - EVENT
-        - TRIGGER
-  ReaderSQLUser:
-    Type: 'Custom::SQLUser'
-<%  unless rack_env?(:production)%>
+    DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
+    DBServerHost: '!GetAtt AuroraCluster.Endpoint.Address',
+    # Credentials (username and password) for the SQL User this Resource is provisioning.
+    DBCredentialAdminSecret: '!Ref DatabaseSecretAdmin',
+    # Credentials (username and password) for the SQL User this Resource is provisioning.
+    DBCredentialSecret: '!Ref DatabaseSecretWriter',
+    Privileges: %w(
+      SELECT
+      INSERT
+      UPDATE
+      DELETE
+      CREATE
+      DROP
+      REFERENCES
+      INDEX
+      ALTER
+      CREATE\ TEMPORARY\ TABLES
+      LOCK\ TABLES
+      EXECUTE
+      CREATE\ VIEW
+      SHOW\ VIEW
+      CREATE\ ROUTINE
+      ALTER\ ROUTINE
+      EVENT
+      TRIGGER
+    )
+  }.compact
+  %>
+
+  ReaderSQLUser: <%= lambda_fn 'SQLUserLambda', {
     # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
     # SQL user.
-    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
-<%  end -%>
-    Properties:
-      ServiceToken: !GetAtt SQLUserLambda.Arn
-      DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
-      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
-      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
-      # Credentials (username and password) for the SQL User this Resource is provisioning.
-      DBCredentialSecret: !Ref DatabaseSecretReader
-      Privileges:
-        - SELECT
+    DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
+    DBServerHost: '!GetAtt AuroraCluster.Endpoint.Address',
+    # Credentials for SQL admin user that will create/update/delete this SQL user resource.
+    DBCredentialAdminSecret: '!Ref DatabaseSecretAdmin',
+    # Credentials (username and password) for the SQL User this Resource is provisioning.
+    DBCredentialSecret: '!Ref DatabaseSecretReader',
+    Privileges: ['SELECT']
+  }.compact
+  %>
 
 # We don't provision these in production via CloudFormation ... yet!
 <%  unless rack_env?(:production)%>
