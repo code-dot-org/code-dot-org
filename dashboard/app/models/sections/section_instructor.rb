@@ -38,7 +38,6 @@ public def create_section(section, email)
   # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
   # for a total of 6)
   if SectionInstructor.where(section: section).count >= 6
-    puts "Section #{section.id} is full #{SectionInstructor.where(section: section).count}"
     raise ArgumentError.new('section full')
   end
 
@@ -51,13 +50,10 @@ public def create_section(section, email)
 
   # Actually delete the instructor if they were soft-deleted so they can be re-invited.
   if si&.deleted_at.present?
-    puts "Re-adding previously removed instructor #{instructor.id} to section #{section.id}"
     si.really_destroy!
   # Can't re-add someone who is already an instructor (or invited/declined)
   elsif si.present?
-    puts "User #{instructor.id} is already an instructor for section #{section.id}"
     raise ArgumentError.new('already invited')
-    return
   end
 
   return SectionInstructor.create!(

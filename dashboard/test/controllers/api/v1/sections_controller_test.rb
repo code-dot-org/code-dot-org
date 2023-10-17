@@ -779,6 +779,32 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 0, @teacher.scripts.size
   end
 
+  test 'creating a section with a coteacher adds both teachers' do
+    sign_in @teacher
+
+    coteacher = create(:teacher)
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      add_instructor_emails: [coteacher.email]
+    }
+    assert_response :success
+    assert_equal 2, returned_section.section_instructors.size
+  end
+
+  test 'creating a section adds teacher as instructor' do
+    sign_in @teacher
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+    }
+    assert_response :success
+    assert_equal 1, returned_section.section_instructors.size
+    assert_equal @teacher.id, returned_section.section_instructors.first.instructor_id
+  end
+
   test 'creating a section with no course or script does not assign a script' do
     sign_in @teacher
     assert_equal 0, @teacher.scripts.size
@@ -873,6 +899,22 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     section.reload
     assert_equal 'Old section name', section.name
+  end
+
+  test 'update: add coteacher' do
+    coteacher = create(:teacher)
+
+    section = create :section
+    sign_in section.teacher
+
+    assert_equal 1, section.section_instructors.size
+
+    post :update, params: {
+      id: section.id,
+      add_instructor_emails: [coteacher.email]
+    }
+    assert_response :success
+    assert_equal 2, section.section_instructors.size
   end
 
   test "update: course_id is cleared if not provided and script has no default course" do
