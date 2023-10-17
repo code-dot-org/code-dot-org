@@ -1,0 +1,14 @@
+@import 'breakpoints';
+
+$border-radius: 4px;
+
+html {
+  font-size: 16px;
+}
+
+section.banner {
+
+  .wrapper {
+    max-width: 650px;
+  }
+}
