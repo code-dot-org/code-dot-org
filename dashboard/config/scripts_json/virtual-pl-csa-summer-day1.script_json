@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-10 20:44:17 UTC",
+    "serialized_at": "2023-10-16 15:02:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -208,7 +208,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nIn this section, facilitators debrief the asynchronous activity, going through the slides participants worked on and highlighting important points.\n\n\n**Objectives**\n\n* Participants can recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally \n\n**Suggested Time:** 10 minutes \n",
+        "overview": "**Purpose:**\nIn this section, facilitators debrief the asynchronous activity, going through the slides participants worked on and highlighting important points.\n\n\n**Objectives**\n\n* Participants can recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally. \n\n**Suggested Time:** 10 minutes \n",
         "student_overview": "\n\n**You will**\n\n* Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally "
       },
       "seeding_key": {
@@ -225,7 +225,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nParticipants who did not do the pre-work received their first exposure to The Neighborhood during the previous asynchronous session. This lesson is meant to further expose them to the environment and continue to build comfort.\n\n\n**Objectives**\n\n**Content objectives:*\n\n* Call methods with arguments\n* Differentiate between parameters and arguments\n\n\n**Pedagogy objectives:*\n* Participants are able to support students in reading and comprehension in the course.\n\n**Suggested time:** 60 minutes ",
+        "overview": "**Purpose:**\nParticipants who did not do the pre-work received their first exposure to The Neighborhood during the previous asynchronous session. This lesson is meant to further expose them to the environment and continue to build comfort.\n\n\n**Objectives**\n\n*Content objectives:*\n\n* Call methods with arguments\n* Differentiate between parameters and arguments\n\n\n*Pedagogy objectives:*\n* Participants are able to support students in reading and comprehension in the course.\n\n**Suggested time:** 60 minutes ",
         "student_overview": "**You will**\n\n* Call methods with arguments\n* Differentiate between parameters and arguments\n\n\n* Learn strategies to support students in reading and comprehension in the course."
       },
       "seeding_key": {
@@ -512,7 +512,7 @@
       "key": "b5297d54-0e13-4e9b-a073-962016a8ff47",
       "position": 3,
       "properties": {
-        "progression_name": "Debugging"
+        "progression_name": "Investigating Unit 1 Lesson 7"
       },
       "seeding_key": {
         "activity_section.key": "b5297d54-0e13-4e9b-a073-962016a8ff47",
@@ -538,6 +538,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async1intro"
+        ],
         "progression": "Introduction to Async 1"
       },
       "bonus": false,
@@ -560,6 +563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async1conditionals1"
+        ],
         "progression": "Conditionals"
       },
       "bonus": false,
@@ -582,6 +588,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async1conditionals2"
+        ],
         "progression": "Conditionals"
       },
       "bonus": false,
@@ -604,6 +613,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async1crp1"
+        ],
         "progression": "How the Landscape of CSA Influenced our Design Choices"
       },
       "bonus": false,
@@ -626,6 +638,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async1crp2"
+        ],
         "progression": "How the Landscape of CSA Influenced our Design Choices"
       },
       "bonus": false,
@@ -648,6 +663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async2intro"
+        ],
         "progression": "Introduction to Asynchronous Part 2"
       },
       "bonus": false,
@@ -670,6 +688,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async2validation"
+        ],
         "progression": "Validation in CSA"
       },
       "bonus": false,
@@ -692,12 +713,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "level_keys": [
+          "virtual-pl-csa-summer-day1-async2lesson"
+        ],
+        "progression": "Investigating Unit 1 Lesson 7"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csa-summer-day1_async2debug1"
+          "virtual-pl-csa-summer-day1-async2lesson"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-5",
@@ -705,7 +729,7 @@
         "activity_section.key": "b5297d54-0e13-4e9b-a073-962016a8ff47"
       },
       "level_keys": [
-        "virtual-pl-csa-summer-day1_async2debug1"
+        "virtual-pl-csa-summer-day1-async2lesson"
       ]
     },
     {
@@ -714,12 +738,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async1jigsaw2"
+        ],
+        "progression": "Investigating Unit 1 Lesson 7"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csa-summer-day1_async2debug2"
+          "virtual-pl-csa-summer-day1_async1jigsaw2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-5",
@@ -727,15 +754,43 @@
         "activity_section.key": "b5297d54-0e13-4e9b-a073-962016a8ff47"
       },
       "level_keys": [
-        "virtual-pl-csa-summer-day1_async2debug2"
+        "virtual-pl-csa-summer-day1_async1jigsaw2"
       ]
     },
     {
       "chapter": 10,
       "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1-async2jigsaw"
+        ],
+        "progression": "Investigating Unit 1 Lesson 7"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day1-async2jigsaw"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day1",
+        "activity_section.key": "b5297d54-0e13-4e9b-a073-962016a8ff47"
+      },
+      "level_keys": [
+        "virtual-pl-csa-summer-day1-async2jigsaw"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async2wrapup"
+        ],
         "progression": "Unit 1 Wrap-up"
       },
       "bonus": false,
@@ -840,9 +895,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csa-summer-day1_async2debug1",
+        "level.key": "virtual-pl-csa-summer-day1-async2lesson",
         "script_level.level_keys": [
-          "virtual-pl-csa-summer-day1_async2debug1"
+          "virtual-pl-csa-summer-day1-async2lesson"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-5",
@@ -852,9 +907,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csa-summer-day1_async2debug2",
+        "level.key": "virtual-pl-csa-summer-day1_async1jigsaw2",
         "script_level.level_keys": [
-          "virtual-pl-csa-summer-day1_async2debug2"
+          "virtual-pl-csa-summer-day1_async1jigsaw2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day1",
+        "activity_section.key": "b5297d54-0e13-4e9b-a073-962016a8ff47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csa-summer-day1-async2jigsaw",
+        "script_level.level_keys": [
+          "virtual-pl-csa-summer-day1-async2jigsaw"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-5",

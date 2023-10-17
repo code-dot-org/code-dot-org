@@ -61,7 +61,7 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import experiments from '@cdo/apps/util/experiments';
+import {disableOrphans} from './eventHandlers';
 
 const options = {
   contextMenu: true,
@@ -622,7 +622,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
   };
 
-  blocklyWrapper.inject = function (container, opt_options, opt_audioPlayer) {
+  blocklyWrapper.inject = function (container, opt_options) {
     const options = {
       ...opt_options,
       theme: cdoUtils.getUserTheme(opt_options.theme),
@@ -668,7 +668,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
-      workspace.addChangeListener(Blockly.Events.disableOrphans);
+      workspace.addChangeListener(disableOrphans);
     }
 
     document.dispatchEvent(
@@ -699,14 +699,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
 
-    if (
-      options.useModalFunctionEditor &&
-      experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
-    ) {
-      // If the modal function editor is enabled for this level and
-      // the dcdo flag is on, initialize the modal function editor.
+    if (options.useModalFunctionEditor) {
+      // If the modal function editor is enabled for this level,
+      // initialize the modal function editor.
       blocklyWrapper.functionEditor = new FunctionEditor();
-      blocklyWrapper.functionEditor.init(opt_options);
+      blocklyWrapper.functionEditor.init(options);
     }
 
     return workspace;

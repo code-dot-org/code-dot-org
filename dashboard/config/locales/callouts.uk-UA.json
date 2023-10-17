@@ -326,6 +326,54 @@
         "CSD U6 colorLeds intensity_2021": {
           "CSDU6L10_rainbow": "Додай свій код тут"
         },
+        "CSD U6 light show": {
+          "CSDUDL03P09": "Що робить цей рядок?"
+        },
+        "CSD U6 light show_2018": {
+          "CSDUDL03P09": "Що робить цей рядок?"
+        },
+        "CSD U6 light show_2019": {
+          "CSDUDL03P09": "Що робить цей рядок?"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Що робить цей рядок?"
+        },
+        "CSD U6 tugowar variables 1": {
+          "CSD_U6_startGame": "Визначте startGame тут"
+        },
+        "CSD U6 tugowar variables 1_2018": {
+          "CSD_U6_startGame": "Визначте startGame тут"
+        },
+        "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "Визначте startGame тут"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Визначте startGame тут"
+        },
+        "CSD U6 tugowar variables 2": {
+          "CSD_U6_movePlayer": "Визначити movePlayer() тут"
+        },
+        "CSD U6 tugowar variables 2_2018": {
+          "CSD_U6_movePlayer": "Визначити movePlayer() тут"
+        },
+        "CSD U6 tugowar variables 2_2019": {
+          "CSD_U6_movePlayer": "Визначити movePlayer() тут"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Визначити movePlayer() тут"
+        },
+        "CSD U6 tugowar variables 3": {
+          "CSD_U6_checkWin": "Перевірте, чи виграв гравець"
+        },
+        "CSD U6 tugowar variables 3_2018": {
+          "CSD_U6_checkWin": "Перевірте, чи виграв гравець"
+        },
+        "CSD U6 tugowar variables 3_2019": {
+          "CSD_U6_checkWin": "Перевірте, чи виграв гравець"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Перевірте, чи виграв гравець"
+        },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Зміни номер тут"
         },

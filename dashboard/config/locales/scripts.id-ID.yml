@@ -6752,8 +6752,14 @@ id:
               display_name: 'Bab 2: Bangunan Permainan'
         virtual-pl-csa-summer-2024-day1:
           title: Hari 1
+        virtual-pl-csa-summer-day1:
+          title: Hari 1
         virtual-pl-csa-summer-day2:
           title: Hari 2
+        virtual-pl-csa-summer-day3:
+          title: Hari 3
+        virtual-pl-csa-summer-day4:
+          title: Hari 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -6780,6 +6786,14 @@ id:
           lessons:
             lesson-3:
               name: Penilaian
+        virtual-pl-csp-summer-day1:
+          title: Hari 1
+        virtual-pl-csp-summer-day2:
+          title: Hari 2
+        virtual-pl-csp-summer-day3:
+          title: Hari 3
+        virtual-pl-csp-summer-day4:
+          title: Hari 4
         virustest:
           description_short: Gunakan Sprite Lab untuk membuat simulasi wabah virus.
           title: Mensimulasikan Wabah

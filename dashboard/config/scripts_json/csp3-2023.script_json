@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-22 16:52:58 UTC",
+    "serialized_at": "2023-10-13 18:15:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -775,7 +775,7 @@
       "key": "d6c92b59-59f2-4389-9140-1ee501660288",
       "position": 1,
       "properties": {
-        "description": "Apps solve a problem for a target audience. Apps take in input from users and output information in various ways. Users interact with apps through the *user interface*.",
+        "description": "Apps have unique purposes that appeal to different types of users. Apps take in input from users and output information in various ways. Users interact with apps through the *user interface*.",
         "remarks": true
       },
       "seeding_key": {
@@ -787,13 +787,7 @@
       "key": "f2900c95-a53c-4e1d-8c16-891f66a87535",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite app. Discuss with a partner what the user interface looks like and the inputs and outputs.*\n\n**Discussion Goal:** After students have shared with a partner, bring the class back together and discuss a few examples. \n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The [Unit 3 Journal](https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link) provides a template meant to help facilitate the thinking involved in this prompt for students."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss or Write:** *Focus on an app from this level and explain its purpose. Give an example of who a potential user of such an app might be.*\n\nDepending on the amount of time that you have available in class, you can choose to either have a whole-class discussion of the prompt or a writing opportunity for students to practice their skills for the new Create PT Task.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f2900c95-a53c-4e1d-8c16-891f66a87535",
@@ -801,8 +795,35 @@
       }
     },
     {
-      "key": "5952b01b-5708-4e70-b5f8-01d6f70b7125",
+      "key": "89118328-6ce7-4070-9fc8-07511c886fe8",
       "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<div style=\"column-count: 2; column-gap: 20px; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always; width: 180%\">\n     <b>Create Perfomance Task Written Response Practice</b>\n    </br>\n    </br>\n    In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n    </br>\n    </br>\n    Sample Prompt: <i> Focus on an app from this level and explain its purpose. Give an example of who a potential user of such an app might be.</i>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <img src=\"https://images.code.org/3f77c8efade39dc50d301f0751f767b7-writtenResponse3.png\" alt=\"\" style=\"display: block; margin: auto; float: right;\"/>\n    </p>\n</div>\n</br>\n<div style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g22e15123a99_0_388\" target=\"_blank\">Unit Journal Template</a>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <b>Exemplar Response for Instructors</b>\n</br>\n<i> (Exemplars will be forthcoming with further College Board updates in Fall 2023)\n    </p>\n </div>"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "89118328-6ce7-4070-9fc8-07511c886fe8",
+        "lesson_activity.key": "9da73de1-3e08-422a-9f17-96981d0f5aff"
+      }
+    },
+    {
+      "key": "d565660b-916d-408b-9b1b-8d2999f01d6b",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion / Writing Goal:** Have students share their thoughts with a partner. Then, bring the class back together and discuss a few examples. "
+      },
+      "seeding_key": {
+        "activity_section.key": "d565660b-916d-408b-9b1b-8d2999f01d6b",
+        "lesson_activity.key": "9da73de1-3e08-422a-9f17-96981d0f5aff"
+      }
+    },
+    {
+      "key": "5952b01b-5708-4e70-b5f8-01d6f70b7125",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal** Add to your journal the following terms along with your own definitions:\n\n* User Interface\n* Input\n* Output\n",
         "tips": [
@@ -819,7 +840,7 @@
     },
     {
       "key": "c5eda6df-f822-408c-9c89-0a6b02286d1f",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "---"
       },
@@ -830,7 +851,7 @@
     },
     {
       "key": "cbc517c1-483e-485c-b5ea-079041b5fcac",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Match term with the example.",
         "name": "Assessment: Check For Understanding\r",

@@ -1,0 +1,17 @@
+name 'virtual-pl-csd-summer-day3-UnderstandingContext2_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 1 Connections and Conclusions
+<br>
+<img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+#### While you have seen much of this unit through Model Lessons and TLOs, we want to wrap-up the unit by showing you the lessons you did not see. We also want to make the "story" of this unit clear and describe how it relates to other units in the curriculum.
+
+---
+#### Watch  the Unit 1 Connections and Conclusions (7:36) video. 
+
+
+
+MARKDOWN

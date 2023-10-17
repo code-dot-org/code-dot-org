@@ -1,0 +1,32 @@
+{
+  "sq-AL": {
+    "data": {
+      "start_libraries": {
+        "LLM - Written Voice Simulator_ai23": {
+          "I18n_HAIW23L4": {
+            "newBackButton_19": "Kthehu"
+          }
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "Ushqimi",
+            "PEOPLE": "Njerëzit",
+            "allButtonText": "Të gjitha"
+          }
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "Ushqimi",
+            "PEOPLE": "Njerëzit",
+            "allButtonText": "Të gjitha"
+          }
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "I18n_HAIW23L6": {
+            "resetBtn_8": "Rifillo"
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,10 +14,22 @@
         "csd3-2018/Variables": {
           "name": "Variables"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "ကွန်ပျူတာသိပ္ပံအခြေခံ။"
+        },
         "csd2-2019/Lists": {
           "name": "စာရင်းများ"
         },
         "csd3-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Loops"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "ဖြစ်စဥ်များ"
+        },
+        "k5-onlinepd-2019/Variables": {
           "name": "Variables"
         },
         "csd3-2021/Variables": {
@@ -25,6 +37,9 @@
         },
         "csd3-2021/Text": {
           "name": "စာ"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "ကွန်ပျူတာသိပ္ပံအခြေခံ။"
         },
         "csd3-2022/Variables": {
           "name": "Variables"
@@ -46,12 +61,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Hour of Code"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း"

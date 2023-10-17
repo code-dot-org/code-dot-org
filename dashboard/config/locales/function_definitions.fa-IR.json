@@ -694,6 +694,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2021": {
+          "draw a circle": {
+            "description": "دایره‌ای با شعاع مشخص رسم کنید",
+            "name": "یک دایره بکشید",
+            "parameters": {
+              "radius": "شعاع"
+            }
+          },
+          "draw a house": {
+            "name": "یک خانه بکشید",
+            "parameters": {
+              "length": "طول"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "یک فرفره رسم کنید",
+            "parameters": {
+              "length": "طول",
+              "repeat": "تکرار کن",
+              "sides": "اضلاع"
+            }
+          },
+          "draw a shape": {
+            "name": "یک شکل رسم کنید",
+            "parameters": {
+              "length": "طول",
+              "sides": "اضلاع"
+            }
+          },
+          "draw a square": {
+            "name": "یک مربع بکشید",
+            "parameters": {
+              "length": "طول"
+            }
+          },
+          "draw a star": {
+            "description": "ستاره‌ای با نقاط مشخص و اضلاع با طول مشخص رسم کنید",
+            "name": "رسم یک ستاره",
+            "parameters": {
+              "length": "طول",
+              "points": "امتیازات"
+            }
+          },
+          "draw a triangle": {
+            "name": "یک مثلث بکشید",
+            "parameters": {
+              "length": "طول"
+            }
+          }
+        },
         "CourseD_EOC_artist_2023": {
           "draw a circle": {
             "description": "دایره‌ای با شعاع مشخص بکشید",
@@ -1560,6 +1610,11 @@
             "name": "تابع من"
           }
         },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "راه‌حل ممکن"
+          }
+        },
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "یک کاری بکنید"
@@ -1640,6 +1695,41 @@
             "parameters": {
               "length": "طول"
             }
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "راه‌حل ممکن"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "راه‌حل ممکن"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "راه‌حل ممکن"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "راه‌حل ممکن"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "راه‌حل ممکن"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "راه‌حل ممکن"
+          }
+        },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "راه‌حل ممکن"
           }
         },
         "courseC_artist_prog3": {
@@ -1745,6 +1835,11 @@
         "courseC_data wizard_2020": {
           "do something": {
             "name": "یک کاری بکنید"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "یه کاری بکن"
           }
         },
         "courseC_data wizard_2023": {
