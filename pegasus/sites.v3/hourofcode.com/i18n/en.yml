@@ -1603,6 +1603,7 @@
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
   map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header_count_year_so_far: '%{event_count} events registered so far in %{year}'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
   map_header_country: '# in %{country}'
