@@ -22,6 +22,10 @@
 #
 class LearningGoalAiEvaluation < ApplicationRecord
   belongs_to :learning_goal
+  has_one :rubric, through: :learning_goal
+  has_one :lesson, through: :rubric
+  has_one :level, through: :rubric
+
   belongs_to :user
   belongs_to :requester, class_name: 'User'
 
@@ -46,6 +50,24 @@ class LearningGoalAiEvaluation < ApplicationRecord
       id: id,
       understanding: understanding,
       learning_goal_id: learning_goal_id,
+    }
+  end
+
+  def summarize_debug
+    script_level = rubric.get_script_level
+    {
+      id: id,
+      user_id: user_id,
+      script_level_id: script_level&.id,
+      username: user.username,
+      requester_username: requester&.username,
+      unit_name: script_level&.script&.name,
+      lesson_position: lesson.absolute_position,
+      level_name: level.name,
+      learning_goal: learning_goal.learning_goal,
+      status: STATUSES.to_h.invert[status].to_s,
+      understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.invert[understanding].to_s,
+      ai_confidence: AI_CONFIDENCE_LEVELS.invert[ai_confidence].to_s,
     }
   end
 end
