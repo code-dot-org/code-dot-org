@@ -2327,8 +2327,14 @@ sv:
               display_name: 'Kapitel 2: Bygga Spel'
         virtual-pl-csa-summer-2024-day1:
           title: Dag 1
+        virtual-pl-csa-summer-day1:
+          title: Dag 1
         virtual-pl-csa-summer-day2:
           title: Dag 2
+        virtual-pl-csa-summer-day3:
+          title: Dag 3
+        virtual-pl-csa-summer-day4:
+          title: Dag 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2341,6 +2347,16 @@ sv:
         virtual-pl-csd-summer-day4:
           title: Dag 4
         virtual-pl-csd-summer-day5:
+          title: Dag 5
+        virtual-pl-csp-summer-day1:
+          title: Dag 1
+        virtual-pl-csp-summer-day2:
+          title: Dag 2
+        virtual-pl-csp-summer-day3:
+          title: Dag 3
+        virtual-pl-csp-summer-day4:
+          title: Dag 4
+        virtual-pl-csp-summer-day5:
           title: Dag 5
         virustest:
           description_short: Använd Sprite Lab för att skapa en simulering av ett

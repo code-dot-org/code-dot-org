@@ -24,6 +24,8 @@ import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
+const invalidUnderstanding = -1;
+
 export default function LearningGoal({
   learningGoal,
   teacherHasEnabledAi,
@@ -35,19 +37,19 @@ export default function LearningGoal({
   submittedEvaluation,
 }) {
   const [isOpen, setIsOpen] = useState(false);
-
   const [isAutosaving, setIsAutosaving] = useState(false);
   const [autosaved, setAutosaved] = useState(false);
   const [errorAutosaving, setErrorAutosaving] = useState(false);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
-  const understandingLevel = useRef(0);
+  const [displayUnderstanding, setDisplayUnderstanding] =
+    useState(invalidUnderstanding);
   const teacherFeedback = useRef('');
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
 
-  // Timer variabls for autosaving
+  // Timer variables for autosaving
   const autosaveTimer = useRef();
   const saveAfter = 2000;
 
@@ -84,7 +86,7 @@ export default function LearningGoal({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoal.id,
       feedback: teacherFeedback.current,
-      understanding: understandingLevel.current,
+      understanding: displayUnderstanding,
     });
     HttpClient.put(
       `${base_teacher_evaluation_endpoint}/${learningGoalEval.id}`,
@@ -123,14 +125,14 @@ export default function LearningGoal({
         .then(response => response.json())
         .then(json => {
           setLearningGoalEval(json);
-          if (!json.feedback) {
-            teacherFeedback.current = '';
-          } else {
+          if (json.feedback) {
             teacherFeedback.current = json.feedback;
             setDisplayFeedback(teacherFeedback.current);
           }
-          if (json.understanding) {
-            understandingLevel.current = json.understanding;
+          if (json.understanding >= 0 && json.understanding !== null) {
+            setDisplayUnderstanding(json.understanding);
+          } else {
+            setDisplayUnderstanding(invalidUnderstanding);
           }
         })
         .catch(error => console.log(error));
@@ -139,7 +141,7 @@ export default function LearningGoal({
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
-    understandingLevel.current = radioButtonData;
+    setDisplayUnderstanding(radioButtonData);
     if (!isAutosaving) {
       autosave();
     }
@@ -214,20 +216,44 @@ export default function LearningGoal({
           <span>{learningGoal.learningGoal}</span>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
-          {aiEnabled && <AiToken />}
-          {/*TODO: Display status of feedback*/}
-          {canProvideFeedback && (
-            <BodyThreeText>{i18n.needsApproval()}</BodyThreeText>
+          {aiEnabled && displayUnderstanding === invalidUnderstanding && (
+            <AiToken />
           )}
-          {submittedEvaluation?.understanding && (
+          {/*TODO: Display status of feedback*/}
+          {canProvideFeedback &&
+            aiEnabled &&
+            displayUnderstanding === invalidUnderstanding && (
+              <BodyThreeText>{i18n.approve()}</BodyThreeText>
+            )}
+          {canProvideFeedback &&
+            !aiEnabled &&
+            displayUnderstanding === invalidUnderstanding && (
+              <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
+            )}
+          {displayUnderstanding >= 0 && (
             <BodyThreeText>
-              {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
+              {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
             </BodyThreeText>
           )}
+          <div className={style.submittedFeedback}>
+            {submittedEvaluation?.understanding && (
+              <BodyThreeText>
+                {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
+              </BodyThreeText>
+            )}
+            {submittedEvaluation?.feedback && (
+              <FontAwesome
+                icon="message"
+                className="fa-regular"
+                title={i18n.feedback()}
+              />
+            )}
+          </div>
         </div>
       </summary>
+
       {/*TODO: Pass through data to child component*/}
-      <div className={style.expandedBorder}>
+      <div>
         {teacherHasEnabledAi && !!studentLevelInfo && (
           <div className={style.openedAiAssessment}>
             <AiAssessment
@@ -239,11 +265,12 @@ export default function LearningGoal({
           </div>
         )}
         <div className={style.learningGoalExpanded}>
+          {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
             learningGoalKey={learningGoal.key}
             evidenceLevels={learningGoal.evidenceLevels}
             canProvideFeedback={canProvideFeedback}
-            understanding={understandingLevel.current}
+            understanding={displayUnderstanding}
             radioButtonCallback={radioButtonCallback}
             submittedEvaluation={submittedEvaluation}
           />
@@ -256,7 +283,6 @@ export default function LearningGoal({
             </div>
           )}
           {!!studentLevelInfo && renderAutoSaveTextbox()}
-          {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
         </div>
       </div>
     </details>

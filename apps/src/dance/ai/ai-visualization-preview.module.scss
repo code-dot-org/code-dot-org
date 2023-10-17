@@ -6,6 +6,7 @@ $preview-size: 200px;
   width: $preview-size;
   height: $preview-size;
   background-color: $neutral_white;
+  border: 1px solid $neutral_dark30;
 }
 
 :export {

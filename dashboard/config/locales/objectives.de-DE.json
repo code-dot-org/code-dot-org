@@ -986,12 +986,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Teile ein kreatives Artefakt mit anderen Schülern."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Trainiere und teste ein Modell für maschinelles Lernen."
         },
@@ -3448,15 +3442,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Entwickelte Programme die auf zeitgesteuerte Ereignisse reagieren."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Veranschaulichung von veränderten Stimmungen in einem Gedicht."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Bildliche und wörtliche Sprache in einem Text darstellen."
         }
       }
     }

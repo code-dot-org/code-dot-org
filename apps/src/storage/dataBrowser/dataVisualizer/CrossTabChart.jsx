@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {CROSS_TAB_CHART_AREA} from './constants';
 import * as color from '../../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default function CrossTabChart(props) {
   if (!props.records || !props.selectedColumn1 || !props.selectedColumn2) {
@@ -155,7 +156,7 @@ const wrapperStyle = {
   width: '100%',
 };
 const chartTitleStyle = {
-  fontFamily: '"Gotham 7r", sans-serif',
+  ...fontConstants['main-font-bold'],
   fontSize: 16,
   lineHeight: '16px',
   color: 'black',
@@ -185,5 +186,5 @@ const innerCellStyle = {
   overflow: 'hidden',
 };
 const axisTitleStyle = {
-  fontFamily: '"Gotham 5r", sans-serif',
+  ...fontConstants['main-font-semi-bold'],
 };

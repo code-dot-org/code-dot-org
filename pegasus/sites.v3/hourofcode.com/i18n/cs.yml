@@ -200,6 +200,10 @@ cs:
   linked_in: LinkedIn
   instagram: Instagram
   tik_tok: TikTok
+  device_tablet: tableta
+  device_laptop: Notebook
+  device_desktop_computer: Stolní počítač
+  device_mobile_device: Mobilní zařízení
   subscribe_to_emails_heading: Přihlásit se k odběru e-mailů
   subscribe_to_emails_desc: Přečtěte si o tom, co se děje na Code.org a ve vzdělávání
     informatiky prostřednictvím čtvrtletních aktualizací prostřednictvím našeho seznamu
@@ -238,18 +242,37 @@ cs:
     - s našimi odbornými vzdělávacími workshopy.
   students_label: Studenti, žáci
   teachers_label: Učitelé
+  educators_label: Pedagogové
+  companies_label: Společnosti
+  districts_label: Okresy
+  school_assemblies_label: Školní shromáždění
+  parents_label: Rodiče
+  public_officials_label: Veřejní úředníci
+  volunteers_label: Dobrovolníci
+  virtual_events_label: Virtuální události
   teacher_label_csf: 'Základy informatiky: učitel'
   teacher_label_csd: CS Discoveries Učitel
   teacher_label_csp: 'Principy informatiky: učitel'
   teacher_label_csc: 'Mezipředmětové vztahy v informatice: učitel'
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Fórum pro učitele
+  teacher_forum_desc: Navštivte Fórum pro učitele Hour of Code, kde získáte rady,
+    přehled a podporu od ostatních pedagogů.
   required_materials: 'Požadované materiály:'
   optional_materials: 'Volitelné materiály:'
   call_to_action_hold_an_event: Pořádat událost
+  call_to_action_register_event: Zaregistrujte svou akci
+  call_to_action_select_activity: Vyberte aktivitu
+  call_to_action_start_activity: Zahájení aktivity
+  call_to_action_get_certificates: Získat certifikáty
+  call_to_action_go_beyond_hoc: Překročte Hodinu kódu
+  call_to_action_view_promo_resources: Zobrazit propagační zdroje
   call_to_action_learn_more: Dozvědět se více
   call_to_action_watch_now: Sledovat nyní
   call_to_action_try_activity: Vyzkoušejte aktivitu
   call_to_action_try_activities: Vyzkoušejte aktivity
+  call_to_action_explore_activities: Prozkoumejte aktivity
+  call_to_action_explore_ai: Prozkoumejte AI
   call_to_action_explore_unit: Prozkoumejte jednotku
   call_to_action_explore_curriculum: Prozkoumejte kurikulum
   call_to_action_explore_curriculum_options: Prozkoumat možnosti učebních osnov
@@ -302,6 +325,7 @@ cs:
   call_to_action_find_self_paced_modules: Najděte moduly s vlastním tempem
   call_to_action_join_teacher_forums: Připojte se k fórům učitelů
   call_to_action_explore_teacher_forums: Prozkoumat fórum pro učitele
+  call_to_action_explore_teacher_forum: Prozkoumejte fórum pro učitele
   call_to_action_explore_career_resources: Prozkoumejte kariérní zdroje
   call_to_action_watch_videos: Sledovat videa
   call_to_action_download_posters: Stáhnout plakáty
@@ -332,6 +356,18 @@ cs:
   call_to_action_start_translating: Začněte překládat
   call_to_action_learn_about_advocacy: Zjistěte více o naší advokacii
   call_to_action_visit_store: Navštivte obchod
+  call_to_action_view_faqs: Zobrazit více často kladených dotazů
+  aria_label_call_to_action_hoc_how_to_educators: Podívejte se na návod pro pedagogy
+  aria_label_call_to_action_hoc_how_to_companies: Zobrazit průvodce návody pro společnosti
+  aria_label_call_to_action_hoc_how_to_districts: Zobrazit průvodce návody pro okresy
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Zobrazit příručku pro školní
+    shromáždění
+  aria_label_call_to_action_hoc_how_to_parents: Zobrazit příručku pro rodiče
+  aria_label_call_to_action_hoc_how_to_public_officials: Zobrazit příručku pro veřejné
+    úředníky
+  aria_label_call_to_action_hoc_how_to_volunteers: Zobrazit návod pro dobrovolníky
+  aria_label_call_to_action_hoc_how_to_virtual_events: Podívejte se na průvodce virtuálními
+    událostmi
   aria_label_call_to_action_afe: Další informace o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začněte odborný vzdělávací program Teaching
     Computer Science Fundamentals
@@ -1190,8 +1226,8 @@ cs:
     180 zemích.
   farsi_page_support_heading: Vaše podpora a váš hlas
   farsi_page_support_heading_02: Děkujeme za váš zájem o Code.org v perštině.
-  farsi_page_support_get_updates: "[Sign up](%{form_url}) to learn more about this
-    specific project and get updated on its staged release dates."
+  farsi_page_support_get_updates: "[Zaregistrovat se] (%{form_url}), abyste se dozvěděli
+    více o tomto konkrétním projektu a byli informováni o jeho postupných datech vydání."
   farsi_page_support_contact_us: Pokud chcete tuto iniciativu podpořit nebo se dozvědět
     více, prosím [kontaktujte nás] (%{contact_link}) nebo darujte níže.
   farsi_page_compliance_heading: Dodržování předpisů na podporu překladů do perštiny
@@ -13093,6 +13129,126 @@ cs:
   all: Vše
   dont_know: Nevím
   language_label: Jazyk
+  before_hoc: Před hodinou kódu
+  day_of_hoc: Den Hodiny kódu
+  after_hoc: Po hodině kódu
+  step_01: Krok 1
+  step_02: Krok 2
+  step_03: Krok 3
+  step_04: Krok 4
+  step_05: Krok 5
+  step_06: Krok 6
+  step_07: Krok 7
+  step_08: Krok 8
+  hoc_how_to_top_heading: Váš průvodce Hour of Code
+  hoc_how_to_top_desc: Návody přizpůsobené na míru pro nejlepší zážitek z Hour of
+    Code.
+  hoc_how_to_top_view_guide: Zobrazit průvodce pro
+  hoc_how_to_nav_main_aria_label: Vyberte si průvodce
+  hoc_how_to_nav_sidebar_aria_label: Navigace na bočním panelu
+  hoc_how_to_educators_intro_heading: Jak naplánovat vaši Hodinu kódu
+  hoc_how_to_educators_intro_desc: Hodina kódu je hodinový úvod do informatiky, pomocí
+    zábavných výukových programů, které ukazují, že se základy může naučit kdokoli.
+    Letos posuneme Hodinu kódu do nových výšin tím, že nabízíme možnosti kódování,
+    které zahrnují jak umělou inteligenci (AI), tak komponenty jiné než AI. Ať už
+    jste vy nebo vaši studenti zkušení programátoři, nebo se všichni vydáte na svou
+    úplně první výpravu v oblasti informatiky, tato Hodina kódu slibuje mimořádnou
+    plavbu.
+  hoc_how_to_faq_question_prerequisites: Jaké jsou předpoklady pro provedení Hodiny
+    kódu?
+  hoc_how_to_faq_answer_prerequisites: Hodina kódu je jednoduchá na spuštění - dokonce
+    i pro začátečníky. Nepotřebujete zkušenosti v oblasti informatiky nebo výuky,
+    abyste inspirovali studenty k prozkoumání, tvorbě a učení se něčemu novému.
+  hoc_how_to_faq_question_devices: Jaká zařízení potřebuji ke spuštění Hodiny kódu?
+  hoc_how_to_faq_answer_devices_01: 'Zařízení, která můžete použít:'
+  hoc_how_to_faq_answer_devices_02: Pokud jsou zařízení omezená nebo nedostupná, zkuste
+    [párové programování] (%{pair_url}) nebo prozkoumejte naše [odpojené aktivity]
+    (%{unplugged_url}), abyste se učili bez jakýchkoli zařízení vůbec!
+  hoc_how_to_faq_question_volunteer: Kdo se může stát dobrovolníkem?
+  hoc_how_to_faq_answer_volunteer: Dobrovolníkem může být každý, kdo má zájem o vzdělávání
+    v oblasti informatiky a zvyšující se rozmanitost v technologii! Rádi bychom viděli,
+    jak se účastní dobrovolníci všech prostředí. Hodina kódu nabízí širokou škálu
+    aktivit pro všechny věkové kategorie a úrovně dovedností, takže nemusíte být odborníkem
+    na programování, abyste se dobrovolně přihlásili!
+  hoc_how_to_faq_question_full_hour: Bude Hodina kódu trvat celou hodinu?
+  hoc_how_to_faq_answer_full_hour: Mnoho studentů bude moci dokončit své aktivity
+    za méně než hodinu, a to je v pořádku! Studenti se mohou dále učit, zatímco ostatní
+    studenti dokončí svou činnost.
+  hoc_how_to_faq_question_account: Musí se studenti přihlásit pomocí účtu?
+  hoc_how_to_faq_answer_account: Aby studenti mohli vyzkoušet Hodinu kódu, není vyžadována
+    žádná registrace ani přihlášení. Registrace na Hodinu kódu NEautomaticky vytvoří
+    účet Code.org.
+  hoc_how_to_resources_heading_educators: Další zdroje k Hodině Kódu pro vyučující
+  hoc_how_to_resources_promo_heading: Propagační zdroje
+  hoc_how_to_resources_promo_desc: Najděte všechny zdroje, které potřebujete - tištěné
+    i digitální -, abyste upoutali pozornost na svou Hodinu kódu.
+  hoc_how_to_resources_discover_heading: Objevte aktivity
+  hoc_how_to_resources_discover_desc: Prozkoumejte široký výběr hodinových výukových
+    programů určených pro všechny věkové kategorie ve více než 45 jazycích.
+  hoc_how_to_step_label_plan: Naplánujte si, kde a kdy budete hrát Hodinu kódu
+  hoc_how_to_step_label_choose_activity: Vyberte si svou aktivitu
+  hoc_how_to_step_label_test_activity: Vyzkoušejte svou aktivitu
+  hoc_how_to_step_label_register_event: Zaregistrujte svou akci
+  hoc_how_to_step_label_tell: Řekněte svým studentům, škole a komunitě
+  hoc_how_to_step_label_get_coding: Získejte kódování!
+  hoc_how_to_step_label_celebrate: Oslavit
+  hoc_how_to_step_label_beyond_hoc: Za hodinou kódu
+  hoc_how_to_step_beyond_hoc_subhead: Tady to nekončí!
+  hoc_how_to_step_beyond_hoc_desc: Počítačová věda nemusí skončit Hodinou kódu! Zatímco
+    90% rodičů chce, aby se jejich dítě učilo informatiku, většina škol ji stále neučí.
+    Naučte se, jak přivést CS do školy vašeho dítěte ještě dnes.
+  hoc_how_to_step_01_educators_subhead: Vyberte čas a prostor události, který odpovídá
+    počtu studentů a zařízení, která máte k dispozici.
+  hoc_how_to_step_01_educators_desc_01: Jaké prostory máte k dispozici pro svou Hodinu
+    kódu? Zvažte technické možnosti vašeho prostoru a druhy zařízení, na kterých očekáváte,
+    že vaši studenti budou pracovat. Studenti mohou pracovat na výukových programech
+    na jednom zařízení, střídat se pomocí sdíleného zařízení nebo vyzkoušet výukový
+    program společně na tabuli ve třídě. Existují dokonce i odpojené výukové programy,
+    které lze dokončit bez jakýchkoli zařízení. Odpojené možnosti lze provádět kdekoli
+    - dokonce i venku!
+  hoc_how_to_step_01_educators_desc_02: Lidé z celého světa se připojují k oslavě
+    Hodiny kódu během Týdne vzdělávání CS, %{campaign_date} kdy jsou vydány nejnovější
+    výukové programy a aktivity. Hodinu kódu však můžete udělat každý den v roce!
+  hoc_how_to_step_02_educators_desc_01: Prozkoumejte aktivity založené na věku vaší
+    skupiny, zkušenosti, zájmy, a více. Pro studenty je populární vyzkoušet výukové
+    programy vedené samostatně, ačkoli mnoho aktivit zahrnuje plány lekcí pro učitele,
+    které vedou diskusi nebo také rozšiřují aktivitu.
+  hoc_how_to_step_02_educators_desc_02: Rozhodněte se předem, zda chcete vybrat jeden
+    výukový program pro všechny své studenty, nebo nechte každé dítě vybrat si vlastní.
+  hoc_how_to_step_02_educators_desc_03: Letos se vy a vaši studenti můžete [dozvědět
+    se vše o AI] (%ai_url) prostřednictvím výukových programů, plánů lekcí a naší
+    nové série videí Jak AI funguje.
+  hoc_how_to_step_03_educators_desc_01: Než se dostanete do učebny, vyzkoušejte si
+    výukový program sami, abyste mohli odpovědět na otázky!
+  hoc_how_to_step_03_educators_desc_02: Můžete také otestovat výukové programy na
+    studentských počítačích nebo zařízeních, abyste se ujistili, že podporují zvuk
+    a video. Máte nízkou šířku pásma? Plánujte zobrazovat videa v přední části třídy,
+    aby si každý student nestahoval svá vlastní videa.
+  hoc_how_to_step_03_educators_desc_03: Zvažte poskytnutí sluchátek pro vaši třídu,
+    nebo požádejte studenty, aby si přinesli vlastní, pokud vybraný výukový program
+    nejlépe funguje se zvukem.
+  hoc_how_to_step_04_educators_desc_01: Když zaregistrujete událost Hodina kódu, obdržíte
+    užitečné e-maily s novinkami a tipy pro pořádání úspěšné Hodiny kódu. Je to také
+    způsob, jak můžete informovat místní dobrovolníky, že se vaše škola účastní. Dobrovolníci
+    jsou skvělým zdrojem a mohou přijít mluvit do vaší třídy o počítačové vědě nebo
+    pomoci svým studentům s aktivitami Hodiny kódu.
+  hoc_how_to_step_05_educators_desc_01: Nechte své studenty nadchnout událostí sdílením
+    [inspirativní videa] (%{videos_url}) zdůrazňující různé lidi a kreativní způsoby,
+    jak lze počítačovou vědu použít v reálném světě.
+  hoc_how_to_step_05_educators_desc_02: Sdílejte své plány Hodiny kódu s dalšími učiteli,
+    kteří se možná budou chtít zapojit do zábavy! Je to také skvělá příležitost oslovit
+    studentskou asociaci rodičů učitelů vaší školy nebo sdílet zpravodaje rodičů a
+    dát jim vědět, co se jejich děti učí.
+  hoc_how_to_step_06_educators_desc_01: Nasměrujte své studenty na aktivitu, možná
+    sdílením odkazu na tabuli nebo prostřednictvím systému řízení učení ve vaší třídě.
+    Vaši studenti se mohou setkat s výzvami - to je v pořádku! Naučit se programovat
+    je jako naučit se nový jazyk; hned nebudete plynule mluvit. Pokud neznáte odpověď,
+    můžete na to přijít společně.
+  hoc_how_to_step_07_educators_desc_01: 'Nezapomeňte oslavit úspěch! Sdílejte fotografie
+    a videa z vaší události Hodina kódu na sociálních médiích. Použijte #HourOfCode
+    a @codeorg, abychom mohli zdůraznit i váš úspěch!'
+  hoc_how_to_step_07_educators_desc_02: Můžete také vytisknout certifikáty pro své
+    studenty, aby předvedli své úspěchy!
   team_page_full_team_alt_text: Téměř 100 zaměstnanců Code.org v odpovídajících modrých
     a žlutých tričkách pózuje v hotelové konferenční místnosti pro firemní letní akci
     Codechella 2022.
@@ -13611,6 +13767,155 @@ cs:
     stahování'
   video_library_page_not_hacked_video_title_7: 'Jak se nenechat hacknout: Nainstalujte
     aktualizace'
+  about_us_page_title: O nás
+  about_us_page_hero_description: Code.org® je vzdělávací inovační nezisková organizace
+    zaměřená na vizi, že každý student v každé škole má příležitost učit se počítačové
+    vědy jako součást svého základního vzdělávání K-12. Rozšiřujeme přístup k informatice
+    ve školách, se zaměřením na zvýšení účasti mladých žen a studentů z jiných nedostatečně
+    zastoupených skupin. Code.org, přední poskytovatel kurikula informatiky K-12 v
+    největších školních čtvrtích ve Spojených státech, také organizuje každoroční
+    kampaň [Hour of Code] (%{hour_url}), která zapojila více než 15% všech studentů
+    na světě. Code.org je podporován velkorysými dárci, jako jsou Microsoft, Amazon,
+    Google a [mnoho dalších].%{others_url}
+  about_us_page_section_title_1: Více než 80 milionů studentů a 2 miliony učitelů
+    na Code.org
+  about_us_page_statistic_figcaption: Účast Code.org od školního roku 2021-2022. [Viz
+    rozčleněné údaje.] ()%{data_url}
+  about_us_page_statistic_description: Code.org zvyšuje rozmanitost v oblasti informatiky
+    tím, že oslovuje studenty všech prostředí, kde jsou - na úrovni jejich dovedností,
+    ve svých školách a způsoby, které je inspirují k dalšímu učení. Drtivá většina
+    studentů na Code.org pochází ze studentských skupin historicky nedostatečně zastoupených
+    v informatice. Zvyšování rozmanitosti v informatice je základem naší práce, a
+    [doporučujeme vám přečíst si více o našem úsilí] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org ve zprávách
+  about_us_page_section_news_description: Zobrazit všechny minulé [novinky a oznámení]
+    (%{news_url})
+  about_us_page_section_table: Naše cíle a metriky
+  about_us_page_section_table_header_1: Cíl Code.org
+  about_us_page_section_table_header_2: Úspěch
+  abous_page_section_table_cell_1_1: Zlepšit rozmanitost v CS * (studenti USA) *
+  abous_page_section_table_cell_1_2: 45% studentů Code.org jsou mladé ženy, 50% jsou
+    studenti z marginalizovaných rasových a etnických skupin a 46% amerických studentů
+    je na školách s vysokými potřebami. Přečtěte si více o [našem přístupu k rozmanitosti.]
+    (%{diversity_url})
+  about_page_section_table_cell_2_1: Inspirujte studenty
+  about_page_section_table_cell_2_2: Desítky milionů vyzkoušely [Hodinu kódu] (%{hour_url}).
+    (426 370 561 sloužilo. 49% žen)
+  about_page_section_table_cell_3_1: Oslovte učebny
+  about_page_section_table_cell_3_2: 591,636 učitelů se přihlásilo k výuce našich
+    úvodních kurzů na [Code Studio] (%{code_studio_url}) a je zapsáno 19 177 297 studentů.
+  about_page_section_table_cell_4_1: Připravte nové učitele CS
+  about_page_section_table_cell_4_2: Připravili jsme více než 106 000 nových učitelů
+    pro výuku CS ve třídách K-12. Zjistěte více o našich [profesionálních vzdělávacích
+    programech.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Změňte osnovy školního obvodu
+  about_page_section_table_cell_5_2: Navázali jsme partnerství s [180+ z největších
+    školních obvodů] (%{schoold_disctrict_url}) a 60 regionálními partnery, abychom
+    [přidali CS do školních osnov] (%{cs_curriculum_url}). [Další informace o tom,
+    jak se stát regionálním partnerem.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Nastavení zásad pro podporu CS
+  about_page_section_table_cell_6_2: "[Zásady změněny v 50 státech USA] (%{states_url})
+    za účelem stanovení vzdělávacích standardů CS, aby se kurzy CS počítaly k maturitě
+    na střední škole atd. [(podrobnosti)] (%{details_url})"
+  about_page_section_table_cell_7_1: Přejít na globální
+  about_page_section_table_cell_7_2: Naše kurzy jsou k dispozici ve více než 67 jazycích,
+    které se používají ve více než 180 zemích.
+  about_page_section_table_under_label: 'Zdroj: Aktivita Code Studio a [průzkumy zúčastněných
+    pedagogů] (%{educators_url})'
+  about_page_section_title_3: Více informací, historie a filozofie
+  about_page_section_more_description_1: 'V roce 2013 byl Code.org spuštěn dvojčaty
+    [Hadi](%{hadi_url}) a [Ali Partovi] (%{partovi_url}) s (%{video_url}) propagací
+    [video]počítačové vědy. Toto video se stalo #1 na YouTube na jeden den a 15 000
+    škol nás požádalo o pomoc. Od té doby jsme se rozšířili z početného personálu
+    dobrovolníků, abychom vybudovali plnou organizaci podporující celosvětové hnutí.
+    Věříme, že kvalitní vzdělávání v oblasti informatiky by mělo být k dispozici každému
+    dítěti, nejen několika šťastlivcům.'
+  about_page_section_more_description_2: 'Abychom podpořili náš cíl, pracujeme napříč
+    spektrem vzdělávání: navrhujeme vlastní kurzy nebo spolupracujeme s ostatními,
+    školíme učitele, spolupracujeme s velkými školními obvody, pomáháme měnit vládní
+    politiky, rozšiřujeme se na mezinárodní úrovni prostřednictvím partnerství a marketing
+    za účelem prolomení stereotypů.'
+  about_page_section_more_description_3: Naše práce staví na [desetiletích úsilí nesčetných
+    organizací a jednotlivců] (%{efforts_url}), kteří pomohli založit, financovat
+    a šířit vzdělávání v oblasti informatiky. Jsme vděční, že můžeme těžit z neúnavné
+    pomoci širší komunity vzdělávání v oblasti informatiky, a [děkujeme všem partnerům
+    a jednotlivcům, kteří v průběhu let podporovali náš dopad] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Naše základní hodnoty a pokyny pro zasílání zpráv]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Naše učební osnovy a filozofie pedagogiky] (%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx přednáška našeho zakladatele Hadi Partoviho
+    o tom, proč je informatika pro všechny (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Sjednocující přístup v rozděleném světě
+  about_page_section_specific_title_1: Sjednocující přístup v rozděleném světě
+  about_page_section_specific_title_2: Náš závazek k přístupnosti
+  about_page_section_specific_title_3: 'Jsme oddáni volným osnovám a technice založené
+    na otevřeném zdrojovém kódu '
+  about_page_section_specific_title_4: Koalice advokacie Code.org
+  about_page_section_specific_title_5: Rámec informatiky K-12
+  about_page_section_specific_title_6: Dárci Code.org
+  about_page_section_specific_title_7: Sledujte nás
+  about_page_section_specific_title_8: Mezinárodní působnost Code.org
+  about_page_section_specific_description_1: Globální role Code.org v hnutí informatiky
+    K-12 je možná pouze proto, že používáme sjednocující přístup napříč různými a
+    často rozdělenými zúčastněnými stranami. V době rostoucí polarizace, myšlenka
+    zvyšování příležitostí pro studenty spojuje lidi z celého politického spektra.
+    Členové týmu Code.org, studenti, učitelé a příznivci mají různorodé a rozdílné
+    názory a všichni jsou vítáni v naší misi. [Přečtěte si více.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org věří, že informatika je základem
+    pro všechny studenty a jsme odhodláni k rovnosti, přístupu a příležitostem v naší
+    organizaci [values.](%{values_url}) Abychom dosáhli tohoto cíle, pracujeme na
+    identifikaci a odstranění překážek, které brání začlenění a plné účasti studentů
+    a pedagogů se zdravotním postižením. Chcete-li se dozvědět více o našem úsilí,
+    podívejte se na naše [prohlášení o přístupnosti] (%{accessibility_url})
+  about_page_section_specific_description_3: Všechny zdroje kurikula a výukové programy,
+    které vytváříme, budou navždy volně k použití a budou otevřeně licencovány na
+    základě licence [Creative Commons] (%{commons_url}), což ostatním umožní vytvářet
+    odvozené vzdělávací zdroje pro nekomerční účely. Pokud máte zájem o licencování
+    našich materiálů pro komerční účely, [kontaktujte nás] (%{contact_us_url}). Naše
+    kurzy jsou přeloženy pro celosvětové použití nebo mluvčími různých jazyků. Naše
+    technologie je vyvíjena jako projekt s otevřeným zdrojovým kódem%{open_source_url}.
+  about_page_section_specific_description_4: Code.org Advocacy Coalition (Code.org
+    Advocacy Coalition%{advocacy_url}) je dvoustranná koalice korporací a neziskových
+    organizací, které spolupracují na vytváření federálních a státních politik USA
+    s cílem rozšířit a udržet přístup k počítačové vědě K-12 a rozšířit účast a rozmanitost
+    v této oblasti. Spojujeme [republikánské a demokratické politické vůdce] (%{leaders_url})
+    ve společné věci podporující rozšiřování přístupu a účasti na počítačové vědě
+    K-12.
+  about_page_section_specific_description_5: Code.org je členem řídícího výboru, který
+    pomohl vytvořit [K-12 Computer Science Framework] (%{framework_url}) - průvodce
+    na vysoké úrovni pro státy, okresy a organizace provádějící vzdělávání v oblasti
+    informatiky. Rámec získal podporu stovek akademiků, pedagogů K-12, softwarových
+    společností, neziskových organizací a států.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Přihlaste se k odběru aktualizací stavu]
+    (%{sign_up_url}) o pokroku v hnutí informatiky K-12 a o práci Code.org. Nebo sledujte
+    Code.org na sociálních médiích:"
+  about_page_section_specific_description_8: Více než 40% návštěvnosti našich webových
+    stránek pochází ze zemí mimo Spojené státy a toto číslo stále stoupá. Abychom
+    rozšířili globální přístup k informatice, náš tým úzce spolupracuje s [více než
+    100 mezinárodními partnery] (%{partners_url}), pomáhá jim propagovat Hodinu kódu,
+    prosazovat změnu politiky a školit učitele. Počítačová věda je součástí mezinárodního
+    vzdělávacího diskurzu tím, že spolupracujeme s ministerstvy školství z celého
+    světa a spolupracujeme s mezinárodními organizacemi, jako je Organizace pro hospodářskou
+    spolupráci a rozvoj a Organizace spojených národů pro vzdělávání, vědu a kulturu.
+  about_page_section_donors_description_1: Code.org® je registrovaná veřejná nezisková
+    organizace 501c3 s podporou široké veřejnosti. Jsme vděční za velkorysou podporu,
+    kterou jsme obdrželi od [jednotlivců a organizací] (%{individuals_url}), kteří
+    podporují naši vizi.
+  about_page_section_donors_description_2: Úspěchy kódů (výše) ukazují naši schopnost
+    využít tyto dolary k silným výsledkům. Ale vzhledem k naší neziskové ambici, že
+    každé dítě v každé škole by mělo mít přístup k informatice - stát se gramotnými
+    občany v dnešním digitálním světě a otestovat své zájmy v dalším zkoumání CS jako
+    kariéry - máme před sebou dlouhou cestu ke splnění cíle získávání finančních prostředků,
+    který tuto vizi podpoří.
+  about_page_donors_link_1: Udělejte dary
+  about_page_donors_link_2: "[viz náš seznam dárců] (%{donors_url})"
   language_code:
     ar: arabština
     az: ázerbájdžánský

@@ -1,0 +1,27 @@
+name 'virtual-pl-csp-summer-day2-P2-Context1_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 3, Asynchronous Part 2
+
+##### Welcome! In this asynchronous module, you will wrap up Unit 2 and prepare for Unit 3 tomorrow. 
+
+<img src="https://images.code.org/54406d71f9b74b706efb2d75cedd6619-image-1649859864319.22.50 AM.png" alt="Image of solving the diversity problem begining in K-12" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 20px;">
+
+## In this module, you will:
+
+* ##### Get an overview of what you didn’t cover in Unit 2.
+* ##### Be introduced to Unit 3.
+
+### **Suggested time:** 37 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+
+
+MARKDOWN

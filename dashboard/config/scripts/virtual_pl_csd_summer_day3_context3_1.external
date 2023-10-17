@@ -1,0 +1,13 @@
+name 'virtual-pl-csd-summer-day3-Context3_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Previously, On...Unit 2
+
+#### The content from Unit 1: Digital Information connects to the content of Unit 2: The Internet. While in Unit 1, students learn how to represent information digitally. In Unit 2, they focus on communicating that information over the internet. Additionally, the thinking, communication, and collaboration skills students develop in Unit 1 will be continued in Unit 2 and for the rest of the year.
+
+---
+### In preparation for the next module, watch the video Introduction to Unit 2: The Internet (1:27).
+
+MARKDOWN

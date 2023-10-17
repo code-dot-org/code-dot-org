@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 import {styles} from './censusFormStyles';
 
 const singleLineLayoutStyles = {
@@ -10,7 +11,7 @@ const singleLineLayoutStyles = {
   verticalAlign: 'middle',
   minHeight: 42,
   fontSize: 13,
-  fontFamily: '"Gotham 4r", sans-serif',
+  ...fontConstants['main-font-regular'],
   color: '#333',
   padding: 0,
 };

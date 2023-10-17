@@ -16,6 +16,7 @@ import {
 import LearningGoal from './LearningGoal';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import classnames from 'classnames';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -35,11 +36,11 @@ export default function RubricContent({
   studentLevelInfo,
   rubric,
   teacherHasEnabledAi,
-  currentLevelName,
+  canProvideFeedback,
+  onLevelForEvaluation,
   reportingData,
+  visible,
 }) {
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
-  const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
@@ -118,51 +119,62 @@ export default function RubricContent({
   };
 
   return (
-    <div className={style.rubricContent}>
-      {!!studentLevelInfo && <Heading2>{studentLevelInfo.name}</Heading2>}
-      <Heading5>
-        {i18n.lessonNumbered({
-          lessonNumber: lesson.position,
-          lessonName: lesson.name,
-        })}
-      </Heading5>
-      {!!studentLevelInfo && (
-        <div className={style.studentInfo}>
-          <div className={style.levelAndStudentDetails}>
-            {onLevelForEvaluation && (
-              <div className={style.studentMetadata}>
-                {studentLevelInfo.timeSpent && (
+    <div
+      className={classnames(style.rubricContent, {
+        [style.visibleRubricContent]: visible,
+        [style.hiddenRubricContent]: !visible,
+      })}
+    >
+      <div>
+        {!!studentLevelInfo && (
+          <Heading2 className={style.studentName}>
+            {studentLevelInfo.name}
+          </Heading2>
+        )}
+        <Heading5>
+          {i18n.lessonNumbered({
+            lessonNumber: lesson.position,
+            lessonName: lesson.name,
+          })}
+        </Heading5>
+        {!!studentLevelInfo && (
+          <div className={style.studentInfo}>
+            <div className={style.levelAndStudentDetails}>
+              {onLevelForEvaluation && (
+                <div className={style.studentMetadata}>
+                  {studentLevelInfo.timeSpent && (
+                    <BodyThreeText className={style.singleMetadatum}>
+                      <FontAwesome icon="clock" />
+                      <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
+                    </BodyThreeText>
+                  )}
                   <BodyThreeText className={style.singleMetadatum}>
-                    <FontAwesome icon="clock" />
-                    <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
+                    <FontAwesome icon="rocket" />
+                    {i18n.numAttempts({
+                      numAttempts: studentLevelInfo.attempts || 0,
+                    })}
                   </BodyThreeText>
-                )}
-                <BodyThreeText className={style.singleMetadatum}>
-                  <FontAwesome icon="rocket" />
-                  {i18n.numAttempts({
-                    numAttempts: studentLevelInfo.attempts || 0,
+                  {studentLevelInfo.lastAttempt && (
+                    <BodyThreeText className={style.singleMetadatum}>
+                      <FontAwesome icon="calendar" />
+                      <span>
+                        {formatLastAttempt(studentLevelInfo.lastAttempt)}
+                      </span>
+                    </BodyThreeText>
+                  )}
+                </div>
+              )}
+              {!onLevelForEvaluation && rubricLevel?.position && (
+                <BodyThreeText>
+                  {i18n.feedbackAvailableOnLevel({
+                    levelPosition: rubricLevel.position,
                   })}
                 </BodyThreeText>
-                {studentLevelInfo.lastAttempt && (
-                  <BodyThreeText className={style.singleMetadatum}>
-                    <FontAwesome icon="calendar" />
-                    <span>
-                      {formatLastAttempt(studentLevelInfo.lastAttempt)}
-                    </span>
-                  </BodyThreeText>
-                )}
-              </div>
-            )}
-            {!onLevelForEvaluation && rubricLevel?.position && (
-              <BodyThreeText>
-                {i18n.feedbackAvailableOnLevel({
-                  levelPosition: rubricLevel.position,
-                })}
-              </BodyThreeText>
-            )}
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
       <div className={style.learningGoalContainer}>
         {rubric.learningGoals.map(lg => (
           <LearningGoal
@@ -207,9 +219,11 @@ export default function RubricContent({
 }
 
 RubricContent.propTypes = {
-  currentLevelName: PropTypes.string,
+  onLevelForEvaluation: PropTypes.bool,
+  canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
+  visible: PropTypes.bool,
 };
