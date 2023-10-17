@@ -5,8 +5,7 @@ details {
 
 summary {
   font-size: 1.5em;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   margin-bottom: 0.5em;
   display: list-item;
   user-select: none;

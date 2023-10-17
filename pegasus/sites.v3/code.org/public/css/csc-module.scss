@@ -10,8 +10,7 @@ $color-white: white;
   }
 
   a {
-    font-family: var(--main-font);
-    font-weight: var(--semi-bold-font-weight);
+    font-family: 'Gotham 4r', sans-serif;
     color: $color-black;
     text-decoration: none;
   }
@@ -34,8 +33,7 @@ $color-white: white;
     background: #ffa400;
     color: $color-white !important;
     font-size: 1em;
-    font-family: var(--main-font);
-    font-weight: var(--semi-bold-font-weight);
+    font-family: 'Gotham 4r', sans-serif;
     padding: 0.5em 1em;
   }
 

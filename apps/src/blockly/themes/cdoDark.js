@@ -1,6 +1,5 @@
 import GoogleBlockly from 'blockly/core';
 import DarkTheme from '@blockly/theme-dark';
-import fontConstants from '@cdo/apps/fontConstants';
 import cdoBlockStyles from './cdoBlockStyles.mjs';
 import {Themes} from '../constants.js';
 import color from '../../util/color';
@@ -16,7 +15,6 @@ export default GoogleBlockly.Theme.defineTheme(Themes.DARK, {
     flyoutOpacity: 0.8,
   },
   fontStyle: {
-    family: fontConstants['main-font'],
-    weight: fontConstants['regular-font-weight'],
+    family: '"Gotham 4r", sans-serif',
   },
 });

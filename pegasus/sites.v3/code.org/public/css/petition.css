@@ -1,8 +1,7 @@
 #petition_message {
   font-size: 21px;
   line-height: 28px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 #petition_form .desktop-feature {
@@ -24,9 +23,7 @@
 
 #email_error, #age_error, #no_error {
   color: #ff8000;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
-  display: none;
+  font-family: 'Gotham 7r', sans-serif; display: none;
 }
 
 .grey_input {
@@ -47,6 +44,5 @@
   min-width: 100px;
   margin-top: 0px;
   margin-bottom: 10px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }

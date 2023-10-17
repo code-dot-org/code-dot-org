@@ -2,7 +2,6 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import fontConstants from '@cdo/apps/fontConstants';
 import color from '../util/color';
 import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';
@@ -16,7 +15,7 @@ const style = {
     display: 'block',
     maxWidth: 800,
     margin: 'auto',
-    ...fontConstants['main-font-regular'],
+    fontFamily: `"Gotham 4r", sans-serif`,
   },
   h1: {
     fontSize: 38.5,

@@ -1,12 +1,18 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
+import BlockSvgFrame from '../../addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
-import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+
+const BLOCK_OFFSET = 16;
+
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
+const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
+  experiments.MODAL_FUNCTION_EDITOR
+);
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -17,7 +23,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a function (aka procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
-    type: BLOCK_TYPES.procedureDefinition,
+    type: 'procedures_defnoreturn',
     message0: '%1 %2 %3 %4',
     message1: '%1',
     args0: [
@@ -26,7 +32,10 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type: 'field_input',
+        type:
+          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
+            ? 'field_label'
+            : 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -61,14 +70,13 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
-      'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
   },
   {
     // Block for calling a procedure with no return value.
-    type: BLOCK_TYPES.procedureCall,
+    type: 'procedures_callnoreturn',
     message0: '%1 %2',
     args0: [
       {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
@@ -97,24 +105,31 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 
 // Respond to the click of a call block's edit button
 export const editButtonHandler = function () {
-  const procedure = this.getSourceBlock().getProcedureModel();
-  if (procedure) {
-    Blockly.functionEditor.showForFunction(procedure);
+  if (modalFunctionEditorExperimentEnabled) {
+    const procedure = this.getSourceBlock().getProcedureModel();
+    if (procedure) {
+      Blockly.functionEditor.showForFunction(procedure);
+    }
+  } else {
+    // If we aren't using the new modal function editor yet, just center the block that
+    // was clicked.
+    const workspace = this.getSourceBlock().workspace;
+    const name = this.getSourceBlock().getFieldValue('NAME');
+    const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
+    if (definition) {
+      workspace.centerOnBlock(definition.id);
+      definition.select();
+    }
   }
 };
 
 // This extension adds an edit button to the end of a procedure call block.
-GoogleBlockly.Extensions.register('procedures_edit_button', function () {
+const editButton = function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
-  // If we are in the modal function editor, don't add the button, due to an issue with Blockly
-  // not being able to handle us clearing the block right after it has been clicked.
-  // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
-  // remove the check on functionEditor workspace id.
   if (
     useModalFunctionEditor &&
     this.inputList.length &&
-    !this.workspace.isFlyout &&
-    this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
+    !this.workspace.isFlyout
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
@@ -123,31 +138,9 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
     });
     this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
   }
-});
+};
 
-// This extension renders function and behavior definitions as mini toolboxes
-// The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
-GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
-  // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
-  let miniToolboxBlocks = [];
-  if (this.type === 'behavior_definition') {
-    miniToolboxBlocks.push('sprite_parameter_get');
-  }
-
-  // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
-  if (!miniToolboxBlocks.length) {
-    return;
-  }
-
-  const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
-    this
-  )(undefined, true);
-  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
-    miniToolboxBlocks,
-    flyoutToggleButton,
-    true
-  );
-});
+GoogleBlockly.Extensions.register('procedures_edit_button', editButton);
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
@@ -205,7 +198,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // Note: Blockly.Msg was undefined when this code was extracted into global scope
   const functionDefinitionBlock = {
     kind: 'block',
-    type: BLOCK_TYPES.procedureDefinition,
+    type: 'procedures_defnoreturn',
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
@@ -233,7 +226,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   workspaces.forEach(workspace => {
     const procedureBlocks = workspace
       .getTopBlocks()
-      .filter(topBlock => topBlock.type === BLOCK_TYPES.procedureDefinition);
+      .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
     procedureBlocks.forEach(block => {
       allFunctions.push({
         name: block.getFieldValue('NAME'),
@@ -264,18 +257,53 @@ const getNewFunctionButtonWithCallback = (
   functionDefinitionBlock
 ) => {
   let callbackKey, callback;
-
-  callbackKey = 'newProcedureCallback';
-  callback = () =>
-    Blockly.functionEditor.newProcedureCallback(
-      BLOCK_TYPES.procedureDefinition
-    );
-
+  if (modalFunctionEditorExperimentEnabled) {
+    callbackKey = 'newProcedureCallback';
+    callback = Blockly.functionEditor.newProcedureCallback;
+  } else {
+    callbackKey = 'createAndCenterFunctionDefinitionBlock';
+    // Everything here is place-holder code that should be replaced with a
+    // call to open the behavior editor with a new defintion block.
+    // Until then, we just create a block under all existing blocks on the
+    // main workspace.
+    callback = () => createAndCenterDefinitionBlock(functionDefinitionBlock);
+  }
   workspace.registerButtonCallback(callbackKey, callback);
 
   return {
     kind: 'button',
     text: msg.createBlocklyFunction(),
+    // TODO: Remove the alternate callback key once we're using the new function editor
     callbackKey,
   };
+};
+
+const getLowestBlockBottomY = () => {
+  let lowestBlockBottomY = 0;
+  Blockly.getMainWorkspace()
+    .getTopBlocks()
+    .forEach(block => {
+      const blockY = block.getRelativeToSurfaceXY().y;
+      const blockBottomY = blockY + block.getHeightWidth().height;
+      if (blockBottomY > lowestBlockBottomY) {
+        lowestBlockBottomY = blockBottomY;
+      }
+    });
+  return lowestBlockBottomY;
+};
+
+// Creates a new definition block under all existing blocks on the main workspace,
+// scrolls to the block, and selects it
+export const createAndCenterDefinitionBlock = blockState => {
+  const newDefinitionBlock = Blockly.serialization.blocks.append(
+    {...blockState, x: BLOCK_OFFSET, y: getLowestBlockBottomY() + BLOCK_OFFSET},
+    Blockly.getMainWorkspace()
+  );
+
+  // Close the open toolbox flyout
+  Blockly.getMainWorkspace().hideChaff();
+
+  // Scroll to the new block and select it.
+  Blockly.getMainWorkspace().centerOnBlock(newDefinitionBlock.id);
+  newDefinitionBlock.select();
 };

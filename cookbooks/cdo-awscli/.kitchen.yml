@@ -15,6 +15,7 @@ platforms:
     pid_one_command: /bin/systemd
   run_list:
   - recipe[apt]
+  - recipe[sudo-user]
 suites:
 - name: default
   run_list:

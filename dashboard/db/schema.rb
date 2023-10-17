@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_12_201537) do
+ActiveRecord::Schema.define(version: 2023_09_27_182433) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -645,11 +645,24 @@ ActiveRecord::Schema.define(version: 2023_10_12_201537) do
     t.integer "understanding"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "requester_id"
-    t.integer "ai_confidence"
     t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
-    t.index ["requester_id"], name: "index_learning_goal_ai_evaluations_on_requester_id"
     t.index ["user_id"], name: "index_learning_goal_ai_evaluations_on_user_id"
+  end
+
+  create_table "learning_goal_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "teacher_id"
+    t.integer "unit_id"
+    t.integer "level_id"
+    t.integer "learning_goal_id"
+    t.boolean "ai_sourced"
+    t.date "prompt_version"
+    t.integer "understanding"
+    t.text "feedback"
+    t.text "context"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "submitted_at"
   end
 
   create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2292,7 +2305,6 @@ ActiveRecord::Schema.define(version: 2023_10_12_201537) do
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "learning_goal_ai_evaluations", "users", column: "requester_id", name: "index_learning_goal_ai_evaluations_on_requester_id"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "lti_deployments", "lti_integrations"
   add_foreign_key "lti_user_identities", "lti_integrations"

@@ -40,8 +40,7 @@
 
   h2 {
     margin: 1em 0;
-    font-family: var(--main-font);
-    font-weight: var(--regular-font-weight);
+    font-family: $gotham-regular;
 
     @media screen and (max-width: $width-md) {
       font-size: 1.25em;

@@ -52,7 +52,6 @@ export const initSongs = createAsyncThunk(
         defaultSong?: string;
         isProjectLevel: boolean;
         freePlay: boolean;
-        songSelection?: Array<string>;
       };
       onAuthError: (songId: string) => void;
       onSongSelected?: (songId: string) => void;
@@ -64,20 +63,9 @@ export const initSongs = createAsyncThunk(
 
     // Check for a user-specified manifest file.
     const userManifest = queryParams('manifest') as string;
-
-    // Build up a set from our song selection so we can filter our manifest later.
-    const filteredSongSet = new Set(selectSongOptions.songSelection || []);
-
-    const unfilteredSongManifest = await getSongManifest(
+    const songManifest = await getSongManifest(
       useRestrictedSongs,
       userManifest
-    );
-
-    // a song should be included if we do NOT have a filtered song set
-    // OR if we do have a set and our song's id is in them.
-    const songManifest = unfilteredSongManifest.filter(
-      (song: {id: string}) =>
-        !filteredSongSet.size || filteredSongSet.has(song.id)
     );
     const songData = parseSongOptions(songManifest) as SongData;
     const selectedSong = getSelectedSong(songManifest, selectSongOptions);

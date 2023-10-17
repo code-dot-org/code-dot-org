@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
@@ -44,6 +43,6 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
   },
 };

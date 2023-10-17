@@ -1,22 +1,21 @@
 import _ from 'lodash';
-import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
-import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
-import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
-
-import cdoTheme from '../themes/cdoTheme';
-import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 import {
-  BLOCK_TYPES,
+  ToolboxType,
   CLAMPED_NUMBER_REGEX,
   DEFAULT_SOUND,
   stringIsXml,
-  ToolboxType,
 } from '../constants';
+import cdoTheme from '../themes/cdoTheme';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {
   convertXmlToJson,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
+import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
+import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Loads blocks to a workspace.
@@ -45,7 +44,10 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
     hiddenDefinitionSource,
     Blockly.getHiddenDefinitionWorkspace()
   );
-  if (Blockly.functionEditor) {
+  if (
+    experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR) &&
+    Blockly.functionEditor
+  ) {
     Blockly.functionEditor.setUpEditorWorkspaceProcedures();
   }
 }
@@ -67,10 +69,13 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
 function prepareSourcesForWorkspaces(source, hiddenDefinitions) {
   let {parsedSource, parsedHiddenDefinitions, blockOrderMap} =
     parseSourceAndHiddenDefinitions(source, hiddenDefinitions);
-
-  const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
-  if (Blockly.useModalFunctionEditor) {
-    procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
+  // TODO: When we add behaviors, we should always hide behavior blocks.
+  const procedureTypesToHide = [];
+  if (
+    Blockly.useModalFunctionEditor &&
+    experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
+  ) {
+    procedureTypesToHide.push('procedures_defnoreturn');
   }
   moveHiddenProcedures(
     parsedSource,

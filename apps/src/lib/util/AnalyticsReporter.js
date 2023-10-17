@@ -27,19 +27,16 @@ class AnalyticsReporter {
     }
   }
 
-  setUserProperties(userId, userType, enabledExperiments) {
+  setUserProperties(userId, userType, signInState) {
     const identifyObj = new Identify();
     const formattedUserId = this.formatUserId(userId);
-    // enabledExperiments sometimes has duplicates
-    const uniqueExperiments = [...new Set(enabledExperiments)].sort();
     setUserId(formattedUserId);
     identifyObj.set('userType', userType);
-    identifyObj.set('signInState', !!userId);
-    identifyObj.set('enabledExperiments', uniqueExperiments);
+    identifyObj.set('signInState', signInState);
 
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
-        `User properties: userId: ${formattedUserId}, userType: ${userType}, signInState: ${!!userId}, enabledExperiments: ${uniqueExperiments}`
+        `User properties: userId: ${formattedUserId}, userType: ${userType}, signInState: ${signInState}`
       );
     }
     identify(identifyObj);

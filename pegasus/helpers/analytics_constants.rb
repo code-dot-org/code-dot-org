@@ -13,8 +13,6 @@ module AnalyticsConstants
     CSF_CURRICULUM_PAGE_VISITED_EVENT = 'CSF Curriculum Page Visited'.freeze,
     CSF_UNPLUGGED_PAGE_VISITED_EVENT = 'CSF Unplugged Page Visited'.freeze,
     CSP_CURRICULUM_PAGE_VISITED_EVENT = 'CSP Curriculum Page Visited'.freeze,
-    DONATE_PAGE_VISITED_EVENT = 'Donate Page Visited'.freeze,
-    HELP_US_PAGE_VISITED_EVENT = 'Help Us Page Visited'.freeze,
     PHYSICAL_COMPUTING_PAGE_VISITED_EVENT = 'Physical Computing Page Visited'.freeze,
     ELEMENTARY_CURRICULUM_PAGE_VISITED_EVENT =
       'Elementary School Curriculum Page Visited'.freeze,

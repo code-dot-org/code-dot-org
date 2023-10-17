@@ -74,8 +74,7 @@ table td {
   margin: 0 0 12px 0;
   padding: 0px;
   text-align: center;
-  font-family: var(--main-font);
-  font-weight: var(--regular-font-weight);
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 #donorslider .donor-slider {
@@ -91,8 +90,7 @@ table td {
 
 #donorslider .donor-slider a {
   color: #4d575f;
-  font-family: var(--main-font);
-  font-weight: var(--regular-font-weight);
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 #donorslider .donor-button button {
@@ -140,8 +138,7 @@ section.flex-container {
     margin: 1em 0;
     font-size: 18px;
     text-align: center;
-    font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
+    font-family: "Gotham 7r", sans-serif;
   }
     section.flex-container img {
       align-self: center;
@@ -196,8 +193,7 @@ section.lists h3 {
 
   h5 {
     color: #00adbc;
-    font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
+    font-family: 'Gotham 7r', sans-serif;
     margin: 1.5em 1em 0;
     font-size: 1em;
   }

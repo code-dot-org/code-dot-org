@@ -253,7 +253,7 @@
   },
   "https://studio.code.org/s/csd7-2023/lessons/5/levels/3": {
     "dsls": {
-      "markdown": "![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)\n\n<h2> <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform\" target=\"_blank\">Click Here</a> to take the Shoe Recommendation Survey</h2>\n"
+      "markdown": "![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)\n\n## [Click Here](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) to take the Shoe Recommendation Survey\n"
     }
   },
   "https://studio.code.org/s/csd7-2023/lessons/5/levels/4": {

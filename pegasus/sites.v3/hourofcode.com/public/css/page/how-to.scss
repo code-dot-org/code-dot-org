@@ -22,8 +22,7 @@ html {
 
 h2 {
   font-size: 2rem;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: var(--main-font-extra-bold);
   margin: 0 0 1rem;
   line-height: 1.2;
 }
@@ -36,7 +35,6 @@ h2 {
   margin: 2rem 0 0;
   display: flex;
   justify-content: start;
-  align-items: flex-start;
   flex-wrap: wrap;
   gap: 1em;
 }
@@ -62,8 +60,6 @@ section.banner {
 
   h1 {
     margin-bottom: 1rem;
-    font-size: 2.5rem;
-    color: var(--neutral_white);
   }
 
   .show-overflow {
@@ -90,8 +86,7 @@ section.banner {
     @include reset-spacing;
 
     li {
-      font-family: var(--main-font);
-      font-weight: var(--semi-bold-font-weight);
+      font-family: var(--main-font-bold);
       color: var(--neutral_dark);
       @include reset-list-item-spacing;
 
@@ -200,8 +195,7 @@ section.steps {
     color: var(--brand_primary_dark);
     padding: 2px 6px;
     border-radius: $border-radius;
-    font-family: var(--main-font);
-    font-weight: var(--semi-bold-font-weight);
+    font-family: var(--main-font-bold);
     font-size: 0.65rem;
     line-height: 1.6;
     text-transform: uppercase;
@@ -267,8 +261,7 @@ section.steps {
           }
 
           p.body-two {
-            font-family: var(--main-font);
-            font-weight: var(--semi-bold-font-weight);
+            font-family: var(--main-font-bold);
           }
         }
 
@@ -282,7 +275,6 @@ section.steps {
 
           &.body-two {
             width: 90%;
-            font-weight: var(--regular-font-weight);
           }
         }
       }
@@ -346,8 +338,7 @@ section.steps {
       font-size: 1rem;
       text-align: center;
       line-height: 2;
-      font-family: var(--main-font);
-      font-weight: var(--semi-bold-font-weight);
+      font-family: var(--main-font-bold);
     }
 
     h3 {

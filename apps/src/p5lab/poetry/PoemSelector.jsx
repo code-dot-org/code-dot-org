@@ -14,7 +14,6 @@ import {APP_WIDTH} from '../constants';
 import {PoetryStandaloneApp} from './constants';
 import {getPoem, shouldAlphabetizePoems} from './poem';
 import * as utils from '@cdo/apps/utils';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const poemShape = PropTypes.shape({
   key: PropTypes.string,
@@ -264,7 +263,7 @@ const styles = {
     marginRight: 5,
   },
   warning: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     textAlign: 'end',
     padding: '0 10px 10px 0',
   },

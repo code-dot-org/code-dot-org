@@ -40,8 +40,7 @@
 
 .mc-h1-second-box {
   margin-top: 0;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: var(--gotham-bold);
   font-size: 1.25rem;
   line-height: 1.40;
   margin-bottom: 0.5em;
@@ -49,8 +48,7 @@
 
 .mc-h1-half-box {
   margin-top: 0;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: var(--gotham-bold);
   font-size: 1.25rem;
   line-height: 1.40;
   margin-bottom: 0.5em;
@@ -65,8 +63,7 @@
 }
 
 .color-block a:link, .color-block a:visited, .color-block a:hover, .color-block a:active {
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: "Gotham 5r", sans-serif;
   color: white;
   text-decoration: underline;
 }

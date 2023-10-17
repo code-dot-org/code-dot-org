@@ -22,7 +22,6 @@
  *
  * Shared
  *= require barlow-semi-condensed-font
- *= require metropolis-font
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -35,12 +34,10 @@
 @import "mixins";
 @import "style-constants";
 
-// Bootstrap Variables
-$baseFontFamily: $main-font;
-$headingsFontWeight: $regular-font-weight;
+$baseFontFamily: $gotham-regular;
+$headingsFontWeight: normal;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
-
 $selectUserTypeButtonBorderColor: #ccc;
 $selectUserTypeButtonBackgroundColor: #fff;
 $selectUserTypeButtonTextColor: #000;
@@ -79,14 +76,16 @@ body.music-black {
 }
 
 h1 {
-  @include main-font-bold;
+  font-family: $gotham-extra-bold;
+  font-weight: normal;
   font-size: 32px;
   color: $purple;
 }
 
 h2 {
   margin: 25px 0 10px 0;
-  @include main-font-semi-bold;
+  font-family: $gotham-bold;
+  font-weight: normal;
   font-size: 22px;
   line-height: 30px;
   color: $teal;
@@ -111,22 +110,24 @@ th {
   border: 1px solid $white;
   text-align: left;
   font-size: 120%;
-  @include main-font-semi-bold;
+  font-family: $gotham-bold;
   font-weight: normal;
   padding: 5px;
 }
 
 strong {
-  @include main-font-bold;
+  font-family: $gotham-extra-bold;
+  font-weight: normal;
 }
 
 em {
-  @include main-font-regular-italic;
+  font-family: $gotham-italics;
+  font-style: normal;
 }
 
 strong em,
 em strong {
-  @include main-font-bold-italic;
+  font-family: $gotham-extra-bold-italics;
 }
 
 a.video_link {
@@ -240,7 +241,7 @@ img.video_thumbnail {
     margin-top: 12px;
 
     .headerlink {
-      @include main-font-regular;
+      font-family: 'Gotham 4r', sans-serif;
       margin-left: 30px;
       font-size: 14px;
       line-height: 22px;
@@ -264,7 +265,7 @@ img.video_thumbnail {
     &.header_button_light {
       background-color: $teal;
     }
-    @include main-font-regular;
+    font-family: 'Gotham 4r', sans-serif;
     display: inline-block;
     color: $white;
     background-color: transparent;
@@ -485,7 +486,8 @@ img.video_thumbnail {
 .main {
   padding: 10px;
   a:link, a:visited, a:hover, a:active {
-    @include main-font-bold;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
     color: $brand_secondary_default;
     background-color: transparent;
     text-decoration: underline;
@@ -527,7 +529,8 @@ html, body {
   background-color: $darkest_gray;
   color: $header_text;
   a:link, a:visited, a:hover, a:active {
-    @include main-font-regular;
+    font-family: $gotham-regular;
+    font-weight: normal;
     color: $white;
     background-color: transparent;
   }
@@ -546,7 +549,8 @@ html, body {
     }
   .fineprint {
     a:link, a:visited, a:hover, a:active {
-      @include main-font-semi-bold;
+      font-family: $gotham-bold;
+      font-weight: normal;
     }
   }
   .dim {
@@ -597,7 +601,8 @@ $small-footer-standard-width: 400px;
   color: $dimgray;
   font-size: 14px;
   a {
-    @include main-font-semi-bold;
+    font-family: $gotham-bold;
+    font-weight: normal;
     &:link {
       color: $charcoal;
       text-decoration: none;
@@ -729,7 +734,6 @@ $small-footer-standard-width: 400px;
 /* Override footer position on some pages, but not published project views */
 #page-small-footer .small-footer-base {
   position: fixed;
-  margin-top: 0;
 }
 
 
@@ -1376,7 +1380,8 @@ body.iframe_embed_app_and_code {
   color: $neutral_dark;
 
   .help_title {
-    @include main-font-bold;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
     font-size: 17.5px;
     display: inline-block;
   }
@@ -1445,7 +1450,7 @@ body.iframe_embed_app_and_code {
         border: 2px solid $brand_secondary_default;
         border-radius: 6px;
         color: $neutral_white;
-        @include main-font-semi-bold;
+        font-family: $gotham-bold;
         cursor: pointer !important;
 
         &:hover {
@@ -1560,7 +1565,8 @@ body.iframe_embed_app_and_code {
   font-size: 20px;
   line-height: 28px;
   color: $neutral_dark;
-  @include main-font-semi-bold;
+  font-family: $gotham-bold;
+  font-weight: normal;
   padding-right: 25px;
 }
 
@@ -1623,7 +1629,8 @@ a.download-video {
 
 .quiet_links {
   a:link {
-    @include main-font-regular;
+    font-family: $gotham-regular;
+    font-weight: normal;
   }
 }
 
@@ -1641,7 +1648,8 @@ a.download-video {
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      @include main-font-bold;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
     }
     .btn {
       height: 32px;
@@ -1808,7 +1816,7 @@ a.download-video {
       font-size: 1em;
       max-width: 20%;
       line-height: 1.2;
-      @include main-font-semi-bold;
+      font-family: $gotham-bold;
     }
   }
 
@@ -1821,7 +1829,7 @@ a.download-video {
     color: $neutral_dark;
     font-size: 1em;
     line-height: 1.2;
-    @include main-font-semi-bold;
+    font-family: $gotham-bold;
   }
 
   #password_field, #new_user {
@@ -1837,7 +1845,7 @@ a.download-video {
     background-color: $brand_secondary_default;
     border: 2px solid $brand_secondary_default;
     color: $neutral_white;
-    @include main-font-semi-bold;
+    font-family: $gotham-bold;
     margin: 5px 0;
     width: $button-width;
 
@@ -2211,7 +2219,7 @@ a.download-video {
       margin: 5px 0;
       font-size: 18px;
       height: 40px;
-      @include main-font-bold;
+      font-family: $gotham-extra-bold;
     }
 
     #forgot-password {
@@ -2302,7 +2310,7 @@ a.download-video {
     }
 
     button {
-      @include main-font-semi-bold;
+      font-family: $gotham-bold;
       padding: 10px 20px;
       margin-right: 0;
       background-color: $brand_secondary_default;
@@ -2329,7 +2337,7 @@ a.download-video {
   }
 
   .oauth-sign-in {
-    @include main-font-semi-bold;
+    font-family: $gotham-bold;
     width: 100%;
     margin: 5px 0;
     color: $neutral_dark;
@@ -2464,7 +2472,8 @@ a.download-video {
       .giantmark {
         .text {
           opacity: 0.8;
-          @include main-font-semi-bold;
+          font-family: $gotham-bold;
+          font-weight: normal;
         }
       }
     }
@@ -2652,7 +2661,8 @@ a.download-video {
       padding: 5px;
       font-size: 18px;
       line-height: 18px;
-      @include main-font-bold;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
       color: $white;
       background: $cyan;
       margin: 0;
@@ -2792,7 +2802,8 @@ a.download-video {
   color: $white;
   font-size: 13px;
   padding-right: 10px;
-  @include main-font-regular;
+  font-family: $gotham-regular;
+  font-weight: normal;
   padding: 10px;
 }
 
@@ -2999,7 +3010,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
     }
   }
   .item-answer-letter {
-    @include main-font-semi-bold;
+    font-family: $gotham-bold;
   }
 }
 
@@ -3028,7 +3039,7 @@ $modal-no-icon-gap: 22px;
   }
 
   .congrats {
-    @include main-font-semi-bold;
+    font-family: "Gotham 5r", sans-serif;
     font-size: 21px;
     line-height: 27px;
   }
@@ -3075,7 +3086,8 @@ $modal-no-icon-gap: 22px;
     }
 
     .hint-header {
-      @include main-font-bold;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
     }
 
     .hint-image {
@@ -3103,7 +3115,8 @@ $modal-no-icon-gap: 22px;
 }
 
 .dialog-title {
-  @include main-font-bold;
+  font-family: $gotham-extra-bold;
+  font-weight: normal;
 }
 
 h5.dialog-title {
@@ -3193,7 +3206,7 @@ h5.dialog-title {
   }
 
   strong {
-    @include main-font-semi-bold;
+    font-family: $gotham-bold;
   }
 }
 
@@ -3576,7 +3589,7 @@ code {
       cursor: pointer;
       border: none;
       box-shadow: none;
-      @include main-font-semi-bold;
+      font-family: $gotham-bold;
       font-size: 100%;
       color: $brand_secondary_default;
       text-decoration: underline;
@@ -3651,15 +3664,15 @@ h2.danger {
   padding: 30px 10px 36px 10px;
 
   h1 {
-    @include main-font-semi-bold;
     color: $white;
     margin-bottom: 24px;
     margin-top: 0;
+    font-family: "Gotham 5r", sans-serif;
     font-size: 38px;
   }
 
   h3 {
-    @include main-font-semi-bold;
+    font-family: "Gotham 5r", sans-serif;
     font-size: 20px;
     line-height: normal;
   }
@@ -3701,9 +3714,7 @@ h2.danger {
 .foorm-adjust-header {
   background-color: $white;
   h3 {
-    @include main-font-semi-bold;
-    font-family: $main-font !important;
-    font-weight: $semi-bold-font-weight !important;
+    font-family: "Gotham 5r", sans-serif !important;
     font-size: 22px !important;
     line-height: 30px !important;
     color: $teal !important;
@@ -3711,9 +3722,7 @@ h2.danger {
 }
 
 .foorm-adjust-page-title {
-  @include main-font-semi-bold;
-  font-family: $main-font !important;
-  font-weight: $semi-bold-font-weight !important;
+  font-family: "Gotham 5r", sans-serif !important;
   font-size: 22px !important;
 }
 
@@ -3729,10 +3738,10 @@ h2.danger {
   table-layout: fixed;
 
   th {
-    @include main-font-regular;
     font-size: 12px;
     text-align: center;
-    font-weight: $regular-font-weight !important;
+    font-family: 'Gotham 4r', sans-serif;
+    font-weight: normal !important;
   }
 
   @media (min-width: 601px) {
@@ -3863,21 +3872,19 @@ h2.danger {
       }
 
       #link_your_email {
-        @include main-font-regular;
-        font-family: $main-font !important;
         background-color: $orange;
         border-color: $orange;
         border-image-source: none !important;
+        font-family: 'Gotham 4r', sans-serif !important;
         text-shadow: none !important;
         border-width: 1px !important;
       }
 
       #not_now {
-        @include main-font-regular;
-        font-family: $main-font !important;
         background-color: $light_purple;
         border-color: $light_purple;
         border-image-source: none !important;
+        font-family: 'Gotham 4r', sans-serif !important;
         text-shadow: none !important;
         border-width: 1px !important;
       }
@@ -3987,14 +3994,14 @@ html[dir=rtl] {
 
   .mapboxgl-ctrl-geocoder--suggestion {
     color: $default_text;
-    @include main-font-regular;
+    font-family: $gotham-regular, sans-serif;
   }
 }
 
 #reset-predict-progress-button {
   display: 'inline-block';
   font-size: 12;
-  @include main-font-regular;
+  font-family: $gotham-regular;
   border-width: '1px';
   border-style: 'solid';
   border-color: $border_gray;
@@ -4028,7 +4035,7 @@ a {
     &:link, &:visited, &:hover, &:active {
       text-decoration: none;
       border-radius: 4px;
-      @include main-font-semi-bold;
+      font-family: $gotham-bold;
       font-size: 1em !important;
       padding: 10px 20px;
       height: auto;
@@ -4059,4 +4066,3 @@ a {
 }
 
 @import "NpsSurveyBlock";
-@import "DanceAiModal";

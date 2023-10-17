@@ -5,7 +5,7 @@ class RubricsControllerTest < ActionController::TestCase
 
   setup do
     @levelbuilder = create :levelbuilder
-    @lesson = create(:lesson, :with_lesson_group)
+    @lesson = create(:lesson)
     @level = create(:level)
     create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
   end
@@ -18,11 +18,6 @@ class RubricsControllerTest < ActionController::TestCase
 
   test "create Rubric and Learning Goals with valid params" do
     sign_in @levelbuilder
-
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{@lesson.script.name}.script_json" && contents.include?('learning goal example 1')
-    end.once
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     assert_creates(Rubric) do
       post :create, params: {
@@ -43,30 +38,6 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal @level.id, rubric.level_id
     assert_equal @lesson.id, rubric.lesson_id
     assert_equal 2, learning_goals.length
-  end
-
-  test 'updates rubric and learning goals with valid params' do
-    sign_in @levelbuilder
-
-    lesson = create :lesson, :with_lesson_group
-    level = create :level
-    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
-    rubric = create :rubric, lesson: lesson, level: level
-    learning_goal = create :learning_goal, rubric: rubric
-    unit_name = rubric.lesson.script.name
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && contents.include?(learning_goal.key)
-    end.once
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    post :update, params: {
-      id: rubric.id,
-      learning_goals_attributes: [
-        {id: learning_goal.id, learning_goal: 'updated learning goal', ai_enabled: true, position: 0},
-      ]
-    }
-    learning_goal.reload
-    assert_equal 'updated learning goal', learning_goal.learning_goal
   end
 
   test 'submits rubric evaluations of a student' do
@@ -105,8 +76,8 @@ class RubricsControllerTest < ActionController::TestCase
     rubric = create :rubric
     learning_goal1 = create :learning_goal, rubric: rubric
     learning_goal2 = create :learning_goal, rubric: rubric
-    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, requester: teacher, understanding: 1
-    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, requester: teacher,  understanding: 2
+    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, understanding: 1
+    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, understanding: 2
 
     get :get_ai_evaluations, params: {
       id: rubric.id,
@@ -125,7 +96,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in teacher
 
     learning_goal = create :learning_goal
-    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student
 
     get :get_ai_evaluations, params: {
       id: learning_goal.rubric.id,
@@ -142,9 +113,9 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in teacher
 
     learning_goal = create :learning_goal
-    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher, understanding: 1
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, understanding: 1
     travel 1.minute do
-      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher, understanding: 2
+      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, understanding: 2
     end
 
     get :get_ai_evaluations, params: {

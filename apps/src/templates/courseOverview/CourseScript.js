@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
@@ -193,7 +192,7 @@ const styles = {
   },
   title: {
     fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   // TODO: share better with ProgressLesson
   hidden: {

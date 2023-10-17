@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class Assigned extends Component {
   render() {
@@ -24,7 +23,7 @@ const styles = {
   assigned: {
     color: color.level_perfect,
     fontSize: 16,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     lineHeight: '36px',
     marginLeft: 10,
     verticalAlign: 'top',

@@ -1,5 +1,4 @@
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const teacherFeedbackStyles = {
   footer: {
@@ -16,13 +15,14 @@ const teacherFeedbackStyles = {
     color: color.charcoal,
     fontSize: 18,
     lineHeight: '18px',
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'normal',
   },
   commentAndFooter: {
     padding: '8px 16px',
   },
   timestamp: {
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
   },
 };
 
