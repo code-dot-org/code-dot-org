@@ -122,8 +122,8 @@ Dance.prototype.init = function (config) {
     this.studioApp_.init(config);
     this.currentCode = this.studioApp_.getCode();
     if (this.usesPreview) {
+      // rerender preview each time student code changes
       this.studioApp_.addChangeHandler(e => {
-        // We want to check if the workspace code changed only when a block has been dragged or changed.
         if (
           e.type !== Blockly.Events.BLOCK_DRAG &&
           e.type !== Blockly.Events.BLOCK_CHANGE
@@ -131,7 +131,6 @@ Dance.prototype.init = function (config) {
           return;
         }
 
-        // Only preview once the drag has finished (performance consideration)
         if (e.type === Blockly.Events.BLOCK_DRAG && e.isStart) {
           return;
         }
@@ -474,15 +473,10 @@ Dance.prototype.preview = async function () {
     code
   ).hooks;
 
-  // background not showing up unless foreground block included?
-  // should check out preview on lower powered devices
   const charactersReferenced = utils.computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
-  const previewStartTime = Date.now();
   this.nativeAPI.p5_.draw();
-  const previewEndTime = Date.now();
-  console.log(`Preview time: ${previewEndTime - previewStartTime} ms`);
   this.nativeAPI.setForegroundEffectsInPreviewMode(false);
 };
 
