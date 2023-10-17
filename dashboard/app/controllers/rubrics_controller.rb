@@ -86,9 +86,8 @@ class RubricsController < ApplicationController
   end
 
   def run_ai_evaluations_for_user
-    permitted_params = params.transform_keys(&:underscore).permit(:id, :user_id)
-
-    user = User.find(permitted_params[:user_id]) || current_user
+    user_id = params.transform_keys(&:underscore).require(:user_id)
+    user = User.find_by(id: user_id)
     return head :forbidden unless user && (user.student_of?(current_user) || user == current_user)
 
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
