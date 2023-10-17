@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-11 16:44:49 UTC",
+    "serialized_at": "2023-10-16 15:02:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -208,7 +208,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nIn this section, facilitators debrief the asynchronous activity, going through the slides participants worked on and highlighting important points.\n\n\n**Objectives**\n\n* Participants can recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally \n\n**Suggested Time:** 10 minutes \n",
+        "overview": "**Purpose:**\nIn this section, facilitators debrief the asynchronous activity, going through the slides participants worked on and highlighting important points.\n\n\n**Objectives**\n\n* Participants can recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally. \n\n**Suggested Time:** 10 minutes \n",
         "student_overview": "\n\n**You will**\n\n* Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally "
       },
       "seeding_key": {
@@ -225,7 +225,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nParticipants who did not do the pre-work received their first exposure to The Neighborhood during the previous asynchronous session. This lesson is meant to further expose them to the environment and continue to build comfort.\n\n\n**Objectives**\n\n**Content objectives:*\n\n* Call methods with arguments\n* Differentiate between parameters and arguments\n\n\n**Pedagogy objectives:*\n* Participants are able to support students in reading and comprehension in the course.\n\n**Suggested time:** 60 minutes ",
+        "overview": "**Purpose:**\nParticipants who did not do the pre-work received their first exposure to The Neighborhood during the previous asynchronous session. This lesson is meant to further expose them to the environment and continue to build comfort.\n\n\n**Objectives**\n\n*Content objectives:*\n\n* Call methods with arguments\n* Differentiate between parameters and arguments\n\n\n*Pedagogy objectives:*\n* Participants are able to support students in reading and comprehension in the course.\n\n**Suggested time:** 60 minutes ",
         "student_overview": "**You will**\n\n* Call methods with arguments\n* Differentiate between parameters and arguments\n\n\n* Learn strategies to support students in reading and comprehension in the course."
       },
       "seeding_key": {
@@ -713,6 +713,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1-async2lesson"
+        ],
         "progression": "Investigating Unit 1 Lesson 7"
       },
       "bonus": false,
@@ -735,6 +738,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1_async1jigsaw2"
+        ],
         "progression": "Investigating Unit 1 Lesson 7"
       },
       "bonus": false,
@@ -757,6 +763,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day1-async2jigsaw"
+        ],
         "progression": "Investigating Unit 1 Lesson 7"
       },
       "bonus": false,
