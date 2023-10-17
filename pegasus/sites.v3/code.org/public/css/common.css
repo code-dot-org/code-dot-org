@@ -4,8 +4,7 @@
 
 .solid-block-header {
   font-size: 30px;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: 'Gotham 7r', sans-serif;
   line-height: 1.2em;
   background-color: var(--neutral_dark70);
   color: var(--neutral_white);
@@ -20,8 +19,7 @@
 .solid-block-subheader {
   color: #7665a0;
   font-size: 18px;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: 'Gotham 7r', sans-serif;
   margin-top: 10px;
   margin-bottom: 20px;
   line-height: 1.2em;
@@ -30,8 +28,7 @@
 .solid-block-subtitle {
   color: var(--neutral_white);
   font-size: 16px;
-  font-family: var(--main-font);
-  font-weight: var(--regular-font-weight);
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .video-smalltext {
@@ -147,14 +144,12 @@
 }
 .course-carousel .slide h2 {
   font-size: 18px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   margin: 0 0 .333em 0;
 }
 .course-carousel .slide h3 {
   font-size: 14px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   margin: 0 0 .857em 0;
 }
 .course-carousel .slide p {
@@ -197,8 +192,7 @@
   padding: 10px 20px;
   margin: 0;
   font-size: 18px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -398,8 +392,7 @@
 .share-buttons button {
   width: auto;
   height: auto;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   margin: 10px 10px 0 0;
 }
 .share-buttons button i {
@@ -417,8 +410,7 @@ a.link-button {
   border-radius: 4px;
   padding: 6px 12px;
   font-size: 14px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 4r', sans-serif;
   text-decoration: none;
 }
 
@@ -561,8 +553,7 @@ a.link-button {
 .impact-stats-link .left p.title {
   font-size: 16px;
   margin-bottom: 3px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .impact-stats-link .left p.details {
@@ -577,8 +568,7 @@ a.link-button {
   margin-top: 0px;
   width: 200px;
   height: 50px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 @media screen and (min-width: 970px) {

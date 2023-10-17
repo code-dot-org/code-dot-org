@@ -68,8 +68,7 @@
 
   h1 {
     font-size: 4.5em;
-    font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
+    font-family: $gotham-extra-bold;
     margin: 0 auto 0.5em;
 
     @media screen and (max-width: $width-lg) {
@@ -87,7 +86,7 @@
 
   h2 {
     margin-top: 0;
-    font-family: var(--main-font);
+    font-family: $gotham-regular;
 
     @media screen and (max-width: $width-md) {
       font-size: 1.25em;
@@ -100,8 +99,7 @@
   // The Hour of Code is coming/here text
   p {
     font-size: 2em;
-    font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
+    font-family: $gotham-bold;
 
     @media screen and (max-width: $width-md) {
       font-size: 1.75em;
@@ -142,7 +140,7 @@ section.banner {
   }
 
   h2 {
-    font-family: var(--main-font);
+    font-family: $gotham-regular;
     font-size: 1.2em;
     line-height: 1.4;
     margin: 1em auto 2em;
@@ -171,8 +169,7 @@ section.banner {
   a {
     color: $darkest_gray;
     text-decoration: underline;
-    font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
+    font-family: $gotham-bold;
   }
 
   p:last-child {

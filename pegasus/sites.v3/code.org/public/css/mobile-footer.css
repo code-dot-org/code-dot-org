@@ -34,7 +34,7 @@
 #footer-links a {
   color: white;
   font-weight: normal;
-  font-family: var(--main-font);
+  font-family: 'Gotham 4r', sans-serif;
   text-decoration: none;
 }
 
@@ -178,8 +178,7 @@
    #privacy a {
     color: #ffa400;
     opacity: 1;
-    font-family: var(--main-font);
-    font-weight: var(--semi-bold-font-weight);
+    font-family: 'Gotham 5r', sans-serif;
   }
 
   #privacy a:hover {

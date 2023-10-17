@@ -6,7 +6,6 @@ import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {getStore} from '../../redux';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export const styles = {
   button: {
@@ -25,7 +24,7 @@ export const styles = {
   },
   intro: {
     fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
     color: color.charcoal,
     paddingRight: 20,
   },

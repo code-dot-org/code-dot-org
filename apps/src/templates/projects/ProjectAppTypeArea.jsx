@@ -9,7 +9,6 @@ import Button from '../Button';
 import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
 import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const NUM_PROJECTS_TO_ADD = 12;
 
@@ -216,7 +215,7 @@ const styles = {
     marginTop: 35,
     marginBottom: 16,
     cursor: 'pointer',
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   viewMoreButtons: {
     float: 'right',

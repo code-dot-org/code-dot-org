@@ -1,3 +1,12 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  height: 100%;
+}
+
 .wrapper {
   min-height: 100%;
   margin-bottom: -80px;     /* This is the same as the height of .push. */
@@ -111,8 +120,7 @@
 #footer-links a {
   color: white;
   font-weight: normal;
-  font-family: var(--main-font);
-  font-weight: var(--regular-font-weight);
+  font-family: 'Gotham 4r', sans-serif;
   opacity: 0.8;
   text-decoration: none;
 }
@@ -177,9 +185,9 @@
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 4r', sans-serif;
   font-size: 14px;
+  font-weight: normal;
   height: 35px;
   letter-spacing: normal;
   line-height: 20px;

@@ -22,8 +22,7 @@
 .testimonial-title {
   margin-top: 30px;
   font-size: 20px;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: 'Gotham 7r', sans-serif;
 }
 
 .testimonial-subtitle {

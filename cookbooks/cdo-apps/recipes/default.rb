@@ -10,6 +10,7 @@ chef_client_updater 'install' do
 end
 
 include_recipe 'apt'
+include_recipe 'sudo-user'
 
 include_recipe 'cdo-apps::hostname'
 

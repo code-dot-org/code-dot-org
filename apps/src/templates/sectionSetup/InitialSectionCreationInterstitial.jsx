@@ -9,7 +9,6 @@ import {connect} from 'react-redux';
 import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import fontConstants from '@cdo/apps/fontConstants';
 
 class InitialSectionCreationInterstitial extends Component {
   static propTypes = {
@@ -83,7 +82,7 @@ const styles = {
     color: color.neutral_dark,
     fontSize: '1.25em',
     marginBottom: '0.5em',
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
   },
   descriptionText: {
     fontSize: '1em',

@@ -1,15 +1,19 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
+import {createAndCenterDefinitionBlock} from './proceduresBlocks';
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
-import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
+const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
+  experiments.MODAL_FUNCTION_EDITOR
+);
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -20,7 +24,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a behavior (a type of procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
-    type: BLOCK_TYPES.behaviorDefinition,
+    type: 'behavior_definition',
     message0: '%1 %2 %3 %4 %5',
     message1: '%1',
     args0: [
@@ -29,7 +33,10 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type: 'field_input',
+        type:
+          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
+            ? 'field_label'
+            : 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -68,13 +75,11 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'behaviors_block_frame',
-      'procedure_def_mini_toolbox',
-      'modal_procedures_no_destroy',
     ],
     mutator: 'behavior_def_mutator',
   },
   {
-    type: BLOCK_TYPES.behaviorGet,
+    type: 'gamelab_behavior_get',
     message0: '%1 %2',
     args0: [
       {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
@@ -94,12 +99,11 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
-      'modal_procedures_no_destroy',
     ],
     mutator: 'behavior_get_mutator',
   },
   {
-    type: BLOCK_TYPES.spriteParameterGet,
+    type: 'sprite_parameter_get',
     message0: '%1',
     args0: [
       {
@@ -117,7 +121,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   },
 ]);
 
-// Mutators and Extensions
 GoogleBlockly.Extensions.registerMutator(
   'behavior_def_mutator',
   behaviorDefMutator
@@ -157,24 +160,32 @@ GoogleBlockly.Extensions.registerMutator(
 export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
+  const newBehaviorButton = {
+    kind: 'button',
+    text: msg.createBlocklyBehavior(),
+    callbackKey: 'createNewBehavior',
+  };
   const behaviorDefinitionBlock = {
     kind: 'block',
-    type: BLOCK_TYPES.behaviorDefinition,
+    type: 'behavior_definition',
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
   };
 
+  // TODO: Replace this with a call to open the behavior editor with a new block
+  const createNewBehavior = () =>
+    createAndCenterDefinitionBlock(behaviorDefinitionBlock);
+
   // If the modal function editor is enabled, we render a button to open the editor
   // Otherwise, we render a "blank" behavior definition block
   if (functionEditorOpen) {
-    // No-op - cannot create new behaviors while the modal editor is open
+    // No-op -- cannot create new behaviors while the modal editor is open
   } else if (useModalFunctionEditor) {
-    const newBehaviorButton = getNewBehaviorButtonWithCallback(
-      workspace,
-      behaviorDefinitionBlock
-    );
+    workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
     blockList.push(newBehaviorButton);
+  } else {
+    blockList.push(behaviorDefinitionBlock);
   }
 
   blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
@@ -189,7 +200,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   workspaces.forEach(workspace => {
     const behaviorBlocks = workspace
       .getTopBlocks()
-      .filter(topBlock => topBlock.type === BLOCK_TYPES.behaviorDefinition);
+      .filter(topBlock => topBlock.type === 'behavior_definition');
     behaviorBlocks.forEach(block =>
       allBehaviors.push({
         name: block.getFieldValue('NAME'),
@@ -201,7 +212,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   allBehaviors.sort(nameComparator).forEach(({name, id}) => {
     blockList.push({
       kind: 'block',
-      type: BLOCK_TYPES.behaviorGet,
+      type: 'gamelab_behavior_get',
       extraState: {
         name,
         id,
@@ -262,19 +273,3 @@ function simplifyBlockStateForFlyout(block) {
 
   return modifiedBlock;
 }
-
-const getNewBehaviorButtonWithCallback = (
-  workspace,
-  behaviorDefinitionBlock
-) => {
-  const callbackKey = 'newBehaviorCallback';
-  workspace.registerButtonCallback(callbackKey, () => {
-    Blockly.functionEditor.newProcedureCallback(BLOCK_TYPES.behaviorDefinition);
-  });
-
-  return {
-    kind: 'button',
-    text: msg.createBlocklyBehavior(),
-    callbackKey,
-  };
-};

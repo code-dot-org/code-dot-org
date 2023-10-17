@@ -9,7 +9,6 @@ export async function saveRubricToTable(
   setSaveNotificationText,
   rubric,
   learningGoalList,
-  setLearningGoalList,
   selectedLevelForAssessment,
   lessonId
 ) {
@@ -45,9 +44,10 @@ export async function saveRubricToTable(
     if (!rubric) {
       navigateToHref(data.redirectUrl);
     } else {
-      setLearningGoalList(data.learningGoals);
       setSaveNotificationText(SAVE_COMPLETED_TEXT);
-      clearNotification(setSaveNotificationText);
+      setTimeout(() => {
+        setSaveNotificationText('');
+      }, 8500);
     }
   } catch (err) {
     console.error('Error saving rubric:' + err);
@@ -118,12 +118,6 @@ function resetPositionsOfLearningGoals(keyConceptList) {
     }
   });
   return keyConceptList;
-}
-
-function clearNotification(setSaveNotificationText) {
-  setTimeout(() => {
-    setSaveNotificationText('');
-  }, 8500);
 }
 
 export const styles = {

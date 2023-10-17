@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {
-  EmText,
-  StrongText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+import {EmText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
@@ -42,9 +38,7 @@ export default function AiAssessmentBox({
     <div className={boxColor()}>
       {isAiAssessed && (
         <div>
-          <BodyThreeText>
-            <StrongText>{studentAchievment()}</StrongText>
-          </BodyThreeText>
+          <Heading6>{studentAchievment()}</Heading6>
           {aiConfidence && (
             <div>
               <EmText>{i18n.aiConfidence({aiConfidence: aiConfidence})}</EmText>

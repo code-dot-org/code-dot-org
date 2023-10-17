@@ -11,7 +11,10 @@
 
 // Fade in for 1 seconds after a 1 second delay.
 @keyframes appear1 {
-  0%, 50% {
+  0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
   }
   100% {
@@ -24,35 +27,7 @@
     left: 50%;
   }
   100% {
-    left: 10%;
-  }
-}
-
-// 0.5 second pause, then scan over 2.5 seconds
-@keyframes scan-left-to-right {
-  0%, 16.6% {
-    left: calc(50% - 65px);
-  }
-  100% {
-    left: calc(50% + 65px);
-  }
-}
-
-@keyframes center-to-left {
-  0% {
-    left: calc(50% + 65px);
-  }
-  100% {
-    left: 10%;
-  }
-}
-
-@keyframes right-to-center {
-  0% {
-    left: 83%
-  }
-  100% {
-    left: 45%;
+    left: 5%;
   }
 }
 
@@ -118,9 +93,9 @@
       pointer-events: none;
 
       .prompt {
+        margin-left: 140px;
         display: flex;
         align-items: center;
-        justify-content: center;
         font-size: 18px;
         margin-top: 14px;
 
@@ -173,105 +148,77 @@
       top: 60px;
       left: 0;
       pointer-events: none;
-      z-index: 1;
 
       .botContainer {
         flex: 0 0 140px;
 
         .bot {
+          width: 110px;
           position: absolute;
-          transform: translateX(-50%);
+          transform: translateX(-50px);
 
           &AppearCentered {
-            left: calc(50% - 65px);
+            left: 50%;
             animation: appear 2s;
-          }
-
-          &ScanLeftToRight {
-            animation: scan-left-to-right 3s;
-            left: calc(50% + 65px);
           }
 
           &CenterToLeft {
             animation: center-to-left 1.75s;
-            left: 10%;
+            left: 5%;
           }
 
           &Left {
-            left: 10%;
-          }
-
-          .image {
-            position: relative;
-            width: 110px;
-            animation: appear1 0.5s;
-          }
-
-          .beamImage {
-            top: 140px;
-            left: 50%;
-            width: 100px;
-            position: absolute;
-            transform: translateX(-50%);
-            animation: appear1 0.25s;
-            display: none;
-
-            &Visible {
-              display: block;
-            }
+            left: 5%;
           }
         }
+      }
+
+      .spinner {
+        position: absolute;
+        top: 60px;
+        left: calc(50% + 100px);
       }
     }
 
     .outputsArea {
       position: absolute;
-      display: flex;
-      justify-content: center;
-      width: 100%;
+      width: calc(100% - 340px);
+      margin-left: 120px;
       height: 270px;
       top: 60px;
       left: 0;
 
-      .blockPreview {
-        position: absolute;
-        transform: translateX(-50%);
-        left: 45%;
-        top: 60px;
+      .pre {
+        white-space: pre-wrap;
+        word-break: initial;
+        overflow: scroll;
+        font-size: 14px;
+      }
 
-        &Right {
-          left: 83%;
-        }
+      .code {
+        max-height: 80px;
+      }
 
-        &RightToCenter {
-          animation: right-to-center 2s;
-          left: 45%;
-        }
+      .explanation {
+        max-height: 60px;
       }
     }
 
     .previewArea {
       position: absolute;
       height: 100%;
-      right: 5px;
+      right: 0;
       display: flex;
       align-items: center;
       margin-top: 10px;
-      animation: appear1 2s;
-    }
-
-    .generatingArea {
-      position: absolute;
-      top: 40px;
-      width: 100%;
     }
 
     .buttonsArea {
       height: 44px;
       margin-top: auto;
       display: flex;
-      justify-content: flex-end;
-      flex-direction: row;
+      align-items: flex-end;
+      flex-direction: column;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -279,10 +226,6 @@
 
       .button {
         font-size: 16px;
-
-        &Left {
-          margin-right: auto;
-        }
       }
     }
   }

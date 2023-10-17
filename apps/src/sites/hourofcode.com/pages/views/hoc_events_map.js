@@ -54,14 +54,6 @@ $(document).ready(function () {
       url: 'mapbox://codeorg.hoctiles',
     });
 
-    map.setFilter('admin-0-boundary-disputed', [
-      'all',
-      ['==', ['get', 'disputed'], 'true'],
-      ['==', ['get', 'admin_level'], 0],
-      ['==', ['get', 'maritime'], 'false'],
-      ['match', ['get', 'worldview'], ['all', 'MA'], true, false],
-    ]);
-
     // The order we add layers matters here as layers are added on top of each
     // other. We want special events to be on top of the other events, so we
     // add the special events layer second.

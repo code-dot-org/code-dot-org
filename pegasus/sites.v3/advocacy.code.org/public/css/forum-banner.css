@@ -21,8 +21,7 @@
 .announcement .left .title {
   font-size: 16px;
   margin-bottom: 3px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .announcement .left .details {
@@ -36,6 +35,5 @@
 .announcement .right button {
   margin-top: 10px;
   margin-right: 10px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }

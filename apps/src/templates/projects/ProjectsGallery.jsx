@@ -9,7 +9,6 @@ import {Galleries} from './projectConstants';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const galleryTabs = [
   {
@@ -90,7 +89,7 @@ const styles = {
     },
     border: 'none',
     borderRadius: 50,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 20,
     backgroundColor: color.neutral_light,
     color: color.neutral_dark,

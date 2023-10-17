@@ -88,16 +88,14 @@
   color: white;
   text-decoration: none;
   font-size: 14px;
-  font-family: var(--main-font);
-  font-weight: var(--regular-font-weight);
+  font-family: 'Gotham 4r', sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
 
 .secondary-nav a {
   color: white;
-  font-family: var(--main-font);
-  font-weight: var(--regular-font-weight);
+  font-family: 'Gotham 4r', sans-serif;
   text-decoration: none;
 }
 
@@ -184,8 +182,7 @@
   .secondary-nav a {
     color: #7664a0;
     text-decoration: none;
-    font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
+    font-family: 'Gotham 7r', sans-serif;
   }
 }
 
@@ -228,7 +225,6 @@
   .secondary-nav a {
     color: #7664a0;
     text-decoration: none;
-    font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+    font-family: 'Gotham 7r', sans-serif;
   }
 }

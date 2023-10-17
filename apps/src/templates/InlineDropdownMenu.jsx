@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 import onClickOutside from 'react-onclickoutside';
 import {KeyCodes} from '@cdo/apps/constants';
 
@@ -136,7 +135,7 @@ const styles = {
   dropdownOptionContainer: {
     height: '22px',
     fontSize: '14px',
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r"',
     color: color.dark_charcoal,
     padding: '5px 12px',
     cursor: 'pointer',

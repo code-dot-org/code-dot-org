@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-10 15:16:23 UTC",
+    "serialized_at": "2023-10-05 19:27:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -653,9 +653,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U1L4 CYU3_1"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -678,9 +675,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async1_1"
-        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -703,9 +697,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async1.5_1"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -728,9 +719,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async2_1"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -753,9 +741,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async3_1"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -778,9 +763,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async4_1"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -803,9 +785,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async5_1"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -828,9 +807,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async6_1"
-        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -853,9 +829,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources1_1"
-        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -986,7 +959,7 @@
   "resources": [
     {
       "name": "2023 Virtual CSP Summer Workshop - Day 1 Agenda",
-      "url": "https://docs.google.com/document/d/1sfEyKamZF3xCAuOcZbqwCA_Upy6RpGi1uF3bX7eBKxo/edit",
+      "url": "https://docs.google.com/document/d/1MhL-WxbG7ZqMYyYhvJ2m74FHLeM_2dLzzSZOH-MmvVY/edit#heading=h.z84jwpltvqnh",
       "key": "2023_virtual_csp_summer_workshop_-_day_1_agenda",
       "properties": {
       },
@@ -996,7 +969,7 @@
     },
     {
       "name": "2023 Virtual CSP Summer Workshop - Day 1 Slides",
-      "url": "https://docs.google.com/presentation/d/1wkHDEdZ8tU0OSJajVVNt-2g1tyRb8d0CSxElTjNuwmY/edit#slide=id.gdc8b0dc810_0_182",
+      "url": "https://docs.google.com/presentation/d/1aKaFm5imjjW6SXjkPcI1URUfTPiYb-9A-khgzPHg9-c/edit#slide=id.gdc8b0dc810_0_182",
       "key": "2023_virtual_csp_summer_workshop_-_day_1_slides",
       "properties": {
       },

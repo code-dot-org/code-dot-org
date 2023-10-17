@@ -34,8 +34,7 @@ div[dir='rtl'] .img-dance-stars{
   background-color: white;
   border-color: white;
   color: #4d575f;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: $gotham-bold;
 
   &:hover {
     background-color: $neutral_light;
@@ -48,16 +47,14 @@ div[dir='rtl'] .img-dance-stars{
   color: white;
   text-align: center;
   margin-bottom: 10px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   line-height: 19px;
   padding: 5px 10px;
 }
 
 .foot-note-heading {
   margin-bottom: 5px;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: 'Gotham 7r', sans-serif;
 }
 
 .img-wrapper img {
@@ -274,8 +271,7 @@ a:hover {
   }
 
   .foot-note-text {
-    font-family: var(--main-font);
-    font-weight: var(--semi-bold-font-weight);
+    font: 14px/16px 'Gotham 5r', sans-serif;
   }
 
   .student_dance_projects {
@@ -300,8 +296,7 @@ a:hover {
   top: 230px;
   text-align: center;
   width: 460px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .new-announcement .highlight-word {
@@ -309,8 +304,7 @@ a:hover {
 }
 
 .highlight-strong strong  {
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   color: rgb(89, 202, 211);
 }
 
@@ -322,8 +316,7 @@ a:hover {
   line-height: 30px;
   text-align: center;
   width: 100%;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   .highlight-word {
     color: rgb(89, 202, 211);
   }
@@ -340,8 +333,7 @@ a:hover {
   text-align: center;
   width: 100%;
   padding-bottom: 10px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
   .highlight-word {
     color: rgb(89, 202, 211);
   }

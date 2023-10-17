@@ -6,8 +6,7 @@
 
 #classroom a {
   color: white;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 #classroom .section {
@@ -26,8 +25,7 @@
 }
 
 #classroom .section h2 {
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: 'Gotham 7r', sans-serif;
   margin-top: 0px;
   margin-bottom:10px;
   color: white;

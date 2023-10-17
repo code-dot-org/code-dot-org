@@ -21,8 +21,7 @@
 }
 
 .info {
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: 'Gotham 7r', sans-serif;
 }
 
 #infobox strong {
@@ -39,8 +38,7 @@
 }
 
 #infobox b {
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 #state-dropdown {
@@ -102,8 +100,7 @@
 }
 
 #state-title {
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
+  font-family: 'Gotham 7r', sans-serif;
   color: var(--brand_primary_dark);
   font-size: 38px;
   line-height: 44px;

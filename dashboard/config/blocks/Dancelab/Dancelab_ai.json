@@ -1,25 +1,15 @@
 {
   "category": "World",
   "config": {
+    "style": "world_blocks",
     "func": "ai",
-    "inline": true,
-    "blockText": "{IMAGE}generate {VALUE} stage",
+    "blockText": "use AI {VALUE}",
     "color": [
-      216,
-      0.13,
-      0.29
+      0,
+      0.9,
+      0.9
     ],
     "args": [
-      {
-        "name": "IMAGE",
-        "dummy": true,
-        "inline": true,
-        "customOptions": {
-          "assetUrl": "media/ai-bot-border.png",
-          "width": 24,
-          "height": 24
-        }
-      },
       {
         "name": "VALUE",
         "customInput": "danceAi"

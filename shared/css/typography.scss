@@ -99,14 +99,14 @@
 
 @mixin heading-sm {
   @include heading-common;
-  @include main-font-semi-bold;
+  font-family: $gotham-bold, sans-serif;
   font-size: 1.25rem;
   line-height: 1.40;
 }
 
 @mixin heading-xs {
   @include heading-common;
-  @include main-font-semi-bold;
+  font-family: $gotham-bold, sans-serif;
   font-size: 1rem;
   line-height: 1.48;
 }
@@ -114,7 +114,7 @@
 // Paragraph styles
 @mixin paragraph-common {
   color: $neutral-dark;
-  @include main-font-regular;
+  font-family: $gotham-regular, sans-serif;
   margin-bottom: 1em;
 }
 
@@ -145,7 +145,7 @@
 // Overline styles
 @mixin overline-common {
   @include paragraph-common;
-  @include main-font-semi-bold;
+  font-family: $gotham-bold, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
 }
@@ -170,28 +170,28 @@
 
 // Strong and Em styles
 @mixin strong {
-  @include main-font-semi-bold;
+  font-family: $gotham-bold, sans-serif;
 }
 
 @mixin extra-strong {
-  @include main-font-bold;
+  font-family: $gotham-extra-bold, sans-serif;
 }
 
 @mixin em {
-  @include main-font-regular-italic;
+  font-family: $gotham-italics, sans-serif;
 }
 
 @mixin strong-em {
-  @include main-font-semi-bold-italic;
+  font-family: $gotham-bold-italics, sans-serif;
 }
 
 @mixin extra-strong-em {
-  @include main-font-bold-italic;
+  font-family: $gotham-extra-bold-italics, sans-serif;
 }
 
 // Caption styles
 @mixin figcaption {
-  @include main-font-semi-bold;
+  font-family: $gotham-bold, sans-serif;
   font-size: 0.875rem;
   margin: 0.5em 0 1em;
   line-height: 1.64;

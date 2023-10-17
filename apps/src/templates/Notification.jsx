@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from './Button';
 import trackEvent from '../util/trackEvent';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import fontConstants from '@cdo/apps/fontConstants';
+import _ from 'lodash';
 
 export const NotificationType = {
   information: 'information',
@@ -271,15 +270,16 @@ const styles = {
     boxSizing: 'border-box',
   },
   notice: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
+    fontWeight: 'bold',
     letterSpacing: -0.2,
     lineHeight: 1.5,
     marginTop: 16,
     backgroundColor: color.white,
   },
   details: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     lineHeight: 1.5,
     paddingTop: 6,
@@ -287,7 +287,7 @@ const styles = {
     color: color.charcoal,
   },
   detailsLink: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     color: color.teal,
   },
   wordBox: {

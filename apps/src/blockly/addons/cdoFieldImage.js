@@ -36,9 +36,7 @@ export default class CdoFieldImage extends GoogleBlockly.FieldImage {
   }
 
   shouldAllowImageChange() {
-    // This can be called during object construction, in which case
-    // an undefined value will be treated as true.
-    return this.allowImageChange !== false;
+    return this.allowImageChange;
   }
 
   /**

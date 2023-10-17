@@ -61,9 +61,6 @@ class Section < ApplicationRecord
   belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
-  has_many :section_instructors, -> {where(status: :active)}
-  has_many :instructors, through: :section_instructors, class_name: 'User'
-
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 

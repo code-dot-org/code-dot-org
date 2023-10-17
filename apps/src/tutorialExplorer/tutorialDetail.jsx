@@ -8,7 +8,6 @@ import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
 import FocusTrap from 'focus-trap-react';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -367,25 +366,25 @@ const styles = {
     marginTop: 20,
   },
   tutorialDetailName: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 22,
     paddingBottom: 4,
   },
   tutorialDetailPublisher: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 16,
   },
   tutorialDetailSub: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 12,
     paddingBottom: 20,
   },
   tutorialDetailDescription: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
   },
   tutorialDetailDisabled: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 16,
     paddingTop: 40,
   },
@@ -399,7 +398,7 @@ const styles = {
   tutorialDetailsTableTitle: {
     padding: 5,
     width: '40%',
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     border: '1px solid lightgrey',
   },
   tutorialDetailsTableBody: {

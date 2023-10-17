@@ -82,6 +82,7 @@ class XhrProxyController < ApplicationController
     dataservice.accuweather.com
     deckofcardsapi.com
     distanza.org
+    dweet.io
     githubusercontent.com
     googleapis.com
     grobchess.com

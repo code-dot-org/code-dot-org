@@ -1,6 +1,5 @@
 <Dancelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 63,
   "created_at": "2023-10-06T21:05:54.000Z",
   "level_num": "custom",
@@ -13,12 +12,12 @@
     ],
     "hide_animation_mode": "true",
     "show_type_hints": "true",
-    "use_modal_function_editor": "false",
+    "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
-    "never_autoplay_video": "true",
+    "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -56,7 +55,7 @@
     "video_key": "hoc_dance_events_2019",
     "encrypted": "false",
     "mini_rubric": "false",
-    "long_instructions": "####**Code an event to make your dancer move on command!** \r\nMake sure to press your “up arrow” key or ^ after clicking the Run button. \r\n\r\n",
+    "long_instructions": "###Code an event to make your dancer move on command! \r\nMake sure to press your “up arrow” key or ^ after clicking the Run button. \r\n\r\n",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "soft_buttons": [
@@ -64,13 +63,11 @@
       "rightButton",
       "upButton",
       "downButton"
-    ],
-    "encrypted_examples": [
-
     ]
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-06T21:05:54.434+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2\"},{\"changed_at\":\"2023-10-06 21:05:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-06 21:58:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"tts_long_instructions_override\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-06 21:59:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-06 21:59:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-06 22:21:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-06 22:21:12 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-11 18:06:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-11 18:07:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-11 18:09:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 14:39:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 14:39:33 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 14:39:45 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 14:43:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 14:44:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 14:44:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 15:06:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 15:08:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 15:09:10 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 19:48:55 +0000\",\"changed\":[\"toolbox_blocks\",\"never_autoplay_video\",\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-13 15:28:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-13 15:33:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-06T21:05:54.434+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2\"},{\"changed_at\":\"2023-10-06 21:05:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-06 21:58:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"tts_long_instructions_override\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-06 21:59:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-06 21:59:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-06 22:21:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-06 22:21:12 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -79,11 +76,11 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="Dancelab_whenSetup" id="j$yrO^C*jfX*iuc~Z*Ev" deletable="false" movable="false" x="16" y="16">
           <statement name="DO">
-            <block type="Dancelab_ai" id="S-0-~A3!eTbE9d!R(f,:">
-              <field name="VALUE">{"inputs":["spooky","funky","cold"],"backgroundEffect":"splatter","backgroundColor":"neon","foregroundEffect":"floating_rainbows"}</field>
+            <block type="Dancelab_ai" id="T7uTkol`jUpn:XlpAKEo">
+              <field name="VALUE">{  "backgroundColor": "neon",  "backgroundEffect": "splatter",  "foregroundEffect": "floating_rainbows",  "explanation": "I chose neon colors and splatter effect for the background to create an artistic vibe, and added floating rainbows in the foreground to make it feel like a colorful flower garden with a touch of magic."}</field>
               <next>
-                <block type="Dancelab_makeAnonymousDanceSprite" id="28RG2iM]{[2:51XLXeF}">
-                  <field name="COSTUME">"BEAR"</field>
+                <block type="Dancelab_makeAnonymousDanceSprite" id="c8wjX(X5r$|_c2=P2:[3">
+                  <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;SHARK&quot;, &quot;SLOTH&quot;">"BEAR"</field>
                   <field name="LOCATION">{x: 200, y: 200}</field>
                 </block>
               </next>
@@ -97,12 +94,8 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="Dancelab_ai" id="Ru3$z|81JlKgT/;fMb]K" x="35" y="19">
+        <block type="Dancelab_ai" id="Ru3$z|81JlKgT/;fMb]K" x="35" y="49">
           <field name="VALUE"/>
-        </block>
-        <block type="Dancelab_makeAnonymousDanceSprite" id="?HY,i)c_^8M0NKLrvWQ#" x="14" y="90">
-          <field name="COSTUME">"BEAR"</field>
-          <field name="LOCATION">{x: 200, y: 200}</field>
         </block>
         <block type="Dancelab_whenKey" id="{;e[WB=LDmM:JwaT9[ny" x="20" y="152">
           <field name="KEY">"up"</field>
@@ -110,6 +103,11 @@
         <block type="Dancelab_doMoveEachLR" id="*hCDocpHXqlku@f[[rK=" x="18" y="224">
           <field name="GROUP">"BEAR"</field>
           <field name="MOVE">MOVES.Dab</field>
+          <field name="DIR">-1</field>
+        </block>
+        <block type="Dancelab_doMoveEachLR" id="K,s:?b;es-2/:#X1xBtC" x="28" y="299">
+          <field name="GROUP">"FROG"</field>
+          <field name="MOVE">MOVES.DoubleJam</field>
           <field name="DIR">-1</field>
         </block>
       </xml>

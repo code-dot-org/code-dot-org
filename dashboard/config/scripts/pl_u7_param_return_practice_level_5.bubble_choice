@@ -1,9 +1,0 @@
-name 'PL U7 Param Return Practice_Level 5'
-display_name 'Parameters and Return Practice, Part 5'
-description 'Continue working on the app that you choose in the previous level(s) in order to practice the steps involved in its development. There is a sequence of six levels associated with this Practice activity. If you want to change apps, please start back at level 1 in order to follow the full development sequence.
-
-Note: This is the same level as U7L2 - Level 5 in the CS Principles Curriculum.'
-
-sublevels
-level 'U7_L03_Parameters and Return Practice_Choice_1-5'
-level 'U7_L03_Parameters and Return Practice_Choice_2-5'

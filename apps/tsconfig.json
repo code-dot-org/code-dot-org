@@ -24,9 +24,7 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
-      "@cdo/apps/*": ["./src/*"],
-      "@cdo/static/*": ["./static/*"],
-    },
-    "resolveJsonModule": true,
+      "@cdo/apps/*": ["./src/*"]
+    }
   }
 }

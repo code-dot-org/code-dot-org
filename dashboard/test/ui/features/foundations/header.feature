@@ -21,17 +21,13 @@ Scenario: Signed out user in English should see 7 header links
   And I see "#header-projects"
   And element "#header-projects" contains text "Projects"
 
-Scenario: Student in English should see 4 header links
+Scenario: Student in English should see 2 header links
   Given I create a student named "Sally Student" and go home
   And I wait to see ".headerlinks"
-  And I see "#header-student-home"
-  And element "#header-student-home" contains text "My Dashboard"
   And I see "#header-student-courses"
   And element "#header-student-courses" contains text "Course Catalog"
   And I see "#header-student-projects"
   And element "#header-student-projects" contains text "Projects"
-  And I see "#header-incubator"
-  And element "#header-incubator" contains text "Incubator"
 
 Scenario: Teacher in English should see 5 header links
   Given I create a teacher named "Tessa Teacher" and go home
@@ -68,19 +64,17 @@ Scenario: Signed out user in Spanish should see 7 header links
   And I see "#header-about"
   And element "#header-about" has "es" text from key "nav.header.about"
 
-Scenario: Student in Spanish should see 4 header links
+Scenario: Student in Spanish should see 3 header links
   Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/courses/lang/es"
   Then check that I am on "http://studio.code.org/courses?lang=es"
   And I wait to see ".headerlinks"
-  And I see "#header-student-home"
-  And element "#header-student-home" has "es" text from key "nav.header.my_dashboard"
   And I see "#header-student-courses"
   And element "#header-student-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-student-projects"
   And element "#header-student-projects" has "es" text from key "nav.header.project_gallery"
-  And I see "#header-incubator"
-  And element "#header-incubator" has "es" text from key "nav.header.incubator"
+  And I see "#header-non-en-about"
+  And element "#header-non-en-about" has "es" text from key "nav.header.about"
 
 Scenario: Teacher in Spanish should see 5 header links
   Given I create a teacher named "Pabla Profesora"

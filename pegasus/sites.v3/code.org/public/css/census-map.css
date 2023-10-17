@@ -17,7 +17,7 @@
 }
 
 #map-footer #left a {
-  font-family: var(--main-font);
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 #map-footer #right {
@@ -30,7 +30,7 @@
 }
 
 #footer-text {
-  font-family: var(--main-font);
+  font-family: 'Gotham 4r', sans-serif;
   vertical-align: top;
   margin-right: 15px;
 }
@@ -127,13 +127,12 @@
 }
 
 .census-info-window .census-message {
-  font-family: var(--main-font);
+  font-family: 'Gotham 4r', sans-serif;
   text-align: center;
 }
 
 .census-info-window .census-message a {
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .census-info-window .button-container {
