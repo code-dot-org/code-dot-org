@@ -2171,6 +2171,9 @@
           "name": "Föll með stikum",
           "type": "Myndband"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Föll"
+        },
         "teacher_forum_1/csd/2023": {
           "name": "Kennaraspjall"
         },
@@ -2614,11 +2617,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Myndband"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

@@ -1197,6 +1197,8 @@
   "none": "Geen",
   "noneOfTheAbove": "Geen van allen",
   "notSaved": "Niet opgeslagen",
+  "notSignedInBody": "Je hebt geen account nodig om aan deze les te werken, maar als je je werk wilt opslaan, vergeet dan niet om je aan te melden of een account aan te maken voordat je begint.",
+  "notSignedInHeader": "Je bent niet ingelogd",
   "notStarted": "Niet gestart",
   "note": "*Opmerking:",
   "numBlocksNeeded": "Gefeliciteerd! Je hebt puzzel {puzzleNumber} opgelost. (Maar je had het het ook met {numBlocks, plural, one {1 block} other {# blocks}} op kunnen lossen.)",

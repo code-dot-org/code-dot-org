@@ -5679,7 +5679,6 @@
           "type": "资源"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "视频"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -6028,7 +6027,7 @@
         },
         "helpful_hints_for_teachers_and_learners/csc-timecapsule/2023": {
           "name": "为教师和学习者提供的有用提示",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1k1bpCeQdh8PPHmh1ztDLyW2_jyuBhWqqRDhy1AKQ3U8/",
           "type": "资源"
         },
         "poem_art_1_-_introduction/csc-timecapsule/2023": {
@@ -6058,7 +6057,7 @@
         },
         "helpful_hints/csc-timecapsule/2023": {
           "name": "有用的提示",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1k1bpCeQdh8PPHmh1ztDLyW2_jyuBhWqqRDhy1AKQ3U8/",
           "type": "幻灯片"
         },
         "time_capsule_rubric/csc-timecapsule/2023": {
@@ -7296,6 +7295,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "有参数的函数",
           "type": "视频"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "函数",
+          "type": "幻灯片"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "幻灯片"
@@ -9368,11 +9371,6 @@
           "name": "视频：Aloe Blacc文本压缩",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "视频"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "诗歌列表",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "幻灯片"
         }
       }
     }
