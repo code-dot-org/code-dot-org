@@ -64,3 +64,5 @@ social:
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <hr>
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::CS_JOURNEYS_PAGE_VISITED_EVENT
