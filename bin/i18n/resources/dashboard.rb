@@ -42,6 +42,7 @@ module I18n
         SharedFunctions.sync_out
         Slides.sync_out
         Standards.sync_out
+        UnpluggedContent.sync_out
       end
     end
   end

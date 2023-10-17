@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::DataContent do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out UnpluggedContent resource' do
-  #     I18n::Resources::Dashboard::UnpluggedContent::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::UnpluggedContent.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out UnpluggedContent resource' do
+      I18n::Resources::Dashboard::UnpluggedContent::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::UnpluggedContent.sync_out
+    end
+  end
 end
