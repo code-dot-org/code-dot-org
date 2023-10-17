@@ -10,8 +10,11 @@ body {
   margin-top: 40px;
 }
 
-.withBorderTopAndBottom {
+.withBorderTop {
   border-top: 1px solid $neutral_dark20;
+}
+
+.withBorderBottom {
   border-bottom: 1px solid $neutral_dark20;
 }
 
