@@ -476,8 +476,13 @@ Dance.prototype.preview = async function () {
   const charactersReferenced = utils.computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
-  this.nativeAPI.p5_.draw();
-  this.nativeAPI.setForegroundEffectsInPreviewMode(false);
+
+  // force preview draw to occur **after** any
+  // draw iterations already queued up
+  setTimeout(() => {
+    this.nativeAPI.p5_.draw();
+    this.nativeAPI.setForegroundEffectsInPreviewMode(false);
+  }, 0);
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
