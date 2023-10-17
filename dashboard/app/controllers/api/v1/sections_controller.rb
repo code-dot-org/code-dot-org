@@ -69,6 +69,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     )
     return head :bad_request unless section.persisted?
 
+    params[:add_instructor_emails].each {|instructor_email|  SectionInstructor.create_section(section, instructor_email)}
+
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
     current_user.assign_script @unit if @unit
 
