@@ -16,7 +16,7 @@ import {
   reorderLevel,
   moveLevelToActivitySection,
   addLevel,
-  NEW_LEVEL_ID
+  NEW_LEVEL_ID,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 import ActivitySectionCardButtons from './ActivitySectionCardButtons';
@@ -60,7 +60,7 @@ class ActivitySectionCard extends Component {
     updateActivitySectionField: PropTypes.func.isRequired,
     reorderLevel: PropTypes.func.isRequired,
     moveLevelToActivitySection: PropTypes.func.isRequired,
-    addLevel: PropTypes.func.isRequired
+    addLevel: PropTypes.func.isRequired,
   };
 
   /**
@@ -71,7 +71,7 @@ class ActivitySectionCard extends Component {
   state = {
     levelPosToRemove: null,
     currentYOffsets: [],
-    draggedLevelPos: null
+    draggedLevelPos: null,
   };
 
   initialDragState = {
@@ -79,7 +79,7 @@ class ActivitySectionCard extends Component {
     initialClientY: null,
     initialScrollTop: null,
     newPosition: null,
-    startingYMidpoints: null
+    startingYMidpoints: null,
   };
 
   dragState = this.initialDragState;
@@ -102,12 +102,12 @@ class ActivitySectionCard extends Component {
         lastClientY: clientY,
         initialScrollTop: $(window).scrollTop(),
         newPosition: position,
-        startingYMidpoints
+        startingYMidpoints,
       };
 
       this.setState(
         {
-          draggedLevelPos: position
+          draggedLevelPos: position,
         },
         () => this.props.updateActivitySectionMetrics()
       );
@@ -188,7 +188,7 @@ class ActivitySectionCard extends Component {
       activitySection,
       activityPosition,
       targetActivityPos,
-      targetActivitySectionPos
+      targetActivitySectionPos,
     } = this.props;
     if (
       targetActivityPos === activityPosition &&
@@ -219,7 +219,7 @@ class ActivitySectionCard extends Component {
     this.dragState = this.initialDragState;
     this.setState({
       draggedLevelPos: null,
-      currentYOffsets: []
+      currentYOffsets: [],
     });
   };
 
@@ -379,8 +379,8 @@ class ActivitySectionCard extends Component {
             skin: level.skin,
             videoKey: level.videoKey,
             concepts: level.concepts,
-            conceptDifficulty: level.conceptDifficulty
-          }
+            conceptDifficulty: level.conceptDifficulty,
+          },
         ],
         activeId: level.id,
         key: level.key,
@@ -389,7 +389,7 @@ class ActivitySectionCard extends Component {
         bonus: false,
         assessment: false,
         challenge: false,
-        expand: false
+        expand: false,
       }
     );
   };
@@ -406,7 +406,7 @@ class ActivitySectionCard extends Component {
       targetActivitySectionPos,
       activityPosition,
       hasLessonPlan,
-      allowMajorCurriculumChanges
+      allowMajorCurriculumChanges,
     } = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
@@ -494,9 +494,8 @@ class ActivitySectionCard extends Component {
               <LevelToken
                 ref={levelToken => {
                   if (levelToken) {
-                    const metrics = ReactDOM.findDOMNode(
-                      levelToken
-                    ).getBoundingClientRect();
+                    const metrics =
+                      ReactDOM.findDOMNode(levelToken).getBoundingClientRect();
                     this.levelTokenMetrics[scriptLevel.position] = metrics;
                   }
                 }}
@@ -550,7 +549,7 @@ class ActivitySectionCard extends Component {
 
 const styles = {
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
   },
   activitySectionCard: {
     fontSize: 18,
@@ -560,58 +559,58 @@ const styles = {
     borderColor: '#ccc',
     borderRadius: borderRadius,
     padding: 20,
-    margin: 10
+    margin: 10,
   },
   activitySectionCardHeader: {
     color: '#5b6770',
     marginBottom: 15,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   headerLabel: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   labelAndCheckbox: {
     fontSize: 13,
     marginTop: 3,
-    marginRight: 10
+    marginRight: 10,
   },
   input: {
-    width: '100%'
+    width: '100%',
   },
   bottomControls: {
     height: 30,
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   checkboxesAndButtons: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   checkboxes: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
-    marginRight: 5
+    marginRight: 5,
   },
   titleInput: {
     width: 275,
-    marginRight: 10
+    marginRight: 10,
   },
   durationInput: {
-    width: 50
-  }
+    width: 50,
+  },
 };
 
 styles.targetActivitySectionCard = {
   ...styles.activitySectionCard,
   borderWidth: 5,
   borderColor: color.cyan,
-  padding: 16
+  padding: 16,
 };
 
 export const UnconnectedActivitySectionCard = ActivitySectionCard;
@@ -624,6 +623,8 @@ export default connect(
     addLevel,
     moveActivitySection,
     removeActivitySection,
-    updateActivitySectionField
-  }
+    updateActivitySectionField,
+  },
+  null,
+  {forwardRef: true}
 )(ActivitySectionCard);

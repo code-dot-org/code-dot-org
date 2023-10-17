@@ -5,14 +5,14 @@ const RESET_IDLE_TIME = 'studioAppActivity/RESET_IDLE_TIME';
 const studioAppActivityInitialState = {
   idleTimeSinceLastReport: 0,
   idleStart: null,
-  isIdle: false
+  isIdle: false,
 };
 
 export default function reducer(state = studioAppActivityInitialState, action) {
   if (action.type === SET_START_IDLE) {
     return Object.assign({}, state, {
       isIdle: true,
-      idleStart: new Date().getTime()
+      idleStart: new Date().getTime(),
     });
   }
 
@@ -23,7 +23,7 @@ export default function reducer(state = studioAppActivityInitialState, action) {
 
       return Object.assign({}, state, {
         isIdle: false,
-        idleTimeSinceLastReport: newIdleTime
+        idleTimeSinceLastReport: newIdleTime,
       });
     } else {
       return state;
@@ -35,7 +35,7 @@ export default function reducer(state = studioAppActivityInitialState, action) {
 
     return Object.assign({}, state, {
       idleTimeSinceLastReport: 0,
-      idleStart
+      idleStart,
     });
   }
 
@@ -48,15 +48,15 @@ const timeSinceIdleStart = state => {
 };
 
 export const setStartIdle = () => ({
-  type: SET_START_IDLE
+  type: SET_START_IDLE,
 });
 
 export const setEndIdle = () => ({
-  type: SET_END_IDLE
+  type: SET_END_IDLE,
 });
 
 export const resetIdleTime = () => ({
-  type: RESET_IDLE_TIME
+  type: RESET_IDLE_TIME,
 });
 
 export const getIdleTimeSinceLastReport = state => {

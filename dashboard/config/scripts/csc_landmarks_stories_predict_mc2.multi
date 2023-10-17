@@ -4,3 +4,5 @@ right 'The sprite in the **say block** is Julia, not Sam.', feedback: 'Correct!'
 wrong 'The **event block** is using the wrong costumes.', feedback: 'Incorrect.'
 wrong 'The program is missing a **set background** block.', feedback: 'Incorrect.'
 wrong 'The prorgram is missing a **sound** block.', feedback: 'Incorrect.'
+
+allow_multiple_attempts false

@@ -2,7 +2,6 @@ Feature: Authored Hints
 
 Scenario: View Authored Hints
   Given I am on "http://studio.code.org/s/allthethings/lessons/6/levels/2?noautoplay=true"
-  And I rotate to landscape
   And I wait to see "#lightbulb"
 
   # This level has a total of three authored hints

@@ -5,7 +5,7 @@ export const howManyStudents = [
   {value: 'NONE', display: i18n.none()},
   {value: 'SOME', display: i18n.some()},
   {value: 'ALL', display: i18n.all()},
-  {value: "I DON'T KNOW", display: i18n.iDontKnow()}
+  {value: "I DON'T KNOW", display: i18n.iDontKnow()},
 ];
 
 export const roleOptions = [
@@ -14,46 +14,46 @@ export const roleOptions = [
   {value: 'ADMINISTRATOR', display: i18n.administrator()},
   {value: 'PARENT', display: i18n.parent()},
   {value: 'VOLUNTEER', display: i18n.volunteer()},
-  {value: 'OTHER', display: i18n.other()}
+  {value: 'OTHER', display: i18n.other()},
 ];
 
 export const courseTopics = [
   {
     name: 'topic_blocks',
-    label: i18n.censusBlockBased()
+    label: i18n.censusBlockBased(),
   },
   {
     name: 'topic_text',
-    label: i18n.censusTextBased()
+    label: i18n.censusTextBased(),
   },
   {
     name: 'topic_robots',
-    label: i18n.censusPhysicalComputing()
+    label: i18n.censusPhysicalComputing(),
   },
   {
     name: 'topic_internet',
-    label: i18n.censusInternet()
+    label: i18n.censusInternet(),
   },
   {
     name: 'topic_security',
-    label: i18n.censusCybersecurity()
+    label: i18n.censusCybersecurity(),
   },
   {
     name: 'topic_data',
-    label: i18n.censusDataAnalysis()
+    label: i18n.censusDataAnalysis(),
   },
   {
     name: 'topic_web_design',
-    label: i18n.censusWebDesign()
+    label: i18n.censusWebDesign(),
   },
   {
     name: 'topic_game_design',
-    label: i18n.censusGameDesign()
+    label: i18n.censusGameDesign(),
   },
   {
     name: 'topic_ethical_social',
-    label: i18n.censusEthicalSocial()
-  }
+    label: i18n.censusEthicalSocial(),
+  },
 ];
 
 export const frequencyOptions = [
@@ -61,7 +61,7 @@ export const frequencyOptions = [
   {value: 'LESS THAN ONE HOUR PER WEEK', display: i18n.censusFrequency1()},
   {value: 'ONE TO THREE HOURS PER WEEK', display: i18n.censusFrequency1to3()},
   {value: 'THREE PLUS HOURS PER WEEK', display: i18n.censusFrequency3plus()},
-  {value: "I DON'T KNOW", display: i18n.iDontKnow()}
+  {value: "I DON'T KNOW", display: i18n.iDontKnow()},
 ];
 
 export const pledge = i18n.censusPledge();

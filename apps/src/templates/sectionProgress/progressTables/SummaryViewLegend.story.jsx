@@ -3,17 +3,17 @@ import SummaryViewLegend from './SummaryViewLegend';
 
 export default {
   title: 'SummaryViewLegend',
-  component: SummaryViewLegend
+  component: SummaryViewLegend,
 };
 
 const Template = args => <SummaryViewLegend {...args} />;
 
 export const IncludesLightGreenProgressBox = Template.bind({});
 IncludesLightGreenProgressBox.args = {
-  showCSFProgressBox: true
+  showCSFProgressBox: true,
 };
 
 export const ExcludesLightGreenProgressBox = Template.bind({});
 ExcludesLightGreenProgressBox.args = {
-  showCSFProgressBox: false
+  showCSFProgressBox: false,
 };

@@ -14,7 +14,7 @@ export const dependentStudentsShape = PropTypes.arrayOf(
   PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired
+    username: PropTypes.string.isRequired,
   })
 ).isRequired;
 
@@ -23,7 +23,7 @@ export default class PersonalLoginDialog extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     dependentStudents: dependentStudentsShape,
     onCancel: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired
+    onConfirm: PropTypes.func.isRequired,
   };
 
   render() {
@@ -42,11 +42,11 @@ export default class PersonalLoginDialog extends React.Component {
           <p>
             <strong style={styles.dangerText}>
               {i18n.personalLoginDialog_body1({
-                numStudents: dependentStudents.length
+                numStudents: dependentStudents.length,
               })}
             </strong>
             {i18n.personalLoginDialog_body2({
-              numStudents: dependentStudents.length
+              numStudents: dependentStudents.length,
             })}
           </p>
           <div style={styles.studentBox}>
@@ -89,10 +89,10 @@ export default class PersonalLoginDialog extends React.Component {
 const styles = {
   container: {
     margin: GUTTER,
-    color: color.charcoal
+    color: color.charcoal,
   },
   dangerText: {
-    color: color.red
+    color: color.red,
   },
   studentBox: {
     padding: GUTTER / 2,
@@ -101,11 +101,11 @@ const styles = {
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 4,
     height: 50,
-    overflowY: 'scroll'
+    overflowY: 'scroll',
   },
   button: {
     display: 'block',
     textAlign: 'center',
-    marginBottom: '1em'
-  }
+    marginBottom: '1em',
+  },
 };

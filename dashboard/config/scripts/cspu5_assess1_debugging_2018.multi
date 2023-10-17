@@ -16,3 +16,5 @@ Debugging a program by printing out the current values with console.log and seei
 
 On the other hand, changing variable names will not help because you are only renaming the problem rather than finding and fixing the problem. Computers read code line by line, so rewriting chunks of code is the same as rewriting the same problem.
 MARKDOWN
+
+allow_multiple_attempts true

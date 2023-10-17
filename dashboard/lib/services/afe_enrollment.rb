@@ -26,14 +26,12 @@ class Services::AFEEnrollment
   # @param zip [String] Teacher's school's postal code, 5 characters
   # @param marketing_kit [Boolean] Whether the teacher opted in to receiving AFE's marketing kit
   # @param csta_plus [Boolean] Whether the teacher opted in to a free CSTA Plus membership
-  # @param aws_educate [Boolean] Whether the teacher opted in to a free AWS Educate membership
   # @param amazon_terms [Boolean] Whether the teacher agreed to AFE's privacy policy and terms
   #        of service.  Should always be true; we don't submit without this.
   # @param new_code_account [Boolean] Whether the teacher signed up for code.org as part of the
   #        AFE process.
   def self.submit(first_name:, last_name:, email:, nces_id:, street_1:, street_2:,
-    city:, state:, zip:, marketing_kit:, csta_plus:, aws_educate:,
-    amazon_terms:, new_code_account:)
+    city:, state:, zip:, marketing_kit:, csta_plus:, amazon_terms:, new_code_account:)
     submission_body = {
       'traffic-source' => 'AFE-code.org-2020',
       'first-name' => first_name,
@@ -43,11 +41,10 @@ class Services::AFEEnrollment
       'school-address-1' => street_1,
       'school-address-2' => street_2,
       'school-city' => city,
-      'school-state' => get_us_state_abbr(state, true),
+      'school-state' => get_us_state_abbr(state, include_dc: true),
       'school-zip' => zip,
       'inspirational-marketing-kit' => booleanize(marketing_kit),
       'csta-plus' => booleanize(csta_plus),
-      'aws-educate' => booleanize(aws_educate),
       'amazon-terms' => booleanize(amazon_terms),
       'new-code-account' => booleanize(new_code_account),
       'registration-date-time' => Time.now.iso8601

@@ -1,11 +1,8 @@
 ---
-title: Teacher Resources - Write your first computer program
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Tilföng kennara - Skrifaðu fyrsta tölvuforritið þitt
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# Skrifaðu fyrsta tölvuforritið þitt: Klukkustund kóðunar
 
 {{ hoc_maze_video }}
 
@@ -15,7 +12,7 @@ video_player: true
 
 ### Lesson Plans:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [Skrifaðu fyrsta tölvuforritið þitt]({{ hoc_hourofcode_cb_url }})
 
 ### Extension Activities:
 
@@ -34,7 +31,7 @@ video_player: true
 
 ## Yfirlit
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+Lærðu grunnhugtök tölvunarfræði með draga og sleppa forritun. Þetta kennslustund með leik sem þú stýrir og inniheldur myndbandsfyrirlestra með Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu um endurtekningarlykkjur, skilyrðingar og helstu algrím. Til á 37 tungumálum.
 
 **Recommended Age Range:** 4-104
 

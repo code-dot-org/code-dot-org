@@ -12,7 +12,7 @@
  * methods with no-op functions.
  * @param {!Window} window
  */
-module.exports = function(window) {
+module.exports = function (window) {
   // Add console if it doesn't exist
   var console = (window.console = window.console || {});
 
@@ -39,13 +39,13 @@ module.exports = function(window) {
     'timeEnd',
     'timeStamp',
     'trace',
-    'warn'
+    'warn',
   ];
   var method;
   for (var i = 0; i < methods.length; i++) {
     method = methods[i];
     if (!console[method]) {
-      console[method] = function() {};
+      console[method] = function () {};
     }
   }
 };

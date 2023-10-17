@@ -12,7 +12,7 @@ var levelDef = {
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
-      {tileType: 0, possibleFeatures: [], startsHidden: false}
+      {tileType: 0, possibleFeatures: [], startsHidden: false},
     ],
     [
       {tileType: 0, possibleFeatures: [], startsHidden: false},
@@ -22,7 +22,7 @@ var levelDef = {
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
-      {tileType: 0, possibleFeatures: [], startsHidden: false}
+      {tileType: 0, possibleFeatures: [], startsHidden: false},
     ],
     [
       {tileType: 0, possibleFeatures: [], startsHidden: false},
@@ -32,7 +32,7 @@ var levelDef = {
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
-      {tileType: 0, possibleFeatures: [], startsHidden: false}
+      {tileType: 0, possibleFeatures: [], startsHidden: false},
     ],
     [
       {tileType: 0, possibleFeatures: [], startsHidden: false},
@@ -43,24 +43,24 @@ var levelDef = {
         value: 1,
         range: 1,
         possibleFeatures: [1],
-        startsHidden: false
+        startsHidden: false,
       },
       {
         tileType: 1,
         value: 1,
         range: 1,
         possibleFeatures: [2],
-        startsHidden: false
+        startsHidden: false,
       },
       {
         tileType: 1,
         value: 1,
         range: 1,
         possibleFeatures: [3],
-        startsHidden: false
+        startsHidden: false,
       },
       {tileType: 0, possibleFeatures: [0], startsHidden: false},
-      {tileType: 0, possibleFeatures: [], startsHidden: false}
+      {tileType: 0, possibleFeatures: [], startsHidden: false},
     ],
     [
       {tileType: 0, possibleFeatures: [], startsHidden: false},
@@ -70,7 +70,7 @@ var levelDef = {
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
-      {tileType: 0, possibleFeatures: [], startsHidden: false}
+      {tileType: 0, possibleFeatures: [], startsHidden: false},
     ],
     [
       {tileType: 0, possibleFeatures: [], startsHidden: false},
@@ -80,7 +80,7 @@ var levelDef = {
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
-      {tileType: 0, possibleFeatures: [], startsHidden: false}
+      {tileType: 0, possibleFeatures: [], startsHidden: false},
     ],
     [
       {tileType: 0, possibleFeatures: [], startsHidden: false},
@@ -90,7 +90,7 @@ var levelDef = {
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
-      {tileType: 0, possibleFeatures: [], startsHidden: false}
+      {tileType: 0, possibleFeatures: [], startsHidden: false},
     ],
     [
       {tileType: 0, possibleFeatures: [], startsHidden: false},
@@ -100,9 +100,9 @@ var levelDef = {
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
       {tileType: 0, possibleFeatures: [], startsHidden: false},
-      {tileType: 0, possibleFeatures: [], startsHidden: false}
-    ]
-  ]
+      {tileType: 0, possibleFeatures: [], startsHidden: false},
+    ],
+  ],
 };
 
 module.exports = {
@@ -114,9 +114,9 @@ module.exports = {
       description: 'Infinite loop is detected and handled',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         // Don't run all 10,000 steps...
         Maze.executionInfo.steps_.length = 0;
         return (
@@ -140,15 +140,15 @@ module.exports = {
         '      </block>' +
         '    </next>' +
         '  </block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Try to harvest from wrong crop',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           constants.HarvesterTerminationValue.WRONG_CROP
@@ -165,15 +165,15 @@ module.exports = {
         '     </block>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Try to harvest from empty crop',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           constants.HarvesterTerminationValue.EMPTY_CROP
@@ -195,15 +195,15 @@ module.exports = {
         '     </block>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Try to harvest from nothing',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           constants.HarvesterTerminationValue.WRONG_CROP
@@ -217,16 +217,16 @@ module.exports = {
         '     </block>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'Harvest some but not all',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           constants.HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING
@@ -253,14 +253,14 @@ module.exports = {
         '     </block>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'Harvest all successfully',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
@@ -299,7 +299,7 @@ module.exports = {
         '     </block>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

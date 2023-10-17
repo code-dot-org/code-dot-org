@@ -8,3 +8,5 @@ wrong '"The word is just right the word is still too short!"'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -33,7 +33,7 @@
     -if @header['theme'] == 'responsive' || 'responsive_full_width'
       -if @header['nav']
         %div
-          .col-80-right
+          %main.col-80-right
             =body
           .left-nav.desktop-feature
             -if @header['nav'].nil? || @header['nav'] == 'blank'
@@ -41,7 +41,8 @@
             -else
               = view(@header['nav'])
       -else
-        =body
+        %main
+          =body
 
       #clearboth{:style=>"clear:both"}
       .desktop-feature

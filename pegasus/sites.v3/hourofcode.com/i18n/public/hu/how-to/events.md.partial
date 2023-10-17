@@ -37,17 +37,17 @@ Oszd meg a rendezvényen készült képeket a Facebookon vagy a Twitteren a **#K
 
 * * *
 
-## Example plan for a school assembly or event
+## Mintaterv egy iskolai gyűlés vagy esemény megrendezéséhez
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Esemény:** Az egész iskolára kiterjedő informatikai oktatási hetet megnyitó gyűlés.
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Időpont:** {{ campaign_date/start_short }} (az informatikai hét kezdete) 
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Időpont:** Iskolaidőben. Délelőtti programok. Körülbelül 1 óra időtartamban.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Helyszín:** Iskola díszterme (pl. színházterem, tornaterem, étkező)
 
-## Run of Show
+## A műsor programja
 
 | Idő           | Program                                                                                                                                               |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |

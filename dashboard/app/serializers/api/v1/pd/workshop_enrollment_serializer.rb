@@ -1,13 +1,13 @@
 class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   attributes :id, :first_name, :last_name, :email, :alternate_email, :application_id, :district_name, :school, :role,
     :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience,
-    :csf_courses_planned, :csf_has_physical_curriculum_guide, :user_id, :attended,
+    :csf_courses_planned, :user_id, :attended,
     :pre_workshop_survey, :previous_courses, :replace_existing, :attendances,
     :scholarship_status, :enrolled_date, :years_teaching, :years_teaching_cs, :taught_ap_before, :planning_to_teach_ap
 
   def user_id
     user = object.resolve_user
-    user ? user.id : nil
+    user&.id
   end
 
   def application_id
@@ -16,7 +16,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
 
   def alternate_email
     # Note: Use dig instead of [] because RuboCop doesn't like chaining ordinary method call after safe navigation operator.
-    object&.application&.sanitize_form_data_hash&.dig(:alternate_email)
+    object&.application&.sanitized_form_data_hash&.dig(:alternate_email)
   end
 
   def school

@@ -14,7 +14,7 @@ export function DropletTooltipManagerStub(config = {}, blockInfo = {}) {
   // Establish the droplet configuration.
   tooltipManager.dropletConfig = Object.assign(
     {
-      showExamplesLink: undefined
+      showExamplesLink: undefined,
     },
     config
   );
@@ -30,7 +30,7 @@ export function DropletTooltipManagerStub(config = {}, blockInfo = {}) {
         parameterInfos: [],
         signatureOverride: undefined,
         showExamplesLink: undefined,
-        showCodeLink: undefined
+        showCodeLink: undefined,
       },
       blockInfo
     )

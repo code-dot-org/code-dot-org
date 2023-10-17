@@ -21,3 +21,5 @@ Learning Objective: **6.1.1** and Essential Knowledge statements: **6.1.1B**
  (D) This option is correct. Network redundancy is a process through which additional or alternate instances of network devices, equipment and communication mediums are installed within network infrastructure. It is a method for ensuring network availability in case of a network device or path failure and unavailability.
 
 MARKDOWN
+
+allow_multiple_attempts true

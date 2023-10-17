@@ -6,6 +6,7 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class OrderControls extends Component {
   static propTypes = {
@@ -13,11 +14,11 @@ export default class OrderControls extends Component {
     remove: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
     item: PropTypes.object,
-    itemType: PropTypes.oneOf(['activity', 'activitySection'])
+    itemType: PropTypes.oneOf(['activity', 'activitySection']),
   };
 
   state = {
-    showConfirm: false
+    showConfirm: false,
   };
 
   handleMoveUp = () => {
@@ -100,26 +101,26 @@ export default class OrderControls extends Component {
 
 const styles = {
   controls: {
-    display: 'flex'
+    display: 'flex',
   },
   controlIcon: {
     margin: '0 5px',
     cursor: 'pointer',
-    fontSize: 20
+    fontSize: 20,
   },
   previewContainer: {
-    color: color.default_text
+    color: color.default_text,
   },
   preview: {
     border: '1px solid #ccc',
-    padding: '5px 25px'
+    padding: '5px 25px',
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
     width: 970,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
-    marginLeft: -500
-  }
+    ...fontConstants['main-font-regular'],
+    marginLeft: -500,
+  },
 };

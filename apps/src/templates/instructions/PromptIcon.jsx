@@ -6,7 +6,7 @@ import React from 'react';
  */
 export default class PromptIcon extends React.Component {
   static propTypes = {
-    src: PropTypes.string.isRequired
+    src: PropTypes.string.isRequired,
   };
 
   render() {
@@ -20,6 +20,6 @@ const styles = {
     // whether or not we have authored hints. In both cases, we want to display
     // this icon at 50px.
     maxWidth: 50,
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

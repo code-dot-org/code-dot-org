@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '../../../../util/color';
 
 export default class ModuleAssignment extends React.Component {
   static propTypes = {
-    moduleAssignmentData: PropTypes.object
+    moduleAssignmentData: PropTypes.object,
   };
 
   render() {
@@ -37,7 +38,7 @@ const styles = {
     backgroundColor: color.cyan,
     color: 'white',
     position: 'relative',
-    fontFamily: '"Gotham 4r"'
+    ...fontConstants['main-font-regular'],
   },
   ribbonWrapper: {
     width: '90px',
@@ -45,7 +46,7 @@ const styles = {
     overflow: 'hidden',
     position: 'absolute',
     top: '0px',
-    right: '0px'
+    right: '0px',
   },
   ribbon: {
     transform: 'rotate(45deg)',
@@ -54,11 +55,11 @@ const styles = {
     left: '-1px',
     top: '10px',
     width: '120px',
-    backgroundColor: 'red'
+    backgroundColor: 'red',
   },
   ribbonStylesForStatus: {
     not_started: {backgroundColor: 'white'},
     in_progress: {backgroundColor: color.mustardyellow},
-    completed: {backgroundColor: '#0EBE0E'}
-  }
+    completed: {backgroundColor: '#0EBE0E'},
+  },
 };

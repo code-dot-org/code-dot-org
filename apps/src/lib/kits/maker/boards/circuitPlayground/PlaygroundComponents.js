@@ -5,9 +5,8 @@
 
 import {
   N_COLOR_LEDS,
-  TOUCH_PINS,
   CP_COMMAND,
-  CP_ACCEL_STREAM_ON
+  CP_ACCEL_STREAM_ON,
 } from './PlaygroundConstants';
 import LookbackLogger from '../../LookbackLogger';
 import _ from 'lodash';
@@ -20,7 +19,6 @@ import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
 import Led from './Led';
 import Switch from './Switch';
-import experiments from '../../../../../util/experiments';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -37,7 +35,7 @@ export function createCircuitPlaygroundComponents(board) {
   return Promise.all([
     initializeSoundSensor(board),
     initializeLightSensor(board),
-    initializeThermometer(board)
+    initializeThermometer(board),
   ]).then(([soundSensor, lightSensor, tempSensor]) => {
     return {
       colorLeds: initializeColorLeds(board),
@@ -49,7 +47,7 @@ export function createCircuitPlaygroundComponents(board) {
       buzzer: new Piezo({
         board,
         pin: 5,
-        controller: PlaygroundIO.Piezo
+        controller: PlaygroundIO.Piezo,
       }),
 
       soundSensor,
@@ -63,8 +61,6 @@ export function createCircuitPlaygroundComponents(board) {
       buttonL: new PlaygroundButton({board, pin: 4}),
 
       buttonR: new PlaygroundButton({board, pin: 19}),
-
-      ...(experiments.isEnabled('maker-captouch') && initializeTouchPads(board))
     };
   });
 }
@@ -132,13 +128,6 @@ export function cleanupCircuitPlaygroundComponents(
     delete components.accelerometer;
     delete components.buttonL;
     delete components.buttonR;
-
-    if (experiments.isEnabled('maker-captouch')) {
-      // Remove listeners from each TouchSensor
-      TOUCH_PINS.forEach(pin => {
-        delete components[`touchPad${pin}`];
-      });
-    }
   }
 }
 
@@ -188,7 +177,7 @@ export const componentConstructors = {
    * 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
    */
   Servo: five.Servo,
-  TouchSensor
+  TouchSensor,
 };
 
 function initializeColorLeds(board) {
@@ -199,7 +188,7 @@ function initializeColorLed(board, pin) {
   return new NeoPixel({
     board,
     controller: PlaygroundIO.Pixel,
-    pin
+    pin,
   });
 }
 
@@ -208,7 +197,7 @@ function initializeSoundSensor(board) {
     const sensor = new five.Sensor({
       board,
       pin: 'A4',
-      freq: 100
+      freq: 100,
     });
     addSensorFeatures(five.Board.fmap, sensor);
     sensor.once('data', () => resolve(sensor));
@@ -220,7 +209,7 @@ function initializeLightSensor(board) {
     const sensor = new five.Sensor({
       board,
       pin: 'A5',
-      freq: 100
+      freq: 100,
     });
     addSensorFeatures(five.Board.fmap, sensor);
     sensor.once('data', () => resolve(sensor));
@@ -266,7 +255,7 @@ function initializeThermometer(board) {
       board,
       controller: PlaygroundThermometer,
       pin: 'A0',
-      freq: 100
+      freq: 100,
     });
     thermometer.once('data', () => resolve(thermometer));
   });
@@ -275,17 +264,17 @@ function initializeThermometer(board) {
 function initializeAccelerometer(board) {
   const accelerometer = new five.Accelerometer({
     board,
-    controller: PlaygroundIO.Accelerometer
+    controller: PlaygroundIO.Accelerometer,
   });
-  accelerometer.start = function() {
+  accelerometer.start = function () {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };
-  accelerometer.getOrientation = function(orientationType) {
+  accelerometer.getOrientation = function (orientationType) {
     if (undefined === orientationType) {
       return [
         accelerometer.getOrientation('x'),
         accelerometer.getOrientation('y'),
-        accelerometer.getOrientation('z')
+        accelerometer.getOrientation('z'),
       ];
     }
 
@@ -300,12 +289,12 @@ function initializeAccelerometer(board) {
     }
     return accelerometer[orientationType];
   };
-  accelerometer.getAcceleration = function(accelerationDirection) {
+  accelerometer.getAcceleration = function (accelerationDirection) {
     if (undefined === accelerationDirection) {
       return [
         accelerometer.getAcceleration('x'),
         accelerometer.getAcceleration('y'),
-        accelerometer.getAcceleration('z')
+        accelerometer.getAcceleration('z'),
       ];
     }
     if (accelerationDirection === 'total') {
@@ -314,20 +303,4 @@ function initializeAccelerometer(board) {
     return accelerometer[accelerationDirection];
   };
   return accelerometer;
-}
-
-function initializeTouchPads(board) {
-  // We make one playground-io Touchpad component for all captouch sensors,
-  // then wrap it in our own separate objects to get the API we want to
-  // expose to students.
-  const playgroundTouchpad = new five.Touchpad({
-    board,
-    controller: PlaygroundIO.Touchpad,
-    pads: TOUCH_PINS
-  });
-  let touchPads = {};
-  TOUCH_PINS.forEach(pin => {
-    touchPads[`touchPad${pin}`] = new TouchSensor(pin, playgroundTouchpad);
-  });
-  return touchPads;
 }

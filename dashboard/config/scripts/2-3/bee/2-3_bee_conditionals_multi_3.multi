@@ -9,3 +9,5 @@ wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png'
 right '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png'
 wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png'
 wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png'
+
+allow_multiple_attempts true

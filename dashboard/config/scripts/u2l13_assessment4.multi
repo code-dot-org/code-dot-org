@@ -1,11 +1,14 @@
 name 'U2L13 Assessment4'
-encrypted 'rLsclVnxnlNtUB45LmJCiyNqo8Cs6kNtBRRn4aqlfo5T5qBEyRgqpD5F61Ep
-n/ol+pG3LYByoSPfTlMLpKryroVWlkGlzJikkEEyvL3t3feXpFTi3dpysMiX
-bapZDGsRlLPvXx7aMNPaUqUb6acAXUfaKG3GUhoxmM3TfUExbuGdpwj8RJ5v
-eCqRZcCgQnh1uZqIsZhsL26+MYiPFqfQYYooTpTNc/SP2BGyIPK9TIW6W4bJ
-2/GTwE9Lcxmmja5fv9vpxPz7noCCg0W7n/5fTfUYdsK3gJ2NB+kgXlQJbH2C
-2+orD8WslX9M1QDqRlkvL3HQaSmDzkNixZKqbpHfRFYUboGm4vvJUUw0FHH4
-TYrQpXqthDgj6okuZksmSm5SdKNRNiW5ecI0DqI9ZqBGWHK4q3j1Jjxrsup2
-slqwBHqo2VZbFAJ0qq69i80o6pisF7G54b5F4FX2ZAFqntcSoAE1sNsKaHGU
-+JSACIDiOyVML121D2ws+PbyYctKUopuFLt6MVmf40V4rME3EJ3ozA==
-'
+title 'Assessment: Question 3'
+question 'The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?'
+wrong '26'
+wrong '26 x 25'
+right '26 × 25 × 24 ×···× 3 × 2 x 1'
+wrong '26^26'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- 26 × 25 × 24 ×···× 3 × 2 x 1
+MARKDOWN
+
+allow_multiple_attempts true

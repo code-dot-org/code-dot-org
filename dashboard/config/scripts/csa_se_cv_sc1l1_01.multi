@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SC1L1-01'
+
+question 'This lesson effectively helped me understand the concepts and practical usage of Git and GitHub.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

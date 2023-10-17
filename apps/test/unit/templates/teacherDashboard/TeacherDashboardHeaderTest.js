@@ -17,7 +17,7 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 5,
     code: 'VQGSJR',
-    providerManaged: false
+    providerManaged: false,
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 4,
     code: 'TQGSJR',
-    providerManaged: false
+    providerManaged: false,
   },
   {
     id: 1,
@@ -37,19 +37,19 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 6,
     code: 'XQGSJR',
-    providerManaged: false
-  }
+    providerManaged: false,
+  },
 ];
 
 const MOCK_SCRIPT = {
-  name: 'Course D (2019)'
+  name: 'Course D (2019)',
 };
 
 const DEFAULT_PROPS = {
   sections: MOCK_SECTIONS,
   selectedSection: MOCK_SECTIONS[0],
   assignmentName: MOCK_SCRIPT.name,
-  openEditSectionDialog: () => {}
+  openEditSectionDialog: () => {},
 };
 
 describe('TeacherDashboardHeader', () => {
@@ -94,14 +94,14 @@ describe('TeacherDashboardHeader', () => {
     expect(dropdownLinks.at(1).contains(checkmarkIcon)).to.equal(false);
   });
 
-  it('renders button to edit section details', () => {
+  it('renders button to edit section details in new section setup flow', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let editSectionButton = wrapper.findWhere(
       element =>
         element.is('Button') &&
-        element.prop('text') === i18n.editSectionDetails()
+        element.prop('text') === i18n.editSectionDetails() &&
+        element.prop('href') === '/sections/3/edit'
     );
     expect(editSectionButton).to.have.lengthOf(1);
-    expect(wrapper.find('Connect(EditSectionDialog)')).to.have.lengthOf(1);
   });
 });

@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
 import {getStore} from '@cdo/apps/redux';
 
-$(function() {
+$(function () {
   ReactDOM.render(
     <Provider store={getStore()}>
       <SetupGuide />

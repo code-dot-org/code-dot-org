@@ -15,7 +15,7 @@ describe('BorderedCallToAction', () => {
     headingText,
     descriptionText,
     buttonText,
-    buttonUrl
+    buttonUrl,
   };
 
   describe('default behavior', () => {
@@ -40,7 +40,7 @@ describe('BorderedCallToAction', () => {
     it('has a dashed border', () => {
       expect(borderedCtA.findAll('div')[0].props.style).to.contain({
         borderStyle: 'dashed',
-        borderWidth: 5
+        borderWidth: 5,
       });
     });
 
@@ -72,7 +72,7 @@ describe('BorderedCallToAction', () => {
       );
       expect(borderedCtA.findAll('div')[0].props.style).to.contain({
         borderStyle: 'solid',
-        borderWidth: 1
+        borderWidth: 1,
       });
     });
 
@@ -80,12 +80,12 @@ describe('BorderedCallToAction', () => {
       const borderedCtA = isolateComponent(
         <BorderedCallToAction
           {...defaultProps}
-          buttonColor={Button.ButtonColor.orange}
+          buttonColor={Button.ButtonColor.brandSecondaryDefault}
         />
       );
       const button = borderedCtA.findOne('Button');
       expect(button.props.text).to.equal(buttonText);
-      expect(button.props.color).to.equal('orange');
+      expect(button.props.color).to.equal('brandSecondaryDefault');
     });
 
     it('can use a custom onClick, which ignores buttonUrl', () => {

@@ -5,7 +5,7 @@ import _ from 'lodash';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import LessonTip, {
-  tipTypes
+  tipTypes,
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import i18n from '@cdo/locale';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
@@ -19,14 +19,14 @@ export default class EditTipDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     tip: tipShape.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    handleDelete: PropTypes.func.isRequired
+    handleDelete: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      tip: this.props.tip
+      tip: this.props.tip,
     };
   }
 
@@ -102,7 +102,7 @@ export default class EditTipDialog extends Component {
           <Button
             text={i18n.saveAndClose()}
             onClick={this.handleCloseAndSave}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </LessonEditorDialog>
@@ -113,13 +113,13 @@ export default class EditTipDialog extends Component {
 const styles = {
   dialogContent: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   textArea: {
-    width: '95%'
+    width: '95%',
   },
   confirmDeleteButton: {
     display: 'flex',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };

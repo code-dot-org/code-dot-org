@@ -1,6 +1,6 @@
 import React from 'react';
 import sinon from 'sinon';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 
 import {expect} from '../../../util/reconfiguredChai';
 
@@ -16,19 +16,19 @@ describe('DownloadReplayVideoButton', () => {
 
   let originalAppOptions;
 
-  before(function() {
+  before(function () {
     originalAppOptions = window.appOptions;
     window.appOptions = {
-      signedReplayLogUrl: 'some-url.com'
+      signedReplayLogUrl: 'some-url.com',
     };
   });
 
-  after(function() {
+  after(function () {
     window.appOptions = originalAppOptions;
   });
 
-  beforeEach(function() {
-    wrapper = shallow(
+  beforeEach(function () {
+    wrapper = mount(
       <DownloadReplayVideoButton channelId="test" appType="dance" />
     );
 
@@ -41,7 +41,8 @@ describe('DownloadReplayVideoButton', () => {
     tryDownloadVideoSpy = sinon.spy(wrapper.instance(), 'tryDownloadVideo');
   });
 
-  afterEach(function() {
+  afterEach(function () {
+    wrapper.unmount();
     checkVideoSpy.restore();
     checkVideoUntilSuccessSpy.restore();
     fetchSpy.restore();
@@ -57,7 +58,7 @@ describe('DownloadReplayVideoButton', () => {
   it('renders as disabled if the download has been initiated before the video has been found', () => {
     wrapper.setState({
       videoExists: false,
-      downloadInitiated: true
+      downloadInitiated: true,
     });
 
     expect(wrapper.instance().buttonEnabled()).to.equal(false);
@@ -68,12 +69,12 @@ describe('DownloadReplayVideoButton', () => {
   it('renders as enabled if the download has been initiated after the video has been found', () => {
     wrapper.setState({
       videoExists: true,
-      downloadInitiated: true
+      downloadInitiated: true,
     });
 
     expect(wrapper.instance().buttonEnabled()).to.equal(true);
     expect(wrapper.find('button').props()).to.have.property('disabled', false);
-    expect(wrapper.find('i').hasClass('fa-download')).to.equal(true);
+    expect(wrapper.find('i').hasClass('fa-spinner')).to.equal(true);
   });
 
   it('begins checking for video immediately', () => {
@@ -99,7 +100,7 @@ describe('DownloadReplayVideoButton', () => {
     expect(fetchSpy.callCount).to.equal(1);
     expect(
       fetchSpy.calledWith(wrapper.instance().getVideoUrl(), {
-        method: 'GET'
+        method: 'GET',
       })
     ).to.equal(true);
   });
@@ -115,7 +116,7 @@ describe('DownloadReplayVideoButton', () => {
     expect(fetchSpy.callCount).to.equal(1);
     expect(
       fetchSpy.calledWith(wrapper.instance().getVideoUrl(), {
-        method: 'HEAD'
+        method: 'HEAD',
       })
     ).to.equal(true);
   });

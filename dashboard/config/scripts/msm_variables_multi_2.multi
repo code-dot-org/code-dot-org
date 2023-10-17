@@ -7,3 +7,5 @@ right '8'
 wrong 'a function'
 wrong 'ab'
 
+
+allow_multiple_attempts true

@@ -14,3 +14,5 @@ answer 'to decrease a value by another value'
 
 question 'loop control variable'
 answer 'a variable declared and used within a loop to count iterations through the loop'
+
+allow_multiple_attempts true

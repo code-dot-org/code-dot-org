@@ -36,8 +36,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
     )
     begin
       survey_submission.save_with_foorm_submission(answers.to_json, params[:form_name], params[:form_version])
-    rescue ActiveRecord::ActiveRecordError => e
-      render json: {error: e.message}, status: :bad_request
+    rescue ActiveRecord::ActiveRecordError => exception
+      render json: {error: exception.message}, status: :bad_request
       return
     end
 
@@ -77,9 +77,9 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
         survey_submission.save_with_foorm_submission(data.to_json, params[:form_name], params[:form_version])
         submission_ids << survey_submission.foorm_submission_id
         survey_submission_ids << survey_submission.id
-      rescue ActiveRecord::ActiveRecordError => e
+      rescue ActiveRecord::ActiveRecordError => exception
         save_success = true
-        error = e.message
+        error = exception.message
       end
     end
     {

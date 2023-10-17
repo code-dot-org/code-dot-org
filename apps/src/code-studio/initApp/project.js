@@ -1,4 +1,3 @@
-/* global appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
@@ -30,7 +29,12 @@ var showProjectAdmin = require('../showProjectAdmin');
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 import {getStore} from '../../redux';
-import {workspaceAlertTypes, displayWorkspaceAlert} from '../projectRedux';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert,
+  refreshInRestrictedShareMode,
+  refreshTeacherHasConfirmedUploadWarning,
+} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -39,7 +43,7 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange'
+  workspaceChange: 'workspaceChange',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -61,7 +65,7 @@ var PathPart = {
   PROJECTS: 1,
   APP: 2,
   CHANNEL_ID: 3,
-  ACTION: 4
+  ACTION: 4,
 };
 
 /**
@@ -112,7 +116,10 @@ var currentSources = {
   makerAPIsEnabled: null,
   animations: null,
   selectedSong: null,
-  selectedPoem: null
+  selectedPoem: null,
+  inRestrictedShareMode: false,
+  teacherHasConfirmedUploadWarning: false,
+  hiddenDefinitions: null,
 };
 
 /**
@@ -137,7 +144,10 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
-    libraries: data.libraries
+    libraries: data.libraries,
+    inRestrictedShareMode: data.inRestrictedShareMode,
+    teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
+    hiddenDefinitions: data.hiddenDefinitions,
   };
 }
 
@@ -148,6 +158,7 @@ const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
 
 /**
  * Used by setThumbnailUrl() to set the project thumbnail URL path.
+ * NOTE: if changing this URL, update project thumbnail URL validation as well
  */
 const THUMBNAIL_PATH = '.metadata/thumbnail.png';
 
@@ -363,16 +374,16 @@ var projects = (module.exports = {
     if (!id) {
       return;
     }
-    channels.delete(id + '/abuse', function(err, result) {
+    channels.delete(id + '/abuse', function (err, result) {
       if (err) {
         throw err;
       }
-      assets.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
+      assets.patchAll(id, `abuse_score=${score}`, null, function (err, result) {
         if (err) {
           throw err;
         }
       });
-      files.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
+      files.patchAll(id, `abuse_score=${score}`, null, function (err, result) {
         if (err) {
           throw err;
         }
@@ -522,7 +533,7 @@ var projects = (module.exports = {
     },
     setCurrentSourceVersionId(id) {
       currentSourceVersionId = id;
-    }
+    },
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -579,7 +590,7 @@ var projects = (module.exports = {
   showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked({
-        showShareAndRemix: !this.shouldHideShareAndRemix()
+        showShareAndRemix: !this.shouldHideShareAndRemix(),
       });
     }
   },
@@ -608,12 +619,8 @@ var projects = (module.exports = {
    */
   setLibraryDetails(config = {}) {
     current = current || {};
-    const {
-      libraryName,
-      libraryDescription,
-      latestLibraryVersion,
-      publishing
-    } = config;
+    const {libraryName, libraryDescription, latestLibraryVersion, publishing} =
+      config;
 
     if (libraryName !== current.libraryName) {
       current.libraryName = libraryName;
@@ -641,9 +648,7 @@ var projects = (module.exports = {
   },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
-      document.title = `${newName} - ${appOptions.gameDisplayName} - ${
-        appOptions.appName
-      }`;
+      document.title = `${newName} - ${appOptions.gameDisplayName} - ${appOptions.appName}`;
     }
   },
 
@@ -698,10 +703,31 @@ var projects = (module.exports = {
         sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
+      if (currentSources.inRestrictedShareMode !== undefined) {
+        sourceHandler.setInRestrictedShareMode(
+          currentSources.inRestrictedShareMode
+        );
+        // ensure restrictedShareMode is set correctly in redux
+        // so we hide publish and remix correctly.
+        getStore().dispatch(refreshInRestrictedShareMode());
+      }
+
+      if (currentSources.teacherHasConfirmedUploadWarning !== undefined) {
+        sourceHandler.setTeacherHasConfirmedUploadWarning(
+          currentSources.teacherHasConfirmedUploadWarning
+        );
+        getStore().dispatch(refreshTeacherHasConfirmedUploadWarning());
+      }
+
       if (isEditing) {
         if (current) {
           if (currentSources.source) {
             sourceHandler.setInitialLevelSource(currentSources.source);
+          }
+          if (currentSources.hiddenDefinitions) {
+            sourceHandler.setInitialHiddenDefinitions(
+              currentSources.hiddenDefinitions
+            );
           }
         } else {
           this.setName('My Project');
@@ -716,7 +742,7 @@ var projects = (module.exports = {
 
         $(window).on(
           events.appInitialized,
-          function() {
+          function () {
             // Get the initial app code as a baseline
             this.sourceHandler
               .getLevelSource(currentSources.source)
@@ -725,7 +751,7 @@ var projects = (module.exports = {
               });
           }.bind(this)
         );
-        $(window).on(events.workspaceChange, function() {
+        $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
 
@@ -748,6 +774,11 @@ var projects = (module.exports = {
         }
       } else if (current) {
         this.sourceHandler.setInitialLevelSource(currentSources.source);
+        if (currentSources.hiddenDefinitions) {
+          sourceHandler.setInitialHiddenDefinitions(
+            currentSources.hiddenDefinitions
+          );
+        }
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.legacyShareStyle && this.getStandaloneApp()) {
@@ -952,7 +983,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong, selectedPoem} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem, inRestrictedShareMode, teacherHasConfirmedUploadWarning} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -1115,7 +1146,7 @@ var projects = (module.exports = {
         channelId,
         packSources(),
         filename,
-        function(err, response) {
+        function (err, response) {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
@@ -1201,6 +1232,26 @@ var projects = (module.exports = {
     return this.save();
   },
 
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    this.sourceHandler.setInRestrictedShareMode(inRestrictedShareMode);
+    return this.save();
+  },
+
+  inRestrictedShareMode() {
+    return this.sourceHandler.inRestrictedShareMode();
+  },
+
+  setTeacherHasConfirmedUploadWarning(hasConfirmedUploadWarning) {
+    this.sourceHandler.setTeacherHasConfirmedUploadWarning(
+      hasConfirmedUploadWarning
+    );
+    return this.save();
+  },
+
+  teacherHasConfirmedUploadWarning() {
+    return this.sourceHandler.teacherHasConfirmedUploadWarning();
+  },
+
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -1220,12 +1271,12 @@ var projects = (module.exports = {
   },
 
   getSourceForChannel(channelId, callback) {
-    channels.fetch(channelId, function(err, data) {
+    channels.fetch(channelId, function (err, data) {
       if (err) {
         executeCallback(callback, null);
       } else {
         var url = channelId + '/' + SOURCE_FILE;
-        sources.fetch(url, function(err, data) {
+        sources.fetch(url, function (err, data) {
           if (err) {
             executeCallback(callback, null);
           } else {
@@ -1239,7 +1290,7 @@ var projects = (module.exports = {
   createNewChannelFromSource(source, callback) {
     channels.create(
       {
-        name: 'New Project'
+        name: 'New Project',
       },
       (err, channelData) => {
         sources.put(
@@ -1277,6 +1328,11 @@ var projects = (module.exports = {
           const selectedSong = this.sourceHandler.getSelectedSong();
           const selectedPoem = this.sourceHandler.getSelectedPoem();
           const libraries = this.sourceHandler.getLibrariesList();
+          const inRestrictedShareMode =
+            this.sourceHandler.inRestrictedShareMode();
+          const teacherHasConfirmedUploadWarning =
+            this.sourceHandler.teacherHasConfirmedUploadWarning();
+          const hiddenDefinitions = this.sourceHandler.getHiddenDefinitions();
           callback({
             source,
             html,
@@ -1284,7 +1340,10 @@ var projects = (module.exports = {
             makerAPIsEnabled,
             selectedSong,
             selectedPoem,
-            libraries
+            libraries,
+            inRestrictedShareMode,
+            teacherHasConfirmedUploadWarning,
+            hiddenDefinitions,
           });
         })
         .catch(error => callback({error}))
@@ -1306,7 +1365,7 @@ var projects = (module.exports = {
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
-            makerAPIsEnabled: apisEnabled
+            makerAPIsEnabled: apisEnabled,
           },
           () => {
             resolve();
@@ -1331,7 +1390,7 @@ var projects = (module.exports = {
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
-            libraries: updatedLibrariesList
+            libraries: updatedLibrariesList,
           },
           () => {
             resolve();
@@ -1359,7 +1418,7 @@ var projects = (module.exports = {
   showSaveError_() {
     header.showProjectSaveError();
   },
-  logError_: function(errorType, errorCount, errorText) {
+  logError_: function (errorType, errorCount, errorText) {
     // Share URLs only make sense for standalone app types.
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
@@ -1381,8 +1440,8 @@ var projects = (module.exports = {
           isOwner: this.isOwner(),
           currentUrl: window.location.href,
           shareUrl: shareUrl,
-          currentSourceVersionId: currentSourceVersionId
-        })
+          currentSourceVersionId: currentSourceVersionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -1586,7 +1645,7 @@ var projects = (module.exports = {
       return;
     }
     var destChannel = current.id;
-    assets.copyAll(srcChannel, destChannel, function(err) {
+    assets.copyAll(srcChannel, destChannel, function (err) {
       if (err) {
         header.showProjectSaveError();
         return;
@@ -1629,7 +1688,7 @@ var projects = (module.exports = {
   },
   delete(callback) {
     var channelId = current.id;
-    channels.delete(channelId, function(err, data) {
+    channels.delete(channelId, function (err, data) {
       executeCallback(callback, data);
     });
   },
@@ -1655,7 +1714,7 @@ var projects = (module.exports = {
    * is determined by parsing the current url path.
    * @returns {Promise} A Promise which will resolve when the project loads.
    */
-  loadStandaloneProject_: function() {
+  loadStandaloneProject_: function () {
     var pathInfo = parsePath();
 
     if (pathInfo.channelId) {
@@ -1691,7 +1750,7 @@ var projects = (module.exports = {
    * is determined by appOptions.channel.
    * @returns {Promise} A Promise which will resolve when the project loads.
    */
-  loadProjectBackedLevel_: function() {
+  loadProjectBackedLevel_: function () {
     isEditing = true;
     return this.fetchChannel(appOptions.channel)
       .catch(err => {
@@ -1731,6 +1790,7 @@ var projects = (module.exports = {
   },
 
   setThumbnailUrl() {
+    // NOTE: if changing this URL, update project thumbnail URL validation as well
     current.thumbnailUrl = `/v3/files/${current.id}/${THUMBNAIL_PATH}`;
     thumbnailChanged = true;
   },
@@ -1876,11 +1936,11 @@ var projects = (module.exports = {
       sourcesApi = useSourcesPublic ? sourcesPublic : sources;
     }
     return sourcesApi;
-  }
+  },
 });
 
 function fetchAbuseScore(resolve) {
-  channels.fetch(current.id + '/abuse', function(err, data) {
+  channels.fetch(current.id + '/abuse', function (err, data) {
     currentAbuseScore = (data && data.abuse_score) || currentAbuseScore;
     resolve();
     if (err) {
@@ -1892,7 +1952,7 @@ function fetchAbuseScore(resolve) {
 }
 
 function fetchSharingDisabled(resolve) {
-  channels.fetch(current.id + '/sharing_disabled', function(err, data) {
+  channels.fetch(current.id + '/sharing_disabled', function (err, data) {
     sharingDisabled = (data && data.sharing_disabled) || sharingDisabled;
     resolve();
     if (err) {
@@ -1904,7 +1964,7 @@ function fetchSharingDisabled(resolve) {
 }
 
 function fetchShareFailure(resolve) {
-  channels.fetch(current.id + '/share-failure', function(err, data) {
+  channels.fetch(current.id + '/share-failure', function (err, data) {
     currentShareFailureEnglish =
       data && data.share_failure && data.share_failure.content
         ? data.share_failure.content
@@ -1944,7 +2004,7 @@ function fetchPrivacyProfanityViolations(resolve) {
 function fetchAbuseScoreAndPrivacyViolations(project) {
   const promises = [
     new Promise(fetchAbuseScore),
-    new Promise(fetchShareFailure)
+    new Promise(fetchShareFailure),
   ];
 
   if (project.getStandaloneApp() === 'playlab') {
@@ -2085,7 +2145,7 @@ function parsePath() {
     return {
       appName: null,
       channelId: null,
-      action: null
+      action: null,
     };
   }
 
@@ -2107,6 +2167,6 @@ function parsePath() {
   return {
     appName: tokens[PathPart.APP],
     channelId,
-    action: tokens[PathPart.ACTION]
+    action: tokens[PathPart.ACTION],
   };
 }

@@ -6,7 +6,7 @@ export default function wrap(p5) {
   original = original || p5.createSprite;
   log.length = 0;
 
-  p5.createSprite = function() {
+  p5.createSprite = function () {
     const sprite = original.apply(p5, arguments);
 
     for (let prop of trackedProps) {
@@ -21,7 +21,7 @@ export default function wrap(p5) {
           } else {
             descriptor.value = value;
           }
-        }
+        },
       });
     }
     return sprite;

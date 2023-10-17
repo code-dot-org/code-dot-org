@@ -7,17 +7,16 @@ module Services
 
     setup do
       PDF.stubs(:generate_from_url)
-      AWS::S3.unstub(:cached_exists_in_bucket?)
     end
 
     test 'get_pdfless_lessons will only include lessons not present in S3' do
       unit_with_lesson_pdfs = create :script, :with_lessons, seeded_from: Time.now
-      AWS::S3.stubs(:cached_exists_in_bucket?).with do |_bucket, key|
+      AWS::S3.stubs(:exists_in_bucket).with do |_bucket, key|
         key.include?(unit_with_lesson_pdfs.name)
       end.returns(true)
 
       unit_without_lesson_pdfs = create :script, :with_lessons, seeded_from: Time.now
-      AWS::S3.stubs(:cached_exists_in_bucket?).with do |_bucket, key|
+      AWS::S3.stubs(:exists_in_bucket).with do |_bucket, key|
         key.include?(unit_without_lesson_pdfs.name)
       end.returns(false)
 
@@ -26,6 +25,7 @@ module Services
     end
 
     test 'get_pdfless_lessons excludes lessons without lesson plans' do
+      AWS::S3.stubs(:exists_in_bucket).returns(false)
       unit_with_lesson_plans = create :script, :with_lessons
       unit_without_lesson_plans = create :script, :with_lessons
       unit_without_lesson_plans.lessons.each do |lesson|
@@ -45,11 +45,11 @@ module Services
 
       script_names = Services::CurriculumPdfs.get_pdf_enabled_scripts.map(&:name)
 
-      refute script_names.include?(in_development.name)
-      refute script_names.include?(pilot.name)
-      assert script_names.include?(beta.name)
-      assert script_names.include?(preview.name)
-      assert script_names.include?(stable.name)
+      refute_includes(script_names, in_development.name)
+      refute_includes(script_names, pilot.name)
+      assert_includes(script_names, beta.name)
+      assert_includes(script_names, preview.name)
+      assert_includes(script_names, stable.name)
     end
 
     test 'will not generate a overview PDF when unit does not have lesson plans' do

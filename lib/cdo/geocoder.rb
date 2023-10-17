@@ -6,7 +6,7 @@ require 'geocoder/lookups/freegeoip'
 module Geocoder
   module Result
     class Base
-      def summarize(prefix='location_')
+      def summarize(prefix = 'location_')
         {}.tap do |results|
           results['location_p'] = "#{latitude},#{longitude}" if latitude && longitude
           %w(street_number route street_address city state state_code country country_code postal_code).each do |component_name|
@@ -71,9 +71,7 @@ module Geocoder
         data['relevance']
       end
 
-      private
-
-      def mapbox_context(name)
+      private def mapbox_context(name)
         context.map do |c|
           c if c['id']&.match?(Regexp.new(name))
         end&.compact&.first

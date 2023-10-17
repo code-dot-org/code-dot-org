@@ -24,6 +24,6 @@ const styles = {
   text: {
     fontSize: 18,
     lineHeight: '24px',
-    padding: 5
-  }
+    padding: 5,
+  },
 };

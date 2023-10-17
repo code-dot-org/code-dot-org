@@ -20,3 +20,5 @@ Markus is finding that it takes too long to track down all of the groceries he n
 Which of the following data must be obtained from the user\'s smartphone in order for *GroceryGrabbr* to suggest the order for picking up groceries?
 MARKDOWN
 
+
+allow_multiple_attempts true

@@ -22,7 +22,7 @@ module OmniauthCallbacksControllerTests
           name: args[:name] || 'someone',
           email: args[:email] || 'auth_test@code.org',
           user_type: args[:user_type].presence,
-          dob: args[:dob] || (Date.today - 20.years),
+          dob: args[:dob] || (Time.zone.today - 20.years),
           gender: args[:gender] || 'f'
         },
         credentials: {
@@ -151,7 +151,7 @@ module OmniauthCallbacksControllerTests
       study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
       study_events = study_records.map {|e| e[:event]}
 
-      assert study_records.all? {|record| record[:data_string].present?}
+      assert(study_records.all? {|record| record[:data_string].present?})
       assert_equal 1, study_records.map {|r| r[:data_string]}.uniq.count
       assert_equal [expected_study_group], study_groups
       assert_equal expected_events, study_events

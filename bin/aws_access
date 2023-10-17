@@ -13,7 +13,7 @@ module Aws
   end
 end
 
-unless (provider = Aws::STS::Client.new.config.credentials).class == Aws::Google
+unless (provider = Aws::STS::Client.new.config.credentials).instance_of?(Aws::Google)
   puts "WARNING: AWS is currently using #{provider}, not Google credentials."
 end
 

@@ -3,7 +3,7 @@ var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
-var CalcVisualizationColumn = function(props) {
+var CalcVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedVisualizationDiv>

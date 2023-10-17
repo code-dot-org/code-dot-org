@@ -55,8 +55,8 @@ For more information about how to teach this material, please refer to this <a h
       </td>
       <td>
         <ul>
-          <li>Intro to Databases - Part 1 - Creating and Storing Records<iframe width="100%" src="https://www.youtube.com/embed/d8ByCh-BouQ" frameborder="0" allowfullscreen></iframe></li>
-          <li>Intro to Databases - Part 2 - Data Viewer<iframe width="100%" src="https://www.youtube.com/embed/RZlHfbtO2C4" frameborder="0" allowfullscreen></iframe></li>
+          <li>Intro to Databases - Part 1 - Creating and Storing Records<iframe width="100%" src="https://www.youtube-nocookie.com/embed/d8ByCh-BouQ" frameborder="0" allowfullscreen></iframe></li>
+          <li>Intro to Databases - Part 2 - Data Viewer<iframe width="100%" src="https://www.youtube-nocookie.com/embed/RZlHfbtO2C4" frameborder="0" allowfullscreen></iframe></li>
           <li>
             <a href="https://code.org/applab/docs/tabledatastorage" target="_blank">App Lab Docs: Table Data Storage Overview</a>
           </li>
@@ -125,7 +125,7 @@ For more information about how to teach this material, please refer to this <a h
         Stage 6 - Importing and Exporting Data<br><br>
         <a href="https://studio.code.org/s/cspunit6/lessons/6/levels/1" target="_blank">Code Studio</a>
       </td>
-      <td>       
+      <td>
         In this stage, students learn how to “<strong>Remix</strong>” projects and that an app’s data does not transfer when it is remixed. Students learn how to use the <strong>import</strong> and <strong>export</strong> tools in the Data Viewer to transfer data between apps.
       </td>
       <td>

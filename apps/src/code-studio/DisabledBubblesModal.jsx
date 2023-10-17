@@ -9,7 +9,7 @@ import {disabledBubblesSupportArticle} from './disabledBubbles';
  */
 export default class DisabledBubblesModal extends React.Component {
   state = {
-    open: true
+    open: true,
   };
 
   handleClose = () => this.setState({open: false});
@@ -44,13 +44,13 @@ export default class DisabledBubblesModal extends React.Component {
 const styles = {
   main: {
     fontSize: 16,
-    margin: 15
+    margin: 15,
   },
   paragraph: {
     paddingTop: 5,
-    paddingBottom: 5
+    paddingBottom: 5,
   },
   button: {
-    textAlign: 'right'
-  }
+    textAlign: 'right',
+  },
 };

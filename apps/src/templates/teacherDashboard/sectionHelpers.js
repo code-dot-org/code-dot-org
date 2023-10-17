@@ -22,8 +22,8 @@ export function recordSwitchToSection(toSectionId, fromSectionId, studyGroup) {
       data_json: JSON.stringify({
         section_id: fromSectionId,
         old_section_id: fromSectionId,
-        new_section_id: toSectionId
-      })
+        new_section_id: toSectionId,
+      }),
     },
     {includeUserId: true}
   );
@@ -36,8 +36,8 @@ export function recordOpenEditSectionDetails(sectionId, studyGroup) {
       study_group: studyGroup,
       event: 'open_edit_section_dashboard_header',
       data_json: JSON.stringify({
-        section_id: sectionId
-      })
+        section_id: sectionId,
+      }),
     },
     {includeUserId: true}
   );

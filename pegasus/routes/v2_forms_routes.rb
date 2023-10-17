@@ -11,8 +11,8 @@ post '/v2/forms/:kind' do |kind|
   begin
     form = insert_or_upsert_form(kind, payload)
     redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
-  rescue FormError => e
-    form_error! e
+  rescue FormError => exception
+    form_error! exception
   end
 end
 
@@ -53,8 +53,8 @@ patch '/v2/forms/:kind/:secret' do |kind, secret|
     content_type :json
     forbidden! unless form = update_form(kind, secret, payload)
     JSON.parse(form[:data]).merge(secret: secret).to_json
-  rescue FormError => e
-    form_error! e
+  rescue FormError => exception
+    form_error! exception
   end
 end
 post '/v2/forms/:kind/:secret/update' do |kind, secret|
@@ -121,7 +121,7 @@ post '/v2/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_
   begin
     form = insert_or_upsert_form(kind, payload, parent_id: parent_form[:id])
     redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
-  rescue FormError => e
-    form_error! e
+  rescue FormError => exception
+    form_error! exception
   end
 end

@@ -87,8 +87,8 @@ class PardotV2
       yield prospects if block_given?
 
       total_results_retrieved += prospects.length
-      log "Retrieved #{total_results_retrieved} prospects. Last Pardot ID = #{last_id}."\
-        " #{limit.nil? ? 'No limit' : "Limit = #{limit}"}."
+      log "Retrieved #{total_results_retrieved} prospects. Last Pardot ID = #{last_id}. " \
+        "#{limit.nil? ? 'No limit' : "Limit = #{limit}"}."
       break if limit && total_results_retrieved >= limit
     end
 
@@ -259,11 +259,11 @@ class PardotV2
     # @see http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects
     post_with_auth_retry "#{PROSPECT_DELETION_URL}/#{pardot_id}"
     true
-  rescue StandardError => e
+  rescue StandardError => exception
     # If the input pardot_id does not exist, Pardot will response with
     # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
-    return false if /Pardot request failed with HTTP 400/.match?(e.message)
-    raise e
+    return false if /Pardot request failed with HTTP 400/.match?(exception.message)
+    raise exception
   end
 
   # Finds prospects using email address and extract their Pardot ids.
@@ -272,11 +272,11 @@ class PardotV2
   def self.retrieve_pardot_ids_by_email(email)
     doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{URI.encode_www_form_component(email)}"
     doc.xpath('//prospect/id').map(&:text)
-  rescue StandardError => e
+  rescue StandardError => exception
     # If the input email does not exist, Pardot will response with
     # HTTP code 400, and error code 4 "Invalid prospect email address" in the body.
-    return [] if /Pardot request failed with HTTP 400/.match?(e.message)
-    raise e
+    return [] if /Pardot request failed with HTTP 400/.match?(exception.message)
+    raise exception
   end
 
   # Converts contact keys and values to Pardot prospect keys and values.
@@ -352,7 +352,7 @@ class PardotV2
   # @param [Array<Hash>] prospects an array of prospect data
   # @return [String] a URL
   def self.build_batch_url(api_endpoint, prospects)
-    prospects_payload_json_encoded = URI.encode({prospects: prospects}.to_json)
+    prospects_payload_json_encoded = URI::DEFAULT_PARSER.escape({prospects: prospects}.to_json)
 
     # Encode plus signs in email addresses because it is invalid in a query string
     # (even though it is valid in the base of a URL).
@@ -381,7 +381,7 @@ class PardotV2
     # Return indexes of rejected emails and their error messages
     errors = extract_batch_request_errors doc
 
-    log "Completed a batch request to #{api_endpoint} in #{time_elapsed.round(2)} secs. "\
+    log "Completed a batch request to #{api_endpoint} in #{time_elapsed.round(2)} secs. " \
       "#{prospects.length} prospects submitted. #{errors.length} rejected."
 
     errors

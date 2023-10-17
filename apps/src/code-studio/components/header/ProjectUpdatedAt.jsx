@@ -7,12 +7,13 @@ import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
 import {projectUpdatedStatuses as statuses} from '../../projectRedux';
 import RetryProjectSaveDialog from './RetryProjectSaveDialog';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {
     status: PropTypes.oneOf(Object.values(statuses)),
     updatedAt: PropTypes.string,
-    onContentUpdated: PropTypes.func
+    onContentUpdated: PropTypes.func,
   };
 
   componentDidMount() {
@@ -35,6 +36,7 @@ class ProjectUpdatedAt extends React.Component {
           title={msg.projectSaveErrorTooltip()}
         >
           <i className="fa fa-exclamation-triangle" />
+          &nbsp;
           {msg.projectSaveError()}
         </span>
       );
@@ -62,7 +64,7 @@ class ProjectUpdatedAt extends React.Component {
     return (
       <div className="project_updated_at header_text" style={styles.container}>
         {this.renderText()}
-        <RetryProjectSaveDialog />
+        <RetryProjectSaveDialog onTryAgain={() => project.save()} />
       </div>
     );
   }
@@ -71,11 +73,11 @@ class ProjectUpdatedAt extends React.Component {
 const styles = {
   container: {
     display: 'block',
-    textAlign: 'left'
-  }
+    textAlign: 'left',
+  },
 };
 
 export default connect(state => ({
   status: state.project.projectUpdatedStatus,
-  updatedAt: state.project.projectUpdatedAt
+  updatedAt: state.project.projectUpdatedAt,
 }))(ProjectUpdatedAt);

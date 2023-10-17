@@ -1,6 +1,6 @@
 - content_for :body_scripts do
   - video_infos = {}
-  - Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
+  - Video.where(locale: I18n.default_locale).each { |video| video_infos[video.key] = video.summarize(false) }
   - script_data = { editorvideo: { video_infos: video_infos }.to_json }
   %script{src: webpack_asset_path('js/levels/editors/fields/_video.js'), data: script_data}
 

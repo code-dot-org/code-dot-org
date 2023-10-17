@@ -19,7 +19,7 @@ export default class DeleteAccountDialog extends React.Component {
     checkboxes: PropTypes.objectOf(
       PropTypes.shape({
         checked: PropTypes.bool.isRequired,
-        label: PropTypes.object.isRequired
+        label: PropTypes.object.isRequired,
       })
     ).isRequired,
     password: PropTypes.string.isRequired,
@@ -31,7 +31,7 @@ export default class DeleteAccountDialog extends React.Component {
     onCancel: PropTypes.func.isRequired,
     disableConfirm: PropTypes.bool.isRequired,
     deleteUser: PropTypes.func.isRequired,
-    deleteError: PropTypes.string
+    deleteError: PropTypes.string,
   };
 
   render() {
@@ -50,7 +50,7 @@ export default class DeleteAccountDialog extends React.Component {
       onCancel,
       disableConfirm,
       deleteUser,
-      deleteError
+      deleteError,
     } = this.props;
     const checkboxesLength = Object.keys(checkboxes).length;
 
@@ -89,7 +89,7 @@ export default class DeleteAccountDialog extends React.Component {
             <div style={styles.section}>
               <strong>
                 {i18n.deleteAccountDialog_checkboxTitle({
-                  numCheckboxes: checkboxesLength
+                  numCheckboxes: checkboxesLength,
                 })}
               </strong>
               {Object.keys(checkboxes).map(id => {
@@ -124,7 +124,7 @@ export default class DeleteAccountDialog extends React.Component {
           )}
           <Field
             label={i18n.deleteAccountDialog_verification({
-              verificationString: i18n.deleteAccountDialog_verificationString()
+              verificationString: i18n.deleteAccountDialog_verificationString(),
             })}
           >
             <input
@@ -163,38 +163,38 @@ export default class DeleteAccountDialog extends React.Component {
 const styles = {
   container: {
     margin: GUTTER,
-    color: color.charcoal
+    color: color.charcoal,
   },
   bodyContainer: {
     display: 'flex',
     alignItems: 'center',
     paddingTop: GUTTER / 2,
-    paddingBottom: GUTTER
+    paddingBottom: GUTTER,
   },
   icon: {
     color: color.red,
-    fontSize: 100
+    fontSize: 100,
   },
   text: {
-    paddingLeft: GUTTER
+    paddingLeft: GUTTER,
   },
   dangerText: {
-    color: color.red
+    color: color.red,
   },
   italicText: {
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   section: {
-    paddingBottom: GUTTER
+    paddingBottom: GUTTER,
   },
   checkboxContainer: {
     display: 'flex',
-    paddingTop: GUTTER / 2
+    paddingTop: GUTTER / 2,
   },
   label: {
-    paddingLeft: GUTTER / 2
+    paddingLeft: GUTTER / 2,
   },
   input: {
-    width: 490
-  }
+    width: 490,
+  },
 };

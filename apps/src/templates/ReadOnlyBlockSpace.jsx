@@ -11,12 +11,12 @@ import React from 'react';
 export default class ReadOnlyBlockSpace extends React.Component {
   static propTypes = {
     block: PropTypes.object.isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   state = {
     height: 100,
-    blockSpace: undefined
+    blockSpace: undefined,
   };
 
   componentDidMount() {
@@ -31,7 +31,7 @@ export default class ReadOnlyBlockSpace extends React.Component {
       this.props.block,
       {
         noScrolling: true,
-        rtl: this.props.isRtl
+        rtl: this.props.isRtl,
       }
     );
 
@@ -44,7 +44,7 @@ export default class ReadOnlyBlockSpace extends React.Component {
     // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
       height,
-      blockSpace
+      blockSpace,
     });
   }
 
@@ -57,7 +57,8 @@ export default class ReadOnlyBlockSpace extends React.Component {
   render() {
     const style = {
       maxHeight: this.state.height,
-      paddingBottom: 10
+      paddingBottom: 10,
+      overflow: 'hidden',
     };
 
     return (

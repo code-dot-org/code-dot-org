@@ -8,7 +8,7 @@ import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import i18n from '@cdo/locale';
 import {
   convertXmlToBlockly,
-  shrinkBlockSpaceContainer
+  shrinkBlockSpaceContainer,
 } from '@cdo/apps/templates/instructions/utils';
 import {parseElement} from '@cdo/apps/xml';
 import '../../../style/curriculum/documentation_tables.scss';
@@ -19,7 +19,7 @@ const VIDEO_HEIGHT = 315;
 export default function ProgrammingExpressionOverview({
   programmingExpression,
   programmingEnvironmentName,
-  programmingEnvironmentLanguage
+  programmingEnvironmentLanguage,
 }) {
   const titleRef = React.createRef();
   const videoRef = createRef();
@@ -43,7 +43,7 @@ export default function ProgrammingExpressionOverview({
         blocksDom,
         {
           noScrolling: true,
-          inline: false
+          inline: false,
         }
       );
       shrinkBlockSpaceContainer(blockSpace, true);
@@ -90,7 +90,7 @@ export default function ProgrammingExpressionOverview({
             style={{
               backgroundColor: getColor(),
               marginLeft: 10,
-              padding: '5px 10px'
+              padding: '5px 10px',
             }}
           >
             {programmingExpression.category}
@@ -165,7 +165,8 @@ export default function ProgrammingExpressionOverview({
           <h2>{i18n.additionalInformationHeader()}</h2>
           <EnhancedSafeMarkdown
             markdown={i18n.additionalInformationText({
-              externalDocumentationUrl: programmingExpression.externalDocumentation.trim()
+              externalDocumentationUrl:
+                programmingExpression.externalDocumentation.trim(),
             })}
             className="docs-pages"
           />
@@ -189,20 +190,23 @@ const programmingExpressionShape = PropTypes.shape({
   returnValue: PropTypes.string,
   tips: PropTypes.string,
   video: PropTypes.object,
-  imageUrl: PropTypes.string
+  imageUrl: PropTypes.string,
+  blockName: PropTypes.string,
+  parameters: PropTypes.arrayOf(PropTypes.object),
+  examples: PropTypes.arrayOf(PropTypes.object),
 });
 
 ProgrammingExpressionOverview.propTypes = {
   programmingExpression: programmingExpressionShape.isRequired,
   programmingEnvironmentName: PropTypes.string,
-  programmingEnvironmentLanguage: PropTypes.string
+  programmingEnvironmentLanguage: PropTypes.string,
 };
 
 const styles = {
   image: {
-    paddingBottom: 5
+    paddingBottom: 5,
   },
   video: {
-    paddingTop: 10
-  }
+    paddingTop: 10,
+  },
 };

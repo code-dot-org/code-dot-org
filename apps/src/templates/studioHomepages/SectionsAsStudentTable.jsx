@@ -8,6 +8,7 @@ import shapes from './shapes';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import {tableLayoutStyles} from '../tables/tableConstants';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class SectionsAsStudentTable extends React.Component {
   static propTypes = {
@@ -16,13 +17,13 @@ class SectionsAsStudentTable extends React.Component {
     canLeave: PropTypes.bool.isRequired,
     updateSections: PropTypes.func,
     updateSectionsResult: PropTypes.func,
-    isPlSections: PropTypes.bool
+    isPlSections: PropTypes.bool,
   };
 
   onLeave(sectionCode, sectionName) {
     $.post({
       url: `/api/v1/sections/${sectionCode}/leave`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.props.updateSections(data.studentSections, data.plSections);
       this.props.updateSectionsResult(
@@ -52,7 +53,7 @@ class SectionsAsStudentTable extends React.Component {
               style={{
                 ...styles.col,
                 ...styles.sectionNameCol,
-                ...styles.headerRowPadding
+                ...styles.headerRowPadding,
               }}
             >
               <div style={styles.colText}>{i18n.section()}</div>
@@ -66,7 +67,7 @@ class SectionsAsStudentTable extends React.Component {
             <td
               style={{
                 ...styles.col,
-                ...(isRtl ? styles.sectionCodeColRtl : styles.sectionCodeCol)
+                ...(isRtl ? styles.sectionCodeColRtl : styles.sectionCodeCol),
               }}
             >
               <div style={styles.colText}>{i18n.sectionCode()}</div>
@@ -83,7 +84,7 @@ class SectionsAsStudentTable extends React.Component {
             <tr
               style={{
                 ...(index % 2 === 0 ? styles.lightRow : styles.darkRow),
-                ...styles.row
+                ...styles.row,
               }}
               key={index}
               className="test-row"
@@ -113,7 +114,7 @@ class SectionsAsStudentTable extends React.Component {
               <td
                 style={{
                   ...styles.col,
-                  ...(isRtl ? styles.sectionCodeColRtl : styles.sectionCodeCol)
+                  ...(isRtl ? styles.sectionCodeColRtl : styles.sectionCodeCol),
                 }}
               >
                 {section.login_type === SectionLoginType.clever
@@ -151,7 +152,7 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    width: styleConstants['content-width']
+    width: styleConstants['content-width'],
   },
   headerRow: {
     backgroundColor: color.table_header,
@@ -161,24 +162,24 @@ const styles = {
     borderBottomWidth: 1,
     borderTopWidth: 0,
     borderLeftWidth: 0,
-    borderRightWidth: 1
+    borderRightWidth: 1,
   },
   headerRowPadding: {
     paddingTop: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   lightRow: {
-    backgroundColor: color.table_light_row
+    backgroundColor: color.table_light_row,
   },
   darkRow: {
-    backgroundColor: color.table_dark_row
+    backgroundColor: color.table_dark_row,
   },
   row: {
     borderBottomColor: color.border_light_gray,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
     paddingTop: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   col: {
     borderRightWidth: 1,
@@ -189,55 +190,55 @@ const styles = {
     borderBottomWidth: 0,
     color: color.charcoal,
     paddingLeft: 20,
-    paddingRight: 20
+    paddingRight: 20,
   },
   sectionNameCol: {
-    width: 310
+    width: 310,
   },
   courseCol: {
-    width: 310
+    width: 310,
   },
   teacherCol: {
     lineHeight: '52px',
-    width: 160
+    width: 160,
   },
   studentsCol: {
-    width: 110
+    width: 110,
   },
   sectionCodeCol: {
     lineHeight: '52px',
     whiteSpace: 'nowrap',
     width: 135,
-    borderRightWidth: 0
+    borderRightWidth: 0,
   },
   sectionCodeColRtl: {
     lineHeight: '52px',
     whiteSpace: 'nowrap',
-    width: 210
+    width: 210,
   },
   leaveCol: {
     width: 110,
     borderLeftWidth: 1,
     borderLeftColor: color.border_light_gray,
-    borderLeftStyle: 'solid'
+    borderLeftStyle: 'solid',
   },
   colText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
-    lineHeight: '22px'
+    lineHeight: '22px',
   },
   link: {
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   currentUnit: {
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(SectionsAsStudentTable);

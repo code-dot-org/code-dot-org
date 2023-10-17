@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org námskeið eru notuð af tugum miljóna nemenda og af einni miljón kennara út um allan heim.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Forsagan
 
 Code.org var hleypt af stokkunum árið 2103 af tvíburabræðrunum Hadi og Ali Partovi með [myndskeiði sem kynnti tölvunarfræði](https://www.youtube.com/watch?v=nKIu9yen5nc). Þetta myndskeið varð #1 á YouTube í einn dag og 15.000 skólar höfðu samband til að leita eftir stuðningi. Síðan þá höfum við stækkað frá því að vera naumur hópur sjálfboðaliða í það að vera orðin skipuleg samtök sem standa að baki alheimshreyfingu. Það er sannfæring okkar að gæðakennsla í tölvunarfræði eigi að vera tiltæk öllum börnum, ekki bara fáum heppnum.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Það sem við gerum
 

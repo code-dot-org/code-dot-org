@@ -14,7 +14,7 @@ export const organizeReferenceGuides = (
   const organizedGuides = getGuideChildren(parent, referenceGuides).map(
     guide => [
       {...guide, level}, // add the depth of this guide so we can render the indentation
-      ...organizeReferenceGuides(referenceGuides, guide.key, level + 1) // put the children right after the parent
+      ...organizeReferenceGuides(referenceGuides, guide.key, level + 1), // put the children right after the parent
     ]
   );
   return flatten(organizedGuides);

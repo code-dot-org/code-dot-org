@@ -1,4 +1,4 @@
-@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
 
 html, body {
   height: 100%;
@@ -10,6 +10,10 @@ html, body {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+button {
+  height: unset !important;
 }
 
 section {
@@ -28,7 +32,6 @@ section {
     text-align: center;
     color: $dark_purple;
     font-size: 32px;
-    font-family: $gotham-extra-bold;
     margin: 0 auto 1em;
     line-height: 1.2em;
 
@@ -60,7 +63,8 @@ section.hoc-description {
 
   .number-served{
     color: $darkest_gray;
-    font-family: $gotham-extra-bold;
+    font-family: var(--main-font);
+    font-weight: var(--bold-font-weight);
     font-size: 3em;
     margin: 0 auto 0.5em;
 
@@ -98,7 +102,8 @@ section.join-us {
 
   p.signup-closed {
     font-size: 18px;
-    font-family: $gotham-bold;
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
     text-align: center;
     line-height: 1.4;
     margin: 0 auto;
@@ -123,7 +128,8 @@ section.join-us {
         margin: 0 0 1em;
         text-align: left;
         color: $teal;
-        font-family: $gotham-bold;
+        font-family: var(--main-font);
+        font-weight: var(--semi-bold-font-weight);
         font-size: 22px;
       }
     }
@@ -240,7 +246,8 @@ section.what-is-hoc {
   }
 
   h3 {
-    font-family: $gotham-regular;
+    font-family: var(--main-font);
+    font-weight: var(--regular-font-weight);
     font-size: 22px;
     color: $darkest_gray;
     max-width: 700px;
@@ -354,7 +361,7 @@ section.host-an-hour {
 }
 
 .ctabutton {
-  font-size: 18px;
+  font-size: 16px;
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -362,7 +369,7 @@ section.host-an-hour {
 }
 
 .ctabutton-white {
-  font-size: 18px;
+  font-size: 16px;
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -384,7 +391,7 @@ section.host-an-hour {
 }
 
 .ctabutton-white-inverse {
-  font-size: 18px;
+  font-size: 16px;
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
@@ -406,14 +413,16 @@ section.host-an-hour {
 }
 
 .category-header {
-  font-family: $gotham-bold;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 .category-button {
   background-color: #5b6770;
   border-radius: 5px;
   color: white;
-  font-family: $gotham-regular;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   margin: 5px 0px;
   padding: 8px;
 }
@@ -486,7 +495,8 @@ a.category-link {
   }
 
   .banner-title {
-    font-family: $gotham-extra-bold;
+    font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
     color: white;
     line-height: 1.2;
     margin: 0 auto 1em;
@@ -624,7 +634,8 @@ a.category-link {
 }
 
 .front-header-banner .front-header-title p {
-  font-family: $gotham-bold !important;
+  font-family: var(--main-font) !important;
+  font-weight: var(--semi-bold-font-weight);
   margin-bottom: 0px;
 }
 
@@ -669,7 +680,8 @@ a.category-link {
 
 #volunteer-signup a {
   color: white;
-  font-family: $gotham-regular;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   text-decoration: none;
 }
 

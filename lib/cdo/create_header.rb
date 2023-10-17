@@ -60,8 +60,8 @@ class CreateHeader
 
     entries << "dance"
 
-    if options[:project_type]
-      entries.unshift(options[:project_type]) unless entries.include? options[:project_type]
+    if options[:project_type] && !(entries.include? options[:project_type])
+      entries.unshift(options[:project_type])
     end
 
     entries.map(&method(:get_project_info))

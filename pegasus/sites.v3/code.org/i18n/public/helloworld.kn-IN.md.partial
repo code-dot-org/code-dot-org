@@ -18,7 +18,7 @@ social:
 
 ಕಂಪ್ಯೂಟರ್ ಸೇನ್ಸ್ 101 ರಲ್ಲಿ, ಅನೇಕ ವಿದ್ಯಾರ್ಥಿಗಳು ರೂಪಿಸುವ ಮೊದಲ ಪ್ರೋಗ್ರಾಂ ಸರಳವಾಗಿದ್ದು ಈ ವಿಶಿಷ್ಟ ಬರಹದ ಸಾಲನ್ನು ಔಟ್‌ಪುಟ್ ಆಗಿ ನೀಡುತ್ತದೆ: "ಹಲೋ ವರ್ಲ್ಡ್!" ಈ ಪರಿಚಯಾತ್ಮಕ ಚಟುವಟಿಕೆಯೊಂದಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಜಗತ್ತಿಗೆ ಹಲೋ ಹೇಳಿ ಅದು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಮೂಲಭೂತ ಕೋಡಿಂಗ್ ಕೌಶಲ್ಯ ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ರಚಿಸಲು ಆತ್ಮವಿಶ್ವಾಸವನ್ನು ನೀಡುತ್ತದೆ. ನೀವು ರಚಿಸುವ ಜಗತ್ತಿನಲ್ಲಿ ಸಂವಾದಾತ್ಮಕ ಅಕ್ಷರಗಳನ್ನು ಕೋಡ್ ಮಾಡಲು ಆರು ಮೋಜಿನ ಥೀಮ್‌ಗಳಿಂದ ಆರಿಸಿಕೊಳ್ಳಿ!
 
-# ನಿಮ್ಮ ಹಲೋವರ್ಲ್ಡ್ ಥೀಮ್ ಆಯ್ಕೆ ಮಾಡಿ
+## Choose your Hello World theme
 
 {{ spritelab_module, title: "ಹೊಸತು! Space", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", alt_text: "Two cute astronaut and corgi characters floating in space", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 {{ spritelab_module, title: "ಹೊಸತು! Soccer", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", alt_text: "Three giraffe, tiger, and rhino characters on a field about to start a game of soccer", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
@@ -37,3 +37,5 @@ social:
 {{ featured_project, title: "Animals", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", alt_text: "A student project featuring an animated gif of an underwater scene with dolphin, fish, and jellyfish characters in front of a shipwreck", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
 {{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", alt_text: "A student project featuring an animated gif of a game of tag with two alien characters on a distant planet", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}
+
+{{ helloworld }}

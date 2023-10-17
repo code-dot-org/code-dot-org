@@ -25,3 +25,5 @@ Going through the code line by line:
 * The number at index three is now 2. Therefore, 2 is displayed
 
 MARKDOWN
+
+allow_multiple_attempts true

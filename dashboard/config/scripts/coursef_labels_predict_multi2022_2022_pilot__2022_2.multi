@@ -5,3 +5,4 @@ wrong '"One meal coming right up!"', feedback: 'Incorrect. The label of a variab
 wrong '"One food coming right up!"', feedback: 'Incorrect. The label of a variable is never printed.'
 right '"One  coming right up!"', feedback: 'Correct! The variable labels do not match.'
 wrong 'Nothing will get printed.', feedback: 'Incorrect. The event and the print block will still work.'
+allow_multiple_attempts false

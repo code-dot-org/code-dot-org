@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import fontConstants from '@cdo/apps/fontConstants';
 import loadable from '../util/loadable';
 const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
 import i18n from '@cdo/locale';
@@ -12,13 +13,13 @@ const singleLineLayoutStyles = {
   verticalAlign: 'middle',
   minHeight: 42,
   fontSize: 13,
-  fontFamily: '"Gotham 4r", sans-serif',
+  ...fontConstants['main-font-regular'],
   color: '#333',
-  padding: 0
+  padding: 0,
 };
 const singleLineContainerStyles = {
   display: 'table',
-  width: '100%'
+  width: '100%',
 };
 
 export default class CountryAutocompleteDropdown extends Component {
@@ -29,11 +30,11 @@ export default class CountryAutocompleteDropdown extends Component {
     value: PropTypes.string,
     fieldName: PropTypes.string,
     singleLineLayout: PropTypes.bool,
-    maxHeight: PropTypes.number
+    maxHeight: PropTypes.number,
   };
 
   static defaultProps = {
-    fieldName: 'country_s'
+    fieldName: 'country_s',
   };
 
   handleChange = event => {
@@ -46,12 +47,12 @@ export default class CountryAutocompleteDropdown extends Component {
       showErrorMsg,
       value,
       singleLineLayout,
-      maxHeight
+      maxHeight,
     } = this.props;
 
     const questionStyle = {
       ...styles.question,
-      ...(singleLineLayout && singleLineLayoutStyles)
+      ...(singleLineLayout && singleLineLayoutStyles),
     };
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
     const showError = showErrorMsg && !value;

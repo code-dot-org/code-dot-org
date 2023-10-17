@@ -268,7 +268,7 @@ def get_lesson_group_pairs(script, cb_chapters, lesson_pairs)
     # 4. Verify that the remaining number of lessons is now the same as the
     # number of lessons in the corresponding CB chapter.
     unless filtered_lessons.count == cb_chapter['lessons'].count
-      raise "lesson count mismatch for lesson group #{lesson_group.display_name}: "\
+      raise "lesson count mismatch for lesson group #{lesson_group.display_name}: " \
               "#{filtered_lessons.count} != #{cb_chapter['lessons'].count}"
     end
 
@@ -300,7 +300,7 @@ def canonicalize(str)
   str = match&.captures&.last if match
   str.gsub!(/[-:]/, ' ')
   # deduplicate spaces
-  str = str.split(' ').compact.join(' ')
+  str = str.split.compact.join(' ')
   str.downcase.strip
 end
 

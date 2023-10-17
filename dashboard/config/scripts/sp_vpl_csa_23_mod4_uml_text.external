@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# UML diagrams and documentation
+# UML diagrams
 
 In Java, there are lots of classes written by other programmers!  While we cannot always see the actual code from those programmers, that is OK because we have resources to help us understand how to use classes.  
 
@@ -23,16 +23,7 @@ Some things to notice in the UML diagram:
 
 As you review the UML diagram, can you find the methods we have used so far in the Painter class?  Which methods do you want to know more about?
 
-## Documentation
-The UML diagram can be a good place to get an overview of a class, but sometimes we need more information.  This is when the documentation comes in helpful.
-
-At the top of a programming window in Code.org you will see a “Documentation” tab.  This tab includes documentation for JavaLab, including documentation for the `Painter` class.  
-
-<img src="https://images.code.org/e50ce0decfe4183f79e5a84d5b5e9ff8-image-1674170119889.14.51 PM.png" style="width:50%" alt="Unit 3 Project Rubric">
-
 <hr>
 
-**Up next:** We will use the documentation tab to navigate `Painter` objects
-
-![]()
+**Up next:** We will learn how to use the documentation tab in Java Lab.
 MARKDOWN

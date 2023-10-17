@@ -8,3 +8,4 @@ right 'Prepared notes outside of class from reading and practice problems'
 right 'Completing extra practice problems'
 right 'Self-testing before the exam'
 right 'Review for exam with friends / study group'
+allow_multiple_attempts true

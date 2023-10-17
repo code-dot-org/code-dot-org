@@ -6,9 +6,10 @@ import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {
   CourseOfferingCategories,
-  ParticipantAudiencesByType
+  ParticipantAudiencesByType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {translatedCourseOfferingCategories} from './AssignmentSelectorHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
@@ -19,11 +20,14 @@ export const getCourseOfferingsByCategory = (
   courseOfferings,
   participantType
 ) => {
-  const filteredCourseOfferings = _.filter(courseOfferings, function(offering) {
-    return ParticipantAudiencesByType[participantType].includes(
-      offering.participant_audience
-    );
-  });
+  const filteredCourseOfferings = _.filter(
+    courseOfferings,
+    function (offering) {
+      return ParticipantAudiencesByType[participantType].includes(
+        offering.participant_audience
+      );
+    }
+  );
   let orderedCourseOfferings = _.orderBy(
     filteredCourseOfferings,
     'display_name'
@@ -53,7 +57,7 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    isNewSection: PropTypes.bool
+    isNewSection: PropTypes.bool,
   };
 
   constructor(props) {
@@ -72,16 +76,13 @@ export default class AssignmentSelector extends Component {
     this.state = {
       selectedCourseOfferingId,
       selectedCourseVersionId,
-      selectedUnitId
+      selectedUnitId,
     };
   }
 
   getSelectedAssignment() {
-    const {
-      selectedCourseOfferingId,
-      selectedCourseVersionId,
-      selectedUnitId
-    } = this.state;
+    const {selectedCourseOfferingId, selectedCourseVersionId, selectedUnitId} =
+      this.state;
 
     return {
       courseOfferingId: isValidAssignment(selectedCourseOfferingId)
@@ -90,7 +91,7 @@ export default class AssignmentSelector extends Component {
       courseVersionId: isValidAssignment(selectedCourseVersionId)
         ? selectedCourseVersionId
         : null,
-      unitId: isValidAssignment(selectedUnitId) ? selectedUnitId : null
+      unitId: isValidAssignment(selectedUnitId) ? selectedUnitId : null,
     };
   }
 
@@ -105,7 +106,7 @@ export default class AssignmentSelector extends Component {
         {
           selectedCourseOfferingId: event.target.value,
           selectedCourseVersionId: noAssignment,
-          selectedUnitId: noAssignment
+          selectedUnitId: noAssignment,
         },
         this.reportChange
       );
@@ -113,8 +114,8 @@ export default class AssignmentSelector extends Component {
       const courseOfferingId = Number(event.target.value);
 
       if (this.state.selectedCourseOfferingId !== courseOfferingId) {
-        const courseVersions = this.props.courseOfferings[courseOfferingId]
-          ?.course_versions;
+        const courseVersions =
+          this.props.courseOfferings[courseOfferingId]?.course_versions;
 
         let courseVersionId;
 
@@ -137,7 +138,7 @@ export default class AssignmentSelector extends Component {
           {
             selectedCourseOfferingId: courseOfferingId,
             selectedCourseVersionId: courseVersionId,
-            selectedUnitId: firstUnitId
+            selectedUnitId: firstUnitId,
           },
           this.reportChange
         );
@@ -153,7 +154,7 @@ export default class AssignmentSelector extends Component {
       this.setState(
         {
           selectedUnitId: noAssignment,
-          selectedCourseVersionId: noAssignment
+          selectedCourseVersionId: noAssignment,
         },
         this.reportChange
       );
@@ -172,7 +173,7 @@ export default class AssignmentSelector extends Component {
         this.setState(
           {
             selectedUnitId: firstUnitId,
-            selectedCourseVersionId: courseVersionId
+            selectedCourseVersionId: courseVersionId,
           },
           this.reportChange
         );
@@ -187,7 +188,7 @@ export default class AssignmentSelector extends Component {
     ) {
       this.setState(
         {
-          selectedUnitId: noAssignment
+          selectedUnitId: noAssignment,
         },
         this.reportChange
       );
@@ -196,7 +197,7 @@ export default class AssignmentSelector extends Component {
       if (this.state.selectedUnitId !== unitId) {
         this.setState(
           {
-            selectedUnitId: unitId
+            selectedUnitId: unitId,
           },
           this.reportChange
         );
@@ -212,11 +213,8 @@ export default class AssignmentSelector extends Component {
 
   render() {
     const {dropdownStyle, disabled, courseOfferings, section} = this.props;
-    const {
-      selectedCourseOfferingId,
-      selectedCourseVersionId,
-      selectedUnitId
-    } = this.state;
+    const {selectedCourseOfferingId, selectedCourseVersionId, selectedUnitId} =
+      this.state;
 
     const courseOfferingsByCategories = getCourseOfferingsByCategory(
       courseOfferings,
@@ -235,11 +233,12 @@ export default class AssignmentSelector extends Component {
      * teachers will not be able to see PL course offerings because they
      * can not assign them so they should not see the PL course offerings either
      */
-    const filteredCategories = _.filter(CourseOfferingCategories, function(
-      category
-    ) {
-      return courseOfferingsByCategories[category];
-    });
+    const filteredCategories = _.filter(
+      CourseOfferingCategories,
+      function (category) {
+        return courseOfferingsByCategories[category];
+      }
+    );
 
     return (
       <div>
@@ -316,12 +315,12 @@ const styles = {
   family: {
     display: 'inline-block',
     marginTop: 4,
-    marginRight: 6
+    marginRight: 6,
   },
   secondary: {
-    marginTop: 6
+    marginTop: 6,
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    ...fontConstants['main-font-semi-bold'],
+  },
 };

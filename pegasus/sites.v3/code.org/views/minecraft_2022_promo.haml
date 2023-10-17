@@ -12,12 +12,12 @@
     %img.background-img{src: mee_image, style: "border-radius: 0"}
   .col-50.specific-tutorial.right-tutorial{style: "right: 10px; top: 10px; height: initial"}
     .tutorial-box
-      %h2.specific-tutorial-heading= mee_title
+      %h2.heading-sm{style: "margin-top: 0"}= mee_title
       .tutorial-details{style: "height: initial"}
         %p.tutorial-description
           = mee_description
       %a{href: mee_link, target: '_blank'}
-        %button.tutorial-button{style: "color: #4d575f; background-color: white; border-color: white; font-size: 14px"}
+        %button.tutorial-button{style: "font-size: 14px"}
           = mee_link_text
       - if language_dir_class == 'rtl'
         %img{style: "position: absolute; top: 10px; left: 10px; width: 60px;", src: '/images/mc/new_tag.png'}

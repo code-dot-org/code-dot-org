@@ -57,22 +57,20 @@ module UserPermissionGrantee
     return [:staging, :levelbuilder, :production].include? rack_env
   end
 
-  private
-
   # admin can be nil, which should be treated as false
-  def admin_changed?
+  private def admin_changed?
     # no change: false
     # false <-> nil: false
     # false|nil <-> true: true
     !!changes['admin'].try {|from, to| !!from != !!to}
   end
 
-  def log_admin_save
+  private def log_admin_save
     ChatClient.message 'infra-security',
-      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
-      "environment: #{rack_env}, "\
-      "user ID: #{id}, "\
-      "email: #{email}, "\
+      "#{admin ? 'Granting' : 'Revoking'} UserPermission: " \
+      "environment: #{rack_env}, " \
+      "user ID: #{id}, " \
+      "email: #{email}, " \
       "permission: ADMIN",
       color: 'yellow'
   end

@@ -24,3 +24,5 @@ Which of the following code segments should replace missing code so that the `ad
 
 
 MARKDOWN
+
+allow_multiple_attempts true

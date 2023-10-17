@@ -77,8 +77,8 @@ module Pd::SurveyPipeline
             next if reducer_result.blank?
 
             summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
-          rescue => e
-            errors << e.message
+          rescue => exception
+            errors << exception.message
           end
         end
       end

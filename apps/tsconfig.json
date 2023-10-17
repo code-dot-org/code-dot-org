@@ -1,0 +1,32 @@
+{
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./test/**/*.ts",
+    "./test/**/*.tsx",
+    "./src/**/*.js",
+    "./src/**/*.jsx",
+  ],
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "lib": ["ES2019", "DOM"],
+    "module": "es6",
+    "rootDir": "./",
+    "moduleResolution": "node",
+    "outDir": "build",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@cdo/apps/*": ["./src/*"],
+      "@cdo/static/*": ["./static/*"],
+    },
+    "resolveJsonModule": true,
+  }
+}

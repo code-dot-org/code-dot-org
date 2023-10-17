@@ -5,7 +5,7 @@ var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
-var EvalVisualizationColumn = function() {
+var EvalVisualizationColumn = function () {
   return (
     <span>
       <ProtectedVisualizationDiv>

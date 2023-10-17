@@ -20,12 +20,12 @@ function AllFeedbacks({feedbacksByLevel}) {
 
 const styles = {
   header: {
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };
 
 AllFeedbacks.propTypes = {
-  feedbacksByLevel: PropTypes.arrayOf(levelFeedbackShape)
+  feedbacksByLevel: PropTypes.arrayOf(levelFeedbackShape),
 };
 
 export default AllFeedbacks;

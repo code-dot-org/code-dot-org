@@ -1,11 +1,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MusicLabView from '@cdo/apps/music/views/MusicView';
+import ProjectBeats from '@cdo/apps/music/views/ProjectBeats';
 
-$(document).ready(function() {
+$(document).ready(function () {
+  const channelId = document.querySelector('script[data-channelid]').dataset
+    .channelid;
+
   ReactDOM.render(
-    <MusicLabView />,
+    <ProjectBeats channelId={channelId} />,
     document.getElementById('musiclab-container')
   );
 });

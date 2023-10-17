@@ -6,13 +6,13 @@ import {canShowGoogleShareButton} from './googlePlatformApiRedux';
 
 const style = {
   textAlign: 'center',
-  paddingTop: 5
+  paddingTop: 5,
 };
 
 class GoogleClassroomAttributionLabel extends React.Component {
   static propTypes = {
     // redux provided
-    visible: PropTypes.bool.isRequired
+    visible: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -29,5 +29,5 @@ class GoogleClassroomAttributionLabel extends React.Component {
 }
 
 export default connect(state => ({
-  visible: canShowGoogleShareButton(state)
+  visible: canShowGoogleShareButton(state),
 }))(GoogleClassroomAttributionLabel);

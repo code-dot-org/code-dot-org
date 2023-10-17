@@ -38,9 +38,8 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
             msg.create(),
             '',
             newName => {
-              const newVar = this.sourceBlock_.workspace.createVariable(
-                newName
-              );
+              const newVar =
+                this.sourceBlock_.workspace.createVariable(newName);
               this.setValue(newVar.getId());
             }
           );
@@ -51,7 +50,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
       }
     }
   }
-  menuGenerator_ = function() {
+  menuGenerator_ = function () {
     const options = CdoFieldVariable.dropdownCreate.call(this);
 
     // Remove the last two options (Delete and Rename)
@@ -61,7 +60,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
     // Add our custom options (Rename this variable, Rename all)
     options.push([
       msg.renameAll({variableName: this.getText()}),
-      RENAME_ALL_ID
+      RENAME_ALL_ID,
     ]);
     options.push([msg.renameThis(), RENAME_THIS_ID]);
 
@@ -76,7 +75,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
  * @param {string} defaultText default input text for window prompt
  * @param {Function} callback with parameter (text) of new name
  */
-CdoFieldVariable.modalPromptName = function(
+CdoFieldVariable.modalPromptName = function (
   promptText,
   confirmButtonLabel,
   defaultText,
@@ -89,6 +88,6 @@ CdoFieldVariable.modalPromptName = function(
     cancelText: confirmButtonLabel,
     confirmText: msg.cancel(),
     onConfirm: null,
-    onCancel: callback
+    onCancel: callback,
   });
 };

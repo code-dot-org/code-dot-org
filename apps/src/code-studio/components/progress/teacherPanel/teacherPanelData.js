@@ -24,19 +24,19 @@ export const getStudentsForSection = async () => {
 export const queryLockStatus = async scriptId => {
   try {
     const response = await fetch(`/api/lock_status?script_id=${scriptId}`, {
-      credentials: 'same-origin'
+      credentials: 'same-origin',
     });
     const data = await response.json();
 
     // Extract the state that teacherSectionsRedux cares about
     const teacherSections = Object.values(data).map(section => ({
       id: section.section_id,
-      name: section.section_name
+      name: section.section_name,
     }));
 
     return {
       teacherSections,
-      sectionLockStatus: data
+      sectionLockStatus: data,
     };
   } catch (err) {
     console.log(err);

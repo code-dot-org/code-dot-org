@@ -16,7 +16,7 @@ describe('AppLabTooltipOverlay', () => {
       height: TEST_APP_HEIGHT,
       mouseX: TEST_MOUSE_X,
       mouseY: TEST_MOUSE_Y,
-      isInDesignMode: false
+      isInDesignMode: false,
     };
   var result, stubDraggedElementDropPoint;
 
@@ -70,7 +70,7 @@ describe('AppLabTooltipOverlay', () => {
     beforeEach(() => {
       stubDraggedElementDropPoint.returns({
         left: DROP_POINT_X,
-        top: DROP_POINT_Y
+        top: DROP_POINT_Y,
       });
       result = shallow(<AppLabTooltipOverlay {...TEST_PROPS} />);
     });

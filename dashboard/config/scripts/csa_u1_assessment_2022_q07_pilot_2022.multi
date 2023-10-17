@@ -9,3 +9,5 @@ wrong '`Painter daVinci = Painter;`'
 markdown <<MARKDOWN
 Which of the following correctly instantiates a new `Painter` object?
 MARKDOWN
+
+allow_multiple_attempts true

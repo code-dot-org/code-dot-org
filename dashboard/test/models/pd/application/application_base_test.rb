@@ -8,6 +8,10 @@ module Pd::Application
 
     freeze_time
 
+    setup do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+    end
+
     test 'required fields' do
       application = ApplicationBase.new
       refute application.valid?
@@ -191,7 +195,7 @@ module Pd::Application
         filtered_question: 'to be removed'
       }
 
-      application.stubs(sanitize_form_data_hash: form_data)
+      application.stubs(sanitized_form_data_hash: form_data)
       ApplicationBase.stubs(filtered_labels: form_data.except(:filtered_question))
 
       expected_full_answers = {
@@ -218,7 +222,7 @@ module Pd::Application
         application = create :pd_teacher_application, status: 'incomplete'
         assert_nil application.applied_at
 
-        tomorrow = Date.tomorrow.to_time
+        tomorrow = Time.zone.tomorrow.to_time
         next_day = tomorrow + 1.day
 
         Timecop.freeze(tomorrow) do
@@ -247,7 +251,7 @@ module Pd::Application
         string_question_with_extra: 'Other:',
         string_question_with_extra_other: 'my other string answer',
       }
-      application.stubs(sanitize_form_data_hash: form_data)
+      application.stubs(sanitized_form_data_hash: form_data)
       ApplicationBase.stubs(filtered_labels: form_data)
 
       expected_full_answers = {
@@ -263,32 +267,18 @@ module Pd::Application
       assert_nil application.instance_variable_get(:@full_answers)
     end
 
-    test 'queue_email creates an associated unsent Email record' do
+    test 'send_pd_application_email sends email and creates an associated sent Email record' do
       application = create TEACHER_APPLICATION_FACTORY
 
-      application.expects(:deliver_email).never
+      application.expects(:deliver_email).once
       assert_creates Email do
-        application.queue_email :test_email
+        application.send_pd_application_email :test_email
       end
       email = Email.last
       assert_equal application, email.application
       assert_equal 'test_email', email.email_type
       assert_equal application.status, email.application_status
-      assert_nil email.sent_at
-    end
-
-    test 'queue_email with deliver_now sends email and creates an associated sent Email record' do
-      application = create TEACHER_APPLICATION_FACTORY
-
-      application.expects(:deliver_email)
-      assert_creates Email do
-        application.queue_email :test_email, deliver_now: true
-      end
-      email = Email.last
-      assert_equal application, email.application
-      assert_equal 'test_email', email.email_type
-      assert_equal application.status, email.application_status
-      assert_not_nil email.sent_at
+      refute_nil email.sent_at
     end
 
     test 'record status change with user' do
@@ -383,7 +373,7 @@ module Pd::Application
 
       assert teacher_without_email.email.blank?
 
-      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitize_form_data_hash[:alternate_email]}>"
+      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitized_form_data_hash[:alternate_email]}>"
       assert_equal formatted_alternate_email, application.formatted_applicant_email
     end
 
@@ -395,36 +385,10 @@ module Pd::Application
       application_without_email = create :pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
 
       assert teacher_without_email.email.blank?
-      assert application_without_email.sanitize_form_data_hash[:alternate_email].blank?
+      assert application_without_email.sanitized_form_data_hash[:alternate_email].blank?
       assert_raises_matching("invalid email address for application #{application_without_email.id}") do
         application_without_email.formatted_applicant_email
       end
-    end
-
-    test 'deleting an application also deletes its unsent emails' do
-      # Create two applications, each with sent and unsent email
-      application_a = create TEACHER_APPLICATION_FACTORY
-      application_b = create TEACHER_APPLICATION_FACTORY
-      [application_a, application_b].each do |application|
-        application.stubs(:deliver_email)
-        application.queue_email :test_email
-        application.queue_email :test_email, deliver_now: true
-        assert_equal 2, application.emails.count
-        assert_equal 1, application.emails.unsent.count
-      end
-
-      # Destroy one of the applications
-      application_a.destroy
-
-      # Unsent email for that application was destroyed
-      assert_equal 0, application_a.emails.unsent.count
-      # Sent email for that application was not destroyed
-      assert_equal 1, application_a.emails.count
-      # Email for the other application was not destroyed
-      assert_equal 2, application_b.emails.count
-    ensure
-      application_a.emails.destroy_all
-      application_b.emails.destroy_all
     end
   end
 end

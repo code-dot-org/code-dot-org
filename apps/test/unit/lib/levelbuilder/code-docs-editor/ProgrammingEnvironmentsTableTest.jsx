@@ -13,21 +13,21 @@ describe('ProgrammingEnvironmentsTable', () => {
           id: 1,
           name: 'applab',
           title: 'App Lab',
-          editPath: '/programming_environment/1/edit'
+          editPath: '/programming_environment/1/edit',
         },
         {
           id: 2,
           name: 'spritelab',
-          editPath: '/programming_environment/2/edit'
+          editPath: '/programming_environment/2/edit',
         },
         {
           id: 3,
           name: 'gamelab',
           title: 'Game Lab',
-          editPath: '/programming_environment/3/edit'
-        }
+          editPath: '/programming_environment/3/edit',
+        },
       ],
-      hidden: false
+      hidden: false,
     };
   });
 
@@ -54,12 +54,7 @@ describe('ProgrammingEnvironmentsTable', () => {
     // We need mount here to access the buttons
     const wrapper = mount(<ProgrammingEnvironmentsTable {...defaultProps} />);
 
-    wrapper
-      .find('BodyRow')
-      .at(1)
-      .find('Button')
-      .at(1)
-      .simulate('click');
+    wrapper.find('BodyRow').at(1).find('Button').at(1).simulate('click');
     expect(wrapper.find('StylizedBaseDialog').length).to.equal(1);
   });
 });

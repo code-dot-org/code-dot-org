@@ -9,6 +9,7 @@
         "name": "SOUND",
         "customInput": "soundPicker"
       }
-    ]
+    ],
+    "style": "default"
   }
 }

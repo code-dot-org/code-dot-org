@@ -12,7 +12,7 @@ import $ from 'jquery';
  * Represents a Dashboard user account - could be a teacher, a student, etc.
  * @constructor
  */
-var DashboardUser = (module.exports = function() {
+var DashboardUser = (module.exports = function () {
   /**
    * Indicates whether the async call has completed yet.
    * @type {boolean}
@@ -68,21 +68,21 @@ DashboardUser.currentUser_ = null;
  *
  * @return {DashboardUser} that doesn't have its data yet, but will soon.
  */
-DashboardUser.getCurrentUser = function() {
+DashboardUser.getCurrentUser = function () {
   if (!DashboardUser.currentUser_) {
     DashboardUser.currentUser_ = new DashboardUser();
     $.ajax({
       url: '/api/v1/users/netsim_signed_in',
       type: 'get',
       dataType: 'json',
-      success: function(data /*, textStatus, jqXHR*/) {
+      success: function (data /*, textStatus, jqXHR*/) {
         DashboardUser.currentUser_.initialize(data);
       },
-      error: function(/*jqXHR, textStatus, errorThrown*/) {
+      error: function (/*jqXHR, textStatus, errorThrown*/) {
         DashboardUser.currentUser_.initialize({
-          isSignedIn: false
+          isSignedIn: false,
         });
-      }
+      },
     });
   }
   return DashboardUser.currentUser_;
@@ -92,7 +92,7 @@ DashboardUser.getCurrentUser = function() {
  * Load data into user from async request, when ready.
  * @param data
  */
-DashboardUser.prototype.initialize = function(data) {
+DashboardUser.prototype.initialize = function (data) {
   this.id = data.id;
   this.name = data.name;
   this.isAdmin = data.admin === true;
@@ -102,7 +102,7 @@ DashboardUser.prototype.initialize = function(data) {
 
   // Call any queued callbacks
   this.whenReadyCallbacks_.forEach(
-    function(callback) {
+    function (callback) {
       callback(this);
     }.bind(this)
   );
@@ -114,7 +114,7 @@ DashboardUser.prototype.initialize = function(data) {
  * Possible for it to be called immediately.
  * @param {!function} callback
  */
-DashboardUser.prototype.whenReady = function(callback) {
+DashboardUser.prototype.whenReady = function (callback) {
   if (this.isReady) {
     callback(this);
   } else {
@@ -127,8 +127,8 @@ DashboardUser.prototype.whenReady = function(callback) {
  * @param {number} sectionID
  * @returns {boolean}
  */
-DashboardUser.prototype.ownsSection = function(sectionID) {
-  return this.ownedSections.some(function(section) {
+DashboardUser.prototype.ownsSection = function (sectionID) {
+  return this.ownedSections.some(function (section) {
     return section.id === sectionID;
   });
 };

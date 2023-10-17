@@ -6,7 +6,7 @@ import {
   addLibraryAnimation,
   appendBlankFrame,
   appendCustomFrames,
-  appendLibraryFrames
+  appendLibraryFrames,
 } from './animationList';
 import {makeEnum} from '@cdo/apps/utils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
@@ -28,6 +28,8 @@ const BEGIN_UPLOAD = 'AnimationPicker/BEGIN_UPLOAD';
 const HANDLE_UPLOAD_ERROR = 'AnimationPicker/HANDLE_UPLOAD_ERROR';
 const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
+const SHOWING_UPLOAD_WARNING = 'AnimationPicker/SHOWING_UPLOAD_WARNING';
+const EXITED_UPLOAD_WARNING = 'AnimationPicker/EXITED_UPLOAD_WARNING';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -39,7 +41,8 @@ const initialState = {
   isSpriteLab: false,
   isBackground: false,
   // List of animations selected to be added through multiselect
-  selectedAnimations: {}
+  selectedAnimations: {},
+  uploadWarningShowing: false,
 };
 
 export default function reducer(state, action) {
@@ -50,7 +53,7 @@ export default function reducer(state, action) {
         visible: true,
         goal: action.goal,
         isBackground: false,
-        isSpriteLab: action.isSpriteLab
+        isSpriteLab: action.isSpriteLab,
       });
     }
     return state;
@@ -61,7 +64,7 @@ export default function reducer(state, action) {
         visible: true,
         goal: action.goal,
         isBackground: true,
-        isSpriteLab: true
+        isSpriteLab: true,
       });
     }
     return state;
@@ -69,16 +72,28 @@ export default function reducer(state, action) {
   if (action.type === HIDE) {
     return initialState;
   }
+  if (action.type === SHOWING_UPLOAD_WARNING) {
+    return {
+      ...state,
+      uploadWarningShowing: true,
+    };
+  }
+  if (action.type === EXITED_UPLOAD_WARNING) {
+    return {
+      ...state,
+      uploadWarningShowing: false,
+    };
+  }
   if (action.type === BEGIN_UPLOAD) {
     return _.assign({}, state, {
       uploadInProgress: true,
-      uploadFilename: action.filename
+      uploadFilename: action.filename,
     });
   }
   if (action.type === HANDLE_UPLOAD_ERROR) {
     return _.assign({}, state, {
       uploadInProgress: false,
-      uploadError: action.status
+      uploadError: action.status,
     });
   }
   if (action.type === SELECT_ANIMATION) {
@@ -86,8 +101,8 @@ export default function reducer(state, action) {
       ...state,
       selectedAnimations: {
         ...state.selectedAnimations,
-        [action.animation.sourceUrl]: action.animation
-      }
+        [action.animation.sourceUrl]: action.animation,
+      },
     };
   }
   if (action.type === REMOVE_ANIMATION) {
@@ -95,7 +110,7 @@ export default function reducer(state, action) {
     delete updatedAnimations[action.animation.sourceUrl];
     return {
       ...state,
-      selectedAnimations: updatedAnimations
+      selectedAnimations: updatedAnimations,
     };
   }
   return state;
@@ -138,7 +153,27 @@ export function hide() {
 export function beginUpload(filename) {
   return {
     type: BEGIN_UPLOAD,
-    filename: filename
+    filename: filename,
+  };
+}
+
+/**
+ * We are showing the pre-upload warning.
+ * @returns  {{type: string}}
+ */
+export function showingUploadWarning() {
+  return {
+    type: SHOWING_UPLOAD_WARNING,
+  };
+}
+
+/**
+ * The user exited the upload warning.
+ * @returns  {{type: string}}
+ */
+export function exitedUploadWarning() {
+  return {
+    type: EXITED_UPLOAD_WARNING,
   };
 }
 
@@ -155,11 +190,13 @@ export function handleUploadComplete(result) {
     study_group: 'control-2020',
     event: 'upload',
     data_json: JSON.stringify({
-      size: result.size
-    })
+      size: result.size,
+    }),
   });
 
-  return function(dispatch, getState) {
+  return function (dispatch, getState) {
+    const isBackgroundMode =
+      getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const {goal, uploadFilename} = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
@@ -171,7 +208,8 @@ export function handleUploadComplete(result) {
           name: uploadFilename,
           sourceUrl: sourceUrl,
           size: result.size,
-          version: result.versionId
+          version: result.versionId,
+          categories: [isBackgroundMode ? 'backgrounds' : ''],
         });
 
         if (goal === Goal.NEW_ANIMATION) {
@@ -197,12 +235,12 @@ export function handleUploadComplete(result) {
  */
 function loadImageMetadata(sourceUrl, onComplete, onError) {
   let image = new Image();
-  image.addEventListener('load', function() {
+  image.addEventListener('load', function () {
     onComplete({
       sourceSize: {x: image.width, y: image.height},
       frameSize: {x: image.width, y: image.height},
       frameCount: 1,
-      frameDelay: 4
+      frameDelay: 4,
     });
   });
   image.addEventListener('error', onError);
@@ -217,7 +255,7 @@ function loadImageMetadata(sourceUrl, onComplete, onError) {
 export function handleUploadError(status) {
   return {
     type: HANDLE_UPLOAD_ERROR,
-    status: status
+    status: status,
   };
 }
 
@@ -229,7 +267,7 @@ export function handleUploadError(status) {
 export function addSelectedAnimation(animation) {
   return {
     type: SELECT_ANIMATION,
-    animation: animation
+    animation: animation,
   };
 }
 
@@ -241,7 +279,7 @@ export function addSelectedAnimation(animation) {
 export function removeSelectedAnimation(animation) {
   return {
     type: REMOVE_ANIMATION,
-    animation: animation
+    animation: animation,
   };
 }
 
@@ -255,10 +293,14 @@ export function pickNewAnimation() {
     const state = getState();
     const goal = state.animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      if (state.interfaceMode !== P5LabInterfaceMode.ANIMATION) {
+      if (
+        ![P5LabInterfaceMode.ANIMATION, P5LabInterfaceMode.BACKGROUND].includes(
+          state.interfaceMode
+        )
+      ) {
         dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
       }
-      dispatch(addBlankAnimation());
+      dispatch(addBlankAnimation(state.interfaceMode));
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendBlankFrame());
     }
@@ -280,8 +322,8 @@ export function pickLibraryAnimation(animation) {
     event: 'select-sprite',
     data_json: JSON.stringify({
       name: animation.name,
-      sourceUrl: animation.sourceUrl
-    })
+      sourceUrl: animation.sourceUrl,
+    }),
   });
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
@@ -294,6 +336,7 @@ export function pickLibraryAnimation(animation) {
       }
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendLibraryFrames(animation));
+      dispatch(hide());
     }
   };
 }

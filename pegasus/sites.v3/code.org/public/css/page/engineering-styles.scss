@@ -1,0 +1,120 @@
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.hero-banner-basic {
+  background-image: url("/images/about/careers/engineering/hero-bg.jpg");
+  background-size: cover;
+  background-color: #999;
+
+  &__image {
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .text-wrapper {
+    margin-right: 1.25rem;
+  }
+  a.link-button {
+    background-color: $neutral-white;
+    border-color: $neutral-white;
+    color: $neutral-dark;
+  }
+  @media screen and (max-width: $width-sm) {
+    .text-wrapper {
+      margin-right: 0;
+    }
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+}
+
+.engineering-team {
+  .action-block {
+    &__image {
+      @media screen and (min-width: 971px) {
+        object-fit: cover;
+        object-position: left;
+      }
+    }
+  }
+}
+
+.our-team-text {
+  @media (max-width: 767px) {
+    &__image {
+      margin-top: 0;
+      margin-bottom: 1.8rem;
+      max-width: 100%;
+    }
+    &__image--1 {
+      margin-top: 0;
+    }
+    &__image--2 {
+      margin-top: 0;
+    }
+    &__image--3 {
+      margin-left: 1.25rem;
+      margin-bottom: 1.25rem;
+      max-width: 15rem;
+      width: 50%;
+      float: right;
+    }
+    &__divider {
+      height: 2.5rem;
+
+      &--small {
+        height: 1.75rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__image--1 {
+      max-width: 29.4rem;
+      float: right;
+      margin-left: 3.75rem;
+    }
+    &__image--2 {
+      max-width: 22.8rem;
+      float: left;
+      margin-right: 3.75rem;
+    }
+    &__image--3 {
+      max-width: 16.8rem;
+      float: right;
+      margin-left: 3.75rem;
+    }
+    &__image--4 {
+      max-width: 25.5rem;
+      float: left;
+      margin-right: 3.75rem;
+    }
+    &__divider {
+      height: 3.75rem;
+
+      &--small {
+        height: 3rem;
+      }
+    }
+  }
+}
+
+.faq {
+  .link-button {
+    margin-top: 2.5rem;
+  }
+  @media (min-width: 970px) {
+    padding-bottom: 0;
+  }
+}
+
+.engineering-team,
+.our-team-text {
+  padding-bottom: calc(4rem - 1rem);
+}
+
+.faq {
+  strong {
+    @include strong;
+  }
+}

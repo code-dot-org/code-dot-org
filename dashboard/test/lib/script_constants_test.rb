@@ -33,9 +33,15 @@ class ScriptConstantsTest < ActiveSupport::TestCase
     assert_nil ScriptConstants.csf_next_course_recommendation("something-unknown")
   end
 
-  describe 'ScriptConstants::i18n' do
-    it 'finds course1 in i18n' do
-      assert ScriptConstants.i18n?('course1')
+  test "ScriptConstants.i18n? returns true when the script is translatable" do
+    ScriptConstants.stub_const(:TRANSLATEABLE_UNITS, %w[translatable]) do
+      assert ScriptConstants.i18n?('translatable')
+    end
+  end
+
+  test 'ScriptConstants.i18n? returns false when the script is not translatable' do
+    ScriptConstants.stub_const(:TRANSLATEABLE_UNITS, []) do
+      refute ScriptConstants.i18n?('untranslatable')
     end
   end
 end

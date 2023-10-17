@@ -12,13 +12,13 @@ const ChatBubbleTip = ({isRtl, color, background}) => {
       position: 'absolute',
       left: isRtl ? undefined : -24,
       right: isRtl ? -24 : undefined,
-      bottom: 5
+      bottom: 5,
     },
     polyline: {
       stroke: color,
       strokeWidth: 1,
-      fill: background
-    }
+      fill: background,
+    },
   };
 
   return (
@@ -35,11 +35,11 @@ const ChatBubbleTip = ({isRtl, color, background}) => {
 ChatBubbleTip.propTypes = {
   color: PropTypes.string,
   background: PropTypes.string,
-  isRtl: PropTypes.bool.isRequired
+  isRtl: PropTypes.bool.isRequired,
 };
 
 export default connect(state => {
   return {
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
   };
 })(Radium(ChatBubbleTip));

@@ -8,12 +8,12 @@ describe('DataDocEditAll', () => {
   const dataDoc1 = {
     key: 'key1',
     name: 'First Name',
-    content: 'First Content'
+    content: 'First Content',
   };
   const dataDoc2 = {
     key: 'key2',
     name: 'Second Name',
-    content: 'Second Content'
+    content: 'Second Content',
   };
   const allDocs = [dataDoc1, dataDoc2];
   const wrapper = isolateComponent(<DataDocEditAll dataDocs={allDocs} />);
@@ -28,7 +28,7 @@ describe('DataDocEditAll', () => {
 
   it('shows Data Doc even if it does not have name or content', () => {
     const emptyDoc = {
-      key: 'emptyDoc'
+      key: 'emptyDoc',
     };
     const editAllWithEmptyDocWrapper = isolateComponent(
       <DataDocEditAll dataDocs={[emptyDoc]} />
@@ -58,10 +58,7 @@ describe('DataDocEditAll', () => {
 
     // check delete button (TextLink) calls initiate delete doc function
     expect(
-      editAllTable
-        .findAll('.actions-box')[0]
-        .findAll('TextLink')[1]
-        .toString()
+      editAllTable.findAll('.actions-box')[0].findAll('TextLink')[1].toString()
     ).to.contain('initiateDeleteDataDoc');
   });
 
@@ -71,7 +68,7 @@ describe('DataDocEditAll', () => {
     const docToDelete = {
       key: 'docToDelete',
       name: 'deleteDoc',
-      content: 'This doc will be deleted.'
+      content: 'This doc will be deleted.',
     };
     let currDocs = [...allDocs];
     currDocs.push(docToDelete);
@@ -79,7 +76,7 @@ describe('DataDocEditAll', () => {
     server.respondWith('DELETE', `/data_docs/${docToDelete.key}`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(docToDelete)
+      JSON.stringify(docToDelete),
     ]);
 
     const testDeleteWrapper = isolateComponent(

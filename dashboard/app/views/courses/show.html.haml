@@ -14,6 +14,7 @@
 - data[:show_redirect_warning] = redirect_warning
 - data[:redirect_to_course_url] = unit_group.redirect_to_course_url(@current_user)
 - data[:user_id] = @current_user.try(:id)
+- data[:user_type] = @current_user.try(:user_type)
 
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}

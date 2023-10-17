@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-Post-Survey-Q02'
+
+question 'How familiar are you now with using AI tools to generate code?'
+
+right 'Not at all familiar: I have no experience or understanding of how to use AI tools to generate code.'
+right 'Slightly familiar: I have a basic understanding of how to use AI tools for code generation, but I lack hands-on experience.'
+right 'Moderately familiar: I have some experience and understand the principles of using AI tools for code generation, but there are areas I\'m not entirely comfortable with.'
+right 'Mostly familiar: I have good experience and feel quite comfortable using AI tools to generate code, though there might be a few complex scenarios where I need more practice.'
+right 'Very familiar: I have extensive experience and feel completely at ease using AI tools to generate code, even in complex scenarios.'
+
+allow_multiple_attempts false

@@ -1,0 +1,28 @@
+name 'CSC-SelfPaced-intro_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching CS Connections
+
+##### Welcome! This free self-paced professional learning module is designed help you prepare to teach Code.org's CS Connections curriculum. 
+
+
+<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## In this module, you will:
+
+* ##### Get an overview of CS Connections.
+* ##### Set up a plan to implement a CS Connections module.
+* ##### Practice key concepts included in lessons.
+* ##### Preview end of module projects.
+* ##### Consider strategies to create positive CS learning experiences.
+
+### **Suggested time:** 75 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

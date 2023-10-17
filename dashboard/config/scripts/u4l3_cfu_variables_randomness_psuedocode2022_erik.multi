@@ -27,3 +27,5 @@ DISPLAY(a)
 DISPLAY(b)
 DISPLAY(b)
 MARKDOWN
+
+allow_multiple_attempts true

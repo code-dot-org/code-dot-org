@@ -15,7 +15,7 @@ const sections = [
     code: 'ABCD',
     grade: '10',
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const sections = [
     code: 'EFGH',
     grade: '11',
     providerManaged: true,
-    hidden: false
+    hidden: false,
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const sections = [
     code: 'IJKL',
     grade: '9',
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 4,
@@ -48,17 +48,17 @@ const sections = [
     code: 'MNOP',
     grade: '6',
     providerManaged: false,
-    hidden: true
-  }
+    hidden: true,
+  },
 ];
 
 const DEFAULT_PROPS = {
   sectionData: sections[0],
-  onEdit: () => {},
+  handleEdit: () => {},
   removeSection: () => {},
   toggleSectionHidden: () => {},
   updateRoster: () => {},
-  setRosterProvider
+  setRosterProvider,
 };
 
 describe('SectionActionDropdown', () => {
@@ -132,5 +132,17 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
     expect(wrapper).to.contain('Restore Section');
+  });
+
+  it('sends selected user to the new edit page', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl = '/sections/' + sectionId + '/edit';
+    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
   });
 });

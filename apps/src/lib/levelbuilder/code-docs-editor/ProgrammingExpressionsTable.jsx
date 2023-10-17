@@ -11,7 +11,7 @@ const DEFAULT_VALUE = 'all';
 const DEFAULT_TYPE = 'programming_expressions';
 const RESULT_TYPES = [
   {id: DEFAULT_TYPE, formattedName: 'Programming Expressions'},
-  {id: 'programming_classes', formattedName: 'Programming Classes'}
+  {id: 'programming_classes', formattedName: 'Programming Classes'},
 ];
 
 /*
@@ -23,16 +23,14 @@ const RESULT_TYPES = [
 export default function ProgrammingExpressionsTable({
   allProgrammingEnvironments,
   allCategories,
-  hidden
+  hidden,
 }) {
   const [selectedEnvironment, setSelectedEnvironment] = useState(DEFAULT_VALUE);
   const [selectedCategory, setSelectedCategory] = useState(DEFAULT_VALUE);
   const [selectedResultType, setSelectedResultType] = useState(DEFAULT_TYPE);
   const [programmingExpressions, setProgrammingExpressions] = useState([]);
-  const [
-    categoriesAvailableForSelect,
-    setCategoriesAvailableForSelect
-  ] = useState(allCategories);
+  const [categoriesAvailableForSelect, setCategoriesAvailableForSelect] =
+    useState(allCategories);
   const [itemToClone, setItemToClone] = useState(null);
 
   const [itemToDelete, setItemToDelete] = useState(null);
@@ -104,7 +102,7 @@ export default function ProgrammingExpressionsTable({
   const destroyExpression = (destroyPath, callback) => {
     fetch(destroyPath, {
       method: 'DELETE',
-      headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
+      headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')},
     }).then(response => {
       if (response.ok) {
         setItemToDelete(null);
@@ -154,32 +152,32 @@ export default function ProgrammingExpressionsTable({
         header: {
           label: 'Actions',
           props: {
-            style: {width: '10%'}
-          }
+            style: {width: '10%'},
+          },
         },
         cell: {
-          formatters: [actionsCellFormatter]
-        }
+          formatters: [actionsCellFormatter],
+        },
       },
 
       {
         property: 'name',
         header: {
-          label: 'Name'
-        }
+          label: 'Name',
+        },
       },
       {
         property: 'environmentTitle',
         header: {
-          label: 'IDE'
-        }
+          label: 'IDE',
+        },
       },
       {
         property: 'categoryName',
         header: {
-          label: 'Category'
-        }
-      }
+          label: 'Category',
+        },
+      },
     ];
   };
 
@@ -235,8 +233,9 @@ export default function ProgrammingExpressionsTable({
       <>
         {!!itemToDelete && (
           <StylizedBaseDialog
-            body={`Are you sure you want to remove ${itemToDelete.name ||
-              itemToDelete.key} and its associated code doc?`}
+            body={`Are you sure you want to remove ${
+              itemToDelete.name || itemToDelete.key
+            } and its associated code doc?`}
             handleConfirmation={() => {
               destroyExpression(
                 `/${selectedResultType}/${itemToDelete.id}`,
@@ -299,13 +298,13 @@ export default function ProgrammingExpressionsTable({
 ProgrammingExpressionsTable.propTypes = {
   allProgrammingEnvironments: PropTypes.arrayOf(PropTypes.object).isRequired,
   allCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
-  hidden: PropTypes.bool
+  hidden: PropTypes.bool,
 };
 
 const styles = {
   actionsColumn: {
     display: 'flex',
     justifyContent: 'flex-start',
-    backgroundColor: 'white'
-  }
+    backgroundColor: 'white',
+  },
 };

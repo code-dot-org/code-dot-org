@@ -25,7 +25,7 @@ const responsiveWindowWidth = {
   [ResponsiveSize.lg]: 1024,
   [ResponsiveSize.md]: 820,
   [ResponsiveSize.sm]: 650,
-  [ResponsiveSize.xs]: 0
+  [ResponsiveSize.xs]: 0,
 };
 
 /**

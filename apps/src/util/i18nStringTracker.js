@@ -8,8 +8,8 @@ export default function localeWithI18nStringTracker(locale, source) {
 
   const localeWithTracker = {};
   // Iterates each function in the given locale object and creates a wrapper function.
-  Object.keys(locale).forEach(function(stringKey, index) {
-    localeWithTracker[stringKey] = function(d) {
+  Object.keys(locale).forEach(function (stringKey, index) {
+    localeWithTracker[stringKey] = function (d) {
       const value = locale[stringKey](d);
       log(stringKey, source);
       return value;

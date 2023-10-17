@@ -14,11 +14,11 @@ const staticStyles = {
     backgroundColor: 'white',
     borderRadius: 10,
     marginLeft: 4,
-    marginRight: 4
+    marginRight: 4,
   },
   wrapper: {
     position: 'relative',
-    margin: 4
+    margin: 4,
   },
   indexBubble: {
     position: 'absolute',
@@ -30,14 +30,14 @@ const staticStyles = {
     borderRadius: 12,
     textAlign: 'center',
     border: 'solid ' + color.light_purple + ' 2px',
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   indexBubbleText: {
     margin: 2,
     fontWeight: 'bold',
     fontSize: 16,
-    color: color.light_purple
-  }
+    color: color.light_purple,
+  },
 };
 
 /**
@@ -48,7 +48,7 @@ export default class ListItemThumbnail extends React.Component {
     animationProps: shapes.AnimationProps.isRequired,
     singleFrameAnimation: PropTypes.bool.isRequired,
     index: PropTypes.number,
-    isSelected: PropTypes.bool
+    isSelected: PropTypes.bool,
   };
 
   state = {previewSize: 0};
@@ -62,7 +62,7 @@ export default class ListItemThumbnail extends React.Component {
 
   recalculatePreviewSize() {
     this.setState({
-      previewSize: this.refs.wrapper.getBoundingClientRect().width
+      previewSize: this.refs.wrapper.getBoundingClientRect().width,
     });
   }
 
@@ -83,8 +83,8 @@ export default class ListItemThumbnail extends React.Component {
       root: {
         border:
           'solid 2px ' +
-          (this.props.isSelected ? color.purple : color.light_gray)
-      }
+          (this.props.isSelected ? color.purple : color.light_gray),
+      },
     });
     let playBehavior;
     if (this.props.singleFrameAnimation) {

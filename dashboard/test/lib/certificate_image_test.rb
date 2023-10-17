@@ -2,7 +2,6 @@ require 'test_helper'
 
 class CertificateImageTest < ActiveSupport::TestCase
   def test_special_template_courses
-    assert CertificateImage.prefilled_title_course?('Hour of Code') # 2013
     assert CertificateImage.prefilled_title_course?('hourofcode') # 2014
     assert CertificateImage.prefilled_title_course?('flappy')
     assert CertificateImage.prefilled_title_course?('frozen')
@@ -14,10 +13,10 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert CertificateImage.prefilled_title_course?('mee_empathy')
     assert CertificateImage.prefilled_title_course?('mee_timecraft')
     assert CertificateImage.prefilled_title_course?('mee_estate')
-    assert !CertificateImage.prefilled_title_course?('course1')
-    assert !CertificateImage.prefilled_title_course?('course2')
-    assert !CertificateImage.prefilled_title_course?('course3')
-    assert !CertificateImage.prefilled_title_course?('course4')
+    refute CertificateImage.prefilled_title_course?('course1')
+    refute CertificateImage.prefilled_title_course?('course2')
+    refute CertificateImage.prefilled_title_course?('course3')
+    refute CertificateImage.prefilled_title_course?('course4')
   end
 
   def test_course_templates
@@ -111,16 +110,26 @@ class CertificateImageTest < ActiveSupport::TestCase
     csp = create :unit_group, name: 'csp-2021'
     create :course_version, content_root: csp
 
+    hello = create :script, name: 'hello', is_course: true
+    cv = create :course_version, content_root: hello
+    create :course_offering, course_versions: [cv], key: 'hello', category: 'hoc'
+
+    other = create :script, name: 'other', is_course: true
+    cv = create :course_version, content_root: other
+    create :course_offering, course_versions: [cv], key: 'other', category: 'other'
+
     assert CertificateImage.hoc_course?('flappy')
     assert CertificateImage.hoc_course?('oceans')
     assert CertificateImage.hoc_course?('mc')
     assert CertificateImage.hoc_course?('mee')
     assert CertificateImage.hoc_course?('kodable')
+    assert CertificateImage.hoc_course?('hello')
 
     # course1 is created by dashboard test fixtures
     refute CertificateImage.hoc_course?('course1')
     refute CertificateImage.hoc_course?('coursea-2021')
     refute CertificateImage.hoc_course?('csp-2021')
+    refute CertificateImage.hoc_course?('other')
   end
 
   private

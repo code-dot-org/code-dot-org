@@ -1,4 +1,4 @@
-class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
+class Api::V1::Pd::RegionalPartnerWorkshopsController < ApplicationController
   authorize_resource class: :regional_partner_workshops
   before_action :get_filtered_workshops
 
@@ -13,7 +13,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
       state = params[:state]
 
       # lookup state abbreviation, since the supplied state can be the full name
-      state = get_us_state_abbr_from_name(state, true) if state && state.length > 2
+      state = get_us_state_abbr_from_name(state, include_dc: true) if state && state.length > 2
     end
 
     # Find the matching partner, even if it has no workshops
@@ -34,9 +34,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
            scope: {course: @course, subject: @subject}
   end
 
-  private
-
-  def get_filtered_workshops
+  private def get_filtered_workshops
     @partners = RegionalPartner.includes(:pd_workshops)
 
     @course = params[:course]

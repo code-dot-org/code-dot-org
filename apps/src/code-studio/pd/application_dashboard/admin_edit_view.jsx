@@ -11,8 +11,8 @@ import FormDataEdit from './form_data_edit';
 export default class AdminEditView extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
-      applicationId: PropTypes.string.isRequired
-    }).isRequired
+      applicationId: PropTypes.string.isRequired,
+    }).isRequired,
   };
 
   renderApplication = ({applicationData}) => (

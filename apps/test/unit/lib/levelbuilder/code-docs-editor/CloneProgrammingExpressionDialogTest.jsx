@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import CloneProgrammingExpressionDialog, {
-  CloneFormDialog
+  CloneFormDialog,
 } from '@cdo/apps/lib/levelbuilder/code-docs-editor/CloneProgrammingExpressionDialog';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
@@ -15,43 +15,43 @@ describe('CloneFormDialog', () => {
       itemToClone: {
         id: 7,
         name: 'makeSprite',
-        environmentId: 3
+        environmentId: 3,
       },
       programmingEnvironmentsForSelect: [
         {
           id: 1,
           name: 'applab',
-          title: 'App Lab'
+          title: 'App Lab',
         },
         {
           id: 2,
-          name: 'spritelab'
+          name: 'spritelab',
         },
         {
           id: 3,
           name: 'gamelab',
-          title: 'Game Lab'
-        }
+          title: 'Game Lab',
+        },
       ],
       categoriesForSelect: [
         {
           environmentName: 'spritelab',
           key: 'math',
-          formattedName: 'Spritelab: Math'
+          formattedName: 'Spritelab: Math',
         },
         {
           environmentName: 'applab',
           key: 'uicontrols',
-          formattedName: 'App Lab: UI Controls'
+          formattedName: 'App Lab: UI Controls',
         },
         {
           environmentName: 'gamelab',
           key: 'sprites',
-          formattedName: 'Game Lab: Sprites'
-        }
+          formattedName: 'Game Lab: Sprites',
+        },
       ],
       onClose: () => {},
-      onCloneSuccess: onCloneSuccessSpy
+      onCloneSuccess: onCloneSuccessSpy,
     };
   });
 
@@ -63,12 +63,12 @@ describe('CloneFormDialog', () => {
     expect(environmentSelect.find('option').map(o => o.props().value)).to.eql([
       '',
       'applab',
-      'spritelab'
+      'spritelab',
     ]);
     expect(environmentSelect.find('option').map(o => o.text())).to.eql([
       '',
       'App Lab',
-      'spritelab'
+      'spritelab',
     ]);
   });
 
@@ -86,11 +86,11 @@ describe('CloneFormDialog', () => {
     expect(categorySelect.find('option').length).to.equal(2);
     expect(categorySelect.find('option').map(o => o.props().value)).to.eql([
       '',
-      'uicontrols'
+      'uicontrols',
     ]);
     expect(categorySelect.find('option').map(o => o.text())).to.eql([
       '',
-      'App Lab: UI Controls'
+      'App Lab: UI Controls',
     ]);
   });
 
@@ -111,10 +111,7 @@ describe('CloneFormDialog', () => {
     fetchStub
       .withArgs('/programming_expressions/7/clone')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
-    wrapper
-      .find('Button')
-      .last()
-      .simulate('click');
+    wrapper.find('Button').last().simulate('click');
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       expect(onCloneSuccessSpy).to.be.calledOnce;
       fetchStub.restore();
@@ -129,40 +126,40 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
         itemToClone={{
           id: 7,
           name: 'makeSprite',
-          environmentId: 3
+          environmentId: 3,
         }}
         programmingEnvironmentsForSelect={[
           {
             id: 1,
             name: 'applab',
-            title: 'App Lab'
+            title: 'App Lab',
           },
           {
             id: 2,
-            name: 'spritelab'
+            name: 'spritelab',
           },
           {
             id: 3,
             name: 'gamelab',
-            title: 'Game Lab'
-          }
+            title: 'Game Lab',
+          },
         ]}
         categoriesForSelect={[
           {
             environmentName: 'spritelab',
             key: 'math',
-            formattedName: 'Spritelab: Math'
+            formattedName: 'Spritelab: Math',
           },
           {
             environmentName: 'applab',
             key: 'uicontrols',
-            formattedName: 'App Lab: UI Controls'
+            formattedName: 'App Lab: UI Controls',
           },
           {
             environmentName: 'gamelab',
             key: 'sprites',
-            formattedName: 'Game Lab: Sprites'
-          }
+            formattedName: 'Game Lab: Sprites',
+          },
         ]}
         onClose={() => {}}
       />
@@ -177,10 +174,7 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
     fetchStub
       .withArgs('/programming_expressions/7/clone')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
-    wrapper
-      .find('Button')
-      .last()
-      .simulate('click');
+    wrapper.find('Button').last().simulate('click');
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       wrapper.update();
       expect(wrapper.find('Button').length).to.equal(1);

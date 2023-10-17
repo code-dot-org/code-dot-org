@@ -12,3 +12,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Methods represent a behavior for an object and are intended to perform a specific task. Methods are called to perform the task and contain statements for executing its task. The statements in a method are an algorithm, which can consist of a combination of sequencing, selection, and iteration statements.
 MARKDOWN
+
+allow_multiple_attempts true

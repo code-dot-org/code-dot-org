@@ -20,3 +20,5 @@ Assume that `a`, `b`, and `c` are `boolean` variables. Which of the following bo
 
 
 MARKDOWN
+
+allow_multiple_attempts true

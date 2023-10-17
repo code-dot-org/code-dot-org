@@ -4,11 +4,11 @@ require 'dynamic_config/gatekeeper'
 
 class DynamicConfigGatekeeperTest < Minitest::Test
   MOCK_DATA = {
-    "basic feature": {
+    'basic feature': {
       "[]" => true
     },
-    "empty feature": {},
-    "complex feature": {
+    'empty feature': {},
+    'complex feature': {
       "[]" => true,
       "[[\"type\",\"query\"]]" => false
     }
@@ -83,9 +83,9 @@ class DynamicConfigGatekeeperTest < Minitest::Test
   def test_to_hash
     @mock_datastore.expect(:all, MOCK_DATA)
     expected = {
-      "basic feature": [{"rule" => nil, "value" => true}],
-      "empty feature": [],
-      "complex feature": [
+      'basic feature': [{"rule" => nil, "value" => true}],
+      'empty feature': [],
+      'complex feature': [
         {"rule" => nil, "value" => true},
         {"rule" => nil, "where" => {"type" => "query"}, "value" => false}
       ]
@@ -96,7 +96,7 @@ class DynamicConfigGatekeeperTest < Minitest::Test
 
   def test_feature_names
     @mock_datastore.expect(:all, MOCK_DATA)
-    assert_equal(Set[:"basic feature", :"complex feature"], @gatekeeper.feature_names)
+    assert_equal(Set[:'basic feature', :'complex feature'], @gatekeeper.feature_names)
     @mock_datastore.verify
   end
 

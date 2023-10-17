@@ -4,3 +4,5 @@ wrong 'Laurel won\'t move at all.', feedback: 'Incorrect. The program uses a `re
 right 'Laurel will move forward and get treasure three times in a row.', feedback: 'Correct!'
 wrong 'Laurel will move forward and get all of the treasure.', feedback: 'Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.'
 wrong 'I don\'t know.', feedback: 'The program uses a `repeat` loop to get Laurel to move forward three times.'
+
+allow_multiple_attempts false

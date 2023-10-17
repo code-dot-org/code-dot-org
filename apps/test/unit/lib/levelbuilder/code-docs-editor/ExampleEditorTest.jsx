@@ -16,9 +16,9 @@ describe('ExampleEditor', () => {
         code: 'return foo;',
         app: 'studio.code.org/p/spritelab',
         app_display_type: 'withCode',
-        embed_app_with_code_height: '100'
+        embed_app_with_code_height: '100',
       },
-      updateExample: updateSpy
+      updateExample: updateSpy,
     };
   });
 

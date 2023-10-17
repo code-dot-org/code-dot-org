@@ -6,8 +6,7 @@ Background:
   And I dismiss the login reminder
 
 Scenario: Connect two blocks from toolbox
-  When I rotate to landscape
-  And I press ":1.label"
+  When I press ":1.label"
   And I drag block "2" to block "1"
   And I press ":2.label"
   And I drag block "8" to block "6"

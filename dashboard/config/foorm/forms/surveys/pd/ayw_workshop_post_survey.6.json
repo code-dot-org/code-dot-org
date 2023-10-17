@@ -38,7 +38,7 @@
           "library_name": "surveys/pd/ayw_module_4",
           "library_version": 1,
           "name": "module_4_panel",
-          "baker_comment": "BAKER NOTE: module_4_panel and ayw2-inperson panel are the same for SY21-22.  We chose to use module_4_panel arbitrarily, and we changed the name and heading on this page. ALSO AYW 1+2 is problematic. People will get duplicate questions.  Should we turn on just the AYW2 survey for 1+2 folks?"
+          "baker_comment": "BAKER NOTE: module_4_panel and ayw2-inperson panel are the same for SY21-22.  We chose to use module_4_panel arbitrarily, and we changed the name and heading on this page."
         },
         {
           "type": "library_item",
@@ -88,6 +88,13 @@
           "library_version": 1,
           "name": "ayw4_panel",
           "natalia_comment": "NATALIA NOTE: AYW4 includes modules 7 and 8, question sets are different for each module for CSP, so there are three combinations: ayw_module_7 is for mod 7 on its own, ayw_module_8 is for Mod 8 on its own, ayw_inperson_4 is for sessions where both modules are covered."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/ayw_workshop",
+          "library_version": 0,
+          "name": "ayw_workshop_3_4_panel",
+          "baker_comment": "NATALIA NOTE: ayw_workshop_3_4_panel contains unduplicated and reorganized questions for learning objectives from ayw3-inperson and ayw4-inperson"
         },
         {
           "type": "library_item",

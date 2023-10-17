@@ -14,7 +14,7 @@ const mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
 
 const ButtonState = {
   UP: 0,
-  DOWN: 1
+  DOWN: 1,
 };
 
 const ArrowIds = {
@@ -22,7 +22,7 @@ const ArrowIds = {
   UP: 'upButton',
   RIGHT: 'rightButton',
   DOWN: 'downButton',
-  SPACE: 'studio-space-button'
+  SPACE: 'studio-space-button',
 };
 
 function p5KeyCodeFromArrow(idBtn) {
@@ -56,9 +56,8 @@ export default class MobileControls {
   init(opts) {
     this.opts = opts || {};
 
-    document.getElementById(
-      GAMELAB_DPAD_CONTAINER_ID
-    ).innerHTML = gameLabDPadHtmlEjs();
+    document.getElementById(GAMELAB_DPAD_CONTAINER_ID).innerHTML =
+      gameLabDPadHtmlEjs();
 
     // Connect up arrow button event handlers
     for (const btn in ArrowIds) {
@@ -90,18 +89,15 @@ export default class MobileControls {
     const dpadDisplayStyle =
       dpadVisible && mobileControlsOk ? 'inline' : 'none';
     document.getElementById('studio-dpad-rim').style.display = dpadDisplayStyle;
-    document.getElementById(
-      'studio-dpad-cone'
-    ).style.display = dpadDisplayStyle;
-    document.getElementById(
-      'studio-dpad-button'
-    ).style.display = dpadDisplayStyle;
+    document.getElementById('studio-dpad-cone').style.display =
+      dpadDisplayStyle;
+    document.getElementById('studio-dpad-button').style.display =
+      dpadDisplayStyle;
 
     const spaceButtonDisplayStyle =
       spaceButtonVisible && mobileControlsOk ? 'inline' : 'none';
-    document.getElementById(
-      'studio-space-button'
-    ).style.display = spaceButtonDisplayStyle;
+    document.getElementById('studio-space-button').style.display =
+      spaceButtonDisplayStyle;
 
     if (this.dpadFourWay !== dpadFourWay) {
       if (this.dPadState.trackingMouseMove) {
@@ -109,7 +105,7 @@ export default class MobileControls {
         // will reset buttons back to "up":
         this.onMouseMove({
           clientX: this.dPadState.startingX,
-          clientY: this.dPadState.startingY
+          clientY: this.dPadState.startingY,
         });
       }
 
@@ -120,7 +116,7 @@ export default class MobileControls {
         // will set up buttons correctly for the new dpad mode:
         this.onMouseMove({
           clientX: this.dPadState.previousX,
-          clientY: this.dPadState.previousY
+          clientY: this.dPadState.previousY,
         });
       }
     }
@@ -201,7 +197,7 @@ export default class MobileControls {
 
   onMouseDown = e => {
     this.dPadState = {
-      trackingMouseMove: true
+      trackingMouseMove: true,
     };
     document.body.addEventListener('mousemove', this.onMouseMove);
     if (mouseMoveTouchEventName) {
@@ -332,26 +328,26 @@ export default class MobileControls {
         cssClass: 'left',
         key: window.p5.prototype.LEFT_ARROW,
         current: -(currentX - startingX),
-        previous: -(previousX - startingX)
+        previous: -(previousX - startingX),
       },
       {
         cssClass: 'right',
         key: window.p5.prototype.RIGHT_ARROW,
         current: currentX - startingX,
-        previous: previousX - startingX
+        previous: previousX - startingX,
       },
       {
         cssClass: 'up',
         key: window.p5.prototype.UP_ARROW,
         current: -(currentY - startingY),
-        previous: -(previousY - startingY)
+        previous: -(previousY - startingY),
       },
       {
         cssClass: 'down',
         key: window.p5.prototype.DOWN_ARROW,
         current: currentY - startingY,
-        previous: previousY - startingY
-      }
+        previous: previousY - startingY,
+      },
     ];
     const prevKeyValue = keyValues.reduce((maxKeyValue, curKeyValue) => {
       const {previous = 0} = maxKeyValue || {};
@@ -390,7 +386,7 @@ export default class MobileControls {
       // will reset buttons back to "up":
       this.onMouseMove({
         clientX: this.dPadState.startingX,
-        clientY: this.dPadState.startingY
+        clientY: this.dPadState.startingY,
       });
 
       document.body.removeEventListener('mousemove', this.onMouseMove);

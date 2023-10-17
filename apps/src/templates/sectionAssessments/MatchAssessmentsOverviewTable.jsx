@@ -14,7 +14,7 @@ import ReactTooltip from 'react-tooltip';
 import {optionDataPropTypeMatch} from './assessmentDataShapes';
 
 export const COLUMNS = {
-  OPTION: 0
+  OPTION: 0,
 };
 
 const ANSWER_COLUMN_WIDTH = 100;
@@ -52,14 +52,14 @@ const answerColumnsFormatter = (
 class MatchAssessmentsOverviewTable extends Component {
   static propTypes = {
     questionAnswerData: PropTypes.arrayOf(optionDataPropTypeMatch),
-    setQuestionIndex: PropTypes.func.isRequired
+    setQuestionIndex: PropTypes.func.isRequired,
   };
 
   state = {
     [COLUMNS.OPTION]: {
       direction: 'desc',
-      position: 0
-    }
+      position: 0,
+    },
   };
 
   getSortingColumns = () => {
@@ -74,10 +74,10 @@ class MatchAssessmentsOverviewTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -96,19 +96,19 @@ class MatchAssessmentsOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
-          ...styles.answerColumnHeader
-        }
-      }
+          ...styles.answerColumnHeader,
+        },
+      },
     },
     cell: {
       formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.notAnsweredCell
-        }
-      }
-    }
+          ...styles.notAnsweredCell,
+        },
+      },
+    },
   });
 
   getColumnLabel = columnLabel => {
@@ -128,28 +128,28 @@ class MatchAssessmentsOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
-          ...styles.answerColumnHeader
+          ...styles.answerColumnHeader,
         },
         'data-for': `tooltipForOption${columnLabel}`,
-        'data-tip': true
-      }
+        'data-tip': true,
+      },
     },
     cell: {
       formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.answerColumnCell
-        }
-      }
-    }
+          ...styles.answerColumnCell,
+        },
+      },
+    },
   });
 
   getOptionColumn = (sortable, numAnswers) => ({
     property: 'option',
     header: {
       label: i18n.option(),
-      props: {style: tableLayoutStyles.headerCell}
+      props: {style: tableLayoutStyles.headerCell},
     },
     cell: {
       formatters: [this.optionFormatter],
@@ -159,10 +159,10 @@ class MatchAssessmentsOverviewTable extends Component {
           ...styles.questionCell,
           maxWidth:
             styleConstants['content-width'] -
-            numAnswers * (ANSWER_COLUMN_WIDTH + PADDING)
-        }
-      }
-    }
+            numAnswers * (ANSWER_COLUMN_WIDTH + PADDING),
+        },
+      },
+    },
   });
 
   getColumns = sortable => {
@@ -176,7 +176,7 @@ class MatchAssessmentsOverviewTable extends Component {
     return [
       this.getOptionColumn(sortable, numAnswerColumns),
       ...columnLabelNames,
-      this.getNotAnsweredColumn()
+      this.getNotAnsweredColumn(),
     ];
   };
 
@@ -208,7 +208,7 @@ class MatchAssessmentsOverviewTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.questionAnswerData);
 
     return (
@@ -226,31 +226,32 @@ class MatchAssessmentsOverviewTable extends Component {
 const styles = {
   answerColumnHeader: {
     width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
     padding: 0,
-    height: 40
+    height: 40,
   },
   notAnsweredCell: {
     padding: 0,
-    height: 40
+    height: 40,
   },
   questionCell: {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  }
+    whiteSpace: 'nowrap',
+  },
 };
 
-export const UnconnectedMatchAssessmentsOverviewTable = MatchAssessmentsOverviewTable;
+export const UnconnectedMatchAssessmentsOverviewTable =
+  MatchAssessmentsOverviewTable;
 
 export default connect(
   state => ({}),
   dispatch => ({
     setQuestionIndex(questionIndex) {
       dispatch(setQuestionIndex(questionIndex));
-    }
+    },
   })
 )(MatchAssessmentsOverviewTable);

@@ -4,6 +4,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class FilterChoice extends React.Component {
   static propTypes = {
@@ -12,7 +13,7 @@ export default class FilterChoice extends React.Component {
     name: PropTypes.string.isRequired,
     selected: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired,
-    singleEntry: PropTypes.bool.isRequired
+    singleEntry: PropTypes.bool.isRequired,
   };
 
   handleChange = event => {
@@ -47,16 +48,16 @@ const styles = {
     userSelect: 'none',
     WebkitUserSelect: 'none',
     MozUserSelect: 'none',
-    MsUserSelect: 'none'
+    MsUserSelect: 'none',
   },
   filterChoiceLabel: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 13,
     paddingBottom: 0,
     marginBottom: 0,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   filterChoiceInput: {
-    marginRight: 5
-  }
+    marginRight: 5,
+  },
 };

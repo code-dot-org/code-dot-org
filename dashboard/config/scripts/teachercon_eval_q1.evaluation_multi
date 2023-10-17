@@ -8,3 +8,4 @@ answer '1.11: Packets and Making a Reliable Internet', weight: 1, lesson_name: '
 answer '2.2: Text Compression', weight: 1, lesson_name: 'Lesson 2,2'
 answer '2.3: Black and White Pixelation', weight: 1, lesson_name: 'Lesson 2,3'
 answer '2.10: Good and Bad Data Visualization', weight: 1, lesson_name: 'Lesson 2,10'
+allow_multiple_attempts true

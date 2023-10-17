@@ -9,7 +9,7 @@ export default class Pagination extends React.Component {
     currentPage: PropTypes.number.isRequired,
     totalPages: PropTypes.number.isRequired,
     // Page change callback, passed new page number
-    onPageChange: PropTypes.func.isRequired
+    onPageChange: PropTypes.func.isRequired,
   };
 
   handlePageChange = data => {

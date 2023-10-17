@@ -1,0 +1,26 @@
+name 'CSC-SelfPaced-TLintro_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introduction to Debugging
+
+##### In the next section of this professional learning module, you will be formerly introduced to debugging. You probably have already been debugging throughout this module when your code did not run correctly and you needed to fix your code.  
+
+##### **Bug** - Part of a program that does not work correctly.
+
+##### **Debugging** - Finding and fixing problems in an algorithm or program.
+
+##### **Persistence** - Not giving up.
+* ##### Persistence works best when you try things many different ways, many different times.
+
+
+## You will:
+
+* ##### Review suggestions for implementing debugging.
+
+## Let's keep learning! 
+
+
+
+MARKDOWN

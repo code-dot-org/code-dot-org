@@ -11,7 +11,7 @@ import * as utils from '@cdo/apps/utils';
 const DEFAULT_PROPS = {
   viewPeerList: true,
   loadPeers: () => {},
-  teacherAccountViewingAsParticipant: false
+  teacherAccountViewingAsParticipant: false,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -42,8 +42,8 @@ describe('ReviewNavigator', () => {
         {ownerId: 1, ownerName: 'Jerry'},
         {
           ownerId: 2,
-          ownerName: 'Elaine'
-        }
+          ownerName: 'Elaine',
+        },
       ];
       const loadPeersStub = sinon.stub();
       const wrapper = setUp({viewPeerList: true, loadPeers: loadPeersStub});
@@ -62,7 +62,7 @@ describe('ReviewNavigator', () => {
       const loadPeersStub = sinon.stub();
       const wrapper = setUp({
         viewPeerList: true,
-        loadPeers: loadPeersStub
+        loadPeers: loadPeersStub,
       });
 
       const dropdown = wrapper.find(DropdownButton);
@@ -78,7 +78,7 @@ describe('ReviewNavigator', () => {
       const loadPeersStub = sinon.stub();
       const wrapper = setUp({
         viewPeerList: true,
-        loadPeers: loadPeersStub
+        loadPeers: loadPeersStub,
       });
 
       const dropdown = wrapper.find(DropdownButton);
@@ -94,7 +94,7 @@ describe('ReviewNavigator', () => {
     const navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
     sinon.stub(utils, 'currentLocation').returns({
       origin: 'fakeOrigin',
-      pathname: '/fakePath'
+      pathname: '/fakePath',
     });
     const fakePeerList = [{ownerId: 1, ownerName: 'Jerry'}];
     const loadPeersStub = sinon.stub();
@@ -119,7 +119,7 @@ describe('ReviewNavigator', () => {
     const navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
     sinon.stub(utils, 'currentLocation').returns({
       origin: 'fakeOrigin',
-      pathname: '/fakePath'
+      pathname: '/fakePath',
     });
     const wrapper = setUp({viewPeerList: false});
 

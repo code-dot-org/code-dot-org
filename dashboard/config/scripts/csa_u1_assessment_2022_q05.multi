@@ -23,3 +23,5 @@ if (!myPainter.isFacingNorth()) {
 
 Which of the following is equivalent?
 MARKDOWN
+
+allow_multiple_attempts true

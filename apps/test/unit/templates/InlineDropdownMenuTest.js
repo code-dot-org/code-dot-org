@@ -9,7 +9,7 @@ const clickSpy = sinon.spy();
 
 const defaultProps = {
   icon: 'icon',
-  children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>]
+  children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>],
 };
 
 describe('InlineDropdownMenu', () => {
@@ -36,21 +36,13 @@ describe('InlineDropdownMenu', () => {
   it('passes through href', () => {
     const wrapper = shallow(<InlineDropdownMenu {...defaultProps} />);
     wrapper.find('button').invoke('onClick')();
-    expect(
-      wrapper
-        .find('a')
-        .at(0)
-        .props().href
-    ).to.equal('foo');
+    expect(wrapper.find('a').at(0).props().href).to.equal('foo');
   });
 
   it('passes through onClick and closes dropdown', () => {
     const wrapper = shallow(<InlineDropdownMenu {...defaultProps} />);
     wrapper.find('button').invoke('onClick')();
-    wrapper
-      .find('a')
-      .at(1)
-      .invoke('onClick')();
+    wrapper.find('a').at(1).invoke('onClick')();
     expect(clickSpy.calledOnce).to.be.true;
 
     // dropdown is closed
@@ -60,10 +52,7 @@ describe('InlineDropdownMenu', () => {
   it('passes through keyboard action and closes dropdown', () => {
     const wrapper = shallow(<InlineDropdownMenu {...defaultProps} />);
     wrapper.find('button').invoke('onClick')();
-    wrapper
-      .find('a')
-      .at(1)
-      .invoke('onKeyDown')({which: KeyCodes.ENTER});
+    wrapper.find('a').at(1).invoke('onKeyDown')({which: KeyCodes.ENTER});
     expect(clickSpy.calledOnce).to.be.true;
 
     // dropdown is closed

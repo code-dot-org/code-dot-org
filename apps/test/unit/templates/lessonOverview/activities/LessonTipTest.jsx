@@ -10,8 +10,8 @@ describe('LessonTip', () => {
       tip: {
         key: 'tip-1',
         type: 'teachingTip',
-        markdown: 'Teaching tip content'
-      }
+        markdown: 'Teaching tip content',
+      },
     };
   });
 

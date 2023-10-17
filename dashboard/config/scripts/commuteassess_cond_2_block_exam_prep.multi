@@ -16,3 +16,5 @@ markdown <<MARKDOWN
 <!-- TEXT: ![](https://images.code.org/25998f71dad01951719e0a6c95bf4ea1-image-1482507408209.png)
 -->
 MARKDOWN
+
+allow_multiple_attempts true

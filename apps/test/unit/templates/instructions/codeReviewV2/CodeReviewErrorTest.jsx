@@ -7,7 +7,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const DEFAULT_PROPS = {
   messageTitle: null,
-  messageText: null
+  messageText: null,
 };
 
 const setUp = (overrideProps = {}) => {

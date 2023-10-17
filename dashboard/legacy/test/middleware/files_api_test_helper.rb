@@ -61,11 +61,6 @@ class FilesApiTestHelper
     post_object filename, body, headers
   end
 
-  def patch_abuse(abuse_score)
-    patch "/v3/#{@endpoint}/#{@channel_id}/?abuse_score=#{abuse_score}"
-    last_response.body
-  end
-
   def copy_object(source_filename, dest_filename)
     put "/v3/#{@endpoint}/#{@channel_id}/#{dest_filename}?src=#{CGI.escape(source_filename)}"
     last_response.body
@@ -163,7 +158,7 @@ class FilesApiTestHelper
   def ensure_aws_credentials
     list_objects
     credentials_missing = !last_response.successful? &&
-        last_response.body.index('Aws::Errors::MissingCredentialsError')
+      last_response.body.index('Aws::Errors::MissingCredentialsError')
     credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
       Aws::Errors::MissingCredentialsError: if you are running these tests locally,
       follow these instructions to configure your AWS credentials and try again:

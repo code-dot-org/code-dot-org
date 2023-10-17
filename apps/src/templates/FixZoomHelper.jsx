@@ -15,7 +15,7 @@ import _ from 'lodash';
 export default class FixZoomHelper extends React.Component {
   // mode can be "none", "button", or "helper".
   state = {
-    mode: 'none'
+    mode: 'none',
   };
 
   isLandscape() {
@@ -51,7 +51,7 @@ export default class FixZoomHelper extends React.Component {
         offsetLeft: window.visualViewport.offsetLeft,
         offsetTop: window.visualViewport.offsetTop,
         width: window.visualViewport.width,
-        height: window.visualViewport.height
+        height: window.visualViewport.height,
       });
     }
   };
@@ -138,17 +138,17 @@ const styles = {
     padding: 15,
     transform: 'translate(-100%,-100%)',
     whiteSpace: 'nowrap',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   buttonIcon: {
     display: 'inline-block',
     verticalAlign: 'middle',
-    fontSize: 24
+    fontSize: 24,
   },
   buttonText: {
     display: 'inline-block',
     verticalAlign: 'middle',
-    paddingTop: 5
+    paddingTop: 5,
   },
   helper: {
     position: 'fixed',
@@ -160,7 +160,7 @@ const styles = {
     right: 0,
     bottom: 0,
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   helperInner: {
     position: 'fixed',
@@ -172,16 +172,16 @@ const styles = {
     padding: 15,
     borderRadius: 5,
     textAlign: 'center',
-    pointerEvents: 'none'
+    pointerEvents: 'none',
   },
   helperInnerIcons: {
     fontSize: 24,
-    marginBottom: 10
+    marginBottom: 10,
   },
   closeX: {
     position: 'absolute',
     top: 5,
     right: 5,
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };

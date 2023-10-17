@@ -1,25 +1,25 @@
 import {assert} from '../util/reconfiguredChai';
 
-describe('Observer', function() {
+describe('Observer', function () {
   var Observer = require('@cdo/apps/Observer');
   var ObservableEventDEPRECATED = require('@cdo/apps/ObservableEventDEPRECATED');
   var observer, eventA, eventB, log, funcX, funcY;
 
-  beforeEach(function() {
+  beforeEach(function () {
     observer = new Observer();
     eventA = new ObservableEventDEPRECATED();
     eventB = new ObservableEventDEPRECATED();
     log = '';
-    funcX = function() {
+    funcX = function () {
       log += 'X';
     };
-    funcY = function() {
+    funcY = function () {
       log += 'Y';
     };
   });
 
-  describe('Registration and call ordering', function() {
-    it('calls registered functions in order of registration', function() {
+  describe('Registration and call ordering', function () {
+    it('calls registered functions in order of registration', function () {
       observer.observe(eventA, funcX);
       observer.observe(eventA, funcX);
       observer.observe(eventA, funcY);
@@ -31,7 +31,7 @@ describe('Observer', function() {
       assert(log === 'XXYXY');
     });
 
-    it('does not share functions between events', function() {
+    it('does not share functions between events', function () {
       observer.observe(eventA, funcX);
       observer.observe(eventB, funcY);
 
@@ -40,7 +40,7 @@ describe('Observer', function() {
       assert(log === 'X');
     });
 
-    it('can be fired multiple times', function() {
+    it('can be fired multiple times', function () {
       observer.observe(eventA, funcX);
       observer.observe(eventA, funcX);
       observer.observe(eventA, funcY);
@@ -55,8 +55,8 @@ describe('Observer', function() {
     });
   });
 
-  describe('Keys and removal', function() {
-    it('can unregister from all events at once', function() {
+  describe('Keys and removal', function () {
+    it('can unregister from all events at once', function () {
       observer.observe(eventA, funcX);
       observer.observe(eventA, funcY);
       observer.observe(eventB, funcX);
@@ -75,7 +75,7 @@ describe('Observer', function() {
       assert(log === 'XYX', 'No change');
     });
 
-    it('can safely unregister when original references to events are lost', function() {
+    it('can safely unregister when original references to events are lost', function () {
       observer.observe(eventA, funcX);
 
       eventA.notifyObservers();
@@ -89,10 +89,10 @@ describe('Observer', function() {
     });
   });
 
-  it('respects binding `this` to the function passed into register', function() {
+  it('respects binding `this` to the function passed into register', function () {
     var clientA = {log: ''};
     var clientB = {log: ''};
-    var funcUsesThis = function() {
+    var funcUsesThis = function () {
       this.log += 'Z';
       this.that = this;
     };
@@ -107,8 +107,8 @@ describe('Observer', function() {
     assert(clientB.that === clientB);
   });
 
-  it('passes arguments through to observers', function() {
-    var funcWithArg = function(note) {
+  it('passes arguments through to observers', function () {
+    var funcWithArg = function (note) {
       log += note;
     };
 

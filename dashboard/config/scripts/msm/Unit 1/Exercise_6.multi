@@ -8,3 +8,5 @@ wrong 'left, right, top'
 wrong 'random'
 wrong 'left top right'
 
+
+allow_multiple_attempts true

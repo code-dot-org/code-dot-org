@@ -25,3 +25,5 @@ int b = a + (int) (Math.random() * a);
 ```
 Which of the following best describes the value assigned to `b` when the code segment is executed?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -14,8 +14,6 @@
       "description": "Draw a square with the turtle moving at increasingly faster speeds (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).",
       "code": "```\n// Draw a square with the turtle moving at increasingly faster speeds\n// (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).\ntextLabel(\"speed\", \"speed: 10\");\nfor (var i = 1; i &lt;= 10; i++) {\n  for (var j = 0; j &lt; 4; j++) {\n    setText(\"speed\", \"speed: \" + i * 10);\n    speed(i*10);\n    moveForward(100);\n    turnRight(90);\n  }\n}\n```",
       "image": "https://images.code.org/5b3d4a5f9b27b99cfdebf0012a7f091e-image-1445619219090.gif"
-    },
-    {
     }
   ],
   "palette_params": [

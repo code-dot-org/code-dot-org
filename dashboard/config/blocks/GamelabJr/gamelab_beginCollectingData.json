@@ -6,6 +6,7 @@
       "0.35",
       "0.62"
     ],
+    "style": "world_blocks",
     "func": "beginCollectingData",
     "blockText": "begin collecting data {BREAK} value {VALUE} with label {LABEL}",
     "args": [

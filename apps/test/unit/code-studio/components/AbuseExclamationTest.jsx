@@ -11,7 +11,7 @@ describe('AbuseExclamation', () => {
           tos: 'terms of service',
           contact_us: 'contact us',
           edit_project: 'edit project',
-          go_to_code_studio: 'go to code studio'
+          go_to_code_studio: 'go to code studio',
         }}
         isOwner
       />
@@ -27,7 +27,7 @@ describe('AbuseExclamation', () => {
           tos: 'terms of service',
           contact_us: 'contact us',
           edit_project: 'edit project',
-          go_to_code_studio: 'go to code studio'
+          go_to_code_studio: 'go to code studio',
         }}
         isOwner
       />
@@ -42,7 +42,7 @@ describe('AbuseExclamation', () => {
           tos: 'terms of service',
           contact_us: 'contact us',
           edit_project: 'edit project',
-          go_to_code_studio: 'go to code studio'
+          go_to_code_studio: 'go to code studio',
         }}
         isOwner={false}
       />

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MusicMenu from '@cdo/apps/musicMenu/MusicMenu';
 
-$(document).ready(function() {
+$(document).ready(function () {
   ReactDOM.render(
     <MusicMenu />,
     document.getElementById('musiclab-menu-container')

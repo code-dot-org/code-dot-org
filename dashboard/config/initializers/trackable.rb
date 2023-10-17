@@ -8,15 +8,15 @@ module OverrideUpdateTrackedFields
         sign_in_count: sign_in_count
       )
     end
-    if persisted? && id && current_sign_in_ip
-      if UserGeo.find_by_user_id(id).nil?
-        UserGeo.create!(
-          user_id: id,
-          ip_address: current_sign_in_ip
-        )
-      end
+    if persisted? && id && current_sign_in_ip && UserGeo.find_by_user_id(id).nil?
+      UserGeo.create!(
+        user_id: id,
+        ip_address: current_sign_in_ip
+      )
     end
   end
 end
 
-User.prepend OverrideUpdateTrackedFields
+Rails.application.config.to_prepare do
+  User.prepend OverrideUpdateTrackedFields
+end

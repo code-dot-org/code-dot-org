@@ -9,7 +9,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
@@ -17,7 +17,7 @@ import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 const newJSInterpreter = () => {
   let interpreter = new JSInterpreter({
     shouldRunAtMaxSpeed: () => false,
-    studioApp: {hideSource: true}
+    studioApp: {hideSource: true},
   });
   const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
   interpreter.calculateCodeInfo({code});
@@ -72,7 +72,7 @@ describe('The DebugConsole component when the console is enabled', () => {
   function typeKey(keyCode) {
     debugInput().simulate('keydown', {
       target: debugInput().instance(),
-      keyCode: keyCode
+      keyCode: keyCode,
     });
   }
 
@@ -110,9 +110,7 @@ describe('The DebugConsole component when the console is enabled', () => {
 
       it('the expressions is added to the list of watch expressions', () => {
         expect(
-          getStore()
-            .getState()
-            .watchedExpressions.getIn([0, 'expression'])
+          getStore().getState().watchedExpressions.getIn([0, 'expression'])
         ).to.equal('a+b');
       });
 
@@ -189,7 +187,7 @@ describe('The DebugConsole component when the console is enabled', () => {
         getStore().dispatch(
           actions.appendLog({
             output: ['test'],
-            fromConsoleLog: true
+            fromConsoleLog: true,
           })
         );
         expect(debugOutput().text()).to.equal('▶["test"]');
@@ -199,7 +197,7 @@ describe('The DebugConsole component when the console is enabled', () => {
         getStore().dispatch(
           actions.appendLog({
             output: 'hello world',
-            fromConsoleLog: true
+            fromConsoleLog: true,
           })
         );
         expect(debugOutput().text()).to.equal('"hello world"');
@@ -209,7 +207,7 @@ describe('The DebugConsole component when the console is enabled', () => {
         getStore().dispatch(
           actions.appendLog({
             output: 1 + 1,
-            fromConsoleLog: true
+            fromConsoleLog: true,
           })
         );
         expect(debugOutput().text()).to.equal('2');
@@ -219,7 +217,7 @@ describe('The DebugConsole component when the console is enabled', () => {
         getStore().dispatch(
           actions.appendLog({
             output: {foo: 'bar'},
-            fromConsoleLog: true
+            fromConsoleLog: true,
           })
         );
         expect(debugOutput().text()).to.equal('▶Object {foo: "bar"}');
@@ -230,12 +228,12 @@ describe('The DebugConsole component when the console is enabled', () => {
       it('the original array is prepended with >, and the interpreted array with an expander icon is prepended with < ', () => {
         getStore().dispatch(
           actions.appendLog({
-            input: '["test"]'
+            input: '["test"]',
           })
         );
         getStore().dispatch(
           actions.appendLog({
-            output: ['test']
+            output: ['test'],
           })
         );
         expect(debugOutput().text()).to.equal('> ["test"]< ▶["test"]');
@@ -245,12 +243,12 @@ describe('The DebugConsole component when the console is enabled', () => {
         var input = 'hello world';
         getStore().dispatch(
           actions.appendLog({
-            input: input
+            input: input,
           })
         );
         getStore().dispatch(
           actions.appendLog({
-            output: input
+            output: input,
           })
         );
         expect(debugOutput().text()).to.equal(`> ${input}< "${input}"`);
@@ -259,12 +257,12 @@ describe('The DebugConsole component when the console is enabled', () => {
       it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', () => {
         getStore().dispatch(
           actions.appendLog({
-            input: '1 + 1'
+            input: '1 + 1',
           })
         );
         getStore().dispatch(
           actions.appendLog({
-            output: 1 + 1
+            output: 1 + 1,
           })
         );
         expect(debugOutput().text()).to.equal('> 1 + 1< 2');
@@ -273,12 +271,12 @@ describe('The DebugConsole component when the console is enabled', () => {
       it('the original object is prepended with >, and the interpreted object with an expander icon is prepended with <', () => {
         getStore().dispatch(
           actions.appendLog({
-            input: "{foo: 'bar'}"
+            input: "{foo: 'bar'}",
           })
         );
         getStore().dispatch(
           actions.appendLog({
-            output: {foo: 'bar'}
+            output: {foo: 'bar'},
           })
         );
         expect(debugOutput().text()).to.equal(
@@ -394,7 +392,7 @@ describe('The DebugConsole component when the debug console is disabled', () => 
   function typeKey(keyCode) {
     debugInput().simulate('keydown', {
       target: debugInput().instance(),
-      keyCode: keyCode
+      keyCode: keyCode,
     });
   }
 

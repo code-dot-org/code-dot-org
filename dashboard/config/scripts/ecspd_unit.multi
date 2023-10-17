@@ -12,3 +12,4 @@ right 'Unit 6: Robotics'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

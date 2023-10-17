@@ -8,8 +8,8 @@ export const styles = {
   line: {
     stroke: '#aaa',
     strokeWidth: 1.8,
-    strokeDasharray: 6.5
-  }
+    strokeDasharray: 6.5,
+  },
 };
 
 /**
@@ -24,7 +24,7 @@ export default class CrosshairOverlay extends React.Component {
     height: PropTypes.number,
     mouseX: PropTypes.number,
     mouseY: PropTypes.number,
-    flip: PropTypes.bool
+    flip: PropTypes.bool,
   };
 
   render() {

@@ -3,7 +3,8 @@
     max-width: 724px;
   }
   body {
-    font-family: 'Gotham 4r', sans-serif;
+    font-family: var(--main-font);
+    font-weight: var(--regular-font-weight);
     font-size: 16px;
     line-height: 20px;
     font-weight: normal;
@@ -23,7 +24,7 @@
     color: #7665a0;
   }
   ul.link-bar {
-    padding-left:0px; 
+    padding-left:0px;
   }
   ul.link-bar li {
     display: inline;

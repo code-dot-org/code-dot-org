@@ -11,17 +11,17 @@ export default class GDPRDialog extends Component {
     isDialogOpen: PropTypes.bool.isRequired,
     currentUserId: PropTypes.number.isRequired,
     // If we're coming from pegasus, studioUrlPrefix is passed in as a prop and used to construct the logout url.
-    studioUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string,
   };
 
   state = {
-    isDialogOpen: this.props.isDialogOpen
+    isDialogOpen: this.props.isDialogOpen,
   };
 
   handleYesClick = () => {
     this.setState({isDialogOpen: false});
     $.post(`/dashboardapi/v1/users/accept_data_transfer_agreement`, {
-      user_id: this.props.currentUserId
+      user_id: this.props.currentUserId,
     });
   };
 
@@ -64,7 +64,7 @@ export default class GDPRDialog extends Component {
             __useDeprecatedTag
             text={i18n.gdprDialogYes()}
             onClick={this.handleYesClick}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="ui-test-gdpr-dialog-accept"
           />
         </DialogFooter>
@@ -77,9 +77,9 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   instructions: {
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
 };

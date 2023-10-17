@@ -42,7 +42,8 @@ export function apiValidateType(
   varName,
   varValue,
   expectedType,
-  opt
+  opt,
+  isMicroBitBoard
 ) {
   const validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
@@ -64,6 +65,7 @@ export function apiValidateType(
           typeof varValue === 'boolean';
         break;
       case 'pinid':
+        // Assign pins for Circuit Playground as default.
         var validPins = [
           'A0',
           'A1',
@@ -80,9 +82,13 @@ export function apiValidateType(
           6,
           9,
           10,
-          12
+          12,
         ];
         var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
+        if (isMicroBitBoard) {
+          validPins = [0, 1, 2];
+          reservedPins = [];
+        }
         properType =
           validPins.includes(varValue) && !reservedPins.includes(varValue);
         if (!validPins.includes(varValue)) {

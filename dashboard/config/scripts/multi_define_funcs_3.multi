@@ -4,3 +4,4 @@ question 'What should g(2) return?'
 wrong '6'
 right '5'
 wrong 'y'
+allow_multiple_attempts true

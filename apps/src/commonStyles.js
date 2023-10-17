@@ -6,7 +6,7 @@ var color = require('./util/color');
 var styleConstants = require('./styleConstants');
 
 commonStyles.hidden = {
-  display: 'none'
+  display: 'none',
 };
 
 commonStyles.purpleHeader = {
@@ -17,32 +17,32 @@ commonStyles.purpleHeader = {
   WebkitUserSelect: 'none',
   MozUserSelect: 'none',
   msUserSelect: 'none',
-  userSelect: 'none'
+  userSelect: 'none',
 };
 
 commonStyles.purpleHeaderUnfocused = {
   backgroundColor: color.lighter_purple,
-  color: color.dark_charcoal
+  color: color.neutral_white,
 };
 
 commonStyles.teacherBlueHeader = {
   backgroundColor: color.cyan,
-  color: color.lightest_cyan
+  color: color.lightest_cyan,
 };
 
 commonStyles.teacherHeaderUnfocused = {
-  color: color.dark_charcoal
+  color: color.dark_charcoal,
 };
 
 commonStyles.minecraftHeader = {
   backgroundColor: '#3b3b3b',
-  color: color.white
+  color: color.white,
 };
 
 commonStyles.button = {
   paddingTop: 5,
   paddingBottom: 5,
-  fontSize: 14
+  fontSize: 14,
 };
 
 // Div contain instructions, either below visualization or in top instructions
@@ -51,5 +51,5 @@ commonStyles.bubble = {
   color: color.black,
   marginBottom: 10,
   position: 'relative',
-  cursor: 'pointer'
+  cursor: 'pointer',
 };

@@ -1,4 +1,3 @@
-import experiments from '../../../../../util/experiments';
 export const N_COLOR_LEDS = 10;
 export const EXTERNAL_PINS = [0, 1, 2, 3, 6, 9, 10, 12];
 export const TOUCH_PINS = [0, 2, 3, 6, 9, 10, 12];
@@ -7,35 +6,30 @@ export const J5_CONSTANTS = {
   OUTPUT: 1,
   ANALOG: 2,
   PWM: 3,
-  SERVO: 4
+  SERVO: 4,
 };
 
 export const CP_API = 'circuitPlayground';
 
 export const CP_SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
 export const CP_BUTTON_VARS = ['buttonL', 'buttonR'];
-const TOUCH_PAD_VARS = TOUCH_PINS.map(pin => `touchPad${pin}`);
 
 const BUTTON_EVENTS = ['down', 'up'];
 const SENSOR_EVENTS = ['change', 'data'];
-const TOUCH_EVENTS = ['down', 'up'];
 
 export const CP_COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
   toggleSwitch: ['open', 'close', 'change'],
-  accelerometer: ['change', 'data', 'shake']
+  accelerometer: ['change', 'data', 'shake'],
 };
 CP_SENSOR_VARS.forEach(s => (CP_COMPONENT_EVENTS[s] = SENSOR_EVENTS));
-if (experiments.isEnabled('maker-captouch')) {
-  TOUCH_PAD_VARS.forEach(s => (CP_COMPONENT_EVENTS[s] = TOUCH_EVENTS));
-}
 
 export const BOARD_EVENT_ALIASES = {
   // codeStudioName: 'playground-io-name'
   shake: 'tap:single',
   singleTap: 'tap:single',
-  doubleTap: 'tap:double'
+  doubleTap: 'tap:double',
 };
 
 export const SONG_SINGLE_NOTE = ['G3'];
@@ -49,7 +43,7 @@ export const SONG_CHARGE = [
   ['G4', 1 / 8],
   [null, 3 / 8],
   ['E4', 3 / 16],
-  ['G4', 1]
+  ['G4', 1],
 ];
 
 // Preferred tempo: 80
@@ -57,7 +51,7 @@ export const SONG_LEVEL_COMPLETE = [
   ['G#4', 1 / 8],
   [null, 1 / 8],
   ['G#4', 1 / 8],
-  ['C#5', 1 / 2]
+  ['C#5', 1 / 2],
 ];
 
 // Preferred tempo: 180
@@ -111,7 +105,7 @@ export const SONG_ASCENDING = [
   ['G6', 1 / 32],
   ['C7', 1 / 32],
   ['G6', 1 / 32],
-  ['C7', 1 / 32]
+  ['C7', 1 / 32],
 ];
 
 // Preferred tempo: 120
@@ -175,7 +169,7 @@ export const SONG_CONCLUSION = [
   ['C5', 1 / 32],
   ['E4', 1 / 32],
   ['C5', 1 / 32],
-  ['E4', 1 / 32]
+  ['E4', 1 / 32],
 ];
 
 // Circuit playground command codes for certain needed overrides

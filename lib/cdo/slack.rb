@@ -13,6 +13,7 @@ class Slack
   }.freeze
 
   CHANNEL_MAP = {
+    'content-editors' => 'content-editors',
     'server operations' => 'server-operations',
     'staging' => 'infra-staging',
     'test' => 'infra-test',
@@ -21,6 +22,7 @@ class Slack
 
   # Common channel name to ID mappings
   CHANNEL_IDS = {
+    'content-editors' => 'C03A2LG1JLQ',
     'developers' => 'C0T0PNTM3',
     'deploy-status' => 'C7GS8NE8L',
     'infra-staging' => 'C03CK8E51',
@@ -116,9 +118,9 @@ class Slack
   # @return [Boolean] Whether the text was posted to Slack successfully.
   # WARNING: This function mutates params.
   # NOTE: This function utilizes an incoming webhook, not the Slack token
-  def self.message(text, params={})
+  def self.message(text, params = {})
     return false unless CDO.slack_endpoint
-    params[:channel] = "\##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
+    params[:channel] = "##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text
 
     payload =
@@ -252,10 +254,10 @@ class Slack
         Honeybadger.notify_cronjob_error opts
         response = false
       end
-    rescue Exception => error
+    rescue Exception => exception
       opts = {
         error_class: "Slack integration [error]",
-        error_message: error,
+        error_message: exception,
         context: {url: url, payload: payload}
       }
       Honeybadger.notify_cronjob_error opts

@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import LoginTypePicker from './LoginTypePicker';
-import EditSectionForm from './EditSectionForm';
 import PadAndCenter from './PadAndCenter';
 import {sectionShape} from './shapes';
 import {
@@ -13,14 +12,24 @@ import {
   setRosterProvider,
   editSectionProperties,
   cancelEditingSection,
-  assignedCourseOffering
+  assignedCourseOffering,
 } from './teacherSectionsRedux';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {navigateToHref} from '@cdo/apps/utils';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+// Navigates to the new section setup page if both params are non-null.
+const redirectToNewSectionPage = (participantType, loginType) => {
+  if (!!participantType && !!loginType) {
+    navigateToHref(
+      `/sections/new?participantType=${participantType}&loginType=${loginType}`
+    );
+  }
+};
 
 /**
- * UI for a teacher to add a new class section.  For editing a section see
- * EditSectionDialog.
+ * UI for a teacher to add a new class section.
  */
 const AddSectionDialog = ({
   isOpen,
@@ -32,7 +41,7 @@ const AddSectionDialog = ({
   handleCancel,
   availableParticipantTypes,
   assignedCourseOffering,
-  asyncLoadComplete
+  asyncLoadComplete,
 }) => {
   useEffect(() => {
     if (
@@ -42,10 +51,32 @@ const AddSectionDialog = ({
     ) {
       setParticipantType(assignedCourseOffering.participant_audience);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assignedCourseOffering, asyncLoadComplete, section?.participantType]);
 
   const {loginType, participantType} = section || {};
   const title = i18n.newSectionUpdated();
+
+  const onParticipantTypeSelection = participantType => {
+    if (participantType !== 'student') {
+      redirectToNewSectionPage(participantType, SectionLoginType.email);
+    }
+    setParticipantType(participantType);
+  };
+
+  const onLoginTypeSelection = loginType => {
+    // Oauth section types should use the roster dialog, not the section setup page
+    if (
+      [
+        SectionLoginType.picture,
+        SectionLoginType.word,
+        SectionLoginType.email,
+      ].includes(loginType)
+    ) {
+      redirectToNewSectionPage(participantType, loginType);
+    }
+    setLoginType(loginType);
+  };
 
   const getDialogContent = () => {
     if (!asyncLoadComplete) {
@@ -59,7 +90,7 @@ const AddSectionDialog = ({
       return (
         <ParticipantTypePicker
           title={title}
-          setParticipantType={setParticipantType}
+          setParticipantType={onParticipantTypeSelection}
           handleCancel={handleCancel}
           availableParticipantTypes={availableParticipantTypes}
         />
@@ -71,25 +102,28 @@ const AddSectionDialog = ({
           title={title}
           handleImportOpen={beginImportRosterFlow}
           setRosterProvider={setRosterProvider}
-          setLoginType={setLoginType}
+          setLoginType={onLoginTypeSelection}
           handleCancel={handleCancel}
         />
       );
     }
-    return <EditSectionForm title={title} isNewSection={true} />;
   };
 
-  return (
-    <BaseDialog
-      useUpdatedStyles
-      fixedWidth={1010}
-      isOpen={isOpen}
-      overflow="hidden"
-      uncloseable
-    >
-      <PadAndCenter>{getDialogContent()}</PadAndCenter>
-    </BaseDialog>
-  );
+  if (participantType && loginType) {
+    return null;
+  } else {
+    return (
+      <BaseDialog
+        useUpdatedStyles
+        fixedWidth={1010}
+        isOpen={isOpen}
+        overflow="hidden"
+        uncloseable
+      >
+        <PadAndCenter>{getDialogContent()}</PadAndCenter>
+      </BaseDialog>
+    );
+  }
 };
 
 AddSectionDialog.propTypes = {
@@ -103,7 +137,7 @@ AddSectionDialog.propTypes = {
   handleCancel: PropTypes.func.isRequired,
   availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
   assignedCourseOffering: PropTypes.object,
-  asyncLoadComplete: PropTypes.bool
+  asyncLoadComplete: PropTypes.bool,
 };
 
 export const UnconnectedAddSectionDialog = AddSectionDialog;
@@ -114,7 +148,7 @@ export default connect(
     section: state.teacherSections.sectionBeingEdited,
     availableParticipantTypes: state.teacherSections.availableParticipantTypes,
     assignedCourseOffering: assignedCourseOffering(state),
-    asyncLoadComplete: state.teacherSections.asyncLoadComplete
+    asyncLoadComplete: state.teacherSections.asyncLoadComplete,
   }),
   dispatch => ({
     beginImportRosterFlow: () => dispatch(beginImportRosterFlow()),
@@ -122,6 +156,6 @@ export default connect(
     setLoginType: loginType => dispatch(editSectionProperties({loginType})),
     setParticipantType: participantType =>
       dispatch(editSectionProperties({participantType})),
-    handleCancel: () => dispatch(cancelEditingSection())
+    handleCancel: () => dispatch(cancelEditingSection()),
   })
 )(AddSectionDialog);

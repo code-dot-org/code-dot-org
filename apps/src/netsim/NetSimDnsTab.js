@@ -16,7 +16,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimDnsTab = (module.exports = function(
+var NetSimDnsTab = (module.exports = function (
   rootDiv,
   dnsModeChangeCallback,
   becomeDnsCallback
@@ -64,12 +64,12 @@ var NetSimDnsTab = (module.exports = function(
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimDnsTab.prototype.render = function() {
+NetSimDnsTab.prototype.render = function () {
   var levelConfig = NetSimGlobals.getLevelConfig();
 
   var renderedMarkup = $(
     markup({
-      level: levelConfig
+      level: levelConfig,
     })
   );
   this.rootDiv_.html(renderedMarkup);
@@ -92,7 +92,7 @@ NetSimDnsTab.prototype.render = function() {
 /**
  * @param {DnsMode} newDnsMode
  */
-NetSimDnsTab.prototype.setDnsMode = function(newDnsMode) {
+NetSimDnsTab.prototype.setDnsMode = function (newDnsMode) {
   if (this.dnsModeControl_) {
     this.dnsModeControl_.setDnsMode(newDnsMode);
   }
@@ -107,13 +107,13 @@ NetSimDnsTab.prototype.setDnsMode = function(newDnsMode) {
 /**
  * @param {boolean} isDnsNode
  */
-NetSimDnsTab.prototype.setIsDnsNode = function(isDnsNode) {
+NetSimDnsTab.prototype.setIsDnsNode = function (isDnsNode) {
   this.dnsManualControl_.setIsDnsNode(isDnsNode);
 };
 
 /**
  * @param {Array} tableContents
  */
-NetSimDnsTab.prototype.setDnsTableContents = function(tableContents) {
+NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
   this.dnsTable_.setDnsTableContents(tableContents);
 };

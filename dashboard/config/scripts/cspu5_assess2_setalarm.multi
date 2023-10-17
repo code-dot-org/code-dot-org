@@ -1,37 +1,35 @@
 name 'cspu5_assess2_setAlarm'
-encrypted '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
-cNGiJgH9e0WFBTt5EiiwjkygByo/2w==
-'
+wrong 'day == “Saturday”'
+wrong 'day == “Sunday”'
+right '(day == “Saturday”) || (day == “Sunday”)'
+wrong '(day == “Saturday”) && (day == “Sunday”)'
+wrong 'day != “Monday”'
+
+markdown <<MARKDOWN
+Consider the JavaScript code segment below. Which statement should be used in place of &lt;missing code&gt; such that the alarm is set to 9:00 am on weekends, and 6:30 am on weekdays.
+
+      var day = prompt("What day is it tomorrow?");
+      if ( <missing code> ){
+      	setAlarm = “9:00am”;
+      } 
+      	else {
+      	setAlarm = “6:30am”;
+      }
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8**
+
+Inside the IF statement, the alarm is set to 9:00am. The alarms should only be set to 9:00am if it is a weekend so therefore, the IF statement should check if it is the weekend or not. Since there are 2 weekend days and 5 weekdays, it would be easier to check if it was a Saturday or a Sunday. 
+
+Inside IF statements:
+
+* Two equal signs in a row "==" are used to see if the values are equal and
+* Two vertical lines "||" checks if one _or_ the other statement is true
+* Alternatively, the notation "&&" means "and" which checks if both statements are true
+* Therefore, to check if the day EQUALS "Saturday" OR if the day EQUALS "Sunday", the code is written as
+
+(day == “Saturday”) || (day == “Sunday”) which will be true if the day is a weekend or, if it is a weekday, this statement will be false.
+MARKDOWN
+
+allow_multiple_attempts true

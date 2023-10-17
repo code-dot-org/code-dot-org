@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import VerticalImageResourceCard from '@cdo/apps/templates/VerticalImageResourceCard';
 import {
   nextLevelCourseCards,
-  defaultNextLevelCourseCard
+  defaultNextLevelCourseCard,
 } from '@cdo/apps/templates/certificates/congratsNextLevelActivityCards';
 
 const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
@@ -37,7 +37,7 @@ const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
 GraduateToNextLevel.propTypes = {
   scriptName: PropTypes.string,
   courseTitle: PropTypes.string,
-  courseDesc: PropTypes.string
+  courseDesc: PropTypes.string,
 };
 
 export default GraduateToNextLevel;

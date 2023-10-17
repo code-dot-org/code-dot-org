@@ -1,0 +1,565 @@
+---
+title: Code.org 2021 Annual Report
+nav: about_nav
+theme: responsive
+video_player: true
+style_min: true
+social:
+  "og:title": "Code.org 2021 Annual Report"
+  "og:image": "https://code.org/images/social-media/default-og-image.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:title": "Code.org 2021 Annual Report"
+  "twitter:image:src": "https://code.org/images/social-media/default-og-image.png"
+---
+<link href="/css/marketing.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/donors.css">
+
+# Code.org 2021 Annual Report
+
+[<button>View PDF of this report</button>](/files/code.org-annual-report-2021.pdf)
+&nbsp;&nbsp;
+
+<h2 class="purple-block">Letter from Hadi</h2>
+
+In the nine years since Code.org launched, computer science has become the fastest-growing subject in primary and secondary education, globally. Over 70 countries have announced plans for computer science, and millions of teachers have begun teaching CS in their classrooms. In the US, AP Computer Science has grown 10-fold in under a decade.
+
+In 2021, we were inspired by the connections computer science has to every facet of our lives.
+
+From the depths of outer space to the devices in our hands, computer science impacts so many different subjects and fields. This year for Hour of Code, we saw students get inspired by how CS touches their lives, too, with more than 85,000 events across 164 countries.
+
+With two new programs this year, we hope students continue to explore the wide world of computer science beyond Hour of Code. Our new curriculum CS Connections helps students and teachers explore the connections between computer science and traditional subjects like math, language arts, science, and social studies. With CS Journeys, students can discover what this looks like beyond the classroom by connecting with real-world computer scientists on exciting virtual field trips and classroom discussions.
+
+In the U.S., momentum for the CS movement is happening outside of Code.org, too, thanks to the hard work and collaboration of our partners in advocacy. For the first time ever, a majority of all U.S. high schools now offer foundational computer science—up from 10% when we started this work. Findings from our <a href="https://advocacy.code.org/stateofcs" target="_blank">2021 State of Computer Science Education</a> report show how far we’ve come, and outline the work that needs to be done to improve access and participation for every student.
+
+As part of our effort to address equity in CS, we began developing a first-of-its-kind curriculum for the AP Computer Science A (CSA) Java programming course with an intentional focus on increasing student access, participation, and diversity. At a time when AP CSA has extremely low representation of young women and students from underrepresented racial and ethnic groups, we believe we can reimagine how this content is taught to change the face of computing and broaden access to underserved students.
+
+Millions of teachers and educators, our Regional Partner and International Partner networks, and hundreds of other partner organizations have helped this movement grow. Yet there is still a long way to go to reach universal access and balanced representation. We are thankful to every partner and supporter behind the vision that every student in every school should have the opportunity to learn computer science.
+
+<section class="flex ceo-letter">
+  <figure>
+    <img src="/images/fill-200x200/avatars/hadi_partovi.jpg" alt="Photo of Hadi Partovi, Founder and CEO"/>
+  </figure>
+
+  <p>- <strong>Hadi Partovi</strong>, Founder and CEO</p>
+</section>
+
+
+
+<h2 class="purple-block">2021 Highlights</h2>
+
+<h2 class="highlight" style="margin-top: 2em">We helped students make cross-curricular connections to CS</h2>
+To help students make meaningful connections between CS and other disciplines — and to help teachers from a variety of backgrounds more easily begin teaching the subject — we introduced a new set of cross-curricular modules, projects, and lessons called <a href="https://code.org/educate/csc" target="_blank">Computer Science (CS) Connections</a>. This curriculum allows students to learn computer science concepts at the same time as learning other subjects like language arts, math, and science.
+
+<div class="color-block bt0">
+  <p class="callout-quote">Coming out of a pandemic, this allowed students to <em>see a real-world future in programming</em> and impacting students of the next generation. They loved it and made huge connections — even as K-12 students</p>
+  <p class="callout-attrib"><strong>— Elementary school teacher, Virginia</strong></p>
+</div>
+
+
+
+<h2 class="highlight">We celebrated 2 million teachers on Code.org</h2>
+In 2021, we celebrated 2 million teachers with accounts on Code.org! To every teacher who has taught a Code.org course, hosted an Hour of Code, taken a Professional Development workshop, or been a champion of CS at their school, we say thank you!
+
+<figure class="centerspot">
+  <img src="/images/AR2021/fit-580/twomillion2021.png" alt="Illustration of a computer"/>
+</figure>
+
+Through our workshops, we also prepared 1,696 middle school and 1,026 high school teachers to teach computer science. We also launched self-paced professional learning modules, designed to help teachers get started teaching at every level.
+
+
+
+<h2 class="highlight">We began developing an AP CSA curriculum with equity at its core</h2>
+To continue closing gaps in access and participation, Code.org and Amazon developed a <a href="https://codeorg.medium.com/amazon-code-org-plan-new-curriculum-for-breakthrough-in-computer-science-diversity-3562a66de2e7" target="_blank">first-of-its-kind approach for the AP Computer Science A (CSA) Java programming curriculum</a> to empower every student, regardless of their background, to envision themselves using computer science to bring their dreams to life.
+
+The curriculum considers cultural references and learning styles in every facet. That includes vocabulary, visuals, and the sequence of concepts taught, using strategies from Culturally Responsive Teaching pedagogy. Leaders from the technology industry, academia, and state governments are participating in unique advisory councils to give us valuable insight and help us understand how to prepare all students for continuing pathways in computer science.
+
+
+
+<h2 class="highlight">We showed students CS in the real world</h2>
+We're excited to help bring computer science lessons to life for students of all ages. <a href="https://code.org/csjourneys" target="_blank">CS Journeys</a> is a program designed for students to explore how CS impacts their world and envision their own future possibilities.
+
+From virtual field trips with NASA and live class chats with Star Wars creators, students are encouraged to uncover CS in unexpected places. We hope these unique experiences will inspire students to continue their CS journey, both in the classroom and beyond.
+
+<figure class="centerspot">
+  <img src="/images/AR2021/fit-580/threegirlswithtablets2021.jpg" alt="Three smiling girls sitting outside with tablets"/>
+</figure>
+
+
+
+<h2 class="highlight">We outlined ambitious goals to transform global CS education</h2>
+We envision a world where computer science is a fundamental part of the education system, and we plan to grow in order to pursue strategies to unlock this potential. For a close look at our goals in closing gaps and increasing opportunity, you can review the ambitious <a href="https://code.org/files/2025goals.pdf" target="_blank">2025 goals</a> we've detailed and how we determined those goals. In light of the COVID-19 setback to the global education system, the goals we set in 2020 are likely too ambitious. Our Board of directors will discuss whether we revise the timeline for these goals. We want goals that are aspirational and achievable. We've also identified a number of large-scale, multiyear projects that would enable Code.org to reach an even greater scale in making CS a standard in education globally. Read about them in our <a href="https://code.org/files/bigbets.pdf" target="_blank">Big Bets in Computer Science Education</a> summary.
+
+
+
+<h2 class="highlight">We called on President Biden and Congress to fund computer science in schools</h2>
+Support for computer science is bipartisan. Both the Obama and Trump administrations supported CS, and the Biden White House has <a href="https://twitter.com/codeorg/status/1419745011822997523?s=20" target="_blank">signaled that CS will be a priority</a> in its education plans. Fortunately, the U.S. Senate has for the first time agreed to authorize funding for computer science in new legislation (USICA, section 6112), but this needs the full support of Congress.
+
+<figure class="centerspot">
+  <img src="/images/AR2021/fit-580/presbiden2021.png" alt="Vice President Joe Biden with a student during the Hour of Code event"/>
+  <figcaption>From 2014: Vice President Joe Biden during the Hour of Code event in the Eisenhower Executive Office Building, in Washington, D.C. (Photo: Official White House Photo by David Lienemann)</figcaption>
+</figure>
+
+This year, our founder and CEO Hadi Partovi <a href="https://codeorg.medium.com/code-org-commits-to-teaching-cybersecurity-concepts-to-3-million-students-dd044a0339d7" target="_blank">attended a White House summit</a> on cybersecurity to talk with leaders across the nation about the role of cybersecurity in keeping us safe. With the ever-expanding role of digital technology in our lives, cybersecurity is of utmost importance to personal safety, and even national security. To help address these issues, Code.org announced that we will redouble our efforts to teach cybersecurity concepts throughout our classrooms to help ensure that every student, in every school, learns the basic concepts of cybersecurity as part of a foundational computer science education.
+
+
+
+<h2 class="highlight">We reported on foundational CS course participation by demographics and passed policy in most states</h2>
+We developed and produced the 5th annual <a href="https://advocacy.code.org/stateofcs" target="_blank">State of Computer Science Education</a> report in partnership with the CSTA and ECEP Alliance. The report includes state policy data and Access Report data. For the first time, we reported on enrollment in foundational computer science courses overall and by demographics.
+
+<section class="flex stateofcs-report">
+  <figure>
+    <img src="/images/AR2021/fit-580/socs-cover-2021.png" alt="Cover of the 2021 State of CS report"/>
+  </figure>
+
+  <ul>
+    <p><strong>Highlights include:</strong></p>
+    <li>For the first time, over half of all high schools offer CS (51%)</li>
+    <li>$70M in CS funding for FY 2022</li>
+    <li>All 50 states and DC now allow CS to count towards a graduation requirement</li>
+    <li>3 new states require all HS to offer (IL, MS, OK) and one has a grad requirement (AR)</li>
+    <li>31 states adopted 50 CS policies</li>
+  </ul>
+</section>
+
+
+
+
+
+<h2 class="highlight">We added new activities to our biggest CS celebration of the year in the Hour of Code</h2>
+This year, students and teachers used Hour of Code to explore the relationship that computer science has with different subjects in school, different industries, and even different career paths. From seeing code pop up in unexpected places — like this <a href="https://twitter.com/senoraschlegel/status/1468604705832067075" target="_blank">dancing Spanish class</a> — to watching <a href="https://twitter.com/msferreira6/status/1469025521107447818" target="_blank">poem</a> after <a href="https://twitter.com/MrsMarcumBGISD/status/1468677068212867080" target="_blank">poem</a> roll in from our <a href="http://code.org/poetry" target="_blank">Poem Art activity</a>, this Hour of Code was full of creative connections.
+
+<div class="color-block bp0">
+  <p class="callout-quote">It was fun to watch students who struggle with other aspects of school <em>really shine</em> when doing the Hour of Code!</p>
+  <p class="callout-attrib"><strong>— Elementary school teacher, Georgia</strong></p>
+</div>
+
+Hour of Code 2021 was a rousing success, with more than 85,000 events registered across 164 countries!
+
+
+
+<h2 class="highlight">We saw large growth in international usage on our platform</h2>
+Last year was the first time in Code.org history there were more new accounts created from outside the U.S. The percentage of new teacher accounts from outside the U.S. grew to 70% in 2021. Non-U.S. usage of Code.org-created Hour of Code tutorials was 62% of total use.
+
+<figure class="centerspot">
+  <img src="/images/AR2021/fit-580/intlusage2021.png" alt="CEO Hadi Partovi and a student at a computer"/>
+</figure>
+
+
+
+<h2 class="highlight">We achieved milestones in our localization work and continued to drive systemic change</h2>
+We hit our goal of translating our primary education content into 30 languages leading to large increases in CS Fundamentals usage (especially in South Korea, Japan, Poland, France, and Brazil).
+
+In 2021, Code.org contributed to and helped launch <a href="https://www.brookings.edu/essay/building-skills-for-life-how-to-expand-and-improve-computer-science-education-around-the-world/" target="_blank">the global CS report created by the Brookings Institute</a>, which validated that 70 countries already teach CS in primary, secondary, or both. We also worked with the Inter-American Development Bank to author an assessment of CS education in seven Caribbean countries, which will result in a two-country pilot and recommendations for ministries of education to adopt CS.
+
+
+
+<h2 class="highlight">We saw excitement and advocacy for CS in campaigns across the world</h2>
+In 2021, <a href="https://www.youtube.com/watch?v=FbRWeaygDq8&list=PLzdnOPI1iJNe9SjNaR9Rk2-osurLgB3lz&index=7" target="_blank">we launched a video</a> where the President of the Spanish government Pedro Sánchez Pérez-Castejón, and four living former Spanish Presidents called for CS to be taught in all schools and to all students in Spain.
+
+<figure class="centerspot">
+  {{ vid_spanish_prez }}
+  <figcaption>Four former Spanish Presidents share their support for Code.org.</figcaption>
+</figure>
+
+In early 2021, the Ministry of Education of Saudi Arabia—in collaboration with Microsoft and Code.org— attracted a record 3.5 million students (more that 50% of all K12 students in the country) to a coding challenge known as “My School is Programming” or “Madrasati Codes.” Over half of the students enrolled in the kingdom’s 24,000 primary and secondary schools participated in the competition with girls representing 61% of the participants.
+
+
+
+<h2 class="purple-block">Code.org by the Numbers</h2>
+Addressing diversity and equity issues is core to Code.org’s work, and is woven throughout our programs – from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among students from underrepresented racial and ethnic groups: Black, Hispanic/Latino, Native American, and Pacific Islander.
+
+<figure class="centerspot">
+  <img src="/images/AR2021/fit-580/diversitypiecharts2021.png" alt="Three pie chart graphs detailing diversity percentages of students that Code.org reaches: 48% Female or Gender-Expansive; 50% Underrepresented racial/ethnic groups; 46% Students qualifying for free or reduced-price lunch"/>
+  <figcaption>Source: Code.org participation data from the 2020-2021 school year. <a href="https://code.org/promote/diversitydata">See fully disaggregated data here.</a></figcaption>
+</figure>
+
+<figure class="centerspot">
+  <img src="/images/AR2021/fit-580/diversitybarcharts2021.png" alt="Three bar charts detailing the percentage of public high schools that offer foundational computer science education"/>
+</figure>
+
+<table class="bythenumbers">
+  <tr>
+    <th>Schools, states, countries</th><th>2021</th>
+  </tr>
+  <tr>
+    <td>US High Schools teaching CS (Data from the Access Report) <br/><span class="goal2025">2025 Goal: 80% of all HS teach CS</span></td><td>51%</td>
+  </tr>
+  <tr>
+    <td>US Students passing the AP CS exams <br/><span class="goal2025">2025 Goal: 350,000</span></td>
+    <td>181,075</td>
+  </tr>
+  <tr>
+    <td>States that have established an “all schools must offer CS” policy OR a state CS plans + CS funding <br/><span class="goal2025">2025 Goal: 50</span></td>
+    <td>31</td>
+  </tr>
+  <tr>
+    <td>70 countries have established plans for CS <br/><span class="goal2025">2025 Goal: 70</span></td>
+    <td>73</td>
+  </tr>
+  <tr>
+    <th colspan="2">Code.org Platform</th>
+  </tr>
+  <tr>
+    <td>Student accounts [all-time] on Code.org <br/><span class="goal2025">2025 Goal: 100M</span></td>
+    <td>67,890,982</td>
+  </tr>
+  <tr>
+    <td>% of accounts from female students <br/><span class="goal2025">2025 Goal: 47%</span></td>
+    <td>46.1%</td>
+  </tr>
+  <tr>
+    <th colspan="2">International</th>
+  </tr>
+  <tr>
+    <td>Student accounts [all-time] on Code.org from outside the US <br/><span class="goal2025">2025 Goal: 60M</span></td>
+    <td>26,057,894</td>
+  </tr>
+  <tr>
+    <th colspan="2">CS Principles</th>
+  </tr>
+  <tr>
+    <td>Students that have started Code.org CS Principles course in the academic year <br/><span class="goal2025">2025 Goal: 400k</span></td>
+    <td>231,352</td>
+  </tr>
+  <tr>
+    <td>Female students that have started Code.org CS Principles course in the academic year <br/><span class="goal2025">2025 Goal: 160k (40%)</span></td>
+    <td>34.4%</td>
+  </tr>
+  <tr>
+    <td>Students from underrepresented racial and ethnic groups* that have started Code.org CS Principles course in the academic year <br/><span class="goal2025">2025 Goal: 172k (43%)</span></td>
+    <td>41.9%</td>
+  </tr>
+  <tr>
+    <th colspan="2">CS Discoveries</th>
+  </tr>
+  <tr>
+    <td>Students that have started Code.org CS Discoveries course in the academic year <br/><span class="goal2025">2025 Goal: 2M</span></td>
+    <td>788,337</td>
+  </tr>
+  <tr>
+    <td>Female students that have started Code.org CS Discoveries course in the academic year <br/><span class="goal2025">2025 Goal: 900K (45%)</span></td>
+    <td>41.4%</td>
+  </tr>
+  <tr>
+    <td>Students from underrepresented racial and ethnic groups* that have started Code.org CS Discoveries course in the academic year <br/><span class="goal2025">2025 Goal: 900K (45%)</span></td>
+    <td>48%</td>
+  </tr>
+  <tr>
+    <th colspan="2">CS Fundamentals</th>
+  </tr>
+  <tr>
+    <td>US Students that have started Code.org CS Fundamentals course in the academic year <br/><span class="goal2025">2025 Goal: 5M</span></td>
+    <td>4,000,309</td>
+  </tr>
+  <tr>
+    <td>US Female students that have started Code.org CS Fundamentals course in the academic year <br/><span class="goal2025">2025 Goal: 50%</span></td>
+    <td>46.1%</td>
+  </tr>
+</table>
+
+
+
+<h2 class="purple-block">Finances</h2>
+For calendar year 2021 our total expenses were approximately $23M. The chart below paints a general picture of how this money was spent.
+
+<figure class="centerspot">
+  <img src="/images/AR2021/fit-580/finances2021.png" alt="Pie chart showing 2021 financial stats"/>
+</figure>
+
+The table below shows the total cost breakdown of our headline achievements since founding.
+
+| <strong>Areas of effort / Achievements in 2013 - 2021</strong>                                                                                                                                                                                           | <strong>Fully-loaded cost (including admin)</strong> |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------------- |
+| **Diversity and Global Marketing:** Diversity and Global Marketing: Hour of Code campaign, 1.3 billion served, reaching 20% of students globally. 48% female participation.                                                                       | $17.9 million                       |
+| **Curriculum + Code Studio learning platform:** ~330 hours of coursework created, 2M teacher accounts. 67 million student accounts. 45% female, 50% underrepresented racial/ethnic groups.                                                       | $43.4 million                       |
+| **Partnership + professional learning:**  56 [regional partners](/educate/regional-partner) and 522 facilitators who have prepared over 113,000 new CS teachers across grades K-12. ($16.1M spent on grades K-5, $44.7M on grades 6-12.)| $74.7 million                      |
+| **Government affairs:** Policies changed in 50 states, $241M in state budgets allocated to computer science.                                                                                                                          | $12.8 million |
+| **International:** Translation of CSF curriculum into 30 languages, Hour of Code activities in 67 languages, and support for 110 international partnerships.                                                                                                                             | $8.7 million |                         |
+| <strong>TOTAL SPENT (2013-2021)</strong>                                                                                                                                                                                                                 | $157.5 million                       |
+
+## Other reports
+
+* See recent [Code.org Statistics](/statistics)
+* See the [2020 Annual Report](/about/2020)
+* See the [2019 Annual Report](/about/2019)
+* See the [2018 Annual Report](/about/2018)
+* See the [2017 Annual Report](/about/2017)
+* See the [2016 Annual Report](/about/2016) and [2015-16 Code.org Evaluation Report](/files/EvaluationReport2015-16.pdf)
+* See the [2015 Annual Report](/about/2015) and [2014-15 Evaluation Report](/about/evaluation)
+* See the [2014 Annual Report](/about/2014)
+
+
+
+<h2 class="purple-block">Our generous donors</h2>
+Code.org® is dedicated to the vision that every student in every school should have the opportunity to learn computer science. We are supported by a dynamic community of corporate, institutional, and individual donors. Code.org is a public 501(c)(3) non-profit organization. All charitable contributions to Code.org are tax-deductible to the extent permitted by law.
+
+Code.org gratefully acknowledges the following supporters who have made generous commitments of $1,000 and above to support Code.org's fiscal year 2021 (January 1, 2021 - December 31, 2021). For more information or to learn how to partner with Code.org, please contact the Office of Development at <giving@code.org> or (206) 593-5521.
+
+<h2>Platinum Supporters ($3,000,000+)</h2>
+<section class="flex-container">
+  <img src="/images/fit-150/avatars/amazon.jpg" alt="Amazon logo" />
+  <img src="/images/fit-150/avatars/microsoft.jpg" alt="Microsoft logo" />
+  <p><strong>Anonymous</strong></p>
+</section>
+
+<h2>Gold Supporters ($1,000,000+)</h2>
+<section class="flex-container logos">
+  <img src="/images/fit-150/avatars/ballmer_group.jpg" alt="Ballmer Group logo" />
+  <img src="/images/fit-150/avatars/google.png" alt="Google logo" />
+</section>
+<section class="flex-container text">
+  <p><strong>Charlie Lee</strong></p>
+  <p><strong>Anonymous</strong></p>
+</section>
+
+<section class="lists no-flex no-padding">
+  <section class="flex-container no-padding mobile-hide">
+    <h3>Institutional Supporters</h3>
+    <h3>Individual Supporters</h3>
+  </section>
+
+  <h4>$500,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Atlassian Foundation International</li>
+      <li>Benevity</li>
+      <li>Cisco Systems Foundation</li>
+      <li>Infosys Foundation USA</li>
+      <li>Pluralsight</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Rebecca and Alfred Lin</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$250,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Patrick J. McGovern Foundation</li>
+      <li>WhaleRock Capital Management LLC</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Hopper-Dean Foundation</li>
+      <li>The Marie-Josée and Henry R. Kravis Foundation</li>
+      <li>Vandana and Vishal Sikka</li>
+      <li>Anonymous (2)</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$100,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Accenture</li>
+      <li>AmazonSmile</li>
+      <li>Arizona Public Service Foundation</li>
+      <li>Koch Companies Community Fund</li>
+      <li>MUFG Union Bank Foundation</li>
+      <li>Northrop Grumman Foundation</li>
+      <li>Paypal Giving Fund</li>
+      <li>Pluralsight ONE Fund</li>
+      <li>Zynga Inc.</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Gubrit Family Trust</li>
+      <li>Kaphan Foundation</li>
+      <li>Kaveh Khosrowshahi</li>
+      <li>Bret and Karen Taylor</li>
+      <li>Harry Wagner</li>
+      <li>Mr. Devin Wenig and Mrs. Cindy Wenig</li>
+      <li>The Wilke Family Foundation</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$50,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Craft Ventures</li>
+      <li>Fortive Foundation</li>
+      <li>Motorola Solutions Foundation</li>
+      <li>Tanium</li>
+      <li>TIBCO Software</li>
+      <li>UK Online Giving Foundation</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>The Hindawi Charitable Fund</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$25,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Deel, Inc.</li>
+      <li>Foundation for California's Technology & Innovation Economy</li>
+      <li>Radix</li>
+      <li>SimCorp</li>
+      <li>UKG Inc.</li>
+      <li>WideOrbit</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Molly and Scott Forstall</li>
+      <li>Kelman-Lee Family</li>
+      <li>Louis and Mary Kay Smith Family Foundation</li>
+      <li>Mr. Jonathan David Perlow</li>
+      <li>Anonymous</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$10,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Alaska Airlines</li>
+      <li>CompTIA</li>
+      <li>GoDaddy</li>
+      <li>Network For Good</li>
+      <li>PricewaterhouseCoopers</li>
+      <li>Quickbase Inc.</li>
+      <li>Salesforce.org</li>
+      <li>Tango Card, Inc.</li>
+      <li>Winston & Strawn LLP</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>John P. Bevans</li>
+      <li>R. Martin Chavez</li>
+      <li>John and Allison Danner</li>
+      <li>L'Aiglon Foundation</li>
+      <li>Robins Nest Family Foundation</li>
+      <li>Craig Silverstein and Mary Obelnicki</li>
+      <li>Troper Wojcicki Foundation</li>
+      <li>Anonymous</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$5,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>Bright Funds Foundation</li>
+      <li>Consilio</li>
+      <li>Couponcause</li>
+      <li>Facebook Payments</li>
+      <li>Greycroft Foundation</li>
+      <li>Harvard Business Analytics Program</li>
+      <li>The KIND Foundation</li>
+      <li>King & Spalding LLP</li>
+      <li>NBCUniversal</li>
+      <li>New Relic</li>
+      <li>SecureLink, Inc.</li>
+      <li>Anonymous</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Sahil Bloom</li>
+      <li>Carl Schriever</li>
+      <li>Mr. Matthew McDonald Watkins and Mrs. Melanie Brown Watkins</li>
+      <li>Anonymous (3)</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+
+  <h4>$1,000+</h4>
+  <div class="col-50">
+    <h5 class="mobile-show">Institutional Supporters</h5>
+    <ul>
+      <li>American Express Foundation Employee Giving</li>
+      <li>Apollo GraphQL</li>
+      <li>BairesDev</li>
+      <li>BrainGu LLC</li>
+      <li>Cognia</li>
+      <li>Enterprise Holdings Foundation</li>
+      <li>Experts Exchange</li>
+      <li>Foundation for the Carolinas</li>
+      <li>The Giving Back Fund</li>
+      <li>Greenwald Foundation</li>
+      <li>Hack the Box</li>
+      <li>Mitchell International</li>
+      <li>Munich Re Digital Partners</li>
+      <li>Ping Identity</li>
+      <li>Quanex Foundation</li>
+      <li>The Red Hat Charitable Giving Fund of Triangle Community Foundation</li>
+      <li>Stripe</li>
+      <li>Twitch Interactive Inc.</li>
+      <li>The Wonderful Company Foundation</li>
+    </ul>
+  </div>
+  <div class="col-50">
+    <h5 class="mobile-show">Individual Supporters</h5>
+    <ul>
+      <li>Adriaan Bouten</li>
+      <li>Gigi Brisson</li>
+      <li>Carr Lee Foundation</li>
+      <li>Richard Caster</li>
+      <li>Clatterbuck-Warner Donor Advised Fund</li>
+      <li>Jonah Cohen</li>
+      <li>Joel Conaway</li>
+      <li>Allen Conlon</li>
+      <li>Craig Dickinson</li>
+      <li>Aimee Eichelberger</li>
+      <li>Jonathan Gayek</li>
+      <li>Forrest Jordan</li>
+      <li>Edmond Lau</li>
+      <li>David and Angela Longo</li>
+      <li>Peri McDonald</li>
+      <li>Mr. Greg Isao Nakamoto and Mrs. Lauri Bortscheller Nakamoto</li>
+      <li>Pratt Family Fund</li>
+      <li>Nicholas Schneider</li>
+      <li>Kirsten Schreiter</li>
+      <li>Danny Sheridan</li>
+      <li>Lawrence Tanimoto and Connie Guan</li>
+      <li>Molly Tonnell</li>
+      <li>Matthew Walker</li>
+      <li>Jason Weill</li>
+      <li>Kristin Yeoman</li>
+      <li>David Youngworth</li>
+      <li>Anonymous (4)</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+</section>
+
+
+
+<h2>In-Kind Supporters</h2>
+Code.org gratefully acknowledges the following supporters who have made generous in-kind commitments to support Code.org's fiscal year 2021 (January 1,2021 - December 31, 2021). If you have any questions, please contact the Office of Development at <a href="mailto:giving@code.org">giving@code.org</a> or (206) 593-5521.
+
+- Adobe
+- Amazon Web Services
+- Grammarly
+- Hadi Partovi
+- Hoefler&Co.
+- PagerDuty
+- Sauce Labs
+- Tableau Software
+- Trello

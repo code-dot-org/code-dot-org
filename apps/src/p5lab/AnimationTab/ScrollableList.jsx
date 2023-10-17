@@ -13,7 +13,7 @@ class ScrollableList extends React.Component {
     className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
-    onScroll: PropTypes.func
+    onScroll: PropTypes.func,
   };
 
   render() {

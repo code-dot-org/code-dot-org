@@ -15,7 +15,7 @@ class ToggleButton extends Component {
     title: PropTypes.string,
     style: PropTypes.object,
     onClick: PropTypes.func,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   render() {
@@ -38,15 +38,15 @@ class ToggleButton extends Component {
       {},
       {
         ':focus': {
-          outline: 'none'
-        }
+          outline: 'none',
+        },
       },
       styles.buttonStyle,
       styles.toggleButtonStyle,
       this.props.active ? styles.activeStyle : styles.inactiveStyle,
       this.props.active &&
         this.props.activeColor && {
-          backgroundColor: this.props.activeColor
+          backgroundColor: this.props.activeColor,
         },
       this.props.first ? styles.firstButtonStyle : null,
       this.props.last ? styles.lastButtonStyle : null,

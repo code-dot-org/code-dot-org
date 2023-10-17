@@ -1,14 +1,14 @@
 var jsInterpreter;
-module.exports.injectJSInterpreter = function(jsi) {
+module.exports.injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
 };
 
 var createWithDebug;
-module.exports.setCreateWithDebug = function(debug) {
+module.exports.setCreateWithDebug = function (debug) {
   createWithDebug = debug;
 };
 
-module.exports.createSprite = function(x, y, width, height) {
+module.exports.createSprite = function (x, y, width, height) {
   /*
    * Copied code from p5play from createSprite()
    *

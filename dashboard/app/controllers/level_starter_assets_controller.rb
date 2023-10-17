@@ -10,10 +10,10 @@ class LevelStarterAssetsController < ApplicationController
 
   # GET /level_starter_assets/:level_name
   def show
-    starter_assets = (@level&.project_template_level&.starter_assets || @level.starter_assets || []).map do |friendly_name, uuid_name|
+    starter_assets = (@level&.project_template_level&.starter_assets || @level.starter_assets || []).filter_map do |friendly_name, uuid_name|
       file_obj = get_object(uuid_name)
       summarize(file_obj, friendly_name, uuid_name)
-    end.compact
+    end
 
     render json: {starter_assets: starter_assets}
   end
@@ -76,7 +76,7 @@ class LevelStarterAssetsController < ApplicationController
   #
 
   def summarize(file_obj, friendly_name, uuid_name)
-    if file_obj.nil? || file_obj.size.zero?
+    if file_obj.blank?
       nil
     else
       {
@@ -97,25 +97,23 @@ class LevelStarterAssetsController < ApplicationController
     bucket.object(path)
   end
 
-  private
-
-  def set_level
+  private def set_level
     @level = Level.cache_find(params[:level_name])
   end
 
-  def file_mime_type(extension)
+  private def file_mime_type(extension)
     MIME::Types.type_for(extension)&.first&.raw_media_type
   end
 
-  def file_content_type(extension)
+  private def file_content_type(extension)
     MIME::Types.type_for(extension)&.first&.content_type
   end
 
-  def prefix(key)
+  private def prefix(key)
     S3_PREFIX + key
   end
 
-  def bucket
+  private def bucket
     Aws::S3::Bucket.new(S3_BUCKET)
   end
 end

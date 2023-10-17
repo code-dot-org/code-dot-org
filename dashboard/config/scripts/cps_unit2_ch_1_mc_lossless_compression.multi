@@ -1,25 +1,21 @@
 name 'CPS Unit2 Ch 1 MC lossless compression'
-encrypted 'bWyYT1ArYoza1nvonedHhZ5WbjAp6sYaVjATXt32EYdrII6uafgQNWTO1ydy
-tGqVgskT55CRWoRSccC6o5ei2K/wZVNCShlSt2+X3HZvxjijBNkKoVbK/2Ch
-m5FMqHTV0n1EULr6Vf+VVqzrROTzl0lO2KhXJdg59jWUYWTJ3beskKZaH8T3
-M2hYQfY+u7eo3scpmhRA9Xc5gmsxstyimn6JPTzYygCEb1BgGiOj6W2s/l+k
-0GNKnlFdHXdEL528OfFjU0n2NAyehNjhblB3x7eg3M+qpW661U5Bt9/kYA7g
-OCzegsPu0w05aMmy+XHyEJZe7cmmTNsGCU7RxlzRihEUlQQRZxfp5au+QUfu
-1F0Gfb5Ze95kmUq8nMDBkWRKT0KSG7qmqRh5lLR9CQ4doFep/3T1txRycHQ0
-yP+T/e8pHDkiiZm9ZY7+7uEeurzOfvmAj3nHbXP0h0cbBAVLLQdIAIpt5ki9
-/9qbnatW27tmq1WBc+vnHdk+ZxXcV4fAQat5q5dwJJFogK6lLttvAj7uH/T2
-4tAQVwpsaKxCdbnwa9uqZfOOyu5LVnuuErKfv2LX50E7O4B4LEeQBMkUDCJD
-qJERnaI769dIGMjIizlSqYK+JJrwJN5PjMAb+0dFULuvUfj10tB/kG4zbw3N
-jH/HZT4yQcKmyEGT6GfP9uTjxwfW0jfEvIjqeoMo/WP8tOQcE7AShOIituN2
-4VQfhmW3jxagv8Ao9667zLzSIxxWI9Yizhh+wkYqZpgYwFbouB2e1y7GmaVA
-PyOv9Or8GaoWapcyCYH5OG1oCjX+jUgrWCFqZ+j8yEClGksEa0yWpXSCx1oM
-LUvKL4Bccb6ckRcNnlMDqQuWVl3Qwz2wiuBE6Ov23QnHKC4cY2SdtJQfMEW5
-8qS75tUbcRkrBMghTgCql46Ek6MaKaVZ4Na4+yFWaFR8iWhPKhqkaml78qDF
-hkB01+Ata3rnXX7BGfylnOVRwe9p/wdsJTZSA1sNmZG2G4Mpy8CptwK6nJNH
-JAGO6f75/nD3YuNAsOsPx5TLJmy//QKtRY5QJ8r0zQm2c70B0brkDtTie4zg
-RTmsjLwljCWqxziLyJeqpWp9gC0HS0gdsHPB4vv9+uGoC+Qf+l3XNBS+SOp+
-eeKioh7VydUgY3tycy5ipo/9cRC68kDO60HvjkA1Ngtn1/KKIfBtkHlKFNxK
-Fn3zSSE+OTzfOMrqka4SLbD2kpAcDKnMQBwW21wNUGFps/GnkUeuHlzT4jr1
-xbCMMAPtTBjDKdRPCkO/PKTfqR+/+j3B5dZODUcT+4+Dse3eVwpHSMwJOb5f
-Cr+HCrgmTPQYdlFBqQ1H+71C
-'
+title 'Compression'
+description ' '
+question ' '
+wrong 'Lossy compression'
+right 'Lossless compression'
+wrong 'Fast Fourier Transform compression'
+wrong 'Tailored compression'
+markdown <<MARKDOWN
+A compression scheme for long strings of bits called *run-length encoding* is described as follows: 
+
+Rather than record each 0 and 1 individually, instead record “runs” of bits by storing the number of consecutive 1s and 0s that appear.  
+
+Since it’s binary, any run of 0s must be followed by a run of 1s (even if the run is only 1-bit long) and vice versa. Thus, you can store a list of small numbers that represents the alternating runs of 0s and 1s.  Here is an example:
+
+![](https://images.code.org/e36d29fd5a1cf276b4a0437cbc5c9235-image-1470149724968.png)
+
+To uncompress the data back into its original binary state, you simply reverse the process.  This technique is an example of what type of compression?
+MARKDOWN
+
+allow_multiple_attempts true

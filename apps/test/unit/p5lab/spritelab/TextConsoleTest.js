@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import TextConsole, {
-  AUTO_CLOSE_TIME
+  AUTO_CLOSE_TIME,
 } from '@cdo/apps/p5lab/spritelab/TextConsole';
 import {mount} from 'enzyme';
 import sinon from 'sinon';

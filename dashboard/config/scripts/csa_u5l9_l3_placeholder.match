@@ -10,3 +10,4 @@ question 'enhanced for loop variable'
 answer 'a variable declared and used within an enhanced for loop to store a copy of the element being visited. '
 question 'logical operator'
 answer 'an operator that returns a Boolean value'
+allow_multiple_attempts true

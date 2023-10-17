@@ -1,6 +1,6 @@
 # Rack middleware that allowlists cookies and headers based on path-based cache behaviors.
 # Behaviors are defined in http cache config.
-require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
+require 'cdo/legacy_varnish_helpers'
 require 'active_support/core_ext/hash/slice'
 require 'cdo/rack/response'
 require 'cdo/aws/cloudfront'
@@ -21,7 +21,7 @@ module Rack
         return [403, {}, ['Unsupported method.']] unless AWS::CloudFront::ALLOWED_METHODS.include?(env['REQUEST_METHOD'].upcase)
         request = Rack::Request.new(env)
         path = request.path
-        behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
+        behavior = LegacyVarnishHelpers.behavior_for_path((config[:behaviors] + [config[:default]]), path)
 
         # Filter query string.
         if behavior[:query] == false
@@ -32,7 +32,7 @@ module Rack
 
         # Filter allowlisted request headers.
         headers = behavior[:headers]
-        REMOVED_HEADERS.each do |remove_header|
+        LegacyVarnishHelpers::REMOVED_HEADERS.each do |remove_header|
           name, value = remove_header.split ':'
           next if headers.include? name
           http_header = "HTTP_#{name.upcase.tr('-', '_')}"
@@ -83,7 +83,7 @@ module Rack
       def call(env)
         request = Rack::Request.new(env)
         path     = request.path
-        behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
+        behavior = LegacyVarnishHelpers.behavior_for_path((config[:behaviors] + [config[:default]]), path)
 
         status, headers, body = @app.call(env)
         response = Rack::Response.new(body, status, headers)

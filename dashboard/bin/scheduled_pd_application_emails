@@ -4,28 +4,16 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../config/environment'
 
-def queue_pd_reminder_emails
-  # For each teacher application, queue up one reminder email if their admin
-  # hasn't yet responded.
-  Pd::Application::TeacherApplication.where(
-    application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
-  ).find_each do |teacher_application|
-    if teacher_application.allow_sending_admin_approval_teacher_reminder_email?
-      teacher_application.queue_email :admin_approval_teacher_reminder
-    end
-  end
+# Send reminder emails for teachers that have been accepted but have not yet
+# registered for a workshop.
+Services::RegistrationReminder.send_registration_reminders!
 
-  # Queue reminder emails for teachers that have been accepted but have not yet
-  # registered for a workshop.
-  Services::RegistrationReminder.queue_registration_reminders!
+# Send reminder emails for teachers who have started an application but
+# have not completed it
+Services::CompleteApplicationReminder.send_complete_application_reminders!
 
-  # Queue reminder emails for teachers who have started an application but
-  # have not completed it
-  Services::CompleteApplicationReminder.queue_complete_application_reminders!
-end
-
-# First, add PD reminder emails to the queue.
-queue_pd_reminder_emails
-
-# Second, send all queued emails.
-Pd::Application::Email.send_all_queued_emails
+# Send reminder emails to teachers if their admin has not yet submitted approval
+# Sends an email no more than once for each application, and only if it's been
+# at least 6 days from when an admin approval email was sent.
+# See allow_sending_admin_approval_teacher_reminder_email? for all conditions
+Pd::Application::TeacherApplication.send_admin_approval_reminders_to_teachers

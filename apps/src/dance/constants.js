@@ -1,6 +1,6 @@
 import {
   MAX_VISUALIZATION_WIDTH,
-  MIN_VISUALIZATION_WIDTH
+  MIN_VISUALIZATION_WIDTH,
 } from '@cdo/apps/StudioApp';
 
 /** @const {number} */
@@ -34,5 +34,8 @@ export const DancelabReservedWords = [
   'atTimestamp',
   'everySeconds',
   'everySecondsRange',
-  'everyVerseChorus'
+  'everyVerseChorus',
 ];
+
+export const ASSET_BASE =
+  'https://curriculum.code.org/images/sprites/dance_20191106/';

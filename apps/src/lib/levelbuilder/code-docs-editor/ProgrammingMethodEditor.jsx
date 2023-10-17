@@ -44,7 +44,7 @@ function useProgrammingMethod(initialProgrammingMethod) {
   return [
     programmingMethod,
     setProgrammingMethodProperty,
-    resetProgrammingMethod
+    resetProgrammingMethod,
   ];
 }
 
@@ -58,12 +58,12 @@ function renderParameterEditor(parameter, updateFunc) {
 
 export default function ProgrammingMethodEditor({
   initialProgrammingMethod,
-  overloadOptions
+  overloadOptions,
 }) {
   const [
     programmingMethod,
     setProgrammingMethodProperty,
-    resetProgrammingMethod
+    resetProgrammingMethod,
   ] = useProgrammingMethod(initialProgrammingMethod);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
@@ -78,9 +78,9 @@ export default function ProgrammingMethodEditor({
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
       },
-      body: JSON.stringify(programmingMethod)
+      body: JSON.stringify(programmingMethod),
     })
       .then(response => {
         setIsSaving(false);
@@ -107,7 +107,7 @@ export default function ProgrammingMethodEditor({
   };
 
   const markdownEditorFeatures = {
-    imageUpload: true
+    imageUpload: true,
   };
 
   return (
@@ -217,7 +217,7 @@ const programmingMethodShape = PropTypes.shape({
   tips: PropTypes.string,
   examples: PropTypes.arrayOf(PropTypes.object),
   fields: PropTypes.arrayOf(PropTypes.object),
-  methods: PropTypes.arrayOf(PropTypes.object)
+  methods: PropTypes.arrayOf(PropTypes.object),
 });
 
 ProgrammingMethodEditor.propTypes = {
@@ -225,9 +225,9 @@ ProgrammingMethodEditor.propTypes = {
   overloadOptions: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
+      name: PropTypes.string.isRequired,
     })
-  )
+  ),
 };
 
 const styles = {
@@ -238,7 +238,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   selectInput: {
     boxSizing: 'border-box',
@@ -247,6 +247,6 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginBottom: 0,
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

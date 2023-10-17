@@ -14,9 +14,8 @@ export default class ObstacleZoneWalls extends Walls {
       this.obstacleZones[this.background] &&
       this.obstacleZones[this.background][this.wallMapRequested]
     ) {
-      const collisionRects = this.obstacleZones[this.background][
-        this.wallMapRequested
-      ];
+      const collisionRects =
+        this.obstacleZones[this.background][this.wallMapRequested];
 
       // Compare against a set of specific rectangles.
       for (let i = 0; i < collisionRects.length; i++) {

@@ -1,97 +1,74 @@
-import {Triggers} from '../constants';
-import Globals from '../globals';
+import {BlockTypes} from './blockTypes';
 import {
-  DEFAULT_SOUND,
-  EXTRA_SAMPLE_FIELD_PREFIX,
-  EXTRA_SAMPLE_INPUT_PREFIX,
-  FIELD_SOUNDS_TYPE,
+  EXTRA_SOUND_INPUT_PREFIX,
   MINUS_IMAGE,
   PLUS_IMAGE,
-  TRACK_NAME_FIELD
+  SOUND_VALUE_TYPE,
+  TRACK_NAME_FIELD,
 } from './constants';
-import FieldSounds from './FieldSounds';
-
-export const dynamicTriggerExtension = function() {
-  this.getInput('trigger').appendField(
-    new Blockly.FieldDropdown(function() {
-      return Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]);
-    }),
-    'trigger'
-  );
-};
 
 export const getDefaultTrackNameExtension = player =>
-  function() {
+  function () {
     this.getField(TRACK_NAME_FIELD).setValue(
-      `track ${Object.keys(player.getTracksMetadata()).length + 1}`
+      `track 1` // TODO: Replace with Sequencer output when re-enabling Tracks mode
     );
   };
 
 export const playMultiMutator = {
-  extraSampleCount_: 0,
-  saveExtraState: function() {
+  extraSoundInputCount_: 0,
+  saveExtraState: function () {
     return {
-      extraSampleCount: this.extraSampleCount_
+      extraSoundInputCount: this.extraSoundInputCount_,
     };
   },
-  loadExtraState: function(state) {
-    this.updateShape_(state.extraSampleCount);
+  loadExtraState: function (state) {
+    this.updateShape_(state.extraSoundInputCount);
   },
-  addSound_: function() {
-    this.appendDummyInput(EXTRA_SAMPLE_INPUT_PREFIX + this.extraSampleCount_)
+  addSound_: function () {
+    const shadowBlockXml = `<shadow type="${BlockTypes.VALUE_SAMPLE}"/>`;
+    this.appendValueInput(EXTRA_SOUND_INPUT_PREFIX + this.extraSoundInputCount_)
+      .setShadowDom(Blockly.Xml.textToDom(shadowBlockXml))
       .setAlign(Blockly.Input.Align.RIGHT)
-      .appendField('and')
-      .appendField(
-        new FieldSounds({
-          type: FIELD_SOUNDS_TYPE,
-          name: EXTRA_SAMPLE_FIELD_PREFIX + this.extraSampleCount_,
-          getLibrary: () => Globals.getLibrary(),
-          playPreview: (id, onStop) => {
-            Globals.getPlayer().previewSound(id, onStop);
-          },
-          currentValue: DEFAULT_SOUND
-        }),
-        EXTRA_SAMPLE_FIELD_PREFIX + this.extraSampleCount_
-      );
-    this.extraSampleCount_++;
-  },
-  removeSound_: function() {
-    this.extraSampleCount_--;
-    this.removeInput(EXTRA_SAMPLE_INPUT_PREFIX + this.extraSampleCount_);
-  },
-  updateShape_: function(targetCount) {
-    this.setInputsInline(targetCount < 1);
-    const prevCount = this.extraSampleCount_;
+      .setCheck(SOUND_VALUE_TYPE)
+      .appendField('and');
 
-    while (this.extraSampleCount_ < targetCount) {
+    this.extraSoundInputCount_++;
+  },
+  removeSound_: function () {
+    this.extraSoundInputCount_--;
+    this.removeInput(EXTRA_SOUND_INPUT_PREFIX + this.extraSoundInputCount_);
+  },
+  updateShape_: function (targetCount) {
+    this.setInputsInline(targetCount < 1);
+    const prevCount = this.extraSoundInputCount_;
+
+    while (this.extraSoundInputCount_ < targetCount) {
       this.addSound_();
     }
 
-    while (this.extraSampleCount_ > targetCount) {
+    while (this.extraSoundInputCount_ > targetCount) {
       this.removeSound_();
     }
 
-    this.showHidePlus_(this.extraSampleCount_ < 7); // upper limit?
-    this.showHideMinus_(this.extraSampleCount_ > 0);
+    this.showHidePlus_(this.extraSoundInputCount_ < 7); // upper limit?
+    this.showHideMinus_(this.extraSoundInputCount_ > 0);
     Blockly.Events.fire(
       new Blockly.Events.BlockChange(
         this,
         'mutation',
         null,
-        {extraSampleCount: prevCount},
-        {extraSampleCount: this.extraSampleCount_}
+        {extraSoundInputCount: prevCount},
+        {extraSoundInputCount: this.extraSoundInputCount_}
       )
     );
   },
-  showHidePlus_: function(shouldShow) {
-    if (this.getField('PLUS')) {
-      this.getField('PLUS')
-        .getParentInput()
-        .removeField('PLUS');
+  showHidePlus_: function (shouldShow) {
+    if (this.getInput('PLUS')) {
+      this.removeInput('PLUS');
     }
 
     if (shouldShow) {
-      this.inputList[this.inputList.length - 1].appendField(
+      this.appendDummyInput('PLUS').appendField(
         new Blockly.FieldImage(PLUS_IMAGE, 20, 20),
         'PLUS',
         'plus'
@@ -101,15 +78,18 @@ export const playMultiMutator = {
       );
     }
   },
-  showHideMinus_: function(shouldShow) {
+  showHideMinus_: function (shouldShow) {
     if (this.getField('MINUS')) {
-      this.getField('MINUS')
-        .getParentInput()
-        .removeField('MINUS');
+      this.getField('MINUS').getParentInput().removeField('MINUS');
     }
 
     if (shouldShow) {
-      this.inputList[this.inputList.length - 1].insertFieldAt(
+      // Try to insert minus before last sample input (not plus)
+      let input = this.inputList[this.inputList.length - 1];
+      if (input.name === 'PLUS') {
+        input = this.inputList[this.inputList.length - 2];
+      }
+      input.insertFieldAt(
         0,
         new Blockly.FieldImage(MINUS_IMAGE, 20, 20),
         'MINUS',
@@ -120,14 +100,14 @@ export const playMultiMutator = {
       );
     }
   },
-  plus: function() {
-    this.updateShape_(this.extraSampleCount_ + 1);
+  plus: function () {
+    this.updateShape_(this.extraSoundInputCount_ + 1);
   },
-  minus: function() {
-    if (this.extraSampleCount_ === 0) {
+  minus: function () {
+    if (this.extraSoundInputCount_ === 0) {
       return;
     }
 
-    this.updateShape_(this.extraSampleCount_ - 1);
-  }
+    this.updateShape_(this.extraSoundInputCount_ - 1);
+  },
 };

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<block type="behavior_definition" deletable="false" movable="false" editable="false">
-  <mutation>
-    <arg name="this sprite" type="Sprite"/>
-    <description/>
-  </mutation>
-  <field name="NAME" id="acting goofy">acting goofy</field>
-  <statement name="STACK"/>
-</block>

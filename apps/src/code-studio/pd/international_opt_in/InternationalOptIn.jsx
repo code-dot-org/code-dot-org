@@ -2,18 +2,18 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FormController from '../form_components/FormController';
 import FormComponent from '../form_components/FormComponent';
-import formComponentUtils from '../form_components/utils';
 import DatePicker from '../workshop_dashboard/components/date_picker';
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
-import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap';
+import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {snakeCase} from 'lodash';
 
 export default class InternationalOptIn extends FormController {
   static propTypes = {
     accountEmail: PropTypes.string.isRequired,
-    labels: PropTypes.object.isRequired
+    labels: PropTypes.object.isRequired,
   };
 
   /**
@@ -46,14 +46,14 @@ export default class InternationalOptIn extends FormController {
     return {
       ...super.getPageProps(),
       accountEmail: this.props.accountEmail,
-      labels: this.props.labels
+      labels: this.props.labels,
     };
   }
 }
 
 class InternationalOptInComponent extends FormComponent {
   static propTypes = {
-    accountEmail: PropTypes.string.isRequired
+    accountEmail: PropTypes.string.isRequired,
   };
 
   /**
@@ -72,7 +72,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isColombiaSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'colombia';
+    return getCountryKey(this.props.data?.schoolCountry) === 'colombia';
   }
 
   /**
@@ -83,7 +83,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isChileSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'chile';
+    return getCountryKey(this.props.data?.schoolCountry) === 'chile';
   }
 
   /**
@@ -94,7 +94,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isUzbekistanSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'uzbekistan';
+    return getCountryKey(this.props.data?.schoolCountry) === 'uzbekistan';
   }
 
   /**
@@ -183,7 +183,7 @@ class InternationalOptInComponent extends FormComponent {
       label: this.props.labels.colombianChileanSchoolDepartment,
       options: departmentOptions,
       placeholder: i18n.selectAnOption(),
-      required: true
+      required: true,
     });
 
     const municipalities = departments[selectedDepartment] || {};
@@ -201,7 +201,7 @@ class InternationalOptInComponent extends FormComponent {
       placeholder: selectedDepartment
         ? i18n.selectAnOption()
         : i18n.selectDepartmentFirst(),
-      required: true
+      required: true,
     });
 
     const cities = municipalities[selectedMunicipality] || {};
@@ -217,13 +217,13 @@ class InternationalOptInComponent extends FormComponent {
       placeholder: selectedMunicipality
         ? i18n.selectAnOption()
         : i18n.selectMunicipalityFirst(),
-      required: true
+      required: true,
     });
 
     const names = cities[selectedCity] || [];
     let nameOptions = [i18n.pdNotApplicable()];
     if (selectedCity !== i18n.pdNotApplicable()) {
-      nameOptions = nameOptions.concat(Object.keys(names));
+      nameOptions = nameOptions.concat(names);
     }
     const selectName = this.buildSelectFieldGroup({
       name: 'schoolName',
@@ -233,7 +233,7 @@ class InternationalOptInComponent extends FormComponent {
       placeholder: selectedCity
         ? i18n.selectAnOption()
         : i18n.selectCityFirst(),
-      required: true
+      required: true,
     });
 
     return (
@@ -268,7 +268,7 @@ class InternationalOptInComponent extends FormComponent {
       label: this.props.labels.colombianChileanSchoolDepartment,
       options: departmentOptions,
       placeholder: i18n.selectAnOption(),
-      required: true
+      required: true,
     });
 
     const communes = departments[selectedDepartment] || {};
@@ -284,7 +284,7 @@ class InternationalOptInComponent extends FormComponent {
       placeholder: selectedDepartment
         ? i18n.selectAnOption()
         : i18n.selectDepartmentFirst(),
-      required: true
+      required: true,
     });
 
     const names = communes[selectedCommune] || {};
@@ -300,13 +300,13 @@ class InternationalOptInComponent extends FormComponent {
       placeholder: selectedCommune
         ? i18n.selectAnOption()
         : i18n.selectCommuneFirst(),
-      required: true
+      required: true,
     });
 
     const ids = names[selectedName] || [];
     let idOptions = [i18n.pdNotApplicable()];
     if (selectedName !== i18n.pdNotApplicable()) {
-      idOptions = idOptions.concat(Object.keys(ids));
+      idOptions = idOptions.concat(ids);
     }
     const selectId = this.buildSelectFieldGroup({
       name: 'schoolId',
@@ -316,7 +316,7 @@ class InternationalOptInComponent extends FormComponent {
       placeholder: selectedName
         ? i18n.selectAnOption()
         : i18n.selectNameFirst(),
-      required: true
+      required: true,
     });
 
     return (
@@ -351,7 +351,7 @@ class InternationalOptInComponent extends FormComponent {
       label: this.props.labels.schoolDepartmentRegion,
       options: departmentOptions,
       placeholder: i18n.selectAnOption(),
-      required: true
+      required: true,
     });
 
     const districts = departments[selectedDepartment] || {};
@@ -367,13 +367,13 @@ class InternationalOptInComponent extends FormComponent {
       placeholder: selectedDepartment
         ? i18n.selectAnOption()
         : i18n.selectDepartmentFirst(),
-      required: true
+      required: true,
     });
 
     const schools = districts[selectedDistrict] || [];
     let schoolOptions = [i18n.pdNotApplicable()];
     if (selectDistrict !== i18n.pdNotApplicable()) {
-      schoolOptions = schoolOptions.concat(Object.keys(schools));
+      schoolOptions = schoolOptions.concat(schools);
     }
     const selectSchool = this.buildSelectFieldGroup({
       name: 'schoolName',
@@ -383,7 +383,7 @@ class InternationalOptInComponent extends FormComponent {
       placeholder: selectedDistrict
         ? i18n.selectAnOption()
         : i18n.selectDistrictFirst(),
-      required: true
+      required: true,
     });
 
     return (
@@ -397,14 +397,10 @@ class InternationalOptInComponent extends FormComponent {
 
   renderSchoolFieldGroups() {
     let schoolDataFieldGroup;
-    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const selectedCountry = this.props.data?.schoolCountry;
     if (this.isColombiaSelected()) {
       schoolDataFieldGroup = this.renderColombianSchoolDataFieldGroup();
-    } else if (
-      this.isChileSelected() &&
-      this.props.options.workshopFacilitator[selectedCountry] !==
-        'Centro de Innovación - Mineduc' //we want the free text fields in this case
-    ) {
+    } else if (this.isChileSelected()) {
       schoolDataFieldGroup = this.renderChileanSchoolDataFieldGroup();
     } else if (this.isUzbekistanSelected()) {
       schoolDataFieldGroup = this.renderUzebekistanSchoolDataFieldGroup();
@@ -424,7 +420,7 @@ class InternationalOptInComponent extends FormComponent {
             type: 'text',
             disabled: !selectedCountry,
             placeholder,
-            required: true
+            required: true,
           })}
           {this.buildFieldGroup({
             name: 'schoolName',
@@ -432,7 +428,7 @@ class InternationalOptInComponent extends FormComponent {
             type: 'text',
             disabled: !selectedCountry,
             placeholder,
-            required: true
+            required: true,
           })}
         </FormGroup>
       );
@@ -446,7 +442,7 @@ class InternationalOptInComponent extends FormComponent {
           name: 'schoolCountry',
           label: this.props.labels.schoolCountry,
           required: true,
-          placeholder: i18n.selectAnOption()
+          placeholder: i18n.selectAnOption(),
         })}
         {schoolDataFieldGroup}
       </FormGroup>
@@ -456,11 +452,11 @@ class InternationalOptInComponent extends FormComponent {
   renderWorkshopFieldGroups() {
     // If no country has been selected, display the inputs disabled with a
     // placeholder text asking the user to select their country first.
-    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const selectedCountry = this.props.data?.schoolCountry;
     const placeholder = selectedCountry ? undefined : i18n.selectCountryFirst();
 
     const organizers = this.props.options.workshopOrganizer[
-      selectedCountry
+      getCountryKey(selectedCountry)
     ] || [i18n.organizerNotListed()];
     const selectOrganizer = this.buildSelectFieldGroup({
       name: 'workshopOrganizer',
@@ -468,123 +464,53 @@ class InternationalOptInComponent extends FormComponent {
       options: organizers,
       disabled: !selectedCountry,
       placeholder: selectedCountry ? i18n.selectAnOption() : placeholder,
-      required: true
+      required: true,
     });
 
-    const facilitators = this.props.options.workshopFacilitator[
-      selectedCountry
-    ] || [i18n.facilitatorNotListed()];
-    const selectFacilitator = this.buildSelectFieldGroup({
-      name: 'workshopFacilitator',
-      label: this.props.labels.workshopFacilitator,
-      options: facilitators,
-      disabled: !selectedCountry,
-      placeholder: selectedCountry ? i18n.selectAnOption() : placeholder,
-      required: true
-    });
-
-    return (
-      <FormGroup>
-        {selectOrganizer}
-        {selectFacilitator}
-      </FormGroup>
-    );
+    return <FormGroup>{selectOrganizer}</FormGroup>;
   }
 
   render() {
     const labels = this.props.labels;
 
-    const lastSubjectsKey = formComponentUtils.normalizeAnswer(
-      this.props.options.subjects[this.props.options.subjects.length - 1]
-    ).answerValue;
-    const textFieldMapSubjects = {[lastSubjectsKey]: 'other'};
-
-    const lastResourcesKey = formComponentUtils.normalizeAnswer(
-      this.props.options.resources[this.props.options.resources.length - 1]
-    ).answerValue;
-    const textFieldMapResources = {[lastResourcesKey]: 'other'};
-
-    const lastRoboticsKey = formComponentUtils.normalizeAnswer(
-      this.props.options.robotics[this.props.options.robotics.length - 1]
-    ).answerValue;
-    const textFieldMapRobotics = {[lastRoboticsKey]: 'other'};
-
     return (
       <FormGroup>
         <br />
         <h4>{i18n.tellUsAboutYourself()}</h4>
+
         {/* Personal */}
         {this.buildFieldGroup({
           name: 'firstName',
           label: labels.firstName,
           type: 'text',
-          required: true
+          required: true,
         })}
         {this.buildFieldGroup({
           name: 'firstNamePreferred',
           label: labels.firstNamePreferred,
           type: 'text',
-          required: false
+          required: false,
         })}
         {this.buildFieldGroup({
           name: 'lastName',
           label: labels.lastName,
           type: 'text',
-          required: true
+          required: true,
         })}
         {this.buildFieldGroup({
           name: 'email',
           label: labels.email,
           type: 'text',
           value: this.props.accountEmail,
-          readOnly: true
-        })}
-        {this.buildFieldGroup({
-          name: 'emailAlternate',
-          label: labels.emailAlternate,
-          type: 'text'
-        })}
-        {this.buildButtonsFromOptions({
-          name: 'gender',
-          label: labels.gender,
-          type: 'radio',
-          required: true
+          readOnly: true,
         })}
 
         {/* School */}
         {this.renderSchoolFieldGroups()}
 
-        {/* Teaching */}
-        {this.buildButtonsFromOptions({
-          name: 'ages',
-          label: labels.ages,
-          type: 'check',
-          required: true
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'subjects',
-          label: labels.subjects,
-          type: 'check',
-          required: true,
-          textFieldMap: textFieldMapSubjects
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'resources',
-          label: labels.resources,
-          type: 'check',
-          required: false,
-          textFieldMap: textFieldMapResources
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'robotics',
-          label: labels.robotics,
-          type: 'check',
-          required: false,
-          textFieldMap: textFieldMapRobotics
-        })}
-
         <br />
         <h4>{i18n.tellUsAboutWorkshop()}</h4>
+
         {/* Workshop */}
         <FormGroup
           id="date"
@@ -617,7 +543,7 @@ class InternationalOptInComponent extends FormComponent {
           name: 'workshopCourse',
           label: labels.workshopCourse,
           required: true,
-          placeholder: i18n.selectAnOption()
+          placeholder: i18n.selectAnOption(),
         })}
 
         {/* Opt-Ins */}
@@ -632,12 +558,12 @@ class InternationalOptInComponent extends FormComponent {
           ),
           type: 'radio',
           required: true,
-          placeholder: i18n.selectAnOption()
+          placeholder: i18n.selectAnOption(),
         })}
         {this.buildSingleCheckbox({
           name: 'legalOptIn',
           label: labels.legalOptIn,
-          required: true
+          required: true,
         })}
       </FormGroup>
     );
@@ -652,24 +578,21 @@ function dateStringToMoment(dateString) {
   return null;
 }
 
+function getCountryKey(countryName) {
+  return snakeCase(countryName);
+}
+
 InternationalOptInComponent.associatedFields = [
   'firstName',
   'firstNamePreferred',
   'lastName',
   'email',
-  'emailAlternate',
-  'gender',
   'schoolName',
   'schoolCity',
   'schoolCountry',
-  'ages',
-  'subjects',
-  'resources',
-  'robotics',
   'date',
   'workshopOrganizer',
-  'workshopFacilitator',
   'workshopCourse',
   'emailOptIn',
-  'legalOptIn'
+  'legalOptIn',
 ];

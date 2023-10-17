@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T19:55:17.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2022-ReviewAnalysis",
+    "long_instructions": "##ReviewAnalysis FRQ (Part B)\r\n\r\nWrite the `ReviewAnalysis` method `collectComments`, which collects and formats only comments that contain an exclamation point. The method returns an `ArrayList` of String objects containing copies of user comments from `allReviews` that contain an exclamation point, formatted as follows. An empty `ArrayList` is returned if no comment in `allReviews` contains an exclamation point. \r\n* The `String` inserted into the `ArrayList` to be returned begins with the index of the `Review` in `allReviews`. \r\n* The index is immediately followed by a hyphen (\"-\"). \r\n* The hyphen is followed by a copy of the original comment. \r\n* The `String` must end with either a period or an exclamation point. If the original comment from `allReviews` does not end in either a period or an exclamation point, a period is added. \r\n\r\nThe following example of `allReviews` is repeated from part (a).\r\n\r\n![](https://images.code.org/468f4c4c1d3183beea029536320db13e-image-1687366413334.53.24 PM.png)\r\n\r\nThe following `ArrayList` would be returned by a call to `collectComments` with the given contents of `allReviews`. The reviews at index `1` and index `4` in `allReviews` are not included in the `ArrayList` to return since neither review contains an exclamation point. \r\n\r\n![](https://images.code.org/03a0545bb54784b6ed531f3b3a9615a7-image-1687366453004.54.09 PM.png)\r\n\r\nComplete method `collectComments`. ",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 19:55:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-06-21 19:56:23 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

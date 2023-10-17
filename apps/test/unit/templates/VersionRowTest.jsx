@@ -8,7 +8,7 @@ import msg from '@cdo/locale';
 describe('VersionRow', () => {
   const MINIMUM_PROPS = {
     versionId: 'abcdef',
-    lastModified: new Date()
+    lastModified: new Date(),
   };
 
   it('renders preview and restore buttons for a non-latest version', () => {

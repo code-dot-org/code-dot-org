@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalStar = function(pointCount, inner, outer, style, color) {
+var EvalStar = function (pointCount, inner, outer, style, color) {
   evalUtils.ensureNumber(pointCount);
   evalUtils.ensureNumber(inner);
   evalUtils.ensureNumber(outer);
@@ -20,7 +20,7 @@ var EvalStar = function(pointCount, inner, outer, style, color) {
 EvalStar.inherits(EvalImage);
 module.exports = EvalStar;
 
-EvalStar.prototype.draw = function(parent) {
+EvalStar.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
     parent.appendChild(this.element_);

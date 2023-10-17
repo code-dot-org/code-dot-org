@@ -95,10 +95,10 @@ function generateCodeDesignElements(modelId, modelData) {
 }
 
 export default function autogenerateML(modelId) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     $.ajax({
       url: `/api/v1/ml_models/${modelId}`,
-      method: 'GET'
+      method: 'GET',
     })
       .then(modelData => {
         generateCodeDesignElements(modelId, modelData);

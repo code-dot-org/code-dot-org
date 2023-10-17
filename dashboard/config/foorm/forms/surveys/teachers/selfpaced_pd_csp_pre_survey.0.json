@@ -151,16 +151,16 @@
           "name": "csp_confidence_to_teach",
           "title": "How *confident* do you feel in your ability to teach computer science effectively right now?",
           "rateMax": 7,
-          "minRateDescription": "Very uninterested",
-          "maxRateDescription": "Very interested"
+          "minRateDescription": "Not confident at all",
+          "maxRateDescription": "Very confident"
         },
         {
           "type": "rating",
           "name": "csp_how_nessessary_to_learn",
           "title": "How *necessary* is it for students to learn computer science? ",
           "rateMax": 7,
-          "minRateDescription": "Very uninterested",
-          "maxRateDescription": "Very interested"
+          "minRateDescription": "Not necessary at all",
+          "maxRateDescription": "Very necessary"
         }
       ]
     },
@@ -264,7 +264,7 @@
         {
           "type": "checkbox",
           "name": "race_eth",
-          "title": "Which of the following best represents your racial or ethnic background? Please select all that apply.",
+          "title": "Which of the following best represents your racial or ethnic background? Please select all that apply. (optional)",
           "choices": [
             {
               "value": "white",

@@ -1,4 +1,4 @@
-var Cell = function(tileType, speed, size, direction, emotion, sprite) {
+var Cell = function (tileType, speed, size, direction, emotion, sprite) {
   /**
    * @type {Number}
    */
@@ -35,7 +35,7 @@ module.exports = Cell;
 /**
  * @return {Number}
  */
-Cell.prototype.getTileType = function() {
+Cell.prototype.getTileType = function () {
   return this.tileType_;
 };
 
@@ -43,7 +43,7 @@ Cell.prototype.getTileType = function() {
  * Returns a new Cell that's an exact replica of this one
  * @return {Cell}
  */
-Cell.prototype.clone = function() {
+Cell.prototype.clone = function () {
   var newCell = new Cell(
     this.tileType_,
     this.speed_,
@@ -59,14 +59,14 @@ Cell.prototype.clone = function() {
  * Serializes this Cell into JSON
  * @return {Object}
  */
-Cell.prototype.serialize = function() {
+Cell.prototype.serialize = function () {
   return {
     tileType: this.tileType_,
     speed: this.speed_,
     size: this.size_,
     direction: this.direction_,
     emotion: this.emotion_,
-    sprite: this.sprite_
+    sprite: this.sprite_,
   };
 };
 
@@ -75,7 +75,7 @@ Cell.prototype.serialize = function() {
  * @param {Object}
  * @return {Cell}
  */
-Cell.deserialize = function(serialized) {
+Cell.deserialize = function (serialized) {
   return new Cell(
     serialized.tileType,
     serialized.speed,

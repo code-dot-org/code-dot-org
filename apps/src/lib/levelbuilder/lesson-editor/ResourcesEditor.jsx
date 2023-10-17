@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import {
   addResource,
   editResource,
-  removeResource
+  removeResource,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
@@ -25,7 +25,7 @@ class ResourcesEditor extends Component {
     // Provided by redux
     addResource: PropTypes.func.isRequired,
     editResource: PropTypes.func.isRequired,
-    removeResource: PropTypes.func.isRequired
+    removeResource: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -36,7 +36,7 @@ class ResourcesEditor extends Component {
       searchValue: '',
       newResourceDialogOpen: false,
       confirmRemovalDialogOpen: false,
-      error: ''
+      error: '',
     };
   }
 
@@ -64,98 +64,98 @@ class ResourcesEditor extends Component {
         header: {
           label: 'Key',
           props: {
-            style: {width: '20%'}
-          }
+            style: {width: '20%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'name',
         header: {
           label: 'Name',
           props: {
-            style: {width: '15%'}
-          }
+            style: {width: '15%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'type',
         header: {
           label: 'Type',
           props: {
-            style: {width: '10%'}
-          }
+            style: {width: '10%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'audience',
         header: {
           label: 'Audience',
           props: {
-            style: {width: '7%'}
-          }
+            style: {width: '7%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'url',
         header: {
           label: 'URL',
           props: {
-            style: {width: '35%'}
-          }
+            style: {width: '35%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'actions',
         header: {
           label: 'Actions',
           props: {
-            style: {width: '10%'}
-          }
+            style: {width: '10%'},
+          },
         },
         cell: {
           formatters: [this.actionsCellFormatter],
           props: {
             style: {
-              ...lessonEditorTableStyles.actionsCell
-            }
-          }
-        }
-      }
+              ...lessonEditorTableStyles.actionsCell,
+            },
+          },
+        },
+      },
     ];
   }
 
@@ -166,7 +166,7 @@ class ResourcesEditor extends Component {
   constructResourceOption = resource => ({
     value: resource.key.toString(),
     label: `${resource.name} - ${resource.url}`,
-    resource: resource
+    resource: resource,
   });
 
   addResource = resource => {
@@ -221,7 +221,7 @@ class ResourcesEditor extends Component {
     $.ajax({
       url: this.props.getRollupsUrl,
       method: 'GET',
-      contentType: 'application/json;charset=UTF-8'
+      contentType: 'application/json;charset=UTF-8',
     })
       .done(data => {
         this.props.resources
@@ -262,9 +262,7 @@ class ResourcesEditor extends Component {
         )}
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
-            body={`Are you sure you want to remove resource "${
-              this.state.resourceToRemove.name
-            }" from this lesson?`}
+            body={`Are you sure you want to remove resource "${this.state.resourceToRemove.name}" from this lesson?`}
             cancelText="Cancel"
             confirmText="Delete"
             confirmType="danger"
@@ -284,7 +282,7 @@ class ResourcesEditor extends Component {
               searchUrl={'resources/search'}
               constructOptions={this.constructSearchOptions}
               additionalQueryParams={{
-                courseVersionId: this.props.courseVersionId
+                courseVersionId: this.props.courseVersionId,
               }}
             />
           </div>
@@ -318,12 +316,12 @@ class ResourcesEditor extends Component {
 
 const styles = {
   resourceSearch: {
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   remove: {
     fontSize: 14,
@@ -332,7 +330,7 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     width: '50%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   edit: {
     fontSize: 14,
@@ -341,7 +339,7 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     width: '50%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   addButton: {
     background: '#eee',
@@ -352,17 +350,14 @@ const styles = {
     padding: 7,
     textAlign: 'center',
     marginTop: 10,
-    marginLeft: 0
-  }
+    marginLeft: 0,
+  },
 };
 
 export const UnconnectedResourcesEditor = ResourcesEditor;
 
-export default connect(
-  state => ({}),
-  {
-    addResource,
-    editResource,
-    removeResource
-  }
-)(ResourcesEditor);
+export default connect(state => ({}), {
+  addResource,
+  editResource,
+  removeResource,
+})(ResourcesEditor);

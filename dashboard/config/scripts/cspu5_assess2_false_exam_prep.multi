@@ -22,3 +22,5 @@ For example:
 * If you add num1 and num2 together, you are combining the strings and not the values of the strings.
 * num1 + num2 = "53" and NOT 8 because the variables are of a string type.
 MARKDOWN
+
+allow_multiple_attempts true

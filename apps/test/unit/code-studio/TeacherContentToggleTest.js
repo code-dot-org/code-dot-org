@@ -5,7 +5,7 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import {
   UnconnectedTeacherContentToggle as TeacherContentToggle,
-  mapStateToProps
+  mapStateToProps,
 } from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import * as hiddenLessonRedux from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -52,11 +52,9 @@ describe('TeacherContentToggle', () => {
 
     // Each child element is a wrapper around the original DOM element, and
     // has unhidden the original DOM element
-    const [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    const [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     assert.equal(contentElement.childNodes[0].getAttribute('id'), 'level-body');
     assert.equal(contentElement.childNodes[0].style.display, '');
@@ -88,11 +86,9 @@ describe('TeacherContentToggle', () => {
     );
 
     const root = $(component.html());
-    const [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    const [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, '');
@@ -114,11 +110,9 @@ describe('TeacherContentToggle', () => {
     );
 
     const root = $(component.html());
-    const [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    const [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     assert.equal(contentElement.style.display, '');
     assert.equal(contentElement.style.visibility, '');
@@ -140,11 +134,9 @@ describe('TeacherContentToggle', () => {
     );
 
     const root = $(component.html());
-    const [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    const [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     assert.equal(contentElement.style.display, 'none');
     assert.equal(contentElement.style.visibility, '');
@@ -166,11 +158,9 @@ describe('TeacherContentToggle', () => {
     );
 
     const root = $(component.html());
-    const [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    const [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     // nothing visible
     assert.equal(contentElement.style.display, '');
@@ -194,15 +184,13 @@ describe('TeacherContentToggle', () => {
 
     component.setProps({
       hiddenLessonsInitialized: true,
-      isHiddenLesson: true
+      isHiddenLesson: true,
     });
 
     let root = $(component.html());
-    let [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    let [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
@@ -211,14 +199,12 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, '');
 
     component.setProps({
-      isBlocklyOrDroplet: false
+      isBlocklyOrDroplet: false,
     });
     root = $(component.html());
-    [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
     // same thing, but we also set display:none on content
     assert.equal(contentElement.style.display, 'none');
     assert.equal(contentElement.style.visibility, 'hidden');
@@ -241,15 +227,13 @@ describe('TeacherContentToggle', () => {
 
     component.setProps({
       sectionsAreLoaded: true,
-      isLockedLesson: true
+      isLockedLesson: true,
     });
 
     let root = $(component.html());
-    let [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    let [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
@@ -258,14 +242,12 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
 
     component.setProps({
-      isBlocklyOrDroplet: false
+      isBlocklyOrDroplet: false,
     });
     root = $(component.html());
-    [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
     // same thing, but we also set display:none on content
     assert.equal(contentElement.style.display, 'none');
     assert.equal(contentElement.style.visibility, 'hidden');
@@ -290,15 +272,13 @@ describe('TeacherContentToggle', () => {
       sectionsAreLoaded: true,
       isLockedLesson: true,
       hiddenLessonsInitialized: true,
-      isHiddenLesson: true
+      isHiddenLesson: true,
     });
 
     const root = $(component.html());
-    const [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    const [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
@@ -307,7 +287,7 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, '');
 
     component.setProps({
-      isBlocklyOrDroplet: false
+      isBlocklyOrDroplet: false,
     });
   });
 
@@ -328,15 +308,13 @@ describe('TeacherContentToggle', () => {
       sectionsAreLoaded: true,
       isLockedLesson: false,
       hiddenLessonsInitialized: true,
-      isHiddenLesson: false
+      isHiddenLesson: false,
     });
 
     const root = $(component.html());
-    const [
-      contentElement,
-      lockedLessonElement,
-      hiddenLessonElement
-    ] = root.children().toArray();
+    const [contentElement, lockedLessonElement, hiddenLessonElement] = root
+      .children()
+      .toArray();
 
     // content is hidden, hiddenLesson is visible
     assert.equal(contentElement.style.display, '');
@@ -345,7 +323,7 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
 
     component.setProps({
-      isBlocklyOrDroplet: false
+      isBlocklyOrDroplet: false,
     });
   });
 
@@ -364,7 +342,7 @@ describe('TeacherContentToggle', () => {
         progress: {},
         teacherSections: {},
         hiddenLesson: {},
-        verifiedInstructor: {}
+        verifiedInstructor: {},
       };
 
       it('sets locked hidden to true when locked and hidden', () => {
@@ -403,22 +381,22 @@ describe('TeacherContentToggle', () => {
           lessons: [
             {
               id: 123,
-              lockable: true
-            }
-          ]
+              lockable: true,
+            },
+          ],
         },
         teacherSections: {},
         hiddenLesson: {},
         verifiedInstructor: {
-          isVerified: true
-        }
+          isVerified: true,
+        },
       };
 
       const stateUnverified = {
         ...state,
         verifiedInstructor: {
-          isVerified: false
-        }
+          isVerified: false,
+        },
       };
 
       it('sets locked/hidden to false', () => {

@@ -5,6 +5,7 @@ import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import styleConstants from '../../styleConstants';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../../util/color';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
@@ -22,7 +23,7 @@ export default function Congrats(props) {
       hero: '2017Minecraft',
       minecraft: 'pre2017Minecraft',
       mc: 'pre2017Minecraft',
-      oceans: 'oceans'
+      oceans: 'oceans',
     }[tutorial] || 'other');
   /**
    * Renders links to certificate alternatives when there is a special event going on.
@@ -32,6 +33,23 @@ export default function Congrats(props) {
    */
   const renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
+    // In order to remove the certificate links remove or comment the following section -------------------------------
+    if (language === 'ko') {
+      extraLinkText =
+        '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
+      if (/oceans/.test(tutorial)) {
+        extraLinkUrl = pegasus('/files/online-coding-party-2023-2-oceans.png');
+      } else if (/dance/.test(tutorial)) {
+        extraLinkUrl = pegasus('/files/online-coding-party-2023-2-dance.png');
+      } else if (/frozen/.test(tutorial)) {
+        extraLinkUrl = pegasus('/files/online-coding-party-2023-2-frozen.png');
+      } else if (/hero/.test(tutorial)) {
+        extraLinkUrl = pegasus('/files/online-coding-party-2023-2-hero.png');
+      } else {
+        extraLinkText = null;
+      }
+    }
+    // End of section to be removed or commented ----------------------------------------------------------------------
     // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.
@@ -39,7 +57,12 @@ export default function Congrats(props) {
     }
     return (
       <div style={styles.extraLinkContainer}>
-        <a href={extraLinkUrl} target={'_blank'} style={styles.extraLink}>
+        <a
+          href={extraLinkUrl}
+          target={'_blank'}
+          style={styles.extraLink}
+          rel="noreferrer"
+        >
           {extraLinkText}
         </a>
       </div>
@@ -60,7 +83,7 @@ export default function Congrats(props) {
     isHocTutorial,
     nextCourseScriptName,
     nextCourseTitle,
-    nextCourseDesc
+    nextCourseDesc,
   } = props;
 
   const isEnglish = language === 'en';
@@ -118,7 +141,7 @@ Congrats.propTypes = {
   isHocTutorial: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,
-  nextCourseDesc: PropTypes.string
+  nextCourseDesc: PropTypes.string,
 };
 
 const styles = {
@@ -126,20 +149,20 @@ const styles = {
     width: '100%',
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
   divider: {
     borderColor: color.lightest_gray,
     borderWidth: '1px 0 0 0',
     borderStyle: 'solid',
-    margin: '20px 0px 20px 0px'
+    margin: '20px 0px 20px 0px',
   },
   extraLinkContainer: {
     clear: 'both',
-    paddingTop: 20
+    paddingTop: 20,
   },
   extraLink: {
     color: color.teal,
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };

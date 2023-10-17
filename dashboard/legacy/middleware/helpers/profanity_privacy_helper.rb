@@ -31,7 +31,7 @@ end
 def title_profanity_privacy_violation(name, locale)
   share_failure = begin
     ShareFiltering.find_name_failure(name, locale)
-  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => error
+  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
     # If WebPurify or Geocoder are unavailable, default to viewable, but log error
     FirehoseClient.instance.put_record(
       :analysis,
@@ -39,7 +39,7 @@ def title_profanity_privacy_violation(name, locale)
         study: 'share_filtering',
         study_group: 'v0',
         event: 'share_filtering_error',
-        data_string: "#{error.class.name}: #{error}",
+        data_string: "#{exception.class.name}: #{exception}",
         data_json: {
           name: name,
           locale: locale
@@ -91,7 +91,7 @@ def share_failure_from_body(body, locale)
 
   begin
     ShareFiltering.find_share_failure(blockly_source, locale)
-  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
+  rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable
     # If WebPurify or Geocoder are unavailable, default to viewable
     return false
   end

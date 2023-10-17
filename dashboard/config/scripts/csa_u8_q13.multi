@@ -37,3 +37,5 @@ I.  It returns the intended output if `target` is the first item in `arrList`
 II.  It returns the intended output if `target` is the last item in `arrList`
 III. It returns the intended output if `target` is not in `arrList`
 MARKDOWN
+
+allow_multiple_attempts true

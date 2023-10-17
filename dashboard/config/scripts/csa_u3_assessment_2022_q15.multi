@@ -47,3 +47,5 @@ System.out.println(third.getAttempts());
 
 What is printed as a result of executing the code segment if the code segment is the first use of a `ScoreBoard` object?
 MARKDOWN
+
+allow_multiple_attempts true

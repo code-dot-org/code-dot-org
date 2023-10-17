@@ -16,7 +16,7 @@ export default storybook => {
             linkText={i18n.viewCourse()}
             isRtl={false}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

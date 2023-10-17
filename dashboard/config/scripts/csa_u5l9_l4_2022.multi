@@ -41,3 +41,5 @@ public boolean findDuplicates(int[][] values, int number, int currRow, int currC
 
 Which array, when used as an argument, would cause the `hasDuplicates` method to return `false`?
 MARKDOWN
+
+allow_multiple_attempts true

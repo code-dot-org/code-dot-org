@@ -1,7 +1,7 @@
-/* global dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import commonMsg from '@cdo/locale';
 
 import * as rowStyle from './rowStyle';
 import {getStore} from '../../redux';
@@ -19,7 +19,7 @@ export default class ImagePickerPropertyRow extends React.Component {
     handleChange: PropTypes.func,
     desc: PropTypes.node,
     elementId: PropTypes.string,
-    currentImageType: PropTypes.string
+    currentImageType: PropTypes.string,
   };
 
   componentDidMount() {
@@ -32,7 +32,7 @@ export default class ImagePickerPropertyRow extends React.Component {
 
   state = {
     value: this.props.initialValue,
-    lastEdit: 0
+    lastEdit: 0,
   };
 
   changeUnlessEditing(filename) {
@@ -47,12 +47,12 @@ export default class ImagePickerPropertyRow extends React.Component {
 
     this.setState({
       value: filename,
-      lastEdit: Date.now()
+      lastEdit: Date.now(),
     });
 
     // We may not have changed file yet (if we still actively editing)
     setTimeout(
-      function() {
+      function () {
         this.changeUnlessEditing(this.state.value);
       }.bind(this),
       USER_INPUT_DELAY
@@ -70,7 +70,7 @@ export default class ImagePickerPropertyRow extends React.Component {
       showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
       elementId: this.props.elementId,
       currentValue: this.state.value,
-      currentImageType: this.props.currentImageType
+      currentImageType: this.props.currentImageType,
     });
   };
 
@@ -97,7 +97,7 @@ export default class ImagePickerPropertyRow extends React.Component {
           />
           &nbsp;
           <a style={rowStyle.link} onClick={this.handleButtonClick}>
-            Choose...
+            {commonMsg.choosePrefix()}
           </a>
         </div>
       </div>

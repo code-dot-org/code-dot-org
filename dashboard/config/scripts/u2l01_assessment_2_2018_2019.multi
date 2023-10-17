@@ -6,3 +6,4 @@ right 'Request For Comments'
 wrong 'Radio Frequency Controller'
 wrong 'Related Fundamental Content'
 wrong 'ReFactored Code'
+allow_multiple_attempts true

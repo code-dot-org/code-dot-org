@@ -6,7 +6,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import ScreenSelector from '@cdo/apps/applab/ScreenSelector';
 import {reducers} from '@cdo/apps/applab/redux/applab';
@@ -38,7 +38,7 @@ describe('The ScreenSelector component', () => {
   it('renders a select element on pages with design mode', () => {
     getStore().dispatch(
       setPageConstants({
-        hasDesignMode: true
+        hasDesignMode: true,
       })
     );
     expect(render().find('select')).to.have.length(1);
@@ -47,7 +47,7 @@ describe('The ScreenSelector component', () => {
   it('will be hidden on pages without design mode', () => {
     getStore().dispatch(
       setPageConstants({
-        hasDesignMode: false
+        hasDesignMode: false,
       })
     );
     expect(render().find('select')).to.have.length(0);
@@ -57,7 +57,7 @@ describe('The ScreenSelector component', () => {
     getStore().dispatch(
       setPageConstants({
         hasDesignMode: true,
-        isReadOnlyWorkspace: true
+        isReadOnlyWorkspace: true,
       })
     );
     expect(render().find('select')).to.have.length(1);

@@ -14,3 +14,4 @@ answer 'the ability to change after initialization'
 
 question 'parsing'
 answer 'converting formatted text into a different type'
+allow_multiple_attempts true

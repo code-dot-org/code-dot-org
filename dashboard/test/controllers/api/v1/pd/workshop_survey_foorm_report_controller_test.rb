@@ -31,11 +31,11 @@ module Api::V1::Pd
       response = JSON.parse(@response.body, symbolize_names: true)
 
       assert_equal 'CS Discoveries', response[:course_name]
-      assert_not_empty response[:questions]
-      assert_not_empty response[:this_workshop]
-      assert_equal 4, response[:this_workshop][:"Day 5"][:general][:response_count]
+      refute_empty response[:questions]
+      refute_empty response[:this_workshop]
+      assert_equal 4, response[:this_workshop][:'Day 5'][:general][:response_count]
 
-      assert_not_empty response[:workshop_rollups]
+      refute_empty response[:workshop_rollups]
       general_rollup = response[:workshop_rollups][:general]
       assert_equal 5.5, general_rollup[:single_workshop][:averages][:teacher_engagement][:average]
     end
@@ -67,9 +67,9 @@ module Api::V1::Pd
       assert_equal 2, day_0_general_response['response_count']
       matrix_response = day_0_general_response['surveys/pd/summer_workshop_pre_survey_test.0']['teaching_cs_matrix']
 
-      assert_not_nil matrix_response['committed_to_teaching_cs']
-      assert_not_nil matrix_response['like_teaching_cs']
-      assert_not_nil matrix_response['skills_cs']
+      refute_nil matrix_response['committed_to_teaching_cs']
+      refute_nil matrix_response['like_teaching_cs']
+      refute_nil matrix_response['skills_cs']
     end
 
     test 'rollup does not fail if there are no rollup responses' do
@@ -81,7 +81,7 @@ module Api::V1::Pd
       assert_response :success
       response = JSON.parse(@response.body)
 
-      assert_not_empty response['workshop_rollups']['general']['single_workshop']
+      refute_empty response['workshop_rollups']['general']['single_workshop']
       assert_equal 0, response['workshop_rollups']['general']['single_workshop']['response_count']
       assert_nil response['workshop_rollups']['general']['averages']
     end
@@ -100,11 +100,11 @@ module Api::V1::Pd
       response = JSON.parse(@response.body).with_indifferent_access
 
       assert_equal 'CS Fundamentals', response[:course_name]
-      assert_not_empty response[:questions]
-      assert_not_empty response[:this_workshop]
+      refute_empty response[:questions]
+      refute_empty response[:this_workshop]
       assert_equal 5, response[:this_workshop]['Post Workshop'][:general][:response_count]
 
-      assert_not_empty response[:workshop_rollups]
+      refute_empty response[:workshop_rollups]
       general_rollup = response[:workshop_rollups][:general]
       facilitator_rollup = response[:workshop_rollups][:facilitator]
       assert_equal 4.6, general_rollup[:single_workshop][:averages][:teacher_engagement][:average]
@@ -122,7 +122,7 @@ module Api::V1::Pd
       csf_workshop = create :csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour
-      facilitator_id = csf_workshop.facilitators.pluck(:id).first
+      facilitator_id = csf_workshop.facilitators.pick(:id)
       create_list :csf_intro_post_workshop_submission, 1, :answers_low, pd_workshop_id: csf_workshop.id
       create_list :csf_intro_post_workshop_submission, 5, :answers_high, pd_workshop_id: csf_workshop.id
 
@@ -131,11 +131,11 @@ module Api::V1::Pd
       response = JSON.parse(@response.body).with_indifferent_access
 
       assert_equal 'CS Fundamentals', response[:course_name]
-      assert_not_empty response[:questions]
-      assert_not_empty response[:this_workshop]
+      refute_empty response[:questions]
+      refute_empty response[:this_workshop]
       assert_equal 6, response[:this_workshop]['Post Workshop'][:general][:response_count]
 
-      assert_not_empty response[:workshop_rollups]
+      refute_empty response[:workshop_rollups]
 
       general_rollup = response[:workshop_rollups][:general]
       assert_equal 6, general_rollup[:overall_facilitator][facilitator_id.to_s.to_sym][:response_count]
@@ -157,7 +157,7 @@ module Api::V1::Pd
       response = JSON.parse(@response.body, symbolize_names: true)
 
       overall_facilitator_rollup_facilitator = response[:workshop_rollups][:facilitator][:overall_facilitator]
-      csf_workshop_1_facilitator = csf_workshop_1.facilitators.pluck(:id).first.to_s.to_sym
+      csf_workshop_1_facilitator = csf_workshop_1.facilitators.pick(:id).to_s.to_sym
       assert_equal 5, overall_facilitator_rollup_facilitator[csf_workshop_1_facilitator][:response_count]
     end
 
@@ -189,6 +189,32 @@ module Api::V1::Pd
       end
     end
 
+    test 'omits surveys submitted by facilitators' do
+      csf_workshop = create :csf_workshop,
+                            started_at:  Time.now.utc - 1.day,
+                            ended_at: Time.now.utc - 1.hour,
+                            num_facilitators: 2
+      facilitator = csf_workshop.facilitators[0]
+
+      # included in report
+      create :pd_pre_workshop_foorm_submission, pd_workshop: csf_workshop
+      create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: csf_workshop
+
+      # not included in report
+      create :facilitator_post_survey_workshop_submission, user: facilitator, pd_workshop: csf_workshop
+
+      sign_in @workshop_admin
+      get :generic_survey_report, params: {workshop_id: csf_workshop.id}
+      assert_response :success
+
+      response = JSON.parse(@response.body)
+      expected_form_names = [
+        'surveys/pd/summer_workshop_pre_survey.0',
+        'surveys/pd/workshop_csf_intro_post_test.0'
+      ]
+      assert_equal expected_form_names.sort, response['questions']['general'].keys.sort
+    end
+
     test 'filters facilitator data if facilitator is signed in' do
       csf_workshop = create :csf_workshop,
         started_at:  Time.now.utc - 1.day,
@@ -210,10 +236,10 @@ module Api::V1::Pd
 
       assert_equal 7, response[:this_workshop]['Post Workshop'][:facilitator][:response_count][facilitator_1_id]
 
-      overall_facilitator = response[:this_workshop]['Post Workshop'][:facilitator][:"surveys/pd/workshop_csf_intro_post_test.0"]
+      overall_facilitator = response[:this_workshop]['Post Workshop'][:facilitator][:'surveys/pd/workshop_csf_intro_post_test.0']
       facilitator_effectiveness = overall_facilitator[:facilitator_effectiveness]
       # Verify see results for facilitator 1
-      assert_not_nil facilitator_effectiveness[facilitator_1_id][:on_track]
+      refute_nil facilitator_effectiveness[facilitator_1_id][:on_track]
       # Verify do not see results for facilitator 2
       assert_nil facilitator_effectiveness[facilitator_2_id]
 
@@ -223,6 +249,35 @@ module Api::V1::Pd
       assert_equal 5.29, facilitator_rollup[:averages][:facilitator_effectiveness][:average]
       # Verify do not see results for facilitator 2
       assert_nil response[:workshop_rollups][:facilitator][:single_workshop][facilitator_2_id]
+    end
+
+    test 'participant and facilitator post surveys are available for download' do
+      csf_workshop = create :csf_workshop,
+                            started_at:  Time.now.utc - 1.day,
+                            ended_at: Time.now.utc - 1.hour,
+                            num_facilitators: 2
+      facilitator = csf_workshop.facilitators[0]
+      csf_workshop.facilitators[1]
+      create_surveys_for_csf_workshop(csf_workshop, csf_workshop.facilitators.pluck(:id), 5, 2)
+      create :facilitator_post_survey_workshop_submission, user: facilitator, pd_workshop: csf_workshop
+
+      get :forms_for_workshop, params: {workshop_id: csf_workshop.id}
+      assert_response :success
+
+      response = JSON.parse(@response.body)
+
+      form_names = [
+        'surveys/pd/workshop_csf_intro_post_test',
+        'surveys/pd/csd_csp_facilitator_post_survey'
+      ]
+      assert_equal(form_names, response.map {|h| h['name']})
+
+      sign_in @workshop_admin
+
+      form_names.each do |name|
+        get :csv_survey_report, params: {name: name, version: 0, workshop_id: csf_workshop.id}
+        assert_response :success, "downloading form #{name}"
+      end
     end
 
     # Creates sample survey responses for the given workshop with the given facilitator_ids.

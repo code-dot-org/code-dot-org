@@ -6,3 +6,4 @@ wrong 'A. It can cause two people with identical search queries to receive vastl
 wrong 'B. It can cause you to have difficulty finding views or ideas that you do not agree with'
 right 'C. Both A and B'
 wrong 'D. None'
+allow_multiple_attempts true

@@ -1,4 +1,4 @@
-@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
 
 .section-wrapper {
   margin-top: 4em;
@@ -111,7 +111,8 @@
 
 .learnmore-link {
   color: white;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 .caption-headline {

@@ -73,10 +73,7 @@ describe('Check cookies and session storage appear on click', () => {
 
   it('if cookie is set, callout does not appear', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
-    sinon
-      .stub(cookies, 'get')
-      .withArgs('hide_signin_callout')
-      .returns('true');
+    sinon.stub(cookies, 'get').withArgs('hide_signin_callout').returns('true');
     expect(wrapper.html()).to.be.null;
   });
 

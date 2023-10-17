@@ -25,7 +25,7 @@ export const Buttons = props => {
 Buttons.propTypes = {
   // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 /**
@@ -44,7 +44,7 @@ export const ButtonsFromOptions = props => {
 };
 ButtonsFromOptions.propTypes = {
   // the name of the input. Should match a key in FormContext
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 /**
@@ -63,7 +63,7 @@ export const ButtonsWithAdditionalTextFields = props => {
     return {
       answerText: answer,
       inputValue: data[textFieldName],
-      onInputChange: newValue => onChange({[textFieldName]: newValue})
+      onInputChange: newValue => onChange({[textFieldName]: newValue}),
     };
   });
 
@@ -78,7 +78,7 @@ ButtonsWithAdditionalTextFields.propTypes = {
   // Each key is an answer text from options.
   // Each value is the suffix (appended to `${name}_`) which will become the name of the new text field
   // For example, {"Other" : "other"} will add a text field called `${name}_other` after the "Other" option.
-  textFieldMap: PropTypes.object.isRequired
+  textFieldMap: PropTypes.object.isRequired,
 };
 
 /**
@@ -99,5 +99,5 @@ export const ButtonsWithAdditionalTextFieldsFromOptions = props => {
 };
 ButtonsWithAdditionalTextFieldsFromOptions.propTypes = {
   // the name of the input. Should match a key in FormContext options
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };

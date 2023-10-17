@@ -6,51 +6,51 @@ import Maze from '@cdo/apps/maze/maze';
 import ResultsHandler from '@cdo/apps/maze/results/resultsHandler';
 import {MazeController} from '@code-dot-org/maze';
 
-describe('Maze', function() {
+describe('Maze', function () {
   let maze;
   let clock;
 
-  beforeEach(function() {
+  beforeEach(function () {
     clock = sinon.useFakeTimers();
     maze = new Maze();
     maze.controller = new MazeController(
       {
-        map: [[]]
+        map: [[]],
       },
       {
-        movePegmanAnimationSpeedScale: 1
+        movePegmanAnimationSpeedScale: 1,
       },
       {
-        level: {}
+        level: {},
       }
     );
     maze.resultsHandler = new ResultsHandler(maze.controller, {});
     maze.prepareForExecution_();
   });
 
-  afterEach(function() {
+  afterEach(function () {
     clock.restore();
   });
 
-  describe('animation queue', function() {
+  describe('animation queue', function () {
     let animateActionSpy;
     let finishAnimationsSpy;
     let getActionsSpy;
 
-    beforeEach(function() {
+    beforeEach(function () {
       animateActionSpy = sinon.stub(maze, 'animateAction_');
       finishAnimationsSpy = sinon.stub(maze, 'finishAnimations_');
       getActionsSpy = sinon.stub(maze.executionInfo, 'getActions');
       getActionsSpy.returns(new Array(2));
     });
 
-    afterEach(function() {
+    afterEach(function () {
       animateActionSpy.restore();
       finishAnimationsSpy.restore();
       getActionsSpy.restore();
     });
 
-    it('is initiated by scheduleAnimations', function() {
+    it('is initiated by scheduleAnimations', function () {
       maze.scheduleAnimations_(false);
       expect(finishAnimationsSpy.called).to.be.false;
       clock.tick(999);
@@ -59,7 +59,7 @@ describe('Maze', function() {
       expect(finishAnimationsSpy.called).to.be.true;
     });
 
-    it('can be rate-adjusted', function() {
+    it('can be rate-adjusted', function () {
       const scheduleSingleAnimationSpy = sinon.stub(
         maze,
         'scheduleSingleAnimation_'
@@ -94,7 +94,7 @@ describe('Maze', function() {
       scheduleSingleAnimationSpy.restore();
     });
 
-    it('can be canceled by a reset', function() {
+    it('can be canceled by a reset', function () {
       const controllerResetSpy = sinon.stub(maze.controller, 'reset');
 
       maze.scheduleAnimations_(false);

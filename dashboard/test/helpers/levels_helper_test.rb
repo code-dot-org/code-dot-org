@@ -13,6 +13,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   setup do
     @level = create(:maze)
+    @game = Game.custom_maze
 
     def request
       OpenStruct.new(
@@ -234,9 +235,9 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? {|callout| callout['id'] == callout1.id}
-    assert callouts.any? {|callout| callout['id'] == callout2.id}
-    assert callouts.none? {|callout| callout['id'] == irrelevant_callout.id}
+    assert(callouts.any? {|callout| callout['id'] == callout1.id})
+    assert(callouts.any? {|callout| callout['id'] == callout2.id})
+    assert(callouts.none? {|callout| callout['id'] == irrelevant_callout.id})
   end
 
   test "should localize callouts" do
@@ -249,7 +250,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'}
+    assert(callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'})
   end
 
   test 'app_options returns camelCased view option on Blockly level' do
@@ -284,7 +285,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
     create(:script_level, script: @script, levels: [@level])
 
-    assert_not_nil app_options['channel']
+    refute_nil app_options['channel']
   end
 
   test 'app_options does not set a channel if the level is cached' do
@@ -348,7 +349,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # Request it for a different level, should get a different channel
     level = create(:level, :blockly)
-    assert_not_equal channel, get_channel_for(level, script.id)
+    refute_equal channel, get_channel_for(level, script.id)
   end
 
   test 'uses_google_blockly is false if not set' do
@@ -420,7 +421,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # channel exists
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
-    assert_not_nil get_channel_for(@level, script.id, @user)
+    refute_nil get_channel_for(@level, script.id, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
     # different user
@@ -439,7 +440,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
     @channel_id = get_channel_for(@level, script.id, @user)
-    assert_not_nil @channel_id
+    refute_nil @channel_id
 
     _,  @project_id = storage_decrypt_channel_id(@channel_id)
     create :code_review, user_id: @user.id, project_id: @project_id
@@ -528,8 +529,8 @@ class LevelsHelperTest < ActionView::TestCase
     # "Load the level" as the navigator
     sign_in @navigator
     assert_equal true, app_options[:level]['isNavigator']
-    assert_not_nil app_options[:level]['pairingDriver']
-    assert_not_nil app_options[:level]['pairingChannelId']
+    refute_nil app_options[:level]['pairingDriver']
+    refute_nil app_options[:level]['pairingChannelId']
 
     # calling app_options should not set readonly_workspace
     app_options
@@ -612,7 +613,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     app_options = question_options
 
-    assert_not app_options[:level]['submittable']
+    refute app_options[:level]['submittable']
   end
 
   test 'submittable level is submittable for student with teacher' do
@@ -671,7 +672,7 @@ class LevelsHelperTest < ActionView::TestCase
     @script = create(:script)
     @script.update(professional_learning_course: 'Professional Learning Course')
     @script_level = create(:script_level, levels: [@level], script: @script)
-    assert_not can_view_solution?
+    refute can_view_solution?
 
     sign_out user
     user = create :levelbuilder
@@ -679,15 +680,15 @@ class LevelsHelperTest < ActionView::TestCase
     assert can_view_solution?
 
     @script.update(name: 'algebra')
-    assert_not can_view_solution?
+    refute can_view_solution?
 
     @script.update(name: 'some pd script')
     @script_level = nil
-    assert_not can_view_solution?
+    refute can_view_solution?
 
     @script_level = create(:script_level, levels: [@level], script: @script)
     @level.update(ideal_level_source_id: nil)
-    assert_not can_view_solution?
+    refute can_view_solution?
   end
 
   test 'show solution link shows link for appropriate users' do
@@ -707,10 +708,10 @@ class LevelsHelperTest < ActionView::TestCase
     sign_out user
     user = create :student
     sign_in user
-    assert_not can_view_solution?
+    refute can_view_solution?
 
     sign_out user
-    assert_not can_view_solution?
+    refute can_view_solution?
   end
 
   test 'build_script_level_path differentiates lesson and survey' do
@@ -845,7 +846,7 @@ class LevelsHelperTest < ActionView::TestCase
     @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
 
     standalone = false
-    assert_not include_multi_answers?(standalone)
+    refute include_multi_answers?(standalone)
   end
 
   test 'section first_activity_at should not be nil when finding experiments' do
@@ -1076,14 +1077,14 @@ class LevelsHelperTest < ActionView::TestCase
     stubs(:request).returns(mock_request)
 
     assert_equal render_multi_or_match_content("embedded blockly test.start_blocks"),
-      "<xml><xml><block type=\"embedded_block\"/></xml></xml>"\
-      "<div id=\"codeWorkspace\" style=\"display: none\"></div>"\
-      "<style>.blocklySvg { background: none; }</style>"\
-      "<script src=\"/assets/js/blockly.js\"></script>"\
-      "<script src=\"/assets/js/en_us/blockly_locale.js\"></script>"\
-      "<script src=\"/assets/js/common.js\"></script>"\
-      "<script src=\"/assets/js/en_us/maze_locale.js\"></script>"\
-      "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>"\
+      "<xml><xml><block type=\"embedded_block\"/></xml></xml>" \
+      "<div id=\"codeWorkspace\" style=\"display: none\"></div>" \
+      "<style>.blocklySvg { background: none; }</style>" \
+      "<script src=\"/assets/js/blockly.js\"></script>" \
+      "<script src=\"/assets/js/en_us/blockly_locale.js\"></script>" \
+      "<script src=\"/assets/js/common.js\"></script>" \
+      "<script src=\"/assets/js/en_us/maze_locale.js\"></script>" \
+      "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>" \
       "<script src=\"/assets/js/embedBlocks.js\"></script>"
 
     unstub(:request)
@@ -1094,8 +1095,8 @@ class LevelsHelperTest < ActionView::TestCase
       name: "embedded iframe test"
 
     assert_equal render_multi_or_match_content("embedded iframe test.level"),
-      "<div class=\"aspect-ratio\">"\
-      "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
+      "<div class=\"aspect-ratio\">" \
+      "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>" \
       "</div>"
   end
 

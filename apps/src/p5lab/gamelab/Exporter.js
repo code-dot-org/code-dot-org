@@ -1,4 +1,3 @@
-/* global dashboard */
 /* eslint no-unused-vars: ["error", { "ignoreRestSiblings": true }] */
 import $ from 'jquery';
 import JSZip from 'jszip';
@@ -13,7 +12,7 @@ import {APP_WIDTH, APP_HEIGHT} from '../constants';
 import {
   extractSoundAssets,
   rewriteAssetUrls,
-  fetchWebpackRuntime
+  fetchWebpackRuntime,
 } from '@cdo/apps/util/exporter';
 
 const CONTROLS_HEIGHT = 165;
@@ -34,7 +33,7 @@ export default {
       codePath: 'code.js',
       webExport: true,
       exportClass: 'web',
-      webpackRuntimePath: null
+      webpackRuntimePath: null,
     });
     const cacheBust = '?__cb__=' + '' + new String(Math.random()).slice(2);
 
@@ -45,12 +44,12 @@ export default {
       code,
       animationOpts,
       rootRelativeAssetPrefix,
-      zipAssetPrefix
+      zipAssetPrefix,
     });
     const exportCode = exportGamelabCodeEjs({
       code,
       animationOpts,
-      animationListJSON
+      animationListJSON,
     });
 
     const mainProjectFilesPrefix = appName + '/';
@@ -90,7 +89,7 @@ export default {
       gamelabApiAsset,
       cssAsset,
       p5Asset,
-      p5playAsset
+      p5playAsset,
     ];
 
     return new Promise((resolve, reject) => {
@@ -132,7 +131,7 @@ export default {
           logToCloud.addPageAction(
             logToCloud.PageAction.StaticResourceFetchError,
             {
-              app: 'gamelab'
+              app: 'gamelab',
             },
             1 / 100
           );
@@ -151,7 +150,7 @@ export default {
     const exportAnimationList = {
       orderedKeys,
       propsByKey: {},
-      ...rest
+      ...rest,
     };
     orderedKeys.map(key => {
       const props = propsByKey[key];
@@ -169,17 +168,17 @@ export default {
       const {rootRelativePath} = appAsset || {};
       rewrittenAnimationList.propsByKey[key] = {
         ...anim,
-        rootRelativePath
+        rootRelativePath,
       };
     });
     return rewrittenAnimationList;
   },
 
   exportApp(appName, code, animationOpts) {
-    return this.exportAppToZip(appName, code, animationOpts).then(function(
+    return this.exportAppToZip(appName, code, animationOpts).then(function (
       zip
     ) {
-      zip.generateAsync({type: 'blob'}).then(function(blob) {
+      zip.generateAsync({type: 'blob'}).then(function (blob) {
         saveAs(blob, appName + '.zip');
       });
     });
@@ -190,7 +189,7 @@ export default {
       animationOpts,
       code = '',
       rootRelativeAssetPrefix = '',
-      zipAssetPrefix = ''
+      zipAssetPrefix = '',
     } = params;
     const {animationList} = animationOpts;
     const {propsByKey: animationPropsByKey} = animationList;
@@ -202,14 +201,14 @@ export default {
         rootRelativePath: rootRelativeAssetPrefix + filename,
         zipPath: zipAssetPrefix + filename,
         dataType: 'binary',
-        filename: filename
+        filename: filename,
       };
     });
 
     const soundAssets = extractSoundAssets({
       sources: [code],
       rootRelativeAssetPrefix,
-      zipAssetPrefix
+      zipAssetPrefix,
     });
 
     const animAssets = Object.entries(animationPropsByKey).map(
@@ -229,7 +228,7 @@ export default {
           rootRelativePath: rootRelativeAssetPrefix + filename,
           zipPath: zipAssetPrefix + filename,
           dataType: 'binary',
-          filename
+          filename,
         };
       }
     );
@@ -241,9 +240,8 @@ export default {
 
     return {
       appAssets: [...appAssets, ...animAssets, ...soundAssets],
-      animationListJSON: this.generateExportableAnimationListJSON(
-        rewrittenAnimList
-      )
+      animationListJSON:
+        this.generateExportableAnimationListJSON(rewrittenAnimList),
     };
-  }
+  },
 };

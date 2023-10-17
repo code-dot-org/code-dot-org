@@ -8,15 +8,15 @@ export default class ChangeUserTypeForm extends React.Component {
   static propTypes = {
     values: PropTypes.shape({
       email: PropTypes.string,
-      emailOptIn: PropTypes.string
+      emailOptIn: PropTypes.string,
     }).isRequired,
     validationErrors: PropTypes.shape({
       email: PropTypes.string,
-      emailOptIn: PropTypes.string
+      emailOptIn: PropTypes.string,
     }).isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-    onSubmit: PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -34,13 +34,13 @@ export default class ChangeUserTypeForm extends React.Component {
   onEmailChange = event =>
     this.props.onChange({
       ...this.props.values,
-      email: event.target.value
+      email: event.target.value,
     });
 
   onEmailOptInChange = event =>
     this.props.onChange({
       ...this.props.values,
-      emailOptIn: event.target.value
+      emailOptIn: event.target.value,
     });
 
   onKeyDown = event => {
@@ -101,7 +101,7 @@ export default class ChangeUserTypeForm extends React.Component {
             onChange={this.onEmailOptInChange}
             style={{
               ...styles.input,
-              width: 100
+              width: 100,
             }}
             ref={el => (this.emailOptInSelect = el)}
           >
@@ -117,6 +117,6 @@ export default class ChangeUserTypeForm extends React.Component {
 
 const styles = {
   input: {
-    marginBottom: 4
-  }
+    marginBottom: 4,
+  },
 };

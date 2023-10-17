@@ -1,0 +1,3 @@
+#weblab-network-check-container{style: "height: 100%"}
+- data = {bramble: {studioUrl: @studio_url}.to_json}
+%script{type: "text/javascript", src: webpack_asset_path('js/weblab_host/network_check.js'), data: data}

@@ -26,8 +26,8 @@ class VocabulariesController < ApplicationController
       vocabulary.save!
       vocabulary.serialize_scripts
       render json: vocabulary.summarize_for_lesson_edit
-    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => e
-      render status: :bad_request, json: {error: e.message.to_json}
+    rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
+      render status: :bad_request, json: {error: exception.message.to_json}
     end
   end
 
@@ -54,9 +54,7 @@ class VocabulariesController < ApplicationController
     @vocabularies = @course_version.vocabularies.order(:word).map(&:summarize_for_edit)
   end
 
-  private
-
-  def vocabulary_params
+  private def vocabulary_params
     vp = params.transform_keys(&:underscore)
     vp = vp.permit(:id, :key, :word, :definition, :common_sense_media, :course_version_id, :lesson_ids)
     vp[:lesson_ids] = JSON.parse(vp[:lesson_ids]) if vp[:lesson_ids]

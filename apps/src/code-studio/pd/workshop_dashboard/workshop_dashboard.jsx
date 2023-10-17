@@ -1,5 +1,3 @@
-/* global window */
-
 /**
  * Main landing page and router for the workshop dashboard.
  */
@@ -22,30 +20,30 @@ import WorkshopAttendance from './attendance/workshop_attendance';
 import ReportView from './reports/report_view';
 import workshopDashboardReducers, {
   setPermission,
-  setFacilitatorCourses
+  setFacilitatorCourses,
 } from './reducers';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import regionalPartnerReducers, {
   setRegionalPartners,
   setRegionalPartnerFilter,
-  getInitialRegionalPartnerFilter
+  getInitialRegionalPartnerFilter,
 } from '../components/regional_partners_reducers';
 import {WorkshopAdmin} from './permission';
 import {
   RegionalPartnerShape,
-  ALL_PARTNERS_OPTION
+  ALL_PARTNERS_OPTION,
 } from '../components/regional_partner_dropdown';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const browserHistory = useRouterHistory(createHistory)({
-  basename: ROOT_PATH
+  basename: ROOT_PATH,
 });
 const store = createStore(
   combineReducers({
     workshopDashboard: workshopDashboardReducers,
     regionalPartners: regionalPartnerReducers,
-    mapbox: mapboxReducer
+    mapbox: mapboxReducer,
   })
 );
 
@@ -58,7 +56,7 @@ export default class WorkshopDashboard extends React.Component {
     permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
     facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
     regionalPartners: PropTypes.arrayOf(RegionalPartnerShape),
-    mapboxAccessToken: PropTypes.string
+    mapboxAccessToken: PropTypes.string,
   };
 
   constructor(props) {

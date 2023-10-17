@@ -1,4 +1,3 @@
-/* global p5 */
 import {expect} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
@@ -6,12 +5,12 @@ import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {
   MAX_NUM_SPRITES,
-  SPRITE_WARNING_BUFFER
+  SPRITE_WARNING_BUFFER,
 } from '@cdo/apps/p5lab/spritelab/constants';
 import msg from '@cdo/locale';
 import {
   workspaceAlertTypes,
-  displayWorkspaceAlert
+  displayWorkspaceAlert,
 } from '@cdo/apps/code-studio/projectRedux';
 import * as redux from '@cdo/apps/redux';
 
@@ -19,7 +18,7 @@ describe('SpriteLab Core Library', () => {
   let coreLibrary;
   const spriteName = 'spriteName';
 
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
     let image = new p5.Image(100, 100, coreLibrary.p5);
@@ -30,7 +29,7 @@ describe('SpriteLab Core Library', () => {
       a: animation,
       b: animation,
       c: animation,
-      costume_label: animation
+      costume_label: animation,
     };
   });
 
@@ -77,7 +76,7 @@ describe('SpriteLab Core Library', () => {
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: spriteName},
-          'costume'
+          'costume',
         ])
       ).to.equal('costume_label');
     });
@@ -137,13 +136,13 @@ describe('SpriteLab Core Library', () => {
       let id3 = coreLibrary.addSprite();
 
       expect(coreLibrary.getSpriteArray({id: id1})).to.have.members([
-        coreLibrary.nativeSpriteMap[id1]
+        coreLibrary.nativeSpriteMap[id1],
       ]);
       expect(coreLibrary.getSpriteArray({id: id2})).to.have.members([
-        coreLibrary.nativeSpriteMap[id2]
+        coreLibrary.nativeSpriteMap[id2],
       ]);
       expect(coreLibrary.getSpriteArray({id: id3})).to.have.members([
-        coreLibrary.nativeSpriteMap[id3]
+        coreLibrary.nativeSpriteMap[id3],
       ]);
     });
 
@@ -154,10 +153,10 @@ describe('SpriteLab Core Library', () => {
 
       expect(coreLibrary.getSpriteArray({costume: 'a'})).to.have.members([
         coreLibrary.nativeSpriteMap[id1],
-        coreLibrary.nativeSpriteMap[id3]
+        coreLibrary.nativeSpriteMap[id3],
       ]);
       expect(coreLibrary.getSpriteArray({costume: 'b'})).to.have.members([
-        coreLibrary.nativeSpriteMap[id2]
+        coreLibrary.nativeSpriteMap[id2],
       ]);
     });
 
@@ -166,15 +165,15 @@ describe('SpriteLab Core Library', () => {
       let id2 = coreLibrary.addSprite({name: 'name2'});
 
       expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
-        coreLibrary.nativeSpriteMap[id1]
+        coreLibrary.nativeSpriteMap[id1],
       ]);
       expect(coreLibrary.getSpriteArray({name: 'name2'})).to.have.members([
-        coreLibrary.nativeSpriteMap[id2]
+        coreLibrary.nativeSpriteMap[id2],
       ]);
 
       let id3 = coreLibrary.addSprite({name: spriteName});
       expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
-        coreLibrary.nativeSpriteMap[id3]
+        coreLibrary.nativeSpriteMap[id3],
       ]);
     });
   });
@@ -190,22 +189,23 @@ describe('SpriteLab Core Library', () => {
 
   describe('Workspace alert dispatch', () => {
     let stubbedDispatch;
-    beforeEach(function() {
+    beforeEach(function () {
       stubbedDispatch = stub();
       stub(redux, 'getStore').returns({
-        dispatch: stubbedDispatch
+        dispatch: stubbedDispatch,
       });
     });
 
-    afterEach(function() {
+    afterEach(function () {
       redux.getStore.restore();
     });
 
     // If the total number of sprites created is equal to or less than
     // MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER, then a display workspace alert
     // should not have been dispatched
-    it(`If ${MAX_NUM_SPRITES -
-      SPRITE_WARNING_BUFFER} sprites or less are created, a workspace alert is NOT dispatched`, () => {
+    it(`If ${
+      MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER
+    } sprites or less are created, a workspace alert is NOT dispatched`, () => {
       for (let i = 0; i < MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER; i++) {
         coreLibrary.addSprite();
       }
@@ -256,11 +256,11 @@ describe('SpriteLab Core Library', () => {
       let sprite = coreLibrary.nativeSpriteMap[id];
       let behavior1 = {
         func: () => behaviorLog.push('behavior 1 ran'),
-        name: 'behavior1'
+        name: 'behavior1',
       };
       let behavior2 = {
         func: () => behaviorLog.push('behavior 2 ran'),
-        name: 'behavior2'
+        name: 'behavior2',
       };
       coreLibrary.addBehavior(sprite, behavior1);
       coreLibrary.addBehavior(sprite, behavior2);
@@ -278,7 +278,7 @@ describe('SpriteLab Core Library', () => {
       let sprite2 = coreLibrary.nativeSpriteMap[id2];
       let behavior = {
         func: arg => behaviorLog.push('behavior ran for sprite ' + arg.id),
-        name: 'behavior'
+        name: 'behavior',
       };
 
       coreLibrary.addBehavior(sprite1, behavior);
@@ -287,7 +287,7 @@ describe('SpriteLab Core Library', () => {
 
       expect(behaviorLog).to.deep.equal([
         'behavior ran for sprite 0',
-        'behavior ran for sprite 1'
+        'behavior ran for sprite 1',
       ]);
     });
 
@@ -300,11 +300,11 @@ describe('SpriteLab Core Library', () => {
       let sprite1 = coreLibrary.nativeSpriteMap[id1];
       let behavior1 = {
         func: arg => behaviorLog.push('behavior 1 ran for sprite ' + arg.id),
-        name: 'behavior1'
+        name: 'behavior1',
       };
       let behavior2 = {
         func: arg => behaviorLog.push('behavior 2 ran for sprite ' + arg.id),
-        name: 'behavior2'
+        name: 'behavior2',
       };
 
       coreLibrary.addBehavior(sprite0, behavior1);
@@ -325,7 +325,7 @@ describe('SpriteLab Core Library', () => {
         'behavior 2 ran for sprite 1',
         // Second tick:
         'behavior 1 ran for sprite 1',
-        'behavior 2 ran for sprite 0'
+        'behavior 2 ran for sprite 0',
       ]);
     });
 
@@ -338,11 +338,11 @@ describe('SpriteLab Core Library', () => {
       let sprite1 = coreLibrary.nativeSpriteMap[id1];
       let behavior1 = {
         func: arg => behaviorLog.push('behavior 1 ran for sprite ' + arg.id),
-        name: 'behavior1'
+        name: 'behavior1',
       };
       let behavior2 = {
         func: arg => behaviorLog.push('behavior 2 ran for sprite ' + arg.id),
-        name: 'behavior2'
+        name: 'behavior2',
       };
 
       coreLibrary.addBehavior(sprite0, behavior1);
@@ -362,7 +362,7 @@ describe('SpriteLab Core Library', () => {
         'behavior 2 ran for sprite 1',
         // Second tick:
         'behavior 1 ran for sprite 1',
-        'behavior 2 ran for sprite 1'
+        'behavior 2 ran for sprite 1',
       ]);
     });
   });
@@ -383,7 +383,7 @@ describe('SpriteLab Core Library', () => {
 
       expect(eventLog).to.deep.equal([
         'when up press ran',
-        'while down press ran'
+        'while down press ran',
       ]);
 
       keyWentDownStub.restore();
@@ -392,13 +392,13 @@ describe('SpriteLab Core Library', () => {
 
     describe('Click events', () => {
       let eventLog, mouseWentDownStub, mouseIsOverStub, mousePressedOverStub;
-      beforeEach(function() {
+      beforeEach(function () {
         eventLog = [];
         mouseWentDownStub = stub(coreLibrary.p5, 'mouseWentDown');
         mouseIsOverStub = stub(coreLibrary.p5, 'mouseIsOver');
         mousePressedOverStub = stub(coreLibrary.p5, 'mousePressedOver');
       });
-      afterEach(function() {
+      afterEach(function () {
         mouseWentDownStub.restore();
         mouseIsOverStub.restore();
         mousePressedOverStub.restore();
@@ -459,7 +459,7 @@ describe('SpriteLab Core Library', () => {
         coreLibrary.runEvents();
         expect(eventLog).to.deep.equal([
           id1 + ' was clicked',
-          id2 + ' was clicked'
+          id2 + ' was clicked',
         ]);
       });
     });
@@ -467,7 +467,7 @@ describe('SpriteLab Core Library', () => {
     describe('Collision Events with individual sprites', () => {
       let eventLog, sprite, overlapStub;
       const targetName = 'targetName';
-      beforeEach(function() {
+      beforeEach(function () {
         eventLog = [];
         let spriteId = coreLibrary.addSprite({name: spriteName});
         sprite = coreLibrary.nativeSpriteMap[spriteId];
@@ -475,7 +475,7 @@ describe('SpriteLab Core Library', () => {
         overlapStub = stub(sprite, 'overlap');
       });
 
-      afterEach(function() {
+      afterEach(function () {
         overlapStub.restore();
       });
 
@@ -486,7 +486,7 @@ describe('SpriteLab Core Library', () => {
           'whentouch',
           {
             sprite1: {name: spriteName},
-            sprite2: {name: targetName}
+            sprite2: {name: targetName},
           },
           () => eventLog.push('when touch ran')
         );
@@ -495,7 +495,7 @@ describe('SpriteLab Core Library', () => {
           'whiletouch',
           {
             sprite1: {name: spriteName},
-            sprite2: {name: targetName}
+            sprite2: {name: targetName},
           },
           () => eventLog.push('while touch ran')
         );
@@ -511,7 +511,7 @@ describe('SpriteLab Core Library', () => {
           'whiletouch',
           {
             sprite1: {name: spriteName},
-            sprite2: {name: targetName}
+            sprite2: {name: targetName},
           },
           () => eventLog.push('while touch ran')
         );
@@ -531,7 +531,7 @@ describe('SpriteLab Core Library', () => {
           'whentouch',
           {
             sprite1: {name: spriteName},
-            sprite2: {name: targetName}
+            sprite2: {name: targetName},
           },
           () => eventLog.push('when touch ran')
         );
@@ -552,7 +552,7 @@ describe('SpriteLab Core Library', () => {
           'whentouch',
           {
             sprite1: {name: spriteName},
-            sprite2: {name: targetName}
+            sprite2: {name: targetName},
           },
           () => eventLog.push('when touch ran')
         );
@@ -578,34 +578,34 @@ describe('SpriteLab Core Library', () => {
         sprite2,
         target1,
         target2;
-      beforeEach(function() {
+      beforeEach(function () {
         eventLog = [];
 
         let sprite1Id = coreLibrary.addSprite({
           name: 'sprite1',
-          animation: 'a'
+          animation: 'a',
         });
         sprite1 = coreLibrary.nativeSpriteMap[sprite1Id];
         let sprite2Id = coreLibrary.addSprite({
           name: 'sprite2',
-          animation: 'a'
+          animation: 'a',
         });
         sprite2 = coreLibrary.nativeSpriteMap[sprite2Id];
         let target1Id = coreLibrary.addSprite({
           name: 'target1',
-          animation: 'b'
+          animation: 'b',
         });
         target1 = coreLibrary.nativeSpriteMap[target1Id];
         let target2Id = coreLibrary.addSprite({
           name: 'target2',
-          animation: 'b'
+          animation: 'b',
         });
         target2 = coreLibrary.nativeSpriteMap[target2Id];
 
         overlapStub1 = stub(sprite1, 'overlap');
         overlapStub2 = stub(sprite2, 'overlap');
       });
-      afterEach(function() {
+      afterEach(function () {
         overlapStub1.restore();
         overlapStub2.restore();
       });
@@ -699,7 +699,7 @@ describe('SpriteLab Core Library', () => {
           'while: 0, 2',
           'while: 0, 3',
           'while: 1, 2',
-          'while: 1, 3'
+          'while: 1, 3',
         ]);
       });
 
@@ -720,7 +720,7 @@ describe('SpriteLab Core Library', () => {
         // 'b' sprite changes to 'c' sprite
         spriteCommands.setAnimation.apply(coreLibrary, [
           {name: 'target1'},
-          'c'
+          'c',
         ]);
         coreLibrary.runEvents();
         // Event does not fire
@@ -729,7 +729,7 @@ describe('SpriteLab Core Library', () => {
         // 'c' sprite changes back to 'b' sprite
         spriteCommands.setAnimation.apply(coreLibrary, [
           {name: 'target1'},
-          'b'
+          'b',
         ]);
         coreLibrary.runEvents();
         // Event does fire again

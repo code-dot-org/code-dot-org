@@ -3,19 +3,19 @@ import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
 
 var testUtils = require('../../util/testUtils');
 
-describe('throwIfSerializedAnimationListIsInvalid', function() {
+describe('throwIfSerializedAnimationListIsInvalid', function () {
   testUtils.setExternalGlobals();
 
-  it('does not throw on minimum valid SerializedAnimationList', function() {
+  it('does not throw on minimum valid SerializedAnimationList', function () {
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: [],
-        propsByKey: {}
+        propsByKey: {},
       })
     ).not.to.throw();
   });
 
-  it('throws if passed anything empty', function() {
+  it('throws if passed anything empty', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid(undefined)).to.throw(
       Error,
       `serializedAnimationList is not an object`
@@ -26,49 +26,49 @@ describe('throwIfSerializedAnimationListIsInvalid', function() {
     );
   });
 
-  it('throws if missing orderedKeys or propsByKey', function() {
+  it('throws if missing orderedKeys or propsByKey', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid({})).to.throw(
       Error,
       `orderedKeys is not an array`
     );
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
-        orderedKeys: []
+        orderedKeys: [],
       })
     ).to.throw(Error, `propsByKey is not an object`);
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
-        propsByKey: {}
+        propsByKey: {},
       })
     ).to.throw(Error, `orderedKeys is not an array`);
   });
 
-  it('throws if orderedKeys is not an array', function() {
+  it('throws if orderedKeys is not an array', function () {
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: {},
-        propsByKey: {}
+        propsByKey: {},
       })
     ).to.throw(Error, `orderedKeys is not an array`);
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: '',
-        propsByKey: {}
+        propsByKey: {},
       })
     ).to.throw(Error, `orderedKeys is not an array`);
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: null,
-        propsByKey: {}
+        propsByKey: {},
       })
     ).to.throw(Error, `orderedKeys is not an array`);
   });
 
-  it('throws if it finds keys without associated props', function() {
+  it('throws if it finds keys without associated props', function () {
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: ['keyWithoutProps'],
-        propsByKey: {}
+        propsByKey: {},
       })
     ).to.throw(
       Error,
@@ -76,11 +76,11 @@ describe('throwIfSerializedAnimationListIsInvalid', function() {
     );
   });
 
-  it('throws if it finds props without associated key', function() {
+  it('throws if it finds props without associated key', function () {
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: [],
-        propsByKey: buildValidPropsForKeys(['propsWithoutKey'])
+        propsByKey: buildValidPropsForKeys(['propsWithoutKey']),
       })
     ).to.throw(
       Error,
@@ -88,13 +88,13 @@ describe('throwIfSerializedAnimationListIsInvalid', function() {
     );
   });
 
-  it('throws if required prop fields are missing', function() {
+  it('throws if required prop fields are missing', function () {
     const requiredFields = [
       'name',
       'frameSize',
       'frameCount',
       'looping',
-      'frameDelay'
+      'frameDelay',
     ];
     requiredFields.forEach(requiredField => {
       const keys = ['mykey'];
@@ -103,7 +103,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function() {
       expect(() =>
         throwIfSerializedAnimationListIsInvalid({
           orderedKeys: keys,
-          propsByKey: props
+          propsByKey: props,
         })
       ).to.throw(
         Error,
@@ -112,19 +112,19 @@ describe('throwIfSerializedAnimationListIsInvalid', function() {
     });
   });
 
-  it('throws if a name is used twice in props', function() {
+  it('throws if a name is used twice in props', function () {
     const keys = ['one', 'two'];
     let props = buildValidPropsForKeys(keys);
     keys.forEach(k => (props[k].name = 'duplicate'));
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: keys,
-        propsByKey: props
+        propsByKey: props,
       })
     ).to.throw(Error, 'Name "duplicate" appears more than once in propsByKey');
   });
 
-  it('does not throw if it finds an unexpected property', function() {
+  it('does not throw if it finds an unexpected property', function () {
     const keys = ['mykey'];
     let props = buildValidPropsForKeys(keys);
     props['mykey'].extraStuff = 'here is something else';
@@ -132,7 +132,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function() {
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: keys,
         propsByKey: props,
-        somethingElse: {}
+        somethingElse: {},
       })
     ).not.to.throw();
   });
@@ -146,7 +146,7 @@ function buildValidPropsForKeys(keys) {
       frameSize: {x: 0, y: 0},
       frameCount: 0,
       looping: true,
-      frameDelay: 0
+      frameDelay: 0,
     };
     return memo;
   }, {});

@@ -6,7 +6,7 @@ import {
   Transforms,
   createEditor,
   Text,
-  Element as SlateElement
+  Element as SlateElement,
 } from 'slate';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
@@ -20,12 +20,10 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const renderLeaf = useCallback(props => <Leaf {...props} />, []);
   const editor = useMemo(() => withReact(createEditor()), []);
   const [commentText, setCommentText] = useState('');
-  const [displayAddCommentFailure, setDisplayAddCommentFailure] = useState(
-    false
-  );
-  const [addCommentFailureMessage, setAddCommentFailureMessage] = useState(
-    null
-  );
+  const [displayAddCommentFailure, setDisplayAddCommentFailure] =
+    useState(false);
+  const [addCommentFailureMessage, setAddCommentFailureMessage] =
+    useState(null);
 
   const onChange = value => {
     const markdownValue = value.map(v => serialize(v)).join('');
@@ -57,8 +55,8 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
     Transforms.delete(editor, {
       at: {
         anchor: Editor.start(editor, []),
-        focus: Editor.end(editor, [])
-      }
+        focus: Editor.end(editor, []),
+      },
     });
     setDisplayAddCommentFailure(false);
   };
@@ -120,7 +118,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
           disabled={isTextEmpty(commentText)}
           onClick={handleSubmit}
           text={javalabMsg.submit()}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           style={styles.submitButton}
         />
       </div>
@@ -134,12 +132,12 @@ const toggleBlock = (editor, format) => {
   if (isActive) {
     Transforms.unwrapNodes(editor, {
       match: n => n.type === format,
-      split: true
+      split: true,
     });
   } else {
     Transforms.wrapNodes(editor, {
       type: format,
-      children: []
+      children: [],
     });
   }
 };
@@ -156,7 +154,7 @@ const isBlockActive = (editor, format, blockType = 'type') => {
       match: n =>
         !Editor.isEditor(n) &&
         SlateElement.isElement(n) &&
-        n[blockType] === format
+        n[blockType] === format,
     })
   );
 
@@ -178,7 +176,7 @@ const Element = ({attributes, children, element}) => {
 Element.propTypes = {
   attributes: PropTypes.object,
   children: PropTypes.node,
-  element: PropTypes.object
+  element: PropTypes.object,
 };
 
 const Leaf = ({attributes, children}) => {
@@ -186,18 +184,18 @@ const Leaf = ({attributes, children}) => {
 };
 Leaf.propTypes = {
   attributes: PropTypes.object,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 const initialValue = [
   {
     type: 'paragraph',
-    children: [{text: ''}]
-  }
+    children: [{text: ''}],
+  },
 ];
 
 CodeReviewCommentEditor.propTypes = {
-  addCodeReviewComment: PropTypes.func.isRequired
+  addCodeReviewComment: PropTypes.func.isRequired,
 };
 
 export default CodeReviewCommentEditor;
@@ -205,24 +203,24 @@ export default CodeReviewCommentEditor;
 const styles = {
   textareaWrapper: {
     border: `1px solid ${color.light_teal}`,
-    borderRadius: '5px'
+    borderRadius: '5px',
   },
   codeButton: {
-    padding: '5px'
+    padding: '5px',
   },
   buttonsArea: {
     borderBottom: `1px solid ${color.light_gray}`,
-    margin: '0 5px'
+    margin: '0 5px',
   },
   submit: {
     display: 'flex',
     alignItems: 'end',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   submitButton: {
-    marginTop: '10px'
+    marginTop: '10px',
   },
   error: {
-    marginTop: '8px'
-  }
+    marginTop: '8px',
+  },
 };

@@ -7,7 +7,7 @@ export default class SearchBar extends React.Component {
   static propTypes = {
     placeholderText: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-    clearButton: PropTypes.bool
+    clearButton: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -56,14 +56,14 @@ const styles = {
     borderWidth: BORDER_WIDTH,
     borderColor: BORDER_COLOR,
     borderRadius: BORDER_RADIUS,
-    textIndent: 22
+    textIndent: 22,
   },
   icon: {
     position: 'absolute',
     top: 6,
     left: 5,
     fontSize: 16,
-    color: color.light_gray
+    color: color.light_gray,
   },
   clearIcon: {
     position: 'absolute',
@@ -71,10 +71,10 @@ const styles = {
     right: 5,
     fontSize: 16,
     color: color.light_gray,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   searchArea: {
     position: 'relative',
-    margin: '10px 0'
-  }
+    margin: '10px 0',
+  },
 };

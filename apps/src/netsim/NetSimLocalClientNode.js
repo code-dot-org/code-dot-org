@@ -33,7 +33,7 @@ var MessageGranularity = NetSimConstants.MessageGranularity;
  * @constructor
  * @augments NetSimClientNode
  */
-var NetSimLocalClientNode = (module.exports = function(shard, clientRow) {
+var NetSimLocalClientNode = (module.exports = function (shard, clientRow) {
   NetSimClientNode.call(this, shard, clientRow);
 
   /**
@@ -90,7 +90,7 @@ var NetSimLocalClientNode = (module.exports = function(shard, clientRow) {
    * @type {function}
    * @private
    */
-  this.onNodeLostConnection_ = function() {};
+  this.onNodeLostConnection_ = function () {};
 
   /**
    * Event registration information
@@ -107,10 +107,10 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
  * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimLocalClientNode.create = function(shard, displayName, onComplete) {
+NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
   var templateNode = new NetSimLocalClientNode(shard);
   templateNode.displayName_ = displayName;
-  templateNode.getTable().create(templateNode.buildRow(), function(err, row) {
+  templateNode.getTable().create(templateNode.buildRow(), function (err, row) {
     if (err) {
       onComplete(err, null);
       return;
@@ -122,7 +122,7 @@ NetSimLocalClientNode.create = function(shard, displayName, onComplete) {
 };
 
 /** Set node's display name.  Does not trigger an update! */
-NetSimLocalClientNode.prototype.setDisplayName = function(displayName) {
+NetSimLocalClientNode.prototype.setDisplayName = function (displayName) {
   this.displayName_ = displayName;
 };
 
@@ -132,7 +132,7 @@ NetSimLocalClientNode.prototype.setDisplayName = function(displayName) {
  * @param {!NetSimLogPanel} sentLog
  * @param {!NetSimLogPanel} receivedLog
  */
-NetSimLocalClientNode.prototype.initializeSimulation = function(
+NetSimLocalClientNode.prototype.initializeSimulation = function (
   sentLog,
   receivedLog
 ) {
@@ -159,7 +159,7 @@ NetSimLocalClientNode.prototype.initializeSimulation = function(
  * Gives the simulating node a chance to unregister from anything it was
  * observing.
  */
-NetSimLocalClientNode.prototype.stopSimulation = function() {
+NetSimLocalClientNode.prototype.stopSimulation = function () {
   if (this.eventKeys.registeredOnShard) {
     this.eventKeys.registeredOnShard.nodeTable.tableChange.unregister(
       this.eventKeys.nodeTable
@@ -178,8 +178,8 @@ NetSimLocalClientNode.prototype.stopSimulation = function() {
  * Ticks the simulation routers
  * @param {!RunLoop.Clock} clock
  */
-NetSimLocalClientNode.prototype.tick = function(clock) {
-  this.routers_.forEach(function(router) {
+NetSimLocalClientNode.prototype.tick = function (clock) {
+  this.routers_.forEach(function (router) {
     router.tick(clock);
   });
 };
@@ -189,7 +189,7 @@ NetSimLocalClientNode.prototype.tick = function(clock) {
  * of the shard.
  * @param {function} onNodeLostConnection
  */
-NetSimLocalClientNode.prototype.setLostConnectionCallback = function(
+NetSimLocalClientNode.prototype.setLostConnectionCallback = function (
   onNodeLostConnection
 ) {
   this.onNodeLostConnection_ = onNodeLostConnection;
@@ -199,17 +199,20 @@ NetSimLocalClientNode.prototype.setLostConnectionCallback = function(
  * If a client update fails, should attempt an automatic reconnect.
  * @param {NodeStyleCallback} [onComplete]
  */
-NetSimLocalClientNode.prototype.update = function(onComplete) {
-  onComplete = onComplete || function() {};
+NetSimLocalClientNode.prototype.update = function (onComplete) {
+  onComplete = onComplete || function () {};
 
   var self = this;
-  NetSimLocalClientNode.superPrototype.update.call(this, function(err, result) {
-    if (err) {
-      logger.error('Local node update failed: ' + err.message);
-      self.onNodeLostConnection_();
+  NetSimLocalClientNode.superPrototype.update.call(
+    this,
+    function (err, result) {
+      if (err) {
+        logger.error('Local node update failed: ' + err.message);
+        self.onNodeLostConnection_();
+      }
+      onComplete(err, result);
     }
-    onComplete(err, result);
-  });
+  );
 };
 
 /**
@@ -217,10 +220,13 @@ NetSimLocalClientNode.prototype.update = function(onComplete) {
  * @param {NetSimClientNode} client
  * @param {!NodeStyleCallback} onComplete
  */
-NetSimLocalClientNode.prototype.connectToClient = function(client, onComplete) {
+NetSimLocalClientNode.prototype.connectToClient = function (
+  client,
+  onComplete
+) {
   this.connectToNode(
     client,
-    function(err, wire) {
+    function (err, wire) {
       if (err) {
         onComplete(err);
         return;
@@ -228,7 +234,7 @@ NetSimLocalClientNode.prototype.connectToClient = function(client, onComplete) {
 
       // Check whether WE just established a mutual connection with a remote client.
       this.shard_.wireTable.refresh().always(
-        function() {
+        function () {
           this.onWireTableChange_(this.shard_.wireTable.readAll());
           onComplete(err, wire);
         }.bind(this)
@@ -241,15 +247,18 @@ NetSimLocalClientNode.prototype.connectToClient = function(client, onComplete) {
  * @param {!NetSimRouterNode} router
  * @param {NodeStyleCallback} onComplete
  */
-NetSimLocalClientNode.prototype.connectToRouter = function(router, onComplete) {
-  onComplete = onComplete || function() {};
+NetSimLocalClientNode.prototype.connectToRouter = function (
+  router,
+  onComplete
+) {
+  onComplete = onComplete || function () {};
 
   logger.info(
     this.getDisplayName() + ': Connecting to ' + router.getDisplayName()
   );
   this.connectToNode(
     router,
-    function(err, wire) {
+    function (err, wire) {
       if (err) {
         onComplete(err);
         return;
@@ -273,7 +282,7 @@ NetSimLocalClientNode.prototype.connectToRouter = function(router, onComplete) {
  * @returns {WireRow}
  * @override
  */
-NetSimLocalClientNode.prototype.makeWireRowForConnectingTo = function(
+NetSimLocalClientNode.prototype.makeWireRowForConnectingTo = function (
   otherNode
 ) {
   if (otherNode instanceof NetSimRouterNode) {
@@ -283,7 +292,7 @@ NetSimLocalClientNode.prototype.makeWireRowForConnectingTo = function(
       localAddress: otherNode.getRandomAvailableClientAddress(),
       remoteAddress: otherNode.getAddress(),
       localHostname: this.getHostname(),
-      remoteHostname: otherNode.getHostname()
+      remoteHostname: otherNode.getHostname(),
     };
   }
   return NetSimLocalClientNode.superPrototype.makeWireRowForConnectingTo.call(
@@ -298,14 +307,14 @@ NetSimLocalClientNode.prototype.makeWireRowForConnectingTo = function(
  * @returns {NetSimRouterNode|null} Router we are connected to or null if not
  *          connected to a router at all.
  */
-NetSimLocalClientNode.prototype.getMyRouter = function() {
+NetSimLocalClientNode.prototype.getMyRouter = function () {
   if (this.myRouterID_ === undefined) {
     return null;
   }
 
   return _.find(
     this.routers_,
-    function(router) {
+    function (router) {
       return router.entityID === this.myRouterID_;
     }.bind(this)
   );
@@ -314,8 +323,8 @@ NetSimLocalClientNode.prototype.getMyRouter = function() {
 /**
  * @param {NodeStyleCallback} [onComplete]
  */
-NetSimLocalClientNode.prototype.disconnectRemote = function(onComplete) {
-  onComplete = onComplete || function() {};
+NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
+  onComplete = onComplete || function () {};
 
   // save the wire so we can destroy it
   var wire = this.getOutgoingWire();
@@ -326,7 +335,7 @@ NetSimLocalClientNode.prototype.disconnectRemote = function(onComplete) {
   // destroy wire on API
   if (wire) {
     wire.destroy(
-      function(err) {
+      function (err) {
         // We're not going to stop if an error occurred here; the error might
         // just be that the wire was already cleaned up by another node.
         // As long as we make a good-faith disconnect effort, the cleanup system
@@ -349,7 +358,7 @@ NetSimLocalClientNode.prototype.disconnectRemote = function(onComplete) {
  * disconnect paths.
  * @private
  */
-NetSimLocalClientNode.prototype.cleanUpBeforeDestroyingWire_ = function() {
+NetSimLocalClientNode.prototype.cleanUpBeforeDestroyingWire_ = function () {
   this.myRemoteClient = null;
   this.myRouterID_ = undefined;
   this.remoteChange.notifyObservers(null, null);
@@ -361,7 +370,7 @@ NetSimLocalClientNode.prototype.cleanUpBeforeDestroyingWire_ = function() {
  * @param {string} payload
  * @param {!NodeStyleCallback} onComplete
  */
-NetSimLocalClientNode.prototype.sendMessage = function(payload, onComplete) {
+NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
   var myWire = this.getOutgoingWire();
   if (!myWire) {
     onComplete(new Error('Cannot send message; not connected.'));
@@ -390,9 +399,9 @@ NetSimLocalClientNode.prototype.sendMessage = function(payload, onComplete) {
       toNodeID: remoteNodeID,
       simulatedBy: simulatingNodeID,
       payload: payload,
-      extraHopsRemaining: extraHops
+      extraHopsRemaining: extraHops,
     },
-    function(err, row) {
+    function (err, row) {
       if (err) {
         logger.error(
           'Failed to send message: ' +
@@ -433,7 +442,7 @@ NetSimLocalClientNode.prototype.sendMessage = function(payload, onComplete) {
  * @param {number} remoteNodeID
  * @returns {number} one of the two IDs provided
  */
-NetSimLocalClientNode.prototype.selectSimulatingNode_ = function(
+NetSimLocalClientNode.prototype.selectSimulatingNode_ = function (
   localNodeID,
   remoteNodeID
 ) {
@@ -462,7 +471,7 @@ NetSimLocalClientNode.prototype.selectSimulatingNode_ = function(
  * @param {string[]} payloads
  * @param {!NodeStyleCallback} onComplete
  */
-NetSimLocalClientNode.prototype.sendMessages = function(payloads, onComplete) {
+NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
   if (payloads.length === 0) {
     onComplete(null);
     return;
@@ -470,7 +479,7 @@ NetSimLocalClientNode.prototype.sendMessages = function(payloads, onComplete) {
 
   this.sendMessage(
     payloads[0],
-    function(err, result) {
+    function (err, result) {
       if (err) {
         onComplete(err, result);
         return;
@@ -486,7 +495,7 @@ NetSimLocalClientNode.prototype.sendMessages = function(payloads, onComplete) {
  * routers configured to simulate for the local node.
  * @private
  */
-NetSimLocalClientNode.prototype.onNodeTableChange_ = function() {
+NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
   var nodeRows = this.shard_.nodeTable.readAll();
 
   // If our own row is gone, drop everything and handle disconnect.
@@ -496,8 +505,8 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function() {
   }
 
   // Remove simulating routers that have vanished from remote storage.
-  this.routers_ = this.routers_.filter(function(simulatingRouter) {
-    var stillExists = nodeRows.some(function(row) {
+  this.routers_ = this.routers_.filter(function (simulatingRouter) {
+    var stillExists = nodeRows.some(function (row) {
       return row.id === simulatingRouter.entityID;
     });
     if (!stillExists) {
@@ -509,11 +518,11 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function() {
 
   // Create and simulate new routers
   nodeRows
-    .filter(function(row) {
+    .filter(function (row) {
       return row.type === NetSimConstants.NodeType.ROUTER;
     })
-    .forEach(function(row) {
-      var alreadySimulating = this.routers_.some(function(simulatingRouter) {
+    .forEach(function (row) {
+      var alreadySimulating = this.routers_.some(function (simulatingRouter) {
         return row.id === simulatingRouter.entityID;
       });
 
@@ -529,8 +538,8 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function() {
  * @param {Object[]} nodeRows
  * @returns {boolean} TRUE if own row is in given row collection
  */
-NetSimLocalClientNode.prototype.canFindOwnRowIn = function(nodeRows) {
-  return nodeRows.some(function(row) {
+NetSimLocalClientNode.prototype.canFindOwnRowIn = function (nodeRows) {
+  return nodeRows.some(function (row) {
     return row.id === this.entityID && row.uuid === this.uuid;
   }, this);
 };
@@ -541,7 +550,7 @@ NetSimLocalClientNode.prototype.canFindOwnRowIn = function(nodeRows) {
  * "connected" state or stop trying to connect.
  * @private
  */
-NetSimLocalClientNode.prototype.onWireTableChange_ = function() {
+NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
   var myWire = this.getOutgoingWire();
   if (!myWire) {
     return;
@@ -553,7 +562,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function() {
   // Look for mutual connection
   var mutualConnectionRow = _.find(
     wireRows,
-    function(row) {
+    function (row) {
       return (
         row.remoteNodeID === myWire.localNodeID &&
         row.localNodeID === myWire.remoteNodeID
@@ -566,7 +575,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function() {
     NetSimClientNode.get(
       mutualConnectionRow.localNodeID,
       this.shard_,
-      function(err, remoteClient) {
+      function (err, remoteClient) {
         this.myRemoteClient = remoteClient;
         this.remoteChange.notifyObservers(myWire, this.myRemoteClient);
       }.bind(this)
@@ -581,7 +590,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function() {
     // someone else; check if they did and if so, stop trying to connect
     myConnectionTargetWireRow = _.find(
       wireRows,
-      function(row) {
+      function (row) {
         return (
           row.localNodeID === myWire.remoteNodeID &&
           row.remoteNodeID !== myWire.localNodeID
@@ -589,7 +598,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function() {
       }.bind(this)
     );
     isTargetConnectedToSomeoneElse = myConnectionTargetWireRow
-      ? wireRows.some(function(row) {
+      ? wireRows.some(function (row) {
           return (
             row.remoteNodeID === myConnectionTargetWireRow.localNodeID &&
             row.localNodeID === myConnectionTargetWireRow.remoteNodeID
@@ -608,7 +617,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function() {
  * sent to this node.
  * @private
  */
-NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
+NetSimLocalClientNode.prototype.onMessageTableChange_ = function () {
   if (!NetSimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
@@ -620,7 +629,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
     MessageGranularity.BITS
   ) {
     this.getLatestMessageOnSimplexWire(
-      function(err, message) {
+      function (err, message) {
         if (err) {
           logger.error('Error pulling message off the wire: ' + err.message);
           return;
@@ -640,12 +649,12 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
   var messages = this.shard_.messageTable
     .readAll()
     .map(
-      function(row) {
+      function (row) {
         return new NetSimMessage(this.shard_, row);
       }.bind(this)
     )
     .filter(
-      function(message) {
+      function (message) {
         return (
           message.toNodeID === this.entityID &&
           message.simulatedBy === this.entityID
@@ -665,7 +674,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
   // Step 1 (async): Pull all our messages out of storage
   NetSimEntity.destroyEntities(
     messages,
-    function(err) {
+    function (err) {
       if (err) {
         logger.error('Error pulling message off the wire: ' + err.message);
         this.isProcessingMessages_ = false;
@@ -673,7 +682,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
       }
 
       // Step 2 (sync): Handle all messages
-      messages.forEach(function(message) {
+      messages.forEach(function (message) {
         this.handleMessage_(message);
       }, this);
 
@@ -691,7 +700,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
  * @param {!NetSimMessage} message
  * @private
  */
-NetSimLocalClientNode.prototype.handleMessage_ = function(message) {
+NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
@@ -705,7 +714,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function(message) {
  * @param {!NodeStyleCallback} onComplete - given the message as a result, or
  *        NULL if no messages exist.
  */
-NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function(
+NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function (
   onComplete
 ) {
   var myWire = this.getOutgoingWire();
@@ -721,10 +730,10 @@ NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function(
     .refresh()
     .fail(onComplete)
     .done(
-      function() {
+      function () {
         // We only care about rows on our (simplex) wire
         var rowsOnWire = messageTable.readAll().filter(
-          function(row) {
+          function (row) {
             return myWire.isMessageRowOnSimplexWire(row);
           }.bind(this)
         );
@@ -746,13 +755,13 @@ NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function(
  * @param {string} newState - probably ought to be "0" or "1"
  * @param {!NodeStyleCallback} onComplete
  */
-NetSimLocalClientNode.prototype.setSimplexWireState = function(
+NetSimLocalClientNode.prototype.setSimplexWireState = function (
   newState,
   onComplete
 ) {
   this.sendMessage(
     newState,
-    function(err) {
+    function (err) {
       if (err) {
         logger.warn(err.message);
         onComplete(new Error('Failed to set wire state.'));
@@ -772,7 +781,7 @@ NetSimLocalClientNode.prototype.setSimplexWireState = function(
  * (latest) state.
  * @param {!NodeStyleCallback} onComplete
  */
-NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function(
+NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (
   onComplete
 ) {
   var myWire = this.getOutgoingWire();
@@ -788,9 +797,9 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function(
     .refresh()
     .fail(onComplete)
     .done(
-      function() {
+      function () {
         // We only care about rows on our (simplex) wire
-        var rowsOnWire = messageTable.readAll().filter(function(row) {
+        var rowsOnWire = messageTable.readAll().filter(function (row) {
           return myWire.isMessageRowOnSimplexWire(row);
         }, this);
 
@@ -798,12 +807,12 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function(
         var oldRowsOnWire = rowsOnWire.slice(0, -1);
 
         // We are only in charge of deleting messages that we are simulating
-        var myOldRowsOnWire = oldRowsOnWire.filter(function(row) {
+        var myOldRowsOnWire = oldRowsOnWire.filter(function (row) {
           return row.simulatedBy === this.entityID;
         }, this);
 
         // Convert to message entities so we can destroy them
-        var myOldMessagesOnWire = myOldRowsOnWire.map(function(row) {
+        var myOldMessagesOnWire = myOldRowsOnWire.map(function (row) {
           return new NetSimMessage(this.shard_, row);
         }, this);
 

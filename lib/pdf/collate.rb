@@ -22,7 +22,7 @@ module PDF
   end
 
   def self.get_local_markdown_paths(collate_file)
-    existing_files get_local_pdf_paths(collate_file).map {|f| f.sub('.pdf', '.md')}
+    existing_files(get_local_pdf_paths(collate_file).map {|f| f.sub('.pdf', '.md')})
   end
 
   def self.string_is_url(filename)
@@ -48,9 +48,9 @@ module PDF
       next filename unless string_is_url(filename)
       begin
         local_file = Tempfile.from_url(filename)
-      rescue Exception => msg
+      rescue Exception => exception
         puts "Error downloading PDF file #{filename} for output file #{output_file}. Aborting"
-        puts "Error message: #{msg}"
+        puts "Error message: #{exception}"
         raise
       end
       temp_file_handles << local_file

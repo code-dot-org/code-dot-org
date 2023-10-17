@@ -3,9 +3,9 @@ import {expect} from '../../../../../../util/reconfiguredChai';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
-  enableMicroBitComponents
+  enableMicroBitComponents,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {EventEmitter} from 'events';
 import sinon from 'sinon';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
@@ -17,14 +17,14 @@ const COMPONENTS = [
   'tempSensor',
   'accelerometer',
   'compass',
-  'lightSensor'
+  'lightSensor',
 ];
 
 describe('MicroBit Components', () => {
-  let board;
+  let boardClient;
 
   beforeEach(() => {
-    board = new MicrobitStubBoard();
+    boardClient = new MBFirmataClientStub();
   });
 
   describe(`createMicroBitComponents()`, () => {
@@ -32,7 +32,7 @@ describe('MicroBit Components', () => {
       // This test is here to warn us if we add a new component but
       // don't cover it with new tests.  If that happens, make sure you
       // add matching tests below!
-      return createMicroBitComponents(board).then(components => {
+      return createMicroBitComponents(boardClient).then(components => {
         expect(Object.keys(components)).to.deep.equal(COMPONENTS);
       });
     });
@@ -42,7 +42,7 @@ describe('MicroBit Components', () => {
     let buttonA;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(
+      return createMicroBitComponents(boardClient).then(
         components => (buttonA = components.buttonA)
       );
     });
@@ -52,7 +52,7 @@ describe('MicroBit Components', () => {
     });
 
     it('bound to the board controller', () => {
-      expect(buttonA.board.mb).to.equal(board);
+      expect(buttonA.board.mb).to.equal(boardClient);
     });
 
     it('on pin 1', () => {
@@ -64,7 +64,7 @@ describe('MicroBit Components', () => {
     let buttonB;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(
+      return createMicroBitComponents(boardClient).then(
         components => (buttonB = components.buttonB)
       );
     });
@@ -74,7 +74,7 @@ describe('MicroBit Components', () => {
     });
 
     it('bound to the board controller', () => {
-      expect(buttonB.board.mb).to.equal(board);
+      expect(buttonB.board.mb).to.equal(boardClient);
     });
 
     it('on pin 2', () => {
@@ -86,13 +86,13 @@ describe('MicroBit Components', () => {
     let ledScreen;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(
+      return createMicroBitComponents(boardClient).then(
         components => (ledScreen = components.ledScreen)
       );
     });
 
     it('bound to the board controller', () => {
-      expect(ledScreen.board.mb).to.equal(board);
+      expect(ledScreen.board.mb).to.equal(boardClient);
     });
   });
 
@@ -100,13 +100,13 @@ describe('MicroBit Components', () => {
     let tempSensor;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(
+      return createMicroBitComponents(boardClient).then(
         components => (tempSensor = components.tempSensor)
       );
     });
 
     it('bound to the board controller', () => {
-      expect(tempSensor.board.mb).to.equal(board);
+      expect(tempSensor.board.mb).to.equal(boardClient);
     });
 
     it('with non-null values immediately after initialization', () => {
@@ -123,13 +123,13 @@ describe('MicroBit Components', () => {
     let accelerometer;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(
+      return createMicroBitComponents(boardClient).then(
         components => (accelerometer = components.accelerometer)
       );
     });
 
     it('bound to the board controller', () => {
-      expect(accelerometer.board.mb).to.equal(board);
+      expect(accelerometer.board.mb).to.equal(boardClient);
     });
   });
 
@@ -137,13 +137,13 @@ describe('MicroBit Components', () => {
     let compass;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(
+      return createMicroBitComponents(boardClient).then(
         components => (compass = components.compass)
       );
     });
 
     it('bound to the board controller', () => {
-      expect(compass.board.mb).to.equal(board);
+      expect(compass.board.mb).to.equal(boardClient);
     });
   });
 
@@ -151,13 +151,13 @@ describe('MicroBit Components', () => {
     let lightSensor;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(
+      return createMicroBitComponents(boardClient).then(
         components => (lightSensor = components.lightSensor)
       );
     });
 
     it('bound to the board controller', () => {
-      expect(lightSensor.board.mb).to.equal(board);
+      expect(lightSensor.board.mb).to.equal(boardClient);
     });
 
     it('with non-null values immediately after initialization', () => {
@@ -172,7 +172,7 @@ describe('MicroBit Components', () => {
     let components;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(c => (components = c));
+      return createMicroBitComponents(boardClient).then(c => (components = c));
     });
     afterEach(() => {
       sinon.restore();
@@ -251,7 +251,7 @@ describe('MicroBit Components', () => {
     });
 
     it('calls stop on a capacitive touch sensor and clears events', () => {
-      let boardClient = new MicrobitStubBoard();
+      let boardClient = new MBFirmataClientStub();
       let sensor = new CapacitiveTouchSensor({mb: boardClient, pin: 0});
       const spy = sinon.spy(sensor, 'stop');
       cleanupMicroBitComponents(
@@ -268,7 +268,7 @@ describe('MicroBit Components', () => {
     let components;
 
     beforeEach(() => {
-      return createMicroBitComponents(board).then(c => (components = c));
+      return createMicroBitComponents(boardClient).then(c => (components = c));
     });
 
     it('starts components with sensors', () => {

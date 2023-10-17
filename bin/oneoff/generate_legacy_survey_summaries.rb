@@ -124,6 +124,7 @@ def snapshot_summer_workshops_from_jotform(course)
 
   survey_reports = {}
 
+  only_facilitator_questions_responses = [false, true]
   facilitators.each do |id, f|
     all_their_workshops = Pd::Workshop.facilitated_by(f)
     all_their_completed_workshops = all_their_workshops.where(course: course, subject: subject).in_state(Pd::Workshop::STATE_ENDED)
@@ -132,7 +133,7 @@ def snapshot_summer_workshops_from_jotform(course)
 
     unless all_their_completed_workshops.empty?
       # Do workshop rollups, then facilitator rollups.
-      [false, true].each do |only_facilitator_questions|
+      only_facilitator_questions_responses.each do |only_facilitator_questions|
         rollup = report_facilitator_rollup(id, all_their_completed_workshops.first, only_facilitator_questions)
 
         key = "facilitator_#{id}_all_ws"

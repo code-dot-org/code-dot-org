@@ -8,7 +8,7 @@ const defaultProps = {
   onChangeVersion: () => {},
   selectedCourseVersionId: 1,
   courseVersions: courseOfferings['1'].course_versions,
-  disabled: false
+  disabled: false,
 };
 
 describe('AssignmentVersionSelector', () => {
@@ -16,9 +16,9 @@ describe('AssignmentVersionSelector', () => {
     const wrapper = shallow(<AssignmentVersionSelector {...defaultProps} />);
     assert.equal(wrapper.find('option').length, 2);
     assert.equal(wrapper.find('AssignmentVersionMenuItem').length, 2);
-    assert.deepEqual(wrapper.find('option').map(option => option.text()), [
-      '2018 (Recommended)',
-      '2017'
-    ]);
+    assert.deepEqual(
+      wrapper.find('option').map(option => option.text()),
+      ['2018 (Recommended)', '2017']
+    );
   });
 });

@@ -12,5 +12,5 @@ export const sectionLoginFactory = Factory.define('sectionLogin')
     secretWords: 'wizard',
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
-    sharingDisabled: true
+    sharingDisabled: true,
   });

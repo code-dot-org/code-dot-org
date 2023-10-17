@@ -8,7 +8,7 @@ import ArrowButtons from '../templates/ArrowButtons';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
-var BounceVisualizationColumn = function() {
+var BounceVisualizationColumn = function () {
   return (
     <span>
       <ProtectedVisualizationDiv>

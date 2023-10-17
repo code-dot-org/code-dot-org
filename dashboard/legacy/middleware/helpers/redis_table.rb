@@ -46,7 +46,7 @@ class RedisTable
   # @param [Hash] value The hash for the new row.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
   # @return [Hash] The inserted value, including the new :id field.
-  def insert(value, ignored_ip=nil)
+  def insert(value, ignored_ip = nil)
     new_id = next_id
     value = merge_ids(value, new_id, SecureRandom.uuid)
     @props.set(row_key(new_id), value.to_json)
@@ -61,9 +61,9 @@ class RedisTable
   # @return [Array<Hash>]
   def to_a_from_min_id(min_id)
     @props.to_hash.
-        select {|k, _v| belongs_to_this_table_with_min_id(k, min_id)}.
-        collect {|_k, v| make_row(v)}.
-        sort_by {|row| row['id']}
+      select {|k, _v| belongs_to_this_table_with_min_id(k, min_id)}.
+      collect {|_k, v| make_row(v)}.
+      sort_by {|row| row['id']}
   end
 
   # Returns all rows as an array ordered by ascending row id.
@@ -128,7 +128,7 @@ class RedisTable
   # @param [Integer] id The id of the row to update.
   # @param [Hash] hash The updated hash.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
-  def update(id, hash, ignored_ip=nil)
+  def update(id, hash, ignored_ip = nil)
     original_hash = @props.to_hash[row_key(id)]
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless original_hash
     hash = merge_ids(hash, id, JSON.parse(original_hash)['uuid'])
@@ -241,8 +241,8 @@ class RedisTable
   # @return [Boolean]
   def belongs_to_this_table_with_min_id(row_key, min_id)
     (@table_name == table_from_row_key(row_key)) &&
-        (row_key != @row_id_key) &&
-        (min_id.nil? || id_from_row_key(row_key) >= min_id)
+      (row_key != @row_id_key) &&
+      (min_id.nil? || id_from_row_key(row_key) >= min_id)
   end
 
   # Return true if k is special internal key (e.g. the row id key) that should

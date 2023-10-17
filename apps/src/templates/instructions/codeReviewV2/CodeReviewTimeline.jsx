@@ -1,13 +1,13 @@
 import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import CodeReviewTimelineElement, {
-  codeReviewTimelineElementType
+  codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
 import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 import {
   commitShape,
-  reviewShape
+  reviewShape,
 } from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 
@@ -21,7 +21,7 @@ const CodeReviewTimeline = props => {
     addCodeReviewComment,
     closeReview,
     toggleResolveComment,
-    deleteCodeReviewComment
+    deleteCodeReviewComment,
   } = props;
 
   const timelineEndRef = useRef(null);
@@ -78,13 +78,13 @@ CodeReviewTimeline.propTypes = {
   addCodeReviewComment: PropTypes.func.isRequired,
   closeReview: PropTypes.func.isRequired,
   toggleResolveComment: PropTypes.func.isRequired,
-  deleteCodeReviewComment: PropTypes.func.isRequired
+  deleteCodeReviewComment: PropTypes.func.isRequired,
 };
 
 export default CodeReviewTimeline;
 
 const styles = {
   wrapper: {
-    margin: '10px 0'
-  }
+    margin: '10px 0',
+  },
 };

@@ -9,7 +9,7 @@ export default function CollapsibleEditorSection(props) {
   const {title, fullWidth} = props;
   const editorsStyle = {
     ...styles.editors,
-    width: fullWidth ? null : styleConstants['content-width']
+    width: fullWidth ? null : styleConstants['content-width'],
   };
 
   return (
@@ -34,20 +34,20 @@ CollapsibleEditorSection.propTypes = {
   title: PropTypes.string,
   fullWidth: PropTypes.bool,
   collapsed: PropTypes.bool,
-  children: PropTypes.any
+  children: PropTypes.any,
 };
 
 const styles = {
   header: {
-    borderBottom: '1px solid rgb(204, 204, 204)'
+    borderBottom: '1px solid rgb(204, 204, 204)',
   },
   icon: {
-    marginRight: 10
+    marginRight: 10,
   },
   editors: {
-    padding: 10
+    padding: 10,
   },
   title: {
-    fontSize: 20
-  }
+    fontSize: 20,
+  },
 };

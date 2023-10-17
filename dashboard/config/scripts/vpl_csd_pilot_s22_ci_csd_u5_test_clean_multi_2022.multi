@@ -8,3 +8,5 @@ right 'Yes, they should correct misspellings and standardize names so the chart 
 wrong 'Yes, they should take out places that they think will not be good for the class trip.'
 wrong 'No, changing data will confuse people when their answers aren\’t in the chart.'
 wrong 'No, if the data has problems, they should give the survey again.'
+
+allow_multiple_attempts true

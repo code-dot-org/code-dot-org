@@ -1,0 +1,76 @@
+@import 'color.scss';
+@import '../../../mixins.scss';
+
+.row {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 10px;
+}
+
+.validation {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 20px 10px;
+}
+
+.message {
+  width: 90%;
+}
+
+.validationTitle {
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.label {
+  padding-right: 10px;
+}
+
+.conditionNameDropdown {
+  margin-right: 10px;
+}
+
+.addConditionButton {
+  font-size: 14px;
+  background-color: $brand_primary_default;
+  color: $neutral_light;
+}
+
+.addValidationButton {
+  font-size: 14px;
+  background-color: $brand_secondary_default;
+  color: $neutral_light;
+}
+
+%icon-button {
+  @include remove-button-styles;
+  font-size: 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+}
+
+%delete-button {
+  @extend %icon-button;
+  background-color: $product_negative_default;
+  color: $neutral_light;
+}
+
+.deleteConditionButton {
+  @extend %delete-button;
+  margin: 0 10px;
+}
+
+.deleteValidationButton {
+  @extend %delete-button;
+}
+
+.moveValidationButton {
+  @extend %icon-button;
+  background-color: $neutral-dark60;
+  color: $neutral_light;
+}

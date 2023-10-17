@@ -4,14 +4,14 @@ import DisallowedHtmlWarningDialog from './DisallowedHtmlWarningDialog';
 
 export default {
   title: 'DisallowedHtmlWarningDialog',
-  component: DisallowedHtmlWarningDialog
+  component: DisallowedHtmlWarningDialog,
 };
 
 const DEFAULT_PROPS = {
   isOpen: true,
   filename: 'index.html',
   handleClose: action('close'),
-  hideBackdrop: true
+  hideBackdrop: true,
 };
 
 const Template = args => (
@@ -20,10 +20,10 @@ const Template = args => (
 
 export const SingleDisallowedTags = Template.bind({});
 SingleDisallowedTags.args = {
-  disallowedTags: ['script']
+  disallowedTags: ['script'],
 };
 
 export const MultipleDisallowedTags = Template.bind({});
 MultipleDisallowedTags.args = {
-  disallowedTags: ['script', 'meta[http-equiv]']
+  disallowedTags: ['script', 'meta[http-equiv]'],
 };

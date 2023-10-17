@@ -4,8 +4,8 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import FixZoomHelper from '@cdo/apps/templates/FixZoomHelper';
 
-describe('FixZoomHelper', function() {
-  it('shows nothing when not zoomed', function() {
+describe('FixZoomHelper', function () {
+  it('shows nothing when not zoomed', function () {
     const component = shallow(<FixZoomHelper />);
 
     const instance = component.instance();
@@ -17,7 +17,7 @@ describe('FixZoomHelper', function() {
     expect(instance.state.mode).to.equal('none');
   });
 
-  it('shows button when zoomed', function() {
+  it('shows button when zoomed', function () {
     const component = shallow(<FixZoomHelper />);
 
     const instance = component.instance();
@@ -29,7 +29,7 @@ describe('FixZoomHelper', function() {
     expect(instance.state.mode).to.equal('button');
   });
 
-  it('shows helper when zoomed and button pressed', function() {
+  it('shows helper when zoomed and button pressed', function () {
     const component = shallow(<FixZoomHelper />);
 
     const instance = component.instance();
@@ -43,7 +43,7 @@ describe('FixZoomHelper', function() {
     expect(instance.state.mode).to.equal('helper');
   });
 
-  it('shows button again when zoomed and helper pressed', function() {
+  it('shows button again when zoomed and helper pressed', function () {
     const component = shallow(<FixZoomHelper />);
 
     const instance = component.instance();
@@ -61,7 +61,7 @@ describe('FixZoomHelper', function() {
     expect(instance.state.mode).to.equal('button');
   });
 
-  it('shows nothing when zoomed and button pressed and zoomed back out', function() {
+  it('shows nothing when zoomed and button pressed and zoomed back out', function () {
     const component = shallow(<FixZoomHelper />);
 
     const instance = component.instance();

@@ -1,4 +1,5 @@
 require 'test_reporter'
+require 'rspec'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -34,6 +35,7 @@ Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.applicatio
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
 CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 
@@ -87,7 +89,9 @@ class ActiveSupport::TestCase
     CDO.stubs(:optimize_webpack_assets).returns(false)
     CDO.stubs(:use_my_apps).returns(true)
 
+    # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
+    AWS::S3.stubs(:exists_in_bucket).returns(true)
   end
 
   teardown do
@@ -124,7 +128,7 @@ class ActiveSupport::TestCase
   end
 
   # Add more helper methods to be used by all tests here...
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
   include CaptureQueries
@@ -280,7 +284,7 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      assert_not_equal(before[i], e.call, error)
+      refute_equal(before[i], e.call, error)
     end
   end
 
@@ -319,9 +323,9 @@ class ActiveSupport::TestCase
   def assert_raises_matching(matcher)
     assert_raises do
       yield
-    rescue => err
-      assert_match matcher, err.to_s
-      raise err
+    rescue => exception
+      assert_match matcher, exception.message
+      raise exception
     end
   end
 
@@ -334,11 +338,7 @@ class ActiveSupport::TestCase
   end
 
   def assert_caching_disabled(cache_control_header)
-    expected_directives = [
-      'no-store',
-      'max-age=0',
-      'must-revalidate'
-    ]
+    expected_directives = ['no-store']
     assert_cache_control_match expected_directives, cache_control_header
   end
 
@@ -356,7 +356,7 @@ class ActiveSupport::TestCase
   #   class MyTest < ActiveSupport::TestCase
   #     freeze_time
   #     #...
-  def self.freeze_time(time=nil)
+  def self.freeze_time(time = nil)
     time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
@@ -444,7 +444,7 @@ class ActionController::TestCase
   # @param method [Symbol, String] http method with which to perform the action (default :get)
   # @param response [Symbol, String, Number] expected response (default :success)
   # @param user [Symbol, String, Proc] user to log in, or nil to test as a not-logged-in user (default: nil)
-  #   It can be a factory name to be passed to FactoryGirl.create,
+  #   It can be a factory name to be passed to FactoryBot.create,
   #   or a proc that runs in the context of the test case and returns a user.
   # @param params [Hash, Proc] params to pass to the action. It can be a direct hash,
   #   or a proc that generates a hash at runtime in the context of the test case.
@@ -499,7 +499,7 @@ class ActionController::TestCase
       params = instance_exec(&params) if params.is_a? Proc
 
       if user
-        # user can be a symbol or string for FactoryGirl creation,
+        # user can be a symbol or string for FactoryBot creation,
         # or a proc that returns a user object at runtime
         actual_user = user.is_a?(Proc) ? instance_exec(&user) : create(user)
         sign_in actual_user
@@ -533,7 +533,7 @@ class ActionController::TestCase
     end
   end
 
-  def assert_sharing_meta_tags(opts={})
+  def assert_sharing_meta_tags(opts = {})
     # example:
     # <meta content="500177453358606" property="fb:app_id" />
     # <meta content="article" property="og:type" />

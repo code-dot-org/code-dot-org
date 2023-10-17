@@ -41,6 +41,11 @@ Scenario: Flappy customized dashboard certificate pages
   Then I wait to see an image "/certificate_images/"
 
 Scenario: Pegasus share page preserves certificate when redirecting
+  # Reset lesson data (otherwise it will pull a cached certificate from
+  # other tests)
+  Given I am on "http://studio.code.org/s/mc/reset"
+  Then I wait until the Minecraft game is loaded
+
   # Set up a customized certificate
   Given I am on "http://code.org/api/hour/finish/mc"
   And I wait until current URL contains "/congrats"

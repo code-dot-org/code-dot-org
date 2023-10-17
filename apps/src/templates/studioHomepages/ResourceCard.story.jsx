@@ -5,7 +5,7 @@ import {reduxStore} from '@cdo/storybook/decorators';
 
 export default {
   title: 'ResourceCard',
-  component: ResourceCard
+  component: ResourceCard,
 };
 
 const Template = args => (
@@ -24,5 +24,5 @@ export const ToolCard = Template.bind({});
 
 export const ToolCardWithWrap = Template.bind({});
 ToolCardWithWrap.args = {
-  allowWrap: true
+  allowWrap: true,
 };

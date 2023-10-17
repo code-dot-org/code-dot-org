@@ -17,7 +17,7 @@ class Tutorials
   # We alias the database columns with names that have the datatype suffixes stripped off for
   # backwards-compatibility with some existing tutorial pages
   # Note: A tutorial can be present in the sheet but hidden by giving it the "do-not-show" tag.
-  def initialize(table, no_cache=false)
+  def initialize(table, no_cache: false)
     @table = "cdo_#{table}".to_sym
 
     # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")
@@ -85,7 +85,7 @@ class Tutorials
   end
 
   def self.sort_by_popularity?(site, hoc_mode)
-    ("post-hoc" == hoc_mode) || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
+    (hoc_mode == "post-hoc") || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
   end
 end
 

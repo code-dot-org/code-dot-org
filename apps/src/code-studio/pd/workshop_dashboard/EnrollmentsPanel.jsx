@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
 import MoveEnrollmentsDialog from './components/move_enrollments_dialog';
 import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
@@ -10,11 +10,11 @@ import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
 import {
   SubjectNames,
-  ActiveCoursesWithSurveys
+  ActiveCoursesWithSurveys,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {
   shouldUseFoormSurvey,
-  shouldShowSurveyResults
+  shouldShowSurveyResults,
 } from './workshop_summary_utils';
 
 export const MOVE_ENROLLMENT_BUTTON_NAME = 'moveEnrollment';
@@ -33,19 +33,20 @@ export default class EnrollmentsPanel extends React.Component {
       enrolled_teacher_count: PropTypes.number,
       ['scholarship_workshop?']: PropTypes.bool,
       sessions: PropTypes.array,
-      subject: PropTypes.string
+      subject: PropTypes.string,
+      state: PropTypes.string,
     }),
     enrollments: PropTypes.array,
     isLoadingEnrollments: PropTypes.bool,
     isWorkshopAdmin: PropTypes.bool,
-    loadEnrollments: PropTypes.func.isRequired
+    loadEnrollments: PropTypes.func.isRequired,
   };
 
   state = {
     enrollmentActiveTab: 0,
     selectedEnrollments: [],
     enrollmentChangeDialogOpen: null,
-    error: null
+    error: null,
   };
 
   componentWillUnmount() {
@@ -81,7 +82,7 @@ export default class EnrollmentsPanel extends React.Component {
 
   handleChangeEnrollmentsCanceled = () => {
     this.setState({
-      enrollmentChangeDialogOpen: null
+      enrollmentChangeDialogOpen: null,
     });
   };
 
@@ -92,7 +93,7 @@ export default class EnrollmentsPanel extends React.Component {
     );
     this.setState({
       enrollmentChangeDialogOpen: null,
-      selectedEnrollments: []
+      selectedEnrollments: [],
     });
   };
 
@@ -106,7 +107,7 @@ export default class EnrollmentsPanel extends React.Component {
     this.moveEnrollmentRequest = $.ajax({
       method: 'POST',
       url: `/api/v1/pd/enrollments/move?${urlParams}`,
-      traditional: true
+      traditional: true,
     })
       .done(() => {
         // reload
@@ -115,7 +116,7 @@ export default class EnrollmentsPanel extends React.Component {
       })
       .fail(() => {
         this.setState({
-          error: 'Error: unable to move enrollments'
+          error: 'Error: unable to move enrollments',
         });
         this.handleEnrollmentRefresh();
         this.moveEnrollmentRequest = null;
@@ -126,21 +127,21 @@ export default class EnrollmentsPanel extends React.Component {
     this.handleEditEnrollment(updatedName, this.state.selectedEnrollments[0]);
     this.setState({
       enrollmentChangeDialogOpen: null,
-      selectedEnrollments: []
+      selectedEnrollments: [],
     });
   };
 
   handleEditEnrollment = (updatedName, selectedEnrollment) => {
     let updatedNameSnakeCase = {
       first_name: updatedName.firstName,
-      last_name: updatedName.lastName
+      last_name: updatedName.lastName,
     };
 
     this.editEnrollmentRequest = $.ajax({
       method: 'POST',
       url: `/api/v1/pd/enrollment/${selectedEnrollment.id}/edit`,
       contentType: 'application/json',
-      data: JSON.stringify(updatedNameSnakeCase)
+      data: JSON.stringify(updatedNameSnakeCase),
     })
       .done(() => {
         // reload
@@ -170,7 +171,7 @@ export default class EnrollmentsPanel extends React.Component {
           id: enrollment.id,
           email: enrollment.email,
           first_name: enrollment.first_name,
-          last_name: enrollment.last_name
+          last_name: enrollment.last_name,
         });
         return {selectedEnrollments};
       });
@@ -186,7 +187,7 @@ export default class EnrollmentsPanel extends React.Component {
     this.deleteEnrollmentRequest = $.ajax({
       method: 'DELETE',
       url: `/api/v1/pd/workshops/${workshopId}/enrollments/${id}`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(() => {
       // reload
       loadEnrollments();
@@ -215,7 +216,7 @@ export default class EnrollmentsPanel extends React.Component {
       workshop,
       enrollments,
       isLoadingEnrollments,
-      isWorkshopAdmin
+      isWorkshopAdmin,
     } = this.props;
     const header = (
       <div>
@@ -337,11 +338,11 @@ export default class EnrollmentsPanel extends React.Component {
 
 const styles = {
   linkButton: {
-    color: 'inherit'
+    color: 'inherit',
   },
   error: {
     color: 'red',
     display: 'inline',
-    paddingLeft: '10px'
-  }
+    paddingLeft: '10px',
+  },
 };

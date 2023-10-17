@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LessonToken, {
-  LessonTokenContents
+  LessonTokenContents,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/LessonToken';
 
 const defaultLesson = {
@@ -16,7 +16,7 @@ const defaultLesson = {
   lockable: false,
   unplugged: false,
   assessment: true,
-  hasLessonPlan: true
+  hasLessonPlan: true,
 };
 
 describe('LessonToken', () => {
@@ -35,7 +35,7 @@ describe('LessonToken', () => {
         handleDragStart,
         cloneLesson,
         removeLesson,
-        lesson: defaultLesson
+        lesson: defaultLesson,
       };
     });
 
@@ -59,7 +59,7 @@ describe('LessonToken', () => {
         handleDragStart,
         cloneLesson,
         removeLesson,
-        lesson: defaultLesson
+        lesson: defaultLesson,
       };
     });
 
@@ -101,7 +101,7 @@ describe('LessonToken', () => {
             key: 'new-lesson',
             name: 'New Lesson',
             levels: [],
-            position: 1
+            position: 1,
           }}
         />
       );

@@ -122,6 +122,7 @@ class Unit < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
+            {rubric: {learning_goals: :learning_goal_evidence_levels}},
             :standards,
             :opportunity_standards
           ]
@@ -159,6 +160,7 @@ class Unit < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
   validate :deeper_learning_courses_cannot_be_launched
 
@@ -279,6 +281,10 @@ class Unit < ApplicationRecord
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
   #   unit is being updated, so we can regenerate PDFs.
+  # is_deprecated - true if the unit is deprecated. If this flag is set, we will redirect
+  #   all /s, /lessons and /levels page in that unit to our "This course is deprecated" page.
+  #   We don't use published_state here because some courses in the deprecated published state
+  #   are not ready to be redirected. In the future we should unify these two states.
   serialized_attrs %w(
     hideable_lessons
     professional_learning_course
@@ -306,6 +312,7 @@ class Unit < ApplicationRecord
     is_migrated
     seeded_from
     use_legacy_lesson_plans
+    is_deprecated
   )
 
   def self.twenty_hour_unit
@@ -336,17 +343,15 @@ class Unit < ApplicationRecord
 
     def family_names
       Rails.cache.fetch('script/family_names', force: !Unit.should_cache?) do
-        (CourseVersion.course_offering_keys('Unit') + ScriptConstants::FAMILY_NAMES).uniq.sort
+        (CourseVersion.course_offering_keys('Unit') + ScriptConstants::DEPRECATED_FAMILY_NAMES).uniq.sort
       end
     end
 
-    private
-
-    def visible_units
+    private def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
 
-    def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
+    private def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
       record = {
         study: 'scripts_en_yml',
         event: log_event_type,
@@ -514,8 +519,8 @@ class Unit < ApplicationRecord
     @@level_cache[level.id] = level if level && should_cache?
     @@level_cache[level.name] = level if level && should_cache?
     level
-  rescue => e
-    raise e, "Error finding level #{level_identifier}: #{e}"
+  rescue => exception
+    raise exception, "Error finding level #{level_identifier}: #{exception}"
   end
 
   def cached
@@ -785,7 +790,7 @@ class Unit < ApplicationRecord
     script_levels.map do |script_level|
       script_level.levels.map do |level|
         next if level.contained_levels.empty? ||
-          !TEXT_RESPONSE_TYPES.include?(level.contained_levels.first.class)
+          TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]
@@ -832,7 +837,7 @@ class Unit < ApplicationRecord
   end
 
   def hoc?
-    Unit.unit_in_category?('hoc', name)
+    get_course_version&.hoc?
   end
 
   def flappy?
@@ -861,6 +866,10 @@ class Unit < ApplicationRecord
       standards_with_lessons << standard_summary
     end
     standards_with_lessons
+  end
+
+  def duration_in_minutes
+    lessons.sum(&:total_lesson_duration)
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
@@ -1243,10 +1252,10 @@ class Unit < ApplicationRecord
 
         copied_unit
       end
-    rescue => e
+    rescue => exception
       filepath_to_delete = Unit.script_json_filepath(new_name)
-      File.delete(filepath_to_delete) if File.exist?(filepath_to_delete)
-      raise e, "Error: #{e.message}"
+      FileUtils.rm_f(filepath_to_delete)
+      raise exception, "Error: #{exception.message}"
     end
   end
 
@@ -1345,8 +1354,8 @@ class Unit < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         Unit.merge_and_write_i18n(i18n, unit_name, metadata_i18n, log_event_type: 'write_script')
       end
-    rescue StandardError => e
-      errors.add(:base, e.to_s)
+    rescue StandardError => exception
+      errors.add(:base, exception.to_s)
       return false
     end
     update_teacher_resources(general_params[:resourceIds])
@@ -1359,8 +1368,8 @@ class Unit < ApplicationRecord
         unit.write_script_json
       end
       true
-    rescue StandardError => e
-      errors.add(:base, e.to_s)
+    rescue StandardError => exception
+      errors.add(:base, exception.to_s)
       return false
     end
   end
@@ -1475,113 +1484,115 @@ class Unit < ApplicationRecord
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
-    # TODO: Set up peer reviews to be more consistent with the rest of the system
-    # so that they don't need a bunch of one off cases (example peer reviews
-    # don't have a lesson group in the database right now)
-    if has_peer_reviews? && !only_instructor_review_required?
-      levels = []
-      peer_reviews_to_complete.times do |x|
-        levels << {
-          ids: [x],
-          kind: LEVEL_KIND.peer_review,
-          title: '',
-          url: '',
-          name: I18n.t('peer_review.reviews_unavailable'),
-          icon: 'fa-lock',
-          locked: true
+    ActiveRecord::Base.connected_to(role: :reading) do
+      # TODO: Set up peer reviews to be more consistent with the rest of the system
+      # so that they don't need a bunch of one off cases (example peer reviews
+      # don't have a lesson group in the database right now)
+      if has_peer_reviews? && !only_instructor_review_required?
+        levels = []
+        peer_reviews_to_complete.times do |x|
+          levels << {
+            ids: [x],
+            kind: LEVEL_KIND.peer_review,
+            title: '',
+            url: '',
+            name: I18n.t('peer_review.reviews_unavailable'),
+            icon: 'fa-lock',
+            locked: true
+          }
+        end
+
+        peer_review_lesson_info = {
+          name: I18n.t('peer_review.review_count', review_count: peer_reviews_to_complete),
+          lesson_group_display_name: 'Peer Review',
+          levels: levels,
+          lockable: false
         }
       end
 
-      peer_review_lesson_info = {
-        name: I18n.t('peer_review.review_count', review_count: peer_reviews_to_complete),
-        lesson_group_display_name: 'Peer Review',
-        levels: levels,
-        lockable: false
+      has_older_course_progress = unit_group.try(:has_older_version_progress?, user)
+      has_older_unit_progress = has_older_version_progress?(user)
+      user_unit = user && user_scripts.find_by(user: user)
+
+      # If the current user is assigned to this unit, get the section
+      # that assigned it.
+      assigned_section_id = user&.assigned_script?(self) ? user.section_for_script(self)&.id : nil
+
+      summary = {
+        id: id,
+        name: name,
+        title: title_for_display,
+        description: Services::MarkdownPreprocessor.process(localized_description),
+        studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
+        course_id: unit_group.try(:id),
+        publishedState: get_published_state,
+        instructionType: get_instruction_type,
+        instructorAudience: get_instructor_audience,
+        participantAudience: get_participant_audience,
+        loginRequired: login_required,
+        plc: old_professional_learning_course?,
+        hideable_lessons: hideable_lessons?,
+        disablePostMilestone: disable_post_milestone?,
+        csf: csf?,
+        isCsd: csd?,
+        isCsp: csp?,
+        only_instructor_review_required: only_instructor_review_required?,
+        peerReviewsRequired: peer_reviews_to_complete || 0,
+        peerReviewLessonInfo: peer_review_lesson_info,
+        student_detail_progress_view: student_detail_progress_view?,
+        project_widget_visible: project_widget_visible?,
+        project_widget_types: project_widget_types,
+        teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        lesson_extras_available: lesson_extras_available,
+        has_verified_resources: has_verified_resources?,
+        curriculum_path: curriculum_path,
+        announcements: localized_announcements,
+        age_13_required: logged_out_age_13_required?,
+        show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
+        show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
+        course_versions: summarize_course_versions(user, locale_code),
+        supported_locales: supported_locales,
+        section_hidden_unit_info: section_hidden_unit_info(user),
+        pilot_experiment: get_pilot_experiment,
+        editor_experiment: editor_experiment,
+        show_assign_button: course_assignable?(user),
+        project_sharing: project_sharing,
+        curriculum_umbrella: curriculum_umbrella,
+        family_name: family_name,
+        version_year: version_year,
+        assigned_section_id: assigned_section_id,
+        hasStandards: has_standards_associations?,
+        tts: tts?,
+        deprecated: deprecated?,
+        is_course: is_course?,
+        is_migrated: is_migrated?,
+        scriptPath: script_path(self),
+        showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
+        weeklyInstructionalMinutes: weekly_instructional_minutes,
+        includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
+        useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
+        courseVersionId: get_course_version&.id,
+        courseOfferingId: get_course_version&.course_offering&.id,
+        scriptOverviewPdfUrl: get_unit_overview_pdf_url,
+        scriptResourcesPdfUrl: get_unit_resources_pdf_url,
+        updated_at: updated_at.to_s,
+        isPlCourse: pl_course?
       }
+
+      #TODO: lessons should be summarized through lesson groups in the future
+      summary[:lessonGroups] = lesson_groups.map(&:summarize)
+      summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+      summary[:deeperLearningCourse] = professional_learning_course if old_professional_learning_course?
+      summary[:wrapupVideo] = wrapup_video.key if wrapup_video
+      summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
+
+      summary
     end
-
-    has_older_course_progress = unit_group.try(:has_older_version_progress?, user)
-    has_older_unit_progress = has_older_version_progress?(user)
-    user_unit = user && user_scripts.find_by(user: user)
-
-    # If the current user is assigned to this unit, get the section
-    # that assigned it.
-    assigned_section_id = user&.assigned_script?(self) ? user.section_for_script(self)&.id : nil
-
-    summary = {
-      id: id,
-      name: name,
-      title: title_for_display,
-      description: Services::MarkdownPreprocessor.process(localized_description),
-      studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
-      course_id: unit_group.try(:id),
-      publishedState: get_published_state,
-      instructionType: get_instruction_type,
-      instructorAudience: get_instructor_audience,
-      participantAudience: get_participant_audience,
-      loginRequired: login_required,
-      plc: old_professional_learning_course?,
-      hideable_lessons: hideable_lessons?,
-      disablePostMilestone: disable_post_milestone?,
-      csf: csf?,
-      isCsd: csd?,
-      isCsp: csp?,
-      only_instructor_review_required: only_instructor_review_required?,
-      peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewLessonInfo: peer_review_lesson_info,
-      student_detail_progress_view: student_detail_progress_view?,
-      project_widget_visible: project_widget_visible?,
-      project_widget_types: project_widget_types,
-      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      lesson_extras_available: lesson_extras_available,
-      has_verified_resources: has_verified_resources?,
-      curriculum_path: curriculum_path,
-      announcements: localized_announcements,
-      age_13_required: logged_out_age_13_required?,
-      show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
-      show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
-      course_versions: summarize_course_versions(user, locale_code),
-      supported_locales: supported_locales,
-      section_hidden_unit_info: section_hidden_unit_info(user),
-      pilot_experiment: get_pilot_experiment,
-      editor_experiment: editor_experiment,
-      show_assign_button: course_assignable?(user),
-      project_sharing: project_sharing,
-      curriculum_umbrella: curriculum_umbrella,
-      family_name: family_name,
-      version_year: version_year,
-      assigned_section_id: assigned_section_id,
-      hasStandards: has_standards_associations?,
-      tts: tts?,
-      deprecated: deprecated?,
-      is_course: is_course?,
-      is_migrated: is_migrated?,
-      scriptPath: script_path(self),
-      showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
-      weeklyInstructionalMinutes: weekly_instructional_minutes,
-      includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
-      useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
-      courseVersionId: get_course_version&.id,
-      courseOfferingId: get_course_version&.course_offering&.id,
-      scriptOverviewPdfUrl: get_unit_overview_pdf_url,
-      scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      updated_at: updated_at.to_s,
-      isPlCourse: pl_course?
-    }
-
-    #TODO: lessons should be summarized through lesson groups in the future
-    summary[:lessonGroups] = lesson_groups.map(&:summarize)
-    summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-    summary[:deeperLearningCourse] = professional_learning_course if old_professional_learning_course?
-    summary[:wrapupVideo] = wrapup_video.key if wrapup_video
-    summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
-
-    summary
   end
 
   def unit_without_lesson_plans?
-    lessons.select(&:has_lesson_plan).empty?
+    lessons.none?(&:has_lesson_plan)
   end
 
   def summarize_for_rollup(user = nil)
@@ -1635,6 +1646,7 @@ class Unit < ApplicationRecord
   def summarize_header
     {
       name: name,
+      displayName: title_for_display,
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,

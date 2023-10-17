@@ -4,10 +4,10 @@ import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   UnconnectedVisualizationResizeBar as VisualizationResizeBar,
-  RESIZE_VISUALIZATION_EVENT
+  RESIZE_VISUALIZATION_EVENT,
 } from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
-describe('VisualizationResizeBar', function() {
+describe('VisualizationResizeBar', function () {
   let wrapper;
 
   beforeEach(() => {
@@ -39,10 +39,7 @@ describe('VisualizationResizeBar', function() {
     expect(spy).to.have.callCount(0);
 
     // Mouse down doesn't fire resize event, but does attach needed handlers
-    wrapper
-      .find('div')
-      .instance()
-      .dispatchEvent(mouseEvent('mousedown', 0, 0));
+    wrapper.find('div').instance().dispatchEvent(mouseEvent('mousedown', 0, 0));
     expect(spy).to.have.callCount(0);
 
     // Now mouse move fires a resize event

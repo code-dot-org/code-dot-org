@@ -7,6 +7,7 @@ import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const initialState = {
   word: '',
@@ -14,7 +15,7 @@ const initialState = {
   commonSenseMedia: false,
   isSaving: false,
   error: '',
-  lessons: []
+  lessons: [],
 };
 
 export default class AddVocabularyDialog extends Component {
@@ -23,7 +24,7 @@ export default class AddVocabularyDialog extends Component {
     handleClose: PropTypes.func.isRequired,
     editingVocabulary: vocabularyShape,
     courseVersionId: PropTypes.number.isRequired,
-    selectableLessons: PropTypes.arrayOf(PropTypes.object)
+    selectableLessons: PropTypes.arrayOf(PropTypes.object),
   };
 
   constructor(props) {
@@ -32,7 +33,7 @@ export default class AddVocabularyDialog extends Component {
       this.state = {
         ...this.props.editingVocabulary,
         isSaving: false,
-        error: ''
+        error: '',
       };
     } else {
       this.state = {...initialState};
@@ -74,7 +75,7 @@ export default class AddVocabularyDialog extends Component {
       word: this.state.word,
       definition: this.state.definition,
       commonSenseMedia: this.state.commonSenseMedia,
-      courseVersionId: this.props.courseVersionId
+      courseVersionId: this.props.courseVersionId,
     };
     if (this.props.editingVocabulary) {
       data['key'] = this.props.editingVocabulary.key;
@@ -87,7 +88,7 @@ export default class AddVocabularyDialog extends Component {
       method: method,
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(data)
+      data: JSON.stringify(data),
     })
       .done(data => {
         this.props.afterSave(data);
@@ -96,7 +97,7 @@ export default class AddVocabularyDialog extends Component {
       .fail(error => {
         this.setState({
           isSaving: false,
-          error: error.responseText
+          error: error.responseText,
         });
       });
   };
@@ -109,7 +110,7 @@ export default class AddVocabularyDialog extends Component {
     const selectableLessonOptions = this.props.selectableLessons
       ? this.props.selectableLessons.map(l => ({
           label: l.name,
-          value: l.id
+          value: l.id,
         }))
       : null;
     return (
@@ -198,24 +199,24 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
+    ...fontConstants['main-font-regular'],
   },
   container: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   inputAndLabel: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   textInput: {
-    width: '98%'
+    width: '98%',
   },
   checkboxAndLabel: {
-    display: 'flex'
+    display: 'flex',
   },
   checkboxInput: {
-    marginRight: 5
+    marginRight: 5,
   },
   submitButton: {
     color: 'white',
@@ -223,11 +224,10 @@ const styles = {
     borderColor: color.orange,
     borderRadius: 3,
     fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-regular'],
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 5,
-    paddingBottom: 5
-  }
+    paddingBottom: 5,
+  },
 };

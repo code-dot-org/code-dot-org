@@ -13,7 +13,7 @@ export const COLUMNS = {
   STANDARD_CATEGORY: 0,
   STANDARD_NUMBER: 1,
   STANDARD_DESCRIPTION: 2,
-  LESSONS_COMPLETED: 3
+  LESSONS_COMPLETED: 3,
 };
 
 class StandardsProgressTable extends Component {
@@ -22,7 +22,7 @@ class StandardsProgressTable extends Component {
     isViewingReport: PropTypes.bool,
     //redux
     standards: PropTypes.array,
-    lessonsByStandard: PropTypes.object
+    lessonsByStandard: PropTypes.object,
   };
 
   standardCategoryCellFormatter = (standard, {rowData, rowIndex}) => {
@@ -57,19 +57,19 @@ class StandardsProgressTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.mainColumnHeader
-            }
-          }
+              ...styles.mainColumnHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.standardCategoryCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.mainColumnCell
-            }
-          }
-        }
+              ...styles.mainColumnCell,
+            },
+          },
+        },
       },
       {
         property: 'shortcode',
@@ -78,19 +78,19 @@ class StandardsProgressTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.mainColumnHeader
-            }
-          }
+              ...styles.mainColumnHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.standardNumberCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.mainColumnCell
-            }
-          }
-        }
+              ...styles.mainColumnCell,
+            },
+          },
+        },
       },
       {
         property: 'description',
@@ -99,19 +99,19 @@ class StandardsProgressTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.descriptionColumnHeader
-            }
-          }
+              ...styles.descriptionColumnHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.standardDescriptionColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.descriptionCell
-            }
-          }
-        }
+              ...styles.descriptionCell,
+            },
+          },
+        },
       },
       {
         property: 'numCompleted',
@@ -120,20 +120,20 @@ class StandardsProgressTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.mainColumnHeader
-            }
-          }
+              ...styles.mainColumnHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.lessonsCompletedColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.mainColumnCell
-            }
-          }
-        }
-      }
+              ...styles.mainColumnCell,
+            },
+          },
+        },
+      },
     ];
     return dataColumns;
   };
@@ -160,7 +160,7 @@ class StandardsProgressTable extends Component {
         numCompleted: this.getNumLessonsCompletedForStandard(standard, index),
         lessonsForStandardStatus: this.props.lessonsByStandard[standard.id]
           ? this.props.lessonsByStandard[standard.id]
-          : []
+          : [],
       };
     });
 
@@ -191,24 +191,24 @@ class StandardsProgressTable extends Component {
 const styles = {
   mainColumnHeader: {
     width: 80,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   descriptionColumnHeader: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   mainColumnCell: {
     width: 80,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   descriptionCell: {
     maxWidth: 470,
-    padding: '10px 10px 0px 10px'
-  }
+    padding: '10px 10px 0px 10px',
+  },
 };
 
 export const UnconnectedStandardsProgressTable = StandardsProgressTable;
 
 export default connect(state => ({
   lessonsByStandard: lessonsByStandard(state),
-  standards: state.sectionStandardsProgress.standardsData
+  standards: state.sectionStandardsProgress.standardsData,
 }))(StandardsProgressTable);

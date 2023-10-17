@@ -7,7 +7,7 @@ import {
   DialogState,
   LoadingDisplay,
   UnpublishSuccessDisplay,
-  ErrorDisplay
+  ErrorDisplay,
 } from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
 import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
 import LibraryPublisher from '@cdo/apps/code-studio/components/libraries/LibraryPublisher.jsx';
@@ -77,14 +77,14 @@ describe('LibraryCreationDialog', () => {
       server.respondWith('POST', `/profanity/find`, [
         status,
         {'Content-Type': 'application/json'},
-        JSON.stringify(serverData)
+        JSON.stringify(serverData),
       ]);
     };
 
     it('displays an error if profanity is found in library code', async () => {
       stubFindProfanityRequest(200, ['fart']);
       const library = {
-        librarySource: 'function fart() {};'
+        librarySource: 'function fart() {};',
       };
       const wrapper = shallow(
         <LibraryCreationDialog

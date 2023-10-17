@@ -13,3 +13,5 @@ MARKDOWN
 markdown <<MARKDOWN
 Which of these do NOT add 1 to the value stored in `index`?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -61,17 +61,17 @@ const DEFAULT_PROPS = {
   path: 'foo',
   data: {
     unreviewed: {
-      total: 10
+      total: 10,
     },
     accepted: {
-      total: 9
-    }
-  }
+      total: 9,
+    },
+  },
 };
 
 /** Shallow-render the component and stub react-router. */
 function customShallow(component) {
   return shallow(component, {
-    context: {router: {createHref: () => {}}}
+    context: {router: {createHref: () => {}}},
   });
 }

@@ -46,3 +46,5 @@ IV. `Painter ross = new Painter (0, 0, “East”, 6);`
 
 
 MARKDOWN
+
+allow_multiple_attempts true

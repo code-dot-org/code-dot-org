@@ -27,7 +27,7 @@ var TEXT_FINAL_VERTICAL_OFFSET = -10;
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizWire = (module.exports = function(localNode, remoteNode) {
+var NetSimVizWire = (module.exports = function (localNode, remoteNode) {
   NetSimVizElement.call(this);
 
   this.alwaysShowWireState = NetSimGlobals.getLevelConfig().automaticReceive;
@@ -54,9 +54,7 @@ var NetSimVizWire = (module.exports = function(localNode, remoteNode) {
    * @type {jQuery} wrapped around a SVGTextElement
    * @private
    */
-  this.text_ = jQuerySvgElement('text')
-    .addClass('state-label')
-    .appendTo(root);
+  this.text_ = jQuerySvgElement('text').addClass('state-label').appendTo(root);
 
   /**
    * X-coordinate of text label, for animation.
@@ -114,7 +112,7 @@ NetSimVizWire.inherits(NetSimVizElement);
  * Update path data for wire if we can detect pending changes
  * @param {RunLoop.Clock} [clock] - somtimes omitted during setup
  */
-NetSimVizWire.prototype.render = function(clock) {
+NetSimVizWire.prototype.render = function (clock) {
   // Cache the local position values here, so we can check later if
   // anything has changed before making an expensive `.attr` call
   var textPosX = this.textPosX_;
@@ -134,7 +132,7 @@ NetSimVizWire.prototype.render = function(clock) {
       this.localVizNode.posY,
       'L',
       this.remoteVizNode.posX,
-      this.remoteVizNode.posY
+      this.remoteVizNode.posY,
     ].join(' ');
     this.wireCenter_ = this.getWireCenterPosition();
   }
@@ -166,7 +164,7 @@ NetSimVizWire.prototype.render = function(clock) {
  * Hide this wire - used to hide the incoming wire when we're trying to show
  * simplex mode.
  */
-NetSimVizWire.prototype.hide = function() {
+NetSimVizWire.prototype.hide = function () {
   this.getRoot().addClass('hidden-wire');
 };
 
@@ -175,7 +173,7 @@ NetSimVizWire.prototype.hide = function() {
  * another node of matching ID being added, and begins its exit animation.
  * @override
  */
-NetSimVizWire.prototype.kill = function() {
+NetSimVizWire.prototype.kill = function () {
   NetSimVizWire.superPrototype.kill.call(this);
   this.localVizNode = null;
   this.remoteVizNode = null;
@@ -187,7 +185,7 @@ NetSimVizWire.prototype.kill = function() {
  *
  * @param {EncodingType[]} newEncodings
  */
-NetSimVizWire.prototype.setEncodings = function(newEncodings) {
+NetSimVizWire.prototype.setEncodings = function (newEncodings) {
   this.encodings_ = newEncodings;
 };
 
@@ -195,7 +193,7 @@ NetSimVizWire.prototype.setEncodings = function(newEncodings) {
  * Kick off an animation of the wire state being set by the local viznode.
  * @param {"0"|"1"} newState
  */
-NetSimVizWire.prototype.animateSetState = function(newState) {
+NetSimVizWire.prototype.animateSetState = function (newState) {
   if (!(this.localVizNode && this.remoteVizNode)) {
     return;
   }
@@ -215,14 +213,14 @@ NetSimVizWire.prototype.animateSetState = function(newState) {
     var holdPositionMs = 300;
     this.doAfterDelay(
       flyOutMs + holdPositionMs,
-      function() {
+      function () {
         this.setWireClasses_('unknown');
       }.bind(this)
     );
   }
 };
 
-NetSimVizWire.prototype.setWireState = function(newState) {
+NetSimVizWire.prototype.setWireState = function (newState) {
   if (!(this.localVizNode && this.remoteVizNode)) {
     return;
   }
@@ -235,7 +233,7 @@ NetSimVizWire.prototype.setWireState = function(newState) {
  * Kick off an animation of the wire state being read by the local viznode.
  * @param {"0"|"1"} newState
  */
-NetSimVizWire.prototype.animateReadState = function(newState) {
+NetSimVizWire.prototype.animateReadState = function (newState) {
   if (!(this.localVizNode && this.remoteVizNode)) {
     return;
   }
@@ -249,7 +247,7 @@ NetSimVizWire.prototype.animateReadState = function(newState) {
   this.snapTextToPosition(this.getWireCenterPosition());
   this.doAfterDelay(
     holdPositionMs,
-    function() {
+    function () {
       this.tweenTextToPosition(
         this.getLocalNodePosition(),
         flyToNodeMs,
@@ -258,7 +256,7 @@ NetSimVizWire.prototype.animateReadState = function(newState) {
       if (this.alwaysShowWireState) {
         this.doAfterDelay(
           holdPositionMs,
-          function() {
+          function () {
             this.snapTextToPosition(this.getWireCenterPosition());
           }.bind(this)
         );
@@ -276,7 +274,7 @@ NetSimVizWire.prototype.animateReadState = function(newState) {
  * @param {"0"|"1"|*} newState
  * @private
  */
-NetSimVizWire.prototype.setWireClasses_ = function(newState) {
+NetSimVizWire.prototype.setWireClasses_ = function (newState) {
   var stateOff = newState === '0';
   var stateOn = !stateOff && newState === '1';
   var stateUnknown = !stateOff && !stateOn;
@@ -293,7 +291,7 @@ NetSimVizWire.prototype.setWireClasses_ = function(newState) {
  * @returns {string} a display bit appropriate to the enabled encodings.
  * @private
  */
-NetSimVizWire.prototype.getDisplayBit_ = function(wireState) {
+NetSimVizWire.prototype.getDisplayBit_ = function (wireState) {
   if (
     this.isEncodingEnabled_(EncodingType.A_AND_B) &&
     !this.isEncodingEnabled_(EncodingType.BINARY)
@@ -309,8 +307,8 @@ NetSimVizWire.prototype.getDisplayBit_ = function(wireState) {
  * @returns {boolean}
  * @private
  */
-NetSimVizWire.prototype.isEncodingEnabled_ = function(queryEncoding) {
-  return this.encodings_.some(function(enabledEncoding) {
+NetSimVizWire.prototype.isEncodingEnabled_ = function (queryEncoding) {
+  return this.encodings_.some(function (enabledEncoding) {
     return enabledEncoding === queryEncoding;
   });
 };
@@ -322,7 +320,7 @@ NetSimVizWire.prototype.isEncodingEnabled_ = function(queryEncoding) {
  * @param {number} [duration=600] in milliseconds
  * @param {TweenFunction} [tweenFunction=linear]
  */
-NetSimVizWire.prototype.tweenTextToPosition = function(
+NetSimVizWire.prototype.tweenTextToPosition = function (
   destination,
   duration,
   tweenFunction
@@ -357,24 +355,24 @@ NetSimVizWire.prototype.tweenTextToPosition = function(
  * Snaps the text to the given position.
  * @param {{x:number, y:number}} destination
  */
-NetSimVizWire.prototype.snapTextToPosition = function(destination) {
+NetSimVizWire.prototype.snapTextToPosition = function (destination) {
   this.tweenTextToPosition(destination, 0);
 };
 
 /**
  * @returns {{x:number, y:number}}
  */
-NetSimVizWire.prototype.getLocalNodePosition = function() {
+NetSimVizWire.prototype.getLocalNodePosition = function () {
   return {
     x: this.localVizNode.posX,
-    y: this.localVizNode.posY
+    y: this.localVizNode.posY,
   };
 };
 
 /**
  * @returns {{x:number, y:number}}
  */
-NetSimVizWire.prototype.getWireCenterPosition = function() {
+NetSimVizWire.prototype.getWireCenterPosition = function () {
   return {
     x:
       (this.remoteVizNode.posX - this.localVizNode.posX) / 2 +
@@ -382,6 +380,6 @@ NetSimVizWire.prototype.getWireCenterPosition = function() {
     y:
       (this.remoteVizNode.posY - this.remoteVizNode.posY) / 2 +
       this.localVizNode.posY +
-      TEXT_FINAL_VERTICAL_OFFSET
+      TEXT_FINAL_VERTICAL_OFFSET,
   };
 };

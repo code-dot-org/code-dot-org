@@ -57,9 +57,9 @@ def get_token
     }
     auth_response = JSON.parse(RestClient.post(TOKEN_URL, form, headers))
     $token = auth_response['access_token']
-  rescue RestClient::Exception => e
+  rescue RestClient::Exception => exception
     Honeybadger.notify_cronjob_error(
-      e,
+      exception,
       error_message: "Failed to retrieve OAuth token from Spotify for use in App Lab Datasets.",
       context: {
         tenant_id: client_id,
@@ -76,9 +76,9 @@ def get_playlist_data(chart_type, playlist_id)
   begin
     url = "#{BASE_URL}/playlists/#{playlist_id}?#{field_query}"
     response = RestClient.get(url, {authorization: "Bearer #{$token}"})
-  rescue RestClient::Exception => e
+  rescue RestClient::Exception => exception
     Honeybadger.notify_cronjob_error(
-      e,
+      exception,
       error_message: "Failed to retrieve playlist data from Spotify for use in App Lab Datasets.",
       context: {
         playlist_id: playlist_id,

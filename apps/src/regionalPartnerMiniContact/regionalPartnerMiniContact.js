@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   RegionalPartnerMiniContact,
-  RegionalPartnerMiniContactPopupLink
+  RegionalPartnerMiniContactPopupLink,
 } from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 
-window.showRegionalPartnerMiniContact = function() {
+window.showRegionalPartnerMiniContact = function () {
   const regionalPartnerMiniContactElement = $(
     '#regional-partner-mini-contact-container'
   );
@@ -16,14 +16,14 @@ window.showRegionalPartnerMiniContact = function() {
 
   $.ajax({
     type: 'GET',
-    url: '/dashboardapi/v1/users/me/contact_details'
+    url: '/dashboardapi/v1/users/me/contact_details',
   })
     .done(results => {
       options = {
         user_name: results.user_name,
         email: results.email,
         zip: results.zip,
-        notes: notes
+        notes: notes,
       };
     })
     .complete(() => {
@@ -38,21 +38,18 @@ window.showRegionalPartnerMiniContact = function() {
     });
 };
 
-window.showRegionalPartnerMiniContactPopupLink = function() {
+window.showRegionalPartnerMiniContactPopupLink = function () {
   const regionalPartnerMiniContactPopupLinkElement = $(
     '#regional-partner-mini-contact-popup-link-container'
   );
 
-  const sourcePageId = regionalPartnerMiniContactPopupLinkElement.data(
-    'source-page-id'
-  );
-  const notes = regionalPartnerMiniContactPopupLinkElement.data(
-    'options-notes'
-  );
+  const sourcePageId =
+    regionalPartnerMiniContactPopupLinkElement.data('source-page-id');
+  const notes =
+    regionalPartnerMiniContactPopupLinkElement.data('options-notes');
   const linkText = regionalPartnerMiniContactPopupLinkElement.data('link-text');
-  const isButton = regionalPartnerMiniContactPopupLinkElement.data(
-    'link-button'
-  );
+  const isButton =
+    regionalPartnerMiniContactPopupLinkElement.data('link-button');
 
   ReactDOM.render(
     <RegionalPartnerMiniContactPopupLink

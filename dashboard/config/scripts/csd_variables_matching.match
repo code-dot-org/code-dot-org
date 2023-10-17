@@ -57,3 +57,5 @@ This lesson was all about how to use **expressions** to be able to **use a varia
         rect(position, position, 50, 50);
     }
 MARKDOWN
+
+allow_multiple_attempts true

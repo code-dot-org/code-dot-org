@@ -20,15 +20,15 @@ function initPage() {
       qtip_config: {
         codeStudio: {
           canReappear: false,
-          dropletPaletteCategory: ''
+          dropletPaletteCategory: '',
         },
         style: {classes: ''},
         position: {
           my: '',
           at: '',
-          adjust: {x: 0, y: 0}
-        }
-      }
-    }
+          adjust: {x: 0, y: 0},
+        },
+      },
+    },
   });
 }

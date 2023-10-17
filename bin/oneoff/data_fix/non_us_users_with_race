@@ -37,10 +37,10 @@ File.foreach('/tmp/non_us_ids_with_races.csv').with_index do |line, line_num|
     begin
       puts "UPDATING: #{user.id} (deleting races: #{user.races})..."
       user.update!(races: nil) # this will delete the races property altogether in the JSON, not just clear it
-    rescue Exception => e
+    rescue Exception => exception
       puts "EXCEPTION:"
       puts "  USER: #{user}"
-      puts "  MESSAGE: #{e.message}"
+      puts "  MESSAGE: #{exception.message}"
       sleep(10)
     end
   rescue ActiveRecord::RecordNotFound

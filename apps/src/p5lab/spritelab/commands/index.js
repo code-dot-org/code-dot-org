@@ -17,5 +17,5 @@ export default {
   ...spriteCommands,
   ...storyLabCommands,
   ...worldCommands,
-  ...validationCommands
+  ...validationCommands,
 };

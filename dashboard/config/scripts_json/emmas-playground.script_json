@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "emmas-playground",
-    "serialized_at": "2023-01-20 18:35:02 UTC",
+    "serialized_at": "2023-03-02 22:55:56 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -107,6 +107,21 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Ecosystems Test",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -169,6 +184,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -220,6 +247,84 @@
       "seeding_key": {
         "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6",
         "lesson_activity.key": "1b63a389-4467-4ab2-bb9d-7e9530d8c527"
+      }
+    },
+    {
+      "key": "54e46e9a-f7c7-4145-b2de-22d681409ab3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video Placeholder"
+      },
+      "seeding_key": {
+        "activity_section.key": "54e46e9a-f7c7-4145-b2de-22d681409ab3",
+        "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563"
+      }
+    },
+    {
+      "key": "8df5a4be-6581-4c5a-a1d4-52698cd8a254",
+      "position": 2,
+      "properties": {
+        "progression_name": "Remove Algae"
+      },
+      "seeding_key": {
+        "activity_section.key": "8df5a4be-6581-4c5a-a1d4-52698cd8a254",
+        "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563"
+      }
+    },
+    {
+      "key": "faf7bbeb-5af9-4721-8a47-7f45da085c87",
+      "position": 3,
+      "properties": {
+        "progression_name": "Remove Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "faf7bbeb-5af9-4721-8a47-7f45da085c87",
+        "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563"
+      }
+    },
+    {
+      "key": "3749a66d-10e9-405a-8aa5-6d96d574fb95",
+      "position": 4,
+      "properties": {
+        "progression_name": "Conditionals Markdown"
+      },
+      "seeding_key": {
+        "activity_section.key": "3749a66d-10e9-405a-8aa5-6d96d574fb95",
+        "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563"
+      }
+    },
+    {
+      "key": "9a08ff3c-fc7d-4359-826f-685db6068fab",
+      "position": 5,
+      "properties": {
+        "progression_name": "Matching"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a08ff3c-fc7d-4359-826f-685db6068fab",
+        "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563"
+      }
+    },
+    {
+      "key": "3a1da94d-591b-40c0-b4d8-603fee738e6e",
+      "position": 6,
+      "properties": {
+        "progression_name": "Conditionals Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a1da94d-591b-40c0-b4d8-603fee738e6e",
+        "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563"
+      }
+    },
+    {
+      "key": "aba33c40-fc0e-4008-9872-7480eb1e19eb",
+      "position": 7,
+      "properties": {
+        "name": "Simulation",
+        "progression_name": "Simulation"
+      },
+      "seeding_key": {
+        "activity_section.key": "aba33c40-fc0e-4008-9872-7480eb1e19eb",
+        "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563"
       }
     }
   ],
@@ -823,6 +928,163 @@
       "level_keys": [
         "csc_fm_show_input_output_test_clone"
       ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emmasw_test_ecosystems_template_2023"
+        ],
+        "progression": "Video Placeholder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emmasw_test_ecosystems_template_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "54e46e9a-f7c7-4145-b2de-22d681409ab3"
+      },
+      "level_keys": [
+        "emmasw_test_ecosystems_template_2023"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Remove Algae"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma_ecosystems_ocean_algae_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "8df5a4be-6581-4c5a-a1d4-52698cd8a254"
+      },
+      "level_keys": [
+        "emma_ecosystems_ocean_algae_2023"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Remove Fish"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma_ecosystems_ocean_boat_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "faf7bbeb-5af9-4721-8a47-7f45da085c87"
+      },
+      "level_keys": [
+        "emma_ecosystems_ocean_boat_2023"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals Markdown"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma_ecosystems_inequalities_markdown_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "3749a66d-10e9-405a-8aa5-6d96d574fb95"
+      },
+      "level_keys": [
+        "emma_ecosystems_inequalities_markdown_2023"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Matching"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma_matching_ecosystems_test"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "9a08ff3c-fc7d-4359-826f-685db6068fab"
+      },
+      "level_keys": [
+        "emma_matching_ecosystems_test"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emmasw_ecosystems_ocean_coral_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "3a1da94d-591b-40c0-b4d8-603fee738e6e"
+      },
+      "level_keys": [
+        "emmasw_ecosystems_ocean_coral_2023"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emmasw_ecosystems_ocean_simulation_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "aba33c40-fc0e-4008-9872-7480eb1e19eb"
+      },
+      "level_keys": [
+        "emmasw_ecosystems_ocean_simulation_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1124,6 +1386,90 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "4fe42c1d-2805-4720-8e0e-6b87bb42a1b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emmasw_test_ecosystems_template_2023",
+        "script_level.level_keys": [
+          "emmasw_test_ecosystems_template_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "54e46e9a-f7c7-4145-b2de-22d681409ab3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma_ecosystems_ocean_algae_2023",
+        "script_level.level_keys": [
+          "emma_ecosystems_ocean_algae_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "8df5a4be-6581-4c5a-a1d4-52698cd8a254"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma_ecosystems_ocean_boat_2023",
+        "script_level.level_keys": [
+          "emma_ecosystems_ocean_boat_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "faf7bbeb-5af9-4721-8a47-7f45da085c87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma_ecosystems_inequalities_markdown_2023",
+        "script_level.level_keys": [
+          "emma_ecosystems_inequalities_markdown_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "3749a66d-10e9-405a-8aa5-6d96d574fb95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma_matching_ecosystems_test",
+        "script_level.level_keys": [
+          "emma_matching_ecosystems_test"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "9a08ff3c-fc7d-4359-826f-685db6068fab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emmasw_ecosystems_ocean_coral_2023",
+        "script_level.level_keys": [
+          "emmasw_ecosystems_ocean_coral_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "3a1da94d-591b-40c0-b4d8-603fee738e6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emmasw_ecosystems_ocean_simulation_2023",
+        "script_level.level_keys": [
+          "emmasw_ecosystems_ocean_simulation_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "aba33c40-fc0e-4008-9872-7480eb1e19eb"
       }
     }
   ],

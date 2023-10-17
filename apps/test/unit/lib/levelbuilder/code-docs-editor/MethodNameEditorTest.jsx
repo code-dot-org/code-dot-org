@@ -11,9 +11,9 @@ describe('MethodNameEditor', () => {
     updateSpy = sinon.spy();
     defaultProps = {
       method: {
-        name: 'method 1'
+        name: 'method 1',
       },
-      updateMethod: updateSpy
+      updateMethod: updateSpy,
     };
   });
 

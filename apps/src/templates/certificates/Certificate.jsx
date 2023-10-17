@@ -21,7 +21,7 @@ import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
  */
 function reEncodeNonLatin1(data) {
   var encodedData = encodeURIComponent(data);
-  encodedData = encodedData.replace(/%([0-9A-F]{2})/g, function(match, p1) {
+  encodedData = encodedData.replace(/%([0-9A-F]{2})/g, function (match, p1) {
     return String.fromCharCode('0x' + p1);
   });
   return decodeURIComponent(encodedData);
@@ -48,8 +48,8 @@ function Certificate(props) {
       dataType: 'json',
       data: {
         session_s: session,
-        name_s: nameInputRef.current.value
-      }
+        name_s: nameInputRef.current.value,
+      },
     }).done(response => {
       if (response.certificate_sent) {
         setStudentName(response['name']);
@@ -63,9 +63,20 @@ function Certificate(props) {
     const data = {
       name: studentName,
       course: props.tutorial,
-      donor
+      donor,
     };
-    return btoa(reEncodeNonLatin1(JSON.stringify(data)));
+    const asciiData = btoa(reEncodeNonLatin1(JSON.stringify(data)));
+    const urlSafeData = asciiData
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/g, '');
+    // This method complies with “Base 64 Encoding with URL and Filename
+    // Safe Alphabet” in RFC 4648. The alphabet uses ‘-’ instead of ‘+’ and
+    // ‘_’ instead of ‘/’.
+    // NOTE: using replaceAll has causes issues in the test machine due to the
+    // version of the google-chrome-stable package installed. replace method has
+    // better support.
+    return urlSafeData;
   };
 
   const getCertificateImagePath = () => {
@@ -91,7 +102,7 @@ function Certificate(props) {
     under13,
     children,
     initialCertificateImageUrl,
-    isHocTutorial
+    isHocTutorial,
   } = props;
 
   const personalizedCertificate = getCertificateImagePath();
@@ -106,7 +117,7 @@ function Certificate(props) {
   const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
 
   const facebook = queryString.stringify({
-    u: certificateShareLink
+    u: certificateShareLink,
   });
 
   const twitter = queryString.stringify({
@@ -114,7 +125,7 @@ function Certificate(props) {
     related: 'codeorg',
     text: randomDonorTwitter
       ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
-      : i18n.justDidHourOfCode()
+      : i18n.justDidHourOfCode(),
   });
 
   const print = getPrintPath();
@@ -182,42 +193,42 @@ Certificate.propTypes = {
   under13: PropTypes.bool,
   children: PropTypes.node,
   initialCertificateImageUrl: PropTypes.string.isRequired,
-  isHocTutorial: PropTypes.bool
+  isHocTutorial: PropTypes.bool,
 };
 
 const styles = {
   heading: {
-    width: '100%'
+    width: '100%',
   },
   container: {
     marginBottom: 50,
-    float: 'left'
+    float: 'left',
   },
   mobileHeading: {
     fontSize: 24,
-    lineHeight: 1.5
+    lineHeight: 1.5,
   },
   desktopHalf: {
     width: '50%',
-    float: 'left'
+    float: 'left',
   },
   mobileFull: {
     width: '100%',
-    float: 'left'
+    float: 'left',
   },
   nameInput: {
     height: 32,
-    margin: 0
+    margin: 0,
   },
   submit: {
     background: color.orange,
-    color: color.white
+    color: color.white,
   },
   confetti: {
-    top: 100
-  }
+    top: 100,
+  },
 };
 
 export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize
+  responsiveSize: state.responsive.responsiveSize,
 }))(Certificate);

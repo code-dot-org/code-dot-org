@@ -92,7 +92,7 @@ const levelDef = {
   solutionBlocks: noSetColor,
   ideal: Infinity,
   toolbox: null,
-  freePlay: false
+  freePlay: false,
 };
 
 module.exports = {
@@ -105,17 +105,17 @@ module.exports = {
       description:
         "Level With Set Color: setting color in user code but not answer doesn't invalidate solution",
       expected: {
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      xml: setColor
+      xml: setColor,
     },
     {
       description:
         "Level With Set Color: using random color doesn't invalidate solution",
       expected: {
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      xml: setRandomColor
-    }
-  ]
+      xml: setRandomColor,
+    },
+  ],
 };

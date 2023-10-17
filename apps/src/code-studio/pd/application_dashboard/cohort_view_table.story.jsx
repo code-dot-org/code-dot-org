@@ -4,7 +4,7 @@ import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default {
   title: 'CohortViewTable',
-  component: CohortViewTable
+  component: CohortViewTable,
 };
 
 const Template = args => <CohortViewTable path="path" {...args} />;
@@ -21,7 +21,7 @@ CohortViewTeacherApp.args = {
       email: 'nurse@hogwarts.edu',
       notified: 'Yes',
       assigned_workshop: 'Chicago Summer Workshop 6/1',
-      registered_workshop_id: 1
+      registered_workshop_id: 1,
     },
     {
       id: 2,
@@ -32,22 +32,22 @@ CohortViewTeacherApp.args = {
       email: 'short@hogwarts.edu',
       notified: 'Yes',
       assigned_workshop: 'Chicago Summer Workshop 6/1',
-      registered_workshop_id: 2
-    }
+      registered_workshop_id: 2,
+    },
   ],
   viewType: 'teacher',
   regionalPartnerFilter: {
     value: 2,
-    label: 'WNY Stem Hub'
+    label: 'WNY Stem Hub',
   },
   regionalPartners: [
     {
       id: 1,
-      workshop_type: WorkshopTypes.local_summer
+      workshop_type: WorkshopTypes.local_summer,
     },
     {
       id: 2,
-      workshop_type: WorkshopTypes.local_summer
-    }
-  ]
+      workshop_type: WorkshopTypes.local_summer,
+    },
+  ],
 };

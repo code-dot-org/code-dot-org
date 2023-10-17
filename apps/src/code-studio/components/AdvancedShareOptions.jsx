@@ -6,6 +6,8 @@ import {CIPHER, ALPHABET} from '../../constants';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
+import Button from '../../templates/Button';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const style = {
   nav: {
@@ -15,49 +17,58 @@ const style = {
       marginTop: 0,
       marginLeft: 0,
       marginRight: 0,
-      marginBottom: 10
+      marginBottom: 10,
     },
     li: {
       display: 'inline-block',
-      color: color.light_gray,
+      color: color.neutral_dark90,
+      ...fontConstants['main-font-semi-bold'],
       fontSize: 'larger',
-      fontWeight: 'bold',
       marginRight: 10,
-      cursor: 'pointer'
+      cursor: 'pointer',
     },
-    selectedLi: {color: color.purple}
+    selectedLi: {color: color.brand_secondary_default},
   },
   ol: {
-    marginLeft: 15
+    marginLeft: 15,
   },
   p: {
     fontSize: 'inherit',
     lineHeight: 'inherit',
-    color: 'inherit'
+    color: color.neutral_dark,
+    ...fontConstants['main-font-semi-bold'],
+  },
+  warningp: {
+    color: color.red,
   },
   bold: {
-    fontFamily: "'Gotham 7r', sans-serif"
+    ...fontConstants['main-font-bold'],
   },
   root: {
-    marginTop: 20
+    marginTop: 20,
   },
   expand: {
-    color: color.purple,
+    color: color.brand_secondary_default,
+    ...fontConstants['main-font-semi-bold'],
     cursor: 'pointer',
-    fontWeight: 'bold'
   },
   embedInput: {
     cursor: 'copy',
     width: 465,
     height: 80,
-    margin: 0
-  }
+    margin: 0,
+  },
+  shareLibraryButton: {
+    margin: 0,
+    fontSize: 'large',
+    height: 40,
+  },
 };
 
 const ShareOptions = {
   EXPORT: 'export',
   EMBED: 'embed',
-  LIBRARY: 'library'
+  LIBRARY: 'library',
 };
 
 class AdvancedShareOptions extends React.Component {
@@ -71,8 +82,8 @@ class AdvancedShareOptions extends React.Component {
     channelId: PropTypes.string.isRequired,
     embedOptions: PropTypes.shape({
       iframeHeight: PropTypes.number.isRequired,
-      iframeWidth: PropTypes.number.isRequired
-    }).isRequired
+      iframeWidth: PropTypes.number.isRequired,
+    }).isRequired,
   };
 
   constructor(props) {
@@ -83,7 +94,7 @@ class AdvancedShareOptions extends React.Component {
         : ShareOptions.EMBED,
       exporting: false,
       exportError: null,
-      embedWithoutCode: false
+      embedWithoutCode: false,
     };
   }
 
@@ -94,7 +105,7 @@ class AdvancedShareOptions extends React.Component {
       .then(this.setState.bind(this, {exporting: false}), () => {
         this.setState({
           exporting: false,
-          exportError: 'Failed to export project. Please try again later.'
+          exportError: 'Failed to export project. Please try again later.',
         });
       });
   };
@@ -120,6 +131,9 @@ class AdvancedShareOptions extends React.Component {
     return (
       <div>
         <p style={style.p}>{i18n.shareEmbedDescription()}</p>
+        <p style={{...style.p, ...style.warningp}}>
+          {i18n.shareEmbedWarning()}
+        </p>
         <textarea
           type="text"
           onClick={e => e.target.select()}
@@ -130,6 +144,7 @@ class AdvancedShareOptions extends React.Component {
         <label style={{display: 'flex'}}>
           <input
             type="checkbox"
+            style={{accentColor: color.brand_primary_default}}
             checked={this.state.embedWithoutCode}
             onChange={() =>
               this.setState({embedWithoutCode: !this.state.embedWithoutCode})
@@ -156,14 +171,19 @@ class AdvancedShareOptions extends React.Component {
           Export your project as a zipped file, which will contain the
           HTML/CSS/JS files, as well as any assets, for your project.
         </p>
-        <button
-          type="button"
+        <Button
+          color={Button.ButtonColor.neutralDark}
           onClick={this.downloadExport}
-          style={{marginLeft: 0}}
+          style={{
+            margin: 0,
+            paddingRight: 11,
+            fontSize: 'large',
+            height: 40,
+          }}
         >
           {spinner}
           Export
-        </button>
+        </Button>
         {alert}
       </div>
     );
@@ -177,13 +197,12 @@ class AdvancedShareOptions extends React.Component {
     return (
       <div>
         <p style={style.p}>{i18n.shareLibraryWithClassmate()}</p>
-        <button
-          type="button"
+        <Button
+          color={Button.ButtonColor.neutralDark}
           onClick={this.props.openLibraryCreationDialog}
-          style={{marginLeft: 0}}
-        >
-          {i18n.shareLibrary()}
-        </button>
+          style={style.shareLibraryButton}
+          text={i18n.shareLibrary()}
+        />
       </div>
     );
   };
@@ -193,7 +212,7 @@ class AdvancedShareOptions extends React.Component {
       <li
         style={[
           style.nav.li,
-          this.state.selectedOption === option && style.nav.selectedLi
+          this.state.selectedOption === option && style.nav.selectedLi,
         ]}
         onClick={() => this.setState({selectedOption: option})}
       >
@@ -268,12 +287,12 @@ class AdvancedShareOptions extends React.Component {
 
 export default connect(
   state => ({
-    librariesEnabled: state.pageConstants.librariesEnabled
+    librariesEnabled: state.pageConstants.librariesEnabled,
   }),
   dispatch => ({
     openLibraryCreationDialog() {
       dispatch(showLibraryCreationDialog());
       dispatch(hideShareDialog());
-    }
+    },
   })
 )(Radium(AdvancedShareOptions));

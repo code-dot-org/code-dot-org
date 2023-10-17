@@ -6,11 +6,11 @@ import {install, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 
-const customSimpleDialog = function({
+const customSimpleDialog = function ({
   bodyText,
   prompt,
   promptPrefill,
-  onCancel: callback
+  onCancel: callback,
 }) {
   if (prompt) {
     const result = window.prompt(bodyText, promptPrefill);
@@ -29,7 +29,7 @@ Blockly.inject(document.getElementById('blockly-container'), {
   customSimpleDialog,
   valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
   hasVerticalScrollbars: true,
-  typeHints: true
+  typeHints: true,
 });
 
 const blockPool = JSON.parse(
@@ -39,21 +39,18 @@ install(Blockly);
 installCustomBlocks({
   blockly: Blockly,
   blockDefinitions: blockPool,
-  customInputTypes // TODO: generalize for other app types.
+  customInputTypes, // TODO: generalize for other app types.
 });
 
 const DEFAULT_NAME = 'acting';
 
 const blockXml = `<xml>
   <block type="behavior_definition">
-    <title id=${DEFAULT_NAME} name="NAME">${DEFAULT_NAME}</title>
+    <title id="${DEFAULT_NAME}" name="NAME">${DEFAULT_NAME}</title>
   </block>
 </xml>`;
 
-Blockly.Xml.domToBlockSpace(
-  Blockly.mainBlockSpace,
-  Blockly.Xml.textToDom(blockXml)
-);
+Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, blockXml);
 const block = Blockly.mainBlockSpace.getTopBlocks()[0];
 const name = getInput('name').value || DEFAULT_NAME;
 
@@ -75,9 +72,8 @@ if (childBlock) {
 
 Blockly.behaviorEditor.openAndEditFunction(name || DEFAULT_NAME);
 
-document.querySelector('#functionDescriptionText').value = getInput(
-  'description'
-).value;
+document.querySelector('#functionDescriptionText').value =
+  getInput('description').value;
 
 function getInput(name) {
   return document.querySelector(
@@ -101,9 +97,7 @@ document
         '#functionDescriptionText'
       ).value;
       if (stack) {
-        getInput('stack').value = Blockly.Xml.domToText(
-          Blockly.Xml.blockToDom(stack)
-        );
+        getInput('stack').value = Blockly.cdoUtils.getCode(stack);
       }
     } catch (error) {
       alert(`Error saving:\n\n${error}`);

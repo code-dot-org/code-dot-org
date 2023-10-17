@@ -16,7 +16,7 @@ function showAmazonFutureEngineerEligibility() {
 
   $.ajax({
     type: 'GET',
-    url: '/dashboardapi/v1/users/me/donor_teacher_banner_details'
+    url: '/dashboardapi/v1/users/me/donor_teacher_banner_details',
   })
     .done(results => {
       signedIn = true;
@@ -25,7 +25,7 @@ function showAmazonFutureEngineerEligibility() {
     .complete(() => {
       firehoseClient.putRecord({
         study: 'amazon-future-engineer-eligibility',
-        event: 'start'
+        event: 'start',
       });
 
       amazonFutureEngineerEligibilityElements.each(

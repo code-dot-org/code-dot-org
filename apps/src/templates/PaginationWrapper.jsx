@@ -13,7 +13,7 @@ class PaginationWrapper extends Component {
     totalPages: PropTypes.number.isRequired,
     currentPage: PropTypes.number.isRequired,
     onChangePage: PropTypes.func.isRequired,
-    label: PropTypes.string
+    label: PropTypes.string,
   };
 
   render() {
@@ -27,20 +27,20 @@ class PaginationWrapper extends Component {
             padding: 0,
             margin: 0,
             li: {
-              display: 'inline'
+              display: 'inline',
             },
             a: {
               float: 'left',
               paddingLeft: 12,
               textDecoration: 'none',
-              color: color.cyan
+              color: color.cyan,
             },
             '.active a': {
-              color: color.default_text
+              color: color.default_text,
             },
             'a:hover': {
-              color: color.default_text
-            }
+              color: color.default_text,
+            },
           }}
         />
         {this.props.label && (
@@ -60,8 +60,8 @@ class PaginationWrapper extends Component {
 
 const styles = {
   label: {
-    float: 'left'
-  }
+    float: 'left',
+  },
 };
 
 export default Radium(PaginationWrapper);

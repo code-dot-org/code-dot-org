@@ -7,3 +7,5 @@ wrong 'option 1'
 wrong 'option 2'
 right 'option 3'
 wrong 'option 4'
+
+allow_multiple_attempts false

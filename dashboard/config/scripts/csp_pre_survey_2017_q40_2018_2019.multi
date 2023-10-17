@@ -6,3 +6,4 @@ right 'Online program'
 right 'Summer program/camp'
 right 'Other'
 right 'I did not do any computer science outside of school'
+allow_multiple_attempts true

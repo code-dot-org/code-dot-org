@@ -3,7 +3,7 @@ Date of Last Revision: August 24, 2016
 
 Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
 
-Code.org is committed to protecting the privacy of children who use our sites and applications.  This notice describes our practices of collecting, using, and disclosing personal information from children under 13.  Please review our general [Privacy Policy](<%= CDO.code_org_url('/privacy') %>) and [Terms of Use Agreement](<%= CDO.code_org_url('/tos') %>) for additional information.  These policies are in accordance with the U.S. Children’s Online Privacy Protection Act (COPPA).  If you have any questions about these policies, you may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 1501 4th Avenue, Suite 900, Seattle, WA 98101.
+Code.org is committed to protecting the privacy of children who use our sites and applications.  This notice describes our practices of collecting, using, and disclosing personal information from children under 13.  Please review our general [Privacy Policy](<%= CDO.code_org_url('/privacy') %>) and [Terms of Use Agreement](<%= CDO.code_org_url('/tos') %>) for additional information.  These policies are in accordance with the U.S. Children’s Online Privacy Protection Act (COPPA).  If you have any questions about these policies, you may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 801 5th Avenue, Suite 2100, Seattle, WA 98104.
 
 ## 1. Authorization from the School
 
@@ -75,9 +75,9 @@ For a more detailed explanation of how we share and transfer data, please read t
 
 At any time, you (as the teacher) can refuse to permit us to collect further personal information from your students in association with a particular account, and can request that we delete from our records the personal information we have collected in connection with that account.  Please keep in mind that a request to delete records may lead to a termination of an account, membership, or other service.
 
-You may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 1501 4th Avenue, Suite 900, Seattle, WA 98101, to request access to review, change, or delete a student’s personal information.  
+You may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 801 5th Avenue, Suite 2100, Seattle, WA 98104, to request access to review, change, or delete a student’s personal information.  
 
 ## 5. Revoking and Deleting Your Consent
 At any time, you may revoke your consent, refuse to allow us to further use or collect your students’ personal information, and direct us to delete the information.  If you revoke your consent, we will no longer permit your students to participate in certain activities on Code.org.  Your students will continue to have access to other activities on Code.org which do not require your students’ personal information.
 
-To revoke your consent, write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 1501 4th Avenue, Suite 900, Seattle, WA 98101.
+To revoke your consent, write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 801 5th Avenue, Suite 2100, Seattle, WA 98104.

@@ -5,9 +5,12 @@ import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /*
  * SignInOrAgeDialog uses 'anon_over13' as its session storage key.
@@ -27,17 +30,18 @@ export const songFilterOn = () => {
 
 class AgeDialog extends Component {
   state = {
-    open: true
+    open: true,
   };
 
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     turnOffFilter: PropTypes.func.isRequired,
-    storage: PropTypes.object.isRequired
+    storage: PropTypes.object.isRequired,
+    unitName: PropTypes.string,
   };
 
   static defaultProps = {
-    storage: window.sessionStorage
+    storage: window.sessionStorage,
   };
 
   setSessionStorage = over13 => {
@@ -62,11 +66,20 @@ class AgeDialog extends Component {
     }
 
     // Sets cookie to true when anon user is 13+. False otherwise.
-    const over13 = parseInt(value, 10) >= 13;
+    const age = parseInt(value, 10);
+    const over13 = age >= 13;
     this.setSessionStorage(over13);
 
     if (over13) {
       this.props.turnOffFilter();
+    }
+
+    // Send Amplitude event when anon user is 21+.
+    if (age >= 21) {
+      analyticsReporter.sendEvent(EVENTS.AGE_21_SELECTED_EVENT, {
+        unit_name: this.props.unitName,
+        current_path: document.location.pathname,
+      });
     }
   };
 
@@ -114,11 +127,11 @@ class AgeDialog extends Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
   },
   dancePartyHeading: {
     fontSize: 32,
-    fontFamily: "'Gotham 7r', sans-serif"
+    ...fontConstants['main-font-bold'],
   },
   middle: {
     marginTop: 20,
@@ -131,26 +144,27 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex'
+    display: 'flex',
   },
   middleCell: {
     display: 'inline-block',
     verticalAlign: 'top',
-    maxWidth: '50%'
+    maxWidth: '50%',
   },
   age: {
-    paddingTop: 15
+    paddingTop: 15,
   },
   dropdown: {
     verticalAlign: 'top',
     marginRight: 10,
     marginTop: 2,
-    width: 160
-  }
+    width: 160,
+  },
 };
 
 export const UnconnectedAgeDialog = AgeDialog;
 
 export default connect(state => ({
-  signedIn: state.currentUser.signInState === SignInState.SignedIn
+  signedIn: state.currentUser.signInState === SignInState.SignedIn,
+  unitName: state.progress.scriptName,
 }))(AgeDialog);

@@ -10,3 +10,4 @@ answer 'A loop that repeats a code segment a given number of times'
 
 question 'Loop Control Variable'
 answer 'A variable declared and used within a loop to count iterations through the loop'
+allow_multiple_attempts true

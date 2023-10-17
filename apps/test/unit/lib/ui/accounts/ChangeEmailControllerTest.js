@@ -40,7 +40,7 @@ describe('ChangeEmailController', () => {
       userAge,
       userType,
       isPasswordRequired: true,
-      emailChangedCallback
+      emailChangedCallback,
     });
   }
 
@@ -102,7 +102,7 @@ describe('ChangeEmailController', () => {
       controller = newController(13, 'student');
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD
+        currentPassword: TEST_PASSWORD,
       });
       expect(form.find('#change-email-modal_user_email').val()).to.equal(
         TEST_EMAIL
@@ -113,7 +113,7 @@ describe('ChangeEmailController', () => {
       controller = newController(12, 'student');
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD
+        currentPassword: TEST_PASSWORD,
       });
       expect(form.find('#change-email-modal_user_email').val()).to.equal('');
     });
@@ -121,7 +121,7 @@ describe('ChangeEmailController', () => {
     it('sets hashed email field', async () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD
+        currentPassword: TEST_PASSWORD,
       });
       expect(form.find('#change-email-modal_user_hashed_email').val()).to.equal(
         hashEmail(TEST_EMAIL)
@@ -132,7 +132,7 @@ describe('ChangeEmailController', () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
-        emailOptIn: 'yes'
+        emailOptIn: 'yes',
       });
       expect(
         form.find('#change-email-modal_user_email_preference_opt_in').val()
@@ -143,7 +143,7 @@ describe('ChangeEmailController', () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
-        emailOptIn: 'no'
+        emailOptIn: 'no',
       });
       expect(
         form.find('#change-email-modal_user_email_preference_opt_in').val()
@@ -154,7 +154,7 @@ describe('ChangeEmailController', () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
-        emailOptIn: undefined
+        emailOptIn: undefined,
       });
       expect(
         form.find('#change-email-modal_user_email_preference_opt_in').val()
@@ -164,7 +164,7 @@ describe('ChangeEmailController', () => {
     it('sets current password field', async () => {
       await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD
+        currentPassword: TEST_PASSWORD,
       });
       expect(
         form.find('#change-email-modal_user_current_password').val()
@@ -174,7 +174,7 @@ describe('ChangeEmailController', () => {
     it('resolves to new email on success', async () => {
       const newEmail = await controller.submitEmailChange({
         newEmail: TEST_EMAIL,
-        currentPassword: TEST_PASSWORD
+        currentPassword: TEST_PASSWORD,
       });
       expect(newEmail).to.equal(TEST_EMAIL);
     });
@@ -185,7 +185,7 @@ describe('ChangeEmailController', () => {
       await expect(
         controller.submitEmailChange({
           newEmail: TEST_EMAIL,
-          currentPassword: TEST_PASSWORD
+          currentPassword: TEST_PASSWORD,
         })
       ).to.eventually.be.rejectedWith(Error);
     });
@@ -197,21 +197,21 @@ describe('ChangeEmailController', () => {
           {
             responseJSON: {
               email: ['test-email-error'],
-              current_password: ['test-current-password-error']
-            }
-          }
+              current_password: ['test-current-password-error'],
+            },
+          },
         ])
       );
       await expect(
         controller.submitEmailChange({
           newEmail: TEST_EMAIL,
-          currentPassword: TEST_PASSWORD
+          currentPassword: TEST_PASSWORD,
         })
       ).to.eventually.be.rejectedWith({
         serverErrors: {
           email: 'test-email-error',
-          currentPassword: 'test-current-password-error'
-        }
+          currentPassword: 'test-current-password-error',
+        },
       });
     });
   });
@@ -236,7 +236,7 @@ describe('ChangeEmailController', () => {
       controller.onEmailChanged(TEST_EMAIL);
       expect(displayedUserEmail.effect).to.have.been.calledWith('highlight', {
         duration: 1500,
-        color: color.orange
+        color: color.orange,
       });
     });
 
