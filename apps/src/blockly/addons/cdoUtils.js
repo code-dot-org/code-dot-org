@@ -356,3 +356,32 @@ export function partitionBlocksByType(
 
   return [...prioritizedBlocks, ...remainingBlocks];
 }
+
+/**
+ * Retrieves custom category blocks from the Blockly toolbox XML for display in a flyout.
+ *
+ * @param {string} category - The name of the custom category to retrieve blocks from.
+ * @returns {HTMLCollection} - a collection of XML blocks for flyout, or an empty array
+ */
+export function getCustomCategoryBlocksForFlyout(category) {
+  const parser = new DOMParser();
+  // TODO: Update this to use JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
+  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
+
+  const categoryNodes = xmlDoc.getElementsByTagName('category');
+  for (const categoryNode of categoryNodes) {
+    const categoryCustom = categoryNode.getAttribute('custom');
+
+    if (categoryCustom === category) {
+      const xmlList = document.createDocumentFragment();
+      const blockNodes = categoryNode.getElementsByTagName('block');
+      for (const blockNode of blockNodes) {
+        if (blockNode.parentElement === categoryNode) {
+          xmlList.appendChild(blockNode.cloneNode(true));
+        }
+      }
+      return xmlList.children;
+    }
+  }
+  return [];
+}

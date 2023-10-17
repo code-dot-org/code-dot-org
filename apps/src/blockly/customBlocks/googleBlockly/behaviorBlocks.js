@@ -177,7 +177,12 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     blockList.push(newBehaviorButton);
   }
 
-  blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
+  // Blockly supports XML or JSON, but not a combination of both.
+  // We convert to JSON here because the behavior_get blocks are JSON.
+  const blocksJson = convertToolboxXmlToJson(
+    Blockly.cdoUtils.getCustomCategoryBlocksForFlyout('Behavior')
+  );
+  blockList.push(...blocksJson);
 
   // Workspaces to populate behaviors flyout category from
   const workspaces = [
@@ -215,36 +220,26 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-function getCustomCategoryBlocksForFlyout(category) {
+// Gets an array of simplified JSON blocks for flyout
+function convertToolboxXmlToJson(xmlList) {
   const parser = new DOMParser();
-  // TODO: Update this to use JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
-  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
+  const xmlRootElement = parser.parseFromString(
+    '<xml></xml>',
+    'application/xml'
+  );
 
-  const categoryNodes = xmlDoc.getElementsByTagName('category');
-  for (const categoryNode of categoryNodes) {
-    const categoryCustom = categoryNode.getAttribute('custom');
-
-    if (categoryCustom === category) {
-      const xmlRootElement = xmlDoc.createElement('xml'); // Create a new <xml> root element
-
-      const blockNodes = categoryNode.getElementsByTagName('block');
-      for (const blockNode of blockNodes) {
-        if (blockNode.parentElement === categoryNode) {
-          xmlRootElement.appendChild(blockNode.cloneNode(true)); // Append cloned block nodes
-        }
-      }
-
-      const jsonBlocks = convertXmlToJson(xmlRootElement);
-      const flyoutBlocks = jsonBlocks.blocks.blocks.map(
-        simplifyBlockStateForFlyout
-      );
-
-      // Returns an array of simplified JSON blocks for flyout, or an empty array
-      // if the desired category is not found
-      return flyoutBlocks;
-    }
+  // Iterate through each block element in xmlList
+  for (const blockElement of xmlList) {
+    // Append the block element to the xmlRootElement
+    xmlRootElement.documentElement.appendChild(blockElement);
   }
-  return [];
+
+  const jsonBlocks = convertXmlToJson(xmlRootElement.documentElement);
+  const flyoutBlocks = jsonBlocks.blocks?.blocks?.map(
+    simplifyBlockStateForFlyout
+  );
+
+  return flyoutBlocks;
 }
 
 // Used to simplify block state for inclusion in the Behaviors category flyout
