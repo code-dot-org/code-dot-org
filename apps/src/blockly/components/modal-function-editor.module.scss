@@ -5,34 +5,23 @@
   position: absolute;
   // TODO: Calculate these values based on the size of the workspace
   top: 30px;
+  left: 0;
   z-index: 1000;
   width: 100%;
   height: 100%;
-  bottom: 0;
-  background: $white;
+  // bottom: 0;
+  // background: $white;
 }
 
 .toolbar {
-  position: absolute;
-  left: 142px;
-  top: 10px;
-  width: 800px;
-  pointer-events: auto;
+  // position: absolute;
+  // left: 142px;
+  // top: 10px;
+  // width: 800px;
+  // z-index: 1;
+  //pointer-events: auto;
 }
 
 .buttons {
   float: right;
-}
-
-.inputs {
-  z-index: 0;
-}
-
-.inputTitleContainer {
-  padding: 10px;
-  width: 100%;
-}
-
-.wideInput {
-  width: 100%;
 }
