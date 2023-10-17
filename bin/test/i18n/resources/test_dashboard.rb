@@ -43,6 +43,7 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::RestrictedContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Scripts.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::SharedFunctions.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::Slides.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Standards.expects(:sync_out).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_out

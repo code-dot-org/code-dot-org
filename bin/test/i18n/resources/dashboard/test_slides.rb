@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::Slides do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out Slides resource' do
-  #     I18n::Resources::Dashboard::Slides::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::Slides.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out Slides resource' do
+      I18n::Resources::Dashboard::Slides::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::Slides.sync_out
+    end
+  end
 end
