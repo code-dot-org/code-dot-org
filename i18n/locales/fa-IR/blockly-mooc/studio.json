@@ -103,7 +103,7 @@
   "dropletBlock_moveFast_description": "مجموعه ای از شخصیت به سرعت حرکت را عوض می کند.",
   "dropletBlock_moveFast_param0": "نوع",
   "dropletBlock_moveFast_param0_description": "تغییر نوع شخصیت به ('تصادفی'، 'Stormtrooper' 'RebelPilot' 'PufferPig' 'Mynock' 'MouseDroid' 'Tauntaun' یا 'Probot').",
-  "dropletBlock_playSound_description": "صدای انتخاب شده را پخش می‌کند.",
+  "dropletBlock_playSound_description": "صدای انتخاب شده را پخش کن.",
   "dropletBlock_playSound_param0": "صدا",
   "dropletBlock_playSound_param0_description": "نام صدا برای بخش.",
   "dropletBlock_removePoints_description": "حذف امتیاز از رکورد.",

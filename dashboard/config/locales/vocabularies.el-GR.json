@@ -1171,26 +1171,6 @@
         "program/starwarsblocks/unversioned": {
           "word": "Πρόγραμμα",
           "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
-        },
-        "code/poem-art/unversioned": {
-          "word": "Κώδικας",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "Εκδήλωση",
-          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
         }
       }
     }

@@ -272,6 +272,27 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Stave-bien"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Løkker"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Hændelser"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Betingelser"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funktioner"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabler"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loops"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "SpriteLab"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Glade Kort"
         },
@@ -494,9 +515,6 @@
         "express-2023/Dance Party": {
           "name": "Dance Party"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
-        },
         "aquatic/Aquatic": {
           "name": "Minecraft: Akvatisk rejse"
         },
@@ -531,10 +549,7 @@
           "name": "Minecraft Hour of Code"
         },
         "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Kodning af en simulation"
         },
         "playlab/Play Lab": {
           "name": "Play Lab"
@@ -874,6 +889,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstremudfordringen - den er omfattende"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Puslespil"

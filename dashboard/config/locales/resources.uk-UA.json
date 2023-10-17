@@ -2207,7 +2207,7 @@
           "type": "Слайди"
         },
         "designing_screens_with_code/csd/2021": {
-          "name": "Проектування екранів за допомогою коду",
+          "name": "Проєктування екранів за допомогою коду",
           "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -6364,7 +6364,7 @@
           "type": "Слайди"
         },
         "designing_screens_with_code/csd/2022": {
-          "name": "Проектування екранів за допомогою коду",
+          "name": "Проєктування екранів за допомогою коду",
           "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -8445,7 +8445,6 @@
           "type": "Ресурс"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Відео"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -8481,6 +8480,7 @@
           "type": "Ресурс"
         },
         "ecosystems/csc-adaptations/2023": {
+          "name": "Моделювання адаптацій тварин",
           "url": "https://docs.google.com/presentation/d/1J9yCLR8vBYHgKxuuKymGNWU_KFCGGGUpzTmpl_dvl7A/template/preview",
           "type": "Слайди"
         },
@@ -8659,6 +8659,7 @@
           "url": "/s/csc-орієнтири відображення-2023/vocab"
         },
         "lesson_slides/csc-mappinglandmarks/2023": {
+          "name": "Кодування інтерактивних карт",
           "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
           "type": "Слайди"
         },
@@ -10964,7 +10965,7 @@
           "type": "Слайди"
         },
         "designing_screens_with_code/csd/2023": {
-          "name": "Проектування екранів за допомогою коду",
+          "name": "Проєктування екранів за допомогою коду",
           "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -11126,6 +11127,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "Функції з параметрами",
           "type": "Відео"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "Функції",
+          "type": "Слайди"
         },
         "exemplar_1_-_city_silhouette/csd/2023": {
           "type": "Зразок"
@@ -13342,6 +13347,7 @@
           "type": "Відео"
         },
         "how_ai_works/how-ai-works/2023": {
+          "name": "Як працює ШІ",
           "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
           "type": "Слайди"
         },
@@ -13460,11 +13466,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Відео"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": "Слайди"
         }
       }
     }
