@@ -33,8 +33,6 @@ module I18n
           end
 
           def restore_localization(language)
-            return unless File.exist?(I18N_BACKUP_FILE_PATH)
-
             crowdin_file_path = crowdin_file_path_of(language)
 
             RedactRestoreUtils.restore(
