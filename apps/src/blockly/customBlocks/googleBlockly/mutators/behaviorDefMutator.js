@@ -81,9 +81,7 @@ export const behaviorDefMutator = {
     const state = Object.create(null);
     state['procedureId'] = this.getProcedureModel().getId();
     state['behaviorId'] = this.behaviorId;
-    // if (this.description) {
-    //   state['description'] = this.description;
-    // }
+
     handleSaveDescription(this, state);
 
     const params = this.getProcedureModel().getParameters();
@@ -138,9 +136,7 @@ export const behaviorDefMutator = {
     }
 
     handleLoadDescription(this, state);
-    // if (state['description']) {
-    //   this.description = state['description'];
-    // }
+
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },

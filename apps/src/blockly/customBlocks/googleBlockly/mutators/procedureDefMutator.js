@@ -87,9 +87,7 @@ export const procedureDefMutator = {
    */
   saveExtraState: function () {
     const state = Object.create(null);
-    // if (this.description) {
-    //   state['description'] = this.description;
-    // }
+
     handleSaveDescription(this, state);
     state['procedureId'] = this.getProcedureModel().getId();
 
@@ -143,14 +141,7 @@ export const procedureDefMutator = {
       }
     }
 
-    // if (state['description']) {
-    //   this.description = state['description'];
-    // }
     handleLoadDescription(this, state);
-    console.log(
-      'after load extra state, description is ' +
-        this.getField('DESCRIPTION').getValue()
-    );
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },
