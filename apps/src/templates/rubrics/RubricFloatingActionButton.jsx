@@ -41,18 +41,18 @@ export default function RubricFloatingActionButton({
         EVENTS.TA_RUBRIC_ON_STUDENT_WORK_LOADED,
         eventData
       );
+
+      const fireUnloadEvent = () =>
+        analyticsReporter.sendEvent(
+          EVENTS.TA_RUBRIC_ON_STUDENT_WORK_UNLOADED,
+          eventData
+        );
+      window.addEventListener('beforeunload', fireUnloadEvent);
+
+      return () => {
+        window.removeEventListener('beforeunload', fireUnloadEvent);
+      };
     }
-
-    const fireUnloadEvent = () =>
-      analyticsReporter.sendEvent(
-        EVENTS.TA_RUBRIC_ON_STUDENT_WORK_UNLOADED,
-        eventData
-      );
-    window.addEventListener('beforeunload', fireUnloadEvent);
-
-    return () => {
-      window.removeEventListener('beforeunload', fireUnloadEvent);
-    };
   }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
 
   return (
