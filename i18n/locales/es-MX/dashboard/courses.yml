@@ -305,25 +305,25 @@ es-MX:
         name: Todo el Vocabulario
       csd_curriculum_guide/csd/2021:
         name: CSD Guía Curricular
-        url: "<https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview>"
+        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
       csd_guide_to_assessment/csd/2021:
         name: CSD Guía de Evaluacíon
-        url: "<https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view>"
+        url: https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view
       csd_guide_to_debugging/csd/2021:
         name: CSD Guía para la Depuración
-        url: "<https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview>"
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
       csd_guide_to_differentiation/csd/2021:
         name: CSD Guía para la Diferenciación
-        url: "<https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview>"
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
       csd_guide_to_using_resources/csd/2021:
         name: Guía para el uso de recursos de Descubrimientos de las Ciencias de la Computación
-        url: "<https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview>"
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
       csd_implementation_guide/csd/2021:
         name: CSD Guía de Implementación
-        url: "<https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview>"
+        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
       getting_started_with_csd/csd/2021:
         name: Primeros pasos con CSD
-        url: "<https://docs.google.com/document/d/1jwPgmlorztdxnVUChhNjE32V651ZWFDs/view>"
+        url: https://docs.google.com/document/d/1jwPgmlorztdxnVUChhNjE32V651ZWFDs/view
       all_code_5/csd/2022:
         name: Todo el Código
       all_resources_7/csd/2022:
@@ -334,31 +334,31 @@ es-MX:
         name: Todo el Vocabulario
       csd_changelog_22-_23/csd/2022:
         name: CSD Registro de Cambios '22-'23
-        url: "<https://docs.google.com/document/d/1GR3VaThoqXY6XBeVCHcYvZtaQFn47jPpmLNRQB4IK7Y/preview>"
+        url: https://docs.google.com/document/d/1GR3VaThoqXY6XBeVCHcYvZtaQFn47jPpmLNRQB4IK7Y/preview
       csd_curriculum_guide/csd/2022:
         name: CSD Guía Curricular
-        url: "<https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview>"
+        url: https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview
       csd_guide_to_assessment/csd/2022:
         name: CSD Guía de Evaluacíon
-        url: "<https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view>"
+        url: https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view
       csd_guide_to_debugging/csd/2022:
         name: CSD Guía para la Depuración
-        url: "<https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview>"
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
       csd_guide_to_differentiation/csd/2022:
         name: CSD Guía para la Diferenciación
-        url: "<https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview>"
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
       csd_guide_to_using_resources/csd/2022:
         name: Guía para el uso de recursos de Descubrimientos de las Ciencias de la Computación
-        url: "<https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview>"
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
       csd_implementation_guide/csd/2022:
         name: CSD Guía de Implementación
-        url: "<https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview>"
+        url: https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview
       csd_learning_frameworks/csd/2022:
         name: CSD Entorno de Aprendizaje
-        url: "<https://docs.google.com/document/d/1HgFqY7I4wyUSK9cWMk4vuAvWZ7OcdH9c/view>"
+        url: https://docs.google.com/document/d/1HgFqY7I4wyUSK9cWMk4vuAvWZ7OcdH9c/view
       csd_programming_levels_guide/csd/2022:
         name: CSD Guía de Niveles de Programación
-        url: "<https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview>"
+        url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
       all_code_2/csd/2023:
         name: Todo el Código
         url: "/cursos/csd-2023/código"

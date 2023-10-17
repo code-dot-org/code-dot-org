@@ -2116,7 +2116,7 @@ uk:
             csp5_1:
               display_name: 'Глава 1: Програмування, кероване подіями'
         csd3-virtual:
-          title: Основи Game Lab із вільним графіком занять
+          title: Основи Ігрової Лабораторії для самостійного навчання
           description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво та ігри в Game Lab."
           lesson_groups:
             csd3_1:
@@ -3337,9 +3337,9 @@ uk:
         csa-data-lab:
           title: Лабораторія даних для курсу AP CSA
         hello-world-space-2022:
-          title: 'Привіт Світ: Космос'
+          title: 'Привіт, світ: Космос'
         hello-world-soccer-2022:
-          title: 'Привіт Світ: Футбол'
+          title: 'Привіт, світ: Футбол'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3865,6 +3865,8 @@ uk:
           lesson_groups:
             lessonGroup-3:
               display_name: Вхідні та вихідні дані
+        ai-temp:
+          title: Як працює ШІ
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3970,14 +3972,20 @@ uk:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-2021:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-2022:
           lessons:
             lesson-4:
@@ -3985,14 +3993,20 @@ uk:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4123,6 +4137,8 @@ uk:
           title: Модуль 8.
         vpl-csa-2023-m1:
           title: Модуль 1.
+        how-ai-works-2023:
+          title: Як працює ШІ
         vpl-csa-2023-m2:
           title: Модуль 2.
         vpl-csa-2023-m3:
@@ -4155,5 +4171,23 @@ uk:
           title: Модуль 8.
         virtual-pl-csa-summer-2024-day1:
           title: День 1
+        virtual-pl-csp-summer-day2:
+          title: День 2
+        virtual-pl-csp-summer-day3:
+          title: День 3
+        virtual-pl-csp-summer-day4:
+          title: День 4
+        virtual-pl-csp-summer-day5:
+          title: День 5
         virtual-pl-csa-summer-day2:
           title: День 2
+        virtual-pl-csa-summer-day3:
+          title: День 3
+        virtual-pl-csa-summer-day4:
+          title: День 4
+        virtual-pl-csa-summer-day1:
+          title: День 1
+        virtual-pl-csp-summer-day1:
+          title: День 1
+        csa-postap-se-and-computer-vision-2023:
+          title: Програмна інженерія та комп'ютерний зір

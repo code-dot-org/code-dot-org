@@ -9,10 +9,11 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     @teacher3 = create(:teacher)
     @section = create(:section, user: @teacher, login_type: 'word')
     @section2 = create(:section, user: @teacher, login_type: 'word')
-    @si1 = create(:section_instructor, section: @section, instructor: @teacher, status: :active)
+    # These are auto-created for the section creator
+    @si1 = @section.instructors.first
+    @si2 = @section2.instructors.first
     @former_instructor = create(:section_instructor, section: @section, instructor: @teacher2, status: :removed)
     @former_instructor.destroy!
-    @si2 = create(:section_instructor, section: @section2, instructor: @teacher, status: :active)
     @si3 = create(:section_instructor, section: @section2, instructor: @teacher2, status: :active)
   end
 

@@ -1,0 +1,120 @@
+{
+  "pl-PL": {
+    "data": {
+      "start_libraries": {
+        "LLM - Written Voice Simulator_ai23": {
+          "I18n_HAIW23L4": {
+            "delete_13": "Usuń tekst",
+            "enterNewVoice_18": "Modeluj ten głos!",
+            "label2_0": "Wybierz głos do modelowania",
+            "label3_2": "Nadaj nazwę swojemu zapisywanemu plikowi",
+            "label5_3": "Skopiuj/Wklej lub wpisz słowa, na podstawie których chcesz utworzyć model na podstawie poniżej",
+            "label6_4": "Nadaj głosowi imię",
+            "loadScreenButton_20": "Załaduj tę historię",
+            "load_16": "Załaduj Zapisz",
+            "modelingVoiceLabel_1": "Modelowanie głosu",
+            "newBackButton_19": "Wstecz",
+            "newVoice_15": "Zmień głos",
+            "promptStory21": "Wprowadź nazwę, pod którą chcesz zapisać swoją historię",
+            "promptVoiceId": "Proszę nadać głosowi imię",
+            "promptVoiceRaw": "Wprowadź tekst dla nowego głosu",
+            "saveName_17": "Zapisz!",
+            "save_14": "Zapisz tekst",
+            "startButton_12": "Generuj!",
+            "whichVoice_11": "Stwórz własne!"
+          }
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "I18n_HAIW23L3": {
+            "ACTIVITIES": "Działania",
+            "ALEXTEXT": "Alex uwielbia spędzać czas na świeżym powietrzu, odkrywanie natury, i wyruszanie na ekscytujące przygody. Często przegląda komiksy i analizuje superbohaterów. Jest zafascynowany kowbojami i „starym zachodem”, często nosząc kowbojskie kapelusze w filmach. Jego przyjaciele opisują go jako miłego, kochający zabawę, i twórczy duch.",
+            "BAKING_SODA_VINEGAR": "Soda oczyszczona i ocet: co może pójść nie tak?",
+            "BOBA_TEAS": "Boba Tea Hacks: Unikalne kombinacje smakowe",
+            "CLOTHING": "Odzież",
+            "CODE_ORG": "Naucz się kodować z pomocą Code.org",
+            "COWBOY_POETRY": "Odkryj poezję kowbojską",
+            "DRAW_PASTELS": "Naucz się rysować za pomocą pasteli",
+            "FOOD": "Żywność",
+            "FREE_THROW": "Opanowanie rzutu wolnego w koszykówce",
+            "FRIDA_KAHLO": "Analiza sztuki Fridy Kahlo",
+            "GNOCCHI": "Gnocchi z Noną",
+            "GREEN_LANTERN": "Dlaczego Zielona Latarnia jest najlepszym superbohaterem wszechczasów",
+            "HIKING": "Najlepsze 3 miejsca turystyczne w Twojej okolicy",
+            "HP_PJ": "Harry Potter czy Percy Jackson: który jest lepszy?",
+            "JIM_LEE": "Jim Lee i DC Comic Universe",
+            "KPOP": "Transmisja na żywo z festiwalu muzycznego „K-Pop Poppin”",
+            "LEARN_DRIVE": "5 wskazówek podczas nauki jazdy",
+            "MEDIA": "Media",
+            "MODERN_HORROR": "Dlaczego współczesne horrory nie są tak naprawdę przerażające",
+            "ORIGAMI_FLOWERS": "Jak tworzyć origami kwiatów",
+            "OTTER_RELEASE": "Wydra zostaje wypuszczona z powrotem do wody po raz pierwszy",
+            "PEOPLE": "Osoby",
+            "PROTEIN_SHAKES": "Najlepszych 5 koktajli proteinowych dla sportowców",
+            "STARGAZING": "Obserwacja gwiazd: jak czytać nocne niebo",
+            "SUNDUBU": "Jak zrobić Sundubu w domu",
+            "allButtonText": "Wszystko",
+            "backButton2_7": "⬅️ Wybierz nową osobę",
+            "nextScreen1_4": "Zobacz rekomendacje! ➡️",
+            "recommendScrollDown_6": "⬇️ Przewiń w dół ⬇️",
+            "recommendScrollUp_5": "⬆️ Przewiń w górę ⬆️",
+            "recommendationTitle_2": "Twoje rekomendacje",
+            "startNextButton_3": "Zacznijmy! ➡️"
+          }
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "I18n_HAIW23L3": {
+            "ACTIVITIES": "Działania",
+            "ALEXTEXT": "Alex uwielbia spędzać czas na świeżym powietrzu, odkrywanie natury, i wyruszanie na ekscytujące przygody. Często przegląda komiksy i analizuje superbohaterów. Jest zafascynowany kowbojami i „starym zachodem”, często nosząc kowbojskie kapelusze w filmach. Jego przyjaciele opisują go jako miłego, kochający zabawę, i twórczy duch.",
+            "BAKING_SODA_VINEGAR": "Soda oczyszczona i ocet: co może pójść nie tak?",
+            "BOBA_TEAS": "Boba Tea Hacks: Unikalne kombinacje smakowe",
+            "CLOTHING": "Odzież",
+            "CODE_ORG": "Naucz się kodować z pomocą Code.org",
+            "COWBOY_POETRY": "Odkryj poezję kowbojską",
+            "DRAW_PASTELS": "Naucz się rysować za pomocą pasteli",
+            "FOOD": "Żywność",
+            "FREE_THROW": "Opanowanie rzutu wolnego w koszykówce",
+            "FRIDA_KAHLO": "Analiza sztuki Fridy Kahlo",
+            "GNOCCHI": "Gnocchi z Noną",
+            "GREEN_LANTERN": "Dlaczego Zielona Latarnia jest najlepszym superbohaterem wszechczasów",
+            "HIKING": "Najlepsze 3 miejsca turystyczne w Twojej okolicy",
+            "HP_PJ": "Harry Potter czy Percy Jackson: który jest lepszy?",
+            "JIM_LEE": "Jim Lee i DC Comic Universe",
+            "KPOP": "Transmisja na żywo z festiwalu muzycznego „K-Pop Poppin”",
+            "LEARN_DRIVE": "5 wskazówek podczas nauki jazdy",
+            "MEDIA": "Media",
+            "MODERN_HORROR": "Dlaczego współczesne horrory nie są tak naprawdę przerażające",
+            "ORIGAMI_FLOWERS": "Jak tworzyć origami kwiatów",
+            "OTTER_RELEASE": "Wydra zostaje wypuszczona z powrotem do wody po raz pierwszy",
+            "PEOPLE": "Osoby",
+            "PROTEIN_SHAKES": "Najlepszych 5 koktajli proteinowych dla sportowców",
+            "STARGAZING": "Obserwacja gwiazd: jak czytać nocne niebo",
+            "SUNDUBU": "Jak zrobić Sundubu w domu",
+            "allButtonText": "Wszystko",
+            "backButton2_7": "⬅️ Wybierz nową osobę",
+            "nextScreen1_4": "Zobacz rekomendacje! ➡️",
+            "recommendScrollDown_6": "⬇️ Przewiń w dół ⬇️",
+            "recommendScrollUp_5": "⬆️ Przewiń w górę ⬆️",
+            "recommendationTitle_2": "Twoje rekomendacje",
+            "startNextButton_3": "Zacznijmy! ➡️"
+          }
+        },
+        "Noisy Image Widget_ai23": {
+          "I18n_HAIW23L5": {
+            "label1_1": "Przesuń suwak, aby dodać do obrazu więcej lub mniej generacji szumów",
+            "loadingScreen_4": "Bądź cierpliwy! Hałaśliwe ładowanie obrazu!",
+            "newImageButton_6": "Nowy obraz",
+            "noiseGenerationsLabel_3": "Generacje hałasu: ",
+            "picturePrompt": "Wprowadź adres URL swojego zdjęcia"
+          }
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "I18n_HAIW23L6": {
+            "button2_7": "Uprawa",
+            "label1_1": "Wybierz obraz",
+            "resetBtn_8": "Zresetuj"
+          }
+        }
+      }
+    }
+  }
+}

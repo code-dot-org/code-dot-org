@@ -227,6 +227,12 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Sõnamesilane"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Arvutiteaduse alused"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Järgmised sammud"
+        },
         "csd2-2019/Lists": {
           "name": "Loendid"
         },
@@ -310,6 +316,24 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Sõnamesilane"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Tsüklid"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Sündmused"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Tingimuslaused"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funktsioonid"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Muutujad"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For tsükkel"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Happy Maps"
@@ -421,6 +445,12 @@
         },
         "express-2021/lesson-1": {
           "name": "Tantsuõhtu"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Arvutiteaduse alused"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Järgmised sammud"
         },
         "csd3-2022/Variables": {
           "name": "Muutujad"
@@ -545,9 +575,6 @@
         "express-2023/Dance Party": {
           "name": "Tantsuõhtu"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "KoodiTund 2013"
-        },
         "aquatic/Aquatic": {
           "name": "Minecraft: Voyage Aquatic"
         },
@@ -584,20 +611,11 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "KoodiTund Minecraft Designer"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars: galaktika loomine koodiga – (JavaScript)"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manuaalne DNS"
         },
         "allthethings/Jigsaw": {
           "name": "Pusle"
@@ -926,8 +944,14 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstreemne väljakutse - kõikehõlmav"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "KoodiTund 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Pusle"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuaalne DNS"
         }
       }
     }

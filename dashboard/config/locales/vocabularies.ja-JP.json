@@ -2287,26 +2287,6 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "可逆圧縮",
           "definition": "圧縮されたデータから元のデータを完全に再構築できるようにするデータ圧縮アルゴリズム。 テキスト圧縮にもっとも一般的に使用されます（zip圧縮など）。"
-        },
-        "code/poem-art/unversioned": {
-          "word": "コード",
-          "definition": "（v）コンピューター用の指示を書くこと。"
-        },
-        "event/poem-art/unversioned": {
-          "word": "イベント",
-          "definition": "何かを引き起こすアクション。"
-        },
-        "program/poem-art/unversioned": {
-          "word": "プログラム",
-          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
-        },
-        "mood/poem-art/unversioned": {
-          "word": "ムード",
-          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
-        },
-        "line/poem-art/unversioned": {
-          "word": "行",
-          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
         }
       }
     }

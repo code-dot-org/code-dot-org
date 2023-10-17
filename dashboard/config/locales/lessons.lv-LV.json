@@ -266,6 +266,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Burtošanas bite"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cikli"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Pasākumi"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Sazarojumi"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcijas"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Mainīgie"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "\"par\" cikli"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Laimīgās kartes"
         },
@@ -466,12 +484,6 @@
         },
         "hourofcode/Maze": {
           "name": "Labirints"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Spēles laboratorija"

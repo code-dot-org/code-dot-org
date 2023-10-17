@@ -2826,7 +2826,7 @@
           "hw_Run": "Kodu işə salman üçün buraya vurun."
         },
         "helloworld_food_click_space-2022": {
-          "hw_Run": "birinci bura basın"
+          "hw_Run": "birinci bura basın!"
         },
         "helloworld_food_costumes": {
           "hello_world_new": "Yeni blok!"
@@ -2936,10 +2936,12 @@
           "poetry_sprite": "Yeni blok!"
         },
         "poetry_hoc_backgroundEffects": {
-          "poetry_background": "Kod bloklarını burada tapın. "
+          "poetry_background": "Kod bloklarını burada tapın. ",
+          "run_button": "Animasiyanızı bu düymə ilə sınayın. "
         },
         "poetry_hoc_backgroundEffects_2023": {
-          "poetry_background": "Kod bloklarını burada tapın. "
+          "poetry_background": "Kod bloklarını burada tapın. ",
+          "run_button": "Animasiyanızı bu düymə ilə sınayın. "
         },
         "poetry_hoc_events1": {
           "poetry_event": "Yeni blok!",
