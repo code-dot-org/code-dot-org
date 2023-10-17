@@ -244,21 +244,4 @@ class RubricsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
   end
-
-  test "can run ai evaluations for self" do
-    student = create :student
-    sign_in student
-
-    rubric = create :rubric, lesson: @lesson, level: @level
-
-    Experiment.stubs(:enabled?).with(user: student, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
-    EvaluateRubricJob.expects(:perform_later).with(user_id: student.id, script_level_id: @script_level.id).once
-
-    post :run_ai_evaluations_for_user, params: {
-      id: rubric.id,
-      userId: student.id,
-    }
-    assert_response :success
-  end
 end
