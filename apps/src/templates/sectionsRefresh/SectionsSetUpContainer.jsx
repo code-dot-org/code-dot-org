@@ -21,6 +21,7 @@ import ReactTooltip from 'react-tooltip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DCDO from '@cdo/apps/dcdo';
 import color from '@cdo/apps/util/color';
+import CoteacherSettings from './CoteacherSettings';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -81,6 +82,7 @@ export default function SectionsSetUpContainer({
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
+  const [coteachersToAdd, setCoteachersToAdd] = useState([]);
 
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
@@ -306,7 +308,15 @@ export default function SectionsSetUpContainer({
           {tooltip}
         </div>
       ),
-      () => <div>{i18n.coteacherAddInfo()}</div>,
+      () => (
+        <CoteacherSettings
+          sectionInstructors={sections[0]}
+          addCoteacher={newCoteacher =>
+            setCoteachersToAdd(existing => [...existing, newCoteacher])
+          }
+          coteachersToAdd={coteachersToAdd}
+        />
+      ),
       isCoteacherOpen,
       toggleIsCoteacherOpen
     );
