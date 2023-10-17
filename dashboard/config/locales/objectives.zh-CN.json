@@ -986,12 +986,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "与其他学生分享一件有创意的艺术品。"
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "创建新的精灵图并为他们分配服装和位置。"
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "使用精灵图和事件创建交互式动画。"
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "训练和测试机器学习模型。"
         },
@@ -3448,15 +3442,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "在提到电脑鼠标、触控板或触摸屏时使用适当的术语。"
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "开发响应定时事件的程序。"
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "展示诗歌中的意境转换。"
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "代表文字的隐喻和字面含义。"
         }
       }
     }

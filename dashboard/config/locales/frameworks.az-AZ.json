@@ -2,6 +2,9 @@
   "az-AZ": {
     "data": {
       "frameworks": {
+        "ai4k12-2021": {
+          "name": "AI4K12 Milli Təlimatlar 2021"
+        },
         "ccmath": {
           "name": "Ümumi Əsas Riyaziyyat Standartları"
         }

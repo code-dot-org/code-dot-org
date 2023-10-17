@@ -1547,6 +1547,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "拼字比赛"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "开始"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "计算机科学基础"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "展望未来"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知识: 序列"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "掌握基本知识： 循环"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知识： 条件语句"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "掌握基本知识： 函数"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "掌握基本知识： 事件"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "计算机科学教学的最佳实践"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "规划"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "下一步"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "解决问题入门"
         },
@@ -2215,6 +2248,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "游戏实验室中的事件"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "欢迎来到 \"教师的计算机科学基础\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "理解计算机科学基础课程"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "序列"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "循环"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "事件"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "条件语句"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "结课项目"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "函数"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "变量"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "计数循环"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "精灵图实验室"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "评审反思"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "下一步"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "我的在线社区的安全"
@@ -3866,6 +3938,39 @@
           "preparation": "-   完成难题，找出学生可能存在的问题。\n-   （可选）挑选几个习题让班级学生分组来做。\n-   确保每个学生都有反思日志。",
           "purpose": "在本线上活动中，学生们将学习如何使用《游戏实验室》中的事件。他们将首先在按下箭头键时训练骑士移动，然后最后展示他们在本课程中学习的其它技能，包括序列和循环（作为最终自由游戏习题的一部分）。",
           "student_overview": "用事件来创作故事或交互的游戏。"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "开始"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "计算机科学基础"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "展望未来"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知识: 序列"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "掌握基本知识： 循环"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知识： 条件语句"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "掌握基本知识： 函数"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "掌握基本知识： 事件"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "计算机科学教学的最佳实践"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "规划"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "下一步"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "解决问题入门",
@@ -6336,9 +6441,6 @@
           "overview": "⚠️ 本课适用于想要在**单天**内展示整个 [人工智能工作原理视频系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 的教室。它不打算与本单元中的其他课程顺序进行教学，本单元逐一介绍每个视频。\n\n学生通过匹配视频中的词汇来关注每个视频，然后回答有关每个视频的反思问题。课程计划和幻灯片非常稀疏且开放式，允许即兴创作和自定义，以适应您的课堂。",
           "preparation": "\\-打印出活动指南\n\\-将幻灯片投影到视频投影仪上"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "《编程一小时 2013》"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "应用程序实验室简介",
           "overview": "本教程旨在快速介绍应用实验室编程环境，作为构建和共享应用程序的强大工具。教程本身教学生在JavaScript中使用模块或文本创建和控制按钮、文本、图像、声音和屏幕。在教程结束时，学生有时间将他们开始构建的项目扩展为“选择自己的冒险”、“贺卡”或“性格测试”应用程序。他们也可以继续构建code.org/applab页面上显示的更多项目。  \n\n祝你在应用实验室愉快地完成编程一小时！\n\n**年龄适宜性：**本教程为13岁以上的学生设计。因为它允许学生上传自定义的声音和图像，年轻的学生不应该在没有监督的情况下使用它。为了保护学生的隐私，如果你的学生年龄在13岁以下，他们将不能使用本教程，除非你首先在你管理的区域为他们设置账户。",
@@ -6509,9 +6611,10 @@
           "student_overview": "教程摘要：第一批学生将物体分类为“鱼”或“非鱼”，试图清除海洋中的垃圾。然后，学生们将需要扩展他们的训练数据集，以覆盖水中的其它海洋生物。在活动的第二部分，学生们将选择他们自己的标签应用于随机生成的鱼的图像。该训练数据用于能够自行标记新图像的机器学习模型。"
         },
         "outbreak/Outbreak": {
-          "overview": "本课程将围绕事件的**技能培养**与一个**小项目**结合，学生可以在精灵图实验室中构建自己的计算机模拟。学生将通过模拟来了解病毒传播的速度以及如何减缓病毒传播。",
-          "preparation": "-   解决难题，找出学生可能存在的问题。\n-   确保每个学生都有反思日志。",
-          "purpose": "在前一课中，学生从一个简单的模拟中收集和解释数据。在本课中，学生将按照说明编写自己的模拟模型。学生之前掌握的关于现实世界病毒疫情爆发的知识将应用于一个虚构的场景。 ",
+          "name": "编码一个模拟",
+          "overview": "在本课中，所有年龄段的学习者将在一个支持性的安全环境中获得编程和计算机科学的入门体验。本课将一个**小项目**与围绕事件的**技能培养**结合，学生可以在精灵图实验室中构建自己的计算机模拟。学生将通过模拟来了解病毒传播的速度，以及如何减缓病毒传播。",
+          "preparation": "#### 编程一小时前一周\n\n-   阅读[Hour of Code Educator Guide](https://hourofcode.com/us/how-to)和[Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，以便开始规划你的“编程一小时”活动。\n\n-   如果你想获得课堂支持、打折海报或参加机器人赠品活动（仅限美国），请[Register your Hour of Code event](https://hourofcode.com/us)。\n\n-   自行观看并完成在线教程： [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   在让学生完成教程之前，请务必先进行测试。\n\n-   检查你的技术设备，并确定是否需要在“编程一小时”之前对所有问题进行排查。\n\n#### 编程一小时前一天\n\n-   每个完成活动的学生都应获得[certificate](https://studio.code.org/certificates/batch)。提前为每个学生打印一张，这样在“编程一小时”结束时就更加方便。\n\n-   （可选）鼓励学生携带耳机以便在活动中使用。",
+          "purpose": "在本课中，学生将按照指示编写他们自己的模拟模型。学生之前关于真实世界病毒爆发的知识将应用于一个虚构场景。",
           "student_overview": "一种病毒来到怪物城镇！学习创建一个病毒模拟器，帮助怪物恢复健康。"
         },
         "playlab/Play Lab": {
@@ -6553,72 +6656,6 @@
           "preparation": "-   测试《文本压缩工具》\n-   查看教师提示，决定采用哪一种选项。",
           "purpose": "压缩背后的基本原理是开发一种方法或协议，用较少的比特量来表示原始信息。在本课中，我们使用重复模式的“字典”表示压缩数据的方式与[LZW压缩方案](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)相似，但需要注意的是，LZW与学生们在本课中所做的略有不同。学生们在这里发明他们自己的方法。LZW不仅用于文本数据（zip文件），还可以用于GIF图片文件格式。",
           "student_overview": "在某种程度上，我们达到了发送比特的物理速度极限，如果我们想更快地发送大量信息，我们必须找到一种用更少的比特量表示相同信息的方法 - 我们必须压缩数据。 "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "逃出房间"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "数字设计"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "事件驱动编程"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "基本应用程序功能"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "取值器和设置器"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "频率分析"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "开始和结束屏幕"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "开始和结束屏幕2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "编程一小时2017 收集器"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "概述和安装说明"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "点对点 - 在共享的线路上发送比特位"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "点对点 - 发送数字"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "点对点 - 发送Ascii码"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "广播消息"
-        },
-        "netsim/Routers and addresses": {
-          "name": "路由和地址"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "数据包和可靠性"
-        },
-        "netsim/Manual DNS": {
-          "name": "手动域名解析服务器"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "自动域名解析服务器节点"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "网络模拟器自由游戏"
-        },
-        "odometer/Odometer Widget": {
-          "name": "里程表小工具"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "情绪学习"
-        },
-        "vigenere/Vigenere": {
-          "name": "维吉尼亚"
         },
         "allthethings/Jigsaw": {
           "name": "拼图"
@@ -6757,6 +6794,21 @@
         },
         "allthethings/lesson-49": {
           "name": "音乐"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "逃出房间"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "数字设计"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "事件驱动编程"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "基本应用程序功能"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "取值器和设置器"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "计算机科学发现学生课程后调查"
@@ -7067,12 +7119,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "为 CDEF 教育者的调试"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "频率分析"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "开始和结束屏幕"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "开始和结束屏幕2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "《编程一小时 2013》"
+        },
         "jigsaw/Jigsaw": {
           "name": "拼图",
           "overview": "这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。",
           "preparation": "-   回顾[常识教育](https://www.commonsense.org/education/digital-citizenship)网站，了解更多网上安全方面的内容。",
           "purpose": "本课的主要目标是让学生积累计算机的使用经验。课程涵盖最基本的计算机功能，如点击、拖动和拖放，我们正在为将来的习题创造一个更加平等的竞争环境。本课程还提供了一个介绍基本计算机硬件术语（可能包括“鼠标”、“触控板”或“触摸屏”，取决于你的设备）的好机会。",
           "student_overview": "点击并拖拽来完成难题。"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "编程一小时2017 收集器"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "概述和安装说明"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "点对点 - 在共享的线路上发送比特位"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "点对点 - 发送数字"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "点对点 - 发送Ascii码"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "广播消息"
+        },
+        "netsim/Routers and addresses": {
+          "name": "路由和地址"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "数据包和可靠性"
+        },
+        "netsim/Manual DNS": {
+          "name": "手动域名解析服务器"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "自动域名解析服务器节点"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "网络模拟器自由游戏"
+        },
+        "odometer/Odometer Widget": {
+          "name": "里程表小工具"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "黑白像素教程"
@@ -7088,6 +7188,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "彩色像素自由游戏"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "情绪学习"
+        },
+        "vigenere/Vigenere": {
+          "name": "维吉尼亚"
         }
       }
     }

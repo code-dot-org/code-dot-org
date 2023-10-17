@@ -93,6 +93,9 @@ uk:
       Check-In Survey: Вхідне опитування
       Checking for a Winner: Перевірка переможця
       'Choice Levels: Customize Your App': 'Рівні вибору: Налаштування свого застосунку'
+      'Circuit Playground: Buzzer': 'Circuit Playground: зумер'
+      'Circuit Playground: Color LEDs': 'Circuit Playground: кольорові світлодіоди'
+      'Circuit Playground: LEDs': 'Circuit Playground: LED-лампочки'
       Circuits and Logic: Схеми та логіка
       Club Datasets: Набори даних клубу
       Code Prediction: Прогнозування коду
@@ -141,7 +144,7 @@ uk:
       Design a Screen for your App: Створення екрану застосунка
       Design an AI App - AI Lab: Розробка Застосунка ШІ - Лабораторія ШІ
       Design an AI App - App Lab: Розробка Застосунка ШІ - Програмна Лабораторія
-      Designing Screens with Code: Проектування екранів за допомогою коду
+      Designing Screens with Code: Проєктування екранів за допомогою коду
       Designing for Accessibility: Проєктування для доступності
       Digital Sharing - Unplugged Activity: Цифровий обмін - Безмашинна вправа
       Draw Your Background: Намалюй своє тло
@@ -152,6 +155,7 @@ uk:
       Editing Images: Редагування зображень
       Emotion Machine Example: Приклад машини емоцій
       End of Course Projects: Кінець курсових проєктів
+      Event Types: Типи подій
       Events: Події
       Events and Linking Screens: Події та зв'язування екранів
       Events and Properties: Події та властивості
@@ -320,6 +324,7 @@ uk:
       Player Controls: Керування для гравця
       Playing Notes: Відтворення нот
       Playing with Notes: Відтворення з нотатками
+      Polling Events: Події опитування
       Post-Course Survey Instructions: Інструкції з опитування після курсу
       Practice: Практика
       Predict: Прогнозування
@@ -350,6 +355,7 @@ uk:
       Repeat Blocks with BB-8: Повторіть блоки з BB-8
       Repeat Blocks with the Artist: Повторіть блоки з виконавцем
       Representing Images: Кодування зображень
+      Responding to Board Events: Реагування на події плати
       Responding to User Input: Відповідь на введення користувача
       Review: Огляд
       Review Your Animated Scene: Перевірка своєї анімованої сцени
@@ -360,6 +366,7 @@ uk:
       'Review: CSS': 'Повторення: CSS'
       'Review: HTML': 'Повторення: HTML'
       Revise Sprite Lab Project: Переглянути проєкт Sprite Lab
+      Revisiting the Counter Pattern: Повертаючись до шаблону лічильника
       Run a simulation: Запустити симуляцію
       Safari App: Застосунок Сафарі
       Safari Model: Модель Сафарі
@@ -426,6 +433,7 @@ uk:
       Updating Your Prototype: Оновлення прототипу
       Upload Your Images: Завантаження зображень
       User Interface: Інтерфейс користувача
+      Using Accelerometer Events: Використання подій акселерометра
       Using Arrays: Використання масивів
       Using HTML Tags: Використання тегів HTML
       Using Training Data: Використання навчальних даних
@@ -559,3 +567,4 @@ uk:
       Your Personal Website: Ваш Власний Вебсайт
       Your Team Project: Ваш командний проєкт
       Zoo Predictions: Прогнозування тварин
+      getProperty: getProperty

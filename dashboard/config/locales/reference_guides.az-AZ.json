@@ -3,34 +3,79 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
-          "display_name": "Akselerometr hadisələri"
+          "display_name": "Akselerometr hadisələri",
+          "content": "izləmək"
+        },
+        "csd-2022/accuracy-in-ai-lab": {
+          "content": "verilənlər, məlumat"
         },
         "csd-2022/ai-lab": {
           "display_name": "Suni İntellekt Labaratoriyası"
         },
+        "csd-2022/analog-sensors": {
+          "display_name": "dövrə",
+          "content": "tədbirlər"
+        },
         "csd-2022/app-lab": {
-          "display_name": "Proqram Labı"
+          "display_name": "Proqram Labı",
+          "content": "Sənədlər"
         },
         "csd-2022/applab-overview": {
-          "display_name": "Yekun"
+          "display_name": "Yekun",
+          "content": "Sənədlər"
         },
         "csd-2022/arrays": {
-          "display_name": "Massivlər"
+          "display_name": "Massivlər",
+          "content": "massiv"
         },
         "csd-2022/board-events": {
-          "display_name": "İdarə Heyətinin Tədbirləri"
+          "display_name": "İdarə Heyətinin Tədbirləri",
+          "content": "oyun meydançası"
+        },
+        "csd-2022/body-styling": {
+          "content": "elementlər"
+        },
+        "csd-2022/booleans-and-comparison-operators": {
+          "content": "Riyaziyyat"
         },
         "csd-2022/changing-screens": {
-          "display_name": "Ekranların dəyişdirilməsi"
+          "display_name": "Ekranların dəyişdirilməsi",
+          "content": "işləyici"
+        },
+        "csd-2022/changing-sensor-scale": {
+          "content": "mikro"
+        },
+        "csd-2022/checking-multiple-conditions-with-if-else-if": {
+          "display_name": "Hallar",
+          "content": "qırıq"
         },
         "csd-2022/circuit-playground": {
-          "display_name": "Oyun ərazisinə ümumi baxış"
+          "display_name": "Oyun ərazisinə ümumi baxış",
+          "content": "bunlar"
+        },
+        "csd-2022/circuit-playground-parent": {
+          "content": "xüsusiyyət"
+        },
+        "csd-2022/circuits-and-buttons": {
+          "content": "sancaq"
+        },
+        "csd-2022/circuits-and-leds": {
+          "content": "positiv"
         },
         "csd-2022/classes": {
-          "display_name": "Dərslər"
+          "display_name": "Dərslər",
+          "content": "üslubu"
         },
         "csd-2022/collision-detection": {
-          "display_name": "Toqquşmanın Aşkarlanması"
+          "display_name": "Toqquşmanın Aşkarlanması",
+          "content": "toqquşdurucu"
+        },
+        "csd-2022/color-lights": {
+          "content": "lövhə"
+        },
+        "csd-2022/counter-patterns-with-event": {
+          "display_name": "hadisə",
+          "content": "düymə"
         },
         "csd-2022/creating-a-survey": {
           "display_name": "Sorğu yaratmaq"
@@ -104,6 +149,9 @@
         "csd-2022/layout-properties": {
           "display_name": "Düzən Xüsusiyyətləri"
         },
+        "csd-2022/list-scrolling-pattern": {
+          "display_name": "Siyahı"
+        },
         "csd-2022/lists": {
           "display_name": "Siyahılar"
         },
@@ -161,6 +209,9 @@
         "csd-2022/the-draw-loop": {
           "display_name": "Bərabərlik Döngüsü"
         },
+        "csd-2022/timed-loop": {
+          "display_name": "Fasiləli dövr"
+        },
         "csd-2022/variables": {
           "display_name": "dəyişənlər"
         },
@@ -169,6 +220,9 @@
         },
         "csd-2022/web-lab": {
           "display_name": "Veb Laboratoriyası"
+        },
+        "csd-2022/which-type-of-chart": {
+          "display_name": "diaqram"
         }
       }
     }

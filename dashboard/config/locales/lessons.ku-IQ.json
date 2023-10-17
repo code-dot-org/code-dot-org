@@ -80,6 +80,18 @@
         "coursef-2019/Internet": {
           "name": "ئینتەرنێت"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "گرێکان"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "فرمانەکان"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "گۆڕاوەکان"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "نەخشەی دڵخۆش"
         },
@@ -175,12 +187,6 @@
         },
         "coursef-2023/The Internet": {
           "name": "ئینتەرنێت"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "allthethings/Jigsaw": {
           "name": "مەتەڵە وێنە"
