@@ -5462,7 +5462,6 @@
           "type": "مصدر"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "فيديو"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -5622,17 +5621,14 @@
           "type": "مصدر"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
-          "name": "قائمة المصادر لجميع الدروس",
-          "url": ""
+          "name": "قائمة المصادر لجميع الدروس"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
           "name": "معايير محاكاة النظام البيئي البحري ",
-          "url": "",
           "type": "مصدر"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
           "name": "مفردات في محاكاة النظام البيئي البحري",
-          "url": "",
           "type": "مصدر"
         },
         "ecosystems/csc-ecosystems/2023": {
@@ -5647,8 +5643,7 @@
         },
         "ecologist_s_notebook/csc-ecosystems/2023": {
           "name": "دفتر ملاحظات عالم البيئة",
-          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
           "name": "الصفحة المقصودة لاتصالات CS",
@@ -5679,7 +5674,6 @@
           "url": "/s/csc-رسم خرائط المعالم -2023/vocab"
         },
         "lesson_slides/csc-mappinglandmarks/2023": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
           "type": "شرائح"
         },
@@ -5700,8 +5694,7 @@
         },
         "activity_guide_planning_1/csc-mappinglandmarks/2023": {
           "name": "خطة المشروع",
-          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview"
         },
         "interactive_map_rubric/csc-mappinglandmarks/2023": {
           "name": "نموذج تقييم ترميز الخرائط التفاعلية",
@@ -5710,8 +5703,7 @@
         },
         "local_landmarks_map_reflection_observation/csc-mappinglandmarks/2023": {
           "name": "انعكاس خريطة المعالم المحلية ومراقبتها",
-          "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview"
         },
         "books_about_maps_list/csc-mappinglandmarks/2023": {
           "name": "قائمة كتب حول الخرائط",
@@ -6018,2235 +6010,846 @@
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
           "type": "مصدر"
         },
-        "all_resources/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "teacher_forum/csd/2023": {
-          "name": "منتدى المعلم",
-          "url": ""
-        },
-        "csd_guide_to_assessment_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_curriculum_videos_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_differentiation_2/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_teaching_and_learning_strategies_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_using_resources_2/csd/2023": {
-          "name": "",
-          "url": ""
+          "name": "منتدى المعلم"
         },
         "the_problem_solving_process_2/csd/2023": {
-          "name": "عملية حل المشكلات",
-          "url": ""
-        },
-        "aluminum_boats/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "aluminum_boats_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "code_org_how-to_videos/csd/2023": {
-          "name": "",
-          "url": ""
+          "name": "عملية حل المشكلات"
         },
         "intro_to_problem_solving/csd/2023": {
           "name": "مقدمة عن حل المشكلات",
-          "url": "",
           "type": "شرائح"
         },
         "problem_solving_process/csd/2023": {
-          "name": "عملية حل المشكلات",
-          "url": "",
-          "type": ""
+          "name": "عملية حل المشكلات"
         },
         "problem_solving_process_1/csd/2023": {
           "name": "عملية حل المشكلات",
-          "url": "",
           "type": "فيديو"
         },
         "problem_solving_process_2/csd/2023": {
-          "name": "عملية حل المشكلات",
-          "url": ""
+          "name": "عملية حل المشكلات"
         },
         "the_problem_solving_process/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "the_problem_solving_process_1/csd/2023": {
           "name": "عملية حل المشكلات",
-          "url": "",
           "type": "شرائح"
         },
         "the_problem_solving_process_5/csd/2023": {
-          "name": "عملية حل المشكلات",
-          "url": "",
-          "type": ""
+          "name": "عملية حل المشكلات"
         },
         "exploring_problem_solving/csd/2023": {
           "name": "استكشاف حل المشكلات",
-          "url": "",
           "type": "شرائح"
         },
         "solving_problems/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
-        "solving_problems_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "what_is_a_computer/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "what_is_a_computer_/csd/2023": {
-          "name": "ما هو الكمبيوتر؟",
-          "url": "",
-          "type": ""
+          "name": "ما هو الكمبيوتر؟"
         },
         "what_is_a_computer_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "what_is_a_computer_version_a_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "what_is_a_computer_version_b_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "input_and_output/csd/2023": {
-          "name": "الإدخال والإخراج",
-          "url": "",
-          "type": ""
+          "name": "الإدخال والإخراج"
         },
         "input_and_output_1/csd/2023": {
-          "name": "الإدخال والإخراج",
-          "url": "",
-          "type": ""
+          "name": "الإدخال والإخراج"
         },
         "input_and_output_2/csd/2023": {
           "name": "الإدخال والإخراج",
-          "url": "",
           "type": "شرائح"
-        },
-        "apps_with_processing/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "apps_with_processing_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "apps_with_processing_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "apps_with_storage/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "apps_with_storage_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "apps_with_storage_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "what_do_computers_do/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "apps_and_problem_solving/csd/2023": {
-          "name": "التطبيقات وحل المشكلات",
-          "url": "",
-          "type": ""
+          "name": "التطبيقات وحل المشكلات"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "apps_and_problem_solving_1/csd/2023": {
           "name": "التطبيقات وحل المشكلات",
-          "url": "",
           "type": "استعراض النظراء"
         },
         "apps_and_problem_solving_2/csd/2023": {
           "name": "التطبيقات وحل المشكلات",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "computer_science_practices/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "تأملات"
-        },
-        "peer_review_exemplar/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "project_-_propose_an_app/csd/2023": {
           "name": "المشروع - اقتراح تطبيق",
-          "url": "",
           "type": "شرائح"
         },
-        "project_guide_exemplar/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "sample_marked_rubrics/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "build_a_newspaper_table/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "build_a_newspaper_table_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "intro_to_problem_solving_newspapers_/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "intro_to_problem_solving_spaghetti_/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "spaghetti_bridge/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "spaghetti_bridge_-_activity_guide/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "code_org_how-to_video_playlist/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "intro_to_problem_solving_-_paper_tower/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "intro_to_problem_solving_paper_towels_/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "paper_tower/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exploring_problem_solving_-_animal_theme/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "exploring_problem_solving_animals_/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "solving_problems_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "tangrams/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "exploring_problem_solving_-_games_theme/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "exploring_problem_solving_games_/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "solving_problems_3/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "csd_guide_to_debugging/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_differentiation/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_programming_levels_guide/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_code_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_resources_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_assessment_2/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_curriculum_videos_2/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_programming_levels/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_teaching_and_learning_strategies_2/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_using_resources_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_for_design/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_with_programming/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "_key_warm_up_word_search/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "_key_web_design_for_users/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
-        },
-        "exploring_web_pages_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "exploring_web_pages_2/csd/2023": {
           "name": "استكشاف صفحات الويب",
-          "url": "",
           "type": "شرائح"
         },
         "problem_solving_and_design/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
-        },
-        "web_design_for_users_b_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "web_design_template/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "_warm_up_word_search_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exemplar_text_website/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "html_tags/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "intro_to_html/csd/2023": {
           "name": "مقدمة عن HTML",
-          "url": "",
           "type": "شرائح"
         },
         "intro_to_web_lab_part_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "pair_programming/csd/2023": {
           "name": "البرمجة الزوجية",
-          "url": "",
           "type": "فيديو"
         },
         "video_intro_to_web_lab_part_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "formatting_html/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "headings/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "headings_and_paragraphs/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "lists/csd/2023": {
           "name": "القوائم",
-          "url": "",
           "type": "مصدر"
         },
         "video_debugging/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "video_pair_programming/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "html_web_page/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "html_web_page_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
-        },
-        "html_web_page_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "mini-project_html_web_page/csd/2023": {
           "name": "مشروع مصغر: صفحة ويب HTML",
-          "url": "",
           "type": "شرائح"
-        },
-        "peer_review_-_html_web_page/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "problem_solving_process_with_programming/csd/2023": {
           "name": "عملية حل المشكلات باستخدام البرمجة",
-          "url": "",
           "type": "مصدر"
-        },
-        "project_guide_-_html_project/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "digital_footprint/csd/2023": {
           "name": "البصمة الرقمية",
-          "url": "",
           "type": "شرائح"
-        },
-        "social_sleuth/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "social_sleuth_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "intro_to_css_-_part_1/csd/2023": {
           "name": "مدخل للغة CSS -الجزء 1",
-          "url": "",
           "type": "فيديو"
         },
         "intro_to_css_-_part_2/csd/2023": {
           "name": "مدخل للغة CSS -الجزء 2",
-          "url": "",
           "type": "فيديو"
         },
         "style_sheets/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "styling_text_with_css/csd/2023": {
           "name": "تصميم النص باستخدام CSS",
-          "url": "",
           "type": "شرائح"
         },
         "text_properties/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "mini-project_your_personal_style/csd/2023": {
           "name": "مشروع مصغر: أسلوبك الشخصي",
-          "url": "",
           "type": "شرائح"
         },
-        "peer_review_-_your_personal_style/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "project_guide_-_your_personal_style/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "your_personal_style/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "your_personal_style_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "your_personal_style_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "creative_commons_overview/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "intellectual_property/csd/2023": {
           "name": "الملكية الفكرية",
-          "url": "",
           "type": "شرائح"
         },
-        "licensing_your_work/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "licensing_your_work_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "creative_commons_search/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "images_in_html/csd/2023": {
           "name": "الصور بصيغة HTML",
-          "url": "",
           "type": "مصدر"
         },
         "using_images/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "define_your_web_page/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "define_your_webpage/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "websites_for_expression/csd/2023": {
           "name": "مواقع الويب المخصصة للتعبير",
-          "url": "",
           "type": "شرائح"
-        },
-        "body_styling/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "layout_properties/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "styling_elements_with_css/csd/2023": {
           "name": "تصميم العناصر باستخدام CSS",
-          "url": "",
           "type": "شرائح"
-        },
-        "personal_web_page_-_prepare/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "project_guide_-_personal_web_page_-_prepare/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "your_web_page_prepare/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "peer_review_-_personal_website/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "personal_web_page/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "personal_web_page_-_reflect/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "personal_web_page_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "personal_web_page_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "practices_reflection/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "project_-_personal_web_page/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "project_guide_-_personal_web_page_-_reflect/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "publishing_your_website/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
-        "websites_for_a_purpose/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "websites_for_a_purpose_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "websites_for_a_purpose_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "team_problem_solving/csd/2023": {
           "name": "فريق حل المشكلات",
-          "url": "",
           "type": "شرائح"
         },
         "video_managing_disagreement/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "video_teamwork/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
-        },
-        "website_team_plan/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "website_team_plan_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "internet_scavenger_hunt/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "links_and_research/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "links_and_research_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "sources_and_research/csd/2023": {
           "name": "المصادر والبحوث المنهجية",
-          "url": "",
           "type": "شرائح"
         },
         "video_how_search_works/csd/2023": {
           "name": "كيف يعمل البحث",
-          "url": "",
           "type": "فيديو"
         },
         "classes/csd/2023": {
           "name": "الفصول الدراسية",
-          "url": "",
           "type": "مصدر"
         },
         "css_classes/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "plan_a_multi-page_website/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "planning_a_multi-page_site/csd/2023": {
           "name": "تخطيط موقع ويب متعدد الصفحات",
-          "url": "",
           "type": "شرائح"
         },
-        "project_guide_-_website_for_a_purpose_-_prepare/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "website_for_a_purpose/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "website_for_a_purpose_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "hyperlinks/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "linking_pages/csd/2023": {
           "name": "ربط الصفحات",
-          "url": "",
           "type": "شرائح"
         },
         "project_-_website_for_a_purpose/csd/2023": {
           "name": "المشروع - الموقع الإلكتروني لغرض ما",
-          "url": "",
           "type": "شرائح"
-        },
-        "peer_review_-_final_personal_website/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "peer_review_and_final_touches/csd/2023": {
           "name": "مراجعة الأقران واللمسات الأخيرة",
-          "url": "",
           "type": "شرائح"
-        },
-        "practices_reflection_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "project_guide_-_website_for_a_purpose_-_reflect/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "website_for_a_purpose_-_reflect/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "website_for_a_purpose_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "all_code_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_resources_6/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_6/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_6/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_assessment_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_curriculum_videos_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_teaching_and_learning_strategies_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_using_resources_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_with_design/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_with_programming_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "_warm_up_word_search_key_/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
-        "app_design_for_users/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exemplar_-_animation_and_game_design_activity_guide/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "programming_for_a_purpose/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "_warm_up_word_search_unit_3/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "animation_and_game_design_template/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
-        },
-        "drawing_shapes/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "drawing_shapes_version_a_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "drawing_shapes_version_b_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "plotting_shapes/csd/2023": {
           "name": "رسم الأشكال",
-          "url": "",
           "type": "شرائح"
-        },
-        "sample_shape_drawing/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "drawing_in_game_lab/csd/2023": {
           "name": "الرسم في مختبر الألعاب",
-          "url": "",
           "type": "شرائح"
         },
         "drawing_in_game_lab_-_part_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "drawing_in_game_lab_-_part_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "drawing_shapes_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "shapes_and_parameters/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "shapes_and_parameters_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "introduction_to_variables/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "naming_variables/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "variables/csd/2023": {
           "name": "المتغيرات",
-          "url": "",
           "type": "مصدر"
         },
         "variables_1/csd/2023": {
           "name": "المتغيرات",
-          "url": "",
           "type": "فيديو"
         },
         "variables_2/csd/2023": {
           "name": "المتغيرات",
-          "url": "",
           "type": "شرائح"
         },
         "random_numbers/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "random_numbers_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "activity_guide_-_robot_face_planning/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "mini-project_-_robot_faces/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "mini-project_-_robot_faces_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "problem_solving_with_programming/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "robot_faces/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "animation_tab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "introduction_to_sprites/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "sprites/csd/2023": {
           "name": "النقوش المتحركة",
-          "url": "",
           "type": "مصدر"
         },
         "sprites_1/csd/2023": {
           "name": "النقوش المتحركة",
-          "url": "",
           "type": "شرائح"
         },
         "the_animation_tab/csd/2023": {
           "name": "تبويب الرسوم المتحركة",
-          "url": "",
           "type": "فيديو"
         },
         "sprite_properties/csd/2023": {
           "name": "خصائص الكائنات",
-          "url": "",
           "type": "مصدر"
         },
         "sprite_properties_1/csd/2023": {
           "name": "خصائص الكائنات",
-          "url": "",
           "type": "شرائح"
         },
         "sprite_properties_needs_updating_/csd/2023": {
           "name": "خصائص الكائنات",
-          "url": "",
           "type": "فيديو"
         },
         "text/csd/2023": {
           "name": "النص",
-          "url": "",
           "type": "شرائح"
         },
         "captioned_scenes/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "mini-project_-_captioned_scenes/csd/2023": {
           "name": "مشروع صغير: المشاهدات ذات التعليقات التوضيحية",
-          "url": "",
           "type": "شرائح"
         },
-        "mini_project_-_captioned_scenes/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "sprite_scene_planning/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "flipbook_example_-_by_marnic_bos/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "introduction_to_the_draw_loop/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
-        },
-        "random_dot_flipbook/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "random_sprite_flipbook/csd/2023": {
-          "name": "",
-          "url": ""
         },
         "the_draw_loop/csd/2023": {
           "name": "حلقة الرسم",
-          "url": "",
           "type": "مصدر"
         },
         "the_draw_loop_1/csd/2023": {
           "name": "حلقة الرسم",
-          "url": "",
           "type": "شرائح"
         },
         "sprite_movement/csd/2023": {
           "name": "حركة الرسوم المتحركة",
-          "url": "",
           "type": "فيديو"
         },
         "sprite_movement_1/csd/2023": {
           "name": "حركة الرسوم المتحركة",
-          "url": "",
           "type": "شرائح"
         },
         "animated_scene/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
-        },
-        "animated_scene_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "animated_scene_planning/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "mini-project_-_animation/csd/2023": {
           "name": "مشروع صغير: الرسوم المتحركة",
-          "url": "",
           "type": "شرائح"
         },
         "boolean_expressions/csd/2023": {
           "name": "تعبيرات منطقية",
-          "url": "",
           "type": "فيديو"
         },
         "booleans_and_comparison_operators/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "conditional_statements/csd/2023": {
           "name": "العبارات الشرطية",
-          "url": "",
           "type": "فيديو"
         },
         "conditionals/csd/2023": {
           "name": "الجمل الشرطية",
-          "url": "",
           "type": "شرائح"
         },
         "if_statements/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "keyboard_input/csd/2023": {
           "name": "مدخلات لوحة المفاتيح",
-          "url": "",
           "type": "شرائح"
         },
         "if-else_statements/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "if_else_statements/csd/2023": {
           "name": "عبارات If/Else (إذا/وبخلاف ذلك)",
-          "url": "",
           "type": "فيديو"
         },
         "mouse_input/csd/2023": {
           "name": "مدخلات الماوس",
-          "url": "",
           "type": "شرائح"
         },
         "extra_code_in_challenge_levels/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
-        },
-        "interactive_card/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "interactive_card_-_marked_rubrics/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "interactive_card_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "interactive_card_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "interactive_card_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "interactive_card_3/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "project_-_interactive_card/csd/2023": {
           "name": "المشروع - البطاقة التفاعلية",
-          "url": "",
           "type": "شرائح"
         },
         "velocity/csd/2023": {
           "name": "السرعة",
-          "url": "",
           "type": "فيديو"
         },
         "velocity_1/csd/2023": {
           "name": "السرعة",
-          "url": "",
           "type": "مصدر"
         },
         "velocity_2/csd/2023": {
           "name": "السرعة",
-          "url": "",
           "type": "شرائح"
         },
         "collision_detection/csd/2023": {
-          "name": "كشف التصادم",
-          "url": "",
-          "type": ""
+          "name": "كشف التصادم"
         },
         "collision_detection_1/csd/2023": {
           "name": "كشف التصادم",
-          "url": "",
           "type": "مصدر"
         },
         "collision_detection_2/csd/2023": {
           "name": "كشف التصادم",
-          "url": "",
           "type": "شرائح"
-        },
-        "collision_detection_version_a_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "collision_detection_version_b_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "mini-project_-_side_scroller/csd/2023": {
           "name": "مشروع صغير: التمرير الجانبي",
-          "url": "",
           "type": "شرائح"
         },
-        "mini-project_guide_-_side_scroller/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "side_scroller/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
-        },
-        "side_scroller_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "complex_sprite_movement/csd/2023": {
           "name": "الحركة المعقدة للنقش المتحرك",
-          "url": "",
           "type": "شرائح"
         },
         "velocity_and_the_counter_pattern/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "collisions/csd/2023": {
           "name": "التصادمات",
-          "url": "",
           "type": "شرائح"
         },
         "flyer_game/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
-        },
-        "flyer_game_-_project_guide/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "flyer_game_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "mini-project_-_flyer_game/csd/2023": {
           "name": "مشروع صغير: لعبة التحليق",
-          "url": "",
           "type": "شرائح"
         },
         "functions/csd/2023": {
           "name": "دوال",
-          "url": "",
           "type": "فيديو"
         },
         "functions_1/csd/2023": {
           "name": "دوال",
-          "url": "",
           "type": "مصدر"
         },
         "functions_2/csd/2023": {
           "name": "دوال",
-          "url": "",
           "type": "شرائح"
-        },
-        "defender_game/csd/2023": {
-          "name": "",
-          "url": ""
         },
         "the_game_design_process/csd/2023": {
           "name": "عملية تصميم اللعبة",
-          "url": "",
           "type": "شرائح"
-        },
-        "planning_your_platform_game/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "planning_your_platform_game_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "using_the_game_design_process/csd/2023": {
           "name": "استخدام عملية تصميم اللعبة",
-          "url": "",
           "type": "شرائح"
         },
-        "make_your_own_game/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "make_your_own_game_-_sample_marked_rubrics/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "make_your_own_game_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "make_your_own_game_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "make_your_own_game_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "make_your_own_game_3/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "project_-_design_a_game/csd/2023": {
           "name": "المشروع - تصميم لعبة",
-          "url": "",
           "type": "شرائح"
-        },
-        "all_code_6/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_resources_7/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_7/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_7/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_assessment_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_curriculum_videos_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_differentiation_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_teaching_and_learning_strategies_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_using_resources_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "designing_with_empathy/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "designing_with_empathy_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "designing_with_empathy_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "problem_solving_process_with_empathy/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "profile_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "profile_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "profile_3/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "profile_4/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "reacting_as_your_user/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "reacting_as_your_user_profile_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "reacting_as_your_user_profile_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "reacting_as_your_user_profile_3/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "reacting_as_your_user_profile_4/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "understanding_your_user/csd/2023": {
           "name": "فهم المستخدم",
-          "url": "",
           "type": "شرائح"
         },
         "the_design_thinking_process/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "user_centered_design_-_define_and_prepare/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "user_centered_design_define_prepare_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "user_centered_design_define_prepare_2021/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "user_centered_design_-_try_and_reflect/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "user_centered_design_try_reflect_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "user_centered_design_try_reflect_2021/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "user_interface_screens/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "user_interfaces/csd/2023": {
           "name": "واجهات المستخدم",
-          "url": "",
           "type": "شرائح"
-        },
-        "user_testing_computer_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "user_testing_user_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "feedback_and_testing/csd/2023": {
           "name": "الملاحظات والاختبار",
-          "url": "",
           "type": "شرائح"
         },
-        "improve_a_screen/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "improve_a_screen_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "prototype_feedback/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "example_user_interviews/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "identifying_user_needs/csd/2023": {
           "name": "تحديد احتياجات المستخدم",
-          "url": "",
           "type": "شرائح"
-        },
-        "user_interviews/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "example_project_-_cooking_app_-_convincing_evidence/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "example_project_-_cooking_app_-_extensive_evidence/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "example_project_-_language_app_-_convincing_evidence/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "example_project_-_language_app_-_limited_evidence/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "paper_prototype_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "paper_prototype_project_guide/csd/2023": {
-          "name": "",
-          "url": ""
         },
         "paper_prototypes/csd/2023": {
           "name": "النماذج الورقية الأولية",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "project_-_paper_prototype/csd/2023": {
           "name": "المشروع - النموذج الورقي الأولي",
-          "url": "",
           "type": "شرائح"
-        },
-        "app_design_kickoff/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "app_design_kickoff_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "designing_apps_for_good/csd/2023": {
           "name": "تصميم تطبيقات من أجل الخير",
-          "url": "",
           "type": "شرائح"
         },
-        "example_apps_for_good/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "market_research/csd/2023": {
-          "name": "أبحاث السوق",
-          "url": "",
-          "type": ""
+          "name": "أبحاث السوق"
         },
         "market_research_-_research_areas/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "market_research_1/csd/2023": {
-          "name": "أبحاث السوق",
-          "url": "",
-          "type": ""
+          "name": "أبحاث السوق"
         },
         "market_research_2/csd/2023": {
           "name": "أبحاث السوق",
-          "url": "",
           "type": "شرائح"
         },
-        "explore_ui_elements/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "explore_ui_elements_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "exploring_ui_elements/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "build_a_paper_prototype/csd/2023": {
           "name": "النماذج الورقية الأولية",
-          "url": "",
           "type": "شرائح"
         },
         "design_mode/csd/2023": {
           "name": "وضع التصميم",
-          "url": "",
           "type": "مصدر"
         },
         "design_mode_elements/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
-        },
-        "paper_prototype_planning/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "paper_prototype_planning_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "phone_paper_prototype/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "paper_prototype_user_testing/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "paper_prototype_user_testing_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "prototype_testing/csd/2023": {
           "name": "اختبار النموذج الأولي",
-          "url": "",
           "type": "شرائح"
         },
-        "user_test_cases/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "user_test_cases_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "what_s_for_lunch_testing/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "design_mode_in_app_lab/csd/2023": {
           "name": "التصميم الرقمي",
-          "url": "",
           "type": "شرائح"
         },
         "intro_to_design_mode/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "model_screen_design/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "screen_design_2021_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "screen_ownership_2021_/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "build_a_digital_prototype/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "events_in_app_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "events_in_app_lab_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "events_in_app_lab_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "changing_screens/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "importing_screens/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "linking_prototype_screens/csd/2023": {
           "name": "ربط الشاشات",
-          "url": "",
           "type": "شرائح"
         },
         "multi-screen_apps/csd/2023": {
           "name": "التطبيقات متعددة الشاشات",
-          "url": "",
           "type": "مصدر"
         },
         "responding_to_user_input/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
-        },
-        "digital_prototype_user_testing/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "testing_the_app/csd/2023": {
           "name": "اختبار التطبيق",
-          "url": "",
           "type": "شرائح"
-        },
-        "bugs_and_features/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "bugs_and_features_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "bugs_and_features_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "updating_your_prototype/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "updating_your_prototype_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "app_presentation/csd/2023": {
           "name": "عرض التطبيق",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "app_presentation_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "app_presentation_1/csd/2023": {
-          "name": "عرض التطبيق",
-          "url": "",
-          "type": ""
-        },
-        "app_presentation_template/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer_review_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer_review_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "عرض التطبيق"
         },
         "project_-_app_presentation/csd/2023": {
           "name": "المشروع - عرض التطبيق",
-          "url": "",
           "type": "شرائح"
         },
-        "sample_marked_rubrics_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "csd_guide_to_using_resources/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_resources_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_assessment_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_curriculum_videos_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_differentiation_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_teaching_and_learning_strategies_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_with_data/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "meals_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "representation_matters/csd/2023": {
-          "name": "مسائل التمثيل",
-          "url": "",
-          "type": ""
+          "name": "مسائل التمثيل"
         },
         "representation_matters_1/csd/2023": {
-          "name": "مسائل التمثيل",
-          "url": "",
-          "type": ""
+          "name": "مسائل التمثيل"
         },
         "representation_matters_2/csd/2023": {
           "name": "مسائل التمثيل",
-          "url": "",
           "type": "شرائح"
-        },
-        "animal_shapes/csd/2023": {
-          "name": "",
-          "url": ""
         },
         "patterns_and_representation/csd/2023": {
           "name": "الأنماط والتمثيل",
-          "url": "",
           "type": "شرائح"
         },
         "representing_information/csd/2023": {
-          "name": "تمثيل المعلومات",
-          "url": "",
-          "type": ""
-        },
-        "representing_information_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "representing_information_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "ascii/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "تمثيل المعلومات"
         },
         "ascii_and_binary_representation/csd/2023": {
           "name": "ASCII والتمثيل الثنائي",
-          "url": "",
           "type": "شرائح"
         },
-        "ascii_challenges/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "ascii_challenges_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "ascii_text/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "representing_images/csd/2023": {
           "name": "تمثيل الصور",
-          "url": "",
           "type": "شرائح"
         },
         "binary_and_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
-        "number_cards/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "number_cards_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "representing_numbers/csd/2023": {
-          "name": "تمثيل الأرقام",
-          "url": "",
-          "type": ""
+          "name": "تمثيل الأرقام"
         },
         "representing_numbers_1/csd/2023": {
           "name": "تمثيل الأرقام",
-          "url": "",
           "type": "شرائح"
-        },
-        "representing_numbers_2021/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "activity_guide_-_pet_records/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "ascii_to_binary_table/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "combining_representations/csd/2023": {
           "name": "الجمع بين التمثيلات",
-          "url": "",
           "type": "شرائح"
-        },
-        "pet_records/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "keeping_data_secret/csd/2023": {
           "name": "الحفاظ على سرية البيانات",
-          "url": "",
           "type": "شرائح"
         },
-        "medical_records/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "medical_records_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
-        "secret_messages_2021/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "create_a_representation/csd/2023": {
-          "name": "المشروع - إنشاء تمثيل",
-          "url": "",
-          "type": ""
-        },
-        "create_a_representation_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": ""
+          "name": "المشروع - إنشاء تمثيل"
         },
         "create_a_representation_1/csd/2023": {
-          "name": "المشروع - إنشاء تمثيل",
-          "url": ""
+          "name": "المشروع - إنشاء تمثيل"
         },
         "create_a_representation_2/csd/2023": {
           "name": "المشروع - إنشاء تمثيل",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "create_a_representation_3/csd/2023": {
           "name": "المشروع - إنشاء تمثيل",
-          "url": "",
           "type": "شرائح"
         },
-        "create_a_representation_marked_rubrics/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "problem_solving_with_data/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "problem_solving_with_data_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "problem_solving_with_data_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "structuring_data/csd/2023": {
-          "name": "هيكلة البيانات",
-          "url": "",
-          "type": ""
+          "name": "هيكلة البيانات"
         },
         "structuring_data_1/csd/2023": {
           "name": "هيكلة البيانات",
-          "url": "",
           "type": "شرائح"
         },
-        "structuring_data_2021/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "interpreting_data/csd/2023": {
-          "name": "تفسير البيانات",
-          "url": "",
-          "type": ""
+          "name": "تفسير البيانات"
         },
         "interpreting_data_1/csd/2023": {
-          "name": "تفسير البيانات",
-          "url": "",
-          "type": ""
+          "name": "تفسير البيانات"
         },
         "interpreting_data_2/csd/2023": {
           "name": "تفسير البيانات",
-          "url": "",
           "type": "مصدر"
         },
         "interpreting_data_3/csd/2023": {
           "name": "تفسير البيانات",
-          "url": "",
           "type": "شرائح"
         },
-        "making_decisions_with_data/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "making_decisions_with_data_1/csd/2023": {
-          "name": "اتخاذ القرارات باستخدام البيانات",
-          "url": "",
-          "type": ""
+          "name": "اتخاذ القرارات باستخدام البيانات"
         },
         "making_decisions_with_data_2/csd/2023": {
           "name": "اتخاذ القرارات باستخدام البيانات",
-          "url": "",
           "type": "شرائح"
         },
         "problem_solving_process_with_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "automating_data_decisions/csd/2023": {
-          "name": "أتمتة قرارات البيانات",
-          "url": "",
-          "type": ""
+          "name": "أتمتة قرارات البيانات"
         },
         "automating_data_decisions_1/csd/2023": {
           "name": "أتمتة قرارات البيانات",
-          "url": "",
           "type": "مصدر"
         },
         "automating_data_decisions_2/csd/2023": {
-          "name": "أتمتة قرارات البيانات",
-          "url": "",
-          "type": ""
+          "name": "أتمتة قرارات البيانات"
         },
         "automating_data_decisions_3/csd/2023": {
           "name": "أتمتة قرارات البيانات",
-          "url": "",
           "type": "شرائح"
         },
         "amazon_and_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "data_in_the_real_world/csd/2023": {
-          "name": "البيانات في العالم الحقيقي",
-          "url": "",
-          "type": ""
+          "name": "البيانات في العالم الحقيقي"
         },
         "data_in_the_real_world_1/csd/2023": {
-          "name": "البيانات في العالم الحقيقي",
-          "url": "",
-          "type": ""
+          "name": "البيانات في العالم الحقيقي"
         },
         "netflix_and_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "problem_solving_with_big_data/csd/2023": {
           "name": "حل المشكلات باستخدام البيانات الضخمة",
-          "url": "",
           "type": "شرائح"
         },
         "waze_and_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "data_and_machine_learning/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "video_impact_on_society/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "video_machine_learning/csd/2023": {
@@ -8255,878 +6858,364 @@
           "type": "فيديو"
         },
         "video_training_data_and_bias/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "make_a_recommendation/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "make_a_recommendation_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "make_a_recommendation_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "make_a_recommendation_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer_review_exemplar_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer_review_exemplar_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "project_-_make_a_recommendation/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "all_code_3/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_resources_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_4/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_assessment_6/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_curriculum_videos_6/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_teaching_and_learning_strategies_6/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_with_design_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_with_programming_2/csd/2023": {
-          "name": "",
-          "url": ""
         },
         "physical_design_template/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "physical_designs/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "physical_designs_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "_exemplar_physical_designs/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "_warm_up_word_search_unit_6/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "circuit_playground/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "circuits_and_logic/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "physical_output/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "the_circuit_playground/csd/2023": {
           "name": "لوحة الأضواء الدائرية",
-          "url": "",
           "type": "شرائح"
         },
         "designing_screens_with_code/csd/2023": {
           "name": "تصميم الشاشات باستخدام الكود",
-          "url": "",
           "type": "مصدر"
         },
         "updating_screen_elements/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "board_events/csd/2023": {
           "name": "أحداث اللوحة",
-          "url": "",
           "type": "مصدر"
         },
         "board_events_1/csd/2023": {
           "name": "أحداث اللوحة",
-          "url": "",
           "type": "شرائح"
         },
         "physical_input/csd/2023": {
           "name": "المدخلات المادية",
-          "url": "",
           "type": "مصدر"
         },
         "the_counter_pattern/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "if_statements_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "the_counter_pattern_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "variables_and_if_statements/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "exemplar_1_-_loose_papers_app/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exemplar_2_-_cats_vs_dogs_app/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exemplar_3_-_bird_survey/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "mini-project_field_collector_app/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "project_guide_-_field_collector_app/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "rubric_-_field_collector_app/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "color_leds/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "color_lights/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "getting_screen_inputs/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "taking_input_with_getproperty/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "combining_inputs_and_outputs/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "input_output_devices/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
-        "exemplar_1_-_lights_and_music/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exemplar_2_-_magic_unicorn/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exemplar_3_-_red_light_green_light/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "peer_review_-_human_device_interaction/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "project_guide_-_human_device_interaction/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "project_human_device_interaction/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "rubric_-_human_device_interaction/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "student_checklist_-_human_device_interaction/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "analog_sensors/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "board_sensors/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "changing_sensor_scale/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "date_and_change_events/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "accelerometer/csd/2023": {
           "name": "مقياس التسارع",
-          "url": "",
           "type": "شرائح"
         },
         "accelerometer_events/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "the_accelerometer/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "arrays/csd/2023": {
           "name": "المصفوفات",
-          "url": "",
           "type": "مصدر"
         },
         "introduction_to_arrays/csd/2023": {
           "name": "مقدمة عن المجموعات الوصفية",
-          "url": "",
           "type": "فيديو"
         },
         "making_music/csd/2023": {
           "name": "إنشاء موسيقى",
-          "url": "",
           "type": "شرائح"
         },
         "modifying_arrays/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "playing_notes/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "producing_output/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "functions_with_parameters/csd/2023": {
           "name": "الدوال والمعاملات",
-          "url": "",
           "type": "فيديو"
         },
-        "exemplar_1_-_city_silhouette/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exemplar_2_-_dual_landscape_painting/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exemplar_3_-_monster_puppet/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "mini-project_interactive_art/csd/2023": {
-          "name": "",
-          "url": "",
+        "fucntions_devices/csd/2023": {
+          "name": "دوال",
           "type": "شرائح"
         },
-        "project_guide_-_interactive_art/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "mini-project_interactive_art/csd/2023": {
+          "type": "شرائح"
         },
         "student_example_projects/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "student_rubric_-_interactive_art/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "circuits_and_leds/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "physical_outputs_and_leds/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "circuits_and_buttons/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "physical_inputs_and_buttons/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "peer_review_-_prototype_an_innovation/csd/2023": {
-          "name": "",
-          "url": ""
         },
         "project_prototype_an_innovation/csd/2023": {
           "name": "المشروع: إعداد نموذج أولي لابتكار",
-          "url": "",
           "type": "شرائح"
         },
         "prototype_an_innovation/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "prototype_an_innovation_-_student_checklist/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "prototype_an_innovation_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "prototype_an_innovation_example_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "prototype_an_innovation_example_2/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "prototype_an_innovation_example_3/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "all_code_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_resources_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_assessment_7/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_curriculum_videos_7/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_debugging_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_differentiation_5/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_programming_levels_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_teaching_and_learning_strategies_7/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_using_resources_6/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "teacher_forum_1/csd/2023": {
-          "name": "منتدى المعلم",
-          "url": ""
-        },
-        "the_problem_solving_process_with_design_2/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "the_problem_solving_process_with_programming_3/csd/2023": {
-          "name": "",
-          "url": ""
+          "name": "منتدى المعلم"
         },
         "physical_designs_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "_exemplar_physical_designs_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "introducing_the_micro_bit/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "led_planning_sheet/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "the_micro_bit_led_display/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "the_micro_bit_overview/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "updating_screen_elements_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "board_events_2/csd/2023": {
           "name": "أحداث اللوحة",
-          "url": "",
           "type": "شرائح"
         },
         "board_events_3/csd/2023": {
           "name": "أحداث اللوحة",
-          "url": "",
           "type": "مصدر"
         },
         "micro_bit_inputs/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "the_counter_pattern_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "variables_and_if_statements_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "mini-project_field_collector_app_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "project_guide_-_field_collector_app_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "rubric_-_field_collector_app_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "getting_screen_inputs_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "combining_inputs_and_outputs_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "peer_review_-_human_device_interaction_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "project_guide_-_human_device_interaction_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "project_human_device_interaction_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "rubric_-_human_device_interaction_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "student_checklist_-_human_device_interaction_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "board_sensors_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "data_change_events/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "setting_sensor_scale/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "the_micro_bit_sensors/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "accelerometer_1/csd/2023": {
           "name": "مقياس التسارع",
-          "url": "",
           "type": "شرائح"
         },
         "accelerometer_events_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "the_micro_bit_accelerometer/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "functions_3/csd/2023": {
           "name": "دوال",
-          "url": "",
           "type": "شرائح"
         },
         "mini-project_interactive_pet/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "project_guide_-_interactive_pet/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "student_rubric_-_interactive_pet/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
         "external_leds_on_a_micro_bit/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "physical_outputs_and_leds_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "external_buttons_on_a_micro_bit/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "physical_inputs_and_buttons_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "peer_review_-_prototype_an_innovation_1/csd/2023": {
-          "name": "",
-          "url": ""
         },
         "project_prototype_an_innovation_1/csd/2023": {
           "name": "المشروع: إعداد نموذج أولي لابتكار",
-          "url": "",
           "type": "شرائح"
         },
-        "prototype_an_innovation_-_student_checklist_1/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "prototype_an_innovation_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "prototype_an_innovation_3/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "all_code/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_resources_8/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_8/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_8/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_assessment_8/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_curriculum_videos_8/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_teaching_and_learning_strategies_8/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_using_resources_7/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "the_problem_solving_process_4/csd/2023": {
-          "name": "عملية حل المشكلات",
-          "url": ""
-        },
-        "the_problem_solving_process_with_data_1/csd/2023": {
-          "name": "",
-          "url": ""
+          "name": "عملية حل المشكلات"
         },
         "ai_what_is_machine_learning_/csd/2023": {
-          "name": "",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "فيديو"
         },
-        "classifying_fish/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "introduction_to_machine_learning/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "types_of_machine_learning/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "types_of_machine_learning_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "types_of_machine_learning_2/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "innovations_in_ai/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "innovations_in_ai_-_activity_guide/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "seeing_ai/csd/2023": {
           "name": "رؤية الذكاء الاصطناعي",
-          "url": "",
           "type": "فيديو"
         },
         "_key_patterns_in_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "finding_patterns_in_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "patterns_in_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "patterns_in_data_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "shoe_survey/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "_key_classification_models/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
-        "classification_models/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "classification_models_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "fruit_veggie_cards/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "_key_training_a_model_in_ai_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "accuracy_in_ai_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "introduction_to_ai_lab/csd/2023": {
           "name": "مقدمة لمختبر الذكاء الاصطناعي",
-          "url": "",
           "type": "شرائح"
         },
         "introduction_to_ai_lab_1/csd/2023": {
           "name": "مقدمة لمختبر الذكاء الاصطناعي",
-          "url": "",
           "type": "فيديو"
         },
         "selecting_features/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
-        },
-        "training_a_model_in_ai_lab/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "training_and_testing_in_ai_lab/csd/2023": {
           "name": "التدريب والاختبار في مختبر الذكاء الاصطناعي",
-          "url": "",
           "type": "فيديو"
         },
         "using_data_with_categorical_features/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "importing_a_model_in_app_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "importing_models_in_app_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "ai_training_data_bias/csd/2023": {
@@ -9135,260 +7224,115 @@
           "type": "فيديو"
         },
         "model_cards/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "model_cards_1/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "_key_zoo_models/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "model_cards_in_ai_lab/csd/2023": {
           "name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي",
-          "url": "",
           "type": "فيديو"
         },
         "saving_models_in_ai_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "selecting_a_label/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "zoo_models/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "if-statements_in_app_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "model_cards_in_app_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "printable_model_cards/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "_key_numerical_accuracy/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "_key_zombie_prediction/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
-        "numerical_accuracy/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "numerical_models/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "zombie_prediction/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "_key_-_numerical_data_in_ai_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "numerical_data_in_ai_lab/csd/2023": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "url": "",
           "type": "شرائح"
         },
         "numerical_data_in_ai_lab_1/csd/2023": {
-          "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "url": "",
-          "type": ""
+          "name": "البيانات العددية في مختبر الذكاء الاصطناعي"
         },
         "numerical_data_in_ai_lab_2/csd/2023": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "url": "",
           "type": "فيديو"
         },
         "using_data_with_numerical_features/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "customizing_apps/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "ai_code_of_ethics/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "ai_ethics_research_areas/csd/2023": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "ai_ethics_research_reflection/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "create_an_ml_app/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "create_an_ml_app_-_project_guide/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "make_a_machine_learning_app/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "5_why_s_-_activity_guide/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "app_brainstorm_-_activity_guide/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "issue_statements/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "creating_a_survey/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "creating_a_survey_in_google_forms/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "survey_planning/csd/2023": {
           "name": "تصميم أداة لجمع البيانات",
-          "url": "",
           "type": "شرائح"
         },
-        "survey_planning_-_activity_guide/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "survey_template_google_form_/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "cleaning_survey_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
-        "isaac_s_survey_data_-_student_resource/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "kim_s_survey_data_-_student_resource/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "survey_data_in_ai_lab/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "view_and_download_survey_data/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "troubleshooting_models/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "troubleshooting_models_-_activity_guide/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "creating_an_app/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "_template_5_why_s/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "design_an_ai_app/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "design_an_ai_app_-_project_guide/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "design_an_ai_app_1/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "نموذج التقييم"
         },
-        "exemplar_-_design_an_ai_app/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "exemplar_-_design_an_ai_app_model_card/csd/2023": {
-          "name": "",
-          "url": ""
-        },
-        "exemplar_-_design_an_ai_app_project_guide/csd/2023": {
-          "name": "",
-          "url": ""
-        },
         "model_card_-_digital_template/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "model_card_-_printable_template/csd/2023": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "all_resources/coursea/2023": {
@@ -10788,22 +8732,8 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "فيديو"
         },
-        "all_resources/how-ai-works/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards/how-ai-works/2023": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary/how-ai-works/2023": {
-          "name": "",
-          "url": ""
-        },
         "classifying_fish/how-ai-works/2023": {
-          "name": "",
-          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
           "name": "كيف يعمل الذكاء الاصطناعي - بيانات التدريب والتحيز",
@@ -10816,14 +8746,12 @@
           "type": "فيديو"
         },
         "introduction_to_machine_learning/how-ai-works/2023": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
           "type": "شرائح"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
           "name": "[Example] شبكة الرؤية الحاسوبية",
-          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing",
-          "type": ""
+          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
         },
         "computer_vision/how-ai-works/2023": {
           "name": "رؤية الكمبيوتر",
@@ -10832,8 +8760,7 @@
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "شبكة الرؤية الحاسوبية",
-          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
           "name": "كيف يعمل الذكاء الاصطناعي: كيف تعمل رؤية الكمبيوتر",
@@ -10842,8 +8769,7 @@
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
           "name": "اداة التعلم التي تتكون من شاشة عرض ذات سبعة اجزاء ",
-          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
           "name": "ما تراه الشبكة العصبية",
@@ -10857,8 +8783,7 @@
         },
         "neural_networks/how-ai-works/2023": {
           "name": "الشبكات العصبية",
-          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
         },
         "neural_networks_1/how-ai-works/2023": {
           "name": "الشبكات العصبية",
@@ -10872,11 +8797,10 @@
         },
         "eliza_activity_guide/how-ai-works/2023": {
           "name": "(اختياري) دليل نشاط إليزا",
-          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "ماجستير في القانون التوليدي",
+          "name": "نموذج محاكاة لغة كبير مُولّد",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "شرائح"
         },
@@ -10897,18 +8821,15 @@
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
           "name": "دليل الفيديو والمفردات",
-          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] دليل نشاط محاكاة الصوت المكتوب",
-          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
           "name": "دليل محاكاة الصوت المكتوب",
-          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
           "name": "دليل مستخدم محاكي الصوت المكتوب",
@@ -10917,8 +8838,7 @@
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "(اختياري) دليل نشاط لعبة GAN",
-          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
         },
         "generative_images/how-ai-works/2023": {
           "name": "صور توليدية",
@@ -10937,13 +8857,11 @@
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] نشاط الصورة المشوشة",
-          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
           "name": "دليل نشاط أداة الصور المشوشة",
-          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
           "name": "دليل المستخدم: أداة صورة الضوضاء",
@@ -10952,8 +8870,7 @@
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
           "name": "دليل الفيديو والمفردات",
-          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
         },
         "algorithmic_bias/how-ai-works/2023": {
           "name": "التحيز الخوارزمي",
@@ -10976,16 +8893,13 @@
           "type": "مصدر"
         },
         "ai_code_of_ethics/how-ai-works/2023": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
           "type": "شرائح"
         },
         "ai_ethics_research_areas/how-ai-works/2023": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
         },
         "ai_ethics_research_reflection/how-ai-works/2023": {
-          "name": "",
           "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
@@ -10994,12 +8908,9 @@
           "type": "فيديو"
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
-          "name": "",
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "فيديو"
         },
@@ -11034,14 +8945,12 @@
           "type": "فيديو"
         },
         "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
-          "name": "",
           "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "فيديو"
         },
         "vocabulary_matching/how-ai-works/2023": {
           "name": "مطابقة المفردات",
-          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
           "name": "[Key] مطابقة المفردات",
@@ -11162,11 +9071,6 @@
           "name": "فيديو: ضغط النص مع آلو بلاك",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "فيديو"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "قائمة القصائد.",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "شرائح"
         }
       }
     }

@@ -200,6 +200,10 @@ nl:
   linked_in: LinkedIn
   instagram: Instagram
   tik_tok: TikTok
+  device_tablet: Tablet
+  device_laptop: Laptop
+  device_desktop_computer: Desktopcomputer
+  device_mobile_device: Mobiel apparaat
   subscribe_to_emails_heading: Abonneer je op e-mails
   subscribe_to_emails_desc: Lees meer over wat er gebeurt op Code.org en in het informaticaonderwijs
     door middel van driemaandelijkse updates via onze mailinglijst.
@@ -236,18 +240,37 @@ nl:
     informatica is niet nodig — met onze professionele leerworkshops.
   students_label: Leerlingen
   teachers_label: Leraren
+  educators_label: Onderwijzers
+  companies_label: Bedrijven
+  districts_label: Districten
+  school_assemblies_label: Schoolvergaderingen
+  parents_label: Ouders
+  public_officials_label: Ambtenaren
+  volunteers_label: Vrijwilligers
+  virtual_events_label: Virtuele evenementen
   teacher_label_csf: Docent CS Fundamentals
   teacher_label_csd: Docent CS Discoveries
   teacher_label_csp: Docent CS Principles
   teacher_label_csc: Docent CS Connections
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Forum voor leerkrachten
+  teacher_forum_desc: Bezoek het Hour of Code Teacher Forum voor advies, inzicht en
+    ondersteuning van andere docenten.
   required_materials: 'Benodigde materialen:'
   optional_materials: 'Optionele materialen:'
   call_to_action_hold_an_event: Een evenement houden
+  call_to_action_register_event: Meld je evenement aan
+  call_to_action_select_activity: Selecteer een activiteit
+  call_to_action_start_activity: Een activiteit starten
+  call_to_action_get_certificates: Certificaten verkrijgen
+  call_to_action_go_beyond_hoc: Ga verder dan het Hour of Code
+  call_to_action_view_promo_resources: Promotiemateriaal bekijken
   call_to_action_learn_more: Meer informatie
   call_to_action_watch_now: Nu kijken
   call_to_action_try_activity: Activiteit proberen
   call_to_action_try_activities: Activiteiten uitproberen
+  call_to_action_explore_activities: Activiteiten ontdekken
+  call_to_action_explore_ai: AI ontdekken
   call_to_action_explore_unit: Eenheid verkennen
   call_to_action_explore_curriculum: Ontdek het curriculum
   call_to_action_explore_curriculum_options: Bekijk de opties voor het curriculum
@@ -301,6 +324,7 @@ nl:
     volgen
   call_to_action_join_teacher_forums: Word lid van de forums voor docenten
   call_to_action_explore_teacher_forums: Bekijk de forums voor docenten
+  call_to_action_explore_teacher_forum: Ontdek het docentenforum
   call_to_action_explore_career_resources: Ontdek de bronnen voor je loopbaan
   call_to_action_watch_videos: Video's bekijken
   call_to_action_download_posters: Posters downloaden
@@ -331,6 +355,18 @@ nl:
   call_to_action_start_translating: Begin met vertalen
   call_to_action_learn_about_advocacy: Meer informatie over onze belangenbehartiging
   call_to_action_visit_store: Bezoek de winkel
+  call_to_action_view_faqs: Bekijk meer veelgestelde vragen
+  aria_label_call_to_action_hoc_how_to_educators: Bekijk de handleiding voor docenten
+  aria_label_call_to_action_hoc_how_to_companies: Bekijk de handleiding voor bedrijven
+  aria_label_call_to_action_hoc_how_to_districts: Bekijk de instructiegids voor districten
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Bekijk de instructiegids
+    voor schoolvergaderingen
+  aria_label_call_to_action_hoc_how_to_parents: Bekijk de handleiding voor ouders
+  aria_label_call_to_action_hoc_how_to_public_officials: Bekijk de instructiegids
+    voor ambtenaren
+  aria_label_call_to_action_hoc_how_to_volunteers: Bekijk de handleiding voor vrijwilligers
+  aria_label_call_to_action_hoc_how_to_virtual_events: Bekijk de handleiding voor
+    virtuele evenementen
   aria_label_call_to_action_afe: Meer informatie over Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start het professionele leerprogramma Teaching
     Computer Science Fundamentals
@@ -13468,6 +13504,129 @@ nl:
   all: Alles
   dont_know: Ik weet het niet
   language_label: taal
+  before_hoc: Voor Hour of Code
+  day_of_hoc: Dag van het uur van de code
+  after_hoc: Na Hour of Code
+  step_01: Stap 1
+  step_02: Stap 2
+  step_03: Stap 3
+  step_04: Stap 4
+  step_05: Stap 5
+  step_06: Stap 6
+  step_07: Stap 7
+  step_08: Stap 8
+  hoc_how_to_top_heading: Jouw gids voor Hour of Code
+  hoc_how_to_top_desc: Op maat gemaakte handleidingen voor de beste Hour of Code-ervaring.
+  hoc_how_to_top_view_guide: Bekijk de gids voor
+  hoc_how_to_nav_main_aria_label: Kies een gids
+  hoc_how_to_nav_sidebar_aria_label: Navigatie in de zijbalk
+  hoc_how_to_educators_intro_heading: Hoe plan je een CodeUur
+  hoc_how_to_educators_intro_desc: The Hour of Code is een introductie van een uur
+    in de informatica, waarbij aan de hand van leuke tutorials wordt aangetoond dat
+    iedereen de basis kan leren. Dit jaar brengen we Hour of Code naar nieuwe hoogten
+    door codeermogelijkheden aan te bieden die zowel kunstmatige intelligentie (AI)
+    als niet-AI-componenten omvatten. Of u of uw leerlingen nu ervaren programmeurs
+    zijn of u allemaal op weg gaat naar uw allereerste informatica-expeditie, dit
+    Hour of Code belooft een buitengewone reis.
+  hoc_how_to_faq_question_prerequisites: Wat zijn de vereisten om een Hour of Code
+    te doen?
+  hoc_how_to_faq_answer_prerequisites: The Hour of Code is eenvoudig uit te voeren
+    — zelfs voor beginners. Je hebt geen ervaring in informatica of onderwijs nodig
+    om studenten te inspireren om iets nieuws te ontdekken, te creëren en te leren.
+  hoc_how_to_faq_question_devices: Welke apparaten heb ik nodig om een Hour of Code
+    uit te voeren?
+  hoc_how_to_faq_answer_devices_01: 'Apparaten die je kunt gebruiken:'
+  hoc_how_to_faq_answer_devices_02: Als apparaten beperkt of niet beschikbaar zijn,
+    probeer dan [pair programming] (%{pair_url}) of bekijk onze [unplugged activities]
+    (%{unplugged_url}) om te leren zonder apparaten!
+  hoc_how_to_faq_question_volunteer: Wie kan zich als vrijwilliger melden?
+  hoc_how_to_faq_answer_volunteer: Iedereen die gepassioneerd is door informaticaonderwijs
+    en toenemende diversiteit in technologie kan vrijwilliger worden! We zouden graag
+    zien dat vrijwilligers van alle achtergronden meedoen. The Hour of Code biedt
+    een grote verscheidenheid aan activiteiten voor alle leeftijden en vaardigheidsniveaus,
+    dus je hoeft geen programmeerexpert te zijn om vrijwilligerswerk te doen!
+  hoc_how_to_faq_question_full_hour: Zal het Hour of Code een heel uur duren?
+  hoc_how_to_faq_answer_full_hour: Veel studenten zullen hun activiteiten in minder
+    dan een uur kunnen afronden, en dat is oké! Studenten kunnen blijven leren terwijl
+    andere studenten hun activiteit voltooien.
+  hoc_how_to_faq_question_account: Moeten leerlingen zich aanmelden met een account?
+  hoc_how_to_faq_answer_account: Studenten hoeven zich niet aan te melden of in te
+    loggen om de Hour of Code uit te proberen. Als je je aanmeldt voor het Hour of
+    Code, wordt er NIET automatisch een Code.org-account aangemaakt.
+  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_promo_heading: Promotiebronnen
+  hoc_how_to_resources_promo_desc: Vind alle bronnen die je nodig hebt (gedrukt en
+    digitaal) om je Hour of Code onder de aandacht te brengen.
+  hoc_how_to_resources_discover_heading: Activiteiten ontdekken
+  hoc_how_to_resources_discover_desc: Ontdek een brede selectie van tutorials van
+    een uur, ontworpen voor alle leeftijden, in meer dan 45 talen.
+  hoc_how_to_step_label_plan: Plan waar en wanneer je je Hour of Code gaat doen
+  hoc_how_to_step_label_choose_activity: Kies je activiteit
+  hoc_how_to_step_label_test_activity: Test je activiteit
+  hoc_how_to_step_label_register_event: Meld je evenement aan
+  hoc_how_to_step_label_tell: Vertel het aan je leerlingen, school en gemeenschap
+  hoc_how_to_step_label_get_coding: Begin met coderen!
+  hoc_how_to_step_label_celebrate: Vier
+  hoc_how_to_step_label_beyond_hoc: Na Hour of Code
+  hoc_how_to_step_beyond_hoc_subhead: Hier houdt het niet op!
+  hoc_how_to_step_beyond_hoc_desc: Informatica hoeft niet te eindigen met het Hour
+    of Code! Hoewel 90% van de ouders wil dat hun kind informatica leert, geven de
+    meeste scholen dat nog steeds niet. Leer vandaag nog hoe je CS naar de school
+    van je kind kunt brengen.
+  hoc_how_to_step_01_educators_subhead: Selecteer de tijd en ruimte van een evenement
+    die geschikt zijn voor het aantal studenten en apparaten dat je beschikbaar hebt.
+  hoc_how_to_step_01_educators_desc_01: Welke plekken zijn er beschikbaar om je Hour
+    of Code te doen? Denk aan de technische mogelijkheden van je ruimte en het soort
+    apparaten waarop je van je leerlingen verwacht te werken. Leerlingen kunnen op
+    één apparaat werken, beurtelings op een gedeeld apparaat, of samen een tutorial
+    proberen op een whiteboard in de klas. Er zijn zelfs losgekoppelde tutorials die
+    zonder apparaten kunnen worden voltooid. Onaangesloten opties kunnen overal worden
+    gedaan, zelfs buitenshuis!
+  hoc_how_to_step_01_educators_desc_02: Mensen over de hele wereld nemen deel aan
+    de viering van het Hour of Code tijdens de CS Education Week, %{campaign_date}
+    wanneer de nieuwste tutorials en activiteiten worden vrijgegeven. Maar je kunt
+    elke dag van het jaar een Hour of Code doen!
+  hoc_how_to_step_02_educators_desc_01: Ontdek activiteiten op basis van de leeftijd,
+    ervaring, interesses en meer van je groep. Het is populair voor leerlingen om
+    zelfgeleide tutorials uit te proberen, maar veel activiteiten omvatten ook lesplannen
+    voor docenten om de discussie te begeleiden of om de activiteit uit te breiden.
+  hoc_how_to_step_02_educators_desc_02: Beslis van tevoren of je één enkele tutorial
+    wilt kiezen voor al je leerlingen, of laat elk kind zijn eigen les kiezen.
+  hoc_how_to_step_02_educators_desc_03: Dit jaar kunnen jij en je leerlingen [alles
+    over AI leren] (%ai_url) via tutorials, lesplannen en onze nieuwe How AI Works-videoserie.
+  hoc_how_to_step_03_educators_desc_01: Probeer de tutorial zelf uit voordat je naar
+    de klas gaat, zodat je vragen kunt beantwoorden!
+  hoc_how_to_step_03_educators_desc_02: Je kunt ook tutorials testen op computers
+    of apparaten van studenten om er zeker van te zijn dat ze geluid en video ondersteunen.
+    Heb je een lage bandbreedte? Plan om video's aan de voorkant van de klas te laten
+    zien, zodat niet elke student zijn eigen video's downloadt.
+  hoc_how_to_step_03_educators_desc_03: Overweeg om je klas een koptelefoon mee te
+    nemen, of vraag de leerlingen om hun eigen koptelefoon mee te nemen, als de tutorial
+    die je kiest het beste werkt met geluid.
+  hoc_how_to_step_04_educators_desc_01: Wanneer je je Hour of Code-evenement registreert,
+    ontvang je nuttige e-mails met nieuws en tips voor het organiseren van een succesvol
+    Hour of Code-evenement. Het is ook de manier waarop je lokale vrijwilligers kunt
+    laten weten dat je school meedoet. Vrijwilligers zijn een geweldige hulpbron en
+    kunnen met je klas over informatica komen praten of je leerlingen helpen met Hour
+    of Code-activiteiten.
+  hoc_how_to_step_05_educators_desc_01: Maak je leerlingen enthousiast voor het evenement
+    door [inspirerende video's] (%{videos_url}) te delen waarin verschillende mensen
+    en creatieve manieren worden belicht waarop informatica in de echte wereld kan
+    worden gebruikt.
+  hoc_how_to_step_05_educators_desc_02: Deel je Hour of Code-abonnementen met andere
+    docenten die misschien mee willen doen! Dit is ook een geweldige kans om contact
+    op te nemen met de Parent Teacher Student Association van je school of deel te
+    nemen in nieuwsbrieven voor ouders, zodat ze weten wat hun kinderen leren.
+  hoc_how_to_step_06_educators_desc_01: Leid je leerlingen naar de activiteit, bijvoorbeeld
+    door de link op het bord te delen of via het leerbeheersysteem van je klas. Je
+    leerlingen kunnen tegen uitdagingen aanlopen, dat is oké! Leren programmeren is
+    als het leren van een nieuwe taal; je spreekt niet meteen vloeiend. Als je het
+    antwoord niet weet, kun je er samen achter komen.
+  hoc_how_to_step_07_educators_desc_01: 'Zorg ervoor dat je het succes viert! Deel
+    foto''s en video''s van je Hour of Code-evenement op sociale media. Gebruik #HourOfCode
+    en @codeorg zodat we ook jouw succes kunnen benadrukken!'
+  hoc_how_to_step_07_educators_desc_02: Je kunt ook certificaten afdrukken zodat je
+    leerlingen kunnen laten zien wat ze hebben bereikt!
   team_page_full_team_alt_text: Bijna 100 medewerkers van Code.org in bijpassende
     blauwe en gele t-shirts poseren in een vergaderruimte van een hotel voor het Codechella-evenement
     van het bedrijf in de zomer van 2022.
@@ -14031,6 +14190,167 @@ nl:
     en downloads'
   video_library_page_not_hacked_video_title_7: 'Hoe u niet gehackt wordt: updates
     installeren'
+  about_us_page_title: Over Ons
+  about_us_page_hero_description: Code.org® is een non-profitorganisatie zonder winstoogmerk
+    die zich inzet voor de visie dat elke student op elke school de mogelijkheid heeft
+    om informatica te leren als onderdeel van hun basisonderwijs in het K-12. We breiden
+    de toegang tot informatica op scholen uit, met een focus op het vergroten van
+    de participatie van jonge vrouwen en studenten uit andere ondervertegenwoordigde
+    groepen. Code.org is de toonaangevende aanbieder van informatica-leerplannen voor
+    K-12 in de grootste schooldistricten van de Verenigde Staten en organiseert ook
+    de jaarlijkse [Hour of Code] (%{hour_url}) -campagne, waarbij meer dan 15% van
+    alle studenten in de wereld betrokken is. Code.org wordt ondersteund door gulle
+    donateurs, waaronder Microsoft, Amazon, Google en [vele anderen] ()%{others_url}
+  about_us_page_section_title_1: Meer dan 80 miljoen studenten en 2 miljoen docenten
+    op Code.org
+  about_us_page_statistic_figcaption: Code.org deelname vanaf het schooljaar 2021-2022.
+    [Zie uitgesplitste gegevens.] ()%{data_url}
+  about_us_page_statistic_description: Code.org vergroot de diversiteit in de informatica
+    door leerlingen van alle achtergronden te bereiken waar ze zich bevinden — op
+    hun vaardigheidsniveau, op hun school en op manieren die hen inspireren om te
+    blijven leren. De overgrote meerderheid van de studenten op Code.org komt uit
+    studentengroepen die historisch ondervertegenwoordigd zijn in de informatica.
+    De toenemende diversiteit in de informatica is van fundamenteel belang voor ons
+    werk, en [we raden u aan meer te lezen over onze inspanningen] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org in het nieuws
+  about_us_page_section_news_description: Bekijk al het verleden [nieuws en aankondigingen]
+    (%{news_url})
+  about_us_page_section_table: Onze doelen en statistieken
+  about_us_page_section_table_header_1: Doel van Code.org
+  about_us_page_section_table_header_2: Prestatie
+  abous_page_section_table_cell_1_1: Verbeter de diversiteit in CS * (Amerikaanse
+    studenten) *
+  abous_page_section_table_cell_1_2: 45% van de Code.org-studenten zijn jonge vrouwen,
+    50% zijn studenten uit gemarginaliseerde raciale en etnische groepen, en 46% van
+    de Amerikaanse studenten zit op scholen met hoge behoeften. Lees meer over [onze
+    benadering van diversiteit.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Studenten inspireren
+  about_page_section_table_cell_2_2: Tientallen miljoenen mensen hebben de [Hour of
+    Code] geprobeerd (%{hour_url}). (426.370.561 bediend. 49% vrouw)
+  about_page_section_table_cell_3_1: Klaslokalen bereiken
+  about_page_section_table_cell_3_2: 591.636 docenten hebben zich aangemeld om onze
+    introductiecursussen te geven op [Code Studio] (%{code_studio_url}) en 19.177.297
+    studenten zijn ingeschreven.
+  about_page_section_table_cell_4_1: Bereid nieuwe CS-leraren voor
+  about_page_section_table_cell_4_2: We hebben meer dan 106.000 nieuwe leraren voorbereid
+    om CS-les te geven in de klassen K-12. Meer informatie over onze [professionele
+    leerprogramma's.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Het curriculum van het schooldistrict wijzigen
+  about_page_section_table_cell_5_2: We werken samen met [180+ van de grootste schooldistricten]
+    (%{schoold_disctrict_url}) en 60 regionale partners om [CS aan het schoolcurriculum
+    toe te voegen] ()%{cs_curriculum_url}. [Meer informatie over hoe u een regionale
+    partner kunt worden.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Beleid instellen om CS te ondersteunen
+  about_page_section_table_cell_6_2: "[Beleid gewijzigd in 50 Amerikaanse staten]
+    (%{states_url}) om CS-onderwijsnormen vast te stellen, CS-cursussen mee te laten
+    tellen voor het afstuderen van de middelbare school, enz. [(details)] (%{details_url})"
+  about_page_section_table_cell_7_1: Ga wereldwijd
+  about_page_section_table_cell_7_2: Onze cursussen zijn beschikbaar in meer dan 67
+    talen en worden in meer dan 180 landen gebruikt.
+  about_page_section_table_under_label: 'Bron: Code Studio Activity en [enquêtes van
+    deelnemende docenten] (%{educators_url})'
+  about_page_section_title_3: Meer informatie, geschiedenis en filosofie
+  about_page_section_more_description_1: 'In 2013 werd Code.org gelanceerd door tweelingbroers
+    [Hadi](%{hadi_url}) en [Ali Partovi] (%{partovi_url}) met een [video](%{video_url})
+    promotie van informatica. Deze video werd een dag lang #1 op YouTube en 15.000
+    scholen vroegen ons om hulp. Sindsdien zijn we van een groep vrijwilligers uitgegroeid
+    tot een volledige organisatie die een wereldwijde beweging ondersteunt. Wij zijn
+    van mening dat een kwalitatief hoogstaand informaticaonderwijs beschikbaar moet
+    zijn voor elk kind, niet alleen voor een paar gelukkigen.'
+  about_page_section_more_description_2: 'Om ons doel te bereiken, werken we in het
+    hele onderwijsspectrum: we ontwerpen onze eigen cursussen of werken we samen met
+    anderen, leiden leraren op, werken samen met grote schooldistricten, helpen bij
+    het veranderen van overheidsbeleid, internationaal uitbreiden via partnerschappen
+    en marketing om stereotypen te doorbreken.'
+  about_page_section_more_description_3: Ons werk bouwt voort op [decennia van inspanningen
+    van talloze organisaties en individuen] (%{efforts_url}) die hebben bijgedragen
+    aan het opzetten, financieren en verspreiden van informaticaonderwijs. We zijn
+    dankbaar dat we kunnen profiteren van de onvermoeibare hulp van de bredere onderwijsgemeenschap
+    op het gebied van informatica, en [we bedanken alle partners en individuen die
+    onze impact in de loop der jaren hebben ondersteund] ())%{partners_url}.
+  about_page_section_more_list_1: "[Code.org Jaarverslag 2021] (%{report_url}) (Eerdere
+    verslagen: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7})"
+  about_page_section_more_list_2: "[Onze kernwaarden en richtlijnen voor berichten]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Ons curriculum en pedagogische filosofie] ()%{curriculum_url}"
+  about_page_section_more_list_4: "[TEDx-lezing van onze oprichter Hadi Partovi over
+    waarom informatica voor iedereen is (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Een verenigende aanpak in een verdeelde wereld
+  about_page_section_specific_title_1: Een verenigende aanpak in een verdeelde wereld
+  about_page_section_specific_title_2: Onze toewijding aan toegankelijkheid
+  about_page_section_specific_title_3: Onze toewijding aan een gratis curriculum en
+    open source technologie
+  about_page_section_specific_title_4: Code.org Advocacy Coalition
+  about_page_section_specific_title_5: K-12 Kader voor computerwetenschappen
+  about_page_section_specific_title_6: Donateurs van Code.org
+  about_page_section_specific_title_7: Volg ons
+  about_page_section_specific_title_8: Het internationale bereik van Code.org
+  about_page_section_specific_description_1: De wereldwijde rol van Code.org in de
+    computerwetenschappelijke beweging van het K-12 jaar is alleen mogelijk omdat
+    we een verenigende aanpak hanteren voor diverse en vaak verdeelde belanghebbenden.
+    In een tijd van toenemende polarisatie verenigt het idee om de kansen voor studenten
+    te vergroten mensen uit het hele politieke spectrum. De teamleden, studenten,
+    docenten en supporters van Code.org hebben uiteenlopende en uiteenlopende standpunten,
+    en ze zijn allemaal welkom in onze missie. [Lees meer.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org is van mening dat informatica
+    van fundamenteel belang is voor alle studenten en we zetten ons in voor gelijkheid,
+    toegang en kansen in onze organisatie [values.](%{values_url}) Om dit doel te
+    bereiken, werken we aan het identificeren en elimineren van barrières die de inclusie
+    en volledige deelname van studenten en docenten met een handicap in de weg staan.
+    Voor meer informatie over onze inspanningen, zie onze [toegankelijkheidsverklaring.]
+    (%{accessibility_url})
+  about_page_section_specific_description_3: Alle leermiddelen en tutorials die we
+    schrijven, zullen voor altijd gratis te gebruiken zijn en openlijk gelicentieerd
+    onder een [Creative Commons] (%{commons_url}) -licentie, waardoor anderen afgeleide
+    leermiddelen kunnen maken voor niet-commerciële doeleinden. Als u geïnteresseerd
+    bent in het in licentie geven van ons materiaal voor commerciële doeleinden, [neem
+    dan contact met ons op] (%{contact_us_url}). Onze cursussen worden vertaald voor
+    wereldwijd gebruik of door sprekers van verschillende talen. Onze technologie
+    is ontwikkeld als een [open source-project.] (%{open_source_url})
+  about_page_section_specific_description_4: De [Code.org Advocacy Coalition] (%{advocacy_url})
+    is een tweeledige coalitie van bedrijven en non-profitorganisaties die samenwerken
+    om te helpen bij het opstellen van Amerikaans federaal en staatsbeleid om de toegang
+    tot K-12-informatica uit te breiden en te behouden en om de participatie en diversiteit
+    in het veld te vergroten. We brengen [Republikeinse en Democratische politieke
+    leiders] (%{leaders_url}) samen voor een gemeenschappelijk doel ter ondersteuning
+    van de uitbreiding van de toegang tot en deelname aan K-12-informatica.
+  about_page_section_specific_description_5: Code.org is lid van de stuurgroep die
+    heeft bijgedragen aan de oprichting van het [K-12 Computer Science Framework]
+    (%{framework_url}), een gids op hoog niveau voor staten, districten en organisaties
+    die informaticaonderwijs implementeren. Het Framework heeft de steun gekregen
+    van honderden academici, K-12-docenten, softwarebedrijven, non-profitorganisaties
+    en staten.
+  about_page_section_specific_description_6: Code.org IRS-formulier 990 voor [2014]
+    [2015](%{irs_url_1}%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}),
+    [2018](%{irs_url_5}), [2019](%{irs_url_6}), [2020](%{irs_url_7}) en [2021](%{irs_url_8}).
+    [Donatiebeleid.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Meld je aan om statusupdates te ontvangen]
+    (%{sign_up_url}) over de voortgang in de K-12 informaticabeweging en over het
+    werk van Code.org. Of volg Code.org op sociale media:"
+  about_page_section_specific_description_8: Meer dan 40% van ons websiteverkeer komt
+    van buiten de Verenigde Staten en dat aantal blijft stijgen. Om de wereldwijde
+    toegang tot informatica uit te breiden, werkt ons team nauw samen met [meer dan
+    100 internationale partners] (%{partners_url}) om hen te helpen het Hour of Code
+    te promoten, te pleiten voor beleidsverandering en leraren op te leiden. We maken
+    informatica onderdeel van het internationale onderwijsdiscours door samen te werken
+    met ministeries van onderwijs van over de hele wereld en door samen te werken
+    met internationale organisaties zoals de Organisatie voor Economische Samenwerking
+    en Ontwikkeling en de Organisatie van de Verenigde Naties voor Onderwijs, Wetenschap
+    en Cultuur.
+  about_page_section_donors_description_1: Code.org® is een geregistreerde openbare
+    501c3 non-profitorganisatie, met steun van het grote publiek. We zijn dankbaar
+    voor de genereuze steun die we hebben gekregen van [individuen en organisaties]
+    (%{individuals_url}) die onze visie ondersteunen.
+  about_page_section_donors_description_2: De prestaties van Codes (hierboven) tonen
+    aan dat we in staat zijn om deze dollars te gebruiken voor sterke resultaten.
+    Maar gezien onze ambitie zonder winstoogmerk dat elk kind op elke school toegang
+    moet hebben tot informatica — om geletterde burgers te worden in de digitale wereld
+    van vandaag en om hun interesses te testen om CS verder te verkennen als een carrière
+    — hebben we nog een lange weg te gaan om een fondsenwervingsdoel te bereiken dat
+    die visie ondersteunt.
+  about_page_donors_link_1: Doe een donatie
+  about_page_donors_link_2: "[zie onze lijst van donateurs] (%{donors_url})"
   language_code:
     ar: Arabisch
     az: Azerbeidzjaans

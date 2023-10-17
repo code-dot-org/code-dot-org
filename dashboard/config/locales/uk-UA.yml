@@ -161,12 +161,20 @@ uk:
   copy: Скопіювати
   course_offering:
     headers:
-      csc: Підключення CS
+      csa_labs: Лабораторії CSA
+      csc: Інтеграція інформатики
       csf: Основи інформатики
+      express: Експрес
+      favorites: Улюблені
       hello_world: Привіт, світе
+      labs_and_skills: Лабораторії та навички
       minecraft: Майнкрафт
+      popular_media: Популярні медіа
+      self_paced: Самостійний темп
       sports: Спорт
-  courses: курси
+      teacher_led: Під керівництвом вчителя
+      year_long: Річні курси
+  courses: Курси
   courses_category: Всі курси
   courses_page:
     title_student: Навчання у Студії коду
@@ -542,6 +550,7 @@ uk:
       finished_hoc: Готово!
       help_support: Допомога та підтримка
       help_us: Допомога нам
+      incubator: Інкубатор
       learn: Вчитися
       legal: Конфіденційність та юридична інформація
       legal_privacy: Політика конфіденційності

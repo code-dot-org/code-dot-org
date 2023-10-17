@@ -61,7 +61,7 @@ class Section < ApplicationRecord
   belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
-  has_many :section_instructors
+  has_many :section_instructors, dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, through: :section_instructors
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
 
@@ -222,6 +222,23 @@ class Section < ApplicationRecord
   def update_student_sharing(sharing_disabled)
     students.each do |student|
       student.update!(sharing_disabled: sharing_disabled)
+    end
+  end
+
+  after_save :ensure_owner_is_active_instructor
+  def ensure_owner_is_active_instructor
+    return if user.blank?
+
+    si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
+    if si.blank?
+      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
+    elsif si.deleted?
+      si.restore
+      si.status = :active
+      si.save!
+    elsif si.status != 'active'
+      si.status = :active
+      si.save!
     end
   end
 

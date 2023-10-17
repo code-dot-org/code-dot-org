@@ -100,6 +100,8 @@ uk:
           description_audience: Вік 7-13
         ai-ethics-2021:
           description_audience: Класи 6-12
+        ai-temp:
+          title: Як працює ШІ
         aiml-2021:
           lesson_groups:
             lessonGroup-2:
@@ -1144,18 +1146,26 @@ uk:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-2021:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-2022:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
           lessons:
             lesson-4:
               name: Дані
@@ -1163,10 +1173,14 @@ uk:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Класи
+            lessonGroup-5:
+              display_name: Двовимірні масиви
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1182,6 +1196,8 @@ uk:
             lesson-3:
               name: Робота з API для Говоруна і рядки
           title: Лабораторія Говоруна для курсу AP CSA
+        csa-postap-se-and-computer-vision-2023:
+          title: Програмна інженерія та комп'ютерний зір
         csa-software-engineering:
           title: Програмна інженерія та комп'ютерний зір
         csa-u6-dev:
@@ -2137,7 +2153,7 @@ uk:
               display_name: Зміст
             cspSurvey:
               display_name: Зміст
-          title: Основи Game Lab із вільним графіком занять
+          title: Основи Ігрової Лабораторії для самостійного навчання
         csd4-2017:
           description: Розділ 4 знайомить із ширшим соціальним впливом комп'ютерних
             технологій. Вирішуючи низку проєктних завдань, ми навчимося краще розуміти
@@ -4360,9 +4376,9 @@ uk:
         hello-world-csc:
           title: Привіт, світе
         hello-world-soccer-2022:
-          title: 'Привіт Світ: Футбол'
+          title: 'Привіт, світ: Футбол'
         hello-world-space-2022:
-          title: 'Привіт Світ: Космос'
+          title: 'Привіт, світ: Космос'
         hero:
           description: Майнкрафт повернувся до Години коду з новеньким підручником!
             Подорожуйте Майнкрафтом з кодом.
@@ -4381,6 +4397,8 @@ uk:
           student_description: Спробуйте основи інформатики з персонажами  Angry Birds,
             Plants vs. Zombies, та Білкою з Льодовикового періоду!
           title: Лабіринт
+        how-ai-works-2023:
+          title: Як працює ШІ
         iceage:
           description: Створи історію чи гру в Ігровій студії Льодовикового періоду!
           description_short: Створи історію чи гру в Ігровій студії Льодовикового
@@ -5029,8 +5047,14 @@ uk:
               display_name: 'Тема 2: Створення ігор'
         virtual-pl-csa-summer-2024-day1:
           title: День 1
+        virtual-pl-csa-summer-day1:
+          title: День 1
         virtual-pl-csa-summer-day2:
           title: День 2
+        virtual-pl-csa-summer-day3:
+          title: День 3
+        virtual-pl-csa-summer-day4:
+          title: День 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -5057,6 +5081,16 @@ uk:
           lessons:
             lesson-3:
               name: Оцінювання
+          title: День 5
+        virtual-pl-csp-summer-day1:
+          title: День 1
+        virtual-pl-csp-summer-day2:
+          title: День 2
+        virtual-pl-csp-summer-day3:
+          title: День 3
+        virtual-pl-csp-summer-day4:
+          title: День 4
+        virtual-pl-csp-summer-day5:
           title: День 5
         virustest:
           description_short: Створіть симуляцію спалаху вірусу за допомогою Sprite

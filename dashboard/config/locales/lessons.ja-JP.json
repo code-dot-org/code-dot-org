@@ -1562,6 +1562,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "つづりみつばち"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "使用開始"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "コンピュータ サイエンス入門"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "先を見る"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "基本をマスターする: シーケンス"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "基本をマスターする: ループ"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "基本をマスターする: 条件文"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "基本をマスターする: 関数"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "基本をマスターする: イベント"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "コンピューター サイエンスを教えるためのベストプラクティス"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "計画"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "次の手順"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "問題解決入門"
         },
@@ -2230,6 +2263,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "プレイ ラボのイベント"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "「コンピュータ サイエンスを教える」へようこそ"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "コンピューター サイエンス入門コースを理解する"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "シークエンス"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "くりかえし"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "イベント"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "条件"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "コース最後のプロジェクト"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "関数(かんすう) "
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "変数（へんすう）"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ループ用"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "スプライト ラボ"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "復習内容をレビューする"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "次の手順"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "オンラインネイバーフッドの安全"
@@ -3893,6 +3965,39 @@
           "preparation": "-   パズルをやってみて、クラスで問題となる可能性のある領域を見つけます。\n-   （オプション）2~3種類のパズルを選んで、授業中にグループで取り組んでもらいます。\n-   生徒全員に必ず「リフレクションジャーナル」を用意してください。",
           "purpose": "このオンライン アクティビティでは、生徒は「プレイ ラボ」でイベントを使用する方法を学びます。矢印キーが押されたら騎士が動くように訓練することから始め、最終的にはじゆうあそびパズルの一部として、シーケンスやループなど、このコースを通して学んだ残りのスキルを紹介する機会を設けています。",
           "student_overview": "イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "使用開始"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "コンピュータ サイエンス入門"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "先を見る"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "基本をマスターする: シーケンス"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "基本をマスターする: ループ"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "基本をマスターする: 条件文"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "基本をマスターする: 関数"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "基本をマスターする: イベント"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "コンピューター サイエンスを教えるためのベストプラクティス"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "計画"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "次の手順"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "問題解決入門"
@@ -6326,10 +6431,10 @@
           "overview": "このレッスンは、［AIの仕組み動画シリーズ］［1］の［AIの仕組み：機械学習とは？］［0］動画を中心に構成されています。レッスンプランを検討する前に、まずこのビデオをご覧ください。\n\nこのレッスンでは、機械学習と呼ばれる人工知能の一形態と、問題解決プロセスを使用してロボットを訓練して問題を解決する方法を紹介します。生徒たちは、ロボット（AIボット）が魚のパターンを検出する方法を学習する3つの機械学習活動に参加します。\n\nこのレッスンは、単独で教えることもできますし、「AIの仕組み」についての7つの連続レッスンの一部として教えることもできます[この連続レッスンのすべてを見るにはこちらをクリック](https://code.org/ai/how-ai-works)。"
         },
         "how-ai-works-2023/Computer Vision": {
-          "name": "コンピュータビジョン",
-          "overview": "このレッスンは、[ AI の仕組み動画シリーズ ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)の中の[ AIの仕組み：コンピュータビジョン ](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)動画を中心に構成されています。レッスンプランを検討する前に、まずこの動画を見てください。\n\n生徒はコンピュータ・ビジョンの仕組みを学びます。まず目の錯覚を見て、自分の目が気づいた絵の特徴を特定します。生徒は、コンピュータビジョンとコンピュータが「見る」仕組みを説明する動画を見ます。ネットワークを使用して、7セグメント・ディスプレイに表示されている数字を決定するアルゴリズムを設計します。最後に、生徒は自分のアルゴリズムをテストします。\n\nこのレッスンは、単独で教えることもできますし、AIの仕組みに関する7つの連続レッスンの一部として教えることもできます。",
-          "preparation": "-   コンピュータビジョン・ネットワークのアクティビティ・ガイドをグループごとに印刷する。\n-   ( 任意) 7セグメント・ディスプレイ・マニピュラティブを印刷する。",
-          "student_overview": "数字を検出するアルゴリズムを設計することで、コンピュータビジョンの仕組みを学びます。"
+          "name": "コンピュータービジョン",
+          "overview": "このレッスンは、[ AI の仕組み動画シリーズ ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)の中の[ AIの仕組み：コンピュータービジョン ](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)動画を中心に構成されています。レッスンプランを検討する前に、まずこの動画を見てください。\n\n生徒はコンピュータ・ビジョンの仕組みを学びます。まず目の錯覚を見て、自分の目が気づいた絵の特徴を特定します。生徒は、コンピュータービジョンとコンピュータが「見る」仕組みを説明する動画を見ます。ネットワークを使用して、7セグメント・ディスプレイに表示されている数字を決定するアルゴリズムを設計します。最後に、生徒は自分のアルゴリズムをテストします。\n\nこのレッスンは、単独で教えることもできますし、AIの仕組みに関する7つの連続レッスンの一部として教えることもできます。",
+          "preparation": "-   コンピュータービジョン・ネットワークのアクティビティ・ガイドをグループごとに印刷する。\n-   ( 任意) 7セグメント・ディスプレイ・マニピュラティブを印刷する。",
+          "student_overview": "数字を検出するアルゴリズムを設計することで、コンピュータービジョンの仕組みを学びます。"
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "ニューラルネットワーク",
@@ -6361,12 +6466,9 @@
           "student_overview": "AIの倫理について共同で研究し、共有可能な行動規範を作成しよう"
         },
         "how-ai-works-2023/How AI Works In a Day": {
-          "name": "1 日で AI が機能する仕組み",
+          "name": "１日で分かるAIの仕組み",
           "overview": "⚠️このレッスンは、[ AIの仕組み動画シリーズ ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) のすべてを **1日** で見せたい教室を対象としています。各動画を1日に1本ずつ紹介するこのユニットの他のレッスンと順番に教えることは意図されていません。\n\n生徒は、動画に登場するボキャブラリーをマッチングさせ、各動画に関する復習の質問に答えることで、各動画に沿って学習します。レッスンプランとスライドは、あなたの教室に合うように即興でカスタマイズできるように、非常に簡潔で自由形式になっています。",
           "preparation": "-   アクティビティガイドを印刷する\n-   ビデオプロジェクターでスライドを投影する。"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
         },
         "applab-intro/Intro to App Lab": {
           "name": "アプリラボの紹介",
@@ -6542,9 +6644,10 @@
           "student_overview": "チュートリアルの概要：まず、生徒は、オブジェクトを「魚」または「魚ではない」に分類して、海からゴミを取り除く試みを行います。次に、トレーニング データセットを拡張して、水中に属するその他の海洋生物を含めなくてはなりません。アクティビティの後半では、生徒はランダムに生成された魚のイメージに適用する独自のラベルを選択します。このトレーニング データは、新しいイメージに自動的にラベルを付けることができる機械学習モデルに使用されます。"
         },
         "outbreak/Outbreak": {
+          "name": "シミュレーションをコーディング",
           "overview": "このレッスンでは、イベントに関する**スキル構築**と**ミニプロジェクト**を組み合わせて、スプライトラボで独自のコンピュータシミュレーションを作成します。生徒にシミュレーションをじっくり調べてもらい、ウイルスがどれだけ早く広がるか、スピードを弱めるには何ができるかを理解してもらいます。",
-          "preparation": "- パズル全体をやってみて、クラスで問題となる可能性のある領域を見つけます。\n- 生徒全員に必ず「リフレクションジャーナル」を用意してください。",
-          "purpose": "前のレッスンでは、生徒は簡単なシミュレーションからデータを収集して解釈しました。 このレッスンでは、指示に従って独自のシミュレーションモデルをコーディングします。実世界でのウイルスの大流行について生徒に予備知識があれば、架空のシナリオにそれを適用できます。",
+          "preparation": "#### Hour of Codeの1週間前\n\n-   [Hour of Code教育者へのガイド](https://hourofcode.com/us/how-to)と[成功を収めた教師が伝えるベストプラクティス](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)を見直して、Hour of Codeイベント計画を開始します。\n\n-   授業のサポート、割引料金のポスター、ロボットのギブアウェイ (米国のみ) に参加したい場合は、[Hour of Codeイベントを登録](https://hourofcode.com/us)します。\n\n-   [Outbreak](https://studio.code.org/s/outbreak/)のオンラインチュートリアルを自習、完了します\n\n-   生徒に完成させるよう言う前に、必ず最初に試してみてください。\n\n-   技術的な面を確認し、Hour of Codeを始める前に、トラブルシューティングを行う必要があるかどうか判断してください。\n\n#### Hour of Code前日\n\n-   アクティビティを完了した各生徒には[certificate](https://studio.code.org/certificates/batch)を渡します。Hour of Codeの終了時に配りやすいよう人数分を事前に印刷しておきましょう。\n\n-   (オプション) 生徒にアクティビティ中に使うヘッドホンを持参するよう伝えておきます。",
+          "purpose": "このレッスンでは、指示に従って独自のシミュレーションモデルをコーディングします。実世界でのウイルスの大流行について生徒に予備知識があれば、架空のシナリオにそれを適用できます。",
           "student_overview": "モンスタータウンにウイルスが広がっています！ ウイルスシミュレーターを作成し、モンスターが健康を取り戻す手助けをする方法を学びます。"
         },
         "playlab/Play Lab": {
@@ -6586,66 +6689,6 @@
           "preparation": "-   テキスト圧縮ウィジェットをテストします\n    \\-　指導のヒントを確認して、使用するオプションを決定します",
           "purpose": "圧縮とは基本的に、元の情報を表すために使用するビット数を減らすための方法またはプロトコルを開発することです。このレッスンで、圧縮データを繰り返しパターンの「辞書」を使って表す方法は、[LZW圧縮スキーム](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)と似ていますが、LZWは、このレッスンで生徒が行う方法とは少し異なるので注意してください。生徒はここで独自の方法を発明します。 LZWは、テキスト（zipファイル）だけでなく、GIF画像ファイル形式でも使用されます。",
           "student_overview": "ある時点で、私たちはビットを送信できる速度で物理的な限界に達します。大量の情報をより高速に送信したい場合は、同じ情報をより少ないビットで表す方法を見つけなくてはなりません。つまり、データを圧縮する必要があります。  "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "部屋から脱出"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "デジタルデザイン"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "イベント駆動型プログラミング"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "基本的なアプリの機能"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "ゲッターとセッター"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "周波数分析"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "開始画面と終了画面"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "開始画面と終了画面2"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "概要とセットアップ手順"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "ピアツーピア - 共有ワイヤーでビットを送信する"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "ピアツーピア - 番号の送信"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "ピアツーピア - Asciiの送信"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "メッセージのブロードキャスト"
-        },
-        "netsim/Routers and addresses": {
-          "name": "ルーターとアドレス"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "パケットと信頼性"
-        },
-        "netsim/Manual DNS": {
-          "name": "手動DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "自動DNSノード"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "インターネット シミュレーター フリープレイ"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "ムード研究"
-        },
-        "vigenere/Vigenere": {
-          "name": "ヴィジュネル暗号"
         },
         "allthethings/Jigsaw": {
           "name": "ジグソーパズル"
@@ -6772,6 +6815,21 @@
         },
         "allthethings/lesson-49": {
           "name": "音楽"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "部屋から脱出"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "デジタルデザイン"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "イベント駆動型プログラミング"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "基本的なアプリの機能"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "ゲッターとセッター"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD生徒 コース後アンケート ('18～'19) "
@@ -7082,12 +7140,54 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "CDEF教育者向けのデバッグ"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "周波数分析"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "開始画面と終了画面"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "開始画面と終了画面2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "ジグソーパズル",
           "overview": "このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。",
           "preparation": "-   オンラインセーフティーコンテンツのため[良識教育](https://www.commonsense.org/education/digital-citizenship)のウェブサイトをおさらいしましょう。",
           "purpose": "このレッスンの主な目標は、生徒のコンピュータ体験を構築することです。クリック、ドラッグ、ドロップなどの最も基本的なコンピュータ機能を網羅することで、今後、パズルに取り組むために、教室でより公平な遊びの場を生み出します。このレッスンは、また、デバイスに応じて、「マウス」、「トラックパッド」、「タッチスクリーン」など、基本的なコンピュータハードウェア用語を紹介する絶好の機会にもなっています。",
           "student_overview": "クリックしてドラッグし、パズルを完成させましょう。"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "概要とセットアップ手順"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "ピアツーピア - 共有ワイヤーでビットを送信する"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "ピアツーピア - 番号の送信"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "ピアツーピア - Asciiの送信"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "メッセージのブロードキャスト"
+        },
+        "netsim/Routers and addresses": {
+          "name": "ルーターとアドレス"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "パケットと信頼性"
+        },
+        "netsim/Manual DNS": {
+          "name": "手動DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "自動DNSノード"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "インターネット シミュレーター フリープレイ"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "白黒ピクセレーション チュートリアル"
@@ -7103,6 +7203,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "カラーピクセレーション フリープレイ"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "ムード研究"
+        },
+        "vigenere/Vigenere": {
+          "name": "ヴィジュネル暗号"
         }
       }
     }

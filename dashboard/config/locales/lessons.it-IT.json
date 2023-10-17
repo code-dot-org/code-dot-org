@@ -1583,6 +1583,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Ape Sapiente"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Introduzione"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fondamenti di Informatica"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Guardare avanti"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "I concetti fondamentali: sequenze di istruzioni"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "I concetti fondamentali: cicli"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "I concetti fondamentali: istruzioni condizionali"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "I concetti fondamentali: funzioni"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "I concetti fondamentali: eventi"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Linee guida per l'insegnamento dell'informatica"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Gestione della classe"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Passi successivi"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introduzione alla risoluzione di problemi"
         },
@@ -2263,6 +2296,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Una battaglia reale con eventi"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Benvenuti in \"Fondamenti di Informatica - Corso per insegnanti\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Introduzione ai corsi di Fondamenti di informatica (CSF)"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sequenze di istruzioni"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cicli"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventi"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Istruzioni condizionali"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Progetti di fine corso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funzioni"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabili"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Cicli con contatore"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratorio dei Personaggi"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Analizza le tue riflessioni"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Passi successivi"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Il mio quartiere digitale"
@@ -4655,6 +4727,39 @@
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa attività online, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
           "student_overview": "Usa gli eventi per creare una storia o realizzare un gioco interattivo."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Introduzione"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fondamenti di Informatica"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Guardare avanti"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "I concetti fondamentali: sequenze di istruzioni"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "I concetti fondamentali: cicli"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "I concetti fondamentali: istruzioni condizionali"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "I concetti fondamentali: funzioni"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "I concetti fondamentali: eventi"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Linee guida per l'insegnamento dell'informatica"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Gestione della classe"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Passi successivi"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introduzione alla risoluzione di problemi",
@@ -8352,9 +8457,6 @@
           "overview": "⚠️ Questa lezione è destinata alle classi che vogliono mostrare l'intera serie di video [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) in un **solo giorno**. Non è pensata per essere insegnata in sequenza con le altre lezioni di questa unità, che presenta ogni video un giorno alla volta.\n\nGli studenti seguono ogni video abbinando il vocabolario del video, quindi rispondendo a una domanda di riflessione su ogni video. Il piano delle lezioni e le diapositive sono molto limitati e aperti per consentire l'improvvisazione e la personalizzazione in base alle esigenze della classe.",
           "preparation": "-   Stampa la guida alle attività\n-   Proietta le diapositive su un videoproiettore"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "L'Ora del Codice 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Introduzione a Sviluppo App",
           "overview": "Questo tutorial è progettato per introdurre rapidamente l'ambiente di programmazione del Laboratorio dell'app come uno strumento completo per costruire e condividere app. Il tutorial insegna agli studenti a creare e controllare pulsanti, testi, immagini, suoni e schermi su JavaScript utilizzando i blocchi o i testi. Alla fine del tutorial, agli studenti verrà concesso del tempo per ampliare un progetto che hanno cominciato a creare in un'app \"Scegli la tua avventura\", \"Biglietti di auguri\" o \"Quiz sulla personalità\". Possono anche continuare a creare altri progetti presentati sulla pagina code.org/applab. \n\nDivertiti a completare l'Ora di codice con il Laboratorio dell'app!\n\n**Fascia d'età adeguata:** il tutorial è progettato per gli studenti di età superiore ai 13 anni. Poiché viene consentito di caricare suoni e immagini personalizzati, gli studenti più piccoli non possono usare questa funzionalità senza una supervisione. Per proteggere la privacy degli studenti, se i tuoi alunni hanno un'età inferiore ai 13 anni, non saranno in grado di usare questo tutorial a meno che tu non proceda prima con la configurazione degli account appositamente per loro in una sezione gestita da te.",
@@ -8506,9 +8608,7 @@
           "student_overview": "Riepilogo del tutorial: i primi studenti classificano gli oggetti come \"pesce\" o \"non pesce\" per tentare di rimuovere la spazzatura dall'oceano. Quindi, gli studenti dovranno espandere il loro set di dati di addestramento per includere altre creature marine che appartengono all'acqua. Nella seconda parte dell'attività, gli studenti sceglieranno le proprie etichette da applicare alle immagini di pesci generati casualmente. Questi dati di addestramento vengono utilizzati per un modello di apprendimento automatico che dovrebbe quindi essere in grado di etichettare le nuove immagini da soli."
         },
         "outbreak/Outbreak": {
-          "overview": "Questa lezione combina la **palestra delle competenze** sugli eventi con un **mini progetto** in cui gli alunni possono creare la propria simulazione al computer nel Laboratorio dei personaggi. Gli alunni studiano la simulazione per capire quanto velocemente può diffondersi un virus e cosa si può fare per rallentarlo. ",
-          "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
-          "purpose": "Nella lezione precedente, gli alunni hanno raccolto e interpretato i dati da una semplice simulazione. In questa lezione, gli alunni seguiranno le istruzioni per codificare il proprio modello di simulazione. Le precedenti conoscenze degli alunni sulle epidemie di virus nel mondo reale verranno applicate a uno scenario fittizio. ",
+          "name": "Codifica di una simulazione",
           "student_overview": "Un virus è arrivato nella Città dei Mostri! Impara a creare un simulatore di virus e aiuta i mostri a guarire."
         },
         "playlab/Play Lab": {
@@ -8544,72 +8644,6 @@
           "preparation": "-   Prova il pulsante di compressione del testo\n-   Rivedi i suggerimenti per l'insegnamento per decidere quali opzioni desideri utilizzare",
           "purpose": "Il principio basilare alla base della compressione è sviluppare un metodo o un protocollo per utilizzare un minor numero di bit per rappresentare le informazioni originali. Il modo in cui rappresentiamo i dati compressi in questa lezione, con un \"dizionario\" di modelli ripetuti è simile al [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), ma va notato che LZW è leggermente diverso da quello che fanno gli studenti in questa lezione.  Gli studenti qui inventano un loro modo. LZW viene utilizzato non solo per il testo (file zip), ma anche con il formato file immagine GIF.",
           "student_overview": "A un certo punto si raggiunge un limite fisico di quanto velocemente possiamo inviare bit, e se vogliamo inviare una grande quantità di informazioni più velocemente, dobbiamo trovare un modo per rappresentare le stesse informazioni con meno bit - dobbiamo quindi comprimere i dati. "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Escape Room"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Design Digitale"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Programmazione Basata sugli Eventi"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Funzionalità Essenziali dell'App"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters and Setters"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Analisi di Frequenza"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Schermate Iniziali e Finali"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Schermate Iniziali e Finali 2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Ora di Codice per Collezionisti 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Panoramica ed Istruzioni Installazione"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Inviare Bit su un Cavo Condiviso"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Inviare Numeri"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Inviare Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Broadcasting dei messaggi"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Router ed indirizzi"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pacchetti ed Affidabilità"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS Manuale"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nodo DNS Automatico"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Simulatore Internet Freeplay"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget contachilometri"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Studio dello stato d'animo"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Puzzle"
@@ -8748,6 +8782,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Musica"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Escape Room"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Design Digitale"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programmazione Basata sugli Eventi"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funzionalità Essenziali dell'App"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters and Setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Sondaggio post-corso per studenti ('18-'19)"
@@ -9058,12 +9107,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Debug per Educatori CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analisi di Frequenza"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Schermate Iniziali e Finali"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Schermate Iniziali e Finali 2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "L'Ora del Codice 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Puzzle",
           "overview": "Questa lezione darà agli alunni un'idea di cosa aspettarsi quando si recheranno nell'aula computer. Inizia con una breve discussione che li introduca alle buone norme comportamentali dell'aula computer, quindi passeranno all'utilizzo di un computer per completare gli esercizi online.",
           "preparation": "-   Consulta il sito web dii [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) per ulteriori contenuti sulla sicurezza online.",
           "purpose": "L'obiettivo principale di questa lezione è introdurre gli alunni ai computer. Coprendo le funzionalità informatiche più basilari, come cliccare, trascinare e rilasciare, creiamo un campo di gioco più equo nella classe, per i rompicapi futuri. Questa lezione, inoltre, fornisce un'ottima opportunità per introdurre la terminologia sul hardware essenziale del computer, tra cui, potenzialmente, \"mouse\", \"trackpad\" o \"schermo touch\", a seconda dei dispositivi.",
           "student_overview": "Clicca e trascina per completare l'esercizio"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Ora di Codice per Collezionisti 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Panoramica ed Istruzioni Installazione"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Inviare Bit su un Cavo Condiviso"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Inviare Numeri"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Inviare Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Broadcasting dei messaggi"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Router ed indirizzi"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pacchetti ed Affidabilità"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS Manuale"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nodo DNS Automatico"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulatore Internet Freeplay"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget contachilometri"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Pixellazione Bianco e Nero Tutorial"
@@ -9079,6 +9176,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Colore Pixellazione Freeplay"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Studio dello stato d'animo"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

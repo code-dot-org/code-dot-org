@@ -986,12 +986,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Sdílejte kreativní artefakt s ostatními studenty."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Vyučte a otestujte nějaký model strojového učení."
         },
@@ -3448,15 +3442,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Při zmiňování počítačové myši, trackpadu nebo dotykové obrazovky používejte vhodnou terminologii."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Vyvíjejte programy, které reagují na časované události."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Ilustrujte změny atmosféry v básni."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Vykreslete obrazná a doslovná vyjádření z textu."
         }
       }
     }

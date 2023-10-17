@@ -341,14 +341,6 @@
         "machine_learning/oceans/unversioned": {
           "word": "Strojno učenje"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Otklanjanje pogriješaka"
         },
@@ -372,26 +364,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Otklanjanje pogriješaka"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kôd",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
         }
       }
     }
