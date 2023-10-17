@@ -10,6 +10,7 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {handleLoadDescription, handleSaveDescription} from './helpers';
 
 /**
  * A type guard which checks if the given block is a procedure block.
@@ -80,9 +81,10 @@ export const behaviorDefMutator = {
     const state = Object.create(null);
     state['procedureId'] = this.getProcedureModel().getId();
     state['behaviorId'] = this.behaviorId;
-    if (this.description) {
-      state['description'] = this.description;
-    }
+    // if (this.description) {
+    //   state['description'] = this.description;
+    // }
+    handleSaveDescription(this, state);
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;
@@ -135,9 +137,10 @@ export const behaviorDefMutator = {
       }
     }
 
-    if (state['description']) {
-      this.description = state['description'];
-    }
+    handleLoadDescription(this, state);
+    // if (state['description']) {
+    //   this.description = state['description'];
+    // }
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },

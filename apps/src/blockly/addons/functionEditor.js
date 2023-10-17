@@ -149,7 +149,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
       Blockly.Events.enable();
-      this.moveDescriptionToBlockField(this.block);
+      // this.moveDescriptionToBlockField(this.block);
     } else {
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
