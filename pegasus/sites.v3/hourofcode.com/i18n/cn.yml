@@ -133,6 +133,10 @@ cn:
   linked_in: 领英
   instagram: Instagram
   tik_tok: 抖音
+  device_tablet: 平板电脑
+  device_laptop: 笔记本电脑
+  device_desktop_computer: 台式电脑
+  device_mobile_device: 移动设备
   subscribe_to_emails_heading: 订阅电子邮件
   subscribe_to_emails_desc: 通过我们的邮件列表，通过季度更新，了解 Code.org 和计算机科学教育领域的最新动态。
   subscribe_to_emails_intl: 订阅国际更新
@@ -159,18 +163,36 @@ cn:
   for_educators_desc: 立即通过我们的专业学习研讨会开始教学，无需计算机科学经验。
   students_label: 学生
   teachers_label: 教师
+  educators_label: 教育工作者
+  companies_label: 公司
+  districts_label: 地区
+  school_assemblies_label: 学校集会
+  parents_label: 父母
+  public_officials_label: 公职人员
+  volunteers_label: 志愿者
+  virtual_events_label: 虚拟活动
   teacher_label_csf: 计算机科学基础教师
   teacher_label_csd: 计算机科学探索教师
   teacher_label_csp: 计算机科学原理教师
   teacher_label_csc: 计算机科学联系老师
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: 教师论坛
+  teacher_forum_desc: 访问编程一小时教师论坛，从其他教育工作者那里获得建议、见解和支持。
   required_materials: 所需材料：
   optional_materials: 可选材料：
   call_to_action_hold_an_event: 举办活动
+  call_to_action_register_event: 注册您的活动
+  call_to_action_select_activity: 选择一项活动
+  call_to_action_start_activity: 开始一项活动
+  call_to_action_get_certificates: 获取证书
+  call_to_action_go_beyond_hoc: 超越编程一小时
+  call_to_action_view_promo_resources: 查看促销资源
   call_to_action_learn_more: 了解更多
   call_to_action_watch_now: 立即观看
   call_to_action_try_activity: 尝试活动
   call_to_action_try_activities: 尝试活动
+  call_to_action_explore_activities: 探索活动
+  call_to_action_explore_ai: 探索人工智能
   call_to_action_explore_unit: 探索单元
   call_to_action_explore_curriculum: 探索课程
   call_to_action_explore_curriculum_options: 浏览课程选项
@@ -223,6 +245,7 @@ cn:
   call_to_action_find_self_paced_modules: 查找自定进度模块
   call_to_action_join_teacher_forums: 加入教师论坛
   call_to_action_explore_teacher_forums: 浏览教师论坛
+  call_to_action_explore_teacher_forum: 探索教师论坛
   call_to_action_explore_career_resources: 探索职业资源
   call_to_action_watch_videos: 观看视频
   call_to_action_download_posters: 下载海报
@@ -253,6 +276,15 @@ cn:
   call_to_action_start_translating: 开始翻译
   call_to_action_learn_about_advocacy: 了解我们的倡导活动
   call_to_action_visit_store: 访问商店
+  call_to_action_view_faqs: 查看更多常见问题解答
+  aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者操作指南
+  aria_label_call_to_action_hoc_how_to_companies: 查看公司操作指南
+  aria_label_call_to_action_hoc_how_to_districts: 查看各地区的操作指南
+  aria_label_call_to_action_hoc_how_to_school_assemblies: 查看学校集会操作指南
+  aria_label_call_to_action_hoc_how_to_parents: 查看家长操作指南
+  aria_label_call_to_action_hoc_how_to_public_officials: 查看公职人员操作指南
+  aria_label_call_to_action_hoc_how_to_volunteers: 查看志愿者操作指南
+  aria_label_call_to_action_hoc_how_to_virtual_events: 查看虚拟活动的操作指南
   aria_label_call_to_action_afe: 了解有关亚马逊未来工程师的更多信息
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
@@ -8908,6 +8940,74 @@ cn:
   all: 全部
   dont_know: 我不知道
   language_label: 语言
+  before_hoc: 在《编程一小时》之前
+  day_of_hoc: 编程一小时之日
+  after_hoc: 编程一小时之后
+  step_01: 第 1 步
+  step_02: 第 2 步
+  step_03: 第 3 步
+  step_04: 第 4 步
+  step_05: 第 5 步
+  step_06: 第 6 步
+  step_07: 第 7 步
+  step_08: 第 8 步
+  hoc_how_to_top_heading: 你的编程一小时指南
+  hoc_how_to_top_desc: 量身定制的操作指南，打造最佳编程一小时体验。
+  hoc_how_to_top_view_guide: 查看指南
+  hoc_how_to_nav_main_aria_label: 选择指南
+  hoc_how_to_nav_sidebar_aria_label: 侧栏导航
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: "《编程一小时》是一小时的计算机科学入门，它使用有趣的教程来展示任何人都可以学习基础知识。今年，我们通过提供包含人工智能
+    (AI) 和非 AI 组件的编程机会，将 “编程一小时” 推向新的高度。无论您或您的学生是经验丰富的程序员，还是所有人都在开始第一次计算机科学探险，这个 “编程一小时”
+    都将带来一段非凡的旅程。"
+  hoc_how_to_faq_question_prerequisites: 参加 “编程一小时” 的先决条件是什么？
+  hoc_how_to_faq_answer_prerequisites: "“编程一小时” 很容易上手，即使对于初学者来说也是如此。你不需要计算机科学或教学方面的经验就能激励学生去探索、创造和学习新的东西。"
+  hoc_how_to_faq_question_devices: 我需要什么设备才能运行 “编程一小时”？
+  hoc_how_to_faq_answer_devices_01: 您可以使用的设备：
+  hoc_how_to_faq_answer_devices_02: 如果设备有限或不可用，请尝试 [配对编程] (%{pair_url}) 或探索我们的 [不插电活动]
+    (%{unplugged_url})，无需任何设备即可学习！
+  hoc_how_to_faq_question_volunteer: 谁可以做志愿者？
+  hoc_how_to_faq_answer_volunteer: 任何对计算机科学教育和不断增加技术多样性充满热情的人都可以成为志愿者！我们很乐意看到各种背景的志愿者参与进来。编程一小时提供各种各样的活动，适合所有年龄段和技能水平，因此您无需成为编程专家即可成为志愿者！
+  hoc_how_to_faq_question_full_hour: 编程一小时会持续一整小时吗？
+  hoc_how_to_faq_answer_full_hour: 许多学生将能够在不到一个小时的时间内完成活动，没关系！学生可以在其他学生完成活动的同时继续学习。
+  hoc_how_to_faq_question_account: 学生需要使用帐户登录吗?
+  hoc_how_to_faq_answer_account: 学生无需注册或登录即可试用 “编程一小时”。注册 “编程一小时” 不会自动创建 Code.org
+    账户。
+  hoc_how_to_resources_heading_educators: 适用于教育工作者的其他编程一小时的资源
+  hoc_how_to_resources_promo_heading: 促销资源
+  hoc_how_to_resources_promo_desc: 查找您需要的所有资源（印刷版和数字版），以引起人们对编程一小时的关注。
+  hoc_how_to_resources_discover_heading: 探索活动
+  hoc_how_to_resources_discover_desc: 探索专为所有年龄段设计的超过 45 种语言的一小时教程。
+  hoc_how_to_step_label_plan: 计划你将在何时何地完成编程一小时
+  hoc_how_to_step_label_choose_activity: 选择你的活动
+  hoc_how_to_step_label_test_activity: 测试一下你的活动
+  hoc_how_to_step_label_register_event: 注册您的活动
+  hoc_how_to_step_label_tell: 告诉你的学生、学校和社区
+  hoc_how_to_step_label_get_coding: 开始编程！
+  hoc_how_to_step_label_celebrate: 庆祝
+  hoc_how_to_step_label_beyond_hoc: 超越编程一小时
+  hoc_how_to_step_beyond_hoc_subhead: 还没到此结束！
+  hoc_how_to_step_beyond_hoc_desc: 计算机科学不必以 “编程一小时” 结束！尽管90％的家长希望孩子学习计算机科学，但大多数学校仍然不教计算机科学。立即学习如何将
+    CS 带到孩子的学校。
+  hoc_how_to_step_01_educators_subhead: 选择适合学生人数和可用设备数量的活动时间和空间。
+  hoc_how_to_step_01_educators_desc_01: 有哪些空间可供你参加 “编程一小时”？考虑一下你所在空间的技术能力，以及你期望学生使用的设备类型。学生可以在单台设备上学习教程，使用共享设备轮流学习，或者在课堂白板上一起尝试教程。甚至还有不插电的教程，无需任何设备即可完成。不插电的选项可以在任何地方完成，即使在户外也是如此！
+  hoc_how_to_step_01_educators_desc_02: 在 CS 教育周期间，世界各地的人们都会参加编程一小时庆祝活动，届 %{campaign_date}
+    时将发布最新的教程和活动。但是你可以在一年中的任何一天做 Hour of Code！
+  hoc_how_to_step_02_educators_desc_01: 根据小组的年龄、经验、兴趣等探索活动。学生尝试自学教程很受欢迎，尽管许多活动都包括供教师指导讨论或扩展活动的教学计划。
+  hoc_how_to_step_02_educators_desc_02: 提前决定是要为所有学生选择一个教程，还是让每个孩子自己选择教程。
+  hoc_how_to_step_02_educators_desc_03: 今年，你和你的学生可以通过教程、教学计划和我们全新的人工智能工作原理视频系列 [全面了解人工智能]
+    (%ai_url)。
+  hoc_how_to_step_03_educators_desc_01: 在进入教室之前亲自尝试一下教程，这样你就可以回答问题了！
+  hoc_how_to_step_03_educators_desc_02: 您也可以在学生的计算机或设备上测试教程，以确保它们支持声音和视频。带宽不足？计划在课堂前面播放视频，这样每个学生就不会下载自己的视频了。
+  hoc_how_to_step_03_educators_desc_03: 如果你选择的教程在声音方面效果最好，可以考虑为你的课堂提供耳机，或者让学生自带耳机。
+  hoc_how_to_step_04_educators_desc_01: 注册编程一小时活动后，您将收到有用的电子邮件，其中包含成功举办 “编程一小时” 的新闻和小贴士。这也是让当地志愿者知道你的学校正在参与的方法。志愿者是一个很好的资源，他们可以来你的课堂上谈论计算机科学，或者帮助你的学生进行
+    “编程一小时” 活动。
+  hoc_how_to_step_05_educators_desc_01: 通过分享 [鼓舞人心的视频] (%{videos_url})，重点介绍不同的人群和在现实世界中使用计算机科学的创造性方式，让你的学生为这次活动感到兴奋。
+  hoc_how_to_step_05_educators_desc_02: 与其他可能想一起享受乐趣的老师分享你的 “编程一小时” 计划！这也是一个很好的机会，可以联系学校的家长教师学生协会或分享家长时事通讯，让他们知道孩子正在学习什么。
+  hoc_how_to_step_06_educators_desc_01: 可以通过在黑板上共享链接或通过教室的学习管理系统来引导学生参与活动。你的学生可能会遇到挑战——没关系！学习编程就像学习一门新语言；你不会马上就流利了。如果你不知道答案，你可以一起弄清楚。
+  hoc_how_to_step_07_educators_desc_01: '一定要庆祝成功！在社交媒体上分享你的 “编程一小时” 活动的照片和视频。使用 #HourOfCode
+    和 @codeorg 这样我们也可以重点介绍你的成功！'
+  hoc_how_to_step_07_educators_desc_02: 您还可以为学生打印证书，以展示他们的成绩！
   team_page_full_team_alt_text: 将近 100 名身穿相配的蓝色和黄色 T 恤的 Code.org 员工在酒店会议室里摆姿势，参加公司
     2022 年夏季的 Codechella 活动。
   careers_page_code_pride_alt_text: 两名展示女性气质的员工拿着 Code.org 品牌的彩虹横幅的末端微笑。在他们身后，有几个人穿着
@@ -9183,6 +9283,84 @@ cn:
   video_library_page_not_hacked_video_title_5: 如何不被黑客入侵：网站和 Wifi
   video_library_page_not_hacked_video_title_6: 如何不被黑客攻击：消息和下载
   video_library_page_not_hacked_video_title_7: 如何不被黑客攻击：安装更新
+  about_us_page_title: 关于我们
+  about_us_page_hero_description: Code.org® 是一家教育创新非营利组织，致力于实现这样的愿景，即每所学校的每个学生都有机会学习计算机科学，将其作为K-12核心教育的一部分。我们扩大学校对计算机科学的普及，重点是提高年轻女性和来自其他代表性不足群体的学生的参与度。作为美国最大的学区K-12计算机科学课程的领先提供商，Code.org还组织一年一度的
+    [编程一小时] (%{hour_url}) 活动，该活动吸引了全球15％以上的学生。Code.org 得到了包括微软、亚马逊、谷歌和 [许多其他公司] 在内的慷慨捐助者的支持。()%{others_url}
+  about_us_page_section_title_1: Code.org 上有超过 8000 万学生和 200 万名教师
+  about_us_page_statistic_figcaption: Code.org 从 2021-2022 学年起参与情况。[见分类数据。] (%{data_url})
+  about_us_page_statistic_description: Code.org 通过接触各种背景的学生来增加计算机科学的多样性，包括他们的技能水平、学校以及激励他们继续学习的方式。Code.org上的绝大多数学生来自历史上计算机科学领域代表性不足的学生群体。计算机科学的多样性不断提高是我们工作的基础，[我们鼓励您阅读更多有关我们努力的信息]
+    (%{diversity_url})。
+  about_us_page_section_title_2: 新闻中的 Code.org
+  about_us_page_section_news_description: 查看所有过去的 [新闻和公告] (%{news_url})
+  about_us_page_section_table: 我们的目标和指标
+  about_us_page_section_table_header_1: Code.org 目标
+  about_us_page_section_table_header_2: 成就
+  abous_page_section_table_cell_1_1: 提高 CS 的多样性*（美国学生）*
+  abous_page_section_table_cell_1_2: Code.org学生中有45％是年轻女性，50％是来自边缘化种族和族裔群体的学生，46％的美国学生在需求旺盛的学校就读。阅读更多关于
+    [我们的多元化方法。] (%{diversity_url})
+  about_page_section_table_cell_2_1: 激励学生
+  about_page_section_table_cell_2_2: 数千万人尝试了 [编程一小时] (%{hour_url})。（426,370,561人服务。49％为女性）
+  about_page_section_table_cell_3_1: 到达教室
+  about_page_section_table_cell_3_2: 已有591,636名教师报名在 [Code Studio] (%{code_studio_url})
+    上教授我们的入门课程，招收了19,177,297名学生。
+  about_page_section_table_cell_4_1: 为新的 CS 老师做好准备
+  about_page_section_table_cell_4_2: 我们已经为超过10.6万名新教师做好了准备，可以在K-12年级教授计算机科学。了解我们的
+    [专业学习计划。] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: 更改学区课程
+  about_page_section_table_cell_5_2: 我们已经与 [180 多个最大的学区] (%{schoold_disctrict_url})
+    和 60 个地区合作伙伴合作，以 [将 CS 添加到学校课程中] (%{cs_curriculum_url})。[了解如何成为区域合作伙伴。] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: 设置支持 CS 的政策
+  about_page_section_table_cell_6_2: "[美国 50 个州的政策发生了变化] (%{states_url}) 以建立 CS 教育标准、将
+    CS 课程计入高中毕业等 [（详情）] (%{details_url})"
+  about_page_section_table_cell_7_1: 走向全球
+  about_page_section_table_cell_7_2: 我们的课程提供超过 67 种语言版本，在 180 多个国家/地区使用。
+  about_page_section_table_under_label: 来源：Code Studio 活动和 [参与教育工作者的调查] (%{educators_url})
+  about_page_section_title_3: 更多信息、历史和哲学
+  about_page_section_more_description_1: '2013年，Code.org由双胞胎兄弟 [Hadi](%{hadi_url})
+    和 [Ali Partovi] (%{partovi_url}) 推出，以 () 推广 [video]计算机%{video_url}科学。这段视频在 YouTube
+    上变成了 #1 一天，有 15,000 所学校向我们寻求帮助。从那时起，我们已经从自给自足的志愿者队伍发展成为一个支持全球运动的完整组织。我们认为，应该向每个孩子提供高质量的计算机科学教育，而不仅仅是少数幸运儿。'
+  about_page_section_more_description_2: 为了支持我们的目标，我们确实在教育领域开展工作：设计自己的课程或与其他人合作，培训教师，与大型学区合作，帮助改变政府政策，通过合作伙伴关系向国际扩张，以及通过营销来打破陈规定型观念。
+  about_page_section_more_description_3: 我们的工作建立在 [无数组织和个人数十年的努力之上] (%{efforts_url})，他们帮助建立、资助和传播计算机科学教育。我们很高兴能从更广泛的计算机科学教育界的不懈帮助中受益，并且
+    [我们感谢多年来支持我们影响力的所有合作伙伴和个人] (%{partners_url}))。
+  about_page_section_more_list_1: "[Code.org 2021 年年度报告] (%{report_url}) (过去的报告： [2020](%{past_url_1})、()、
+    [2019](%{past_url_2})、 [2018](%{past_url_3})、 [2017](%{past_url_4})、( [2016]%{past_url_5})、
+    [2015](%{past_url_6})、 [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[我们的核心价值观和信息传递指南] (%{core_url})"
+  about_page_section_more_list_3: "[我们的课程和教学理念] ()%{curriculum_url}"
+  about_page_section_more_list_4: "[我们的创始人哈迪·帕尔托维在TEDx上发表的关于为什么计算机科学适合所有人的演讲（视频）]（）%{tedx_url}"
+  about_page_section_title_4: 在分裂的世界中采取统一的方法
+  about_page_section_specific_title_1: 在分裂的世界中采取统一的方法
+  about_page_section_specific_title_2: 我们对无障碍的承诺
+  about_page_section_specific_title_3: 我们对免费课程和开源技术的承诺
+  about_page_section_specific_title_4: Code.org 倡导联盟
+  about_page_section_specific_title_5: K-12 计算机科学框架
+  about_page_section_specific_title_6: Code.org 捐赠者
+  about_page_section_specific_title_7: 关注我们
+  about_page_section_specific_title_8: Code.org 的国际影响力
+  about_page_section_specific_description_1: Code.org之所以能够在K-12计算机科学运动中发挥全球作用，是因为我们在不同且经常存在分歧的利益相关者之间采用统一的方法。在两极分化加剧的时期，增加学生机会的想法团结了来自各个政治派别的人们。Code.org
+    的团队成员、学生、教师和支持者的观点各不相同，欢迎他们加入我们的使命。[阅读更多。] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org 认为计算机科学是所有学生的基础，我们致力于在组织中实现公平、准入和机会
+    [values.](%{values_url}) 为了实现这一目标，我们努力识别并消除阻碍残疾学生和教育工作者融入和充分参与的障碍。要详细了解我们的努力，请参阅我们的
+    [无障碍声明。] (%{accessibility_url})
+  about_page_section_specific_description_3: 我们创作的所有课程资源和教程都将永久免费使用，并在 [知识共享] (%{commons_url})
+    许可下公开许可，允许其他人为非商业目的制作衍生教育资源。如果您有兴趣将我们的材料用于商业目的，[联系我们] (%{contact_us_url})。我们的课程经过翻译，可供全球使用或由讲不同语言的人使用。我们的技术是作为
+    [开源项目。] (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org 倡导联盟] (%{advocacy_url}) 是一个由公司和非营利组织组成的两党联盟，它们共同努力帮助制定美国联邦和州的政策，以扩大和维持对K-12计算机科学的普及，并扩大该领域的参与和多样性。我们将
+    [共和党和民主党政治领导人] (%{leaders_url}) 聚集在一起，共同支持扩大对K-12计算机科学的普及和参与。"
+  about_page_section_specific_description_5: Code.org 是指导委员会的成员，该委员会帮助建立 [K-12 计算机科学框架]
+    (%{framework_url})，该框架是各州、地区和组织实施计算机科学教育的高级指南。该框架赢得了数百名学者、K-12教育工作者、软件公司、非营利组织和各州的支持。
+  about_page_section_specific_description_6: Code.org 美国国税局 990 表格 [2014]（%{irs_url_1}）、
+    [2015]（%{irs_url_2}）、 [2016]（%{irs_url_3}）、 [2017]（%{irs_url_4}）、（）、 [2018]（%{irs_url_5}
+    [2019]%{irs_url_6})、 [2020](%{irs_url_7}) 和 [2021](%{irs_url_8})。[捐赠政策。] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[注册接收状态更新] (%{sign_up_url})，了解K-12计算机科学运动的进展以及Code.org的工作。或者在社交媒体上关注
+    Code.org："
+  about_page_section_specific_description_8: 我们超过 40% 的网站流量来自美国以外，而且这一数字还在继续攀升。为了扩大全球对计算机科学的普及，我们的团队与
+    [100 多个国际合作伙伴] (%{partners_url}) 密切合作，帮助他们宣传 “编程一小时”、倡导政策变革和培训教师。我们与世界各地的教育部合作，并与经济合作与发展组织和联合国教育、科学及文化组织等国际组织合作，使计算机科学成为国际教育话语的一部分。
+  about_page_section_donors_description_1: Code.org® 是一家注册的501c3公共非营利组织，得到了公众的支持。我们感谢支持我们愿景的
+    [个人和组织] (%{individuals_url}) 的慷慨支持。
+  about_page_section_donors_description_2: 守则取得的成就（上图）证明了我们有能力利用这些资金取得强劲的成果。但是，鉴于我们的非营利性雄心壮志，即每所学校的每个孩子都应该有机会接触计算机科学——成为当今数字世界中的识字公民，并考验他们对进一步探索计算机科学作为职业的兴趣——我们还有很长的路要走，才能实现支持这一愿景的筹款目标。
+  about_page_donors_link_1: 捐款
+  about_page_donors_link_2: "[查看我们的捐赠者名单] (%{donors_url})"
   language_code:
     ar: 阿拉伯语
     az: 阿塞拜疆人

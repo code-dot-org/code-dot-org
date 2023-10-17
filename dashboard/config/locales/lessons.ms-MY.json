@@ -1079,6 +1079,12 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Lebah Ejaan"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Asas Sains Komputer"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Merancang"
+        },
         "csd1-2019/The Problem Solving Process": {
           "name": "Proses Penyelesaian Masalah"
         },
@@ -1525,6 +1531,30 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Pertempuran Diraja bersama Acara"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Penjujukan"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Gelung"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Acara-acara"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Bersyarat"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Fungsi"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Pemboleh ubah"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Untuk Gelung"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Keselamatan di Kejiranan dalam Talian Saya"
@@ -2934,6 +2964,12 @@
           "preparation": "-   Main melalui teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Dalam aktiviti dalam talian ini, pelajar akan mempelajari cara menggunakan peristiwa di dalam Makmal Mainan. Mereka akan mulakan dengan melatih kesatria untuk bergerak apabila kekunci anak panah ditekan, kemudian ditamatkan dengan peluang mempamerkan kemahiran lain yang mereka pelajari sepanjang kursus ini, termasuk jujukan dan penggelungan, sebagai sebahagian daripada teka-teki permainan bebas terakhir.",
           "student_overview": "Gunakan acara untuk mencipta cerita atau membuat permainan berinteraktif."
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Asas Sains Komputer"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Merancang"
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "Proses Penyelesaian Masalah"
@@ -5174,9 +5210,10 @@
           "student_overview": "Rumusan Tutorial: Pelajar pertama mengklasifikasikan objek sebagai sama ada \"ikan\" atau \"bukan ikan\" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya."
         },
         "outbreak/Outbreak": {
-          "overview": "Pelajaran ini menggabungkan **pembinaan kemahiran** di sekitar acara dengan **projek mini** yang membolehkan pelajar membina simulasi komputer mereka sendiri dalam Sprite Lab. Pelajar akan mengkaji simulasi untuk memahami seberapa cepat virus boleh merebak dan apa yang boleh dilakukan untuk memperlahankannya.",
-          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
-          "purpose": "Dalam pelajaran lepas, pelajar mengumpul dan mentafsir data daripada simulasi mudah. Dalam pelajaran ini, pelajar akan mengikut arahan untuk mengekod model simulasi mereka sendiri. Pengetahuan sedia ada pelajar tentang wabak virus di dunia sebenar akan digunakan pada senario rekaan.",
+          "name": "Mengekod Simulasi",
+          "overview": "Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini menggabungkan **pembinaan kemahiran** di sekitar acara dengan **projek mini** yang membolehkan pelajar membina simulasi komputer mereka sendiri dalam Sprite Lab. Pelajar akan mengkaji simulasi untuk memahami seberapa cepat virus boleh merebak dan apa yang boleh dilakukan untuk memperlahankannya.",
+          "preparation": "#### Satu Minggu Sebelum  Hour of Code Anda\n\n-   Semak [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) dan [Best Practice from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) untuk mula merancang acara Hour of Code anda.\n\n-   [Register your Hour of Code event[Outbreak]](https://hourofcode.com/us) jika anda ingin mendapatkan sokongan bilik darjah, poster diskaun atau mengambil bahagian dalam pemberian robotik (AS sahaja).\n\n-   Semak dan lengkapkan tutorial dalam talian sendiri: [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   Pastikan anda mengujinya terlebih dahulu sebelum meminta pelajar anda melengkapkannya.\n\n-   Semak teknologi anda dan tentukan sama ada anda perlu menyelesaikan sebarang masalah sebelum Hour of Code anda.\n\n#### Sehari Sebelum Waktu Kod Anda\n\n-   Setiap pelajar yang melengkapkan aktiviti perlu menerima [certificate](https://studio.code.org/certificates/batch). Cetak satu untuk semua orang terlebih dahulu untuk memudahkan ini pada penghujung Hour of Code anda.\n\n-   (pilihan) Galakkan pelajar membawa masuk fon kepala untuk digunakan semasa aktiviti.",
+          "purpose": "Dalam pelajaran ini, pelajar akan mengikut arahan untuk mengekod model simulasi mereka sendiri. Pengetahuan sedia ada pelajar tentang wabak virus di dunia sebenar akan digunakan pada senario rekaan.",
           "student_overview": "Virus telah datang ke Bandar Raksasa! Belajar untuk mencipta simulator virus dan bantu raksasa itu kembali sihat."
         },
         "playlab/Play Lab": {
@@ -5219,9 +5256,6 @@
           "preparation": "-   Uji Widget Pemampatan Teks\n-   Semak petua pengajaran untuk menentukan pilihan yang ingin anda gunakan",
           "purpose": "Prinsip asas di sebalik pemampatan adalah untuk membangunkan kaedah atau protokol untuk menggunakan lebih sedikit bit untuk mewakili maklumat asal. Cara kami mewakili data dimampatkan dalam pelajaran ini, dengan \"kamus\" corak berulang adalah serupa dengan [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), tetapi perlu diingat bahawa LZW berbeza sedikit daripada apa yang pelajar lakukan dalam pelajaran ini. Pelajar mencipta cara mereka sendiri di sini. LZW digunakan bukan sahaja untuk teks (fail zip), tetapi juga dengan format fail imej GIF.",
           "student_overview": "Pada satu ketika kita mencapai had fizikal berapa cepat kita boleh menghantar bit dan jika kita ingin menghantar sejumlah besar maklumat dengan lebih cepat, kita perlu mencari jalan untuk mewakili maklumat yang sama dengan bit yang lebih sedikit - kita mesti memampatkan data.  "
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Kajian Perasaan"
         },
         "allthethings/Jigsaw": {
           "name": "Gergaji jig"
@@ -5472,6 +5506,9 @@
           "preparation": "-   Semak tapak web [Pelajaran Yang Munasabah](https://www.commonsense.org/education/digital-citizenship) untuk mendapatkan lebih banyak kandungan keselamatan dalam talian.",
           "purpose": "Matlamat utama pelajaran ini adalah untuk membina pengalaman pelajar dengan komputer. Dengan meliputi fungsi komputer yang paling asas seperti mengklik, menyeret, dan menjatuhkan, kami mencipta medan permainan yang lebih sama di dalam kelas untuk teka-teki masa depan. Pelajaran ini juga memberikan peluang yang baik untuk memperkenalkan istilah perkakasan komputer asas, yang berpotensi termasuk \"tetikus\", \"trackpad\" atau \"skrin sentuh\", bergantung pada peranti anda.",
           "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Kajian Perasaan"
         }
       }
     }

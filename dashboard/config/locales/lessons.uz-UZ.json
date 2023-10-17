@@ -1571,6 +1571,36 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Bilimdon Asalari"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Boshlash"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Kompyuter fanlari asoslari"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Looking Ahead"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Mastering the Basics: Sequencing"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Mastering the Basics: Loops"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Mastering the Basics: Conditionals"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Mastering the Basics: Functions"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Mastering the Basics: Events"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Best Practices for Teaching Computer Science"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planning"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Intro to Problem Solving"
         },
@@ -2239,6 +2269,30 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "A Royal Battle with Events"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sequencing"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Sikllar"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Hodisalar"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Shartli bayonotlar"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funksiyalar"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "O‘zgaruvchilar"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For sikllari"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Mening onlayn atrofimda xavfsizlik"
@@ -3821,6 +3875,36 @@
           "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
           "purpose": " Bu onlayn mashg‘ulotda, talabalar Play Labda hodisalardan qanday foydalanishni o‘rganishadi. Ular yo‘nalishli tugma bosilganda otliqni harakatlantirishni mashq qilib ko‘rish orqali boshlashadi va keyin tekinga o‘ynaladigan boshqotirma a’zosi sifatida bu kurs davomida o‘rgangan boshqa mahoratlari, jumladan ketma-ketliklar va sikllarni namoyish qilish imkoniyati bilan tugatishadi.",
           "student_overview": "Use events to create a story or make an interactive game."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Boshlash"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Kompyuter fanlari asoslari"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Looking Ahead"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Mastering the Basics: Sequencing"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Mastering the Basics: Loops"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Mastering the Basics: Conditionals"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Mastering the Basics: Functions"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Mastering the Basics: Events"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Best Practices for Teaching Computer Science"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planning"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Intro to Problem Solving"
@@ -6234,9 +6318,6 @@
           "overview": "⚠️ Ushbu dars butun [AI qanday ishlaydi video seriyasini](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) \\*\\* bir kunda\\*\\* ko'rsatmoqchi bo'lgan sinflar uchun mo'ljallangan. Har bir videoni bir vaqtning o'zida taqdim etadigan ushbu bo'limdagi boshqa darslar bilan ketma -ket o'qitish mo'ljallanmagan.\n\nTalabalar har bir video bilan birga videoning so'z boyligini moslashtirish orqali kuzatib boradilar, so'ngra har bir video haqidagi savolga javob berishadi. Dars rejasi va slaydlar juda kam va ochiq bo'lib, improvizatsiya va moslashtirishni sizning sinfingizga moslashtirishga imkon beradi.",
           "preparation": "-   Faoliyat qo'llanmasini chop eting\n-   Slaydlarni video proektorga qo'ying"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Dasturlash soati - 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Intro to App Lab",
           "purpose": "Ushbu dars sizning talabalaringiz uchun App Lab-da birinchi qadamdir. O'quv qo'llanmasining o'zi keng funksional imkoniyatlarga ega kuchli vosita bilan tanishish bo'lishi kerak. Talabalar o'quv mashg'ulotlarida ijobiy tajribaga ega bo'lishlari kerak va, muhimi, App Lab-da ishlashni darsdan tashqari davom ettirishlari kerak. Ular bu darsda faqat vosita imkoniyatlari bilan tanishadilar, shuning uchun ular keyinchalik amalga oshirishni istagan murakkab turdagi loyihalar uchun ilhom olish uchun code.org/applab sahifasidan yoki loyiha galereyasidan foydalanishlari lozim."
@@ -6333,10 +6414,7 @@
           "student_overview": "O'quv qo'llanmasining qisqacha mazmuni: Dastlab talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni 'baliqlar' yoki 'baliqlar emas' deb tasniflashadi. Keyin talabalar o'zlarining ma'lumot to'plamlarini boshqa dengizni o'z ichiga olgan holda kengaytirishlari kerak bo'ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Ushbu ma'lumotlar yangi tasvirlarni belgilashga qodir bo'lgan mashina o'rganish modeli uchun ishlatiladi. "
         },
         "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Simulyatsiyani kodlash"
         },
         "playlab/Play Lab": {
           "name": "Play Lab - O‘yin laboratoriyasi",
@@ -6364,66 +6442,6 @@
           "overview": "Bir nuqtada biz bitlarni qanday tez yuborishimiz mumkinligi haqidagi fizik chegaraga erishamiz va agar biz tezroq katta hajmdagi ma'lumotlarni yuborishni istasak, biz bir xil ma'lumotlarni kamroq bitlar bilan ifodalashning yo'lini topishimiz kerak - biz ma'lumotlarni siqishimiz kerak. Bu darsda, In this lesson, talabalar matnni siqish uskunalardan foydalanib, ingliz tilidagi matn segmentlarini siqish uchun ko‘rinishlarni izlash va kattaroq ko‘rinishlarni almashtirish orqali foydalanadilar.",
           "preparation": "-   Matnni Zichlovchi Qurilmani test qilib ko‘ring\n-   Qaysi tanlovni ishlatishni xohlashingizga qarab o‘rgatish usullarini qarab chiqing",
           "purpose": "Zichlashning asosiy maqsadi asl ma'lumotni namoyish qilish uchun kamroq bitlardan foydalanish usuli yoki protokolini ishlab chiqishdir. Ushbu darsda siqilgan ma'lumotlarni namoyish etish uslubi, takroriy naqshlarning 'lug'ati' bilan [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) ga o'xshash, ammo shuni ta'kidlash kerakki, LZW o'quvchilar ushbu darsda bajaradigan narsalardan biroz farq qiladi. Talabalar bu yerda o'z usullarini ixtiro qilishadi. LZW nafaqat matn uchun (zip fayllar), balki GIF rasm fayli formati bilan ham qo'llaniladi."
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Room Escape"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Digital Design"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Event Driven Programming"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Basic App Functionality"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters and Setters"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Frequency Analysis"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Start and End Screens"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Start and End Screens2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Collector Hour of Code 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Overview and Setup Instructions"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Sending Bits on a Shared Wire"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Sending Numbers"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Sending Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Broadcasting messages"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routers and addresses"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Packets and Reliability"
-        },
-        "netsim/Manual DNS": {
-          "name": "Qo'lbola DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Automatic DNS node"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Internet Simulator Freeplay"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Topishmoq"
@@ -6562,6 +6580,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Musiqa"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Room Escape"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Digital Design"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Event Driven Programming"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Basic App Functionality"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters and Setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD Student Post-Course Survey ('18-'19)"
@@ -6872,10 +6905,55 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Debugging for CDEF Educators"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Frequency Analysis"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Start and End Screens"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Start and End Screens2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Dasturlash soati - 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Topishmoq",
           "overview": "Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi, shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda o‘sish kuzatiladi.",
           "student_overview": "Click and drag to finish the puzzles."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Collector Hour of Code 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Overview and Setup Instructions"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Sending Bits on a Shared Wire"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Sending Numbers"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Sending Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Broadcasting messages"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routers and addresses"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Packets and Reliability"
+        },
+        "netsim/Manual DNS": {
+          "name": "Qo'lbola DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automatic DNS node"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet Simulator Freeplay"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Black & White Pixelation Tutorial"
@@ -6891,6 +6969,9 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Color Pixelation Freeplay"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

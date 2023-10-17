@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-11 21:46:07 UTC",
+    "serialized_at": "2023-10-16 16:55:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,7 +96,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis is participants’ first experience with inheritance.  Once again, this lesson is intended to build participants’ confidence with the course content and tools. \n\n\n**Objectives**\n\n**Content objectives:*\n* Participants can explain the purpose and functionality of inheritance\n* Participants can identify use cases for creating subclasses of an existing class\n* Participants can write a subclass that extends a superclass\n\n**Pedagogy objective:*\n\n* Participants have strategies for effectively using videos in their classrooms\n\n**Suggested time:** 40 minutes",
+        "overview": "**Purpose:**\nThis is participants’ first experience with inheritance.  Once again, this lesson is intended to build participants’ confidence with the course content and tools. \n\n\n**Objectives**\n\n*Content objectives:*\n* Participants can explain the purpose and functionality of inheritance\n* Participants can identify use cases for creating subclasses of an existing class\n* Participants can write a subclass that extends a superclass\n\n*Pedagogy objective:*\n\n* Participants have strategies for effectively using videos in their classrooms\n\n**Suggested time:** 40 minutes",
         "student_overview": "**You will**\n\n* Explain the purpose and functionality of inheritance\n* Identify use cases for creating subclasses of an existing class\n* Write a subclass that extends a superclass\n* Learn strategies for effectively using videos in their classrooms"
       },
       "seeding_key": {
@@ -147,7 +147,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**Purpose:**\nThis session introduces the concept of code review to participants and allows them to continue practice with writing methods. \n\n\n**Objectives**\n\n*Content objectives*\n* Participants can conduct a code review to give and receive feedback\n* Participants can explain why it is important to use good programming style\n* Participants can write clear comments to help the reader understand the code\n*Pedagogy objective*\n\n* Participants can describe the role feedback plays in the classroom. \n\n**Suggested time:** 60 minutes\n",
+        "overview": "**Purpose:**\nThis session introduces the concept of code review to participants and allows them to continue practice with writing methods. \n\n\n**Objectives**\n\n*Content objectives*\n* Participants can conduct a code review to give and receive feedback\n* Participants can explain why it is important to use good programming style\n* Participants can write clear comments to help the reader understand the code\n\n*Pedagogy objective*\n\n* Participants can describe the role feedback plays in the classroom. \n\n**Suggested time:** 60 minutes\n",
         "student_overview": "**You will**\n\n* Conduct a code review to give and receive feedback\n* Explain why it is important to use good programming style\n* Write clear comments to help the reader understand the code\n* Describe the role feedback plays in the classroom. "
       },
       "seeding_key": {
@@ -196,7 +196,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break\n\n\n**Objectives**\n\n* Participants gain experience looking at authentic student work\n* Participants know how to consider code efficiency as they look at student work. \n\n**Suggested Time:** 35 minutes",
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break.\n\n\n**Objectives**\n\n* Participants gain experience looking at authentic student work\n* Participants know how to consider code efficiency as they look at student work. \n\n**Suggested Time:** 35 minutes",
         "student_overview": "\n**You will**\n\n* Gain experience looking at authentic student work\n* Know how to consider code efficiency as they look at student work. "
       },
       "seeding_key": {
@@ -213,7 +213,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nThis session gives participants the opportunity to see how the curriculum introduces students to FRQs\n\n\n\n**Objectives**\n\n*Content objectives:*\n* Participants can implement a class using inheritance based on a given set of specifications\n* Participants can implement methods with parameters based on a given set of specifications\n* Participants can trace and validate the code of peers\n\n*Pedagogy objective:*\n* Participants can identify what role they play in creating an inclusive CS classroom.\n\n**Suggested Time:** 45 minutes",
+        "overview": "**Purpose:**\nThis session gives participants the opportunity to see how the curriculum introduces students to FRQs.\n\n\n\n**Objectives**\n\n*Content objectives:*\n* Participants can implement a class using inheritance based on a given set of specifications\n* Participants can implement methods with parameters based on a given set of specifications\n* Participants can trace and validate the code of peers\n\n*Pedagogy objective:*\n* Participants can identify what role they play in creating an inclusive CS classroom.\n\n**Suggested Time:** 45 minutes",
         "student_overview": "\n**You will**\n\n* Implement a class using inheritance based on a given set of specifications\n* Implement methods with parameters based on a given set of specifications\n* Trace and validate the code of peers\n\n* Identify what role they play in creating an inclusive CS classroom."
       },
       "seeding_key": {
@@ -503,6 +503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day2-async1intro"
+        ],
         "progression": "Introduction to Asynchronous Part 1"
       },
       "bonus": false,
@@ -525,6 +528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day2_async1jigsaw1"
+        ],
         "progression": "Lesson Investigation Jigsaw"
       },
       "bonus": false,
@@ -547,6 +553,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day2_async1jigsaw"
+        ],
         "progression": "Lesson Investigation Jigsaw"
       },
       "bonus": false,
@@ -569,6 +578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day2-async2intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -590,6 +602,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day2_async2frq"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -611,6 +626,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day2_async2swyk"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -632,6 +650,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day2_async2U2overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -653,6 +674,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day2_async2wrapup"
+        ],
         "progression": "Module 2 Wrap-up"
       },
       "bonus": false,
