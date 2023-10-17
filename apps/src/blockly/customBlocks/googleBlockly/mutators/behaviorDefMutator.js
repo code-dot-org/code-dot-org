@@ -11,8 +11,8 @@
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
 import {
+  getBlockDescription,
   handleLoadDescription,
-  handleSaveDescription,
 } from './functionMutatorHelpers';
 
 /**
@@ -85,7 +85,7 @@ export const behaviorDefMutator = {
     state['procedureId'] = this.getProcedureModel().getId();
     state['behaviorId'] = this.behaviorId;
 
-    handleSaveDescription(this, state);
+    state['description'] = getBlockDescription(this);
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;

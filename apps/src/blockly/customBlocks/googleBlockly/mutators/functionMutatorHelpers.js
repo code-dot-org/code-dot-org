@@ -22,11 +22,11 @@ export function handleLoadDescription(block, extraState) {
   }
 }
 
-// Save the description to extra state.
+// Get the description from the block.
 // If the modal function editor is enabled, we get the description
 // from the description field on the block. Otherwise we get it from
 // the description property on the block.
-export function handleSaveDescription(block, extraState) {
+export function getBlockDescription(block) {
   let description = block.description;
   if (useModalFunctionEditor) {
     const descriptionField = block.getField('DESCRIPTION');
@@ -34,5 +34,5 @@ export function handleSaveDescription(block, extraState) {
       description = descriptionField.getValue();
     }
   }
-  extraState['description'] = description;
+  return description;
 }
