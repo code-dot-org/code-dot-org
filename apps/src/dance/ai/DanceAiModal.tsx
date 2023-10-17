@@ -124,20 +124,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const handleGenerateClick = () => {
     startAi();
-    
-  const handleProcessClick = () => {
-    const inputNames = inputs.map(
-      input =>
-        inputLibrary.items.find((item: AiModalItem) => item.id === input).name
-    );
+    setMode(Mode.GENERATING);
+  };
 
-    startAi(inputNames);
+  const handleProcessClick = () => {
+    startAi();
     setMode(Mode.PROCESSING);
     setTimeout(() => {
       setProcessingDone(true);
     }, 4000);
   };
-  
+
   const startAi = async () => {
     // Default to using cached response, otherwise contact OpenAI directly
     let responseJsonString: string;
