@@ -3,7 +3,6 @@ require_relative '../i18n_script_utils'
 module I18n
   module Resources
     module Dashboard
-      DASHBOARD_CONFIG_PATH = CDO.dir('dashboard/config').freeze
       DIR_NAME = 'dashboard'.freeze
       ORIGIN_I18N_DIR_PATH = CDO.dir('dashboard/config/locales').freeze
       I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze

@@ -1,5 +1,4 @@
-require 'fileutils'
-require 'json'
+#!/usr/bin/env ruby
 
 require_relative '../../../../../dashboard/config/environment'
 require_relative '../../../i18n_script_utils'
@@ -21,10 +20,9 @@ module I18n
           private
 
           def prepare_marketing_announcements_data
-            marketing_announcements_file = File.join(I18N_SOURCE_DIR_PATH, DIR_NAME, 'announcements.json')
             marketing_announcement_strings = {'banners' => {}}
 
-            banners = JSON.load_file(File.join(DASHBOARD_CONFIG_PATH, DIR_NAME, FILE_NAME))['banners']
+            banners = I18nScriptUtils.parse_file(ORIGIN_I18N_FILE_PATH)['banners']
             banners.each do |banner_id, content|
               marketing_announcement_strings['banners'][banner_id] = {
                 'title' => content['title'],
@@ -32,8 +30,7 @@ module I18n
                 'buttonText' => content['buttonText']
               }
             end
-            FileUtils.mkdir_p(File.join(I18N_SOURCE_DIR_PATH, DIR_NAME))
-            File.write(marketing_announcements_file, JSON.pretty_generate(marketing_announcement_strings))
+            I18nScriptUtils.write_json_file(I18N_SOURCE_FILE_PATH, marketing_announcement_strings)
           end
         end
       end

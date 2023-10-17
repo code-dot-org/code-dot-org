@@ -4,8 +4,10 @@ module I18n
   module Resources
     module Dashboard
       module MarketingAnnouncements
-        DIR_NAME = 'marketing'.freeze
-        FILE_NAME = 'announcements.json'.freeze
+        FILE_NAME = 'marketing_announcements.json'.freeze
+
+        ORIGIN_I18N_FILE_PATH = File.join(I18n::Resources::Dashboard::DIR_NAME, 'config/marketing/announcements.json').freeze
+        I18N_SOURCE_FILE_PATH = File.join(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
 
         def self.sync_in
           SyncIn.perform
