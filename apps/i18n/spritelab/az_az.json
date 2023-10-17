@@ -1,5 +1,5 @@
 {
-  "addAdditionalPrompts": "Proqramınız kifayət qədər cəld yaratmadı.",
+  "addAdditionalPrompts": "Proqramınız kifayət qədər göstəriş yaratmadı.",
   "addAtTimeEvent": "\nBu bloku iş yerinizə əlavə edin:\n<XML><block type=\"gamelab_atTime\"><title name=\"UNIT\">\"seconds\"</title><value name=\"N\"><block type=\"math_number\"><title name=\"NUM\">5</title></block></value></block></XML>\n",
   "addJoinBlocks": "Daxil etdiyiniz dəqiq mətni çap edirsiniz. Qoşulma bloklarından istifadə edərək başqa mətn əlavə etməyə çalışın. ",
   "addPrintBlock": "Kodunuza bir çap bloku əlavə etməlisiniz:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"></title></block></value></block></xml> ",
@@ -76,6 +76,7 @@
   "cscAdaptationsAddAnotherBehavior ": "Başqa <code style=\"color:black; background-color:#5ED5DD\">sprite</code> blok başlayır əlavə etdiyinizə əmin olun.",
   "cscAdaptationsAddAnotherBehaviorBeforeNewEvent": "</code> hadisə blokunu sağ basdıqda yeni <code style=\"color:black; background-color:#6AF36C\">əlavə etməzdən əvvəl sprite üçün iki davranışınız olduğundan əmin olun.",
   "cscAdaptationsAddBeginsTraveling": "Kodunuza</code> blok səyahət etməyə başladığı <code style=\"color:black; background-color:#5ED5DD\">sprite əlavə etdiyinizə əmin olun.",
+  "cscAdaptationsAllSpritesTravel": "sprayt",
   "cscAdaptationsBuffaloCostume": "Davranış blokunuzda camış kostyumunu seçdiyinizə əmin olun.",
   "cscAdaptationsChangeBehaviorType": "Sprite üçün fərqli <code style=\"color:black; background-color:#6AF36C\">davranış</code> seçin.",
   "cscAdaptationsChangeFirefliesCostume": "Aşağı ox düyməsinə basıldıqda atəşböcəklərinin kostyumu dəyişdirdiyinə əmin olun.",

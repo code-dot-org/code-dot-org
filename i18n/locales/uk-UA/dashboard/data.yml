@@ -531,7 +531,7 @@ uk:
         csd_pair_programming: Парне програмування
         csd_gamelab_functions: Виклик та визначення функцій
         csd_applab_parameters: Функції з параметрами
-        csd_applab_loops: Цикли в Лабораторії додатків
+        csd_applab_loops: Цикли в Програмній Лабораторії
         csd_problem_solving_process: Процес вирішення проблем
         CSF_Going_Places_Safely: Мій інтернет-район
         CSF_SpriteLab_Intro_v2: Представляємо Спрайт Лабораторію
@@ -570,7 +570,9 @@ uk:
         csc_timecapsule_intro: Пишемо код для капсули часу
         csd_sprite_properties: Властивості спрайтів
         csc-starquilts-intro: Кодуємо геометричний зірковий узор
+        csc-mapmakers-intro: Кодування інтерактивних карт
         csc-ecosystems-intro: Імітація морської екосистеми
+        csc_animal_adaptations_intro: Моделювання адаптацій тварин
         what-is-creativity: Що таке креативність?
         code-break: Зробіть перерву на код
     callout:

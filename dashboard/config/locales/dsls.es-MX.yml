@@ -29675,6 +29675,7 @@ es-MX:
       intro-pulse-survey-q2_csd6_2023:
         answers:
         - correct: true
+          text: Esta es la primera vez que aprendo a crear aplicaciones con dispositivos
         - correct: true
         - correct: true
         questions:
@@ -30009,6 +30010,8 @@ es-MX:
         title: "¡Encuesta rápida de Desarrollo Web!"
       intro-pulse-survey_csd3_2023:
         title: Animaciones Interactivas y Juegos ¡Encuesta Rápida!
+      intro-pulse-survey_csd6_2023:
+        title: "¡Encuesta rápida sobre creación de aplicaciones con dispositivos!"
       made-choices-about-assignments:
         answers:
         - correct: true

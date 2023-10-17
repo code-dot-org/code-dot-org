@@ -783,13 +783,15 @@ uk:
         c_and_c_digital_sharing: Обмін та поширення онлайн
         code-break: Зробіть перерву на код
         csc-ecosystems-intro: Імітація морської екосистеми
+        csc-mapmakers-intro: Кодування інтерактивних карт
         csc-starquilts-intro: Кодуємо геометричний зірковий узор
+        csc_animal_adaptations_intro: Моделювання адаптацій тварин
         csc_timecapsule_intro: Пишемо код для капсули часу
         csd_applab_arrays: Вступ до масивів
         csd_applab_designmode: 'Відкриття інформатики: Лабораторія застосунків - Режим
           дизайну'
         csd_applab_designmode_short: Режим дизайну Лабораторії застосунків
-        csd_applab_loops: Цикли в Лабораторії додатків
+        csd_applab_loops: Цикли в Програмній Лабораторії
         csd_applab_parameters: Функції з параметрами
         csd_concept_binary_data: 'Як комп''ютери працюють: Двійкове кодування і дані'
         csd_concept_circuits_logic: 'Як працюють комп''ютери: Схеми та логіка'

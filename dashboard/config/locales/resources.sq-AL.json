@@ -7038,7 +7038,6 @@
           "type": "Burim"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Video"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -9324,6 +9323,10 @@
           "url": "https://youtu.be/5UMKeMPCa7E",
           "type": "Video"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "funksione",
+          "type": "Sllajdet"
+        },
         "exemplar_1_-_city_silhouette/csd/2023": {
           "name": "Modeli 1 - Silueta e Qytetit",
           "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
@@ -11466,11 +11469,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": "Sllajdet"
         }
       }
     }
