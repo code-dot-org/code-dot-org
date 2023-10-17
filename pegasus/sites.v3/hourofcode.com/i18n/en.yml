@@ -1542,7 +1542,7 @@
   signup_event_entire_school_label: 'My entire school is participating'
   signup_event_location_label: 'Event location'
   signup_event_location_error: 'Event location is required.'
-  signup_special_event_flag_label: 'My event will involve an entire district, members of the community, and/or other special plans to go beyond an hour'
+  signup_special_event_flag_label: 'My event will involve an entire district, an entire organization, members of the community, and/or other special plans to go beyond an hour'
   signup_special_event_details_label: 'Apply to be highlighted as a special event'
   signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only, while supplies last)'
   signup_send_posters_address_label: 'Address of school or organization'
