@@ -235,7 +235,7 @@ export default function LearningGoal({
           )}
           {submittedEvaluation && (
             <div className={style.submittedEvaluation}>
-              {submittedEvaluation?.understanding && (
+              {submittedEvaluation.understanding && (
                 <BodyThreeText>
                   {
                     UNDERSTANDING_LEVEL_STRINGS[
@@ -244,7 +244,7 @@ export default function LearningGoal({
                   }
                 </BodyThreeText>
               )}
-              {submittedEvaluation?.feedback && (
+              {submittedEvaluation.feedback && (
                 <FontAwesome
                   icon="message"
                   className="fa-regular"
