@@ -6,11 +6,11 @@ import Lab2MetricsReporter from '../lab2/Lab2MetricsReporter';
 /**
  * This function sends a POST request to the chat completion backend controller.
  */
-async function postOpenaiChatCompletion(
+export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[]
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {messages: messagesToSend};
-
+  console.log("payload", payload)
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
     JSON.stringify(payload),
@@ -19,7 +19,9 @@ async function postOpenaiChatCompletion(
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
+  console.log("response", response)
   if (response.ok) {
+    console.log("response is ok")
     return await response.json();
   } else {
     return null;
@@ -53,10 +55,11 @@ export async function getChatCompletionMessage(
   try {
     response = await postOpenaiChatCompletion(messagesToSend);
   } catch (error) {
-    Lab2MetricsReporter.logError(
-      'Error in chat completion request',
-      error as Error
-    );
+    console.log("error ", error)
+    // Lab2MetricsReporter.logError(
+    //   'Error in chat completion request',
+    //   error as Error
+    // );
   }
 
   // For now, response will be null if there was an error.
