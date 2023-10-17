@@ -13,27 +13,24 @@ module I18n
           MARKETING_ANNOUNCEMENTS_TYPE = 'marketing_announcements'.freeze
 
           def process(language)
-            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
-            return unless File.directory?(crowdin_locale_dir)
-            crowdin_file_path = File.join(crowdin_locale_dir, FILE_NAME)
+            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
+            return unless File.exist?(crowdin_file_path)
 
-            locale = language[:locale_s]
-            unless locale == 'en-US'
-              puts locale
-              distribute_localization(locale, crowdin_file_path)
+            unless I18nScriptUtils.source_lang?(language)
+              distribute_localization(language, crowdin_file_path)
             end
 
-            i18n_file_path = I18nScriptUtils.locale_dir(locale, DIR_NAME, FILE_NAME)
+            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
           end
 
           private
 
-          def distribute_localization(locale, file_path)
+          def distribute_localization(language, file_path)
             crowdin_translations = I18nScriptUtils.parse_file(file_path)
 
-            i18n_data = I18nScriptUtils.to_dashboard_i18n_data(locale, MARKETING_ANNOUNCEMENTS_TYPE, crowdin_translations)
-            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "#{MARKETING_ANNOUNCEMENTS_TYPE}.#{locale}.json")
+            i18n_data = I18nScriptUtils.to_dashboard_i18n_data(language[:locale_s], MARKETING_ANNOUNCEMENTS_TYPE, crowdin_translations)
+            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "#{MARKETING_ANNOUNCEMENTS_TYPE}.#{language[:locale_s]}.json")
             I18nScriptUtils.sanitize_data_and_write(i18n_data, target_i18n_file_path)
           end
         end

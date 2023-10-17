@@ -6,7 +6,7 @@ module I18n
       module MarketingAnnouncements
         FILE_NAME = 'marketing_announcements.json'.freeze
 
-        ORIGIN_I18N_FILE_PATH = File.join(I18n::Resources::Dashboard::DIR_NAME, 'config/marketing/announcements.json').freeze
+        ORIGIN_I18N_FILE_PATH = CDO.dir('dashboard/config/marketing/announcements.json').freeze
         I18N_SOURCE_FILE_PATH = File.join(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
 
         def self.sync_in

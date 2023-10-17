@@ -16,45 +16,46 @@ describe I18n::Resources::Dashboard::MarketingAnnouncements::SyncIn do
     assert_equal I18n::Utils::SyncInBase, described_class.superclass
   end
 
-  describe '#prepare_marketing_announcements_data' do
-    let(:origin_marketing_announcements_data) do
-      <<~JSON.strip
-        {"pages": {"page1": "Test Page"},
-         "banners": {
-           "banner1": {
-             "title": "Banner Title",
-             "body": "Banner Body",
-             "buttonText": "Button Text"
-           }
-         }
-        }
-      JSON
-    end
-
-    it 'should prepare marketing announcement banners and write to a JSON file' do
-    end
-  end
-
   describe '#process' do
     let(:run_process) {described_instance.process}
-    let(:expected_i18n_source_file_content) do
-      <<~JSON.strip
-        {
+
+    let(:banner_id) {'expected_banner_id'}
+    let(:banner_title) {'expected_banner_title'}
+    let(:banner_body) {'expected_banner_body'}
+    let(:banner_button_text) {'expected_banner_buttonText'}
+
+    let(:origin_marketing_announcements_data) do
+      {
+        'unexpected_key' => 'unexpected_val',
+        'banners' => {
+          banner_id => {
+            'unexpected_attr' => 'unexpected_val',
+            'title' => banner_title,
+            'body' => banner_body,
+            'buttonText' => banner_button_text,
+          }
+        }
+      }
+    end
+
+    before do
+      FileUtils.mkdir_p File.dirname(origin_i18n_file_path)
+      File.write origin_i18n_file_path, JSON.dump(origin_marketing_announcements_data)
+    end
+
+    it 'prepares marketing announcement banners and write to a JSON file' do
+      expected_i18n_source_file_content = <<~JSON.strip
+          {
           "banners": {
-            "banner1": {
-              "title": "Banner Title",
-              "body": "Banner Body",
-              "buttonText": "Button Text"
+            "#{banner_id}": {
+              "title": "#{banner_title}",
+              "body": "#{banner_body}",
+              "buttonText": "#{banner_button_text}"
             }
           }
         }
       JSON
-    end
-    let(:expect_i18n_source_file_creation) do
-      I18nScriptUtils.expects(:write_file).with(i18n_source_file_path, expected_i18n_source_file_content)
-    end
 
-    it 'prepares the i18n source file' do
       run_process
 
       assert File.exist?(i18n_source_file_path)
