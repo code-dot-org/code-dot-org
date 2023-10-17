@@ -199,6 +199,7 @@ module I18n
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/blocks.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/course_offerings.json')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/block_categories.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/data_content.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/parameter_names.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/progressions.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/variable_names.yml')
