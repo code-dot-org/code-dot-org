@@ -512,7 +512,7 @@ a.link-button,
 button {
   align-items: flex-start;
   background-color: var(--brand_secondary_default);
-  border: 2px solid var(--brand_secondary_default);
+  border: 1px solid var(--brand_secondary_default);
   border-radius: 4px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
@@ -533,7 +533,6 @@ button {
 a.link-button:hover,
 button:hover {
   background-color: var(--brand_secondary_dark);
-  border-color: var(--brand_secondary_dark);
 }
 
 .continue-btn{
