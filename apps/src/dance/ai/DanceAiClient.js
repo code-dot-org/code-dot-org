@@ -10,6 +10,7 @@ import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.
  * example: {"backgroundEffect":"sparkles","backgroundColor":"cool","foregroundEffect":"bubbles"}
  */
 export function chooseEffects(emojis) {
+  // Obtain final summed output weight based off input received
   const outputTypes = [CachedBackgrounds, CachedForegrounds, CachedPalettes];
   const outputWeights = [];
   outputTypes.forEach(outputJson => {
