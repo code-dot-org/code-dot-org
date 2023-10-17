@@ -39,11 +39,6 @@ class CensusMapInfoWindow extends Component {
           'We believe this school historically offered limited or no Computer Science opportunities.';
         color = 'blue';
         break;
-      case 'MAYBE':
-      case 'HISTORICAL_MAYBE':
-        censusMessage = 'We have conflicting data for this school.';
-        color = 'yellow';
-        break;
       default:
         censusMessage = 'We need data for this school.';
         missingCensusData = true;
@@ -226,17 +221,16 @@ export default class CensusMapReplacement extends Component {
             ['get', 'teaches_cs'],
             ['NO', 'HISTORICAL_NO'],
             '#989CF8',
-            ['MAYBE', 'HISTORICAL_MAYBE'],
-            '#FFFDA6',
             'white',
           ],
           'circle-stroke-width': 1,
           'circle-stroke-color': '#000000',
         },
         filter: [
-          'any',
+          'all',
           ['!=', 'teaches_cs', 'YES'],
           ['!=', 'teaches_cs', 'HISTORICAL_YES'],
+          ['!=', 'teaches_cs', 'EXCLUDED'],
         ],
       });
       _this.map.addLayer({
@@ -393,8 +387,6 @@ export default class CensusMapReplacement extends Component {
             <div className="caption">Offers computer science</div>
             <div className="color legend-limited-cs" />
             <div className="caption">Limited or no CS opportunities</div>
-            <div className="color legend-inconclusive-cs" />
-            <div className="caption">Inconclusive data</div>
             <div className="color legend-no-data-cs" />
             <div className="caption">No Data</div>
           </div>
@@ -405,8 +397,6 @@ export default class CensusMapReplacement extends Component {
           <div className="caption">Offers computer science</div>
           <div className="color legend-limited-cs" />
           <div className="caption">Limited or no CS opportunities</div>
-          <div className="color legend-inconclusive-cs" />
-          <div className="caption">Inconclusive data</div>
           <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
         </div>
