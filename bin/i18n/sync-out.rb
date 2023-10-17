@@ -224,56 +224,6 @@ module I18n
             I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
           end
         end
-
-        ### Standards
-        Dir.glob("i18n/locales/#{locale}/standards/*.json") do |loc_file|
-          # For every framework, we place the frameworks and categories in their
-          # respective places.
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          # These JSON files contain the framework name, a set of categories, and a
-          # set of standards.
-          loc_data = JSON.parse(File.read(loc_file))
-          framework = File.basename(loc_file, '.json')
-
-          # Frameworks
-          destination = "dashboard/config/locales/frameworks.#{locale}.json"
-          framework_data = File.exist?(destination) ?
-                             I18nScriptUtils.parse_file(destination).dig(locale, "data", "frameworks") || {} :
-                             {}
-          framework_data[framework] = {
-            "name" => loc_data["name"]
-          }
-          framework_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'frameworks', framework_data)
-          I18nScriptUtils.sanitize_data_and_write(framework_data, destination)
-
-          # Standard Categories
-          destination = "dashboard/config/locales/standard_categories.#{locale}.json"
-          category_data = File.exist?(destination) ?
-                            I18nScriptUtils.parse_file(destination).dig(locale, "data", "standard_categories") || {} :
-                            {}
-          (loc_data["categories"] || {}).keys.each do |category|
-            category_data[category] = {
-              "description" => loc_data["categories"][category]["description"]
-            }
-          end
-          category_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standard_categories', category_data)
-          I18nScriptUtils.sanitize_data_and_write(category_data, destination)
-
-          # Standards
-          destination = "dashboard/config/locales/standards.#{locale}.json"
-          standard_data = File.exist?(destination) ?
-                            I18nScriptUtils.parse_file(destination).dig(locale, "data", "standards") || {} :
-                            {}
-          (loc_data["standards"] || {}).keys.each do |standard|
-            standard_data[standard] = {
-              "description" => loc_data["standards"][standard]["description"]
-            }
-          end
-          standard_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standards', standard_data)
-          I18nScriptUtils.sanitize_data_and_write(standard_data, destination)
-        end
       end
 
       puts "Distribution finished!"
