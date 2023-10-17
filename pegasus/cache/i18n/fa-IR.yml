@@ -599,7 +599,7 @@ fa-IR:
   dashboard_progress_not_started: شروع نشده
   dashboard_progress_pair_programming: برنامه نویسی دونفره
   dashboard_progress_submitted: ثبت شده
-  dashboard_puzzle: پازل
+  dashboard_puzzle: معما
   dashboard_puzzle_solving: 'حل پازل:'
   dashboard_question: سؤال
   dashboard_sections_account_creation_question: چه کسی یک حساب کاربری دانش آموزی ساخته
@@ -799,7 +799,7 @@ fa-IR:
   header_about_team: کل تیم
   header_about_us: درباره ما
   header_course_catalog: سرفصل دوره‌ها
-  header_courses: مراحل
+  header_courses: دوره‌ها
   header_documentation: مستندات
   header_educate_beyond: فراتر از Code.org
   header_educate_community: جامعه‌ی مجازی
