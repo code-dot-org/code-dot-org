@@ -195,6 +195,7 @@ module I18n
 
         ### Dashboard
         Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
+          next if loc_file == File.join('i18n/locales', locale, "dashboard/#{locale}.yml")
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/blocks.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/course_offerings.json')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/block_categories.yml')
