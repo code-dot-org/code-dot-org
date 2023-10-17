@@ -56,6 +56,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
+      addMutationToMiniToolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
@@ -72,6 +73,39 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
 
   blocklyWrapper.Xml.createBlockOrderMap = createBlockOrderMap;
+}
+
+/**
+ * Adds a mutation element to a block if it should have an open miniflyout.
+ * CDO Blockly uses an unsupported method for serializing miniflyout state
+ * where arbitrary block attribute could be used to manage extra state.
+ * Mainline Blockly expects a mutator. The presence of the mutation element
+ * will trigger the block's domToMutation function to run, if it exists.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToMiniToolboxBlocks(blockElement) {
+  const miniflyoutAttribute = blockElement.getAttribute('miniflyout');
+  const existingMutationElement = blockElement.querySelector('mutation');
+  if (!miniflyoutAttribute || existingMutationElement) {
+    // The block is the wrong type or has somehow already been processed.
+    return;
+  }
+  // The default icon is a '+' symbol which represents a currently-closed flyout.
+  const useDefaultIcon = miniflyoutAttribute === 'open' ? 'false' : 'true';
+
+  // The mutation element does not exist, so create it.
+  const newMutationElement =
+    blockElement.ownerDocument.createElement('mutation');
+
+  // Create new mutation attribute based on original block attribute.
+  newMutationElement.setAttribute('useDefaultIcon', useDefaultIcon);
+
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(newMutationElement, blockElement.firstChild);
+
+  // Remove the miniflyout attribute from the parent block element.
+  blockElement.removeAttribute('miniflyout');
 }
 
 /**
