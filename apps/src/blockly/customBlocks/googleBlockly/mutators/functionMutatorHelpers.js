@@ -1,3 +1,4 @@
+// Common helper functions for procedure and behavior mutators.
 import msg from '@cdo/locale';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
@@ -5,9 +6,9 @@ import msg from '@cdo/locale';
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
 
 // If the definition block has a description property
-// under definitionBlock.description, move it to the description field
-// of the block, and delete the description property from the definition block.
-// If the block does not have a description field, don't move the description.
+// in extra state, either add a new editable input field to the block
+// for the description (if the modal function editor is enabled),
+// or set the description property on the block (if the modal function editor is disabled).
 export function handleLoadDescription(block, extraState) {
   const description = extraState['description'];
   if (useModalFunctionEditor) {
@@ -21,6 +22,10 @@ export function handleLoadDescription(block, extraState) {
   }
 }
 
+// Save the description to extra state.
+// If the modal function editor is enabled, we get the description
+// from the description field on the block. Otherwise we get it from
+// the description property on the block.
 export function handleSaveDescription(block, extraState) {
   let description = block.description;
   if (useModalFunctionEditor) {

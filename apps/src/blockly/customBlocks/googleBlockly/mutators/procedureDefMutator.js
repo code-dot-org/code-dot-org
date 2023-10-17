@@ -11,7 +11,10 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
-import {handleLoadDescription, handleSaveDescription} from './helpers';
+import {
+  handleLoadDescription,
+  handleSaveDescription,
+} from './functionMutatorHelpers';
 
 /**
  * A type guard which checks if the given block is a procedure block.
