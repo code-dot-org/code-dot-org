@@ -471,7 +471,8 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -520,7 +521,8 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -572,7 +574,9 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -617,7 +621,8 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
