@@ -8,6 +8,7 @@
 
   height: 60px;
   width: 60px;
+  background-size: 60px;
   padding: 0;
 
   border-width: 0;
@@ -318,7 +319,7 @@ h2.studentName {
   margin-bottom: 8px;
 }
 
-.submittedFeedback {
+.submittedEvaluation {
   display: flex;
   width: 170px;
   flex-direction: row;
@@ -425,6 +426,11 @@ p.errorMessage {
   display: flex;
   gap: 16px;
   position: relative;
+}
+
+.aiBotImg {
+  width: 42px;
+  height: 68px;
 }
 
 .greenAiAssessment {
