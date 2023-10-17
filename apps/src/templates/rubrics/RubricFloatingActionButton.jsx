@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
-const icon = require('@cdo/static/AI-FAB.png');
+const icon = require('@cdo/static/ai-fab-background.png');
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -65,15 +65,15 @@ export default function RubricFloatingActionButton({
         type="button"
       />
       {/* TODO: do not hardcode in AI setting */}
-      {isOpen && (
-        <RubricContainer
-          rubric={rubric}
-          studentLevelInfo={studentLevelInfo}
-          reportingData={reportingData}
-          currentLevelName={currentLevelName}
-          teacherHasEnabledAi
-        />
-      )}
+      <RubricContainer
+        rubric={rubric}
+        studentLevelInfo={studentLevelInfo}
+        reportingData={reportingData}
+        currentLevelName={currentLevelName}
+        initialTeacherHasEnabledAi
+        open={isOpen}
+        closeRubric={handleClick}
+      />
     </div>
   );
 }

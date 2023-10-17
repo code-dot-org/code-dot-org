@@ -43,7 +43,8 @@ header {
 }
 
 summary {
-  font-family: $gotham-bold;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 
   &:hover {
     cursor: pointer;

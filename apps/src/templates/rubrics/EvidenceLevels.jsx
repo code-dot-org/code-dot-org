@@ -5,7 +5,11 @@ import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {evidenceLevelShape, submittedEvaluationShape} from './rubricShapes';
 import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
-import {BodyThreeText, Heading6} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyThreeText,
+  Heading6,
+  StrongText,
+} from '@cdo/apps/componentLibrary/typography';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function EvidenceLevels({
@@ -16,12 +20,16 @@ export default function EvidenceLevels({
   radioButtonCallback,
   submittedEvaluation,
 }) {
+  const sortedEvidenceLevels = () => {
+    const newArray = [...evidenceLevels];
+    return newArray.sort((a, b) => b.understanding - a.understanding);
+  };
   if (canProvideFeedback) {
     const radioGroupName = `evidence-levels-${learningGoalKey}`;
     return (
       <div className={style.evidenceLevelSet}>
         <Heading6>{i18n.assignARubricScore()}</Heading6>
-        {evidenceLevels.map(evidenceLevel => (
+        {sortedEvidenceLevels().map(evidenceLevel => (
           <div
             key={evidenceLevel.id}
             className={classNames(
@@ -53,7 +61,7 @@ export default function EvidenceLevels({
     return (
       <div className={style.evidenceLevelSet}>
         <Heading6>{i18n.rubricScores()}</Heading6>
-        {evidenceLevels.map(evidenceLevel => (
+        {sortedEvidenceLevels().map(evidenceLevel => (
           <div
             key={evidenceLevel.id}
             className={classNames(style.evidenceLevelOption, {
@@ -63,8 +71,10 @@ export default function EvidenceLevels({
             })}
           >
             {/*TODO: [DES-321] Label-two styles here*/}
-            <BodyThreeText className={style.evidenceLevelLabel}>
-              {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
+            <BodyThreeText>
+              <StrongText>
+                {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
+              </StrongText>
             </BodyThreeText>
             <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
           </div>

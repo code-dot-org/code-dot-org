@@ -239,6 +239,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Comórtas Litrithe"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Buntús na Ríomheolaíochta"
+        },
         "csd2-2019/Lists": {
           "name": "Liostaí"
         },
@@ -352,6 +355,30 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Comórtas Litrithe"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Seicheamhú"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Lúba"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Teagmhais"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Coinníollacha"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Feidhmeanna"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Athróga"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Lúba \"Do Gach\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Saotharlann na Sprideanna"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Mapaí Meidhreacha"
@@ -526,6 +553,9 @@
         },
         "express-2021/lesson-1": {
           "name": "Cóisir Dhamhsa"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Buntús na Ríomheolaíochta"
         },
         "csd2-2022/Peer Review and Final Touches": {
           "name": "Piarmheasúnú agus Bailchríoch"
@@ -713,9 +743,6 @@
         "express-2023/Dance Party": {
           "name": "Cóisir Dhamhsa"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "An Uair Chódála 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Buneolas ar an tSaotharlann Aipeanna"
         },
@@ -757,12 +784,6 @@
         },
         "oceans/Oceans": {
           "name": "AI ar son an Aigéin"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Spraotharlann"
@@ -1114,6 +1135,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Sár-Dhúshlán - Cuimsitheach"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "An Uair Chódála 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Míreanna Mearaí"

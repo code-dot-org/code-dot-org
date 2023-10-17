@@ -227,6 +227,12 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Spelovanje"
         },
+        "K5-OnlinePD/Planning": {
+          "name": "Planiranje"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Slijedeći Koraci"
+        },
         "csd2-2019/Lists": {
           "name": "Liste"
         },
@@ -298,6 +304,24 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Spelovanje"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Petlje"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Događaji"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcije"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Varijable"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Od-Do-Za Petlje"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Vesele Mape"
@@ -408,6 +432,12 @@
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planiranje"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Slijedeći Koraci"
         },
         "csd3-2022/Variables": {
           "name": "Varijable"
@@ -560,9 +590,6 @@
         "pre-express-2023/Sequencing with Scrat": {
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Sat Kodiranja 2013"
-        },
         "artist/Artist": {
           "name": "Umjetnik"
         },
@@ -589,12 +616,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "Sata Kodiranja Minecraft-a"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Play Lab"
@@ -928,6 +949,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstremni izazov - sveobuhvatan"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Sat Kodiranja 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Slagalica",

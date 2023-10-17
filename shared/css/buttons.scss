@@ -10,8 +10,7 @@
   height: 34px;
   line-height: 20px;
   font-size: 14px;
-  font-family: $gotham-regular;
-  font-weight: normal;
+  @include main-font-regular;
   letter-spacing: normal;
   text-align: center;
   vertical-align: middle;
