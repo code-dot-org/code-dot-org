@@ -1,78 +1,10 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import uniq from 'lodash/uniq';
+import classNames from 'classnames';
 
-const commonI18n = require('@cdo/locale');
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import Chip from './_Chip';
 import moduleStyles from './chip.module.scss';
-
-export interface ChipProps {
-  /** Chip label */
-  label: string;
-  /** Chip name*/
-  name: string;
-  /** Chip value */
-  value: string;
-  /** Chip checked state */
-  checked: boolean;
-  /** Chip required state */
-  required: boolean;
-  /** Chip disabled state */
-  disabled?: boolean;
-  /** Chip onChange handler*/
-  onCheckedChange: (checked: boolean) => void;
-}
-
-export const Chip: React.FunctionComponent<ChipProps> = ({
-  label,
-  name,
-  value,
-  checked,
-  required,
-  disabled,
-  onCheckedChange,
-}) => {
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    // Reset validity on every render so it gets checked again.
-    // Otherwise, removing the `required` attribute doesn't work as expected.
-    const input = inputRef.current;
-    if (input) {
-      input.setCustomValidity('');
-    }
-  }, [inputRef, onCheckedChange]);
-
-  // TODO:
-  //  - add sizes
-  // - remove multiSelectGroup
-
-  return (
-    <div>
-      <label className={moduleStyles.chip}>
-        <input
-          ref={inputRef}
-          type="checkbox"
-          name={name}
-          value={value}
-          checked={checked}
-          required={required}
-          disabled={disabled}
-          onChange={e => {
-            onCheckedChange(e.target.checked);
-            // Reset validity so it gets checked again.
-            e.target.setCustomValidity('');
-          }}
-          onInvalid={e => {
-            (e.target as HTMLInputElement).setCustomValidity(
-              commonI18n.chooseAtLeastOne()
-            );
-          }}
-        />
-        {label}
-      </label>
-    </div>
-  );
-};
 
 export interface ChipsProps {
   /** Chips group label */
@@ -83,7 +15,7 @@ export interface ChipsProps {
   required?: boolean;
   /** Chips disabled state */
   disabled?: boolean;
-  /** List of chips to render ({value: string, label: string}[]) */
+  /** List of chips to render */
   options: {value: string; label: string}[];
   /** List of selected chips values */
   values: string[];
@@ -91,9 +23,10 @@ export interface ChipsProps {
   setValues: (values: string[]) => void;
   /** Size of chips */
   size?: ComponentSizeXSToL;
+  /** Custom className */
+  className?: string;
 }
 
-// TODO: add different sizes
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
@@ -116,6 +49,7 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   values,
   setValues,
   size = 'm',
+  className,
 }) => {
   // NOTE: The `name` will show up in the DOM with an appended `[]`, so Rails
   // natively understands it as an array. Set `required` to `true` if you want
@@ -124,7 +58,14 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
   const inputName = `${name}[]`;
 
   return (
-    <div className={moduleStyles.chips} data-testid={`chips-${name}`}>
+    <div
+      className={classNames(
+        moduleStyles.chips,
+        moduleStyles[`chips-${size}`],
+        className
+      )}
+      data-testid={`chips-${name}`}
+    >
       <fieldset>
         {label && <label className={moduleStyles.groupLabel}>{label}</label>}
 
