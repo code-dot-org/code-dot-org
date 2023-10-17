@@ -35,8 +35,8 @@ describe I18n::Resources::Dashboard::MarketingAnnouncements::SyncIn do
     end
   end
 
-  describe '#perform' do
-    let(:process_resource) {described_instance.send(:process)}
+  describe '#process' do
+    let(:run_process) {described_instance.process}
     let(:expected_i18n_source_file_content) do
       <<~JSON.strip
         {
@@ -55,9 +55,10 @@ describe I18n::Resources::Dashboard::MarketingAnnouncements::SyncIn do
     end
 
     it 'prepares the i18n source file' do
-      execution_sequence = sequence('execution')
-      expect_i18n_source_file_creation.in_sequence(execution_sequence)
-      process_resource
+      run_process
+
+      assert File.exist?(i18n_source_file_path)
+      assert_equal expected_i18n_source_file_content, File.read(i18n_source_file_path)
     end
   end
 end
