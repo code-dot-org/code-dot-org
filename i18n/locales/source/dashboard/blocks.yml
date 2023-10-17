@@ -55,7 +55,7 @@ en:
             '2.00': large
             '3.00': extra large
       Dancelab_ai:
-        text: use AI to [VALUE][0]
+        text: use AI [VALUE][0]
       Dancelab_aiText:
         text: use AI to [VALUE][0]
       Dancelab_alternateMoves:
