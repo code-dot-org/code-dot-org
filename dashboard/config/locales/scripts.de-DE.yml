@@ -7782,8 +7782,14 @@ de:
               display_name: 'Kapitel 2: Erstellen von Spielen'
         virtual-pl-csa-summer-2024-day1:
           title: Tag 1
+        virtual-pl-csa-summer-day1:
+          title: Tag 1
         virtual-pl-csa-summer-day2:
           title: Tag 2
+        virtual-pl-csa-summer-day3:
+          title: Tag 3
+        virtual-pl-csa-summer-day4:
+          title: Tag 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -7810,6 +7816,14 @@ de:
           lessons:
             lesson-3:
               name: Prüfung
+        virtual-pl-csp-summer-day1:
+          title: Tag 1
+        virtual-pl-csp-summer-day2:
+          title: Tag 2
+        virtual-pl-csp-summer-day3:
+          title: Tag 3
+        virtual-pl-csp-summer-day4:
+          title: Tag 4
         virustest:
           description_short: 'Entwickle mit Sprite Lab die Simulation eines Virenausbruchs. '
           title: Simulieren eines Ausbruchs

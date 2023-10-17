@@ -983,12 +983,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartir un artefacte creatiu amb els companys."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": ""
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": ""
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
         },
@@ -3343,15 +3337,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Fer servir la terminologia correcta per referir-se al ratolí, al ratolí tàctil o a la pantalla tàctil."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Desenvolupar programes que responguin a esdeveniments cronometrats."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Il·lustrar els canvis en l'estat d'ànim que transmet un poema."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Representar el llenguatge literal i figurat en un text."
         }
       }
     }
