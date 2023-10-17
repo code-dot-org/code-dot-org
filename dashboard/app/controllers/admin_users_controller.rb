@@ -103,7 +103,7 @@ class AdminUsersController < ApplicationController
       level: level
     )
     if user_level.persisted? &&
-      user_level.best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
+        user_level.best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
       flash[:alert] = "UserLevel (ID: #{user_level.id}) already green"
       redirect_to :manual_pass_form
       return
@@ -210,7 +210,7 @@ class AdminUsersController < ApplicationController
         users = restricted_users.where(hashed_email: User.hash_email(search_term)).or(restricted_users.where(username: search_term))
         @user = users.first
         if users.many?
-          flash[:notice] = "More than one User matches email address.  "\
+          flash[:notice] = "More than one User matches email address.  " \
                          "Showing first result.  Matching User IDs - #{users.pluck(:id).join ','}"
         end
       end
@@ -219,9 +219,9 @@ class AdminUsersController < ApplicationController
       end
     elsif permission.present?
       @users_with_permission = restricted_users.
-                                 joins(:permissions).
-                                 where(user_permissions: {permission: permission}).
-                                 order(:email)
+        joins(:permissions).
+        where(user_permissions: {permission: permission}).
+        order(:email)
       @users_with_permission = @users_with_permission.page(page).per(page_size)
     end
   end
@@ -284,8 +284,8 @@ class AdminUsersController < ApplicationController
 
     flash[:alert] = "MERGED: #{params[:studio_person_a_id]} and #{params[:studio_person_b_id]}"
     redirect_to studio_person_form_path
-  rescue ArgumentError => e
-    flash[:alert] = "MERGE FAILED: #{e.message}"
+  rescue ArgumentError => exception
+    flash[:alert] = "MERGE FAILED: #{exception.message}"
     redirect_to studio_person_form_path
   end
 
@@ -297,8 +297,8 @@ class AdminUsersController < ApplicationController
 
     flash[:alert] = "SPLIT: #{params[:studio_person_id]}"
     redirect_to studio_person_form_path
-  rescue ArgumentError => e
-    flash[:alert] = "SPLIT FAILED: #{e.message}"
+  rescue ArgumentError => exception
+    flash[:alert] = "SPLIT FAILED: #{exception.message}"
     redirect_to studio_person_form_path
   end
 
@@ -310,27 +310,25 @@ class AdminUsersController < ApplicationController
 
     flash[:alert] = "ADDED: #{params[:email]} to #{params[:studio_person_id]}"
     redirect_to studio_person_form_path
-  rescue ArgumentError => e
-    flash[:alert] = "ADD EMAIL FAILED: #{e.message}"
+  rescue ArgumentError => exception
+    flash[:alert] = "ADD EMAIL FAILED: #{exception.message}"
     redirect_to studio_person_form_path
   end
 
-  private
-
-  def restricted_users
+  private def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
 
-  def page
+  private def page
     params[:page] || 1
   end
 
-  def page_size
+  private def page_size
     return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
     params[:page_size] == 'All' ? @users_with_permission.count : params[:page_size]
   end
 
-  def set_target_user_from_identifier(user_identifier)
+  private def set_target_user_from_identifier(user_identifier)
     if user_identifier
       user_identifier.strip!
       @target_user = User.from_identifier(user_identifier)

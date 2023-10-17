@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Десятки миллионов учеников и около 1 миллиона учителей по всему миру используют курсы Code.org.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## История создания
 
 Code.org был запущен двумя братьями близнецами Хайди и Али Партови в 2013 году. Всё началось с [видео, которое продвигало компьютерные науки](https://www.youtube.com/watch?v=nKIu9yen5nc). Это видео стало №1 на Ютубе за 1 день и 15 000 школ протянули руку, чтобы помочь нам. С тех пор мы выросли от кучки волонтеров до построения целой организации, поддерживаемой международным движением. Мы верим, что качественное образование в области компьютерных наук может быть доступно для каждого ребенка, а не только нескольким счастливчикам.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Что мы делаем
 

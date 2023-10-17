@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Siegħa tal-Kodiċi u l-Kumitat Konsultattiv tas-CSEDWeek
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Siegħa tal-Kodiċi u l-Kumitat Konsultattiv tas-CSEDWeek
 
 {{ advisory-committee/about_headshots }}
 

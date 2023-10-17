@@ -23,7 +23,7 @@ export function puzzleComplete(state) {
   return {
     isAchieved: true,
     message: msg.puzzleCompleted(),
-    successIconUrl: ''
+    successIconUrl: '',
   };
 }
 
@@ -46,6 +46,6 @@ export function usingHints(state) {
     isAchieved,
     message,
     successIconUrl: '',
-    failureIconUrl: ''
+    failureIconUrl: '',
   };
 }

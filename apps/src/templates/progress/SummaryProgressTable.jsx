@@ -13,7 +13,7 @@ class SummaryProgressTable extends React.Component {
     minimal: PropTypes.bool,
 
     // redux provided
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
   };
 
   render() {
@@ -39,19 +39,21 @@ class SummaryProgressTable extends React.Component {
           </thead>
         )}
         <tbody>
-          {/*Filter our lessons to those that will be rendered, and then make
+          {
+            /*Filter our lessons to those that will be rendered, and then make
             every other (remaining) one dark */
-          lessons
-            .map((lesson, index) => ({unfilteredIndex: index, lesson}))
-            .filter(item => this.props.lessonIsVisible(item.lesson))
-            .map((item, filteredIndex) => (
-              <SummaryProgressRow
-                key={item.unfilteredIndex}
-                levels={levelsByLesson[item.unfilteredIndex]}
-                lesson={item.lesson}
-                dark={filteredIndex % 2 === 1}
-              />
-            ))}
+            lessons
+              .map((lesson, index) => ({unfilteredIndex: index, lesson}))
+              .filter(item => this.props.lessonIsVisible(item.lesson))
+              .map((item, filteredIndex) => (
+                <SummaryProgressRow
+                  key={item.unfilteredIndex}
+                  levels={levelsByLesson[item.unfilteredIndex]}
+                  lesson={item.lesson}
+                  dark={filteredIndex % 2 === 1}
+                />
+              ))
+          }
         </tbody>
       </table>
     );
@@ -65,14 +67,14 @@ const styles = {
     borderLeftColor: color.border_gray,
     borderTopColor: color.border_gray,
     borderBottomColor: color.border_light_gray,
-    borderRightColor: color.border_light_gray
+    borderRightColor: color.border_light_gray,
   },
   headerRow: {
-    backgroundColor: color.table_header
-  }
+    backgroundColor: color.table_header,
+  },
 };
 
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({
-  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs)
+  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs),
 }))(SummaryProgressTable);

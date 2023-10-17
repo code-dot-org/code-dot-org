@@ -98,7 +98,7 @@ module Api::V1::Pd
     def update
       application_data = application_params.to_h
 
-      if application_data[:status] != @application.status
+      if application_data[:status] && (application_data[:status] != @application.status)
         status_changed = true
       end
 
@@ -131,14 +131,15 @@ module Api::V1::Pd
         application_data[interview_field] = application_data[interview_field].strip_utf8mb4 if application_data[interview_field]
       end
 
-      if current_user.workshop_admin?
-        @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
+      if current_user.workshop_admin? && application_admin_params.key?(:form_data)
+        @application.form_data_hash = application_admin_params[:form_data]
       end
 
       unless @application.update(application_data)
         return render status: :bad_request, json: {errors: @application.errors.full_messages}
       end
 
+      @application.send_decision_email if status_changed && @application.should_send_decision_email?
       @application.update_scholarship_status(scholarship_status) if scholarship_status_changed
 
       @application.update_status_timestamp_change_log(current_user) if status_changed
@@ -168,9 +169,7 @@ module Api::V1::Pd
       render json: filtered_applications, each_serializer: ApplicationSearchSerializer
     end
 
-    private
-
-    def get_applications_by_role(role, include_associations: true)
+    private def get_applications_by_role(role, include_associations: true)
       # hide incomplete applications for people who are not workshop admins
       applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
       applications_of_type = applications_of_type.where.not(status: 'incomplete') unless current_user.workshop_admin?
@@ -194,7 +193,7 @@ module Api::V1::Pd
       end
     end
 
-    def application_params
+    private def application_params
       params.require(:application).permit(
         :status,
         :notes,
@@ -217,7 +216,7 @@ module Api::V1::Pd
       )
     end
 
-    def application_admin_params
+    private def application_admin_params
       params.require(:application).tap do |application_params|
         # Permit form_data and everything under it
         application_params.permit(:form_data).permit!
@@ -232,7 +231,7 @@ module Api::V1::Pd
     ROLES = TYPES_BY_ROLE.keys
     TEACHER_ROLES = ROLES.select {|role| role.to_s.include?('teachers')}
 
-    def empty_application_data
+    private def empty_application_data
       {}.tap do |app_data|
         TYPES_BY_ROLE.each do |role, app_type|
           app_data[role] = {}
@@ -245,7 +244,7 @@ module Api::V1::Pd
       end
     end
 
-    def get_csv_text(applications, role)
+    private def get_csv_text(applications, role)
       prefetch applications, role: role
       course = role.to_s.split('_').first # course is the first part of role, e.g. 'csf'
 
@@ -255,11 +254,11 @@ module Api::V1::Pd
       ].join
     end
 
-    def get_optional_columns(_regional_partner_value)
+    private def get_optional_columns(_regional_partner_value)
       {registered_workshop: false}
     end
 
-    def prefetch(applications, role: nil)
+    private def prefetch(applications, role: nil)
       type = TYPES_BY_ROLE[role.try(&:to_sym)]
       type.prefetch_associated_models applications
       applications

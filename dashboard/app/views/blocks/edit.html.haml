@@ -25,7 +25,7 @@
       %div
         = f.submit class: 'btn', id: 'block_submit'
       %br
-        = f.submit class: 'btn btn-info', value: 'Save as Clone', data: {'disable-with': 'Cloning...'}
+        = f.submit class: 'btn btn-info', id: 'block_clone', value: 'Save as Clone', data: {'disable-with': 'Cloning...'}
 
     - unless @block.new_record?
       = form_for(@block,

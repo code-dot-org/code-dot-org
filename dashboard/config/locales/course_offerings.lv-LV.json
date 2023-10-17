@@ -2,27 +2,20 @@
   "lv-LV": {
     "data": {
       "course_offerings": {
-        "coursea": "A kurss",
-        "courseb": "B kurss",
-        "coursec": "C kurss",
-        "coursed": "D kurss",
-        "coursee": "E kurss",
-        "coursef": "F kurss",
-        "express": "Ekspress kurss",
-        "csp": "AP® Datorzinātņu Principi",
-        "flappy": "Flappy kods",
-        "jigsaw": "Puzle",
         "algebra": "Datorzinātne Algebrā",
         "artist": "Mākslinieks",
         "course1": "Kurss 1",
         "course2": "Kurss 2",
         "course3": "Kurss 3",
         "course4": "4. kurss",
-        "frozen": "Programmē ar Annu un Elzu",
-        "playlab": "Spēles laboratorija",
+        "csp": "AP® Datorzinātņu Principi",
         "edit-code": "rediģēt kodu",
-        "step": "solis",
-        "soccer": "futbols"
+        "flappy": "Flappy kods",
+        "frozen": "Programmē ar Annu un Elzu",
+        "jigsaw": "Puzle",
+        "playlab": "Spēles laboratorija",
+        "soccer": "futbols",
+        "step": "solis"
       }
     }
   }

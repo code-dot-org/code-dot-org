@@ -5,6 +5,9 @@
 // It should be imported to the pages that are listed in Phase 1 updates.
 // Therefore never mind if you meet !important anywhere in this file. It will be used only if there is no other option than to overwrite styles
 // in a way that updating styles of shared elements would only affect Phase1 pages.
+html {
+  font-size: 100%;
+}
 
 body {
   font-size: 100%;
@@ -38,7 +41,7 @@ h6 {
   color: $neutral_dark;
   font-size: 1em;
   line-height: 1.2;
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -84,7 +87,7 @@ p {
     font-size: 14px;
   }
   a {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     font-size:  1em;
   }
 
@@ -96,13 +99,13 @@ p {
     .signup-field-label {
       label {
         color: $neutral_dark;
-        font-family: $gotham-bold;
+        @include main-font-semi-bold;
         font-size: 1em;
       }
     }
 
     .submit {
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
       padding: 10px 20px;
       height: auto;
       margin-right: 0;
@@ -211,7 +214,7 @@ p {
         color: $neutral_dark;
 
         a {
-          font-family: $gotham-extra-bold;
+          @include main-font-bold;
           text-decoration: underline;
           color: $brand_secondary_default;
           &:hover {
@@ -221,7 +224,7 @@ p {
       }
 
       .launch {
-        font-family: $gotham-bold;
+        @include main-font-semi-bold;
         font-size: 1em !important;
         padding: 10px 20px;
         height: auto;
@@ -250,7 +253,7 @@ p {
       }
 
       .course-explorer-gray-button {
-        font-family: $gotham-bold;
+        @include main-font-semi-bold;
         font-size: 1em !important;
         color: $neutral_dark;
         background-color: $neutral_white;
@@ -282,7 +285,7 @@ p {
     color: $neutral_white;
 
     .course-explorer-gray-button {
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
       font-size: .8em !important;
       background-color: $brand_primary_default;
       border: 2px solid $neutral_white;
@@ -358,7 +361,7 @@ p {
   }
 
   .tutorial-gray {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     font-size: 1em !important;
     padding: 10px 16px;
     height: auto;
@@ -412,5 +415,24 @@ p {
 .newProject-button-tile {
   &:hover {
     border-color: $neutral_dark70 !important;
+  }
+}
+
+.tutorial-promo-container.dance-party-container {
+  .tutorial-description {
+    color: $neutral_white;
+  }
+}
+
+.full-resource-block .resource-title {
+  // Overwrite global full-resource-block styling for phase1 styles
+  color: $neutral_dark !important;
+}
+
+.featured-project {
+  > a {
+    > div {
+      background-color: $neutral_light;
+    }
   }
 }

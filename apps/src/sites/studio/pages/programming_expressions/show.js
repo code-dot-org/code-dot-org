@@ -11,7 +11,7 @@ import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBloc
 
 $(document).ready(() => {
   registerReducers({
-    instructionsDialog
+    instructionsDialog,
   });
   const customBlocksConfig = getScriptData('customBlocksConfig');
   if (customBlocksConfig) {

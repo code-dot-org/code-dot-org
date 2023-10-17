@@ -91,7 +91,7 @@ class HourOfCodeHelpersTest < Minitest::Test
         en: 'English'
       },
       locale_code: {
-        "es-es": "Spanish (Spain)"
+        'es-es': "Spanish (Spain)"
       }
     }
     I18n.backend.store_translations I18n.default_locale, sources
@@ -111,13 +111,13 @@ class HourOfCodeHelpersTest < Minitest::Test
   end
 
   def test_get_translated_language_names
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     translations = {
       language_code: {
         en: 'Inglesa'
       },
       locale_code: {
-        "es-es": "Español (España)"
+        'es-es': "Español (España)"
       }
     }
     I18n.enforce_available_locales = false

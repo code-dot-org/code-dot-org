@@ -6,7 +6,7 @@ export default {
   // The component and subcomponents properties are somewhat invalid since all headings hold the
   // same weight here, but Storybook requires us to set the component property.
   component: Heading1,
-  subcomponents: {Heading2, Heading3}
+  subcomponents: {Heading2, Heading3},
 };
 
 //

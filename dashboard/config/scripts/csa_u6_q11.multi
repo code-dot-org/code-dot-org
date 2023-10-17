@@ -20,3 +20,5 @@ Assume that `numList` has been initialized with the following `Integer` objects:
 
 ![](https://images.code.org/643cea182cb5f30a1ce5e10ccedf5e66-image-1634924365431.png)
 MARKDOWN
+
+allow_multiple_attempts true

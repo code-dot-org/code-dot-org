@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import {
   addVocabulary,
   updateVocabulary,
-  removeVocabulary
+  removeVocabulary,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
@@ -22,7 +22,7 @@ class VocabulariesEditor extends Component {
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
     addVocabulary: PropTypes.func.isRequired,
     updateVocabulary: PropTypes.func.isRequired,
-    removeVocabulary: PropTypes.func.isRequired
+    removeVocabulary: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -31,7 +31,7 @@ class VocabulariesEditor extends Component {
       confirmRemovalDialogOpen: false,
       vocabularyForRemoval: null,
       newVocabularyDialogOpen: false,
-      vocabularyForEdit: null
+      vocabularyForEdit: null,
     };
   }
 
@@ -43,7 +43,7 @@ class VocabulariesEditor extends Component {
           onMouseDown={() =>
             this.setState({
               newVocabularyDialogOpen: true,
-              vocabularyForEdit: rowData
+              vocabularyForEdit: rowData,
             })
           }
         >
@@ -55,7 +55,7 @@ class VocabulariesEditor extends Component {
           onMouseDown={() =>
             this.setState({
               confirmRemovalDialogOpen: true,
-              vocabularyForRemoval: rowData
+              vocabularyForRemoval: rowData,
             })
           }
         >
@@ -72,57 +72,57 @@ class VocabulariesEditor extends Component {
         header: {
           label: 'Word',
           props: {
-            style: {width: '20%'}
-          }
+            style: {width: '20%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'definition',
         header: {
           label: 'Definition',
           props: {
-            style: {width: '70%'}
-          }
+            style: {width: '70%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'actions',
         header: {
           label: 'Actions',
           props: {
-            style: {width: '10%'}
-          }
+            style: {width: '10%'},
+          },
         },
         cell: {
           formatters: [this.actionsCellFormatter],
           props: {
             style: {
-              ...lessonEditorTableStyles.actionsCell
-            }
-          }
-        }
-      }
+              ...lessonEditorTableStyles.actionsCell,
+            },
+          },
+        },
+      },
     ];
   }
 
   constructVocabularyOption = vocabulary => ({
     value: vocabulary.key,
     label: `${vocabulary.word} - ${vocabulary.definition}`,
-    vocabulary
+    vocabulary,
   });
 
   afterVocabularySave = vocabulary => {
@@ -148,7 +148,7 @@ class VocabulariesEditor extends Component {
   handleRemoveVocabularyDialogClose = () => {
     this.setState({
       confirmRemovalDialogOpen: false,
-      vocabularyForRemoval: null
+      vocabularyForRemoval: null,
     });
   };
 
@@ -166,7 +166,7 @@ class VocabulariesEditor extends Component {
             handleClose={() =>
               this.setState({
                 newVocabularyDialogOpen: false,
-                vocabularyForEdit: null
+                vocabularyForEdit: null,
               })
             }
             courseVersionId={this.props.courseVersionId}
@@ -176,9 +176,7 @@ class VocabulariesEditor extends Component {
         )}
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
-            body={`Are you sure you want to remove the vocabulary "${
-              this.state.vocabularyForRemoval.word
-            }" from this lesson?`}
+            body={`Are you sure you want to remove the vocabulary "${this.state.vocabularyForRemoval.word}" from this lesson?`}
             cancelText="Cancel"
             confirmText="Delete"
             confirmType="danger"
@@ -195,7 +193,7 @@ class VocabulariesEditor extends Component {
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
             additionalQueryParams={{
-              courseVersionId: this.props.courseVersionId
+              courseVersionId: this.props.courseVersionId,
             }}
             searchUrl={'vocabularies/search'}
             constructOptions={this.constructSearchOptions}
@@ -220,12 +218,12 @@ class VocabulariesEditor extends Component {
 
 const styles = {
   search: {
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   edit: {
     fontSize: 14,
@@ -234,7 +232,7 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     width: '50%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   remove: {
     fontSize: 14,
@@ -243,7 +241,7 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     width: '50%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   addButton: {
     background: '#eee',
@@ -253,19 +251,19 @@ const styles = {
     padding: 7,
     textAlign: 'center',
     marginTop: 10,
-    marginLeft: 0
-  }
+    marginLeft: 0,
+  },
 };
 
 export const UnconnectedVocabulariesEditor = VocabulariesEditor;
 
 export default connect(
   state => ({
-    vocabularies: state.vocabularies
+    vocabularies: state.vocabularies,
   }),
   {
     addVocabulary,
     updateVocabulary,
-    removeVocabulary
+    removeVocabulary,
   }
 )(VocabulariesEditor);

@@ -8,6 +8,7 @@ module Api::V1::Pd::Application
     self.use_transactional_test_case = true
 
     setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
       @teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
       @test_params = {
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY, :approved_yes),
@@ -54,7 +55,7 @@ module Api::V1::Pd::Application
         principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
         principal_pay_fee: 'Yes, my school would be able to pay the full program fee.'
       }
-      actual_principal_fields = @teacher_application.sanitize_form_data_hash.slice(*expected_principal_fields.keys)
+      actual_principal_fields = @teacher_application.sanitized_form_data_hash.slice(*expected_principal_fields.keys)
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
@@ -77,7 +78,7 @@ module Api::V1::Pd::Application
 
       assert_equal(
         'Yes',
-        teacher_application.reload.sanitize_form_data_hash[:principal_wont_replace_existing_course]
+        teacher_application.reload.sanitized_form_data_hash[:principal_wont_replace_existing_course]
       )
     end
 
@@ -106,7 +107,7 @@ module Api::V1::Pd::Application
         principal_schedule_confirmed: "Other: this is the other for master schedule",
         principal_wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
-      actual_principal_fields = teacher_application.reload.sanitize_form_data_hash.select do |k, _|
+      actual_principal_fields = teacher_application.reload.sanitized_form_data_hash.select do |k, _|
         expected_principal_fields.key?(k)
       end
 
@@ -115,7 +116,7 @@ module Api::V1::Pd::Application
 
     test 'Sends principal approval received emails on successful create' do
       ADMIN_APPROVAL_EMAILS.each do |email_type|
-        TEACHER_APPLICATION_CLASS.any_instance.expects(:queue_email).with(email_type, deliver_now: true)
+        TEACHER_APPLICATION_CLASS.any_instance.expects(:send_pd_application_email).with(email_type)
       end
 
       put :create, params: @test_params

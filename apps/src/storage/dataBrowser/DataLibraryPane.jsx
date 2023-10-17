@@ -18,11 +18,11 @@ class DataLibraryPane extends React.Component {
   static propTypes = {
     // Provided via redux
     libraryManifest: PropTypes.object.isRequired,
-    onShowWarning: PropTypes.func.isRequired
+    onShowWarning: PropTypes.func.isRequired,
   };
 
   state = {
-    search: ''
+    search: '',
   };
 
   onError = error => {
@@ -52,7 +52,7 @@ class DataLibraryPane extends React.Component {
       searchValue = e.target.value.toLowerCase();
     }
     this.setState({
-      search: searchValue
+      search: searchValue,
     });
   };
 
@@ -118,11 +118,11 @@ class DataLibraryPane extends React.Component {
 
 export default connect(
   state => ({
-    libraryManifest: state.data.libraryManifest || {}
+    libraryManifest: state.data.libraryManifest || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
       dispatch(showWarning(warningMsg, warningTitle));
-    }
+    },
   })
 )(DataLibraryPane);

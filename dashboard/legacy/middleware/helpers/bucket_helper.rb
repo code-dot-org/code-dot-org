@@ -128,7 +128,7 @@ class BucketHelper
     end
   end
 
-  def copy_files(src_channel, dest_channel, options={})
+  def copy_files(src_channel, dest_channel, options = {})
     src_owner_id, src_storage_app_id = storage_decrypt_channel_id(src_channel)
     dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
 
@@ -165,7 +165,9 @@ class BucketHelper
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
 
-    s3.copy_object(bucket: @bucket, copy_source: ERB::Util.url_encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
+    encoded_location = ERB::Util.url_encode("#{@bucket}/#{key}")
+    copy_source = "#{encoded_location}?versionId=#{version}"
+    s3.copy_object(bucket: @bucket, copy_source: copy_source, key: key, metadata_directive: 'REPLACE')
   end
 
   def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
@@ -352,9 +354,9 @@ class BucketHelper
       map do |version|
         comment = with_comments ?
           DASHBOARD_DB[:project_commits].
-          select(:comment).
-          where(storage_app_id: storage_app_id, object_version_id: version.version_id).
-          first&.
+            select(:comment).
+            where(storage_app_id: storage_app_id, object_version_id: version.version_id).
+            first&.
           fetch(:comment) :
           nil
         {
@@ -401,9 +403,9 @@ class BucketHelper
         version_restored = true
       rescue Aws::S3::Errors::NoSuchVersion
         # Do nothing - we'll attempt the fallback below.
-      rescue Aws::S3::Errors::InvalidArgument => err
+      rescue Aws::S3::Errors::InvalidArgument => exception
         # On invalid version, try the fallback - otherwise reraise.
-        raise unless invalid_version_id?(err)
+        raise unless invalid_version_id?(exception)
       end
     end
 

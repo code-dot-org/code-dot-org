@@ -32,6 +32,6 @@ export const useDefaultOptions = (name, label) => {
     name,
     label: contextLabel,
     controlWidth: {md: 6},
-    required: true
+    required: true,
   };
 };

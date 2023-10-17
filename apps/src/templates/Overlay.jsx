@@ -18,18 +18,18 @@ const style = {
   width: '100%',
   opacity: 0.4,
   backgroundColor: 'black',
-  zIndex: Z_INDEX
+  zIndex: Z_INDEX,
 };
 
 const craftStyle = {
-  opacity: 0.8
+  opacity: 0.8,
 };
 
 class Overlay extends React.Component {
   static propTypes = {
     visible: PropTypes.bool,
     hide: PropTypes.func,
-    isMinecraft: PropTypes.bool
+    isMinecraft: PropTypes.bool,
   };
 
   render() {
@@ -47,14 +47,14 @@ export default connect(
   function propsFromStore(state) {
     return {
       visible: state.instructions.overlayVisible,
-      isMinecraft: !!state.pageConstants.isMinecraft
+      isMinecraft: !!state.pageConstants.isMinecraft,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      hide: function() {
+      hide: function () {
         dispatch(hideOverlay());
-      }
+      },
     };
   }
 )(Radium(Overlay));

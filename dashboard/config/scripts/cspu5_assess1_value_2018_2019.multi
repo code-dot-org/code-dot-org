@@ -23,3 +23,5 @@ It is important to note that if a variable is assigned a new value, the lines of
 * c = b / a which equals 8 / 2 = 4
 * By the end of the program, value of c = 4
 MARKDOWN
+
+allow_multiple_attempts true

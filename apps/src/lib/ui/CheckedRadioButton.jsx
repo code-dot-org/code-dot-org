@@ -9,7 +9,7 @@ export class CheckedRadioButton extends Component {
     checked: PropTypes.bool.isRequired,
     value: PropTypes.string.isRequired,
     // onRadioButtonChange is required if disabledMode=false
-    onRadioButtonChange: PropTypes.func
+    onRadioButtonChange: PropTypes.func,
   };
 
   handleChange = event => {

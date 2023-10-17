@@ -15,7 +15,7 @@ describe('Code Connection extension', () => {
       async_command: command => {
         expect(command).to.eql('move?direction=forward');
         done();
-      }
+      },
     };
     executeUserCode(mockClient, 'move(0, "forward")');
   });
@@ -25,7 +25,7 @@ describe('Code Connection extension', () => {
       async_command: command => {
         expect(command).to.eql('place?slotNum=0&direction=forward');
         done();
-      }
+      },
     };
     executeUserCode(mockClient, 'place(0, "0", "forward")');
   });
@@ -37,7 +37,7 @@ describe('Code Connection extension', () => {
           'give?player=steve&itemName=stone&data=1&amount=2'
         );
         done();
-      }
+      },
     };
     executeUserCode(mockClient, `give(0, "steve", item(0, "stone", "1"), "2")`);
   });

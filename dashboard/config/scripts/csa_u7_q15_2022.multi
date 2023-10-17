@@ -38,3 +38,5 @@ public static int mystery2(int n) {
 
 Which, if any, of the following changes to `mystery2` is required so that the two methods work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

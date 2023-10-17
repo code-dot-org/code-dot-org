@@ -25,7 +25,7 @@ class AilabTest < ActiveSupport::TestCase
       translated_dynamic_instructions[k] = v.sub 'Original', 'Translated'
     end
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {

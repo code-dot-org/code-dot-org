@@ -25,3 +25,5 @@ Since the student wants each dot to be half the radius of the previous dot, this
 
 The main concept of this problem is that the student only wants to change the radius of the bottom dot, and since the next dot is half of the previous, the variables "middle" and "top" can be changed accordingly.
 MARKDOWN
+
+allow_multiple_attempts true

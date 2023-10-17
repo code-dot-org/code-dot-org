@@ -107,7 +107,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
     translatable_level = create :level, name: 'TTS test Short Instructions',
       type: 'Blockly', short_instructions: "regular instructions in English"
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -125,7 +125,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
     translatable_level = create :level, name: 'TTS test Long Instructions',
       type: 'Blockly', long_instructions: "long instructions in English"
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -152,7 +152,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
     outer_level = create :level, name: 'level 4', type: 'Blockly'
     outer_level.update(contained_level_names: [contained_level.name])
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -178,7 +178,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       type: 'Blockly', short_instructions: "regular instructions in English",
       tts_short_instructions_override: "instructions override"
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -200,7 +200,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       published: true
     level.save
 
-    level.stubs(:write_to_file?).returns(true)
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     refute level.tts_should_update_long_instructions?
     level.long_instructions = "test long instructions updated"
@@ -217,7 +217,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
     outer_level = create :level, name: 'level 1', type: 'Blockly', published: true
     outer_level.update(contained_level_names: [contained_level_one.name])
 
-    outer_level.stubs(:write_to_file?).returns(true)
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     refute outer_level.tts_should_update_long_instructions?
     outer_level.contained_level_names = [contained_level_two.name]

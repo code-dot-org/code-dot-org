@@ -2,16 +2,6 @@
   "mr-IN": {
     "data": {
       "title": {
-        "Conditionals": "कंडीशनल्स ",
-        "Conditionals_2018": "कंडीशनल्स ",
-        "courseB_unplugged_MRF": "अनप्लग्ड कृती ",
-        "courseB_unplugged_loopyMRF": "अनप्लग्ड कृती ",
-        "courseC_Unplugged_ScreenOutTheMean": "अनप्लग्ड कृती ",
-        "courseC_Unplugged_ScreenOutTheMean_2018": "अनप्लग्ड कृती ",
-        "courseD_unplugged_digitalCitizenship": "अनप्लग्ड कृती ",
-        "courseD_unplugged_digitalCitizenship_2018": "अनप्लग्ड कृती ",
-        "courseF_unplugged_powerOfWords": "अनप्लग्ड कृती ",
-        "ComputationalThinking": "कॉम्प्युटेशनल विचार  ",
         "BigEvent": "मोठा इव्हेंट ",
         "BigEvent_2018": "मोठा इव्हेंट ",
         "BinaryBracelets": "बायनरी ब्रेसलेट्स",
@@ -20,6 +10,9 @@
         "BinaryImages_2018": "बायनरी इमेजेस",
         "BuildingAFoundation": "पाया तयार करणे",
         "BuildingAFoundation_2018": "अनुवाद गहाळ: en-US.data.unplugged.BuildingAFoundation_2018.title",
+        "ComputationalThinking": "कॉम्प्युटेशनल विचार  ",
+        "Conditionals": "कंडीशनल्स ",
+        "Conditionals_2018": "कंडीशनल्स ",
         "Crowdsourcing": "क्राउडसोर्सिंग",
         "Crowdsourcing_2018": "अनुवाद गहाळ: en-US.data.unplugged.Crowdsourcing_2018.title",
         "DiceRace": "वास्तविक जीवन अल्गोरिदम: डाइस रेस",
@@ -51,10 +44,17 @@
         "courseA_unplugged_loops": "लूप अनप्लग्ड",
         "courseA_unplugged_loops_2018": "लूप अनप्लग्ड",
         "courseB_unplugged_CnC_2018": "फेअर तयार करणे आणि प्ले करणे खूप छान आहे",
+        "courseB_unplugged_MRF": "अनप्लग्ड कृती ",
+        "courseB_unplugged_MRF_2018": "माझे रोबोटिक मित्र",
+        "courseB_unplugged_loopyMRF": "अनप्लग्ड कृती ",
+        "courseC_Unplugged_ScreenOutTheMean": "अनप्लग्ड कृती ",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "अनप्लग्ड कृती ",
+        "courseD_unplugged_digitalCitizenship": "अनप्लग्ड कृती ",
+        "courseD_unplugged_digitalCitizenship_2018": "अनप्लग्ड कृती ",
         "courseE_unplugged_CnC_2018": "डिजिटल शेअरिंग",
         "courseE_unplugged_privateInformation": "कॉमन सेन्स एज्युकेशन: खाजगी आणि वैयक्तिक माहिती",
-        "courseF_unplugged_powerOfWords_2018": "अनुवाद गहाळ: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title",
-        "courseB_unplugged_MRF_2018": "माझे रोबोटिक मित्र"
+        "courseF_unplugged_powerOfWords": "अनप्लग्ड कृती ",
+        "courseF_unplugged_powerOfWords_2018": "अनुवाद गहाळ: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
       }
     }
   }

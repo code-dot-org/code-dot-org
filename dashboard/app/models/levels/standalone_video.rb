@@ -31,6 +31,8 @@ class StandaloneVideo < Level
     video_rounded_corners
     video_full_width
     background
+    uses_lab2
+    disable_projects
   )
 
   before_validation do
@@ -59,8 +61,21 @@ class StandaloneVideo < Level
     video_full_width
   end
 
+  def uses_lab2?
+    uses_lab2
+  end
+
   def self.create_from_level_builder(params, level_params)
-    create!(level_params.merge(user: params[:user], game: Game.standalone_video, level_num: 'custom'))
+    # Note: the disable_projects property was only added to levels created after August 2023,
+    # so not all levels of this type have this property.
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.standalone_video,
+        level_num: 'custom',
+        properties: {disable_projects: true}
+      )
+    )
   end
 
   def localized_long_instructions

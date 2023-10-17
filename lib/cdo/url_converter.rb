@@ -23,8 +23,8 @@ class UrlConverter
   # An 'origin' is a protocol, domain, and (optional) port.  This method may
   # replace all three.
   def replace_origin(url)
-    if @dashboard_host
-      raise 'Should not use learn.code.org' unless LEARN_CODE_ORG_REGEX.match(url).nil?
+    if @dashboard_host && !LEARN_CODE_ORG_REGEX.match(url).nil?
+      raise 'Should not use learn.code.org'
     end
 
     if @hourofcode_host && HOUROFCODE_COM_REGEX =~ url

@@ -12,7 +12,7 @@ def fanout_sequential(command, delay_per_group, group_size)
   end
 end
 
-command = 'sudo service pegasus upgrade'
+command = 'sudo systemctl restart pegasus'
 
 # CDO.log.info "Restarting Pegasus on frontends with group size #{group_size} and delay #{delay}s..."
 fanout_sequential(command, 0, 20)

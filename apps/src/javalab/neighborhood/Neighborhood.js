@@ -29,8 +29,8 @@ export default class Neighborhood {
         },
         playAudioOnFailure: studioApp.playAudioOnFailure.bind(studioApp),
         loadAudio: studioApp.loadAudio.bind(studioApp),
-        getTestResults: studioApp.getTestResults.bind(studioApp)
-      }
+        getTestResults: studioApp.getTestResults.bind(studioApp),
+      },
     });
     // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
     // reference the maze visualization area. It is initially set up in maze's Visualization.jsx

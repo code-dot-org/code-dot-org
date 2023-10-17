@@ -9,7 +9,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
   featuredProjectDataPropType,
-  featuredProjectTableTypes
+  featuredProjectTableTypes,
 } from './projectConstants';
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
@@ -27,51 +27,51 @@ export const COLUMNS = {
   APP_TYPE: 2,
   LAST_PUBLISHED: 3,
   LAST_FEATURED: 4,
-  ACTIONS: 5
+  ACTIONS: 5,
 };
 
 export const styles = {
   cellFirst: {
     borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray
+    borderColor: color.border_light_gray,
   },
   headerCellFirst: {
     borderWidth: '0px 0px 1px 0px',
-    borderColor: color.border_light_gray
+    borderColor: color.border_light_gray,
   },
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
     padding: 2,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   headerCellThumbnail: {
-    padding: 0
+    padding: 0,
   },
   cellName: {
     borderWidth: '1px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15,
-    width: 250
+    width: 250,
   },
   headerCellName: {
     borderWidth: '0px 1px 1px 0px',
     borderColor: color.border_light_gray,
-    padding: 15
+    padding: 15,
   },
   cellType: {
-    width: 120
+    width: 120,
   },
   thumbnailWrapper: {
     height: THUMBNAIL_SIZE,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 // Cell formatters.
-const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
+const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
@@ -109,7 +109,7 @@ const unfeature = channel => {
   $.ajax({
     url: url,
     type: 'PUT',
-    dataType: 'json'
+    dataType: 'json',
   })
     .done(handleSuccess)
     .fail(handleUnfeatureFailure);
@@ -145,7 +145,7 @@ const feature = (channel, publishedAt) => {
   $.ajax({
     url: url,
     type: 'PUT',
-    dataType: 'json'
+    dataType: 'json',
   })
     .done(handleSuccess)
     .fail(handleFeatureFailure);
@@ -184,14 +184,14 @@ class FeaturedProjectsTable extends React.Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
     tableVersion: PropTypes.oneOf(Object.values(featuredProjectTableTypes))
-      .isRequired
+      .isRequired,
   };
 
   state = {
     [COLUMNS.PROJECT_NAME]: {
       direction: 'desc',
-      position: 0
-    }
+      position: 0,
+    },
   };
 
   getSortingColumns = () => {
@@ -207,10 +207,10 @@ class FeaturedProjectsTable extends React.Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -225,9 +225,9 @@ class FeaturedProjectsTable extends React.Component {
               ...tableLayoutStyles.headerCell,
               ...styles.headerCellFirst,
               ...styles.headerCellThumbnail,
-              ...tableLayoutStyles.unsortableHeader
-            }
-          }
+              ...tableLayoutStyles.unsortableHeader,
+            },
+          },
         },
         cell: {
           formatters: [thumbnailFormatter],
@@ -235,10 +235,10 @@ class FeaturedProjectsTable extends React.Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.cellFirst,
-              ...styles.cellThumbnail
-            }
-          }
-        }
+              ...styles.cellThumbnail,
+            },
+          },
+        },
       },
       {
         property: 'projectName',
@@ -247,78 +247,78 @@ class FeaturedProjectsTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.headerCellName
-            }
-          }
+              ...styles.headerCellName,
+            },
+          },
         },
         cell: {
           formatters: [nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.cellName
-            }
-          }
-        }
+              ...styles.cellName,
+            },
+          },
+        },
       },
       {
         property: 'type',
         header: {
           label: i18n.projectType(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [typeFormatter],
           props: {
             style: {
               ...styles.cellType,
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'topic',
         header: {
           label: 'Topic',
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [topicFormatter],
           props: {
             style: {
               ...styles.cellType,
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'publishedAt',
         header: {
           label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'featuredAt',
         header: {
           label: i18n.featured(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
     ];
     const archiveColumns = [
       {
@@ -326,12 +326,12 @@ class FeaturedProjectsTable extends React.Component {
         header: {
           label: i18n.unfeatured(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'actions',
@@ -340,15 +340,15 @@ class FeaturedProjectsTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader
-            }
-          }
+              ...tableLayoutStyles.unsortableHeader,
+            },
+          },
         },
         cell: {
           formatters: [actionsFormatterUnfeatured],
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
     ];
     const currentColumns = [
       {
@@ -358,15 +358,15 @@ class FeaturedProjectsTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader
-            }
-          }
+              ...tableLayoutStyles.unsortableHeader,
+            },
+          },
         },
         cell: {
           formatters: [actionsFormatterFeatured],
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
     ];
 
     if (tableVersion === 'currentFeatured') {
@@ -389,7 +389,7 @@ class FeaturedProjectsTable extends React.Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.projectList);
 
     return (

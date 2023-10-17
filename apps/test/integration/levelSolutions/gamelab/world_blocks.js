@@ -2,7 +2,6 @@ import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
 import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
-/* global Gamelab */
 
 module.exports = {
   app: 'gamelab',
@@ -25,18 +24,18 @@ module.exports = {
         'var g = World.frameCount;\n' +
         'var h = World.seconds;\n' +
         'console.log("done")',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper
-          .tickAppUntil(Gamelab, function() {
+          .tickAppUntil(Gamelab, function () {
             var debugOutput = document.getElementById('debug-output');
             return debugOutput.textContent !== '';
           })
-          .then(function() {
+          .then(function () {
             Gamelab.onPuzzleComplete();
           });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '"done"');
@@ -44,8 +43,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Deprecated Game. still works',
@@ -60,18 +59,18 @@ module.exports = {
         'var g = Game.frameCount;\n' +
         'var h = Game.seconds;\n' +
         'console.log("done")',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper
-          .tickAppUntil(Gamelab, function() {
+          .tickAppUntil(Gamelab, function () {
             var debugOutput = document.getElementById('debug-output');
             return debugOutput.textContent !== '';
           })
-          .then(function() {
+          .then(function () {
             Gamelab.onPuzzleComplete();
           });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '"done"');
@@ -79,8 +78,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     // Check that createEdgeSprites makes the edges group and the
     // edge sprites available in the global namespace
@@ -95,18 +94,18 @@ module.exports = {
         'if (!topEdge) console.log("Fail: edges was falsy");\n' +
         'if (!bottomEdge) console.log("Fail: edges was falsy");\n' +
         'console.log("done")',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper
-          .tickAppUntil(Gamelab, function() {
+          .tickAppUntil(Gamelab, function () {
             var debugOutput = document.getElementById('debug-output');
             return debugOutput.textContent !== '';
           })
-          .then(function() {
+          .then(function () {
             Gamelab.onPuzzleComplete();
           });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '"done"');
@@ -114,8 +113,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     testAsyncProgramGameLab(
       "showMobileControls() with default params doesn't show on desktop",
@@ -212,6 +211,6 @@ module.exports = {
         assert.equal($('#studio-dpad-rim').is(':visible'), false);
         assert.equal($('#studio-dpad-cone').is(':visible'), false);
       }
-    )
-  ]
+    ),
+  ],
 };

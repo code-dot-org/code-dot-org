@@ -48,8 +48,8 @@ class ProgrammingEnvironmentsController < ApplicationController
       @programming_environment.save! if @programming_environment.changed?
       @programming_environment.write_serialization
       render json: @programming_environment.summarize_for_edit.to_json
-    rescue ActiveRecord::RecordInvalid => e
-      render(status: :not_acceptable, plain: e.message)
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception.message)
     end
   end
 
@@ -70,8 +70,8 @@ class ProgrammingEnvironmentsController < ApplicationController
   def destroy
     @programming_environment.destroy!
     render(status: :ok, plain: "Destroyed #{@programming_environment.name}")
-  rescue => e
-    render(status: :not_acceptable, plain: e.message)
+  rescue => exception
+    render(status: :not_acceptable, plain: exception.message)
   end
 
   def get_summary_by_name
@@ -81,9 +81,7 @@ class ProgrammingEnvironmentsController < ApplicationController
     return render json: @programming_environment.categories_for_get
   end
 
-  private
-
-  def programming_environment_params
+  private def programming_environment_params
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :title,
@@ -98,7 +96,7 @@ class ProgrammingEnvironmentsController < ApplicationController
     transformed_params
   end
 
-  def set_programming_environment
+  private def set_programming_environment
     @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
     raise ActiveRecord::RecordNotFound unless @programming_environment
   end

@@ -12,3 +12,5 @@ Which of the following best describes the Boolean expression shown below?
 
 `A || !(B && C)`
 MARKDOWN
+
+allow_multiple_attempts true

@@ -7,6 +7,12 @@
   "catProcedures": "Функциялар",
   "catText": "Мәтін",
   "catVariables": "Айнымалылар",
+  "designElementProperty_image": "бейне",
+  "designElementProperty_text": "мәтін",
+  "designElementProperty_textAlignment_left": "солға",
+  "designElementProperty_textAlignment_right": "оңға",
+  "designElementProperty_zOrder": "тереңдік",
+  "designElementTheme_classic": "Классикалық",
   "designWorkspaceHeader": "Жұмыс аумағы: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param4": "биіктік",
@@ -19,7 +25,7 @@
   "nextLevel": "Құттықтаймыз! Сіз бұл басқатырғышты шештіңіз.",
   "no": "Жоқ",
   "numBlocksNeeded": "Бұл басқатырғыш %1 бөлшекпен шешілуі мүмкін.",
-  "repeatForever": "әрқашан қайтала",
   "repeatDo": "жасау",
+  "repeatForever": "әрқашан қайтала",
   "yes": "Иә"
 }

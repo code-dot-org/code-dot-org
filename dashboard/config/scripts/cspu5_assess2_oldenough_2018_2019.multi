@@ -31,3 +31,5 @@ Going through the code line by line:
 * Therefore, since age is not less than 35, the program executes the code that is in the else statement.
 * The program displays "You are old enough to be President!"
 MARKDOWN
+
+allow_multiple_attempts true

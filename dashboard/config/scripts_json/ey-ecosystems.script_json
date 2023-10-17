@@ -1,0 +1,2092 @@
+{
+  "script": {
+    "name": "ey-ecosystems",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "ey-ecosystems",
+    "serialized_at": "2023-05-11 15:25:42 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "ey-ecosystems"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Overfishing Simulation",
+      "name": "Overfishing Simulation",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this **skill-building** lesson, students will program a model of an aquatic ecosystem and then simulate an overfishing situation. Students will learn how to program conditional statements to check the amount of algae in the water. If there is too much algae, the coral becomes sick. If there is too little algae, the fish have no food source and leave the area. If there is just the right amount of algae, the sick coral will heal and the fish will stay in the area. ",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Check your technology and decide if you need to troubleshoot anything in advance.",
+        "purpose": "Students will learn that marine ecosystems have many organisms which interact and keep each other in balance. This lesson combines computer science with life sciences as students create a model that simulates the effects of overfishing. "
+      },
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "Balancing the Ecosystem",
+      "name": "Balancing the Ecosystem",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "In this **skill-building** lesson, students will read about and then program three different solutions to the problem of overfishing.\n\nThis lesson starts where the previous lesson left off, with the model of an unbalanced aquatic ecosystem. First, students will modify the behavior of the boat so it can only move within a specified “fishing zone”. Second, students will program a new event to specify a “fishing season” and a “no fishing season”. Third, students will learn how to use a variable to keep track of the number of fish the boat has removed. The lesson ends with a Check For Understanding level to make sure students learned the three solutions to overfishing.\n",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Read the provided article on [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing).",
+        "purpose": "Students will continue to learn about balanced and unbalanced ecosystems. Using a scientific article about overfishing as a foundation, students will develop a rich understanding of the connections between organisms in an ecosystem. Ultimately, students will have the opportunity to apply what they have learned by modeling a local ecosystem. "
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "Coding My Ecosystem",
+      "name": "Coding My Ecosystem",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "In this **skill-building** lesson, students will explore several different ecosystem simulations. Students can choose to explore a rainforest, desert, arctic, or wetlands ecosystem. They will take on the role of an ecologist and investigate the interactions between the plants and animals in each ecosystem’s food chain. Students will read the instructions to understand the challenge each ecosystem is facing. Then they will modify the corresponding code in order to rebalance the ecosystem. ",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction."
+      },
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "de9c5fef-2729-4e77-9df7-533238786022",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de9c5fef-2729-4e77-9df7-533238786022",
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "1763707b-084f-4e82-968f-30fac4cd07fe",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe",
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "e67eb1a1-22eb-4446-bab6-74e25de4344e",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e67eb1a1-22eb-4446-bab6-74e25de4344e",
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "986667f5-6234-4f36-ac98-58e4514df36a",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "986667f5-6234-4f36-ac98-58e4514df36a",
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "551fa354-48ec-49ee-8323-4283d47dd2fe",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe",
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "eb85cd2d-5ceb-45ce-84e6-66c4dc9b8eb0",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb85cd2d-5ceb-45ce-84e6-66c4dc9b8eb0",
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "3250d956-b706-489d-b5ba-568f13c77a11",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3250d956-b706-489d-b5ba-568f13c77a11",
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "198b0512-ea74-4864-9900-055d7d8f0a5c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "198b0512-ea74-4864-9900-055d7d8f0a5c",
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    },
+    {
+      "key": "d3c9769e-360e-44db-ba84-c093a244e243",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d3c9769e-360e-44db-ba84-c093a244e243",
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "96a7a6e0-eb05-4a07-a8a8-ce9d07f070fe",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _What differences do you notice between the two photos?_ \n- _Which picture shows a balanced ecosystem? What evidence do you see?_ \n\n**Do This**: Show students the photos on the slideshow or find your own example and non example of a balanced ecosystem.\n\n**Discussion Goal**: Students will realize that a balanced ecosystem is bright, colorful, and full of life but an unbalanced ecosystem is dreary and dead. Evidence may include multiple types of fish swimming, living and brightly colored coral, fish swimming in groups, and bright-colored water in the healthy and balanced ecosystem. Evidence of the unhealthy ecosystem may include a lack of fish, old and dead coral, an old fishing net, etc.",
+        "duration": "5",
+        "name": "Think About It"
+      },
+      "seeding_key": {
+        "activity_section.key": "96a7a6e0-eb05-4a07-a8a8-ce9d07f070fe",
+        "lesson_activity.key": "de9c5fef-2729-4e77-9df7-533238786022"
+      }
+    },
+    {
+      "key": "e55c2ce6-583a-4c5d-a659-7ca12b87694f",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To boost engagement and ensure all voices are heard, give students a moment to think or even write down a few ideas before sharing with the full group. Consider using a think, pair, share strategy. Allow students with the same native language to discuss in their native language. Try to call on students by using a randomization system to avoid prioritizing only student voices with first-hand experience of visiting marine ecosystems."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e55c2ce6-583a-4c5d-a659-7ca12b87694f",
+        "lesson_activity.key": "de9c5fef-2729-4e77-9df7-533238786022"
+      }
+    },
+    {
+      "key": "730e4342-4be2-4d54-a3d5-c7171f70e62e",
+      "position": 3,
+      "properties": {
+        "description": "The first photo shows many organisms living and supporting each other. There are fish of many different sizes swimming, the coral is flowering and bright, and you can even see some algae in the water. The second photo was taken after this aquatic ecosystem became sick and died. There aren’t any fish, growing coral or plants. How do you think this happened? Do you think the whole system died at the same time or over a period of time? Keep these questions and your ideas in mind as you work through programming your aquatic ecosystem simulation.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "730e4342-4be2-4d54-a3d5-c7171f70e62e",
+        "lesson_activity.key": "de9c5fef-2729-4e77-9df7-533238786022"
+      }
+    },
+    {
+      "key": "ee6c4981-3037-435d-a84e-9868aa45997f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide",
+        "duration": "25",
+        "name": "Aquatic Ecosystem Simulation - Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee6c4981-3037-435d-a84e-9868aa45997f",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "d881c72d-3257-4414-b35c-31abeedfb10c",
+      "position": 2,
+      "properties": {
+        "description": "In today’s coding lesson, you will build a simulation of an ecosystem. You will start by adding code to represent the food chain: Fish eat the algae and humans in boats catch the fish. But the ecosystem becomes unbalanced due to humans taking too many fish from the water. When one species of an ecosystem is removed there is an **effect** on the rest of the organisms in the system. In this simulation, the fish eat the algae at a normal rate. But when too many fish are caught and removed from the ecosystem, the algae becomes overgrown which in turn harms the coral reef.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d881c72d-3257-4414-b35c-31abeedfb10c",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "247640ee-b747-4a6e-b38c-7c98e3814d05",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Ecosystems video” slide\n\n**Do This**: Show the introduction video to the entire class",
+        "progression_name": "Ecosystems Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "247640ee-b747-4a6e-b38c-7c98e3814d05",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "fe9ac435-f46b-4fc2-8a39-572f055ec2ba",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Test the simulation” slide\n\n**Do This**: Have students try the unfinished simulation on their own computers. Ask guiding questions to help them notice what is missing from the simulation.",
+        "progression_name": "Ecosystems Simulation"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe9ac435-f46b-4fc2-8a39-572f055ec2ba",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "ead0920a-84ef-4821-b648-58518bc1bc50",
+      "position": 5,
+      "properties": {
+        "description": "**Guiding Questions**:\n- What is changing on screen?\n- Are plants and animals being added? Removed?\n- Why is there so much algae?\n- What happens to the coral when there is a lot of algae? \n- What would you expect to happen when the boat touches the fish?\n- Is this a balanced ecosystem?\n- Is the food chain in action?\n- What could make this simulation better? \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ead0920a-84ef-4821-b648-58518bc1bc50",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "a31f3b55-8b82-4e28-9b29-72fa18fcc7c3",
+      "position": 6,
+      "properties": {
+        "description": "**Do This**: Have students jump into the coding tutorials as soon as possible in order to build some understanding of the project. Have the students come back together as a class for level 6 to discuss how to code cause-and-effect situations."
+      },
+      "seeding_key": {
+        "activity_section.key": "a31f3b55-8b82-4e28-9b29-72fa18fcc7c3",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "05238457-6d11-4399-8e91-abda06a87c8c",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "- Encourage students to read and reread the instructions at the top of each level. \n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- The instructions can be switched into a variety of languages in the bottom left of their screen. \n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> Remind students to look for hints with more explicit details about how to pass the level.\n- Consider pausing the class a couple of times during the lesson to turn and talk with a neighbor about which animal adaptation they’re modeling. \n- Support students in understanding that debugging (finding & fixing errors) is a very typical part of the process of coding. Celebrate determination, critical thinking and attention to detail. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "05238457-6d11-4399-8e91-abda06a87c8c",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "046fb5ab-d563-4b6d-a7dc-d3840844a90e",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-5 - Code the Food Chain” slide\n\n**Do This**: Have students set up the aquatic ecosystem. They will add event blocks to the simulation to make the fish eat the algae and be removed when they touch the boat. \n\n**Level 3** - Students find the `When fish touches algae` event block and add an `eats object algae` block under the event. \n\n**Level 4** - Students find the `When boat touches fish` event block and add a `catches object fish` block under the event.\n\n**Level 5** - You can use this matching level as a Check For Understanding and to reinforce the learning in levels 3-4. Students drag the picture of the code that matches the GIF. One GIF shows the fish eating algae and the other GIF shows the boat catching fish. \n",
+        "progression_name": "Ecosystems Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "046fb5ab-d563-4b6d-a7dc-d3840844a90e",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "79d9a6a7-3ed7-4d18-af90-abafd8ff78f0",
+      "position": 9,
+      "properties": {
+        "progression_name": "Food Chain Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "79d9a6a7-3ed7-4d18-af90-abafd8ff78f0",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "61605d6d-3468-4da7-a8ed-de7af0d702b1",
+      "position": 10,
+      "properties": {
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: As soon as a few students have completed Level 5, bring the whole class together to preview Level 6. Read over the cause-and-effect scenarios of too much, too little, and just enough algae. Spiral in the conversation from the warm-up to remind students about unbalanced ecosystems. In this simulation, the amount of algae causes the system to fall out of balance. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n\n* **Conditionals** - Statements that only run under certain conditions.\n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer."
+      },
+      "seeding_key": {
+        "activity_section.key": "61605d6d-3468-4da7-a8ed-de7af0d702b1",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "ff34e9f6-244c-439e-930b-78231ef49355",
+      "position": 11,
+      "properties": {
+        "description": "Conditional statements in computer science are like \"if-then\" statements that tell the computer what to do in certain situations. For example, if the user taps the volume up key, then the sound on the computer will get louder. In marine life ecosystems, there are certain cause-and-effect relationships and we can use computer science to check. \n\nFor example, if there is **too much algae**, it blocks the coral from receiving enough sunlight and causes the coral to die. On the other hand, if there is **too little algae**, then the fish that eat algae will leave because there isn't enough food for them. But if there is **just the right amount of algae**, then the ecosystem will be healthy and all the living things (algae, fish, coral, and more) will be able to thrive.\n\nIn computer science, we use conditional statements to tell the computer what to do based on certain conditions or situations.  Just like how living things in an ecosystem are affected by different causes and effects, we can program our ecosystem to have different outcomes if there is too much, too little, or just enough of a certain resource. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ff34e9f6-244c-439e-930b-78231ef49355",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "37bc5b84-1457-4e39-9b93-6a4efa31d633",
+      "position": 12,
+      "properties": {
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - 10 Cause & Effect” slide\n\n**Level 6** - Look closely at the photos of the ecosystem and the code that represents the situation.\n\n**Level 7** - Students will add a conditional block that checks to see if there is **too much algae**. When the condition is true, the computer will run the code inside the conditional block. In this case, when overfishing occurs, there aren't enough fish to eat all the algae. If there is too much algae, the healthy coral changes costume to become sick coral.\n\n**Level 8** - Students will add a second conditional statement that checks to see if there is **too little algae**. When the condition is true the computer will run the code inside the conditional block. This time the fish will stop everything, then begin leaving the area. These two blocks are glued together to help students easily nest them inside the conditional block.\n\n**Level 9** - Students now add one final conditional statement that checks if the amount of **algae is just right**. When that’s true, the coral changes costume from sick to healthy.\n\n**Level 10** - This is a matching level similar to Level 5 and can be used as a check for understanding, It is also an opportunity to reinforce how the three conditional blocks check the amount of algae (cause) and change the ecosystem accordingly (effect). \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "37bc5b84-1457-4e39-9b93-6a4efa31d633",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "aac548b6-1b85-4eb4-aa32-9c110b621918",
+      "position": 13,
+      "properties": {
+        "progression_name": "If... then... Conditional Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "54e331a5-ee9e-4ce9-ae31-6c15da961ded",
+      "position": 14,
+      "properties": {
+        "progression_name": "Balancing Your Ecosystem",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In levels 7-9 students are supplied with the correct code from their previous levels. They will add a few new blocks to the end of the starter code in each level to build the simulation. \nConditional statements can be a tricky concept in computer science. If you have time, this [Conditions with Cards](https://code.org/hourofcode/unplugged-conditionals-with-cards) Unplugged activity can help reinforce the understanding. Additionally, encourage students to read their code out loud to help them understand what the conditional blocks are doing in each situation. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "54e331a5-ee9e-4ce9-ae31-6c15da961ded",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "a071617a-4035-46bb-9b88-bf688391c1bc",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Now You’re in Control” slide\n \n**Do This**: With the remaining time, allow students to modify the fully coded simulation on their own. The instructions include prompts to give students an idea of how to change their code.",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "a071617a-4035-46bb-9b88-bf688391c1bc",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "1d614233-b818-4c51-855f-c920174a085a",
+      "position": 16,
+      "properties": {
+        "progression_name": "Free Play",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Level 11 would be a great place for students to pair program - you can show students [this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) demonstrating how to pair program. Have students pair up and use one computer to experiment with changing the values throughout the simulation. Working with a partner will promote conversation and encourage students to explain their observations and thinking.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1d614233-b818-4c51-855f-c920174a085a",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "967f525a-63e8-4235-9dff-c90f9183141c",
+      "position": 17,
+      "properties": {
+        "description": "Try changing one number at a time and predict what you expect to happen before clicking the run button. Explain what changed in the program after changing the numbers. After you experiment a bit try answering the following questions:\n- What happens if your ecosystem starts with a large number of fish?\n- What happens if it takes more/less time for the algae to regrow?\n- How else can you control how many new algae are growing?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "967f525a-63e8-4235-9dff-c90f9183141c",
+        "lesson_activity.key": "1763707b-084f-4e82-968f-30fac4cd07fe"
+      }
+    },
+    {
+      "key": "5d48e7eb-4451-4e1f-952c-2ef6f2e29aec",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Show What You Know!” slide\n\n**Discuss**: Use conditional statements to explain balanced and/or unbalanced ecosystems.\n\n**Discussion Goal**: Students will be able to articulate what they have learned about the effects of one organism on another in an ecosystem. ",
+        "duration": "10",
+        "name": "Cause and Effect"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d48e7eb-4451-4e1f-952c-2ef6f2e29aec",
+        "lesson_activity.key": "e67eb1a1-22eb-4446-bab6-74e25de4344e"
+      }
+    },
+    {
+      "key": "5ec88bd2-1409-46c2-99c9-70de679a820a",
+      "position": 2,
+      "properties": {
+        "description": "We have learned how to show cause and effect in an ecosystem using code! Show what you’ve learned about how the organisms in this aquatic ecosystem balance each other and how over fishing can disrupt the balance. Fill in the blanks of the conditional statement: If there are  ________ then ________. The word bank has some options to get you started but you may use any other words you need as well. \n\nFor example: If there are **too many algae** then **the coral will become unhealthy**. If there are **too few fish to eat the algae** then **the algae will overgrow**.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5ec88bd2-1409-46c2-99c9-70de679a820a",
+        "lesson_activity.key": "e67eb1a1-22eb-4446-bab6-74e25de4344e"
+      }
+    },
+    {
+      "key": "ca8056db-4271-473c-b39e-f27ab2cec4cb",
+      "position": 3,
+      "properties": {
+        "description": "**Do This**: Have students record their answers on sticky notes, a journal, Google form or other content management system used in your class. "
+      },
+      "seeding_key": {
+        "activity_section.key": "ca8056db-4271-473c-b39e-f27ab2cec4cb",
+        "lesson_activity.key": "e67eb1a1-22eb-4446-bab6-74e25de4344e"
+      }
+    },
+    {
+      "key": "a2704607-8873-4572-9635-88e6892f4295",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read & Discuss” slide\n\n**Do This**: Provide students with the Understanding Overfishing [article](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) digitally or printed. Read the article together out loud, taking time to address new vocabulary as needed for your class. \n\n**Discuss**: \n- _How does the article connect to the overfishing simulation we made in Lesson 1?_ \n- _How could we change the code to balance the ecosystem?_\n\n**Discussion Goal**: Students should see the connection to the unbalanced ecosystem, specifically if there are fewer fish, the algae overgrows and the coral becomes sick. Have students refer to the paragraph of the article titled “Harm to ecosystems”. Students can also find several solutions to the problem in the section titled “How to prevent overfishing”. Students should brainstorm how they could apply these solutions to their coded simulation.",
+        "duration": "10",
+        "name": "Read and Discuss",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To boost engagement and ensure all voices are heard, give students a moment to think or even write down a few ideas before sharing with the full group. Reinforce the idea that in the brainstorming phase there are no wrong answers or bad ideas. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a2704607-8873-4572-9635-88e6892f4295",
+        "lesson_activity.key": "986667f5-6234-4f36-ac98-58e4514df36a"
+      }
+    },
+    {
+      "key": "5b28efac-1bc8-49b7-951b-e1c48c176b7c",
+      "position": 2,
+      "properties": {
+        "description": "This article gives us several, well-researched solutions to the problem of overfishing. How could we change our simulation to demonstrate one of these solutions? How could we keep the coral healthy? How could we keep track of the amount of fish caught by the boat? Do we need to limit any of the sprites? Which of the solutions in the article would be easy to code and which would be very difficult?\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5b28efac-1bc8-49b7-951b-e1c48c176b7c",
+        "lesson_activity.key": "986667f5-6234-4f36-ac98-58e4514df36a"
+      }
+    },
+    {
+      "key": "8ff94c1d-2476-43fd-a5c5-b19e17972f71",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide\n",
+        "duration": "35",
+        "name": "Balancing the Aquatic Ecosystem Simulation - Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ff94c1d-2476-43fd-a5c5-b19e17972f71",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "2017ced2-46a2-4364-978b-651909e83616",
+      "position": 2,
+      "properties": {
+        "description": "In today’s coding lesson, you will modify a model of an unbalanced aquatic ecosystem. The ecosystem starts out unbalanced due to humans removing too many fish from the water. When one species of an ecosystem is removed, there is an effect on the rest of the organisms in the system.\n\nYou will code three different solutions to the problem of overfishing. \n\nFirst, you will limit the area in which the boat is allowed to fish. \n\nThen, you’ll create a fishing season and a no fishing season to allow the fish time to recover. \n\nFinally, you’ll add code to count the number of fish caught by the boat and to stop the boat from catching more fish once it reaches its limit. \n\nWhen you run the code, watch each simulation carefully to find the solution you believe is the most effective.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2017ced2-46a2-4364-978b-651909e83616",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "0af3e66c-396f-4a21-b964-e732a36a9c00",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are a few tips that should help students regardless of the level they're working on:\n\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0af3e66c-396f-4a21-b964-e732a36a9c00",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "6ccb8785-8118-4696-b26f-879b9cd1c6a3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Prediction” slide\n\n**Say**: _What is causing the coral to die in this aquatic simulation?_\n\n**Do This**: Have students start together on the first level. They will type an answer into the text box using evidence from the text in the article they read during the warm-up. You can use their responses as a check for understanding and address any common misconceptions. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ccb8785-8118-4696-b26f-879b9cd1c6a3",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "ef7a06a2-5f49-4ee8-8cb1-9fd32eb1a7d0",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 1-2 - Establish Marine Protected Areas” slide\n\n**Do This**: Have students read through the instructions to complete levels 1 and 2. Remind students to try running their code several times and using the built-in hints to figure out the solution before asking their peers for assistance. Consider making a connection to the text displayed on the slide.\n\n**Level 1** - Students will learn Sustainable Fishing Practice #1: Fishing Zones. Fishing boats can only fish in designated areas. Some areas are off limits for fishing boats so the ecosystem can recover.\n\n**Level 2** - Students will add code to change the boat’s behavior so it stays within the specified fishing zone.\n",
+        "name": "Overfishing Solution #1 - Establish Marine Protected Areas",
+        "progression_name": "Solution 1 - Fishing Zone"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef7a06a2-5f49-4ee8-8cb1-9fd32eb1a7d0",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "eaa5c830-6542-46d3-9d82-f2db01324c12",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-5 - Create a Fishing Season” slide\n\n**Do This**: Have students complete the code in these levels at their own pace. Consider pulling the group together to make a connection to the text in Level 3.\n\n**Level 3** - Students will learn Sustainable Fishing Practice #2: Create a Fishing Season. Set limits on when people can catch fish. When it is not fishing season the ecosystem has time to recover.\n\n**Level 4** - Students will add code to create a No Fishing.\n\n**Level 5** - Students will add code to create a Fishing season that repeats. The ecosystem will alternate between Fishing and No Fishing seasons.",
+        "name": "Overfishing Solution #2 - Create a “Fishing Season”",
+        "progression_name": "Solution 2 - Fishing Season"
+      },
+      "seeding_key": {
+        "activity_section.key": "eaa5c830-6542-46d3-9d82-f2db01324c12",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "5855dbf4-aa28-4bf1-924a-c1a47499ef01",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show “Levels 6-8 - Limit the Number of Fish Caught ” slide\n\n**Do This**: Have students complete the code using the instructions on levels 6-8 at their own pace. Consider pulling the group together to make a connection to the text in Level 6.\n\n**Level 6** - Students will learn Sustainable Fishing Practice #3: Set Fishing Limits. Scientists can help figure out how many fish can be caught without causing harm the ocean. Then the fishermen will know to only catch that many fish.\n\n**Level 7** - Students will create a new variable to track how many fish the boat has caught and increase the variable by 1 for every new fish that is caught.\n\n**Level 8** - Students will use a conditional to set the fishing limit and remove the boat once it has reached this limit.\n\n",
+        "name": "Overfishing Solution #3  - Limit the Number of Fish Caught",
+        "progression_name": "Solution 3 - Fishing Limits"
+      },
+      "seeding_key": {
+        "activity_section.key": "5855dbf4-aa28-4bf1-924a-c1a47499ef01",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "150f6bf4-ad2e-4d4d-80bd-a03d1cc4e289",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Display: Show “Level 9 - Check for Understanding” slide\n\n**Level 9** is a final Check For Understanding. Students will look at the three sustainable fishing practices\nand drag the code to the matching image.\n",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "150f6bf4-ad2e-4d4d-80bd-a03d1cc4e289",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "7d23e4ec-3093-4a1a-a7c8-2276307af038",
+      "position": 9,
+      "properties": {
+        "progression_name": "Check For Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It may be helpful for students who are working at the same pace to gather in pairs or in small groups to discuss the Level 9 - Check For Understanding question before submitting their  answers. Guide students to explain each line of code and its purpose in the simulation. After discussing in small groups, students should be better prepared to complete the matching questions. \n\nIt may also be helpful to provide students with a few sentence starters for their discussions. You can write these on a piece of paper or on the classroom board as needed. \n\n- The coral stays healthy in this simulation because… \n- The coral does not get sick in this simulation because…\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7d23e4ec-3093-4a1a-a7c8-2276307af038",
+        "lesson_activity.key": "551fa354-48ec-49ee-8323-4283d47dd2fe"
+      }
+    },
+    {
+      "key": "ff8a6f34-663b-4d9d-a803-19da088dee12",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Show What you Know” slide\n\n**Say:** \n- _Name THREE blocks of code used in Lesson 3: Balancing the Ecosystem._ \n- _Describe TWO solutions to the overfishing problem._\n- _Explain your ONE favorite part of the lesson._\n\n**Do This**: Have students record their answers on sticky notes, a journal, Google form or other content management system used in your class. _Optional: Extended reading and discussion._\n",
+        "duration": "10",
+        "name": "Show What You Know"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff8a6f34-663b-4d9d-a803-19da088dee12",
+        "lesson_activity.key": "eb85cd2d-5ceb-45ce-84e6-66c4dc9b8eb0"
+      }
+    },
+    {
+      "key": "db330ebd-f3aa-4d5b-a960-582c901c6f6f",
+      "position": 2,
+      "properties": {
+        "description": "We have learned a lot about computer programming by exploring the effects of overfishing on an ecosystem that has fish, algae, and coral. We programmed three different solutions to help keep the coral healthy for longer. Which do you believe is the best solution? Explain your answer. Using evidence from the simulation \n\nIn conclusion take time to consider your role in your local ecosystem. Think about how humans may be impacting aquatic ecosystems and how we can work towards keeping our ecosystems in balance so that all organisms can thrive. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "db330ebd-f3aa-4d5b-a960-582c901c6f6f",
+        "lesson_activity.key": "eb85cd2d-5ceb-45ce-84e6-66c4dc9b8eb0"
+      }
+    },
+    {
+      "key": "13d73364-d197-44e5-874c-3bc5bc42d112",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Ecosystem** - A biological community of interacting organisms and their environment\n- **Producer** - definition\n- **Primary Consumer** - definition\n- **Secondary Consumer** - definition\n\n**Do This**: Review the vocabulary definitions and the pictures.",
+        "duration": "10",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "13d73364-d197-44e5-874c-3bc5bc42d112",
+        "lesson_activity.key": "3250d956-b706-489d-b5ba-568f13c77a11"
+      }
+    },
+    {
+      "key": "4d9e37f4-ead2-47a5-ab94-d95a4221f454",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Food Chain” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d9e37f4-ead2-47a5-ab94-d95a4221f454",
+        "lesson_activity.key": "3250d956-b706-489d-b5ba-568f13c77a11"
+      }
+    },
+    {
+      "key": "3db16f9e-3352-4c41-a13b-76246d16084d",
+      "position": 3,
+      "properties": {
+        "description": "Energy flows from one organism to another through the food chain. The sun provides energy for the plants to grow. Primary consumers get the energy to live by eating plants. Secondary consumers eat the primary consumers for energy. Let’s look at this example of the Marine Ecosystem we have been working with and then complete the example for a rainforest ecosystem.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3db16f9e-3352-4c41-a13b-76246d16084d",
+        "lesson_activity.key": "3250d956-b706-489d-b5ba-568f13c77a11"
+      }
+    },
+    {
+      "key": "529ebecd-693a-44cd-b1f3-1f27c3d4d6fb",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Marine Ecosystem example” slide\n\n**Do This**: Review the Marine Ecosystem food chain example "
+      },
+      "seeding_key": {
+        "activity_section.key": "529ebecd-693a-44cd-b1f3-1f27c3d4d6fb",
+        "lesson_activity.key": "3250d956-b706-489d-b5ba-568f13c77a11"
+      }
+    },
+    {
+      "key": "2b20dd9b-5188-48e3-b020-9b860993f7ad",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \nShow “Rainforest example” slide\n\n**Discuss**: What are the organisms in the food chain in a rainforest ecosystem? \n\n**Discussion Goal**: Students will identify organisms’ placement in the food chain within a rainforest ecosystem. "
+      },
+      "seeding_key": {
+        "activity_section.key": "2b20dd9b-5188-48e3-b020-9b860993f7ad",
+        "lesson_activity.key": "3250d956-b706-489d-b5ba-568f13c77a11"
+      }
+    },
+    {
+      "key": "049257f9-d077-49f0-9e6d-5943fcc20f5c",
+      "position": 1,
+      "properties": {
+        "name": "Complete the Food Chain",
+        "progression_name": "Code Your Own Ecosystem Simulation"
+      },
+      "seeding_key": {
+        "activity_section.key": "049257f9-d077-49f0-9e6d-5943fcc20f5c",
+        "lesson_activity.key": "198b0512-ea74-4864-9900-055d7d8f0a5c"
+      }
+    },
+    {
+      "key": "7ea2a6c0-bc60-4614-9747-a46cddf814d1",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Food Chain"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ea2a6c0-bc60-4614-9747-a46cddf814d1",
+        "lesson_activity.key": "198b0512-ea74-4864-9900-055d7d8f0a5c"
+      }
+    },
+    {
+      "key": "3b2dc597-f10b-4bad-b2a1-d62bd30c20a5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Choice Level: Ecosystems"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b2dc597-f10b-4bad-b2a1-d62bd30c20a5",
+        "lesson_activity.key": "198b0512-ea74-4864-9900-055d7d8f0a5c"
+      }
+    },
+    {
+      "key": "ea8763cc-8fa5-4dde-8674-980b9a89bcf7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Share Your Simulation"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea8763cc-8fa5-4dde-8674-980b9a89bcf7",
+        "lesson_activity.key": "198b0512-ea74-4864-9900-055d7d8f0a5c"
+      }
+    },
+    {
+      "key": "b3b3d97c-fb0c-4fb3-bf2f-bca1bc56dc6e",
+      "position": 1,
+      "properties": {
+        "description": "**Discuss**: \n- _Is your ecosystem balanced or are there too much or too little of any of the organisms?_ \n- _What regulations could help keep your ecosystem sustainable, balanced, and healthy?_\n\n**Discussion Goal:** Students will make a connection to the real world. They will be able to explain the need to  keep different ecosystems balanced and healthy, and potential solutions for doing so.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3b3d97c-fb0c-4fb3-bf2f-bca1bc56dc6e",
+        "lesson_activity.key": "d3c9769e-360e-44db-ba84-c093a244e243"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ecosystems Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_intro video_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "247640ee-b747-4a6e-b38c-7c98e3814d05"
+      },
+      "level_keys": [
+        "csc_ecosystems_intro video_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ecosystems Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_fish_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "fe9ac435-f46b-4fc2-8a39-572f055ec2ba"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_fish_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Food Chain Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_algae_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "79d9a6a7-3ed7-4d18-af90-abafd8ff78f0"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_algae_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Food Chain Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_boat_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "79d9a6a7-3ed7-4d18-af90-abafd8ff78f0"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_boat_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Food Chain Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_events"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "79d9a6a7-3ed7-4d18-af90-abafd8ff78f0"
+      },
+      "level_keys": [
+        "csc_ecosystems_matching_events"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_conditionals_overview"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      },
+      "level_keys": [
+        "csc_ecosystems_conditionals_overview"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_coral_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_health_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_coral_health_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_justright_algae"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_justright_algae"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_conditionals"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      },
+      "level_keys": [
+        "csc_ecosystems_matching_conditionals"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_algae_freeplay_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "1d614233-b818-4c51-855f-c920174a085a"
+      },
+      "level_keys": [
+        "csc_ecosystems_algae_freeplay_2023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Solution 1 - Fishing Zone"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_overfishing_solutions_overview"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "ef7a06a2-5f49-4ee8-8cb1-9fd32eb1a7d0"
+      },
+      "level_keys": [
+        "csc_ecosystems_overfishing_solutions_overview"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Solution 1 - Fishing Zone"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_solution2_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "ef7a06a2-5f49-4ee8-8cb1-9fd32eb1a7d0"
+      },
+      "level_keys": [
+        "csc_ecosystems_solution2_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Solution 2 - Fishing Season"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_overfishing_solution2_overview"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "eaa5c830-6542-46d3-9d82-f2db01324c12"
+      },
+      "level_keys": [
+        "csc_ecosystems_overfishing_solution2_overview"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Solution 2 - Fishing Season"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_solution3A_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "eaa5c830-6542-46d3-9d82-f2db01324c12"
+      },
+      "level_keys": [
+        "csc_ecosystems_solution3A_2023"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Solution 2 - Fishing Season"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_solution3B_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "eaa5c830-6542-46d3-9d82-f2db01324c12"
+      },
+      "level_keys": [
+        "csc_ecosystems_solution3B_2023"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Solution 3 - Fishing Limits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_overfishing_solution3_overview"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "5855dbf4-aa28-4bf1-924a-c1a47499ef01"
+      },
+      "level_keys": [
+        "csc_ecosystems_overfishing_solution3_overview"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Solution 3 - Fishing Limits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_solution1_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "5855dbf4-aa28-4bf1-924a-c1a47499ef01"
+      },
+      "level_keys": [
+        "csc_ecosystems_solution1_2023"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Solution 3 - Fishing Limits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_solution1b_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "5855dbf4-aa28-4bf1-924a-c1a47499ef01"
+      },
+      "level_keys": [
+        "csc_ecosystems_solution1b_2023"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_cfu"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "7d23e4ec-3093-4a1a-a7c8-2276307af038"
+      },
+      "level_keys": [
+        "csc_ecosystems_matching_cfu"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Food Chain"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystemes_foodchain_info"
+        ],
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "7ea2a6c0-bc60-4614-9747-a46cddf814d1"
+      },
+      "level_keys": [
+        "csc_ecosystemes_foodchain_info"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice Level: Ecosystems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_choice_freeplay_2023"
+        ],
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "3b2dc597-f10b-4bad-b2a1-d62bd30c20a5"
+      },
+      "level_keys": [
+        "csc_ecosystems_choice_freeplay_2023"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Your Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_planning"
+        ],
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "ea8763cc-8fa5-4dde-8674-980b9a89bcf7"
+      },
+      "level_keys": [
+        "csc_ecosystems_planning"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_intro video_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_intro video_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "247640ee-b747-4a6e-b38c-7c98e3814d05"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_fish_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_fish_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "fe9ac435-f46b-4fc2-8a39-572f055ec2ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_algae_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_algae_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "79d9a6a7-3ed7-4d18-af90-abafd8ff78f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_boat_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_boat_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "79d9a6a7-3ed7-4d18-af90-abafd8ff78f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_matching_events",
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_events"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "79d9a6a7-3ed7-4d18-af90-abafd8ff78f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_conditionals_overview",
+        "script_level.level_keys": [
+          "csc_ecosystems_conditionals_overview"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_coral_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_coral_health_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_health_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_justright_algae",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_justright_algae"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_matching_conditionals",
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_conditionals"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "aac548b6-1b85-4eb4-aa32-9c110b621918"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_algae_freeplay_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_algae_freeplay_2023"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "1d614233-b818-4c51-855f-c920174a085a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_overfishing_solutions_overview",
+        "script_level.level_keys": [
+          "csc_ecosystems_overfishing_solutions_overview"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "ef7a06a2-5f49-4ee8-8cb1-9fd32eb1a7d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_solution2_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_solution2_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "ef7a06a2-5f49-4ee8-8cb1-9fd32eb1a7d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_overfishing_solution2_overview",
+        "script_level.level_keys": [
+          "csc_ecosystems_overfishing_solution2_overview"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "eaa5c830-6542-46d3-9d82-f2db01324c12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_solution3A_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_solution3A_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "eaa5c830-6542-46d3-9d82-f2db01324c12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_solution3B_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_solution3B_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "eaa5c830-6542-46d3-9d82-f2db01324c12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_overfishing_solution3_overview",
+        "script_level.level_keys": [
+          "csc_ecosystems_overfishing_solution3_overview"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "5855dbf4-aa28-4bf1-924a-c1a47499ef01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_solution1_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_solution1_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "5855dbf4-aa28-4bf1-924a-c1a47499ef01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_solution1b_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_solution1b_2023"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "5855dbf4-aa28-4bf1-924a-c1a47499ef01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_matching_cfu",
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_cfu"
+        ],
+        "lesson.key": "Balancing the Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "7d23e4ec-3093-4a1a-a7c8-2276307af038"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystemes_foodchain_info",
+        "script_level.level_keys": [
+          "csc_ecosystemes_foodchain_info"
+        ],
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "7ea2a6c0-bc60-4614-9747-a46cddf814d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_choice_freeplay_2023",
+        "script_level.level_keys": [
+          "csc_ecosystems_choice_freeplay_2023"
+        ],
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "3b2dc597-f10b-4bad-b2a1-d62bd30c20a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_planning",
+        "script_level.level_keys": [
+          "csc_ecosystems_planning"
+        ],
+        "lesson.key": "Coding My Ecosystem",
+        "lesson_group.key": "",
+        "script.name": "ey-ecosystems",
+        "activity_section.key": "ea8763cc-8fa5-4dde-8674-980b9a89bcf7"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Simulating a Marine Ecosystem",
+      "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
+      "key": "simulating_a_marine_ecosystem",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "simulating_a_marine_ecosystem"
+      }
+    },
+    {
+      "name": "Understanding Overfishing Article",
+      "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
+      "key": "understanding_overfishing_article",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "understanding_overfishing_article"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "resource.key": "simulating_a_marine_ecosystem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "resource.key": "understanding_overfishing_article"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "resource.key": "simulating_a_marine_ecosystem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "resource.key": "simulating_a_marine_ecosystem"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "(v) To write instructions for a computer",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "key": "conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "key": "debug",
+      "word": "Debug",
+      "definition": "Finding and fixing errors or problems in code.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debug"
+      }
+    },
+    {
+      "key": "ecosystem",
+      "word": "Ecosystem",
+      "definition": "A biological community of interacting organisms and their environment",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ecosystem"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "overfishing",
+      "word": "Overfishing",
+      "definition": "Removal of fish faster than they can reproduce",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overfishing"
+      }
+    },
+    {
+      "key": "simulation",
+      "word": "Simulation",
+      "definition": "A computer model for the purpose of study.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "simulation"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A container that can store a value. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "vocabulary.key": "debug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "vocabulary.key": "ecosystem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "vocabulary.key": "overfishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "vocabulary.key": "ecosystem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "ecosystem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "overfishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "simulation"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "25306b0f-1cff-4252-8619-17f83e8dc228",
+      "properties": {
+        "description": "Modify code in a simulation to restore balance to an ecosystem that is facing a challenge, such as a decrease in a certain species or an overgrowth of another species."
+      },
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "objective.key": "25306b0f-1cff-4252-8619-17f83e8dc228"
+      }
+    },
+    {
+      "key": "37100786-e501-40a6-90b1-ee5946feaa8b",
+      "properties": {
+        "description": "Debug (find and fix problems) in their code. "
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "objective.key": "37100786-e501-40a6-90b1-ee5946feaa8b"
+      }
+    },
+    {
+      "key": "488e5cc3-d191-4c2c-a03b-a1f9e11f7e14",
+      "properties": {
+        "description": "Explain how their modifications to the simulation impacted the ecosystem."
+      },
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "objective.key": "488e5cc3-d191-4c2c-a03b-a1f9e11f7e14"
+      }
+    },
+    {
+      "key": "61276d0d-615a-4861-a632-b8be89ab352f",
+      "properties": {
+        "description": "Identify patterns between the new ecosystem examples and the previous marine ecosystem simulation."
+      },
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "objective.key": "61276d0d-615a-4861-a632-b8be89ab352f"
+      }
+    },
+    {
+      "key": "881495fa-1983-49f2-a302-7b695893620e",
+      "properties": {
+        "description": "Describe the unique characteristics and adaptations of plants and animals that inhabit each ecosystem."
+      },
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "objective.key": "881495fa-1983-49f2-a302-7b695893620e"
+      }
+    },
+    {
+      "key": "8d77668a-6113-46bf-bb7e-e71e4753995e",
+      "properties": {
+        "description": "Identify different types of ecosystems, such as rainforest, desert, arctic, and wetlands."
+      },
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "objective.key": "8d77668a-6113-46bf-bb7e-e71e4753995e"
+      }
+    },
+    {
+      "key": "96a4c6c2-85da-4130-8e7d-5a44cc42c94f",
+      "properties": {
+        "description": "Use a scientific article to guide their solutions to the overfishing simulation. "
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "objective.key": "96a4c6c2-85da-4130-8e7d-5a44cc42c94f"
+      }
+    },
+    {
+      "key": "b40cf8d9-c2b1-460a-9780-9d51b7d2e79a",
+      "properties": {
+        "description": "Use conditional statements to show a cause and effect scenario in nature"
+      },
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "objective.key": "b40cf8d9-c2b1-460a-9780-9d51b7d2e79a"
+      }
+    },
+    {
+      "key": "dc971103-d932-4f1c-bf9d-32488cac505b",
+      "properties": {
+        "description": "Create and use a variable to keep track of a changing value in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "objective.key": "dc971103-d932-4f1c-bf9d-32488cac505b"
+      }
+    },
+    {
+      "key": "df97e6c7-485a-46b8-9739-4a593789cdc9",
+      "properties": {
+        "description": "Explain how changes to one part of the food chain can affect the entire ecosystem."
+      },
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "objective.key": "df97e6c7-485a-46b8-9739-4a593789cdc9"
+      }
+    },
+    {
+      "key": "e85bbb6b-9b8c-4465-9cc9-a46bdc6ea95c",
+      "properties": {
+        "description": "Analyze the interactions between plants and animals in a food chain."
+      },
+      "seeding_key": {
+        "lesson.key": "Coding My Ecosystem",
+        "objective.key": "e85bbb6b-9b8c-4465-9cc9-a46bdc6ea95c"
+      }
+    },
+    {
+      "key": "f4a3b33e-b367-4947-97d6-77eda07ddcdc",
+      "properties": {
+        "description": "Develop a simulation of the effects of overfishing on an aquatic ecosystem"
+      },
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "objective.key": "f4a3b33e-b367-4947-97d6-77eda07ddcdc"
+      }
+    },
+    {
+      "key": "ffb0d66c-d5dc-4e97-a4f3-1e85f5651240",
+      "properties": {
+        "description": "Identify different organisms present in a balanced marine ecosystem"
+      },
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "objective.key": "ffb0d66c-d5dc-4e97-a4f3-1e85f5651240"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-5-ETS1-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "K-ESS3-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS4-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS4-4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "5-PS3-1"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "csta",
+        "opportunity_standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "csta",
+        "opportunity_standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "csta",
+        "opportunity_standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "3-LS2-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "3-LS4-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "3-LS4-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "3-LS4-4"
+      }
+    }
+  ]
+}

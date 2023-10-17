@@ -10,3 +10,5 @@ right 'It includes some randomness'
 wrong 'It can be easily automated'
 wrong 'It is predictable'
 wrong 'It has fixed percentages of different elements'
+
+allow_multiple_attempts true

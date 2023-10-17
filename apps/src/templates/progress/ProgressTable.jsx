@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
+import {groupedLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import LessonGroup from './LessonGroup';
@@ -9,8 +9,8 @@ import {groupedLessonsType} from './progressTypes';
 
 export const styles = {
   hidden: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 };
 
 class ProgressTable extends React.Component {
@@ -18,7 +18,7 @@ class ProgressTable extends React.Component {
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
     groupedLessons: PropTypes.arrayOf(groupedLessonsType).isRequired,
-    minimal: PropTypes.bool
+    minimal: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -32,7 +32,7 @@ class ProgressTable extends React.Component {
       width: 'initial',
       maxWidth: 940 + 2 * padding,
       paddingLeft: padding,
-      paddingRight: padding
+      paddingRight: padding,
     });
   }
 
@@ -79,5 +79,5 @@ export const UnconnectedProgressTable = ProgressTable;
 export default connect(state => ({
   isPlc: state.progress.deeperLearningCourse,
   isSummaryView: state.progress.isSummaryView,
-  groupedLessons: groupedLessons(state.progress)
+  groupedLessons: groupedLessons(state.progress),
 }))(ProgressTable);

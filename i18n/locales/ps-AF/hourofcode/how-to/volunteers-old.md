@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: د کوډ رضاکارانو ساعت لپاره لارښود څنګه
 ---
 
 {{ signup_button }}

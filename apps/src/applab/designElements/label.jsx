@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -8,7 +9,9 @@ import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import EnumPropertyRow from './EnumPropertyRow';
+import TextAlignmentPropertyRow, {
+  TEXT_ALIGNMENT_LEFT,
+} from './TextAlignmentPropertyRow';
 import BorderProperties from './BorderProperties';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
@@ -21,7 +24,7 @@ class LabelProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -30,18 +33,18 @@ class LabelProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <PropertyRow
-          desc={'text'}
+          desc={applabMsg.designElementProperty_text()}
           initialValue={$(element).text()}
           handleChange={this.props.handleChange.bind(this, 'text')}
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={applabMsg.designElementProperty_widthPx()}
           isNumber
           lockState={
             $(element).data('lock-width') || PropertyRow.LockState.UNLOCKED
@@ -51,7 +54,7 @@ class LabelProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={applabMsg.designElementProperty_heightPx()}
           isNumber
           lockState={
             $(element).data('lock-height') || PropertyRow.LockState.UNLOCKED
@@ -61,24 +64,24 @@ class LabelProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={applabMsg.designElementProperty_xPositionPx()}
           isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={applabMsg.designElementProperty_yPositionPx()}
           isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ColorPickerPropertyRow
-          desc={'text color'}
+          desc={applabMsg.designElementProperty_textColor()}
           initialValue={element.style.color}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <ColorPickerPropertyRow
-          desc={'background color'}
+          desc={applabMsg.designElementProperty_backgroundColor()}
           initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
@@ -89,15 +92,13 @@ class LabelProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
-          desc={'font size (px)'}
+          desc={applabMsg.designElementProperty_fontSizePx()}
           isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
-        <EnumPropertyRow
-          desc={'text alignment'}
-          initialValue={element.style.textAlign || 'left'}
-          options={['left', 'right', 'center', 'justify']}
+        <TextAlignmentPropertyRow
+          initialValue={element.style.textAlign || TEXT_ALIGNMENT_LEFT}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BorderProperties
@@ -116,7 +117,7 @@ class LabelProperties extends React.Component {
           )}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={applabMsg.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -137,7 +138,7 @@ class LabelEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getClickEventCode() {
@@ -152,22 +153,19 @@ class LabelEvents extends React.Component {
 
   render() {
     const element = this.props.element;
-    const clickName = 'Click';
-    const clickDesc =
-      'Triggered when the label is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <EventHeaderRow />
         <EventRow
-          name={clickName}
-          desc={clickDesc}
+          name={applabMsg.designElementEvent_click()}
+          desc={applabMsg.designElement_label_clickEventDesc()}
           handleInsert={this.insertClick}
         />
       </div>
@@ -187,7 +185,7 @@ export default {
   EventTab: LabelEvents,
   themeValues: themeValues.label,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('label');
     element.style.margin = '0px';
     element.style.lineHeight = '1';
@@ -207,7 +205,7 @@ export default {
     return element;
   },
 
-  onDeserialize: function(element) {
+  onDeserialize: function (element) {
     // Set background color style for older projects that didn't set it on create:
     if (!element.style.backgroundColor) {
       element.style.backgroundColor = themeValues.label.backgroundColor.classic;
@@ -223,10 +221,10 @@ export default {
     elementUtils.setDefaultFontFamilyStyle(element);
   },
 
-  getCurrentSize: function(element) {
+  getCurrentSize: function (element) {
     return {
       width: parseInt(element.style.width, 10),
-      height: parseInt(element.style.height, 10)
+      height: parseInt(element.style.height, 10),
     };
   },
 
@@ -234,7 +232,7 @@ export default {
    * @returns {{width: number, height: number}} Size that this element should be if it were fitted exactly. If there is
    * no text, then the best size is 15 x 15 so that the user has something to drag around.
    */
-  getBestSize: function(element) {
+  getBestSize: function (element) {
     // Start by assuming best fit is current size
     const size = this.getCurrentSize(element);
 
@@ -265,14 +263,12 @@ export default {
           visibility: 'hidden',
           width: 'auto',
           height: 'auto',
-          maxWidth: maxWidth + 'px'
+          maxWidth: maxWidth + 'px',
         })
         .appendTo($(document.body));
 
-      const {
-        horizontalPadding,
-        verticalPadding
-      } = elementUtils.calculatePadding(element.style.padding);
+      const {horizontalPadding, verticalPadding} =
+        elementUtils.calculatePadding(element.style.padding);
 
       if (!widthLocked) {
         // Truncate the width before it runs off the edge of the screen
@@ -300,7 +296,7 @@ export default {
     return size;
   },
 
-  resizeToFitText: function(element) {
+  resizeToFitText: function (element) {
     const size = this.getBestSize(element);
 
     // For center or right alignment, we should adjust the left side to effectively retain that alignment.
@@ -342,17 +338,15 @@ export default {
    * If several property changes happen together, they will share the same unique batchChangeId
    * parameter. Batched property changes occur as a result of theme changes.
    */
-  beforePropertyChange: function(element, name, batchChangeId) {
+  beforePropertyChange: function (element, name, batchChangeId) {
     switch (name) {
       case 'padding':
       case 'text':
       case 'fontFamily':
       case 'fontSize': {
         // Check _lastFitsExactly for a cache hit
-        const {
-          batchId = -1,
-          previouslyFitExactly: batchPreviouslyFitExactly
-        } = this._lastFitsExactly;
+        const {batchId = -1, previouslyFitExactly: batchPreviouslyFitExactly} =
+          this._lastFitsExactly;
         if (batchId === batchChangeId) {
           // We've already computed previouslyFitExactly for this batch of property updates:
           return batchPreviouslyFitExactly;
@@ -367,7 +361,7 @@ export default {
         this._lastFitsExactly = batchChangeId
           ? {
               batchId: batchChangeId,
-              previouslyFitExactly
+              previouslyFitExactly,
             }
           : {};
         return previouslyFitExactly;
@@ -380,7 +374,7 @@ export default {
   /**
    * @returns {boolean} True if it modified the backing element
    */
-  onPropertyChange: function(element, name, value, previouslyFitExactly) {
+  onPropertyChange: function (element, name, value, previouslyFitExactly) {
     switch (name) {
       case 'text':
       case 'fontFamily':
@@ -400,5 +394,5 @@ export default {
         return false;
     }
     return true;
-  }
+  },
 };

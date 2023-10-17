@@ -1,5 +1,5 @@
 ---
-title: Whole School Participation
+title: Bütün Məktəbdə İştirak
 ---
 
 {{ signup_button }}

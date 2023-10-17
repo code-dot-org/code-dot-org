@@ -48,3 +48,21 @@ se:
           description_short: DihtorDiehtaga álggahankursa mat veahkehit ohppiid ráhkadit albma artefávttaid.
           description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima ja suohtasdihte reaidun.
           description_teacher: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima ja suohtasdihte reaidun.
+        csd-pilot:
+          description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima ja suohtasdihte reaidun.
+        csp-2020:
+          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
+        csd-2020:
+          description_short: DihtorDiehtaga álggahankursa mat veahkehit ohppiid ráhkadit albma artefávttaid.
+          description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima ja suohtasdihte reaidun.
+          description_teacher: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima ja suohtasdihte reaidun.
+        csp-2021:
+          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
+        mike-test:
+          title: DihtorDiehtaga Vuođut
+        csp-2022:
+          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
+        csp-2023:
+          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
+        csd-2023:
+          title: DihtorDiehtaga Fuomášumit

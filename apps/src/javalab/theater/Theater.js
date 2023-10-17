@@ -2,7 +2,7 @@ import {
   TheaterSignalType,
   STATUS_MESSAGE_PREFIX,
   InputMessageType,
-  InputMessage
+  InputMessage,
 } from '../constants';
 import javalabMsg from '@cdo/javalab/locale';
 

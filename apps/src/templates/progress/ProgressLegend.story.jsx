@@ -3,7 +3,7 @@ import ProgressLegend from './ProgressLegend';
 
 export default {
   title: 'ProgressLegend',
-  component: ProgressLegend
+  component: ProgressLegend,
 };
 
 const Template = args => (
@@ -14,17 +14,17 @@ const Template = args => (
 
 export const CSF = Template.bind({});
 CSF.args = {
-  includeCsfColumn: true
+  includeCsfColumn: true,
 };
 
 export const CSP = Template.bind({});
 CSP.args = {
-  includeCsfColumn: false
+  includeCsfColumn: false,
 };
 
 export const FullLegend = Template.bind({});
 FullLegend.args = {
   includeCsfColumn: true,
   includeProgressNotApplicable: true,
-  includeReviewStates: true
+  includeReviewStates: true,
 };

@@ -19,3 +19,5 @@ public int remainder (int num1, int num2) {
 
 What is the precondition required so the method works as intended for all values of the parameters that satisfy the preconditions?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,70 +1,13 @@
 {
-  "navigateForward": "जारी राख्नुहोस्",
-  "navigateBack": "पछाडि",
-  "tryAgain": "Try again",
-  "navigateDone": "समाप्त",
-  "saveProgress": "सङ्ग्रह गर्नुहोस्",
-  "correctAnswer": "Correct",
-  "incorrectAnswer": "Incorrect",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "अधिकतम",
-  "columnInspectorDescription": "वर्णन",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "अधिकतम",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "वर्णन",
+  "correctAnswer": "Correct",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "उमेर"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "day"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "corn"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "color"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "उमेर"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "वर्णन"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "size"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "chicken"
+        "Length": {
+          "id": "Length"
         }
       }
     },
@@ -78,21 +21,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banana"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "उमेर"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "chicken"
+        "color": {
+          "id": "color"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "उमेर"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "उमेर"
@@ -106,68 +63,61 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "देश"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "उमेर"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Score"
-        },
         "Country": {
           "id": "देश"
         },
         "Name": {
           "id": "नाम"
         },
+        "Score": {
+          "id": "Score"
+        },
         "Star": {
           "id": "तारा"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Artist"
+        "chicken": {
+          "id": "chicken"
         }
       }
     },
-    "abalone": {
+    "nutrition": {
       "fields": {
-        "Length": {
-          "id": "Length"
+        "Description": {
+          "id": "वर्णन"
         }
       }
     },
-    "student_survey": {
+    "salad_toy": {
       "fields": {
-        "Country": {
-          "id": "देश"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Achievements": {
-          "id": "उपलब्धिहरु"
-        },
-        "Age": {
-          "id": "उमेर",
-          "description": "उमेर"
-        },
-        "Gender": {
-          "id": "लिङ्ग",
-          "description": "लिङ्ग"
+        "chicken": {
+          "id": "chicken"
         }
       }
     },
-    "boba_toy": {
+    "salsa_toy": {
       "fields": {
-        "banana": {
-          "id": "banana"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "उमेर"
+        "corn": {
+          "id": "corn"
         }
       }
     },
@@ -178,12 +128,62 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "size"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "day"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artist"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "उमेर"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "उपलब्धिहरु"
+        },
+        "Age": {
+          "description": "उमेर",
+          "id": "उमेर"
+        },
         "Country": {
           "id": "देश"
+        },
+        "Gender": {
+          "description": "लिङ्ग",
+          "id": "लिङ्ग"
+        },
+        "Internet": {
+          "id": "Internet"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Incorrect",
+  "modelCardPossibleValuesMaximum": "अधिकतम",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "पछाडि",
+  "navigateDone": "समाप्त",
+  "navigateForward": "जारी राख्नुहोस्",
+  "saveProgress": "सङ्ग्रह गर्नुहोस्",
+  "tryAgain": "Try again"
 }

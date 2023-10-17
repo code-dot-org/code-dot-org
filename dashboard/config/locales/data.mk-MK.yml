@@ -7,6 +7,6 @@ mk:
     video:
       name:
         C4_loops_zombie: Лупови
-        csp_applab_loops: Лупови
         CSF_loops_AB: Лупови
         PL_CS_Journeys_Overview: CS Патувања
+        csp_applab_loops: Лупови

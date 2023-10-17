@@ -18,7 +18,7 @@ President, Code.org
 
 <hr/>
 
-Code.org is a 501c3 non-profit. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101. You can update your email preferences and edit your submitted information at any time.
+Code.org is a 501c3 non-profit. Our address is 801 5th Avenue, Suite 2100, Seattle, WA 98104. You can update your email preferences and edit your submitted information at any time.
 
 - [Edit my information](<%= update_preferences %>)
 - [Unsubscribe from additional teacher requests **this year**](<%= update_preferences %>)

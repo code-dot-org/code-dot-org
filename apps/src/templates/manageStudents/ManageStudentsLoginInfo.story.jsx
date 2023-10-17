@@ -9,23 +9,39 @@ const studentData = [
     username: 'studenta',
     userType: 'student',
     secretWords: 'secret words',
-    secretPicturePath: 'wizard.jpg'
-  }
+    secretPicturePath: 'wizard.jpg',
+  },
 ];
 
-export default storybook => {
-  storybook = storybook.storiesOf('ManageStudentsLoginInfo', module);
+const loginTypes = Object.values(SectionLoginType);
 
-  Object.values(SectionLoginType).forEach(loginType => {
-    storybook = storybook.add(loginType, () => (
-      <ManageStudentsLoginInfo
-        sectionId={7}
-        sectionCode="ABCDEF"
-        sectionName="Name"
-        loginType={loginType}
-        studioUrlPrefix="http://localhost-studio.code.org:3000"
-        studentData={studentData}
-      />
-    ));
-  });
+const defaultExport = {
+  title: 'ManageStudents/ManageStudentsLoginInfo',
+  component: ManageStudentsLoginInfo,
+};
+
+const Template = args => (
+  <ManageStudentsLoginInfo
+    sectionId={7}
+    sectionCode="ABCDEF"
+    sectionName="Name"
+    studioUrlPrefix="http://localhost-studio.code.org:3000"
+    studentData={studentData}
+    {...args}
+  />
+);
+
+const stories = {};
+
+loginTypes.forEach(loginType => {
+  const story = Template.bind({});
+  story.args = {
+    loginType: loginType,
+  };
+  stories[`${loginType}`] = story;
+});
+
+module.exports = {
+  ...stories,
+  default: defaultExport,
 };

@@ -9,14 +9,14 @@ import {setHasAuthoredHints} from './redux/instructions';
 import {
   enqueueHints,
   showNextHint,
-  displayMissingBlockHints
+  displayMissingBlockHints,
 } from './redux/authoredHints';
 import {TestResults} from './constants';
 import {
   tryGetSessionStorage,
   trySetSessionStorage,
   showGenericQtip,
-  createEvent
+  createEvent,
 } from './utils';
 import msg from '@cdo/locale';
 
@@ -58,9 +58,8 @@ export default class AuthoredHints {
    * @param {BlockHint[]} blocks {@see authoredHintUtils.createContextualHintsFromBlocks}
    */
   displayMissingBlockHints(blocks) {
-    const newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(
-      blocks
-    );
+    const newContextualHints =
+      authoredHintUtils.createContextualHintsFromBlocks(blocks);
     getStore().dispatch(displayMissingBlockHints(newContextualHints));
 
     if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
@@ -77,7 +76,7 @@ export default class AuthoredHints {
       attempt: this.studioApp_.attempts,
       testResult: this.studioApp_.lastTestResult,
       activityId: response && response.activity_id,
-      levelSourceId: response && response.level_source_id
+      levelSourceId: response && response.level_source_id,
     });
   }
 
@@ -140,7 +139,7 @@ export default class AuthoredHints {
       // hint info
       hintId: hint.hintId,
       hintClass: hint.hintClass,
-      hintType: hint.hintType
+      hintType: hint.hintType,
     });
   }
 
@@ -222,7 +221,7 @@ export default class AuthoredHints {
     const message = msg.onetimeHintPromptMessage();
     const position = {
       my: 'top left',
-      at: 'bottom right'
+      at: 'bottom right',
     };
     showGenericQtip('#lightbulb', title, message, position);
   }

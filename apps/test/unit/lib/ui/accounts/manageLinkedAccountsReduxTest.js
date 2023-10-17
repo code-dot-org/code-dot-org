@@ -2,7 +2,7 @@ import sinon from 'sinon';
 import {assert} from '../../../../util/reconfiguredChai';
 import manageLinkedAccounts, {
   initializeState,
-  convertServerAuthOptions
+  convertServerAuthOptions,
 } from '@cdo/apps/lib/ui/accounts/manageLinkedAccountsRedux';
 
 describe('manageLinkedAccountsRedux', () => {
@@ -18,13 +18,13 @@ describe('manageLinkedAccountsRedux', () => {
     it('sets state from action state', () => {
       const authenticationOptions = {
         1: {id: 1, credentialType: 'google_oauth2', email: 'example@email.com'},
-        2: {id: 2, credentialType: 'facebook', email: 'another@email.com'}
+        2: {id: 2, credentialType: 'facebook', email: 'another@email.com'},
       };
       const state = {
         authenticationOptions: authenticationOptions,
         userHasPassword: true,
         isGoogleClassroomStudent: true,
-        isCleverStudent: true
+        isCleverStudent: true,
       };
       const initializeStateAction = initializeState(state);
       const newState = manageLinkedAccounts(null, initializeStateAction);
@@ -38,15 +38,15 @@ describe('manageLinkedAccountsRedux', () => {
   describe('convertServerAuthOptions', () => {
     it('maps authentication options from server by id', () => {
       const authenticationOptions = [
-        {id: 1, credential_type: 'facebook', email: 'example@email.com'}
+        {id: 1, credential_type: 'facebook', email: 'example@email.com'},
       ];
       const expectedAuthOptions = {
         1: {
           id: 1,
           credentialType: 'facebook',
           email: 'example@email.com',
-          error: ''
-        }
+          error: '',
+        },
       };
       const convertedAuthOptions = convertServerAuthOptions(
         authenticationOptions

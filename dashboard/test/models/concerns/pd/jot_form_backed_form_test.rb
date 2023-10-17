@@ -78,14 +78,14 @@ module Pd
       e = assert_raises do
         DummyForm.response_exists?(unique_key: generate_unique_key)
       end
-      assert e.message.include? 'Missing required attributes [:form_id]'
+      assert_includes(e.message, 'Missing required attributes [:form_id]')
     end
 
     test 'response_exists? raises error when missing a unique attribute' do
       e = assert_raises do
         DummyForm.response_exists?(form_id: get_form_id)
       end
-      assert e.message.include? 'Missing required attributes [:unique_key]'
+      assert_includes(e.message, 'Missing required attributes [:unique_key]')
     end
 
     test 'response_exists?' do
@@ -99,21 +99,21 @@ module Pd
       e = assert_raises do
         DummyForm.create_placeholder!(unique_key: generate_unique_key)
       end
-      assert e.message.include? 'Missing required attributes [:form_id]'
+      assert_includes(e.message, 'Missing required attributes [:form_id]')
     end
 
     test 'create_placeholder! raises error when missing a unique attribute' do
       e = assert_raises do
         DummyForm.create_placeholder!(form_id: get_form_id)
       end
-      assert e.message.include? 'Missing required attributes [:unique_key]'
+      assert_includes(e.message, 'Missing required attributes [:unique_key]')
     end
 
     test 'create_placeholder! raises error when missing submission_id' do
       e = assert_raises do
         DummyForm.create_placeholder!(unique_key: generate_unique_key, form_id: get_form_id)
       end
-      assert e.message.include? 'Expected submission_id'
+      assert_includes(e.message, 'Expected submission_id')
     end
 
     test 'create_placeholder! creates a placeholder' do
@@ -224,9 +224,9 @@ module Pd
         DummyForm.fill_placeholders
       end
 
-      assert e.message.include? 'Errors filling Pd::DummyForm placeholders:'
-      assert e.message.include? "  Submission #{failed_submission_ids[0]}: Test error 1"
-      assert e.message.include? "  Submission #{failed_submission_ids[1]}: Test error 2"
+      assert_includes(e.message, 'Errors filling Pd::DummyForm placeholders:')
+      assert_includes(e.message, "  Submission #{failed_submission_ids[0]}: Test error 1")
+      assert_includes(e.message, "  Submission #{failed_submission_ids[1]}: Test error 2")
     end
 
     test 'placeholder sync_from_jotform updates answers from JotForm API' do
@@ -321,7 +321,7 @@ module Pd
     test 'jotform sync gets questions syncs new answers for each form' do
       form_ids = Array.new(2) {get_form_id}
       last_submission_id = get_submission_id
-      min_date = Date.today
+      min_date = Time.zone.today
       form_ids.each do |form_id|
         DummyForm.expects(:get_min_date).with(form_id).returns(min_date)
         DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(
@@ -452,8 +452,8 @@ module Pd
       end
 
       assert actual_log_message.start_with?('3 JotForm submissions imported in 1 batch.')
-      assert e.message.include? "Error syncing JotForm submissions for forms [#{form_id}]. Errors:"
-      assert e.message.include? "Processing error 1"
+      assert_includes(e.message, "Error syncing JotForm submissions for forms [#{form_id}]. Errors:")
+      assert_includes(e.message, "Processing error 1")
     end
 
     test 'jotform sync stops processing when an entire batch fails' do
@@ -491,9 +491,9 @@ module Pd
         DummyForm.sync_from_jotform form_id
       end
       Array.new(2) do |i|
-        assert e.message.include? "Process error #{i}"
+        assert_includes(e.message, "Process error #{i}")
       end
-      assert e.message.include? 'Submission all: Entire batch failed. Aborting'
+      assert_includes(e.message, 'Submission all: Entire batch failed. Aborting')
     end
 
     private

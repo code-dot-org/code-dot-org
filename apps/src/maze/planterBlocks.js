@@ -4,7 +4,7 @@
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
@@ -14,12 +14,12 @@ exports.install = function(blockly, blockInstallOptions) {
     title: msg.plant(),
     titleImage: undefined,
     tooltip: msg.plantTooltip(),
-    functionName: 'Maze.plant'
+    functionName: 'Maze.plant',
   });
 
   blockly.Blocks.planter_ifAtSoil = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg.soil()].join(' ')
@@ -28,10 +28,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  generator.planter_ifAtSoil = function() {
+  generator.planter_ifAtSoil = function () {
     var argument = `Maze.atSoil('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     var code = `if (${argument}) {\n${branch}}\n`;
@@ -40,7 +40,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.planter_ifAtSprout = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg.sprout()].join(' ')
@@ -49,10 +49,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  generator.planter_ifAtSprout = function() {
+  generator.planter_ifAtSprout = function () {
     var argument = `Maze.atSprout('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     var code = `if (${argument}) {\n${branch}}\n`;

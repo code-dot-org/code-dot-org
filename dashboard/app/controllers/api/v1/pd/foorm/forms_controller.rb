@@ -7,8 +7,8 @@ class Api::V1::Pd::Foorm::FormsController < ApplicationController
     begin
       filled_in_form = Foorm::Form.fill_in_library_items(form_questions)
       render json: filled_in_form
-    rescue => e
-      render status: :internal_server_error, json: {error: e.message}
+    rescue => exception
+      render status: :internal_server_error, json: {error: exception.message}
     end
   end
 

@@ -4,18 +4,19 @@ import AssetManager from './AssetManager';
 import color from '../../util/color';
 import {
   SOUND_PREFIX,
-  DEFAULT_SOUND_PATH_PREFIX
+  DEFAULT_SOUND_PATH_PREFIX,
 } from '../../assetManagement/assetPrefix';
 import SoundLibrary from './SoundLibrary';
 import i18n from '@cdo/locale';
 import Sounds from '../../Sounds';
 import {RecordingFileType} from './recorders';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const audioExtension = '.mp3';
 
 const MODE = {
   files: 'files',
-  sounds: 'sounds'
+  sounds: 'sounds',
 };
 
 /**
@@ -32,7 +33,7 @@ export default class SoundPicker extends React.Component {
     libraryOnly: PropTypes.bool,
     //For logging upload failures
     projectId: PropTypes.string,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
   };
 
   state = {mode: MODE.sounds};
@@ -56,19 +57,36 @@ export default class SoundPicker extends React.Component {
       soundModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        fontFamily: isFileMode ? null : '"Gotham 5r"',
-        color: isFileMode ? color.light_gray : null,
         fontSize: 16,
-        cursor: 'pointer'
+        cursor: 'pointer',
       },
       fileModeToggle: {
         margin: 0,
         fontSize: 16,
-        fontFamily: isFileMode ? '"Gotham 5r"' : null,
-        color: isFileMode ? null : color.light_gray,
-        cursor: 'pointer'
-      }
+        cursor: 'pointer',
+      },
     };
+
+    if (isFileMode) {
+      headerStyles.soundModeToggle = {
+        ...headerStyles.soundModeToggle,
+        color: color.light_gray,
+      };
+
+      headerStyles.fileModeToggle = {
+        ...headerStyles.fileModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+    } else {
+      headerStyles.soundModeToggle = {
+        ...headerStyles.soundModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+      headerStyles.fileModeToggle = {
+        ...headerStyles.fileModeToggle,
+        color: color.light_gray,
+      };
+    }
 
     let modeSwitch;
     let title = <p>{i18n.chooseSounds()}</p>;
@@ -123,15 +141,15 @@ export default class SoundPicker extends React.Component {
 
 const styles = {
   root: {
-    margin: '0 0 0 5px'
+    margin: '0 0 0 5px',
   },
   divider: {
     borderColor: color.purple,
-    margin: '5px 0'
+    margin: '5px 0',
   },
   warning: {
     color: color.red,
     fontSize: 13,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 };

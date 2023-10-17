@@ -11,7 +11,7 @@ const fakeStandards = [
     categoryShortcode: 'AP',
     categoryDescription: 'Algorithms & Programming',
     shortcode: 'shortcode-1',
-    description: 'Create programs that use variables to store and modify data.'
+    description: 'Create programs that use variables to store and modify data.',
   },
   {
     frameworkShortcode: 'framework-1',
@@ -19,8 +19,8 @@ const fakeStandards = [
     categoryShortcode: 'DA',
     categoryDescription: 'Data & Analysis',
     shortcode: 'shortcode-2',
-    description: 'Translate between different bit representations of numbers.'
-  }
+    description: 'Translate between different bit representations of numbers.',
+  },
 ];
 
 describe('StandardsEditor', () => {
@@ -33,7 +33,7 @@ describe('StandardsEditor', () => {
       standards: fakeStandards,
       frameworks: [],
       addStandard,
-      removeStandard
+      removeStandard,
     };
   });
 

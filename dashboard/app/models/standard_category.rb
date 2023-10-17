@@ -37,7 +37,7 @@ class StandardCategory < ApplicationRecord
   def self.seed_all
     Framework.all.each do |framework|
       filename = "config/standards/#{framework.shortcode}_categories.csv"
-      CSV.foreach(filename, {headers: true}) do |row|
+      CSV.foreach(filename, headers: true) do |row|
         category = StandardCategory.find_or_initialize_by(framework: framework, shortcode: row['category'])
         category.parent_category = StandardCategory.find_by!(shortcode: row['parent']) if row['parent']
         category.category_type = row['type']

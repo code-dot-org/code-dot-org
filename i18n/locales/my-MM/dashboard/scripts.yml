@@ -14,12 +14,16 @@ my:
           title: ဖလပ်ပီ ကုပ်
           description: သင့်ကိုယ်ပိုင်ဂိမ်းကို 10 မိနစ်အောက်သာရေးလိုပါသလား။ ကျွန်ုပ်တို့၏ ဖလပ်ပီ ကုပ် သင်ခန်းစာကို စမ်းသုံးကြည့်ပါ။
           student_description: သင့်ကိုယ်ပိုင်ဂိမ်းကို 10 မိနစ်အောက်သာရေးလိုပါသလား။ ကျွန်ုပ်တို့၏ ဖလပ်ပီ ကုပ် သင်ခန်းစာကို စမ်းသုံးကြည့်ပါ။
+        starwars:
+          title: 'Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း'
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft စွန့်စားခန်း
           description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
           student_description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
         basketball:
           name: ဘတ်စကတ်ဘော
+        minecraft:
+          title: Minecraft ဒီဇိုင်းနာ
         hero:
           title: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
           description_short: Hour of Code အတွက် အစီအစဥ်သစ်နဲွ Minecraft ပြန်လည်​ရောက်ရှိလာပါပြီ!
@@ -341,3 +345,73 @@ my:
               display_name: စာရင်းများ
             lessonGroup-3:
               display_name: Loops
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ဖြစ်စဥ်များ
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ဖြစ်စဥ်များ
+            csf_loops:
+              display_name: Loops
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Variables
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-6:
+              display_name: ဖြစ်စဥ်များ
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-5:
+              display_name: ဖြစ်စဥ်များ
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Loops
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Variables

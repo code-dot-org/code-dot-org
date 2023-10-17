@@ -5,7 +5,7 @@ import {
   BasicBubble,
   BubbleShape,
   BasicTooltip,
-  BubbleSize
+  BubbleSize,
 } from './BubbleFactory';
 import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {defaultBubbleIcon} from './progressHelpers';
@@ -21,7 +21,7 @@ export default class ProgressLegend extends Component {
   static propTypes = {
     includeCsfColumn: PropTypes.bool.isRequired,
     includeProgressNotApplicable: PropTypes.bool,
-    includeReviewStates: PropTypes.bool
+    includeReviewStates: PropTypes.bool,
   };
 
   render() {
@@ -74,7 +74,7 @@ export default class ProgressLegend extends Component {
     const {
       includeCsfColumn,
       includeProgressNotApplicable,
-      includeReviewStates
+      includeReviewStates,
     } = this.props;
 
     const columns = [];
@@ -99,7 +99,7 @@ export default class ProgressLegend extends Component {
       <td key={_.uniqueId()}>
         {this.getLevelDetails('scissors', i18n.unplugged())}
         {this.getLevelDetails('flag-checkered', i18n.stageExtras())}
-      </td>
+      </td>,
     ];
     const column2 = [
       <td key={_.uniqueId()} />,
@@ -109,7 +109,7 @@ export default class ProgressLegend extends Component {
       <td key={_.uniqueId()}>
         {this.getLevelDetails('desktop', i18n.online())}
         {this.getLevelDetails('check-circle', i18n.progressLegendAssessment())}
-      </td>
+      </td>,
     ];
     const column3 = [
       <td key={_.uniqueId()} />,
@@ -119,7 +119,7 @@ export default class ProgressLegend extends Component {
       <td key={_.uniqueId()} className="end-border">
         {this.getLevelDetails('list-ul', i18n.question())}
         {this.getLevelDetails('sitemap', i18n.choiceLevel())}
-      </td>
+      </td>,
     ];
     return [column1, column2, column3];
   }
@@ -128,7 +128,7 @@ export default class ProgressLegend extends Component {
     return [
       <td key={_.uniqueId()} />,
       <td key={_.uniqueId()}>{i18n.concept()}</td>,
-      <td key={_.uniqueId()}>{i18n.activity()}</td>
+      <td key={_.uniqueId()}>{i18n.activity()}</td>,
     ];
   }
 
@@ -144,7 +144,7 @@ export default class ProgressLegend extends Component {
       </td>,
       <td key={_.uniqueId()} rowSpan={2}>
         <div>—</div>
-      </td>
+      </td>,
     ];
   }
 
@@ -168,7 +168,7 @@ export default class ProgressLegend extends Component {
             `${i18n.activity()}: ${i18n.notStarted()}`
           )}
         </div>
-      </td>
+      </td>,
     ];
   }
 
@@ -192,7 +192,7 @@ export default class ProgressLegend extends Component {
             `${i18n.activity()}: ${i18n.inProgress()}`
           )}
         </div>
-      </td>
+      </td>,
     ];
   }
 
@@ -209,7 +209,7 @@ export default class ProgressLegend extends Component {
             true
           )}
         </div>
-      </td>
+      </td>,
     ];
   }
 
@@ -226,7 +226,7 @@ export default class ProgressLegend extends Component {
             true
           )}
         </div>
-      </td>
+      </td>,
     ];
   }
 
@@ -245,7 +245,7 @@ export default class ProgressLegend extends Component {
             `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
           )}
         </div>
-      </td>
+      </td>,
     ];
   }
 
@@ -272,7 +272,7 @@ export default class ProgressLegend extends Component {
             `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
           )}
         </div>
-      </td>
+      </td>,
     ];
   }
 
@@ -288,7 +288,7 @@ export default class ProgressLegend extends Component {
             `${i18n.activity()}: ${i18n.submitted()}`
           )}
         </div>
-      </td>
+      </td>,
     ];
   }
 

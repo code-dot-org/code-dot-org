@@ -12,3 +12,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Methods specify the behaviors that an object can perform.
 MARKDOWN
+
+allow_multiple_attempts true

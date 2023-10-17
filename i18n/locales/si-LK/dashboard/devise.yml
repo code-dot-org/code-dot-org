@@ -50,9 +50,6 @@ si:
       expired: "කල් ඉකුත්වී ඇත, කරුණාකර අලුත් එකක් ඉල්ලන්න"
       not_found: "සොයා ගත නොහැක"
       not_locked: "අගුලුදා නැත"
-      not_saved:
-        one: "එක් දෝශයක් හේතුවෙන් %{resource} සුරැකීම වැලකී ඇත:"
-        other: "දෝශ %{count} ක් නිසා %{resource} සුරැකිය නොහැකියි:"
     invitations:
       send_instructions: '%{email} වෙත ඇරයුමක් යවන ලදි.'
       invitation_token_invalid: 'ලබා දී ඇති ආරාධනා සංකේතය වලංගු නොවේ!'

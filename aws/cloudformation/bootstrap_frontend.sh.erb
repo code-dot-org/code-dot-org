@@ -20,7 +20,10 @@ ps aux | grep "cluster worker" | grep dashboard | head -n 3 | tr --squeeze-repea
 export AWS_METADATA_SERVICE_TIMEOUT=30
 export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 
-# Make sure server passes health check.
+# Ensure the instance launch has completed successfully by requesting the Health Check endpoint for Pegasus
+# and  Dashboard via nginx (port 80), setting the Hostname to "studio" to ensure nginx routes the request to Dashboard.
 # The status code determines success/failure of the instance launch.
-curl --silent --show-error --fail --retry 10 --retry-connrefused --retry-max-time 60 \
-  localhost:80/health_check > /dev/null
+curl --silent --show-error --fail --retry 10 --retry-connrefused --retry-max-time 300 --output /dev/null \
+  localhost:80/health_check \
+&& curl --silent --show-error --fail --retry 10 --retry-connrefused --retry-max-time 300 --output /dev/null \
+  -H "Host: studio" localhost:80/health_check

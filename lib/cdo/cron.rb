@@ -15,7 +15,7 @@ module Cdo
           select(&:on_weekday?).
           map {|day| Chronic.parse(time_str, now: day)}.
           map(&:utc)
-        day_names = times.map {|day| Time::RFC2822_DAY_NAME[day.wday].upcase}
+        day_names = times.map {|day| day.strftime('%a').upcase}
         "0 #{times.first.hour} * * #{day_names.first}-#{day_names.last}"
       end
     end
@@ -25,7 +25,7 @@ module Cdo
       Time.use_zone(time_zone) do
         Chronic.time_class = Time.zone
         time = Chronic.parse(time_str).utc
-        day_name = Time::RFC2822_DAY_NAME[time.wday].upcase
+        day_name = time.strftime('%a').upcase
         "#{time.min} #{time.hour} * * #{day_name}"
       end
     end

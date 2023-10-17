@@ -44,8 +44,8 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       capabilities: [
         Blockly.ComponentManager.Capability.DELETE_AREA,
         Blockly.ComponentManager.Capability.DRAG_TARGET,
-        Blockly.ComponentManager.Capability.POSITIONABLE
-      ]
+        Blockly.ComponentManager.Capability.POSITIONABLE,
+      ],
     });
     this.workspace.recordDragTargets();
   }
@@ -68,14 +68,14 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       {
         width: WIDTH,
         height: BODY_HEIGHT,
-        y: LID_HEIGHT
+        y: LID_HEIGHT,
       },
       bodyClipPath
     );
     const SPRITE = {
       width: 96,
       height: 124,
-      url: 'sprites.png'
+      url: 'sprites.png',
     };
     const body = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.IMAGE,
@@ -84,7 +84,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         x: -SPRITE_LEFT,
         height: SPRITE.height,
         y: -SPRITE_TOP,
-        'clip-path': 'url(#blocklyTrashBodyClipPath)'
+        'clip-path': 'url(#blocklyTrashBodyClipPath)',
       },
       this.svgGroup_
     );
@@ -112,7 +112,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         x: -SPRITE_LEFT,
         height: SPRITE.height,
         y: -SPRITE_TOP,
-        'clip-path': 'url(#blocklyTrashLidClipPath)'
+        'clip-path': 'url(#blocklyTrashLidClipPath)',
       },
       this.svgGroup_
     );
@@ -141,7 +141,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         r: 33,
         stroke: '#c00',
         'stroke-width': 5,
-        fill: 'none'
+        fill: 'none',
       },
       this.notAllowed_
     );
@@ -155,8 +155,8 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       let trashcanVisibility = 'hidden';
       let toolboxVisibility = 'visible';
       // Don't show the trashcan if the block is being dragged out of the toolbox.
-      const isDraggingFromToolbox = !!Blockly.mainBlockSpace?.currentGesture_
-        ?.flyout_;
+      const isDraggingFromToolbox =
+        !!Blockly.mainBlockSpace?.currentGesture_?.flyout_;
       if (!isDraggingFromToolbox && blocklyEvent.isStart) {
         trashcanVisibility = 'visible';
         toolboxVisibility = 'hidden';
@@ -164,7 +164,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
       // query selector for uncategorized toolbox contents
       document
-        .querySelectorAll('.blocklyFlyout .blocklyWorkspace')
+        .querySelectorAll(
+          '.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace'
+        )
         .forEach(x => {
           x.style.visibility = toolboxVisibility;
         });

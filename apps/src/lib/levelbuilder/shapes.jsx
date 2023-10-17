@@ -17,7 +17,7 @@ export const levelShape = PropTypes.shape({
   conceptDifficulty: PropTypes.string,
   concepts: PropTypes.string,
   skin: PropTypes.string,
-  videoKey: PropTypes.string
+  videoKey: PropTypes.string,
 });
 
 export const scriptLevelShape = PropTypes.shape({
@@ -43,13 +43,13 @@ export const scriptLevelShape = PropTypes.shape({
   bonus: PropTypes.bool,
   assessment: PropTypes.bool,
   challenge: PropTypes.bool,
-  isViewingAsInstructorInTraining: PropTypes.bool
+  isViewingAsInstructorInTraining: PropTypes.bool,
 });
 
 export const tipShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  markdown: PropTypes.string.isRequired
+  markdown: PropTypes.string.isRequired,
 });
 
 export const activitySectionShape = PropTypes.shape({
@@ -62,7 +62,7 @@ export const activitySectionShape = PropTypes.shape({
   progressionName: PropTypes.string,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
-  tips: PropTypes.arrayOf(tipShape).isRequired
+  tips: PropTypes.arrayOf(tipShape).isRequired,
 });
 
 export const activityShape = PropTypes.shape({
@@ -71,7 +71,7 @@ export const activityShape = PropTypes.shape({
   position: PropTypes.number.isRequired,
   duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
     .isRequired,
-  activitySections: PropTypes.arrayOf(activitySectionShape)
+  activitySections: PropTypes.arrayOf(activitySectionShape),
 });
 
 export const resourceShape = PropTypes.shape({
@@ -85,7 +85,7 @@ export const resourceShape = PropTypes.shape({
   assessment: PropTypes.bool,
   includeInPdf: PropTypes.bool,
   downloadUrl: PropTypes.string,
-  isRollup: PropTypes.bool
+  isRollup: PropTypes.bool,
 });
 
 export const vocabularyShape = PropTypes.shape({
@@ -94,12 +94,12 @@ export const vocabularyShape = PropTypes.shape({
   markdownKey: PropTypes.string,
   word: PropTypes.string.isRequired,
   definition: PropTypes.string.isRequired,
-  commonSenseMedia: PropTypes.bool.isRequired
+  commonSenseMedia: PropTypes.bool.isRequired,
 });
 
 export const programmingEnvironmentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 });
 
 export const programmingExpressionShape = PropTypes.shape({
@@ -107,12 +107,12 @@ export const programmingExpressionShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  programmingEnvironmentName: PropTypes.string.isRequired
+  programmingEnvironmentName: PropTypes.string.isRequired,
 });
 
 export const frameworkShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
-  shortcode: PropTypes.string.isRequired
+  shortcode: PropTypes.string.isRequired,
 });
 
 export const standardShape = PropTypes.shape({
@@ -123,7 +123,7 @@ export const standardShape = PropTypes.shape({
   categoryShortcode: PropTypes.string.isRequired,
   categoryDescription: PropTypes.string.isRequired,
   shortcode: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
 });
 
 export const relatedLessonShape = PropTypes.shape({
@@ -132,5 +132,5 @@ export const relatedLessonShape = PropTypes.shape({
   lockable: PropTypes.bool,
   relativePosition: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
-  editUrl: PropTypes.string.isRequired
+  editUrl: PropTypes.string.isRequired,
 });

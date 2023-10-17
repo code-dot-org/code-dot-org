@@ -16,7 +16,7 @@ describe('AddLevelDialog', () => {
       addLevel,
       activityPosition: 1,
       activitySection: sampleActivities[0].activitySections[2],
-      allowMajorCurriculumChanges: true
+      allowMajorCurriculumChanges: true,
     };
   });
 

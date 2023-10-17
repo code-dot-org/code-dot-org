@@ -25,3 +25,5 @@ It is important to note that if a variable is assigned a new value, the lines of
 * c = a + c which equals 4 + 4 = 8
 * By the end of the program, a = 4, b = 8, and c = 8
 MARKDOWN
+
+allow_multiple_attempts true

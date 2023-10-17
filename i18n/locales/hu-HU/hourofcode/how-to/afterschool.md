@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: A Kódolás órája - útmutató az iskolán kívüli oktatáshoz
 ---
 
 {{ signup_button }}

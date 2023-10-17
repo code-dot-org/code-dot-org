@@ -8,7 +8,7 @@ const DEFAULT_PROPS = {
   displayName: 'Lesson Group Name',
   description: 'This is an awesome Lesson Group.',
   closeDialog: () => {},
-  bigQuestions: 'Who? What?'
+  bigQuestions: 'Who? What?',
 };
 
 describe('LessonGroupInfoDialog', () => {

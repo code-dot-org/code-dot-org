@@ -2,6 +2,8 @@
 ko:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: 선택항목 {A}{B}{C}으로 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       AmysBlocks_spriteSayVar:
@@ -15,7 +17,6 @@ ko:
             '0.75': 작음
             '1.00': 보통
             '2.00': 큰
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +24,6 @@ ko:
             '0.75': 작음
             '1.00': 보통
             '2.00': 큰
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} 이(가) {N} 마디마다 \n{MOVE1} 와(과) {MOVE2} 을(를) 교대"
         options:
@@ -452,26 +452,6 @@ ko:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
@@ -921,7 +901,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
@@ -967,7 +946,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
@@ -996,8 +974,6 @@ ko:
         options:
           INPUT1:
             '1': 레몬 주스
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} 효과 연출"
         options:
@@ -1014,8 +990,6 @@ ko:
         options:
           INPUT1:
             '1': 레몬 주스
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{SPRITE1COSTUME}(으)로 {VAR1}와(과) 소통"
       FunctionBlocks_makeManipulative2:
@@ -1044,6 +1018,8 @@ ko:
         text: 대상 피하기
       gamelab_beginCollectingData:
         text: 데이터 {BREAK} 값 {VALUE}을 라벨 {LABEL}로 수집하기 시작합니다
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE}가 {TARGET}에서 벗어나 튕겨집니다"
       gamelab_changePropBy:
@@ -1186,7 +1162,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
@@ -1230,9 +1205,21 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP}(을)를 {FORMAT}(으)로 레이아웃"
+        options:
+          FORMAT:
+            '"border"': 테두리
+            '"circle"': 원
+            '"grid"': 그리드
+            '"top"': 위쪽 행
+            '"row"': class
+            '"bottom"': 아래쪽 행
+            '"left"': 왼쪽 열
+            '"column"': 열
+            '"right"': 오른쪽 열
       gamelab_locationAt:
         text: '위치 x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1258,6 +1245,18 @@ ko:
             '"spiral"': 나선
       gamelab_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': 테두리
+            '"circle"': 원
+            '"grid"': 그리드
+            '"top"': 위쪽 행
+            '"row"': class
+            '"bottom"': 아래쪽 행
+            '"left"': 왼쪽 열
+            '"column"': 열
+            '"right"': 오른쪽 열
       gamelab_makeNumSprites:
         text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
       gamelab_makeProjectile:
@@ -1486,11 +1485,9 @@ ko:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': 느리게
             '5': 보통
             '7': 빠르게
-            '9': extra fast
       gamelab_setTint:
         text: 의 색상을 변경 {THIS} 받는 사람 {COLOR}
       gamelab_setupScoreboard:
@@ -1646,6 +1643,10 @@ ko:
         text: x 좌표 {SPRITE}
       gamelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE}이(가) {LOCATION}(으)로 글라이딩"
+      KatiesBlocks_tumbling:
+        text: 텀블링
       Mikelab_addBehaviorSimple:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1961,14 +1962,10 @@ ko:
         options:
           INPUT1:
             '1': 레몬 주스
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': 레몬 주스
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2212,8 +2209,6 @@ ko:
         text: 왼쪽으로 회전
       RyanLab_turnRight:
         text: 오른쪽으로 회전
-      SpriteLab2Beta_spriteSay:
-        text: 스프라이트 {SPRITE} 말할 {TEXT} 에 대 한 {SECONDS} 초
       Vector_createSpriteWith:
         text: |-
           스프라이트 만들기
@@ -2250,18 +2245,25 @@ ko:
         options:
           PORTION:
             '1': 모두
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': 모두
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE}이(가) {SPEECH}을(를) 말함"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 오른쪽으로 회전
+            new Behavior(spinning_left, []): 왼쪽으로 회전
+            new Behavior(fluttering, []): 너울거림
+            new Behavior(jittering, []): 지터링
+            new Behavior(wobbling, []): 흔들림
+            new Behavior(wandering, []): 배회
+            new Behavior(patrolling, []): 순찰
+      adaptations_startFollowing:
+        text: "{SPRITE}이(가) {TARGET}을(를) 팔로잉하기 시작함"
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:
@@ -2314,7 +2316,7 @@ ko:
             '"d"': d
       craft_ifPath:
         text: |-
-          {DIR}에 길이 있을 경우
+          경로가 {DIR}인 경우
           {STATEMENT}
         options:
           DIR:
@@ -2323,7 +2325,7 @@ ko:
             "'left'": 왼쪽
       craft_ifStandingOn:
         text: |-
-          {TYPE} 위에 서 있을 경우
+          {TYPE} 위에 서있을 경우
           {STATEMENT}
         options:
           TYPE:
@@ -2335,7 +2337,7 @@ ko:
             "'seaLantern'": 바다 랜턴
       craft_ifStandingOnLimit:
         text: |-
-          {TYPE} 위에 서 있을 경우
+          {TYPE} 위에 서있을 경우
           {STATEMENT}
         options:
           TYPE:
@@ -2346,35 +2348,51 @@ ko:
       craft_moveForward:
         text: 앞으로 이동
       craft_placeBlock:
-        text: 장소 {blockType}
+        text: "{blockType} 놓기"
         options:
           blockType:
             '"chiseledStoneBricks"': 장식용 석조 벽돌
             '"seaLantern"': 바다 랜턴
       craft_placePrismarine:
-        text: 장소 프리스마린
+        text: 프리즈머린 놓기
       craft_placeTorch:
         text: 횃불 놓기
       craft_repeatUntilConduit:
         text: |-
-          도관이 완료될 때까지 반복
+          전달체가 완료될 때까지 반복
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           목표까지 반복
           {STATEMENT}
       craft_spawnEntity:
-        text: 산란 {ENTITY}
+        text: "{ENTITY} 생성"
         options:
           ENTITY:
             '"dolphin"': 돌고래
             '"squid"': 오징어
       craft_turn:
-        text: 설정 {DIR}
+        text: "{DIR} 회전"
         options:
           DIR:
-            right: 우측 윙어
-            left: 왼쪽
+            right: 오른쪽 ↻
+            left: 왼쪽 ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: 인쇄 {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} 효과 연출"
         options:
@@ -2389,5 +2407,3 @@ ko:
         text: "{HEADING} 헤딩 설정"
       storylab_setSubheading:
         text: "{SUBHEADING} 서브 헤딩 설정"
-      validation_validatedBackground:
-        text: 배경을 {IMG}으로 설정

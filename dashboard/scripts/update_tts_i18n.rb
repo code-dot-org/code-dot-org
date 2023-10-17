@@ -7,7 +7,7 @@ def clean(value)
   elsif value.instance_of? String
     return value.gsub(/\s+/, '')
   elsif value.instance_of? Array
-    return clean(value.join(''))
+    return clean(value.join)
   elsif value.instance_of? Hash
     return clean(value.values)
   end
@@ -17,7 +17,7 @@ def text_translated?(left, right)
   clean(left) != clean(right)
 end
 
-def update_level_tts_i18n(level, script=nil)
+def update_level_tts_i18n(level, script = nil)
   # Short Instructions
 
   translated_text = level.tts_short_instructions_text

@@ -11,3 +11,4 @@ question 'compound Boolean expression'
 answer 'an expression using logical operators that evaluates to a Boolean value'
 question 'polymorphism'
 answer 'the ability to perform an action in different ways'
+allow_multiple_attempts true

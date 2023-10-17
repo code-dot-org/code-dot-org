@@ -1,11 +1,8 @@
 ---
-title: Teacher Resources - Make a Flappy Game
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Υλικό δασκάλου - φτιάξτε ένα παιχνίδι Flappy
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Φτιάξτε ένα παιχνίδι Flappy: Ένας οδηγός για την Ώρα του Κώδικα
 
 {{ hoc_flappy_video }}
 
@@ -15,7 +12,7 @@ video_player: true
 
 ### Lesson Plans:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Δημιουργήστε ένα παιχνίδι Flappy]({{ hoc_flappy_cb_url }})
 
 ### Extension Activities:
 

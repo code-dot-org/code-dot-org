@@ -25,7 +25,7 @@ var Colours = {
   FROZEN6: '#e8e8e8',
   FROZEN7: '#bbd1e4',
   FROZEN8: '#fdd0fd',
-  FROZEN9: '#aea4ff'
+  FROZEN9: '#aea4ff',
 };
 
 module.exports = Colours;

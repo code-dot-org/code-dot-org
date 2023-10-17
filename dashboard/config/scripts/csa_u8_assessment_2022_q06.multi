@@ -15,3 +15,5 @@ Consider the following two data structures for storing millions of words.
 
 Which of the following statements most accurately describes the time needed for operations on these data structures?
 MARKDOWN
+
+allow_multiple_attempts true

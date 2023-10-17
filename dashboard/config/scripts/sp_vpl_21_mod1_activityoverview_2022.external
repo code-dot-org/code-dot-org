@@ -3,9 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Types of activities found in this course 
+# Types of Activities Found in This Course 
 
-##### You will encounter a variety of different types of activities referred to as **levels**. These levels are located in the Code.org learning platform called **Code Studio.** Each level is designed to help you prepare to teach CS Discoveries for the first time. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">You will encounter a variety of different types of activities referred to as <strong>levels</strong>. These levels are located in the Code.org learning platform called <strong>Code Studio.</strong> Each level is designed to help you prepare to teach CS Discoveries for the first time. 
+</p>
+</div>
 
 ##### **Read the information below to learn more about the different types of levels you will encounter in these professional learning modules.**
 

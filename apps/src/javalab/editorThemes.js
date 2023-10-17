@@ -3,7 +3,7 @@ import color from '@cdo/apps/util/color';
 import {
   syntaxHighlighting,
   defaultHighlightStyle,
-  HighlightStyle
+  HighlightStyle,
 } from '@codemirror/language';
 import {tags} from '@lezer/highlight';
 
@@ -29,56 +29,57 @@ export const darkTheme = EditorView.theme(
   {
     '&': {
       color: color.lighter_gray,
-      backgroundColor: color.darkest_slate_gray
+      backgroundColor: color.darkest_slate_gray,
     },
     '.cm-content': {
-      caretColor: cursor
+      caretColor: cursor,
     },
     '&.cm-focused .cm-cursor': {borderLeftColor: cursor},
-    '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection': {
-      backgroundColor: selection
-    },
+    '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection':
+      {
+        backgroundColor: selection,
+      },
     '.cm-panels': {backgroundColor: darkBackground, color: color.lighter_gray},
     '.cm-panels button': {color: color.lightest_gray},
     '.cm-panels.cm-panels-top': {borderBottom: '2px solid black'},
     '.cm-panels.cm-panels-bottom': {borderTop: '2px solid black'},
     '.cm-searchMatch': {
       backgroundColor: '#72a1ff59',
-      outline: '1px solid #457dff'
+      outline: '1px solid #457dff',
     },
     '.cm-searchMatch.cm-searchMatch-selected': {
-      backgroundColor: '#6199ff2f'
+      backgroundColor: '#6199ff2f',
     },
     '.cm-activeLine': {backgroundColor: color.dark_gray},
     '.cm-selectionMatch': {backgroundColor: '#aafe661a'},
     '.cm-matchingBracket, .cm-nonmatchingBracket': {
       backgroundColor: '#bad0f847',
-      outline: '1px solid #515a6b'
+      outline: '1px solid #515a6b',
     },
     '.cm-gutters': {
       backgroundColor: color.darkest_slate_gray,
       color: stone,
-      border: 'none'
+      border: 'none',
     },
     '.cm-activeLineGutter': {
-      backgroundColor: highlightBackground
+      backgroundColor: highlightBackground,
     },
     '.cm-foldPlaceholder': {
       backgroundColor: 'transparent',
       border: 'none',
-      color: '#ddd'
+      color: '#ddd',
     },
     '.cm-tooltip': {
       border: '1px solid #181a1f',
-      backgroundColor: darkBackground
+      backgroundColor: darkBackground,
     },
     '.cm-tooltip-autocomplete': {
       '& > ul > li[aria-selected]': {
         backgroundColor: highlightBackground,
-        color: color.lighter_gray
-      }
+        color: color.lighter_gray,
+      },
     },
-    '.cm-textfield': {color: color.lightest_gray}
+    '.cm-textfield': {color: color.lightest_gray},
   },
   {dark: true}
 );
@@ -95,21 +96,21 @@ export const darkHighlightStyle = HighlightStyle.define([
       tags.character,
       tags.propertyName,
       tags.macroName,
-      tags.definition(tags.name)
+      tags.definition(tags.name),
     ],
-    color: coral
+    color: coral,
   },
   {
     tag: [tags.function(tags.variableName), tags.labelName],
-    color: malibu
+    color: malibu,
   },
   {
     tag: [tags.color, tags.constant(tags.name), tags.standard(tags.name)],
-    color: whiskey
+    color: whiskey,
   },
   {
     tag: [tags.separator],
-    color: color.lighter_gray
+    color: color.lighter_gray,
   },
   {
     tag: [
@@ -120,9 +121,9 @@ export const darkHighlightStyle = HighlightStyle.define([
       tags.annotation,
       tags.modifier,
       tags.self,
-      tags.namespace
+      tags.namespace,
     ],
-    color: chalky
+    color: chalky,
   },
   {
     tag: [
@@ -132,9 +133,9 @@ export const darkHighlightStyle = HighlightStyle.define([
       tags.escape,
       tags.regexp,
       tags.link,
-      tags.special(tags.string)
+      tags.special(tags.string),
     ],
-    color: cyan
+    color: cyan,
   },
   {tag: [tags.meta, tags.comment], color: stone},
   {tag: tags.strong, fontWeight: 'bold'},
@@ -144,10 +145,10 @@ export const darkHighlightStyle = HighlightStyle.define([
   {tag: tags.heading, fontWeight: 'bold', color: coral},
   {
     tag: [tags.atom, tags.bool, tags.special(tags.variableName)],
-    color: whiskey
+    color: whiskey,
   },
   {tag: [tags.processingInstruction, tags.string, tags.inserted], color: sage},
-  {tag: tags.invalid, color: invalid}
+  {tag: tags.invalid, color: invalid},
 ]);
 
 /**
@@ -161,12 +162,12 @@ export const lightTheme = EditorView.theme(
   {
     // Sets the background color for the main editor area
     '&': {
-      backgroundColor: color.white
+      backgroundColor: color.white,
     },
     // Sets the background color for the left-hand side gutters
     '.cm-gutters': {
-      backgroundColor: color.white
-    }
+      backgroundColor: color.white,
+    },
   },
   {dark: false}
 );
@@ -174,7 +175,7 @@ export const lightTheme = EditorView.theme(
 // Extension to enable the light theme (both the editor theme and the highlight style).
 export const lightMode = [
   lightTheme,
-  syntaxHighlighting(defaultHighlightStyle)
+  syntaxHighlighting(defaultHighlightStyle),
 ];
 
 export const DEFAULT_FONT_SIZE_PX = 13;

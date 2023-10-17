@@ -6,3 +6,5 @@ question 'What is the value of x-10?'
 wrong 'a function'
 right '5'
 wrong 'x'
+
+allow_multiple_attempts true

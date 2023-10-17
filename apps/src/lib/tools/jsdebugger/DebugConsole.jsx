@@ -12,7 +12,7 @@ import i18n from '@cdo/locale';
 import {KeyCodes} from '../../../constants';
 import {
   add as addWatchExpression,
-  remove as removeWatchExpression
+  remove as removeWatchExpression,
 } from '../../../redux/watchedExpressions';
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
@@ -26,7 +26,7 @@ const INPUT_OUTPUT_SHARED_STYLE = {
   borderWidth: 0,
   padding: 0,
   outline: 0,
-  userSelect: 'text'
+  userSelect: 'text',
 };
 
 const style = {
@@ -37,24 +37,24 @@ const style = {
     lineHeight: 'normal',
     cursor: 'text',
     whiteSpace: 'pre-wrap',
-    flexGrow: 1
+    flexGrow: 1,
   },
   debugOutputBackgroundError: {
-    backgroundColor: color.lightest_red
+    backgroundColor: color.lightest_red,
   },
   debugOutputBackgroundWarning: {
-    backgroundColor: color.lightest_yellow
+    backgroundColor: color.lightest_yellow,
   },
   debugInputWrapper: {
     flexGrow: 0,
     flexShrink: 0,
-    display: 'flex'
+    display: 'flex',
   },
   debugInputWrapperDisabled: {
     flexGrow: 0,
     flexShrink: 0,
     display: 'flex',
-    backgroundColor: '#eee'
+    backgroundColor: '#eee',
   },
   debugInputPrompt: {
     height: DEBUG_INPUT_HEIGHT,
@@ -62,7 +62,7 @@ const style = {
     paddingLeft: DEBUG_CONSOLE_LEFT_PADDING,
     width: 15,
     cursor: 'text',
-    flexGrow: 0
+    flexGrow: 0,
   },
   debugInput: {
     ...INPUT_OUTPUT_SHARED_STYLE,
@@ -71,11 +71,11 @@ const style = {
     lineHeight: DEBUG_INPUT_HEIGHT + 'px',
     flexGrow: 1,
     marginBottom: 0,
-    boxShadow: 'none'
+    boxShadow: 'none',
   },
   inspector: {
-    display: 'inline-flex'
-  }
+    display: 'inline-flex',
+  },
 };
 
 // These colors come from the ace editor defaults
@@ -88,7 +88,7 @@ const inspectorTheme = {
   OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
   OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
   OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
-  OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
+  OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)',
 };
 
 const WATCH_COMMAND_PREFIX = '$watch ';
@@ -126,16 +126,16 @@ export default connect(
     jsInterpreter: selectors.getJSInterpreter(state),
     logOutput: selectors.getLogOutput(state),
     maxLogLevel: selectors.getMaxLogLevel(state),
-    isAttached: selectors.isAttached(state)
+    isAttached: selectors.isAttached(state),
   }),
   {
     addWatchExpression,
     removeWatchExpression,
     evalInCurrentScope: actions.evalInCurrentScope,
-    appendLog: actions.appendLog
+    appendLog: actions.appendLog,
   },
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(
   class DebugConsole extends React.Component {
     static propTypes = {
@@ -144,7 +144,7 @@ export default connect(
       logOutput: PropTypes.oneOfType([
         PropTypes.array,
         PropTypes.object,
-        PropTypes.string
+        PropTypes.string,
       ]).isRequired,
       debugConsoleDisabled: PropTypes.bool.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
@@ -158,7 +158,7 @@ export default connect(
       // passed from above
       debugButtons: PropTypes.bool,
       debugWatch: PropTypes.bool,
-      style: PropTypes.object
+      style: PropTypes.object,
     };
 
     onInputKeyDown = e => {
@@ -187,12 +187,13 @@ export default connect(
                 ? `(${input})`
                 : input
             );
-            result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
-              result
-            );
+            result =
+              this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+                result
+              );
             this.appendLog({
               output: result,
-              undefinedInput: input === 'undefined' ? true : false
+              undefinedInput: input === 'undefined' ? true : false,
             });
           } catch (err) {
             this.appendLog({output: String(err)});
@@ -328,7 +329,7 @@ export default connect(
           style={{
             display: 'flex',
             flexDirection: 'column',
-            ...this.props.style
+            ...this.props.style,
           }}
           ref={
             // we currently need this ref because JsDebugger does some
@@ -346,7 +347,7 @@ export default connect(
             ref={el => (this._debugOutput = el)}
             style={{
               ...style.debugOutput,
-              ...this.getDebugOutputBackgroundStyle()
+              ...this.getDebugOutputBackgroundStyle(),
             }}
           >
             {this.displayOutputToConsole()}

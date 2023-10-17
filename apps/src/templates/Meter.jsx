@@ -8,7 +8,7 @@ export default class Meter extends Component {
     label: PropTypes.string,
     value: PropTypes.number.isRequired,
     max: PropTypes.number.isRequired,
-    containerStyle: PropTypes.object
+    containerStyle: PropTypes.object,
   };
 
   render() {
@@ -34,7 +34,7 @@ export default class Meter extends Component {
             style={{
               ...styles.meterValue,
               width: `${percentFull}%`,
-              backgroundColor
+              backgroundColor,
             }}
           />
         </div>
@@ -46,19 +46,19 @@ export default class Meter extends Component {
 const styles = {
   container: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   label: {
-    margin: '0 10px'
+    margin: '0 10px',
   },
   meter: {
     width: 100,
     height: 10,
     borderRadius: 8,
     backgroundColor: color.white,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   meterValue: {
-    height: '100%'
-  }
+    height: '100%',
+  },
 };

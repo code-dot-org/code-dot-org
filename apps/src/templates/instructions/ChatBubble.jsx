@@ -7,7 +7,7 @@ import InlineAudio from './InlineAudio';
 
 const styles = {
   container: {
-    position: 'relative'
+    position: 'relative',
   },
 
   main: {
@@ -20,37 +20,37 @@ const styles = {
     paddingRight: 10,
     position: 'relative',
     borderStyle: 'dashed',
-    borderWidth: 1
+    borderWidth: 1,
   },
 
   minecraft: {
     backgroundColor: '#3B3B3B',
     borderRadius: 4,
-    borderWidth: 0
+    borderWidth: 0,
   },
 
   withAudioControls: {
-    paddingRight: 76
+    paddingRight: 76,
   },
 
   audioControls: {
     position: 'absolute',
     top: 7,
-    right: 12
-  }
+    right: 12,
+  },
 };
 
 var audioStyle = {
   wrapper: {
-    position: 'relative'
+    position: 'relative',
   },
   button: {
-    height: '32px'
+    height: '32px',
   },
   buttonImg: {
-    lineHeight: '32px',
-    fontSize: 20
-  }
+    lineHeight: '28px',
+    fontSize: 20,
+  },
 };
 
 const ChatBubble = ({
@@ -60,7 +60,7 @@ const ChatBubble = ({
   borderColor,
   ttsUrl,
   ttsMessage,
-  textToSpeechEnabled
+  textToSpeechEnabled,
 }) => {
   borderColor = borderColor || 'white';
   const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
@@ -72,7 +72,7 @@ const ChatBubble = ({
           styles.main,
           isMinecraft && styles.minecraft,
           showAudioControls && styles.withAudioControls,
-          {borderColor}
+          {borderColor},
         ]}
       >
         {children}
@@ -94,7 +94,7 @@ ChatBubble.propTypes = {
   skinId: PropTypes.string,
   ttsUrl: PropTypes.string,
   ttsMessage: PropTypes.string,
-  textToSpeechEnabled: PropTypes.bool
+  textToSpeechEnabled: PropTypes.bool,
 };
 
 export default Radium(ChatBubble);

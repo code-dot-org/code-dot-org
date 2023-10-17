@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const DEFAULT_FILTER_KEY = i18n.all();
 
@@ -35,16 +36,16 @@ function TextResponsesLessonSelector({lessons, onChangeFilter}) {
 
 TextResponsesLessonSelector.propTypes = {
   lessons: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onChangeFilter: PropTypes.func.isRequired
+  onChangeFilter: PropTypes.func.isRequired,
 };
 
 const styles = {
   dropdownContainer: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   dropdown: {
     display: 'block',
@@ -52,8 +53,8 @@ const styles = {
     height: 30,
     paddingLeft: 8,
     paddingRight: 8,
-    marginLeft: 8
-  }
+    marginLeft: 8,
+  },
 };
 
 export default TextResponsesLessonSelector;

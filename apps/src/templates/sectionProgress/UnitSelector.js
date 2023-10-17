@@ -11,8 +11,8 @@ export const dropdownStyles = {
     height: 34,
     paddingLeft: 5,
     paddingRight: 5,
-    width: 300
-  }
+    width: 300,
+  },
 };
 
 export default class UnitSelector extends Component {
@@ -20,7 +20,7 @@ export default class UnitSelector extends Component {
     coursesWithProgress: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   render() {

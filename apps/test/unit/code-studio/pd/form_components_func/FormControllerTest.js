@@ -30,7 +30,7 @@ describe('FormController', () => {
     requiredFields: [],
     pageComponents: [DummyPage1, DummyPage2, DummyPage3],
     onSuccessfulSubmit,
-    allowPartialSaving: true
+    allowPartialSaving: true,
   };
   afterEach(() => {
     sinon.restore();
@@ -56,7 +56,7 @@ describe('FormController', () => {
       requiredFields: [],
       pageComponents: [DummyPage1, DummyPage2, DummyPage3],
       onSuccessfulSubmit,
-      allowPartialSaving: true
+      allowPartialSaving: true,
     };
   });
 
@@ -73,7 +73,7 @@ describe('FormController', () => {
   const serverResponse = (statusNumber = 200, data = {}) => [
     statusNumber,
     {'Content-Type': 'application/json'},
-    JSON.stringify(data)
+    JSON.stringify(data),
   ];
   const clickSaveButton = () => form.findAll('Button')[1].props.onClick();
 
@@ -97,7 +97,7 @@ describe('FormController', () => {
     expect(buttons).to.have.length(2);
     expect(buttons.map(button => button.content())).to.eql([
       'Next',
-      saveButtonText
+      saveButtonText,
     ]);
   });
 
@@ -111,7 +111,7 @@ describe('FormController', () => {
     expect(buttons.map(button => button.content())).to.eql([
       'Back',
       'Next',
-      saveButtonText
+      saveButtonText,
     ]);
   });
 
@@ -125,7 +125,7 @@ describe('FormController', () => {
     expect(buttons.map(button => button.content())).to.eql([
       'Back',
       'Submit',
-      saveButtonText
+      saveButtonText,
     ]);
   });
 
@@ -290,10 +290,10 @@ describe('FormController', () => {
 
     [
       serverResponse(400, {
-        errors: {form_data: ['an error']}
+        errors: {form_data: ['an error']},
       }),
       serverResponse(500),
-      serverResponse(409)
+      serverResponse(409),
     ].forEach(response => {
       const statusNumber = response[0];
       it(`Re-enables the save button after unsuccessful save with ${statusNumber} error`, () => {
@@ -302,7 +302,7 @@ describe('FormController', () => {
         const server = sinon.fakeServer.create();
         server.respondWith(
           serverResponse(400, {
-            errors: {form_data: ['an error']}
+            errors: {form_data: ['an error']},
           })
         );
 
@@ -351,7 +351,7 @@ describe('FormController', () => {
       server.respondWith([
         201,
         {'Content-Type': 'application/json'},
-        JSON.stringify({})
+        JSON.stringify({}),
       ]);
 
       clickSaveButton(form);
@@ -428,7 +428,7 @@ describe('FormController', () => {
 
       [
         {previouslySaved: false, message: 'with new application'},
-        {previouslySaved: true, message: 'with previously-saved application'}
+        {previouslySaved: true, message: 'with previously-saved application'},
       ].forEach(({previouslySaved, message}) => {
         it(`Submits when the last page has no errors ${message}`, () => {
           previouslySaved
@@ -469,10 +469,10 @@ describe('FormController', () => {
 
       [
         serverResponse(400, {
-          errors: {form_data: ['an error']}
+          errors: {form_data: ['an error']},
         }),
         serverResponse(500),
-        serverResponse(409)
+        serverResponse(409),
       ].forEach(response => {
         const statusNumber = response[0];
         it(`Re-enables the submit button on ${statusNumber} error and removes spinner`, () => {
@@ -534,7 +534,7 @@ describe('FormController', () => {
         arrayField: ['  no trim in array  '],
         onlySpaces: '     ',
         otherPageTextFieldWithSpace: '   no trim   ',
-        otherPageArrayField: ['  still no trim in array  ']
+        otherPageArrayField: ['  still no trim in array  '],
       };
       form = isolateComponent(
         <FormController {...defaultProps} getInitialData={() => initialData} />
@@ -543,7 +543,7 @@ describe('FormController', () => {
         'textFieldWithSpace',
         'textFieldWithNoSpace',
         'arrayField',
-        'onlySpaces'
+        'onlySpaces',
       ];
 
       setPage(1);
@@ -554,7 +554,7 @@ describe('FormController', () => {
         arrayField: ['  no trim in array  '],
         onlySpaces: null,
         otherPageTextFieldWithSpace: '   no trim   ',
-        otherPageArrayField: ['  still no trim in array  ']
+        otherPageArrayField: ['  still no trim in array  '],
       });
     });
 
@@ -562,26 +562,23 @@ describe('FormController', () => {
       const pageData = {
         page1Field1: 'value1',
         page1Field2: 'will be cleared',
-        page1Field3: 'will be modified'
+        page1Field3: 'will be modified',
       };
 
-      DummyPage1.processPageData = sinon
-        .stub()
-        .withArgs(pageData)
-        .returns({
-          page1Field2: undefined,
-          page1Field3: 'modified'
-        });
+      DummyPage1.processPageData = sinon.stub().withArgs(pageData).returns({
+        page1Field2: undefined,
+        page1Field3: 'modified',
+      });
 
       DummyPage1.associatedFields = [
         'page1Field1',
         'page1Field2',
-        'page1Field3'
+        'page1Field3',
       ];
 
       const initialData = {
         ...pageData,
-        page2Field1: 'unmodified'
+        page2Field1: 'unmodified',
       };
       form = isolateComponent(
         <FormController {...defaultProps} getInitialData={() => initialData} />
@@ -594,7 +591,7 @@ describe('FormController', () => {
         page1Field1: 'value1',
         page1Field2: undefined,
         page1Field3: 'modified',
-        page2Field1: 'unmodified'
+        page2Field1: 'unmodified',
       });
     });
   });
@@ -607,7 +604,7 @@ describe('FormController', () => {
 
     it('Saves form data to session storage', () => {
       const initialData = {
-        existingField1: 'existing value 1'
+        existingField1: 'existing value 1',
       };
       form = isolateComponent(
         <FormController
@@ -617,22 +614,22 @@ describe('FormController', () => {
         />
       );
       form.findOne(DummyPage1).props.onChange({
-        updatedField1: 'updated value 1'
+        updatedField1: 'updated value 1',
       });
       expect(sessionStorage[sessionStorageKey]).to.eql(
         JSON.stringify({
           currentPage: 0,
           data: {
             existingField1: 'existing value 1',
-            updatedField1: 'updated value 1'
-          }
+            updatedField1: 'updated value 1',
+          },
         })
       );
     });
 
     it('Saves current page to session storage', () => {
       const initialData = {
-        existingField1: 'existing value 1'
+        existingField1: 'existing value 1',
       };
       form = isolateComponent(
         <FormController
@@ -645,7 +642,7 @@ describe('FormController', () => {
       expect(sessionStorage['DummyForm']).to.eql(
         JSON.stringify({
           currentPage: 1,
-          data: {existingField1: 'existing value 1'}
+          data: {existingField1: 'existing value 1'},
         })
       );
     });
@@ -653,11 +650,11 @@ describe('FormController', () => {
     it('Loads current page and form data from session storage on mount', () => {
       const testData = {
         field1: 'value 1',
-        field2: 'value 2'
+        field2: 'value 2',
       };
       sessionStorage['DummyForm'] = JSON.stringify({
         currentPage: 2,
-        data: testData
+        data: testData,
       });
 
       form = isolateComponent(

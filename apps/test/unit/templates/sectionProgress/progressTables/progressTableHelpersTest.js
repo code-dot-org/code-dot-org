@@ -3,12 +3,12 @@ import {mount} from 'enzyme';
 import {
   getSummaryCellFormatters,
   getDetailCellFormatters,
-  unitTestExports
+  unitTestExports,
 } from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
 import {
   fakeLessonWithLevels,
   fakeStudents,
-  fakeStudentLevelProgress
+  fakeStudentLevelProgress,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('progressTableHelpers', () => {
@@ -58,9 +58,9 @@ describe('progressTableHelpers', () => {
           imperfectPercent: 20,
           completedPercent: 60,
           timeSpent: 300, // time spent = 5 minutes
-          lastTimestamp: 1614841198 // date = 3/4
-        }
-      }
+          lastTimestamp: 1614841198, // date = 3/4
+        },
+      },
     };
 
     const summaryCellFormatters = getSummaryCellFormatters(
@@ -128,7 +128,7 @@ describe('progressTableHelpers', () => {
       expect(secondCell.props().items.map(i => i.node)).to.deep.equal([
         '5',
         '5',
-        '5'
+        '5',
       ]); // 5 minutes (3 times, once for each level)
     });
 
@@ -139,7 +139,7 @@ describe('progressTableHelpers', () => {
       expect(thirdCell.props().items.map(i => i.node)).to.deep.equal([
         '3/4',
         '3/4',
-        '3/4'
+        '3/4',
       ]); // date = 3/4 (3 times, once for each level)
     });
   });

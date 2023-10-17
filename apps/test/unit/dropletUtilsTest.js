@@ -12,30 +12,30 @@ const BASE_DROPLET_CATEGORIES = Object.freeze({
     id: 'control',
     color: 'blue',
     rgb: '#64B5F6',
-    blocks: []
+    blocks: [],
   },
   Math: {
     id: 'math',
     color: 'orange',
     rgb: '#FFB74D',
-    blocks: []
+    blocks: [],
   },
   Variables: {
     id: 'variables',
     color: 'purple',
     rgb: '#BB77C7',
-    blocks: []
+    blocks: [],
   },
   Functions: {
     id: 'functions',
     color: 'green',
     rgb: '#68D995',
-    blocks: []
+    blocks: [],
   },
   '': {
     id: 'default',
-    blocks: []
-  }
+    blocks: [],
+  },
 });
 
 const BASE_DROPLET_CONFIG = Object.freeze({
@@ -43,97 +43,97 @@ const BASE_DROPLET_CONFIG = Object.freeze({
     getTime: {
       value: true,
       color: '#64B5F6',
-      title: 'getTime'
+      title: 'getTime',
     },
     randomNumber: {
       value: true,
       color: '#FFB74D',
-      title: 'randomNumber'
+      title: 'randomNumber',
     },
     prompt: {
       value: true,
       color: '#BB77C7',
-      title: 'prompt'
+      title: 'prompt',
     },
     promptNum: {
       value: true,
       color: '#BB77C7',
-      title: 'promptNum'
+      title: 'promptNum',
     },
     'Math.random': {
       color: '#FFB74D',
       title: 'Math.random',
-      value: true
+      value: true,
     },
     'Math.round': {
       value: true,
       color: '#FFB74D',
-      title: 'Math.round'
+      title: 'Math.round',
     },
     'Math.abs': {
       value: true,
       color: '#FFB74D',
-      title: 'Math.abs'
+      title: 'Math.abs',
     },
     'Math.max': {
       value: true,
       color: '#FFB74D',
-      title: 'Math.max'
+      title: 'Math.max',
     },
     'Math.min': {
       value: true,
       color: '#FFB74D',
-      title: 'Math.min'
+      title: 'Math.min',
     },
     'Math.pow': {
       value: true,
       color: '#FFB74D',
-      title: 'Math.pow'
+      title: 'Math.pow',
     },
     'Math.sqrt': {
       value: true,
       color: '#FFB74D',
-      title: 'Math.sqrt'
-    }
+      title: 'Math.sqrt',
+    },
   },
   categories: {
     arithmetic: {
-      color: '#FFB74D'
+      color: '#FFB74D',
     },
     logic: {
-      color: '#FFB74D'
+      color: '#FFB74D',
     },
     conditionals: {
-      color: '#64B5F6'
+      color: '#64B5F6',
     },
     loops: {
       color: '#64B5F6',
-      beginner: false
+      beginner: false,
     },
     functions: {
-      color: '#68D995'
+      color: '#68D995',
     },
     returns: {
-      color: '#68D995'
+      color: '#68D995',
     },
     comments: {
-      color: '#FFFFFF'
+      color: '#FFFFFF',
     },
     containers: {
-      color: '#BB77C7'
+      color: '#BB77C7',
     },
     value: {
-      color: '#BB77C7'
+      color: '#BB77C7',
     },
     command: {
-      color: '#68D995'
+      color: '#68D995',
     },
     assignments: {
-      color: '#BB77C7'
-    }
+      color: '#BB77C7',
+    },
   },
   paramButtonsForUnknownFunctions: true,
-  createSocketForKnownBlock: true
+  createSocketForKnownBlock: true,
 });
 
 describe('dropletUtils', () => {
@@ -182,28 +182,28 @@ describe('dropletUtils', () => {
           MyTestBlock: {
             value: true,
             color: '#COO110',
-            title: 'MyTestBlock'
-          }
-        }
+            title: 'MyTestBlock',
+          },
+        },
       });
       const appOptionsConfig = {
         dropletConfig: {
           blocks: [
-            {func: 'MyTestBlock', category: 'My Test Category', type: 'value'}
+            {func: 'MyTestBlock', category: 'My Test Category', type: 'value'},
           ],
           categories: {
             'My Test Category': {
               color: 'white',
               rgb: '#COO110',
-              blocks: []
-            }
-          }
+              blocks: [],
+            },
+          },
         },
         level: {
           codeFunctions: {
-            MyTestBlock: null
-          }
-        }
+            MyTestBlock: null,
+          },
+        },
       };
       const result = dropletUtils.generateDropletModeOptions(appOptionsConfig);
 
@@ -220,17 +220,17 @@ describe('dropletUtils', () => {
         functions: {
           moveForward: {
             color: 'red',
-            title: 'moveForward'
+            title: 'moveForward',
           },
           turnLeft: {
             color: 'red',
-            title: 'turnLeft'
+            title: 'turnLeft',
           },
           turnRight: {
             color: 'red',
-            title: 'turnRight'
-          }
-        }
+            title: 'turnRight',
+          },
+        },
       });
 
       const appOptionsConfig = {
@@ -239,9 +239,9 @@ describe('dropletUtils', () => {
           codeFunctions: {
             moveForward: null,
             turnLeft: null,
-            turnRight: null
-          }
-        }
+            turnRight: null,
+          },
+        },
       };
       const result = dropletUtils.generateDropletModeOptions(appOptionsConfig);
 
@@ -266,8 +266,8 @@ describe('dropletUtils', () => {
             id: 'test-category',
             color: 'blue',
             rgb: '#COO110',
-            blocks: []
-          }
+            blocks: [],
+          },
         },
         BASE_DROPLET_CATEGORIES
       );
@@ -278,9 +278,9 @@ describe('dropletUtils', () => {
             id: 'test-category',
             color: 'blue',
             rgb: '#COO110',
-            blocks: []
-          }
-        }
+            blocks: [],
+          },
+        },
       };
       const result = mergeCategoriesWithConfig(dropletConfig);
       // I got our expected result by running this code and doing a JSON.parse on
@@ -299,9 +299,9 @@ describe('dropletUtils', () => {
           Turtle: {
             color: 'cyan',
             rgb: '#4DD0E1',
-            blocks: []
-          }
-        }
+            blocks: [],
+          },
+        },
       };
 
       var result = mergeCategoriesWithConfig(appConfig);
@@ -319,7 +319,7 @@ describe('dropletUtils', () => {
       dropletUtils.__TestInterface.filteredBlocksFromConfig;
 
     var codeFunctions = {
-      sourceBlock: null
+      sourceBlock: null,
     };
 
     var dropletConfig = {
@@ -328,11 +328,11 @@ describe('dropletUtils', () => {
           func: 'sourceBlock',
           category: 'Math',
           type: 'value',
-          docFunc: 'targetBlock'
+          docFunc: 'targetBlock',
         },
         {func: 'targetBlock', category: 'Math', type: 'value'},
-        {func: 'thirdBlock', category: 'Math', type: 'value'}
-      ]
+        {func: 'thirdBlock', category: 'Math', type: 'value'},
+      ],
     };
 
     it('returns source and target when paletteOnly is true', () => {
@@ -347,9 +347,9 @@ describe('dropletUtils', () => {
           func: 'sourceBlock',
           category: 'Math',
           type: 'value',
-          docFunc: 'targetBlock'
+          docFunc: 'targetBlock',
         },
-        {func: 'targetBlock', category: 'Math', type: 'value'}
+        {func: 'targetBlock', category: 'Math', type: 'value'},
       ]);
     });
 
@@ -364,7 +364,7 @@ describe('dropletUtils', () => {
 
     it('doesnt return target when source is not in codeFunctions', () => {
       var codeFunctions = {
-        thirdBlock: null
+        thirdBlock: null,
       };
       var mergedBlocks = filteredBlocksFromConfig(
         codeFunctions,
@@ -373,7 +373,7 @@ describe('dropletUtils', () => {
         {paletteOnly: true}
       );
       assert.deepEqual(mergedBlocks, [
-        {func: 'thirdBlock', category: 'Math', type: 'value'}
+        {func: 'thirdBlock', category: 'Math', type: 'value'},
       ]);
     });
   });
@@ -479,8 +479,8 @@ describe('dropletUtils', () => {
           'A category': {
             color: 'cyan',
             rgb: '#00cccc',
-            blocks: []
-          }
+            blocks: [],
+          },
         },
         blocks: [
           {
@@ -489,7 +489,7 @@ describe('dropletUtils', () => {
             category: 'A category',
             paletteParams: ['pin', 'mode'],
             params: ['13', '"output"'],
-            dropdown: {1: ['"output"', '"input"', '"analog"']}
+            dropdown: {1: ['"output"', '"input"', '"analog"']},
           },
           {
             func: 'digitalWrite',
@@ -497,7 +497,7 @@ describe('dropletUtils', () => {
             category: 'A category',
             paletteParams: ['pin', 'value'],
             params: ['13', '1'],
-            dropdown: {1: ['1', '0']}
+            dropdown: {1: ['1', '0']},
           },
           {
             func: 'digitalRead',
@@ -506,11 +506,11 @@ describe('dropletUtils', () => {
             type: 'value',
             nativeIsAsync: true,
             paletteParams: ['pin'],
-            params: ['"D4"']
-          }
+            params: ['"D4"'],
+          },
         ],
         additionalPredefValues: ['buttonL', 'buttonR'],
-        autocompleteFunctionsWithSemicolon: true
+        autocompleteFunctionsWithSemicolon: true,
       };
     });
 

@@ -68,7 +68,7 @@ export function speechBubble(
     radius = 8,
     fill = 'white',
     strokeWeight = 2,
-    stroke = 'gray'
+    stroke = 'gray',
   } = {},
   bubbleType
 ) {
@@ -178,7 +178,7 @@ export function validationBar(
   const barColors = {
     fail: colors['dark_purple'],
     pass: colors['bright_green'],
-    bonus: colors['neon_pink']
+    bonus: colors['neon_pink'],
   };
   p5.push();
   p5.fill(barColors[state]);

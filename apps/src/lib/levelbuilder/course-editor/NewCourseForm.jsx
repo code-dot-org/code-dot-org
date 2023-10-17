@@ -112,13 +112,13 @@ export default function NewCourseForm(props) {
 NewCourseForm.propTypes = {
   families: PropTypes.arrayOf(PropTypes.string).isRequired,
   versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-  familiesCourseTypes: PropTypes.object.isRequired
+  familiesCourseTypes: PropTypes.object.isRequired,
 };
 
 const styles = {
   buttonStyle: {
     marginLeft: 0,
     marginTop: 10,
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };

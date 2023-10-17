@@ -11,7 +11,7 @@ dates = []
 revert_dates.split("\n").each do |revert_date|
   # Expected format:
   # Thu Oct 2 16:05:32 2014 -0700
-  parts = revert_date.split(' ')
+  parts = revert_date.split
   raise "Unexpected date string format #{revert_date}" unless parts.length == 6
   dates << Date.parse([parts[1], parts[2], parts[4]].join(' '))
 end

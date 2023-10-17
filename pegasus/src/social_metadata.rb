@@ -11,6 +11,12 @@
 #   code.org/prize
 #   code.org/hourofcode2022
 #   code.org/maker
+#   code.org/blockchain
+#   code.org/ai
+#   code.org/ai/pl/101
+#   code.org/ai/how-ai-works
+#   code.org/videos
+#   code.org/10years
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -40,6 +46,7 @@ def get_social_metadata_for_page(request)
     dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
     dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
     dance_2022: {path: "/images/social-media/dance-social-2022.png", width: 1200, height: 630},
+    dance_2023: {path: "/images/social-media/dance-social-2023-spring.png", width: 1200, height: 630},
     hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
     oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
@@ -52,11 +59,20 @@ def get_social_metadata_for_page(request)
     cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
     hoc_2022_landing_page: {path: "/shared/images/social-media/hoc2022_social_landing_page.png", width: 1200, height: 630},
     maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
+    blockchain: {path: "/shared/images/social-media/blockchain-social.png", width: 1200, height: 630},
+    ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
+    ai_101: {path: "/shared/images/social-media/ai-101-social.png", width: 1200, height: 630},
+    ai_how_ai_works: {path: "/shared/images/social-media/ai-how-ai-works-social.png", width: 1200, height: 630},
+    hoc_2023_social: {path: "/shared/images/social-media/hoc2023_social.png", width: 1200, height: 630},
+    videos_page: {path: "/shared/images/social-media/videos-page.png", width: 1200, height: 630},
+    ten_years: {path: "/shared/images/social-media/10years-social.png", width: 1200, height: 630},
   }
 
   # Important:
   #   - image should always come before video
   #   - description should always come before description_twitter
+  #   - to apply an image that shows up specifically on Twitter,
+  #     use the "image_twitter" key after the "image" key
   social_tags = {
     "code.org" => {
       "default" => {
@@ -67,9 +83,9 @@ def get_social_metadata_for_page(request)
     },
     "hourofcode.com" => {
       "default" => {
-        title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2022_explore_play_create),
-        image: images[:hoc_2022_social]
+        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
       }
     },
     "challenge" => {
@@ -121,8 +137,8 @@ def get_social_metadata_for_page(request)
     "dance" => {
       "default" => {
         title: hoc_s(:social_hoc2018_dance_party),
-        description: hoc_s(:social_hoc2022_dance),
-        image: images[:dance_2022]
+        description: hoc_s(:social_hoc2023_dance),
+        image: images[:dance_2023]
       }
     },
     "oceans" => {
@@ -141,9 +157,9 @@ def get_social_metadata_for_page(request)
     },
     "learn" => {
       "default" => {
-        title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2022_explore_play_create),
-        image: images[:hoc_2022_social]
+        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
       }
     },
     "hoc-overview" => {
@@ -181,6 +197,48 @@ def get_social_metadata_for_page(request)
         image: images[:maker_physical_computing]
       }
     },
+    "blockchain" => {
+      "default" => {
+        title: hoc_s(:social_blockchain_title),
+        description: hoc_s(:social_blockchain_desc),
+        image: images[:blockchain]
+      }
+    },
+    "ai" => {
+      "default" => {
+        title: hoc_s(:social_ai_title),
+        description: hoc_s(:social_ai_desc),
+        image: images[:ai]
+      }
+    },
+    "ai_101" => {
+      "default" => {
+        title: hoc_s(:ai_pl_101_hero_heading),
+        description: hoc_s(:ai_pl_101_hero_desc),
+        image: images[:ai_101]
+      }
+    },
+    "ai_how_ai_works" => {
+      "default" => {
+        title: hoc_s(:how_ai_works_hero_heading),
+        description: hoc_s(:how_ai_works_hero_desc),
+        image: images[:ai_how_ai_works]
+      }
+    },
+    "videos_page" => {
+      "default" => {
+        title: hoc_s(:video_library_page_main_title),
+        description: hoc_s(:social_videos_desc),
+        image: images[:videos_page]
+      }
+    },
+    "ten_years" => {
+      "default" => {
+        title: hoc_s(:tenth_anniversary_top_heading),
+        description: hoc_s(:tenth_anniversary_top_desc),
+        image: images[:ten_years]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -209,6 +267,18 @@ def get_social_metadata_for_page(request)
     page = "hoc-2022-landing-page"
   elsif request.path == "/maker" && request.site == "code.org"
     page = "maker"
+  elsif request.path == "/blockchain" && request.site == "code.org"
+    page = "blockchain"
+  elsif request.path == "/ai" && request.site == "code.org"
+    page = "ai"
+  elsif request.path == "/ai/pl/101" && request.site == "code.org"
+    page = "ai_101"
+  elsif request.path == "/ai/how-ai-works" && request.site == "code.org"
+    page = "ai_how_ai_works"
+  elsif request.path == "/educate/resources/videos" && request.site == "code.org"
+    page = "videos_page"
+  elsif request.path == "/10years" && request.site == "code.org"
+    page = "ten_years"
   else
     return {}
   end
@@ -223,9 +293,10 @@ def get_social_metadata_for_page(request)
   # Additional hoc variants.
   extension = ""
   hoc_launch = DCDO.get("hoc_launch", CDO.default_hoc_launch)
-  if hoc_launch == "mc"
+  case hoc_launch
+  when "mc"
     extension = "-mc"
-  elsif hoc_launch == "dance"
+  when "dance"
     extension = "-dance"
   end
 
@@ -236,13 +307,16 @@ def get_social_metadata_for_page(request)
 
   output = {}
   social_tag_set.each do |name, value|
-    if name == :image
+    case name
+    when :image
       output["og:image"] = "https://#{request.host}#{value[:path]}"
-      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
+      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}" unless social_tag_set.include?(:image_twitter)
       output["og:image:width"] = value[:width]
       output["og:image:height"] = value[:height]
       output["twitter:card"] = "photo"
-    elsif name == :video
+    when :image_twitter
+      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
+    when :video
       output["og:video:url"] = "http://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:secure_url"] = "https://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:type"] = "video/mp4"
@@ -252,13 +326,13 @@ def get_social_metadata_for_page(request)
       output["twitter:player:width"] = value[:width]
       output["twitter:player:height"] = value[:height]
       output["twitter:card"] = "player"
-    elsif name == :title
+    when :title
       output["og:title"] = value
       output["twitter:title"] = value
-    elsif name == :description
+    when :description
       output["og:description"] = value
       output["twitter:description"] = value
-    elsif name == :description_twitter
+    when :description_twitter
       output["twitter:description"] = value
     end
   end

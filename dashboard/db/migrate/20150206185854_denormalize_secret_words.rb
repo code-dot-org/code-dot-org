@@ -1,7 +1,7 @@
 class DenormalizeSecretWords < ActiveRecord::Migration[4.2]
   def change
     add_column :users, :secret_words, :string
-    execute <<~SQL
+    execute <<~SQL.squish
       update users set secret_words =
         (select concat((select word from secret_words where id = secret_word_1_id),
                        ' ',

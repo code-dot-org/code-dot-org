@@ -1501,6 +1501,7 @@
   header_stats: "आंकड़े"
   header_help_us: "हमारी मदद करें"
   header_about: "के बारे में"
+  header_incubator: "इनक्यूबेटर"
   header_teacher_community: "अध्यापक समुदाय"
   header_help_support: 'सहायता और समर्थन '
   header_report_bug: "समस्या की रिपोर्ट करें"
@@ -1615,7 +1616,7 @@
   hoc2018_mc_download_adventurer: "Minecraft एडवेंचरर का ऑफलाइन संस्करण डाउनलोड करें।"
   hoc2018_mc_educators: "शिक्षकों के लिए"
   hoc2018_mc_educators_box1_title: "Minecraft के साथ कोड"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: शिक्षा संस्करण Minecraft में मानक-संरेखित पाठ्यक्रम, प्रशिक्षण और कोडिंग प्रदान करता है।'
+  hoc2018_mc_educators_box1_desc: "Minecraft: शिक्षा संस्करण Minecraft में मानक-संरेखित पाठ्यक्रम, प्रशिक्षण और कोडिंग प्रदान करता है।"
   hoc2018_mc_educators_box1_button: "शुरुआत करें"
   hoc2018_mc_educators_box2_title: "प्रशिक्षण गाइड डाउनलोड करें"
   hoc2018_mc_educators_box2_desc: "यह टूलकिट आवर ऑफ़ कोड आयोजित करने और कंप्यूटर साइंस में अपने छात्रों को शामिल करने में आपकी मदद करेगी।"
@@ -1722,7 +1723,7 @@
   hoc2018_mc_with_microsoft: "साझेदारी में साथ"
   hoc2018_mc_thank_microsoft: "हम Microsoft का धन्यवाद करते हैं कि उन्हें यह सुनिश्चित करने के हमारे दृष्टिकोण और उद्देश्य को सहयोग किया कि प्रत्येक बच्चे के पास कंप्यूटर साइंस सीखने और 21वीं सदी में सफल होने के लिए कौशल हों।"
   hoc2019_mc_mee_title: "अच्छे के लिए माइनक्राफ्ट एआई"
-  hoc2019_mc_mee_description1: 'नया Minecraft Hour of Code ट्यूटोरियल अब Minecraft: एजुकेशन एडिशन फॉर विंडोज, मैक और आईपैड में उपलब्ध है। कोडिंग की मूल बातें जानें और अपने छात्रों के साथ एआई का पता लगाएं!'
+  hoc2019_mc_mee_description1: "नया Minecraft Hour of Code ट्यूटोरियल अब Minecraft: एजुकेशन एडिशन फॉर विंडोज, मैक और आईपैड में उपलब्ध है। कोडिंग की मूल बातें जानें और अपने छात्रों के साथ एआई का पता लगाएं!"
   hoc2019_mc_mee_description2: "एक पाठ योजना, वीडियो, कंप्यूटर विज्ञान पाठ्यक्रम और शिक्षक प्रशिक्षण सहित मुफ्त संसाधनों तक पहुंचें।"
   hoc2019_mc_more_coding_resources: "अधिक कोडिंग संसाधन"
   hoc2019_dance_previous_versions: "डांस पार्टी के पिछले संस्करण की तलाश है?  \n2018 से [भाग 1] (%{dance_2018_link}) और [भाग 2] (%{dance_extras_2018_link}) शुरू करने के लिए यहां क्लिक करें"
@@ -1735,18 +1736,18 @@
   page_not_available_description: "हमें खेद है, आपके द्वारा अनुरोधित पृष्ठ अब इस पते पर उपलब्ध नहीं है। यदि आपको अभी भी पहुंच की आवश्यकता है, तो कृपया [support@code.org] (%{support_email_link}) ईमेल करें।"
   page_not_available_button: "मुख्य पृष्ठ पर वापस जाएं"
   hoc2020_mc_available_code_org: "Code.org पर उपलब्ध"
-  hoc2020_mc_available_mee: 'Minecraft में उपलब्ध: शिक्षा संस्करण'
+  hoc2020_mc_available_mee: "Minecraft में उपलब्ध: शिक्षा संस्करण"
   hoc2020_mc_mee_title: "माइनक्राफ्ट टेल ऑफ़ टू विलेज"
-  hoc2020_mc_mee_description: 'नया Minecraft Hour of Code ट्यूटोरियल अब Minecraft: एजुकेशन एडिशन फॉर विंडोज, मैक, क्रोमबुक और आईपैड में उपलब्ध है। कोडिंग की मूल बातें जानें और अपने छात्रों के साथ विविधता और समावेश का पता लगाएं! एक पाठ योजना, वीडियो, कंप्यूटर विज्ञान पाठ्यक्रम, इक्विटी पाठ और शिक्षक प्रशिक्षण सहित मुफ्त संसाधनों तक पहुंचें।'
+  hoc2020_mc_mee_description: "नया Minecraft Hour of Code ट्यूटोरियल अब Minecraft: एजुकेशन एडिशन फॉर विंडोज, मैक, क्रोमबुक और आईपैड में उपलब्ध है। कोडिंग की मूल बातें जानें और अपने छात्रों के साथ विविधता और समावेश का पता लगाएं! एक पाठ योजना, वीडियो, कंप्यूटर विज्ञान पाठ्यक्रम, इक्विटी पाठ और शिक्षक प्रशिक्षण सहित मुफ्त संसाधनों तक पहुंचें।"
   hoc2021_mc_mee_title: "माइनक्राफ्ट टाइमक्राफ्ट"
-  hoc2021_mc_mee_description: 'कोड सीखने के लिए समय में वापस जाएं! नया Minecraft आवर ऑफ कोड ट्यूटोरियल Minecraft में उपलब्ध है: Windows, Mac, Chromebook, और iPad के लिए एजुकेशन एडिशन। फ्री एजुकेटर संसाधन, ट्रेनिंग और वीडियो के साथ शुरुआत करें।'
+  hoc2021_mc_mee_description: "कोड सीखने के लिए समय में वापस जाएं! नया Minecraft आवर ऑफ कोड ट्यूटोरियल Minecraft में उपलब्ध है: Windows, Mac, Chromebook, और iPad के लिए एजुकेशन एडिशन। फ्री एजुकेटर संसाधन, ट्रेनिंग और वीडियो के साथ शुरुआत करें।"
   hoc2021_mc_mee_villages_title: "दो गांवों की कथा"
-  hoc2021_mc_mee_villages_description: 'Minecraft में अपने छात्रों के साथ कोडिंग के बेसिक्स सीखें और विविधता एवं समावेशन को एक्सप्लोर करें: एजुकेशन एडमिशन। '
+  hoc2021_mc_mee_villages_description: "Minecraft में अपने छात्रों के साथ कोडिंग के बेसिक्स सीखें और विविधता एवं समावेशन को एक्सप्लोर करें: एजुकेशन एडमिशन। "
   hoc2021_mc_mee_ai_title: "भलाई के लिए AI"
-  hoc2021_mc_mee_ai_description: 'AI को एक्सप्लोर करें और Minecraft में कोड करना सीखें: एजुकेशन एडिशन। '
+  hoc2021_mc_mee_ai_description: "AI को एक्सप्लोर करें और Minecraft में कोड करना सीखें: एजुकेशन एडिशन। "
   hoc2022_mc_mee_title: "Minecraft: एस्केप एस्टेट"
   hoc2022_mc_mee_description: 'भोर तक रहस्यमयी हवेली से भागें और एक लाख पन्ने कमाएँ! नया Minecraft ऑवर ऑफ़ कोड ट्यूटोरियल अब Minecraft: Education Edition for Windows, Mac, Chromebook, Ipad और Mobile में उपलब्ध है। निःशुल्क शिक्षक संसाधनों, प्रशिक्षणों और वीडियो के साथ शुरुआत करें।'
-  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition में इस निःशुल्क कोडिंग पाठ में भविष्य को सेव करने के लिए समय पर वापस यात्रा करें।'
+  hoc2022_mc_mee_timecraft_description: "Minecraft: Education Edition में इस निःशुल्क कोडिंग पाठ में भविष्य को सेव करने के लिए समय पर वापस यात्रा करें।"
   footer_powered_by_aws: "अमेज़ॅन वेब सर्विसेज द्वारा संचालित"
   footer_built_on_github: "माइक्रोसॉफ्ट से गिटहब पर बनाया गया"
   codebytes_skinny_banner_title: "हमारे CodeBytes लाइव मिनी-पाठ के लिए 7-11 दिसंबर को हमसे जुड़ें!"
@@ -1795,7 +1796,7 @@
   ai_zooniverse: "ज़ूनिवर्स - स्नैपशॉट माउंटेन ज़ेबरा"
   ai_zooniverse_description: "छवियों में विभिन्न जानवरों की पहचान करके लुप्तप्राय केप माउंटेन ज़ेबरा की रक्षा करने में मदद करें।"
   ai_audience: "ऑडियंस"
-  ai_minecraft_description: 'एक पाठ योजना, वीडियो, कंप्यूटर विज्ञान पाठ्यक्रम और शिक्षक प्रशिक्षण सहित मुफ्त संसाधनों तक पहुंचें। (Minecraft की आवश्यकता है: शिक्षा संस्करण)'
+  ai_minecraft_description: "एक पाठ योजना, वीडियो, कंप्यूटर विज्ञान पाठ्यक्रम और शिक्षक प्रशिक्षण सहित मुफ्त संसाधनों तक पहुंचें। (Minecraft की आवश्यकता है: शिक्षा संस्करण)"
   ai_k_12_audience: "K-12 (पढ़ना आवश्यक)"
   ai_microsoft_workshop: "Microsoft से निःशुल्क आभासी कार्यशालाएँ"
   ai_microsoft_workshop_description: "मुक्त STEM और कोडिंग कार्यशालाओं के साथ स्पार्क जिज्ञासा।"

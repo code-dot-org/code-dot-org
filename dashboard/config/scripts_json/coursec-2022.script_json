@@ -27,12 +27,16 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "fa-AF",
+        "fa-IR"
+      ],
       "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2023-01-12 01:56:49 UTC",
+    "serialized_at": "2023-04-07 00:36:08 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

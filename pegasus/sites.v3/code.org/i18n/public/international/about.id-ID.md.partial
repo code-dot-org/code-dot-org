@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Kursus Code.org digunakan oleh puluhan juta siswa dan satu juta guru di seluruh dunia.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Sejarah
 
 Pada tahun 2013, Code.org diluncurkan oleh saudara kembar Hadi dan Ali Partovi dengan video [yang mempromosikan ilmu komputer](https://www.youtube.com/watch?v=nKIu9yen5nc). Video ini menduduki peringkat #1 di YouTube dalam sehari, dan 15.000 sekolah menelepon untuk meminta bantuan kami. Sejak saat itu, kami mulai memperluas penyebaran tenaga sukarelawan untuk membangun organisasi yang dapat mendukung gerakan di seluruh dunia. Kami percaya bahwa pendidikan ilmu komputer yang berkualitas harus tersedia untuk setiap anak, bukan hanya hanya segelintir anak yang mujur.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Apa yang Kami Lakukan
 

@@ -24,5 +24,5 @@ export const globalFunctions = {
       val = Number(window.prompt(text));
     } while (isNaN(val));
     return val;
-  }
+  },
 };

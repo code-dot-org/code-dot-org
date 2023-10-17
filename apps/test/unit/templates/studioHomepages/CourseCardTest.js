@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {
-  expect
+  expect,
   // assert
 } from '../../../util/reconfiguredChai';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';

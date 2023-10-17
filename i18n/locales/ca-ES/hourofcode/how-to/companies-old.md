@@ -1,11 +1,11 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Com allotjar una Hora del Codi - Empreses
 ---
 
 {{ signup_button }}
 
 # Com portar l'Hora del Codi a la teva empresa
-### Esbrineu com vosaltres i els vostres empleats poden inspirar els alumnes per provar les ciències informàtiques!
+### Descobriu com vosaltres i els vostres empleats podeu inspirar els alumnes perquè s'endinsin en la informàtica
 
 ***
 

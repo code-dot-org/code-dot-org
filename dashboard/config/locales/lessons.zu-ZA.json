@@ -2,14 +2,8 @@
   "zu-ZA": {
     "data": {
       "lessons": {
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "csd3-2022/Text": {
-          "name": "Umbhalo"
+        "csd2-2017/Lists": {
+          "name": "Umbhalo olandelanayo"
         },
         "csd2-2018/Lists": {
           "name": "Umbhalo olandelanayo"
@@ -17,10 +11,13 @@
         "csd2-2019/Lists": {
           "name": "Umbhalo olandelanayo"
         },
-        "csd2-2017/Lists": {
-          "name": "Umbhalo olandelanayo"
-        },
         "csd3-2021/Text": {
+          "name": "Umbhalo"
+        },
+        "csd3-2022/Text": {
+          "name": "Umbhalo"
+        },
+        "csd3-2023/Text": {
           "name": "Umbhalo"
         }
       }

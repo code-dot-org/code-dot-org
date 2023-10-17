@@ -14,7 +14,7 @@ import color from '@cdo/apps/util/color';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
 
 export const COLUMNS = {
-  QUESTION: 0
+  QUESTION: 0,
 };
 
 const ANSWER_COLUMN_WIDTH = 70;
@@ -57,14 +57,14 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
   static propTypes = {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
     openDialog: PropTypes.func.isRequired,
-    setQuestionIndex: PropTypes.func.isRequired
+    setQuestionIndex: PropTypes.func.isRequired,
   };
 
   state = {
     [COLUMNS.QUESTION]: {
       direction: 'desc',
-      position: 0
-    }
+      position: 0,
+    },
   };
 
   getSortingColumns = () => {
@@ -79,10 +79,10 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -114,19 +114,19 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
-          ...styles.answerColumnHeader
-        }
-      }
+          ...styles.answerColumnHeader,
+        },
+      },
     },
     cell: {
       formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.notAnsweredCell
-        }
-      }
-    }
+          ...styles.notAnsweredCell,
+        },
+      },
+    },
   });
 
   getAnswerColumn = columnLabel => ({
@@ -136,26 +136,26 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
-          ...styles.answerColumnHeader
-        }
-      }
+          ...styles.answerColumnHeader,
+        },
+      },
     },
     cell: {
       formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.answerColumnCell
-        }
-      }
-    }
+          ...styles.answerColumnCell,
+        },
+      },
+    },
   });
 
   getQuestionColumn = (sortable, numAnswers) => ({
     property: 'question',
     header: {
       label: i18n.question(),
-      props: {style: tableLayoutStyles.headerCell}
+      props: {style: tableLayoutStyles.headerCell},
     },
     cell: {
       formatters: [this.questionFormatter],
@@ -164,10 +164,10 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
           ...tableLayoutStyles.cell,
           maxWidth:
             styleConstants['content-width'] -
-            numAnswers * (ANSWER_COLUMN_WIDTH + PADDING)
-        }
-      }
-    }
+            numAnswers * (ANSWER_COLUMN_WIDTH + PADDING),
+        },
+      },
+    },
   });
 
   getColumns = sortable => {
@@ -186,7 +186,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
     return [
       this.getQuestionColumn(sortable, numAnswerColumns),
       ...columnLabelNames,
-      this.getNotAnsweredColumn()
+      this.getNotAnsweredColumn(),
     ];
   };
 
@@ -203,7 +203,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.questionAnswerData);
 
     return (
@@ -218,33 +218,34 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
 const styles = {
   answerColumnHeader: {
     width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
     padding: 0,
-    height: 40
+    height: 40,
   },
   notAnsweredCell: {
     padding: 0,
-    height: 40
+    height: 40,
   },
   link: {
     color: color.teal,
     display: 'block',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  }
+    whiteSpace: 'nowrap',
+  },
 };
 
-export const UnconnectedMultipleChoiceAssessmentsOverviewTable = MultipleChoiceAssessmentsOverviewTable;
+export const UnconnectedMultipleChoiceAssessmentsOverviewTable =
+  MultipleChoiceAssessmentsOverviewTable;
 
 export default connect(
   state => ({}),
   dispatch => ({
     setQuestionIndex(questionIndex) {
       dispatch(setQuestionIndex(questionIndex));
-    }
+    },
   })
 )(MultipleChoiceAssessmentsOverviewTable);

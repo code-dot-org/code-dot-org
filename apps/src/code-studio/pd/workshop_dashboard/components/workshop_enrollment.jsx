@@ -4,13 +4,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
-import {Tabs, Tab} from 'react-bootstrap';
+import {Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {enrollmentShape} from '../types';
 import WorkshopEnrollmentSchoolInfo from './workshop_enrollment_school_info';
 import WorkshopEnrollmentPreSurvey from './workshop_enrollment_pre_survey';
 import {
   SubjectNames,
-  ActiveCourseWorkshops
+  ActiveCourseWorkshops,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default class WorkshopEnrollment extends React.Component {
@@ -28,7 +28,7 @@ export default class WorkshopEnrollment extends React.Component {
     location: PropTypes.object,
     activeTab: PropTypes.number,
     onTabSelect: PropTypes.func,
-    selectedEnrollments: PropTypes.array
+    selectedEnrollments: PropTypes.array,
   };
 
   static defaultProps = {activeTab: 0};
@@ -62,7 +62,7 @@ export default class WorkshopEnrollment extends React.Component {
 
     const sortedEnrollments = _.sortBy(this.props.enrollments, [
       'last_name',
-      'first_name'
+      'first_name',
     ]);
     const workshopEnrollmentSchoolInfo = (
       <WorkshopEnrollmentSchoolInfo

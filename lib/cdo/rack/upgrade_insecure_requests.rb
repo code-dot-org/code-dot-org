@@ -17,7 +17,7 @@ module Rack
 
     def initialize(app)
       super(
-          app,
+        app,
           xpath: %w(img script embed iframe).map {|x| "//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
       ) do |nodes, env|
         nodes.each do |node|
@@ -78,21 +78,19 @@ module Rack
       end
     end
 
-    private
-
-    def ssl?(env)
+    private def ssl?(env)
       Request.new(env).ssl?
     end
 
-    def not_ssl?(env, *_)
+    private def not_ssl?(env, *_)
       !ssl?(env)
     end
 
-    def process(node)
+    private def process(node)
       node['src'] = process_url(node['src']) if node['src']
     end
 
-    def process_url(src)
+    private def process_url(src)
       HTTPS_DOMAINS.each do |http, https|
         matched = src.sub!(http, https)
         return src if matched

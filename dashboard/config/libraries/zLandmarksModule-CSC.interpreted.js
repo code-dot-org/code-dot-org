@@ -419,6 +419,46 @@ function getSpritesThatTouched(){
   return -1;
 }
 
+/**
+ * Checks that a user caused a sprite to move with the arrow keys by detecting arrow keypresses and comparing the position of each sprite between the previous and current frames.
+ * @returns {boolean} true if the any sprite moved in the same frame that a user pressed an arrow key
+ * @see [Click here for example](https://levelbuilder-studio.code.org/levels/43127)
+ * @example
+ addCriteria(function() {
+   return checkInteractiveSpriteMovement()
+ }, "genericFailure");
+ */
+
+function checkInteractiveSpriteMovement() {
+  	// Uses functions from the NativeSpriteLab helper library to detect if a user pressed a key this frame
+	var keyPressedNow = isKeyPressed("up") || isKeyPressed("down") || isKeyPressed("left") || isKeyPressed("right");
+
+  	var spriteIds = getSpriteIdsInUse();
+ 
+  	if(!validationProps.previous) {
+      	validationProps.previous = {};
+    }
+  	for (i=0; i<spriteIds.length; i++) {
+      var currentX = getProp({id: spriteIds[i]}, "x");
+      var currentY = getProp({id: spriteIds[i]}, "y");
+
+      // Performs 2 checks: 1. Did the user press a key this frame? 2. Did the sprites position change from the last frame?
+      if (
+        validationProps.previous[spriteIds[i]] &&
+        (currentX != validationProps.previous[spriteIds[i]].x || currentY != validationProps.previous[spriteIds[i]].y) &&
+        keyPressedNow
+      ) {
+      	return true;
+      }
+
+      // Update validationProps.previous for the next position comparison
+      validationProps.previous[spriteIds[i]] = {
+      	x: currentX,
+        y: currentY,
+      };
+    }
+}
+
 
 function README() {
   console.log("This is the README for the zLandmarksModule-CSC Helper library");

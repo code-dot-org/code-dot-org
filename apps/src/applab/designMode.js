@@ -1,4 +1,3 @@
-/* global Applab */
 import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
@@ -27,6 +26,7 @@ import firehoseClient from '../lib/util/firehose';
 import project from '../code-studio/initApp/project';
 import {ImageMode} from '../code-studio/components/AssetManager';
 import autogenerateML from '@cdo/apps/applab/ai';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 
 var designMode = {};
 export default designMode;
@@ -50,9 +50,9 @@ var ANIMATION_LENGTH_MS = applabConstants.ANIMATION_LENGTH_MS;
  * Subscribe to state changes on the store.
  * @param {!Store} store
  */
-designMode.setupReduxSubscribers = function(store) {
+designMode.setupReduxSubscribers = function (store) {
   var state;
-  store.subscribe(function() {
+  store.subscribe(function () {
     var lastState = state;
     state = store.getState();
 
@@ -70,7 +70,7 @@ designMode.setupReduxSubscribers = function(store) {
  * pane for editing the clicked element.
  * @param event
  */
-designMode.onDesignModeVizClick = function(event) {
+designMode.onDesignModeVizClick = function (event) {
   if (!Applab.isInDesignMode() || $('#resetButton').is(':visible')) {
     return;
   }
@@ -101,10 +101,10 @@ designMode.onDesignModeVizClick = function(event) {
 /**
  * @returns {HTMLElement} The currently visible screen element.
  */
-designMode.activeScreen = function() {
+designMode.activeScreen = function () {
   return elementUtils
     .getScreens()
-    .filter(function() {
+    .filter(function () {
       return this.style.display !== 'none';
     })
     .first()[0];
@@ -117,13 +117,13 @@ designMode.activeScreen = function() {
  * @param {number} top Position from top.
  * @returns {HTMLElement} The generated element
  */
-designMode.createElement = function(elementType, left, top) {
+designMode.createElement = function (elementType, left, top) {
   var element = elementLibrary.createElement(elementType, left, top);
   designMode.attachElement(element);
   return element;
 };
 
-designMode.attachElement = function(element) {
+designMode.attachElement = function (element) {
   var parent;
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {
@@ -139,7 +139,7 @@ designMode.attachElement = function(element) {
   designMode.editElementProperties(element);
 };
 
-designMode.editElementProperties = function(element) {
+designMode.editElementProperties = function (element) {
   highlightElement(element);
 
   currentlyEditedElement = element;
@@ -150,7 +150,7 @@ designMode.editElementProperties = function(element) {
  * Loads the current element or current screen into the property tab.
  * Also makes sure we re-render design mode to update properties such as isDimmed.
  */
-designMode.resetPropertyTab = function() {
+designMode.resetPropertyTab = function () {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
   Applab.render();
@@ -160,8 +160,8 @@ designMode.resetPropertyTab = function() {
  * Enable (or disable) dragging of new elements from the element tray
  * @param allowEditing {boolean}
  */
-designMode.resetElementTray = function(allowEditing) {
-  $('#design-toolbox .new-design-element').each(function() {
+designMode.resetElementTray = function (allowEditing) {
+  $('#design-toolbox .new-design-element').each(function () {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
 };
@@ -184,17 +184,17 @@ function appendPx(input) {
 }
 designMode.appendPx = appendPx;
 
-designMode.fontFamilyStyleFromOption = function(option) {
+designMode.fontFamilyStyleFromOption = function (option) {
   const fontIndex = applabConstants.fontFamilyOptions.indexOf(option);
   return applabConstants.fontFamilyStyles[fontIndex === -1 ? 0 : fontIndex];
 };
 
-designMode.fontFamilyOptionFromStyle = function(style) {
+designMode.fontFamilyOptionFromStyle = function (style) {
   const fontIndex = applabConstants.fontFamilyStyles.indexOf(style);
   return applabConstants.fontFamilyOptions[fontIndex === -1 ? 0 : fontIndex];
 };
 
-designMode.assignImageType = function(element, image_source) {
+designMode.assignImageType = function (element, image_source) {
   if (ICON_PREFIX_REGEX.test(image_source)) {
     return ImageMode.ICON;
   } else if (HTTP_PREFIX_REGEX.test(image_source)) {
@@ -212,7 +212,7 @@ designMode.assignImageType = function(element, image_source) {
  * @param name {string}
  * @param value {string}
  */
-designMode.onPropertyChange = function(element, name, value, timestamp) {
+designMode.onPropertyChange = function (element, name, value, timestamp) {
   designMode.updateProperty(element, name, value, timestamp);
   designMode.editElementProperties(element);
 };
@@ -226,7 +226,7 @@ designMode.onPropertyChange = function(element, name, value, timestamp) {
  * @param timestamp
  * @param batchChangeId
  */
-designMode.updateProperty = function(
+designMode.updateProperty = function (
   element,
   name,
   value,
@@ -351,7 +351,7 @@ designMode.updateProperty = function(
       dataImageType = designMode.assignImageType(element, value);
       element.setAttribute('data-image-type', dataImageType);
 
-      var fitImage = function() {
+      var fitImage = function () {
         // Fit the image into the button
         element.style.backgroundSize = 'contain';
         element.style.backgroundPosition = '50% 50%';
@@ -437,7 +437,7 @@ designMode.updateProperty = function(
         if (groupName) {
           // Remove checked attribute from all other radio buttons in group
           var buttons = document.getElementsByName(groupName);
-          Array.prototype.forEach.call(buttons, function(item) {
+          Array.prototype.forEach.call(buttons, function (item) {
             if (item.type === 'radio') {
               item.removeAttribute('checked');
             }
@@ -487,7 +487,7 @@ designMode.updateProperty = function(
         var options = $('#screenSelector option');
         var newScreenText = applabConstants.NEW_SCREEN;
         var defaultScreenId = elementUtils.getId(element);
-        options.sort(function(a, b) {
+        options.sort(function (a, b) {
           if (a.text === defaultScreenId) {
             return -1;
           } else if (b.text === defaultScreenId) {
@@ -539,7 +539,7 @@ designMode.updateProperty = function(
  *   element as defined in PROP_INFO in setPropertyDropdown.js.
  * @returns {*}
  */
-designMode.readProperty = function(element, name) {
+designMode.readProperty = function (element, name) {
   switch (name) {
     case 'left':
       // Ignore 'px' suffix
@@ -615,7 +615,7 @@ designMode.readProperty = function(element, name) {
 const FIREHOSE_STUDY = 'applab';
 const FIREHOSE_GROUP = 'design_mode';
 
-designMode.onDuplicate = function(element, prevThemeName, event) {
+designMode.onDuplicate = function (element, prevThemeName, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
     const newScreenId = duplicateScreen(element);
@@ -630,8 +630,8 @@ designMode.onDuplicate = function(element, prevThemeName, event) {
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
-      elementClass: element.className
-    })
+      elementClass: element.className,
+    }),
   });
   var duplicateElement = $(element).clone()[0];
   var dupLeft = parseInt(element.style.left, 10) + 10;
@@ -668,7 +668,7 @@ designMode.onDuplicate = function(element, prevThemeName, event) {
   return duplicateElement;
 };
 
-designMode.hasCustomizedThemeProperties = function(element) {
+designMode.hasCustomizedThemeProperties = function (element) {
   const currentThemeValue = elementLibrary.getCurrentTheme(
     designMode.activeScreen()
   );
@@ -698,7 +698,7 @@ designMode.hasCustomizedThemeProperties = function(element) {
 
 var batchChangeId = 1;
 
-designMode.onRestoreThemeDefaults = function(element) {
+designMode.onRestoreThemeDefaults = function (element) {
   firehoseClient.putRecord({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
@@ -707,8 +707,8 @@ designMode.onRestoreThemeDefaults = function(element) {
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
-      elementClass: element.className
-    })
+      elementClass: element.className,
+    }),
   });
 
   const currentThemeValue = elementLibrary.getCurrentTheme(
@@ -754,7 +754,7 @@ designMode.onRestoreThemeDefaults = function(element) {
   }
 };
 
-designMode.changeThemeForElement = function(
+designMode.changeThemeForElement = function (
   element,
   prevThemeValue,
   themeValue
@@ -812,7 +812,7 @@ designMode.changeThemeForElement = function(
   }
 };
 
-designMode.changeThemeForScreen = function(screenElement, themeValue) {
+designMode.changeThemeForScreen = function (screenElement, themeValue) {
   if (!applabConstants.themeOptions.includes(themeValue)) {
     throw new Error(`Invalid themeValue: ${themeValue}`);
   }
@@ -826,7 +826,7 @@ designMode.changeThemeForScreen = function(screenElement, themeValue) {
 
   const screenAndChildren = [
     currentScreen[0],
-    ...currentScreen.children().toArray()
+    ...currentScreen.children().toArray(),
   ];
 
   // Modify each element in the screen (including the screen itself):
@@ -847,8 +847,8 @@ function duplicateScreen(element) {
     event: 'duplicate_screen',
     project_id: project.getCurrentId(),
     data_json: JSON.stringify({
-      elementId: element.id
-    })
+      elementId: element.id,
+    }),
   });
 
   const sourceScreen = $(element);
@@ -875,7 +875,7 @@ function duplicateScreen(element) {
   const madeUndraggable = makeUndraggable(sourceScreen.children());
 
   // Clone each child of the source screen into the new screen (with new ids):
-  sourceScreen.children().each(function() {
+  sourceScreen.children().each(function () {
     const clonedChild = $(this).clone()[0];
     const elementType = elementLibrary.getElementType(clonedChild);
     elementUtils.setId(
@@ -890,7 +890,7 @@ function duplicateScreen(element) {
     makeDraggable(sourceScreen.children());
   }
   const styles = {
-    textAlign: 'center'
+    textAlign: 'center',
   };
   const alert = (
     <div style={styles}>
@@ -902,7 +902,7 @@ function duplicateScreen(element) {
   return newScreenId;
 }
 
-designMode.onCopyElementToScreen = function(element, destScreen) {
+designMode.onCopyElementToScreen = function (element, destScreen) {
   firehoseClient.putRecord({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
@@ -912,8 +912,8 @@ designMode.onCopyElementToScreen = function(element, destScreen) {
       elementId: element.id,
       elementTag: element.tagName,
       elementClass: element.className,
-      destinationScreen: destScreen
-    })
+      destinationScreen: destScreen,
+    }),
   });
 
   const sourceElement = $(element);
@@ -943,7 +943,7 @@ designMode.onCopyElementToScreen = function(element, destScreen) {
     makeDraggable(sourceElement.children());
   }
   const styles = {
-    textAlign: 'center'
+    textAlign: 'center',
   };
   const alert = (
     <div style={styles}>
@@ -954,7 +954,7 @@ designMode.onCopyElementToScreen = function(element, destScreen) {
   studioApp().displayPlayspaceAlert(NOTIFICATION_ALERT_TYPE, alert);
 };
 
-designMode.onDeletePropertiesButton = function(element, event) {
+designMode.onDeletePropertiesButton = function (element, event) {
   deleteElement(element);
 };
 
@@ -967,8 +967,8 @@ function deleteElement(element) {
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
-      elementClass: element.className
-    })
+      elementClass: element.className,
+    }),
   });
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
@@ -987,7 +987,7 @@ function deleteElement(element) {
   }
 }
 
-designMode.onDepthChange = function(element, depthDirection) {
+designMode.onDepthChange = function (element, depthDirection) {
   // move to outer resizable div
   var outerElement = element.parentNode;
   var parent = outerElement.parentNode;
@@ -1038,7 +1038,7 @@ designMode.onDepthChange = function(element, depthDirection) {
   designMode.editElementProperties(element);
 };
 
-designMode.onInsertEvent = function(code) {
+designMode.onInsertEvent = function (code) {
   Applab.appendToEditor(code);
   getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
   Applab.scrollToEnd();
@@ -1046,7 +1046,7 @@ designMode.onInsertEvent = function(code) {
 
 // By switchig to design mode, auto-generated design elements (see ai.js) will
 // appear without the user needing to click the "Run" button.
-designMode.onInsertAICode = function(code) {
+designMode.onInsertAICode = function (code) {
   Applab.appendToEditor(code);
   getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.DESIGN));
   getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
@@ -1054,7 +1054,7 @@ designMode.onInsertAICode = function(code) {
 };
 
 /**/
-designMode.serializeToLevelHtml = function() {
+designMode.serializeToLevelHtml = function () {
   var designModeViz = $('#designModeViz');
   // Children are screens. Want to operate on grandchildren
   var madeUndraggable = makeUndraggable(designModeViz.children().children());
@@ -1063,13 +1063,13 @@ designMode.serializeToLevelHtml = function() {
   // remove prefixes from the element ids.
   var designModeVizClone = designModeViz.clone();
   $(designModeVizClone).removeClass('withCrosshair');
-  designModeVizClone.children().each(function() {
+  designModeVizClone.children().each(function () {
     elementUtils.removeIdPrefix(this);
   });
   designModeVizClone
     .children()
     .children()
-    .each(function() {
+    .each(function () {
       elementUtils.removeIdPrefix(this);
       if (this.nodeName === 'IMG') {
         // Remove object-fit style and all styles and attributes used by the
@@ -1098,7 +1098,7 @@ designMode.serializeToLevelHtml = function() {
   // Remove the "data:img/png..." URI from icon images
   designModeVizClone
     .find('[data-canonical-image-url^="' + ICON_PREFIX + '"]')
-    .each(function() {
+    .each(function () {
       this.removeAttribute('src');
       this.style.backgroundImage = '';
     });
@@ -1120,7 +1120,7 @@ function makeUrlProtocolRelative(url) {
 designMode.makeUrlProtocolRelative = makeUrlProtocolRelative;
 
 function getUnsafeHtmlReporter(sanitizationTarget) {
-  return function(removed, unsafe, safe) {
+  return function (removed, unsafe, safe) {
     var msg =
       'The following lines of HTML were modified or removed:\n' +
       removed +
@@ -1135,7 +1135,7 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
       removedHtml: removed,
       unsafeHtml: unsafe,
       safeHtml: safe,
-      sanitizationTarget: sanitizationTarget
+      sanitizationTarget: sanitizationTarget,
     });
   };
 }
@@ -1152,7 +1152,7 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
  *
  * @returns returns the modified version of the element passed in for screenEl.
  */
-designMode.parseScreenFromLevelHtml = function(
+designMode.parseScreenFromLevelHtml = function (
   screenEl,
   allowDragging,
   prefix,
@@ -1160,7 +1160,7 @@ designMode.parseScreenFromLevelHtml = function(
 ) {
   var screen = $(screenEl);
   elementUtils.addIdPrefix(screen[0], prefix);
-  screen.children().each(function() {
+  screen.children().each(function () {
     elementUtils.addIdPrefix(this, prefix);
   });
 
@@ -1170,7 +1170,7 @@ designMode.parseScreenFromLevelHtml = function(
   }
 
   elementLibrary.onDeserialize(screen[0], designMode.updateProperty.bind(this));
-  screen.children().each(function() {
+  screen.children().each(function () {
     var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
     elementLibrary.onDeserialize(
       element,
@@ -1189,7 +1189,7 @@ designMode.parseScreenFromLevelHtml = function(
  * @param prefix {string} Optional prefix to attach to element ids of children and
  *     grandchildren after parsing. Defaults to ''.
  */
-designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
+designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   if (!rootEl) {
     return;
   }
@@ -1205,8 +1205,9 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   var levelDom = $.parseHTML(
     sanitizeHtml(Applab.levelHtml, reportUnsafeHtml, true)
   );
+  sanitizeLevelDom(levelDom);
   var children = $(levelDom).children();
-  children.each(function() {
+  children.each(function () {
     designMode.parseScreenFromLevelHtml(
       this,
       allowDragging,
@@ -1216,6 +1217,36 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   });
   children.appendTo(rootEl);
 };
+
+// We have seen issues where design mode HTML somehow contains HTML from
+// outside the design mode area (ex. codeApp, visualizationArea). We don't know
+// exactly how this is happening, but this function removes those selectors to
+// help prevent the page from breaking.
+function sanitizeLevelDom(levelDom) {
+  const disallowedSelectors = [
+    '#codeApp',
+    '#visualizationColumn',
+    '#visualizationResizeBar',
+    '.editor-column',
+  ];
+
+  const foundSelectors = [];
+
+  for (const selector of disallowedSelectors) {
+    if ($(levelDom).find(selector).length > 0) {
+      foundSelectors.push(selector);
+      $(levelDom).find(selector).remove();
+    }
+  }
+
+  if (foundSelectors.length > 0) {
+    MetricsReporter.logWarning({
+      message: 'Invalid HTML detected in App Lab project',
+      channelId: Applab.channelId,
+      selectors: foundSelectors,
+    });
+  }
+}
 
 /**
  * When we make elements resizable, we wrap them in an outer div. Given an outer
@@ -1261,22 +1292,20 @@ function boundedResize(left, top, width, height, preserveAspectRatio) {
  */
 function makeDraggable(jqueryElements) {
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
-  jqueryElements.each(function() {
+  jqueryElements.each(function () {
     var elm = $(this);
     var wrapper = elm
       .wrap('<div>')
       .parent()
       .resizable({
-        create: function() {
+        create: function () {
           // resizable sets z-index to 90, which we don't want
-          $(this)
-            .children()
-            .css('z-index', '');
+          $(this).children().css('z-index', '');
         },
-        start: function() {
+        start: function () {
           highlightElement(elm[0]);
         },
-        resize: function(event, ui) {
+        resize: function (event, ui) {
           // Wishing for a vector maths library...
 
           // Customize motion according to current visualization scale.
@@ -1317,18 +1346,18 @@ function makeDraggable(jqueryElements) {
 
           // Re-render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
-        }
+        },
       })
       .draggable({
         cancel: false, // allow buttons and inputs to be dragged
-        start: function() {
+        start: function () {
           highlightElement(elm[0]);
 
           // Turn off clipping in app space so we can drag the element
           // out of it
           designMode.setAppSpaceClipping(false);
         },
-        drag: function(event, ui) {
+        drag: function (event, ui) {
           // draggables are not compatible with CSS transform-scale,
           // so adjust the position in various ways here.
 
@@ -1348,7 +1377,7 @@ function makeDraggable(jqueryElements) {
           // Set original element properties to update values in Property tab
           elm.css({
             left: newLeft,
-            top: newTop
+            top: newTop,
           });
 
           // Dim the element if it's dragged out of bounds
@@ -1361,7 +1390,7 @@ function makeDraggable(jqueryElements) {
           // Re-render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
         },
-        stop: function(event, ui) {
+        stop: function (event, ui) {
           // Note: It looks like the ui.position values don't change between
           // the last drag event and the stop event. Since we already performed
           // the scale transformation on ui.position values in the drag handler,
@@ -1374,7 +1403,7 @@ function makeDraggable(jqueryElements) {
               'drop',
               {direction: 'down'},
               ANIMATION_LENGTH_MS,
-              function() {
+              function () {
                 deleteElement(elm[0]);
               }
             );
@@ -1386,16 +1415,16 @@ function makeDraggable(jqueryElements) {
           // Turn clipping back on so it's not possible for elements
           // to bleed out of app space
           designMode.setAppSpaceClipping(true);
-        }
+        },
       })
       .css({
         position: 'absolute',
-        lineHeight: '0px'
+        lineHeight: '0px',
       });
 
     wrapper.css({
       top: elm.css('top'),
-      left: elm.css('left')
+      left: elm.css('left'),
     });
 
     // Chrome/Safari both have issues where they don't properly render the
@@ -1407,7 +1436,7 @@ function makeDraggable(jqueryElements) {
 
     // And a hack for Safari
     if (this.tagName === 'DIV') {
-      setTimeout(function() {
+      setTimeout(function () {
         wrapper.hide().show(0);
       }, 0);
     }
@@ -1449,7 +1478,7 @@ function isMouseEventInBounds(mouseEvent) {
  * Sets app space clipping behavior. App space is clipped if clip == true.
  * @param {boolean} clip
  */
-designMode.setAppSpaceClipping = function(clip) {
+designMode.setAppSpaceClipping = function (clip) {
   var container = $('#designModeViz');
   if (clip) {
     // Delay the clipping until we're done the delete/pushback animation
@@ -1478,7 +1507,7 @@ function getVisualizationScale() {
  */
 function makeUndraggable(jqueryElements) {
   var foundOne = false;
-  jqueryElements.each(function() {
+  jqueryElements.each(function () {
     var wrapper = $(this);
     var elm = $(getInnerElement(this));
 
@@ -1505,12 +1534,10 @@ function highlightElement(element) {
   removeElementHighlights();
 
   if ($(element).is('#designModeViz img[src!=""], #designModeViz label')) {
-    $(element)
-      .parent()
-      .css({
-        outlineStyle: 'dashed',
-        outlineWidth: '1px'
-      });
+    $(element).parent().css({
+      outlineStyle: 'dashed',
+      outlineWidth: '1px',
+    });
   }
 }
 
@@ -1520,26 +1547,26 @@ function highlightElement(element) {
 function removeElementHighlights() {
   $('#designModeViz .ui-draggable').css({
     outlineStyle: '',
-    outlineWidth: ''
+    outlineWidth: '',
   });
 }
 
-designMode.configureDragAndDrop = function() {
+designMode.configureDragAndDrop = function () {
   // Allow elements to be dragged and dropped from the design mode
   // element tray to the play space.
   $('#visualization').droppable({
     accept: '.new-design-element',
-    activate: function(event, ui) {
+    activate: function (event, ui) {
       // Turn off clipping in app space so we can drag the element
       // into and out of it
       designMode.setAppSpaceClipping(false);
     },
-    deactivate: function(event, ui) {
+    deactivate: function (event, ui) {
       // Turn clipping back on so it's not possible for elements
       // to bleed out of app space
       designMode.setAppSpaceClipping(true);
     },
-    drop: function(event, ui) {
+    drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
       var point = gridUtils.scaledDropPoint(ui.helper);
@@ -1566,7 +1593,7 @@ designMode.configureDragAndDrop = function() {
           var origLeft = parent.css('left');
           parent.css('visibility', 'hidden');
           parent.css('left', '0px');
-          setTimeout(function() {
+          setTimeout(function () {
             parent.css('left', origLeft);
             parent.css('visibility', '');
           }, 1);
@@ -1575,7 +1602,7 @@ designMode.configureDragAndDrop = function() {
 
       // Re-render design work space for this element
       designMode.renderDesignWorkspace(element);
-    }
+    },
   });
 };
 
@@ -1606,7 +1633,7 @@ function moveElementIntoBounds(element) {
   elm.animate(
     {
       left: newContainedPos.left,
-      top: newContainedPos.top
+      top: newContainedPos.top,
     },
     ANIMATION_LENGTH_MS
   );
@@ -1614,7 +1641,7 @@ function moveElementIntoBounds(element) {
   // Update position on original element to update values in Property tab
   $(element).css({
     left: newContainedPos.left,
-    top: newContainedPos.top
+    top: newContainedPos.top,
   });
 }
 
@@ -1622,7 +1649,7 @@ function moveElementIntoBounds(element) {
  * Create a new screen
  * @returns {string} The id of the newly created screen
  */
-designMode.createScreen = function() {
+designMode.createScreen = function () {
   var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
   $('#designModeViz').append(newScreen);
 
@@ -1635,7 +1662,7 @@ designMode.createScreen = function() {
  * React-rendered components, and eventually calls renderScreens, below.
  * @param {!string} screenId
  */
-designMode.changeScreen = function(screenId) {
+designMode.changeScreen = function (screenId) {
   getStore().dispatch(screens.changeScreen(screenId));
 };
 
@@ -1653,7 +1680,7 @@ function renderScreens(screenId) {
   // Update which screen is shown in run mode
   Applab.changeScreen(getStore().getState().screens.currentScreenId);
 
-  elementUtils.getScreens().each(function() {
+  elementUtils.getScreens().each(function () {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
   designMode.editElementProperties(
@@ -1667,11 +1694,11 @@ function renderScreens(screenId) {
 }
 
 /** @returns {string[]} Array of all screen Ids in current app */
-designMode.getAllScreenIds = function() {
+designMode.getAllScreenIds = function () {
   return elementUtils
     .getScreens()
     .get()
-    .map(function(screen) {
+    .map(function (screen) {
       return elementUtils.getId(screen);
     });
 };
@@ -1680,7 +1707,7 @@ designMode.getAllScreenIds = function() {
  * Load our default screen (ie. the first one in the DOM), creating a screen
  * if we have none.
  */
-designMode.loadDefaultScreen = function() {
+designMode.loadDefaultScreen = function () {
   var defaultScreen;
 
   if (elementUtils.getScreens().length === 0) {
@@ -1691,14 +1718,14 @@ designMode.loadDefaultScreen = function() {
   designMode.changeScreen(defaultScreen);
 };
 
-designMode.renderDesignWorkspace = function(element) {
+designMode.renderDesignWorkspace = function (element) {
   var designWorkspace = document.getElementById('designWorkspace');
   if (!designWorkspace) {
     return;
   }
 
   var props = {
-    handleDragStart: function() {
+    handleDragStart: function () {
       if ($('#resetButton').is(':visible')) {
         studioApp().resetButtonClick();
       }
@@ -1724,7 +1751,7 @@ designMode.renderDesignWorkspace = function(element) {
       this,
       designMode.activeScreen()
     ),
-    autogenerateML
+    autogenerateML,
   };
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -1739,16 +1766,13 @@ designMode.renderDesignWorkspace = function(element) {
  * existed under the root div. If we find one of those, convert it to be a single
  * screen app.
  */
-designMode.addScreenIfNecessary = function(html) {
+designMode.addScreenIfNecessary = function (html) {
   var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
   html = sanitizeHtml(html, reportUnsafeHtml, true);
   var rootDiv = $(html);
   if (
     rootDiv.children().length === 0 ||
-    rootDiv
-      .children()
-      .eq(0)
-      .hasClass('screen')
+    rootDiv.children().eq(0).hasClass('screen')
   ) {
     // no children, or first child is a screen
     return html;
@@ -1763,7 +1787,7 @@ designMode.addScreenIfNecessary = function(html) {
   return rootDiv[0].outerHTML;
 };
 
-designMode.setAsClipboardElement = function(element) {
+designMode.setAsClipboardElement = function (element) {
   if (!element) {
     return;
   }
@@ -1789,8 +1813,8 @@ designMode.setAsClipboardElement = function(element) {
   }
 };
 
-designMode.addKeyboardHandlers = function() {
-  $('#designModeViz').keydown(function(event) {
+designMode.addKeyboardHandlers = function () {
+  $('#designModeViz').keydown(function (event) {
     if (!Applab.isInDesignMode() || Applab.isRunning()) {
       return;
     }
@@ -1854,6 +1878,6 @@ designMode.addKeyboardHandlers = function() {
   });
 };
 
-designMode.resetIds = function() {
+designMode.resetIds = function () {
   elementLibrary.resetIds();
 };

@@ -14,7 +14,7 @@ export default class CellEditor extends React.Component {
     cell: PropTypes.object.isRequired,
     row: PropTypes.number.isRequired,
     col: PropTypes.number.isRequired,
-    onUpdate: PropTypes.func.isRequired
+    onUpdate: PropTypes.func.isRequired,
   };
 
   constructor(props) {

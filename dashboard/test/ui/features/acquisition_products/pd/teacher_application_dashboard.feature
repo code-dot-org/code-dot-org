@@ -14,6 +14,7 @@ Feature: Teacher Application Dashboard
     And I press the first ".Select-option" element
     Then I wait until element "span:contains('Withdrawn')" is visible
     And I wait until element "td:contains('Unreviewed')" is not visible
+    Then I wait until element "#quick-view" is visible
     And I see no difference for "Admin Course View"
 
     # Access the Detail View by navigating to the first row's "view application" button href

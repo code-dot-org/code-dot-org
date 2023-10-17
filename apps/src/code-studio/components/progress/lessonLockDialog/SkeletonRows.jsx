@@ -20,7 +20,7 @@ const SkeletonRows = ({numRows, numCols}) => {
 
 SkeletonRows.propTypes = {
   numRows: PropTypes.number.isRequired,
-  numCols: PropTypes.number.isRequired
+  numCols: PropTypes.number.isRequired,
 };
 
 const styles = {
@@ -28,8 +28,8 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.light_gray,
-    padding: 10
-  }
+    padding: 10,
+  },
 };
 
 export default SkeletonRows;

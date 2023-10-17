@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class Services::RegistrationReminderTest < ActiveSupport::TestCase
-  test 'queue_registration_reminders!' do
+  setup do
+    Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
+  end
+
+  test 'send_registration_reminders!' do
     # The expected behavior of this method is to find applications needing registration reminder
     # emails and queue up the emails to be sent at the appropriate times.  It runs on a cronjob.
     # Here, we walk through the typical flow for an application and verify that emails are queued
@@ -9,63 +13,50 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     #
     Timecop.freeze do
       # Initial creation: No reminders
-      application = create :pd_teacher_application
-      Services::RegistrationReminder.queue_registration_reminders!
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
+      application = create :pd_teacher_application, form_data_hash: application_hash
+      Services::RegistrationReminder.send_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
-      # Fake sending first accepted email
+      # Fake send first accepted email
       Timecop.travel 1.day
       create :pd_application_email, application: application, email_type: 'accepted', sent_at: DateTime.now
-      Services::RegistrationReminder.queue_registration_reminders!
+      Services::RegistrationReminder.send_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
       # First email is due in 7 days. At 6 days, no email yet:
       Timecop.travel 6.days
-      Services::RegistrationReminder.queue_registration_reminders!
+      Services::RegistrationReminder.send_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
       # At 7 days, email is sent on schedule:
       Timecop.travel 1.day
-      Services::RegistrationReminder.queue_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+      Services::RegistrationReminder.send_registration_reminders!
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Immediate re-run does not create another reminder
-      Services::RegistrationReminder.queue_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
-
-      # Fake sending the email from the queue
-      application.emails.
-        where(email_type: 'registration_reminder', sent_at: nil).
-        update(sent_at: DateTime.now)
+      Services::RegistrationReminder.send_registration_reminders!
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Next email is due in 7 days.  At 6 days, only the one reminder has been sent:
       Timecop.travel 6.days
-      Services::RegistrationReminder.queue_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+      Services::RegistrationReminder.send_registration_reminders!
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # At 7 days, the second reminder is sent on schedule:
       Timecop.travel 1.day
-      Services::RegistrationReminder.queue_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      Services::RegistrationReminder.send_registration_reminders!
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Immediate re-run does not create another reminder
-      Services::RegistrationReminder.queue_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
-
-      # Fake sending the email from the queue
-      application.emails.
-        where(email_type: 'registration_reminder', sent_at: nil).
-        update(sent_at: DateTime.now)
+      Services::RegistrationReminder.send_registration_reminders!
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # That's the last one - no more reminders are sent
       Timecop.travel 30.days
-      Services::RegistrationReminder.queue_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      Services::RegistrationReminder.send_registration_reminders!
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
     end
-  end
-
-  test 'applications_needing_first_reminder omits applications with no registration email' do
-    assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
   test 'applications_needing_first_reminder omits applications with unsent registration email' do

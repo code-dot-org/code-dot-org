@@ -6,25 +6,22 @@ import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
-  componentConstructors
+  componentConstructors,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
-import TouchSensor from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/TouchSensor';
 import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import Switch from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
-  TOUCH_PINS
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import {
   newBoard,
   setSensorAnalogValue,
   stubComponentInitialization,
-  restoreComponentInitialization
+  restoreComponentInitialization,
 } from './CircuitPlaygroundTestHelperFunctions';
-import experiments from '@cdo/apps/util/experiments';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -72,38 +69,8 @@ describe('Circuit Playground Components', () => {
           'tempSensor',
           'accelerometer',
           'buttonL',
-          'buttonR'
+          'buttonR',
         ]);
-      });
-    });
-
-    // Remove this whole describe block when maker-captouch is on by default.
-    describe('with capTouch enabled', () => {
-      before(() => experiments.setEnabled('maker-captouch', true));
-      after(() => experiments.setEnabled('maker-captouch', false));
-
-      it(`returns an exact set of expected components`, () => {
-        return createCircuitPlaygroundComponents(board).then(components => {
-          expect(Object.keys(components)).to.deep.equal([
-            'colorLeds',
-            'led',
-            'toggleSwitch',
-            'buzzer',
-            'soundSensor',
-            'lightSensor',
-            'tempSensor',
-            'accelerometer',
-            'buttonL',
-            'buttonR',
-            'touchPad0',
-            'touchPad2',
-            'touchPad3',
-            'touchPad6',
-            'touchPad9',
-            'touchPad10',
-            'touchPad12'
-          ]);
-        });
       });
     });
 
@@ -113,7 +80,7 @@ describe('Circuit Playground Components', () => {
       const boardTwo = newBoard();
       return Promise.all([
         createCircuitPlaygroundComponents(boardOne),
-        createCircuitPlaygroundComponents(boardTwo)
+        createCircuitPlaygroundComponents(boardTwo),
       ]).then(([componentsOne, componentsTwo]) => {
         expect(componentsOne.led.board === boardOne).to.be.true;
         expect(componentsTwo.led.board === boardTwo).to.be.true;
@@ -523,7 +490,7 @@ describe('Circuit Playground Components', () => {
           accelerometer.io.sysexCommand
         ).to.have.been.calledOnce.and.calledWith([
           CP_COMMAND,
-          CP_ACCEL_STREAM_ON
+          CP_ACCEL_STREAM_ON,
         ]);
       });
 
@@ -544,7 +511,7 @@ describe('Circuit Playground Components', () => {
         expect(accelerometer.getOrientation()).to.deep.equal([
           accelerometer.getOrientation('x'),
           accelerometer.getOrientation('y'),
-          accelerometer.getOrientation('z')
+          accelerometer.getOrientation('z'),
         ]);
 
         stub.restore();
@@ -568,86 +535,11 @@ describe('Circuit Playground Components', () => {
         expect(accelerometer.getAcceleration()).to.deep.equal([
           accelerometer.getAcceleration('x'),
           accelerometer.getAcceleration('y'),
-          accelerometer.getAcceleration('z')
+          accelerometer.getAcceleration('z'),
         ]);
 
         stub.restore();
       });
-    });
-
-    describe('touchPads', () => {
-      // Remove these two lines when maker-captouch is on by default.
-      before(() => experiments.setEnabled('maker-captouch', true));
-      after(() => experiments.setEnabled('maker-captouch', false));
-
-      it('only creates one five.Touchpad for all the TouchSensors', () => {
-        return createCircuitPlaygroundComponents(board).then(components => {
-          const theOnlyTouchpadController =
-            components.touchPad0.touchpadsController_;
-          expect(theOnlyTouchpadController.board).to.equal(board);
-          TOUCH_PINS.forEach(pin => {
-            expect(components[`touchPad${pin}`].touchpadsController_).to.equal(
-              theOnlyTouchpadController
-            );
-          });
-        });
-      });
-
-      TOUCH_PINS.forEach(pin => {
-        describe(`touchPin${pin}`, () => {
-          let touchPad;
-
-          beforeEach(() => {
-            return createCircuitPlaygroundComponents(board).then(components => {
-              touchPad = components[`touchPad${pin}`];
-            });
-          });
-
-          it('creates a TouchSensor', () => {
-            expect(touchPad).to.be.an.instanceOf(TouchSensor);
-          });
-
-          it(`on pin ${pin}`, () => {
-            expect(touchPad.pinIndex_).to.equal(pin);
-          });
-
-          // See TouchSensorTest.js for more details on TouchSensors.
-        });
-      });
-    });
-  });
-
-  // Remove this whole describe block when maker-captouch is on by default.
-  describe('cleanupCircuitPlaygroundComponents() with capTouch enabled', () => {
-    let components;
-
-    before(() => experiments.setEnabled('maker-captouch', true));
-    after(() => experiments.setEnabled('maker-captouch', false));
-
-    beforeEach(() => {
-      return createCircuitPlaygroundComponents(board).then(
-        c => (components = c)
-      );
-    });
-
-    it('destroys everything that createCircuitPlaygroundComponents creates', () => {
-      expect(Object.keys(components)).to.have.length(17);
-      cleanupCircuitPlaygroundComponents(
-        components,
-        true /* shouldDestroyComponents */
-      );
-      expect(Object.keys(components)).to.have.length(0);
-    });
-
-    it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
-      components.someOtherComponent = {};
-      expect(Object.keys(components)).to.have.length(18);
-      cleanupCircuitPlaygroundComponents(
-        components,
-        true /* shouldDestroyComponents */
-      );
-      expect(Object.keys(components)).to.have.length(1);
-      expect(components).to.haveOwnProperty('someOtherComponent');
     });
   });
 
@@ -795,7 +687,7 @@ describe('Circuit Playground Components', () => {
           frequencySpy.restore();
         });
 
-        it('stops Piezo.play()', function() {
+        it('stops Piezo.play()', function () {
           // Make a new one since we're spying on a 'prototype'
           return createCircuitPlaygroundComponents(board).then(({buzzer}) => {
             // Set up a song

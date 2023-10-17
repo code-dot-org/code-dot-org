@@ -60,7 +60,7 @@ ja:
       length: 長さ
       level: 'レベル
 
-'
+        '
       marginX: マージンX
       marginY: マージンY
       meal: 食事
@@ -97,7 +97,7 @@ ja:
       type: タイプ
       variable: '変数
 
-'
+        '
       width: 幅
       wizard: 魔法使い
       x: x

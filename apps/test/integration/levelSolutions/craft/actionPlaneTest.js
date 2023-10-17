@@ -16,7 +16,7 @@ const levelDef = {
     'grass',
     'grass',
     'grass',
-    'grass'
+    'grass',
   ],
   groundDecorationPlane: ['', '', '', '', '', '', '', '', '', '', '', ''],
   actionPlane: ['', '', '', '', 'grass', 'grass', '', 'grass', '', '', '', ''],
@@ -29,7 +29,7 @@ const levelDef = {
         "grass", "grass", "planksBirch", "grass",
         "", "", "", ""
       ]) && verificationAPI.isPlayerAt([3, 1]);
-    }`
+    }`,
 };
 
 export default {
@@ -62,8 +62,8 @@ export default {
         </xml>`,
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
-      }
+        testResult: TestResults.ALL_PASS,
+      },
     },
     {
       description: 'Craft fall into hole',
@@ -85,8 +85,8 @@ export default {
         </xml>`,
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
-      }
-    }
-  ]
+        testResult: TestResults.APP_SPECIFIC_FAIL,
+      },
+    },
+  ],
 };

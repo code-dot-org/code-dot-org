@@ -5,3 +5,5 @@ wrong 'Making sure that the key used to encrypt the data is kept a secret'
 wrong 'Staying aware of data you might be producing, even unintentionally'
 wrong 'Keeping the devices that have data on them physically secure (locking doors, etc.)'
 wrong 'Using a strong key that cannot be easily guessed'
+
+allow_multiple_attempts true

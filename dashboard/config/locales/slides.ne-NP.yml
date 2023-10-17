@@ -1,438 +1,9 @@
 ---
 ne:
   slides:
-    maze_intro:
-      1:
-        text: Welcome to your first hour of code! Let's dive right into your first
-          taste of programming.
-      2:
-        text: We'll be using Blockly, a visual programming language where you drag
-          and drop blocks to write code.
-      3:
-        text: Most code is typed, but Blockly is visual. Each blocks corresponds to
-          a line of "real" code.
-      4:
-        text: You'll learn the foundations of computer science, concepts which are
-          used anywhere from making apps to controlling the Mars rover.
-      5:
-        text: A program is a set of instructions for your computer to follow.
-      6:
-        text: The goal of your first program is to get an Angry Bird through a maze
-          to hit a Green Pig.
-      7:
-        text: The left side is the maze where your program is run. The instructions
-          for each puzzle are below the maze.
-      8:
-        text: The middle toolbox has the commands for the Angry Bird. You'll use these
-          to build your code.
-      9:
-        text: On the right is your workspace where you'll drag blocks from the toolbox
-          to build your program. To delete a block, drag it to the trash in the corner.
-      10:
-        text: Each block is one instruction. If you drag a "move forward" block to
-          your workspace and press "Run Program", the bird moves one space on the
-          maze.
-      11:
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
-      12:
-        text: If you run a program and want to fix it and try again, press the "Reset"
-          button.
-      13:
-        text: Let's go get those pigs!
-    artist_intro:
-      1:
-        text: Hi, I'm JR! Every race car team need computer scientists to win. They
-          analyze data from the car to make it go faster.
-      2:
-        text: In these puzzles, you'll be an artist that draws a line behind them
-          everywhere they go.
-      3:
-        text: This block says "move forward by 100 pixels." Pixels are just really
-          tiny dots on your screen.
-      4:
-        text: This block says "turn right by 90 degrees." This will turn your artist
-          the same amount as the "turn" blocks in the maze puzzles.
-      5:
-        text: Click on the arrow in either of these blocks to change the amount the
-          artist moves forward or turns. Play around to get familiar with these new
-          blocks.
-    farmer_intro:
-      1:
-        text: Hi, I'm Paola! In these puzzles, you're a farmer who has to get her
-          field completely flat to start planting crops.
-      2:
-        text: You have to help her remove all the piles of dirt and fill in all the
-          holes.
-      3:
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
-          shovelful of dirt to a hole.
-      4:
-        text: The piles and holes are different sizes, so you have to tell the farmer
-          how many shovelfuls to use.
-    flappy_intro:
-      1:
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
-      2:
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
-      3:
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
-      4:
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
-      5:
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
-      6:
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
-      7:
-        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
-          by attaching the "FLAP" block to the appropriate event handler, and now
-          in your game whenever you click the mouse, the bird will flap.
-      8:
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
-      9:
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
-      10:
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. रमाईलो गर्नुहोस्!
-    loop_times:
-      1:
-        text: Hi, I'm Mark! Let's learn about loops. Using loops you can tell a computer
-          to repeat any set of actions over and over, thousands or even billions of
-          times.
-      2:
-        text: In this puzzle, we want to make the bird move forward 5 spaces to get
-          to the pig.
-      3:
-        text: We can use the new "repeat" block to help us out.
-      4:
-        text: Instead of dragging out 5 "move forward" blocks...
-      5:
-        text: We can put the "move forward" block inside the "repeat" block and write
-          a number in the block to tell it how many times to repeat.
-      6:
-        text: 'And this is important: you can put more than one command inside a "repeat"
-          block.'
-      7:
-        text: Enjoy using your new "repeat" block!
-    loop_until:
-      1:
-        text: Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech
-          to study Computer Science. Let's try our new block, the "repeat until" block.
-      2:
-        text: What if we didn't know how far the bird had to move to get to the pig?
-      3:
-        text: If we put a "move forward" block inside the "repeat until" block, the
-          bird will move forward UNTIL it reaches the pig (or crashes into a wall).
-      4:
-        text: 'And this is important: just like before, we can put multiple blocks
-          inside the "repeat until" block, and they will all be repeated.'
-    if:
-      1:
-        text: 'Hi, I''m Bill! Let''s learn a new fundamental concept: "If" statements.
-          This is how computers make decisions.'
-      2:
-        text: You use "If" statements yourself everday. Before you go outside each
-          morning, you say IF it's raining outside, I need to wear my jacket.
-      3:
-        text: We can tell the zombie to check IF there's path to the left, and if
-          he finds a path to the left, we can have him turn in that direction.
-      4:
-        text: To write the code for this, let's drag out our "if" block and put a
-          "turn left" block inside it.
-      5:
-        text: Now, if we put a "move forward" block above it and a "repeat" block
-          around everything, each time the zombie moves, he'll check if there's a
-          path to the left and turn. The "repeat" command is critical, to check for
-          a turn at every step.
-      6:
-        text: If statements are really important in computer science. One of the first
-          programs I wrote was a tic-tac-toe game, and there was a If statement that
-          said IF the other person is about to win, block the spot that lets them
-          win.
-      7:
-        text: Have fun using the "if" block!
-    if_else:
-      1:
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
-      2:
-        text: If I put a "move forward" block in the spot where it says "do" and a
-          "turn left" block where it says "else" that means that the zombie will choose
-          between 2 options. IF there is a path ahead, the zombie will move forward,
-          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
-      3:
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
-      4:
-        text: Now, get those zombies where they belong!
-    if_else_scrat:
-      1:
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
-      2:
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
-      3:
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
-      4:
-        text: Now let's help Scrat the squirrel get that acorn!
-    function:
-      1:
-        text: Hi, I'm Brina, an engineer at Instagram. A function is certain lines
-          of code that you want to use over and over again, so instead of writing
-          that code out everytime, you can just use one block.
-      2:
-        text: We're going to learn how to define functions. Function definitions have
-          a star in the corner. The name of the function is written on the top line.
-      3:
-        text: The blocks that go inside the definition tell us what it does. So this
-          function definition is called "fill 5" and it's made up of a "repeat" block
-          and a "fill" block.
-      4:
-        text: The definition sits on the workspace, but our farmer won't run the function
-          until we drag out our "fill 5" function block from functions category.
-      5:
-        text: 'Let''s put the "fun" back in "FUNction!" '
-    loop_while:
-      1:
-        text: 'Hi, I''m Makinde! Let''s learn about the "while block." '
-      2:
-        text: The "while block" will do whatever you put inside it AS LONG AS the
-          statement on the top is TRUE.
-      3:
-        text: For example, if the farmer is standing on a pile, she will continue
-          to remove 1 shovelful WHILE there is still a pile beneath her.
-    loop_for:
-      1:
-        text: Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies,
-          including Shrek.
-      2:
-        text: This is our new "counter" loop. It will perform actions over and over
-          again and you can make the actions change slightly each time.
-      3:
-        text: In this example, our "counter" loop says "count with counter from 50
-          to 90 by 10" and inside it, we have our "draw a square" block. Drag the
-          "counter" block from the "Variables" section into the "length" spot.
-      4:
-        text: This means our artist is going to draw a square that has 50 pixel length
-          sides, then it will add 10 to that and draw a square with 60 pixel length
-          sides. Then it will keep adding 10 and drawing squares until it reaches
-          90. So we'll have squares of 50, 60, 70, 80, and 90.
-    parameters:
-      1:
-        text: Hi, I'm Janete, and I'm an engineer at Zynga.
-      2:
-        text: What if we want to draw a bunch of triangles and have their lengths
-          be different sizes?
-      3:
-        text: We could write all that code out by hand or we can use a function with
-          parameters.
-      4:
-        text: To do this, click the blue star on the "draw a triangle" function definition.
-          Then drag "input name" into the "input" block.
-      5:
-        text: Then if you write "length" in the spot where it says "x" and press "Enter"
-          you'll create a length input for your function.
-      6:
-        text: Then click on the star. Now, you want to click on the variables category
-          and drag the "length" block into the "move forward" block of your function
-          definition. And drag away the old number block.
-      7:
-        text: To use your function with parameters, click on the functions category
-          and drag out your "draw a triangle with length" function.
-      8:
-        text: Now you can use the math block to input different numbers to draw triangles
-          of different sizes.
-    hoc_wrapup:
-      1:
-        text: Congratulations! With the last puzzle you solved, you just wrote code
-          that can tell ANY robot how to find it's way through a non-branching maze
-          or tunnel of any length, whether it's a zombie, a bird, a mars rover, or
-          even a self-driving car.
-      2:
-        text: The basic concepts you used are at the heart of every program or app
-          you'll ever try.  We learned about repeat loops, repeat until statements,
-          if statements, and if else statements.
-      3:
-        text: If you liked your first hour of code, visit code.org to continue your
-          education into computer science! Once you complete our 20 hour course, you'll
-          have mastered the basics of programming, and can start learning how to write
-          phone apps, robot instructions, games, you name it.
-      4:
-        text: 'Technology is changing everything we do and it doesn''t matter if you''re
-          young or old: programming is fun, it''s creative, and anyone can learn!'
     20_wrapup:
       1:
         text: Show notes coming soon!
-    frozen_intro:
-      1:
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
-      2:
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
-      3:
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
-      4:
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
-      5:
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
-      6:
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
-      7:
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
-      8:
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
-      9:
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
-      10:
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
-    frozen_loops:
-      1:
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
-      2:
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
-      3:
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
-      4:
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
-      5:
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
-    frozen_functions:
-      1:
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
-      2:
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
-      3:
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
-      4:
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
-      5:
-        text: 'You can define this as a function called "create a square." '
-      6:
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
-      7:
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
-    playlab_intro:
-      1:
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
-      2:
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
-      3:
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
-      4:
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
-      5:
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
-      6:
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
-    playlab_events:
-      1:
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
-      2:
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
-      3:
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
-      4:
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
-    playlab_repeat_forever:
-      1:
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
-      2:
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
-      3:
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
     C1_artist_intro:
       1:
         text: These are your draw blocks. Use the correct one to move the artist where
@@ -548,6 +119,41 @@ ne:
           within the loop you want to increase the speed of the light. And that's
           all created through loops. Loops are important in computer science because
           they make our work shorter and easier.
+    C1_going_places_safely:
+      1:
+        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
+          mom's computer but I always get permission first. "Mom, can I go on the
+          computer? Sure honey!"
+      2:
+        text: I love my mom's computer because I can go on the Internet. The Internet
+          is kind of like your neighborhood. You can visit cool places, you can talk
+          to family and friends and you can learn lots of new things.
+      3:
+        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
+          I took her picture and changed the color of her stripes, then added a hat
+          and added it to my collection of wacky animals. Awesome! Later, I went to
+          a place far far away. I visited Kenya. That's a country in Africa. Lots
+          of zebras live there.
+      4:
+        text: Sometimes on the Internet I talk to people I know, like my grandma who
+          lives in another state. Hi grandma! She's making me cookies that she'll
+          send me for my birthday. "Yummy, I wish the Internet had smellorama!" I
+          can talk to different people on the Internet, like my cousin but I only
+          talk to people I know.
+      5:
+        text: What I like most on the interent is that I get to play fun games. Score!
+          I also like to draw and create new things and share it with my friends.
+          Cool! Sometimes I visit websites where I learn new things but I always stick
+          to websites that are just right for me. Wow, dinosaurs!
+      6:
+        text: 'The Internet is a super fun place. But just like when you cross a street
+          in your neighborhood, you also have to be careful when you go online. Here
+          are three rules to remember. Rule number 1: Always ask your parents first.
+          Rule number 2: Only talk to people you know. Rule number 3: Stick to places
+          that are just right for you.'
+      7:
+        text: Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to
+          log on again to see where I can visit next.
     C1_happy_maps_unplugged:
       1:
         text: This lesson is called Happy Maps. Today we're gonna help our furry little
@@ -624,41 +230,6 @@ ne:
           write for a computer. Programs are really good for that but they're also
           helpful in other places. You can make your own game or even program a robot
           to do things for you.
-    C1_going_places_safely:
-      1:
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
-      2:
-        text: I love my mom's computer because I can go on the Internet. The Internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
-      3:
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
-      4:
-        text: Sometimes on the Internet I talk to people I know, like my grandma who
-          lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the Internet had smellorama!" I
-          can talk to different people on the Internet, like my cousin but I only
-          talk to people I know.
-      5:
-        text: What I like most on the interent is that I get to play fun games. Score!
-          I also like to draw and create new things and share it with my friends.
-          Cool! Sometimes I visit websites where I learn new things but I always stick
-          to websites that are just right for me. Wow, dinosaurs!
-      6:
-        text: 'The Internet is a super fun place. But just like when you cross a street
-          in your neighborhood, you also have to be careful when you go online. Here
-          are three rules to remember. Rule number 1: Always ask your parents first.
-          Rule number 2: Only talk to people you know. Rule number 3: Stick to places
-          that are just right for you.'
-      7:
-        text: Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to
-          log on again to see where I can visit next.
     C1_pair_programming:
       1:
         text: Today we're going to learn about Pair Programming. In pair programming
@@ -765,6 +336,16 @@ ne:
         text: One more thing is you can put as many commands as you want inside the
           repeat block. So in this example, you're telling it to move forward and
           turn left, which it'll do five times. रमाईलो गर्नुहोस्!
+    C2_artist_debugging:
+      1:
+        text: Here we already have some blocks out in our work space. But there is
+          something wrong.
+      2:
+        text: Let's debug this code by slowing down the speed and watching it as it
+          goes through each block step by step.
+      3:
+        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
+          25.
     C2_artist_intro:
       1:
         text: You wouldn't even qualify for the race if you don't have people who
@@ -788,6 +369,16 @@ ne:
         text: And this is a 120 degree turn. And remember, you can change these values
           by clicking the arrows next to the numbers for pixels and degrees. Enjoy
           drawing with your artist!
+    C2_artist_loops:
+      1:
+        text: Here we are going to use the repeat block to help us save steps when
+          we are programming our artist. We already have some blocks out on our stage
+          but they are just there to get us started.
+      2:
+        text: To loop those blocks four times to draw the whole square, we just drag
+          out the repeat block and put the moveforward and turn right blocks inside
+          the repeat block. When we hit run, the artist will repeat those steps four
+          times to complete the square.
     C2_bee_conditionals:
       1:
         text: This is the conditional block. It says IF there is nectar or honey that
@@ -799,6 +390,29 @@ ne:
         text: In this example, we're going to say IF the purple flower has nectar
           greater than 0, get nectar. That will tell our bee to keep getting nectar
           as long as it's there. Ta-dah!
+    C2_bee_debugging:
+      1:
+        text: Have you ever heard of debugging a program? This is the way you figure
+          out what's not working. When you debug code, you identify and remove errors.
+      2:
+        text: Here we're given a few blocks already in our workplace. We're going
+          to use the step button to walk through the blocks, step by step, to see
+          if this is the right solution and where we may need to fix it.
+      3:
+        text: Looks like there's our problem! We need one more move forward block.
+          The step button helps us debug our problem by identifying where the error
+          is so we can fix it.
+    C2_bee_loops:
+      1:
+        text: A loop is a repetition of activity. Going into a hive to inspect, I
+          look at a frame, and then I put it back. I repeat that same activity multiple
+          times. It's looping around, doing the same activity multiple times.
+      2:
+        text: This is the repeat block. Whatever you put inside the repeat block will
+          repeat those actions the number of times that you tell it to. For example,
+          in this level, rather than drag out move forward and get nectar three times,
+          we're going to just drag them out once each and repeat the action three
+          times. That made it easy!
     C2_binary_bracelets:
       1:
         text: This is the binary bracelets lesson. We are going to code our initials
@@ -847,28 +461,6 @@ ne:
           conditionals. It's the way a computer makes a decision. How about, if you
           hit the target, you earn ten points. Else, you lose three. When you know
           how conditionals work, you can create all kinds of exciting games.
-    C2_artist_debugging:
-      1:
-        text: Here we already have some blocks out in our work space. But there is
-          something wrong.
-      2:
-        text: Let's debug this code by slowing down the speed and watching it as it
-          goes through each block step by step.
-      3:
-        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
-          25.
-    C2_bee_debugging:
-      1:
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
-      2:
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
-      3:
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
     C2_digital_footprint:
       1:
         text: On your head you hold your hat and your smarts will tell you where you're
@@ -933,27 +525,6 @@ ne:
           recreate that same piece again, or I can teach someone else to do it. Put
           the glass in the kiln, fuse it together, follow the rest of the instructions
           to make the bowl. Algorithms give you a road map for getting something done.
-    C2_artist_loops:
-      1:
-        text: Here we are going to use the repeat block to help us save steps when
-          we are programming our artist. We already have some blocks out on our stage
-          but they are just there to get us started.
-      2:
-        text: To loop those blocks four times to draw the whole square, we just drag
-          out the repeat block and put the moveforward and turn right blocks inside
-          the repeat block. When we hit run, the artist will repeat those steps four
-          times to complete the square.
-    C2_bee_loops:
-      1:
-        text: A loop is a repetition of activity. Going into a hive to inspect, I
-          look at a frame, and then I put it back. I repeat that same activity multiple
-          times. It's looping around, doing the same activity multiple times.
-      2:
-        text: This is the repeat block. Whatever you put inside the repeat block will
-          repeat those actions the number of times that you tell it to. For example,
-          in this level, rather than drag out move forward and get nectar three times,
-          we're going to just drag them out once each and repeat the action three
-          times. That made it easy!
     C2_maze_intro:
       1:
         text: Usually programming is all in text but we'll use Blockly which uses
@@ -1774,6 +1345,669 @@ ne:
           numbers of a book. A user can increase and decrease the size of the font
           on a page. Based on the font size, the number of pages in the book can change.
           We can adjust it by storing the number of pages in the variable.
+    artist_intro:
+      1:
+        text: Hi, I'm JR! Every race car team need computer scientists to win. They
+          analyze data from the car to make it go faster.
+      2:
+        text: In these puzzles, you'll be an artist that draws a line behind them
+          everywhere they go.
+      3:
+        text: This block says "move forward by 100 pixels." Pixels are just really
+          tiny dots on your screen.
+      4:
+        text: This block says "turn right by 90 degrees." This will turn your artist
+          the same amount as the "turn" blocks in the maze puzzles.
+      5:
+        text: Click on the arrow in either of these blocks to change the amount the
+          artist moves forward or turns. Play around to get familiar with these new
+          blocks.
+    farmer_intro:
+      1:
+        text: Hi, I'm Paola! In these puzzles, you're a farmer who has to get her
+          field completely flat to start planting crops.
+      2:
+        text: You have to help her remove all the piles of dirt and fill in all the
+          holes.
+      3:
+        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
+          shovelful of dirt to a hole.
+      4:
+        text: The piles and holes are different sizes, so you have to tell the farmer
+          how many shovelfuls to use.
+    flappy_intro:
+      1:
+        text: Hi, I'm Katie! One of the most exciting things about computer science
+          is that a computer program can be interactive.
+      2:
+        text: Any time somebody clicks or taps or types on a computer or phone, that
+          generates an EVENT, and there's some code that decides what to do when an
+          EVENT occurs.
+      3:
+        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
+          is clicked, play a sound" '
+      4:
+        text: Have you ever heard of the game FlappyBird? By using Event handlers,
+          we're going to learn to program our own custom version of FlappyBird!
+      5:
+        text: The code you'll write involves dragging and dropping blocks that represent
+          commands for the computer. Under the hood, each of these blocks is represented
+          by real code.
+      6:
+        text: 'If you take a look at the workspace, there are some green blocks that
+          are filled in for you - these are "event handlers" '
+      7:
+        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
+          by attaching the "FLAP" block to the appropriate event handler, and now
+          in your game whenever you click the mouse, the bird will flap.
+      8:
+        text: In each puzzle of this activity we'll introduce new types of events
+          as green blocks on the workspace, and you can decide the appropriate blocks
+          to add in response to those events.
+      9:
+        text: When you see a drop down arrow like this, that means you can change
+          the settings - like what sound to play when flappy hits the ground.
+      10:
+        text: In the final puzzle you'll be able to create your own game and share
+          it with your friends. रमाईलो गर्नुहोस्!
+    frozen_functions:
+      1:
+        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
+          in college.
+      2:
+        text: One of the most important concepts in computer science is how to define
+          new commands. Most computer languages have only about 100 words or commands.
+          And really, the art and magic is in defining your own new words out of these
+          building blocks.
+      3:
+        text: Once you've taught a computer how to do an action once using this sequence
+          of commands, you can make up your own name for that action so it's easy
+          to repeat it later. When you define your own command and give it a name,
+          that's called a function.
+      4:
+        text: Hi, I’m Jess. When programming with blocks, you would use functions
+          if there are a set of actions you would like to use lots of times. For example,
+          you've written code to create a square.
+      5:
+        text: 'You can define this as a function called "create a square." '
+      6:
+        text: Now you have a new block that you can use multiple times to create multiple
+          squares.
+      7:
+        text: A lot of simple shapes can be used to create more complex patterns.
+          In the next puzzle, the code you recently wrote to make a circle is available
+          to you as a new function that can make circles of different sizes. Can you
+          use it to help Elsa create intricate and beautiful patterns in the snow?
+    frozen_intro:
+      1:
+        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
+          code to join Anna and Elsa as they explore the magic and beauty of ice.
+      2:
+        text: You'll create snowflakes and patterns as you ice skate and make a winter
+          wonderland that you can then share with your friends.
+      3:
+        text: In the next hour, you're going to learn the basics of how to code. Traditional
+          programming is usually in text, but we'll use Blockly, which uses visual
+          blocks that you can drag and drop to write programs. This is how even university
+          students learn the basics. Under the hood, you're still creating code.
+      4:
+        text: A program is a set of instructions that tells a computer what to do.
+          Let's build a code, or a program, that will help Elsa create a simple line.
+          We will use this later to create more complex patterns.
+      5:
+        text: Your screen is split into three main parts. On the left, is the ice
+          surface where you'll run your program. The instructions for each level are
+          written right below the surface.
+      6:
+        text: This middle area is the toolbox, and each of these blocks is an action
+          that Elsa and Anna can do.
+      7:
+        text: The white space on the right is called the workspace, and this is where
+          we'll build our program. To move around the ice surface, you'll use the
+          "Move Forward" block.
+      8:
+        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
+          we press "Run", what happens? Elsa moves forward a certain amount on the
+          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
+          computer screen.
+      9:
+        text: The other block we have in this puzzle says "turn right by 90 degrees."
+          And when we use this "Turn Right" block, that makes Elsa turn a certain
+          amount. You can play around with how far you want Elsa to turn. The angle
+          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
+          this is a 120 degree turn.
+      10:
+        text: Remember, you can change the number of pixels and degrees by clicking
+          the arrows next to them.
+    frozen_loops:
+      1:
+        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
+          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
+          It won't get bored and it will only take a few seconds. Whether it's counting,
+          or drawing, or anything--computers can repeat things hundreds or even billions
+          of times.
+      2:
+        text: In programming, we call this a loop. A loop is how you repeat your code
+          over and over again. For the next puzzle, your goal is to help Anna create
+          a square with the "Repeat" block.
+      3:
+        text: Any blocks of code you put inside the "Repeat" block will be repeated
+          in sequence, as many times as you want.
+      4:
+        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
+          4 times. But the easier way is to tell the computer to "Move Forward" and
+          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
+          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
+          Right" block inside a "Repeat" block.
+      5:
+        text: Remember, you can change the number in the "Repeat" block to anything,
+          and it will repeat what's inside the block that many times.
+    function:
+      1:
+        text: Hi, I'm Brina, an engineer at Instagram. A function is certain lines
+          of code that you want to use over and over again, so instead of writing
+          that code out everytime, you can just use one block.
+      2:
+        text: We're going to learn how to define functions. Function definitions have
+          a star in the corner. The name of the function is written on the top line.
+      3:
+        text: The blocks that go inside the definition tell us what it does. So this
+          function definition is called "fill 5" and it's made up of a "repeat" block
+          and a "fill" block.
+      4:
+        text: The definition sits on the workspace, but our farmer won't run the function
+          until we drag out our "fill 5" function block from functions category.
+      5:
+        text: 'Let''s put the "fun" back in "FUNction!" '
+    gumball_events:
+      1:
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_intro:
+      1:
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_repeat:
+      1:
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    hoc_dance_congrats:
+      1:
+        text: Hour of Code | डान्स पार्टीः पार्टी चलिरहेको!
+      2:
+        text: 'बधाई छ! तपाईंले भर्खरै मात्र कम्प्युटर विज्ञानका आधारभूत कुराहरु सिक्नुभएको
+          छ । अब तपाईं आफ्नो साथीहरुसँग साझेदारी गर्न आफ्नै डिजाइनको नृत्य पार्टी
+          सिर्जना गर्न यी ब्लकहरु प्रयोग गर्न सक्नुहुन्छ '
+      3:
+        text: यदि तपाईंले उपकरण बाकसमा हेर्नुभयो भने, तपाईंले पहिले कहिल्यै नदेखेका
+          केही नयाँ ब्लकहरु फेला पार्नुहुनेछ । उदाहरणका लागि, तपाईं पर्दामा डान्सरहरुलाई
+          विभिन्न तरिकामा मिलाउन सजावट खण्ड प्रयोग गर्न सक्नुहुन्छ ।
+      4:
+        text: वरिपरि हेर्नुहोस् र यी नयाँ खण्ड र विशेषताहरु प्रयोग गर्न प्रयास गर्नुहोस्
+          । के तपाईं आफूलाई मनपर्ने गीतमा होसियारीसाथ कोरियोग्राफ गरिएको नाच सिर्जना
+          गर्नुहुनेछ ?
+      5:
+        text: अथवा साथीहरुसँग नाच्ने ?
+      6:
+        text: अथवा अरु कुनै कुराहरु ?
+      7:
+        text: ट्यूटोरियलको अन्तमा तपाईं आफ्नो सिर्जनाको लिंक आफ्नो साथीहरुसँग साझेदारी
+          गर्न सक्नुहुन्छ । आफ्नो कल्पनालाई तिखार्नुहोस् र रमाइलो गर्नुहोस् ।
+    hoc_dance_congrats_2019:
+      1:
+        text: Hour of Code | डान्स पार्टीः पार्टी चलिरहेको!
+      2:
+        text: 'बधाई छ! तपाईंले भर्खरै मात्र कम्प्युटर विज्ञानका आधारभूत कुराहरु सिक्नुभएको
+          छ । अब तपाईं आफ्नो साथीहरुसँग साझेदारी गर्न आफ्नै डिजाइनको नृत्य पार्टी
+          सिर्जना गर्न यी ब्लकहरु प्रयोग गर्न सक्नुहुन्छ '
+      3:
+        text: यदि तपाईंले उपकरण बाकसमा हेर्नुभयो भने, तपाईंले पहिले कहिल्यै नदेखेका
+          केही नयाँ ब्लकहरु फेला पार्नुहुनेछ । उदाहरणका लागि, तपाईं पर्दामा डान्सरहरुलाई
+          विभिन्न तरिकामा मिलाउन सजावट खण्ड प्रयोग गर्न सक्नुहुन्छ ।
+      4:
+        text: वरिपरि हेर्नुहोस् र यी नयाँ खण्ड र विशेषताहरु प्रयोग गर्न प्रयास गर्नुहोस्
+          । के तपाईं आफूलाई मनपर्ने गीतमा होसियारीसाथ कोरियोग्राफ गरिएको नाच सिर्जना
+          गर्नुहुनेछ ?
+      5:
+        text: अथवा साथीहरुसँग नाच्ने ?
+      6:
+        text: अथवा अरु कुनै कुराहरु ?
+      7:
+        text: ट्यूटोरियलको अन्तमा तपाईं आफ्नो सिर्जनाको लिंक आफ्नो साथीहरुसँग साझेदारी
+          गर्न सक्नुहुन्छ । आफ्नो कल्पनालाई तिखार्नुहोस् र रमाइलो गर्नुहोस् ।
+    hoc_dance_events:
+      1:
+        text: Hour of Code । डान्स पार्टीः इभेन्टस् ।
+      2:
+        text: 'म एलो ब्लाक हु । म गायक, गीतकार र मनोरञ्जनकर्ता हुँ । मेरो विचारमा
+          कम्प्युटर विज्ञान साँच्चै सिक्न महत्वपूर्ण छ किनकि कम्प्युटर विज्ञान भनेको
+          भविष्य हो, र मलाई लाग्छ मानिसहरुको जीवनलाई शाब्दिक रुपमा नियन्त्रण गर्ने
+          प्रविधिको नियन्त्रणमा हुनु महत्वपूर्ण छ ।
+
+          '
+      3:
+        text: 'संगीतद्धारा ठीक समयमा फरक फरक डान्स चालहरु बनाउन तपाईं घटना भनिने केही
+          कुरा प्रयोग गर्न सक्नुहुन्छ । एउटा घटनाले तपाईंको कार्यक्रमलाई केही कुरा
+          सुन्न र तुरुन्तै प्रतिक्रिया देखाउन भन्छ ।
+
+          '
+      4:
+        text: घटनाका केही उदाहरणहरु सुन्नका लागि माउस क्लिक, वाण वटन, वा स्क्रिनमा
+          थिच्ने आदि  छन् । अहिले हामीले प्रयोग गर्न लागेको घटनाले गीतमा भएको परिवर्तन
+          सुन्नेछ । यो परिवर्तनले तपाईंको डान्सरलाई नयाँ नृत्य गर्न उत्प्रेरित गर्नेछ
+          ।
+      5:
+        text: पेशेवर डान्सरहरु  आफ्नो कोरियोग्राफी अभ्यास गर्छन्  गीतको धडकन गनेर।
+      6:
+        text: संगीतमा एउटा नापले कुनै निश्चित संख्यामा धडकनलाई जनाउँछ । प्रायःजसो
+          लोकप्रिय गीतहरुमा एक नाप चार धड्कन लामो हुन्छ ।
+      7:
+        text: तपाईंको डान्सरहरुलाई हराउन, तपाईंलाई हरियो घटना–खण्ड आवश्यक हुनेछ ।
+          यो घटना ब्लक भन्छ, ४ वटा मापन पछि ।
+      8:
+        text: यदि तपाईंले बैजनी "do forever" ब्लक बाहिर तान्नुभयो भने, तपाईंले आफ्नो
+          डान्सरका लागि डान्स छान्न सक्नुहुन्छ किनभने यो "after 4 measures" घटना ब्लक
+          अन्तर्गत छ, तपाईंको डान्सरले आफ्नो डान्स सुरु गर्नु अघि गीतको ४ मापन प्रतीक्षा
+          गर्नेछ ।
+      9:
+        text: 'प्रदर्शन क्षेत्रको माथिको मापन काउन्टरमा नजर राख्नुहोस् ।
+
+          '
+      10:
+        text: डान्स कोड ट्रिगर गर्ने घटना हेर्नुहोस् र सुन्नुहोस् । अनि ठीक संकेतमा,
+          हाम्रो डान्सर जान थाल्छ ।
+    hoc_dance_events_2019:
+      1:
+        text: Hour of Code । डान्स पार्टीः इभेन्टस् ।
+      4:
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.
+    hoc_dance_measures_2019:
+      2:
+        text: 'म एलो ब्लाक हु । म गायक, गीतकार र मनोरञ्जनकर्ता हुँ । मेरो विचारमा
+          कम्प्युटर विज्ञान साँच्चै सिक्न महत्वपूर्ण छ किनकि कम्प्युटर विज्ञान भनेको
+          भविष्य हो, र मलाई लाग्छ मानिसहरुको जीवनलाई शाब्दिक रुपमा नियन्त्रण गर्ने
+          प्रविधिको नियन्त्रणमा हुनु महत्वपूर्ण छ ।
+
+          '
+      5:
+        text: तपाईंको डान्सरहरुलाई हराउन, तपाईंलाई हरियो घटना–खण्ड आवश्यक हुनेछ ।
+          यो घटना ब्लक भन्छ, ४ वटा मापन पछि ।
+      6:
+        text: यदि तपाईंले बैजनी "do forever" ब्लक बाहिर तान्नुभयो भने, तपाईंले आफ्नो
+          डान्सरका लागि डान्स छान्न सक्नुहुन्छ किनभने यो "after 4 measures" घटना ब्लक
+          अन्तर्गत छ, तपाईंको डान्सरले आफ्नो डान्स सुरु गर्नु अघि गीतको ४ मापन प्रतीक्षा
+          गर्नेछ ।
+      7:
+        text: 'प्रदर्शन क्षेत्रको माथिको मापन काउन्टरमा नजर राख्नुहोस् ।
+
+          '
+      8:
+        text: डान्स कोड ट्रिगर गर्ने घटना हेर्नुहोस् र सुन्नुहोस् । अनि ठीक संकेतमा,
+          हाम्रो डान्सर जान थाल्छ ।
+    hoc_dance_properties:
+      1:
+        text: Hour of Code | डान्स पार्टीः गुणहरु
+      2:
+        text: मेरो नाम मारिया, म वासिङ्टन विश्वविद्यालयमा एक जूनियर छु र म एक अमेजन
+          भविष्य इन्जिनियर हुँ ।
+      3:
+        text: 'मलाई कम्प्युटर विज्ञान मनपर्छ किनभने यसमा समस्या समाधान गर्ने र आलोचनात्मक
+          सोचाई समावेश छ अनि घण्टौं काम गरिसकेपछि तपाईंले यसबाट इनामदायी कुरा पाउन
+          सक्नुहुन्छ ।
+
+          '
+      4:
+        text: अहिलेसम्म, तपाईंले केही विभिन्न प्रकारका डान्सरहरुसँग खेल्ने मौका पाउनुभएको
+          छ र तपाईंले तिनीहरुलाई विभिन्न प्रकारका नृत्य चालहरु गर्न प्रोग्राम गर्नुभएको
+          छ । तर यी चालहरुले वास्तवमा कसरी काम गर्छ ?
+      5:
+        text: हरेक नृत्य चाल फ्रेम भनिने छविहरुको श्रृंखलाबाट बनेको हुन्छ । प्रत्येक
+          फ्रेम पहिलेको फ्रेमभन्दा अलिक फरक हुन्छ । तपाईंको प्रोग्राम चलाइसकेपछि कम्प्युटरले
+          एकपछि अर्को फ्रेम देखाउँदछ । तिनीहरुलाई यति छिटो देखाइन्छ कि डान्स चलिरहेको
+          जस्तो देखिन्छ । सबै एनिमेसनको रहस्य यही हो ।
+      6:
+        text: 'तपाईं आफ्नो डान्सरको चाल मात्र परिवर्तन गर्न सक्नुहुन्न, डान्सरको गुण
+          पनि परिवर्तन गर्न सक्नुहुन्छ । गुणहरुले पर्दामा डान्सरको स्थान, डान्सरको
+          आकार र डान्सरको रङजस्ता कुराहरुको वर्णन गर्छ ।
+
+          '
+      7:
+        text: 'डान्सरको गुण परिवर्तन गर्न तपाईंले सेट खण्ड प्रयोग गर्नुहुनेछ । हाम्रा
+          डान्सरहरुलाई सानो देखाउन सेट खण्ड प्रयोग गरौं । पहिला, तपाईंको कार्यक्रममा
+          सेट खण्ड तान्नुहोस् । त्यसपछि, तपाईंले परिवर्तन गर्न चाहेको डान्स चयन गर्नुहोस्
+          र पर्दामा देखिने साइज टाइप गर्नुहोस् ।
+
+          '
+      8:
+        text: "पूरा आकार १०० हो । यदि तपाईंले कम नम्बर रोज्नुभयो भने, त्यो डान्सर
+          सानो हुनेछ, नाच्नेहरु त्यति नै सानो देखिन्छन् । \nब्याकअप डान्सरहरु बनाउने
+          यो एउटा राम्रो तरिका हो ।\n"
+      9:
+        text: 'सेट खण्डको प्रयोग गरेर, तपाईं पनि डान्सरको आयाम, परिक्रमा, स्थिति र
+          रंग परिवर्तन गर्न सक्नुहुन्छ । यी गुणहरुसँग वरिपरि खेलेर तपाईंले सबै प्रकारका
+          परिवर्तन गर्न सक्नुहुन्छ र तिनीहरुलाई गीतको विभिन्न भागमा लिङ्क गर्न सक्नुहुन्छ
+          ।
+
+          '
+      10:
+        text: 'सम्झनुहोस्, तपाईंले पहिले नै अवस्थित डान्सरको गुण मात्र सेट गर्न सक्नुहुन्छ
+          ।"Make a new dancer" खण्डपछि तपाईंको सेट खण्ड आएको निश्चित गर्नुहोस् । सिर्जनात्मक
+          हुन प्रयास गर्न नहिचकिचाउनुहोस् र रमाइलो गर्नुहोस् ।
+
+          '
+    hoc_dance_properties_2019:
+      1:
+        text: Hour of Code | डान्स पार्टीः गुणहरु
+      2:
+        text: मेरो नाम मारिया, म वासिङ्टन विश्वविद्यालयमा एक जूनियर छु र म एक अमेजन
+          भविष्य इन्जिनियर हुँ ।
+      3:
+        text: 'मलाई कम्प्युटर विज्ञान मनपर्छ किनभने यसमा समस्या समाधान गर्ने र आलोचनात्मक
+          सोचाई समावेश छ अनि घण्टौं काम गरिसकेपछि तपाईंले यसबाट इनामदायी कुरा पाउन
+          सक्नुहुन्छ ।
+
+          '
+      5:
+        text: हरेक नृत्य चाल फ्रेम भनिने छविहरुको श्रृंखलाबाट बनेको हुन्छ । प्रत्येक
+          फ्रेम पहिलेको फ्रेमभन्दा अलिक फरक हुन्छ । तपाईंको प्रोग्राम चलाइसकेपछि कम्प्युटरले
+          एकपछि अर्को फ्रेम देखाउँदछ । तिनीहरुलाई यति छिटो देखाइन्छ कि डान्स चलिरहेको
+          जस्तो देखिन्छ । सबै एनिमेसनको रहस्य यही हो ।
+      6:
+        text: 'तपाईं आफ्नो डान्सरको चाल मात्र परिवर्तन गर्न सक्नुहुन्न, डान्सरको गुण
+          पनि परिवर्तन गर्न सक्नुहुन्छ । गुणहरुले पर्दामा डान्सरको स्थान, डान्सरको
+          आकार र डान्सरको रङजस्ता कुराहरुको वर्णन गर्छ ।
+
+          '
+    hoc_dance_warmup:
+      1:
+        text: 'Hour of Code | डान्स पार्टी: वार्म अप '
+      2:
+        text: हाई । मेरो नाम Miral Kotb हो र म एक डान्सर, सफ्टवेयर विकासकर्ता र iLuminate
+          को सर्जक हुँ ।
+      3:
+        text: त्यसकारण, कम्प्युटर विज्ञान विभिन्न तरिकामा सिर्जनशीलतासँग सम्बन्धित
+          छ । असीम, साँच्चिकै । मेरो मतलव, एक पटक तपाईसँग सफ्टवेयर लेख्ने क्षमता भएपछि
+          तपाईंले विचारहरु कुनै पनि कुरामा राख्न सक्नुहुन्छ । म यो लाईट सुटसँग गर्छु
+          । सफ्टवेयर लेख्ने उपकरणहरु एकपटक तपाईं धेरै गर्न सक्नुहुन्छ र सम्भावनाहरु
+          साँच्चै अनन्त छन् ।
+      4:
+        text: अर्को एक घण्टामा, तपार्इं आफ्नो डान्स पार्टी प्रोग्रामिङ गरेर कम्प्युटर
+          विज्ञानसँग सुरु गर्न जाँदै हुनुहुन्छ । हामीले तपाईंसँग खेल्नका लागि केही
+          हिट सङ्गीत र महान डान्सरहरुको एउटा टोली एकत्रित गरेका छौं ।
+      5:
+        text: 'तपाईं विभिन्न डान्सरहरु छनोट गर्न कोडको खण्ड प्रयोग गर्नुहुनेछ, तिनीहरुको
+          नेतृत्व चाल परिवर्तन, तिनीहरुलाई संगीत प्रतिक्रिया बनाउन र तिनीहरुलाई अन्तरक्रियात्मक
+          बनाउन ।
+
+          '
+      6:
+        text: तपाईंले देख्नुहुनेछ कि तपाईंको पर्दा तीन मुख्य भागमा विभाजन गरिएको छ
+          । वायाँतिर प्ले गर्ने ठाउँ छ । यहाँ तपाईंका डान्सरहरु देखापर्नेछन् ।
+      7:
+        text: यो बीचको क्षेत्र उपकरण बाकस हो । तपाईं पाठहरु मार्फत् जाने क्रममा कोडका
+          नयाँ खण्डहरु यो खाली स्थानमा उपलब्ध हुनेछ ।
+      8:
+        text: दायाँतिरको खाली स्थान कार्यस्थान हो । तपाईंले आफ्नो कार्यक्रम निर्माण
+          गर्न उपकरण बाकस बाहिर र कार्यस्थानमा खण्डहरु तान्न सक्नुहुन्छ ।
+      9:
+        text: प्रत्येक स्तरका लागि निर्देशन यहाँ पर्दाको शीर्षमा हुनेछ । यदि तपाईंलाई
+          संकेत आवश्यक भएमा, प्रकाश बल्ब मात्र क्लिक गर्नुहोस् ।
+      10:
+        text: सुरु गर्न को लागी, रातो खण्डसँग एक नयाँ डान्सर बनाउनुहोस् । पहिलो, यसलाई
+          उपकरण बाकसबाट बाहिर तान्नुहोस् र यो सुन्तला सेटअप खण्ड अन्तर्गत स्न्याप
+          गर्नुहोस् । यो डान्सर बिरालो हो र यसको नाम "my_first_dancer" हो । तपाईंले
+          यहाँ क्लिक गरेर नाम परिवर्तन गर्न सक्नुहुन्छ ।
+      11:
+        text: तपाईले यसमा तपाईंको प्ले स्पेसमा डान्स कहाँ देखापर्छ, परिवर्तन गर्न
+          सक्नुहुन्छ ।
+      12:
+        text: प्ले स्पेस माथि संगीत टिप्नका लागि मेनु छ । छनौट गर्नका लागि धेरै गीतहरु
+          छन्, त्यसैले आफूलाई मनपर्ने गीतहरु फेला पार्न रमाइलो गर्नुहोस् । प्ले स्पेस
+          मुनि चालु वटन छ । जब तपाईंले चालु वटन थिच्नुहुन्छ, तपाईंले आफ्नो कार्यक्रमबाट
+          डान्सरहरु प्ले स्पेसमा देखापर्ने र संगीत बज्ने देख्नुहुनेछ ।
+      13:
+        text: आफैंले प्रयास गर्नुहोस्! अनि यदि तपाईंलाई अड्किएको महसुस भइरहेको छ भने
+          ठीकै छ! बस उठ्नुहोस् र सार्नुहोस्, थाहा पाउनु अघि तपाईंले आफ्नै डान्स पार्टी
+          बनाउनुभएको होला । त्यसोभए, तपाईं के बनाउनु हुन्छ ?
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Hour of Code | डान्स पार्टी: वार्म अप '
+      2:
+        text: हाई । मेरो नाम Miral Kotb हो र म एक डान्सर, सफ्टवेयर विकासकर्ता र iLuminate
+          को सर्जक हुँ ।
+      3:
+        text: कम्प्युटर विज्ञान विभिन्न तरिकामा सिर्जनशीलतासँग सम्बन्धित छ । अपार,
+          साँच्चिकै । मेरो मतलब, एकपटक तपाईंसँग सफ्टवेयर लेख्ने क्षमता भएपछि तपाईंले
+          विचारहरु कुनै पनि कुरामा राख्न सक्नुहुन्छ । म लाईट सूटसँग गर्छु । सफ्टवेयर
+          लेख्ने उपकरणहरु एकपटक तपाईं धेरै गर्न सक्नुहुन्छ, र यसका सम्भावनाहरु साँच्चै
+          अनन्त छन् ।
+      4:
+        text: अर्को एक घण्टामा, तपार्इं आफ्नो डान्स पार्टी प्रोग्रामिङ गरेर कम्प्युटर
+          विज्ञानसँग सुरु गर्न जाँदै हुनुहुन्छ । हामीले तपाईंसँग खेल्नका लागि केही
+          हिट सङ्गीत र महान डान्सरहरुको एउटा टोली एकत्रित गरेका छौं ।
+      5:
+        text: 'तपाईं विभिन्न डान्सरहरु छनोट गर्न कोडको खण्ड प्रयोग गर्नुहुनेछ, तिनीहरुको
+          नेतृत्व चाल परिवर्तन, तिनीहरुलाई संगीत प्रतिक्रिया बनाउन र तिनीहरुलाई अन्तरक्रियात्मक
+          बनाउन ।
+
+          '
+      6:
+        text: तपाईंले देख्नुहुनेछ कि तपाईंको पर्दा तीन मुख्य भागमा विभाजन गरिएको छ
+          । वायाँतिर प्ले गर्ने ठाउँ छ । यहाँ तपाईंका डान्सरहरु देखापर्नेछन् ।
+      8:
+        text: दायाँतिरको खाली स्थान कार्यस्थान हो । तपाईंले आफ्नो कार्यक्रम निर्माण
+          गर्न उपकरण बाकस बाहिर र कार्यस्थानमा खण्डहरु तान्न सक्नुहुन्छ ।
+      9:
+        text: प्रत्येक स्तरका लागि निर्देशन यहाँ पर्दाको शीर्षमा हुनेछ । यदि तपाईंलाई
+          संकेत आवश्यक भएमा, प्रकाश बल्ब मात्र क्लिक गर्नुहोस् ।
+      11:
+        text: तपाईले यसमा तपाईंको प्ले स्पेसमा डान्स कहाँ देखापर्छ, परिवर्तन गर्न
+          सक्नुहुन्छ ।
+      12:
+        text: प्ले स्पेस माथि संगीत टिप्नका लागि मेनु छ । छनौट गर्नका लागि धेरै गीतहरु
+          छन्, त्यसैले आफूलाई मनपर्ने गीतहरु फेला पार्न रमाइलो गर्नुहोस् । प्ले स्पेस
+          मुनि चालु वटन छ । जब तपाईंले चालु वटन थिच्नुहुन्छ, तपाईंले आफ्नो कार्यक्रमबाट
+          डान्सरहरु प्ले स्पेसमा देखापर्ने र संगीत बज्ने देख्नुहुनेछ ।
+    hoc_wrapup:
+      1:
+        text: Congratulations! With the last puzzle you solved, you just wrote code
+          that can tell ANY robot how to find it's way through a non-branching maze
+          or tunnel of any length, whether it's a zombie, a bird, a mars rover, or
+          even a self-driving car.
+      2:
+        text: The basic concepts you used are at the heart of every program or app
+          you'll ever try.  We learned about repeat loops, repeat until statements,
+          if statements, and if else statements.
+      3:
+        text: If you liked your first hour of code, visit code.org to continue your
+          education into computer science! Once you complete our 20 hour course, you'll
+          have mastered the basics of programming, and can start learning how to write
+          phone apps, robot instructions, games, you name it.
+      4:
+        text: 'Technology is changing everything we do and it doesn''t matter if you''re
+          young or old: programming is fun, it''s creative, and anyone can learn!'
+    iceage_events:
+      1:
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_intro:
+      1:
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_repeat:
+      1:
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    if:
+      1:
+        text: 'Hi, I''m Bill! Let''s learn a new fundamental concept: "If" statements.
+          This is how computers make decisions.'
+      2:
+        text: You use "If" statements yourself everday. Before you go outside each
+          morning, you say IF it's raining outside, I need to wear my jacket.
+      3:
+        text: We can tell the zombie to check IF there's path to the left, and if
+          he finds a path to the left, we can have him turn in that direction.
+      4:
+        text: To write the code for this, let's drag out our "if" block and put a
+          "turn left" block inside it.
+      5:
+        text: Now, if we put a "move forward" block above it and a "repeat" block
+          around everything, each time the zombie moves, he'll check if there's a
+          path to the left and turn. The "repeat" command is critical, to check for
+          a turn at every step.
+      6:
+        text: If statements are really important in computer science. One of the first
+          programs I wrote was a tic-tac-toe game, and there was a If statement that
+          said IF the other person is about to win, block the spot that lets them
+          win.
+      7:
+        text: Have fun using the "if" block!
+    if_else:
+      1:
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
+      2:
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+      3:
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
+      4:
+        text: Now, get those zombies where they belong!
+    if_else_scrat:
+      1:
+        text: An if-else statement is a decision between two things. Let's see how
+          we can use an if-else statement with our buddy Scrat the squirrel.
+      2:
+        text: This block looks the same as the "if" block, but there's an extra part
+          at the bottom that says "else". If I put a "move forward" block where it
+          says "do" and a "turn left" block where it says "else", that means Scrat
+          the squirrel will move forward if there's a path ahead. If there's not a
+          path ahead, Scrat will turn left.
+      3:
+        text: It's making a decision and doing one of the two actions based on that
+          decision. And just like "if" blocks, you can put "if-else" blocks inside
+          "repeat" blocks.
+      4:
+        text: Now let's help Scrat the squirrel get that acorn!
     infinity_playlab_events:
       1:
         text: Now we're going to learn about something that all game programmers use
@@ -1846,6 +2080,672 @@ ne:
           block. In this next puzzle, our goal is to help Anna walk up and down continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    loop_for:
+      1:
+        text: Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies,
+          including Shrek.
+      2:
+        text: This is our new "counter" loop. It will perform actions over and over
+          again and you can make the actions change slightly each time.
+      3:
+        text: In this example, our "counter" loop says "count with counter from 50
+          to 90 by 10" and inside it, we have our "draw a square" block. Drag the
+          "counter" block from the "Variables" section into the "length" spot.
+      4:
+        text: This means our artist is going to draw a square that has 50 pixel length
+          sides, then it will add 10 to that and draw a square with 60 pixel length
+          sides. Then it will keep adding 10 and drawing squares until it reaches
+          90. So we'll have squares of 50, 60, 70, 80, and 90.
+    loop_times:
+      1:
+        text: Hi, I'm Mark! Let's learn about loops. Using loops you can tell a computer
+          to repeat any set of actions over and over, thousands or even billions of
+          times.
+      2:
+        text: In this puzzle, we want to make the bird move forward 5 spaces to get
+          to the pig.
+      3:
+        text: We can use the new "repeat" block to help us out.
+      4:
+        text: Instead of dragging out 5 "move forward" blocks...
+      5:
+        text: We can put the "move forward" block inside the "repeat" block and write
+          a number in the block to tell it how many times to repeat.
+      6:
+        text: 'And this is important: you can put more than one command inside a "repeat"
+          block.'
+      7:
+        text: Enjoy using your new "repeat" block!
+    loop_until:
+      1:
+        text: Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech
+          to study Computer Science. Let's try our new block, the "repeat until" block.
+      2:
+        text: What if we didn't know how far the bird had to move to get to the pig?
+      3:
+        text: If we put a "move forward" block inside the "repeat until" block, the
+          bird will move forward UNTIL it reaches the pig (or crashes into a wall).
+      4:
+        text: 'And this is important: just like before, we can put multiple blocks
+          inside the "repeat until" block, and they will all be repeated.'
+    loop_while:
+      1:
+        text: 'Hi, I''m Makinde! Let''s learn about the "while block." '
+      2:
+        text: The "while block" will do whatever you put inside it AS LONG AS the
+          statement on the top is TRUE.
+      3:
+        text: For example, if the farmer is standing on a pile, she will continue
+          to remove 1 shovelful WHILE there is still a pile beneath her.
+    maze_intro:
+      1:
+        text: Welcome to your first hour of code! Let's dive right into your first
+          taste of programming.
+      2:
+        text: We'll be using Blockly, a visual programming language where you drag
+          and drop blocks to write code.
+      3:
+        text: Most code is typed, but Blockly is visual. Each blocks corresponds to
+          a line of "real" code.
+      4:
+        text: You'll learn the foundations of computer science, concepts which are
+          used anywhere from making apps to controlling the Mars rover.
+      5:
+        text: A program is a set of instructions for your computer to follow.
+      6:
+        text: The goal of your first program is to get an Angry Bird through a maze
+          to hit a Green Pig.
+      7:
+        text: The left side is the maze where your program is run. The instructions
+          for each puzzle are below the maze.
+      8:
+        text: The middle toolbox has the commands for the Angry Bird. You'll use these
+          to build your code.
+      9:
+        text: On the right is your workspace where you'll drag blocks from the toolbox
+          to build your program. To delete a block, drag it to the trash in the corner.
+      10:
+        text: Each block is one instruction. If you drag a "move forward" block to
+          your workspace and press "Run Program", the bird moves one space on the
+          maze.
+      11:
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
+      12:
+        text: If you run a program and want to fix it and try again, press the "Reset"
+          button.
+      13:
+        text: Let's go get those pigs!
+    mc_2016_congrats:
+      1:
+        text: Congratulations! You've learned to use computer science commands to
+          bring the Minecraft world to life. You are the developer now. You've unlocked
+          all the commands and all the creatures. You choose what happens.
+      2:
+        text: When you're done making your game, choose share to get a link that you
+          can share with your friends or to play your game on your phone. रमाईलो गर्नुहोस्!
+          I'm looking forward to playing your version of Minecraft.
+    mc_2016_events:
+      1:
+        text: On this next level, you can pick to be either Steve or Alex. Press the
+          arrow buttons on your keyboard to move up, down, left, and right. Now you
+          can move around a level wherever you want. To use a creature, just walk
+          towards it, turn to face it, and press the spacebar.
+      2:
+        text: If you're using a touch screen, swipe up, down, left, and right to move
+          around. Then tap the game to use the item in front of you.
+      3:
+        text: But what happens when you use it? In Minecraft, sheep drop wool when
+          you shear them, cows run away when you hit them, and creepers explode when
+          you get near them. These reactions happen thanks to something called events.
+          Events tell your program to listen or wait for when something happens. And
+          when it does, perform an action.
+      4:
+        text: So far, you've used one event. Code you put in the "when spawned" slot
+          runs when your creature is created or when the game starts. Over the next
+          few levels you'll have new slots for events such as "when touched" that
+          runs when you touch the creature, or "when used" for when you use the creature.
+          Or, if you want your zombie to disappear when the sun comes up, put that
+          in the "when day" slot
+    mc_2016_intro:
+      1:
+        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
+          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
+          but the world has stopped. The sheep aren't moving, the chickens aren't
+          laying eggs, and zombies are just standing still. It's up to you to add
+          the code to make the Minecraft world work.
+      2:
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: how people think and behave.'
+      3:
+        text: You'll see your screen is split into three main parts. 1) On the left
+          is the Minecraft game. Right now the world is frozen but we're going to
+          fix that with code.
+      4:
+        text: 2) This middle area is the toolbox. Each of these blocks is a command
+          that chickens, sheep, and other Minecraft creatures can understand.
+      5:
+        text: 3) The space on the right is called the workspace and this is where
+          we'll build our program.
+      6:
+        text: If you forget what to do, the instructions for each level are at the
+          top.
+      7:
+        text: To start off, we're going to program a chicken. Let's drag the "move
+          forward" command to the workspace. When I hit "Run" the chicken moves forward
+          one step. To go further, I'll drag another "move forward" block underneath
+          the first "move forward" block until the highlight appears. Then I'll drop
+          it and the two blocks snap together. If I hit "Run" again, the chicken walks
+          two steps.
+      8:
+        text: If you ever want to delete a block, just remove it from the stack and
+          drag it back to the toolbox.
+      9:
+        text: After you've hit "Run" you can always hit the "Reset" button to reset
+          the game and start over. Now, it's your turn to make your very own version
+          of Minecraft. रमाईलो गर्नुहोस्!
+    mc_2016_loops:
+      1:
+        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
+          of the animals and enemies in the game. One of the animals that I worked
+          on is the ocelot. I worked on the part where you can feed an ocelot a fish
+          to tame it into your own cat.
+      2:
+        text: As humans, we get really bored if we have to do the same thing over
+          and over and over again. But the cool thing about computers is that they
+          can do the same thing millions or even billions of times in a row without
+          getting bored. This repetition is called a loop and every creature in Minecraft
+          uses loops.
+      3:
+        text: Earlier, we got a chicken to move across the screen but then she stopped.
+          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
+          do" loop from our toolbox to keep our chickens moving around forever too.
+          The power of loops will save you tons of time and open up all kinds of neat
+          options as you build your own version of Minecraft.
+    mc_2016_spawn:
+      1:
+        text: In games, spawn means the same thing as create. In this level, let's
+          make zombies spawn when the sun goes down. To do this, we'll use the "when
+          night" block.
+      2:
+        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
+          block under the "when night" block. As soon as they're spawned, each zombie
+          will run the code that you put in their "when spawned" event slot. Have
+          fun spawning zombies!
+    mc_2017_agent_intro:
+      11:
+        text: If you forget what to do, the instructions for each level are at the
+          top.
+    mc_congrats_no_share:
+      1:
+        text: Congratulations! You just learned the basic building blocks of computer
+          science.
+      2:
+        text: Now you can use these blocks to build your own creation. There are no
+          more instructions and no puzzles to solve. You can build anything you want.
+          You get to choose.
+      3:
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
+      4:
+        text: Now you can build whatever you want. रमाईलो गर्नुहोस्!
+    mc_congrats_share:
+      1:
+        text: Congratulations! You just learned the basic building blocks of computer
+          science.
+      2:
+        text: Now you can use these blocks to build your own creation. There are no
+          more instructions and no puzzles to solve. You can build anything you want.
+          You get to choose.
+      3:
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
+      4:
+        text: When you're done making your creation, choose share to get a link to
+          share with your friends. रमाईलो गर्नुहोस्!
+    mc_if_statements:
+      1:
+        text: Now we're going to learn about if statements. If statements are a fundamental
+          part of learning to program. They help a computer make decisions.
+      2:
+        text: All computers use if statements, including my phone. For example, when
+          I unlock my phone, it runs some code that says if I enter the password correctly,
+          then unlock the phone. Otherwise, it shows an error message.
+      3:
+        text: You can use if statements in your code to make Steve and Alice react
+          to what they see in the world. For example, if there is a rock in front
+          of them, they can turn left. Or turn right if they run into a tree.
+      4:
+        text: In this case, we don't want to fall in the lava. It's easy to plan for
+          the lava. We can see it on the screen. But what about the lava that we can't
+          under the stone?
+      5:
+        text: After we mine the stone, we'll need to check if there's any lava in
+          that place before moving forward. If there is lava there, we want to place
+          a stone in front of our character before we can move forward. That way we
+          can safely move on. Time for more mining! And remember to use the if statement
+          to watch your step.
+    mc_intro:
+      1:
+        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
+          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
+          or maybe twelve and I started programming because I wanted to make games.
+          One of my father's friends told me that in order to make games, you need
+          to learn how to program. That's how I got started. I like designing and
+          figuring out the architecture of games. That's what I really like about
+          Minecraft.
+      2:
+        text: Over the next hour, you're going to learn the basics of computer science
+          by programming Alex or Steve to move through a simulated piece of a Minecraft
+          world.
+      3:
+        text: Traditional programming is usually in text but today we'll use Blockly,
+          a system which uses visual blocks that you can drag and drop to write programs.
+          Under the hood, you're creating Javascript code.
+      4:
+        text: The concepts you'll be learning are what computer programmers use every
+          day and are the foundation to computer science. Here at Mojang, we use these
+          same concepts to make Minecraft work.
+      5:
+        text: Before you start, you'll pick your character. I'm going to choose Alex.
+          Let's build code for a program that will help her move around the screen.
+      6:
+        text: Your screen is split into three main parts. On the left is the Minecraft
+          playspace where your program will run. The instructions for each level are
+          written below.
+      7:
+        text: This middle area is the toolbox and each of these blocks is a command
+          that directs Alex's actions.
+      8:
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      9:
+        text: If we drag the moveForward(); block to our workspace and then click
+          run, what happens? Alex moves forward one space on the grid.
+      10:
+        text: And what if we want to do something after she has moved forward one
+          space? We can add another block to our program. I'm going to choose the
+          turnRight(); block and I'll drag it underneath my moveForward(); block until
+          this orange line appears. Then I'll drop it and the two blocks will snap
+          together. When we press run again, Alex will perform the commands that are
+          stacked from top to bottom in our workspace.
+      11:
+        text: If you ever want to delete a block, just drag it from the stack back
+          to the toolbox.
+      12:
+        text: 'To undo your changes and get back to how the level started, use the
+          Start Over button in the top right corner of the workspace. One more thing:
+          you see the little triangle on the turn blocks? Anytime you see these triangles,
+          it means that you can pick a different option. Let''s start coding!'
+    mc_repeat:
+      1:
+        text: I'm Lydia Winters, Mojang's brand director and we made a little game
+          called Minecraft.
+      2:
+        text: My favorite thing to do in Minecraft is explore. I love adventuring
+          in caves and seeing what I can find. As someone who isn't a programmer,
+          I'm really excited to go through the Minecraft lesson and actually learn
+          some coding myself.
+      3:
+        text: The last level needed lots of moveForward(); blocks. It would be easier
+          if we could just tell the computer to perform the moveForward(); command
+          four or five times. Luckily for us, computers are really good at repeating
+          commands with repeat loops.
+      4:
+        text: When building Minecraft, we use repeat loops to place all the initial
+          materials for creating a new world. That's thousands and thousands of blocks.
+          We also use loops in little ways, for example to make Alex's feet move back
+          and forth as she walks. Repeat loops are a powerful part of programming.
+      5:
+        text: Night is coming so in the next couple of levels, we're going to build
+          a house to stay safe. We're going to use the repeat block to do this very
+          easily.
+      6:
+        text: To build a wall of our house, we can either tell Alex to moveForward();
+          and place planks four times or we can tell her to moveForward(); and place
+          one plank, then take this command and use the repeat block to have her perform
+          the action multiple times. Now we'll click on the repeat block and tell
+          her how many times we want her to perform this action. Now let's build our
+          house before night falls! Have fun.
+    parameters:
+      1:
+        text: Hi, I'm Janete, and I'm an engineer at Zynga.
+      2:
+        text: What if we want to draw a bunch of triangles and have their lengths
+          be different sizes?
+      3:
+        text: We could write all that code out by hand or we can use a function with
+          parameters.
+      4:
+        text: To do this, click the blue star on the "draw a triangle" function definition.
+          Then drag "input name" into the "input" block.
+      5:
+        text: Then if you write "length" in the spot where it says "x" and press "Enter"
+          you'll create a length input for your function.
+      6:
+        text: Then click on the star. Now, you want to click on the variables category
+          and drag the "length" block into the "move forward" block of your function
+          definition. And drag away the old number block.
+      7:
+        text: To use your function with parameters, click on the functions category
+          and drag out your "draw a triangle with length" function.
+      8:
+        text: Now you can use the math block to input different numbers to draw triangles
+          of different sizes.
+    playlab_events:
+      1:
+        text: Now, we're going to learn about something that all game programmers
+          use everyday. They're called events. An event tells your program to listen
+          for when something happens. When that thing happens, it performs an action.
+      2:
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.
+      3:
+        text: Here, we're going to make the space bot greet the earthlings when a
+          player clicks on him. We'll use the "when clicked" block and attach the
+          "say" block to it. When the player clicks on the space bot, everything attached
+          to this "when clicked" event block will be performed. What does your alien
+          say?
+      4:
+        text: There are also "when arrow" blocks. If you link the "move" blocks to
+          these, you can start to move your actors up, down, left, or right. Step
+          by step, your game is getting more interactive.
+    playlab_intro:
+      1:
+        text: We're going to create games using Play Lab. Good games have a story,
+          and every story has actors. We'll learn how to make our actors like witches,
+          alinens, and animals speak, move, and interact with each other. By the end
+          of this tutorial, you can build a game from scratch and share it with your
+          friends.
+      2:
+        text: Your screen is split into 3 main parts. On the left is the game space
+          where your program will run. The instructions for each level are written
+          below.
+      3:
+        text: The middle area is the toolbox, and each of these blocks is a piece
+          of code. The white space on the right is called the workspace and this is
+          where we'll build our program.
+      4:
+        text: To start off, you'll need to link your blocks to the orange "when run"
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line, and then they'll snap together.
+      5:
+        text: In this first puzzle, our actor is a penguin and we'll be making it
+          say "Hello!" by dragging the say block out, linking it to the when run block,
+          and typing in "Hello." We can also make the penguin move by using the move
+          right and move left blocks. Once you have your blocks in place, hit the
+          run button to see what you've programmed.
+      6:
+        text: Get started and by the end, you'll be able to create your own game with
+          all kinds of players that can interact, turn happy or sad, score points,
+          or throw fireballs, or even vanish each other. It's all up to you and the
+          game you want to make.
+    playlab_repeat_forever:
+      1:
+        text: This is the "repeat forever" block. Anything inside this block will
+          happen forever in the game.
+      2:
+        text: If we want an actor to do something repeatedly, without the player having
+          to do anything, we'll put those blocks inside the "repeat forever" block.
+      3:
+        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
+          of the kingdom, left and right continuously. Learning how the repeat commands
+          works, will save you a ton of time later when you build your own game.
+    starwars_blocks_congrats:
+      1:
+        text: Hi, my name is Alice and I run the product and engineering teams here
+          at Code.org and I worked on this tutorial that you're playing through right
+          now.
+      2:
+        text: You just made it to the last level. Congratulations! You just learned
+          everything you need to know to make your own Star Wars game. Now there are
+          no more instructions, no puzzles to solve. You can make your own game and
+          you choose how it works. One more thing, you've unlocked new sounds and
+          new commands to do even more.
+      3:
+        text: "[students speaking] So we made a game basically where you get points
+          when you get puffer pigs. The twist is everytime you get a puffer pig a
+          storm trooper appears. Actually the whole screen is full of puffer pigs
+          and then when you touch 10,000 of them, you win."
+      4:
+        text: "[students speaking] We made a game where you can't lose and everything
+          you kill gives you points. For my program, I reversed the keys so that whenever
+          you click up, your character goes down and when you go right, your character
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
+      5:
+        text: When you're done making your game, choose share to get a link you can
+          share with friends or play your game on your phone. रमाईलो गर्नुहोस्!
+    starwars_blocks_events:
+      1:
+        text: Hello, my name is Charita Carter. I'm a senior creative producer here
+          at Walt Disney Imagineering. I'm responsible for leading teams that actually
+          produce the attractions that our guests get to experience. We are always
+          looking for ways that we can improve and make a better experience for our
+          guests and technology is at the heart of that.
+      2:
+        text: Congratulations, you did it! You programmed BB-8. Now I think we're
+          ready for something harder. Let's go for it. Now that you've learned the
+          basics of programming, we're going to back in time to build your own game,
+          starring R2-D2 and C-3PO.
+      3:
+        text: 'To make a game, we need to learn about something that game programmers
+          use every day: they''re called events. Events tell your program to listen
+          or wait for when something happens and then when it does, it performs an
+          action.'
+      4:
+        text: Some examples of events are listening for a mouse click, an arrow button
+          or a tap on the screen.
+      5:
+        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
+          pilot and then move down to the other rebel pilot. We'll use events to make
+          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+      6:
+        text: We use the whenUp() event block and attach the goUp() block to it. When
+          the player presses the up arrow key, the code attached to the whenUp() block
+          is run. And we'll do the same thing to make R2-D2 move down. Now instead
+          of writing all the code to control our droid in advance, we can let R2-D2
+          react to button press events that move him around the screen.
+      7:
+        text: Step by step, your game is getting more interactive.
+    starwars_blocks_intro:
+      1:
+        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
+          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
+          spherical droid. Everything he does and every movement that he makes is
+          controlled by computer software. Computer science impacts every industry,
+          from marketing to health care to film. In fact, hundreds of computer engineers
+          worked together to make a film like The Force Awakens.'
+      2:
+        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
+          animation and creature development team. In The Force Awakens, I'm responsible
+          for helping the artist develop rigs, which are the parts of the character
+          that move that allow the character to look very believable in a galaxy far,
+          far away.
+      3:
+        text: In the next hour, we're going to build our own Star Wars game that will
+          teach you the basic concepts of programming. Usually programming is all
+          text but we're going to use blocks here so we can drag and drop to write
+          the programs. To start off, we're going to work with Rey to program BB-8
+          to walk to collect all of the scrap parts.
+      4:
+        text: Your screen is split into three parts. On the left is the Star Wars
+          game space where code will run. The instructions for each level are written
+          below the game space.
+      5:
+        text: This middle area is the toolbox and each of these blocks is a command
+          that BB-8 can understand.
+      6:
+        text: The white space on the right is called the work space and this is where
+          we're going to build our program.
+      7:
+        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
+          moves left one block on the grid.
+      8:
+        text: And what if I want BB-8 to do something after the moveLeft(); block?
+          I can add another block to our program. I'm going to choose the moveUp();
+          block and I'll drag it under my moveLeft(); block until the highlight appears.
+          Then I'll drop it and the two blocks will snap together. When I press run
+          again, BB-8 will perform the commands that are stacked top to bottom on
+          our workspace.
+      9:
+        text: If you ever want to delete a block, just remove it from the stack and
+          drag it back into the toolbox.
+      10:
+        text: After you hit run, you can always hit the reset button to get BB-8 back
+          to the start. Now let's get rolling!
+    starwars_congrats:
+      1:
+        text: Hi, my name is Alice and I run the product and engineering teams here
+          at Code.org and I worked on this tutorial that you're playing through right
+          now.
+      2:
+        text: You just made it to the last level. Congratulations! You just learned
+          everything you need to know to make your own Star Wars game. Now there are
+          no more instructions, no puzzles to solve. You can make your own game and
+          you choose how it works. One more thing, you've unlocked new sounds and
+          new commands to do even more.
+      3:
+        text: "[students speaking] So we made a game basically where you get points
+          when you get puffer pigs. The twist is everytime you get a puffer pig a
+          storm trooper appears. Actually the whole screen is full of puffer pigs
+          and then when you touch 10,000 of them, you win."
+      4:
+        text: "[students speaking] We made a game where you can't lose and everything
+          you kill gives you points. For my program, I reversed the keys so that whenever
+          you click up, your character goes down and when you go right, your character
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
+      5:
+        text: When you're done making your game, choose share to get a link you can
+          share with friends or play your game on your phone. रमाईलो गर्नुहोस्!
+    starwars_events:
+      1:
+        text: Hello, my name is Charita Carter. I'm a senior creative producer here
+          at Walt Disney Imagineering. I'm responsible for leading teams that actually
+          produce the attractions that our guests get to experience. We are always
+          looking for ways that we can improve and make a better experience for our
+          guests and technology is at the heart of that.
+      2:
+        text: Congratulations, you did it! You programmed BB-8. Now I think we're
+          ready for something harder. Let's go for it. Now that you've learned the
+          basics of programming, we're going to back in time to build your own game,
+          starring R2-D2 and C-3PO.
+      3:
+        text: 'To make a game, we need to learn about something that game programmers
+          use every day: they''re called events. Events tell your program to listen
+          or wait for when something happens and then when it does, it performs an
+          action.'
+      4:
+        text: Some examples of events are listening for a mouse click, an arrow button
+          or a tap on the screen.
+      5:
+        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
+          pilot and then move down to the other rebel pilot. We'll use events to make
+          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+      6:
+        text: We use the whenUp() event block and attach the goUp() block to it. When
+          the player presses the up arrow key, the code attached to the whenUp() block
+          is run. And we'll do the same thing to make R2-D2 move down.
+      7:
+        text: To do this, we'll use a command called whenUp(). When you drag the command
+          out of the toolbox, you'll see that it starts and ends with a curly bracket
+          instead of a semi-colon. This gives us space to put other commands in the
+          middle. Every command that we place inside these brackets will run when
+          the player presses the up arrow.
+      8:
+        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
+          And we'll do the same thing to make R2-D2 go down.
+      9:
+        text: Now instead of writing all the code to control our droid in advance,
+          we can let R2-D2 react to button press events that move him around the screen.
+          Step by step, your game is getting more interactive.
+    starwars_intro:
+      1:
+        text: 'Hi, I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
+          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
+          spherical droid. Everything he does and every movement that he makes is
+          controlled by computer software. Computer science impacts every industry,
+          from marketing to health care to film. In fact, hundreds of computer engineers
+          worked together to make a film like The Force Awakens.'
+      2:
+        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
+          animation and creature development team. In The Force Awakens, I'm responsible
+          for helping the artists develop rigs which are the parts of the character
+          that move that allow the character to look very believable in a galaxy far
+          far away.
+      3:
+        text: In the next hour, we're going to build our own Star Wars game. We'll
+          teach you the basic concepts of programming. Usually programming is all
+          text but we're going to use blocks here so that we can drag and drop to
+          write the programs. Under the hood, you're still creating code. After you
+          try the basics with blocks, we'll switch you to JavaScript, one of the most
+          popular programming languages on the web.
+      4:
+        text: To start off, we're going to work with Rey to program BB-8 to walk to
+          collect all of the scrap parts. Your screen is split into three parts. On
+          the left is the Star Wars game space, where code will run. The instructions
+          for each level are written below the game space.
+      5:
+        text: This middle area is the toolbox and each of these blocks is a command
+          that BB-8 can understand.
+      6:
+        text: The white space on the right is called the workspace and this is where
+          we are going to build our program.
+      7:
+        text: If I drag the moveLeft(); block to our workspace and press run, what
+          happens? BB-8 moves left one block on the grid.
+      8:
+        text: And what if I want BB-8 to do something after the moveLeft(); block?
+          I can add another block to our program. I'm going to choose the moveUp();
+          block and I'll drag it under my moveLeft(); block until the highlight appears.
+          Then I'll drop it and the two blocks will snap together.
+      9:
+        text: When I press run again, BB-8 will perform the commands that are stacked
+          from top to bottom on our workspace. If you ever want to delete a block,
+          just remove it from the stack and drag it back into the tool box.
+      10:
+        text: After you've hit run, you can always hit the reset button to get BB-8
+          back to the start. Now let's get rolling!
+    starwars_typing:
+      1:
+        text: Inside the blocks we've been using are JavaScript commands. JavaScript
+          is the most popular programming language for professional developers today.
+          Blocks are a great way to get started learning to code and in fact, top
+          universities like Harvard and Berkeley start teaching this way. But once
+          we learn the basics, engineers write code by typing because it allows us
+          to go faster.
+      2:
+        text: We can type hundreds of commands without having to find them in the
+          toolbox or drag them out. Because you're learning typing may be slower at
+          first but we wanted you to give it a try.
+      3:
+        text: In the upper right corner on your workspace, you can click the show
+          text button on any puzzle to switch from blocks to typing code as text.
+      4:
+        text: In the next lesson, we'll start you out in typing mode. Here you can
+          still drag the block from the toolbox or you can type the command name.
+          As you start to type, you'll see names of possible commands show below where
+          you're typing. Instead of typing the whole command name, you can select
+          one of these to move faster. In my job, I use this auto-complete feature
+          all the time when writing code.
+      5:
+        text: When you're typing code, the computer needs you to be very precise.
+          You need to spell and capitalize the command name exactly correctly, including
+          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
+          cannot understand the code and won't be able to move.
+      6:
+        text: When you make an error on the line, the editor highlights it for you
+          so that you can try changing your text to fix it.
+      7:
+        text: If you get stuck, you can always start over with the start over button
+          and you can switch back to block mode at any time by clicking in the top-right
+          corner. Ok, let's give typing a try! And if you make mistakes, don't get
+          frustrated. It takes everybody a few tries to get it right.
     tutorial_puzzle_challenge:
       1:
         text: What do you want to be when you grow up Olivia? An astronaut. Do you
@@ -1913,6 +2813,41 @@ ne:
           initials. It's a fun activity and it's very empowering because binary is
           one of those things that feels very technical but once you understand it,
           it's like you speak a secret language.
+    unplug10:
+      1:
+        text: This activity explains in an easy-to-understand way how the internet
+          works. We explain all the terminology you'll need in simple terms so that
+          students can simulate transmitting messages, like an email.
+      2:
+        text: Students will transmit messages while pretending to be one of three
+          transmission methods. Wireless internet, DSL or fiber optic. The students
+          who represent wi-fi will have to wear the message they're transmitting on
+          their head because wifi is the most likely to drop some information.
+      3:
+        text: The students pretending to be DSL or cable will carry the message on
+          the back of their hand, where they're slightly less likely to drop information.
+          And the students representing fiber optic will get to carry them with both
+          hands. This activity is a great way to understand something that many of
+          us use every day.
+    unplug11:
+      1:
+        text: So now it's time to step back and take a birds eye view of everything
+          you've done in these past nineteen lessons. This is a great time to call
+          out to students that what they've just done is a huge achievement. They've
+          learned more over these lessons than most adults know about computer science.
+      2:
+        text: Discuss as a class or in small groups about their favorite lessons.
+          Once you take a look back at everything you've learned, this is where your
+          students' creativity can shine. Split them into groups and have them create
+          an unplugged lesson of their own. Assign each group a key concept, like
+          functions or algorithms and have lots of craft materials on hand for them
+          to use. Have each group present their new unplugged activity or even set
+          aside another day to do a few of the student created activities.
+      3:
+        text: From everyone here at Code.org, we hope you've had a TON of fun during
+          this course. And whether your dream is to create the best new app, use programming
+          to help cure diseases, or you just want to be a stellar problem-solver,
+          this course was the first step in achieving those dreams.
     unplug2:
       1:
         text: The lesson on computational thinking is intended to teach you how to
@@ -2039,938 +2974,3 @@ ne:
           proofread your own work, and needing to check the work of the people done
           before you. You'll quickly understand how important it is that you be careful
           in your coding when a whole team is depending on you.
-    unplug10:
-      1:
-        text: This activity explains in an easy-to-understand way how the internet
-          works. We explain all the terminology you'll need in simple terms so that
-          students can simulate transmitting messages, like an email.
-      2:
-        text: Students will transmit messages while pretending to be one of three
-          transmission methods. Wireless internet, DSL or fiber optic. The students
-          who represent wi-fi will have to wear the message they're transmitting on
-          their head because wifi is the most likely to drop some information.
-      3:
-        text: The students pretending to be DSL or cable will carry the message on
-          the back of their hand, where they're slightly less likely to drop information.
-          And the students representing fiber optic will get to carry them with both
-          hands. This activity is a great way to understand something that many of
-          us use every day.
-    unplug11:
-      1:
-        text: So now it's time to step back and take a birds eye view of everything
-          you've done in these past nineteen lessons. This is a great time to call
-          out to students that what they've just done is a huge achievement. They've
-          learned more over these lessons than most adults know about computer science.
-      2:
-        text: Discuss as a class or in small groups about their favorite lessons.
-          Once you take a look back at everything you've learned, this is where your
-          students' creativity can shine. Split them into groups and have them create
-          an unplugged lesson of their own. Assign each group a key concept, like
-          functions or algorithms and have lots of craft materials on hand for them
-          to use. Have each group present their new unplugged activity or even set
-          aside another day to do a few of the student created activities.
-      3:
-        text: From everyone here at Code.org, we hope you've had a TON of fun during
-          this course. And whether your dream is to create the best new app, use programming
-          to help cure diseases, or you just want to be a stellar problem-solver,
-          this course was the first step in achieving those dreams.
-    starwars_intro:
-      1:
-        text: 'Hi, I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
-      2:
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
-      3:
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
-      4:
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
-      5:
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
-      6:
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
-      7:
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
-      8:
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
-      9:
-        text: When I press run again, BB-8 will perform the commands that are stacked
-          from top to bottom on our workspace. If you ever want to delete a block,
-          just remove it from the stack and drag it back into the tool box.
-      10:
-        text: After you've hit run, you can always hit the reset button to get BB-8
-          back to the start. Now let's get rolling!
-    starwars_typing:
-      1:
-        text: Inside the blocks we've been using are JavaScript commands. JavaScript
-          is the most popular programming language for professional developers today.
-          Blocks are a great way to get started learning to code and in fact, top
-          universities like Harvard and Berkeley start teaching this way. But once
-          we learn the basics, engineers write code by typing because it allows us
-          to go faster.
-      2:
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
-      3:
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
-      4:
-        text: In the next lesson, we'll start you out in typing mode. Here you can
-          still drag the block from the toolbox or you can type the command name.
-          As you start to type, you'll see names of possible commands show below where
-          you're typing. Instead of typing the whole command name, you can select
-          one of these to move faster. In my job, I use this auto-complete feature
-          all the time when writing code.
-      5:
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
-      6:
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
-      7:
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
-    starwars_events:
-      1:
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
-      2:
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C-3PO.
-      3:
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
-      4:
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
-      5:
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
-      6:
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
-      7:
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
-      8:
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
-      9:
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
-    starwars_congrats:
-      1:
-        text: Hi, my name is Alice and I run the product and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
-      2:
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
-      3:
-        text: "[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win."
-      4:
-        text: "[students speaking] We made a game where you can't lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It's really hard! Sometimes you just get an advantage, an unfair
-          advantage if you're the developer of the game. Did I get it? Yay!"
-      5:
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. रमाईलो गर्नुहोस्!
-    starwars_blocks_intro:
-      1:
-        text: 'Hi I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
-          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.'
-      2:
-        text: Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artist develop rigs, which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far,
-          far away.
-      3:
-        text: In the next hour, we're going to build our own Star Wars game that will
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so we can drag and drop to write
-          the programs. To start off, we're going to work with Rey to program BB-8
-          to walk to collect all of the scrap parts.
-      4:
-        text: Your screen is split into three parts. On the left is the Star Wars
-          game space where code will run. The instructions for each level are written
-          below the game space.
-      5:
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
-      6:
-        text: The white space on the right is called the work space and this is where
-          we're going to build our program.
-      7:
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8
-          moves left one block on the grid.
-      8:
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together. When I press run
-          again, BB-8 will perform the commands that are stacked top to bottom on
-          our workspace.
-      9:
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back into the toolbox.
-      10:
-        text: After you hit run, you can always hit the reset button to get BB-8 back
-          to the start. Now let's get rolling!
-    starwars_blocks_events:
-      1:
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
-      2:
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C-3PO.
-      3:
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
-      4:
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
-      5:
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
-      6:
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
-      7:
-        text: Step by step, your game is getting more interactive.
-    starwars_blocks_congrats:
-      1:
-        text: Hi, my name is Alice and I run the product and engineering teams here
-          at Code.org and I worked on this tutorial that you're playing through right
-          now.
-      2:
-        text: You just made it to the last level. Congratulations! You just learned
-          everything you need to know to make your own Star Wars game. Now there are
-          no more instructions, no puzzles to solve. You can make your own game and
-          you choose how it works. One more thing, you've unlocked new sounds and
-          new commands to do even more.
-      3:
-        text: "[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win."
-      4:
-        text: "[students speaking] We made a game where you can't lose and everything
-          you kill gives you points. For my program, I reversed the keys so that whenever
-          you click up, your character goes down and when you go right, your character
-          goes left. It's really hard! Sometimes you just get an advantage, an unfair
-          advantage if you're the developer of the game. Did I get it? Yay!"
-      5:
-        text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. रमाईलो गर्नुहोस्!
-    mc_intro:
-      1:
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
-      2:
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
-      3:
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
-      4:
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
-      5:
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
-      6:
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
-      7:
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
-      8:
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
-      9:
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
-      10:
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
-      11:
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
-      12:
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
-    mc_repeat:
-      1:
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
-      2:
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
-      3:
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
-      4:
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
-      5:
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
-      6:
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
-    mc_if_statements:
-      1:
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
-      2:
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
-      3:
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
-      4:
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
-      5:
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
-    mc_congrats_share:
-      1:
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
-      2:
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
-      3:
-        text: "[students talking] It's about to get real. Shear. I made an L out of
-          torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!"
-      4:
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. रमाईलो गर्नुहोस्!
-    mc_congrats_no_share:
-      1:
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
-      2:
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
-      3:
-        text: "[students talking] It's about to get real. Shear. I made an L out of
-          torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!"
-      4:
-        text: Now you can build whatever you want. रमाईलो गर्नुहोस्!
-    gumball_intro:
-      1:
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
-      2:
-        text: Do you have a favorite video game? We're going to take one step toward
-          creating games just like that in PlayLab. Good games have a story and every
-          story has actors. Actors that do things like speak, move and interact with
-          each other. Maybe even score points based on the rules of the game. Today,
-          we'll be learning how to do all these things one by one with fun actors
-          and then build a game from scratch that can be shared and played on a phone.
-      3:
-        text: Today, we'll be learning how to do all these things one by one with
-          fun actors and then build a game from scratch that can be shared and played
-          on a phone.
-      4:
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
-      5:
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
-      6:
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
-      7:
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
-      8:
-        text: In this first puzzle, we'll make the actors say something by linking
-          the "say" block to the when run block and typing in your message. Once you
-          have your blocks in place, hit the run button to see what you programmed.
-      9:
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
-    gumball_events:
-      1:
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
-      2:
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
-      3:
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
-      4:
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
-    gumball_repeat:
-      1:
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
-      2:
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
-      3:
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
-    iceage_intro:
-      1:
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
-      2:
-        text: Do you have a favorite video game? We're going to take one step toward
-          creating games just like that in PlayLab. Good games have a story and every
-          story has actors. Actors that do things like speak, move and interact with
-          each other. Maybe even score points based on the rules of the game. Today,
-          we'll be learning how to do all these things one by one with fun actors
-          and then build a game from scratch that can be shared and played on a phone.
-      3:
-        text: Today, we'll be learning how to do all these things one by one with
-          fun actors and then build a game from scratch that can be shared and played
-          on a phone.
-      4:
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
-      5:
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
-      6:
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
-      7:
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
-      8:
-        text: In this first puzzle, we'll make the actors say something by linking
-          the "say" block to the when run block and typing in your message. Once you
-          have your blocks in place, hit the run button to see what you programmed.
-      9:
-        text: Get started and by the end you'll be able to create your own game with
-          all kinds of players that can interact, score points, throw things, and
-          vanish each other. It's all up to you!
-    iceage_events:
-      1:
-        text: Now we're going to learn about something all game programmers use everyday.
-          They're called events. An event tells your program to listen for when something
-          happens and then when it does, the game performs an action.
-      2:
-        text: Some examples of events are listening for a mouse click or an up or
-          down arrow key or even a tap on the screen.
-      3:
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
-      4:
-        text: There are also when arrow blocks. If you link move blocks to those,
-          you can start to move your actors up, down, left, right, with the arrow
-          keys. Little by little your game is getting more interactive.
-    iceage_repeat:
-      1:
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
-      2:
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
-      3:
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
-    mc_2016_intro:
-      1:
-        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
-          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
-          but the world has stopped. The sheep aren't moving, the chickens aren't
-          laying eggs, and zombies are just standing still. It's up to you to add
-          the code to make the Minecraft world work.
-      2:
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
-          really interested in is how people think and interact with technology and
-          so this job is the perfect job for me to put together the computer engineering
-          with the psychology: how people think and behave.'
-      3:
-        text: You'll see your screen is split into three main parts. 1) On the left
-          is the Minecraft game. Right now the world is frozen but we're going to
-          fix that with code.
-      4:
-        text: 2) This middle area is the toolbox. Each of these blocks is a command
-          that chickens, sheep, and other Minecraft creatures can understand.
-      5:
-        text: 3) The space on the right is called the workspace and this is where
-          we'll build our program.
-      6:
-        text: If you forget what to do, the instructions for each level are at the
-          top.
-      7:
-        text: To start off, we're going to program a chicken. Let's drag the "move
-          forward" command to the workspace. When I hit "Run" the chicken moves forward
-          one step. To go further, I'll drag another "move forward" block underneath
-          the first "move forward" block until the highlight appears. Then I'll drop
-          it and the two blocks snap together. If I hit "Run" again, the chicken walks
-          two steps.
-      8:
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back to the toolbox.
-      9:
-        text: After you've hit "Run" you can always hit the "Reset" button to reset
-          the game and start over. Now, it's your turn to make your very own version
-          of Minecraft. रमाईलो गर्नुहोस्!
-    mc_2016_loops:
-      1:
-        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
-          of the animals and enemies in the game. One of the animals that I worked
-          on is the ocelot. I worked on the part where you can feed an ocelot a fish
-          to tame it into your own cat.
-      2:
-        text: As humans, we get really bored if we have to do the same thing over
-          and over and over again. But the cool thing about computers is that they
-          can do the same thing millions or even billions of times in a row without
-          getting bored. This repetition is called a loop and every creature in Minecraft
-          uses loops.
-      3:
-        text: Earlier, we got a chicken to move across the screen but then she stopped.
-          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
-          do" loop from our toolbox to keep our chickens moving around forever too.
-          The power of loops will save you tons of time and open up all kinds of neat
-          options as you build your own version of Minecraft.
-    mc_2016_events:
-      1:
-        text: On this next level, you can pick to be either Steve or Alex. Press the
-          arrow buttons on your keyboard to move up, down, left, and right. Now you
-          can move around a level wherever you want. To use a creature, just walk
-          towards it, turn to face it, and press the spacebar.
-      2:
-        text: If you're using a touch screen, swipe up, down, left, and right to move
-          around. Then tap the game to use the item in front of you.
-      3:
-        text: But what happens when you use it? In Minecraft, sheep drop wool when
-          you shear them, cows run away when you hit them, and creepers explode when
-          you get near them. These reactions happen thanks to something called events.
-          Events tell your program to listen or wait for when something happens. And
-          when it does, perform an action.
-      4:
-        text: So far, you've used one event. Code you put in the "when spawned" slot
-          runs when your creature is created or when the game starts. Over the next
-          few levels you'll have new slots for events such as "when touched" that
-          runs when you touch the creature, or "when used" for when you use the creature.
-          Or, if you want your zombie to disappear when the sun comes up, put that
-          in the "when day" slot
-    mc_2016_spawn:
-      1:
-        text: In games, spawn means the same thing as create. In this level, let's
-          make zombies spawn when the sun goes down. To do this, we'll use the "when
-          night" block.
-      2:
-        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
-          block under the "when night" block. As soon as they're spawned, each zombie
-          will run the code that you put in their "when spawned" event slot. Have
-          fun spawning zombies!
-    mc_2016_congrats:
-      1:
-        text: Congratulations! You've learned to use computer science commands to
-          bring the Minecraft world to life. You are the developer now. You've unlocked
-          all the commands and all the creatures. You choose what happens.
-      2:
-        text: When you're done making your game, choose share to get a link that you
-          can share with your friends or to play your game on your phone. रमाईलो गर्नुहोस्!
-          I'm looking forward to playing your version of Minecraft.
-    mc_2017_agent_intro:
-      11:
-        text: If you forget what to do, the instructions for each level are at the
-          top.
-    hoc_dance_warmup:
-      1:
-        text: 'Hour of Code | डान्स पार्टी: वार्म अप '
-      2:
-        text: हाई । मेरो नाम Miral Kotb हो र म एक डान्सर, सफ्टवेयर विकासकर्ता र iLuminate
-          को सर्जक हुँ ।
-      3:
-        text: त्यसकारण, कम्प्युटर विज्ञान विभिन्न तरिकामा सिर्जनशीलतासँग सम्बन्धित
-          छ । असीम, साँच्चिकै । मेरो मतलव, एक पटक तपाईसँग सफ्टवेयर लेख्ने क्षमता भएपछि
-          तपाईंले विचारहरु कुनै पनि कुरामा राख्न सक्नुहुन्छ । म यो लाईट सुटसँग गर्छु
-          । सफ्टवेयर लेख्ने उपकरणहरु एकपटक तपाईं धेरै गर्न सक्नुहुन्छ र सम्भावनाहरु
-          साँच्चै अनन्त छन् ।
-      4:
-        text: अर्को एक घण्टामा, तपार्इं आफ्नो डान्स पार्टी प्रोग्रामिङ गरेर कम्प्युटर
-          विज्ञानसँग सुरु गर्न जाँदै हुनुहुन्छ । हामीले तपाईंसँग खेल्नका लागि केही
-          हिट सङ्गीत र महान डान्सरहरुको एउटा टोली एकत्रित गरेका छौं ।
-      5:
-        text: 'तपाईं विभिन्न डान्सरहरु छनोट गर्न कोडको खण्ड प्रयोग गर्नुहुनेछ, तिनीहरुको
-          नेतृत्व चाल परिवर्तन, तिनीहरुलाई संगीत प्रतिक्रिया बनाउन र तिनीहरुलाई अन्तरक्रियात्मक
-          बनाउन ।
-
-'
-      6:
-        text: तपाईंले देख्नुहुनेछ कि तपाईंको पर्दा तीन मुख्य भागमा विभाजन गरिएको छ
-          । वायाँतिर प्ले गर्ने ठाउँ छ । यहाँ तपाईंका डान्सरहरु देखापर्नेछन् ।
-      7:
-        text: यो बीचको क्षेत्र उपकरण बाकस हो । तपाईं पाठहरु मार्फत् जाने क्रममा कोडका
-          नयाँ खण्डहरु यो खाली स्थानमा उपलब्ध हुनेछ ।
-      8:
-        text: दायाँतिरको खाली स्थान कार्यस्थान हो । तपाईंले आफ्नो कार्यक्रम निर्माण
-          गर्न उपकरण बाकस बाहिर र कार्यस्थानमा खण्डहरु तान्न सक्नुहुन्छ ।
-      9:
-        text: प्रत्येक स्तरका लागि निर्देशन यहाँ पर्दाको शीर्षमा हुनेछ । यदि तपाईंलाई
-          संकेत आवश्यक भएमा, प्रकाश बल्ब मात्र क्लिक गर्नुहोस् ।
-      10:
-        text: सुरु गर्न को लागी, रातो खण्डसँग एक नयाँ डान्सर बनाउनुहोस् । पहिलो, यसलाई
-          उपकरण बाकसबाट बाहिर तान्नुहोस् र यो सुन्तला सेटअप खण्ड अन्तर्गत स्न्याप
-          गर्नुहोस् । यो डान्सर बिरालो हो र यसको नाम "my_first_dancer" हो । तपाईंले
-          यहाँ क्लिक गरेर नाम परिवर्तन गर्न सक्नुहुन्छ ।
-      11:
-        text: तपाईले यसमा तपाईंको प्ले स्पेसमा डान्स कहाँ देखापर्छ, परिवर्तन गर्न
-          सक्नुहुन्छ ।
-      12:
-        text: प्ले स्पेस माथि संगीत टिप्नका लागि मेनु छ । छनौट गर्नका लागि धेरै गीतहरु
-          छन्, त्यसैले आफूलाई मनपर्ने गीतहरु फेला पार्न रमाइलो गर्नुहोस् । प्ले स्पेस
-          मुनि चालु वटन छ । जब तपाईंले चालु वटन थिच्नुहुन्छ, तपाईंले आफ्नो कार्यक्रमबाट
-          डान्सरहरु प्ले स्पेसमा देखापर्ने र संगीत बज्ने देख्नुहुनेछ ।
-      13:
-        text: आफैंले प्रयास गर्नुहोस्! अनि यदि तपाईंलाई अड्किएको महसुस भइरहेको छ भने
-          ठीकै छ! बस उठ्नुहोस् र सार्नुहोस्, थाहा पाउनु अघि तपाईंले आफ्नै डान्स पार्टी
-          बनाउनुभएको होला । त्यसोभए, तपाईं के बनाउनु हुन्छ ?
-    hoc_dance_events:
-      1:
-        text: Hour of Code । डान्स पार्टीः इभेन्टस् ।
-      2:
-        text: 'म एलो ब्लाक हु । म गायक, गीतकार र मनोरञ्जनकर्ता हुँ । मेरो विचारमा
-          कम्प्युटर विज्ञान साँच्चै सिक्न महत्वपूर्ण छ किनकि कम्प्युटर विज्ञान भनेको
-          भविष्य हो, र मलाई लाग्छ मानिसहरुको जीवनलाई शाब्दिक रुपमा नियन्त्रण गर्ने
-          प्रविधिको नियन्त्रणमा हुनु महत्वपूर्ण छ ।
-
-'
-      3:
-        text: 'संगीतद्धारा ठीक समयमा फरक फरक डान्स चालहरु बनाउन तपाईं घटना भनिने केही
-          कुरा प्रयोग गर्न सक्नुहुन्छ । एउटा घटनाले तपाईंको कार्यक्रमलाई केही कुरा
-          सुन्न र तुरुन्तै प्रतिक्रिया देखाउन भन्छ ।
-
-'
-      4:
-        text: घटनाका केही उदाहरणहरु सुन्नका लागि माउस क्लिक, वाण वटन, वा स्क्रिनमा
-          थिच्ने आदि  छन् । अहिले हामीले प्रयोग गर्न लागेको घटनाले गीतमा भएको परिवर्तन
-          सुन्नेछ । यो परिवर्तनले तपाईंको डान्सरलाई नयाँ नृत्य गर्न उत्प्रेरित गर्नेछ
-          ।
-      5:
-        text: पेशेवर डान्सरहरु  आफ्नो कोरियोग्राफी अभ्यास गर्छन्  गीतको धडकन गनेर।
-      6:
-        text: संगीतमा एउटा नापले कुनै निश्चित संख्यामा धडकनलाई जनाउँछ । प्रायःजसो
-          लोकप्रिय गीतहरुमा एक नाप चार धड्कन लामो हुन्छ ।
-      7:
-        text: तपाईंको डान्सरहरुलाई हराउन, तपाईंलाई हरियो घटना–खण्ड आवश्यक हुनेछ ।
-          यो घटना ब्लक भन्छ, ४ वटा मापन पछि ।
-      8:
-        text: यदि तपाईंले बैजनी "do forever" ब्लक बाहिर तान्नुभयो भने, तपाईंले आफ्नो
-          डान्सरका लागि डान्स छान्न सक्नुहुन्छ किनभने यो "after 4 measures" घटना ब्लक
-          अन्तर्गत छ, तपाईंको डान्सरले आफ्नो डान्स सुरु गर्नु अघि गीतको ४ मापन प्रतीक्षा
-          गर्नेछ ।
-      9:
-        text: 'प्रदर्शन क्षेत्रको माथिको मापन काउन्टरमा नजर राख्नुहोस् ।
-
-'
-      10:
-        text: डान्स कोड ट्रिगर गर्ने घटना हेर्नुहोस् र सुन्नुहोस् । अनि ठीक संकेतमा,
-          हाम्रो डान्सर जान थाल्छ ।
-    hoc_dance_properties:
-      1:
-        text: Hour of Code | डान्स पार्टीः गुणहरु
-      2:
-        text: मेरो नाम मारिया, म वासिङ्टन विश्वविद्यालयमा एक जूनियर छु र म एक अमेजन
-          भविष्य इन्जिनियर हुँ ।
-      3:
-        text: 'मलाई कम्प्युटर विज्ञान मनपर्छ किनभने यसमा समस्या समाधान गर्ने र आलोचनात्मक
-          सोचाई समावेश छ अनि घण्टौं काम गरिसकेपछि तपाईंले यसबाट इनामदायी कुरा पाउन
-          सक्नुहुन्छ ।
-
-'
-      4:
-        text: अहिलेसम्म, तपाईंले केही विभिन्न प्रकारका डान्सरहरुसँग खेल्ने मौका पाउनुभएको
-          छ र तपाईंले तिनीहरुलाई विभिन्न प्रकारका नृत्य चालहरु गर्न प्रोग्राम गर्नुभएको
-          छ । तर यी चालहरुले वास्तवमा कसरी काम गर्छ ?
-      5:
-        text: हरेक नृत्य चाल फ्रेम भनिने छविहरुको श्रृंखलाबाट बनेको हुन्छ । प्रत्येक
-          फ्रेम पहिलेको फ्रेमभन्दा अलिक फरक हुन्छ । तपाईंको प्रोग्राम चलाइसकेपछि कम्प्युटरले
-          एकपछि अर्को फ्रेम देखाउँदछ । तिनीहरुलाई यति छिटो देखाइन्छ कि डान्स चलिरहेको
-          जस्तो देखिन्छ । सबै एनिमेसनको रहस्य यही हो ।
-      6:
-        text: 'तपाईं आफ्नो डान्सरको चाल मात्र परिवर्तन गर्न सक्नुहुन्न, डान्सरको गुण
-          पनि परिवर्तन गर्न सक्नुहुन्छ । गुणहरुले पर्दामा डान्सरको स्थान, डान्सरको
-          आकार र डान्सरको रङजस्ता कुराहरुको वर्णन गर्छ ।
-
-'
-      7:
-        text: 'डान्सरको गुण परिवर्तन गर्न तपाईंले सेट खण्ड प्रयोग गर्नुहुनेछ । हाम्रा
-          डान्सरहरुलाई सानो देखाउन सेट खण्ड प्रयोग गरौं । पहिला, तपाईंको कार्यक्रममा
-          सेट खण्ड तान्नुहोस् । त्यसपछि, तपाईंले परिवर्तन गर्न चाहेको डान्स चयन गर्नुहोस्
-          र पर्दामा देखिने साइज टाइप गर्नुहोस् ।
-
-'
-      8:
-        text: "पूरा आकार १०० हो । यदि तपाईंले कम नम्बर रोज्नुभयो भने, त्यो डान्सर
-          सानो हुनेछ, नाच्नेहरु त्यति नै सानो देखिन्छन् । \nब्याकअप डान्सरहरु बनाउने
-          यो एउटा राम्रो तरिका हो ।\n"
-      9:
-        text: 'सेट खण्डको प्रयोग गरेर, तपाईं पनि डान्सरको आयाम, परिक्रमा, स्थिति र
-          रंग परिवर्तन गर्न सक्नुहुन्छ । यी गुणहरुसँग वरिपरि खेलेर तपाईंले सबै प्रकारका
-          परिवर्तन गर्न सक्नुहुन्छ र तिनीहरुलाई गीतको विभिन्न भागमा लिङ्क गर्न सक्नुहुन्छ
-          ।
-
-'
-      10:
-        text: 'सम्झनुहोस्, तपाईंले पहिले नै अवस्थित डान्सरको गुण मात्र सेट गर्न सक्नुहुन्छ
-          ।"Make a new dancer" खण्डपछि तपाईंको सेट खण्ड आएको निश्चित गर्नुहोस् । सिर्जनात्मक
-          हुन प्रयास गर्न नहिचकिचाउनुहोस् र रमाइलो गर्नुहोस् ।
-
-'
-    hoc_dance_congrats:
-      1:
-        text: Hour of Code | डान्स पार्टीः पार्टी चलिरहेको!
-      2:
-        text: 'बधाई छ! तपाईंले भर्खरै मात्र कम्प्युटर विज्ञानका आधारभूत कुराहरु सिक्नुभएको
-          छ । अब तपाईं आफ्नो साथीहरुसँग साझेदारी गर्न आफ्नै डिजाइनको नृत्य पार्टी
-          सिर्जना गर्न यी ब्लकहरु प्रयोग गर्न सक्नुहुन्छ '
-      3:
-        text: यदि तपाईंले उपकरण बाकसमा हेर्नुभयो भने, तपाईंले पहिले कहिल्यै नदेखेका
-          केही नयाँ ब्लकहरु फेला पार्नुहुनेछ । उदाहरणका लागि, तपाईं पर्दामा डान्सरहरुलाई
-          विभिन्न तरिकामा मिलाउन सजावट खण्ड प्रयोग गर्न सक्नुहुन्छ ।
-      4:
-        text: वरिपरि हेर्नुहोस् र यी नयाँ खण्ड र विशेषताहरु प्रयोग गर्न प्रयास गर्नुहोस्
-          । के तपाईं आफूलाई मनपर्ने गीतमा होसियारीसाथ कोरियोग्राफ गरिएको नाच सिर्जना
-          गर्नुहुनेछ ?
-      5:
-        text: अथवा साथीहरुसँग नाच्ने ?
-      6:
-        text: अथवा अरु कुनै कुराहरु ?
-      7:
-        text: ट्यूटोरियलको अन्तमा तपाईं आफ्नो सिर्जनाको लिंक आफ्नो साथीहरुसँग साझेदारी
-          गर्न सक्नुहुन्छ । आफ्नो कल्पनालाई तिखार्नुहोस् र रमाइलो गर्नुहोस् ।
-    hoc_dance_warmup_2019:
-      1:
-        text: 'Hour of Code | डान्स पार्टी: वार्म अप '
-      2:
-        text: हाई । मेरो नाम Miral Kotb हो र म एक डान्सर, सफ्टवेयर विकासकर्ता र iLuminate
-          को सर्जक हुँ ।
-      3:
-        text: कम्प्युटर विज्ञान विभिन्न तरिकामा सिर्जनशीलतासँग सम्बन्धित छ । अपार,
-          साँच्चिकै । मेरो मतलब, एकपटक तपाईंसँग सफ्टवेयर लेख्ने क्षमता भएपछि तपाईंले
-          विचारहरु कुनै पनि कुरामा राख्न सक्नुहुन्छ । म लाईट सूटसँग गर्छु । सफ्टवेयर
-          लेख्ने उपकरणहरु एकपटक तपाईं धेरै गर्न सक्नुहुन्छ, र यसका सम्भावनाहरु साँच्चै
-          अनन्त छन् ।
-      4:
-        text: अर्को एक घण्टामा, तपार्इं आफ्नो डान्स पार्टी प्रोग्रामिङ गरेर कम्प्युटर
-          विज्ञानसँग सुरु गर्न जाँदै हुनुहुन्छ । हामीले तपाईंसँग खेल्नका लागि केही
-          हिट सङ्गीत र महान डान्सरहरुको एउटा टोली एकत्रित गरेका छौं ।
-      5:
-        text: 'तपाईं विभिन्न डान्सरहरु छनोट गर्न कोडको खण्ड प्रयोग गर्नुहुनेछ, तिनीहरुको
-          नेतृत्व चाल परिवर्तन, तिनीहरुलाई संगीत प्रतिक्रिया बनाउन र तिनीहरुलाई अन्तरक्रियात्मक
-          बनाउन ।
-
-'
-      6:
-        text: तपाईंले देख्नुहुनेछ कि तपाईंको पर्दा तीन मुख्य भागमा विभाजन गरिएको छ
-          । वायाँतिर प्ले गर्ने ठाउँ छ । यहाँ तपाईंका डान्सरहरु देखापर्नेछन् ।
-      8:
-        text: दायाँतिरको खाली स्थान कार्यस्थान हो । तपाईंले आफ्नो कार्यक्रम निर्माण
-          गर्न उपकरण बाकस बाहिर र कार्यस्थानमा खण्डहरु तान्न सक्नुहुन्छ ।
-      9:
-        text: प्रत्येक स्तरका लागि निर्देशन यहाँ पर्दाको शीर्षमा हुनेछ । यदि तपाईंलाई
-          संकेत आवश्यक भएमा, प्रकाश बल्ब मात्र क्लिक गर्नुहोस् ।
-      11:
-        text: तपाईले यसमा तपाईंको प्ले स्पेसमा डान्स कहाँ देखापर्छ, परिवर्तन गर्न
-          सक्नुहुन्छ ।
-      12:
-        text: प्ले स्पेस माथि संगीत टिप्नका लागि मेनु छ । छनौट गर्नका लागि धेरै गीतहरु
-          छन्, त्यसैले आफूलाई मनपर्ने गीतहरु फेला पार्न रमाइलो गर्नुहोस् । प्ले स्पेस
-          मुनि चालु वटन छ । जब तपाईंले चालु वटन थिच्नुहुन्छ, तपाईंले आफ्नो कार्यक्रमबाट
-          डान्सरहरु प्ले स्पेसमा देखापर्ने र संगीत बज्ने देख्नुहुनेछ ।
-    hoc_dance_events_2019:
-      1:
-        text: Hour of Code । डान्स पार्टीः इभेन्टस् ।
-      4:
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
-    hoc_dance_measures_2019:
-      2:
-        text: 'म एलो ब्लाक हु । म गायक, गीतकार र मनोरञ्जनकर्ता हुँ । मेरो विचारमा
-          कम्प्युटर विज्ञान साँच्चै सिक्न महत्वपूर्ण छ किनकि कम्प्युटर विज्ञान भनेको
-          भविष्य हो, र मलाई लाग्छ मानिसहरुको जीवनलाई शाब्दिक रुपमा नियन्त्रण गर्ने
-          प्रविधिको नियन्त्रणमा हुनु महत्वपूर्ण छ ।
-
-'
-      5:
-        text: तपाईंको डान्सरहरुलाई हराउन, तपाईंलाई हरियो घटना–खण्ड आवश्यक हुनेछ ।
-          यो घटना ब्लक भन्छ, ४ वटा मापन पछि ।
-      6:
-        text: यदि तपाईंले बैजनी "do forever" ब्लक बाहिर तान्नुभयो भने, तपाईंले आफ्नो
-          डान्सरका लागि डान्स छान्न सक्नुहुन्छ किनभने यो "after 4 measures" घटना ब्लक
-          अन्तर्गत छ, तपाईंको डान्सरले आफ्नो डान्स सुरु गर्नु अघि गीतको ४ मापन प्रतीक्षा
-          गर्नेछ ।
-      7:
-        text: 'प्रदर्शन क्षेत्रको माथिको मापन काउन्टरमा नजर राख्नुहोस् ।
-
-'
-      8:
-        text: डान्स कोड ट्रिगर गर्ने घटना हेर्नुहोस् र सुन्नुहोस् । अनि ठीक संकेतमा,
-          हाम्रो डान्सर जान थाल्छ ।
-    hoc_dance_properties_2019:
-      1:
-        text: Hour of Code | डान्स पार्टीः गुणहरु
-      2:
-        text: मेरो नाम मारिया, म वासिङ्टन विश्वविद्यालयमा एक जूनियर छु र म एक अमेजन
-          भविष्य इन्जिनियर हुँ ।
-      3:
-        text: 'मलाई कम्प्युटर विज्ञान मनपर्छ किनभने यसमा समस्या समाधान गर्ने र आलोचनात्मक
-          सोचाई समावेश छ अनि घण्टौं काम गरिसकेपछि तपाईंले यसबाट इनामदायी कुरा पाउन
-          सक्नुहुन्छ ।
-
-'
-      5:
-        text: हरेक नृत्य चाल फ्रेम भनिने छविहरुको श्रृंखलाबाट बनेको हुन्छ । प्रत्येक
-          फ्रेम पहिलेको फ्रेमभन्दा अलिक फरक हुन्छ । तपाईंको प्रोग्राम चलाइसकेपछि कम्प्युटरले
-          एकपछि अर्को फ्रेम देखाउँदछ । तिनीहरुलाई यति छिटो देखाइन्छ कि डान्स चलिरहेको
-          जस्तो देखिन्छ । सबै एनिमेसनको रहस्य यही हो ।
-      6:
-        text: 'तपाईं आफ्नो डान्सरको चाल मात्र परिवर्तन गर्न सक्नुहुन्न, डान्सरको गुण
-          पनि परिवर्तन गर्न सक्नुहुन्छ । गुणहरुले पर्दामा डान्सरको स्थान, डान्सरको
-          आकार र डान्सरको रङजस्ता कुराहरुको वर्णन गर्छ ।
-
-'
-    hoc_dance_congrats_2019:
-      1:
-        text: Hour of Code | डान्स पार्टीः पार्टी चलिरहेको!
-      2:
-        text: 'बधाई छ! तपाईंले भर्खरै मात्र कम्प्युटर विज्ञानका आधारभूत कुराहरु सिक्नुभएको
-          छ । अब तपाईं आफ्नो साथीहरुसँग साझेदारी गर्न आफ्नै डिजाइनको नृत्य पार्टी
-          सिर्जना गर्न यी ब्लकहरु प्रयोग गर्न सक्नुहुन्छ '
-      3:
-        text: यदि तपाईंले उपकरण बाकसमा हेर्नुभयो भने, तपाईंले पहिले कहिल्यै नदेखेका
-          केही नयाँ ब्लकहरु फेला पार्नुहुनेछ । उदाहरणका लागि, तपाईं पर्दामा डान्सरहरुलाई
-          विभिन्न तरिकामा मिलाउन सजावट खण्ड प्रयोग गर्न सक्नुहुन्छ ।
-      4:
-        text: वरिपरि हेर्नुहोस् र यी नयाँ खण्ड र विशेषताहरु प्रयोग गर्न प्रयास गर्नुहोस्
-          । के तपाईं आफूलाई मनपर्ने गीतमा होसियारीसाथ कोरियोग्राफ गरिएको नाच सिर्जना
-          गर्नुहुनेछ ?
-      5:
-        text: अथवा साथीहरुसँग नाच्ने ?
-      6:
-        text: अथवा अरु कुनै कुराहरु ?
-      7:
-        text: ट्यूटोरियलको अन्तमा तपाईं आफ्नो सिर्जनाको लिंक आफ्नो साथीहरुसँग साझेदारी
-          गर्न सक्नुहुन्छ । आफ्नो कल्पनालाई तिखार्नुहोस् र रमाइलो गर्नुहोस् ।

@@ -40,9 +40,9 @@ module Pd
       # Note - these answers are incomplete on their own, and need to be combined with the Question objects
       #        (from get_questions above)
       def get_submissions(last_known_submission_id: nil, min_date: nil, limit: 100, offset: 0)
-        CDO.log.info "Getting JotForm submissions for #{@form_id} "\
-          "last_known_submission_id: #{last_known_submission_id}, min_date: #{min_date},"\
-          " limit: #{limit}, offset: #{offset}"
+        CDO.log.info "Getting JotForm submissions for #{@form_id} " \
+          "last_known_submission_id: #{last_known_submission_id}, min_date: #{min_date}, " \
+          "limit: #{limit}, offset: #{offset}"
 
         response = @client.get_submissions(@form_id,
           last_known_submission_id: last_known_submission_id,
@@ -167,11 +167,12 @@ module Pd
       # For each non-datetime hash, also remove "\\" pairs from each string as
       # well, which are appearing in strings such as "I\\'m a teacher."
       def strip_answer(answer)
-        if answer.is_a? String
+        case answer
+        when String
           answer.strip
-        elsif answer.is_a? Array
+        when Array
           answer.map(&:strip)
-        elsif answer.is_a? Hash
+        when Hash
           if ["month", "day", "year"].all? {|k| answer.key?(k)}
             answer = answer.values_at("month", "day", "year").join("/")
           else

@@ -7,49 +7,49 @@ module.exports = {
   skinId: 'eval',
   levelDefinition: {
     solutionBlocks: blockUtils.mathBlockXml('functional_string', null, {
-      VAL: 'AAAA'
+      VAL: 'AAAA',
     }),
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'Nothing',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      xml: '<xml>' + '</xml>'
+      xml: '<xml>' + '</xml>',
     },
     {
       description: 'correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
         blockUtils.mathBlockXml('functional_string', null, {
-          VAL: 'AAAA'
+          VAL: 'AAAA',
         }) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'wrong case',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, evalMsg.stringMismatchError());
         return true;
       },
       xml:
         '<xml>' +
         blockUtils.mathBlockXml('functional_string', null, {
-          VAL: 'aaaa'
+          VAL: 'aaaa',
         }) +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

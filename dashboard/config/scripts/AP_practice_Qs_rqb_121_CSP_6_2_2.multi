@@ -24,3 +24,5 @@ Learning Objective: **6.2.2** and Essential Knowledge statements: **6.2.2F, 6.2.
  (D) This is incorrect. The Routing tables that are maintained and used for traffic flow are at the Internet Layer, and not at the TCP Layer.
 
 MARKDOWN
+
+allow_multiple_attempts true

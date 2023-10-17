@@ -7,7 +7,7 @@
 export const ColumnType = {
   STRING: 'string',
   NUMBER: 'number',
-  BOOLEAN: 'boolean'
+  BOOLEAN: 'boolean',
 };
 
 export const ChartType = {
@@ -15,7 +15,7 @@ export const ChartType = {
   BAR_CHART: 1,
   HISTOGRAM: 2,
   SCATTER_PLOT: 3,
-  CROSS_TAB: 4
+  CROSS_TAB: 4,
 };
 
 export function getDatasetInfo(tableName, tables = []) {

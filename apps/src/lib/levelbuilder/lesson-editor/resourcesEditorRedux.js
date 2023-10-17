@@ -10,25 +10,25 @@ const REMOVE_RESOURCE = 'resourcesEditor/REMOVE_RESOURCE';
 export const initResources = (resourceContext, resources) => ({
   type: INIT,
   resourceContext,
-  resources
+  resources,
 });
 
 export const addResource = (resourceContext, newResource) => ({
   type: ADD_RESOURCE,
   resourceContext,
-  newResource
+  newResource,
 });
 
 export const editResource = (resourceContext, updatedResource) => ({
   type: EDIT_RESOURCE,
   resourceContext,
-  updatedResource
+  updatedResource,
 });
 
 export const removeResource = (resourceContext, key) => ({
   type: REMOVE_RESOURCE,
   resourceContext,
-  key
+  key,
 });
 
 // Verify that an array of resources all match resourceShape

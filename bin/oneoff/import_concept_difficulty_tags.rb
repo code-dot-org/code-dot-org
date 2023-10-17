@@ -39,7 +39,7 @@ def main(csv_dir)
 
       if concept_difficulties.any? {|key, value| lcd[key] != value}
         lcd.update!(concept_difficulties)
-        file_path = Level.level_file_path(level.name)
+        file_path = Policies::LevelFiles.level_file_path(level.name)
         File.write(file_path, level.to_xml)
       end
     end

@@ -9,7 +9,7 @@ export default function JoinSectionNotifications({
   result,
   name,
   id,
-  sectionCapacity
+  sectionCapacity,
 }) {
   if (action === 'join' && result === 'success') {
     return <JoinSectionSuccessNotification sectionName={name} />;
@@ -44,7 +44,7 @@ JoinSectionNotifications.propTypes = {
   result: PropTypes.string,
   name: PropTypes.string,
   id: PropTypes.string,
-  sectionCapacity: PropTypes.number
+  sectionCapacity: PropTypes.number,
 };
 
 const JoinSectionSuccessNotification = ({sectionName}) => (
@@ -56,7 +56,7 @@ const JoinSectionSuccessNotification = ({sectionName}) => (
   />
 );
 JoinSectionSuccessNotification.propTypes = {
-  sectionName: PropTypes.string.isRequired
+  sectionName: PropTypes.string.isRequired,
 };
 
 const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (
@@ -79,7 +79,7 @@ const JoinSectionNotFoundNotification = ({sectionId}) => (
   />
 );
 JoinSectionNotFoundNotification.propTypes = {
-  sectionId: PropTypes.string.isRequired
+  sectionId: PropTypes.string.isRequired,
 };
 
 const JoinSectionFullNotification = ({sectionId, sectionCapacity}) => (
@@ -88,14 +88,14 @@ const JoinSectionFullNotification = ({sectionId, sectionCapacity}) => (
     notice={i18n.sectionsNotificationFailure()}
     details={i18n.sectionsNotificationJoinFull({
       sectionId,
-      sectionCapacity
+      sectionCapacity,
     })}
     dismissible={true}
   />
 );
 JoinSectionFullNotification.propTypes = {
   sectionId: PropTypes.string.isRequired,
-  sectionCapacity: PropTypes.number.isRequired
+  sectionCapacity: PropTypes.number.isRequired,
 };
 
 const JoinSectionRestrictedNotification = ({sectionId}) => (
@@ -107,7 +107,7 @@ const JoinSectionRestrictedNotification = ({sectionId}) => (
   />
 );
 JoinSectionRestrictedNotification.propTypes = {
-  sectionId: PropTypes.string.isRequired
+  sectionId: PropTypes.string.isRequired,
 };
 
 const JoinSectionFailNotification = ({sectionId}) => (
@@ -137,7 +137,7 @@ const JoinSectionParticipantNotification = ({sectionId}) => (
     type="failure"
     notice={i18n.sectionsNotificationFailure()}
     details={i18n.sectionsNotificationCantBeParticipant({
-      sectionId
+      sectionId,
     })}
     dismissible={true}
   />

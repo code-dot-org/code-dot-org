@@ -26,3 +26,5 @@ Here is the caclulation:
 * (3,750 pixel data ) + (3 bytes of meta data) = **3,753 bytes** (multiply by 8 for number of bits: 30,024)
 
 MARKDOWN
+
+allow_multiple_attempts true

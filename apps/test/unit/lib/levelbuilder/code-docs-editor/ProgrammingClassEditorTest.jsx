@@ -22,25 +22,25 @@ describe('ProgrammingClassEditor', () => {
       tips: 'some tips on how to use this class',
       examples: [{name: 'example 1'}],
       fields: [{name: 'fields 1'}],
-      methods: [{key: 'method1', name: 'method 1'}]
+      methods: [{key: 'method1', name: 'method 1'}],
     };
     defaultProps = {
       initialProgrammingClass,
       environmentCategories: [
         {key: 'circuit', name: 'Circuit'},
         {key: 'variables', name: 'Variables'},
-        {key: 'canvas', name: 'Canvas'}
+        {key: 'canvas', name: 'Canvas'},
       ],
       videoOptions: [
         {
           key: 'video1',
-          name: 'Video 1'
+          name: 'Video 1',
         },
         {
           key: 'video2',
-          name: 'Video 2'
-        }
-      ]
+          name: 'Video 2',
+        },
+      ],
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -54,26 +54,11 @@ describe('ProgrammingClassEditor', () => {
     expect(wrapper.text().includes('Editing Class')).to.be.true;
 
     // Display name
-    expect(
-      wrapper
-        .find('input')
-        .at(0)
-        .props().value
-    ).to.equal('Painter');
+    expect(wrapper.find('input').at(0).props().value).to.equal('Painter');
 
     // Key
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().value
-    ).to.equal('painter');
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().readOnly
-    ).to.be.true;
+    expect(wrapper.find('input').at(1).props().value).to.equal('painter');
+    expect(wrapper.find('input').at(1).props().readOnly).to.be.true;
 
     // Category select
     const categorySelect = wrapper.find('select').at(0);
@@ -90,25 +75,17 @@ describe('ProgrammingClassEditor', () => {
     // Documentation section
     const documentationSection = wrapper.find('CollapsibleEditorSection').at(0);
     expect(documentationSection.props().title).to.equal('Documentation');
+    expect(documentationSection.find('input').at(0).props().value).to.equal(
+      'developer.mozilla.org'
+    );
     expect(
-      documentationSection
-        .find('input')
-        .at(0)
-        .props().value
-    ).to.equal('developer.mozilla.org');
-    expect(
-      documentationSection
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .props().markdown
+      documentationSection.find('TextareaWithMarkdownPreview').at(0).props()
+        .markdown
     ).to.equal('This is a longer description of the code.');
 
     const detailsSection = wrapper.find('CollapsibleEditorSection').at(1);
     expect(
-      detailsSection
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .props().markdown
+      detailsSection.find('TextareaWithMarkdownPreview').at(0).props().markdown
     ).to.equal('Painter()');
   });
 
@@ -120,10 +97,7 @@ describe('ProgrammingClassEditor', () => {
     const tipsSection = wrapper.find('CollapsibleEditorSection').at(2);
     expect(tipsSection.props().title).to.equal('Tips');
     expect(
-      tipsSection
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .props().markdown
+      tipsSection.find('TextareaWithMarkdownPreview').at(0).props().markdown
     ).to.equal('some tips on how to use this class');
   });
 
@@ -194,7 +168,7 @@ describe('ProgrammingClassEditor', () => {
         'tips',
         'examples',
         'fields',
-        'methods'
+        'methods',
       ].sort()
     );
     expect(fetchCallBody.name).to.equal('Painter');

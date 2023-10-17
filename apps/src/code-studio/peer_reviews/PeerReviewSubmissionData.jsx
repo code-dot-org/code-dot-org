@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import PeerReviewLinkSection from './PeerReviewLinkSection';
 
 class PeerReviewSubmissionData extends React.Component {
   static propTypes = {
-    submissions: PropTypes.arrayOf(PropTypes.object).isRequired
+    submissions: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   renderTableHeader() {

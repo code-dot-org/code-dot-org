@@ -2,8 +2,8 @@
 az:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: ox düymələri ilə hərəkət edən NESW
+      AmysBlocks_playerBehaviors:
+        text: davranış
       AmysBlocks_setPromptWithChoices:
         text: istifadəçidən {QUESTION} seçimlər {A}{B}{C} ilə dəyişən {VAR} soruş
       BadGuys_makeNewBadGuysSprite:
@@ -1029,6 +1029,8 @@ az:
         text: hədəflərdən qaçınmaq
       gamelab_beginCollectingData:
         text: "{BREAK} dəyəri {VALUE} {LABEL} etiketi ilə data toplamağa başlayın"
+      gamelab_behaviorPicker:
+        text: davranış
       gamelab_bounceOff:
         text: SPRITE][0] {TARGET} üzərindən sıçrayır
       gamelab_changePropBy:
@@ -1136,7 +1138,6 @@ az:
         text: dəyər 0
         options:
           VALUE:
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1231,6 +1232,19 @@ az:
             '"z"': z
       gamelab_layoutGrid:
         text: şəbəkə şəklində spraytı tətrib et
+      gamelab_layoutSprites:
+        text: forma {GROUP} {FORMAT} kimi
+        options:
+          FORMAT:
+            '"border"': kənar
+            '"circle"': dairə
+            '"grid"': tor
+            '"top"': üst sıra
+            '"row"': sinif
+            '"bottom"': alt sıra
+            '"left"': sol sütun
+            '"column"': sütun
+            '"right"': sağ sütun
       gamelab_locationAt:
         text: 'yer x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1257,6 +1271,18 @@ az:
             '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} də yeni {ANIMATION_NAME} spraytı yarat"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': kənar
+            '"circle"': dairə
+            '"grid"': tor
+            '"top"': üst sıra
+            '"row"': sinif
+            '"bottom"': alt sıra
+            '"left"': sol sütun
+            '"column"': sütun
+            '"right"': sağ sütun
       gamelab_makeNumSprites:
         text: yeni {ANIMATION_NAME} spraytı {NUM} yarat
       gamelab_makeProjectile:
@@ -1349,9 +1375,16 @@ az:
         options:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": Hava buynuzu
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": alqış
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": nəğmə
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": şənləndirmək, alqış
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": zərbə
             "'sound://category_sports/One_Whistle_SFX.mp3'": Fit
       gamelab_playSoundOptionsSpace:
         text: oynat
+        options:
+          SOUND:
+            "'sound://category_space/Launch_SFX.mp3'": işə salmaq
       gamelab_playSpeech:
         text: nitqi oynat
       gamelab_playerBehaviors:
@@ -1542,7 +1575,7 @@ az:
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
-        text: akrobatika
+        text: yıxılma
       gamelab_turn:
         text: döndər {SPRITE} {DIRECTION} {N} dərəcə
         options:
@@ -1622,6 +1655,10 @@ az:
         text: x koordinatı
       gamelab_yLocationOf:
         text: y koordinatı
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} {LOCATION} yerə sürüşmək"
+      KatiesBlocks_tumbling:
+        text: yıxılma
       Mikelab_addBehaviorSimple:
         text: sprayt {SPRITE} başlayır {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1957,6 +1994,10 @@ az:
         text: canavarlar hərəkət etməyi dayandırırlar
       ParticlesBlocks_statesOfMatter:
         text: davranış
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): bərk
+            new Behavior(liquid, []): maye
       Poetry_addFrame:
         text: "{BRUSH} çərçivə təyin edin"
         options:
@@ -2047,6 +2088,9 @@ az:
             '"sound://category_achievements/peaceful_win_6.mp3"': külək cingiltisi
       Poetry_playSoundOptionsSpace:
         text: oynat
+        options:
+          SOUND:
+            "'sound://category_space/Launch_SFX.mp3'": işə salmaq
       Poetry_setAuthor:
         text: müəllifi təyin et {AUTHOR}
       Poetry_setBackground:
@@ -2175,7 +2219,6 @@ az:
         options:
           'N':
             '0': "???"
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2198,8 +2241,6 @@ az:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      SpriteLab2Beta_spriteSay:
-        text: sprayt {SPRITE} deyir {TEXT} {SECONDS} saniyə ərzində
       Vector_createSpriteWith:
         text: |-
           sprayt yarat
@@ -2292,6 +2333,21 @@ az:
             '"quarantining"': xəstələnəndə karantin
             '"avoiding"': sosial məsafə
             '"none"': hərəkətsiz qalmaq
+      adaptations_adaptationBehaviors:
+        text: davranış
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa fırlanır
+            new Behavior(spinning_left, []): sola fırlanır
+            new Behavior(fluttering, []): çırpınan
+            new Behavior(jittering, []): |-
+              titrəmək
+              (hər hansı cihazın titrəməsi)
+            new Behavior(wobbling, []): titrəmə(titrəmək)
+            new Behavior(wandering, []): gəzən
+            new Behavior(patrolling, []): patrul
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} nöqtəsini izləməyə başlayır"
       binary_drawBinScreen:
         text: |-
           ekranı çəkin
@@ -2381,6 +2437,7 @@ az:
             '"blueIce"': mavi buz
             '"blackConcrete"': qara beton
             '"seaGrass"': dəniz otu
+            '"kelp"': yosun
       craft_placeTorch:
         text: məşəl yerləşdir
       craft_repeatUntilGoal:
@@ -2401,8 +2458,23 @@ az:
           DIR:
             right: sağa
             left: sola
+      ecosystems_int10:
+        text: dəyər 0
+        options:
+          VALUE:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: başlıqları təmizlə
+      storylab_printText:
+        text: çap et
       storylab_setForegroundEffect2:
         text: "{EFFECT} effekti elə"
         options:
@@ -2413,7 +2485,3 @@ az:
             '"rain"': yağış
             '"starburst"': Ulduz partlaması
             '"twinkling"': parıldayan
-      validation_validatedBackground:
-        text: fonu {IMG} təyin edin
-      validation_validatedSound:
-        text: səsiOYNAT {SOUND}

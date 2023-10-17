@@ -23,13 +23,13 @@ describe('DocumentationTabTest', () => {
           methods: [
             {
               key: 'getwidth',
-              name: 'int getWidth()'
+              name: 'int getWidth()',
             },
             {
               key: 'getHeight',
-              name: 'int getHeight()'
-            }
-          ]
+              name: 'int getHeight()',
+            },
+          ],
         },
         {
           id: 2,
@@ -39,11 +39,11 @@ describe('DocumentationTabTest', () => {
           methods: [
             {
               key: 'play',
-              name: 'public static void play(Scene scene)'
-            }
-          ]
-        }
-      ]
+              name: 'public static void play(Scene scene)',
+            },
+          ],
+        },
+      ],
     },
     {
       key: 'org_code_neighborhood',
@@ -57,16 +57,16 @@ describe('DocumentationTabTest', () => {
           methods: [
             {
               key: 'getx',
-              name: 'int getX()'
+              name: 'int getX()',
             },
             {
               key: 'getY',
-              name: 'int getY()'
-            }
-          ]
-        }
-      ]
-    }
+              name: 'int getY()',
+            },
+          ],
+        },
+      ],
+    },
   ];
 
   // Convenience method; tests can use "await processEventLoop()" to wait for

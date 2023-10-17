@@ -132,9 +132,6 @@ lt:
       4:
         text: "Nagi, pajudink tuos zombius!"
     if_else_scrat:
-      1:
-      2:
-      3:
       4:
         text: "Padėk tai voverei pasiekti gilę!"
     function:
@@ -194,75 +191,27 @@ lt:
       1:
         text: "Jau greitai bus galima pamatyti pastabas!"
     frozen_intro:
-      1:
       2:
         text: "Čiuoždami galėsite sukurti snaigių raštus ir šiomis žiemos grožybėmis pasidalinti su draugais."
       3:
         text: "Toliau Tu mokysiesi programavimo pagrindų. Tradiciškai programavime naudojamas tekstas, bet mes naudosime Blockly, kuris naudoja blokelius, kuriuos gali tempti ir paleisti rašydamas programą. Tai naudoja net universiteto studentai mokydamiesi pagrindų. Po blokeliais Tu vistiek kuri programinį kodą."
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:
       10:
         text: "Prisimink, Tu gali pakeisti pikselių ir laipsnių skaičių spausdamas ant rodyklių šalia jų."
     frozen_functions:
       1:
         text: "Labas, aš esu Krisas Bošas. Esu profesionalus krepšininkas ir programuodavau mokykloje."
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
     playlab_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
       6:
         text: "Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais, kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti ugnies kamuolius ir panašiai. Viskas priklauso nuo tavo fantazijos."
     infinity_playlab_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
       7:
         text: "Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais, kurie gali bendrauti, pelnyti taškus, mėtyti robotus, vyšnias, žiežirbas, ledus ir panašiai. Viskas priklauso nuo tavo fantazijos!"
     gumball_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
       9:
         text: "Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais, kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti daiktus ir panašiai. Viskas priklauso nuo tavo fantazijos!"
     iceage_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
       9:
         text: "Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais, kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti daiktus ir panašiai. Viskas priklauso nuo tavo fantazijos!"
     mc_2016_intro:
       1:
         text: "Labas, aš esu Jens – pagrindinis Minecraft žaidimo projektuotojas. Šiose pamokėlėse galėsi susikurti savo Minecraft žaidimą. Pamatysi Minecraft aplinką, kurioje veiksmas sustojo: avys nejuda, viščiukai nededa kiaušinių, o zombiai negaudo žmonių. Nuo tavęs priklausys, kaip parašysi kodą ir kaip veiks tavo Minecraft pasaulis."
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:

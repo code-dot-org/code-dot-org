@@ -16,3 +16,4 @@ answer 'In-person wrap up to the first year of teaching the course'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

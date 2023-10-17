@@ -1,5 +1,5 @@
 name 'SP-VPL-CSD-21-mod5-AILabVocab-c4u_-22'
-title 'Check for understanding'
+title 'Check for Understanding'
 description 'Match the correct description to each term.'
 
 question 'A. Feature '
@@ -22,3 +22,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

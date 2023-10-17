@@ -1,1 +1,24 @@
---- {}
+---
+km:
+  data:
+    shared_functions:
+      driving with arrow keys: បើកបរដោយប្រើគ្រាប់ចុចព្រួញ
+      fluttering: ញ័រ
+      growing: រីកមាឌ
+      jittering: ភ័យ
+      moving east: ផ្លាស់ទីទៅខាងកើត
+      moving east and looping: ផ្លាស់ទីទៅទិសខាងកើតនិងបង្វិលជុំ
+      moving north: ផ្លាស់ទីទៅខាងជើង
+      moving north and looping: ផ្លាស់ទីទៅខាងជើង ហើយ looping
+      moving south: ផ្លាស់ទីទៅខាងត្បូង
+      moving south and looping: ផ្លាស់ទីទៅខាងត្បូង ហើយ looping
+      moving west: ផ្លាស់ទីទៅខាងលិច
+      moving west and looping: ផ្លាស់ទីទៅខាងលិច ហើយ looping
+      moving with arrow keys: ផ្លាស់ទីដោយប្រើគ្រាប់ ចុចព្រួញ
+      patrolling: ដើរល្បាត
+      shrinking: រួមមាឌ
+      spinning left: បង្វិលឆ្វេង
+      spinning right: បង្វិលស្តាំ
+      swimming left and right: ហែលទៅឆ្វេង ហើយទៅស្ដាំ
+      wandering: វង្វេង
+      wobbling: អង្រួន

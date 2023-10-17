@@ -5,5 +5,5 @@ module.exports = {
 
   AVATAR_HEIGHT: 24,
   AVATAR_WIDTH: 34,
-  AVATAR_Y_OFFSET: 0
+  AVATAR_Y_OFFSET: 0,
 };

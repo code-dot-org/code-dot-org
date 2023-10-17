@@ -9,19 +9,19 @@ import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
 import i18n from '@cdo/locale';
-
+import {P5LabInterfaceMode} from '../constants';
 /**
  * Vertical scrolling list of animations associated with the project.
  */
 class AnimationList extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
-    selectedAnimation: shapes.AnimationKey,
+    currentAnimations: shapes.CurrentAnimations,
     onNewItemClick: PropTypes.func.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    labType: PropTypes.string.isRequired,
   };
 
   render() {
@@ -32,7 +32,7 @@ class AnimationList extends React.Component {
       labType,
       onNewItemClick,
       spriteLab,
-      selectedAnimation
+      currentAnimations,
     } = this.props;
     let newAnimationLabel;
     if (spriteLab) {
@@ -67,7 +67,10 @@ class AnimationList extends React.Component {
             key={key}
             animationKey={key}
             animationProps={animationList.propsByKey[key]}
-            isSelected={key === selectedAnimation}
+            isSelected={
+              key === currentAnimations[P5LabInterfaceMode.ANIMATION] ||
+              key === currentAnimations[P5LabInterfaceMode.BACKGROUND]
+            }
             animationList={animationList}
             labType={labType}
           />
@@ -93,14 +96,14 @@ const styles = {
     borderRight: 'none',
     backgroundColor: color.lightest_gray,
     paddingRight: 10,
-    paddingLeft: 10
-  }
+    paddingLeft: 10,
+  },
 };
 export default connect(
   state => ({
     animationList: state.animationList,
-    selectedAnimation: state.animationTab.selectedAnimation,
-    spriteLab: state.pageConstants.isBlockly
+    currentAnimations: state.animationTab.currentAnimations,
+    spriteLab: state.pageConstants.isBlockly,
   }),
   dispatch => ({
     onNewItemClick(isSpriteLab, hideCostumes) {
@@ -109,6 +112,6 @@ export default connect(
       } else {
         dispatch(show(Goal.NEW_ANIMATION, isSpriteLab));
       }
-    }
+    },
   })
 )(AnimationList);

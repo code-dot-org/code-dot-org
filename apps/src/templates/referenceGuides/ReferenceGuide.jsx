@@ -6,7 +6,7 @@ import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import '../../../style/curriculum/documentation_tables.scss';
 
 const referenceGuideShape = PropTypes.shape({
-  content: PropTypes.string
+  content: PropTypes.string,
 });
 
 export default function ReferenceGuide({referenceGuide}) {
@@ -26,5 +26,5 @@ export default function ReferenceGuide({referenceGuide}) {
 }
 
 ReferenceGuide.propTypes = {
-  referenceGuide: referenceGuideShape.isRequired
+  referenceGuide: referenceGuideShape.isRequired,
 };

@@ -2,73 +2,14 @@
   "gl-ES": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "categories": {
-            "html_tags": {
-              "name": "Etiquetas HTML"
-            }
-          }
-        },
-        "gamelab": {
-          "categories": {
-            "groups": {
-              "name": "Grupos",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Cor"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Cor"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matemáticas",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "O mínimo número devolto"
-                    },
-                    "max": {
-                      "description": "O máximo número devolto"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "O mínimo número devolto"
-                    },
-                    "max": {
-                      "description": "O máximo número devolto"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variables"
-            },
-            "functions": {
-              "name": "Funcións"
-            }
-          }
-        },
         "applab": {
-          "name": "Laboratorio de aplicacións",
           "categories": {
-            "ui_controls": {
+            "advanced": {
+              "name": "Avanzado"
+            },
+            "control": {
               "expressions": {
-                "onEvent": {
+                "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "Función"
@@ -88,9 +29,37 @@
                 }
               }
             },
-            "control": {
+            "functions": {
+              "name": "Funcións"
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "O máximo número devolto"
+                    },
+                    "min": {
+                      "description": "O mínimo número devolto"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "O máximo número devolto"
+                    },
+                    "min": {
+                      "description": "O mínimo número devolto"
+                    }
+                  }
+                }
+              },
+              "name": "Matemáticas"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Función"
@@ -99,79 +68,110 @@
                 }
               }
             },
-            "math": {
-              "name": "Matemáticas",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "O mínimo número devolto"
-                    },
-                    "max": {
-                      "description": "O máximo número devolto"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "O mínimo número devolto"
-                    },
-                    "max": {
-                      "description": "O máximo número devolto"
-                    }
-                  }
-                }
-              }
-            },
             "variables": {
               "name": "Variables"
-            },
+            }
+          },
+          "name": "Laboratorio de aplicacións"
+        },
+        "gamelab": {
+          "categories": {
             "functions": {
               "name": "Funcións"
             },
-            "advanced": {
-              "name": "Avanzado"
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cor"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cor"
+                    }
+                  }
+                }
+              },
+              "name": "Grupos"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "O máximo número devolto"
+                    },
+                    "min": {
+                      "description": "O mínimo número devolto"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "O máximo número devolto"
+                    },
+                    "min": {
+                      "description": "O mínimo número devolto"
+                    }
+                  }
+                }
+              },
+              "name": "Matemáticas"
+            },
+            "variables": {
+              "name": "Variables"
             }
           }
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "Mundo"
-            },
-            "location": {
-              "name": "Localizacións"
-            },
             "actions": {
               "name": "Accións"
-            },
-            "events": {
-              "name": "Eventos"
             },
             "behaviors": {
               "name": "Comportamentos"
             },
-            "loops": {
-              "name": "Bucles"
+            "comments": {
+              "name": "Comentarios"
             },
-            "variables": {
-              "name": "Variables"
-            },
-            "math": {
-              "name": "Matemáticas"
-            },
-            "logic": {
-              "name": "Lóxica"
+            "events": {
+              "name": "Eventos"
             },
             "functions": {
               "name": "Funcións"
             },
+            "location": {
+              "name": "Localizacións"
+            },
+            "logic": {
+              "name": "Lóxica"
+            },
+            "loops": {
+              "name": "Bucles"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
             "text": {
               "name": "Texto"
             },
-            "comments": {
-              "name": "Comentarios"
+            "variables": {
+              "name": "Variables"
+            },
+            "world": {
+              "name": "Mundo"
+            }
+          }
+        },
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "Etiquetas HTML"
             }
           }
         }

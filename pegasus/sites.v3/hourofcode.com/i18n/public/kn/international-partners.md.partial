@@ -1,18 +1,16 @@
 ---
-title: Contact International Partners
+title: ಅಂತರರಾಷ್ಟ್ರೀಯ ಪಾಲುದಾರರನ್ನು ಸಂಪರ್ಕಿಸಿ
 layout: wide
 ---
 
 {{ signup_button }}
 
-# Contact International Partners
+# ಅಂತರರಾಷ್ಟ್ರೀಯ ಪಾಲುದಾರರನ್ನು ಸಂಪರ್ಕಿಸಿ
 
-ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ನಿಜವಾಗಿಯೂ ಅಂತಾರಾಷ್ಟ್ರೀಯ ಚಳವಳಿಯನ್ನಾಗಿ ಮಾಡಲು ವಿಶ್ವದ ಹಲವು ಸಂಸ್ಥೆಗಳ ಜೊತೆಗೆ Code.org ಕೆಲಸ ಮಾಡುತ್ತದೆ. 2017 ರಲ್ಲಿ, ಎಲ್ಲ ಅವರ್ ಆಫ್ ಕೋಡ್ ಕಾರ್ಯಕ್ರಮಗಳ ಪೈಕಿ 60% ರಷ್ಟು ಅಮೆರಿಕದಲ್ಲಿ ನಡೆದಿದೆ ಎಂದು ನಿಮಗೆ ಗೊತ್ತೇ?
+ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ನಿಜವಾಗಿಯೂ ಅಂತಾರಾಷ್ಟ್ರೀಯ ಚಳವಳಿಯನ್ನಾಗಿ ಮಾಡಲು ವಿಶ್ವದ ಹಲವು ಸಂಸ್ಥೆಗಳ ಜೊತೆಗೆ Code.org ಕೆಲಸ ಮಾಡುತ್ತದೆ. 2017 ರಲ್ಲಿ, ಎಲ್ಲ ಅವರ್ ಆಫ್ ಕೋಡ್ ಕಾರ್ಯಕ್ರಮಗಳ ಪೈಕಿ 60% ರಷ್ಟು ಅಮೆರಿಕದಲ್ಲಿ ನಡೆದಿದೆ ಎಂದು ನಿಮಗೆ ಗೊತ್ತೇ? If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
 
-ನಿಮ್ಮ ದೇಶದಲ್ಲಿ ಹೆಚ್ಚು ಜನರು ತೊಡಗಿಸಿಕೊಳ್ಳುವಂತೆ ಮಾಡುವಲ್ಲಿ ನೀವೂ ಕೂಡಾ ಮಹತ್ವದ ಪಾತ್ರ ವಹಿಸಬಹುದು! ಈ ಕೆಳಗಿನ ದೇಶಗಳ ನಿವಾಸಿಗಳ ಪೈಕಿ ನೀವೂ ಒಬ್ಬರಾಗಿದ್ದರೆ, ಪಟ್ಟಿ ಮಾಡಿದ ಪಾಲುದಾರರನ್ನು ಸಂಪರ್ಕಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಸ್ಥಳೀಯ ಅವರ್ ಆಫ್ ಕೋಡ್‌ ಜೊತೆಗೆ ಸಂಪರ್ಕಿಸಿ.
+*Don't see your country listed here?* [See how to become our international partner!](https://code.org/international/apply) <br /> <br />
 
-*ಇಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡಿರುವಲ್ಲಿ ನಿಮ್ಮ ದೇಶ ಕಾಣಿಸುತ್ತಿಲ್ಲವೇ?* [ಅವರ್ ಆಫ್ ಕೋಡ್ ಅಂತಾರಾಷ್ಟ್ರೀಯ ಪಾಲುದಾರರಗಾಲು ಅರ್ಜಿ ಸಲ್ಲಿಸಿ](https://airtable.com/shreokz55rqubug8F)! <br /> <br />
+*ಇಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡಿರುವಲ್ಲಿ ನಿಮ್ಮ ದೇಶ ಕಾಣಿಸುತ್ತಿಲ್ಲವೇ?* [ಅವರ್ ಆಫ್ ಕೋಡ್ ಅಂತಾರಾಷ್ಟ್ರೀಯ ಪಾಲುದಾರರಗಾಲು ಅರ್ಜಿ ಸಲ್ಲಿಸಿ](https://airtable.com/shreokz55rqubug8F)!
 
 {{ international_partners_table }}
-
-{{ signup_button }}

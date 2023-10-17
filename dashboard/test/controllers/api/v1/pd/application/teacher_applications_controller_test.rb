@@ -8,6 +8,8 @@ module Api::V1::Pd::Application
     self.use_transactional_test_case = true
 
     setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+
       @test_params = {
         form_data: build(TEACHER_APPLICATION_HASH_FACTORY)
       }
@@ -18,22 +20,12 @@ module Api::V1::Pd::Application
       partner = @program_manager.regional_partners.first
       partner.update!(applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL)
       @hash_with_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner.id
-      @application = create TEACHER_APPLICATION_FACTORY, regional_partner: partner
+      @application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval
 
       @program_manager_without_admin_approval = create :program_manager
       partner_without_admin_approval = @program_manager_without_admin_approval.regional_partners.first
       partner_without_admin_approval.update!(applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL)
       @hash_without_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner_without_admin_approval.id
-    end
-
-    setup do
-      Pd::Application::TeacherApplicationMailer.stubs(:confirmation).returns(
-        mock {|mail| mail.stubs(:deliver_now)}
-      )
-
-      Pd::Application::TeacherApplicationMailer.stubs(:admin_approval).returns(
-        mock {|mail| mail.stubs(:deliver_now)}
-      )
     end
 
     test_redirect_to_sign_in_for :create
@@ -80,31 +72,25 @@ module Api::V1::Pd::Application
       response: :forbidden
 
     test 'sends email on successful create' do
-      Pd::Application::TeacherApplicationMailer.expects(:confirmation).
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
-
       sign_in @applicant
 
       put :create, params: @test_params
+      application = TEACHER_APPLICATION_CLASS.last
       assert_response :success
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
     end
 
-    test 'does not send principal approval email on successful create if RP has selective principal approval' do
-      Pd::Application::TeacherApplicationMailer.expects(:confirmation).
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
-
-      # TODO: This expectation passes in all tests regardless of regional partner settings.
+    test 'does not create principal approval email on successful create if RP has selective principal approval' do
+      sign_in @applicant
       Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
-      sign_in @applicant
-
       put :create, params: {form_data: @hash_without_admin_approval}
+      application = TEACHER_APPLICATION_CLASS.last
       assert_response :success
+      assert_equal 1, application.emails.where(email_type: 'confirmation').count
     end
 
-    test 'does not send confirmation mail on unsuccessful create' do
+    test 'does not create confirmation mail on unsuccessful create' do
       Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).never
       PRINCIPAL_APPROVAL_APPLICATION_CLASS.expects(:create_placeholder_and_send_mail).never
@@ -187,62 +173,51 @@ module Api::V1::Pd::Application
       assert_response :created
     end
 
-    test 'autoscores and queues emails on submit when approval is required' do
-      Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
-      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).once.
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
-
+    test 'autoscores and sends emails on submit when approval is required' do
       sign_in @applicant
       put :create, params: {form_data: @hash_with_admin_approval, isSaving: false}
-      assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
+      application = TEACHER_APPLICATION_CLASS.last
+      assert_equal 'awaiting_admin_approval', application.status
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval').count
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :created
     end
 
-    test 'autoscores and queues only confirmation email on submit when approval is not required' do
-      Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
+    test 'autoscores and sends only confirmation email on submit when approval is not required' do
+      sign_in @applicant
       Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
-      sign_in @applicant
       put :create, params: {form_data: @hash_without_admin_approval, isSaving: false}
-      assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
+      application = TEACHER_APPLICATION_CLASS.last
+      assert_equal 'unreviewed', application.status
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :created
     end
 
-    test 'autoscores and queues emails once submitted with approval required' do
+    test 'autoscores and sends emails once incomplete apps are submitted with approval required' do
       application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval, user: @applicant, status: 'incomplete'
-
-      Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
-      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).once.
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
 
       sign_in @applicant
       put :update, params: {id: application.id, form_data: @hash_with_admin_approval, isSaving: false}
-      assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
+      application = TEACHER_APPLICATION_CLASS.last
+      assert_equal 'awaiting_admin_approval', application.status
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval').count
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
     end
 
-    test 'autoscores and queues only confirmation email with approval not required' do
+    test 'autoscores and sends only confirmation email once incomplete apps are submitted with approval not required' do
       application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_without_admin_approval, user: @applicant, status: 'incomplete'
-
-      Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
       Pd::Application::TeacherApplicationMailer.expects(:admin_approval).never
 
       sign_in @applicant
       put :update, params: {id: application.id, form_data: @hash_without_admin_approval, isSaving: false}
-      assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
+      application = TEACHER_APPLICATION_CLASS.last
+      assert_equal 'unreviewed', application.status
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'confirmation').count
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
     end
@@ -268,15 +243,12 @@ module Api::V1::Pd::Application
       assert_response :ok
     end
 
-    test 'making principal approval required updates status to \'awaiting_admin_approval\' and queues email' do
+    test 'making principal approval required updates status to \'awaiting_admin_approval\' and sends email' do
       application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_without_admin_approval, user: @applicant, status: 'unreviewed'
       sign_in @program_manager_without_admin_approval
 
-      Pd::Application::TeacherApplicationMailer.expects(:needs_admin_approval).
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
-
       post :change_principal_approval_requirement, params: {id: application.id, principal_approval_not_required: false}
+      assert_equal 1, application.reload.emails.where.not(sent_at: nil).where(email_type: 'needs_admin_approval').count
       assert_response :success
       assert_equal 'awaiting_admin_approval', application.reload.status
     end
@@ -319,7 +291,7 @@ module Api::V1::Pd::Application
       refute application.reload.principal_approval_not_required
     end
 
-    test 'send_principal_approval queues up an email if none exist' do
+    test 'send_principal_approval sends an email if none exist' do
       sign_in @program_manager
       @application.update!(status: 'awaiting_admin_approval')
       @application.update!(principal_approval_not_required: false)
@@ -330,6 +302,7 @@ module Api::V1::Pd::Application
       email = Pd::Application::Email.last
       assert_equal @application, email.application
       assert_equal 'admin_approval', email.email_type
+      refute_nil email.sent_at
     end
 
     test 'send_principal_approval does nothing if an email has already been sent' do

@@ -9,12 +9,12 @@ var utils = require('./utils');
  * @param {string[]} executionLog an array of function or statement names
  * @returns {!Object}
  */
-module.exports.getResultsFromLog = function(logConditions, executionLog) {
+module.exports.getResultsFromLog = function (logConditions, executionLog) {
   executionLog = executionLog || [];
   var results = {
-    testResult: TestResults.ALL_PASS
+    testResult: TestResults.ALL_PASS,
   };
-  logConditions.forEach(function(condition, index) {
+  logConditions.forEach(function (condition, index) {
     var testResult = TestResults.LOG_CONDITION_FAIL;
     var exact;
 

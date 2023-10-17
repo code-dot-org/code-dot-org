@@ -15,9 +15,9 @@ describe('ProgressViewHeader', () => {
       path: '//localhost-studio.code.org:3000/s/csd1-2019',
       lessons: [],
       version_year: '2019',
-      family_name: 'csd-1'
+      family_name: 'csd-1',
     },
-    scriptFriendlyName: "CSD Unit 1 - Problem Solving and Computing ('19-'20)"
+    scriptFriendlyName: "CSD Unit 1 - Problem Solving and Computing ('19-'20)",
   };
 
   it('show buttons when in standards view', () => {

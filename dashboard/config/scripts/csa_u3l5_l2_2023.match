@@ -14,3 +14,4 @@ answer 'a condition that must always be true just after the execution of a code 
 
 question 'loop control variable'
 answer 'a variable that is changed by a constant value and determines the end of a loop'
+allow_multiple_attempts true

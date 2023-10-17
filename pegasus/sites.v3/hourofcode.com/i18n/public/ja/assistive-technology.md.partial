@@ -43,6 +43,6 @@ title: Completing an Hour of Code with Assistive Technology
 
 <p>The <a href="https://studio.code.org/courses" target="_blank">Code.org tutorials</a> can all be used with or without sound. All the videos have captions.</p>
 
-<h2>Pair Programming</h2>
+<h2>ペアプログラミング</h2>
 
 <p>Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="_blank">check out this video</a> to learn the best techniques for pair programming.</p>

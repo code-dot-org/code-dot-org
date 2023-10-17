@@ -184,7 +184,7 @@ def campaign_date(format)
     id = 'campaign_date_full_year'
   end
 
-  # For hoc2022, we just want campaign dates for the US
+  # For hoc2023, we just want campaign dates for the US
   # and non-US.
   if @country != "us"
     id = "nonus_#{id}"

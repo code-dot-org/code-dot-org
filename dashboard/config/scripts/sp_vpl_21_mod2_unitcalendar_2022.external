@@ -3,11 +3,14 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Task: Modify the unit calendar
+# Task: Modify the Unit Calendar
 
-#### The unit calendar is a tool you can use to help plan your unit pacing. The calendar can be adjusted based on instructional minutes per week. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-## Steps to modify the unit calendar
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">The unit calendar is a tool you can use to help plan your unit pacing. The calendar can be adjusted based on instructional minutes per week. 
+</p></div>
+
+## Steps to Modify The Unit Calendar
 
 ##### **Step 1:** Once on the Unit Overview page, click on the blue "View calendar" button. 
 

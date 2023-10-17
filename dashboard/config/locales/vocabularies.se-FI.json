@@ -2,30 +2,34 @@
   "se-FI": {
     "data": {
       "vocabularies": {
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "input/coursef/2022": {
+        "input/csd/2021": {
           "word": "Inputa"
         },
-        "internet/coursef/2022": {
-          "word": "Interneahtta"
+        "processing/csd/2021": {
+          "word": "Gieđahallan"
         },
-        "copyright/coursee/2022": {
+        "digital_footprint/csd/2021": {
+          "word": "Digitála Luodda"
+        },
+        "copyright/csd/2021": {
           "word": "Dahkkivuoigatvuohta"
         },
-        "drop/courseb/2022": {
+        "drop/coursea/2021": {
           "word": "Gahčá"
         },
-        "drop/pre-express/2022": {
+        "drop/courseb/2021": {
           "word": "Gahčá"
         },
-        "drop/coursea/2022": {
+        "copyright/coursee/2021": {
+          "word": "Dahkkivuoigatvuohta"
+        },
+        "input/coursef/2021": {
+          "word": "Inputa"
+        },
+        "internet/coursef/2021": {
+          "word": "Interneahtta"
+        },
+        "drop/pre-express/2021": {
           "word": "Gahčá"
         },
         "input/csd/2022": {
@@ -40,55 +44,62 @@
         "copyright/csd/2022": {
           "word": "Dahkkivuoigatvuohta"
         },
-        "code/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "drop/coursea/2022": {
+          "word": "Gahčá"
         },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "drop/courseb/2022": {
+          "word": "Gahčá"
         },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "copyright/coursee/2022": {
+          "word": "Dahkkivuoigatvuohta"
         },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "input/coursef/2021": {
+        "input/coursef/2022": {
           "word": "Inputa"
         },
-        "internet/coursef/2021": {
+        "internet/coursef/2022": {
           "word": "Interneahtta"
         },
-        "drop/courseb/2021": {
+        "drop/pre-express/2022": {
           "word": "Gahčá"
         },
-        "drop/coursea/2021": {
-          "word": "Gahčá"
+        "artist/csc-starquilts/2023": {
+          "word": "Dáiddár"
         },
-        "drop/pre-express/2021": {
-          "word": "Gahčá"
+        "comments/csc-starquilts/2023": {
+          "word": "Kommentárat"
         },
-        "copyright/coursee/2021": {
-          "word": "Dahkkivuoigatvuohta"
-        },
-        "input/csd/2021": {
+        "input/csd/2023": {
           "word": "Inputa"
         },
-        "processing/csd/2021": {
+        "processing/csd/2023": {
           "word": "Gieđahallan"
         },
-        "digital_footprint/csd/2021": {
+        "digital_footprint/csd/2023": {
           "word": "Digitála Luodda"
         },
-        "copyright/csd/2021": {
+        "copyright/csd/2023": {
           "word": "Dahkkivuoigatvuohta"
+        },
+        "drop/coursea/2023": {
+          "word": "Gahčá"
+        },
+        "drop/courseb/2023": {
+          "word": "Gahčá"
+        },
+        "copyright/coursee/2023": {
+          "word": "Dahkkivuoigatvuohta"
+        },
+        "input/coursef/2023": {
+          "word": "Inputa"
+        },
+        "internet/coursef/2023": {
+          "word": "Interneahtta"
+        },
+        "drop/pre-express/2023": {
+          "word": "Gahčá"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Fierbmi"
         }
       }
     }

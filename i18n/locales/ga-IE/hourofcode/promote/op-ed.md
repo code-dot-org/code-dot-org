@@ -1,5 +1,5 @@
 ---
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+title: Samplach Op-ed Tacúil Seachtain Oideachais Ríomheolaíochta agus Uair an Chóid
 ---
 
 {{ signup_button }}

@@ -1,0 +1,37 @@
+name 'SP-VPL-21-CSD-mod5-ProjectOverview-AIML_-22_23'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Chapter 1 Project: Make a Machine Learning App
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">In this one or two day project, students apply their skills from the first half of the unit to create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+</p></div>
+
+## Sample Student Projects
+
+##### Click the images below to view the sample projects in a new tab.
+
+<div style="float: left; text-align:center;"><a href="https://studio.code.org/projects/applab/0SK4Dg5S5AMnlYXXrJtutpv0R_dbfwZAelY4L7cUsUQ" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:150px; margin-right:25; margin-top:0px; margin-bottom:5px;" src="https://images.code.org/ff5f4f4efa57a671137a02c6ad135fde-image-1641917143591.04.32 AM.png" width="125px"; alt="Image of dress code app"></a></div>
+
+<div style="float: left; text-align:center;"><a href="https://studio.code.org/projects/applab/D9hbf5AkDwietNvVFbYG4mwywWPGxCvkm4jWxOT-JzM/" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:150px; margin-right:25; margin-top:0px; margin-bottom:5px;" src="https://images.code.org/e5cf38c89b083ae9abcd597fb0e97ed3-image-1639774938746.02.03 PM.png" width="125px" alt="Immage of procrastination calculator app"></a></div>
+
+<div style="float: left; text-align:center;"><a href="https://studio.code.org/projects/applab/9_BNOybSxs7brT-55BS4nTlpXg5PCmY4RdPrhND2DE4" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:150px; margin-right:25; margin-top:0px; margin-bottom:5px;" src="https://images.code.org/5eb7d19047002fada2f5b64e6b233076-image-1641916759870.57.57 AM.png" width="125px" alt="Image of vehicle efficiency app"></a></div>
+
+
+<div style="clear:both"/>
+
+## Pacing Recommendation
+
+##### If you are short on time, this mini project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
+
+## Project Resources
+
+* ##### <a href="https://studio.code.org/s/csd7-2023/lessons/16" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit" target="blank" rel="noopener noreferrer" >Project guide</a> 
+* ##### <a href="https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view" target="blank" rel="noopener noreferrer" >Project rubric</a> 
+
+
+MARKDOWN

@@ -1,7 +1,7 @@
 {
   "addCSSButton": "添加 CSS",
-  "addImageButton": "添加图片",
   "addHTMLButton": "添加 HTML",
+  "addImageButton": "添加图片",
   "closeFullscreenPreview": "关闭全屏预览",
   "currentProjectCapacity": "已使用 {totalMegabytes}MB 中的 {currentMegabytes}MB",
   "disallowedHtml": "文件 “{filename}” 包含不允许的 HTML 元素：`{disallowedTags}`。关闭此对话框后，它们会将被删除。",
@@ -14,8 +14,8 @@
   "reset": "重置 Web Lab",
   "resetComplete": "Web Lab重置已完成",
   "resetFailure": "无法重置 Web Lab： {message}。",
-  "toggleInspectorOn": "检查：关闭",
   "toggleInspectorOff": "检查：关闭",
+  "toggleInspectorOn": "检查：关闭",
   "troubleshootingSupport": "有关更多信息，请参阅我们的支持文章 [“Web Lab问题疑难解答”]({url}) 。",
   "uploadError": "上传错误"
 }

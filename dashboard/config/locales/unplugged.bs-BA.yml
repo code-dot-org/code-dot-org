@@ -2,8 +2,95 @@
 bs:
   data:
     unplugged:
+      BigEvent:
+        title: Veliki Događaj
+      BigEvent_2018:
+        title: Veliki Događaj
+      BigEvent_2019:
+        title: Veliki Događaj
+      BinaryBracelets:
+        title: Binarne narukvice
+      BinaryBracelets_2018:
+        title: Binarne narukvice
+      BinaryBracelets_2019:
+        title: Binarne narukvice
+      BuildingAFoundation:
+        title: Izrada Temelja
+      ComputationalThinking:
+        title: Računarsko razmišljanje
+      Conditionals:
+        title: Uvjeti
+      Conditionals_2018:
+        title: Uvjeti
+      Conditionals_2019:
+        title: Uvjeti
+      Crowdsourcing:
+        title: Crowdsourcing
+      DesignRecipe:
+        title: Recept za Dizajn
+      DigitalCitizenship:
+        title: Digitalno Državljanstvo
+      DigitalFootprint:
+        title: Digitalni otisak stopala
+      DigitalFootprint_2018:
+        title: Digitalni otisak stopala
+      DigitalFootprint_2019:
+        title: Digitalni otisak stopala
+      FunctionalSuncatchers:
+        title: Funkcionalni Vitraži
+      GettingLoopy:
+        title: Zapetljavanje
+      GettingLoopy_2018:
+        title: Zapetljavanje
+      GettingLoopy_2019:
+        title: Zapetljavanje
+      GoingPlacesSafely:
+        title: Sigurna Putovanja
+      GoingPlacesSafely_2018:
+        title: Sigurna Putovanja
+      GoingPlacesSafely_2019:
+        title: Sigurna Putovanja
+      GraphPaperProgramming:
+        title: Papirno Programiranje Grafikona
+      GraphPaperProgramming_2018:
+        title: Papirno Programiranje Grafikona
+      GraphPaperProgramming_2019:
+        title: Papirno Programiranje Grafikona
+      Internet:
+        title: Internet
+      MoveIt:
+        title: Pomakni, pomakni
+      MoveItMoveIt_2018:
+        title: Pomakni, Pomakni
+      MoveItMoveIt_2019:
+        title: Pomakni, Pomakni
+      PaperPlanes:
+        title: 'Stvarni algoritmi: Papirni Planovi'
+      PaperPlanes_2018:
+        title: 'Stvarni algoritmi: Papirni Planovi'
+      PaperPlanes_2019:
+        title: 'Stvarni algoritmi: Papirni Planovi'
+      PlantASeed:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      PlantASeed_2018:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      PlantASeed_2019:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      RelayProgramming:
+        title: Prijenos programiranja
+      RelayProgramming_2018:
+        title: Prijenos programiranja
+      RelayProgramming_2018_2019:
+        title: Prijenos programiranja
+      SongwritingParameters:
+        title: Pisanje pjesama
+      SongwritingWithParameters:
+        title: Pisanje pjesama sa Parametrima
+      TangramAlgorithms:
+        desc: Ova lekcija nam pokazuje nešto veoma važno o algoritmima. Ako držite
+          algoritam jednostavnim postoji mnogo načina da ga koristiš. Ako želiš da
+          svi završe sa istom stvari, onda Vaš algoritam treba još detalja.
       Unplug1:
-        title: Uvod u računarstvo
         desc: Ova lekcija će uvesti koncept računarstva i objasniti šta računarski
           znanstvenik radi.  Također će dati studentima priliku da preuzmu ulogu računarskog
           znanstvenika.  Do kraja aktivnosti, svaki student će imati podsjetnik onoga
@@ -11,6 +98,11 @@ bs:
           djece o riječima koje se pojavljuju u kursu kojeg rade, ali predstavljajući
           ih u zabavnom i razigranom okruženju daleko je produktivnije nego čekanje
           vise naprednih mogucnosti.
+        title: Uvod u računarstvo
+      Unplug10:
+        title: Internet
+      Unplug11:
+        title: Zamotavanje
       Unplug2:
         title: Računarsko razmišljanje
       Unplug3:
@@ -25,181 +117,89 @@ bs:
         title: Apstrakcija
       Unplug9:
         title: Prijenos programiranja
-      Unplug10:
-        title: Internet
-      Unplug11:
-        title: Zamotavanje
       UnplugHappyMaps:
         title: Vesele Mape
-      MoveIt:
-        title: Pomakni, pomakni
-      PlantASeed:
-        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
-      BuildingAFoundation:
-        title: Izrada Temelja
-      GettingLoopy:
-        title: Zapetljavanje
-      RelayProgramming:
-        title: Prijenos programiranja
-      Conditionals:
-        title: Uvjeti
-      BigEvent:
-        title: Veliki Događaj
-      GoingPlacesSafely:
-        title: Sigurna Putovanja
-      GraphPaperProgramming:
-        title: Papirno Programiranje Grafikona
-      PaperPlanes:
-        title: 'Stvarni algoritmi: Papirni Planovi'
-      BinaryBracelets:
-        title: Binarne narukvice
-      DigitalFootprint:
-        title: Digitalni otisak stopala
-      ComputationalThinking:
-        title: Računarsko razmišljanje
-      FunctionalSuncatchers:
-        title: Funkcionalni Vitraži
-      SongwritingParameters:
-        title: Pisanje pjesama
-      Internet:
-        title: Internet
-      Crowdsourcing:
-        title: Crowdsourcing
-      DigitalCitizenship:
-        title: Digitalno Državljanstvo
-      TangramAlgorithms:
-        desc: Ova lekcija nam pokazuje nešto veoma važno o algoritmima. Ako držite
-          algoritam jednostavnim postoji mnogo načina da ga koristiš. Ako želiš da
-          svi završe sa istom stvari, onda Vaš algoritam treba još detalja.
-      SongwritingWithParameters:
-        title: Pisanje pjesama sa Parametrima
-      DesignRecipe:
-        title: Recept za Dizajn
-      courseA_unplugged_loops:
-        desc: U ovoj lekciji, Vi ćete učiti o petljama!
-      courseB_unplugged_MRF:
-        title: Izvanmrežna aktivnost
-        desc: U ovoj lekciji, Vi ćete 'programirati' Vaše prijatelje!
-      courseB_unplugged_loopyMRF:
-        title: Izvanmrežna aktivnost
-        desc: Baš kao u "Mojim robotskim prijateljima", Vi ćete "programirati" Vaše
-          prijatelje, ali ovaj put sa petljama!
-      courseC_Unplugged_ScreenOutTheMean:
-        title: Izvanmrežna aktivnost
-        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
-      courseD_unplugged_digitalCitizenship:
-        title: Izvanmrežna aktivnost
-        desc: Danas ćete naučiti što znači biti digitalni građanin.
-      courseF_unplugged_powerOfWords:
-        title: Izvanmrežna aktivnost
-        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
-      courseAB_unplugged_plantASeed:
-        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
-      courseA_unplugged_happyMaps:
+      UnplugHappyMaps_2018:
         title: Vesele Mape
-      courseA_unplugged_goingPlacesSafely:
-        title: Sigurna Putovanja
+      UnplugHappyMaps_2019:
+        title: Vesele Mape
       courseABC_unplugged_bigEvent:
         title: Veliki Događaj
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      courseA_unplugged_goingPlacesSafely:
+        title: Sigurna Putovanja
+      courseA_unplugged_happyMaps:
+        title: Vesele Mape
+      courseA_unplugged_loops:
+        desc: U ovoj lekciji, Vi ćete učiti o petljama!
+      courseA_unplugged_loops_2018:
+        desc: U ovoj lekciji, Vi ćete učiti o petljama!
+      courseA_unplugged_loops_2019:
+        desc: U ovoj lekciji, Vi ćete učiti o petljama!
+      courseB_unplugged_MRF:
+        desc: U ovoj lekciji, Vi ćete 'programirati' Vaše prijatelje!
+        title: Izvanmrežna aktivnost
+      courseB_unplugged_MRF_2018:
+        title: Moji Prijatelji Roboti
+      courseB_unplugged_MRF_2019:
+        title: Moji Prijatelji Roboti
       courseB_unplugged_digitalFootprint:
         title: Digitalni otisak stopala
-      courseC_unplugged_buildingAFoundation:
-        title: Izrada Temelja
-      courseC_unplugged_paperPlanes:
-        title: 'Stvarni algoritmi: Papirni Planovi'
-      courseC_unplugged_gettingLoopy:
-        title: Zapetljavanje
+      courseB_unplugged_loopyMRF:
+        desc: Baš kao u "Mojim robotskim prijateljima", Vi ćete "programirati" Vaše
+          prijatelje, ali ovaj put sa petljama!
+        title: Izvanmrežna aktivnost
+      courseC_Unplugged_ScreenOutTheMean:
+        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
+        title: Izvanmrežna aktivnost
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
+        title: Izvanmrežna aktivnost
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
+        title: Izvanmrežna aktivnost
       courseC_unplugged_binaryBracelets:
         title: Binarne narukvice
+      courseC_unplugged_buildingAFoundation:
+        title: Izrada Temelja
+      courseC_unplugged_gettingLoopy:
+        title: Zapetljavanje
+      courseC_unplugged_paperPlanes:
+        title: 'Stvarni algoritmi: Papirni Planovi'
+      courseD_unplugged_conditionalsCards:
+        title: Uvjeti s Kartama
+      courseD_unplugged_digitalCitizenship:
+        desc: Danas ćete naučiti što znači biti digitalni građanin.
+        title: Izvanmrežna aktivnost
+      courseD_unplugged_digitalCitizenship_2018:
+        desc: Danas ćete naučiti što znači biti digitalni građanin.
+        title: Izvanmrežna aktivnost
+      courseD_unplugged_digitalCitizenship_2019:
+        desc: Danas ćete naučiti što znači biti digitalni građanin.
+        title: Izvanmrežna aktivnost
       courseD_unplugged_graphPaperProgramming:
         title: Papirno Programiranje Grafikona
       courseD_unplugged_relayProgramming:
         title: Prijenos programiranja
-      courseD_unplugged_conditionalsCards:
-        title: Uvjeti s Kartama
-      courseE_unplugged_songwritingParameters:
-        title: Pisanje pjesama
-      courseE_unplugged_internet:
-        title: Internet
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
+      courseE_unplugged_internet:
+        title: Internet
       courseE_unplugged_songwriting:
         title: Pisanje pjesama
+      courseE_unplugged_songwritingParameters:
+        title: Pisanje pjesama
+      courseF_unplugged_powerOfWords:
+        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
+        title: Izvanmrežna aktivnost
+      courseF_unplugged_songwritingParameters:
+        title: Pisanje pjesama sa Parametrima
       courseF_unplugged_tangrams:
         desc: Ova lekcija nam pokazuje nešto veoma važno o algoritmima. Ako držite
           algoritam jednostavnim postoji mnogo načina da ga koristiš. Ako želiš da
           svi završe sa istom stvari, onda Vaš algoritam treba još detalja.
-      courseF_unplugged_songwritingParameters:
-        title: Pisanje pjesama sa Parametrima
-      courseB_unplugged_MRF_2018:
-        title: Moji Prijatelji Roboti
-      PlantASeed_2018:
-        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
-      UnplugHappyMaps_2018:
-        title: Vesele Mape
-      GoingPlacesSafely_2018:
-        title: Sigurna Putovanja
-      courseA_unplugged_loops_2018:
-        desc: U ovoj lekciji, Vi ćete učiti o petljama!
-      BigEvent_2018:
-        title: Veliki Događaj
-      GraphPaperProgramming_2018:
-        title: Papirno Programiranje Grafikona
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Izvanmrežna aktivnost
-        desc: Danas ćete naučiti što znači biti digitalni građanin.
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Izvanmrežna aktivnost
-        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
-      Conditionals_2018:
-        title: Uvjeti
-      DigitalFootprint_2018:
-        title: Digitalni otisak stopala
-      PaperPlanes_2018:
-        title: 'Stvarni algoritmi: Papirni Planovi'
-      GettingLoopy_2018:
-        title: Zapetljavanje
-      BinaryBracelets_2018:
-        title: Binarne narukvice
-      MoveItMoveIt_2018:
-        title: Pomakni, Pomakni
-      RelayProgramming_2018:
-        title: Prijenos programiranja
-      courseB_unplugged_MRF_2019:
-        title: Moji Prijatelji Roboti
-      Conditionals_2019:
-        title: Uvjeti
-      GraphPaperProgramming_2019:
-        title: Papirno Programiranje Grafikona
-      RelayProgramming_2018_2019:
-        title: Prijenos programiranja
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Izvanmrežna aktivnost
-        desc: Danas ćete naučiti što znači biti digitalni građanin.
-      GettingLoopy_2019:
-        title: Zapetljavanje
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Izvanmrežna aktivnost
-        desc: Danas ćete naučiti šta uraditi ako se neke ponaša loše na mreži.
-      BigEvent_2019:
-        title: Veliki Događaj
-      BinaryBracelets_2019:
-        title: Binarne narukvice
-      PaperPlanes_2019:
-        title: 'Stvarni algoritmi: Papirni Planovi'
-      PlantASeed_2019:
-        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
-      UnplugHappyMaps_2019:
-        title: Vesele Mape
-      GoingPlacesSafely_2019:
-        title: Sigurna Putovanja
-      courseA_unplugged_loops_2019:
-        desc: U ovoj lekciji, Vi ćete učiti o petljama!
-      MoveItMoveIt_2019:
-        title: Pomakni, Pomakni
-      DigitalFootprint_2019:
-        title: Digitalni otisak stopala
-      timeforcs_demo_crowdsourcing:
-        title: Crowdsourcing
       timeforcs_demo_conditionals:
         title: Uvjeti
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing

@@ -3,7 +3,7 @@
   "config": {
     "func": "changeMoveEachLR",
     "blockText": "{GROUP} do {MOVE} {DIR} forever",
-    "style": "dance_blocks",
+    "style": "lab_blocks",
     "args": [
       {
         "name": "GROUP",

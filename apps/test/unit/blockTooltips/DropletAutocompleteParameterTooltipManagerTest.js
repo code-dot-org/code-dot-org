@@ -18,7 +18,7 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
     beforeEach(() => {
       // Build a basic droplet config.
       let dropletConfig = {
-        showExamplesLink: 'http://example.com/examples'
+        showExamplesLink: 'http://example.com/examples',
       };
 
       // Create the bare essentials for a block description.
@@ -26,9 +26,9 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
         parameterInfos: [
           {
             description: 'parameter description',
-            assetTooltip: 'assetTooltip'
-          }
-        ]
+            assetTooltip: 'assetTooltip',
+          },
+        ],
       };
 
       // Mock a DropletTooltipManager.

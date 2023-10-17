@@ -17,8 +17,8 @@ const ProjectsPromo = () => {
           {
             id: 'projects-promo-thebadguys',
             url: '/projects/thebadguys/new',
-            text: i18n.coursesLearnHeroButton()
-          }
+            text: i18n.coursesLearnHeroButton(),
+          },
         ]}
       />
     );
@@ -33,8 +33,8 @@ const ProjectsPromo = () => {
         {
           id: 'view-project-ideas',
           url: pegasus('/project-ideas'),
-          text: i18n.projectPromoButton()
-        }
+          text: i18n.projectPromoButton(),
+        },
       ]}
     />
   );

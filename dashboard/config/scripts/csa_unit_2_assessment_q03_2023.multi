@@ -27,3 +27,5 @@ Since the parameter name is the same as the name of the instance variable, we ca
 
 Changing the line to `x = this.x` would be incorrect. The value on the left of the assignment operator ( `=` ) is assigned the value on the right of the assignment operator.
 MARKDOWN
+
+allow_multiple_attempts true

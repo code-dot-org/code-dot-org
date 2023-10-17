@@ -58,7 +58,7 @@ fr:
       Building an App: Fabriquer une application
       'Bunny ': 'Lapin
 
-'
+        '
       Bunny Jumper: Saut de lapin
       Button Circuits: Circuits de bouton
       Buttons and Switch: Boutons et interrupteur
@@ -87,6 +87,7 @@ fr:
       Change: Changer
       Changing Screens: Changer d’écran
       Changing Sensor Scale: Modifier l’échelle des capteurs
+      Check for Understanding: Vérifier la compréhension
       Checking for a Winner: Recherche d'un gagnant
       Choose Your Own Adventure: Choisissez votre propre aventure
       Choosing Good IDs: Choisir les bons identifiants
@@ -112,12 +113,12 @@ fr:
       Course E Artist Project: Cours E Projet Artiste
       Course E Sprite Lab Project: 'Cours E Projet du Labo des Lutins
 
-'
+        '
       'Course E: Play Lab Project': 'Cours E : Projet Play Lab'
       Course F Artist Project: Cours E Projet Artistique
       Course F Sprite Lab Project: 'Cours F Projet d''Artiste
 
-'
+        '
       'Course F: Artist Project': 'Cours F : Projet Artiste'
       'Course F: Artist Project - Revise': 'Cours F : Projet Artiste - Révision'
       'Course F: Play Lab Project': 'Cours F : Projet Play Lab'
@@ -148,7 +149,7 @@ fr:
       Digital Sharing - Unplugged Activity: Partage numérique - Activité déconnectée
       Dogger Example: 'Exemple de Dogger
 
-'
+        '
       Drawing: Dessiner
       Drawing Shapes: Dessiner des formes
       Editing Images: Modifier les images
@@ -213,6 +214,7 @@ fr:
       Intro to Design Mode: Introduction au mode création
       Intro to For Loops: Intro au Boucles « Pour »
       Introducing Sprite Lab: Introduction au Labo des Sprites
+      Introduction: Introduction
       Introduction to Arrays: Introduction aux Tableaux
       Introduction to Game Lab: Introduction au labo de jeux
       Keeping Data Secret: Garder les Données Secrètes
@@ -326,13 +328,13 @@ fr:
       'Review: HTML': 'Révision : HTML'
       Revise Artist Project: 'Réviser le Projet d''Artiste
 
-'
+        '
       Revise Sprite Lab Project: 'Réviser le Projet du Labo des Lutins
 
-'
+        '
       Robot Doodle: 'Gribouillis de Robot
 
-'
+        '
       Run a simulation: Lancer une simulation
       Sample App: Appli d’exemple
       Sample Game: Jeu d’exemple
@@ -343,6 +345,7 @@ fr:
       Sample Website: Exemple de site web
       Sensor Experiment: Expérience des capteurs
       Shapes and Parameters: Formes et paramètres
+      Share Out: Partager
       Skill Building: Développement des Compétences
       Skill-Building: Développement des Compétences
       Social Sleuth: Limier social
@@ -353,7 +356,7 @@ fr:
       Sprite Interactions Review: Révision des interactions de sprite
       Sprite Lab Example Project: 'Exemple de Projet du Labo des Lutins
 
-'
+        '
       Sprite Lab Project: Projet Labo du Lutin
       Sprite Movement: Le Déplacement du Lutin
       Sprite Properties: Propriétés du sprite
@@ -372,6 +375,7 @@ fr:
       Tour of Design Mode: Visite du mode création
       Train AI to Clean the Ocean: Former l'IA pour nettoyer l'océan
       Train an AI to Clean the Ocean: Entraîner l'IA pour rendre l'océan propre
+      Unplugged Activity: Activité Déconnectée
       Using Training Data: Utiliser les données d'entraînement
       Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
@@ -504,7 +508,7 @@ fr:
       'Video: While Loops with the Farmer': " Vidéo : Les Boucles Tant Que avec la
         Fermière"
       'Video: Wrap-up': 'Vidéo : Conclusion '
-      Warm Up: Warm-up (Séance d’échauffement)
+      Warm Up: Séance d’échauffement
       Website Project: Projet de site Web
       Welcome to Monster Town: Bienvenue à Monstreville
       Where'd They Go?: Is sont passés où ?

@@ -6,7 +6,7 @@ const statuses = Object.values(LevelStatus);
 
 const defaultExport = {
   title: 'ProgressBubble',
-  component: ProgressBubble
+  component: ProgressBubble,
 };
 
 const Template = args => <ProgressBubble {...args} />;
@@ -27,9 +27,9 @@ statuses.map(status => {
       status: status,
       isLocked: false,
       url: '/foo/bar',
-      icon: 'fa-document'
+      icon: 'fa-document',
     },
-    disabled: false
+    disabled: false,
   };
   stories[`BubbleStatus-${status}`] = story;
 });
@@ -46,9 +46,9 @@ ConceptAssessmentNotTried.args = {
     isConceptLevel: true,
     isLocked: false,
     url: '/foo/bar',
-    icon: 'fa-document'
+    icon: 'fa-document',
   },
-  disabled: false
+  disabled: false,
 };
 stories[`ConceptAssessmentNotTried`] = ConceptAssessmentNotTried;
 
@@ -63,9 +63,9 @@ ConceptAssessmentSubmitted.args = {
     isConceptLevel: true,
     isLocked: false,
     url: '/foo/bar',
-    icon: 'fa-document'
+    icon: 'fa-document',
   },
-  disabled: false
+  disabled: false,
 };
 stories[`ConceptAssessmentSubmitted`] = ConceptAssessmentSubmitted;
 
@@ -77,9 +77,9 @@ BubbleNoUrl.args = {
     bubbleText: '1',
     status: LevelStatus.perfect,
     isLocked: false,
-    icon: 'fa-document'
+    icon: 'fa-document',
   },
-  disabled: false
+  disabled: false,
 };
 stories[`BubbleNoUrl`] = BubbleNoUrl;
 
@@ -92,9 +92,9 @@ DisabledBubble.args = {
     status: LevelStatus.perfect,
     isLocked: false,
     url: '/foo/bar',
-    icon: 'fa-document'
+    icon: 'fa-document',
   },
-  disabled: true
+  disabled: true,
 };
 stories[`DisabledBubble`] = DisabledBubble;
 
@@ -107,14 +107,14 @@ HiddenTooltipsBubble.args = {
     status: LevelStatus.perfect,
     isLocked: false,
     url: '/foo/bar',
-    icon: 'fa-document'
+    icon: 'fa-document',
   },
   hideToolTips: true,
-  disabled: false
+  disabled: false,
 };
 stories[`HiddenTooltipsBubble`] = HiddenTooltipsBubble;
 
 module.exports = {
   ...stories,
-  default: defaultExport
+  default: defaultExport,
 };

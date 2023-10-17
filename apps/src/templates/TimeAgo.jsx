@@ -7,14 +7,14 @@ class TimeAgo extends React.Component {
   static propTypes = {
     dateString: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.instanceOf(Date)
+      PropTypes.instanceOf(Date),
     ]).isRequired,
     locale: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   state = {
-    timeout: undefined
+    timeout: undefined,
   };
 
   componentDidMount() {
@@ -43,7 +43,7 @@ class TimeAgo extends React.Component {
   clearTimer = () => {
     clearTimeout(this.state.timeout);
     this.setState({
-      timeout: undefined
+      timeout: undefined,
     });
   };
 
@@ -67,5 +67,5 @@ class TimeAgo extends React.Component {
 export const UnlocalizedTimeAgo = TimeAgo;
 
 export default connect(state => ({
-  locale: state.pageConstants && state.pageConstants.locale
+  locale: state.pageConstants && state.pageConstants.locale,
 }))(TimeAgo);

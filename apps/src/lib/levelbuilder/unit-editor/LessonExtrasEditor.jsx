@@ -12,7 +12,7 @@ export default class LessonExtrasEditor extends React.Component {
     lessonExtrasAvailable: PropTypes.bool,
     updateLessonExtrasAvailable: PropTypes.func.isRequired,
     updateProjectWidgetVisible: PropTypes.func.isRequired,
-    updateProjectWidgetTypes: PropTypes.func.isRequired
+    updateProjectWidgetTypes: PropTypes.func.isRequired,
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -113,6 +113,6 @@ export default class LessonExtrasEditor extends React.Component {
 
 const styles = {
   checkbox: {
-    margin: '0 0 0 7px'
-  }
+    margin: '0 0 0 7px',
+  },
 };

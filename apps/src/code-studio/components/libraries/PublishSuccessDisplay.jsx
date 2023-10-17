@@ -9,7 +9,7 @@ export default class PublishSuccessDisplay extends React.Component {
   static propTypes = {
     libraryName: PropTypes.string.isRequired,
     channelId: PropTypes.string.isRequired,
-    onShareTeacherLibrary: PropTypes.func
+    onShareTeacherLibrary: PropTypes.func,
   };
 
   render = () => {
@@ -41,6 +41,6 @@ export default class PublishSuccessDisplay extends React.Component {
 const styles = {
   centerContent: {
     display: 'flex',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 };

@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "Добави CSS",
+  "addHTMLButton": "Добави HTML",
+  "addImageButton": "Добави Изображение",
+  "closeFullscreenPreview": "Затвори прегледа на цял екран",
+  "currentProjectCapacity": "{currentMegabytes}MB от {totalMegabytes}MB използвани",
+  "disallowedHtml": "Файлът \"{filename}\" съдържа HTML елементи, които не са разрешени: `{disallowedTags}`. Те ще бъдат премахнати при затваряне на този диалог.",
+  "errorSavingProject": "Нещо не е сработило при автоматичното запазване на проекта ви. Проверете интернет връзката си и опитайте да запазите проекта ръчно. Ако проблемът продължава, опитайте да презаредите страницата, за да започнете отначало.",
+  "fatalError": "Фатална Грешка: {message}. Ако сте в Режим на Частно сърфиране, данните не могат да бъдат записани.",
+  "loadFailure": "Съжаляваме, Web Lab не успя да зареди по някаква причина. Грешка: {message}",
+  "openFullscreenPreview": "Отвори прегледа на цял екран",
+  "refreshPreview": "Презареди и Запази",
+  "reloading": "Презареждане...",
+  "reset": "Нулиране на Web Lab",
+  "resetComplete": "Нулиране на Web Lab Завършено",
+  "resetFailure": "Неуспешно нулиране на Web Lab: {message}.",
+  "toggleInspectorOff": "Инспектор: Включен",
+  "toggleInspectorOn": "Инспектор: Изключен",
+  "troubleshootingSupport": "За повече информация вижте нашата статия за поддръжка [\"Отстраняване на проблеми в Web Lab\"]({url}).",
+  "uploadError": "Грешка при Качване"
 }

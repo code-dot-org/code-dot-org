@@ -4,7 +4,7 @@ az:
     progressions:
       '"If/Else" with the Bee': 'Arı ilə "Əgər/Yoxsa"
 
-'
+        '
       8-Bit Binary Number Widget: 8-Bit İkili Nömrə Vidceti
       AI Lab and Isaac's Data: AI Laboratoriyası və İshaqın Məlumatları
       AI Lab and Kim's Data: AI Laboratoriyası və Kimin Məlumatları
@@ -28,20 +28,21 @@ az:
       Adding New Screens: Yeni ekranların əlavə edilməsi
       Adding Pages: 'səhifələri əlavə etmək
 
-'
+        '
       Adding Screens: ekranlar əlavə etmək
       Alien Defender: Yadplanteli mudafiyesi
       Alternative Datasets: Alternativ Datasets
       Analog Sensors: Analoq sensorlar
       Animate Your Scene: 'Səhnənizi Canlandırın
 
-'
+        '
       App Lab Intro - Video: 'Tətbiq Laboratoriyasına Giriş - Video
 
-'
+        '
       'App Project: Bugs and Features': 'Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər'
       'App Project: Linking Screens': 'Tətbiq Layihəsi: Ekranları Bağlamaq'
       'App Project: Screen Design': 'Proqram Layihəsi: Ekran Dizaynı'
+      'App Project: Screen Import': 'Tətbiq Layihəsi: Ekran İdxalı'
       'App: Choose a Kid''s Movie': Tətbiq:Uşağın kinosunu seçin
       'App: Friend Finder': 'Tətbiq: Dost tapan'
       'App: Guess the Number': 'Tətbiq: rəqəmi təxmin et '
@@ -51,17 +52,17 @@ az:
       'App: My Famous Birthday': Mənim məşhur ad günüm
       'App: National Parks': 'milli parklar
 
-'
+        '
       'App: Outfit Picker': 'Tətbiq: paltar seçən'
       'App: Pet Chooser': 'Tətbiq: Ev Heyvanı seçən'
       'App: Stamp Notebook': 'Proqram: Stamp Notbuk'
       'App: Story Creator': hekayə yaradıcısı
       'App: The Fastest Finger': 'ən sürətli barmaq
 
-'
+        '
       'App: Where Should I Live?': 'mən harda yaşamalıyam
 
-'
+        '
       Arrays: Massivlər
       Artist Intro with JR Hildebrand: JR Hildebrand ilə Rəssam Girişi
       Artist Intro with JR Hildebrande: JR Hildebrand ilə Rəssam Girişi
@@ -101,7 +102,7 @@ az:
       CSS and Style Sheets: CSS və Stil səhifələri
       Cake Defender: Keks mudafiəsi
       Cake Survey: Tort Sorğusu
-      Challenge: meydan oxumaq
+      Challenge: Çətin tapşırıq
       Challenge Levels: Çağırış Səviyyələri
       Challenge/Practice: Çağırış/Təcrübə
       'Challenge: Add More Inputs': 'Çağırış: Daha Çox Giriş Əlavə Edin'
@@ -114,10 +115,12 @@ az:
       Change: Dəyişmək
       Changing Screens: Ekranların dəyişdirilməsi
       Check Your Work: İşinizi Yoxlayın
+      Check for Understanding: Anlayışı yoxlayın
       Check-In Survey: 'giriş sorğusu
 
-'
+        '
       Checking for a Winner: Qazananı yoxlamaq
+      Choice: Seçim
       'Choice Levels: Customize Your App': 'Seçim səviyyələri: Tətbiqinizi fərdiləşdirin'
       Choose Your Own Adventure: Öz macəranızı seçin
       Choosing Good IDs: Yaxşı şəxsiyyət vəsiqələrinin seçilməsi
@@ -172,7 +175,7 @@ az:
       Design Your Game: Oyununu dizayn et
       Design Your Prototype: 'Prototipinizi dizayn edin
 
-'
+        '
       Design a Screen for your App: Proqramınız üçün ekran dizayn edin
       Design an AI App - AI Lab: AI Proqramın Dizaynı - AI Laboratoriyası
       Designing Screens with Code: Kod ilə ekran dizaynı
@@ -180,10 +183,10 @@ az:
       Digital Sharing - Unplugged Activity: Rəqəmsal Paylaşım - Çıxarılan Fəaliyyət
       Draw Your Background: 'arxa fonunuzu çəkin
 
-'
+        '
       Draw a Background: 'arxa fon çək
 
-'
+        '
       Drawing: Şəkil
       Drawing Shapes: Rəsm Şekilləri
       Driver Alert System: sürücü xəbərdarlığı sistemi
@@ -209,14 +212,15 @@ az:
       'Exploration: Clicker Game': 'Kəşfiyyat: Klik Oyunu'
       'Exploration: For Loops': 'Kəşfiyyat: Döngələr üçün
 
-'
+        '
       'Exploration: Rikki''s Poster': 'Kəşfiyyat: Rikkinin Posteri
 
-'
+        '
       'Exploration: Sample Apps': 'Tədqiqat: Nümunə Tətbiqlər'
       'Exploration: Sample Programs': 'Tədqiqat: Nümunə Proqramlar'
       'Exploration: Sample Project': 'Tədqiqat: Nümunə Layihəsi'
       Explore HTML: HTML kəşf edin
+      Explore!: Kəşf edin!
       Exploring CS in Entertainment: Əyləncədə CS-ni araşdırın
       Exploring more CSS: Daha çox CSS-i araşdırın
       Extra: Əlavə
@@ -243,6 +247,7 @@ az:
       'Free Play: Make an Interactive Scene': 'Pulsuz Oyun: İnteraktiv bir səhnə yaradın'
       Functions: Funksiyalar
       Functions with Parameters: Parametrli funksiyalar
+      Geometric Sun: Həndəsi Günəş
       Get In Formation: Düzül
       Getting Properties: Xüsusiyyətləri əldə etmək
       Graph Paper Programming - Unplugged Activity: Qrafik Kağız Proqramlaşdırma -
@@ -269,12 +274,14 @@ az:
       Innovation Research: Yenilik Araşdırması
       Input Examples: Giriş Nümunələri
       Input with If-Else: If-Else ilə daxil edin
+      Inspiration!: ilham
       InspirationalArtwork: İlham verən sənət əsəri
       Intro to Design Mode: Dizayn rejiminə giriş
       Intro to For Loops: For Loops-a giriş
       Intro to Sprites: Spraytlara giriş
       Intro to Variables: Dəyişənlərə giriş
       Introducing Sprite Lab: Sprite Laboratoriyasını təqdim edirik
+      Introduction: Giriş
       Introduction to Arrays: Massivlərə Giriş
       Introduction to Game Lab: Oyun Laboratoriyasına giriş
       Introduction to Variables: Dəyişənlərə giriş
@@ -396,6 +403,7 @@ az:
       Setup: Qur
       Shapes and Parameters: Forma və parametrlər
       Shapes and the Draw Loop: Formalar və Çəkmə Döngəsi
+      Share Out: Paylaş
       Share Your App: Tətbiqinizi paylaşın
       Side Scroller: Yan Scroller
       Simple Circuits: Sadə sxemlər
@@ -433,7 +441,7 @@ az:
       The Draw Loop: Bərabərlik Döngüsü
       The Harvester: 'Biçinçi
 
-'
+        '
       The Internet - Unplugged Activity: İnternet - Bağlanmamış Fəaliyyət
       The Power of Words - Unplugged Activity: Sözlərin Gücü - Unplugged Fəaliyyət
       The Right App - Unplugged Activity: Düzgün Tətbiq - Çıxarılan Fəaliyyət
@@ -441,6 +449,7 @@ az:
       Tour of Design Mode: Dizayn rejimi turu
       Train AI to Clean the Ocean: Okeanı təmizləmək üçün süni intellektə öyrədin
       UI Element Properties: UI Element Xüsusiyyətləri
+      Unplugged Activity: Sərbəst fəaliyyət
       Upload Your Images: Şəkillərinizi yükləyin
       User Interface: İstifadəçi interfeysi
       Using the Grid: Şəbəkədən istifadə
@@ -453,6 +462,7 @@ az:
       Video - Variables: Video - Dəyişənlər
       'Video: "If/Else"': 'Video: "Əgər/Və_ya"'
       'Video: Conditional Statements': 'Video: Şərti Bəyanatlar'
+      'Video: Conditionals': 'Video: Şərti ifadələr'
       'Video: Conditionals: If Statements': 'Video: Şərti Bəyanatlar: İf Operatorları'
       'Video: Conditionals: If and If/Else Statements': 'Video: Şərti Bəyanatlar:
         İf və İf/Else Operatorları'

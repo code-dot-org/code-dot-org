@@ -20,7 +20,7 @@ describe('ProgrammingMethodEditor', () => {
       examples: [{name: 'example 1'}],
       parameters: [{name: 'parameter 1'}],
       overloadOf: null,
-      canHaveOverload: false
+      canHaveOverload: false,
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -39,26 +39,11 @@ describe('ProgrammingMethodEditor', () => {
     expect(wrapper.text().includes('Editing Method')).to.be.true;
 
     // Display name
-    expect(
-      wrapper
-        .find('input')
-        .at(0)
-        .props().value
-    ).to.equal('getPaint()');
+    expect(wrapper.find('input').at(0).props().value).to.equal('getPaint()');
 
     // Key
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().value
-    ).to.equal('getpaint');
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().readOnly
-    ).to.be.true;
+    expect(wrapper.find('input').at(1).props().value).to.equal('getpaint');
+    expect(wrapper.find('input').at(1).props().readOnly).to.be.true;
   });
 
   it('uses overloadOptions for overload dropdown if canHaveOverload is true', () => {
@@ -66,11 +51,11 @@ describe('ProgrammingMethodEditor', () => {
       <ProgrammingMethodEditor
         initialProgrammingMethod={{
           ...initialProgrammingMethod,
-          canHaveOverload: true
+          canHaveOverload: true,
         }}
         overloadOptions={[
           {key: 'droppaint', name: 'dropPaint()'},
-          {key: 'turnleft', name: 'turnLeft'}
+          {key: 'turnleft', name: 'turnLeft'},
         ]}
       />
     );
@@ -80,7 +65,7 @@ describe('ProgrammingMethodEditor', () => {
     expect(overloadSelector.find('option').map(o => o.props().value)).to.eql([
       '',
       'droppaint',
-      'turnleft'
+      'turnleft',
     ]);
   });
 
@@ -89,11 +74,11 @@ describe('ProgrammingMethodEditor', () => {
       <ProgrammingMethodEditor
         initialProgrammingMethod={{
           ...initialProgrammingMethod,
-          canHaveOverload: false
+          canHaveOverload: false,
         }}
         overloadOptions={[
           {key: 'droppaint', name: 'dropPaint()'},
-          {key: 'turnleft', name: 'turnLeft'}
+          {key: 'turnleft', name: 'turnLeft'},
         ]}
       />
     );
@@ -113,17 +98,12 @@ describe('ProgrammingMethodEditor', () => {
     // Documentation section
     const documentationSection = wrapper.find('CollapsibleEditorSection').at(0);
     expect(documentationSection.props().title).to.equal('Documentation');
+    expect(documentationSection.find('input').at(0).props().value).to.equal(
+      'developer.mozilla.org'
+    );
     expect(
-      documentationSection
-        .find('input')
-        .at(0)
-        .props().value
-    ).to.equal('developer.mozilla.org');
-    expect(
-      documentationSection
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .props().markdown
+      documentationSection.find('TextareaWithMarkdownPreview').at(0).props()
+        .markdown
     ).to.equal('This is a longer description of the code.');
   });
 
@@ -136,10 +116,7 @@ describe('ProgrammingMethodEditor', () => {
     );
     const detailsSection = wrapper.find('CollapsibleEditorSection').at(1);
     expect(
-      detailsSection
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .props().markdown
+      detailsSection.find('TextareaWithMarkdownPreview').at(0).props().markdown
     ).to.equal('getPaint()()');
   });
 
@@ -222,7 +199,7 @@ describe('ProgrammingMethodEditor', () => {
         'externalLink',
         'syntax',
         'examples',
-        'parameters'
+        'parameters',
       ].sort()
     );
     expect(fetchCallBody.name).to.equal('PainterClass');

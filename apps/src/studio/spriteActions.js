@@ -5,7 +5,7 @@ import {
   DEFAULT_ACTOR_FADE_TIME,
   SHAKE_DEFAULT_CYCLES,
   SHAKE_DEFAULT_DISTANCE,
-  SHAKE_DEFAULT_DURATION
+  SHAKE_DEFAULT_DURATION,
 } from './constants';
 import {valueOr} from '../utils';
 

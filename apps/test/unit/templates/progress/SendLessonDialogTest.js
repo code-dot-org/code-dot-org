@@ -13,10 +13,7 @@ describe('SendLessonDialog', () => {
 
     assert.equal(wrapper.find('#uitest-copy-button').length, 1);
     assert.equal(
-      wrapper
-        .find('#uitest-copy-button')
-        .at(0)
-        .props().icon,
+      wrapper.find('#uitest-copy-button').at(0).props().icon,
       'link'
     );
   });

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '../util/color';
 import Button from './Button';
 
@@ -22,7 +23,7 @@ class VerticalImageResourceCard extends Component {
     image: PropTypes.string.isRequired,
     MCShareLink: PropTypes.string,
     jumbo: PropTypes.bool,
-    hasAdjustableHeight: PropTypes.bool
+    hasAdjustableHeight: PropTypes.bool,
   };
 
   render() {
@@ -35,7 +36,7 @@ class VerticalImageResourceCard extends Component {
       jumbo,
       MCShareLink,
       image,
-      hasAdjustableHeight
+      hasAdjustableHeight,
     } = this.props;
     const cardHeight = hasAdjustableHeight ? {} : styles.cardHeight;
     const cardStyle = jumbo
@@ -78,7 +79,7 @@ class VerticalImageResourceCard extends Component {
       courseC: pegasus('/shared/images/courses/logo_tall_coursec.png'),
       courseD: pegasus('/shared/images/courses/logo_tall_coursed.png'),
       courseE: pegasus('/shared/images/courses/logo_tall_coursee.png'),
-      courseF: pegasus('/shared/images/courses/logo_tall_coursef.png')
+      courseF: pegasus('/shared/images/courses/logo_tall_coursef.png'),
     };
     const imgSrc = filenameToImgUrl[image];
 
@@ -117,7 +118,7 @@ class VerticalImageResourceCard extends Component {
 }
 
 VerticalImageResourceCard.defaultProps = {
-  altText: ''
+  altText: '',
 };
 
 const styles = {
@@ -127,7 +128,7 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.border_gray,
     width: 308,
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   jumboCard: {
     overflow: 'hidden',
@@ -136,42 +137,42 @@ const styles = {
     borderColor: color.border_gray,
     width: 473,
     marginBottom: 20,
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   cardHeight: {
-    height: 440
+    height: 440,
   },
   image: {
-    width: 310
+    width: 310,
   },
   jumboImage: {
-    width: 473
+    width: 473,
   },
   imageHeight: {
-    height: 220
+    height: 220,
   },
   text: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal
+    ...fontConstants['main-font-regular'],
+    color: color.charcoal,
   },
   title: {
     paddingTop: 20,
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 15,
-    fontSize: 20
+    fontSize: 20,
   },
   button: {
-    margin: 20
+    margin: 20,
   },
   description: {
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 14,
-    lineHeight: 1.5
+    lineHeight: 1.5,
   },
   descriptionHeight: {
-    height: 89
+    height: 89,
   },
   shareLink: {
     borderWidth: 1,
@@ -180,8 +181,8 @@ const styles = {
     fontSize: 14,
     marginTop: 5,
     padding: 5,
-    width: 258
-  }
+    width: 258,
+  },
 };
 
 export default VerticalImageResourceCard;

@@ -5,10 +5,10 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   selectSection,
   setSections,
-  setStudentsForCurrentSection
+  setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser, {
-  setCurrentUserName
+  setCurrentUserName,
 } from '@cdo/apps/templates/currentUserRedux';
 import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
 import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
@@ -36,7 +36,7 @@ store.dispatch(
   )
 );
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function () {
   // Mount and render the letter:
   const mountPoint = document.createElement('div');
   document.body.appendChild(mountPoint);

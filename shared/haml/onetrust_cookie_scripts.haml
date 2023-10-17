@@ -1,13 +1,16 @@
 - require '../shared/middleware/helpers/experiments'
 -# OneTrust Cookies Consent Notice scripts for code.org
-- cookie_script_env = experiment_value('onetrust_cookie_scripts')
-- if cookie_script_env == 'production'
-  %script{src: 'https://cdn.cookielaw.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d/OtAutoBlock.js', type: 'text/javascript'}
-  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d'}
-  :javascript
-    function OptanonWrapper() { }
+- cookie_script_env = experiment_value('onetrust_cookie_scripts', request)
+- if cookie_script_env == 'off'
+  return
 - elsif cookie_script_env == 'test'
   %script{src: 'https://cdn.cookielaw.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d-test/OtAutoBlock.js', type: 'text/javascript'}
   %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d-test'}
+  :javascript
+    function OptanonWrapper() { }
+- else
+  -# Default to loading the OneTrust UI
+  %script{src: 'https://cdn.cookielaw.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d/OtAutoBlock.js', type: 'text/javascript'}
+  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d'}
   :javascript
     function OptanonWrapper() { }

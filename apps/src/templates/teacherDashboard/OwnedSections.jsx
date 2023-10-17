@@ -21,11 +21,11 @@ class OwnedSections extends React.Component {
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
 
     // redux provided
-    beginEditingSection: PropTypes.func.isRequired
+    beginEditingSection: PropTypes.func.isRequired,
   };
 
   state = {
-    viewHidden: false
+    viewHidden: false,
   };
 
   constructor(props) {
@@ -58,7 +58,7 @@ class OwnedSections extends React.Component {
 
   toggleViewHidden = () => {
     this.setState({
-      viewHidden: !this.state.viewHidden
+      viewHidden: !this.state.viewHidden,
     });
   };
 
@@ -122,31 +122,28 @@ class OwnedSections extends React.Component {
 const styles = {
   button: {
     marginBottom: 20,
-    float: 'right'
+    float: 'right',
   },
   buttonContainer: {
     width: styleConstants['content-width'],
     textAlign: 'right',
     paddingTop: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   hiddenSectionLabel: {
     fontSize: 18,
     paddingBottom: 10,
-    color: color.charcoal
+    color: color.charcoal,
   },
   hiddenSectionDesc: {
     fontSize: 14,
     lineHeight: '22px',
     paddingBottom: 10,
-    color: color.charcoal
-  }
+    color: color.charcoal,
+  },
 };
 export const UnconnectedOwnedSections = OwnedSections;
 
-export default connect(
-  () => ({}),
-  {
-    beginEditingSection
-  }
-)(OwnedSections);
+export default connect(() => ({}), {
+  beginEditingSection,
+})(OwnedSections);

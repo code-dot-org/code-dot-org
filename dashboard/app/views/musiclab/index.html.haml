@@ -1,6 +1,7 @@
-#codeApp{style: "position: absolute; top: 60px; bottom: 10px; left: 10px; right: 10px"}
+#codeApp{style: "position: absolute; top: 52px; bottom: 2px; left: 0px; right: 0px"}
   #musiclab-container{style: "height: 100%"}
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/googleblockly.js')}
-  %script{src: webpack_asset_path('js/musiclab/index.js')}
+  %script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
+  %script{src: webpack_asset_path('js/musiclab/index.js'), data: {channelid: @channel_id}}

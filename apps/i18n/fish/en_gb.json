@@ -1,8 +1,8 @@
 {
-  "continue": "Continue",
   "cancel": "Cancel",
-  "yes": "Yes",
+  "continue": "Continue",
+  "finish": "Finish",
   "no": "No",
   "run": "Run",
-  "finish": "Finish"
+  "yes": "Yes"
 }

@@ -1,9 +1,9 @@
 {
   "catControl": "Лупови",
+  "catLogic": "Логика",
   "catMath": "Математика",
   "catTurtle": "Акции",
   "catVariables": "Променливи",
-  "catLogic": "Логика",
   "drawATree": "Нацртај дрво",
   "forward": "напред",
   "jump": "Рипај "

@@ -9,7 +9,7 @@ class SchoolTest < ActiveSupport::TestCase
 
     schools = School.merge_from_csv(School.get_seed_filename(true))
     assert_equal(20, schools.size, 'test data contains 20 schools')
-    assert_not_nil School.find_by(
+    refute_nil School.find_by(
       {
         id: '10000500871',
         school_district_id: 100005,
@@ -30,8 +30,8 @@ class SchoolTest < ActiveSupport::TestCase
 
     begin
       School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true)
-    rescue => error
-      assert_includes error.to_s, 'This was a dry run'
+    rescue => exception
+      assert_includes exception.message, 'This was a dry run'
       assert_equal 0, School.count
     end
   end
@@ -49,39 +49,16 @@ class SchoolTest < ActiveSupport::TestCase
     parse_row = proc do |row|
       {
         id: row['id'],
-        state_school_id: row['state_school_id'],
         name: row['name'] + 'test'
       }
     end
 
     begin
       School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &parse_row)
-    rescue => error
-      assert_includes error.to_s, 'This was a dry run'
+    rescue => exception
+      assert_includes exception.message, 'This was a dry run'
       assert_equal before_count, School.count
     end
-  end
-
-  test 'reload_state_cs_offerings' do
-    school = create :school
-    state_cs_offering = create :state_cs_offering
-    state_cs_offering_collection = Census::StateCsOffering.where(state_school_id: state_cs_offering.state_school_id)
-
-    assert school.state_cs_offering.empty?
-    reloaded_state_cs_offerings = school.load_state_cs_offerings(state_cs_offering_collection, false)
-
-    assert_equal state_cs_offering_collection.pluck(:course, :school_year),
-      reloaded_state_cs_offerings.pluck(:course, :school_year)
-  end
-
-  test 'null state_school_id is valid' do
-    school = build :school, :without_state_school_id
-    assert school.valid?, school.errors.full_messages
-  end
-
-  test 'invalid state_school_id is invalid' do
-    school = build :school, :with_invalid_state_school_id
-    refute school.valid?
   end
 
   test 'maker high needs false when no stats data' do
@@ -295,12 +272,7 @@ class SchoolTest < ActiveSupport::TestCase
   def clear_schools_and_dependent_models
     # Clear tables with hard dependencies (ie, MySQL foreign keys)
     # on the schools table.
-    Census::ApSchoolCode.delete_all
-    Census::IbSchoolCode.delete_all
-    Census::CensusOverride.delete_all
     Census::CensusSummary.delete_all
-    Census::OtherCurriculumOffering.delete_all
-    Census::StateCsOffering.delete_all
     SchoolInfo.delete_all
     SchoolStatsByYear.delete_all
     CircuitPlaygroundDiscountApplication.delete_all

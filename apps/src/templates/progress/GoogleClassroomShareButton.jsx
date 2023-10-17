@@ -17,13 +17,13 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     theme: PropTypes.string,
     height: PropTypes.number,
     courseid: PropTypes.number,
-    analyticsData: PropTypes.string
+    analyticsData: PropTypes.string,
   };
 
   static defaultProps = {
     itemtype: 'assignment',
     theme: 'light',
-    height: Button.ButtonHeight.default
+    height: Button.ButtonHeight.default,
   };
 
   constructor(props) {
@@ -43,7 +43,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
   buttonRef = null;
   iframeMouseOver = false;
   state = {
-    buttonMounted: false
+    buttonMounted: false,
   };
 
   componentDidMount() {
@@ -105,7 +105,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
         study: 'google-classroom-share-button',
         study_group: 'v0',
         event: event,
-        data_json: this.props.analyticsData
+        data_json: this.props.analyticsData,
       },
       {includeUserId: true}
     );
@@ -121,7 +121,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
       size: this.props.height,
       courseid: this.props.courseid,
       onsharestart: `${this.onShareStartName()}`,
-      onsharecomplete: `${this.onShareCompleteName()}`
+      onsharecomplete: `${this.onShareCompleteName()}`,
     });
   }
 
@@ -145,11 +145,11 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
 const styles = {
   label: {
     paddingLeft: 16,
-    textAlign: 'left'
+    textAlign: 'left',
   },
   container: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'start'
-  }
+    justifyContent: 'start',
+  },
 };

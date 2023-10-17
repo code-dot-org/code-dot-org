@@ -21,6 +21,7 @@
         "name": "B",
         "type": "String"
       }
-    ]
+    ],
+    "style": "default"
   }
 }

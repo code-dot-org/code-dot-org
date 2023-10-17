@@ -16,8 +16,8 @@ Durante a campanha da Hora do Código, sua empresa pode ajudar a conscientizar a
 
 Confira as etapas abaixo para começar a usar, e veja o nosso [guide para parceiros corporativos](/files/hoc-corporate-toolkit.pdf) para saber mais sobre como incentivar sua empresa a utilizar o Hour of Code.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Conecte-se a uma escola local](#connect-with-a-school)
+- [Incentive os funcionários a serem voluntários em salas de aula](#encourage-employees)
 - [Receba seu próprio evento Hora do Código](#host-hour-of-code)
 - [Promova a Hora do Código](#promote-hour-of-code)
 - [Ainda mais maneiras de apoiar a Hora do Código](#support-hour-of-code)
@@ -26,31 +26,31 @@ Confira as etapas abaixo para começar a usar, e veja o nosso [guide para parcei
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Conecte-se a uma escola local
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+É sempre melhor começar localmente, com a escola com a qual você ou seus funcionários mantém um vínculo forte, como uma alma mater, a escola do jovem envolvido ou uma organização ou escola local que se concentre em prestar serviços a uma população historicamente subrepresentada em termos de ciência da computação.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+A partir desse ponto, você poderá visitar o site da escola na internet para encontrar os contatos desejados, para que se envolvam, como diretores, coordenadores, instrutores de tecnologia ou ciência da computação, e até a APM da escola. Você também pode firmar parcerias com organizações como a Boys & Girls Club of America, a ACM e outras, para promover um evento.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Se você não conseguir fazer contato com uma escola, [fale conosco](https://support.code.org/hc/en-us/requests/new) e vamos conectar você a uma dos nossos parceiros locais, se possível.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Incentive os funcionários a serem voluntários em salas de aula
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Uma das maneiras mais satisfatórias de participar do Hour of Code é como voluntário em uma sala de aula local, seja presencial ou virtualmente. O melhor de tudo é que você não precisa ser um engenheiro para ser voluntário. Você ainda pode oferecer uma experiência significativa para os alunos, compartilhando sua própria experiência de carreira e como a CC ou a tecnologia afetaram sua função.
 
 [<button>Inscreva-se como voluntário</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Uma vez registrado como voluntário, o professor pode analisar seu perfil no nosso [volunteer map](https://code.org/volunteer/local) – portanto, os perfis devem ser enviados com o máximo de informações possível. Se você for adequado para a sala de aula, um professor entrará em contato com você, por meio da plataforma (nunca compartilhamos seu endereço de e-mail com o professor). Você poderá então coordenar os detalhes diretamente com o professor sobre [a melhor forma de se voluntariar para uma sala de aula](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Para obter mais orientação sobre o voluntariado e as mensagens amostrais e estimular sua empresa em relação ao Hour of Code, confira o nosso [guia para parceiros corporativos]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -162,7 +162,7 @@ Ajude a conscientizar as pessoas sobre o movimento da ciência da computação 
 - Caso a sua primeira linha de código tenha mudado a sua vida, ajude os alunos perto de você a fazer a #HourOfCode deles https://code.org/volunteer
 - Caso tenha aprendido a codificar, qual é a sua história? Inspire os alunos perto de você com a primeira #HourOfCode deles https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+href="https://hourofcode.com/promote/resources#posters">Encontre mais</a> pôsteres, vídeos, adesivos e outros meios para promover o evento na sua comunidade.
 
 * * *
 

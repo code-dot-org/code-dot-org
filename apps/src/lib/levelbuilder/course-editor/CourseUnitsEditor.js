@@ -9,7 +9,7 @@ export default class CourseUnitsEditor extends Component {
     unitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     updateUnitsInCourse: PropTypes.func.isRequired,
-    allowMajorCurriculumChanges: PropTypes.bool.isRequired
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
   };
 
   handleChange = () => {
@@ -31,7 +31,7 @@ export default class CourseUnitsEditor extends Component {
           <select
             style={{
               ...this.props.inputStyle,
-              opacity: selectedUnit === '' ? 0.4 : 1
+              opacity: selectedUnit === '' ? 0.4 : 1,
             }}
             key={index}
             value={selectedUnit}

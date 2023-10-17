@@ -106,6 +106,6 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     # Test: We only get back the userscript for the script that still exists
     scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(@user)
     assert_equal scripts.size, 1
-    assert scripts.include?(user_script_1)
+    assert_includes(scripts, user_script_1)
   end
 end

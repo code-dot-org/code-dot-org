@@ -21,7 +21,7 @@ export const ages = [
   '18',
   '19',
   '20',
-  '21+'
+  '21+',
 ];
 
 /**
@@ -31,7 +31,7 @@ export const ages = [
 export default class AgeDropdown extends Component {
   static propTypes = {
     style: PropTypes.object,
-    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   };
 
   /**

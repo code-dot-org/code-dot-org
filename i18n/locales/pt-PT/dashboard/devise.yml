@@ -50,9 +50,6 @@ pt:
       expired: "caducou, por favor pede uma nova"
       not_found: "não encontrado"
       not_locked: "não foi bloqueado"
-      not_saved:
-        one: "1 erro proibiu este %{resource} de ser salvo:"
-        other: "%{count} erros não permite que este %{resource} seja salvo:"
     invitations:
       send_instructions: 'Foi enviado um convite por e-mail para %{email}.'
       invitation_token_invalid: 'O teu convite não é válido!'

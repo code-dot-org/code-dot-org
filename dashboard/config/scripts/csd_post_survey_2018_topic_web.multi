@@ -4,3 +4,5 @@ layout 'wrap'
 right 'Yes'
 right 'No'
 right 'Not sure what this is'
+
+allow_multiple_attempts true

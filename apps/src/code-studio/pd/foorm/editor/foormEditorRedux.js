@@ -16,7 +16,7 @@ const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
 // a valid survey.
 export const setQuestions = questions => ({
   type: SET_QUESTIONS,
-  questions
+  questions,
 });
 
 // formData is an object in the format
@@ -24,7 +24,7 @@ export const setQuestions = questions => ({
 // where questions is a survey in surveyJS format.
 export const setFormData = formData => ({
   type: SET_FORM_DATA,
-  formData
+  formData,
 });
 
 // libraryQuestionData is an object in the format
@@ -32,7 +32,7 @@ export const setFormData = formData => ({
 // where questions is a valid survey element in surveyJS format.
 export const setLibraryQuestionData = libraryQuestionData => ({
   type: SET_LIBRARY_QUESTION_DATA,
-  libraryQuestionData
+  libraryQuestionData,
 });
 
 // libraryData is an object that contains
@@ -40,17 +40,17 @@ export const setLibraryQuestionData = libraryQuestionData => ({
 // (name, version, ID)
 export const setLibraryData = libraryData => ({
   type: SET_LIBRARY_DATA,
-  libraryData
+  libraryData,
 });
 
 export const setHasJSONError = hasJSONError => ({
   type: SET_HAS_JSON_ERROR,
-  hasJSONError
+  hasJSONError,
 });
 
 export const setHasLintError = hasLintError => ({
   type: SET_HAS_LINT_ERROR,
-  hasLintError
+  hasLintError,
 });
 
 // "Entities" represent metadata (ID, name, etc.) about the forms or libraries
@@ -59,12 +59,12 @@ export const setHasLintError = hasLintError => ({
 // containing the SurveyJS configuration that can be edited.
 export const setFetchableEntities = entitiesMetadata => ({
   type: SET_FETCHABLE_ENTITIES,
-  entitiesMetadata
+  entitiesMetadata,
 });
 
 export const addFetchableEntity = entityMetadata => ({
   type: ADD_FETCHABLE_ENTITY,
-  entityMetadata
+  entityMetadata,
 });
 
 // "Sub-entities" are library question metadata (ID, name, etc.)
@@ -72,27 +72,27 @@ export const addFetchableEntity = entityMetadata => ({
 // There is no equivalent "sub-entity" when editing forms currently.
 export const setFetchableSubEntities = subEntitiesMetadata => ({
   type: SET_FETCHABLE_SUB_ENTITIES,
-  subEntitiesMetadata
+  subEntitiesMetadata,
 });
 
 export const addFetchableSubEntity = subEntityMetadata => ({
   type: ADD_FETCHABLE_SUB_ENTITY,
-  subEntityMetadata
+  subEntityMetadata,
 });
 
 export const setLastSaved = lastSaved => ({
   type: SET_LAST_SAVED,
-  lastSaved
+  lastSaved,
 });
 
 export const setSaveError = saveError => ({
   type: SET_SAVE_ERROR,
-  saveError
+  saveError,
 });
 
 export const setLastSavedQuestions = questions => ({
   type: SET_LAST_SAVED_QUESTIONS,
-  questions
+  questions,
 });
 
 const initialState = {
@@ -119,26 +119,26 @@ const initialState = {
   libraryVersion: null,
   libraryQuestionId: null,
   libraryQuestionName: null,
-  fetchableSubEntities: []
+  fetchableSubEntities: [],
 };
 
 export default function foormEditorRedux(state = initialState, action) {
   if (action.type === SET_QUESTIONS) {
     return {
       ...state,
-      questions: action.questions
+      questions: action.questions,
     };
   }
   if (action.type === SET_HAS_JSON_ERROR) {
     return {
       ...state,
-      hasJSONError: action.hasJSONError
+      hasJSONError: action.hasJSONError,
     };
   }
   if (action.type === SET_HAS_LINT_ERROR) {
     return {
       ...state,
-      hasLintError: action.hasLintError
+      hasLintError: action.hasLintError,
     };
   }
   if (action.type === SET_FORM_DATA) {
@@ -149,7 +149,7 @@ export default function foormEditorRedux(state = initialState, action) {
       formName: action.formData['name'],
       formVersion: action.formData['version'],
       formId: action.formData['id'],
-      foormEntityId: action.formData['id']
+      foormEntityId: action.formData['id'],
     };
   }
   if (action.type === SET_LIBRARY_QUESTION_DATA) {
@@ -158,7 +158,7 @@ export default function foormEditorRedux(state = initialState, action) {
       questions: action.libraryQuestionData['question'],
       libraryQuestionName: action.libraryQuestionData['name'],
       libraryQuestionId: action.libraryQuestionData['id'],
-      foormEntityId: action.libraryQuestionData['id']
+      foormEntityId: action.libraryQuestionData['id'],
     };
   }
   if (action.type === SET_LIBRARY_DATA) {
@@ -166,19 +166,19 @@ export default function foormEditorRedux(state = initialState, action) {
       ...state,
       libraryName: action.libraryData['name'],
       libraryVersion: action.libraryData['version'],
-      libraryId: action.libraryData['id']
+      libraryId: action.libraryData['id'],
     };
   }
   if (action.type === SET_FETCHABLE_ENTITIES) {
     return {
       ...state,
-      fetchableEntities: action.entitiesMetadata
+      fetchableEntities: action.entitiesMetadata,
     };
   }
   if (action.type === SET_FETCHABLE_SUB_ENTITIES) {
     return {
       ...state,
-      fetchableSubEntities: action.subEntitiesMetadata
+      fetchableSubEntities: action.subEntitiesMetadata,
     };
   }
   if (action.type === ADD_FETCHABLE_ENTITY) {
@@ -189,7 +189,7 @@ export default function foormEditorRedux(state = initialState, action) {
 
     return {
       ...state,
-      fetchableEntities: updatedEntities
+      fetchableEntities: updatedEntities,
     };
   }
   if (action.type === ADD_FETCHABLE_SUB_ENTITY) {
@@ -200,25 +200,25 @@ export default function foormEditorRedux(state = initialState, action) {
 
     return {
       ...state,
-      fetchableSubEntities: updatedSubEntities
+      fetchableSubEntities: updatedSubEntities,
     };
   }
   if (action.type === SET_LAST_SAVED) {
     return {
       ...state,
-      lastSaved: action.lastSaved
+      lastSaved: action.lastSaved,
     };
   }
   if (action.type === SET_SAVE_ERROR) {
     return {
       ...state,
-      saveError: action.saveError
+      saveError: action.saveError,
     };
   }
   if (action.type === SET_LAST_SAVED_QUESTIONS) {
     return {
       ...state,
-      lastSavedQuestions: action.questions
+      lastSavedQuestions: action.questions,
     };
   }
 

@@ -9,7 +9,7 @@ describe('StandardsReportHeader', () => {
   beforeEach(() => {
     DEFAULT_PROPS = {
       teacherName: 'Awesome Teacher',
-      sectionName: 'Great Section'
+      sectionName: 'Great Section',
     };
   });
 

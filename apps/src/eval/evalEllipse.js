@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalCircle = function(width, height, style, color) {
+var EvalCircle = function (width, height, style, color) {
   evalUtils.ensureNumber(width);
   evalUtils.ensureNumber(height);
   evalUtils.ensureStyle(style);
@@ -18,7 +18,7 @@ var EvalCircle = function(width, height, style, color) {
 EvalCircle.inherits(EvalImage);
 module.exports = EvalCircle;
 
-EvalCircle.prototype.draw = function(parent) {
+EvalCircle.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'ellipse');
     parent.appendChild(this.element_);

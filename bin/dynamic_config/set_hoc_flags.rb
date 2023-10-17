@@ -10,7 +10,6 @@
 # See the documentation below for more details.
 puts "Loading..."
 require_relative '../../dashboard/config/environment'
-require 'pp'
 
 # The names of scripts we expect to see
 HIGH_SCALE_UNIT_NAMES = %w(

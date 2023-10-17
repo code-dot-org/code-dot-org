@@ -7,7 +7,7 @@ style_min: true
 <img src="/images/avatars/computer_science_teachers_association.png" style="float:right; width:20%; margin-left:25px">
 <h1 style="margin-top:25px">3rd Party Professional Development and Curricula</h1>
 <div>
-<p>Below are 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA). To learn more about the review process and committee, visit the CSTA's <a href="https://csteachers.org/page/quality-pd-review-process/" target="_blank">Quality PD Review Process page</a>. To view an interactive display of the table below, <a href="https://csteachers.org/page/quality-pd">click here</a>.</p>  
+<p>Below are 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA). To learn more about the review process and committee, visit the CSTA's <a href="https://csteachers.org/pd-accreditation-process/" target="_blank" rel="noopener noreferrer">Quality PD Review Process page</a>. To view an interactive display of the table below, <a href="https://csteachers.org/pd-opportunities/accredited-pd/" target="_blank" rel="noopener noreferrer">click here</a>.</p>
 <p>If you’d like to explore additional opportunities for classrooms, afterschool clubs, and learning online, take a look at <a href="#supporters">Resources from our supporters</a> and <a href="#more">More Resources</a> below the table of CSTA-recommended programs.</p>
 </div>
 
@@ -64,7 +64,7 @@ style_min: true
 | [Vidcode](https://www.vidcode.com/) | 125+ project-based online tutorials and lesson plans organized into flexible modules for 4th-12th grade. | 3-day summer institute, quarterly one-day academic year check-ins, and self-led virtual educator course online. Facilitators model teaching, and teachers learn foundational programming concepts. | Online PD is free. In-person PD is $7,500 for up to 25 teachers for a 3-day PD, or $3,000/day. |
 | [WeTeach_CS Foundations of CS for Teachers - Praxis Prep](https://utakeit.tacc.utexas.edu/foundations-cs-praxis/) | Online course, certification preparation course for the content required by the Praxis Computer Science (5652) test. | 40 hours of PD. Online course delivered via Canvas, with readings, videos, interactive lessons, and practice quizzes. | $398 for subscription. Asynchronous, with no time limit. Resources are available after completion. |
 | [WeTeach_CS Foundations of CS for Teachers - TExES 241 Prep](https://utakeit.tacc.utexas.edu/foundations-of-cs-texes-prep/) | Online course, certification prep for TExES 241 Computer Science Certification Test. | 40 hours of PD, across 7 weeks. Online lessons delivered via Canvas, with interactive activities, online quizzes, videos, official quizzes, and final exam to simulate certification prep test. | $398 for subscription. Asynchronous, with no time limit. Resources are available after completion. |
- 
+
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSafnGCmIEqDVOeY1qdpIq1jJZfmaFnx5T04-8t-I0cYUxhc0d5R-lDP6RPgPHcvbHq4C2msG3iMbYv/pubhtml?gid=2131089180&single=true"><button>See full details and comparison</button></a>
 

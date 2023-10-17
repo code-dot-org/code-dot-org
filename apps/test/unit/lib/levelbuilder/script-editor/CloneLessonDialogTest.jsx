@@ -13,7 +13,7 @@ describe('CloneLessonDialog', () => {
     defaultProps = {
       lessonId: 1,
       lessonName: 'lesson-1',
-      handleClose: handleCloseSpy
+      handleClose: handleCloseSpy,
     };
   });
 
@@ -24,23 +24,15 @@ describe('CloneLessonDialog', () => {
   it('disables clone button while saving', () => {
     fetchSpy.resolves();
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
-    wrapper
-      .find('Button')
-      .at(1)
-      .simulate('click');
-    expect(
-      wrapper
-        .find('Button')
-        .at(1)
-        .props().disabled
-    ).to.be.true;
+    wrapper.find('Button').at(1).simulate('click');
+    expect(wrapper.find('Button').at(1).props().disabled).to.be.true;
   });
 
   it('can display success message on clone', () => {
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
     let returnData = {
       editLessonUrl: '/lessons/1/edit',
-      editScriptUrl: '/s/test-script/edit'
+      editScriptUrl: '/s/test-script/edit',
     };
     fetchSpy
       .withArgs('/lessons/1/clone')
@@ -63,7 +55,7 @@ describe('CloneLessonDialog', () => {
   it('displays error message on failed clone', () => {
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
     let returnData = {
-      error: 'Error message.'
+      error: 'Error message.',
     };
     fetchSpy
       .withArgs('/lessons/1/clone')
@@ -128,7 +120,7 @@ describe('CloneLessonDialog', () => {
 
     let returnData = {
       editLessonUrl: '/lessons/1/edit',
-      editScriptUrl: '/s/test-script/edit'
+      editScriptUrl: '/s/test-script/edit',
     };
     fetchSpy
       .withArgs('/lessons/1/clone')
@@ -153,7 +145,7 @@ describe('CloneLessonDialog', () => {
 
     let returnData = {
       editLessonUrl: '/lessons/1/edit',
-      editScriptUrl: '/s/test-script/edit'
+      editScriptUrl: '/s/test-script/edit',
     };
     fetchSpy
       .withArgs('/lessons/1/clone')

@@ -2,8 +2,350 @@
 ro:
   data:
     unplugged:
+      BigEvent:
+        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
+          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
+          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
+          în funcție de butonul care a fost apăsat.
+        title: Marele eveniment
+      BigEvent_2018:
+        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
+          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
+          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
+          în funcție de butonul care a fost apăsat.
+        title: Marele eveniment
+      BigEvent_2019:
+        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
+          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
+          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
+          în funcție de butonul care a fost apăsat.
+        title: Marele eveniment
+      BinaryBracelets:
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
+          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
+          multe feluri.
+        title: Brăţări Binare
+      BinaryBracelets_2018:
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
+          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
+          multe feluri.
+        title: Brăţări Binare
+      BinaryBracelets_2019:
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
+          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
+          multe feluri.
+        title: Brăţări Binare
+      BinaryImages:
+        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
+          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
+          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
+          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
+          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
+          sistem binar.
+        title: Imagini binare
+      BinaryImages_2018:
+        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
+          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
+          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
+          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
+          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
+          sistem binar.
+        title: Imagini binare
+      BinaryImages_2019:
+        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
+          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
+          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
+          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
+          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
+          sistem binar.
+        title: Imagini binare
+      Booleans:
+        desc: Booleenii sunt al patrulea și ultimul tip de date despre care vei învăța
+          în acest curs. În cadrul acestei activități vei învăța definirea operatorilor
+          booleeni și cum ne ajută ei să scriem funcții care gândesc logic
+        title: Boolean și Logică
+      BuildingAFoundation:
+        desc: Elevii construiesc o structură folosind numai rechizitele oferite. Structurile
+          trebuie să finalizeze o sarcină (ating o anumită înălțime sau suportă o
+          anumită greutate) și elevii discută ideea de a fi perseverent când lucrurile
+          devin complicate.
+        title: Construirea unei Fundaţii
+      BuildingAFoundation_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      BuildingAFoundation_2019:
+        desc: 'traducere lipsă: en-us.data.unplugged.buildingaFoundation_2018.desc'
+        title: 'traducere lipsă: ro-US.data.unplugged.buildingaFoundation_2018.title'
+      CollisionDetection:
+        desc: A determina când se ating obiectele de pe ecran este un aspect important
+          în cele mai multe jocuri. În această lecţie ne vom uita la modul în care
+          Teorema lui Pitagora şi Formula Distanței pot fi folosite pentru a măsura
+          distanţa dintre două puncte pe un plan, pentru ca apoi să decidem dacă aceste
+          două puncte (sau caractere ale jocului) se ating.
+        title: Detectarea coliziunilor şi teorema lui Pitagora
+      ComputationalThinking:
+        desc: Elevii folosesc paşii de gândire computațională (descompunere, potrivire
+          de patern, astractizare, algoritm) pentru a-și dea seama cum să joace un
+          joc care vine fără instrucţiuni.
+        title: Gândire Computațională
+      Conditionals:
+        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
+          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
+          și ”Dacă trag o carte neagră, tu obții un punct.”'
+        title: Condiţionale
+      ConditionalsPiecewiseFunctions:
+        desc: Parametri pe care-i alocăm funcțiilor determină output-urile să varieze
+          pe baza unui model foarte rigid. Să presupunem că vrem parametri cu niște
+          valori pentru a crea output-uri folosind un model, dar alte valori pentru
+          a utiliza un model diferit. Acum sunt necesare condiționalele...
+        title: Condiționale și funcții pe porțiuni
+      Conditionals_2018:
+        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
+          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
+          și ”Dacă trag o carte neagră, tu obții un punct.”'
+        title: Condiţionale
+      Conditionals_2019:
+        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
+          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
+          și ”Dacă trag o carte neagră, tu obții un punct.”'
+        title: Condiţionale
+      Contracts:
+        desc: Contractele ne ajută să înțelegem și să discutăm funcțiile. În această
+          lecție, vom privi cum Contractele ne ajută să înțelegem un nou limbaj de
+          programare sau o funcție.
+        title: Contracte, Domeniu și Gamă
+      Crowdsourcing:
+        desc: Elevii folosesc crowdsourcing, o tehnica uzuală de rezolvare a problemelor
+          din informatică, pentru a finaliza o sarcină împreună ca o modalitate mai
+          eficientă decât rezolvarea individuală.
+        title: Obţinând Informaţii/Critici
+      Crowdsourcing_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      Crowdsourcing_2019:
+        desc: 'traducere lipsă: en-us.data.unplugged.crowdsourcing_2018.desc'
+        title: 'traducere lipsă: en-us.data.unplugged.crowdsourcing_2018.title'
+      DesignRecipe:
+        desc: În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
+          mai sofisticate solicită o abordare mai în profunzime. Rețeta Design este
+          o abordare structurată în scrierea funcţiilor, care include teste de scriere
+          menite să verifice dacă funcţia funcționează cum era de aşteptat.
+        title: Rețeta pentru design
+      DiceRace:
+        desc: Această lecție indică modul în care noi folosim algoritmi în viața de
+          zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul
+          pentru un joc de zaruri.
+        title: 'Algoritmi din viaţa reală: cursa de zaruri'
+      DiceRace_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      DigitalCitizenship:
+        desc: Elevii exploreaza diferenţa dintre informaţii private şi informaţii
+          personale, pentru a distinge ce este sigur şi nesigure să distribuie online.
+        title: Cetățenia Digitală
+      DigitalFootprint:
+        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
+          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+        title: Amprenta ta Digitală
+      DigitalFootprint_2018:
+        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
+          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+        title: Amprenta ta Digitală
+      DigitalFootprint_2019:
+        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
+          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+        title: Amprenta ta Digitală
+      EnvelopeVariables:
+        desc: Variabilele permit foarte multă libertate în informatică.  Această lecţie
+          vă ajută să înțelegeți ce sunt variabile şi cum le putem folosi în multe
+          moduri diferite. Utilizați această activitate înainte de (sau în conjuncție
+          cu) lecţia despre abstractizare ca idea să fie întradevăr înțeleasă.
+        title: Variabile de tip plic
+      EnvelopeVariables_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      EnvelopeVariables_2019:
+        desc: 'traducere lipsă: en-us.data.unplugged.envelopevariables_2018.desc'
+        title: 'traducere lipsă: en-us.data.unplugged.envelopevariables_2018.title'
+      ForLoopFun:
+        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
+          vom învăța cum să folosim bucle cu structură extra încorporată.
+        title: Pentru distracția cu bucle
+      ForLoopFun_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      ForLoopFun_2019:
+        desc: 'traducere lipsă: en-us.data.unplugged.forloopfun_2018.desc'
+        title: 'traducere lipsă: en-us.data.unplugged.forloopfun_2018.title'
+      FunctionalSuncatchers:
+        desc: Elevii creează un algoritm cu variabile şi funcţii (bucăţi de cod pe
+          care doriţi să le utilizaţi în mod repetat) pentru a realiza suncatchers
+          folosind ață și mărgele.
+        title: Prinzători ai Soarelui Funcţionali
+      GettingLoopy:
+        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
+          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
+          simplă, apoi vor fi instruiți să o repete.
+        title: Transformând în Buclă
+      GettingLoopy_2018:
+        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
+          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
+          simplă, apoi vor fi instruiți să o repete.
+        title: Transformând în Buclă
+      GettingLoopy_2019:
+        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
+          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
+          simplă, apoi vor fi instruiți să o repete.
+        title: Transformând în Buclă
+      GoingPlacesSafely:
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
+          arată cum poate fi sigură navigarea pe Internet.
+        title: Mergând în locuri în siguranţă
+      GoingPlacesSafely_2018:
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
+          arată cum poate fi sigură navigarea pe Internet.
+        title: Mergând în locuri în siguranţă
+      GoingPlacesSafely_2019:
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
+          arată cum poate fi sigură navigarea pe Internet.
+        title: Mergând în locuri în siguranţă
+      GraphPaperProgramming:
+        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
+          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
+          un desen.
+        title: Programare pe Hârtie Milimetrică
+      GraphPaperProgramming_2018:
+        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
+          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
+          un desen.
+        title: Programare pe Hârtie Milimetrică
+      GraphPaperProgramming_2019:
+        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
+          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
+          un desen.
+        title: Programare pe Hârtie Milimetrică
+      GraphingData_2019:
+        desc: În această lecție, elevii vor colecta date dintr-un proiect Play Lab
+          sau scenariu din lumea reală și le vor folosi pentru a face predicții.
+        title: Fotografierea datelor
+      Internet:
+        desc: Elevii transmit mesaje pe bucăți de hârtie simulând metode variate de
+          transmisie pe Internet.
+        title: Internet
+      Internet_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      Internet_2019:
+        desc: 'traducere lipsă: en-us.data.unplugged.internet_2018.desc'
+        title: 'traducere lipsă: en-us.data.unplugged.internet_2018.title'
+      MadGlibs:
+        desc: Abstractizarea este una dintre cele mai importante aptitudini pentru
+          ca un programator să înţeleagă.  Această activitate îi va pune pe elevii
+          dvs. să analizeze povestiri pentru a găsi diferenţe, astfel încât să poată
+          abstractiza. Acele povestiri abstractizate vor deveni șabloane pentru altele
+          noi, distractive și trăznite.
+        title: Mad Glibs
+      MoveIt:
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj printr-un labirint folosind o singură comandă.
+        title: Mişcă-te, Mişcă-te
+      MoveItMoveIt_2018:
+        desc: "[șir gol]"
+        title: Mutaţi-l, mutați-l
+      MoveItMoveIt_2019:
+        desc: "[șir gol]"
+        title: Mutaţi-l, mutați-l
+      PaperPlanes:
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
+          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
+          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
+          informatică și rolul esențial pe care îl joacă algoritmii.
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+      PaperPlanes_2018:
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
+          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
+          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
+          informatică și rolul esențial pe care îl joacă algoritmii.
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+      PaperPlanes_2019:
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
+          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
+          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
+          informatică și rolul esențial pe care îl joacă algoritmii.
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+      PlantASeed:
+        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
+          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
+          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
+          în care algoritmii joacă un rol esențial.
+        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+      PlantASeed_2018:
+        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
+          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
+          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
+          în care algoritmii joacă un rol esențial.
+        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+      PlantASeed_2019:
+        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
+          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
+          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
+          în care algoritmii joacă un rol esențial.
+        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+      RelayProgramming:
+        desc: Elevii aleargă într-o cursă cu ștafetă, în care au de sărit garduri
+          pentru a scrie un algoritm pe baza unei imagini ”Programarea pe hârtie milimetrică”.
+          Ei pot scrie o singură instrucțiune la un moment dat și, dacă este vreo
+          eroare, trebuie să șteargă tot înapoi până la acel punct.
+        title: Programare de releu
+      RelayProgramming_2018:
+        desc: Această activitate va începe cu o scurtă lecție despre depanare și persistență,
+          apoi se va muta rapid la o cursă contra cronometru, în timp ce elevii intră
+          în echipe și lucrează împreună pentru a scrie un program câte o instrucțiune
+          la un moment dat.
+        title: Programare de releu
+      RelayProgramming_2018_2019:
+        desc: Această activitate va începe cu o scurtă lecție despre depanare și persistență,
+          apoi se va muta rapid la o cursă contra cronometru, în timp ce elevii intră
+          în echipe și lucrează împreună pentru a scrie un program câte o instrucțiune
+          la un moment dat.
+        title: Programare de releu
+      SP-VPL-CSA-21-mod3-1-1:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      SP-VPL-CSD-21-CourseNavigation:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      SongwritingParameters:
+        desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
+          transmiterea parametrilor (care personalizează o funcție fără a trebui să
+          rescrie întreaga funcție).
+        title: Compunând Cântece
+      SongwritingParameters_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      SongwritingParameters_2019:
+        desc: 'traducere lipsă: en-us.data.unplugged.songwritingParameters_2018.desc'
+        title: 'traducere lipsă: en-us.data.unplugged.songwritingParameters_2018.title'
+      SongwritingWithParameters:
+        desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
+          (uneori numite proceduri) sunt mini-programe pe care le puteţi folosi iar
+          și iar in interiorul programului vostru mai mare. Această lecţie va ajuta
+          elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii
+          este o practică așa de utilă.  '
+        title: Compozitie cu parametri
+      SongwritingWithParameters_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      TangramAlgorithms:
+        desc: Această lecţie ne arată ceva important despre algoritmi. Dacă vă păstraţi
+          un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi
+          să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul
+          dumneavoastră are nevoie de mai multe detalii.
+        title: Algoritmi Tangram
+      TangramAlgorithms_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
       Unplug1:
-        title: Introducere în Informatică
         desc: Această lecție va prezenta conceptul de Informatică și va explica ce
           face un programator. De asemenea, va oferi elevilor oportunitatea de a-și
           asuma rolul unui programator. La sfârșitul activității, fiecare elev va
@@ -12,8 +354,18 @@ ro:
           cu lecțiile ce urmează, dar prezentându-le într-un mod distractiv și jucăuș
           este de departe mult mai productiv decât așteptarea unor oportunități ulterioare
           mai avansate.
+        title: Introducere în Informatică
+      Unplug10:
+        desc: În această lecție, elevii își vor imagina că parcurg Internetul, în
+          timp ce vor învăța despre adresele web, IP-uri și DNS.
+        title: Internetul
+      Unplug11:
+        desc: Revizuirea finală a primelor 20 de ore va ajuta elevii să retrăiască
+          toate momentele lor favorite, oferindu-le, în același timp, pași următori
+          pe care ei îi pot face pe cont propriu dacă sunt interesați să continue
+          călătoria lor în informatică.
+        title: Revizuire
       Unplug2:
-        title: Gândire Computațională
         desc: Folosind doar hârtie și markere, elevii vor învăța cei patru pași ai
           gândirii algoritmice. După o scurtă introducere, elevii ar trebui să se
           împartă în grupuri în care vor avea de formulat instrucțiuni pentru alți
@@ -25,23 +377,23 @@ ro:
           Echipele vor face schimb de algoritmi cu un alt grup și vor desena monstrul
           pe baza a ceea ce indică respectivul algoritm. A ieșit desenul așa cum a
           intenționat echipa originală?
+        title: Gândire Computațională
       Unplug3:
-        title: Programare pe Hârtie Milimetrică
         desc: 'Programându-și unii altora ce imagini să deseneze, elevii vor începe
           să înțeleagă ce este în realitate programarea. Ora va începe astfel: elevii
           se vor învăța unii pe alții să deseneze pătrate pe o foaie grafică, încercând
           să reproducă o anumită imagine. Dacă este timp, lecția poate încheia cu
           imagini pe care chiar elevii le-au creat.'
+        title: Programare pe Hârtie Milimetrică
       Unplug4:
-        title: Algoritmi
         desc: Această lecție este despre algoritmi. Folosind piese de tangram și hârtie
           milimetrică, primul exercițiu va arăta cât este de important ca fiecare
           instrucțiune să fie formulată cât mai clar și fără ambiguități. După aceea,
           clasa va explora cât mai multe modalități de a îndoi o foaie într-un dreptunghi,
           observând cum unele metode necesită mai multe sau mai puține îndoituri decât
           celelalte.
+        title: Algoritmi
       Unplug5:
-        title: Funcţii
         desc: În această lecție, elevii vor crea un suncatcher din șir, mărgele și
           un talisman special. Elevii vor urma o serie de pași repetitivi, apoi li
           se va cere să identifice anumite seturi de ”competențe” care vor fi multiplicate
@@ -53,526 +405,281 @@ ro:
           de detaliile materialelor lor și să formuleze termeni vagi pentru materialele
           de lucru al unui individ. Această utilizare a unor substituienți generici
           este o introducere minunată în variabile.
+        title: Funcţii
       Unplug6:
-        title: Condiţii
         desc: Acesta este un joc pentru clasă. După prezentarea ideii de condiționale,
           afirmații-dacă, și bucle de repetiție, elevii pot exersa împreună folosind
           un program scris anterior, un pachet de carduri de joc și șansa remizei.
+        title: Condiţii
       Unplug7:
-        title: Compunere muzicală
         desc: Cititul versurilor este o aventură destul de intuitivă pentru cei mai
           mulți elevi. Vom lua o activitate deja bine cunoscută și o vom schimba într-o
           învățătură riguroasă despre definirea și apelarea funcțiilor. Odată ce elevii
           sunt familiarizați cu procesul de definire/apelare, vom adăuga funcționalități
           suplimentare aduse de transmiterea de parametri la apelarea acelor funcții.
+        title: Compunere muzicală
       Unplug8:
-        title: Abstractizare
         desc: Această activitate combină rutina zilnică a elevilor dvs. cu un joc
           de gândire de tip Mad-Lib, pentru a vă ajuta elevii să învețe despre eficiența
           abstractizării.
+        title: Abstractizare
       Unplug9:
-        title: Programare de releu
         desc: Această lecție va prelua o idee dintr-o activitate anterioară (4. Programarea
           pe hârtie milimetrică) și va folosi acele competențe pentru a accentua importanța
           completitudinii programelor care operează secvențial și a verificării frecvente
           de bug-uri în programe.
-      Unplug10:
-        title: Internetul
-        desc: În această lecție, elevii își vor imagina că parcurg Internetul, în
-          timp ce vor învăța despre adresele web, IP-uri și DNS.
-      Unplug11:
-        title: Revizuire
-        desc: Revizuirea finală a primelor 20 de ore va ajuta elevii să retrăiască
-          toate momentele lor favorite, oferindu-le, în același timp, pași următori
-          pe care ei îi pot face pe cont propriu dacă sunt interesați să continue
-          călătoria lor în informatică.
-      UnplugHappyMaps:
-        title: Hărţi Fericite
-        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
-          un personaj printr-un labirint folosind o singură comandă.
-      MoveIt:
-        title: Mişcă-te, Mişcă-te
-        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
-          un personaj printr-un labirint folosind o singură comandă.
-      PlantASeed:
-        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
-        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
-          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
-          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
-          în care algoritmii joacă un rol esențial.
-      BuildingAFoundation:
-        title: Construirea unei Fundaţii
-        desc: Elevii construiesc o structură folosind numai rechizitele oferite. Structurile
-          trebuie să finalizeze o sarcină (ating o anumită înălțime sau suportă o
-          anumită greutate) și elevii discută ideea de a fi perseverent când lucrurile
-          devin complicate.
-      GettingLoopy:
-        title: Transformând în Buclă
-        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
-          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
-          simplă, apoi vor fi instruiți să o repete.
-      RelayProgramming:
         title: Programare de releu
-        desc: Elevii aleargă într-o cursă cu ștafetă, în care au de sărit garduri
-          pentru a scrie un algoritm pe baza unei imagini ”Programarea pe hârtie milimetrică”.
-          Ei pot scrie o singură instrucțiune la un moment dat și, dacă este vreo
-          eroare, trebuie să șteargă tot înapoi până la acel punct.
-      Conditionals:
-        title: Condiţionale
-        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
-          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
-          și ”Dacă trag o carte neagră, tu obții un punct.”'
-      BigEvent:
-        title: Marele eveniment
-        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
-          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
-          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
-          în funcție de butonul care a fost apăsat.
-      GoingPlacesSafely:
-        title: Mergând în locuri în siguranţă
-        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
-          arată cum poate fi sigură navigarea pe Internet.
-      GraphPaperProgramming:
-        title: Programare pe Hârtie Milimetrică
-        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
-          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
-          un desen.
-      PaperPlanes:
-        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
-        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
-          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
-          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
-          informatică și rolul esențial pe care îl joacă algoritmii.
-      BinaryBracelets:
-        title: Brăţări Binare
-        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
-          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
-          multe feluri.
-      DigitalFootprint:
-        title: Amprenta ta Digitală
-        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
-          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
-      ComputationalThinking:
-        title: Gândire Computațională
-        desc: Elevii folosesc paşii de gândire computațională (descompunere, potrivire
-          de patern, astractizare, algoritm) pentru a-și dea seama cum să joace un
-          joc care vine fără instrucţiuni.
-      FunctionalSuncatchers:
-        title: Prinzători ai Soarelui Funcţionali
-        desc: Elevii creează un algoritm cu variabile şi funcţii (bucăţi de cod pe
-          care doriţi să le utilizaţi în mod repetat) pentru a realiza suncatchers
-          folosind ață și mărgele.
-      SongwritingParameters:
-        title: Compunând Cântece
-        desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
-          transmiterea parametrilor (care personalizează o funcție fără a trebui să
-          rescrie întreaga funcție).
-      DiceRace:
-        title: 'Algoritmi din viaţa reală: cursa de zaruri'
-        desc: Această lecție indică modul în care noi folosim algoritmi în viața de
-          zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul
-          pentru un joc de zaruri.
-      Internet:
-        title: Internet
-        desc: Elevii transmit mesaje pe bucăți de hârtie simulând metode variate de
-          transmisie pe Internet.
-      Crowdsourcing:
-        title: Obţinând Informaţii/Critici
-        desc: Elevii folosesc crowdsourcing, o tehnica uzuală de rezolvare a problemelor
-          din informatică, pentru a finaliza o sarcină împreună ca o modalitate mai
-          eficientă decât rezolvarea individuală.
-      DigitalCitizenship:
-        title: Cetățenia Digitală
-        desc: Elevii exploreaza diferenţa dintre informaţii private şi informaţii
-          personale, pentru a distinge ce este sigur şi nesigure să distribuie online.
-      TangramAlgorithms:
-        title: Algoritmi Tangram
-        desc: Această lecţie ne arată ceva important despre algoritmi. Dacă vă păstraţi
-          un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi
-          să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul
-          dumneavoastră are nevoie de mai multe detalii.
-      EnvelopeVariables:
-        title: Variabile de tip plic
-        desc: Variabilele permit foarte multă libertate în informatică.  Această lecţie
-          vă ajută să înțelegeți ce sunt variabile şi cum le putem folosi în multe
-          moduri diferite. Utilizați această activitate înainte de (sau în conjuncție
-          cu) lecţia despre abstractizare ca idea să fie întradevăr înțeleasă.
-      MadGlibs:
-        title: Mad Glibs
-        desc: Abstractizarea este una dintre cele mai importante aptitudini pentru
-          ca un programator să înţeleagă.  Această activitate îi va pune pe elevii
-          dvs. să analizeze povestiri pentru a găsi diferenţe, astfel încât să poată
-          abstractiza. Acele povestiri abstractizate vor deveni șabloane pentru altele
-          noi, distractive și trăznite.
-      ForLoopFun:
-        title: Pentru distracția cu bucle
-        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
-          vom învăța cum să folosim bucle cu structură extra încorporată.
-      SongwritingWithParameters:
-        title: Compozitie cu parametri
-        desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
-          (uneori numite proceduri) sunt mini-programe pe care le puteţi folosi iar
-          și iar in interiorul programului vostru mai mare. Această lecţie va ajuta
-          elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii
-          este o practică așa de utilă.  '
-      BinaryImages:
-        title: Imagini binare
-        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
-          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
-          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
-          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
-          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
-          sistem binar.
+      UnplugHappyMaps:
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj printr-un labirint folosind o singură comandă.
+        title: Hărţi Fericite
+      UnplugHappyMaps_2018:
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj printr-un labirint folosind o singură comandă.
+        title: Hărţi Fericite
+      UnplugHappyMaps_2019:
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj printr-un labirint folosind o singură comandă.
+        title: Hărţi Fericite
       VideoGamesCoordinatePlanes:
-        title: Jocuri Video și Planuri de coordonate
         desc: Descoperă cum jocurile video la care îți place sa te joci sunt de fapt
           dirijate de algebră! Explorează cum expresiile algebrice și planul de coordonate
           ne pot ajuta să înțelegem cum funționează jocurile video și apoi începe
           planificarea unui joc pe care să-l creezi tu.
-      Contracts:
-        title: Contracte, Domeniu și Gamă
-        desc: Contractele ne ajută să înțelegem și să discutăm funcțiile. În această
-          lecție, vom privi cum Contractele ne ajută să înțelegem un nou limbaj de
-          programare sau o funcție.
-      DesignRecipe:
-        title: Rețeta pentru design
-        desc: În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
-          mai sofisticate solicită o abordare mai în profunzime. Rețeta Design este
-          o abordare structurată în scrierea funcţiilor, care include teste de scriere
-          menite să verifice dacă funcţia funcționează cum era de aşteptat.
-      Booleans:
-        title: Boolean și Logică
-        desc: Booleenii sunt al patrulea și ultimul tip de date despre care vei învăța
-          în acest curs. În cadrul acestei activități vei învăța definirea operatorilor
-          booleeni și cum ne ajută ei să scriem funcții care gândesc logic
-      ConditionalsPiecewiseFunctions:
-        title: Condiționale și funcții pe porțiuni
-        desc: Parametri pe care-i alocăm funcțiilor determină output-urile să varieze
-          pe baza unui model foarte rigid. Să presupunem că vrem parametri cu niște
-          valori pentru a crea output-uri folosind un model, dar alte valori pentru
-          a utiliza un model diferit. Acum sunt necesare condiționalele...
-      CollisionDetection:
-        title: Detectarea coliziunilor şi teorema lui Pitagora
-        desc: A determina când se ating obiectele de pe ecran este un aspect important
-          în cele mai multe jocuri. În această lecţie ne vom uita la modul în care
-          Teorema lui Pitagora şi Formula Distanței pot fi folosite pentru a măsura
-          distanţa dintre două puncte pe un plan, pentru ca apoi să decidem dacă aceste
-          două puncte (sau caractere ale jocului) se ating.
-      courseB_unplugged_MRF:
-        title: Activitate fără Calculator
-      courseB_unplugged_loopyMRF:
-        title: Activitate fără Calculator
-      courseC_Unplugged_ScreenOutTheMean:
-        title: Activitate fără Calculator
-      courseD_unplugged_digitalCitizenship:
-        title: Activitate fără Calculator
-      courseF_unplugged_powerOfWords:
-        title: Activitate fără Calculator
-      deeper learning description:
-        title: "[șir gol]"
-      courseAB_unplugged_plantASeed:
-        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
-        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
-          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
-          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
-          în care algoritmii joacă un rol esențial.
-      courseA_unplugged_happyMaps:
-        title: Hărţi Fericite
-        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
-          un personaj printr-un labirint folosind o singură comandă.
-      courseA_unplugged_goingPlacesSafely:
-        title: Mergând în locuri în siguranţă
-        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
-          arată cum poate fi sigură navigarea pe Internet.
+        title: Jocuri Video și Planuri de coordonate
       courseABC_unplugged_bigEvent:
-        title: Marele eveniment
         desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
           reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
           Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
           în funcție de butonul care a fost apăsat.
+        title: Marele eveniment
+      courseAB_unplugged_plantASeed:
+        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
+          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
+          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
+          în care algoritmii joacă un rol esențial.
+        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+      courseA_unplugged_goingPlacesSafely:
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
+          arată cum poate fi sigură navigarea pe Internet.
+        title: Mergând în locuri în siguranţă
+      courseA_unplugged_happyMaps:
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj printr-un labirint folosind o singură comandă.
+        title: Hărţi Fericite
+      courseA_unplugged_loops:
+        desc: În această lecție, veți afla despre bucle!
+        title: Bucle deconectate
+      courseA_unplugged_loops_2018:
+        desc: În această lecție, veți afla despre bucle!
+        title: Bucle deconectate
+      courseA_unplugged_loops_2019:
+        desc: În această lecție, veți afla despre bucle!
+        title: Bucle deconectate
+      courseB_unplugged_CnC_2018:
+        desc: Crumutat Fundamentelor Informaticii de către echipa de la Drepturi de
+          autor și creativitate, această lecție există pentru a ajuta elevii să înțeleagă
+          procesul creativ de partajare și inspirație. Împreună cu aceasta vine promovarea
+          expresiei creative și nevoia de a fi corect cu munca creativă.
+        title: Este minunat să creezi și să joci corect
+      courseB_unplugged_CnC_2019:
+        desc: Crumutat Fundamentelor Informaticii de către echipa de la Drepturi de
+          autor și creativitate, această lecție există pentru a ajuta elevii să înțeleagă
+          procesul creativ de partajare și inspirație. Împreună cu aceasta vine promovarea
+          expresiei creative și nevoia de a fi corect cu munca creativă.
+        title: Este minunat să creezi și să joci corect
+      courseB_unplugged_MRF:
+        desc: În această lecție, vă veți „programa” prietenii!
+        title: Activitate fără Calculator
+      courseB_unplugged_MRF_2018:
+        desc: Învață să programezi scriind cod pentru prietenii tăi!
+        title: Amicii mei roboți
+      courseB_unplugged_MRF_2019:
+        desc: Învață să programezi scriind cod pentru prietenii tăi!
+        title: Amicii mei roboți
       courseB_unplugged_digitalFootprint:
-        title: Amprenta ta Digitală
         desc: Profesorii introduc elevilor ideea că postarea informațiilor online
           despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+        title: Amprenta ta Digitală
+      courseB_unplugged_loopyMRF:
+        desc: La fel ca în „Prietenii mei robotici”, veți „programa” prietenii dvs.,
+          dar de data aceasta cu bucle!
+        title: Activitate fără Calculator
+      courseB_unplugged_loopyMRF_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      courseB_unplugged_loopyMRF_2019:
+        desc: "[șir gol]"
+        title: Prietenii mei Robotici Loopy
+      courseB_unplugged_passwords_2019:
+        desc: Explorați de ce utilizatorii folosesc parolele, aflați beneficiile utilizării
+          parolelor și descoperiți strategii pentru crearea și păstrarea parolelor
+          puternice și sigure.
+        title: Parole puternice
+      courseC_Unplugged_ScreenOutTheMean:
+        desc: Astăzi veți afla despre ce să faceți dacă cineva este mediu online.
+        title: Activitate fără Calculator
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        desc: Astăzi veți afla despre ce să faceți dacă cineva este mediu online.
+        title: Activitate fără Calculator
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        desc: Astăzi veți afla despre ce să faceți dacă cineva este mediu online.
+        title: Activitate fără Calculator
+      courseC_unplugged_binaryBracelets:
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
+          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
+          multe feluri.
+        title: Brăţări Binare
       courseC_unplugged_buildingAFoundation:
-        title: Construirea unei Fundaţii
         desc: Elevii construiesc o structură folosind numai rechizitele oferite. Structurile
           trebuie să finalizeze o sarcină (ating o anumită înălțime sau suportă o
           anumită greutate) și elevii discută ideea de a fi perseverent când lucrurile
           devin complicate.
+        title: Construirea unei Fundaţii
+      courseC_unplugged_gettingLoopy:
+        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
+          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
+          simplă, apoi vor fi instruiți să o repete.
+        title: Transformând în Buclă
       courseC_unplugged_paperPlanes:
-        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
         desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
           de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
           De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
           informatică și rolul esențial pe care îl joacă algoritmii.
-      courseC_unplugged_gettingLoopy:
-        title: Transformând în Buclă
-        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
-          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
-          simplă, apoi vor fi instruiți să o repete.
-      courseC_unplugged_binaryBracelets:
-        title: Brăţări Binare
-        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
-          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
-          multe feluri.
-      courseD_unplugged_graphPaperProgramming:
-        title: Programare pe Hârtie Milimetrică
-        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
-          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
-          un desen.
-      courseD_unplugged_relayProgramming:
-        title: Programare de releu
-        desc: Elevii aleargă într-o cursă cu ștafetă, în care au de sărit garduri
-          pentru a scrie un algoritm pe baza unei imagini ”Programarea pe hârtie milimetrică”.
-          Ei pot scrie o singură instrucțiune la un moment dat și, dacă este vreo
-          eroare, trebuie să șteargă tot înapoi până la acel punct.
-      courseD_unplugged_conditionalsCards:
-        title: Condiționale cu Carduri
-        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
-          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
-          și ”Dacă trag o carte neagră, tu obții un punct.”'
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
       courseD_unplugged_binaryImages:
-        title: Imagini binare
         desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
           noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
           într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
           pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
           asemenea, chiar și informații mai complexe (precum imagini şi culori) în
           sistem binar.
-      courseE_unplugged_diceRace:
-        title: 'Algoritmi din lumea reală: Cursa zarurilor'
-        desc: Această lecție indică modul în care noi folosim algoritmi în viața de
-          zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul
-          pentru un joc de zaruri.
-      courseE_unplugged_songwritingParameters:
-        title: Compoziții muzicale cu parametri
-        desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
-          transmiterea parametrilor (care personalizează o funcție fără a trebui să
-          rescrie întreaga funcție).
-      courseE_unplugged_internet:
-        title: Internet
-        desc: Elevii transmit mesaje pe bucăți de hârtie simulând metode variate de
-          transmisie pe Internet.
+        title: Imagini binare
+      courseD_unplugged_conditionalsCards:
+        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
+          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
+          și ”Dacă trag o carte neagră, tu obții un punct.”'
+        title: Condiționale cu Carduri
+      courseD_unplugged_digitalCitizenship:
+        desc: Astăzi vei afla ce înseamnă să fii cetățean digital.
+        title: Activitate fără Calculator
+      courseD_unplugged_digitalCitizenship_2018:
+        desc: Astăzi vei afla ce înseamnă să fii cetățean digital.
+        title: Activitate fără Calculator
+      courseD_unplugged_digitalCitizenship_2019:
+        desc: Astăzi vei afla ce înseamnă să fii cetățean digital.
+        title: Activitate fără Calculator
+      courseD_unplugged_graphPaperProgramming:
+        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
+          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
+          un desen.
+        title: Programare pe Hârtie Milimetrică
+      courseD_unplugged_relayProgramming:
+        desc: Elevii aleargă într-o cursă cu ștafetă, în care au de sărit garduri
+          pentru a scrie un algoritm pe baza unei imagini ”Programarea pe hârtie milimetrică”.
+          Ei pot scrie o singură instrucțiune la un moment dat și, dacă este vreo
+          eroare, trebuie să șteargă tot înapoi până la acel punct.
+        title: Programare de releu
+      courseE_simon_says_2019:
+        desc: "Joacă un joc și gândește-te ce comenzi sunt necesare pentru a obține
+          rezultatul potrivit.\r\n\r\n! [imagine test] (https://code.org/images/logo.png)"
+        title: Simon Spune
+      courseE_unplugged_CnC_2018:
+        desc: Crumutat Fundamentelor Informaticii de către echipa de la Drepturi de
+          autor și creativitate, această lecție există pentru a ajuta elevii să înțeleagă
+          provocările și beneficiile respectării dreptului de proprietate și a drepturilor
+          de autor, în special în mediile digitale. Elevii ar trebui încurajați să
+          respecte drepturile artiștilor ca o parte importantă a faptului de a fi
+          cetățean digital etic.
+        title: Partajare digitală
+      courseE_unplugged_CnC_2019:
+        desc: Crumutat Fundamentelor Informaticii de către echipa de la Drepturi de
+          autor și creativitate, această lecție există pentru a ajuta elevii să înțeleagă
+          provocările și beneficiile respectării dreptului de proprietate și a drepturilor
+          de autor, în special în mediile digitale. Elevii ar trebui încurajați să
+          respecte drepturile artiștilor ca o parte importantă a faptului de a fi
+          cetățean digital etic.
+        title: Partajare digitală
+      courseE_unplugged_accessAbility_2019:
+        desc: Aflați despre accesibilitate și valoarea empatiei prin brainstorming
+          și proiectarea de soluții accesibile pentru aplicații ipotetice.
+        title: Abilitatea de acces
       courseE_unplugged_crowdsourcing:
-        title: Obţinând Informaţii/Critici
         desc: Elevii folosesc crowdsourcing, o tehnica uzuală de rezolvare a problemelor
           din informatică, pentru a finaliza o sarcină împreună ca o modalitate mai
           eficientă decât rezolvarea individuală.
+        title: Obţinând Informaţii/Critici
+      courseE_unplugged_diceRace:
+        desc: Această lecție indică modul în care noi folosim algoritmi în viața de
+          zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul
+          pentru un joc de zaruri.
+        title: 'Algoritmi din lumea reală: Cursa zarurilor'
+      courseE_unplugged_internet:
+        desc: Elevii transmit mesaje pe bucăți de hârtie simulând metode variate de
+          transmisie pe Internet.
+        title: Internet
+      courseE_unplugged_privateInformation:
+        desc: Astăzi veți afla diferența dintre informațiile private și cele personale!
+        title: 'Educație pentru bunul simț: informații private și personale '
+      courseE_unplugged_privateInformation_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      courseE_unplugged_privateInformation_2019:
+        desc: Dezvoltată de Common Sense Education, această lecție se referă la diferența
+          dintre informațiile care pot fi partajate în siguranță online și informațiile
+          care nu sunt.
+        title: Informații private și personale
       courseE_unplugged_songwriting:
-        title: Compunând Cântece
         desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
           transmiterea parametrilor (care personalizează o funcție fără a trebui să
           rescrie întreaga funcție).
-      courseF_unplugged_tangrams:
-        title: Algoritmi Tangram
-        desc: Această lecţie ne arată ceva important despre algoritmi. Dacă vă păstraţi
-          un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi
-          să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul
-          dumneavoastră are nevoie de mai multe detalii.
+        title: Compunând Cântece
+      courseE_unplugged_songwritingParameters:
+        desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
+          transmiterea parametrilor (care personalizează o funcție fără a trebui să
+          rescrie întreaga funcție).
+        title: Compoziții muzicale cu parametri
       courseF_unplugged_envelopeVariables:
-        title: Variabile de tip plic
         desc: Variabilele permit foarte multă libertate în informatică.  Această lecţie
           vă ajută să înțelegeți ce sunt variabile şi cum le putem folosi în multe
           moduri diferite. Utilizați această activitate înainte de (sau în conjuncție
           cu) lecţia despre abstractizare ca idea să fie întradevăr înțeleasă.
+        title: Variabile de tip plic
       courseF_unplugged_forLoopFun:
-        title: Pentru distracția cu bucle
         desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
           vom învăța cum să folosim bucle cu structură extra încorporată.
+        title: Pentru distracția cu bucle
+      courseF_unplugged_powerOfWords:
+        desc: Astăzi veți afla despre ce să faceți dacă cineva este mediu online.
+        title: Activitate fără Calculator
+      courseF_unplugged_powerOfWords_2018:
+        desc: "[șir gol]"
+        title: "[șir gol]"
+      courseF_unplugged_powerOfWords_2019:
+        desc: 'traducere lipsă: en-us.data.unplugged.coursef_unplugged_powerofwords_2018.desc'
+        title: 'traducere lipsă: en-us.data.unplugged.coursef_unplugged_powerofwords_2018.title'
       courseF_unplugged_songwritingParameters:
-        title: Compozitie cu parametri
         desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
           (uneori numite proceduri) sunt mini-programe pe care le puteţi folosi iar
           și iar in interiorul programului vostru mai mare. Această lecţie va ajuta
           elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii
           este o practică așa de utilă.  '
-      courseB_unplugged_MRF_2018:
-        title: Amicii mei roboți
-      BuildingAFoundation_2018:
+        title: Compozitie cu parametri
+      courseF_unplugged_tangrams:
+        desc: Această lecţie ne arată ceva important despre algoritmi. Dacă vă păstraţi
+          un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi
+          să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul
+          dumneavoastră are nevoie de mai multe detalii.
+        title: Algoritmi Tangram
+      deeper learning description:
+        desc: 'traducere lipsă: ro-US.data.unplugged.desc'
         title: "[șir gol]"
-        desc: "[șir gol]"
-      courseB_unplugged_loopyMRF_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      DiceRace_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      courseE_unplugged_privateInformation_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      SongwritingParameters_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      Internet_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      Crowdsourcing_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      TangramAlgorithms_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      courseF_unplugged_powerOfWords_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      EnvelopeVariables_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      ForLoopFun_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      SongwritingWithParameters_2018:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      PlantASeed_2018:
-        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
-        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
-          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
-          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
-          în care algoritmii joacă un rol esențial.
-      UnplugHappyMaps_2018:
-        title: Hărţi Fericite
-        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
-          un personaj printr-un labirint folosind o singură comandă.
-      GoingPlacesSafely_2018:
-        title: Mergând în locuri în siguranţă
-        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
-          arată cum poate fi sigură navigarea pe Internet.
-      BigEvent_2018:
-        title: Marele eveniment
-        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
-          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
-          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
-          în funcție de butonul care a fost apăsat.
-      GraphPaperProgramming_2018:
-        title: Programare pe Hârtie Milimetrică
-        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
-          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
-          un desen.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Activitate fără Calculator
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Activitate fără Calculator
-      Conditionals_2018:
-        title: Condiţionale
-        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
-          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
-          și ”Dacă trag o carte neagră, tu obții un punct.”'
-      DigitalFootprint_2018:
-        title: Amprenta ta Digitală
-        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
-          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
-      BinaryImages_2018:
-        title: Imagini binare
-        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
-          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
-          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
-          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
-          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
-          sistem binar.
-      PaperPlanes_2018:
-        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
-        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
-          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
-          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
-          informatică și rolul esențial pe care îl joacă algoritmii.
-      GettingLoopy_2018:
-        title: Transformând în Buclă
-        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
-          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
-          simplă, apoi vor fi instruiți să o repete.
-      BinaryBracelets_2018:
-        title: Brăţări Binare
-        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
-          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
-          multe feluri.
-      MoveItMoveIt_2018:
-        title: Mutaţi-l, mutați-l
-        desc: "[șir gol]"
-      RelayProgramming_2018:
-        title: Programare de releu
-      courseB_unplugged_MRF_2019:
-        title: Amicii mei roboți
-      courseB_unplugged_loopyMRF_2019:
-        desc: "[șir gol]"
-      Conditionals_2019:
-        title: Condiţionale
-        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
-          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
-          și ”Dacă trag o carte neagră, tu obții un punct.”'
-      GraphPaperProgramming_2019:
-        title: Programare pe Hârtie Milimetrică
-        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
-          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
-          un desen.
-      RelayProgramming_2018_2019:
-        title: Programare de releu
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Activitate fără Calculator
-      BinaryImages_2019:
-        title: Imagini binare
-        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
-          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
-          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
-          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
-          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
-          sistem binar.
-      GettingLoopy_2019:
-        title: Transformând în Buclă
-        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
-          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
-          simplă, apoi vor fi instruiți să o repete.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Activitate fără Calculator
-      BigEvent_2019:
-        title: Marele eveniment
-        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
-          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
-          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
-          în funcție de butonul care a fost apăsat.
-      BinaryBracelets_2019:
-        title: Brăţări Binare
-        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
-          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
-          multe feluri.
-      PaperPlanes_2019:
-        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
-        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
-          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
-          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
-          informatică și rolul esențial pe care îl joacă algoritmii.
-      PlantASeed_2019:
-        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
-        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
-          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
-          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
-          în care algoritmii joacă un rol esențial.
-      UnplugHappyMaps_2019:
-        title: Hărţi Fericite
-        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
-          un personaj printr-un labirint folosind o singură comandă.
-      GoingPlacesSafely_2019:
-        title: Mergând în locuri în siguranţă
-        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
-          arată cum poate fi sigură navigarea pe Internet.
-      MoveItMoveIt_2019:
-        title: Mutaţi-l, mutați-l
-        desc: "[șir gol]"
-      DigitalFootprint_2019:
-        title: Amprenta ta Digitală
-        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
-          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
-      timeforcs_demo_crowdsourcing:
-        title: Obţinând Informaţii/Critici
       timeforcs_demo_conditionals:
-        title: Condiţionale
         desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
           de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
           și ”Dacă trag o carte neagră, tu obții un punct.”'
-      SP-VPL-CSD-21-CourseNavigation:
-        title: "[șir gol]"
-        desc: "[șir gol]"
-      SP-VPL-CSA-21-mod3-1-1:
-        title: "[șir gol]"
-        desc: "[șir gol]"
+        title: Condiţionale
+      timeforcs_demo_crowdsourcing:
+        desc: 'Notă _Josh: în contrast cu prima lecție, l-am formatat pe acesta la
+          fel ca o lecție tipică deconectată. _'
+        title: Obţinând Informaţii/Critici

@@ -1,2 +1,15 @@
 {
+  "dataDisplayFeatures": "Valige üks või mitu veergu sisenditena, et aidata prognoosida.",
+  "dataDisplayLabel": "Valige üks veerg ennustamiseks.",
+  "generateResults": "Teie mudelit testitakse.",
+  "modelSummary": "Olete edukalt koolitatud ja salvestanud oma mudeli. Vaadake oma mudeli üksikasjad üle ja klõpsake nuppu Valmis, et kasutada oma koolitatud mudelit App Lab -is.",
+  "results": "Vaadake tulemused üle.",
+  "resultsDetails": "Tulemuste üksikasjad on näidatud.",
+  "saveModel": "Salvestage koolitatud mudel App Lab -is kasutamiseks.",
+  "selectDataset": "Valige andmekogum, mida soovite kasutada.",
+  "selectedDataset": "Sa just valisid andmekogumi.",
+  "selectedFeatureCategorical": "Sa just valisid kategoorilise funktsiooni.",
+  "selectedFeatureNumerical": "Valisite just numbrilise funktsiooni.",
+  "trainModel": "Teie mudelit koolitatakse.",
+  "uploadedDataset": "Sa just laadisid üles andmekogumi."
 }

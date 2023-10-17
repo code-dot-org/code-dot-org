@@ -1,5 +1,5 @@
 ---
-title: Whole School Participation
+title: Rannpháirtíocht Scoile Uile
 ---
 
 {{ signup_button }}

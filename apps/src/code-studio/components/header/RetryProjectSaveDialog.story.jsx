@@ -5,7 +5,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'RetryProjectSaveDialog',
-  component: RetryProjectSaveDialog
+  component: RetryProjectSaveDialog,
 };
 
 // Template
@@ -16,10 +16,10 @@ const Template = args => (
 // Stories
 export const DialogOpenDefault = Template.bind({});
 DialogOpenDefault.args = {
-  projectUpdatedStatus: statuses.error
+  projectUpdatedStatus: statuses.error,
 };
 
 export const DialogOpenWithPendingSave = Template.bind({});
 DialogOpenWithPendingSave.args = {
-  projectUpdatedStatus: statuses.saving
+  projectUpdatedStatus: statuses.saving,
 };

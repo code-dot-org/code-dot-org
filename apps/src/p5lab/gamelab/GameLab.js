@@ -27,7 +27,7 @@ export default class GameLab extends P5Lab {
       config.level.lastAttempt = '';
       showLevelBuilderSaveButton(() => ({
         start_blocks: this.studioApp_.getCode(),
-        start_libraries: JSON.stringify(project.getProjectLibraries())
+        start_libraries: JSON.stringify(project.getProjectLibraries()),
       }));
     }
 
@@ -55,7 +55,7 @@ export default class GameLab extends P5Lab {
 
   preloadLabAssets() {
     return Promise.all([
-      this.preloadAnimations_(this.level.pauseAnimationsByDefault)
+      this.preloadAnimations_(this.level.pauseAnimationsByDefault),
     ]);
   }
 

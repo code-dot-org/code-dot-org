@@ -1,0 +1,33 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-05-15T20:16:09.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    \\n  </head>\\n  <body>\\n    \\n    Manny: Aren't you Patrick Star? Patrick: Yup Manny: And this is your ID? Patrick: Yup Manny: I found this ID in this wallet. And if that's the case, this must be your wallet Patrick: That makes sense to me Manny: Then take it Patrick: It's not my wallet\\n    \\n    \\n    \\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "hide_share_and_remix": "true",
+    "long_instructions": "<img src=\"https://images.code.org/5bf8426612c7c7696edddb0b66c73428-dialogue.png\" style=\"float: right; width: 25%; margin-left: 10px; margin-right: 10px\" />\r\n\r\n# Fixing Dialogue\r\n\r\nA screenwriter tried to copy-and-paste their dialogue from a play into a webpage, but the formatting got all messed up. Can you separate each piece of dialogue so it's on it's own line?\r\n\r\n# Do This\r\n\r\n1) Separate the dialogue into separate lines so each person is speaking on their own line\r\n- Use `<p>` and `</p>` tags so each line appears correctly on the website",
+    "submittable": "false",
+    "parent_level_id": 20000,
+    "name_suffix": "_csd-vpl-23",
+    "map_reference": "/courses/csd-2022/guides/html-tags",
+    "video_key": "csd_weblab_intro_2",
+    "encrypted": "false",
+    "mini_rubric": "true",
+    "validation_enabled": "true",
+    "display_name": "Fixing Dialogue",
+    "bubble_choice_description": "Help a writer fix their website so each line of dialogue appears on a separate line",
+    "thumbnail_url": "https://images.code.org/5bf8426612c7c7696edddb0b66c73428-dialogue.png",
+    "rubric_key_concept": "Use correct HTML syntax to create text paragraphs",
+    "rubric_performance_level_1": "All texts is contained within paragraph tags. The resulting webpage matches the preview in the level instructions.",
+    "rubric_performance_level_2": "At least some text has been separated out into a paragraph through proper use of paragraph tags. The resulting webpage partially matches the preview in the level instructions",
+    "rubric_performance_level_3": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",
+    "rubric_performance_level_4": "There are no paragraph tags in the text."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-05-15T20:16:09.625+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracC_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - PracC_2023\"}]"
+}]]></config>
+</Weblab>

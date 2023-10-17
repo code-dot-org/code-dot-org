@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "homepage": [
+      "show-everywhere"
+    ]
+  },
+
+  "banners": {
+    "show-everywhere": {
+      "desktopImage": "/images/globe.png",
+      "actions": [
+        {
+          "type": "text",
+          "text": "Showing everywhere"
+        }
+      ]
+    }
+  }
+}

@@ -8,6 +8,7 @@ tr:
       Green: Yeşil
       Red: Kırmızı
       actor: oyuncu
+      adjective: sıfat
       age: yaş
       animal1score: hayvan1skor
       animal1speed: hayvan1hız
@@ -20,6 +21,7 @@ tr:
       bit: bit
       blue1: mavi1
       blue2: mavi2
+      body-part: vücut parçası
       bodylength: vücut uzunluğu
       buttonHeight: butonYüksekliği
       buttonMargin: buttonMargin
@@ -65,8 +67,10 @@ tr:
       name: adı
       nectar: nektar
       nectars: nektarlar
+      number: sayı
       object: nesne
       padYOffset: padYOffset
+      parts: Parçalar
       planet: gezegen
       player_score: oyuncu_skoru
       points: Puanlar
@@ -92,6 +96,7 @@ tr:
       startX: startX
       startY: startY
       stopped-left: sol-durdu
+      time: zaman
       type: yaz
       variable: değişken
       width: genişlik

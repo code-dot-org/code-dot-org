@@ -155,6 +155,13 @@ Given(/^I wait for the temp data doc page to load$/) do
   }
 end
 
+Given(/^I wait for the temp data doc edit page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/data_docs/#{@temp_data_doc_key}/edit"
+    And I wait until element "#edit-data-doc" is visible
+  }
+end
+
 Given(/^element "([^"]*)" contains the name of the temp data doc$/) do |selector|
   steps %{
      And element "#{selector}" contains text "#{@temp_data_doc_name}"

@@ -7,8 +7,8 @@ require 'yaml'
 require_relative 'i18n_script_utils'
 
 class RedactRestoreUtils
-  def self.redact_file(source_path, plugins=[], format='md')
-    args = ['bin/i18n/node_modules/.bin/redact']
+  def self.redact_file(source_path, plugins = [], format = 'md')
+    args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
     args.push(Shellwords.escape(source_path))
@@ -17,8 +17,8 @@ class RedactRestoreUtils
     return JSON.parse(stdout)
   end
 
-  def self.restore_file(source_path, redacted_path, plugins=[], format='md')
-    args = ['bin/i18n/node_modules/.bin/restore']
+  def self.restore_file(source_path, redacted_path, plugins = [], format = 'md')
+    args = [CDO.dir('bin/i18n/node_modules/.bin/restore')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
     args.push("-s #{Shellwords.escape(source_path)}")
@@ -29,8 +29,8 @@ class RedactRestoreUtils
     return JSON.parse(stdout)
   end
 
-  def self.redact_data(source_data, plugins=[], format='md')
-    args = ['bin/i18n/node_modules/.bin/redact']
+  def self.redact_data(source_data, plugins = [], format = 'md')
+    args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
 
@@ -42,7 +42,7 @@ class RedactRestoreUtils
     return JSON.parse(stdout)
   end
 
-  def self.restore_data(source_data, redacted_data, plugins=[], format='md')
+  def self.restore_data(source_data, redacted_data, plugins = [], format = 'md')
     source_json = Tempfile.new(['source', '.json'])
     redacted_json = Tempfile.new(['redacted', '.json'])
 
@@ -60,7 +60,7 @@ class RedactRestoreUtils
     return restored
   end
 
-  def self.restore(source, redacted, dest, plugins=[], format='md')
+  def self.restore(source, redacted, dest, plugins = [], format = 'md')
     return unless File.exist?(source)
     return unless File.exist?(redacted)
     is_json = File.extname(source) == '.json'
@@ -94,24 +94,21 @@ class RedactRestoreUtils
         file.write(JSON.pretty_generate(restored))
       else
         redacted_key = redacted_data.keys.first
-        file.write(
-          I18nScriptUtils.to_crowdin_yaml(
-            {
-              redacted_key => restored
-            }
-          )
-        )
+        restored = {redacted_key => restored}
+        file.write(I18nScriptUtils.to_crowdin_yaml(restored))
       end
     end
+
+    restored
   end
 
-  def self.redact(source, dest, plugins=[], format='md')
+  def self.redact(source, dest, plugins = [], format = 'md')
     return unless File.exist? source
     FileUtils.mkdir_p File.dirname(dest)
 
     source_data =
       if File.extname(source) == '.json'
-        JSON.parse(File.read(source))
+        JSON.load_file(source)
       else
         YAML.load_file(source)
       end
@@ -128,6 +125,6 @@ class RedactRestoreUtils
   end
 
   private_class_method def self.plugins_to_arg(plugins)
-    plugins.map {|name| "bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js" if name}.join(',')
+    plugins.map {|name| CDO.dir("bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js") if name}.join(',')
   end
 end

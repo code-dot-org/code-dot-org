@@ -6,16 +6,16 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {
   singleton as studioApp,
   stubStudioApp,
-  restoreStudioApp
+  restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/javalabRedux';
+import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
 
 describe('Javalab', () => {
   let javalab;
@@ -32,7 +32,7 @@ describe('Javalab', () => {
     javalab.studioApp_ = studioApp();
     config = {
       level: {},
-      skin: {}
+      skin: {},
     };
   });
 
@@ -48,7 +48,7 @@ describe('Javalab', () => {
     beforeEach(() => {
       eventStub = {
         preventDefault: sinon.stub(),
-        returnValue: undefined
+        returnValue: undefined,
       };
     });
 
@@ -71,9 +71,9 @@ describe('Javalab', () => {
         startSources: {
           'File.java': {
             text: 'Some code',
-            visible: true
-          }
-        }
+            visible: true,
+          },
+        },
       };
 
       javalab.init(config);
@@ -88,15 +88,15 @@ describe('Javalab', () => {
         startSources: {
           'File.java': {
             text: 'Some code',
-            visible: true
-          }
+            visible: true,
+          },
         },
         lastAttempt: {
           'MyClass.java': {
             text: 'Some code 2',
-            visible: true
-          }
-        }
+            visible: true,
+          },
+        },
       };
       javalab.init(config);
 
@@ -107,7 +107,7 @@ describe('Javalab', () => {
 
     it('does not populate if start sources are empty', () => {
       config.level = {
-        startSources: {}
+        startSources: {},
       };
       javalab.init(config);
 
@@ -120,9 +120,9 @@ describe('Javalab', () => {
       config.level = {
         exemplarSources: {
           'File.java': {
-            text: 'Some exemplar code'
-          }
-        }
+            text: 'Some exemplar code',
+          },
+        },
       };
       javalab.init(config);
 

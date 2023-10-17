@@ -14,3 +14,4 @@ answer 'to exit a method and go back to the point in the program that called it 
 
 question '`void`'
 answer 'specifies that a method should not have a return value'
+allow_multiple_attempts true

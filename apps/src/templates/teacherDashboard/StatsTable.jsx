@@ -17,7 +17,8 @@ class StatsTable extends Component {
     studentsCompletedLevelCount: PropTypes.object,
 
     // Provided by redux.
-    scriptName: PropTypes.string
+    scriptName: PropTypes.string,
+    participantType: PropTypes.string,
   };
 
   state = {};
@@ -26,7 +27,7 @@ class StatsTable extends Component {
     const {students, studentsCompletedLevelCount} = this.props;
     return (students || []).map(student => ({
       ...student,
-      completedLevelsCount: studentsCompletedLevelCount[student.id] || 0
+      completedLevelsCount: studentsCompletedLevelCount[student.id] || 0,
     }));
   };
 
@@ -37,7 +38,7 @@ class StatsTable extends Component {
     if (studentUrl) {
       return (
         <a
-          className="uitest-name-cell"
+          className="uitest-display-name-cell"
           style={tableLayoutStyles.link}
           href={studentUrl}
           target="_blank"
@@ -47,8 +48,12 @@ class StatsTable extends Component {
         </a>
       );
     } else {
-      return <span className="uitest-name-cell">{name}</span>;
+      return <span className="uitest-display-name-cell">{name}</span>;
     }
+  };
+
+  familyNameFormatter = familyName => {
+    return <span className="uitest-family-name-cell">{familyName}</span>;
   };
 
   getSortingColumns = () => {
@@ -56,51 +61,89 @@ class StatsTable extends Component {
   };
 
   getColumns = sortable => {
-    return [
-      {
-        property: 'name',
-        header: {
-          label: i18n.name(),
-          props: {
-            className: 'uitest-name-header',
-            style: {
-              ...tableLayoutStyles.headerCell
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          formatters: [this.nameFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      },
-      {
-        property: 'completedLevelsCount',
-        header: {
-          label: i18n.completedLevels(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.rightAlignText
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.rightAlignText
-            }
-          }
-        }
-      }
-    ];
+    const columns = [this.nameColumn(sortable)];
+
+    // Only include family name in non-PL sections
+    if (this.props.participantType === 'student') {
+      columns.push(this.familyNameColumn(sortable));
+    }
+
+    columns.push(this.completedLevelsCountColumn(sortable));
+
+    return columns;
   };
+
+  nameColumn(sortable) {
+    return {
+      property: 'name',
+      header: {
+        label: i18n.name(),
+        props: {
+          className: 'uitest-display-name-header',
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.nameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  familyNameColumn(sortable) {
+    return {
+      property: 'familyName',
+      header: {
+        label: i18n.familyName(),
+        props: {
+          className: 'uitest-family-name-header',
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.familyNameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  completedLevelsCountColumn(sortable) {
+    return {
+      property: 'completedLevelsCount',
+      header: {
+        label: i18n.completedLevels(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...styles.rightAlignText,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...styles.rightAlignText,
+          },
+        },
+      },
+    };
+  }
 
   // The user requested a new sorting column. Adjust the state accordingly.
   onSort = selectedColumn => {
@@ -111,10 +154,10 @@ class StatsTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -131,7 +174,7 @@ class StatsTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.studentsWithCompletedLevelCount());
 
     return (
@@ -149,14 +192,17 @@ class StatsTable extends Component {
 
 const styles = {
   table: {
-    width: '100%'
+    width: '100%',
   },
   rightAlignText: {
-    textAlign: 'right'
-  }
+    textAlign: 'right',
+  },
 };
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
-  scriptName: getSelectedScriptName(state)
+  scriptName: getSelectedScriptName(state),
+  participantType:
+    state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      .participantType,
 }))(StatsTable);

@@ -10,3 +10,4 @@ right 'constructing social relationships'
 wrong 'interacting with others'
 wrong 'creating artifacts of social relevance'
 wrong 'building relationships between old and new knowledge'
+allow_multiple_attempts true

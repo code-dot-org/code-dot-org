@@ -12,8 +12,8 @@ const defaultProps = {
     body: 'body text',
     buttonId: 'button-id',
     buttonUrl: '/button-url',
-    buttonText: 'button text'
-  }
+    buttonText: 'button text',
+  },
 };
 
 describe('CertificateShare', () => {
@@ -22,7 +22,7 @@ describe('CertificateShare', () => {
   beforeEach(() => {
     storedWindowDashboard = window.dashboard;
     window.dashboard = {
-      CODE_ORG_URL: '//code.org'
+      CODE_ORG_URL: '//code.org',
     };
   });
 
@@ -45,7 +45,7 @@ describe('CertificateShare', () => {
   it('renders no announcement without announcement prop', () => {
     const props = {
       ...defaultProps,
-      announcement: null
+      announcement: null,
     };
     const wrapper = shallow(<CertificateShare {...props} />);
 

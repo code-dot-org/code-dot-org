@@ -5,3 +5,5 @@ wrong 'The speakers on the computer are not working.'
 wrong 'The file name for the sad song is incorrect.'
 wrong 'The board is not connected to the computer.'
 wrong 'The event handler does not have the correct parameters.'
+
+allow_multiple_attempts true

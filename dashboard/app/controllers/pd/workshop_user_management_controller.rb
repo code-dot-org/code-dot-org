@@ -46,9 +46,7 @@ class Pd::WorkshopUserManagementController < ApplicationController
     redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
   end
 
-  private
-
-  def restricted_users
+  private def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
 end

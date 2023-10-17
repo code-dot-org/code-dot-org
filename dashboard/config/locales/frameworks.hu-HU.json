@@ -1,2 +1,38 @@
 {
+  "hu-HU": {
+    "data": {
+      "frameworks": {
+        "ai4k12-2021": {
+          "name": "AI4K12 Nemzeti Irányelvek 2021"
+        },
+        "c3ss": {
+          "name": "C3 Társadalomtudományi Szabványok"
+        },
+        "ccela": {
+          "name": "Közös Core angol nyelvi művészeti szabványok"
+        },
+        "ccmath": {
+          "name": "Közös alapvető matematikai szabványok"
+        },
+        "csa": {
+          "name": "CSA fogalmi keretrendszer"
+        },
+        "csp2021": {
+          "name": "CSP fogalmi keretrendszer"
+        },
+        "csta": {
+          "name": "CSTA K-12 számítástechnikai szabványok (2017)"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 számítástechnikai szabványok (2011)"
+        },
+        "iste": {
+          "name": "ISTE szabványok a hallgatók számára"
+        },
+        "ngss": {
+          "name": "Következő generációs tudományos szabványok"
+        }
+      }
+    }
+  }
 }

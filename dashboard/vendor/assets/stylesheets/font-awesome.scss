@@ -1,0 +1,14 @@
+/*
+   Note: additional styling should probably not be added to this file (or, if added, below these @import statements),
+   as @import statements must come before other CSS style declarations.
+
+   If you are changing the location of these files,
+   see readme in the top-level shared/css directory for more detail on manual steps to take when uploading new files.
+ */
+@import "font";
+@import url($font-awesome-core-url);
+@import url($font-awesome-brands-url);
+@import url($font-awesome-solid-url);
+@import url($font-awesome-regular-url);
+@import url($font-awesome-v4-fonts-url);
+@import url($font-awesome-v4-shims-url);

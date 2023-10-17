@@ -18,7 +18,7 @@ describe('LibraryClientApi', () => {
         name: 'My Project',
         libraryName: 'My Library',
         libraryDescription: 'A very cool library!',
-        libraryPublishedAt: new Date()
+        libraryPublishedAt: new Date(),
       };
       unpublishCallback = sinon.stub();
     });
@@ -32,7 +32,7 @@ describe('LibraryClientApi', () => {
       server.respondWith('delete', `/v3/libraries/${channelId}/library.json`, [
         status,
         {'Content-Type': 'application/json'},
-        ''
+        '',
       ]);
     };
 
@@ -42,7 +42,7 @@ describe('LibraryClientApi', () => {
         ...project,
         libraryName: undefined,
         libraryDescription: undefined,
-        libraryPublishedAt: null
+        libraryPublishedAt: null,
       };
 
       libraryApi.unpublish(project, unpublishCallback);

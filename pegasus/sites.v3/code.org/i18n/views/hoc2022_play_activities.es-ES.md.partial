@@ -1,4 +1,4 @@
-{{ featured_tutorial, title: "Hola, Mundo: Fútbol", body: "Tú eres el capitán del equipo y programas escenas interactivas en el campo de fútbol. ¡GOOOOOOLLLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
+{{featured_tutorial, title: «Hola, Mundo: Fútbol», body: «Tú eres el capitán del equipo y programas escenas interactivas en el campo de fútbol. "¡GOOOOOOLLLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
 {{ featured_tutorial, title: "Deportes", body: "Haz un partido de baloncesto o mezcla y combina todos los deportes.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
 

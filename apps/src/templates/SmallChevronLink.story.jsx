@@ -6,13 +6,13 @@ export default storybook => {
     {
       name: 'Default',
       description: 'Used throughout the site for navigation',
-      story: () => <SmallChevronLink href="/foo" text="View course" />
+      story: () => <SmallChevronLink href="/foo" text="View course" />,
     },
     {
       name: 'Icon before text',
       story: () => (
         <SmallChevronLink href="/foo" text="View course" iconBefore />
-      )
-    }
+      ),
+    },
   ]);
 };

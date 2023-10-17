@@ -14,7 +14,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderStopCallback
  * @constructor
  */
-var NetSimBandwidthControl = (module.exports = function(
+var NetSimBandwidthControl = (module.exports = function (
   rootDiv,
   sliderChangeCallback,
   sliderStopCallback
@@ -25,7 +25,7 @@ var NetSimBandwidthControl = (module.exports = function(
     value: Infinity,
     min: 4,
     max: 128 * NetSimConstants.BITS_PER_KILOBIT,
-    upperBoundInfinite: true
+    upperBoundInfinite: true,
   });
 
   // Auto-render, unlike our base class
@@ -40,6 +40,6 @@ NetSimBandwidthControl.inherits(NetSimSlider.LogarithmicSlider);
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimBandwidthControl.prototype.valueToLabel = function(val) {
+NetSimBandwidthControl.prototype.valueToLabel = function (val) {
   return NetSimUtils.bitrateToLocalizedRoundedBitrate(val);
 };

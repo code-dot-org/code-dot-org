@@ -56,12 +56,12 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 1}
       Services::CurriculumPdfs.generate_script_overview_pdf(script, tmpdir)
 
-      lesson_group.lessons << create(:lesson, script: script)
+      lesson_group.lessons << create(:lesson, script: script, has_lesson_plan: true)
       script.reload
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 2}
       Services::CurriculumPdfs.generate_script_overview_pdf(script, tmpdir)
 
-      lesson_group.lessons << create(:lesson, script: script)
+      lesson_group.lessons << create(:lesson, script: script, has_lesson_plan: true)
       script.reload
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 3}
       Services::CurriculumPdfs.generate_script_overview_pdf(script, tmpdir)

@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Các khóa học của Code.org được hàng chục triệu học sinh và một triệu giáo viên trên khắp thế giới sử dụng.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Lịch sử
 
 Vào năm 2013, Code.org do anh em song sinh Hadi và Ali Partovi ra mắt thông qua một [video tuyên truyền về môn khoa học máy tính](https://www.youtube.com/watch?v=nKIu9yen5nc). Video này leo lên hạng 1 trên YouTube trong một ngày và 15.000 trường học đã liên hệ với chúng tôi để được trợ giúp. Kể từ đó, chúng tôi đã mở rộng từ một đội ngũ nhân viên tình nguyện được trang bị năng lực để xây dựng một tổ chức hoàn thiện hỗ trợ phong trào trên toàn thế giới. Chúng tôi tin rằng một nền giáo dục khoa học máy tính chất lượng nên dành cho mọi trẻ em chứ không chỉ một số trẻ may mắn.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Hoạt động của chúng tôi
 

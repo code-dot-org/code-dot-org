@@ -3,7 +3,7 @@ import {
   loadConfig,
   getProjectDatabase,
   showRateLimitAlert,
-  getPathRef
+  getPathRef,
 } from './firebaseUtils';
 import {WarningType} from './constants';
 
@@ -37,9 +37,7 @@ export function enforceTableCount(config, tableName) {
         type: WarningType.MAX_TABLES_EXCEEDED,
         msg:
           `Table '${tableName}' cannot be written to because the ` +
-          `maximum number of tables (${
-            config.maxTableCount
-          }) has been exceeded.`
+          `maximum number of tables (${config.maxTableCount}) has been exceeded.`,
       });
     }
     return Promise.resolve(config);

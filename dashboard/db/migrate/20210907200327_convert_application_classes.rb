@@ -22,11 +22,11 @@ class ConvertApplicationClasses < ActiveRecord::Migration[5.2]
         ActiveRecord::Base.transaction do
           Pd::Application::ApplicationBase.
             with_deleted.
-            where("type in (?)", TEACHER_APPLICATION_CLASSES.values).
+            where(type: TEACHER_APPLICATION_CLASSES.values).
             update_all(type: "Pd::Application::TeacherApplication")
           Pd::Application::ApplicationBase.
             with_deleted.
-            where("type in (?)", PRINCIPAL_APPROVAL_APPLICATION_CLASSES.values).
+            where(type: PRINCIPAL_APPROVAL_APPLICATION_CLASSES.values).
             update_all(type: "Pd::Application::PrincipalApprovalApplication")
         end
       end

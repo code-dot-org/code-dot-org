@@ -5,7 +5,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button, ButtonToolbar} from 'react-bootstrap';
+import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
   PermissionPropType,
@@ -13,7 +13,7 @@ import {
   Organizer,
   CsfFacilitator,
   Facilitator,
-  ProgramManager
+  ProgramManager,
 } from './permission';
 import $ from 'jquery';
 import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
@@ -21,31 +21,31 @@ import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
   date_order: 'desc',
-  limit: 5
+  limit: 5,
 };
 const filterParams = {
   inProgress: {
     ...defaultFilters,
     limit: null, // Always show all 'In Progress' workshops
-    state: 'In Progress'
+    state: 'In Progress',
   },
   notStarted: {
     ...defaultFilters,
-    state: 'Not Started'
+    state: 'Not Started',
   },
   ended: {
     ...defaultFilters,
-    state: 'Ended'
-  }
+    state: 'Ended',
+  },
 };
 
 export class WorkshopIndex extends React.Component {
   static propTypes = {
-    permission: PermissionPropType.isRequired
+    permission: PermissionPropType.isRequired,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   handleNewWorkshopClick = () => {
@@ -164,10 +164,10 @@ export class WorkshopIndex extends React.Component {
 
 const styles = {
   surveySubmissionsButton: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };
 
 export default connect(state => ({
-  permission: state.workshopDashboard.permission
+  permission: state.workshopDashboard.permission,
 }))(WorkshopIndex);

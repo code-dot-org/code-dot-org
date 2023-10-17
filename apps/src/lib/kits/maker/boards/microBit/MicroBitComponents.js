@@ -15,18 +15,18 @@ import ExternalLed from './ExternalLed';
  * Initializes a set of components for the currently
  * connected MicroBit board.
  *
- * @param {MBFirmataClient} board - Microbit firmata client
+ * @param {MBFirmataClient} boardClient - Microbit firmata client
  * @returns {Promise} board components
  */
-export function createMicroBitComponents(board) {
+export function createMicroBitComponents(boardClient) {
   return Promise.resolve({
-    buttonA: new MicroBitButton({mb: board, pin: 1}),
-    buttonB: new MicroBitButton({mb: board, pin: 2}),
-    ledScreen: new LedScreen({mb: board}),
-    tempSensor: new MicroBitThermometer({mb: board}),
-    accelerometer: new Accelerometer({mb: board}),
-    compass: new Compass({mb: board}),
-    lightSensor: new LightSensor({mb: board})
+    buttonA: new MicroBitButton({mb: boardClient, pin: 1}),
+    buttonB: new MicroBitButton({mb: boardClient, pin: 2}),
+    ledScreen: new LedScreen({mb: boardClient}),
+    tempSensor: new MicroBitThermometer({mb: boardClient}),
+    accelerometer: new Accelerometer({mb: boardClient}),
+    compass: new Compass({mb: boardClient}),
+    lightSensor: new LightSensor({mb: boardClient}),
   });
 }
 
@@ -124,5 +124,5 @@ export const componentConstructors = {
   LightSensor,
   ExternalButton,
   ExternalLed,
-  CapacitiveTouchSensor
+  CapacitiveTouchSensor,
 };

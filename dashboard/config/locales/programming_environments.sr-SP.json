@@ -2,76 +2,14 @@
   "sr-SP": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "categories": {
-            "groups": {
-              "name": "Групе",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Боја"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Боја"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Звезда"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Математика",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Најмањи враћени број"
-                    },
-                    "max": {
-                      "description": "Највећи враћени број"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Најмањи враћени број"
-                    },
-                    "max": {
-                      "description": "Највећи враћени број"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Променљиве"
-            },
-            "functions": {
-              "name": "Функције"
-            }
-          }
-        },
         "applab": {
           "categories": {
-            "ui_controls": {
+            "advanced": {
+              "name": "Напредна подешавања"
+            },
+            "control": {
               "expressions": {
-                "onEvent": {
+                "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "Функција"
@@ -91,9 +29,37 @@
                 }
               }
             },
-            "control": {
+            "functions": {
+              "name": "Функције"
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Највећи враћени број"
+                    },
+                    "min": {
+                      "description": "Најмањи враћени број"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Највећи враћени број"
+                    },
+                    "min": {
+                      "description": "Најмањи враћени број"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Функција"
@@ -102,79 +68,113 @@
                 }
               }
             },
-            "math": {
-              "name": "Математика",
+            "variables": {
+              "name": "Променљиве"
+            }
+          }
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
               "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Најмањи враћени број"
-                    },
-                    "max": {
-                      "description": "Највећи враћени број"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Најмањи враћени број"
-                    },
-                    "max": {
-                      "description": "Највећи враћени број"
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Звезда"
                     }
                   }
                 }
               }
             },
-            "variables": {
-              "name": "Променљиве"
-            },
             "functions": {
               "name": "Функције"
             },
-            "advanced": {
-              "name": "Напредна подешавања"
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Боја"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Боја"
+                    }
+                  }
+                }
+              },
+              "name": "Групе"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Највећи враћени број"
+                    },
+                    "min": {
+                      "description": "Најмањи враћени број"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Највећи враћени број"
+                    },
+                    "min": {
+                      "description": "Најмањи враћени број"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променљиве"
             }
           }
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "Свет"
-            },
-            "location": {
-              "name": "Локације"
-            },
             "actions": {
               "name": "Акције"
-            },
-            "events": {
-              "name": "Догађаји"
             },
             "behaviors": {
               "name": "Понашање"
             },
-            "loops": {
-              "name": "Петље"
+            "comments": {
+              "name": "Коментари"
             },
-            "variables": {
-              "name": "Променљиве"
-            },
-            "math": {
-              "name": "Математика"
-            },
-            "logic": {
-              "name": "Логика"
+            "events": {
+              "name": "Догађаји"
             },
             "functions": {
               "name": "Функције"
             },
+            "location": {
+              "name": "Локације"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "loops": {
+              "name": "Петље"
+            },
+            "math": {
+              "name": "Математика"
+            },
             "text": {
               "name": "текст"
             },
-            "comments": {
-              "name": "Коментари"
+            "variables": {
+              "name": "Променљиве"
+            },
+            "world": {
+              "name": "Свет"
             }
           }
         }

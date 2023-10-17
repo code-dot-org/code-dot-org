@@ -10,3 +10,4 @@ question 'alias'
 answer 'a reference variable that points to the same object as another reference variable.'
 question 'multi-selection statement'
 answer 'a statement that selects a single action from three or more conditional statements based on which Boolean expression is true'
+allow_multiple_attempts true

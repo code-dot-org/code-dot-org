@@ -7,3 +7,14 @@ sl:
           assignment_family_title: AP® računalniški principi
         csp-2018:
           assignment_family_title: AP® računalniški principi
+        mike-test:
+          title: Osnove Računalništva
+    resources:
+      curriculum/csd/2017:
+        name: kurikulum
+      curriculum/csd/2018:
+        name: kurikulum
+      curriculum/csd/2019:
+        name: kurikulum
+      curriculum/csd/2020:
+        name: kurikulum

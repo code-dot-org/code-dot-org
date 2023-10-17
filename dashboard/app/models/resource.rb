@@ -146,9 +146,7 @@ class Resource < ApplicationRecord
     end
   end
 
-  private
-
-  def generate_key_from_name
+  private def generate_key_from_name
     # This is a litte silly, but we want to replace all characters in the
     # string that DON'T match our formatting regex, so rather than doing
     # something simple like gsub (which can only do positive matches) we have

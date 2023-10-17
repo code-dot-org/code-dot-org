@@ -17,25 +17,25 @@ describe('PeerReviewSubmissions', () => {
         course_name: 'Course 1',
         review_ids: [
           [1, 'accepted', '2019-03-05T01:11:50Z'],
-          [2, 'accepted', '2019-03-05T01:11:50Z']
-        ]
+          [2, 'accepted', '2019-03-05T01:11:50Z'],
+        ],
       },
       {
         submitter: 'User 2',
         course_name: 'Course 2',
         review_ids: [
           [3, 'accepted', '2019-03-05T01:11:50Z'],
-          [4, 'accepted', '2019-03-05T01:11:50Z']
-        ]
-      }
+          [4, 'accepted', '2019-03-05T01:11:50Z'],
+        ],
+      },
     ],
     pagination: {
       total_results: 2,
       total_pages: 1,
       current_page: 1,
       next_page: null,
-      prev_page: null
-    }
+      prev_page: null,
+    },
   };
 
   before(() => {
@@ -49,16 +49,25 @@ describe('PeerReviewSubmissions', () => {
       [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(fakePeerReviewData)
+        JSON.stringify(fakePeerReviewData),
       ]
     );
 
     peerReviewSubmissions = mount(
       <PeerReviewSubmissions
-        courseList={[['course_1', 1], ['course_2', 2]]}
+        courseList={[
+          ['course_1', 1],
+          ['course_2', 2],
+        ]}
         courseUnitMap={{
-          1: [['course_1_unit_1', 10], ['course_1_unit_2', 11]],
-          2: [['course_2_unit_1', 20], ['course_2_unit_2', 21]]
+          1: [
+            ['course_1_unit_1', 10],
+            ['course_1_unit_2', 11],
+          ],
+          2: [
+            ['course_2_unit_1', 20],
+            ['course_2_unit_2', 21],
+          ],
         }}
       />
     );
@@ -83,7 +92,7 @@ describe('PeerReviewSubmissions', () => {
       plcCourseId: '',
       plcCourseUnitId: '',
       submissions: fakePeerReviewData.submissions,
-      pagination: fakePeerReviewData.pagination
+      pagination: fakePeerReviewData.pagination,
     });
     expect(
       peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
@@ -98,7 +107,7 @@ describe('PeerReviewSubmissions', () => {
     expect(courseOptions).to.deep.equal([
       ['All Courses', ''],
       ['course_1', 1],
-      ['course_2', 2]
+      ['course_2', 2],
     ]);
     expect(
       peerReviewSubmissions.find('select#PlcCourseUnitSelect').prop('disabled')
@@ -130,7 +139,7 @@ describe('PeerReviewSubmissions', () => {
     expect(courseUnitOptions).to.deep.equal([
       ['All Course Units', ''],
       ['course_1_unit_1', 10],
-      ['course_1_unit_2', 11]
+      ['course_1_unit_2', 11],
     ]);
 
     peerReviewSubmissions

@@ -1,0 +1,12 @@
+name 'SP-VPL-21-CSP-mod3-IntroToCSP_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Video: Teacher Tips - Introduction to CS Principles
+
+## Consider the following when watching this video:
+### What excites you most about teaching CS Principles?
+
+<a href="https://youtu.be/1X-DgBsq9d8" target="blank" rel="noopener noreferrer">![](https://images.code.org/37d048a3cd0d26e77ac9c3187fdc977c-image-1643328025605.56.48 PM.jpg)</a>
+MARKDOWN

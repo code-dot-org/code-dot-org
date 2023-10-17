@@ -104,7 +104,7 @@ var ELEMENT_ID_DENYLIST = [
   'unsubmitButton',
   'turtleImage',
   'prompt-icon',
-  'bubble'
+  'bubble',
 ];
 
 var TURTLE_CANVAS_ID = 'turtleCanvas';
@@ -287,6 +287,6 @@ export function calculatePadding(cssPaddingString) {
   }
   return {
     horizontalPadding,
-    verticalPadding
+    verticalPadding,
   };
 }

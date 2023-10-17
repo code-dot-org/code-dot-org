@@ -1,4 +1,6 @@
 !!! 5
+-require 'cpa'
+-require '../shared/middleware/helpers/experiments'
 %html{dir: locale_dir}
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
@@ -18,8 +20,9 @@
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
+    = stylesheet_link_tag    'font-awesome', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
-    = render partial: 'layouts/analytics'
+    = render partial: 'layouts/google_analytics'
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
@@ -56,7 +59,6 @@
         = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
-
 
     - cookie_key = environment_specific_cookie_name('_user_type')
     - user_type = request.cookies[cookie_key]

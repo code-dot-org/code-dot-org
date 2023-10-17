@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Spinner from '../../../components/spinner';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import moment from 'moment';
@@ -24,7 +24,7 @@ class FoormEntityEditorHeader extends Component {
 
     // populated by Redux
     questions: PropTypes.object,
-    foormEntityId: PropTypes.number
+    foormEntityId: PropTypes.number,
   };
 
   constructor(props) {
@@ -33,7 +33,7 @@ class FoormEntityEditorHeader extends Component {
     this.state = {
       lastValidated: null,
       validationError: null,
-      validationStarted: false
+      validationStarted: false,
     };
   }
 
@@ -41,7 +41,7 @@ class FoormEntityEditorHeader extends Component {
     this.setState({validationStarted: true});
 
     const requestData = {
-      [this.props.validateDataKey]: this.props.questions
+      [this.props.validateDataKey]: this.props.questions,
     };
 
     // By default, we validate the JSON representing the Foorm configuration
@@ -57,13 +57,13 @@ class FoormEntityEditorHeader extends Component {
       type: 'post',
       contentType: 'application/json',
       processData: false,
-      data: JSON.stringify(requestData)
+      data: JSON.stringify(requestData),
     })
       .done(result => {
         this.setState({
           lastValidated: moment().format(TIME_FORMAT),
           validationError: null,
-          validationStarted: false
+          validationStarted: false,
         });
       })
       .fail(result => {
@@ -72,7 +72,7 @@ class FoormEntityEditorHeader extends Component {
           validationError:
             (result.responseJSON && result.responseJSON.error) ||
             'Unknown error.',
-          validationStarted: false
+          validationStarted: false,
         });
       });
   };
@@ -133,27 +133,27 @@ class FoormEntityEditorHeader extends Component {
 const styles = {
   validationInfo: {
     marginTop: 10,
-    marginLeft: 10
+    marginLeft: 10,
   },
   validateButton: {
-    marginLeft: 0
+    marginLeft: 0,
   },
   spinner: {
-    marginTop: 5
+    marginTop: 5,
   },
   validation: {
-    display: 'flex'
+    display: 'flex',
   },
   helperButtons: {
     marginTop: 15,
-    marginBottom: 15
+    marginBottom: 15,
   },
   livePreview: {
-    marginTop: 8
-  }
+    marginTop: 8,
+  },
 };
 
 export default connect(state => ({
   questions: state.foorm.questions || {},
-  foormEntityId: state.foorm.foormEntityId
+  foormEntityId: state.foorm.foormEntityId,
 }))(FoormEntityEditorHeader);

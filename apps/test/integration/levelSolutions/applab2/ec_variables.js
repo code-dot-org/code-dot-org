@@ -14,17 +14,17 @@ module.exports = {
       xml:
         'var str = "Hello World";\n' +
         'textInput("id", str.substring(1, 5));\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id').value, 'ello');
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'str.indexOf',
@@ -32,17 +32,17 @@ module.exports = {
       xml:
         'var str = "Hello World";\n' +
         'textInput("id", str.indexOf("World"));\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id').value, '6');
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'str.includes',
@@ -51,9 +51,9 @@ module.exports = {
         'var str = "Hello World";\n' +
         'textInput("id1", str.includes("World"));\n' +
         'textInput("id2", str.includes("NOPE"));\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id1').value, 'true');
           assert.equal(document.getElementById('id2').value, 'false');
           Applab.onPuzzleComplete();
@@ -61,24 +61,24 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'str.length',
       editCode: true,
       xml: 'var str = "Hello World";\n' + 'textInput("id", str.length);\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id').value, '11');
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'str.toUpperCase/str.toLowerCase',
@@ -87,9 +87,9 @@ module.exports = {
         'var str = "Hello World";\n' +
         'textInput("id1", str.toUpperCase());\n' +
         'textInput("id2", str.toLowerCase());\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(document.getElementById('id1').value, 'HELLO WORLD');
           assert.equal(document.getElementById('id2').value, 'hello world');
           Applab.onPuzzleComplete();
@@ -97,8 +97,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     // This regression test covers an error in the interpreter's sort()
@@ -107,7 +107,7 @@ module.exports = {
     testApplabConsoleOutput({
       testName: 'Array.prototype.sort',
       source: 'console.log([5, 4, 4, 1].sort());',
-      expect: '▶[1, 4, 4, 5]'
-    })
-  ]
+      expect: '▶[1, 4, 4, 5]',
+    }),
+  ],
 };

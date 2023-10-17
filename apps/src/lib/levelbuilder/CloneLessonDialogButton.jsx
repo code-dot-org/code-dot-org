@@ -31,13 +31,13 @@ export default function CloneLessonDialogButton(props) {
 CloneLessonDialogButton.propTypes = {
   lessonId: PropTypes.number.isRequired,
   lessonName: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired
+  buttonText: PropTypes.string.isRequired,
 };
 
 const styles = {
   button: {
     height: 23,
     padding: 5,
-    margin: 0
-  }
+    margin: 0,
+  },
 };

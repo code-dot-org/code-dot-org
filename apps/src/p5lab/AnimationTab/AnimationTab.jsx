@@ -12,17 +12,15 @@ import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
 import i18n from '@cdo/locale';
 import {P5LabInterfaceMode, P5LabType} from '../constants.js';
-import experiments from '@cdo/apps/util/experiments';
-
 /**
  * Root of the animation editor interface mode for GameLab
  */
 class AnimationTab extends React.Component {
   static propTypes = {
-    channelId: PropTypes.string.isRequired,
+    channelId: PropTypes.string,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
-    hideUploadOption: PropTypes.bool.isRequired,
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
@@ -31,39 +29,40 @@ class AnimationTab extends React.Component {
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
       P5LabInterfaceMode.ANIMATION,
-      P5LabInterfaceMode.BACKGROUND
+      P5LabInterfaceMode.BACKGROUND,
     ]).isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
-    selectedAnimation: shapes.AnimationKey,
-    defaultQuery: PropTypes.object
+    currentAnimation: shapes.AnimationKey,
+    defaultQuery: PropTypes.object,
   };
 
   render() {
     const {
       channelId,
       columnSizes,
+      currentAnimation,
       defaultQuery,
       hideAnimationNames,
       hideBackgrounds,
-      hideUploadOption,
       interfaceMode,
       labType,
       libraryManifest,
       onColumnWidthsChange,
       pickerType,
-      selectedAnimation
+      shouldWarnOnAnimationUpload,
     } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
-    if (selectedAnimation) {
+    if (currentAnimation) {
       hidePiskelStyle = {visibility: 'hidden'};
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const animationsColumnStyle =
-      labType === 'SPRITELAB' && experiments.isEnabled('backgroundsTab')
+      labType !== P5LabType.GAMELAB
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
+
     return (
       <div>
         <ResizablePanes
@@ -90,13 +89,13 @@ class AnimationTab extends React.Component {
           <AnimationPicker
             channelId={channelId}
             libraryManifest={libraryManifest}
-            hideUploadOption={hideUploadOption}
             hideAnimationNames={hideAnimationNames}
             navigable={!hideCostumes}
             hideBackgrounds={hideBackgrounds}
             hideCostumes={hideCostumes}
             pickerType={pickerType}
             defaultQuery={defaultQuery}
+            shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
           />
         )}
       </div>
@@ -110,30 +109,30 @@ const styles = {
     top: 0,
     bottom: 20,
     left: 0,
-    right: 0
+    right: 0,
   },
   animationsColumnGamelab: {
     display: 'flex',
     flexDirection: 'column',
     minWidth: 190,
-    maxWidth: 300
+    maxWidth: 300,
   },
   animationsColumnSpritelab: {
     display: 'flex',
     flexDirection: 'column',
     minWidth: 240,
-    maxWidth: 300
+    maxWidth: 300,
   },
   editorColumn: {
     display: 'flex',
     flexDirection: 'column',
-    position: 'relative'
+    position: 'relative',
   },
   piskelEl: {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    border: 'solid thin ' + color.light_gray
+    border: 'solid thin ' + color.light_gray,
   },
   emptyPiskelEl: {
     backgroundColor: color.light_gray,
@@ -144,22 +143,22 @@ const styles = {
     paddingRight: 1,
     paddingBottom: 1,
     textAlign: 'center',
-    fontSize: 14
+    fontSize: 14,
   },
   helpText: {
     position: 'relative',
     top: '50%',
-    transform: 'translateY(-50%)'
-  }
+    transform: 'translateY(-50%)',
+  },
 };
 export default connect(
   state => ({
+    currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],
     columnSizes: state.animationTab.columnSizes,
-    selectedAnimation: state.animationTab.selectedAnimation
   }),
   dispatch => ({
     onColumnWidthsChange(widths) {
       dispatch(setColumnSizes(widths));
-    }
+    },
   })
 )(AnimationTab);

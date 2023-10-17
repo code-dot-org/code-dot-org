@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: জেলাগুলির জন্য কীভাবে কোডের ঘন্টা
 ---
 
 {{ signup_button }}

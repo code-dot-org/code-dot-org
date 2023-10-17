@@ -10,3 +10,5 @@ wrong 'Baking cookies'
 wrong 'Shopping from a grocery list'
 right 'Banana'
 
+
+allow_multiple_attempts true

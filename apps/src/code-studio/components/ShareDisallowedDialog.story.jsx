@@ -7,7 +7,7 @@ export default storybook => {
       name: 'basic example',
       story: () => (
         <ShareDisallowedDialog isOpen={true} hideShareDialog={() => {}} />
-      )
-    }
+      ),
+    },
   ]);
 };

@@ -312,3 +312,57 @@ en-GB:
               display_name: Lists
             lessonGroup-3:
               display_name: Loops
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Variables
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Loops
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Variables

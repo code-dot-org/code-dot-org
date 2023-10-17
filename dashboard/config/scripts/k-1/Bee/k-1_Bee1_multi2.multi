@@ -9,3 +9,5 @@ wrong '/script_assets/k_1_images/bee_images/nectar.png'
 wrong '/script_assets/k_1_images/bee_images/2nectar.png'
 wrong '/script_assets/k_1_images/bee_images/3nectar.png'
 right '/script_assets/k_1_images/bee_images/4nectar.png'
+
+allow_multiple_attempts true

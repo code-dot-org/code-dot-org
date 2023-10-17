@@ -16,3 +16,4 @@ answer 'The student who thinks about the big-picture and looks for potential mis
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

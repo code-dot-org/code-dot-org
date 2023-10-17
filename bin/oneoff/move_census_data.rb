@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-# coding: utf-8
-
 require_relative '../../dashboard/config/environment'
 require 'optparse'
 
@@ -384,7 +382,7 @@ def process_form(form)
       # There was a period of time where we were saving all the census fields on Hour of Code signups
       # even after we split into two forms. If all of those extra fields are empty then we can skip
       # processing the form.
-      return if census_data.select {|k, v| v.presence && @census_only_fields.include?(k)}.empty?
+      return if census_data.none? {|k, v| v.presence && @census_only_fields.include?(k)}
       submission = Census::CensusHoc2017v1.new census_data
     when 'HocCensus2017'
       submission =
@@ -459,9 +457,9 @@ DB[:forms].where(kind: @census_form_kinds).each do |form|
     puts "Skipping form #{form_id} becasue it has already been migrated to census submission #{previous_migrations[0].census_submission_id}" if @verbose
     skips += 1
   end
-rescue Exception => e
-  puts "Error processing form id #{form[:id]}: #{e.message}"
-  puts e.backtrace if @verbose
+rescue Exception => exception
+  puts "Error processing form id #{form[:id]}: #{exception.message}"
+  puts exception.backtrace if @verbose
   failures += 1
 end
 

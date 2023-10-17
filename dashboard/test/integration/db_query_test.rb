@@ -20,7 +20,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(9) do
+    assert_cached_queries(8) do
       get script_lesson_script_level_path(
         script_id: script.name,
         lesson_position: 1,
@@ -117,7 +117,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     # Simulate all the ajax requests which the unit overview page sends to the
     # server on page load.
 
-    assert_cached_queries(9) do
+    assert_cached_queries(6) do
       get "/api/user_progress/#{script.name}"
       assert_response :success
     end
@@ -152,7 +152,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(unit)
     sign_in student
 
-    assert_cached_queries(19) do
+    assert_cached_queries(16) do
       get "/s/#{unit.name}/lessons/1/levels/1"
       assert_response :success
     end

@@ -43,7 +43,7 @@ var logger = NetSimLogger.getSingleton();
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimLogEntry = (module.exports = function(shard, row, packetSpec) {
+var NetSimLogEntry = (module.exports = function (shard, row, packetSpec) {
   row = row !== undefined ? row : {};
   NetSimEntity.call(this, shard, row);
 
@@ -102,14 +102,14 @@ NetSimLogEntry.inherits(NetSimEntity);
  */
 NetSimLogEntry.LogStatus = {
   SUCCESS: 'success',
-  DROPPED: 'dropped'
+  DROPPED: 'dropped',
 };
 
 /**
  * Helper that gets the log table for the configured instance.
  * @returns {NetSimTable}
  */
-NetSimLogEntry.prototype.getTable = function() {
+NetSimLogEntry.prototype.getTable = function () {
   return this.shard_.logTable;
 };
 
@@ -117,13 +117,13 @@ NetSimLogEntry.prototype.getTable = function() {
  * Build own row for the log table
  * @returns {LogEntryRow}
  */
-NetSimLogEntry.prototype.buildRow = function() {
+NetSimLogEntry.prototype.buildRow = function () {
   return {
     nodeID: this.nodeID,
     base64Binary: binaryToBase64(this.binary),
     status: this.status,
     timestamp: this.timestamp,
-    sentBy: this.sentBy
+    sentBy: this.sentBy,
   };
 };
 
@@ -137,7 +137,7 @@ NetSimLogEntry.prototype.buildRow = function() {
  * @param {!string} sentBy - display name of sender
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimLogEntry.create = function(
+NetSimLogEntry.create = function (
   shard,
   nodeID,
   binary,
@@ -151,7 +151,7 @@ NetSimLogEntry.create = function(
   entity.status = status;
   entity.timestamp = Date.now();
   entity.sentBy = sentBy;
-  entity.getTable().create(entity.buildRow(), function(err, result) {
+  entity.getTable().create(entity.buildRow(), function (err, result) {
     if (err) {
       onComplete(err, null);
       return;
@@ -166,7 +166,7 @@ NetSimLogEntry.create = function(
  * @param {Packet.HeaderType} field
  * @returns {string}
  */
-NetSimLogEntry.prototype.getHeaderField = function(field) {
+NetSimLogEntry.prototype.getHeaderField = function (field) {
   try {
     if (Packet.isAddressField(field)) {
       return this.packet_.getHeaderAsAddressString(field);
@@ -179,19 +179,19 @@ NetSimLogEntry.prototype.getHeaderField = function(field) {
 };
 
 /** Get packet message as binary. */
-NetSimLogEntry.prototype.getMessageBinary = function() {
+NetSimLogEntry.prototype.getMessageBinary = function () {
   return formatBinary(this.packet_.getBodyAsBinary(), BITS_PER_BYTE);
 };
 
 /** Get packet message as ASCII */
-NetSimLogEntry.prototype.getMessageAscii = function() {
+NetSimLogEntry.prototype.getMessageAscii = function () {
   return this.packet_.getBodyAsAscii(BITS_PER_BYTE);
 };
 
 /**
  * @returns {string} Localized packet status, "success" or "dropped"
  */
-NetSimLogEntry.prototype.getLocalizedStatus = function() {
+NetSimLogEntry.prototype.getLocalizedStatus = function () {
   if (this.status === NetSimLogEntry.LogStatus.SUCCESS) {
     return i18n.logStatus_success();
   } else if (this.status === NetSimLogEntry.LogStatus.DROPPED) {
@@ -203,17 +203,17 @@ NetSimLogEntry.prototype.getLocalizedStatus = function() {
 /**
  * @returns {string} Localized "X of Y" packet count info for this entry.
  */
-NetSimLogEntry.prototype.getLocalizedPacketInfo = function() {
+NetSimLogEntry.prototype.getLocalizedPacketInfo = function () {
   return i18n.xOfYPackets({
     x: this.getHeaderField(Packet.HeaderType.PACKET_INDEX),
-    y: this.getHeaderField(Packet.HeaderType.PACKET_COUNT)
+    y: this.getHeaderField(Packet.HeaderType.PACKET_COUNT),
   });
 };
 
 /**
  * @returns {string} 12-hour time with milliseconds
  */
-NetSimLogEntry.prototype.getTimeString = function() {
+NetSimLogEntry.prototype.getTimeString = function () {
   return moment(this.timestamp).format('h:mm:ss.SSS A');
 };
 
@@ -221,11 +221,11 @@ NetSimLogEntry.prototype.getTimeString = function() {
  * Get a controller for the node that generated this log entry
  * @returns {NetSimClientNode|NetSimRouterNode|null}
  */
-NetSimLogEntry.prototype.getOriginNode = function() {
+NetSimLogEntry.prototype.getOriginNode = function () {
   var nodeRows = this.shard_.nodeTable.readAll();
   var originNodeRow = _.find(
     nodeRows,
-    function(row) {
+    function (row) {
       return row.id === this.nodeID;
     }.bind(this)
   );

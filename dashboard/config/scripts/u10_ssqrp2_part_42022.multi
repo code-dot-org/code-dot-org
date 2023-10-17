@@ -19,3 +19,5 @@ wrong 'Users look for "Happiness Moments" to document in their everyday lives.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

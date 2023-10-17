@@ -43,8 +43,8 @@ http {
 
   map $http_x_cdo_backend $upstream_host {
     # Override host using X-Cdo-Backend header.
-    dashboard "<%=CDO.dashboard_hostname%>";
-    pegasus "<%=CDO.pegasus_hostname%>";
+    dashboard "<%=node['cdo-nginx']['dashboard_hostname']%>";
+    pegasus "<%=node['cdo-nginx']['pegasus_hostname']%>";
 
     # Default to original host variable.
     default $http_host;

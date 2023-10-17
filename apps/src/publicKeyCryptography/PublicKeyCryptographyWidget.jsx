@@ -18,6 +18,7 @@ import ToggleGroup from '../templates/ToggleGroup';
 import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 import {Provider} from 'react-redux';
 
 // Magic strings for view modes
@@ -28,19 +29,19 @@ const ALL_VIEW = 'all';
 
 const style = {
   root: {
-    fontFamily: `"Gotham 4r", sans-serif`,
-    marginTop: 10
+    ...fontConstants['main-font-regular'],
+    marginTop: 10,
   },
   characterViewWrapper: {
     clear: 'both',
-    marginTop: 10
+    marginTop: 10,
   },
   noCharacterSelected: {
     textAlign: 'center',
     padding: '100px 0',
     fontSize: 'x-large',
-    color: color.light_gray
-  }
+    color: color.light_gray,
+  },
 };
 
 /** Root component for Public Key Cryptography widget */
@@ -48,7 +49,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
   state = {
     animating: false,
     publicModulus: null,
-    selectedCharacter: null
+    selectedCharacter: null,
   };
 
   setSelectedCharacter = selectedCharacter =>
@@ -191,7 +192,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
     const store = createStore(
       combineReducers({
         isRtl,
-        responsive
+        responsive,
       })
     );
     return (
@@ -238,10 +239,10 @@ const CharacterSelect = props => (
 );
 CharacterSelect.propTypes = {
   selectedCharacter: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 const characterSelectTextStyle = {
   lineHeight: '26px',
   verticalAlign: 'baseline',
-  marginRight: 8
+  marginRight: 8,
 };

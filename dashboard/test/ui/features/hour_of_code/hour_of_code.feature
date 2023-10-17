@@ -5,7 +5,6 @@ Background:
 
 Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I drag block "1" to block "5"
   And I press "runButton"
@@ -38,7 +37,6 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
 
 Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
@@ -51,7 +49,6 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
 @no_mobile
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video, comes back on link
   Given I am on "http://studio.code.org/hoc/10"
-  And I rotate to landscape
   Then I wait until element ".video-modal" is visible
   Then I close the dialog
   Then I am on "http://studio.code.org/hoc/11"
@@ -64,7 +61,6 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
 
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"

@@ -19,7 +19,7 @@ export default class DesignModeHeaders extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     showMakerToggle: PropTypes.bool.isRequired,
-    autogenerateML: PropTypes.func
+    autogenerateML: PropTypes.func,
   };
 
   onToggleToolbox = () => this.props.onToggleToolbox();
@@ -38,10 +38,10 @@ export default class DesignModeHeaders extends React.Component {
       lineHeight: styleConstants['workspace-headers-height'] + 'px',
       fontSize: 18,
       cursor: 'pointer',
-      color: this.props.isRunning ? color.dark_charcoal : color.lighter_purple,
+      color: color.neutral_white,
       ':hover': {
-        color: color.white
-      }
+        color: color.neutral_dark20,
+      },
     };
 
     if (collapse) {
@@ -83,33 +83,33 @@ export default class DesignModeHeaders extends React.Component {
         justifyContent: 'space-between',
         width: 270,
         borderRight: '1px solid gray',
-        float: 'left'
+        float: 'left',
       },
       showToolboxHeader: {
         float: 'left',
         display: this.props.isToolboxVisible ? 'none' : 'flex',
         justifyContent: 'space-between',
-        paddingLeft: 10
+        paddingLeft: 10,
       },
       showToolboxClickable: {
         marginLeft: 18,
         ':hover': {
-          color: color.white
-        }
+          color: color.white,
+        },
       },
       iconContainer: {
         float: 'right',
         marginRight: 10,
         marginLeft: 10,
-        height: '100%'
+        height: '100%',
       },
       assetsIcon: {
         fontSize: 18,
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
       },
       runningVersionHistoryButton: {
-        color: color.dark_charcoal
-      }
+        color: color.dark_charcoal,
+      },
     };
 
     const hasFocus = !this.props.isRunning;

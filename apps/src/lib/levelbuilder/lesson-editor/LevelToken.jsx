@@ -27,15 +27,12 @@ export class UnconnectedLevelToken extends Component {
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
 
     // from redux
-    toggleExpand: PropTypes.func
+    toggleExpand: PropTypes.func,
   };
 
   render() {
-    const {
-      draggedLevelPos,
-      scriptLevel,
-      allowMajorCurriculumChanges
-    } = this.props;
+    const {draggedLevelPos, scriptLevel, allowMajorCurriculumChanges} =
+      this.props;
     const springConfig = {stiffness: 1000, damping: 80};
 
     return (
@@ -45,35 +42,37 @@ export class UnconnectedLevelToken extends Component {
             ? {
                 y: this.props.dragging ? this.props.delta : 0,
                 scale: spring(1.02, springConfig),
-                shadow: spring(5, springConfig)
+                shadow: spring(5, springConfig),
               }
             : {
                 y: this.props.dragging
                   ? spring(this.props.delta, springConfig)
                   : 0,
                 scale: 1,
-                shadow: 0
+                shadow: 0,
               }
         }
         key={scriptLevel.position}
       >
-        {// Use react-motion to interpolate the following values and create
-        // smooth transitions.
-        ({y, scale, shadow}) => (
-          <LevelTokenContents
-            y={y}
-            scale={scale}
-            shadow={shadow}
-            draggedLevelPos={draggedLevelPos}
-            scriptLevel={scriptLevel}
-            handleDragStart={this.props.handleDragStart}
-            toggleExpand={this.props.toggleExpand}
-            removeLevel={this.props.removeLevel}
-            activitySectionPosition={this.props.activitySectionPosition}
-            activityPosition={this.props.activityPosition}
-            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
-          />
-        )}
+        {
+          // Use react-motion to interpolate the following values and create
+          // smooth transitions.
+          ({y, scale, shadow}) => (
+            <LevelTokenContents
+              y={y}
+              scale={scale}
+              shadow={shadow}
+              draggedLevelPos={draggedLevelPos}
+              scriptLevel={scriptLevel}
+              handleDragStart={this.props.handleDragStart}
+              toggleExpand={this.props.toggleExpand}
+              removeLevel={this.props.removeLevel}
+              activitySectionPosition={this.props.activitySectionPosition}
+              activityPosition={this.props.activityPosition}
+              allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+            />
+          )
+        }
       </Motion>
     );
   }
@@ -94,7 +93,7 @@ export class LevelTokenContents extends Component {
     removeLevel: PropTypes.func.isRequired,
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
-    allowMajorCurriculumChanges: PropTypes.bool.isRequired
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
   };
 
   handleDragStart = e => {
@@ -146,12 +145,13 @@ export class LevelTokenContents extends Component {
     return (
       <div
         style={Object.assign({}, styles.levelToken, {
-          transform: `translate3d(0, ${this.props.y}px, 0) scale(${
-            this.props.scale
-          })`,
-          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${this.props
-            .shadow * 3}px`,
-          zIndex: this.props.draggedLevelPos ? 1000 : 500 - scriptLevel.position
+          transform: `translate3d(0, ${this.props.y}px, 0) scale(${this.props.scale})`,
+          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${
+            this.props.shadow * 3
+          }px`,
+          zIndex: this.props.draggedLevelPos
+            ? 1000
+            : 500 - scriptLevel.position,
         })}
       >
         {allowMajorCurriculumChanges && (
@@ -226,7 +226,7 @@ const styles = {
     position: 'relative',
     background: '#eee',
     borderRadius: borderRadius,
-    margin: `${tokenMargin}px 0`
+    margin: `${tokenMargin}px 0`,
   },
   reorder: {
     fontSize: 16,
@@ -237,7 +237,7 @@ const styles = {
     padding: '7px 15px',
     borderTopLeftRadius: borderRadius,
     borderBottomLeftRadius: borderRadius,
-    cursor: 'ns-resize'
+    cursor: 'ns-resize',
   },
   levelTokenName: {
     padding: 7,
@@ -246,7 +246,7 @@ const styles = {
     width: '100%',
     borderTop: '1px solid #ddd',
     borderBottom: '1px solid #ddd',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   tag: {
     color: 'white',
@@ -257,7 +257,7 @@ const styles = {
     marginLeft: 5,
     marginTop: 5,
     display: 'flex',
-    flexWrap: 'nowrap'
+    flexWrap: 'nowrap',
   },
   remove: {
     fontSize: 14,
@@ -269,7 +269,7 @@ const styles = {
     padding: '7px 13px',
     borderTopRightRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   edit: {
     fontSize: 14,
@@ -279,37 +279,39 @@ const styles = {
     border: '1px solid #00adbc',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 13px',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   levelArea: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   titleAndBubble: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    flexGrow: 2
+    flexGrow: 2,
   },
   levelTitle: {
-    marginLeft: 5
+    marginLeft: 5,
   },
   levelDetailsArea: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   bubble: {
-    width: 34
-  }
+    width: 34,
+  },
 };
 
 export const LevelToken = connect(
   state => ({}),
   {
-    toggleExpand
-  }
+    toggleExpand,
+  },
+  null,
+  {forwardRef: true}
 )(UnconnectedLevelToken);
 
 export default LevelToken;

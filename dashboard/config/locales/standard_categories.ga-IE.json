@@ -2,17 +2,17 @@
   "ga-IE": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Smaointeoireacht Ríomhaireachtúil"
-        },
-        "L": {
-          "description": "Teanga"
-        },
         "C": {
           "description": "Ciorcail"
         },
+        "CT": {
+          "description": "Smaointeoireacht Ríomhaireachtúil"
+        },
         "F": {
           "description": "Feidhmeanna"
+        },
+        "L": {
+          "description": "Teanga"
         }
       }
     }

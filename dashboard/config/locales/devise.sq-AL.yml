@@ -54,6 +54,7 @@ sq:
         konfirmimin e adresës tuaj të re të emailit.
       updated: Ju përditësuat llogarinë tuaj me sukses.
     sessions:
+      signed_in: "[empty string]"
       signed_out: Ju dolët me sukses.
     unlocks:
       send_instructions: Ju do të merrni një email me udhëzime se si të zhbllokoni
@@ -62,6 +63,28 @@ sq:
         email me udhëzime se si do ta zhbllokoni atë në pak minuta.
       unlocked: Llogaria juaj u zhbllokua me sukses. Ju lutem logohuni për të vazhduar.
   errors:
+    invitations:
+      edit:
+        header: Vendos fjalëkalimin tënd
+        submit_button: Vendos fjalëkalimin tim
+      invitation_removed: Ftesa juaj u fshi.
+      invitation_token_invalid: Shenja e ftesës nuk është e vlefshme!
+      new:
+        header: Dërgo ftesën
+        submit_button: Dërgo një ftesë
+      no_invitations_remaining: Nuk ka mbetur asnjë ftesë tjetër
+      send_instructions: Një ftesë përmes email-it është dërguar në %{email}.
+      updated: Fjalëkalimi juaj u ndryshua me sukses! Ju tashmë jeni loguar.
+    mailer:
+      invitation_instructions:
+        accept: Pranoni ftesën
+        hello: Përshëndetje %{email}
+        ignore: Nëse nuk dëshironi të pranoni ftesën, ju lutem injoroni këtë email.<br
+          /> Llogaria juaj nuk mund të krijohet derisa të keni akses në link-un e
+          mësipërm dhe të vendosni fjalëkalimin tuaj.
+        someone_invited_you: Dikush ju ka ftuar në %{url}, mund t'a pranoni ftesën
+          përmes link-ut të mëposhtëm.
+        subject: Udhëzime rreth ftesës
     messages:
       already_confirmed: ishte e konfirmuar, ju lutem provoni të logoheni
       confirmation_period_expired: duhet të konfirmohet brënda %{period}, ju lutem
@@ -69,28 +92,3 @@ sq:
       expired: ka skaduar, ju lutem kërkoni një të ri
       not_found: nuk u gjet
       not_locked: nuk ishte e bllokuar
-      not_saved:
-        one: '1 gabim e ndaloi këtë %{resource} për tu ruajtur:'
-        other: "%{count} gabime ndaluan %{resource} për tu ruajtur:"
-    invitations:
-      send_instructions: Një ftesë përmes email-it është dërguar në %{email}.
-      invitation_token_invalid: Shenja e ftesës nuk është e vlefshme!
-      updated: Fjalëkalimi juaj u ndryshua me sukses! Ju tashmë jeni loguar.
-      no_invitations_remaining: Nuk ka mbetur asnjë ftesë tjetër
-      invitation_removed: Ftesa juaj u fshi.
-      new:
-        header: Dërgo ftesën
-        submit_button: Dërgo një ftesë
-      edit:
-        header: Vendos fjalëkalimin tënd
-        submit_button: Vendos fjalëkalimin tim
-    mailer:
-      invitation_instructions:
-        subject: Udhëzime rreth ftesës
-        hello: Përshëndetje %{email}
-        someone_invited_you: Dikush ju ka ftuar në %{url}, mund t'a pranoni ftesën
-          përmes link-ut të mëposhtëm.
-        accept: Pranoni ftesën
-        ignore: Nëse nuk dëshironi të pranoni ftesën, ju lutem injoroni këtë email.<br
-          /> Llogaria juaj nuk mund të krijohet derisa të keni akses në link-un e
-          mësipërm dhe të vendosni fjalëkalimin tuaj.

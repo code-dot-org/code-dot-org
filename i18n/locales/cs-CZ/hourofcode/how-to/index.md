@@ -25,7 +25,7 @@ Vyzkoušet „Hodinu programování“ je jednoduchý a zábavný způsob, jak d
 
 <a id="how-to-video"></a>
 
-## 1. Podívejte se na video s návodem pro Hodinu kódu <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Podívejte se na video s návodem pro Hodinu kódu <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ Vůbec nevadí, když je pro vás i vaše studenty počítačová věda něčím
 
 Naveďte studenty k aktivitě
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Napište odkaz na výukový program na tabuli. Najděte odkaz uvedený v [informacích pro vybraný výukový program]({{ urls/learn }}).
 
 Když Vaši studenti narazí na nějaké překážky, je správné zareagovat:
 
@@ -151,6 +151,6 @@ Co když nějaký student skončí dříve?
 
 ### Co následuje po Hodině kódu?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Počítačová věda nemusí končit Hodinou Kódu! [Naučte se](/beyond) , jak přivést CS do vaší školy a studentů.
 
 {{ signup_button }}

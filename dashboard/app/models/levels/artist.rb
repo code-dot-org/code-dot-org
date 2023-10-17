@@ -46,6 +46,16 @@ class Artist < Blockly
     super + %w(predraw_blocks)
   end
 
+  def project_type
+    if skin == 'elsa' || skin == 'anna'
+      'frozen'
+    elsif is_k1 == 'true'
+      'artist_k1'
+    else
+      'artist'
+    end
+  end
+
   # List of possible skins, the first is used as a default.
   def self.skins
     %w(artist artist_zombie elsa anna)

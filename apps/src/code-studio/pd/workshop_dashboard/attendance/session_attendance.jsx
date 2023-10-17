@@ -6,10 +6,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import _ from 'lodash';
+import fontConstants from '@cdo/apps/fontConstants';
 import SessionAttendanceRow from './session_attendance_row';
 import VisibilitySensor from '../components/visibility_sensor';
 import Spinner from '../../components/spinner';
-import {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
 import {PermissionPropType, WorkshopAdmin, ProgramManager} from '../permission';
@@ -29,13 +30,13 @@ export class SessionAttendance extends React.Component {
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     scholarshipWorkshop: PropTypes.bool.isRequired,
-    enrollmentCount: PropTypes.number.isRequired
+    enrollmentCount: PropTypes.number.isRequired,
   };
 
   state = {
     loading: true,
     attendance: undefined,
-    refreshInterval: undefined
+    refreshInterval: undefined,
   };
 
   componentDidMount() {
@@ -83,7 +84,7 @@ export class SessionAttendance extends React.Component {
     if (props) {
       this.setState({
         loading: true,
-        attendance: undefined
+        attendance: undefined,
       });
     } else {
       props = this.props;
@@ -91,16 +92,14 @@ export class SessionAttendance extends React.Component {
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/pd/workshops/${props.workshopId}/attendance/${
-        props.sessionId
-      }`,
-      dataType: 'json'
+      url: `/api/v1/pd/workshops/${props.workshopId}/attendance/${props.sessionId}`,
+      dataType: 'json',
     }).done(data => {
       this.loadRequest = null;
 
       this.setState({
         loading: false,
-        attendance: _.sortBy(data.attendance, ['last_name', 'first_name'])
+        attendance: _.sortBy(data.attendance, ['last_name', 'first_name']),
       });
     });
   };
@@ -123,7 +122,7 @@ export class SessionAttendance extends React.Component {
       const clonedAttendance = _.cloneDeep(this.state.attendance);
       clonedAttendance[i] = value;
       this.setState({
-        attendance: clonedAttendance
+        attendance: clonedAttendance,
       });
     }
     this.props.onSaved(value);
@@ -199,15 +198,15 @@ export class SessionAttendance extends React.Component {
 
 const styles = {
   idle: {
-    opacity: 0.5
+    opacity: 0.5,
   },
   attendanceSummary: {
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     fontSize: 16,
-    margin: 15
-  }
+    margin: 15,
+  },
 };
 
 export default connect(state => ({
-  permission: state.workshopDashboard.permission
+  permission: state.workshopDashboard.permission,
 }))(SessionAttendance);

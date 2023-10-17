@@ -1,0 +1,15 @@
+{
+  "blockly_blockRepeatTooltip": "ponovi",
+  "blockly_blockWhenRun": "pri pokretanju",
+  "blockly_blockWhenRunTooltip": "pri pokretanju",
+  "blockly_toolboxCategoryEvents": "Događaji",
+  "blockly_toolboxCategoryFunctions": "Funkcije",
+  "blockly_toolboxCategoryLogic": "Logika",
+  "blockly_toolboxCategoryMath": "Matematika",
+  "blockly_toolboxCategoryVariables": "Varijable",
+  "share": "Podijeli",
+  "startOver": "Počni Ponovo",
+  "panelHeaderInstructions": "Upute",
+  "panelHeaderWorkspace": "Radni prostor: ",
+  "continue": "Nastavi"
+}

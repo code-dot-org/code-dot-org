@@ -1,5 +1,3 @@
-/* globals appOptions */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import EditableProjectName from './EditableProjectName';
@@ -9,7 +7,7 @@ import ProjectShare from './ProjectShare';
 
 export default class ProjectHeader extends React.Component {
   static propTypes = {
-    onChangedWidth: PropTypes.func
+    onChangedWidth: PropTypes.func,
   };
 
   render() {
@@ -22,7 +20,9 @@ export default class ProjectHeader extends React.Component {
 
         {/* For Minecraft Code Connection (aka CodeBuilder) projects, add the
             option to import code from an Hour of Code share link */}
-        {appOptions.level.isConnectionLevel && <ProjectImport />}
+        {window.appOptions && appOptions.level.isConnectionLevel && (
+          <ProjectImport />
+        )}
       </div>
     );
   }

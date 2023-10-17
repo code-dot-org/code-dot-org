@@ -84,11 +84,10 @@ class AuroraBackupTest < Minitest::Test
       client: snapshot_client
     )
     rds_client = Minitest::Mock.new
-    rds_client.expect :modify_db_cluster_snapshot_attribute, nil, {
+    rds_client.expect :modify_db_cluster_snapshot_attribute, nil,
       attribute_name: 'restore',
       db_cluster_snapshot_identifier: temp_snapshot_name,
       values_to_add: [backup_account_id]
-    }
 
     result = AuroraBackup.share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
     assert_equal result.snapshot_id, temp_snapshot_name

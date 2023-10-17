@@ -10,3 +10,4 @@ wrong 'design of learning artifacts'
 wrong 'creation of learning artifacts'
 wrong 'discussion of learning artifacts'
 right 'all of the above'
+allow_multiple_attempts true

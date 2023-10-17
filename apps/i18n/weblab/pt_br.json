@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "Adicionar CSS",
+  "addHTMLButton": "Adicionar HTML",
+  "addImageButton": "Adicionar imagem",
+  "closeFullscreenPreview": "Fechar pré-visualização em tela cheia",
+  "currentProjectCapacity": "{currentMegabytes}MB de {totalMegabytes}MB usados",
+  "disallowedHtml": "O arquivo \"{filename}\" contém elementos HTML que não são permitidos: `{disallowedTags}`. Eles serão removidos quando essa caixa de diálogo for fechada.",
+  "errorSavingProject": "Algo não funcionou ao salvar automaticamente seu projeto. Verifique sua conexão com a Internet e tente salvar manualmente. Se esse problema persistir, tente recarregar a página para começar de novo.",
+  "fatalError": "Erro fatal: {message}. Se você estiver no modo de navegação privada, os dados não poderão ser gravados.",
+  "loadFailure": "Lamentamos, mas o Web Lab não conseguiu carregar por algum motivo. Erro: {message}",
+  "openFullscreenPreview": "Abrir pré-visualização em tela cheia",
+  "refreshPreview": "Atualizar e salvar",
+  "reloading": "Recarregando...",
+  "reset": "Redefinir o Web Lab",
+  "resetComplete": "Reinicialização do Web Lab concluída",
+  "resetFailure": "Falha ao redefinir o Web Lab: {message}.",
+  "toggleInspectorOff": "Inspetor: Ativo",
+  "toggleInspectorOn": "Inspetor: Desligado",
+  "troubleshootingSupport": "Consulte nosso artigo de suporte [\"Solução de problemas do Web Lab\"]({url}) para obter mais informações.",
+  "uploadError": "Erro de upload"
 }

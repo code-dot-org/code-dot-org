@@ -6,9 +6,9 @@ title: Hour of Code How-to Guide for After-school
 
 # Com ensenyar una Hora del Codi en extraescolars i entitats
 
-### Uniu-vos al moviment i presenteu les ciències informàtiques als vostres alumnes amb aquests passos.
+### Uniu-vos al moviment i introduïu els vostres alumnes en les ciències informàtiques amb aquests passos.
 
-El pensament computacional ajuda a nodrir els coneixements de resolució de problemes, lògica i creativitat. I la tecnologia està transformant cada indústria del planeta. Els alumnes d'avui haurien d'aprendre a crear tecnologia, no només utilitzar-la. En començar aviat, tindran la base per l'èxit en qualsevol trajectòria professional del segle XXI. 
+El pensament computacional ajuda a desenvolupar les habilitats de resolució de problemes, la lògica i la creativitat. I la tecnologia està transformant tots els àmbits professionals d'arreu del món. Els alumnes d'avui haurien d'aprendre a crear tecnologia, no només a utilitzar-la. Si comencen aviat, tindran les eines necessàries per arribar lluny en qualsevol àmbit professional del segle XXI. 
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
@@ -66,7 +66,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Esbrinem-ho junts.” - “La tecnologia no sempre funciona de la forma que volem” - “Aprendre un programa és com aprendre un nou idioma; no el parlareu amb fluïdesa immediatament.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Esbrinem-ho junts”. - “La tecnologia no sempre funciona com volem”. - “Aprendre a programar és com aprendre un idioma; no es parla amb fluïdesa el primer dia".
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
@@ -82,9 +82,9 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Consulteu les [Preguntes freqüents sobre l'Hora del Codi](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## Què ve després de l'Hora del Codi?
+## I desprès de l'Hora del Codi, què?
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 

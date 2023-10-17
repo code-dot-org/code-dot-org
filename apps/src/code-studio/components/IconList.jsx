@@ -10,15 +10,15 @@ import i18n from '@cdo/locale';
 export default class IconList extends React.Component {
   static propTypes = {
     assetChosen: PropTypes.func.isRequired,
-    search: PropTypes.string.isRequired
+    search: PropTypes.string.isRequired,
   };
 
   getMatches(query) {
     const results = {};
 
-    Object.keys(aliases).forEach(function(alias) {
+    Object.keys(aliases).forEach(function (alias) {
       if (query.test(alias)) {
-        aliases[alias].forEach(function(match) {
+        aliases[alias].forEach(function (match) {
           results[match] = alias;
         });
       }
@@ -32,8 +32,8 @@ export default class IconList extends React.Component {
       root: {
         height: '330px',
         overflowY: 'scroll',
-        clear: 'both'
-      }
+        clear: 'both',
+      },
     };
 
     let search = this.props.search;

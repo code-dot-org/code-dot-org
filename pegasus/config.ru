@@ -34,7 +34,7 @@ unless CDO.chef_managed
   # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
   # For other environments (development / CI), run the HTTP cache from Rack middleware.
   require 'cdo/rack/allowlist'
-  require File.expand_path('../../cookbooks/cdo-varnish/libraries/http_cache', __FILE__)
+  require 'cdo/http_cache'
   use Rack::Allowlist::Downstream,
     HttpCache.config(rack_env)[:pegasus]
 

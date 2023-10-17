@@ -66,7 +66,7 @@ Dasturlash Soati haqida kompaniyangizni hayratga solish uchun ko'ngilli bo'lish 
 
 Agar siz qo'shimcha harakat qilishni istasangiz, kompaniyangiz "Dasturlash Soati" tadbirini ham o'tkazishi mumkin. Tadbirni o'tkazishning aniq formulasi yo'q, shuning uchun biz sizni ijodkor bo'lishingizni qo'llab quvvatlaymiz! Bizning xodimlarimiz soni oz (lekin kuchli!) ekanligini hisobga olgan holda, "Code.org" ning Dasturlash Soati tadbirlarini muvofiqlashtirish bilan shug'ullanuvchi jamoasi yo'q. Biroq, boshlash uchun bu erda ba'zi maslahatlar mavjud.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Ushbu video-qo'llanmani tomosha qiling <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Tadbiringiz uchun sana, format va joyni aniqlang
 

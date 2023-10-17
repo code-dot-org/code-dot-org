@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-20T18:08:55.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Data FRQ (Part B)\r\n\r\nWrite the `countIncreasingCols` method, which returns the number of columns in `grid` that are in increasing order. A column is considered to be in increasing order if the element in each row after the first row is greater than or equal to the element in the previous row. A column with only one row is considered to be in increasing order. \r\n\r\nThe following examples show the `countIncreasingCols` return values for possible contents of `grid`. \r\n\r\nThe return value for the following contents of `grid` is `1`, since the first column is in increasing order but the second and third columns are not. \r\n\r\n<p style=\"text-align: center;\"> 10 50 40 <br> 20 40 20 <br> 30 50 30 </p>\r\n\r\nThe return value for the following contents of `grid` is `2`, since the first and third columns are in increasing order but the second and fourth columns are not. \r\n<p style=\"text-align: center;\"> 10 540 440 440 <br> 220 450 440 190 </p>\r\n\r\nComplete the `countIncreasingCols` method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "project_template_level_name": "CSA-frq-2022-Data",
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-20T18:08:55.284+00:00\",\"changed\":[\"cloned from \\\"CSA-frq-2022-Data-PartA\\\"\"],\"cloned_from\":\"CSA-frq-2022-Data-PartA\"},{\"changed_at\":\"2023-06-20 18:09:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-06-20 18:15:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-06-20 18:16:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-06-21 19:53:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

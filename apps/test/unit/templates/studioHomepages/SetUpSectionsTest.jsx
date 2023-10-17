@@ -43,7 +43,7 @@ describe('SetUpSections', () => {
     expect(analyticsSpy).to.have.been.calledOnce;
     expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Section Setup Started',
-      {}
+      {},
     ]);
 
     analyticsSpy.restore();

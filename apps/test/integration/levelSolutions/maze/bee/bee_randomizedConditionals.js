@@ -12,7 +12,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -22,7 +22,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -32,7 +32,7 @@ var levelDef = {
       {tileType: 1},
       {tileType: 1},
       {tileType: 1},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -42,7 +42,7 @@ var levelDef = {
       {tileType: 1, featureType: 2, value: 1, cloudType: 3, range: 1},
       {tileType: 1, featureType: 1, value: 1, cloudType: 4, range: 1},
       {tileType: 1},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -52,7 +52,7 @@ var levelDef = {
       {tileType: 1},
       {tileType: 1},
       {tileType: 1},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -62,7 +62,7 @@ var levelDef = {
       {tileType: 1},
       {tileType: 1},
       {tileType: 1},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -72,7 +72,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -82,10 +82,10 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
-    ]
+      {tileType: 0},
+    ],
   ],
-  flowerType: 'redWithNectar'
+  flowerType: 'redWithNectar',
 };
 
 module.exports = {
@@ -97,9 +97,9 @@ module.exports = {
       description: 'Try to get honey, assuming that !flower -> honey',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.executionInfo.terminationValue() === 3; //TerminationValue.NOT_AT_HONEYCOMB;
       },
       xml:
@@ -122,13 +122,13 @@ module.exports = {
         '    </block>' +
         '  </statement>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Check every cell before getting flower or honey',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
@@ -155,7 +155,7 @@ module.exports = {
         '    </block>' +
         '  </statement>' +
         '</block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

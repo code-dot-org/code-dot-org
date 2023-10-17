@@ -14,8 +14,8 @@ class MemoryAdapter
 
   def get(key)
     Oj.load(@hash[key])
-  rescue => exc
-    Honeybadger.notify(exc)
+  rescue => exception
+    Honeybadger.notify(exception)
     nil
   end
 

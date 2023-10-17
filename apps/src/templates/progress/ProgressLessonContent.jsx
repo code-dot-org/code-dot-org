@@ -3,9 +3,10 @@ import React from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import {levelWithProgressType} from './progressTypes';
-import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
+import {progressionsFromLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class ProgressLessonContent extends React.Component {
   static propTypes = {
@@ -13,17 +14,12 @@ export default class ProgressLessonContent extends React.Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     selectedSectionId: PropTypes.number,
-    lessonName: PropTypes.string
+    lessonName: PropTypes.string,
   };
 
   render() {
-    const {
-      description,
-      levels,
-      disabled,
-      selectedSectionId,
-      lessonName
-    } = this.props;
+    const {description, levels, disabled, selectedSectionId, lessonName} =
+      this.props;
     const progressions = progressionsFromLevels(levels);
 
     let bubbles;
@@ -72,9 +68,9 @@ const styles = {
     marginTop: 20,
     marginBottom: 30,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif'
+    ...fontConstants['main-font-regular'],
   },
   noLevelsWarning: {
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };

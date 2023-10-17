@@ -29,7 +29,7 @@ describe('ActivityCardAndPreview', () => {
       targetActivitySectionPos: 1,
       activitySectionMetrics: [],
       hasLessonPlan: true,
-      allowMajorCurriculumChanges: true
+      allowMajorCurriculumChanges: true,
     };
   });
 

@@ -19,7 +19,7 @@ const FAKE_TUTORIAL = {
   tags_programming_language: '008',
   string_detail_grades: 'Ages 8 and up.',
   string_detail_programming_languages: 'FORTRAN',
-  string_detail_platforms: 'iOS'
+  string_detail_platforms: 'iOS',
 };
 
 describe('Tutorial', () => {
@@ -27,10 +27,7 @@ describe('Tutorial', () => {
     const wrapper = shallow(
       <Tutorial item={FAKE_TUTORIAL} tutorialClicked={CALLBACK} />
     );
-    const imageSrc = wrapper
-      .find(Image)
-      .first()
-      .props().src;
+    const imageSrc = wrapper.find(Image).first().props().src;
     const titleText = wrapper.findWhere(
       element => element.text() === 'How to train your dragon'
     );

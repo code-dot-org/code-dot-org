@@ -1,7 +1,7 @@
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -16,7 +16,7 @@ exports.install = function(blockly, blockInstallOptions) {
     title: isK1 ? msg.get() : msg.collect(),
     titleImage: isK1 ? skin.collectBlock : undefined,
     tooltip: msg.collectorCollectTooltip(),
-    functionName: 'Maze.collect'
+    functionName: 'Maze.collect',
   });
 
   // simplified collector block. For when you want a K1 block in a
@@ -27,13 +27,13 @@ exports.install = function(blockly, blockInstallOptions) {
     title: msg.get(),
     titleImage: skin.collectBlock,
     tooltip: msg.collectorCollectTooltip(),
-    functionName: 'Maze.collect'
+    functionName: 'Maze.collect',
   });
 
   // Block for 'if' conditional if there is a collectible
   blockly.Blocks.collector_ifCollectible = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         msg.ifCode() + ' ' + msg.collectiblePresent()
@@ -43,10 +43,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setTooltip(msg.ifTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  generator.collector_ifCollectible = function() {
+  generator.collector_ifCollectible = function () {
     var argument = `Maze.pilePresent('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     var code = `if (${argument}) {\n${branch}}\n`;
@@ -56,7 +56,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // Block for 'while' conditional if there is a collectible
   blockly.Blocks.collector_whileCollectible = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(
         msg.whileMsg() + ' ' + msg.collectiblePresent()
@@ -65,10 +65,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());
-    }
+    },
   };
 
-  generator.collector_whileCollectible = function() {
+  generator.collector_whileCollectible = function () {
     var argument = `Maze.pilePresent('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     branch = Blockly.getInfiniteLoopTrap() + branch;

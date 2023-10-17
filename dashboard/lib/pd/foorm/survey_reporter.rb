@@ -3,6 +3,7 @@ module Pd::Foorm
   class SurveyReporter
     include Constants
     include Pd::WorkshopConstants
+    include Pd::WorkshopSurveyFoormConstants
     extend Helper
 
     # Calculates report for a given workshop id.
@@ -65,17 +66,6 @@ module Pd::Foorm
       result_data
     end
 
-    # Get rollup for all survey results for the given course
-    def self.get_rollup_for_course(course_name, questions_to_summarize, facilitators)
-      workshop_ids = Pd::Workshop.where(course: course_name).where.not(started_at: nil, ended_at: nil).pluck(:id)
-      return get_rollup_for_workshop_ids(
-        workshop_ids,
-        questions_to_summarize,
-        false,
-        facilitators
-      )
-    end
-
     # Given set of facilitators and a course name, return average responses for given
     # questions across all workshops each facilitator has run.
     # @param object {facilitator_id: facilitator_name,...} specifying facilitators to include
@@ -120,7 +110,7 @@ module Pd::Foorm
       questions_to_summarize,
       split_by_facilitator,
       facilitators,
-      facilitator_id=nil
+      facilitator_id = nil
     )
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_ids, facilitator_id)
       parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
@@ -146,12 +136,15 @@ module Pd::Foorm
       [parsed_forms, summarized_answers]
     end
 
-    # Gets the raw data needed for summarizing workshop survey results.
+    # Gets the raw data needed for summarizing survey results of workshop participants.
     # @param workshop id, the workshop to get data from
     # @return array of [WorkshopSurveyFoormSubmissions, FoormSubmissions, FoormForms]
     #   for the given workshop id.
-    def self.get_raw_data_for_workshop(workshop_id, facilitator_id=nil)
-      ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
+    def self.get_raw_data_for_workshop(workshop_id, facilitator_id = nil)
+      ws_submissions = Pd::WorkshopSurveyFoormSubmission.
+        where(pd_workshop_id: workshop_id).
+        joins(:foorm_submission).
+        where(foorm_submissions: {form_name: ALL_PARTICIPANT_SURVEY_CONFIG_PATHS})
       if facilitator_id
         ws_submissions = ws_submissions.where(facilitator_id: facilitator_id).or(ws_submissions.where(facilitator_id: nil))
       end
@@ -172,7 +165,7 @@ module Pd::Foorm
     #   with this id
     # @return {facilitator_id: facilitator_name,...} object with data
     # for each facilitator for the workshop specified
-    def self.get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter=nil)
+    def self.get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter = nil)
       facilitators_formatted = {}
       if facilitator_id_filter
         facilitators_formatted[facilitator_id_filter] = User.find(facilitator_id_filter).name

@@ -10,3 +10,5 @@ wrong '(rectangle (+ 8 2) (- 7 5) solid red)'
 
 
 
+
+allow_multiple_attempts true

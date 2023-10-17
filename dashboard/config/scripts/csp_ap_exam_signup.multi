@@ -6,3 +6,5 @@ right 'No'
 markdown <<MARKDOWN
 If you plan on taking the AP exam, do you know how to sign up for the exam at your school?
 MARKDOWN
+
+allow_multiple_attempts true

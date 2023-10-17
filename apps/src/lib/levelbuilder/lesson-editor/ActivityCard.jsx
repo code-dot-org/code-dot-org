@@ -10,7 +10,7 @@ import {
   addActivitySection,
   moveActivity,
   removeActivity,
-  updateActivityField
+  updateActivityField,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
@@ -40,7 +40,7 @@ class ActivityCard extends Component {
     addActivitySection: PropTypes.func.isRequired,
     removeActivity: PropTypes.func.isRequired,
     moveActivity: PropTypes.func.isRequired,
-    updateActivityField: PropTypes.func.isRequired
+    updateActivityField: PropTypes.func.isRequired,
   };
 
   handleAddActivitySection = () => {
@@ -90,7 +90,7 @@ class ActivityCard extends Component {
       clearTargetActivitySection,
       updateActivitySectionMetrics,
       hasLessonPlan,
-      allowMajorCurriculumChanges
+      allowMajorCurriculumChanges,
     } = this.props;
 
     let levelsInActivity = 0;
@@ -103,38 +103,41 @@ class ActivityCard extends Component {
         <div
           style={{
             ...styles.activityHeader,
-            ...(this.props.collapsed && {marginBottom: 10})
+            ...(this.props.collapsed && {marginBottom: 10}),
           }}
         >
-          {hasLessonPlan && (
-            <div style={styles.activityHeaderComponents}>
-              <div style={styles.inputsAndIcon}>
-                <FontAwesome
-                  icon={this.props.collapsed ? 'expand' : 'compress'}
-                  onClick={this.props.handleCollapse}
+          <div style={styles.activityHeaderComponents}>
+            <div style={styles.inputsAndIcon}>
+              {hasLessonPlan && (
+                <div>
+                  <FontAwesome
+                    icon={this.props.collapsed ? 'expand' : 'compress'}
+                    onClick={this.props.handleCollapse}
+                  />
+                  <label style={styles.labelAndInput}>
+                    <span style={styles.label}>{`Activity:`}</span>
+                    <input
+                      value={activity.displayName}
+                      style={{width: 200}}
+                      onChange={this.handleChangeDisplayName}
+                      className="uitest-activity-name-input"
+                    />
+                  </label>
+                </div>
+              )}
+              <label style={styles.labelAndInput}>
+                <span style={styles.label}>{`Duration:`}</span>
+                <input
+                  value={activity.duration}
+                  style={{width: 35}}
+                  onChange={this.handleChangeDuration}
+                  className="uitest-activity-duration-input"
                 />
-
-                <label style={styles.labelAndInput}>
-                  <span style={styles.label}>{`Activity:`}</span>
-                  <input
-                    value={activity.displayName}
-                    style={{width: 200}}
-                    onChange={this.handleChangeDisplayName}
-                    className="uitest-activity-name-input"
-                  />
-                </label>
-                <label style={styles.labelAndInput}>
-                  <span style={styles.label}>{`Duration:`}</span>
-                  <input
-                    value={activity.duration}
-                    style={{width: 35}}
-                    onChange={this.handleChangeDuration}
-                    className="uitest-activity-duration-input"
-                  />
-                  <span style={{fontSize: 10}}>{'(mins)'}</span>
-                </label>
-              </div>
-              {(allowMajorCurriculumChanges || levelsInActivity === 0) && (
+                <span style={{fontSize: 10}}>{'(mins)'}</span>
+              </label>
+            </div>
+            {hasLessonPlan &&
+              (allowMajorCurriculumChanges || levelsInActivity === 0) && (
                 <OrderControls
                   name={activity.displayName || 'Unnamed Activity'}
                   move={this.handleMoveActivity}
@@ -143,8 +146,7 @@ class ActivityCard extends Component {
                   itemType={'activity'}
                 />
               )}
-            </div>
-          )}
+          </div>
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
@@ -189,21 +191,21 @@ const styles = {
     background: color.cyan,
     borderTopLeftRadius: borderRadius,
     borderTopRightRadius: borderRadius,
-    padding: 10
+    padding: 10,
   },
   activityHeaderComponents: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexWrap: 'wrap',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   activityBody: {
     background: color.lightest_cyan,
     borderBottomLeftRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
     padding: 10,
-    marginBottom: 20
+    marginBottom: 20,
   },
   addButton: {
     fontSize: 14,
@@ -211,38 +213,35 @@ const styles = {
     background: 'white',
     border: '1px solid #ccc',
     boxShadow: 'none',
-    margin: '0 10px 10px 10px'
+    margin: '0 10px 10px 10px',
   },
   button: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   label: {
     fontSize: 18,
-    marginRight: 5
+    marginRight: 5,
   },
   labelAndInput: {
     marginLeft: 10,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
   },
   inputsAndIcon: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
-    flex: '1 1'
-  }
+    flex: '1 1',
+  },
 };
 
 export const UnconnectedActivityCard = ActivityCard;
 
-export default connect(
-  state => ({}),
-  {
-    addActivitySection,
-    moveActivity,
-    removeActivity,
-    updateActivityField
-  }
-)(ActivityCard);
+export default connect(state => ({}), {
+  addActivitySection,
+  moveActivity,
+  removeActivity,
+  updateActivityField,
+})(ActivityCard);

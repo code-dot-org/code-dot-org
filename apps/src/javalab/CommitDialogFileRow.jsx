@@ -32,7 +32,7 @@ export default function CommitDialogFileRow({file, onToggleFile}) {
 
 CommitDialogFileRow.propTypes = {
   file: PropTypes.shape(fileShape).isRequired,
-  onToggleFile: PropTypes.func.isRequired
+  onToggleFile: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -41,23 +41,23 @@ const styles = {
     justifyContent: 'space-between',
     padding: PADDING,
     paddingBottom: PADDING / 2,
-    borderBottom: `1px solid ${color.lightest_gray}`
+    borderBottom: `1px solid ${color.lightest_gray}`,
   },
   fileLabelContainer: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   fileLabel: {
     flexGrow: 2,
-    color: color.default_text
+    color: color.default_text,
   },
   fileNameConflictWarning: {
     color: color.default_text,
     fontStyle: 'italic',
-    fontSize: 12
+    fontSize: 12,
   },
   checkbox: {
     width: 18,
-    height: 18
-  }
+    height: 18,
+  },
 };

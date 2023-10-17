@@ -14,7 +14,7 @@ describe('AddResourceDialog', () => {
       onSave: onSaveSpy,
       handleClose: handleCloseSpy,
       typeOptions: ['Activity Guide', 'Handout'],
-      audienceOptions: ['Teacher', 'Student']
+      audienceOptions: ['Teacher', 'Student'],
     };
   });
 
@@ -47,7 +47,7 @@ describe('AddResourceDialog', () => {
     const instance = wrapper.instance();
     instance.setState({
       name: 'my resource name',
-      url: 'code.org'
+      url: 'code.org',
     });
     const saveResourceSpy = sinon.stub(instance, 'saveResource');
     instance.forceUpdate();
@@ -65,7 +65,7 @@ describe('AddResourceDialog', () => {
       includeInPdf: true,
       downloadUrl: '',
       type: 'Handout',
-      audience: 'Teacher'
+      audience: 'Teacher',
     };
     const wrapper = mount(
       <AddResourceDialog

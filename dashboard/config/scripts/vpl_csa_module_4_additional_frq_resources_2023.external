@@ -1,0 +1,20 @@
+name 'vpl-csa-module-4-additional-FRQ-resources_2023'
+editor_experiment ''
+display_name 'CSA Module 1 Overview'
+
+title 'Module 1: CSA Virtual Professional Learning'
+markdown <<MARKDOWN
+# Additional resources available from the College Board
+
+The College Board releases student answers along with explanations about how the students were scored on the question.  These can be helpful to teachers when understanding how the rubric is applied on the College Board exam.  You can find these on the <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="blank">College Board Website</a>
+
+**Optional:** If you'd like to explore these resources now, we have linked Sample Responses from the College Board for 2018 Question 4 or 2022 Question 4 here for you.
+
+*  <a href="https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap18-computer-science-a-q4.pdf" target="blank">2018 Question 4 - Sample Responses </a>
+*  <a href="https://apcentral.collegeboard.org/media/pdf/ap22-apc-computer-science-a-q4.pdf" target="blank">2022 Question 4 - Sample Responses</a>
+
+<hr>
+
+**Up next:** We will look at the FRQ Question from the FRQ Day in Code.org’s Unit 5. 
+
+MARKDOWN

@@ -8,7 +8,7 @@ import {MAX_NUM_TEXTS} from '@cdo/apps/p5lab/spritelab/constants';
 describe('Validation Commands', () => {
   let coreLibrary;
 
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
   });
@@ -16,20 +16,20 @@ describe('Validation Commands', () => {
   it('getTitle', () => {
     expect(commands.getTitle.apply(coreLibrary)).to.deep.equal({
       title: undefined,
-      subtitle: undefined
+      subtitle: undefined,
     });
     worldCommands.showTitleScreen.apply(coreLibrary, [
       'my title',
-      'my subtitle'
+      'my subtitle',
     ]);
     expect(commands.getTitle.apply(coreLibrary)).to.deep.equal({
       title: 'my title',
-      subtitle: 'my subtitle'
+      subtitle: 'my subtitle',
     });
     worldCommands.hideTitleScreen.apply(coreLibrary);
     expect(commands.getTitle.apply(coreLibrary)).to.deep.equal({
       title: undefined,
-      subtitle: undefined
+      subtitle: undefined,
     });
   });
 
@@ -40,13 +40,13 @@ describe('Validation Commands', () => {
     worldCommands.printText.apply(coreLibrary, ['second']);
     expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal([
       'first',
-      'second'
+      'second',
     ]);
     worldCommands.printText.apply(coreLibrary, ['third']);
     expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal([
       'first',
       'second',
-      'third'
+      'third',
     ]);
   });
 
@@ -69,12 +69,12 @@ describe('Validation Commands', () => {
     worldCommands.setPrompt.apply(coreLibrary, [
       'prompt text',
       'myVar1',
-      () => {}
+      () => {},
     ]);
     worldCommands.setPrompt.apply(coreLibrary, [
       'prompt text',
       'myVar2',
-      () => {}
+      () => {},
     ]);
     worldCommands.setPromptWithChoices.apply(coreLibrary, [
       'prompt text',
@@ -82,7 +82,7 @@ describe('Validation Commands', () => {
       'a',
       'b',
       'c',
-      () => {}
+      () => {},
     ]);
     worldCommands.setPromptWithChoices.apply(coreLibrary, [
       'prompt text',
@@ -90,13 +90,13 @@ describe('Validation Commands', () => {
       1,
       2,
       3,
-      () => {}
+      () => {},
     ]);
     expect(commands.getPromptVars.apply(coreLibrary)).to.deep.equal({
       myVar1: null,
       myVar2: null,
       myVar3: null,
-      myVar4: null
+      myVar4: null,
     });
     coreLibrary.onPromptAnswer('myVar2', 'my answer');
     coreLibrary.onPromptAnswer('myVar3', 2);

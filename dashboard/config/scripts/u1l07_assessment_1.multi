@@ -1,12 +1,18 @@
 name 'U1L07 Assessment 1'
-encrypted 'C4B8u951lzzFrUdMz4xdWMBN5ao+WCon5GhxGRa5nQ2nM0baKJGKaVsEigiS
-4qM/E0sCN0wEtSZDVZHD3o+PLdssCxFu6yD5RSfexv2kKIBjUSi5OL3uXfd8
-TIxexCLwfEtuqKDKHD1tC46FGpijytc83dRrX8qogE3Qqm0llhfeSXFCbuMY
-Pelaoc5GwDFdRh6OTTms07Sto+ZSkQuoxzyVfwosGwsDEJ0eos1e9tKfU0mU
-IUVxmzX+Z1nanAuJp7+q60uljUEeEMZovu8sVcB+hv4x77CfHGO9w5+Z6ZWM
-qH9bZwIpQVLmo1PolDtl7TTwJ4xzBJrVctpTnW9spdVksWIj5OtxF+2Cjdb2
-5+Q8iXSfYypxywgwSSCo8lQxq7W7TW1vSBK5zAXY+wIjokt4pLRS91EYlxbL
-60o/48oOAMoy/02xm7mNz7EGMcbV4Zv+sXI8EzW1uqyNl9BXyq5TZ+owvlWx
-Y4IliWdRuWRfiVkHYmiauvQfXhN5WNJmhNqa8Zm3Xuij2P0DFmxRpg3hxQgi
-m9Jp20zDcRASNRVn0iCeE94Yfam9snCWItM1
-'
+title 'Single Source Shortest Path Assessment'
+question 'Which one is the shortest path tree from the source node indicated?'
+right 'A'
+wrong 'B'
+wrong 'C'
+wrong 'D'
+wrong 'E'
+
+markdown <<MARKDOWN
+<img src = "https://images.code.org/2d5c475328b50e7da1414b59e8c40aab-image-1433977200543.png" width ="100%"/>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer: A
+MARKDOWN
+
+allow_multiple_attempts true

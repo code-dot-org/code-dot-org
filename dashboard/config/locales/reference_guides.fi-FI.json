@@ -55,6 +55,9 @@
         },
         "csd-2022/velocity": {
           "display_name": "Nopeus"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Nettilabra"
         }
       }
     }

@@ -9,3 +9,5 @@ answer 'The "About" Page'
 question 'The "Contact Us" Button'
 answer 'The "Use It" Page'
 
+
+allow_multiple_attempts true

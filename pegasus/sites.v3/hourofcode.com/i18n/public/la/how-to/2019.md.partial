@@ -27,9 +27,9 @@ Explora las actividades y decide con anticipación si deseas elegir un solo tuto
 
 ## 3. Elabora tu Plan para el Día
 
-### Piensa en tus necesidades tecnológicas. ¡Las computadoras son opcionales!
+### Considera tus necesidades tecnológicas. ¡Las computadoras son opcionales!
 
-- Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero no necesitas una computadora para cada niño; incluso, puedes llevar adelante la Hora del Código sin computadoras. Para las [actividades sin conexión](/learn), solo tienes que filtrar la sección Tecnología en el aula para mostrar las opciones para “Sin computadoras o dispositivos”.
+- Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero no necesitas una computadora para cada niño; incluso, puedes desarrollar la Hora del Código sin computadoras. Para las [actividades sin conexión](/learn), solo tienes que filtrar la sección Tecnología en el aula para mostrar las opciones para “Sin computadoras o dispositivos”.
 - Asegúrate de probar los tutoriales en las computadoras o los dispositivos de los estudiantes para garantizar que el sonido y el video funcionen bien en los navegadores. ¿Tienes ancho de banda limitado? Muestra los videos a toda la clase para que los estudiantes no tengan que descargarlos. También puedes probar los tutoriales sin conexión.
 - Entrega auriculares, o pide a los estudiantes que traigan los suyos, en caso de que el tutorial que elijas funcione mejor con sonido.
 - ¿No tienes suficientes dispositivos? Usa la [programación en parejas](https://www.youtube.com/watch?v=vgkahOzFH2Q). Al formar equipos, los estudiantes se ayudan entre sí y dependen menos del docente. Además verán que las ciencias de la computación son una actividad social y colaborativa.
@@ -48,7 +48,7 @@ Ahora que has planificado tu evento, ¡es hora de comenzar a promoverlo!
 
 ¡Promueve la Hora del Código a otros docentes que quieran unirse a la diversión! ¡También es una gran oportunidad para comunicarse con el PTSA de tu escuela o compartir boletines informativos para padres, haciéndoles saber que sus hijos pueden volver a casa con ganas de probar más actividades y tutoriales!
 
-### Informa a los voluntarios cuando se registren a tu evento
+### Informa a los voluntarios a través registrando tu evento
 
 Cuando [registres tu evento de la Hora del Código](/), recibirás comunicaciones útiles por correo electrónico con noticias y consejos para organizar una Hora del Código exitosa. También es la forma en que puedes informar a los voluntarios locales que tu escuela está participando. Los voluntarios son un gran recurso y pueden venir a hablar con tu clase sobre ciencias de la computación o simplemente ayudar a tus estudiantes con las actividades de la Hora del Código.
 
@@ -82,7 +82,7 @@ Está bien si tanto tú como tus estudiantes son nuevos en las ciencias de la co
 
 Involucra a los estudiantes en la actividad
 
-- Escribe el enlace al tutorial en el tablero. Encuentra el enlace en la [información para el tutorial seleccionado]({{ urls/learn }}) debajo del número de participantes.
+- Escribe el enlace al tutorial en la pizarra blanca. Encuentra el enlace en la [información para el tutorial seleccionado]({{ urls/learn }}) debajo del número de participantes.
 
 Si los estudiantes encuentran dificultades, está bien responder:
 
@@ -119,6 +119,6 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 ## ¿Qué viene después de la Hora del Código?
 
-¡Las ciencias de la computación no tienen que terminar con la Hora del Código! Nuestro plan de estudios está en Internet y es de uso gratuito, para siempre.  [Descubre cómo](/beyond) llevar las ciencias de la computación a tu escuela y a tus estudiantes.
+¡Las ciencias de la computación no tienen que terminar con la Hora del Código! Nuestro plan de estudios está en Internet y es gratuito para siempre. [Descubre cómo](/beyond) llevar las ciencias de la computación a tu escuela y a tus estudiantes.
 
 {{ signup_button }}

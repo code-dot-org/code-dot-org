@@ -64,14 +64,14 @@ class SlackTest < Minitest::Test
 
   def test_message_uses_channel_map
     Net::HTTP.expects(:post_form).with do |_url, params|
-      '#infra-test' == JSON.parse(params[:payload])['channel']
+      JSON.parse(params[:payload])['channel'] == '#infra-test'
     end.returns(stub(code: 200))
     assert Slack.message(FAKE_MESSAGE, channel: 'test')
   end
 
   def test_message_slackifies_bold
     Net::HTTP.expects(:post_form).with do |_url, params|
-      'this should be *bold*' == JSON.parse(params[:payload])['text']
+      JSON.parse(params[:payload])['text'] == 'this should be *bold*'
     end.returns(stub(code: 200))
     message_with_bold = 'this should be <b>bold</b>'
     assert Slack.message(message_with_bold, channel: FAKE_CHANNEL)
@@ -79,7 +79,7 @@ class SlackTest < Minitest::Test
 
   def test_message_slackifies_italic
     Net::HTTP.expects(:post_form).with do |_url, params|
-      'this should be _italic_' == JSON.parse(params[:payload])['text']
+      JSON.parse(params[:payload])['text'] == 'this should be _italic_'
     end.returns(stub(code: 200))
     message_with_italic = 'this should be <i>italic</i>'
     assert Slack.message(message_with_italic, channel: FAKE_CHANNEL)
@@ -87,8 +87,7 @@ class SlackTest < Minitest::Test
 
   def test_message_slackifies_code_block
     Net::HTTP.expects(:post_form).with do |_url, params|
-      "this should be\n```\na block of code\n```" ==
-        JSON.parse(params[:payload])['text']
+      JSON.parse(params[:payload])['text'] == "this should be\n```\na block of code\n```"
     end.returns(stub(code: 200))
     message_with_code_block = "this should be\n<pre>\na block of code\n</pre>"
     assert Slack.message(message_with_code_block, channel: FAKE_CHANNEL)
@@ -96,14 +95,14 @@ class SlackTest < Minitest::Test
 
   def test_message_slackifies
     Net::HTTP.expects(:post_form).with do |_url, params|
-      "*dashboard* tests failed <https://a-link.to/somewhere|html output>"\
-      "\n_rerun: bundle exec ./runner.rb -c iPhone "\
+      "*dashboard* tests failed <https://a-link.to/somewhere|html output>" \
+      "\n_rerun: bundle exec ./runner.rb -c iPhone " \
       "-f features/applab/sharedApps.feature --html_" ==
         JSON.parse(params[:payload])['text']
     end.returns(stub(code: 200))
-    message_with_all = '<b>dashboard</b> tests failed '\
-      '<a href="https://a-link.to/somewhere">html output</a><br/>'\
-      '<i>rerun: bundle exec ./runner.rb -c iPhone '\
+    message_with_all = '<b>dashboard</b> tests failed ' \
+      '<a href="https://a-link.to/somewhere">html output</a><br/>' \
+      '<i>rerun: bundle exec ./runner.rb -c iPhone ' \
       '-f features/applab/sharedApps.feature --html</i>'
     assert Slack.message(message_with_all, channel: FAKE_CHANNEL)
   end

@@ -11,7 +11,7 @@ describe('AddLevelDialogTop', () => {
     addLevel = sinon.spy();
     defaultProps = {
       addLevel,
-      searchOptions: searchOptions
+      searchOptions: searchOptions,
     };
   });
 
@@ -34,16 +34,16 @@ describe('AddLevelDialogTop', () => {
           unplugged: false,
           updated_at: '10/20/20 at 01:30:16 PM',
           url: '/levels/22300/edit',
-          videoKey: null
-        }
+          videoKey: null,
+        },
       ],
-      numPages: 1
+      numPages: 1,
     };
     let server = sinon.fakeServer.create();
     server.respondWith('GET', '/levels/get_filtered_levels?page=1', [
       200,
       {'Content-Type': 'application/json;charset=UTF-8'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
     const wrapper = isolateComponent(<AddLevelDialogTop {...defaultProps} />);
     server.respond();

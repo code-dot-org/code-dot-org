@@ -9,11 +9,11 @@ const levelDef = {
     [0, 0, 0, 0, 16, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   freePlay: true,
   timeoutFailureTick: 200,
-  editCode: true
+  editCode: true,
 };
 
 export default {
@@ -27,14 +27,14 @@ export default {
         setMap("circle");
         for (var i = 0; i < 100; i++) goRight();
       `,
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Studio.sprite[0].x, 245);
         return true;
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Droplet Star Wars map collision: Hoth circle',
@@ -43,14 +43,14 @@ export default {
         setMap("circle");
         for (var i = 0; i < 100; i++) goRight();
       `,
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Studio.sprite[0].x, 235);
         return true;
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

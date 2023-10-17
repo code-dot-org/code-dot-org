@@ -7,6 +7,13 @@
   "catProcedures": "Funkcije",
   "catText": "Tekst",
   "catVariables": "Varijable",
+  "designElementProperty_fitImage_none": "nijedno",
+  "designElementProperty_text": "tekst",
+  "designElementProperty_textAlignment_center": "centralna",
+  "designElementProperty_textAlignment_left": "lijevo",
+  "designElementProperty_textAlignment_right": "desno",
+  "designElementProperty_zOrder": "dubina",
+  "designElementTheme_classic": "Klasični",
   "designWorkspaceHeader": "Radni prostor: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param2": "y",
@@ -21,7 +28,7 @@
   "nextLevel": "Čestitamo! Ovaj zadatak je riješen.",
   "no": "Ne",
   "numBlocksNeeded": "Ovaj zadatak se može riješiti s %1 blokova.",
-  "repeatForever": "ponavljaj zauvijek",
   "repeatDo": "uradi",
+  "repeatForever": "ponavljaj zauvijek",
   "yes": "Da"
 }

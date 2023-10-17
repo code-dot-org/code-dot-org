@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PreviewPaneHeader from '../PreviewPaneHeader';
 import MazeVisualization from '@cdo/apps/maze/Visualization';
-import {toggleVisualizationCollapsed} from '../javalabRedux';
+import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
 import {DisplayTheme} from '../DisplayTheme';
 
 const ICON_PATH = '/blockly/media/turtle/';
@@ -13,19 +13,16 @@ class NeighborhoodVisualizationColumn extends React.Component {
     // populated by redux
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isCollapsed: PropTypes.bool,
-    toggleVisualizationCollapsed: PropTypes.func
+    toggleVisualizationCollapsed: PropTypes.func,
   };
 
   state = {
-    isFullscreen: false
+    isFullscreen: false,
   };
 
   render() {
-    const {
-      displayTheme,
-      isCollapsed,
-      toggleVisualizationCollapsed
-    } = this.props;
+    const {displayTheme, isCollapsed, toggleVisualizationCollapsed} =
+      this.props;
     const {isFullscreen} = this.state;
 
     const fullIconPath =
@@ -86,18 +83,18 @@ const styles = {
     backgroundImage: 'url("/blockly/media/javalab/Neighborhood.png")',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'top'
-  }
+    backgroundPosition: 'top',
+  },
 };
 
 export default connect(
   state => ({
-    displayTheme: state.javalab.displayTheme,
-    isCollapsed: state.javalab.isVisualizationCollapsed
+    displayTheme: state.javalabView.displayTheme,
+    isCollapsed: state.javalabView.isVisualizationCollapsed,
   }),
   dispatch => ({
     toggleVisualizationCollapsed() {
       dispatch(toggleVisualizationCollapsed());
-    }
+    },
   })
 )(NeighborhoodVisualizationColumn);

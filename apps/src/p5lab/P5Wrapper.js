@@ -14,7 +14,7 @@ const defaultFrameRate = 30;
  * An instantiable P5Wrapper class that wraps p5 and p5play and patches it in
  * specific places to enable GameLab functionality
  */
-var P5Wrapper = function() {
+var P5Wrapper = function () {
   this.p5 = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
@@ -26,7 +26,7 @@ var P5Wrapper = function() {
     'mouseWheel',
     'keyPressed',
     'keyReleased',
-    'keyTyped'
+    'keyTyped',
   ];
   this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(
     this.p5eventNames
@@ -79,7 +79,7 @@ P5Wrapper.baseP5loadImage = null;
  * @param {!Function} options.onDraw callback to run during each draw()
  * @param {boolean} options.spritelab Whether this is a spritelab instance
  */
-P5Wrapper.prototype.init = function(options) {
+P5Wrapper.prototype.init = function (options) {
   this.onExecutionStarting = options.onExecutionStarting;
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
@@ -89,7 +89,7 @@ P5Wrapper.prototype.init = function(options) {
   // Override p5.loadImage so we can modify the URL path param
   if (!P5Wrapper.baseP5loadImage) {
     P5Wrapper.baseP5loadImage = window.p5.prototype.loadImage;
-    window.p5.prototype.loadImage = function(path) {
+    window.p5.prototype.loadImage = function (path) {
       // Make sure to pass all arguments through to loadImage, which can get
       // wrapped and take additional arguments during preload.
       arguments[0] = assetPrefix.fixPath(path);
@@ -98,7 +98,7 @@ P5Wrapper.prototype.init = function(options) {
   }
 
   // Override p5.redraw to make it two-phase after userDraw()
-  window.p5.prototype.redraw = function() {
+  window.p5.prototype.redraw = function () {
     /*
      * Copied code from p5 from redraw()
      */
@@ -118,7 +118,7 @@ P5Wrapper.prototype.init = function(options) {
   };
 
   // Create 2nd phase function afterUserDraw()
-  window.p5.prototype.afterUserDraw = function() {
+  window.p5.prototype.afterUserDraw = function () {
     /*
      * Copied code from p5 from redraw()
      */
@@ -131,7 +131,7 @@ P5Wrapper.prototype.init = function(options) {
   // Disable fullscreen() method:
   // (we don't make this change in our fork of p5.play, as we want this restriction
   //  only while running within Code Studio)
-  window.p5.prototype.fullscreen = function(val) {
+  window.p5.prototype.fullscreen = function (val) {
     return false;
   };
 
@@ -146,7 +146,7 @@ P5Wrapper.prototype.init = function(options) {
     );
   }
 
-  window.p5.prototype.gamelabPreload = function() {
+  window.p5.prototype.gamelabPreload = function () {
     this.p5decrementPreload = window.p5._getDecrementPreload.apply(
       this.p5,
       arguments
@@ -157,7 +157,7 @@ P5Wrapper.prototype.init = function(options) {
 /**
  * Reset P5Wrapper to its initial state. Called before each time it is used.
  */
-P5Wrapper.prototype.resetExecution = function() {
+P5Wrapper.prototype.resetExecution = function () {
   p5SpriteWrapper.setCreateWithDebug(false);
 
   if (this.p5) {
@@ -175,16 +175,16 @@ P5Wrapper.prototype.resetExecution = function() {
  * Register a p5 event handler function. The provided function replaces the
  * method stored on our p5 instance.
  */
-P5Wrapper.prototype.registerP5EventHandler = function(eventName, handler) {
+P5Wrapper.prototype.registerP5EventHandler = function (eventName, handler) {
   this.p5[eventName] = handler;
 };
 
-P5Wrapper.prototype.changeStepSpeed = function(stepSpeed) {
+P5Wrapper.prototype.changeStepSpeed = function (stepSpeed) {
   this.stepSpeed = stepSpeed;
   this.setP5FrameRate();
 };
 
-P5Wrapper.prototype.drawDebugSpriteColliders = function() {
+P5Wrapper.prototype.drawDebugSpriteColliders = function () {
   if (this.p5) {
     this.p5.allSprites.forEach(sprite => {
       sprite.display(true);
@@ -192,7 +192,7 @@ P5Wrapper.prototype.drawDebugSpriteColliders = function() {
   }
 };
 
-P5Wrapper.prototype.loadSound = function(url) {
+P5Wrapper.prototype.loadSound = function (url) {
   if (this.p5 && this.p5.loadSound) {
     return this.p5.loadSound(url);
   }
@@ -201,10 +201,11 @@ P5Wrapper.prototype.loadSound = function(url) {
 /**
  * Instantiate a new p5 and start execution
  */
-P5Wrapper.prototype.startExecution = function() {
+P5Wrapper.prototype.startExecution = function () {
   new window.p5(
-    function(p5obj) {
+    function (p5obj) {
       this.p5 = p5obj;
+      this.p5._onblur(); // This is to explicitly wipe out the downKeys object over in p5.js so no old keys hang around.
       // Tell p5.play that we don't want it to have Sprite do anything
       // within _syncAnimationSizes()
       this.p5._fixedSpriteAnimationFrameSizes = true;
@@ -214,7 +215,7 @@ P5Wrapper.prototype.startExecution = function() {
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
       // Overload _draw function to make it two-phase
-      p5obj._draw = function() {
+      p5obj._draw = function () {
         /*
          * Copied code from p5 _draw()
          */
@@ -249,7 +250,7 @@ P5Wrapper.prototype.startExecution = function() {
         }
       }.bind(p5obj);
 
-      p5obj.afterRedraw = function() {
+      p5obj.afterRedraw = function () {
         /*
          * Copied code from p5 _draw()
          */
@@ -259,7 +260,7 @@ P5Wrapper.prototype.startExecution = function() {
         this._drawEpilogue();
       }.bind(p5obj);
 
-      p5obj._drawEpilogue = function() {
+      p5obj._drawEpilogue = function () {
         /*
          * Copied code from p5 _draw()
          */
@@ -272,7 +273,7 @@ P5Wrapper.prototype.startExecution = function() {
       }.bind(p5obj);
 
       // Overload _setup function to make it two-phase
-      p5obj._setup = function() {
+      p5obj._setup = function () {
         /*
          * Copied code from p5 _setup()
          */
@@ -298,7 +299,7 @@ P5Wrapper.prototype.startExecution = function() {
         }
       }.bind(p5obj);
 
-      p5obj._setupEpiloguePhase1 = function() {
+      p5obj._setupEpiloguePhase1 = function () {
         /*
          * Modified code from p5 _setup() (safe to call multiple times in the
          * event that the debugger has slowed down the process of completing
@@ -316,14 +317,14 @@ P5Wrapper.prototype.startExecution = function() {
         }
       }.bind(p5obj);
 
-      p5obj._setupEpiloguePhase2 = function() {
+      p5obj._setupEpiloguePhase2 = function () {
         /*
          * Modified code from p5 _setup()
          */
         this._setupDone = true;
       }.bind(p5obj);
 
-      p5obj.preload = function() {
+      p5obj.preload = function () {
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has
           // not completed, so we need to grab increment p5's preloadCount by
@@ -334,7 +335,7 @@ P5Wrapper.prototype.startExecution = function() {
         }
       }.bind(this);
 
-      p5obj.setup = function() {
+      p5obj.setup = function () {
         this.onSetup();
       }.bind(this);
 
@@ -352,28 +353,28 @@ P5Wrapper.prototype.startExecution = function() {
  * done. This allows us to release our "preload" count reference in p5, which
  * means that setup() can begin.
  */
-P5Wrapper.prototype.notifyPreloadPhaseComplete = function() {
+P5Wrapper.prototype.notifyPreloadPhaseComplete = function () {
   if (this.p5decrementPreload) {
     this.p5decrementPreload();
     this.p5decrementPreload = null;
   }
 };
 
-P5Wrapper.prototype.notifyKeyCodeDown = function(keyCode) {
+P5Wrapper.prototype.notifyKeyCodeDown = function (keyCode) {
   // Synthesize an event and send it to the internal p5 handler for keydown
   if (this.p5) {
     this.p5._onkeydown({which: keyCode});
   }
 };
 
-P5Wrapper.prototype.notifyKeyCodeUp = function(keyCode) {
+P5Wrapper.prototype.notifyKeyCodeUp = function (keyCode) {
   // Synthesize an event and send it to the internal p5 handler for keyup
   if (this.p5) {
     this.p5._onkeyup({which: keyCode});
   }
 };
 
-P5Wrapper.prototype.getCustomMarshalGlobalProperties = function() {
+P5Wrapper.prototype.getCustomMarshalGlobalProperties = function () {
   return {
     width: this.p5,
     height: this.p5,
@@ -420,49 +421,51 @@ P5Wrapper.prototype.getCustomMarshalGlobalProperties = function() {
     rightEdge: this.p5,
     topEdge: this.p5,
     bottomEdge: this.p5,
-    edges: this.p5
+    edges: this.p5,
   };
 };
 
-P5Wrapper.prototype.getCustomMarshalBlockedProperties = function() {
+P5Wrapper.prototype.getCustomMarshalBlockedProperties = function () {
   return [
+    '_curElement',
+    '_elements',
+    '_userNode',
     'arguments',
     'callee',
     'caller',
+    'canvas',
     'constructor',
+    'createWriter',
+    'downloadFile',
+    'elt',
     'eval',
+    'httpDo',
+    'httpGet',
+    'httpPost',
+    'loadJSON',
+    'loadStrings',
+    'loadTable',
+    'loadXML',
+    'p5',
+    'parent',
     'prototype',
+    'save',
     'stack',
     'unwatch',
     'valueOf',
     'watch',
-    '_userNode',
-    '_elements',
-    '_curElement',
-    'elt',
-    'canvas',
-    'parent',
-    'p5',
-    'downloadFile',
     'writeFile',
-    'httpGet',
-    'httpPost',
-    'httpDo',
-    'loadJSON',
-    'loadStrings',
-    'loadTable',
-    'loadXML'
   ];
 };
 
-P5Wrapper.prototype.getCustomMarshalObjectList = function() {
+P5Wrapper.prototype.getCustomMarshalObjectList = function () {
   return [
     {
       instance: this.p5.Sprite,
       ensureIdenticalMarshalInstances: true,
       methodOpts: {
-        nativeCallsBackInterpreter: true
-      }
+        nativeCallsBackInterpreter: true,
+      },
     },
     // The p5play Group object should be custom marshalled, but its constructor
     // actually creates a standard Array instance with a few additional methods
@@ -472,8 +475,8 @@ P5Wrapper.prototype.getCustomMarshalObjectList = function() {
       instance: Array,
       requiredMethod: 'draw',
       methodOpts: {
-        nativeCallsBackInterpreter: true
-      }
+        nativeCallsBackInterpreter: true,
+      },
     },
     {instance: window.p5},
     {instance: this.p5.Camera},
@@ -486,7 +489,7 @@ P5Wrapper.prototype.getCustomMarshalObjectList = function() {
     {instance: window.p5.Graphics},
     {instance: window.p5.Font},
     {instance: window.p5.Table},
-    {instance: window.p5.TableRow}
+    {instance: window.p5.TableRow},
     // TODO: Maybe add collider types here?
   ];
 };
@@ -496,7 +499,7 @@ P5Wrapper.prototype.getCustomMarshalObjectList = function() {
  * lists or blacklisted properties.
  * @returns {Array.<string>}
  */
-P5Wrapper.prototype.getMarshallableP5Properties = function() {
+P5Wrapper.prototype.getMarshallableP5Properties = function () {
   const blockedProps = this.getCustomMarshalBlockedProperties();
   const globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
 
@@ -513,7 +516,7 @@ P5Wrapper.prototype.getMarshallableP5Properties = function() {
   return propNames;
 };
 
-P5Wrapper.prototype.getGlobalPropertyList = function() {
+P5Wrapper.prototype.getGlobalPropertyList = function () {
   const propList = {};
 
   // Include every property on the p5 instance in the global property list
@@ -536,7 +539,7 @@ P5Wrapper.prototype.getGlobalPropertyList = function() {
 /**
  * Return the current frame rate
  */
-P5Wrapper.prototype.getFrameRate = function() {
+P5Wrapper.prototype.getFrameRate = function () {
   return this.p5 ? this.p5.frameRate() : 0;
 };
 
@@ -544,7 +547,7 @@ P5Wrapper.prototype.getFrameRate = function() {
  * Mark all current and future sprites as debug=true.
  * @param {boolean} debugSprites - Enable or disable debug flag on all sprites
  */
-P5Wrapper.prototype.debugSprites = function(debugSprites) {
+P5Wrapper.prototype.debugSprites = function (debugSprites) {
   if (this.p5) {
     p5SpriteWrapper.setCreateWithDebug(debugSprites);
     this.p5.allSprites.forEach(sprite => {
@@ -553,7 +556,7 @@ P5Wrapper.prototype.debugSprites = function(debugSprites) {
   }
 };
 
-P5Wrapper.prototype.afterDrawComplete = function() {
+P5Wrapper.prototype.afterDrawComplete = function () {
   this.p5.afterUserDraw();
   this.p5.afterRedraw();
 };
@@ -563,7 +566,7 @@ P5Wrapper.prototype.afterDrawComplete = function() {
  * of the epilogue so the student can see what they may be drawing in their
  * setup code while debugging.
  */
-P5Wrapper.prototype.afterSetupStarted = function() {
+P5Wrapper.prototype.afterSetupStarted = function () {
   this.p5._setupEpiloguePhase1();
 };
 
@@ -572,12 +575,12 @@ P5Wrapper.prototype.afterSetupStarted = function() {
  * call _setupEpiloguePhase1() multiple times in the event that it may already
  * have been called.
  */
-P5Wrapper.prototype.afterSetupComplete = function() {
+P5Wrapper.prototype.afterSetupComplete = function () {
   this.p5._setupEpiloguePhase1();
   this.p5._setupEpiloguePhase2();
 };
 
-P5Wrapper.prototype.preloadBackgrounds = function() {
+P5Wrapper.prototype.preloadBackgrounds = function () {
   if (!this.preloadBackgrounds_) {
     this.preloadedBackgrounds = {};
     this.preloadBackgrounds_ = Promise.all(
@@ -603,7 +606,7 @@ P5Wrapper.prototype.preloadBackgrounds = function() {
   );
 };
 
-P5Wrapper.prototype.preloadSpriteImages = function(animationList) {
+P5Wrapper.prototype.preloadSpriteImages = function (animationList) {
   if (!this.preloadedSprites) {
     this.preloadedSprites = {};
   }
@@ -647,7 +650,7 @@ P5Wrapper.prototype.preloadSpriteImages = function(animationList) {
  *
  * @return {Promise} promise that resolves when all animations are loaded
  */
-P5Wrapper.prototype.preloadAnimations = function(
+P5Wrapper.prototype.preloadAnimations = function (
   animationList,
   pauseAnimationsByDefault
 ) {
@@ -669,9 +672,8 @@ P5Wrapper.prototype.preloadAnimations = function(
             props.frameSize.y,
             frameCount
           );
-          this.p5._predefinedSpriteAnimations[
-            props.name
-          ] = this.p5.loadAnimation(spriteSheet);
+          this.p5._predefinedSpriteAnimations[props.name] =
+            this.p5.loadAnimation(spriteSheet);
           this.p5._predefinedSpriteAnimations[props.name].looping =
             props.looping;
           this.p5._predefinedSpriteAnimations[props.name].frameDelay =

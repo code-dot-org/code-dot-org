@@ -19,3 +19,5 @@ wrong 'This code will cause on error'
 markdown <<MARKDOWN
 <img src="https://images.code.org/8c0a8e1c21119c07fd136b06b192a318-image-1482857124411.png" style="width: 120px">
 MARKDOWN
+
+allow_multiple_attempts true

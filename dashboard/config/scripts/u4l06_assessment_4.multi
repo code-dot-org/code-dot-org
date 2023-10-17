@@ -8,3 +8,5 @@ right 'to notify when the data has been stored.'
 markdown <<MARKDOWN
 ## Assessment Question 4
 MARKDOWN
+
+allow_multiple_attempts true

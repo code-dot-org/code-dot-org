@@ -32,13 +32,13 @@ export default class BlockSvgFrame {
       .replace(/\s+/g, ' ');
 
     this.frameGroup_ = Blockly.utils.dom.createSvgElement('g', {
-      class: this.className
+      class: this.className,
     });
 
     const clip = Blockly.utils.dom.createSvgElement(
       'clipPath',
       {
-        id: `frameClip${safeCharBlockId}`
+        id: `frameClip${safeCharBlockId}`,
       },
       this.frameGroup_
     );
@@ -47,7 +47,7 @@ export default class BlockSvgFrame {
       {
         x: frameX,
         y: frameY,
-        height: frameSizes.HEADER_HEIGHT
+        height: frameSizes.HEADER_HEIGHT,
       },
       clip
     );
@@ -60,7 +60,7 @@ export default class BlockSvgFrame {
         fill: this.baseColor,
         stroke: this.headerColor,
         rx: 15,
-        ry: 15
+        ry: 15,
       },
       this.frameGroup_
     );
@@ -73,7 +73,7 @@ export default class BlockSvgFrame {
         fill: this.headerColor,
         rx: 15,
         ry: 15,
-        'clip-path': `url(#frameClip${safeCharBlockId})`
+        'clip-path': `url(#frameClip${safeCharBlockId})`,
       },
       this.frameGroup_
     );
@@ -89,7 +89,7 @@ export default class BlockSvgFrame {
         class: 'blocklyText',
         style: `font-size: 12pt;fill: ${this.textColor}`,
         y: frameTextVerticalPosition,
-        'dominant-baseline': 'central'
+        'dominant-baseline': 'central',
       },
       this.frameGroup_
     );
@@ -101,7 +101,7 @@ export default class BlockSvgFrame {
       top: frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT,
       right: frameSizes.MARGIN_SIDE,
       bottom: frameSizes.MARGIN_BOTTOM,
-      left: frameSizes.MARGIN_SIDE
+      left: frameSizes.MARGIN_SIDE,
     };
   }
 
@@ -118,7 +118,7 @@ export default class BlockSvgFrame {
     Blockly.utils.dom.addClass(this.frameGroup_, 'hidden');
     var frameGroup = this.frameGroup_;
     // Trigger the CSS fade-in transition.
-    setTimeout(function() {
+    setTimeout(function () {
       Blockly.utils.dom.removeClass(frameGroup, 'hidden');
     }, 0);
 

@@ -10,10 +10,10 @@ include TimedTaskWithLogging
 namespace :ci do
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
   timed_task_with_logging :chef_update do
-    # Replace root certificates in the installation of OpenSSL embedded in Chef client with a newer list from our repository
-    # that we periodically obtain and commit to our repository from https://curl.se/docs/caextract.html
+    # Ensure Chef Client is using an up to date TLS/SSL root certificate store from a trusted source (Mozilla via curl.se)
     Dir.chdir(cookbooks_dir) do
-      RakeUtils.sudo 'cp cacert.pem /opt/chef/embedded/ssl/certs/cacert.pem'
+      ROOT_CERTIFICATE_URL = "https://raw.githubusercontent.com/code-dot-org/code-dot-org/#{GitUtils.current_branch}/cookbooks/cacert.pem"
+      RakeUtils.sudo "curl -o /opt/chef/embedded/ssl/certs/cacert.pem #{ROOT_CERTIFICATE_URL}"
     end
     if CDO.chef_local_mode
       # Update local cookbooks from repository in local mode.
@@ -79,9 +79,9 @@ namespace :ci do
   timed_task_with_logging :publish_github_release do
     RakeUtils.system "bin/create-release --force"
     ChatClient.log '<a href="https://github.com/code-dot-org/code-dot-org/releases/latest">New release created</a>'
-  rescue RuntimeError => e
+  rescue RuntimeError => exception
     ChatClient.log 'Failed to create a new release.', color: 'red'
-    ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text', color: 'red'
+    ChatClient.log "/quote #{exception.message}\n#{CDO.backtrace exception}", message_format: 'text', color: 'red'
   end
 
   desc 'flush Content Distribution Network (CDN) caches'

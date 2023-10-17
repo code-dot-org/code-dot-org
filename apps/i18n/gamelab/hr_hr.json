@@ -1,9 +1,9 @@
 {
   "dropletBlock_createSprite_param2": "širina",
   "dropletBlock_createSprite_param3": "visina",
-  "dropletBlock_setCollider_param0": "tip",
-  "dropletBlock_setCollider_param4": "visina",
   "dropletBlock_setColliderEach_param0": "tip",
   "dropletBlock_setColliderEach_param4": "visina",
+  "dropletBlock_setCollider_param0": "tip",
+  "dropletBlock_setCollider_param4": "visina",
   "shareGame": "Podijeli svoju igru:"
 }

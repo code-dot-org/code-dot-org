@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "Pridať CSS",
+  "addHTMLButton": "Pridať HTML",
+  "addImageButton": "Pridať obrázok",
+  "closeFullscreenPreview": "Zatvoriť náhľad na celú obrazovku",
+  "currentProjectCapacity": "Využíva sa {currentMegabytes} MB z {totalMegabytes} MB",
+  "disallowedHtml": "Súbor „{filename}“ obsahuje HTML prvky, ktoré nie sú povolené: `{disallowedTags}`. Po zatvorení tohto okna sa odstránia.",
+  "errorSavingProject": "Pri automatickom ukladaní tvojho projektu sa niečo pokazilo. Skontroluj si internetové pripojenie a skús projekt uložiť manuálne. Ak bude tento problém pretrvávať, skús znova načítať stránku a začať odznova.",
+  "fatalError": "Fatálna chyba: {message}. Si v režime súkromného prehliadania, nie je teda možné zapisovať údaje.",
+  "loadFailure": "Žiaľ, Web Lab sa z nejakého dôvodu nepodarilo načítať. Chyba: {message}",
+  "openFullscreenPreview": "Otvoriť náhľad na celú obrazovku",
+  "refreshPreview": "Obnoviť a uložiť",
+  "reloading": "Načítava sa…",
+  "reset": "Obnoviť Web Lab",
+  "resetComplete": "Obnova Web Labu dokončená",
+  "resetFailure": "Nepodarilo sa obnoviť Web Lab: {message}.",
+  "toggleInspectorOff": "Kontrola: zapnutá",
+  "toggleInspectorOn": "Kontrola: vypnutá",
+  "troubleshootingSupport": "Viac informácií nájdeš v našom článku podpory [Riešenie problémov s Web Labom]({url}) .",
+  "uploadError": "Chyba nahrávania"
 }

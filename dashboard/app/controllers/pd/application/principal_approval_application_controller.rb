@@ -14,7 +14,7 @@ module Pd::Application
 
       return render :not_found unless teacher_application
 
-      application_hash = teacher_application.sanitize_form_data_hash
+      application_hash = teacher_application.sanitized_form_data_hash
 
       @teacher_application = {
         id: teacher_application.id,

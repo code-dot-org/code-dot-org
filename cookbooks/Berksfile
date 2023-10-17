@@ -4,7 +4,6 @@ Encoding.default_external = Encoding::UTF_8
 source "https://supermarket.chef.io"
 cookbook 'apt'
 cookbook 'ark'
-cookbook 'build-essential'
 cookbook 'chef-client'
 cookbook 'ntp'
 cookbook 'seven_zip'

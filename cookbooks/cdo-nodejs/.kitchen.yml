@@ -2,6 +2,9 @@
 driver:
   name: dokken
   chef_version: 17.6.18
+  platform: linux/amd64
+  pull_platform_image: false
+  pull_chef_image: false
 verifier:
   name: inspec
 transport:

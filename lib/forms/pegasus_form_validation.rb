@@ -6,10 +6,8 @@ require_relative '../cdo/regexp'
 require_relative '../cdo/geocoder'
 
 module PegasusFormValidation
-  private
-
-  def csv_multivalue(value)
-    return value if value.class == FieldError
+  private def csv_multivalue(value)
+    return value if value.instance_of?(FieldError)
     begin
       CSV.parse_line(value.to_s) || []
     rescue
@@ -17,14 +15,14 @@ module PegasusFormValidation
     end
   end
 
-  def default_if_empty(value, default_value)
-    return value if value.class == FieldError
+  private def default_if_empty(value, default_value)
+    return value if value.instance_of?(FieldError)
     return default_value if value.blank?
     value
   end
 
-  def downcased(value)
-    return value if value.class == FieldError
+  private def downcased(value)
+    return value if value.instance_of?(FieldError)
     if value.is_a?(Enumerable)
       value.map {|i| i.to_s.downcase}
     else
@@ -32,14 +30,14 @@ module PegasusFormValidation
     end
   end
 
-  def enum(value, allowed)
-    return value if value.class == FieldError
+  private def enum(value, allowed)
+    return value if value.instance_of?(FieldError)
     return FieldError.new(value, :invalid) unless allowed.include?(value)
     value
   end
 
-  def integer(value)
-    return value if value.class == FieldError
+  private def integer(value)
+    return value if value.instance_of?(FieldError)
     return nil if value.blank?
 
     s_value = value.to_s.strip
@@ -49,21 +47,21 @@ module PegasusFormValidation
     i_value
   end
 
-  def nil_if_empty(value)
-    return value if value.class == FieldError
+  private def nil_if_empty(value)
+    return value if value.instance_of?(FieldError)
     return nil if value.blank?
     value
   end
 
-  def required(value)
-    return value if value.class == FieldError
+  private def required(value)
+    return value if value.instance_of?(FieldError)
     return value if value.is_a? Integer
     return FieldError.new(value, :required) if value.blank?
     value
   end
 
-  def stripped(value)
-    return value if value.class == FieldError
+  private def stripped(value)
+    return value if value.instance_of?(FieldError)
     if value.is_a?(Enumerable)
       value.map {|i| i.to_s.strip}
     else
@@ -71,22 +69,22 @@ module PegasusFormValidation
     end
   end
 
-  def uploaded_file(value)
-    return value if value.class == FieldError
+  private def uploaded_file(value)
+    return value if value.instance_of?(FieldError)
     return nil if value.blank?
     AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], File.open(value[:tempfile]))
   end
 
-  def email_address(value)
-    return value if value.class == FieldError
+  private def email_address(value)
+    return value if value.instance_of?(FieldError)
     email = downcased stripped value
     return nil if email.blank?
     return FieldError.new(value, :invalid) unless ValidatesEmailFormatOf.validate_email_format(email).nil?
     email
   end
 
-  def zip_code(value)
-    return value if value.class == FieldError
+  private def zip_code(value)
+    return value if value.instance_of?(FieldError)
     value = stripped value
     return nil if value.blank?
 
@@ -96,27 +94,27 @@ module PegasusFormValidation
     value
   end
 
-  def confirm_match(value, value2)
-    return value if value.class == FieldError
+  private def confirm_match(value, value2)
+    return value if value.instance_of?(FieldError)
     return FieldError.new(value, :mismatch) if value != value2
     value
   end
 
-  def us_phone_number(value)
-    return value if value.class == FieldError
+  private def us_phone_number(value)
+    return value if value.instance_of?(FieldError)
     value = stripped value
     return nil if value.blank?
     return FieldError.new(value, :invalid) unless RegexpUtils.us_phone_number?(value)
     RegexpUtils.extract_us_phone_number_digits(value)
   end
 
-  def data_to_errors(data)
+  private def data_to_errors(data)
     errors = {}
 
     data.each_pair do |key, value|
-      if value.class == FieldError
+      if value.instance_of?(FieldError)
         errors[key] = [value.message]
-      elsif value.class == Hash
+      elsif value.instance_of?(Hash)
         suberrors = data_to_errors(value)
         suberrors.each_pair do |subkey, subvalue|
           newkey = "#{key}[#{subkey}]".to_sym
@@ -128,7 +126,7 @@ module PegasusFormValidation
     errors
   end
 
-  def validate_form(kind, data, logger = nil)
+  private def validate_form(kind, data, logger = nil)
     data = Object.const_get(kind).normalize(data)
 
     errors = data_to_errors(data)

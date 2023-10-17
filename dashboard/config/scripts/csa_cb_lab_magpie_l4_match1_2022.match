@@ -15,3 +15,5 @@ answer 'an optional integer argument that starts the search at a specific index'
 markdown <<MARKDOWN
 Review the `findKeyword()` method that we constructed in our previous work with Magpie. Match the method's three parameters with their definition.
 MARKDOWN
+
+allow_multiple_attempts true

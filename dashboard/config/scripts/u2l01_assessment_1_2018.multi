@@ -6,3 +6,5 @@ wrong 'The worldwide leaders of the Tier 1 Internet service providers.'
 right 'A loosely organized collection of citizens and engineers who communicate mostly by email.'
 wrong 'Political leaders and heads of state.'
 wrong 'There are no members. IETF is an “organization” in name only.'
+
+allow_multiple_attempts true

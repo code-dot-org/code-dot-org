@@ -14,3 +14,5 @@ teacher_markdown <<MARKDOWN
 - make informed choices to support or oppose decisions my government makes about access to the internet.
 - make informed choices about my privacy on the internet.
 MARKDOWN
+
+allow_multiple_attempts true

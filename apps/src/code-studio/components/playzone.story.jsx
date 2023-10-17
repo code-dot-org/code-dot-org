@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'PlayZone',
-  component: PlayZone
+  component: PlayZone,
 };
 
 // Template
@@ -14,5 +14,5 @@ const Template = args => <PlayZone {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   lessonName: 'Test Lesson',
-  onContinue: action('Selected Continue')
+  onContinue: action('Selected Continue'),
 };

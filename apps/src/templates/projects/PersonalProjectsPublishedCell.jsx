@@ -13,7 +13,7 @@ class PersonalProjectsPublishedCell extends Component {
     isPublished: PropTypes.bool.isRequired,
     isPublishable: PropTypes.bool.isRequired,
     showPublishDialog: PropTypes.func.isRequired,
-    unpublishProject: PropTypes.func.isRequired
+    unpublishProject: PropTypes.func.isRequired,
   };
 
   onPublish = () => {
@@ -60,6 +60,6 @@ export default connect(
     },
     unpublishProject(projectId) {
       dispatch(unpublishProject(projectId));
-    }
+    },
   })
 )(PersonalProjectsPublishedCell);

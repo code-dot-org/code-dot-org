@@ -1193,23 +1193,6 @@
     "bubble_choice_description": "Make the sprite begin a new behavior after some time has passed.",
     "short_instructions": "Make the sprite move one way, then another way.",
     "long_instructions": "# Switching Behaviors\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nIf you want to switch from one behavior to another, you need to _stop_ the old behavior and _begin_ the new behavior  at the same time. You can use a new block to make sprites stop their current behaviors.\n\n[blockly block][1]\n\nYou'll need to connect a behavior to this block, such as `moving east`.\n\n## Do This\n\n-   Run the code and see what happens.\n-   Add behaviors to each `stops` and `begins` block to make the sprite change from moving east to moving west at 2 seconds.",
-    "behavior_names": {
-      "moving east": "moving east",
-      "patrolling": "patrolling",
-      "moving forward": "moving forward",
-      "growing": "growing",
-      "moving west": "moving west",
-      "spinning right": "spinning right",
-      "moving north": "moving north",
-      "moving south": "moving south",
-      "jittering": "jittering",
-      "wandering": "wandering",
-      "shrinking": "shrinking",
-      "spinning left": "spinning left",
-      "fluttering": "fluttering",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping"
-    },
     "behavior_descriptions": {
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
       "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
@@ -3781,7 +3764,7 @@
   "https://studio.code.org/s/coursef-2022/lessons/13/levels/6": {
     "display_name": "Virus Simulation",
     "short_instructions": "Change monsters into monsters with face masks when you click them.",
-    "long_instructions": "<img src=\"https://images.code.org/a157874032e8f71cf921ba32f082e5b4-image-1602518140122.2020-10-12 11_55_12.gif\" style=\"float:right; padding:10px\">\n\n# Stopping the Outbreak with Masks\n\n\\*One way to slow down an outbreak is to wear a mask. Monsters with face masks will be unable to get the virus or give it to others.\n\n## Do This\n\n1.  Use a `when clicked` block with the `change costume` block to give healthy monsters a mask when they are clicked. Repeat this for sick monsters.\n\n2.  Press `Run` and begin rapidly clicking the monsters. Try to slow or stop the outbreak by putting a mask on all the monsters.",
+    "long_instructions": "<img src=\"https://images.code.org/a157874032e8f71cf921ba32f082e5b4-image-1602518140122.2020-10-12 11_55_12.gif\" style=\"float:right; padding:10px\">\n\n# Stopping the Outbreak with Masks\n\n\\*One way to slow down an outbreak is to wear a mask. Monsters with face masks will be unable to get the virus or give it to others.\n\n## Do This\n\n1.  Use a `when clicked` block with the `change costume` block to give healthy monsters a mask when they are clicked. Repeat this for sick monsters.\n\n2.  Press `Run` and begin rapidly clicking the monsters. Try to slow or stop the outbreak by putting a mask on all the monsters.\n\n[blockly block][0]",
     "authored_hints": {
       "hint1": "To give the monsters masks, use the `change costume` block with a `when clicked` event:\n\n[blockly block][0]\n\nBe sure to drag in the small red `clicked` block as well!",
       "hint2": "The new code for this level should look like this:\n\n[blockly block][0]"

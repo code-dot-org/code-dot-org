@@ -12,7 +12,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 1},
-      {tileType: 1}
+      {tileType: 1},
     ],
     [
       {tileType: 1},
@@ -22,7 +22,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 1}
+      {tileType: 1},
     ],
     [
       {tileType: 0},
@@ -32,7 +32,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -42,7 +42,7 @@ var levelDef = {
       {tileType: 1},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -52,7 +52,7 @@ var levelDef = {
       {tileType: 1},
       {tileType: 1},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -62,7 +62,7 @@ var levelDef = {
       {tileType: 1},
       {tileType: 1},
       {tileType: 1},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 1},
@@ -72,7 +72,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 1},
       {tileType: 1},
-      {tileType: 1}
+      {tileType: 1},
     ],
     [
       {tileType: 1},
@@ -82,9 +82,9 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 1},
-      {tileType: 1}
-    ]
-  ]
+      {tileType: 1},
+    ],
+  ],
 };
 
 module.exports = {
@@ -96,7 +96,7 @@ module.exports = {
       description: 'Try to use a repeat 5 loop',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
       xml:
         '<xml>' +
@@ -119,14 +119,14 @@ module.exports = {
         '      </block>' +
         '    </next>' +
         '  </block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'Try to use a repeat 6 loop',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
       xml:
         '<xml>' +
@@ -149,14 +149,14 @@ module.exports = {
         '      </block>' +
         '    </next>' +
         '  </block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'Use a While loop',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
 
       xml:
@@ -180,7 +180,7 @@ module.exports = {
         '      </block>' +
         '    </next>' +
         '  </block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

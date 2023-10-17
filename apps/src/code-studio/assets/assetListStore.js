@@ -1,26 +1,26 @@
 var assets = [];
 
 module.exports = {
-  reset: function(list) {
+  reset: function (list) {
     return (assets = list.slice());
   },
 
-  add: function(asset) {
+  add: function (asset) {
     assets = this.remove(asset.filename);
     assets.unshift(asset);
     return assets.slice();
   },
 
-  remove: function(filename) {
-    assets = assets.filter(function(asset) {
+  remove: function (filename) {
+    assets = assets.filter(function (asset) {
       return asset.filename !== filename;
     });
     return assets.slice();
   },
 
-  list: function(allowedExtensions) {
+  list: function (allowedExtensions) {
     return allowedExtensions
-      ? assets.filter(function(asset) {
+      ? assets.filter(function (asset) {
           var match = asset.filename.toLowerCase().match(/\.[^.]+$/);
           if (match) {
             var extension = match[0];
@@ -28,5 +28,5 @@ module.exports = {
           }
         })
       : assets.slice();
-  }
+  },
 };

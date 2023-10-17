@@ -35,3 +35,5 @@ public static int surprise(int b) {
 
 What will `surprise(146781)` return?
 MARKDOWN
+
+allow_multiple_attempts true

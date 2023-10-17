@@ -8,7 +8,7 @@ module UserHelpers
   USERNAME_MAX_LENGTH = 20
 
   def self.generate_username(queryable, name)
-    prefix = name.split(' ').first.downcase.
+    prefix = name.split.first.downcase.
       gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..USERNAME_MAX_LENGTH - 5].
       squish.
       tr(' ', '_')

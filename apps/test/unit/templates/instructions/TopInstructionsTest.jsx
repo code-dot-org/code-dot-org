@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {
   UnconnectedTopInstructions as TopInstructions,
-  TabType
+  TabType,
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -35,7 +35,7 @@ const DEFAULT_PROPS = {
   hasBackgroundMusic: false,
   displayReviewTab: false,
   exampleSolutions: [],
-  isViewingAsInstructorInTraining: false
+  isViewingAsInstructorInTraining: false,
 };
 
 describe('TopInstructions', () => {
@@ -153,12 +153,9 @@ describe('TopInstructions', () => {
 
     expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
     expect(wrapper.find('Button')).to.have.lengthOf(2);
-    expect(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().text
-    ).to.equal('Example Solution 1');
+    expect(wrapper.find('Button').at(0).props().text).to.equal(
+      'Example Solution 1'
+    );
   });
 
   it('does not display example solutions buttons in other tabs when available', () => {
@@ -174,54 +171,120 @@ describe('TopInstructions', () => {
     expect(wrapper.find('Button')).to.have.lengthOf(0);
   });
 
+  it('displays StudentRubricView when rubrics tab is selected', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        viewAs={ViewType.Participant}
+        taRubric={{learningGoals: []}}
+      />
+    );
+    // This is an anti-pattern but one we already use in this file.
+    wrapper.setState({tabSelected: TabType.TA_RUBRIC});
+    expect(wrapper.state().tabSelected).to.equal(TabType.TA_RUBRIC);
+    expect(wrapper.find('StudentRubricView')).to.have.lengthOf(1);
+  });
+
+  it('passes displayTaRubricTab=true to TopInstructionsHeader if rubric is present', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        viewAs={ViewType.Participant}
+        taRubric={{learningGoals: []}}
+      />
+    );
+
+    expect(wrapper.find(TopInstructionsHeader).props().displayTaRubricTab).to.be
+      .true;
+  });
+
   describe('viewing the Feedback Tab', () => {
-    describe('as a instructor', () => {
-      it('passes displayFeedback = false to TopInstructionsHeader on a level with no rubric where the instructor is not viewing student work', () => {
+    describe('as an instructor', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level with no miniRubric where the instructor is not viewing student work', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
           tabSelected: 'instructions',
           feedbacks: [],
-          rubric: null,
+          miniRubric: null,
           teacherViewingStudentWork: false,
           studentId: null,
           fetchingData: false,
-          token: null
+          token: null,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
           .be.false;
       });
 
-      it('passes displayFeedback = true to TopInstructionsHeader on a level with a rubric where the instructor is not viewing student work', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level with a miniRubric where the instructor is not viewing student work', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
           tabSelected: 'instructions',
           feedbacks: [],
-          rubric: {
+          miniRubric: {
             keyConcept: 'This is the key concept',
             performanceLevel1: 'Includes more than needed',
             performanceLevel2: 'Includes exactly all needed elements',
             performanceLevel3: 'Has some of the needed elements',
-            performanceLevel4: 'No work done'
+            performanceLevel4: 'No work done',
           },
           teacherViewingStudentWork: false,
           studentId: null,
           fetchingData: false,
-          token: null
+          token: null,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
           .be.true;
       });
 
-      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level with a TA Rubric', () => {
+        const wrapper = shallow(
+          <TopInstructions {...DEFAULT_PROPS} taRubric={{learningGoals: []}} />
+        );
+
+        wrapper.setState({
+          tabSelected: 'instructions',
+          feedbacks: [],
+          miniRubric: {
+            keyConcept: 'This is the key concept',
+            performanceLevel1: 'Includes more than needed',
+            performanceLevel2: 'Includes exactly all needed elements',
+            performanceLevel3: 'Has some of the needed elements',
+            performanceLevel4: 'No work done',
+          },
+          teacherViewingStudentWork: false,
+          studentId: null,
+          fetchingData: false,
+          token: null,
+        });
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.false;
+      });
+
+      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and cannot leave feedback', () => {
         const props = {...DEFAULT_PROPS, displayReviewTab: true};
         const wrapper = shallow(<TopInstructions {...props} />);
 
         wrapper.setState({
-          teacherViewingStudentWork: true
+          teacherViewingStudentWork: true,
+          teacherCanLeaveFeedback: false,
+        });
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.false;
+      });
+
+      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and can leave feedback', () => {
+        const props = {...DEFAULT_PROPS, displayReviewTab: true};
+        const wrapper = shallow(<TopInstructions {...props} />);
+
+        wrapper.setState({
+          teacherViewingStudentWork: true,
+          teacherCanLeaveFeedback: true,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
@@ -244,27 +307,65 @@ describe('TopInstructions', () => {
               id: 5,
               level_id: 123,
               performance: 'performanceLevel2',
-              student_id: 1
-            }
+              student_id: 1,
+            },
           ],
-          rubric: {
+          miniRubric: {
             keyConcept: 'This is the key concept',
             performanceLevel1: 'Includes more than needed',
             performanceLevel2: 'Includes exactly all needed elements',
             performanceLevel3: 'Has some of the needed elements',
-            performanceLevel4: 'No work done'
+            performanceLevel4: 'No work done',
           },
           teacherViewingStudentWork: false,
           studentId: 1,
           fetchingData: false,
-          token: null
+          token: null,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
           .be.true;
       });
 
-      it('passes displayFeedback = false to TopInstructionsHeader on a level where the instructor has not given feedback and there is no rubric', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level where there is a TA Rubric', () => {
+        const wrapper = shallow(
+          <TopInstructions
+            {...DEFAULT_PROPS}
+            viewAs={ViewType.Participant}
+            taRubric={{learningGoals: []}}
+          />
+        );
+
+        wrapper.setState({
+          tabSelected: 'instructions',
+          feedbacks: [
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: 'performanceLevel2',
+              student_id: 1,
+            },
+          ],
+          miniRubric: {
+            keyConcept: 'This is the key concept',
+            performanceLevel1: 'Includes more than needed',
+            performanceLevel2: 'Includes exactly all needed elements',
+            performanceLevel3: 'Has some of the needed elements',
+            performanceLevel4: 'No work done',
+          },
+          teacherViewingStudentWork: false,
+          studentId: 1,
+          fetchingData: false,
+          token: null,
+        });
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.false;
+      });
+
+      it('passes displayFeedback = false to TopInstructionsHeader on a level where the instructor has not given feedback and there is no miniRubric', () => {
         const wrapper = shallow(
           <TopInstructions {...DEFAULT_PROPS} viewAs={ViewType.Participant} />
         );
@@ -272,11 +373,11 @@ describe('TopInstructions', () => {
         wrapper.setState({
           tabSelected: 'instructions',
           feedbacks: [],
-          rubric: null,
+          miniRubric: null,
           teacherViewingStudentWork: false,
           studentId: 1,
           fetchingData: false,
-          token: null
+          token: null,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to

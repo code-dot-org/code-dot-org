@@ -12,7 +12,6 @@ import {allowAnimationMode, countAllowedModes} from './stateQueries';
 import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -23,14 +22,14 @@ class P5LabVisualizationHeader extends React.Component {
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
       P5LabInterfaceMode.ANIMATION,
-      P5LabInterfaceMode.BACKGROUND
+      P5LabInterfaceMode.BACKGROUND,
     ]).isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     numAllowedModes: PropTypes.number.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired
+    isReadOnlyWorkspace: PropTypes.bool.isRequired,
   };
 
   changeInterfaceMode = mode => {
@@ -56,7 +55,7 @@ class P5LabVisualizationHeader extends React.Component {
         study: 'animation-library',
         study_group: 'control-2020',
         event: 'tab-click',
-        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab'
+        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab',
       });
     }
 
@@ -82,6 +81,7 @@ class P5LabVisualizationHeader extends React.Component {
             <ToggleGroup
               selected={interfaceMode}
               onChange={this.changeInterfaceMode}
+              flex={true}
             >
               <button
                 style={styles.buttonFocus}
@@ -103,18 +103,22 @@ class P5LabVisualizationHeader extends React.Component {
                     : msg.animationMode()}
                 </button>
               )}
-              {allowAnimationMode &&
-                this.props.isBlockly &&
-                experiments.isEnabled('backgroundsTab') && (
-                  <button
-                    style={styles.buttonFocus}
-                    type="button"
-                    value={P5LabInterfaceMode.BACKGROUND}
-                    id="backgroundMode"
-                  >
-                    {msg.backgroundMode()}
-                  </button>
-                )}
+              {allowAnimationMode && this.props.isBlockly && (
+                <button
+                  style={{
+                    ...styles.buttonFocus,
+                    // If the button text is wider than the available space, truncate it.
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                  }}
+                  type="button"
+                  value={P5LabInterfaceMode.BACKGROUND}
+                  id="backgroundMode"
+                >
+                  {msg.backgroundMode()}
+                </button>
+              )}
             </ToggleGroup>
           </div>
         )}
@@ -125,14 +129,14 @@ class P5LabVisualizationHeader extends React.Component {
 
 const styles = {
   main: {
-    height: styleConstants['workspace-headers-height']
+    height: styleConstants['workspace-headers-height'],
   },
   buttonFocus: {
     ':focus': {
       outlineWidth: 1,
-      outlineColor: color.black
-    }
-  }
+      outlineColor: color.black,
+    },
+  },
 };
 export default connect(
   state => ({
@@ -141,9 +145,13 @@ export default connect(
     isBlockly: state.pageConstants.isBlockly,
     numAllowedModes: countAllowedModes(state),
     isShareView: state.pageConstants.isShareView,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   }),
-  dispatch => ({
-    onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))
-  })
+  dispatch => {
+    return {
+      onInterfaceModeChange(mode) {
+        dispatch(changeInterfaceMode(mode));
+      },
+    };
+  }
 )(P5LabVisualizationHeader);

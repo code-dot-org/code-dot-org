@@ -1,1 +1,21 @@
-{}
+{
+  "addCSSButton": "CSS hinzufügen",
+  "addImageButton": "Bild hinzufügen",
+  "addHTMLButton": "HTML hinzufügen",
+  "closeFullscreenPreview": "Vollbildvorschau schließen",
+  "currentProjectCapacity": "{currentMegabytes}MB von {totalMegabytes}MB verwendet",
+  "disallowedHtml": "Die Datei \"{filename}\" enthält HTML-Elemente, die nicht erlaubt sind: `{disallowedTags}`. Sie werden entfernt, wenn dieser Dialog geschlossen wird.",
+  "errorSavingProject": "Beim automatischen Speichern Ihres Projekts hat etwas nicht funktioniert. Überprüfen Sie Ihre Internetverbindung und versuchen Sie, manuell zu speichern. Wenn das Problem weiterhin besteht, versuchen Sie, die Seite neu zu laden, um von vorne zu beginnen.",
+  "fatalError": "Fataler Fehler: {message}. Wenn Sie sich im Modus „Privates Surfen“ befinden, können keine Daten geschrieben werden.",
+  "loadFailure": "Es tut uns leid, Web Lab konnte aus irgendeinem Grund nicht geladen werden. Fehler: {message}",
+  "openFullscreenPreview": "Vollbildvorschau öffnen",
+  "refreshPreview": "Aktualisieren und speichern",
+  "reloading": "Wird neu geladen...",
+  "reset": "Web Lab zurücksetzen",
+  "resetComplete": "Web Lab Reset abgeschlossen",
+  "resetFailure": "Web Lab konnte nicht zurückgesetzt werden: {message}.",
+  "toggleInspectorOn": "Inspektor: Aus",
+  "toggleInspectorOff": "Inspektor: An",
+  "troubleshootingSupport": "Weitere Informationen finden Sie in unserem Support-Artikel [\"Beheben von Web Lab-Problemen\"]({url}) .",
+  "uploadError": "Fehler beim Hochladen"
+}

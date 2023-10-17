@@ -10,3 +10,5 @@ wrong 'There is no purpose because the `main` method is not required.'
 teacher_markdown <<MARKDOWN
 The `main` method is where the program starts running. `main` is the name Java looks for to determine where to start running the program.
 MARKDOWN
+
+allow_multiple_attempts true

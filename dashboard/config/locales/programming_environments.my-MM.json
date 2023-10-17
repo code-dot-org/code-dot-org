@@ -2,138 +2,8 @@
   "my-MM": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
-        },
-        "gamelab": {
-          "categories": {
-            "game_lab": {
-              "expressions": {
-                "playSound": {
-                  "short_description": "MP3အသံဖိုင်ကိုသတ်မှတ်ထား​သောURLမှဖွင့်မည်."
-                },
-                "showMobileControls": {
-                  "content": "play space အောက်တွင် မြင်ရသော မိုဘိုင်းထိန်းချုပ်မှုများကို ပြောင်းလဲပါ။",
-                  "short_description": "play space အောက်တွင် မြင်ရသော မိုဘိုင်းထိန်းချုပ်မှုများကို ပြောင်းလဲပါ။"
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "sprite.height": {
-                  "return_value": "Sprite ၏အနံကိုထည်ပါ။"
-                },
-                "sprite.width": {
-                  "return_value": "Sprite၏အလျားကိုထည့်ပါ။"
-                }
-              }
-            },
-            "drawing": {
-              "name": "ပုံ​ရေးဆွဲခြင်း"
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "လုပ်ဆောင်ချက်၏ ဆောင်ရွက်မှုတစ်ခုစီကြားရှိ မီလီစက္ကန့်အရေအတွက်။"
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "လုပ်ဆောင်ချက်ကို  မဆောင်ရွက်မီ စောင့်ဆိုင်းရန် မီလီစက္ကန့် အရေအတွက်။"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "သင်္ချာ",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
-                    },
-                    "max": {
-                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
-                    },
-                    "max": {
-                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variables",
-              "expressions": {
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "ရှာဖွေရန် စာကြောင်း။"
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "ရှာဖွေရန် စာကြောင်း။"
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "စာကြောင်း၏ အရှည်။"
-                }
-              }
-            }
-          }
-        },
         "applab": {
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "ပုံသေတည်နေရာ (0,0) တွင် ပေးထားသော id ဖြင့် ထောက်ပံ့ပေးထား၍ ရည်ညွှန်းထားသော စာသားကိုပြသသည့် စခရင်ပေါ်တွင် ခလုတ်တစ်ခု ဖန်တီးပါ။"
-                },
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "လုပ်ဆောင်ချက်"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "MP3အသံဖိုင်ကိုသတ်မှတ်ထား​သောURLမှဖွင့်မည်."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "ပြောင်းလဲရန် ပိုင်ဆိုင်မှု။"
-                    }
-                  },
-                  "short_description": "သတ်မှတ်ထားသော အစိတ်အပိုင်းအတွက် တန်ဖိုးအသစ်တစ်ခုသို့ ပိုင်ဆိုင်မှုတစ်ခု သတ်မှတ်ပါ။"
-                },
-                "setScreen": {
-                  "short_description": "သတ်မှတ်ထားတဲ့ ဇာတ်ညွှန်းကို သတ်မှတ်ပေးတယ်။"
-                },
-                "showElement": {
-                  "short_description": "ပေးထားသော အိုင်ဒီဖြင့် အစိတ်အပိုင်းကို ပြပါ။"
-                },
-                "textLabel": {
-                  "short_description": "ပုံသေတည်နေရာ (0,0) တွင် ပေးထားသော အိုင်ဒီဖြင့်ကိုးကားပြီး ပေးထားသော စာသားကို မျက်နှာပြင်ပေါ်တွင် စာသားခေါင်းစဉ်တစ်ခု ဖန်တီးပါ။"
-                }
-              }
-            },
             "canvas": {
               "expressions": {
                 "circle": {
@@ -189,17 +59,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "ပုံရိပ် အချက် အလက် ကို ဖမ်းယူ ရန် ဝန်းရံ ထားသော ထောင့် မှန် စတုဂံ ၏ အမြင့်။"
+                    },
+                    "width": {
+                      "description": "ပုံရိပ် အချက် အလက် ကို ဖမ်းယူ ရန် ဝန်းရံ ထားသော ထောင့် မှန် စတုဂံ ၏ အကျယ်။"
+                    },
                     "x": {
                       "description": "ဖမ်းယူမှု စရန် ပစ်ဇယ် ရှိ x ၏တည်နေရာ။"
                     },
                     "y": {
                       "description": "ဖမ်းယူမှု စရန် ပစ်ဇယ် ရှိ  y ၏တည်နေရာ။"
-                    },
-                    "width": {
-                      "description": "ပုံရိပ် အချက် အလက် ကို ဖမ်းယူ ရန် ဝန်းရံ ထားသော ထောင့် မှန် စတုဂံ ၏ အကျယ်။"
-                    },
-                    "height": {
-                      "description": "ပုံရိပ် အချက် အလက် ကို ဖမ်းယူ ရန် ဝန်းရံ ထားသော ထောင့် မှန် စတုဂံ ၏ အမြင့်။"
                     }
                   }
                 },
@@ -225,97 +95,129 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "ထောင့်မှန် စတုဂံ၏ ပစ်ဇယ်များအတွင်းရှိ ဒေါင်လိုက် အမြင့်။"
+                    },
+                    "width": {
+                      "description": "ထောင့်မှန်စတုဂံ ၏ပစ်ဇယ် အတွင်းရှိ မြေပြင်ညီ အကျယ်။"
+                    },
                     "x": {
                       "description": "pixels တွင်ရှိသော ထောင့်မှန်စတုဂံဘယ်ဘက်အပေါ်ထောင့်၏ x အနေအထား။"
                     },
                     "y": {
                       "description": "pixels တွင်ရှိသော ထောင့်မှန်စတုဂံဘယ်ဘက်အပေါ်ထောင့်၏ y အနေအထား။"
-                    },
-                    "width": {
-                      "description": "ထောင့်မှန်စတုဂံ ၏ပစ်ဇယ် အတွင်းရှိ မြေပြင်ညီ အကျယ်။"
-                    },
-                    "height": {
-                      "description": "ထောင့်မှန် စတုဂံ၏ ပစ်ဇယ်များအတွင်းရှိ ဒေါင်လိုက် အမြင့်။"
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "အယ်လ်ဖာ (opacity) ပမာဏ (၀ မှ ၂၅၅) ပမာဏကို \"pixel\" ပစ်ဆဲလ် တွင် တပ်ဆင်ရန်ဖြစ်သည်။"
+                    },
                     "x": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော x အနေအထား။"
                     },
                     "y": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော y အနေအထား။"
-                    },
-                    "alphaValue": {
-                      "description": "အယ်လ်ဖာ (opacity) ပမာဏ (၀ မှ ၂၅၅) ပမာဏကို \"pixel\" ပစ်ဆဲလ် တွင် တပ်ဆင်ရန်ဖြစ်သည်။"
                     }
                   },
                   "short_description": "ပေးထားသောပုံဒေတာ၌ ပေးထားသော x နှင့် y အနေအထားတွင်တည်ရှိသော pixel ၏အရောင်တွင် အယ်လ်ဖာ၏ပမာဏ (အလင်းပိတ်မှု) (0 မှ 255) ကို သတ်မှတ်ပါ။"
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "အပြာရောင် ပမာဏ (၀ မှ ၂၅၅ ပမာဏ) ကို ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။"
+                    },
                     "x": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော x အနေအထား။"
                     },
                     "y": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော y အနေအထား။"
-                    },
-                    "blueValue": {
-                      "description": "အပြာရောင် ပမာဏ (၀ မှ ၂၅၅ ပမာဏ) ကို ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။"
                     }
                   },
                   "short_description": "အပြာရောင်တန်ဖိုး ဝင်ငွေ ပမာဏကို ပေးထားတဲ့ x နဲ့ y နေရာမှာ တည်ရှိတဲ့ \"pixel\" ပစ်ဆယ် ရဲ့ အရောင်မှာ (၀ မှ ၂၅၅ ထိ) အပြာရောင် ပမာဏကို သတ်မှတ်ထားပါ။"
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "အစိမ်းရောင် ပမာဏ (၀ မှ ၂၅၅ ပမာဏ) ကို ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။"
+                    },
                     "x": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော x အနေအထား။"
                     },
                     "y": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော y အနေအထား။"
-                    },
-                    "greenValue": {
-                      "description": "အစိမ်းရောင် ပမာဏ (၀ မှ ၂၅၅ ပမာဏ) ကို ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။"
                     }
                   },
                   "short_description": "အစိမ်းရောင် ပမာဏ (၀ မှ ၂၅၅ အထိ) အစိမ်းရောင် ပမာဏကို အစိမ်းရောင် တန်ဖိုး ဝင်ငွေ ပမာဏဆီ ပေးထားတဲ့ ဓာတ်ပုံ အချက်အလက်တွေမှာ ပေးထားတဲ့ x နဲ့ y နေရာမှာ တည်ရှိပါတယ်။"
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "ရွေးချယ်စရာ။ ပမာဏ (၀ မှ ၂၅၅) ပမာဏသည် ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။ စံထားချက် ၂၅၅ (အပြည့်အဝ ပျံ့နှံ့မှု) ၂၅၅ အထိ ပျက်ကွက်မှု။"
+                    },
+                    "blue": {
+                      "description": "အပြာရောင် ပမာဏ (၀ မှ ၂၅၅ ပမာဏ) ကို ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။"
+                    },
+                    "green": {
+                      "description": "အစိမ်းရောင် ပမာဏ (၀ မှ ၂၅၅ ပမာဏ) ကို ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။"
+                    },
+                    "red": {
+                      "description": "အနီရောင်ပမာဏ (၀ မှ ၂၅၅ ပမာဏ)ကို ပစ်ဆယ်ထဲထည့်ရန်။"
+                    },
                     "x": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော x အနေအထား။"
                     },
                     "y": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော y အနေအထား။"
-                    },
-                    "red": {
-                      "description": "အနီရောင်ပမာဏ (၀ မှ ၂၅၅ ပမာဏ)ကို ပစ်ဆယ်ထဲထည့်ရန်။"
-                    },
-                    "green": {
-                      "description": "အစိမ်းရောင် ပမာဏ (၀ မှ ၂၅၅ ပမာဏ) ကို ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။"
-                    },
-                    "blue": {
-                      "description": "အပြာရောင် ပမာဏ (၀ မှ ၂၅၅ ပမာဏ) ကို ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။"
-                    },
-                    "alpha": {
-                      "description": "ရွေးချယ်စရာ။ ပမာဏ (၀ မှ ၂၅၅) ပမာဏသည် ပစ်ဆဲလ်တွင် တပ်ဆင်ရန်။ စံထားချက် ၂၅၅ (အပြည့်အဝ ပျံ့နှံ့မှု) ၂၅၅ အထိ ပျက်ကွက်မှု။"
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
+                    "redValue": {
+                      "description": "အနီရောင်ပမာဏ (၀ မှ ၂၅၅ ပမာဏ)ကို ပစ်ဆယ်ထဲထည့်ရန်။"
+                    },
                     "x": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော x အနေအထား။"
                     },
                     "y": {
                       "description": "ပုံ၏ဘယ်ဘက်အပေါ်ထောင့်မှစတင်သည့် pixels တွင်ရှိသော y အနေအထား။"
-                    },
-                    "redValue": {
-                      "description": "အနီရောင်ပမာဏ (၀ မှ ၂၅၅ ပမာဏ)ကို ပစ်ဆယ်ထဲထည့်ရန်။"
                     }
                   },
                   "short_description": "ပေးထားသောပုံဒေတာ၌ ပေးထားသော x နှင့် y အနေအထားတွင်တည်ရှိသော pixel ၏အရောင်တွင်  အနီရောင်ပမာဏ(0 မှ 255 အထိ)မှ ထည့်သွင်းမှုအနီရောင်တန်ဖိုးပမာဏသို့ သတ်မှတ်ပါ။"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Timeout အစုမှ ပြန်ရ သော တန် ဖိုး၏ ပယ်ဖျက်ရန် လုပ်ဆောင်ချက်။"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "လုပ်ဆောင်ချက်၏ ဆောင်ရွက်မှုတစ်ခုစီကြားရှိ မီလီစက္ကန့်အရေအတွက်။"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "လုပ်ဆောင်ချက်ကို  မဆောင်ရွက်မီ စောင့်ဆိုင်းရန် မီလီစက္ကန့် အရေအတွက်။"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "လုပ်ဆောင်ချက်"
+                    }
+                  }
                 }
               }
             },
@@ -371,6 +273,31 @@
                   }
                 }
               }
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    },
+                    "min": {
+                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    },
+                    "min": {
+                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    }
+                  }
+                }
+              },
+              "name": "သင်္ချာ"
             },
             "turtle": {
               "expressions": {
@@ -437,66 +364,45 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "Timeout အစုမှ ပြန်ရ သော တန် ဖိုး၏ ပယ်ဖျက်ရန် လုပ်ဆောင်ချက်။"
-                    }
-                  }
+                "button": {
+                  "short_description": "ပုံသေတည်နေရာ (0,0) တွင် ပေးထားသော id ဖြင့် ထောက်ပံ့ပေးထား၍ ရည်ညွှန်းထားသော စာသားကိုပြသသည့် စခရင်ပေါ်တွင် ခလုတ်တစ်ခု ဖန်တီးပါ။"
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "လုပ်ဆောင်ချက်၏ ဆောင်ရွက်မှုတစ်ခုစီကြားရှိ မီလီစက္ကန့်အရေအတွက်။"
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "လုပ်ဆောင်ချက်ကို  မဆောင်ရွက်မီ စောင့်ဆိုင်းရန် မီလီစက္ကန့် အရေအတွက်။"
-                    }
-                  }
-                },
-                "timedLoop": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "လုပ်ဆောင်ချက်"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "သင်္ချာ",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
-                    },
-                    "max": {
-                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
-                    }
-                  }
                 },
-                "randomNumber": {
+                "playSound": {
+                  "short_description": "MP3အသံဖိုင်ကိုသတ်မှတ်ထား​သောURLမှဖွင့်မည်."
+                },
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
-                    },
-                    "max": {
-                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    "property": {
+                      "description": "ပြောင်းလဲရန် ပိုင်ဆိုင်မှု။"
                     }
-                  }
+                  },
+                  "short_description": "သတ်မှတ်ထားသော အစိတ်အပိုင်းအတွက် တန်ဖိုးအသစ်တစ်ခုသို့ ပိုင်ဆိုင်မှုတစ်ခု သတ်မှတ်ပါ။"
+                },
+                "setScreen": {
+                  "short_description": "သတ်မှတ်ထားတဲ့ ဇာတ်ညွှန်းကို သတ်မှတ်ပေးတယ်။"
+                },
+                "showElement": {
+                  "short_description": "ပေးထားသော အိုင်ဒီဖြင့် အစိတ်အပိုင်းကို ပြပါ။"
+                },
+                "textLabel": {
+                  "short_description": "ပုံသေတည်နေရာ (0,0) တွင် ပေးထားသော အိုင်ဒီဖြင့်ကိုးကားပြီး ပေးထားသော စာသားကို မျက်နှာပြင်ပေါ်တွင် စာသားခေါင်းစဉ်တစ်ခု ဖန်တီးပါ။"
                 }
               }
             },
             "variables": {
-              "name": "Variables",
               "expressions": {
+                "addPair": {
+                  "return_value": "ဘာမှမရှိ"
+                },
                 "declareAssign_list_123": {
                   "short_description": "ပြောင်းလဲနိုင်ခြင်းသို့ အတွဲ တစ်ကြောင်းကို ကြေငြာ၍ တာဝန်ချပါ။"
                 },
@@ -514,13 +420,104 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "ဘာမှမရှိ"
+                "length": {
+                  "return_value": "စာကြောင်း၏ အရှည်။"
+                }
+              },
+              "name": "Variables"
+            }
+          }
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "လုပ်ဆောင်ချက်၏ ဆောင်ရွက်မှုတစ်ခုစီကြားရှိ မီလီစက္ကန့်အရေအတွက်။"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "လုပ်ဆောင်ချက်ကို  မဆောင်ရွက်မီ စောင့်ဆိုင်းရန် မီလီစက္ကန့် အရေအတွက်။"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "ပုံ​ရေးဆွဲခြင်း"
+            },
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "MP3အသံဖိုင်ကိုသတ်မှတ်ထား​သောURLမှဖွင့်မည်."
+                },
+                "showMobileControls": {
+                  "content": "play space အောက်တွင် မြင်ရသော မိုဘိုင်းထိန်းချုပ်မှုများကို ပြောင်းလဲပါ။",
+                  "short_description": "play space အောက်တွင် မြင်ရသော မိုဘိုင်းထိန်းချုပ်မှုများကို ပြောင်းလဲပါ။"
+                }
+              }
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    },
+                    "min": {
+                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "အများဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    },
+                    "min": {
+                      "description": "အနည်းဆုံးပြန်သွားနိုင်မယ့်အ​ရေအတွက်"
+                    }
+                  }
+                }
+              },
+              "name": "သင်္ချာ"
+            },
+            "sprites": {
+              "expressions": {
+                "sprite.height": {
+                  "return_value": "Sprite ၏အနံကိုထည်ပါ။"
+                },
+                "sprite.width": {
+                  "return_value": "Sprite၏အလျားကိုထည့်ပါ။"
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "ရှာဖွေရန် စာကြောင်း။"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "ရှာဖွေရန် စာကြောင်း။"
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "စာကြောင်း၏ အရှည်။"
                 }
-              }
+              },
+              "name": "Variables"
             }
           }
         },
@@ -529,22 +526,25 @@
             "actions": {
               "name": "လုပ်​ဆောင်ချက်များ"
             },
+            "logic": {
+              "name": "Logic"
+            },
             "loops": {
               "name": "Loops"
-            },
-            "variables": {
-              "name": "Variables"
             },
             "math": {
               "name": "သင်္ချာ"
             },
-            "logic": {
-              "name": "Logic"
-            },
             "text": {
               "name": "စာ"
+            },
+            "variables": {
+              "name": "Variables"
             }
           }
+        },
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

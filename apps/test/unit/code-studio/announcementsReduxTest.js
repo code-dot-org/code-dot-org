@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import reducer, {
   addAnnouncement,
-  VisibilityType
+  VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
@@ -17,7 +17,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
 
@@ -30,8 +30,8 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
-      }
+        buttonText: 'Push the button',
+      },
     ];
     assert.deepEqual(state, expected);
   });
@@ -46,7 +46,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.student,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
 
@@ -59,8 +59,8 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.student,
         dismissible: true,
-        buttonText: 'Push the button'
-      }
+        buttonText: 'Push the button',
+      },
     ];
     assert.deepEqual(state, expected);
   });
@@ -75,7 +75,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.teacherAndStudent,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
 
@@ -88,8 +88,8 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.teacherAndStudent,
         dismissible: true,
-        buttonText: 'Push the button'
-      }
+        buttonText: 'Push the button',
+      },
     ];
     assert.deepEqual(state, expected);
   });
@@ -105,7 +105,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
     const state = reducer(
@@ -118,7 +118,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.bullhorn,
         visibility: VisibilityType.teacher,
         dismissible: false,
-        buttonText: 'Do you like this button?'
+        buttonText: 'Do you like this button?',
       })
     );
 
@@ -131,7 +131,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       },
       {
         key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
@@ -141,8 +141,8 @@ describe('announcementsRedux', () => {
         type: NotificationType.bullhorn,
         visibility: VisibilityType.teacher,
         dismissible: false,
-        buttonText: 'Do you like this button?'
-      }
+        buttonText: 'Do you like this button?',
+      },
     ];
     assert.deepEqual(state, expected);
   });
@@ -157,7 +157,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
     const state = reducer(
@@ -170,7 +170,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.bullhorn,
         visibility: VisibilityType.student,
         dismissible: false,
-        buttonText: 'Do you like this button?'
+        buttonText: 'Do you like this button?',
       })
     );
 
@@ -183,7 +183,7 @@ describe('announcementsRedux', () => {
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       },
       {
         key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
@@ -193,8 +193,8 @@ describe('announcementsRedux', () => {
         type: NotificationType.bullhorn,
         visibility: VisibilityType.student,
         dismissible: false,
-        buttonText: 'Do you like this button?'
-      }
+        buttonText: 'Do you like this button?',
+      },
     ];
     assert.deepEqual(state, expected);
   });

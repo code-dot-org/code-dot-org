@@ -1,7 +1,7 @@
 {
-  "danceFeedbackNeedNewDancer": "Ju keni nevojë të krijoni një kërcimtar.",
-  "danceFeedbackNoDancers": "Ju nuk keni asnjë kërcimtar.",
-  "danceFeedbackNoBackground": "Ju duhet të shtonji një efekt në sfond.",
   "danceFeedbackNeedDifferentDance": "Ju duhet të përdorni një kërcim tjetër.",
-  "danceFeedbackNeedTwoDancers": "Ju keni nevojë të krijoni dy kërcimtarë."
+  "danceFeedbackNeedNewDancer": "Ju keni nevojë të krijoni një kërcimtar.",
+  "danceFeedbackNeedTwoDancers": "Ju keni nevojë të krijoni dy kërcimtarë.",
+  "danceFeedbackNoBackground": "Ju duhet të shtonji një efekt në sfond.",
+  "danceFeedbackNoDancers": "Ju nuk keni asnjë kërcimtar."
 }

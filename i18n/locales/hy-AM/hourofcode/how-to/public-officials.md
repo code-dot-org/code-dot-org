@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+title: Ինչպես ուղեցույցը պետական պաշտոնյաների համար
 ---
 
 {{ signup_button }}

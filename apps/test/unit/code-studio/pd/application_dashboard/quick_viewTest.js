@@ -7,17 +7,17 @@ import sinon from 'sinon';
 
 describe('Quick View', () => {
   const fakeRouter = {
-    createHref() {}
+    createHref() {},
   };
 
   const context = {
-    router: fakeRouter
+    router: fakeRouter,
   };
 
   const routeProps = {
     path: 'csf_facilitators',
     applicationType: 'CSF Facilitators',
-    role: 'csf_facilitators'
+    role: 'csf_facilitators',
   };
 
   const regionalPartnerFilter = {value: 1, label: 'A Great Organization'};
@@ -58,8 +58,8 @@ describe('Quick View', () => {
         applicant_name: 'Clare Constantine',
         district_name: null,
         school_name: null,
-        status: 'unreviewed'
-      }
+        status: 'unreviewed',
+      },
     ];
     let server;
     let quickView;
@@ -71,7 +71,7 @@ describe('Quick View', () => {
         [
           200,
           {'Content-Type': 'application/json'},
-          JSON.stringify(applicationsData)
+          JSON.stringify(applicationsData),
         ]
       );
 

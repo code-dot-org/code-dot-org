@@ -45,21 +45,13 @@ describe('HiddenForSectionToggle', () => {
     );
 
     // Click the first button
-    wrapper
-      .find(Button)
-      .at(0)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(0).props().onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('visible');
 
     callback.resetHistory();
 
     // Click the second button
-    wrapper
-      .find(Button)
-      .at(1)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(1).props().onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('hidden');
   });
 
@@ -70,16 +62,8 @@ describe('HiddenForSectionToggle', () => {
     );
 
     // Click both buttons
-    wrapper
-      .find(Button)
-      .at(0)
-      .props()
-      .onClick();
-    wrapper
-      .find(Button)
-      .at(1)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(0).props().onClick();
+    wrapper.find(Button).at(1).props().onClick();
     expect(callback).not.to.have.been.called;
   });
 });

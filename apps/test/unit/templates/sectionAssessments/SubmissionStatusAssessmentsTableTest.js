@@ -4,7 +4,7 @@ import {assert, expect} from '../../../util/reconfiguredChai';
 import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
 import {
   studentOverviewData,
-  testDataTimestamps
+  testDataTimestamps,
 } from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 import i18n from '@cdo/locale';
 
@@ -72,73 +72,43 @@ describe('SubmissionStatusAssessmentsTable', () => {
     timestampHeaderCell.simulate('click');
 
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(0)
-        .text(),
+      wrapper.find('.timestampCell').at(0).text(),
       i18n.notStarted()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(1)
-        .text(),
+      wrapper.find('.timestampCell').at(1).text(),
       i18n.notStarted()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(2)
-        .text(),
+      wrapper.find('.timestampCell').at(2).text(),
       i18n.inProgress()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(3)
-        .text(),
+      wrapper.find('.timestampCell').at(3).text(),
       i18n.inProgress()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(4)
-        .text(),
+      wrapper.find('.timestampCell').at(4).text(),
       testDataTimestamps.oldest.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(5)
-        .text(),
+      wrapper.find('.timestampCell').at(5).text(),
       testDataTimestamps.older.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(6)
-        .text(),
+      wrapper.find('.timestampCell').at(6).text(),
       testDataTimestamps.old.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(7)
-        .text(),
+      wrapper.find('.timestampCell').at(7).text(),
       testDataTimestamps.new.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(8)
-        .text(),
+      wrapper.find('.timestampCell').at(8).text(),
       testDataTimestamps.newer.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(9)
-        .text(),
+      wrapper.find('.timestampCell').at(9).text(),
       testDataTimestamps.newest.toLocaleString()
     );
 
@@ -146,73 +116,43 @@ describe('SubmissionStatusAssessmentsTable', () => {
     timestampHeaderCell.simulate('click');
 
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(9)
-        .text(),
+      wrapper.find('.timestampCell').at(9).text(),
       i18n.notStarted()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(8)
-        .text(),
+      wrapper.find('.timestampCell').at(8).text(),
       i18n.notStarted()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(7)
-        .text(),
+      wrapper.find('.timestampCell').at(7).text(),
       i18n.inProgress()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(6)
-        .text(),
+      wrapper.find('.timestampCell').at(6).text(),
       i18n.inProgress()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(5)
-        .text(),
+      wrapper.find('.timestampCell').at(5).text(),
       testDataTimestamps.oldest.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(4)
-        .text(),
+      wrapper.find('.timestampCell').at(4).text(),
       testDataTimestamps.older.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(3)
-        .text(),
+      wrapper.find('.timestampCell').at(3).text(),
       testDataTimestamps.old.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(2)
-        .text(),
+      wrapper.find('.timestampCell').at(2).text(),
       testDataTimestamps.new.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(1)
-        .text(),
+      wrapper.find('.timestampCell').at(1).text(),
       testDataTimestamps.newer.toLocaleString()
     );
     assert.equal(
-      wrapper
-        .find('.timestampCell')
-        .at(0)
-        .text(),
+      wrapper.find('.timestampCell').at(0).text(),
       testDataTimestamps.newest.toLocaleString()
     );
   });
@@ -225,27 +165,15 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     // Renders a user-friendly formatted time string
-    expect(
-      wrapper
-        .find('.timestampCell')
-        .first()
-        .text()
-    ).to.equal('10/7/2018, 8:52:05 PM');
+    expect(wrapper.find('.timestampCell').first().text()).to.equal(
+      '10/7/2018, 8:52:05 PM'
+    );
 
     // Also renders a machine/screen-reader-friendly (Date)Time Element
-    expect(
-      wrapper
-        .find('.timestampCell')
-        .first()
-        .find('time')
-    ).to.exist;
+    expect(wrapper.find('.timestampCell').first().find('time')).to.exist;
 
     expect(
-      wrapper
-        .find('.timestampCell')
-        .first()
-        .find('time')
-        .prop('dateTime')
+      wrapper.find('.timestampCell').first().find('time').prop('dateTime')
     ).to.equal('2018-10-07T20:52:05.000Z');
   });
 
@@ -260,10 +188,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
       />
     );
     expect(
-      basicNonEnglishWrapper
-        .find('.timestampCell')
-        .first()
-        .text()
+      basicNonEnglishWrapper.find('.timestampCell').first().text()
     ).to.equal('7/10/2018 20:52:05');
 
     // localeCode will undefined by default here, but it defaults to null in
@@ -274,11 +199,8 @@ describe('SubmissionStatusAssessmentsTable', () => {
         localeCode={null}
       />
     );
-    expect(
-      nullLocaleWrapper
-        .find('.timestampCell')
-        .first()
-        .text()
-    ).to.equal('10/7/2018, 8:52:05 PM');
+    expect(nullLocaleWrapper.find('.timestampCell').first().text()).to.equal(
+      '10/7/2018, 8:52:05 PM'
+    );
   });
 });

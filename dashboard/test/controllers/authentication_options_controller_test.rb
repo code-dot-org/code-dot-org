@@ -3,7 +3,7 @@ require 'test_helper'
 class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
   test 'disconnect: redirects with an error message if user is not signed in' do
     post '/users/auth/1/disconnect'
-    assert flash[:alert].include? 'Sorry'
+    assert_includes(flash[:alert], 'Sorry')
     assert_response :redirect
   end
 
@@ -14,7 +14,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
 
     assert_destroys(AuthenticationOption) do
       post "/users/auth/#{auth_option.id}/disconnect"
-      assert flash[:notice].include? "Success!"
+      assert_includes(flash[:notice], "Success!")
       assert_response :redirect
       assert_raises ActiveRecord::RecordNotFound do
         AuthenticationOption.find(auth_option.id)
@@ -38,7 +38,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
 
     sign_in teacher
     post "/users/auth/#{teacher.primary_contact_info_id}/disconnect"
-    assert flash[:notice].include? "Success!"
+    assert_includes(flash[:notice], "Success!")
     assert_response :redirect
 
     teacher.reload
@@ -63,7 +63,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
 
     sign_in teacher
     post "/users/auth/#{teacher.primary_contact_info_id}/disconnect"
-    assert flash[:notice].include? "Success!"
+    assert_includes(flash[:notice], "Success!")
     assert_response :redirect
 
     teacher.reload

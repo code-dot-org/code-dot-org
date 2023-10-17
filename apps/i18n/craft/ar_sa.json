@@ -1,9 +1,9 @@
 {
   "absolute": "مطلق",
+  "agentDiamondPathCongrats": "مبروك، لقد وجدت مكان الماسة! لقد جمعت {count, plural,one {ماسة واحدة}other {# ماسات}} حتى الآن!",
   "agentGenericFailureMessage": "استمر في البرمجة! تذكر استخدام العامل للمساعدة.",
   "agentTooFewBlocksFailureMessage": "حاول إضافة مربع واحد فقط في كل مرة لتوصيل العامل للمكان الصحيح.",
   "at": "عند",
-  "agentDiamondPathCongrats": "مبروك، لقد وجدت مكان الماسة! لقد جمعت {count, plural,one {ماسة واحدة}other {# ماسات}} حتى الآن!",
   "blockActionAdd": "أضف",
   "blockActionAttack": "اهجم",
   "blockActionClone": "استنسخ المربعات",

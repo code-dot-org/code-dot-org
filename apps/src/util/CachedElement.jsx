@@ -17,7 +17,7 @@ export default function CachedElement({elementType, cacheKey, createElement}) {
 CachedElement.propTypes = {
   elementType: PropTypes.string.isRequired,
   cacheKey: PropTypes.string.isRequired,
-  createElement: PropTypes.func.isRequired
+  createElement: PropTypes.func.isRequired,
 };
 
 function createHtml(element) {
@@ -34,5 +34,5 @@ const elementsHtmlCache = {};
 
 export const unitTestExports = {
   clearElementsCache,
-  elementsHtmlCache
+  elementsHtmlCache,
 };

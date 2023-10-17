@@ -1140,51 +1140,121 @@ az:
       9:
         text: "icra etmək"
       10:
+        text: "Bəs o bir boşluq irəlilədikdən sonra nəsə etmək istəsək nə olar? Proqramımıza daha bir blok əlavə edə bilərik. Mən turnRight(); blokunu seçəcəm və mən onu moveForward(); bloknun altına, bu narıncı xətt görünənə qədər çəkəcəm. Sonra onu qoyacam və iki blok bir-birinə yapışacaq. Yenidən run düyməsini basdıqda, Alex iş məkanımızda yuxarıdan aşağıya yığılmış əmrləri yerinə yetirəcək."
       11:
+        text: "Əgər nə vaxtsa bloku silmək istəsəniz, onu yığından çıxarın və alətlər qutusuna geri çəkin."
       12:
+        text: "Dəyişikliklərinizi ləğv etmək və səviyyənin başladığı vəziyyətə qayıtmaq üçün iş sahəsinin yuxarı sağ küncündəki Başdan Başla düyməsini istifadə edin. Daha bir şey: dönmə bloklarında kiçik üçbucağı görürsən? Bu üçbucaqları gördüyünüz zaman başqa variant seçə bilərsiniz. Gəlin kodlaşdırmağa başlayaq!"
+    mc_repeat:
+      1:
+        text: "Mən Lydia Winters, Mojang-ın brend direktoruyam və biz Minecraft adlı kiçik bir oyun hazırladıq."
+      2:
+        text: "Minecraft-da ən çox sevdiyim şey kəşf etməkdir. Mən mağaralarda macəra etməyi və oradan nəsə tapmağı sevirəm. Proqramçı olmayan biri kimi, Minecraft dərsindən keçmək və özümdə bəzi kodlaşdırma öyrənməkdən üçün çox həyəcanlıyam."
+      3:
+        text: "Son səviyyədə çoxlu moveForward(); blokları lazım idi. Əgər biz kompüterə moveForward(); əmrini dörd-beş dəfə etməsini deyə bilsəydik daha asan olardı. Xoşbəxtlikdən bizim üçün kompüterlər təkrar döngələri olan əmrləri təkrarlamaqda həqiqətən yaxşıdırlar."
+      4:
+        text: "Minecraft qurarkən, yeni bir dünya yaratmaq üçün bütün ilkin materialları yerləşdirmək üçün təkrar döngələrdən istifadə edirik. Bu minlərlə və minlərlə blokdur. Biz həmçinin kiçik üsullarla ilmələrdən istifadə edirik, məsələn, Aleksin ayaqları yeriyərkən irəli və geri hərəkət etməsi üçün. Təkrar döngələr proqramlaşdırmanın güclü hissəsidir."
+      5:
+        text: "Gecə yaxınlaşır, ona görə də növbəti bir neçə səviyyədə təhlükəsiz qalmaq üçün bir ev tikəcəyik. Bunu çox asanlıqla etmək üçün təkrar blokundan istifadə edəcəyik."
+      6:
+        text: "Evimizin divarını qurmaq üçün ya Aleksə MoveForward(); və taxtaları dörd dəfə yerləşdirməsini əmr edək və ya biz ona MoveForward(); və bir taxta qoymasını, sonra bu əmri götürüb və onun hərəkəti bir neçə dəfə yerinə yetirməsi üçün təkrar blokundan istifadə edək. İndi biz təkrar blokuna klikləyəcəyik və ona bu hərəkəti neçə dəfə yerinə yetirməsini istədiyimizi söyləyəcəyik. İndi gecə düşmədən evimizi tikək! Əylənin."
+    mc_if_statements:
+      1:
+        text: "İndi if ifadələri haqqında öyrənəcəyik. İf ifadələri proqramlaşdırmağı öyrənməyin əsas hissəsidir. Onlar kompüterə qərarlar verməkdə kömək edirlər."
+      2:
+        text: "Telefonum daxil olmaqla bütün kompüterlər \"if\" ifadələrindən istifadə edir. Məsələn, mən telefonun kilidini açanda o, parolu düzgün daxil etdiyim halda telefonun kilidini açdığımı bildirən bəzi kod işlədir. Əks halda, səhv mesajı göstərir."
+      3:
+        text: "Stiv və Alisin dünyada gördüklərinə reaksiya verməsi üçün kodunuzdakı \"if\" ifadələrindən istifadə edə bilərsiniz. Məsələn, qarşılarında qaya varsa, sola dönə bilərlər. Və ya ağaca çırpıldıqda sağa dönsünlər."
+      4:
+        text: "Bu halda biz lavaya düşmək istəmirik. Lava üçün plan hazırlamaq asandır. Biz bunu ekranda görə bilərik. Bəs daşın altında olan görə bilmədiyimiz lava necə?"
+      5:
+        text: "Daşı çıxardıqdan sonra irəliləməzdən əvvəl həmin yerdə lava olub-olmadığını yoxlamalıyıq. Əgər orada lava varsa, irəli getməzdən əvvəl xarakterimizin qarşısına daş qoymaq istəyirik. Beləliklə, biz təhlükəsiz şəkildə irəliləyə bilərik. Mədənə işləmək vaxtıdır! Və addımınızı izləmək üçün \"if\" ifadəsindən istifadə etməyi unutmayın."
     mc_congrats_share:
       1:
         text: "Təbriklər! Sən indicə kompüter elmlərində bloklar tikməyin əsaslarını öyrəndin."
       2:
+        text: "İndi siz öz yaradıcılığınızı qurmaq üçün bu bloklardan istifadə edə bilərsiniz. Daha təlimat və həll etmək üçün tapmacalar yoxdur. İstədiyiniz hər şeyi qura bilərsiniz. Sizin seçiminizdir."
       3:
+        text: "[şagirdlər danışır] Bu reallaşmaq üzrədir. Qırx. Mən məşəllərdən L hərfi düzəltdim. Mən ağcaqayın taxtalarından A düzəltdim. İşlədi, işlədi. Yundan ev tikdik!"
       4:
+        text: "Yaradıcılığınızı tamamladıqdan sonra, dostlarınızla paylaşmaq üçün link əldə etmək üçün paylaşmağı seçin. Əylənin!"
     mc_congrats_no_share:
       1:
         text: "Təbriklər! Sən indicə kompüter elmlərində bloklar tikməyin əsaslarını öyrəndin."
       2:
+        text: "İndi siz öz yaradıcılığınızı qurmaq üçün bu bloklardan istifadə edə bilərsiniz. Daha təlimat və həll etmək üçün tapmacalar yoxdur. İstədiyiniz hər şeyi qura bilərsiniz. Sizin seçiminizdir."
       3:
+        text: "[şagirdlər danışır] Bu reallaşmaq üzrədir. Qırx. Mən məşəllərdən L hərfi düzəltdim. Mən ağcaqayın taxtalarından A düzəltdim. İşlədi, işlədi. Yundan ev tikdik!"
       4:
         text: "İndi sən nə istəsən qura bilərsən. Xoş əyləncələr!"
     gumball_intro:
       1:
+        text: "Öz oyununuzu etmək istəyirsinizsə, bu, həqiqətən asandır. Sizə lazım olan yalnız proqramlaşdırmanın bir neçə əsaslarıdır və siz yaratdığınız oyunu oynamağa başlaya bilərsiniz."
       2:
+        text: "Sevimli video oyununuz varmı? PlayLab-da buna bənzər oyunlar yaratmaq üçün bir addım atacağıq. Yaxşı oyunların bir hekayəsi var və hər hekayənin aktyorları var. Danışmaq, hərəkət etmək və bir-biri ilə əlaqə qurmaq kimi şeylər edən aktyorlar. Ola bilsin ki, hətta oyun qaydalarına əsasən xal da qazansın. Bu gün biz əyləncəli aktyorlarla bütün bunları bir-bir necə edəcəyimizi öyrənəcəyik və sonra telefonda paylaşıla və oynaya bilən sıfırdan bir oyun quracağıq."
       3:
+        text: "Biz bu gün bütün bu şeyləri əyləncəli aktyorlarla bir bir necə etmək olar onları öyrənəcəyik və sonra da 0'dan telefonda oynanıla və paylaşıla bilən bir oyun düzəldəcəyik."
       4:
+        text: "Ekranınız üç əsas hissəyə bölünür. Solda proqramınızın işləyəcəyi oyun sahəsi var. Hər səviyyə üçün təlimatlar aşağıda yazılmışdır."
       5:
+        text: "Bu orta sahə alət qutusudur və bu blokların hər biri kod parçasıdır."
       6:
         text: "Sağdakı ağ boşluq iş sahəsi adlanır və proqramımızı burada quracağıq."
       7:
+        text: "Başlamaq üçün bloku işə saldıqda bloklarınızı narıncı ilə əlaqələndirməlisiniz. Siz sarı xətti görənə qədər onları dartmaqla bir neçə bloku birləşdirə bilərsiniz və sonra bir-birinə yapışacaqlar."
       8:
+        text: "Bu ilk/birinci tapmacada \"göy\" blokunu \"başlanğıcda\" blokuna bağlayaraq mesajınızı yazaraq biz aktyorları nəsə deməyə məcbur edəcəyik. Bloklarınız yerində olduqdan sonra nə proqramlaşdırdığınızı görmək üçün başlanğıc düyməsini basın."
       9:
+        text: "Başlayın və sonda siz hər növ oyunçu ilə qarşılıqlı əlaqədə oluna bilən, xallar qazanıla, bir şeylər atıla və bir birinizi yox edə biləcəyiniz bir oyun yarada biləcəksiniz. Bunların hamısı sizdən asılıdı!"
+    gumball_events:
+      1:
+        text: "İndi bütün oyun proqramçılarının hər gün nədən istifadə etdiyini öyrənəcəyik. Bunlara hadisələr/tədbirlər deyilir. Tədbir proqramınıza bir şey baş verdikdə dinləməsini və sonra baş verdikdə oyun hərəkəti yerinə yetirməsini bildirir."
+      2:
+        text: "Tədbirlərin/hadisələrin bəzi nümunələri siçan klikini dinləmək, yuxarı və ya aşağı ox düyməsini basmaq və ya hətta ekrana toxunmaqdır."
+      3:
+        text: "Burada oyunçu aktyora basdıqda/tıkladıqda onun bir şey söyləməsini təmin edəcəyik. \"Tıklandığında\" blokundan istifadə edəcəyik və ona \"de/söylə\" blokunu əlavə edəcəyik. Oyunçu basdıqda, həmin bloka əlavə edilmiş bütün bloklar yerinə yetiriləcəkdir."
+      4:
+        text: "Oxun bloklandığı hallar da var. Hərəkət bloklarını bunlarla əlaqələndirsəniz, ox düymələrindən istifadə edərək aktyorlarınızı yuxarı, aşağı, sola, sağa hərəkət etdirməyə başlaya bilərsiniz. Yavaş-yavaş oyununuz getdikcə daha interaktiv olur."
     gumball_repeat:
       1:
+        text: "Bir şeyi hər zaman və sonsuza qədər təkrar etməli olmağ məcburiyyətin xəyal edə bilirsiniz? Ümid edirik ki heç məcbur qalmazsınız, çünki kompüterlər həqiqətən də bir şeyləri təkrar etməkdə yaxşıdırlar."
       2:
+        text: "Bu əbədi təkrar blokudur. Bu blokun içindəki hər şey oyunda əbədi olaraq baş verəcəkdir. Bir aktyorun oyunçu bir şey etmədən dəfələrlə bir şey etməsini istəyiriksə, bu blokları repeat forever (həmişə təkrarla) blokunun içərisinə qoyacağıq."
       3:
         text: "Bu növbəti tapmacada məqsədimiz aktyorun davamlı olaraq bir işi yerinə yetirməsinə kömək etməkdir. Təkrar əmrlərin necə işlədiyini öyrənmək daha sonra öz oyununuzu qurduğunuz zaman sizə çoxlu vaxta qənaət edəcək."
     iceage_intro:
       1:
+        text: "Öz oyununuzu etmək istəyirsinizsə, bu, həqiqətən asandır. Sizə lazım olan yalnız proqramlaşdırmanın bir neçə əsaslarıdır və siz yaratdığınız oyunu oynamağa başlaya bilərsiniz."
       2:
+        text: "Sevimli video oyununuz varmı? PlayLab-da buna bənzər oyunlar yaratmaq üçün bir addım atacağıq. Yaxşı oyunların bir hekayəsi var və hər hekayənin aktyorları var. Danışmaq, hərəkət etmək və bir-biri ilə əlaqə qurmaq kimi şeylər edən aktyorlar. Ola bilsin ki, hətta oyun qaydalarına əsasən xal da qazansın. Bu gün biz əyləncəli aktyorlarla bütün bunları bir-bir necə edəcəyimizi öyrənəcəyik və sonra telefonda paylaşıla və oynaya bilən sıfırdan bir oyun quracağıq."
       3:
+        text: "Biz bu gün bütün bu şeyləri əyləncəli aktyorlarla bir bir necə etmək olar onları öyrənəcəyik və sonra da 0'dan telefonda oynanıla və paylaşıla bilən bir oyun düzəldəcəyik."
       4:
+        text: "Ekranınız üç əsas hissəyə bölünür. Solda proqramınızın işləyəcəyi oyun sahəsi var. Hər səviyyə üçün təlimatlar aşağıda yazılmışdır."
       5:
+        text: "Bu orta sahə alət qutusudur və bu blokların hər biri kod parçasıdır."
       6:
         text: "Sağdakı ağ boşluq iş sahəsi adlanır və proqramımızı burada quracağıq."
       7:
+        text: "Başlamaq üçün bloku işə saldıqda bloklarınızı narıncı ilə əlaqələndirməlisiniz. Siz sarı xətti görənə qədər onları dartmaqla bir neçə bloku birləşdirə bilərsiniz və sonra bir-birinə yapışacaqlar."
       8:
+        text: "Bu ilk/birinci tapmacada \"göy\" blokunu \"başlanğıcda\" blokuna bağlayaraq mesajınızı yazaraq biz aktyorları nəsə deməyə məcbur edəcəyik. Bloklarınız yerində olduqdan sonra nə proqramlaşdırdığınızı görmək üçün başlanğıc düyməsini basın."
       9:
+        text: "Başlayın və sonda siz hər növ oyunçu ilə qarşılıqlı əlaqədə oluna bilən, xallar qazanıla, bir şeylər atıla və bir birinizi yox edə biləcəyiniz bir oyun yarada biləcəksiniz. Bunların hamısı sizdən asılıdı!"
+    iceage_events:
+      1:
+        text: "İndi bütün oyun proqramçılarının hər gün nədən istifadə etdiyini öyrənəcəyik. Bunlara hadisələr/tədbirlər deyilir. Tədbir proqramınıza bir şey baş verdikdə dinləməsini və sonra baş verdikdə oyun hərəkəti yerinə yetirməsini bildirir."
+      2:
+        text: "Tədbirlərin/hadisələrin bəzi nümunələri siçan klikini dinləmək, yuxarı və ya aşağı ox düyməsini basmaq və ya hətta ekrana toxunmaqdır."
+      3:
+        text: "Burada oyunçu aktyora basdıqda/tıkladıqda onun bir şey söyləməsini təmin edəcəyik. \"Tıklandığında\" blokundan istifadə edəcəyik və ona \"de/söylə\" blokunu əlavə edəcəyik. Oyunçu basdıqda, həmin bloka əlavə edilmiş bütün bloklar yerinə yetiriləcəkdir."
+      4:
+        text: "Oxun bloklandığı hallar da var. Hərəkət bloklarını bunlarla əlaqələndirsəniz, ox düymələrindən istifadə edərək aktyorlarınızı yuxarı, aşağı, sola, sağa hərəkət etdirməyə başlaya bilərsiniz. Yavaş-yavaş oyununuz getdikcə daha interaktiv olur."
     iceage_repeat:
       1:
+        text: "Bir şeyi hər zaman və sonsuza qədər təkrar etməli olmağ məcburiyyətin xəyal edə bilirsiniz? Ümid edirik ki heç məcbur qalmazsınız, çünki kompüterlər həqiqətən də bir şeyləri təkrar etməkdə yaxşıdırlar."
       2:
+        text: "Bu əbədi təkrar blokudur. Bu blokun içindəki hər şey oyunda əbədi olaraq baş verəcəkdir. Bir aktyorun oyunçu bir şey etmədən dəfələrlə bir şey etməsini istəyiriksə, bu blokları repeat forever (həmişə təkrarla) blokunun içərisinə qoyacağıq."
       3:
         text: "Bu növbəti tapmacada məqsədimiz aktyorun davamlı olaraq bir işi yerinə yetirməsinə kömək etməkdir. Təkrar əmrlərin necə işlədiyini öyrənmək daha sonra öz oyununuzu qurduğunuz zaman sizə çoxlu vaxta qənaət edəcək."
     mc_2016_intro:
@@ -1226,10 +1296,12 @@ az:
       1:
         text: "Oyunlarda yenidən yaranma və yaratmaq eyni şey deməkdir. Bu səviyyədə, günəş batdıqda zombilərin yenidən yaranmasına təmin edək. Bunu etmək üçün \"gecə zaman\" blokundan istifadə edəcəyik."
       2:
+        text: "Zombilərin gecə görünməsini istədiyimiz üçün \"gecə olanda\" blokunun altına \"zombi kürü\" bloku əlavə edəcəyik. Onlar göründükdən sonra, hər zombi onların \"görünəndə\" hadisə yuvasına daxil edəcəyiniz kodu işə salın. Zombies kürü ilə əylənin!"
     mc_2016_congrats:
       1:
         text: "Təbrik edirik! Minecraft dünyasını canlandırmaq üçün kompüter elmləri əmrlərindən istifadə etməyi öyrəndiniz. Siz indi tərtibatçısınız. Siz bütün əmrləri və bütün canlıları açdınız. Nə olacağını seçirsən."
       2:
+        text: "Oyunu yaratmağə bitirdiyiniz vaxt, dostlarınızla paylaşa bilməyiniz və ya öz telefonunuzda oynamağınız üçün paylaşı seçin ki, keçid ala biləsiniz. Zövq alın! Mən Minecraftın sizin versiyanızı oynamaq üçün səbirsizlənirəm."
     applab_intro_welcome:
       1:
         text: "Mənim adım Mei'lani. Mən code.org saytında təcrübəçiyəm və eyni zamanda kompüter elmləri üzrə tələbəyəm. Mən kompüter elmini sevirəm, çünki o, həqiqətən yaradıcıdır. Problemi həll edən mən oluram. Mən hər şeyi istədiyim kimi işləməli oluram. Amma mən də dizayner olacam. Mən sənətkar olmalıyam və onun yaradıcı tərəfində olan hər şeyi seçirəm."
@@ -1297,40 +1369,93 @@ az:
       2:
         text: "Dizayn rejiminə keçmək üçün tətbiqinizin yuxarısındakı açardan istifadə edin."
       3:
+        text: "Yeni elementləri ekrana sürüklüyərək onları əlavə edə bilərsiniz. Onları fərqli yerlərə hərəkət elətdirə bilərsiniz və yuxarı üst küncə sürüklüyərək ölçülərin dəyişə bilərsiniz."
       4:
+        text: "Elementin xususiyyətlərin dəyişmək üçün sağdakı kontrollardan istifadə edin. Misal üçün, düymənin yazısını, rəngini və yazı ölçüsünü dəyişmək çox sadədir."
       5:
+        text: "Ekranınıza yeni bir element əlavə etdikdə, button1 (düymə 1) kimi ümumi bir identifikator alacaq. Bu düymənin identifikatorunu \"sağ düymə\" kimi daha mənalı bir şeyə dəyişdirmək yaxşı bir fikirdir. Beləliklə, proqrama girəndə bunun nə olduğunu biləcəksiniz."
       6:
+        text: "Əgər səhvən tətbiqinizə elemnet əlavə edibsinizsə, sadəcə onu kənara sürüşdürün və sil'ə basın."
       7:
+        text: "Ekran elementini sürükləməklə tətbiqinizə tamamilə yeni ekranlar əlavə edə bilərsiniz."
       8:
+        text: "Siz yuxarıdakı açılan menyudan yaratdığınız ekranlar arasında sürətlə keçid edə bilərsiniz."
       9:
+        text: "Tətbiqinizin içərisində bütün bu ekranlar arasında keçid üsuluna ehtiyacınız olacaq, buna görə alətlər panelinə set screen bloku əlavə olunur. Bir düyməni basmaqla ekranları dəyişdirmək üçün \"hadisəni aktivləşdir\" blokunun içərisində \"ekranı Qur\" istifadə edin."
       10:
+        text: "Növbəti bir neçə səviyyədə siz tək bir layihə üzərində işləyəcəksiniz. Əvvəlcə bir düymə əlavə edəcəksiniz, sonra yeni ekran əlavə edəcəksiniz və sonda düymənin yeni ekrana keçməsi üçün kod yazacaqsınız."
+    applab_intro_share:
+      1:
+        text: "Düymələr, səslər, şəkillər, mətn və yeni ekranlar əlavə etmək kimi Tətbiq Laboratoriyasının bəzi əsaslarını öyrəndiyinizə görə, hər cür proqramlar yarada bilərsiniz."
+      2:
+        text: "Növbəti səviyyədə siz yaratmağı bitirdiyiniz proqramı tapacaqsınız. Bir az yaradıcılıqla bunu dostlarınız üçün şəxsiyyət testinə, ailənizlə bölüşmək üçün təbrik kartına və ya öz seçdiyiniz oyuna çevirə bilərsiniz. Bütün bu proqramlar artıq öyrəndiyiniz bacarıqların cəmidir və əminəm ki, daha çoxunu tapa bilərsiniz."
+      3:
+        text: "Tətbiqinizi bitirdikdən sonra onun necə göründüyünü görmək üçün onu asanlıqla telefonunuza göndərə bilərsiniz. \"Paylaş\" düyməsini basın və telefon nömrənizi bura daxil edin."
+      4:
+        text: "Tətbiqinizi dərhal açmağınıza imkan verən mətn mesajı alacaqsınız."
+      5:
+        text: "Siz həmçinin tətbiqinizin linkini sosial media vasitəsilə paylaşa və ya başqalarının oynaması və paylaşması üçün code.org ictimai qalereyasına yerləşdirə bilərsiniz."
+      6:
+        text: "Siz yalnız App Lab nə edə bilər səthi cızıqlanmış etdik. Tam App Lab daha qabaqcıl istifadəçi qarşılıqlı əlaqələri, yeni ekran elementləri və hətta quraşdırılmış verilənlər bazasına malikdir, belə ki, siz tez bir zamanda tam özellikli tətbiqlər qura bilərsiniz. “Code.org/applab” -da davam etmək istəyirsinizsə, tam alət və çoxlu ideya  tapa bilərsiniz."
+      7:
+        text: "Gəldiyiniz üçün təşəkkürlər. İndi gedin ilk tətbiqinizi yaradın və paylaşın və App Lab ilə proqramlar yaratmağa davam edin!"
     mc_2017_agent_intro:
       1:
+        text: "Stacy: Stampy, Lizzy, Preston - mənimlə gəldiyiniz üçün təşəkkür edirəm. Sizə göstərmək istədiyim, bu düzənlik yaylanın düz üstündədir. Düşünürəm ki, bunu sevəcəksiniz!"
       2:
         text: "Biraz gözlə - yolda çuxur var! (qışqırıq)"
       3:
+        text: "Hər kəs tamam mı? möhürlü: ah, Mən problem görürem. Baxın! Yolda bir çuxur var idi. Stacy: Həqiqətən, Stampy? Lizzy: Bəlkə onu düzəltmək üçün blokları toplamalıyıq. Preston: Gəlin bir yarış edək. Birincisi üst qalibiyyətə geri qayıdır. Stacy: Tamam, işarənizdə, təyin et, GO! Tamam, Mən yalnız mý bu terracotta bəzi toplamaq alıram. Gözləmək. Uşaqlar, mən mina bilməz! Preston: eyni. Lizzy: Mən də edə bilmərəm. Stacy: Tamam, həqiqətən qəribə. Stampy, mina edə bilərsinizmi? Stampy: Mən mina bilməz! Stacy: Tamam, hər kəs sakit qalsin. Stampy: Oyun sınıq mı? Stacy: Əgər varsa, biz bunu necə düzəlre bilerik? Lizzy: Bilmirəm. Stampy: Hər kəs Minecraft kodunu necə yazmağı bilir?"
       4:
+        text: "(poof) Preston: Bu nədir? Stampy: Mən heç belə bir şey görməmişəm. Lizzy: Bu, çox gözəldir! Steysi: Bu...bu əhlilləşdirilə bilər? Preston: Nə baş verir? Kimsə real dünyaya qayıtmalı və bunu düzəltməlidir. Hamısı: Mən yox! Steysi: Mən yo- (dərin nəfəs) Yaxşı, mən gedəcəm."
       5:
         text: "Oh , tamam , ey, mən əsl dünyadayam hal-hazırda.Mən Minecraftın ofislərini tapmağa çalışacam."
       6:
+        text: "Amma köməyinizə ehtiyacım olacaq. Dərsliyi etməyə başlayın, kodlaşdırmağı öyrənməyə başlayın, bir neçə səviyyədən sonra sizinlə görüşəcəm, yaxşı? Mənə uğur arzula! Məncə yol budur. Ah! Kaktus! Mən yaxşıyam!"
       7:
+        text: "Kod Saatı problemini başa çatdırmaq üçün agenti proqramlaşdırmaq üçün kod yazmalısınız. Yolunuzda hər hansı maneəni aradan qaldırmaq üçün Agentlə birlikdə çalışacaqsınız, belə ki, səyahət üçün lazım olan əşyaları goture bilərsiniz. Yalnız Agent blokları yerləşdirə və qıra bilər və yalnız siz maddələr toplaya bilərsiniz. Sizin ekran üç əsas hissəyə bölünür. Solda Minecraft."
       8:
+        text: "Orta sahə, Agentin başa düşə biləcəyi əmrlər olan alətlər qutusudur."
       9:
+        text: "Və sağda iş sahəsi var. Agenti idarə etmək proqramınızı qurmaq üçün əmrləri yığdığınız yer budur."
       10:
+        text: "Agent təzyiq plitələrini gəzdirə, dönə və aktivləşdirə bilər. O, həmçinin blokları məhv edə bilər və blokları yerləşdirə bilər. Bloku bu minecart relslər kimi yerləşdirəndə onu özünün altına qoyur."
       11:
         text: "Əgər nə edəcəyini unutdunsa, hər səviyyə üçün təlimatlar yuxarıdadır."
       12:
+        text: "Yenidən cəhd etmək istəyirsinizsə, hər şeyi başladığı yerə yenidən qurmaq üçün mavi sıfırlama düyməsini basa bilərsiniz. Bir kod blokunu silmək lazımdırsa, onu iş yerinizdən alət qutusuna sürükleyin. Agenti hərəkət etdirmek üçün run e basmagi unutmayın. Tamam, davam edin və ilk bir neçə səviyyəni sınayın. Uğurlar!"
     mc_2017_repeat:
       1:
+        text: "Stampy: Stacy'nin nə etmək istədiyi maraqlıdır"
       2:
+        text: "Stacy: Vay, düşünürəm ki, doğru yerdəyəm. Bu əladı!"
       3:
         text: "Mən elə hiss edirəm ki,  sanki mən yenidən \"Minecraft\"-yam.Salam. Necəsən?  Salam?"
       4:
+        text: "Oh, bir sürünən var. Siz heç bir şey etmirsiniz, yoxsa? Katie: Stacy? Stacy:Salam, Katie? Katie: Bəli, Minecraft-a xoş gəlmisiniz!"
       5:
+        text: "Stacy: Bu gözəl. Beləliklə, hər gün burada bir geliştirici kimi işləyirsiniz? Katie: Bəli, bu olduqca gozeldi. Mən Minecraft bazarda komanda bir geliştiriciyem. Stacy: Neçə kodlaşdırma dilini bilirsiniz? Katie: Karyeramda yəqin ki, bir çox ilə işləmişəm. Stacy: Bir çox? Katie: Bəli. Stacy: Beləliklə, indi, özünü Agent adlandıran bu kiçik qolem oğlan haqqında bir şey bilmək olmazdı? Katie: Biz Agentdən istifadə edirik ki, Stiv və ya Aleksin edə bilmədiyi şeylər, lavalara rast gəlmək kimi. Stacy: Yaxşı, mən nece kod yazilir öyrənmək istəyirəm, və onlar necə kod yazilir öyrənmək istəyir, belə ki, öyrənmək etdiyiniz zaman bilmək lazımdır ki, ilk şeylerden biri nədir?"
       6:
+        text: "Katie: Yaxşı, döngülərdən istifadə etməyi öyrənməlisiniz. Döngülər, inkişaf etdiricilərin təkrar-təkrar işlədilə bilən kompüterə əmrlər vermək üçün yazdıqlarıdır. Stacy: Anladım, məncə, onlardan bəziləri həqiqətən də qarşıdakı səviyyələrdə görünür, ona görə də davam edin və döngüləri sınayın."
       7:
+        text: "Növbəti səviyyədə, Agenti yol boyunca hərəkət etmək üçün bir döngədən istifadə edə bilərsiniz. Təkrarlanan bloku iş sahəsinə sürükleyin və hərəkət blokunu təkrar blokun içərisinə yerləşdirin. Bu, kompüterə bir çox blokları iş sahəsinə sürükləmədən bir sıra eyni şeyi bir neçə dəfə etməyə imkan verir. Təkrar blokda bir reqem qoyaraq neçə dəfə təkrarlanacağını seçə bilərsiniz."
       8:
+        text: "Təkrar blokuna növbələr və çoxlu əmrlər də qoya bilərsiniz, lakin hələlik Agenti bir neçə addım irəli aparmaq üçün təkrardan istifadə etməyə çalışın. Unutmayın ki, tapmacada ilişib qalsanız, həmişə mavi sıfırlama düyməsini sıxıb yenidən cəhd edə bilərsiniz."
       9:
+        text: "Katei kimi gözəl bir işə sahib olmağı düşünürsünüzsə, davam edin və hər səviyyəni bitirdikdən sonra kodu göstər düyməsini basın. Bu, əslində Katie kimi birinin Minecraft proqramlaşdırarkən istifadə etdiyi Javascript kodunu sizə göstərəcək. Katie: Bəli, hər kəsə uğurlar!"
+    mc_2017_functions:
+      1:
+        text: "Preston: Mən lovğalanmağa çalışmıram, amma parkurda olduqca yaxşıyam. Lizzy: Stacy geri gəldiyi zaman gün belə yataq."
+      2:
+        text: "Stacy: Ok uşaqlar, Mən Minecraft ofislərinden gəlirəm, və mən düşünürəm ki mən problemi həll etməyi bjlirem. Mən bir funksiyası istifadə edə bilərem. Qoyun bunu açım ."
+      3:
+        text: "Belə ki, funksiya müəyyən bir vəzifə yerinə yetirmək üçün təlimat xüsusi dəstidir, cür bir resept kimi. Növbəti bir neçə səviyyədə, siz bulmacalar həll etmək üçün onları istifadə edə bilərsiniz.."
+      4:
+        text: "Funksiyanın nə etdiyini görmək üçün funksiyadaki coda baxın "
+      5:
+        text: "Sonra, bu adla toolbox da blok tap və bloku hərəkət eletdirende onu sürüşdür"
+      6:
+        text: "Unutmayın, siz eyni funksiyanı hər dəfə eyni şeyləri etmək üçün yerinə yetirə bilərsiniz körpü tikmək kimi. Uğurlar, bunu edə biləcəyinizi bilirəm!"
     mc_2017_congratulations:
       1:
         text: "Preston: Təbriklər!"
@@ -1339,14 +1464,27 @@ az:
       3:
         text: "Stampy: Təbriklər, sən bunu bacardın!"
       4:
+        text: "Stacy: Təbrik edirem uşaqlar, söz bacardıniz. İndi siz Kod Saatını tamamladiniz .Minecraft-da kodlaşdırma başlaya bilərsiniz. Döngələr, funksiyalar və bir proqram Agentinin nə etdiyini öyrəndiniz."
       5:
+        text: "İndi, sərbəst iş keçəlin vaxtıdı, bardakı siz artıq gelistiricisiz. Araşdırmaq, mina və qurmaq üçün öz funksiyalarını yazmaq üçün qalan vaxtdan istifadə edin."
       6:
+        text: "Bu səviyyədə yazdığınız kodu Minecraft: Təhsil Edition-da Minecraft dünyasına daxil edə bilərsiniz. Yalnız “Finish” düyməsini basın və dünyadakı istifadə etmək üçün linki almaq üçün təlimatlara əməl edin. Agentlə kodlaşdırmaya davam et. Əylən və yaxşı iş!"
       7:
+        text: "Stacy: Mən geldim! Tamam, siz uşaqlar, bu Agentdir! Sizə nə edə biləcəyini göstərəcəyəm. Baxın, bunu edir! Mən ona bu terra cotta bloklarından bir pilləkən qurmağıni dedim, indi biz yalnız buradan çıxmaq üçün istifadə edə bilərik. Və siz uşaqlar, yalnız merdivenler deyil. Agentə istədiyim hər şeyi etməsini deyə bilərəm və mənim üçün bunu edəcək."
       8:
+        text: "Stampy: Bunu necə etdiniz? Stacy: Bu asan idi, əslində. Mən yalnız kodu istifadə elədim!"
+    csd_concept_how_computers_work:
+      1:
+        text: "Baxdığınız hər yerdə kompüterlər dünyanı dəyişir. Bizim masaüstümüzdə, evlərimizdə, ciblərimizdə və ya başqa bir yerdə olsunlar. Amma əksəriyyətimiz bu inqilabi texnologiyadan gündəlik istifadə edərkən tez-tez soruşmuruq: “Kompüterlər necə işləyir?” Bu seriyada, siz kompüter həqiqətən  necə işlədiyini öyrənəcəksiniz, bir kompüteri ne kompüter edir  ilə başlayaraq. Sonra, söz baxacaqsınız ki informasiya computerin içində balaca inanılmaz sürətlə irəli geri hərəkət edən elektrik siqnallarla təsvir olunub "
+      2:
+        text: "Bundan sonra siz kompüterlərin sadə riyaziyyatdan tutmuş bütün virtual dünyaları simulyasiya etməyə qədər hər şeyi etmək üçün sxemlərdən necə istifadə etdiyini öyrənəcəksiniz. Daha sonra siz daha ümumi şəkildə baxacaqsınız və bütün bu məlumatları həqiqətən daxil edən, çıxaran və saxlayan kompüterin müxtəlif hissələrinə baxacaqsınız. Nəhayət, kodun əslində nə olduğuna və proqram təminatının avadanlığı necə idarə etdiyinə nəzər salacaqsınız. Beləliklə, istər hər gün istifadə etdiyiniz cihazlarla maraqlanırsınız, istərsə də gələcəyin yeniliklərini dizayn etmək istəyirsiniz, ilk addım kompüterlərin necə işlədiyini öyrənməkdir."
     csd_concept_computer:
       1:
+        text: "Mənim adım May-Li Khoe və mən dizayner və ixtiraçıyam. Beləliklə, dizayn etdiyim bəzi şeylər Apple-da olub və indi uşaqların məktəbdə daha asan vaxt keçirmələri üçün istifadə etmələri üçün məhsullar hazırlayıram. Digər işlərimə DJ-lik və rəqs daxildir."
       2:
+        text: "Kompüterlər hər yerdədir! İnsanların cibindədirlər, insanların maşınlarındadırlar, insanların biləklərində var. Onlar hazırda çantanızda ola bilər. Bəs kompüteri kompüter edən nədir? Kompüteri kompüterə çevirən nədir? Və hətta necə işləyir?"
       3:
+        text: "Salam, mən Nat! Mən Xbox-un ilk dizaynerlərindən biri idim. Mən bəlkə yeddi yaşımdan kompüterlərlə işləyirəm və indi virtual reallıq üzərində işləyirəm. Biz insanlar olaraq həmişə problemləri həll etməyə kömək edəcək alətlər yaratmışıq. Təkər arabası, çəkic və ya çap maşını və ya traktor qoşqu kimi alətlər."
       4:
         text: "Bütün bu ixtiralar bizə mexaniki kömək etdi. Zaman keçdikcə insanlar düşünməyə başladılar ki, tənlikləri həll etmək və ya səmadakı ulduzları izləmək kimi düşünmə işimizdə bizə kömək edəcək bir maşının dizaynı və inşası ola bilərmi? Kir və daş kimi fiziki əşyaları hərəkət etdirmək və ya manipulyasiya etmək əvəzinə, bu maşınlar məlumatı idarə etmək üçün dizayn edilməlidir. Kompüter elminin qabaqcılları düşünmə maşınının necə dizayn ediləcəyini araşdırarkən onun dörd fərqli vəzifəni yerinə yetirməli olduğunu başa düşdülər."
       5:
@@ -1371,12 +1509,15 @@ az:
       4:
         text: "Kompüterin içərisində kompüterdəki bütün məlumatları daşıyan elektrik naqilləri və sxemlər var. Siz elektrik enerjisindən istifadə edərək məlumatı necə saxlayır və ya təqdim edirsiniz?"
       5:
+        text: "Yaxşı, elektrik cərəyanı axan tək bir naqiliniz varsa, siqnal ya açıq və ya sönük ola bilər. Bu çox seçim deyil, amma bu, həqiqətən vacib bir başlanğıcdır. Bir tel ilə biz bəli və ya yox, doğru və ya yalan, bir və ya sıfır və ya başqa hər şeyi yalnız iki variantla təmsil edə bilərik. Tək telin bu yandırma/söndürmə vəziyyətinə bit deyilir və bu, kompüterin saxlaya biləcəyi ən kiçik məlumat parçasıdır."
       6:
         text: "Daha çox tel istifadə etsəniz, daha çox bit əldə edəcəksiniz: daha çox olanlar və sıfırlar. Daha çox bitlə daha mürəkkəb məlumatları təmsil edə bilərsiniz. Ancaq bunu başa düşmək üçün ikili say sistemi deyilən bir şeyi öyrənməliyik."
       7:
         text: "Onluq say sistemində sıfırdan doqquza kimi on rəqəmimiz var və biz hamımız saymağı belə öyrənmişik. İkili say sistemində yalnız iki rəqəmimiz var: sıfır və bir. Bu iki rəqəmlə istənilən ədədə qədər saya bilərik."
       8:
+        text: "Baxın bu necə işləyir. Hamımızın öyrəşdiyimiz onluq say sistemində ədəddəki hər mövqe fərqli qiymətə malikdir. 1 mövqe, 10 mövqe, 100 mövqe və s. var. Məsələn, 100 mövqeyində 9 900-dür. Binar sistemdə hər mövqe də bir dəyər daşıyır. Amma hər dəfə 10-a vurmaq əvəzinə 2-yə vururuq. Deməli, 1 mövqe, 2 mövqe, 4 mövqe, 8 mövqe və s. Məsələn, binar sistemdə 9 rəqəmi 1001-dir. Dəyəri hesablamaq üçün 1 çarpı 8, üstəgəl 0 çarpı 4, üstəgəl 0 çarpı 2, üstəgəl 1 dəfə 1 əlavə edirik. Demək olar ki, heç kim bu riyaziyyatı etmir, çünki kompüterlər bunu bizim yerimizə edir. Əhəmiyyətli olan odur ki, istənilən ədəd yalnız birlər və sıfırlarla və ya açıq və ya sönük olan bir dəstə tel ilə təmsil oluna bilər. Nə qədər çox tel istifadə etsəniz, saxlaya biləcəyiniz nömrələr bir o qədər çox olar. 8 naqillə siz 0-dan 255-ə qədər rəqəmləri saxlaya bilərsiniz. Bu, 8 ədəddir. Cəmi 32 naqillə siz 0-dan 4 milyarda qədər saxlaya bilərsiniz. İkilik say sistemindən istifadə edərək, istədiyiniz istənilən ədədi təmsil edə bilərsiniz."
       9:
+        text: "Bəs digər məlumat növləri haqqında nə demək olar? Mətn, şəkillər və ya səs kimi? Belə çıxır ki, bütün bunları rəqəmlərlə də göstərmək olar. Əlifbadakı bütün hərfləri düşünün. Hər hərf üçün bir nömrə təyin edə bilərsiniz. A 1 ola bilər, B 2 ola bilər və s. Daha sonra hər hansı bir sözü və ya paraqrafı rəqəmlər ardıcıllığı kimi təqdim edə bilərsiniz. Və gördüyümüz kimi, bu nömrələr elektrik siqnalları kimi saxlanıla bilər. Hər veb səhifəsində və ya telefonunuzda gördüyünüz hər söz bu kimi bir sistemdən istifadə etməklə təmsil olunur."
       10:
         text: "İndi ekranda gördüyünüz fotoşəkilləri, videoları və bütün qrafikləri nəzərdən keçirək."
       11:
@@ -1393,15 +1534,21 @@ az:
       3:
         text: "Giriş kimi daxil olan məlumatı emal etmək və çıxan məlumatı çıxarmaq üçün kompüter giriş siqnallarını dəyişdirməli və birləşdirməlidir. Bunu etmək üçün kompüter dövrə yaratmaq üçün bir araya gələn milyonlarla kiçik elektron komponentlərdən istifadə edir."
       4:
+        text: "Gəlin sxemlərin birlər və sıfırlarla təmsil olunan məlumatları necə dəyişdirə və emal edə biləcəyinə daha yaxından nəzər salaq. Bu inanılmaz dərəcədə sadə bir dövrədir. O, elektrik siqnalını alır və ya söndürür və onu çevirir. Beləliklə, verdiyiniz siqnal 1 olarsa, dövrə sizə 0 verir və dövrəyə 0 verirsinizsə, bu sizə 1 verir. Daxil olan siqnal çıxan siqnalla eyni deyil və ona görə də biz bu dövrəyə NOT (DEYİL) deyirik."
       5:
+        text: "Daha mürəkkəb sxemlər çoxlu siqnal qəbul edib onları birləşdirə və sizə fərqli nəticə verə bilər. Bu misalda dövrə iki elektrik siqnalı alacaq, indi hər biri 1 və ya 0 ola bilər. Əgər daxil olan siqnallardan biri 0-dırsa, nəticə də 0-dır. Bu dövrə sizə yalnız 1 verəcək əgər birinci siqnal və ikinci siqnal hər ikisi 1-dirsə və buna görə də dövrəni AND adlandırırıq."
       6:
         text: "Sadə məntiqi hesablamalar aparan bu kimi çoxlu kiçik sxemlər var. Bu sxemləri birləşdirərək daha mürəkkəb hesablamalar aparan daha mürəkkəb sxemlər yarada bilərik."
       7:
+        text: "Məsələn, toplayıcı adlanan 2 biti birləşdirən bir dövrə yarada bilərsiniz. Bu dövrə hər biri 1 və ya 0 olmaqla 2 fərdi bit alır və cəmi hesablamaq üçün onları bir araya toplayır. Cəm 0 üstəgəl 0 bərabər 0, 0 üstəgəl 1 bərabər 1 və ya 1 üstəgəl 1 bərabər 2 ola bilər. Cəmi təmsil etmək üçün ikiyə qədər ikilik rəqəm ala biləcəyi üçün iki naqil çıxmalıdır. İki bit məlumat əlavə etmək üçün tək bir toplayıcıya sahib olduqdan sonra, daha böyük ədədləri bir araya toplamaq üçün bu toplayıcı dövrələrin qatlarını yan-yana birləşdirə bilərsiniz."
       8:
         text: "Məsələn, 8 bitlik toplayıcının 25 və 50 rəqəmlərini necə əlavə etməsi buradadır. Hər bir nömrə 8 bitdən istifadə etməklə təmsil olunur, nəticədə dövrəyə daxil olan 16 müxtəlif elektrik siqnalı yaranır. 8 bitlik toplayıcı üçün dövrənin içərisində çoxlu kiçik toplayıcılar var, onlar birlikdə cəmi hesablayırlar."
       9:
+        text: "Müxtəlif elektrik dövrələri çıxma və ya vurma kimi digər sadə hesablamaları yerinə yetirə bilər. Əslində, kompüterinizin etdiyi bütün məlumatları emal edən çoxlu və çoxlu kiçik sadə əməliyyatların birləşdirilməsidir. Bir kompüter tərəfindən edilən hər bir fərdi əməliyyat o qədər sadədir ki, onu bir insan edə bilər, lakin kompüterlərin içərisindəki bu sxemlər çox daha sürətlidir."
       10:
+        text: "Əvvəllər bu sxemlər böyük və çətin idi və 8 bitlik toplayıcı bir soyuducu qədər böyük ola bilərdi və onların sadə hesablama aparması bir neçə dəqiqə çəkərdi. Bu gün kompüter sxemləri mikroskopik ölçülərə malikdir və daha sürətlidir. Niyə kiçik kompüterlər də daha sürətlidir? Çünki dövrə nə qədər kiçik olsa, elektrik siqnalının getməli olduğu məsafə bir o qədər azdır. Elektrik təxminən işıq sürəti ilə hərəkət edir, buna görə də müasir sxemlər saniyədə milyardlarla hesablama apara bilir."
       11:
+        text: "Beləliklə, istər oyun oynayırsınız, istər video çəkirsiniz, istərsə də kosmosu kəşf edirsinizsə, texnologiya ilə edə biləcəyiniz hər şey çox tez emal olunmaq üçün çoxlu məlumat tələb edir. Bütün bu mürəkkəbliyin altında ikili siqnalları vebsaytlara, videolara, musiqilərə və oyunlara çevirən çoxlu kiçik sxemlər var. Bu sxemlər hətta xəstəliyi diaqnoz etmək və müalicə etmək üçün DNT-ni deşifrə etməyə kömək edə bilər. Beləliklə, bütün bu dövrələrlə nə etmək istərdiniz?"
     csd_concept_memory_cpu_input_output:
       1:
         text: "Salam, mənim adım Madison Maxeydir. Mənim Loomia adlı şirkətim var və biz diqqətimizi ağıllı geyimlər və ağıllı yumşaq yaxşı məhsullar üçün ağıllı parçalar hazırlamağa yönəldirik. Toxuculuqdan söhbət düşəndə səma həddidir."
@@ -1422,6 +1569,7 @@ az:
       9:
         text: "Bütün bunlar o qədər tez baş verir ki, anında hiss olunur, lakin kompüter hər hərfi göstərmək üçün barmağınızın əsas nöqtəni basdığı andan başlayaraq minlərlə təlimat işlədir."
       10:
+        text: "Bu nümunədə çıxış cihazı ekran idi, lakin kompüterdən ikili siqnal götürən və fiziki dünyada bir şey edən bir çox fərqli çıxış növü var. Məsələn, dinamik səs çalacaq, 3D printer isə obyekti çap edəcək. Çıxış cihazları həmçinin robot qolu, avtomobilin motoru və ya şirkətimin hazırladığı freze maşınının kəsici aləti kimi fiziki hərəkəti idarə edə bilər. Yeni giriş və çıxış növləri kompüterlərə dünya ilə tamamilə yeni üsullarla qarşılıqlı əlaqə yaratmağa imkan verir. Buna yaddaş və CPU-nun sürəti və ölçüsünün təkmilləşdirilməsi kömək etdi."
       11:
         text: "Tapşırıq nə qədər mürəkkəbdirsə və giriş və ya çıxış nə qədər çox məlumatdırsa, kompüterə bir o qədər çox emal gücü və yaddaş lazımdır. Ekranda hərflərin yazılması asan ola bilər, lakin mürəkkəb 3D qrafika və ya yüksək dəqiqlikli film çəkmək üçün müasir kompüterlərdə tez-tez bütün bu məlumatları emal etmək üçün çoxlu CPU və onları saxlamaq üçün çoxlu gigabayt yaddaş var."
       12:
@@ -1442,54 +1590,94 @@ az:
       7:
         text: "CPU-nun əsl sehri onun hansı dövrələrdən istifadə edəcəyini və onları nə vaxt istifadə edəcəyini bilməsidir. CPU müəyyən bir işi yerinə yetirmək üçün hansı sxemdən istifadə edəcəyini söyləyən sadə əmrlər alır. Məsələn, \"əlavə et\" əmri CPU-ya yeni nömrə hesablamaq üçün xarici dövrədən istifadə etməyi bildirir. Və sonra \"mağaza\" əmri CPU-ya bu nəticəni yaddaşda saxlamaq üçün fərqli bir sxemdən istifadə etməyi əmr edir."
       8:
+        text: "Rəqəmlər kimi, bu sadə əmrlərin hamısı binari birlərlə və sıfırlarla və ya elektrik siqnalları ilə təmsil oluna bilər. Binari əmrlər yaddaşda saxlanılır və CPU onları bir-birinin ardınca ardıcıl olaraq alır və yerinə yetirir. Bu əmrlər ardıcıllığı əslində çox sadə kompüter proqramıdır."
       9:
+        text: "İkili kod proqram təminatının ən əsas formasıdır və kompüterin bütün avadanlıqlarını idarə edir. Bu günlərdə heç kim ikili sistemdə proqram təminatı yazmır. Bu əbədi olardı!"
       10:
+        text: "Bu gün yazdığımız proqram təminatı daha çox buna (Python) və ya buna (Ruby) və ya hətta buna (Blockly) bənzəyir. Bu kimi proqramlaşdırma dilləri ingilis dilinə çox oxşar bir dildə əmrlər yazmağa imkan verir."
       11:
+        text: "Ekranda düzbucaqlı çəkmək üçün sadəcə bir əmr lazımdır. Bu yüksək səviyyəli əmr CPU-nun başa düşdüyü yüzlərlə və ya minlərlə sadə binari əmrlərə çevrilir. Proqram təminatı CPU-ya nə edəcəyini bildirir, lakin siz musiqi dinləyərkən, internetdə gəzəndə və dostunuzla yazışarkən kompüteriniz eyni anda birdən çox proqram təminatını işə salır."
       12:
+        text: "Beləliklə, bütün bu proqramlar ilk növbədə kompüterə necə daxil olur və CPU hamısını bir anda necə işlədə bilər? Bunu öyrənmək üçün əməliyyat sisteminə nəzər salmalıyıq."
       13:
+        text: "Kompüterin əməliyyat sistemi, proqram təminatının kompüterin avadanlıqlarından necə istifadə etdiyini idarə edən əsas proqramdır. Məsələn, mən əksər fərdi kompüterlərdə işləyən Windows əməliyyat sisteminin yaradılmasına kömək etmişəm."
       14:
+        text: "Əməliyyat sistemi kompüterdəki digər proqram təminatını idarə etməyə imkan verən xüsusi qabiliyyətlərə malik proqramdır. O, yeni proqramları kompüterinizin yaddaşına yükləyərək quraşdırmağa imkan verir. Proqramın mərkəzi prosessor tərəfindən nə vaxt işlədilməsi və həmin proqramın kompüterin giriş və çıxış cihazlarına daxil olub-olmaması barədə qərar qəbul edir. Və kompüterinizin eyni anda bir çox proqramı işlətdiyini düşündüyünüz zaman, əslində bu, bir saniyənin kəsirləri ərzində həmin CPU-nu paylaşan proqramlar arasında sürətlə keçid edən əməliyyat sistemidir."
       15:
+        text: "Hər bir kompüterin içərisində kompüterin aparatını idarə edən əməliyyat sistemini idarə edən proqram təminatı var."
       16:
+        text: "Proqram təminatı sadə ikili koddan ibarət əmrlər toplusudur və bu ikili kod milyardlarla kiçik dövrələrdən keçən elektrik siqnallarıdır."
       17:
+        text: "Kompüterlər hər cür heyranedici şeylər etmək potensialına malikdir. Ancaq kompüteri ağıllı və ya faydalı edən yeganə şey sizsiniz. Kodlamağı öyrənəndə siz həll etmək istədiyiniz problemi müəyyənləşdirir və bu ideyaları reallığa çevirən proqram təminatını yazırsınız."
     hoc_dance_warmup:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Qızışma"
       2:
+        text: "Salam! Mənim adım Miral Kotbdur və mən rəqqasə, proqram tərtibatçısı və iLuminate yaradıcısıyam."
       3:
+        text: "Beləliklə, kompüter elmi yaradıcılıqla bir çox cəhətdən əlaqəlidir. Ölçülməzdir, həqiqətən. Demək istədiyim odur ki, proqram təminatı yazmaq bacarığınız olduqdan sonra hər şeyə ideyalar qoya bilərsiniz. Mən bunu yüngül kostyumlarla edirəm. Proqram yazmaq üçün alətlərə sahib olduqdan sonra edə biləcəyiniz çox şey var və imkanlar həqiqətən sonsuzdur."
       4:
+        text: "Növbəti saatda siz öz rəqs partiyanızı proqramlaşdıraraq kompüter elmlərinə başlayacaqsınız! Sizinlə oynamağınız üçün bir neçə hit musiqi və möhtəşəm rəqqaslardan ibarət komanda topladıq."
       5:
+        text: "Siz müxtəlif rəqqasları seçmək, onların rəqs hərəkətlərini dəyişdirmək, musiqiyə reaksiya vermək və onu interaktiv etmək üçün kod bloklarından istifadə edəcəksiniz."
       6:
+        text: "Ekranınızın üç əsas hissəyə bölündüyünü görəcəksiniz. Solda oyun sahəsi var. Rəqqaslar və Rəqqasələr burada görünəcək."
       7:
+        text: "Bu orta sahə alətlər qutusudur. Siz dərsləri keçərkən bu bölgədə yeni kod blokları mövcud olacaq."
       8:
+        text: "Sağdakı boşluq iş sahəsidir. Proqramınızı qurmaq üçün blokları alətlər qutusundan çıxarıb iş sahəsinə çəkə bilərsiniz."
       9:
+        text: "Hər səviyyə üçün təlimatlar burada ekranın yuxarı hissəsində olacaq. Əgər sizə bir ipucu lazımdırsa, sadəcə lampanın üzərinə klikləyin."
       10:
+        text: "Başlamaq üçün gəlin bu qırmızı blokla yeni bir rəqqas yaradaq. Əvvəlcə onu alətlər qutusundan çıxarın və bu narıncı \"quraşdırma\" blokunun altına yapışdırın. Bu rəqqas pişikdir və adı \"mənim_ilk_rəqqasım\"dır. Bura klikləməklə adı istədiyinizə dəyişə bilərsiniz."
       11:
+        text: "Bununla siz rəqqasın oyun məkanınızda göründüyü yeri də dəyişə bilərsiniz."
       12:
+        text: "Oyun sahəsinin üstündə musiqi seçmək üçün menyu var. Seçmək üçün bir ton mahnı var, buna görə də sevimlilərinizi tapmaqdan əylənin. Oyun sahəsinin altında qaçış düyməsi var. Qaçış düyməsini basdığınız zaman proqramınızdakı rəqqasların oyun məkanında göründüyünü və musiqi çalınacağını görəcəksiniz."
       13:
+        text: "Özünüz cəhd edin! Və özünüzü ilişib hiss edirsinizsə, eybi yoxdur! Sadəcə ayağa qalx və hərəkət et və bir vaxt sonra öz rəqs partiyanı qurmuş olacaqsan. Yaxşı, nə yaradacaqsınız?"
     hoc_dance_events:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Hadisələr"
       2:
+        text: "Mən Aloe Blaccam. Mən müğənni, bəstəkar və sənətkar. Hesab edirəm ki, kompüter elmini öyrənmək həqiqətən vacibdir, çünki kompüter elmləri gələcəkdir və insanların həyatlarını sözün əsl mənasında idarə edən texnologiyaya nəzarət etməsinin vacib olduğunu düşünürəm."
       3:
+        text: "Fərqli rəqs hərəkətlərini musiqi ilə uyğun vaxtda etmək üçün hadisələr adlanan bir şeydən istifadə edə bilərsiniz. Hadisə proqramınıza nəyinsə baş verəcəyini dinləməyinizi və dərhal reaksiya vermənizi söyləyir."
       4:
+        text: "Hadisələrin bəzi nümunələri siçanın kliklənməsini, ox düyməsini və ya ekranda toxunuşu dinləməkdir. İndi istifadə edəcəyimiz hadisə mahnının dəyişməsini dinləyəcək. Dəyişiklik rəqqasınızı yeni rəqs etməyə sövq edəcək."
       5:
+        text: "Peşəkar rəqqaslar mahnının döyüntülərini saymaqla öz xoreoqrafiyalarını məşq edirlər."
       6:
+        text: "Musiqidə ölçü müəyyən sayda vuruşa aiddir. Ən məşhur mahnılarda ölçü dörd vuruş uzunluğundadır."
       7:
+        text: "Rəqqaslarınızı sərbəst buraxmaq üçün sizə yaşıl hadisə bloku lazımdır. Bu hadisə bloku \"4 ölçü sonra\" deyir."
       8:
+        text: "Bənövşəyi \"əbədi etmək\" blokunu sürükləsəniz, rəqqasınız üçün rəqs seçə bilərsiniz. \"4 ölçüdən sonra\" hadisə bloku altında olduğundan, rəqqasınız rəqsə başlamazdan əvvəl mahnının dörd ölçüsünü gözləyəcək."
       9:
+        text: "Ekran sahəsinin yuxarısındakı ölçü sayğacına diqqət yetirin."
       10:
+        text: "Rəqs kodunu işə salacaq hadisəyə baxın və qulaq asın. Və dərhal rəqqasımız rəqs etməyə başlayır."
     hoc_dance_properties:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Xüsusiyətlər"
       2:
+        text: "Mənim adım Mariadır. Mən Vaşinqton Universitetində təhsil alıram və Amazon şirkətinin gələcək mühəndisiyəm."
       3:
+        text: "Mən kompüter elmini sevirəm, çünki bu, problemlərin həlli və tənqidi düşüncəni əhatə edir və bir şey üzərində saatlarla işlədikdən sonra həqiqətən gözəl və məmnunedici bir şey tapa bilərsiniz."
       4:
+        text: "İndiyə qədər müxtəlif növ rəqqaslarla oynamaq şansınız olub və siz onları müxtəlif növ rəqs hərəkətləri etmək üçün proqramlaşdırmısınız. Bəs bu hərəkətlər həqiqətən necə işləyir?"
       5:
+        text: "Hər rəqs hərəkəti kadrlar adlanan bir sıra şəkillərdən ibarətdir. Hər bir kadr özündən əvvəlkindən bir qədər fərqlidir. Proqramınız işə salındıqda kompüter bir-birinin ardınca kadrları göstərir. Onlar o qədər sürətlə göstərilir ki, sanki rəqqas hərəkət edir. Bütün animasiyaların arxasındakı sirr budur."
       6:
+        text: "Yalnız rəqqasınızın hərəkətlərini deyil, həm də rəqqasın xüsusiyyətlərini dəyişə bilərsiniz. Xüsusiyyətlər rəqqasənin ekrandakı mövqeyi, rəqqasənin ölçüsü və rəqqasın rəngi kimi şeyləri təsvir edir."
       7:
+        text: "Rəqqasənin xassələrini dəyişdirmək üçün siz set blokdan istifadə edəcəksiniz. Rəqqaslarımızın daha kiçik görünməsi üçün set blokundan istifadə edək. Əvvəlcə müəyyən edilmiş bloku proqramınıza sürükləyin. Sonra dəyişdirmək istədiyiniz rəqqasəni seçin və ekranda görünəcək ölçüsünü yazın."
       8:
+        text: "Tam ölçü 100'dür. Daha aşağı rəqəm seçsəniz, rəqqas daha kiçik olacaq. Rəqqas nə qədər kiçik olsa, bir o qədər uzaqda görünür. Bu, ehtiyat rəqqas hazırlamaq üçün əla bir yoldur."
       9:
+        text: "Siz həmçinin dəst blokundan istifadə edərək rəqqasənin ölçülərini, fırlanmasını, mövqeyini və rəngini dəyişə bilərsiniz. Bu funksiyalarla oynamaqla siz hər cür dəyişikliklər edə və onları mahnının müxtəlif hissələri ilə əlaqələndirə bilərsiniz."
       10:
+        text: "Unutmayın ki, siz yalnız artıq mövcud olan rəqqasə xassələrini təyin edə bilərsiniz. Set blokunuzun \"Yeni rəqqas yaradın\" blokundan sonra gəldiyinə əmin olun. Təcrübə etməkdən çekinmeyin, yaradıcı olun və əylənin."
     hoc_dance_congrats:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Şənlik davam edir!"
@@ -1530,8 +1718,11 @@ az:
         text: "Tamam, macəraçı həmkarım, kifayət qədər qarmaqarışıqlıq. Sualtı xəzinə tapmaq üçün kodlaşdırmağa başlayaq."
     MC_2018_loops:
       1:
+        text: "Əla! Biz cod balığı tutduq! Bilirdinizmi ki, bir delfinə bir cod balığı bəsləsəniz, delfin sizi xəzinənin ola biləcəyi bir batmış gəmiyə aparacaq? Biz yaxınlaşırıq. Növbəti tapşırıqlar daha çətin olacaq, ona görə də daha çox kodlaşdırma bacarıqlarını öyrənək. Bu nədir? Mağara?"
       2:
+        text: "Xoş gəldiniz, macəraçılar! Mənim adım Squid. Son tapmacaların bəzilərində eyni əmrlər dəstindən dəfələrlə istifadə etdiyinizi gördüm. Bir az yorucu görsənir. Heç yorulmadan və ya cansıxıcı olmadan qab yumaq və ya dişlərinizi fırçalamaq kimi bir şeyi təkrar-təkrar etmək yolunun olmasını arzu edirsinizmi? Bu gözəl olardı."
       3:
+        text: "Kompüterlər kodlaşdırma dövrlərdən istifadə edərək eyni şeyi təkrar-təkrar etməkdə həqiqətən yaxşıdırlar. Proqramınızın eyni təlimatları dəfələrlə yerinə yetirməsini istədiyiniz zaman, bir dövrdən istifadə edə bilərsiniz!"
       4:
         text: "Döngü blokunda məqsədə çatana qədər təkrarlanan təlimatlar var. Proqramınız \"Məqsədə qədər təkrar et\" döngəsini işə saldıqdan sonra o, məqsədə çatana qədər içindəki təlimatları təkrar etməyə davam edəcək."
       5:
@@ -1540,16 +1731,21 @@ az:
         text: "Yaxşı, bu bir az qəribə idi. Kim bilirdi ki, kalamar kodlaşdıra bilir? Onların barmaqlarının olduğunu belə düşünmürdüm. Beləliklə, indi biz döngələr haqqında bilirik. Gəlin onlardan bizə daha çox xəzinə götürmək üçün istifadə edək."
     mc_2018_conditionals:
       1:
+        text: "Əla! Daha üç tapmaca həll edildi! Və... bir qızılbalıq tutduq. Qızıl yığınları qədər maraqlı deyil, amma əldə edə biləcəyimizi götürəcəyik. Və məndə belə bir hiss var ki, nautilus qabığı daha sonra işə yarayacaq. Maraqlıdır, bu xarabalıqlarda nə gizlənir? Bəlkə başqa bir işarə! Gəlin içəri nəzər salaq."
       2:
+        text: "Mənim adım Nettydir və xarabalıqlarıma xoş gəlmisiniz. Biz həmişə şəraitdən asılı olaraq qərarlar qəbul edirik. Yağış yağacaqmış kimi görünürsə, çətir götürəcəyik. Acıqsa, qəlyanaltı yeyəcəyik."
       3:
+        text: "Bir sürünən görsək, əks istiqamətdə qaçırıq. Kompüterlər də bu cür qərarlar verir. Onlar əslində koddan istifadə edərək şərtlərə cavab verə bilərlər."
       4:
         text: "Kod əmrlərindən istifadə edərək belə bir cavabı proqramlaşdırmaq üçün if yol blokunu seçin."
       5:
         text: "Komanda yaratmaq üçün açılan menyunu seçin."
       6:
+        text: "Məsələn, \"əgər yol sağa doğru\" əmrini yazsanız və şərti daxilində sağa dönsəniz, Stiv sağa açıq yola çatdıqda həmişə sağa dönəcək. Sağa açılma yoxdursa, sağa dönməyəcək. Bu şərti \"if\" əmrləri, sualtı mağaralardakı sirli xarabalıqlar kimi gözlənilməz vəziyyətlərdə kodu işlətdiyiniz zaman faydalıdır."
       7:
         text: "if bloklarından istifadə etməyə çalışın və kodunuzu fırlanma üçün götürün."
       8:
+        text: "Vay! Netty-nin qalıqları möhtəşəm idi. Mən həqiqətən də valideynlərimin evindən köçməliyəm. Belə ki, nə düşünürsünüz? Son tapmacaları tamamlamaq üçün şərtlərimiz uyğundurmu? Gəlin cəhd edək."
     mc_2018_closing:
       1:
         text: "Amy Lee33: Təbrik edirik! Sən bunu etdin!"
@@ -1560,25 +1756,80 @@ az:
       4:
         text: "Tomohawk: Təbriklər!"
       5:
+        text: "Nə gözəl gündür! Bütün xəzinə ovu bizi Minecraft kanalı qurmağa, Nautilus mərmilərini tapmağa və xəzinə sandıqlarını araşdırmağa apardı. Mən sadəcə prizmanın rəngini sevirəm. Dövrlər və şərti ifadələrlə kodlaşdırmağı da öyrəndik."
       6:
+        text: "Kodlaşdırmadan danışarkən, bu axtarışın daha bir səviyyəsi var. Buna hazırsınızmı, macəraçılar?"
       7:
         text: "Bu pulsuz oyun səviyyəsidir və siz kodlaşdırma bacarıqlarınızı istifadə etmək və inanılmaz bir şey qurmaq üçün qoya bilərsiniz."
       8:
+        text: "Hmmm... xəzinəni gizlətmək üçün yer, sualtı abidə, mərcan qala? Ahhh... çoxlu ideyalar. Təkrar hərəkət yaratmaq üçün döngələrdən və bütün bu gözlənilməz senarilərə hazırlaşmaq üçün şərtlərdən istifadə etməyə çalışın."
       9:
+        text: "Siz, şübhəsiz ki, indiyə qədər özünüzü cəsarətli bir kodlayıcı olduğununuzu sübut etdiniz və nə qurduğunuzu görmək üçün səbirsizlənirəm. Və ümid edirəm ki, kodla macəralarınız burada bitməyəcək. Yolunuz açıq olsun!"
     teaching_csf_how_it_works:
       1:
+        image: 'notlar/ogretme_cs_fundamentals_1.png'
         text: "Bu kurs bir neçə mərhələlərə bölünüb."
       2:
+        image: 'notlar/ogretme_cs_fundamentallar_1.png'
         text: "İlk bir neçə mərhələ sizə kompüter elmlərinin nə olduğunu təqdim edəcək, həmçinin bəzi açar lüğəti."
       3:
+        image: 'notlar/ogretme_cs_fundamentals_3.png'
+        text: "Sonra, tələbələrinizin olduğu kimi kodlaşdırmağı öyrənəcəksiniz. Kursun son mərhələləri sizə sinifinizdə informatika fənnini öyrətmək üçün plan hazırlamağa kömək edəcək. Kurs boyunca siz həm qoşulmuş, və ya onlayn dərslərin, eləcə də kompütersiz həyata keçirilən şəbəkədən çıxarılan dərslərin nümunələrini görəcəksiniz."
       4:
+        image: 'notlar/ogretme_cs_fundamentall_4.png'
+        text: "Öyrənmə platforması ilərləmənizi izləyəcək, beləliklə istədiyiniz zaman qaldığınız yerdən davam edə bilərsiniz."
+    what_is_cs:
+      1:
+        image: 'not cs nədir?'
+        text: "Kodlaşdırma kompüterə verdiyiniz göstərişlər toplusudur. Kompüter elmi insanların böyük problemləri həll etmək üçün kompüterin gücündən istifadə etdiyi bir sahədir. Kompüter elminə kodlaşdırma daxildir, lakin bu, internetin necə işlədiyi və cəmiyyətə təsir etməsi, böyük məlumatlarla nə etməli və böyük problemləri necə həll etmək kimi başqa şeyləri də əhatə edir. Kompüter elmi problem həll etmək, dərindən düşünmək və əzmkarlıq haqqındadır."
+    writing_first_program:
+      1:
+        image: 'notlar/yazi_ilk_program_1.png'
+        text: "Code.org Blockly adlı vizual, sürüklə və burax proqramlaşdırma dilindən istifadə edir. Blockly proqramlar qurmaq və tapmacaları həll etmək üçün bloklar adlanan rəngli təlimatlardan istifadə edir."
+      2:
+        image: 'notlar/yazi_ilk_program_2.png'
+        text: "hər pazlın 4 hissəsi var."
+      3:
+        image: 'notes/writing_first_program_3.png'
+        text: "proqramınızın işlədiyi oyun sahəsi soldadır"
+      4:
+        image: 'notlar/yazi_ilk_program_4.png'
+        text: "Mərkəzdə sizə lazım olan bütün blokların olduğu alətlər qutusu sahəsi var."
+      5:
+        image: 'notlar/yazi_ilk_program_5.png'
+        text: "Sağda proqramınızı qurmaq üçün blokları sürükləyəcəyiniz iş sahəsi var."
+      6:
+        image: 'notlar/yazi_ilk_program_6.png'
+        text: "İş sahəsinin üstündə hər tapmaca üçün təlimatlar var."
+      7:
+        image: 'notes/writing_first_program_7.png'
+        text: "Əgər alətlər qutusundan həddən artıq çox blok çıxarsanız, əlavə bloku yenidən alətlər qutusuna dartın. Proqramınızı sınamaq üçün Run düyməsini basın və yenidən cəhd etmək üçün Sıfırlayın."
+    repeat_block:
+      1:
+        image: 'notlat/tekrarla_blok.png'
+        text: "A təkrar bloku size onu dediyiniz qeder tekrarlamaq imkani verir"
+    what_is_an_event:
+      1:
+        image: 'notlar/ne_dir_an_hadise.png'
+        text: "Bir hadisə bir şeyin baş verməsini dinləmək üçün proqramınızı izah edir. Bu şey baş verəndə proqram bir hərəkət edir. Kompüter bir siçan klikine, bir ok düyməsini basmaga və ya ekranda bir krana qulaq asmaq bilər."
     lesson_planning:
       1:
+        image: 'notlar/dersler_planlama_1.png'
+        text: "CS Fundamentals dərsləri dərsin nə əhatə edəcəyini bildirmək üçün ümumi baxışlarla başlayır."
       2:
+        image: 'notlar/dersler_planlama_2.png'
+        text: "Derslerde isinme,fealiyetler ve ozetler var. Oz dersinizi planlamaq isteyirsinizse bu ipuclarini dusune bilersinz"
       3:
+        image: 'notlar/dersler_planlama_3.png'
+        text: "1. Spiraling tədris planı dizaynını istifadə etməyə çalışın. Bir dəfə anlayışları təqdim edin və sonra onları yenidən nəzərdən keçirin."
       4:
+        image: 'notlar/dersler_planlama_4.png'
+        text: "2. Onlayn dərsləri unplugged dərslərlə birləşdirərək qarışıq bir öyrənmə təcrübəsi yaradın."
       5:
+        image: 'notlar/dersler_planlama_5.png'
+        text: "3. Tədris planınızı kiçik parçalara bölün."
       6:
+        image: 'notlar/dersler_planlama_6.png'
         text: "4. Yerli standartlara, kollec və karyeraya hazırlıq bacarıqlarına uyğunlaşdığınızdan əmin olun."
     opd_closing:
       1:
@@ -1591,41 +1842,84 @@ az:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Qızışma"
       2:
+        text: "Salam! Mənim adım Miral Kotbdur və mən rəqqasə, proqram tərtibatçısı və iLuminate yaradıcısıyam."
       3:
+        text: "Kompüter elmləri yaradıcılıqla çoxsaylı əlaqəlidir. Həqiqətən, ölçüləbilməzdir. Demək istədiyim odur ki, proqram yazmaq bacarığına sahib olduqdan sonra, fikirlərinizi hər şeyə qoya bilərsiniz. Mən bunu yüngül kostyumlarla edirəm. Alətlərə sahib olduqdan sonra, proqram yazmaq üçün  edə biləcəyiniz çox şey var. İmkanlarınız həqiqətən sonsuzdur."
       4:
+        text: "Növbəti saatda siz öz rəqs partiyanızı proqramlaşdıraraq kompüter elmlərinə başlayacaqsınız! Sizinlə oynamağınız üçün bir neçə hit musiqi və möhtəşəm rəqqaslardan ibarət komanda topladıq."
       5:
+        text: "Siz müxtəlif rəqqasları seçmək, onların rəqs hərəkətlərini dəyişdirmək, musiqiyə reaksiya vermək və onu interaktiv etmək üçün kod bloklarından istifadə edəcəksiniz."
       6:
+        text: "Ekranınızın üç əsas hissəyə bölündüyünü görəcəksiniz. Solda oyun sahəsi var. Rəqqaslar və Rəqqasələr burada görünəcək."
       7:
+        text: "Orta sahə alətlər qutusudur. Dərslərdən keçərkən bu məkanda yeni kod blokları mövcud olacaq."
       8:
+        text: "Sağdakı boşluq iş sahəsidir. Proqramınızı qurmaq üçün blokları alətlər qutusundan çıxarıb iş sahəsinə çəkə bilərsiniz."
       9:
+        text: "Hər səviyyə üçün təlimatlar burada ekranın yuxarı hissəsində olacaq. Əgər sizə bir ipucu lazımdırsa, sadəcə lampanın üzərinə klikləyin."
       10:
+        text: "Başlamaq üçün gəlin bu qırmızı blokla yeni rəqqasə hazırlayaq. Əvvəlcə onu alətlər qutusundan çıxarın və bu narıncı \"quraşdırma\" blokunun altına yapışdırın. Bu rəqqasə pişikdir."
       11:
+        text: "Bununla siz rəqqasın oyun məkanınızda göründüyü yeri də dəyişə bilərsiniz."
       12:
+        text: "Oyun sahəsinin üstündə musiqi seçmək üçün menyu var. Seçmək üçün bir ton mahnı var, buna görə də sevimlilərinizi tapmaqdan əylənin. Oyun sahəsinin altında qaçış düyməsi var. Qaçış düyməsini basdığınız zaman proqramınızdakı rəqqasların oyun məkanında göründüyünü və musiqi çalınacağını görəcəksiniz."
       13:
+        text: "Özünüz sınayın! Və əgər özünü ilişmiş hiss edirsənsə, hər şey qaydasındadır, sadəcə ayağa qalx və hərəkət et! Bunu bilməmişdən əvvəl isə öz rəqs şənliyini düzəltmiş olacaqsan. Elə isə, nə yaradacaqsız?"
     hoc_dance_events_2019:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Hadisələr"
       2:
         text: "Mənim adım Erindir və mən Code.org-da proqram təminatı mühəndisiyəm və mən Rəqs Partisini qurmağa kömək etmişəm."
       3:
+        text: "Musiqi ilə fərqli rəqs hərəkətlərini sadəcə lazımi vaxtda həyata keçirmək üçün hadisələr deyilən bir şeydən istifadə edə bilərsiniz. Bir hadisə proqramınıza hansısa hadisənin baş verdiyinə «qulaq as» və dərhal reaksiya göstərməyi tapşırır."
       4:
         text: "Hadisələrin bəzi nümunələri siçanın kliklənməsini, ox düyməsini və ya ekranda toxunuşu dinləməkdir."
       5:
+        text: "Burada ekranda oxu düymələrini, yaxud klaviaturanızdakı tuşlara basdıqda hərəkət etmək üçün rəqqas proqramını proqramlaşdıracayıq."
       6:
+        text: "\"Ox yuxarı olduqda\" hadisə blokundan istifadə edib ona \"bir dəfə et\" blokunu bağlaya bilərik. Kimsə yuxarı ox açarına basdıqda, \"yuxarı ox\" blokuna yapışdırılan kod işə salınır. Hansı rəqs hərəkətini seçəcəksiniz?"
       7:
+        text: "Seçdiyiniz rəqqas növünün \"quraşdırma\" blokunun daxilində yaratdığınız rəqqaslardan birinə uyğun olduğuna əmin olun. Yoxsa heç nə baş verməyə bilər."
       8:
+        text: "Nəhayət, rəqqaslarınızın hər bir tuşla fərqli hərəkətlər etməsi üçün bu kimi daha çox hadisələr yarada bilərsiniz. Cəhd edin və bir neçə sətir kod ilə siz öz interaktiv rəqsinizi yarada bilərsiz"
+    hoc_dance_measures_2019:
+      1:
+        text: "Kod saatı | Rəqs Şənliyi: Ölçülər"
+      2:
+        text: "Mən Aloe Blaccam. Mən müğənni, bəstəkar və sənətkar. Hesab edirəm ki, kompüter elmini öyrənmək həqiqətən vacibdir, çünki kompüter elmləri gələcəkdir və insanların həyatlarını sözün əsl mənasında idarə edən texnologiyaya nəzarət etməsinin vacib olduğunu düşünürəm."
+      3:
+        text: "İndi istifadə edəcəyimiz hadisə mahnıda dəyişiklik üçün qulaq asacaq. Bu dəyişiklik sizi yeni rəqs etməyə təhrik edəcək."
+      4:
+        text: "Peşəkar rəqqaslar mahnının döymələrini sayaraq xoreoqrafiyalarını məşq edirlər. Musiqidə ölçü müəyyən bir döyməni ifadə edir. Əksər məşhur mahnılarda bir ölçü dörd döymə uzunluğundadır."
+      5:
+        text: "Rəqqaslarınızı sərbəst buraxmaq üçün sizə yaşıl hadisə bloku lazımdır. Bu hadisə bloku \"4 ölçü sonra\" deyir."
+      6:
+        text: "Bənövşəyi \"əbədi etmək\" blokunu sürükləsəniz, rəqqasınız üçün rəqs seçə bilərsiniz. \"4 ölçüdən sonra\" hadisə bloku altında olduğundan, rəqqasınız rəqsə başlamazdan əvvəl mahnının dörd ölçüsünü gözləyəcək."
+      7:
+        text: "Ekran sahəsinin yuxarısındakı ölçü sayğacına diqqət yetirin."
+      8:
+        text: "Rəqs kodunu işə salacaq hadisəyə baxın və qulaq asın. Və dərhal rəqqasımız rəqs etməyə başlayır."
     hoc_dance_properties_2019:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Xüsusiyətlər"
       2:
+        text: "Mənim adım Mariadır. Mən Vaşinqton Universitetində təhsil alıram və Amazon şirkətinin gələcək mühəndisiyəm."
       3:
+        text: "Mən kompüter elmini sevirəm, çünki bu, problemlərin həlli və tənqidi düşüncəni əhatə edir və bir şey üzərində saatlarla işlədikdən sonra həqiqətən gözəl və məmnunedici bir şey tapa bilərsiniz."
       4:
+        text: "İndiyə qədər bəzi müxtəlif rəqs növlərini oynamaq şansınız olub və onları müxtəlif rəqs hərəkətləri etmək üçün proqramlaşmısınız. Bəs bu hərəkətlər həqiqətən də necə nəticə verir?"
       5:
+        text: "Hər rəqs hərəkəti kadrlar adlanan bir sıra şəkillərdən ibarətdir. Hər bir kadr özündən əvvəlkindən bir qədər fərqlidir. Proqramınız işə salındıqda kompüter bir-birinin ardınca kadrları göstərir. Onlar o qədər sürətlə göstərilir ki, sanki rəqqas hərəkət edir. Bütün animasiyaların arxasındakı sirr budur."
       6:
+        text: "Yalnız rəqqasınızın hərəkətlərini deyil, həm də rəqqasın xüsusiyyətlərini dəyişə bilərsiniz. Xüsusiyyətlər rəqqasənin ekrandakı mövqeyi, rəqqasənin ölçüsü və rəqqasın rəngi kimi şeyləri təsvir edir."
       7:
+        text: "Bir rəqqasın xüsusiyyətlərini dəyişdirmək üçün set blokundan istifadə edəcəksiniz.  Rəqqaslarımızın daha kiçik görünməsi üçün set blokundan istifadə edək. Əvvəlcə, set blokunuzu proqramınıza çəkin."
       8:
+        text: "Sonra dəyişmək istədiyiniz rəqqas seçin və ekranda görünəcəkləri ölçüdə yazın. Tam ölçüsü 100-dür. Daha az rəqəm seçsəniz, bu rəqqasəni daha kiçik edər. Rəqqas nə qədər kiçik olsa, bir o qədər uzaqdan görsənir. "
       9:
+        text: "Set blokundan istifadə edərək rəqqasın ölçülərini, dönmə, mövqe və rəngini də dəyişə bilərsiniz. Bu xüsusiyyətlərlə oynamaqla hər cür dəyişiklik edə və onları mahnının müxtəlif hissələri ilə əlaqələndirə bilərsiniz."
       10:
+        text: "Unutmayın ki, siz yalnız artıq mövcud olan rəqqasə xassələrini təyin edə bilərsiniz. Set blokunuzun \"Yeni rəqqas yaradın\" blokundan sonra gəldiyinə əmin olun. Təcrübə etməkdən çəkinmeyin, yaradıcı olun və əylənin!"
     hoc_dance_congrats_2019:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Şənlik davam edir!"
@@ -1641,3 +1935,166 @@ az:
         text: "Yoxsa tamam başqa bir şey?"
       7:
         text: "Təlimin sonunda siz öz yaradıcılığınızın linkini dostlarınızla paylaşa bilərsiniz. Təsəvvürünüzü genişləndirin və sadəcə əylənin!"
+    poemart_intro:
+      1:
+        image: 'qeydlər/hoc_poem_art_2021_introduction_01.jpg'
+        text: "Mənim adım Caiadır, mən  şair və kompüter elmləri tələbəsiyəm. Kodlaşdırmadan o qədər öyrəndim ki, bu da məni daha yaxşı şair etdi. Mənim şeirimlə bağlı çox şey məni kodlaşdırmada daha yaxşı etdi. Sadəcə ona görə ki, hər şey bir araya gəldikdən sonra həqiqətən seçdiyin sözlər və nələri yaradacağın haqda düşünmək lazımdır."
+      2:
+        image: 'qeydlər/hoc_poem_art_2021_sert_02.jpg'
+        text: "Növbəti saat ərzində siz animasiyalı şeir yaradaraq kompüter elmləri və poeziya haqqında məlumat əldə edəcəksiniz. Mahiyyətcə poeziya sözlərlə incəsənəti yaradır. Özümü ifadə etmək üçün şeir yaradıram; Özünəməxsus üslubumdan və ritmimdən istifadə edərək yazanda dinləyicilərin təxəyyülünü və emosiyalarını oyatmağa çalışıram."
+      3:
+        image: 'qeydlər/hoc_poem_art_2021_sert_03.jpg'
+        text: "Necə ki, incəsənət kimi şeirləri də bir çox fərqli mənalarda izah etmək olar. Eyni şeir müxtəlif insanlar üçün çox fərqli şeylər ifadə edə bilər. Hər şeirin öz əhval-ruhiyyəsi var. Əhval-ruhiyyə şeirdən əldə etdiyin hissdir. Bəzən insanlar müəyyən rəngləri və obrazları müxtəlif əhval-ruhiyyə ilə əlaqələndirirlər."
+      4:
+        image: 'qeydlər/hoc_poem_art_2021_sert_04.jpg'
+        text: "Məsələn, sarı rəngin rəngi məni şənləndirir. Qorxu kimi əhval-ruhiyyə haqqında düşünəndə isə bəzən başımda qaranlıq və fırtınalı bir gecə təsəvvür edirəm. Bu fəaliyyətdə hiss etdiyiniz hisslərə əsaslanaraq bir şeirin əhval-ruhiyyəsini əyani və canlandırmaq imkanınız olacaq."
+      5:
+        image: 'qeydlər/hoc_poem_art_2021_sert_05.jpg'
+        text: "Kod istifadə edərək bunu necə edəcəyinizə diqqət yetirək. Ekranınızın üç əsas hissəyə bölündüyünü görəcəksiniz. Sol tərəfdə oyun yeri yerləşir. Burada sizin animasiya şeiriniz gələcək. Hər şeirin bir başlığı və bir müəllifi vardır."
+      6:
+        image: 'qeydlər/hoc_poem_art_2021_sert_06.jpg'
+        text: "Bu orta sahə alətlər qutusudur. Dərsdən keçərkən bu məkanda yeni kod blokları əlçatan olacaq."
+      7:
+        image: 'qeydlər/hoc_poem_art_2021_sert_07.jpg'
+        text: "Sağ tərəfdəki boşluq iş sahəsidir. Proqramınızı qurmaq üçün blokları alət qutusundan və iş yerinə sürükləyə bilərsiniz."
+      8:
+        image: 'qeydlər/hoc_poem_art_2021_sert_08.jpg'
+        text: "Hər bir səviyyə üçün təlimatlar ekranın yuxarı hissəsində burada olacaq. Əgər işarə istəyirsinizsə, lampanın üzərinə basın."
+      9:
+        image: 'qeydlər/hoc_poem_art_2021_sert_09.jpg'
+        text: "Əvvəlcə bəyəndiyiniz şeiri seçin. Hər cür şeir var və hər səviyyədə yenisini seçə bilərsiniz."
+      10:
+        image: 'qeydlər/hoc_poem_art_2021_sert_10.jpg'
+        text: "Sonra şeirinizi canlandırmaq üçün alətlər qutusundan blokları iş yerinizə sürükləyəcəksiniz. Şeirinizin əhval-ruhiyyəsinə uyğun arxa fon rəngi və ya effekt seçə bilərsiniz. Sonra \"Qaç\"a basaraq şeirinizi hərəkətdə görə bilərsiniz."
+      11:
+        image: 'qeydlər/hoc_poem_art_2021_sert_11.jpg'
+        text: "Müxtəlif şeirləri oxumağa bir qədər vaxt ayırın və sizdə hiss oyadan bir şeir tapın. Özünüzü necə hiss etdiyinizi və bu hissləri obraz və kod vasitəsilə necə çatdıra biləcəyinizi düşünün."
+    poemart_events:
+      1:
+        image: 'qeydlər/hoc_poem_art_2021_hadisələr_01.jpg'
+        text: "Bəzən şeirin əhval-ruhiyyəsi şeirdə qismən dəyişir. Xoşbəxt şeir kimi başlayan şeylər kədərə çevrilir, yaxud qaranlıq işıq saçar."
+      2:
+        image: 'qeydlər/hoc_poem_art_2021_hadisələr_02.jpg'
+        text: "Bu fəaliyyətdə siz hadisələrlə işləyəcəksiniz. Bu hadisə blokundan istifadə edərək şeirinizdə konkret bir xətt göründüyü zaman proqramınızın gedişatını dəyişə bilərsiniz. Qeyd edək ki, hadisə blokları sizin əsas proqramınıza daxil deyil. Əksinə, onlar özlərinin az proqramlarını yaradırlar."
+      3:
+        image: 'qeydlər/hoc_poem_art_2021_hadisələr_03.jpg'
+        text: "Şeirinizi oxuyun və əhval-ruhiyyənin dəyişdiyi anı tapın. Hansı sətirdə baş verdiyini sayaq: bir, iki, üç. Hadisə blokunuzda sətirin nömrəsini daxil edin."
+      4:
+        image: 'qeydlər/hoc_poem_art_2021_hadisələr_04.jpg'
+        text: "Sonra bu xətt ekranda özünü büruzə verəndə əhval-ruhiyyənin dəyişməsini əks etdirmək üçün bir şeydə proqramla. \"Başlada\" basdıqda kodladığınızı görə bilərsiniz."
+    poemart_imagery:
+      1:
+        image: 'qeydlər/hoc_poem_art_2021_obrazlılıq_01.jpg'
+        text: "Poeziyada müəlliflər oxucunun zehnində bir şəkil çəkmək üçün obrazlardan istifadə edirlər. Timsah sözünü görəndə ağlımızda avtomatik olaraq yaşıl timsah təsəvvür edirik. Belə bir şəkli animasiyaya daxil etmək üçün spritlərdən istifadə edəcəyik."
+      2:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_02.jpg'
+        text: "Bu, sizə sprayt düzəltməyə və onun üçün kostyum seçməyə imkan verən yeni sprayt bloku yaradır. Şeirlə uyğunlaşdığını düşündüyünüz sprite üçün kostyum seçin. "
+      3:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_03.jpg'
+        text: "Sprite-ın yerini dəyişdirmək üçün yer blokunundakı sancaq ikonasını klikləyə və sonra oyun yerində getməsini istədiyiniz yerə klikləyə bilərsiniz."
+      4:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_04.jpg'
+        text: "Növbəti bir neçə səviyyədə bəzi yeni bloklar görəcəksiniz. Bu blok sprite-ın ölçüsünü dəyişdirməyə imkan verir. Bu blok, sizin sprite-ı davranışla canlandırmağa imkan verir."
+      5:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_05.jpg'
+        text: "Əgər şeirdə gəzən buludlardan bəhs edirsə, əvvəlcə bulud sprite-ı yaradın, sonra bu davranış blokunu seçin, sürükləyin və gəzməyi seçin."
+      6:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_06.jpg'
+        text: "Sprite kostyumlarınızın uyğun olduğundan əmin olun. İcra et düyməsini basdığınız zaman gəzən bir bulud oxuyub və görəcəksiniz."
+      7:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_07.jpg'
+        text: "İndi şeirdəki sözləri göstərmək üçün hərfi şəkillər əlavə edə bilərsiniz. Əylənin!"
+    poemart_celebration:
+      1:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_01.jpg'
+        text: "Təbrik edirəm! Kompüter elmlərinin əsaslarını və bir şeirin əhvalını necə tapmağı öyrəndiniz. İndi dostlarınızla bölüşmək üçün öz cizgi şeirinizi yarada bilərsiniz."
+      2:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_02.jpg'
+        text: "Bütün şeir üçün sadə bir səhnə diqqətlə seçəcəksinizmi?"
+      3:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_03.jpg'
+        text: "Yoxsa şeirinizin hər sətrinə yeni bir səhnə yaratmaq üçün çoxlu tədbirlərdən istifadə edəcəksiniz?"
+      4:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_04.jpg'
+        text: "Təlimatın sonunda dostlarınızla yaradıcılığınızı link ilə paylaşa bilərsiniz."
+      5:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_05.jpg'
+        text: "Təsəvvürünüzü uzatın və əylənin!"
+    hello_world_intro:
+      1:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_01.jpg'
+        text: "Salam! Mənim adım Erindir və mən Code.org-da bir proqram mühəndisiyəm. Çox həyəcanlıyam, çünki edəcəyiniz dərslik üzərində işləmişdim! Buna “Salam Dünya” deyirik."
+      2:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_02.jpg'
+        text: "“Salam Dünya” kompüter elmlərində məşhur bir ifadədir və bu ifadənin göstərilməsi kompüter elmlərini öyrənməkdə ümumi ilk addımdır. Növbəti saat ərzində Sprite Laboratoriyasında proqramlaşdıraraq kompüter elmlərinə başlayacaqsınız."
+      3:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_03.jpg'
+        text: "Sprite Laboratoriyası xəyali və əyləncəli layihələr qurmaq üçün istifadə edə biləcəyiniz bir vasitədir. Ekranınızın üç əsas hissəyə bölündüyünü görəcəksiniz. Solda oyun sahəsi var. Spritelarınızın görünəcəyi yer budur."
+      4:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_04.jpg'
+        text: "Spritelar ekrandakı əlaqə qura biləcəyiniz obyektlərdir,  hekayədə və ya oyundakı bir personaj və ya element kimi."
+      5:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_05.jpg'
+        text: "Bu orta sahə alətlər qutusudur. Dərsdən keçərkən bu məkanda yeni kod blokları əlçatan olacaq."
+      6:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_06.jpg'
+        text: "Sağ tərəfdəki boşluq iş sahəsidir. Toolbox-dan blokları çıxara bilərsiniz və proqramınızı qurmaq üçün iş yerinə daxil ola bilərsiniz."
+      7:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_07.jpg'
+        text: "Hər bir səviyyə üçün təlimatlar ekranın yuxarı hissəsində burada olacaq. Əgər işarə istəyirsinizsə, lampanın üzərinə basın."
+      8:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_08.jpg'
+        text: "Başlamaq üçün bir sprite hazırlayaq! Bu blok sizə sprite-a kostyum və yer verməyə imkan verir. Kostyum, sprite-ın görünüşünü təsvir etmək üçün istifadə etdiyimiz sözdür. Sprite yerini dəyişdirmək üçün yer blokunundakı sancaq ikonunu klikləyə və sonra getməsini istədiyiniz yerə klikləyə bilərsiniz."
+      9:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_09.jpg'
+        text: "İndi sprite-in özünü tanıtmasına icazə verək! Sprite bir şey söyləmək üçün bu “Söylə” blokundan istifadə edin və proqramınıza əlavə edin. “Söylə” blokunuzda seçilmiş kostyumun sprite-nızdaki kostyumla uyğun olduğundan əmin olun."
+      10:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_10.jpg'
+        text: "“İcra et” düyməsini basdığınız zaman sprite istədiyiniz mətni söyləyəcək. İndi Sprite Laboratoriyası ilə başlamağın və təsəvvürünüzün sizi hara aparacağını görməyin vaxtı gəldi!"
+    hello_world_events:
+      1:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_01.jpg'
+        text: "İndi Sprite Laboratoriyadan necə istifadə edəcəyinizi öyrəndiyiniz üçün proqramınızın kimsə onunla oynadığı zaman reaksiya verməyini istəyəcəksiniz. Bunu etmək üçün hadisələrdən istifadə edəcəksiniz. Bir hadisə proqramınıza bir şeyin baş verməsini dinləməsini və sonra dərhal reaksiya verməsini söyləyir."
+      2:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_02.jpg'
+        text: "Hadisələrin bəzi nümunələri siçan klik, ox düyməsi və ya ekranda tap dinləyir. \"Clicked\" kimi bloklar hadisə blokları adlanır. Hadisə blokuna bağlı kod müvafiq hərəkət aşkar edildikdə işə salır."
+      3:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_03.jpg'
+        text: "Məsələn, bu “söyləyin” bloku “tıklandıqda” hadisəsinə əlavə etsəm, istifadəçi kliklədikdə və ya vurduqda mənim spritem bir şey söyləyəcək. Hadisə bloklarının əsas proqramınıza daxil olmadığına diqqət yetirin. Bunun əvəzinə özləri üçün kiçik proqramlar yaradırlar."
+      4:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_04.jpg'
+        text: "Birdən çox spritiniz varsa, interaktiv bir hekayə danışmaq üçün əlavə hadisələrdən istifadə edə bilərsiniz."
+      5:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_05.jpg'
+        text: "Tezliklə Sprite Laboratoriyasında sprite-in ölçüsünü və ya görünüşünü dəyişdirmək, fərqli fonlar qurmaq, səslər çalmaq və s. daxil olmaqla daha çox şeyi necə edəcəyinizi öyrənəcəksiniz. Kimsə onlarla ünsiyyət qurduqda spritlərinizin nə etməsini istəyirsiniz? Bu sizə bağlıdır!"
+    hello_world_congrats:
+      1:
+        image: 'qeydlər/hoc_salam_dünya_2021_azadoyna_01.jpg'
+        text: "Təbrik edirəm! Kompüter elminin əsaslarını yeni öyrənmisiniz. İndi istədiyinizi yaratmaq üçün Sprite Laboratoriyadan istifadə edə bilərsiniz."
+      2:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_02.jpg'
+        text: "Kostyumlar yazan bir düymə görəcəksiniz. Üzərinə kliklədiyiniz zaman kitabxanadan yeni sprite kostyumları seçə bilərsiniz."
+      3:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_02.jpg'
+        text: "Özün də çəkə bilərsən! Bəyəndiyiniz kostyuma sahib olduqdan sonra kodunuza geri dönün."
+      4:
+        image: 'Qeyd'
+        text: "İndi sprite üçün həmin kostyumu seçin."
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "Alət qutusuna baxsanız, əvvəllər görmədiyiniz yeni blokları tapa bilərsiniz. Məsələn, spritiniza əyləncəli və maraqlı yollarla hərəkət etməyə imkan verən çoxlu davranış bloku var."
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "İki sprit bir-birinə vurduqda nə baş verdiyini idarə etmək üçün “toxunanda” hadisə blokunundan istifadə edə bilərsiniz."
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "“Effekt yaradın” blokunu axtarın. Bu güclü blok əmrlə partlayan, yağan və ya yağış yağan bir dəstə sprites hazırlamaq üçün istifadə edilə bilər."
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Ətrafa nəzər salın. Bu yeni blok və xüsusiyyətləri təcrübədən keçirməyə çalışın. Təlimatın sonunda \"Paylaş\" düyməsinə basaraq, yaratdığınız bir linki dostlarınızla paylaşın."
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "Sprite Lab-da tətbiqlər, oyunlar və digər yeni proqramlar inkişaf etdirməyə başlamaq üçün lazım olan bütün güclü bacarıqlara sahibsiniz! Yeni güclərinizdən yaxşılığa istifadə edin. Kağız üzərində bir şey yaratdığınız və ya dostunuzla danışdığınız kimi mehriban və hörmətli olun."
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "Belə isə nə yaradırsınız? Özünüz haqqında bir hekayə danışa bilərdiniz... və ya birini öz xüsusi qəhrəmanlarınızı düzəldin. Bəlkə siz hətta yeni kompüter elmləri bacarıqlarınızı növbəti məktəb layihəniz üçün istifadə edəcəksiniz! Təxəyyülünüzü uzatın və əylənin!"

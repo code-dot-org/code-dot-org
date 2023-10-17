@@ -13,7 +13,7 @@
 version: "3"
 services:
   site:
-    image: codedotorg/code-dot-org:1.5.4
+    image: codedotorg/code-dot-org:1.9.1
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated
@@ -21,6 +21,11 @@ services:
       - mysqldata:/var/lib/mysql
       - yarncache:/home/circleci/.cache
       - gcloud_config:/home/circleci/.config/gcloud
+      - $HOME/.aws:/home/circleci/.aws
+    tty: true
+    stdin_open: true
+    environment:
+      - AWS_PROFILE
     command: bash -c "docker/dev_setup.sh"
 
 volumes:

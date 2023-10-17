@@ -26,3 +26,5 @@ Going through the code line by line:
 * Therefore, it will exit the loop when _a_ is 2 (less than three, does not meet the condition for the while loop)
 * The value of _a_ is displayed, which equals 2
 MARKDOWN
+
+allow_multiple_attempts true

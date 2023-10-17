@@ -1,6 +1,6 @@
 import {
   TestResults,
-  BeeTerminationValue as TerminationValue
+  BeeTerminationValue as TerminationValue,
 } from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
 
@@ -15,7 +15,7 @@ var levelDef = {
     [2, 1, 1, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 0, 0, 0, 0],
-    [0, 0, 1, 1, 0, 0, 0, 0]
+    [0, 0, 1, 1, 0, 0, 0, 0],
   ],
   startDirection: 1, // Direction.EAST,
   initialDirt: [
@@ -26,9 +26,9 @@ var levelDef = {
     [0, 1, 2, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
-  flowerType: 'redWithNectar'
+  flowerType: 'redWithNectar',
 };
 
 module.exports = {
@@ -40,9 +40,9 @@ module.exports = {
       description: 'Get two nectar',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 2;
       },
       xml:
@@ -51,17 +51,17 @@ module.exports = {
           'maze_moveForward',
           'maze_nectar',
           'maze_moveForward',
-          'maze_nectar'
+          'maze_nectar',
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Get three nectar (one extra)',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 3;
       },
       xml:
@@ -71,17 +71,17 @@ module.exports = {
           'maze_nectar',
           'maze_moveForward',
           'maze_nectar',
-          'maze_nectar'
+          'maze_nectar',
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Get only 1 nectar',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 1 &&
           Maze.executionInfo.terminationValue() ===
@@ -91,16 +91,16 @@ module.exports = {
       xml:
         '<xml>' +
         blockUtils.blocksFromList(['maze_moveForward', 'maze_nectar']) +
-        '</xml>'
+        '</xml>',
     },
     {
       description:
         "Fail immediately trying to get nectar where there isn't any",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 0 &&
           Maze.executionInfo.terminationValue() ===
@@ -114,30 +114,29 @@ module.exports = {
           'maze_moveForward',
           'maze_nectar',
           'maze_moveForward',
-          'maze_nectar'
+          'maze_nectar',
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Fail leaving path',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 0;
       },
       // turn left, move forward
-      xml:
-        '<xml><block type="maze_turn"><title name="DIR">turnLeft</title><next><block type="maze_moveForward"></block></next></block></xml>'
+      xml: '<xml><block type="maze_turn"><title name="DIR">turnLeft</title><next><block type="maze_moveForward"></block></next></block></xml>',
     },
     {
       description: 'Fail getting more nectar than there is',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.controller.subtype.nectars_.length === 1 &&
           Maze.executionInfo.terminationValue() ===
@@ -149,9 +148,9 @@ module.exports = {
         blockUtils.blocksFromList([
           'maze_moveForward',
           'maze_nectar',
-          'maze_nectar'
+          'maze_nectar',
         ]) +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

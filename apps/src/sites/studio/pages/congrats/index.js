@@ -7,7 +7,7 @@ import {getStore} from '@cdo/apps/redux';
 import queryString from 'query-string';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const store = getStore();
   const script = document.querySelector('script[data-congrats]');
   const congratsData = JSON.parse(script.dataset.congrats);

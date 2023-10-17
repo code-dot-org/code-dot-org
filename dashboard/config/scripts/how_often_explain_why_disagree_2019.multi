@@ -5,3 +5,4 @@ right 'Rarely (a few times a year)'
 right 'Sometimes (once or twice a month)'
 right 'Often (once or twice a week)'
 right 'Almost every lesson'
+allow_multiple_attempts true

@@ -8,6 +8,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
 import {studentShape, levelWithProgress} from './types';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 
@@ -17,7 +18,7 @@ export default class SelectedStudentInfo extends React.Component {
     onSelectUser: PropTypes.func.isRequired,
     selectedUserId: PropTypes.number,
     teacherId: PropTypes.number,
-    levelsWithProgress: PropTypes.arrayOf(levelWithProgress)
+    levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
   };
 
   onUnsubmit = userLevelId => {
@@ -27,9 +28,9 @@ export default class SelectedStudentInfo extends React.Component {
       data: {
         user_level: {
           best_result: 1,
-          submitted: false
-        }
-      }
+          submitted: false,
+        },
+      },
     })
       .done(data => {
         // Let's just refresh so that the dots are correct, etc.
@@ -79,7 +80,7 @@ export default class SelectedStudentInfo extends React.Component {
       // If not viewing a student, the teacher has themself selected
       return {
         id: teacherId,
-        name: i18n.studentTableTeacherDemo()
+        name: i18n.studentTableTeacherDemo(),
       };
     }
   };
@@ -121,14 +122,8 @@ export default class SelectedStudentInfo extends React.Component {
       );
     }
 
-    const {
-      paired,
-      submitLevel,
-      status,
-      updatedAt,
-      partnerNames,
-      partnerCount
-    } = levelWithProgress;
+    const {paired, submitLevel, status, updatedAt, partnerNames, partnerCount} =
+      levelWithProgress;
 
     return (
       <div style={styles.main}>
@@ -172,7 +167,6 @@ export default class SelectedStudentInfo extends React.Component {
                   : i18n.notApplicable()}
               </div>
               <Button
-                __useDeprecatedTag
                 text={i18n.unsubmit()}
                 color="blue"
                 onClick={() => this.onUnsubmit(levelWithProgress.userLevelId)}
@@ -196,7 +190,7 @@ const styles = {
   main: {
     display: 'flex',
     justifyContent: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   studentInfo: {
     minHeight: 80,
@@ -204,24 +198,26 @@ const styles = {
     textAlign: 'center',
     display: 'flex',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   bubble: {
-    marginLeft: 0
+    marginLeft: 0,
   },
   name: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold',
-    fontSize: 15
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 15,
   },
   timeHeader: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
+    ...fontConstants['main-font-semi-bold'],
   },
   arrow: {
     fontSize: 40,
     cursor: 'pointer',
     position: 'relative',
-    top: 30
-  }
+    top: 30,
+  },
+  button: {
+    margin: 0,
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+  },
 };

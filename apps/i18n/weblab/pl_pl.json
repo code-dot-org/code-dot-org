@@ -1,9 +1,12 @@
 {
   "addCSSButton": "Dodaj CSS",
-  "addImageButton": "Dodaj obraz",
   "addHTMLButton": "Dodaj HTML",
+  "addImageButton": "Dodaj obraz",
   "closeFullscreenPreview": "Zamknij podgląd pełnoekranowy",
   "currentProjectCapacity": "{currentMegabytes}MB z {totalMegabytes}MB używane",
+  "disallowedHtml": "Plik \"{filename}\" zawiera elementy HTML, które nie są dozwolone: `{disallowedTags}`. Zostaną one usunięte po zamknięciu tego okna dialogowego.",
+  "errorSavingProject": "Coś nie działało podczas automatycznego zapisywania Twojego projektu. Sprawdź połączenie internetowe i spróbuj ręcznie zapisać. Jeśli ten problem będzie się powtarzał, spróbuj ponownie załadować stronę, aby zacząć od nowa.",
+  "fatalError": "Błąd krytyczny: {message}. Jeśli jesteś w trybie przeglądania prywatnego, dane nie mogą być zapisywane.",
   "loadFailure": "Przykro nam, z jakiegoś powodu nie udało się załadować Web Lab. Błąd: {message}",
   "openFullscreenPreview": "Otwórz podgląd pełnoekranowy",
   "refreshPreview": "Odśwież i zapisz",
@@ -11,8 +14,8 @@
   "reset": "Zresetuj Web Lab",
   "resetComplete": "Resetowanie Web Lab zakończone",
   "resetFailure": "Nie udało się zresetować Web Lab: {message}.",
-  "toggleInspectorOn": "Inspektor: Wył",
   "toggleInspectorOff": "Inspektor: Wł.",
+  "toggleInspectorOn": "Inspektor: Wył",
   "troubleshootingSupport": "Zapoznaj się z naszym artykułem pomocy technicznej [\"Rozwiązywanie problemów z laboratorium internetowym\"]({url}), aby uzyskać więcej informacji.",
   "uploadError": "Błąd przesyłania"
 }

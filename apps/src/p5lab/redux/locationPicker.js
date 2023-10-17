@@ -2,14 +2,14 @@ import {
   REQUEST_LOCATION,
   CANCEL_LOCATION_SELECTION,
   SELECT_LOCATION,
-  UPDATE_LOCATION
+  UPDATE_LOCATION,
 } from '../actions';
 import {LocationPickerMode} from '../spritelab/constants';
 import {getStore} from '@cdo/apps/redux';
 
 export default function locationPicker(state, action) {
   state = state || {
-    mode: LocationPickerMode.IDLE
+    mode: LocationPickerMode.IDLE,
   };
   switch (action.type) {
     case REQUEST_LOCATION:
@@ -17,25 +17,25 @@ export default function locationPicker(state, action) {
         ...state,
         mode: LocationPickerMode.SELECTING,
         lastSelection: undefined,
-        requestTime: Date.now()
+        requestTime: Date.now(),
       };
     case CANCEL_LOCATION_SELECTION:
       return {
         ...state,
         mode: LocationPickerMode.IDLE,
-        lastSelection: undefined
+        lastSelection: undefined,
       };
     case SELECT_LOCATION:
       return {
         ...state,
         mode: LocationPickerMode.IDLE,
-        lastSelection: action.value
+        lastSelection: action.value,
       };
     case UPDATE_LOCATION:
       return {
         ...state,
         mode: LocationPickerMode.SELECTING,
-        lastSelection: action.value
+        lastSelection: action.value,
       };
     default:
       return state;
@@ -44,27 +44,27 @@ export default function locationPicker(state, action) {
 
 export function requestLocation() {
   return {
-    type: REQUEST_LOCATION
+    type: REQUEST_LOCATION,
   };
 }
 
 export function updateLocation(loc) {
   return {
     type: UPDATE_LOCATION,
-    value: loc
+    value: loc,
   };
 }
 
 export function selectLocation(loc) {
   return {
     type: SELECT_LOCATION,
-    value: loc
+    value: loc,
   };
 }
 
 export function cancelLocationSelection() {
   return {
-    type: CANCEL_LOCATION_SELECTION
+    type: CANCEL_LOCATION_SELECTION,
   };
 }
 

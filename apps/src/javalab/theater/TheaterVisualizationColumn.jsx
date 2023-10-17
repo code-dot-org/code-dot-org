@@ -5,12 +5,12 @@ import classNames from 'classnames';
 import PreviewPaneHeader from '../PreviewPaneHeader';
 import {
   VISUALIZATION_DIV_ID,
-  isResponsiveFromState
+  isResponsiveFromState,
 } from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import {toggleVisualizationCollapsed} from '../javalabRedux';
+import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
 import style from './theater-visualization-column.module.scss';
 import JavalabCrosshairOverlay, {
-  showOverlayFromState
+  showOverlayFromState,
 } from '../JavalabCrosshairOverlay';
 
 class TheaterVisualizationColumn extends React.Component {
@@ -20,11 +20,11 @@ class TheaterVisualizationColumn extends React.Component {
     isCollapsed: PropTypes.bool,
     responsive: PropTypes.bool,
     showOverlay: PropTypes.bool,
-    toggleVisualizationCollapsed: PropTypes.func
+    toggleVisualizationCollapsed: PropTypes.func,
   };
 
   state = {
-    isFullscreen: false
+    isFullscreen: false,
   };
 
   render() {
@@ -33,7 +33,7 @@ class TheaterVisualizationColumn extends React.Component {
       isCollapsed,
       responsive,
       showOverlay,
-      toggleVisualizationCollapsed
+      toggleVisualizationCollapsed,
     } = this.props;
     const {isFullscreen} = this.state;
 
@@ -84,20 +84,20 @@ const styles = {
     backgroundImage: 'url("/blockly/media/javalab/Theater.png")',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'top'
-  }
+    backgroundPosition: 'top',
+  },
 };
 
 export default connect(
   state => ({
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    isCollapsed: state.javalab.isVisualizationCollapsed,
+    isCollapsed: state.javalabView.isVisualizationCollapsed,
     responsive: isResponsiveFromState(state),
-    showOverlay: showOverlayFromState(state)
+    showOverlay: showOverlayFromState(state),
   }),
   dispatch => ({
     toggleVisualizationCollapsed() {
       dispatch(toggleVisualizationCollapsed());
-    }
+    },
   })
 )(TheaterVisualizationColumn);

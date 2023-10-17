@@ -6,3 +6,5 @@ right '9 bits'
 wrong '10 bits'
 wrong '16 bits'
 wrong '17 bits'
+
+allow_multiple_attempts true

@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Ora e Kodimit dhe Komiteti Këshillimor i Javës së KED-së
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Ora e Kodimit dhe Komiteti Këshillimor i Javës së KED-së
 
 {{ advisory-committee/about_headshots }}
 

@@ -8,7 +8,7 @@ export default class LookbackLogger {
   addData(value) {
     this.dataCollection.insert({
       value: value,
-      date: new Date()
+      date: new Date(),
     });
   }
 
@@ -18,7 +18,7 @@ export default class LookbackLogger {
       .query()
       .filter({
         date__lte: now,
-        date__gte: new Date(now.getTime() - ms)
+        date__gte: new Date(now.getTime() - ms),
       })
       .avg('value');
   }

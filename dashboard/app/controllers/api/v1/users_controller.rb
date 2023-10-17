@@ -157,7 +157,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
   # POST /api/v1/users/<user_id>/postpone_census_banner
   def postpone_census_banner
-    today = Date.today
+    today = Time.zone.today
     year = today.year
     # Find the next scheduled date that is at least 2 weeks away
     scheduled_display_dates = [
@@ -177,7 +177,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
   # POST /api/v1/users/<user_id>/dismiss_census_banner
   def dismiss_census_banner
-    today = Date.today
+    today = Time.zone.today
     year = today.year
 
     # if they dismiss Aug 1 or later then don't show until next November
@@ -212,5 +212,19 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def set_standards_report_info_to_seen
     @user.has_seen_standards_report_info_dialog = true
     @user.save!
+  end
+
+  # Expects a param with the key "g-recaptcha-response" that is used
+  # to validate whether a user isn't a bot
+  # POST /dashboardapi/v1/users/<user_id>/verify_captcha
+  def verify_captcha
+    if verify_recaptcha
+      @user.last_verified_captcha_at = Time.now.utc
+      @user.save
+
+      return head :ok
+    else
+      return head :bad_request
+    end
   end
 end

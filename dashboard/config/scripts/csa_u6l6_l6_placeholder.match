@@ -14,3 +14,4 @@ answer 'allows a class, or type, to be used as the parameter to an ArrayList and
 
 question 'natural language processing (NLP)'
 answer 'the ability of a computer program to understand human language'
+allow_multiple_attempts true

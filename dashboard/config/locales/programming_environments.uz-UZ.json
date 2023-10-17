@@ -2,19 +2,550 @@
   "uz-UZ": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab",
+        "applab": {
           "categories": {
-            "html_tags": {
-              "name": "HTML Teglar"
+            "advanced": {
+              "name": "Chuqurlashtirilgan"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Aylananing radiusi, piksellarda."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Rasmning yuqori chap burchagidagi piksellardagi x pozitsiyasi chizish uchun."
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidagi piksellardagi x pozitsiyasi chizish uchun."
+                    },
+                    "y": {
+                      "description": "Chizish uchun rasmning yuqori chap burchagidagi piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi alfa (shaffoflik) miqdorini (0 dan 255 gacha) qaytaradi."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Rasm ma'lumotlarini olish uchun chegaralangan to'rtburchakning balandligi."
+                    },
+                    "width": {
+                      "description": "Rasm ma'lumotlarini olish uchun chegaralangan to'rtburchakning kengligi."
+                    },
+                    "x": {
+                      "description": "Rasmga olishni boshlash uchun pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Rasmga olishni boshlash uchun pikseldagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Ma'lumotlarni tuvalga joylashtirish uchun tasvirning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Ma'lumotlarni tuvalga joylashtirish uchun tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "To'rtburchakning piksellaridagi vertikal balandlik."
+                    },
+                    "width": {
+                      "description": "To'rtburchakning piksellaridagi gorizontal kenglik."
+                    },
+                    "x": {
+                      "description": "To'rtburchakning yuqori chap burchagidagi piksellardagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "To'rtburchakning yuqori chap burchagidagi piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "Pikselda o'rnatiladigan alfa (shaffoflik) miqdori (0 dan 255 gacha)."
+                    },
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi alfa (shaffoflik) miqdorini (0 dan 255 gacha) o'rnatadi."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "(0 255 dan) ko'k miqdori piksel o'rnatish uchun."
+                    },
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi ko'k (0 dan 255 gacha) miqdorini BlueValue kirish miqdoriga o'rnatadi."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "Pikselda o'rnatiladigan yashil rang miqdori (0 dan 255 gacha)."
+                    },
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi yashil rang miqdorini (0 dan 255 gacha) GreenValue kirish miqdoriga o'rnatadi."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Ixtiyoriy. Pikselda o'rnatiladigan shaffoflik miqdori (0 dan 255 gacha). Standart 255 (to'liq shaffoflik) ga teng."
+                    },
+                    "blue": {
+                      "description": "(0 255 dan) ko'k miqdori piksel o'rnatish uchun."
+                    },
+                    "green": {
+                      "description": "Pikselda o'rnatiladigan yashil rang miqdori (0 dan 255 gacha)."
+                    },
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "red": {
+                      "description": "(0 255 dan) qizil miqdori piksel o'rnatish uchun."
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    },
+                    "redValue": {
+                      "description": "(0 255 dan) qizil miqdori piksel o'rnatish uchun."
+                    },
+                    "x": {
+                      "description": "Rasmning yuqori chap burchagidan boshlab pikseldagi x pozitsiyasi."
+                    },
+                    "y": {
+                      "description": "Tasvirning yuqori chap burchagidan boshlab piksellardagi y pozitsiyasi."
+                    }
+                  },
+                  "short_description": "Berilgan rasm ma'lumotlarida berilgan x va y pozitsiyasida joylashgan piksel rangidagi qizil (0 dan 255 gacha) miqdorini RedValue kirish miqdoriga o'rnatadi."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Bekor qilish uchun setTimeout funktsiyasi tomonidan qaytarilgan qiymat."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Funktsiyaning har bir bajarilishi orasidagi millisekundlar soni."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Funktsiyani bajarishdan oldin kutish kerak bo'lgan millisekundlar soni."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "obyekt"
+                    },
+                    "tableName": {
+                      "description": "Yozuvlarni olish uchun jadval nomi."
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Qabul qilinadigan kalitning nomi."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Ushbu ilovaning joriy foydalanuvchisi uchun noyob identifikatorni oladi."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Ushbu voqea ishlovchisi qo'llaniladigan jadvalning nomi."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Saqlanadigan kalitning nomi."
+                    },
+                    "value": {
+                      "description": "Saqlanadigan ma'lumotlar."
+                    }
+                  },
+                  "short_description": "App Lab kalit/qiymat ma'lumotlarini saqlashda kalit/qiymat juftligini saqlaydi va harakat tugagandan so'ng qayta qo'ng'iroq qilish funktsiyasini chaqiradi."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Ma'lumotlarni qaytaradigan xizmatning veb-manzili."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obyekt"
+                    }
+                  }
+                }
+              },
+              "name": "Maʼlumotlar"
+            },
+            "functions": {
+              "name": "Funksiyalar"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Maksimal raqam qaytarildi"
+                    },
+                    "min": {
+                      "description": "Minimal raqam qaytarildi"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Maksimal raqam qaytarildi"
+                    },
+                    "min": {
+                      "description": "Minimal raqam qaytarildi"
+                    }
+                  }
+                }
+              },
+              "name": "Matematik"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Kaplumbağani oldinga va chapga silliq, dumaloq yoyda siljitadi."
+                },
+                "getX": {
+                  "short_description": "Toshbaqaning piksellarida joriy x koordinatasini oladi."
+                },
+                "getY": {
+                  "short_description": "Kaplumbağa piksellarida joriy y koordinatasini oladi."
+                },
+                "hide": {
+                  "short_description": "Toshbaqani hozirgi joyida ko'rinmas holga keltiradi."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Kaplumbağani o'ngga siljitish uchun piksellar soni."
+                    },
+                    "y": {
+                      "description": "Kaplumbağani pastga siljitish uchun piksellar soni."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Toshbaqani joriy yo'nalishdan ma'lum miqdordagi pikselni orqaga siljitadi."
+                },
+                "moveForward": {
+                  "short_description": "Toshbaqani joriy yo'nalishda ma'lum miqdordagi pikselni oldinga siljitadi."
+                },
+                "moveTo": {
+                  "short_description": "Toshbaqani ekrandagi ma'lum bir (x, y) holatiga o'tkazadi."
+                },
+                "penColor": {
+                  "short_description": "Chiziqlar va nuqta chizish uchun kaplumbağa tomonidan ishlatiladigan qalam rangini o'rnatadi."
+                },
+                "penDown": {
+                  "short_description": "Qalamni pastga qo'yadi, shunda toshbaqa harakatlanayotganda uning orqasida chiziq tortadi."
+                },
+                "penRGB": {
+                  "short_description": "RGBA qiymatlaridan foydalanib, chiziqlar va nuqta chizish uchun kaplumbağa tomonidan ishlatiladigan qalam rangini belgilaydi."
+                },
+                "penUp": {
+                  "short_description": "Kaplumbağa harakatlanayotganda chiziq chizmasligi uchun qalamni yuqoriga ko'taradi."
+                },
+                "penWidth": {
+                  "short_description": "Kaplumbağa harakatlanayotganda uning orqasiga tortadigan chiziqning kengligini piksellarga o'rnatadi."
+                },
+                "show": {
+                  "short_description": "Toshbaqani hozirgi joyida ko'rinadigan qiladi."
+                },
+                "speed": {
+                  "short_description": "Kaplumbağa tezligini o'z ichiga olgan dasturni bajarish tezligini belgilaydi."
+                },
+                "turnLeft": {
+                  "short_description": "Belgilangan burchak ostida qolgan toshbaqani aylantiradi. Kaplumbağaning pozitsiyasi bir xil bo'lib qoladi."
+                },
+                "turnRight": {
+                  "short_description": "Kaplumbağani belgilangan burchak bilan o'ngga aylantiradi. Kaplumbağaning pozitsiyasi bir xil bo'lib qoladi."
+                },
+                "turnTo": {
+                  "short_description": "Kaplumbağa yo'nalishini ma'lum bir burchakka o'zgartiradi. 0 yuqoriga, 90 o'ngga, 180 pastga va 270 chapga."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "examples": {
+                    "Example: Simple Turtle Control 1": {
+                      "description": "Har bir tugmani bosishda toshbaqani oldinga siljiting."
+                    }
+                  },
+                  "short_description": "Ekranda standart joylashuvda berilgan id tomonidan taqdim etilgan va havola qilingan matnni ko'rsatadigan tugma hosil qiladi (0,0)."
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Ko'rsatilgan URL-dan MP3 ovozli faylni ishga tushiradi."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "O'zgartirish uchun mulk."
+                    }
+                  },
+                  "short_description": "Belgilangan element uchun xususiyatni yangi qiymatga o'rnatadi."
+                },
+                "setScreen": {
+                  "short_description": "Ekranni berilgan ScreenID-ga o'rnatadi."
+                },
+                "showElement": {
+                  "short_description": "Taqdim etilgan id bilan elementni ko'rsatadi."
+                },
+                "textLabel": {
+                  "short_description": "Ekranda standart joylashuvda berilgan id tomonidan taqdim etilgan va havola qilingan matnni ko'rsatadigan matn yorlig'ini yaratadi (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Hech biri"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "O'zgaruvchiga massivni e'lon qiling va tayinlang"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Qidirilamoqchi bo'lgan satr."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Qidirilamoqchi bo'lgan satr."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Ipning uzunligi"
+                }
+              },
+              "name": "O‘zgaruvchilar"
             }
-          }
+          },
+          "description": "App Lab - bu oddiy dasturlarni yaratishingiz mumkin bo‘lgan dasturiy muhit. Ilovani ishlab chiqing, uni ishlashi uchun bloklar yoki JavaScript bilan kodni yarating, so‘ngra bir necha soniya ichida o‘z ilovangiz bilan o'rtoqlashing.",
+          "name": "Ilovalar laboratoriyasi"
         },
         "gamelab": {
-          "name": "O‘yin laboratoriyasi",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Funktsiyaning har bir bajarilishi orasidagi millisekundlar soni."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Funktsiyani bajarishdan oldin kutish kerak bo'lgan millisekundlar soni."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Yulduz raqsi"
+                    }
+                  }
+                }
+              },
+              "name": "Rasm chizish"
+            },
+            "functions": {
+              "name": "Funksiyalar"
+            },
             "game_lab": {
-              "name": "O‘yin laboratoriyasi",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -39,23 +570,15 @@
                 },
                 "playSound": {
                   "short_description": "Ko'rsatilgan URL-dan MP3 ovozli faylni ishga tushiradi."
+                },
+                "showMobileControls": {
+                  "content": "O'yin maydoni ostida ko'rinadigan mobil boshqaruv elementlarini o'zgartiradi.",
+                  "short_description": "O'yin maydoni ostida ko'rinadigan mobil boshqaruv elementlarini o'zgartiradi."
                 }
-              }
-            },
-            "sprites": {
-              "name": "Spraytlar",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spiral"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "O‘yin laboratoriyasi"
             },
             "groups": {
-              "name": "Guruhlar",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -92,300 +615,128 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "Rasm chizish",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Yulduz raqsi"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Guruhlar"
             },
             "math": {
-              "name": "Matematik",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Minimal raqam qaytarildi"
-                    },
                     "max": {
                       "description": "Maksimal raqam qaytarildi"
+                    },
+                    "min": {
+                      "description": "Minimal raqam qaytarildi"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "Minimal raqam qaytarildi"
-                    },
                     "max": {
                       "description": "Maksimal raqam qaytarildi"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "O‘zgaruvchilar"
-            },
-            "functions": {
-              "name": "Funksiyalar"
-            }
-          }
-        },
-        "applab": {
-          "name": "Ilovalar laboratoriyasi",
-          "description": "App Lab - bu oddiy dasturlarni yaratishingiz mumkin bo‘lgan dasturiy muhit. Ilovani ishlab chiqing, uni ishlashi uchun bloklar yoki JavaScript bilan kodni yarating, so‘ngra bir necha soniya ichida o‘z ilovangiz bilan o'rtoqlashing.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "examples": {
-                    "Example: Simple Turtle Control 1": {
-                      "description": "Har bir tugmani bosishda toshbaqani oldinga siljiting."
-                    }
-                  }
-                },
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funksiya"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Ko'rsatilgan URL-dan MP3 ovozli faylni ishga tushiradi."
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "obyekt"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funksiya"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "obyekt"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "obyekt"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funksiya"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematik",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
+                    },
                     "min": {
                       "description": "Minimal raqam qaytarildi"
-                    },
-                    "max": {
-                      "description": "Maksimal raqam qaytarildi"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Minimal raqam qaytarildi"
-                    },
-                    "max": {
-                      "description": "Maksimal raqam qaytarildi"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matematik"
             },
-            "variables": {
-              "name": "O‘zgaruvchilar",
-              "expressions": {
-                "addPair": {
-                  "return_value": "Hech biri"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funksiyalar"
-            },
-            "advanced": {
-              "name": "Chuqurlashtirilgan"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Sprite Lab",
-          "categories": {
             "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Sprite balandligi."
+                },
+                "sprite.width": {
+                  "return_value": "Sprite kengligi."
+                }
+              },
               "name": "Spraytlar"
             },
-            "world": {
-              "name": "Dunyo"
-            },
-            "location": {
-              "name": "Joylashuvlar"
-            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Qidirilamoqchi bo'lgan satr."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Qidirilamoqchi bo'lgan satr."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Ipning uzunligi"
+                }
+              },
+              "name": "O‘zgaruvchilar"
+            }
+          },
+          "name": "O‘yin laboratoriyasi"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Harakatlar"
-            },
-            "events": {
-              "name": "Hodisalar"
             },
             "behaviors": {
               "name": "Xatti-harakatlar"
             },
-            "loops": {
-              "name": "Sikllar"
+            "comments": {
+              "name": "Fikrlar"
             },
-            "variables": {
-              "name": "O‘zgaruvchilar"
-            },
-            "math": {
-              "name": "Matematik"
-            },
-            "logic": {
-              "name": "Mantiq"
+            "events": {
+              "name": "Hodisalar"
             },
             "functions": {
               "name": "Funksiyalar"
             },
+            "location": {
+              "name": "Joylashuvlar"
+            },
+            "logic": {
+              "name": "Mantiq"
+            },
+            "loops": {
+              "name": "Sikllar"
+            },
+            "math": {
+              "name": "Matematik"
+            },
+            "sprites": {
+              "name": "Spraytlar"
+            },
             "text": {
               "name": "Matn"
             },
-            "comments": {
-              "name": "Fikrlar"
+            "variables": {
+              "name": "O‘zgaruvchilar"
+            },
+            "world": {
+              "name": "Dunyo"
             }
-          }
+          },
+          "name": "Sprite Lab"
+        },
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "HTML Teglar"
+            }
+          },
+          "name": "Web Lab"
         }
       }
     }

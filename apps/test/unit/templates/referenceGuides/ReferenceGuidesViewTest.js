@@ -10,7 +10,7 @@ describe('ReferenceGuideView', () => {
       content: 'markdown text',
       position: 0,
       key: 'guide',
-      parent_reference_guide_key: null
+      parent_reference_guide_key: null,
     };
     const wrapper = isolateComponent(
       <ReferenceGuideView
@@ -30,7 +30,7 @@ describe('ReferenceGuideView', () => {
       content: 'markdown text',
       position: 0,
       key: 'guide',
-      parent_reference_guide_key: null
+      parent_reference_guide_key: null,
     };
     const wrapper = isolateComponent(
       <ReferenceGuideView
@@ -50,7 +50,7 @@ describe('ReferenceGuideView', () => {
       content: 'content 3',
       key: 'guide3',
       position: 0,
-      parent_reference_guide_key: 'guide1'
+      parent_reference_guide_key: 'guide1',
     };
     // guide1
     /// guide3
@@ -63,14 +63,14 @@ describe('ReferenceGuideView', () => {
         content: 'content 1',
         key: 'guide1',
         position: 0,
-        parent_reference_guide_key: null
+        parent_reference_guide_key: null,
       },
       {
         display_name: 'display name 2',
         content: 'content 2',
         key: 'guide2',
         position: 1,
-        parent_reference_guide_key: null
+        parent_reference_guide_key: null,
       },
       referenceGuide,
       {
@@ -78,15 +78,15 @@ describe('ReferenceGuideView', () => {
         content: 'content 4',
         key: 'guide4',
         position: 0,
-        parent_reference_guide_key: 'guide2'
+        parent_reference_guide_key: 'guide2',
       },
       {
         display_name: 'display name 5',
         content: 'content 5',
         key: 'guide5',
         position: 0,
-        parent_reference_guide_key: 'guide3'
-      }
+        parent_reference_guide_key: 'guide3',
+      },
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideView

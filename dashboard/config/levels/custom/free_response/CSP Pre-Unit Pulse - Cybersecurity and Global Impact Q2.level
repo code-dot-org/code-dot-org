@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2023-05-17T22:32:45.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "title": "The Pre-Unit Pulse ❤️🎧 - Cybersecurity and Global Impact",
+    "long_instructions": "#####These pre-unit questions should take 5 minutes or less to complete. There are two purposes to these questions:\r\n* *To help you reflect on what you've learned already in this course*\r\n* *To get you thinking about topics that will come in handy later in this next unit*\r\n\r\n> **What are your biggest fears when it comes to using the Internet?**",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2023-05-17T22:32:45.555+00:00\",\"changed\":[\"cloned from \\\"CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1\\\"\"],\"cloned_from\":\"CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1\"},{\"changed_at\":\"2023-05-17 22:32:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

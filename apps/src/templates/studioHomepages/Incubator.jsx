@@ -11,7 +11,7 @@ class Incubator extends Component {
           subHeadingText="Try something new"
           backgroundUrl="/shared/images/banners/banner-incubator.png"
           imageUrl="/shared/images/banners/banner-incubator-image.png"
-          short={true}
+          imgStyling={{maxHeight: '160px'}}
         />
         <div className="main" style={{maxWidth: 970, margin: '0 auto'}}>
           <div style={{margin: '40px 0'}}>
@@ -35,17 +35,17 @@ class Incubator extends Component {
 
           <TwoColumnActionBlock
             imageUrl={
-              '/shared/images/teacher-announcement/incubator-musiclab.png'
+              '/shared/images/teacher-announcement/incubator-projectbeats.png'
             }
-            subHeading={'Music Lab'}
+            subHeading={'Project Beats'}
             description={
               'Make music with code! Try mixing and matching beats, bass, and other sounds to make your own songs.'
             }
             buttons={[
               {
-                url: '/musiclab',
-                text: 'Try it out!'
-              }
+                url: '/projectbeats',
+                text: 'Try it out!',
+              },
             ]}
           />
         </div>

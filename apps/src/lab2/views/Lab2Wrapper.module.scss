@@ -1,0 +1,117 @@
+@import 'color.scss';
+@import './common.scss';
+
+// We actually fade out the block to reveal the lab underneath.
+// We will do it over 1s, and then leave it invisible.
+@keyframes fade-out-block {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// We will fade in the spinner container for 1s after a 2s delay, then leave it showing.
+@keyframes fade-in-spinner-container {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// We will fade in the spinner text for 1s after a 10s delay, then leave it showing.
+@keyframes fade-in-spinner-text {
+  0% {
+    opacity: 0;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.labContainer {
+  position: fixed;
+  top: 52px;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  font-size: 13px;
+
+  &Loading {
+    pointer-events: none;
+  }
+
+  .solidBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark_black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 70;
+
+    &.showingBlock {
+      opacity: 1;
+    }
+
+    &.fadeInBlock {
+      animation: fade-out-block 1s;
+    }
+
+    .slowLoadContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      .spinnerContainer {
+        color: $neutral_dark40;
+        animation: fade-in-spinner-container 3s;
+      }
+
+      .spinnerText {
+        color: $neutral_dark60;
+        animation: fade-in-spinner-text 11s;
+      }
+    }
+  }
+
+  .pageErrorContainer {
+    @extend %full-container-overlay;
+    animation: fadein 0.5s;
+
+    .pageError {
+      background-color: $neutral_light;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+
+      &Image {
+        width: 120px;
+        display: block;
+        margin: 2px auto 15px auto;
+      }
+
+      &Message {
+        color: $neutral_dark70;
+        margin-top: 10px;
+      }
+    }
+  }
+}

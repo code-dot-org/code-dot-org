@@ -20,3 +20,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 `name` and `grade` both represent characteristics that a student would have. `goToSleep` represents a behavior that a student would do rather than a characteristic a student would have.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -32,6 +32,7 @@ const SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL =
   'instructions/SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL';
 const SET_CODE_REVIEW_ENABLED_FOR_LEVEL =
   'instructions/SET_CODE_REVIEW_ENABLED_FOR_LEVEL';
+const SET_TA_RUBRIC = 'instructions/SET_TA_RUBRIC';
 
 /**
  * Some scenarios:
@@ -76,7 +77,8 @@ const instructionsInitialState = {
   referenceLinks: [],
   muteBackgroundMusic: () => {},
   unmuteBackgroundMusic: () => {},
-  programmingEnvironment: null
+  programmingEnvironment: null,
+  taRubric: null,
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -98,7 +100,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       referenceLinks,
       muteBackgroundMusic,
       unmuteBackgroundMusic,
-      programmingEnvironment
+      programmingEnvironment,
     } = action;
     let isCollapsed = state.isCollapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -120,26 +122,26 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       referenceLinks,
       muteBackgroundMusic,
       unmuteBackgroundMusic,
-      programmingEnvironment
+      programmingEnvironment,
     });
   }
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
     return Object.assign({}, state, {
-      isCollapsed: !state.isCollapsed
+      isCollapsed: !state.isCollapsed,
     });
   }
 
   if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT && state.allowResize) {
     return Object.assign({}, state, {
       renderedHeight: action.height,
-      expandedHeight: !state.isCollapsed ? action.height : state.expandedHeight
+      expandedHeight: !state.isCollapsed ? action.height : state.expandedHeight,
     });
   }
 
   if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED && state.allowResize) {
     return Object.assign({}, state, {
-      maxNeededHeight: action.maxNeededHeight
+      maxNeededHeight: action.maxNeededHeight,
     });
   }
 
@@ -151,38 +153,38 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     return Object.assign({}, state, {
       maxAvailableHeight: action.maxAvailableHeight,
       renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
-      expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight)
+      expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight),
     });
   }
 
   if (action.type === SET_ALLOW_INSTRUCTIONS_RESIZE) {
     return {
       ...state,
-      allowResize: action.allowResize
+      allowResize: action.allowResize,
     };
   }
 
   if (action.type === SET_HAS_AUTHORED_HINTS) {
     return Object.assign({}, state, {
-      hasAuthoredHints: action.hasAuthoredHints
+      hasAuthoredHints: action.hasAuthoredHints,
     });
   }
 
   if (action.type === SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL) {
     return Object.assign({}, state, {
-      ttsAutoplayEnabledForLevel: action.ttsAutoplayEnabledForLevel
+      ttsAutoplayEnabledForLevel: action.ttsAutoplayEnabledForLevel,
     });
   }
 
   if (action.type === SET_CODE_REVIEW_ENABLED_FOR_LEVEL) {
     return Object.assign({}, state, {
-      codeReviewEnabledForLevel: action.codeReviewEnabledForLevel
+      codeReviewEnabledForLevel: action.codeReviewEnabledForLevel,
     });
   }
 
   if (action.type === SET_FEEDBACK) {
     return Object.assign({}, state, {
-      feedback: action.feedback
+      feedback: action.feedback,
     });
   }
 
@@ -192,27 +194,33 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     }
 
     return Object.assign({}, state, {
-      overlayVisible: false
+      overlayVisible: false,
     });
   }
 
   if (action.type === SET_DYNAMIC_INSTRUCTIONS_DEFAULTS) {
     return Object.assign({}, state, {
-      dynamicInstructionsDefaults: action.dynamicInstructionsDefaults
+      dynamicInstructionsDefaults: action.dynamicInstructionsDefaults,
     });
   }
 
   if (action.type === SET_DYNAMIC_INSTRUCTIONS_KEY) {
     return Object.assign({}, state, {
       dynamicInstructionsKey: action.dynamicInstructionsKey,
-      overlayVisible: action.options && action.options.showOverlay
+      overlayVisible: action.options && action.options.showOverlay,
     });
   }
 
   if (action.type === SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK) {
     return Object.assign({}, state, {
       dynamicInstructionsDismissCallback:
-        action.dynamicInstructionsDismissCallback
+        action.dynamicInstructionsDismissCallback,
+    });
+  }
+
+  if (action.type === SET_TA_RUBRIC) {
+    return Object.assign({}, state, {
+      taRubric: action.taRubric,
     });
   }
 
@@ -233,7 +241,7 @@ export const setInstructionsConstants = ({
   referenceLinks,
   muteBackgroundMusic,
   unmuteBackgroundMusic,
-  programmingEnvironment
+  programmingEnvironment,
 }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
@@ -249,19 +257,19 @@ export const setInstructionsConstants = ({
   referenceLinks,
   muteBackgroundMusic,
   unmuteBackgroundMusic,
-  programmingEnvironment
+  programmingEnvironment,
 });
 
 export const setInstructionsRenderedHeight = height => ({
   type: SET_INSTRUCTIONS_RENDERED_HEIGHT,
-  height
+  height,
 });
 
 /**
  * Toggles whether instructions are currently collapsed.
  */
 export const toggleInstructionsCollapsed = () => ({
-  type: TOGGLE_INSTRUCTIONS_COLLAPSED
+  type: TOGGLE_INSTRUCTIONS_COLLAPSED,
 });
 
 /**
@@ -270,7 +278,7 @@ export const toggleInstructionsCollapsed = () => ({
  */
 export const setInstructionsMaxHeightNeeded = height => ({
   type: SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED,
-  maxNeededHeight: height
+  maxNeededHeight: height,
 });
 
 /**
@@ -280,52 +288,58 @@ export const setInstructionsMaxHeightNeeded = height => ({
  */
 export const setInstructionsMaxHeightAvailable = height => ({
   type: SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE,
-  maxAvailableHeight: height
+  maxAvailableHeight: height,
 });
 
 export const setAllowInstructionsResize = allowResize => ({
   type: SET_ALLOW_INSTRUCTIONS_RESIZE,
-  allowResize
+  allowResize,
 });
 
 export const setHasAuthoredHints = hasAuthoredHints => ({
   type: SET_HAS_AUTHORED_HINTS,
-  hasAuthoredHints
+  hasAuthoredHints,
 });
 
 export const setTtsAutoplayEnabledForLevel = ttsAutoplayEnabledForLevel => ({
   type: SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL,
-  ttsAutoplayEnabledForLevel
+  ttsAutoplayEnabledForLevel,
 });
 
 export const setCodeReviewEnabledForLevel = codeReviewEnabledForLevel => ({
   type: SET_CODE_REVIEW_ENABLED_FOR_LEVEL,
-  codeReviewEnabledForLevel
+  codeReviewEnabledForLevel,
 });
 
 export const setFeedback = feedback => ({
   type: SET_FEEDBACK,
-  feedback
+  feedback,
 });
 
 export const hideOverlay = () => ({
-  type: HIDE_OVERLAY
+  type: HIDE_OVERLAY,
 });
 
 export const setDynamicInstructionsDefaults = dynamicInstructionsDefaults => ({
   type: SET_DYNAMIC_INSTRUCTIONS_DEFAULTS,
-  dynamicInstructionsDefaults
+  dynamicInstructionsDefaults,
 });
 
 export const setDynamicInstructionsKey = (dynamicInstructionsKey, options) => ({
   type: SET_DYNAMIC_INSTRUCTIONS_KEY,
   dynamicInstructionsKey,
-  options
+  options,
 });
 
-export const setDynamicInstructionsOverlayDismissCallback = dynamicInstructionsDismissCallback => ({
-  type: SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK,
-  dynamicInstructionsDismissCallback
+export const setDynamicInstructionsOverlayDismissCallback =
+  dynamicInstructionsDismissCallback => ({
+    type: SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK,
+    dynamicInstructionsDismissCallback,
+  });
+
+export const setTaRubric = taRubric => ({
+  type: SET_TA_RUBRIC,
+  taRubric,
 });
 
 // HELPERS
@@ -384,7 +398,7 @@ export const determineInstructionsConstants = config => {
     hasContainedLevels,
     teacherMarkdown,
     muteBackgroundMusic,
-    unmuteBackgroundMusic
+    unmuteBackgroundMusic,
   } = config;
 
   const {
@@ -393,7 +407,7 @@ export const determineInstructionsConstants = config => {
     levelVideos,
     mapReference,
     referenceLinks,
-    programmingEnvironment
+    programmingEnvironment,
   } = level;
 
   let {longInstructions, shortInstructions, dynamicInstructions} = level;
@@ -479,7 +493,7 @@ export const determineInstructionsConstants = config => {
     referenceLinks,
     muteBackgroundMusic,
     unmuteBackgroundMusic,
-    programmingEnvironment
+    programmingEnvironment,
   };
 };
 
@@ -490,6 +504,6 @@ export function getDynamicInstructions(state) {
 
   return {
     ...state.dynamicInstructionsDefaults,
-    ...(state.dynamicInstructions && JSON.parse(state.dynamicInstructions))
+    ...(state.dynamicInstructions && JSON.parse(state.dynamicInstructions)),
   };
 }

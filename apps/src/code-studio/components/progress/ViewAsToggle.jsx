@@ -15,14 +15,14 @@ class ViewAsToggle extends React.Component {
   static propTypes = {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     changeViewType: PropTypes.func.isRequired,
-    logToFirehose: PropTypes.func
+    logToFirehose: PropTypes.func,
   };
 
   componentDidMount() {
     this.toggleHideAsStudent(this.props.viewAs);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.viewAs !== this.props.viewAs) {
       this.toggleHideAsStudent(nextProps.viewAs);
     }
@@ -78,24 +78,24 @@ class ViewAsToggle extends React.Component {
 
 const styles = {
   main: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   viewAs: {
     fontSize: 16,
-    margin: 10
+    margin: 10,
   },
   toggleGroup: {
-    margin: 10
-  }
+    margin: 10,
+  },
 };
 export const UnconnectedViewAsToggle = ViewAsToggle;
 export default connect(
   state => ({
-    viewAs: state.viewAs
+    viewAs: state.viewAs,
   }),
   dispatch => ({
     changeViewType(viewAs) {
       dispatch(changeViewType(viewAs));
-    }
+    },
   })
 )(UnconnectedViewAsToggle);

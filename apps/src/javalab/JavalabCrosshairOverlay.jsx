@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import VisualizationOverlay, {
-  dispatchResizeEvent
+  dispatchResizeEvent,
 } from '@cdo/apps/templates/VisualizationOverlay';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 import TooltipOverlay, {
-  coordinatesProvider
+  coordinatesProvider,
 } from '@cdo/apps/templates/TooltipOverlay';
 import style from './javalab-crosshair-overlay.module.scss';
 
@@ -17,7 +17,7 @@ import style from './javalab-crosshair-overlay.module.scss';
 export default function JavalabCrosshairOverlay({
   width = parseInt(style.width),
   height = parseInt(style.height),
-  visible = true
+  visible = true,
 }) {
   // Use SCSS to control visibility to preserve scaling controlled by <JavalabPanels>.
   // Otherwise, unmounting/remounting would reset the scale.
@@ -36,7 +36,7 @@ export default function JavalabCrosshairOverlay({
 JavalabCrosshairOverlay.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-  visible: PropTypes.bool
+  visible: PropTypes.bool,
 };
 
 export function resizeCrosshairOverlay() {
@@ -44,5 +44,7 @@ export function resizeCrosshairOverlay() {
 }
 
 export function showOverlayFromState(state) {
-  return !state.javalab.isVisualizationCollapsed && !state.javalab.isRunning;
+  return (
+    !state.javalabView.isVisualizationCollapsed && !state.javalab.isRunning
+  );
 }

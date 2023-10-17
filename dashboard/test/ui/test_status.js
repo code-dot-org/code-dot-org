@@ -72,7 +72,7 @@ function Test(fromRow) {
   this.updateView();
 }
 
-Test.prototype.setLastModified = function(object, lastModified) {
+Test.prototype.setLastModified = function (object, lastModified) {
   // Do no updating if things haven't changed.
   if (this.lastModified_ && lastModified <= this.lastModified_) {
     return Promise.resolve();
@@ -89,7 +89,7 @@ Test.prototype.setLastModified = function(object, lastModified) {
   }
 };
 
-Test.prototype.fetchStatus = function(object) {
+Test.prototype.fetchStatus = function (object) {
   this.isUpdating_ = true;
   this.updateView();
   const ensure = () => {
@@ -98,7 +98,7 @@ Test.prototype.fetchStatus = function(object) {
   };
 
   return Promise.resolve(object)
-    .then(json => {
+    .then((json) => {
       if (json.commit === COMMIT_HASH) {
         this.versionId = json.version_id;
         this.attempt = parseInt(json.attempt, 10);
@@ -107,13 +107,13 @@ Test.prototype.fetchStatus = function(object) {
         this.status = this.success ? STATUS_SUCCEEDED : STATUS_FAILED;
       }
     })
-    .then(ensure, error => {
+    .then(ensure, (error) => {
       ensure();
       throw error;
     });
 };
 
-Test.prototype.updateView = function() {
+Test.prototype.updateView = function () {
   const succeeded = this.status === STATUS_SUCCEEDED;
   const failed = this.status === STATUS_FAILED;
 
@@ -125,9 +125,11 @@ Test.prototype.updateView = function() {
   // Update row appearance
   row.className = this.status;
   if (succeeded || failed) {
+    var formatDurn = new Date(this.duration * 1000);
+
     statusCell.innerHTML =
       (succeeded ? "Succeeded" : "Failed") +
-      ` in ${Math.round(this.duration)} seconds` +
+      ` in ${formatDurn.getUTCHours()} hr ${formatDurn.getUTCMinutes()} min ${formatDurn.getUTCSeconds()} sec` +
       (this.attempt > 0 ? ` on retry #${this.attempt}` : "");
     logLinkCell.innerHTML = `<a href="${this.publicLogUrl()}">Log on S3</a>`;
   } else {
@@ -143,14 +145,14 @@ Test.prototype.updateView = function() {
   updateProgress && updateProgress();
 };
 
-Test.prototype.s3Key = function() {
+Test.prototype.s3Key = function () {
   const featureRegex = /features\/(.*)\.feature/i;
   const result = featureRegex.exec(this.feature);
   const featureName = result[1].replace(/\//g, "_");
   return `${S3_PREFIX}/${this.browser}_${featureName}${S3_KEY_SUFFIX}`;
 };
 
-Test.prototype.publicLogUrl = function() {
+Test.prototype.publicLogUrl = function () {
   return `https://${S3_BUCKET}.s3.amazonaws.com/${this.s3Key()}?versionId=${
     this.versionId
   }`;
@@ -166,7 +168,7 @@ function keyify(str) {
 // Build a cache of tests for this run.
 var tests = {};
 var rows = document.querySelectorAll("tbody tr");
-rows.forEach(row => {
+rows.forEach((row) => {
   let test = new Test(row);
   tests[test.browser] = tests[test.browser] || {};
   tests[test.browser][keyify(test.feature)] = test;
@@ -210,7 +212,7 @@ function calculateBrowserProgress(browser) {
   return {
     successCount,
     failureCount,
-    pendingCount
+    pendingCount,
   };
 }
 
@@ -288,7 +290,7 @@ function updateProgressNow() {
   renderBrowserProgress("total", {
     successCount,
     failureCount,
-    pendingCount
+    pendingCount,
   });
 
   // Set the tab's status icon according to how complete the test run is
@@ -321,9 +323,9 @@ function refresh() {
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime() / 1000);
   let newTime = new Date();
   fetch(`${API_BASEPATH}/${S3_PREFIX}/since/${lastRefreshEpochSeconds}`, {
-    mode: "no-cors"
+    mode: "no-cors",
   })
-    .then(response => {
+    .then((response) => {
       if (response.ok) {
         return response.json();
       }
@@ -331,20 +333,20 @@ function refresh() {
         `While fetching updates, "${response.url}" returned ${response.status}.`
       );
     })
-    .then(json => {
-      return Promise.all(json.map(object => refreshIndividualTest(object)))
+    .then((json) => {
+      return Promise.all(json.map((object) => refreshIndividualTest(object)))
         .then(() => {
           lastRefreshTime = newTime;
           lastRefreshTimeLabel.textContent =
             "Updated " + lastRefreshTime.toTimeString();
         })
-        .catch(error => {
+        .catch((error) => {
           lastRefreshTimeLabel.textContent =
             "Partially updated at " + newTime.toTimeString();
           console.warn(error);
         });
     })
-    .catch(error => console.error(error))
+    .catch((error) => console.error(error))
     .then(ensure, ensure);
 }
 
@@ -398,7 +400,7 @@ function toggleHideSucceeded() {
   let display = hideSucceeded ? "none" : "table-row";
   let rule = _.findLast(
     sheet.rules,
-    rule => rule.selectorText === ".SUCCEEDED"
+    (rule) => rule.selectorText === ".SUCCEEDED"
   );
   if (rule) {
     rule.style.display = display;

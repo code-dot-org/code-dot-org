@@ -205,9 +205,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  private
-
-  def sign_in_google_oauth2(user)
+  private def sign_in_google_oauth2(user)
     SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
     prepare_locale_cookie user
 
@@ -217,7 +215,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_user user
   end
 
-  def sign_up_google_oauth2
+  private def sign_up_google_oauth2
     session[:sign_up_type] = AuthenticationOption::GOOGLE
 
     # For some providers, signups can happen without ever having hit the sign_up page, where
@@ -245,14 +243,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  def sign_in_clever(user)
+  private def sign_in_clever(user)
     SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
     sign_in_user user
   end
 
-  def sign_up_clever
+  private def sign_up_clever
     session[:sign_up_type] = AuthenticationOption::CLEVER
 
     # For some providers, signups can happen without ever having hit the sign_up page, where
@@ -280,7 +278,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     register_new_user user
   end
 
-  def find_user_by_credential
+  private def find_user_by_credential
     return nil unless auth_hash
 
     User.find_by_credential \
@@ -288,25 +286,25 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       id: auth_hash.uid
   end
 
-  def auth_hash
+  private def auth_hash
     request.env['omniauth.auth']
   end
 
-  def auth_params
+  private def auth_params
     request.env['omniauth.params']
   end
 
-  def prepare_locale_cookie(user)
+  private def prepare_locale_cookie(user)
     # Set user-account locale only if no cookie is already set.
     if user.locale &&
-      user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
+        user.locale != request.env['cdo.locale'] &&
+        cookies[:language_].nil?
 
       set_locale_cookie(user.locale)
     end
   end
 
-  def email_already_taken_redirect(provider:, found_provider:, email:)
+  private def email_already_taken_redirect(provider:, found_provider:, email:)
     if found_provider == 'clever'
       redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
     else
@@ -314,7 +312,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  def register_new_user(user)
+  private def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
     redirect_to new_user_registration_url
   end
@@ -322,7 +320,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
   skip_before_action :verify_authenticity_token, only: :powerschool
 
-  def extract_powerschool_data(auth)
+  private def extract_powerschool_data(auth)
     # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
     args = JSON.parse(auth.extra.response.message.to_json)['args']
     powerschool_data = OmniAuth::AuthHash.new(
@@ -338,7 +336,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth
   end
 
-  def extract_microsoft_data(auth)
+  private def extract_microsoft_data(auth)
     microsoft_data = OmniAuth::AuthHash.new(
       email: auth[:extra][:raw_info][:userPrincipalName],
       name: auth[:extra][:raw_info][:displayName]
@@ -350,7 +348,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Moves non-standard attributes from the extra Clever OAuth data and puts it in the location we
   # expect it to be in the AuthHash. Example attributes: gender, date of birth.
-  def inject_clever_data(auth)
+  private def inject_clever_data(auth)
     return if auth.nil?
     dob = auth[:dob] || auth.dig(:extra, :raw_info, :canonical, :data, :dob)
     gender = auth[:gender] || auth.dig(:extra, :raw_info, :canonical, :data, :gender)
@@ -359,17 +357,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth
   end
 
-  def just_authorized_google_classroom?
+  private def just_authorized_google_classroom?
     current_user&.providers&.include?(AuthenticationOption::GOOGLE) &&
       has_google_oauth2_scope?('classroom.rosters.readonly')
   end
 
-  def has_google_oauth2_scope?(scope_name)
+  private def has_google_oauth2_scope?(scope_name)
     scopes = (auth_params&.[]('scope') || '').split(',')
     scopes.include?(scope_name)
   end
 
-  def allows_section_takeover(user)
+  private def allows_section_takeover(user)
     # OAuth providers do not necessarily provide student email addresses, so we
     # want to perform silent takeover on these accounts, but *only if* the
     # student hasn't made progress with the initial account
@@ -390,7 +388,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # @returns [User] that survives the takeover - this might be the the oauth_user passed in, or a
   #   _different_ user that was taken over.  Either way, the caller should consider the returned
   #   user the one that should be signed in at the end of the auth flow.
-  def silent_takeover(oauth_user, auth_hash)
+  private def silent_takeover(oauth_user, auth_hash)
     lookup_email = oauth_user.email.presence || auth_hash.info.email
     lookup_user = User.find_by_email_or_hashed_email(lookup_email)
     provider = auth_hash.provider.to_s
@@ -462,7 +460,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           oauth_refresh_token: auth_hash.credentials&.refresh_token
         )
       end
-    rescue => err
+    rescue => exception
       error_class = lookup_user.migrated? ?
         'Failed to create AuthenticationOption during silent takeover' :
         'Failed to update User during silent takeover'
@@ -470,7 +468,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # This can happen if the account being taken over is already invalid
       Honeybadger.notify(
         error_class: error_class,
-        error_message: err.to_s,
+        error_message: exception.message,
         context: {
           user_id: lookup_user.id,
           tags: 'accounts'
@@ -483,7 +481,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     lookup_user
   end
 
-  def sign_in_user(user)
+  private def sign_in_user(user)
     flash.notice = I18n.t('auth.signed_in')
 
     # Will only log if the sign_up page session cookie is set, so this is safe to call in all cases
@@ -492,17 +490,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_and_redirect user
   end
 
-  def email_already_taken(user)
+  private def email_already_taken(user)
     lookup_user = User.find_by_email_or_hashed_email(user.email)
     return !!lookup_user
   end
 
-  def auth_already_exists(auth_hash)
+  private def auth_already_exists(auth_hash)
     lookup_user = User.find_by_credential(type: auth_hash.provider, id: auth_hash.uid)
     return !!lookup_user
   end
 
-  def allows_silent_takeover(oauth_user, auth_hash)
+  private def allows_silent_takeover(oauth_user, auth_hash)
     return false if auth_hash.provider.blank?
     return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     return false if oauth_user.persisted?
@@ -513,11 +511,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return !!lookup_user
   end
 
-  def should_connect_provider?
+  private def should_connect_provider?
     return current_user && auth_params.fetch("action", nil) == "connect"
   end
 
-  def get_connect_provider_errors(auth_option)
+  private def get_connect_provider_errors(auth_option)
     errors = auth_option.errors.full_messages
 
     return errors.first unless errors.empty?

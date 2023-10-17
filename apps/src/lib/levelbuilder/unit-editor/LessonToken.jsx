@@ -17,7 +17,7 @@ export default class LessonToken extends Component {
     handleDragStart: PropTypes.func,
     removeLesson: PropTypes.func.isRequired,
     cloneLesson: PropTypes.func.isRequired,
-    allowMajorCurriculumChanges: PropTypes.bool.isRequired
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -30,33 +30,37 @@ export default class LessonToken extends Component {
             ? {
                 y: this.props.dragging ? this.props.delta : 0,
                 scale: spring(1.02, springConfig),
-                shadow: spring(5, springConfig)
+                shadow: spring(5, springConfig),
               }
             : {
                 y: this.props.dragging
                   ? spring(this.props.delta, springConfig)
                   : 0,
                 scale: 1,
-                shadow: 0
+                shadow: 0,
               }
         }
         key={this.props.lesson.position}
       >
-        {// Use react-motion to interpolate the following values and create
-        // smooth transitions.
-        ({y, scale, shadow}) => (
-          <LessonTokenContents
-            y={y}
-            scale={scale}
-            shadow={shadow}
-            draggedLessonPos={draggedLessonPos}
-            lesson={this.props.lesson}
-            handleDragStart={this.props.handleDragStart}
-            removeLesson={this.props.removeLesson}
-            cloneLesson={this.props.cloneLesson}
-            allowMajorCurriculumChanges={this.props.allowMajorCurriculumChanges}
-          />
-        )}
+        {
+          // Use react-motion to interpolate the following values and create
+          // smooth transitions.
+          ({y, scale, shadow}) => (
+            <LessonTokenContents
+              y={y}
+              scale={scale}
+              shadow={shadow}
+              draggedLessonPos={draggedLessonPos}
+              lesson={this.props.lesson}
+              handleDragStart={this.props.handleDragStart}
+              removeLesson={this.props.removeLesson}
+              cloneLesson={this.props.cloneLesson}
+              allowMajorCurriculumChanges={
+                this.props.allowMajorCurriculumChanges
+              }
+            />
+          )
+        }
       </Motion>
     );
   }
@@ -72,7 +76,7 @@ export class LessonTokenContents extends Component {
     handleDragStart: PropTypes.func.isRequired,
     removeLesson: PropTypes.func.isRequired,
     cloneLesson: PropTypes.func.isRequired,
-    allowMajorCurriculumChanges: PropTypes.bool.isRequired
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
   };
 
   handleEditLesson = () => {
@@ -98,14 +102,13 @@ export class LessonTokenContents extends Component {
       <div
         className="uitest-lesson-token-contents"
         style={Object.assign({}, styles.lessonToken, {
-          transform: `translate3d(0, ${this.props.y}px, 0) scale(${
-            this.props.scale
-          })`,
-          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${this.props
-            .shadow * 3}px`,
+          transform: `translate3d(0, ${this.props.y}px, 0) scale(${this.props.scale})`,
+          boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${
+            this.props.shadow * 3
+          }px`,
           zIndex: this.props.draggedLessonPos
             ? 1000
-            : 500 - this.props.lesson.position
+            : 500 - this.props.lesson.position,
         })}
       >
         {this.props.allowMajorCurriculumChanges && (
@@ -158,7 +161,7 @@ const styles = {
     position: 'relative',
     background: '#eee',
     borderRadius: borderRadius,
-    margin: `${tokenMargin}px 0`
+    margin: `${tokenMargin}px 0`,
   },
   reorder: {
     fontSize: 16,
@@ -169,7 +172,7 @@ const styles = {
     padding: '7px 15px',
     borderTopLeftRadius: borderRadius,
     borderBottomLeftRadius: borderRadius,
-    cursor: 'ns-resize'
+    cursor: 'ns-resize',
   },
   lessonTokenName: {
     padding: 7,
@@ -178,7 +181,7 @@ const styles = {
     width: '100%',
     borderTop: '1px solid #ddd',
     borderBottom: '1px solid #ddd',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   tag: {
     color: 'white',
@@ -186,7 +189,7 @@ const styles = {
     padding: '3px 5px',
     lineHeight: '12px',
     borderRadius: 5,
-    marginLeft: 3
+    marginLeft: 3,
   },
   remove: {
     fontSize: 14,
@@ -198,7 +201,7 @@ const styles = {
     padding: '7px 13px',
     borderTopRightRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   clone: {
     fontSize: 14,
@@ -210,7 +213,7 @@ const styles = {
     borderColor: color.dark_charcoal,
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 13px',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   edit: {
     fontSize: 14,
@@ -220,21 +223,21 @@ const styles = {
     border: '1px solid #00adbc',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 13px',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   lessonArea: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   lessonDetails: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   lessonTitle: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

@@ -9,12 +9,12 @@ var utils = require('../utils');
  * some number of support equations
  * @param {!Array} blocks List of blockly blocks
  */
-var EquationSet = function(blocks) {
+var EquationSet = function (blocks) {
   this.compute_ = null; // an Equation
   this.equations_ = []; // a list of Equations
 
   if (blocks) {
-    blocks.forEach(function(block) {
+    blocks.forEach(function (block) {
       var equation = EquationSet.getEquationFromBlock(block);
       if (equation) {
         this.addEquation_(equation);
@@ -24,13 +24,13 @@ var EquationSet = function(blocks) {
 };
 module.exports = EquationSet;
 
-EquationSet.prototype.clone = function() {
+EquationSet.prototype.clone = function () {
   var clone = new EquationSet();
   clone.compute_ = null;
   if (this.compute_) {
     clone.compute_ = this.compute_.clone();
   }
-  clone.equations_ = this.equations_.map(function(item) {
+  clone.equations_ = this.equations_.map(function (item) {
     return item.clone();
   });
   return clone;
@@ -41,7 +41,7 @@ EquationSet.prototype.clone = function() {
  * compute equation. Throws if equation of this name already exists.
  * @param {Equation} equation The equation to add.
  */
-EquationSet.prototype.addEquation_ = function(equation) {
+EquationSet.prototype.addEquation_ = function (equation) {
   if (!equation.name) {
     if (this.compute_) {
       throw new Error('compute expression already exists');
@@ -59,7 +59,7 @@ EquationSet.prototype.addEquation_ = function(equation) {
  * Get an equation by name, or compute equation if name is null
  * @returns {Equation} Equation of that name if it exists, null otherwise.
  */
-EquationSet.prototype.getEquation = function(name) {
+EquationSet.prototype.getEquation = function (name) {
   if (name === null) {
     return this.computeEquation();
   }
@@ -74,21 +74,21 @@ EquationSet.prototype.getEquation = function(name) {
 /**
  * @returns the compute equation if there is one
  */
-EquationSet.prototype.computeEquation = function() {
+EquationSet.prototype.computeEquation = function () {
   return this.compute_;
 };
 
 /**
  * @returns true if EquationSet has at least one variable or function.
  */
-EquationSet.prototype.hasVariablesOrFunctions = function() {
+EquationSet.prototype.hasVariablesOrFunctions = function () {
   return this.equations_.length > 0;
 };
 
 /**
  * @returns {boolean} True if our compute expression is jsut a funciton call
  */
-EquationSet.prototype.computesFunctionCall = function() {
+EquationSet.prototype.computesFunctionCall = function () {
   if (!this.compute_) {
     return false;
   }
@@ -101,7 +101,7 @@ EquationSet.prototype.computesFunctionCall = function() {
  * @returns {boolean} True if our compute expression is just a variable, which
  * we take to mean we can treat similarly to our single function scenario
  */
-EquationSet.prototype.computesSingleVariable = function() {
+EquationSet.prototype.computesSingleVariable = function () {
   if (!this.compute_) {
     return false;
   }
@@ -116,7 +116,7 @@ EquationSet.prototype.computesSingleVariable = function() {
  * @returns {boolean} True if our EquationSet consists of a variable set to
  *   a number, and the computation of that variable.
  */
-EquationSet.prototype.computesSingleConstant = function() {
+EquationSet.prototype.computesSingleConstant = function () {
   if (!this.compute_ || this.equations_.length !== 1) {
     return false;
   }
@@ -129,7 +129,7 @@ EquationSet.prototype.computesSingleConstant = function() {
   );
 };
 
-EquationSet.prototype.isAnimatable = function() {
+EquationSet.prototype.isAnimatable = function () {
   if (!this.compute_) {
     return false;
   }
@@ -147,8 +147,8 @@ EquationSet.prototype.isAnimatable = function() {
  * Returns a list of equations that consist of setting a variable to a constant
  * value, without doing any additional math. i.e. foo = 1
  */
-EquationSet.prototype.getConstants = function() {
-  return this.equations_.filter(function(item) {
+EquationSet.prototype.getConstants = function () {
+  return this.equations_.filter(function (item) {
     return item.params.length === 0 && item.expression.isNumber();
   });
 };
@@ -158,7 +158,7 @@ EquationSet.prototype.getConstants = function() {
  * compute expressions are identical and all of their equations have the same
  * names and identical expressions.
  */
-EquationSet.prototype.isIdenticalTo = function(otherSet) {
+EquationSet.prototype.isIdenticalTo = function (otherSet) {
   if (this.equations_.length !== otherSet.equations_.length) {
     return false;
   }
@@ -188,7 +188,7 @@ EquationSet.prototype.isIdenticalTo = function(otherSet) {
  * names and equivalent expressions. Equivalence is a less strict requirement
  * than identical that allows params to be reordered.
  */
-EquationSet.prototype.isEquivalentTo = function(otherSet) {
+EquationSet.prototype.isEquivalentTo = function (otherSet) {
   if (this.equations_.length !== otherSet.equations_.length) {
     return false;
   }
@@ -215,10 +215,10 @@ EquationSet.prototype.isEquivalentTo = function(otherSet) {
 /**
  * Returns a list of the non-compute equations (vars/functions) sorted by name.
  */
-EquationSet.prototype.sortedEquations = function() {
+EquationSet.prototype.sortedEquations = function () {
   // note: this has side effects, as it reorders equations. we could also
   // ensure this was done only once if we had performance concerns
-  this.equations_.sort(function(a, b) {
+  this.equations_.sort(function (a, b) {
     return a.name.localeCompare(b.name);
   });
 
@@ -229,7 +229,7 @@ EquationSet.prototype.sortedEquations = function() {
  * @returns {boolean} true if evaluating our EquationSet would result in
  *   dividing by zero.
  */
-EquationSet.prototype.hasDivZero = function() {
+EquationSet.prototype.hasDivZero = function () {
   var evaluation = this.evaluate();
   return (
     evaluation.err && evaluation.err instanceof ExpressionNode.DivideByZeroError
@@ -240,7 +240,7 @@ EquationSet.prototype.hasDivZero = function() {
  * @returns {boolean} true if evaluating our EquationSet would result in
  *   dividing by zero.
  */
-EquationSet.prototype.hasImaginary = function() {
+EquationSet.prototype.hasImaginary = function () {
   var evaluation = this.evaluate();
   return (
     evaluation.err &&
@@ -251,7 +251,7 @@ EquationSet.prototype.hasImaginary = function() {
 /**
  * Evaluate the EquationSet's compute expression in the context of its equations
  */
-EquationSet.prototype.evaluate = function() {
+EquationSet.prototype.evaluate = function () {
   return this.evaluateWithExpression(this.compute_.expression);
 };
 
@@ -264,7 +264,7 @@ EquationSet.prototype.evaluate = function() {
  * @returns {Error?} evaluation.err
  * @returns {Number?} evaluation.result
  */
-EquationSet.prototype.evaluateWithExpression = function(computeExpression) {
+EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
   // no variables/functions. this is easy
   if (this.equations_.length === 0) {
     return computeExpression.evaluate();
@@ -277,7 +277,7 @@ EquationSet.prototype.evaluateWithExpression = function(computeExpression) {
   var madeProgress;
   var testMapping;
   var evaluation;
-  var setTestMappingToOne = function(item) {
+  var setTestMappingToOne = function (item) {
     testMapping[item] = jsnums.makeFloat(1);
   };
   do {
@@ -293,7 +293,7 @@ EquationSet.prototype.evaluateWithExpression = function(computeExpression) {
         testMapping = _.clone(mapping);
         testMapping[equation.name] = {
           variables: equation.params,
-          expression: equation.expression
+          expression: equation.expression,
         };
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
@@ -312,7 +312,7 @@ EquationSet.prototype.evaluateWithExpression = function(computeExpression) {
         madeProgress = true;
         mapping[equation.name] = {
           variables: equation.params,
-          expression: equation.expression
+          expression: equation.expression,
         };
       } else if (mapping[equation.name] === undefined) {
         evaluation = equation.expression.evaluate(mapping);
@@ -338,7 +338,7 @@ EquationSet.prototype.evaluateWithExpression = function(computeExpression) {
 /**
  * Given a Blockly block, generates an Equation.
  */
-EquationSet.getEquationFromBlock = function(block) {
+EquationSet.getEquationFromBlock = function (block) {
   var name;
   if (!block) {
     return null;
@@ -364,7 +364,7 @@ EquationSet.getEquationFromBlock = function(block) {
       if (block.getInput('ARG2')) {
         argNames.push('ARG2');
       }
-      var args = argNames.map(function(inputName) {
+      var args = argNames.map(function (inputName) {
         var argBlock = block.getInputTargetBlock(inputName);
         if (!argBlock) {
           return 0;

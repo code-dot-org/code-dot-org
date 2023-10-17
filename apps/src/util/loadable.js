@@ -21,6 +21,6 @@ export default function loadable(getComponent, options = {}) {
   return loadableComponents(getComponent, {
     ErrorComponent: ExclamationTriangle,
     LoadingComponent: Spinner,
-    ...options
+    ...options,
   });
 }

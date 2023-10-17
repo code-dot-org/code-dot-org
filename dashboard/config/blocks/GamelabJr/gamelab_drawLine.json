@@ -23,6 +23,7 @@
         "name": "LOC2",
         "type": "Location"
       }
-    ]
+    ],
+    "style": "world_blocks"
   }
 }

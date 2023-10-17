@@ -4,11 +4,11 @@ title: Exemplo de artigo de opinião em apoio à Semana da Educação em Ciênci
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# Escreva um artigo independente no jornal dando apoio à Semana da educação em ciência da computação
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### Veja abaixo uma amostra de artigo independente de apoio à Semana da educação em ciência da computação – e as respectivas metas – que pode ser utilizada por legisladores estaduais e municipais, líderes empresariais, e outros.
 
-### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
+### Visite [advocacy.code.org]({{ urls/advocacy }}) para encontrar informações específicas do seu estado sobre ciência da computação.
 
 * * *
 
@@ -22,7 +22,7 @@ Mas, quem exatamente escreverá este software?
 
 Considerando a velocidade com que nosso mundo está sendo transformado pela tecnologia, você poderá pensar que o número de alunos que estudam ciência da computação nos ensinos fundamental e médio seja maior do que nunca atualmente. Nesse caso, você estaria errado. Na verdade, menos alunos estudam ciência da computação, e menos escolas a ensinam hoje do que há 10 anos.
 
-Em uma época em que a demanda por programadores habilidosos nunca foi tão alta, estamos ficando sem cientistas da computação. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+Em uma época em que a demanda por programadores habilidosos nunca foi tão alta, estamos ficando sem cientistas da computação. Mesmo neste período de altos índices de desemprego, milhares de vagas, muitas das quais estão bem aqui em **[INSIRA O ESTADO/A CIDADE]**, ainda estão em aberto por falta de pessoas qualificadas para ocupar os cargos.
 
 E qual é o motivo? Como podemos mudar isso?
 
@@ -42,6 +42,6 @@ Precisamos contratar mais professores de ciência da computação e incentivar o
 
 De acordo com o Bureau of Labor Statistics (agência norte-americana que analisa estatísticas trabalhistas), até o ano de 2020, haverá 9,2 milhões de empregos nas áreas de Ciências, Tecnologia, Engenharia e Matemática (STEM, na sigla em inglês). Metade desses empregos, isto é, 4,6 milhões, será das áreas de computação ou tecnologia da informação. E a ciência da computação é um conhecimento cada vez mais fundamental para o século XXI. Quem preencherá essas vagas de emprego, uma vez que nossas crianças não têm a oportunidade de desenvolver as habilidades necessárias?
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. Em todas as escolas de **[ESTADO]**, nossos alunos participarão de uma Hora do Código nacional, desmitificando a ciência da computação e estimulando seu desejo de seguir em frente e aprender mais. Eu estarei junto deles, e convido você a se juntar a nós também. Todos deveriam aprender a programar. Visit https://hourofcode.com/{{ country }} to learn more and get started. E apoiar nossos esforços para levar a ciência da computação a mais escolas no **[ESTADO]**.
+Esta semana, {{ campaign_date/full }}, é a Semana da educação em ciência da computação. Em todas as escolas de **[ESTADO]**, nossos alunos participarão de uma Hora do Código nacional, desmitificando a ciência da computação e estimulando seu desejo de seguir em frente e aprender mais. Eu estarei junto deles, e convido você a se juntar a nós também. Todos deveriam aprender a programar. Visite https://hourofcode.com/{{ country }} para saber mais e começar a utilizar. E apoiar nossos esforços para levar a ciência da computação a mais escolas no **[ESTADO]**.
 
 {{ signup_button }}

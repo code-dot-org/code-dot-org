@@ -21,7 +21,7 @@ export default class DesignModeBox extends React.Component {
     onInsertEvent: PropTypes.func.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     currentTheme: PropTypes.string.isRequired,
-    handleScreenChange: PropTypes.func.isRequired
+    handleScreenChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -35,7 +35,7 @@ export default class DesignModeBox extends React.Component {
         boxSizing: 'border-box',
         borderLeft: '1px solid gray',
         borderRight: '1px solid gray',
-        borderBottom: '1px solid gray'
+        borderBottom: '1px solid gray',
       },
       designProperties: {
         position: 'absolute',
@@ -44,15 +44,15 @@ export default class DesignModeBox extends React.Component {
         left: this.props.isToolboxVisible ? 270 : 0,
         right: 0,
         boxSizing: 'border-box',
-        padding: 10
+        padding: 10,
       },
       transparent: {
         width: '100%',
         height: '100%',
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
         position: 'relative',
-        zIndex: 1
-      }
+        zIndex: 1,
+      },
     };
 
     let transparencyLayer;

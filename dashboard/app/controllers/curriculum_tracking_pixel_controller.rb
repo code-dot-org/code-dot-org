@@ -6,7 +6,7 @@ class CurriculumTrackingPixelController < ApplicationController
   def index
     prevent_caching
     if params[:from]
-      curriculum_page = URI.unescape(params[:from])
+      curriculum_page = CGI.unescape(params[:from])
     end
     user_id = current_user&.id
 

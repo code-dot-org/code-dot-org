@@ -25,7 +25,7 @@ function showYourSchool() {
     schoolType: yourschoolElement.data('parameters-school-type'),
     schoolName: yourschoolElement.data('parameters-school-name'),
     schoolState: yourschoolElement.data('parameters-school-state'),
-    schoolZip: rawSchoolZip ? rawSchoolZip.toString() : undefined
+    schoolZip: rawSchoolZip ? rawSchoolZip.toString() : undefined,
   };
 
   ReactDOM.render(
@@ -40,6 +40,7 @@ function showYourSchool() {
         teacherApplicationMode={yourschoolElement.data(
           'parameters-teacher-application-mode'
         )}
+        tileset={yourschoolElement.data('parameters-tileset')}
       />
     </Provider>,
     yourschoolElement[0]
