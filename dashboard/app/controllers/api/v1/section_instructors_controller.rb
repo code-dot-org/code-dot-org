@@ -25,13 +25,14 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     section = Section.find(params.require(:section_id))
     authorize! :manage, section
 
-    si = SectionInstructor.create_section(section, params.require(:email))
-
-    if si.nil?
-      return head :bad_request
+    begin
+      si = SectionInstructor.create_section(section, params.require(:email))
+    rescue ArgumentError => exception
+      render json: {error: exception.message}, status: :bad_request
+    rescue RuntimeError
+      return head :not_found
     end
-
-    render json: si, serializer: Api::V1::SectionInstructorSerializer
+    return si
   end
 
   # Removes an instructor from the section (soft-deleting the record).
