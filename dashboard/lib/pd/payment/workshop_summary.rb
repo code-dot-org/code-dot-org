@@ -78,7 +78,7 @@ module Pd::Payment
       workshop.account_required_for_attendance? ? workshop.teachers_attending_all_sessions(true).count : nil
     end
 
-    def generate_organizer_report_line_item(with_payment = false)
+    def generate_organizer_report_line_item(with_payment: false)
       line_item = {
         organizer_name: workshop.organizer&.name,
         organizer_email: workshop.organizer&.email,

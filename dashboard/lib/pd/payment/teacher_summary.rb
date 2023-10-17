@@ -46,7 +46,7 @@ module Pd::Payment
 
     delegate :workshop, to: :workshop_summary
 
-    def generate_teacher_progress_report_line_item(with_payment = false)
+    def generate_teacher_progress_report_line_item(with_payment: false)
       line_item = {
         teacher_first_name: enrollment.first_name,
         teacher_last_name: enrollment.last_name,

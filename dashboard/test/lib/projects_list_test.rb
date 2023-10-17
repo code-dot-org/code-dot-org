@@ -54,12 +54,12 @@ class ProjectsListTest < ActionController::TestCase
   end
 
   test 'get_project_row_data includes library data if with_library is true' do
-    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, nil, false)
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, with_library: false)
     assert_nil project_row['libraryName']
     assert_nil project_row['libraryDescription']
     assert_nil project_row['libraryPublishedAt']
 
-    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, nil, true)
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, with_library: true)
     assert_equal 'bobsLibrary', project_row['libraryName']
     assert_equal 'A library by Bob.', project_row['libraryDescription']
     assert_equal '2020-01-25T17:48:12.358-08:00', project_row['libraryPublishedAt']
