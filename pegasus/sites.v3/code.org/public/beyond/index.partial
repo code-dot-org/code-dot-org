@@ -65,4 +65,4 @@ social:
 
 <hr>
 
-= view :analytics_event_log_helper, event_name: AnalyticsConstants::CS_JOURNEYS_PAGE_VISITED_EVENT
+{{ visit_partial_event_logger }}

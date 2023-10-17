@@ -92,4 +92,4 @@ style_min: true
   <p>The BBC micro:bit can be programmed using 2 code editors: Microsoft MakeCode a blocks-based code editor and the micro:bit Python, which offers text-based code.</p>
 </details>
 
-= view :analytics_event_log_helper, event_name: AnalyticsConstants::MAKER_MICROBIT_PAGE_VISITED_EVENT
+{{ visit_partial_event_logger }}
