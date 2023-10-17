@@ -186,7 +186,7 @@
         # exceed 5% of the total database connection capacity of a reader instance.
         MaxConnectionsPercent: 5
 
-  WriterSQLUser: <%= lambda_fn 'SQLUserLambda', {
+  WriterSQLUser: <%= lambda_fn 'SQLUser', {
     # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
     # SQL user.
     DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
@@ -218,7 +218,7 @@
   }.compact
   %>
 
-  ReaderSQLUser: <%= lambda_fn 'SQLUserLambda', {
+  ReaderSQLUser: <%= lambda_fn 'SQLUser', {
     # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
     # SQL user.
     DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
