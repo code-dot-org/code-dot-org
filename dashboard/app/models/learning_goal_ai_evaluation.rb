@@ -33,6 +33,14 @@ class LearningGoalAiEvaluation < ApplicationRecord
 
   validates :ai_confidence, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
 
+  STATUSES = {
+    SUCCESS: 0,
+    PENDING: 1,
+    FAILURE: 2,
+  }
+
+  validates :status, inclusion: {in: STATUSES.values}
+
   def summarize_for_instructor
     {
       id: id,
