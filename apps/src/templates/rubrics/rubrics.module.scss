@@ -22,9 +22,57 @@
   width: 760px;
 }
 
+.hiddenRubricContainer {
+  display: none;
+}
+
+.settings {
+  width: 724px;
+  min-height: 298px;
+  padding: 16px 16px 32px 16px;
+  gap: 16px;
+
+  border-radius: 0 0 4px 4px;
+  border-right: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  background: $neutral_light;
+  box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.settingsVisible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.settingsHidden {
+  display: none;
+}
+
+.aiAssessmentOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+  border-bottom: 1px solid $light_gray_200;
+  padding-bottom: 1rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
 .rubricContent {
   border-radius: 0 0 4px 4px;
-  border: 1px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
   background: $neutral_light;
   box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
 
@@ -33,11 +81,18 @@
   overflow-x: hidden;
   overflow-y: auto;
 
-  display: flex;
   padding: 16px;
+}
+
+.visibleRubricContent {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+}
+
+.hiddenRubricContent {
+  display: none;
 }
 
 .rubricContainerFooter {
@@ -99,25 +154,89 @@
 
 .learningGoalContainer {
   display: flex;
-  // padding: 0px 1px;
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
 
   border-radius: 4px;
-  border: 1px solid var(--light-gray-400, #a9acaf);
-  background: var(--light-white, #fff);
+  border: 1px solid $neutral_dark40;
+  background: $neutral_white;
 }
 
 .rubricHeader {
-  height: 21px;
   border-radius: 4px 4px 0 0;
   background: $neutral_dark;
   color: $neutral_white;
-  padding: 9px 15px 8px;
+  // padding: 9px 15px 8px;
 
+  border-top: 2px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.rubricHeaderLeftSide {
+  display: flex;
+  gap: 4px;
+  //height: 40px;
+  align-items: center;
+}
+
+.rubricHeaderRightSide {
+  display: flex;
+  // height: 40px;
+  // justify-content: flex-end;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+button.buttonStyle {
+  border-width: 0;
+  margin: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.closeButton {
+  display: flex;
+  padding: 11px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background-color: $neutral_dark;
+  color: $neutral_white;
+}
+
+button.rubricHeaderTab {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.selectedTab {
+  background: $neutral_light;
+  h6 {
+    line-height: 1.1875;
+    margin-bottom: 0;
+    color: $light_primary_700;
+  }
+}
+
+.unselectedTab {
+  background: $neutral_dark70;
   h6 {
     color: $neutral_white;
+    margin-bottom: 0;
     line-height: 1.1875;
   }
 }
@@ -256,7 +375,8 @@ h2.studentName {
     line-height: 154%;
   }
 
-  p, h6 {
+  p,
+  h6 {
     margin-bottom: 0;
   }
 }

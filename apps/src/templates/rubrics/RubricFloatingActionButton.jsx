@@ -37,15 +37,15 @@ export default function RubricFloatingActionButton({
         type="button"
       />
       {/* TODO: do not hardcode in AI setting */}
-      {isOpen && (
-        <RubricContainer
-          rubric={rubric}
-          studentLevelInfo={studentLevelInfo}
-          reportingData={reportingData}
-          currentLevelName={currentLevelName}
-          teacherHasEnabledAi
-        />
-      )}
+      <RubricContainer
+        rubric={rubric}
+        studentLevelInfo={studentLevelInfo}
+        reportingData={reportingData}
+        currentLevelName={currentLevelName}
+        initialTeacherHasEnabledAi
+        open={isOpen}
+        closeRubric={handleClick}
+      />
     </div>
   );
 }

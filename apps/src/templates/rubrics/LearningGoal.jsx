@@ -216,7 +216,9 @@ export default function LearningGoal({
           <span>{learningGoal.learningGoal}</span>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
-          {aiEnabled && <AiToken />}
+          {aiEnabled && displayUnderstanding === invalidUnderstanding && (
+            <AiToken />
+          )}
           {/*TODO: Display status of feedback*/}
           {canProvideFeedback &&
             aiEnabled &&
