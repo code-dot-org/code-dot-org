@@ -32,8 +32,6 @@ social:
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-%script{type: "text/javascript", src: webpack_asset_path('js/hourofcode.com/public/index.js')}
-
 
 #top
   #fullwidth
@@ -86,7 +84,6 @@ social:
         %a.link-button{href: "/events"}
           =hoc_s(:call_to_action_register_your_hoc)
 
-
   -# What is HoC?
   -# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.
   %section.what-is-hoc
@@ -119,7 +116,6 @@ social:
         %img{src: '/images/code-dot-org-logo-40x40.svg'}
 
   = view 'popup_window.js'
-
 
 :javascript
 
