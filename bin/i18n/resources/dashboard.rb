@@ -34,6 +34,9 @@ module I18n
         CourseOfferings.sync_out
         Courses.sync_out
         CurriculumContent.sync_out
+        Docs.sync_out
+        Scripts.sync_out
+        SharedFunctions.sync_out
       end
     end
   end

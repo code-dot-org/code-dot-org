@@ -119,50 +119,56 @@ export default function RubricContent({
 
   return (
     <div className={style.rubricContent}>
-      {!!studentLevelInfo && (
-        <div className={style.studentInfo}>
-          <Heading2>{studentLevelInfo.name}</Heading2>
-          <div className={style.levelAndStudentDetails}>
-            <Heading5>
-              {i18n.lessonNumbered({
-                lessonNumber: lesson.position,
-                lessonName: lesson.name,
-              })}
-            </Heading5>
-            {onLevelForEvaluation && (
-              <div className={style.studentMetadata}>
-                {studentLevelInfo.timeSpent && (
+      <div>
+        {!!studentLevelInfo && (
+          <Heading2 className={style.studentName}>
+            {studentLevelInfo.name}
+          </Heading2>
+        )}
+        <Heading5>
+          {i18n.lessonNumbered({
+            lessonNumber: lesson.position,
+            lessonName: lesson.name,
+          })}
+        </Heading5>
+        {!!studentLevelInfo && (
+          <div className={style.studentInfo}>
+            <div className={style.levelAndStudentDetails}>
+              {onLevelForEvaluation && (
+                <div className={style.studentMetadata}>
+                  {studentLevelInfo.timeSpent && (
+                    <BodyThreeText className={style.singleMetadatum}>
+                      <FontAwesome icon="clock" />
+                      <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
+                    </BodyThreeText>
+                  )}
                   <BodyThreeText className={style.singleMetadatum}>
-                    <FontAwesome icon="clock" />
-                    <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
+                    <FontAwesome icon="rocket" />
+                    {i18n.numAttempts({
+                      numAttempts: studentLevelInfo.attempts || 0,
+                    })}
                   </BodyThreeText>
-                )}
-                <BodyThreeText className={style.singleMetadatum}>
-                  <FontAwesome icon="rocket" />
-                  {i18n.numAttempts({
-                    numAttempts: studentLevelInfo.attempts || 0,
+                  {studentLevelInfo.lastAttempt && (
+                    <BodyThreeText className={style.singleMetadatum}>
+                      <FontAwesome icon="calendar" />
+                      <span>
+                        {formatLastAttempt(studentLevelInfo.lastAttempt)}
+                      </span>
+                    </BodyThreeText>
+                  )}
+                </div>
+              )}
+              {!onLevelForEvaluation && rubricLevel?.position && (
+                <BodyThreeText>
+                  {i18n.feedbackAvailableOnLevel({
+                    levelPosition: rubricLevel.position,
                   })}
                 </BodyThreeText>
-                {studentLevelInfo.lastAttempt && (
-                  <BodyThreeText className={style.singleMetadatum}>
-                    <FontAwesome icon="calendar" />
-                    <span>
-                      {formatLastAttempt(studentLevelInfo.lastAttempt)}
-                    </span>
-                  </BodyThreeText>
-                )}
-              </div>
-            )}
-            {!onLevelForEvaluation && rubricLevel?.position && (
-              <BodyThreeText>
-                {i18n.feedbackAvailableOnLevel({
-                  levelPosition: rubricLevel.position,
-                })}
-              </BodyThreeText>
-            )}
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
       <div className={style.learningGoalContainer}>
         {rubric.learningGoals.map(lg => (
           <LearningGoal
