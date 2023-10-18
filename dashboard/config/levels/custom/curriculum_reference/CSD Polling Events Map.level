@@ -1,0 +1,17 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2017-03-30T22:37:36.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Polling Events",
+    "reference": "/docs/csd/polling_events/index.html"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Map>

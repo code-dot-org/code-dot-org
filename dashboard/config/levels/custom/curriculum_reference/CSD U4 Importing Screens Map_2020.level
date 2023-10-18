@@ -1,0 +1,19 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-02-18T17:28:33.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Importing Screens",
+    "teacher_markdown": "#### Promoting Teamwork\r\n\r\nThe following levels will prepare teams to merge all of their separate screens into a single app. There are two potential stumbling blocks that teams may run into during the import process:\r\n\r\n* Miscommunicated urls: The sharing URLS are long and complicated, so students will need a shared location where they can copy/paste their urls\r\n* Conflicting screen IDs: Importing a screen with the same ID as an existing one will allow you to overwrite the existing screen. This is particularly troublesome when students leave the default screen ID \"screen1\"\r\n* Conflicting element IDs: If students have _properly_ namespaced all of their elements this shouldn't be an issue, but any elements that have the default ID or share an ID with an existing element will prevent a screen from importing\r\n\r\nOnce teams move to the programming phase of this project, it becomes much more difficult for students to collaborate on the same app. The design phase is the primary opportunity for all students to collaborate on the app - after this teams will still be working together, but each student will be working on their own copy of the app.",
+    "reference": "/docs/concepts/app-lab/design-mode/importing-screens/index.html",
+    "parent_level_id": 16346,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-06 16:37:26 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-06 16:41:08 +0000\",\"changed\":[\"display_name\",\"teacher_markdown\",\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-06 17:26:14 +0000\",\"changed\":[\"display_name\",\"teacher_markdown\",\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-20 00:16:26 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</Map>

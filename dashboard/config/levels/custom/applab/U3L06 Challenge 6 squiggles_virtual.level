@@ -1,0 +1,135 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "dot": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "arcRight": null,
+      "arcLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Read the documentation for the \"arcLeft\" and \"arcRight\" commands and then draw the squiggles as shown. ",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.5",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "long_instructions": "# Multiple Parameters - Making Arcs\r\n\r\nMany commands need more than one parameter to make sense. When a command needs more than one parameter, the parameters are separated by commas and the **order of the parameters matters**.\r\n\r\nTwo new commands have been added to the block palette, `arcLeft()` and `arcRight()` which both accept two parameters.\r\n\r\n**Read the documentation:** Read the documentation for `arcLeft()` and `arcRight()`.\r\n\r\n<img src=\"https://images.code.org/320a5e54abb95b267738d5e15946b51c-image-1441985535028.png\" style=\"height: 250px; float: left; margin: 10px\">\r\n\r\n# Do This:\r\n\r\n**Draw a squiggly line:**\r\n\r\nUsing `arcLeft` and `arcRight` along with the ones you have already learned draw a **purple squiggle on a blue background**. Feel free to use any of the methods for choosing colors you have already learned.\r\n\r\nHints:\r\n\r\n* To make the figure exactly, you need to turn before calling arcLeft or arcRight to orient the turtle first.\r\n* The parameters to arcLeft and arcRight are the same and they are multiples of 10\r\n* The colors are \"PowderBlue\" and \"Purple\" - though you can use other colors if you like.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "7bob5aRFtFH9MtS0NxdWcDh/QPLPxNkyg6d8NaXdZGmHd0gOt8W9UdX2Ogxl\nKR+G\n",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of arcRight() and arcLeft() without any loops."
+      },
+      {
+        "entries": [
+          "penColor:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to set the pen color at least twice - once for the background and once for the squiggly."
+      },
+      {
+        "entries": [
+          "penWidth:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "To complete this task you need to set the pen width for the squiggly."
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to make at least 1 dot to make the background color"
+      },
+      {
+        "entries": [
+          "arcLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "To complete this task you need to call arcLeft at least three times"
+      },
+      {
+        "entries": [
+          "arcRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "To complete this task you need to call arcRight at three times."
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Validation note: we don't check to see if the student actually drew this exact squiggly.  We check that the student: \r\n* set the `penColor` at least twice\r\n* set the `penWidth` at least once\r\n* called `arcLeft` at least 3 times\r\n* called `arcRight` at least 3 times\r\n* called `dot` once (for the background color)\r\n",
+    "parent_level_id": 16920,
+    "name_suffix": "_virtual",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-19 18:35:14 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

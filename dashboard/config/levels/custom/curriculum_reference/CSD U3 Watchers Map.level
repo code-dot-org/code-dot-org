@@ -1,0 +1,15 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2017-04-12T20:19:54.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Debugging with Watchers",
+    "reference": "/docs/csd/gamelab_watchers/index.html"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Map>

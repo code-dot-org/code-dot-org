@@ -1,0 +1,67 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-12-04T22:03:55.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "comment": null,
+      "onEvent": null,
+      "setText": null,
+      "setProperty": null
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "This program keeps track of the money collected and tickets sold for a performance. There are three variables already created that store the cost of an adult, child, and senior ticket.\r\n\r\n# Do This\r\n\r\n* Run the program to see how it works. Make sure to click all three buttons.\r\n* Add code to make the \"Child\" and \"Senior\" buttons work. They should increase the total number of tickets sold and the total money collected. Use the code for the \"Adult\" button as a guide.",
+    "submittable": "false",
+    "start_blocks": "// Create and assign values to variables\r\nvar dollars = 0;\r\nvar tickets = 0;\r\nvar adultPrice = 12.50;\r\nvar childPrice = 8.50;\r\nvar seniorPrice = 10;\r\n\r\n// Use the code in this button to guide how you\r\n// add code to the others.\r\nonEvent(\"adultButton\",\"click\",function(){\r\n  // Increase tickets sold\r\n  tickets = tickets + 1;\r\n  // Increase dollars collected\r\n  dollars = dollars + adultPrice;\r\n  setProperty(\"dollarsLabel\", \"text\", \"$\" + dollars);\r\n  setProperty(\"ticketsLabel\", \"text\", tickets + \" tickets\");\r\n  playSound(\"sound://category_digital/coin_2.mp3\");\r\n});\r\n\r\n// Add code to make this button work\r\nonEvent(\"childButton\",\"click\",function(){\r\n\r\n  playSound(\"sound://category_digital/coin_2.mp3\");\r\n});\r\n\r\n// Add code to make this button work\r\nonEvent(\"seniorButton\",\"click\",function(){\r\n\r\n  playSound(\"sound://category_digital/coin_2.mp3\");\r\n});",
+    "never_autoplay_video": "false",
+    "slider_speed": "0.1",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "validation_enabled": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "true",
+    "makerlab_enabled": "false",
+    "parent_level_id": 15820,
+    "mini_rubric": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"adultButton\" style=\"padding: 0px; margin: 0px; color: rgb(255, 255, 255); position: absolute; left: 5px; top: 345px; width: 100px; height: 100px; font-size: 20px; background-color: gold; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; border-radius: 5px;\">Adult Ticket</button><button id=\"childButton\" style=\"padding: 0px; margin: 0px; height: 100px; color: rgb(255, 255, 255); background-color: orange; position: absolute; left: 110px; top: 345px; width: 100px; font-size: 20px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; border-radius: 5px;\">Child Ticket</button><button id=\"seniorButton\" style=\"padding: 0px; margin: 0px; color: rgb(255, 255, 255); background-color: red; position: absolute; left: 215px; top: 345px; width: 100px; height: 100px; font-size: 20px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; border-radius: 5px;\">Senior Ticket</button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 310px; height: 85px; position: absolute; left: 5px; top: 70px; text-align: center; background-color: rgba(0, 0, 0, 0); border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 60px;\" id=\"dollarsLabel\">$0</label><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 305px; height: 65px; position: absolute; left: 10px; top: 165px; text-align: center; background-color: rgba(0, 0, 0, 0); border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 40px;\" id=\"ticketsLabel\">0 tickets</label></div></div>",
+    "reference_links": [
+      "/docs/concepts/patterns/counter-patterns-with-event/",
+      "/docs/concepts/patterns/variable-with-string-concatenation-pattern/"
+    ],
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "encrypted_examples": "mOp/vtOWqPQN1E/FQgEYB9Xn31HfCZAiagRbMlHqbKmgoXsDrX7ntTKgvNHb\nGpXHZf4U4yVtVWVJVSymHxYjSw==\n",
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-07 17:50:22 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:51:56 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:52:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"slider_speed\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-07 17:57:12 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"expand_debugger\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-08 00:16:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-08 00:16:51 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-08 00:17:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-08 00:18:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 01:32:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 01:43:17 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 01:51:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 01:52:42 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 01:54:42 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 02:11:57 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 02:13:30 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 02:14:45 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-12 02:34:10 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-14 21:10:12 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-06 20:20:06 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-09-06 20:22:51 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"watchers_prepopulated\",\"start_html\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-03-31 20:32:48 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2020-04-01 06:23:05 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2020-04-02 16:52:47 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>
