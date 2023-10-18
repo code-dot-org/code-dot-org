@@ -10,7 +10,7 @@ title: Riktlinjer för övningar
 
 # Riktlinjer för att skapa och skicka in handledning och lektioner för Hour of Code™ och Computer Science Education Week
 
-Code.org är värd för en mängd olika Hour of Code™ -aktiviteter, lektioner och videor på webbplatserna Code.org och Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org är värd för en mängd olika Hour of Code™ -aktiviteter, lektioner och videor på webbplatserna Code.org och Hour of Code. Den aktuella listan finns på []({{ urls/learn }})hourofcode.com/learn.
 
 Vill du skicka in din egen självstyrda handledning, lärarledd lektion eller robotik/makeraktivitet som förklarar en datavetenskapsprincip? Gå med i denna globala rörelse och hjälp deltagare runt om i världen att komma igång med en timmes kod eller gå vidare med flera lektioner, dagslånga eller veckolånga aktiviteter.
 
@@ -18,7 +18,7 @@ Vill du skicka in din egen självstyrda handledning, lärarledd lektion eller ro
 
 Några tips:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Skicka in varje handledning eller aktivitet individuellt. Med tanke på antalet bidrag vi har sett de senaste åren, vi kommer att ha tid att granska **upp till 5 aktiviteter** per partner. Efter det kommer vi att göra ett bästa försök att granska så många som möjligt innan Hour of Code börjar.
+1. **Skicka in mer än en aktivitet**: Om du har byggt aktiviteter för olika nivåer, olika åldrar, eller andra kategorier, vi listar dina aktiviteter separat så att varje lärare kan hitta rätt sak för sitt klassrum. Skicka in varje handledning eller aktivitet individuellt. Med tanke på antalet bidrag vi har sett de senaste åren, vi kommer att ha tid att granska **upp till 5 aktiviteter** per partner. Efter det kommer vi att göra ett bästa försök att granska så många som möjligt innan Hour of Code börjar.
 
 2. **Utöver nybörjarlektioner**: Förutom lektioner för lärare och studenter som lär sig datavetenskap för första gången listar vi inlärningsupplevelser för datavetenskapliga klassrum som vill gå lite längre! Hjälp oss genom att skicka in lektioner för klasser som redan är bekväma med grunderna.
 
@@ -45,7 +45,7 @@ Några tips:
 
 Dessa aktiviteter är utformade för studenter att självstyra genom en handledning. De kräver inte mycket instruktion från en lärare eller lärarförberedande arbete.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Lärarunderlättad lektion ([exempel](https://studio.code.org/s/course1/lessons/2/levels/1), [mall](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Nu när hundratusentals lärare har provat Hour of Code är många klassrum redo för mer kreativa aktiviteter som lär ut grunderna i datavetenskap. För att hjälpa mer avancerade lärare att hitta inspiration samlar vi in och sammanställer ”lärarledda” lektioner och aktivitetsplaner för Hour of Code-veteraner.
 
@@ -84,11 +84,11 @@ Målet med en Hour of Code är att ge nybörjare en tillgänglig första smak av
 
 Aktiviteterna ska lära ut ett datavetenskapskoncept som loopar, villkor, kryptering eller hur Internet fungerar. En aktivitet kan också lära om hur datavetenskap ansluter till verkliga yrken, händelser eller historia. Till exempel, lära UX-design för att skapa appar som är meningsfulla för en publik eller sak. Vi avskräcker aktiviteter som fokuserar på syntaxen för programmering snarare än begreppen. Till exempel listar vi, men inte markera, aktiviteter som lär HTML. På samma sätt avskräcker vi blockprogrammeringslektioner som fokuserar på att inställa/ändra konfigurationsalternativ snarare än att lära sig att modellera en algoritm eller process.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Aktiviteter som kräver en appinstallation, skrivbordsapp, eller spelkonsolupplevelser är okej men inte idealiska. Vi kommer inte att lista aktiviteter som kräver registrering eller betalning. (Robotikernas aktiviteter kan kräva köp av robotik.)
+*Tekniska krav:* På grund av det stora utbudet av skol- och klassrumsteknikinställningar är de bästa aktiviteterna webbaserade eller smartphone-vänliga eller på annat sätt urkopplade aktiviteter som lär ut datavetenskapliga begrepp utan användning av en dator (se http://csunplugged.com/). [](http://csunplugged.com/) Aktiviteter som kräver en appinstallation, skrivbordsapp, eller spelkonsolupplevelser är okej men inte idealiska. Vi kommer inte att lista aktiviteter som kräver registrering eller betalning. (Robotikernas aktiviteter kan kräva köp av robotik.)
 
 *Studentledd (självstyrd) Format:* Den ursprungliga Hour of Code byggdes mestadels på framgången med självstyrda handledning eller lektioner, valfritt underlättad av läraren. Det finns gott om befintliga alternativ, men om du vill skapa en ny, dessa aktiviteter bör utformas så att de kan vara roliga för en elev som arbetar ensam, eller i ett klassrum vars lärare har minimal förberedelse eller CS-bakgrund. De bör ge anvisningar för studenter i motsats till en öppen timme lång utmaning. Helst integreras instruktionerna och handledningarna direkt i programmeringsplattformen för att undvika att växla flikar eller fönster mellan handledningen och programmeringsplattformen.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+För att få en känsla av det stora utbudet av typer av handledning och lektionsplaner du kan skapa, besök sidan [Hour of Code Activities.](https://hourofcode.com/us/learn)
 
 [**Tillbaka till toppen**](#top)
 
@@ -103,6 +103,7 @@ Vad du behöver:
 * Namn och e-post till den primära kontakt som representerar den inlämnade aktiviteten
 * Aktivitetsnamn (kan inte inkludera ”Hour of Code” i namnet)
 * URL-länk till aktiviteten
+* Inkluderar denna aktivitet AI: Ja eller Nej
 * En aktivitetsbeskrivning (max antal tecken: 400) 
     * Vänligen inkludera i beskrivningen om det huvudsakligen är studentstyrt eller lärarunderlättat. Dessutom, vissa skolor är intresserade av att veta om Hour of Code-aktiviteter adresserar Common Core eller Next Generation Science Standards. Om aktiviteten adresserar specifika standarder, överväga att inkludera denna information.
 * Rekommenderade betygsnivåer för avsedda användare. Du kan hänvisa till \[Computer Science Teachers' Association's K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) för klassanpassade datavetenskapskoncept. Exempel på betygsnivåer inkluderar: 
@@ -110,9 +111,9 @@ Vad du behöver:
     * Betyg 2-5 (åldrarna 7-10)
     * Betyg 6-8 (åldrarna 11-13)
     * Betyg 9+ (åldrar 14+)
-* En lista över ämnesområden som din aktivitet täcker (förutom datavetenskap). Till exempel, om en matematiklärare kan använda din aktivitet för att undervisa om vinklar eller paraboler, lista som matematik. Om du har en galen libs aktivitet som lär ut verb/substantiv/etc. Välj språkkonst.
-* En lista över programmeringsspråk som din aktivitet lär ut. Dvs C/C ++, Java, JavaScript, etc. eller språfoberoende (för lektionsplaner som kan undervisas på flera språk)
-* En lista över naturliga språk som stöds. Obs! Språkdetektering är aktivitetsleverantörens ansvar; vi kommer att omdirigera alla användare till den angivna webbadressen.
+* En lista över programmeringsspråk som din aktivitet lär ut. Dvs C/C ++, Java, JavaScript, etc. eller språfoberoende (för lektionsplaner som kan undervisas på flera språk) Välj språkkonst.
+* En lista över naturliga språk som stöds. Obs! Språkdetektering är aktivitetsleverantörens ansvar; vi kommer att omdirigera alla användare till den angivna webbadressen. eller språfoberoende (för lektionsplaner som kan undervisas på flera språk)
+* Vilken erfarenhetsnivå ska en lärare ha för att använda din aktivitet? (t.ex. Nybörjare eller Bekväm.) Och vilken erfarenhetsnivå ska eleverna ha?
 * Vilken erfarenhetsnivå ska en lärare ha för att använda din aktivitet? (t.ex. Nybörjare eller Bekväm.) Och vilken erfarenhetsnivå ska eleverna ha? Om du vill förbereda mer avancerade Hour of Code™ -aktiviteter, vänligen inkludera de förkunskaper som behövs i beskrivningen av din aktivitet.
 * Längden på din aktivitet 
     * Endast 1 timme
@@ -140,11 +141,11 @@ Vad du behöver:
     * Urkopplad
 * Skärmdump eller marknadsföringsbild av Hour of Code-aktiviteten. Vänligen skicka minst en bild med 4:3 dimensioner. Det bör vara minst 520px x 390px. Den här bilden bör inte ha någon text på den (förutom din logotyp), för att göra den mer tillgänglig för icke-engelsktalande. Om en lämplig bild inte tillhandahålls kan vi ta vår egen skärmdump av din handledning ELLER vi kan välja att inte lista den. Alla bilder måste skickas som en URL-länk till en .jpg, .jpeg eller .png.
 * För att mer exakt spåra deltagande måste tredjepartshandledningspartners inkludera spårningsbilder på 1 pixel på första sidan i sina Hour of Code-tutorials. Se avsnittet [Tracking Pixel](#pixel) nedan för mer information.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* När du är klar med din aktivitet bör användarna hänvisas till [](https://code.org/api/hour/finish) code.org/api/hour/finish där de kommer att kunna: 
     * Dela på sociala medier att de slutfört Hour of Code
     * Få ett intyg om att de slutfört Hour of Code
     * Se topplistor om vilka länder/städer som har högst deltagande i Hour of Code-aktiviteter
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * För användare som spenderar en timme på din aktivitet och inte slutför den, vänligen inkludera en knapp på din aktivitet som säger ”Jag är klar med min Hour of Code” som länkar tillbaka till [](https://code.org/api/hour/finish) code.org/api/hour/finish också.
 * (Valfritt) Vi kan följa upp med en online-enkät/formulärlänk som ber om en rapport om följande aktivitetsmått: 
     * För onlineaktiviteter (särskilt smartphone/tablet-appar): 
         * Antal användare
@@ -166,9 +167,11 @@ Vad du behöver:
 
 ## Hur verksamheten kommer att utvärderas
 
-En mångsidig kommitté av datavetenskapspedagoger kommer att rangordna inlämningar baserat på kvalitativa och kvantitativa kriterier. Alla aktiviteter som passar de grundläggande kriterierna kommer att listas. Lärare kommer att kunna filtrera och sortera för att hitta de bästa aktiviteterna för sitt klassrum.
+En mångsidig kommitté av datavetenskapspedagoger kommer att rangordna inlämningar baserat på kvalitativa och kvantitativa kriterier. Alla aktiviteter som passar de grundläggande kriterierna kommer att listas.
 
-Rubriken för utvärdering av aktiviteter och lektionsplaner kommer att leta efter följande kriterier för alla aktiviteter och rangordna dem därefter:
+För traditionella kodningsaktiviteter, en mångsidig kommitté av datavetenskapspedagoger kommer att rangordna inlämningar baserat på kvalitativa och kvantitativa kriterier. Alla aktiviteter som passar de grundläggande kriterierna kommer att listas. Lärare kommer att kunna filtrera och sortera för att hitta de bästa aktiviteterna för sitt klassrum.
+
+Om granskningskommittén betygsätter aktiviteten noll i produktionskvalitet (på grund av dåliga buggar eller instruktioner som gör det mycket svårt att använda), för att främja lärande i underrepresenterade grupper (på grund av rasistiskt/sexistiskt material), i utbildningsvärde (lär inte CS-begrepp), eller rolig/engagerande (på grund av att det är svårt/avskräckande för studenter att arbeta igenom), kommer aktiviteten inte att listas.
 
 - Hög produktionskvalitet
 - Främja lärande av alla demografiska grupper (esp. studenter underrepresenterade i CS, som unga kvinnor, studenter från marginaliserade ras- och etniska grupper och studenter med funktionsnedsättning)
@@ -176,9 +179,9 @@ Rubriken för utvärdering av aktiviteter och lektionsplaner kommer att leta eft
 - Roligt och engagerande
 - Uppmuntrar eleverna att skapa något unikt de kan dela (För yngre elever: med föräldrar och klasskamrater. För äldre studenter: på Internet)
 
-Om granskningskommittén betygsätter aktiviteten noll i produktionskvalitet (på grund av dåliga buggar eller instruktioner som gör det mycket svårt att använda), för att främja lärande i underrepresenterade grupper (på grund av rasistiskt/sexistiskt material), i utbildningsvärde (lär inte CS-begrepp), eller rolig/engagerande (på grund av att det är svårt/avskräckande för studenter att arbeta igenom), kommer aktiviteten inte att listas.
-
 För att kunna listas måste alla aktiviteter dessutom:
+
+För självstyrda aktiviteter för nya lärare och studenter kommer granskningskommittén att leta efter om:
 
 - Var lämplig för ett offentligt skolklassrum (inga vapen, inget uttryckligt/moget innehåll, inget religiöst innehåll etc.)
 - Kräver ingen registrering
@@ -204,11 +207,13 @@ Lärare och studenter kommer att kunna söka igenom och filtrera vår lista öve
 
 ## Förslag för att utforma en timmes självstyrda handledning
 
-Du kan inkludera [Hour of Code-logotypen](https://hourofcode.com/us/promote/resources#logo) i din handledning, men detta krävs inte. Om du använder Hour of Code-logotypen, se varumärkesriktlinjerna nedan. <u>Under inga omständigheter kan Code.org-logotypen och namnet användas.</u> Båda är varumärkesskyddade och kan inte blandas med ett tredje parts varumärke utan uttryckligt skriftligt tillstånd.
-
-**Se till att den genomsnittliga studenten kan avsluta bekvämt på en timme.** Överväg att lägga till en öppen aktivitet i slutet för elever som går snabbare genom lektionen. Kom ihåg att de flesta barn kommer att vara absoluta nybörjare till datavetenskap och kodning.
+Aktiviteter behöver inte inkludera AI, även om vi vill erbjuda fler AI-relaterade aktiviteter.
 
 **Inkludera läraranteckningar.** De flesta aktiviteter bör vara studentstyrda, men om en aktivitet underlättas eller hanteras av en lärare, vänligen inkludera tydliga och enkla anvisningar för läraren i form av läraranteckningar på en separat URL som skickas med din aktivitet. Inte bara är eleverna nybörjare, några av lärarna är också. Inkludera information som:
+
+**Inkorporera feedback i slutet av aktiviteten.** (t.ex. ”Du avslutade 10 nivåer och lärde dig om loopar! Bra jobbat!”)
+
+**Uppmuntra eleverna att posta på sociala medier (där så är lämpligt) när de är klara.** Till exempel ”Jag har gjort en Hour of Code med ________ Har du? #HourOfCode ”eller” Jag har gjort en #HourOfCode som en del av #CSEdWeek. Har du?
 
 - Vilka plattformar och webbläsare fungerar handledningen bäst på?
 - Fungerar det på smartphones? Tabletter?
@@ -247,7 +252,7 @@ Hour of Code® och Hora del Código® är registrerade varumärken som tillhör 
 
 ## Spårning Pixel
 
-För att mer exakt spåra deltagande ber vi varje handledningspartner att inkludera en spårningsbild på 1 pixel på första sidan i deras Hour of Code-tutorials. Pixelbilden får endast finnas på startsidan. Inkludera inte på några interimssidor i din handledning.
+Om din handledning är godkänd och ingår på den sista handledningssidan kommer Code.org att ge dig en unik spårningspixel som du kan integrera i din handledning. Se exempel nedan. Inkludera inte på några interimssidor i din handledning.
 
 Detta gör att vi kan räkna användare som gör din Hour of Code-handledning. Det kommer att leda till mer exakta deltagarantal för din handledning.
 
@@ -257,7 +262,7 @@ OBS: detta är inte viktigt att göra för installerbara appar (iOS/Android-appa
 
 Exempel på spårningspixlar för Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Tillbaka till toppen**](#top)

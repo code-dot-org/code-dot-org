@@ -617,6 +617,7 @@ ko:
         artist_intro: 예술가 퍼즐 소개
         c_and_c_digital_sharing: 디지털 공유
         c_and_c_great_to_create: 창작과 페어 플레이는 멋진 일입니다.
+        code-break: 코드 브레이크 선택
         codebreak_e01: '코드 브레이크 1.0: 힐 하퍼 알고리즘'
         codebreak_e02: 코드 브레이크 2.0 - 마크 큐반 및 린제이 스콧 프로토타입
         codebreak_e03: '코드 브레이크 3.0: 애쉬튼 커쳐와 미아 길 엡손 암호화'
@@ -631,7 +632,7 @@ ko:
         codebreak_e12: '코드 브레이크 12.0: 알로에 블라크, 브렛 테일러, 파울라 메이아 하드웨어'
         conditionals_with_cards: '언플러그드 레슨 인 액션: 카드 조건문'
         cs-principles-intro-to-objects: 'CS 기초: 객체 소개'
-        csc-ecosystems-intro: 해양생태계 시뮬레이션
+        csc-ecosystems-intro: 해양 생태계 시뮬레이션
         csc-poem-art-intro: 소개 영상
         csc-poem-art-outro: 아우트로 동영상
         csc-starquilts-intro: 기하학적 별무늬 퀼트 코딩
@@ -828,6 +829,7 @@ ko:
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - 파일럿 비디오 - 데이터
           블록
         u7-libraries-explanation: '앱 랩: 자신만의 블록 만들기 - 라이브러리 이용 방법'
+        what-is-creativity: 창의력이란?
         what_is_an_event: 이벤트란?
         what_is_cs: 컴퓨터 과학이란?
         why-should-teach-unplugged-activities: 'FAQ: "언플러그드" 활동을 가르쳐야 하는 이유는?'

@@ -381,6 +381,10 @@ es-MX:
             que expongan los escollos éticos en un área de la Inteligencia Artificial
             (IA) de tu elección. '
           title: Nuestro Código Ético de la Inteligencia Artificial
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Nuestro Código Ético de la Inteligencia Artificial
         ai-lab:
           name: ai-lab
           student_description: Usa estos niveles para conocer el Laboratorio de Inteligencia
@@ -622,6 +626,8 @@ es-MX:
           lessons:
             lesson-1:
               name: Partículas
+            lesson-4:
+              name: ecosistemas
         andrea-test:
           description: una descripción más larga en mi intento de crear un curso...
             aún preguntándome de dónde proviene la descripción, el contenido....
@@ -2418,6 +2424,8 @@ es-MX:
               display_name: Lecciones alternativas
             lessonGroup-6:
               display_name: Encuesta Final de la Unidad
+            lessonGroup-7:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Bienvenido a CSA
@@ -2551,6 +2559,8 @@ es-MX:
               display_name: Lecciones alternativas
             lessonGroup-5:
               display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Atributos
@@ -2560,6 +2570,8 @@ es-MX:
               name: Evaluación de la unidad 2
             lesson-15:
               name: Encuesta de la Unidad 2
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-4:
               name: Variables
             lesson-9:
@@ -2674,6 +2686,8 @@ es-MX:
               display_name: Lecciones alternativas
             lessonGroup-5:
               display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Matrices Unidimensionales (1D)
@@ -2681,6 +2695,8 @@ es-MX:
               name: Práctica FRQ
             lesson-14:
               name: Encuesta de la Unidad 3
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-3:
               name: Bucles Para
           title: Arrays y Algoritmos
@@ -2771,9 +2787,13 @@ es-MX:
               display_name: Lecciones alternativas
             lessonGroup-5:
               display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-15:
               name: Encuesta de la Unidad 4
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-9:
               name: Aleatorio
           title: Condiciones y Lógica
@@ -2892,9 +2912,13 @@ es-MX:
               display_name: Lecciones alternativas
             lessonGroup-5:
               display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-14:
               name: Encuesta de la Unidad 5
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
           title: Arrays Bidimensionales
         csa5-exemplars:
           lesson_groups:
@@ -3007,9 +3031,13 @@ es-MX:
               display_name: Lecciones alternativas
             lessonGroup-5:
               display_name: Encuesta Final de la Unidad
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-14:
               name: Encuesta de la Unidad 6
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
           student_description: Esta unidad continúa ampliando las estructuras de datos
             para introducirte en la creación de listas utilizando la clase `ArrayList`.
             En el proceso, aprenderás sobre las clases `Integer` y `Double` y utilizarás
@@ -3152,7 +3180,11 @@ es-MX:
               display_name: Encuesta Final de la Unidad
             lessonGroup-5:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-6:
               name: Propiedad Intelectual
           student_description: En esta unidad, se practica el diseño y el desarrollo
@@ -3303,9 +3335,13 @@ es-MX:
               display_name: Encuesta
             lessonGroup-5:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-11:
               name: Práctica FRQ
+            lesson-15:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-7:
               name: Buscando y Ordenando
           student_description: En esta unidad, ampliarás los algoritmos que has aprendido
@@ -3447,6 +3483,11 @@ es-MX:
               display_name: Revisión y Práctica
             lessonGroup-3:
               display_name: Simulacros de Exámenes
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          lessons:
+            lesson-2:
+              name: Proyecto Arte en el Asfalto - Día 2
           student_description: Esta unidad te prepara para el examen AP CSA repasando
             los conceptos clave, practicando las preguntas de opción múltiple y de
             respuesta libre, y reforzando las estrategias para realizar el examen.
@@ -3497,6 +3538,11 @@ es-MX:
           title: CSC Cubiertalibro
         csc-ecosystems-2022:
           name: csc-ecosistemas-2022
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Programa tu Propio Ecosistema (2023)
+          title: Cómo simular un ecosistema marino (2023)
         csc-fables-2022:
           name: csc-fábulas-2022
         csc-function-machines-pilot:
@@ -10433,7 +10479,7 @@ es-MX:
           name: mc
           student_description: Utiliza bloques de código para llevar a Steve o Alex
             en una aventura a través del mundo de Minecraft.
-          title: Hora de Código de Minecraft
+          title: Aventurero de Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -12110,6 +12156,103 @@ es-MX:
               display_name: Contenido
             csd3_2:
               display_name: 'Capítulo 2: Desarrollo de juegos'
+        virtual-pl-csa-summer-2024-day1:
+          title: Día 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 1
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 3
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 4
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -12179,6 +12322,25 @@ es-MX:
           lessons:
             lesson-3:
               name: Evaluación
+          title: Día 5
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Síncronos Parte 2
+            lessonGroup-4:
+              display_name: Asíncronos Parte 1
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 1
+        virtual-pl-csp-summer-day2:
+          title: Día 2
+        virtual-pl-csp-summer-day3:
+          title: Día 3
+        virtual-pl-csp-summer-day4:
+          title: Día 4
+        virtual-pl-csp-summer-day5:
           title: Día 5
         virustest:
           description_short: 'Utiliza el Laboratorio de Sprite para crear una simulación

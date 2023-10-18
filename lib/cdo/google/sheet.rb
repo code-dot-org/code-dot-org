@@ -17,7 +17,7 @@ end
 module Google
   class Sheet
     def initialize(document_key)
-      @drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
+      @drive = Google::Drive.new
       @document_key = document_key
     end
 
@@ -44,7 +44,7 @@ module Google
       @drive.update_sheet metadata, @document_key, "#{tab_name}_meta (auto)"
     end
 
-    def notify_of_external_sharing(allowed_list=[])
+    def notify_of_external_sharing(allowed_list = [])
       # List of external emails that we can share this document with.
       external_emails = external_emails_with_access - allowed_list
 

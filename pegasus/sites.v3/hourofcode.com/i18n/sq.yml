@@ -9,32 +9,36 @@ sq:
   campaign_date_start_long: Dhjetor 5
   campaign_date_short: 5-11 dhjetor
   campaign_date_full: 5-11 dhjetor
-  campaign_date_year: '2022'
+  campaign_date_year: '2023'
   campaign_date_full_year: 5-11 Dhjetor, 2022
   nonus_campaign_date_start_short: Tetor 1
   nonus_campaign_date_start_long: Tetor 1
   nonus_campaign_date_short: Tetor 1 - Dhjetor 18
   nonus_campaign_date_full: 1 tetor - 18 dhjetor
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
   latam_campaign_date_start_short: Tetor 1
   latam_campaign_date_start_long: Tetor 1
   latam_campaign_date_short: Tetor 1 - Dhjetor 18
   latam_campaign_date_full: 1 tetor - 18 dhjetor
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
   europe_campaign_date_start_short: Tetor 1
   europe_campaign_date_start_long: Tetor 1
   europe_campaign_date_short: Tetor 1 - Dhjetor 18
   europe_campaign_date_full: 1 tetor - 18 dhjetor
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
   africa_campaign_date_start_short: Tetor 1
   africa_campaign_date_start_long: Tetor 1
   africa_campaign_date_short: Tetor 1 - Dhjetor 18
   africa_campaign_date_full: 1 tetor - 18 dhjetor
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
+  hoc2023_header: Kreativiteti me AI
+  hoc2023_social_creativity_with_ai_title: Ora e Kodimit - Çfarë do të krijoni?
+  hoc2023_social_creativity_with_ai_desc: Përdorni shkencat kompjuterike për të eksploruar
+    dhe mësuar rreth AI!
   hoc2022_header: Eksploro, Luaj, Krijo!
   social_hoc2022_explore_play_create: 'Perdorni shekncat kompjuterike, te eksploroni,
     luani dhe krijoni! '
@@ -106,19 +110,20 @@ sq:
     rrolin e shkencave kompjuterike rreth krijimit te nje bote me te drejte.
   oceans_landing_videos: Video rreth AI dhe Machine Learning
   oceans_behind_the_scenes: 'AI për Oqeanet: Prapa skenave'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Nivelet 2-4 përdorin një model të paracaktuar të siguruar
+    nga projekti <a href="https://www.tensorflow.org/" ></a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobileNet. </a> Një model MobileNet është një rrjet nervor <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolucional</a>
+    që është trajnuar në <a href="http://www.image-net.org/">ImageNet</a>, një grup
+    i të dhënave me mbi 14 milion imazhe të shënuara me dorë me fjalë të tilla si
+    “tullumbace” ose “luleshtrydhe”. Për ta personalizuar këtë model me të dhënat
+    e etiketuara të trajnimit që nxënësi gjeneron në këtë aktivitet, ne përdorim një
+    teknikë të quajtur <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>Çdo imazh në setin e të dhënave të trajnimit ushqehet në MobileNet,
+    si piksele, për të marrë një listë të shënimeve që kanë më shumë gjasa të zbatohen
+    për të. Pastaj, për një imazh të ri, ne e ushqejmë atë në MobileNet dhe krahasojmë
+    listën e saj rezultuese të shënimeve me ato nga grupi i të dhënave të trajnimit.
+    Ne e klasifikojmë imazhin e ri me të njëjtën etiketë (të tilla si “peshk” ose
+    “jo peshk”) si imazhet nga grupi i trajnimit me rezultatet më të ngjashme.
   oceans_behind_the_scenes_1_markdown: Nivelet 2-4 përdorin një model të paracaktuar
     të siguruar nga projekti [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
     Një model MobileNet është një [rrjet nervor konvolucional] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -133,13 +138,13 @@ sq:
     e saj rezultuese të shënimeve me ato nga grupi i të dhënave të trajnimit. Ne e
     klasifikojmë imazhin e ri me të njëjtën etiketë (të tilla si “peshk” ose “jo peshk”)
     si imazhet nga grupi i trajnimit me rezultatet më të ngjashme.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: Nivelet 6-8 përdorin një makinë <a href="https://en.wikipedia.org/wiki/Support-vector_machine">mbështetje-vektoriale</a>
+    (SVM). Ne shikojmë në çdo komponent të peshkut (të tilla si sytë, goja, trupi)
+    dhe mbledhim të gjitha meta të dhënat për komponentët (të tilla si numri i dhëmbëve,
+    forma e trupit) në një vektor të numrave për secilin peshk. Ne përdorim këto vektorë
+    për të trajnuar SVM. Bazuar në të dhënat e trajnimit, SVM ndan “hapësirën” e të
+    gjithë peshqve të mundshëm në dy pjesë, të cilat korrespondojnë me klasat që po
+    përpiqemi të mësojmë (të tilla si “blu” ose “jo blu”).
   oceans_behind_the_scenes_2_markdown: Nivelet 6-8 përdorin një [Mbështetje-Vector
     Machine] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Ne shikojmë
     në çdo komponent të peshkut (të tilla si sytë, goja, trupi) dhe mbledhim të gjitha
@@ -176,6 +181,32 @@ sq:
     katalog të ri të kurrikulës dhe faqe të ridizajnuar Teach për t'ju ndihmuar të
     gjeni të gjitha!
   in_partnership_with: Në partneritet me
+  shop_code_dot_org_heading: Dyqani Code.org
+  shop_code_dot_org_desc: Mbështetni punën tonë dhe vishni lëvizjen me krenari. Kapelet
+    tona janë veshur nga Presidenti Obama dhe të famshëm gjithashtu.
+  spread_the_word_heading: Përhape fjalën
+  spread_the_word_desc: Përforcojeni ndikimin tonë duke ndarë Code.org me rrjetin
+    tuaj. Nga mediat sociale deri te azhurnimet me email, zbuloni se si mund të na
+    ndihmoni të arrijmë më shumë edukatorë, studentë dhe avokatë.
+  follow_us_heading: Na ndiqni në mediat sociale
+  follow_us_desc: Qëndroni të azhurnuar me ne në mediat sociale dhe ndani postimet
+    tona me rrjetin tuaj për të qëndruar të informuar dhe për të ndihmuar në ndërgjegjësimin.
+  facebook: Facebook
+  twitter: Cicëroj
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tabletë
+  device_laptop: Laptop
+  device_desktop_computer: Kompjuter desktop
+  device_mobile_device: Pajisja celulare
+  subscribe_to_emails_heading: Regjistrohu për email
+  subscribe_to_emails_desc: Lexoni për atë që po ndodh në Code.org dhe në edukimin
+    e shkencave kompjuterike përmes azhurnimeve tremujore përmes listës sonë të postimeve.
+  subscribe_to_emails_intl: Regjistrohuni për përditësimet
+  promote_code_dot_org_heading: Promovoni Code.org
+  promote_code_dot_org_desc: Promovoni shkencat kompjuterike në zonën tuaj me ndihmën
+    e statistikave, kuotave dhe videove.
   afe_partnership_logo_alt: Logoja e Inxhinierit të së
   afe_partnership_thanks_desc: Amazon Future Engineer është një program gjithëpërfshirës
     i fëmijërisë në karrierë për të frymëzuar, edukuar dhe trajnuar fëmijët dhe të
@@ -185,18 +216,57 @@ sq:
   grade_level_label_elementary: Shkolla Fillore
   grade_level_label_middle: Shkolla e Mesme
   grade_level_label_high: Shkolla e Mesme
+  curricula_title_elementary: Kurrikulat e Shkollës Fillore
+  curricula_desc_elementary: Shfletoni kurset argëtuese, falas dhe aktivitetet që
+    ju ftojnë të eksploroni shkencat kompjuterike me nxënësit tuaj të shkollës fillore.
+  curricula_title_middle: Kurrikulat e shkollës së mesme
+  curricula_desc_middle: Shfletoni ofertat tërheqëse që ju mundësojnë juve dhe nxënësve
+    tuaj të shkollave të mesme të eksploroni shkencat kompjuterike së
+  curricula_title_high: Kurrikulat e shkollës së mesme
+  curricula_desc_high: Shfletoni kurset dhe aktivitetet bindëse që ju ftojnë ju dhe
+    nxënësit tuaj të shkollës së mesme të gërmoni më thellë në shkencat kompjuterike.
+  for_administrators_heading: Për administratorët
+  for_administrators_desc: Bashkohuni me mijëra shkolla që kanë përfshirë tashmë shkencat
+    kompjuterike në kurrikulën e tyre.
+  for_parents_heading: Për prindërit
+  for_parents_desc: Ju mund të ndihmoni në inkurajimin e shkollës së nxënësit tuaj
+    për të ofruar ose zgjeruar edukimin e shkencave
+  for_educators_heading: Për mësuesit
+  for_educators_desc: Filloni të mësoni sot - nuk ka përvojë të nevojshme të shkencave
+    kompjuterike - me punëtoritë tona të të mësuarit
   students_label: Nxënësit
   teachers_label: Mësimdhënësit
+  educators_label: Edukatorët
+  companies_label: Kompanitë
+  districts_label: Qarqet
+  school_assemblies_label: Asamble shkollore
+  parents_label: Prindërit
+  public_officials_label: Zyrtarët Publikë
+  volunteers_label: Vullnetarë
+  virtual_events_label: Ngjarje Virtuale
   teacher_label_csf: CS Bazat Mësues
   teacher_label_csd: CS Zbulimet Mësues
   teacher_label_csp: CS Parimet Mësues
   teacher_label_csc: CS Lidhjet Mësues
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Forumi i mësuesve
+  teacher_forum_desc: Vizitoni Forumin e Mësuesve të Orës së Kodit për të marrë këshilla,
+    njohuri dhe mbështetje nga edukatorët e tjerë.
   required_materials: 'Materialet e kërkuara:'
   optional_materials: 'Materialet opsionale:'
+  call_to_action_hold_an_event: Mbajeni një ngjarje
+  call_to_action_register_event: Regjistroni ngjarjen tuaj
+  call_to_action_select_activity: Zgjidhni një aktivitet
+  call_to_action_start_activity: Filloni një aktivitet
+  call_to_action_get_certificates: Merrni certifikata
+  call_to_action_go_beyond_hoc: Shkoni përtej Orës së Kodit
+  call_to_action_view_promo_resources: Shikoni burimet promovuese
   call_to_action_learn_more: Mëso më shumë
   call_to_action_watch_now: Shikoni tani
   call_to_action_try_activity: Provoni aktivitetin
+  call_to_action_try_activities: Provoni aktivitete
+  call_to_action_explore_activities: Eksploroni aktivitetet
+  call_to_action_explore_ai: Eksploroni AI
   call_to_action_explore_unit: Eksploroni njësinë
   call_to_action_explore_curriculum: Eksploro kurrikulën
   call_to_action_explore_curriculum_options: Eksploroni mundësitë e
@@ -211,6 +281,15 @@ sq:
   call_to_action_explore_choice_level: Eksploroni nivelin e zgjedhjes shembull
   call_to_action_explore_collection: Explore koleksionin
   call_to_action_explore_unplugged_lesson: Eksploroni mësimet e shkëputura
+  call_to_action_explore_csf: Eksploroni Bazat e CS
+  call_to_action_explore_csd: Eksploroni Zbulimet e CS
+  call_to_action_explore_csp: Eksploroni Parimet CS
+  call_to_action_explore_csc: Eksploroni lidhjet CS
+  call_to_action_explore_csa: Eksploroni AP® Shkenca Kompjuterike A
+  call_to_action_explore_csa_short: Eksploroni AP® CSA
+  call_to_action_explore_maker: Eksploroni kurrikulën e Maker
+  call_to_action_explore_hoc: Eksploroni mësime për Orën e Kodit
+  call_to_action_explore_hoc_short: Eksploroni orën e kodimit
   call_to_action_try_app_lab: Provoni App Lab
   call_to_action_view_lesson_plan: Shikoni planin e mësimit
   call_to_action_self_paced_pl: Filloni mësimin profesional të vetë-ritmit
@@ -234,11 +313,13 @@ sq:
   call_to_action_resources_tools: Provoni mjetet e programimit
   call_to_action_sign_up_free: Regjistrohu falas
   call_to_action_explore_ai_resources: Eksploroni burimet e AI
+  call_to_action_explore_ai_curricula: Eksploroni kurrikulat e AI
   call_to_action_explore_curriculum_catalog: Eksploro katalogun e kurrikulës
   call_to_action_see_full_curriculum_catalog: Shihni katalogun e plotë të programeve
   call_to_action_find_self_paced_modules: Gjeni module të vetë-ritmit
   call_to_action_join_teacher_forums: Join forumet mësues
   call_to_action_explore_teacher_forums: Explore forume mësues
+  call_to_action_explore_teacher_forum: Eksploroni forumin mësues
   call_to_action_explore_career_resources: Explore burimet e karrierës
   call_to_action_watch_videos: Shikoni videot
   call_to_action_download_posters: Shkarko postera
@@ -253,6 +334,34 @@ sq:
   call_to_action_learn_about_approach: Mësoni më shumë rreth qasjes sonë
   call_to_action_try_java_lab: Provoni Java Lab
   call_to_action_notify_available: Më njoftoni kur është në dispozicion
+  call_to_action_register_early_access: Regjistrohu për akses të hershëm
+  call_to_action_open_positions: Shikoni pozicionet e hapura
+  call_to_action_explore_roles: Eksploroni role të hapura
+  call_to_action_get_guide: Merrni udhëzuesin
+  call_to_action_donate_to_cdo: Dhuroni për Code.org
+  call_to_action_start_fundraiser: Filloni një mbledhje fondesh
+  call_to_action_view_donation_policy: Shikoni politikën e dhurimit
+  call_to_action_view_donate_bitpay: Dhuroni me BitPay
+  call_to_action_make_a_donation: Bëni një donacion
+  call_to_action_other_ways_to_give: Mënyra të tjera për të dhënë
+  call_to_action_become_partner_usa: Bëhuni një partner i Shteteve të Bashkuara
+  call_to_action_become_partner_intl: Bëhuni një partner ndërkombëtar
+  call_to_action_become_a_volunteer: Bëhuni vullnetar
+  call_to_action_start_translating: Filloni përkthimin
+  call_to_action_learn_about_advocacy: Mësoni rreth avokimit tonë
+  call_to_action_visit_store: Vizitoni dyqanin
+  call_to_action_view_faqs: Shikoni më shumë FAQ
+  aria_label_call_to_action_hoc_how_to_educators: Shikoni udhëzuesin për edukatorët
+  aria_label_call_to_action_hoc_how_to_companies: Shikoni udhëzuesin për kompanitë
+  aria_label_call_to_action_hoc_how_to_districts: Shikoni udhëzuesin për rrethet
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Shikoni udhëzuesin për kuvendet
+    e shkollave
+  aria_label_call_to_action_hoc_how_to_parents: Shikoni udhëzuesin për prindërit
+  aria_label_call_to_action_hoc_how_to_public_officials: Shikoni udhëzuesin për zyrtarët
+    publik
+  aria_label_call_to_action_hoc_how_to_volunteers: Shikoni udhëzuesin për vullnetarët
+  aria_label_call_to_action_hoc_how_to_virtual_events: Shikoni udhëzuesin për ngjarjet
+    virtuale
   aria_label_call_to_action_afe: Mësoni më shumë rreth Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Filloni programin e mësimdhënies së Shkencave
     Kompjuterike Bazat e
@@ -360,8 +469,11 @@ sq:
   curriculum_name_csp: Parimet e Shkencave Kompjut
   curriculum_name_csc: Lidhjet Shkenca Kompjut
   curriculum_name_csa: AP® Shkenca Kompjuterike A
+  curriculum_name_csa_ai: Inxhinieri Softuerësh & Vizioni Komp
   curriculum_name_csc_02: Çdo Modul i Lidhjeve CS
   curriculum_name_ai: AI & Machine Learning
+  curriculum_name_artificial_intelligence: Inteligjenca Artificiale (AI)
+  curriculum_name_maker: prodhues
   curriculum_name_maker_cp: Krijimi i aplikacioneve me pajisje (Playground Circuit)
   curriculum_name_maker_microbit: Krijimi i aplikacioneve me pajisje (micro:bit)
   curriculum_name_creating_apps_with_devices: Krijimi i aplikacioneve me pajisje
@@ -372,6 +484,8 @@ sq:
   curriculum_name_interactive_animations_games: Animacione Interaktive & Lojëra
   curriculum_name_design_process: Procesi i Dizajnit
   curriculum_name_data_society: Të dhënat & Shoqëria
+  curriculum_desc_csf: Set falas i kurrikulave fillore që i njofton studentët me konceptet
+    themelore të shkencave kompjuterike.
   curriculum_desc_csf_express: Mësoni të krijoni programe kompjuterike, të zhvilloni
     aftësi për zgjidhjen e problemeve dhe të punoni përmes sfidave argëtuese! Bëni
     lojëra dhe projekte krijuese për t'i ndarë me miqtë, familjen dhe mësuesit.
@@ -422,6 +536,26 @@ sq:
     në informatikë. Zhvillimi i programeve që shfrytëzojnë hyrjet dhe rezultatet e
     harduerit. Ekziston një version i kësaj njësie si për mikro: bit ashtu edhe për
     shesh lojërash për qark.'
+  curriculum_desc_csa: Prezantoni studentët me inxhinierinë e softuerit dhe dizajnin
+    e orientuar drejt objekteve ndërsa ata mësojnë gjuhën e programimit Java në këtë
+    program falas për AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Edukimi i krijuesit e çon STEM (Shkencë, Teknologji, Inxhinieri,
+    Matematikë) një hap më tej duke ftuar përvojën praktike dhe bashkëpunimin në klasë
+    për të ndihmuar në mësimin e zgjidhjes së problemeve dhe të menduarit kritik.
+  curriculum_desc_maker_short: Edukimi i krijuesit fton përvojën praktike dhe bashkëpunimin
+    në klasë për të ndihmuar në mësimin e zgjidhjes së problemeve dhe të menduarit
+    kritik.
+  curriculum_desc_csd: Kursi fleksibël, duke lejuar që secila njësi të mësohet vetëm
+    ose të kombinohet. I prezanton studentët në ndërtimin e faqeve të internetit,
+    aplikacioneve, animacioneve, lojërave dhe sistemeve informatike fizike.
+  curriculum_desc_csp: Pa pagesë, AP® CSP miratuar, kurs hyrës i shkollës së mesme
+    që prezanton studentët me konceptet themelore të shkencave kompjuterike.
+  curriculum_desc_csa_ai_long: 'Ky modul CSA post-AP me dy kapitull u ofron nxënësve
+    të shkollave të mesme përvojë praktike me mjete profesionale të zhvillimit të
+    softuerit, duke përfshirë GitHub dhe GitHub Compilot, dhe u jep atyre aftësitë
+    e botës reale për të zhvilluar një program vizioni kompjuterik. '
+  curriculum_desc_csa_ai_short: Ky modul Post-AP® CSA u ofron nxënësve të shkollave
+    të mesme përvojë praktike me mjete profesionale të zhvillimit të softuerit.
   collection_hardware: Përqendrohuni në Hardware
   collection_hardware_desc: Fuqizon studentët të përdorin të dhëna dhe pajisje fizike
     për të zgjidhur problemet.
@@ -454,6 +588,7 @@ sq:
   module_label_professional_learning: 'Të mësuarit profesional:'
   module_label_languages: 'Gjuhët e mbështetura:'
   module_label_accessibility_features: 'Aksesueshmëria:'
+  module_label_accessibility_features_full: 'Karakteristikat e aksesit:'
   module_label_educator_tool: Mjet edukator
   module_label_educator_course: Kursi i edukatorit
   module_label_student_tool: Mjet studentor
@@ -461,6 +596,7 @@ sq:
   module_label_student_content_resources: Përmbajtja dhe burimet
   module_label_new: I ri
   module_label_coming_soon: Vjen së shpejti
+  module_label_available_now: Në dispozicion tani
   module_label_video_series: Seritë e videove
   module_label_self_paced: Moduli i vetë-ritmit
   module_ages_5_10: 5-10
@@ -471,6 +607,8 @@ sq:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -485,11 +623,14 @@ sq:
   module_grade_9_12_teachers: 9-12 Mësues
   module_level_beginner: Fillestar
   module_level_intermediate: i ndërmjetëm
+  module_level_advanced: Avancuar
   module_duration_45_mins: 45 minuta
+  module_duration_2_weeks: 2 javë
   module_duration_1_hr: 1 orë
   module_duration_2_hrs: 2 orë
   module_duration_3_hrs: 3 orë
   module_duration_5_hrs: 5 orë
+  module_duration_5_hrs_plus: 5+ orë
   module_duration_8_hrs: 8 orë
   module_duration_20_hrs: 20 orë
   module_duration_35_hrs: 35 orë
@@ -501,6 +642,7 @@ sq:
   module_duration_school_year: Viti shkollor
   module_duration_month_quarter: Muaji ose Tremujori
   module_duration_month_semester_year: Muaji, Semestri ose Viti
+  module_duration_varies: Ndryshon
   module_prerequisites_none: Asnjë
   module_prerequisites_maker_cp: Qasja në një shesh lojërash qark
   module_prerequisites_maker_microbit: Qasja në një mikro:bit
@@ -567,6 +709,10 @@ sq:
   heading_java_lab: Java Lab
   heading_objects_first: Objektet e para
   heading_these_lessons_will: 'Këto mësime do të:'
+  heading_explore_curriculum_catalog: Eksploroni të gjitha kurset tona në Katalogun
+    e Kurrikulave
+  heading_csa_ai: Duke kërkuar për gjëra për të bërë pas provimit AP®?
+  heading_bring_cs_to_students: Sillni shkenca kompjuterike për studentët
   professional_learning_section_desc: Merrni mbështetjen që ju nevojitet ndërsa përgatiteni
     për të dhënë mësim. Mësuesit e duan atë, me mbi 90% duke e renditur atë zhvillimin
     më të mirë profesional ndonjëherë!
@@ -600,6 +746,23 @@ sq:
     çdo pyetjeje që mund të keni në lidhje me fillimin e mësimdhënies me Code.org.
     Ju gjithashtu mund të pyesni mësuesit e tjerë për përvojën e tyre në forumet tona
     të mësuesve.
+  subscribe_form_section_title: Abonohuni për përditësime
+  subscribe_form_section_desc_csa: Regjistrohuni për të marrë email mujor në lidhje
+    me AP® Computer Science A të Code.org dhe merrni përkujtime, këshilla dhe azhurnime
+    të dobishme të dërguara direkt në kutinë tuaj postare.
+  subscribe_form_section_desc_csc: Regjistrohuni për të marrë email mujor në lidhje
+    me Lidhjet e Shkencave Kompjuterike të Code.org dhe merrni përkujtime, këshilla
+    dhe azhurnime të dobishme të dërguara direkt në kutinë tuaj postare.
+  subscribe_form_section_desc_csd: Regjistrohuni për të marrë email mujor në lidhje
+    me Zbulimet e Shkencave Kompjuterike të Code.org dhe merrni përkujtime, këshilla
+    dhe azhurnime të dobishme të dërguara direkt në kutinë tuaj postare.
+  subscribe_form_section_desc_csf: Regjistrohuni për të marrë email mujor në lidhje
+    me Bazat e Shkencave Kompjuterike të Code.org dhe merrni përkujtime, këshilla
+    dhe azhurnime të dobishme të dërguara direkt në kutinë tuaj postare.
+  subscribe_form_section_desc_csp: Regjistrohuni për të marrë email mujor në lidhje
+    me Parimet e Shkencave Kompjuterike të Code.org dhe merrni përkujtime, këshilla
+    dhe azhurnime të dobishme të dërguara direkt në kutinë tuaj postare.
+  subscribe_form_section_unsubscribe: Ju mund të çabonoheni në çdo kohë.
   blockchain_hero_heading: Si funksionon Blockchain
   blockchain_hero_desc: Zhytuni në botën e blockchain me “How Blockchain Works”, seritë
     tona të reja video dhe mësimet shoqëruese!
@@ -706,6 +869,9 @@ sq:
     çiftohet me një video të vetme nga seria, duke u zhyten më thellë në konceptet
     e prezantuara në video.
   ai_curriculum_btn_aria_label_04: Eksploroni se si funksionon AI mësimet
+  ai_curriculum_grades_05: 'Nivelet e klasës: 9-12'
+  ai_curriculum_btn_aria_label_05: Eksploroni modulin e Inxhinierisë Softuerike &
+    Vizioni
   ai_carousel_heading: 'Çfarë thonë mësuesit për AI me Code.org:'
   ai_carousel_quote_01: Ky mësim gjithashtu u dha studentëve të mi mundësinë të shohin
     se ekziston një element i mendimit në sistemet e klasifikimit. Më vonë, kur filluam
@@ -831,11 +997,20 @@ sq:
     studentëve. Me një përzierje të pasur të teorisë, shembujve praktikë dhe burimeve,
     ajo synon të fuqizojë edukatorët për të lundruar në peizazhin e AI dhe për të
     përmirësuar përvojat e të mësuarit të studentëve.
+  ai_pl_101_resources_5: Udhëzues për të siguruar një qasje të përgjegjshme ndaj
   ai_pl_101_video_desc_6: 'Mësoni më shumë rreth teknologjisë së re që nxit ndryshimet
     e mëdha në AI, duke shfaqur dy video të reja në modelet e gjuhës së madhe (si
     ChatGPT) dhe AI gjeneruese. Dëgjoni se si funksionojnë këto teknologji të reja
     direkt nga ekspertët: Mira Murati, CTO e OpenAI dhe Cristóbal Valenzuela, CEO
     i RunwayML.'
+  ai_pl_101_llm_slides_title: Modeli i gjuhës së madhe bën thirrje për edukatorët
+  ai_pl_101_llm_slides_desc: Mjetet për marrjen e prodhimit më të mirë të mundshëm
+    nga LLM-të si ChatGPT, nga fillestari në të avancuar. Përfshin kërkesat fillestare
+    për ata që thjesht zhyten gishtërinjtë e tyre, si dhe mjete të përparuara për
+    ata që kërkojnë të maksimizojnë potencialin e tyre.
+  ai_pl_101_resources_3: AI bën thirrje për transformimin e të mësuarit të studentëve
+  ai_pl_101_resources_section_title: Më shumë mënyra për të mësuar rreth AI
+  ai_pl_101_resources_guide: 'Udhëzues shoqërues:'
   how_ai_works_hero_heading: Si funksionon AI
   how_ai_works_hero_desc: Zhytuni në botën e AI me “Si funksionon AI”, seritë tona
     të videove dhe mësimet shoqëruese!
@@ -1179,20 +1354,18 @@ sq:
   teach_page_free_curriculum_desc: Ne duam që ju të sjellë Shkenca Kompjuterike në
     shkollën tuaj pa u shqetësuar për koston. Kjo është arsyeja pse ne jemi angazhuar
     që ofertat tona të kurrikulës të jenë falas përgjithmonë!
-  teach_page_free_curriculum_list_heading_01: Angazhimi i kurrikulës për çdo nivel
-    të klasës
   teach_page_free_curriculum_list_desc_01: Kurrikulë falas, fleksibël dhe argëtuese
     me oferta në mbi 67 gjuhë.
-  teach_page_free_curriculum_list_heading_02: Kurrikula e adaptueshme, inovative
   teach_page_free_curriculum_list_desc_02: Code.org ofron gjithçka, nga kurrikulat
     e vitit të plotë deri te aktivitetet me një njësi. Plus, ne azhurnojmë kurrikulat
     tona çdo vit për të mbështetur praktikat më të mira dhe fushat e fokusit, dhe
     për të krijuar oferta të reja që mësojnë tema aktuale në kërkesë.
-  teach_page_free_curriculum_list_heading_03: Kurrikula e strukturuar e hartuar sipas
-    standardeve kombëtare
   teach_page_free_curriculum_list_desc_03: Çdo program mësimor është hartuar në të
     paktën një grup standardesh kombëtare, duke përfshirë CSTA, Standardet e Shkencës
     së Gjeneratës së Re dhe Core të Përbashkët.
+  teach_page_free_curriculum_list_desc_04: Oferta në mbi 67 gjuhë
+  teach_page_free_curriculum_list_desc_05: Hartëzuar në të paktën një grup standardesh
+    kombëtare (përfshirë CSTA, NGSS dhe Common Core)
   teach_page_free_curriculum_heading_02: 'Eksploroni ofertat tona të kurrikulës për
     nivele të ndryshme të klasave:'
   teach_page_resources_heading: Burimet që ju mbështesin në çdo hap të rrugës
@@ -1255,8 +1428,8 @@ sq:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Laboratori i aplikacionit
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Punëtori të udhëhequra nga lehtësuesit,
+    Modulet e vetë-ritmit
   csp_page_curriculum_glance_professional_languages: Shqip
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1385,8 +1558,8 @@ sq:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Laboratori i Aplikacioneve, Laboratori i Lojërave,
     Laboratori i Uebit
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Punëtori të udhëhequra nga lehtësuesit,
+    Modulet e vetë-ritmit
   csd_page_curriculum_glance_professional_languages: Shqip
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1457,10 +1630,10 @@ sq:
     alternative janë në dispozicion nëse nuk keni qasje në këto furnizime.
   csd_page_faq_answer_04_06: Krijimi i aplikacioneve me pajisje (Opsioni A dhe Opsioni
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Opsioni A: Grupi në klasë i terreneve të lojërave të
+    qarkut. Shikoni [code.org/maker/circuitplayground] () për më shumë detaje.%{url}'
+  csd_page_faq_answer_04_08: 'Opsioni B: Grupi në klasë i pajisjeve mikro: bit. Shikoni
+    [code.org/maker/microbit] () për më shumë detaje.%{url}'
   csd_page_faq_answer_04_09: Furnizimet e prodhuesit, të tilla si kutitë e indeve
     të zbrazëta ose rrotullat e kartonit ose let
   csd_page_faq_answer_04_10: "* Shënim: Njësia e Krijimit të Aplikacioneve me Pajisje
@@ -1537,8 +1710,8 @@ sq:
     dhe Dizajn, Projektim Aplikacionesh
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Luaj Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Punëtori të udhëhequra nga lehtësuesit,
+    Modulet e vetë-ritmit
   csf_page_curriculum_glance_languages: Arabisht, Bahasa Indonezisht, Katalan, Kineze
     e Thjeshtuar, Kineze Tradicionale, Çeke, Frëngjisht, Gjermanisht, Hindi, Italisht,
     Japonisht, Koreane, Kanada, Malay, Marathi, Mongolian, Polonisht, Portuguese-BR,
@@ -1592,10 +1765,10 @@ sq:
     të lartë, njëditore Code.org për mësuesit individualë ose për PD në të gjithë
     shkollën [Regjistrohuni për një seminar të zhvillimit profesional pranë jush]
     (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Bashkohuni me mbi 100,000 mësues që kanë marrë pjesë
+    në punëtoritë tona. Shumica e pjesëmarrësve të punëtorisë sonë thonë: “Është zhvillimi
+    më i mirë profesional që kam marrë pjesë ndonjëherë”. Në fakt, [90% e të pranishmëve
+    do t''ua rekomandonin programin tonë mësuesve të tjerë] ()!%{rec_url}'
   csf_page_faq_question_05: Cila është koha e rekomanduar për mësimin e Bazave CS?
   csf_page_faq_answer_05: Çdo kurs CSF përfshin 13-17 mësime të dizajnuara për periudha
     45 minutëshe. Ne rekomandojmë që të gjithë studentët të lëvizin nga mësimi në
@@ -1603,9 +1776,10 @@ sq:
     nga mësuesit të dizajnuara për t'u përjetuar në unison ndërsa mësimet e ndërtimit
     të aftësive mund të përfundojnë nga studentët me ritmin e tyre.
   csf_page_faq_question_06: Çfarë materialesh më duhen për CS Bazat?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Shumë mësime kanë fletëpalosje që udhëheqin studentët përmes
+    aktiviteteve. Këto burime mund të printohen ose caktohen në mënyrë dixhitale.
+    Disa mësime kërkojnë furnizime tipike në klasë dhe manipulues. [Vizitoni programin
+    mësimor të CSF për të mësuar më shumë] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1676,6 +1850,64 @@ sq:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Ndihmoni të financoni misionin tonë
+  donate_page_top_desc: Çdo donacion nxit misionin e Code.org për të zgjeruar qasjen
+    në edukimin e shkencave kompjuterike. Ne ofrojmë disa mënyra për të dhuruar dhe
+    për të bërë një ndryshim.
+  donate_page_fundraise_title: Mbledhje fondesh për Code.org
+  donate_page_fundraise_desc: Ndihmoni të mbledhni para për Code.org! Çdo nxënës në
+    çdo shkollë duhet të ketë mundësinë të mësojë shkenca kompjuterike.
+  donate_page_other_ways_title: Mënyra të tjera për të dhënë
+  donate_page_other_ways_desc: Eksploroni metoda të ndryshme për të kontribuar dhe
+    gjeni opsionin që ju përshtatet më së miri. Çdo gjest, i madh apo i vogël, e shtyn
+    misionin tonë përpara.
+  donate_page_501c3: Code.org është regjistruar si një organizatë publike 501 (c)
+    (3) jofitimprurëse. Kontributet në Code.org janë të zbritshme nga taksat në masën
+    e lejuar me ligj. Numri i identifikimit tatimor të Code.org është 46-0858543.
+  donate_page_donation_policy_title: Kuptimi i politikës sonë të dhurimit
+  donate_page_donation_policy_desc: Mësoni se si i trajtojmë dhe shpërndajmë kontributet
+    tuaja.
+  donate_tabs_tab_label_daf_direct: DAF Direkt
+  donate_tabs_tab_label_amazon: Amazona
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Punonjës Match
+  donate_tabs_daf_direct_title: Dhuroni përmes DAF Direct
+  donate_tabs_daf_direct_desc: Dhuroni përmes fondit tuaj të këshilluar nga donatorët
+    me Fidelity Charitable, Schwab Charitable ose BNY Mellon dhe bëni rekomandimin
+    tuaj të grantit në Code.org përmes formularit online DAF Direct.
+  donate_tabs_amazon_title: Dhuroni nëpërmjet Amazon
+  donate_tabs_amazon_desc: Dhuroni direkt duke përdorur llogarinë tuaj Amazon. Me
+    vetëm disa klikime, kontribuoni pa probleme në misionin e Code.org dhe fuqizoni
+    të ardhmen e edukimit të shkencave kompjuterike.
+  donate_tabs_bitpay_title: Dhuroni me Crypto përmes BitPay
+  donate_tabs_bitpay_desc: Përqafoni të ardhmen e dhënies me cryptocurrency. Përmes
+    BitPay, monedha juaj dixhitale mund të mbështesë drejtpërdrejt përpjekjet e Code.org
+    në zgjerimin e edukimit të shkencave kompjuterike.
+  help_page_top_heading: Si mund të ndihmoni
+  help_page_top_desc: Mbështetni misionin tonë për ta bërë shkencën kompjuterike të
+    arritshme për çdo fëmijë, kudo. Përpjekjet tuaja na ndihmojnë të frymëzojmë inovatorët
+    e ardhshëm dhe të kapërcejmë hendekun e arsimit teknolog
+  help_page_top_subhead: Bëni një donacion për Code.org
+  help_page_top_desc_02: Ne jemi duke punuar për t'i dhënë çdo nxënësi mundësinë për
+    të mësuar shkenca kompjuterike - si në internet dhe në shkolla, ku krijojmë kurse
+    të përhershme dhe trajnojmë mësuesit. Për çdo dollar që dhuroni, një fëmijë futet
+    në shkencat kompjuterike.
+  help_page_partners_heading: Bëhuni një partner
+  help_page_partners_desc: Code.org punon me organizata të tjera jofitimprurëse si
+    partnerë për të ndihmuar në përhapjen e shkencave kompjuterike në një mënyrë lokale,
+    të qëndrueshme. Mësoni më shumë rreth programit tonë
+  help_page_volunteer_heading: Vullnetarë në një klasë
+  help_page_volunteer_desc: Vullnetar për të dhënë mësim Orën e Kodimit ose të jetë
+    një folës i ftuar në një klasë lokale. Regjistrohuni për të dëgjuar për mundësitë
+    pranë jush.
+  help_page_translate_heading: Na ndihmoni të përkthejmë
+  help_page_translate_desc: Vullnetarët kanë përkthyer tutorialet tona në mbi 45 gjuhë.
+    Na ndihmoni të vazhdojmë të zgjerojmë udhëzimet tona për studentët në mbarë botën!
+  help_page_speak_for_cs_heading: Flisni për edukimin e shkencave kompjuterike
+  help_page_speak_for_cs_desc: Mësoni më shumë rreth punës së avokimit të Code.org
+    në të gjithë SHBA dhe dhjetë politikat që ne rekomandojmë që shtetet të miratojnë
+    për t'i bërë shkencat kompjuterike themelore për të gjithë studentët. Plus, zbuloni
+    se si mund të nxisni ndryshimin në gjendjen tuaj.
   hoc_live: Ora e kodit të drejtpërdrejtë
   hoc_live_sign_up_title: Regjistrohuni për Orën e Kodit Live
   hoc_live_learn_title: Mësoni me Orën e Kodit Live
@@ -1756,9 +1988,9 @@ sq:
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: Ndihmoni në mbrojtjen e Cape Mountain Zebra të rrezikuar
     duke identifikuar kafshët e ndryshme në imazhe.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
-  codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
+  codeorg_homepage_hoc2018_curriculum: Shkoni më tej me <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">kurset Code.org</a>
+  codeorg_homepage_hoc2018_dance_heading: Krijoni&nbsp;partinë tuaj të <span class="highlight-word">vallëzimit</span>
   codeorg_homepage_hoc2018_header_line1: Ora e Kodit po vjen...
   codeorg_homepage_hoc2018_header_line2_desktop: Çfarë do të krijoni <span class="hoc2018-highlight-word">?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Çfarë do të krijoni?
@@ -2095,6 +2327,13 @@ sq:
     në kurset e Code.org, mundësitë lokale ose lajmet e tjera të shkencave kompjuterike?
   signup_email_preference_privacy: "(Shih politikën tonë të privatësisë)"
   signup_email_preference_yes: po
+  signup_email_preference_yes_elementary: Po - Më dërgoni azhurnime në Burimet e Shkollës
+    Fillore
+  signup_email_preference_yes_middle: Po - Më dërgoni azhurnime në Burimet e Shkollës
+    së Mes
+  signup_email_preference_yes_high: Po - Më dërgoni azhurnime në Burimet e Shkollës
+    së Mes
+  signup_email_preference_yes_general: Po - Më dërgoni përditësime të përgjithshme
   signup_email_preference_no: Jo
   signup_email_preference_error: Kërkohet preferenca e emailit
   signup_multiple_event_warning: Nëse ju po organizoni më shumë se një event, ju lutem
@@ -2596,8 +2835,8 @@ sq:
     përtej një ore</a>
   learn_banner_beyond_markdown: Deshironi te vazhdoni te mesoni (Shkoni me tutje se
     vetem nje ore)
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers: 'Mësuesit: <a id=''teacher_banner_host''>Pritni një orë</a>
+    ose <a id=''teacher_banner_howto''>lexoni Udhëzuesin Si-To</a>'
   learn_banner_teachers_markdown: 'Mesuesit: mbani nje ore kodi ose lexoni guiden
     e pjesemarrjes. '
   tutorial_dance2019_name: Festë Vallëzimi
@@ -4738,13 +4977,13 @@ sq:
 
     Ju mund ta çoni aktivitetin edhe më tej duke shtuar imazhin dhe etiketat tuaja (së bashku me shumë opsione të tjera shtesë të projektit, argëtimi nuk mbaron kurrë). Kufjet janë të rekomanduara.
   tutorial_itchj_longdescription: |-
-    Our Jumping activity provides you the coding skills to get a character to jump onto platforms that is used in many arcade style games.
+    Aktiviteti ynë Jumping ju ofron aftësitë e kodimit për të marrë një karakter për t'u hedhur në platforma që përdoren në shumë lojëra të stilit Arcade.
 
-    Use the Jumping skills and create your own game goal.
+    Përdorni aftësitë Jumping dhe për të krijuar qëllimin tuaj lojë.
 
-    This uses a cartesian coordinate system so you'll get to learn a little about screen coordinates here.
+    Kjo përdor një sistem koordinativ kartezian, kështu që ju do të mësoni pak rreth koordinatave të ekranit këtu.
 
-    Enjoy learning all about jumping with Itch! Headphones are recommended.
+    Gëzoni të mësoni gjithçka rreth kërcimit me kruarje! Kufjet janë të rekomanduara.
   tutorial_tickleo_longdescription: Me Tickle, një aplikacion kodimi miqësor për përdoruesit,
     ju lehtë mund ta programoni Orca për të notuar në një numër mënyrash thjesht duke
     zvarritur dhe hedhur blloqe kodimi për të krijuar një komandë që ajo të ndjekë.
@@ -5051,16 +5290,17 @@ sq:
   tutorial_ticklep_longdescription: Me Tickle, një aplikacion kodimi miqësor për përdoruesit,
     ju lehtë mund të programoni Parrot Drone për të notuar në një numër mënyrash thjesht
     duke zvarritur dhe hedhur blloqe kodimi për të krijuar një komandë që ai të ndjekë.
-  tutorial_bbot_longdescription: "With these 3 one-hour coding activities, you don't
-    need any programming knowledge or experience to teach your students about programming!
-    You can teach programming in a fun and easy way. Go over the activities and download
-    our lesson materials including presentation slides, unplugged materials, and solutions
-    guides and you will find yourself ready to teach your first lesson in 20 - 40
-    minutes! \n\nOur activities include both offline and online exercises to teach
-    your students (ages 7 and up) about programming and fundamental programming concepts
-    like for loops and algorithms. Students will apply their knowledge and skills
-    in the Bomberbot online game, where they will program their robot to solve logic-based
-    puzzles in the most efficient way. "
+  tutorial_bbot_longdescription: "Me këto 3 aktivitete kodimi një-orëshe, nuk keni
+    nevojë për ndonjë njohuri ose përvojë programimi për të mësuar studentët tuaj
+    rreth programimit! Ju mund të mësoni programimin në një mënyrë argëtuese dhe të
+    lehtë. Kaloni mbi aktivitetet dhe shkarkoni materialet tona mësimore duke përfshirë
+    diapozitivët e prezantimit, materialet e shkëputura dhe udhëzuesit e zgjidhjeve
+    dhe do ta gjeni veten të gatshëm të jepni mësimin tuaj të parë në 20 - 40 minuta!
+    \n\nAktivitetet tona përfshijnë ushtrime offline dhe online për të mësuar studentët
+    tuaj (moshat 7 vjeç e lart) rreth programimit dhe koncepteve themelore të programimit
+    si për sythe dhe algoritme. Studentët do të aplikojnë njohuritë dhe aftësitë e
+    tyre në lojën online Bomberbot, ku ata do të programojnë robotin e tyre për të
+    zgjidhur enigmat e bazuara në logjikë në mënyrën më efikase. "
   tutorial_scratchg_longdescription: Fëmijët duan të luajnë lojëra në telefonat e
     tyre dhe në kompjuterë. Por si janë programuar? Ky aktivitet i prezanton studentët
     me gjuhën programuese Scratch dhe më pas u tregon atyre se si të programojnë stile
@@ -5256,13 +5496,13 @@ sq:
   tutorial_grok_longdescription: 'Përdorni blloqe drag-and-drop ose gjuhën e bazuar
     në tekst Python për të nxjerrë flamuj nga e gjithë bota, për të krijuar snowflakes
     fantastike, ose për të ndërtuar një chatbot të quajtur “Eliza”. '
-  tutorial_ijournalist_longdescription: "This teacher facilitated lesson teaches Computer
-    Science and Language Arts.  Pupils begin to develop a journalistic style that
-    considers the interest of the reader and presentation of information for an online
-    news story.  Pupils use basic HTML and CSS to create and present an online news
-    story about a fictional school robbery.\n\nIt sets computer science within a meaningful
-    context enabling children to understand the value of computer science in other
-    subject areas. \n\n"
+  tutorial_ijournalist_longdescription: "Ky mësues lehtësuar mësim mëson Shkenca Kompjuterike
+    dhe Artet Gjuhësore. Nxënësit fillojnë të zhvillojnë një stil gazetaresk që konsideron
+    interesin e lexuesit dhe prezantimin e informacionit për një histori të lajmeve
+    në internet. Nxënësit përdorin HTML dhe CSS bazë për të krijuar dhe paraqitur
+    një histori lajmesh në internet për një grabitje imagjinare të shkollës.\n\nAi
+    vendos shkencën kompjuterike brenda një konteksti kuptimplotë që u mundëson fëmijëve
+    të kuptojnë vlerën e shkencave kompjuterike në fusha të tjera lëndore. \n\n"
   tutorial_bbcmusic_longdescription: Plani i mësimit të bazuar në standarde për klasat
     K-5. Merrni fëmijët tuaj në laboratorin kompjuterik me fletë pune në dorë dhe
     ndërtoni aplikacione që përfshijnë muzikë.
@@ -5422,11 +5662,11 @@ sq:
     janë më të vështira për t'u përdorur sesa duhet. Dizajni bën një ndryshim dhe
     është e rëndësishme që ndërfaqet të vlerësohen për të kontrolluar se ato janë
     të lehta për t'u përdorur.
-  tutorial_imathematician_longdescription: "This teacher led activity provides the
-    opportunity for pupils to use a cross curricular approach to computer science
-    and mathematics.  \n\nPupils will create a computer program to solve a variation
-    of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
-    Dilemma.\n"
+  tutorial_imathematician_longdescription: "Ky aktivitet i udhëhequr nga mësuesit
+    ofron mundësinë që nxënësit të përdorin një qasje ndër-kurrikulare për shkencat
+    kompjuterike dhe matematikën.  \n\nNxënësit do të krijojnë një program kompjuterik
+    për të zgjidhur një variant të një problemi të famshëm në një degë të Matematikës
+    (Teoria e Lojërave), të quajtur Dilema e të Burgosurit.\n"
   tutorial_tlcmagic_longdescription: 'Duke eksploruar se si funksionon magjia, ju
     mësoni rreth të menduarit kompjuterik: veçanërisht rëndësinë e vlerësimit për
     të menduarit algoritmik. Ju eksploroni testimin dhe analizën e rrezikut. Mashtrimi
@@ -5568,11 +5808,11 @@ sq:
     një aventurë përmes kësaj bote Minecraft.
   tutorial_minecraft-2016_longdescription: Ndërtoni një lojë Minecraft. Krijo versionet
     tuaja të pulave, deleve, Creepers, zombies dhe më shumë.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Programa el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas diskutidas previamente.&iacute;Este segment
+    sens&ntilde;në los estudiantes la Conneci&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Udhëzues i orës së kodimit me Pixie
   tutorial_play_longdescription: Krijoni një histori ose bëni një lojë me Play Lab!
     Bëni kafshët, piratët, zombitë, ninjas dhe shumë personazhe të tjerë të lëvizin,
@@ -12853,12 +13093,13 @@ sq:
   tutorial_googlename _longdescription: Zgjidhni një emër dhe sillni shkronjat e fjalës
     në jetë duke përdorur kodin. Zgjidhni një pseudonim, emrin e një kafshe, një kafshë,
     një sport, një vend ose një hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Qyteti Zillah po lulëzon dhe muzika është
+    në ajër. Thashethemet e kanë atë, boti i famshëm Gargantua është në internet dhe
+    dërgon Toxibots të fundit për të hedhur plehra bllokun e qytetit për bllok.…Grab
+    hoverboard tuaj cobot dhe të marrë të gatshme për zakon, lëvizin, dhe të përfundojë
+    off atë që keni filluar! Lojtarët programojnë hoverbots e tyre cobot për të ndryshuar
+    korsi, për të shmangur pengesat, dhe për të marrë nga shumë Toxibots në këtë lojë
+    ritm-vetëquajtur.
   tutorial_nasachspacejam_longdescription: Krijoni një sistem diellor që vërtet shkëmbin!
     Mësoni rreth muzikës, astronomisë dhe kodimit në këtë aktivitet të vetë-drejtuar
     (nuk kërkohet përvojë kodimi). Programoni planetet për të bërë muzikë, duke krijuar
@@ -13480,6 +13721,134 @@ sq:
   all: Të gjitha
   dont_know: Unë nuk e di
   language_label: Gjuha
+  before_hoc: Para orës së kodit
+  day_of_hoc: Dita e Orës së Kodit
+  after_hoc: Pas orës së kodit
+  step_01: Hapi 1
+  step_02: Hapi 2
+  step_03: Hapi 3
+  step_04: Hapi 4
+  step_05: Hapi 5
+  step_06: Hapi 6
+  step_07: Hapi 7
+  step_08: Hapi 8
+  hoc_how_to_top_heading: Udhëzuesi juaj për Orën e Kodit
+  hoc_how_to_top_desc: Udhëzues të përshtatur për përvojën më të mirë të Orës së Kodit.
+  hoc_how_to_top_view_guide: Shikoni udhëzuesin për
+  hoc_how_to_nav_main_aria_label: Zgjidhni një udhëzues
+  hoc_how_to_nav_sidebar_aria_label: Navigimi i anësorit
+  hoc_how_to_educators_intro_heading: 7. Planifikoni Orën tuaj të Kodit
+  hoc_how_to_educators_intro_desc: Ora e Kodit është një hyrje një orëshe në shkencat
+    kompjuterike, duke përdorur mësime argëtuese për të treguar se çdokush mund të
+    mësojë bazat. Këtë vit, ne po e çojmë Orën e Kodit në lartësi të reja duke ofruar
+    mundësi kodimi që përfshijnë si komponentët e inteligjencës artificiale (AI) dhe
+    jo AI. Pavarësisht nëse ju ose studentët tuaj jeni kodues me përvojë ose të gjithë
+    jeni duke nisur në ekspeditën tuaj të parë të shkencave kompjuterike, kjo Orë
+    e Kodit premton një udhëtim të jashtëzakonshëm.
+  hoc_how_to_faq_question_prerequisites: Cilat janë parakushtet për të bërë një orë
+    të kodit?
+  hoc_how_to_faq_answer_prerequisites: Ora e Kodit është e thjeshtë për tu ekzekutuar
+    - madje edhe për fillestarët. Ju nuk keni nevojë për përvojë në shkencat kompjuterike
+    ose mësimdhënie në mënyrë që të frymëzoni studentët për të eksploruar, krijuar
+    dhe mësuar diçka të re.
+  hoc_how_to_faq_question_devices: Cilat pajisje më duhen për të drejtuar një orë
+    të kodit?
+  hoc_how_to_faq_answer_devices_01: 'Pajisjet që mund të përdorni:'
+  hoc_how_to_faq_answer_devices_02: Nëse pajisjet janë të kufizuara ose të padisponueshme,
+    provoni [programimin e çifteve] (%{pair_url}) ose eksploroni [aktivitetet e shkëputura]
+    tona (%{unplugged_url}) për të mësuar pa ndonjë pajisje fare!
+  hoc_how_to_faq_question_volunteer: Kush mund te jete vullnetar/e?
+  hoc_how_to_faq_answer_volunteer: Çdokush i pasionuar për arsimin e shkencave kompjuterike
+    dhe rritjen e diversitetit në teknologji mund të jetë një Ne do të dëshironim
+    të shohim vullnetarë të të gjitha prejardhjeve të marrin pjesë Ora e Kodit përmban
+    një shumëllojshmëri të madhe aktivitetesh për të gjitha moshat dhe nivelet e aftësive,
+    kështu që ju nuk keni nevojë të jeni një ekspert programimi për të vullnetarë!
+  hoc_how_to_faq_question_full_hour: A do të zgjasë ora e kodit një orë të plotë?
+  hoc_how_to_faq_answer_full_hour: Shumë studentë do të jenë në gjendje të përfundojnë
+    aktivitetet e tyre në më pak se një orë, dhe kjo është në rregull! Studentët mund
+    të vazhdojnë të mësojnë ndërsa studentët e tjerë përfundojnë aktivitetet e tyre.
+  hoc_how_to_faq_question_account: A duhet pjesëmarrësit të LOG ON kur përdorin një
+    llogari?
+  hoc_how_to_faq_answer_account: Asnjë regjistrim ose hyrje nuk kërkohet që studentët
+    të provojnë Orën e Kodit. Regjistrimi në Orën e Kodit NUK krijon automatikisht
+    një llogari Code.org.
+  hoc_how_to_resources_heading_educators: Burime te tjera te ores se kodimit per mesimdhenes
+  hoc_how_to_resources_promo_heading: Burimet promovuese
+  hoc_how_to_resources_promo_desc: Gjeni të gjitha burimet që ju nevojiten — të shtypura
+    dhe dixhitale — për të sjellë vëmendjen në Orën tuaj të Kodit.
+  hoc_how_to_resources_discover_heading: Zbuloni Aktivitetet
+  hoc_how_to_resources_discover_desc: Eksploroni një përzgjedhje të gjerë të mësimeve
+    një orëshe të dizajnuara për të gjitha moshat në mbi 45 gjuh
+  hoc_how_to_step_label_plan: Planifikoni ku dhe kur do të bëni Orën tuaj të Kodit
+  hoc_how_to_step_label_choose_activity: Zgjidhni aktivitetin tuaj
+  hoc_how_to_step_label_test_activity: Testoni aktivitetin tuaj
+  hoc_how_to_step_label_register_event: Regjistroni ngjarjen tuaj
+  hoc_how_to_step_label_tell: Tregoni studentëve, shkollës dhe komunitetit tuaj
+  hoc_how_to_step_label_get_coding: Merrni kodimin!
+  hoc_how_to_step_label_celebrate: Festoni
+  hoc_how_to_step_label_beyond_hoc: Përtej Orës së Kodit
+  hoc_how_to_step_beyond_hoc_subhead: Nuk mbaron këtu!
+  hoc_how_to_step_beyond_hoc_desc: Shkenca kompjuterike nuk duhet të përfundojë me
+    Orën e Kodit! Ndërsa 90% e prindërve duan që fëmija i tyre të mësojë shkencat
+    kompjuterike, shumica e shkollave ende nuk e mësojnë atë. Mësoni se si të sillni
+    CS në shkollën e fëmijës tuaj sot.
+  hoc_how_to_step_01_educators_subhead: Zgjidhni një kohë dhe hapësirë ngjarjeje që
+    funksionon për numrin e studentëve dhe pajisjeve që keni në dispozicion.
+  hoc_how_to_step_01_educators_desc_01: Cilat hapësira janë në dispozicion për ju
+    për të bërë Orën tuaj të Kodit? Konsideroni aftësitë teknologjike të hapësirës
+    suaj dhe llojet e pajisjeve që prisni që studentët tuaj të punojnë. Studentët
+    mund të punojnë në mësime në një pajisje të vetme, të bëjnë radhë duke përdorur
+    një pajisje të përbashkët ose të provojnë një tutorial së bashku në një tabelë
+    të bardhë në klasë. Ka edhe mësime të shkëputura që mund të përfundojnë pa pajisje
+    fare. Opsionet e shkëputura mund të bëhen kudo - madje edhe jashtë!
+  hoc_how_to_step_01_educators_desc_02: Njerëzit në mbarë botën bashkohen me festimin
+    e Orës së Kodit gjatë Javës së Arsim %{campaign_date} it të CS kur lëshohen udhëzimet
+    dhe aktivitetet më të fundit. Por ju mund të bëni një orë të kodit çdo ditë të
+    vitit!
+  hoc_how_to_step_02_educators_desc_01: Eksploroni aktivitetet bazuar në moshën, përvojën,
+    interesat dhe më shumë të grupit tuaj. Është popullore për studentët të provojnë
+    mësime të vetë-udhëhequra, megjithëse shumë aktivitete përfshijnë plane mësimore
+    për mësuesit për të udhëhequr diskutimin ose zgjerimin e aktivitetit gjithashtu.
+  hoc_how_to_step_02_educators_desc_02: Vendosni para kohe nëse dëshironi të zgjidhni
+    një tutorial të vetëm për të gjithë nxënësit tuaj, ose le secilin fëmijë të zgjedhë
+    veten.
+  hoc_how_to_step_02_educators_desc_03: Këtë vit, ju dhe studentët tuaj mund të [mësoni
+    gjithçka rreth AI] (%ai_url) përmes mësimeve, planeve mësimesh dhe serisë sonë
+    të re Video How AI Works.
+  hoc_how_to_step_03_educators_desc_01: Provoni vetë tutorialin para se të hyni në
+    klasë në mënyrë që të mund t'i përgjigjeni pyetjeve!
+  hoc_how_to_step_03_educators_desc_02: Ju gjithashtu mund të provoni mësime në kompjuterët
+    ose pajisjet e studentëve për të siguruar që ato mbështesin tingullin dhe videon.
+    Keni bandwidth të ulët? Planifikoni të shfaqni video në pjesën e përparme të klasës,
+    kështu që secili student të mos shkarkojë videot e tyre.
+  hoc_how_to_step_03_educators_desc_03: Konsideroni sigurimin e kufjeve për klasën
+    tuaj, ose kërkoni studentëve të sjellin vetë, nëse udhëzimi që zgjidhni funksionon
+    më mirë me tingullin.
+  hoc_how_to_step_04_educators_desc_01: Kur regjistroni ngjarjen tuaj të Orës së Kodit,
+    do të merrni email të dobishëm me lajme dhe këshilla për të mbajtur një orë të
+    suksesshme të kodit. Është gjithashtu mënyra se si ju mund të tregoni vullnetarët
+    vendas të dinë se shkolla juaj po merr pjesë. Vullnetarët janë një burim i shkëlqyeshëm
+    dhe mund të vijnë të flasin me klasën tuaj për shkencat kompjuterike ose të ndihmojnë
+    studentët tuaj me aktivitetet e Orës së Kodit.
+  hoc_how_to_step_05_educators_desc_01: Bëni nxënësit tuaj të ngazëllyer për ngjarjen
+    duke ndarë [video frymëzuese] (%{videos_url}) duke theksuar njerëz të ndryshëm
+    dhe mënyra krijuese që shkenca kompjuterike mund të përdoret në botën reale.
+  hoc_how_to_step_05_educators_desc_02: Ndani planet tuaja të Orës së Kodit me mësues
+    të tjerë që mund të duan të bashkohen në argëtim! Kjo është gjithashtu një mundësi
+    e shkëlqyeshme për të kontaktuar Shoqatën e Studentëve të Mësuesve të Prindërve
+    të shkollës tuaj ose për të ndarë në gazetat e prindërve, duke i dhënë atyre se
+    çfarë po mësojnë fëmijët
+  hoc_how_to_step_06_educators_desc_01: Drejtoni studentët tuaj në aktivitet, ndoshta
+    duke ndarë lidhjen në bord ose përmes sistemit të menaxhimit të mësimit të klasës
+    tuaj. Studentët tuaj mund të hasin sfida - kjo është në rregull! Të mësuarit për
+    të programuar është si të mësoni një gjuhë të re; ju nuk do të jeni rrjedhshëm
+    menjëherë. Nëse nuk e dini përgjigjen, mund ta kuptoni së bashku.
+  hoc_how_to_step_07_educators_desc_01: 'Sigurohuni që të festoni suksesin! Ndani
+    fotot dhe videot e ngjarjes tuaj të Orës së Kodit në mediat sociale. Përdorni
+    #HourOfCode dhe @codeorg në mënyrë që të mund të nxjerrim në pah edhe suksesin
+    tuaj!'
+  hoc_how_to_step_07_educators_desc_02: Ju gjithashtu mund të printoni certifikata
+    për studentët tuaj për të treguar arritjet e tyre!
   team_page_full_team_alt_text: Gati 100 punonjës të Code.org me bluza blu dhe të
     verdha që përputhen pozojnë në një sallë konferencash hoteli për ngjarjen Codechella
     të verës 2022 të kompanisë.
@@ -13577,6 +13946,628 @@ sq:
     Kompjuterike AP të Code.org duke përdorur Kuorumin, një gjuhë e bazuar në dëshmi
     e krijuar fillimisht për të siguruar qasje për studentët e verbër ose me pamje
     të dëmtuar.
+  engineering_hero_heading: Bashkohuni me ekipin tonë inxhinierik
+  engineering_hero_desc: Ndërsa vazhdojmë të zgjerojmë ekipin tonë inxhinierik, ne
+    donim të ndajmë më shumë rreth organizatës sonë inxhinierike në Code.org dhe disa
+    nga aspektet unike të punës këtu. Nëse jeni të interesuar të aplikoni për një
+    nga rolet tona, ne do të donim të dëgjonim nga ju!
+  engineering_team_title: Njihuni me ekipin inxhinierik në Code.org
+  engineering_team_card_text_1: Kjo është (shumica) ne në personin tonë të mbledhur
+    së bashku gjatë verës së 2023! Kjo turmë është e ndarë në katër nën-ekipe brenda
+    ekipit tonë inxhinierik të cilët punojnë së bashku për të ndërtuar dhe shërbyer
+    platformën për të gjithë studentët dhe mësuesit tanë.
+  engineering_team_card_text_2: Nëse jeni të interesuar të aplikoni për një nga rolet
+    tona, ne do të donim të dëgjonim nga ju! Ju mund të gjeni një listë të pozicioneve
+    të hapura në faqen tonë Karriera.
+  engineering_our_team_title: Ekipi ynë inxhinieri
+  engineering_our_team_desc: 'Ekipi inxhinierik në Code.org është i ndarë në katër
+    nën-ekipe që ndërtojnë dhe mbështesin fusha të ndryshme të platformës sonë:'
+  engineering_our_team_sub_title_1: Ekipi i nxënësve
+  engineering_our_team_text_1: Ekipi ynë i të mësuarit të studentëve zotëron të gjitha
+    aktivitetet tona (ne i quajmë ato laboratorë) që studentët tanë përdorin çdo ditë.
+    Ky ekip punon kryesisht në teknologjinë e përparme (ne përdorim React dhe shumë
+    JS me porosi) dhe ne kemi një marrëdhënie të shkëlqyeshme pune me shumë partnerë
+    dhe projekte me burim të hapur. Për shembull, ne përdorim [Blockly Google] (%{youtube_url})
+    për të gjithë programimin tonë të bazuar në bllok. Ne mbështesim studentët në
+    udhëtimin e tyre të të mësuarit gjatë gjithë rrugës nga Kopshti deri në klasën
+    e 12-të.
+  engineering_our_team_sub_title_2: Ekipi i Eksperiencës
+  engineering_our_team_text_2: Ekipi ynë i Përvojës së Mësuesit ndërton mjetet që
+    tërheqin mësues të rinj në Code.org (ne i quajmë këto produkte blerjeje) dhe zhvillon
+    platformën që fuqizon mësuesit tanë ekzistues për të mësuar kurrikulën tonë (mjetet
+    tona të mësuesve). Ashtu si me mjetet tona studentore, ne mbështetemi në React
+    për të ndërtuar front-end tonë dhe komponentët tanë server-side janë shërbyer
+    duke përdorur Ruby on Rails.
+  engineering_our_team_sub_title_3: Ekipi i Platformës
+  engineering_our_team_text_3: Ekipi ynë i Platformës zotëron komponentë thelbësorë
+    që shërbejnë nevojave të ekipeve tona të studentëve dhe mësuesve (për shembull,
+    vërtetimi dhe profili i përdoruesit) dhe gjithashtu ka misionin për të arritur
+    studentë të cilët ende nuk mund t'i arrijmë. Kjo përfshin ndërtimin e integrimeve
+    që na lidhin me shkollat që përdorin sisteme të ndryshme të menaxhimit të të mësuarit
+    (LMS) dhe paketimin e kurrikulës sonë në mënyrë që të mund të përdoret në shkolla
+    të largëta që nuk kanë qasje në internet të besueshëm.
+  engineering_our_team_sub_title_4: Infrastruktura Ekip
+  engineering_our_team_text_4: Ekipi ynë i infrastrukturës ofron shtyllën kurrizore
+    për platformën që mbështet studentët dhe mësuesit tanë. Kjo përfshin infrastrukturën
+    tonë të pritjes dhe shërbimet përkatëse (ne përdorim AWS), menaxhimin e të dhënave,
+    programet e sigurisë, zhvilluesit dhe shërbimet e vendosjes dhe shumë më tepër.
+    Ky ekip gjithashtu zotëron sistemet tona të shkallëzimit dhe sigurimit, të cilat
+    janë kritike gjatë Orës së Kodimit, ku ftojmë çdo student në botë të përfundojë
+    një orë kodimi me ne.
+  engineering_faq_question_1: Çfarë bën Code.org?
+  engineering_faq_answer_1_a: Code.org është një organizatë jofitimprurëse e inovacionit
+    arsimor dedikuar vizionit që çdo student në çdo shkollë ka mundësinë të mësojë
+    shkencat kompjuterike si pjesë e edukimit të tyre kryesor K-12.
+  engineering_faq_answer_1_b: Ne zgjerojmë aksesin në shkencat kompjuterike në shkolla,
+    me fokus në rritjen e pjesëmarrjes së grave të reja dhe studentëve nga grupe të
+    tjera të nënpërfaqësuara. Ofruesi kryesor i kurrikulës së shkencave kompjuterike
+    K-12 në rrethet më të mëdha shkollore në Shtetet e Bashkuara, Code.org gjithashtu
+    organizon fushatën vjetore të Orës së Kodimit, e cila ka angazhuar më shumë se
+    15% të të gjithë studentëve në botë.
+  engineering_faq_answer_1_c: Code.org mbështetet nga donatorë bujarë duke përfshirë
+    Microsoft, Amazon, Google dhe shumë të tjerë.
+  engineering_faq_question_2: Cila është përvoja dhe mjetet e zhvilluesit të Code.org?
+  engineering_faq_answer_2: Përvoja jonë e zhvilluesit mund të jetë e ndryshme nga
+    ajo që keni parë në rolet tuaja të kaluara. Duke punuar ngushtë me ekipin tonë
+    të produkteve, ne dërgojmë në prodhim çdo ditë të javës dhe kemi një shumëllojshmëri
+    të ritmeve - ndonjëherë ju jeni duke shkruar kodin që shkon drejtpërdrejt atë
+    ditë; herë të tjera jeni në projekte afatgjata - dhe ndërsa ndjekim sprintet 2-javore,
+    ne e bëjmë këtë në një mënyrë të lehtë. Ne indeksojmë drejt marrjes së gjërave
+    të duhura në mënyrën e duhur kundrejt marrjes së një pamje puriste të ndonjë metodologjie
+    të veçantë. [I gjithë kodi ynë] (%{code_url}) është me burim të hapur dhe ne përdorim
+    kërkesat tërheqëse JIRA dhe GitHub për të gjurmuar të gjitha artikujt tanë të
+    punës. Ne gjithashtu kujdesemi shumë për cilësinë dhe testimin dhe jemi me fat
+    që kemi mbështetje të pabesueshme nga [SauceLabs](%{saucelabs_url}), të cilët
+    na ndihmojnë të ekzekutojmë suitën tonë të testeve të UI në pajisje të ndryshme
+    studentore (p.sh., iPad) në fermën e tyre të pajisjeve cloud.
+  engineering_faq_question_3: Cili është rotacioni i inxhinierit në thirrje në Code.org?
+  engineering_faq_answer_3: Ekipi ynë 30+ inxhinieri ndan përgjegjësitë në thirrje
+    Çdo inxhinier mbulon një ndërrim 24-orësh dhe përdor rrugët tona të përshkallëzimit
+    dhe librat për t'iu përgjigjur ndërprerjeve të faqes ose çështjeve të tjera të
+    faqeve të drejtpërdrejta. Ne jemi krenarë për besueshmërinë e faqes sonë - mesatarisht,
+    secili inxhinier zgjohet vetëm një herë në vit për çështje që zakonisht zgjidhen
+    shpejt. Në vend të kësaj, “Zhvilluesi i Ditës” zakonisht kalon një pjesë të ditës
+    së tyre të punës duke menaxhuar vendosjen e prodhimit dhe duke trajtuar çështje
+    më pak urgjente.
+  engineering_faq_question_4: A jeni një organizatë miqësore me distancë/WFH?
+  engineering_faq_answer_4_a: Po! Në vitin 2019, pak para pandemisë, Code.org u bë
+    një organizatë e parë në distancë. Sot, ne kemi inxhinierë në çdo zonë kohore
+    të SHBA dhe akomodojmë orarin e punës në përputhje me Shumica e takimeve tona
+    ndodhin midis orëve 10:00 dhe 3pm PT.
+  engineering_faq_answer_4_b: Ne gjithashtu e njohim vlerën e kohës personale, dhe
+    çdo çerek bashkohemi personalisht, zakonisht në Seattle. Dy nga këto ngjarje (ne
+    i quajmë ato Javën e fillimit dhe “Codechella”) sjellin të gjithë në organizatë
+    së bashku në janar dhe qershor - dhe ekipet e inxhinierisë dhe produkteve takohen
+    veçmas në prill dhe tetor.
+  engineering_faq_answer_4_c: Ne besojmë fuqimisht në kalimin e kohës me studentët
+    dhe mësuesit tanë, kështu që shumë nga këto ngjarje personale përfshijnë udhëtime
+    në shkolla dhe klasa për të mbledhur reagime ose për të provuar produktet tona.
+  engineering_faq_question_5: Çfarë e bën ekipin inxhinierik në Code.org unik?
+  engineering_faq_answer_5_a: 'Përtej zgjidhjes së problemeve teknike sfiduese, ne
+    kemi disa gjëra që e bëjnë organizmin tonë inxhinierik të ndryshëm nga të tjerët
+    në të cilët mund të keni punuar:'
+  engineering_faq_answer_5_b_1: Ne të gjithë ndajmë pasionin tonë për misionin tonë.
+  engineering_faq_answer_5_b_2: Secili prej nesh është këtu për të mbështetur misionin
+    për të zgjeruar qasjen në shkencat kompjuterike për çdo student në të gjithë botën.
+    Ne të gjithë kemi historinë dhe perspektivën tonë unike për atë që na shtyn drejt
+    këtij misioni.
+  engineering_faq_answer_5_c_1: Ne kujdesemi thellësisht për njëri-tjetrin.
+  engineering_faq_answer_5_c_2: Kur inxhinierët po luftojnë me një çështje, ne hyjmë
+    dhe ndihmojmë. Një nga parimet tona është se ne jemi të vështirë për problemet,
+    por të sjellshëm me njëri-tjetrin. Ne promovojmë inxhinierë rregullisht, por nuk
+    përshkruajmë zgjidhje të mbi-inxhinieruara vetëm për të mbështetur rrugën e promovimit
+    të dikujt. Në vend të kësaj, ne investojmë në inxhinierët tanë me një buxhet bujar
+    të zhvillimit profesional dhe qasje në mundësi të tjera të të mësuarit.
+  engineering_faq_answer_5_d_1: Ne punojmë shumë, por vendosim kufij të qartë.
+  engineering_faq_answer_5_d_2: Ndërsa ne mbështesim studentët në të gjithë botën,
+    ne mbajmë veten përgjegjës për kufijtë e qartë midis punës dhe jetës në shtëpi.
+    Ne gëzojmë pa takime të mërkurën, duke marrë PTO tonë (5 javë gjithsej, e cila
+    përfshin një mbyllje zyre 2-javore org-gjerë në fund të vitit aka Pushimi dimëror),
+    gjysmën e ditës së punës të premteve gjatë verës aka Summer Fridays, dhe përfitime
+    të tjera bujare.
+  careers_hero_title: Karriera
+  careers_hero_description: Code.org është një organizatë jofitimprurëse e dedikuar
+    për zgjerimin e qasjes në shkencat kompjuterike në shkolla Ne jemi veçanërisht
+    të fokusuar në rritjen e pjesëmarrjes në mesin e grave të reja dhe studentëve
+    të nënpërfaqësuar.
+  careers_hero_description_under: Na ndihmo të ndryshojmë botën, një student në të
+    njëjtën kohë!
+  careers_vision_title: Vizioni ynë
+  careers_vision_decsription: Vizioni ynë është që çdo student në çdo shkollë duhet
+    të ketë mundësinë për të mësuar shkenca kompjuterike si pjesë e arsimit të tyre
+    kryesor K-12.
+  careers_vision_description_under: Bashkohuni me ekipin tonë për të ndihmuar ta bëni
+    këtë vizion realitet!
+  careers_values_title: Vlerat tona thelbësore
+  careers_values_first_column_text_1: Ne besojmë se shkenca kompjuterike është themelore
+    për të gjithë studentët
+  careers_values_first_column_text_2: Ne jemi të përkushtuar për barazi, qasje dhe
+    mundësi
+  careers_values_first_column_text_3: Ne besojmë në fuqinë e një komuniteti arsimor
+    bashkëpunues
+  careers_values_second_column_text_1: Ne jemi të shkathët dhe të përgjegjshëm ndaj
+    reagimeve
+  careers_values_second_column_text_2: Ne veprojmë me integritet dhe transparencë
+  careers_values_second_column_text_3: Ne besojmë se ndikimi i gjerë kërkon të mendojmë
+    të mëdhenj dhe të veprojmë
+  careers_approach_section_title: Qasja jonë unifikuese
+  careers_approach_section_description: Roli global i Code.org në lëvizjen e shkencave
+    kompjuterike K-12 është i mundur vetëm sepse ne përdorim një qasje unifikuese
+    në të gjithë aktorët e ndryshëm dhe shpesh të ndarë. Në një kohë të polarizimit
+    në rritje, ideja e rritjes së mundësive për studentët bashkon njerëz nga i gjithë
+    spektri politik. Anëtarët e ekipit të Code.org, studentët, mësuesit dhe mbështetësit
+    kanë pikëpamje të ndryshme dhe divergjente, dhe të gjithë janë të mirëpritur në
+    misionin tonë.
+  careers_aproach_section_description_link: Lexoni më shumë rreth qasjes së Code.org
+    ndaj unitetit.
+  careers_approach_section_button: Eksploroni role të hapura
+  careers_principle_section_title: Parimet tona kulturore
+  careers_principle_title_1: Studentët dhe mësuesit tanë janë ylli ynë i veriut
+  careers_principle_description_1: Ne përdorim dhuratat, kohën dhe energjinë tonë
+    për të sjellë shkencën kompjuterike për ata që kanë më shumë nevojë për të. Kjo
+    është ajo që na bashkon. Ky është parimi ynë më i rëndësishëm.
+  careers_principle_title_2: Ne jemi të vështirë për problemet dhe të sjellshëm me
+    njëri-tjetrin
+  careers_principle_description_2: Ne qëndrojmë të fokusuar në sfidën e sjelljes së
+    shkencave kompjuterike për studentët dhe mësuesit në nivel global. Ne e pranojmë
+    se secili prej nesh sjell më të mirën nga qëllimet tona për të mbështetur misionin
+    tonë dhe për të dhënë hir kur bëjmë gabime.
+  careers_principle_title_3: Kërkoni zgjidhje, jo konsensus
+  careers_principle_description_3: Ne zotërojmë vendime, pavarësisht nëse marrim hapa
+    të vegjël apo hapa të mëdhenj drejt rezultateve që po kërkojmë. Pronarët kërkojnë
+    dhe dëgjojnë, por nuk janë të paralizuar nga reagimet. Ne pranojmë dhe mbështesim
+    vendimet e pronarëve, edhe nëse nuk pajtohemi.
+  careers_principle_title_4: Përvetësoni mentalitetin e një themeluesi
+  careers_principle_description_4: Ne fiksohemi për rezultatet dhe përqendrohemi në
+    veprimet tona në drejtimin e tyre. Ne zhytemi në detaje dhe punojmë shumë. Ne
+    jemi të sinqertë, të ligët në gatishmëri dhe vlerësojmë vazhdimisht nëse jemi
+    në rrugën e duhur; nuk kemi frikë të rrotullohemi. Ndryshimi i botës e kërkon
+  careers_principle_title_5: Inovacioni kampion
+  careers_principle_description_5: Ne mendojmë të mëdha, rrezikojmë dhe nuk kemi frikë
+    të dështojmë. Nëse shohim një mënyrë më të mirë për të përmbushur qëllimet tona,
+    ne e bëjmë atë dhe inkurajojmë të tjerët ta bëjnë këtë. Zgjidhjet në rritje nuk
+    do të ndihmojnë në ndryshimin e botës.
+  careers_principle_title_6: Vendimet e ankorimit në fakte
+  careers_principle_description_6: Ne përdorim të dhënat për të kuptuar biznesin tonë,
+    për të vendosur rezultatet e dëshiruara dhe për të udhëhequr vendimmarrjen. Ne
+    e balancojmë këtë duke njohur se nuk do të kemi gjithmonë të dhënat që na duhen
+    për të vepruar.
+  careers_principle_title_7: Një mentalitet i rritjes na ushqen
+  careers_principle_description_7: Ne i afrohemi secilës sfidë me kuriozitet. Ne japim
+    reagime me mirësi dhe sinqerisht; ne marrim reagime hapur. Ne mësojmë nga gabimet
+    tona dhe kërkojmë mënyra për të rritur shtrirjen dhe ndikimin e punës sonë.
+  careers_balance_section_title: Bilanci ynë punë-jetë
+  careers_balance_section_description: Ne kujdesemi për punonjësit tanë dhe jemi të
+    përkushtuar për të mbështetur të gjithë si në punë ashtu edhe jashtë punës. Ne
+    e dimë që të gjithë kanë nevoja të ndryshme, prandaj ne ofrojmë një paketë përfitimesh
+    holistike që do të sigurojë që ju (dhe familja juaj) të kujdeseni.
+  careers_balance_first_column_text_1: Përfitimet shëndetësore për ju dhe familjen
+    tuaj
+  careers_balance_first_column_text_2: Koha bujare e paguar pushimi dhe largimi i
+    planeve
+  careers_balance_second_column_text_1: Mjedis pune fleksibël dhe mbështetës
+  careers_balance_second_column_text_2: Mundësi për rritje dhe mësim profesional
+  careers_openroles_section_title: Rolet e hapura
+  careers_openroles_section_description: Code.org është i bazuar në Seattle, por shumë
+    nga anëtarët e ekipit tonë janë të largët. Kandidatët në distancë janë të mirëseardhur
+    dhe të inkurajuar
+  careers_more_info_text: Për më shumë informacion rreth Code.org, shikoni [Pyetjet
+    e bëra më shpesh] (%{support_url}) ose mësoni rreth [mënyra të tjera për t'u përfshirë
+    në misionin tonë] (%{help_url}).
+  careers_approach_section_title2: Qasja jonë ndaj diversitetit
+  careers_approach_section_description_1: Ne përqafojmë perspektiva, ide dhe prejardhje
+    të ndryshme në Code.org. Ne jemi të angazhuar për të ofruar një mundësi të barabartë
+    për të gjithë punonjësit dhe aplikantët. Ne nuk diskriminojmë në bazë të racës,
+    fesë, ngjyrës, origjinës kombëtare, gjinisë, orientimit seksual, moshës, statusit
+    martesor, statusit të veteranit ose statusit të aftësisë së kufizuar (mendore
+    dhe fizike).
+  careers_approach_section_description_2: Ne do të sigurojmë që individëve me aftësi
+    të kufizuara t'u ofrohet akomodim i arsyeshëm për të marrë pjesë në procesin e
+    aplikimit për punë ose intervistë, për të kryer funksione thelbësore të punës
+    dhe për të marrë përfitime dhe privilegje të tjera të punësimit. Nëse keni nevoja
+    individuale në lidhje me një aftësi të kufizuar, ju lutemi kontaktoni tek accommodations@code.org.
+  csa_ai_page_hero_title: Inxhinieri Softuerësh & Vizioni Komp
+  csa_ai_page_hero_description: 'Ky modul CSA post-AP me dy kapitull u ofron nxënësve
+    të shkollave të mesme përvojë praktike me mjete profesionale të zhvillimit të
+    softuerit, duke përfshirë GitHub dhe GitHub Compilot, dhe u jep atyre aftësitë
+    e botës reale për të zhvilluar një program vizioni kompjuterik. '
+  csa_ai_page_video_section_title: Hap përtej botës së mjediseve programuese Code.org
+  csa_ai_page_video_section_li_1: Mësoni rreth AI dhe aplikacionet e saj
+  csa_ai_page_video_section_li_2: Përvojë praktike me mjetet profesionale të zhvillimit
+    të softuerit
+  csa_ai_page_video_section_li_3: Mësoni praktikat standarde të industrisë
+  csa_ai_page_video_section_li_4: Kultivoni të menduarit kritik
+  csa_ai_page_programming_tools: 'Mjetet e Programimit: Github, Github Copilot, VCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Asnjë
+  csa_ai_page_curriculum_topics: 'Temat: Programim, Të dhëna, Art dhe Dizajn, Lojëra
+    dhe Animacion'
+  csa_ai_page_curriculum_accessibility_features: Shihni seksionin FAQ për detaje
+  csa_ai_page_curriculum_languages_support: Shqip
+  csa_ai_page_article_title_1: Ndërtoni me Copilot
+  csa_ai_page_article_description_1: Studentët mësojnë se si të përdorin GitHub Copilot
+    si një programues palësh për të shpjeguar kodin ekzistues, për të gjetur dhe rregulluar
+    gabimet dhe për të gjeneruar zgjidhje për problemet e reja.
+  csa_ai_page_article_link_1: Mësoni më shumë rreth Copilot
+  csa_ai_page_article_title_2: Ndërtoni modelin tuaj të AI
+  csa_ai_page_article_description_2: Studentët trajnojnë modelet e tyre të AI duke
+    përdorur Machine Teachable për të njohur imazhet dhe gjestet formojnë një webcam
+    dhe të marrin në konsideratë se si vizioni kompjuterik ndikon në mënyrën se si
+    përdoruesit ndërveprojnë me aplikacionet
+  csa_ai_page_article_link_2: Eksploroni planin e mësimit
+  csa_ai_page_article_title_3: Explore vizionin kompjuterik
+  csa_ai_page_article_description_3: Studentët zbatojnë modelet e AI që krijuan me
+    Machine Teachable në një aplikacion Java, duke përdorur GitHub Copilot për t'i
+    ndihmuar ata të modifikojnë versionet ekzistuese të aplikacioneve për të punuar
+    me inputet e ndryshme.
+  csa_ai_page_article_link_3: Shihni një shembull
+  csa_ai_page_learn_more_section_title: Mësoni më shumë rreth inteligjencës artificiale
+  csa_ai_page_learn_more_title: Eksploroni AI 101 për Mësuesit
+  csa_ai_page_learn_more_description: Zbuloni botën novatore të Inteligjencës Artificiale
+    (AI) dhe potencialin e saj transformues në arsim me serinë tonë gjithëpërfshirëse
+    të të mësuarit në internet për mësuesit.
+  csa_ai_page_learn_more_link: Shikoni serinë AI 101 për Mësuesit
+  csa_ai_page_faq_question_01: Cilat janë parakushtet për këtë modul?
+  csa_ai_page_faq_answer_01_01: 'Para se të zhyten në këtë modul, studentët duhet
+    të posedojnë një njohuri hyrëse të nivelit të Java. Në mënyrë të veçantë, ata
+    duhet të zotërojnë:'
+  csa_ai_page_faq_answer_01_list_01: "**Klasat dhe Objektet: ** Studentët duhet të
+    jenë të njohur me përcaktimin dhe përdorimin e klasave, si dhe krijimin dhe manipulimin
+    e objekteve."
+  csa_ai_page_faq_answer_01_list_02: "**Metodat e shkrimit dhe thirrjes: ** Studentët
+    duhet të jenë në gjendje të përcaktojnë metodat brenda një klase, të kuptojnë
+    parametrat e metodës dhe llojet e kthimit, dhe metodat e thirrjes nga objektet
+    ose metodat e tjera."
+  csa_ai_page_faq_answer_01_list_03: "**1D Vargjeve dhe ArrayLists: ** Ata duhet të
+    jenë të aftë në deklarimin, inicializimin dhe manipulimin e vargjeve një-dimensionale
+    dhe ArrayLists, duke përfshirë përsëritjen përmes tyre."
+  csa_ai_page_faq_answer_01_list_04: "**Përzgjedhja dhe përsëritja: ** Një themel
+    i fortë në deklaratat dhe sythe të kushtëzuara është thelbësore."
+  csa_ai_page_faq_question_01_02: Në mënyrë ideale, studentët që kanë përfunduar AP
+    Shkenca Kompjuterike A ose një kurs me thellësi dhe ashpërsi të ngjashme do të
+    ishin të përgatitur mirë për këtë modul.
+  csa_ai_page_faq_question_02: Si mund ta instaloj softuerin e kërkuar për këtë modul?
+  csa_ai_page_faq_answer_02_01: Ky modul është unik sepse përfshin përdorimin e softuerit
+    të palëve të treta në vend të laboratorëve dhe mjeteve Code.org. [Lexoni më shumë
+    rreth instalimit të softuerit këtu] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Si mund të mbështes nevojat e aksesit gjatë mësimdhënies
+    së këtij moduli?
+  csa_ai_page_faq_answer_03_01: Ushqimi për nevojat e aksesit është thelbësor për
+    një mjedis mësimi gjithëpërfshirës. [Lexoni më shumë rreth karakteristikave të
+    aksesit në softuerin e përdorur në këtë modul këtu] (%{install_url}).
+  csa_ai_page_faq_question_04: Si mund ta përdor VS Code në Chromebook?
+  csa_ai_page_faq_answer_04: Përdorimi i VS Code në një Chromebook është bërë më i
+    thjeshtë, veçanërisht me aftësinë për të ekzekutuar aplikacione Linux në modelet
+    më të reja të Chromebook. [Lexoni më shumë rreth vendosjes së Kodit VS në Chromebook
+    këtu] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Si mund të marr zhvillim profesional për këtë modul?
+  csa_ai_page_faq_answer_05: Aktualisht nuk ka zhvillim specifik profesional për këtë
+    kurs. Nëse po kërkoni të kuptoni se si t'i qaseni Inteligjencës Artificiale në
+    klasën tuaj, mundeni [eksploroni AI 101 për Mësuesit] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Cila është koha e rekomanduar për mësimin e këtij moduli?
+  csa_ai_page_faq_answer_06_01: Moduli i Inxhinierisë së Softuerit dhe Vizionit Kompjuterik
+    është i strukturuar me mendime për të siguruar mësim gjithëpërfshirës në një afat
+    kohor I gjithë moduli është krijuar për të shtrirë **2 javë udhëzime**. Shumica
+    e mësimeve janë përshtatur për **45 minuta**, ndërsa mësimet ku studentët gërmojnë
+    në zhvillimin e projektit Java janë të dizajnuara për **90 minuta**. Kjo kohë
+    e zgjatur siguron që studentët të kenë mundësi të mjaftueshme për të kuptuar,
+    zbatuar dhe zgjidhur problemet ndërsa punojnë.
+  csa_ai_page_faq_answer_06_02: Ekziston gjithashtu fleksibilitet i qëllimshëm i integruar
+    në strukturën e modulit. Në varësi të dinamikës së klasës, angazhimit të studentëve
+    dhe thellësisë në të cilën dëshironi të eksploroni secilën temë, mund të rregulloni
+    kohëzgjatjen. Për shembull, mësimi Intro to Copilot, i dizajnuar si një mësim
+    45 minutësh, mund të zgjerohet në 90 minuta nëse dëshironi të zhyteni më thellë
+    në mënyrën se si funksionojnë modelet dhe mjetet e mëdha gjuhësore si GitHub Chilot
+    dhe ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Me një llogari të aprovuar të mësuesit, mund të gjeni
+    çelësat e përgjigjeve në një panel blu “Mësues” Vetëm që tregon në mësimet dhe
+    aktivitetet në internet. Nëse keni nevojë për një llogari të aprovuar të mësuesit,
+    mund të aplikoni për qasje në materialet e mbrojtura vetëm për mësuesit (çelësat
+    e përgjigjes, etj) përmes [kjo formë] ().%{form_url}Ju lutemi mbani në mend se
+    mund të duhen 3-5 ditë pune për të verifikuar llogarinë tuaj.
+  csa_ai_page_faq_question_08: A është ky modul i hartuar sipas standardeve?
+  csa_ai_page_faq_answer_08: Po, programi mësimor i Inxhinierisë së Softuerit dhe
+    Vizionit Kompjuterik është hartuar në [Standardet CSTA K-12] (%{csta_k12_url})
+    dhe AI për [Udhëzimet K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Sa kushton për të mësuar këtë modul?
+  csa_ai_page_faq_answer_09_01: Kurrikula dhe platforma jonë janë në dispozicion në
+    [pa kosto] (%{no_cost_url}) për këdo, kudo, për të dhënë mësim!
+  csa_ai_page_faq_answer_09_02: Për më tepër, softueri dhe mjetet e përdorura në këtë
+    modul janë falas. GitHub Copilot është falas për të verifikuar [teachers](%{teachers_url})
+    dhe (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Çfarë të bëj nëse instalimi i softuerit nuk funksionon?
+  csa_ai_page_faq_answer_10: Përballimi i çështjeve gjatë instalimit të softuerit
+    mund të jetë i zakonshëm, por ka hapa sistematikë që mund të ndiqni për të zgjidhur
+    dhe zgjidhur ato. [Shikoni disa këshilla për zgjidhjen e problemeve këtu] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Kurrikula jonë e Inxhinierisë së Softuerit dhe Vizionit
+    Kompjuterik është dizajnuar me vlerat tona Qëllimet e mëposhtme udhëzuan krijimin
+    e këtij programi mësimor:'
+  csa_ai_page_faq_answer_11_list_01: "**Qëllimi 1: ** Përdorni mjetet e AI për të
+    gjeneruar, korrigjuar dhe modifikuar kodin."
+  csa_ai_page_faq_answer_11_list_02: "**Qëllimi 2: ** Kalimi nga Java Lab në mjetet
+    e botës reale."
+  csa_ai_page_faq_answer_11_list_03: "**Qëllimi 3: ** Thelloni të kuptuarit se si
+    modelet e AI trajnohen dhe integrohen në programe."
+  csa_ai_page_faq_answer_11_02: Për më shumë informacion në lidhje me vlerat që udhëhoqën
+    punën tonë, ju lutemi shikoni [vlerat e kurrikulës] (%{curriculum_values_url}).
+  video_library_page_main_title: Video të shkurtra edukative
+  video_library_page_hero_description: Biblioteka në rritje e videove edukative e
+    Code.org është në dispozicion për ripërdorim nga edukatorët në mbarë botën, online
+    ose në klasa. Qëllimi ynë është të përforcojmë përpjekjet tona përtej mundësive
+    të kurrikulës sonë.
+  video_library_page_title_ai_works: Si funksionon AI
+  video_library_page_description_ai_works: Kjo seri videosh të shkurtra do t'ju prezantojë
+    se si funksionon inteligjenca artificiale dhe pse ka rëndësi. Mësoni rreth rrjeteve
+    nervore, ose si mëson AI, dhe thellohuni në çështje si paragjykimi algoritmik
+    dhe etika e vendimmarrjes së AI.
+  video_library_page_title_computers_work: Si funksionojnë kompjuterët
+  video_library_page_description_computers_work: Shpjegon se çfarë e bën një kompjuter
+    një kompjuter, si informacioni dixhital përfaqësohet në 1s dhe 0, si funksionojnë
+    qarqet kompjuterike për të manipuluar informacionin dixhital dhe si një njësi
+    qendrore e përpunimit (CPU) dhe sistemi operativ kontrollojnë inputet, rezultatet,
+    kujtesën dhe harduerin e një kompjuteri.
+  video_library_page_title_internet_works: Si funksionon interneti
+  video_library_page_description_internet_works: Duke shfaqur Vint Cerf, shpikësin
+    e TCP/IP, David Karp themeluesi i Tumblr për të shpjeguar HTTP dhe HTML, Princesha
+    e Sigurisë së Google për të shpjeguar SSL dhe sigurinë kibernetike, dhe inxhinierë
+    nga Microsoft, Spotify dhe Symantec. Kjo seri e videove të shkurtra që shpjegojnë
+    se si funksionon interneti.
+  video_library_page_title_not_hacked: Si të mos merrni hacked
+  video_library_page_description_not_hacked: Interneti është i hapur, kështu që çdo
+    gjë që ndodh në të mund të shihet nëse nuk është e mbrojtur. Në vendet moderne,
+    njerëzit janë më të shqetësuar për t'u hakuar sesa për ndonjë krim tjetër. Pse?
+    Sepse çdo kompjuter ose telefon në internet është duke u testuar rregullisht për
+    dobësi nga kriminelët, terroristët, apo edhe aktorët shtetërorë. Nëse nuk jeni
+    të kujdesshëm, dikush mund të hakojë pajisjen ose llogaritë tuaja, madje edhe
+    të vjedhë identitetin tuaj ose paratë tuaja.
+  video_library_page_title_blockchain: Si funksionon Blockchain
+  video_library_page_description_blockchain: E krijuar në partneritet me Coinbase,
+    kjo seri përmban ekspertë të industrisë dhe synon të çmitizojë këtë teknologji
+    duke eksploruar se çfarë është blockchain, si funksionon dhe implikimet e tij
+    të mundshme shoqërore - të mira dhe të këqija.
+  video_library_page_title_careers: Karriera në CS
+  video_library_page_description_careers: Karriera në shkencat kompjuterike dhe teknologjinë
+    mund të jetë argëtuese dhe shpërblyese. Por çfarë bën me të vërtetë një person
+    që punon në këto fusha? Me një shumëllojshmëri të madhe të vendeve të punës dhe
+    kompanive, nuk ka vetëm një përgjigje për këtë pyetje. Shikoni videot më poshtë
+    për të takuar disa nga njerëzit që po trajtojnë probleme të mëdha në mënyra krijuese.
+  video_library_page_title_inspirational: frymëzues
+  video_library_page_description_inspirational: Çfarë do të ndryshojë shkenca kompjuterike
+    në botën tonë? Gjithçka? Për kë është? Gjithkush! Shikoni këto video për t'ju
+    frymëzuar dhe motivuar.
+  video_library_page_footer_description: Po kërkoni diçka tjetër? Ne kemi kaq shumë
+    video të shkëlqyera në dispozicion në kanalin tonë Youtube.
+  video_library_page_footer_cta: Eksploroni të gjitha videot e Code.org në YouTube
+  video_library_page_computer_work_video_title_1: Prezantimi se si funksionojnë kompjuterët
+  video_library_page_computer_work_video_title_2: Binary dhe të dhëna
+  video_library_page_computer_work_video_title_3: CPU, Memory, Input, dhe Output
+  video_library_page_computer_work_video_title_4: Çfarë e bën një kompjuter, një kompjuter?
+  video_library_page_computer_work_video_title_5: Qarqet Logjike
+  video_library_page_computer_work_video_title_6: Hardware dhe Softuer
+  video_library_page_internet_work_video_title_1: Çfarë është interneti?
+  video_library_page_internet_work_video_title_2: 'Interneti: Adresat IP dhe DNS'
+  video_library_page_internet_work_video_title_3: 'Interneti: HTTP dhe HTML'
+  video_library_page_internet_work_video_title_4: 'Interneti: Siguria kibernetike
+    dhe krimi'
+  video_library_page_internet_work_video_title_5: 'INTERNETI: Tela, Kabllo, & Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNETI: Paketat, Rrugëzimi dhe
+    Besueshmëria'
+  video_library_page_internet_work_video_title_7: 'INTERNETI: Encryption & Çelësat
+    Publik'
+  video_library_page_internet_work_video_title_8: 'Interneti: Si funksionon kërkimi'
+  video_library_page_cs_video_title_1: Emri im është Jerome dhe unë jam një Teknolog
+    i Dizajnit në Meow Wolf
+  video_library_page_cs_video_title_2: Emri im është Nikesha dhe unë jam një inxhinier
+    i hapësirës ajrore në NASA
+  video_library_page_cs_video_title_3: Emri im është Brina dhe unë jam një Inxhinier
+    Softuerësh në Instagram
+  video_library_page_cs_video_title_4: Emri im është Kinsley dhe unë jam një inxhinier
+    softuerësh në Facebook
+  video_library_page_cs_video_title_5: Emri im është Polina dhe unë jam një Shkencëtar
+    i të Dhënave në Artet Elektronike
+  video_library_page_cs_video_title_6: Emri im është Danelle dhe unë jam një Inxhinier
+    Softuerësh në MBARI
+  video_library_page_cs_video_title_7: Emri im është Christopher dhe unë jam një analist
+    i sigurisë në Tanium.
+  video_library_page_cs_video_title_8: Emri im është Federico dhe unë jam një Menaxher
+    i Programit Teknik në Microsoft
+  video_library_page_cs_video_title_9: Emri im është Tess dhe unë jam një Inxhinier
+    Softuerësh në Google
+  video_library_page_inspirational_video_title_1: Ndryshoni fytyrën e shkencave kompjuterike
+    (3 min)
+  video_library_page_inspirational_video_title_2: Shtyjeni veten. Çdokush mund të
+    mësojë. (1 min)
+  video_library_page_inspirational_video_title_3: Frymëzoni një vajzë (2 min)
+  video_library_page_inspirational_video_title_4: Çfarë Nuk të Mëson Shumica e Shkollave
+    (5 min)
+  video_library_page_inspirational_video_title_5: Ora e kodimit është këtu - Çdokush
+    mund të mësojë (2 min)
+  video_library_page_inspirational_video_title_6: Emri im është Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Ora e Kodimit me Steph Curry (2
+    min)
+  video_library_page_inspirational_video_title_8: Shkenca Kompjuterike po ndryshon
+    gjithçka (5 min)
+  video_library_page_inspirational_video_title_9: Intro Shkenca Kompjuterike (1 min)
+  video_library_page_inspirational_video_title_10: Presidenti Obama për shkencat kompjuterike
+    (1 min)
+  video_library_page_inspirational_video_title_11: Çdokush mund të mësojë (1 min)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_inspirational_video_title_13: NASA feston orën e kodimit (2 min)
+  video_library_page_inspirational_video_title_14: Është më shumë se një lojë (1 min)
+  video_library_page_inspirational_video_title_15: Krijo Me Shkenca Kompjuterike (1
+    min)
+  video_library_page_not_hacked_video_title_1: 'Si të mos merrni Hacked: Hyrje'
+  video_library_page_not_hacked_video_title_2: 'Si të mos merrni Hacked: Fjalëkalimet'
+  video_library_page_not_hacked_video_title_3: 'Si të mos merrni Hacked: Vërtetimi
+    dhe Pajisja Locks'
+  video_library_page_not_hacked_video_title_4: 'Si të mos merrni Hacked: Phishing'
+  video_library_page_not_hacked_video_title_5: 'Si të mos merrni hakuar: Uebfaqet
+    dhe Wifi'
+  video_library_page_not_hacked_video_title_6: 'Si të mos merrni Hacked: Mesazhet
+    dhe Shkarkimet'
+  video_library_page_not_hacked_video_title_7: 'Si të mos merrni Hacked: Instaloni
+    përditësimet'
+  about_us_page_title: Rreth Nesh
+  about_us_page_hero_description: Code.org® është një inovacion arsimor jofitimprurës
+    kushtuar vizionit që çdo student në çdo shkollë ka mundësinë për të mësuar shkencat
+    kompjuterike si pjesë e arsimit të tyre thelbësor K-12. Ne zgjerojmë qasjen në
+    shkencat kompjuterike në shkolla, me fokus në rritjen e pjesëmarrjes nga gratë
+    e reja dhe studentët nga grupe të tjera të nënpërfaqësuara. Ofruesi kryesor i
+    kurrikulës së shkencave kompjuterike K-12 në rrethet më të mëdha shkollore në
+    Shtetet e Bashkuara, Code.org gjithashtu organizon fushatën vjetore [Hour of Code]
+    (%{hour_url}), e cila ka angazhuar më shumë se 15% të të gjithë nxënësve në botë.
+    Code.org mbështetet nga donatorë bujare duke përfshirë Microsoft, Amazon, Google
+    dhe [shumë të tjerë.]%{others_url}
+  about_us_page_section_title_1: Mbi 80 milionë studentë dhe 2 milionë mësues në Code.org
+  about_us_page_statistic_figcaption: Pjesëmarrja e Code.org nga viti shkollor 2021-2022.
+    [Shih të dhënat e disagreguara.] ()%{data_url}
+  about_us_page_statistic_description: Code.org rrit diversitetin në shkencat kompjuterike
+    duke arritur studentët e të gjitha prejardhjeve aty ku janë - në nivelin e tyre
+    të aftësive, në shkollat e tyre dhe në mënyra që i frymëzojnë ata për të vazhduar
+    të mësojnë. Shumica dërrmuese e studentëve në Code.org janë nga grupet studentore
+    historikisht të nënpërfaqësuara në shkencat kompjuterike. Rritja e diversitetit
+    në shkencat kompjuterike është themelore për punën tonë dhe [ju inkurajojmë të
+    lexoni më shumë rreth përpjekjeve tona] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org në lajme
+  about_us_page_section_news_description: Shihni të gjitha të kaluarën [lajmet dhe
+    njoftimet] (%{news_url})
+  about_us_page_section_table: Qëllimet dhe metrikat tona
+  about_us_page_section_table_header_1: Qëllimi i Code.org
+  about_us_page_section_table_header_2: Arritja
+  abous_page_section_table_cell_1_1: Përmirësimi i diversitetit në CS* (studentët
+    amerikanë) *
+  abous_page_section_table_cell_1_2: 45% e studentëve të Code.org janë gra të reja,
+    50% janë studentë nga grupet racore dhe etnike të margjinalizuara, dhe 46% e studentëve
+    amerikanë janë në shkolla me nevoja të larta. Lexo më shumë rreth [qasjes sonë
+    ndaj diversitetit.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Frymëzoni studentët
+  about_page_section_table_cell_2_2: Dhjetëra miliona e kanë provuar [Orën e Kodit]
+    (%{hour_url}). (426,370,561 shërbyer. 49% femër)
+  about_page_section_table_cell_3_1: Arritni klasat
+  about_page_section_table_cell_3_2: 591,636 mësues janë regjistruar për të mësuar
+    kurset tona intro në [Code Studio] (%{code_studio_url}) dhe 19.177.297 studentë
+    janë regjistruar.
+  about_page_section_table_cell_4_1: Prep mësuesit e rinj CS
+  about_page_section_table_cell_4_2: Ne kemi përgatitur më shumë se 106,000 mësues
+    të rinj për të mësuar CS nëpër klasat K-12. Mësoni rreth programeve tona të mësimit
+    profesional.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Ndryshoni kurrikulën e qarkut
+  about_page_section_table_cell_5_2: Ne kemi bashkëpunuar me [180+ të rretheve më
+    të mëdha shkollore] (%{schoold_disctrict_url}) dhe 60 partnerë rajonale për [shtoni
+    CS në kurrikulën e shkollës] (%{cs_curriculum_url}). [Mësoni për t'u bërë një
+    partner rajonal.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Vendosni politika për të mbështetur CS
+  about_page_section_table_cell_6_2: "[Politikat e ndryshuara në 50 shtete të SHBA]
+    (%{states_url}) për të vendosur standardet e arsimit CS, për të bërë kurset CS
+    të llogariten në diplomimin e shkollës së mesme, etj. [(Detajet)] (%{details_url})"
+  about_page_section_table_cell_7_1: Shko globale
+  about_page_section_table_cell_7_2: Kurset tona janë në dispozicion në mbi 67 gjuhë,
+    të përdorura në 180+ vende.
+  about_page_section_table_under_label: 'Burimi: Aktiviteti Code Studio dhe [sondazhet
+    e edukatorëve pjesëmarrës] (%{educators_url})'
+  about_page_section_title_3: Më shumë informacion, histori dhe filozofi
+  about_page_section_more_description_1: 'Në vitin 2013, Code.org u lançua nga vëllezërit
+    binjakë [Hadi](%{hadi_url}) dhe [Ali Partovi] (%{partovi_url}) me një [video](%{video_url})
+    promovimin e shkencave kompjuterike. Kjo video u bë #1 në YouTube për një ditë
+    dhe 15,000 shkolla na kontaktuan për ndihmë. Që atëherë, ne jemi zgjeruar nga
+    një staf i vullnetarëve për të ndërtuar një organizatë të plotë që mbështet një
+    lëvizje në të gjithë botën. Ne besojmë se një arsim cilësor i shkencave kompjuterike
+    duhet të jetë në dispozicion për çdo fëmijë, jo vetëm pak me fat.'
+  about_page_section_more_description_2: 'Për të mbështetur qëllimin tonë, ne punojmë
+    në të gjithë spektrin e arsimit: hartimin e kurseve tona ose partneritet me të
+    tjerët, trajnimin e mësuesve, partneritet me rrethe të mëdha shkollore, ndihmë
+    në ndryshimin e politikave qeveritare, zgjerimin ndërkombëtarisht përmes partneriteteve
+    dhe marketingut për të thyer stereotipet.'
+  about_page_section_more_description_3: Puna jonë ndërtohet mbi [dekada përpjekjeje,
+    nga organizata dhe individë të panumërta] (%{efforts_url}) të cilët kanë ndihmuar
+    në krijimin, financimin dhe përhapjen e arsimit të shkencave kompjuterike. Ne
+    jemi mirënjohës që përfitojmë nga ndihma e palodhur e komunitetit më të gjerë
+    të arsimit të shkencave kompjuterike dhe [falënderojmë të gjithë partnerët dhe
+    individët që kanë mbështetur ndikimin tonë gjatë viteve] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Raporti Vjetor] (%{report_url})
+    (Raportet e kaluara: [2020] [2019](%{past_url_1}%{past_url_2}), (), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Vlerat tona thelbësore dhe udhëzimet e mesazheve]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Filozofia jonë e kurrikulës dhe pedagogjisë] (%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx biseda nga themeluesi ynë Hadi Partovi për
+    pse shkenca kompjuterike është për të gjithë (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Një qasje unifikuese në një botë të ndarë
+  about_page_section_specific_title_1: Një qasje unifikuese në një botë të ndarë
+  about_page_section_specific_title_2: Angazhimi ynë për qasje
+  about_page_section_specific_title_3: Angazhimi ynë për kurrikulën falas dhe teknologjinë
+    me burim të
+  about_page_section_specific_title_4: Koalicioni i avokimit të Code.org
+  about_page_section_specific_title_5: Korniza e Shkencave Kompjuterike K-
+  about_page_section_specific_title_6: Donatorët e Code.org
+  about_page_section_specific_title_7: Na ndiqni
+  about_page_section_specific_title_8: Arritja Ndërkombëtare e Code.org
+  about_page_section_specific_description_1: Roli global i Code.org në lëvizjen e
+    shkencave kompjuterike K-12 është i mundur vetëm sepse ne përdorim një qasje unifikuese
+    në të gjithë aktorët e ndryshme dhe shpesh të ndarë. Në një kohë të rritjes së
+    polarizimit, ideja e rritjes së mundësive për studentët bashkon njerëz nga e gjithë
+    spektri politik. Anëtarët e ekipit të Code.org, studentët, mësuesit dhe mbështetësit
+    kanë pikëpamje të ndryshme dhe të ndryshme dhe të gjithë janë të mirëpritur në
+    misionin tonë. [Lexo më shumë.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org beson se shkenca kompjuterike
+    është themelore për të gjithë studentët dhe ne jemi të angazhuar për barazi, qasje
+    dhe mundësi në organizatën tonë [values.](%{values_url}) Për të arritur këtë qëllim,
+    ne punojmë për të identifikuar dhe eliminuar pengesat që parandalojnë përfshirjen
+    dhe pjesëmarrjen e plotë të studentëve dhe edukatorëve me aftësi të kufizuara.
+    Për të mësuar më shumë rreth përpjekjeve tona, shihni [deklaratën tonë të aksesit.]
+    (%{accessibility_url})
+  about_page_section_specific_description_3: Të gjitha burimet e kurrikulës dhe udhëzimet
+    që ne autorojmë do të jenë përgjithmonë të lirë për t'u përdorur dhe të licencuar
+    hapur nën një licencë [Creative Commons] (%{commons_url}), duke lejuar të tjerët
+    të bëjnë burime edukimi derivat për qëllime jo-komerciale. Nëse jeni të interesuar
+    të licenconi materialet tona për qëllime komerciale, [na kontaktoni] (%{contact_us_url}).
+    Kurset tona janë përkthyer për përdorim në të gjithë botën ose nga folës të gjuhëve
+    të ndryshme. Teknologjia jonë është zhvilluar si një [projekt me burim të hapur%{open_source_url}.]
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
+    është një koalicion dypartiak i korporatave dhe organizatave jofitimprurëse që
+    punojnë së bashku për të ndihmuar në krijimin e politikave federale dhe shtetërore
+    të SHBA për të zgjeruar dhe mbështetur qasjen në shkencat kompjuterike K-12 dhe
+    për të zgjeruar pjesëmarrjen dhe diversitetin në këtë fushë. Ne sjellim së bashku
+    [liderët politikë republikanë dhe demokratë] (%{leaders_url}) në kauzë të përbashkët
+    që mbështesin zgjerimin e qasjes në dhe pjesëmarrjen në shkencat kompjuterike
+    K-12."
+  about_page_section_specific_description_5: Code.org është anëtar i komitetit drejtues
+    që ndihmoi në krijimin e [K-12 Computer Science Framework] (%{framework_url})
+    - një udhëzues i nivelit të lartë për shtetet, rrethet dhe organizatat që zbatojnë
+    arsimin e shkencave kompjuterike. Korniza ka fituar mbështetjen e qindra akademikëve,
+    edukatorëve K-12, kompanive softuerike, organizatave jofitimprurëse dhe shteteve.
+  about_page_section_specific_description_6: Code.org IRS formë 990 për [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), dhe [2021](%{irs_url_8}). [Politika
+    e dhurimit.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Regjistrohuni për të marrë përditësime
+    të statusit] (%{sign_up_url}) në lidhje me progresin në lëvizjen e shkencave kompjuterike
+    K-12 dhe për punën e Code.org. Ose ndiqni Code.org në mediat sociale:"
+  about_page_section_specific_description_8: Mbi 40% e trafikut të faqes sonë vjen
+    nga jashtë Shteteve të Bashkuara dhe ky numër vazhdon të rritet. Për të zgjeruar
+    qasjen globale në shkencat kompjuterike, ekipi ynë punon ngushtë me [më shumë
+    se 100 partnerë ndërkombëtarë] (%{partners_url}), duke i ndihmuar ata të promovojnë
+    Orën e Kodit, të avokojnë ndryshimin e politikave dhe trajnojnë mësuesit. Ne po
+    e bëjmë shkencën kompjuterike pjesë të diskursit ndërkombëtar të arsimit duke
+    bashkëpunuar me ministritë e arsimit nga e gjithë bota dhe duke punuar me organizata
+    ndërkombëtare si Organizata për Bashkëpunim Ekonomik dhe Zhvillim dhe Organizata
+    e Kombeve të Bashkuara për Arsim, Shkencor dhe Kulturë.
+  about_page_section_donors_description_1: Code.org® është një jofitimprurëse publike
+    e regjistruar 501c3, me mbështetje nga publiku i gjerë. Ne jemi mirënjohës për
+    mbështetjen bujare që kemi marrë nga [individët dhe organizatat] (%{individuals_url})
+    që mbështesin vizionin tonë.
+  about_page_section_donors_description_2: Arritjet e kodeve (më lart) tregojnë aftësinë
+    tonë për t'i shfrytëzuar ato dollarë në rezultate të forta. Por duke pasur parasysh
+    ambicien tonë jofitimprurëse që çdo fëmijë në çdo shkollë duhet të ketë qasje
+    në shkencat kompjuterike - për t'u bërë qytetarë të shkolluar në botën e sotme
+    dixhitale dhe për të testuar interesat e tyre në eksplorimin e CS më tej si një
+    karrierë - ne kemi një rrugë të gjatë për të përmbushur një qëllim mbledhje fonde
+    që do të mbështesë këtë vizion.
+  about_page_donors_link_1: Bëni donacione
+  about_page_donors_link_2: "[shihni listën tonë të donatorëve] (%{donors_url})"
   language_code:
     ar: arabisht
     az: Azerbajxhanisht

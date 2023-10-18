@@ -124,7 +124,7 @@ class HelpHeader
       # these protections because we use them. For example, the report abuse page uses the referrer attribute to know
       # which page the user probably wants to report.
       entry[:rel] = "noopener noreferrer nofollow" unless URI(entry[:url]).host.
-                                                            blank?
+        blank?
     end
     entries
   end

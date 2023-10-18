@@ -1,0 +1,23 @@
+- video_internet_index = 8
+- video_internet_id = ["what_is_internet", "cabel_wifi", "ip_dns", "packets_routing", "http_html", "encryption_key", "security_crime", "search_works"]
+- internet_video_caption = [hoc_s(:video_library_page_internet_work_video_title_1), hoc_s(:video_library_page_internet_work_video_title_5), hoc_s(:video_library_page_internet_work_video_title_2),
+hoc_s(:video_library_page_internet_work_video_title_6) , hoc_s(:video_library_page_internet_work_video_title_3), hoc_s(:video_library_page_internet_work_video_title_7), hoc_s(:video_library_page_internet_work_video_title_4), hoc_s(:video_library_page_internet_work_video_title_8)]
+- video_internet = ["Dxcc6ycZ73M", "ZhEf7e4kopM", "5o8CwafCxnU", "AYdF7b3nMto", "kBXQZMmiA4s", "ZghMPWGXexs", "AuYNXgO_f3Y", "LVV_93mBfSU"]
+
+.carousel-wrapper#internet_works_collection
+  .carousel.internet__works__collection
+    .slides
+      - video_internet_index.times do |index|
+        .slide
+          .video-wrapper.video-wrapper--one-col.flex-space-between
+            .video__container
+              = view :display_video_thumbnail, id: video_internet_id[index], video_code: video_internet[index], play_button: 'center', letterbox: 'false', caption: internet_video_caption[index]
+
+  .pagination
+    #internet_works_collection_pagination
+  .dd__buttons
+    %button.carousel__prev#prev_4
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_4
+      %img{src: "/images/carousel/next.svg", alt: "next"}

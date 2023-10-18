@@ -205,6 +205,19 @@ pl:
             które ujawniają etyczne pułapki w wybranym przez Ciebie obszarze sztucznej
             inteligencji (AI).
           title: Godzina kodowania - Etyka AI
+        ai-ethics-2023:
+          description: Lekcje te wprowadzają uczniów w kwestie etyczne dotyczące sztucznej
+            inteligencji. Uczniowie badają różne tematy i bieżące wydarzenia związane
+            z technologiami sztucznej inteligencji, a następnie proszeni są o refleksję
+            i zajęcie stanowiska na temat tego, jak uważają, że te technologie powinny
+            być wykorzystywane w społeczeństwie.
+          lessons:
+            lesson-1:
+              name: Godzina kodowania - Etyka AI
+            lesson-2:
+              name: Społeczne oddziaływanie generatywnej sztucznej inteligencji
+          name: ai-ethics-2023
+          title: Etyka AI
         ai-lab:
           name: ai-lab
           student_description: Skorzystaj z tych poziomów, aby poznać AI Lab i wykorzystać
@@ -349,6 +362,10 @@ pl:
               name: Muzyka
             lesson-50:
               name: Czat AI
+            lesson-51:
+              name: Rubryki AI
+            lesson-52:
+              name: Dance Lab2
           name: wszystkie rzeczy
           student_description: Wszystkie typy poziomów dla testowania UI
           title: Wszystkie te Rzeczy!
@@ -565,6 +582,7 @@ pl:
             podzielić się z innymi. Zalecany dla przedszkola i pierwszej klasy.
           description_audience: W wieku 4-6
           description_short: Kurs 1 jest przeznaczony dla początkujących.
+          name: course1
           student_description: Kurs 1 umożliwia początkującym tworzenie programów
             komputerowych, które pomogą im nauczyć się współpracować z innymi, rozwijać
             umiejętności rozwiązywania problemów i wytrwać przy rozwiązywaniu trudnych
@@ -581,6 +599,7 @@ pl:
           description_audience: Powyżej 6 lat (wymagana umiejętność czytania)
           description_short: Wprowadzenie do informatyki dla uczniów, którzy potrafią
             czytać.
+          name: course2
           student_description: Kurs 2 jest przeznaczony dla uczniów, którzy umieją
             czytać, ale nie mają doświadczenia w programowaniu. W tym kursie uczniowie
             będą tworzyć programy do rozwiązywania problemów oraz interaktywne gry
@@ -597,6 +616,7 @@ pl:
           description_audience: W wieku 8-18
           description_short: Zagłębiaj się w programowanie, tworząc gry i interaktywne
             historie. To jest kontynuacja Kursu 2.
+          name: course3
           student_description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli
             Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania wprowadzone
             w poprzednich kursach, aby tworzyć elastyczne rozwiązania dla bardziej
@@ -1906,6 +1926,13 @@ pl:
           title: Projekty CSA Profesjonalnego kodowania edukacyjnego
         csa-pl-test:
           name: csa-pl-test
+        csa-postap-se-and-computer-vision-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: GitHub i Copilot'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wizja komputerowa'
+          title: Inżynieria oprogramowania i wizja komputerowa
         csa-preview:
           name: csa-preview
           title: Przegląd programu i narzędzi CSA
@@ -2126,6 +2153,8 @@ pl:
               name: To słowo kluczowe
             lesson-15:
               name: Jednostka 2 Ankieta
+            lesson-16:
+              name: 'Piaskownica: Konsola'
             lesson-2:
               name: Konstruktory bez argumentów
             lesson-3:
@@ -2207,6 +2236,10 @@ pl:
               name: Dane dla projektu dobra społecznego [wersja 1-dniowa]
             lesson-14:
               name: Jednstka 3 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Modyfikowanie elementów
             lesson-3:
@@ -2291,6 +2324,10 @@ pl:
               name: Instrukcje wielokrotnego wyboru
             lesson-15:
               name: Jednostka 4 Ankieta
+            lesson-16:
+              name: 'Piaskownica: Konsola'
+            lesson-18:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Projekt abstrakcyjnych danych sztuki
             lesson-3:
@@ -2379,6 +2416,10 @@ pl:
               name: Osobisty projekt narracyjny [Wersja 1-dniowa]
             lesson-14:
               name: Jednostka 5 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Elementy tablicy 2D
             lesson-3:
@@ -2462,6 +2503,10 @@ pl:
               name: Projekt przetwarzania języka naturalnego [wersja 1-dniowa]
             lesson-14:
               name: Jednostka 6 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Łańcuchy częściowe
             lesson-3:
@@ -2544,6 +2589,10 @@ pl:
               name: Jednostka 7 Ankieta
             lesson-14:
               name: Kreatywne kodowanie z projektem teatralnym [wersja 1-dniowa]
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Odniesienia do obiektów jako parametry
             lesson-3:
@@ -2633,6 +2682,10 @@ pl:
               name: Jednostka 8 Sprawdzian
             lesson-13:
               name: Kreatywne kodowanie w programie Console Project [wersja 1-dniowa]
+            lesson-14:
+              name: 'Piaskownica: Konsola'
+            lesson-16:
+              name: 'Piaskownica: Teatr'
             lesson-2:
               name: Wyszukiwanie
             lesson-3:
@@ -2730,6 +2783,11 @@ pl:
               display_name: Przegląd i praktyka
             lessonGroup-3:
               display_name: Egzaminy próbne
+          lessons:
+            lesson-1:
+              name: 'Piaskownica: Konsola'
+            lesson-3:
+              name: 'Piaskownica: Teatr'
           name: csa9-2023
           student_description: Ta jednostka przygotowuje Ciebie do egzaminu AP CSA
             poprzez przegląd kluczowych pojęć, ćwiczenie pytań wielokrotnego wyboru
@@ -2790,6 +2848,8 @@ pl:
             lesson-4:
               name: Zaprojektuj okładkę swojej interaktywnej książki
           name: csc-bookcovers-2023
+        csc-ecosystems:
+          name: csc-ecosystems
         csc-ecosystems-2022:
           name: csc-ecosystems-2022
         csc-ecosystems-2023:
@@ -2923,6 +2983,8 @@ pl:
               name: Badanie pulsu do klonowania
             lesson-12:
               name: Plac zabaw AI
+            lesson-13:
+              name: Plac zabaw Gen AI Blocks
             lesson-7:
               name: Wprowadzenie do Duszków
             lesson-9:
@@ -3764,6 +3826,7 @@ pl:
               display_name: Treści
             cspSurvey:
               display_name: Treści
+          name: csd3-virtual
           student_description: Będziesz programować animacje, sztukę interaktywną
             i gry w Game Lab.Zacznij od prostych kształtów i buduj bardziej wyszukane
             animacje i gry oparte na duszku, używając tych samych koncepcji programowania
@@ -6908,6 +6971,15 @@ pl:
           title: 2021 Zasady informatyki Omówienie głębszego uczenia
         dlp21-overview:
           name: dlp21-overview
+        draft-hoc-dp:
+          name: draft-hoc-dp
+          title: Potańcówka (szkic)
+        draft-hoc-dp-2:
+          lessons:
+            lesson-1:
+              name: Godzina Kodowania (Szkic 2)
+          name: draft-hoc-dp-2
+          title: Potańcówka (Szkic 2)
         drafting:
           name: redakcja
           title: Aktualizacje wersji roboczej CSP 2023-24
@@ -7642,6 +7714,13 @@ pl:
           student_description: Samouczki z nauczycielem do opracowania w  Game Lab.  Te
             samouczki wychodzą poza zakres koncepcji ujętych w CSD.
           title: Laboratorium Gier (Game Lab)
+        genai-temp:
+          description: Jednostka tymczasowa do pracy z generatywną AI
+          lessons:
+            lesson-1:
+              name: Tymczasowa lekcja dla Ali
+          name: genai-temp
+          title: "[Temp] Generatywna AI"
         glj-behavior-test:
           title: Gra Lab Jr. Test - Zachowanie
         grade1:
@@ -7879,6 +7958,8 @@ pl:
               name: Pomysły FM
             lesson-4:
               name: Maszyny funkcyjne w Artyście
+            lesson-5:
+              name: AI 3-5
           name: katies-playground
           title: Miejsce Katie do robienia rzeczy
         kodea-pd-2021:
@@ -7898,7 +7979,7 @@ pl:
           description_short: Odkrywaj świat Minecraft poprzez kodowanie.
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę
             w świecie gry Minecraft.
-          title: Godzina Kodowania z Minecraft
+          title: Poszukiwacz przygód z Minecraftem
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -7919,9 +8000,9 @@ pl:
             do wprowadzenia informatyki z urzdzeniami fizycznymi i sposobu myślenia
             „twórcy”. Możesz także uczyć tych treści za pomocą urządzeń **circuit
             plac zabaw**, przypisując jednostkę [Tworzenie aplikacji z urządzeniami
-            (Circuit Playground) unit](/s/devices-2022). Obie jednostki uczą tych
-            samych treści i są równoważne - nie trzeba kupować obu zestawów urządzeń
-            ani uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:**
+            (Circuit Playground) unit](/s/devices). Obie jednostki uczą tych samych
+            treści i są równoważne - nie trzeba kupować obu zestawów urządzeń ani
+            uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:**
             Jednostka ta uwypukla interakcje między wejściami i wyjściami na ekranie
             micro:bita i aplikacji. Na swoich mikro:bitach uczniowie uczą się kontrolować
             wejścia, takie jak przyciski i wyjścia, takie jak ekran LED. Wchodzą również
@@ -9189,6 +9270,114 @@ pl:
               display_name: Treści
             csd3_2:
               display_name: 'Rozdział 2: Budowanie gier'
+        virtual-pl-csa-summer-2024-day1:
+          name: virtual-pl-csa-summer-2024-day1
+          title: Dzień 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day1
+          title: Dzień 1
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day2
+          title: Dzień 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day3
+          title: Dzień 3
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day4
+          title: Dzień 4
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Część asychroniczna 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Część asychroniczna 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day5
+          title: 'Dzień 5 '
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -9374,6 +9563,31 @@ pl:
             lesson-9:
               name: Przygotowanie na rok
           name: virtual-pl-csd-letni-dzień5
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Synchroniczna Część 2
+            lessonGroup-4:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csp-summer-day1
+          title: Dzień 1
+        virtual-pl-csp-summer-day1-2024:
+          name: virtual-pl-csp-summer-day1-2024
+        virtual-pl-csp-summer-day2:
+          name: virtual-pl-csp-summer-day2
+          title: Dzień 2
+        virtual-pl-csp-summer-day3:
+          name: virtual-pl-csp-summer-day3
+          title: Dzień 3
+        virtual-pl-csp-summer-day4:
+          name: virtual-pl-csp-summer-day4
+          title: Dzień 4
+        virtual-pl-csp-summer-day5:
+          name: virtual-pl-csp-summer-day5
         virustest:
           description_short: 'Użyj Sprite Lab, aby utworzyć symulację epidemii wirusa. '
           lesson_groups:
@@ -9469,12 +9683,20 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 3 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Lekcja modelu'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m3
           title: Moduł 3
         vpl-csd-2023-m4:
           lessons:
             lesson-2:
               name: Moduł CSD 4 Synchroniczny
+            lesson-5:
+              name: 'Sesja synchroniczna 4: Badanie programu nauczania'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m4
           title: Moduł 4
         vpl-csd-2023-m5:

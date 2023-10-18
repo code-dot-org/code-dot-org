@@ -5,36 +5,40 @@ hi:
   language: अंग्रेजी
   front_title: इतिहास में सबसे बडे शिक्षण कार्यक्रम से जुड़ें, %{campaign_date}
   coming_soon: जल्दी आ रहा है
-  campaign_date_start_short: दिसम्बर 5
-  campaign_date_start_long: दिसम्बर 5
-  campaign_date_short: दिसम्बर 5-11
-  campaign_date_full: दिसम्बर 5-11
-  campaign_date_year: '2022'
-  campaign_date_full_year: दिसंबर 5-11, 2022
+  campaign_date_start_short: दिसम्बर 4
+  campaign_date_start_long: दिसम्बर 4
+  campaign_date_short: दिसम्बर 4-10
+  campaign_date_full: दिसम्बर 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: दिसंबर 4-10 2023
   nonus_campaign_date_start_short: 1 अक्टूबर
   nonus_campaign_date_start_long: 1 अक्टूबर
   nonus_campaign_date_short: 1 अक्टूबर - 18 दिसंबर
   nonus_campaign_date_full: 1 अक्टूबर - 18 दिसंबर
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 अक्टूबर 2022 - 18 दिसंबर 2022
   latam_campaign_date_start_short: 1 अक्टूबर
   latam_campaign_date_start_long: 1 अक्टूबर
   latam_campaign_date_short: 1 अक्टूबर - 18 दिसंबर
   latam_campaign_date_full: 1 अक्टूबर - 18 दिसंबर
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 अक्टूबर 2022 - 18 दिसंबर 2022
   europe_campaign_date_start_short: 1 अक्टूबर
   europe_campaign_date_start_long: 1 अक्टूबर
   europe_campaign_date_short: 1 अक्टूबर - 18 दिसंबर
   europe_campaign_date_full: 1 अक्टूबर - 18 दिसंबर
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 अक्टूबर 2022 - 18 दिसंबर 2022
   africa_campaign_date_start_short: 1 अक्टूबर
   africa_campaign_date_start_long: 1 अक्टूबर
   africa_campaign_date_short: 1 अक्टूबर - 18 दिसंबर
   africa_campaign_date_full: 1 अक्टूबर - 18 दिसंबर
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 अक्टूबर 2022 - 18 दिसंबर 2022
+  hoc2023_header: एआई के साथ रचनात्मकता
+  hoc2023_social_creativity_with_ai_title: ऑवर ऑफ़ कोड - आप क्या बनाएंगे?
+  hoc2023_social_creativity_with_ai_desc: AI के बारे में जानने और जानने के लिए कंप्यूटर
+    विज्ञान का उपयोग करें!
   hoc2022_header: खोज करें, खेलें, बनाएं!
   social_hoc2022_explore_play_create: खोज करने, खेलने और बनाने के लिए कंप्यूटर विज्ञान
     का उपयोग करें!
@@ -184,6 +188,32 @@ hi:
     करिकुलम कैटलॉग और फिर से डिज़ाइन किया गया टीच पेज आपको यह सब खोजने में मदद करने
     के लिए!
   in_partnership_with: के साथ साझेदारी में
+  shop_code_dot_org_heading: शॉप कोड. ओआरजी
+  shop_code_dot_org_desc: हमारे काम का समर्थन करें और गर्व के साथ आंदोलन को पहनें।
+    हमारी टोपियां राष्ट्रपति ओबामा और मशहूर हस्तियों ने भी पहनी हैं।
+  spread_the_word_heading: इस का प्रचार करें
+  spread_the_word_desc: Code.org को अपने नेटवर्क के साथ शेयर करके हमारे प्रभाव को
+    बढ़ाएं। सोशल मीडिया से लेकर ईमेल अपडेट तक, जानें कि आप अधिक शिक्षकों, छात्रों और
+    अधिवक्ताओं तक पहुंचने में हमारी मदद कैसे कर सकते हैं।
+  follow_us_heading: हमें सोशल मीडिया पर फॉलो करें
+  follow_us_desc: सोशल मीडिया पर हमारे साथ अपडेट रहें और सूचित रहने और जागरूकता बढ़ाने
+    में मदद करने के लिए हमारे पोस्ट को अपने नेटवर्क के साथ साझा करें।
+  facebook: Facebook
+  twitter: चहचहाना
+  linked_in: लिंक्डइन
+  instagram: इंस्टाग्राम
+  tik_tok: टिकटोक
+  device_tablet: टैब्लेट
+  device_laptop: लैपटॉप
+  device_desktop_computer: डेस्कटॉप कंप्यूटर
+  device_mobile_device: मोबाइल डिवाइस
+  subscribe_to_emails_heading: ईमेल की सदस्यता लें
+  subscribe_to_emails_desc: हमारी मेलिंग सूची के माध्यम से तिमाही अपडेट के माध्यम
+    से Code.org पर और कंप्यूटर विज्ञान शिक्षा में क्या हो रहा है, इसके बारे में पढ़ें।
+  subscribe_to_emails_intl: अंतर्राष्ट्रीय अपडेट के लिए सब्सक्राइब करें
+  promote_code_dot_org_heading: Code.org का प्रचार करें
+  promote_code_dot_org_desc: आँकड़ों, उद्धरणों और वीडियो की सहायता से अपने क्षेत्र
+    में कंप्यूटर विज्ञान को बढ़ावा दें।
   afe_partnership_logo_alt: अमेज़न फ्यूचर इंजीनियर लोगो
   afe_partnership_thanks_desc: Amazon Future Engineer एक व्यापक बचपन से कैरियर कार्यक्रम
     है, जो कम आय वाले और अन्य वंचित बच्चों और युवाओं को कंप्यूटर विज्ञान में करियर
@@ -193,18 +223,59 @@ hi:
   grade_level_label_elementary: एलीमेंट्री स्कूल
   grade_level_label_middle: मिडिल स्कूल
   grade_level_label_high: हाई स्कूल
+  curricula_title_elementary: एलीमेंट्री स्कूल करिकुला
+  curricula_desc_elementary: मजेदार, मुफ्त पाठ्यक्रम और गतिविधियाँ ब्राउज़ करें, जो
+    आपको अपने प्राथमिक विद्यालय के छात्रों के साथ कंप्यूटर विज्ञान का पता लगाने के
+    लिए आमंत्रित करती हैं।
+  curricula_title_middle: मिडिल स्कूल करिकुला
+  curricula_desc_middle: आकर्षक पेशकशों को ब्राउज़ करें, जो आपको और आपके मिडिल स्कूल
+    के छात्रों को एक साथ कंप्यूटर विज्ञान का पता लगाने में सक्षम बनाती हैं।
+  curricula_title_high: हाई स्कूल करिकुला
+  curricula_desc_high: आकर्षक पाठ्यक्रमों और गतिविधियों को ब्राउज़ करें जो आपको और
+    आपके हाई स्कूल के छात्रों को कंप्यूटर विज्ञान में गहराई से जाने के लिए आमंत्रित
+    करते हैं।
+  for_administrators_heading: व्यवस्थापकों के लिए
+  for_administrators_desc: उन हजारों स्कूलों में शामिल हों, जिन्होंने पहले ही कंप्यूटर
+    विज्ञान को अपने पाठ्यक्रम में शामिल कर लिया है।
+  for_parents_heading: माता पिता के लिए
+  for_parents_desc: आप कंप्यूटर विज्ञान की शिक्षा प्रदान करने या उसका विस्तार करने
+    के लिए अपने छात्र के स्कूल को प्रोत्साहित करने में मदद कर सकते हैं।
+  for_educators_heading: शिक्षकों के लिए
+  for_educators_desc: आज ही पढ़ाना शुरू करें — कोई कंप्यूटर विज्ञान अनुभव आवश्यक नहीं
+    है — हमारी पेशेवर शिक्षण कार्यशालाओं के साथ।
   students_label: छात्र
   teachers_label: शिक्षक
+  educators_label: शिक्षक
+  companies_label: कंपनियां
+  districts_label: ज़िले
+  school_assemblies_label: स्कूल असेंबली
+  parents_label: माता-पिता
+  public_officials_label: सार्वजनिक अधिकारी
+  volunteers_label: स्वयंसेवक
+  virtual_events_label: वर्चुअल इवेंट्स
   teacher_label_csf: सीएस फंडामेंटल्स टीचर
   teacher_label_csd: CS खोज शिक्षक
   teacher_label_csp: सीएस प्रिंसिपल्स टीचर
   teacher_label_csc: सीएस कनेक्शंस टीचर
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: टीचर फोरम
+  teacher_forum_desc: अन्य शिक्षकों से सलाह, अंतर्दृष्टि और सहायता प्राप्त करने के
+    लिए ऑवर ऑफ कोड टीचर फोरम पर जाएं।
   required_materials: 'आवश्यक सामग्री:'
   optional_materials: 'वैकल्पिक सामग्री:'
+  call_to_action_hold_an_event: इवेंट आयोजित करें
+  call_to_action_register_event: अपना ईवेंट रजिस्टर करें
+  call_to_action_select_activity: कोई गतिविधि चुनें
+  call_to_action_start_activity: कोई गतिविधि शुरू करें
+  call_to_action_get_certificates: प्रमाणपत्र प्राप्त करें
+  call_to_action_go_beyond_hoc: ऑवर ऑफ़ कोड के पार जाएं
+  call_to_action_view_promo_resources: प्रोमो संसाधन देखें
   call_to_action_learn_more: अधिक जानें
   call_to_action_watch_now: अभी देखें
   call_to_action_try_activity: गतिविधि का प्रयास करें
+  call_to_action_try_activities: गतिविधियों का प्रयास करें
+  call_to_action_explore_activities: गतिविधियों का अन्वेषण करें
+  call_to_action_explore_ai: AI का अन्वेषण करें
   call_to_action_explore_unit: यूनिट एक्सप्लोर करें
   call_to_action_explore_curriculum: पाठ्यक्रम का अन्वेषण करें
   call_to_action_explore_curriculum_options: पाठ्यचर्या के विकल्पों का अन्वेषण करें
@@ -219,6 +290,15 @@ hi:
   call_to_action_explore_choice_level: उदाहरण पसंद के स्तर का अन्वेषण करें
   call_to_action_explore_collection: कलेक्शन एक्सप्लोर करें
   call_to_action_explore_unplugged_lesson: अनप्लग्ड पाठ खोजें
+  call_to_action_explore_csf: सीएस फंडामेंटल्स का अन्वेषण करें
+  call_to_action_explore_csd: CS खोजों को एक्सप्लोर करें
+  call_to_action_explore_csp: CS सिद्धांतों का अन्वेषण करें
+  call_to_action_explore_csc: CS कनेक्शन एक्सप्लोर करें
+  call_to_action_explore_csa: AP® कंप्यूटर साइंस A का अन्वेषण करें
+  call_to_action_explore_csa_short: AP® CSA का अन्वेषण करें
+  call_to_action_explore_maker: मेकर करिकुला एक्सप्लोर करें
+  call_to_action_explore_hoc: ऑवर ऑफ़ कोड ट्यूटोरियल एक्सप्लोर करें
+  call_to_action_explore_hoc_short: ऑवर ऑफ़ कोड एक्सप्लोर करें
   call_to_action_try_app_lab: App Lab आज़माएं
   call_to_action_view_lesson_plan: पाठ योजना देखें
   call_to_action_self_paced_pl: सेल्फ-पेस्ड प्रोफेशनल लर्निंग शुरू करें
@@ -242,11 +322,13 @@ hi:
   call_to_action_resources_tools: प्रोग्रामिंग टूल आज़माएं
   call_to_action_sign_up_free: मुफ्त में साइन अप करें
   call_to_action_explore_ai_resources: AI संसाधनों का अन्वेषण करें
+  call_to_action_explore_ai_curricula: AI पाठ्यक्रम का अन्वेषण करें
   call_to_action_explore_curriculum_catalog: पाठ्यचर्या सूची का अन्वेषण करें
   call_to_action_see_full_curriculum_catalog: संपूर्ण पाठ्यचर्या सूची देखें
   call_to_action_find_self_paced_modules: स्व-गति वाले मॉड्यूल खोजें
   call_to_action_join_teacher_forums: शिक्षक मंचों से जुड़ें
   call_to_action_explore_teacher_forums: शिक्षक फ़ोरम देखें
+  call_to_action_explore_teacher_forum: शिक्षक फोरम एक्सप्लोर करें
   call_to_action_explore_career_resources: कैरियर संसाधनों का अन्वेषण करें
   call_to_action_watch_videos: वीडियोज़ देखें
   call_to_action_download_posters: पोस्टर डाउनलोड करें
@@ -261,6 +343,35 @@ hi:
   call_to_action_learn_about_approach: हमारे दृष्टिकोण के बारे में और जानें
   call_to_action_try_java_lab: जावा लैब का प्रयास करें
   call_to_action_notify_available: उपलब्ध होने पर मुझे सूचित करें
+  call_to_action_register_early_access: जल्दी पहुंचने के लिए रजिस्टर करें
+  call_to_action_open_positions: ओपन पोजीशन देखें
+  call_to_action_explore_roles: खुली भूमिकाओं के बारे में जानें
+  call_to_action_get_guide: गाइड प्राप्त करें
+  call_to_action_donate_to_cdo: Code.org को दान करें
+  call_to_action_start_fundraiser: फ़ंडरेज़र शुरू करें
+  call_to_action_view_donation_policy: दान नीति देखें
+  call_to_action_view_donate_bitpay: BitPay के साथ दान करें
+  call_to_action_make_a_donation: दान करें
+  call_to_action_other_ways_to_give: देने के अन्य तरीके
+  call_to_action_become_partner_usa: यूनाइटेड स्टेट्स पार्टनर बनें
+  call_to_action_become_partner_intl: अंतर्राष्ट्रीय भागीदार बनें
+  call_to_action_become_a_volunteer: एक स्वयंसेवक बनें
+  call_to_action_start_translating: अनुवाद करना शुरू करें
+  call_to_action_learn_about_advocacy: हमारी वकालत के बारे में जानें
+  call_to_action_visit_store: स्टोर पर जाएं
+  call_to_action_view_faqs: और अक्सर पूछे जाने वाले प्रश्न देखें
+  aria_label_call_to_action_hoc_how_to_educators: शिक्षकों के लिए हाउ-टू गाइड देखें
+  aria_label_call_to_action_hoc_how_to_companies: कंपनियों के लिए हाउ-टू गाइड देखें
+  aria_label_call_to_action_hoc_how_to_districts: जिलों के लिए हाउ-टू गाइड देखें
+  aria_label_call_to_action_hoc_how_to_school_assemblies: स्कूल असेंबली के लिए हाउ-टू
+    गाइड देखें
+  aria_label_call_to_action_hoc_how_to_parents: माता-पिता के लिए हाउ-टू गाइड देखें
+  aria_label_call_to_action_hoc_how_to_public_officials: सार्वजनिक अधिकारियों के लिए
+    हाउ-टू गाइड देखें
+  aria_label_call_to_action_hoc_how_to_volunteers: स्वयंसेवकों के लिए हाउ-टू गाइड
+    देखें
+  aria_label_call_to_action_hoc_how_to_virtual_events: वर्चुअल इवेंट्स के लिए हाउ-टू
+    गाइड देखें
   aria_label_call_to_action_afe: Amazon फ्यूचर इंजीनियर के बारे में और जानें
   aria_label_call_to_action_teaching_csf: टीचिंग कंप्यूटर साइंस फंडामेंटल्स प्रोफेशनल
     लर्निंग प्रोग्राम शुरू करें
@@ -368,8 +479,11 @@ hi:
   curriculum_name_csp: कंप्यूटर विज्ञान के सिद्धांत
   curriculum_name_csc: कंप्यूटर विज्ञान कनेक्शन
   curriculum_name_csa: कंप्यूटर विज्ञान A
+  curriculum_name_csa_ai: सॉफ्टवेयर इंजीनियरिंग और कंप्यूटर विज़न
   curriculum_name_csc_02: कोई भी CS कनेक्शन मॉड्यूल
   curriculum_name_ai: "  कृत्रिम बुद्धि और मशीन प्रशिक्षण  "
+  curriculum_name_artificial_intelligence: आर्टिफिशियल इंटेलिजेंस (AI)
+  curriculum_name_maker: निर्माता
   curriculum_name_maker_cp: डिवाइस के साथ ऐप्स बनाना (सर्किट प्लेग्राउंड)
   curriculum_name_maker_microbit: डिवाइस के साथ ऐप्स बनाना (micro:bit)
   curriculum_name_creating_apps_with_devices: डिवाइस के साथ ऐप्स बनाना
@@ -380,6 +494,8 @@ hi:
   curriculum_name_interactive_animations_games: इंटरैक्टिव एनिमेशन और गेम्स
   curriculum_name_design_process: डिजाइन प्रक्रिया
   curriculum_name_data_society: डेटा और सोसायटी
+  curriculum_desc_csf: प्राथमिक पाठ्यक्रम का मुफ्त सेट जो छात्रों को कंप्यूटर विज्ञान
+    की मूलभूत अवधारणाओं से परिचित कराता है।
   curriculum_desc_csf_express: कंप्यूटर प्रोग्राम बनाना सीखें, समस्या-समाधान कौशल
     विकसित करें, और मज़ेदार चुनौतियों के माध्यम से काम करें! दोस्तों, परिवार और शिक्षकों
     के साथ साझा करने के लिए गेम और रचनात्मक प्रोजेक्ट बनाएं।
@@ -425,6 +541,25 @@ hi:
     का अन्वेषण करें। ऐसे प्रोग्राम विकसित करें जो हार्डवेयर इनपुट और आउटपुट का उपयोग
     करते हैं। माइक्रो:बिट और सर्किट प्लेग्राउंड दोनों के लिए इस यूनिट का एक संस्करण
     है।
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) के लिए इस निःशुल्क पाठ्यक्रम
+    में जावा प्रोग्रामिंग भाषा सीखने के दौरान छात्रों को सॉफ़्टवेयर इंजीनियरिंग और
+    ऑब्जेक्ट-ओरिएंटेड डिज़ाइन से परिचित कराएं।
+  curriculum_desc_maker: निर्माता शिक्षा समस्या समाधान और आलोचनात्मक सोच सिखाने में
+    मदद करने के लिए कक्षा में व्यावहारिक अनुभव और सहयोग को आमंत्रित करके एसटीईएम (विज्ञान,
+    प्रौद्योगिकी, इंजीनियरिंग, गणित) को एक कदम आगे ले जाती है।
+  curriculum_desc_maker_short: निर्माता शिक्षा समस्या समाधान और आलोचनात्मक सोच सिखाने
+    में मदद करने के लिए कक्षा में व्यावहारिक अनुभव और सहयोग को आमंत्रित करती है।
+  curriculum_desc_csd: लचीला पाठ्यक्रम, जिससे प्रत्येक यूनिट को अकेले या संयुक्त रूप
+    से पढ़ाया जा सकता है। छात्रों को वेबसाइट, ऐप, एनिमेशन, गेम और भौतिक कंप्यूटिंग
+    सिस्टम बनाने से परिचित कराता है।
+  curriculum_desc_csp: 'नि: शुल्क, AP® CSP समर्थित, हाई स्कूल परिचयात्मक पाठ्यक्रम
+    जो छात्रों को कंप्यूटर विज्ञान की मूलभूत अवधारणाओं से परिचित कराता है।'
+  curriculum_desc_csa_ai_long: 'यह दो-अध्याय पोस्ट-एपी सीएसए मॉड्यूल हाई स्कूल के
+    छात्रों को GitHub और GitHub Copilot सहित पेशेवर सॉफ़्टवेयर डेवलपमेंट टूल के साथ
+    व्यावहारिक अनुभव प्रदान करता है, और उन्हें कंप्यूटर विज़न प्रोग्राम विकसित करने
+    के लिए वास्तविक दुनिया के कौशल प्रदान करता है। '
+  curriculum_desc_csa_ai_short: यह पोस्ट-AP® CSA मॉड्यूल हाई स्कूल के छात्रों को पेशेवर
+    सॉफ़्टवेयर डेवलपमेंट टूल के साथ व्यावहारिक अनुभव प्रदान करता है।
   collection_hardware: हार्डवेयर पर ध्यान दें
   collection_hardware_desc: समस्याओं को हल करने के लिए छात्रों को डेटा और भौतिक उपकरणों
     का उपयोग करने का अधिकार देता है।
@@ -457,6 +592,7 @@ hi:
   module_label_professional_learning: 'प्रोफेशनल लर्निंग:'
   module_label_languages: 'समर्थित भाषाएँ:'
   module_label_accessibility_features: 'सुलभता:'
+  module_label_accessibility_features_full: 'एक्सेसिबिलिटी फीचर्स:'
   module_label_educator_tool: शिक्षक उपकरण
   module_label_educator_course: एजुकेटर कोर्स
   module_label_student_tool: स्टूडेंट टूल
@@ -464,6 +600,7 @@ hi:
   module_label_student_content_resources: सामग्री और संसाधन
   module_label_new: नया
   module_label_coming_soon: जल्द आ रहा है
+  module_label_available_now: अभी उपलब्ध
   module_label_video_series: वीडियो श्रृंखला
   module_label_self_paced: सेल्फ-पेस्ड मॉड्यूल
   module_ages_5_10: 5-10
@@ -474,6 +611,8 @@ hi:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -488,11 +627,14 @@ hi:
   module_grade_9_12_teachers: 9-12 शिक्षक
   module_level_beginner: नौसिखिया
   module_level_intermediate: मध्यवर्ती
+  module_level_advanced: उन्नत
   module_duration_45_mins: 45 मिनट
+  module_duration_2_weeks: 2 सप्ताह
   module_duration_1_hr: 1 घंटा
   module_duration_2_hrs: 2 घंटे
   module_duration_3_hrs: 3 घंटे
   module_duration_5_hrs: 5 घंटे
+  module_duration_5_hrs_plus: 5+ घंटे
   module_duration_8_hrs: 8 घंटे
   module_duration_20_hrs: 20 घंटे
   module_duration_35_hrs: 35 घंटे
@@ -504,6 +646,7 @@ hi:
   module_duration_school_year: स्कूल वर्ष
   module_duration_month_quarter: महीना या तिमाही
   module_duration_month_semester_year: महीना, सेमेस्टर या वर्ष
+  module_duration_varies: भिन्न होता है
   module_prerequisites_none: कुछ भी नहीं
   module_prerequisites_maker_cp: सर्किट प्लेग्राउंड तक पहुंच
   module_prerequisites_maker_microbit: माइक्रो:बिट तक पहुंच
@@ -569,6 +712,10 @@ hi:
   heading_java_lab: जावा लैब
   heading_objects_first: ऑब्जेक्ट्स पहले
   heading_these_lessons_will: 'ये सबक होंगे:'
+  heading_explore_curriculum_catalog: पाठ्यचर्या सूची में हमारे सभी पाठ्यक्रमों का
+    अन्वेषण करें
+  heading_csa_ai: AP® परीक्षा के बाद करने के लिए चीज़ों की तलाश है?
+  heading_bring_cs_to_students: छात्रों के लिए कंप्यूटर विज्ञान लाओ
   professional_learning_section_desc: पढ़ाने की तैयारी के दौरान आपको जो सहायता चाहिए
     वह प्राप्त करें। शिक्षक इसे पसंद करते हैं, 90% से अधिक इसे अब तक का सबसे अच्छा
     व्यावसायिक विकास मानते हैं!
@@ -601,6 +748,23 @@ hi:
   support_and_questions_section_desc: Code.org के साथ शिक्षण शुरू करने के बारे में
     आपके किसी भी प्रश्न का उत्तर देने के लिए हमारी सहायता टीम यहां मौजूद है। आप हमारे
     शिक्षक मंचों पर अन्य शिक्षकों से उनके अनुभव के बारे में भी पूछ सकते हैं।
+  subscribe_form_section_title: अपडेट के लिए सब्सक्राइब करें
+  subscribe_form_section_desc_csa: Code.org के AP® Computer Science A के बारे में
+    मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे गए उपयोगी
+    रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_desc_csc: Code.org के कंप्यूटर साइंस कनेक्शन के बारे में
+    मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे गए उपयोगी
+    रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_desc_csd: Code.org की कंप्यूटर साइंस डिस्कवरी के बारे में
+    मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे गए उपयोगी
+    रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_desc_csf: Code.org के कंप्यूटर साइंस फंडामेंटल्स के बारे
+    में मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे
+    गए उपयोगी रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_desc_csp: Code.org के कंप्यूटर विज्ञान सिद्धांतों के बारे
+    में मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे
+    गए उपयोगी रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_unsubscribe: आप किसी भी समय सदस्यता समाप्त कर सकते हैं।
   blockchain_hero_heading: ब्लॉकचैन कैसे काम करता है
   blockchain_hero_desc: हमारी नई वीडियो श्रृंखला और उससे जुड़े सबक “हाउ ब्लॉकचैन वर्क्स”
     के साथ ब्लॉकचैन की दुनिया में गोता लगाएँ!
@@ -704,6 +868,9 @@ hi:
     पाठ को श्रृंखला के एक वीडियो के साथ जोड़ा जाता है, जो वीडियो में पेश की गई अवधारणाओं
     के बारे में गहराई से बताता है।
   ai_curriculum_btn_aria_label_04: AI के काम करने के तरीके के बारे में जानें
+  ai_curriculum_grades_05: 'ग्रेड स्तर: 9-12'
+  ai_curriculum_btn_aria_label_05: सॉफ़्टवेयर इंजीनियरिंग और कंप्यूटर विज़न मॉड्यूल
+    का अन्वेषण करें
   ai_carousel_heading: 'Code.org के साथ AI के बारे में शिक्षक क्या कहते हैं:'
   ai_carousel_quote_01: इस पाठ ने मेरे छात्रों को यह देखने का अवसर भी दिया कि वर्गीकरण
     प्रणालियों में राय का एक तत्व है। बाद में, जब हमने यह देखना शुरू किया कि एआई में
@@ -822,10 +989,19 @@ hi:
     व्यावहारिक उदाहरणों और संसाधनों के समृद्ध मिश्रण के साथ, इसका उद्देश्य शिक्षकों
     को एआई परिदृश्य को नेविगेट करने और छात्रों के सीखने के अनुभवों को बढ़ाने के लिए
     सशक्त बनाना है।
+  ai_pl_101_resources_5: AI के लिए एक जिम्मेदार दृष्टिकोण सुनिश्चित करने के लिए मार्गदर्शिका
   ai_pl_101_video_desc_6: 'AI में बड़े बदलावों को चलाने वाली नई तकनीक के बारे में
     और जानें, जिसमें लार्ज लैंग्वेज मॉडल (जैसे ChatGPT) और Generative AI पर दो नए
     वीडियो शामिल हैं। सुनें कि ये नई तकनीकें सीधे विशेषज्ञों से कैसे काम करती हैं:
     मीरा मुराती, ओपनएआई की सीटीओ, और रनवेएमएल के सीईओ क्रिस्टोबल वालेंज़ुएला।'
+  ai_pl_101_llm_slides_title: शिक्षकों के लिए लार्ज लैंग्वेज मॉडल प्रॉम्प्ट
+  ai_pl_101_llm_slides_desc: शुरुआत से लेकर एडवांस तक, ChatGPT जैसे LLM से सर्वोत्तम
+    संभव आउटपुट प्राप्त करने के लिए टूल। इसमें उन लोगों के लिए स्टार्टर प्रॉम्प्ट
+    शामिल हैं जो बस अपने पैर की उंगलियों को डुबो रहे हैं, साथ ही उन लोगों के लिए एडवांस
+    टूल भी शामिल हैं जो अपनी क्षमता को अधिकतम करना चाहते हैं।
+  ai_pl_101_resources_3: स्टूडेंट लर्निंग को बदलने के लिए AI प्रॉम्प्ट्स
+  ai_pl_101_resources_section_title: AI के बारे में जानने के और तरीके
+  ai_pl_101_resources_guide: 'साथी गाइड:'
   how_ai_works_hero_heading: AI कैसे काम करता है
   how_ai_works_hero_desc: "“How AI Works”, हमारी वीडियो श्रृंखला और उससे जुड़े पाठों
     के साथ AI की दुनिया में गोता लगाएँ!"
@@ -1159,18 +1335,18 @@ hi:
   teach_page_free_curriculum_desc: हम चाहते हैं कि आप लागत की चिंता किए बिना अपने
     स्कूल में कंप्यूटर विज्ञान की शुरुआत करें। इसलिए हम अपने पाठ्यक्रम को सदैव निःशुल्क
     रखने का वादा करते हैं!
-  teach_page_free_curriculum_list_heading_01: सभी ग्रेड स्तरों के लिए एक आकर्षक पाठ्यक्रम
   teach_page_free_curriculum_list_desc_01: मुफ़्त, लचीला और मज़ेदार पाठ्यक्रम 67 से
     अधिक भाषाओं में उपलब्ध है।
-  teach_page_free_curriculum_list_heading_02: अनुकूलनीय और नवीन पाठ्यक्रम
   teach_page_free_curriculum_list_desc_02: Code.org साल भर के पाठ्यक्रम से लेकर एकल-इकाई
     गतिविधियों तक सब कुछ प्रदान करता है। हम नए पाठ्यक्रम तैयार करने के लिए हर साल
     अपने पाठ्यक्रम को अपडेट करते हैं जो सर्वोत्तम प्रथाओं और फोकस क्षेत्रों का समर्थन
     करते हैं और वर्तमान में मांग वाले विषयों को पढ़ाते हैं।
-  teach_page_free_curriculum_list_heading_03: राष्ट्रीय मानकों के अनुरूप संरचित पाठ्यक्रम
   teach_page_free_curriculum_list_desc_03: प्रत्येक पाठ्यक्रम CSTA, अगली पीढ़ी के
     विज्ञान मानकों और कॉमन कोर सहित राष्ट्रीय मानकों के कम से कम एक सेट को मैप करता
     है।
+  teach_page_free_curriculum_list_desc_04: 67 से अधिक भाषाओं में ऑफ़र
+  teach_page_free_curriculum_list_desc_05: राष्ट्रीय मानकों के कम से कम एक सेट (CSTA,
+    NGSS और कॉमन कोर सहित) के लिए मैप किया गया
   teach_page_free_curriculum_heading_02: ग्रेड स्तर द्वारा प्रस्तावित पाठ्यक्रम पर
     एक नज़र डालें।
   teach_page_resources_heading: हर कदम पर आपका समर्थन करने के लिए संसाधन
@@ -1231,8 +1407,8 @@ hi:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: ऐप लैब
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: फैसिलिटेटर के नेतृत्व वाली कार्यशालाएं,
+    सेल्फ-पेस्ड मॉड्यूल
   csp_page_curriculum_glance_professional_languages: अंग्रेजी
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1359,8 +1535,8 @@ hi:
     कंप्यूटिंग, ऐप डिज़ाइन, गेम्स एंड एनिमेशन, आर्ट एंड डिज़ाइन, प्रोग्रामिंग
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: ऐप लैब, गेम लैब, एआई लैब, वेब लैब
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: फैसिलिटेटर के नेतृत्व वाली कार्यशालाएं,
+    सेल्फ-पेस्ड मॉड्यूल
   csd_page_curriculum_glance_professional_languages: अंग्रेजी
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1379,11 +1555,11 @@ hi:
   csd_page_courses_collections_desc: किसी विशिष्ट विषय पर केंद्रित इकाइयों के एक समूह
     के साथ एक क्षेत्र में गहराई से गोता लगाएँ।
   csd_page_faq_question_01: क्या सीएस डिस्कवरीज को मानकों के अनुसार मैप किया गया है?
-  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
-    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
-    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
-    [A summary of standards mappings can be found here](%{mappings_url}). A Google
-    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_answer_01: CS डिस्कवरीज को कंप्यूटर विज्ञान के लिए K-12 फ्रेमवर्क और
+    मार्गदर्शन के रूप में 2017 CSTA मानकों दोनों का उपयोग करके लिखा गया था। वर्तमान
+    में, CS डिस्कवरीज के प्रत्येक पाठ में प्रासंगिक 2017 CSTA मानकों के लिए मैपिंग
+    शामिल है। [मानक मैपिंग का सारांश यहां पाया जा सकता है] ().%{mappings_url}मानकों
+    का Google Sheets संस्करण [CSD मानक] () पर पाया जा सकता है.%{csd_standards_url}
   csd_page_faq_question_02: इस कोर्स के लिए मुझे व्यावसायिक विकास कैसे/कहां मिल सकता
     है?
   csd_page_faq_answer_02: हमारा प्रोफेशनल लर्निंग प्रोग्राम साल भर सहायता प्रदान करता
@@ -1427,10 +1603,10 @@ hi:
     दें कि पेनीज़ को उसी आकार के किसी अन्य प्रकार के वजन से बदला जा सकता है)। यदि
     आपके पास इन आपूर्ति तक पहुंच नहीं है, तो वैकल्पिक गतिविधियाँ उपलब्ध हैं।
   csd_page_faq_answer_04_06: डिवाइस के साथ ऐप्स बनाना (विकल्प A और विकल्प B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'विकल्प A: सर्किट प्लेग्राउंड का क्लासरूम सेट। अधिक जानकारी
+    के लिए [code.org/maker/circuitplayground] () देखें.%{url}'
+  csd_page_faq_answer_04_08: 'विकल्प B: माइक्रो:बिट डिवाइस का क्लासरूम सेट। अधिक जानकारी
+    के लिए [code.org/maker/microbit] () देखें.%{url}'
   csd_page_faq_answer_04_09: निर्माता की आपूर्ति, जैसे खाली टिशू बॉक्स या कार्डबोर्ड
     रोल या स्क्रैच पेपर
   csd_page_faq_answer_04_10: "*नोट: क्रिएटिंग एप्स विद डिवाइसेस यूनिट में दो कार्यान्वयन
@@ -1508,8 +1684,8 @@ hi:
     एंड डिज़ाइन, ऐप डिज़ाइन
   csf_page_curriculum_glance_devices: लैपटॉप, क्रोमबुक, टैबलेट
   csf_page_curriculum_glance_tools: स्प्राइट लैब, प्ले लैब
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: फैसिलिटेटर के नेतृत्व वाली कार्यशालाएं,
+    सेल्फ-पेस्ड मॉड्यूल
   csf_page_curriculum_glance_languages: अरबी भाषा, इंडोनेशियाई, कैटलन, चीनी सरलीकृत,
     चीनी पारंपरिक, चेक, फ्रेंच, जर्मन, हिंदी, इतालवी, जापानी, कोरियाई, कन्नड़, मलय,
     मराठी, मंगोलियन, पोलिश, पुर्तगाली-बीआर, रोमानियाई, रूसी, स्लोवाक, तागालोग, तमिल,
@@ -1565,10 +1741,10 @@ hi:
     लिए स्थानीय शिक्षकों से जुड़ें। हमारे क्षेत्रीय साझेदार व्यक्तिगत शिक्षकों के
     लिए या स्कूल भर में पीडी के लिए उच्च गुणवत्ता वाली, एक दिवसीय Code.org कार्यशालाएं
     प्रदान करते हैं। [अपने आस-पास एक पेशेवर विकास कार्यशाला के लिए साइन अप करें] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: हमारी कार्यशालाओं में भाग लेने वाले 100,000 से अधिक शिक्षकों
+    से जुड़ें। हमारी कार्यशाला में उपस्थित अधिकांश लोग कहते हैं, 'यह अब तक का सबसे
+    अच्छा व्यावसायिक विकास है जिसमें मैंने भाग लिया है. ' असल में, [90% उपस्थित लोग
+    अन्य शिक्षकों को हमारे कार्यक्रम की सिफारिश करेंगे] ()!%{rec_url}
   csf_page_faq_question_05: सीएस फंडामेंटल्स को पढ़ाने के लिए अनुशंसित समय क्या है?
   csf_page_faq_answer_05: प्रत्येक CSF कोर्स में 45-मिनट की अवधि के लिए डिज़ाइन किए
     गए 13-17 पाठ शामिल हैं। हम सभी छात्रों को शिक्षक द्वारा निर्धारित गति से पाठ से
@@ -1577,9 +1753,10 @@ hi:
     द्वारा अपनी गति से पूरे किए जा सकते हैं।
   csf_page_faq_question_06: सीएस फंडामेंटल्स के लिए मुझे किन सामग्रियों की आवश्यकता
     होगी?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: कई पाठों में ऐसे हैंडआउट्स होते हैं जो गतिविधियों के माध्यम
+    से छात्रों का मार्गदर्शन करते हैं। इन संसाधनों को डिजिटल रूप से प्रिंट या असाइन
+    किया जा सकता है। कुछ पाठों में कक्षा की विशिष्ट आपूर्ति और जोड़-तोड़ की आवश्यकता
+    होती है। [अधिक जानने के लिए CSF सिलेबस पर जाएं] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1650,6 +1827,64 @@ hi:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: हमारे मिशन को पूरा करने में मदद करें
+  donate_page_top_desc: हर दान कंप्यूटर विज्ञान शिक्षा तक पहुंच बढ़ाने के लिए Code.org
+    के मिशन को बढ़ावा देता है। हम आपको दान करने और बदलाव लाने के कई तरीके प्रदान करते
+    हैं।
+  donate_page_fundraise_title: Code.org के लिए फ़ंडरेज़
+  donate_page_fundraise_desc: Code.org के लिए पैसे जुटाने में मदद करें! हर स्कूल के
+    हर छात्र को कंप्यूटर साइंस सीखने का अवसर मिलना चाहिए।
+  donate_page_other_ways_title: देने के अन्य तरीके
+  donate_page_other_ways_desc: योगदान करने के लिए विविध तरीकों का पता लगाएं, और वह
+    विकल्प खोजें जो आपके लिए सबसे उपयुक्त हो। हर इशारा, बड़ा या छोटा, हमारे मिशन को
+    आगे ले जाता है।
+  donate_page_501c3: Code.org सार्वजनिक 501 (c) (3) गैर-लाभकारी संगठन के रूप में पंजीकृत
+    है। Code.org में किए गए योगदान कानून द्वारा अनुमत सीमा तक कर-कटौती योग्य हैं।
+    Code.org की कर पहचान संख्या 46-0858543 है।
+  donate_page_donation_policy_title: हमारी दान नीति को समझना
+  donate_page_donation_policy_desc: इस बारे में जानें कि हम आपके योगदानों को कैसे
+    संभालते हैं और उन्हें आवंटित करते हैं।
+  donate_tabs_tab_label_daf_direct: डीएएफ डायरेक्ट
+  donate_tabs_tab_label_amazon: अमेज़न
+  donate_tabs_tab_label_bitpay: बिटपे
+  donate_tabs_tab_label_employee_match: कर्मचारी मैच
+  donate_tabs_daf_direct_title: DAF डायरेक्ट के माध्यम से दान करें
+  donate_tabs_daf_direct_desc: Fidelity Charitable, Schwab Charitable, या BNY Mellon
+    के साथ अपने दाता-सलाह वाले फंड के माध्यम से दान करें और DAF Direct ऑनलाइन फ़ॉर्म
+    के माध्यम से Code.org को अपनी अनुदान अनुशंसा करें।
+  donate_tabs_amazon_title: Amazon के जरिए दान करें
+  donate_tabs_amazon_desc: अपने Amazon अकाउंट का उपयोग करके सीधे दान करें। बस कुछ
+    ही क्लिक के साथ, Code.org के मिशन में निर्बाध रूप से योगदान दें और कंप्यूटर विज्ञान
+    शिक्षा के भविष्य को सशक्त बनाएं।
+  donate_tabs_bitpay_title: BitPay के माध्यम से क्रिप्टो के साथ दान करें
+  donate_tabs_bitpay_desc: क्रिप्टोकुरेंसी के साथ देने के भविष्य को गले लगाओ। BitPay
+    के माध्यम से, आपकी डिजिटल मुद्रा कंप्यूटर विज्ञान शिक्षा के विस्तार में Code.org
+    के प्रयासों का सीधे समर्थन कर सकती है।
+  help_page_top_heading: आप कैसे मदद कर सकते हैं
+  help_page_top_desc: कंप्यूटर विज्ञान को हर बच्चे के लिए, हर जगह सुलभ बनाने के हमारे
+    मिशन का समर्थन करें। आपके प्रयास हमें भावी नवोन्मेषकों को प्रेरित करने और तकनीकी
+    शिक्षा की खाई को पाटने में मदद करते हैं।
+  help_page_top_subhead: Code.org को दान दें
+  help_page_top_desc_02: हम हर छात्र को कंप्यूटर विज्ञान सीखने का अवसर देने के लिए
+    काम कर रहे हैं — दोनों ऑनलाइन और स्कूलों में, जहां हम स्थायी पाठ्यक्रम स्थापित
+    करते हैं और शिक्षकों को प्रशिक्षित करते हैं। आपके द्वारा दान किए जाने वाले प्रत्येक
+    डॉलर के लिए, एक बच्चे को कंप्यूटर विज्ञान से परिचित कराया जाता है।
+  help_page_partners_heading: पार्टनर बनें
+  help_page_partners_desc: Code.org कंप्यूटर विज्ञान को स्थानीय, टिकाऊ तरीके से फैलाने
+    में मदद करने के लिए भागीदार के रूप में अन्य गैर-लाभकारी संगठनों के साथ काम करता
+    है। हमारे प्रोग्राम के बारे में और जानें।
+  help_page_volunteer_heading: कक्षा में स्वयंसेवक
+  help_page_volunteer_desc: ऑवर ऑफ कोड सिखाने के लिए स्वयंसेवा करें या स्थानीय कक्षा
+    में अतिथि वक्ता बनें। अपने आस-पास के अवसरों के बारे में जानने के लिए साइन अप करें।
+  help_page_translate_heading: अनुवाद करने में हमारी मदद करें
+  help_page_translate_desc: स्वयंसेवकों ने 45 से अधिक भाषाओं में हमारे ट्यूटोरियल
+    का अनुवाद किया है। दुनिया भर के छात्रों के लिए हमारे ट्यूटोरियल का विस्तार जारी
+    रखने में हमारी मदद करें!
+  help_page_speak_for_cs_heading: कंप्यूटर विज्ञान की शिक्षा के लिए बोलें
+  help_page_speak_for_cs_desc: पूरे अमेरिका में Code.org के समर्थन कार्य और उन दस
+    नीतियों के बारे में और जानें जिन्हें हम सभी छात्रों के लिए कंप्यूटर विज्ञान को
+    आधारभूत बनाने के लिए राज्यों को अपनाने की सलाह देते हैं। साथ ही, पता करें कि आप
+    अपने राज्य में बदलाव कैसे ला सकते हैं।
   hoc_live: ऑवर ऑफ़ कोड लाइव
   hoc_live_sign_up_title: ऑवर ऑफ़ कोड लाइव के लिए साइन अप करें
   hoc_live_learn_title: ऑवर ऑफ़ कोड लाइव के साथ सीखें
@@ -2075,6 +2310,11 @@ hi:
     कंप्यूटर विज्ञान समाचारों के अपडेट के बारे में ईमेल कर सकते हैं?
   signup_email_preference_privacy: "(हमारी गोपनीयता नीति देखें)"
   signup_email_preference_yes: हाँ
+  signup_email_preference_yes_elementary: हां - मुझे प्राथमिक स्कूल संसाधनों पर अपडेट
+    भेजें
+  signup_email_preference_yes_middle: हां - मुझे मिडिल स्कूल संसाधनों पर अपडेट भेजें
+  signup_email_preference_yes_high: हां - मुझे हाई स्कूल संसाधनों पर अपडेट भेजें
+  signup_email_preference_yes_general: हां - मुझे सामान्य अपडेट भेजें
   signup_email_preference_no: नहीं
   signup_email_preference_error: ईमेल वरीयता आवश्यक है।
   signup_multiple_event_warning: जब आप रजिस्टर करेंगे तो हम आपके स्कूल का नाम और शहर
@@ -5538,11 +5778,11 @@ hi:
     से एक साहसिक कार्य पर ले जाने के लिए कोड के ब्लॉक का उपयोग करें।
   tutorial_minecraft-2016_longdescription: एक माइनक्राफ्ट गेम बनाएं। चिकन, भेड़, क्रीपर्स,
     ज़ॉम्बी और बहुत कुछ के अपने संस्करण बनाएं।
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;एस्टे सेगमेंटो
+    एसेंस&ntilde;ए लॉस एस्टुडिएंटेस ला कोनेक्सी&oacute;एन एंट्रे एस&iacute;म्बोलोस
+    वाई एक्सियोनेस अस&iacute; कोमो ला वालिओसा हैबिलिडाड डे डेपुरासी&oacute;एन।
   tutorial_pixie_longdescription: पिक्सी के साथ ऑवर ऑफ़ कोड ट्यूटोरियल
   tutorial_play_longdescription: Play Lab के साथ एक कहानी बनाएं या गेम बनाएं! जानवरों,
     समुद्री लुटेरों, ज़ॉम्बीज़, निन्जा और कई अन्य पात्रों को हिलाने, आवाज़ें बनाने,
@@ -12667,12 +12907,12 @@ hi:
   tutorial_googlename _longdescription: एक नाम चुनें और कोड का उपयोग करके शब्द के
     अक्षरों को जीवंत करें। एक उपनाम, एक पालतू जानवर का नाम, एक जानवर, एक खेल, एक जगह
     या एक शौक चुनें।
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: ज़िला शहर फल-फूल रहा है, और संगीत हवा में
+    है। अफवाह यह है कि, प्रसिद्ध गार्गेंटुआ बॉट ऑनलाइन है और ब्लॉक दर ब्लॉक शहर को
+    कूड़ेदान करने के लिए आखिरी टॉक्सिबॉट्स भेज रहा है।…अपने कोबोट होवरबोर्ड को पकड़ें
+    और जो आपने शुरू किया था उसे पूरा करने के लिए तैयार हो जाएं! खिलाड़ी अपने कोबोट
+    होवरबॉट्स को लेन बदलने, बाधाओं से बचने और इस रिदम-स्टाइल गेम में कई टॉक्सिबॉट्स
+    को बाहर निकालने के लिए प्रोग्राम करते हैं।
   tutorial_nasachspacejam_longdescription: एक ऐसा सौर मंडल बनाएं जो वास्तव में हिलता
     हो! इस स्व-निर्देशित गतिविधि में संगीत, खगोल विज्ञान और कोडिंग के बारे में जानें
     (कोई कोडिंग अनुभव आवश्यक नहीं है)। संगीत बनाने के लिए ग्रहों को प्रोग्राम करें,
@@ -13296,6 +13536,130 @@ hi:
   all: सभी
   dont_know: मुझे पता नहीं
   language_label: भाषा
+  before_hoc: आवर ऑफ़ कोड से पहले
+  day_of_hoc: डे ऑफ़ ऑवर ऑफ़ कोड
+  after_hoc: आफ्टर ऑवर ऑफ़ कोड
+  step_01: चरण 1
+  step_02: चरण 2
+  step_03: चरण 3
+  step_04: चरण 4
+  step_05: चरण 5
+  step_06: चरण 6
+  step_07: चरण 7
+  step_08: चरण 8
+  hoc_how_to_top_heading: ऑवर ऑफ़ कोड के लिए आपकी मार्गदर्शिका
+  hoc_how_to_top_desc: ऑवर ऑफ़ कोड अनुभव के लिए अनुकूलित हाउ-टू गाइड।
+  hoc_how_to_top_view_guide: के लिए मार्गदर्शिका देखें
+  hoc_how_to_nav_main_aria_label: एक गाइड चुनें
+  hoc_how_to_nav_sidebar_aria_label: साइडबार नेविगेशन
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: ऑवर ऑफ कोड कंप्यूटर विज्ञान का एक घंटे का परिचय
+    है, जिसमें मजेदार ट्यूटोरियल का उपयोग करके यह दिखाया जाता है कि कोई भी मूल बातें
+    सीख सकता है। इस साल, हम आर्टिफिशियल इंटेलिजेंस (AI) और गैर-AI दोनों घटकों को शामिल
+    करने वाले कोडिंग अवसरों की पेशकश करके ऑवर ऑफ़ कोड को नई ऊंचाइयों पर ले जा रहे हैं।
+    चाहे आप या आपके छात्र अनुभवी कोडर हों या आप सभी अपने पहले कंप्यूटर विज्ञान अभियान
+    पर निकल रहे हों, यह ऑवर ऑफ़ कोड एक असाधारण यात्रा का वादा करता है।
+  hoc_how_to_faq_question_prerequisites: ऑवर ऑफ़ कोड करने के लिए आवश्यक शर्तें क्या
+    हैं?
+  hoc_how_to_faq_answer_prerequisites: ऑवर ऑफ़ कोड चलाना आसान है — यहां तक कि शुरुआती
+    लोगों के लिए भी। छात्रों को कुछ नया खोजने, बनाने और सीखने के लिए प्रेरित करने
+    के लिए आपको कंप्यूटर विज्ञान या शिक्षण में अनुभव की आवश्यकता नहीं है।
+  hoc_how_to_faq_question_devices: ऑवर ऑफ़ कोड चलाने के लिए मुझे किन उपकरणों की आवश्यकता
+    होगी?
+  hoc_how_to_faq_answer_devices_01: 'वे उपकरण जिनका आप उपयोग कर सकते हैं:'
+  hoc_how_to_faq_answer_devices_02: यदि डिवाइस सीमित या अनुपलब्ध हैं, तो बिना किसी
+    डिवाइस के सीखने के लिए [पेयर प्रोग्रामिंग] (%{pair_url}) आज़माएं या हमारी [अनप्लग्ड
+    गतिविधियों] (%{unplugged_url}) को एक्सप्लोर करें!
+  hoc_how_to_faq_question_volunteer: वालंटियर कौन कर सकता है?
+  hoc_how_to_faq_answer_volunteer: कंप्यूटर विज्ञान शिक्षा और तकनीक में बढ़ती विविधता
+    के बारे में भावुक कोई भी व्यक्ति स्वयंसेवक हो सकता है! हम सभी पृष्ठभूमियों के
+    स्वयंसेवकों को इसमें भाग लेते देखना पसंद करेंगे। ऑवर ऑफ़ कोड में सभी उम्र और कौशल
+    स्तरों के लिए कई तरह की गतिविधियाँ शामिल हैं, इसलिए आपको स्वयंसेवा करने के लिए
+    प्रोग्रामिंग विशेषज्ञ होने की आवश्यकता नहीं है!
+  hoc_how_to_faq_question_full_hour: क्या ऑवर ऑफ़ कोड में पूरा एक घंटा लगेगा?
+  hoc_how_to_faq_answer_full_hour: कई छात्र एक घंटे से भी कम समय में अपनी गतिविधियों
+    को पूरा करने में सक्षम होंगे, और यह ठीक है! छात्र सीखना जारी रख सकते हैं जबकि
+    अन्य छात्र अपनी गतिविधि पूरी कर लेते हैं।
+  hoc_how_to_faq_question_account: क्या छात्रों को अकाउंट का उपयोग करने के लिए लॉग
+    इन करना होगा?
+  hoc_how_to_faq_answer_account: ऑवर ऑफ़ कोड आज़माने के लिए छात्रों के लिए किसी साइनअप
+    या लॉगिन की आवश्यकता नहीं है। ऑवर ऑफ़ कोड के लिए साइन अप करने से स्वचालित रूप से
+    Code.org अकाउंट नहीं बनता है।
+  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_promo_heading: प्रचार के संसाधन
+  hoc_how_to_resources_promo_desc: अपने ऑवर ऑफ़ कोड पर ध्यान आकर्षित करने के लिए अपनी
+    ज़रूरत के सभी संसाधनों का पता लगाएं—प्रिंट और डिजिटल—।
+  hoc_how_to_resources_discover_heading: डिस्कवर गतिविधियां
+  hoc_how_to_resources_discover_desc: 45 से अधिक भाषाओं में सभी उम्र के लिए डिज़ाइन
+    किए गए एक घंटे के ट्यूटोरियल के विस्तृत चयन का अन्वेषण करें।
+  hoc_how_to_step_label_plan: योजना बनाएं कि आप अपना ऑवर ऑफ़ कोड कहाँ और कब करेंगे
+  hoc_how_to_step_label_choose_activity: अपनी गतिविधि चुनें
+  hoc_how_to_step_label_test_activity: अपनी गतिविधि का परीक्षण करें
+  hoc_how_to_step_label_register_event: अपना ईवेंट रजिस्टर करें
+  hoc_how_to_step_label_tell: अपने छात्रों, स्कूल और समुदाय को बताएं
+  hoc_how_to_step_label_get_coding: कोडिंग प्राप्त करें!
+  hoc_how_to_step_label_celebrate: जश्न मनाएं
+  hoc_how_to_step_label_beyond_hoc: बियॉन्ड ऑवर ऑफ़ कोड
+  hoc_how_to_step_beyond_hoc_subhead: यह यहीं खत्म नहीं होता है!
+  hoc_how_to_step_beyond_hoc_desc: कंप्यूटर विज्ञान को ऑवर ऑफ कोड के साथ समाप्त नहीं
+    होना चाहिए! जबकि 90% माता-पिता चाहते हैं कि उनका बच्चा कंप्यूटर विज्ञान सीखे,
+    फिर भी अधिकांश स्कूल इसे नहीं पढ़ाते हैं। आज ही CS को अपने बच्चे के स्कूल में
+    लाना सीखें।
+  hoc_how_to_step_01_educators_subhead: एक ईवेंट समय और स्थान चुनें जो आपके पास उपलब्ध
+    छात्रों और उपकरणों की संख्या के लिए काम करता है।
+  hoc_how_to_step_01_educators_desc_01: ऑवर ऑफ़ कोड करने के लिए आपके लिए कौन-कौन से
+    स्थान उपलब्ध हैं? अपने स्पेस की तकनीकी क्षमताओं और उन डिवाइसों पर विचार करें,
+    जिन पर आप अपने छात्रों से काम करने की उम्मीद करते हैं। छात्र एक डिवाइस पर ट्यूटोरियल
+    पर काम कर सकते हैं, एक साझा डिवाइस का उपयोग करके बारी-बारी से काम कर सकते हैं
+    या कक्षा के व्हाइटबोर्ड पर एक साथ ट्यूटोरियल आज़मा सकते हैं। यहां तक कि अनप्लग्ड
+    ट्यूटोरियल भी हैं जिन्हें बिना किसी डिवाइस के पूरा किया जा सकता है। अनप्लग्ड विकल्प
+    कहीं भी किए जा सकते हैं—यहाँ तक कि बाहर भी!
+  hoc_how_to_step_01_educators_desc_02: दुनिया भर के लोग सीएस एजुकेशन वीक के दौरान
+    ऑवर ऑफ कोड उत्सव में शामिल होते हैं, %{campaign_date} जब नवीनतम ट्यूटोरियल और
+    गतिविधियां जारी की जाती हैं। लेकिन आप साल के किसी भी दिन ऑवर ऑफ़ कोड कर सकते हैं!
+  hoc_how_to_step_02_educators_desc_01: अपने समूह की आयु, अनुभव, रुचियों आदि के आधार
+    पर गतिविधियों का अन्वेषण करें। छात्रों के लिए स्व-नेतृत्व वाले ट्यूटोरियल आज़माना
+    लोकप्रिय है, हालांकि कई गतिविधियों में शिक्षकों द्वारा चर्चा का मार्गदर्शन करने
+    या गतिविधि को आगे बढ़ाने के लिए पाठ योजनाएँ भी शामिल हैं।
+  hoc_how_to_step_02_educators_desc_02: समय से पहले तय करें कि क्या आप अपने सभी छात्रों
+    के लिए एक ही ट्यूटोरियल चुनना चाहते हैं, या प्रत्येक बच्चे को अपना खुद का ट्यूटोरियल
+    चुनने दें।
+  hoc_how_to_step_02_educators_desc_03: इस वर्ष, आप और आपके छात्र ट्यूटोरियल, पाठ
+    योजनाओं और हमारी नई How AI Works वीडियो श्रृंखला के माध्यम से [AI के बारे में
+    सब कुछ सीख सकते हैं] (%ai_url)।
+  hoc_how_to_step_03_educators_desc_01: कक्षा में आने से पहले ट्यूटोरियल को स्वयं
+    आज़माएं ताकि आप सवालों के जवाब दे सकें!
+  hoc_how_to_step_03_educators_desc_02: आप छात्र कंप्यूटर या डिवाइस पर ट्यूटोरियल
+    का परीक्षण भी कर सकते हैं ताकि यह सुनिश्चित हो सके कि वे ध्वनि और वीडियो का समर्थन
+    करते हैं। क्या आपकी बैंडविड्थ कम है? कक्षा के सामने वीडियो दिखाने की योजना बनाएं,
+    ताकि प्रत्येक छात्र अपने स्वयं के वीडियो डाउनलोड न कर सके।
+  hoc_how_to_step_03_educators_desc_03: अपनी कक्षा के लिए हेडफ़ोन उपलब्ध कराने पर
+    विचार करें, या छात्रों से अपना खुद का हेडफ़ोन लाने के लिए कहें, अगर आपके द्वारा
+    चुना गया ट्यूटोरियल ध्वनि के साथ सबसे अच्छा काम करता है।
+  hoc_how_to_step_04_educators_desc_01: जब आप अपना ऑवर ऑफ़ कोड इवेंट रजिस्टर करते हैं,
+    तो आपको एक सफल ऑवर ऑफ़ कोड होस्ट करने के लिए समाचार और सुझावों के साथ उपयोगी ईमेल
+    प्राप्त होंगे। यह भी बताया गया है कि आप स्थानीय स्वयंसेवकों को कैसे बता सकते हैं
+    कि आपका स्कूल भाग ले रहा है। स्वयंसेवक एक बेहतरीन संसाधन हैं और कंप्यूटर विज्ञान
+    के बारे में आपकी कक्षा में बात कर सकते हैं या ऑवर ऑफ़ कोड गतिविधियों में आपके छात्रों
+    की मदद कर सकते हैं।
+  hoc_how_to_step_05_educators_desc_01: अपने छात्रों को [प्रेरणादायक वीडियो] (%{videos_url})
+    साझा करके इस कार्यक्रम के लिए उत्साहित करें, जिसमें विविध लोगों और रचनात्मक तरीकों
+    को उजागर किया गया है, जिनसे कंप्यूटर विज्ञान का वास्तविक दुनिया में उपयोग किया
+    जा सकता है।
+  hoc_how_to_step_05_educators_desc_02: अपने ऑवर ऑफ़ कोड प्लान को अन्य शिक्षकों के
+    साथ साझा करें, जो मौज-मस्ती में शामिल होना चाहते हैं! यह आपके स्कूल के पेरेंट
+    टीचर स्टूडेंट एसोसिएशन से संपर्क करने या पैरेंट न्यूज़लेटर्स में साझा करने का
+    भी एक शानदार अवसर है, जिससे उन्हें पता चलता है कि उनके बच्चे क्या सीख रहे हैं।
+  hoc_how_to_step_06_educators_desc_01: अपने छात्रों को गतिविधि के लिए निर्देशित करें,
+    शायद बोर्ड पर लिंक साझा करके या अपनी कक्षा की शिक्षण प्रबंधन प्रणाली के माध्यम
+    से। आपके छात्रों को चुनौतियों का सामना करना पड़ सकता है—यह ठीक है! प्रोग्राम करना
+    सीखना एक नई भाषा सीखने जैसा है; आप तुरंत पारंगत नहीं होंगे। अगर आपको इसका उत्तर
+    नहीं पता है, तो आप इसे एक साथ समझ सकते हैं।
+  hoc_how_to_step_07_educators_desc_01: 'सफलता का जश्न मनाना सुनिश्चित करें! अपने
+    ऑवर ऑफ़ कोड इवेंट की फ़ोटो और वीडियो सोशल मीडिया पर शेयर करें। #HourOfCode और @codeorg
+    का उपयोग करें ताकि हम आपकी सफलता को भी उजागर कर सकें!'
+  hoc_how_to_step_07_educators_desc_02: आप अपने छात्रों की उपलब्धि दिखाने के लिए प्रमाणपत्र
+    भी प्रिंट कर सकते हैं!
   team_page_full_team_alt_text: नीली और पीली टी-शर्ट से मेल खाने वाले लगभग 100 Code.org
     कर्मचारी कंपनी के समर 2022 कोडेचेला कार्यक्रम के लिए एक होटल के सम्मेलन कक्ष में
     पोज देते हैं।
@@ -13389,6 +13753,612 @@ hi:
     प्रिंसिपल्स पाठ्यक्रम का रूपांतरण, जो एक साक्ष्य-आधारित भाषा है जिसे मूल रूप से
     नेत्रहीन या दृष्टिबाधित छात्रों के लिए सुलभता प्रदान करने के लिए डिज़ाइन किया
     गया है।
+  engineering_hero_heading: हमारी इंजीनियरिंग टीम में शामिल हों!
+  engineering_hero_desc: जैसे-जैसे हम अपनी इंजीनियरिंग टीम का विस्तार करना जारी रखते
+    हैं, हम Code.org पर अपने इंजीनियरिंग संगठन और यहां काम करने के कुछ अनोखे पहलुओं
+    के बारे में और जानकारी साझा करना चाहते थे। यदि आप हमारी किसी भूमिका के लिए आवेदन
+    करने में रुचि रखते हैं, तो हमें आपसे सुनना अच्छा लगेगा!
+  engineering_team_title: Code.org पर इंजीनियरिंग टीम से मिलें
+  engineering_team_card_text_1: यह (अधिकांश) हम 2023 की गर्मियों के दौरान व्यक्तिगत
+    रूप से एक साथ मिलते हैं! यह भीड़ हमारी इंजीनियरिंग टीम की चार उप-टीमों में विभाजित
+    है, जो हमारे सभी छात्रों और शिक्षकों के लिए मंच बनाने और उनकी सेवा करने के लिए
+    मिलकर काम करती हैं।
+  engineering_team_card_text_2: यदि आप हमारी किसी भूमिका के लिए आवेदन करने में रुचि
+    रखते हैं, तो हमें आपसे सुनना अच्छा लगेगा! आप हमारे करियर पेज पर ओपन पोजीशन की
+    सूची पा सकते हैं।
+  engineering_our_team_title: हमारी इंजीनियरिंग टीम
+  engineering_our_team_desc: 'Code.org की इंजीनियरिंग टीम को चार उप-टीमों में विभाजित
+    किया गया है जो हमारे प्लेटफ़ॉर्म के विभिन्न क्षेत्रों का निर्माण और समर्थन करती
+    हैं:'
+  engineering_our_team_sub_title_1: स्टूडेंट लर्निंग टीम
+  engineering_our_team_text_1: हमारी स्टूडेंट लर्निंग टीम हमारी सभी गतिविधियों (हम
+    उन्हें लैब कहते हैं) का मालिक है, जिनका उपयोग हमारे छात्र हर दिन करते हैं। यह
+    टीम ज्यादातर फ्रंट-एंड तकनीक पर काम करती है (हम रिएक्ट और बहुत सारे कस्टम जेएस
+    का उपयोग करते हैं) और हमारे कई भागीदारों और ओपन सोर्स प्रोजेक्ट्स के साथ अच्छे
+    कामकाजी संबंध हैं। उदाहरण के लिए, हम अपनी सभी ब्लॉक-आधारित प्रोग्रामिंग के लिए
+    [Google's Blockly] (%{youtube_url}) का उपयोग करते हैं। हम बालवाड़ी से 12 वीं कक्षा
+    तक के छात्रों की सीखने की यात्रा में उनकी सहायता करते हैं।
+  engineering_our_team_sub_title_2: टीचर एक्सपीरियंस टीम
+  engineering_our_team_text_2: हमारी शिक्षक अनुभव टीम उन उपकरणों का निर्माण करती है
+    जो नए शिक्षकों को Code.org की ओर आकर्षित करते हैं (हम इन अधिग्रहण उत्पादों को
+    कहते हैं) और एक ऐसा प्लेटफ़ॉर्म विकसित करती है जो हमारे मौजूदा शिक्षकों को हमारे
+    पाठ्यक्रम (हमारे शिक्षक उपकरण) को पढ़ाने के लिए सशक्त बनाता है। हमारे स्टूडेंट
+    टूल की तरह, हम अपना फ्रंट-एंड बनाने के लिए React पर भरोसा करते हैं और हमारे सर्वर-साइड
+    कंपोनेंट्स को Ruby on Rails का उपयोग करके सर्व किया जाता है।
+  engineering_our_team_sub_title_3: प्लेटफ़ॉर्म टीम
+  engineering_our_team_text_3: हमारी प्लेटफ़ॉर्म टीम के पास ऐसे मुख्य घटक हैं जो हमारी
+    छात्र और शिक्षक टीमों की ज़रूरतों को पूरा करते हैं (उदाहरण के लिए, प्रमाणीकरण
+    और उपयोगकर्ता प्रोफ़ाइल) और उन छात्रों तक पहुँचने का मिशन भी है, जिन तक हम अभी
+    तक नहीं पहुँच पाए हैं। इसमें ऐसे बिल्डिंग इंटीग्रेशन शामिल हैं जो हमें उन स्कूलों
+    से जोड़ते हैं जो अलग-अलग लर्निंग मैनेजमेंट सिस्टम (LMS) का उपयोग करते हैं और हमारे
+    पाठ्यक्रम की पैकेजिंग करते हैं ताकि इसका उपयोग उन दूरस्थ स्कूलों में किया जा सके
+    जिनके पास विश्वसनीय इंटरनेट तक पहुंच नहीं है।
+  engineering_our_team_sub_title_4: इंफ्रास्ट्रक्चर टीम
+  engineering_our_team_text_4: हमारी इंफ्रास्ट्रक्चर टीम हमारे छात्रों और शिक्षकों
+    की सहायता करने वाले प्लेटफॉर्म की रीढ़ प्रदान करती है। इसमें हमारी होस्टिंग इंफ्रास्ट्रक्चर
+    और संबंधित सेवाएं (हम AWS का उपयोग करते हैं), डेटा प्रबंधन, सुरक्षा प्रोग्राम,
+    डेवलपर और परिनियोजन सेवाएँ और बहुत कुछ शामिल हैं। यह टीम हमारे स्केलिंग और प्रोविजनिंग
+    सिस्टम की भी मालिक है, जो ऑवर ऑफ़ कोड के दौरान महत्वपूर्ण होते हैं, जहां हम दुनिया
+    के हर छात्र को हमारे साथ एक घंटे की कोडिंग पूरी करने के लिए आमंत्रित करते हैं।
+  engineering_faq_question_1: Code.org क्या करता है?
+  engineering_faq_answer_1_a: Code.org एक शिक्षा नवाचार गैर-लाभकारी संस्था है जो इस
+    दृष्टिकोण को समर्पित है कि प्रत्येक स्कूल के प्रत्येक छात्र को अपनी मूल K-12 शिक्षा
+    के हिस्से के रूप में कंप्यूटर विज्ञान सीखने का अवसर मिले।
+  engineering_faq_answer_1_b: हम स्कूलों में कंप्यूटर विज्ञान तक पहुंच का विस्तार
+    करते हैं, जिसमें अन्य कम प्रतिनिधित्व वाले समूहों की युवा महिलाओं और छात्रों की
+    भागीदारी बढ़ाने पर ध्यान दिया जाता है। संयुक्त राज्य अमेरिका के सबसे बड़े स्कूल
+    जिलों में K-12 कंप्यूटर विज्ञान पाठ्यक्रम का अग्रणी प्रदाता, Code.org वार्षिक
+    ऑवर ऑफ़ कोड अभियान का भी आयोजन करता है, जिसमें दुनिया के 15% से अधिक छात्र शामिल
+    होते हैं।
+  engineering_faq_answer_1_c: Code.org को Microsoft, Amazon, Google और कई अन्य लोगों
+    सहित उदार दानदाताओं द्वारा समर्थित किया जाता है।
+  engineering_faq_question_2: Code.org का डेवलपर अनुभव और टूलिंग क्या है?
+  engineering_faq_answer_2: हमारा डेवलपर अनुभव उस अनुभव से भिन्न हो सकता है जो आपने
+    अपनी पिछली भूमिकाओं में देखा है। हमारी उत्पाद टीम के साथ मिलकर काम करते हुए, हम
+    हर सप्ताह प्रोडक्शन के लिए शिप करते हैं और हमारे पास कई तरह के कैडेंस होते हैं
+    - कभी-कभी आप कोड लिख रहे होते हैं जो उस दिन लाइव हो जाता है; दूसरी बार आप लंबी
+    अवधि के प्रोजेक्ट पर होते हैं - और जब हम 2-साप्ताहिक स्प्रिंट का अनुसरण करते हैं,
+    तो हम हल्के तरीके से ऐसा करते हैं। हम सही चीजों को सही तरीके से करने बनाम किसी
+    विशेष कार्यप्रणाली के बारे में शुद्धतावादी दृष्टिकोण अपनाने की दिशा में अनुक्रमित
+    करते हैं। [हमारा सारा कोड] (%{code_url}) ओपन सोर्स है और हम अपने सभी काम के आइटम
+    को ट्रैक करने के लिए JIRA और GitHub पुल अनुरोधों का उपयोग करते हैं। हम गुणवत्ता
+    और परीक्षण की भी बहुत परवाह करते हैं और भाग्यशाली हैं कि हमें [SauceLabs](%{saucelabs_url})
+    का अविश्वसनीय समर्थन मिला है, जो अपने क्लाउड डिवाइस फ़ार्म में विभिन्न छात्र उपकरणों
+    (जैसे, iPads) पर UI परीक्षणों के हमारे सूट को चलाने में हमारी मदद करते हैं।
+  engineering_faq_question_3: Code.org पर इंजीनियर ऑन-कॉल रोटेशन क्या है?
+  engineering_faq_answer_3: हमारी 30+ इंजीनियरिंग टीम ऑन-कॉल जिम्मेदारियां साझा करती
+    है। प्रत्येक इंजीनियर 24 घंटे की शिफ्ट को कवर करता है और साइट आउटेज या अन्य लाइव-साइट
+    समस्याओं का जवाब देने के लिए हमारे एस्केलेशन पथ और प्लेबुक का उपयोग करता है। हमें
+    अपनी साइट की विश्वसनीयता पर गर्व है - औसतन, प्रत्येक इंजीनियर को साल में केवल
+    एक बार उन समस्याओं के लिए जगाया जाता है, जिन्हें आमतौर पर तुरंत हल किया जा सकता
+    है। इसके बजाय, “डेवलपर ऑफ़ द डे” आमतौर पर अपने कार्यदिवस का एक हिस्सा उत्पादन
+    परिनियोजन को प्रबंधित करने और कम ज़रूरी समस्याओं को हल करने में बिताता है।
+  engineering_faq_question_4: क्या आप रिमोट-फ्रेंडली/WFH संगठन हैं?
+  engineering_faq_answer_4_a: हां! 2019 में, महामारी से कुछ समय पहले, Code.org एक
+    रिमोट-फर्स्ट संगठन बन गया था। आज, हमारे पास अमेरिका के हर टाइम ज़ोन में इंजीनियर
+    हैं और उसी हिसाब से काम के घंटे तय करते हैं। हमारी अधिकांश बैठकें सुबह 10 बजे
+    से दोपहर 3 बजे पीटी के बीच होती हैं।
+  engineering_faq_answer_4_b: हम व्यक्तिगत समय के मूल्य को भी पहचानते हैं, और हर तिमाही
+    में हम व्यक्तिगत रूप से मिलते हैं, आमतौर पर सिएटल में। इनमें से दो इवेंट (हम उन्हें
+    किक-ऑफ वीक और “कोडेचेला” कहते हैं) जनवरी और जून में संगठन के सभी लोगों को एक साथ
+    लाते हैं - और इंजीनियरिंग और उत्पाद टीमें अप्रैल और अक्टूबर में अलग-अलग मिलती
+    हैं।
+  engineering_faq_answer_4_c: हम अपने छात्रों और शिक्षकों के साथ समय बिताने में दृढ़ता
+    से विश्वास करते हैं, इसलिए इनमें से कई व्यक्तिगत कार्यक्रमों में फीडबैक इकट्ठा
+    करने या हमारे उत्पादों का प्ले-टेस्ट करने के लिए स्कूलों और कक्षाओं में यात्राएं
+    शामिल हैं
+  engineering_faq_question_5: Code.org की इंजीनियरिंग टीम को क्या खास बनाता है?
+  engineering_faq_answer_5_a: 'चुनौतीपूर्ण तकनीकी समस्याओं को हल करने के अलावा, हमारे
+    पास कुछ चीजें हैं जो हमारे इंजीनियरिंग संगठन को उन अन्य लोगों से अलग बनाती हैं
+    जिनमें आपने काम किया होगा:'
+  engineering_faq_answer_5_b_1: हम सभी अपने मिशन के प्रति अपने जुनून को साझा करते
+    हैं।
+  engineering_faq_answer_5_b_2: हम में से प्रत्येक दुनिया के हर छात्र के लिए कंप्यूटर
+    विज्ञान तक पहुंच का विस्तार करने के मिशन का समर्थन करने के लिए यहां है। इस मिशन
+    की ओर हमें क्या प्रेरित करता है, इस बारे में हम सभी के पास अपनी अनोखी कहानी और
+    दृष्टिकोण है।
+  engineering_faq_answer_5_c_1: हम एक-दूसरे की बहुत परवाह करते हैं।
+  engineering_faq_answer_5_c_2: जब इंजीनियर किसी समस्या से जूझ रहे होते हैं, तो हम
+    कदम बढ़ाते हैं और हम मदद करते हैं। हमारा एक सिद्धांत यह है कि हम समस्याओं पर कठोर
+    हैं, लेकिन एक-दूसरे के प्रति दयालु हैं। हम नियमित रूप से इंजीनियरों को बढ़ावा
+    देते हैं, लेकिन हम किसी के प्रचार पथ का समर्थन करने के लिए अति-इंजीनियर समाधान
+    निर्धारित नहीं करते हैं। इसके बजाय, हम अपने इंजीनियरों में एक उदार व्यावसायिक
+    विकास बजट और सीखने के अन्य अवसरों तक पहुंच के साथ निवेश करते हैं।
+  engineering_faq_answer_5_d_1: हम कड़ी मेहनत करते हैं, लेकिन हम स्पष्ट सीमाएँ निर्धारित
+    करते हैं।
+  engineering_faq_answer_5_d_2: जबकि हम दुनिया भर के छात्रों की सहायता करते हैं, हम
+    काम और घरेलू जीवन के बीच स्पष्ट सीमाओं के लिए खुद को जिम्मेदार ठहराते हैं। हम
+    अपने PTO (कुल 5 सप्ताह, जिसमें वर्ष के अंत में एक ऑर्ग-व्यापी 2-सप्ताह का कार्यालय
+    बंद होना उर्फ विंटर ब्रेक शामिल है), गर्मियों के दौरान शुक्रवार को आधे कार्य दिवस
+    उर्फ ग्रीष्म शुक्रवार, और अन्य उदार लाभों को लेकर बुधवार को बिना किसी मीटिंग का
+    आनंद लेते हैं।
+  careers_hero_title: करियर
+  careers_hero_description: Code.org एक गैर-लाभकारी संगठन है जो स्कूलों में कंप्यूटर
+    विज्ञान तक पहुंच बढ़ाने के लिए समर्पित है। हम विशेष रूप से युवा महिलाओं और कम
+    प्रतिनिधित्व वाले छात्रों के बीच भागीदारी बढ़ाने पर ध्यान केंद्रित कर रहे हैं।
+  careers_hero_description_under: दुनिया को बदलने में हमारी मदद करें, एक समय में एक
+    छात्र!
+  careers_vision_title: हमारा विज़न
+  careers_vision_decsription: हमारा दृष्टिकोण यह है कि हर स्कूल के प्रत्येक छात्र
+    को अपनी मूल K-12 शिक्षा के हिस्से के रूप में कंप्यूटर विज्ञान सीखने का अवसर मिले।
+  careers_vision_description_under: इस सपने को साकार करने में मदद करने के लिए हमारी
+    टीम में शामिल हों!
+  careers_values_title: हमारे मूल मूल्य
+  careers_values_first_column_text_1: हमारा मानना है कि कंप्यूटर विज्ञान सभी छात्रों
+    के लिए मूलभूत है
+  careers_values_first_column_text_2: हम इक्विटी, एक्सेस और अवसर के लिए प्रतिबद्ध
+    हैं
+  careers_values_first_column_text_3: हम एक सहयोगी शिक्षा समुदाय की शक्ति में विश्वास
+    करते हैं
+  careers_values_second_column_text_1: हम फीडबैक के प्रति चुस्त और उत्तरदायी हैं
+  careers_values_second_column_text_2: हम ईमानदारी और पारदर्शिता के साथ काम करते हैं
+  careers_values_second_column_text_3: हमारा मानना है कि व्यापक प्रभाव के लिए बड़ी
+    सोच और समग्र रूप से कार्य करने की आवश्यकता होती है
+  careers_approach_section_title: हमारा एकीकृत दृष्टिकोण
+  careers_approach_section_description: K-12 कंप्यूटर विज्ञान आंदोलन में Code.org
+    की वैश्विक भूमिका केवल इसलिए संभव है क्योंकि हम विविध और अक्सर विभाजित हितधारकों
+    के बीच एक एकीकृत दृष्टिकोण का उपयोग करते हैं। बढ़ते ध्रुवीकरण के समय, छात्रों
+    के लिए अवसरों को बढ़ाने का विचार राजनीतिक स्पेक्ट्रम के लोगों को एकजुट करता है।
+    Code.org की टीम के सदस्यों, छात्रों, शिक्षकों और समर्थकों के दृष्टिकोण विविध और
+    अलग-अलग हैं, और हमारे मिशन में उन सभी का स्वागत है।
+  careers_aproach_section_description_link: Code.org के एकता के दृष्टिकोण के बारे
+    में और पढ़ें।
+  careers_approach_section_button: खुली भूमिकाओं के बारे में जानें
+  careers_principle_section_title: हमारे सांस्कृतिक सिद्धांत
+  careers_principle_title_1: हमारे छात्र और शिक्षक हमारे नॉर्थ स्टार हैं
+  careers_principle_description_1: हम अपने उपहार, समय और ऊर्जा का उपयोग कंप्यूटर विज्ञान
+    को उन लोगों तक पहुँचाने के लिए करते हैं जिन्हें इसकी सबसे अधिक आवश्यकता है। यही
+    बात हमें एकजुट करती है। यह हमारा सबसे महत्वपूर्ण सिद्धांत है।
+  careers_principle_title_2: हम समस्याओं पर कठोर हैं और एक-दूसरे के प्रति दयालु हैं
+  careers_principle_description_2: हम वैश्विक स्तर पर छात्रों और शिक्षकों के लिए कंप्यूटर
+    विज्ञान लाने की चुनौती पर ध्यान केंद्रित करते हैं। हम मानते हैं कि हम में से प्रत्येक
+    अपने मिशन का समर्थन करने और गलती करने पर अनुग्रह देने के अपने इरादों को पूरा करता
+    है।
+  careers_principle_title_3: समाधान की तलाश करें, आम सहमति नहीं
+  careers_principle_description_3: हमारे पास निर्णय हैं, चाहे हम छोटे कदम उठा रहे
+    हों या उन परिणामों की ओर बड़ी छलांग लगा रहे हों, जिनकी हम तलाश कर रहे हैं। मालिक
+    मांगते हैं और सुनते हैं, लेकिन फ़ीडबैक से लकवाग्रस्त नहीं होते हैं। हम मालिकों
+    के निर्णयों को स्वीकार करते हैं और उनका समर्थन करते हैं, भले ही हम असहमत हों।
+  careers_principle_title_4: संस्थापक की मानसिकता को अपनाएं
+  careers_principle_description_4: हम परिणामों के बारे में जुनूनी होते हैं और उन्हें
+    चलाने पर अपने कार्यों पर ध्यान केंद्रित करते हैं। हम विवरणों में गोता लगाते हैं
+    और कड़ी मेहनत करते हैं। हम ईमानदार हैं, चपलता में झुकते हैं, और लगातार आकलन करते
+    हैं कि क्या हम रास्ते पर हैं; हम आगे बढ़ने से डरते नहीं हैं। दुनिया को बदलना इसकी
+    मांग करता है।
+  careers_principle_title_5: चैंपियन इनोवेशन
+  careers_principle_description_5: हम बड़ा सोचते हैं, जोखिम लेते हैं, और असफल होने
+    से डरते नहीं हैं। अगर हम अपने लक्ष्यों को पूरा करने का बेहतर तरीका देखते हैं,
+    तो हम ऐसा करते हैं और दूसरों को भी ऐसा करने के लिए प्रोत्साहित करते हैं। वृद्धिशील
+    समाधान दुनिया को बदलने में मदद नहीं करेंगे।
+  careers_principle_title_6: तथ्यों में एंकर के फैसले
+  careers_principle_description_6: हम अपने व्यवसाय को समझने, वांछित परिणाम स्थापित
+    करने और निर्णय लेने में मार्गदर्शन करने के लिए डेटा का उपयोग करते हैं। हम यह पहचानकर
+    इसे संतुलित करते हैं कि कार्य करने के लिए हमारे पास हमेशा वह डेटा नहीं होगा जिसकी
+    हमें आवश्यकता है।
+  careers_principle_title_7: विकास की मानसिकता हमें ईंधन देती है
+  careers_principle_description_7: हम हर चुनौती का सामना जिज्ञासा के साथ करते हैं।
+    हम कृपया और स्पष्ट रूप से फ़ीडबैक देते हैं; हमें खुलकर फ़ीडबैक मिलता है। हम अपनी
+    गलतियों से सीखते हैं और अपने काम की पहुंच और प्रभाव को बढ़ाने के तरीकों की तलाश
+    करते हैं।
+  careers_balance_section_title: हमारा कार्य-जीवन संतुलन
+  careers_balance_section_description: हम अपने कर्मचारियों की परवाह करते हैं और काम
+    के दौरान और काम के बाहर सभी की सहायता करने के लिए समर्पित हैं। हम जानते हैं कि
+    हर किसी की अलग-अलग ज़रूरतें होती हैं, यही वजह है कि हम एक समग्र लाभ पैकेज पेश
+    करते हैं, जो यह सुनिश्चित करेगा कि आपकी (और आपके परिवार की) देखभाल की जाए।
+  careers_balance_first_column_text_1: आपके और आपके परिवार के लिए स्वास्थ्य लाभ
+  careers_balance_first_column_text_2: उदार पेड टाइम ऑफ और लीव प्लान
+  careers_balance_second_column_text_1: लचीला, सहायक कार्य वातावरण
+  careers_balance_second_column_text_2: विकास और पेशेवर सीखने के अवसर
+  careers_openroles_section_title: भूमिकाएँ खोलें
+  careers_openroles_section_description: Code.org सिएटल में आधारित है, लेकिन हमारी
+    टीम के कई सदस्य दूरस्थ हैं। दूरस्थ उम्मीदवारों का स्वागत है और उन्हें आवेदन करने
+    के लिए प्रोत्साहित किया जाता है।
+  careers_more_info_text: Code.org के बारे में अधिक जानकारी के लिए, हमारे [अक्सर पूछे
+    जाने वाले प्रश्न] (%{support_url}) देखें या [हमारे मिशन में शामिल होने के अन्य
+    तरीकों] (%{help_url}) के बारे में जानें।
+  careers_approach_section_title2: विविधता के प्रति हमारा दृष्टिकोण
+  careers_approach_section_description_1: हम Code.org पर विविध दृष्टिकोणों, विचारों
+    और पृष्ठभूमियों को अपनाते हैं। हम सभी कर्मचारियों और आवेदकों को समान अवसर प्रदान
+    करने के लिए प्रतिबद्ध हैं। हम जाति, धर्म, रंग, राष्ट्रीय मूल, लिंग, यौन अभिविन्यास,
+    आयु, वैवाहिक स्थिति, वयोवृद्ध स्थिति, या विकलांगता (मानसिक और शारीरिक) स्थिति
+    के आधार पर भेदभाव नहीं करते हैं।
+  careers_approach_section_description_2: हम यह सुनिश्चित करेंगे कि विकलांग व्यक्तियों
+    को नौकरी के लिए आवेदन या साक्षात्कार प्रक्रिया में भाग लेने, आवश्यक कार्य करने
+    और रोजगार के अन्य लाभ और विशेषाधिकार प्राप्त करने के लिए उचित आवास प्रदान किया
+    जाए। यदि आपकी विकलांगता से संबंधित व्यक्तिगत ज़रूरतें हैं, तो कृपया accommodations@code.org
+    पर संपर्क करें।
+  csa_ai_page_hero_title: सॉफ्टवेयर इंजीनियरिंग और कंप्यूटर विज़न
+  csa_ai_page_hero_description: 'यह दो-अध्याय पोस्ट-एपी सीएसए मॉड्यूल हाई स्कूल के
+    छात्रों को GitHub और GitHub Copilot सहित पेशेवर सॉफ़्टवेयर डेवलपमेंट टूल के साथ
+    व्यावहारिक अनुभव प्रदान करता है, और उन्हें कंप्यूटर विज़न प्रोग्राम विकसित करने
+    के लिए वास्तविक दुनिया के कौशल प्रदान करता है। '
+  csa_ai_page_video_section_title: Code.org प्रोग्रामिंग वातावरण की दुनिया से आगे
+    बढ़ें
+  csa_ai_page_video_section_li_1: AI और इसके अनुप्रयोगों के बारे में जानें
+  csa_ai_page_video_section_li_2: पेशेवर सॉफ़्टवेयर डेवलपमेंट टूल के साथ व्यावहारिक
+    अनुभव
+  csa_ai_page_video_section_li_3: उद्योग-मानक पद्धतियां सीखें
+  csa_ai_page_video_section_li_4: आलोचनात्मक सोच विकसित करें
+  csa_ai_page_programming_tools: 'प्रोग्रामिंग टूल: जीथब, जीथब कोपिलॉट, वीएससीओडी,
+    टेन्सरफ्लो '
+  csa_ai_page_professional_learning: कुछ भी नहीं
+  csa_ai_page_curriculum_topics: 'विषय: प्रोग्रामिंग, डेटा, आर्ट एंड डिज़ाइन, गेम्स
+    और एनिमेशन'
+  csa_ai_page_curriculum_accessibility_features: विवरण के लिए अक्सर पूछे जाने वाले
+    प्रश्न अनुभाग देखें
+  csa_ai_page_curriculum_languages_support: अंग्रेजी
+  csa_ai_page_article_title_1: कोपिलॉट के साथ बनाएँ
+  csa_ai_page_article_description_1: छात्र मौजूदा कोड की व्याख्या करने, त्रुटियों
+    को खोजने और उन्हें ठीक करने और नई समस्याओं के समाधान उत्पन्न करने के लिए एक जोड़ी
+    प्रोग्रामर के रूप में GitHub Copilot का उपयोग करना सीखते हैं।
+  csa_ai_page_article_link_1: कोपिलॉट के बारे में और जानें
+  csa_ai_page_article_title_2: अपना खुद का AI मॉडल बनाएं
+  csa_ai_page_article_description_2: छात्र एक वेबकैम बनाने वाली छवियों और इशारों को
+    पहचानने के लिए टीचेबल मशीन का उपयोग करके अपने स्वयं के AI मॉडल को प्रशिक्षित करते
+    हैं और विचार करते हैं कि कंप्यूटर विज़न यूज़र के ऐप्स के साथ बातचीत करने के तरीके
+    को कैसे प्रभावित करता है।
+  csa_ai_page_article_link_2: पाठ योजना का अन्वेषण करें
+  csa_ai_page_article_title_3: कंप्यूटर विज़न एक्सप्लोर करें
+  csa_ai_page_article_description_3: छात्र विभिन्न इनपुट के साथ काम करने के लिए ऐप्स
+    के मौजूदा संस्करणों को संशोधित करने में मदद करने के लिए GitHub Copilot का उपयोग
+    करके Teachable Machine के साथ बनाए गए AI मॉडल को जावा ऐप में लागू करते हैं।
+  csa_ai_page_article_link_3: एक उदाहरण देखें
+  csa_ai_page_learn_more_section_title: आर्टिफिशियल इंटेलिजेंस के बारे में और जानें
+  csa_ai_page_learn_more_title: शिक्षकों के लिए AI 101 का अन्वेषण करें
+  csa_ai_page_learn_more_description: शिक्षकों के लिए हमारी व्यापक ऑनलाइन शिक्षण श्रृंखला
+    के साथ आर्टिफिशियल इंटेलिजेंस (AI) की अभूतपूर्व दुनिया और शिक्षा में इसकी परिवर्तनकारी
+    क्षमता की खोज करें।
+  csa_ai_page_learn_more_link: शिक्षकों के लिए AI 101 श्रृंखला देखें
+  csa_ai_page_faq_question_01: इस मॉड्यूल के लिए आवश्यक शर्तें क्या हैं?
+  csa_ai_page_faq_answer_01_01: 'इस मॉड्यूल में गोता लगाने से पहले, छात्रों के पास
+    जावा का प्रवेश स्तर का ज्ञान होना चाहिए। विशेष रूप से, उन्हें इस पर ध्यान देना
+    चाहिए:'
+  csa_ai_page_faq_answer_01_list_01: "**कक्षाएं और वस्तुएं: ** छात्रों को कक्षाओं
+    को परिभाषित करने और उनका उपयोग करने के साथ-साथ वस्तुओं को बनाने और उनमें हेरफेर
+    करने से परिचित होना चाहिए।"
+  csa_ai_page_faq_answer_01_list_02: "**लेखन और कॉल करने के तरीके: ** छात्रों को कक्षा
+    के भीतर विधियों को परिभाषित करने, विधि मापदंडों और रिटर्न प्रकारों को समझने और
+    वस्तुओं या अन्य तरीकों से कॉल विधियों को समझने में सक्षम होना चाहिए।"
+  csa_ai_page_faq_answer_01_list_03: "**1D Arrays और ArrayLists: ** उन्हें एक-आयामी
+    सरणियों और ArrayLists को घोषित करने, आरंभ करने और उनमें हेरफेर करने में कुशल होना
+    चाहिए, जिसमें उनके माध्यम से पुनरावृति करना भी शामिल है।"
+  csa_ai_page_faq_answer_01_list_04: "**चयन और पुनरावृत्ति: ** सशर्त कथनों और छोरों
+    में एक ठोस आधार महत्वपूर्ण है।"
+  csa_ai_page_faq_question_01_02: आदर्श रूप से, जिन छात्रों ने एपी कंप्यूटर साइंस
+    ए या समान गहराई और कठोरता का कोर्स पूरा कर लिया है, वे इस मॉड्यूल के लिए अच्छी
+    तरह से तैयार होंगे।
+  csa_ai_page_faq_question_02: मैं इस मॉड्यूल के लिए आवश्यक सॉफ़्टवेयर कैसे स्थापित
+    करूं?
+  csa_ai_page_faq_answer_02_01: यह मॉड्यूल अद्वितीय है क्योंकि इसमें Code.org लैब
+    और टूल के बजाय तृतीय-पक्ष सॉफ़्टवेयर का उपयोग शामिल है। [सॉफ़्टवेयर इंस्टॉल करने
+    के बारे में यहाँ और पढ़ें] ()%{accessibility_url}।
+  csa_ai_page_faq_question_03: इस मॉड्यूल को सिखाते समय मैं एक्सेसिबिलिटी आवश्यकताओं
+    का समर्थन कैसे कर सकता हूं?
+  csa_ai_page_faq_answer_03_01: समावेशी सीखने के माहौल के लिए सुलभता की जरूरतों को
+    पूरा करना महत्वपूर्ण है। [इस मॉड्यूल में उपयोग किए गए सॉफ़्टवेयर में एक्सेसिबिलिटी
+    सुविधाओं के बारे में यहाँ और पढ़ें] ().%{install_url}
+  csa_ai_page_faq_question_04: मैं Chromebook पर VS कोड का उपयोग कैसे करूं?
+  csa_ai_page_faq_answer_04: Chromebook पर VS कोड का उपयोग करना अधिक सरल हो गया है,
+    खासकर नए Chromebook मॉडल पर Linux ऐप्स चलाने की क्षमता के साथ। [Chromebook पर
+    VS कोड सेट करने के बारे में यहाँ और पढ़ें] ().%{chromebook_url}
+  csa_ai_page_faq_question_05: मैं इस मॉड्यूल के लिए व्यावसायिक विकास कैसे प्राप्त
+    कर सकता हूं?
+  csa_ai_page_faq_answer_05: इस कोर्स के लिए वर्तमान में कोई विशिष्ट व्यावसायिक विकास
+    नहीं है। यदि आप यह समझना चाहते हैं कि अपनी कक्षा में आर्टिफिशियल इंटेलिजेंस से
+    कैसे संपर्क किया जाए, तो आप [शिक्षकों के लिए AI 101 का पता लगा सकते हैं] (%{ai_101_url})।
+  csa_ai_page_faq_question_06: इस मॉड्यूल को पढ़ाने के लिए अनुशंसित समय क्या है?
+  csa_ai_page_faq_answer_06_01: सॉफ्टवेयर इंजीनियरिंग और कंप्यूटर विज़न मॉड्यूल को
+    संक्षिप्त समय सीमा में व्यापक शिक्षा प्रदान करने के लिए सोच-समझकर संरचित किया
+    गया है। पूरे मॉड्यूल को **2 सप्ताह के अनुदेश** के लिए डिज़ाइन किया गया है। ज़्यादातर
+    पाठ **45 मिनट** के लिए तैयार किए जाते हैं, जबकि वे पाठ जहाँ छात्र व्यावहारिक जावा
+    प्रोजेक्ट के विकास में तल्लीन होते हैं, **90 मिनट** के लिए डिज़ाइन किए जाते हैं।
+    यह विस्तारित समय सुनिश्चित करता है कि छात्रों को काम करते समय समझने, उन्हें लागू
+    करने और समस्या निवारण करने का पर्याप्त अवसर मिले।
+  csa_ai_page_faq_answer_06_02: मॉड्यूल की संरचना में जानबूझकर लचीलापन भी बनाया गया
+    है। कक्षा की गतिशीलता, छात्रों की सहभागिता, और आप प्रत्येक विषय को किस गहराई तक
+    एक्सप्लोर करना चाहते हैं, इसके आधार पर आप अवधि को समायोजित कर सकते हैं। उदाहरण
+    के लिए, इंट्रो टू कोपिलॉट पाठ, जिसे 45 मिनट के पाठ के रूप में डिज़ाइन किया गया
+    है, को 90 मिनट तक बढ़ाया जा सकता है, यदि आप इस बारे में गहराई से जानना चाहते हैं
+    कि GitHub Copilot और ChatGPT जैसे बड़े भाषा मॉडल और टूल कैसे काम करते हैं।
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: स्वीकृत शिक्षक खाते के साथ, आप एक नीले “शिक्षक” केवल
+    पैनल में उत्तर कुंजी पा सकते हैं जो ऑनलाइन पाठ और गतिविधियों में दिखाई देता है।
+    यदि आपको एक स्वीकृत शिक्षक खाते की आवश्यकता है, तो आप [इस फ़ॉर्म] () के माध्यम
+    से संरक्षित शिक्षक-केवल सामग्री (उत्तर कुंजी, आदि) तक पहुंच के लिए आवेदन कर सकते
+    हैं।%{form_url}कृपया ध्यान रखें कि आपके खाते को सत्यापित करने में 3-5 कार्यदिवस
+    लग सकते हैं।
+  csa_ai_page_faq_question_08: क्या यह मॉड्यूल मानकों के अनुसार मैप किया गया है?
+  csa_ai_page_faq_answer_08: हां, सॉफ्टवेयर इंजीनियरिंग और कंप्यूटर विज़न पाठ्यक्रम
+    को [CSTA K-12 मानक] (%{csta_k12_url}) और [K-12 दिशानिर्देशों] () के लिए AI में
+    मैप किया गया है।%{k12_url}
+  csa_ai_page_faq_question_09: इस मॉड्यूल को सिखाने में कितना खर्च होता है?
+  csa_ai_page_faq_answer_09_01: हमारे पाठ्यक्रम और प्लेटफ़ॉर्म किसी भी व्यक्ति के
+    लिए, कहीं भी, पढ़ाने के लिए [बिना किसी लागत के] (%{no_cost_url}) पर उपलब्ध हैं!
+  csa_ai_page_faq_answer_09_02: इसके अतिरिक्त, इस मॉड्यूल में उपयोग किए जाने वाले
+    सॉफ़्टवेयर और टूल निःशुल्क हैं। GitHub Copilot सत्यापित [teachers](%{teachers_url})
+    और () के लिए निःशुल्क है. [students]%{students_url}
+  csa_ai_page_faq_question_10: यदि सॉफ़्टवेयर इंस्टॉलेशन काम नहीं कर रहा है तो मुझे
+    क्या करना चाहिए?
+  csa_ai_page_faq_answer_10: सॉफ़्टवेयर इंस्टॉलेशन के दौरान समस्याओं का सामना करना
+    आम बात हो सकती है, लेकिन ऐसे व्यवस्थित चरण हैं जिनका पालन करके आप समस्या निवारण
+    और उनका समाधान कर सकते हैं। [यहां कुछ समस्या निवारण युक्तियां देखें] ().%{troubleshooting_url}
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'हमारे सॉफ्टवेयर इंजीनियरिंग और कंप्यूटर विज़न पाठ्यक्रम
+    को हमारे पाठ्यचर्या मूल्यों को ध्यान में रखकर तैयार किया गया था। निम्नलिखित लक्ष्यों
+    ने इस पाठ्यक्रम के निर्माण का मार्गदर्शन किया:'
+  csa_ai_page_faq_answer_11_list_01: "**लक्ष्य 1: ** कोड जेनरेट करने, डिबग करने और
+    संपादित करने के लिए AI टूल का उपयोग करें।"
+  csa_ai_page_faq_answer_11_list_02: "**लक्ष्य 2: ** जावा लैब से वास्तविक दुनिया के
+    टूल में संक्रमण।"
+  csa_ai_page_faq_answer_11_list_03: "**लक्ष्य 3: ** एआई मॉडल को कैसे प्रशिक्षित किया
+    जाता है और कार्यक्रमों में एकीकृत किया जाता है, इसकी समझ को गहरा करें।"
+  csa_ai_page_faq_answer_11_02: हमारे काम को निर्देशित करने वाले मूल्यों के बारे में
+    अधिक जानकारी के लिए, कृपया हमारे [पाठ्यचर्या मूल्य] ()%{curriculum_values_url}देखें।
+  video_library_page_main_title: शैक्षिक लघु वीडियो
+  video_library_page_hero_description: Code.org की शैक्षिक वीडियो की बढ़ती लाइब्रेरी
+    दुनिया भर के शिक्षकों द्वारा, ऑनलाइन या कक्षाओं में फिर से उपयोग के लिए उपलब्ध
+    है। हमारा लक्ष्य अपने प्रयासों को अपने पाठ्यक्रम की पहुंच से बाहर बढ़ाना है।
+  video_library_page_title_ai_works: AI कैसे काम करता है
+  video_library_page_description_ai_works: लघु वीडियो की यह श्रृंखला आपको बताएगी कि
+    आर्टिफिशियल इंटेलिजेंस कैसे काम करता है और यह क्यों मायने रखता है। तंत्रिका नेटवर्क
+    के बारे में जानें, या AI कैसे सीखता है, और एल्गोरिथम पूर्वाग्रह और AI निर्णय लेने
+    की नैतिकता जैसे मुद्दों पर ध्यान दें।
+  video_library_page_title_computers_work: कंप्यूटर कैसे काम करते हैं
+  video_library_page_description_computers_work: यह बताता है कि कंप्यूटर को कंप्यूटर
+    क्या बनाता है, 1s और 0s में डिजिटल जानकारी का प्रतिनिधित्व कैसे किया जाता है,
+    डिजिटल जानकारी में हेरफेर करने के लिए कंप्यूटर सर्किट कैसे काम करते हैं, और एक
+    सेंट्रल प्रोसेसिंग यूनिट (CPU) और ऑपरेटिंग सिस्टम कंप्यूटर के इनपुट, आउटपुट, मेमोरी
+    और हार्डवेयर को कैसे नियंत्रित करते हैं।
+  video_library_page_title_internet_works: इंटरनेट कैसे काम करता है
+  video_library_page_description_internet_works: जिसमें TCP/IP के आविष्कारक Vint Cerf,
+    HTTP और HTML की व्याख्या करने के लिए Tumblr के संस्थापक डेविड कार्प, SSL और साइबर
+    सुरक्षा की व्याख्या करने के लिए Google की सुरक्षा राजकुमारी, और Microsoft, Spotify
+    और Symantec के इंजीनियर शामिल हैं। इंटरनेट कैसे काम करता है, इसकी व्याख्या करने
+    वाले लघु वीडियो की यह श्रृंखला।
+  video_library_page_title_not_hacked: हाउ नॉट गेट हैक
+  video_library_page_description_not_hacked: इंटरनेट खुला है, इसलिए इस पर होने वाली
+    हर चीज को तब तक देखा जा सकता है जब तक कि वह सुरक्षित न हो। आधुनिक देशों में, लोग
+    किसी भी अन्य अपराध की तुलना में हैक होने के बारे में अधिक चिंतित हैं। क्यों? क्योंकि
+    अपराधियों, आतंकवादियों, या यहां तक कि राज्य के अभिनेताओं द्वारा कमजोरियों के लिए
+    इंटरनेट पर हर कंप्यूटर या फोन का नियमित रूप से परीक्षण किया जा रहा है। यदि आप
+    सावधान नहीं हैं, तो कोई आपके डिवाइस या अकाउंट को हैक कर सकता है, और यहां तक कि
+    आपकी पहचान या आपके पैसे भी चुरा सकता है।
+  video_library_page_title_blockchain: ब्लॉकचैन कैसे काम करता है
+  video_library_page_description_blockchain: कॉइनबेस के साथ साझेदारी में निर्मित,
+    इस श्रृंखला में उद्योग के विशेषज्ञों को शामिल किया गया है और इसका उद्देश्य ब्लॉकचेन
+    क्या है, यह कैसे काम करता है, और इसके संभावित सामाजिक प्रभावों — अच्छे और बुरे
+    दोनों की खोज करके इस तकनीक का रहस्योद्घाटन करना है।
+  video_library_page_title_careers: CS में करियर
+  video_library_page_description_careers: कंप्यूटर विज्ञान और प्रौद्योगिकी में करियर
+    मजेदार और फायदेमंद हो सकता है। लेकिन इन क्षेत्रों में काम करने वाला व्यक्ति वास्तव
+    में क्या करता है? विभिन्न प्रकार की नौकरियों और कंपनियों के साथ, इस सवाल का सिर्फ
+    एक ही जवाब नहीं है। कुछ ऐसे लोगों से मिलने के लिए नीचे दिए गए वीडियो देखें, जो
+    रचनात्मक तरीकों से बड़ी समस्याओं का सामना कर रहे हैं।
+  video_library_page_title_inspirational: प्रेरणादायक
+  video_library_page_description_inspirational: हमारी दुनिया में कंप्यूटर विज्ञान
+    क्या बदलेगा? सब कुछ? यह किसके लिए है? सब लोग! आपको प्रेरित करने और प्रेरित करने
+    के लिए ये वीडियो देखें।
+  video_library_page_footer_description: कुछ और खोज रहे हैं? हमारे Youtube चैनल पर
+    बहुत सारे बेहतरीन वीडियो उपलब्ध हैं।
+  video_library_page_footer_cta: YouTube पर Code.org के सभी वीडियो एक्सप्लोर करें
+  video_library_page_computer_work_video_title_1: पेश है कि कंप्यूटर कैसे काम करते
+    हैं
+  video_library_page_computer_work_video_title_2: बाइनरी और डेटा
+  video_library_page_computer_work_video_title_3: CPU, मेमोरी, इनपुट और आउटपुट
+  video_library_page_computer_work_video_title_4: एक कंप्यूटर, एक कंप्यूटर क्या बनाता
+    है?
+  video_library_page_computer_work_video_title_5: सर्किट लॉजिक
+  video_library_page_computer_work_video_title_6: हार्डवेयर और सॉफ्टवेयर
+  video_library_page_internet_work_video_title_1: internet क्या है?
+  video_library_page_internet_work_video_title_2: 'इंटरनेट: आईपी एड्रेस और डीएनएस'
+  video_library_page_internet_work_video_title_3: 'इंटरनेट: HTTP और HTML'
+  video_library_page_internet_work_video_title_4: 'इंटरनेट: साइबर सुरक्षा और अपराध'
+  video_library_page_internet_work_video_title_5: 'इंटरनेट: तार, केबल, और वाईफ़ाई'
+  video_library_page_internet_work_video_title_6: 'इंटरनेट: पैकेट, रूटिंग और विश्वसनीयता'
+  video_library_page_internet_work_video_title_7: 'इंटरनेट: एन्क्रिप्शन और सार्वजनिक
+    कुंजी'
+  video_library_page_internet_work_video_title_8: 'इंटरनेट: सर्च कैसे काम करता है'
+  video_library_page_cs_video_title_1: मेरा नाम जेरोम है और मैं मेव वुल्फ में एक डिज़ाइन
+    टेक्नोलॉजिस्ट हूँ
+  video_library_page_cs_video_title_2: मेरा नाम निकेशा है और मैं नासा में एक एयरोस्पेस
+    इंजीनियर हूँ
+  video_library_page_cs_video_title_3: मेरा नाम ब्रिना है और मैं इंस्टाग्राम पर एक
+    सॉफ्टवेयर इंजीनियर हूँ
+  video_library_page_cs_video_title_4: मेरा नाम Kinsley है और मैं Facebook पर एक सॉफ्टवेयर
+    इंजीनियर हूँ
+  video_library_page_cs_video_title_5: मेरा नाम पोलिना है और मैं इलेक्ट्रॉनिक आर्ट्स
+    में डेटा साइंटिस्ट हूं
+  video_library_page_cs_video_title_6: मेरा नाम डैनेल है और मैं MBARI में एक सॉफ्टवेयर
+    इंजीनियर हूँ
+  video_library_page_cs_video_title_7: मेरा नाम क्रिस्टोफर है और मैं टैनियम में एक
+    सुरक्षा विश्लेषक हूँ
+  video_library_page_cs_video_title_8: मेरा नाम Federico है और मैं Microsoft में एक
+    तकनीकी प्रोग्राम मैनेजर हूँ
+  video_library_page_cs_video_title_9: मेरा नाम Tess है और मैं Google में एक सॉफ़्टवेयर
+    इंजीनियर हूँ
+  video_library_page_inspirational_video_title_1: कंप्यूटर विज्ञान का चेहरा बदलें
+    (3 मिनट)
+  video_library_page_inspirational_video_title_2: अपने आप को धक्का दें। कोई भी सीख
+    सकता है. (1 मिनट)
+  video_library_page_inspirational_video_title_3: एक लड़की को प्रेरित करें (2 मिनट)
+  video_library_page_inspirational_video_title_4: अधिकांश स्कूल जो नहीं सिखाते हैं
+    (5 मिनट)
+  video_library_page_inspirational_video_title_5: ऑवर ऑफ़ कोड यहाँ है - कोई भी सीख
+    सकता है (2 मिनट)
+  video_library_page_inspirational_video_title_6: माय नेम इज अरसेली (3 मिनट)
+  video_library_page_inspirational_video_title_7: स्टीफ करी के साथ ऑवर ऑफ़ कोड (2 मिनट)
+  video_library_page_inspirational_video_title_8: कंप्यूटर विज्ञान सब कुछ बदल रहा
+    है (5 मिनट)
+  video_library_page_inspirational_video_title_9: कंप्यूटर साइंस परिचय (1 मिनट)
+  video_library_page_inspirational_video_title_10: कंप्यूटर विज्ञान पर राष्ट्रपति
+    ओबामा (1 मिनट)
+  video_library_page_inspirational_video_title_11: कोई भी सीख सकता हैं (1 मिनट)
+  video_library_page_inspirational_video_title_12: लो क्यू फाल्टा एन नुएस्ट्रास एस्कुएलस
+    (2 मिनट)
+  video_library_page_inspirational_video_title_13: नासा ऑवर ऑफ़ कोड मनाता है (2 मिनट)
+  video_library_page_inspirational_video_title_14: इट्स मोर थान अ गेम (1 मिनट)
+  video_library_page_inspirational_video_title_15: कंप्यूटर साइंस के साथ बनाएं (1
+    मिनट)
+  video_library_page_not_hacked_video_title_1: 'हाउ नॉट टू गेट हैक: परिचय'
+  video_library_page_not_hacked_video_title_2: 'हाउ नॉट टू गेट हैक: पासवर्ड'
+  video_library_page_not_hacked_video_title_3: 'हैक कैसे न हो: प्रमाणीकरण और डिवाइस
+    लॉक'
+  video_library_page_not_hacked_video_title_4: 'हाउ नॉट टू गेट हैक: फ़िशिंग'
+  video_library_page_not_hacked_video_title_5: 'हैक कैसे न हों: वेबसाइट और वाईफाई'
+  video_library_page_not_hacked_video_title_6: 'हाउ नॉट टू गेट हैक: मैसेजिंग और डाउनलोड्स'
+  video_library_page_not_hacked_video_title_7: 'हैक कैसे न हो: अपडेट इंस्टॉल करें'
+  about_us_page_title: हमारे बारे में
+  about_us_page_hero_description: Code.org® एक शिक्षा नवाचार गैर-लाभकारी संस्था है
+    जो इस दृष्टिकोण को समर्पित है कि प्रत्येक स्कूल के प्रत्येक छात्र को अपनी मूल
+    K-12 शिक्षा के हिस्से के रूप में कंप्यूटर विज्ञान सीखने का अवसर मिले। हम स्कूलों
+    में कंप्यूटर विज्ञान तक पहुंच का विस्तार करते हैं, जिसमें अन्य कम प्रतिनिधित्व
+    वाले समूहों की युवा महिलाओं और छात्रों की भागीदारी बढ़ाने पर ध्यान दिया जाता है।
+    संयुक्त राज्य अमेरिका के सबसे बड़े स्कूल जिलों में K-12 कंप्यूटर विज्ञान पाठ्यक्रम
+    का अग्रणी प्रदाता, Code.org वार्षिक [ऑवर ऑफ़ कोड] (%{hour_url}) अभियान का भी आयोजन
+    करता है, जिसमें दुनिया के 15% से अधिक छात्र शामिल होते हैं। Code.org को Microsoft,
+    Amazon, Google और [कई अन्य] सहित उदार दानदाताओं द्वारा समर्थित किया जाता है.%{others_url}
+  about_us_page_section_title_1: Code.org पर 80 मिलियन से अधिक छात्र और 2 मिलियन शिक्षक
+  about_us_page_statistic_figcaption: 2021-2022 स्कूल वर्ष से Code.org की भागीदारी।
+    [अलग-अलग डेटा देखें.] ()%{data_url}
+  about_us_page_statistic_description: Code.org उन सभी पृष्ठभूमियों के छात्रों तक
+    पहुँचकर कंप्यूटर विज्ञान में विविधता बढ़ाता है जहाँ वे हैं — उनके कौशल स्तर पर,
+    उनके स्कूलों में, और उन तरीकों से जो उन्हें सीखते रहने के लिए प्रेरित करते हैं।
+    Code.org पर अधिकांश छात्र ऐसे छात्र समूहों से हैं जिनका कंप्यूटर विज्ञान में ऐतिहासिक
+    रूप से कम प्रतिनिधित्व है। कंप्यूटर विज्ञान में बढ़ती विविधता हमारे काम के लिए
+    मूलभूत है, और [हम आपको हमारे प्रयासों के बारे में और अधिक पढ़ने के लिए प्रोत्साहित
+    करते हैं] ().%{diversity_url}
+  about_us_page_section_title_2: समाचार में Code.org
+  about_us_page_section_news_description: सभी पिछली [समाचार और घोषणाएं] देखें ()%{news_url}
+  about_us_page_section_table: हमारे लक्ष्य और मैट्रिक्स
+  about_us_page_section_table_header_1: Code.org लक्ष्य
+  about_us_page_section_table_header_2: उपलब्धियां
+  abous_page_section_table_cell_1_1: सीएस में विविधता में सुधार करें* (अमेरिकी छात्र)
+    *
+  abous_page_section_table_cell_1_2: Code.org के 45% छात्र युवा महिलाएं हैं, 50% हाशिए
+    पर रहने वाले नस्लीय और जातीय समूहों के छात्र हैं, और 46% अमेरिकी छात्र उच्च आवश्यकता
+    वाले स्कूलों में हैं। [विविधता के प्रति हमारे दृष्टिकोण] के बारे में और पढ़ें.
+    ()%{diversity_url}
+  about_page_section_table_cell_2_1: छात्रों को प्रेरित करें
+  about_page_section_table_cell_2_2: दसियों लाख लोगों ने [ऑवर ऑफ कोड] (%{hour_url})
+    को आजमाया है। (426,370,561 ने सेवा की। 49% महिला)
+  about_page_section_table_cell_3_1: कक्षाओं तक पहुँचें
+  about_page_section_table_cell_3_2: 591,636 शिक्षकों ने [कोड स्टूडियो] (%{code_studio_url})
+    पर हमारे परिचय पाठ्यक्रमों को पढ़ाने के लिए साइन अप किया है और 19,177,297 छात्र
+    नामांकित हैं।
+  about_page_section_table_cell_4_1: नए सीएस शिक्षकों को तैयार करें
+  about_page_section_table_cell_4_2: हमने K-12 ग्रेड में CS को पढ़ाने के लिए 106,000
+    से अधिक नए शिक्षकों को तैयार किया है। हमारे [पेशेवर शिक्षण कार्यक्रमों] के बारे
+    में जानें. ()%{learning_programs_url}
+  about_page_section_table_cell_5_1: स्कूल जिला पाठ्यक्रम बदलें
+  about_page_section_table_cell_5_2: हमने [180+ सबसे बड़े स्कूल जिलों] (%{schoold_disctrict_url})
+    और 60 क्षेत्रीय भागीदारों के साथ साझेदारी की है, ताकि [स्कूल पाठ्यक्रम में सीएस
+    जोड़ें] ()।%{cs_curriculum_url}[क्षेत्रीय भागीदार बनने के बारे में जानें.] ()%{regional_partner_url}
+  about_page_section_table_cell_6_1: CS का समर्थन करने के लिए नीतियां सेट करें
+  about_page_section_table_cell_6_2: "[50 अमेरिकी राज्यों में नीतियां बदली गई हैं]
+    (%{states_url}) सीएस शिक्षा मानकों को स्थापित करने, सीएस पाठ्यक्रमों को हाई स्कूल
+    ग्रेजुएशन में गिनने के लिए, आदि [(विवरण)] (%{details_url})"
+  about_page_section_table_cell_7_1: वैश्विक हो जाओ
+  about_page_section_table_cell_7_2: हमारे पाठ्यक्रम 67 से अधिक भाषाओं में उपलब्ध
+    हैं, जिनका उपयोग 180+ देशों में किया जाता है।
+  about_page_section_table_under_label: 'स्रोत: कोड स्टूडियो गतिविधि और [भाग लेने
+    वाले शिक्षकों के सर्वेक्षण] ()%{educators_url}'
+  about_page_section_title_3: अधिक जानकारी, इतिहास और दर्शन
+  about_page_section_more_description_1: '2013 में, Code.org को जुड़वां भाइयों [Hadi](%{hadi_url})
+    और [अली पार्टोवी] (%{partovi_url}) द्वारा कंप्यूटर विज्ञान को बढ़ावा देने के लिए
+    लॉन्च किया गया था। [video]%{video_url}YouTube पर यह वीडियो एक दिन के लिए #1 बन
+    गया और 15,000 स्कूलों ने मदद के लिए हमसे संपर्क किया। तब से, हमने दुनिया भर में
+    एक आंदोलन का समर्थन करने वाले एक पूर्ण संगठन का निर्माण करने के लिए स्वयंसेवकों
+    के बूटस्ट्रैप्ड स्टाफ़ से विस्तार किया है। हमारा मानना है कि कंप्यूटर विज्ञान
+    की गुणवत्तापूर्ण शिक्षा हर बच्चे के लिए उपलब्ध होनी चाहिए, न कि केवल कुछ भाग्यशाली
+    बच्चों के लिए।'
+  about_page_section_more_description_2: 'अपने लक्ष्य का समर्थन करने के लिए, हम शिक्षा
+    के दायरे में काम करते हैं: अपने स्वयं के पाठ्यक्रम तैयार करना या दूसरों के साथ
+    साझेदारी करना, शिक्षकों को प्रशिक्षित करना, बड़े स्कूल जिलों के साथ साझेदारी करना,
+    सरकारी नीतियों को बदलने में मदद करना, साझेदारी के माध्यम से अंतरराष्ट्रीय स्तर
+    पर विस्तार करना और रूढ़ियों को तोड़ने के लिए मार्केटिंग करना।'
+  about_page_section_more_description_3: हमारा काम [दशकों के प्रयासों, अनगिनत संगठनों
+    और व्यक्तियों द्वारा] (%{efforts_url}) पर आधारित है, जिन्होंने कंप्यूटर विज्ञान
+    शिक्षा को स्थापित करने, निधि देने और फैलाने में मदद की है। हम व्यापक कंप्यूटर
+    विज्ञान शिक्षा समुदाय की अथक मदद से लाभ उठाने के लिए आभारी हैं, और [हम उन सभी
+    भागीदारों और व्यक्तियों को धन्यवाद देते हैं जिन्होंने वर्षों से हमारे प्रभाव का
+    समर्थन किया है] ())।%{partners_url}
+  about_page_section_more_list_1: "[Code.org 2021 वार्षिक रिपोर्ट] (%{report_url})
+    (पिछली रिपोर्ट: [2020](%{past_url_1}), [2019](%{past_url_2}), (), [2018](%{past_url_3}),
+    [2017](%{past_url_4} [2016]%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7})"
+  about_page_section_more_list_2: "[हमारे मूल मूल्य और मैसेजिंग दिशानिर्देश] (%{core_url})"
+  about_page_section_more_list_3: "[हमारा पाठ्यक्रम और शिक्षाशास्त्र दर्शन] ()%{curriculum_url}"
+  about_page_section_more_list_4: "[TEDx हमारे संस्थापक हादी पार्टोवी की बात है कि
+    कंप्यूटर विज्ञान सभी के लिए क्यों है (वीडियो)] ()%{tedx_url}"
+  about_page_section_title_4: विभाजित दुनिया में एक एकीकृत दृष्टिकोण
+  about_page_section_specific_title_1: विभाजित दुनिया में एक एकीकृत दृष्टिकोण
+  about_page_section_specific_title_2: सुलभता के प्रति हमारी प्रतिबद्धता
+  about_page_section_specific_title_3: मुफ्त पाठ्यक्रम और ओपन सोर्स टेक्नोलॉजी का
+    हमारी प्रतिबद्धता है
+  about_page_section_specific_title_4: Code.org एडवोकेसी कोएलिशन
+  about_page_section_specific_title_5: K-12 कंप्यूटर साइंस फ्रेमवर्क
+  about_page_section_specific_title_6: Code.org दानदाता
+  about_page_section_specific_title_7: हमें फॉलो करें
+  about_page_section_specific_title_8: Code.org की अंतर्राष्ट्रीय पहुंच
+  about_page_section_specific_description_1: K-12 कंप्यूटर विज्ञान आंदोलन में Code.org
+    की वैश्विक भूमिका केवल इसलिए संभव है क्योंकि हम विविध और अक्सर विभाजित हितधारकों
+    के बीच एक एकीकृत दृष्टिकोण का उपयोग करते हैं। बढ़ते ध्रुवीकरण के समय, छात्रों
+    के लिए अवसरों को बढ़ाने का विचार राजनीतिक स्पेक्ट्रम के लोगों को एकजुट करता है।
+    Code.org की टीम के सदस्यों, छात्रों, शिक्षकों और समर्थकों के दृष्टिकोण विविध और
+    अलग-अलग हैं, और हमारे मिशन में उन सभी का स्वागत है। [और पढ़ें.] ()%{read_more_url}
+  about_page_section_specific_description_2: Code.org का मानना है कि कंप्यूटर विज्ञान
+    सभी छात्रों के लिए मूलभूत है और हम अपने संगठनात्मक क्षेत्र में समानता, पहुंच और
+    अवसर के लिए प्रतिबद्ध हैं [values.](%{values_url}) इस लक्ष्य को प्राप्त करने के
+    लिए, हम विकलांग छात्रों और शिक्षकों की समावेशन और पूर्ण भागीदारी को रोकने वाली
+    बाधाओं को पहचानने और उन्हें दूर करने के लिए काम करते हैं। हमारे प्रयासों के बारे
+    में अधिक जानने के लिए, हमारा [एक्सेसिबिलिटी स्टेटमेंट] देखें. ()%{accessibility_url}
+  about_page_section_specific_description_3: हमारे द्वारा लिखे गए सभी पाठ्यचर्या संसाधन
+    और ट्यूटोरियल हमेशा के लिए उपयोग करने के लिए स्वतंत्र होंगे और [क्रिएटिव कॉमन्स]
+    (%{commons_url}) लाइसेंस के तहत खुले तौर पर लाइसेंस प्राप्त करेंगे, जिससे अन्य
+    लोग गैर-वाणिज्यिक उद्देश्यों के लिए व्युत्पन्न शिक्षा संसाधन बना सकेंगे। यदि आप
+    व्यावसायिक उद्देश्यों के लिए हमारी सामग्री को लाइसेंस देने में रुचि रखते हैं,
+    तो [हमसे संपर्क करें] ().%{contact_us_url}हमारे पाठ्यक्रमों का अनुवाद दुनिया भर
+    में उपयोग के लिए या विभिन्न भाषाओं के वक्ताओं द्वारा किया जाता है। हमारी तकनीक
+    को [ओपन सोर्स प्रोजेक्ट] के रूप में विकसित किया गया है. (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org एडवोकेसी गठबंधन] (%{advocacy_url})
+    निगमों और गैर-लाभकारी संगठनों का एक द्विदलीय गठबंधन है जो K-12 कंप्यूटर विज्ञान
+    तक पहुंच बढ़ाने और बनाए रखने और क्षेत्र में भागीदारी और विविधता को व्यापक बनाने
+    के लिए अमेरिकी संघीय और राज्य नीतियों को स्थापित करने में मदद करने के लिए मिलकर
+    काम करता है। हम K-12 कंप्यूटर विज्ञान तक पहुंच बढ़ाने और उसमें भागीदारी का समर्थन
+    करने वाले [रिपब्लिकन और डेमोक्रेटिक राजनीतिक नेताओं] (%{leaders_url}) को एक साथ
+    लाते हैं।"
+  about_page_section_specific_description_5: Code.org संचालन समिति का एक सदस्य है
+    जिसने [K-12 कंप्यूटर साइंस फ्रेमवर्क] (%{framework_url}) को स्थापित करने में मदद
+    की - जो कंप्यूटर विज्ञान शिक्षा को लागू करने वाले राज्यों, जिलों और संगठनों के
+    लिए एक उच्च-स्तरीय मार्गदर्शिका है। फ्रेमवर्क ने सैकड़ों शिक्षाविदों, K-12 शिक्षकों,
+    सॉफ्टवेयर कंपनियों, गैर-लाभकारी संस्थाओं और राज्यों का समर्थन हासिल किया है।
+  about_page_section_specific_description_6: Code.org IRS फॉर्म 990 के लिए [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), (), [2017](%{irs_url_4}), [2018](%{irs_url_5}
+    [2019]%{irs_url_6}), [2020](%{irs_url_7}), और [2021]().%{irs_url_8}[दान नीति.]
+    (%{donation_policy_url})
+  about_page_section_specific_description_7: "[स्टेटस अपडेट प्राप्त करने के लिए साइन
+    अप करें] (%{sign_up_url}) K-12 कंप्यूटर विज्ञान आंदोलन में प्रगति के बारे में
+    और Code.org के काम के बारे में। या सोशल मीडिया पर Code.org को फ़ॉलो करें:"
+  about_page_section_specific_description_8: हमारी वेबसाइट का 40% से अधिक ट्रैफ़िक
+    संयुक्त राज्य अमेरिका के बाहर से आता है और यह संख्या लगातार बढ़ रही है। कंप्यूटर
+    विज्ञान तक वैश्विक पहुंच बढ़ाने के लिए, हमारी टीम [100 से अधिक अंतर्राष्ट्रीय
+    भागीदारों] (%{partners_url}) के साथ मिलकर काम करती है, जिससे उन्हें ऑवर ऑफ़ कोड
+    को बढ़ावा देने, नीति में बदलाव की वकालत करने और शिक्षकों को प्रशिक्षित करने में
+    मदद मिलती है। हम दुनिया भर के शिक्षा मंत्रालयों के साथ साझेदारी करके और आर्थिक
+    सहयोग और विकास संगठन और संयुक्त राष्ट्र शैक्षिक, वैज्ञानिक और सांस्कृतिक संगठन
+    जैसे अंतर्राष्ट्रीय संगठनों के साथ काम करके कंप्यूटर विज्ञान को अंतर्राष्ट्रीय
+    शिक्षा विमर्श का हिस्सा बना रहे हैं।
+  about_page_section_donors_description_1: Code.org® एक पंजीकृत सार्वजनिक 501c3 गैर-लाभकारी
+    संस्था है, जिसे आम जनता का समर्थन प्राप्त है। हमारे दृष्टिकोण का समर्थन करने वाले
+    [व्यक्तियों और संगठनों] () से हमें मिले उदार समर्थन के लिए हम आभारी हैं.%{individuals_url}
+  about_page_section_donors_description_2: कोड उपलब्धियां (ऊपर) मजबूत परिणामों में
+    उन डॉलर का लाभ उठाने की हमारी क्षमता को प्रदर्शित करती हैं। लेकिन हमारी गैर-लाभकारी
+    महत्वाकांक्षा को देखते हुए कि हर स्कूल में हर बच्चे की कंप्यूटर विज्ञान तक पहुंच
+    होनी चाहिए — आज की डिजिटल दुनिया में साक्षर नागरिक बनने के लिए और करियर के रूप
+    में सीएस की खोज में उनकी रुचियों का परीक्षण करने के लिए — हमें एक धन उगाहने वाले
+    लक्ष्य को पूरा करने के लिए एक लंबा रास्ता तय करना है जो उस दृष्टिकोण का समर्थन
+    करेगा।
+  about_page_donors_link_1: दान करें
+  about_page_donors_link_2: "[दानदाताओं की हमारी सूची देखें] ()%{donors_url}"
   language_code:
     ar: अरबी
     az: आज़रबाइजानी

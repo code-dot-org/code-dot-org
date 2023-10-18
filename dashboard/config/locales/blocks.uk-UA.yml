@@ -2169,6 +2169,10 @@ uk:
             '"when"': коли
             '"while"': поки
         text: "{CONDITION} {SPRITE} клацнули"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}говорить{TEXT1}протягом{NUM}секунд"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}думає{TEXT1}протягом{NUM}секунд"
       gamelab_spriteThink_fables4:
         options:
           THOUGHT:
@@ -2252,6 +2256,14 @@ uk:
         text: |-
           якщо {NUM}% ймовірність
           {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': дуже низька
+            '90': дуже висока
+        text: |2-
+           {NUM} ймовірність
+           {STATEMENT}
       gamelab_xLocationOf:
         text: x координата {SPRITE}
       gamelab_yLocationOf:

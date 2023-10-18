@@ -4,6 +4,12 @@ es-MX:
     blocks:
       AmysBlocks_addTarget:
         text: "{TARGET} {OPT} {SPRITE} "
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"too much"': demasiado
+            '"just right"': suficiente
+            '"too little"': muy poco
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -1369,15 +1375,15 @@ es-MX:
             "'sound://category_nature/summer_night_loop.mp3'": noche de verano
             "'sound://category_background/ocean_waves.mp3'": olas
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": olas en la playa
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbuja
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": gato
             "'sound://category_animals/cow.mp3'": vaca
             "'sound://category_animals/pig.mp3'": cerdo
             "'sound://category_animals/sheep.mp3'": oveja
-            "'sound://category_animals/goat.mp3'": Cabra
+            "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/chicken.mp3'": gallina
-            "'sound://category_animals/rooster.mp3'": rejilla
+            "'sound://category_animals/rooster.mp3'": gallo
             "'sound://category_animals/elephant.mp3'": elefante
             "'sound://category_animals/dolphin.mp3'": delfín
             "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
@@ -1399,7 +1405,7 @@ es-MX:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": corneta de aire
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
             "'sound://category_sports/Crowd_Chant_SFX.mp3'": cántico
             "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
@@ -1745,6 +1751,8 @@ es-MX:
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatorio
+      Mikelab_destroy:
+        text: eliminar {SPRITE}
       Mikelab_getNext:
         text: obtener siguiente objeto
       Mikelab_getProp:
@@ -2171,7 +2179,7 @@ es-MX:
             '"sound://category_background/inside_plane.mp3"': Zumbido
             '"sound://category_loops/red_flag_loop1.mp3"': Misión
             '"sound://category_nature/summer_night_loop.mp3"': Noche
-            '"sound://category_background/ocean_waves.mp3"': océano
+            '"sound://category_background/ocean_waves.mp3"': mar
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Lluvioso
             '"sound://category_background/rainforest_ambient_sound.mp3"': Bosque lluvioso
             '"sound://category_background/repitition.mp3"': Montar
@@ -2631,6 +2639,16 @@ es-MX:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      ecosystems_catchMe:
+        text: atrapar {THIS}
+      ecosystems_eat:
+        text: comer {THIS}
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"too much"': demasiado
+            '"just right"': suficiente
+            '"too little"': muy poco
       ecosystems_int10:
         text: "{VALUE}"
         options:
@@ -2645,6 +2663,18 @@ es-MX:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+            "{x1:0, x2:400, y1:150, y2:250}": Centro
+            "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+            "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
       storylab_clearHeadings:
         text: eliminar títulos
       storylab_printText:

@@ -26,7 +26,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     user.reload
     assert_response :ok
     assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
-    assert_not_empty user.child_account_compliance_state_last_updated
+    refute_empty user.child_account_compliance_state_last_updated
   end
 
   test "making the same request twice is ok and email is sent once" do
@@ -104,6 +104,17 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "if a user enters an invalid email, it should return a 400" do
+    user = create(:young_student, :without_parent_permission)
+    sign_in user
+
+    post '/policy_compliance/child_account_consent', params:
+      {
+        'parent-email': 'bademail',
+      }
+    assert_response :bad_request
+  end
+
   test "should update user and send an email to the parent upon creating the request" do
     user = create(:young_student, :without_parent_permission
 )
@@ -117,7 +128,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
       assert_redirected_to lockout_path
       user.reload
       assert_equal Policies::ChildAccount::ComplianceState::REQUEST_SENT, user.child_account_compliance_state
-      assert_not_empty user.child_account_compliance_state_last_updated
+      refute_empty user.child_account_compliance_state_last_updated
     end
   end
 

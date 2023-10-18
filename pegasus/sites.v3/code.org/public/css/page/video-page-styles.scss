@@ -1,0 +1,130 @@
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.hero-banner-basic {
+  &.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(96deg, #438477 42.78%, #1BA785 101.66%);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/banners/banner-bg-sharp-woven.png');
+      background-repeat: repeat;
+      background-size: contain;
+      z-index: 2;
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  .text-wrapper {
+    width: 54%;
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    width: 33%;
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.carousel-wrapper {
+  padding-bottom: 0;
+
+  @media (max-width: 1279px) {
+    overflow: hidden;
+  }
+}
+
+.carousel {
+
+  .video-wrapper {
+    min-width: 18.75rem;
+    max-width: 26.25rem;
+    margin: 0 auto;
+    display: contents;
+  }
+
+  @media (min-width: 640px) {
+    position: relative;
+
+    .slides {
+      width: 300%;
+      height: 26rem;
+      display: flex;
+    }
+
+    .slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      height: 17.25rem;
+    }
+
+    .video-wrapper {
+      min-width: 14.3rem;
+    }
+  }
+}
+
+.video-series {
+  margin: 0 auto;
+}
+
+.thumbnail-wrapper .thumbnail-image {
+  height: 14rem;
+}
+
+.video-wrapper--one-col img {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .slides {
+    height: 15rem !important;
+    display: flex;
+  }
+
+  .thumbnail-wrapper .thumbnail-image {
+    height: 100%;
+  }
+
+  .carousel-wrapper .pagination {
+    margin-top: 1rem;
+  }
+}

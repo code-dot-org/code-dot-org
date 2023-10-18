@@ -224,7 +224,7 @@ ro:
           description_short: Învață să programezi droizi si creează-ți propriul joc Star Wars într-o galaxie foarte îndepărtată.
           student_description: Învață să programezi droizi si creează-ți propriul joc Star Wars într-o galaxie foarte îndepărtată.
         mc:
-          title: Ora de Programare Minecraft
+          title: Minecraft Adventurer
           description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex intr-o aventura in acest univers Minecraft.
           description_short: Exploreaza o lume Minecraft prin cod.
           student_description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex intr-o aventura in acest univers Minecraft.
@@ -3350,6 +3350,7 @@ ro:
         self-paced-pl-csp4-2022: {}
         csa9-2022: {}
         csa-pl-standalone-code-2022: {}
+        csc-ecosystems: {}
         dlp-csd-overview-2022: {}
         dlp-csd-mod1-2022: {}
         dlp-csd-mod2-2022: {}
@@ -4294,3 +4295,23 @@ ro:
         vpl-csd-2023-m6: {}
         vpl-csd-2023-m7: {}
         vpl-csd-2023-m8: {}
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Codul nostru de Etică IA
+        draft-hoc-dp: {}
+        genai-temp: {}
+        virtual-pl-csp-summer-day1-2024: {}
+        virtual-pl-csa-summer-2024-day1: {}
+        virtual-pl-csp-summer-day2: {}
+        virtual-pl-csp-summer-day3: {}
+        virtual-pl-csp-summer-day4: {}
+        virtual-pl-csp-summer-day5: {}
+        virtual-pl-csa-summer-day2: {}
+        virtual-pl-csa-summer-day3: {}
+        virtual-pl-csa-summer-day4: {}
+        virtual-pl-csa-summer-day5: {}
+        virtual-pl-csa-summer-day1: {}
+        virtual-pl-csp-summer-day1: {}
+        csa-postap-se-and-computer-vision-2023: {}
+        draft-hoc-dp-2: {}

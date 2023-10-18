@@ -36,6 +36,10 @@ fr:
   africa_campaign_date_full: Du 1er octobre au 18 décembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
+  hoc2023_header: Créativité grâce à l'IA
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Qu'allez-vous créer ?
+  hoc2023_social_creativity_with_ai_desc: Utilisez l'informatique pour explorer et
+    en apprendre davantage sur l'IA !
   hoc2022_header: Explore, joue, crée !
   social_hoc2022_explore_play_create: Utilisez l'informatique pour découvrir, jouer
     et créer !
@@ -192,6 +196,34 @@ fr:
     qu'un nouveau catalogue de programmes et une nouvelle page d'enseignement pour
     vous aider à tout trouver !
   in_partnership_with: En partenariat avec
+  shop_code_dot_org_heading: Achetez Code.org
+  shop_code_dot_org_desc: Soutenez notre travail et portez le mouvement avec fierté.
+    Nos chapeaux ont également été portés par le président Obama et par des célébrités.
+  spread_the_word_heading: Fais passer le mot
+  spread_the_word_desc: Amplifiez notre impact en partageant Code.org avec votre réseau.
+    Des réseaux sociaux aux mises à jour par e-mail, découvrez comment vous pouvez
+    nous aider à toucher un plus grand nombre d'enseignants, d'étudiants et de défenseurs
+    des droits.
+  follow_us_heading: Suivez-nous sur les réseaux sociaux
+  follow_us_desc: Restez à jour avec nous sur les réseaux sociaux et partagez nos
+    publications avec votre réseau pour rester informé et contribuer à la sensibilisation.
+  facebook: Pseudoloc-Ƒàçéƀôôķ
+  twitter: Pseudoloc-Ţŵîţţéŕ
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Pseudoloc-Ţàƀļéţ
+  device_laptop: Ordinateur portable
+  device_desktop_computer: Ordinateur de bureau
+  device_mobile_device: Appareil mobile
+  subscribe_to_emails_heading: Abonnez-vous aux e-mails
+  subscribe_to_emails_desc: Découvrez ce qui se passe sur Code.org et dans le domaine
+    de l'enseignement de l'informatique grâce à des mises à jour trimestrielles via
+    notre liste de diffusion.
+  subscribe_to_emails_intl: Abonnez-vous aux mises à jour internationales
+  promote_code_dot_org_heading: Promouvoir Code.org
+  promote_code_dot_org_desc: Faites la promotion de l'informatique dans votre région
+    à l'aide de statistiques, de citations et de vidéos.
   afe_partnership_logo_alt: Logo Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer est un programme complet de
     l'enfance à la carrière qui vise à inspirer, éduquer et former les enfants et
@@ -201,18 +233,57 @@ fr:
   grade_level_label_elementary: École primaire
   grade_level_label_middle: École intermédiaire
   grade_level_label_high: Lycée
+  curricula_title_elementary: Programmes des écoles primaires
+  curricula_desc_elementary: Parcourez les cours et activités amusants et gratuits
+    qui vous invitent à explorer l'informatique avec vos élèves du primaire.
+  curricula_title_middle: Programmes d'études secondaires
+  curricula_desc_middle: Parcourez les offres intéressantes qui vous permettent, à
+    vous et à vos collégiens, d'explorer l'informatique ensemble.
+  curricula_title_high: Programmes d'études secondaires
+  curricula_desc_high: Parcourez les cours et activités captivants qui vous invitent,
+    vous et vos élèves du secondaire, à approfondir vos connaissances en informatique.
+  for_administrators_heading: Pour les administrateurs
+  for_administrators_desc: Rejoignez les milliers d'écoles qui ont déjà intégré l'informatique
+    à leurs programmes.
+  for_parents_heading: Pour les parents
+  for_parents_desc: Vous pouvez encourager l'école de votre élève à proposer ou à
+    développer l'enseignement de l'informatique.
+  for_educators_heading: Pour les enseignants
+  for_educators_desc: Commencez à enseigner dès aujourd'hui, aucune expérience en
+    informatique n'est nécessaire, grâce à nos ateliers de formation professionnelle.
   students_label: Élèves
   teachers_label: Enseignants
+  educators_label: Pseudoloc-Éðûçàţôŕš
+  companies_label: Entreprises
+  districts_label: Districts
+  school_assemblies_label: Assemblées scolaires
+  parents_label: Pseudoloc-Þàŕéñţš
+  public_officials_label: Fonctionnaires publics
+  volunteers_label: Volontaires
+  virtual_events_label: Évènements virtuels
   teacher_label_csf: Professeur de base de CS
   teacher_label_csd: Enseignant de CS Discoveries
   teacher_label_csp: Professeur de principes CS
   teacher_label_csc: Professeur CS Connections
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Pseudoloc-Ţéàçĥéŕ Ƒôŕûɱ
+  teacher_forum_desc: Visitez le forum des enseignants de l'Heure de code pour obtenir
+    des conseils, des idées et du soutien de la part d'autres éducateurs.
   required_materials: 'Matériaux requis :'
   optional_materials: 'Matériaux optionnels :'
+  call_to_action_hold_an_event: Organisez un événement
+  call_to_action_register_event: Enregistrez votre événement
+  call_to_action_select_activity: Sélectionnez une activité
+  call_to_action_start_activity: Commencer une activité
+  call_to_action_get_certificates: Obtenir des certificats
+  call_to_action_go_beyond_hoc: Dépassez l'heure de code
+  call_to_action_view_promo_resources: Afficher les ressources promotionnelles
   call_to_action_learn_more: En savoir plus
   call_to_action_watch_now: Regarder maintenant
   call_to_action_try_activity: Essayes une activité
+  call_to_action_try_activities: Essayez les activités
+  call_to_action_explore_activities: Explorez les activités
+  call_to_action_explore_ai: Découvrez l'IA
   call_to_action_explore_unit: Explorez l'unité
   call_to_action_explore_curriculum: Explorez le programme
   call_to_action_explore_curriculum_options: Explorez les options de programme
@@ -227,6 +298,15 @@ fr:
   call_to_action_explore_choice_level: Découvrez un exemple de niveau de choix
   call_to_action_explore_collection: Découvrez la collection
   call_to_action_explore_unplugged_lesson: Découvrez les leçons déconnectées
+  call_to_action_explore_csf: Découvrez CS Fundamentals
+  call_to_action_explore_csd: Découvrez CS Discoveries
+  call_to_action_explore_csp: Découvrez les principes du CS
+  call_to_action_explore_csc: Découvrez CS Connections
+  call_to_action_explore_csa: Découvrez AP® Computer Science A
+  call_to_action_explore_csa_short: Découvrez AP® CSA
+  call_to_action_explore_maker: Découvrez les programmes de formation de Maker
+  call_to_action_explore_hoc: Découvrez les didacticiels Hour of Code
+  call_to_action_explore_hoc_short: Découvrez Hour of Code
   call_to_action_try_app_lab: Essayez App Lab
   call_to_action_view_lesson_plan: Voir le plan de cours
   call_to_action_self_paced_pl: Commencez un apprentissage professionnel à votre rythme
@@ -250,12 +330,14 @@ fr:
   call_to_action_resources_tools: Essayer quelques outils de programmation
   call_to_action_sign_up_free: Inscrivez-vous gratuitement
   call_to_action_explore_ai_resources: Explorez les ressources en matière d'IA
+  call_to_action_explore_ai_curricula: Découvrez les programmes d'IA
   call_to_action_explore_curriculum_catalog: Explorez le catalogue des programmes
   call_to_action_see_full_curriculum_catalog: Consultez le catalogue complet des programmes
     d'études
   call_to_action_find_self_paced_modules: Trouvez des modules autodidactes
   call_to_action_join_teacher_forums: Adhérez à des forums dédiés aux enseignants
   call_to_action_explore_teacher_forums: Explorez les forums pour enseignants
+  call_to_action_explore_teacher_forum: Explorez le forum des enseignants
   call_to_action_explore_career_resources: Explorez les ressources professionnelles
   call_to_action_watch_videos: Regardez des vidéos
   call_to_action_download_posters: Téléchargez des affiches
@@ -270,6 +352,39 @@ fr:
   call_to_action_learn_about_approach: En savoir plus sur notre approche
   call_to_action_try_java_lab: Essayez Java Lab
   call_to_action_notify_available: Avertissez-moi dès que disponible
+  call_to_action_register_early_access: Inscrivez-vous pour un accès anticipé
+  call_to_action_open_positions: Afficher les postes vacants
+  call_to_action_explore_roles: Découvrez les postes vacants
+  call_to_action_get_guide: Téléchargez le guide
+  call_to_action_donate_to_cdo: Faire un don à Code.org
+  call_to_action_start_fundraiser: Lancer une collecte de fonds
+  call_to_action_view_donation_policy: Voir la politique de dons
+  call_to_action_view_donate_bitpay: Faites un don avec BitPay
+  call_to_action_make_a_donation: Faites un don
+  call_to_action_other_ways_to_give: Autres façons de donner
+  call_to_action_become_partner_usa: Devenez un partenaire des États-Unis
+  call_to_action_become_partner_intl: Devenez un partenaire international
+  call_to_action_become_a_volunteer: Devenez bénévole
+  call_to_action_start_translating: Commencez à traduire
+  call_to_action_learn_about_advocacy: En savoir plus sur notre plaidoyer
+  call_to_action_visit_store: Visitez le magasin
+  call_to_action_view_faqs: Afficher plus de FAQ
+  aria_label_call_to_action_hoc_how_to_educators: Consultez le guide pratique pour
+    les éducateurs
+  aria_label_call_to_action_hoc_how_to_companies: Consultez le guide pratique pour
+    les entreprises
+  aria_label_call_to_action_hoc_how_to_districts: Consultez le guide pratique pour
+    les districts
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Consultez le guide pratique
+    pour les assemblées scolaires
+  aria_label_call_to_action_hoc_how_to_parents: Consultez le guide pratique pour les
+    parents
+  aria_label_call_to_action_hoc_how_to_public_officials: Consultez le guide pratique
+    pour les agents publics
+  aria_label_call_to_action_hoc_how_to_volunteers: Consultez le guide pratique pour
+    les bénévoles
+  aria_label_call_to_action_hoc_how_to_virtual_events: Consultez le guide pratique
+    pour les événements virtuels
   aria_label_call_to_action_afe: En savoir plus sur Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Lancez le programme d'apprentissage professionnel
     Teaching Computer Science Fundamentals
@@ -380,8 +495,11 @@ fr:
   curriculum_name_csp: Principes de l'informatique
   curriculum_name_csc: Connexions en l'Informatique
   curriculum_name_csa: Sciences informatiques A
+  curriculum_name_csa_ai: Pseudoloc-Šôƒţŵàŕé Éñĝîñééŕîñĝ ⅋ Çôɱþûţéŕ Ṽîšîôñ
   curriculum_name_csc_02: Tout module du programme de connexion en informatique
   curriculum_name_ai: L’IA et l'apprentissage automatique
+  curriculum_name_artificial_intelligence: Intelligence artificielle (IA)
+  curriculum_name_maker: Créateur
   curriculum_name_maker_cp: Création d'applications avec des appareils (Circuit Playground)
   curriculum_name_maker_microbit: Création d'applications avec des appareils (micro:bit)
   curriculum_name_creating_apps_with_devices: Création d'applications avec des appareils
@@ -392,6 +510,8 @@ fr:
   curriculum_name_interactive_animations_games: Animations et jeux interactifs
   curriculum_name_design_process: Le processus de conception
   curriculum_name_data_society: Données et société
+  curriculum_desc_csf: Ensemble gratuit de programmes élémentaires qui initient les
+    élèves aux concepts fondamentaux de l'informatique.
   curriculum_desc_csf_express: Apprenez à créer des programmes informatiques, à développer
     vos compétences en résolution de problèmes et à relever des défis amusants ! Créez
     des jeux et des projets créatifs à partager avec vos amis, votre famille et vos
@@ -445,6 +565,27 @@ fr:
     dans l'informatique. Développez des programmes qui utilisent des entrées et des
     sorties matérielles. Il existe une version de cet appareil pour le micro:bit et
     le Circuit Playground.
+  curriculum_desc_csa: Initiez les étudiants au génie logiciel et à la conception
+    orientée objet pendant qu'ils apprennent le langage de programmation Java dans
+    ce programme gratuit pour AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: La formation des créateurs va encore plus loin dans le domaine
+    des STEM (science, technologie, ingénierie, mathématiques) en faisant appel à
+    l'expérience pratique et à la collaboration en classe pour aider à enseigner la
+    résolution de problèmes et la pensée critique.
+  curriculum_desc_maker_short: La formation Maker invite à l'expérience pratique et
+    à la collaboration en classe pour aider à enseigner la résolution de problèmes
+    et la pensée critique.
+  curriculum_desc_csd: Cours flexible, permettant à chaque unité d'être enseignée
+    seule ou combinée. Initie les étudiants à la création de sites Web, d'applications,
+    d'animations, de jeux et de systèmes informatiques physiques.
+  curriculum_desc_csp: Cours d'introduction au lycée gratuit, approuvé par AP® CSP,
+    qui initie les étudiants aux concepts fondamentaux de l'informatique.
+  curriculum_desc_csa_ai_long: 'Ce module post-AP CSA en deux chapitres offre aux
+    lycéens une expérience pratique des outils de développement logiciel professionnels,
+    notamment GitHub et GitHub Copilot, et leur donne les compétences pratiques nécessaires
+    pour développer un programme de vision par ordinateur. '
+  curriculum_desc_csa_ai_short: Ce module post-AP® CSA offre aux lycéens une expérience
+    pratique des outils de développement logiciel professionnels.
   collection_hardware: Concentrez-vous sur le matériel
   collection_hardware_desc: Permet aux étudiants d'utiliser des données et des appareils
     physiques pour résoudre des problèmes.
@@ -479,6 +620,7 @@ fr:
   module_label_professional_learning: 'Apprentissage professionnel :'
   module_label_languages: 'Langues prises en charge :'
   module_label_accessibility_features: 'Accessibilité :'
+  module_label_accessibility_features_full: 'Caractéristiques d''accessibilité :'
   module_label_educator_tool: Outil pédagogique
   module_label_educator_course: Cours pour éducateurs
   module_label_student_tool: Outil pour étudiants
@@ -486,6 +628,7 @@ fr:
   module_label_student_content_resources: Contenu et ressources
   module_label_new: Nouveau
   module_label_coming_soon: Prochainement
+  module_label_available_now: Disponible dès maintenant
   module_label_video_series: Séries de vidéos
   module_label_self_paced: Module à rythme automatique
   module_ages_5_10: 5-10
@@ -496,6 +639,8 @@ fr:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: Maternelle à Terminale
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6 à 10
   module_grade_9_12: 9-12
@@ -510,11 +655,14 @@ fr:
   module_grade_9_12_teachers: 'Enseignants du secondaire supérieur '
   module_level_beginner: Débutant
   module_level_intermediate: Intermédiaire
+  module_level_advanced: Pseudoloc-Àðṽàñçéð
   module_duration_45_mins: 45 minutes
+  module_duration_2_weeks: 2 semaines
   module_duration_1_hr: 1 heure
   module_duration_2_hrs: 2 heures
   module_duration_3_hrs: 3 heures
   module_duration_5_hrs: 5 heures
+  module_duration_5_hrs_plus: Plus de 5 heures
   module_duration_8_hrs: 8 heures
   module_duration_20_hrs: 20 heures
   module_duration_35_hrs: 35 heures
@@ -526,6 +674,7 @@ fr:
   module_duration_school_year: Année Scolaire
   module_duration_month_quarter: Mois ou trimestre
   module_duration_month_semester_year: Mois, semestre ou année
+  module_duration_varies: Varie
   module_prerequisites_none: Aucune
   module_prerequisites_maker_cp: Accès à un circuit de jeux
   module_prerequisites_maker_microbit: Accès à un micro:bit
@@ -594,6 +743,10 @@ fr:
   heading_java_lab: Labo Java
   heading_objects_first: Les objets d'abord
   heading_these_lessons_will: 'Ces leçons permettront de :'
+  heading_explore_curriculum_catalog: Découvrez tous nos cours dans le catalogue des
+    programmes
+  heading_csa_ai: Vous recherchez des choses à faire après l'examen AP® ?
+  heading_bring_cs_to_students: Mettre l'informatique à la portée des étudiants
   professional_learning_section_desc: Obtenez le soutien dont vous avez besoin pour
     vous préparer à enseigner. Les enseignants l'adorent, plus de 90 % d'entre eux
     le considèrent comme le meilleur développement professionnel de tous les temps !
@@ -628,6 +781,23 @@ fr:
     à toutes vos questions concernant le démarrage de l'enseignement avec Code.org.
     Vous pouvez également demander à d'autres enseignants de partager leur expérience
     sur nos forums d'enseignants.
+  subscribe_form_section_title: Abonnez-vous aux mises à jour
+  subscribe_form_section_desc_csa: Inscrivez-vous pour recevoir des e-mails mensuels
+    sur AP® Computer Science A de Code.org et recevoir des rappels, des conseils et
+    des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_desc_csc: Inscrivez-vous pour recevoir des e-mails mensuels
+    sur les connexions informatiques de Code.org et recevoir des rappels, des conseils
+    et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_desc_csd: Inscrivez-vous pour recevoir des courriels mensuels
+    sur les découvertes informatiques de Code.org et recevoir des rappels, des conseils
+    et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_desc_csf: Inscrivez-vous pour recevoir des courriels mensuels
+    sur les principes fondamentaux de l'informatique de Code.org et recevoir des rappels,
+    des conseils et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_desc_csp: Inscrivez-vous pour recevoir des e-mails mensuels
+    sur les principes informatiques de Code.org et recevoir des rappels, des conseils
+    et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_unsubscribe: Vous pouvez vous désinscrire à tout moment.
   blockchain_hero_heading: Comment fonctionne la blockchain
   blockchain_hero_desc: Plongez dans le monde de la blockchain avec « Comment fonctionne
     la blockchain », notre nouvelle série de vidéos et les leçons qui l'accompagnent !
@@ -734,6 +904,9 @@ fr:
     leçon est associée à une seule vidéo de la série, qui permet d'approfondir les
     concepts présentés dans les vidéos.
   ai_curriculum_btn_aria_label_04: Découvrez les leçons sur le fonctionnement de l'IA
+  ai_curriculum_grades_05: 'Niveaux scolaires : 9-12'
+  ai_curriculum_btn_aria_label_05: Explorez le module Génie logiciel et vision par
+    ordinateur
   ai_carousel_heading: 'Ce que les enseignants disent à propos de l''IA avec Code.org :'
   ai_carousel_quote_01: Cette leçon a également permis à mes élèves de constater qu'il
     existe un élément d'opinion dans les systèmes de classification. Plus tard, lorsque
@@ -866,11 +1039,20 @@ fr:
     l'évaluation des étudiants. Grâce à un riche mélange de théories, d'exemples pratiques
     et de ressources, il vise à donner aux enseignants les moyens de s'y retrouver
     dans le paysage de l'IA et d'améliorer les expériences d'apprentissage des étudiants.
+  ai_pl_101_resources_5: Guide pour garantir une approche responsable de l'IA
   ai_pl_101_video_desc_6: 'Apprenez-en davantage sur les nouvelles technologies à
     l''origine des grands changements en matière d''IA, avec deux nouvelles vidéos
     sur les grands modèles linguistiques (tels que ChatGPT) et l''IA générative. Découvrez
     comment ces nouvelles technologies fonctionnent directement auprès des experts :
     Mira Murati, directrice technique d''OpenAI, et Cristóbal Valenzuela, PDG de RunwayML.'
+  ai_pl_101_llm_slides_title: Invites de grands modèles linguistiques pour les enseignants
+  ai_pl_101_llm_slides_desc: Des outils pour obtenir le meilleur résultat possible
+    à partir de LLM tels que ChatGPT, du débutant au confirmé. Comprend des instructions
+    de démarrage pour ceux qui ne font que s'y plonger, ainsi que des outils avancés
+    pour ceux qui cherchent à maximiser leur potentiel.
+  ai_pl_101_resources_3: L'IA invite à transformer l'apprentissage des élèves
+  ai_pl_101_resources_section_title: D'autres façons d'en savoir plus sur l'IA
+  ai_pl_101_resources_guide: 'Guide d''accompagnement :'
   how_ai_works_hero_heading: Comment fonctionne l'IA
   how_ai_works_hero_desc: Plongez dans le monde de l'IA avec « Comment fonctionne
     l'IA », notre série de vidéos et les leçons qui l'accompagnent !
@@ -1236,21 +1418,19 @@ fr:
   teach_page_free_curriculum_desc: Nous souhaitons vous permettre d'introduire l'informatique
     dans votre école sans vous soucier du coût. C'est pour cela que nous nous engageons
     à proposer des programmes d'études toujours gratuits !
-  teach_page_free_curriculum_list_heading_01: Un programme attrayant à chaque niveau
-    d'étude
   teach_page_free_curriculum_list_desc_01: Programme d'études gratuit, flexible et
     amusant, proposé dans plus de 67 langues.
-  teach_page_free_curriculum_list_heading_02: Un programme flexible et innovant
   teach_page_free_curriculum_list_desc_02: Code.org vous offre tout, des programmes
     d'études d'une année entière aux activités par unité. De plus, nous actualisons
     nos programmes chaque année pour nous conformer aux bonnes pratiques et promouvoir
     les domaines d'intérêt, tout en créant de nouvelles offres pour enseigner les
     sujets les plus demandés du moment.
-  teach_page_free_curriculum_list_heading_03: Programme d'études structuré et conforme
-    aux normes nationales
   teach_page_free_curriculum_list_desc_03: Chaque programme est relié à au moins un
     ensemble de normes nationales, notamment le CSTA, les normes scientifiques de
     la prochaine génération et le Common Core.
+  teach_page_free_curriculum_list_desc_04: Des offres dans plus de 67 langues
+  teach_page_free_curriculum_list_desc_05: Corrété à au moins un ensemble de normes
+    nationales (y compris le CSTA, le NGSS et le Common Core)
   teach_page_free_curriculum_heading_02: 'Découvrez nos offres de programmes scolaires
     correspondant à différents niveaux scolaires :'
   teach_page_resources_heading: Des ressources qui vous accompagnent à chaque étape
@@ -1315,8 +1495,8 @@ fr:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Laboratoire d'applications
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Ateliers dirigés par un animateur,
+    modules à suivre à votre rythme
   csp_page_curriculum_glance_professional_languages: Anglais
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1445,8 +1625,8 @@ fr:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Laboratoire d'applications, Laboratoire de jeux,
     Laboratoire d'IA, Laboratoire Web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Ateliers dirigés par un animateur,
+    modules à suivre à votre rythme
   csd_page_curriculum_glance_professional_languages: Anglais
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1520,8 +1700,8 @@ fr:
     à ces fournitures.
   csd_page_faq_answer_04_06: Création d'applications avec des appareils (option A
     et option B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Option A : ensemble de terrains de jeu Circuit Playgrounds
+    pour la classe. Consultez [code.org/maker/circuitplayground] () pour plus de détails.%{url}'
   csd_page_faq_answer_04_08: 'Option B : ensemble d''appareils micro:bit pour la classe.
     Consultez [code.org/maker/microbit] (%{url}) pour plus de détails.'
   csd_page_faq_answer_04_09: fournitures de fabrication, telles que des boîtes à mouchoirs
@@ -1603,8 +1783,8 @@ fr:
     et design, Conception d'applications
   csf_page_curriculum_glance_devices: Ordinateur portable, Chromebook, tablette
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Ateliers dirigés par un animateur,
+    modules à suivre à votre rythme
   csf_page_curriculum_glance_languages: arabe, bahasa indonésien, catalan, chinois
     simplifié, chinois traditionnel, tchèque, français, allemand, hindi, italien,
     japonais, coréen, kannada, malais, marathi, mongol, polonais, portugais-BR, roumain,
@@ -1755,6 +1935,68 @@ fr:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Participez au financement de notre mission
+  donate_page_top_desc: Chaque don contribue à la mission de Code.org d'élargir l'accès
+    à l'enseignement de l'informatique. Nous vous proposons plusieurs façons de faire
+    un don et de faire une différence.
+  donate_page_fundraise_title: Collectez des fonds pour Code.org
+  donate_page_fundraise_desc: Aidez à collecter des fonds pour Code.org ! Chaque élève
+    de chaque école devrait avoir la possibilité d'apprendre l'informatique.
+  donate_page_other_ways_title: Autres façons de donner
+  donate_page_other_ways_desc: Explorez les différentes méthodes de contribution et
+    trouvez l'option qui vous convient le mieux. Chaque geste, petit ou grand, fait
+    avancer notre mission.
+  donate_page_501c3: Code.org est enregistré en tant qu'organisation publique à but
+    non lucratif 501 (c) (3). Les contributions à Code.org sont déductibles des impôts
+    dans la mesure permise par la loi. Le numéro d'identification fiscale de Code.org
+    est le 46-0858543.
+  donate_page_donation_policy_title: Comprendre notre politique en matière de dons
+  donate_page_donation_policy_desc: Découvrez comment nous gérons et répartissons
+    vos contributions.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Employee Match
+  donate_tabs_daf_direct_title: Faites un don via DAF Direct
+  donate_tabs_daf_direct_desc: Faites un don par le biais de votre fonds conseillé
+    par un donateur auprès de Fidelity Charitable, Schwab Charitable ou BNY Mellon
+    et faites votre recommandation de subvention à Code.org via le formulaire en ligne
+    de DAF Direct.
+  donate_tabs_amazon_title: Faites un don via Amazon
+  donate_tabs_amazon_desc: Faites un don directement en utilisant votre compte Amazon.
+    En quelques clics, contribuez facilement à la mission de Code.org et contribuez
+    à l'avenir de l'enseignement de l'informatique.
+  donate_tabs_bitpay_title: Faites un don avec Crypto via BitPay
+  donate_tabs_bitpay_desc: Profitez de l'avenir des dons grâce aux cryptomonnaies.
+    Grâce à BitPay, votre monnaie numérique peut directement soutenir les efforts
+    de Code.org pour développer l'enseignement de l'informatique.
+  help_page_top_heading: Comment pouvez-vous nous aider
+  help_page_top_desc: Soutenez notre mission qui consiste à rendre l'informatique
+    accessible à tous les enfants, partout dans le monde. Vos efforts nous aident
+    à inspirer les futurs innovateurs et à combler le fossé en matière d'enseignement
+    technologique.
+  help_page_top_subhead: Faites un don à Code.org
+  help_page_top_desc_02: Nous nous efforçons de donner à chaque élève la possibilité
+    d'apprendre l'informatique, à la fois en ligne ET dans les écoles, où nous établissons
+    des cours permanents et formons les enseignants. Pour chaque dollar que vous donnez,
+    un enfant est initié à l'informatique.
+  help_page_partners_heading: Devenez partenaire
+  help_page_partners_desc: Code.org travaille avec d'autres organisations à but non
+    lucratif en tant que partenaires pour aider à diffuser l'informatique de manière
+    locale et durable. Apprenez-en davantage sur notre programme.
+  help_page_volunteer_heading: Faites du bénévolat dans une salle de classe
+  help_page_volunteer_desc: Faites du bénévolat pour enseigner l'Heure de code ou
+    soyez conférencier invité dans une classe locale. Inscrivez-vous pour connaître
+    les opportunités près de chez vous.
+  help_page_translate_heading: Aidez-nous à traduire
+  help_page_translate_desc: Des bénévoles ont traduit nos tutoriels dans plus de 45
+    langues. Aidez-nous à continuer à développer nos tutoriels pour les étudiants
+    du monde entier !
+  help_page_speak_for_cs_heading: Exprimez-vous en faveur de l'enseignement de l'informatique
+  help_page_speak_for_cs_desc: Apprenez-en davantage sur le travail de plaidoyer de
+    Code.org aux États-Unis et sur les dix politiques que nous recommandons aux États
+    d'adopter pour faire de l'informatique une base fondamentale pour tous les étudiants.
+    Découvrez également comment vous pouvez apporter des changements dans votre État.
   hoc_live: Lévènement "Une heure de code" en direct
   hoc_live_sign_up_title: S'inscrire à "Une heure de Code" en direct
   hoc_live_learn_title: Apprenez avec L'Heure du code en direct
@@ -2196,6 +2438,13 @@ fr:
     le domaine informatique ?
   signup_email_preference_privacy: "(Consulter notre politique de confidentialité)"
   signup_email_preference_yes: Oui
+  signup_email_preference_yes_elementary: Oui - Envoyez-moi des mises à jour sur les
+    ressources des écoles primaires
+  signup_email_preference_yes_middle: Oui - Envoyez-moi des mises à jour sur les ressources
+    du collège
+  signup_email_preference_yes_high: Oui - Envoyez-moi des mises à jour sur les ressources
+    du lycée
+  signup_email_preference_yes_general: Oui - Envoyez-moi des mises à jour générales
   signup_email_preference_no: Non
   signup_email_preference_error: La préférence d'e-mail est requise
   signup_multiple_event_warning: Si vous hébergez plusieurs événements, veuillez soumettre
@@ -5873,11 +6122,11 @@ fr:
     dans une aventure à travers le monde de Minecraft.
   tutorial_minecraft-2016_longdescription: Contruit un jeu Minecraft. Crée tes propres
     versions de poulet, mouton, Creepers, zombies et plus encore.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un « Vocabulario Robot »
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Tutoriel Hour of Code avec Pixie
   tutorial_play_longdescription: Programme une histoire ou un jeu dans le Labo de
     jeux ! Fais bouger des animaux, des pirates, des zombies, des ninjas et beaucoup
@@ -13300,12 +13549,13 @@ fr:
   tutorial_googlename _longdescription: Choisissez un nom et donnez vie aux lettres
     du mot à l'aide d'un code. Choisissez un surnom, le nom d'un animal de compagnie,
     un animal, un sport, un lieu ou un loisir.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: La ville de Zillah est florissante et il
+    y a de la musique dans l'air. Selon la rumeur, le célèbre bot Gargantua est en
+    ligne et envoie les derniers Toxibots détruire la ville quartier par quartier.…Prenez
+    votre hoverboard cobot et préparez-vous à faire du groove, à bouger et à terminer
+    ce que vous avez commencé ! Les joueurs programment leurs hoverbots cobots pour
+    qu'ils changent de voie, évitent les obstacles et éliminent de nombreux Toxibots
+    dans ce jeu rythmé.
   tutorial_nasachspacejam_longdescription: Créez un système solaire vraiment incroyable !
     Apprenez-en davantage sur la musique, l'astronomie et le codage dans cette activité
     autoguidée (aucune expérience de codage n'est requise). Programmez des planètes
@@ -13939,6 +14189,145 @@ fr:
   all: Tous
   dont_know: Je ne sais pas
   language_label: Langue
+  before_hoc: Avant l'heure de code
+  day_of_hoc: Journée de l'heure de code
+  after_hoc: Après une heure de code
+  step_01: Étape 1
+  step_02: Étape 2
+  step_03: Étape 3
+  step_04: Étape 4
+  step_05: Étape 5
+  step_06: Étape 6
+  step_07: Étape 7
+  step_08: Étape 8
+  hoc_how_to_top_heading: Votre guide d'Hour of Code
+  hoc_how_to_top_desc: Guides pratiques personnalisés pour une expérience Hour of
+    Code optimale.
+  hoc_how_to_top_view_guide: Voir le guide pour
+  hoc_how_to_nav_main_aria_label: Choisissez un guide
+  hoc_how_to_nav_sidebar_aria_label: Navigation dans la barre latérale
+  hoc_how_to_educators_intro_heading: 'Comment planifier votre Heure de Code ?
+
+    '
+  hoc_how_to_educators_intro_desc: The Hour of Code est une introduction d'une heure
+    à l'informatique, à l'aide de didacticiels amusants pour montrer que tout le monde
+    peut en apprendre les bases. Cette année, nous propulsons Hour of Code vers de
+    nouveaux sommets en proposant des opportunités de codage qui incluent à la fois
+    des composants liés à l'intelligence artificielle (IA) et des composants non liés
+    à l'IA. Que vous ou vos étudiants soyez des codeurs expérimentés ou que vous partiez
+    tous pour votre toute première expédition informatique, cette Heure de code promet
+    un voyage extraordinaire.
+  hoc_how_to_faq_question_prerequisites: Quels sont les prérequis pour participer
+    à une heure de code ?
+  hoc_how_to_faq_answer_prerequisites: The Hour of Code est simple à exécuter, même
+    pour les débutants. Vous n'avez pas besoin d'expérience en informatique ou en
+    enseignement pour inciter les étudiants à explorer, créer et apprendre quelque
+    chose de nouveau.
+  hoc_how_to_faq_question_devices: De quels appareils ai-je besoin pour exécuter une
+    heure de code ?
+  hoc_how_to_faq_answer_devices_01: 'Appareils que vous pouvez utiliser :'
+  hoc_how_to_faq_answer_devices_02: Si le nombre d'appareils est limité ou indisponible,
+    essayez [programmation par paire] (%{pair_url}) ou explorez nos [activités débranchées]
+    (%{unplugged_url}) pour apprendre sans aucun appareil !
+  hoc_how_to_faq_question_volunteer: Qui peut se porter volontaire ?
+  hoc_how_to_faq_answer_volunteer: Toute personne passionnée par l'enseignement de
+    l'informatique et l'augmentation de la diversité technologique peut devenir bénévole !
+    Nous aimerions voir des bénévoles de tous horizons participer. L'Heure de code
+    propose une grande variété d'activités pour tous les âges et tous les niveaux
+    de compétence. Vous n'avez donc pas besoin d'être un expert en programmation pour
+    faire du bénévolat !
+  hoc_how_to_faq_question_full_hour: L'heure de code durera-t-elle une heure complète ?
+  hoc_how_to_faq_answer_full_hour: De nombreux étudiants pourront terminer leurs activités
+    en moins d'une heure, et c'est bon ! Les élèves peuvent continuer à apprendre
+    pendant que les autres élèves terminent leur activité.
+  hoc_how_to_faq_question_account: Les élèves doivent-ils utiliser un compte pour
+    se connecter ?
+  hoc_how_to_faq_answer_account: Aucune inscription ou connexion n'est requise pour
+    que les étudiants puissent essayer l'Heure de code. L'inscription à l'Heure de
+    Code ne crée PAS automatiquement un compte Code.org.
+  hoc_how_to_resources_heading_educators: Autres ressources de l'Heure de Code pour
+    les enseignants
+  hoc_how_to_resources_promo_heading: Ressources promotionnelles
+  hoc_how_to_resources_promo_desc: Trouvez toutes les ressources dont vous avez besoin
+    (imprimées et numériques) pour attirer l'attention sur votre heure de code.
+  hoc_how_to_resources_discover_heading: Découvrez les activités
+  hoc_how_to_resources_discover_desc: Découvrez une large sélection de didacticiels
+    d'une heure conçus pour tous les âges dans plus de 45 langues.
+  hoc_how_to_step_label_plan: Planifiez où et quand vous ferez votre heure de code
+  hoc_how_to_step_label_choose_activity: Choisissez votre activité
+  hoc_how_to_step_label_test_activity: Testez votre activité
+  hoc_how_to_step_label_register_event: Enregistrez votre événement
+  hoc_how_to_step_label_tell: Parlez-en à vos élèves, à votre école et à votre communauté
+  hoc_how_to_step_label_get_coding: Commencez à coder !
+  hoc_how_to_step_label_celebrate: Pseudoloc-Çéļéƀŕàţé
+  hoc_how_to_step_label_beyond_hoc: Au-delà de l'heure de code
+  hoc_how_to_step_beyond_hoc_subhead: Cela ne s'arrête pas là !
+  hoc_how_to_step_beyond_hoc_desc: L'informatique ne doit pas s'arrêter avec l'heure
+    de code ! Alors que 90 % des parents souhaitent que leur enfant apprenne l'informatique,
+    la plupart des écoles ne l'enseignent toujours pas. Apprenez comment introduire
+    le CS à l'école de votre enfant dès aujourd'hui.
+  hoc_how_to_step_01_educators_subhead: Sélectionnez l'heure et l'espace de l'événement
+    adaptés au nombre d'étudiants et d'appareils dont vous disposez.
+  hoc_how_to_step_01_educators_desc_01: Quels sont les espaces disponibles pour faire
+    votre heure de code ? Tenez compte des capacités technologiques de votre espace
+    et des types d'appareils sur lesquels vous vous attendez à ce que vos étudiants
+    travaillent. Les étudiants peuvent travailler sur des didacticiels sur un seul
+    appareil, utiliser à tour de rôle un appareil partagé ou essayer un didacticiel
+    ensemble sur un tableau blanc de classe. Il existe même des didacticiels débranchés
+    qui peuvent être complétés sans aucun appareil. Les options débranchées peuvent
+    être utilisées n'importe où, même à l'extérieur !
+  hoc_how_to_step_01_educators_desc_02: Des personnes du monde entier se joignent
+    à la célébration de l'Heure du code pendant la CS Education Week, au cours de
+    %{campaign_date} laquelle les derniers tutoriels et activités sont publiés. Mais
+    vous pouvez faire une heure de code n'importe quel jour de l'année !
+  hoc_how_to_step_02_educators_desc_01: Explorez les activités en fonction de l'âge,
+    de l'expérience, des intérêts et plus encore de votre groupe. Les étudiants ont
+    tendance à essayer des didacticiels autonomes, bien que de nombreuses activités
+    incluent des plans de cours destinés aux enseignants afin d'orienter la discussion
+    ou de prolonger l'activité.
+  hoc_how_to_step_02_educators_desc_02: Décidez à l'avance si vous souhaitez choisir
+    un didacticiel unique pour tous vos élèves ou laisser chaque enfant choisir le
+    sien.
+  hoc_how_to_step_02_educators_desc_03: Cette année, vous et vos élèves pouvez [tout
+    apprendre sur l'IA] (%ai_url) grâce à des didacticiels, à des plans de cours et
+    à notre nouvelle série de vidéos How AI Works.
+  hoc_how_to_step_03_educators_desc_01: Essayez vous-même le didacticiel avant d'entrer
+    en classe afin de pouvoir répondre aux questions !
+  hoc_how_to_step_03_educators_desc_02: Vous pouvez également tester les didacticiels
+    sur les ordinateurs ou appareils des étudiants pour vous assurer qu'ils prennent
+    en charge le son et la vidéo. Vous avez une faible bande passante ? Prévoyez de
+    diffuser des vidéos devant la classe, afin que chaque élève ne télécharge pas
+    ses propres vidéos.
+  hoc_how_to_step_03_educators_desc_03: Envisagez de fournir des écouteurs à votre
+    classe ou demandez aux élèves d'apporter les leurs, si le didacticiel que vous
+    choisissez fonctionne le mieux avec le son.
+  hoc_how_to_step_04_educators_desc_01: Lorsque vous inscrivez votre événement Heure
+    de code, vous recevrez des e-mails utiles contenant des nouvelles et des conseils
+    pour organiser une heure de code réussie. C'est aussi la façon dont vous pouvez
+    informer les bénévoles locaux que votre école participe. Les bénévoles sont une
+    excellente ressource et peuvent venir parler d'informatique à votre classe ou
+    aider vos élèves dans le cadre des activités de l'Heure de code.
+  hoc_how_to_step_05_educators_desc_01: Incitez vos élèves à participer à l'événement
+    en partageant des [vidéos inspirantes] (%{videos_url}) mettant en lumière des
+    personnes diverses et des manières créatives d'utiliser l'informatique dans le
+    monde réel.
+  hoc_how_to_step_05_educators_desc_02: Partagez vos plans d'Heure de code avec d'autres
+    professeurs qui voudront peut-être participer à la fête ! C'est également une
+    excellente occasion de contacter l'association parents-enseignants élèves de votre
+    école ou de publier des bulletins d'information destinés aux parents pour leur
+    faire savoir ce que leurs enfants apprennent.
+  hoc_how_to_step_06_educators_desc_01: Dirigez vos élèves vers l'activité, par exemple
+    en partageant le lien sur le tableau ou via le système de gestion de l'apprentissage
+    de votre classe. Vos élèves peuvent rencontrer des difficultés, ce n'est pas grave !
+    Apprendre à programmer, c'est comme apprendre une nouvelle langue ; vous ne le
+    maîtriserez pas tout de suite. Si vous ne connaissez pas la réponse, vous pouvez
+    la trouver ensemble.
+  hoc_how_to_step_07_educators_desc_01: 'N''oubliez pas de célébrer le succès ! Partagez
+    des photos et des vidéos de votre événement Hour of Code sur les réseaux sociaux.
+    Utilisez #HourOfCode et @codeorg pour que nous puissions également souligner votre
+    succès !'
+  hoc_how_to_step_07_educators_desc_02: Vous pouvez également imprimer des certificats
+    pour que vos élèves puissent montrer leurs réussites !
   team_page_full_team_alt_text: Près de 100 employés de Code.org portant des t-shirts
     bleus et jaunes assortis posent dans la salle de conférence d'un hôtel pour l'événement
     Codechella organisé par l'entreprise à l'été 2022.
@@ -14037,6 +14426,673 @@ fr:
   accessibility_card_text_10: Une adaptation du programme AP Computer Science Principles
     de Code.org à l'aide de Quorum, un langage fondé sur des preuves conçu à l'origine
     pour offrir une accessibilité aux étudiants aveugles ou malvoyants.
+  engineering_hero_heading: Joignez-vous à notre équipe d'ingénieurs !
+  engineering_hero_desc: Alors que nous continuons à élargir notre équipe d'ingénierie,
+    nous voulions en savoir plus sur notre organisation d'ingénierie sur Code.org
+    et sur certains des aspects uniques du travail ici. Si vous souhaitez postuler
+    à l'un de nos postes, n'hésitez pas à nous contacter !
+  engineering_team_title: Rencontrez l'équipe d'ingénierie de Code.org
+  engineering_team_card_text_1: C'est (la plupart) d'entre nous lors de notre réunion
+    en personne au cours de l'été 2023 ! Cette équipe est divisée en quatre sous-équipes
+    au sein de notre équipe d'ingénierie qui travaillent ensemble pour créer et mettre
+    à disposition la plateforme pour tous nos étudiants et professeurs.
+  engineering_team_card_text_2: Si vous souhaitez postuler à l'un de nos postes, n'hésitez
+    pas à nous contacter ! Vous trouverez une liste des postes vacants sur notre page
+    Carrières.
+  engineering_our_team_title: Notre équipe d'ingénieurs
+  engineering_our_team_desc: 'L''équipe d''ingénierie de Code.org est divisée en quatre
+    sous-équipes qui développent et soutiennent différents domaines de notre plateforme :'
+  engineering_our_team_sub_title_1: Équipe d'apprentissage des étudiants
+  engineering_our_team_text_1: Notre équipe d'apprentissage des étudiants est responsable
+    de toutes nos activités (nous les appelons laboratoires) que nos étudiants utilisent
+    au quotidien. Cette équipe travaille principalement sur les technologies frontales
+    (nous utilisons React et beaucoup de JS personnalisés) et nous entretenons d'excellentes
+    relations de travail avec de nombreux partenaires et projets open source. Par
+    exemple, nous utilisons [Google's Blockly] (%{youtube_url}) pour toute notre programmation
+    basée sur des blocs. Nous soutenons les élèves dans leur parcours d'apprentissage,
+    de la maternelle à la 12e année.
+  engineering_our_team_sub_title_2: Équipe chargée de l'expérience des enseignants
+  engineering_our_team_text_2: Notre équipe chargée de l'expérience pédagogique crée
+    les outils qui attirent les nouveaux enseignants vers Code.org (nous les appelons
+    produits d'acquisition) et développe la plateforme qui permet à nos enseignants
+    existants d'enseigner notre programme (nos outils pédagogiques). Comme pour nos
+    outils destinés aux étudiants, nous nous appuyons sur React pour créer notre interface
+    et nos composants côté serveur sont fournis à l'aide de Ruby on Rails.
+  engineering_our_team_sub_title_3: L'équipe de la plateforme
+  engineering_our_team_text_3: Notre équipe de plateforme possède des composants essentiels
+    qui répondent aux besoins de nos équipes d'étudiants et d'enseignants (par exemple,
+    l'authentification et le profil utilisateur) et a également pour mission d'atteindre
+    les étudiants que nous ne pouvons pas encore atteindre. Cela inclut la création
+    d'intégrations qui nous connectent aux écoles qui utilisent différents systèmes
+    de gestion de l'apprentissage (LMS) et le conditionnement de notre programme de
+    manière à ce qu'il puisse être utilisé dans des écoles éloignées qui n'ont pas
+    accès à un Internet fiable.
+  engineering_our_team_sub_title_4: Équipe chargée de l'infrastructure
+  engineering_our_team_text_4: Notre équipe d'infrastructure fournit l'épine dorsale
+    de la plateforme qui soutient nos étudiants et nos enseignants. Cela inclut notre
+    infrastructure d'hébergement et les services associés (nous utilisons AWS), la
+    gestion des données, les programmes de sécurité, les services de développement
+    et de déploiement et bien plus encore. Cette équipe est également propriétaire
+    de nos systèmes de mise à l'échelle et de provisionnement, qui sont essentiels
+    pendant Hour of Code, où nous invitons tous les étudiants du monde entier à passer
+    une heure de codage avec nous.
+  engineering_faq_question_1: Que fait Code.org ?
+  engineering_faq_answer_1_a: Code.org est un organisme à but non lucratif voué à
+    l'innovation dans le domaine de l'éducation qui a pour objectif que chaque élève
+    de chaque école ait la possibilité d'apprendre l'informatique dans le cadre de
+    son enseignement de base de la maternelle à la 12e année.
+  engineering_faq_answer_1_b: Nous élargissons l'accès à l'informatique dans les écoles,
+    en mettant l'accent sur l'augmentation de la participation des jeunes femmes et
+    des étudiants d'autres groupes sous-représentés. Principal fournisseur de programmes
+    d'informatique de la maternelle à la 12e année dans les plus grands districts
+    scolaires des États-Unis, Code.org organise également la campagne annuelle Hour
+    of Code, qui a mobilisé plus de 15 % de tous les élèves du monde.
+  engineering_faq_answer_1_c: Code.org est soutenu par de généreux donateurs tels
+    que Microsoft, Amazon, Google et bien d'autres.
+  engineering_faq_question_2: Quels sont l'expérience et les outils de développement
+    de Code.org ?
+  engineering_faq_answer_2: 'Notre expérience de développeur peut être différente
+    de celle que vous avez constatée dans vos rôles précédents. En étroite collaboration
+    avec notre équipe produit, nous livrons à la production tous les jours de la semaine
+    et nous appliquons différentes cadences : parfois, vous écrivez du code qui sera
+    mis en ligne le jour même, d''autres fois, vous travaillez sur des projets à plus
+    long terme. Bien que nous suivions des sprints bihebdomadaires, nous le faisons
+    de manière légère. Nous nous efforçons de faire les bonnes choses de la bonne
+    façon plutôt que d''adopter une vision puriste d''une méthodologie en particulier.
+    [Tout notre code] (%{code_url}) est open source et nous utilisons les pull requests
+    JIRA et GitHub pour suivre tous nos éléments de travail. Nous accordons également
+    une grande importance à la qualité et aux tests et nous avons la chance de bénéficier
+    du soutien incroyable de [SauceLabs](%{saucelabs_url}), qui nous aide à exécuter
+    notre série de tests d''interface utilisateur sur différents appareils des étudiants
+    (par exemple, des iPad) dans leur parc d''appareils cloud.'
+  engineering_faq_question_3: En quoi consiste la rotation des ingénieurs de garde
+    chez Code.org ?
+  engineering_faq_answer_3: 'Notre équipe d''ingénieurs de plus de 30 ans partage
+    les responsabilités sur appel. Chaque ingénieur travaille 24 heures sur 24 et
+    utilise nos méthodes d''escalade et nos stratégies pour répondre aux pannes de
+    site ou à d''autres problèmes réels sur le site. Nous sommes fiers de la fiabilité
+    de notre site : en moyenne, chaque ingénieur n''est réveillé qu''une fois par
+    an pour des problèmes généralement rapides à résoudre. Au lieu de cela, le « développeur
+    du jour » passe généralement une partie de sa journée de travail à gérer le déploiement
+    de la production et à trier les problèmes moins urgents.'
+  engineering_faq_question_4: Êtes-vous une organisation adaptée aux télécommandes/WFH ?
+  engineering_faq_answer_4_a: Oui ! En 2019, peu avant la pandémie, Code.org est devenue
+    une organisation axée sur le télétravail. Aujourd'hui, nous avons des ingénieurs
+    dans tous les fuseaux horaires des États-Unis et adaptons les heures de travail
+    en conséquence. La plupart de nos réunions ont lieu entre 10 h et 15 h PT.
+  engineering_faq_answer_4_b: Nous reconnaissons également la valeur du temps passé
+    en personne, et nous nous réunissons chaque trimestre en personne, généralement
+    à Seattle. Deux de ces événements (nous les appelons Kick-off week et « Codechella »)
+    réunissent tous les membres de l'organisation en janvier et juin, et les équipes
+    d'ingénierie et de produit se réunissent séparément en avril et en octobre.
+  engineering_faq_answer_4_c: Nous croyons fermement qu'il est important de passer
+    du temps avec nos élèves et nos professeurs, c'est pourquoi bon nombre de ces
+    événements en présentiel incluent des visites dans les écoles et les salles de
+    classe pour recueillir des commentaires ou tester nos produits
+  engineering_faq_question_5: Qu'est-ce qui rend l'équipe d'ingénierie de Code.org
+    unique ?
+  engineering_faq_answer_5_a: 'Au-delà de la résolution de problèmes techniques complexes,
+    nous avons quelques éléments qui différencient notre organisation d''ingénierie
+    des autres dans lesquelles vous avez peut-être travaillé :'
+  engineering_faq_answer_5_b_1: Nous partageons tous la même passion pour notre mission.
+  engineering_faq_answer_5_b_2: Chacun d'entre nous est là pour soutenir la mission
+    qui consiste à élargir l'accès à l'informatique pour tous les étudiants du monde
+    entier. Nous avons tous une histoire et un point de vue uniques sur ce qui nous
+    pousse à accomplir cette mission.
+  engineering_faq_answer_5_c_1: Nous nous soucions profondément l'un de l'autre.
+  engineering_faq_answer_5_c_2: Lorsque les ingénieurs sont aux prises avec un problème,
+    nous intervenons et nous les aidons. L'un de nos principes est que nous abordons
+    les problèmes avec fermeté, mais que nous sommes gentils les uns envers les autres.
+    Nous promouvons régulièrement des ingénieurs, mais nous ne prescrivons pas de
+    solutions trop sophistiquées uniquement pour soutenir le parcours de promotion
+    d'une personne. Nous investissons plutôt dans nos ingénieurs en leur allouant
+    un budget de développement professionnel généreux et en leur donnant accès à d'autres
+    opportunités de formation.
+  engineering_faq_answer_5_d_1: Nous travaillons fort, mais nous fixons des limites
+    claires.
+  engineering_faq_answer_5_d_2: Tout en soutenant les étudiants du monde entier, nous
+    nous engageons à établir des limites claires entre le travail et la vie familiale.
+    Nous profitons des mercredis sans réunion, de notre PTO (5 semaines au total,
+    dont deux semaines de fermeture des bureaux à l'échelle de l'organisation à la
+    fin de l'année, c'est-à-dire les vacances d'hiver), d'une demi-journée de travail
+    le vendredi pendant l'été, c'est-à-dire les vendredis d'été, et d'autres avantages
+    généreux.
+  careers_hero_title: Pseudoloc-Çàŕééŕš
+  careers_hero_description: Code.org est une organisation à but non lucratif dédiée
+    à l'élargissement de l'accès à l'informatique dans les écoles. Nous nous concentrons
+    particulièrement sur l'augmentation de la participation des jeunes femmes et des
+    étudiants sous-représentés.
+  careers_hero_description_under: Aidez-nous à changer le monde, un étudiant à la
+    fois !
+  careers_vision_title: Notre vision
+  careers_vision_decsription: Notre vision est que chaque élève de chaque école devrait
+    avoir la possibilité d'apprendre l'informatique dans le cadre de son enseignement
+    de base de la maternelle à la 12e année.
+  careers_vision_description_under: Joignez-vous à notre équipe pour aider à faire
+    de cette vision une réalité !
+  careers_values_title: Nos valeurs fondamentales
+  careers_values_first_column_text_1: Nous pensons que l'informatique est fondamentale
+    pour tous les étudiants
+  careers_values_first_column_text_2: Nous nous engageons en faveur de l'équité, de
+    l'accès et des opportunités
+  careers_values_first_column_text_3: Nous croyons au pouvoir d'une communauté éducative
+    collaborative
+  careers_values_second_column_text_1: Nous sommes agiles et réactifs aux commentaires
+  careers_values_second_column_text_2: Nous agissons avec intégrité et transparence
+  careers_values_second_column_text_3: Nous pensons qu'un impact global nécessite
+    de voir grand et d'agir de manière holistique
+  careers_approach_section_title: Notre approche unificatrice
+  careers_approach_section_description: Le rôle mondial de Code.org dans le mouvement
+    informatique de la maternelle à la 12e année n'est possible que parce que nous
+    utilisons une approche unificatrice entre des parties prenantes diverses et souvent
+    divisées. À une époque de polarisation croissante, l'idée d'accroître les opportunités
+    pour les étudiants réunit des personnes de tous les horizons politiques. Les membres
+    de l'équipe, les étudiants, les enseignants et les supporters de Code.org ont
+    des points de vue divers et divergents, et ils sont tous les bienvenus dans notre
+    mission.
+  careers_aproach_section_description_link: En savoir plus sur l'approche de Code.org
+    en matière d'unité.
+  careers_approach_section_button: Découvrez les postes vacants
+  careers_principle_section_title: Nos principes culturels
+  careers_principle_title_1: Nos étudiants et nos professeurs sont notre étoile polaire
+  careers_principle_description_1: Nous utilisons nos dons, notre temps et notre énergie
+    pour mettre l'informatique à la portée de ceux qui en ont le plus besoin. C'est
+    ce qui nous unit. C'est notre principe le plus important.
+  careers_principle_title_2: Nous sommes durs face aux problèmes et nous sommes gentils
+    les uns envers les autres
+  careers_principle_description_2: Nous restons concentrés sur le défi de mettre l'informatique
+    à la portée des étudiants et des enseignants du monde entier. Nous reconnaissons
+    que chacun de nous apporte le meilleur de ses intentions pour soutenir notre mission
+    et faire preuve de grâce lorsque nous commettons des erreurs.
+  careers_principle_title_3: Recherchez des solutions, pas un consensus
+  careers_principle_description_3: Nous prenons nos propres décisions, qu'il s'agisse
+    de petits pas ou de grands pas vers les résultats que nous recherchons. Les propriétaires
+    demandent et écoutent, mais ne sont pas paralysés par les commentaires. Nous acceptons
+    et soutenons les décisions des propriétaires, même si nous ne sommes pas d'accord.
+  careers_principle_title_4: Adoptez la mentalité d'un fondateur
+  careers_principle_description_4: Nous sommes obsédés par les résultats et concentrons
+    nos actions sur leur réalisation. Nous nous penchons sur les détails et travaillons
+    dur. Nous sommes honnêtes, nous misons sur l'agilité et nous évaluons continuellement
+    si nous sommes sur la bonne voie ; nous n'avons pas peur de changer de cap. Changer
+    le monde l'exige.
+  careers_principle_title_5: Défendons l'innovation
+  careers_principle_description_5: Nous voyons les choses en grand, nous prenons des
+    risques et nous n'avons pas peur d'échouer. Si nous trouvons une meilleure façon
+    d'atteindre nos objectifs, nous le faisons et encourageons les autres à faire
+    de même. Les solutions progressives ne contribueront pas à changer le monde.
+  careers_principle_title_6: Ancrer les décisions dans les faits
+  careers_principle_description_6: Nous utilisons les données pour comprendre notre
+    activité, établir les résultats souhaités et guider la prise de décision. Nous
+    équilibrons cela en reconnaissant que nous ne disposerons pas toujours des données
+    dont nous avons besoin pour agir.
+  careers_principle_title_7: Un état d'esprit axé sur la croissance nous anime
+  careers_principle_description_7: Nous abordons chaque défi avec curiosité. Nous
+    donnons des commentaires avec gentillesse et franchise ; nous recevons des commentaires
+    ouvertement. Nous tirons les leçons de nos erreurs et cherchons des moyens d'accroître
+    la portée et l'impact de notre travail.
+  careers_balance_section_title: Notre équilibre entre vie professionnelle et vie
+    privée
+  careers_balance_section_description: Nous nous soucions de nos employés et nous
+    nous engageons à soutenir tout le monde au travail et en dehors du travail. Nous
+    savons que chacun a des besoins différents, c'est pourquoi nous proposons un ensemble
+    complet d'avantages sociaux qui garantira que vous (et votre famille) êtes pris
+    en charge.
+  careers_balance_first_column_text_1: Des prestations de santé pour vous et votre
+    famille
+  careers_balance_first_column_text_2: De généreux plans de congés payés et de congés
+  careers_balance_second_column_text_1: Environnement de travail flexible et favorable
+  careers_balance_second_column_text_2: Opportunités de croissance et de formation
+    professionnelle
+  careers_openroles_section_title: Rôles ouverts
+  careers_openroles_section_description: Code.org est basé à Seattle, mais bon nombre
+    des membres de notre équipe travaillent à distance. Les candidats à distance sont
+    les bienvenus et encouragés à postuler.
+  careers_more_info_text: Pour plus d'informations sur Code.org, consultez notre [Questions
+    fréquemment posées] (%{support_url}) ou découvrez [d'autres moyens de participer
+    à notre mission] (%{help_url}).
+  careers_approach_section_title2: Notre approche de la diversité
+  careers_approach_section_description_1: Chez Code.org, nous adoptons des points
+    de vue, des idées et des parcours variés. Nous nous engageons à offrir des chances
+    égales à tous les employés et candidats. Nous ne faisons aucune discrimination
+    fondée sur la race, la religion, la couleur, l'origine nationale, le sexe, l'orientation
+    sexuelle, l'âge, l'état civil, le statut d'ancien combattant ou l'état de handicap
+    (mental ou physique).
+  careers_approach_section_description_2: Nous veillerons à ce que les personnes handicapées
+    bénéficient d'aménagements raisonnables pour participer au processus de candidature
+    ou d'entretien, pour exécuter les fonctions professionnelles essentielles et pour
+    bénéficier des autres avantages et privilèges liés à l'emploi. Si vous avez des
+    besoins individuels liés à un handicap, veuillez contacter accommodations@code.org.
+  csa_ai_page_hero_title: Pseudoloc-Šôƒţŵàŕé Éñĝîñééŕîñĝ ⅋ Çôɱþûţéŕ Ṽîšîôñ
+  csa_ai_page_hero_description: 'Ce module post-AP CSA en deux chapitres offre aux
+    lycéens une expérience pratique des outils de développement logiciel professionnels,
+    notamment GitHub et GitHub Copilot, et leur donne les compétences pratiques nécessaires
+    pour développer un programme de vision par ordinateur. '
+  csa_ai_page_video_section_title: Dépassez le monde des environnements de programmation
+    Code.org
+  csa_ai_page_video_section_li_1: En savoir plus sur l'IA et ses applications
+  csa_ai_page_video_section_li_2: Expérience pratique avec des outils de développement
+    logiciel professionnels
+  csa_ai_page_video_section_li_3: Découvrez les pratiques standard du secteur
+  csa_ai_page_video_section_li_4: Cultivez l'esprit critique
+  csa_ai_page_programming_tools: 'Outils de programmation : Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Aucune
+  csa_ai_page_curriculum_topics: 'Sujets : Programmation, Données, Art et design,
+    Jeux et animation'
+  csa_ai_page_curriculum_accessibility_features: Voir la section FAQ pour plus de
+    détails
+  csa_ai_page_curriculum_languages_support: Anglais
+  csa_ai_page_article_title_1: Pseudoloc-Ɓûîļð ŵîţĥ Çôþîļôţ
+  csa_ai_page_article_description_1: Les étudiants apprennent à utiliser GitHub Copilot
+    en tant que programmeur à deux pour expliquer le code existant, détecter et corriger
+    les erreurs, et générer des solutions à de nouveaux problèmes.
+  csa_ai_page_article_link_1: En savoir plus sur Copilot
+  csa_ai_page_article_title_2: Créez votre propre modèle d'IA
+  csa_ai_page_article_description_2: Les élèves forment leurs propres modèles d'IA
+    à l'aide de Teachable Machine pour reconnaître les images et les gestes d'une
+    webcam et étudient l'impact de la vision par ordinateur sur la façon dont les
+    utilisateurs interagissent avec les applications.
+  csa_ai_page_article_link_2: Découvrez le plan de cours
+  csa_ai_page_article_title_3: Découvrez la vision par ordinateur
+  csa_ai_page_article_description_3: Les élèves mettent en œuvre les modèles d'IA
+    qu'ils ont créés avec Teachable Machine dans une application Java, en utilisant
+    GitHub Copilot pour les aider à modifier les versions existantes des applications
+    afin qu'elles fonctionnent avec les différentes entrées.
+  csa_ai_page_article_link_3: Voir un exemple
+  csa_ai_page_learn_more_section_title: En savoir plus sur l'intelligence artificielle
+  csa_ai_page_learn_more_title: Découvrez AI 101 pour les enseignants
+  csa_ai_page_learn_more_description: Découvrez le monde révolutionnaire de l'intelligence
+    artificielle (IA) et son potentiel de transformation dans le domaine de l'éducation
+    grâce à notre série complète d'apprentissage en ligne destinée aux enseignants.
+  csa_ai_page_learn_more_link: Regardez la série AI 101 for Teachers
+  csa_ai_page_faq_question_01: Quels sont les prérequis pour ce module ?
+  csa_ai_page_faq_answer_01_01: 'Avant de se lancer dans ce module, les étudiants
+    doivent posséder une connaissance de base de Java. Plus précisément, ils devraient
+    comprendre :'
+  csa_ai_page_faq_answer_01_list_01: "**Classes et objets :** Les élèves doivent être
+    familiarisés avec la définition et l'utilisation des classes, ainsi qu'avec la
+    création et la manipulation d'objets."
+  csa_ai_page_faq_answer_01_list_02: "**Méthodes d'écriture et d'appel :** Les étudiants
+    doivent être capables de définir des méthodes au sein d'une classe, de comprendre
+    les paramètres des méthodes et les types de retour, et d'appeler des méthodes
+    à partir d'objets ou d'autres méthodes."
+  csa_ai_page_faq_answer_01_list_03: "**Tableaux et listes de tableaux 1D :** Ils
+    doivent être compétents pour déclarer, initialiser et manipuler des tableaux unidimensionnels
+    et des listes de tableaux, y compris en les itérant."
+  csa_ai_page_faq_answer_01_list_04: "**Sélection et itération :** Une base solide
+    en termes d'instructions conditionnelles et de boucles est cruciale."
+  csa_ai_page_faq_question_01_02: Idéalement, les étudiants ayant suivi un cours d'informatique
+    AP A ou un cours d'une profondeur et d'une rigueur similaires seraient bien préparés
+    pour ce module.
+  csa_ai_page_faq_question_02: Comment installer le logiciel requis pour ce module ?
+  csa_ai_page_faq_answer_02_01: Ce module est unique car il implique l'utilisation
+    de logiciels tiers plutôt que de laboratoires et d'outils Code.org. [Pour en savoir
+    plus sur l'installation du logiciel, cliquez ici] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Comment puis-je répondre aux besoins en matière d'accessibilité
+    tout en enseignant ce module ?
+  csa_ai_page_faq_answer_03_01: Il est essentiel de répondre aux besoins d'accessibilité
+    pour créer un environnement d'apprentissage inclusif. [Pour en savoir plus sur
+    les fonctionnalités d'accessibilité du logiciel utilisé dans ce module, cliquez
+    ici] (%{install_url}).
+  csa_ai_page_faq_question_04: Comment utiliser VS Code sur les Chromebooks ?
+  csa_ai_page_faq_answer_04: L'utilisation de VS Code sur un Chromebook est devenue
+    plus simple, notamment avec la possibilité d'exécuter des applications Linux sur
+    les nouveaux modèles de Chromebook. [Pour en savoir plus sur la configuration
+    de VS Code sur les Chromebooks, cliquez ici] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Comment puis-je obtenir un développement professionnel
+    pour ce module ?
+  csa_ai_page_faq_answer_05: Il n'existe actuellement aucun développement professionnel
+    spécifique pour ce cours. Si vous souhaitez comprendre comment aborder l'intelligence
+    artificielle dans votre classe, vous pouvez [explorer AI 101 pour les enseignants]
+    (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Quel est le calendrier recommandé pour enseigner ce
+    module ?
+  csa_ai_page_faq_answer_06_01: Le module de génie logiciel et de vision par ordinateur
+    est soigneusement structuré pour fournir un apprentissage complet dans un délai
+    concis. L'ensemble du module est conçu pour s'étendre sur **2 semaines d'enseignement**.
+    La plupart des leçons sont conçues pour une durée de **45 minutes**, tandis que
+    les leçons où les étudiants se plongent dans le développement pratique de projets
+    Java sont conçues pour une durée de **90 minutes**. Cette période prolongée garantit
+    aux étudiants de nombreuses opportunités de comprendre, de mettre en œuvre et
+    de résoudre les problèmes pendant qu'ils travaillent.
+  csa_ai_page_faq_answer_06_02: Une flexibilité intentionnelle est également intégrée
+    à la structure du module. En fonction de la dynamique de la classe, de l'engagement
+    des élèves et de la profondeur avec laquelle vous souhaitez explorer chaque sujet,
+    vous pouvez ajuster la durée. Par exemple, la leçon d'introduction à Copilot,
+    conçue comme une leçon de 45 minutes, peut être étendue à 90 minutes si vous souhaitez
+    approfondir le fonctionnement de grands modèles de langage et d'outils tels que
+    GitHub Copilot et ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Avec un compte enseignant approuvé, vous pouvez trouver
+    les réponses dans un panneau bleu « réservé aux enseignants » qui apparaît dans
+    les leçons et activités en ligne. Si vous avez besoin d'un compte enseignant approuvé,
+    vous pouvez demander l'accès à du matériel réservé aux enseignants (corrigés,
+    etc.) via [ce formulaire] ().%{form_url}N'oubliez pas que la vérification de votre
+    compte peut prendre de 3 à 5 jours ouvrables.
+  csa_ai_page_faq_question_08: Ce module est-il adapté aux normes ?
+  csa_ai_page_faq_answer_08: Oui, le programme de génie logiciel et de vision par
+    ordinateur est adapté aux [normes CSTA K-12] (%{csta_k12_url}) et à l'IA pour
+    [Directives K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Combien coûte l'enseignement de ce module ?
+  csa_ai_page_faq_answer_09_01: Notre programme et notre plateforme sont disponibles
+    [sans frais] (%{no_cost_url}) pour que tout le monde puisse enseigner, n'importe
+    où !
+  csa_ai_page_faq_answer_09_02: De plus, le logiciel et les outils utilisés dans ce
+    module sont gratuits. GitHub Copilot est gratuit pour verified [teachers](%{teachers_url})
+    et [students]().%{students_url}
+  csa_ai_page_faq_question_10: Que dois-je faire si l'installation du logiciel ne
+    fonctionne pas ?
+  csa_ai_page_faq_answer_10: Il peut être courant de rencontrer des problèmes lors
+    de l'installation du logiciel, mais il existe des étapes systématiques que vous
+    pouvez suivre pour les résoudre. [Consultez quelques conseils de dépannage ici]
+    (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Notre programme de génie logiciel et de vision par
+    ordinateur a été conçu en tenant compte de nos valeurs pédagogiques. Les objectifs
+    suivants ont guidé la création de ce programme :'
+  csa_ai_page_faq_answer_11_list_01: "**Objectif 1 :** Utiliser les outils d'IA pour
+    générer, déboguer et modifier du code."
+  csa_ai_page_faq_answer_11_list_02: "**Objectif 2 :** Transition de Java Lab vers
+    des outils du monde réel."
+  csa_ai_page_faq_answer_11_list_03: "**Objectif 3 :** Approfondir la compréhension
+    de la manière dont les modèles d'IA sont formés et intégrés aux programmes."
+  csa_ai_page_faq_answer_11_02: Pour plus d'informations sur les valeurs qui ont guidé
+    notre travail, veuillez consulter nos [valeurs du programme] (%{curriculum_values_url}).
+  video_library_page_main_title: Courtes vidéos pédagogiques
+  video_library_page_hero_description: La bibliothèque croissante de vidéos pédagogiques
+    de Code.org est disponible pour être réutilisée par les enseignants du monde entier,
+    en ligne ou en classe. Notre objectif est d'amplifier nos efforts au-delà de la
+    portée de notre propre programme.
+  video_library_page_title_ai_works: Comment fonctionne l'IA
+  video_library_page_description_ai_works: Cette série de courtes vidéos vous expliquera
+    comment fonctionne l'intelligence artificielle et pourquoi elle est importante.
+    Découvrez les réseaux neuronaux, ou comment l'IA apprend, et abordez des questions
+    telles que les biais algorithmiques et l'éthique de la prise de décision par l'IA.
+  video_library_page_title_computers_work: Comment fonctionnent les ordinateurs
+  video_library_page_description_computers_work: Explique ce qui fait d'un ordinateur
+    un ordinateur, comment les informations numériques sont représentées en 1 et en
+    0, comment les circuits informatiques fonctionnent pour manipuler les informations
+    numériques, et comment une unité centrale (CPU) et un système d'exploitation contrôlent
+    les entrées, les sorties, la mémoire et le matériel d'un ordinateur.
+  video_library_page_title_internet_works: Comment fonctionne Internet
+  video_library_page_description_internet_works: Avec Vint Cerf, l'inventeur du TCP/IP,
+    David Karp, le fondateur de Tumblr, pour expliquer le HTTP et le HTML, la princesse
+    de la sécurité de Google pour expliquer le SSL et la cybersécurité, ainsi que
+    des ingénieurs de Microsoft, Spotify et Symantec. Cette série de courtes vidéos
+    explique le fonctionnement d'Internet.
+  video_library_page_title_not_hacked: Comment ne pas se faire pirater
+  video_library_page_description_not_hacked: Internet est ouvert, donc tout ce qui
+    s'y passe peut être vu à moins qu'il ne soit protégé. Dans les pays modernes,
+    les gens craignent davantage de se faire pirater que de n'importe quel autre crime.
+    Pourquoi ? Parce que chaque ordinateur ou téléphone connecté à Internet est régulièrement
+    testé pour détecter les vulnérabilités par des criminels, des terroristes ou même
+    des acteurs étatiques. Si vous ne faites pas attention, quelqu'un pourrait pirater
+    votre appareil ou vos comptes, et même voler votre identité ou votre argent.
+  video_library_page_title_blockchain: Comment fonctionne la blockchain
+  video_library_page_description_blockchain: Réalisée en partenariat avec Coinbase,
+    cette série met en vedette des experts du secteur et vise à démystifier cette
+    technologie en explorant ce qu'est la blockchain, son fonctionnement et ses implications
+    sociétales potentielles, bonnes ou mauvaises.
+  video_library_page_title_careers: Carrières chez CS
+  video_library_page_description_careers: Les carrières en informatique et en technologie
+    peuvent être amusantes et enrichissantes. Mais que fait réellement une personne
+    travaillant dans ces domaines ? Avec une grande variété d'emplois et d'entreprises,
+    il n'y a pas qu'une seule réponse à cette question. Regardez les vidéos ci-dessous
+    pour rencontrer des personnes qui abordent de grands problèmes de manière créative.
+  video_library_page_title_inspirational: Inspirant
+  video_library_page_description_inspirational: Qu'est-ce que l'informatique va changer
+    dans notre monde ? Tout ? C'est pour qui ? Tout le monde ! Regardez ces vidéos
+    pour vous inspirer et vous motiver.
+  video_library_page_footer_description: Vous recherchez autre chose ? Nous avons
+    tellement de superbes vidéos disponibles sur notre chaîne Youtube.
+  video_library_page_footer_cta: Découvrez toutes les vidéos de Code.org sur YouTube
+  video_library_page_computer_work_video_title_1: Pseudoloc-Îñţŕôðûçîñĝ Ĥôŵ Çôɱþûţéŕš
+    Ŵôŕķ
+  video_library_page_computer_work_video_title_2: Pseudoloc-Ɓîñàŕý àñð Ðàţà
+  video_library_page_computer_work_video_title_3: Processeur, mémoire, entrée et sortie
+  video_library_page_computer_work_video_title_4: Qu'est-ce qui fait d'un ordinateur
+    un ordinateur ?
+  video_library_page_computer_work_video_title_5: Logique des circuits
+  video_library_page_computer_work_video_title_6: Pseudoloc-Ĥàŕðŵàŕé àñð Šôƒţŵàŕé
+  video_library_page_internet_work_video_title_1: Qu'est-ce qu'Internet ?
+  video_library_page_internet_work_video_title_2: 'INTERNET : Adresses IP et DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET : HTTP et HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET : Cybersécurité et criminalité'
+  video_library_page_internet_work_video_title_5: 'INTERNET : fils, câbles et Wi-Fi'
+  video_library_page_internet_work_video_title_6: 'INTERNET : paquets, routage et
+    fiabilité'
+  video_library_page_internet_work_video_title_7: 'INTERNET : chiffrement et clés
+    publiques'
+  video_library_page_internet_work_video_title_8: 'INTERNET : Comment fonctionne la
+    recherche'
+  video_library_page_cs_video_title_1: Je m'appelle Jerome et je suis technologue
+    en design chez Meow Wolf
+  video_library_page_cs_video_title_2: Je m'appelle Nikesha et je suis ingénieur aérospatial
+    à la NASA
+  video_library_page_cs_video_title_3: Je m'appelle Brina et je suis ingénieure logicielle
+    chez Instagram
+  video_library_page_cs_video_title_4: Je m'appelle Kinsley et je suis ingénieur logiciel
+    chez Facebook
+  video_library_page_cs_video_title_5: Je m'appelle Polina et je suis data scientist
+    chez Electronic Arts.
+  video_library_page_cs_video_title_6: Je m'appelle Danelle et je suis ingénieure
+    logicielle au MBARI
+  video_library_page_cs_video_title_7: Je m'appelle Christopher et je suis analyste
+    de sécurité chez Tanium
+  video_library_page_cs_video_title_8: Je m'appelle Federico et je suis responsable
+    des programmes techniques chez Microsoft
+  video_library_page_cs_video_title_9: Je m'appelle Tess et je suis ingénieur logiciel
+    chez Google
+  video_library_page_inspirational_video_title_1: Changez le visage de l'informatique
+    (3 min)
+  video_library_page_inspirational_video_title_2: Dépassez vos limites. Tout le monde
+    peut apprendre. (1 min)
+  video_library_page_inspirational_video_title_3: Inspirez une fille (2 min)
+  video_library_page_inspirational_video_title_4: Ce que la plupart des écoles n'enseignent
+    pas (5 min)
+  video_library_page_inspirational_video_title_5: 'L''heure du code est arrivée :
+    tout le monde peut apprendre (2 min)'
+  video_library_page_inspirational_video_title_6: Je m'appelle Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Heure de code avec Steph Curry (2
+    min)
+  video_library_page_inspirational_video_title_8: L'informatique change tout (5 min)
+  video_library_page_inspirational_video_title_9: Introduction à l'informatique (1
+    min)
+  video_library_page_inspirational_video_title_10: Le président Obama sur l'informatique
+    (1 min)
+  video_library_page_inspirational_video_title_11: N'importe qui peut apprendre (1
+    min)
+  video_library_page_inspirational_video_title_12: Ce qui manque à nos élèves (2 min)
+  video_library_page_inspirational_video_title_13: La NASA célèbre l'heure du code
+    (2 min)
+  video_library_page_inspirational_video_title_14: C'est plus qu'un jeu (1 min)
+  video_library_page_inspirational_video_title_15: Créez avec l'informatique (1 min)
+  video_library_page_not_hacked_video_title_1: 'Comment ne pas se faire pirater :
+    introduction'
+  video_library_page_not_hacked_video_title_2: 'Comment ne pas se faire pirater :
+    mots de passe'
+  video_library_page_not_hacked_video_title_3: 'Comment ne pas se faire pirater :
+    authentification et verrouillage des appareils'
+  video_library_page_not_hacked_video_title_4: 'Comment ne pas se faire pirater :
+    hameçonnage'
+  video_library_page_not_hacked_video_title_5: 'Comment ne pas se faire pirater :
+    sites Web et wifi'
+  video_library_page_not_hacked_video_title_6: 'Comment ne pas se faire pirater :
+    messagerie et téléchargements'
+  video_library_page_not_hacked_video_title_7: 'Comment ne pas se faire pirater :
+    installez les mises à jour'
+  about_us_page_title: Pseudoloc-Àƀôûţ Ûš
+  about_us_page_hero_description: Code.org® est un organisme à but non lucratif voué
+    à l'innovation dans le domaine de l'éducation dont l'objectif est que chaque élève
+    de chaque école ait la possibilité d'apprendre l'informatique dans le cadre de
+    son enseignement de base de la maternelle à la 12e année. Nous élargissons l'accès
+    à l'informatique dans les écoles, en mettant l'accent sur l'augmentation de la
+    participation des jeunes femmes et des étudiants d'autres groupes sous-représentés.
+    Principal fournisseur de programmes d'informatique de la maternelle à la 12e année
+    dans les plus grands districts scolaires des États-Unis, Code.org organise également
+    la campagne annuelle [Hour of Code] (%{hour_url}), qui a mobilisé plus de 15 %
+    de tous les élèves du monde. Code.org est soutenu par de généreux donateurs tels
+    que Microsoft, Amazon, Google et [bien d'autres.] ()%{others_url}
+  about_us_page_section_title_1: Plus de 80 millions d'élèves et 2 millions d'enseignants
+    sur Code.org
+  about_us_page_statistic_figcaption: Participation à Code.org dès l'année scolaire
+    2021-2022. [Voir les données désagrégées.] ()%{data_url}
+  about_us_page_statistic_description: 'Code.org accroît la diversité dans le domaine
+    de l''informatique en atteignant les étudiants de tous les horizons, là où ils
+    se trouvent : au niveau de leurs compétences, dans leurs écoles et de manière
+    à les inciter à poursuivre leur apprentissage. La grande majorité des étudiants
+    de Code.org sont issus de groupes d''étudiants historiquement sous-représentés
+    en informatique. L''augmentation de la diversité dans le domaine de l''informatique
+    est au cœur de notre travail, et [nous vous encourageons à en savoir plus sur
+    nos efforts] (%{diversity_url}).'
+  about_us_page_section_title_2: Code.org dans les médias
+  about_us_page_section_news_description: Voir toutes les [actualités et annonces]
+    passées (%{news_url})
+  about_us_page_section_table: Nos objectifs et indicateurs
+  about_us_page_section_table_header_1: Objectif de Code.org
+  about_us_page_section_table_header_2: Réalisation
+  abous_page_section_table_cell_1_1: Améliorer la diversité en CS* (étudiants américains)
+    *
+  abous_page_section_table_cell_1_2: 45 % des élèves de Code.org sont des jeunes femmes,
+    50 % sont des élèves issus de groupes raciaux et ethniques marginalisés, et 46 %
+    des élèves américains fréquentent des écoles spécialisées. En savoir plus sur
+    [notre approche de la diversité.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Pseudoloc-Îñšþîŕé šţûðéñţš
+  about_page_section_table_cell_2_2: Des dizaines de millions de personnes ont essayé
+    [Hour of Code] (%{hour_url}). (426 370 561 personnes servies, 49 % de femmes)
+  about_page_section_table_cell_3_1: Accédez aux salles de classe
+  about_page_section_table_cell_3_2: 591 636 professeurs se sont inscrits pour donner
+    nos cours d'introduction sur [Code Studio] (%{code_studio_url}) et 19 177 297
+    étudiants sont inscrits.
+  about_page_section_table_cell_4_1: Préparez les nouveaux professeurs de CS
+  about_page_section_table_cell_4_2: Nous avons préparé plus de 106 000 nouveaux enseignants
+    à enseigner l'informatique de la maternelle à la 12e année. Découvrez nos [programmes
+    de formation professionnelle.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Modifier le programme du district scolaire
+  about_page_section_table_cell_5_2: Nous avons établi un partenariat avec [plus de
+    180 des plus grands districts scolaires] (%{schoold_disctrict_url}) et 60 partenaires
+    régionaux pour [ajouter l'informatique au programme scolaire] (%{cs_curriculum_url}).
+    [Découvrez comment devenir un partenaire régional.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Configurez des politiques pour prendre en charge
+    CS
+  about_page_section_table_cell_6_2: "[Les politiques ont changé dans 50 États américains]
+    (%{states_url}) pour établir des normes d'enseignement de l'informatique, faire
+    en sorte que les cours d'informatique soient pris en compte pour l'obtention du
+    diplôme d'études secondaires, etc. [(détails)] (%{details_url})"
+  about_page_section_table_cell_7_1: Passez à l'international
+  about_page_section_table_cell_7_2: Nos cours sont disponibles dans plus de 67 langues,
+    utilisés dans plus de 180 pays.
+  about_page_section_table_under_label: 'Source : Code Studio Activity et [enquêtes
+    auprès des éducateurs participants] (%{educators_url})'
+  about_page_section_title_3: Plus d'informations, histoire et philosophie
+  about_page_section_more_description_1: 'En 2013, Code.org a été lancé par les frères
+    jumeaux [Hadi](%{hadi_url}) et [Ali Partovi] (%{partovi_url}) dans le but de [video]promouvoir
+    l''%{video_url}informatique. Cette vidéo est devenue #1 sur YouTube pendant une
+    journée, et 15 000 écoles nous ont contactés pour obtenir de l''aide. Depuis,
+    nous sommes passés d''une équipe de bénévoles à court de ressources à une organisation
+    complète soutenant un mouvement mondial. Nous pensons qu''un enseignement informatique
+    de qualité devrait être accessible à tous les enfants, et pas seulement à quelques
+    chanceux.'
+  about_page_section_more_description_2: 'Pour atteindre notre objectif, nous travaillons
+    dans tous les domaines de l''enseignement : en concevant nos propres cours ou
+    en établissant des partenariats avec d''autres, en formant des enseignants, en
+    nouant des partenariats avec de grands districts scolaires, en aidant à modifier
+    les politiques gouvernementales, en nous développant à l''international par le
+    biais de partenariats et en faisant du marketing pour briser les stéréotypes.'
+  about_page_section_more_description_3: Notre travail s'appuie sur [des décennies
+    d'efforts déployés par d'innombrables organisations et individus] (%{efforts_url})
+    qui ont contribué à établir, à financer et à diffuser l'enseignement de l'informatique.
+    Nous sommes reconnaissants de bénéficier de l'aide infatigable de l'ensemble de
+    la communauté de l'enseignement de l'informatique, et [nous remercions tous les
+    partenaires et personnes qui ont soutenu notre impact au fil des ans] (%{partners_url})).
+  about_page_section_more_list_1: "[Rapport annuel 2021 de Code.org] (%{report_url})
+    (Rapports précédents : [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](), (%{past_url_4}) [2016]%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7})"
+  about_page_section_more_list_2: "[Nos valeurs fondamentales et nos directives en
+    matière de messagerie] (%{core_url})"
+  about_page_section_more_list_3: "[Notre programme et notre philosophie pédagogique]
+    ()%{curriculum_url}"
+  about_page_section_more_list_4: "[Conférence TEDx de notre fondateur Hadi Partovi
+    sur les raisons pour lesquelles l'informatique est pour tous (VIDÉO)] ()%{tedx_url}"
+  about_page_section_title_4: Une approche unificatrice dans un monde divisé
+  about_page_section_specific_title_1: Une approche unificatrice dans un monde divisé
+  about_page_section_specific_title_2: Notre engagement en matière d'accessibilité
+  about_page_section_specific_title_3: Notre engagement vis à vis du programme d'études
+    libre et de la technologie open source
+  about_page_section_specific_title_4: Coalition de plaidoyer Code.org
+  about_page_section_specific_title_5: Cadre informatique K-12
+  about_page_section_specific_title_6: Donateurs de Code.org
+  about_page_section_specific_title_7: Suivez-nous
+  about_page_section_specific_title_8: Le Portée Internationale de Code.org
+  about_page_section_specific_description_1: Le rôle mondial de Code.org dans le mouvement
+    informatique de la maternelle à la 12e année n'est possible que parce que nous
+    utilisons une approche unificatrice entre des parties prenantes diverses et souvent
+    divisées. À une époque de polarisation croissante, l'idée d'accroître les opportunités
+    pour les étudiants réunit des personnes de tous les horizons politiques. Les membres
+    de l'équipe, les étudiants, les enseignants et les supporters de Code.org ont
+    des points de vue divers et divergents, et ils sont tous les bienvenus dans notre
+    mission. [En savoir plus.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org estime que l'informatique est
+    fondamentale pour tous les étudiants et nous nous engageons en faveur de l'équité,
+    de l'accès et des opportunités au sein de notre organisation [values.](%{values_url})
+    Pour atteindre cet objectif, nous nous efforçons d'identifier et d'éliminer les
+    obstacles qui empêchent l'inclusion et la pleine participation des étudiants et
+    des éducateurs handicapés. Pour en savoir plus sur nos efforts, consultez notre
+    [déclaration d'accessibilité.] (%{accessibility_url})
+  about_page_section_specific_description_3: Toutes les ressources pédagogiques et
+    les didacticiels que nous créons seront toujours libres d'utilisation et seront
+    librement licenciés sous licence [Creative Commons] (%{commons_url}), permettant
+    à d'autres de créer des ressources pédagogiques dérivées à des fins non commerciales.
+    Si vous souhaitez obtenir une licence pour nos matériaux à des fins commerciales,
+    [contactez-nous] (%{contact_us_url}). Nos cours sont traduits pour une utilisation
+    dans le monde entier ou par des locuteurs de différentes langues. Notre technologie
+    est développée en tant que [projet open source.] (%{open_source_url})
+  about_page_section_specific_description_4: La [Code.org Advocacy Coalition] (%{advocacy_url})
+    est une coalition bipartite d'entreprises et d'organisations à but non lucratif
+    qui travaillent ensemble pour aider à établir des politiques fédérales et étatiques
+    visant à étendre et à maintenir l'accès à l'informatique de la maternelle à la
+    12e année et à élargir la participation et la diversité dans ce domaine. Nous
+    réunissons [les dirigeants politiques républicains et démocrates] (%{leaders_url})
+    autour d'une cause commune en faveur de l'élargissement de l'accès et de la participation
+    à l'informatique de la maternelle à la 12e année.
+  about_page_section_specific_description_5: Code.org est membre du comité directeur
+    qui a contribué à établir le [K-12 Computer Science Framework] (%{framework_url}),
+    un guide de haut niveau destiné aux États, aux districts et aux organisations
+    qui mettent en œuvre l'enseignement de l'informatique. Le Framework a obtenu le
+    soutien de centaines d'universitaires, d'enseignants de la maternelle à la 12e
+    année, d'éditeurs de logiciels, d'organisations à but non lucratif et d'États.
+  about_page_section_specific_description_6: Formulaire Code.org IRS 990 pour [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](), (%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}) et [2021](%{irs_url_8}). [Politique
+    en matière de dons.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Inscrivez-vous pour recevoir des mises
+    à jour] (%{sign_up_url}) sur les progrès du mouvement informatique de la maternelle
+    à la 12e année et sur le travail de Code.org. Ou suivez Code.org sur les réseaux
+    sociaux :"
+  about_page_section_specific_description_8: Plus de 40 % du trafic de notre site
+    Web provient de l'extérieur des États-Unis et ce chiffre continue d'augmenter.
+    Afin d'élargir l'accès mondial à l'informatique, notre équipe travaille en étroite
+    collaboration avec [plus de 100 partenaires internationaux] (%{partners_url}),
+    les aidant à promouvoir l'Heure de code, à plaider en faveur d'un changement de
+    politique et à former des enseignants. Nous intégrons l'informatique au discours
+    international sur l'éducation en établissant des partenariats avec les ministères
+    de l'Éducation du monde entier et en collaborant avec des organisations internationales
+    telles que l'Organisation de coopération et de développement économiques et l'Organisation
+    des Nations Unies pour l'éducation, la science et la culture.
+  about_page_section_donors_description_1: Code.org® est un organisme public à but
+    non lucratif 501c3 enregistré, avec le soutien du grand public. Nous sommes reconnaissants
+    du soutien généreux que nous avons reçu de [personnes et organisations] (%{individuals_url})
+    qui soutiennent notre vision.
+  about_page_section_donors_description_2: Les réalisations des codes (ci-dessus)
+    démontrent notre capacité à tirer parti de ces dollars pour obtenir de bons résultats.
+    Mais compte tenu de l'ambition de notre organisation à but non lucratif de faire
+    en sorte que chaque enfant de chaque école ait accès à l'informatique, afin de
+    devenir des citoyens alphabétisés dans le monde numérique d'aujourd'hui et de
+    tester leur intérêt en explorant davantage les technologies de l'information en
+    tant que carrière, nous avons encore un long chemin à parcourir pour atteindre
+    un objectif de collecte de fonds qui soutiendra cette vision.
+  about_page_donors_link_1: Faites un don
+  about_page_donors_link_2: "[voir notre liste de donateurs] (%{donors_url})"
   language_code:
     ar: arabe
     az: azerbaïdjanais

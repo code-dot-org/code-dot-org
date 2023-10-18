@@ -1,66 +1,69 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
+import {useDispatch} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
+import {
+  tableLayoutStyles,
+  NAME_CELL_INPUT_WIDTH,
+} from '../tables/tableConstants';
 
-class ManageStudentFamilyNameCell extends Component {
-  static propTypes = {
-    id: PropTypes.number.isRequired,
-    familyName: PropTypes.string,
-    isEditing: PropTypes.bool,
-    editedValue: PropTypes.string,
-    sectionId: PropTypes.number,
+export default function ManageStudentFamilyNameCell({
+  id,
+  familyName,
+  isEditing,
+  editedValue,
+  inputDisabled,
+}) {
+  const dispatch = useDispatch();
 
-    //Provided by redux
-    editStudent: PropTypes.func.isRequired,
-  };
-
-  onChangeName = e => {
-    // Convert the empty string back to null before saving, so it doesn't
-    // add empty family names to students.
+  const onChangeName = e => {
+    // Avoid saving empty string to database; convert back to null if necessary
     const newValue = e.target.value || null;
-    this.props.editStudent(this.props.id, {familyName: newValue});
+    dispatch(editStudent(id, {familyName: newValue}));
   };
 
-  render() {
-    const {familyName, editedValue} = this.props;
+  // When the cell is disabled (i.e. for teacher accounts), the tooltip appears
+  const tooltipId = inputDisabled ? _.uniqueId() : '';
 
-    return (
-      <div>
-        {!this.props.isEditing && <div>{familyName}</div>}
-        {this.props.isEditing && (
-          <div>
+  return (
+    <div style={tableLayoutStyles.tableText}>
+      {!isEditing && <div>{familyName}</div>}
+      {isEditing && (
+        <div>
+          <span data-for={tooltipId} data-tip>
             <input
+              name="uitest-family-name"
               style={styles.inputBox}
-              // Since familyName is optional, explicitly prevent value from
-              // being set to undefined.
+              // Because familyName is optional, allow empty string
               value={editedValue || ''}
-              onChange={this.onChangeName}
+              onChange={onChangeName}
               placeholder={i18n.familyName()}
               aria-label={i18n.familyName()}
+              disabled={inputDisabled}
             />
-          </div>
-        )}
-      </div>
-    );
-  }
+            <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
+              <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
+            </ReactTooltip>
+          </span>
+        </div>
+      )}
+    </div>
+  );
 }
 
 const styles = {
   inputBox: {
-    width: 225,
+    width: NAME_CELL_INPUT_WIDTH,
   },
 };
 
-export const UnconnectedManageStudentFamilyNameCell =
-  ManageStudentFamilyNameCell;
-
-export default connect(
-  state => ({}),
-  dispatch => ({
-    editStudent(id, studentInfo) {
-      dispatch(editStudent(id, studentInfo));
-    },
-  })
-)(ManageStudentFamilyNameCell);
+ManageStudentFamilyNameCell.propTypes = {
+  id: PropTypes.number.isRequired,
+  familyName: PropTypes.string,
+  isEditing: PropTypes.bool,
+  editedValue: PropTypes.string,
+  inputDisabled: PropTypes.bool,
+};

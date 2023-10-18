@@ -5,33 +5,22 @@ function borderGPT(str) {
 }
 
 function createBorder() {
-  var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-  noFill();
-  var x;
-  var y;
-  for (var i = 0; i < 20; i++) {
-    var c = colors[i % colors.length];
-    stroke(c);
-    beginShape();
-    for (x = 20; x <= 380; x += random(5, 20)) {
-      y = 20;
-      vertex(x, y + i);
+  var numberOfCircles = 100;
+  var minRadius = 5;
+  var maxRadius = 20;
+  for (var i = 0; i < numberOfCircles; i++) {
+    var x = random(20, 380);
+    var y = random(20, 380);
+    var r = random(minRadius, maxRadius);
+    var opacity = random(50, 255);
+    fill(0, 0, 0, opacity);
+    noStroke();
+    if (x < 40 || x > 360 || y < 40 || y > 360) {
+      ellipse(x, y, r);
     }
-    for (y = 20; y <= 380; y += random(5, 20)) {
-      x = 380;
-      vertex(x - i, y);
-    }
-    for (x = 380; x >= 20; x -= random(5, 20)) {
-      y = 380;
-      vertex(x, y - i);
-    }
-    for (y = 380; y >= 20; y -= random(5, 20)) {
-      x = 20;
-      vertex(x + i, y);
-    }
-    endShape(CLOSE);
   }
 }
+
 
 
 

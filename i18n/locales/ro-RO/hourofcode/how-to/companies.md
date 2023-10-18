@@ -66,7 +66,7 @@ Pentru mai multe detalii privind voluntariatul și exemple de mesaje pentru a v�
 
 Dacă doriți să faceți mai mult, societatea dv. poate găzdui, de asemenea, un eveniment Hour of Code. Nu există o formulă specifică pentru găzduirea unui eveniment, așadar vă încurajăm să fiți creativ! Întrucât numărul personalului nostru este mic (dar puternic!), Code.org nu are o echipă dedicată pentru coordonarea evenimentelor Hour of Code. Cu toate acestea, există câteva sfaturi pentru a începe.
 
-### 1. Vizionați acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Urmărește acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Stabilește data, formatul și locul în care se va organiza evenimentul tău
 
@@ -90,7 +90,7 @@ Există evenimente [virtuale](https://hourofcode.com/us/how-to/virtual) sau cu p
 
 #### Dispozitive:
 
-Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Dar nu ai nevoie de un calculator pentru fiecare copil și poți chiar să organizezi Hour of Code fără calculatoare! Pentru activități offline, utilizează, în secțiunea Tehnologie necesară pentru ore, filtrul care să afișeze opțiunile „Fără computere sau dispozitive”.
+Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Însă nu este nevoie de un calculator pentru fiecare copil și poți chiar să organizezi Hour of Code fără calculatoare! Pentru activități offline, utilizează, în secțiunea Tehnologie necesară pentru ore, filtrul care să afișeze opțiunile „Fără computere sau dispozitive”.
 
 - **Activități de test** pe calculatoare sau dispozitive. Asigură-te că acestea pot deschide browserele și că au sunet și video.
 - **Nu ai suficiente dispozitive?** Folosește metoda programării în perechi. Atunci când elevii au un partener, ei se ajută reciproc şi se bazează mai puţin pe profesor. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.

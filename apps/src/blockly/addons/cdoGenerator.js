@@ -36,7 +36,9 @@ export default function initializeGenerator(blocklyWrapper) {
     block,
     opt_thisOnly
   ) {
-    if (block?.isUnused()) {
+    // Skip unused check for non-rendered workspaces. Non-rendered workspaces
+    // do not have an unused concept.
+    if (block?.workspace?.rendered && block?.isUnused()) {
       return '';
     }
     return originalBlockToCode.call(

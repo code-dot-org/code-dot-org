@@ -53,14 +53,14 @@ class Experiment < ApplicationRecord
     end
   end
 
-  def self.get_all_enabled(user: nil, section: nil, script: nil, experiment_name: nil)
+  def self.get_all_enabled(user: nil, script: nil, experiment_name: nil)
     if @@experiments.nil? || @@experiments_loaded < DateTime.now - MAX_CACHE_AGE
       update_cache
     end
     @@experiments.select do |experiment|
-      experiment.enabled?(user: user, section: section) &&
+      (experiment_name.nil? || experiment.name == experiment_name) &&
         (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
-        (experiment_name.nil? || experiment.name == experiment_name)
+        experiment.enabled?(user: user)
     end
   rescue => exception
     Honeybadger.notify(
@@ -80,10 +80,9 @@ class Experiment < ApplicationRecord
   # @param script [Unit]
   # @param experiment_name [String]
   # @returns [Boolean]
-  def self.enabled?(user: nil, section: nil, script: nil, experiment_name: nil)
+  def self.enabled?(user: nil, script: nil, experiment_name: nil)
     get_all_enabled(
       user: user,
-      section: section,
       script: script,
       experiment_name: experiment_name
     ).any?
@@ -96,11 +95,10 @@ class Experiment < ApplicationRecord
   # @param script [Unit]
   # @param experiment_names [Array[String]]
   # @returns [Boolean]
-  def self.any_enabled?(user: nil, section: nil, script: nil, experiment_names: [])
+  def self.any_enabled?(user: nil, script: nil, experiment_names: [])
     experiment_names.any? do |experiment_name|
       get_all_enabled(
         user: user,
-        section: section,
         script: script,
         experiment_name: experiment_name
       ).any?

@@ -5,36 +5,39 @@ ja:
   language: 日本語
   front_title: "%{campaign_date} は、史上最大の学習イベントに参加しよう"
   coming_soon: 近日公開
-  campaign_date_start_short: 12月5日
-  campaign_date_start_long: 12月5日
-  campaign_date_short: 12月5日～11日
-  campaign_date_full: 12月5日～11日
-  campaign_date_year: '2022'
-  campaign_date_full_year: 2022年12月5日～11 日
+  campaign_date_start_short: 12月4日
+  campaign_date_start_long: 12月4日
+  campaign_date_short: 12月4日～10日
+  campaign_date_full: 12月4日～10日
+  campaign_date_year: '2023'
+  campaign_date_full_year: 2023年12月4日～10日
   nonus_campaign_date_start_short: 10 月 1 日
   nonus_campaign_date_start_long: 10 月 1 日
   nonus_campaign_date_short: 10月1日～12月18日
   nonus_campaign_date_full: 10月1日～12月18日
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 2022年10月1日～2022年12月18日
   latam_campaign_date_start_short: 10 月 1 日
   latam_campaign_date_start_long: 10 月 1 日
   latam_campaign_date_short: 10月1日～12月18日
   latam_campaign_date_full: 10月1日～12月18日
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 2022年10月1日～2022年12月18日
   europe_campaign_date_start_short: 10 月 1 日
   europe_campaign_date_start_long: 10 月 1 日
   europe_campaign_date_short: 10月1日～12月18日
   europe_campaign_date_full: 10月1日～12月18日
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 2022年10月1日～2022年12月18日
   africa_campaign_date_start_short: 10 月 1 日
   africa_campaign_date_start_long: 10 月 1 日
   africa_campaign_date_short: 10月1日～12月18日
   africa_campaign_date_full: 10月1日～12月18日
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 2022年10月1日～2022年12月18日
+  hoc2023_header: AI による創造性
+  hoc2023_social_creativity_with_ai_title: "『アワー・オブ・コード』-あなたなら何を作りますか？"
+  hoc2023_social_creativity_with_ai_desc: コンピュータサイエンスを使ってAIを探求し、学びましょう！
   hoc2022_header: 探って、遊んで、作ろう！
   social_hoc2022_explore_play_create: コンピューターサイエンスで、探って、遊んで、作ろう！
   codeorg_homepage_hoc2022_body: 宇宙を探検してゴールを決め、ダンスをしましょう。コンピューターサイエンスを試す方法はたくさんあります。
@@ -120,24 +123,76 @@ ja:
   curriculum_launch_2023_title: カリキュラムの驚くべきアップデートをご紹介
   curriculum_launch_2023_desc: CSC、CSP、CSD などのアップデートに加えて、すべてを見つけるのに役立つ新しいカリキュラム カタログとリニューアルされた指導ページも追加されました。
   in_partnership_with: パートナーシップ
+  shop_code_dot_org_heading: ショップコード.org
+  shop_code_dot_org_desc: 私たちの仕事をサポートし、誇りを持ってムーブメントを着用してください。私たちの帽子はオバマ大統領や有名人にも着用されています。
+  spread_the_word_heading: みんなに広めよう
+  spread_the_word_desc: Code.orgをネットワークと共有して、私たちの影響力を拡大してください。ソーシャルメディアからメール更新まで、私たちがより多くの教育者、学生、支持者にリーチするのをどのように支援できるかをご覧ください。
+  follow_us_heading: ソーシャルメディアでフォローしてください
+  follow_us_desc: ソーシャルメディアで最新情報を入手したり、投稿をネットワークと共有したりして、最新情報を入手して認知度を高めましょう。
+  facebook: フェイスブック
+  twitter: ツイッター
+  linked_in: LinkedIn
+  instagram: インスタグラム
+  tik_tok: TikTok
+  device_tablet: タブレット
+  device_laptop: ノートパソコン
+  device_desktop_computer: デスクトップコンピューター
+  device_mobile_device: モバイルデバイス
+  subscribe_to_emails_heading: メールを購読する
+  subscribe_to_emails_desc: Code.orgとコンピュータサイエンス教育で何が起こっているかをメーリングリストで四半期ごとに更新して読んでください。
+  subscribe_to_emails_intl: 国際アップデートを購読する
+  promote_code_dot_org_heading: コード.orgをプロモート
+  promote_code_dot_org_desc: 統計、引用、動画を活用して、お住まいの地域のコンピューターサイエンスを宣伝しましょう。
   afe_partnership_logo_alt: Amazon Future Engineerのロゴ
   afe_partnership_thanks_desc: Amazon Future Engineer は、低所得層やその他の困難な状況に置かれている子供や若者がコンピューター・サイエンスのキャリアを追求できるよう、インスピレーションを与え、教育し、訓練するための包括的な幼少期からキャリアまでのプログラムです。[パートナーシップについて詳しくはこちら](%{afe_url})。
   grade_level: 学年レベル
   grade_level_label_elementary: 小学校
   grade_level_label_middle: ミドルスクール
   grade_level_label_high: ハイスクール
+  curricula_title_elementary: 小学校カリキュラム
+  curricula_desc_elementary: 小学生と一緒にコンピュータサイエンスを探求できる、楽しくて無料のコースやアクティビティをご覧ください。
+  curricula_title_middle: 中学校カリキュラム
+  curricula_desc_middle: あなたと中学生が一緒にコンピュータサイエンスを探求できるようにする魅力的なサービスをご覧ください。
+  curricula_title_high: 高校カリキュラム
+  curricula_desc_high: あなたと高校生がコンピュータサイエンスをより深く掘り下げることができる魅力的なコースやアクティビティをご覧ください。
+  for_administrators_heading: 管理者向け
+  for_administrators_desc: すでにコンピュータサイエンスをカリキュラムに取り入れている何千もの学校に参加してください。
+  for_parents_heading: 保護者向け
+  for_parents_desc: 生徒の学校にコンピュータサイエンス教育を提供または拡大するよう奨励することができます。
+  for_educators_heading: 教育関係者向け
+  for_educators_desc: コンピュータサイエンスの経験がなくても、プロフェッショナルな学習ワークショップで今すぐ授業を始めましょう。
   students_label: 生徒
   teachers_label: 先生方
+  educators_label: 教育者
+  companies_label: 企業
+  districts_label: 地区
+  school_assemblies_label: 学校集会
+  parents_label: 両親
+  public_officials_label: 公務員
+  volunteers_label: ボランティア
+  virtual_events_label: バーチャルイベント
   teacher_label_csf: CS基礎教師
   teacher_label_csd: CS Discoveries教師
   teacher_label_csp: CSプリンシプル教師
   teacher_label_csc: CSコネクション教師
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: 教師フォーラム
+  teacher_forum_desc: Hour of Code Teacher Forumにアクセスして、他の教育者からアドバイス、洞察、サポートを受けてください。
   required_materials: 必要な教材：
   optional_materials: オプションの教材：
+  call_to_action_hold_an_event: イベントを開催
+  call_to_action_register_event: イベントを登録する
+  call_to_action_select_activity: アクティビティを選択してください
+  call_to_action_start_activity: アクティビティを開始する
+  call_to_action_get_certificates: 証明書を取得
+  call_to_action_go_beyond_hoc: "「アワー・オブ・コード」の先へ"
+  call_to_action_view_promo_resources: プロモーションリソースを見る
   call_to_action_learn_more: もっと詳しく知る
   call_to_action_watch_now: 今すぐ見る
   call_to_action_try_activity: アクティビティを試す
+  call_to_action_try_activities: アクティビティを試す
+  call_to_action_explore_activities: アクティビティを見る
+  call_to_action_explore_ai: AI について詳しく見る
   call_to_action_explore_unit: エクスプロアユニット
   call_to_action_explore_curriculum: カリキュラムを見る
   call_to_action_explore_curriculum_options: カリキュラムの選択肢を探索
@@ -152,6 +207,15 @@ ja:
   call_to_action_explore_choice_level: 選択レベルの例を探索
   call_to_action_explore_collection: コレクションを探索
   call_to_action_explore_unplugged_lesson: アンプラグド・レッスンを探索
+  call_to_action_explore_csf: CS ファンダメンタルズを見る
+  call_to_action_explore_csd: CSディスカバリーを見る
+  call_to_action_explore_csp: CS 原則の詳細を見る
+  call_to_action_explore_csc: CS 接続の詳細を見る
+  call_to_action_explore_csa: Explore AP® コンピュータサイエンス A
+  call_to_action_explore_csa_short: AP® CSAの詳細はこちら
+  call_to_action_explore_maker: Maker カリキュラムを探す
+  call_to_action_explore_hoc: Hour of Code のチュートリアルを見る
+  call_to_action_explore_hoc_short: "「アワー・オブ・コード」を探る"
   call_to_action_try_app_lab: アプリラボを試す
   call_to_action_view_lesson_plan: 授業計画を見る
   call_to_action_self_paced_pl: 自分のペースで進められる専門的な学習を始める
@@ -175,11 +239,13 @@ ja:
   call_to_action_resources_tools: プログラミング・ツールを探索
   call_to_action_sign_up_free: 無料サインアップ
   call_to_action_explore_ai_resources: AIリソースを探索
+  call_to_action_explore_ai_curricula: AI カリキュラムを見る
   call_to_action_explore_curriculum_catalog: カリキュラムカタログを探索
   call_to_action_see_full_curriculum_catalog: カリキュラム・カタログを探索
   call_to_action_find_self_paced_modules: 自習型モジュールを探す
   call_to_action_join_teacher_forums: 教師フォーラムに参加
   call_to_action_explore_teacher_forums: 教師フォーラムを探索
+  call_to_action_explore_teacher_forum: 教師用フォーラムを探す
   call_to_action_explore_career_resources: キャリア・リソースの探索
   call_to_action_watch_videos: 動画を見る
   call_to_action_download_posters: ポスターのダウンロード
@@ -194,6 +260,31 @@ ja:
   call_to_action_learn_about_approach: 私たちのアプローチについて詳しく知る
   call_to_action_try_java_lab: Java Labを試す
   call_to_action_notify_available: 利用可能になったら通知する
+  call_to_action_register_early_access: 早期アクセスに登録する
+  call_to_action_open_positions: オープンポジションを表示
+  call_to_action_explore_roles: 募集中の職種を見る
+  call_to_action_get_guide: ガイドを入手
+  call_to_action_donate_to_cdo: Code.org に寄付してください
+  call_to_action_start_fundraiser: 募金活動を始める
+  call_to_action_view_donation_policy: 寄付ポリシーを見る
+  call_to_action_view_donate_bitpay: ビットペイで寄付する
+  call_to_action_make_a_donation: 寄付をする
+  call_to_action_other_ways_to_give: その他の寄付方法
+  call_to_action_become_partner_usa: 米国のパートナーになりましょう
+  call_to_action_become_partner_intl: 国際パートナーになりましょう
+  call_to_action_become_a_volunteer: ボランティアになりましょう
+  call_to_action_start_translating: 翻訳を始める
+  call_to_action_learn_about_advocacy: アドボカシーについて知る
+  call_to_action_visit_store: ストアを訪ねる
+  call_to_action_view_faqs: よくある質問をもっと見る
+  aria_label_call_to_action_hoc_how_to_educators: 教育者向けハウツーガイドを見る
+  aria_label_call_to_action_hoc_how_to_companies: 企業向けハウツーガイドを見る
+  aria_label_call_to_action_hoc_how_to_districts: 地区向けハウツーガイドを見る
+  aria_label_call_to_action_hoc_how_to_school_assemblies: 学校集会のハウツーガイドを見る
+  aria_label_call_to_action_hoc_how_to_parents: 保護者向けハウツーガイドを見る
+  aria_label_call_to_action_hoc_how_to_public_officials: 公務員向けハウツーガイドを見る
+  aria_label_call_to_action_hoc_how_to_volunteers: ボランティア向けハウツーガイドを見る
+  aria_label_call_to_action_hoc_how_to_virtual_events: バーチャルイベントのハウツーガイドを見る
   aria_label_call_to_action_afe: Amazon フューチャーエンジニアの詳細はこちら
   aria_label_call_to_action_teaching_csf: コンピュータサイエンスの基礎を教える専門学習プログラムを開始
   aria_label_call_to_action_teaching_csd: ティーチング・コンピュータ・サイエンス・ディスカバリーズの専門学習プログラムを開始
@@ -266,8 +357,11 @@ ja:
   curriculum_name_csp: コンピュータ サイエンス プリンシプル
   curriculum_name_csc: コンピューター・サイエンス・コネクション
   curriculum_name_csa: コンピュータ・サイエンスA
+  curriculum_name_csa_ai: ソフトウェアエンジニアリングとコンピュータービジョン
   curriculum_name_csc_02: 任意のCS接続モジュール
   curriculum_name_ai: "  AIと機械学習  "
+  curriculum_name_artificial_intelligence: 人工知能 (AI)
+  curriculum_name_maker: メーカー
   curriculum_name_maker_cp: デバイスを使ったアプリの作成 (サーキットプレイグラウンド)
   curriculum_name_maker_microbit: 'デバイスによるアプリの作成 (micro: bit)'
   curriculum_name_creating_apps_with_devices: デバイスを使ったアプリの作成
@@ -278,6 +372,7 @@ ja:
   curriculum_name_interactive_animations_games: インタラクティブなアニメーションとゲーム
   curriculum_name_design_process: 設計プロセス
   curriculum_name_data_society: データと社会
+  curriculum_desc_csf: コンピュータサイエンスの基本概念を学生に紹介する無料の初等カリキュラムセット。
   curriculum_desc_csf_express: コンピュータプログラムの作成、問題解決能力の開発、楽しい課題に取り組みながら学びます！ゲームや創造的なプロジェクトを作り、友達や家族、先生と共有しましょう。
   curriculum_desc_csf_express_pre_reader: パズルを解いたり、アニメーションのシーンを作ったりして、ドラッグ＆ドロップのブロックコーディングの基礎を学びましょう。アートや簡単なゲームを作って、友達や家族、先生と共有しましょう。
   curriculum_desc_csf_course_a: ループやイベントなどのコマンドを使ってプログラミングします。他の生徒と協力し、さまざまな問題解決手法を調べ、困難な課題に直面しても粘り強く取り組み、インターネットの安全性について学びましょう。
@@ -294,6 +389,13 @@ ja:
   curriculum_desc_data_society: 問題解決におけるデータの役割と、その過程におけるコンピュータの支援に重点をおきます。表現システムと関連する課題を扱います。データ収集がどのように問題解決を助けるかを発見します。
   curriculum_desc_creating_apps_with_devices: コンピューティングにおける物理デバイスの役割を探索します。ハードウェアの入出力を利用したプログラムを開発します。このユニットには、micro:bitとCircuit
     Playgroundの両方用のバージョンがあります。
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) 向けのこの無料カリキュラムで、学生にJavaプログラミング言語を学びながら、ソフトウェアエンジニアリングとオブジェクト指向設計を紹介してください。
+  curriculum_desc_maker: メーカー教育は、STEM（科学、技術、工学、数学）をさらに一歩進め、実践的な経験とコラボレーションを教えることで、問題解決と批判的思考を教えるのに役立ちます。
+  curriculum_desc_maker_short: メーカー教育では、問題解決と批判的思考を教えるのに役立つ実践的な経験とコラボレーションを教えるのに役立ちます。
+  curriculum_desc_csd: フレキシブルなコースで、各単元を単独で、または組み合わせて指導できます。Web サイト、アプリ、アニメーション、ゲーム、物理コンピューティングシステムの構築について学生に紹介します。
+  curriculum_desc_csp: 学生にコンピュータサイエンスの基本概念を紹介する、AP® CSPが承認した無料の高校入門コース。
+  curriculum_desc_csa_ai_long: 'この2章からなるPost-AP CSAモジュールでは、高校生にGitHubやGitHub Copilotなどのプロフェッショナルなソフトウェア開発ツールを実際に体験してもらい、コンピュータビジョンプログラムを開発するための実際のスキルを学びます。 '
+  curriculum_desc_csa_ai_short: このPost-AP® CSAモジュールは、高校生にプロフェッショナルなソフトウェア開発ツールを実際に体験してもらうものです。
   collection_hardware: ハードウェアに焦点を当てる
   collection_hardware_desc: 生徒がデータや物理的なデバイスを使用して問題を解決できるようにします。
   collection_design_purpose: 目的を持ったデザインに焦点を当てる
@@ -319,6 +421,7 @@ ja:
   module_label_professional_learning: プロフェッショナルラーニング：
   module_label_languages: 対応言語：
   module_label_accessibility_features: アクセシビリティ：
+  module_label_accessibility_features_full: 'アクセシビリティ機能:'
   module_label_educator_tool: 教育者用ツール
   module_label_educator_course: 教育者用コース
   module_label_student_tool: 生徒用ツール
@@ -326,6 +429,7 @@ ja:
   module_label_student_content_resources: コンテンツとリソース
   module_label_new: 新規
   module_label_coming_soon: 近日公開予定
+  module_label_available_now: 今すぐ利用可能
   module_label_video_series: ビデオシリーズ
   module_label_self_paced: セルフペースモジュール
   module_ages_5_10: 5-10
@@ -336,6 +440,8 @@ ja:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: 幼稚園～高校3年
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -350,11 +456,14 @@ ja:
   module_grade_9_12_teachers: 9-12教師
   module_level_beginner: 初心者
   module_level_intermediate: 中級者
+  module_level_advanced: 上級者向け
   module_duration_45_mins: 45 分
+  module_duration_2_weeks: 2 週間
   module_duration_1_hr: 1 時間
   module_duration_2_hrs: 2 時間
   module_duration_3_hrs: 3 時間
   module_duration_5_hrs: 5 時間
+  module_duration_5_hrs_plus: 5 時間以上
   module_duration_8_hrs: 8 時間
   module_duration_20_hrs: 20 時間
   module_duration_35_hrs: 35 時間
@@ -366,6 +475,7 @@ ja:
   module_duration_school_year: 学年
   module_duration_month_quarter: 月または四半期
   module_duration_month_semester_year: 月、学期、または年
+  module_duration_varies: 不定
   module_prerequisites_none: "[なし]"
   module_prerequisites_maker_cp: サーキットプレイグラウンドへのアクセス
   module_prerequisites_maker_microbit: マイクロ:ビットへのアクセス
@@ -418,6 +528,9 @@ ja:
   heading_java_lab: Javaラボ
   heading_objects_first: オブジェクトファースト
   heading_these_lessons_will: これらのレッスンでは次のことを行います。
+  heading_explore_curriculum_catalog: カリキュラムカタログのすべてのコースをご覧ください
+  heading_csa_ai: AP® 試験後にやることをお探しですか？
+  heading_bring_cs_to_students: 学生にコンピュータサイエンスをもたらす
   professional_learning_section_desc: 指導準備に必要なサポートを受けましょう。90％以上の教師が、これまでで最高の専門能力開発であると評価しています！
   professional_learning_section_desc_short: 指導準備に必要なサポートを受けましょう。
   professional_learning_section_desc_self_paced: ジャストインタイムのサポートで、あなたのスケジュールに合わせて自信を持って教える準備ができます。
@@ -432,6 +545,13 @@ ja:
   no_devices_section_desc: CS教育は常にスクリーンの前で行われる必要はなく、デバイスへのアクセスがコンピューター・サイエンスの概念を学ぶ障害になるべきではありません。
   support_and_questions_section_subhead: まだ質問がございますか？私たちにご連絡ください！私たちがお手伝いします。
   support_and_questions_section_desc: サポートチームは、Code.orgを使った指導を始めるにあたって、どんな質問にもお答えします。また、教師フォーラムで他の教師の経験について質問することもできます。
+  subscribe_form_section_title: 最新情報を購読する
+  subscribe_form_section_desc_csa: サインアップして、Code.orgのAP® Computer Science Aに関するメールを毎月受信し、役立つリマインダー、ヒント、最新情報を受信トレイに直接送信してください。
+  subscribe_form_section_desc_csc: サインアップすると、Code.orgのComputer Science Connectionsに関するメールを毎月受信し、役立つリマインダー、ヒント、最新情報を受信トレイに直接送信できます。
+  subscribe_form_section_desc_csd: サインアップすると、Code.orgのComputer Science Discoverysに関する毎月のメールを受け取り、役立つリマインダー、ヒント、最新情報を受信トレイに直接送信できます。
+  subscribe_form_section_desc_csf: サインアップすると、Code.orgのコンピュータサイエンスの基礎に関するメールを毎月受信し、役立つリマインダー、ヒント、更新情報を受信トレイに直接送信できます。
+  subscribe_form_section_desc_csp: サインアップすると、Code.orgのコンピュータサイエンス原則に関するメールを毎月受信し、役立つリマインダー、ヒント、更新情報を受信トレイに直接送信できます。
+  subscribe_form_section_unsubscribe: 購読はいつでも解除できます。
   blockchain_hero_heading: ブロックチェーンの仕組み
   blockchain_hero_desc: 新しいビデオシリーズとそれに付随するレッスンである「How Blockchain Works」で、ブロックチェーンの世界に飛び込みましょう！
   blockchain_intro_heading: ブロックチェーンの仕組みを見る
@@ -504,6 +624,8 @@ ja:
   ai_curriculum_title_04: "「AI はどのように機能するか 」"
   ai_curriculum_desc_04: これらのレッスンは、「AI の仕組み」ビデオシリーズを補足するものです。各レッスンは、シリーズの 1 本の動画とペアになっており、動画で紹介されている概念をより深く掘り下げています。
   ai_curriculum_btn_aria_label_04: AI のしくみを探るレッスン
+  ai_curriculum_grades_05: グレードレベル:9-12
+  ai_curriculum_btn_aria_label_05: "「ソフトウェアエンジニアリングとコンピュータビジョン」モジュールをご覧ください"
   ai_carousel_heading: 'Code.orgを使った人工知能についての教師たちの感想:'
   ai_carousel_quote_01: このレッスンは、生徒たちに、分類システムには意見の要素があることを知る機会にもなりました。後になって、AI にバイアスが入り込む可能性が明らかになったとき、私は生徒たちを引き戻して、モデルのトレーニングに使われるデータは選択に基づくものであることを思い出させることができました。
   ai_carousel_quote_02: 私の学生たちは、ほぼ日常的に経験している技術の進歩に関しては、自分たちが単なる消費者である必要はないことを学びました。彼らも実はクリエイターになれるのです！
@@ -571,8 +693,14 @@ ja:
   ai_pl_101_video_title_5: AI を教室にもたらす
   ai_pl_101_video_desc_5: このセッションでは、AIに関する教育、AI教育ツールの評価と活用、学生の評価におけるAIの活用に焦点を当てます。理論、実践例、リソースを豊富に組み合わせることで、教育者が
     AI の世界をナビゲートし、学生の学習体験を向上させることができるようにすることを目的としています。
+  ai_pl_101_resources_5: AI への責任あるアプローチを確保するためのガイド
   ai_pl_101_video_desc_6: 大規模言語モデル（ChatGPTなど）とジェネレーティブAIに関する2つの新しいビデオを特集して、AIに大きな変化をもたらす新しいテクノロジーについて詳しく学んでください。これらの新しいテクノロジーがどのように機能するかを、OpenAI
     の CTO であるミラ・ムラティと RunwayML の CEO であるクリストバル・バレンズエラという専門家から直接聞くことができます。
+  ai_pl_101_llm_slides_title: 教育者向けの大規模言語モデルプロンプト
+  ai_pl_101_llm_slides_desc: 初心者から上級者まで、ChatGPTのようなLLMから可能な限り最高のアウトプットを引き出すためのツール。初心者向けのスタータープロンプトのほか、可能性を最大限に引き出したいユーザー向けの高度なツールも含まれています。
+  ai_pl_101_resources_3: 学生の学習を変革するための AI プロンプト
+  ai_pl_101_resources_section_title: AI について学ぶその他の方法
+  ai_pl_101_resources_guide: 'コンパニオンガイド:'
   how_ai_works_hero_heading: "「AI はどのように機能するか 」"
   how_ai_works_hero_desc: ビデオシリーズとそれに付随するレッスンである「How AI Works」で AI の世界に飛び込みましょう！
   how_ai_works_intro_desc: この一連の短いビデオとそれに付随する教室での授業では、人工知能がどのように機能し、なぜ重要なのかを教員と生徒に紹介します。トピックに基づいて個別のレッスンを選択したり、1つのクラスで一連のトピックをすべて調べたり、7つのレッスンすべてを教えてより深く掘り下げたりすることができます。
@@ -742,12 +870,11 @@ ja:
   teach_page_quote: Code.orgのカリキュラムを利用すれば、すべてがあなたのために用意されています。生徒への質問も用意されています。あなたが教える必要のある授業が用意されており、その指導方法も教えてくれます。ですから、コンピュータ・サイエンスの経験がなくても、このカリキュラムがあれば大丈夫です。コンピュータ・サイエンスの経験があり、それを教えたことがある人なら、生徒への教え方に新しいアプローチを与えてくれるでしょう。
   teach_page_free_curriculum_heading: 無料で魅力的なカリキュラム
   teach_page_free_curriculum_desc: 私たちは、費用を心配することなく、あなたの学校でコンピュータサイエンスを導入していただきたいと考えています。そのため、私たちはカリキュラムの提供を永久に無料とすることを約束しています！
-  teach_page_free_curriculum_list_heading_01: 各学年向けの魅力的なカリキュラム
   teach_page_free_curriculum_list_desc_01: 無料で、柔軟性があり、楽しいカリキュラムは、67以上の言語で提供されています。
-  teach_page_free_curriculum_list_heading_02: 適応力のある革新的なカリキュラム
   teach_page_free_curriculum_list_desc_02: Code.orgは、通年のカリキュラムから単発のアクティビティまで、あらゆるものを提供しています。さらに、ベストプラクティスや重点分野をサポートするためにカリキュラムを毎年更新し、現在需要の高いトピックを教える新しい内容を作成しています。
-  teach_page_free_curriculum_list_heading_03: 国家標準に対応した体系的なカリキュラム
   teach_page_free_curriculum_list_desc_03: 各カリキュラムは、CSTA、次世代科学標準、コモン・コアなど、少なくとも1つの国家基準に対応しています。
+  teach_page_free_curriculum_list_desc_04: 67 以上の言語に対応
+  teach_page_free_curriculum_list_desc_05: 少なくとも1つの国内規格（CSTA、NGSS、およびコモンコアを含む）にマッピングされている
   teach_page_free_curriculum_heading_02: 学年別のカリキュラムの内容をご覧ください：
   teach_page_resources_heading: 各ステップをサポートするリソース
   teach_page_resources_desc: Code.orgのアカウントにサインアップすると、自信を持ってコンピュータサイエンスを教えるのに役立つ教材にアクセスできます。Code.orgには、CS教育の経験のない教育者を支援するために設計された広範なリソースがあります。タブをクリックして、リソースの詳細をご覧ください。
@@ -788,8 +915,7 @@ ja:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: アプリラボ
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: ファシリテーター主導のワークショップ、自分のペースで進めるモジュール
   csp_page_curriculum_glance_professional_languages: 日本語
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -909,8 +1035,7 @@ ja:
   csd_page_curriculum_glance_topics: 人工知能、データ、ウェブデザイン、フィジカルコンピューティング、アプリデザイン、ゲームとアニメーション、アートとデザイン、プログラミング
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: アプリラボ、ゲームラボ、AIラボ、ウェブラボ
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: ファシリテーター主導のワークショップ、自分のペースで進めるモジュール
   csd_page_curriculum_glance_professional_languages: 日本語
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -985,8 +1110,7 @@ ja:
   csf_page_curriculum_glance_topics: プログラミング、インターネット、ゲーム・アニメーション、アートとデザイン、アプリデザイン
   csf_page_curriculum_glance_devices: ラップトップ, Chromebook, タブレット
   csf_page_curriculum_glance_tools: スプライトラボ、プレイラボ
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: ファシリテーター主導のワークショップ、自分のペースで進めるモジュール
   csf_page_curriculum_glance_languages: アラビア語、インドネシア語、カタロニア語、中国語簡体字、中国語繁体字、チェコ語、フランス語、ドイツ語、ヒンディー語、イタリア語、日本語、韓国語、カンナダ語、マレー語、マラーティー語、モンゴル語、ポーランド語、ポルトガル語BR、ルーマニア語、ロシア語、スロバキア語、タガログ語、タミル語、タイ語、トルコ語、ウクライナ語、スペイン語ラタム語、ウルドゥー語、スペイン語ES、ウズベク語、ベトナム語
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
@@ -1088,13 +1212,43 @@ ja:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: 私たちの使命への資金提供にご協力ください
+  donate_page_top_desc: すべての寄付は、コンピュータサイエンス教育へのアクセスを拡大するというCode.orgの使命を後押しします。私たちは皆さんが寄付をして社会に貢献できるよう、いくつかの方法を提供しています。
+  donate_page_fundraise_title: Code.org のファンドレイズ
+  donate_page_fundraise_desc: Code.orgのために資金を集めるのを手伝ってください！すべての学校のすべての生徒にコンピュータサイエンスを学ぶ機会が与えられるべきです。
+  donate_page_other_ways_title: その他の寄付方法
+  donate_page_other_ways_desc: さまざまな貢献方法を探り、自分に最も適したオプションを見つけてください。大小を問わず、あらゆるジェスチャーが私たちの使命を前進させます。
+  donate_page_501c3: Code.orgは公共の501 (c) (3) 非営利団体として登録されています。Code.org への寄付は、法律で認められている範囲で税控除の対象となります。Code.org
+    の納税者番号は 46-0858543 です。
+  donate_page_donation_policy_title: 寄付ポリシーの理解
+  donate_page_donation_policy_desc: 寄付金の取り扱いと配分方法について学びましょう。
+  donate_tabs_tab_label_daf_direct: DAF ダイレクト
+  donate_tabs_tab_label_amazon: アマゾン
+  donate_tabs_tab_label_bitpay: ビットペイ
+  donate_tabs_tab_label_employee_match: 従業員マッチ
+  donate_tabs_daf_direct_title: DAF ダイレクト経由で寄付
+  donate_tabs_daf_direct_desc: フィデリティ・チャリティー、シュワブ・チャリティー、またはBNYメロンのドナー・アドバイズド・ファンドを通じて寄付し、DAFダイレクトのオンラインフォームからCode.orgに助成金を推薦してください。
+  donate_tabs_amazon_title: アマゾン経由で寄付
+  donate_tabs_amazon_desc: Amazon アカウントを使用して直接寄付してください。数回クリックするだけで、Code.org のミッションにシームレスに貢献し、コンピュータサイエンス教育の未来を後押しできます。
+  donate_tabs_bitpay_title: ビットペイ経由でクリプトを使って寄付する
+  donate_tabs_bitpay_desc: 暗号通貨で寄付の未来を切り開きましょう。BitPayを通じて、デジタル通貨はCode.orgのコンピューターサイエンス教育の拡大に向けた取り組みを直接支援することができます。
+  help_page_top_heading: どのように支援できるか
+  help_page_top_desc: すべての子どもがどこからでもコンピュータサイエンスを利用できるようにするという私たちの使命を支援してください。皆さんの努力は、私たちが将来のイノベーターを鼓舞し、テクノロジー教育のギャップを埋めるのに役立ちます。
+  help_page_top_subhead: Code.org に寄付をしてください
+  help_page_top_desc_02: 私たちは、オンラインと学校の両方で、すべての学生にコンピュータサイエンスを学ぶ機会を提供するよう努めています。学校では、常設コースを開設し、教師を養成しています。1ドル寄付するごとに、1人の子どもにコンピュータサイエンスを紹介してもらいます。
+  help_page_partners_heading: パートナーになる
+  help_page_partners_desc: Code.orgは、他の非営利団体とパートナーとして協力して、地域的で持続可能な方法でコンピュータサイエンスを広める手助けをしています。プログラムの詳細をご覧ください。
+  help_page_volunteer_heading: 教室でのボランティア
+  help_page_volunteer_desc: ボランティアでHour of Codeを教えたり、地元の教室でゲストスピーカーになったりしてください。サインアップして、お近くの機会について聞いてみましょう。
+  help_page_translate_heading: 翻訳にご協力ください
+  help_page_translate_desc: ボランティアはチュートリアルを45以上の言語に翻訳しています。今後も世界中の学生向けにチュートリアルを広げていくのにご協力ください！
+  help_page_speak_for_cs_heading: コンピュータサイエンス教育のために声を上げて
+  help_page_speak_for_cs_desc: Code.orgが全米で行っているアドボカシー活動と、コンピュータサイエンスをすべての学生にとって基礎的なものにするために州が採用することを推奨する10のポリシーについて詳しく学んでください。さらに、お住まいの州に変化をもたらす方法についても調べてください。
   hoc_live: アワー・オブ・コードライブ
   hoc_live_sign_up_title: アワー・オブ・コードライブにサインアップ
   hoc_live_learn_title: アワー・オブ・コードライブで学ぼう
-  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
-    of all ages and abilities, including those without computers, are welcome. Join
-    our mailing list to receive recordings of the episodes and resources to continue
-    learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_sign_up_message: 特別ゲストと一緒にリアルタイムで学ぼう！パソコンを持っていない学生も含め、年齢や能力を問わずすべての学生を歓迎します。私たちのメーリングリストに参加して、エピソードの録画や家庭での学習を続けるためのリソースを受け取りましょう。
+    [here]過去のエピソードを見る ()%{episodes_url}
   hoc_live_learn_message: 特別ゲストと一緒にコンピュータサイエンスの基本概念を学びましょう！コンピュータを持たない学生も含め、あらゆる年齢や能力の学生が、バーチャルワークショップに参加できます。Hour
     of Code ライブのエピソードを通じて、自宅でも学習を続けてください。
   hoc_live_join_us: あなたもやってみませんか？
@@ -1151,7 +1305,7 @@ ja:
     のコース</a> を進める
   codeorg_homepage_hoc2018_dance_heading: 自分で作る <span class="highlight-word">ダンス&nbsp;パーティー</span>
   codeorg_homepage_hoc2018_header_line1: アワー・オブ・コードがやってくる...
-  codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
+  codeorg_homepage_hoc2018_header_line2_desktop: <span class="hoc2018-highlight-word">何を作成しますか?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: 何を作りますか。
   codeorg_homepage_hoc2018_header_line3: 想像力を解き放ち、イノベーションを生み出しましょう。Hour of Codeから始めて、それが何であれ、あなた自身のクリエイティビティブランドから始めましょう。
   codeorg_homepage_hoc2018_musician_before: 特集
@@ -1167,7 +1321,7 @@ ja:
   hoc2018_tutorial_mchoc_description: コードブロックで、アレックスやスティーブをマインクラフト世界の冒険に連れ出しましょう。
   codeorg_homepage_hoc2019_dance_heading: 新しい <span class="highlight-word"> Dance&nbsp;Party!</span>
     をお試しください
-  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: "&nbsp;**ダンスパーティーをコーディングしよう！**"
   codeorg_homepage_special2020_body1: "  学校閉鎖に直面している保護者や先生への支援。  "
   codeorg_homepage_special2020_body2: おすすめの学習リソースをご覧ください。
   codeorg_homepage_special2020_body: この夏も学び続けましょう！自宅での学習に役立つリソースをご覧ください。
@@ -1443,6 +1597,10 @@ ja:
   signup_email_preference_opt_in: Code.orgコースのアップデート、地元の何かよい機会、あるいはその他コンピューターサイエンスのニュースなどメールで連絡してもよいですか？
   signup_email_preference_privacy: "（プライバシーポリシーをご覧ください）"
   signup_email_preference_yes: はい
+  signup_email_preference_yes_elementary: はい-小学校向けリソースに関する最新情報を送ってください
+  signup_email_preference_yes_middle: はい-中学校のリソースに関する最新情報を送ってください
+  signup_email_preference_yes_high: はい-高校のリソースに関する最新情報を送ってください
+  signup_email_preference_yes_general: はい-一般的な更新情報を送ってください
   signup_email_preference_no: いいえ
   signup_email_preference_error: Eメールプリファレンスは必須です
   signup_multiple_event_warning: 複数のイベントを開催する場合は、それぞれに一意の名前またはメールアドレスを提出してください。我々は、名前とメールアドレスの組み合わせごとに1
@@ -3214,9 +3372,8 @@ ja:
     the Pandaと彼のすてきなトーストフレンドが、基本的なコマンドと構造を生徒たちに教えます。Bamboo JS アクティビティは、コーディングにもう少しアニメーションとアートとデザインを加えたい学生のためのデザインです。Bamboo
     アクティビティはあらゆる年齢の学生に最適です。 '
   tutorial_robojav_longdescription: シミュレートされたロボットやカスタマイズされたクリーチャーのための小さな世界を画面上に構築しながら、Javaプログラミングの基礎を1時間で学べます。事前のプログラミング経験は必要ありません。対象トピックには、オブジェクト、メソッド、パラメーター、シンプルなグラフィックが含まれます。
-  tutorial_roboba_longdescription: "RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. The Algebra 1 activities are self-guided. \nRoboBlockly
-    prepares students to be ready to program in C/C++.\n"
+  tutorial_roboba_longdescription: "RoboBlocklyは、初心者がBlocklyのロボットを使って数学を学ぶことができるように設計されています。Algebra
+    1 のアクティビティはガイド不要です。 \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
   tutorial_knodsnake_longdescription: 'JavaScriptでスネークゲームを作成する方法を学びましょう！ '
   tutorial_soccharater_longdescription: 自分だけのピクセルキャラクターをコーディングしよう！HTML を使用してキャラクターを作成し、CSS
     を使用してスタイルを設定し、JavaScript を使用してかわいいピクセル人物をアニメーション化します。自分でコーディングすることも、友達を招待してチームコーディングゲームと一緒にコーディングすることもできます。
@@ -3237,18 +3394,14 @@ ja:
   tutorial_codemoji_longdescription: Codemojiアクティビティは、1年生から6年生までの生徒が絵文字を使用して基本的なコーディングの概念を学ぶためのWebベースのアクティビティです。アクティビティを終えた生徒たちは、基本的な
     HTML タグと概念について学びました。これは、学生がわずか数ステップで基本的なウェブサイトを構築するというコーディングプロジェクトを進めるのに役立ちます。Codemoji
     アクティビティを終えると、生徒たちは実際のコーディングスキルを身につけていきます。
-  tutorial_robobii_longdescription: "RoboBlockly is designed for beginners to learn
-    coding with robots in Blockly. The coding activities are self-guided with tutorial
-    videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
-  tutorial_robobm_longdescription: "RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. The math activities are self-guided. \nRoboBlockly
-    prepares students to be ready to program in C/C++.\n"
-  tutorial_codingrobots_longdescription: "RoboBlockly is designed for beginners to
-    learn coding and math with robots. The activities are student-guided with tutorial
-    videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
-  tutorial_robob_longdescription: "RoboBlockly is designed for beginners to learn
-    robotics with coding in Blockly. The robotics activities are self-guided with
-    tutorial videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
+  tutorial_robobii_longdescription: "RoboBlocklyは、初心者がBlocklyでロボットを使ったコーディングを学ぶために設計されています。コーディングアクティビティはチュートリアルビデオでガイドなしで行えます。
+    \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
+  tutorial_robobm_longdescription: "RoboBlocklyは、初心者がBlocklyのロボットを使って数学を学ぶことができるように設計されています。数学のアクティビティは自習型です。
+    \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
+  tutorial_codingrobots_longdescription: "RoboBlocklyは、初心者がロボットを使ってコーディングと数学を学ぶために設計されています。アクティビティは学生が指導するチュートリアルビデオで行われます。
+    \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
+  tutorial_robob_longdescription: "RoboBlocklyは、初心者がBlocklyでコーディングしてロボット工学を学ぶことができるように設計されています。ロボット工学のアクティビティは、チュートリアルビデオでガイドなしで行えます。
+    \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
   tutorial_coders_longdescription: "このステップバイステップのパズルゲームでは、ボットプログラミングを簡単に紹介できます。 \n\n目的は、他のプレイヤーとの宇宙船レースに勝つことです。\n\nゲームの開始は簡単で、船を動かすのに数行のコードしか必要ありませんが、より洗練されたボットを作成するための改善の可能性はほぼ無限にあります。 "
   tutorial_tynkerhw_longdescription: このハイオクなレーシングゲームでHot Wheelsを使ってプログラミングを学びましょう！幅広い車種から選んで、複雑なレーストラックをナビゲートしながらプログラミングを学びましょう。障害物を飛び越え、コーナーを滑ってレースに勝ちましょう。自分のレーストラックをプログラムして、友達にレースを挑むこともできます。
   tutorial_tynkermh_longdescription: モンスターハイはスカベンジャーハントを主催しています!ドラッグアンドドロップブロックでコーディングパズルを解き、フランキー、ドラキュラウラ、クローディーン、クレオ、グーリアを助けよう。モンスター・ハイのホールでクエストを進めながら、障害物を避けて学校の紋章をすべて見つけてください。それから、グールたちと一緒に自分だけのダンスパーティーミュージックビデオをプログラムして、友達と共有しましょう。
@@ -3289,9 +3442,9 @@ ja:
   tutorial_tlcknight_longdescription: このアクティビティでは、2 つの異なる表現を使用してパズルを解きます。最初はかなり難しいですが、ボードや動きの表現を変えるととても簡単になります。問題を表すグラフを作成しましょう。抽象化を使うことの威力と、表現の選択によって問題がいかに簡単になるかをご覧ください。このアクティビティは、ツアーガイドアクティビティに続くものです。
   tutorial_fufafit_longdescription: 学生は、授業と運動感覚活動を通じて、高度なプログラミングの概念（機能）を学びます。学生は画面上の機能に関する知識を応用してプログラムを実行します。このレッスンは、シーケンス、条件、ループ、またはその他の基本的なプログラミング概念についてある程度の経験がある学生と教師を対象としています。
   tutorial_ozodance_longdescription: |-
-    This teacher-led tutorial introduces students to the concept of coding with the help of Ozobot, a small programmable robot. Students will be learning how to code by creating and programming a dance routine for Ozobot! They will use OzoBlockly, a visual programming language based on Blockly, to program the dance and then have fun see their choreography come alive when Ozobot performs their dance.
+    この教師主導のチュートリアルでは、小さなプログラマブルロボットであるOzobotを使ったコーディングの概念を学生に紹介します。学生たちは、Ozobotのダンスルーチンを作成してプログラミングすることで、コーディングの仕方を学びます！Blocklyをベースにしたビジュアルプログラミング言語であるOzoBlocklyを使ってダンスをプログラミングし、Ozobotがダンスを披露すると振り付けが生き生きと動き出すのを楽しみます。
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by the Ozobot games. The tutorial is designed for grades 1-12 and can be customized to your students' abilities.
+    このチュートリアルでは、Ozobot のプログラミング経験や Ozobot の知識は必要ありません。ただし、ある程度のプログラミング経験がある学生でも、Ozobot のゲームには夢中になります。チュートリアルは1年生から12年生を対象としており、生徒の能力に合わせてカスタマイズできます。
   tutorial_codingrobotics_longdescription: 学生は基本的なプログラミングの概念について学び、新しい知識をロボット工学に応用します。学生はKodableとWonder
     Workshopの両方と連携して、プログラミングの知識を活かしてPathアプリでロボットに「ダッシュ」を指示します。
   tutorial_box_longdescription: ボックスアイランドを旅して、ヒロが荒野に散らばっている時計をすべて集めるのを手伝ってください！このチュートリアルでは、アルゴリズム、シーケンス、ループ、条件式の基礎を学びます！
@@ -3340,15 +3493,15 @@ ja:
     は有限状態マシンを作成するための使いやすく無料のツールです。このアクティビティでは、単純な有限状態マシンを作成してシミュレーションした後、パズル、ガジェット、Web
     ページ、ゲームなどを表現するより複雑な有限状態マシンを作成します。
   tutorial_procolor_longdescription: |-
-    This teacher-led tutorial introduces your students to programming and computational thinking and it also explains what kind of robot Ozobot is. This activity is "unplugged", which means that the coding is not done on a computer or tablet, but on a piece of paper with markers. Students will be giving commands to Ozobot using OzoCodes, which are special color sequences. After learning about how to program Ozobot with markers and paper, students are challenged to solve a maze and help Ozobot find the way to school.
+    この教師主導のチュートリアルでは、生徒にプログラミングと計算的思考を紹介し、Ozobotがどのようなロボットであるかについても説明します。このアクティビティは「アンプラグド」です。つまり、コーディングはコンピューターやタブレットではなく、マーカー付きの紙の上で行われます。学生は、特別なカラーシーケンスであるOzoCodesを使ってOzobotにコマンドを渡します。マーカーと紙を使ってOzobotをプログラムする方法を学んだ後、生徒たちは迷路を解き、Ozobotが学校に行く道を見つけるのを手伝うことに挑戦します。
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by programming Ozobot. The tutorial is designed for grades K-12 and can be customized to your students' abilities.
+    このチュートリアルでは、Ozobot のプログラミング経験や Ozobot の知識は必要ありません。ただし、ある程度のプログラミング経験がある学生でも、Ozobot のプログラミングには従事できます。チュートリアルは幼稚園から高校までの学年向けに設計されており、生徒の能力に合わせてカスタマイズできます。
   tutorial_spiralsfinch_longdescription: 'フィンチは、コンピュータサイエンスを学ぶ学生にコードを具体的かつ物理的に表現させることで、生徒に刺激を与え、楽しませるように設計された小型ロボットです。このアクティビティでは、フィンチを動かしたり回転させたりするプログラムの書き方を学びます。次に、変数を使用してロボットがらせん状に動くようにプログラムします。このアクティビティでは、Scratch
     か Snap! のどちらかでフィンチをプログラムできます。ラップトップまたは Chromebook のいずれかを使用します。事前のプログラミング経験は必要ありません。 '
   tutorial_ozoi_longdescription: |-
-    This tutorial introduces students to programming and computational thinking and it also explains what kind of robot Ozobot is. This activity is "unplugged", which means that the coding is not done on a computer or tablet, but on a piece of paper with markers. Students will be learning about how the robot works and then give commands to Ozobot using OzoCodes, which are special color sequences. After learning about how to program Ozobot with markers and paper, students are challenged to solve a maze and help Ozobot find the way to the store.
+    このチュートリアルでは、学生にプログラミングと計算的思考を紹介し、Ozobotがどのようなロボットであるかを説明します。このアクティビティは「アンプラグド」です。つまり、コーディングはコンピューターやタブレットではなく、マーカー付きの紙の上で行われます。学生はロボットの仕組みを学び、次に特殊なカラーシーケンスであるOzoCodesを使ってOzobotに命令を出します。マーカーと紙を使ってOzobotをプログラムする方法を学んだ後、生徒たちは迷路を解き、Ozobotが店への道を見つけるのを手伝うことに挑戦します。
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by programming Ozobot. The tutorial is designed for grades K-12 and can be customized to your students' abilities.
+    このチュートリアルでは、Ozobot のプログラミング経験や Ozobot の知識は必要ありません。ただし、ある程度のプログラミング経験がある学生でも、Ozobot のプログラミングには従事できます。チュートリアルは幼稚園から高校までの学年向けに設計されており、生徒の能力に合わせてカスタマイズできます。
   tutorial_ticklel_longdescription: ブリックバイブリックで、思い思いのレゴイマジネーションを膨らませましょう。Tickleアプリにいくつかのコードをまとめることで、レゴWeDoに素晴らしいことをさせることができます。
   tutorial_spiralsdash_longdescription: ロボットを使ってアートを作りながら、プログラムで変数を使う基礎を学びましょう！Blocklyの変数を使って、Dashロボットの車輪速度を動的に制御できます。レッスンを修了すると、変数を割り当てる方法、変数にアクセスする方法、ループを使用して変数を動的に変更する方法を理解できるようになります。時間の経過とともに変数の値を変化させることで、Dash
     に素晴らしいスパイラルを描かせることができます！
@@ -3369,11 +3522,8 @@ ja:
     1 つは、インターフェースはわかりやすくシンプルで、雑然としたものではないということです。また、問題を単純化することや、人を理解することの重要性など、計算的思考の側面も示しています。
   tutorial_tlcaus_longdescription: このアクティビティでは、さまざまなコンピューティングの概念を覚えやすい方法で紹介します。手品を紹介し、抽象化、論理的推論、計算モデリングを使ってアルゴリズムの動作を確認する方法を示します。「パンチカード検索」アクティビティと組み合わせると、初期のコンピューターで使われていたディバイド・アンド・コンカー・アルゴリズムが導入されます。
   tutorial_tlcmicro_longdescription: このビデオは、ヒューマンコンピュータインタラクション (HCI) の一般的な入門編として、特に必要以上に使いにくいガジェットが多数ある理由を説明しています。デザインは確かに違いを生むので、インターフェースを評価して使いやすいかどうかを確認することが重要です。
-  tutorial_imathematician_longdescription: "This teacher led activity provides the
-    opportunity for pupils to use a cross curricular approach to computer science
-    and mathematics.  \n\nPupils will create a computer program to solve a variation
-    of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
-    Dilemma.\n"
+  tutorial_imathematician_longdescription: "この教師主導のアクティビティは、生徒がコンピュータサイエンスと数学にカリキュラム横断的なアプローチをとる機会を提供します。
+    \ \n\n生徒たちは、「囚人のジレンマ」と呼ばれる、数学 (ゲーム理論) の一分野にある有名な問題のバリエーションを解くためのコンピュータープログラムを作成します。\n"
   tutorial_tlcmagic_longdescription: 魔法の仕組みを探る中で、計算的思考、特にアルゴリズム的思考に対する評価の重要性について学びます。テストとハザード分析の両方を学びます。このマジックトリックは、コンピューターサイエンティスト、エンジニア
     (およびマジシャン) がどのようにアルゴリズムを徹底的にチェックしなければならないかを示しています。彼らは物事がうまくいかないかを注意深く考え、それがうまくいくかを確認しなければなりません。
   tutorial_scratchmus_longdescription: Scratchを使用すると、独自のインタラクティブなゲーム、ストーリー、アニメーションを作成して、友達と共有できます。はじめに、インタラクティブな音楽プロジェクトを作ってみましょう。アクティビティカードとワークショップガイドも、scratch.mit.edu
@@ -3431,11 +3581,7 @@ ja:
   tutorial_rmc_longdescription: コードブロックを使って、アレックスやスティーブをこのマインクラフトの世界で冒険に連れて行ってください。
   tutorial_smc_longdescription: コードブロックを使って、アレックスやスティーブをこのマインクラフトの世界で冒険に連れて行ってください。
   tutorial_minecraft-2016_longdescription: マインクラフトのゲームを作ろう。チキン、シープ、クリーパー、ゾンビなどを自分だけのバージョンで作ろう。
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: あらかじめ定義された「ボキャブラリーロボット」を使うことで、学生は、&aacute;事前に説明しなくても特定のタスクを導き出す方法を発見できます。&iacute;このセグメントは、&oacute;学生にとって記号とアクションの間のつながりを、&ntilde;&iacute;&oacute;重要なデバッグ機能と同様に意味しています。&iacute;
   tutorial_pixie_longdescription: Pixie による「アワー・オブ・コード」チュートリアル
   tutorial_play_longdescription: プレイラボでお話やゲームを作りましょう！動物、海賊、ゾンビ、忍者、ほかにもいろんなキャラクターを動かして、音を出したり、点数を稼いだり、火の玉だって投げられます！
   tutorial_robomind-nl_longdescription: '学生は自分の仮想ロボットを制御することでプログラミングの基礎を学びます。オンラインコースは完全に自己完結型で、短いプレゼンテーション、動画、クイズ、およびプログラミング演習に役立つ自動ガイダンス/ヒントが用意されています。 '
@@ -7509,11 +7655,7 @@ ja:
   tutorial_hopsub_longdescription: 友達やクラスメートとペアプログラムする方法を学び、ホップスコッチのキャラクターを使って自分だけの地下鉄サーファーを作ろう！
   tutorial_itchmundos_longdescription: プログラミングツールであるScratchをご紹介しましょう。オブジェクトや背景を追加したり、イベントブロックや外観を使用したりして、プログラムに活気を与えます。
   tutorial_itchtenacity_longdescription: Scratchでプログラムされているこのプロジェクトでは、海水を浄化するロボットのシミュレーターが開発されています。
-  tutorial_kcjskiing_longdescription: 'It''s all fun and games until someone crashes
-    into a tree… or IS that the fun part? Strap on those skis and bend at the knees
-    as you guide your character down a hill of frozen obstacles using code in this
-    Scratch activity. Design the course, add movement and sensing, plus a bit of collision-interaction
-    and boom - you''ve got yourself a mountain of fun. '
+  tutorial_kcjskiing_longdescription: '誰かが木にぶつかるまでは、楽しいゲームばかりです。… それともそれが楽しい部分ですか？このScratchアクティビティのコードを使って、雪に覆われた障害物の丘をキャラクターに導きながら、スキー板を装着して膝を曲げましょう。コースをデザインし、動きと感知を追加し、衝突インタラクションとブームを少し加えれば、山のように楽しい時間を過ごせます。 '
   tutorial_groksecurity_longdescription: オンラインで安全を保つための短い入門書で、サイバー監視に全力を注ぎましょう。安全なパスワード、フィッシング、セキュリティ設定、ソーシャルメディアなどについて学べます！
   tutorial_creaticode_longdescription: スクラッチブロックを使って素晴らしい3Dプロジェクトを構築する方法を学びましょう！
   tutorial_kcjhockey_longdescription: シュートすれば得点し、観客は熱狂します！このゲームを作るときにスケート靴をひもでつなぐ必要はありませんが、コーディングスキルを磨く準備はできていてください！自分だけのホッケーゲームをコーディングする方法を学び、ScratchでNPCゴールキーパーと対戦してスキルをテストしましょう。デジタルプレーヤーは、動き、感知、変数を使ってパックをかわしたり滑ったりして、勝利のゴールを決めることができます。
@@ -8219,12 +8361,7 @@ ja:
   tutorial_googlesuperhero_longdescription: 建物の上を飛んだり、回転したり、相棒と一緒に作業したり、ゲーム内のオブジェクトに触れてポイントを獲得したりするようにプログラミングして、人生やコミュニティの日常のヒーローをスーパーヒーローに変えましょう。Code
     Your Heroでは、CS FirstとScratchでヒーローの特殊能力と創造性を披露しましょう。
   tutorial_googlename _longdescription: 名前を選んで、コードを使ってその単語の文字に命を吹き込みましょう。ニックネーム、ペットの名前、動物、スポーツ、場所、趣味を選択してください。
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: ジラー・シティは活気にあふれ、音楽も流れています。噂によると、有名なガルガンチュアのボットがオンラインで、最後のトキシボットを送って街を一区ずつゴミ箱に捨てているそうです。…コボットのホバーボードを手に取り、グルーヴやムーブをして、始めたことを終わらせる準備をしましょう！このリズムスタイルのゲームでは、プレイヤーはコボットのホバーボットをプログラムして、車線を変更したり、障害物を避けたり、多くのトキシボットを倒したりします。
   tutorial_nasachspacejam_longdescription: 本当に素晴らしい太陽系を作りましょう！このガイドなしのアクティビティで、音楽、天文学、コーディングについて学びましょう
     (コーディングの経験は必要ありません)。惑星をプログラムして音楽を作り、スペーシーなメロディーが奏でる自分だけの音楽的な太陽系を作りましょう。
   tutorial_hatchxrsolar_longdescription: 'ブロックベースのプログラミングの概念を使用して、星を探索し、独自の太陽系を構築してください。3D
@@ -8706,6 +8843,75 @@ ja:
   all: "[すべて]"
   dont_know: 分からない
   language_label: 言語
+  before_hoc: コード開始前
+  day_of_hoc: デイ・オブ・アワー・オブ・アワー
+  after_hoc: アフター・アワー・オブ・コード
+  step_01: ステップ 1
+  step_02: ステップ 2
+  step_03: ステップ 3
+  step_04: ステップ 4
+  step_05: ステップ 5
+  step_06: ステップ 6
+  step_07: ステップ 7
+  step_08: ステップ 8
+  hoc_how_to_top_heading: "『アワー・オブ・コード』ガイド"
+  hoc_how_to_top_desc: Hour of Codeを最高に体験していただけるよう、カスタマイズされたハウツーガイドをご用意しています。
+  hoc_how_to_top_view_guide: のガイドを表示
+  hoc_how_to_nav_main_aria_label: ガイドを選択
+  hoc_how_to_nav_sidebar_aria_label: サイドバーナビゲーション
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: "『Hour of Code』は、コンピュータサイエンスを1時間の入門編として紹介するプログラムです。楽しいチュートリアルで、誰でも基本を学べるということをお見せします。今年は、人工知能
+    (AI) と非人工知能 (AI) コンポーネントの両方を網羅したコーディングの機会を提供することで、Hour of Code を新たな高みへと導きます。あなたも生徒も経験豊富なコーダーであろうと、初めてのコンピューターサイエンス探検に出かける人であろうと、この「Hour
+    of Code」は並外れた旅を約束します。"
+  hoc_how_to_faq_question_prerequisites: アワー・オブ・コードを行うための前提条件は何か？
+  hoc_how_to_faq_answer_prerequisites: Hour of Codeは初心者でも簡単に実行できます。学生が何か新しいことを探求し、創造し、学ぶように促すのに、コンピュータサイエンスや教育の経験は必要ありません。
+  hoc_how_to_faq_question_devices: Hour of Codeを実行するにはどのデバイスが必要ですか?
+  hoc_how_to_faq_answer_devices_01: '使用できるデバイス:'
+  hoc_how_to_faq_answer_devices_02: デバイスが限られている場合や利用できない場合は、[ペアプログラミング] (%{pair_url})
+    を試すか、[unplugged Activities] (%{unplugged_url}) を試して、デバイスをまったく使わずに学習してください。
+  hoc_how_to_faq_question_volunteer: ボランティアになるには？
+  hoc_how_to_faq_answer_volunteer: コンピュータサイエンス教育とテクノロジーの多様性の向上に情熱を傾けている人なら誰でもボランティアになることができます！あらゆるバックグラウンドのボランティアの参加を期待しています。Hour
+    of Codeには、年齢やスキルレベルを問わずさまざまなアクティビティが用意されているので、プログラミングの専門家でなくてもボランティアに参加できます！
+  hoc_how_to_faq_question_full_hour: "『Hour of Code』は丸一時間かかりますか？"
+  hoc_how_to_faq_answer_full_hour: 多くの学生は1時間足らずでアクティビティを終えることができますが、それでも大丈夫です！他の学生がアクティビティを完了している間、学生は学習を続けることができます。
+  hoc_how_to_faq_question_account: 生徒たちが、アカウントを取得してログインする必要はありますか？
+  hoc_how_to_faq_answer_account: 学生がHour of Codeを試すのにサインアップやログインは必要ありません。Hour of Codeにサインアップしても、Code.orgのアカウントは自動的には作成されません。
+  hoc_how_to_resources_heading_educators: Hour of Codeの教育者向けその他資料
+  hoc_how_to_resources_promo_heading: プロモーションリソース
+  hoc_how_to_resources_promo_desc: 印刷物でもデジタルでも、必要なリソースをすべて見つけて、Hour of Codeに注目を集めましょう。
+  hoc_how_to_resources_discover_heading: アクティビティを発見する
+  hoc_how_to_resources_discover_desc: 45以上の言語で、あらゆる年齢層向けに設計された幅広い1時間のチュートリアルをご覧ください。
+  hoc_how_to_step_label_plan: Hour of Codeをいつどこで行うかを計画する
+  hoc_how_to_step_label_choose_activity: アクティビティを選択してください
+  hoc_how_to_step_label_test_activity: アクティビティをテストしてみる
+  hoc_how_to_step_label_register_event: イベントを登録する
+  hoc_how_to_step_label_tell: 生徒、学校、コミュニティに伝えましょう
+  hoc_how_to_step_label_get_coding: コーディングを始めましょう！
+  hoc_how_to_step_label_celebrate: セレブレート
+  hoc_how_to_step_label_beyond_hoc: ビヨンド・アワー・オブ・コード
+  hoc_how_to_step_beyond_hoc_subhead: ここで終わらない！
+  hoc_how_to_step_beyond_hoc_desc: コンピュータサイエンスはHour of Codeで終わる必要はありません！保護者の 90% は子供にコンピュータサイエンスを学ばせたいと思っていますが、ほとんどの学校ではいまだにコンピュータサイエンスを教えていません。お子さんの学校にコンピュータサイエンスを導入する方法を今すぐ学びましょう。
+  hoc_how_to_step_01_educators_subhead: 参加できる生徒数やデバイスの数に合わせて、イベントの時間と場所を選択してください。
+  hoc_how_to_step_01_educators_desc_01: "「Hour of Code（アワー・オブ・コード）」を行うにはどのようなスペースがありますか？自分のスペースが持つ技術力や、学生に使ってほしいデバイスの種類を考えてみましょう。学生は
+    1 台のデバイスでチュートリアルに取り組むことも、共有デバイスを使用して交代で取り組むことも、教室のホワイトボードで一緒にチュートリアルを試すこともできます。デバイスをまったく使わずに完了できる、接続されていないチュートリアルもあります。アンプラグドオプションはどこでも、屋外でも実行できます！"
+  hoc_how_to_step_01_educators_desc_02: 最新のチュートリアルやアクティビティが公開されるCS Education %{campaign_date}
+    Weekでは、世界中の人々がHour of Codeセレブレーションに参加します。しかし、「Hour of Code」は年中いつでも開催できます！
+  hoc_how_to_step_02_educators_desc_01: グループの年齢、経験、興味などに基づいてアクティビティを調べることができます。学生が自主的なチュートリアルを試すのが一般的ですが、多くのアクティビティには、教師がディスカッションを導いたり、アクティビティを拡張したりするための授業計画も含まれています。
+  hoc_how_to_step_02_educators_desc_02: 生徒全員のために1つのチュートリアルを選択するか、各子供に自分で選択させるかを事前に決めてください。
+  hoc_how_to_step_02_educators_desc_03: 今年は、チュートリアル、授業計画、および新しい「How AI Works」ビデオシリーズを通じて、皆さんと生徒が
+    [AI についてすべて学ぶ]（%ai_url）ことができます。
+  hoc_how_to_step_03_educators_desc_01: 質問に答えられるように、教室に入る前に自分でチュートリアルを試してみてください！
+  hoc_how_to_step_03_educators_desc_02: また、生徒のコンピューターやデバイスでチュートリアルをテストして、音声とビデオがサポートされていることを確認することもできます。帯域幅が狭いですか？各生徒が自分の動画をダウンロードしないように、クラスの前に動画を見せるようにしましょう。
+  hoc_how_to_step_03_educators_desc_03: 選択したチュートリアルがサウンドに最も適している場合は、クラスにヘッドフォンを用意するか、生徒に自分のヘッドフォンを用意してもらうことを検討してください。
+  hoc_how_to_step_04_educators_desc_01: Hour of Codeイベントを登録すると、Hour of Codeを成功に導くためのニュースやヒントが記載された役立つメールが届きます。また、学校が参加していることを地元のボランティアに知らせる方法でもあります。ボランティアは素晴らしいリソースです。コンピュータサイエンスについてクラスで話したり、Hour
+    of Codeのアクティビティで生徒を支援したりできるのです。
+  hoc_how_to_step_05_educators_desc_01: さまざまな人々やコンピュータサイエンスを現実の世界で活用できる創造的な方法を紹介する
+    [インスピレーションを与える動画] (%{videos_url}) を共有して、学生たちにこのイベントを楽しんでもらいましょう。
+  hoc_how_to_step_05_educators_desc_02: Hour of Codeのプランを他の教師と共有して、一緒に楽しみましょう！また、学校の保護者・教師・学生協会に連絡したり、保護者向けニュースレターを配信して、子どもたちが何を学んでいるのかを知らせる絶好の機会でもあります。
+  hoc_how_to_step_06_educators_desc_01: 掲示板でリンクを共有したり、教室の学習管理システムを通じて、生徒をアクティビティに誘導します。生徒が課題にぶつかるかもしれませんが、それは問題ありません。プログラミングを学ぶことは、新しい言語を学ぶようなものです。すぐには流暢にはなれません。答えがわからなければ、一緒に考え出せばいい。
+  hoc_how_to_step_07_educators_desc_01: 成功を祝ってください！Hour of Code イベントの写真や動画をソーシャルメディアでシェアしましょう。#HourOfCode
+    と @codeorg を使ってあなたの成功もアピールしましょう！
+  hoc_how_to_step_07_educators_desc_02: 生徒に成績をアピールするための証明書を印刷することもできます！
   team_page_full_team_alt_text: お揃いの青と黄色のTシャツを着た約100人のCode.orgの従業員が、同社の2022年夏のCodechellaイベントのためにホテルの会議室でポーズをとる。
   careers_page_code_pride_alt_text: 女性らしい表情をしている2人の従業員が、Code.orgブランドのレインボーバナーの両端を掲げて微笑んでいます。彼らの後ろには、Code.orgのシャツを着て、色とりどりのフォルクスワーゲンバグの横を歩きながら虹色の旗を振っている人が何人かいます。
   accessibility_hero_heading: Code.orgのアクセシビリティ
@@ -8755,6 +8961,324 @@ ja:
   accessibility_card_title_10: 'Quorum '
   accessibility_card_text_10: Code.org の APコンピューターサイエンス原理カリキュラムを Quorum を使用して改変したもの。Quorum
     は、もともと視覚障害のある学生にアクセシビリティを提供するために設計された根拠に基づいた言語です。
+  engineering_hero_heading: エンジニアリングチームに参加してください！
+  engineering_hero_desc: エンジニアリングチームを拡大し続ける中で、Code.orgのエンジニアリング組織と、ここで働くことのユニークな側面についてもっと共有したいと思いました。当社の職種に応募することに関心をお持ちの方は、ぜひご連絡ください！
+  engineering_team_title: Code.org でエンジニアリングチームに会いましょう
+  engineering_team_card_text_1: これは、2023年の夏に行われる対面式の集まりに参加している私たちの（ほとんど）です！参加者はエンジニアリングチーム内の
+    4 つのサブチームに分かれており、協力してすべての学生と教師のためのプラットフォームを構築し、提供しています。
+  engineering_team_card_text_2: 当社の職種への応募にご興味がおありでしたら、ぜひご連絡ください。募集中のポジションのリストは、採用情報ページでご覧いただけます。
+  engineering_our_team_title: 当社のエンジニアリングチーム
+  engineering_our_team_desc: Code.orgのエンジニアリングチームは、プラットフォームのさまざまな領域を構築およびサポートする4つのサブチームに分かれています。
+  engineering_our_team_sub_title_1: 学生学習チーム
+  engineering_our_team_text_1: 学生が毎日使用するすべてのアクティビティ（ラボと呼んでいます）は、学生学習チームが所有しています。このチームは主にフロントエンド技術（React
+    と多くのカスタム JS を使用）に取り組んでおり、多くのパートナーやオープンソースプロジェクトと素晴らしい協力関係を築いています。たとえば、ブロックベースのプログラミングにはすべて
+    [Google's Blockly] (%{youtube_url}) を使用しています。幼稚園から 12 年生までの生徒の学習過程をサポートします。
+  engineering_our_team_sub_title_2: 教師体験チーム
+  engineering_our_team_text_2: 私たちの教師体験チームは、Code.orgに新しい教師を引き付けるためのツール（これらを習得製品と呼んでいます）を構築し、既存の教師がカリキュラムを教えるためのプラットフォーム（教師用ツール）を開発しています。学生向けツールと同様に、フロントエンドの構築には
+    React を使用し、サーバー側のコンポーネントは Ruby on Rails を使用して提供しています。
+  engineering_our_team_sub_title_3: プラットフォームチーム
+  engineering_our_team_text_3: 私たちのプラットフォームチームは、学生チームと教師チームのニーズを満たすコアコンポーネント（認証やユーザープロファイルなど）を所有しており、まだ連絡が取れていない学生に手を差し伸べることも使命としています。これには、さまざまな学習管理システム
+    (LMS) を使用する学校と私たちをつなぐ統合を構築することや、信頼できるインターネットにアクセスできない遠隔地の学校でも使用できるようにカリキュラムをパッケージ化することが含まれます。
+  engineering_our_team_sub_title_4: インフラストラクチャーチーム
+  engineering_our_team_text_4: 私たちのインフラチームは、学生と教師をサポートするプラットフォームのバックボーンを提供しています。これには、ホスティングインフラストラクチャと関連サービス
+    (AWS を使用)、データ管理、セキュリティプログラム、開発者およびデプロイサービスなどが含まれます。このチームはスケーリングとプロビジョニングのシステムも所有しています。Hour
+    of Code では、世界中のすべての学生に 1 時間のコーディングを一緒に完了してもらうように勧めています。
+  engineering_faq_question_1: Code.org は何をしていますか?
+  engineering_faq_answer_1_a: Code.orgは、すべての学校のすべての生徒が中核となる幼稚園から高校までの教育の一環としてコンピューターサイエンスを学ぶ機会を得られるというビジョンを掲げている教育革新非営利団体です。
+  engineering_faq_answer_1_b: 私たちは、教育機関におけるコンピュータ・サイエンスへのアクセスを拡大し、若い女性や少数派に属する他のグループの学生の参加を増やすことに重点を置いています。Code.orgは、米国最大の学区における幼稚園から高校までのコンピュータサイエンスのカリキュラムの大手プロバイダーであり、毎年Hour
+    of Codeキャンペーンも開催しています。このキャンペーンには、世界中の全生徒の 15% 以上が参加しています。
+  engineering_faq_answer_1_c: Code.orgは、マイクロソフト、アマゾン、グーグル、その他多くの寄付者によって支えられています。
+  engineering_faq_question_2: Code.org の開発者エクスペリエンスとツールについて教えてください。
+  engineering_faq_answer_2: 私たちの開発者経験は、あなたが過去の役職で見たものとは異なるかもしれません。製品チームと緊密に連携し、平日に本番環境に出荷しています。その日に本番稼働するコードを書いている場合もあれば、長期のプロジェクトに参加する場合もあります。また、週2回のスプリントをフォローする一方で、軽快な方法で行っています。私たちは、特定の方法論について純粋主義的な見方をするのではなく、正しいことを正しい方法で行うことに重きを置いています。[すべてのコード]
+    (%{code_url}) はオープンソースで、JIRA と GitHub のプルリクエストを使用してすべての作業項目を追跡しています。また、私たちは品質とテストにも細心の注意を払っており、幸運にも
+    [SauceLabs](%{saucelabs_url}) からの素晴らしいサポートを受けています。彼らは、クラウドデバイスファーム内のさまざまな学生デバイス
+    (iPad など) で UI テストを実行するのを手伝ってくれます。
+  engineering_faq_question_3: Code.orgのエンジニアオンコールローテーションとは何ですか?
+  engineering_faq_answer_3: 30人以上のエンジニアリングチームがオンコールの責任を分担しています。各エンジニアは 24 時間シフトに対応し、エスカレーションパスとプレイブックを使用してサイトの停止やその他のライブサイトの問題に対応します。弊社はサイトの信頼性に誇りを持っています。各エンジニアは、通常、すぐに解決できる問題に対して、平均して
+    1 年に 1 回しか起きません。代わりに、「今日の開発者」は通常、仕事の一部を実稼働環境への展開の管理と緊急性の低い問題の優先順位付けに費やしています。
+  engineering_faq_question_4: リモートワークや在宅勤務に対応している組織ですか？
+  engineering_faq_answer_4_a: はい!パンデミックが発生する少し前の2019年、Code.orgはリモートファーストの組織になりました。現在では、米国のすべてのタイムゾーンにエンジニアが配置され、それに応じて勤務時間を調整しています。ほとんどの会議は、太平洋標準時の午前10時から午後3時の間に行われます。
+  engineering_faq_answer_4_b: また、対面での時間の価値も認識しており、四半期ごとに、通常はシアトルで直接会います。そのうちの 2 つのイベント
+    (「キックオフウィーク」と「Codechella」と呼んでいます) では、1 月と 6 月に組織内の全員が一堂に会し、4 月と 10 月にエンジニアリングチームと製品チームが別々に集まります。
+  engineering_faq_answer_4_c: 私たちは生徒や教師と時間を過ごすことを強く信じています。このような対面式のイベントの多くには、フィードバックを集めたり、製品のプレイテストをするために学校や教室に出かけたりすることが含まれます。
+  engineering_faq_question_5: Code.org のエンジニアリングチームのユニークな点は何ですか?
+  engineering_faq_answer_5_a: 困難な技術的問題を解決する以外にも、私たちのエンジニアリング組織には、あなたがこれまで働いていた他の組織と異なる点がいくつかあります。
+  engineering_faq_answer_5_b_1: 私たちは皆、私たちの使命に対する情熱を共有しています。
+  engineering_faq_answer_5_b_2: 私たち一人ひとりが、世界中のすべての学生にコンピュータサイエンスへのアクセスを拡大するという使命を支援するためにここにいます。この使命に向かって私たちを駆り立てるものについて、私たちは皆独自のストーリーと視点を持っています。
+  engineering_faq_answer_5_c_1: 私たちはお互いを深く気にかけています。
+  engineering_faq_answer_5_c_2: エンジニアが問題に直面しているとき、私たちは介入して支援します。私たちの原則の1つは、問題には一生懸命取り組むが、お互いに親切にすることです。私たちは定期的にエンジニアを昇進させますが、誰かの昇進を支援するためだけに過剰に設計されたソリューションを処方することはありません。その代わり、専門能力開発予算が豊富で、他の学習機会も利用できるエンジニアに投資しています。
+  engineering_faq_answer_5_d_1: 私たちは一生懸命働いていますが、明確な境界線を設定しています。
+  engineering_faq_answer_5_d_2: 私たちは世界中の学生を支援すると同時に、仕事と家庭生活の境界を明確にすることにも責任を負っています。水曜日はミーティングなし、有給休暇
+    (合計 5 週間、つまり年末の組織全体の 2 週間のオフィス閉鎖、つまり冬休み)、夏季の金曜日 (サマーフライデー)、その他の手厚い福利厚生を受けることを楽しんでいます。
+  careers_hero_title: キャリア
+  careers_hero_description: Code.orgは、学校でのコンピュータサイエンスへのアクセスを拡大することを目的とした非営利団体です。私たちは特に、若い女性や社会に恵まれない学生の参加を増やすことに力を入れています。
+  careers_hero_description_under: 生徒一人ずつ、世界を変えるのを手伝ってください！
+  careers_vision_title: 私たちのビジョン
+  careers_vision_decsription: 私たちのビジョンは、すべての学校のすべての生徒が、幼稚園から高校までの中核教育の一環としてコンピューターサイエンスを学ぶ機会を持つべきだということです。
+  careers_vision_description_under: 私たちのチームに参加して、このビジョンを実現するのを手伝ってください！
+  careers_values_title: 私たちのコアバリュー
+  careers_values_first_column_text_1: 私たちは、コンピュータサイエンスはすべての学生の基礎であると信じています。
+  careers_values_first_column_text_2: 私たちは公平性、アクセス、機会に全力で取り組んでいます
+  careers_values_first_column_text_3: 私たちは共同教育コミュニティの力を信じています
+  careers_values_second_column_text_1: 私たちは機敏でフィードバックに迅速に対応します
+  careers_values_second_column_text_2: 私たちは誠実さと透明性をもって行動します
+  careers_values_second_column_text_3: 幅広い影響を与えるには、大きく考え、全体的に行動することが必要だと考えています。
+  careers_approach_section_title: 私たちの統一アプローチ
+  careers_approach_section_description: 幼稚園から高校までのコンピュータサイエンス運動におけるCode.orgの世界的な役割は、多様でしばしば分断されている利害関係者を対象に統一的なアプローチを採用しているからこそ可能です。二極化が進む中、学生の機会を増やすという考えは、政治的スペクトル全体にわたる人々を結びつけています。Code.orgのチームメンバー、学生、教師、サポーターは、多様で多様な視点を持っており、私たちのミッションでは誰もが歓迎されています。
+  careers_aproach_section_description_link: Code.orgの統一へのアプローチについてもっと読んでください。
+  careers_approach_section_button: 募集中の職種を見る
+  careers_principle_section_title: 私たちの文化的原則
+  careers_principle_title_1: 私たちの学生と教師は私たちの北極星です
+  careers_principle_description_1: 私たちは贈り物、時間、エネルギーを駆使して、コンピュータサイエンスを最も必要としている人々に提供しています。これが私たちを結びつけるものです。これが私たちの最も重要な原則です。
+  careers_principle_title_2: 私たちは問題に強く、お互いに親切です
+  careers_principle_description_2: 私たちは、世界中の学生や教師にコンピュータサイエンスを届けるという課題に引き続き注力しています。私たち一人ひとりが、自分たちの使命を支え、間違いを犯したときには恩返しをするという意図のもと、最善を尽くしていることを認識しています。
+  careers_principle_title_3: コンセンサスではなく解決策を求める
+  careers_principle_description_3: 小さな一歩を踏み出すにしても、求めている成果に向けて大きな飛躍を踏み出すにしても、決定を下すのは私たちです。オーナーは求め、耳を傾けますが、フィードバックに惑わされることはありません。たとえ意見が合わなくても、私たちはオーナーの決定を受け入れ、支持します。
+  careers_principle_title_4: 創始者のメンタリティを取り入れましょう
+  careers_principle_description_4: 私たちは結果にこだわり、その推進に私たちの行動を集中させます。私たちは細部にまで踏み込み、一生懸命働きます。私たちは正直で、アジリティを重視し、順調に進んでいるかどうかを常に評価します。方向転換を恐れません。世界を変えるにはそれが必要です。
+  careers_principle_title_5: チャンピオンイノベーション
+  careers_principle_description_5: 私たちは大きく考え、リスクを冒し、失敗を恐れません。目標を達成するためのより良い方法を見つけたら、それを実行し、他の人にもそうするよう奨励します。漸進的な解決策は世界を変えるのに役立ちません。
+  careers_principle_title_6: 決定を事実に根付かせる
+  careers_principle_description_6: 私たちはデータを利用して事業を理解し、望ましい成果を確立し、意思決定の指針を立てます。私たちは、行動に必要なデータが常に揃っているとは限らないことを認識することで、このバランスを取っています。
+  careers_principle_title_7: 成長マインドセットが私たちを駆り立てます
+  careers_principle_description_7: 私たちはそれぞれの課題に好奇心を持って取り組みます。フィードバックは親切かつ率直に行い、フィードバックはオープンに受け取ります。私たちは過ちから学び、仕事の範囲と影響力を高める方法を模索します。
+  careers_balance_section_title: ワークライフバランス
+  careers_balance_section_description: 私たちは従業員を大切にし、職場でも仕事外でもすべての人をサポートすることに専念しています。私たちは誰もが異なるニーズを持っていることを理解しています。だからこそ、私たちは、あなた（そしてあなたの家族）が確実に面倒を見ることができる総合的な福利厚生パッケージを提供しています。
+  careers_balance_first_column_text_1: あなたとあなたの家族にとっての健康上の利点
+  careers_balance_first_column_text_2: 手厚い有給休暇および休暇制度
+  careers_balance_second_column_text_1: 柔軟で協力的な職場環境
+  careers_balance_second_column_text_2: 成長と専門的学習の機会
+  careers_openroles_section_title: オープンロール
+  careers_openroles_section_description: Code.orgはシアトルに拠点を置いていますが、チームメンバーの多くはリモートです。遠隔地の候補者も大歓迎で、応募することをお勧めします。
+  careers_more_info_text: Code.org の詳細については、[よくある質問] (%{support_url}) をご覧になるか、[私たちの使命に参加するその他の方法]
+    (%{help_url}) をご覧ください。
+  careers_approach_section_title2: 多様性への取り組み
+  careers_approach_section_description_1: Code.orgでは、多様な視点、アイデア、背景を取り入れています。私たちは、すべての従業員と応募者に平等な機会を提供するよう努めています。人種、宗教、肌の色、出身国、性別、性的指向、年齢、婚姻状況、退役軍人の有無、または障害（精神的および身体的）の状況に基づいて差別することはありません。
+  careers_approach_section_description_2: 当社は、障がいのある個人が求人応募または面接プロセスに参加し、重要な職務を遂行し、その他の福利厚生や雇用上の特権を受けるための合理的な配慮が提供されるようにします。障害に関して個別のニーズがある場合は、accommodations@code.org
+    までご連絡ください。
+  csa_ai_page_hero_title: ソフトウェアエンジニアリングとコンピュータービジョン
+  csa_ai_page_hero_description: 'この2章からなるPost-AP CSAモジュールでは、高校生にGitHubやGitHub Copilotなどのプロフェッショナルなソフトウェア開発ツールを実際に体験してもらい、コンピュータビジョンプログラムを開発するための実際のスキルを学びます。 '
+  csa_ai_page_video_section_title: Code.org プログラミング環境の世界から一歩踏み出しましょう
+  csa_ai_page_video_section_li_1: AI とその応用について知る
+  csa_ai_page_video_section_li_2: プロ仕様のソフトウェア開発ツールを使った実務経験
+  csa_ai_page_video_section_li_3: 業界標準のプラクティスを学ぶ
+  csa_ai_page_video_section_li_4: 批判的思考を育む
+  csa_ai_page_programming_tools: 'プログラミングツール:Github、Github コパイロット、VSCode、テンソルフロー '
+  csa_ai_page_professional_learning: "[なし]"
+  csa_ai_page_curriculum_topics: トピック:プログラミング, データ, アート/デザイン, ゲームとアニメーション
+  csa_ai_page_curriculum_accessibility_features: 詳細については、FAQセクションを参照してください
+  csa_ai_page_curriculum_languages_support: 日本語
+  csa_ai_page_article_title_1: コパイロットでビルド
+  csa_ai_page_article_description_1: 学生は、GitHub Copilotをペアプログラマーとして使用して、既存のコードを説明し、エラーを見つけて修正し、新しい問題の解決策を生成する方法を学びます。
+  csa_ai_page_article_link_1: コパイロットについてさらに詳しく
+  csa_ai_page_article_title_2: 独自の AI モデルを構築
+  csa_ai_page_article_description_2: 学生はTeachable Machineを使って独自のAIモデルをトレーニングし、Webカメラからの画像やジェスチャーを認識し、コンピュータービジョンがユーザーのアプリ操作にどのような影響を与えるかを考えます。
+  csa_ai_page_article_link_2: 授業計画を見る
+  csa_ai_page_article_title_3: コンピュータービジョンを調べる
+  csa_ai_page_article_description_3: 学生は、Teachable Machine で作成した AI モデルを Java アプリに実装します。GitHub
+    Copilot を使用すると、既存のバージョンのアプリを変更してさまざまな入力に対応できるようになります。
+  csa_ai_page_article_link_3: 例を見る
+  csa_ai_page_learn_more_section_title: 人工知能についてもっと知る
+  csa_ai_page_learn_more_title: 教師向け AI 101 の詳細を見る
+  csa_ai_page_learn_more_description: 教師向けの包括的なオンライン学習シリーズで、人工知能（AI）の画期的な世界と教育におけるその変革の可能性を発見してください。
+  csa_ai_page_learn_more_link: 教師向け AI 101 シリーズを見る
+  csa_ai_page_faq_question_01: このモジュールの前提条件は何ですか?
+  csa_ai_page_faq_answer_01_01: このモジュールに進む前に、学生は初級レベルの Java の知識を持っている必要があります。具体的には、次のことを把握しておく必要があります。
+  csa_ai_page_faq_answer_01_list_01: "**クラスとオブジェクト:** 学生は、クラスの定義と使用、およびオブジェクトの作成と操作に精通している必要があります。"
+  csa_ai_page_faq_answer_01_list_02: "**メソッドの作成と呼び出し:** 学生は、クラス内でメソッドを定義し、メソッドのパラメータと戻り値の型を理解し、オブジェクトや他のメソッドからメソッドを呼び出すことができる必要があります。"
+  csa_ai_page_faq_answer_01_list_03: "**1D 配列と ArrayLists: ** 一次元配列や ArrayList の宣言、初期化、操作
+    (反復処理を含む) に習熟している必要があります。"
+  csa_ai_page_faq_answer_01_list_04: "**選択と反復:** 条件文とループの強固な基盤が不可欠です。"
+  csa_ai_page_faq_question_01_02: 理想的には、APコンピュータサイエンスAまたは同様の深みと厳密さのコースを修了した学生は、このモジュールへの十分な準備が整っているでしょう。
+  csa_ai_page_faq_question_02: このモジュールに必要なソフトウェアをインストールする方法を教えてください。
+  csa_ai_page_faq_answer_02_01: このモジュールは、Code.orgのラボやツールではなく、サードパーティのソフトウェアを使用するという点でユニークです。[ソフトウェアのインストールについて詳しくは、こちらをご覧ください]
+    ()。%{accessibility_url}
+  csa_ai_page_faq_question_03: このモジュールを教えている間、アクセシビリティのニーズにどのように対応できますか？
+  csa_ai_page_faq_answer_03_01: アクセシビリティのニーズに応えることは、インクルーシブな学習環境にとって極めて重要です。[このモジュールで使用されているソフトウェアのアクセシビリティ機能の詳細については、こちらをご覧ください]
+    ()%{install_url}。
+  csa_ai_page_faq_question_04: Chromebook で VS Code を使用するにはどうすればよいですか?
+  csa_ai_page_faq_answer_04: Chromebook での VS Code の使用がより簡単になりました。特に、新しい Chromebook
+    モデルで Linux アプリを実行できるようになったからです。[Chromebook での VS Code のセットアップについて詳しくは、こちらをご覧ください]
+    ()。%{chromebook_url}
+  csa_ai_page_faq_question_05: このモジュールの専門能力開発を受けるにはどうすればいいですか？
+  csa_ai_page_faq_answer_05: 現在、このコースには特定の専門能力開発はありません。教室での人工知能への取り組み方を知りたい場合は、[教師向け
+    AI 101 を探る] (%{ai_101_url}) をご覧ください。
+  csa_ai_page_faq_question_06: このモジュールを教えるのに推奨されるタイミングはいつですか？
+  csa_ai_page_faq_answer_06_01: ソフトウェアエンジニアリングとコンピュータビジョンのモジュールは、簡潔な時間枠で包括的な学習を提供するように慎重に構成されています。モジュール全体は、**2週間の指導**にまたがるように設計されています。ほとんどのレッスンは**45分**を対象としていますが、学生が実践的なJavaプロジェクト開発を掘り下げるレッスンは**90分**を対象としています。この延長された時間により、学生は作業中に理解、実装、トラブルシューティングを行う十分な機会を得られます。
+  csa_ai_page_faq_answer_06_02: また、モジュールの構造には意図的な柔軟性が組み込まれています。授業の動向、学生の関与、各トピックをどの程度深く掘り下げたいかに応じて、時間を調整できます。たとえば、コパイロットの入門レッスンは
+    45 分のレッスンですが、GitHub Copilot や ChatGPT などの大規模な言語モデルやツールがどのように機能するかをより深く掘り下げたい場合は、90
+    分に延長できます。
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: 承認済みの教師用アカウントでは、オンラインレッスンやアクティビティに表示される青い「教師」専用パネルに解答キーが表示されます。承認済みの教師用アカウントが必要な場合は、[このフォーム]
+    () から、保護対象の教師専用資料 (解答キーなど) へのアクセスを申請できます。%{form_url}アカウントの確認には3～5営業日かかる場合がありますのでご注意ください。
+  csa_ai_page_faq_question_08: このモジュールは標準に対応していますか?
+  csa_ai_page_faq_answer_08: はい、ソフトウェアエンジニアリングとコンピュータビジョンのカリキュラムは [CSTA K-12 標準] (%{csta_k12_url})
+    と [K-12 ガイドライン] () の AI にマッピングされています。%{k12_url}
+  csa_ai_page_faq_question_09: このモジュールを教えるにはどれくらいの費用がかかりますか？
+  csa_ai_page_faq_answer_09_01: 私たちのカリキュラムとプラットフォームは [無料] (%{no_cost_url}) で利用でき、誰でも、どこでも、教えることができます！
+  csa_ai_page_faq_answer_09_02: さらに、このモジュールで使用されるソフトウェアとツールは無料です。GitHub Copilot は、検証済み
+    [teachers](%{teachers_url}) と () については無料です。 [students]%{students_url}
+  csa_ai_page_faq_question_10: ソフトウェアのインストールがうまくいかない場合はどうすればいいですか?
+  csa_ai_page_faq_answer_10: ソフトウェアのインストール中に問題が発生することはよくあることですが、トラブルシューティングと解決に役立つ体系的な手順があります。[トラブルシューティングのヒントはこちらをご覧ください]
+    ()%{troubleshooting_url}。
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: ソフトウェアエンジニアリングとコンピュータビジョンのカリキュラムは、カリキュラムバリューを念頭に置いて設計されました。以下の目標がこのカリキュラムの作成の指針となりました。
+  csa_ai_page_faq_answer_11_list_01: "**目標 1: ** AI ツールを使用してコードを生成、デバッグ、編集する。"
+  csa_ai_page_faq_answer_11_list_02: "**目標 2: ** Java Lab から実際のツールへの移行"
+  csa_ai_page_faq_answer_11_list_03: "**目標3: ** AI モデルがどのようにトレーニングされ、プログラムに統合されるかについての理解を深める。"
+  csa_ai_page_faq_answer_11_02: 私たちの活動の指針となった価値観の詳細については、「カリキュラムバリュー」(%{curriculum_values_url})
+    をご覧ください。
+  video_library_page_main_title: 教育用ショートビデオ
+  video_library_page_hero_description: Code.orgの教育ビデオのライブラリは増え続けており、世界中の教育者がオンラインまたは教室で再利用できます。私たちの目標は、自分たちのカリキュラムの範囲を超えて取り組みを拡大することです。
+  video_library_page_title_ai_works: "「AI はどのように機能するか 」"
+  video_library_page_description_ai_works: このショートビデオシリーズでは、人工知能がどのように機能し、なぜ重要なのかを紹介します。ニューラルネットワークや
+    AI がどのように学習するかについて学び、アルゴリズムの偏りや AI の意思決定の倫理などの問題を掘り下げてみましょう。
+  video_library_page_title_computers_work: コンピューターの仕組み
+  video_library_page_description_computers_work: コンピューターをコンピューターにする理由、デジタル情報が 1 と
+    0 で表される方法、コンピューター回路がデジタル情報を操作する方法、中央処理装置 (CPU) とオペレーティングシステムがコンピューターの入力、出力、メモリ、ハードウェアを制御する方法について説明します。
+  video_library_page_title_internet_works: インターネットはどのように機能するか
+  video_library_page_description_internet_works: TCP/IPの発明者であるヴィント・サーフ、HTTPとHTMLについて説明するTumblrの創設者であるデビッド・カープ、SSLとサイバーセキュリティを説明するGoogleのセキュリティプリンセス、マイクロソフト、Spotify、シマンテックのエンジニアを特集しています。インターネットの仕組みを説明するこのショートビデオシリーズ。
+  video_library_page_title_not_hacked: ハッキングされない方法
+  video_library_page_description_not_hacked: インターネットはオープンなので、保護されていない限り、インターネット上で起こっていることはすべて見ることができます。現代の国では、人々は他のどの犯罪よりもハッキングされることを心配しています。なぜ？なぜなら、インターネット上のすべてのコンピューターや電話は、犯罪者、テロリスト、さらには国家主体によって定期的に脆弱性検査を受けているからです。注意しないと、誰かがデバイスやアカウントをハッキングしたり、個人情報やお金を盗んだりする可能性があります。
+  video_library_page_title_blockchain: ブロックチェーンの仕組み
+  video_library_page_description_blockchain: コインベースと提携して制作されたこのシリーズでは、業界の専門家を特集し、ブロックチェーンとは何か、その仕組み、そしてその潜在的な社会的影響（良い点と悪い点の両方）を探ることで、この技術の謎を解き明かすことを目的としています。
+  video_library_page_title_careers: CSのキャリア
+  video_library_page_description_careers: コンピュータサイエンスとテクノロジーのキャリアは、楽しくてやりがいのあるものです。しかし、これらの分野で働く人は実際には何をしているのでしょうか？仕事や会社は非常に多様であるため、この質問に対する答えは1つだけではありません。以下のビデオを見て、大きな問題にクリエイティブな方法で取り組んでいる人たちに会いましょう。
+  video_library_page_title_inspirational: 心に強く訴える
+  video_library_page_description_inspirational: コンピュータサイエンスは私たちの世界で何を変えるでしょうか？すべて？誰のためなの？みんな！これらのビデオを見て、インスピレーションとモチベーションを高めましょう。
+  video_library_page_footer_description: 他に何かお探しですか？Youtubeチャンネルには素晴らしい動画がたくさんあります。
+  video_library_page_footer_cta: YouTube にある Code.org のすべての動画をご覧ください
+  video_library_page_computer_work_video_title_1: コンピューターの仕組みの紹介
+  video_library_page_computer_work_video_title_2: バイナリとデータ
+  video_library_page_computer_work_video_title_3: CPU、メモリ、入力、出力
+  video_library_page_computer_work_video_title_4: 何がコンピュータをコンピュータたらしめるのか？
+  video_library_page_computer_work_video_title_5: 回路ロジック
+  video_library_page_computer_work_video_title_6: ハードウェアとソフトウェア
+  video_library_page_internet_work_video_title_1: インターネットって何？
+  video_library_page_internet_work_video_title_2: インターネット:IP アドレスと DNS
+  video_library_page_internet_work_video_title_3: インターネット:HTTP と HTML
+  video_library_page_internet_work_video_title_4: インターネット:サイバーセキュリティと犯罪
+  video_library_page_internet_work_video_title_5: インターネット:ワイヤー、ケーブル、Wifi
+  video_library_page_internet_work_video_title_6: インターネット:パケット、ルーティング、信頼性
+  video_library_page_internet_work_video_title_7: インターネット:暗号化と公開鍵
+  video_library_page_internet_work_video_title_8: インターネット:検索の仕組み
+  video_library_page_cs_video_title_1: 私の名前はジェロームです。Meow Wolfのデザインテクノロジストです
+  video_library_page_cs_video_title_2: 私の名前はニケシャです。NASAの航空宇宙エンジニアです
+  video_library_page_cs_video_title_3: 私の名前はブライナです。Instagramのソフトウェアエンジニアです。
+  video_library_page_cs_video_title_4: 私の名前はキンズレーです。Facebookのソフトウェアエンジニアです
+  video_library_page_cs_video_title_5: 私の名前はポリーナです。エレクトロニック・アーツのデータサイエンティストです
+  video_library_page_cs_video_title_6: 私の名前はダネルです。MBARIのソフトウェアエンジニアです
+  video_library_page_cs_video_title_7: 私の名前はクリストファーです。Taniumのセキュリティアナリストです。
+  video_library_page_cs_video_title_8: 私の名前はFedericoです。マイクロソフトのテクニカルプログラムマネージャーです。
+  video_library_page_cs_video_title_9: 私の名前はテスです。Googleのソフトウェアエンジニアです
+  video_library_page_inspirational_video_title_1: チェンジ・ザ・フェイス・オブ・コンピュータ・サイエンス (3 分)
+  video_library_page_inspirational_video_title_2: 自分を押してください。誰でも学ぶことができます。(1 分)
+  video_library_page_inspirational_video_title_3: インスパイア・ア・ガール (2分)
+  video_library_page_inspirational_video_title_4: 多くの学校が教えていない（が大切な）こと（５分）
+  video_library_page_inspirational_video_title_5: "『Hour of Code』が登場-誰でも学べる (2 分)"
+  video_library_page_inspirational_video_title_6: マイ・ネーム・イズ・アラセリー (3分)
+  video_library_page_inspirational_video_title_7: "『アワー・オブ・コード』ウィズ・ステフ・カリー (2分)"
+  video_library_page_inspirational_video_title_8: コンピュータサイエンスがすべてを変える (5 分)
+  video_library_page_inspirational_video_title_9: コンピュータサイエンス入門 (1 分)
+  video_library_page_inspirational_video_title_10: オバマ大統領、コンピューターサイエンスについて語る (1 分)
+  video_library_page_inspirational_video_title_11: 誰でも学べるプログラミング （１分）
+  video_library_page_inspirational_video_title_12: ロ・ケ・ファルタ・エン・ヌエストラス・エスクエラス (2分)
+  video_library_page_inspirational_video_title_13: NASA、アワー・オブ・コードを祝う (2 分)
+  video_library_page_inspirational_video_title_14: イッツ・モア・ザン・ア・ゲーム (1分)
+  video_library_page_inspirational_video_title_15: コンピュータサイエンスで創造 (1 分)
+  video_library_page_not_hacked_video_title_1: ハッキングされない方法:はじめに
+  video_library_page_not_hacked_video_title_2: ハッキングされない方法:パスワード
+  video_library_page_not_hacked_video_title_3: ハッキングされない方法:認証とデバイスロック
+  video_library_page_not_hacked_video_title_4: ハッキングされない方法:フィッシング
+  video_library_page_not_hacked_video_title_5: ハッキングされない方法:ウェブサイトとWifi
+  video_library_page_not_hacked_video_title_6: ハッキングされない方法:メッセージングとダウンロード
+  video_library_page_not_hacked_video_title_7: ハッキングされない方法:アップデートのインストール
+  about_us_page_title: 弊所概要
+  about_us_page_hero_description: Code.org® は、すべての学校のすべての生徒が中核となる幼稚園から高校までの教育の一環としてコンピューターサイエンスを学ぶ機会を得られるというビジョンを掲げている教育革新非営利団体です。私たちは、教育機関におけるコンピュータ・サイエンスへのアクセスを拡大し、若い女性や少数派に属する他のグループの学生の参加を増やすことに重点を置いています。Code.orgは、米国最大の学区における幼稚園から高校までのコンピュータサイエンスカリキュラムの大手プロバイダーであり、毎年恒例の
+    [Hour of Code] (%{hour_url}) キャンペーンも開催しています。このキャンペーンには、世界中の全生徒の 15% 以上が参加しています。Code.org
+    は、マイクロソフト、アマゾン、グーグル、その他多くの寄付者によって支えられています。()%{others_url}
+  about_us_page_section_title_1: Code.orgには8,000万人以上の学生と200万人の教師がいます
+  about_us_page_statistic_figcaption: 2021年から2022年の学年度からのCode.orgへの参加。[細分化されたデータを参照してください。]
+    ()%{data_url}
+  about_us_page_statistic_description: Code.orgは、あらゆるバックグラウンドを持つ学生に、スキルレベル、学校内、そして学習を続ける意欲を掻き立てるような方法で届けることで、コンピューターサイエンスの多様性を高めています。Code.org
+    の学生の大半は、これまでコンピューターサイエンスの分野では過小評価されてきた学生グループの出身です。コンピュータサイエンスの多様性を高めることは私たちの仕事の基礎であり、[私たちの取り組みについてもっと読むことをお勧めします]
+    ()。%{diversity_url}
+  about_us_page_section_title_2: Code.org のニュース記事
+  about_us_page_section_news_description: 過去の [ニュースとお知らせ] をすべて見る ()%{news_url}
+  about_us_page_section_table: 私たちの目標と指標
+  about_us_page_section_table_header_1: Code.org の目標
+  about_us_page_section_table_header_2: 達成
+  abous_page_section_table_cell_1_1: CSの多様性の向上* (米国の学生) *
+  abous_page_section_table_cell_1_2: Code.orgの学生の 45% は若い女性、50% は社会から取り残された人種や民族グループの学生、そして米国の学生の
+    46% はニーズの高い学校に通っています。[多様性への取り組み] についてもっと読む ()%{diversity_url}
+  about_page_section_table_cell_2_1: 学生を鼓舞する
+  about_page_section_table_cell_2_2: 数千万人が [アワーオブコード]（%{hour_url}）を試しました。（426,370,561人が提供。49％が女性）
+  about_page_section_table_cell_3_1: リーチクラスルーム
+  about_page_section_table_cell_3_2: 591,636人の教師が [Code Studio] (%{code_studio_url})
+    のイントロコースを教えるために登録し、19,177,297人の学生が在籍しています。
+  about_page_section_table_cell_4_1: 新しいCS教師の準備
+  about_page_section_table_cell_4_2: 幼稚園から高校までの学年を対象に、106,000人以上の新しい教師がCSを教える準備が整いました。[プロフェッショナル・ラーニング・プログラム]
+    () について学びましょう。%{learning_programs_url}
+  about_page_section_table_cell_5_1: 学区カリキュラムの変更
+  about_page_section_table_cell_5_2: 私たちは [180以上の大手学区] (%{schoold_disctrict_url})、60の地域パートナーと提携して
+    [学校のカリキュラムにCSを追加] () しています。%{cs_curriculum_url}[地域パートナーになることについて学んでください。] ()%{regional_partner_url}
+  about_page_section_table_cell_6_1: CS をサポートするポリシーを設定
+  about_page_section_table_cell_6_2: "[米国50州でポリシーが変更されました] (%{states_url}) CS教育基準の確立、CSコースを高校卒業にカウントすることなど
+    [(詳細)] (%{details_url})"
+  about_page_section_table_cell_7_1: グローバル化
+  about_page_section_table_cell_7_2: 私たちのコースは67以上の言語で利用でき、180か国以上で使用されています。
+  about_page_section_table_under_label: 出典:Code Studio アクティビティと [参加教育者アンケート] ()%{educators_url}
+  about_page_section_title_3: 詳細情報、歴史、哲学
+  about_page_section_more_description_1: '2013年、Code.orgは双子の兄弟 [Hadi](%{hadi_url})
+    と [Ali Partovi] () によって設立され、(%{partovi_url}) [video]%{video_url}はコンピュータサイエンスを促進しました。この動画は
+    1 日で YouTube で #1 になり、15,000 の学校から支援を求められました。それ以来、私たちは自力で動けなくなったボランティアスタッフから、世界規模の運動を支援する完全な組織を構築するまでに拡大してきました。私たちは、質の高いコンピュータサイエンス教育は、幸運な少数の子供たちだけでなく、すべての子どもたちが受けられるべきだと考えています。'
+  about_page_section_more_description_2: この目標を達成するために、独自のコース設計や他者との提携、教師の育成、大規模な学区との提携、政府の政策変更支援、パートナーシップを通じた国際的展開、固定観念を打ち破るマーケティングなど、さまざまな教育分野に取り組んでいます。
+  about_page_section_more_description_3: 私たちの活動は、コンピュータサイエンス教育の確立、資金提供、普及を支援してきた [数え切れないほどの組織や個人による数十年にわたる努力]
+    (%{efforts_url}) に基づいています。私たちは、幅広いコンピュータサイエンス教育コミュニティのたゆまぬ支援の恩恵を受けていることに感謝しています。また、[長年にわたって私たちの影響力を支えてくれたすべてのパートナーと個人に感謝します]
+    ())。%{partners_url}
+  about_page_section_more_list_1: "[Code.org 2021 年次報告書] (%{report_url}) (過去のレポート:
+    [2020](%{past_url_1}), (), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}),
+    ( [2016]%{past_url_5})、 [2015](%{past_url_6})、 [2014](%{past_url_7})"
+  about_page_section_more_list_2: "[私たちのコアバリューとメッセージガイドライン] (%{core_url})"
+  about_page_section_more_list_3: "[カリキュラムと教育理念] ()%{curriculum_url}"
+  about_page_section_more_list_4: "[コンピュータサイエンスがすべての人のためのものである理由についての創設者ハディ・パルトヴィによるTEDxトーク
+    (ビデオ)] ()%{tedx_url}"
+  about_page_section_title_4: 分断された世界における統一的アプローチ
+  about_page_section_specific_title_1: 分断された世界における統一的アプローチ
+  about_page_section_specific_title_2: アクセシビリティへの取り組み
+  about_page_section_specific_title_3: 弊所の無料カリキュラムとオープンソース技術への取組み
+  about_page_section_specific_title_4: Code.org アドボカシー連合
+  about_page_section_specific_title_5: K-12 コンピュータサイエンスフレームワーク
+  about_page_section_specific_title_6: Code.org の寄付者
+  about_page_section_specific_title_7: 弊所をフォローする
+  about_page_section_specific_title_8: Code.orgの国際的研究
+  about_page_section_specific_description_1: 幼稚園から高校までのコンピュータサイエンス運動におけるCode.orgの世界的な役割は、多様でしばしば分断されている利害関係者を対象に統一的なアプローチを採用しているからこそ可能です。二極化が進む中、学生の機会を増やすという考えは、政治的スペクトル全体にわたる人々を結びつけています。Code.orgのチームメンバー、学生、教師、サポーターは、多様で多様な視点を持っており、私たちのミッションでは誰もが歓迎されています。[もっと読む。]
+    ()%{read_more_url}
+  about_page_section_specific_description_2: Code.orgは、コンピュータサイエンスはすべての学生の基盤であると信じており、私たちは組織における公平性、アクセス、機会の確保に取り組んでいます
+    [values.](%{values_url}) この目標を達成するために、障害を持つ学生や教育者の参加と完全な参加を妨げる障壁を特定し、排除するよう努めています。私たちの取り組みについて詳しくは、[アクセシビリティステートメント]
+    () をご覧ください。%{accessibility_url}
+  about_page_section_specific_description_3: 私たちが作成するすべてのカリキュラムリソースとチュートリアルは、永久に無料で使用でき、[クリエイティブ・コモンズ]
+    (%{commons_url}) ライセンスの下でオープンライセンスされます。これにより、他の人が非営利目的で派生的な教育リソースを作成できるようになります。弊社の素材を商用目的でライセンスすることに興味がある場合は、[お問い合わせ]
+    () をクリックしてください。%{contact_us_url}当社のコースは、世界中での使用を目的として、または異なる言語の話者によって翻訳されています。私たちの技術は
+    [オープンソースプロジェクト] (%{open_source_url}) として開発されています。
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
+    は、幼稚園から高校までのコンピュータサイエンスへのアクセスを拡大および維持し、この分野への参加と多様性を広げるための米国連邦および州の政策の策定を支援するために協力する企業と非営利団体の超党派連合です。私たちは、幼稚園から高校までのコンピュータサイエンスへのアクセスと参加の拡大を支持する共通の目的で
+    [共和党と民主党の政治指導者] (%{leaders_url}) を集めています。"
+  about_page_section_specific_description_5: Code.orgは、コンピュータサイエンス教育を実施する州、地区、組織向けのハイレベルガイドである
+    [K-12 Computer Science Framework] (%{framework_url}) の設立を支援した運営委員会のメンバーです。このフレームワークは、何百人もの学者、幼稚園から高校までの教育者、ソフトウェア企業、非営利団体、州の支持を得ています。
+  about_page_section_specific_description_6: "()、()、()、()、 [2014](%{irs_url_1})、()、
+    [2015](%{irs_url_2})、 [2016](%{irs_url_3}) の Code.org IRS フォーム 990 [2017]%{irs_url_4}
+    [2018]%{irs_url_5} [2019]%{irs_url_6})、 [2020]()、(%{irs_url_7})、 [2021]()。%{irs_url_8}[寄付ポリシー]
+    ()%{donation_policy_url}"
+  about_page_section_specific_description_7: "[登録して最新情報を受け取る] (%{sign_up_url}) は、幼稚園から高校までのコンピュータサイエンス運動の進捗状況とCode.orgの活動についてです。または、ソーシャルメディアで
+    Code.org をフォローしてください。"
+  about_page_section_specific_description_8: 当社のウェブサイトトラフィックの 40% 以上は米国外からのもので、その数は増え続けています。コンピュータサイエンスへのグローバルなアクセスを拡大するために、私たちのチームは
+    [100 を超える国際的なパートナー] (%{partners_url}) と緊密に協力して、Hour of Code の推進、政策変更の提言、教師のトレーニングを支援しています。私たちは、世界中の教育省庁と提携し、経済協力開発機構や国連教育科学文化機関などの国際機関と協力することで、コンピュータサイエンスを国際的な教育分野の一部にしています。
+  about_page_section_donors_description_1: Code.org® は、一般大衆からの支援を受けた、登録された公的な501c3非営利団体です。私たちのビジョンを支持してくれる
+    [個人や組織] () から受けた寛大な支援に感謝しています。%{individuals_url}
+  about_page_section_donors_description_2: コード実績（上記）は、これらの資金を活用して強力な成果を上げる当社の能力を実証しています。しかし、今日のデジタル世界で識字能力のある市民になり、キャリアとしてコンピュータサイエンスをさらに探求することへの興味を試すために、すべての学校の子どもたちがコンピュータサイエンスにアクセスできるようにする、という非営利団体の野心を考えると、そのビジョンを支える資金調達の目標を達成するには長い道のりがあります。
+  about_page_donors_link_1: 寄付をする
+  about_page_donors_link_2: "[寄付者リストをご覧ください] ()%{donors_url}"
   language_code:
     ar: アラビア語
     az: アゼルバイジャン語

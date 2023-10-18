@@ -104,6 +104,7 @@ class User < ApplicationRecord
   #     child account policy.
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
+  #   ai_rubrics_disabled: Turns off AI assessment for a User.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -140,6 +141,7 @@ class User < ApplicationRecord
     us_state
     country_code
     family_name
+    ai_rubrics_disabled
   )
 
   attr_accessor(
@@ -187,7 +189,9 @@ class User < ApplicationRecord
     TYPE_STUDENT = 'student'.freeze,
     TYPE_TEACHER = 'teacher'.freeze
   ].freeze
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
+
+  validates_presence_of :user_type
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
@@ -820,6 +824,7 @@ class User < ApplicationRecord
     user.provider = auth.provider
     user.uid = auth.uid
     user.name = name_from_omniauth auth.info.name
+    user.family_name = auth.info.family_name if auth.info.family_name.present?
     user.user_type = params['user_type'] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
@@ -1061,9 +1066,7 @@ class User < ApplicationRecord
 
     # Remove family name, in case it was set on the student account.
     # Must do this before updating user_type, to prevent validation failure.
-    if DCDO.get('family-name-features', false)
-      self.family_name = nil
-    end
+    self.family_name = nil
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
@@ -1221,7 +1224,7 @@ class User < ApplicationRecord
   #   3: {}
   # }
   def self.user_levels_by_user_by_level(users, script)
-    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
     UserLevel.where(
       script_id: script.id,
       user_id: users.map(&:id)
@@ -1588,7 +1591,7 @@ class User < ApplicationRecord
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-  def self.send_reset_password_instructions(attributes={})
+  def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
     if attributes[:email].blank?
       user = User.new
@@ -1723,9 +1726,9 @@ class User < ApplicationRecord
   # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
-    where("assigned_at").
-    order(assigned_at: :desc).
-    first
+      where("assigned_at").
+      order(assigned_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user was most recently
@@ -1744,9 +1747,9 @@ class User < ApplicationRecord
   # in.
   def user_script_with_most_recent_progress
     user_scripts.
-    where("last_progress_at").
-    order(last_progress_at: :desc).
-    first
+      where("last_progress_at").
+      order(last_progress_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user made the most recent
@@ -1765,7 +1768,7 @@ class User < ApplicationRecord
   # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
-    user_script_with_most_recent_progress[:last_progress_at]
+      user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Check if the user's most recently assigned script is associated with at least
@@ -1990,10 +1993,10 @@ class User < ApplicationRecord
       script = Unit.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Unit::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result >= ActivityConstants::BEST_PASS_RESULT &&
-        script_valid &&
-        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
-        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
+          new_result >= ActivityConstants::BEST_PASS_RESULT &&
+          script_valid &&
+          HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+          AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
@@ -2089,7 +2092,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
+      family_name: family_name,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2228,6 +2231,11 @@ class User < ApplicationRecord
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
+  end
+
+  # Returns true when the parent email matches the account email.
+  def parent_created_account?
+    student? && parent_email.present? && hashed_email == User.hash_email(parent_email)
   end
 
   # Temporary: Allow single-auth students to add a parent email so it's possible
@@ -2375,7 +2383,7 @@ class User < ApplicationRecord
   # course, we will create a UserScript entry so that they get a course card
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
-  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
     # applab-intro is not seeded in our minimal test env used on test/circle. We
     # should be able to handle this gracefully
     script = begin

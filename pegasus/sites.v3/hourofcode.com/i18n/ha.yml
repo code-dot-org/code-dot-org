@@ -5,36 +5,40 @@ ha:
   language: English
   front_title: Join the largest learning event in history, %{campaign_date}
   coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 5
-  campaign_date_start_long: December 5
-  campaign_date_short: Dec. 5-11
-  campaign_date_full: December 5-11
-  campaign_date_year: '2022'
-  campaign_date_full_year: December 5-11, 2022
-  nonus_campaign_date_start_short: Oct. 1
-  nonus_campaign_date_start_long: October 1
-  nonus_campaign_date_short: Oct. 1 - Dec. 18
-  nonus_campaign_date_full: October 1 - December 18
-  nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
-  europe_campaign_date_start_short: Oct. 1
-  europe_campaign_date_start_long: October 1
-  europe_campaign_date_short: Oct. 1 - Dec. 18
-  europe_campaign_date_full: October 1 - December 18
-  europe_campaign_date_year: '2022'
-  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1 - Dec. 18
-  africa_campaign_date_full: October 1 - December 18
-  africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  campaign_date_start_short: Dec. 4
+  campaign_date_start_long: December 4
+  campaign_date_short: Dec. 4-10
+  campaign_date_full: December 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: December 4-10, 2023
+  nonus_campaign_date_start_short: Sept. 5
+  nonus_campaign_date_start_long: September 5
+  nonus_campaign_date_short: Sept. 5 - Dec. 17
+  nonus_campaign_date_full: September 5 - December 17
+  nonus_campaign_date_year: '2023'
+  nonus_campaign_date_full_year: September 5, 2023 - December 17, 2023
+  latam_campaign_date_start_short: Sept. 5
+  latam_campaign_date_start_long: September 5
+  latam_campaign_date_short: Sept. 5 - Dec. 17
+  latam_campaign_date_full: September 5 - December 17
+  latam_campaign_date_year: '2023'
+  latam_campaign_date_full_year: September 5, 2023 - December 17, 2023
+  europe_campaign_date_start_short: Sept. 5
+  europe_campaign_date_start_long: September 5
+  europe_campaign_date_short: Sept. 5 - Dec. 17
+  europe_campaign_date_full: September 5 - December 17
+  europe_campaign_date_year: '2023'
+  europe_campaign_date_full_year: September 5, 2023 - December 17, 2023
+  africa_campaign_date_start_short: Sept. 5
+  africa_campaign_date_start_long: September 5
+  africa_campaign_date_short: Sept. 5 - Dec. 17
+  africa_campaign_date_full: September 5 - December 17
+  africa_campaign_date_year: '2023'
+  africa_campaign_date_full_year: September 5, 2023 - December 17, 2023
+  hoc2023_header: Creativity with AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - What will you create?
+  hoc2023_social_creativity_with_ai_desc: Use computer science to explore and learn
+    about AI!
   hoc2022_header: Explore, Play, Create!
   social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
   codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
@@ -172,6 +176,32 @@ ha:
   curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
     Catalog and redesigned Teach page to help you find it all!
   in_partnership_with: In partnership with
+  shop_code_dot_org_heading: Shop Code.org
+  shop_code_dot_org_desc: Support our work and wear the movement with pride. Our hats
+    have been worn by President Obama and celebrities too.
+  spread_the_word_heading: Spread the word
+  spread_the_word_desc: Amplify our impact by sharing Code.org with your network.
+    From social media to email updates, discover how you can help us reach more educators,
+    students, and advocates.
+  follow_us_heading: Follow us on social media
+  follow_us_desc: Stay up to date with us on social media and share our posts with
+    your network to stay informed and help drive awareness.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tablet
+  device_laptop: Laptop
+  device_desktop_computer: Desktop Computer
+  device_mobile_device: Mobile Device
+  subscribe_to_emails_heading: Subscribe to emails
+  subscribe_to_emails_desc: Read about what's happening at Code.org and in computer
+    science education through quarterly updates via our mailing list.
+  subscribe_to_emails_intl: Subscribe to international updates
+  promote_code_dot_org_heading: Promote Code.org
+  promote_code_dot_org_desc: Promote computer science in your area with the help of
+    stats, quotes, and videos.
   afe_partnership_logo_alt: Amazon Future Engineer logo
   afe_partnership_thanks_desc: Amazon Future Engineer is a comprehensive childhood-to-career
     program to inspire, educate, and train low-income and other disadvantaged children
@@ -180,18 +210,57 @@ ha:
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
+  curricula_title_elementary: Elementary School Curricula
+  curricula_desc_elementary: Browse the fun, free courses and activities that invite
+    you to explore computer science with your elementary school students.
+  curricula_title_middle: Middle School Curricula
+  curricula_desc_middle: Browse the engaging offerings that enable you and your middle
+    school students to explore computer science together.
+  curricula_title_high: High School Curricula
+  curricula_desc_high: Browse the compelling courses and activities that invite you
+    and your high school students to dig deeper into computer science.
+  for_administrators_heading: For administrators
+  for_administrators_desc: Join the thousands of schools who have already incorporated
+    computer science into their curriculum.
+  for_parents_heading: For parents
+  for_parents_desc: You can help encourage your student's school to offer or expand
+    computer science education.
+  for_educators_heading: For educators
+  for_educators_desc: Start teaching today — no computer science experience necessary
+    — with our professional learning workshops.
   students_label: Students
   teachers_label: Teachers
+  educators_label: Educators
+  companies_label: Companies
+  districts_label: Districts
+  school_assemblies_label: School Assemblies
+  parents_label: Parents
+  public_officials_label: Public Officials
+  volunteers_label: Volunteers
+  virtual_events_label: Virtual Events
   teacher_label_csf: CS Fundamentals Teacher
   teacher_label_csd: CS Discoveries Teacher
   teacher_label_csp: CS Principles Teacher
   teacher_label_csc: CS Connections Teacher
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Teacher Forum
+  teacher_forum_desc: Visit the Hour of Code Teacher Forum to get advice, insight
+    and support from other educators.
   required_materials: 'Required Materials:'
   optional_materials: 'Optional Materials:'
+  call_to_action_hold_an_event: Hold an event
+  call_to_action_register_event: Register your event
+  call_to_action_select_activity: Select an activity
+  call_to_action_start_activity: Start an activity
+  call_to_action_get_certificates: Get certificates
+  call_to_action_go_beyond_hoc: Go beyond the Hour of Code
+  call_to_action_view_promo_resources: View promo resources
   call_to_action_learn_more: Learn more
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
+  call_to_action_try_activities: Try activities
+  call_to_action_explore_activities: Explore activities
+  call_to_action_explore_ai: Explore AI
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
   call_to_action_explore_curriculum_options: Explore curriculum options
@@ -206,6 +275,15 @@ ha:
   call_to_action_explore_choice_level: Explore example choice level
   call_to_action_explore_collection: Explore collection
   call_to_action_explore_unplugged_lesson: Explore unplugged lessons
+  call_to_action_explore_csf: Explore CS Fundamentals
+  call_to_action_explore_csd: Explore CS Discoveries
+  call_to_action_explore_csp: Explore CS Principles
+  call_to_action_explore_csc: Explore CS Connections
+  call_to_action_explore_csa: Explore AP® Computer Science A
+  call_to_action_explore_csa_short: Explore AP® CSA
+  call_to_action_explore_maker: Explore Maker curricula
+  call_to_action_explore_hoc: Explore Hour of Code tutorials
+  call_to_action_explore_hoc_short: Explore Hour of Code
   call_to_action_try_app_lab: Try App Lab
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
@@ -229,11 +307,13 @@ ha:
   call_to_action_resources_tools: Try out programming tools
   call_to_action_sign_up_free: Sign up for free
   call_to_action_explore_ai_resources: Explore AI resources
+  call_to_action_explore_ai_curricula: Explore AI curricula
   call_to_action_explore_curriculum_catalog: Explore the Curriculum Catalog
   call_to_action_see_full_curriculum_catalog: See full Curriculum Catalog
   call_to_action_find_self_paced_modules: Find self-paced modules
   call_to_action_join_teacher_forums: Join teacher forums
   call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_teacher_forum: Explore teacher forum
   call_to_action_explore_career_resources: Explore career resources
   call_to_action_watch_videos: Watch videos
   call_to_action_download_posters: Download posters
@@ -248,6 +328,34 @@ ha:
   call_to_action_learn_about_approach: Learn more about our approach
   call_to_action_try_java_lab: Try Java Lab
   call_to_action_notify_available: Notify me when available
+  call_to_action_register_early_access: Register for early access
+  call_to_action_open_positions: View open positions
+  call_to_action_explore_roles: Explore open roles
+  call_to_action_get_guide: Get the guide
+  call_to_action_donate_to_cdo: Donate to Code.org
+  call_to_action_start_fundraiser: Start a fundraiser
+  call_to_action_view_donation_policy: View donation policy
+  call_to_action_view_donate_bitpay: Donate with BitPay
+  call_to_action_make_a_donation: Make a donation
+  call_to_action_other_ways_to_give: Other ways to give
+  call_to_action_become_partner_usa: Become a United States partner
+  call_to_action_become_partner_intl: Become an international partner
+  call_to_action_become_a_volunteer: Become a volunteer
+  call_to_action_start_translating: Start translating
+  call_to_action_learn_about_advocacy: Learn about our advocacy
+  call_to_action_visit_store: Visit the store
+  call_to_action_view_faqs: View more FAQs
+  aria_label_call_to_action_hoc_how_to_educators: View how-to guide for Educators
+  aria_label_call_to_action_hoc_how_to_companies: View how-to guide for Companies
+  aria_label_call_to_action_hoc_how_to_districts: View how-to guide for Districts
+  aria_label_call_to_action_hoc_how_to_school_assemblies: View how-to guide for School
+    Assemblies
+  aria_label_call_to_action_hoc_how_to_parents: View how-to guide for Parents
+  aria_label_call_to_action_hoc_how_to_public_officials: View how-to guide for Public
+    Officials
+  aria_label_call_to_action_hoc_how_to_volunteers: View how-to guide for Volunteers
+  aria_label_call_to_action_hoc_how_to_virtual_events: View how-to guide for Virtual
+    Events
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -356,8 +464,11 @@ ha:
   curriculum_name_csp: Computer Science Principles
   curriculum_name_csc: Computer Science Connections
   curriculum_name_csa: AP® Computer Science A
+  curriculum_name_csa_ai: Software Engineering & Computer Vision
   curriculum_name_csc_02: Any CS Connections Module
   curriculum_name_ai: AI & Machine Learning
+  curriculum_name_artificial_intelligence: Artificial Intelligence (AI)
+  curriculum_name_maker: Maker
   curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
   curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
   curriculum_name_creating_apps_with_devices: Creating Apps with Devices
@@ -368,6 +479,8 @@ ha:
   curriculum_name_interactive_animations_games: Interactive Animations & Games
   curriculum_name_design_process: The Design Process
   curriculum_name_data_society: Data & Society
+  curriculum_desc_csf: Free set of elementary curricula that introduces students to
+    the foundational concepts of computer science.
   curriculum_desc_csf_express: Learn to create computer programs, develop problem-solving
     skills, and work through fun challenges! Make games and creative projects to share
     with friends, family, and teachers.
@@ -411,6 +524,25 @@ ha:
   curriculum_desc_creating_apps_with_devices: Explore the role of physical devices
     in computing. Develop programs that utilize hardware inputs and outputs. There
     is a version of this unit for both the micro:bit and Circuit Playground.
+  curriculum_desc_csa: Introduce students to software engineering and object-oriented
+    design while they learn the Java programming language in this free curriculum
+    for AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maker education takes STEM (Science, Technology, Engineering,
+    Mathematics) a step further by inviting hands-on experience and collaboration
+    into the classroom to help teach problem solving and critical thinking.
+  curriculum_desc_maker_short: Maker education invites hands-on experience and collaboration
+    into the classroom to help teach problem solving and critical thinking.
+  curriculum_desc_csd: Flexible course, allowing each unit to be taught alone or combined.
+    Introduces students to building websites, apps, animations, games, and physical
+    computing systems.
+  curriculum_desc_csp: Free, AP® CSP endorsed, high school introductory course that
+    introduces students to the foundational concepts of computer science.
+  curriculum_desc_csa_ai_long: This two-chapter post-AP® CSA module offers high school
+    students hands-on experience with professional software development tools, including
+    GitHub and GitHub Copilot, and imparts them with the real-world skills to develop
+    a computer vision program.
+  curriculum_desc_csa_ai_short: This post-AP® CSA module offers high school students
+    hands-on experience with professional software development tools.
   collection_hardware: Focus on Hardware
   collection_hardware_desc: Empowers students to use data and physical devices to
     solve problems.
@@ -441,6 +573,7 @@ ha:
   module_label_professional_learning: 'Professional Learning:'
   module_label_languages: 'Languages Supported:'
   module_label_accessibility_features: 'Accessibility:'
+  module_label_accessibility_features_full: 'Accessibility Features:'
   module_label_educator_tool: Educator tool
   module_label_educator_course: Educator course
   module_label_student_tool: Student tool
@@ -448,6 +581,7 @@ ha:
   module_label_student_content_resources: Content & resources
   module_label_new: New
   module_label_coming_soon: Coming soon
+  module_label_available_now: Available Now
   module_label_video_series: Video series
   module_label_self_paced: Self-paced module
   module_ages_5_10: 5-10
@@ -458,6 +592,8 @@ ha:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -472,11 +608,14 @@ ha:
   module_grade_9_12_teachers: 9-12 Teachers
   module_level_beginner: Beginner
   module_level_intermediate: Intermediate
+  module_level_advanced: Advanced
   module_duration_45_mins: 45 minutes
+  module_duration_2_weeks: 2 weeks
   module_duration_1_hr: 1 hour
   module_duration_2_hrs: 2 hours
   module_duration_3_hrs: 3 hours
   module_duration_5_hrs: 5 hours
+  module_duration_5_hrs_plus: 5+ hours
   module_duration_8_hrs: 8 hours
   module_duration_20_hrs: 20 hours
   module_duration_35_hrs: 35 hours
@@ -488,6 +627,7 @@ ha:
   module_duration_school_year: School Year
   module_duration_month_quarter: Month or Quarter
   module_duration_month_semester_year: Month, Semester, or Year
+  module_duration_varies: Varies
   module_prerequisites_none: None
   module_prerequisites_maker_cp: Access to a Circuit Playground
   module_prerequisites_maker_microbit: Access to a micro:bit
@@ -548,6 +688,10 @@ ha:
   heading_java_lab: Java Lab
   heading_objects_first: Objects first
   heading_these_lessons_will: 'These lessons will:'
+  heading_explore_curriculum_catalog: Explore all of our courses in the Curriculum
+    Catalog
+  heading_csa_ai: Looking for things to do after the AP® exam?
+  heading_bring_cs_to_students: Bring computer science to students
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
   professional_learning_section_desc_short: Get the support you need as you prepare
@@ -578,6 +722,23 @@ ha:
   support_and_questions_section_desc: Our support team is here to answer any questions
     you may have about starting teaching with Code.org. You can also ask other teachers
     about their experience on our teacher forums.
+  subscribe_form_section_title: Subscribe for updates
+  subscribe_form_section_desc_csa: Sign up to receive monthly emails about Code.org's
+    AP® Computer Science A and get helpful reminders, tips, and updates sent right
+    to your inbox.
+  subscribe_form_section_desc_csc: Sign up to receive monthly emails about Code.org's
+    Computer Science Connections and get helpful reminders, tips, and updates sent
+    right to your inbox.
+  subscribe_form_section_desc_csd: Sign up to receive monthly emails about Code.org's
+    Computer Science Discoveries and get helpful reminders, tips, and updates sent
+    right to your inbox.
+  subscribe_form_section_desc_csf: Sign up to receive monthly emails about Code.org's
+    Computer Science Fundamentals and get helpful reminders, tips, and updates sent
+    right to your inbox.
+  subscribe_form_section_desc_csp: Sign up to receive monthly emails about Code.org's
+    Computer Science Principles and get helpful reminders, tips, and updates sent
+    right to your inbox.
+  subscribe_form_section_unsubscribe: You can unsubscribe at any time.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -682,6 +843,9 @@ ha:
     lesson is paired with a single video from the series, diving-deeper into the concepts
     introduced in the videos.
   ai_curriculum_btn_aria_label_04: Explore How AI Works lessons
+  ai_curriculum_grades_05: 'Grade Levels: 9-12'
+  ai_curriculum_btn_aria_label_05: Explore the Software Engineering & Computer Vision
+    module
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -705,7 +869,8 @@ ha:
   ai_video_series_title: How AI Works
   ai_video_series_desc: This series of short videos will introduce you to how artificial
     intelligence works and why it matters. Then delve into issues like algorithmic
-    bias and the ethics of AI decision-making.
+    bias and the ethics of AI decision-making. Watch the video series below, or [check
+    out our How AI Works lessons](%{how_ai_works_url})!
   ai_resources_heading: Additional resources
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
@@ -777,8 +942,6 @@ ha:
   ai_pl_101_video_desc_2: Introduction to the fundamentals of Artificial Intelligence
     which will equip you with the foundational knowledge to understand the profound
     impact of AI in our society and its increasing relevance to the field of education.
-    You will gain practical insights into leveraging AI for tasks in the classroom,
-    and saving time on administrative tasks.
   ai_pl_101_video_title_3: Transforming Learning with AI
   ai_pl_101_video_desc_3: Explore the intersection of AI and education. This session
     explores how AI can be combined with pedagogy to enhance student learning. It
@@ -787,18 +950,27 @@ ha:
   ai_pl_101_video_title_4: Ensuring a Responsible Approach to AI
   ai_pl_101_video_desc_4: Explore the ethical considerations and best practices for
     incorporating artificial intelligence in educational environments. This session
-    will provide concrete strategies, resources, and real-world examples, all aimed
-    at understanding the potential biases of AI, and the ethical considerations that
+    provides concrete strategies, resources, and real-world examples, all aimed at
+    understanding the potential biases of AI, and the ethical considerations that
     come with it.
   ai_pl_101_video_title_5: Bringing AI to the Classroom
   ai_pl_101_video_desc_5: This session focuses on teaching about AI, evaluating and
     utilizing AI educational tools, and leveraging AI for student assessment. With
     a rich blend of theory, practical examples, and resources, it aims to empower
     educators to navigate the AI landscape and enhance student learning experiences.
+  ai_pl_101_resources_5: Guide to Ensuring a Responsible Approach to AI
   ai_pl_101_video_desc_6: 'Learn more about the new technology driving the large changes
     in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
     AI. Hear how these new technologies work directly from the experts: Mira Murati,
     CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML.'
+  ai_pl_101_llm_slides_title: Large Language Model Prompts for Educators
+  ai_pl_101_llm_slides_desc: Tools for getting the best possible output from LLMs
+    like ChatGPT, from beginner to advanced. Includes starter prompts for those just
+    dipping their toes in, as well as advanced tools for those looking to maximize
+    their potential.
+  ai_pl_101_resources_3: AI Prompts for Transforming Student Learning
+  ai_pl_101_resources_section_title: More ways to learn about AI
+  ai_pl_101_resources_guide: 'Companion guide:'
   how_ai_works_hero_heading: How AI Works
   how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
     series and accompanying lessons!
@@ -1123,20 +1295,12 @@ ha:
   teach_page_free_curriculum_desc: We want you to bring Computer Science to your school
     without worrying about the cost. That's why we have committed to our curriculum
     offerings being free forever!
-  teach_page_free_curriculum_list_heading_01: Engaging curriculum for every grade
-    level
-  teach_page_free_curriculum_list_desc_01: Free, flexible, and fun curriculum with
-    offerings in over 67 languages.
-  teach_page_free_curriculum_list_heading_02: Adaptable, innovative curriculum
-  teach_page_free_curriculum_list_desc_02: Code.org offers everything from full-year
-    curricula to single-unit activities. Plus, we update our curricula annually to
-    support best practices and areas of focus, and create new offerings that teach
-    current in-demand topics.
-  teach_page_free_curriculum_list_heading_03: Structured curriculum mapped to national
-    standards
-  teach_page_free_curriculum_list_desc_03: Each curriculum is mapped to at least one
-    set of national standards, including CSTA, Next Generation Science Standards,
-    and Common Core.
+  teach_page_free_curriculum_list_desc_01: Free, flexible, and fun
+  teach_page_free_curriculum_list_desc_02: Updated yearly to support best practices
+  teach_page_free_curriculum_list_desc_03: New releases for in-demand topics
+  teach_page_free_curriculum_list_desc_04: Offerings in over 67 languages
+  teach_page_free_curriculum_list_desc_05: Mapped to at least one set of national
+    standards (including CSTA, NGSS, and Common Core)
   teach_page_free_curriculum_heading_02: 'Explore our curriculum offerings for different
     grade levels:'
   teach_page_resources_heading: Resources that support you every step of the way
@@ -1596,6 +1760,60 @@ ha:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Help fund our mission
+  donate_page_top_desc: Every donation fuels Code.org's mission to expand access to
+    computer science education. We offer several ways for you to donate and make a
+    difference.
+  donate_page_fundraise_title: Fundraise for Code.org
+  donate_page_fundraise_desc: Help raise money for Code.org! Every student in every
+    school should have the opportunity to learn computer science.
+  donate_page_other_ways_title: Other ways to give
+  donate_page_other_ways_desc: Explore diverse methods to contribute, and find the
+    option that suits you best. Every gesture, big or small, propels our mission forward.
+  donate_page_501c3: Code.org is registered as a public 501(c)(3) nonprofit organization.
+    Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's
+    tax identification number is 46-0858543.
+  donate_page_donation_policy_title: Understanding our Donation Policy
+  donate_page_donation_policy_desc: Learn about how we handle and allocate your contributions.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Employee Match
+  donate_tabs_daf_direct_title: Donate via DAF Direct
+  donate_tabs_daf_direct_desc: Donate through your donor-advised fund with Fidelity
+    Charitable, Schwab Charitable, or BNY Mellon and make your grant recommendation
+    to Code.org through the DAF Direct online form.
+  donate_tabs_amazon_title: Donate via Amazon
+  donate_tabs_amazon_desc: Donate directly using your Amazon account. With just a
+    few clicks, seamlessly contribute to Code.org's mission and empower the future
+    of computer science education.
+  donate_tabs_bitpay_title: Donate with Crypto via BitPay
+  donate_tabs_bitpay_desc: Embrace the future of giving with cryptocurrency. Through
+    BitPay, your digital currency can directly support Code.org's endeavors in expanding
+    computer science education.
+  help_page_top_heading: How you can help
+  help_page_top_desc: Support our mission to make computer science accessible for
+    every child, everywhere. Your efforts help us inspire future innovators and bridge
+    the tech education gap.
+  help_page_top_subhead: Make a donation to Code.org
+  help_page_top_desc_02: We're working to give every student the opportunity to learn
+    computer science — both online AND in schools, where we establish permanent courses
+    and train teachers. For every dollar you donate, one child is introduced to computer
+    science.
+  help_page_partners_heading: Become a partner
+  help_page_partners_desc: Code.org works with other nonprofit organizations as partners
+    to help spread computer science in a local, sustainable fashion. Learn more about
+    our program.
+  help_page_volunteer_heading: Volunteer in a classroom
+  help_page_volunteer_desc: Volunteer to teach the Hour of Code or be a guest speaker
+    in a local classroom. Sign up to hear about opportunities near you.
+  help_page_translate_heading: Help us translate
+  help_page_translate_desc: Volunteers have translated our tutorials in over 45 languages.
+    Help us continue to expand our tutorials for students around the world!
+  help_page_speak_for_cs_heading: Speak up for computer science education
+  help_page_speak_for_cs_desc: Learn more about Code.org's advocacy work across the
+    U.S. and the ten policies we recommend states adopt to make computer science foundational
+    for all students. Plus, find out how you can drive change in your state.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -2007,6 +2225,11 @@ ha:
     local opportunities, or other computer science news?
   signup_email_preference_privacy: "(See our privacy policy)"
   signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes_elementary: Yes - Send me updates on Elementary School
+    Resources
+  signup_email_preference_yes_middle: Yes - Send me updates on Middle School Resources
+  signup_email_preference_yes_high: Yes - Send me updates on High School Resources
+  signup_email_preference_yes_general: Yes - Send me general updates
   signup_email_preference_no: 'No'
   signup_email_preference_error: Email preference is required
   signup_multiple_event_warning: We will put your school name and city on the map
@@ -2718,9 +2941,9 @@ ha:
   tutorial_pixie_name: PIXIE Challenges
   tutorial_play_name: Play Lab
   tutorial_robomind-nl_name: Program a virtual robot
-  tutorial_spheroi_name: 'Blocks 1: Intro'
-  tutorial_spherol_name: 'Blocks 3: Lights'
-  tutorial_spherov_name: 'Blocks 4: Variables'
+  tutorial_spheroi_name: 'Blocks 1: Roll Block Squares'
+  tutorial_spherol_name: 'Blocks 3: Matrix Emotions'
+  tutorial_spherov_name: 'Blocks 4: On Collision Event Pong'
   tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
   tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
   tutorial_alicesims_name: Storyboarding and Programming with Alice and The Sims
@@ -2897,7 +3120,7 @@ ha:
   tutorial_ifly_name: iFly
   tutorial_idowedo_name: iDo WeDo
   tutorial_diggindwarf_name: Diggin' Dwarf
-  tutorial_spheroit_name: 'Blocks 2: If/Then Else'
+  tutorial_spheroit_name: 'Blocks 2: Light and Sound Stories'
   tutorial_gameofcodes_name: Game Of Codes
   tutorial_blocklygames_name: Blockly Games
   tutorial_spherohello_name: 'Text 1: Hello World'
@@ -5299,19 +5522,16 @@ ha:
     by controlling their own virtual robot. The online course is fully self-contained
     with short presentations, movies, quizzes and automatic guidance/hints to help
     with the programming exercises. '
-  tutorial_spheroi_longdescription: Welcome to your first blocks activity! This is
-    a great place to start for most users, and can be used for the "Hour of Code."
-    Follow the steps to get an overview of the app, learn how to create programs using
-    block coding, and gain an understanding of loops and operators.
-  tutorial_spherol_longdescription: You will learn a new use for the lights on your
-    robot. In this activity, you will build a spinning top program where the gyroscopic
-    spin rate will control the main LEDs, and you will use the concepts of normalization
-    and absolute value. This is a great activity after you complete Blocks 2, and
-    can be used for the "Hour of Code."
-  tutorial_spherov_longdescription: It's time for another classic game powered by
-    Sphero. Learn how to use variables, loop until, and randomness within bounds to
-    bring Hot Potato to life. When you're all done, grab some friends and start tossing.
-    Don't get caught with the Sphero when the time runs out!
+  tutorial_spheroi_longdescription: Welcome to BOLT Blocks 1, your introduction to
+    the Block Canvas! You'll learn about how to use the space to program your Sphero
+    BOLT and then explore how to control your robot's movement with the all-important
+    roll block.
+  tutorial_spherol_longdescription: What's better than an emoji? An animated emoji!
+    Learn how to create your own matrix animations on top of BOLT to showcase an emotion.
+    Then add loops to make your program repeat blocks again and again.
+  tutorial_spherov_longdescription: Programming events enable you to change BOLT's
+    behavior while a program is running! Learn all about events and program a version
+    of pong to play with BOLT and your feet!
   tutorial_swb_longdescription: Learn to program droids, and create your own Star
     Wars game in a galaxy far, far away.
   tutorial_build-a-galaxy_longdescription: Learn to program droids, and create your
@@ -6104,10 +6324,9 @@ ha:
   tutorial_diggindwarf_longdescription: Dwarfs need your help to navigate, dig, and
     collect gems!  Learn how to use JavaScript to guide your dwarf through mazes and
     puzzles.
-  tutorial_spheroit_longdescription: Learn your first "if/then, else" condition by
-    building a fun game where you will be throwing Sphero and guessing animal sounds.
-    This is a great activity after you complete Blocks 1, and can be used for the
-    "Hour of Code."
+  tutorial_spheroit_longdescription: BOLT's lights and sounds can make your stories
+    come to life. Put on your storyteller's hat and get ready to program your story
+    on the Block Canvas with BOLT!
   tutorial_gameofcodes_longdescription: Build an awesome Dragon game to defend the
     wall, then export it as a standalone app (for iOS, Android, PC, and Mac).
   tutorial_blocklygames_longdescription: Blockly Games is a series of educational
@@ -6115,11 +6334,8 @@ ha:
     experience with computer programming but who wish to learn at a more challenging
     pace. By the end of these games, players are ready to use conventional text-based
     languages.
-  tutorial_spherohello_longdescription: Have you conquered Blocks and need a new challenge?
-    Take the logic you have learned with block-based programming and begin to learn
-    how to program with just text. In this first Text activity learn the basics of
-    the text canvas, loops, and some tips to get started with your first lines of
-    JavaScript code.
+  tutorial_spherohello_longdescription: In this activity, you will explore functions
+    in the text programming canvas and get started with your first lines of JavaScript!
   tutorial_spheroarcade_longdescription: In this arcade-style playground, you can
     recreate classic games with a Sphero SPRK+ robot while learning the basics of
     game design. You'll build your very own robotic renditions of some famous games
@@ -11031,7 +11247,7 @@ ha:
   tutorial_milnefunctions_name: Dash Joins a Dance Circle (with Functions)
   tutorial_sasmap_name: 'Show With Code: Features on a Map'
   tutorial_firstrobotics_name: FIRST Tech Challenge Simulator
-  tutorial_sasdata_name: Building Data Fundamentals
+  tutorial_sasdata_name: SAS DataFly
   tutorial_carnegiesensabot_name: Sensabot Challenge
   tutorial_robotical4_name: Hour of Code Activity 4 - Getting Started with MartyBlocks
   tutorial_kinderadd_name: Adding and Subtracting with KIBO
@@ -12807,6 +13023,124 @@ ha:
   all: All
   dont_know: I don't know
   language_label: Language
+  before_hoc: Before Hour of Code
+  day_of_hoc: Day of Hour of Code
+  after_hoc: After Hour of Code
+  step_01: Step 1
+  step_02: Step 2
+  step_03: Step 3
+  step_04: Step 4
+  step_05: Step 5
+  step_06: Step 6
+  step_07: Step 7
+  step_08: Step 8
+  hoc_how_to_top_heading: Your guide to Hour of Code
+  hoc_how_to_top_desc: Tailored how-to guides for the best Hour of Code experience.
+  hoc_how_to_top_view_guide: View guide for
+  hoc_how_to_nav_main_aria_label: Choose a guide
+  hoc_how_to_nav_sidebar_aria_label: Sidebar navigation
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: The Hour of Code is a one-hour introduction to
+    computer science, using fun tutorials to show that anybody can learn the basics.  This
+    year, we're taking Hour of Code to new heights by offering coding opportunities
+    that encompass both artificial intelligence (AI) and non-AI components. Whether
+    you or your students are experienced coders or you all are setting out on your
+    very first computer science expedition, this Hour of Code promises an extraordinary
+    voyage.
+  hoc_how_to_faq_question_prerequisites: What are the prerequisites for doing an Hour
+    of Code?
+  hoc_how_to_faq_answer_prerequisites: The Hour of Code is simple to run — even for
+    beginners. You don't need experience in computer science or teaching in order
+    to inspire students to explore, create, and learn something new.
+  hoc_how_to_faq_question_devices: What devices do I need to run an Hour of Code?
+  hoc_how_to_faq_answer_devices_01: 'Devices you can use:'
+  hoc_how_to_faq_answer_devices_02: If devices are limited or unavailable, try [pair
+    programming](%{pair_url}) or explore our [unplugged activities](%{unplugged_url})
+    to learn without any devices at all!
+  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_answer_volunteer: Anyone passionate about computer science education
+    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
+    of all backgrounds participate. The Hour of Code features a large variety of activities
+    for all ages and skill levels, so you don't need to be a programming expert to
+    volunteer!
+  hoc_how_to_faq_question_full_hour: Will the Hour of Code take a full hour?
+  hoc_how_to_faq_answer_full_hour: Many students will be able to finish their activities
+    in less than an hour, and that's okay! Students can continue to learn while other
+    students complete their activity.
+  hoc_how_to_faq_question_account: Do students need to log on using an account?
+  hoc_how_to_faq_answer_account: No signup or login is required for students to try
+    the Hour of Code. Signing up for the Hour of Code does NOT automatically create
+    a Code.org account.
+  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_promo_heading: Promotional Resources
+  hoc_how_to_resources_promo_desc: Find all the resources you need—print and digital—to
+    bring attention to your Hour of Code.
+  hoc_how_to_resources_discover_heading: Discover Activities
+  hoc_how_to_resources_discover_desc: Explore a wide selection of one-hour tutorials
+    designed for all ages in over 45 languages.
+  hoc_how_to_step_label_plan: Plan where and when you'll do your Hour of Code
+  hoc_how_to_step_label_choose_activity: Choose your activity
+  hoc_how_to_step_label_test_activity: Test out your activity
+  hoc_how_to_step_label_register_event: Register your event
+  hoc_how_to_step_label_tell: Tell your students, school, and community
+  hoc_how_to_step_label_get_coding: Get coding!
+  hoc_how_to_step_label_celebrate: Celebrate
+  hoc_how_to_step_label_beyond_hoc: Beyond Hour of Code
+  hoc_how_to_step_beyond_hoc_subhead: It doesn't end here!
+  hoc_how_to_step_beyond_hoc_desc: Computer science doesn't have to end with the Hour
+    of Code! While 90% of parents want their child to learn computer science, most
+    schools still don't teach it. Learn how to bring CS to your child's school today.
+  hoc_how_to_step_01_educators_subhead: Select an event time and space that works
+    for the number of students and devices you have available.
+  hoc_how_to_step_01_educators_desc_01: What spaces are available for you to do your
+    Hour of Code? Consider the tech capabilities of your space, and the kinds of devices
+    you expect your students to work on. Students can work on tutorials on a single
+    device, take turns using a shared device, or try a tutorial together on a classroom
+    whiteboard. There are even unplugged tutorials that can be completed with no devices
+    at all. Unplugged options can be done anywhere—even outdoors!
+  hoc_how_to_step_01_educators_desc_02: People around the world join the Hour of Code
+    celebration during CS Education Week %{campaign_date} when the latest tutorials
+    and activities are released. But you can do an Hour of Code any day of the year!
+  hoc_how_to_step_02_educators_desc_01: Explore activities based on your group's age,
+    experience, interests, and more. It's popular for students to try self-led tutorials,
+    though many activities include lesson plans for teachers to guide discussion or
+    extend the activity as well.
+  hoc_how_to_step_02_educators_desc_02: Decide ahead of time if you want to choose
+    a single tutorial for all of your students, or let each child pick their own.
+  hoc_how_to_step_02_educators_desc_03: This year, you and your students can [learn
+    all about AI](%ai_url) through tutorials, lesson plans, and our new How AI Works
+    video series.
+  hoc_how_to_step_03_educators_desc_01: Try out the tutorial yourself before you get
+    into the classroom so you can answer questions!
+  hoc_how_to_step_03_educators_desc_02: You can also test tutorials on student computers
+    or devices to ensure they support sound and video. Have low bandwidth? Plan to
+    show videos at the front of the class, so each student isn't downloading their
+    own videos.
+  hoc_how_to_step_03_educators_desc_03: Consider providing headphones for your class,
+    or ask students to bring their own, if the tutorial you choose works best with
+    sound.
+  hoc_how_to_step_04_educators_desc_01: When you register your Hour of Code event,
+    you'll receive helpful emails with news and tips for hosting a successful Hour
+    of Code. It's also how you can let local volunteers know your school is participating.
+    Volunteers are a great resource and can come speak to your class about computer
+    science or help your students with Hour of Code activities.
+  hoc_how_to_step_05_educators_desc_01: Get your students excited for the event by
+    sharing [inspirational videos](%{videos_url}) highlighting diverse people and
+    creative ways that computer science can be used in the real world.
+  hoc_how_to_step_05_educators_desc_02: Share your Hour of Code plans with other teachers
+    who may want to join in on the fun! This is also a great opportunity to reach
+    out to your school's Parent Teacher Student Association or share in parent newsletters,
+    letting them know what their children are learning.
+  hoc_how_to_step_06_educators_desc_01: Direct your students to the activity, maybe
+    by sharing the link on the board or through your classroom's learning management
+    system. Your students may encounter challenges—that's okay! Learning to program
+    is like learning a new language; you won't be fluent right away. If you don't
+    know the answer, you can figure it out together.
+  hoc_how_to_step_07_educators_desc_01: 'Be sure to celebrate success! Share photos
+    and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too!'
+  hoc_how_to_step_07_educators_desc_02: You can also print certificates for your students
+    to show off their achievement!
   team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
     yellow t-shirts pose in a hotel conference room for the company's summer 2022
     Codechella event.
@@ -12899,6 +13233,580 @@ ha:
   accessibility_card_text_10: An adaptation of Code.org’s AP Computer Science Principles
     curriculum using Quorum, an evidence-based language originally designed to provide
     accessibility for blind or visually-impaired students.
+  engineering_hero_heading: Join our engineering team!
+  engineering_hero_desc: As we continue to expand our engineering team, we wanted
+    to share more about our engineering organization at Code.org and some of the unique
+    aspects of working here. If you are interested in applying for one of our roles,
+    we'd love to hear from you!
+  engineering_team_title: Meet the engineering team at Code.org
+  engineering_team_card_text_1: This is (most of) us at our in-person get together
+    during the summer of 2023! This crowd is divided into four sub-teams within our
+    engineering team who work together to build and serve the platform for all our
+    students and teachers.
+  engineering_team_card_text_2: If you are interested in applying for one of our roles,
+    we'd love to hear from you! You can find a list of open positions on our Careers
+    page.
+  engineering_our_team_title: Our engineering team
+  engineering_our_team_desc: 'The engineering team at Code.org is divided into four
+    sub-teams that build and support different areas of our platform:'
+  engineering_our_team_sub_title_1: Student Learning Team
+  engineering_our_team_text_1: Our Student Learning Team owns all our activities (we
+    call them labs) that our students use each day. This team works mostly on front-end
+    tech (we use React and a lot of custom JS) and we have a great working relationship
+    with many partners and open source projects. For example, we use [Google's Blockly](%{youtube_url})
+    for all of our block-based programming. We support students in their learning
+    journey all the way from Kindergarten through 12th grade.
+  engineering_our_team_sub_title_2: Teacher Experience Team
+  engineering_our_team_text_2: Our Teacher Experience Team builds the tools that attract
+    new teachers to Code.org (we call these acquisition products) and develops the
+    platform that empowers our existing teachers to teach our curriculum (our teacher
+    tools). As with our student tools, we rely on React to build our front-end and
+    our server-side components are served using Ruby on Rails.
+  engineering_our_team_sub_title_3: Platform Team
+  engineering_our_team_text_3: Our Platform Team owns core components that serve the
+    needs of our student and teacher teams (for example, authentication and user profile)
+    and also has the mission of reaching students who we can't yet reach. This includes
+    building integrations that connect us with schools that use different Learning
+    Management Systems (LMS) and packaging our curriculum so that it can be used in
+    remote schools who don't have access to reliable internet.
+  engineering_our_team_sub_title_4: Infrastructure Team
+  engineering_our_team_text_4: Our Infrastructure Team provides the backbone for the
+    platform that supports our students and teachers. This includes our hosting infrastructure
+    and related services (we use AWS), data management, security programs, developer
+    and deployment services and much more. This team also owns our scaling and provisioning
+    systems, which are critical during Hour of Code, where we invite every student
+    in the world to complete an hour of coding with us.
+  engineering_faq_question_1: What does Code.org do?
+  engineering_faq_answer_1_a: Code.org is an education innovation nonprofit dedicated
+    to the vision that every student in every school has the opportunity to learn
+    computer science as part of their core K-12 education.
+  engineering_faq_answer_1_b: We expand access to computer science in schools, with
+    a focus on increasing participation by young women and students from other underrepresented
+    groups. The leading provider of K-12 computer science curriculum in the largest
+    school districts in the United States, Code.org also organizes the annual Hour
+    of Code campaign, which has engaged more than 15% of all students in the world.
+  engineering_faq_answer_1_c: Code.org is supported by generous donors including Microsoft,
+    Amazon, Google and many others.
+  engineering_faq_question_2: What is Code.org’s developer experience and tooling?
+  engineering_faq_answer_2: Our developer experience may be different to what you’ve
+    seen in your past roles. Working closely with our product team, we ship to production
+    every weekday and we have a variety of cadences - sometimes you are writing code
+    that goes live that day; other times you are on longer term projects - and while
+    we do follow 2-weekly sprints, we do so in a lightweight way. We index towards
+    getting the right things done the right way vs. taking a purist view of any particular
+    methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub
+    pull requests to track all of our work items. We also care a lot about quality
+    and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}),
+    who help us run our suite of UI tests on various student devices (e.g., iPads)
+    in their cloud device farm.
+  engineering_faq_question_3: What is the engineer on-call rotation at Code.org?
+  engineering_faq_answer_3: Our 30+ engineering team shares on-call responsibilities.
+    Each engineer covers a 24-hour shift and uses our escalation paths and playbooks
+    to respond to site outages or other live-site issues. We are proud of our site’s
+    reliability - on average, each engineer is only woken up once per year for issues
+    that are typically quick to resolve. Instead, the "Developer of the Day" usually
+    spends a portion of their workday managing the production deployment and triaging
+    less urgent issues.
+  engineering_faq_question_4: Are you a remote-friendly / WFH organization?
+  engineering_faq_answer_4_a: Yes! In 2019, shortly before the pandemic, Code.org
+    became a remote-first organization. Today, we have engineers in every US time
+    zone and accommodate working hours accordingly. Most of our meetings happen between
+    the hours of 10am and 3pm PT.
+  engineering_faq_answer_4_b: We also recognize the value of in-person time, and every
+    quarter we get together in person, typically in Seattle. Two of these events (we
+    call them Kick-off week and “Codechella”) bring everyone in the organization together
+    in January and June - and the engineering and product teams meet separately in
+    April and October.
+  engineering_faq_answer_4_c: We strongly believe in spending time with our students
+    and teachers, so many of these in-person events include trips into schools and
+    classrooms to gather feedback or play-test our products
+  engineering_faq_question_5: What makes the engineering team at Code.org unique?
+  engineering_faq_answer_5_a: 'Beyond solving challenging technical problems, we have
+    a few things that make our engineering org different from others you may have
+    worked in:'
+  engineering_faq_answer_5_b_1: We all share our passion for our mission.
+  engineering_faq_answer_5_b_2: Each of us is here to support the mission to expand
+    access to computer science for every student across the world. We all have our
+    unique story and perspective about what drives us towards this mission.
+  engineering_faq_answer_5_c_1: We care deeply about each other.
+  engineering_faq_answer_5_c_2: When engineers are struggling with an issue, we step
+    in and we help. One of our principles is that we are hard on problems, but kind
+    to each other. We promote engineers regularly, but we don't prescribe over-engineered
+    solutions just to support someone's promotion path. Instead, we invest in our
+    engineers with a generous professional development budget and access to other
+    learning opportunities.
+  engineering_faq_answer_5_d_1: We work hard, but we set clear boundaries.
+  engineering_faq_answer_5_d_2: While we support students across the world, we hold
+    ourselves accountable for clear boundaries between work and home life. We enjoy
+    no-meetings Wednesdays, taking our PTO (5 weeks total, which includes an org-wide
+    2-week office closure at the end of the year aka Winter Break), half working day
+    on Fridays during the summer aka Summer Fridays, and other generous benefits.
+  careers_hero_title: Careers
+  careers_hero_description: Code.org is a nonprofit organization dedicated to expanding
+    access to computer science in schools. We are especially focused on increasing
+    participation among young women and underrepresented students.
+  careers_hero_description_under: Help us change the world, one student at a time!
+  careers_vision_title: Our vision
+  careers_vision_decsription: Our vision is that every student in every school should
+    have the opportunity to learn computer science as part of their core K-12 education.
+  careers_vision_description_under: Come join our team to help make this vision a
+    reality!
+  careers_values_title: Our core values
+  careers_values_first_column_text_1: We believe computer science is foundational
+    for all students
+  careers_values_first_column_text_2: We are committed to equity, access, and opportunity
+  careers_values_first_column_text_3: We believe in the power of a collaborative education
+    community
+  careers_values_second_column_text_1: We are agile and responsive to feedback
+  careers_values_second_column_text_2: We act with integrity and transparency
+  careers_values_second_column_text_3: We believe broad impact requires thinking big
+    and acting holistically
+  careers_approach_section_title: Our unifying approach
+  careers_approach_section_description: Code.org's global role in the K-12 computer
+    science movement is only possible because we use a unifying approach across diverse
+    and often divided stakeholders. At a time of increasing polarization, the idea
+    of increasing opportunity for students unites people from across the political
+    spectrum. Code.org's team members, students, teachers, and supporters have diverse
+    and diverging viewpoints, and they are all welcome in our mission.
+  careers_aproach_section_description_link: Read more about Code.org’s approach to
+    unity.
+  careers_approach_section_button: Explore open roles
+  careers_principle_section_title: Our cultural principles
+  careers_principle_title_1: Our students and teachers are our North Star
+  careers_principle_description_1: We use our gifts, time, and energy to bring computer
+    science to those who need it most. This is what unites us. This is our most important
+    principle.
+  careers_principle_title_2: We are hard on problems and kind to each other
+  careers_principle_description_2: We stay focused on the challenge of bringing computer
+    science to students and teachers globally. We recognize that each of us brings
+    the best of our intentions to support our mission and give grace when we make
+    mistakes.
+  careers_principle_title_3: Seek solutions, not consensus
+  careers_principle_description_3: We own decisions, whether taking small steps or
+    big leaps toward the outcomes we are seeking. Owners ask for and listen to, but
+    are not paralyzed by feedback. We accept and support the decisions of owners,
+    even if we disagree.
+  careers_principle_title_4: Adopt a founder’s mentality
+  careers_principle_description_4: We obsess about outcomes and focus our actions
+    on driving them. We dive into the details and work hard. We are honest, lean into
+    agility, and continually assess if we’re on track; we are not afraid to pivot.
+    Changing the world demands it.
+  careers_principle_title_5: Champion innovation
+  careers_principle_description_5: We think big, take risks, and are not afraid to
+    fail. If we see a better way to accomplish our goals, we do it and encourage others
+    to do so too. Incremental solutions won’t help change the world.
+  careers_principle_title_6: Anchor decisions in facts
+  careers_principle_description_6: We use data to understand our business, establish
+    desired outcomes, and guide decision-making. We balance this by recognizing we
+    won’t always have the data we need in order to act.
+  careers_principle_title_7: A growth mindset fuels us
+  careers_principle_description_7: We approach each challenge with curiosity. We give
+    feedback kindly and candidly; we receive feedback openly. We learn from our mistakes
+    and look for ways to increase the reach and impact of our work.
+  careers_balance_section_title: Our work-life balance
+  careers_balance_section_description: We care about our employees and are dedicated
+    to supporting everyone both at work and outside of work. We know that everyone
+    has different needs, which is why we offer a holistic benefits package that will
+    ensure that you (and your family) are taken care of.
+  careers_balance_first_column_text_1: Health benefits for you and your family
+  careers_balance_first_column_text_2: Generous paid time off and leave plans
+  careers_balance_second_column_text_1: Flexible, supportive work environment
+  careers_balance_second_column_text_2: Growth and professional learning opportunities
+  careers_openroles_section_title: Open roles
+  careers_openroles_section_description: Code.org is based in Seattle, but many of
+    our team members are remote. Remote candidates are welcome and encouraged to apply.
+  careers_more_info_text: For more information about Code.org, check out our [Frequently
+    Asked Questions](%{support_url}) or learn about [other ways to get involved with
+    our mission](%{help_url}).
+  careers_approach_section_title2: Our approach to diversity
+  careers_approach_section_description_1: We embrace diverse perspectives, ideas,
+    and backgrounds at Code.org. We are committed to providing an equal opportunity
+    to all employees and applicants. We do not discriminate on the basis of race,
+    religion, color, national origin, gender, sexual orientation, age, marital status,
+    veteran status, or disability (mental and physical) status.
+  careers_approach_section_description_2: We will ensure that individuals with disabilities
+    are provided reasonable accommodation to participate in the job application or
+    interview process, to perform essential job functions, and to receive other benefits
+    and privileges of employment. If you have individual needs related to a disability,
+    please reach out to accommodations@code.org.
+  csa_ai_page_hero_title: Software Engineering & Computer Vision
+  csa_ai_page_hero_description: This two-chapter post-AP® CSA module offers high school
+    students hands-on experience with professional software development tools, including
+    GitHub and GitHub Copilot, and imparts them with the real-world skills to develop
+    a computer vision program.
+  csa_ai_page_video_section_title: Step beyond the world of Code.org programming environments
+  csa_ai_page_video_section_li_1: Learn about AI and its applications
+  csa_ai_page_video_section_li_2: Hands-on experience with professional software development
+    tools
+  csa_ai_page_video_section_li_3: Learn industry-standard practices
+  csa_ai_page_video_section_li_4: Cultivate critical thinking
+  csa_ai_page_programming_tools: 'Programming Tools: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: None
+  csa_ai_page_curriculum_topics: 'Topics: Programming, Data, Art and Design, Games
+    and Animation'
+  csa_ai_page_curriculum_accessibility_features: See FAQ section for details
+  csa_ai_page_curriculum_languages_support: English
+  csa_ai_page_article_title_1: Build with Copilot
+  csa_ai_page_article_description_1: Students learn how to use GitHub Copilot as a
+    pair programmer to explain existing code, find and fix errors, and generate solutions
+    to new problems.
+  csa_ai_page_article_link_1: Learn more about Copilot
+  csa_ai_page_article_title_2: Build your own AI model
+  csa_ai_page_article_description_2: Students train their own AI models using Teachable
+    Machine to recognize images and gestures form a webcam and consider how computer
+    vision impacts the way users interact with apps.
+  csa_ai_page_article_link_2: Explore the lesson plan
+  csa_ai_page_article_title_3: Explore computer vision
+  csa_ai_page_article_description_3: Students implement the AI models they created
+    with Teachable Machine into a Java app, using GitHub Copilot to help them modify
+    existing versions of apps to work with the different inputs.
+  csa_ai_page_article_link_3: See an example
+  csa_ai_page_learn_more_section_title: Learn more about Artificial Intelligence
+  csa_ai_page_learn_more_title: Explore AI 101 for Teachers
+  csa_ai_page_learn_more_description: Discover the groundbreaking world of Artificial
+    Intelligence (AI) and its transformative potential in education with our comprehensive
+    online learning series for teachers.
+  csa_ai_page_learn_more_link: Watch the AI 101 for Teachers series
+  csa_ai_page_faq_question_01: What are the prerequisites for this module?
+  csa_ai_page_faq_answer_01_01: 'Before diving into this module, students should possess
+    an entry-level knowledge of Java. Specifically, they should a grasp on:'
+  csa_ai_page_faq_answer_01_list_01: "**Classes and Objects:** Students should be
+    familiar with defining and using classes, as well as creating and manipulating
+    objects."
+  csa_ai_page_faq_answer_01_list_02: "**Writing and Calling Methods:** Students should
+    be able to define methods within a class, understand method parameters and return
+    types, and call methods from objects or other methods."
+  csa_ai_page_faq_answer_01_list_03: "**1D Arrays and ArrayLists:** They should be
+    proficient in declaring, initializing, and manipulating one-dimensional arrays
+    and ArrayLists, including iterating through them."
+  csa_ai_page_faq_answer_01_list_04: "**Selection and Iteration:** A solid foundation
+    in conditional statements and loops is crucial."
+  csa_ai_page_faq_question_01_02: Ideally, students who have completed AP Computer
+    Science A or a course of similar depth and rigor would be well-prepared for this
+    module.
+  csa_ai_page_faq_question_02: How do I install the software required for this module?
+  csa_ai_page_faq_answer_02_01: This module is unique because it involves the use
+    of third-party software rather than Code.org labs and tools. [Read more about
+    installing the software here](%{accessibility_url}).
+  csa_ai_page_faq_question_03: How can I support accessibility needs while teaching
+    this module?
+  csa_ai_page_faq_answer_03_01: Catering to accessibility needs is crucial for an
+    inclusive learning environment. [Read more about accessibility features in the
+    software used in this module here](%{install_url}).
+  csa_ai_page_faq_question_04: How do I use VS Code on Chromebooks?
+  csa_ai_page_faq_answer_04: Using VS Code on a Chromebook has become more straightforward,
+    especially with the capability to run Linux apps on newer Chromebook models. [Read
+    more about setting up VS Code on Chromebooks here](%{chromebook_url}).
+  csa_ai_page_faq_question_05: How can I get professional development for this module?
+  csa_ai_page_faq_answer_05: There is not currently specific professional development
+    for this course. If you are looking to understand how to approach Artificial Intelligence
+    in your classroom you can [explore AI 101 for Teachers](%{ai_101_url}).
+  csa_ai_page_faq_question_06: What is the recommended timing for teaching this module?
+  csa_ai_page_faq_answer_06_01: The Software Engineering & Computer Vision module
+    is thoughtfully structured to provide comprehensive learning in a concise timeframe.
+    The entire module is designed to span **2 weeks of instruction**. Most lessons
+    are tailored for **45 minutes**, while lessons where students delve into hands-on
+    Java project development are designed for **90 minutes**. This extended time ensures
+    students have ample opportunity to understand, implement, and troubleshoot as
+    they work.
+  csa_ai_page_faq_answer_06_02: There is also intentional flexibility built into the
+    module's structure. Depending on the classroom dynamics, student engagement, and
+    the depth to which you'd like to explore each topic, you can adjust the duration.
+    For example, the Intro to Copilot lesson, designed as a 45 minute lesson, can
+    be expanded to 90 minutes if you wish to dive deeper into how large language models
+    and tools like GitHub Copilot and ChatGPT work.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: With an approved teacher account, you can find answer
+    keys in a blue "Teacher" Only panel that shows in the online lessons and activities.If
+    you need an approved teacher account, you can apply for access to protected teacher-only
+    materials (answer keys, etc) through [this form](%{form_url}). Please keep in
+    mind that it may take 3-5 business days to verify your account.
+  csa_ai_page_faq_question_08: Is this module mapped to standards?
+  csa_ai_page_faq_answer_08: Yes, the Software Engineering & Computer Vision curriculum
+    is mapped to the [CSTA K-12 Standards](%{csta_k12_url}) and the AI for [K-12 Guidelines](%{k12_url}).
+  csa_ai_page_faq_question_09: How much does it cost to teach this module?
+  csa_ai_page_faq_answer_09_01: Our curriculum and platform are available at [no cost](%{no_cost_url})
+    for anyone, anywhere, to teach!
+  csa_ai_page_faq_answer_09_02: Additionally, the software and tools used in this
+    module are free of charge. GitHub Copilot is free for verified [teachers](%{teachers_url})
+    and [students](%{students_url}).
+  csa_ai_page_faq_question_10: What do I do if software installation isn't working?
+  csa_ai_page_faq_answer_10: Facing issues during software installation can be common,
+    but there are systematic steps you can follow to troubleshoot and resolve them.
+    [Check out some troubleshooting tips here](%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Our Software Engineering & Computer Vision curriculum
+    was designed with our Curriculum Values in mind. The following goals guided the
+    creation of the this curriculum:'
+  csa_ai_page_faq_answer_11_list_01: "**Goal 1:** Use AI tools to generate, debug,
+    and edit code."
+  csa_ai_page_faq_answer_11_list_02: "**Goal 2:** Transition from Java Lab to real-world
+    tools."
+  csa_ai_page_faq_answer_11_list_03: "**Goal 3:** Deepen understanding of how AI models
+    are trained and integrated into programs."
+  csa_ai_page_faq_answer_11_02: For more information about the values that guided
+    our work, please see our [curriculum values](%{curriculum_values_url}).
+  video_library_page_main_title: Educational short videos
+  video_library_page_hero_description: Code.org's growing library of educational videos
+    is available for re-use by educators worldwide, online or in classrooms. Our goal
+    is to amplify our efforts beyond our own curriculum's reach.
+  video_library_page_title_ai_works: How AI Works
+  video_library_page_description_ai_works: This series of short videos will introduce
+    you to how artificial intelligence works and why it matters. Learn about neural
+    networks, or how AI learns, and delve into issues like algorithmic bias and the
+    ethics of AI decision-making.
+  video_library_page_title_computers_work: How Computers Work
+  video_library_page_description_computers_work: Explains what makes a computer a
+    computer, how digital information is represented in 1s and 0s, how computer circuits
+    work to manipulate digital information, and how a central processing unit (CPU)
+    and operating system control the inputs, outputs, memory, and hardware of a computer.
+  video_library_page_title_internet_works: How the Internet Works
+  video_library_page_description_internet_works: Featuring Vint Cerf, the inventor
+    of TCP/IP, David Karp the founder of Tumblr to explain HTTP and HTML, Google's
+    Security Princess to explain SSL and cybersecurity, and engineers from Microsoft,
+    Spotify, and Symantec. This series of short videos explaining How the Internet
+    Works.
+  video_library_page_title_not_hacked: How Not to Get Hacked
+  video_library_page_description_not_hacked: The Internet is open, so everything that
+    happens on it can be seen unless it's protected. In modern countries, people are
+    more worried about getting hacked than about any other crime. Why? Because every
+    computer or phone on the Internet is regularly being tested for vulnerabilities
+    by criminals, terrorists, or even state actors. If you're not careful, somebody
+    could hack your device or accounts, and even steal your identity or your money.
+  video_library_page_title_blockchain: How Blockchain Works
+  video_library_page_description_blockchain: Made in partnership with Coinbase, this
+    series features industry experts and aims to demystify this technology by exploring
+    what blockchain is, how it works, and its potential societal implications — both
+    good and bad.
+  video_library_page_title_careers: Careers in CS
+  video_library_page_description_careers: Careers in computer science and technology
+    can be fun and rewarding. But what does a person working in these fields really
+    do? With a vast variety of jobs and companies, there's not just one answer to
+    this question. Watch the videos below to meet some of the people who are tackling
+    big problems in creative ways.
+  video_library_page_title_inspirational: Inspirational
+  video_library_page_description_inspirational: What will computer science change
+    in our world? Everything? Who is it for? Everybody! Watch these videos to inspire
+    and motivate you.
+  video_library_page_footer_description: Looking for something else? We have so many
+    great videos available on our Youtube channel.
+  video_library_page_footer_cta: Explore all Code.org videos on YouTube
+  video_library_page_computer_work_video_title_1: Introducing How Computers Work
+  video_library_page_computer_work_video_title_2: Binary and Data
+  video_library_page_computer_work_video_title_3: CPU, Memory, Input, and Output
+  video_library_page_computer_work_video_title_4: What Makes a Computer, a Computer?
+  video_library_page_computer_work_video_title_5: Circuits Logic
+  video_library_page_computer_work_video_title_6: Hardware and Software
+  video_library_page_internet_work_video_title_1: What is the internet?
+  video_library_page_internet_work_video_title_2: 'THE INTERNET: IP Addresses and
+    DNS'
+  video_library_page_internet_work_video_title_3: 'THE INTERNET: HTTP and HTML'
+  video_library_page_internet_work_video_title_4: 'THE INTERNET: Cybersecurity & Crime'
+  video_library_page_internet_work_video_title_5: 'THE INTERNET: Wires, Cables, &
+    Wifi'
+  video_library_page_internet_work_video_title_6: 'THE INTERNET: Packets, Routing
+    and Reliability'
+  video_library_page_internet_work_video_title_7: 'THE INTERNET: Encryption & Public
+    Keys'
+  video_library_page_internet_work_video_title_8: 'THE INTERNET: How Search Works'
+  video_library_page_cs_video_title_1: My name is Jerome and I'm a Design Technologist
+    at Meow Wolf
+  video_library_page_cs_video_title_2: My name is Nikesha and I'm an Aerospace Engineer
+    at NASA
+  video_library_page_cs_video_title_3: My name is Brina and I'm a Software Engineer
+    at Instagram
+  video_library_page_cs_video_title_4: My name is Kinsley and I'm a Software Engineer
+    at Facebook
+  video_library_page_cs_video_title_5: My name is Polina and I'm a Data Scientist
+    at Electronic Arts
+  video_library_page_cs_video_title_6: My name is Danelle and I'm a Software Engineer
+    at MBARI
+  video_library_page_cs_video_title_7: My name is Christopher and I'm a Security Analyst
+    at Tanium
+  video_library_page_cs_video_title_8: My name is Federico and I'm a Technical Program
+    Manager at Microsoft
+  video_library_page_cs_video_title_9: My name is Tess and I'm a Software Engineer
+    at Google
+  video_library_page_inspirational_video_title_1: Change the Face of Computer Science
+    (3 min)
+  video_library_page_inspirational_video_title_2: Push yourself. Anybody can learn.
+    (1 min)
+  video_library_page_inspirational_video_title_3: Inspire a girl (2 min)
+  video_library_page_inspirational_video_title_4: What Most Schools Don't Teach (5
+    min)
+  video_library_page_inspirational_video_title_5: Hour of Code is Here - Anybody Can
+    Learn (2 min)
+  video_library_page_inspirational_video_title_6: My Name is Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Hour of Code with Steph Curry (2
+    min)
+  video_library_page_inspirational_video_title_8: Computer Science is Changing Everything
+    (5 min)
+  video_library_page_inspirational_video_title_9: Computer Science intro (1 min)
+  video_library_page_inspirational_video_title_10: President Obama on computer science
+    (1 min)
+  video_library_page_inspirational_video_title_11: Anybody Can Learn (1 min)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_inspirational_video_title_13: NASA Celebrates Hour of Code (2
+    min)
+  video_library_page_inspirational_video_title_14: It's More Than A Game (1 min)
+  video_library_page_inspirational_video_title_15: Create With Computer Science (1
+    min)
+  video_library_page_not_hacked_video_title_1: 'How Not To Get Hacked: Introduction'
+  video_library_page_not_hacked_video_title_2: 'How Not To Get Hacked: Passwords'
+  video_library_page_not_hacked_video_title_3: 'How Not To Get Hacked: Authentication
+    and Device Locks'
+  video_library_page_not_hacked_video_title_4: 'How Not To Get Hacked: Phishing'
+  video_library_page_not_hacked_video_title_5: 'How Not To Get Hacked: Websites and
+    Wifi'
+  video_library_page_not_hacked_video_title_6: 'How Not To Get Hacked: Messaging and
+    Downloads'
+  video_library_page_not_hacked_video_title_7: 'How Not To Get Hacked: Install Updates'
+  about_us_page_title: About Us
+  about_us_page_hero_description: Code.org® is an education innovation nonprofit dedicated
+    to the vision that every student in every school has the opportunity to learn
+    computer science as part of their core K-12 education. We expand access to computer
+    science in schools, with a focus on increasing participation by young women and
+    students from other underrepresented groups.  The leading provider of K-12 computer
+    science curriculum in the largest school districts in the United States, Code.org
+    also organizes the annual [Hour of Code](%{hour_url}) campaign, which has engaged
+    more than 15% of all students in the world. Code.org is supported by generous
+    donors including Microsoft, Amazon, Google and [many others.](%{others_url})
+  about_us_page_section_title_1: Over 80 million students and 2 million teachers on
+    Code.org
+  about_us_page_statistic_figcaption: Code.org participation from the 2021-2022 school
+    year. [See disaggregated data.](%{data_url})
+  about_us_page_statistic_description: Code.org increases diversity in computer science
+    by reaching students of all backgrounds where they are — at their skill-level,
+    in their schools, and in ways that inspire them to keep learning. The vast majority
+    of the students on Code.org are from student groups historically underrepresented
+    in computer science. Increasing diversity in computer science is foundational
+    to our work, and [we encourage you to read more about our efforts](%{diversity_url}).
+  about_us_page_section_title_2: Code.org in the News
+  about_us_page_section_news_description: See all past [news and announcements](%{news_url})
+  about_us_page_section_table: Our goals and metrics
+  about_us_page_section_table_header_1: Code.org Goal
+  about_us_page_section_table_header_2: Accomplishment
+  abous_page_section_table_cell_1_1: Improve diversity in CS *(US students)*
+  abous_page_section_table_cell_1_2: 45% of Code.org students are young women, 50%
+    are students from marginalized racial and ethnic groups, and 46% of US students
+    are in high needs schools. Read more about [our approach to diversity.](%{diversity_url})
+  about_page_section_table_cell_2_1: Inspire students
+  about_page_section_table_cell_2_2: Tens of millions have tried the [Hour of Code](%{hour_url}).
+    (426,370,561 served. 49% female)
+  about_page_section_table_cell_3_1: Reach classrooms
+  about_page_section_table_cell_3_2: 591,636 teachers have signed up to teach our
+    intro courses on [Code Studio](%{code_studio_url}) and 19,177,297 students are
+    enrolled.
+  about_page_section_table_cell_4_1: Prep new CS teachers
+  about_page_section_table_cell_4_2: We've prepared more than 106,000 new teachers
+    to teach CS across grades K-12. Learn about our [professional learning programs.](%{learning_programs_url})
+  about_page_section_table_cell_5_1: Change school district curriculum
+  about_page_section_table_cell_5_2: We've partnered with [180+ of the largest school
+    districts](%{schoold_disctrict_url}) and 60 regional partners to [add CS to school
+    curriculum](%{cs_curriculum_url}). [Learn about becoming a regional partner.](%{regional_partner_url})
+  about_page_section_table_cell_6_1: Set up policies to support CS
+  about_page_section_table_cell_6_2: "[Policies changed in 50 U.S. states](%{states_url})
+    to establish CS education standards, make CS courses count towards high school
+    graduation, etc. [(details)](%{details_url})"
+  about_page_section_table_cell_7_1: Go global
+  about_page_section_table_cell_7_2: Our courses are available in over 67 languages,
+    used in 180+ countries.
+  about_page_section_table_under_label: 'Source: Code Studio Activity and [surveys
+    of participating educators](%{educators_url})'
+  about_page_section_title_3: More information, history, and philosophy
+  about_page_section_more_description_1: 'In 2013, Code.org was launched by twin brothers
+    [Hadi](%{hadi_url}) and [Ali Partovi](%{partovi_url}) with a [video](%{video_url})
+    promoting computer science. This video became #1 on YouTube for a day, and 15,000
+    schools reached out to us for help. Since then, we''ve expanded from a bootstrapped
+    staff of volunteers to build a full organization supporting a worldwide movement.
+    We believe that a quality computer science education should be available to every
+    child, not just a lucky few.'
+  about_page_section_more_description_2: 'To support our goal, we do work across the
+    education spectrum: designing our own courses or partnering with others, training
+    teachers, partnering with large school districts, helping change government policies,
+    expanding internationally via partnerships, and marketing to break stereotypes.'
+  about_page_section_more_description_3: Our work builds upon [decades of effort,
+    by countless organizations and individuals](%{efforts_url}) who have helped establish,
+    fund, and spread computer science education. We're thankful to benefit from the
+    tireless help of the broader computer science education community, and [we thank
+    all the partners and individuals who have supported our impact over the years](%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Our core values and messaging guidelines](%{core_url})"
+  about_page_section_more_list_3: "[Our curriculum and pedagogy philosophy](%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx talk by our founder Hadi Partovi about why
+    computer science is for all (VIDEO)](%{tedx_url})"
+  about_page_section_title_4: A unifying approach in a divided world
+  about_page_section_specific_title_1: A unifying approach in a divided world
+  about_page_section_specific_title_2: Our commitment to accessibility
+  about_page_section_specific_title_3: Our commitment to free curriculum and open
+    source technology
+  about_page_section_specific_title_4: Code.org Advocacy Coalition
+  about_page_section_specific_title_5: K-12 Computer Science Framework
+  about_page_section_specific_title_6: Code.org Donors
+  about_page_section_specific_title_7: Follow us
+  about_page_section_specific_title_8: Code.org's International Reach
+  about_page_section_specific_description_1: Code.org's global role in the K-12 computer
+    science movement is only possible because we use a unifying approach across diverse
+    and often divided stakeholders. At a time of increasing polarization, the idea
+    of increasing opportunity for students unites people from across the political
+    spectrum. Code.org's team members, students, teachers, and supporters have diverse
+    and diverging viewpoints, and they are all welcome in our mission. [Read more.](%{read_more_url})
+  about_page_section_specific_description_2: Code.org believes computer science is
+    foundational for all students and we are committed to equity, access, and opportunity
+    in our organizational [values.](%{values_url}) To achieve this goal, we work to
+    identify and eliminate barriers that prevent the inclusion and full participation
+    of students and educators with disabilities. To learn more about our efforts,
+    see our [accessibility statement.](%{accessibility_url})
+  about_page_section_specific_description_3: All curriculum resources and tutorials
+    we author will forever be free to use and openly licensed under a [Creative Commons](%{commons_url})
+    license, allowing others to make derivative education resources for non-commercial
+    purposes. If you are interested in licensing our materials for commercial purposes,
+    [contact us](%{contact_us_url}). Our courses are translated for worldwide use
+    or by speakers of different languages. Our technology is developed as an [open
+    source project.](%{open_source_url})
+  about_page_section_specific_description_4: The [Code.org Advocacy Coalition](%{advocacy_url})
+    is a bipartisan coalition of corporations and nonprofits that work together to
+    help establish US federal and state policies to expand and sustain access to K-12
+    computer science and to broaden participation and diversity in the field. We bring
+    together [Republican and Democratic political leaders](%{leaders_url}) in common
+    cause supporting expanding access to and participation in K-12 computer science.
+  about_page_section_specific_description_5: Code.org is a member of the steering
+    committee that helped establish the [K-12 Computer Science Framework](%{framework_url})
+    - a high-level guide for states, districts, and organizations implementing computer
+    science education. The Framework has won the support of hundreds of academics,
+    K-12 educators, software companies, nonprofits, and states.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url})
+    about progress in the K-12 computer science movement and about the work of Code.org.
+    Or follow Code.org on social media:"
+  about_page_section_specific_description_8: Over 40% of our website traffic comes
+    from outside of the United States and that number continues to climb. In order
+    to expand global access to computer science, our team works closely with [more
+    than 100 international partners](%{partners_url}), helping them to promote the
+    Hour of Code, advocate for policy change, and train teachers. We are making computer
+    science part of the international education discourse by partnering with ministries
+    of education from around the world and working with international organizations
+    like the Organization for Economic Co-operation and Development and the United
+    Nations Educational, Scientific and Cultural Organization.
+  about_page_section_donors_description_1: Code.org® is a registered public 501c3
+    nonprofit, with support from the general public. We are grateful for the generous
+    support we've received from [individuals and organizations](%{individuals_url})
+    who support our vision.
+  about_page_section_donors_description_2: Codes accomplishments (above) demonstrate
+    our ability to leverage those dollars into strong outcomes. But given our nonprofit
+    ambition that every child in every school should have access to computer science
+    — to become literate citizens in today's digital world and to test their interests
+    in exploring CS further as a career — we have a long way to go to meet a fundraising
+    goal that will support that vision.
+  about_page_donors_link_1: Make a donations
+  about_page_donors_link_2: "[see our list of donors](%{donors_url})"
   language_code:
     ar: Arabic
     az: Azerbaijani

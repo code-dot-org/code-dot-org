@@ -73,7 +73,7 @@ module AWS
     # @param [String] bucket
     # @param [String] key
     # @return [String]
-    def self.download_from_bucket(bucket, key, options={})
+    def self.download_from_bucket(bucket, key, options = {})
       create_client.get_object(bucket: bucket, key: key).body.read.force_encoding(Encoding::BINARY)
     rescue Aws::S3::Errors::NoSuchKey
       raise NoSuchKey.new("No such key `#{key}'")
@@ -139,7 +139,7 @@ module AWS
     # @param [Hash] options Aws::S3::Client#put_object options as documented at
     # http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method.
     # @return [String] The key of the new value, derived from filename.
-    def self.upload_to_bucket(bucket, filename, data, options={})
+    def self.upload_to_bucket(bucket, filename, data, options = {})
       no_random = options.delete(:no_random)
       filename = "#{random}-#{filename}" unless no_random
       create_client.put_object(options.merge(bucket: bucket, key: filename, body: data))
@@ -320,7 +320,7 @@ module AWS
       # @param [Bool] make_public will cause the uploaded files to be given
       #        public_read permission, and public URLs to be returned.  Otherwise,
       #        files will be private and short-term presigned URLs will be returned.
-      def initialize(bucket, prefix, make_public=false)
+      def initialize(bucket, prefix, make_public = false)
         @bucket = bucket
         @prefix = prefix
         @make_public = make_public
@@ -334,7 +334,7 @@ module AWS
       # @return [String] public URL of uploaded log
       # @raise [Exception] if the S3 upload fails
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
-      def upload_log(name, body, options={})
+      def upload_log(name, body, options = {})
         key = "#{@prefix}/#{name}"
 
         options[:content_type] ||= 'text/plain'
@@ -366,7 +366,7 @@ module AWS
       # @return [String] public URL of uploaded file
       # @raise [Exception] if the file cannot be opened or the S3 upload fails
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
-      def upload_file(filename, options={})
+      def upload_file(filename, options = {})
         File.open(filename, 'rb') do |file|
           return upload_log(File.basename(filename), file, options)
         end

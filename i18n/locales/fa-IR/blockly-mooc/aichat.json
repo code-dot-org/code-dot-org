@@ -1,3 +1,14 @@
 {
-  "continue": "ادامه"
+  "aichatWorkspaceHeader": "چت هوش مصنوعی",
+  "allMessagesSentAreRecorded": "تمام پیام های ارسال شده به چت هوش مصنوعی ضبط می شوند.",
+  "anythingPersonalCanNotBeSubmitted": "به منظور محافظت از حریم خصوصی شما، هر چیزی که اطلاعات شخصی محسوب می شود (نام، شماره تلفن، آدرس و غیره) نباید به چت هوش مصنوعی ارسال شود.",
+  "continue": "ادامه",
+  "inappropriateMessagesAreFlagged": "پیام های نامناسب علامت گذاری می شوند و معلم شما مطلع می شود.",
+  "inappropriateUserMessage": "این پیام به عنوان نامناسب علامت گذاری شده است.",
+  "tooPersonalUserMessage": "این پیام به عنوان فوق محرمانه علامت گذاری شده است.",
+  "userChatMessagePlaceholder": "یک پیام چت اضافه کنید...",
+  "waitingForChatResponse": "در حال انتظار برای پاسخ...",
+  "warningModalHeader": "به یاد داشته باشید که به با مسولیت چت کنید!",
+  "warningModalOkButtonText": "گفتگو را شروع کنید",
+  "whatIsPersonalInformation": "چه چیزی اطلاعات شخصی محسوب می شود؟"
 }

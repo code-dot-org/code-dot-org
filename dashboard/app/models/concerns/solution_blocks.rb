@@ -24,7 +24,7 @@ module SolutionBlocks
     return stripped_block.to_xml
   end
 
-  def get_solution_blocks(create_for_toolbox=true)
+  def get_solution_blocks(create_for_toolbox = true)
     solution = Nokogiri::XML(properties['solution_blocks'])
 
     # flatten

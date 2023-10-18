@@ -10,6 +10,7 @@ id:
         error:
           future: tidak mungkin di masa depan
         finish_sign_up_header: Selesaikan pembuatan akun Anda
+        finish_sign_up_header_error: 'Mohon Perbaiki kesalahan berikut:'
         finish_sign_up_subheader: Isikan informasi berikut untuk menyelesaikan pembuatan
           akun Code.org untuk <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Isikan informasi berikut untuk menyelesaikan
@@ -31,6 +32,7 @@ id:
           memiliki sebuah alamat email)](%{url})
         reset_password_token: Tautan pengaturan ulang kata sandi yang telah Anda ikuti
         us_state: Provinsi
+        user_type: Jenis Akun
         username: nama pengguna
         verified_teacher: Guru Terverifikasi
     errors:
@@ -290,7 +292,7 @@ id:
       Arts Inc. Hak Cipta Dilindungi. The Amazing World of Gumball adalah merek dagang
       dan &copy; 2015 Cartoon Network.
     built_on_code_studio: Dibuat di Code Studio
-    built_on_github: Bawaan GitHub dari Microsoft
+    built_on_github: Dibangun di GitHub dari Microsoft
     code_from_html: Code.org menggunakan p5.play, yang berlisensi <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     cookie_notice: Informasi Cookie
@@ -579,7 +581,7 @@ id:
       educate_partner: Bermitra dengan Kami
       educate_requirements: Persyaratan Teknis
       educate_tools: Alat dan Video
-      finished_hoc: Saya selesai!
+      finished_hoc: Saya sudah selesai!
       game_lab_documentation: Dokumentasi lab permainan
       game_lab_tutorials: Tutorial lab permainan
       help_support: Bantuan dan dukungan

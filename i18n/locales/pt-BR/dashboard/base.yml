@@ -53,6 +53,7 @@ pt:
         gender: 'Gênero'
         edit_header: 'Editar Detalhes da Conta'
         finish_sign_up_header: 'Finalize a criação da sua conta'
+        finish_sign_up_header_error: 'Corrija os seguintes erros:'
         finish_sign_up_subheader: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Preencha as informações a seguir para concluir a criação de uma conta do Code.org usando seu <strong>%{provider}</strong> para <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ pt:
         reset_password_token: "O link de redefinição de senha que você seguiu"
         error:
           future: não pode estar no futuro
+        user_type: 'Tipo de conta'
         us_state: 'Estado'
   beta: "beta"
   hello: "Olá, mundo!"
@@ -1257,7 +1259,7 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
-  unit_prefix: "Unidade 4"
+  unit_prefix: "Unidade  %{n}"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Feedback do Professor"
   lesson_lock:

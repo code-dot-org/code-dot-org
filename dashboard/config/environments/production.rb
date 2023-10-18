@@ -76,10 +76,6 @@ Dashboard::Application.configure do
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
-  # Whether or not to skip script preloading. Setting this to true
-  # significantly speeds up server startup time
-  config.skip_script_preload = false
-
   # The activities_old table should not be part of the schema
   # DELETE_ME when the activities old table gets removed
   ActiveRecord::SchemaDumper.ignore_tables = ["activities_old"]

@@ -54,6 +54,10 @@ en:
             '1.00': medium
             '2.00': large
             '3.00': extra large
+      Dancelab_ai:
+        text: use AI {VALUE}
+      Dancelab_aiText:
+        text: use AI to {VALUE}
       Dancelab_alternateMoves:
         text: "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}"
         options:
@@ -1068,7 +1072,7 @@ en:
             '3': baking soda
             '5': both
       DansBlocks_setForegroundEffect2:
-        text: do {EFFECT} effect
+        text: "[Don't Use] do {EFFECT} effect"
         options:
           EFFECT:
             '"bubbles"': bubbles

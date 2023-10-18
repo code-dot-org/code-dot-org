@@ -78,6 +78,7 @@ module Cdo
     end
 
     def self.delete_cluster(cluster_id, max_attempts = 20, delay = 60)
+      raise StandardError.new("cluster_id is required") unless cluster_id.present?
       rds_client = Aws::RDS::Client.new
       begin
         existing_cluster = rds_client.describe_db_clusters({db_cluster_identifier: cluster_id}).db_clusters.first

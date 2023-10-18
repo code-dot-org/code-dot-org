@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
 import centererStyle from './curriculum_catalog_card.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -11,7 +11,10 @@ import {
 import {TextLink} from '@dsco_/link';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import {translatedCourseOfferingDeviceTypes} from '../teacherDashboard/CourseOfferingHelpers';
+import {
+  translatedCourseOfferingDeviceTypes,
+  translatedAvailableResources,
+} from '../teacherDashboard/CourseOfferingHelpers';
 
 const ExpandedCurriculumCatalogCard = ({
   courseDisplayName,
@@ -28,7 +31,12 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
+  isInUS,
+  imageSrc,
+  imageAltText,
+  availableResources,
 }) => {
+  const expandedCardRef = useRef(null);
   const iconData = {
     ideal: {
       icon: 'circle-check',
@@ -46,8 +54,30 @@ const ExpandedCurriculumCatalogCard = ({
 
   const devices = JSON.parse(deviceCompatibility);
 
+  const resoucesOrder = [
+    'Lesson Plan',
+    'Slide Deck',
+    'Activity Guide',
+    'Answer Key',
+    'Rubric',
+  ];
+
+  let availableResourceCounter = 0;
+
+  const displayDivider = () => {
+    return ++availableResourceCounter < Object.keys(availableResources).length;
+  };
+
+  useEffect(() => {
+    const yOffset =
+      expandedCardRef.current.getBoundingClientRect().top +
+      window.scrollY -
+      150;
+    window.scrollTo({top: yOffset, behavior: 'smooth'});
+  }, [expandedCardRef]);
+
   return (
-    <div>
+    <div ref={expandedCardRef}>
       <div
         className={`${style.arrowContainer} ${centererStyle.arrowContainer}`}
       />
@@ -82,67 +112,98 @@ const ExpandedCurriculumCatalogCard = ({
                       {description}
                     </BodyTwoText>
                   </div>
-                  <div className={style.videoContainer}>
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      style={{border: 'none'}}
-                      src={video}
-                      title=""
-                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
+                  <div className={style.mediaContainer}>
+                    {video ? (
+                      <div className={style.videoContainer}>
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          style={{border: 'none'}}
+                          src={video}
+                          title="Youtube embed"
+                          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        />
+                      </div>
+                    ) : (
+                      <div className={style.imageContainer}>
+                        <img
+                          src={imageSrc}
+                          alt={imageAltText}
+                          style={{height: '100%'}}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    <Heading4 visualAppearance="heading-xs">
-                      {i18n.availableResources()}
-                    </Heading4>
-                    <hr className={style.thickDivider} />
-                    <TextLink text={i18n.lessonPlans()} href="#" />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.slideDecks()} href="#" />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.activityGuides()} href="#" />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.answerKeysExemplars()} href="#" />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.projectRubrics()} href="#" />
+                    {availableResources && (
+                      <div>
+                        <Heading4 visualAppearance="heading-xs">
+                          {i18n.availableResources()}
+                        </Heading4>
+                        <hr className={style.thickDivider} />
+                        {resoucesOrder.map(
+                          resource =>
+                            availableResources[resource] && (
+                              <div key={resource}>
+                                <BodyTwoText>
+                                  {translatedAvailableResources[resource]}{' '}
+                                </BodyTwoText>
+                                {displayDivider() && (
+                                  <hr className={style.horizontalDivider} />
+                                )}
+                              </div>
+                            )
+                        )}
+                      </div>
+                    )}
                   </div>
-                  <div className={style.professionalLearningContainer}>
-                    <Heading4 visualAppearance="heading-xs">
-                      {i18n.professionalLearning()}
-                    </Heading4>
-                    <hr className={style.thickDivider} />
-                    <TextLink
-                      text={i18n.facilitatorLedWorkshops()}
-                      href={professionalLearningProgram}
-                      icon={
-                        <FontAwesome
-                          icon="arrow-up-right-from-square"
-                          className="fa-solid"
-                        />
-                      }
-                    />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink
-                      text={i18n.selfPacedPl()}
-                      href={selfPacedPlCourseOfferingPath}
-                      icon={
-                        <FontAwesome
-                          icon="arrow-up-right-from-square"
-                          className="fa-solid"
-                        />
-                      }
-                    />
-                  </div>
+                  {isInUS &&
+                    (professionalLearningProgram ||
+                      selfPacedPlCourseOfferingPath) && (
+                      <div className={style.professionalLearningContainer}>
+                        <Heading4 visualAppearance="heading-xs">
+                          {i18n.professionalLearning()}
+                        </Heading4>
+                        <hr className={style.thickDivider} />
+                        {professionalLearningProgram && (
+                          <TextLink
+                            text={i18n.facilitatorLedWorkshops()}
+                            href={professionalLearningProgram}
+                            icon={
+                              <FontAwesome
+                                icon="arrow-up-right-from-square"
+                                className="fa-solid"
+                              />
+                            }
+                          />
+                        )}
+                        {professionalLearningProgram &&
+                          selfPacedPlCourseOfferingPath && (
+                            <hr className={style.horizontalDivider} />
+                          )}
+                        {selfPacedPlCourseOfferingPath && (
+                          <TextLink
+                            text={i18n.selfPacedPl()}
+                            href={selfPacedPlCourseOfferingPath}
+                            icon={
+                              <FontAwesome
+                                icon="arrow-up-right-from-square"
+                                className="fa-solid"
+                              />
+                            }
+                          />
+                        )}
+                      </div>
+                    )}
                 </div>
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.compatibilityContainer}>
                 {Object.keys(devices).map(device => (
-                  <div className={style.iconWithDescription}>
+                  <div key={device} className={style.iconWithDescription}>
                     <FontAwesome
                       icon={iconData[devices[device]].icon}
                       className={`fa-solid ${iconData[devices[device]].color}`}
@@ -174,7 +235,7 @@ const ExpandedCurriculumCatalogCard = ({
                 <Button
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  onClick={assignButtonOnClick}
+                  onClick={() => assignButtonOnClick('expanded-card')}
                   aria-label={assignButtonDescription}
                   text={i18n.assignToClassSections()}
                   style={{flex: 1}}
@@ -187,9 +248,10 @@ const ExpandedCurriculumCatalogCard = ({
                   onClick={onClose}
                   icon="xmark"
                   iconClassName="fa-solid"
+                  aria-label="Close Button"
                 />
               </div>
-              <div className={style.relatedContainer}>
+              <div className={style.relatedContainer} style={{display: 'none'}}>
                 <Heading4 visualAppearance="heading-xs">
                   {i18n.relatedCurricula()}
                 </Heading4>
@@ -209,13 +271,17 @@ ExpandedCurriculumCatalogCard.propTypes = {
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  professionalLearningProgram: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
   publishedDate: PropTypes.string.isRequired,
-  selfPacedPlCourseOfferingPath: PropTypes.string.isRequired,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
   pathToCourse: PropTypes.string,
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
+  isInUS: PropTypes.bool,
+  imageSrc: PropTypes.string,
+  imageAltText: PropTypes.string,
+  availableResources: PropTypes.object,
 };
 export default ExpandedCurriculumCatalogCard;

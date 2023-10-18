@@ -1,10 +1,13 @@
 /**
- * This is a direct copy of `procedureDefMutator` from @blockly/block-shareable-procedures
- * with the compose() and decompose() methods removed. These methods automatically
+ * This is a modified version of `procedureDefMutator` from @blockly/block-shareable-procedures.
+ * We removed compose() and decompose() methods. These methods automatically
  * add a gear icon UI that we do not want. A future version of the plugin will
  * export this mutator (and other extensions), but this will require bumping to
- * Blockly v10.
- * TODO: Once we are on Blockly v10, remove this file.
+ * Blockly v10. We also updated the mutation and extra state methods to save the function's
+ * description.
+ * TODO: Once we are on Blockly v10, we can simplify this by importing `procedureDefMutator`
+ * from @blockly/block-shareable-procedures and calling the duplicated methods inside our versions of them.
+ * This will allow us to get rid of duplicated code.
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
@@ -58,17 +61,21 @@ export const procedureDefMutator = {
   domToMutation: function (xmlElement) {
     for (let i = 0; i < xmlElement.childNodes.length; i++) {
       const node = xmlElement.childNodes[i];
-      if (node.nodeName.toLowerCase() !== 'arg') continue;
-      const varId = node.getAttribute('varid');
-      this.getProcedureModel().insertParameter(
-        new ObservableParameterModel(
-          this.workspace,
-          node.getAttribute('name'),
-          undefined,
-          varId
-        ),
-        i
-      );
+      const nodeName = node.nodeName.toLowerCase();
+      if (nodeName === 'arg') {
+        const varId = node.getAttribute('varid');
+        this.getProcedureModel().insertParameter(
+          new ObservableParameterModel(
+            this.workspace,
+            node.getAttribute('name'),
+            undefined,
+            varId
+          ),
+          i
+        );
+      } else if (nodeName === 'description') {
+        this.description = node.textContent;
+      }
     }
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
   },
@@ -79,6 +86,9 @@ export const procedureDefMutator = {
    */
   saveExtraState: function () {
     const state = Object.create(null);
+    if (this.description) {
+      state['description'] = this.description;
+    }
     state['procedureId'] = this.getProcedureModel().getId();
 
     const params = this.getProcedureModel().getParameters();
@@ -131,6 +141,9 @@ export const procedureDefMutator = {
       }
     }
 
+    if (state['description']) {
+      this.description = state['description'];
+    }
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },

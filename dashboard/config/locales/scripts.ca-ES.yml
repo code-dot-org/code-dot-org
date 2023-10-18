@@ -369,6 +369,10 @@ ca:
             que exposin trampes ètiques en una àrea d''Intel·ligència Artificial (IA)
             que trieu. '
           title: El nostre Codi Ètic d'IA
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: El nostre Codi Ètic d'IA
         ai-lab:
           student_description: Utilitzeu aquests nivells per explorar AI Lab i utilitzar-los
             en altres lliçons o activitats. Haureu de crear un compte de Code.org
@@ -2272,6 +2276,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-6:
               display_name: Enquesta de final d'unitat
+            lessonGroup-7:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Benvingut a CSA
@@ -2402,6 +2408,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Atributs
@@ -2417,6 +2425,8 @@ ca:
               name: La paraula clau aquesta
             lesson-15:
               name: Unitat 2 Enquesta
+            lesson-17:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: No Argument Constructors
             lesson-3:
@@ -2530,6 +2540,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Unidimensional (1D) Matrius
@@ -2543,6 +2555,8 @@ ca:
               name: Dades per a Social Good Project [Versió d'1 dia]
             lesson-14:
               name: Unitat 3 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Modificar Elements
             lesson-3:
@@ -2640,6 +2654,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Projecte d'art de dades abstractes [Versió 1 dia]
@@ -2655,6 +2671,8 @@ ca:
               name: Declaracions de selecció múltiple
             lesson-15:
               name: Unitat 4 Enquesta
+            lesson-17:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Projecte d'art de dades abstractes
             lesson-3:
@@ -2770,6 +2788,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Matrius bidimensionals (2D)
@@ -2783,6 +2803,8 @@ ca:
               name: Projecte de Narrativa Personal [Versió 1 Dia]
             lesson-14:
               name: Unitat 5 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Elements de matriu 2D
             lesson-3:
@@ -2873,6 +2895,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Planificació del projecte
@@ -2886,6 +2910,8 @@ ca:
               name: Projecte de Processament del Llenguatge Natural [Versió d'1 dia]
             lesson-14:
               name: Unitat 6 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Substracions
             lesson-3:
@@ -2991,6 +3017,8 @@ ca:
               display_name: Enquesta de final d'unitat
             lessonGroup-5:
               display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Planificació del projecte
@@ -3004,6 +3032,8 @@ ca:
               name: Unitat 7 Enquesta
             lesson-14:
               name: Codificació creativa amb el projecte teatral [Versió d'1 dia]
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Referències d'objectes com a paràmetres
             lesson-3:
@@ -3118,6 +3148,8 @@ ca:
               display_name: Enquesta
             lessonGroup-5:
               display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Planificació del projecte
@@ -3130,6 +3162,8 @@ ca:
             lesson-13:
               name: Codificació creativa amb el projecte de la consola [Versió d'1
                 dia]
+            lesson-15:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Buscant
             lesson-3:
@@ -3248,6 +3282,11 @@ ca:
               display_name: Revisió i pràctica
             lessonGroup-3:
               display_name: Exàmens simulacre
+            lessonGroup-4:
+              display_name: Caixes de sorra
+          lessons:
+            lesson-2:
+              name: Projecte Art Asfalt — Dia 2
           student_description: Aquesta unitat us prepara per a l'examen AP CSA mitjançant
             la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple
             i de resposta lliure, i l'enfortiment de les estratègies de presa de proves.
@@ -9886,7 +9925,7 @@ ca:
           description_short: Explora el món de Minecraft a través del codi
           student_description: Fes servir blocs de codi per portar al Steve o l'Alex
             a una aventura a través d'aquest món de Minecraft
-          title: Hora del Codi amb Minecraft
+          title: 'Minecraft: L''aventurer'
         microbit-2022:
           lesson_groups:
             lessonGroup-2:
@@ -11471,6 +11510,98 @@ ca:
               display_name: Contingut
             csd3_2:
               display_name: 'Capítol 2: Jocs de construcció'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+          lessons:
+            lesson-1:
+              name: Part 1 síncrona
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-3:
+              name: Part 2 síncrona
+            lesson-4:
+              name: Asíncrona Part 2
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+          lessons:
+            lesson-1:
+              name: Part 1 síncrona
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-3:
+              name: Part 2 síncrona
+            lesson-4:
+              name: Asíncrona Part 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+          lessons:
+            lesson-1:
+              name: Part 1 síncrona
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-3:
+              name: Part 2 síncrona
+            lesson-4:
+              name: Asíncrona Part 2
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+          lessons:
+            lesson-1:
+              name: Part 1 síncrona
+            lesson-2:
+              name: Asíncrona Part 1
+            lesson-3:
+              name: Part 2 síncrona
+            lesson-4:
+              name: Asíncrona Part 2
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+          lessons:
+            lesson-1:
+              name: Part 1 síncrona
+            lesson-3:
+              name: Part 2 síncrona
+            lesson-4:
+              name: Asíncrona Part 2
+          title: 'Dia 5 '
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -11568,6 +11699,16 @@ ca:
               name: Previsionat dels tallers del curs acadèmic
             lesson-9:
               name: Preparació per a l'Any
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Part 2 síncrona
+            lessonGroup-4:
+              display_name: Asíncrona Part 1
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
         virustest:
           description_short: 'Utilitzeu Sprite Lab per crear una simulació d''un brot
             de virus. '

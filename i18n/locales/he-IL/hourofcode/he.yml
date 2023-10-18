@@ -35,6 +35,9 @@ he:
   africa_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  hoc2023_header: יצירתיות עם AI
+  hoc2023_social_creativity_with_ai_title: שעת קוד - מה תיצור?
+  hoc2023_social_creativity_with_ai_desc: השתמש במדעי המחשב כדי לחקור וללמוד על AI!
   hoc2022_header: גלו, שחקו, צרו!
   social_hoc2022_explore_play_create: השתמשו במדעי המחשב כדי לגלות, לשחק וליצור!
   codeorg_homepage_hoc2022_body: גלו את היקום, הבקיעו שער, עשו מהלך - יש כל כך הרבה
@@ -165,6 +168,32 @@ he:
   curriculum_launch_2023_desc: עדכונים ל-CSC, CSP, CSD ועוד - בתוספת קטלוג תכניות
     לימודים חדש ודף Teach שעוצב מחדש כדי לעזור לך למצוא הכל!
   in_partnership_with: בשותפות עם
+  shop_code_dot_org_heading: חנות קוד.org
+  shop_code_dot_org_desc: תמכו בעבודתנו ולבשו את התנועה בגאווה. הכובעים שלנו נלבשו
+    גם על ידי הנשיא אובמה וסלבריטאים.
+  spread_the_word_heading: הפיצו את המידע
+  spread_the_word_desc: הגבר את ההשפעה שלנו על ידי שיתוף Code.org עם הרשת שלך. ממדיה
+    חברתית ועד עדכונים בדוא"ל, גלה כיצד תוכל לעזור לנו להגיע ליותר מחנכים, תלמידים
+    ותומכים.
+  follow_us_heading: עקבו אחרינו ברשתות החברתיות
+  follow_us_desc: הישאר מעודכן איתנו במדיה החברתית ושתף את הפוסטים שלנו עם הרשת שלך
+    כדי להישאר מעודכן ולעזור להגביר את המודעות.
+  facebook: פייסבוק
+  twitter: טוויטר
+  linked_in: LinkedIn
+  instagram: אינסטגרם
+  tik_tok: טיקטוק
+  device_tablet: טאבלט
+  device_laptop: מחשב נייד
+  device_desktop_computer: מחשב שולחני
+  device_mobile_device: מכשיר נייד
+  subscribe_to_emails_heading: הירשם למיילים
+  subscribe_to_emails_desc: קרא על מה שקורה ב- Code.org ובחינוך למדעי המחשב באמצעות
+    עדכונים רבעוניים באמצעות רשימת התפוצה שלנו.
+  subscribe_to_emails_intl: הירשם לעדכונים בינלאומיים
+  promote_code_dot_org_heading: לקדם את Code.org
+  promote_code_dot_org_desc: קדם את מדעי המחשב באזור שלך בעזרת נתונים סטטיסטיים, ציטוטים
+    וסרטונים.
   afe_partnership_logo_alt: לוגו מהנדס העתיד של אמזון
   afe_partnership_thanks_desc: אמזון Future Engineer היא תוכנית מקיפה מילדות לקריירה
     כדי לעורר השראה, לחנך ולהכשיר ילדים וצעירים בעלי הכנסה נמוכה ואחרים מוחלשים להמשיך
@@ -173,18 +202,57 @@ he:
   grade_level_label_elementary: בית ספר יסודי
   grade_level_label_middle: חטיבת ביניים
   grade_level_label_high: בית ספר תיכון
+  curricula_title_elementary: תכניות לימודים בבתי ספר יסודיים
+  curricula_desc_elementary: עיין בקורסים והפעילויות המהנים והחינמיים שמזמינים אותך
+    לחקור את מדעי המחשב עם תלמידי בית הספר היסודי שלך.
+  curricula_title_middle: תכניות לימודים בחטיבת הביניים
+  curricula_desc_middle: עיין בהיצע המרתק המאפשר לך ולתלמידי חטיבת הביניים שלך לחקור
+    יחד את מדעי המחשב.
+  curricula_title_high: תכניות לימודים בתיכון
+  curricula_desc_high: עיין בקורסים ובפעילויות המרתקות שמזמינות אותך ואת תלמידי התיכון
+    שלך להעמיק במדעי המחשב.
+  for_administrators_heading: למנהלי מערכת
+  for_administrators_desc: הצטרפו לאלפי בתי הספר שכבר שילבו את מדעי המחשב בתכנית הלימודים
+    שלהם.
+  for_parents_heading: להורים
+  for_parents_desc: אתה יכול לעזור לעודד את בית הספר של התלמיד שלך להציע או להרחיב
+    את החינוך למדעי המחשב.
+  for_educators_heading: למורים
+  for_educators_desc: התחל ללמד עוד היום - ללא צורך בניסיון במדעי המחשב - עם סדנאות
+    הלמידה המקצועיות שלנו.
   students_label: סטודנטים
   teachers_label: מורים
+  educators_label: מחנכים
+  companies_label: חברות
+  districts_label: מחוזות
+  school_assemblies_label: אסיפות בתי ספר
+  parents_label: הורים
+  public_officials_label: פקידי ציבור
+  volunteers_label: מתנדבים
+  virtual_events_label: אירועים וירטואליים
   teacher_label_csf: מורה יסודות במדעי המחשב
   teacher_label_csd: מורה לתגליות במדעי המחשב
   teacher_label_csp: מורה לעקרונות CS
   teacher_label_csc: מורה לחיבורי CS
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: פורום מורים
+  teacher_forum_desc: בקר בפורום המורים של שעת הקוד כדי לקבל עצות, תובנות ותמיכה ממחנכים
+    אחרים.
   required_materials: 'חומרים נדרשים:'
   optional_materials: 'חומרים אופציונליים:'
+  call_to_action_hold_an_event: ערכו אירוע
+  call_to_action_register_event: רשום את האירוע שלך
+  call_to_action_select_activity: בחר פעילות
+  call_to_action_start_activity: התחל פעילות
+  call_to_action_get_certificates: קבל אישורים
+  call_to_action_go_beyond_hoc: מעבר לשעת הקוד
+  call_to_action_view_promo_resources: הצג משאבי פרומו
   call_to_action_learn_more: למד עוד
   call_to_action_watch_now: צפו עכשיו
   call_to_action_try_activity: נסה פעילות
+  call_to_action_try_activities: נסה פעילויות
+  call_to_action_explore_activities: חקור פעילויות
+  call_to_action_explore_ai: חקור את AI
   call_to_action_explore_unit: חקור את היחידה
   call_to_action_explore_curriculum: חקור את תוכנית הלימודים
   call_to_action_explore_curriculum_options: חקור אפשרויות תכנית לימודים
@@ -199,6 +267,15 @@ he:
   call_to_action_explore_choice_level: חקור את רמת הבחירה לדוגמה
   call_to_action_explore_collection: חקור את האוסף
   call_to_action_explore_unplugged_lesson: חקור שיעורים מנותקים
+  call_to_action_explore_csf: חקור את יסודות CS
+  call_to_action_explore_csd: חקור את תגליות CS
+  call_to_action_explore_csp: חקור את עקרונות CS
+  call_to_action_explore_csc: חקור חיבורי CS
+  call_to_action_explore_csa: חקור את AP® מדעי המחשב א
+  call_to_action_explore_csa_short: חקור את AP® CSA
+  call_to_action_explore_maker: חקור את תוכניות הלימודים של Maker
+  call_to_action_explore_hoc: חקור הדרכות של שעת הקוד
+  call_to_action_explore_hoc_short: חקור את שעת הקוד
   call_to_action_try_app_lab: נסה את מעבדת האפליקציות
   call_to_action_view_lesson_plan: צפה בתכנית השיעור
   call_to_action_self_paced_pl: התחל למידה מקצועית בקצב עצמי
@@ -222,11 +299,13 @@ he:
   call_to_action_resources_tools: נסה את כלי התכנות
   call_to_action_sign_up_free: הירשם בחינם
   call_to_action_explore_ai_resources: חקור משאבי AI
+  call_to_action_explore_ai_curricula: חקור תוכניות לימודים של AI
   call_to_action_explore_curriculum_catalog: חקור את קטלוג תכניות הלימודים
   call_to_action_see_full_curriculum_catalog: ראה קטלוג תוכניות הלימודים המלא
   call_to_action_find_self_paced_modules: מצא מודולים בקצב עצמי
   call_to_action_join_teacher_forums: הצטרף לפורומים של מורים
   call_to_action_explore_teacher_forums: חקור פורומי מורים
+  call_to_action_explore_teacher_forum: חקור את פורום המורים
   call_to_action_explore_career_resources: חקור משאבי קריירה
   call_to_action_watch_videos: צפה בקטעי וידאו
   call_to_action_download_posters: הורד פוסטרים
@@ -241,6 +320,32 @@ he:
   call_to_action_learn_about_approach: למידע נוסף על הגישה שלנו
   call_to_action_try_java_lab: נסה את מעבדת ג'אווה
   call_to_action_notify_available: הודע לי כאשר זמין
+  call_to_action_register_early_access: הירשם לגישה מוקדמת
+  call_to_action_open_positions: הצג עמדות פתוחות
+  call_to_action_explore_roles: חקור תפקידים פתוחים
+  call_to_action_get_guide: קבל את המדריך
+  call_to_action_donate_to_cdo: לתרום לקוד.org
+  call_to_action_start_fundraiser: התחל גיוס כספים
+  call_to_action_view_donation_policy: צפו במדיניות התרומות
+  call_to_action_view_donate_bitpay: תרום באמצעות BitPay
+  call_to_action_make_a_donation: תרום תרומה
+  call_to_action_other_ways_to_give: דרכים אחרות לתת
+  call_to_action_become_partner_usa: להיות שותף בארצות הברית
+  call_to_action_become_partner_intl: להיות שותף בינלאומי
+  call_to_action_become_a_volunteer: להיות מתנדב
+  call_to_action_start_translating: התחל לתרגם
+  call_to_action_learn_about_advocacy: למד על הסנגור שלנו
+  call_to_action_visit_store: בקר בחנות
+  call_to_action_view_faqs: הצג שאלות נפוצות נוספות
+  aria_label_call_to_action_hoc_how_to_educators: צפה במדריך הדרכה למחנכים
+  aria_label_call_to_action_hoc_how_to_companies: צפה במדריך הדרכה לחברות
+  aria_label_call_to_action_hoc_how_to_districts: צפה במדריך הדרכה למחוזות
+  aria_label_call_to_action_hoc_how_to_school_assemblies: צפה במדריך הדרכה לאסיפות
+    בתי ספר
+  aria_label_call_to_action_hoc_how_to_parents: צפה במדריך הדרכה להורים
+  aria_label_call_to_action_hoc_how_to_public_officials: צפה במדריך הדרכה לפקידי ציבור
+  aria_label_call_to_action_hoc_how_to_volunteers: צפה במדריך הדרכה למתנדבים
+  aria_label_call_to_action_hoc_how_to_virtual_events: צפה במדריך הדרכה לאירועים וירטואליים
   aria_label_call_to_action_afe: למידע נוסף על מהנדס העתיד של אמזון
   aria_label_call_to_action_teaching_csf: התחל את תוכנית הלמידה המקצועית של יסודות
     מדעי המחשב
@@ -336,8 +441,11 @@ he:
   curriculum_name_csp: עקרונות מדעי המחשב
   curriculum_name_csc: חיבורי מדעי המחשב
   curriculum_name_csa: AP® מדעי המחשב א
+  curriculum_name_csa_ai: הנדסת תוכנה וראייה ממוחשבת
   curriculum_name_csc_02: כל מודול חיבורי CS
   curriculum_name_ai: בינה מלאכותית ולמידת מכונה
+  curriculum_name_artificial_intelligence: בינה מלאכותית (AI)
+  curriculum_name_maker: יצרנית
   curriculum_name_maker_cp: יצירת אפליקציות עם מכשירים (מגרש משחקים במעגל)
   curriculum_name_maker_microbit: יצירת אפליקציות עם מכשירים (micro:bit)
   curriculum_name_creating_apps_with_devices: יצירת אפליקציות עם מכשירים
@@ -348,6 +456,8 @@ he:
   curriculum_name_interactive_animations_games: אנימציות ומשחקים אינטראקטיביים
   curriculum_name_design_process: תהליך העיצוב
   curriculum_name_data_society: נתונים וחברה
+  curriculum_desc_csf: סט חינם של תוכניות לימוד יסודיות המציג לתלמידים את המושגים
+    הבסיסיים של מדעי המחשב.
   curriculum_desc_csf_express: למד ליצור תוכנות מחשב, לפתח מיומנויות לפתרון בעיות
     ולעבוד דרך אתגרים מהנים! צור משחקים ופרויקטים יצירתיים לשיתוף עם חברים, משפחה
     ומורים.
@@ -387,6 +497,23 @@ he:
   curriculum_desc_creating_apps_with_devices: חקור את תפקידם של מכשירים פיזיים במחשוב.
     פיתוח תוכניות המשתמשות בכניסות ויציאות חומרה. קיימת גרסה של יחידה זו הן עבור micro:bit
     והן עבור מגרש המשחקים Circuit.
+  curriculum_desc_csa: הכירו את התלמידים להנדסת תוכנה ועיצוב מונחה עצמים בזמן שהם
+    לומדים את שפת התכנות Java בתכנית הלימודים החינמית הזו עבור AP® מדעי המחשב A (AP®
+    CSA).
+  curriculum_desc_maker: חינוך Maker לוקח STEM (מדע, טכנולוגיה, הנדסה, מתמטיקה) צעד
+    אחד קדימה על ידי הזמנת ניסיון מעשי ושיתוף פעולה לכיתה כדי לעזור ללמד פתרון בעיות
+    וחשיבה ביקורתית.
+  curriculum_desc_maker_short: Maker Education מזמין ניסיון מעשי ושיתוף פעולה לכיתה
+    כדי לעזור ללמד פתרון בעיות וחשיבה ביקורתית.
+  curriculum_desc_csd: קורס גמיש, המאפשר ללמד כל יחידה לבד או לשלב. מציג לתלמידים
+    בניית אתרים, אפליקציות, אנימציות, משחקים ומערכות מחשוב פיזיות.
+  curriculum_desc_csp: חינם, AP® CSP מאושר, קורס מבוא בתיכון המציג לתלמידים את המושגים
+    הבסיסיים של מדעי המחשב.
+  curriculum_desc_csa_ai_long: 'מודול CSA זה בן שני פרקים לאחר AP מציע לתלמידי תיכון
+    ניסיון מעשי בכלים מקצועיים לפיתוח תוכנה, כולל GitHub ו- GitHub Copilot, ומקנה
+    להם את הכישורים בעולם האמיתי לפיתוח תוכנית ראייה ממוחשבת. '
+  curriculum_desc_csa_ai_short: מודול CSA Post-AP® זה מציע לתלמידי תיכון ניסיון מעשי
+    בכלים מקצועיים לפיתוח תוכנה.
   collection_hardware: דגש על חומרה
   collection_hardware_desc: מאפשר לתלמידים להשתמש בנתונים ובמכשירים פיזיים כדי לפתור
     בעיות.
@@ -417,6 +544,7 @@ he:
   module_label_professional_learning: 'למידה מקצועית:'
   module_label_languages: 'שפות נתמכות:'
   module_label_accessibility_features: 'נגישות:'
+  module_label_accessibility_features_full: 'תכונות נגישות:'
   module_label_educator_tool: כלי מחנך
   module_label_educator_course: קורס מחנך
   module_label_student_tool: כלי סטודנטים
@@ -424,6 +552,7 @@ he:
   module_label_student_content_resources: תוכן ומשאבים
   module_label_new: חדש
   module_label_coming_soon: בקרוב
+  module_label_available_now: זמין כעת
   module_label_video_series: סדרת וידאו
   module_label_self_paced: מודול בקצב עצמי
   module_ages_5_10: 5-10
@@ -434,6 +563,8 @@ he:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -448,11 +579,14 @@ he:
   module_grade_9_12_teachers: 9-12 מורים
   module_level_beginner: למתחילים
   module_level_intermediate: ביניים
+  module_level_advanced: מתקדם
   module_duration_45_mins: 45 דקות
+  module_duration_2_weeks: 2 שבועות
   module_duration_1_hr: 1 שעה
   module_duration_2_hrs: 2 שעות
   module_duration_3_hrs: 3 שעות
   module_duration_5_hrs: 5 שעות
+  module_duration_5_hrs_plus: 5+ שעות
   module_duration_8_hrs: 8 שעות
   module_duration_20_hrs: 20 שעות
   module_duration_35_hrs: 35 שעות
@@ -464,6 +598,7 @@ he:
   module_duration_school_year: שנת הלימודים
   module_duration_month_quarter: חודש או רבעון
   module_duration_month_semester_year: חודש, סמסטר או שנה
+  module_duration_varies: משתנה
   module_prerequisites_none: אף אחד
   module_prerequisites_maker_cp: גישה למגרש משחקים
   module_prerequisites_maker_microbit: גישה למיקרוביט
@@ -523,6 +658,9 @@ he:
   heading_java_lab: מעבדת ג'אווה
   heading_objects_first: אובייקטים ראשונים
   heading_these_lessons_will: 'שיעורים אלה יהיו:'
+  heading_explore_curriculum_catalog: חקור את כל הקורסים שלנו בקטלוג תכניות הלימודים
+  heading_csa_ai: מחפש דברים לעשות לאחר בחינת AP®?
+  heading_bring_cs_to_students: הביאו את מדעי המחשב לסטודנטים
   professional_learning_section_desc: קבל את התמיכה שאתה צריך בזמן שאתה מתכונן ללמד.
     מורים אוהבים את זה, עם למעלה מ -90% מדרגים אותו כהתפתחות המקצועית הטובה ביותר
     אי פעם!
@@ -552,6 +690,23 @@ he:
   support_and_questions_section_desc: צוות התמיכה שלנו כאן כדי לענות על כל שאלה שיש
     לך לגבי התחלת הוראה עם Code.org. אתה יכול גם לשאול מורים אחרים על החוויה שלהם
     בפורומי המורים שלנו.
+  subscribe_form_section_title: הירשם לקבלת עדכונים
+  subscribe_form_section_desc_csa: הירשם לקבלת הודעות דוא"ל חודשיות אודות AP® מדעי
+    המחשב A של Code.org וקבל תזכורות, טיפים ועדכונים מועילים שנשלחו ישירות לתיבת הדואר
+    הנכנס שלך.
+  subscribe_form_section_desc_csc: הירשם לקבלת הודעות דוא"ל חודשיות אודות חיבורי מדעי
+    המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים שנשלחו ישירות לתיבת הדואר
+    הנכנס שלך.
+  subscribe_form_section_desc_csd: הירשם לקבלת הודעות דוא"ל חודשיות אודות תגליות מדעי
+    המחשב של Code.org וקבל תזכורות, טיפים ועדכונים מועילים שנשלחו ישירות לתיבת הדואר
+    הנכנס שלך.
+  subscribe_form_section_desc_csf: הירשם לקבלת הודעות דוא"ל חודשיות אודות יסודות מדעי
+    המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים שנשלחו ישירות לתיבת הדואר
+    הנכנס שלך.
+  subscribe_form_section_desc_csp: הירשם לקבלת הודעות דוא"ל חודשיות אודות עקרונות
+    מדעי המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים הנשלחים ישירות לתיבת
+    הדואר הנכנס שלך.
+  subscribe_form_section_unsubscribe: אתה יכול לבטל את המנוי בכל עת.
   blockchain_hero_heading: איך עובד בלוקצ'יין
   blockchain_hero_desc: לצלול לתוך העולם של blockchain עם "איך Blockchain עובד", סדרת
     הווידאו החדשה שלנו ושיעורים נלווים!
@@ -642,6 +797,8 @@ he:
   ai_curriculum_desc_04: שיעורים אלה משלימים את סדרת הווידיאו כיצד AI עובד. כל שיעור
     משויך לסרטון יחיד מהסדרה, צולל עמוק יותר לתוך המושגים שהוצגו בסרטונים.
   ai_curriculum_btn_aria_label_04: גלה כיצד AI עובד שיעורים
+  ai_curriculum_grades_05: 'רמות כיתה: 9-12'
+  ai_curriculum_btn_aria_label_05: חקור את מודול הנדסת תוכנה וראיית מחשב
   ai_carousel_heading: 'מה המורים אומרים על AI עם Code.org:'
   ai_carousel_quote_01: שיעור זה גם נתן לתלמידים שלי את ההזדמנות לראות שיש אלמנט של
     דעה במערכות סיווג. מאוחר יותר, כשהתחלנו לראות כיצד הטיה יכולה להסתיים ב- AI, הצלחתי
@@ -740,10 +897,18 @@ he:
     של AI, ומינוף AI להערכת תלמידים. עם שילוב עשיר של תיאוריה, דוגמאות מעשיות ומשאבים,
     היא שואפת להעצים אנשי חינוך לנווט בנוף הבינה המלאכותית ולשפר את חוויות הלמידה
     של התלמידים.
+  ai_pl_101_resources_5: מדריך להבטחת גישה אחראית ל- AI
   ai_pl_101_video_desc_6: 'למידע נוסף על הטכנולוגיה החדשה המניעה את השינויים הגדולים
     ב- AI, הכוללת שני סרטונים חדשים במודלים של שפה גדולה (כמו ChatGPT) ו- AI Generative.
     שמע כיצד הטכנולוגיות החדשות הללו עובדות ישירות מהמומחים: מירה מוראטי, CTO של OpenAI,
     וכריסטובל ולנצואלה, מנכ"ל RunwayML.'
+  ai_pl_101_llm_slides_title: הנחיות מודל שפה גדולות למחנכים
+  ai_pl_101_llm_slides_desc: כלים להשגת הפלט הטוב ביותר האפשרי מ- LLMs כמו ChatGPT,
+    ממתחילים למתקדמים. כולל הנחיות למתחילים למי שרק טובל את בהונותיהם פנימה, כמו גם
+    כלים מתקדמים למי שמחפש למקסם את הפוטנציאל שלהם.
+  ai_pl_101_resources_3: הנחיות AI לשינוי למידת התלמידים
+  ai_pl_101_resources_section_title: דרכים נוספות ללמוד על AI
+  ai_pl_101_resources_guide: 'מדריך נלווה:'
   how_ai_works_hero_heading: איך AI עובד
   how_ai_works_hero_desc: לצלול לתוך העולם של AI עם "איך AI עובד", סדרת הווידאו שלנו
     ושיעורים נלווים!
@@ -1023,18 +1188,17 @@ he:
   teach_page_free_curriculum_heading: תוכנית לימודים חופשית ומרתקת
   teach_page_free_curriculum_desc: אנחנו רוצים שתביא את מדעי המחשב לבית הספר שלך בלי
     לדאוג לגבי העלות. לכן התחייבנו לכך שהצעות הלימודים שלנו יהיו בחינם לנצח!
-  teach_page_free_curriculum_list_heading_01: תכנית לימודים מרתקת לכל דרגת כיתה
   teach_page_free_curriculum_list_desc_01: תכנית לימודים חינמית, גמישה ומהנה עם הצעות
     בלמעלה מ-67 שפות.
-  teach_page_free_curriculum_list_heading_02: תכנית לימודים מסתגלת וחדשנית
   teach_page_free_curriculum_list_desc_02: Code.org מציע הכל, החל מתכניות לימודים
     לשנה מלאה ועד פעילויות יחידה אחת. בנוסף, אנו מעדכנים את תוכניות הלימודים שלנו
     מדי שנה כדי לתמוך בשיטות עבודה מומלצות ותחומי מיקוד, ויוצרים הצעות חדשות המלמדות
     נושאים מבוקשים עדכניים.
-  teach_page_free_curriculum_list_heading_03: תכנית לימודים מובנית ממופה לסטנדרטים
-    לאומיים
   teach_page_free_curriculum_list_desc_03: כל תכנית לימודים ממופה לפחות לסט אחד של
     סטנדרטים לאומיים, כולל CSTA, תקני מדע מהדור הבא ו-Common Core.
+  teach_page_free_curriculum_list_desc_04: הצעות בלמעלה מ- 67 שפות
+  teach_page_free_curriculum_list_desc_05: ממופה לפחות לסט אחד של תקנים לאומיים (כולל
+    CSTA, NGSS ו- Common Core)
   teach_page_free_curriculum_heading_02: 'חקור את הצעות הלימודים שלנו לרמות כיתה שונות:'
   teach_page_resources_heading: משאבים שתומכים בך בכל שלב
   teach_page_resources_desc: הרשמה לחשבון Code.org מעניקה לך גישה לחומרים שיעזרו לך
@@ -1089,8 +1253,8 @@ he:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: מעבדת אפליקציות
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: סדנאות בהנחיית מנחה, מודולים בקצב
+    עצמי
   csp_page_curriculum_glance_professional_languages: עברית
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1215,8 +1379,8 @@ he:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: מעבדת אפליקציות, מעבדת משחקים, מעבדת AI, מעבדת
     אינטרנט
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: סדנאות בהנחיית מנחה, מודולים בקצב
+    עצמי
   csd_page_curriculum_glance_professional_languages: עברית
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1274,10 +1438,10 @@ he:
     להחליף עם סוג אחר של משקל באותו גודל). פעילויות חלופיות זמינות אם אין לך גישה
     לאספקה זו.
   csd_page_faq_answer_04_06: יצירת אפליקציות עם מכשירים (אפשרות A ואפשרות B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'אפשרות א'': סט כיתות של מגרשי משחקים. בדוק [code.org/מייקר/מעגל
+    משחקים] () לפרטים נוספים.%{url}'
+  csd_page_faq_answer_04_08: 'אפשרות ב'': ערכת כיתה של מכשירי מיקרוביט. בדוק [code.org/maker/מיקרוביט]
+    () לפרטים נוספים.%{url}'
   csd_page_faq_answer_04_09: ציוד לייצור, כגון קופסאות טישו ריקות או גלילי קרטון או
     נייר שריטה
   csd_page_faq_answer_04_10: "*הערה: היחידה ליצירת אפליקציות עם מכשירים כוללת שתי
@@ -1341,8 +1505,8 @@ he:
     עיצוב אפליקציות
   csf_page_curriculum_glance_devices: מחשב נייד, כרומבוק, טאבלט
   csf_page_curriculum_glance_tools: מעבדת ספרייט, מעבדת Play
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: סדנאות בהנחיית מנחה, מודולים בקצב
+    עצמי
   csf_page_curriculum_glance_languages: ערבית, בהאסה אינדונזית, קטלאנית, סינית פשוטה,
     סינית מסורתית, צ'כית, צרפתית, גרמנית, הינדי, איטלקית, יפנית, קוריאנית, קנאדה,
     מלאית, מראתי, מונגולית, פולנית, פורטוגזית-BR, רומנית, רוסית, סלובקית, טגלוגית,
@@ -1396,9 +1560,9 @@ he:
     רבות בהנחיית מורים שנועדו להתנסות ביחד בעוד ששיעורי בניית המיומנויות יכולים להסתיים
     על ידי התלמידים בקצב שלהם.
   csf_page_faq_question_06: אילו חומרים אני צריך עבור יסודות CS?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: בשיעורים רבים יש דפי מידע המנחים את התלמידים בפעילויות.
+    ניתן להדפיס או להקצות משאבים אלה באופן דיגיטלי. חלק מהשיעורים דורשים אספקה ומניפולטיביות
+    טיפוסיות בכיתה. [בקר בסילבוס CSF למידע נוסף] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1469,6 +1633,54 @@ he:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: עזור לממן את המשימה שלנו
+  donate_page_top_desc: כל תרומה מזינה את המשימה של Code.org להרחיב את הגישה לחינוך
+    במדעי המחשב. אנו מציעים מספר דרכים לתרום ולעשות את ההבדל.
+  donate_page_fundraise_title: גיוס כספים עבור Code.org
+  donate_page_fundraise_desc: עזרה לגייס כסף עבור Code.org! לכל תלמיד בכל בית ספר
+    צריכה להיות הזדמנות ללמוד מדעי המחשב.
+  donate_page_other_ways_title: דרכים אחרות לתת
+  donate_page_other_ways_desc: חקור שיטות מגוונות לתרום, ומצא את האפשרות המתאימה לך
+    ביותר. כל מחווה, גדולה או קטנה, דוחפת את משימתנו קדימה.
+  donate_page_501c3: Code.org רשום כארגון ציבורי 501 (c) (3) ללא מטרות רווח. תרומות
+    ל- Code.org ניתנות לניכוי מס במידה המותרת בחוק. מספר זיהוי המס של Code.org הוא
+    46-0858543.
+  donate_page_donation_policy_title: הבנת מדיניות התרומות שלנו
+  donate_page_donation_policy_desc: למד כיצד אנו מטפלים ומקצים את התרומות שלך.
+  donate_tabs_tab_label_daf_direct: DAF ישיר
+  donate_tabs_tab_label_amazon: אמזון
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: התאמת עובדים
+  donate_tabs_daf_direct_title: תרום באמצעות DAF ישיר
+  donate_tabs_daf_direct_desc: תרום באמצעות הקרן המומלצת על ידי תורמים באמצעות Fidelity
+    Charitabity, Schwab Charitable או BNY מלון והציע את המלצת המענק שלך ל- Code.org
+    באמצעות הטופס המקוון של DAF Direct.
+  donate_tabs_amazon_title: תרום דרך אמזון
+  donate_tabs_amazon_desc: תרום ישירות באמצעות חשבון אמזון שלך. בכמה לחיצות בלבד,
+    תרמו בצורה חלקה למשימה של Code.org והעצימו את עתיד החינוך למדעי המחשב.
+  donate_tabs_bitpay_title: תרום עם קריפטו באמצעות BitPay
+  donate_tabs_bitpay_desc: לאמץ את העתיד של נתינה עם מטבע מבוזר. באמצעות BitPay, המטבע
+    הדיגיטלי שלך יכול לתמוך ישירות במאמצים של Code.org בהרחבת החינוך למדעי המחשב.
+  help_page_top_heading: איך אתה יכול לעזור
+  help_page_top_desc: תמכו במשימה שלנו להנגיש את מדעי המחשב לכל ילד, בכל מקום. המאמצים
+    שלך עוזרים לנו לעורר השראה מחדשים עתידיים ולגשר על פער החינוך הטכנולוגי.
+  help_page_top_subhead: תרמו תרומה ל- Code.org
+  help_page_top_desc_02: אנו פועלים כדי לתת לכל תלמיד את ההזדמנות ללמוד מדעי המחשב
+    - הן באינטרנט והן בבתי ספר, שם אנו מקימים קורסים קבועים ומכשירים מורים. על כל
+    דולר שאתה תורם, ילד אחד מתוודע למדעי המחשב.
+  help_page_partners_heading: להיות שותף
+  help_page_partners_desc: Code.org עובדת עם ארגונים אחרים ללא מטרות רווח כשותפים
+    כדי לסייע בהפצת מדעי המחשב באופן מקומי ובר קיימא. למידע נוסף על התוכנית שלנו.
+  help_page_volunteer_heading: התנדב בכיתה
+  help_page_volunteer_desc: התנדב ללמד את שעת הקוד או להיות דובר אורח בכיתה מקומית.
+    הירשם כדי לשמוע על הזדמנויות בקרבתך.
+  help_page_translate_heading: עזרו לנו לתרגם
+  help_page_translate_desc: מתנדבים תרגמו את ההדרכות שלנו בלמעלה מ- 45 שפות. עזרו
+    לנו להמשיך ולהרחיב את ההדרכות שלנו לסטודנטים ברחבי העולם!
+  help_page_speak_for_cs_heading: דבר בעד חינוך למדעי המחשב
+  help_page_speak_for_cs_desc: למידע נוסף על עבודת הסנגור של Code.org ברחבי ארה"ב
+    ועל עשר המדיניות שאנו ממליצים למדינות לאמץ כדי להפוך את מדעי המחשב לבסיס לכל התלמידים.
+    בנוסף, גלה כיצד תוכל להניע שינוי במצבך.
   hoc_live: שעה של קוד בשידור חי
   hoc_live_sign_up_title: הירשם לשעה של קוד בשידור חי
   hoc_live_learn_title: למד עם שעה של קוד בשידור חי
@@ -1539,8 +1751,8 @@ he:
   ai_activity_zooniverse: זוּנִיבֶרְס - זברה הררית של סנאפצ'ט
   ai_activity_zooniverse_desc: עזרו להגן על "זברת הר־הכֵּף" באמצעות זיהוי החיות האחרות
     שבתמונות.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: המשך הלאה עם קורסי <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: צור משלך <span class="highlight-word">ריקוד&nbsp;מסיבה</span>
   codeorg_homepage_hoc2018_header_line1: שעת הקוד מגיעה...
   codeorg_homepage_hoc2018_header_line2_desktop: מה אתה יוצר <span class="hoc2018-highlight-word">?</span>
@@ -1861,6 +2073,10 @@ he:
     הזדמנויות מקומיות או חדשות אחרות במדעי המחשב?
   signup_email_preference_privacy: "(עיין במדיניות הפרטיות שלנו)"
   signup_email_preference_yes: הן
+  signup_email_preference_yes_elementary: כן - שלח לי עדכונים על משאבי בית ספר יסודי
+  signup_email_preference_yes_middle: כן - שלח לי עדכונים על משאבי חטיבת הביניים
+  signup_email_preference_yes_high: כן - שלח לי עדכונים על משאבי תיכון
+  signup_email_preference_yes_general: כן - שלחו לי עדכונים כלליים
   signup_email_preference_no: לא
   signup_email_preference_error: יש צורך בהעדפת דואר אלקטרוני
   signup_multiple_event_warning: אם אתם מארחים יותר מאירוע אחד, אנא הגישו אותם עם
@@ -2007,11 +2223,11 @@ he:
     אפשרויות המתאימות לכל גיל ולכל רמה, לילדים מגילאי גן ילדים ומעלה. התחילו לתכנן
     את האירוע שלכם על ידי קריאת [המדריך](%{howto}) שלנו.
   hoc_faq_devices_q: באילו מכשירים עלי להשתמש עבור התלמידים שלי?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: הדרכות Code.org פועלות בכל המכשירים והדפדפנים. תוכל לראות מידע
+    נוסף על צרכי הטכנולוגיה של Code.org <a href='%{codeorg_url}/educate/it'>כאן</a>.
+    ניתן למצוא צרכים טכניים עבור הדרכות שאינן Code.org <a href='%{codeorg_url}/learn'>%{partner_url}ב-/learn
+    בתיאור</a> הספציפי של ההדרכה. אל תשכח שאנו מציעים גם פעילויות <a href='%{unplugged_url}'>מנותקות</a>
+    אם בית הספר שלך לא יכול להכיל את ההדרכות!
   hoc_faq_devices_a_markdown: השיעורים באתר Code.or פועלים בכל המכשירים ובכל הדפדפנים.
     ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [here]
     (%{codeorg_url}/educate/it). צרכים טכנולוגיים של השיעורים שלא במסגרת אתר Code.org
@@ -2073,10 +2289,10 @@ he:
     להשתמש ScratchJR iPad app (עבור מוקדם-הקוראים). אם תעיינו בההדרכות באתר <a href='http://code.org/learn'>
     Code.org/learn</a>, תוכלו למצוא הדרכות העובדות על iPads - מ-Code.org, Tynker,
     Lightbot או CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch לא פועל על טבליות. אם התלמידים שלך צעירים, הם
+    יכולים להשתמש באפליקציית ה- iPad ScratchJR (לקוראים מוקדמים). אם אתה מסתכל על
+    הדרכות על [%{partner_url}/ללמוד] (%{codeorg_url}/ללמוד), אתה יכול למצוא הדרכות
+    אחרות שעובדות על אייפד - מ- Code.org, Tynker, Lightbot או CodesPark.
   hoc_faq_count_hoc_q: איך סופרים את שעות הקוד?
   hoc_faq_map_q: למה אני לא רואה את הנקודה שלי על המפה?
   hoc_faq_map_a: אנו מצטערים שאינך רואה את האירוע שלך במפת שעת הקוד. בגלל עשרות אלפי
@@ -4837,11 +5053,11 @@ he:
     בעולם Minecraft זה.
   tutorial_minecraft-2016_longdescription: בנה משחק מיינקראפט. צור גרסאות משלך של
     עוף, כבשים, מטפסים, זומבים ועוד.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: כתוב על "רובוט Vocabulario" מוגדר מראש,
+    לוס אסטודיאנטס descubrir&aacute;n come de modo tal de llevar קאבו טאראס espec
+    ficas in Estas discutidas discutidas בעבר.&iacute;זה קטע אנס&ntilde;א לוס אסטודיאנטס
+    לה קונקסי&oacute;n entre s&iacute;mbolos y acciones כמו קומו לה ואליוסה הבילידד
+    דה דפוראצ'י n.&iacute;&oacute;
   tutorial_pixie_longdescription: הדרכה של שעת קוד עם פיקסי
   tutorial_play_longdescription: צור סיפור או משחק בעזרת מעבדת המשחקים! גרום לחיות,
     פיראטים, זומבים, נינג׳ות ודמויות רבות נוספות, לזוז, לעשות קולות, לצבור נקודות
@@ -11358,12 +11574,11 @@ he:
     הגיבור שלכם ואת היצירתיות שלכם עם CS First and Scratch.
   tutorial_googlename _longdescription: בחר שם והבא לחיים את אותיות המילה באמצעות
     קוד. בחר כינוי, שם של חיית מחמד, חיה, ספורט, מקום או תחביב.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: עיר זילה משגשגת, והמוזיקה באוויר. השמועה
+    אומרת, הבוט המפורסם של גרגנטואה מקוון ושולח את הטוקסיבוטים האחרונים לזרוק את העיר
+    בלוק אחר בלוק.…תפוס את הסקייטבורד המרחף של הקובוט שלך והתכונן לחריץ, לזוז ולסיים
+    את מה שהתחלת! שחקנים מתכנתים את ה- cobot hoverbots שלהם כדי להחליף נתיבים, להימנע
+    ממכשולים ולהוציא טוקסיבוטים רבים במשחק זה בסגנון קצב.
   tutorial_nasachspacejam_longdescription: צור מערכת סולארית שבאמת מתנדנדת! למד על
     מוסיקה, אסטרונומיה וקידוד בפעילות מודרכת עצמית זו (אין צורך בניסיון קידוד). תכנת
     כוכבי לכת ליצירת מוזיקה, יצירת מערכת שמש מוזיקלית משלך, עם מנגינות מרחביות.
@@ -11951,6 +12166,114 @@ he:
   all: כל
   dont_know: אני לא יודע
   language_label: שפה
+  before_hoc: לפני שעת הקוד
+  day_of_hoc: יום שעת הקוד
+  after_hoc: אחרי שעת הקוד
+  step_01: שלב 1
+  step_02: שלב 2
+  step_03: שלב 3
+  step_04: שלב 4
+  step_05: שלב 5
+  step_06: שלב 6
+  step_07: שלב 7
+  step_08: שלב 8
+  hoc_how_to_top_heading: המדריך שלך לשעת הקוד
+  hoc_how_to_top_desc: מדריכי הדרכה מותאמים לחוויית Hour of Code הטובה ביותר.
+  hoc_how_to_top_view_guide: צפה במדריך עבור
+  hoc_how_to_nav_main_aria_label: בחר מדריך
+  hoc_how_to_nav_sidebar_aria_label: ניווט בסרגל הצד
+  hoc_how_to_educators_intro_heading: איך לתכנן את שעת הקוד שלך
+  hoc_how_to_educators_intro_desc: שעת הקוד היא מבוא של שעה למדעי המחשב, תוך שימוש
+    במדריכים מהנים כדי להראות שכל אחד יכול ללמוד את היסודות. השנה, אנו לוקחים את שעת
+    הקוד לגבהים חדשים על ידי הצעת הזדמנויות קידוד הכוללות רכיבים של בינה מלאכותית
+    (AI) וגם רכיבים שאינם בינה מלאכותית. בין אם אתם או התלמידים שלכם מתכנתים מנוסים
+    או שכולכם יוצאים למסע הראשון שלכם למדעי המחשב, שעת הקוד הזו מבטיחה מסע יוצא דופן.
+  hoc_how_to_faq_question_prerequisites: מהם התנאים המוקדמים לביצוע שעת קוד?
+  hoc_how_to_faq_answer_prerequisites: שעת הקוד פשוטה להפעלה - אפילו למתחילים. אינך
+    זקוק לניסיון במדעי המחשב או בהוראה על מנת לעורר את התלמידים לחקור, ליצור וללמוד
+    משהו חדש.
+  hoc_how_to_faq_question_devices: אילו מכשירים אני צריך כדי להפעיל שעת קוד?
+  hoc_how_to_faq_answer_devices_01: 'התקנים שבהם אתה יכול להשתמש:'
+  hoc_how_to_faq_answer_devices_02: אם המכשירים מוגבלים או אינם זמינים, נסה [תכנות
+    זוג] (%{pair_url}) או חקור את [פעילויות מנותקות] שלנו (%{unplugged_url}) כדי ללמוד
+    ללא מכשירים בכלל!
+  hoc_how_to_faq_question_volunteer: מי יכול להתנדב?
+  hoc_how_to_faq_answer_volunteer: כל מי שמתלהב מחינוך למדעי המחשב והגברת המגוון בטכנולוגיה
+    יכול להיות מתנדב! נשמח לראות מתנדבים מכל הרקע משתתפים. שעת הקוד כוללת מגוון רחב
+    של פעילויות לכל הגילאים ורמות המיומנות, כך שאתה לא צריך להיות מומחה לתכנות כדי
+    להתנדב!
+  hoc_how_to_faq_question_full_hour: האם שעת הקוד תארך שעה שלמה?
+  hoc_how_to_faq_answer_full_hour: תלמידים רבים יוכלו לסיים את הפעילויות שלהם תוך
+    פחות משעה, וזה בסדר! התלמידים יכולים להמשיך ללמוד בזמן שתלמידים אחרים מסיימים
+    את פעילותם.
+  hoc_how_to_faq_question_account: האם סטודנטים צריכים להיכנס למערכת באמצעות חשבון
+    אישי?
+  hoc_how_to_faq_answer_account: אין צורך בהרשמה או כניסה לסטודנטים כדי לנסות את שעת
+    הקוד. ההרשמה לשעת הקוד אינה יוצרת חשבון Code.org באופן אוטומטי.
+  hoc_how_to_resources_heading_educators: מקורות מידע נוספים במסגרת "שעה של קוד" למורים
+  hoc_how_to_resources_promo_heading: משאבי קידומי מכירות
+  hoc_how_to_resources_promo_desc: מצא את כל המשאבים הדרושים לך - מודפסים ודיגיטליים
+    - כדי להביא תשומת לב לשעת הקוד שלך.
+  hoc_how_to_resources_discover_heading: גלה פעילויות
+  hoc_how_to_resources_discover_desc: חקור מבחר רחב של הדרכות של שעה אחת המיועדות
+    לכל הגילאים ביותר מ-45 שפות.
+  hoc_how_to_step_label_plan: תכנן היכן ומתי תעשה את שעת הקוד שלך
+  hoc_how_to_step_label_choose_activity: בחר את הפעילות שלך
+  hoc_how_to_step_label_test_activity: בדוק את הפעילות שלך
+  hoc_how_to_step_label_register_event: רשום את האירוע שלך
+  hoc_how_to_step_label_tell: ספר לתלמידים, לבית הספר ולקהילה
+  hoc_how_to_step_label_get_coding: קבל קידוד!
+  hoc_how_to_step_label_celebrate: לחגוג
+  hoc_how_to_step_label_beyond_hoc: מעבר לשעת הקוד
+  hoc_how_to_step_beyond_hoc_subhead: זה לא נגמר כאן!
+  hoc_how_to_step_beyond_hoc_desc: מדעי המחשב לא חייבים להסתיים בשעת הקוד! בעוד 90%
+    מההורים רוצים שילדם ילמד מדעי המחשב, רוב בתי הספר עדיין לא מלמדים זאת. למד כיצד
+    להביא CS לבית הספר של ילדך היום.
+  hoc_how_to_step_01_educators_subhead: בחר זמן ומרחב אירוע המתאימים למספר התלמידים
+    והמכשירים העומדים לרשותך.
+  hoc_how_to_step_01_educators_desc_01: אילו מקומות זמינים עבורך לעשות את שעת הקוד
+    שלך? שקול את היכולות הטכנולוגיות של החלל שלך ואת סוגי המכשירים שאתה מצפה מהתלמידים
+    שלך לעבוד עליהם. התלמידים יכולים לעבוד על הדרכות במכשיר בודד, להחליף שימוש במכשיר
+    משותף או לנסות הדרכה יחד על לוח ציור בכיתה. יש אפילו הדרכות מנותקות שניתן להשלים
+    ללא מכשירים כלל. ניתן לבצע אפשרויות מנותקות בכל מקום - אפילו בחוץ!
+  hoc_how_to_step_01_educators_desc_02: אנשים ברחבי העולם מצטרפים לחגיגת שעת הקוד
+    במהלך שבוע החינוך למדעי %{campaign_date} המחשב כאשר מתפרסמות ההדרכות והפעילויות
+    האחרונות. אבל אתה יכול לעשות שעת קוד בכל יום בשנה!
+  hoc_how_to_step_02_educators_desc_01: חקור פעילויות המבוססות על גיל הקבוצה שלך,
+    ניסיון, תחומי עניין ועוד. זה פופולרי עבור התלמידים לנסות הדרכות בהנהגה עצמית,
+    אם כי פעילויות רבות כוללות מערכי שיעור למורים כדי להנחות דיון או להרחיב את הפעילות
+    גם כן.
+  hoc_how_to_step_02_educators_desc_02: החליטו מראש אם ברצונכם לבחור מדריך יחיד לכל
+    התלמידים שלכם, או לתת לכל ילד לבחור בעצמו.
+  hoc_how_to_step_02_educators_desc_03: השנה, אתה והתלמידים שלך יכולים [ללמוד הכל
+    על AI] (%ai_url) באמצעות הדרכות, מערכי שיעור וסדרת הווידיאו החדשה שלנו איך AI
+    עובד.
+  hoc_how_to_step_03_educators_desc_01: נסה את ההדרכה בעצמך לפני שאתה נכנס לכיתה כדי
+    שתוכל לענות על שאלות!
+  hoc_how_to_step_03_educators_desc_02: אתה יכול גם לבדוק הדרכות במחשבי סטודנטים או
+    במכשירים כדי להבטיח שהם תומכים בסאונד ווידאו. יש רוחב פס נמוך? תכננו להציג סרטונים
+    בחזית הכיתה, כך שכל תלמיד לא יוריד סרטונים משלו.
+  hoc_how_to_step_03_educators_desc_03: שקול לספק אוזניות לכיתה שלך, או בקש מהתלמידים
+    להביא משלהם, אם ההדרכה שתבחר עובדת בצורה הטובה ביותר עם סאונד.
+  hoc_how_to_step_04_educators_desc_01: כשאתה נרשם לאירוע Hour of Code שלך, תקבל הודעות
+    דוא"ל מועילות עם חדשות וטיפים לאירוח שעת קוד מוצלחת. זה גם איך אתה יכול להודיע
+    למתנדבים מקומיים שבית הספר שלך משתתף. מתנדבים הם משאב נהדר ויכולים לבוא לדבר עם
+    הכיתה שלך על מדעי המחשב או לעזור לתלמידים שלך בפעילויות שעת הקוד.
+  hoc_how_to_step_05_educators_desc_01: גרמו לתלמידים שלכם להתרגש מהאירוע על ידי שיתוף
+    [סרטוני השראה] (%{videos_url}) המדגישים אנשים מגוונים ודרכים יצירתיות בהן ניתן
+    להשתמש במדעי המחשב בעולם האמיתי.
+  hoc_how_to_step_05_educators_desc_02: שתף את תוכניות Hour of Code שלך עם מורים אחרים
+    שאולי ירצו להצטרף לכיף! זוהי גם הזדמנות מצוינת לפנות לאגודת תלמידי מורים להורים
+    בבית הספר שלך או לשתף בניוזלטרים להורים, וליידע אותם מה ילדיהם לומדים.
+  hoc_how_to_step_06_educators_desc_01: הפנה את התלמידים שלך לפעילות, אולי על ידי
+    שיתוף הקישור בלוח או דרך מערכת ניהול הלמידה בכיתה שלך. התלמידים שלך עשויים להיתקל
+    באתגרים - זה בסדר! ללמוד לתכנת זה כמו ללמוד שפה חדשה; אתה לא תהיה שוטף מיד. אם
+    אתה לא יודע את התשובה, אתה יכול להבין את זה ביחד.
+  hoc_how_to_step_07_educators_desc_01: 'הקפד לחגוג הצלחה! שתף תמונות וסרטונים של
+    אירוע Hour of Code שלך במדיה החברתית. השתמש ב- #HourOfCode ו- @codeorg כדי שנוכל
+    להדגיש גם את ההצלחה שלך!'
+  hoc_how_to_step_07_educators_desc_02: אתה יכול גם להדפיס תעודות לתלמידים שלך כדי
+    להראות את ההישגים שלהם!
   team_page_full_team_alt_text: כמעט 100 עובדי Code.org בחולצות טריקו תואמות כחולות
     וצהובות מתייצבים בחדר ישיבות במלון לאירוע Codechella בקיץ 2022 של החברה.
   careers_page_code_pride_alt_text: שתי עובדות המציגות נשים מחייכות כשהן אוחזות בקצוות
@@ -12028,6 +12351,491 @@ he:
   accessibility_card_text_10: עיבוד לתכנית הלימודים של עקרונות מדעי המחשב AP של Code.org
     באמצעות Quorum, שפה מבוססת ראיות שנועדה במקור לספק נגישות לתלמידים עיוורים או
     לקויי ראייה.
+  engineering_hero_heading: הצטרפו לצוות ההנדסה שלנו!
+  engineering_hero_desc: ככל שאנו ממשיכים להרחיב את צוות ההנדסה שלנו, רצינו לשתף יותר
+    על ארגון ההנדסה שלנו ב- Code.org וכמה מההיבטים הייחודיים של העבודה כאן. אם אתה
+    מעוניין להגיש מועמדות לאחד התפקידים שלנו, נשמח לשמוע ממך!
+  engineering_team_title: הכירו את צוות ההנדסה ב- Code.org
+  engineering_team_card_text_1: זהו (רובנו) במפגש האישי שלנו במהלך קיץ 2023! קהל זה
+    מחולק לארבעה צוותי משנה בצוות ההנדסה שלנו שעובדים יחד כדי לבנות ולשרת את הפלטפורמה
+    לכל התלמידים והמורים שלנו.
+  engineering_team_card_text_2: אם אתה מעוניין להגיש מועמדות לאחד התפקידים שלנו, נשמח
+    לשמוע ממך! תוכל למצוא רשימה של משרות פתוחות בדף הקריירה שלנו.
+  engineering_our_team_title: צוות ההנדסה שלנו
+  engineering_our_team_desc: 'צוות ההנדסה ב- Code.org מחולק לארבעה צוותי משנה הבונים
+    ותומכים בתחומים שונים בפלטפורמה שלנו:'
+  engineering_our_team_sub_title_1: צוות הלמידה של התלמידים
+  engineering_our_team_text_1: צוות הלמידה של הסטודנטים שלנו הוא הבעלים של כל הפעילויות
+    שלנו (אנו קוראים להן מעבדות) שהתלמידים שלנו משתמשים בהן מדי יום. צוות זה עובד
+    בעיקר על טכנולוגיה חזיתית (אנו משתמשים ב- React והרבה JS מותאמים אישית) ויש לנו
+    יחסי עבודה נהדרים עם שותפים רבים ופרויקטים בקוד פתוח. לדוגמה, אנו משתמשים ב- [Google
+    Blockly] (%{youtube_url}) עבור כל התכנות מבוסס הבלוקים שלנו. אנו תומכים בתלמידים
+    במסע הלמידה שלהם כל הדרך מהגן ועד כיתה י"ב.
+  engineering_our_team_sub_title_2: צוות התנסות במורה
+  engineering_our_team_text_2: צוות חווית המורים שלנו בונה את הכלים שמושכים מורים
+    חדשים ל- Code.org (אנו קוראים למוצרי רכישה אלה) ומפתח את הפלטפורמה המעצימה את
+    המורים הקיימים שלנו ללמד את תוכנית הלימודים שלנו (כלי המורים שלנו). בדומה לכלי
+    הסטודנטים שלנו, אנו מסתמכים על React כדי לבנות את הקצה הקדמי שלנו והרכיבים בצד
+    השרת שלנו מוגשים באמצעות Ruby on Rails.
+  engineering_our_team_sub_title_3: צוות פלטפורמה
+  engineering_our_team_text_3: צוות הפלטפורמה שלנו מחזיק ברכיבי ליבה המשרתים את הצרכים
+    של צוותי התלמידים והמורים שלנו (למשל, אימות ופרופיל משתמש) ויש לו גם את המשימה
+    להגיע לתלמידים שעדיין לא נוכל להגיע אליהם. זה כולל בניית אינטגרציות שמחברות אותנו
+    עם בתי ספר המשתמשים במערכות ניהול למידה שונות (LMS) ואריזת תוכנית הלימודים שלנו
+    כך שניתן יהיה להשתמש בה בבתי ספר מרוחקים שאין להם גישה לאינטרנט אמין.
+  engineering_our_team_sub_title_4: צוות תשתיות
+  engineering_our_team_text_4: צוות התשתיות שלנו מספק את עמוד השדרה לפלטפורמה התומכת
+    בתלמידים ובמורים שלנו. זה כולל את תשתית האחסון והשירותים הנלווים שלנו (אנו משתמשים
+    ב- AWS), ניהול נתונים, תוכניות אבטחה, שירותי מפתחים ופריסה ועוד. צוות זה מחזיק
+    גם במערכות קנה המידה וההקצאה שלנו, שהן קריטיות במהלך שעת הקוד, שם אנו מזמינים
+    כל תלמיד בעולם להשלים איתנו שעה של קידוד.
+  engineering_faq_question_1: מה עושה Code.org?
+  engineering_faq_answer_1_a: Code.org היא עמותה לחדשנות חינוכית המוקדשת לחזון שלכל
+    תלמיד בכל בית ספר יש את ההזדמנות ללמוד מדעי המחשב כחלק מחינוך הליבה שלהם K-12.
+  engineering_faq_answer_1_b: אנו מרחיבים את הגישה למדעי המחשב בבתי הספר, תוך התמקדות
+    בהגדלת ההשתתפות של נשים צעירות ותלמידים מקבוצות אחרות שאינן מיוצגות. Code.org,
+    הספקית המובילה של תכנית הלימודים במדעי המחשב K-12 במחוזות בתי הספר הגדולים בארצות
+    הברית, מארגנת גם את קמפיין Hour of Code השנתי, שעסק ביותר מ -15% מכלל התלמידים
+    בעולם.
+  engineering_faq_answer_1_c: Code.org נתמך על ידי תורמים נדיבים כולל מיקרוסופט, אמזון,
+    גוגל ורבים אחרים.
+  engineering_faq_question_2: מהו הניסיון והכלים למפתחים של Code.org?
+  engineering_faq_answer_2: חוויית המפתחים שלנו עשויה להיות שונה ממה שראית בתפקידי
+    העבר שלך. בשיתוף פעולה הדוק עם צוות המוצרים שלנו, אנו שולחים לייצור בכל יום חול
+    ויש לנו מגוון של קדנס - לפעמים אתה כותב קוד שעולה לאוויר באותו יום; בפעמים אחרות
+    אתה נמצא בפרויקטים לטווח ארוך יותר - ובעוד אנו עוקבים אחר ספרינטים שבועיים, אנו
+    עושים זאת בצורה קלת משקל. אנו מדדים לקראת ביצוע הדברים הנכונים בדרך הנכונה לעומת
+    התייחסות טהרנית של כל מתודולוגיה מסוימת. [כל הקוד שלנו] (%{code_url}) הוא קוד
+    פתוח ואנו משתמשים בבקשות משיכה של JIRA ו- GitHub כדי לעקוב אחר כל פריטי העבודה
+    שלנו. אכפת לנו גם מאיכות ובדיקות ומזל שיש לנו תמיכה מדהימה מ- [SauceLabs](%{saucelabs_url}),
+    שעוזרים לנו להריץ את חבילת מבחני ממשק המשתמש שלנו במכשירי סטודנטים שונים (למשל,
+    אייפד) בחוות מכשירי הענן שלהם.
+  engineering_faq_question_3: מהו סיבוב המהנדס בכוננות ב- Code.org?
+  engineering_faq_answer_3: צוות ההנדסה שלנו 30+ חולק אחריות תורנית. כל מהנדס מכסה
+    משמרת של 24 שעות ומשתמש בנתיבי ההסלמה ובספרי המשחקים שלנו כדי להגיב להפסקות אתרים
+    או לבעיות אחרות באתר חי. אנו גאים באמינות האתר שלנו - בממוצע, כל מהנדס מתעורר
+    רק פעם בשנה בגלל בעיות שבדרך כלל מהירות לפתור. במקום זאת, "מפתח היום" בדרך כלל
+    מבלה חלק מיום העבודה שלו בניהול פריסת הייצור ומשלב בעיות פחות דחופות.
+  engineering_faq_question_4: האם אתה ארגון ידידותי לרחוק/WFH?
+  engineering_faq_answer_4_a: כן! בשנת 2019, זמן קצר לפני המגיפה, Code.org הפך לארגון
+    מרוחק ראשון. כיום יש לנו מהנדסים בכל אזור זמן בארה"ב ומתאימים את שעות העבודה בהתאם.
+    רוב הפגישות שלנו מתרחשות בין השעות 10:00-15:00 PT.
+  engineering_faq_answer_4_b: אנו מכירים גם בערך הזמן האישי, ובכל רבעון אנו נפגשים
+    באופן אישי, בדרך כלל בסיאטל. שניים מהאירועים הללו (אנו קוראים להם שבוע בעיטת הפתיחה
+    ו- "Codechella") מפגישים את כולם בארגון בינואר ויוני - וצוותי ההנדסה והמוצרים
+    נפגשים בנפרד באפריל ובאוקטובר.
+  engineering_faq_answer_4_c: אנו מאמינים מאוד בבילוי עם התלמידים והמורים שלנו, ולכן
+    רבים מהאירועים האישיים הללו כוללים טיולים לבתי ספר וכיתות כדי לאסוף משוב או לבחון
+    את המוצרים שלנו
+  engineering_faq_question_5: מה מייחד את צוות ההנדסה ב- Code.org?
+  engineering_faq_answer_5_a: 'מעבר לפתרון בעיות טכניות מאתגרות, יש לנו כמה דברים
+    שהופכים את הארגון ההנדסי שלנו לשונה מאחרים שאולי עבדת בהם:'
+  engineering_faq_answer_5_b_1: כולנו חולקים את התשוקה שלנו למשימה שלנו.
+  engineering_faq_answer_5_b_2: כל אחד מאיתנו נמצא כאן כדי לתמוך במשימה להרחיב את
+    הגישה למדעי המחשב עבור כל סטודנט ברחבי העולם. לכולנו יש את הסיפור והפרספקטיבה
+    הייחודיים שלנו לגבי מה שמניע אותנו לקראת משימה זו.
+  engineering_faq_answer_5_c_1: אכפת לנו מאוד אחד מהשני.
+  engineering_faq_answer_5_c_2: כאשר מהנדסים נאבקים עם בעיה, אנחנו נכנסים ואנחנו עוזרים.
+    אחד העקרונות שלנו הוא שאנחנו קשים בבעיות, אבל אדיבים זה לזה. אנו מקדמים מהנדסים
+    באופן קבוע, אך איננו רושמים פתרונות מהונדסים יתר על המידה רק כדי לתמוך בנתיב הקידומים
+    של מישהו. במקום זאת, אנו משקיעים במהנדסים שלנו עם תקציב פיתוח מקצועי נדיב וגישה
+    להזדמנויות למידה אחרות.
+  engineering_faq_answer_5_d_1: אנחנו עובדים קשה, אבל אנחנו מציבים גבולות ברורים.
+  engineering_faq_answer_5_d_2: בעוד אנו תומכים בסטודנטים ברחבי העולם, אנו מחזיקים
+    את עצמנו אחראים לגבולות ברורים בין עבודה לחיי הבית. אנו נהנים מימי רביעי ללא פגישות,
+    ולוקחים את ה- PTO שלנו (5 שבועות בסך הכל, הכולל סגירת משרדים בת שבועיים בסוף השנה
+    המכונה חופשת חורף), חצי יום עבודה בימי שישי במהלך הקיץ המכונה ימי שישי בקיץ, והטבות
+    נדיבות אחרות.
+  careers_hero_title: קריירות
+  careers_hero_description: Code.org הוא ארגון ללא מטרות רווח המוקדש להרחבת הגישה
+    למדעי המחשב בבתי הספר. אנו מתמקדים במיוחד בהגדלת ההשתתפות בקרב נשים צעירות וסטודנטים
+    שאינם מיוצגים.
+  careers_hero_description_under: עזרו לנו לשנות את העולם, תלמיד אחד בכל פעם!
+  careers_vision_title: החזון שלנו
+  careers_vision_decsription: החזון שלנו הוא שלכל תלמיד בכל בית ספר תהיה הזדמנות ללמוד
+    מדעי המחשב כחלק מחינוך הליבה שלו K-12.
+  careers_vision_description_under: בואו להצטרף לצוות שלנו כדי לעזור להפוך את החזון
+    הזה למציאות!
+  careers_values_title: ערכי הליבה שלנו
+  careers_values_first_column_text_1: אנו מאמינים שמדעי המחשב הם יסוד לכל התלמידים
+  careers_values_first_column_text_2: אנו מחויבים להון, גישה והזדמנות
+  careers_values_first_column_text_3: אנו מאמינים בכוחה של קהילת חינוך שיתופית
+  careers_values_second_column_text_1: אנו זריזים ומגיבים למשוב
+  careers_values_second_column_text_2: אנו פועלים ביושרה ובשקיפות
+  careers_values_second_column_text_3: אנו מאמינים כי השפעה רחבה דורשת חשיבה גדולה
+    ופעולה הוליסטית
+  careers_approach_section_title: הגישה המאחדת שלנו
+  careers_approach_section_description: התפקיד הגלובלי של Code.org בתנועת מדעי המחשב
+    K-12 אפשרי רק מכיוון שאנו משתמשים בגישה מאחדת בין בעלי עניין מגוונים ולעתים קרובות
+    מחולקים. בתקופה של קיטוב גובר, הרעיון של הגדלת ההזדמנות לסטודנטים מאחד אנשים מכל
+    הקשת הפוליטית. לחברי הצוות של Code.org, לתלמידים, למורים ולתומכים יש נקודות מבט
+    מגוונות ומגוונות, וכולם מוזמנים במשימה שלנו.
+  careers_aproach_section_description_link: קרא עוד על הגישה של Code.org לאחדות.
+  careers_approach_section_button: חקור תפקידים פתוחים
+  careers_principle_section_title: עקרונות התרבות שלנו
+  careers_principle_title_1: התלמידים והמורים שלנו הם כוכב הצפון שלנו
+  careers_principle_description_1: אנו משתמשים במתנות, בזמן ובאנרגיה שלנו כדי להביא
+    את מדעי המחשב למי שזקוק לו ביותר. זה מה שמאחד אותנו. זהו העיקרון החשוב ביותר שלנו.
+  careers_principle_title_2: אנחנו קשים בבעיות ונדיבים זה לזה
+  careers_principle_description_2: אנו נשארים ממוקדים באתגר של הבאת מדעי המחשב לתלמידים
+    ולמורים ברחבי העולם. אנו מכירים בכך שכל אחד מאיתנו מביא את מיטב כוונותינו לתמוך
+    במשימתנו ולתת חסד כאשר אנו מבצעים טעויות.
+  careers_principle_title_3: חפש פתרונות, לא קונצנזוס
+  careers_principle_description_3: בבעלותנו החלטות, בין אם נקיטת צעדים קטנים או קפיצות
+    גדולות לקראת התוצאות שאנו מחפשים. הבעלים מבקשים ומקשיבים, אך אינם משותקים על ידי
+    משוב. אנו מקבלים ותומכים בהחלטות הבעלים, גם אם איננו מסכימים.
+  careers_principle_title_4: אמצו את המנטליות של מייסד
+  careers_principle_description_4: אנו אובססיביים לגבי התוצאות וממקדים את פעולותינו
+    בהנעתם. אנחנו צוללים לפרטים ועובדים קשה. אנו כנים, נוטים לזריזות ומעריכים ללא
+    הרף אם אנו בדרך; אנו לא חוששים להסתובב. שינוי העולם דורש זאת.
+  careers_principle_title_5: חדשנות אלופה
+  careers_principle_description_5: אנחנו חושבים בגדול, לוקחים סיכונים ולא מפחדים להיכשל.
+    אם אנו רואים דרך טובה יותר להשיג את מטרותינו, אנו עושים זאת ומעודדים אחרים לעשות
+    זאת גם כן. פתרונות מצטברים לא יעזרו לשנות את העולם.
+  careers_principle_title_6: החלטות עוגן בעובדות
+  careers_principle_description_6: אנו משתמשים בנתונים כדי להבין את העסק שלנו, לקבוע
+    תוצאות רצויות ולהנחות קבלת החלטות. אנו מאזנים זאת על ידי הכרה שלא תמיד יהיו לנו
+    הנתונים הדרושים לנו על מנת לפעול.
+  careers_principle_title_7: הלך רוח לצמיחה מזין אותנו
+  careers_principle_description_7: אנו ניגשים לכל אתגר בסקרנות. אנו נותנים משוב בחביבות
+    ובכנות; אנו מקבלים משוב בגלוי. אנו לומדים מהטעויות שלנו ומחפשים דרכים להגדיל את
+    טווח ההגעה וההשפעה של העבודה שלנו.
+  careers_balance_section_title: האיזון שלנו בין עבודה לחיים
+  careers_balance_section_description: אכפת לנו מהעובדים שלנו ומחויבים לתמוך בכולם
+    הן בעבודה והן מחוץ לעבודה. אנו יודעים שלכל אחד יש צרכים שונים, ולכן אנו מציעים
+    חבילת הטבות הוליסטית שתבטיח שאתה (ומשפחתך) יטופלו.
+  careers_balance_first_column_text_1: יתרונות בריאותיים לך ולמשפחתך
+  careers_balance_first_column_text_2: חופשה נדיבה בתשלום ותכניות חופשה
+  careers_balance_second_column_text_1: סביבת עבודה גמישה ותומכת
+  careers_balance_second_column_text_2: צמיחה והזדמנויות למידה מקצועיות
+  careers_openroles_section_title: תפקידים פתוחים
+  careers_openroles_section_description: Code.org מבוסס בסיאטל, אך רבים מחברי הצוות
+    שלנו מרוחקים. מועמדים מרוחקים מוזמנים ומעודדים להגיש מועמדות.
+  careers_more_info_text: למידע נוסף על Code.org, עיין ב [שאלות נפוצות] (%{support_url})
+    או למד על [דרכים אחרות להסתבך במשימה שלנו] (%{help_url}).
+  careers_approach_section_title2: הגישה שלנו לגיוון
+  careers_approach_section_description_1: אנו מאמצים נקודות מבט, רעיונות ורקעים מגוונים
+    ב- Code.org. אנו מחויבים לספק הזדמנות שווה לכל העובדים והמועמדים. איננו מפלים
+    על בסיס גזע, דת, צבע, מוצא לאומי, מין, נטייה מינית, גיל, מצב משפחתי, מעמד ותיק
+    או מצב נכות (נפשי ופיזי).
+  careers_approach_section_description_2: אנו נבטיח כי לאנשים עם מוגבלות יינתן התאמה
+    סבירה להשתתף בתהליך הגשת מועמדות לעבודה או ראיון עבודה, לבצע תפקידי עבודה חיוניים
+    ולקבל הטבות וזכויות תעסוקה אחרות. אם יש לך צרכים אישיים הקשורים לנכות, אנא פנה
+    אל accommodations@code.org.
+  csa_ai_page_hero_title: הנדסת תוכנה וראייה ממוחשבת
+  csa_ai_page_hero_description: 'מודול CSA זה בן שני פרקים לאחר AP מציע לתלמידי תיכון
+    ניסיון מעשי בכלים מקצועיים לפיתוח תוכנה, כולל GitHub ו- GitHub Copilot, ומקנה
+    להם את הכישורים בעולם האמיתי לפיתוח תוכנית ראייה ממוחשבת. '
+  csa_ai_page_video_section_title: צעד מעבר לעולם סביבות התכנות Code.org
+  csa_ai_page_video_section_li_1: למד על AI והיישומים שלה
+  csa_ai_page_video_section_li_2: ניסיון מעשי עם כלים מקצועיים לפיתוח תוכנה
+  csa_ai_page_video_section_li_3: למד שיטות עבודה סטנדרטיות בתעשייה
+  csa_ai_page_video_section_li_4: לטפח חשיבה ביקורתית
+  csa_ai_page_programming_tools: 'כלי תכנות: גיתוב, טייס משנה גיתוב, VScode, TensorFlow '
+  csa_ai_page_professional_learning: אף אחד
+  csa_ai_page_curriculum_topics: 'נושאים: תכנות, דאטה, אמנות ועיצוב, משחקים ואנימציה'
+  csa_ai_page_curriculum_accessibility_features: עיין בסעיף שאלות נפוצות לפרטים
+  csa_ai_page_curriculum_languages_support: עברית
+  csa_ai_page_article_title_1: בנה עם טייס משנה
+  csa_ai_page_article_description_1: התלמידים לומדים כיצד להשתמש ב- GitHub Copilot
+    כמתכנת זוגי כדי להסביר קוד קיים, למצוא ולתקן שגיאות וליצור פתרונות לבעיות חדשות.
+  csa_ai_page_article_link_1: למידע נוסף על טייס משנה
+  csa_ai_page_article_title_2: בנה מודל AI משלך
+  csa_ai_page_article_description_2: התלמידים מאמנים מודלים של AI משלהם באמצעות Teachable
+    Machine כדי לזהות תמונות ומחוות באמצעות מצלמת רשת ולשקול כיצד ראיית מחשב משפיעה
+    על האופן שבו משתמשים מתקשרים עם אפליקציות.
+  csa_ai_page_article_link_2: חקור את מערך השיעור
+  csa_ai_page_article_title_3: חקור את ראיית המחשב
+  csa_ai_page_article_description_3: התלמידים מיישמים את דגמי ה- AI שיצרו באמצעות
+    Teachable Machine באפליקציית Java, תוך שימוש ב- GitHub Copilot כדי לעזור להם לשנות
+    גרסאות קיימות של אפליקציות לעבודה עם התשומות השונות.
+  csa_ai_page_article_link_3: ראה דוגמה
+  csa_ai_page_learn_more_section_title: למידע נוסף על בינה מלאכותית
+  csa_ai_page_learn_more_title: חקור את AI 101 למורים
+  csa_ai_page_learn_more_description: גלה את העולם פורץ הדרך של בינה מלאכותית (AI)
+    ואת הפוטנציאל הטרנספורמטיבי שלה בחינוך עם סדרת הלמידה המקוונת המקיפה שלנו למורים.
+  csa_ai_page_learn_more_link: צפו בסדרת AI 101 למורים
+  csa_ai_page_faq_question_01: מהם התנאים המוקדמים למודול זה?
+  csa_ai_page_faq_answer_01_01: 'לפני צלילה לתוך מודול זה, התלמידים צריכים להיות בעלי
+    ידע ברמת הכניסה של Java. באופן ספציפי, הם צריכים לתפוס על:'
+  csa_ai_page_faq_answer_01_list_01: "**שיעורים ואובייקטים: ** התלמידים צריכים להכיר
+    את ההגדרה והשימוש בשיעורים, כמו גם ליצור ולתפעל אובייקטים."
+  csa_ai_page_faq_answer_01_list_02: "**שיטות כתיבה וקריאה: ** התלמידים צריכים להיות
+    מסוגלים להגדיר שיטות בתוך כיתה, להבין פרמטרים של שיטות וסוגי החזרה ולקרוא שיטות
+    מאובייקטים או משיטות אחרות."
+  csa_ai_page_faq_answer_01_list_03: "**מערכים 1D ו- ArrayLists: ** עליהם להיות בקיאים
+    בהכרזה, אתחול ומניפולציה של מערכים חד-ממדיים ו- ArrayLists, כולל איטרציה דרכם."
+  csa_ai_page_faq_answer_01_list_04: "**בחירה ואיטרציה: ** בסיס איתן בהצהרות ולולאות
+    מותנות הוא קריטי."
+  csa_ai_page_faq_question_01_02: באופן אידיאלי, סטודנטים שסיימו AP מדעי המחשב A או
+    קורס של עומק וקפדנות דומים יהיו מוכנים היטב למודול זה.
+  csa_ai_page_faq_question_02: כיצד ניתן להתקין את התוכנה הנדרשת עבור מודול זה?
+  csa_ai_page_faq_answer_02_01: מודול זה הוא ייחודי מכיוון שהוא כרוך בשימוש בתוכנות
+    צד שלישי ולא במעבדות וכלים של Code.org. [קרא עוד על התקנת התוכנה כאן] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: כיצד אוכל לתמוך בצרכי נגישות בזמן לימוד מודול זה?
+  csa_ai_page_faq_answer_03_01: מתן מענה לצרכי נגישות הוא קריטי לסביבת למידה כוללת.
+    [קרא עוד על תכונות נגישות בתוכנה המשמשת במודול זה כאן] (%{install_url}).
+  csa_ai_page_faq_question_04: כיצד אוכל להשתמש בקוד VS במחשבי Chromebook?
+  csa_ai_page_faq_answer_04: השימוש בקוד VS ב- Chromebook הפך לפשוט יותר, במיוחד עם
+    היכולת להריץ אפליקציות לינוקס בדגמי Chromebook חדשים יותר. [קרא עוד על הגדרת קוד
+    VS במחשבי Chromebook כאן] (%{chromebook_url}).
+  csa_ai_page_faq_question_05: כיצד אוכל לקבל פיתוח מקצועי עבור מודול זה?
+  csa_ai_page_faq_answer_05: אין כרגע התפתחות מקצועית ספציפית לקורס זה. אם אתה מחפש
+    להבין כיצד לגשת לבינה מלאכותית בכיתה שלך אתה יכול [לחקור AI 101 למורים] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: מהו העיתוי המומלץ להוראת מודול זה?
+  csa_ai_page_faq_answer_06_01: מודול הנדסת תוכנה וראיית מחשב בנוי בקפידה כדי לספק
+    למידה מקיפה במסגרת זמן תמציתית. המודול כולו נועד להשתרע על **2 שבועות של הוראה**.
+    רוב השיעורים מותאמים ל**45 דקות**, בעוד שהשיעורים שבהם התלמידים מתעמקים בפיתוח
+    פרויקטים מעשיים של Java מיועדים ל**90 דקות**. זמן ממושך זה מבטיח לתלמידים הזדמנות
+    מספקת להבין, ליישם ולפתור בעיות בזמן שהם עובדים.
+  csa_ai_page_faq_answer_06_02: יש גם גמישות מכוונת המובנית במבנה המודול. בהתאם לדינמיקה
+    בכיתה, מעורבות התלמידים והעומק שאליו תרצה לחקור כל נושא, תוכל להתאים את משך הזמן.
+    לדוגמה, ניתן להרחיב את שיעור מבוא לטייס משנה, שתוכנן כשיעור של 45 דקות, ל -90
+    דקות אם ברצונך לצלול לעומק האופן שבו מודלים וכלים גדולים בשפה כמו GitHub Copilot
+    ו- ChatGPT עובדים.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: באמצעות חשבון מורה מאושר, תוכל למצוא מפתחות תשובה בחלונית
+    "מורה" כחולה בלבד המופיעה בשיעורים ובפעילויות המקוונות. אם אתה זקוק לחשבון מורה
+    מאושר, אתה יכול להגיש בקשה לגישה לחומרים מוגנים למורים בלבד (מפתחות תשובה וכו
+    ') דרך [טופס זה] ().%{form_url}אנא זכור כי ייתכן שיחלפו 3-5 ימי עסקים לאימות חשבונך.
+  csa_ai_page_faq_question_08: האם מודול זה ממופה לתקנים?
+  csa_ai_page_faq_answer_08: כן, תכנית הלימודים להנדסת תוכנה וראיית מחשב ממופה ל [תקני
+    CSTA K-12] (%{csta_k12_url}) ו- AI עבור [הנחיות K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: כמה עולה ללמד את המודול הזה?
+  csa_ai_page_faq_answer_09_01: תוכנית הלימודים והפלטפורמה שלנו זמינים ב [ללא עלות]
+    (%{no_cost_url}) לכל אחד, בכל מקום, ללמד!
+  csa_ai_page_faq_answer_09_02: בנוסף, התוכנה והכלים המשמשים במודול זה הם ללא תשלום.
+    GitHub Copilot הוא בחינם עבור מאומת [teachers](%{teachers_url}) ו- (). [students]%{students_url}
+  csa_ai_page_faq_question_10: מה עלי לעשות אם התקנת התוכנה אינה פועלת?
+  csa_ai_page_faq_answer_10: התמודדות עם בעיות במהלך התקנת תוכנה יכולה להיות נפוצה,
+    אך ישנם שלבים שיטתיים שתוכל לבצע כדי לפתור אותם ולפתור אותם. [עיין בכמה טיפים
+    לפתרון בעיות כאן] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'תוכנית הלימודים שלנו להנדסת תוכנה וראיית מחשב תוכננה
+    תוך התחשבות בערכי תכנית הלימודים שלנו. המטרות הבאות הנחו את יצירת תוכנית הלימודים:'
+  csa_ai_page_faq_answer_11_list_01: "**יעד 1: ** השתמש בכלי AI כדי ליצור, לנפות באגים
+    ולערוך קוד."
+  csa_ai_page_faq_answer_11_list_02: "**יעד 2: ** מעבר ממעבדת Java לכלים בעולם האמיתי."
+  csa_ai_page_faq_answer_11_list_03: "**מטרה 3: ** העמיק את ההבנה כיצד מודלים של AI
+    מאומנים ומשולבים בתוכניות."
+  csa_ai_page_faq_answer_11_02: למידע נוסף על הערכים שהנחו את עבודתנו, עיין ב [ערכי
+    תכנית הלימודים] (%{curriculum_values_url}) שלנו.
+  video_library_page_main_title: סרטונים קצרים חינוכיים
+  video_library_page_hero_description: ספריית הסרטונים החינוכיים ההולכת וגדלה של Code.org
+    זמינה לשימוש חוזר על ידי אנשי חינוך ברחבי העולם, באינטרנט או בכיתות לימוד. המטרה
+    שלנו היא להגביר את המאמצים שלנו מעבר להישג ידם של תוכנית הלימודים שלנו.
+  video_library_page_title_ai_works: איך AI עובד
+  video_library_page_description_ai_works: סדרת הסרטונים הקצרים הזו תציג בפניכם כיצד
+    פועלת בינה מלאכותית ומדוע היא חשובה. למד על רשתות עצביות, או כיצד AI לומד, והתעמק
+    בנושאים כמו הטיה אלגוריתמית ואתיקה של קבלת החלטות AI.
+  video_library_page_title_computers_work: איך מחשבים עובדים
+  video_library_page_description_computers_work: מסביר מה הופך מחשב למחשב, כיצד מידע
+    דיגיטלי מיוצג ב- 1s ו- 0s, כיצד מעגלי מחשב פועלים כדי לתפעל מידע דיגיטלי וכיצד
+    יחידת עיבוד מרכזית (CPU) ומערכת הפעלה שולטות בכניסות, ביציאות, בזיכרון ובחומרה
+    של מחשב.
+  video_library_page_title_internet_works: איך האינטרנט עובד
+  video_library_page_description_internet_works: בהשתתפות וינט סרף, ממציא TCP/IP,
+    דיוויד קארפ מייסד Tumblr להסביר HTTP ו- HTML, נסיכת האבטחה של גוגל להסביר SSL
+    ואבטחת סייבר, ומהנדסים ממיקרוסופט, ספוטיפיי וסימנטק. סדרה זו של קטעי וידאו קצרים
+    המסבירים כיצד האינטרנט עובד.
+  video_library_page_title_not_hacked: איך לא להיפרץ
+  video_library_page_description_not_hacked: האינטרנט פתוח, כך שכל מה שקורה בו ניתן
+    לראות אלא אם כן הוא מוגן. במדינות מודרניות אנשים מודאגים יותר מפריצה מאשר מכל
+    פשע אחר. למה? מכיוון שכל מחשב או טלפון באינטרנט נבדקים באופן קבוע על פגיעויות
+    על ידי עבריינים, טרוריסטים או אפילו שחקנים ממלכתיים. אם אתה לא זהיר, מישהו יכול
+    לפרוץ למכשיר או לחשבונות שלך, ואפילו לגנוב את הזהות שלך או את הכסף שלך.
+  video_library_page_title_blockchain: איך עובד בלוקצ'יין
+  video_library_page_description_blockchain: סדרה זו, המיוצרת בשיתוף עם Coinbase,
+    כוללת מומחים בתעשייה ומטרתה לבטל את המיסטיקה של הטכנולוגיה הזו על ידי בחינת מהי
+    בלוקצ'יין, כיצד היא פועלת וההשלכות החברתיות הפוטנציאליות שלה - טובות ורעות כאחד.
+  video_library_page_title_careers: קריירה במדעי המחשב
+  video_library_page_description_careers: קריירה במדעי המחשב והטכנולוגיה יכולה להיות
+    מהנה ומתגמלת. אבל מה באמת עושה אדם שעובד בתחומים אלה? עם מגוון עצום של משרות וחברות,
+    אין רק תשובה אחת לשאלה זו. צפה בסרטונים למטה כדי לפגוש כמה מהאנשים שמתמודדים עם
+    בעיות גדולות בדרכים יצירתיות.
+  video_library_page_title_inspirational: מעורר השראה
+  video_library_page_description_inspirational: מה ישתנה מדעי המחשב בעולמנו? הכל?
+    למי זה מיועד? כולם! צפה בסרטונים אלה כדי לעורר אותך ולהניע אותך.
+  video_library_page_footer_description: מחפש משהו אחר? יש לנו כל כך הרבה סרטונים
+    נהדרים זמינים בערוץ היוטיוב שלנו.
+  video_library_page_footer_cta: חקור את כל סרטוני Code.org ביוטיוב
+  video_library_page_computer_work_video_title_1: הכירו כיצד מחשבים עובדים
+  video_library_page_computer_work_video_title_2: בינארי ונתונים
+  video_library_page_computer_work_video_title_3: מעבד, זיכרון, קלט ופלט
+  video_library_page_computer_work_video_title_4: מה עושה מחשב, מחשב?
+  video_library_page_computer_work_video_title_5: מעגלים לוגיקה
+  video_library_page_computer_work_video_title_6: חומרה ותוכנה
+  video_library_page_internet_work_video_title_1: מהו האינטרנט?
+  video_library_page_internet_work_video_title_2: 'האינטרנט: כתובות IP ו- DNS'
+  video_library_page_internet_work_video_title_3: 'האינטרנט: HTTP ו- HTML'
+  video_library_page_internet_work_video_title_4: 'האינטרנט: אבטחת סייבר ופשע'
+  video_library_page_internet_work_video_title_5: 'האינטרנט: חוטים, כבלים ו- Wifi'
+  video_library_page_internet_work_video_title_6: 'האינטרנט: מנות, ניתוב ואמינות'
+  video_library_page_internet_work_video_title_7: 'האינטרנט: הצפנה ומפתחות ציבוריים'
+  video_library_page_internet_work_video_title_8: 'האינטרנט: איך החיפוש עובד'
+  video_library_page_cs_video_title_1: שמי ג'רום ואני טכנולוג עיצוב ב- Meow Wolf
+  video_library_page_cs_video_title_2: שמי ניקשה ואני מהנדס תעופה וחלל בנאס"א
+  video_library_page_cs_video_title_3: שמי ברינה ואני מהנדס תוכנה באינסטגרם
+  video_library_page_cs_video_title_4: שמי קינסלי ואני מהנדס תוכנה בפייסבוק
+  video_library_page_cs_video_title_5: שמי פולינה ואני מדענית נתונים באמנויות אלקטרוניות
+  video_library_page_cs_video_title_6: שמי דנל ואני מהנדסת תוכנה ב- MBARI
+  video_library_page_cs_video_title_7: שמי כריסטופר ואני אנליסט אבטחה בטניום
+  video_library_page_cs_video_title_8: שמי פדריקו ואני מנהל תוכניות טכניות במיקרוסופט
+  video_library_page_cs_video_title_9: שמי טס ואני מהנדס תוכנה בגוגל
+  video_library_page_inspirational_video_title_1: שנה את פני מדעי המחשב (3 דקות)
+  video_library_page_inspirational_video_title_2: תדחפי את עצמך. כל אחד יכול ללמוד.
+    (דקה אחת)
+  video_library_page_inspirational_video_title_3: השראה לילדה (2 דקות)
+  video_library_page_inspirational_video_title_4: מה לא מלמדים במרבית בתי הספר (5
+    דקות)
+  video_library_page_inspirational_video_title_5: שעת הקוד כאן - כל אחד יכול ללמוד
+    (2 דקות)
+  video_library_page_inspirational_video_title_6: שמי אראסלי (3 דקות)
+  video_library_page_inspirational_video_title_7: שעה של קוד עם סטף קארי (2 דקות)
+  video_library_page_inspirational_video_title_8: מדעי המחשב משנים הכל (5 דקות)
+  video_library_page_inspirational_video_title_9: מבוא למדעי המחשב (דקה אחת)
+  video_library_page_inspirational_video_title_10: הנשיא אובמה על מדעי המחשב (1 דקות)
+  video_library_page_inspirational_video_title_11: כל אחד יכול ללמוד (1דקות)
+  video_library_page_inspirational_video_title_12: לו קה פאלטה אן נואסטראס אסקואלס
+    (2 דקות)
+  video_library_page_inspirational_video_title_13: נאס"א חוגגת את שעת הקוד (2 דקות)
+  video_library_page_inspirational_video_title_14: זה יותר ממשחק (דקה אחת)
+  video_library_page_inspirational_video_title_15: צור עם מדעי המחשב (דקה אחת)
+  video_library_page_not_hacked_video_title_1: 'איך לא להיפרץ: מבוא'
+  video_library_page_not_hacked_video_title_2: 'איך לא להיפרץ: סיסמאות'
+  video_library_page_not_hacked_video_title_3: 'איך לא להיפרץ: אימות ונעילת מכשירים'
+  video_library_page_not_hacked_video_title_4: 'איך לא להיפרץ: דיוג'
+  video_library_page_not_hacked_video_title_5: 'איך לא להיפרץ: אתרי אינטרנט ו- Wifi'
+  video_library_page_not_hacked_video_title_6: 'איך לא להיפרץ: הודעות והורדות'
+  video_library_page_not_hacked_video_title_7: 'איך לא להיפרץ: התקן עדכונים'
+  about_us_page_title: אודותינו
+  about_us_page_hero_description: Code.org® היא עמותה לחדשנות חינוכית המוקדשת לחזון
+    שלכל תלמיד בכל בית ספר יש את ההזדמנות ללמוד מדעי המחשב כחלק מחינוך הליבה שלהם
+    K-12. אנו מרחיבים את הגישה למדעי המחשב בבתי הספר, תוך התמקדות בהגברת ההשתתפות
+    של נשים צעירות ותלמידים מקבוצות אחרות שלא מיוצגות. הספק המוביל של תכנית הלימודים
+    למדעי המחשב K-12 במחוזות בתי הספר הגדולים בארצות הברית, Code.org מארגן גם את הקמפיין
+    השנתי [Hour of Code] (%{hour_url}), שמעורב יותר מ -15% מכלל התלמידים בעולם. Code.org
+    נתמך על ידי תורמים נדיבים כולל מיקרוסופט, אמזון, גוגל ו [רבים אחרים] ()%{others_url}
+  about_us_page_section_title_1: מעל 80 מיליון תלמידים ושני מיליון מורים באתר Code.org
+  about_us_page_statistic_figcaption: השתתפות Code.org משנת הלימודים 2021-2022. [ראה
+    נתונים מפורקים.] ()%{data_url}
+  about_us_page_statistic_description: Code.org מגדיל את המגוון במדעי המחשב על ידי
+    הגעה לתלמידים מכל הרקע שבו הם נמצאים - ברמת הכישורים שלהם, בבתי הספר שלהם ובדרכים
+    שמעוררות בהם השראה להמשיך ללמוד. הרוב המכריע של הסטודנטים ב- Code.org הם מקבוצות
+    סטודנטים שלא מיוצגות באופן היסטורי במדעי המחשב. הגברת המגוון במדעי המחשב היא יסוד
+    לעבודה שלנו, ו [אנו מעודדים אותך לקרוא עוד על המאמצים שלנו] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org בחדשות
+  about_us_page_section_news_description: ראה את כל העבר [חדשות והודעות] (%{news_url})
+  about_us_page_section_table: המטרות והמדדים שלנו
+  about_us_page_section_table_header_1: מטרת קוד.ORG
+  about_us_page_section_table_header_2: הישג
+  abous_page_section_table_cell_1_1: שפר את המגוון במדעי המחשב * (סטודנטים בארה"ב)
+    *
+  abous_page_section_table_cell_1_2: 45% מתלמידי Code.org הן נשים צעירות, 50% הן סטודנטים
+    מקבוצות גזעיות ואתניות שוליות, ו -46% מהתלמידים בארה"ב נמצאים בבתי ספר בעלי צרכים
+    גבוהים. קרא עוד אודות [הגישה שלנו לגיוון.] (%{diversity_url})
+  about_page_section_table_cell_2_1: לעורר תלמידים
+  about_page_section_table_cell_2_2: עשרות מיליונים ניסו את [שעת הקוד] (%{hour_url}).
+    (426,370,561 שירתו. 49% נשים)
+  about_page_section_table_cell_3_1: להגיע לכיתות
+  about_page_section_table_cell_3_2: 591,636 מורים נרשמו ללמד את קורסי ההקדמה שלנו
+    ב- [Code Studio] (%{code_studio_url}) ו -19,177,297 תלמידים נרשמים.
+  about_page_section_table_cell_4_1: הכנת מורים חדשים במדעי המחשב
+  about_page_section_table_cell_4_2: הכנו יותר מ-106,000 מורים חדשים ללמד מדעי המחשב
+    בכיתות י"א. למד על [תוכניות הלמידה המקצועיות שלנו.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: שנה את תכנית הלימודים במחוז בית הספר
+  about_page_section_table_cell_5_2: שיתפנו פעולה עם [180+ ממחוזות בתי הספר הגדולים
+    ביותר] (%{schoold_disctrict_url}) ו -60 שותפים אזוריים כדי [להוסיף מדעי המחשב
+    לתכנית הלימודים בבית הספר] (%{cs_curriculum_url}). [למד כיצד להפוך לשותף אזורי.]
+    (%{regional_partner_url})
+  about_page_section_table_cell_6_1: הגדרת מדיניות לתמיכה במדעי המחשב
+  about_page_section_table_cell_6_2: '[מדיניות שונתה ב -50 מדינות ארה"ב] (%{states_url})
+    כדי לקבוע תקני חינוך במדעי המחשב, לגרום לקורסי מדעי המחשב להיחשב לקראת סיום התיכון
+    וכו'' [(פרטים)] (%{details_url})'
+  about_page_section_table_cell_7_1: הפוך לגלובלי
+  about_page_section_table_cell_7_2: הקורסים שלנו זמינים ביותר מ -67 שפות, המשמשים
+    ב -180+ מדינות.
+  about_page_section_table_under_label: 'מקור: פעילות סטודיו קוד ו [סקרים של מחנכים
+    משתתפים] (%{educators_url})'
+  about_page_section_title_3: מידע נוסף, היסטוריה ופילוסופיה
+  about_page_section_more_description_1: 'בשנת 2013, Code.org הושק על ידי אחים תאומים
+    [Hadi](%{hadi_url}) ו- [עלי פרטובי] (%{partovi_url}) עם () קידם [video]מד%{video_url}עי
+    המחשב. הסרטון הזה הפך ל- #1 ביוטיוב למשך יום אחד, ו -15,000 בתי ספר פנו אלינו
+    לעזרה. מאז, התרחבנו מצוות מתנדבים מפותח לבניית ארגון מלא התומך בתנועה עולמית.
+    אנו מאמינים כי חינוך איכותי במדעי המחשב צריך להיות זמין לכל ילד, לא רק למעטים
+    ברי מזל.'
+  about_page_section_more_description_2: 'כדי לתמוך במטרה שלנו, אנו עובדים על פני
+    קשת החינוך: עיצוב קורסים משלנו או שותפות עם אחרים, הכשרת מורים, שותפות עם מחוזות
+    בתי ספר גדולים, עזרה בשינוי מדיניות ממשלתית, הרחבה בינלאומית באמצעות שותפויות
+    ושיווק לשבירת סטריאוטיפים.'
+  about_page_section_more_description_3: עבודתנו מתבססת על [עשרות שנים של מאמץ, על
+    ידי אינספור ארגונים ויחידים] (%{efforts_url}) שעזרו להקים, לממן ולהפיץ חינוך למדעי
+    המחשב. אנו מודים להפיק תועלת מהעזרה הבלתי נלאית של קהילת החינוך המדעי הרחבה יותר,
+    ו [אנו מודים לכל השותפים והאנשים שתמכו בהשפעה שלנו לאורך השנים] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[ערכי הליבה והנחיות ההודעות שלנו] (%{core_url})"
+  about_page_section_more_list_3: "[תכנית הלימודים והפילוסופיה הפדגוגית שלנו] (%{curriculum_url})"
+  about_page_section_more_list_4: "[שיחת TEDx מאת מייסדנו האדי פרטובי על מדוע מדעי
+    המחשב הם לכולם (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: גישה מאחדת בעולם מחולק
+  about_page_section_specific_title_1: גישה מאחדת בעולם מחולק
+  about_page_section_specific_title_2: המחויבות שלנו לנגישות
+  about_page_section_specific_title_3: המחויבות שלנו לתכנית לימודים בחינם וטכנולוגיית
+    קוד פתוח
+  about_page_section_specific_title_4: קואליציית הסברה של Code.org
+  about_page_section_specific_title_5: מסגרת מדעי המחשב K-12
+  about_page_section_specific_title_6: תורמי קוד.ORG
+  about_page_section_specific_title_7: עקבו אחרינו
+  about_page_section_specific_title_8: טווח ההגעה הבינלאומי של Code.org
+  about_page_section_specific_description_1: התפקיד הגלובלי של Code.org בתנועה למדעי
+    המחשב K-12 אפשרי רק מכיוון שאנו משתמשים בגישה מאחדת בין בעלי עניין מגוונים ולעתים
+    קרובות מחולקים. בתקופה של קיטוב הולך וגובר, הרעיון של הגדלת ההזדמנויות לסטודנטים
+    מאחד אנשים מכל הקשת הפוליטית. חברי הצוות, התלמידים, המורים והתומכים של Code.org
+    הם בעלי נקודות מבט מגוונות ומשונות, וכולם מוזמנים במשימה שלנו. [קרא עוד.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org מאמינה שמדעי המחשב הם יסוד עבור
+    כל התלמידים ואנו מחויבים לשוויון, גישה והזדמנות בארגון שלנו [values.](%{values_url})
+    כדי להשיג מטרה זו, אנו פועלים לזהות ולחסל חסמים המונעים הכללה והשתתפות מלאה של
+    תלמידים ומחנכים עם מוגבלות. למידע נוסף על המאמצים שלנו, עיין בהצהרת הנגישות שלנו%{accessibility_url}.
+  about_page_section_specific_description_3: כל משאבי הלימודים וההדרכות שאנו כותבים
+    יהיו לנצח חופשיים לשימוש וברישיון גלוי תחת רישיון [Creative Commons] (%{commons_url}),
+    המאפשר לאחרים לייצר משאבי חינוך נגזרים למטרות לא מסחריות. אם אתה מעוניין ברישוי
+    החומרים שלנו למטרות מסחריות, [צור קשר] (%{contact_us_url}). הקורסים שלנו מתורגמים
+    לשימוש עולמי או על ידי דוברי שפות שונות. הטכנולוגיה שלנו מפותחת כפרוייקט קוד פתוח%{open_source_url}.
+  about_page_section_specific_description_4: '[Code.org Advocacy Coalition] (%{advocacy_url})
+    היא קואליציה דו-מפלגתית של תאגידים ועמותות הפועלות יחד כדי לסייע בהקמת מדיניות
+    פדרלית ומדינית בארה"ב להרחיב ולקיים גישה למדעי המחשב K-12 ולהרחיב את ההשתתפות
+    והמגוון בתחום. אנו מפגישים [מנהיגים פוליטיים רפובליקנים ודמוקרטים] (%{leaders_url})
+    במטרה משותפת התומכת בהרחבת הגישה והשתתפות במדעי המחשב K-12.'
+  about_page_section_specific_description_5: Code.org הוא חבר בוועדת ההיגוי שעזרה
+    בהקמת [מסגרת מדעי המחשב K-12] (%{framework_url}) - מדריך ברמה גבוהה למדינות, מחוזות
+    וארגונים המיישמים חינוך למדעי המחשב. המסגרת זכתה לתמיכתם של מאות אקדמאים, מחנכים
+    K-12, חברות תוכנה, עמותות ומדינות.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[הירשם לקבלת עדכוני סטטוס] (%{sign_up_url})
+    על ההתקדמות בתנועה למדעי המחשב K-12 ועל העבודה של Code.org. או עקוב אחר Code.org
+    ברשתות החברתיות:"
+  about_page_section_specific_description_8: מעל 40% מתעבורת האתר שלנו מגיעה מחוץ
+    לארצות הברית ומספר זה ממשיך לטפס. על מנת להרחיב את הגישה העולמית למדעי המחשב,
+    הצוות שלנו עובד בשיתוף פעולה הדוק עם [יותר ממאה שותפים בינלאומיים] (%{partners_url}),
+    עוזר להם לקדם את שעת הקוד, לתמוך בשינוי מדיניות ולהכשיר מורים. אנו הופכים את מדעי
+    המחשב לחלק משיח החינוך הבינלאומי על ידי שיתוף פעולה עם משרדי חינוך מרחבי העולם
+    ועבודה עם ארגונים בינלאומיים כמו הארגון לשיתוף פעולה ופיתוח כלכלי וארגון החינוך,
+    המדע והתרבות של האו"ם.
+  about_page_section_donors_description_1: Code.org® היא עמותה ציבורית רשומה של 501c3,
+    עם תמיכה מהציבור הרחב. אנו אסירי תודה על התמיכה הנדיבה שקיבלנו [יחידים וארגונים]
+    (%{individuals_url}) התומכים בחזון שלנו.
+  about_page_section_donors_description_2: הישגי קודים (למעלה) מדגימים את יכולתנו
+    למנף את הדולרים האלה לתוצאות חזקות. אך בהתחשב בשאיפה שלנו ללא מטרות רווח שלכל
+    ילד בכל בית ספר תהיה גישה למדעי המחשב - להפוך לאזרחים בעלי ידע קרוא וכתוב בעולם
+    הדיגיטלי של ימינו ולבדוק את האינטרסים שלהם לחקור את מדעי המחשב כקריירה נוספת -
+    יש לנו דרך ארוכה ללכת כדי לעמוד ביעד גיוס תרומות שתתמוך בחזון זה.
+  about_page_donors_link_1: תרמו תרומה
+  about_page_donors_link_2: "[ראה רשימת התורמים שלנו] (%{donors_url})"
   language_code:
     ar: ערבית
     az: אזרבייז'ני

@@ -5,12 +5,6 @@
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Een variabele declareren"
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Creëer een interactieve animatie met behulp van sprites en events."
-        },
         "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
           "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
         },
@@ -18,6 +12,21 @@
           "description": "Creëer een interactieve animatie met behulp van sprites en events."
         },
         "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "Een variabele declareren"
+        },
+        "33f3d6db-54e2-4c96-b11a-511672ae3be9": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
+          "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
+        },
+        "23d3203d-fd55-4994-a5ea-db01f6e5ea8f": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "d943af7f-1329-432c-95fe-99a27ef065a7": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "10c60f4a-ddfe-4828-8f53-36292496b61b": {
           "description": "Een variabele declareren"
         },
         "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
@@ -178,15 +187,6 @@
         },
         "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
           "description": "Identificeer plaatsen waar je naartoe kunt gaan om informatica en coderen verder te leren"
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": ""
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Veranderingen in de stemming van een gedicht illustreren."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
         }
       }
     }

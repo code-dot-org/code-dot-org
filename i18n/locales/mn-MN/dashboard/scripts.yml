@@ -142,7 +142,7 @@ mn:
           description_short: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
           student_description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
         mc:
-          title: Майнкрафт Кодын цаг
+          title: Minecraft адал явдал эрэгч
           description: Энэхүү Minecraft ертөнцөөр дамжуулан Стив эсвэл Алексийг адал явдалд оруулахын тулд кодын блокуудыг ашиглаарай.
           description_short: Кодоор дамжуулж Майнкрафтын ертөнцийг нээгээрэй.
           student_description: Энэхүү Minecraft ертөнцөөр дамжуулан Стив эсвэл Алексийг адал явдалд оруулахын тулд кодын блокуудыг ашиглаарай.
@@ -2803,6 +2803,8 @@ mn:
               display_name: Хичээлүүд
             lessonGroup-3:
               display_name: Төсөл
+        dance-unplugged:
+          title: Бүжгийн үдэшлэгийг салгав
         spelling-bee:
           title: Зөв бичих дүрэм заах зөгий
         csd-post-survey-2021:
@@ -3824,3 +3826,21 @@ mn:
           title: Модуль 7
         vpl-csd-2023-m8:
           title: Модуль 8
+        virtual-pl-csa-summer-2024-day1:
+          title: 1-р өдөр
+        virtual-pl-csp-summer-day2:
+          title: 2-р өдөр
+        virtual-pl-csp-summer-day3:
+          title: 3-р өдөр
+        virtual-pl-csp-summer-day4:
+          title: 4-р өдөр
+        virtual-pl-csa-summer-day2:
+          title: 2-р өдөр
+        virtual-pl-csa-summer-day3:
+          title: 3-р өдөр
+        virtual-pl-csa-summer-day4:
+          title: 4-р өдөр
+        virtual-pl-csa-summer-day1:
+          title: 1-р өдөр
+        virtual-pl-csp-summer-day1:
+          title: 1-р өдөр

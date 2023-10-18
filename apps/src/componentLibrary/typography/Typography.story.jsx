@@ -113,6 +113,11 @@ const otherTextComponents = [
     children: 'This is a Typography Component. (strong)',
   },
   {
+    semanticTag: 'strong',
+    visualAppearance: 'extra-strong',
+    children: 'This is a Typography Component. (extra-strong)',
+  },
+  {
     semanticTag: 'figcaption',
     visualAppearance: 'figcaption',
     children: 'This is a Typography Component. (figcaption)',

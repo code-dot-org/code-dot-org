@@ -201,6 +201,7 @@ Dashboard::Application.routes.draw do
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
+      get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
       omniauth_callbacks: 'omniauth_callbacks',
@@ -334,8 +335,6 @@ Dashboard::Application.routes.draw do
         delete '/:filename', to: 'level_starter_assets#destroy'
       end
     end
-
-    resources :rubrics, only: [:edit, :new]
 
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
@@ -609,6 +608,7 @@ Dashboard::Application.routes.draw do
 
     post '/report_abuse', to: 'report_abuse#report_abuse'
     get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    post '/report_abuse_pop_up', to: 'report_abuse#report_abuse_pop_up'
 
     get '/too_young', to: 'too_young#index'
 
@@ -921,6 +921,14 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
+
         resources :ml_models, only: [:show, :destroy] do
           collection do
             get 'names'
@@ -1039,6 +1047,22 @@ Dashboard::Application.routes.draw do
     end
 
     resources :code_review_comments, only: [:create, :update, :destroy]
+
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        post 'run_ai_evaluations_for_user'
+        post 'submit_evaluations'
+      end
+    end
+
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
+      collection do
+        get :get_evaluation
+        post :get_or_create_evaluation
+      end
+    end
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 

@@ -20,6 +20,12 @@
         "csd3-2019/Variables": {
           "name": "Variables"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Loops"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
         "csd3-2021/Variables": {
           "name": "Variables"
         },
@@ -32,11 +38,11 @@
         "csd3-2022/Text": {
           "name": "Text"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd3-2023/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2023/Text": {
+          "name": "Text"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Introduction to Computer Science"

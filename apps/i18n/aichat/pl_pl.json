@@ -1,6 +1,14 @@
 {
   "aichatWorkspaceHeader": "Czat AI",
+  "allMessagesSentAreRecorded": "Wszystkie wiadomości wysyłane do AI Chat są rejestrowane.",
+  "anythingPersonalCanNotBeSubmitted": "Aby chronić Twoją prywatność, nie należy przesyłać do czatu AI żadnych informacji uważanych za dane osobowe (imię i nazwisko, numer telefonu, adres itp.).",
   "continue": "Kontynuuj",
+  "inappropriateMessagesAreFlagged": "Nieodpowiednie wiadomości zostaną oznaczone i Twój nauczyciel zostanie powiadomiony.",
   "inappropriateUserMessage": "Ta wiadomość została oznaczona jako nieodpowiednia.",
-  "tooPersonalUserMessage": "Ta wiadomość została oznaczona jako zbyt osobista."
+  "tooPersonalUserMessage": "Ta wiadomość została oznaczona jako zbyt osobista.",
+  "userChatMessagePlaceholder": "Dodaj wiadomość na czacie...",
+  "waitingForChatResponse": "Oczekanie na odpowiedź...",
+  "warningModalHeader": "Pamiętaj, aby rozmawiać odpowiedzialnie!",
+  "warningModalOkButtonText": "Zacznij rozmawiać",
+  "whatIsPersonalInformation": "Co jest uważane za dane osobowe?"
 }

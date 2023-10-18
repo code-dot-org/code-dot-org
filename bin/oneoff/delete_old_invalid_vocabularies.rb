@@ -2,7 +2,7 @@
 
 require_relative '../../dashboard/config/environment'
 
-def main(command=nil, *args)
+def main(command = nil, *args)
   valid, invalid = Vocabulary.all.partition(&:valid?)
   puts "total Vocabulary objects: #{Vocabulary.all.count}"
   puts "    valid: #{valid.count}"

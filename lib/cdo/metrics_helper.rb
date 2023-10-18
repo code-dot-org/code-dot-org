@@ -19,7 +19,7 @@ module Metrics
   # @param metadata [String] Data relevant to the specific metric. For example, the commit hash for DTT metrics.
   # @param value [Float] Numerical value relevant to the specific metric. See constants above for examples.
   # @param timestamp [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
-  def self.write_metric(name, metadata, value, timestamp=nil)
+  def self.write_metric(name, metadata, value, timestamp = nil)
     return if rack_env == :production
     dataset = devinternal_db[:metrics]
     data = {name: name, metadata: metadata, value: value}

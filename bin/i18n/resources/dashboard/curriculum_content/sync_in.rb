@@ -1,88 +1,101 @@
-require 'fileutils'
+#!/usr/bin/env ruby
+
 require 'json'
 
 require_relative '../../../../../dashboard/config/environment'
+require_relative '../../../../../dashboard/lib/script_constants'
+require_relative '../../../../../dashboard/lib/services/i18n/curriculum_sync_utils/serializers'
 require_relative '../../../i18n_script_utils'
 require_relative '../../../redact_restore_utils'
+require_relative '../../../utils/sync_in_base'
 require_relative '../curriculum_content'
 
 module I18n
   module Resources
     module Dashboard
       module CurriculumContent
-        module SyncIn
-          def self.perform
-            puts 'Sync in curriculum content'
-            serialize
-            redact
-          end
+        class SyncIn < I18n::Utils::SyncInBase
+          def process
+            progress_bar.total = translatable_units.size
 
-          # Serialize all curriculum data to the I18N source directory.
-          #
-          # Relies heavily on the custom serializer logic defined in
-          # curriculum_sync_utils/serializers to generate a hash of results with
-          # translator-readable keys, rather than the basic array that is produced by
-          # default.
-          def self.serialize
-            ::Unit.find_each do |script|
-              next unless script.is_migrated?
-              next unless ::ScriptConstants.i18n? script.name
+            # Serialize all curriculum data to the I18N source directory.
+            #
+            # Relies heavily on the custom serializer logic defined in
+            # curriculum_sync_utils/serializers to generate a hash of results with
+            # translator-readable keys, rather than the basic array that is produced by
+            # default.
+            translatable_units.find_each do |unit|
+              next unless unit.is_migrated?
 
-              # prepare data
-              # Select only lessons that pass `numbered_lesson?` for consistent `relative_position` values
-              # throughout our translation pipeline
-              data = ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.new(script, scope: {only_numbered_lessons: true}).as_json.compact
-              # The JSON object will have the script's crowdin_key as the top level key, but we don't
-              # need that, so we will discard the crowdin_key and set data to be the object it is
-              # pointing to.
-              data = data.first[1] unless data.first.nil?
+              name = "#{unit.name}.json"
+              i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, get_unit_subdirectory(unit), name)
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, name, i18n_source_file_path)
 
-              # we expect that some migrated scripts won't have any lesson plan content
-              # at all; that's fine, we can just skip those.
-              data.compact_blank! # don't want any empty values
-              next if data.blank?
+              i18n_data = i18n_data_of(unit)
+              next if i18n_data.blank?
 
-              # write data to path
-              name = "#{script.name}.json"
-              path = File.join(I18N_SOURCE_DIR_PATH, get_script_subdirectory(script), name)
-              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, name, path)
-
-              FileUtils.mkdir_p(File.dirname(path))
-              File.write(path, JSON.pretty_generate(data))
+              I18nScriptUtils.write_file(i18n_source_file_path, JSON.pretty_generate(i18n_data))
+              redact_file_content(i18n_source_file_path)
+            ensure
+              progress_bar.increment
             end
           end
 
-          def self.redact
-            originals_dir = I18N_SOURCE_DIR.sub('source', 'original')
+          private
 
-            Dir[File.join(I18N_SOURCE_DIR_PATH, '**/*.json')].each do |file|
-              original_file = file.sub(I18N_SOURCE_DIR, originals_dir)
-              FileUtils.mkdir_p(File.dirname(original_file))
-              FileUtils.cp(file, original_file)
+          def translatable_units
+            # Eager loads Unit resources needed for Curriculum i18n data serialization,
+            # see: Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer
+            @translatable_units ||= Unit.where(name: ScriptConstants::TRANSLATEABLE_UNITS).includes(
+              :resources, :student_resources, course_version: :reference_guides,
+              lessons: [:objectives, :resources, :vocabularies, {lesson_activities: :activity_sections}],
+            )
+          end
 
-              redacted = RedactRestoreUtils.redact_file(file, REDACT_RESTORE_PLUGINS)
-              File.write(file, JSON.pretty_generate(redacted))
-            end
+          def i18n_data_of(unit)
+            # Select only lessons that pass `numbered_lesson?` for consistent `relative_position` values
+            # throughout our translation pipeline
+            i18n_data = UNIT_SERIALIZER.new(unit, scope: {only_numbered_lessons: true}).as_json.compact
+
+            # The JSON object will have the unit's crowdin_key as the top level key, but we don't
+            # need that, so we will discard the crowdin_key and set data to be the object it is
+            # pointing to.
+            i18n_data = i18n_data.first[1] unless i18n_data.first.nil?
+
+            # we expect that some migrated units won't have any lesson plan content
+            # at all; that's fine, we can just skip those.
+            i18n_data.compact_blank! # don't want any empty values
+          end
+
+          def redact_file_content(i18n_source_file_path)
+            i18n_original_file_path = i18n_source_file_path.sub(I18N_SOURCE_DIR_PATH, I18N_BACKUP_DIR_PATH)
+            I18nScriptUtils.copy_file(i18n_source_file_path, i18n_original_file_path)
+
+            redacted = RedactRestoreUtils.redact_file(i18n_source_file_path, REDACT_RESTORE_PLUGINS)
+            I18nScriptUtils.write_file(i18n_source_file_path, JSON.pretty_generate(redacted))
           end
 
           # Helper method to get the desired destination subdirectory of the given
-          # script for the sync in. Note this may be a nested directory like "2021/csf"
-          def self.get_script_subdirectory(script)
-            # special-case Hour of Code scripts.
-            return 'Hour of Code' if Unit.unit_in_category?('hoc', script.name)
+          # unit for the sync in. Note this may be a nested directory like "2021/csf"
+          def get_unit_subdirectory(unit)
+            # special-case Hour of Code units.
+            return 'Hour of Code' if Unit.unit_in_category?('hoc', unit.name)
 
-            # catchall for scripts without courses
-            return 'other' if script.get_course_version.blank?
+            # catchall for units without courses
+            return 'other' if unit.get_course_version.blank?
 
-            # special-case CSF; we want to group all CSF courses together, even though
-            # they all have different course offerings.
-            return File.join(script.get_course_version.key, 'csf') if script.csf?
+            # special-case CSF and CSC; we want to group all CSF courses together and all CSC courses together,
+            # even though they all have different course offerings.
+            return File.join(unit.get_course_version.key, 'csf') if unit.csf?
+            return File.join(unit.get_course_version.key, 'csc') if unit.csc?
 
             # base case
-            return File.join(script.get_course_version.key, script.get_course_version.course_offering.key)
+            File.join(unit.get_course_version.key, unit.get_course_version.course_offering.key)
           end
         end
       end
     end
   end
 end
+
+I18n::Resources::Dashboard::CurriculumContent::SyncIn.perform if __FILE__ == $0

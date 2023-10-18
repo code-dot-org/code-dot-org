@@ -5,36 +5,40 @@ tr:
   language: İngilizce
   front_title: Tarihteki en büyük eğitim etkinliğine katıl, %{campaign_date}
   coming_soon: Çok Yakında
-  campaign_date_start_short: 5 Ara.
-  campaign_date_start_long: 5 Aralık
-  campaign_date_short: 5-11 Aralık
-  campaign_date_full: 5-11 Aralık
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 Aralık, 2022
-  nonus_campaign_date_start_short: 1 Ekim
+  campaign_date_start_short: 4 Ara.
+  campaign_date_start_long: 4 Aralık
+  campaign_date_short: 4-10 Aralık
+  campaign_date_full: 4-10 Aralık
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 Aralık, 2023
+  nonus_campaign_date_start_short: 1 Eki.
   nonus_campaign_date_start_long: 1 Ekim
   nonus_campaign_date_short: 1 Eki. - 18 Ara.
   nonus_campaign_date_full: 1 Ekim - 18 Aralık
-  nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
-  latam_campaign_date_start_short: 1 Ekim
+  nonus_campaign_date_year: '2023'
+  nonus_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
+  latam_campaign_date_start_short: 1 Eki.
   latam_campaign_date_start_long: 1 Ekim
   latam_campaign_date_short: 1 Eki. - 18 Ara.
   latam_campaign_date_full: 1 Ekim - 18 Aralık
-  latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
+  latam_campaign_date_year: '2023'
+  latam_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
   europe_campaign_date_start_short: 10 Eki.
   europe_campaign_date_start_long: 10 Ekim
   europe_campaign_date_short: 10-25 Eki.
   europe_campaign_date_full: 10-25 Ekim
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 10-25 Ekim 2020
-  africa_campaign_date_start_short: 1 Ekim
+  africa_campaign_date_start_short: 1 Eki.
   africa_campaign_date_start_long: 1 Ekim
   africa_campaign_date_short: 1-31 Eki.
   africa_campaign_date_full: 1-31 Ekim
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1-31 Ekim 2020
+  hoc2023_header: Yapay Zeka ile Yaratıcılık
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Ne yaratacaksınız?
+  hoc2023_social_creativity_with_ai_desc: Yapay zekayı keşfetmek ve öğrenmek için
+    bilgisayar bilimini kullanın!
   hoc2022_header: Keşfet, Oyna, Yarat!
   social_hoc2022_explore_play_create: Keşfetmek, oynamak ve yaratmak için bilgisayar
     bilimini kullanın!
@@ -185,6 +189,32 @@ tr:
     bir Müfredat Kataloğu ve hepsini bulmanıza yardımcı olmak için yeniden tasarlanmış
     Öğretim sayfası!
   in_partnership_with: Ile ortaklaşa
+  shop_code_dot_org_heading: Mağaza Code.org
+  shop_code_dot_org_desc: İşimizi destekleyin ve hareketi gururla giyin. Şapkalarımız
+    Başkan Obama ve ünlüler tarafından da giyildi.
+  spread_the_word_heading: Herkese duyurun
+  spread_the_word_desc: Code.org'u ağınızla paylaşarak etkimizi artırın. Sosyal medyadan
+    e-posta güncellemelerine kadar daha fazla eğitimciye, öğrenciye ve savunucuya
+    ulaşmamıza nasıl yardımcı olabileceğinizi keşfedin.
+  follow_us_heading: Bizi sosyal medyada takip edin
+  follow_us_desc: Sosyal medyada bizimle güncel kalın ve haberdar olmak ve farkındalığı
+    artırmaya yardımcı olmak için yayınlarımızı ağınızla paylaşın.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tablet
+  device_laptop: dizüstü bilgisayar
+  device_desktop_computer: Masaüstü Bilgisayar
+  device_mobile_device: Mobil Cihaz
+  subscribe_to_emails_heading: E-postalara abone olun
+  subscribe_to_emails_desc: Posta listemiz aracılığıyla üç aylık güncellemeler aracılığıyla
+    Code.org'da ve bilgisayar bilimi eğitiminde neler olup bittiğini okuyun.
+  subscribe_to_emails_intl: Uluslararası güncellemelere abone olun
+  promote_code_dot_org_heading: Code.org'u tanıtın
+  promote_code_dot_org_desc: İstatistikler, alıntılar ve videolar yardımıyla bölgenizdeki
+    bilgisayar bilimini tanıtın.
   afe_partnership_logo_alt: Amazon Geleceğin Mühendisi logosu
   afe_partnership_thanks_desc: Amazon Future Engineer, düşük gelirli ve diğer dezavantajlı
     çocuklara ve gençlere bilgisayar bilimlerinde kariyer yapmaları için ilham vermek,
@@ -194,18 +224,57 @@ tr:
   grade_level_label_elementary: İlkokul
   grade_level_label_middle: Ortaokul
   grade_level_label_high: Lise
+  curricula_title_elementary: İlkokul Müfredatı
+  curricula_desc_elementary: Sizi ilkokul öğrencilerinizle bilgisayar bilimlerini
+    keşfetmeye davet eden eğlenceye, ücretsiz kurslara ve etkinliklere göz atın.
+  curricula_title_middle: Ortaokul Müfredatı
+  curricula_desc_middle: Sizin ve ortaokul öğrencilerinizin bilgisayar bilimlerini
+    birlikte keşfetmesini sağlayan ilgi çekici tekliflere göz atın.
+  curricula_title_high: Lise Müfredatı
+  curricula_desc_high: Sizi ve lise öğrencilerinizi bilgisayar bilimlerinin derinliklerine
+    inmeye davet eden ilgi çekici kurslara ve etkinliklere göz atın.
+  for_administrators_heading: Yöneticiler için
+  for_administrators_desc: Bilgisayar bilimlerini müfredatlarına zaten dahil etmiş
+    binlerce okula katılın.
+  for_parents_heading: Ebeveynler için
+  for_parents_desc: Öğrencinizin okulunu bilgisayar bilimleri eğitimi sunmaya veya
+    genişletmeye teşvik etmeye yardımcı olabilirsiniz.
+  for_educators_heading: Eğitmenler için
+  for_educators_desc: Profesyonel öğrenme atölyelerimizle bugün öğretmeye başlayın
+    - bilgisayar bilimi deneyimi gerekmez -.
   students_label: Öğrenciler
   teachers_label: Öğretmenler
+  educators_label: Eğitimciler
+  companies_label: Şirketler
+  districts_label: Bölgeleri
+  school_assemblies_label: Okul Meclisleri
+  parents_label: Ebeveynler
+  public_officials_label: Kamu Görevlileri
+  volunteers_label: Gönüllüler
+  virtual_events_label: Sanal Etkinlikler
   teacher_label_csf: CS Temelleri Öğretmeni
   teacher_label_csd: Bilgisayar Bilimi Keşifleri Öğretmeni
   teacher_label_csp: CS İlkeleri Öğretmeni
   teacher_label_csc: CS Bağlantıları Öğretmeni
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Öğretmen Forumu
+  teacher_forum_desc: Diğer eğitimcilerden tavsiye, içgörü ve destek almak için Hour
+    of Code Öğretmen Forumu'nu ziyaret edin.
   required_materials: 'Gerekli Malzemeler:'
   optional_materials: 'Opsiyonel Malzemeler:'
+  call_to_action_hold_an_event: Bir etkinlik düzenleyin
+  call_to_action_register_event: Etkinliğinizi kaydedin
+  call_to_action_select_activity: Bir etkinlik seçin
+  call_to_action_start_activity: Bir aktivite başlatın
+  call_to_action_get_certificates: Sertifika alın
+  call_to_action_go_beyond_hoc: Kodlama Saati'nin ötesine geçin
+  call_to_action_view_promo_resources: Promosyon kaynaklarını görüntüleyin
   call_to_action_learn_more: Daha fazla bilgi edinin
   call_to_action_watch_now: Şimdi izle
   call_to_action_try_activity: Aktiviteyi deneyin
+  call_to_action_try_activities: Aktiviteleri deneyin
+  call_to_action_explore_activities: Etkinlikleri keşfedin
+  call_to_action_explore_ai: Yapay zekayı keşfedin
   call_to_action_explore_unit: Üniteyi keşfedin
   call_to_action_explore_curriculum: Müfredatı keşfedin
   call_to_action_explore_curriculum_options: Müfredat seçeneklerini keşfedin
@@ -220,6 +289,15 @@ tr:
   call_to_action_explore_choice_level: Örnek seçim düzeyini keşfedin
   call_to_action_explore_collection: Koleksiyonu keşfedin
   call_to_action_explore_unplugged_lesson: Takılı olmayan dersleri keşfedin
+  call_to_action_explore_csf: CS Temellerini Keşfedin
+  call_to_action_explore_csd: CS Keşiflerini Keşfedin
+  call_to_action_explore_csp: CS İlkelerini Keşfedin
+  call_to_action_explore_csc: CS Bağlantılarını Keşfedin
+  call_to_action_explore_csa: AP® Computer Science A'yı Keşfedin
+  call_to_action_explore_csa_short: AP® CSA'yı keşfedin
+  call_to_action_explore_maker: Maker müfredatını keşfedin
+  call_to_action_explore_hoc: Hour of Code eğitimlerini keşfedin
+  call_to_action_explore_hoc_short: Hour of Code'u Keşfedin
   call_to_action_try_app_lab: Uygulama Laboratuvarı'nı deneyin
   call_to_action_view_lesson_plan: Ders planını görüntüleyin
   call_to_action_self_paced_pl: Kendi hızınızda profesyonel öğrenmeye başlayın
@@ -243,12 +321,14 @@ tr:
   call_to_action_resources_tools: Programlama araçlarını deneyin
   call_to_action_sign_up_free: Ücretsiz kaydolun
   call_to_action_explore_ai_resources: Yapay zeka kaynaklarını keşfedin
+  call_to_action_explore_ai_curricula: Yapay zeka müfredatını keşfedin
   call_to_action_explore_curriculum_catalog: Müfredat Kataloğunu keşfedin
   call_to_action_see_full_curriculum_catalog: Tüm Müfredat Kataloğunu görün
   call_to_action_find_self_paced_modules: Kendi temponuzda ilerleyebileceğiniz modüller
     bulun
   call_to_action_join_teacher_forums: Öğretmen forumlarına katılın
   call_to_action_explore_teacher_forums: Öğretmen forumlarını keşfedin
+  call_to_action_explore_teacher_forum: Öğretmen forumunu keşfedin
   call_to_action_explore_career_resources: Kariyer kaynaklarını keşfedin
   call_to_action_watch_videos: Video izleyin
   call_to_action_download_posters: Poster indirin
@@ -263,6 +343,39 @@ tr:
   call_to_action_learn_about_approach: Yaklaşımımız hakkında daha fazla bilgi edinin
   call_to_action_try_java_lab: Java Lab'i deneyin
   call_to_action_notify_available: Uygun olduğunda bana haber ver
+  call_to_action_register_early_access: Erken erişim için kaydolun
+  call_to_action_open_positions: Açık pozisyonları görüntüleyin
+  call_to_action_explore_roles: Açık rolleri keşfedin
+  call_to_action_get_guide: Kılavuzu edinin
+  call_to_action_donate_to_cdo: Code.org'a Bağış Yapın
+  call_to_action_start_fundraiser: Bir bağış toplama etkinliği başlatın
+  call_to_action_view_donation_policy: Bağış politikasını görüntüleyin
+  call_to_action_view_donate_bitpay: BitPay ile Bağış Yapın
+  call_to_action_make_a_donation: Bağış yap
+  call_to_action_other_ways_to_give: Vermenin diğer yolları
+  call_to_action_become_partner_usa: Amerika Birleşik Devletleri ortağı olun
+  call_to_action_become_partner_intl: Uluslararası bir ortak olun
+  call_to_action_become_a_volunteer: Gönüllü ol
+  call_to_action_start_translating: Çevirmeye başla
+  call_to_action_learn_about_advocacy: Savunuculuğumuz hakkında bilgi edinin
+  call_to_action_visit_store: Mağazayı ziyaret edin
+  call_to_action_view_faqs: Daha fazla SSS görüntüleyin
+  aria_label_call_to_action_hoc_how_to_educators: Eğitimciler için nasıl yapılır kılavuzunu
+    görüntüleyin
+  aria_label_call_to_action_hoc_how_to_companies: Şirketler için nasıl yapılır kılavuzunu
+    görüntüleyin
+  aria_label_call_to_action_hoc_how_to_districts: Bölgeler için nasıl yapılır kılavuzunu
+    görüntüleyin
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Okul Meclisleri için nasıl
+    yapılır kılavuzunu görüntüleyin
+  aria_label_call_to_action_hoc_how_to_parents: Ebeveynler için nasıl yapılır kılavuzunu
+    görüntüleyin
+  aria_label_call_to_action_hoc_how_to_public_officials: Kamu Görevlileri için nasıl
+    yapılır kılavuzunu görüntüleyin
+  aria_label_call_to_action_hoc_how_to_volunteers: Gönüllüler için nasıl yapılır kılavuzunu
+    görüntüleyin
+  aria_label_call_to_action_hoc_how_to_virtual_events: Sanal Etkinlikler için nasıl
+    yapılır kılavuzunu görüntüleyin
   aria_label_call_to_action_afe: Amazon Future Engineer hakkında daha fazla bilgi
     edinin
   aria_label_call_to_action_teaching_csf: Bilgisayar Bilimi Temelleri Öğretimi profesyonel
@@ -371,8 +484,11 @@ tr:
   curriculum_name_csp: Bilgisayar Bilimi İlkeleri
   curriculum_name_csc: Bilgisayar Bilimleri Bağlantıları
   curriculum_name_csa: Bilgisayar Bilimleri A
+  curriculum_name_csa_ai: Yazılım Mühendisliği ve Bilgisayarla Görme
   curriculum_name_csc_02: Herhangi Bir Bilgisayar Bilimleri Bağlantıları Modülü
   curriculum_name_ai: Yapay Zeka ve Makine Öğrenimi
+  curriculum_name_artificial_intelligence: Yapay Zeka (AI)
+  curriculum_name_maker: İmalatçı
   curriculum_name_maker_cp: Cihazlarla Uygulama Oluşturma (Circuit Playground)
   curriculum_name_maker_microbit: Cihazlarla Uygulama Oluşturma (micro:bit)
   curriculum_name_creating_apps_with_devices: Cihazlarla Uygulama Oluşturma
@@ -383,6 +499,8 @@ tr:
   curriculum_name_interactive_animations_games: İnteraktif Animasyonlar ve Oyunlar
   curriculum_name_design_process: Tasarım Süreci
   curriculum_name_data_society: Veri ve Toplum
+  curriculum_desc_csf: Öğrencileri bilgisayar biliminin temel kavramlarıyla tanıştıran
+    ücretsiz ilköğretim müfredatı seti.
   curriculum_desc_csf_express: Bilgisayar programları oluşturmayı, problem çözme becerilerini
     geliştirmeyi ve eğlenceli zorluklarla çalışmayı öğrenin! Arkadaşlarınızla, ailenizle
     ve öğretmenlerle paylaşmak için oyunlar ve yaratıcı projeler yapın.
@@ -428,6 +546,25 @@ tr:
   curriculum_desc_creating_apps_with_devices: Fiziksel cihazların bilgi işlemdeki
     rolünü keşfedin. Donanım giriş ve çıkışlarını kullanan programlar geliştirin.
     Bu ünitenin hem micro:bit hem de Circuit Playground için bir versiyonu vardır.
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) için bu ücretsiz müfredatta
+    Java programlama dilini öğrenirken öğrencileri yazılım mühendisliği ve nesne yönelimli
+    tasarımla tanıştırın.
+  curriculum_desc_maker: Maker eğitimi, problem çözmeyi ve eleştirel düşünmeyi öğretmeye
+    yardımcı olmak için uygulamalı deneyim ve işbirliğini sınıfa davet ederek STEM'yi
+    (Bilim, Teknoloji, Mühendislik, Matematik) bir adım daha ileri götürür.
+  curriculum_desc_maker_short: Maker eğitimi, problem çözmeyi ve eleştirel düşünmeyi
+    öğretmeye yardımcı olmak için uygulamalı deneyim ve işbirliğini sınıfa davet eder.
+  curriculum_desc_csd: Esnek kurs, her birimin tek başına veya birlikte öğretilmesine
+    izin verir. Öğrencileri web siteleri, uygulamalar, animasyonlar, oyunlar ve fiziksel
+    bilgi işlem sistemleri oluşturmaya tanıtır.
+  curriculum_desc_csp: Ücretsiz, AP® CSP onaylı, öğrencileri bilgisayar biliminin
+    temel kavramlarıyla tanıştıran lise giriş kursu.
+  curriculum_desc_csa_ai_long: 'Bu iki bölümlü AP sonrası CSA modülü, lise öğrencilerine
+    GitHub ve GitHub Copilot dahil olmak üzere profesyonel yazılım geliştirme araçlarıyla
+    uygulamalı deneyim sunar ve onlara bir bilgisayarla görme programı geliştirmek
+    için gerçek dünya becerileri kazandırır. '
+  curriculum_desc_csa_ai_short: Bu post-AP® CSA modülü, lise öğrencilerine profesyonel
+    yazılım geliştirme araçlarıyla uygulamalı deneyim sunar.
   collection_hardware: Donanıma Odaklanın
   collection_hardware_desc: Öğrencilerin problemleri çözmek için verileri ve fiziksel
     cihazları kullanmalarını sağlar.
@@ -461,6 +598,7 @@ tr:
   module_label_professional_learning: 'Mesleki Öğrenme:'
   module_label_languages: 'Desteklenen Diller:'
   module_label_accessibility_features: 'Erişilebilirlik:'
+  module_label_accessibility_features_full: 'Erişilebilirlik Özellikleri:'
   module_label_educator_tool: Eğitimci aracı
   module_label_educator_course: Eğitimci kursu
   module_label_student_tool: Öğrenci aracı
@@ -468,6 +606,7 @@ tr:
   module_label_student_content_resources: İçerik ve kaynaklar
   module_label_new: Yeni
   module_label_coming_soon: Yakında geliyor
+  module_label_available_now: Şimdi Kullanılabilir
   module_label_video_series: Video serisi
   module_label_self_paced: Kendinden tempolu modül
   module_ages_5_10: 5-10
@@ -478,6 +617,8 @@ tr:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -492,11 +633,14 @@ tr:
   module_grade_9_12_teachers: 9-12 Öğretmenleri
   module_level_beginner: Acemi
   module_level_intermediate: Orta
+  module_level_advanced: Gelişmiş
   module_duration_45_mins: 45 dakika
+  module_duration_2_weeks: 2 hafta
   module_duration_1_hr: 1 saat
   module_duration_2_hrs: 2 saat
   module_duration_3_hrs: 3 saat
   module_duration_5_hrs: 5 saat
+  module_duration_5_hrs_plus: 5+ saat
   module_duration_8_hrs: 8 saat
   module_duration_20_hrs: 20 saat
   module_duration_35_hrs: 35 saat
@@ -508,6 +652,7 @@ tr:
   module_duration_school_year: Okul Yılı
   module_duration_month_quarter: Ay veya Çeyrek
   module_duration_month_semester_year: Ay, Dönem veya Yıl
+  module_duration_varies: Değişir
   module_prerequisites_none: Hiçbiri
   module_prerequisites_maker_cp: Devre Oyun Alanına Erişim
   module_prerequisites_maker_microbit: Micro:bit erişimi:bit
@@ -573,6 +718,9 @@ tr:
   heading_java_lab: Java Laboratuvarı
   heading_objects_first: Önce nesneler
   heading_these_lessons_will: 'Bu dersler:'
+  heading_explore_curriculum_catalog: Müfredat Kataloğu'ndaki tüm kurslarımızı keşfedin
+  heading_csa_ai: AP® sınavından sonra yapılacak şeyler mi arıyorsunuz?
+  heading_bring_cs_to_students: Bilgisayar bilimini öğrencilere kazandırmak
   professional_learning_section_desc: Öğretmeye hazırlanırken ihtiyacınız olan desteği
     alın. Öğretmenler onu seviyor,% 90'dan fazlası onu şimdiye kadarki en iyi mesleki
     gelişim olarak sıralıyor!
@@ -604,6 +752,23 @@ tr:
   support_and_questions_section_desc: Destek ekibimiz Code.org ile öğretime başlamakla
     ilgili tüm sorularınızı yanıtlamak için buradadır. Diğer öğretmenlere öğretmen
     forumlarımızdaki deneyimlerini de sorabilirsiniz.
+  subscribe_form_section_title: Güncellemeler için abone olun
+  subscribe_form_section_desc_csa: Code.org'un AP® Computer Science A hakkında aylık
+    e-postalar almak ve doğrudan gelen kutunuza gönderilen yararlı hatırlatıcılar,
+    ipuçları ve güncellemeler almak için kaydolun.
+  subscribe_form_section_desc_csc: Code.org'un Bilgisayar Bilimi Bağlantıları hakkında
+    aylık e-postalar almak ve doğrudan gelen kutunuza gönderilen yararlı hatırlatıcılar,
+    ipuçları ve güncellemeler almak için kaydolun.
+  subscribe_form_section_desc_csd: Code.org'un Bilgisayar Bilimi Keşifleri hakkında
+    aylık e-postalar almak ve doğrudan gelen kutunuza gönderilen yararlı hatırlatıcılar,
+    ipuçları ve güncellemeler almak için kaydolun.
+  subscribe_form_section_desc_csf: Code.org'un Bilgisayar Bilimi Temelleri hakkında
+    aylık e-postalar almak ve doğrudan gelen kutunuza gönderilen yararlı hatırlatıcılar,
+    ipuçları ve güncellemeler almak için kaydolun.
+  subscribe_form_section_desc_csp: Code.org'un Bilgisayar Bilimi İlkeleri hakkında
+    aylık e-postalar almak ve doğrudan gelen kutunuza gönderilen yararlı hatırlatıcılar,
+    ipuçları ve güncellemeler almak için kaydolun.
+  subscribe_form_section_unsubscribe: İstediğiniz zaman aboneliğinizi iptal edebilirsiniz.
   blockchain_hero_heading: Blockchain Nasıl Çalışır?
   blockchain_hero_desc: Yeni video serimiz ve beraberindeki derslerimiz olan "Blockchain
     Nasıl Çalışır" ile blockchain dünyasına dalın!
@@ -710,6 +875,9 @@ tr:
     ders, diziden tek bir video ile eşleştirilir, videolarda tanıtılan kavramların
     derinliklerine dalmak.
   ai_curriculum_btn_aria_label_04: Yapay Zekanın Nasıl Çalıştığını Keşfedin
+  ai_curriculum_grades_05: 'Sınıf Seviyeleri: 9-12'
+  ai_curriculum_btn_aria_label_05: Yazılım Mühendisliği ve Bilgisayarla Görme modülünü
+    keşfedin
   ai_carousel_heading: 'Öğretmenler Code.org ile AI hakkında ne söylüyor:'
   ai_carousel_quote_01: Bu ders aynı zamanda öğrencilerime sınıflandırma sistemlerinde
     bir fikir unsuru olduğunu görme fırsatı verdi. Daha sonra, önyargının yapay zekada
@@ -824,11 +992,21 @@ tr:
     odaklanmaktadır. Teori, pratik örnekler ve kaynakların zengin bir karışımıyla,
     eğitimcileri AI ortamında gezinmeleri ve öğrenci öğrenme deneyimlerini geliştirmeleri
     için güçlendirmeyi amaçlamaktadır.
+  ai_pl_101_resources_5: Yapay Zekaya Sorumlu Bir Yaklaşım Sağlama Rehberi
   ai_pl_101_video_desc_6: 'Büyük Dil Modelleri (ChatGPT gibi) ve Üretken Yapay Zeka
     hakkında iki yeni video içeren yapay zekadaki büyük değişiklikleri yönlendiren
     yeni teknoloji hakkında daha fazla bilgi edinin. Bu yeni teknolojilerin nasıl
     çalıştığını doğrudan uzmanlardan dinleyin: OpenAI CTO Mira Murati ve RunwayML
     CEO''su Cristóbal Valenzuela.'
+  ai_pl_101_llm_slides_title: Eğitimciler için Büyük Dil Modeli İstemleri
+  ai_pl_101_llm_slides_desc: Başlangıç seviyesinden ileri seviyeye kadar ChatGPT gibi
+    LLM'lerden mümkün olan en iyi çıktıyı elde etmek için araçlar. Sadece ayak parmaklarını
+    batıranlar için başlangıç istemleri içerir, potansiyellerini en üst düzeye çıkarmak
+    isteyenler için gelişmiş araçların yanı sıra.
+  ai_pl_101_resources_3: Öğrenci Öğrenimini Dönüştürmek İçin Yapay Zeka İstemleri
+  ai_pl_101_resources_section_title: AI hakkında daha fazla bilgi edinmek için daha
+    fazla yol
+  ai_pl_101_resources_guide: 'Refakatçi rehberi:'
   how_ai_works_hero_heading: Yapay Zeka Nasıl Çalışır
   how_ai_works_hero_desc: Video serimiz ve beraberindeki derslerimiz “AI Nasıl Çalışır”
     ile AI dünyasına dalın!
@@ -1159,19 +1337,17 @@ tr:
   teach_page_free_curriculum_desc: Maliyet konusunda endişe yaratmadan Bilgisayar
     Bilimini okulunuza taşımanızı istiyoruz. Bu nedenle müfredat tekliflerimizin her
     zaman ücretsiz olacağını taahhüt ediyoruz.
-  teach_page_free_curriculum_list_heading_01: Her sınıf seviyesi için ilgi çekici
-    müfredat
   teach_page_free_curriculum_list_desc_01: 67'den fazla dilde ücretsiz, esnek ve eğlenceli
     müfredatlar.
-  teach_page_free_curriculum_list_heading_02: Uyarlanabilir, yenilikçi müfredat
   teach_page_free_curriculum_list_desc_02: Code.org, tam yılı kapsayan müfredatlardan
     tek üniteli aktivitelere kadar her şeyi sunar. Ayrıca, en iyi uygulamaları ve
     odak alanlarını desteklemek için müfredatımızı yıllık olarak güncelliyor ve talep
     gören güncel konuları öğreten yeni teklifler oluşturuyoruz.
-  teach_page_free_curriculum_list_heading_03: Ulusal standartlara uygun yapılandırılmış
-    müfredat
   teach_page_free_curriculum_list_desc_03: Her müfredat, CSTA, Yeni Nesil Bilim Standartları
     ve Ortak Temel dahil olmak üzere en az bir ulusal standart grubuna uygundur.
+  teach_page_free_curriculum_list_desc_04: 67'den fazla dilde teklifler
+  teach_page_free_curriculum_list_desc_05: En az bir dizi ulusal standartla eşlenmiştir
+    (CSTA, NGSS ve Ortak Çekirdek dahil)
   teach_page_free_curriculum_heading_02: 'Farklı sınıf düzeyleri için müfredat tekliflerimizi
     keşfedin:'
   teach_page_resources_heading: Yolun her adımında sizi destekleyen kaynaklar
@@ -1234,8 +1410,8 @@ tr:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Uygulama Laboratuvarı
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Kolaylaştırıcı liderliğindeki
+    Atölyeler, Kendi Hızınızda Modüller
   csp_page_curriculum_glance_professional_languages: İngilizce
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1361,8 +1537,8 @@ tr:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Uygulama Laboratuvarı, Oyun Laboratuvarı, AI Laboratuvarı,
     Web Laboratuvarı
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Kolaylaştırıcı liderliğindeki
+    Atölyeler, Kendi Hızınızda Modüller
   csd_page_curriculum_glance_professional_languages: İngilizce
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1427,10 +1603,10 @@ tr:
     başka bir ağırlıkla değiştirilebileceğini unutmayın). Bu sarf malzemelerine erişiminiz
     yoksa alternatif etkinlikler mevcuttur.
   csd_page_faq_answer_04_06: Cihazlarla Uygulama Oluşturma (Seçenek A ve Seçenek B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Seçenek A: Devre Oyun Alanlarının sınıf seti. Daha fazla
+    ayrıntı için [code.org/maker/circuitplayground] () adresine bakın.%{url}'
+  csd_page_faq_answer_04_08: 'Seçenek B: Sınıf mikro:bit aygıtları kümesi. Daha fazla
+    ayrıntı için [code.org/maker/microbit] () adresine bakın.%{url}'
   csd_page_faq_answer_04_09: Boş kağıt mendil kutuları veya karton rulolar veya kazıma
     kağıdı gibi yapımcı malzemeleri
   csd_page_faq_answer_04_10: "*Not: Cihazlarla Uygulama Oluşturma biriminin iki uygulama
@@ -1438,12 +1614,12 @@ tr:
     kullananlar için. Öğretmenler, eşdeğer oldukları ve aynı içeriği kapsadıkları
     için her iki cihaz setini de satın almamalı veya her iki birim seçeneğini de öğretmemelidir."
   csd_page_faq_question_06: CS Discoveries diğer Code.org kurslarına nasıl uyar?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS Discoveries, [CS Temelleri] (%{csf_url}) kurslarımız
+    ve [CS İlkeleri] () kursumuz arasında doğal olarak uyacak şekilde tasarlanmıştır.%{csp_url}Bu
+    kursların her biri bilgisayar bilimlerine yaşa uygun bir giriş noktası olacak
+    şekilde tasarlanmış olsa da, daha önce deneyime sahip öğrenciler keşfedilecek
+    birçok yeni konu bulacak ve tanıdık konuları yeni ve daha zorlu bağlamlarda tekrar
+    gözden geçirirler.
   csc_page_top_desc: Bilgisayar bilimi (CS) ile matematik, dil sanatları, bilim ve
     sosyal bilgiler gibi diğer konular arasında bağlantı kurun.
   csc_page_intro_heading: Temel konu standartlarını ele alırken CS öğretin
@@ -1503,8 +1679,8 @@ tr:
     ve Tasarım, Uygulama Tasarımı
   csf_page_curriculum_glance_devices: Dizüstü bilgisayar, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Laboratuvarı, Oyun Laboratuvarı
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Kolaylaştırıcı liderliğindeki
+    Atölyeler, Kendi Hızınızda Modüller
   csf_page_curriculum_glance_languages: Arapça, Bahasa Endonezyaca, Katalanca, Basitleştirilmiş
     Çince, Geleneksel Çince, Çek, Fransızca, Almanca, Hintçe, İtalyanca, Japonca,
     Korece, Kannada, Malayca, Marathi, Moğolca, Lehçe, Portekizce-br, Romence, Rusça,
@@ -1556,10 +1732,10 @@ tr:
     öğretmenlere katılın. Bölgesel Ortaklarımız, bireysel öğretmenler veya okul çapında
     PD için yüksek kaliteli, bir günlük Code.org atölyeleri sunmaktadır. [Yakınınızdaki
     bir profesyonel gelişim atölyesi için kaydolun] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Atölyelerimize katılan 100.000'den fazla öğretmene katılın.
+    Atölye katılımcılarımızın çoğu, “Şimdiye kadar katıldığım en iyi mesleki gelişim”
+    diyor. Aslında, [90% Katılımcıların oranı programımızı diğer öğretmenlere tavsiye
+    eder] ()!%{rec_url}
   csf_page_faq_question_05: CS Temelleri öğretmek için önerilen zamanlama nedir?
   csf_page_faq_answer_05: Her CSF kursu 45 dakikalık dönemler için tasarlanmış 13-17
     ders içerir. Tüm öğrencilerin dersten derse öğretmen tarafından belirlenen bir
@@ -1567,9 +1743,10 @@ tr:
     hızlarında tamamlanabilirken, birlikte deneyimlenmek üzere tasarlanmış öğretmen
     liderliğindeki birçok proje seviyesi vardır..
   csf_page_faq_question_06: CS Fundamentals için hangi materyallere ihtiyacım var?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Birçok derste öğrencilere etkinlikler boyunca rehberlik
+    eden bildiriler bulunur. Bu kaynaklar dijital olarak yazdırılabilir veya atanabilir.
+    Bazı dersler tipik sınıf malzemeleri ve manipülatifleri gerektir. [Daha fazla
+    bilgi edinmek için CSF Müfredatını ziyaret edin] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1640,6 +1817,64 @@ tr:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Misyonumuzu finanse etmeye yardımcı olun
+  donate_page_top_desc: Her bağış, Code.org'un bilgisayar bilimleri eğitimine erişimi
+    genişletme misyonunu besliyor. Bağış yapmanız ve fark yaratmanız için çeşitli
+    yollar sunuyoruz.
+  donate_page_fundraise_title: Code.org için bağış toplama
+  donate_page_fundraise_desc: Code.org için para toplamaya yardımcı olun! Her okuldaki
+    her öğrenci bilgisayar bilimi öğrenme fırsatına sahip olmalıdır.
+  donate_page_other_ways_title: Vermenin diğer yolları
+  donate_page_other_ways_desc: Katkıda bulunmak için çeşitli yöntemleri keşfedin ve
+    size en uygun seçeneği bulun. Her hareket, büyük ya da küçük, misyonumuzu ileriye
+    taşıyor.
+  donate_page_501c3: Code.org, halka açık 501 (c) (3) kar amacı gütmeyen bir kuruluş
+    olarak kayıtlıdır. Code.org'a yapılan katkılar, yasaların izin verdiği ölçüde
+    vergiden düşülebilir. Code.org'un vergi kimlik numarası 46-0858543'dür.
+  donate_page_donation_policy_title: Bağış Politikamızı Anlamak
+  donate_page_donation_policy_desc: Katkılarınızı nasıl ele aldığımız ve tahsis ettiğimiz
+    hakkında bilgi edinin.
+  donate_tabs_tab_label_daf_direct: DAF Doğrudan
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Çalışan Maçı
+  donate_tabs_daf_direct_title: DAF Direct ile bağış yapın
+  donate_tabs_daf_direct_desc: Bağışçı tarafından tavsiye edilen fonunuz aracılığıyla
+    Fidelity Charitable, Schwab Charitable veya BNY Mellon ile bağış yapın ve hibe
+    önerinizi DAF Direct çevrimiçi formu aracılığıyla Code.org'a yapın.
+  donate_tabs_amazon_title: Amazon üzerinden bağış yapın
+  donate_tabs_amazon_desc: Amazon hesabınızı kullanarak doğrudan bağış yapın. Sadece
+    birkaç tıklama ile Code.org'un misyonuna sorunsuz bir şekilde katkıda bulunun
+    ve bilgisayar bilimleri eğitiminin geleceğini güçlendirin.
+  donate_tabs_bitpay_title: BitPay ile Kripto ile Bağış Yapın
+  donate_tabs_bitpay_desc: Kripto para birimi ile vermenin geleceğini kucaklayın.
+    BitPay aracılığıyla, dijital para biriminiz Code.org'un bilgisayar bilimleri eğitimini
+    genişletme çabalarını doğrudan destekleyebilir.
+  help_page_top_heading: Nasıl yardımcı olabilirsiniz
+  help_page_top_desc: Bilgisayar bilimlerini her çocuk için erişilebilir hale getirme
+    misyonumuzu destekleyin, her yerde. Çabalarınız gelecekteki yenilikçilere ilham
+    vermemize ve teknoloji eğitimi açığını kapatmamıza yardımcı oluyor.
+  help_page_top_subhead: Code.org'a bağış yapın
+  help_page_top_desc_02: Her öğrenciye bilgisayar bilimi öğrenme fırsatı vermek için
+    çalışıyoruz - hem çevrimiçi hem de okullarda, kalıcı kurslar kurduğumuz ve öğretmenleri
+    eğittiğimiz yerlerde. Bağışladığınız her dolar için, bir çocuk bilgisayar bilimine
+    tanıtıldı.
+  help_page_partners_heading: Ortak ol
+  help_page_partners_desc: Code.org, bilgisayar biliminin yerel ve sürdürülebilir
+    bir şekilde yayılmasına yardımcı olmak için diğer kar amacı gütmeyen kuruluşlarla
+    ortak olarak çalışır. Programımız hakkında daha fazla bilgi edinin.
+  help_page_volunteer_heading: Bir sınıfta gönüllü olun
+  help_page_volunteer_desc: Kodlar Saati"ni öğretmek veya yerel bir sınıfta konuk
+    konuşmacı olmak için gönüllü olun. Yakınınızdaki fırsatları duymak için kaydolun.
+  help_page_translate_heading: Tercüme etmemize yardım edin
+  help_page_translate_desc: Gönüllüler eğitimlerimizi 45'ten fazla dile çevirdi. Dünyanın
+    dört bir yanındaki öğrenciler için eğitimlerimizi genişletmeye devam etmemize
+    yardımcı olun!
+  help_page_speak_for_cs_heading: Bilgisayar bilimleri eğitimi için konuşun
+  help_page_speak_for_cs_desc: Code.org'un ABD genelindeki savunuculuk çalışmaları
+    ve eyaletlerin bilgisayar bilimini tüm öğrenciler için temel haline getirmek için
+    benimsemelerini önerdiğimiz on politika hakkında daha fazla bilgi edinin. Artı,
+    eyaletinizde değişikliği nasıl sürdüğünüzü öğrenin.
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
   hoc_live_learn_title: Canlı Kodlama Saati ile öğrenin
@@ -2061,6 +2296,13 @@ tr:
     veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
   signup_email_preference_privacy: "(Gizlilik Politikamıza bakın)"
   signup_email_preference_yes: Evet
+  signup_email_preference_yes_elementary: Evet - Bana İlkokul Kaynakları ile ilgili
+    güncellemeleri gönder
+  signup_email_preference_yes_middle: Evet - Ortaokul Kaynakları ile ilgili güncellemeleri
+    gönder
+  signup_email_preference_yes_high: Evet - Bana Lise Kaynakları ile ilgili güncellemeleri
+    gönder
+  signup_email_preference_yes_general: Evet - Bana genel güncellemeleri gönder
   signup_email_preference_no: Hayır
   signup_email_preference_error: E-posta tercihi gereklidir
   signup_multiple_event_warning: Kayıt yaptığınızda, okul ismini şehrini haritaya
@@ -13277,6 +13519,132 @@ tr:
   all: Hepsi
   dont_know: Bilmiyorum
   language_label: Dil
+  before_hoc: Kod Saati Öncesi
+  day_of_hoc: Kod Saati Günü
+  after_hoc: Kodlama Saati Sonrası
+  step_01: Adım 1
+  step_02: Adım 2
+  step_03: Adım 3
+  step_04: 4. Adım
+  step_05: Adım 5
+  step_06: Adım 6
+  step_07: Adım 7
+  step_08: 8. Adım
+  hoc_how_to_top_heading: Hour of Code rehberiniz
+  hoc_how_to_top_desc: En iyi Hour of Code deneyimi için uyarlanmış nasıl yapılır
+    kılavuzları.
+  hoc_how_to_top_view_guide: Şunun için kılavuzu görüntüle
+  hoc_how_to_nav_main_aria_label: Bir rehber seçin
+  hoc_how_to_nav_sidebar_aria_label: Kenar çubuğu gezinme
+  hoc_how_to_educators_intro_heading: Hour of Code nasıl planlanır?
+  hoc_how_to_educators_intro_desc: Hour of Code, herkesin temel bilgileri öğrenebileceğini
+    göstermek için eğlenceli eğitimler kullanan bilgisayar bilimine bir saatlik bir
+    giriş niteliğindedir. Bu yıl, hem yapay zeka (AI) hem de yapay zeka dışı bileşenleri
+    kapsayan kodlama fırsatları sunarak Kodlama Saatini yeni zirvelere taşıyoruz.
+    Siz veya öğrencileriniz ister deneyimli kodlayıcılar olun, ister hepiniz ilk bilgisayar
+    bilimi keşfinize çıkın, bu Hour of Code olağanüstü bir yolculuk vaat ediyor.
+  hoc_how_to_faq_question_prerequisites: Bir Hour of Code yapmanın ön koşulları nelerdir?
+  hoc_how_to_faq_answer_prerequisites: Kodlama Saati"nin çalıştırılması basittir -
+    yeni başlayanlar için bile. Öğrencilere yeni bir şeyler keşfetmeleri, yaratmaları
+    ve öğrenmeleri için ilham vermek için bilgisayar bilimi veya öğretimde deneyime
+    ihtiyacınız yoktur.
+  hoc_how_to_faq_question_devices: Bir Hour of Code çalıştırmak için hangi cihazlara
+    ihtiyacım var?
+  hoc_how_to_faq_answer_devices_01: 'Kullanabileceğiniz cihazlar:'
+  hoc_how_to_faq_answer_devices_02: Cihazlar sınırlıysa veya kullanılamıyorsa, herhangi
+    bir cihaz olmadan öğrenmek için%{pair_url}[eşleştirme programlamayı] (%{unplugged_url})
+    deneyin veya [takılı olmayan etkinliklerimizi] () keşfedin!
+  hoc_how_to_faq_question_volunteer: Kim gönüllü olabilir?
+  hoc_how_to_faq_answer_volunteer: Bilgisayar bilimleri eğitimi ve teknolojide artan
+    çeşitliliği konusunda tutkulu olan herkes gönüllü olabilir! Her kökenden gönüllülerin
+    katılımını görmek isteriz. Hour of Code, her yaş ve beceri seviyesi için çok çeşitli
+    aktiviteler içerir, bu nedenle gönüllü olmak için programlama uzmanı olmanıza
+    gerek yok!
+  hoc_how_to_faq_question_full_hour: Kodlama Saati tam bir saat sürecek mi?
+  hoc_how_to_faq_answer_full_hour: Birçok öğrenci etkinliklerini bir saatten daha
+    kısa sürede bitirebilecek ve sorun değil! Diğer öğrenciler etkinliklerini tamamlarken
+    öğrenciler öğrenmeye devam edebilirler.
+  hoc_how_to_faq_question_account: Öğrenciler bir hesap kullanarak giriş yapmak zorunda
+    mıdır?
+  hoc_how_to_faq_answer_account: Öğrencilerin Kodlama Saatini denemeleri için kayıt
+    veya oturum açma gerekmez. Hour of Code'a kaydolmak otomatik olarak bir Code.org
+    hesabı oluşturmaz.
+  hoc_how_to_resources_heading_educators: Eğitimciler için diğer Hour of Code kaynakları
+  hoc_how_to_resources_promo_heading: Promosyon Kaynakları
+  hoc_how_to_resources_promo_desc: Kodlama Saati'nize dikkat çekmek için ihtiyacınız
+    olan tüm kaynakları (basılı ve dijital) bulun.
+  hoc_how_to_resources_discover_heading: Etkinlikleri Keşfedin
+  hoc_how_to_resources_discover_desc: 45'ten fazla dilde her yaş için tasarlanmış
+    çok çeşitli bir saatlik eğitimleri keşfedin.
+  hoc_how_to_step_label_plan: Hour of Code programınızı nerede ve ne zaman yapacağınızı
+    planlayın
+  hoc_how_to_step_label_choose_activity: Etkinliğinizi seçin
+  hoc_how_to_step_label_test_activity: Etkinliğinizi test edin
+  hoc_how_to_step_label_register_event: Etkinliğinizi kaydedin
+  hoc_how_to_step_label_tell: Öğrencilerinize, okulunuza ve topluluğunuza söyleyin
+  hoc_how_to_step_label_get_coding: Kodlamaya başlayın!
+  hoc_how_to_step_label_celebrate: Kutlamak
+  hoc_how_to_step_label_beyond_hoc: Kodlama Saati Ötesinde
+  hoc_how_to_step_beyond_hoc_subhead: Burada bitmiyor!
+  hoc_how_to_step_beyond_hoc_desc: Bilgisayar biliminin Kodlama Saati ile bitmesi
+    gerekmez! Ebeveynlerin% 90'ı çocuklarının bilgisayar bilimini öğrenmesini isterken,
+    çoğu okul hala öğretmiyor. CS'yi bugün çocuğunuzun okuluna nasıl getireceğinizi
+    öğrenin.
+  hoc_how_to_step_01_educators_subhead: Sahip olduğunuz öğrenci ve cihaz sayısına
+    uygun bir etkinlik zamanı ve alanı seçin.
+  hoc_how_to_step_01_educators_desc_01: Kodlama Saati'nizi yapmak için hangi alanlar
+    var? Alanınızın teknik yeteneklerini ve öğrencilerinizin üzerinde çalışmasını
+    beklediğiniz cihaz türlerini düşünün. Öğrenciler, eğitimler üzerinde tek bir cihazda
+    çalışabilir, paylaşılan bir cihazı kullanarak sırayla çalışabilir veya sınıf beyaz
+    tahtasında bir öğretici programı birlikte deneyebilir. Hiçbir cihaz olmadan tamamlanabilen
+    takılı olmayan eğitimler bile var. Fişsiz seçenekler her yerde, hatta dışarıda
+    bile yapılabilir!
+  hoc_how_to_step_01_educators_desc_02: Dünyanın dört bir yanındaki insanlar, en son
+    eğitimlerin ve etkinliklerin yayınlandığı CS Eğitim %{campaign_date} Haftası sırasında
+    Kod Saati kutlamasına katılıyor. Ancak yılın herhangi bir günü bir Kodlama Saati
+    yapabilirsiniz!
+  hoc_how_to_step_02_educators_desc_01: Grubunuzun yaşına, deneyimine, ilgi alanlarına
+    ve daha fazlasına göre etkinlikleri keşfedin. Öğrencilerin kendi liderliğindeki
+    eğitimleri denemeleri popülerdir, ancak birçok etkinlik öğretmenlerin tartışmaya
+    rehberlik etmesi veya etkinliği genişletmesi için ders planları içerir.
+  hoc_how_to_step_02_educators_desc_02: Tüm öğrencileriniz için tek bir eğitim seçmek
+    isteyip istemediğinize önceden karar verin veya her çocuğun kendi öğreticisini
+    seçmesine izin verin.
+  hoc_how_to_step_02_educators_desc_03: Bu yıl, siz ve öğrencileriniz eğitimler, ders
+    planları ve yeni How AI Works video serimiz aracılığıyla [AI hakkında her şeyi
+    öğrenebilirsiniz] (%ai_url).
+  hoc_how_to_step_03_educators_desc_01: Sınıfa girmeden önce öğreticiyi kendiniz deneyin,
+    böylece soruları cevaplayabilirsiniz!
+  hoc_how_to_step_03_educators_desc_02: Ses ve videoyu desteklediklerinden emin olmak
+    için öğrencilerin bilgisayarlarında veya cihazlarında eğitimleri de test edebilirsiniz.
+    Düşük bant genişliğine sahip misiniz? Videoları sınıfın önünde göstermeyi planlayın,
+    böylece her öğrenci kendi videolarını indirmez.
+  hoc_how_to_step_03_educators_desc_03: Seçtiğiniz eğitim sesle en iyi şekilde çalışıyorsa,
+    sınıfınız için kulaklık sağlamayı düşünün veya öğrencilerden kendi kulaklıklarını
+    getirmelerini isteyin.
+  hoc_how_to_step_04_educators_desc_01: Hour of Code etkinliğinizi kaydettiğinizde,
+    başarılı bir Hour of Code ev sahipliği yapmak için haberler ve ipuçları içeren
+    faydalı e-postalar alacaksınız. Ayrıca yerel gönüllülerin okulunuzun katıldığını
+    bilmelerini de bu şekilde bildirebilirsiniz. Gönüllüler harika bir kaynaktır ve
+    sınıfınıza bilgisayar bilimi hakkında konuşabilir veya Hour of Code etkinliklerinde
+    öğrencilerinize yardımcı olabilirler..
+  hoc_how_to_step_05_educators_desc_01: Bilgisayar biliminin gerçek dünyada kullanılabileceği
+    çeşitli insanları ve yaratıcı yolları vurgulayan [ilham verici videolar] (%{videos_url})
+    paylaşarak öğrencilerinizi etkinlik için heyecanlandırın.
+  hoc_how_to_step_05_educators_desc_02: Hour of Code planlarınızı eğlenceye katılmak
+    isteyebilecek diğer öğretmenlerle paylaşın! Bu aynı zamanda okulunuzun Veli Öğretmen
+    Öğrenci Derneği'ne ulaşmak veya ebeveyn bültenlerinde paylaşmak ve çocuklarının
+    ne öğrendiğini bildirmek için harika bir fırsattır.
+  hoc_how_to_step_06_educators_desc_01: Öğrencilerinizi etkinliğe yönlendirin, belki
+    panodaki bağlantıyı paylaşarak veya sınıfınızın öğrenme yönetim sistemi aracılığıyla.
+    Öğrencileriniz zorluklarla karşılaşabilir - sorun değil! Programlamayı öğrenmek
+    yeni bir dil öğrenmek gibidir; hemen akıcı olmayacaksınız. Cevabı bilmiyorsanız,
+    birlikte çözebilirsiniz.
+  hoc_how_to_step_07_educators_desc_01: 'Başarıyı kutladığınızdan emin olun! Hour
+    of Code etkinliğinizin fotoğraflarını ve videolarını sosyal medyada paylaşın.
+    Başarınızı da vurgulayabilmemiz için #HourOfCode ve @codeorg kullanın!'
+  hoc_how_to_step_07_educators_desc_02: Ayrıca öğrencilerinizin başarılarını göstermeleri
+    için sertifika yazdırabilirsiniz!
   team_page_full_team_alt_text: Eşleşen mavi ve sarı tişörtler giyen yaklaşık 100
     Code.org çalışanı, şirketin 2022 yaz Codechella etkinliği için bir otelin konferans
     salonunda poz veriyor.
@@ -13370,6 +13738,590 @@ tr:
   accessibility_card_text_10: Code.org'un AP Computer Science Principles müfredatının,
     başlangıçta görme engelli veya görme engelli öğrencilere erişilebilirlik sağlamak
     üzere tasarlanmış kanıta dayalı bir dil olan Quorum kullanılarak uyarlanması.
+  engineering_hero_heading: Mühendislik ekibimize katılın!
+  engineering_hero_desc: Mühendislik ekibimizi genişletmeye devam ederken, Code.org'daki
+    mühendislik organizasyonumuz ve burada çalışmanın bazı benzersiz yönleri hakkında
+    daha fazla bilgi paylaşmak istedik. Rollerimizden birine başvurmakla ilgileniyorsanız,
+    senden haber almak isteriz!
+  engineering_team_title: Code.org'da mühendislik ekibiyle tanışın
+  engineering_team_card_text_1: Bu (çoğumuz) 2023 yazında yüz yüze bir araya geliyoruz!
+    Bu kalabalık, tüm öğrencilerimiz ve öğretmenlerimiz için platform oluşturmak ve
+    hizmet etmek için birlikte çalışan mühendislik ekibimiz içinde dört alt takıma
+    ayrılmıştır..
+  engineering_team_card_text_2: Rollerimizden birine başvurmakla ilgileniyorsanız,
+    senden haber almak isteriz! Açık pozisyonların bir listesini Kariyer sayfamızda
+    bulabilirsiniz.
+  engineering_our_team_title: Mühendislik ekibimiz
+  engineering_our_team_desc: 'Code.org''daki mühendislik ekibi, platformumuzun farklı
+    alanlarını oluşturan ve destekleyen dört alt ekibe ayrılmıştır:'
+  engineering_our_team_sub_title_1: Öğrenci Öğrenme Ekibi
+  engineering_our_team_text_1: Öğrenci Öğrenme Ekibimiz, öğrencilerimizin her gün
+    kullandıkları tüm etkinliklerimizin (bunlara laboratuvar diyoruz) sahibidir. Bu
+    ekip çoğunlukla ön uç teknolojisinde çalışıyor (React ve çok sayıda özel JS kullanıyoruz)
+    ve birçok ortak ve açık kaynak projesiyle harika bir çalışma ilişkimiz var. Örneğin,
+    tüm blok tabanlı programlarımız için [Google'ın Blockly] (%{youtube_url}) 'ı kullanıyoruz.
+    Öğrencileri Anaokulundan 12. sınıfa kadar öğrenme yolculuklarında destekliyoruz.
+  engineering_our_team_sub_title_2: Öğretmen Deneyimi Ekibi
+  engineering_our_team_text_2: Öğretmen Deneyimi Ekibimiz, yeni öğretmenleri Code.org'a
+    çeken araçları oluşturur (bu satın alma ürünleri diyoruz) ve mevcut öğretmenlerimizi
+    müfredatımızı (öğretmen araçlarımız) öğretmeleri için güçlendiren platformu geliştirir.
+    Öğrenci araçlarımızda olduğu gibi, ön ucumuzu oluşturmak için React"e güveniyoruz
+    ve sunucu tarafı bileşenlerimiz Ruby on Rails kullanılarak sunuluyor.
+  engineering_our_team_sub_title_3: Platform Ekibi
+  engineering_our_team_text_3: Platform Ekibimiz, öğrenci ve öğretmen ekiplerimizin
+    ihtiyaçlarına (örneğin kimlik doğrulama ve kullanıcı profili) hizmet eden temel
+    bileşenlere sahiptir ve ayrıca henüz ulaşamadığımız öğrencilere ulaşma misyonuna
+    sahiptir. Bu, bizi farklı Öğrenme Yönetim Sistemleri (LMS) kullanan okullara bağlayan
+    entegrasyonlar oluşturmayı ve müfredatımızı güvenilir internete erişimi olmayan
+    uzak okullarda kullanılabilecek şekilde paketlemeyi içerir.
+  engineering_our_team_sub_title_4: Altyapı Ekibi
+  engineering_our_team_text_4: Altyapı Ekibimiz, öğrencilerimizi ve öğretmenlerimizi
+    destekleyen platformun omurgasını sağlar. Buna barındırma altyapımız ve ilgili
+    hizmetlerimiz (AWS kullanıyoruz), veri yönetimi, güvenlik programları, geliştirici
+    ve dağıtım hizmetleri ve çok daha fazlası dahildir. Bu ekip aynı zamanda, dünyadaki
+    her öğrenciyi bizimle bir saatlik kodlamayı tamamlamaya davet ettiğimiz Hour of
+    Code sırasında kritik olan ölçeklendirme ve sağlama sistemlerimize de sahiptir.
+  engineering_faq_question_1: Code.org ne yapıyor?
+  engineering_faq_answer_1_a: Code.org, her okuldaki her öğrencinin temel K-12 eğitiminin
+    bir parçası olarak bilgisayar bilimini öğrenme fırsatına sahip olduğu vizyonuna
+    adanmış, kar amacı gütmeyen bir eğitim inovasyonu kuruluşudur.
+  engineering_faq_answer_1_b: Okullarda bilgisayar bilimlerine erişimi genişletiyoruz,
+    genç kadınların ve yeterince temsil edilmeyen diğer gruplardan öğrencilerin katılımını
+    artırmaya odaklanarak. Amerika Birleşik Devletleri'nin en büyük okul bölgelerinde
+    K-12 bilgisayar bilimleri müfredatının lider sağlayıcısı olan Code.org, dünyadaki
+    tüm öğrencilerin% 15'inden fazlasını içeren yıllık Kod Saati kampanyasını da düzenlemektedir.
+  engineering_faq_answer_1_c: Code.org, Microsoft, Amazon, Google ve diğerleri dahil
+    olmak üzere cömert bağışçılar tarafından desteklenmektedir.
+  engineering_faq_question_2: Code.org'un geliştirici deneyimi ve araçları nedir?
+  engineering_faq_answer_2: Geliştirici deneyimimiz, geçmiş rollerinizde gördüklerinizden
+    farklı olabilir. Ürün ekibimizle yakın çalışarak, hafta içi her gün üretime gönderiyoruz
+    ve çeşitli kadanslarımız var - bazen o gün yayına giren kodlar yazıyorsunuz; diğer
+    zamanlarda daha uzun vadeli projelerdesiniz - ve 2 haftalık sprintleri takip ederken,
+    bunu hafif bir şekilde yapıyoruz. Doğru şeyleri doğru şekilde yapmaya ve herhangi
+    bir metodolojiye saf bir bakış açısına sahip olmaya yöneliyoruz. [Tüm kodumuz]
+    (%{code_url}) açık kaynak kodludur ve tüm iş öğelerimizi izlemek için JIRA ve
+    GitHub çekme isteklerini kullanıyoruz. Ayrıca kalite ve test konusunda da çok
+    önemsiyoruz ve bulut cihaz çiftliğindeki çeşitli öğrenci cihazlarında (örneğin
+    iPad'ler) UI testleri paketimizi çalıştırmamıza yardımcı olan [SauceLabs](%{saucelabs_url})
+    'den inanılmaz desteğe sahip olduğumuz için şanslıyız.
+  engineering_faq_question_3: Code.org'da mühendis nöbetçi rotasyonu nedir?
+  engineering_faq_answer_3: 30'dan fazla mühendislik ekibimiz nöbetçi sorumlulukları
+    paylaşır. Her mühendis 24 saatlik bir vardiyayı kapsar ve site kesintilerine veya
+    diğer canlı site sorunlarına yanıt vermek için yükseltme yollarımızı ve oyun kitaplarımızı
+    kullanır. Sitemizin güvenilirliğinden gurur duyuyoruz - ortalama olarak, her mühendis
+    genellikle çözülmesi hızlı olan sorunlar için yılda yalnızca bir kez uyanıyor.
+    Bunun yerine, “Günün Geliştiricisi” genellikle iş günlerinin bir bölümünü üretim
+    dağıtımını yöneterek ve daha az acil sorunları üç düzeye ayırarak geçirir.
+  engineering_faq_question_4: Uzaktan dostu/WFH organizasyonu musunuz?
+  engineering_faq_answer_4_a: Evet! 2019'da, pandemiden kısa bir süre önce, Code.org
+    uzaktan ilk kuruluş haline geldi. Bugün, her ABD saat diliminde mühendislerimiz
+    var ve çalışma saatlerini buna göre ayarlıyoruz. Toplantılarımızın çoğu sabah
+    10 ile 15:00 PT saatleri arasında gerçekleşir..
+  engineering_faq_answer_4_b: Yüz yüze zamanın değerini de biliyoruz, ve her çeyrekte
+    yüz yüze bir araya geliyoruz, tipik olarak Seattle"da. Bu etkinliklerden ikisi
+    (bunlara Başlangıç haftası ve “Codechella” diyoruz) organizasyondaki herkesi Ocak
+    ve Haziran aylarında bir araya getiriyor - mühendislik ve ürün ekipleri Nisan
+    ve Ekim aylarında ayrı ayrı toplanıyor.
+  engineering_faq_answer_4_c: Öğrencilerimiz ve öğretmenlerimizle zaman geçirmeye
+    şiddetle inanıyoruz, Bu yüz yüze etkinliklerin çoğu, geri bildirim toplamak veya
+    ürünlerimizi oyun testi yapmak için okullara ve sınıflara yapılan gezileri içerir.
+  engineering_faq_question_5: Code.org'daki mühendislik ekibini benzersiz kılan nedir?
+  engineering_faq_answer_5_a: 'Zorlu teknik problemleri çözmenin ötesinde, mühendislik
+    org''umuzu çalışmış olabileceğiniz diğerlerinden farklı kılan birkaç şeyimiz var:'
+  engineering_faq_answer_5_b_1: Hepimiz misyonumuza olan tutkumuzu paylaşıyoruz.
+  engineering_faq_answer_5_b_2: Her birimiz, dünyadaki her öğrenci için bilgisayar
+    bilimlerine erişimi genişletme misyonunu desteklemek için buradayız. Hepimizin
+    bizi bu misyona iten şeyin ne olduğuna dair benzersiz hikayemiz ve bakış açımız
+    var.
+  engineering_faq_answer_5_c_1: Birbirimizi derinden önemsiyoruz.
+  engineering_faq_answer_5_c_2: Mühendisler bir sorunla mücadele ederken, devreye
+    gireriz ve yardım ederiz. İlkelerimizden biri, problemlerde zor olmamız, ancak
+    birbirimize karşı nazik olmamızdır. Mühendisleri düzenli olarak tanıtıyoruz, ancak
+    yalnızca birinin tanıtım yolunu desteklemek için aşırı mühendislik çözümleri önermiyoruz.
+    Bunun yerine, cömert bir mesleki gelişim bütçesi ve diğer öğrenme fırsatlarına
+    erişim ile mühendislerimize yatırım yapıyoruz.
+  engineering_faq_answer_5_d_1: Çok çalışıyoruz, ama net sınırlar koyuyoruz.
+  engineering_faq_answer_5_d_2: Dünyanın her yerinden öğrencileri desteklerken, iş
+    ve ev hayatı arasındaki açık sınırlardan kendimizi sorumlu tutuyoruz. Çarşamba
+    günleri toplantısız, PTO'muzu (yıl sonunda, yani Winter Break olarak da bilinen
+    2 haftalık bir ofis kapatma dahil olmak üzere toplam 5 hafta), yaz aylarında Cuma
+    günleri yarım iş günü, yani Yaz Cuma günleri ve diğer cömert faydalar.
+  careers_hero_title: Kariyer
+  careers_hero_description: Code.org, okullarda bilgisayar bilimlerine erişimi genişletmeye
+    adanmış kar amacı gütmeyen bir kuruluştur. Özellikle genç kadınlar ve yeterince
+    temsil edilmeyen öğrenciler arasında katılımı artırmaya odaklandık.
+  careers_hero_description_under: Dünyayı değiştirmemize yardım edin, her seferinde
+    bir öğrenci!
+  careers_vision_title: Vizyonumuz
+  careers_vision_decsription: Vizyonumuz, her okuldaki her öğrencinin temel K-12 eğitiminin
+    bir parçası olarak bilgisayar bilimini öğrenme fırsatına sahip olması gerektiğidir.
+  careers_vision_description_under: Gelin, bu vizyonu gerçeğe dönüştürmeye yardımcı
+    olmak için ekibimize katılın!
+  careers_values_title: Temel değerlerimiz
+  careers_values_first_column_text_1: Bilgisayar biliminin tüm öğrenciler için temel
+    olduğuna inanıyoruz
+  careers_values_first_column_text_2: Eşitlik, erişim ve fırsata bağlıyız
+  careers_values_first_column_text_3: İşbirliğine dayalı bir eğitim topluluğunun gücüne
+    inanıyoruz
+  careers_values_second_column_text_1: Çevik ve geri bildirime duyarlıyız
+  careers_values_second_column_text_2: Dürüstlük ve şeffaflıkla hareket ediyoruz
+  careers_values_second_column_text_3: Geniş etkinin büyük düşünmeyi ve bütünsel davranmayı
+    gerektirdiğine inanıyoruz
+  careers_approach_section_title: Birleştirici yaklaşımımız
+  careers_approach_section_description: Code.org'un K-12 bilgisayar bilimi hareketindeki
+    küresel rolü, ancak çeşitli ve çoğu zaman bölünmüş paydaşlar arasında birleştirici
+    bir yaklaşım kullandığımız için mümkündür. Kutuplaşmanın arttığı bir zamanda,
+    öğrenciler için artan fırsat fikri, siyasi yelpazenin her yerinden insanları birleştirir.
+    Code.org'un ekip üyeleri, öğrencileri, öğretmenleri ve destekçileri farklı ve
+    farklı bakış açılarına sahiptir ve hepsi misyonumuza hoş geldiniz.
+  careers_aproach_section_description_link: Code.org'un birliğe yaklaşımı hakkında
+    daha fazla bilgi edinin.
+  careers_approach_section_button: Açık rolleri keşfedin
+  careers_principle_section_title: Kültürel ilkelerimiz
+  careers_principle_title_1: Öğrencilerimiz ve öğretmenlerimiz bizim Kuzey Yıldızımız
+  careers_principle_description_1: Hediyelerimizi, zamanımızı ve enerjimizi bilgisayar
+    bilimini en çok ihtiyaç duyanlara getirmek için kullanıyoruz. Bizi birleştiren
+    şey budur. Bu bizim en önemli ilkemizdir.
+  careers_principle_title_2: Sorunlara karşı sert ve birbirimize karşı nazikiz
+  careers_principle_description_2: Bilgisayar bilimini küresel olarak öğrencilere
+    ve öğretmenlere getirmenin zorluğuna odaklanmaya devam ediyoruz. Her birimizin
+    misyonumuzu desteklemek ve hata yaptığımızda lütuf vermek için niyetlerimizin
+    en iyisini getirdiğinin farkındayız.
+  careers_principle_title_3: Çözüm arayın, fikir birliği değil
+  careers_principle_description_3: Aradığımız sonuçlara doğru küçük adımlar veya büyük
+    sıçramalar atıp atmadığımız kararlara sahibiz. Sahipler ister ve dinler, ancak
+    geri bildirimle felç olmazlar. Kabul etmesek bile sahiplerin kararlarını kabul
+    ediyor ve destekliyoruz.
+  careers_principle_title_4: Bir kurucunun zihniyetini benimseyin
+  careers_principle_description_4: Sonuçlara takıntılı ve eylemlerimizi onları yönlendirmeye
+    odaklıyoruz. Ayrıntılara dalıyoruz ve çok çalışıyoruz. Dürüstüz, çevikliğe yaslanıyoruz
+    ve yolda olup olmadığımızı sürekli olarak değerlendiriyoruz; pivot yapmaktan korkmuyoruz.
+    Dünyayı değiştirmek bunu gerektiriyor.
+  careers_principle_title_5: Şampiyon yenilik
+  careers_principle_description_5: Büyük düşünüyoruz, risk alıyoruz ve başarısız olmaktan
+    korkmuyoruz. Hedeflerimize ulaşmak için daha iyi bir yol görürsek, bunu yapar
+    ve başkalarını da bunu yapmaya teşvik ederiz. Artımlı çözümler dünyayı değiştirmeye
+    yardımcı olmaz.
+  careers_principle_title_6: Gerçeklerde çapa kararları
+  careers_principle_description_6: Verileri işimizi anlamak, istenen sonuçları belirlemek
+    ve karar verme sürecine rehberlik etmek için kullanırız. Bunu, harekete geçmek
+    için ihtiyaç duyduğumuz verilere her zaman sahip olmayacağımızı kabul ederek dengeliyoruz.
+  careers_principle_title_7: Büyüme zihniyeti bizi besler
+  careers_principle_description_7: Her zorluğa merakla yaklaşıyoruz. Nazik ve samimi
+    bir şekilde geri bildirim veriyoruz; açıkça geri bildirim alıyoruz. Hatalarımızdan
+    ders alıyor ve işimizin erişimini ve etkisini artırmanın yollarını arıyoruz.
+  careers_balance_section_title: İş-yaşam dengemiz
+  careers_balance_section_description: Çalışanlarımızı önemsiyoruz ve hem işte hem
+    de iş dışında herkesi desteklemeye kendimizi adadık. Herkesin farklı ihtiyaçları
+    olduğunu biliyoruz, bu nedenle size (ve ailenize) bakılmasını sağlayacak bütünsel
+    bir fayda paketi sunuyoruz.
+  careers_balance_first_column_text_1: Siz ve aileniz için sağlık yararları
+  careers_balance_first_column_text_2: Cömert ücretli izin ve izin planları
+  careers_balance_second_column_text_1: Esnek, destekleyici çalışma ortamı
+  careers_balance_second_column_text_2: Büyüme ve profesyonel öğrenme fırsatları
+  careers_openroles_section_title: Açık roller
+  careers_openroles_section_description: Code.org Seattle merkezlidir, ancak ekip
+    üyelerimizin çoğu uzaktadır. Uzak adaylar kabul edilir ve başvurmaya teşvik edilir.
+  careers_more_info_text: Code.org hakkında daha fazla bilgi için [Sıkça Sorulan Sorular]
+    (%{support_url}) sayfamıza göz atın veya [misyonumuza katılmanın diğer yolları]
+    (%{help_url}) hakkında bilgi edinin.
+  careers_approach_section_title2: Çeşitliliğe yaklaşımımız
+  careers_approach_section_description_1: Code.org'da farklı bakış açılarını, fikirleri
+    ve geçmişleri benimsiyoruz. Tüm çalışanlara ve başvuru sahiplerine eşit fırsat
+    sağlamayı taahhüt ediyoruz. Irk, din, renk, ulusal köken, cinsiyet, cinsel yönelim,
+    yaş, medeni durum, gazilik durumu veya engellilik (zihinsel ve fiziksel) statüsü
+    temelinde ayrımcılık yapmayız.
+  careers_approach_section_description_2: Engelli bireylere iş başvurusu veya görüşme
+    sürecine katılmaları, temel iş işlevlerini yerine getirmeleri ve istihdamın diğer
+    faydalarını ve ayrıcalıklarını almaları için makul bir konaklama sağlanmasını
+    sağlayacağız. Bir engelle ilgili bireysel ihtiyaçlarınız varsa, lütfen accommodations@code.org
+    adresine ulaşın.
+  csa_ai_page_hero_title: Yazılım Mühendisliği ve Bilgisayarla Görme
+  csa_ai_page_hero_description: 'Bu iki bölümlü AP sonrası CSA modülü, lise öğrencilerine
+    GitHub ve GitHub Copilot dahil olmak üzere profesyonel yazılım geliştirme araçlarıyla
+    uygulamalı deneyim sunar ve onlara bir bilgisayarla görme programı geliştirmek
+    için gerçek dünya becerileri kazandırır. '
+  csa_ai_page_video_section_title: Code.org programlama ortamları dünyasının ötesine
+    geçin
+  csa_ai_page_video_section_li_1: Yapay zeka ve uygulamaları hakkında bilgi edinin
+  csa_ai_page_video_section_li_2: Profesyonel yazılım geliştirme araçlarıyla uygulamalı
+    deneyim
+  csa_ai_page_video_section_li_3: Endüstri standardı uygulamaları öğrenir
+  csa_ai_page_video_section_li_4: Eleştirel düşünmeyi geliştirin
+  csa_ai_page_programming_tools: 'Programlama Araçları: Github, Github Copilot, VScode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Hiçbiri
+  csa_ai_page_curriculum_topics: 'Konular: Programlama, Veri, Sanat ve Tasarım, Oyunlar
+    ve Animasyon'
+  csa_ai_page_curriculum_accessibility_features: Ayrıntılar için SSS bölümüne bakın
+  csa_ai_page_curriculum_languages_support: İngilizce
+  csa_ai_page_article_title_1: Copilot ile oluşturun
+  csa_ai_page_article_description_1: Öğrenciler, mevcut kodu açıklamak, hataları bulmak
+    ve düzeltmek ve yeni sorunlara çözümler üretmek için GitHub Copilot'u çift programcı
+    olarak nasıl kullanacaklarını öğrenirler.
+  csa_ai_page_article_link_1: Copilot hakkında daha fazla bilgi edinin
+  csa_ai_page_article_title_2: Kendi AI modelinizi oluşturun
+  csa_ai_page_article_description_2: Öğrenciler, bir web kamerası oluşturan görüntüleri
+    ve hareketleri tanımak ve bilgisayar görüşünün kullanıcıların uygulamalarla etkileşim
+    şeklini nasıl etkilediğini düşünmek için Teachable Machine'i kullanarak kendi
+    AI modellerini eğitir.
+  csa_ai_page_article_link_2: Ders planını keşfedin
+  csa_ai_page_article_title_3: Bilgisayarla görüşü keşfedin
+  csa_ai_page_article_description_3: Öğrenciler, Teachable Machine ile oluşturdukları
+    AI modellerini, farklı girişlerle çalışacak şekilde uygulamaların mevcut sürümlerini
+    değiştirmelerine yardımcı olmak için GitHub Copilot'u kullanarak bir Java uygulamasına
+    uygular.
+  csa_ai_page_article_link_3: Bir örneğe bakın
+  csa_ai_page_learn_more_section_title: Yapay Zeka hakkında daha fazla bilgi edinin
+  csa_ai_page_learn_more_title: Öğretmenler için AI 101'i keşfedin
+  csa_ai_page_learn_more_description: Öğretmenlere yönelik kapsamlı çevrimiçi öğrenme
+    serimizle Yapay Zekanın (AI) çığır açan dünyasını ve eğitimdeki dönüştürücü potansiyelini
+    keşfedin.
+  csa_ai_page_learn_more_link: Öğretmenler için AI 101 serisini izleyin
+  csa_ai_page_faq_question_01: Bu modül için ön koşullar nelerdir?
+  csa_ai_page_faq_answer_01_01: 'Bu modüle dalmadan önce, öğrenciler giriş seviyesi
+    Java bilgisine sahip olmalıdır. Spesifik olarak, aşağıdakileri kavramaları gerekir:'
+  csa_ai_page_faq_answer_01_list_01: "**Sınıflar ve Nesneler: ** Öğrenciler, sınıfları
+    tanımlamaya ve kullanmaya, ayrıca nesneler oluşturmaya ve manipüle etmeye aşina
+    olmalıdır."
+  csa_ai_page_faq_answer_01_list_02: "**Yazma ve Çağrı Yöntemleri: ** Öğrenciler bir
+    sınıf içindeki yöntemleri tanımlayabilmeli, yöntem parametrelerini ve dönüş türlerini
+    anlayabilmeli ve nesnelerden veya diğer yöntemlerden yöntemleri çağırabilmelidir."
+  csa_ai_page_faq_answer_01_list_03: "**1D Diziler ve Diziler Listeleri: ** Tek boyutlu
+    dizileri ve ArrayLists, bunlar arasında yineleme de dahil olmak üzere bildirme,
+    başlatma ve manipüle etme konusunda yetkin olmalıdırlar."
+  csa_ai_page_faq_answer_01_list_04: "**Seçim ve Yineleme: ** Koşullu ifadelerde ve
+    döngülerde sağlam bir temel çok önemlidir."
+  csa_ai_page_faq_question_01_02: İdeal olarak, AP Computer Science A veya benzer
+    derinlik ve titizlik kursunu tamamlayan öğrenciler bu modül için iyi hazırlanmış
+    olacaktır.
+  csa_ai_page_faq_question_02: Bu modül için gerekli yazılımı nasıl yüklerim?
+  csa_ai_page_faq_answer_02_01: Bu modül benzersizdir çünkü Code.org laboratuvarları
+    ve araçları yerine üçüncü taraf yazılımların kullanımını içerir. [Yazılımı yükleme
+    hakkında daha fazla bilgiyi buradan okuyun] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Bu modülü öğretirken erişilebilirlik ihtiyaçlarını
+    nasıl destekleyebilirim?
+  csa_ai_page_faq_answer_03_01: Kapsayıcı bir öğrenme ortamı için erişilebilirlik
+    ihtiyaçlarını karşılamak çok önemlidir. [Bu modülde kullanılan yazılımdaki erişilebilirlik
+    özellikleri hakkında daha fazla bilgiyi buradan okuyun] (%{install_url}).
+  csa_ai_page_faq_question_04: Chromebook'larda VS Kodunu nasıl kullanırım?
+  csa_ai_page_faq_answer_04: Bir Chromebook'ta VS Code'u kullanmak, özellikle Linux
+    uygulamalarını daha yeni Chromebook modellerinde çalıştırma yeteneği ile daha
+    kolay hale geldi. [Chromebook"larda VS Code kurma hakkında daha fazla bilgiyi
+    buradan okuyun] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Bu modül için mesleki gelişimi nasıl alabilirim?
+  csa_ai_page_faq_answer_05: Şu anda bu kurs için belirli bir mesleki gelişim yoktur.
+    Sınıfınızda Yapay Zekaya nasıl yaklaşacağınızı anlamak istiyorsanız, [Öğretmenler
+    için AI 101'i keşfedin] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Bu modülü öğretmek için önerilen zamanlama nedir?
+  csa_ai_page_faq_answer_06_01: Yazılım Mühendisliği ve Bilgisayarla Görme modülü,
+    kısa bir zaman diliminde kapsamlı öğrenme sağlamak için düşünceli bir şekilde
+    yapılandırılmıştır. Tüm modül, ** 2 haftalık talimat** kapsayacak şekilde tasarlanmıştır.
+    Çoğu ders **45 dakika** için uyarlanırken, öğrencilerin uygulamalı Java proje
+    geliştirmeye girdiği dersler **90 dakika** için tasarlanmıştır. Bu uzatılmış süre,
+    öğrencilerin çalışırken anlama, uygulama ve sorun giderme konusunda bolca fırsata
+    sahip olmalarını sağlar.
+  csa_ai_page_faq_answer_06_02: Modülün yapısında yerleşik kasıtlı esneklik de vardır.
+    Sınıf dinamiklerine, öğrenci katılımına ve her konuyu keşfetmek istediğiniz derinliğe
+    bağlı olarak süreyi ayarlayabilirsiniz. Örneğin, 45 dakikalık bir ders olarak
+    tasarlanan Copilot'a Giriş dersi, GitHub Copilot ve ChatGPT gibi büyük dil modellerinin
+    ve araçlarının ne kadar büyük çalıştığını daha derinlemesine incelemek isterseniz
+    90 dakikaya genişletilebilir.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Onaylı bir öğretmen hesabıyla, cevap anahtarlarını çevrimiçi
+    derslerde ve etkinliklerde gösterilen mavi “Öğretmen” Panelinde bulabilirsiniz.
+    Onaylanmış bir öğretmen hesabına ihtiyacınız varsa, [bu form] () aracılığıyla
+    öğretmenlere özel korumalı materyallere (cevap anahtarları vb.) erişim için başvurabilirsiniz.%{form_url}Lütfen
+    hesabınızı doğrulamanın 3-5 iş günü sürebileceğini unutmayın.
+  csa_ai_page_faq_question_08: Bu modül standartlara eşlenmiş mi?
+  csa_ai_page_faq_answer_08: Evet, Yazılım Mühendisliği & Bilgisayarla Görme müfredatı
+    [CSTA K-12 Standartları] (%{csta_k12_url}) ve AI için [K-12 Yönergeleri] ().%{k12_url}
+  csa_ai_page_faq_question_09: Bu modülü öğretmenin maliyeti nedir?
+  csa_ai_page_faq_answer_09_01: 'Müfredatımız ve platformumuz şu adresten mevcuttur:
+    [ücretsiz] (%{no_cost_url}) herkes için, herhangi bir yer, öğretmek!'
+  csa_ai_page_faq_answer_09_02: Ayrıca, bu modülde kullanılan yazılım ve araçlar ücretsizdir.
+    GitHub Copilot doğrulanmak için ücretsizdir () ve [teachers](%{teachers_url}).
+    [students]%{students_url}
+  csa_ai_page_faq_question_10: Yazılım yüklemesi çalışmıyorsa ne yapmalıyım?
+  csa_ai_page_faq_answer_10: Yazılım yüklemesi sırasında karşılaşılan sorunlar yaygın
+    olabilir, ancak sorunları gidermek ve çözmek için izleyebileceğiniz sistematik
+    adımlar vardır. [Burada bazı sorun giderme ipuçlarına göz atın] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Yazılım Mühendisliği ve Bilgisayarla Görme müfredatımız
+    Müfredat Değerlerimiz düşünülerek tasarlanmıştır. Aşağıdaki hedefler bu müfredatın
+    oluşturulmasına rehberlik etti:'
+  csa_ai_page_faq_answer_11_list_01: "**Hedef 1: ** Kod oluşturmak, hata ayıklamak
+    ve düzenlemek için AI araçlarını kullanın."
+  csa_ai_page_faq_answer_11_list_02: "**Hedef 2: ** Java Lab'den gerçek dünya araçlarına
+    geçiş."
+  csa_ai_page_faq_answer_11_list_03: "**Hedef 3: ** Yapay zeka modellerinin nasıl
+    eğitildiğini ve programlara nasıl entegre edildiğini anlamayı derinleştirin."
+  csa_ai_page_faq_answer_11_02: Çalışmamıza rehberlik eden değerler hakkında daha
+    fazla bilgi için, lütfen [müfredat değerleri] ().%{curriculum_values_url}
+  video_library_page_main_title: Eğitici kısa videolar
+  video_library_page_hero_description: Code.org'un büyüyen eğitim videoları kütüphanesi,
+    dünya çapında, çevrimiçi veya sınıflarda eğitimciler tarafından yeniden kullanılabilir.
+    Amacımız, çabalarımızı kendi müfredatımızın erişiminin ötesine taşımaktır.
+  video_library_page_title_ai_works: Yapay Zeka Nasıl Çalışır
+  video_library_page_description_ai_works: Bu kısa videolar dizisi size yapay zekanın
+    nasıl çalıştığını ve neden önemli olduğunu tanıtacak. Sinir ağları veya yapay
+    zekanın nasıl öğrendiği hakkında bilgi edinin ve algoritmik önyargı ve yapay zeka
+    karar verme etiği gibi konuları araştırın.
+  video_library_page_title_computers_work: Bilgisayarlar Nasıl Çalışır?
+  video_library_page_description_computers_work: Bir bilgisayarı neyin bilgisayar
+    yaptığını, dijital bilginin 1s ve 0'larda nasıl temsil edildiğini, bilgisayar
+    devrelerinin dijital bilgiyi manipüle etmek için nasıl çalıştığını ve bir merkezi
+    işlem biriminin (CPU) ve işletim sisteminin bir bilgisayarın girişlerini, çıkışlarını,
+    belleğini ve donanımını nasıl kontrol ettiğini açıklar.
+  video_library_page_title_internet_works: İnternet Nasıl Çalışır
+  video_library_page_description_internet_works: TCP/IP'nin mucidi Vint Cerf, HTTP
+    ve HTML'yi açıklamak için Tumblr'ın kurucusu David Karp, SSL ve siber güvenliği
+    açıklamak için Google'ın Güvenlik Prensesi ve Microsoft, Spotify ve Symantec'ten
+    mühendisler. İnternetin Nasıl Çalıştığını açıklayan bu kısa videolar dizisi.
+  video_library_page_title_not_hacked: Nasıl Saldırıya Uğramaz
+  video_library_page_description_not_hacked: İnternet açıktır, bu yüzden üzerinde
+    olan her şey korunmadığı sürece görülebilir. Modern ülkelerde, insanlar saldırıya
+    uğramaktan diğer suçlardan daha fazla endişe duyuyorlar. Neden? Çünkü internetteki
+    her bilgisayar veya telefon, suçlular, teröristler ve hatta devlet aktörleri tarafından
+    güvenlik açıklarına karşı düzenli olarak test ediliyor. Dikkatli olmazsanız, birisi
+    cihazınızı veya hesaplarınızı hackleyebilir ve hatta kimliğinizi veya paranızı
+    çalabilir.
+  video_library_page_title_blockchain: Blockchain Nasıl Çalışır?
+  video_library_page_description_blockchain: Coinbase ile ortaklaşa yapılan bu seri,
+    endüstri uzmanlarını içeriyor ve blockchain'in ne olduğunu, nasıl çalıştığını
+    ve potansiyel toplumsal etkilerini - hem iyi hem de kötü - keşfederek bu teknolojiyi
+    gizemini çözmeyi amaçlıyor.
+  video_library_page_title_careers: CS'de Kariyer
+  video_library_page_description_careers: Bilgisayar bilimi ve teknolojisindeki kariyer
+    eğlenceli ve ödüllendirici olabilir. Peki bu alanlarda çalışan bir kişi gerçekten
+    ne yapar? Çok çeşitli işler ve şirketler ile, bu sorunun tek bir cevabı yok. Büyük
+    sorunları yaratıcı yollarla ele alan bazı insanlarla tanışmak için aşağıdaki videoları
+    izleyin.
+  video_library_page_title_inspirational: İlham verici
+  video_library_page_description_inspirational: Bilgisayar Bilimi Dünyamızda Neyi
+    Değiştirecek? Her şeyi mi? Kimin için? Herkes! Size ilham vermek ve motive etmek
+    için bu videoları izleyin.
+  video_library_page_footer_description: Başka bir şey mi arıyorsunuz? Youtube kanalımızda
+    çok sayıda harika videonuz var.
+  video_library_page_footer_cta: YouTube'daki tüm Code.org videolarını keşfedin
+  video_library_page_computer_work_video_title_1: Bilgisayarların Nasıl Çalıştığını
+    Tanıtmak
+  video_library_page_computer_work_video_title_2: İkili ve Veri
+  video_library_page_computer_work_video_title_3: CPU, Bellek, Giriş ve Çıkış
+  video_library_page_computer_work_video_title_4: Bir Bilgisayarı, Bilgisayarı Yapan
+    Nedir?
+  video_library_page_computer_work_video_title_5: Devreler Mantığı
+  video_library_page_computer_work_video_title_6: Donanım ve Yazılım
+  video_library_page_internet_work_video_title_1: İnternet nedir?
+  video_library_page_internet_work_video_title_2: 'İNTERNET: IP Adresleri ve DNS'
+  video_library_page_internet_work_video_title_3: 'İNTERNET: HTTP ve HTML'
+  video_library_page_internet_work_video_title_4: 'İNTERNET: Siber Güvenlik ve Suç'
+  video_library_page_internet_work_video_title_5: 'İNTERNET: Teller, Kablolar ve Wifi'
+  video_library_page_internet_work_video_title_6: 'İNTERNET: Paketler, Yönlendirme
+    ve Güvenilirlik'
+  video_library_page_internet_work_video_title_7: 'İNTERNET: Şifreleme ve Genel Anahtarlar'
+  video_library_page_internet_work_video_title_8: 'İNTERNET: Arama Nasıl Çalışır'
+  video_library_page_cs_video_title_1: Benim adım Jerome ve Meow Wolf'ta Tasarım Teknolojisiyim
+  video_library_page_cs_video_title_2: Benim adım Nikesha ve NASA'da Havacılık ve
+    Uzay Mühendisiyim
+  video_library_page_cs_video_title_3: Benim adım Brina ve Instagram'da Yazılım Mühendisiyim
+  video_library_page_cs_video_title_4: Benim adım Kinsley ve Facebook'ta Yazılım Mühendisiyim
+  video_library_page_cs_video_title_5: Benim adım Polina ve Electronic Arts'ta Veri
+    Bilimcisiyim
+  video_library_page_cs_video_title_6: Benim adım Danelle ve MBARI'de Yazılım Mühendisiyim
+  video_library_page_cs_video_title_7: Benim adım Christopher ve Tanium'da Güvenlik
+    Analistiyim
+  video_library_page_cs_video_title_8: Benim adım Federico ve Microsoft'ta Teknik
+    Program Yöneticisiyim
+  video_library_page_cs_video_title_9: Benim adım Tess ve Google'da Yazılım Mühendisiyim
+  video_library_page_inspirational_video_title_1: Bilgisayar Biliminin Yüzünü Değiştir
+    (3 dk)
+  video_library_page_inspirational_video_title_2: Kendini zorla. Herkes öğrenebilir.
+    (1 dk)
+  video_library_page_inspirational_video_title_3: Bir kıza ilham verin (2 dk)
+  video_library_page_inspirational_video_title_4: Okulların Çoğu Neyi Öğretmiyor (5
+    dk)
+  video_library_page_inspirational_video_title_5: Hour of Code Is Here - Herkes Öğrenebilir
+    (2 dk)
+  video_library_page_inspirational_video_title_6: Benim Adım Aracely (3 dk)
+  video_library_page_inspirational_video_title_7: Steph Curry ile Kod Saati (2 dk)
+  video_library_page_inspirational_video_title_8: Bilgisayar Bilimi Her Şeyi Değiştiriyor
+    (5 dk)
+  video_library_page_inspirational_video_title_9: Bilgisayar Bilimleri giriş (1 dk)
+  video_library_page_inspirational_video_title_10: Başkan Obama bilgisayar bilimi
+    üzerine (1 dk)
+  video_library_page_inspirational_video_title_11: Herkes öğrenebilir (1 dakika)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 dk)
+  video_library_page_inspirational_video_title_13: NASA Kodlama Saatini Kutluyor (2
+    dk)
+  video_library_page_inspirational_video_title_14: Bir oyundan daha fazlası (1 dk)
+  video_library_page_inspirational_video_title_15: Bilgisayar Bilimi ile Oluşturun
+    (1 dk)
+  video_library_page_not_hacked_video_title_1: 'Nasıl Saldırıya Uğramaz: Giriş'
+  video_library_page_not_hacked_video_title_2: 'Nasıl Saldırıya Uğramaz: Şifreler'
+  video_library_page_not_hacked_video_title_3: 'Nasıl Saldırıya Uğramaz: Kimlik Doğrulama
+    ve Cihaz Kilitleri'
+  video_library_page_not_hacked_video_title_4: 'Nasıl Saldırıya Uğramaz: Kimlik Avı'
+  video_library_page_not_hacked_video_title_5: 'Nasıl Saldırıya Uğramazsınız: Web
+    Siteleri ve Wifi'
+  video_library_page_not_hacked_video_title_6: 'Nasıl Saldırıya Uğramaz: Mesajlaşma
+    ve İndirmeler'
+  video_library_page_not_hacked_video_title_7: 'Nasıl Saldırıya Uğramaz: Güncellemeleri
+    Yükle'
+  about_us_page_title: Hakkımızda
+  about_us_page_hero_description: Code.org®, her okuldaki her öğrencinin temel K-12
+    eğitiminin bir parçası olarak bilgisayar bilimini öğrenme fırsatına sahip olma
+    vizyonuna adanmış, kâr amacı gütmeyen bir eğitim inovasyonu kuruluşudur. Okullarda
+    bilgisayar bilimlerine erişimi genişletiyoruz, genç kadınların ve diğer yeterince
+    temsil edilmeyen gruplardan öğrencilerin katılımını artırmaya odaklanıyoruz. Amerika
+    Birleşik Devletleri'ndeki en büyük okul bölgelerinde K-12 bilgisayar bilimleri
+    müfredatının önde gelen sağlayıcısı olan Code.org, dünyadaki tüm öğrencilerin
+    %15'inden fazlasını meşgul eden yıllık [Hour of Code] (%{hour_url}) kampanyasını
+    da düzenlemektedir. Code.org, Microsoft, Amazon, Google ve [diğerleri] dahil olmak
+    üzere cömert bağışçılar tarafından desteklenmektedir.%{others_url}
+  about_us_page_section_title_1: Code.org'da 80 milyondan fazla öğrenci ve 2 milyon
+    öğretmen
+  about_us_page_statistic_figcaption: 2021-2022 öğretim yılından itibaren Code.org
+    katılımı. [Ayrılmış verilere bakın.] ()%{data_url}
+  about_us_page_statistic_description: Code.org, bilgisayar bilimlerindeki çeşitliliği
+    artırır, bulundukları yerde, beceri düzeylerinde, okullarında ve öğrenmeye devam
+    etmeleri için onlara ilham verecek şekillerde, tüm geçmişlerden gelen öğrencilere
+    ulaşır. Code.org'daki öğrencilerin büyük çoğunluğu, bilgisayar bilimlerinde tarihsel
+    olarak yeterince temsil edilmeyen öğrenci gruplarından geliyor. Bilgisayar bilimlerinde
+    artan çeşitlilik çalışmalarımızın temelini oluşturur, ve [çabalarımız hakkında
+    daha fazla bilgi edinmenizi öneririz] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org Haberlerde
+  about_us_page_section_news_description: Tüm geçmişleri gör [haber ve duyurular]
+    (%{news_url})
+  about_us_page_section_table: Hedeflerimiz ve metriklerimiz
+  about_us_page_section_table_header_1: Code.org Hedef
+  about_us_page_section_table_header_2: Başarı
+  abous_page_section_table_cell_1_1: CS çeşitliliğini artırın* (ABD öğrencileri) *
+  abous_page_section_table_cell_1_2: Code.org öğrencilerinin %45'i genç kadınlar,%
+    50'si marjinalleştirilmiş ırksal ve etnik gruplardan gelen öğrencilerdir ve ABD'li
+    öğrencilerin% 46'sı yüksek ihtiyaçlı okullarda. [Çeşitliliğe yaklaşımımız] hakkında
+    daha fazla bilgi edinin. (%{diversity_url})
+  about_page_section_table_cell_2_1: Öğrencilere ilham verin
+  about_page_section_table_cell_2_2: On milyonlarca kişi [Kod Saati] 'yi denedi (%{hour_url}).
+    (426.370.561 hizmet etti. %49 kadın)
+  about_page_section_table_cell_3_1: Sınıflara ulaşın
+  about_page_section_table_cell_3_2: "[Code Studio] 'da giriş kurslarımızı öğretmek
+    için 591.636 öğretmen kaydoldu (%{code_studio_url}) ve 19.177.297 öğrenci kayıtlıdır."
+  about_page_section_table_cell_4_1: Yeni CS öğretmenlerini hazırlayın
+  about_page_section_table_cell_4_2: K-12 sınıflarında bilgi bilgisi öğretmek için
+    106.000'den fazla yeni öğretmen hazırladık. [Profesyonel öğrenme programlarımız]
+    hakkında bilgi edinin. (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Okul bölgesi müfredatını değiştir
+  about_page_section_table_cell_5_2: "[Okul müfredatına bilgi bilgisi eklemek] ()
+    için [180'den fazla en büyük okul bölgesi] (%{schoold_disctrict_url}) ve 60 bölgesel
+    ortakla ortaklık kurduk.%{cs_curriculum_url}[Bölgesel ortak olma hakkında bilgi
+    edinin.] (%{regional_partner_url})"
+  about_page_section_table_cell_6_1: CS'yi desteklemek için ilkeler ayarlama
+  about_page_section_table_cell_6_2: "[Politikalar 50 ABD eyaletinde değiştirildi]
+    (%{states_url}) CS eğitim standartlarını oluşturmak, CS kurslarının lise mezuniyetinde
+    sayılmasını sağlamak vb. [(ayrıntılar)] (%{details_url})"
+  about_page_section_table_cell_7_1: Küreselleşin
+  about_page_section_table_cell_7_2: Kurslarımız 180'den fazla ülkede kullanılan 67'den
+    fazla dilde mevcuttur.
+  about_page_section_table_under_label: 'Kaynak: Code Studio Etkinliği ve [katılımcı
+    eğitimcilerin anketleri] (%{educators_url})'
+  about_page_section_title_3: Daha fazla bilgi, tarih ve felsefe
+  about_page_section_more_description_1: '2013 yılında Code.org, ikiz kardeşler [Hadi](%{hadi_url})
+    ve [Ali Partovi] () tarafından bilgisayar bilimini teşvik eden bir [video](%{partovi_url}%{video_url})
+    ile başlatıldı. Bu video bir gün boyunca YouTube''da #1 oldu ve 15.000 okul yardım
+    için bize ulaştı. O zamandan beri, dünya çapında bir hareketi destekleyen tam
+    bir organizasyon oluşturmak için önyüklenmiş bir gönüllü kadrosundan genişledik.
+    Kaliteli bir bilgisayar bilimi eğitiminin sadece şanslı birkaç çocuğa değil, her
+    çocuğa sunulması gerektiğine inanıyoruz.'
+  about_page_section_more_description_2: 'Hedefimizi desteklemek için eğitim yelpazesinde
+    çalışıyoruz: kendi kurslarımızı tasarlamak veya başkalarıyla ortaklık kurmak,
+    öğretmenler yetiştirmek, büyük okul bölgeleriyle ortaklık kurmak, hükümet politikalarını
+    değiştirmeye yardımcı olmak, ortaklıklar yoluyla uluslararası genişleme ve klişeleri
+    kırmak için pazarlama yapmak.'
+  about_page_section_more_description_3: Çalışmalarımız, bilgisayar bilimleri eğitiminin
+    kurulmasına, finanse edilmesine ve yayılmasına yardımcı%{efforts_url}olan [sayısız
+    kuruluş ve bireyin onlarca yıllık çabasına] dayanmaktadır. Daha geniş bilgisayar
+    bilimleri eğitim topluluğunun yorulmak bilmeyen yardımından yararlandığımız için
+    minnettarız, ve [yıllar boyunca etkimizi destekleyen tüm ortaklara ve bireylere
+    teşekkür ederiz] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Temel değerlerimiz ve mesajlaşma yönergelerimiz]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Müfredatımız ve pedagoji felsefemiz] (%{curriculum_url})"
+  about_page_section_more_list_4: "[Bilgisayar biliminin neden herkes için olduğu
+    hakkında kurucumuz Hadi Partovi'nin TEDx konuşması (VİDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Bölünmüş bir dünyada birleştirici bir yaklaşım
+  about_page_section_specific_title_1: Bölünmüş bir dünyada birleştirici bir yaklaşım
+  about_page_section_specific_title_2: Erişilebilirlik taahhüdümüz
+  about_page_section_specific_title_3: Ücretsiz müfredat ve açık kaynak teknolojisi
+    bizim sözümüzdür
+  about_page_section_specific_title_4: Code.org Savunuculuk Koalisyonu
+  about_page_section_specific_title_5: K-12 Bilgisayar Bilimleri Çerçevesi
+  about_page_section_specific_title_6: Code.org Bağışçıları
+  about_page_section_specific_title_7: Bizi takip edin
+  about_page_section_specific_title_8: Code.org'un Uluslararası Erişimi
+  about_page_section_specific_description_1: Code.org'un K-12 bilgisayar bilimi hareketindeki
+    küresel rolü ancak çeşitli ve çoğu zaman bölünmüş paydaşlar arasında birleştirici
+    bir yaklaşım kullandığımız için mümkündür. Artan kutuplaşmanın olduğu bir zamanda,
+    öğrenciler için artan fırsat fikri, siyasi yelpazedeki insanları birleştirir.
+    Code.org'un ekip üyeleri, öğrenciler, öğretmenler ve destekçileri farklı ve farklı
+    bakış açılarına sahiptir ve hepsine misyonumuzda memnuniyetle karşılanmaktadır.
+    [Devamını oku.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org bilgisayar biliminin tüm öğrenciler
+    için temel olduğuna inanıyor ve organizasyonumuzda eşitlik, erişim ve fırsatlara
+    bağlıyız [values.](%{values_url}) Bu hedefe ulaşmak için, engelli öğrencilerin
+    ve eğitimcilerin katılımını ve tam katılımını engelleyen engelleri belirlemek
+    ve ortadan kaldırmak için çalışıyoruz. Çabalarımız hakkında daha fazla bilgi edinmek
+    için [erişilebilirlik beyanımıza bakın.] (%{accessibility_url})
+  about_page_section_specific_description_3: Yazdığımız tüm müfredat kaynakları ve
+    eğitimleri sonsuza dek ücretsiz olacak ve bir [Creative Commons] (%{commons_url})
+    lisansı altında açık bir şekilde lisanslanacak ve başkalarının ticari olmayan
+    amaçlar için türev eğitim kaynakları yapmasına izin verecektir. Materyallerimizi
+    ticari amaçlar için lisanslamakla ilgileniyorsanız, [bize ulaşın] (%{contact_us_url}).
+    Kurslarımız dünya çapında kullanım için veya farklı dilleri konuşanlar tarafından
+    çevrilmiştir. Teknolojimiz bir [açık kaynak proje] olarak geliştirilmiştir%{open_source_url}.
+  about_page_section_specific_description_4: "[Code.org Savunuculuk Koalisyonu] (%{advocacy_url}),
+    K-12 bilgisayar bilimine erişimi genişletmek ve sürdürmek ve alandaki katılımı
+    ve çeşitliliği genişletmek için ABD federal ve eyalet politikalarının oluşturulmasına
+    yardımcı olmak için birlikte çalışan şirketler ve kar amacı gütmeyen kuruluşlardan
+    oluşan iki partili bir koalisyondur. [Cumhuriyetçi ve Demokrat siyasi liderleri]
+    (%{leaders_url}) K-12 bilgisayar bilimine erişimi genişletmeyi ve katılımı destekleyen
+    ortak bir amaç için bir araya getiriyoruz."
+  about_page_section_specific_description_5: Code.org, bilgisayar bilimleri eğitimini
+    uygulayan eyaletler, bölgeler ve kuruluşlar için üst düzey bir rehber olan [K-12
+    Bilgisayar Bilimleri Çerçevesi] (%{framework_url}) kurulmasına yardımcı olan yönlendirme
+    komitesinin bir üyesidir. Çerçeve yüzlerce akademisyen, K-12 eğitimcisinin, yazılım
+    şirketlerinin, kar amacı gütmeyen kuruluşların ve eyaletin desteğini kazandı.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Durum güncellemelerini almak için kaydolun]
+    (%{sign_up_url}) K-12 bilgisayar bilimi hareketindeki ilerleme ve Code.org'un
+    çalışmaları hakkında. Veya Code.org'u sosyal medyada takip edin:"
+  about_page_section_specific_description_8: Web sitemizin trafiğinin% 40'ından fazlası
+    Amerika Birleşik Devletleri dışından geliyor ve bu sayı artmaya devam ediyor.
+    Bilgisayar bilimlerine küresel erişimi genişletmek için ekibimiz [100'den fazla
+    uluslararası ortakla] (%{partners_url}) yakın bir şekilde çalışarak Kodlama Saati'ni
+    tanıtmalarına, politika değişikliklerini savunmalarına ve öğretmenler yetiştirmelerine
+    yardımcı olur. Dünyanın dört bir yanından eğitim bakanlıkları ile ortaklık kurarak
+    ve Ekonomik İşbirliği ve Kalkınma Örgütü ve Birleşmiş Milletler Eğitim, Bilim
+    ve Kültür Örgütü gibi uluslararası kuruluşlarla çalışarak bilgisayar bilimini
+    uluslararası eğitim söyleminin bir parçası haline getiriyoruz.
+  about_page_section_donors_description_1: Code.org®, genel halkın desteğiyle kayıtlı
+    bir halka açık 501c3 kar amacı gütmeyen kuruluşudur. Vizyonumuzu destekleyen [kişi
+    ve kuruluşlardan] (%{individuals_url}) aldığımız cömert destek için minnettarız.
+  about_page_section_donors_description_2: Kod başarıları (yukarıda), bu dolarları
+    güçlü sonuçlara dönüştürme yeteneğimizi göstermektedir. Ancak, her okuldaki her
+    çocuğun bilgisayar bilimine erişmesi — günümüzün dijital dünyasında okuryazar
+    vatandaşlar olmak ve bir kariyer olarak bilgi teknolojisini daha da keşfetme konusundaki
+    ilgi alanlarını test etmek için — bu vizyonu destekleyecek bir bağış toplama hedefine
+    ulaşmak için gidecek uzun bir yolumuz var.
+  about_page_donors_link_1: Bağış yapın
+  about_page_donors_link_2: "[bağışçı listemize bakın] (%{donors_url})"
   language_code:
     ar: Arapça
     az: Azerice

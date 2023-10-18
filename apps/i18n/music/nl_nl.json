@@ -5,6 +5,7 @@
   "blockly_blockWhenRun": "als gestart",
   "blockly_blockWhenRunTooltip": "als gestart",
   "blockly_functionNamePlaceholder": "mijn functie",
+  "blockly_toolboxCategoryEffects": "Effecten",
   "blockly_toolboxCategoryEvents": "Gebeurtenissen",
   "blockly_toolboxCategoryFunctions": "Functies",
   "blockly_toolboxCategoryLogic": "Logica",

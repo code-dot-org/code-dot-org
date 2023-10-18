@@ -5,7 +5,7 @@
 
 
 #########################################################
-FROM ubuntu:18.04 as base
+FROM ubuntu:20.04 as base
 #########################################################
 # multi-stage build for parallel compiling node & ruby: 
 # see: https://docs.docker.com/build/building/multi-stage/
@@ -47,7 +47,7 @@ RUN groupadd --gid 3434 ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
 
 #########################################################
-FROM ubuntu:18.04 as node
+FROM ubuntu:20.04 as node
 #########################################################
 # compile node to /build, this layer is merged at the end
 #########################################################
@@ -66,14 +66,14 @@ RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
     tar -xzf node-v18.16.0.tar.gz && \
     rm node-v18.16.0.tar.gz && \
     cd node-v18.16.0 && \
-    # C and CXX flags needed for ubuntu <=18.04: see https://github.com/nodesource/distributions/issues/1392
-    C=/usr/bin/gcc-8 CXX=/usr/bin/g++-8 \
     ./configure && \
     make -j `nproc` && \
     make install PREFIX=/build && \
     cd .. && \
     rm -r node-v18.16.0
 
+# Enable Corepack, for Yarn support
+RUN PATH=/build/bin corepack enable
 
 #########################################################
 FROM base as rbenv
@@ -122,6 +122,7 @@ RUN apt-get install -y --no-install-recommends \
     tzdata \
     unzip \
     vim \
+    wget \
     xvfb \
     xz-utils \
     zlib1g-dev \
@@ -132,29 +133,30 @@ WORKDIR /tmp
 # en_US.UTF-8 locale not available by default
 RUN locale-gen en_US.UTF-8
 
-# install mysql
+# Install MySQL.
+#
+# We explicitly target MySQL 5.7, and because of that we also explicitly target
+# Ubuntu Bionic (18.x).
+#
+# We also explicitly install both mysql-client and mysql-server, so that we can
+# also explicitly define the versions of both; normally only the latter is
+# required since it depends on the former.
+#
+# Once we update to MySQL 8+, this can be simplified.
 RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
     echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections && \
-    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get -fy install && \
+    echo "mysql-apt-config mysql-apt-config/repo-codename select bionic" | /usr/bin/debconf-set-selections && \
+    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get --fix-broken --yes install && \
     rm -rf mysql-apt-config_0.8.22-1_all.deb && \
     apt-get update && \
-    # warning: mysql-server debconf hangs forever if wget is already installed (!)
-    apt-get install -y mysql-server libmysqlclient-dev
+    apt-get install --yes libmysqlclient-dev mysql-client=5.7.42-1ubuntu18.04 mysql-server=5.7.42-1ubuntu18.04
 
 # disable auth for local dashboard mysql db
-RUN chown -R mysql:mysql /var/lib/mysql && \
-    service mysql start && \
+RUN service mysql start && \
     echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
     echo "CREATE USER 'readonly'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
     echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
-    chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && \
     service mysql stop
-
-# install yarn
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-    apt-get update && \
-    apt-get install -y yarn=1.22.19-1
 
 # we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
 RUN add-apt-repository ppa:git-core/ppa && \

@@ -4,10 +4,11 @@ import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -42,53 +43,27 @@ class StudentTable extends React.Component {
     return isSelected ? [styles.tr, styles.selected] : styles.tr;
   };
 
-  render() {
-    const {
-      students,
-      onSelectUser,
-      selectedUserId,
-      levelsWithProgress,
-      isSortedByFamilyName,
-    } = this.props;
+  componentDidMount() {
+    this.sortStudents();
+  }
 
-    // Sort using system default locale.
-    const collator = new Intl.Collator();
+  componentDidUpdate(prevProps) {
+    if (prevProps.isSortedByFamilyName !== this.props.isSortedByFamilyName) {
+      this.sortStudents();
+    }
+  }
 
-    // Returns a comparator function that sorts objects a and b by the given
-    // keys, in order of priority.
-    // Example: comparator(['familyName', 'name']) will sort by familyName
-    // first, looking at name if necessary to break ties.
-    const comparator = keys => (a, b) =>
-      keys.reduce(
-        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
-        0
-      );
-
-    const letterCompare = (a, b) => {
-      // Strip out any non-alphabetic characters from the strings before sorting
-      // (https://unicode.org/reports/tr44/#Alphabetic)
-      const aLetters = a.replace(/[^\p{Alphabetic}]/gu, '');
-      const bLetters = b.replace(/[^\p{Alphabetic}]/gu, '');
-
-      const initialCompare = collator.compare(aLetters, bLetters);
-
-      // Sort strings with letters before strings without
-      if (initialCompare > 0 && !!aLetters && !bLetters) {
-        return -1;
-      }
-      if (initialCompare < 0 && !aLetters && !!bLetters) {
-        return 1;
-      }
-
-      // Use original strings as a fallback if the special-character-stripped
-      // version compares as equal.
-      return initialCompare || collator.compare(a, b);
-    };
-
-    // Sort students, in-place.
+  sortStudents() {
+    const {students, isSortedByFamilyName} = this.props;
     isSortedByFamilyName
-      ? students.sort(comparator(['familyName', 'name']))
-      : students.sort(comparator(['name', 'familyName']));
+      ? students.sort(stringKeyComparator(['familyName', 'name']))
+      : students.sort(stringKeyComparator(['name', 'familyName']));
+    this.setState({students});
+  }
+
+  render() {
+    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
+      this.props;
 
     return (
       <table style={styles.table} className="student-table">
@@ -118,9 +93,7 @@ class StudentTable extends React.Component {
                     />
                   )}
                   <div style={styles.name}>
-                    {student.name}
-                    {!!DCDO.get('family-name-features', false) &&
-                      ` ${student.familyName || ''}`}
+                    {`${student.name} ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
@@ -159,7 +132,7 @@ const styles = {
     padding: 1,
   },
   selected: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     color: color.white,
     backgroundColor: color.light_cyan,
   },

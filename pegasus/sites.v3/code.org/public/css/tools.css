@@ -27,7 +27,8 @@
 }
 
 h1.tools-title {
-  padding: 6px;
+  font-size: 2.5rem;
+  padding: 6px 6px 12px;
   margin: 0px;
   color: white;
 }
@@ -37,11 +38,11 @@ h1.tools-title {
 }
 
 .tools-img-applab {
-  width: 283px;
+  width: 302px;
 }
 
 .tools-img-gamelab {
-  width: 222px;
+  width: 235px;
 }
 
 .tutorial-tile {
@@ -73,8 +74,20 @@ h1.tools-title {
   justify-content: space-between;
 }
 
+.tutorial-tile h2 {
+  font-family: var(--barlowSemiCondensed-medium);
+  font-size: 1.5rem;
+  line-height: 1.32;
+  margin-bottom: 0.5em;
+}
+
+h3,
 h3.tutorial-info-h {
   margin-top: 0px;
+  font-family: var(--barlowSemiCondensed-medium);
+  font-size: 1.5rem;
+  line-height: 1.32;
+  margin-bottom: 0.5em;
 }
 
 .tutorial-info-start {

@@ -767,7 +767,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'update_code_review_expiration resets expiration time when enabling code review' do
     @section.update_code_review_expiration(true)
     @section.save
-    assert_not_nil @section.code_review_expires_at
+    refute_nil @section.code_review_expires_at
     # check the expiration date was set to a time greater than now.
     assert DateTime.parse(@section.code_review_expires_at) > DateTime.now
   end
@@ -780,6 +780,41 @@ class SectionTest < ActiveSupport::TestCase
     @section.update_code_review_expiration(false)
     @section.save
     assert_nil @section.code_review_expires_at
+  end
+
+  test 'section create adds section instructor' do
+    assert_difference 'SectionInstructor.count' do
+      section = create(:section)
+      instructor = section.instructors.first
+      assert_equal instructor, section.user
+    end
+  end
+
+  test 'section update fixes section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.status = :declined
+    si.save!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
+  end
+
+  test 'section update fixes soft-deleted section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.destroy!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed again!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
   end
 
   def set_up_code_review_groups

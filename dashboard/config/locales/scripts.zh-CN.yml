@@ -319,6 +319,10 @@ zh-CN:
           name: ai-ethics-2021
           student_description: '使用文章和视频进行研究，揭露您选择的人工智能 (AI) 领域的道德陷阱。 '
           title: 我们的 AI 道德守则
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: 我们的 AI 道德守则
         ai-lab:
           student_description: 使用这些关卡来探索 AI Lab 并在其他课程或活动中使用。您需要创建一个 Code.org 帐户并登录才能使用这些工具。
           title: 人工智能实验室
@@ -1875,6 +1879,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-6:
               display_name: 单位结束调查
+            lessonGroup-7:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 欢迎来到 CSA
@@ -1990,6 +1996,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 属性
@@ -2005,6 +2013,8 @@ zh-CN:
               name: 这个关键字
             lesson-15:
               name: 第 2 单元调查
+            lesson-17:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 无参数构造函数
             lesson-3:
@@ -2088,6 +2098,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 一维（1D）数组
@@ -2101,6 +2113,8 @@ zh-CN:
               name: 社会公益项目数据 [1 天版]
             lesson-14:
               name: 第 3 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 修改元素
             lesson-3:
@@ -2180,6 +2194,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 抽象数据艺术项目 [1 天版]
@@ -2195,6 +2211,8 @@ zh-CN:
               name: 多选声明
             lesson-15:
               name: 第 4 单元调查
+            lesson-17:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 抽象数据艺术项目
             lesson-3:
@@ -2285,6 +2303,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 二维 (2D) 数组
@@ -2298,6 +2318,8 @@ zh-CN:
               name: 个人叙事项目 [1 天版]
             lesson-14:
               name: 第 5 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 2D 数组元素
             lesson-3:
@@ -2379,6 +2401,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2392,6 +2416,8 @@ zh-CN:
               name: 自然语言处理项目 [1 天版]
             lesson-14:
               name: 第 6 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 子字符串
             lesson-3:
@@ -2476,6 +2502,8 @@ zh-CN:
               display_name: 单位结束调查
             lessonGroup-5:
               display_name: 替补课程
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2489,6 +2517,8 @@ zh-CN:
               name: 第 7 单元调查
             lesson-14:
               name: 剧院项目中的创意编程 [1 天版]
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 作为参数的对象引用
             lesson-3:
@@ -2591,6 +2621,8 @@ zh-CN:
               display_name: 调查
             lessonGroup-5:
               display_name: 替补课程
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2602,6 +2634,8 @@ zh-CN:
               name: 第 8 单元评估
             lesson-13:
               name: 使用控制台项目进行创意编程 [1 天版]
+            lesson-15:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 正在搜索
             lesson-3:
@@ -2692,6 +2726,11 @@ zh-CN:
               display_name: 复习与练习
             lessonGroup-3:
               display_name: 模拟考试
+            lessonGroup-4:
+              display_name: 沙箱
+          lessons:
+            lesson-2:
+              name: 沥青艺术项目 — 第 2 天
           student_description: 本单元通过复习关键概念、练习多选题和自由答题以及强化应试策略，为你准备 AP CSA 考试做好准备。您可以确定优势和需要改进的领域，从而制定个性化的学习计划，集中精力练习并自我评估自己的进度。
         csa9-pilot:
           lesson_groups:
@@ -7018,7 +7057,7 @@ zh-CN:
           description: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
           description_short: 用代码来探索《我的世界》。
           student_description: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
-          title: 我的世界 编程一小时
+          title: "《我的世界》大冒险"
         microbit-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8241,6 +8280,104 @@ zh-CN:
               display_name: 内容
             csd3_2:
               display_name: 第 2 章︰ 创建游戏
+        virtual-pl-csa-summer-2024-day1:
+          title: 第一天
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第一天
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第二天
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第三天
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第四天
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: '第 5 天 '
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -8342,6 +8479,23 @@ zh-CN:
               name: 预览学年研讨会
             lesson-9:
               name: 为新的一年做准备
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 同步第 2 部分
+            lessonGroup-4:
+              display_name: 异步第 1 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第一天
+        virtual-pl-csp-summer-day2:
+          title: 第二天
+        virtual-pl-csp-summer-day3:
+          title: 第三天
+        virtual-pl-csp-summer-day4:
+          title: 第四天
         virustest:
           description_short: '使用精灵图实验室创建一个病毒爆发模拟。 '
           lesson_groups:

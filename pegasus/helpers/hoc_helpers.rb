@@ -94,7 +94,7 @@ def set_hour_of_code_cookie_for_row(row)
   response.set_cookie('hour_of_code', {value: row[:session], domain: '.code.org', path: '/api/hour/'})
 end
 
-def complete_tutorial(tutorial={})
+def complete_tutorial(tutorial = {})
   unless settings.read_only
     # We intentionally allow this DB write even for otherwise unsampled sessions so we can
     # generate personalized, shareable certificates. Only a fraction of users reach the end
@@ -133,7 +133,7 @@ def complete_tutorial(tutorial={})
   redirect(destination || "/congrats?s=#{Base64.urlsafe_encode64(tutorial[:code])}")
 end
 
-def complete_tutorial_pixel(tutorial={})
+def complete_tutorial_pixel(tutorial = {})
   unless settings.read_only || unsampled_session?
     row = DB[:hoc_activity].where(session: session_id).first
     if row && !row[:pixel_finished_at] && !row[:finished_at]
@@ -155,7 +155,7 @@ def complete_tutorial_pixel(tutorial={})
   send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
 end
 
-def launch_tutorial(tutorial, params={})
+def launch_tutorial(tutorial, params = {})
   unless settings.read_only || unsampled_session?
     row = create_session_row_unless_unsampled(
       referer: request.referer_site_with_port,

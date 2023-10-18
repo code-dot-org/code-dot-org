@@ -114,7 +114,7 @@
         "jigsaw": "Casse-tête",
         "kaitie-test-script": "script de test kaitie",
         "kodea-pd-2021": "CSF Online PC - Corée",
-        "mc": "Hour of Code Minecraft",
+        "mc": "Aventurier de Minecraft",
         "microbit": "Création d'applications avec des appareils (micro:bit)",
         "minecraft": "Heure de Code Minecraft - Concepteur",
         "ml-playground": "terrain de jeu ml-playground",
@@ -149,8 +149,6 @@
         "testtess": "testeur",
         "text-compression": "Compression de texte",
         "valentine": "valentine",
-        "vpl-csa": "Formation professionnelle virtuelle CSA",
-        "vpl-csp": "Apprentissage professionnel virtuel selon les principes du CS",
         "web-development": "Développement Web"
       }
     }

@@ -323,7 +323,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     assert_equal 2, response['workshops'].count
-    assert_equal [later_workshop.id, earlier_workshop.id], response['workshops'].map {|w| w['id']}
+    assert_equal([later_workshop.id, earlier_workshop.id], response['workshops'].map {|w| w['id']})
     assert_equal filters.stringify_keys, response['filters']
   end
 

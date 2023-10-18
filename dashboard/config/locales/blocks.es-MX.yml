@@ -4,6 +4,12 @@ es-MX:
     blocks:
       AmysBlocks_addTarget:
         text: "{TARGET} {OPT} {SPRITE} "
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': suficiente
+            '"too little"': muy poco
+            '"too much"': demasiado
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -1082,6 +1088,8 @@ es-MX:
             "{x: 300, y: 200}": derecha
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatorio
+      Mikelab_destroy:
+        text: eliminar {SPRITE}
       Mikelab_getNext:
         text: obtener siguiente objeto
       Mikelab_getProp:
@@ -1508,7 +1516,7 @@ es-MX:
           SOUND:
             '"sound://category_background/fire_burning.mp3"': Junto al fuego
             '"sound://category_background/inside_plane.mp3"': Zumbido
-            '"sound://category_background/ocean_waves.mp3"': océano
+            '"sound://category_background/ocean_waves.mp3"': mar
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Lluvioso
             '"sound://category_background/rainforest_ambient_sound.mp3"': Bosque lluvioso
             '"sound://category_background/repitition.mp3"': Montar
@@ -1992,6 +2000,16 @@ es-MX:
             left: izquierda ↺
             right: derecha ↻
         text: girar a la {DIR}
+      ecosystems_catchMe:
+        text: atrapar {THIS}
+      ecosystems_eat:
+        text: comer {THIS}
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': suficiente
+            '"too little"': muy poco
+            '"too much"': demasiado
       ecosystems_int10:
         options:
           VALUE:
@@ -2006,6 +2024,18 @@ es-MX:
             '8': '8'
             '9': '9'
         text: "{VALUE}"
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
+            "{x1:0, x2:400, y1:150, y2:250}": Centro
+            "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
+            "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+        text: "{RANGE}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addTarget:
@@ -2338,9 +2368,9 @@ es-MX:
             "'sound://category_animals/dog.mp3'": perro
             "'sound://category_animals/dolphin.mp3'": delfín
             "'sound://category_animals/elephant.mp3'": elefante
-            "'sound://category_animals/goat.mp3'": Cabra
+            "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/pig.mp3'": cerdo
-            "'sound://category_animals/rooster.mp3'": rejilla
+            "'sound://category_animals/rooster.mp3'": gallo
             "'sound://category_animals/sheep.mp3'": oveja
             "'sound://category_animals/tiger.mp3'": tigre
             "'sound://category_app/app_button_1.mp3'": botón
@@ -2358,7 +2388,7 @@ es-MX:
             "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": golpe
               de tono
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbuja
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": hechizo
               magico
@@ -2373,7 +2403,7 @@ es-MX:
       gamelab_playSoundOptionsSoccer:
         options:
           SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": corneta de aire
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
             "'sound://category_sports/Crowd_Chant_SFX.mp3'": cántico
             "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar

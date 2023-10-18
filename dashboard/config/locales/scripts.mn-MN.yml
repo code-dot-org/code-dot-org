@@ -3943,6 +3943,8 @@ mn:
           description_short: Найзуудтайгаа хуваалцахын тулд өөрийн бүжгийн үдэшлэгийг
             кодчилоорой! (Энэ хувилбар нь удаан холболтод зориулсан)
           title: Бүжгийн үдэшлэг (Бага өргөнтэй зурвас)
+        dance-unplugged:
+          title: Бүжгийн үдэшлэгийг салгав
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -4683,7 +4685,7 @@ mn:
           description_short: Кодоор дамжуулж Майнкрафтын ертөнцийг нээгээрэй.
           student_description: Энэхүү Minecraft ертөнцөөр дамжуулан Стив эсвэл Алексийг
             адал явдалд оруулахын тулд кодын блокуудыг ашиглаарай.
-          title: Майнкрафт Кодын цаг
+          title: Minecraft адал явдал эрэгч
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -5208,6 +5210,16 @@ mn:
           lesson_groups:
             csd3_2:
               display_name: '2-р бүлэг: Барилгын тоглоом'
+        virtual-pl-csa-summer-2024-day1:
+          title: 1-р өдөр
+        virtual-pl-csa-summer-day1:
+          title: 1-р өдөр
+        virtual-pl-csa-summer-day2:
+          title: 2-р өдөр
+        virtual-pl-csa-summer-day3:
+          title: 3-р өдөр
+        virtual-pl-csa-summer-day4:
+          title: 4-р өдөр
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -5234,6 +5246,14 @@ mn:
           lessons:
             lesson-3:
               name: Үнэлгээ
+        virtual-pl-csp-summer-day1:
+          title: 1-р өдөр
+        virtual-pl-csp-summer-day2:
+          title: 2-р өдөр
+        virtual-pl-csp-summer-day3:
+          title: 3-р өдөр
+        virtual-pl-csp-summer-day4:
+          title: 4-р өдөр
         vpl-csa-2023-m1:
           title: Модуль 1
         vpl-csa-2023-m2:

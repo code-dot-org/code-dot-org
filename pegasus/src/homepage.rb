@@ -351,7 +351,7 @@ class Homepage
               },
               {
                 text: "homepage_slot_text_link_host",
-                url: "https://hourofcode.com/us/#join"
+                url: "https://hourofcode.com/events"
               }
             ]
         },
@@ -428,7 +428,7 @@ class Homepage
               },
               {
                 text: "homepage_slot_text_link_donate",
-                url: "https://donate.code.org/give/172233/#!/donation/checkout"
+                url: "/donate"
               }
             ]
         }

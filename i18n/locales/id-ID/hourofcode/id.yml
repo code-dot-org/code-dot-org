@@ -6,36 +6,40 @@ id:
   front_title: Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal
     7-13 Desember 2015
   coming_soon: Akan Datang
-  campaign_date_start_short: 5 Des.
-  campaign_date_start_long: 5 Desember
-  campaign_date_short: 5-11 Des.
-  campaign_date_full: 5-11 Desember
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 Desember 2022
+  campaign_date_start_short: 4 Des.
+  campaign_date_start_long: 4 Desember
+  campaign_date_short: 4-10 Des.
+  campaign_date_full: 4-10 Desember
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 Desember 2023
   nonus_campaign_date_start_short: 1 Okt.
   nonus_campaign_date_start_long: 1 Oktober
   nonus_campaign_date_short: 1 Oktober - 18 Desember
   nonus_campaign_date_full: 1 Oktober - 18 Desember
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
   latam_campaign_date_start_short: 1 Okt.
   latam_campaign_date_start_long: 1 Oktober
   latam_campaign_date_short: 1 Oktober - 18 Desember
   latam_campaign_date_full: 1 Oktober - 18 Desember
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
   europe_campaign_date_start_short: 1 Okt.
   europe_campaign_date_start_long: 1 Oktober
   europe_campaign_date_short: 1 Oktober - 18 Desember
   europe_campaign_date_full: 1 Oktober - 18 Desember
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
   africa_campaign_date_start_short: 1 Okt.
   africa_campaign_date_start_long: 1 Oktober
   africa_campaign_date_short: 1 Oktober - 18 Desember
   africa_campaign_date_full: 1 Oktober - 18 Desember
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
+  hoc2023_header: Kreativitas dengan AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Apa yang akan Anda buat?
+  hoc2023_social_creativity_with_ai_desc: Gunakan ilmu komputer untuk mengeksplorasi
+    dan belajar tentang AI!
   hoc2022_header: Menjelajah, Bermain, Berkreasi!
   social_hoc2022_explore_play_create: Manfaatkan ilmu komputer untuk menjelajah, bermain,
     dan berkreasi!
@@ -186,6 +190,33 @@ id:
     Kurikulum yang baru dan halaman Ajar yang didesain ulang untuk membantu Anda menemukan
     semuanya!
   in_partnership_with: Bekerja sama dengan
+  shop_code_dot_org_heading: Toko Code.org
+  shop_code_dot_org_desc: Dukung pekerjaan kami dan kenakan gerakan dengan bangga.
+    Topi kami juga dipakai oleh Presiden Obama dan selebriti.
+  spread_the_word_heading: Sebarkan beritanya
+  spread_the_word_desc: Perkuat dampak kami dengan berbagi Code.org dengan jaringan
+    Anda. Dari media sosial hingga pembaruan email, temukan bagaimana Anda dapat membantu
+    kami menjangkau lebih banyak pendidik, siswa, dan advokat.
+  follow_us_heading: Ikuti kami di media sosial
+  follow_us_desc: Tetap up to date dengan kami di media sosial dan bagikan posting
+    kami dengan jaringan Anda untuk tetap mendapat informasi dan membantu mendorong
+    kesadaran.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tablet
+  device_laptop: Laptop
+  device_desktop_computer: Komputer Desktop
+  device_mobile_device: Perangkat Seluler
+  subscribe_to_emails_heading: Berlangganan email
+  subscribe_to_emails_desc: Baca tentang apa yang terjadi di Code.org dan dalam pendidikan
+    ilmu komputer melalui pembaruan triwulanan melalui milis kami.
+  subscribe_to_emails_intl: Berlangganan pembaruan internasional
+  promote_code_dot_org_heading: Promosikan Code.org
+  promote_code_dot_org_desc: Promosikan ilmu komputer di daerah Anda dengan bantuan
+    statistik, kutipan, dan video.
   afe_partnership_logo_alt: Logo Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer merupakan program masa kanak-kanak
     yang komprehensif untuk menginspirasi, mendidik, dan melatih anak-anak dan remaja
@@ -195,18 +226,58 @@ id:
   grade_level_label_elementary: Sekolah Dasar
   grade_level_label_middle: Sekolah Menengah
   grade_level_label_high: SMA
+  curricula_title_elementary: Kurikulum Sekolah Dasar
+  curricula_desc_elementary: Jelajahi kursus dan kegiatan gratis yang menyenangkan
+    yang mengundang Anda untuk menjelajahi ilmu komputer bersama siswa sekolah dasar
+    Anda.
+  curricula_title_middle: Kurikulum Sekolah Menengah
+  curricula_desc_middle: Jelajahi penawaran menarik yang memungkinkan Anda dan siswa
+    sekolah menengah Anda untuk menjelajahi ilmu komputer bersama.
+  curricula_title_high: Kurikulum SMA
+  curricula_desc_high: Jelajahi kursus dan kegiatan menarik yang mengundang Anda dan
+    siswa sekolah menengah Anda untuk menggali lebih dalam ilmu komputer.
+  for_administrators_heading: Untuk administrator
+  for_administrators_desc: Bergabunglah dengan ribuan sekolah yang telah memasukkan
+    ilmu komputer ke dalam kurikulum mereka.
+  for_parents_heading: Untuk orang tua
+  for_parents_desc: Anda dapat membantu mendorong sekolah siswa Anda untuk menawarkan
+    atau memperluas pendidikan ilmu komputer.
+  for_educators_heading: Untuk pendidik
+  for_educators_desc: Mulai mengajar hari ini - tidak perlu pengalaman ilmu komputer
+    - dengan lokakarya pembelajaran profesional kami.
   students_label: Murid-murid
   teachers_label: Guru-guru
+  educators_label: Pendidik
+  companies_label: Perusahaan
+  districts_label: Kabupaten
+  school_assemblies_label: Majelis Sekolah
+  parents_label: Orangtua
+  public_officials_label: Pejabat Publik
+  volunteers_label: Relawan
+  virtual_events_label: Acara Virtual
   teacher_label_csf: Guru CS Fundamentals
   teacher_label_csd: Guru CS Discoveries
   teacher_label_csp: Guru CS Principles
   teacher_label_csc: Guru CS Connections
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Forum Guru
+  teacher_forum_desc: Kunjungi Forum Guru Hour of Code untuk mendapatkan saran, wawasan,
+    dan dukungan dari pendidik lain.
   required_materials: 'Materi yang Diperlukan:'
   optional_materials: 'Materi Opsional:'
+  call_to_action_hold_an_event: Mengadakan acara
+  call_to_action_register_event: Daftarkan acara Anda
+  call_to_action_select_activity: Pilih aktivitas
+  call_to_action_start_activity: Memulai aktivitas
+  call_to_action_get_certificates: Dapatkan sertifikat
+  call_to_action_go_beyond_hoc: Melampaui Hour of Code
+  call_to_action_view_promo_resources: Lihat sumber promo
   call_to_action_learn_more: Belajarlah lagi
   call_to_action_watch_now: Tonton sekarang
   call_to_action_try_activity: Coba aktivitas
+  call_to_action_try_activities: Coba kegiatan
+  call_to_action_explore_activities: Jelajahi kegiatan
+  call_to_action_explore_ai: Jelajahi AI
   call_to_action_explore_unit: Jelajahi unit
   call_to_action_explore_curriculum: Jelajahi kurikulum
   call_to_action_explore_curriculum_options: Telusuri opsi kurikulum
@@ -221,6 +292,15 @@ id:
   call_to_action_explore_choice_level: Telusuri contoh level pilihan
   call_to_action_explore_collection: Telusuri koleksi
   call_to_action_explore_unplugged_lesson: Telusuri pelajaran tanpa komputer
+  call_to_action_explore_csf: Jelajahi Dasar-dasar CS
+  call_to_action_explore_csd: Jelajahi CS Discoveries
+  call_to_action_explore_csp: Jelajahi Prinsip CS
+  call_to_action_explore_csc: Jelajahi Koneksi CS
+  call_to_action_explore_csa: Jelajahi AP® Ilmu Komputer A
+  call_to_action_explore_csa_short: Jelajahi AP® CSA
+  call_to_action_explore_maker: Jelajahi kurikulum Maker
+  call_to_action_explore_hoc: Jelajahi tutorial Hour of Code
+  call_to_action_explore_hoc_short: Jelajahi Hour of Code
   call_to_action_try_app_lab: Coba App Lab
   call_to_action_view_lesson_plan: Lihat rencana pelajaran
   call_to_action_self_paced_pl: Mulai pembelajaran profesional mandiri
@@ -244,11 +324,13 @@ id:
   call_to_action_resources_tools: Coba alat pemrograman
   call_to_action_sign_up_free: Daftar gratis
   call_to_action_explore_ai_resources: Telusuri sumber daya AI
+  call_to_action_explore_ai_curricula: Jelajahi kurikulum AI
   call_to_action_explore_curriculum_catalog: Telusuri Katalog Kurikulum
   call_to_action_see_full_curriculum_catalog: Lihat Katalog Kurikulum lengkap
   call_to_action_find_self_paced_modules: Temukan modul mandiri
   call_to_action_join_teacher_forums: Bergabung dengan forum guru
   call_to_action_explore_teacher_forums: Telusuri forum guru
+  call_to_action_explore_teacher_forum: Jelajahi forum guru
   call_to_action_explore_career_resources: Telusuri sumber daya karier
   call_to_action_watch_videos: Tonton video
   call_to_action_download_posters: Unduh poster
@@ -263,6 +345,34 @@ id:
   call_to_action_learn_about_approach: Ketahui selengkapnya tentang pendekatan kami
   call_to_action_try_java_lab: Coba Java Lab
   call_to_action_notify_available: Beri tahu saya bila tersedia
+  call_to_action_register_early_access: Daftar untuk akses awal
+  call_to_action_open_positions: Lihat posisi terbuka
+  call_to_action_explore_roles: Jelajahi peran terbuka
+  call_to_action_get_guide: Dapatkan panduannya
+  call_to_action_donate_to_cdo: Donasi ke Code.org
+  call_to_action_start_fundraiser: Mulai penggalangan dana
+  call_to_action_view_donation_policy: Lihat kebijakan donasi
+  call_to_action_view_donate_bitpay: Donasi dengan BitPay
+  call_to_action_make_a_donation: Berikan donasi
+  call_to_action_other_ways_to_give: Cara lain untuk memberi
+  call_to_action_become_partner_usa: Menjadi mitra Amerika Serikat
+  call_to_action_become_partner_intl: Menjadi mitra internasional
+  call_to_action_become_a_volunteer: Menjadi sukarelawan
+  call_to_action_start_translating: Mulai menerjemahkan
+  call_to_action_learn_about_advocacy: Pelajari tentang advokasi kami
+  call_to_action_visit_store: Kunjungi toko
+  call_to_action_view_faqs: Lihat lebih banyak FAQ
+  aria_label_call_to_action_hoc_how_to_educators: Lihat panduan cara untuk Pendidik
+  aria_label_call_to_action_hoc_how_to_companies: Lihat panduan cara untuk Perusahaan
+  aria_label_call_to_action_hoc_how_to_districts: Lihat panduan cara untuk Distrik
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Lihat panduan cara untuk
+    Majelis Sekolah
+  aria_label_call_to_action_hoc_how_to_parents: Lihat panduan cara untuk Orang Tua
+  aria_label_call_to_action_hoc_how_to_public_officials: Lihat panduan cara untuk
+    Pejabat Publik
+  aria_label_call_to_action_hoc_how_to_volunteers: Lihat panduan cara untuk Relawan
+  aria_label_call_to_action_hoc_how_to_virtual_events: Lihat panduan cara untuk Acara
+    Virtual
   aria_label_call_to_action_afe: Pelajari selengkapnya tentang Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Mulai program pembelajaran profesional Pengajaran
     Ilmu Komputer Dasar-dasar
@@ -365,8 +475,11 @@ id:
   curriculum_name_csp: Prinsip Ilmu Komputer
   curriculum_name_csc: Computer Science Connections
   curriculum_name_csa: Ilmu Komputer A
+  curriculum_name_csa_ai: Rekayasa Perangkat Lunak & Visi Komputer
   curriculum_name_csc_02: Modul CS Connections apa saja
   curriculum_name_ai: AI dan Machine Learning
+  curriculum_name_artificial_intelligence: Kecerdasan Buatan (AI)
+  curriculum_name_maker: Pembuat
   curriculum_name_maker_cp: Membuat Aplikasi dengan Perangkat (Circuit Playground)
   curriculum_name_maker_microbit: 'Membuat Aplikasi dengan Perangkat (mikro: bit)'
   curriculum_name_creating_apps_with_devices: Membuat Aplikasi dengan Perangkat
@@ -377,6 +490,8 @@ id:
   curriculum_name_interactive_animations_games: Animasi & Game Interaktif
   curriculum_name_design_process: Proses Desain
   curriculum_name_data_society: Data & Masyarakat
+  curriculum_desc_csf: Kumpulan kurikulum dasar gratis yang memperkenalkan siswa pada
+    konsep dasar ilmu komputer.
   curriculum_desc_csf_express: Belajar membuat program komputer, mengembangkan keterampilan
     pemecahan masalah, dan melewati tantangan yang menyenangkan! Buat game dan proyek
     kreatif untuk dibagikan kepada teman, keluarga, dan guru.
@@ -422,6 +537,26 @@ id:
   curriculum_desc_creating_apps_with_devices: Menelusuri peran perangkat fisik dalam
     komputasi. Mengembangkan program yang memanfaatkan input dan output perangkat
     keras. Ada versi unit ini untuk micro:bit dan Circuit Playground.
+  curriculum_desc_csa: Perkenalkan siswa pada rekayasa perangkat lunak dan desain
+    berorientasi objek saat mereka belajar bahasa pemrograman Java dalam kurikulum
+    gratis ini untuk AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Pendidikan Maker membawa STEM (Sains, Teknologi, Teknik,
+    Matematika) selangkah lebih maju dengan mengundang pengalaman langsung dan kolaborasi
+    ke dalam kelas untuk membantu mengajarkan pemecahan masalah dan pemikiran kritis.
+  curriculum_desc_maker_short: Pendidikan Maker mengundang pengalaman langsung dan
+    kolaborasi ke dalam kelas untuk membantu mengajarkan pemecahan masalah dan pemikiran
+    kritis.
+  curriculum_desc_csd: Kursus fleksibel, memungkinkan setiap unit diajarkan sendiri
+    atau digabungkan. Memperkenalkan siswa untuk membangun situs web, aplikasi, animasi,
+    game, dan sistem komputasi fisik.
+  curriculum_desc_csp: Kursus pengantar sekolah menengah gratis yang didukung AP®
+    CSP yang memperkenalkan siswa pada konsep dasar ilmu komputer.
+  curriculum_desc_csa_ai_long: 'Modul CSA pasca-AP dua bagian ini menawarkan pengalaman
+    langsung kepada siswa sekolah menengah dengan alat pengembangan perangkat lunak
+    profesional, termasuk GitHub dan GitHub Copilot, dan memberi mereka keterampilan
+    dunia nyata untuk mengembangkan program visi komputer. '
+  curriculum_desc_csa_ai_short: Modul Post-AP® CSA ini menawarkan pengalaman langsung
+    kepada siswa sekolah menengah dengan alat pengembangan perangkat lunak profesional.
   collection_hardware: Fokus pada Perangkat Keras
   collection_hardware_desc: Memberdayakan siswa untuk menggunakan data dan perangkat
     fisik untuk memecahkan masalah.
@@ -454,6 +589,7 @@ id:
   module_label_professional_learning: 'Pembelajaran Profesional:'
   module_label_languages: 'Bahasa yang Didukung:'
   module_label_accessibility_features: 'Aksesibilitas:'
+  module_label_accessibility_features_full: 'Fitur Aksesibilitas:'
   module_label_educator_tool: Alat bagi pendidik
   module_label_educator_course: Kursus bagi pendidik
   module_label_student_tool: Alat bagi siswa
@@ -461,6 +597,7 @@ id:
   module_label_student_content_resources: Konten & sumber daya
   module_label_new: Baru
   module_label_coming_soon: Segera hadir
+  module_label_available_now: Tersedia Sekarang
   module_label_video_series: Seri video
   module_label_self_paced: Modul mandiri
   module_ages_5_10: 5-10
@@ -471,6 +608,8 @@ id:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -485,11 +624,14 @@ id:
   module_grade_9_12_teachers: Guru 9-12
   module_level_beginner: Pemula
   module_level_intermediate: Menengah
+  module_level_advanced: Lanjutan
   module_duration_45_mins: 45 menit
+  module_duration_2_weeks: 2 minggu
   module_duration_1_hr: 1 jam
   module_duration_2_hrs: 2 jam
   module_duration_3_hrs: 3 jam
   module_duration_5_hrs: 5 jam
+  module_duration_5_hrs_plus: 5+ jam
   module_duration_8_hrs: 8 jam
   module_duration_20_hrs: 20 jam
   module_duration_35_hrs: 35 jam
@@ -501,6 +643,7 @@ id:
   module_duration_school_year: Tahun Ajaran
   module_duration_month_quarter: Bulan atau Kuartal
   module_duration_month_semester_year: Bulan, Semester, atau Tahun
+  module_duration_varies: Bervariasi
   module_prerequisites_none: Tidak ada
   module_prerequisites_maker_cp: Akses ke Taman Bermain Sirkuit
   module_prerequisites_maker_microbit: Akses ke micro:bit
@@ -567,6 +710,9 @@ id:
   heading_java_lab: Java Lab
   heading_objects_first: Utamakan objek
   heading_these_lessons_will: 'Pelajaran ini akan:'
+  heading_explore_curriculum_catalog: Jelajahi semua kursus kami di Katalog Kurikulum
+  heading_csa_ai: Mencari hal-hal yang harus dilakukan setelah ujian AP®?
+  heading_bring_cs_to_students: Membawa ilmu komputer untuk siswa
   professional_learning_section_desc: Dapatkan dukungan yang Anda butuhkan saat Anda
     bersiap untuk mengajar. Para guru menyukainya, dan lebih dari 90% memberinya peringkat
     sebagai pengembangan profesi terbaik yang pernah ada!
@@ -600,6 +746,23 @@ id:
     apa pun yang mungkin Anda miliki tentang cara mulai mengajar dengan Code.org.
     Anda juga dapat bertanya kepada guru lain tentang pengalaman mereka di forum guru
     kami.
+  subscribe_form_section_title: Berlangganan untuk pembaruan
+  subscribe_form_section_desc_csa: Daftar untuk menerima email bulanan tentang AP®
+    Computer Science A Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat
+    yang dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_desc_csc: Daftar untuk menerima email bulanan tentang Koneksi
+    Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
+    dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_desc_csd: Daftar untuk menerima email bulanan tentang Penemuan
+    Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
+    dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_desc_csf: Daftar untuk menerima email bulanan tentang Dasar-Dasar
+    Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
+    dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_desc_csp: Daftar untuk menerima email bulanan tentang Prinsip
+    Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
+    dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_unsubscribe: Anda dapat berhenti berlangganan kapan saja.
   blockchain_hero_heading: Bagaimana Blockchain Bekerja
   blockchain_hero_desc: Selami dunia blockchain dengan “How Blockchain Works,” seri
     video baru kami dan pelajaran yang menyertainya!
@@ -703,6 +866,9 @@ id:
     pelajaran dipasangkan dengan satu video dari seri, menyelami lebih dalam konsep
     yang diperkenalkan dalam video.
   ai_curriculum_btn_aria_label_04: Jelajahi pelajaran Bagaimana AI Bekerja
+  ai_curriculum_grades_05: 'Tingkat Kelas: 9-12'
+  ai_curriculum_btn_aria_label_05: Jelajahi modul Rekayasa Perangkat Lunak & Visi
+    Komputer
   ai_carousel_heading: 'Apa yang dikatakan guru tentang AI dengan Code.org:'
   ai_carousel_quote_01: Pelajaran ini juga memberi siswa saya kesempatan untuk melihat
     bahwa ada unsur opini dalam sistem klasifikasi. Kemudian, ketika kami mulai melihat
@@ -823,10 +989,20 @@ id:
     Dengan perpaduan teori, contoh praktis, dan sumber daya yang kaya, ini bertujuan
     untuk memberdayakan pendidik untuk menavigasi lanskap AI dan meningkatkan pengalaman
     belajar siswa.
+  ai_pl_101_resources_5: Panduan untuk Memastikan Pendekatan yang Bertanggung Jawab
+    terhadap AI
   ai_pl_101_video_desc_6: 'Pelajari lebih lanjut tentang teknologi baru yang mendorong
     perubahan besar dalam AI, menampilkan dua video baru pada Model Bahasa Besar (seperti
     ChatGPT) dan Generative AI. Dengarkan bagaimana teknologi baru ini bekerja langsung
     dari para ahli: Mira Murati, CTO OpenAI, dan Cristóbal Valenzuela, CEO RunwayMLL.'
+  ai_pl_101_llm_slides_title: Prompt Model Bahasa Besar untuk Pendidik
+  ai_pl_101_llm_slides_desc: Alat untuk mendapatkan hasil terbaik dari LLM seperti
+    ChatGPT, dari pemula hingga mahir. Termasuk petunjuk pemula bagi mereka yang baru
+    saja mencelupkan jari kaki mereka, serta alat canggih bagi mereka yang ingin memaksimalkan
+    potensi mereka.
+  ai_pl_101_resources_3: AI Meminta untuk Mengubah Pembelajaran Siswa
+  ai_pl_101_resources_section_title: Lebih banyak cara untuk belajar tentang AI
+  ai_pl_101_resources_guide: 'Panduan pendamping:'
   how_ai_works_hero_heading: Bagaimana AI Bekerja
   how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” serial video kami
     dan pelajaran yang menyertainya!
@@ -1167,20 +1343,18 @@ id:
   teach_page_free_curriculum_desc: Kami ingin Anda membawa  Ilmu Komputer ke sekolah
     tanpa mengkhawatirkan biayanya. Karena itu, kami berkomitmen untuk menawarkan
     kurikulum kami secara gratis selamanya!
-  teach_page_free_curriculum_list_heading_01: Kurikulum yang menarik untuk setiap
-    jenjang kelas
   teach_page_free_curriculum_list_desc_01: Kurikulum gratis, fleksibel, dan menyenangkan
     yang tersedia dalam lebih dari 67 bahasa.
-  teach_page_free_curriculum_list_heading_02: Kurikulum yang inovatif dan dapat disesuaikan
   teach_page_free_curriculum_list_desc_02: Code.org menawarkan semuanya, mulai dari
     kurikulum setahun penuh hingga kegiatan satu unit. Selain itu, kami memperbarui
     kurikulum setiap tahun guna mendukung praktik terbaik dan area fokus, serta membuat
     penawaran baru yang mengajarkan topik terkini yang sedang diminati.
-  teach_page_free_curriculum_list_heading_03: Kurikulum yang disusun sesuai standar
-    nasional
   teach_page_free_curriculum_list_desc_03: Setiap kurikulum disesuaikan dengan setidaknya
     satu set standar nasional, seperti CSTA, Next Generation Science Standards, dan
     Common Core.
+  teach_page_free_curriculum_list_desc_04: Penawaran dalam lebih dari 67 bahasa
+  teach_page_free_curriculum_list_desc_05: Dipetakan ke setidaknya satu set standar
+    nasional (termasuk CSTA, NGSS, dan Common Core)
   teach_page_free_curriculum_heading_02: 'Telusuri penawaran kurikulum kami untuk
     jenjang kelas yang berbeda:'
   teach_page_resources_heading: Sumber daya yang mendukung Anda di tiap langkah
@@ -1244,8 +1418,8 @@ id:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Lokakarya yang dipimpin fasilitator,
+    Modul Self-paced
   csp_page_curriculum_glance_professional_languages: Bahasa Indonesia
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1372,8 +1546,8 @@ id:
     Fisik, Desain Aplikasi, Game dan Animasi, Seni dan Desain, Pemrograman
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Lokakarya yang dipimpin fasilitator,
+    Modul Self-paced
   csd_page_curriculum_glance_professional_languages: Bahasa Indonesia
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1518,8 +1692,8 @@ id:
     dan Desain, Desain Aplikasi
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Lokakarya yang dipimpin fasilitator,
+    Modul Self-paced
   csf_page_curriculum_glance_languages: Arab, Bahasa Indonesia, Catalan, Mandarin
     Sederhana, Tionghoa Tradisional, Ceko, Prancis, Jerman, Hindi, Italia, Jepang,
     Korea, Kannada, Melayu, Marathi, Mongolia, Polandia, Portugis-BR, Rumania, Rusia,
@@ -1661,6 +1835,64 @@ id:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Bantu mendanai misi kami
+  donate_page_top_desc: Setiap donasi mendorong misi Code.org untuk memperluas akses
+    ke pendidikan ilmu komputer. Kami menawarkan beberapa cara bagi Anda untuk menyumbang
+    dan membuat perbedaan.
+  donate_page_fundraise_title: Penggalangan dana untuk Code.org
+  donate_page_fundraise_desc: Bantu mengumpulkan uang untuk Code.org! Setiap siswa
+    di setiap sekolah harus memiliki kesempatan untuk belajar ilmu komputer.
+  donate_page_other_ways_title: Cara lain untuk memberi
+  donate_page_other_ways_desc: Jelajahi beragam metode untuk berkontribusi, dan temukan
+    opsi yang paling cocok untuk Anda. Setiap gerakan, besar atau kecil, mendorong
+    misi kami maju.
+  donate_page_501c3: Code.org terdaftar sebagai organisasi nirlaba 501 (c) (3) publik.
+    Kontribusi ke Code.org dapat dikurangkan dari pajak sejauh diizinkan oleh hukum.
+    Nomor identifikasi pajak Code.org adalah 46-0858543.
+  donate_page_donation_policy_title: Memahami Kebijakan Donasi
+  donate_page_donation_policy_desc: Pelajari tentang cara kami menangani dan mengalokasikan
+    kontribusi Anda.
+  donate_tabs_tab_label_daf_direct: DAF Langsung
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Pertandingan Karyawan
+  donate_tabs_daf_direct_title: Donasi melalui DAF Direct
+  donate_tabs_daf_direct_desc: Donasi melalui dana yang disarankan donor Anda dengan
+    Fidelity Charitable, Schwab Charitable, atau BNY Mellon dan buat rekomendasi hibah
+    Anda ke Code.org melalui formulir online DAF Direct.
+  donate_tabs_amazon_title: Donasi melalui Amazon
+  donate_tabs_amazon_desc: Donasi langsung menggunakan akun Amazon Anda. Hanya dengan
+    beberapa klik, berkontribusi mulus pada misi Code.org dan memberdayakan masa depan
+    pendidikan ilmu komputer.
+  donate_tabs_bitpay_title: Donasi dengan Crypto melalui BitPay
+  donate_tabs_bitpay_desc: Merangkul masa depan memberi dengan cryptocurrency. Melalui
+    BitPay, mata uang digital Anda dapat secara langsung mendukung upaya Code.org
+    dalam memperluas pendidikan ilmu komputer.
+  help_page_top_heading: Bagaimana Anda dapat membantu
+  help_page_top_desc: Dukung misi kami untuk membuat ilmu komputer dapat diakses oleh
+    setiap anak, di mana pun. Upaya Anda membantu kami menginspirasi inovator masa
+    depan dan menjembatani kesenjangan pendidikan teknologi.
+  help_page_top_subhead: Berikan donasi ke Code.org
+  help_page_top_desc_02: Kami bekerja untuk memberi setiap siswa kesempatan untuk
+    belajar ilmu komputer - baik online MAUPUN di sekolah, tempat kami mendirikan
+    kursus permanen dan melatih guru. Untuk setiap dolar yang Anda sumbangkan, satu
+    anak diperkenalkan dengan ilmu komputer.
+  help_page_partners_heading: Menjadi mitra
+  help_page_partners_desc: Code.org bekerja dengan organisasi nirlaba lainnya sebagai
+    mitra untuk membantu menyebarkan ilmu komputer secara lokal dan berkelanjutan.
+    Pelajari lebih lanjut tentang program kami.
+  help_page_volunteer_heading: Sukarelawan di kelas
+  help_page_volunteer_desc: Sukarelawan untuk mengajar Hour of Code atau menjadi pembicara
+    tamu di kelas lokal. Daftar untuk mendengar tentang peluang di dekat Anda.
+  help_page_translate_heading: Bantu kami menerjemahkan
+  help_page_translate_desc: Relawan telah menerjemahkan tutorial kami dalam lebih
+    dari 45 bahasa. Bantu kami terus memperluas tutorial kami untuk siswa di seluruh
+    dunia!
+  help_page_speak_for_cs_heading: Bicaralah untuk pendidikan ilmu komputer
+  help_page_speak_for_cs_desc: Pelajari lebih lanjut tentang pekerjaan advokasi Code.org
+    di seluruh AS dan sepuluh kebijakan yang kami rekomendasikan untuk diterapkan
+    oleh negara bagian untuk menjadikan ilmu komputer menjadi dasar bagi semua siswa.
+    Plus, cari tahu bagaimana Anda dapat mendorong perubahan di negara Anda.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Daftar Hour of Code Live
   hoc_live_learn_title: Belajar dengan Hour of Code Live
@@ -1741,8 +1973,8 @@ id:
   ai_activity_zooniverse: Zooniverse - Foto Gunung Zebra
   ai_activity_zooniverse_desc: Membantu melindungi Cape Mountain Zebra yang terancam
     punah dengan mengidentifikasi hewan yang berbeda dalam gambar.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Pergi lebih jauh dengan kursus <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Buat sendiri <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: The Hour of Code akan datang...
   codeorg_homepage_hoc2018_header_line2_desktop: Apa yang akan Anda buat <span class="hoc2018-highlight-word">?</span>
@@ -2091,6 +2323,13 @@ id:
     pembaruan kursus Code.org, peluang lokal, atau berita ilmu komputer lainnya?
   signup_email_preference_privacy: "(Lihat kebijakan privasi kami)"
   signup_email_preference_yes: ya
+  signup_email_preference_yes_elementary: Ya - Kirimi saya pembaruan tentang Sumber
+    Daya Sekolah Dasar
+  signup_email_preference_yes_middle: Ya - Kirimi saya pembaruan tentang Sumber Daya
+    Sekolah Menengah
+  signup_email_preference_yes_high: Ya - Kirimi saya pembaruan tentang Sumber Daya
+    Sekolah Menengah
+  signup_email_preference_yes_general: Ya - Kirimi saya pembaruan umum
   signup_email_preference_no: Tidak
   signup_email_preference_error: Preferensi email diperlukan
   signup_multiple_event_warning: Jika Anda menyelenggarakan beberapa acara, kirimkan
@@ -12767,12 +13006,12 @@ id:
   tutorial_googlename _longdescription: Pilih nama dan hidupkan huruf-huruf kata tersebut
     menggunakan kode. Pilih nama panggilan, nama hewan peliharaan, binatang, olahraga,
     tempat atau hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Kota Zillah berkembang pesat, dan musik
+    ada di udara. Rumor mengatakan, bot Gargantua yang terkenal sedang online dan
+    mengirim Toxibots terakhir untuk membuang kota blok demi blok.…Ambil hoverboard
+    cobot Anda dan bersiaplah untuk alur, bergerak, dan selesaikan apa yang Anda mulai!
+    Pemain memprogram hoverbot cobot mereka untuk mengubah jalur, menghindari rintangan,
+    dan mengeluarkan banyak Toxibots dalam game bergaya ritme ini.
   tutorial_nasachspacejam_longdescription: Buat tata surya yang benar-benar bebatuan!
     Pelajari tentang musik, astronomi, dan pengkodean dalam aktivitas yang dipandu
     sendiri ini (tidak diperlukan pengalaman pengkodean). Program planet untuk membuat
@@ -13393,6 +13632,132 @@ id:
   all: Semua
   dont_know: Aku tidak tahu
   language_label: Bahasa
+  before_hoc: Sebelum Hour of Code
+  day_of_hoc: Hari Jam Kode
+  after_hoc: Setelah Hour of Code
+  step_01: Langkah 1
+  step_02: Langkah 2
+  step_03: Langkah 3
+  step_04: Langkah 4
+  step_05: Langkah 5
+  step_06: Langkah 6
+  step_07: Langkah 7
+  step_08: Langkah 8
+  hoc_how_to_top_heading: Panduan Anda untuk Hour of Code
+  hoc_how_to_top_desc: Panduan cara yang disesuaikan untuk pengalaman Hour of Code
+    terbaik.
+  hoc_how_to_top_view_guide: Lihat panduan untuk
+  hoc_how_to_nav_main_aria_label: Pilih panduan
+  hoc_how_to_nav_sidebar_aria_label: Navigasi sidebar
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: The Hour of Code adalah pengantar satu jam untuk
+    ilmu komputer, menggunakan tutorial menyenangkan untuk menunjukkan bahwa siapa
+    pun dapat mempelajari dasar-dasarnya. Tahun ini, kami membawa Hour of Code ke
+    tingkat yang baru dengan menawarkan peluang pengkodean yang mencakup komponen
+    kecerdasan buatan (AI) dan non-AI. Apakah Anda atau siswa Anda adalah pembuat
+    kode berpengalaman atau Anda semua memulai ekspedisi ilmu komputer pertama Anda,
+    Hour of Code ini menjanjikan perjalanan yang luar biasa.
+  hoc_how_to_faq_question_prerequisites: Apa prasyarat untuk melakukan Hour of Code?
+  hoc_how_to_faq_answer_prerequisites: Hour of Code mudah dijalankan — bahkan untuk
+    pemula. Anda tidak perlu pengalaman dalam ilmu komputer atau pengajaran untuk
+    menginspirasi siswa untuk mengeksplorasi, menciptakan, dan mempelajari sesuatu
+    yang baru.
+  hoc_how_to_faq_question_devices: Perangkat apa yang saya perlukan untuk menjalankan
+    Hour of Code?
+  hoc_how_to_faq_answer_devices_01: 'Perangkat yang dapat Anda gunakan:'
+  hoc_how_to_faq_answer_devices_02: Jika perangkat terbatas atau tidak tersedia, coba
+    [pair programming] (%{pair_url}) atau jelajahi [aktivitas yang tidak terhubung]
+    (%{unplugged_url}) kami untuk belajar tanpa perangkat sama sekali!
+  hoc_how_to_faq_question_volunteer: Siapa yang bisa menjadi relawan?
+  hoc_how_to_faq_answer_volunteer: Siapa pun yang bersemangat tentang pendidikan ilmu
+    komputer dan meningkatkan keragaman dalam teknologi dapat menjadi sukarelawan!
+    Kami ingin melihat sukarelawan dari semua latar belakang berpartisipasi. The Hour
+    of Code menampilkan berbagai macam kegiatan untuk segala usia dan tingkat keterampilan,
+    jadi Anda tidak perlu menjadi ahli pemrograman untuk menjadi sukarelawan!
+  hoc_how_to_faq_question_full_hour: Apakah Hour of Code akan memakan waktu satu jam
+    penuh?
+  hoc_how_to_faq_answer_full_hour: Banyak siswa akan dapat menyelesaikan kegiatan
+    mereka dalam waktu kurang dari satu jam, dan tidak apa-apa! Siswa dapat terus
+    belajar sementara siswa lain menyelesaikan kegiatan mereka.
+  hoc_how_to_faq_question_account: Apakah siswa harus log in dengan menggunakan akun?
+  hoc_how_to_faq_answer_account: Tidak diperlukan pendaftaran atau login bagi siswa
+    untuk mencoba Hour of Code. Mendaftar untuk Hour of Code TIDAK secara otomatis
+    membuat akun Code.org.
+  hoc_how_to_resources_heading_educators: Sumber lain Hour of Code untuk pendidik
+  hoc_how_to_resources_promo_heading: Sumber Promosi
+  hoc_how_to_resources_promo_desc: Temukan semua sumber daya yang Anda perlukan —
+    cetak dan digital — untuk menarik perhatian pada Hour of Code Anda.
+  hoc_how_to_resources_discover_heading: Temukan Aktivitas
+  hoc_how_to_resources_discover_desc: Jelajahi berbagai pilihan tutorial satu jam
+    yang dirancang untuk segala usia dalam lebih dari 45 bahasa.
+  hoc_how_to_step_label_plan: Rencanakan di mana dan kapan Anda akan melakukan Hour
+    of Code
+  hoc_how_to_step_label_choose_activity: Pilih aktivitas Anda
+  hoc_how_to_step_label_test_activity: Uji aktivitas Anda
+  hoc_how_to_step_label_register_event: Daftarkan acara Anda
+  hoc_how_to_step_label_tell: Beri tahu siswa, sekolah, dan komunitas Anda
+  hoc_how_to_step_label_get_coding: Dapatkan pengkodean!
+  hoc_how_to_step_label_celebrate: Rayakan
+  hoc_how_to_step_label_beyond_hoc: Melampaui Jam Kode
+  hoc_how_to_step_beyond_hoc_subhead: Itu tidak berakhir di sini!
+  hoc_how_to_step_beyond_hoc_desc: Ilmu komputer tidak harus berakhir dengan Hour
+    of Code! Sementara 90% orang tua ingin anak mereka belajar ilmu komputer, sebagian
+    besar sekolah masih tidak mengajarkannya. Pelajari cara membawa CS ke sekolah
+    anak Anda hari ini.
+  hoc_how_to_step_01_educators_subhead: Pilih waktu dan ruang acara yang sesuai dengan
+    jumlah siswa dan perangkat yang tersedia.
+  hoc_how_to_step_01_educators_desc_01: Ruang apa yang tersedia bagi Anda untuk melakukan
+    Hour of Code Anda? Pertimbangkan kemampuan teknologi ruang Anda, dan jenis perangkat
+    yang Anda harapkan untuk dikerjakan siswa Anda. Siswa dapat mengerjakan tutorial
+    pada satu perangkat, bergiliran menggunakan perangkat bersama, atau mencoba tutorial
+    bersama di papan tulis kelas. Bahkan ada tutorial yang tidak terhubung yang dapat
+    diselesaikan tanpa perangkat sama sekali. Opsi yang tidak dicabut dapat dilakukan
+    di mana saja—bahkan di luar ruangan!
+  hoc_how_to_step_01_educators_desc_02: Orang-orang di seluruh dunia bergabung dengan
+    perayaan Hour of Code selama Pekan Pendidikan CS %{campaign_date} ketika tutorial
+    dan kegiatan terbaru dirilis. Tetapi Anda dapat melakukan Hour of Code setiap
+    hari sepanjang tahun!
+  hoc_how_to_step_02_educators_desc_01: Jelajahi aktivitas berdasarkan usia, pengalaman,
+    minat, dan banyak lagi kelompok Anda. Sangat populer bagi siswa untuk mencoba
+    tutorial yang dipimpin sendiri, meskipun banyak kegiatan menyertakan rencana pelajaran
+    bagi guru untuk memandu diskusi atau memperluas kegiatan juga.
+  hoc_how_to_step_02_educators_desc_02: Putuskan sebelumnya jika Anda ingin memilih
+    satu tutorial untuk semua siswa Anda, atau biarkan setiap anak memilih sendiri.
+  hoc_how_to_step_02_educators_desc_03: Tahun ini, Anda dan siswa Anda dapat [mempelajari
+    semua tentang AI] (%ai_url) melalui tutorial, rencana pelajaran, dan seri video
+    How AI Works kami yang baru.
+  hoc_how_to_step_03_educators_desc_01: Cobalah tutorialnya sendiri sebelum masuk
+    ke kelas sehingga Anda dapat menjawab pertanyaan!
+  hoc_how_to_step_03_educators_desc_02: Anda juga dapat menguji tutorial di komputer
+    atau perangkat siswa untuk memastikan mereka mendukung suara dan video. Memiliki
+    bandwidth rendah? Rencanakan untuk menampilkan video di bagian depan kelas, sehingga
+    setiap siswa tidak mengunduh video mereka sendiri.
+  hoc_how_to_step_03_educators_desc_03: Pertimbangkan untuk menyediakan headphone
+    untuk kelas Anda, atau minta siswa untuk membawa sendiri, jika tutorial yang Anda
+    pilih paling cocok dengan suara.
+  hoc_how_to_step_04_educators_desc_01: Saat Anda mendaftarkan acara Hour of Code,
+    Anda akan menerima email bermanfaat berisi berita dan tips untuk menyelenggarakan
+    Hour of Code yang sukses. Ini juga bagaimana Anda dapat memberi tahu sukarelawan
+    lokal bahwa sekolah Anda berpartisipasi. Relawan adalah sumber yang bagus dan
+    dapat datang berbicara ke kelas Anda tentang ilmu komputer atau membantu siswa
+    Anda dengan kegiatan Hour of Code.
+  hoc_how_to_step_05_educators_desc_01: Buat siswa Anda bersemangat untuk acara ini
+    dengan berbagi [video inspirasional] (%{videos_url}) yang menyoroti beragam orang
+    dan cara-cara kreatif bahwa ilmu komputer dapat digunakan di dunia nyata.
+  hoc_how_to_step_05_educators_desc_02: Bagikan rencana Hour of Code Anda dengan guru
+    lain yang mungkin ingin ikut bersenang-senang! Ini juga merupakan kesempatan bagus
+    untuk menjangkau Asosiasi Siswa Guru Orang Tua sekolah Anda atau berbagi di buletin
+    orang tua, memberi tahu mereka apa yang dipelajari anak-anak mereka.
+  hoc_how_to_step_06_educators_desc_01: Arahkan siswa Anda ke kegiatan tersebut, mungkin
+    dengan membagikan tautan di papan tulis atau melalui sistem manajemen pembelajaran
+    kelas Anda. Siswa Anda mungkin menghadapi tantangan — tidak apa-apa! Belajar memprogram
+    seperti belajar bahasa baru; Anda tidak akan langsung fasih. Jika Anda tidak tahu
+    jawabannya, Anda bisa mengetahuinya bersama.
+  hoc_how_to_step_07_educators_desc_01: 'Pastikan untuk merayakan kesuksesan! Bagikan
+    foto dan video acara Hour of Code Anda di media sosial. Gunakan #HourOfCode dan
+    @codeorg sehingga kami dapat menyoroti kesuksesan Anda juga!'
+  hoc_how_to_step_07_educators_desc_02: Anda juga dapat mencetak sertifikat bagi siswa
+    Anda untuk memamerkan prestasi mereka!
   team_page_full_team_alt_text: Hampir 100 karyawan Code.org dengan kaos biru dan
     kuning yang serasi berpose di ruang konferensi hotel untuk acara Codechella musim
     panas 2022 perusahaan.
@@ -13486,6 +13851,609 @@ id:
   accessibility_card_text_10: Adaptasi dari kurikulum AP Computer Science Principles
     Code.org menggunakan Quorum, bahasa berbasis bukti yang awalnya dirancang untuk
     memberikan aksesibilitas bagi siswa tunanetra atau yang mengalami gangguan penglihatan.
+  engineering_hero_heading: Bergabunglah dengan tim teknik kami!
+  engineering_hero_desc: Seiring kami terus memperluas tim teknik kami, kami ingin
+    berbagi lebih banyak tentang organisasi teknik kami di Code.org dan beberapa aspek
+    unik dari bekerja di sini. Jika Anda tertarik untuk melamar salah satu peran kami,
+    kami akan senang mendengar dari Anda!
+  engineering_team_title: Temui tim teknik di Code.org
+  engineering_team_card_text_1: Ini adalah (sebagian besar) kita pada pertemuan tatap
+    muka kita selama musim panas 2023! Kerumunan ini dibagi menjadi empat sub-tim
+    dalam tim teknik kami yang bekerja sama untuk membangun dan melayani platform
+    untuk semua siswa dan guru kami.
+  engineering_team_card_text_2: Jika Anda tertarik untuk melamar salah satu peran
+    kami, kami akan senang mendengar dari Anda! Anda dapat menemukan daftar posisi
+    terbuka di halaman Karir kami.
+  engineering_our_team_title: Tim teknik kami
+  engineering_our_team_desc: 'Tim teknik di Code.org dibagi menjadi empat sub-tim
+    yang membangun dan mendukung berbagai area platform kami:'
+  engineering_our_team_sub_title_1: Tim Pembelajaran Mahasiswa
+  engineering_our_team_text_1: Tim Pembelajaran Siswa kami memiliki semua kegiatan
+    kami (kami menyebutnya laboratorium) yang digunakan siswa kami setiap hari. Tim
+    ini sebagian besar bekerja pada teknologi front-end (kami menggunakan React dan
+    banyak JS khusus) dan kami memiliki hubungan kerja yang hebat dengan banyak mitra
+    dan proyek open source. Misalnya, kami menggunakan [Google Blockly] (%{youtube_url})
+    untuk semua pemrograman berbasis blok kami. Kami mendukung siswa dalam perjalanan
+    belajar mereka dari TK hingga kelas 12.
+  engineering_our_team_sub_title_2: Tim Pengalaman Guru
+  engineering_our_team_text_2: Tim Pengalaman Guru kami membangun alat yang menarik
+    guru baru ke Code.org (kami menyebutnya produk akuisisi) dan mengembangkan platform
+    yang memberdayakan guru kami yang ada untuk mengajarkan kurikulum kami (alat guru
+    kami). Seperti halnya alat siswa kami, kami mengandalkan React untuk membangun
+    front-end kami dan komponen sisi server kami dilayani menggunakan Ruby on Rails.
+  engineering_our_team_sub_title_3: Tim Platform
+  engineering_our_team_text_3: Tim Platform kami memiliki komponen inti yang melayani
+    kebutuhan tim siswa dan guru kami (misalnya, otentikasi dan profil pengguna) dan
+    juga memiliki misi menjangkau siswa yang belum dapat kami jangkau. Ini termasuk
+    membangun integrasi yang menghubungkan kami dengan sekolah yang menggunakan Sistem
+    Manajemen Pembelajaran (LMS) yang berbeda dan mengemas kurikulum kami sehingga
+    dapat digunakan di sekolah terpencil yang tidak memiliki akses ke internet yang
+    dapat diandalkan.
+  engineering_our_team_sub_title_4: Tim Infrastruktur
+  engineering_our_team_text_4: Tim Infrastruktur kami menyediakan tulang punggung
+    untuk platform yang mendukung siswa dan guru kami. Ini termasuk infrastruktur
+    hosting dan layanan terkait kami (kami menggunakan AWS), manajemen data, program
+    keamanan, layanan pengembang dan penyebaran, dan banyak lagi. Tim ini juga memiliki
+    sistem penskalaan dan penyediaan kami, yang sangat penting selama Hour of Code,
+    di mana kami mengundang setiap siswa di dunia untuk menyelesaikan satu jam pengkodean
+    bersama kami.
+  engineering_faq_question_1: Apa yang Code.org lakukan?
+  engineering_faq_answer_1_a: Code.org adalah organisasi nirlaba inovasi pendidikan
+    yang didedikasikan untuk visi bahwa setiap siswa di setiap sekolah memiliki kesempatan
+    untuk belajar ilmu komputer sebagai bagian dari pendidikan inti K-12 mereka.
+  engineering_faq_answer_1_b: Kami memperluas akses ke ilmu komputer di sekolah, dengan
+    fokus pada peningkatan partisipasi oleh wanita muda dan siswa dari kelompok lain
+    yang kurang terwakili. Penyedia kurikulum ilmu komputer K-12 terkemuka di distrik
+    sekolah terbesar di Amerika Serikat, Code.org juga menyelenggarakan kampanye Hour
+    of Code tahunan, yang telah melibatkan lebih dari 15% dari semua siswa di dunia.
+  engineering_faq_answer_1_c: Code.org didukung oleh donor yang murah hati termasuk
+    Microsoft, Amazon, Google, dan banyak lainnya.
+  engineering_faq_question_2: Apa itu pengalaman dan perkakas pengembang Code.org?
+  engineering_faq_answer_2: Pengalaman pengembang kami mungkin berbeda dengan apa
+    yang Anda lihat di peran sebelumnya. Bekerja sama dengan tim produk kami, kami
+    mengirim ke produksi setiap hari kerja dan kami memiliki berbagai irama - terkadang
+    Anda menulis kode yang ditayangkan hari itu; di lain waktu Anda berada di proyek
+    jangka panjang - dan sementara kami mengikuti sprint 2 mingguan, kami melakukannya
+    dengan cara yang ringan. Kami mengindeks untuk menyelesaikan hal-hal yang benar
+    dengan cara yang benar vs. mengambil pandangan murni dari metodologi tertentu.
+    [Semua kode kami] (%{code_url}) adalah open source dan kami menggunakan permintaan
+    tarik JIRA dan GitHub untuk melacak semua item pekerjaan kami. Kami juga sangat
+    peduli dengan kualitas dan pengujian dan beruntung memiliki dukungan luar biasa
+    dari [SauceLabs](%{saucelabs_url}), yang membantu kami menjalankan rangkaian tes
+    UI kami di berbagai perangkat siswa (misalnya, iPad) di pertanian perangkat cloud
+    mereka.
+  engineering_faq_question_3: Apa rotasi panggilan insinyur di Code.org?
+  engineering_faq_answer_3: 30+ tim teknik kami berbagi tanggung jawab on-call. Setiap
+    insinyur mencakup shift 24 jam dan menggunakan jalur eskalasi dan buku pedoman
+    kami untuk menanggapi pemadaman situs atau masalah situs langsung lainnya. Kami
+    bangga dengan keandalan situs kami - rata-rata, setiap insinyur hanya dibangunkan
+    sekali setahun untuk masalah yang biasanya cepat diselesaikan. Sebaliknya, “Pengembang
+    Hari Ini” biasanya menghabiskan sebagian dari hari kerja mereka mengelola penyebaran
+    produksi dan mempriorisasikan masalah yang kurang mendesak.
+  engineering_faq_question_4: Apakah Anda organisasi yang ramah-jarak jauh/WFH?
+  engineering_faq_answer_4_a: Ya! Pada 2019, tak lama sebelum pandemi, Code.org menjadi
+    organisasi yang mengutamakan jarak jauh. Hari ini, kami memiliki insinyur di setiap
+    zona waktu AS dan mengakomodasi jam kerja yang sesuai. Sebagian besar pertemuan
+    kami terjadi antara jam 10 pagi dan 3 sore PT.
+  engineering_faq_answer_4_b: Kami juga mengenali nilai waktu tatap muka, dan setiap
+    kuartal kami berkumpul secara langsung, biasanya di Seattle. Dua dari acara ini
+    (kami menyebutnya Kick-off week dan “Codechella”) menyatukan semua orang di organisasi
+    pada bulan Januari dan Juni - dan tim teknik dan produk bertemu secara terpisah
+    pada bulan April dan Oktober.
+  engineering_faq_answer_4_c: Kami sangat percaya dalam menghabiskan waktu bersama
+    siswa dan guru kami, begitu banyak dari acara tatap muka ini termasuk perjalanan
+    ke sekolah dan ruang kelas untuk mengumpulkan umpan balik atau menguji produk
+    kami
+  engineering_faq_question_5: Apa yang membuat tim teknik di Code.org unik?
+  engineering_faq_answer_5_a: 'Selain memecahkan masalah teknis yang menantang, kami
+    memiliki beberapa hal yang membuat organisasi teknik kami berbeda dari orang lain
+    yang mungkin pernah Anda kerjakan:'
+  engineering_faq_answer_5_b_1: Kami semua berbagi semangat kami untuk misi kami.
+  engineering_faq_answer_5_b_2: Masing-masing dari kita ada di sini untuk mendukung
+    misi untuk memperluas akses ke ilmu komputer untuk setiap siswa di seluruh dunia.
+    Kita semua memiliki cerita dan perspektif unik tentang apa yang mendorong kita
+    menuju misi ini.
+  engineering_faq_answer_5_c_1: Kami sangat peduli satu sama lain.
+  engineering_faq_answer_5_c_2: Ketika para insinyur berjuang dengan suatu masalah,
+    kami turun tangan dan kami membantu. Salah satu prinsip kami adalah bahwa kami
+    sulit menghadapi masalah, tetapi baik satu sama lain. Kami mempromosikan insinyur
+    secara teratur, tetapi kami tidak meresepkan solusi yang direkayasa secara berlebihan
+    hanya untuk mendukung jalur promosi seseorang. Sebaliknya, kami berinvestasi pada
+    teknisi kami dengan anggaran pengembangan profesional yang murah hati dan akses
+    ke peluang belajar lainnya.
+  engineering_faq_answer_5_d_1: Kami bekerja keras, tetapi kami menetapkan batasan
+    yang jelas.
+  engineering_faq_answer_5_d_2: Sementara kami mendukung siswa di seluruh dunia, kami
+    menganggap diri kami bertanggung jawab atas batasan yang jelas antara pekerjaan
+    dan kehidupan rumah tangga. Kami menikmati hari Rabu tanpa pertemuan, mengambil
+    PTO kami (total 5 minggu, yang mencakup penutupan kantor 2 minggu di seluruh dunia
+    pada akhir tahun alias Liburan Musim Dingin), setengah hari kerja pada hari Jumat
+    selama musim panas alias Jumat Musim Panas, dan manfaat murah hati lainnya.
+  careers_hero_title: Karir
+  careers_hero_description: Code.org adalah organisasi nirlaba yang didedikasikan
+    untuk memperluas akses ke ilmu komputer di sekolah. Kami secara khusus berfokus
+    pada peningkatan partisipasi di kalangan wanita muda dan siswa yang kurang terwakili.
+  careers_hero_description_under: Bantu kami mengubah dunia, satu siswa pada satu
+    waktu!
+  careers_vision_title: Visi kami
+  careers_vision_decsription: Visi kami adalah bahwa setiap siswa di setiap sekolah
+    harus memiliki kesempatan untuk belajar ilmu komputer sebagai bagian dari pendidikan
+    inti K-12 mereka.
+  careers_vision_description_under: Bergabunglah dengan tim kami untuk membantu mewujudkan
+    visi ini!
+  careers_values_title: Nilai inti kami
+  careers_values_first_column_text_1: Kami percaya ilmu komputer adalah dasar bagi
+    semua siswa
+  careers_values_first_column_text_2: Kami berkomitmen untuk ekuitas, akses, dan peluang
+  careers_values_first_column_text_3: Kami percaya pada kekuatan komunitas pendidikan
+    kolaboratif
+  careers_values_second_column_text_1: Kami gesit dan responsif terhadap umpan balik
+  careers_values_second_column_text_2: Kami bertindak dengan integritas dan transparansi
+  careers_values_second_column_text_3: Kami percaya dampak luas membutuhkan pemikiran
+    besar dan bertindak secara holistik
+  careers_approach_section_title: Pendekatan pemersatu kami
+  careers_approach_section_description: Peran global Code.org dalam gerakan ilmu komputer
+    K-12 hanya dimungkinkan karena kami menggunakan pendekatan pemersatu di seluruh
+    pemangku kepentingan yang beragam dan sering terbagi. Pada saat polarisasi meningkat,
+    gagasan untuk meningkatkan kesempatan bagi siswa menyatukan orang-orang dari seluruh
+    spektrum politik. Anggota tim, siswa, guru, dan pendukung Code.org memiliki sudut
+    pandang yang beragam dan berbeda, dan mereka semua diterima dalam misi kami.
+  careers_aproach_section_description_link: Baca lebih lanjut tentang pendekatan Code.org
+    untuk persatuan.
+  careers_approach_section_button: Jelajahi peran terbuka
+  careers_principle_section_title: Prinsip budaya kita
+  careers_principle_title_1: Siswa dan guru kami adalah Bintang Utara kami
+  careers_principle_description_1: Kami menggunakan hadiah, waktu, dan energi kami
+    untuk membawa ilmu komputer kepada mereka yang paling membutuhkannya. Inilah yang
+    menyatukan kita. Ini adalah prinsip kami yang paling penting.
+  careers_principle_title_2: Kami keras pada masalah dan baik satu sama lain
+  careers_principle_description_2: Kami tetap fokus pada tantangan membawa ilmu komputer
+    kepada siswa dan guru secara global. Kita menyadari bahwa masing-masing dari kita
+    membawa yang terbaik dari niat kita untuk mendukung misi kita dan memberikan rahmat
+    ketika kita melakukan kesalahan.
+  careers_principle_title_3: Mencari solusi, bukan konsensus
+  careers_principle_description_3: Kami memiliki keputusan, apakah mengambil langkah
+    kecil atau lompatan besar menuju hasil yang kami cari. Pemilik meminta dan mendengarkan,
+    tetapi tidak lumpuh oleh umpan balik. Kami menerima dan mendukung keputusan pemilik,
+    bahkan jika kami tidak setuju.
+  careers_principle_title_4: Mengadopsi mentalitas pendiri
+  careers_principle_description_4: Kami terobsesi dengan hasil dan memfokuskan tindakan
+    kami untuk mendorongnya. Kami menyelami detailnya dan bekerja keras. Kami jujur,
+    condong ke kelincahan, dan terus menilai apakah kami berada di jalur yang benar;
+    kami tidak takut untuk berputar. Mengubah dunia menuntutnya.
+  careers_principle_title_5: Inovasi juara
+  careers_principle_description_5: Kami berpikir besar, mengambil risiko, dan tidak
+    takut gagal. Jika kita melihat cara yang lebih baik untuk mencapai tujuan kita,
+    kita melakukannya dan mendorong orang lain untuk melakukannya juga. Solusi tambahan
+    tidak akan membantu mengubah dunia.
+  careers_principle_title_6: Keputusan jangkar dalam fakta
+  careers_principle_description_6: Kami menggunakan data untuk memahami bisnis kami,
+    menetapkan hasil yang diinginkan, dan memandu pengambilan keputusan. Kami menyeimbangkan
+    ini dengan mengakui bahwa kami tidak akan selalu memiliki data yang kami butuhkan
+    untuk bertindak.
+  careers_principle_title_7: Pola pikir pertumbuhan mendorong kita
+  careers_principle_description_7: Kami mendekati setiap tantangan dengan rasa ingin
+    tahu. Kami memberikan umpan balik dengan ramah dan terus terang; kami menerima
+    umpan balik secara terbuka. Kami belajar dari kesalahan kami dan mencari cara
+    untuk meningkatkan jangkauan dan dampak pekerjaan kami.
+  careers_balance_section_title: Keseimbangan kehidupan kerja kami
+  careers_balance_section_description: Kami peduli dengan karyawan kami dan berdedikasi
+    untuk mendukung semua orang baik di tempat kerja maupun di luar pekerjaan. Kami
+    tahu bahwa setiap orang memiliki kebutuhan yang berbeda, itulah sebabnya kami
+    menawarkan paket manfaat holistik yang akan memastikan bahwa Anda (dan keluarga
+    Anda) diurus.
+  careers_balance_first_column_text_1: Manfaat kesehatan untuk Anda dan keluarga
+  careers_balance_first_column_text_2: Waktu libur berbayar yang murah hati dan meninggalkan
+    rencana
+  careers_balance_second_column_text_1: Lingkungan kerja yang fleksibel dan mendukung
+  careers_balance_second_column_text_2: Pertumbuhan dan peluang belajar profesional
+  careers_openroles_section_title: Peran terbuka
+  careers_openroles_section_description: Code.org berbasis di Seattle, tetapi banyak
+    anggota tim kami yang jauh. Kandidat jarak jauh dipersilakan dan didorong untuk
+    melamar.
+  careers_more_info_text: Untuk informasi lebih lanjut tentang Code.org, lihat [Pertanyaan
+    yang Sering Diajukan] (%{support_url}) kami atau pelajari tentang [cara lain untuk
+    terlibat dengan misi kami] (%{help_url}).
+  careers_approach_section_title2: Pendekatan kami terhadap keragaman
+  careers_approach_section_description_1: Kami merangkul beragam perspektif, ide,
+    dan latar belakang di Code.org. Kami berkomitmen untuk memberikan kesempatan yang
+    sama kepada semua karyawan dan pelamar. Kami tidak melakukan diskriminasi berdasarkan
+    ras, agama, warna kulit, asal negara, jenis kelamin, orientasi seksual, usia,
+    status perkawinan, status veteran, atau status cacat (mental dan fisik).
+  careers_approach_section_description_2: Kami akan memastikan bahwa individu penyandang
+    disabilitas diberikan akomodasi yang wajar untuk berpartisipasi dalam lamaran
+    kerja atau proses wawancara, untuk melakukan fungsi pekerjaan penting, dan untuk
+    menerima tunjangan dan hak istimewa pekerjaan lainnya. Jika Anda memiliki kebutuhan
+    individu terkait dengan disabilitas, silakan hubungi accommodations@code.org.
+  csa_ai_page_hero_title: Rekayasa Perangkat Lunak & Visi Komputer
+  csa_ai_page_hero_description: 'Modul CSA pasca-AP dua bagian ini menawarkan pengalaman
+    langsung kepada siswa sekolah menengah dengan alat pengembangan perangkat lunak
+    profesional, termasuk GitHub dan GitHub Copilot, dan memberi mereka keterampilan
+    dunia nyata untuk mengembangkan program visi komputer. '
+  csa_ai_page_video_section_title: Melangkah melampaui dunia lingkungan pemrograman
+    Code.org
+  csa_ai_page_video_section_li_1: Pelajari tentang AI dan aplikasinya
+  csa_ai_page_video_section_li_2: Pengalaman langsung dengan alat pengembangan perangkat
+    lunak profesional
+  csa_ai_page_video_section_li_3: Pelajari praktik standar industri
+  csa_ai_page_video_section_li_4: Kembangkan pemikiran kritis
+  csa_ai_page_programming_tools: 'Alat Pemrograman: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Tidak ada
+  csa_ai_page_curriculum_topics: 'Topik: Pemrograman, Data, Seni dan Desain, Game
+    dan Animasi'
+  csa_ai_page_curriculum_accessibility_features: Lihat bagian FAQ untuk detailnya
+  csa_ai_page_curriculum_languages_support: Bahasa Indonesia
+  csa_ai_page_article_title_1: Membangun dengan Copilot
+  csa_ai_page_article_description_1: Siswa belajar bagaimana menggunakan GitHub Copilot
+    sebagai programmer pasangan untuk menjelaskan kode yang ada, menemukan dan memperbaiki
+    kesalahan, dan menghasilkan solusi untuk masalah baru.
+  csa_ai_page_article_link_1: Pelajari lebih lanjut tentang Copilot
+  csa_ai_page_article_title_2: Bangun model AI Anda sendiri
+  csa_ai_page_article_description_2: Siswa melatih model AI mereka sendiri menggunakan
+    Teachable Machine untuk mengenali gambar dan gerakan dari webcam dan mempertimbangkan
+    bagaimana visi komputer memengaruhi cara pengguna berinteraksi dengan aplikasi.
+  csa_ai_page_article_link_2: Jelajahi rencana pelajaran
+  csa_ai_page_article_title_3: Jelajahi visi komputer
+  csa_ai_page_article_description_3: Siswa menerapkan model AI yang mereka buat dengan
+    Teachable Machine ke dalam aplikasi Java, menggunakan GitHub Copilot untuk membantu
+    mereka memodifikasi versi aplikasi yang ada untuk bekerja dengan input yang berbeda.
+  csa_ai_page_article_link_3: Lihat contoh
+  csa_ai_page_learn_more_section_title: Pelajari lebih lanjut tentang Artificial Intelligence
+  csa_ai_page_learn_more_title: Jelajahi AI 101 untuk Guru
+  csa_ai_page_learn_more_description: Temukan dunia terobosan Artificial Intelligence
+    (AI) dan potensi transformatifnya dalam pendidikan dengan seri pembelajaran online
+    komprehensif kami untuk para guru.
+  csa_ai_page_learn_more_link: Tonton seri AI 101 for Teachers
+  csa_ai_page_faq_question_01: Apa prasyarat untuk modul ini?
+  csa_ai_page_faq_answer_01_01: 'Sebelum menyelam ke modul ini, siswa harus memiliki
+    pengetahuan entry-level tentang Jawa. Secara khusus, mereka harus memahami:'
+  csa_ai_page_faq_answer_01_list_01: "**Kelas dan Objek: ** Siswa harus terbiasa dengan
+    mendefinisikan dan menggunakan kelas, serta membuat dan memanipulasi objek."
+  csa_ai_page_faq_answer_01_list_02: "**Metode Penulisan dan Panggilan: ** Siswa harus
+    dapat mendefinisikan metode dalam kelas, memahami parameter metode dan tipe pengembalian,
+    dan memanggil metode dari objek atau metode lain."
+  csa_ai_page_faq_answer_01_list_03: "**Array 1D dan ArrayLists: ** Mereka harus mahir
+    dalam mendeklarasikan, menginisialisasi, dan memanipulasi array satu dimensi dan
+    ArrayList, termasuk iterasi melalui mereka."
+  csa_ai_page_faq_answer_01_list_04: "**Seleksi dan Iterasi: ** Dasar yang kuat dalam
+    pernyataan dan loop bersyarat sangat penting."
+  csa_ai_page_faq_question_01_02: Idealnya, siswa yang telah menyelesaikan AP Ilmu
+    Komputer A atau kursus dengan kedalaman dan ketelitian yang sama akan dipersiapkan
+    dengan baik untuk modul ini.
+  csa_ai_page_faq_question_02: Bagaimana cara menginstal perangkat lunak yang diperlukan
+    untuk modul ini?
+  csa_ai_page_faq_answer_02_01: Modul ini unik karena melibatkan penggunaan perangkat
+    lunak pihak ketiga daripada lab dan alat Code.org. [Baca lebih lanjut tentang
+    menginstal perangkat lunak di sini] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Bagaimana saya dapat mendukung kebutuhan aksesibilitas
+    saat mengajar modul ini?
+  csa_ai_page_faq_answer_03_01: Melayani kebutuhan aksesibilitas sangat penting untuk
+    lingkungan belajar yang inklusif. [Baca lebih lanjut tentang fitur aksesibilitas
+    dalam perangkat lunak yang digunakan dalam modul ini di sini] (%{install_url}).
+  csa_ai_page_faq_question_04: Bagaimana cara menggunakan Kode VS di Chromebook?
+  csa_ai_page_faq_answer_04: Menggunakan VS Code di Chromebook menjadi lebih mudah,
+    terutama dengan kemampuan untuk menjalankan aplikasi Linux pada model Chromebook
+    yang lebih baru. [Baca selengkapnya tentang menyiapkan Kode VS di Chromebook di
+    sini] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Bagaimana saya bisa mendapatkan pengembangan profesional
+    untuk modul ini?
+  csa_ai_page_faq_answer_05: Saat ini tidak ada pengembangan profesional khusus untuk
+    kursus ini. Jika Anda ingin memahami cara mendekati Kecerdasan Buatan di kelas
+    Anda, Anda dapat [jelajahi AI 101 for Teachers] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Apa waktu yang disarankan untuk mengajar modul ini?
+  csa_ai_page_faq_answer_06_01: Modul Rekayasa Perangkat Lunak & Visi Komputer disusun
+    dengan cermat untuk memberikan pembelajaran komprehensif dalam jangka waktu yang
+    singkat. Seluruh modul dirancang untuk mencakup instruksi** 2 minggu instruksi**.
+    Sebagian besar pelajaran disesuaikan untuk **45 menit**, sementara pelajaran di
+    mana siswa mempelajari pengembangan proyek Java langsung dirancang untuk **90
+    menit**. Waktu yang diperpanjang ini memastikan siswa memiliki banyak kesempatan
+    untuk memahami, menerapkan, dan memecahkan masalah saat mereka bekerja.
+  csa_ai_page_faq_answer_06_02: Ada juga fleksibilitas yang disengaja yang dibangun
+    ke dalam struktur modul. Bergantung pada dinamika kelas, keterlibatan siswa, dan
+    kedalaman yang ingin Anda jelajahi setiap topik, Anda dapat menyesuaikan durasinya.
+    Misalnya, pelajaran Intro to Copilot, yang dirancang sebagai pelajaran 45 menit,
+    dapat diperluas hingga 90 menit jika Anda ingin menyelam lebih dalam tentang seberapa
+    besar model dan alat bahasa seperti GitHub Copilot dan ChatGPT bekerja.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Dengan akun guru yang disetujui, Anda dapat menemukan
+    kunci jawaban dalam panel “Guru” Hanya biru yang ditampilkan dalam pelajaran dan
+    kegiatan online.Jika Anda memerlukan akun guru yang disetujui, Anda dapat mengajukan
+    permohonan akses ke materi khusus guru yang dilindungi (kunci jawaban, dll) melalui
+    [formulir ini] ().%{form_url}Harap diingat bahwa mungkin diperlukan 3-5 hari kerja
+    untuk memverifikasi akun Anda.
+  csa_ai_page_faq_question_08: Apakah modul ini dipetakan ke standar?
+  csa_ai_page_faq_answer_08: Ya, kurikulum Rekayasa Perangkat Lunak & Visi Komputer
+    dipetakan ke [Standar CSTA K-12] (%{csta_k12_url}) dan AI untuk [Pedoman K-12]
+    ().%{k12_url}
+  csa_ai_page_faq_question_09: Berapa biaya untuk mengajarkan modul ini?
+  csa_ai_page_faq_answer_09_01: Kurikulum dan platform kami tersedia dengan [tanpa
+    biaya] (%{no_cost_url}) bagi siapa saja, di mana saja, untuk mengajar!
+  csa_ai_page_faq_answer_09_02: Selain itu, perangkat lunak dan alat yang digunakan
+    dalam modul ini gratis. GitHub Copilot gratis untuk verified [teachers](%{teachers_url})
+    dan (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Apa yang harus saya lakukan jika instalasi perangkat
+    lunak tidak berfungsi?
+  csa_ai_page_faq_answer_10: Menghadapi masalah selama instalasi perangkat lunak bisa
+    menjadi hal biasa, tetapi ada langkah-langkah sistematis yang dapat Anda ikuti
+    untuk memecahkan masalah dan menyelesaikannya. [Lihat beberapa tips pemecahan
+    masalah di sini] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Kurikulum Rekayasa Perangkat Lunak & Visi Komputer
+    kami dirancang dengan mempertimbangkan Nilai Kurikulum kami. Tujuan-tujuan berikut
+    memandu pembuatan kurikulum ini:'
+  csa_ai_page_faq_answer_11_list_01: "**Sasaran 1: ** Gunakan alat AI untuk menghasilkan,
+    men-debug, dan mengedit kode."
+  csa_ai_page_faq_answer_11_list_02: "**Tujuan 2: ** Transisi dari Java Lab ke alat
+    dunia nyata."
+  csa_ai_page_faq_answer_11_list_03: "**Sasaran 3: ** Memperdalam pemahaman tentang
+    bagaimana model AI dilatih dan diintegrasikan ke dalam program."
+  csa_ai_page_faq_answer_11_02: Untuk informasi lebih lanjut tentang nilai-nilai yang
+    memandu pekerjaan kami, silakan lihat [nilai kurikulum] kami (%{curriculum_values_url}).
+  video_library_page_main_title: Video pendek pendidikan
+  video_library_page_hero_description: Perpustakaan video pendidikan Code.org yang
+    berkembang tersedia untuk digunakan kembali oleh para pendidik di seluruh dunia,
+    online atau di ruang kelas. Tujuan kami adalah untuk memperkuat upaya kami di
+    luar jangkauan kurikulum kami sendiri.
+  video_library_page_title_ai_works: Bagaimana AI Bekerja
+  video_library_page_description_ai_works: Rangkaian video pendek ini akan memperkenalkan
+    Anda tentang cara kerja kecerdasan buatan dan mengapa itu penting. Pelajari tentang
+    jaringan saraf, atau bagaimana AI belajar, dan selidiki isu-isu seperti bias algoritmik
+    dan etika pengambilan keputusan AI.
+  video_library_page_title_computers_work: Bagaimana Komputer Bekerja
+  video_library_page_description_computers_work: Menjelaskan apa yang membuat komputer
+    menjadi komputer, bagaimana informasi digital direpresentasikan dalam 1s dan 0s,
+    bagaimana sirkuit komputer bekerja untuk memanipulasi informasi digital, dan bagaimana
+    unit pemrosesan pusat (CPU) dan sistem operasi mengontrol input, output, memori,
+    dan perangkat keras komputer.
+  video_library_page_title_internet_works: Cara Kerja Internet
+  video_library_page_description_internet_works: Menampilkan Vint Cerf, penemu TCP/IP,
+    David Karp pendiri Tumblr untuk menjelaskan HTTP dan HTML, Google Security Princess
+    untuk menjelaskan SSL dan cybersecurity, dan insinyur dari Microsoft, Spotify,
+    dan Symantec. Serangkaian video pendek ini menjelaskan Cara Kerja Internet.
+  video_library_page_title_not_hacked: Bagaimana Tidak Diretas
+  video_library_page_description_not_hacked: Internet terbuka, jadi segala sesuatu
+    yang terjadi di dalamnya dapat dilihat kecuali dilindungi. Di negara-negara modern,
+    orang lebih khawatir diretas daripada kejahatan lainnya. Mengapa? Karena setiap
+    komputer atau telepon di Internet secara teratur diuji kerentanannya oleh penjahat,
+    teroris, atau bahkan aktor negara. Jika Anda tidak berhati-hati, seseorang dapat
+    meretas perangkat atau akun Anda, dan bahkan mencuri identitas atau uang Anda.
+  video_library_page_title_blockchain: Bagaimana Blockchain Bekerja
+  video_library_page_description_blockchain: Dibuat dalam kemitraan dengan Coinbase,
+    seri ini menampilkan pakar industri dan bertujuan untuk mengungkap teknologi ini
+    dengan mengeksplorasi apa itu blockchain, cara kerjanya, dan potensi implikasi
+    masyarakatnya — baik maupun buruk.
+  video_library_page_title_careers: Karir di CS
+  video_library_page_description_careers: Karir dalam ilmu komputer dan teknologi
+    bisa menyenangkan dan bermanfaat. Tapi apa yang sebenarnya dilakukan seseorang
+    yang bekerja di bidang ini? Dengan berbagai macam pekerjaan dan perusahaan, tidak
+    hanya ada satu jawaban untuk pertanyaan ini. Tonton video di bawah ini untuk bertemu
+    dengan beberapa orang yang menangani masalah besar dengan cara kreatif.
+  video_library_page_title_inspirational: Inspirasional
+  video_library_page_description_inspirational: Apa yang akan berubah ilmu komputer
+    di dunia kita? Semuanya? Untuk siapa ini? Semuanya! Tonton video ini untuk menginspirasi
+    dan memotivasi Anda.
+  video_library_page_footer_description: Mencari sesuatu yang lain? Kami memiliki
+    begitu banyak video hebat yang tersedia di saluran Youtube kami.
+  video_library_page_footer_cta: Jelajahi semua video Code.org di YouTube
+  video_library_page_computer_work_video_title_1: Memperkenalkan Cara Kerja Komputer
+  video_library_page_computer_work_video_title_2: Biner dan Data
+  video_library_page_computer_work_video_title_3: CPU, Memori, Input, dan Output
+  video_library_page_computer_work_video_title_4: Apa yang Membuat Komputer, Komputer?
+  video_library_page_computer_work_video_title_5: Sirkuit Logika
+  video_library_page_computer_work_video_title_6: Perangkat Keras dan Perangkat Lunak
+  video_library_page_internet_work_video_title_1: Apa itu internet?
+  video_library_page_internet_work_video_title_2: 'INTERNET: Alamat IP dan DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET: HTTP dan HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET: Keamanan Siber & Kejahatan'
+  video_library_page_internet_work_video_title_5: 'INTERNET: Kabel, Kabel, & Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNET: Paket, Routing dan Keandalan'
+  video_library_page_internet_work_video_title_7: 'INTERNET: Enkripsi & Kunci Publik'
+  video_library_page_internet_work_video_title_8: 'INTERNET: Cara Kerja Pencarian'
+  video_library_page_cs_video_title_1: Nama saya Jerome dan saya seorang Teknolog
+    Desain di Meow Wolf
+  video_library_page_cs_video_title_2: Nama saya Nikesha dan saya seorang Insinyur
+    Aerospace di NASA
+  video_library_page_cs_video_title_3: Nama saya Brina dan saya seorang Software Engineer
+    di Instagram
+  video_library_page_cs_video_title_4: Nama saya Kinsley dan saya seorang Software
+    Engineer di Facebook
+  video_library_page_cs_video_title_5: Nama saya Polina dan saya seorang Ilmuwan Data
+    di Electronic Arts
+  video_library_page_cs_video_title_6: Nama saya Danelle dan saya seorang Software
+    Engineer di MBARI
+  video_library_page_cs_video_title_7: Nama saya Christopher dan saya seorang Analis
+    Keamanan di Tanium
+  video_library_page_cs_video_title_8: Nama saya Federico dan saya seorang Manajer
+    Program Teknis di Microsoft
+  video_library_page_cs_video_title_9: Nama saya Tess dan saya seorang Software Engineer
+    di Google
+  video_library_page_inspirational_video_title_1: Ubah Wajah Ilmu Komputer (3 menit)
+  video_library_page_inspirational_video_title_2: Dorong dirimu sendiri. Siapa saja
+    bisa belajar. (1 menit)
+  video_library_page_inspirational_video_title_3: Menginspirasi seorang gadis (2 menit)
+  video_library_page_inspirational_video_title_4: Apa yang tidak diajarkan sebagian
+    besar sekolah (5 menit)
+  video_library_page_inspirational_video_title_5: Jam Kode Ada Di Sini - Siapa Saja
+    Bisa Belajar (2 menit)
+  video_library_page_inspirational_video_title_6: Nama saya Aracely (3 menit)
+  video_library_page_inspirational_video_title_7: Jam Kode dengan Steph Curry (2 menit)
+  video_library_page_inspirational_video_title_8: Ilmu Komputer Mengubah Segalanya
+    (5 menit)
+  video_library_page_inspirational_video_title_9: Intro Ilmu Komputer (1 menit)
+  video_library_page_inspirational_video_title_10: Presiden Obama tentang Ilmu Komputer
+    (1 menit)
+  video_library_page_inspirational_video_title_11: Siapapun dapat belajar (1 menit)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 menit)
+  video_library_page_inspirational_video_title_13: NASA Merayakan Jam Kode (2 menit)
+  video_library_page_inspirational_video_title_14: Ini Lebih Dari Sebuah Permainan
+    (1 menit)
+  video_library_page_inspirational_video_title_15: Buat Dengan Ilmu Komputer (1 menit)
+  video_library_page_not_hacked_video_title_1: 'Bagaimana Tidak Diretas: Pendahuluan'
+  video_library_page_not_hacked_video_title_2: 'Cara Tidak Diretas: Kata Sandi'
+  video_library_page_not_hacked_video_title_3: 'Cara Tidak Diretas: Otentikasi dan
+    Kunci Perangkat'
+  video_library_page_not_hacked_video_title_4: 'Cara Tidak Diretas: Phishing'
+  video_library_page_not_hacked_video_title_5: 'Cara Tidak Diretas: Situs Web dan
+    Wifi'
+  video_library_page_not_hacked_video_title_6: 'Cara Tidak Diretas: Pesan dan Unduhan'
+  video_library_page_not_hacked_video_title_7: 'Cara Tidak Diretas: Instal Pembaruan'
+  about_us_page_title: Tentang Kami
+  about_us_page_hero_description: Code.org® adalah organisasi nirlaba inovasi pendidikan
+    yang didedikasikan untuk visi bahwa setiap siswa di setiap sekolah memiliki kesempatan
+    untuk belajar ilmu komputer sebagai bagian dari pendidikan K-12 inti mereka. Kami
+    memperluas akses ke ilmu komputer di sekolah, dengan fokus pada peningkatan partisipasi
+    oleh perempuan muda dan siswa dari kelompok lain yang kurang terwakili. Penyedia
+    terkemuka kurikulum ilmu komputer K-12 di distrik sekolah terbesar di Amerika
+    Serikat, Code.org juga menyelenggarakan kampanye tahunan [Hour of Code] (%{hour_url}),
+    yang telah melibatkan lebih dari 15% dari semua siswa di dunia. Code.org didukung
+    oleh donor dermawan termasuk Microsoft, Amazon, Google dan [banyak lainnya] ()%{others_url}
+  about_us_page_section_title_1: Lebih dari 80 juta siswa dan 2 juta guru di Code.org
+  about_us_page_statistic_figcaption: Partisipasi Code.org dari tahun ajaran 2021-2022.
+    [Lihat data terpilah.] ()%{data_url}
+  about_us_page_statistic_description: Code.org meningkatkan keragaman dalam ilmu
+    komputer dengan menjangkau siswa dari semua latar belakang di mana mereka berada
+    - di tingkat keterampilan mereka, di sekolah mereka, dan dengan cara yang menginspirasi
+    mereka untuk terus belajar. Sebagian besar siswa di Code.org berasal dari kelompok
+    siswa yang secara historis kurang terwakili dalam ilmu komputer. Meningkatkan
+    keragaman dalam ilmu komputer adalah dasar untuk pekerjaan kami, dan [kami mendorong
+    Anda untuk membaca lebih lanjut tentang upaya kami] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org dalam Berita
+  about_us_page_section_news_description: Lihat semua [berita dan pengumuman] sebelumnya
+    (%{news_url})
+  about_us_page_section_table: Tujuan dan metrik kami
+  about_us_page_section_table_header_1: Tujuan Code.org
+  about_us_page_section_table_header_2: Prestasi
+  abous_page_section_table_cell_1_1: Meningkatkan keragaman dalam CS * (siswa AS)
+    *
+  abous_page_section_table_cell_1_2: 45% siswa Code.org adalah wanita muda, 50% adalah
+    siswa dari kelompok ras dan etnis yang terpinggirkan, dan 46% siswa AS berada
+    di sekolah berkebutuhan tinggi. Baca lebih lanjut tentang [pendekatan kami terhadap
+    keragaman.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Menginspirasi siswa
+  about_page_section_table_cell_2_2: Puluhan juta telah mencoba [Hour of Code] (%{hour_url}).
+    (426.370.561 dilayani. 49% perempuan)
+  about_page_section_table_cell_3_1: Jangkau ruang kelas
+  about_page_section_table_cell_3_2: 591.636 guru telah mendaftar untuk mengajar kursus
+    intro kami di [Code Studio] (%{code_studio_url}) dan 19.177.297 siswa terdaftar.
+  about_page_section_table_cell_4_1: Persiapan guru CS baru
+  about_page_section_table_cell_4_2: Kami telah menyiapkan lebih dari 106.000 guru
+    baru untuk mengajar CS di kelas K-12. Pelajari tentang [program pembelajaran profesional
+    kami.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Ubah kurikulum distrik sekolah
+  about_page_section_table_cell_5_2: Kami telah bermitra dengan [180+ distrik sekolah
+    terbesar] (%{schoold_disctrict_url}) dan 60 mitra regional untuk [menambahkan
+    CS ke kurikulum sekolah] (%{cs_curriculum_url}). [Pelajari tentang menjadi mitra
+    regional.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Menyiapkan kebijakan untuk mendukung CS
+  about_page_section_table_cell_6_2: "[Kebijakan diubah di 50 negara bagian AS] (%{states_url})
+    untuk menetapkan standar pendidikan CS, membuat kursus CS diperhitungkan untuk
+    kelulusan sekolah menengah, dll. [(rincian)] (%{details_url})"
+  about_page_section_table_cell_7_1: Pergi global
+  about_page_section_table_cell_7_2: Kursus kami tersedia dalam lebih dari 67 bahasa,
+    digunakan di 180+ negara.
+  about_page_section_table_under_label: 'Sumber: Aktivitas Studio Kode dan [survei
+    pendidik yang berpartisipasi] (%{educators_url})'
+  about_page_section_title_3: Informasi lebih lanjut, sejarah, dan filsafat
+  about_page_section_more_description_1: 'Pada tahun 2013, Code.org diluncurkan oleh
+    saudara kem [Hadi]bar (%{hadi_url}) dan [Ali Partovi] (%{partovi_url}) dengan
+    [video](%{video_url}) mempromosikan ilmu komputer. Video ini menjadi #1 di YouTube
+    selama sehari, dan 15.000 sekolah menghubungi kami untuk meminta bantuan. Sejak
+    itu, kami telah berkembang dari staf relawan yang di-bootstrap untuk membangun
+    organisasi penuh yang mendukung gerakan di seluruh dunia. Kami percaya bahwa pendidikan
+    ilmu komputer yang berkualitas harus tersedia untuk setiap anak, bukan hanya beberapa
+    yang beruntung.'
+  about_page_section_more_description_2: 'Untuk mendukung tujuan kami, kami bekerja
+    di seluruh spektrum pendidikan: merancang kursus kami sendiri atau bermitra dengan
+    orang lain, melatih guru, bermitra dengan distrik sekolah besar, membantu mengubah
+    kebijakan pemerintah, memperluas internasional melalui kemitraan, dan pemasaran
+    untuk mematahkan stereotip.'
+  about_page_section_more_description_3: Pekerjaan kami dibangun di atas [upaya puluhan
+    tahun, oleh organisasi dan individu yang tak terhitung jumlahnya] (%{efforts_url})
+    yang telah membantu mendirikan, mendanai, dan menyebarkan pendidikan ilmu komputer.
+    Kami berterima kasih mendapat manfaat dari bantuan tak kenal lelah dari komunitas
+    pendidikan ilmu komputer yang lebih luas, dan [kami berterima kasih kepada semua
+    mitra dan individu yang telah mendukung dampak kami selama bertahun-tahun] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Nilai-nilai inti dan pedoman pesan kami] (%{core_url})"
+  about_page_section_more_list_3: "[Kurikulum dan filosofi pedagogi kami] (%{curriculum_url})"
+  about_page_section_more_list_4: "[Pembicaraan TEDx oleh pendiri kami Hadi Partovi
+    tentang mengapa ilmu komputer untuk semua (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Pendekatan pemersatu di dunia yang terpecah
+  about_page_section_specific_title_1: Pendekatan pemersatu di dunia yang terpecah
+  about_page_section_specific_title_2: Komitmen kami terhadap aksesibilitas
+  about_page_section_specific_title_3: Komitmen kami terhadap kurikulum gratis dan
+    teknologi open source
+  about_page_section_specific_title_4: Koalisi Advokasi Code.org
+  about_page_section_specific_title_5: Kerangka Ilmu Komputer K-12
+  about_page_section_specific_title_6: Donor Code.org
+  about_page_section_specific_title_7: Ikuti kami
+  about_page_section_specific_title_8: Jangkauan Internasional Code.org
+  about_page_section_specific_description_1: Peran global Code.org dalam gerakan ilmu
+    komputer K-12 hanya mungkin karena kami menggunakan pendekatan pemersatu di seluruh
+    pemangku kepentingan yang beragam dan sering terbagi. Pada saat polarisasi meningkat,
+    gagasan peningkatan peluang bagi siswa menyatukan orang-orang dari seluruh spektrum
+    politik. Anggota tim Code.org, siswa, guru, dan pendukung memiliki sudut pandang
+    yang beragam dan berbeda, dan mereka semua diterima dalam misi kami. [Baca lebih
+    lanjut.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org percaya ilmu komputer adalah
+    dasar bagi semua siswa dan kami berkomitmen untuk kesetaraan, akses, dan peluang
+    dalam organisasi kami [values.](%{values_url}) Untuk mencapai tujuan ini, kami
+    bekerja untuk mengidentifikasi dan menghilangkan hambatan yang mencegah inklusi
+    dan partisipasi penuh siswa dan pendidik penyandang cacat. Untuk mempelajari lebih
+    lanjut tentang upaya kami, lihat [pernyataan aksesibilitas] kami%{accessibility_url}.
+  about_page_section_specific_description_3: Semua sumber daya dan tutorial kurikulum
+    yang kami tulis akan selamanya bebas untuk digunakan dan dilisensikan secara terbuka
+    di bawah lisensi [Creative Commons] (%{commons_url}), memungkinkan orang lain
+    untuk membuat sumber daya pendidikan turunan untuk tujuan non-komersial. Jika
+    Anda tertarik untuk melisensikan materi kami untuk tujuan komersial, [hubungi
+    kami] (%{contact_us_url}). Kursus kami diterjemahkan untuk penggunaan di seluruh
+    dunia atau oleh penutur bahasa yang berbeda. Teknologi kami dikembangkan sebagai
+    [proyek sumber terbuka.%{open_source_url}]
+  about_page_section_specific_description_4: Koalisi Advokasi Code.org (%{advocacy_url})
+    adalah koalisi bipartisan korporasi dan organisasi nirlaba yang bekerja sama untuk
+    membantu menetapkan kebijakan federal dan negara bagian AS untuk memperluas dan
+    mempertahankan akses ke ilmu komputer K-12 dan untuk memperluas partisipasi dan
+    keragaman di lapangan. Kami menyatukan [pemimpin politik Republik dan Demokrat]
+    (%{leaders_url}) dalam tujuan yang sama mendukung perluasan akses dan partisipasi
+    dalam ilmu komputer K-12.
+  about_page_section_specific_description_5: Code.org adalah anggota komite pengarah
+    yang membantu membentuk [Kerangka Ilmu Komputer K-12] (%{framework_url}) - panduan
+    tingkat tinggi untuk negara bagian, distrik, dan organisasi yang menerapkan pendidikan
+    ilmu komputer. Kerangka telah memenangkan dukungan dari ratusan akademisi, pendidik
+    K-12, perusahaan perangkat lunak, organisasi nirlaba, dan negara bagian.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Daftar untuk menerima pembaruan status]
+    (%{sign_up_url}) tentang kemajuan dalam gerakan ilmu komputer K-12 dan tentang
+    pekerjaan Code.org. Atau ikuti Code.org di media sosial:"
+  about_page_section_specific_description_8: Lebih dari 40% lalu lintas situs web
+    kami berasal dari luar Amerika Serikat dan jumlah itu terus meningkat. Untuk memperluas
+    akses global ke ilmu komputer, tim kami bekerja sama dengan [lebih dari 100 mitra
+    internasional] (%{partners_url}), membantu mereka mempromosikan Hour of Code,
+    mengadvokasi perubahan kebijakan, dan melatih guru. Kami menjadikan ilmu komputer
+    bagian dari wacana pendidikan internasional dengan bermitra dengan kementerian
+    pendidikan dari seluruh dunia dan bekerja dengan organisasi internasional seperti
+    Organisasi untuk Kerjasama Ekonomi dan Pembangunan dan Organisasi Pendidikan,
+    Ilmu Pengetahuan dan Budaya PBB.
+  about_page_section_donors_description_1: Code.org® adalah organisasi nirlaba 501c3
+    publik terdaftar, dengan dukungan dari masyarakat umum. Kami berterima kasih atas
+    dukungan dermawan yang kami terima dari [individu dan organisasi] (%{individuals_url})
+    yang mendukung visi kami.
+  about_page_section_donors_description_2: Pencapaian kode (di atas) menunjukkan kemampuan
+    kita untuk memanfaatkan dolar itu menjadi hasil yang kuat. Tetapi mengingat ambisi
+    nirlaba kami bahwa setiap anak di setiap sekolah harus memiliki akses ke ilmu
+    komputer - untuk menjadi warga yang melek huruf di dunia digital saat ini dan
+    untuk menguji minat mereka dalam mengeksplorasi CS lebih jauh sebagai karier -
+    kami memiliki jalan panjang untuk memenuhi tujuan penggalangan dana yang akan
+    mendukung visi itu.
+  about_page_donors_link_1: Buat donasi
+  about_page_donors_link_2: "[lihat daftar donor kami] (%{donors_url})"
   language_code:
     ar: Arab
     az: Orang Azerbaijan

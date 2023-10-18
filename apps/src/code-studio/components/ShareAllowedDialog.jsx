@@ -22,6 +22,8 @@ import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '../../templates/Button';
+import defaultThumbnail from '@cdo/static/projects/project_default.png';
+import fontConstants from '@cdo/apps/fontConstants';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -206,7 +208,7 @@ class ShareAllowedDialog extends React.Component {
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail
       ? this.props.thumbnailUrl
-      : '/blockly/media/projects/project_default.png';
+      : defaultThumbnail;
 
     const facebookShareUrl =
       'https://www.facebook.com/sharer/sharer.php?u=' +
@@ -561,7 +563,7 @@ const styles = {
   },
   thumbnailWarning: {
     fontSize: 12,
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
   },
   sendToPhoneContainer: {
     width: '100%',

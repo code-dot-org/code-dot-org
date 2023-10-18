@@ -263,6 +263,12 @@ class Game < ApplicationRecord
     [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC].include? app
   end
 
+  def use_restricted_songs?
+    return false unless [DANCE, MUSIC].include? app
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
+    CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
+  end
+
   # Format: name:app:intro_video
   # Don't change the order of existing entries! Always append to the end of the list.
   # The list contains no longer used level types in order to maintain the order

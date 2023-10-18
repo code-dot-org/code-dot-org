@@ -45,7 +45,7 @@ module Pd::FacilitatorSpecificForm
   # the field, and the combined field name we expect in the flattened version of
   # our hash. Supports either rails-style keys (underscored symbols) or
   # JSON-style keys (camelCased strings)
-  def each_facilitator_field(hash=nil, camel=false)
+  def each_facilitator_field(hash = nil, camel = false)
     hash ||= camel ? form_data_hash : sanitized_form_data_hash
 
     facilitators = hash.try(:[], camel ? 'whoFacilitated' : :who_facilitated) || []

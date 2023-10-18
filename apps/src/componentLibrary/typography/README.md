@@ -93,10 +93,11 @@ overwriting styles has highest styles priority. Here's some examples:
 
 
 ```javascript
-import {Heading1, BodyTwoText} from './../componentLibrary/typography';
+import {Heading1, BodyTwoText, StrongText} from './../componentLibrary/typography';
 
 <Heading1>Some Heading</Heading1>
 <BodyTwoText>Some body text</BodyTwoText>
+<BodyTwoText>Some <StrongText>Strong BodyTwo</StrongText> text</BodyTwoText>
 
 // OR
 

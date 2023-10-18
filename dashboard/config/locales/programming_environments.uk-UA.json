@@ -82,7 +82,7 @@
               }
             },
             "circuit": {
-              "name": "Контур"
+              "name": "Схема, плата"
             },
             "control": {
               "expressions": {

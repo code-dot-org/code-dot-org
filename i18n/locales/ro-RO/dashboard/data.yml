@@ -718,6 +718,7 @@ ro:
         csa_sorting_algorithms: 'CSA: Algoritmi de sortare'
         star_quilts_intro_to_artist: 'Stele Quilts: Introducere în artist'
         upload_sprites_backgrounds: Încărcarea Sprites personalizate și fundaluri
+        what-is-creativity: Ce este creativitatea?
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

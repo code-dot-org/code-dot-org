@@ -21,7 +21,7 @@ class LevelTest < ActiveSupport::TestCase
   # TYPES_WITH_IDEAL_LEVEL_SOURCE.include or TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include.
   def raise_unless_specifies_ideal_level_source(level_class)
     unless (Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include? level_class.to_s) ||
-      (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
+        (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
       raise "#{level_class} does not specify if it has ideal level sources"
     end
     level_class.descendants.each do |descendant|
@@ -75,7 +75,7 @@ class LevelTest < ActiveSupport::TestCase
   test "cannot create two custom levels with same name" do
     assert_does_not_create(Level) do
       level2 = Level.create(@custom_maze_data)
-      assert_not level2.valid?
+      refute level2.valid?
       assert_includes(level2.errors, :name)
     end
   end
@@ -84,7 +84,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_does_not_create(Level) do
       name_upcase = @custom_maze_data[:name].upcase
       level2 = Level.create(@custom_maze_data.merge(name: name_upcase))
-      assert_not level2.valid?
+      refute level2.valid?
       assert_includes(level2.errors, :name)
     end
   end
@@ -100,7 +100,7 @@ class LevelTest < ActiveSupport::TestCase
   test "reject bad chars in custom level name" do
     assert_does_not_create(Level) do
       level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
-      assert_not level.valid?
+      refute level.valid?
       assert_includes(level.errors, :name)
     end
   end
@@ -280,7 +280,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    LevelLoader.import_levels 'config/levels/custom/maze/K-1 Bee 2.level'
     level = Level.find_by_name('K-1 Bee 2')
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
@@ -290,7 +290,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'creating custom level from file sets level_concept_difficulty' do
     Level.find_by_name('K-1 Bee 2')&.destroy
     assert_nil Level.find_by_name('K-1 Bee 2')
-    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    LevelLoader.import_levels 'config/levels/custom/maze/K-1 Bee 2.level'
     level = Level.find_by_name('K-1 Bee 2')
     refute_nil level
 
@@ -1327,7 +1327,7 @@ class LevelTest < ActiveSupport::TestCase
     contained_level = create :multi
     level_with_contained = create :level, contained_level_names: [contained_level.name]
 
-    assert_not level_with_contained.can_have_feedback_review_state?
+    refute level_with_contained.can_have_feedback_review_state?
   end
 
   test 'next_unused_name_for_copy finds next available level name' do

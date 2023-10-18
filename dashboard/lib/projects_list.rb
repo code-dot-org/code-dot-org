@@ -139,7 +139,7 @@ module ProjectsList
         featured_published_projects[project_group] = []
         project_types.each do |project_type|
           featured_published_projects[project_group] <<
-          fetch_featured_projects_by_type(project_type)
+            fetch_featured_projects_by_type(project_type)
         end
         featured_published_projects[project_group].flatten!
       end

@@ -1,36 +1,3 @@
-/* Variables are duplicated from shared/css/color.scss */
-:root {
-  --brand_primary_light: #ABDFE5;
-  --brand_primary_default: #009EB0;
-  --brand_primary_dark: #008291;
-  --brand_secondary_light: #E0D1EC;
-  --brand_secondary_default: #9660BF;
-  --brand_secondary_dark: #6F488E;
-  --brand_accent_default: #ED6060;
-  --neutral_white: #FFFFFF;
-  --neutral_light: #F7F8FA;
-  --neutral_dark10: #EAEBEB;
-  --neutral_dark20: #D4D5D7;
-  --neutral_dark30: #BFC1C3;
-  --neutral_dark40: #A9ACAF;
-  --neutral_dark50: #94979B;
-  --neutral_dark60: #7F8286;
-  --neutral_dark70: #6A6E73;
-  --neutral_dark80: #54595E;
-  --neutral_dark90: #3F444B;
-  --neutral_dark: #292F36;
-  --orange: #ffa400; /* legacy color */
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  background-color: var(--neutral_white);
-  height: 100%;
-}
-
 .wrapper {
   min-height: 100%;
   margin-bottom: -80px;     /* This is the same as the height of .push. */
@@ -86,21 +53,24 @@ body {
 .whitefooterlink:link {
   color: var(--neutral_white);
   font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   text-decoration: none;
 }
 
 .whitefooterlink:hover {
   color: var(--neutral_white);
   font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   text-decoration: underline;
 }
 
 .whitefooterlink:visited {
   color: var(--neutral_white);
   font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 
 
@@ -140,9 +110,9 @@ body {
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   font-size: 14px;
-  font-weight: normal;
   height: 35px;
   letter-spacing: normal;
   line-height: 22px;

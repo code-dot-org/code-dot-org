@@ -106,10 +106,10 @@ class Documents < Sinatra::Base
     set :template_extnames, ['.erb', '.haml', '.html', '.md', '.partial']
     set :non_static_extnames,
       settings.not_found_extnames +
-      settings.redirect_extnames +
-      settings.template_extnames +
-      settings.exclude_extnames +
-      ['.fetch']
+        settings.redirect_extnames +
+        settings.template_extnames +
+        settings.exclude_extnames +
+        ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
     ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
@@ -444,7 +444,7 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def resolve_template(subdir, extnames, uri, is_document = false)
+    def resolve_template(subdir, extnames, uri, is_document: false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
         # Negotiate for a locale specific partial
@@ -510,7 +510,7 @@ class Documents < Sinatra::Base
         File.join(uri, "index")
       ]
       paths.each do |path|
-        template = resolve_template('public', settings.non_static_extnames, path, true)
+        template = resolve_template('public', settings.non_static_extnames, path, is_document: true)
         return template if template
       end
 
@@ -520,7 +520,7 @@ class Documents < Sinatra::Base
       while at != '/'
         parent = File.dirname(at)
 
-        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
+        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), is_document: true)
         if path
           request.env[:splat_path_info] = uri[parent.length..]
           return path
@@ -541,14 +541,14 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def render_template(path, locals={})
+    def render_template(path, locals = {})
       render_(File.read(path), path, 0, locals)
     rescue => exception
       Honeybadger.context({path: path, e: exception})
       raise "Error rendering #{path}: #{exception}"
     end
 
-    def render_(body, path=nil, line=0, locals={})
+    def render_(body, path = nil, line = 0, locals = {})
       extensions = MultipleExtnameFileUtils.all_extnames(path)
 
       # Now, apply the processing operations implied by each extension to the
@@ -632,7 +632,7 @@ class Documents < Sinatra::Base
       return path
     end
 
-    def view(uri, locals={})
+    def view(uri, locals = {})
       path = resolve_view_template(uri)
       render_template(path, locals)
     end

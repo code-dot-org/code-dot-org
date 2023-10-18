@@ -857,6 +857,7 @@ es-MX:
         artist_intro: Introducción al Artista
         c_and_c_digital_sharing: Colaboración digital
         c_and_c_great_to_create: Crear y jugar limpio es lo mejor
+        code-break: "¡Tómate un descanso de código!"
         codebreak_e01: 'Code Break 1.0: Algoritmos con Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototipos con Mark Cuban y Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Cifrado con Ashton Kutcher y Mia Gil Epner'
@@ -1175,6 +1176,7 @@ es-MX:
         u7-libraries-explanation: 'Laboratorio de aplicaciones: crea tus propios bloques
           - Cómo usar bibliotecas'
         upload_sprites_backgrounds: Cargando Sprites y Fondos Personalizados
+        what-is-creativity: "¿Qué es la creatividad?"
         what_is_an_event: "¿Qué es un evento?"
         what_is_cs: "¿Qué son las Ciencias de la Computación?"
         why-should-teach-unplugged-activities: 'Preguntas frecuentes: ¿por qué debo
