@@ -2,6 +2,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
@@ -921,7 +922,7 @@ export default class P5Lab {
           var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
           var toRemove = allBlocks.filter(element => {
             return (
-              element.getAttribute('type') === 'behavior_definition' &&
+              element.getAttribute('type') === BLOCK_TYPES.behaviorDefinition &&
               element.getAttribute('usercreated') !== 'true'
             );
           });

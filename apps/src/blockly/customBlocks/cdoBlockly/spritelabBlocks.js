@@ -1,5 +1,6 @@
 // This file contains customizations to CDO Blockly Sprite Lab blocks.
 import i18n from '@cdo/locale';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 export const blocks = {
   // Called by block_utils when creating Sprite Lab blocks with mini-toolboxes.
@@ -250,7 +251,9 @@ export const blocks = {
 
     generator.behavior_definition = generator.procedures_defnoreturn;
 
-    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
+    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push(
+      BLOCK_TYPES.behaviorDefinition
+    );
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
