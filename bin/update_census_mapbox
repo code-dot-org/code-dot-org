@@ -14,7 +14,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require_relative '../dashboard/config/environment'
 require_relative '../pegasus/helpers/properties'
 
-require_relative 'upload_to_mapbox'
+require_relative './cron/upload_to_mapbox'
 
 def make_location(lat, long)
   return nil if lat.nil? || long.nil?
