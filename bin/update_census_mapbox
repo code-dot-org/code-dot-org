@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative 'only_one'
+require_relative './cron/only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 # The map on code.org/yourschool is run off of Mapbox.
@@ -11,8 +11,8 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # After setting up authentication, provide the following CDO.* attributes:
 #   CDO.mapbox_upload_token: (the auth token for uploading tiles to Mapbox's servers)
 
-require_relative '../../dashboard/config/environment'
-require_relative '../../pegasus/helpers/properties'
+require_relative '../dashboard/config/environment'
+require_relative '../pegasus/helpers/properties'
 
 require_relative 'upload_to_mapbox'
 
