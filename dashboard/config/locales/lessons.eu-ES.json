@@ -308,6 +308,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Letraz-letra"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Itzuliak"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Gertaerak"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Baldintzak"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funtzioak"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Aldagaiak"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For begiztak"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Mapa Zoriontsuak"
         },
@@ -515,9 +533,6 @@
         "coursef-2023/The Internet": {
           "name": "Internet"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kodearen ordua 2013"
-        },
         "artist/Artist": {
           "name": "Artista"
         },
@@ -541,12 +556,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Kode Ordua"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Jolas Laborategia"
@@ -880,6 +889,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Muturreko erronka - osokoa"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodearen ordua 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Buruhaustea"

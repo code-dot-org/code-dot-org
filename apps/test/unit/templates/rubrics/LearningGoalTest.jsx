@@ -130,6 +130,22 @@ describe('LearningGoal', () => {
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
+  it('does not show AI token after teacher has submitted evaluation', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.LIMITED,
+        }}
+      />
+    );
+    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+  });
+
   it('shows down arrow when closed and up arrow when open', () => {
     const wrapper = shallow(
       <LearningGoal
@@ -152,7 +168,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
@@ -162,7 +178,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',

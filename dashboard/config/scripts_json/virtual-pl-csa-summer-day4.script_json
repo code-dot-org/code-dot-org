@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-12 18:46:20 UTC",
+    "serialized_at": "2023-10-17 14:08:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,7 +96,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break\n\n\n**Objectives**\n* Participants reflect on the industry practices seen in the code.org curriculum\n\n**Suggested Time:** 15 minutes\n",
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break.\n\n\n**Objectives**\n* Participants reflect on the industry practices seen in the code.org curriculum\n\n**Suggested Time:** 15 minutes\n",
         "student_overview": "**You will**\n* Reflect on the industry practices seen in the code.org curriculum"
       },
       "seeding_key": {
@@ -130,7 +130,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nThis lesson requires participants to use the Scanner class.   This is also a time for participants to talk about pair programming in CS classrooms.  \n\n**Objectives**\n\n*Content objectives:*\n* Participants can identify and address invalid values for instance variables.\n* Participants can write mutator methods in a class to change the state of an object.\n\n*Pedagogy objective*\n* Participants have strategies for using pair programming in their classrooms. \n\n**Suggested Time:** 60 minutes",
+        "overview": "**Purpose:**\nThis lesson requires participants to use the Scanner class.   This is also a time for participants to talk about pair programming in CS classrooms.  \n\n**Objectives**\n\n*Content objectives:*\n* Participants can identify and address invalid values for instance variables.\n* Participants can write mutator methods in a class to change the state of an object.\n\n*Pedagogy objective:*\n* Participants have strategies for using pair programming in their classrooms. \n\n**Suggested Time:** 60 minutes",
         "student_overview": "**You will**\n* Identify and address invalid values for instance variables.\n* Write mutator methods in a class to change the state of an object.\n* Have strategies for using pair programming in their classrooms. "
       },
       "seeding_key": {
@@ -179,7 +179,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break\n\n**Objectives**\n* Participants gain experience looking at authentic student work\n* Participants know how to consider code efficiency as they look at student work. \n\n**Suggested Time:** 10 minutes\n",
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break.\n\n**Objectives**\n* Participants gain experience looking at authentic student work.\n* Participants know how to consider code efficiency as they look at student work. \n\n**Suggested Time:** 10 minutes\n",
         "student_overview": "**You will**\n* Gain experience looking at authentic student work\n* Know how to consider code efficiency as they look at student work. \n"
       },
       "seeding_key": {
@@ -504,6 +504,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day4-async1intro"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,
@@ -526,6 +529,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day4_async1recruiting"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,
@@ -548,6 +554,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day4_async1support"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,
@@ -570,6 +579,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day4-async2intro"
+        ],
         "progression": "Asynchronous Part 2"
       },
       "bonus": false,
@@ -592,6 +604,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day43_async2studentWork"
+        ],
         "progression": "Asynchronous Part 2"
       },
       "bonus": false,
@@ -614,6 +629,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day4_async2wrapup"
+        ],
         "progression": "Module 4 Wrap Up"
       },
       "bonus": false,

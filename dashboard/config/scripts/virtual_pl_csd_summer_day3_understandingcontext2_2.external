@@ -1,0 +1,18 @@
+name 'virtual-pl-csd-summer-day3-UnderstandingContext2_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing Unconscious Bias
+<br>
+<img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+#### When we think about the role identity plays in the classroom, we need to consider both our own identities and how those impact our experiences with students in the classrooms as well as how students’ identities impact their experiences in CS. In module 2, we talked about the role and responsibility we play in actively creating a classroom culture of inclusion in our CS classrooms, but even despite our best intentions, we can fall short of that goal. One factor we should consider when creating an inclusive classroom is the role Unconscious Bias plays in the decisions we make in our classrooms. We are going to start by watching a video to frame this discussion.
+
+---
+### To Do:
+#### Watch the video Blind Spots: Challenge Assumptions (2:19).
+
+
+
+MARKDOWN

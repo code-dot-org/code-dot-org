@@ -53,12 +53,6 @@
         "adabe26f-78e0-47f4-92b2-535a38f53f15": {
           "description": "Azonosítsd és keresd meg a hibákat egy programban."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
         "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
           "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
         },
@@ -511,15 +505,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": ""
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Egy vers hangulatváltozásának illusztrálása."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
         }
       }
     }

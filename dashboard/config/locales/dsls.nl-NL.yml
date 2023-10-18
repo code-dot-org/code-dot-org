@@ -4812,6 +4812,7 @@ nl-NL:
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
           text: De vogel zal tegen de TNT aan lopen.
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De vogel zal tegen de muur lopen.
         questions:
         - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
             op `Start` drukt?
@@ -4825,6 +4826,7 @@ nl-NL:
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
           text: De vogel zal tegen de TNT aan lopen.
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De vogel zal tegen de muur lopen.
         questions:
         - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
             op `Start` drukt?
@@ -4880,6 +4882,7 @@ nl-NL:
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
           text: De vogel zal tegen de TNT aan lopen.
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De vogel zal tegen de muur lopen.
         questions:
         - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
             op `Start` drukt?
