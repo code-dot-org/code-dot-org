@@ -2871,26 +2871,6 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compressione senza perdita",
           "definition": "un algoritmo di compressione dei dati che permette di ricostruire perfettamente i dati originali a partire dai dati compressi. Più comunemente usato per la compressione del testo (ad es. Compressione .zip)"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Codice",
-          "definition": "(v) scrivere istruzioni per un computer."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Evento",
-          "definition": "Un'azione che fa accadere qualcosa."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Programma",
-          "definition": "Una serie di passaggi che sono stati codificati in qualcosa che può essere eseguito da una macchina."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Umore",
-          "definition": "l'espressione di un sentimento, un'atmosfera o un'emozione nell'arte o nella scrittura."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Linea",
-          "definition": "(poesia) - una suddivisione di una poesia disposta in una riga che termina al margine destro. "
         }
       }
     }

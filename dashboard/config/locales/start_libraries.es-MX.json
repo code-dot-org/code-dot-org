@@ -1,0 +1,36 @@
+{
+  "es-MX": {
+    "data": {
+      "start_libraries": {
+        "LLM - Written Voice Simulator_ai23": {
+          "I18n_HAIW23L4": {
+            "newBackButton_19": "Volver"
+          }
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "comida",
+            "PEOPLE": "Gente",
+            "allButtonText": "Todos",
+            "recommendationTitle_2": "Tus Recomendaciones",
+            "selectWeightLabel_1": "¡Seleccione al menos una persona para usar para recomendaciones para continuar!"
+          }
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "comida",
+            "PEOPLE": "Gente",
+            "allButtonText": "Todos",
+            "recommendationTitle_2": "Tus Recomendaciones",
+            "selectWeightLabel_1": "¡Seleccione al menos una persona para usar para recomendaciones para continuar!"
+          }
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "I18n_HAIW23L6": {
+            "resetBtn_8": "Reiniciar"
+          }
+        }
+      }
+    }
+  }
+}

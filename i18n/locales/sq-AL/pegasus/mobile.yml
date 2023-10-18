@@ -1239,7 +1239,7 @@
   header_about_contact: "Na kontaktoni"
   header_about_faqs: "(FAQ) Pyetjet e shpeshta"
   header_learn: "Mëso"
-  header_teach: "Mësoj"
+  header_teach: "Mësoni"
   header_stats: "statistikat"
   header_help_us: "Na ndihmoni"
   header_about: "Rreth"
@@ -1255,7 +1255,7 @@
   user_header_my_projects: "Projektet e mia"
   user_header_settings: "Llogaria ime"
   user_header_logout: "Dil"
-  user_header_signin: "Futu"
+  user_header_signin: "Kyçu"
   user_header_create: 'Krijo '
   user_header_applab: 'Laboratori i Aplikacioneve '
   user_header_artist: 'Artisti '

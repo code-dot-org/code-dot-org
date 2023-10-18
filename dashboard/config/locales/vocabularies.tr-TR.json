@@ -2353,26 +2353,6 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Kayıpsız Sıkıştırma",
           "definition": "orijinal verilerin sıkıştırılmış verilerden mükemmel bir şekilde yeniden yapılandırılmasına izin veren bir veri sıkıştırma algoritması. Genelde metin sıkıştırma için kullanılır (örneğin zip sıkıştırma)"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kod",
-          "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Ruh hali",
-          "definition": "sanatta veya yazıda bir duygu, atmosfer veya hissin ifadesi."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Satır",
-          "definition": "(şiir) - sağ kenarda biten bir satırda düzenlenmiş bir şiirin alt bölümü. "
         }
       }
     }

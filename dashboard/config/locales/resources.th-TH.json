@@ -5181,7 +5181,6 @@
           "type": "ทรัพยากร"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "วิดีโอ"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -6334,6 +6333,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "ฟังก์ชันกับพารามิเตอร์",
           "type": "วิดีโอ"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "ฟังก์ชัน",
+          "type": "สไลด์"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "สไลด์"
@@ -8328,11 +8331,6 @@
           "name": "วิดีโอ: การบีบอัดข้อความด้วย Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "วิดีโอ"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "รายชื่อบทกวี",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "สไลด์"
         }
       }
     }

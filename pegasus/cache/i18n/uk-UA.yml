@@ -975,7 +975,7 @@ uk-UA:
   header_about_team: Вся команда
   header_about_us: Про нас
   header_course_catalog: Каталог курсів
-  header_courses: курси
+  header_courses: Курси
   header_documentation: Документація
   header_educate_beyond: Поза Code.org
   header_educate_community: Інтернет-спільнота
@@ -990,6 +990,7 @@ uk-UA:
   header_help_support: 'Допомога та підтримка '
   header_help_us: Допомога нам
   header_home: Головна
+  header_incubator: Інкубатор
   header_learn: Вчитися
   header_legal: Конфіденційність та юридична інформація
   header_legal_privacy: Політика конфіденційності
@@ -1388,6 +1389,7 @@ uk-UA:
   hourofcode_shortcode: Код
   hourofcode_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими
     птахами!
+  how_ai_works: Як працює ШІ
   how_to_teach_hoc: Як викладати "Годину коду"
   i_agree: Погоджуюся
   i_am_a: 'Я - '

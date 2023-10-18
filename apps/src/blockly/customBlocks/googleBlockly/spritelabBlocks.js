@@ -16,7 +16,8 @@ const INPUTS = {
 export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
-  initializeMiniToolbox(renderToolboxBeforeStack = false) {
+  // miniToolboxBlocks is a backwards-compatible parameter used in CDO Blockly.
+  initializeMiniToolbox(miniToolboxBlocks, renderToolboxBeforeStack = false) {
     // Function to create the flyout
     const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
@@ -31,7 +32,11 @@ export const blocks = {
       // By default, the flyout is added after the stack input (at the bottom of the block).
       // This flag is used by behavior and function definitions, mainly in the modal function editor,
       // to add the flyout before the stack input (at the top of the block).
-      if (renderToolboxBeforeStack) {
+      if (
+        renderToolboxBeforeStack &&
+        block.getInput(INPUTS.FLYOUT) &&
+        block.getInput(INPUTS.STACK)
+      ) {
         block.moveInputBefore(INPUTS.FLYOUT, INPUTS.STACK);
       }
       return flyoutField;
@@ -99,7 +104,11 @@ export const blocks = {
     // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
     const lastInput = this.inputList[this.inputList.length - 1];
     // Force add a dummy input at the end of the block, if needed.
-    if (lastInput.type !== Blockly.inputTypes.DUMMY) {
+    if (
+      ![Blockly.inputTypes.DUMMY, Blockly.inputTypes.STATEMENT].includes(
+        lastInput.type
+      )
+    ) {
       this.appendDummyInput();
     }
 
@@ -159,6 +168,8 @@ export const blocks = {
     };
     this.domToMutation = function (xmlElement) {
       const useDefaultIcon =
+        // Assume default icon if no XML attribute present
+        !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
         xmlElement.getAttribute('useDefaultIcon') === 'true';
       flyoutToggleButton.setIcon(useDefaultIcon);

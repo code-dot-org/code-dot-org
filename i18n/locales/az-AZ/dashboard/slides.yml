@@ -1826,8 +1826,10 @@ az:
         image: 'notlar/dersler_planlama_4.png'
         text: "2. Onlayn dərsləri unplugged dərslərlə birləşdirərək qarışıq bir öyrənmə təcrübəsi yaradın."
       5:
+        image: 'notlar/dersler_planlama_5.png'
         text: "3. Tədris planınızı kiçik parçalara bölün."
       6:
+        image: 'notlar/dersler_planlama_6.png'
         text: "4. Yerli standartlara, kollec və karyeraya hazırlıq bacarıqlarına uyğunlaşdığınızdan əmin olun."
     opd_closing:
       1:
@@ -1935,50 +1937,164 @@ az:
         text: "Təlimin sonunda siz öz yaradıcılığınızın linkini dostlarınızla paylaşa bilərsiniz. Təsəvvürünüzü genişləndirin və sadəcə əylənin!"
     poemart_intro:
       1:
+        image: 'qeydlər/hoc_poem_art_2021_introduction_01.jpg'
         text: "Mənim adım Caiadır, mən  şair və kompüter elmləri tələbəsiyəm. Kodlaşdırmadan o qədər öyrəndim ki, bu da məni daha yaxşı şair etdi. Mənim şeirimlə bağlı çox şey məni kodlaşdırmada daha yaxşı etdi. Sadəcə ona görə ki, hər şey bir araya gəldikdən sonra həqiqətən seçdiyin sözlər və nələri yaradacağın haqda düşünmək lazımdır."
       2:
+        image: 'qeydlər/hoc_poem_art_2021_sert_02.jpg'
         text: "Növbəti saat ərzində siz animasiyalı şeir yaradaraq kompüter elmləri və poeziya haqqında məlumat əldə edəcəksiniz. Mahiyyətcə poeziya sözlərlə incəsənəti yaradır. Özümü ifadə etmək üçün şeir yaradıram; Özünəməxsus üslubumdan və ritmimdən istifadə edərək yazanda dinləyicilərin təxəyyülünü və emosiyalarını oyatmağa çalışıram."
       3:
+        image: 'qeydlər/hoc_poem_art_2021_sert_03.jpg'
         text: "Necə ki, incəsənət kimi şeirləri də bir çox fərqli mənalarda izah etmək olar. Eyni şeir müxtəlif insanlar üçün çox fərqli şeylər ifadə edə bilər. Hər şeirin öz əhval-ruhiyyəsi var. Əhval-ruhiyyə şeirdən əldə etdiyin hissdir. Bəzən insanlar müəyyən rəngləri və obrazları müxtəlif əhval-ruhiyyə ilə əlaqələndirirlər."
       4:
+        image: 'qeydlər/hoc_poem_art_2021_sert_04.jpg'
         text: "Məsələn, sarı rəngin rəngi məni şənləndirir. Qorxu kimi əhval-ruhiyyə haqqında düşünəndə isə bəzən başımda qaranlıq və fırtınalı bir gecə təsəvvür edirəm. Bu fəaliyyətdə hiss etdiyiniz hisslərə əsaslanaraq bir şeirin əhval-ruhiyyəsini əyani və canlandırmaq imkanınız olacaq."
       5:
+        image: 'qeydlər/hoc_poem_art_2021_sert_05.jpg'
         text: "Kod istifadə edərək bunu necə edəcəyinizə diqqət yetirək. Ekranınızın üç əsas hissəyə bölündüyünü görəcəksiniz. Sol tərəfdə oyun yeri yerləşir. Burada sizin animasiya şeiriniz gələcək. Hər şeirin bir başlığı və bir müəllifi vardır."
       6:
+        image: 'qeydlər/hoc_poem_art_2021_sert_06.jpg'
         text: "Bu orta sahə alətlər qutusudur. Dərsdən keçərkən bu məkanda yeni kod blokları əlçatan olacaq."
       7:
+        image: 'qeydlər/hoc_poem_art_2021_sert_07.jpg'
         text: "Sağ tərəfdəki boşluq iş sahəsidir. Proqramınızı qurmaq üçün blokları alət qutusundan və iş yerinə sürükləyə bilərsiniz."
       8:
+        image: 'qeydlər/hoc_poem_art_2021_sert_08.jpg'
         text: "Hər bir səviyyə üçün təlimatlar ekranın yuxarı hissəsində burada olacaq. Əgər işarə istəyirsinizsə, lampanın üzərinə basın."
       9:
+        image: 'qeydlər/hoc_poem_art_2021_sert_09.jpg'
         text: "Əvvəlcə bəyəndiyiniz şeiri seçin. Hər cür şeir var və hər səviyyədə yenisini seçə bilərsiniz."
       10:
+        image: 'qeydlər/hoc_poem_art_2021_sert_10.jpg'
         text: "Sonra şeirinizi canlandırmaq üçün alətlər qutusundan blokları iş yerinizə sürükləyəcəksiniz. Şeirinizin əhval-ruhiyyəsinə uyğun arxa fon rəngi və ya effekt seçə bilərsiniz. Sonra \"Qaç\"a basaraq şeirinizi hərəkətdə görə bilərsiniz."
       11:
+        image: 'qeydlər/hoc_poem_art_2021_sert_11.jpg'
         text: "Müxtəlif şeirləri oxumağa bir qədər vaxt ayırın və sizdə hiss oyadan bir şeir tapın. Özünüzü necə hiss etdiyinizi və bu hissləri obraz və kod vasitəsilə necə çatdıra biləcəyinizi düşünün."
     poemart_events:
       1:
+        image: 'qeydlər/hoc_poem_art_2021_hadisələr_01.jpg'
         text: "Bəzən şeirin əhval-ruhiyyəsi şeirdə qismən dəyişir. Xoşbəxt şeir kimi başlayan şeylər kədərə çevrilir, yaxud qaranlıq işıq saçar."
       2:
+        image: 'qeydlər/hoc_poem_art_2021_hadisələr_02.jpg'
         text: "Bu fəaliyyətdə siz hadisələrlə işləyəcəksiniz. Bu hadisə blokundan istifadə edərək şeirinizdə konkret bir xətt göründüyü zaman proqramınızın gedişatını dəyişə bilərsiniz. Qeyd edək ki, hadisə blokları sizin əsas proqramınıza daxil deyil. Əksinə, onlar özlərinin az proqramlarını yaradırlar."
       3:
+        image: 'qeydlər/hoc_poem_art_2021_hadisələr_03.jpg'
         text: "Şeirinizi oxuyun və əhval-ruhiyyənin dəyişdiyi anı tapın. Hansı sətirdə baş verdiyini sayaq: bir, iki, üç. Hadisə blokunuzda sətirin nömrəsini daxil edin."
       4:
+        image: 'qeydlər/hoc_poem_art_2021_hadisələr_04.jpg'
         text: "Sonra bu xətt ekranda özünü büruzə verəndə əhval-ruhiyyənin dəyişməsini əks etdirmək üçün bir şeydə proqramla. \"Başlada\" basdıqda kodladığınızı görə bilərsiniz."
-    hello_world_intro:
+    poemart_imagery:
+      1:
+        image: 'qeydlər/hoc_poem_art_2021_obrazlılıq_01.jpg'
+        text: "Poeziyada müəlliflər oxucunun zehnində bir şəkil çəkmək üçün obrazlardan istifadə edirlər. Timsah sözünü görəndə ağlımızda avtomatik olaraq yaşıl timsah təsəvvür edirik. Belə bir şəkli animasiyaya daxil etmək üçün spritlərdən istifadə edəcəyik."
+      2:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_02.jpg'
+        text: "Bu, sizə sprayt düzəltməyə və onun üçün kostyum seçməyə imkan verən yeni sprayt bloku yaradır. Şeirlə uyğunlaşdığını düşündüyünüz sprite üçün kostyum seçin. "
+      3:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_03.jpg'
+        text: "Sprite-ın yerini dəyişdirmək üçün yer blokunundakı sancaq ikonasını klikləyə və sonra oyun yerində getməsini istədiyiniz yerə klikləyə bilərsiniz."
+      4:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_04.jpg'
+        text: "Növbəti bir neçə səviyyədə bəzi yeni bloklar görəcəksiniz. Bu blok sprite-ın ölçüsünü dəyişdirməyə imkan verir. Bu blok, sizin sprite-ı davranışla canlandırmağa imkan verir."
       5:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_05.jpg'
+        text: "Əgər şeirdə gəzən buludlardan bəhs edirsə, əvvəlcə bulud sprite-ı yaradın, sonra bu davranış blokunu seçin, sürükləyin və gəzməyi seçin."
+      6:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_06.jpg'
+        text: "Sprite kostyumlarınızın uyğun olduğundan əmin olun. İcra et düyməsini basdığınız zaman gəzən bir bulud oxuyub və görəcəksiniz."
+      7:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_obrazlılıq_07.jpg'
+        text: "İndi şeirdəki sözləri göstərmək üçün hərfi şəkillər əlavə edə bilərsiniz. Əylənin!"
+    poemart_celebration:
+      1:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_01.jpg'
+        text: "Təbrik edirəm! Kompüter elmlərinin əsaslarını və bir şeirin əhvalını necə tapmağı öyrəndiniz. İndi dostlarınızla bölüşmək üçün öz cizgi şeirinizi yarada bilərsiniz."
+      2:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_02.jpg'
+        text: "Bütün şeir üçün sadə bir səhnə diqqətlə seçəcəksinizmi?"
+      3:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_03.jpg'
+        text: "Yoxsa şeirinizin hər sətrinə yeni bir səhnə yaratmaq üçün çoxlu tədbirlərdən istifadə edəcəksiniz?"
+      4:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_04.jpg'
+        text: "Təlimatın sonunda dostlarınızla yaradıcılığınızı link ilə paylaşa bilərsiniz."
+      5:
+        image: 'qeydlər/hoc_şeir_incəsənət_2021_bayram_05.jpg'
+        text: "Təsəvvürünüzü uzatın və əylənin!"
+    hello_world_intro:
+      1:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_01.jpg'
+        text: "Salam! Mənim adım Erindir və mən Code.org-da bir proqram mühəndisiyəm. Çox həyəcanlıyam, çünki edəcəyiniz dərslik üzərində işləmişdim! Buna “Salam Dünya” deyirik."
+      2:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_02.jpg'
+        text: "“Salam Dünya” kompüter elmlərində məşhur bir ifadədir və bu ifadənin göstərilməsi kompüter elmlərini öyrənməkdə ümumi ilk addımdır. Növbəti saat ərzində Sprite Laboratoriyasında proqramlaşdıraraq kompüter elmlərinə başlayacaqsınız."
+      3:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_03.jpg'
+        text: "Sprite Laboratoriyası xəyali və əyləncəli layihələr qurmaq üçün istifadə edə biləcəyiniz bir vasitədir. Ekranınızın üç əsas hissəyə bölündüyünü görəcəksiniz. Solda oyun sahəsi var. Spritelarınızın görünəcəyi yer budur."
+      4:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_04.jpg'
+        text: "Spritelar ekrandakı əlaqə qura biləcəyiniz obyektlərdir,  hekayədə və ya oyundakı bir personaj və ya element kimi."
+      5:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_05.jpg'
         text: "Bu orta sahə alətlər qutusudur. Dərsdən keçərkən bu məkanda yeni kod blokları əlçatan olacaq."
       6:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_06.jpg'
         text: "Sağ tərəfdəki boşluq iş sahəsidir. Toolbox-dan blokları çıxara bilərsiniz və proqramınızı qurmaq üçün iş yerinə daxil ola bilərsiniz."
       7:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_07.jpg'
         text: "Hər bir səviyyə üçün təlimatlar ekranın yuxarı hissəsində burada olacaq. Əgər işarə istəyirsinizsə, lampanın üzərinə basın."
-    hello_world_events:
-      2:
-        text: "Hadisələrin bəzi nümunələri siçan klik, ox düyməsi və ya ekranda tap dinləyir. \"Clicked\" kimi bloklar hadisə blokları adlanır. Hadisə blokuna bağlı kod müvafiq hərəkət aşkar edildikdə işə salır."
-    hello_world_congrats:
-      3:
-        text: "Özün də çəkə bilərsən! Bəyəndiyiniz kostyuma sahib olduqdan sonra kodunuza geri dönün."
       8:
-        text: "Ətrafa nəzər salın. Bu yeni blok və xüsusiyyətləri təcrübədən keçirməyə çalışın. Təlimatın sonunda \"Paylaş\" düyməsinə basaraq, yaratdığınız bir linki dostlarınızla paylaşın."
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_08.jpg'
+        text: "Başlamaq üçün bir sprite hazırlayaq! Bu blok sizə sprite-a kostyum və yer verməyə imkan verir. Kostyum, sprite-ın görünüşünü təsvir etmək üçün istifadə etdiyimiz sözdür. Sprite yerini dəyişdirmək üçün yer blokunundakı sancaq ikonunu klikləyə və sonra getməsini istədiyiniz yerə klikləyə bilərsiniz."
+      9:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_09.jpg'
+        text: "İndi sprite-in özünü tanıtmasına icazə verək! Sprite bir şey söyləmək üçün bu “Söylə” blokundan istifadə edin və proqramınıza əlavə edin. “Söylə” blokunuzda seçilmiş kostyumun sprite-nızdaki kostyumla uyğun olduğundan əmin olun."
       10:
+        image: 'qeydlər/hoc_salam_dünya_2021_giriş_10.jpg'
+        text: "“İcra et” düyməsini basdığınız zaman sprite istədiyiniz mətni söyləyəcək. İndi Sprite Laboratoriyası ilə başlamağın və təsəvvürünüzün sizi hara aparacağını görməyin vaxtı gəldi!"
+    hello_world_events:
+      1:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_01.jpg'
+        text: "İndi Sprite Laboratoriyadan necə istifadə edəcəyinizi öyrəndiyiniz üçün proqramınızın kimsə onunla oynadığı zaman reaksiya verməyini istəyəcəksiniz. Bunu etmək üçün hadisələrdən istifadə edəcəksiniz. Bir hadisə proqramınıza bir şeyin baş verməsini dinləməsini və sonra dərhal reaksiya verməsini söyləyir."
+      2:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_02.jpg'
+        text: "Hadisələrin bəzi nümunələri siçan klik, ox düyməsi və ya ekranda tap dinləyir. \"Clicked\" kimi bloklar hadisə blokları adlanır. Hadisə blokuna bağlı kod müvafiq hərəkət aşkar edildikdə işə salır."
+      3:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_03.jpg'
+        text: "Məsələn, bu “söyləyin” bloku “tıklandıqda” hadisəsinə əlavə etsəm, istifadəçi kliklədikdə və ya vurduqda mənim spritem bir şey söyləyəcək. Hadisə bloklarının əsas proqramınıza daxil olmadığına diqqət yetirin. Bunun əvəzinə özləri üçün kiçik proqramlar yaradırlar."
+      4:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_04.jpg'
+        text: "Birdən çox spritiniz varsa, interaktiv bir hekayə danışmaq üçün əlavə hadisələrdən istifadə edə bilərsiniz."
+      5:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_05.jpg'
+        text: "Tezliklə Sprite Laboratoriyasında sprite-in ölçüsünü və ya görünüşünü dəyişdirmək, fərqli fonlar qurmaq, səslər çalmaq və s. daxil olmaqla daha çox şeyi necə edəcəyinizi öyrənəcəksiniz. Kimsə onlarla ünsiyyət qurduqda spritlərinizin nə etməsini istəyirsiniz? Bu sizə bağlıdır!"
+    hello_world_congrats:
+      1:
+        image: 'qeydlər/hoc_salam_dünya_2021_azadoyna_01.jpg'
+        text: "Təbrik edirəm! Kompüter elminin əsaslarını yeni öyrənmisiniz. İndi istədiyinizi yaratmaq üçün Sprite Laboratoriyadan istifadə edə bilərsiniz."
+      2:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_02.jpg'
+        text: "Kostyumlar yazan bir düymə görəcəksiniz. Üzərinə kliklədiyiniz zaman kitabxanadan yeni sprite kostyumları seçə bilərsiniz."
+      3:
+        image: 'qeydlər/hoc_salam_dünya_2021_tədbirlər_02.jpg'
+        text: "Özün də çəkə bilərsən! Bəyəndiyiniz kostyuma sahib olduqdan sonra kodunuza geri dönün."
+      4:
+        image: 'Qeyd'
+        text: "İndi sprite üçün həmin kostyumu seçin."
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "Alət qutusuna baxsanız, əvvəllər görmədiyiniz yeni blokları tapa bilərsiniz. Məsələn, spritiniza əyləncəli və maraqlı yollarla hərəkət etməyə imkan verən çoxlu davranış bloku var."
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "İki sprit bir-birinə vurduqda nə baş verdiyini idarə etmək üçün “toxunanda” hadisə blokunundan istifadə edə bilərsiniz."
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "“Effekt yaradın” blokunu axtarın. Bu güclü blok əmrlə partlayan, yağan və ya yağış yağan bir dəstə sprites hazırlamaq üçün istifadə edilə bilər."
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Ətrafa nəzər salın. Bu yeni blok və xüsusiyyətləri təcrübədən keçirməyə çalışın. Təlimatın sonunda \"Paylaş\" düyməsinə basaraq, yaratdığınız bir linki dostlarınızla paylaşın."
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "Sprite Lab-da tətbiqlər, oyunlar və digər yeni proqramlar inkişaf etdirməyə başlamaq üçün lazım olan bütün güclü bacarıqlara sahibsiniz! Yeni güclərinizdən yaxşılığa istifadə edin. Kağız üzərində bir şey yaratdığınız və ya dostunuzla danışdığınız kimi mehriban və hörmətli olun."
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "Belə isə nə yaradırsınız? Özünüz haqqında bir hekayə danışa bilərdiniz... və ya birini öz xüsusi qəhrəmanlarınızı düzəldin. Bəlkə siz hətta yeni kompüter elmləri bacarıqlarınızı növbəti məktəb layihəniz üçün istifadə edəcəksiniz! Təxəyyülünüzü uzatın və əylənin!"
