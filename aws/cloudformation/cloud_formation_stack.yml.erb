@@ -584,7 +584,9 @@ Resources:
     DeletionPolicy: Retain
     CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
     Properties:
-      ImageId: <%=IMAGE_ID%>
+      # Temporarily hardcode the Ubuntu 20 image just for this server, so we can gradually roll out the update.
+      # TODO (infra): finish updating all environments, and restore this line to again reference IMAGE_ID
+      ImageId: 'ami-0261755bbcb8c4a84'
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
@@ -593,7 +595,7 @@ Resources:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
-          Ebs: {VolumeSize: 64, VolumeType: gp2}
+          Ebs: {VolumeSize: 256, VolumeType: gp2}
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x

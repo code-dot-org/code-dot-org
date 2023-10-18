@@ -122,31 +122,31 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.RESULTS);
   };
 
-  const handleProcessClick = () => {
-    const inputNames = inputs.map(
-      input =>
-        inputLibrary.items.find((item: AiModalItem) => item.id === input).name
-    );
+  const handleGenerateClick = () => {
+    startAi();
+    setMode(Mode.GENERATING);
+  };
 
-    startAi(inputNames);
+  const handleProcessClick = () => {
+    startAi();
     setMode(Mode.PROCESSING);
     setTimeout(() => {
       setProcessingDone(true);
     }, 4000);
   };
 
-  const handleGenerateClick = () => {
-    setMode(Mode.GENERATING);
-  };
-
-  const startAi = async (inputNames: Array<string>) => {
-    const request = `${promptString} ${inputNames.join(', ')}.`;
-    let responseJsonString: string;
+  const startAi = async () => {
     // Default to using cached response, otherwise contact OpenAI directly
+    let responseJsonString: string;
     if (queryParams('ai-model') === 'llm') {
+      const inputNames = inputs.map(
+        input =>
+          inputLibrary.items.find((item: AiModalItem) => item.id === input).name
+      );
+      const request = `${promptString} ${inputNames.join(', ')}.`;
       responseJsonString = await doAi(request);
     } else {
-      responseJsonString = chooseEffects(inputNames);
+      responseJsonString = chooseEffects(inputs);
     }
     const result = JSON.parse(responseJsonString);
 
