@@ -327,7 +327,7 @@ class ScriptLevelsController < ApplicationController
       if params[:lesson_position]
         script.lesson_by_relative_position(params[:lesson_position])
       else
-        script.lesson_by_relative_position(params[:lockable_lesson_position], true)
+        script.lesson_by_relative_position(params[:lockable_lesson_position], unnumbered_lesson: true)
       end
 
     render json: lesson.summary_for_lesson_plans
