@@ -3,7 +3,7 @@ import {getStore} from '@cdo/apps/redux';
 import {getLocation} from '../redux/locationPicker';
 import {P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {NO_OPTIONS_MESSAGE, BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
 import i18n from '@cdo/locale';
@@ -63,7 +63,7 @@ function getAllBehaviors() {
   const behaviors = [];
   Blockly.mainBlockSpace?.getAllBlocks().forEach(function (block) {
     if (
-      block.type === 'behavior_definition' &&
+      block.type === BLOCK_TYPES.behaviorDefinition &&
       block.getProcedureInfo()?.name &&
       block.getProcedureInfo()?.id
     ) {
@@ -482,7 +482,7 @@ export default {
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
         FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription(),
       },
-      'behavior_definition',
+      BLOCK_TYPES.behaviorDefinition,
       {
         [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
       },

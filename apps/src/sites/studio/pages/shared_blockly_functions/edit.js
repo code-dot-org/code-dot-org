@@ -2,6 +2,7 @@ import zip from 'lodash/zip';
 import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {install, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
@@ -45,7 +46,7 @@ installCustomBlocks({
 const DEFAULT_NAME = 'acting';
 
 const blockXml = `<xml>
-  <block type="behavior_definition">
+  <block type="${BLOCK_TYPES.behaviorDefinition}">
     <title id="${DEFAULT_NAME}" name="NAME">${DEFAULT_NAME}</title>
   </block>
 </xml>`;

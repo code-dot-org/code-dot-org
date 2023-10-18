@@ -1,11 +1,11 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
-import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.

@@ -1,9 +1,10 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
-import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
@@ -130,7 +131,7 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
 GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
   // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
   let miniToolboxBlocks = [];
-  if (this.type === 'behavior_definition') {
+  if (this.type === BLOCK_TYPES.behaviorDefinition) {
     miniToolboxBlocks.push('sprite_parameter_get');
   }
 

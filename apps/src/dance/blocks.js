@@ -1,4 +1,5 @@
 import i18n from '@cdo/locale';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import CdoFieldDanceAi from './ai/cdoFieldDanceAi';
 
 // This color palette is limited to colors which have different hues, therefore
@@ -113,7 +114,7 @@ export default {
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
         FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription(),
       },
-      'behavior_definition',
+      BLOCK_TYPES.behaviorDefinition,
       {
         [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
       },
@@ -333,7 +334,9 @@ export default {
 
     generator.behavior_definition = generator.procedures_defnoreturn;
 
-    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
+    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push(
+      BLOCK_TYPES.behaviorDefinition
+    );
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
