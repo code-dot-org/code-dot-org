@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-require_relative './cron/only_one'
-abort 'Script already running' unless only_one_running?(__FILE__)
 
 # The map on code.org/yourschool is run off of Mapbox.
 # This script updates the data on Mapbox by querying all rows from
@@ -8,13 +6,12 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # creating maptiles with Mapbox's command line tool, Tippecanoe,
 # and uploading them to Mapbox's server.
 
-# After setting up authentication, provide the following CDO.* attributes:
-#   CDO.mapbox_upload_token: (the auth token for uploading tiles to Mapbox's servers)
-
 require_relative '../dashboard/config/environment'
 require_relative '../pegasus/helpers/properties'
 
 require_relative './cron/upload_to_mapbox'
+
+raise "CDO.mapbox_upload_token is not defined" unless CDO.mapbox_upload_token
 
 def make_location(lat, long)
   return nil if lat.nil? || long.nil?
