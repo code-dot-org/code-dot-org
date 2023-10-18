@@ -87,8 +87,8 @@ class RubricsController < ApplicationController
 
   def run_ai_evaluations_for_user
     user_id = params.transform_keys(&:underscore).require(:user_id)
-    user = User.find_by(id: user_id)
-    return head :forbidden unless user&.student_of?(current_user)
+    @user = User.find_by(id: user_id)
+    return head :forbidden unless @user&.student_of?(current_user)
 
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
@@ -97,7 +97,7 @@ class RubricsController < ApplicationController
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
-    EvaluateRubricJob.perform_later(user_id: user.id, script_level_id: script_level.id)
+    EvaluateRubricJob.perform_later(user_id: @user.id, script_level_id: script_level.id)
     return head :ok
   end
 
