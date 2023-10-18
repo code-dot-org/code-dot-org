@@ -38,6 +38,12 @@ export default function AiAssessmentBox({
     });
   };
 
+  const aiConfidenceText = () => {
+    const confidenceLevels = [i18n.low(), i18n.medium(), i18n.high()];
+    const ratingText = confidenceLevels[aiConfidence - 1];
+    return i18n.aiConfidence({aiConfidence: ratingText});
+  };
+
   return (
     <div className={boxColor()}>
       {isAiAssessed && (
@@ -47,7 +53,7 @@ export default function AiAssessmentBox({
           </BodyThreeText>
           {aiConfidence && (
             <div>
-              <EmText>{i18n.aiConfidence({aiConfidence: aiConfidence})}</EmText>
+              <EmText>{aiConfidenceText()}</EmText>
               <span data-tip data-for="info-tip">
                 <FontAwesome icon="info-circle" className={style.infoTipIcon} />
               </span>
