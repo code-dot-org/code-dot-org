@@ -190,11 +190,11 @@
     # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
     # SQL user.
     DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
-    DBServerHost: '!GetAtt AuroraCluster.Endpoint.Address',
+    DBServerHost: {'Fn::GetAtt': ['AuroraCluster', 'Endpoint.Address']},
     # Credentials (username and password) for the SQL User this Resource is provisioning.
-    DBCredentialAdminSecret: '!Ref DatabaseSecretAdmin',
+    DBCredentialAdminSecret: {Ref: 'DatabaseSecretAdmin'},
     # Credentials (username and password) for the SQL User this Resource is provisioning.
-    DBCredentialSecret: '!Ref DatabaseSecretWriter',
+    DBCredentialSecret: {Ref: 'DatabaseSecretWriter'},
     Privileges: %w(
       SELECT
       INSERT
@@ -222,11 +222,11 @@
     # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
     # SQL user.
     DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
-    DBServerHost: '!GetAtt AuroraCluster.Endpoint.Address',
+    DBServerHost: {'Fn::GetAtt': ['AuroraCluster', 'Endpoint.Address']},
     # Credentials for SQL admin user that will create/update/delete this SQL user resource.
-    DBCredentialAdminSecret: '!Ref DatabaseSecretAdmin',
+    DBCredentialAdminSecret: {Ref: 'DatabaseSecretAdmin'},
     # Credentials (username and password) for the SQL User this Resource is provisioning.
-    DBCredentialSecret: '!Ref DatabaseSecretReader',
+    DBCredentialSecret: {Ref: "DatabaseSecretReader"},
     Privileges: ['SELECT']
   }.compact
   %>
