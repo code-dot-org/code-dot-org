@@ -35,6 +35,10 @@ fi:
   africa_campaign_date_full: 1.-31. Lokakuuta
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1.-31, Lokakuuta 2020
+  hoc2023_header: Luovuus tekoälyn avulla
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Mitä luot?
+  hoc2023_social_creativity_with_ai_desc: Käytä tietojenkäsittelytiedettä tutkiaksesi
+    ja oppiaksesi tekoälystä!
   hoc2022_header: Tutkia, pelata, luoda!
   social_hoc2022_explore_play_create: Käytä tietojenkäsittelytiedettä tutkiaksesi,
     pelataksesi ja luodaksesi!
@@ -175,6 +179,32 @@ fi:
     - sekä uusi opetussuunnitelmaluettelo ja uudistettu Opetussivu, joka auttaa sinua
     löytämään kaiken!'
   in_partnership_with: Yhteistyössä
+  shop_code_dot_org_heading: Kauppa Code.org
+  shop_code_dot_org_desc: Tue työtämme ja käytä liikettä ylpeänä. Myös presidentti
+    Obama ja julkkikset ovat käyttäneet hattujamme.
+  spread_the_word_heading: Levitä sanaa
+  spread_the_word_desc: Vahvista vaikutustamme jakamalla Code.org verkon kanssa. Sosiaalisesta
+    mediasta sähköpostipäivityksiin, selvitä, kuinka voit auttaa meitä tavoittamaan
+    enemmän opettajia, opiskelijoita ja puolestapuhujia.
+  follow_us_heading: Seuraa meitä sosiaalisessa mediassa
+  follow_us_desc: Pysy ajan tasalla kanssamme sosiaalisessa mediassa ja jaa viestejämme
+    verkostosi kanssa pysyäksesi ajan tasalla ja auttaaksesi lisäämään tietoisuutta.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tabletti
+  device_laptop: Kannettava tietokone
+  device_desktop_computer: Pöytätietokone
+  device_mobile_device: Mobiililaite
+  subscribe_to_emails_heading: Tilaa sähköpostit
+  subscribe_to_emails_desc: Lue Code.orgin tapahtumista ja tietojenkäsittelytieteen
+    koulutuksesta neljännesvuosittaisten päivitysten kautta postituslistaltamme.
+  subscribe_to_emails_intl: Tilaa kansainväliset päivitykset
+  promote_code_dot_org_heading: Mainosta Code.org
+  promote_code_dot_org_desc: Edistä tietojenkäsittelytiedettä omalla alueellasi tilastojen,
+    lainausten ja videoiden avulla.
   afe_partnership_logo_alt: Amazon Future Engineer -logo
   afe_partnership_thanks_desc: Amazon Future Engineer on kattava lapsuudesta uraan
     -ohjelma, joka inspiroi, kouluttaa, ja kouluttaa pienituloisia ja muita heikommassa
@@ -194,19 +224,48 @@ fi:
   curricula_title_high: Lukion opetussuunnitelmat
   curricula_desc_high: Selaa houkuttelevia kursseja ja aktiviteetteja, jotka kutsuvat
     sinut ja lukiolaiset syventymään tietojenkäsittelytieteeseen.
+  for_administrators_heading: Järjestelmänvalvojille
+  for_administrators_desc: Liity tuhansiin kouluihin, jotka ovat jo sisällyttäneet
+    tietojenkäsittelytieteen opetussuunnitelmaansa.
+  for_parents_heading: Huoltajille
+  for_parents_desc: Voit auttaa kannustamaan oppilaasi koulua tarjoamaan tai laajentamaan
+    tietojenkäsittelytieteen koulutusta.
+  for_educators_heading: Opettajille
+  for_educators_desc: Aloita opettaminen tänään - tietojenkäsittelytieteen kokemusta
+    ei tarvita - ammatillisen oppimisen työpajoillamme.
   students_label: Oppilaat
   teachers_label: Opettajat
+  educators_label: Kouluttajat
+  companies_label: Yritykset
+  districts_label: Piirit
+  school_assemblies_label: Koulujen kokoukset
+  parents_label: Vanhemmat
+  public_officials_label: Julkiset virkamiehet
+  volunteers_label: Vapaaehtoiset
+  virtual_events_label: Virtuaalitapahtumat
   teacher_label_csf: CS Fundamentals Opettaja
   teacher_label_csd: CS Löydöt Opettaja
   teacher_label_csp: CS Principles Opettaja
   teacher_label_csc: CS-yhteydet Opettaja
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Opettajafoorumi
+  teacher_forum_desc: Käy Hour of Code -opettajafoorumissa saadaksesi neuvoja, oivalluksia
+    ja tukea muilta opettajilta.
   required_materials: 'Vaaditut materiaalit:'
   optional_materials: 'Valinnaiset materiaalit:'
-  call_to_action_explore_roles: Tutustu avoimiin rooleihin
+  call_to_action_hold_an_event: Tapahtuman pitäminen
+  call_to_action_register_event: Rekisteröi tapahtumasi
+  call_to_action_select_activity: Valitse aktiviteetti
+  call_to_action_start_activity: Aloita toiminta
+  call_to_action_get_certificates: Hanki sertifikaatit
+  call_to_action_go_beyond_hoc: Mene Koodin tunti pidemmälle
+  call_to_action_view_promo_resources: Tarkastele kampanjaresursseja
   call_to_action_learn_more: Lue lisää
   call_to_action_watch_now: Katso nyt
   call_to_action_try_activity: Kokeile toimintaa
+  call_to_action_try_activities: Kokeile aktiviteetteja
+  call_to_action_explore_activities: Tutustu aktiviteetteihin
+  call_to_action_explore_ai: Tutustu tekoälyyn
   call_to_action_explore_unit: Tutki yksikköä
   call_to_action_explore_curriculum: Tutustu opetussuunnitelmaan
   call_to_action_explore_curriculum_options: Tutustu opetussuunnitelman vaihtoehtoihin
@@ -259,6 +318,7 @@ fi:
   call_to_action_find_self_paced_modules: Etsi itsetempoiset moduulit
   call_to_action_join_teacher_forums: Liity opettajien foorumeihin
   call_to_action_explore_teacher_forums: Tutustu opettajien foorumeihin
+  call_to_action_explore_teacher_forum: Tutustu opettajien foorumiin
   call_to_action_explore_career_resources: Tutustu uraresursseihin
   call_to_action_watch_videos: Katso videoita
   call_to_action_download_posters: Lataa julisteita
@@ -275,11 +335,30 @@ fi:
   call_to_action_notify_available: Ilmoita minulle, kun saatavilla
   call_to_action_register_early_access: Rekisteröidy Early Access -palveluun
   call_to_action_open_positions: Tarkastele avoimia positioita
+  call_to_action_explore_roles: Tutustu avoimiin rooleihin
   call_to_action_get_guide: Hanki opas
   call_to_action_donate_to_cdo: Lahjoita käyttäjälle Code.org
   call_to_action_start_fundraiser: Aloita varainhankinta
   call_to_action_view_donation_policy: Näytä lahjoituspolitiikka
   call_to_action_view_donate_bitpay: Lahjoita BitPayn avulla
+  call_to_action_make_a_donation: Tee lahjoitus
+  call_to_action_other_ways_to_give: Muita tapoja antaa
+  call_to_action_become_partner_usa: Ryhdy Yhdysvaltain kumppaniksi
+  call_to_action_become_partner_intl: Ryhdy kansainväliseksi kumppaniksi
+  call_to_action_become_a_volunteer: Ryhdy vapaaehtoiseksi
+  call_to_action_start_translating: Aloita kääntäminen
+  call_to_action_learn_about_advocacy: Lue lisää edunvalvonnastamme
+  call_to_action_visit_store: Käy myymälässä
+  call_to_action_view_faqs: Näytä lisää usein kysyttyjä kysymyksiä
+  aria_label_call_to_action_hoc_how_to_educators: Katso opettajien ohjeopas
+  aria_label_call_to_action_hoc_how_to_companies: Katso ohjeet yrityksille
+  aria_label_call_to_action_hoc_how_to_districts: Katso piirien ohjeopas
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Katso koulukokousten ohjeopas
+  aria_label_call_to_action_hoc_how_to_parents: Katso ohjeet vanhemmille
+  aria_label_call_to_action_hoc_how_to_public_officials: Katso ohjeet virkamiehille
+  aria_label_call_to_action_hoc_how_to_volunteers: Katso ohjeet vapaaehtoisille
+  aria_label_call_to_action_hoc_how_to_virtual_events: Tarkastele virtuaalitapahtumien
+    opasta
   aria_label_call_to_action_afe: Lue lisää Amazon Future Engineeristä
   aria_label_call_to_action_teaching_csf: Aloita Teaching Computer Science Fundamentals
     ammatillinen oppimisohjelma
@@ -616,6 +695,7 @@ fi:
   heading_these_lessons_will: 'Nämä oppitunnit:'
   heading_explore_curriculum_catalog: Tutustu kaikkiin kursseihimme opetussuunnitelma-luettelossa
   heading_csa_ai: Etsitkö tekemistä AP® -kokeen jälkeen?
+  heading_bring_cs_to_students: Tuo tietojenkäsittelytiede opiskelijoille
   professional_learning_section_desc: Hanki tarvitsemasi tuki valmistautuessasi opettamaan.
     Opettajat rakastavat sitä, sillä yli 90% on kaikkien aikojen paras ammatillinen
     kehitys!
@@ -888,6 +968,7 @@ fi:
     Runsaalla yhdistelmällä teoriaa, käytännön esimerkkejä ja resursseja sen tavoitteena
     on antaa opettajille mahdollisuuden navigoida tekoälymaisemassa ja parantaa opiskelijoiden
     oppimiskokemuksia.
+  ai_pl_101_resources_5: Opas vastuullisen lähestymistavan varmistamiseen tekoälyyn
   ai_pl_101_video_desc_6: 'Lue lisää uudesta tekniikasta, joka ohjaa tekoälyn suuria
     muutoksia, ja siinä on kaksi uutta videota suurista kielimalleista (kuten ChatGPT)
     ja Generative AI. Kuule, miten nämä uudet tekniikat toimivat suoraan asiantuntijoilta:
@@ -899,6 +980,8 @@ fi:
     jotka vain kastavat varpaitaan, sekä edistyneitä työkaluja niille, jotka haluavat
     maksimoida potentiaalinsa.'
   ai_pl_101_resources_3: Tekoälyn kehotukset opiskelijoiden oppimisen muuttamiseksi
+  ai_pl_101_resources_section_title: Lisää tapoja oppia tekoälystä
+  ai_pl_101_resources_guide: 'Companion-opas:'
   how_ai_works_hero_heading: Kuinka tekoäly toimii
   how_ai_works_hero_desc: Sukella tekoälyn maailmaan ”Kuinka AI toimii” -videosarjamme
     ja siihen liittyvien oppituntien avulla!
@@ -1741,6 +1824,32 @@ fi:
   donate_tabs_bitpay_desc: Osuta antamisen tulevaisuus kryptovaluutalla. BitPayn kautta
     digitaalinen valuutta voi suoraan tukea Code.orgin pyrkimystä tietojenkäsittelytieteen
     koulutuksen laajentamiseen.
+  help_page_top_heading: Kuinka voit auttaa
+  help_page_top_desc: Tue tehtäväämme tehdä tietojenkäsittelytiede saataville jokaiselle
+    lapselle, kaikkialla. Ponnistelut auttavat meitä inspiroimaan tulevia innovaattoreita
+    ja kaventamaan teknisen koulutuksen kuilua.
+  help_page_top_subhead: Tee lahjoitus Code.orgille
+  help_page_top_desc_02: Pyrimme antamaan jokaiselle opiskelijalle mahdollisuuden
+    oppia tietojenkäsittelytiedettä - sekä verkossa että kouluissa, joissa perustamme
+    pysyviä kursseja ja koulutamme opettajia. Jokaista lahjoittamaasi dollaria kohden
+    yksi lapsi tutustuu tietojenkäsittelytieteeseen.
+  help_page_partners_heading: Ryhdy kumppaniksi
+  help_page_partners_desc: Code.org tekee yhteistyötä muiden voittoa tavoittelemattomien
+    organisaatioiden kanssa kumppaneina auttaakseen levittämään tietojenkäsittelytiedettä
+    paikallisella ja kestävällä tavalla. Lue lisää ohjelmastamme.
+  help_page_volunteer_heading: Vapaaehtoistyö luokkahuoneessa
+  help_page_volunteer_desc: Vapaaehtoisena opettaa Hour of Code tai olla vieraileva
+    puhuja paikallisessa luokkahuoneessa. Rekisteröidy kuullaksesi mahdollisuuksista
+    lähelläsi.
+  help_page_translate_heading: Auta meitä kääntämään
+  help_page_translate_desc: Vapaaehtoiset ovat kääntäneet opetusohjelmamme yli 45
+    kielelle. Auta meitä jatkamaan opetusohjelmien laajentamista opiskelijoille ympäri
+    maailmaa!
+  help_page_speak_for_cs_heading: Puhu tietojenkäsittelytieteen koulutuksen puolesta
+  help_page_speak_for_cs_desc: Lue lisää Code.orgin edunvalvontatyöstä kaikkialla
+    Yhdysvalloissa ja kymmenestä käytännöstä, joita suosittelemme osavaltioita omaksumaan
+    tietojenkäsittelytieteen perustamiseksi kaikille opiskelijoille. Plus, selvitä,
+    kuinka voit ajaa muutosta osavaltiossasi.
   hoc_live: 'Hour of Code Live
 
     '
@@ -13167,6 +13276,128 @@ fi:
   all: Kaikki
   dont_know: En tiedä
   language_label: Kieli
+  before_hoc: Ennen Hour of Code
+  day_of_hoc: Hour of Code -päivä
+  after_hoc: Hour of Code -ohjelman jälkeen
+  step_01: Vaihe 1
+  step_02: Vaihe 2
+  step_03: Vaihe 3
+  step_04: Vaihe 4
+  step_05: Vaihe 5
+  step_06: Vaihe 6
+  step_07: Vaihe 7
+  step_08: Vaihe 8
+  hoc_how_to_top_heading: Opas Hour of Code -ohjelmaan
+  hoc_how_to_top_desc: Räätälöidyt ohjeet parhaan Hour of Code -kokemuksen takaamiseksi.
+  hoc_how_to_top_view_guide: Katso opas
+  hoc_how_to_nav_main_aria_label: Valitse opas
+  hoc_how_to_nav_sidebar_aria_label: Sivupalkin navigointi
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: Hour of Code on tunnin mittainen johdanto tietojenkäsittelytieteeseen,
+    jossa käytetään hauskoja opetusohjelmia osoittaakseen, että kuka tahansa voi oppia
+    perusasiat. Tänä vuonna nostamme Hour of Code uusille korkeuksille tarjoamalla
+    koodausmahdollisuuksia, jotka kattavat sekä tekoälyn (AI) että muut komponentit.
+    Olitpa sinä tai opiskelijasi kokeneita koodaajia tai oletteko kaikki lähdössä
+    ensimmäiselle tietojenkäsittelytutkimusretkelle, tämä Hour of Code lupaa poikkeuksellisen
+    matkan.
+  hoc_how_to_faq_question_prerequisites: Mitkä ovat Hour of Code -ohjelman tekemisen
+    edellytykset?
+  hoc_how_to_faq_answer_prerequisites: Hour of Code on helppo suorittaa - jopa aloittelijoille.
+    Et tarvitse kokemusta tietojenkäsittelytieteestä tai opetuksesta innostaaksesi
+    opiskelijoita tutkimaan, luomaan ja oppimaan jotain uutta.
+  hoc_how_to_faq_question_devices: Mitä laitteita tarvitsen Hour of Code -ohjelman
+    suorittamiseen?
+  hoc_how_to_faq_answer_devices_01: 'Laitteet, joita voit käyttää:'
+  hoc_how_to_faq_answer_devices_02: Jos laitteita on rajoitetusti tai niitä ei ole
+    käytettävissä, kokeile [pariohjelmointia] (%{pair_url}) tai tutustu [irrotettuihin
+    toimintoihin] (%{unplugged_url}) oppiaksesi ilman laitteita ollenkaan!
+  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_answer_volunteer: Jokainen, joka on intohimoinen tietojenkäsittelytieteen
+    koulutukseen ja tekniikan monimuotoisuuden lisäämiseen, voi olla vapaaehtoinen!
+    Haluaisimme nähdä kaikentaustaisia vapaaehtoisia osallistumaan. Hour of Code sisältää
+    laajan valikoiman aktiviteetteja kaiken ikäisille ja taitotasoille, joten sinun
+    ei tarvitse olla ohjelmointiasiantuntija vapaaehtoistyöhön!
+  hoc_how_to_faq_question_full_hour: Kestääkö Hour of Code kokonaisen tunnin?
+  hoc_how_to_faq_answer_full_hour: Monet opiskelijat pystyvät suorittamaan toimintansa
+    alle tunnissa, ja se on okei! Opiskelijat voivat jatkaa oppimista, kun muut opiskelijat
+    suorittavat toimintansa.
+  hoc_how_to_faq_question_account: Pitääkö opiskelijoiden kirjautua sisään tilillä?
+  hoc_how_to_faq_answer_account: Opiskelijat eivät vaadi rekisteröitymistä tai kirjautumista,
+    jotta he voivat kokeilla Hour of Code -ohjelmaa. Rekisteröityminen Hour of Code
+    -palveluun EI automaattisesti luo Code.org-tiliä.
+  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_promo_heading: Kampanjaresurssit
+  hoc_how_to_resources_promo_desc: Löydä kaikki tarvitsemasi resurssit - painetut
+    ja digitaaliset - kiinnittääksesi huomiota Hour of Code -sovellukseesi.
+  hoc_how_to_resources_discover_heading: Tutustu aktiviteetteihin
+  hoc_how_to_resources_discover_desc: Tutustu laajaan valikoimaan yhden tunnin opetusohjelmia,
+    jotka on suunniteltu kaiken ikäisille yli 45 kielellä.
+  hoc_how_to_step_label_plan: Suunnittele, missä ja milloin teet Hour of Code -ohjelman
+  hoc_how_to_step_label_choose_activity: Valitse aktiviteettisi
+  hoc_how_to_step_label_test_activity: Testaa aktiivisuuttasi
+  hoc_how_to_step_label_register_event: Rekisteröi tapahtumasi
+  hoc_how_to_step_label_tell: Kerro oppilaille, koululle ja yhteisölle
+  hoc_how_to_step_label_get_coding: Hanki koodaus!
+  hoc_how_to_step_label_celebrate: Juhli
+  hoc_how_to_step_label_beyond_hoc: Koodin tunnin jälkeen
+  hoc_how_to_step_beyond_hoc_subhead: Se ei lopu tähän!
+  hoc_how_to_step_beyond_hoc_desc: Tietojenkäsittelytieteen ei tarvitse päättyä koodin
+    tuntiin! Vaikka 90% vanhemmista haluaa lapsensa oppivan tietojenkäsittelytiedettä,
+    useimmat koulut eivät edelleenkään opeta sitä. Opi tuomaan CS lapsesi kouluun
+    tänään.
+  hoc_how_to_step_01_educators_subhead: Valitse tapahtuman aika ja tila, joka sopii
+    käytettävissäsi olevien opiskelijoiden ja laitteiden määrään.
+  hoc_how_to_step_01_educators_desc_01: Mitä tiloja sinulla on käytettävissä Hour
+    of Code -tapahtumasi tekemiseen? Harkitse tilasi teknisiä ominaisuuksia ja laitteita,
+    joiden kanssa odotat oppilaidesi työskentelevän. Oppilaat voivat työskennellä
+    opetusohjelmien parissa yhdellä laitteella, käyttää vuorotellen jaettua laitetta
+    tai kokeilla opetusohjelmaa yhdessä luokkahuoneen taululla. On jopa irrotettuja
+    opetusohjelmia, jotka voidaan suorittaa ilman laitteita. Irrotettavat vaihtoehdot
+    voidaan tehdä missä tahansa - jopa ulkona!
+  hoc_how_to_step_01_educators_desc_02: Ihmiset ympäri maailmaa liittyvät Hour of
+    Code -juhlaan CS Education Weekin aikana, %{campaign_date} kun uusimmat opetusohjelmat
+    ja aktiviteetit julkaistaan. Mutta voit tehdä Hour of Code -ohjelman minä tahansa
+    vuoden päivänä!
+  hoc_how_to_step_02_educators_desc_01: Tutustu aktiviteetteihin ryhmäsi iän, kokemuksen,
+    kiinnostuksen kohteiden ja muun perusteella. Opiskelijoiden on suosittua kokeilla
+    itseohjattuja opetusohjelmia, vaikka monet aktiviteetit sisältävät opettajien
+    oppituntisuunnitelmia keskustelun ohjaamiseksi tai toiminnan laajentamiseksi.
+  hoc_how_to_step_02_educators_desc_02: Päätä etukäteen, haluatko valita yhden opetusohjelman
+    kaikille opiskelijoillesi, vai anna jokaisen lapsen valita omansa.
+  hoc_how_to_step_02_educators_desc_03: Tänä vuonna sinä ja oppilaasi voit [oppia
+    kaiken tekoälystä] (%ai_url) opetusohjelmien, tuntisuunnitelmien ja uuden How
+    AI Works -videosarjan avulla.
+  hoc_how_to_step_03_educators_desc_01: Kokeile opetusohjelmaa itse ennen kuin pääset
+    luokkahuoneeseen, jotta voit vastata kysymyksiin!
+  hoc_how_to_step_03_educators_desc_02: Voit myös testata opetusohjelmia opiskelijoiden
+    tietokoneilla tai laitteilla varmistaaksesi, että ne tukevat ääntä ja videota.
+    Onko sinulla alhainen kaistanleveys? Suunnittele videoiden näyttäminen luokan
+    edessä, jotta jokainen oppilas ei lataa omia videoitaan.
+  hoc_how_to_step_03_educators_desc_03: Harkitse kuulokkeiden tarjoamista luokallesi
+    tai pyydä oppilaita tuomaan omat, jos valitsemasi opetusohjelma toimii parhaiten
+    äänen kanssa.
+  hoc_how_to_step_04_educators_desc_01: Kun rekisteröit Hour of Code -tapahtuman,
+    saat hyödyllisiä sähköpostiviestejä, joissa on uutisia ja vinkkejä onnistuneen
+    Hour of Code -tapahtuman järjestämiseen. Näin voit myös kertoa paikallisille vapaaehtoisille,
+    että koulusi osallistuu. Vapaaehtoiset ovat loistava resurssi ja voivat tulla
+    puhumaan luokallesi tietojenkäsittelytieteestä tai auttaa oppilaitasi Hour of
+    Code -toiminnoissa.
+  hoc_how_to_step_05_educators_desc_01: Saa oppilaat innostumaan tapahtumasta jakamalla
+    [inspiroivia videoita] (%{videos_url}) korostamalla erilaisia ihmisiä ja luovia
+    tapoja, joilla tietojenkäsittelytiedettä voidaan käyttää todellisessa maailmassa.
+  hoc_how_to_step_05_educators_desc_02: Jaa Hour of Code -suunnitelmasi muiden opettajien
+    kanssa, jotka saattavat haluta osallistua hauskanpitoon! Tämä on myös loistava
+    tilaisuus ottaa yhteyttä koulusi vanhempien opettajien opiskelijayhdistykseen
+    tai jakaa vanhempien uutiskirjeitä kertoen heille, mitä heidän lapsensa oppivat.
+  hoc_how_to_step_06_educators_desc_01: Ohjaa oppilaat aktiviteettiin, ehkä jakamalla
+    linkki taululla tai luokkahuoneesi oppimisen hallintajärjestelmän kautta. Oppilaasi
+    voivat kohdata haasteita - se on okei! Ohjelmoinnin oppiminen on kuin uuden kielen
+    oppiminen; et ole sujuvaa heti. Jos et tiedä vastausta, voit selvittää sen yhdessä.
+  hoc_how_to_step_07_educators_desc_01: 'Muista juhlia menestystä! Jaa valokuvia ja
+    videoita Hour of Code -tapahtumastasi sosiaalisessa mediassa. Käytä #HourOfCode
+    ja @codeorg, jotta voimme korostaa myös menestystäsi!'
+  hoc_how_to_step_07_educators_desc_02: Voit myös tulostaa todistuksia opiskelijoillesi
+    osoittaaksesi saavutuksiaan!
   team_page_full_team_alt_text: Lähes 100 Code.org -työntekijää vastaavissa sinisissä
     ja keltaisissa t-paidoissa poseeraa hotellin kokoushuoneessa yrityksen kesän 2022
     Codechella -tapahtumaa varten.
@@ -13683,6 +13914,10 @@ fi:
   video_library_page_inspirational_video_title_11: Kuka tahansa voi oppia (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta Ja Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA juhlii Hour of Code (2 min)
+  video_library_page_inspirational_video_title_14: Se on enemmän kuin peli (1 min)
+  video_library_page_inspirational_video_title_15: Luo tietojenkäsittelytieteen avulla
+    (1 min)
   video_library_page_not_hacked_video_title_1: 'Kuinka ei hakkeroida: Johdanto'
   video_library_page_not_hacked_video_title_2: 'Kuinka Ei Hakkeroitu: Salasanat'
   video_library_page_not_hacked_video_title_3: 'Kuinka ei hakkeroida: Todennus ja
@@ -13692,6 +13927,164 @@ fi:
     ja Wifi'
   video_library_page_not_hacked_video_title_6: 'Kuinka ei hakkeroitu: Viestit ja lataukset'
   video_library_page_not_hacked_video_title_7: 'Kuinka ei hakkeroitu: Asenna päivitykset'
+  about_us_page_title: Tietoa meistä
+  about_us_page_hero_description: Code.org® on koulutusinnovaatioiden voittoa tavoittelematon
+    järjestö, joka on omistautunut visioon siitä, että jokaisen koulun jokaisella
+    opiskelijalla on mahdollisuus oppia tietojenkäsittelytiedettä osana perusopetustaan.
+    Laajennamme tietojenkäsittelytieteen mahdollisuuksia kouluissa keskittyen nuorten
+    naisten ja muiden aliedustettujen ryhmien opiskelijoiden osallistumisen lisäämiseen.
+    Johtava K-12-tietojenkäsittelytieteen opetussuunnitelman tarjoaja Yhdysvaltojen
+    suurimmissa koulupiireissä, Code.org järjestää myös vuosittaisen [Hour of Code]
+    (%{hour_url}) -kampanjan, johon on osallistunut yli 15% kaikista maailman opiskelijoista.
+    Code.orgia tukevat anteliaat lahjoittajat, mukaan lukien Microsoft, Amazon, Google
+    ja [monet muut] ()%{others_url}
+  about_us_page_section_title_1: Yli 80 miljoonaa opiskelijaa ja 2 miljoonaa opettajaa
+    Code.org-sivustolla
+  about_us_page_statistic_figcaption: Code.org-osallistuminen lukuvuodelta 2021-2022.
+    [Katso eriteltyt tiedot.] ()%{data_url}
+  about_us_page_statistic_description: Code.org lisää tietojenkäsittelytieteen monimuotoisuutta
+    tavoittamalla kaikenlaiset opiskelijat missä he ovat — heidän taitotasollaan,
+    kouluissaan ja tavoilla, jotka innostavat heitä jatkamaan oppimista. Valtaosa
+    Code.org-sivuston opiskelijoista on opiskelijaryhmistä, jotka ovat historiallisesti
+    aliedustettuina tietojenkäsittelytieteessä. Tietojenkäsittelytieteen monimuotoisuuden
+    lisääminen on työmme perusta, ja [kannustamme sinua lukemaan lisää ponnisteluistamme]
+    (%{diversity_url}).
+  about_us_page_section_title_2: Code.org uutisissa
+  about_us_page_section_news_description: Katso kaikki aiemmat [uutiset ja ilmoitukset]
+    (%{news_url})
+  about_us_page_section_table: Tavoitteemme ja mittarimme
+  about_us_page_section_table_header_1: Code.org-tavoite
+  about_us_page_section_table_header_2: Saavutus
+  abous_page_section_table_cell_1_1: Paranna tietotekniikan monimuotoisuutta * (yhdysvaltalaiset
+    opiskelijat) *
+  abous_page_section_table_cell_1_2: 45% Code.org-opiskelijoista on nuoria naisia,
+    50% syrjäytyneiden rotu- ja etnisten ryhmien opiskelijoita ja 46% yhdysvaltalaisista
+    opiskelijoista on korkeakouluissa. Lue lisää [lähestymistavastamme monimuotoisuuteen.]
+    (%{diversity_url})
+  about_page_section_table_cell_2_1: Inspiroi opiskelijoita
+  about_page_section_table_cell_2_2: Kymmenet miljoonat ovat kokeilleet [Hour of Code]
+    (%{hour_url}). (426 370 561 palvellut. 49% naisia)
+  about_page_section_table_cell_3_1: Tavoita luokkahuoneet
+  about_page_section_table_cell_3_2: 591 636 opettajaa on ilmoittautunut opettamaan
+    esittelykurssejamme [Code Studio] -palvelussa (%{code_studio_url}) ja 19 177 297
+    opiskelijaa on ilmoittautunut.
+  about_page_section_table_cell_4_1: Valmista uusia tietotekniikan opettajia
+  about_page_section_table_cell_4_2: Olemme valmistaneet yli 106 000 uutta opettajaa
+    opettamaan tietotekniikkaa eri luokilla K-12. Tutustu [ammatillisiin oppimisohjelmiin.]
+    (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Muuta koulupiirin opetussuunnitelmaa
+  about_page_section_table_cell_5_2: 'Olemme tehneet yhteistyötä [180+ suurimman koulupiirin]
+    (%{schoold_disctrict_url}) ja 60 alueellisen kumppanin kanssa [CS: n lisäämiseksi
+    koulun opetussuunnitelmaan] (%{cs_curriculum_url}). [Lisätietoja alueelliseksi
+    kumppaniksi tulemisesta.] (%{regional_partner_url})'
+  about_page_section_table_cell_6_1: 'Määritä käytäntöjä CS: n tukemiseksi'
+  about_page_section_table_cell_6_2: "[Käytäntöjä muutettu 50 Yhdysvaltain osavaltiossa]
+    (%{states_url}) CS-koulutusstandardien laatimiseksi, CS-kurssien sisällyttämiseksi
+    lukion valmistumiseen jne. [(yksityiskohdat)] (%{details_url})"
+  about_page_section_table_cell_7_1: Siirry globaaliin maailmaan
+  about_page_section_table_cell_7_2: Kurssimme ovat saatavilla yli 67 kielellä, joita
+    käytetään yli 180 maassa.
+  about_page_section_table_under_label: 'Lähde: Code Studio Activity ja [osallistuvien
+    kouluttajien kyselyt] (%{educators_url})'
+  about_page_section_title_3: Lisätietoja, historia ja filosofia
+  about_page_section_more_description_1: 'Vuonna 2013 Code.orgin lanseerasivat kaksosveljet
+    [Hadi](%{hadi_url}) ja [Ali Partovi] (%{partovi_url}) tietojenkäsittelytiedettä
+    edistävällä [video](%{video_url}). Tästä videosta tuli #1 YouTubessa päiväksi,
+    ja 15 000 koulua pyysi apua. Sittemmin olemme laajentuneet vapaaehtoisista koostuvasta
+    henkilökunnasta rakentamaan täyden organisaation, joka tukee maailmanlaajuista
+    liikettä. Uskomme, että laadukkaan tietojenkäsittelytieteen koulutuksen tulisi
+    olla saatavilla jokaiselle lapselle, ei vain muutamalle onnekkaalle.'
+  about_page_section_more_description_2: 'Tavoitteemme tukemiseksi työskentelemme
+    kaikilla koulutusalueilla: suunnittelemme omia kursseja tai teemme yhteistyötä
+    muiden kanssa, koulutamme opettajia, teemme yhteistyötä suurten koulupiirien kanssa,
+    autamme muuttamaan hallituksen politiikkaa, laajennamme kansainvälisesti kumppanuuksien
+    avulla ja markkinoimme stereotypioiden murtamiseksi.'
+  about_page_section_more_description_3: Työmme perustuu lukemattomien organisaatioiden
+    ja yksilöiden vuosikymmenien ponnisteluihin (%{efforts_url}), jotka ovat auttaneet
+    perustamaan, rahoittamaan ja levittämään tietojenkäsittelytieteen koulutusta.
+    Olemme kiitollisia voidessamme hyötyä laajemman tietojenkäsittelytieteen koulutusyhteisön
+    väsymättömästä avusta, ja [kiitämme kaikkia kumppaneita ja yksilöitä, jotka ovat
+    tukeneet vaikutustamme vuosien varrella] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Perusarvomme ja viestintäohjeemme] (%{core_url})"
+  about_page_section_more_list_3: "[Opetussuunnitelmamme ja pedagogiikan filosofia]
+    (%{curriculum_url})"
+  about_page_section_more_list_4: "[Perustajamme Hadi Partovin TEDx-puhe siitä, miksi
+    tietojenkäsittelytiede on kaikille (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Yhdistävä lähestymistapa jakautuneessa maailmassa
+  about_page_section_specific_title_1: Yhdistävä lähestymistapa jakautuneessa maailmassa
+  about_page_section_specific_title_2: Sitoutumisemme saavutettavuuteen
+  about_page_section_specific_title_3: Sitoutumisemme ilmaiseen opetussuunnitelmaan
+    ja avoimen lähdekoodin tekniikkaan
+  about_page_section_specific_title_4: Code.org Advocacy Coalition
+  about_page_section_specific_title_5: K-12 tietojenkäsittelytieteen kehys
+  about_page_section_specific_title_6: Code.org-lahjoittajat
+  about_page_section_specific_title_7: Seuraa meitä
+  about_page_section_specific_title_8: Code.orgin kansainvälinen ulottuvuus
+  about_page_section_specific_description_1: Code.orgin globaali rooli K-12-tietojenkäsittelytieteen
+    liikkeessä on mahdollista vain, koska käytämme yhdistävää lähestymistapaa erilaisten
+    ja usein jakautuneiden sidosryhmien välillä. Polarisaation lisääntyessä ajatus
+    opiskelijoiden mahdollisuuksien lisäämisestä yhdistää ihmisiä kaikkialta poliittisesta
+    kirjosta. Code.orgin tiimin jäsenillä, opiskelijoilla, opettajilla ja tukijoilla
+    on monipuoliset ja erilaiset näkemykset, ja he ovat kaikki tervetulleita tehtävämme
+    mukaan. [Lue lisää.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org uskoo, että tietojenkäsittelytiede
+    on perusta kaikille opiskelijoille, ja olemme sitoutuneet tasa-arvoon, saatavuuteen
+    ja mahdollisuuksiin organisaatiossamme [values.](%{values_url}) Tämän tavoitteen
+    saavuttamiseksi pyrimme tunnistamaan ja poistamaan esteet, jotka estävät vammaisten
+    opiskelijoiden ja opettajien osallistumisen ja täysimääräisen osallistumisen.
+    Lisätietoja ponnisteluistamme on [saavutettavuusselosteessa.] (%{accessibility_url})
+  about_page_section_specific_description_3: Kaikki kirjoittamamme opetussuunnitelman
+    resurssit ja opetusohjelmat ovat ikuisesti vapaita ja avoimesti lisensoituja [Creative
+    Commons] (%{commons_url}) -lisenssillä, jolloin muut voivat tehdä johdannaisia
+    koulutusresursseja ei-kaupallisiin tarkoituksiin. Jos olet kiinnostunut lisensoimaan
+    materiaalejamme kaupallisiin tarkoituksiin, [ota meihin yhteyttä] (%{contact_us_url}).
+    Kurssimme käännetään maailmanlaajuiseen käyttöön tai eri kielten puhujien toimesta.
+    Teknologiamme kehitetään [avoimen lähdekoodin projektina.] (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
+    on kaksipuolueinen yritysten ja voittoa tavoittelemattomien järjestöjen koalitio,
+    joka työskentelee yhdessä auttaakseen luomaan Yhdysvaltain liittovaltion ja osavaltioiden
+    politiikkaa laajentaakseen ja ylläpitääkseen pääsyä K-12-tietojenkäsittelytieteeseen
+    sekä laajentaakseen osallistumista ja monimuotoisuutta alalla. Tuomme yhteen [republikaanien
+    ja demokraattisten poliittisten johtajien] (%{leaders_url}) yhteisessä tarkoituksessa
+    tukemalla K-12-tietojenkäsittelytieteen saatavuuden laajentamista ja osallistumista
+    siihen."
+  about_page_section_specific_description_5: Code.org on ohjauskomitean jäsen, joka
+    auttoi perustamaan [K-12 Computer Science Framework] (%{framework_url}) - korkean
+    tason opas valtioille, piireille ja organisaatioille, jotka toteuttavat tietojenkäsittelytieteen
+    koulutusta. Kehys on voittanut satojen tutkijoiden, K-12-kouluttajien, ohjelmistoyritysten,
+    voittoa tavoittelemattomien järjestöjen ja osavaltioiden tuen.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Rekisteröidy saadaksesi tilapäivityksiä]
+    (%{sign_up_url}) K-12-tietojenkäsittelyliikkeen edistymisestä ja Code.orgin työstä.
+    Tai seuraa Code.org sosiaalisessa mediassa:"
+  about_page_section_specific_description_8: Yli 40% verkkosivustomme liikenteestä
+    tulee Yhdysvaltojen ulkopuolelta, ja määrä kasvaa edelleen. Laajentaaksemme tietojenkäsittelytieteen
+    maailmanlaajuista saatavuutta tiimimme tekee tiivistä yhteistyötä [yli 100 kansainvälisen
+    kumppanin] kanssa (%{partners_url}) auttaen heitä edistämään Hour of Code -ohjelmaa,
+    puolustamaan politiikan muutosta ja kouluttamaan opettajia. Teemme tietojenkäsittelytieteestä
+    osan kansainvälistä koulutuskeskustelua tekemällä yhteistyötä opetusministeriöiden
+    kanssa ympäri maailmaa ja tekemällä yhteistyötä kansainvälisten järjestöjen, kuten
+    Taloudellisen yhteistyön ja kehityksen järjestön ja Yhdistyneiden Kansakuntien
+    koulutus-, tiede- ja kulttuurijärjestön kanssa.
+  about_page_section_donors_description_1: Code.org® on rekisteröity julkinen 501c3
+    voittoa tavoittelematon järjestö suuren yleisön tuella. Olemme kiitollisia anteliaasta
+    tuesta, jonka olemme saaneet [yksilöiltä ja organisaatioilta] (%{individuals_url}),
+    jotka tukevat näkemystämme.
+  about_page_section_donors_description_2: Koodien saavutukset (yllä) osoittavat kykymme
+    hyödyntää näitä dollareita vahvoihin tuloksiin. Mutta kun otetaan huomioon voittoa
+    tavoittelematon tavoite, jonka mukaan jokaisen koulun jokaisella lapsella tulisi
+    olla pääsy tietojenkäsittelytieteeseen - tulla lukutaitoisiksi kansalaisiksi nykypäivän
+    digitaalisessa maailmassa ja testata kiinnostuksensa tutkia tietotekniikkaa edelleen
+    urana - meillä on pitkä matka saavuttaaksemme varainhankintatavoitteen, joka tukee
+    tätä visiota.
+  about_page_donors_link_1: Tee lahjoituksia
+  about_page_donors_link_2: "[katso luettelo lahjoittajista] (%{donors_url})"
   language_code:
     ar: arabialainen
     az: Azerbaidžanin

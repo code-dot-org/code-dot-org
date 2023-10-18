@@ -35,6 +35,10 @@ ro:
   africa_campaign_date_full: 1 octombrie - 18 decembrie
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
+  hoc2023_header: Creativitate cu AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Ce vei crea?
+  hoc2023_social_creativity_with_ai_desc: Utilizați informatica pentru a explora și
+    a afla despre AI!
   hoc2022_header: Explorează, Joacă-Te, Creează!
   social_hoc2022_explore_play_create: Utilizează informatica pentru a explora, a te
     juca și a crea!
@@ -187,6 +191,33 @@ ro:
     un nou Catalog Curricular și o pagină Predă (Teach) reproiectată, care vă ajută
     să găsiți tot ce vă trebuie!
   in_partnership_with: În parteneriat cu
+  shop_code_dot_org_heading: Cumpărați Code.org
+  shop_code_dot_org_desc: Sprijiniți munca noastră și purtați mișcarea cu mândrie.
+    Pălăriile noastre au fost purtate de președintele Obama și de celebrități.
+  spread_the_word_heading: Răspândește vestea
+  spread_the_word_desc: Amplificați impactul nostru prin partajarea Code.org cu rețeaua
+    dvs. De la rețelele sociale la actualizări prin e-mail, descoperiți cum ne puteți
+    ajuta să ajungem la mai mulți educatori, studenți și avocați.
+  follow_us_heading: Urmărește-ne pe social media
+  follow_us_desc: Rămâneți la curent cu noi pe rețelele de socializare și împărtășiți
+    postările noastre cu rețeaua dvs. pentru a rămâne informat și pentru a ajuta la
+    creșterea gradului de conștientizare.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: tabletă
+  device_laptop: Laptop
+  device_desktop_computer: Computerul desktop
+  device_mobile_device: Dispozitiv mobil
+  subscribe_to_emails_heading: Abonați-vă la e-mailuri
+  subscribe_to_emails_desc: Citiți despre ce se întâmplă pe Code.org și în educația
+    informatică prin actualizări trimestriale prin intermediul listei noastre de corespondență.
+  subscribe_to_emails_intl: Abonați-vă la actualizări internaționale
+  promote_code_dot_org_heading: Promovează Code.org
+  promote_code_dot_org_desc: Promovați informatica în zona dvs. cu ajutorul statisticilor,
+    cotațiilor și videoclipurilor.
   afe_partnership_logo_alt: Sigla Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer este un program cuprinzător
     de la copilărie la carieră pentru a inspira, educa și instrui copiii și tinerii
@@ -205,19 +236,48 @@ ro:
   curricula_title_high: Curricula liceului
   curricula_desc_high: Răsfoiți cursurile și activitățile convingătoare care vă invită
     pe dvs. și pe elevii dvs. de liceu să săpați mai adânc în informatică.
+  for_administrators_heading: Pentru administratori
+  for_administrators_desc: Alăturați-vă miilor de școli care au încorporat deja informatica
+    în programa lor.
+  for_parents_heading: Pentru parinti
+  for_parents_desc: Puteți ajuta la încurajarea școlii elevului dvs. să ofere sau
+    să extindă educația în informatică.
+  for_educators_heading: Pentru educatori/profesori
+  for_educators_desc: Începeți să predați astăzi - nu este necesară experiență în
+    informatică - cu atelierele noastre de învățare profesională.
   students_label: Participanți
   teachers_label: Profesori
+  educators_label: Educatoare
+  companies_label: Companii
+  districts_label: Districte
+  school_assemblies_label: Adunări școlare
+  parents_label: Părinți
+  public_officials_label: Funcționari publici
+  volunteers_label: Voluntari
+  virtual_events_label: Evenimente virtuale
   teacher_label_csf: Profesor de Noțiuni de Bază în Informatică
   teacher_label_csd: Profesor Descoperirile Informaticii
   teacher_label_csp: Profesor de Principii în Informatică
   teacher_label_csc: Profesor de Conexiuni în Informatică
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Forumul profesorilor
+  teacher_forum_desc: Vizitați Forumul profesorilor Hour of Code pentru a obține sfaturi,
+    informații și sprijin de la alți educatori.
   required_materials: 'Materiale Necesare:'
   optional_materials: 'Materiale Opționale:'
-  call_to_action_explore_roles: Explorați rolurile deschise
+  call_to_action_hold_an_event: Organizați un eveniment
+  call_to_action_register_event: Înregistrați-vă evenimentul
+  call_to_action_select_activity: Selectați o activitate
+  call_to_action_start_activity: Începeți o activitate
+  call_to_action_get_certificates: Obțineți certificate
+  call_to_action_go_beyond_hoc: Mergeți dincolo de Ora Codului
+  call_to_action_view_promo_resources: Vizualizați resursele promoționale
   call_to_action_learn_more: Aflați mai multe
   call_to_action_watch_now: Uita-te acum
   call_to_action_try_activity: Încercați activitatea
+  call_to_action_try_activities: Încercați activități
+  call_to_action_explore_activities: Explorați activitățile
+  call_to_action_explore_ai: Explorați AI
   call_to_action_explore_unit: Explorați unitatea
   call_to_action_explore_curriculum: Explorați curriculumul
   call_to_action_explore_curriculum_options: Explorați opțiunile curriculare
@@ -271,6 +331,7 @@ ro:
   call_to_action_find_self_paced_modules: Găsiți modulele de autoînvățare
   call_to_action_join_teacher_forums: Alăturați-vă forumurilor profesorilor
   call_to_action_explore_teacher_forums: Explorați forumurile profesorilor
+  call_to_action_explore_teacher_forum: Explorați forumul profesorilor
   call_to_action_explore_career_resources: Explorați resursele de cariere
   call_to_action_watch_videos: Urmăriți videoclipul
   call_to_action_download_posters: Descărcați posterele
@@ -287,11 +348,38 @@ ro:
   call_to_action_notify_available: Anunță-mă când este disponibil
   call_to_action_register_early_access: Înregistrați-vă pentru acces anticipat
   call_to_action_open_positions: Vizualizați pozițiile deschise
+  call_to_action_explore_roles: Explorați rolurile deschise
   call_to_action_get_guide: Obțineți ghidul
   call_to_action_donate_to_cdo: Donează lui Code.org
   call_to_action_start_fundraiser: Începeți o strângere de fonduri
   call_to_action_view_donation_policy: Vizualizați politica de donații
   call_to_action_view_donate_bitpay: Donează cu BitPay
+  call_to_action_make_a_donation: Faceți o donație
+  call_to_action_other_ways_to_give: Alte modalități de a da
+  call_to_action_become_partner_usa: Deveniți partener al Statelor Unite
+  call_to_action_become_partner_intl: Deveniți partener internațional
+  call_to_action_become_a_volunteer: Deveniți voluntar
+  call_to_action_start_translating: Începeți să traduceți
+  call_to_action_learn_about_advocacy: Aflați mai multe despre serviciile noastre
+    de advocacy
+  call_to_action_visit_store: Vizitați magazinul
+  call_to_action_view_faqs: Vezi mai multe Întrebări frecvente
+  aria_label_call_to_action_hoc_how_to_educators: Vizualizați ghidul instrucțiunilor
+    pentru educatori
+  aria_label_call_to_action_hoc_how_to_companies: Vizualizați ghidul de instrucțiuni
+    pentru companii
+  aria_label_call_to_action_hoc_how_to_districts: Vizualizați ghidul de instrucțiuni
+    pentru districte
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Vizualizați ghidul de instrucțiuni
+    pentru adunările școlare
+  aria_label_call_to_action_hoc_how_to_parents: Vizualizați ghidul de instrucțiuni
+    pentru părinți
+  aria_label_call_to_action_hoc_how_to_public_officials: Vizualizați ghidul de instrucțiuni
+    pentru funcționarii publici
+  aria_label_call_to_action_hoc_how_to_volunteers: Vizualizați ghidul de instrucțiuni
+    pentru voluntari
+  aria_label_call_to_action_hoc_how_to_virtual_events: Vizualizați ghidul de instrucțiuni
+    pentru evenimente virtuale
   aria_label_call_to_action_afe: Aflați mai multe despre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Începeți programul de învățare profesională
     Predarea informaticii Fundamentals
@@ -646,6 +734,7 @@ ro:
   heading_explore_curriculum_catalog: Explorați toate cursurile noastre în Catalogul
     Curriculum
   heading_csa_ai: Căutați lucruri de făcut după examenul AP®?
+  heading_bring_cs_to_students: Aduceți informatica studenților
   professional_learning_section_desc: Obțineți sprijinul de care aveți nevoie în timp
     ce vă pregătiți să predați. Profesorii o adoră, peste 90% dintre ei considerând-o
     cea mai bună dezvoltare profesională!
@@ -929,6 +1018,7 @@ ro:
     elevilor. Cu un amestec bogat de teorie, exemple practice și resurse, își propune
     să împuternicească educatorii să navigheze în peisajul AI și să îmbunătățească
     experiențele de învățare ale elevilor.
+  ai_pl_101_resources_5: Ghid pentru asigurarea unei abordări responsabile a AI
   ai_pl_101_video_desc_6: 'Aflați mai multe despre noua tehnologie care determină
     schimbările majore în AI, oferind două videoclipuri noi pe modele de limbi mari
     (cum ar fi ChatGPT) și AI generativă. Ascultați cum funcționează aceste noi tehnologii
@@ -940,6 +1030,8 @@ ro:
     de pornire pentru cei care doar își scufundă degetele de la picioare, precum și
     instrumente avansate pentru cei care doresc să-și maximizeze potențialul.
   ai_pl_101_resources_3: AI solicită transformarea învățării elevilor
+  ai_pl_101_resources_section_title: Mai multe modalități de a afla despre AI
+  ai_pl_101_resources_guide: 'Ghid însoțitor:'
   how_ai_works_hero_heading: Cum funcționează AI
   how_ai_works_hero_desc: Scufundați-vă în lumea AI cu „How AI Works”, seria noastră
     video și lecțiile însoțitoare!
@@ -1827,6 +1919,32 @@ ro:
   donate_tabs_bitpay_desc: Îmbrățișați viitorul dăruirii cu criptomonede. Prin BitPay,
     moneda dvs. digitală poate sprijini în mod direct eforturile Code.org de a extinde
     educația în informatică.
+  help_page_top_heading: Cum poți ajuta
+  help_page_top_desc: Susțineți misiunea noastră de a face informatica accesibilă
+    pentru fiecare copil, oriunde. Eforturile dvs. ne ajută să inspirăm viitorii inovatori
+    și să reducem decalajul educației tehnologice.
+  help_page_top_subhead: Faceți o donație către Code.org
+  help_page_top_desc_02: Lucrăm pentru a oferi fiecărui elev posibilitatea de a învăța
+    informatică - atât online, cât și în școli, unde stabilim cursuri permanente și
+    formăm profesori. Pentru fiecare dolar pe care îl donați, un copil este introdus
+    în informatică.
+  help_page_partners_heading: Deveniți partener
+  help_page_partners_desc: Code.org colaborează cu alte organizații nonprofit ca parteneri
+    pentru a ajuta la răspândirea informaticii într-un mod local și durabil. Aflați
+    mai multe despre programul nostru.
+  help_page_volunteer_heading: Voluntar într-o sală de clasă
+  help_page_volunteer_desc: Voluntar pentru a preda Hour of Code sau pentru a fi un
+    vorbitor invitat într-o sală de clasă locală. Înscrieți-vă pentru a afla despre
+    oportunitățile din apropierea dvs.
+  help_page_translate_heading: Ajută-ne să traducem
+  help_page_translate_desc: Voluntarii au tradus tutorialele noastre în peste 45 de
+    limbi. Ajutați-ne să continuăm să extindem tutorialele noastre pentru studenții
+    din întreaga lume!
+  help_page_speak_for_cs_heading: Vorbiți pentru educația în informatică
+  help_page_speak_for_cs_desc: Aflați mai multe despre activitatea de advocacy a Code.org
+    în SUA și cele zece politici pe care le recomandăm statelor să le adopte pentru
+    a face informatica fundamentală pentru toți studenții. În plus, aflați cum puteți
+    conduce schimbarea în statul dvs.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Înscrieți-vă la Hour of Code Live
   hoc_live_learn_title: Învață cu Hour of Code Live
@@ -13618,6 +13736,131 @@ ro:
   all: Toate
   dont_know: Nu știu
   language_label: Limbă
+  before_hoc: Înainte de Ora Codului
+  day_of_hoc: Ziua Hour of Code
+  after_hoc: După ora codului
+  step_01: Pasul 1
+  step_02: Pasul 2
+  step_03: Pasul 3
+  step_04: Pasul 4
+  step_05: Pasul 5
+  step_06: Etapa 6
+  step_07: Etapa 7
+  step_08: Etapa 8
+  hoc_how_to_top_heading: Ghidul tău pentru Hour of Code
+  hoc_how_to_top_desc: Ghiduri personalizate pentru cea mai bună experiență Hour of
+    Code.
+  hoc_how_to_top_view_guide: Vizualizați ghidul pentru
+  hoc_how_to_nav_main_aria_label: Alegeți un ghid
+  hoc_how_to_nav_sidebar_aria_label: Navigare în bara laterală
+  hoc_how_to_educators_intro_heading: Cum să planificați evenimentul Hour of Code
+  hoc_how_to_educators_intro_desc: Ora de cod este o introducere de o oră în informatică,
+    folosind tutoriale distractive pentru a arăta că oricine poate învăța elementele
+    de bază. Anul acesta, ducem Hour of Code la noi culmi, oferind oportunități de
+    codare care cuprind atât inteligența artificială (AI), cât și componentele non-AI.
+    Indiferent dacă tu sau elevii tăi sunteți programatori experimentați sau vă porniți
+    cu toții în prima expediție în domeniul informaticii, această oră de cod promite
+    o călătorie extraordinară.
+  hoc_how_to_faq_question_prerequisites: Care sunt premisele pentru a face o oră de
+    cod?
+  hoc_how_to_faq_answer_prerequisites: Hour of Code este simplu de rulat - chiar și
+    pentru începători. Nu aveți nevoie de experiență în informatică sau predare pentru
+    a inspira elevii să exploreze, să creeze și să învețe ceva nou.
+  hoc_how_to_faq_question_devices: Ce dispozitive am nevoie pentru a rula o oră de
+    cod?
+  hoc_how_to_faq_answer_devices_01: 'Dispozitive pe care le puteți utiliza:'
+  hoc_how_to_faq_answer_devices_02: Dacă dispozitivele sunt limitate sau indisponibile,
+    încercați [programare pereche] (%{pair_url}) sau explorați [activitățile deconectate]
+    (%{unplugged_url}) pentru a învăța fără niciun dispozitiv!
+  hoc_how_to_faq_question_volunteer: Cine poate fi voluntar?
+  hoc_how_to_faq_answer_volunteer: Oricine este pasionat de educația informatică și
+    de creșterea diversității în tehnologie poate fi voluntar! Ne-ar plăcea să vedem
+    voluntari din toate mediile participante. Ora de cod oferă o mare varietate de
+    activități pentru toate vârstele și nivelurile de calificare, așa că nu trebuie
+    să fii expert în programare pentru a face voluntariat!
+  hoc_how_to_faq_question_full_hour: Ora Codului va dura o oră întreagă?
+  hoc_how_to_faq_answer_full_hour: Mulți studenți își vor putea termina activitățile
+    în mai puțin de o oră și asta este în regulă! Elevii pot continua să învețe în
+    timp ce alți studenți își finalizează activitatea.
+  hoc_how_to_faq_question_account: Elevii trebuie sa se inregistreze folosind un cont?
+  hoc_how_to_faq_answer_account: Nu este necesară înscrierea sau autentificarea pentru
+    ca studenții să încerce Ora Codului. Înscrierea la Hour of Code NU creează automat
+    un cont Code.org.
+  hoc_how_to_resources_heading_educators: Alte resurse de o oră de cod pentru educatori
+  hoc_how_to_resources_promo_heading: Resurse promoționale
+  hoc_how_to_resources_promo_desc: Găsiți toate resursele de care aveți nevoie - tipărite
+    și digitale - pentru a atrage atenția asupra Hour of Code.
+  hoc_how_to_resources_discover_heading: Descoperă Activități
+  hoc_how_to_resources_discover_desc: Explorați o selecție largă de tutoriale de o
+    oră concepute pentru toate vârstele în peste 45 de limbi.
+  hoc_how_to_step_label_plan: Planificați unde și când veți face Hour of Code
+  hoc_how_to_step_label_choose_activity: Alege-ți activitatea
+  hoc_how_to_step_label_test_activity: Testați-vă activitatea
+  hoc_how_to_step_label_register_event: Înregistrați-vă evenimentul
+  hoc_how_to_step_label_tell: Spune-le elevilor, școlii și comunității
+  hoc_how_to_step_label_get_coding: Obțineți codificare!
+  hoc_how_to_step_label_celebrate: Sărbătoriți
+  hoc_how_to_step_label_beyond_hoc: Dincolo de ora codului
+  hoc_how_to_step_beyond_hoc_subhead: Nu se termină aici!
+  hoc_how_to_step_beyond_hoc_desc: Informatica nu trebuie să se termine cu Ora Codului!
+    În timp ce 90% dintre părinți doresc ca copilul lor să învețe informatică, majoritatea
+    școlilor încă nu o învață. Aflați cum să aduceți CS la școala copilului dvs. astăzi.
+  hoc_how_to_step_01_educators_subhead: Selectați un timp și un spațiu al evenimentului
+    care funcționează pentru numărul de studenți și dispozitive pe care le aveți disponibile.
+  hoc_how_to_step_01_educators_desc_01: Ce spații aveți la dispoziție pentru a vă
+    desfășura Ora de Cod? Luați în considerare capacitățile tehnologice ale spațiului
+    dvs. și tipurile de dispozitive la care vă așteptați ca elevii dvs. să lucreze.
+    Elevii pot lucra la tutoriale pe un singur dispozitiv, pot folosi pe rând un dispozitiv
+    partajat sau pot încerca împreună un tutorial pe o tablă albă de clasă. Există
+    chiar tutoriale deconectate care pot fi completate fără dispozitive deloc. Opțiunile
+    deconectate pot fi făcute oriunde - chiar și în aer liber!
+  hoc_how_to_step_01_educators_desc_02: Oameni din întreaga lume se alătură sărbătorii
+    Hour of Code în timpul Săptămânii Educației CS, %{campaign_date} când sunt lansate
+    cele mai recente tutoriale și activități. Dar puteți face o oră de cod în orice
+    zi a anului!
+  hoc_how_to_step_02_educators_desc_01: Explorați activități bazate pe vârsta, experiența,
+    interesele grupului dvs. și multe altele. Este popular ca elevii să încerce tutoriale
+    auto-conduse, deși multe activități includ planuri de lecție pentru profesori
+    pentru a ghida discuțiile sau pentru a extinde activitatea.
+  hoc_how_to_step_02_educators_desc_02: Decideți din timp dacă doriți să alegeți un
+    singur tutorial pentru toți elevii dvs. sau lăsați fiecare copil să-și aleagă
+    propriul.
+  hoc_how_to_step_02_educators_desc_03: Anul acesta, tu și elevii tăi puteți [afla
+    totul despre AI] (%ai_url) prin tutoriale, planuri de lecții și noua noastră serie
+    video Cum funcționează AI.
+  hoc_how_to_step_03_educators_desc_01: Încercați singur tutorialul înainte de a intra
+    în clasă, astfel încât să puteți răspunde la întrebări!
+  hoc_how_to_step_03_educators_desc_02: De asemenea, puteți testa tutoriale pe computerele
+    sau dispozitivele studenților pentru a vă asigura că acceptă sunet și video. Aveți
+    lățime de bandă redusă? Planificați să afișați videoclipuri în partea din față
+    a clasei, astfel încât fiecare elev să nu-și descarce propriile videoclipuri.
+  hoc_how_to_step_03_educators_desc_03: Luați în considerare furnizarea de căști pentru
+    clasa dvs. sau cereți elevilor să-și aducă propriile lor, dacă tutorialul pe care
+    îl alegeți funcționează cel mai bine cu sunetul.
+  hoc_how_to_step_04_educators_desc_01: Când vă înregistrați evenimentul Hour of Code,
+    veți primi e-mailuri utile cu știri și sfaturi pentru găzduirea unei Hour of Code
+    de succes. Este, de asemenea, modul în care puteți anunța voluntarii locali că
+    școala dvs. participă. Voluntarii sunt o resursă excelentă și pot veni să vorbească
+    cu clasa dvs. despre informatică sau să vă ajute elevii cu activitățile Hour of
+    Code.
+  hoc_how_to_step_05_educators_desc_01: Încântați-vă elevii pentru eveniment, împărtășind
+    [videoclipuri inspiraționale] (%{videos_url}) evidențiind diverse persoane și
+    modalități creative prin care informatica poate fi utilizată în lumea reală.
+  hoc_how_to_step_05_educators_desc_02: Împărtășiți-vă planurile Hour of Code cu alți
+    profesori care ar putea dori să se alăture distracției! Aceasta este, de asemenea,
+    o oportunitate excelentă de a contacta Asociația Studenților Părinți a Profesorilor
+    din școala dvs. sau de a împărtăși buletinele informative pentru părinți, anunțându-i
+    ce învață copiii lor.
+  hoc_how_to_step_06_educators_desc_01: Direcționați elevii către activitate, poate
+    partajând linkul de pe tablă sau prin sistemul de management al învățării al clasei
+    dvs. Elevii tăi pot întâmpina provocări - este în regulă! Învățarea programării
+    este ca și cum ai învăța o limbă nouă; nu vei fi fluent imediat. Dacă nu știți
+    răspunsul, îl puteți da seama împreună.
+  hoc_how_to_step_07_educators_desc_01: 'Asigurați-vă că sărbătoriți succesul! Distribuiți
+    fotografii și videoclipuri ale evenimentului Hour of Code pe rețelele de socializare.
+    Folosiți #HourOfCode și @codeorg pentru a vă putea evidenția și succesul!'
+  hoc_how_to_step_07_educators_desc_02: De asemenea, puteți imprima certificate pentru
+    studenții dvs. pentru a-și arăta realizările!
   team_page_full_team_alt_text: Aproape 100 de angajați Code.org în tricouri asortate
     albastre și galbene pozează într-o sală de conferințe a hotelului pentru evenimentul
     Codechella din vara anului 2022 al companiei.
@@ -14160,6 +14403,10 @@ ro:
   video_library_page_inspirational_video_title_11: Oricine poate învăţa (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA sărbătorește Hour of Code
+    (2 min)
+  video_library_page_inspirational_video_title_14: Este Mai Mult Decât Un Joc (1 min)
+  video_library_page_inspirational_video_title_15: Creați cu informatică (1 min)
   video_library_page_not_hacked_video_title_1: 'Cum să nu fii piratat: Introducere'
   video_library_page_not_hacked_video_title_2: 'Cum să nu fii piratat: parole'
   video_library_page_not_hacked_video_title_3: 'Cum să nu fii piratat: autentificare
@@ -14170,6 +14417,164 @@ ro:
   video_library_page_not_hacked_video_title_6: 'Cum să nu fii piratat: mesagerie și
     descărcări'
   video_library_page_not_hacked_video_title_7: 'Cum să nu fii piratat: Instalați actualizări'
+  about_us_page_title: Despre noi
+  about_us_page_hero_description: Code.org® este o organizație non-profit pentru inovare
+    educațională dedicată viziunii că fiecare elev din fiecare școală are posibilitatea
+    de a învăța informatică ca parte a educației lor de bază K-12. Extindem accesul
+    la informatică în școli, cu accent pe creșterea participării femeilor tinere și
+    a elevilor din alte grupuri subreprezentate. Cel mai important furnizor de curriculum
+    de informatică K-12 în cele mai mari districte școlare din Statele Unite, Code.org
+    organizează, de asemenea, campania anuală [Hour of Code] (%{hour_url}), care a
+    implicat mai mult de 15% din toți elevii din lume. Code.org este susținut de donatori
+    generoși, inclusiv Microsoft, Amazon, Google și [mulți alții.] ()%{others_url}
+  about_us_page_section_title_1: Peste 80 de milioane de elevi și 2 milioane de profesori
+    pe Code.org
+  about_us_page_statistic_figcaption: Participarea Code.org din anul școlar 2021-2022.
+    [A se vedea datele dezagregate.] ()%{data_url}
+  about_us_page_statistic_description: Code.org crește diversitatea în informatică,
+    ajungând la studenți din toate mediile în care se află - la nivelul lor de competențe,
+    în școlile lor și în moduri care îi inspiră să continue să învețe. Marea majoritate
+    a studenților de pe Code.org provin din grupuri de studenți subreprezentate istoric
+    în informatică. Creșterea diversității în informatică este fundamentală pentru
+    munca noastră și [vă încurajăm să citiți mai multe despre eforturile noastre]
+    (%{diversity_url}).
+  about_us_page_section_title_2: Code.org în știri
+  about_us_page_section_news_description: Vezi toate trecutul [știri și anunțuri]
+    (%{news_url})
+  about_us_page_section_table: Obiectivele și valorile noastre
+  about_us_page_section_table_header_1: Obiectivul Code.org
+  about_us_page_section_table_header_2: Realizare
+  abous_page_section_table_cell_1_1: Îmbunătățirea diversității în CS * (studenți
+    americani) *
+  abous_page_section_table_cell_1_2: 45% dintre studenții Code.org sunt femei tinere,
+    50% sunt studenți din grupuri rasiale și etnice marginalizate, iar 46% dintre
+    studenții americani sunt în școli cu nevoi mari. Citiți mai multe despre [abordarea
+    noastră față de diversitate.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Inspirați elevii
+  about_page_section_table_cell_2_2: Zeci de milioane au încercat [Ora Codului] (%{hour_url}).
+    (426.370.561 servite. 49% femei)
+  about_page_section_table_cell_3_1: Accesați sălile de clasă
+  about_page_section_table_cell_3_2: 591.636 de profesori s-au înscris pentru a preda
+    cursurile noastre introductive pe [Code Studio] (%{code_studio_url}) și 19.177.297
+    de studenți sunt înscriși.
+  about_page_section_table_cell_4_1: Pregătiți noi profesori CS
+  about_page_section_table_cell_4_2: Am pregătit peste 106.000 de profesori noi pentru
+    a preda CS în clasele K-12. Aflați mai multe despre [programele noastre de învățare
+    profesională.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Schimbați curriculum-ul districtului școlar
+  about_page_section_table_cell_5_2: Am colaborat cu [180+ dintre cele mai mari districte
+    școlare] (%{schoold_disctrict_url}) și 60 de parteneri regionali pentru [adăugarea
+    CS la programa școlară] (%{cs_curriculum_url}). [Aflați cum să deveniți partener
+    regional.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Configurarea politicilor pentru a sprijini CS
+  about_page_section_table_cell_6_2: "[Politici modificate în 50 de state americane]
+    (%{states_url}) pentru a stabili standarde de educație CS, pentru a face cursurile
+    CS să conteze pentru absolvirea liceului etc. [(detalii)] (%{details_url})"
+  about_page_section_table_cell_7_1: Deveniți la nivel global
+  about_page_section_table_cell_7_2: Cursurile noastre sunt disponibile în peste 67
+    de limbi, utilizate în peste 180 de țări.
+  about_page_section_table_under_label: 'Sursa: Activitatea Code Studio și [sondaje
+    ale educatorilor participanți] (%{educators_url})'
+  about_page_section_title_3: Mai multe informații, istorie și filozofie
+  about_page_section_more_description_1: 'În 2013, Code.org a fost lansat de frații
+    gem [Hadi]eni (%{hadi_url}) și [Ali Partovi] (%{partovi_url}) cu o promovare a
+    [video]informati%{video_url}cii. Acest videoclip a devenit #1 pe YouTube pentru
+    o zi și 15.000 de școli ne-au contactat pentru ajutor. De atunci, ne-am extins
+    de la un personal de voluntari începători pentru a construi o organizație completă
+    care sprijină o mișcare mondială. Credem că o educație informatică de calitate
+    ar trebui să fie disponibilă fiecărui copil, nu doar câtorva norocoși.'
+  about_page_section_more_description_2: 'Pentru a ne susține obiectivul, lucrăm în
+    întregul spectru educațional: proiectăm propriile cursuri sau parteneriate cu
+    alții, formăm profesori, parteneriăm cu districte școlare mari, ajutăm la schimbarea
+    politicilor guvernamentale, extinderea internațională prin parteneriate și marketing
+    pentru a sparge stereotipurile.'
+  about_page_section_more_description_3: Munca noastră se bazează pe [zeci de ani
+    de efort, de către nenumărate organizații și indivizi] (%{efforts_url}) care au
+    ajutat la înființarea, finanțarea și răspândirea educației informatice. Suntem
+    recunoscători că beneficiem de ajutorul neobosit al comunității mai largi de educație
+    în domeniul informaticii și [mulțumim tuturor partenerilor și persoanelor care
+    au susținut impactul nostru de-a lungul anilor] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Valorile noastre de bază și liniile directoare
+    de mesagerie] (%{core_url})"
+  about_page_section_more_list_3: "[Curriculum-ul nostru și filosofia pedagogiei]
+    (%{curriculum_url})"
+  about_page_section_more_list_4: "[Discuție TEDx a fondatorului nostru Hadi Partovi
+    despre motivul pentru care informatica este pentru toți (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: O abordare unificatoare într-o lume divizată
+  about_page_section_specific_title_1: O abordare unificatoare într-o lume divizată
+  about_page_section_specific_title_2: Angajamentul nostru față de accesibilitate
+  about_page_section_specific_title_3: Angajamentul asumat cu privire la curriculumul
+    gratuit și tehnologia open source
+  about_page_section_specific_title_4: Coaliția de avocatură Code.org
+  about_page_section_specific_title_5: Cadrul de informatică K-12
+  about_page_section_specific_title_6: Donatorii Code.org
+  about_page_section_specific_title_7: Urmăriți-ne
+  about_page_section_specific_title_8: Impactul internațional al Code.org
+  about_page_section_specific_description_1: Rolul global al Code.org în mișcarea
+    informatică K-12 este posibil numai pentru că folosim o abordare unificatoare
+    între părțile interesate diverse și adesea divizate. Într-o perioadă de polarizare
+    crescândă, ideea creșterii oportunităților pentru studenți unește oameni din întregul
+    spectru politic. Membrii echipei Code.org, studenții, profesorii și susținătorii
+    au puncte de vedere diverse și divergente și sunt cu toții bineveniți în misiunea
+    noastră. [Citește mai mult.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org consideră că informatica este
+    fundamentală pentru toți studenții și suntem dedicați echității, accesului și
+    oportunităților în organizația noastră [values.](%{values_url}) Pentru a atinge
+    acest obiectiv, lucrăm pentru a identifica și elimina barierele care împiedică
+    includerea și participarea deplină a studenților și educatorilor cu dizabilități.
+    Pentru a afla mai multe despre eforturile noastre, consultați [declarația de accesibilitate]%{accessibility_url}.
+  about_page_section_specific_description_3: Toate resursele curriculare și tutorialele
+    pe care le creăm vor fi pentru totdeauna libere de utilizat și licențiate deschis
+    sub o licență [Creative Commons] (%{commons_url}), permițând altora să creeze
+    resurse educaționale derivate în scopuri necomerciale. Dacă sunteți interesat
+    să licențiați materialele noastre în scopuri comerciale, [contactați-ne] (%{contact_us_url}).
+    Cursurile noastre sunt traduse pentru utilizare la nivel mondial sau de către
+    vorbitori de diferite limbi. Tehnologia noastră este dezvoltată ca un proiect
+    open source%{open_source_url}.
+  about_page_section_specific_description_4: Code.org Advocacy Coalition este o coali%{advocacy_url}ție
+    bipartizană de corporații și organizații non-profit care lucrează împreună pentru
+    a ajuta la stabilirea politicilor federale și de stat ale SUA pentru extinderea
+    și susținerea accesului la informatică K-12 și pentru a lărgi participarea și
+    diversitatea în domeniu. Reunim [lideri politici republicani și democrați] (%{leaders_url})
+    în cauză comună, sprijinind extinderea accesului și participarea la informatica
+    K-12.
+  about_page_section_specific_description_5: Code.org este membru al comitetului director
+    care a ajutat la stabilirea Cadrului de Informatică K-12 (%{framework_url}) -
+    un ghid la nivel înalt pentru state, districte și organizații care implementează
+    educația informatică. Cadrul a câștigat sprijinul a sute de academicieni, educatori
+    K-12, companii de software, organizații non-profit și state.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Înscrieți-vă pentru a primi actualizări
+    de stare] (%{sign_up_url}) despre progresul mișcării informatice K-12 și despre
+    activitatea Code.org. Sau urmăriți Code.org pe social media:"
+  about_page_section_specific_description_8: Peste 40% din traficul site-ului nostru
+    web provine din afara Statelor Unite și acest număr continuă să crească. Pentru
+    a extinde accesul global la informatică, echipa noastră lucrează îndeaproape cu
+    [peste 100 de parteneri internaționali] (%{partners_url}), ajutându-i să promoveze
+    Ora Codului, să pledeze pentru schimbarea politicilor și să pregătească profesori.
+    Facem informatica o parte a discursului educației internaționale prin parteneriate
+    cu ministere ale educației din întreaga lume și colaborând cu organizații internaționale
+    precum Organizația pentru Cooperare și Dezvoltare Economică și Organizația Națiunilor
+    Unite pentru Educație, Știință și Cultură.
+  about_page_section_donors_description_1: Code.org® este o organizație non-profit
+    501c3 înregistrată, cu sprijinul publicului larg. Suntem recunoscători pentru
+    sprijinul generos pe care l-am primit de la [persoane și organizații] (%{individuals_url})
+    care susțin viziunea noastră.
+  about_page_section_donors_description_2: Realizările codurilor (de mai sus) demonstrează
+    capacitatea noastră de a valorifica acești dolari în rezultate puternice. Dar
+    având în vedere ambiția noastră nonprofit ca fiecare copil din fiecare școală
+    să aibă acces la informatică - să devină cetățeni alfabetizați în lumea digitală
+    de astăzi și să-și testeze interesele în explorarea CS în continuare ca o carieră
+    - avem un drum lung de parcurs pentru a atinge un obiectiv de strângere de fonduri
+    care va susține această viziune.
+  about_page_donors_link_1: Faceți o donație
+  about_page_donors_link_2: "[vezi lista noastră de donatori] (%{donors_url})"
   language_code:
     ar: arabic
     az: azeră

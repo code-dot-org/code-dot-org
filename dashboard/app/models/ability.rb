@@ -64,7 +64,6 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      LearningGoalEvaluation,
       LearningGoalTeacherEvaluation
     ]
     cannot :index, Level
@@ -193,7 +192,15 @@ class Ability
       end
 
       if user.teacher?
-        can :manage, Section, user_id: user.id
+        can :manage, Section do |s|
+          # This s.user_id == user.id check will become unnecessary once we know
+          # there's a SectionInstructor object for every section's creator/owner
+          s.user_id == user.id || s.instructors.include?(user)
+        end
+        can :destroy, SectionInstructor do |si|
+          can?(:manage, si.section) && si.instructor_id != si.section.user_id
+        end
+        can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher
         can :manage, User do |u|
           user.students.include?(u)
@@ -213,7 +220,6 @@ class Ability
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
-        can :manage, LearningGoalEvaluation, teacher_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
       end
 

@@ -2363,6 +2363,8 @@ nl:
           student_description: Breid de kennis van het eerste uur uit met uitgebreide
             projectideeën.
           title: Blijf dansen
+        dance-unplugged:
+          title: Unplugged dansfeest
         dani-june-2020-test:
           lesson_groups:
             cs_lg:
@@ -2824,7 +2826,7 @@ nl:
           description_short: Ontdek een Minecraft-wereld met code
           student_description: Gebruik blokken code om Steve of Alex te helpen op
             hun avontuur door deze Minecraft-wereld.
-          title: Minecraft programmeer uur
+          title: Minecraft avonturier
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
@@ -3217,6 +3219,16 @@ nl:
           lesson_groups:
             content:
               display_name: Content
+        virtual-pl-csa-summer-2024-day1:
+          title: Dag 1
+        virtual-pl-csa-summer-day1:
+          title: Dag 1
+        virtual-pl-csa-summer-day2:
+          title: Dag 2
+        virtual-pl-csa-summer-day3:
+          title: Dag 3
+        virtual-pl-csa-summer-day4:
+          title: Dag 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3243,6 +3255,14 @@ nl:
           lessons:
             lesson-3:
               name: Beoordeling
+        virtual-pl-csp-summer-day1:
+          title: Dag 1
+        virtual-pl-csp-summer-day2:
+          title: Dag 2
+        virtual-pl-csp-summer-day3:
+          title: Dag 3
+        virtual-pl-csp-summer-day4:
+          title: Dag 4
         virustest:
           description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
             te simuleren.

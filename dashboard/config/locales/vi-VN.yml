@@ -513,6 +513,8 @@ vi:
     unsubmit-title: Không nộp bản đánh giá nănng lực của bạn
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
     wrong_title: Cảm ơn bạn
+  level_summary:
+    correct_answer: Câu trả lời đúng
   locked_stage: Nội dung của giai đoạn này không hiển thị vì giai đoạn này hiện đang
     bị khóa. Giáo viên của bạn có thể mở khóa giai đoạn này khi đến lúc làm việc hoặc
     xem lại câu trả lời của bạn.
@@ -720,6 +722,8 @@ vi:
       khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"
   parent_mailer:
     parent_email_added_subject: Chào mừng tới Code.org!
+    parent_permission_confirmation_subject: Cảm ơn bạn đã chấp thuận quyền truy cập
+      của con bạn vào Code.org!
     student_associated_subject: Thông tin đăng nhập vào Code.org
   password:
     change_form:
@@ -779,17 +783,23 @@ vi:
         sphero: Sphero
         wonder: Hội thảo kỳ diệu
       school_country:
+        australia: Úc
         barbados: Barbados
         belize: Belize
         canada: Canada
         chile: Chile
         colombia: Colombia
+        india: Ấn Độ
         israel: Israel
         malaysia: Malaysia
         mexico: Mexico
         paraguay: Paraguay
+        portugal: Bồ Đào Nha
+        south_korea: Hàn Quốc
+        spain: Tây Ban Nha
         thailand: Thái Lan
         uzbekistan: Uzbekistan
+        vietnam: Việt Nam
       subjects:
         art: Mỹ thuật
         cs: Khoa học máy tính
@@ -1207,6 +1217,8 @@ vi:
     teacher_educator_guide: Hãy xem chỉ dẫn
     title: Ghi danh cho Code.org
     us_state: Quốc gia
+    us_state_dropdown_options:
+      other: Tôi sống ở một nơi không được liệt kê ở đây
     user_type: Bạn là học viên hay Giáo viên?
     user_type_button: Cập nhật tài khoản
     user_type_label: Kiểu tài khoản

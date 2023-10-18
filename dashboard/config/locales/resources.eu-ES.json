@@ -710,6 +710,9 @@
         "functions_with_parameters/csd/2023": {
           "name": "Parametrodun funtzioak"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Funtzioak"
+        },
         "functions_3/csd/2023": {
           "name": "Funtzioak"
         },
@@ -901,11 +904,6 @@
         },
         "pair_programming/pre-express/2023": {
           "name": "Bikoteka programatzen"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

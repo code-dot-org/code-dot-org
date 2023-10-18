@@ -935,7 +935,7 @@
         },
         "courseC_maze_programming7_2021": {
           "courseC_maze_programming7_1": "Kjo është enigma juaj e parë sfiduese! Këto janë menduar të jenë të vështira dhe mund të kërkojnë disa përpjekje.",
-          "courseC_maze_programming7_2": "Këto blloqe janë guri dhe nuk mund të hidhen larg."
+          "courseC_maze_programming7_2": "Këto blloqe janë të bëra nga guri dhe nuk mund të hidhen larg."
         },
         "courseC_starWars_loops22022": {
           "courseC_starWars_loops2": "Ju keni vetëm një nga këto blloqe në dispozicion në këtë enigmë."
@@ -1244,13 +1244,13 @@
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_events_choice_penguin": {
-          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+          "whenToWhile": "Mundohuni të ndryshoni when në while."
         },
         "courseF_events_choice_penguin_-2022-2": {
-          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+          "whenToWhile": "Mundohuni të ndryshoni when në while."
         },
         "courseF_events_choice_penguin_2023": {
-          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+          "whenToWhile": "Mundohuni të ndryshoni when në while."
         },
         "courseF_events_conflict": {
           "stops_block": "Blloqe të reja këtu!"

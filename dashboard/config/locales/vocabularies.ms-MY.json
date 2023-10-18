@@ -2269,26 +2269,6 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Pemampatan Tanpa Kehilangan",
           "definition": "algoritma pemampatan data yang membolehkan data asal dibina semula dengan sempurna daripada data dimampatkan. Paling biasa digunakan untuk pemampatan teks (cth. .mampatan zip)"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kod",
-          "definition": "(v) bagi menulis arahan untuk komputer."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Acara",
-          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Atur Cara",
-          "definition": "Siri langkah yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Mood",
-          "definition": "ungkapan perasaan, suasana, atau emosi dalam seni atau penulisan."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Baris",
-          "definition": "(puisi) - subbahagian sajak yang disusun dalam barisan yang berakhir di jidar sebelah kanan."
         }
       }
     }

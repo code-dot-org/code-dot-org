@@ -335,23 +335,4 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     assert_equal 1, attendance.length
     attendance.first
   end
-
-  def params(attended = true)
-    attendances = attended ? [{id: @teacher.id}] : []
-    {
-      session_attendances: [
-        session_id: @session.id,
-        attendances: attendances
-      ]
-    }
-  end
-
-  def create_user_params(enrolled_teacher_email)
-    {
-      session_attendances: [
-        session_id: @session.id,
-        attendances: [{email: enrolled_teacher_email}]
-      ]
-    }
-  end
 end

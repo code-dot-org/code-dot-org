@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "problem-solving-computing",
-    "serialized_at": "2023-07-26 16:17:35 UTC",
+    "serialized_at": "2023-10-12 18:10:28 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2149,7 +2149,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Ensure that students are identifying appropriate inputs and outputs.  Student answers may vary slightly, but they should be similar to those in the exemplar provided in the \"Teachers Only\" box of the first level in Code Studio.\n"
+            "markdown": "Ensure that students are identifying appropriate inputs and outputs.  Student answers may vary slightly, but they should be similar to those in the exemplar provided in the \"For the teachers\" resources section of the lesson plan.\n"
           }
         ]
       },
@@ -6921,6 +6921,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

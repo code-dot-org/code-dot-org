@@ -1166,6 +1166,27 @@
         "pre-express-2018/Spelling Bee": {
           "name": "შეჯიბრი დამარცვლაში"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "დაწყება"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "კომპიუტერული მეცნიერების საფუძვლები"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "საფუძვლების დაუფლება: ციკლები"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "საფუძვლების დაუფლება: პირობითი ბრძანებები"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "საფუძვლების დაუფლება: ფუნქციები"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "დაგეგმვა"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "მომდევნო ნაბიჯები"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "შესავალი პრობლემების გადაწყვეტაში"
         },
@@ -1573,6 +1594,30 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "მოვლენები სათამაშო ლაბორატორიაში"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "თანმიმდევრობა"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "ციკლები"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "მოვლენები"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "პირობითი ბრძანებები"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "ფუნქციები"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "ცვლადები"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "\"მიზნისთვის\" ციკლები"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "სპრიტის ლაბორატორია"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "ბედნიერი რუკები"
@@ -2226,6 +2271,27 @@
         "pre-express-2021/A Royal Battle with Events": {
           "name": "მოვლენები სათამაშო ლაბორატორიაში",
           "purpose": "ამ ონლაინ აქტივობაში, მოსწავლეები ისწავლიან თუ როგორ გამოიყენონ მოვლენები სათამაშო ლაბში. ისინი დაიწყებენ რაინდის გაწვრთნით, რომელიც გადაადგილდება ისრის ღილაკზე დაჭერით, შემდეგ კი საბოლოო თავისუფალი თამაშის თავსატეხის ფარგლბში შესაძლებლობა ექნებათ მოახდინონ მთელი ამ კურსის განმავლობაში ნასწავლი დანარჩენი უნარ-ჩვევების, მათ შორის თანმიმდევრობისა და ციკლის დემონსტრირება."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "დაწყება"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "კომპიუტერული მეცნიერების საფუძვლები"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "საფუძვლების დაუფლება: ციკლები"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "საფუძვლების დაუფლება: პირობითი ბრძანებები"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "საფუძვლების დაუფლება: ფუნქციები"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "დაგეგმვა"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "მომდევნო ნაბიჯები"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "შესავალი პრობლემების გადაწყვეტაში"
@@ -3252,9 +3318,6 @@
           "overview": "⚠️ ეს გაკვეთილი განკუთვნილია საკლასო ოთახებისთვის, რომელთაც სურთ აჩვენონ მთელი [How AI Works ვიდეო სერია] **ერთ[0] დღეში**. ის არ არის გამიზნული ამ განყოფილების სხვა გაკვეთილებთან თანმიმდევრობით სწავლებისთვის, რომელიც თითოეულ ვიდეოს წარუდგენს ერთ დღეს.\n\nმოსწავლეები თითოეულ ვიდეოს მიჰყვებიან ვიდეოდან ლექსიკის შესატყვისი, შემდეგ პასუხობენ რეფლექსიის კითხვას თითოეული ვიდეოს შესახებ. გაკვეთილის გეგმა და სლაიდები ძალიან იშვიათი და ღიაა, რათა იმპროვიზაცია და პერსონალიზაცია მოხდეს თქვენს საკლასო ოთახში.",
           "preparation": "-   ამობეჭდეთ საქმიანობის სახელმძღვანელო\n-   დაპროექტეთ სლაიდები ვიდეო პროექტორზე"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "კოდის ერთი საათი 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "შესავალი აპლიკაციების ლაბორატორიაში"
         },
@@ -3328,12 +3391,6 @@
         "oceans/Oceans": {
           "name": "AI ოკეანეებისთვის"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "თამაშების ლაბი",
           "purpose": "ეს გაკვეთილი წარმოადგენს კომპიუტერული მეცნიერების ძირეულ კონცეპტებს კოდინგის და პროგრამირებისთვის (ბლოკების გამოყენებით), ასევე მარტივ დებაგირების ტექნიკებს."
@@ -3357,24 +3414,6 @@
         },
         "text-compression/Text Compression": {
           "name": "ტექსტის შეკუმშვა"
-        },
-        "applab-1hour/Room Escape": {
-          "name": "ოთახიდან გაქცევა"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "ციფრული დიზაინი"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "მოვლენებზე დაფუძნებული პროგრამირება"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "აპლიკაციის საბაზისო ფუნქციონალი"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "სიხშირის ანალიზი"
-        },
-        "odometer/Odometer Widget": {
-          "name": "ოდომეტრის ვიჯეტი"
         },
         "allthethings/Jigsaw": {
           "name": "ფაზლი"
@@ -3444,6 +3483,18 @@
         },
         "allthethings/lesson-49": {
           "name": "მუსიკა"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "ოთახიდან გაქცევა"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "ციფრული დიზაინი"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "მოვლენებზე დაფუძნებული პროგრამირება"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "აპლიკაციის საბაზისო ფუნქციონალი"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD სტუდენტური პოსტ-კურსის კვლევა ('18-'19)"
@@ -3748,9 +3799,18 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "განსაკუთრებული დავალება - ამომწურავი"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "სიხშირის ანალიზი"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "კოდის ერთი საათი 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "ფაზლი",
           "overview": "ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე."
+        },
+        "odometer/Odometer Widget": {
+          "name": "ოდომეტრის ვიჯეტი"
         }
       }
     }

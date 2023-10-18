@@ -1940,6 +1940,9 @@
           "name": "Functies met Parameters",
           "type": "Video"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Functies"
+        },
         "teacher_forum_1/csd/2023": {
           "name": "Lerarenforum"
         },
@@ -2385,11 +2388,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Lijst van gedichten",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": ""
         }
       }
     }

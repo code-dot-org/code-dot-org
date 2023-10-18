@@ -204,6 +204,8 @@ vi:
     parent_account_email_progress_permission: "Liệu chúng tôi có thể gửi thư điện tử chứa những cập nhật thường xuyên về tiến trình và các bài tập cũng như cập nhật về khóa học và khoa học máy tính của trẻ cho bạn không? [(Xem Chính sách riêng tư của chúng tôi)](%{privacy_policy_url})"
     parent_account_email_label: "Email của phụ huynh hoặc người giám hộ"
     us_state: 'Quốc gia'
+    us_state_dropdown_options:
+      other: "Tôi sống ở một nơi không được liệt kê ở đây"
   school_info:
     title: 'Thông tin trường học (không bắt buộc)'
     school_country: 'Quốc gia'
@@ -272,6 +274,7 @@ vi:
   parent_mailer:
     student_associated_subject: 'Thông tin đăng nhập vào Code.org'
     parent_email_added_subject: 'Chào mừng tới Code.org!'
+    parent_permission_confirmation_subject: "Cảm ơn bạn đã chấp thuận quyền truy cập của con bạn vào Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Chào mừng tới Code.org!'
     delete_teacher_subject: 'Code.org thông báo: tài khoản của bạn đã bị xóa'
@@ -868,6 +871,8 @@ vi:
     submit-incomplete-body: "Bạn bỏ lại một số câu hỏi chưa hoàn chỉnh.  Bạn không thể chỉnh sửa đánh giá của bạn sau khi gửi nó.  Bạn có chắc không?"
     submit-complete-title: "Gửi đánh giá của bạn"
     submit-complete-body: "Bạn không thể chỉnh sửa đánh giá của bạn sau khi gửi nó.  Bạn có chắc không?"
+  level_summary:
+    correct_answer: "Câu trả lời đúng"
   match:
     wrong_title: "Cách giải chưa chính xác"
     wrong_body: "Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!"
@@ -1129,17 +1134,23 @@ vi:
         not_listed: 'Điều khoản ưu tiên không được liệt kê'
         none: 'Tùy chọn không muốn trả lời'
       school_country:
+        australia: 'Úc'
         barbados: 'Barbados'
         belize: 'Belize'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
+        india: 'Ấn Độ'
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Mexico'
         paraguay: 'Paraguay'
+        portugal: 'Bồ Đào Nha'
+        south_korea: 'Hàn Quốc'
+        spain: 'Tây Ban Nha'
         thailand: 'Thái Lan'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Việt Nam'
       ages:
         ages_under_6: '< 6 tuổi'
         ages_7_8: '7-8 tuổi'

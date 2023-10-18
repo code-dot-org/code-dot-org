@@ -38,10 +38,12 @@ vi:
         AlgebraA:
           description: Tìm hiểu lập trình chức năng thông qua đại số
           description_short: Tìm hiểu lập trình chức năng thông qua đại số
+          name: AlgeBraA
           student_description: Tìm hiểu lập trình chức năng thông qua đại số
         AlgebraB:
           description: Tìm hiểu lập trình chức năng thông qua đại số
           description_short: Tìm hiểu lập trình chức năng thông qua đại số
+          name: AlgebraB
           student_description: Tìm hiểu lập trình chức năng thông qua đại số
           title: 'Khoa học máy tính trong Đại số: Khoá học B'
         CSDU1-Draft:
@@ -58,6 +60,8 @@ vi:
           description_audience: 8-18 tuổi
         CSF_Secret_Sample_Story:
           description_audience: 8-18 tuổi+
+        CodeStudioPuzzleChallenge:
+          description_short: Thử thách bản thân!
         Course4pre:
           description: Một dựng lên các khái niệm ngắn cho những sinh viên đã không
             thực hiện khóa học 2 và 3.
@@ -94,6 +98,8 @@ vi:
           description_audience: Lứa tuổi 10 + (sau khóa học 3)
         TEMP CSD Unit 3:
           description_short: Lập trình
+        Tutorial Video - Code Studio Puzzle Challenge:
+          description_short: Thử thách bản thân!
         afterschool1:
           description_audience: Tuổi từ 7-13
         ai-ethics:
@@ -146,6 +152,8 @@ vi:
               display_name: Nội dung
             required:
               display_name: Tổng quan
+        allthesurveys:
+          title: Tất cả các khảo sát
         allthethings:
           description: Tất cả các loại cấp bậc để người dùng thử nghiệm giao diện
           description_short: Tất cả các loại cấp bậc để người dùng thử nghiệm giao
@@ -1654,6 +1662,7 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+          name: csd1-2021
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -2210,8 +2219,14 @@ vi:
             cspSurvey:
               display_name: Khảo sát
           title: 'Các Quy tắc KHMT Phần 2: Thông tin Kỹ thuật số'
+        csp2-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
         csp2-2019:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp2-2020:
@@ -2263,14 +2278,20 @@ vi:
               display_name: Tổng quan
         csp3-2017:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp3-2018:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp3-2019:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp3-2020:
@@ -2303,8 +2324,14 @@ vi:
               display_name: Tổng quan
         csp3-research-mxghyt:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
+        csp3-staging:
+          lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
         csp3-support:
           lesson_groups:
             content:
@@ -2313,14 +2340,20 @@ vi:
               display_name: Tổng quan
         csp4-2017:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp4-2018:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp4-2019:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp4-2020:
@@ -2714,6 +2747,8 @@ vi:
           student_description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ
             với bạn bè của mình!
           title: Bữa Tiệc Khiêu Vũ
+        dance-draft:
+          title: KHÔNG SỬ DỤNG
         dance-extras:
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
             án mở rộng.
@@ -3279,7 +3314,7 @@ vi:
           description_short: Hãy khám phá thế giới Minecraft qua những đoạn mã
           student_description: Sử dụng các khối mã lệnh để dẫn Steve hoặc Alex trên
             cuộc phiêu lưu qua thế giới Minecraft này.
-          title: Minecraft Hour of Code
+          title: Minecraft Chuyến phiêu lưu
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -4199,6 +4234,7 @@ vi:
             ramp_up:
               display_name: Chuẩn bị
         time4csdemo:
+          description_audience: Lớp 4
           lesson_groups:
             csf_sprites:
               display_name: Nhân vật

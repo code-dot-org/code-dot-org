@@ -475,7 +475,7 @@ fr:
           student_description: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
           name: starwarsblocks
         mc:
-          title: Hour of Code Minecraft
+          title: Aventurier de Minecraft
           description: Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde de Minecraft.
           description_short: Explore un monde Minecraft à travers son code.
           student_description: Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde de Minecraft.
@@ -8259,3 +8259,118 @@ fr:
           lessons:
             lesson-1:
               name: Notre code d'éthique en matière d'IA
+        virtual-pl-csa-summer-2024-day1:
+          title: Jour 1
+        virtual-pl-csp-summer-day2:
+          title: Jour 2
+        virtual-pl-csp-summer-day3:
+          title: Jour 3
+        virtual-pl-csp-summer-day4:
+          title: Jour 4
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 3
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 4
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: 'Jour 5 '
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 1
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Synchrone, partie 2
+            lessonGroup-4:
+              display_name: Asynchrone, partie 1
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 1

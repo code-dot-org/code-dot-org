@@ -3,7 +3,8 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import jsonic from 'jsonic';
 import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
+import {customInputTypes as spriteLabInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
+import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blocks';
 import {
   valueTypeTabShapeMap,
   exampleSprites,
@@ -19,6 +20,8 @@ function renderBlock(element) {
   const config = element.getAttribute('config');
   const pool = element.getAttribute('pool');
   const parsedConfig = jsonic(config);
+  const customInputTypes =
+    pool === 'Dancelab' ? danceInputTypes : spriteLabInputTypes;
   const blocksInstalled = installCustomBlocks({
     blockly: Blockly,
     blockDefinitions: [

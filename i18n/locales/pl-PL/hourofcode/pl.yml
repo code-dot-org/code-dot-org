@@ -5,36 +5,40 @@ pl:
   language: Polski
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
-  campaign_date_start_short: 7 grudnia
-  campaign_date_start_long: 7 grudnia
-  campaign_date_short: 7-13 grudnia
-  campaign_date_full: 7-13 grudnia
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 grudnia 2022
-  nonus_campaign_date_start_short: 1 października
-  nonus_campaign_date_start_long: 1 października
-  nonus_campaign_date_short: 1 paźdz. - 18 grud.
-  nonus_campaign_date_full: 1 października - 18 grudnia
-  nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
-  latam_campaign_date_start_short: 1 października
-  latam_campaign_date_start_long: 1 października
-  latam_campaign_date_short: 1 paźdz. - 18 grud.
-  latam_campaign_date_full: 1 października - 18 grudnia
-  latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
+  campaign_date_start_short: 4 grudnia
+  campaign_date_start_long: 4 grudnia
+  campaign_date_short: 4-10 grudnia
+  campaign_date_full: 4-10 grudnia
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 grudnia 2023
+  nonus_campaign_date_start_short: 5 września
+  nonus_campaign_date_start_long: 5 września
+  nonus_campaign_date_short: 5 września - 17 grudnia
+  nonus_campaign_date_full: 5 września - 17 grudnia
+  nonus_campaign_date_year: '2023'
+  nonus_campaign_date_full_year: 5 września 2023 - 17 grudnia 2023
+  latam_campaign_date_start_short: 5 września
+  latam_campaign_date_start_long: 5 września
+  latam_campaign_date_short: 5 września - 17 grudnia
+  latam_campaign_date_full: 5 września - 17 grudnia
+  latam_campaign_date_year: '2023'
+  latam_campaign_date_full_year: 5 września 2023 - 17 grudnia 2023
   europe_campaign_date_start_short: 1 paźdz.
   europe_campaign_date_start_long: 1 października
   europe_campaign_date_short: 1 paźdz. - 18 grud.
   europe_campaign_date_full: 1 października - 18 grudnia
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
   africa_campaign_date_start_short: 1 paźdz.
-  africa_campaign_date_start_long: 1 października
+  africa_campaign_date_start_long: 5 września
   africa_campaign_date_short: 1 paźdz. - 18 grud.
   africa_campaign_date_full: 1 października - 18 grudnia
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
+  hoc2023_header: Kreatywność z AI
+  hoc2023_social_creativity_with_ai_title: Godzina kodowania - co stworzysz?
+  hoc2023_social_creativity_with_ai_desc: Skorzystaj z informatyki, aby odkrywać i
+    poznawać sztuczną inteligencję!
   hoc2022_header: Odkrywaj, graj, twórz!
   social_hoc2022_explore_play_create: Korzystaj z informatyki, by odkrywać, grać i
     tworzyć!
@@ -185,6 +189,32 @@ pl:
   curriculum_launch_2023_desc: Aktualizacje CSC, CSP, CSD, i więcej - plus nowy katalog
     programów nauczania i przeprojektowana strona Teach, która pomoże Ci znaleźć wszystko!
   in_partnership_with: We współpracy z
+  shop_code_dot_org_heading: Sklep Code.org
+  shop_code_dot_org_desc: Wspieraj naszą pracę i noś ruch z dumą. Nasze kapelusze
+    były noszone przez prezydenta Obamę i celebrytów.
+  spread_the_word_heading: Podaj dalej
+  spread_the_word_desc: Zwiększ nasz wpływ, udostępniając Code.org swojej sieci. Od
+    mediów społecznościowych po aktualizacje e-mailowe, dowiedz się, jak możesz pomóc
+    nam dotrzeć do większej liczby nauczycieli, studentów, i adwokatów.
+  follow_us_heading: Śledź nas w mediach społecznościowych
+  follow_us_desc: Bądź na bieżąco z nami w mediach społecznościowych i udostępniaj
+    nasze posty swojej sieci, aby być na bieżąco i zwiększać świadomość.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tabletki
+  device_laptop: Laptop
+  device_desktop_computer: Komputer stacjonarny
+  device_mobile_device: Urządzenie mobilne
+  subscribe_to_emails_heading: Subskrybuj e-maile
+  subscribe_to_emails_desc: Przeczytaj o tym, co dzieje się w Code.org i edukacji
+    informatycznej poprzez kwartalne aktualizacje za pośrednictwem naszej listy mailingowej.
+  subscribe_to_emails_intl: Subskrybuj aktualizacje międzynarodowe
+  promote_code_dot_org_heading: Promuj Code.org
+  promote_code_dot_org_desc: Promuj informatykę w swojej okolicy za pomocą statystyk,
+    cytatów i filmów.
   afe_partnership_logo_alt: Logo Inżyniera Przyszłości
   afe_partnership_thanks_desc: Amazon Future Engineer to kompleksowy program od dzieciństwa
     do kariery, który ma inspirować, edukować i szkolić dzieci i młodzież o niskich
@@ -203,19 +233,48 @@ pl:
   curricula_title_high: Programy nauczania w szkole średniej
   curricula_desc_high: Przeglądaj atrakcyjne kursy i zajęcia, które zapraszają Ciebie
     i Twoich uczniów szkół średnich do głębszego zagłębienia się w informatykę.
+  for_administrators_heading: Dla administratorów
+  for_administrators_desc: Dołącz do tysięcy szkół, które już włączyły informatykę
+    do swojego programu nauczania.
+  for_parents_heading: Dla rodziców
+  for_parents_desc: Możesz pomóc zachęcić szkołę swojego ucznia do oferowania lub
+    rozszerzania edukacji informatycznej.
+  for_educators_heading: Dla nauczycieli
+  for_educators_desc: Rozpocznij nauczanie już dziś - bez doświadczenia informatyki
+    - dzięki naszym profesjonalnym warsztatom edukacyjnym.
   students_label: Uczniowie
   teachers_label: Nauczyciele
+  educators_label: Nauczyciele
+  companies_label: Przedsiębiorstwa
+  districts_label: Dzielnice
+  school_assemblies_label: Zespoły szkolne
+  parents_label: Rodzice
+  public_officials_label: Urzędnicy publiczni
+  volunteers_label: Wolontariusze
+  virtual_events_label: Wydarzenia wirtualne
   teacher_label_csf: Nauczyciel CS Fundamentals
   teacher_label_csd: Nauczyciel CS Discovery
   teacher_label_csp: Nauczyciel zasad CS
   teacher_label_csc: Nauczyciel CS Connections
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Forum Nauczycieli
+  teacher_forum_desc: Odwiedź Forum Nauczycieli Godziny Kodowania, aby uzyskać porady,
+    wgląd i wsparcie od innych nauczycieli.
   required_materials: 'Wymagane materiały:'
   optional_materials: 'Materiały opcjonalne:'
-  call_to_action_explore_roles: Przeglądaj otwarte role
+  call_to_action_hold_an_event: Zorganizuj wydarzenie
+  call_to_action_register_event: Zarejestruj swoje wydarzenie
+  call_to_action_select_activity: Wybierz aktywność
+  call_to_action_start_activity: Rozpocznij aktywność
+  call_to_action_get_certificates: Uzyskaj certyfikaty
+  call_to_action_go_beyond_hoc: Wyjdź poza Godzinę Kodeksu
+  call_to_action_view_promo_resources: Wyświetl zasoby promocyjne
   call_to_action_learn_more: Dowiedz się więcej
   call_to_action_watch_now: Obejrzyj teraz
   call_to_action_try_activity: Wypróbuj aktywność
+  call_to_action_try_activities: Wypróbuj działania
+  call_to_action_explore_activities: Eksploruj działania
+  call_to_action_explore_ai: Eksploruj AI
   call_to_action_explore_unit: Poznaj jednostkę
   call_to_action_explore_curriculum: Poznaj program nauczania
   call_to_action_explore_curriculum_options: Poznaj opcje programu nauczania
@@ -268,6 +327,7 @@ pl:
   call_to_action_find_self_paced_modules: Znajdź moduły do samodzielnej nauki
   call_to_action_join_teacher_forums: Dołącz do forów dla nauczycieli
   call_to_action_explore_teacher_forums: Przeglądaj fora nauczycieli
+  call_to_action_explore_teacher_forum: Poznaj forum nauczycieli
   call_to_action_explore_career_resources: Przeglądaj zasoby dotyczące kariery
   call_to_action_watch_videos: Oglądać filmy
   call_to_action_download_posters: Pobierz plakaty
@@ -284,11 +344,32 @@ pl:
   call_to_action_notify_available: Powiadom mnie, gdy będzie dostępny
   call_to_action_register_early_access: Zarejestruj się, aby uzyskać wczesny dostęp
   call_to_action_open_positions: Wyświetlanie otwartych pozycji
+  call_to_action_explore_roles: Przeglądaj otwarte role
   call_to_action_get_guide: Zdobądź przewodnik
   call_to_action_donate_to_cdo: Wesprzyj Code.org
   call_to_action_start_fundraiser: Rozpocznij zbiórkę pieniędzy
   call_to_action_view_donation_policy: Zobacz politykę darowizn
   call_to_action_view_donate_bitpay: Przekaż darowiznę za pomocą BitPay
+  call_to_action_make_a_donation: Przekaż darowiznę
+  call_to_action_other_ways_to_give: Inne sposoby dawania
+  call_to_action_become_partner_usa: Zostań partnerem w Stanach Zjednoczonych
+  call_to_action_become_partner_intl: Zostań partnerem międzynarodowym
+  call_to_action_become_a_volunteer: Zostań wolontariuszem
+  call_to_action_start_translating: Zacznij tłumaczyć
+  call_to_action_learn_about_advocacy: Dowiedz się więcej o naszym rzecznictwie
+  call_to_action_visit_store: Odwiedź sklep
+  call_to_action_view_faqs: Zobacz więcej często zadawanych pytań
+  aria_label_call_to_action_hoc_how_to_educators: Zobacz poradnik dla nauczycieli
+  aria_label_call_to_action_hoc_how_to_companies: Zobacz poradnik dla firm
+  aria_label_call_to_action_hoc_how_to_districts: Zobacz poradnik dla dzielnic
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Zobacz poradnik dotyczący
+    zespołów szkolnych
+  aria_label_call_to_action_hoc_how_to_parents: Zobacz poradnik dla rodziców
+  aria_label_call_to_action_hoc_how_to_public_officials: Zobacz poradnik dla urzędników
+    publicznych
+  aria_label_call_to_action_hoc_how_to_volunteers: Zobacz poradnik dla wolontariuszy
+  aria_label_call_to_action_hoc_how_to_virtual_events: Zobacz poradnik dotyczący wydarzeń
+    wirtualnych
   aria_label_call_to_action_afe: Dowiedz się więcej o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Rozpocznij profesjonalny program nauczania
     nauczania podstaw informatyki
@@ -631,6 +712,7 @@ pl:
   heading_explore_curriculum_catalog: Poznaj wszystkie nasze kursy w katalogu programów
     nauczania
   heading_csa_ai: Szukasz rzeczy do zrobienia po egzaminie AP®?
+  heading_bring_cs_to_students: Przynieś informatykę studentom
   professional_learning_section_desc: Uzyskaj wsparcie, którego potrzebujesz, przygotowując
     się do nauczania. Nauczyciele to uwielbiają, a ponad 90% uplasuje go za najlepszy
     rozwój zawodowy w historii!
@@ -911,6 +993,8 @@ pl:
     inteligencji do oceny uczniów. Dzięki bogatej mieszance teorii, praktycznych przykładów
     i zasobów, ma na celu umożliwienie nauczycielom poruszania się po krajobrazie
     sztucznej inteligencji i ulepszania doświadczeń edukacyjnych uczniów.
+  ai_pl_101_resources_5: Przewodnik po zapewnieniu odpowiedzialnego podejścia do sztucznej
+    inteligencji
   ai_pl_101_video_desc_6: 'Dowiedz się więcej o nowej technologii, która napędza duże
     zmiany w sztucznej inteligencji, zawiera dwa nowe filmy na temat modeli dużych
     języków (takich jak ChatGPT) i Generative AI. Posłuchaj, jak te nowe technologie
@@ -922,6 +1006,8 @@ pl:
     podpowiedzi startowe dla tych, którzy po prostu zanurzają palce u nóg, a także
     zaawansowane narzędzia dla tych, którzy chcą zmaksymalizować swój potencjał.
   ai_pl_101_resources_3: Monity AI do przekształcania uczenia się uczniów
+  ai_pl_101_resources_section_title: Więcej sposobów na poznanie sztucznej inteligencji
+  ai_pl_101_resources_guide: 'Przewodnik towarzyszący:'
   how_ai_works_hero_heading: Jak działa sztuczna inteligencja
   how_ai_works_hero_desc: Zanurz się w świecie sztucznej inteligencji dzięki „How
     AI Works”, naszej serii filmów i towarzyszącym lekcjom!
@@ -1781,6 +1867,32 @@ pl:
   donate_tabs_bitpay_desc: Przyjmij przyszłość dawania za pomocą kryptowaluty. Dzięki
     BitPay Twoja cyfrowa waluta może bezpośrednio wspierać wysiłki Code.org w zakresie
     rozszerzania edukacji informatycznej.
+  help_page_top_heading: Jak możesz pomóc
+  help_page_top_desc: Wspieraj naszą misję, aby informatyka była dostępna dla każdego
+    dziecka, wszędzie. Twoje wysiłki pomagają nam inspirować przyszłych innowatorów
+    i wypełnić lukę w edukacji technicznej.
+  help_page_top_subhead: Przekaż darowiznę na Code.org
+  help_page_top_desc_02: Pracujemy nad tym, aby dać każdemu uczniowi możliwość nauki
+    informatyki - zarówno online, jak i w szkołach, gdzie zakładamy stałe kursy i
+    szkolimy nauczycieli. Za każdego dolara, który przekazujesz, jedno dziecko jest
+    wprowadzane do informatyki.
+  help_page_partners_heading: Zostań partnerem
+  help_page_partners_desc: Code.org współpracuje z innymi organizacjami non-profit
+    jako partnerzy, aby pomóc w rozpowszechnianiu informatyki w lokalny, zrównoważony
+    sposób. Dowiedz się więcej o naszym programie
+  help_page_volunteer_heading: Zostań wolontariuszem w klasie
+  help_page_volunteer_desc: Zostań wolontariuszem, aby uczyć Godziny Kodowania lub
+    być gościem w lokalnej klasie. Zarejestruj się, aby dowiedzieć się o możliwościach
+    w Twojej okolicy.
+  help_page_translate_heading: Pomóż nam tłumaczyć
+  help_page_translate_desc: Wolontariusze przetłumaczyli nasze tutoriale na ponad
+    45 języków. Pomóż nam nadal rozszerzać nasze samouczki dla studentów z całego
+    świata!
+  help_page_speak_for_cs_heading: Mów głośno o edukacji informatycznej
+  help_page_speak_for_cs_desc: Dowiedz się więcej o działaniach rzeczniczych Code.org
+    w Stanach Zjednoczonych i dziesięciu zasadach, które zalecamy stanom przyjąć,
+    aby informatyka była podstawą dla wszystkich studentów. Plus, dowiedz się, jak
+    możesz wprowadzić zmiany w swoim stanie.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
   hoc_live_learn_title: Ucz się z Godziną Kodowania na Żywo
@@ -13726,6 +13838,131 @@ pl:
   all: Wszystkie
   dont_know: Nie wiem
   language_label: Język
+  before_hoc: Przed Godziną Kodeksu
+  day_of_hoc: Dzień Godziny Kodowania
+  after_hoc: Po godzinie kodu
+  step_01: Krok 1
+  step_02: Krok 2
+  step_03: Krok 3
+  step_04: Krok 4
+  step_05: Krok 5
+  step_06: Krok 6
+  step_07: Krok 7
+  step_08: Krok 8
+  hoc_how_to_top_heading: Twój przewodnik po Godzinie Kodowania
+  hoc_how_to_top_desc: Dostosowane przewodniki, aby uzyskać najlepsze wrażenia z Godziny
+    Kodowania.
+  hoc_how_to_top_view_guide: Zobacz przewodnik dla
+  hoc_how_to_nav_main_aria_label: Wybierz przewodnik
+  hoc_how_to_nav_sidebar_aria_label: Nawigacja Sidebar
+  hoc_how_to_educators_intro_heading: Jak zorganizować Godzinę Kodowania
+  hoc_how_to_educators_intro_desc: Godzina kodu to godzinne wprowadzenie do informatyki,
+    korzystając z zabawnych samouczków, aby pokazać, że każdy może nauczyć się podstaw.
+    W tym roku przenosimy Hour of Code na nowe wyżyny, oferując możliwości kodowania,
+    które obejmują zarówno sztuczną inteligencję (AI), jak i komponenty spoza sztucznej
+    inteligencji. Niezależnie od tego, czy Ty lub Twoi uczniowie jesteście doświadczonymi
+    programistami, czy wszyscy wyruszacie na swoją pierwszą wyprawę informatyczną,
+    ta Godzina Kodowania obiecuje niezwykłą podróż.
+  hoc_how_to_faq_question_prerequisites: Jakie są warunki wstępne do zrobienia Godziny
+    Kodowania?
+  hoc_how_to_faq_answer_prerequisites: Godzina kodu jest prosta do uruchomienia -
+    nawet dla początkujących. Nie potrzebujesz doświadczenia w informatyce lub nauczaniu,
+    aby zainspirować uczniów do odkrywania, tworzenia i uczenia się czegoś nowego.
+  hoc_how_to_faq_question_devices: Jakich urządzeń potrzebuję, aby uruchomić Godzinę
+    Kodowania?
+  hoc_how_to_faq_answer_devices_01: 'Urządzenia, z których możesz korzystać:'
+  hoc_how_to_faq_answer_devices_02: Jeśli urządzenia są ograniczone lub niedostępne,
+    spróbuj [programowanie w parach] (%{pair_url}) lub zbadaj nasze [odłączone działania]
+    (%{unplugged_url}), aby uczyć się bez żadnych urządzeń!
+  hoc_how_to_faq_question_volunteer: Kto może zostać wolontariuszem?
+  hoc_how_to_faq_answer_volunteer: Wolontariuszem może być każdy, kto pasjonuje się
+    edukacją informatyką i rosnącą różnorodnością technologii! Chcielibyśmy zobaczyć
+    wolontariusze ze wszystkich środowisk. Godzina kodu oferuje szeroką gamę zajęć
+    dla wszystkich grup wiekowych i poziomów umiejętności, więc nie musisz być ekspertem
+    od programowania, aby być wolontariuszem!
+  hoc_how_to_faq_question_full_hour: Czy Godzina Kodeksu zajmie całą godzinę?
+  hoc_how_to_faq_answer_full_hour: Wielu uczniów będzie mogło zakończyć swoje zajęcia
+    w mniej niż godzinę i to jest w porządku! Uczniowie mogą nadal się uczyć, podczas
+    gdy inni uczniowie kończą swoją aktywność.
+  hoc_how_to_faq_question_account: Czy uczniowie muszą się logować i zakładać konto?
+  hoc_how_to_faq_answer_account: Aby uczniowie mogli wypróbować Godzinę Kodowania,
+    nie jest wymagana rejestracja ani logowanie. Rejestracja w Godzinie Kodowania
+    NIE powoduje automatycznego tworzenia konta Code.org.
+  hoc_how_to_resources_heading_educators: Inne zasoby Godziny Kodowania dla nauczycieli
+  hoc_how_to_resources_promo_heading: Zasoby promocyjne
+  hoc_how_to_resources_promo_desc: Znajdź wszystkie potrzebne zasoby - drukowane i
+    cyfrowe - aby zwrócić uwagę na Godzinę Kodowania.
+  hoc_how_to_resources_discover_heading: Odkryj działania
+  hoc_how_to_resources_discover_desc: Zapoznaj się z szerokim wyborem godzinnych samouczków
+    przeznaczonych dla wszystkich grup wiekowych w ponad 45 językach.
+  hoc_how_to_step_label_plan: Zaplanuj, gdzie i kiedy wykonasz Godzinę Kodowania
+  hoc_how_to_step_label_choose_activity: Wybierz swoją aktywność
+  hoc_how_to_step_label_test_activity: Przetestuj swoją aktywność
+  hoc_how_to_step_label_register_event: Zarejestruj swoje wydarzenie
+  hoc_how_to_step_label_tell: Powiedz swoim uczniom, szkole i społeczności
+  hoc_how_to_step_label_get_coding: Uzyskaj kodowanie!
+  hoc_how_to_step_label_celebrate: Świętuj
+  hoc_how_to_step_label_beyond_hoc: Poza Godziną Kodeksu
+  hoc_how_to_step_beyond_hoc_subhead: To się tu nie kończy!
+  hoc_how_to_step_beyond_hoc_desc: Informatyka nie musi kończyć się Godziną Kodowania!
+    Podczas gdy 90% rodziców chce, aby ich dziecko nauczyło się informatyki, większość
+    szkół nadal tego nie uczy. Dowiedz się, jak zabrać CS do szkoły dziecka już dziś.
+  hoc_how_to_step_01_educators_subhead: Wybierz czas i przestrzeń zdarzenia odpowiadającą
+    liczbie dostępnych uczniów i urządzeń.
+  hoc_how_to_step_01_educators_desc_01: Jakie miejsca są dostępne dla Ciebie, aby
+    wykonać Godzinę Kodowania? Zastanów się nad możliwościami technologicznymi swojej
+    przestrzeni i rodzajami urządzeń, nad którymi oczekujesz, że Twoi uczniowie będą
+    pracować. Uczniowie mogą pracować nad samouczkami na jednym urządzeniu, na zmianę
+    przy użyciu wspólnego urządzenia lub wspólnie wypróbować samouczek na tablicy
+    w klasie. Istnieją nawet odłączone samouczki, które można uzupełnić bez żadnych
+    urządzeń. Odłączone opcje można wykonać w dowolnym miejscu - nawet na zewnątrz!
+  hoc_how_to_step_01_educators_desc_02: Ludzie na całym świecie dołączają do obchodów
+    Godziny Kodowania podczas Tygodnia Edukacji CS, %{campaign_date} kiedy zostaną
+    opublikowane najnowsze samouczki i działania. Ale możesz zrobić Godzinę Kodowania
+    w dowolnym dniu w roku!
+  hoc_how_to_step_02_educators_desc_01: Przeglądaj działania w oparciu o wiek swojej
+    grupy, doświadczenie, zainteresowania, i więcej. Uczniowie lubią próbować samouczków
+    prowadzonych przez siebie, chociaż wiele działań obejmuje plany lekcji dla nauczycieli,
+    aby prowadzić dyskusję lub rozszerzyć aktywność.
+  hoc_how_to_step_02_educators_desc_02: Zdecyduj z wyprzedzeniem, czy chcesz wybrać
+    jeden samouczek dla wszystkich swoich uczniów, lub pozwól każdemu dziecku wybrać
+    własny.
+  hoc_how_to_step_02_educators_desc_03: W tym roku Ty i Twoi uczniowie możecie [dowiedzieć
+    się wszystkiego o sztucznej inteligencji] (%ai_url) poprzez samouczki, plany lekcji
+    i naszą nową serię filmów How AI Works.
+  hoc_how_to_step_03_educators_desc_01: Wypróbuj samouczek samodzielnie, zanim wejdziesz
+    do klasy, abyś mógł odpowiedzieć na pytania!
+  hoc_how_to_step_03_educators_desc_02: Możesz także przetestować samouczki na komputerach
+    lub urządzeniach studenckich, aby upewnić się, że obsługują dźwięk i wideo. Mają
+    niską przepustowość? Zaplanuj wyświetlanie filmów z przodu klasy, aby każdy uczeń
+    nie pobierał własnych filmów.
+  hoc_how_to_step_03_educators_desc_03: Rozważ dostarczenie słuchawek dla swojej klasy
+    lub poproś uczniów, aby przynieśli własne, jeśli wybrany samouczek najlepiej pasuje
+    do dźwięku.
+  hoc_how_to_step_04_educators_desc_01: Kiedy rejestrujesz wydarzenie Godziny Kodowania,
+    otrzymasz pomocne e-maile z nowościami i wskazówkami, jak zorganizować udaną Godzinę
+    Kodowania. To również sposób, w jaki możesz poinformować lokalnych wolontariuszy,
+    że Twoja szkoła uczestniczy. Wolontariusze są świetnym źródłem informacji i mogą
+    porozmawiać z Twoją klasą na temat informatyki lub pomóc uczniom w zajęciach Godziny
+    Kodowania.
+  hoc_how_to_step_05_educators_desc_01: Podekscytuj swoich uczniów wydarzeniem, udostępniając
+    [inspirujące filmy] (%{videos_url}) podkreślając różnorodnych ludzi i kreatywne
+    sposoby wykorzystania informatyki w prawdziwym świecie.
+  hoc_how_to_step_05_educators_desc_02: Podziel się swoimi planami Godziny Kodowania
+    z innymi nauczycielami, którzy mogą chcieć przyłączyć się do zabawy! Jest to również
+    świetna okazja, aby skontaktować się ze Stowarzyszeniem Nauczycieli Rodziców w
+    Twojej szkole lub udostępnić biuletyny rodziców, informując ich o tym, czego uczą
+    się ich dzieci.
+  hoc_how_to_step_06_educators_desc_01: Skieruj uczniów do aktywności, być może udostępniając
+    link na tablicy lub za pośrednictwem systemu zarządzania nauką w klasie. Twoi
+    uczniowie mogą napotkać wyzwania - to w porządku! Nauka programowania jest jak
+    nauka nowego języka; nie będziesz biegły od razu. Jeśli nie znasz odpowiedzi,
+    możesz to rozgryźć razem.
+  hoc_how_to_step_07_educators_desc_01: 'Pamiętaj, aby świętować sukces! Udostępniaj
+    zdjęcia i filmy z wydarzenia Godziny Kodowania w mediach społecznościowych. Użyj
+    #HourOfCode i @codeorg, abyśmy mogli podkreślić również Twój sukces!'
+  hoc_how_to_step_07_educators_desc_02: Możesz także wydrukować certyfikaty dla swoich
+    uczniów, aby pochwalić się swoimi osiągnięciami!
   team_page_full_team_alt_text: Prawie 100 pracowników Code.org w dopasowanych niebieskich
     i żółtych koszulkach pozuje w hotelowej sali konferencyjnej na letnie wydarzenie
     Codechella firmy 2022.
@@ -14250,6 +14487,11 @@ pl:
   video_library_page_inspirational_video_title_11: Każdy może się nauczyć (1 min.)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA świętuje Godzinę Kodowania
+    (2 min)
+  video_library_page_inspirational_video_title_14: To więcej niż gra (1 min)
+  video_library_page_inspirational_video_title_15: Twórz za pomocą informatyki (1
+    min)
   video_library_page_not_hacked_video_title_1: 'Jak się nie zhakować: Wprowadzenie'
   video_library_page_not_hacked_video_title_2: 'Jak się nie zhakować: Hasła'
   video_library_page_not_hacked_video_title_3: 'Jak nie zostać zhakowanym: uwierzytelnianie
@@ -14260,6 +14502,162 @@ pl:
   video_library_page_not_hacked_video_title_6: 'Jak nie dać się zhakować: wiadomości
     i pliki do pobrania'
   video_library_page_not_hacked_video_title_7: 'Jak się nie zhakować: Zainstaluj aktualizacje'
+  about_us_page_title: O Nas
+  about_us_page_hero_description: Code.org® jest organizacją non-profit zajmującą
+    się innowacjami edukacyjnymi poświęconą wizji, że każdy uczeń w każdej szkole
+    ma możliwość nauki informatyki w ramach podstawowej edukacji K-12. Rozszerzamy
+    dostęp do informatyki w szkołach, koncentrując się na zwiększeniu udziału młodych
+    kobiet i uczniów z innych niedostatecznie reprezentowanych grup. Wiodący dostawca
+    programów nauczania informatyki K-12 w największych okręgach szkolnych w Stanach
+    Zjednoczonych, Code.org organizuje również coroczną kampanię [Hour of Code] (%{hour_url}),
+    która zaangażowała ponad 15% wszystkich uczniów na świecie. Code.org jest wspierany
+    przez hojnych darczyńców, w tym Microsoft, Amazon, Google i [wielu innych].%{others_url}
+  about_us_page_section_title_1: Ponad 80 milionów uczniów i 2 miliony nauczycieli
+    na Code.org
+  about_us_page_statistic_figcaption: Udział Code.org z roku szkolnego 2021-2022.
+    [Patrz dane zdezagregowane.] ()%{data_url}
+  about_us_page_statistic_description: Code.org zwiększa różnorodność w informatyce,
+    docierając do uczniów ze wszystkich środowisk, w których się znajdują - na poziomie
+    umiejętności, w szkołach i w sposób, który inspiruje ich do dalszej nauki. Zdecydowana
+    większość studentów na Code.org pochodzi z grup studenckich historycznie niedostatecznie
+    reprezentowanych w informatyce. Rosnąca różnorodność w informatyce jest podstawą
+    naszej pracy, i [zachęcamy do przeczytania więcej o naszych wysiłkach] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org w wiadomościach
+  about_us_page_section_news_description: Zobacz wszystkie przeszłe [wiadomości i
+    ogłoszenia] (%{news_url})
+  about_us_page_section_table: Nasze cele i wskaźniki
+  about_us_page_section_table_header_1: Cel Code.org
+  about_us_page_section_table_header_2: Osiągnięcie
+  abous_page_section_table_cell_1_1: Poprawa różnorodności w CS* (studenci z USA)
+    *
+  abous_page_section_table_cell_1_2: 45% studentów Code.org to młode kobiety, 50%
+    to uczniowie z marginalizowanych grup rasowych i etnicznych, a 46% studentów z
+    USA jest w szkołach o wysokich potrzebach. Przeczytaj więcej o [naszym podejściu
+    do różnorodności] (%{diversity_url})
+  about_page_section_table_cell_2_1: Zainspiruj uczniów
+  about_page_section_table_cell_2_2: Dziesiątki milionów próbowało [Godzina Kodowania]
+    (%{hour_url}). (426,370,561 służył. 49% kobieta)
+  about_page_section_table_cell_3_1: Dotrzeć do sal lekcyjnych
+  about_page_section_table_cell_3_2: 591.636 nauczycieli zapisało się, aby prowadzić
+    nasze kursy wprowadzające na [Code Studio] (%{code_studio_url}), a zapisanych
+    jest 19 177.297 uczniów.
+  about_page_section_table_cell_4_1: Przygotuj nowych nauczycieli CS
+  about_page_section_table_cell_4_2: Przygotowaliśmy ponad 106 000 nowych nauczycieli
+    do nauczania CS w klasach K-12. Dowiedz się więcej o naszych [profesjonalnych
+    programach edukacyjnych.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Zmień program nauczania okręgu szkolnego
+  about_page_section_table_cell_5_2: Nawiązaliśmy współpracę z [180+ największych
+    okręgów szkolnych] (%{schoold_disctrict_url}) i 60 partnerzy regionalni do [dodaj
+    CS do programu szkolnego] (%{cs_curriculum_url}). [Dowiedz się, jak zostać partnerem
+    regionalnym.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Konfigurowanie zasad wspierających CS
+  about_page_section_table_cell_6_2: "[Zasady zmienione w 50 USA. stany] (%{states_url})
+    ustalić standardy edukacyjne CS, sprawić, by kursy CS liczyły się do ukończenia
+    szkoły średniej, itp. [(szczegóły)] (%{details_url})"
+  about_page_section_table_cell_7_1: Przejdź do globalnego
+  about_page_section_table_cell_7_2: Nasze kursy są dostępne w ponad 67 językach,
+    używane w ponad 180 krajach.
+  about_page_section_table_under_label: 'Źródło: Code Studio Activity i [ankiety uczestniczących
+    nauczycieli] (%{educators_url})'
+  about_page_section_title_3: Więcej informacji, historia i filozofia
+  about_page_section_more_description_1: 'W 2013 roku Code.org został uruchomiony
+    przez braci bliźniaków [Hadi](%{hadi_url}) i [Ali Partovi] (%{partovi_url}) z
+    () promującym inform [video]at%{video_url}ykę. Ten film stał się #1 na YouTube
+    przez jeden dzień, a 15 000 szkół zwróciło się do nas o pomoc. Od tamtej pory,
+    rozszerzyliśmy się z bootstrapped personelu wolontariuszy, aby zbudować pełną
+    organizację wspierającą ruch na całym świecie. Uważamy, że wysokiej jakości edukacja
+    informatyka powinna być dostępna dla każdego dziecka, a nie tylko nieliczni szczęśliwcy.'
+  about_page_section_more_description_2: 'Aby wesprzeć nasz cel, pracujemy w całym
+    spektrum edukacji: projektowanie własnych kursów lub współpraca z innymi, szkolenie
+    nauczycieli, współpraca z dużymi okręgami szkolnymi, pomaganie w zmianie polityki
+    rządu, rozszerzanie się na arenie międzynarodowej poprzez partnerstwa, i marketing
+    w celu przełamania stereotypów.'
+  about_page_section_more_description_3: Nasza praca opiera się na [dziesięciolecia
+    wysiłku, przez niezliczone organizacje i osoby] (%{efforts_url}) którzy pomogli
+    założyć, finansować, i rozpowszechniać edukację informatyczną. Jesteśmy wdzięczni,
+    że mogliśmy skorzystać z niestrudzonej pomocy szerszej społeczności edukacji informatycznej,
+    i [dziękujemy wszystkim partnerom i osobom, które przez lata wspierały nasz wpływ]
+    (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Raport roczny] (%{report_url}) (Wcześniejsze
+    raporty: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Nasze podstawowe wartości i wytyczne dotyczące
+    przesyłania wiadomości] (%{core_url})"
+  about_page_section_more_list_3: "[Nasz program nauczania i filozofia pedagogiki]
+    (%{curriculum_url})"
+  about_page_section_more_list_4: "[Rozmowa TEDx naszego założyciela Hadi Partovi
+    o tym, dlaczego informatyka jest dla wszystkich (WIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Podejście jednoczące w podzielonym świecie
+  about_page_section_specific_title_1: Podejście jednoczące w podzielonym świecie
+  about_page_section_specific_title_2: Nasze zaangażowanie w dostępność
+  about_page_section_specific_title_3: Nasze zaangażowanie w bezpłatny program nauczania
+    i technologię open source
+  about_page_section_specific_title_4: Koalicja rzecznictwa Code.org
+  about_page_section_specific_title_5: K-12 Computer Science Framework
+  about_page_section_specific_title_6: Code.org Darczyńcy
+  about_page_section_specific_title_7: Śledź nas
+  about_page_section_specific_title_8: Międzynarodowy zasięg inicjatywy Code.org
+  about_page_section_specific_description_1: Globalna rola Code.org w ruchu informatyki
+    K-12 jest możliwa tylko dlatego, że stosujemy jednoczące podejście wśród różnych
+    i często podzielonych interesariuszy. W czasie rosnącej polaryzacji idea zwiększenia
+    szans dla studentów jednoczy ludzi z całego spektrum politycznego. Członkowie
+    zespołu Code.org, uczniowie, nauczyciele i kibice mają różnorodne i rozbieżne
+    punkty widzenia i wszyscy są mile widziani w naszej misji. [Czytaj więcej.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org uważa, że informatyka jest podstawą
+    dla wszystkich studentów i jesteśmy zaangażowani w równość, dostęp i możliwości
+    w naszej organizacji [values.](%{values_url}) Aby osiągnąć ten cel, pracujemy
+    nad zidentyfikowaniem i wyeliminowaniem barier, które uniemożliwiają włączenie
+    i pełne uczestnictwo uczniów i nauczycieli niepełnosprawnych. Aby dowiedzieć się
+    więcej o naszych wysiłkach, zobacz nasze [oświadczenie o dostępności.] (%{accessibility_url})
+  about_page_section_specific_description_3: Wszystkie zasoby programowe i samouczki,
+    które autoryzujemy, będą na zawsze bezpłatne i otwarcie licencjonowane na podstawie
+    [Creative Commons] (%{commons_url}) licencja, umożliwiając innym tworzenie pochodnych
+    zasobów edukacyjnych w celach niekomercyjnych. Jeśli jesteś zainteresowany licencjonowaniem
+    naszych materiałów do celów komercyjnych, [skontaktuj się z nami] (%{contact_us_url}).
+    Nasze kursy są tłumaczone do użytku na całym świecie lub przez osoby posługujące
+    się różnymi językami. Nasza technologia jest opracowywana jako [projekt open source.]
+    (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
+    jest dwupartyjną koalicją korporacji i organizacji non-profit, które współpracują,
+    aby pomóc ustanowić amerykańską politykę federalną i stanową w celu rozszerzenia
+    i utrzymania dostępu do informatyki K-12 oraz poszerzenia uczestnictwa i różnorodności
+    w tej dziedzinie. Łączymy razem [Przywódcy polityczni republikańscy i demokratyczni]
+    (%{leaders_url}) we wspólnej sprawie wspierającej rozszerzenie dostępu i uczestnictwa
+    w informatyce K-12."
+  about_page_section_specific_description_5: Code.org jest członkiem komitetu sterującego,
+    który pomógł ustanowić [K-12 Computer Science Framework] (%{framework_url}) -
+    przewodnik wysokiego szczebla dla stanów, okręgów i organizacji wdrażających edukację
+    informatyczną. Framework zdobył poparcie setek naukowców, nauczycieli K-12, firm
+    programistycznych, organizacji non-profit i stanów.
+  about_page_section_specific_description_6: Code.org formularz IRS 990 dla [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), i [2021](%{irs_url_8}). [Polityka
+    darowizn.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Zarejestruj się, aby otrzymywać aktualizacje
+    statusu] (%{sign_up_url}) o postępach w ruchu informatyki K-12 i o pracy Code.org.
+    Lub śledź Code.org w mediach społecznościowych:"
+  about_page_section_specific_description_8: Ponad 40% ruchu na naszej stronie pochodzi
+    spoza Stanów Zjednoczonych i liczba ta nadal rośnie. Aby rozszerzyć globalny dostęp
+    do informatyki, nasz zespół ściśle współpracuje z [ponad 100 międzynarodowymi
+    partnerami] (%{partners_url}), pomagając im promować Godzinę Kodeksu, opowiadać
+    się za zmianą polityki i szkolić nauczycieli. Tworzymy informatykę częścią międzynarodowego
+    dyskursu edukacyjnego, współpracując z ministerstwami edukacji z całego świata
+    i współpracując z organizacjami międzynarodowymi, takimi jak Organizacja Współpracy
+    Gospodarczej i Rozwoju oraz Organizacja Narodów Zjednoczonych ds. Edukacji, Nauki
+    i Kultury.
+  about_page_section_donors_description_1: Code.org® to zarejestrowana publiczna organizacja
+    non-profit 501c3, ze wsparciem ogółu społeczeństwa. Jesteśmy wdzięczni za hojne
+    wsparcie, które otrzymaliśmy od [osób i organizacji] (%{individuals_url}) którzy
+    wspierają naszą wizję.
+  about_page_section_donors_description_2: Osiągnięcia kodów (powyżej) pokazują naszą
+    zdolność do wykorzystania tych dolarów do silnych wyników. Ale biorąc pod uwagę
+    naszą ambicję organizacji non-profit, aby każde dziecko w każdej szkole miało
+    dostęp do informatyki - aby stać się obywatelami piśmiennymi w dzisiejszym cyfrowym
+    świecie i przetestować swoje zainteresowania dalszym odkrywaniem CS jako kariery
+    - mamy przed sobą długą drogę, aby osiągnąć cel pozyskiwania funduszy, który wesprze
+    tę wizję.
+  about_page_donors_link_1: Złóż darowizny
+  about_page_donors_link_2: "[zobacz naszą listę darczyńców] (%{donors_url})"
   language_code:
     ar: arabski
     az: azerbejdżański

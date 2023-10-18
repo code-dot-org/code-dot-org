@@ -5,36 +5,40 @@ fa:
   language: فارسی
   front_title: به بزرگترین رویداد یادگیری در تاریخ بپیوندید، %{campaign_date}
   coming_soon: به زودي
-  campaign_date_start_short: 5 دسامبر
-  campaign_date_start_long: ۴ دسامبر
-  campaign_date_short: ۴ تا ۱۰ دسامبر
+  campaign_date_start_short: 4 دسامبر
+  campaign_date_start_long: 4 دسامبر
+  campaign_date_short: 4 تا 10 دسامبر
   campaign_date_full: ۴ تا ۱۰ دسامبر
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5 تا 11 دسامبر 2022
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4 تا 10 دسامبر 2023
   nonus_campaign_date_start_short: 1 اکتبر
   nonus_campaign_date_start_long: اکتبر 1
   nonus_campaign_date_short: اول اکتبر تا 18 دسامبر
   nonus_campaign_date_full: 1 اکتبر  - 18 دسامبر
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
   latam_campaign_date_start_short: 1 اکتبر
   latam_campaign_date_start_long: اکتبر 1
   latam_campaign_date_short: اول اکتبر تا 18 دسامبر
   latam_campaign_date_full: 1 اکتبر  - 18 دسامبر
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
   europe_campaign_date_start_short: 1 اکتبر
   europe_campaign_date_start_long: اکتبر 1
   europe_campaign_date_short: اول اکتبر تا 18 دسامبر
   europe_campaign_date_full: 1 اکتبر  - 18 دسامبر
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
   africa_campaign_date_start_short: 1 اکتبر
   africa_campaign_date_start_long: اکتبر 1
   africa_campaign_date_short: اول اکتبر تا 18 دسامبر
   africa_campaign_date_full: 1 اکتبر  - 18 دسامبر
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
+  hoc2023_header: خلاقیت با هوش مصنوعی
+  hoc2023_social_creativity_with_ai_title: ساعت کد - چه چیزی ایجاد می کنید؟
+  hoc2023_social_creativity_with_ai_desc: استفاده از علم کامپیوتر برای کشف و یادگیری
+    در مورد AI!
   hoc2022_header: بگرد، بازی کن و خلق کن!
   social_hoc2022_explore_play_create: با کمک علوم کامپیوتر بگرد، بازی کن و خلق کن!
   codeorg_homepage_hoc2022_body: جهان را بگرد، امتیاز کسب کن، حرکت ایجاد کن - راه‌های
@@ -175,6 +179,32 @@ fa:
     یک کاتالوگ برنامه درسی جدید و صفحه آموزش دوباره طراحی‌شده برای کمک به شما در یافتن
     همه چیز!
   in_partnership_with: با مشارکت
+  shop_code_dot_org_heading: فروشگاه Code.org
+  shop_code_dot_org_desc: از کار ما حمایت کنید و جنبش را با افتخار بپوشید. کلاه های
+    ما توسط رئیس جمهور اوباما و افراد مشهور نیز پوشیده شده است.
+  spread_the_word_heading: این مفهوم را گسترش دهید
+  spread_the_word_desc: با به اشتراک گذاشتن Code.org با شبکه خود، تأثیر ما را تقویت
+    کنید. از رسانه های اجتماعی گرفته تا به روزرسانی های ایمیل، کشف کنید که چگونه می
+    توانید به ما در دستیابی به مربیان، دانش آموزان و طرفداران بیشتر کمک کنید.
+  follow_us_heading: ما را در شبکه های اجتماعی دنبال کنید
+  follow_us_desc: با ما در رسانه های اجتماعی به روز باشید و پست های ما را با شبکه
+    خود به اشتراک بگذارید تا مطلع شوید و به آگاهی رسانی کمک کنید.
+  facebook: فیس بوک
+  twitter: توييتر
+  linked_in: لینکدین
+  instagram: اینستاگرام
+  tik_tok: تیک‌تاک
+  device_tablet: لوح
+  device_laptop: لپ تاپ
+  device_desktop_computer: کامپیوتر رومیزی
+  device_mobile_device: دستگاه موبایل
+  subscribe_to_emails_heading: مشترک شدن در ایمیل
+  subscribe_to_emails_desc: در مورد آنچه اتفاق می افتد در Code.org و در آموزش علوم
+    کامپیوتر از طریق به روز رسانی های سه ماهه از طریق لیست پستی ما بخوانید.
+  subscribe_to_emails_intl: مشترک شدن در به روزرسانی های بین المللی
+  promote_code_dot_org_heading: Code.org را تبلیغ کنید
+  promote_code_dot_org_desc: با کمک آمار، نقل قول ها و فیلم ها، علوم کامپیوتر را در
+    منطقه خود ارتقا دهید.
   afe_partnership_logo_alt: لوگو مهندس آینده آمازون
   afe_partnership_thanks_desc: مهندس آینده آمازون یک برنامه جامع از کودکی به بازار
     کار است که برای الهام بخشیدن، آموزش و تعلیم کودکان و جوانان کم‌درآمد و سایر افراد
@@ -192,19 +222,48 @@ fa:
   curricula_title_high: برنامه های درسی دبیرستان
   curricula_desc_high: دوره ها و فعالیت های قانع کننده ای را مرور کنید که از شما و
     دانش آموزان دبیرستانی شما دعوت می کند تا عمیق تر به علوم کامپیوتر بپردازید.
+  for_administrators_heading: برای مدیران
+  for_administrators_desc: پیوستن به هزاران مدرسه ای که قبلا علوم کامپیوتر را به برنامه
+    درسی خود اضافه کرده اند.
+  for_parents_heading: برای اولیا
+  for_parents_desc: شما می توانید به تشویق مدرسه دانش آموز خود برای ارائه یا گسترش
+    آموزش علوم کامپیوتر کمک کنید.
+  for_educators_heading: برای آموزگاران
+  for_educators_desc: شروع به تدریس امروز - بدون تجربه علوم کامپیوتر لازم - با کارگاه
+    های آموزشی حرفه ای ما.
   students_label: دانش آموزان
   teachers_label: معلمان
+  educators_label: مربیان
+  companies_label: شرکتها
+  districts_label: ولسوالی
+  school_assemblies_label: مجامع مدارس
+  parents_label: والدین
+  public_officials_label: مقامات دولتی
+  volunteers_label: داوطلبان
+  virtual_events_label: رویدادهای مجازی
   teacher_label_csf: معلم مبانی علوم کامپیوتر
   teacher_label_csd: معلم کشفیات علوم کامپیوتر
   teacher_label_csp: معلم اصول علوم کامپیوتر
   teacher_label_csc: معلم پیوند با علوم کامپیوتری
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: انجمن معلم
+  teacher_forum_desc: برای دریافت مشاوره، بینش و پشتیبانی از سایر مربیان، از انجمن
+    معلمان Hour of Code دیدن کنید.
   required_materials: 'مواد مورد نیاز:'
   optional_materials: 'مواد اختیاری:'
-  call_to_action_explore_roles: نقش های باز را کاوش کنید
+  call_to_action_hold_an_event: برگزاری یک رویداد
+  call_to_action_register_event: رویداد خود را ثبت کنید
+  call_to_action_select_activity: یک فعالیت را انتخاب کنید
+  call_to_action_start_activity: یک فعالیت را شروع کنید
+  call_to_action_get_certificates: دریافت گواهینامه
+  call_to_action_go_beyond_hoc: از ساعت کد فراتر بروید
+  call_to_action_view_promo_resources: مشاهده منابع تبلیغاتی
   call_to_action_learn_more: بیشتر بدانید
   call_to_action_watch_now: اکنون تماشا کنید
   call_to_action_try_activity: فعالیت را امتحان کنید
+  call_to_action_try_activities: فعالیت ها را امتحان کنید
+  call_to_action_explore_activities: فعالیت ها را کشف کنید
+  call_to_action_explore_ai: کشف هوش مصنوعی
   call_to_action_explore_unit: کاوش واحد
   call_to_action_explore_curriculum: برنامه درسی را کاوش کنید
   call_to_action_explore_curriculum_options: گزینه‌های برنامه درسی را کاوش کنید
@@ -257,6 +316,7 @@ fa:
   call_to_action_find_self_paced_modules: یافتن ماژول‌های خودآموز
   call_to_action_join_teacher_forums: پیوستن به انجمن‌های معلمان
   call_to_action_explore_teacher_forums: انجمن معلمان را کاوش کنید
+  call_to_action_explore_teacher_forum: انجمن معلمان را کشف کنید
   call_to_action_explore_career_resources: کشف و بررسی منابع شغلی
   call_to_action_watch_videos: تماشای ویدیو
   call_to_action_download_posters: دانلود پوستر
@@ -273,11 +333,36 @@ fa:
   call_to_action_notify_available: در صورت موجود بودن به من اطلاع دهید
   call_to_action_register_early_access: برای دسترسی زودهنگام ثبت نام کنید
   call_to_action_open_positions: مشاهده پوزیشن های باز
+  call_to_action_explore_roles: نقش های باز را کاوش کنید
   call_to_action_get_guide: راهنما را دریافت کنید
   call_to_action_donate_to_cdo: به Code.org کمک مالی کنید
   call_to_action_start_fundraiser: شروع یک جمع آوری کمک مالی
   call_to_action_view_donation_policy: مشاهده سیاست کمک مالی
   call_to_action_view_donate_bitpay: با BitPay اهدا کنید
+  call_to_action_make_a_donation: کمک مالی کنید
+  call_to_action_other_ways_to_give: راه های دیگر برای دادن
+  call_to_action_become_partner_usa: تبدیل شدن به یک شریک ایالات متحده
+  call_to_action_become_partner_intl: تبدیل شدن به یک شریک بین المللی
+  call_to_action_become_a_volunteer: تبدیل شدن به یک داوطلب
+  call_to_action_start_translating: شروع به ترجمه کنید
+  call_to_action_learn_about_advocacy: درباره وکالت ما اطلاعات کسب کنید
+  call_to_action_visit_store: از فروشگاه دیدن کنید
+  call_to_action_view_faqs: مشاهده سوالات متداول بیشتر
+  aria_label_call_to_action_hoc_how_to_educators: راهنمای آموزش برای مربیان را مشاهده
+    کنید
+  aria_label_call_to_action_hoc_how_to_companies: راهنمای کارکرد شرکتها را مشاهده
+    کنید
+  aria_label_call_to_action_hoc_how_to_districts: راهنمای نحوه کار برای مناطق را مشاهده
+    کنید
+  aria_label_call_to_action_hoc_how_to_school_assemblies: راهنمای نحوه برگزاری مجامع
+    مدارس را مشاهده کنید
+  aria_label_call_to_action_hoc_how_to_parents: راهنمای کارکرد والدین را مشاهده کنید
+  aria_label_call_to_action_hoc_how_to_public_officials: مشاهده راهنمای کارکرد برای
+    مقامات دولتی
+  aria_label_call_to_action_hoc_how_to_volunteers: راهنمای کارکرد داوطلبان را مشاهده
+    کنید
+  aria_label_call_to_action_hoc_how_to_virtual_events: راهنمای نحوه انجام رویدادهای
+    مجازی را مشاهده کنید
   aria_label_call_to_action_afe: درباره مهندس آینده آمازون بیشتر بدانید
   aria_label_call_to_action_teaching_csf: برنامه آموزش حرفه ای مبانی علوم کامپیوتر
     را شروع کنید
@@ -613,6 +698,7 @@ fa:
   heading_explore_curriculum_catalog: تمام دوره های ما را در کاتالوگ برنامه درسی کاوش
     کنید
   heading_csa_ai: آیا به دنبال کارهایی هستید که بعد از آزمون AP® انجام دهید؟
+  heading_bring_cs_to_students: علوم کامپیوتر را به دانش آموزان بیاورید
   professional_learning_section_desc: همانطور که برای تدریس آماده می‌شوید، پشتیبانی
     لازم را دریافت کنید. معلمان آن را دوست دارند، و بیش از 90% آنها آن را بهترین پیشرفت
     حرفه‌ای در طول تاریخ دانسته‌اند.
@@ -882,6 +968,7 @@ fa:
     تمرکز دارد. با ترکیبی غنی از تئوری، نمونه های عملی و منابع، هدف آن توانمند سازی
     مربیان برای حرکت در چشم انداز هوش مصنوعی و افزایش تجربیات یادگیری دانش آموزان
     است.
+  ai_pl_101_resources_5: راهنمای اطمینان از رویکرد مسئولانه به هوش مصنوعی
   ai_pl_101_video_desc_6: 'در مورد فناوری جدیدی که تغییرات بزرگی را در AI ایجاد می
     کند، بیشتر بدانید، شامل دو فیلم جدید در مدل های زبان بزرگ (مانند ChatGPT) و Generative
     AI. بشنوید که چگونه این فن آوری های جدید به طور مستقیم از کارشناسان کار می کنند:
@@ -892,6 +979,8 @@ fa:
     خود را در آن فرو می برند، و همچنین ابزارهای پیشرفته برای کسانی که به دنبال به
     حداکثر رساندن پتانسیل خود هستند.
   ai_pl_101_resources_3: دستورالعمل های هوش مصنوعی برای تبدیل یادگیری دانش آموزان
+  ai_pl_101_resources_section_title: راه های بیشتر برای یادگیری در مورد AI
+  ai_pl_101_resources_guide: 'راهنمای همراه:'
   how_ai_works_hero_heading: هوش مصنوعی چگونه کار می کند
   how_ai_works_hero_desc: با «هوش مصنوعی چگونه کار می کند»، مجموعه ویدیویی ما و درس
     های همراه آن، به دنیای هوش مصنوعی شیرجه بزنید!
@@ -1727,6 +1816,30 @@ fa:
   donate_tabs_bitpay_desc: آینده دادن با ارز رمزنگاری شده را در آغوش بگیرید. از طریق
     BitPay، ارز دیجیتال شما می تواند به طور مستقیم از تلاش های Code.org در گسترش آموزش
     علوم کامپیوتر پشتیبانی کند.
+  help_page_top_heading: چگونه می توانید کمک کنید
+  help_page_top_desc: از ماموریت ما برای دسترسی به علم کامپیوتر برای هر کودک، در همه
+    جا حمایت کنید. تلاش های شما به ما کمک می کند تا نوآوران آینده را الهام بخشیم و
+    شکاف آموزش فناوری را برطرف کنیم.
+  help_page_top_subhead: به Code.org کمک مالی کنید
+  help_page_top_desc_02: ما در حال تلاش هستیم تا هر دانش آموز فرصتی برای یادگیری علوم
+    کامپیوتر - هر دو آنلاین و در مدارس، جایی که ما دوره های دائمی را ایجاد می کنیم
+    و معلمان را آموزش می دهیم. به ازای هر دلاری که اهدا میکنید، یک کودک با علم کامپیوتر
+    آشنا میشود.
+  help_page_partners_heading: تبدیل شدن به یک شریک
+  help_page_partners_desc: Code.org با سایر سازمان های غیر انتفاعی به عنوان شریک کار
+    می کند تا به گسترش علوم کامپیوتر به صورت محلی و پایدار کمک کند. درباره برنامه
+    ما بیشتر بدانید
+  help_page_volunteer_heading: داوطلب در کلاس درس
+  help_page_volunteer_desc: داوطلب شوید تا ساعت کد را تدریس کنید یا یک سخنران مهمان
+    در یک کلاس محلی باشید. ثبت نام کنید تا از فرصت های نزدیک خود مطلع شوید.
+  help_page_translate_heading: به ما در ترجمه کمک کنید
+  help_page_translate_desc: داوطلبان آموزش های ما را به بیش از 45 زبان ترجمه کرده
+    اند. به ما کمک کنید تا آموزش های خود را برای دانش آموزان در سراسر جهان گسترش دهیم!
+  help_page_speak_for_cs_heading: برای آموزش علوم کامپیوتر صحبت کنید
+  help_page_speak_for_cs_desc: در مورد فعالیت های حمایتی Code.org در سراسر ایالات
+    متحده و ده سیاستی که ما به ایالت ها توصیه می کنیم برای ایجاد پایه و اساس علوم
+    رایانه برای همه دانش آموزان، بیشتر بدانید. به علاوه، دریابید که چگونه می توانید
+    در ایالت خود تغییر ایجاد کنید.
   hoc_live: ساعت کد زنده
   hoc_live_sign_up_title: ثبت نام برای ساعت کد زنده
   hoc_live_learn_title: یادگیری با ساعت کد زنده
@@ -13140,6 +13253,127 @@ fa:
   all: همه
   dont_know: من نمی دانم
   language_label: زبان
+  before_hoc: قبل از ساعت کد
+  day_of_hoc: روز ساعت کد
+  after_hoc: بعد از ساعت کد
+  step_01: گام 1
+  step_02: گام 2
+  step_03: گام ۳
+  step_04: گام ۴
+  step_05: گام ۵
+  step_06: گام 6
+  step_07: گام هفتم
+  step_08: گام هشتم
+  hoc_how_to_top_heading: راهنمای شما برای ساعت کد
+  hoc_how_to_top_desc: راهنماهای نحوه کار سفارشی برای بهترین تجربه Hour of Code.
+  hoc_how_to_top_view_guide: مشاهده راهنما برای
+  hoc_how_to_nav_main_aria_label: یک راهنما را انتخاب کنید
+  hoc_how_to_nav_sidebar_aria_label: ناوبری نوار کناری
+  hoc_how_to_educators_intro_heading: چگونه برای ساعت کد نویسی تان را برنامه ریزی
+    کنید
+  hoc_how_to_educators_intro_desc: ساعت کد مقدمه ای یک ساعته با علوم کامپیوتر است
+    که با استفاده از آموزش های سرگرم کننده نشان می دهد که هر کس می تواند اصول اولیه
+    را یاد بگیرد. امسال، ما با ارائه فرصت های کدگذاری که شامل هوش مصنوعی (AI) و اجزای
+    غیر هوش مصنوعی است، Hour of Code را به اوج های جدیدی می رسانیم. چه شما یا دانش
+    آموزانتان برنامه نویس باتجربه هستید و چه همه شما در حال شروع اولین سفر علوم کامپیوتر
+    خود هستید، این ساعت کد یک سفر خارق العاده را وعده می دهد.
+  hoc_how_to_faq_question_prerequisites: پیش نیازهای انجام یک ساعت کد چیست؟
+  hoc_how_to_faq_answer_prerequisites: اجرای ساعت کد ساده است - حتی برای مبتدیان.
+    برای الهام بخشیدن به دانش آموزان برای کشف، ایجاد و یادگیری چیزهای جدید، نیازی
+    به تجربه در علوم کامپیوتر یا تدریس ندارید.
+  hoc_how_to_faq_question_devices: برای اجرای Hour of Code به چه دستگاههایی نیاز دارم؟
+  hoc_how_to_faq_answer_devices_01: 'دستگاههایی که میتوانید از آنها استفاده کنید:'
+  hoc_how_to_faq_answer_devices_02: اگر دستگاهها محدود یا در دسترس نیستند، [برنامه
+    نویسی جفت] (%{pair_url}) را امتحان کنید یا [فعالیتهای بدون اتصال] (%{unplugged_url})
+    ما را بررسی کنید تا بدون هیچ دستگاهی یاد بگیرید!
+  hoc_how_to_faq_question_volunteer: چه کسانی میتونن داوطلب بشن؟
+  hoc_how_to_faq_answer_volunteer: هرکس که علاقه مند به آموزش علوم کامپیوتر و افزایش
+    تنوع در فناوری است، می تواند داوطلب شود! ما دوست داریم داوطلبان از همه زمینه ها
+    شرکت کنند. ساعت کد دارای طیف گسترده ای از فعالیت ها برای تمام سنین و سطوح مهارت
+    است، بنابراین نیازی نیست که یک متخصص برنامه نویسی باشید تا داوطلب شوید!
+  hoc_how_to_faq_question_full_hour: آیا ساعت کد یک ساعت کامل طول می کشد؟
+  hoc_how_to_faq_answer_full_hour: بسیاری از دانش آموزان می توانند فعالیت های خود
+    را در کمتر از یک ساعت به پایان برسانند و این اشکالی ندارد! دانش آموزان می توانند
+    به یادگیری ادامه دهند در حالی که سایر دانش آموزان فعالیت خود را تکمیل می کنند.
+  hoc_how_to_faq_question_account: آیا دانش آموزان نیاز دارند با استفاده از یک حساب
+    کاربری وارد سیستم شوند?
+  hoc_how_to_faq_answer_account: برای دانشجویان برای امتحان ساعت کد نیازی به ثبت نام
+    یا ورود نیست. ثبت نام در Hour of Code به طور خودکار یک حساب کاربری Code.org ایجاد
+    نمی کند.
+  hoc_how_to_resources_heading_educators: سایر منابع ساعت کدنویسی برای مدرسان
+  hoc_how_to_resources_promo_heading: منابع تبلیغاتی
+  hoc_how_to_resources_promo_desc: تمام منابع مورد نیاز خود - چاپی و دیجیتال - را
+    پیدا کنید تا توجه به Hour of Code خود را جلب کنید.
+  hoc_how_to_resources_discover_heading: فعالیتها را کشف کنید
+  hoc_how_to_resources_discover_desc: مجموعه گسترده ای از آموزش های یک ساعته را که
+    برای همه سنین و در بیش از 45 زبان طراحی شده اند، کشف کنید.
+  hoc_how_to_step_label_plan: برنامه ریزی کنید که ساعت کد خود را کجا و چه زمانی انجام
+    می دهید
+  hoc_how_to_step_label_choose_activity: فعالیت خود را انتخاب کنید
+  hoc_how_to_step_label_test_activity: فعالیت خود را آزمایش کنید
+  hoc_how_to_step_label_register_event: رویداد خود را ثبت کنید
+  hoc_how_to_step_label_tell: به دانش آموزان، مدرسه و جامعه خود بگویید
+  hoc_how_to_step_label_get_coding: برنامه نویسی کنید!
+  hoc_how_to_step_label_celebrate: جشن گرفتن
+  hoc_how_to_step_label_beyond_hoc: فراتر از ساعت کد
+  hoc_how_to_step_beyond_hoc_subhead: اينجا تموم نميشه
+  hoc_how_to_step_beyond_hoc_desc: علم کامپیوتر نباید با ساعت کد به پایان برسد! در
+    حالی که 90 درصد والدین می خواهند که فرزندشان علوم کامپیوتر را یاد بگیرد، اکثر
+    مدارس هنوز آن را آموزش نمی دهند. همین امروز یاد بگیرید که چگونه CS را به مدرسه
+    فرزندتان بیاورید.
+  hoc_how_to_step_01_educators_subhead: زمان و فضای رویداد را انتخاب کنید که برای
+    تعداد دانش آموزان و دستگاههایی که در دسترس دارید مناسب باشد.
+  hoc_how_to_step_01_educators_desc_01: چه فضایی برای شما برای انجام Hour of Code
+    در دسترس است؟ قابلیت های تکنولوژیکی فضای خود و انواع دستگاههایی را که انتظار دارید
+    دانش آموزانتان روی آنها کار کنند، در نظر بگیرید. دانش آموزان می توانند بر روی
+    آموزش ها روی یک دستگاه واحد کار کنند، به نوبت با استفاده از یک دستگاه مشترک استفاده
+    کنند یا یک آموزش را با هم روی تخته سفید کلاس درس امتحان کنند. حتی آموزش های بدون
+    اتصال وجود دارد که می توانند بدون هیچ دستگاه تکمیل شوند. گزینه های بدون برق را
+    می توان در هر جایی انجام داد - حتی در فضای باز!
+  hoc_how_to_step_01_educators_desc_02: مردم در سراسر جهان به جشن ساعت کد در طول هفته
+    آموزش CS می پیوندند %{campaign_date} که آخرین آموزش ها و فعالیت ها منتشر می شود.
+    اما شما می توانید ساعت کد را در هر روز از سال انجام دهید!
+  hoc_how_to_step_02_educators_desc_01: فعالیت ها را بر اساس سن، تجربه، علایق و موارد
+    دیگر گروه خود کشف کنید. برای دانش آموزان محبوب است که آموزش های خود رهبری را امتحان
+    کنند، اگرچه بسیاری از فعالیت ها شامل برنامه های درسی برای معلمان برای راهنمایی
+    بحث یا گسترش فعالیت است.
+  hoc_how_to_step_02_educators_desc_02: از قبل تصمیم بگیرید که آیا می خواهید یک آموزش
+    واحد برای همه دانش آموزان خود انتخاب کنید یا بگذارید هر کودک خود را انتخاب کند.
+  hoc_how_to_step_02_educators_desc_03: امسال، شما و دانش آموزانتان می توانید [همه
+    چیز را در مورد هوش مصنوعی یاد بگیرید] (%ai_url) از طریق آموزش ها، برنامه های درس
+    و مجموعه ویدئویی جدید ما چگونه AI کار می کند.
+  hoc_how_to_step_03_educators_desc_01: قبل از ورود به کلاس درس، آموزش را خودتان امتحان
+    کنید تا بتوانید به سوالات پاسخ دهید!
+  hoc_how_to_step_03_educators_desc_02: همچنین می توانید آموزش ها را در رایانه ها
+    یا دستگاه های دانشجویی آزمایش کنید تا اطمینان حاصل کنید که آنها از صدا و ویدئو
+    پشتیبانی می کنند. پهنای باند کم دارید؟ برنامه ریزی کنید که ویدیوها را در جلوی
+    کلاس نمایش دهید، بنابراین هر دانش آموز فیلم های خود را دانلود نمی کند.
+  hoc_how_to_step_03_educators_desc_03: در نظر بگیرید که هدفون برای کلاس خود تهیه
+    کنید یا از دانش آموزان بخواهید که هدفون خود را بیاورند، اگر آموزشی که انتخاب می
+    کنید با صدا بهتر کار می کند.
+  hoc_how_to_step_04_educators_desc_01: هنگامی که رویداد Hour of Code خود را ثبت می
+    کنید، ایمیل های مفیدی با اخبار و نکاتی برای میزبانی موفقیت آمیز Hour of Code دریافت
+    خواهید کرد. همچنین به این ترتیب می توانید به داوطلبان محلی اطلاع دهید که مدرسه
+    شما در آن شرکت می کند. داوطلبان یک منبع عالی هستند و می توانند با کلاس شما در
+    مورد علوم کامپیوتر صحبت کنند یا به دانش آموزان خود در فعالیت های Hour of Code
+    کمک کنند.
+  hoc_how_to_step_05_educators_desc_01: دانش آموزان خود را برای این رویداد با به اشتراک
+    گذاشتن [ویدیوهای الهام بخش] (%{videos_url}) برجسته کردن افراد متنوع و روش های
+    خلاقانه ای که علم کامپیوتر می تواند در دنیای واقعی استفاده شود، هیجان زده کنید.
+  hoc_how_to_step_05_educators_desc_02: برنامه های Hour of Code خود را با معلمان دیگری
+    که ممکن است بخواهند در تفریح شرکت کنند به اشتراک بگذارید! این همچنین فرصتی عالی
+    برای ارتباط با انجمن دانش آموزان والدین معلم مدرسه شما یا به اشتراک گذاشتن در
+    خبرنامه های والدین است و به آنها اطلاع دهید که فرزندانشان چه چیزی یاد می گیرند.
+  hoc_how_to_step_06_educators_desc_01: دانش آموزان خود را به سمت فعالیت هدایت کنید،
+    شاید با به اشتراک گذاشتن پیوند روی صفحه یا از طریق سیستم مدیریت یادگیری کلاس درس
+    خود. دانش آموزان شما ممکن است با چالش هایی روبرو شوند - اشکالی ندارد! یادگیری
+    برنامه نویسی مانند یادگیری یک زبان جدید است؛ شما بلافاصله مسلط نخواهید شد. اگر
+    جواب را نمی دانید، می توانید با هم آن را بفهمید.
+  hoc_how_to_step_07_educators_desc_01: 'اطمینان حاصل کنید که موفقیت را جشن بگیرید!
+    عکس ها و فیلم های رویداد Hour of Code خود را در رسانه های اجتماعی به اشتراک بگذارید.
+    از #HourOfCode و @codeorg استفاده کنید تا بتوانیم موفقیت شما را نیز برجسته کنیم!'
+  hoc_how_to_step_07_educators_desc_02: همچنین می توانید گواهینامه هایی را برای دانش
+    آموزان خود چاپ کنید تا پیشرفت خود را نشان دهند!
   team_page_full_team_alt_text: نزدیک به 100 کارمند Code.org با تی شرت های آبی و زرد
     در اتاق کنفرانس هتل برای رویداد Codechla در تابستان 2022 این شرکت ژست می گیرند.
   careers_page_code_pride_alt_text: دو کارمند ارائه دهنده زنان در حالی که انتهای یک
@@ -13643,6 +13877,10 @@ fa:
   video_library_page_inspirational_video_title_11: هر کس می تواند یاد بگیرد (1 دقیقه)
   video_library_page_inspirational_video_title_12: لو کو فالتا و تغذیه اسکوئلاس (2
     دقیقه)
+  video_library_page_inspirational_video_title_13: ناسا ساعت کد را جشن می گیرد (2
+    دقیقه)
+  video_library_page_inspirational_video_title_14: بیشتر از یک بازی (1 دقیقه)
+  video_library_page_inspirational_video_title_15: ایجاد با علوم کامپیوتر (1 دقیقه)
   video_library_page_not_hacked_video_title_1: چگونه هک نشم:مقدمه
   video_library_page_not_hacked_video_title_2: چگونه هک نشم:کلمات عبور
   video_library_page_not_hacked_video_title_3: چگونه هک نشم:احراز هویت و قفل دستگاه
@@ -13651,6 +13889,148 @@ fa:
   video_library_page_not_hacked_video_title_6: چگونه هک نشم:پیامرسانی و دانلودها
   video_library_page_not_hacked_video_title_7: 'چگونه هک نشکنیم: به روزرسانی ها را
     نصب کنید'
+  about_us_page_title: درباره ما
+  about_us_page_hero_description: Code.org یک سازمان غیرانتفاعی نوآوری آموزشی است
+    که به این چشم انداز اختصاص داده شده است که هر دانش آموز در هر مدرسه فرصت یادگیری
+    علوم کامپیوتر را به عنوان بخشی از آموزش اصلی K-12 خود دارد. ما دسترسی به علوم
+    کامپیوتر را در مدارس گسترش می دهیم، با تمرکز بر افزایش مشارکت زنان جوان و دانش
+    آموزان از سایر گروه های کم نمایندگی. Code.org که ارائه دهنده پیشرو برنامه درسی
+    علوم کامپیوتر K-12 در بزرگترین مناطق مدرسه ای در ایالات متحده است، همچنین کمپین
+    سالانه [ساعت کد] (%{hour_url}) را سازماندهی می کند که بیش از ۱۵٪ از کل دانش آموزان
+    جهان را درگیر کرده است. Code.org توسط اهداکنندگان سخاوتمندانه از جمله مایکروسافت،
+    آمازون، گوگل و [بسیاری دیگر] پشتیبانی می شود.%{others_url}
+  about_us_page_section_title_1: بیش از 80 میلیون دانش آموز و 2 میلیون معلم در Code.org
+  about_us_page_statistic_figcaption: مشارکت Code.org از سال تحصیلی 2021-2022. [به
+    داده های تفکیک مراجعه کنید.] ()%{data_url}
+  about_us_page_statistic_description: Code.org تنوع در علوم کامپیوتر را با رسیدن
+    به دانش آموزان از همه زمینه ها در جایی که هستند، در سطح مهارت، در مدارس و به روشهایی
+    که الهام بخش آنها برای ادامه یادگیری است، افزایش می دهد. اکثریت قریب به اتفاق
+    دانش آموزان در Code.org از گروههای دانشجویی هستند که از لحاظ تاریخی در علوم کامپیوتر
+    کمتر نمایندگی میکنند. افزایش تنوع در علوم کامپیوتر پایه و اساس کار ما است و [ما
+    شما را تشویق می کنیم که در مورد تلاش های ما بیشتر بخوانید] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org در اخبار
+  about_us_page_section_news_description: مشاهده همه گذشته [اخبار و اطلاعیه ها] (%{news_url})
+  about_us_page_section_table: اهداف و معیارهای ما
+  about_us_page_section_table_header_1: هدف کد.ORG
+  about_us_page_section_table_header_2: دستاورد
+  abous_page_section_table_cell_1_1: بهبود تنوع در CS * (دانشجویان آمریکایی) *
+  abous_page_section_table_cell_1_2: ۴۵٪ دانش آموزان Code.org زنان جوان هستند، ۵۰٪
+    دانش آموزان گروه‌های نژادی و قومی به حاشیه رانده هستند و ۴۶٪ دانش آموزان آمریکایی
+    در مدارس با نیازهای بالا هستند. درباره [رویکرد ما به تنوع] بیشتر بخوانید%{diversity_url}.
+  about_page_section_table_cell_2_1: الهام بخش دانش آموزان
+  about_page_section_table_cell_2_2: ده‌ها میلیون نفر [ساعت رمز] (%{hour_url}) را
+    امتحان کرده‌اند. (۴۲۶٬۳۷۰٬۵۶۱ خدمت. ۴۹٪ زن)
+  about_page_section_table_cell_3_1: دسترسی به کلاسهای درس
+  about_page_section_table_cell_3_2: 591,636 معلم برای تدریس دوره های مقدماتی ما در
+    [Code Studio] (%{code_studio_url}) ثبت نام کرده اند و 19,177,297 دانش آموز ثبت
+    نام کرده اند.
+  about_page_section_table_cell_4_1: آماده سازی معلمان جدید CS
+  about_page_section_table_cell_4_2: ما بیش از ۱۰۶،۰۰۰ معلم جدید را برای تدریس علوم
+    پایه در کلاس های K-12 آماده کرده ایم. در مورد [برنامه های یادگیری حرفه ای ما]
+    آشنا شوید%{learning_programs_url}.
+  about_page_section_table_cell_5_1: برنامه درسی منطقه مدرسه را تغییر دهید
+  about_page_section_table_cell_5_2: ما با [180+ از بزرگترین مناطق مدرسه] (%{schoold_disctrict_url})
+    و 60 شریک منطقه ای همکاری کرده ایم تا [CS را به برنامه درسی مدرسه اضافه کنید]
+    (%{cs_curriculum_url}). [درباره تبدیل شدن به یک شریک منطقه ای بیاموزید.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: تنظیم سیاست ها برای پشتیبانی از CS
+  about_page_section_table_cell_6_2: "[سیاست ها در ۵۰ ایالت ایالات متحده تغییر کرد]
+    (%{states_url}) برای ایجاد استانداردهای آموزش CS، حساب کردن دوره های CS برای فارغ
+    التحصیلی دبیرستان و غیره [(جزئیات)] (%{details_url})"
+  about_page_section_table_cell_7_1: جهانی شوید
+  about_page_section_table_cell_7_2: دوره های ما در بیش از 67 زبان در دسترس هستند
+    که در بیش از 180 کشور مورد استفاده قرار می گیرند.
+  about_page_section_table_under_label: 'منبع: فعالیت استودیو کد و [نظرسنجی مربیان
+    شرکت کننده] (%{educators_url})'
+  about_page_section_title_3: اطلاعات بیشتر، تاریخ و فلسفه
+  about_page_section_more_description_1: 'در سال ۲۰۱۳، Code.org توسط برادران دوقلو
+    [Hadi](%{hadi_url}) و [علی پرتوی]] () با یک (%{partovi_url}) ترویج علم کامپیوتر
+    را [video]ه‌اندا%{video_url}زی شد. این ویدیو برای یک روز در یوتیوب #1 شد و 15000
+    مدرسه برای کمک به ما تماس گرفتند. از آن زمان، ما از یک کارمند متشکل از داوطلبان
+    گسترش یافته ایم تا یک سازمان کامل که از یک جنبش جهانی حمایت می کند، بسازیم. ما
+    معتقدیم که آموزش علوم کامپیوتر با کیفیت باید برای همه کودکان در دسترس باشد، نه
+    فقط برای تعداد کمی خوش شانس.'
+  about_page_section_more_description_2: 'برای حمایت از هدف ما، ما در سراسر طیف آموزشی
+    کار می کنیم: طراحی دوره های خود یا همکاری با دیگران، آموزش معلمان، همکاری با مناطق
+    بزرگ مدرسه، کمک به تغییر سیاست های دولت، گسترش بین المللی از طریق مشارکت ها و
+    بازاریابی برای شکستن کلیشه ها.'
+  about_page_section_more_description_3: کار ما بر اساس [دهه ها تلاش، توسط سازمان
+    ها و افراد بی شماری] (%{efforts_url}) که به تأسیس، تأمین مالی و گسترش آموزش علوم
+    کامپیوتر کمک کرده اند، بنا می شود. ما سپاسگزاریم که از کمک خستگی ناپذیر جامعه
+    گسترده تر آموزش علوم کامپیوتر بهره مند می شویم و [ما از همه شرکا و افرادی که در
+    طول سال ها از تأثیر ما حمایت کرده اند تشکر می کنیم] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[ارزش های اصلی و دستورالعمل های پیام رسانی ما]
+    (%{core_url})"
+  about_page_section_more_list_3: "[برنامه درسی و فلسفه آموزش و پرورش ما] (%{curriculum_url})"
+  about_page_section_more_list_4: "[سخنرانی TEDx توسط موسس ما هادی پرتوی در مورد اینکه
+    چرا علوم کامپیوتر برای همه است (ویدئو)] ()%{tedx_url}"
+  about_page_section_title_4: رویکردی متحد کننده در یک جهان تقسیم شده
+  about_page_section_specific_title_1: رویکردی متحد کننده در یک جهان تقسیم شده
+  about_page_section_specific_title_2: تعهد ما به دسترسی
+  about_page_section_specific_title_3: تعهد ما به دوره‌های آموزشی رایگان و فناوری
+    اُپن سورس (متن باز)
+  about_page_section_specific_title_4: ائتلاف مدافع Code.org
+  about_page_section_specific_title_5: چارچوب علوم کامپیوتر K-12
+  about_page_section_specific_title_6: اهدا کنندگان Code.org
+  about_page_section_specific_title_7: ما را دنبال کنید
+  about_page_section_specific_title_8: بازار هدف بین‌المللی Code.org
+  about_page_section_specific_description_1: نقش جهانی Code.org در جنبش علوم کامپیوتر
+    K-12 تنها به این دلیل امکان پذیر است که ما از یک رویکرد متحد کننده در بین ذینفعان
+    متنوع و اغلب متفرقه استفاده می کنیم. در زمان افزایش قطبش، ایده افزایش فرصت برای
+    دانشجویان، مردم را از سراسر طیف سیاسی متحد می کند. اعضای تیم Code.org، دانش آموزان،
+    معلمان و حامیان دیدگاه های متنوع و متفاوتی دارند و همه آنها در ماموریت ما استقبال
+    می کنند. [ادامه مطلب] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org معتقد است که علوم کامپیوتر برای
+    همه دانشجویان بنیادی است و ما متعهد به عدالت، دسترسی، و فرصت در سازمانی خود هستیم
+    [values.](%{values_url}) برای رسیدن به این هدف، ما برای شناسایی و از بین بردن
+    موانعی که مانع ورود و مشارکت کامل دانش آموزان و مربیان معلول می شود، تلاش می کنیم.
+    برای کسب اطلاعات بیشتر در مورد تلاش های ما، به [بیانیه دسترسی] مراجعه کنید. (%{accessibility_url})
+  about_page_section_specific_description_3: تمامی منابع برنامه درسی و آموزشهایی که
+    ما نویسندگی می کنیم، برای همیشه آزاد خواهند بود و تحت مجوز [Creative Commons]
+    (%{commons_url}) به طور علنی مجوز خواهند بود و به دیگران اجازه می دهد منابع آموزشی
+    مشتق شده برای اهداف غیر تجاری ایجاد کنند. اگر علاقه مند به صدور مجوز مواد ما برای
+    اهداف تجاری هستید، [با ما تماس بگیرید] (%{contact_us_url}). دوره های ما برای استفاده
+    در سراسر جهان یا توسط گویشوران زبان های مختلف ترجمه شده است. تکنولوژی ما به عنوان
+    یک [پروژه منبع باز] توسعه یافته است. (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Code.org] (%{advocacy_url})
+    یک ائتلاف دوحزبی از شرکت‌ها و سازمان‌های غیرانتفاعی است که برای کمک به ایجاد سیاست‌های
+    فدرال و ایالتی ایالات متحده برای گسترش و حفظ دسترسی به علوم کامپیوتر K-12 و گسترش
+    مشارکت و تنوع در این زمینه همکاری می‌کنند. ما [رهبران سیاسی جمهوریخواه و دموکرات]
+    را در%{leaders_url}آرمان مشترک گرد هم می‌آوریم که از گسترش دسترسی و مشارکت در
+    علوم کامپیوتر K-12 حمایت می‌کنند."
+  about_page_section_specific_description_5: کد.ORG عضو کمیته راهبری است که به تأسیس
+    [چارچوب علوم کامپیوتر K-12]] (%{framework_url}) - یک راهنمای سطح بالا برای ایالت‌ها،
+    مناطق، و سازمان‌های پیاده‌سازی آموزش علوم کامپیوتر کمک کرد. این چارچوب حمایت صدها
+    دانشگاهیان، مربیان K-12، شرکت های نرم افزاری، سازمان های غیر انتفاعی و ایالت ها
+    را به دست آورده است.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[ثبت نام برای دریافت به روز رسانی وضعیت]
+    (%{sign_up_url}) در مورد پیشرفت در جنبش علوم کامپیوتر K-12 و در مورد کار Code.org.
+    یا Code.org را در رسانه های اجتماعی دنبال کنید:"
+  about_page_section_specific_description_8: بیش از 40٪ از ترافیک وب سایت ما از خارج
+    از ایالات متحده می آید و این رقم همچنان در حال افزایش است. به منظور گسترش دسترسی
+    جهانی به علوم کامپیوتر، تیم ما همکاری نزدیکی با [بیش از ۱۰۰ شریک بین المللی] (%{partners_url})،
+    به آنها در ترویج ساعت کد، حمایت از تغییر سیاست و آموزش معلمان کمک می کند. ما با
+    همکاری وزارتخانه های آموزش و پرورش از سراسر جهان و همکاری با سازمان های بین المللی
+    مانند سازمان همکاری و توسعه اقتصادی و سازمان آموزشی، علمی و فرهنگی سازمان ملل
+    متحد، علوم کامپیوتر را بخشی از گفتمان آموزش بین المللی قرار می دهیم.
+  about_page_section_donors_description_1: Code.org® یک سازمان غیرانتفاعی عمومی 501c3
+    ثبت شده است که با حمایت عموم مردم دارد. ما از حمایت سخاوتمندانه ای که از [افراد
+    و سازمان ها] دریافت کرده ایم سپاسگزاریم (%{individuals_url}) که از چشم انداز ما
+    حمایت می کنند.
+  about_page_section_donors_description_2: دستاوردهای کدها (در بالا) توانایی ما در
+    استفاده از این دلارها را به نتایج قوی نشان می دهد. اما با توجه به جاه طلبی غیرانتفاعی
+    ما که هر کودکی در هر مدرسه باید به علوم کامپیوتر دسترسی داشته باشد - برای تبدیل
+    شدن به شهروندان باسواد در دنیای دیجیتال امروز و آزمایش علاقههایشان به اکتشاف بیشتر
+    در رشته علوم کامپیوتر به عنوان یک شغل - راه طولانی برای رسیدن به هدف جمع آوری
+    کمک مالی که از این چشم انداز حمایت خواهد کرد، داریم.
+  about_page_donors_link_1: کمک مالی کنید
+  about_page_donors_link_2: "[لیست اهداکنندگان ما را ببینید] (%{donors_url})"
   language_code:
     ar: عربی
     az: آذربایجانی
