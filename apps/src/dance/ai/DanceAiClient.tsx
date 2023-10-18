@@ -9,27 +9,35 @@ import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.
  * @returns: a JSON string representing an object containing the effects that were chosen, for
  * example: {"backgroundEffect":"sparkles","backgroundColor":"cool","foregroundEffect":"bubbles"}
  */
-export function chooseEffects(emojis) {
+
+type CachedWeightsMapping = {
+  emojiAssociations: {[key: string]: number[]};
+  output: string[];
+};
+
+export function chooseEffects(emojis: string[]) {
   // Obtain final summed output weight based off input received
-  const outputTypes = [CachedBackgrounds, CachedForegrounds, CachedPalettes];
-  const outputWeights = [];
-  outputTypes.forEach(outputJson => {
-    outputWeights.push(calculateOutputWeightsVector(emojis, outputJson));
+  const outputTypes: CachedWeightsMapping[] = [
+    CachedBackgrounds,
+    CachedForegrounds,
+    CachedPalettes,
+  ];
+  const outputWeights: number[][] = outputTypes.map(function (map) {
+    return calculateOutputWeightsVector(emojis, map);
   });
 
   // Sort and slice top scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
   const numRandomOptions = 3;
-  const outputOptions = [];
-  outputWeights.forEach((weightVector, i) => {
-    outputOptions.push(
-      obtainTopOptions(numRandomOptions, weightVector, outputTypes[i])
-    );
-  });
+  const outputOptions: [number, string][][] = outputWeights.map(
+    (weightVector, i) => {
+      return obtainTopOptions(numRandomOptions, weightVector, outputTypes[i]);
+    }
+  );
 
   // Clarification of which array correlates to which option
-  const backgroundOptions = outputOptions[0];
-  const foregroundOptions = outputOptions[1];
-  const paletteOptions = outputOptions[2];
+  const backgroundOptions: [number, string][] = outputOptions[0];
+  const foregroundOptions: [number, string][] = outputOptions[1];
+  const paletteOptions: [number, string][] = outputOptions[2];
 
   // Choose random value from top scoring options
   const chosenEffects = {
@@ -55,15 +63,17 @@ export function chooseEffects(emojis) {
  * @param {*} associatedOutputJson, precalculated vector weights for each possible type of output (e.g. BackgroundsEffects, ForegroundEffects, etc.)
  * @returns 1d array of values between [-3, 3] with indexes that map to output "classes" (e.g. "circles" for BackgroundEffects) Higher values = stronger correlation
  */
-function calculateOutputWeightsVector(emojis, associatedOutputJson) {
-  const individualInputVectors = [];
-  emojis.forEach(emojiName => {
-    individualInputVectors.push(
-      associatedOutputJson['emojiAssociations'][emojiName]
-    );
+function calculateOutputWeightsVector(
+  emojis: string[],
+  associatedOutputJson: CachedWeightsMapping
+) {
+  const individualInputVectors: number[][] = emojis.map(emojiName => {
+    return associatedOutputJson['emojiAssociations'][emojiName];
   });
-  const sumWeights = individualInputVectors.reduce((firstList, secondList) =>
-    firstList.map((value, index) => value + secondList[index])
+
+  const sumWeights: number[] = individualInputVectors.reduce(
+    (firstList, secondList) =>
+      firstList.map((value, index) => value + secondList[index])
   );
 
   return sumWeights;
@@ -76,10 +86,18 @@ function calculateOutputWeightsVector(emojis, associatedOutputJson) {
  * @param {*} associatedOutputJson, precalculated vector weights for each possible type of output (e.g. BackgroundsEffects, ForegroundEffects, etc.)
  * @returns 1d array of tuples in the format ([score], [output key]) e.g. ("0.51", "circles")
  */
-function obtainTopOptions(numOptions, outputWeights, associatedOutputJson) {
-  const topOptions = outputWeights
+function obtainTopOptions(
+  numOptions: number,
+  outputWeights: number[],
+  associatedOutputJson: CachedWeightsMapping
+) {
+  const topOptions: [number, string][] = outputWeights
     .map(function (sum, index) {
-      return [sum, associatedOutputJson['output'][index]];
+      const options: [number, string] = [
+        sum,
+        associatedOutputJson['output'][index],
+      ];
+      return options;
     })
     .sort((item1, item2) => item2[0] - item1[0])
     .slice(0, numOptions);
