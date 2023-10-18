@@ -484,7 +484,7 @@ export default {
       },
       BLOCK_TYPES.behaviorDefinition,
       {
-        [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
+        [Blockly.BlockValueType.SPRITE]: BLOCK_TYPES.spriteParameterGet,
       },
       false /* disableParamEditing */,
       [

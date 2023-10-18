@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 
@@ -238,7 +239,7 @@ exports.forceInsertTopBlock = function (input, blockType) {
     if (child.nodeType === 1) {
       var type = child.getAttribute('type');
       if (
-        type !== 'procedures_defnoreturn' &&
+        type !== BLOCK_TYPES.procedureDefinition &&
         type !== 'procedures_defreturn'
       ) {
         firstBlock = root.removeChild(child);

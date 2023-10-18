@@ -35,6 +35,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import color from '@cdo/apps/util/color';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -762,7 +763,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         var hasWhenRun = Blockly.mainBlockSpace
           .getTopBlocks()
           .some(function (block) {
-            return block.type === 'when_run' && block.isUserVisible();
+            return block.type === BLOCK_TYPES.whenRun && block.isUserVisible();
           });
 
         var defaultMessage = hasWhenRun
@@ -1412,7 +1413,10 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
   }
 
   const type = emptyBlock.type;
-  if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
+  if (
+    type === BLOCK_TYPES.procedureDefinition ||
+    type === 'procedures_defreturn'
+  ) {
     const emptyBlockInfo = emptyBlock.getProcedureInfo();
     const findUsages = block =>
       block.type === emptyBlockInfo.callType &&
@@ -1481,7 +1485,7 @@ FeedbackUtils.prototype.hasAllBlocks_ = function (blocks) {
 FeedbackUtils.prototype.getUserBlocks_ = function () {
   var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
   var blocks = allBlocks.filter(function (block) {
-    var blockValid = !block.disabled && block.type !== 'when_run';
+    var blockValid = !block.disabled && block.type !== BLOCK_TYPES.whenRun;
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.

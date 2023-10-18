@@ -132,7 +132,7 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
   // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
   let miniToolboxBlocks = [];
   if (this.type === BLOCK_TYPES.behaviorDefinition) {
-    miniToolboxBlocks.push('sprite_parameter_get');
+    miniToolboxBlocks.push(BLOCK_TYPES.spriteParameterGet);
   }
 
   // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
@@ -246,7 +246,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   allFunctions.sort(nameComparator).forEach(({name, id}) => {
     blockList.push({
       kind: 'block',
-      type: 'procedures_callnoreturn',
+      type: BLOCK_TYPES.procedureCall,
       extraState: {
         name: name,
         id: id,

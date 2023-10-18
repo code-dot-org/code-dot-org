@@ -7,6 +7,7 @@ import {
   flush,
 } from '@amplitude/analytics-browser';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import {Block} from 'blockly';
 
@@ -32,7 +33,10 @@ const triggerBlocks = [
   BlockTypes.NEW_TRACK_ON_TRIGGER,
 ];
 
-const functionBlocks = ['procedures_defnoreturn', 'procedures_callnoreturn'];
+const functionBlocks = [
+  BLOCK_TYPES.procedureDefinition,
+  BLOCK_TYPES.procedureCall,
+];
 
 interface BlockStats {
   endingBlockCount: number;

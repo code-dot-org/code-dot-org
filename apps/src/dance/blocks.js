@@ -116,7 +116,7 @@ export default {
       },
       BLOCK_TYPES.behaviorDefinition,
       {
-        [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
+        [Blockly.BlockValueType.SPRITE]: BLOCK_TYPES.spriteParameterGet,
       },
       false /* disableParamEditing */,
       [
@@ -323,12 +323,12 @@ export default {
           block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
         },
         overrides: {
-          getVars(category) {
+          getVars() {
             return {
               Behavior: [this.getFieldValue('NAME')],
             };
           },
-          callType_: 'gamelab_behavior_get',
+          callType_: BLOCK_TYPES.behaviorGet,
         },
       });
 
@@ -339,7 +339,7 @@ export default {
     );
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.BEHAVIOR,
-      'gamelab_behavior_get'
+      BLOCK_TYPES.behaviorGet
     );
     Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
       initialize(flyout, cursor) {

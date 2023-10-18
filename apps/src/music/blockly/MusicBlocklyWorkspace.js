@@ -1,5 +1,6 @@
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockTypes} from './blockTypes';
+import {BLOCK_TYPES, Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import {getBlockMode} from '../appConfig';
@@ -11,7 +12,6 @@ import {
 } from './constants';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import {Renderers} from '@cdo/apps/blockly/constants';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 /**
@@ -113,7 +113,7 @@ export default class MusicBlocklyWorkspace {
       // implementations will become part of the runtime code for both when_run,
       // as well as for each new trigger handler.
       topBlocks.forEach(functionBlock => {
-        if (functionBlock.type === 'procedures_defnoreturn') {
+        if (functionBlock.type === BLOCK_TYPES.procedureDefinition) {
           // Accumulate some custom code that calls all the functions
           // together, simulating tracks mode.
           const actualFunctionName =

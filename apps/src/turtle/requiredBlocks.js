@@ -4,6 +4,7 @@
  * In the future, some of these may be moved to common.js.
  */
 
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 var requiredBlockUtils = require('../required_block_utils');
 
 // This tests for and creates a draw_a_square block on page 2.
@@ -195,14 +196,14 @@ var defineWithArg = function (func_name, arg_name) {
   return {
     test: function (block) {
       return (
-        block.type === 'procedures_defnoreturn' &&
+        block.type === BLOCK_TYPES.procedureDefinition &&
         block.getFieldValue('NAME') === func_name &&
         block.parameterNames_ &&
         block.parameterNames_.length &&
         block.parameterNames_[0] === arg_name
       );
     },
-    type: 'procedures_defnoreturn',
+    type: BLOCK_TYPES.procedureDefinition,
     titles: {NAME: func_name},
     extra: '<mutation><arg name="' + arg_name + '"></arg></mutation>',
   };
