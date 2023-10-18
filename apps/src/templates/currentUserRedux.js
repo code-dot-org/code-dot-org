@@ -6,6 +6,7 @@ import experiments from '@cdo/apps/util/experiments';
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
+const SET_OVER_21 = 'currentUser/SET_OVER_21';
 const SET_USER_ROLE_IN_COURSE = 'currentUser/SET_USER_ROLE_IN_COURSE';
 const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
@@ -31,10 +32,13 @@ export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
   isSignedIn,
 });
-export const setUserType = (userType, under13, over21) => ({
+export const setUserType = (userType, under13) => ({
   type: SET_USER_TYPE,
   userType,
   under13,
+});
+export const setOver21 = over21 => ({
+  type: SET_OVER_21,
   over21,
 });
 export const setUserRoleInCourse = userRoleInCourse => ({
@@ -102,6 +106,11 @@ export default function currentUser(state = initialState, action) {
       ...state,
       userType: action.userType,
       under13: action.under13,
+    };
+  }
+  if (action.type === SET_OVER_21) {
+    return {
+      ...state,
       over21: action.over21,
     };
   }

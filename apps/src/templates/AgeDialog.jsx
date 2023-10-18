@@ -4,7 +4,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import {SignInState, setUserType} from '@cdo/apps/templates/currentUserRedux';
+import {SignInState, setOver21} from '@cdo/apps/templates/currentUserRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/locale';
@@ -38,6 +38,7 @@ class AgeDialog extends Component {
     turnOffFilter: PropTypes.func.isRequired,
     storage: PropTypes.object.isRequired,
     unitName: PropTypes.string,
+    setOver21: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -80,7 +81,7 @@ class AgeDialog extends Component {
         unit_name: this.props.unitName,
         current_path: document.location.pathname,
       });
-      setUserType(true);
+      this.props.setOver21(true);
     }
   };
 
@@ -171,8 +172,8 @@ export default connect(
     unitName: state.progress.scriptName,
   }),
   dispatch => ({
-    setUserType(over21) {
-      dispatch(setUserType(over21));
+    setOver21(over21) {
+      dispatch(setOver21(over21));
     },
   })
 )(AgeDialog);

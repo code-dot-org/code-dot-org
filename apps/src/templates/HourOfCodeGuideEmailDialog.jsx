@@ -6,53 +6,55 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {
+  Heading1,
+  Heading2,
   Heading3,
-  Heading5,
-  BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
 
 function HourOfCodeGuideEmailDialog(signedIn) {
+  console.log(signedIn);
   const [isOpen, setIsOpen] = useState(true);
 
   const onClose = () => {
     setIsOpen(false);
   };
 
-  const bodyText = () => {
-    return signedIn ? i18n.weHaveEverything() : i18n.signUpToReceiveGuide();
-  };
+  const bodyText = () =>
+    signedIn === true ? i18n.weHaveEverything() : i18n.signUpToReceiveGuide();
 
-  const emailGuideButtonText = () => {
-    return signedIn ? i18n.emailMeAGuide() : i18n.getGuideContinue();
-  };
+  const emailGuideButtonText = () =>
+    signedIn === true ? i18n.emailMeAGuide() : i18n.getGuideContinue();
 
-  const continueWithoutEmailButtonText = () => {
-    return signedIn ? i18n.continueToActivity() : i18n.continueWithoutGuide();
-  };
+  const continueWithoutEmailButtonText = () =>
+    signedIn === true ? i18n.continueToActivity() : i18n.continueWithoutGuide();
 
   return (
     <div>
       {isOpen && (
         <AccessibleDialog onClose={onClose}>
           <div tabIndex="0">
-            <Heading3>{i18n.welcomeToDanceParty()}</Heading3>
+            <Heading1>{i18n.welcomeToDanceParty()}</Heading1>
           </div>
           <div>
-            <BodyTwoText>{i18n.learnHowToHost()}</BodyTwoText>
+            <Heading2>{i18n.learnHowToHost()}</Heading2>
           </div>
           <div>
-            <Heading5>{bodyText}</Heading5>
+            <Heading3>{bodyText()}</Heading3>
             <Button
               id="uitest-no-email-guide"
-              text={continueWithoutEmailButtonText}
-              onClick={() => {}}
+              text={continueWithoutEmailButtonText()}
+              onClick={() => {
+                onClose();
+              }}
               styleAsText
               color={Button.ButtonColor.brandSecondaryDefault}
             />
             <Button
               id="uitest-email-guide"
-              text={emailGuideButtonText}
-              onClick={() => {}}
+              text={emailGuideButtonText()}
+              onClick={() => {
+                onClose();
+              }}
               styleAsText
               color={Button.ButtonColor.brandSecondaryDefault}
             />
