@@ -10,6 +10,7 @@ import {
   Heading2,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
+import experiments from '@cdo/apps/util/experiments';
 
 function HourOfCodeGuideEmailDialog(signedIn) {
   console.log(signedIn);
@@ -30,7 +31,7 @@ function HourOfCodeGuideEmailDialog(signedIn) {
 
   return (
     <div>
-      {isOpen && (
+      {isOpen && experiments.isEnabled(experiments.HOC_TUTORIAL_DIALOG) && (
         <AccessibleDialog onClose={onClose}>
           <div tabIndex="0">
             <Heading1>{i18n.welcomeToDanceParty()}</Heading1>
