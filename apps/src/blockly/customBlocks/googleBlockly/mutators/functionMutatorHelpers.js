@@ -29,10 +29,7 @@ export function handleLoadDescription(block, extraState) {
 export function getBlockDescription(block) {
   let description = block.description;
   if (useModalFunctionEditor) {
-    const descriptionField = block.getField('DESCRIPTION');
-    if (descriptionField) {
-      description = descriptionField.getValue();
-    }
+    description = block.getFieldValue('DESCRIPTION');
   }
   return description;
 }
