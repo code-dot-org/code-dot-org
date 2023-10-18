@@ -1,5 +1,6 @@
-import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
+import {BlockSvg} from 'blockly';
 import React, {useCallback, useEffect, useRef} from 'react';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import ProgramExecutor from '../lab2/ProgramExecutor';
 import moduleStyles from './ai-visualization-preview.module.scss';
 
@@ -23,7 +24,7 @@ const AiVisualizationPreview: React.FunctionComponent<
     }
     // Create a temporary setup block
     const setup: BlockSvg = Blockly.getMainWorkspace().newBlock(
-      'Dancelab_whenSetup'
+      BLOCK_TYPES.danceWhenSetup
     ) as BlockSvg;
 
     // Attach the blocks to the setup block
