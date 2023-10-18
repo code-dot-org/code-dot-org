@@ -5,12 +5,9 @@ import i18n from '@cdo/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import {
-  Heading1,
-  Heading2,
-  Heading3,
-} from '@cdo/apps/componentLibrary/typography';
+import {Heading1, Heading2} from '@cdo/apps/componentLibrary/typography';
 import experiments from '@cdo/apps/util/experiments';
+import style from './accessible-dialogue.module.scss';
 
 function HourOfCodeGuideEmailDialog(signedIn) {
   console.log(signedIn);
@@ -36,19 +33,18 @@ function HourOfCodeGuideEmailDialog(signedIn) {
           <div tabIndex="0">
             <Heading1>{i18n.welcomeToDanceParty()}</Heading1>
           </div>
-          <div>
+          <div className={style.middle}>
             <Heading2>{i18n.learnHowToHost()}</Heading2>
+            {bodyText()}
           </div>
           <div>
-            <Heading3>{bodyText()}</Heading3>
             <Button
               id="uitest-no-email-guide"
               text={continueWithoutEmailButtonText()}
               onClick={() => {
                 onClose();
               }}
-              styleAsText
-              color={Button.ButtonColor.brandSecondaryDefault}
+              color={Button.ButtonColor.white}
             />
             <Button
               id="uitest-email-guide"
@@ -56,7 +52,6 @@ function HourOfCodeGuideEmailDialog(signedIn) {
               onClick={() => {
                 onClose();
               }}
-              styleAsText
               color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
