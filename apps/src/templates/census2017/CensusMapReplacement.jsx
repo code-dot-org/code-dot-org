@@ -224,10 +224,10 @@ export default class CensusMapReplacement extends Component {
           'circle-color': [
             'match',
             ['get', 'teaches_cs'],
-            ['MAYBE', 'HISTORICAL_MAYBE'],
-            '#FFFDA6',
             ['NO', 'HISTORICAL_NO'],
             '#989CF8',
+            ['MAYBE', 'HISTORICAL_MAYBE'],
+            '#FFFDA6',
             'white',
           ],
           'circle-stroke-width': 1,
@@ -393,6 +393,8 @@ export default class CensusMapReplacement extends Component {
             <div className="caption">Offers computer science</div>
             <div className="color legend-limited-cs" />
             <div className="caption">Limited or no CS opportunities</div>
+            <div className="color legend-inconclusive-cs" />
+            <div className="caption">Inconclusive data</div>
             <div className="color legend-no-data-cs" />
             <div className="caption">No Data</div>
           </div>
@@ -403,6 +405,8 @@ export default class CensusMapReplacement extends Component {
           <div className="caption">Offers computer science</div>
           <div className="color legend-limited-cs" />
           <div className="caption">Limited or no CS opportunities</div>
+          <div className="color legend-inconclusive-cs" />
+          <div className="caption">Inconclusive data</div>
           <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
         </div>
