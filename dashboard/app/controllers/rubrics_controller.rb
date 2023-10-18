@@ -111,6 +111,7 @@ class RubricsController < ApplicationController
         :id,
         :learning_goal,
         :ai_enabled,
+        :tips,
         :position,
         :_destroy,
         {
