@@ -12,16 +12,25 @@ export function flyoutCategory(workspace) {
     Blockly.Variables.createVariableButtonHandler(button.getTargetWorkspace());
   });
 
-  let blockList = [button];
-
-  blockList.push(
-    ...Blockly.cdoUtils.getCustomCategoryBlocksForFlyout('VARIABLE')
+  const levelConfigBlocks = Array.from(
+    Blockly.cdoUtils.getCustomCategoryBlocksForFlyout('VARIABLE')
   );
 
-  const xmlBlockList = flyoutCategoryBlocks(workspace);
-  blockList = blockList.concat(xmlBlockList);
+  let mathChangeBlock = null;
 
-  return blockList;
+  // Find and get the "math_change" block if it exists, and remove it from levelConfigBlocks
+  const updatedLevelConfigBlocks = levelConfigBlocks.filter(block => {
+    if (block.getAttribute('type') === 'math_change') {
+      mathChangeBlock = block;
+      return false; // Exclude the math_change block
+    }
+    return true; // Include other blocks
+  });
+
+  // Call flyoutCategoryBlocks with the mathChangeBlock if found
+  const categoryBlocks = flyoutCategoryBlocks(workspace, mathChangeBlock);
+
+  return [button, ...categoryBlocks, ...updatedLevelConfigBlocks];
 }
 
 /**
@@ -30,22 +39,13 @@ export function flyoutCategory(workspace) {
  * @param workspace The workspace containing variables.
  * @returns Array of XML block elements.
  */
-function flyoutCategoryBlocks(workspace) {
+function flyoutCategoryBlocks(workspace, mathChangeBlock) {
   const variableModelList = workspace.getVariablesOfType('');
 
   const xmlList = [];
   if (variableModelList.length > 0) {
     // New variables are added to the end of the variableModelList.
     const mostRecentVariable = variableModelList[variableModelList.length - 1];
-    if (Blockly.Blocks['variables_set']) {
-      const block = Blockly.utils.xml.createElement('block');
-      block.setAttribute('type', 'variables_set');
-      block.setAttribute('gap', '8');
-      block.appendChild(
-        Blockly.Variables.generateVariableFieldDom(mostRecentVariable)
-      );
-      xmlList.push(block);
-    }
 
     if (Blockly.Blocks['variables_get']) {
       variableModelList.sort(Blockly.VariableModel.compareByName);
@@ -57,6 +57,36 @@ function flyoutCategoryBlocks(workspace) {
         xmlList.push(block);
       }
     }
+    if (Blockly.Blocks['variables_set']) {
+      const block = Blockly.utils.xml.createElement('block');
+      block.setAttribute('type', 'variables_set');
+      block.setAttribute('gap', '8');
+      block.appendChild(
+        Blockly.Variables.generateVariableFieldDom(mostRecentVariable)
+      );
+      xmlList.push(block);
+    }
+    if (Blockly.Blocks['math_change'] && !mathChangeBlock) {
+      const block = Blockly.utils.xml.createElement('block');
+      block.setAttribute('type', 'math_change');
+      block.setAttribute('gap', Blockly.Blocks['variables_get'] ? '20' : '8');
+      block.appendChild(
+        Blockly.Variables.generateVariableFieldDom(mostRecentVariable)
+      );
+      const value = Blockly.utils.xml.textToDom(
+        '<value name="DELTA">' +
+          '<shadow type="math_number">' +
+          '<field name="NUM">1</field>' +
+          '</shadow>' +
+          '</value>'
+      );
+      block.appendChild(value);
+      xmlList.push(block);
+    }
+  }
+  if (mathChangeBlock) {
+    // Use the provided math_change block
+    xmlList.push(mathChangeBlock);
   }
   return xmlList;
 }
