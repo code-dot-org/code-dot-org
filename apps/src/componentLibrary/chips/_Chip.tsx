@@ -41,9 +41,7 @@ const Chip: React.FunctionComponent<ChipProps> = ({
   }, [inputRef, onCheckedChange]);
 
   // TODO:
-  //  - add sizes
   // - remove multiSelectGroup
-  // - create templates for upcoming components
   // - start making tags components
 
   return (
