@@ -27,12 +27,12 @@ layout: wide_index
 %section
   .wrapper
     = view :"ai/ai_section_intro", overline_label: hoc_s(:for_students_teacher_led_learning), section_heading: hoc_s(:learn_how_ai_works), section_desc: hoc_s(:hoc_ai_learn_how_ai_works_desc)
-    CAROUSEL HERE
+    = view :"ai/how_ai_works_lessons"
 
     %hr
 
     = view :"ai/ai_section_intro", overline_label: hoc_s(:professional_development), section_heading: hoc_s(:ai_101_for_educators), section_desc: hoc_s(:hoc_ai_101_for_educators_desc)
-    CAROUSEL HERE
+    = view :"ai/ai_101_series"
 
     %hr
 
@@ -45,10 +45,9 @@ layout: wide_index
     .flex-container
       %img{src: "//code.org/images/fill-480x360/tutorials/hoc2019/oceans.jpg", alt: ""}
       %img{src: "//code.org/images/fill-480x360/tutorials/hoc2021/ca_avatar.jpg", alt: ""}
-
     %a.link-button{href: resolve_url("/learn?subject=ai")}
       =hoc_s(:call_to_action_try_hoc_ai_activities)
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
-%script{:src=>'/js/ai/how-ai-works-video-series.js'}
+%script{:src=>'/js/page/ai.js'}

@@ -38,19 +38,20 @@
     },
   ]
 
-.carousel-wrapper#how_ai_works_videos
-  .carousel
+.carousel-wrapper#how_ai_works_video_series
+  .carousel.videos
     .slides
       - video_item.each do |video_item|
         .slide
-          %figure.video-responsive.video-wrapper.video-wrapper--one-col
-            %div.video-container
-              %iframe{allowfullscreen: "", frameborder: "0", src: "https://www.youtube-nocookie.com/embed/#{video_item[:embed_link]}?si=VPXqAFtxC8bcmOHO"}
-            %figcaption
-              = video_item[:caption]
+          .slide-content
+            %figure.video-responsive.video-wrapper.video-wrapper--one-col
+              %div.video-container
+                %iframe{allowfullscreen: "", frameborder: "0", src: "https://www.youtube-nocookie.com/embed/#{video_item[:embed_link]}"}
+              %figcaption
+                = video_item[:caption]
 
   .pagination
-    #how_ai_works_videos-pagination
+    #how_ai_works_video_series-pagination
   .dd__buttons
     %button.carousel__prev#prev_1
       %img{src: "/images/carousel/prev.svg", alt: "previous"}

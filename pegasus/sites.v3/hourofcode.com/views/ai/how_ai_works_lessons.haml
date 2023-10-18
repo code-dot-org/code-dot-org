@@ -1,0 +1,33 @@
+- slides_index = 7
+
+- video_code = ["KHbwOetbmbs", "2hXG8v8p0KM", "JrXazCEACVo", "X-AWdfSFCHQ", "X994dDnmRmY", "tJQSyzBUAew", "zNxw5gJtHLc"]
+
+.carousel-wrapper#how_ai_works_lessons
+  .carousel.blocks
+    .slides
+      - slides_index.times do |index|
+        .slide
+          .slide-content
+            .action-block.action-block--one-col
+              .content-wrapper
+                %p.overline-two
+                  =hoc_s(:ai_curriculum_grades_01)
+                %h3=hoc_s("how_ai_works_lesson_title_0#{index + 1}")
+                %figure.video-responsive
+                  %div
+                    %iframe{allowfullscreen: "", frameborder: "0", src: "https://www.youtube-nocookie.com/embed/#{video_code[index]}"}
+                %p=hoc_s("how_ai_works_lesson_desc_0#{index + 1}")
+                %p
+                  %strong=hoc_s(:module_label_duration)
+                  =hoc_s(:module_duration_45_mins)
+              .content-footer
+                %a.link-button{href: CDO.studio_url("/s/how-ai-works-2023/lessons/#{index + 1}"), aria:{label: hoc_s("aria_label_call_to_action_how_ai_works_lesson_0#{index + 1}")}}
+                  = hoc_s(:call_to_action_see_lesson_details)
+
+  .pagination
+    #how_ai_works_lessons-pagination
+  .dd__buttons
+    %button.carousel__prev#prev_2
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+    %button.carousel__next#next_2
+      %img{src: "/images/carousel/next.svg", alt: "next"}
