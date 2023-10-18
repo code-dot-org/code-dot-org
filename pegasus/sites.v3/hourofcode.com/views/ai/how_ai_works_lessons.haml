@@ -24,10 +24,4 @@
                 %a.link-button{href: CDO.studio_url("/s/how-ai-works-2023/lessons/#{index + 1}"), aria:{label: hoc_s("aria_label_call_to_action_how_ai_works_lesson_0#{index + 1}")}}
                   = hoc_s(:call_to_action_see_lesson_details)
 
-  .pagination
-    #how_ai_works_lessons-pagination
-  .dd__buttons
-    %button.carousel__prev#prev_2
-      %img{src: "//code.org/images/carousel/prev.svg", alt: "previous"}
-    %button.carousel__next#next_2
-      %img{src: "//code.org/images/carousel/next.svg", alt: "next"}
+  = view :carousel_pagination, carousel_id: "how_ai_works_lessons-pagination", carousel_index: "2"

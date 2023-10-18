@@ -50,10 +50,4 @@
               %figcaption
                 = video_item[:caption]
 
-  .pagination
-    #how_ai_works_video_series-pagination
-  .dd__buttons
-    %button.carousel__prev#prev_1
-      %img{src: "//code.org/images/carousel/prev.svg", alt: "previous"}
-    %button.carousel__next#next_1
-      %img{src: "//code.org/images/carousel/next.svg", alt: "next"}
+  = view :carousel_pagination, carousel_id: "how_ai_works_video_series-pagination", carousel_index: "1"
