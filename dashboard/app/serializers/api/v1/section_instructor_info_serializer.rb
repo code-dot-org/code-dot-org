@@ -4,7 +4,9 @@ class Api::V1::SectionInstructorInfoSerializer < ActiveModel::Serializer
   attributes :status, :instructor_name, :instructor_email
 
   def instructor_name
-    object.instructor.name
+    if object.active?
+      return  object.instructor.name
+    end
   end
 
   def instructor_email
