@@ -69,31 +69,33 @@ const Chips: React.FunctionComponent<ChipsProps> = ({
       <fieldset>
         {label && <label className={moduleStyles.groupLabel}>{label}</label>}
 
-        {options.map(option => (
-          <Chip
-            label={option.label}
-            name={inputName}
-            value={option.value}
-            key={option.value}
-            checked={values.includes(option.value)}
-            // The child's `required` prop will be set to `false` if the
-            // Group's `required` prop is falsy. It will be set to `true` if
-            // the Group's `required` prop is truthy AND none of the options
-            // are `checked`, or `false` if at least one of the options is
-            // `checked`.
-            required={required ? values.length === 0 : false}
-            disabled={disabled}
-            onCheckedChange={checked => {
-              if (checked) {
-                // Add this value to the `values` array.
-                setValues(uniq([...values, option.value]));
-              } else {
-                // Remove this value from the `values` array.
-                setValues(values.filter(v => v !== option.value));
-              }
-            }}
-          />
-        ))}
+        <div className={moduleStyles.chipsContainer}>
+          {options.map(option => (
+            <Chip
+              label={option.label}
+              name={inputName}
+              value={option.value}
+              key={option.value}
+              checked={values.includes(option.value)}
+              // The child's `required` prop will be set to `false` if the
+              // Group's `required` prop is falsy. It will be set to `true` if
+              // the Group's `required` prop is truthy AND none of the options
+              // are `checked`, or `false` if at least one of the options is
+              // `checked`.
+              required={required ? values.length === 0 : false}
+              disabled={disabled}
+              onCheckedChange={checked => {
+                if (checked) {
+                  // Add this value to the `values` array.
+                  setValues(uniq([...values, option.value]));
+                } else {
+                  // Remove this value from the `values` array.
+                  setValues(values.filter(v => v !== option.value));
+                }
+              }}
+            />
+          ))}
+        </div>
       </fieldset>
     </div>
   );

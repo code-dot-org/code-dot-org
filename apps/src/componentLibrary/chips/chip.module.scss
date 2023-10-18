@@ -4,9 +4,12 @@
 
 // Chips common styles
 .chips {
-  fieldset div {
-    display: inline-block;
-    margin: 0 0.25rem;
+  fieldset {
+    .chipsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
     .chip {
       display: inline-block;
