@@ -39,8 +39,6 @@ class LearningGoalAiEvaluation < ApplicationRecord
 
   STATUSES = {
     SUCCESS: 0,
-    PENDING: 1,
-    FAILURE: 2,
   }
 
   validates :status, inclusion: {in: STATUSES.values}
