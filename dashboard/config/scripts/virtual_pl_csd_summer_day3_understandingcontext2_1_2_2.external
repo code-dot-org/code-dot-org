@@ -1,0 +1,24 @@
+name 'virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Recruiting And Retaining Students Gallery Walk
+
+<br>
+<img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+#### This session is an opportunity for you to take part in a "gallery walk" to review the work of their fellow teachers from the Recruiting and Retaining Students synchronous session.
+
+---
+### To Do:
+#### 1. Review the slides your fellow participants made in the Recruiting and Retaining Students synchronous session.
+#### 2. While viewing, highlight barriers you may be able to influence, and leave a comment (either in the Notes section or using the Comment feature) identifying actions you might take as a teacher for CS Principles to influence, reduce, or eliminate this barrier.
+#### 3. Think about the lessons that you experienced today.
+
+
+#### 4. Reflection QUESTION: Write down one barrier to access or inclusion you see yourself as able to influence or control and what steps or actions you can take to address that barrier.
+
+
+
+MARKDOWN

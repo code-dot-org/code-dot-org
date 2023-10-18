@@ -112,7 +112,7 @@ export default function RubricContent({
       const aiInfo = aiEvaluation.find(
         item => item.learning_goal_id === learningGoalId
       );
-      return aiInfo?.confidence;
+      return aiInfo?.ai_confidence;
     } else {
       return null;
     }
