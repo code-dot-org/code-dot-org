@@ -1,6 +1,4 @@
-@import 'breakpoints';
-
-$border-radius: 4px;
+@import 'breakpoints', 'action-blocks';
 
 html {
   font-size: 16px;
@@ -38,6 +36,22 @@ section.banner {
 
 section.activities {
   margin-bottom: -4rem;
+
+  .section-intro {
+    width: 100%;
+  }
+
+  .flex-container {
+    margin: 3rem auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    img {
+      max-width: 250px;
+    }
+  }
 }
 
 
