@@ -253,7 +253,7 @@ describe('RubricContent', () => {
   it('passes down aiUnderstanding and aiConfidence to the LearningGoal', async () => {
     const mockFetch = sinon.stub(global, 'fetch');
     const aiEvaluationsMock = [
-      {learning_goal_id: 2, understanding: 2, confidence: 70},
+      {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
     ];
     mockFetch.returns(
       Promise.resolve(new Response(JSON.stringify(aiEvaluationsMock)))
@@ -281,7 +281,7 @@ describe('RubricContent', () => {
       aiEvaluationsMock[0].understanding
     );
     expect(learningGoal2Wrapper.prop('aiConfidence')).to.equal(
-      aiEvaluationsMock[0].confidence
+      aiEvaluationsMock[0].ai_confidence
     );
 
     sinon.restore();
