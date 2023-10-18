@@ -34,7 +34,6 @@ class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
     assert_equal 33, summary[:lesson_position]
     assert_equal 'rubric level', summary[:level_name]
     assert_equal 'evaluated learning goal', summary[:learning_goal]
-    assert_equal 'SUCCESS', summary[:status]
     assert_equal 'CONVINCING', summary[:understanding]
     assert_equal 'MEDIUM', summary[:ai_confidence]
   end

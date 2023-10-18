@@ -37,12 +37,6 @@ class LearningGoalAiEvaluation < ApplicationRecord
 
   validates :ai_confidence, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
 
-  STATUSES = {
-    SUCCESS: 0,
-  }
-
-  validates :status, inclusion: {in: STATUSES.values}
-
   def summarize_for_instructor
     {
       id: id,
@@ -63,7 +57,6 @@ class LearningGoalAiEvaluation < ApplicationRecord
       lesson_position: lesson.absolute_position,
       level_name: level.name,
       learning_goal: learning_goal.learning_goal,
-      status: STATUSES.to_h.invert[status].to_s,
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.invert[understanding].to_s,
       ai_confidence: AI_CONFIDENCE_LEVELS.invert[ai_confidence].to_s,
     }
