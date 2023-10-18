@@ -1,7 +1,15 @@
-import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
-import CachedForegrounds from '@cdo/static/dance/ai/model/cached-spacy-foreground-map.json';
-import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
+import UntypedCachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
+import UntypedCachedForegrounds from '@cdo/static/dance/ai/model/cached-spacy-foreground-map.json';
+import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 
+type CachedWeightsMapping = {
+  emojiAssociations: {[key: string]: number[]};
+  output: string[];
+};
+
+const CachedBackgrounds: CachedWeightsMapping = UntypedCachedBackgrounds;
+const CachedForegrounds: CachedWeightsMapping = UntypedCachedForegrounds;
+const CachedPalettes: CachedWeightsMapping = UntypedCachedPalettes;
 /**
  * Chooses the foreground, background, and palette effects that are most closely associated with
  * the emojis the user selected.
@@ -9,12 +17,6 @@ import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.
  * @returns: a JSON string representing an object containing the effects that were chosen, for
  * example: {"backgroundEffect":"sparkles","backgroundColor":"cool","foregroundEffect":"bubbles"}
  */
-
-type CachedWeightsMapping = {
-  emojiAssociations: {[key: string]: number[]};
-  output: string[];
-};
-
 export function chooseEffects(emojis: string[]) {
   // Obtain final summed output weight based off input received
   const outputTypes: CachedWeightsMapping[] = [
