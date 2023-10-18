@@ -1,4 +1,5 @@
 // Functions for checking required blocks.
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 /**
  * Generate a required blocks dictionary for a call to a procedure that does
@@ -11,11 +12,11 @@ exports.call = function (name) {
   return {
     test: function (block) {
       return (
-        block.type === 'procedures_callnoreturn' &&
+        block.type === BLOCK_TYPES.procedureCall &&
         block.getFieldValue('NAME').toLowerCase() === name.toLowerCase()
       );
     },
-    type: 'procedures_callnoreturn',
+    type: BLOCK_TYPES.procedureCall,
     titles: {NAME: name},
   };
 };
@@ -31,11 +32,11 @@ exports.callWithArg = function (func_name, arg_name) {
   return {
     test: function (block) {
       return (
-        block.type === 'procedures_callnoreturn' &&
+        block.type === BLOCK_TYPES.procedureCall &&
         block.getFieldValue('NAME').toLowerCase() === func_name.toLowerCase()
       );
     },
-    type: 'procedures_callnoreturn',
+    type: BLOCK_TYPES.procedureCall,
     extra:
       '<mutation name="' +
       func_name +
@@ -57,11 +58,11 @@ exports.define = function (name) {
   return {
     test: function (block) {
       return (
-        block.type === 'procedures_defnoreturn' &&
+        block.type === BLOCK_TYPES.procedureDefinition &&
         block.getFieldValue('NAME').toLowerCase() === name.toLowerCase()
       );
     },
-    type: 'procedures_defnoreturn',
+    type: BLOCK_TYPES.procedureDefinition,
     titles: {NAME: name},
   };
 };

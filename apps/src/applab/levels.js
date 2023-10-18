@@ -3,6 +3,7 @@ import * as utils from '../utils';
 import blockUtils from '../block_utils';
 import {ApplabBlocks} from '@cdo/apps/applab/sharedApplabBlocks';
 import {ApplabGoalBlocks} from '@cdo/apps/applab/sharedApplabGoalBlocks';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;
@@ -24,8 +25,7 @@ levels.simple = {
         <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
         <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'
   ),
-  startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>',
+  startBlocks: `<block type="${BLOCK_TYPES.whenRun}" deletable="false" x="20" y="20"></block>`,
 };
 
 levels.custom = {
@@ -144,6 +144,5 @@ levels.full_sandbox = {
       createCategory(msg.catVariables(), '', 'VARIABLE') +
       createCategory(msg.catProcedures(), '', 'PROCEDURE')
   ),
-  startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>',
+  startBlocks: `<block type="${BLOCK_TYPES.whenRun}" deletable="false" x="20" y="20"></block>`,
 };

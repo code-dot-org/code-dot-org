@@ -242,10 +242,10 @@ export const blocks = {
           block.setUserVisible(false);
         },
         overrides: {
-          getVars(category) {
+          getVars() {
             return {};
           },
-          callType_: 'gamelab_behavior_get',
+          callType_: BLOCK_TYPES.behaviorGet,
         },
       });
 
@@ -256,7 +256,7 @@ export const blocks = {
     );
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.BEHAVIOR,
-      'gamelab_behavior_get'
+      BLOCK_TYPES.behaviorGet
     );
 
     Blockly.Blocks.sprite_parameter_get = {
