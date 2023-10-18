@@ -33,33 +33,3 @@ class SectionInstructor < ApplicationRecord
     removed: 3,
   }
 end
-
-public def create_section(section, email)
-  # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
-  # for a total of 6)
-  if SectionInstructor.where(section: section).count >= 6
-    raise ArgumentError.new('section full')
-  end
-
-  instructor = User.find_by(email: email, user_type: :teacher)
-
-  si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: section)
-  if instructor.blank?
-    raise
-  end
-
-  # Actually delete the instructor if they were soft-deleted so they can be re-invited.
-  if si&.deleted_at.present?
-    si.really_destroy!
-  # Can't re-add someone who is already an instructor (or invited/declined)
-  elsif si.present?
-    raise ArgumentError.new('already invited')
-  end
-
-  return SectionInstructor.create!(
-    section: section,
-    instructor: instructor,
-    status: :invited,
-    invited_by: current_user
-  )
-end
