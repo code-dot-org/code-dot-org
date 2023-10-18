@@ -1,0 +1,17 @@
+name 'virtual-pl-csd-summer-day4-UnderstandingContext2_2_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Applying Our Knowledge of Identity and Bias
+<br>
+<img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+#### In this session, you watch a video showing the debugging process in Unit 3 Lesson 6. You will learn about tools within App Lab to support debugging. Then you will have the opportunity to work on the lesson.
+
+### To Do:
+#### Watch the Unit 3 Lesson 7 - Debugging (4:20) video. (Note the lesson number is now 6)
+
+
+
+MARKDOWN
