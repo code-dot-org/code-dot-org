@@ -10,7 +10,6 @@ import experiments from '@cdo/apps/util/experiments';
 import style from './accessible-dialogue.module.scss';
 
 function HourOfCodeGuideEmailDialog(signedIn) {
-  console.log(signedIn);
   const [isOpen, setIsOpen] = useState(true);
 
   const onClose = () => {
