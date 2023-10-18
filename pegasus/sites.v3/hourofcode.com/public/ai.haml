@@ -22,7 +22,7 @@ layout: wide_index
 %section.bg-neutral-light
   .wrapper.centered
     = view :"ai/ai_section_intro", overline_label: hoc_s(:for_everyone), section_heading: hoc_s(:how_ai_works_video_series), section_desc: hoc_s(:hoc_ai_how_ai_works_video_series_desc)
-    CAROUSEL HERE
+    = view :"ai/how_ai_works_video_series"
 
 %section
   .wrapper.centered
@@ -36,13 +36,17 @@ layout: wide_index
 
     %hr
 
-    = view :"ai/ai_section_intro", overline_label: hoc_s(:for_students_teacher_led_lessons), section_heading: hoc_s(:learn_about_ai_impacts), section_desc: hoc_s(:hoc_ai_101_for_educators_desc)
+    = view :"ai/ai_section_intro", overline_label: hoc_s(:for_students_teacher_led_lessons), section_heading: hoc_s(:learn_about_ai_impacts), section_desc: hoc_s(:hoc_ai_impacts_desc)
     ACTION BLOCKS HERE
 
 %section.activities.bg-neutral-light
   .wrapper.centered
-    = view :"ai/ai_section_intro", overline_label: hoc_s(:for_everyone), section_heading: hoc_s(:hoc_ai_activities), section_desc: hoc_s(:hoc_ai_101_for_educators_desc)
+    = view :"ai/ai_section_intro", overline_label: hoc_s(:for_everyone), section_heading: hoc_s(:hoc_ai_activities), section_desc: hoc_s(:hoc_ai_activities_desc)
     IMAGES HERE
 
     %a.link-button{href: "#"}
       =hoc_s(:call_to_action_try_hoc_ai_activities)
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+%script{:src=>'/js/ai/how-ai-works-video-series.js'}

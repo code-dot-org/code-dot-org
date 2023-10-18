@@ -18,6 +18,16 @@ hr {
   margin: 4rem 0;
 }
 
+div.section-intro{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: $width-md) {
+    width: 100%;
+  }
+}
+
 section.banner {
   padding: 0;
 
@@ -28,4 +38,119 @@ section.banner {
 
 section.activities {
   margin-bottom: -4rem;
+}
+
+
+figure.video-responsive {
+  max-width: 560px; /* Can be overridden if needed */
+  width: 100%;
+  margin: unset;
+}
+
+figure.video-responsive > div {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  border: 1px solid #EAEBEB;
+  box-sizing: content-box;
+}
+
+figure.video-responsive > div iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-wrapper {
+  padding-bottom: 0;
+
+  @media (max-width: 1279px) {
+    overflow: hidden;
+  }
+
+  // Carousel with prev and next button navigation
+  button.carousel__prev,
+  button.carousel__next {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 1280px) {
+    button.carousel__prev {
+      position: absolute;
+      left: -3.5rem;
+    }
+
+    button.carousel__next {
+      position: absolute;
+      right: -3.5rem;
+    }
+
+    button.carousel__prev,
+    button.carousel__next {
+      display: block !important;
+      top: calc(50% - 50px);
+      background: none;
+      border: none;
+      transform: translateY(-50%);
+      transition: .3s;
+      padding: 0;
+      width: 1.75rem;
+
+      &:hover {
+        background: none;
+        opacity: .8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.carousel {
+  margin: 3rem 0;
+
+  @media screen and (max-width: $width-sm) {
+    margin: 1rem 0;
+  }
+
+  .video-wrapper {
+    min-width: 18.75rem;
+    max-width: 26.25rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    position: relative;
+
+    .slides {
+      width: 300%;
+      height: 26rem;
+      display: flex;
+    }
+
+    .slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 17.25rem;
+    }
+
+    .video-wrapper {
+      min-width: 14.3rem;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .slides {
+    height: 15rem !important;
+    display: flex;
+  }
 }

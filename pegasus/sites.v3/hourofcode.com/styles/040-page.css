@@ -1,8 +1,9 @@
 :root {
   /* Colors */
-  --brand_primary_light: #d5f1f4;
+  --brand_primary_light: #aee4ea;
   --brand_primary_default: #008b9a;
   --brand_primary_dark: #176870;
+  --brand_secondary_light: #c7b4df;
   --brand_secondary_default: #5c3f7f;
   --brand_secondary_dark: #432d5c;
   --neutral_white: #FFFFFF;
@@ -572,10 +573,10 @@ a.link-button.secondary:hover {
   border-left-color: #b9bf15;
 }
 .carousel-wrapper .pagination a {
-  background: #7765a1;
+  background: var(--brand_secondary_light);
 }
 .carousel-wrapper .pagination a.selected {
-  background: #ffa401;
+  background: var(--brand_secondary_default);
 }
 .container_nonresponsive { width: 970px; margin: 0 auto; max-width: none !important; }
 
