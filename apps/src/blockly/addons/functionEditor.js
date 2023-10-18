@@ -312,8 +312,8 @@ export default class FunctionEditor {
   addEditorWorkspaceBlockConfig(blockConfig) {
     const returnValue = {
       ...blockConfig,
-      x: 50,
-      y: 50,
+      x: 20,
+      y: 20,
     };
     return returnValue;
   }
