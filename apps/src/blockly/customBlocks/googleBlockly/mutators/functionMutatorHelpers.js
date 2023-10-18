@@ -9,7 +9,7 @@ const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
 // in extra state, either add a new editable input field to the block
 // for the description (if the modal function editor is enabled),
 // or set the description property on the block (if the modal function editor is disabled).
-export function handleLoadDescription(block, extraState) {
+export function setBlockDescription(block, extraState) {
   const description = extraState['description'];
   if (useModalFunctionEditor) {
     block

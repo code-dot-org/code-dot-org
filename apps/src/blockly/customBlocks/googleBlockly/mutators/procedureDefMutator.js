@@ -13,7 +13,7 @@
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
 import {
   getBlockDescription,
-  handleLoadDescription,
+  setBlockDescription,
 } from './functionMutatorHelpers';
 
 /**
@@ -144,7 +144,7 @@ export const procedureDefMutator = {
       }
     }
 
-    handleLoadDescription(this, state);
+    setBlockDescription(this, state);
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },
