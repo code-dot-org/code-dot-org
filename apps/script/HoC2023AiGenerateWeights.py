@@ -140,6 +140,7 @@ fgoutput['output'] = [
     'exploding_stars',
     'paint_drip',
 ]
+
 with open("apps/static/dance/ai/model/cached-spacy-palette-map", "w") as json_file:
     json_file.write(json.dumps(paletteoutput))
 
