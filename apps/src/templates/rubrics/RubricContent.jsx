@@ -51,7 +51,10 @@ export default function RubricContent({
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
   const submitFeedbackToStudent = () => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, reportingData);
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
+      ...reportingData,
+      studentId: studentLevelInfo.user_id,
+    });
     setIsSubmittingToStudent(true);
     setErrorSubmitting(false);
     const body = JSON.stringify({
