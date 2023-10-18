@@ -4,7 +4,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {SignInState, setUserType} from '@cdo/apps/templates/currentUserRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/locale';
@@ -80,6 +80,7 @@ class AgeDialog extends Component {
         unit_name: this.props.unitName,
         current_path: document.location.pathname,
       });
+      setUserType(true);
     }
   };
 
@@ -164,7 +165,14 @@ const styles = {
 
 export const UnconnectedAgeDialog = AgeDialog;
 
-export default connect(state => ({
-  signedIn: state.currentUser.signInState === SignInState.SignedIn,
-  unitName: state.progress.scriptName,
-}))(AgeDialog);
+export default connect(
+  state => ({
+    signedIn: state.currentUser.signInState === SignInState.SignedIn,
+    unitName: state.progress.scriptName,
+  }),
+  dispatch => ({
+    setUserType(over21) {
+      dispatch(setUserType(over21));
+    },
+  })
+)(AgeDialog);

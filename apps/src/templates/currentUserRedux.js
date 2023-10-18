@@ -31,10 +31,11 @@ export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
   isSignedIn,
 });
-export const setUserType = (userType, under13) => ({
+export const setUserType = (userType, under13, over21) => ({
   type: SET_USER_TYPE,
   userType,
   under13,
+  over21,
 });
 export const setUserRoleInCourse = userRoleInCourse => ({
   type: SET_USER_ROLE_IN_COURSE,
@@ -72,6 +73,7 @@ const initialState = {
   isSortedByFamilyName: false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
+  over21: false,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -100,6 +102,7 @@ export default function currentUser(state = initialState, action) {
       ...state,
       userType: action.userType,
       under13: action.under13,
+      over21: action.over21,
     };
   }
   if (action.type === SET_USER_ROLE_IN_COURSE) {
@@ -134,7 +137,8 @@ export default function currentUser(state = initialState, action) {
     };
   }
   if (action.type === SET_INITIAL_DATA) {
-    const {id, username, user_type, mute_music, under_13} = action.serverUser;
+    const {id, username, user_type, mute_music, under_13, over_21} =
+      action.serverUser;
     analyticsReport.setUserProperties(
       id,
       user_type,
@@ -147,6 +151,7 @@ export default function currentUser(state = initialState, action) {
       userType: user_type,
       isBackgroundMusicMuted: mute_music,
       under13: under_13,
+      over21: over_21,
     };
   }
 
