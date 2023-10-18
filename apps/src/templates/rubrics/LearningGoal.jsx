@@ -55,8 +55,8 @@ export default function LearningGoal({
 
   const handleClick = () => {
     const eventName = isOpen
-      ? EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
-      : EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
+      ? EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
+      : EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
     analyticsReporter.sendEvent(eventName, {
       ...(reportingData || {}),
       learningGoalKey: learningGoal.key,
