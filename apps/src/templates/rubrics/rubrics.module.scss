@@ -351,6 +351,19 @@ h2.studentName {
   }
 }
 
+.evidenceLevelSetHorizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+
+  > div {
+    width: 100%;
+    padding: 0.25rem;
+    border-right: 1px solid $neutral_dark40;
+  }
+}
+
 .evidenceLevelSet {
   display: flex;
   align-items: flex-start;
@@ -395,7 +408,6 @@ h2.studentName {
 
 .submittedEvaluationEvidenceLevel {
   border-radius: 4px;
-  border-width: 0;
   background: $light_primary_100;
 }
 
