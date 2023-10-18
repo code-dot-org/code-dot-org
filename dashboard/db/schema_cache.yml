@@ -2470,6 +2470,14 @@ columns:
     default_function:
     collation:
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: status
+    sql_type_metadata: *2
+    'null': true
+    default: '0'
+    default_function:
+    collation:
+    comment:
   learning_goal_evidence_levels:
   - *27
   - &57 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -12792,7 +12800,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20231012201537
+version: 20231017201252
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
