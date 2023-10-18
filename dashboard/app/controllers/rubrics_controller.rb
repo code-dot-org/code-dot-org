@@ -97,6 +97,11 @@ class RubricsController < ApplicationController
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
+    submitted = submitted_at
+    return render status: :bad_request, json: {error: 'Not submitted'} unless submitted
+    evaluated = ai_evaluated_at
+    return render status: :bad_request, json: {error: 'Already evaluated'} if evaluated && submitted < evaluated
+
     EvaluateRubricJob.perform_later(user_id: @user.id, script_level_id: script_level.id)
     return head :ok
   end
@@ -125,5 +130,22 @@ class RubricsController < ApplicationController
         }
       ],
     )
+  end
+
+  def submitted_at
+    script = @rubric.lesson.script
+    level = @rubric.level
+    user_level = UserLevel.find_by(user: @user, level: level, script: script)
+    return nil unless user_level&.submitted?
+    user_level.updated_at
+  end
+
+  def ai_evaluated_at
+    learning_goal_ids = @rubric.learning_goals.pluck(:id)
+    LearningGoalAiEvaluation.
+      where(user_id: @user.id, learning_goal_id: learning_goal_ids).
+      order(created_at: :desc).
+      first&.
+      created_at
   end
 end
