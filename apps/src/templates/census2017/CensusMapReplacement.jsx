@@ -26,7 +26,7 @@ class CensusMapInfoWindow extends Component {
         break;
       case 'NO':
         censusMessage =
-          'We believe this school offers limited or no Computer Science opportunities.';
+          'We believe this school offers no Computer Science opportunities.';
         color = 'blue';
         break;
       case 'HISTORICAL_YES':
@@ -36,7 +36,7 @@ class CensusMapInfoWindow extends Component {
         break;
       case 'HISTORICAL_NO':
         censusMessage =
-          'We believe this school historically offered limited or no Computer Science opportunities.';
+          'We believe this school historically offered no Computer Science opportunities.';
         color = 'blue';
         break;
       default:
@@ -386,7 +386,7 @@ export default class CensusMapReplacement extends Component {
             <div className="color legend-offers-cs" />
             <div className="caption">Offers computer science</div>
             <div className="color legend-limited-cs" />
-            <div className="caption">Limited or no CS opportunities</div>
+            <div className="caption">No CS opportunities</div>
             <div className="color legend-no-data-cs" />
             <div className="caption">No Data</div>
           </div>
@@ -396,7 +396,7 @@ export default class CensusMapReplacement extends Component {
           <div className="color legend-offers-cs" />
           <div className="caption">Offers computer science</div>
           <div className="color legend-limited-cs" />
-          <div className="caption">Limited or no CS opportunities</div>
+          <div className="caption">No CS opportunities</div>
           <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
         </div>
