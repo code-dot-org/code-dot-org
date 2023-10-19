@@ -311,7 +311,9 @@ describe('RubricContent', () => {
       <RubricContent {...defaultProps} onLevelForEvaluation={false} />
     );
     expect(wrapper.find('InfoAlert').length).to.equal(1);
-    expect(wrapper.find('InfoAlert').props().text).to.include('project levels');
+    expect(wrapper.find('InfoAlert').props().text).to.equal(
+      'Rubrics can only be evaluated on project levels.'
+    );
   });
 
   it('shows info alert when not viewing student work', () => {
@@ -319,8 +321,8 @@ describe('RubricContent', () => {
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
     expect(wrapper.find('InfoAlert').length).to.equal(1);
-    expect(wrapper.find('InfoAlert').props().text).to.include(
-      'Select a student'
+    expect(wrapper.find('InfoAlert').props().text).to.equal(
+      'Select a student from the Teacher Panel to view and evaluate their work.'
     );
   });
 });

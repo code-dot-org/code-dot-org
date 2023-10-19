@@ -121,10 +121,9 @@ export default function RubricContent({
 
   let infoText = null;
   if (!onLevelForEvaluation) {
-    infoText = 'Rubrics can only be evaluated on project levels.';
+    infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
   } else if (!studentLevelInfo) {
-    infoText =
-      'Select a student from the Teacher Panel to view and evaluate their work.';
+    infoText = infoText = i18n.selectAStudentToEvaluateAlert();
   }
   return (
     <div
