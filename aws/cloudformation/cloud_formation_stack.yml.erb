@@ -544,7 +544,7 @@ Resources:
           #!/bin/bash -x
           <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
-            node_name: '$STACK',
+            node_name: frontends ? '$ENVIRONMENT-daemon' : '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
             commit: nil, # track branch
             daemon: true
