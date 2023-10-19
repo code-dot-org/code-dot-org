@@ -628,12 +628,9 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  const userBlockTypes = [];
-  Blockly.getMainWorkspace()
+  const userBlockTypes = Blockly.getMainWorkspace()
     .getAllBlocks()
-    .forEach(block => {
-      userBlockTypes.push(block.type);
-    });
+    .map(block => block.type);
   return new Promise((resolve, reject) => {
     this.nativeAPI.play(
       songMetadata,
