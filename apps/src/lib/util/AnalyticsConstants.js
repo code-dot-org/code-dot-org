@@ -87,6 +87,9 @@ const EVENTS = {
   TA_RUBRIC_SUBMITTED: 'TA Rubric Submitted',
 
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
+
+  TEACHER_HOC_CONGRATS_PAGE_VISITED:
+    'Teacher Hour of Code Congrats Page Visited ',
 };
 
 export {EVENTS};
