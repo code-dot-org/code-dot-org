@@ -85,6 +85,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setResultJson(currentValue);
 
       setShowPreview(true);
+
+      setInputs(JSON.parse(currentValue).inputs);
     }
   }, [currentAiModalField]);
 
