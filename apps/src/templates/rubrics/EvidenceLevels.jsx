@@ -11,24 +11,27 @@ export default function EvidenceLevels({
   understanding,
   radioButtonCallback,
   submittedEvaluation,
+  isStudent,
 }) {
   const sortedEvidenceLevels = () => {
     const newArray = [...evidenceLevels];
     return newArray.sort((a, b) => b.understanding - a.understanding);
   };
-  if (canProvideFeedback) {
+  if (isStudent) {
+    return (
+      <EvidenceLevelsForStudents
+        evidenceLevels={sortedEvidenceLevels()}
+        submittedEvaluation={submittedEvaluation}
+      />
+    );
+  } else {
     return (
       <EvidenceLevelsForTeachers
         learningGoalKey={learningGoalKey}
         evidenceLevels={sortedEvidenceLevels()}
         understanding={understanding}
         radioButtonCallback={radioButtonCallback}
-      />
-    );
-  } else {
-    return (
-      <EvidenceLevelsForStudents
-        evidenceLevels={sortedEvidenceLevels()}
+        canProvideFeedback={canProvideFeedback}
         submittedEvaluation={submittedEvaluation}
       />
     );
@@ -42,4 +45,5 @@ EvidenceLevels.propTypes = {
   understanding: PropTypes.number,
   radioButtonCallback: PropTypes.func,
   submittedEvaluation: submittedEvaluationShape,
+  isStudent: PropTypes.bool,
 };
