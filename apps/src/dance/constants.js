@@ -40,17 +40,81 @@ export const DancelabReservedWords = [
 export const ASSET_BASE =
   'https://curriculum.code.org/images/sprites/dance_20191106/';
 
-export const commonDanceBackgroundEffects =
-  'circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars';
+export const COMMON_DANCE_BACKGROUND_EFFECTS = [
+  'circles',
+  'color_cycle',
+  'diamonds',
+  'disco_ball',
+  'fireworks',
+  'swirl',
+  'kaleidoscope',
+  'lasers',
+  'splatter',
+  'rainbow',
+  'snowflakes',
+  'text',
+  'galaxy',
+  'sparkles',
+  'spiral',
+  'disco',
+  'stars',
+  'music_wave',
+  'ripples',
+  'ripples_random',
+  'quads',
+  'flowers',
+  'squiggles',
+  'growing_stars',
+];
+export const EXTRA_AI_DANCE_BACKGROUND_EFFECTS = [
+  'blooming_petals',
+  'clouds',
+  'frosted_grid',
+  'starburst',
+];
 
-export const extraAiEditionDanceBackgroundEffects =
-  'starburst, blooming_petals, frosted_grid, clouds';
+export const COMMON_DANCE_COLOR_PALETTES = [
+  'rave',
+  'cool',
+  'electronic',
+  'iceCream',
+  'neon',
+  'tropical',
+  'vintage',
+  'warm',
+];
 
-export const commonDanceColorPalettes =
-  'rave, cool, electronic, iceCream, neon, tropical, vintage, warm';
+export const POETRY_COLOR_PALETTES = [
+  'grayscale',
+  'sky',
+  'ocean',
+  'sunrise',
+  'sunset',
+  'spring',
+  'summer',
+  'autumn',
+  'winter',
+  'twinkling',
+  'rainbow',
+  'roses',
+];
 
-export const poetryColorPalettes =
-  'grayscale, sky, ocean, sunrise, sunset, spring, summer, autumn, winter, twinkling, rainbow, roses';
-
-export const danceForegroundEffects =
-  'bubbles, confetti, hearts_red, music_notes, pineapples, pizzas, smiling_poop, rain, floating_rainbows, smile_face, spotlight, color_lights, raining_tacos';
+export const DANCE_FOREGROUND_EFFECTS = [
+  'bubbles',
+  'confetti',
+  'hearts_red',
+  'music_notes',
+  'pineapples',
+  'pizzas',
+  'smiling_poop',
+  'rain',
+  'floating_rainbows',
+  'smile_face',
+  'spotlight',
+  'color_lights',
+  'raining_tacos',
+  'emojis',
+  'hearts_colorful',
+  'exploding_stars',
+  'paint_drip',
+];
