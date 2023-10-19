@@ -207,18 +207,18 @@ class RubricsControllerTest < ActionController::TestCase
     EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, script_level_id: @script_level.id).once
 
-    post :run_ai_evaluations_for_user, params: {
-      id: @rubric.id,
-      userId: @student.id,
-    }
-    assert_response :success
-
     post :ai_evaluation_status_for_user, params: {
       id: @rubric.id,
       userId: @student.id,
     }
     assert_response :success
-    assert_equal({canEvaluate: true, evaluatedAt: nil}.stringify_keys, JSON.parse(@response.body))
+    assert_equal({submitted: true, lastSubmissionEvaluated: false}.stringify_keys, JSON.parse(@response.body))
+
+    post :run_ai_evaluations_for_user, params: {
+      id: @rubric.id,
+      userId: @student.id,
+    }
+    assert_response :success
   end
 
   test "run ai evaluations returns bad request if level not attempted" do
@@ -233,7 +233,7 @@ class RubricsControllerTest < ActionController::TestCase
       userId: @student.id,
     }
     assert_response :success
-    assert_equal({canEvaluate: false, evaluatedAt: nil}.stringify_keys, JSON.parse(@response.body))
+    assert_equal({submitted: false, lastSubmissionEvaluated: false}.stringify_keys, JSON.parse(@response.body))
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
@@ -255,7 +255,7 @@ class RubricsControllerTest < ActionController::TestCase
       userId: @student.id,
     }
     assert_response :success
-    assert_equal({canEvaluate: false, evaluatedAt: nil}.stringify_keys, JSON.parse(@response.body))
+    assert_equal({submitted: false, lastSubmissionEvaluated: false}.stringify_keys, JSON.parse(@response.body))
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
@@ -273,7 +273,6 @@ class RubricsControllerTest < ActionController::TestCase
       create :user_level, user: @student, script: @rubric.lesson.script, level: @level, submitted: true
       Timecop.travel 1.minute
       create :learning_goal_ai_evaluation, user: @student, learning_goal: learning_goal, requester: @teacher
-      evaluated_at = Time.now.utc.to_s
       Timecop.travel 1.minute
       sign_in @teacher
 
@@ -286,7 +285,7 @@ class RubricsControllerTest < ActionController::TestCase
         userId: @student.id,
       }
       assert_response :success
-      assert_equal({canEvaluate: false, evaluatedAt: evaluated_at}.stringify_keys, JSON.parse(@response.body))
+      assert_equal({submitted: true, lastSubmissionEvaluated: true}.stringify_keys, JSON.parse(@response.body))
 
       post :run_ai_evaluations_for_user, params: {
         id: @rubric.id,
@@ -300,7 +299,6 @@ class RubricsControllerTest < ActionController::TestCase
     Timecop.freeze do
       learning_goal = create :learning_goal, rubric: @rubric
       create :learning_goal_ai_evaluation, user: @student, learning_goal: learning_goal, requester: @teacher
-      evaluated_at = Time.now.utc.to_s
       Timecop.travel 1.minute
       create :user_level, user: @student, script: @rubric.lesson.script, level: @level, submitted: true
       sign_in @teacher
@@ -314,7 +312,7 @@ class RubricsControllerTest < ActionController::TestCase
         userId: @student.id,
       }
       assert_response :success
-      assert_equal({canEvaluate: true, evaluatedAt: evaluated_at}.stringify_keys, JSON.parse(@response.body))
+      assert_equal({submitted: true, lastSubmissionEvaluated: false}.stringify_keys, JSON.parse(@response.body))
 
       post :run_ai_evaluations_for_user, params: {
         id: @rubric.id,
