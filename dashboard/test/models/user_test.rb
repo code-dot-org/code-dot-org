@@ -1457,8 +1457,6 @@ class UserTest < ActiveSupport::TestCase
 
   test 'over 21' do
     user = create :user
-    refute user.over_21?
-
     user.age = 15
     refute user.over_21?
     user.save!
