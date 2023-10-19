@@ -2,11 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 
-export default function CoteacherSettings({
-  sectionInstructors,
-  addCoteacher,
-  coteachersToAdd,
-}) {
+export default function CoteacherSettings({addCoteacher, coteachersToAdd}) {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = event => {
@@ -38,7 +34,6 @@ export default function CoteacherSettings({
 }
 
 CoteacherSettings.propTypes = {
-  sectionInstructors: PropTypes.arrayOf(PropTypes.object),
   addCoteacher: PropTypes.func,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
 };
