@@ -2594,6 +2594,10 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        virtual-pl-csa-summer-day3:
+          title: Dita 3
+        virtual-pl-csa-summer-day4:
+          title: Dita 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2618,4 +2622,10 @@ sq:
           lessons:
             lesson-3:
               name: Vlerësim
+          title: Dita 5
+        virtual-pl-csp-summer-day3:
+          title: Dita 3
+        virtual-pl-csp-summer-day4:
+          title: Dita 4
+        virtual-pl-csp-summer-day5:
           title: Dita 5

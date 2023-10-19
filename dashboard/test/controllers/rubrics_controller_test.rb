@@ -7,7 +7,7 @@ class RubricsControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
     @lesson = create(:lesson, :with_lesson_group)
     @level = create(:level)
-    create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
+    @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
   end
 
   # new page is levelbuilder only
@@ -194,5 +194,54 @@ class RubricsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal 1, json_response.length
     assert_equal submitted_teacher_evaluation.feedback, json_response[0]['feedback']
+  end
+
+  test "run ai evaluations for user calls EvaluateRubricJob" do
+    rubric = create :rubric, lesson: @lesson, level: @level
+    student = create :student
+    teacher = create :teacher
+    create :follower, student_user: student, user: teacher
+    sign_in teacher
+
+    Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+    EvaluateRubricJob.expects(:perform_later).with(user_id: student.id, script_level_id: @script_level.id).once
+
+    post :run_ai_evaluations_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :success
+  end
+
+  test "run ai evaluations for user does not call EvaluateRubricJob if ai experiment is disabled" do
+    rubric = create :rubric, lesson: @lesson, level: @level
+    student = create :student
+    teacher = create :teacher
+    create :follower, student_user: student, user: teacher
+    sign_in teacher
+
+    Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(false)
+    EvaluateRubricJob.expects(:perform_later).never
+
+    post :run_ai_evaluations_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :forbidden
+  end
+
+  test "cannot run ai evaluations for user if not teacher of student" do
+    student = create :student
+    teacher = create :teacher
+    sign_in teacher
+
+    rubric = create :rubric, lesson: @lesson, level: @level
+
+    post :run_ai_evaluations_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :forbidden
   end
 end

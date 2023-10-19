@@ -45,6 +45,7 @@ export default function LearningGoal({
   const [displayUnderstanding, setDisplayUnderstanding] =
     useState(invalidUnderstanding);
   const teacherFeedback = useRef('');
+  const understandingLevel = useRef(invalidUnderstanding);
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
@@ -55,8 +56,8 @@ export default function LearningGoal({
 
   const handleClick = () => {
     const eventName = isOpen
-      ? EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
-      : EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
+      ? EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
+      : EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
     analyticsReporter.sendEvent(eventName, {
       ...(reportingData || {}),
       learningGoalKey: learningGoal.key,
@@ -86,7 +87,7 @@ export default function LearningGoal({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoal.id,
       feedback: teacherFeedback.current,
-      understanding: displayUnderstanding,
+      understanding: understandingLevel.current,
     });
     HttpClient.put(
       `${base_teacher_evaluation_endpoint}/${learningGoalEval.id}`,
@@ -131,8 +132,7 @@ export default function LearningGoal({
           }
           if (json.understanding >= 0 && json.understanding !== null) {
             setDisplayUnderstanding(json.understanding);
-          } else {
-            setDisplayUnderstanding(invalidUnderstanding);
+            understandingLevel.current = json.understanding;
           }
         })
         .catch(error => console.log(error));
@@ -142,6 +142,7 @@ export default function LearningGoal({
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
     setDisplayUnderstanding(radioButtonData);
+    understandingLevel.current = radioButtonData;
     if (!isAutosaving) {
       autosave();
     }
@@ -216,7 +217,9 @@ export default function LearningGoal({
           <span>{learningGoal.learningGoal}</span>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
-          {aiEnabled && <AiToken />}
+          {aiEnabled && displayUnderstanding === invalidUnderstanding && (
+            <AiToken />
+          )}
           {/*TODO: Display status of feedback*/}
           {canProvideFeedback &&
             aiEnabled &&
@@ -233,35 +236,43 @@ export default function LearningGoal({
               {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
             </BodyThreeText>
           )}
-          <div className={style.submittedFeedback}>
-            {submittedEvaluation?.understanding && (
-              <BodyThreeText>
-                {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
-              </BodyThreeText>
-            )}
-            {submittedEvaluation?.feedback && (
-              <FontAwesome
-                icon="message"
-                className="fa-regular"
-                title={i18n.feedback()}
-              />
-            )}
-          </div>
+          {submittedEvaluation && (
+            <div className={style.submittedEvaluation}>
+              {submittedEvaluation.understanding && (
+                <BodyThreeText>
+                  {
+                    UNDERSTANDING_LEVEL_STRINGS[
+                      submittedEvaluation.understanding
+                    ]
+                  }
+                </BodyThreeText>
+              )}
+              {submittedEvaluation.feedback && (
+                <FontAwesome
+                  icon="message"
+                  className="fa-regular"
+                  title={i18n.feedback()}
+                />
+              )}
+            </div>
+          )}
         </div>
       </summary>
 
       {/*TODO: Pass through data to child component*/}
       <div>
-        {teacherHasEnabledAi && !!studentLevelInfo && (
-          <div className={style.openedAiAssessment}>
-            <AiAssessment
-              isAiAssessed={learningGoal.aiEnabled}
-              studentName={studentLevelInfo.name}
-              aiConfidence={aiConfidence}
-              aiUnderstandingLevel={aiUnderstanding}
-            />
-          </div>
-        )}
+        {teacherHasEnabledAi &&
+          !!studentLevelInfo &&
+          aiUnderstanding !== undefined && (
+            <div className={style.openedAiAssessment}>
+              <AiAssessment
+                isAiAssessed={learningGoal.aiEnabled}
+                studentName={studentLevelInfo.name}
+                aiConfidence={aiConfidence}
+                aiUnderstandingLevel={aiUnderstanding}
+              />
+            </div>
+          )}
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels

@@ -782,6 +782,41 @@ class SectionTest < ActiveSupport::TestCase
     assert_nil @section.code_review_expires_at
   end
 
+  test 'section create adds section instructor' do
+    assert_difference 'SectionInstructor.count' do
+      section = create(:section)
+      instructor = section.instructors.first
+      assert_equal instructor, section.user
+    end
+  end
+
+  test 'section update fixes section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.status = :declined
+    si.save!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
+  end
+
+  test 'section update fixes soft-deleted section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.destroy!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed again!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
+  end
+
   def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
     @code_review_group_section = create(:section, user: @teacher, login_type: 'word')

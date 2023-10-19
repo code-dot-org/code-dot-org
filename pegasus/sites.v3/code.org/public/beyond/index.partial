@@ -64,3 +64,5 @@ social:
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <hr>
+
+{{ visit_partial_event_logger }}

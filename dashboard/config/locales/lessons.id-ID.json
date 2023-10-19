@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Spelling Bee"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Dapat Dimulai"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Computer Science Fundamentals"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Melihat ke depan"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Menguasai Dasar-dasar: Pengurutan"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Menguasai Dasar-dasar: Loop "
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Menguasai Dasar-dasar: Kondisional"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Menguasai Dasar-dasar: Fungsi"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Menguasai Dasar-dasar: Peristiwa"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Perencanaan"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Langkah berikutnya"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Pengenalan Pemecahan Masalah"
         },
@@ -2281,6 +2314,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Pertempuran Besar dengan Event"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Selamat Datang di \"Mengajarkan Dasar-Dasar Ilmu Komputer\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Memahami Kursus Dasar Ilmu Komputer"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Urutan"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Loop"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "kegiatan"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Kondisi"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Proyek Akhir-Kursus"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "fungsi"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "variabel"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loop"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Meninjau kembali renungan Anda"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Langkah berikutnya"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Keamanan di Lingkungan Sekitar Online Saya"
@@ -3949,6 +4021,39 @@
           "preparation": "-   Kerjakan puzzle untuk menemukan area masalah potensial untuk kelas Anda.-   (Opsional) Ambil beberapa puzzle untuk dikerjakan dalam grup-grup murid di kelas.-   Pastikan setiap murid memiliki buku catatan refleksi harian.",
           "purpose": "Dalam aktivitas online ini, murid akan belajar cara menggunakan event dalam Play Lab dengan melatih sang kesatria untuk bergerak saat tombol panah ditekan, lalu diakhiri dengan kesempatan untuk menunjukkan keterampilan lain yang mereka pelajari sepanjang kursus ini, termasuk urutan dan loop, sebagai bagian dari puzzle terakhir bermain bebas.",
           "student_overview": "Gunakan event untuk membuat cerita atau permainan interaktif."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Dapat Dimulai"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Computer Science Fundamentals"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Melihat ke depan"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Menguasai Dasar-dasar: Pengurutan"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Menguasai Dasar-dasar: Loop "
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Menguasai Dasar-dasar: Kondisional"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Menguasai Dasar-dasar: Fungsi"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Menguasai Dasar-dasar: Peristiwa"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Perencanaan"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Langkah berikutnya"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Pengenalan Pemecahan Masalah"
@@ -6420,9 +6525,6 @@
           "overview": "⚠️Pelajaran ini ditujukan bagi kelas yang ingin menayangkan seluruh [seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dalam **satu hari**. Pelajaran ini tidak dimaksudkan untuk diajarkan secara berurutan dengan pelajaran lain dalam unit ini yang memperkenalkan masing-masing video setiap hari.\n\nSiswa mengikuti tiap video dengan mencocokkan kosakata dari video tersebut, kemudian menjawab pertanyaan refleksi tentang setiap video. Rencana pembelajaran dan slidenya hanya sedikit dan bersifat agar Anda dapat melakukan improvisasi dan penyesuaian dengan kelas Anda.",
           "preparation": "-   Cetak panduan kegiatan\n-   Proyeksikan slide pada proyektor video"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Koding satu jam 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Pengenalan App Lab",
           "overview": "Tutorial ini dirancang untuk mengenalkan model pemrograman App Lab dengan cepat sebagai alat yang sangat baik untuk membuat dan berbagi aplikasi. Tutorial ini sendiri mengajarkan siswa untuk membuat dan mengontrol tombol, teks, gambar, suara, dan layar di JavaScript menggunakan blok atau teks. Di akhir tutorial, siswa diberi waktu untuk memperluas proyek yang mulai mereka buat menjadi aplikasi \"Pilih Petualanganmu Sendiri\", \"Kartu Ucapan\", atau \"Kuis Kepribadian\". Mereka juga dapat melanjutkan untuk membuat lebih banyak proyek yang ditampilkan di halaman code.org/applab.\n\nSeru-seruan menyelesaikan Hour of Code Anda dengan App Lab!\n\n**Kesesuaian Usia:** Tutorial ini dirancang untuk siswa di atas 13 tahun. Karena memungkinkan siswa untuk mengunggah suara dan gambar khusus, siswa yang masih muda tidak boleh menggunakannya tanpa pengawasan. Untuk melindungi privasi siswa, jika siswa Anda berusia di bawah 13 tahun, mereka tidak akan bisa menggunakan tutorial ini kecuali Anda lebih dahulu menyiapkan akun untuk mereka pada bagian yang Anda kelola.",
@@ -6569,9 +6671,10 @@
           "student_overview": "Ringkasan Tutorial: Pertama murid menggolongkan objek sebagai “ikan” atau “bukan ikan” sebagai upaya untuk membuang sampah dari lautan. Lalu, murid perlu memperluas himpunan data latihan agar mencakup makhluk laut lainnya yang tergolong hewan air. Di bagian kedua aktivitas, murid akan memilih label sendiri untuk diterapkan pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri gambar baru."
         },
         "outbreak/Outbreak": {
-          "overview": "Pelajaran ini memadukan **pengembangan keterampilan** seputar acara dengan **proyek mini** di mana siswa membuat simulasi komputernya sendiri di Sprite Lab. Siswa akan mempelajari simulasi untuk memahami seberapa cepat penyebaran virus dan apa yang dapat dilakukan untuk memperlambatnya.",
-          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
-          "purpose": "Pada pelajaran sebelumnya, siswa mengumpulkan dan menafsirkan data dari simulasi sederhana. Dalam pelajaran kali ini, siswa akan mengikuti instruksi untuk membuat kode model simulasinya sendiri. Pengetahuan awal siswa tentang wabah virus di dunia nyata akan diterapkan dalam skenario fiktif.",
+          "name": "Membuat Kode Simulasi",
+          "overview": "Dalam pelajaran kali ini, siswa dari segala usia mendapatkan pengenalan tentng coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini memadukan **pengembangan keterampilan** seputar event dengan **proyek mini** di mana siswa dapat membuat simulasi komputernya sendiri di Sprite Lab. Siswa akan mempelajari simulasi untuk memahami seberapa cepat penyebaran virus dan apa yang dapat dilakukan untuk memperlambatnya.",
+          "preparation": "### Satu Minggu Sebelum Hour of Code Anda:\n\n-   Lihat [Panduan Pendidik Hour of Code](https://hourofcode.com/us/how-to) dan [Praktik Terbaik dari Pendidik yang Sukses](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) untuk memulai rencana acara Hour of Code Anda. \n\n-   [Daftarkan acara Hour of Code Anda](https://hourofcode.com/us) jika Anda ingin menerima dukungan kelas, diskon poster, atau berpartisipasi dalam pembagian hadiah robotika (khusus AS) .\n\n-   Lihat dan selesaikan tutorial online-nya sendiri: [Outbreak](https://studio.code.org/s/outbreak/) \n\n-   Pastikan mencobanya lebih dahulu sebelum meminta murid Anda untuk menyelesaikannya. \n\n-   Periksa semua perangkat pendukung dan tuntaskan masalah yang ada sebelum memulai Hour of Code.\n\n### Satu Hari Sebelum Hour of Code Anda\n\n-   Tiap siswa yang menyelesaikan kegiatan harus mendapatkan [certificate](https://studio.code.org/certificates/batch). Cetak satu untuk semua siswa lebih awal agar lebih mudah pada akhir Hour of Code Anda.\n\n-   (opsional) Anjurkan siswa untuk membawa headphone untuk digunakan selama kegiatan berlangsung.",
+          "purpose": "Dalam pelajaran kali ini, siswa akan mengikuti instruksi untuk membuat code model simulasinya sendiri. Pengetahuan awal siswa tentang wabah virus di dunia nyata akan diterapkan dalam skenario fiktif.",
           "student_overview": "Sebuah virus telah menyerang Monster Town! Belajarlah membuat simulator virus dan bantu para monster agar kembali sehat."
         },
         "playlab/Play Lab": {
@@ -6613,69 +6716,6 @@
           "preparation": "-   Uji Widget Kompresi Teks\n-   Tinjau kembali tips mengajar untuk menentukan opsi yang ingin digunakan",
           "purpose": "Prinsip dasar kompresi adalah mengembangkan sebuah metode atau protokol untuk menggunakan bit lebih sedikit untuk mewakili informasi asli. Cara kita mewakili data yang dikompresi dalam pelajaran ini, dengan “kamus” pola-pola yang diulang, mirip dengan [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), tetapi harus diingat bahwa LZW sedikit berbeda dengan materi yang digeluti murid alam pelajaran ini. Murid menemukan caranya sendiri di sini. LZW digunakan bukan hanya untuk teks (zip files), tapi juga dengan format file gambar GIF.",
           "student_overview": "Suatu saat, kita akan mencapai batasan fisik dalam kecepatan pengiriman bit, dan jika kita ingin mengirim informasi besar dengan lebih cepat, kita harus mencari cara untuk menampilkan informasi yang sama dengan jumlah bit yang lebih kecil - kita harus memadatkan data tersebut."
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Room Escape"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Desain Digital"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Pemrograman Berdasarkan Event"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Fungsionalitas Aplikasi Dasar"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Penghasil dan Pengatur"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Analisis frekuensi"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Layar Mulai dan Akhir"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Layar2 Mulai dan Akhir"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Kolektor Hour of Code 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Peninjauan dan petunjuk pemasangan"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Pengiriman Bit pada Ruang Kawat"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Mengirim Nomor"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Mengirim Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Pesan siaran"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Router dan alamat"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Paket dan dapat dipercaya"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manual DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Node DNS otomatis"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Simulator Internet Freeplay"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Studi Mood"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Teka-teki"
@@ -6811,6 +6851,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Musik"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Room Escape"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Desain Digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Pemrograman Berdasarkan Event"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Fungsionalitas Aplikasi Dasar"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Penghasil dan Pengatur"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Survei Pascakursus Murid CSD  ('18-'19)"
@@ -7121,12 +7176,57 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Debugging untuk Pendidik CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analisis frekuensi"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Layar Mulai dan Akhir"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Layar2 Mulai dan Akhir"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Koding satu jam 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Teka-teki",
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
           "preparation": "-   Lihat situs web [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) untuk konten keamanan online lainnya.",
           "purpose": "Tujuan utama pelajaran ini adalah memupuk pengalaman siswa dengan komputer. Dengan membahas fungsi-fungsi komputer paling dasar, seperti mengklik, men-drag, dan men-drop, kita membuat tempat bermain yang lebih setara di kelas untuk puzzle-puzzle ke depan. Pelajaran ini juga memberi kesempatan yang bagus untuk memperkenalkan terminologi dasar perangkat keras komputer, seperti \"mouse\", \"trackpad\", atau \"layar sentuh\", sesuai perangkat Anda.",
           "student_overview": "Klik dan drag untuk menyelesaikan puzzle."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Kolektor Hour of Code 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Peninjauan dan petunjuk pemasangan"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Pengiriman Bit pada Ruang Kawat"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Mengirim Nomor"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Mengirim Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Pesan siaran"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Router dan alamat"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paket dan dapat dipercaya"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manual DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Node DNS otomatis"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulator Internet Freeplay"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Tutorial Pixelation Hitam & Putih"
@@ -7142,6 +7242,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Warna Pixelation Freeplay"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Studi Mood"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }
