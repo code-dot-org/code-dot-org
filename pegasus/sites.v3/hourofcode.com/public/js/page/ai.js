@@ -71,7 +71,6 @@ $(document).ready(function () {
     prev: "#prev_2",
     next: "#next_2",
     responsive: true,
-    width: "100%",
     scroll: 1,
     swipe: {
       onTouch: true,

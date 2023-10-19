@@ -1,6 +1,6 @@
 - slides_index = 7
 
-- video_code = ["KHbwOetbmbs", "2hXG8v8p0KM", "JrXazCEACVo", "X-AWdfSFCHQ", "X994dDnmRmY", "tJQSyzBUAew", "zNxw5gJtHLc"]
+- slide_image = ["/images/ai/ai_lesson_intro_01.png", "/images/ai/ai_lesson_ai_lesson_computer_vision_02.png", "/images/ai/ai_lesson_neural_networks_03.png", "/images/ai/ai_lesson_chatbots_04.png", "/images/ai/ai_lesson_generative_images_05.png", "/images/ai/ai_lesson_bias_06.png", "/images/ai/ai_lesson_ethics_07.png"]
 
 .carousel-wrapper#how_ai_works_lessons
   .carousel.blocks
@@ -13,11 +13,10 @@
                 %p.overline-two
                   =hoc_s(:ai_curriculum_grades_01)
                 %h3=hoc_s("how_ai_works_lesson_title_0#{index + 1}")
-                %figure.video-responsive
-                  %div
-                    %iframe{allowfullscreen: "", frameborder: "0", src: "https://www.youtube-nocookie.com/embed/#{video_code[index]}"}
+                %figure
+                  %img{src: slide_image[index], alt: ""}
                 %p=hoc_s("how_ai_works_lesson_desc_0#{index + 1}")
-                %p
+                %p.no-margin-bottom
                   %strong=hoc_s(:module_label_duration)
                   =hoc_s(:module_duration_45_mins)
               .content-footer
