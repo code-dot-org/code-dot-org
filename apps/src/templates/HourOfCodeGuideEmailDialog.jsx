@@ -36,7 +36,7 @@ function HourOfCodeGuideEmailDialog(signedIn) {
             <Heading2>{i18n.learnHowToHost()}</Heading2>
             {bodyText()}
           </div>
-          <div>
+          <div className={style.buttonsBottom}>
             <Button
               id="uitest-no-email-guide"
               text={continueWithoutEmailButtonText()}
