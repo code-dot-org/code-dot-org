@@ -40,10 +40,6 @@ const Chip: React.FunctionComponent<ChipProps> = ({
     }
   }, [inputRef, onCheckedChange]);
 
-  // TODO:
-  // - remove multiSelectGroup
-  // - start making tags components
-
   return (
     <div>
       <label className={moduleStyles.chip}>
