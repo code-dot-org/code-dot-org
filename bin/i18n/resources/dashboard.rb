@@ -44,6 +44,9 @@ module I18n
         Slides.sync_out
         Standards.sync_out
         UnpluggedContent.sync_out
+
+        # Should be called when all the Dashboard locale files have been synced-out
+        TextToSpeech.sync_out
       end
     end
   end

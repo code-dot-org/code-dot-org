@@ -31,10 +31,6 @@ module I18n
       I18n::Resources::Apps.sync_out
       I18n::Resources::Dashboard.sync_out
       I18n::Resources::Pegasus.sync_out
-      puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
-      I18nScriptUtils.with_synchronous_stdout do
-        I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
-      end
       puts "updating TTS I18n Static Messages (should usually be a no-op)"
       I18nScriptUtils.with_synchronous_stdout do
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n_static_messages.rb"
