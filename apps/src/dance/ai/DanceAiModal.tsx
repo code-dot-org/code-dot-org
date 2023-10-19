@@ -122,31 +122,43 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.RESULTS);
   };
 
-  const handleProcessClick = () => {
-    const inputNames = inputs.map(
-      input =>
-        inputLibrary.items.find((item: AiModalItem) => item.id === input).name
-    );
+  const handleGenerateClick = () => {
+    startAi();
+    setMode(Mode.GENERATING);
+  };
 
-    startAi(inputNames);
+  const handleRegenerateClick = () => {
+    // Reset state
+    setTypingDone(false);
+    setResultJson('');
+    setShowPreview(false);
+    setProcessingDone(false);
+    setGeneratingNodesDone(false);
+    setGeneratingDone(false);
+
+    handleGenerateClick();
+  };
+
+  const handleProcessClick = () => {
+    startAi();
     setMode(Mode.PROCESSING);
     setTimeout(() => {
       setProcessingDone(true);
     }, 4000);
   };
 
-  const handleGenerateClick = () => {
-    setMode(Mode.GENERATING);
-  };
-
-  const startAi = async (inputNames: Array<string>) => {
-    const request = `${promptString} ${inputNames.join(', ')}.`;
-    let responseJsonString: string;
+  const startAi = async () => {
     // Default to using cached response, otherwise contact OpenAI directly
+    let responseJsonString: string;
     if (queryParams('ai-model') === 'llm') {
+      const inputNames = inputs.map(
+        input =>
+          inputLibrary.items.find((item: AiModalItem) => item.id === input).name
+      );
+      const request = `${promptString} ${inputNames.join(', ')}.`;
       responseJsonString = await doAi(request);
     } else {
-      responseJsonString = chooseEffects(inputNames);
+      responseJsonString = chooseEffects(inputs);
     }
     const result = JSON.parse(responseJsonString);
 
@@ -302,12 +314,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {mode === Mode.SELECT_INPUTS && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
               {getAllItems(currentInputSlot).map(
-                (item: AiModalReturnedItem, index: number) => {
+                (item: AiModalReturnedItem) => {
                   return (
-                    <div
-                      tabIndex={
-                        index === 0 && currentInputSlot === 0 ? 0 : undefined
-                      }
+                    <button
+                      type={'button'}
                       key={item.id}
                       onClick={() => item.available && handleItemClick(item.id)}
                       style={{
@@ -460,16 +470,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
           {mode === Mode.RESULTS_FINAL && (
-            <Button
-              id="start-over"
-              text={'Start over'}
-              onClick={handleStartOverClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonLeft
-              )}
-            />
+            <div
+              id="buttons-area-left"
+              className={moduleStyles.buttonsAreaLeft}
+            >
+              <Button
+                id="start-over"
+                text={'Start over'}
+                onClick={handleStartOverClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={classNames(moduleStyles.button)}
+              />
+              <Button
+                id="regenerate"
+                text={'Regenerate'}
+                onClick={handleRegenerateClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={classNames(moduleStyles.button)}
+              />
+            </div>
           )}
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (

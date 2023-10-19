@@ -351,7 +351,7 @@ class Homepage
               },
               {
                 text: "homepage_slot_text_link_host",
-                url: "https://hourofcode.com/us/#join"
+                url: "https://hourofcode.com/events"
               }
             ]
         },

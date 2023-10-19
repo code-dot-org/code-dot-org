@@ -195,15 +195,20 @@ module I18n
 
         ### Dashboard
         Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
+          next if loc_file == File.join('i18n/locales', locale, "dashboard/#{locale}.yml")
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/blocks.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/course_offerings.json')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/block_categories.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/data_content.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/devise_content.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/parameter_names.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/progressions.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/variable_names.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/restricted_content.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/courses.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/scripts.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/shared_functions.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/slides.yml')
 
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
