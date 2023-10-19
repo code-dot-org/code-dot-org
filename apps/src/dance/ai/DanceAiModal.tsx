@@ -135,6 +135,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.GENERATING);
   };
 
+  const handleRegenerateClick = () => {
+    // Reset state
+    setTypingDone(false);
+    setResultJson('');
+    setShowPreview(false);
+    setProcessingDone(false);
+    setGeneratingNodesDone(false);
+    setGeneratingDone(false);
+
+    handleGenerateClick();
+  };
+
   const handleProcessClick = () => {
     startAi();
     setMode(Mode.PROCESSING);
@@ -189,7 +201,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
       workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
-      workspace.newBlock('Dancelab_setBackgroundEffectWithPalette') as BlockSvg,
+      workspace.newBlock(
+        'Dancelab_setBackgroundEffectWithPaletteAI'
+      ) as BlockSvg,
     ];
 
     // Foreground block.
@@ -329,12 +343,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {mode === Mode.SELECT_INPUTS && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
               {getAllItems(currentInputSlot).map(
-                (item: AiModalReturnedItem, index: number) => {
+                (item: AiModalReturnedItem) => {
                   return (
-                    <div
-                      tabIndex={
-                        index === 0 && currentInputSlot === 0 ? 0 : undefined
-                      }
+                    <button
+                      type={'button'}
                       key={item.id}
                       onClick={() => item.available && handleItemClick(item.id)}
                       style={{
@@ -497,16 +509,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
           {mode === Mode.RESULTS_FINAL && (
-            <Button
-              id="start-over-button"
-              text={'Start over'}
-              onClick={handleStartOverClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonLeft
-              )}
-            />
+            <div
+              id="buttons-area-left"
+              className={moduleStyles.buttonsAreaLeft}
+            >
+              <Button
+                id="start-over-button"
+                text={'Start over'}
+                onClick={handleStartOverClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={classNames(moduleStyles.button)}
+              />
+              <Button
+                id="regenerate"
+                text={'Regenerate'}
+                onClick={handleRegenerateClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={classNames(moduleStyles.button)}
+              />
+            </div>
           )}
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
