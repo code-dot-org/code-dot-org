@@ -145,9 +145,14 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
         activeColor={color.teal}
         onChange={handleFieldClick}
       >
-        {Object.keys(fields).map(fieldKey => {
+        {Object.keys(fields).map((fieldKey, index) => {
           return (
-            <button type="button" value={fieldKey} id="uitest-standards-toggle">
+            <button
+              key={index}
+              type="button"
+              value={fieldKey}
+              id="uitest-standards-toggle"
+            >
               <div>{fields[fieldKey as FieldKey].name}</div>
             </button>
           );
