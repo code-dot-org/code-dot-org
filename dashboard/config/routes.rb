@@ -1052,6 +1052,7 @@ Dashboard::Application.routes.draw do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
+        post 'run_ai_evaluations_for_user'
         post 'submit_evaluations'
       end
     end
