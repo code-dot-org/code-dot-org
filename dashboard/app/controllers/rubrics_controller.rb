@@ -2,8 +2,8 @@ class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
-  load_resource only: [:get_teacher_evaluations, :run_ai_evaluations_for_user]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
+  load_resource only: [:get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -106,6 +106,27 @@ class RubricsController < ApplicationController
     return head :ok
   end
 
+  def ai_evaluation_status_for_user
+    user_id = params.transform_keys(&:underscore).require(:user_id)
+    @user = User.find_by(id: user_id)
+    return head :forbidden unless @user&.student_of?(current_user)
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
+    return head :forbidden unless is_ai_experiment_enabled
+
+    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    return head :bad_request unless is_level_ai_enabled
+
+    submitted = submitted_at
+    evaluated = ai_evaluated_at
+    can_evaluate = !!submitted && (!evaluated || submitted > evaluated)
+    render json: {
+      canEvaluate: can_evaluate,
+      evaluatedAt: evaluated&.utc&.to_s,
+    }
+  end
+
   private
 
   def rubric_params
@@ -130,6 +151,12 @@ class RubricsController < ApplicationController
         }
       ],
     )
+  end
+
+  def run_ai_evaluation_allowed?
+    submitted = submitted_at
+    evaluated = evaluated_at
+    submitted && (!evaluated || submitted > evaluated)
   end
 
   def submitted_at

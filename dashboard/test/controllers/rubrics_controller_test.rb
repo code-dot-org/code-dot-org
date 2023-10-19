@@ -213,6 +213,13 @@ class RubricsControllerTest < ActionController::TestCase
       userId: student.id,
     }
     assert_response :success
+
+    post :ai_evaluation_status_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :success
+    assert_equal({canEvaluate: true, evaluatedAt: nil}.stringify_keys, JSON.parse(@response.body))
   end
 
   test "run ai evaluations returns bad request if level not attempted" do
@@ -225,6 +232,13 @@ class RubricsControllerTest < ActionController::TestCase
     Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
+
+    post :ai_evaluation_status_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :success
+    assert_equal({canEvaluate: false, evaluatedAt: nil}.stringify_keys, JSON.parse(@response.body))
 
     post :run_ai_evaluations_for_user, params: {
       id: rubric.id,
@@ -245,6 +259,13 @@ class RubricsControllerTest < ActionController::TestCase
     EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
 
+    post :ai_evaluation_status_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :success
+    assert_equal({canEvaluate: false, evaluatedAt: nil}.stringify_keys, JSON.parse(@response.body))
+
     post :run_ai_evaluations_for_user, params: {
       id: rubric.id,
       userId: student.id,
@@ -253,54 +274,71 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "run ai evaluations returns bad request if submission already evaluated" do
-    rubric = create :rubric, lesson: @lesson, level: @level
-    learning_goal = create :learning_goal, rubric: rubric
-    student = create :student
-    teacher = create :teacher
-    create :follower, student_user: student, user: teacher
     Timecop.freeze do
+      rubric = create :rubric, lesson: @lesson, level: @level
+      learning_goal = create :learning_goal, rubric: rubric
+      student = create :student
+      teacher = create :teacher
+      create :follower, student_user: student, user: teacher
       # add an earlier evaluation to make sure we're covering the logic which tries to find the most recent evaluation
       create :learning_goal_ai_evaluation, user: student, learning_goal: learning_goal, requester: teacher
       Timecop.travel 1.minute
       create :user_level, user: student, script: rubric.lesson.script, level: @level, submitted: true
       Timecop.travel 1.minute
       create :learning_goal_ai_evaluation, user: student, learning_goal: learning_goal, requester: teacher
+      evaluated_at = Time.now.utc.to_s
+      Timecop.travel 1.minute
+      sign_in teacher
+
+      Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(true)
+      EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+      EvaluateRubricJob.expects(:perform_later).never
+
+      post :ai_evaluation_status_for_user, params: {
+        id: rubric.id,
+        userId: student.id,
+      }
+      assert_response :success
+      assert_equal({canEvaluate: false, evaluatedAt: evaluated_at}.stringify_keys, JSON.parse(@response.body))
+
+      post :run_ai_evaluations_for_user, params: {
+        id: rubric.id,
+        userId: student.id,
+      }
+      assert_response :bad_request
     end
-    sign_in teacher
-
-    Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
-    EvaluateRubricJob.expects(:perform_later).never
-
-    post :run_ai_evaluations_for_user, params: {
-      id: rubric.id,
-      userId: student.id,
-    }
-    assert_response :bad_request
   end
 
   test "run ai evaluations succeeds if submission is more recent than evaluation" do
-    rubric = create :rubric, lesson: @lesson, level: @level
-    learning_goal = create :learning_goal, rubric: rubric
-    student = create :student
-    teacher = create :teacher
-    create :follower, student_user: student, user: teacher
     Timecop.freeze do
+      rubric = create :rubric, lesson: @lesson, level: @level
+      learning_goal = create :learning_goal, rubric: rubric
+      student = create :student
+      teacher = create :teacher
+      create :follower, student_user: student, user: teacher
       create :learning_goal_ai_evaluation, user: student, learning_goal: learning_goal, requester: teacher
+      evaluated_at = Time.now.utc.to_s
       Timecop.travel 1.minute
       create :user_level, user: student, script: rubric.lesson.script, level: @level, submitted: true
+      sign_in teacher
+
+      Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(true)
+      EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+      EvaluateRubricJob.expects(:perform_later).with(user_id: student.id, script_level_id: @script_level.id).once
+
+      post :ai_evaluation_status_for_user, params: {
+        id: rubric.id,
+        userId: student.id,
+      }
+      assert_response :success
+      assert_equal({canEvaluate: true, evaluatedAt: evaluated_at}.stringify_keys, JSON.parse(@response.body))
+
+      post :run_ai_evaluations_for_user, params: {
+        id: rubric.id,
+        userId: student.id,
+      }
+      assert_response :success
     end
-    sign_in teacher
-
-    Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
-    EvaluateRubricJob.expects(:perform_later).with(user_id: student.id, script_level_id: @script_level.id).once
-
-    post :run_ai_evaluations_for_user, params: {
-      id: rubric.id,
-      userId: student.id,
-    }
-    assert_response :success
   end
 
   test "run ai evaluations for user does not call EvaluateRubricJob if ai experiment is disabled" do
