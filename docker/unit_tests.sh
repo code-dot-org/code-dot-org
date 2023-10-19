@@ -13,7 +13,6 @@ export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
 # set up locals.yml
-set +x
 echo "
 build_apps: true
 build_dashboard: true

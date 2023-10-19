@@ -4,7 +4,6 @@
 # In most cases, you will not run this script directly, but instead
 # use docker-compose to run using the ui-tests-compose.yml file in this directory. See instructions in that file.
 
-# rerun tests 1
 
 set -e
 
@@ -30,7 +29,6 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | 
 
 # set up locals.yml
 # Need to actually write all the commented out lines also
-set +x
 echo "
 animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
 assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
