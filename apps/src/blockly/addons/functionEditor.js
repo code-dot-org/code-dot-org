@@ -97,6 +97,7 @@ export default class FunctionEditor {
   hide() {
     if (this.dom) {
       this.dom.style.display = 'none';
+      this.editorWorkspace.hideChaff();
     }
   }
 
