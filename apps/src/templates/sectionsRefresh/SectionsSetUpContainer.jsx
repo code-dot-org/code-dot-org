@@ -158,7 +158,7 @@ export default function SectionsSetUpContainer({
     }
   };
 
-  const saveSection = (section, createAnotherSection) => {
+  const saveSection = (section, createAnotherSection, coteachersToAdd) => {
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -201,6 +201,7 @@ export default function SectionsSetUpContainer({
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
       grades: computedGrades,
+      instructor_emails: coteachersToAdd,
       ...section,
     };
 
@@ -382,7 +383,7 @@ export default function SectionsSetUpContainer({
             color={Button.ButtonColor.neutralDark}
             onClick={e => {
               e.preventDefault();
-              saveSection(sections[0], true);
+              saveSection(sections[0], true, coteachersToAdd);
             }}
           />
         )}
@@ -401,7 +402,7 @@ export default function SectionsSetUpContainer({
           onClick={e => {
             e.preventDefault();
             setIsSaveInProgress(true);
-            saveSection(sections[0], false);
+            saveSection(sections[0], false, coteachersToAdd);
           }}
         />
       </div>

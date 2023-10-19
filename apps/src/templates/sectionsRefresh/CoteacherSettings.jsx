@@ -14,11 +14,13 @@ export default function CoteacherSettings({
   };
 
   const handleButtonClick = () => {
-    console.log(sectionInstructors);
+    const newEmail = inputValue;
+    if (newEmail === '') {
+      return;
+    }
+
+    addCoteacher(newEmail);
     setInputValue('');
-    addCoteacher(inputValue);
-    console.log(coteachersToAdd);
-    // Do something with the input value here
   };
 
   return (
