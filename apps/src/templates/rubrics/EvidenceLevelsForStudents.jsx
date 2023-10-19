@@ -20,9 +20,8 @@ export default function EvidenceLevelsForStudents({
       <Heading6>{i18n.rubricScores()}</Heading6>
       <div className={style.evidenceLevelSetHorizontal}>
         {evidenceLevels.map((evidenceLevel, index) => (
-          <div className={style.evidenceLevelInnerDiv}>
+          <div key={evidenceLevel.id} className={style.evidenceLevelInnerDiv}>
             <div
-              key={evidenceLevel.id}
               className={classNames(style.evidenceLevelOption, {
                 [style.submittedEvaluationEvidenceLevel]:
                   submittedEvaluation?.understanding ===

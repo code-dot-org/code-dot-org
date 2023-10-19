@@ -13,15 +13,26 @@ const DEFAULT_PROPS = {
 
 describe('EvidenceLevels', () => {
   it('renders teachers view of evidence levels when the user can provide feedback', () => {
-    const wrapper = shallow(
-      <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback />
-    );
+    const wrapper = shallow(<EvidenceLevels {...DEFAULT_PROPS} />);
     expect(wrapper.find('EvidenceLevelsForTeachers').length).to.equal(1);
+    expect(
+      wrapper.find('EvidenceLevelsForTeachers').props().canProvideFeedback
+    ).to.equal(undefined);
   });
 
-  it('renders student view of evidence levels when feedback not available', () => {
+  it('renders teachers view of evidence levels when the user can provide feedback', () => {
     const wrapper = shallow(
-      <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback={false} />
+      <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback={true} />
+    );
+    expect(wrapper.find('EvidenceLevelsForTeachers').length).to.equal(1);
+    expect(
+      wrapper.find('EvidenceLevelsForTeachers').props().canProvideFeedback
+    ).to.equal(true);
+  });
+
+  it('renders student view of evidence levels when student is viewing the rubric', () => {
+    const wrapper = shallow(
+      <EvidenceLevels {...DEFAULT_PROPS} isStudent={true} />
     );
     expect(wrapper.find('EvidenceLevelsForStudents').length).to.equal(1);
   });
