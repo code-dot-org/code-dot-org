@@ -30,6 +30,8 @@
   --bold-font-weight: 700;
   --extra-bold-font-weight: 800;
   --black-font-weight: 900;
+  /* Border radius */
+  --border-radius: 4px;
 }
 
 html {

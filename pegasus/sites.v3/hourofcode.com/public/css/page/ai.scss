@@ -54,6 +54,7 @@ section.activities {
 
     img {
       max-width: 175px;
+      border-radius: var(--border-radius);
 
       @media screen and (max-width: $width-md) {
         max-width: 125px;
