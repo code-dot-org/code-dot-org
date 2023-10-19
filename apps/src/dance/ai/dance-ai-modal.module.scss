@@ -59,19 +59,45 @@
 .dialog {
   max-width: initial !important;
   width: 800px !important;
-  height: 380px;
+  height: 430px;
+  padding: 0 !important;
+  border: solid 1px white;
+
+  .headerArea {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(64 68 73);
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    .botImage {
+      height: 40px;
+      margin-right: 20px;
+    }
+
+    .emojiSlot {
+      width: 35px;
+      height: 35px;
+      margin-right: 6px;
+    }
+  }
 
   .innerArea {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 50px);
     position: relative;
     user-select: none;
+    padding: 20px;
+    box-sizing: border-box;
 
     .textArea {
       position: absolute;
       width: 100%;
       height: 20px;
-      top: 10px;
+      bottom: 50px;
       left: 0;
       text-align: center;
       font-size: 24px;
@@ -81,7 +107,7 @@
       position: absolute;
       width: calc(100% - 170px);
       height: 190px;
-      top: 72px;
+      top: 22px;
       left: 170px;
 
       .itemContainer {
@@ -113,7 +139,7 @@
       position: absolute;
       width: 100%;
       height: 70px;
-      top: 260px;
+      top: 210px;
       left: 0;
       pointer-events: none;
 
@@ -170,7 +196,7 @@
       position: absolute;
       width: 100%;
       height: 200px;
-      top: 60px;
+      top: 10px;
       left: 0;
       pointer-events: none;
       z-index: 1;
@@ -230,7 +256,7 @@
       justify-content: center;
       width: 100%;
       height: 270px;
-      top: 60px;
+      top: 10px;
       left: 0;
 
       .blockPreview {
@@ -252,7 +278,7 @@
 
     .previewArea {
       position: absolute;
-      height: 100%;
+      height: 200px;
       right: 5px;
       display: flex;
       align-items: center;
@@ -262,7 +288,7 @@
 
     .generatingArea {
       position: absolute;
-      top: 40px;
+      top: 0;
       width: 100%;
     }
 
@@ -272,7 +298,7 @@
       justify-content: center;
       width: 100%;
       height: 280px;
-      top: 45px;
+      top: 5px;
       left: 0;
     }
 
