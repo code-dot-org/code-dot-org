@@ -35,6 +35,10 @@ ca:
   africa_campaign_date_full: De l'1 d'octubre al 18 de desembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 d'octubre de 2022 - 18 de desembre de 2022
+  hoc2023_header: Creativitat amb IA
+  hoc2023_social_creativity_with_ai_title: Hora del Codi - Què crearàs?
+  hoc2023_social_creativity_with_ai_desc: Utilitzeu la informàtica per explorar i
+    aprendre sobre IA!
   hoc2022_header: Explora, juga i crea!
   social_hoc2022_explore_play_create: Utilitza les ciències informàtiques per explorar,
     jugar i crear!
@@ -179,6 +183,33 @@ ca:
   curriculum_launch_2023_desc: Actualitzacions de CSC, CSP, CSD, i molt més — a més
     d'un nou catàleg curricular i redissenyat Teach pàgina per ajudar a trobar tot!
   in_partnership_with: En col·laboració amb
+  shop_code_dot_org_heading: Botiga Code.org
+  shop_code_dot_org_desc: Recolza el nostre treball i llueix el moviment amb orgull.
+    Els nostres barrets han estat usats pel president Obama i les celebritats també.
+  spread_the_word_heading: Corre la veu
+  spread_the_word_desc: Amplifica el nostre impacte compartint Code.org amb la teva
+    xarxa. Des de les xarxes socials fins a les actualitzacions de correu electrònic,
+    descobreix com ens pots ajudar a arribar a més educadors, estudiants i defensors.
+  follow_us_heading: Segueix-nos a les xarxes socials
+  follow_us_desc: Estigueu al dia amb nosaltres a les xarxes socials i compartiu les
+    nostres publicacions amb la vostra xarxa per mantenir-vos informats i ajudar-vos
+    a conscienciar.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: tauleta
+  device_laptop: Portàtil
+  device_desktop_computer: Ordinador d'escriptori
+  device_mobile_device: Dispositiu mòbil
+  subscribe_to_emails_heading: Subscriu-te a correus electrònics
+  subscribe_to_emails_desc: Llegiu sobre el que passa a Code.org i a l'educació informàtica
+    mitjançant actualitzacions trimestrals a través de la nostra llista de correu.
+  subscribe_to_emails_intl: Subscriu-te a actualitzacions internacionals
+  promote_code_dot_org_heading: Promocionar Code.org
+  promote_code_dot_org_desc: Promoure la informàtica en la seva àrea amb l'ajuda de
+    estadístiques, cites, i vídeos.
   afe_partnership_logo_alt: Logotip de Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer és un programa complet de la
     infància a la carrera per inspirar, educar i entrenar nens i joves de baixos ingressos
@@ -197,19 +228,48 @@ ca:
   curricula_title_high: Curricula de secundària
   curricula_desc_high: Navegueu pels cursos i activitats convincents que us conviden
     a vosaltres i als vostres estudiants de secundària a aprofundir en la informàtica.
+  for_administrators_heading: Per a administradors
+  for_administrators_desc: Uneix-te als milers d'escoles que ja han incorporat la
+    informàtica al seu currículum.
+  for_parents_heading: Per a les famílies
+  for_parents_desc: Vostè pot ajudar a animar l'escola del seu estudiant a oferir
+    o ampliar l'educació en ciències de la computació.
+  for_educators_heading: Per a educadors
+  for_educators_desc: Comenceu a ensenyar avui —no cal experiència informàtica— amb
+    els nostres tallers d'aprenentatge professional.
   students_label: Estudiants
   teachers_label: Professors
+  educators_label: Educadors
+  companies_label: Empreses
+  districts_label: Districtes
+  school_assemblies_label: Assemblees Escolars
+  parents_label: Pares
+  public_officials_label: Funcionaris Públics
+  volunteers_label: Voluntaris
+  virtual_events_label: Esdeveniments virtuals
   teacher_label_csf: CS Fonaments Professor
   teacher_label_csd: Professor CS Discoveries
   teacher_label_csp: CS Principis Professor
   teacher_label_csc: CS Connexions Professor
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Fòrum del Professorat
+  teacher_forum_desc: Visiteu el Fòrum de Professors de l'Hora del Codi per obtenir
+    assessorament, coneixement i suport d'altres educadors.
   required_materials: 'Materials necessaris:'
   optional_materials: 'Materials opcionals:'
-  call_to_action_explore_roles: Explora rols oberts
+  call_to_action_hold_an_event: Celebrar un esdeveniment
+  call_to_action_register_event: Registra el teu esdeveniment
+  call_to_action_select_activity: Seleccioneu una activitat
+  call_to_action_start_activity: Comença una activitat
+  call_to_action_get_certificates: Obtenir certificats
+  call_to_action_go_beyond_hoc: Anar més enllà de l'Hora del Codi
+  call_to_action_view_promo_resources: Veure recursos promocionals
   call_to_action_learn_more: Saber-ne més
   call_to_action_watch_now: Veure ara
   call_to_action_try_activity: Prova l'activitat
+  call_to_action_try_activities: Provar activitats
+  call_to_action_explore_activities: Explora activitats
+  call_to_action_explore_ai: Explora AI
   call_to_action_explore_unit: Explora la unitat
   call_to_action_explore_curriculum: Explora currículum
   call_to_action_explore_curriculum_options: Explora les opcions curriculars
@@ -263,6 +323,7 @@ ca:
   call_to_action_find_self_paced_modules: Troba mòduls a ritme personalitzat
   call_to_action_join_teacher_forums: Uneix-te als fòrums de professorat
   call_to_action_explore_teacher_forums: Explora fòrums de professors
+  call_to_action_explore_teacher_forum: Explora el fòrum del professorat
   call_to_action_explore_career_resources: Explora recursos de carrera
   call_to_action_watch_videos: Mira vídeos
   call_to_action_download_posters: Descarrega pòsters
@@ -279,11 +340,32 @@ ca:
   call_to_action_notify_available: Aviseu-me quan estigui disponible
   call_to_action_register_early_access: Registrar-se per a l'accés anticipat
   call_to_action_open_positions: Veure posicions obertes
+  call_to_action_explore_roles: Explora rols oberts
   call_to_action_get_guide: Aconsegueix la guia
   call_to_action_donate_to_cdo: Fes una donació a Code.org
   call_to_action_start_fundraiser: Iniciar una recaptació de fons
   call_to_action_view_donation_policy: Veure política de donacions
   call_to_action_view_donate_bitpay: Fes una donació amb BitPay
+  call_to_action_make_a_donation: Fes un donatiu
+  call_to_action_other_ways_to_give: Altres formes de donar
+  call_to_action_become_partner_usa: Converteix-te en soci dels Estats Units
+  call_to_action_become_partner_intl: Converteix-te en un soci internacional
+  call_to_action_become_a_volunteer: Fes-te voluntari
+  call_to_action_start_translating: Comenceu a traduir
+  call_to_action_learn_about_advocacy: Coneix la nostra promoció
+  call_to_action_visit_store: Visita la botiga
+  call_to_action_view_faqs: Veure més preguntes freqüents
+  aria_label_call_to_action_hoc_how_to_educators: Veure guia per a educadors
+  aria_label_call_to_action_hoc_how_to_companies: Veure guia per a empreses
+  aria_label_call_to_action_hoc_how_to_districts: Veure guia per als districtes
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Veure guia per a les assemblees
+    escolars
+  aria_label_call_to_action_hoc_how_to_parents: Veure guia per als pares
+  aria_label_call_to_action_hoc_how_to_public_officials: Veure guia per a funcionaris
+    públics
+  aria_label_call_to_action_hoc_how_to_volunteers: Veure guia per a voluntaris
+  aria_label_call_to_action_hoc_how_to_virtual_events: Veure guia per a esdeveniments
+    virtuals
   aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
     d''''Ensenyament de Fonaments de Ciències Informàtiques '
@@ -639,6 +721,7 @@ ca:
   heading_these_lessons_will: 'Aquestes lliçons seran:'
   heading_explore_curriculum_catalog: Explora tots els nostres cursos al Catàleg Curricular
   heading_csa_ai: Busques coses a fer després de l'examen AP®?
+  heading_bring_cs_to_students: Apropar la informàtica als estudiants
   professional_learning_section_desc: Obteniu el suport que necessiteu mentre us prepareu
     per ensenyar. Als professors els encanta, amb més del 90% que el classifica el
     millor desenvolupament professional de la història!
@@ -923,6 +1006,7 @@ ca:
     dels estudiants. Amb una rica barreja de teoria, exemples pràctics i recursos,
     pretén capacitar els educadors per navegar pel paisatge de la IA i millorar les
     experiències d'aprenentatge dels estudiants.
+  ai_pl_101_resources_5: Guia per garantir un enfocament responsable de la IA
   ai_pl_101_video_desc_6: 'Obteniu més informació sobre la nova tecnologia que impulsa
     els grans canvis en la IA, amb dos nous vídeos sobre Models de Llengua Gran (com
     ChatGPT) i Generative AI. Escolta com funcionen aquestes noves tecnologies directament
@@ -933,6 +1017,8 @@ ca:
     a aquells que acaben de submergir els dits dels peus, així com eines avançades
     per a aquells que busquen maximitzar el seu potencial.
   ai_pl_101_resources_3: AI demana per transformar l'aprenentatge dels estudiants
+  ai_pl_101_resources_section_title: Més maneres d'aprendre sobre IA
+  ai_pl_101_resources_guide: 'Guia acompanyant:'
   how_ai_works_hero_heading: Com funciona la IA
   how_ai_works_hero_desc: Submergeix-te en el món de la IA amb “How AI Works”, la
     nostra sèrie de vídeos i lliçons d'acompanyament!
@@ -1808,6 +1894,31 @@ ca:
   donate_tabs_bitpay_desc: Abraçar el futur de donar amb moneda digital. A través
     de BitPay, la seva moneda digital pot donar suport directament als esforços de
     Code.org en l'expansió de l'educació en ciències de la computació.
+  help_page_top_heading: Com pots ajudar
+  help_page_top_desc: Donar suport a la nostra missió de fer que la informàtica sigui
+    accessible per a tots els nens i nenes, a tot arreu. Els vostres esforços ens
+    ajuden a inspirar futurs innovadors i superar la bretxa educativa tecnològica.
+  help_page_top_subhead: Fes una donació a Code.org
+  help_page_top_desc_02: Estem treballant per donar a tots els estudiants l'oportunitat
+    d'aprendre informàtica, tant en línia com a les escoles, on establim cursos permanents
+    i formem professors. Per cada dòlar que doneu, un nen s'introdueix a la informàtica.
+  help_page_partners_heading: Fes-te soci
+  help_page_partners_desc: Code.org treballa amb altres organitzacions sense ànim
+    de lucre com a socis per ajudar a difondre la informàtica d'una manera local i
+    sostenible. Obteniu més informació sobre el nostre programa.
+  help_page_volunteer_heading: Voluntari en una aula
+  help_page_volunteer_desc: Voluntari per ensenyar l'Hora del Codi o ser un orador
+    convidat en una aula local. Registra't per escoltar sobre oportunitats a prop
+    teu.
+  help_page_translate_heading: Ajuda'ns a traduir
+  help_page_translate_desc: Els voluntaris han traduït els nostres tutorials en més
+    de 45 idiomes. Ajuda'ns a seguir ampliant les nostres tutories per a estudiants
+    de tot el món!
+  help_page_speak_for_cs_heading: Parlar per a l'educació en ciències de la computació
+  help_page_speak_for_cs_desc: Obteniu més informació sobre el treball d'incidència
+    de Code.org a tots els Estats Units i les deu polítiques que recomanem que els
+    estats adoptin per fer que la informàtica sigui fundacional per a tots els estudiants.
+    A més, esbrineu com podeu conduir el canvi en el vostre estat.
   hoc_live: Hora de Codi en viu
   hoc_live_sign_up_title: Registra't per Hora de Codi en viu
   hoc_live_learn_title: Aprèn amb Hour of Code Live
@@ -2492,8 +2603,8 @@ ca:
     Minecraft funcionen molt bé amb alumnes de secundària, especialment la versió
     de JavaScript de La guerra de les galàxies i els nivells de joc lliure de tots
     dos tutorials. Com a alternativa, us recomanem que comenceu amb un dels tutorials
-    per a principiants de [%{partner_url}/learn](%{codeorg_url}/aprendre), com ara
-    el d'Angry Birds o el de l'Anna i l'Elsa. Un alumne de secundària hauria de poder
+    per a principiants de [%{partner_url}/learn](%{codeorg_url}/learn), com ara el
+    d'Angry Birds o el de l'Anna i l'Elsa. Un alumne de secundària hauria de poder
     fer-los en 30 minuts i passar a fer-ne un de més avançat en JavaScript, com ara
     els de Khan Academy o CodeHS.
   hoc_faq_scratch_q: Estic fent Scratch per a l' Hora del Codi, però què passa si
@@ -13655,6 +13766,134 @@ ca:
   all: Tot
   dont_know: No ho sé
   language_label: Idioma
+  before_hoc: Abans de l'hora del codi
+  day_of_hoc: Dia de l'Hora de Codi
+  after_hoc: Després de l'hora del codi
+  step_01: Pas 1
+  step_02: Pas 2
+  step_03: Pas 3
+  step_04: Pas 4
+  step_05: Pas 5
+  step_06: Pas 6
+  step_07: Pas 7
+  step_08: Pas 8
+  hoc_how_to_top_heading: La teva guia de l'Hora del Codi
+  hoc_how_to_top_desc: Guies personalitzades per a la millor experiència Hour of Code.
+  hoc_how_to_top_view_guide: Veure guia per
+  hoc_how_to_nav_main_aria_label: Tria una guia
+  hoc_how_to_nav_sidebar_aria_label: Navegació de la barra lateral
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: L'Hora del Codi és una introducció d'una hora a
+    la informàtica, utilitzant divertits tutorials per demostrar que qualsevol pot
+    aprendre els conceptes bàsics. Aquest any, estem portant Hour of Code a noves
+    altures oferint oportunitats de codificació que engloben tant la intel·ligència
+    artificial (IA) com els components no AI. Tant si vosaltres com els vostres estudiants
+    sou codificadors experimentats o tots esteu començant a la vostra primera expedició
+    en informàtica, aquesta Hora del Codi promet un viatge extraordinari.
+  hoc_how_to_faq_question_prerequisites: Quins són els requisits previs per fer una
+    hora de codi?
+  hoc_how_to_faq_answer_prerequisites: L'hora del codi és senzilla d'executar, fins
+    i tot per a principiants. No necessiteu experiència en informàtica o ensenyament
+    per tal d'inspirar els estudiants a explorar, crear i aprendre alguna cosa nova.
+  hoc_how_to_faq_question_devices: Quins dispositius necessito per executar una hora
+    de codi?
+  hoc_how_to_faq_answer_devices_01: 'Dispositius que podeu utilitzar:'
+  hoc_how_to_faq_answer_devices_02: Si els dispositius són limitats o no estan disponibles,
+    proveu [programació de parella] (%{pair_url}) o exploreu les nostres [activitats
+    desconnectades] (%{unplugged_url}) per aprendre sense cap dispositiu en absolut!
+  hoc_how_to_faq_question_volunteer: Qui es pot fer voluntari?
+  hoc_how_to_faq_answer_volunteer: Qualsevol persona apassionada de l'educació en
+    ciències informàtiques i l'augment de la diversitat en tecnologia pot ser voluntari!
+    Ens encantaria que hi participin voluntaris de tots els antecedents. L'Hora del
+    Codi compta amb una gran varietat d'activitats per a totes les edats i nivells
+    d'habilitat, de manera que no cal ser un expert en programació per fer voluntariat!
+  hoc_how_to_faq_question_full_hour: L'hora del codi trigarà una hora completa?
+  hoc_how_to_faq_answer_full_hour: Molts alumnes podran acabar les seves activitats
+    en menys d'una hora, i ja està bé! Els alumnes poden continuar aprenent mentre
+    altres alumnes completen la seva activitat.
+  hoc_how_to_faq_question_account: Els alumnes han d'iniciar sessió amb un compte
+    propi?
+  hoc_how_to_faq_answer_account: No es requereix inscripció ni inici de sessió perquè
+    els estudiants puguin provar l'Hora del Codi. Registrar-se a l'Hora del Codi NO
+    crea automàticament un compte de Code.org.
+  hoc_how_to_resources_heading_educators: Altres recursos de l'Hora del Codi per a
+    educadors
+  hoc_how_to_resources_promo_heading: Recursos promocionals
+  hoc_how_to_resources_promo_desc: Troba tots els recursos que necessites —impressos
+    i digitals— per posar l'atenció a la teva Hora de Codi.
+  hoc_how_to_resources_discover_heading: Descobreix Activitats
+  hoc_how_to_resources_discover_desc: Explora una àmplia selecció de tutorials d'una
+    hora dissenyats per a totes les edats en més de 45 idiomes.
+  hoc_how_to_step_label_plan: Planifica on i quan faràs la teva Hora de Codi
+  hoc_how_to_step_label_choose_activity: Tria la teva activitat
+  hoc_how_to_step_label_test_activity: Prova la teva activitat
+  hoc_how_to_step_label_register_event: Registra el teu esdeveniment
+  hoc_how_to_step_label_tell: Digues als teus alumnes, escola i comunitat
+  hoc_how_to_step_label_get_coding: Obtenir codificació!
+  hoc_how_to_step_label_celebrate: Celebrar
+  hoc_how_to_step_label_beyond_hoc: Més enllà de l'hora del codi
+  hoc_how_to_step_beyond_hoc_subhead: No acaba aquí!
+  hoc_how_to_step_beyond_hoc_desc: La informàtica no ha d'acabar amb l'Hora del Codi!
+    Mentre que el 90% dels pares volen que el seu fill aprengui informàtica, la majoria
+    de les escoles encara no l'ensenyen. Aprèn a portar CS a l'escola del teu fill
+    avui.
+  hoc_how_to_step_01_educators_subhead: Seleccioneu un temps i un espai d'esdeveniment
+    que funcioni per al nombre d'alumnes i dispositius que teniu disponibles.
+  hoc_how_to_step_01_educators_desc_01: Quins espais hi ha disponibles per fer la
+    teva Hora de Codi? Tingueu en compte les capacitats tecnològiques del vostre espai
+    i el tipus de dispositius que espereu que treballin els vostres estudiants. Els
+    estudiants poden treballar en tutories en un sol dispositiu, fer torns utilitzant
+    un dispositiu compartit o provar un tutorial junts en una pissarra d'aula. Fins
+    i tot hi ha tutorials desconnectats que es poden completar sense dispositius en
+    absolut. Les opcions desconnectades es poden fer en qualsevol lloc, fins i tot
+    a l'aire lliure!
+  hoc_how_to_step_01_educators_desc_02: La gent de tot el món s'uneix a la celebració
+    de l'Hora del Codi durant la Setmana de l'Educació de CS %{campaign_date} quan
+    s'estrenen les últimes tutorials i activitats. Però podeu fer una hora de codi
+    qualsevol dia de l'any!
+  hoc_how_to_step_02_educators_desc_01: Explora activitats en funció de l'edat, l'experiència,
+    els interessos i molt més del teu grup. És popular per als estudiants provar tutories
+    autodirigides, tot i que moltes activitats inclouen plans de lliçons per als professors
+    per guiar la discussió o ampliar l'activitat també.
+  hoc_how_to_step_02_educators_desc_02: Decidiu abans d'hora si voleu triar un únic
+    tutorial per a tots els vostres alumnes o deixeu que cada nen triï el seu propi.
+  hoc_how_to_step_02_educators_desc_03: Aquest any, vosaltres i els vostres alumnes
+    podeu [aprendre tot sobre la IA] (%ai_url) a través de tutorials, plans de lliçons
+    i la nostra nova sèrie de vídeos How AI Works.
+  hoc_how_to_step_03_educators_desc_01: Prova tu mateix el tutorial abans d'entrar
+    a l'aula perquè puguis respondre preguntes!
+  hoc_how_to_step_03_educators_desc_02: També podeu provar tutorials en ordinadors
+    o dispositius dels estudiants per assegurar-vos que admeten so i vídeo. Tenir
+    baix ample de banda? Planifiqueu mostrar vídeos a la part frontal de la classe,
+    de manera que cada alumne no descarregui els seus propis vídeos.
+  hoc_how_to_step_03_educators_desc_03: Penseu en proporcionar auriculars per a la
+    vostra classe, o demaneu als estudiants que portin els seus propis, si el tutorial
+    que trieu funciona millor amb el so.
+  hoc_how_to_step_04_educators_desc_01: Quan registreu el vostre esdeveniment Hour
+    of Code, rebreu correus electrònics útils amb notícies i consells per allotjar
+    una reeixida Hora de Codi. També és com podeu fer saber als voluntaris locals
+    que la vostra escola participa. Els voluntaris són un gran recurs i poden venir
+    a parlar a la vostra classe sobre informàtica o ajudar els vostres alumnes amb
+    les activitats de l'Hora del Codi.
+  hoc_how_to_step_05_educators_desc_01: Aconsegueix que els teus alumnes s'emocionin
+    per l'esdeveniment compartint [vídeos inspiracionals] (%{videos_url}) destacant
+    persones diverses i maneres creatives que la informàtica es pot utilitzar en el
+    món real.
+  hoc_how_to_step_05_educators_desc_02: Comparteix els teus plans de Hora de Codi
+    amb altres professors que potser vulguin unir-se a la diversió. Aquesta també
+    és una gran oportunitat per contactar amb l'Associació d'Estudiants de Professorat
+    de Pares de la vostra escola o compartir en butlletins informatius de pares, fent-los
+    saber què estan aprenent els seus fills.
+  hoc_how_to_step_06_educators_desc_01: Dirigeix els teus alumnes a l'activitat, potser
+    compartint l'enllaç a la pissarra o a través del sistema de gestió de l'aprenentatge
+    de la teva aula. Els vostres estudiants poden trobar-se amb reptes, això està
+    bé! Aprendre a programar és com aprendre un nou idioma; no seràs fluix de seguida.
+    Si no coneixeu la resposta, podeu esbrinar junts.
+  hoc_how_to_step_07_educators_desc_01: 'Assegureu-vos de celebrar l''èxit! Comparteix
+    fotos i vídeos del teu esdeveniment Hora del Codi a les xarxes socials. Utilitza
+    #HourOfCode i @codeorg perquè puguem destacar el teu èxit, també!'
+  hoc_how_to_step_07_educators_desc_02: També pots imprimir certificats perquè els
+    teus alumnes llueixin el seu assoliment!
   team_page_full_team_alt_text: Gairebé 100 empleats de Code.org a joc samarretes
     blaves i grogues posen en una sala de conferències d'hotel per a l'esdeveniment
     Codechella estiu 2022 de la companyia.
@@ -14200,6 +14439,11 @@ ca:
   video_library_page_inspirational_video_title_11: Qualsevol pot aprendre (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: La NASA celebra l'hora del codi
+    (2 min)
+  video_library_page_inspirational_video_title_14: És més que un joc (1 min)
+  video_library_page_inspirational_video_title_15: Crear amb Ciències de la Computació
+    (1 min)
   video_library_page_not_hacked_video_title_1: 'Com no ser hackejat: Introducció'
   video_library_page_not_hacked_video_title_2: 'Com no ser hackejat: contrasenyes'
   video_library_page_not_hacked_video_title_3: 'Com no ser hackejat: autenticació
@@ -14209,6 +14453,167 @@ ca:
   video_library_page_not_hacked_video_title_6: 'Com no ser hackejat: missatgeria i
     descàrregues'
   video_library_page_not_hacked_video_title_7: 'Com no ser hackejat: instal·lar actualitzacions'
+  about_us_page_title: Qui som
+  about_us_page_hero_description: Code.org® és una organització sense ànim de lucre
+    d'innovació educativa dedicada a la visió que cada alumne de cada escola té l'oportunitat
+    d'aprendre informàtica com a part de la seva educació bàsica K-12. Ampliem l'accés
+    a la informàtica a les escoles, amb un enfocament en l'augment de la participació
+    de dones joves i estudiants d'altres col·lectius poc representats. El proveïdor
+    líder del currículum d'informàtica K-12 als districtes escolars més grans dels
+    Estats Units, Code.org també organitza la campanya anual [Hour of Code] (%{hour_url}),
+    que ha involucrat més del 15% de tots els estudiants del món. Code.org està recolzat
+    per generosos donants incloent Microsoft, Amazon, Google i [molts altres.] ()%{others_url}
+  about_us_page_section_title_1: Més de 80 milions d'estudiants i 2 milions de professors
+    a Code.org
+  about_us_page_statistic_figcaption: Participació de Code.org a partir del curs escolar
+    2021-2022. [Veure dades desagregades.] ()%{data_url}
+  about_us_page_statistic_description: Code.org augmenta la diversitat en informàtica
+    arribant a estudiants de tots els antecedents on es troben, al seu nivell d'habilitats,
+    a les seves escoles, i de maneres que els inspiren a seguir aprenent. La gran
+    majoria dels estudiants de Code.org són de grups d'estudiants històricament infrarepresentats
+    en informàtica. L'augment de la diversitat en informàtica és fonamental per al
+    nostre treball, i [us animem a llegir més sobre els nostres esforços] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org a les notícies
+  about_us_page_section_news_description: Veure tots els passats [notícies i anuncis]
+    (%{news_url})
+  about_us_page_section_table: Els nostres objectius i mètriques
+  about_us_page_section_table_header_1: Objectiu Code.org
+  about_us_page_section_table_header_2: Realització
+  abous_page_section_table_cell_1_1: Millorar la diversitat en CS * (estudiants dels
+    EUA) *
+  abous_page_section_table_cell_1_2: El 45% dels estudiants de Code.org són dones
+    joves, el 50% són estudiants de grups racials i ètnics marginats, i el 46% dels
+    estudiants nord-americans estan en escoles d'alta necessitat. Llegeix més sobre
+    [el nostre enfocament a la diversitat.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Inspirar els estudiants
+  about_page_section_table_cell_2_2: Desenes de milions han provat l' [Hora del Codi]
+    (%{hour_url}). (426.370.561 servits. 49% femení)
+  about_page_section_table_cell_3_1: Arribar a les aules
+  about_page_section_table_cell_3_2: 591.636 professors s'han inscrit per impartir
+    els nostres cursos d'introducció sobre [Code Studio] (%{code_studio_url}) i 19.177.297
+    alumnes estan matriculats.
+  about_page_section_table_cell_4_1: Prepara nous professors de CS
+  about_page_section_table_cell_4_2: Hem preparat més de 106.000 nous professors per
+    ensenyar CS a través dels graus K-12. Coneix els nostres [programes d'aprenentatge
+    professional.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Canvia el currículum del districte escolar
+  about_page_section_table_cell_5_2: Ens hem associat amb [180+ dels districtes escolars
+    més grans] (%{schoold_disctrict_url}) i 60 socis regionals per [afegir CS al currículum
+    escolar] (%{cs_curriculum_url}). [Obteniu informació sobre convertir-se en soci
+    regional.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Configurar polítiques per donar suport a CS
+  about_page_section_table_cell_6_2: "[Polítiques canviades en 50 estats dels EUA]
+    (%{states_url}) per establir normes d'educació CS, fer que els cursos de CS comptin
+    cap a la graduació de secundària, etc. [(detalls)] (%{details_url})"
+  about_page_section_table_cell_7_1: Anar a nivell global
+  about_page_section_table_cell_7_2: Els nostres cursos estan disponibles en més de
+    67 idiomes, utilitzats en més de 180 països.
+  about_page_section_table_under_label: 'Font: Activitat de Code Studio i [enquestes
+    a educadors participants] (%{educators_url})'
+  about_page_section_title_3: Més informació, història i filosofia
+  about_page_section_more_description_1: 'El 2013, Code.org va ser llançat pels germans
+    bessons [Hadi](%{hadi_url}) i [Ali Partovi] (%{partovi_url}) amb un [video](%{video_url})
+    de promoció de la informàtica. Aquest vídeo es va convertir en #1 a YouTube durant
+    un dia, i 15.000 escoles van contactar amb nosaltres per demanar ajuda. Des de
+    llavors, ens hem ampliat des d''un personal bootstrapped de voluntaris per construir
+    una organització completa donant suport a un moviment mundial. Creiem que una
+    educació en informàtica de qualitat hauria d''estar disponible per a tots els
+    nens, no només uns pocs afortunats.'
+  about_page_section_more_description_2: 'Per donar suport al nostre objectiu, treballem
+    en tot l''espectre educatiu: dissenyar els nostres propis cursos o associar-nos
+    amb altres, formar professors, associar-nos amb grans districtes escolars, ajudar
+    a canviar les polítiques governamentals, expandir-se internacionalment mitjançant
+    associacions i comercialització per trencar estereotips.'
+  about_page_section_more_description_3: El nostre treball es basa en [dècades d'esforç,
+    d'innombrables organitzacions i individus] (%{efforts_url}) que han ajudat a establir,
+    finançar i difondre l'educació en ciències informàtiques. Estem agraïts de beneficiar-se
+    de l'ajuda incansable de la comunitat d'educació en informàtica més àmplia, i
+    [donem les gràcies a tots els socis i individus que han donat suport al nostre
+    impacte al llarg dels anys] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Informe Anual] (%{report_url}) (Informes
+    passats: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Els nostres valors bàsics i directrius de missatgeria]
+    (%{core_url})"
+  about_page_section_more_list_3: "[El nostre currículum i filosofia de pedagogia]
+    (%{curriculum_url})"
+  about_page_section_more_list_4: "[Xerrada TEDx del nostre fundador Hadi Partovi
+    sobre per què la informàtica és per a tots (VÍDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Un enfocament unificador en un món dividit
+  about_page_section_specific_title_1: Un enfocament unificador en un món dividit
+  about_page_section_specific_title_2: El nostre compromís amb l'accessibilitat
+  about_page_section_specific_title_3: El nostre compromís amb els plans d'estudis
+    lliures i la tecnologia de codi obert
+  about_page_section_specific_title_4: Coalició Advocacia Code.org
+  about_page_section_specific_title_5: Marc de Ciències de la Computació K-12
+  about_page_section_specific_title_6: Donants de Code.org
+  about_page_section_specific_title_7: Seguiu-nos
+  about_page_section_specific_title_8: Abast internacional de Code.org
+  about_page_section_specific_description_1: El paper global de Code.org en el moviment
+    de la informàtica K-12 només és possible perquè utilitzem un enfocament unificador
+    entre parts interessades diverses i sovint dividides. En un moment de polarització
+    creixent, la idea d'augmentar l'oportunitat per als estudiants uneix persones
+    de tot l'espectre polític. Els membres de l'equip, estudiants, professors i simpatitzants
+    de Code.org tenen punts de vista diversos i divergents, i tots són benvinguts
+    en la nostra missió. [Llegir més.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org creu que la informàtica és fundacional
+    per a tots els estudiants i estem compromesos amb l'equitat, l'accés, i l'oportunitat
+    en la nostra organització [values.](%{values_url}) Per aconseguir aquest objectiu,
+    treballem per identificar i eliminar les barreres que impedeixen la inclusió i
+    la participació plena d'estudiants i educadors amb discapacitat. Per obtenir més
+    informació sobre els nostres esforços, consulteu la nostra [declaració d'accessibilitat.]
+    (%{accessibility_url})
+  about_page_section_specific_description_3: Tots els recursos curriculars i tutorials
+    que autorem seran per sempre lliures d'utilitzar i obertament llicenciats sota
+    una llicència [Creative Commons] (%{commons_url}), permetent a altres fer recursos
+    educatius derivats per a fins no comercials. Si estàs interessat en llicenciar
+    els nostres materials amb finalitats comercials, [contacta amb nosaltres] (%{contact_us_url}).
+    Els nostres cursos estan traduïts per a ús mundial o per parlants de diferents
+    idiomes. La nostra tecnologia es desenvolupa com un [projecte de codi obert.]
+    (%{open_source_url})
+  about_page_section_specific_description_4: 'La [Code.org Advocacy Coalition] (en
+    anglès: Code.org Advocacy Coalition%{advocacy_url}) és una coalició bipartidista
+    de corporacions i organitzacions sense ànim de lucre que treballen conjuntament
+    per ajudar a establir polítiques federals i estatals dels Estats Units per ampliar
+    i mantenir l''accés a la informàtica K-12 i ampliar la participació i la diversitat
+    en el camp. Reunim [líders polítics republicans i demòcrates] (%{leaders_url})
+    en causa comuna donant suport a l''ampliació de l''accés a la informàtica K-12
+    i la participació en la informàtica K-12.'
+  about_page_section_specific_description_5: Code.org és membre del comitè directiu
+    que va ajudar a establir el [K-12 Computer Science Framework] (%{framework_url})
+    - una guia d'alt nivell per als estats, districtes i organitzacions que implementen
+    l'educació en ciències de la computació. El marc ha guanyat el suport de centenars
+    d'acadèmics, educadors de K-12, empreses de programari, organitzacions sense ànim
+    de lucre i estats.
+  about_page_section_specific_description_6: Code.org IRS formulari 990 per [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), i [2021](%{irs_url_8}). [Política
+    de donacions.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Inscriu-te per rebre actualitzacions
+    d'estat] (%{sign_up_url}) sobre el progrés en el moviment de la informàtica K-12
+    i sobre el treball de Code.org. O seguiu Code.org a les xarxes socials:"
+  about_page_section_specific_description_8: Més del 40% del trànsit del nostre lloc
+    web prové de fora dels Estats Units i aquest nombre continua augmentant. Per tal
+    d'ampliar l'accés global a la informàtica, el nostre equip treballa estretament
+    amb [més de 100 socis internacionals] (%{partners_url}), ajudant-los a promoure
+    l'Hora del Codi, advocar pel canvi de polítiques, i formar professors. Estem fent
+    que la informàtica formi part del discurs internacional de l'educació associant-nos
+    amb ministeris d'educació de tot el món i treballant amb organitzacions internacionals
+    com l'Organització per a la Cooperació i el Desenvolupament Econòmic i l'Organització
+    de les Nacions Unides per a l'Educació, la Ciència i la Cultura.
+  about_page_section_donors_description_1: Code.org® és una entitat sense ànim de
+    lucre 501c3 pública registrada, amb suport del públic en general. Estem agraïts
+    pel generós suport que hem rebut de [persones i organitzacions] (%{individuals_url})
+    que donen suport a la nostra visió.
+  about_page_section_donors_description_2: Els èxits dels codis (anteriors) demostren
+    la nostra capacitat d'aprofitar aquests dòlars en resultats forts. Però donada
+    la nostra ambició sense ànim de lucre que cada nen de cada escola ha de tenir
+    accés a la informàtica —per convertir-se en ciutadans alfabetitzats en el món
+    digital actual i posar a prova els seus interessos en explorar CS més lluny com
+    a carrera—, tenim un llarg camí per recórrer per complir amb un objectiu de recaptació
+    de fons que donarà suport a aquesta visió.
+  about_page_donors_link_1: Fer donacions
+  about_page_donors_link_2: "[Veure la nostra llista de donants] (%{donors_url})"
   language_code:
     ar: Àrab
     az: Àzeri

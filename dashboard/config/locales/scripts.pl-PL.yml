@@ -1926,6 +1926,13 @@ pl:
           title: Projekty CSA Profesjonalnego kodowania edukacyjnego
         csa-pl-test:
           name: csa-pl-test
+        csa-postap-se-and-computer-vision-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: GitHub i Copilot'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wizja komputerowa'
+          title: Inżynieria oprogramowania i wizja komputerowa
         csa-preview:
           name: csa-preview
           title: Przegląd programu i narzędzi CSA
@@ -6967,6 +6974,12 @@ pl:
         draft-hoc-dp:
           name: draft-hoc-dp
           title: Potańcówka (szkic)
+        draft-hoc-dp-2:
+          lessons:
+            lesson-1:
+              name: Godzina Kodowania (Szkic 2)
+          name: draft-hoc-dp-2
+          title: Potańcówka (Szkic 2)
         drafting:
           name: redakcja
           title: Aktualizacje wersji roboczej CSP 2023-24
@@ -7701,6 +7714,13 @@ pl:
           student_description: Samouczki z nauczycielem do opracowania w  Game Lab.  Te
             samouczki wychodzą poza zakres koncepcji ujętych w CSD.
           title: Laboratorium Gier (Game Lab)
+        genai-temp:
+          description: Jednostka tymczasowa do pracy z generatywną AI
+          lessons:
+            lesson-1:
+              name: Tymczasowa lekcja dla Ali
+          name: genai-temp
+          title: "[Temp] Generatywna AI"
         glj-behavior-test:
           title: Gra Lab Jr. Test - Zachowanie
         grade1:
@@ -7959,7 +7979,7 @@ pl:
           description_short: Odkrywaj świat Minecraft poprzez kodowanie.
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę
             w świecie gry Minecraft.
-          title: Godzina Kodowania z Minecraft
+          title: Poszukiwacz przygód z Minecraftem
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -9250,6 +9270,114 @@ pl:
               display_name: Treści
             csd3_2:
               display_name: 'Rozdział 2: Budowanie gier'
+        virtual-pl-csa-summer-2024-day1:
+          name: virtual-pl-csa-summer-2024-day1
+          title: Dzień 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day1
+          title: Dzień 1
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day2
+          title: Dzień 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day3
+          title: Dzień 3
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day4
+          title: Dzień 4
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Część asychroniczna 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          lessons:
+            lesson-1:
+              name: Synchroniczna Część 1
+            lesson-2:
+              name: Część asychroniczna 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day5
+          title: 'Dzień 5 '
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -9435,6 +9563,31 @@ pl:
             lesson-9:
               name: Przygotowanie na rok
           name: virtual-pl-csd-letni-dzień5
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Synchroniczna Część 2
+            lessonGroup-4:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csp-summer-day1
+          title: Dzień 1
+        virtual-pl-csp-summer-day1-2024:
+          name: virtual-pl-csp-summer-day1-2024
+        virtual-pl-csp-summer-day2:
+          name: virtual-pl-csp-summer-day2
+          title: Dzień 2
+        virtual-pl-csp-summer-day3:
+          name: virtual-pl-csp-summer-day3
+          title: Dzień 3
+        virtual-pl-csp-summer-day4:
+          name: virtual-pl-csp-summer-day4
+          title: Dzień 4
+        virtual-pl-csp-summer-day5:
+          name: virtual-pl-csp-summer-day5
         virustest:
           description_short: 'Użyj Sprite Lab, aby utworzyć symulację epidemii wirusa. '
           lesson_groups:

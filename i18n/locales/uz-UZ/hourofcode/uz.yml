@@ -5,36 +5,40 @@ uz:
   language: Ingliz
   front_title: Tarixdagi eng katta tadbirga asoslanish:% {campaign_date}
   coming_soon: Tez kunda
-  campaign_date_start_short: 5-dekabr
-  campaign_date_start_long: 5-dekabr
-  campaign_date_short: 5-11-dekabr
-  campaign_date_full: 5-11-dekabr
-  campaign_date_year: 2022-yil
-  campaign_date_full_year: 2022 yil 5-11-dekabr
+  campaign_date_start_short: 4-dekabr
+  campaign_date_start_long: 4-dekabr
+  campaign_date_short: 4-10-dekabr
+  campaign_date_full: 4-10-dekabr
+  campaign_date_year: 2023-yil
+  campaign_date_full_year: 2023 yil 4-10-dekabr
   nonus_campaign_date_start_short: '"1-oktabr".'
   nonus_campaign_date_start_long: 1 oktyabr
   nonus_campaign_date_short: '"1-oktyabr - 18-dekabr".'
   nonus_campaign_date_full: 1-oktyabr - 18-dekabr
-  nonus_campaign_date_year: 2022-yil
+  nonus_campaign_date_year: 2023-yil
   nonus_campaign_date_full_year: 2022-yil 1-oktyabr - 2022-yil 18-dekabr
   latam_campaign_date_start_short: '"1-oktabr".'
   latam_campaign_date_start_long: 1 oktyabr
   latam_campaign_date_short: '"1-oktyabr - 18-dekabr".'
   latam_campaign_date_full: 1-oktyabr - 18-dekabr
-  latam_campaign_date_year: 2022-yil
+  latam_campaign_date_year: 2023-yil
   latam_campaign_date_full_year: 2022-yil 1-oktyabr - 2022-yil 18-dekabr
   europe_campaign_date_start_short: '"10-oktabr".'
   europe_campaign_date_start_long: 10 oktyabr
   europe_campaign_date_short: 10-25 oktyabr
   europe_campaign_date_full: 10-25 oktyabr
-  europe_campaign_date_year: 2022-yil
+  europe_campaign_date_year: 2023-yil
   europe_campaign_date_full_year: 2021 yil 6-12 oktyabr
   africa_campaign_date_start_short: '"1-oktabr".'
   africa_campaign_date_start_long: 1 oktyabr
   africa_campaign_date_short: 1-31-oktyabr
   africa_campaign_date_full: 1-31-oktyabr
-  africa_campaign_date_year: 2022-yil
+  africa_campaign_date_year: 2023-yil
   africa_campaign_date_full_year: 2020-yil 11-31-oktyabr
+  hoc2023_header: AI bilan ijodkorlik
+  hoc2023_social_creativity_with_ai_title: Kod soati - Siz nima yaratasiz?
+  hoc2023_social_creativity_with_ai_desc: AIni o'rganish va o'rganish uchun kompyuter
+    fanidan foydalaning!
   hoc2022_header: Taqdiq qiling, O'ynang, Yarating!
   social_hoc2022_explore_play_create: Kompyuter fanlarini tadqiq qilish, o'ynash va
     yaratish uchun foydalaning!
@@ -183,6 +187,34 @@ uz:
     — shuningdek, yangi O'quv Dasturi katalogi va qayta ishlab chiqilgan O'qitish
     sahifasi barchasini topishga yordam beradi!
   in_partnership_with: Quyidagilar bilan hamkorlikda
+  shop_code_dot_org_heading: Code.org do'konini xarid qiling
+  shop_code_dot_org_desc: Bizning ishimizni qo'llab-quvvatlang va harakatni g'urur
+    bilan kiying. Bizning bosh kiyimlarimizni Prezident Obama va mashhurlar ham kiygan.
+  spread_the_word_heading: Targ‘ibot qiling
+  spread_the_word_desc: Code.org saytini tarmog'ingiz bilan baham ko'rish orqali ta'sirimizni
+    kuchaytiring. Ijtimoiy tarmoqlardan elektron pochta xabarlariga qadar ko'proq
+    o'qituvchilar, talabalar va advokatlar bilan bog'lanishimizga qanday yordam berishingizni
+    bilib oling.
+  follow_us_heading: Bizni ijtimoiy tarmoqlarda kuzatib boring
+  follow_us_desc: Ijtimoiy tarmoqlarda biz bilan xabardor bo'ling va xabardorlikni
+    oshirish va xabardorlikni oshirishga yordam berish uchun postlarimizni tarmog'ingiz
+    bilan baham ko'ring.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Planshet
+  device_laptop: Noutbuk
+  device_desktop_computer: Ish stoli kompyuter
+  device_mobile_device: Mobil qurilma
+  subscribe_to_emails_heading: Elektron pochta xabarlariga obuna bo'ling
+  subscribe_to_emails_desc: Code.org saytida va informatika ta'limida nima bo'layotgani
+    haqida bizning pochta ro'yxatimiz orqali har chorakda yangilanishlar orqali o'qing.
+  subscribe_to_emails_intl: Xalqaro yangilanishlarga obuna bo'ling
+  promote_code_dot_org_heading: Code.org saytini targ'ib qiling
+  promote_code_dot_org_desc: Statistikalar, iqtiboslar va videolar yordamida o'z mintaqangizda
+    informatika fanini targ'ib qiling.
   afe_partnership_logo_alt: Amazon Future Engineer logotipi
   afe_partnership_thanks_desc: Amazon Future Engineer - bu kam ta'minlangan va boshqa
     nochor bolalar va yoshlarni kompyuter fanlari sohasida martaba orttirishga ilhomlantirish,
@@ -203,19 +235,48 @@ uz:
   curricula_desc_high: Sizni va o'rta maktab o'quvchilaringizni informatika fanini
     chuqurroq o'rganishga taklif qiladigan qiziqarli kurslar va tadbirlarni ko'rib
     chiqing.
+  for_administrators_heading: Ma'murlar uchun
+  for_administrators_desc: Informatika fanini o'z o'quv dasturiga kiritgan minglab
+    maktablarga qo'shiling.
+  for_parents_heading: Ota-onalar uchun "
+  for_parents_desc: Siz o'quvchining maktabini informatika bo'yicha ta'limni taklif
+    qilish yoki kengaytirishga undashingiz mumkin.
+  for_educators_heading: O‘qituvchilar uchun "
+  for_educators_desc: Kasbiy o'quv ustaxonalarimiz bilan bugun o'qitishni boshlang
+    - informatika tajribasi zarur emas.
   students_label: Oʻquvchilar
   teachers_label: O‘qituvchilar
+  educators_label: O'qituvchilar
+  companies_label: Kompaniyalar
+  districts_label: Tumanlar
+  school_assemblies_label: Maktab yig'ilishlari
+  parents_label: Ota-onalar
+  public_officials_label: Davlat amaldorlari
+  volunteers_label: Ko'ngillilar
+  virtual_events_label: Virtual voqealar
   teacher_label_csf: KF Asoslari o'qituvchisi
   teacher_label_csd: Kompyuter fanlari kashfiyotlari O'qituvchi
   teacher_label_csp: KF Tamoyillari o'qituvchisi
   teacher_label_csc: KF Aloqalari o'qituvchisi
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: O'qituvchilar forumi
+  teacher_forum_desc: Boshqa o'qituvchilardan maslahat, tushuncha va yordam olish
+    uchun Kod soati o'qituvchilari forumiga tashrif buyuring.
   required_materials: 'Kerakli Materiallar:'
   optional_materials: 'Ixtiyoriy Materiallar:'
-  call_to_action_explore_roles: Ochiq rollarni o'rganing
+  call_to_action_hold_an_event: Tadbir o'tkazing
+  call_to_action_register_event: Tadbiringizni ro'yxatdan o'tkazing
+  call_to_action_select_activity: Faoliyatni tanlang
+  call_to_action_start_activity: Faoliyatni boshlang
+  call_to_action_get_certificates: Sertifikatlar oling
+  call_to_action_go_beyond_hoc: Kod soatidan tashqariga chiqing
+  call_to_action_view_promo_resources: Promo-manbalarni ko'ring
   call_to_action_learn_more: Ko‘proq ma'lumot olish.
   call_to_action_watch_now: Hoziroq tomosha qiling
   call_to_action_try_activity: Mashg'ulotni sinab ko'ring
+  call_to_action_try_activities: Faoliyatni sinab ko'ring
+  call_to_action_explore_activities: Faoliyatlarni o'rganing
+  call_to_action_explore_ai: AI ni o'rganing
   call_to_action_explore_unit: Bo'limni o'rganib chiqing
   call_to_action_explore_curriculum: O'quv dasturini o'rganib chiqing
   call_to_action_explore_curriculum_options: O'quv dasturining variantlarini o'rganib
@@ -274,6 +335,7 @@ uz:
     toping
   call_to_action_join_teacher_forums: O'qituvchilar forumlariga qo'shiling
   call_to_action_explore_teacher_forums: O'qituvchilar forumlarini o'rganib chiqing
+  call_to_action_explore_teacher_forum: O'qituvchilar forumini o'rganing
   call_to_action_explore_career_resources: Martaba manbalarini o'rganib chiqing
   call_to_action_watch_videos: Videolarni tomosha qiling
   call_to_action_download_posters: Plakatlarni yuklab oling
@@ -291,11 +353,37 @@ uz:
   call_to_action_notify_available: Mavjud bo'lganda menga xabar bering
   call_to_action_register_early_access: Erta kirish uchun ro'yxatdan o'ting
   call_to_action_open_positions: Ochiq pozitsiyalarni ko'rish
+  call_to_action_explore_roles: Ochiq rollarni o'rganing
   call_to_action_get_guide: Qo'llanmani oling
   call_to_action_donate_to_cdo: Code.org saytiga xayriya qiling
   call_to_action_start_fundraiser: Mablag 'yig'ishni boshlang
   call_to_action_view_donation_policy: Xayriya siyosatini ko'rish
   call_to_action_view_donate_bitpay: BitPay bilan xayr-ehson qiling
+  call_to_action_make_a_donation: Xayriya qiling
+  call_to_action_other_ways_to_give: Berishning boshqa usullari
+  call_to_action_become_partner_usa: Amerika Qo'shma Shtatlarining sherigiga aylaning
+  call_to_action_become_partner_intl: Xalqaro hamkor bo'ling
+  call_to_action_become_a_volunteer: Ko'ngilli bo'ling
+  call_to_action_start_translating: Tarjima qilishni boshlang
+  call_to_action_learn_about_advocacy: Bizning targ'ibotimiz haqida bilib oling
+  call_to_action_visit_store: Do'konga tashrif buyuring
+  call_to_action_view_faqs: Ko'proq tez-tez so'raladigan savollarni ko'rish
+  aria_label_call_to_action_hoc_how_to_educators: O'qituvchilar uchun qanday qo'llanmani
+    ko'ring
+  aria_label_call_to_action_hoc_how_to_companies: Kompaniyalar uchun qanday qo'llanmani
+    ko'ring
+  aria_label_call_to_action_hoc_how_to_districts: Tumanlar uchun qanday qo'llanmani
+    ko'ring
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Maktab yig'ilishlari uchun
+    qanday qo'llanmani ko'ring
+  aria_label_call_to_action_hoc_how_to_parents: Ota-onalar uchun qanday qo'llanmani
+    ko'ring
+  aria_label_call_to_action_hoc_how_to_public_officials: Davlat amaldorlari uchun
+    qanday qo'llanmani ko'ring
+  aria_label_call_to_action_hoc_how_to_volunteers: Ko'ngillilar uchun qanday qo'llanmani
+    ko'ring
+  aria_label_call_to_action_hoc_how_to_virtual_events: Virtual voqealar uchun qanday
+    qo'llanmani ko'ring
   aria_label_call_to_action_afe: Amazon Future Engineer haqida ko'proq bilib oling
   aria_label_call_to_action_teaching_csf: Kompyuter fanlari asoslarini o'qitish professional
     ta'lim dasturini boshlang
@@ -656,6 +744,7 @@ uz:
   heading_explore_curriculum_catalog: O'quv dasturlari katalogidagi barcha kurslarimizni
     o'rganing
   heading_csa_ai: AP® imtihonidan keyin qilinadigan ishlarni qidiryapsizmi?
+  heading_bring_cs_to_students: Talabalarga informatika fanini olib keling
   professional_learning_section_desc: O'qitishga tayyorgarlik ko'rayotganda kerakli
     yordamni oling. O'qituvchilar buni yaxshi ko'radilar, 90% dan ortig'i bu eng yaxshi
     kasbiy rivojlanish reytingiga ega!
@@ -944,6 +1033,7 @@ uz:
     foydalanishga qaratilgan. Nazariya, amaliy misollar va manbalarning boy aralashmasi
     bilan u o'qituvchilarga sun'iy intellekt landshaftini boshqarish va talabalarning
     o'rganish tajribasini oshirish imkoniyatini berishga qaratilgan.
+  ai_pl_101_resources_5: AIga mas'uliyatli yondashuvni ta'minlash bo'yicha qo'llanma
   ai_pl_101_video_desc_6: 'Katta til modellari (ChatGpt kabi) va Generative AI bo''yicha
     ikkita yangi videoni o''z ichiga olgan sun''iy intellektdagi katta o''zgarishlarni
     keltirib chiqaradigan yangi texnologiya haqida ko''proq bilib oling. Ushbu yangi
@@ -955,6 +1045,8 @@ uz:
     boshlang'ich ko'rsatmalarni, shuningdek, o'z potentsialini maksimal darajada oshirishni
     istaganlar uchun ilg'or vositalarni o'z ichiga oladi.
   ai_pl_101_resources_3: AI talabalar ta'limini o'zgartirishni taklif qiladi
+  ai_pl_101_resources_section_title: AI haqida bilishning ko'proq usullari
+  ai_pl_101_resources_guide: 'Hamroh qo''llanmasi:'
   how_ai_works_hero_heading: AI qanday ishlaydi
   how_ai_works_hero_desc: "“AI qanday ishlaydi”, bizning video seriyamiz va unga qo'shilgan
     darslarimiz bilan sun'iy intellekt dunyosiga sho'ng'ing!"
@@ -1862,6 +1954,33 @@ uz:
   donate_tabs_bitpay_desc: Kripto valyutasi bilan berishning kelajagini quchoqlang.
     BitPay orqali sizning raqamli valyutangiz Code.org saytining informatika ta'limini
     kengaytirishdagi sa'y-harakatlarini bevosita qo'llab-quvvatlashi mumkin.
+  help_page_top_heading: Qanday yordam berishingiz mumkin
+  help_page_top_desc: Kompyuter fanini har bir bola uchun, hamma joyda ochiq qilish
+    uchun bizning vazifamizni qo'llab-quvvatlang. Sizning sa'y-harakatlaringiz kelajakdagi
+    innovatorlarni ilhomlantirishga va texnologik ta'limdagi bo'shliqni bartaraf etishga
+    yordam beradi.
+  help_page_top_subhead: Code.org saytiga xayriya qiling
+  help_page_top_desc_02: Biz har bir o'quvchiga informatika fanini o'rganish imkoniyatini
+    berish ustida ishlayapmiz - ham onlayn, ham maktablarda, biz doimiy kurslar tashkil
+    etamiz va o'qituvchilarni tayyorlaymiz. Xayriya qilgan har bir dollar uchun bitta
+    bola informatika bilan tanishadi.
+  help_page_partners_heading: Hamkor bo'ling
+  help_page_partners_desc: Code.org kompyuter fanini mahalliy, barqaror tarzda tarqatishga
+    yordam berish uchun boshqa notijorat tashkilotlar bilan hamkor sifatida ishlaydi.
+    Bizning dasturimiz haqida ko'proq bilib oling.
+  help_page_volunteer_heading: Sinfda ko'ngilli
+  help_page_volunteer_desc: Kod soatini o'rgatish yoki mahalliy sinfda mehmon ma'ruzachi
+    bo'lish uchun ko'ngilli bo'ling. Sizga yaqin bo'lgan imkoniyatlar haqida eshitish
+    uchun ro'yxatdan o'ting.
+  help_page_translate_heading: Tarjima qilishga yordam bering
+  help_page_translate_desc: Ko'ngillilar bizning darsliklarimizni 45 dan ortiq tillarga
+    tarjima qilishdi. Dunyo bo'ylab talabalar uchun darsliklarimizni kengaytirishda
+    davom etishimizga yordam bering!
+  help_page_speak_for_cs_heading: Informatika ta'limi uchun gapiring
+  help_page_speak_for_cs_desc: Code.org saytining AQSh bo'ylab targ'ibot ishlari va
+    biz shtatlarga barcha talabalar uchun informatika asosini yaratish uchun tavsiya
+    qilgan o'nta siyosat haqida ko'proq bilib oling. Bundan tashqari, o'zingizning
+    holatingizda qanday o'zgarishlarni amalga oshirishingiz mumkinligini bilib oling.
   hoc_live: Dasturlash soati jonli efir
   hoc_live_sign_up_title: Dasturlash soati jonli efiriga ro'yxatdan o'ting
   hoc_live_learn_title: Kod soatini jonli efirda o'rganing
@@ -14057,6 +14176,140 @@ uz:
   all: Barcha
   dont_know: Bilmayman
   language_label: Til
+  before_hoc: Kod soatidan oldin
+  day_of_hoc: Kod soati kuni
+  after_hoc: Kod soatidan keyin
+  step_01: 1-qadam
+  step_02: 2-qadam
+  step_03: 3-qadam
+  step_04: 4-qadam
+  step_05: 5-qadam
+  step_06: 6-qadam
+  step_07: 7-qadam
+  step_08: 8-qadam
+  hoc_how_to_top_heading: Kod soati bo'yicha qo'llanma
+  hoc_how_to_top_desc: Eng yaxshi kod soati tajribasi uchun moslashtirilgan qo'llanmalar.
+  hoc_how_to_top_view_guide: Qo'llanmani ko'rish
+  hoc_how_to_nav_main_aria_label: Qo'llanmani tanlang
+  hoc_how_to_nav_sidebar_aria_label: Yon paneldagi navigatsiya
+  hoc_how_to_educators_intro_heading: Dasturlash soatini qanday rejalashtirish kerak
+  hoc_how_to_educators_intro_desc: Kod soati - bu kompyuter faniga bir soatlik kirish
+    bo'lib, har kim asoslarni o'rganishi mumkinligini ko'rsatish uchun qiziqarli qo'llanmalardan
+    foydalanadi. Bu yil biz sun'iy intellekt (AI) va sun'iy intellekt (AI) va sun'iy
+    intellekt bo'lmagan komponentlarni o'z ichiga olgan kodlash imkoniyatlarini taklif
+    qilish orqali Code soatini yangi cho'qqilarga olib chiqmoqdamiz. Siz yoki sizning
+    talabalaringiz tajribali kodlaydiganmisiz yoki barchangiz birinchi kompyuter fanlari
+    ekspeditsiyasiga boryapsizmi, bu Kod soati g'ayrioddiy sayohatni va'da qiladi.
+  hoc_how_to_faq_question_prerequisites: Kod soatini bajarish uchun qanday shartlar
+    mavjud?
+  hoc_how_to_faq_answer_prerequisites: Kod soatini ishlatish juda oson - hatto yangi
+    boshlanuvchilar uchun ham. Talabalarni yangi narsalarni o'rganish, yaratish va
+    o'rganishga ilhomlantirish uchun sizga kompyuter fanlari yoki o'qitish bo'yicha
+    tajriba kerak emas.
+  hoc_how_to_faq_question_devices: Bir soat kodini ishlatish uchun qanday qurilmalar
+    kerak?
+  hoc_how_to_faq_answer_devices_01: 'Siz foydalanishingiz mumkin bo''lgan qurilmalar:'
+  hoc_how_to_faq_answer_devices_02: Agar qurilmalar cheklangan yoki mavjud bo'lmasa,
+    hech qanday qurilmadan o'rganish uchun [juftlik dasturlash] (%{pair_url}) ni sinab
+    ko'ring yoki bizning [unplugged faoliyatimizni] (%{unplugged_url}) o'rganing!
+  hoc_how_to_faq_question_volunteer: Kim ko'ngilli bo'lishi mumkin?
+  hoc_how_to_faq_answer_volunteer: Kompyuter fanlari ta'limi va texnologiyalarning
+    xilma-xilligini oshirishga ishtiyoqli har bir kishi ko'ngilli bo'lishi mumkin!
+    Biz barcha kelib chiqadigan ko'ngillilar qatnashishini ko'rishni istardik. Kod
+    soati barcha yoshdagi va mahorat darajalari uchun turli xil tadbirlarni o'z ichiga
+    oladi, shuning uchun siz ko'ngilli bo'lish uchun dasturlash bo'yicha mutaxassis
+    bo'lishingiz shart emas!
+  hoc_how_to_faq_question_full_hour: Kod soati to'liq soat davom etadimi?
+  hoc_how_to_faq_answer_full_hour: Ko'pgina talabalar o'z faoliyatini bir soatdan
+    kamroq vaqt ichida tugatishlari mumkin va bu yaxshi! Boshqa talabalar esa o'z
+    faoliyatini yakunlashda talabalar o'rganishni davom ettirishlari mumkin.
+  hoc_how_to_faq_question_account: Talabalar akkaunt yordamida tizimga kirishlari
+    kerakmi? "
+  hoc_how_to_faq_answer_account: Talabalar Kod soatini sinab ko'rishlari uchun ro'yxatdan
+    o'tish yoki kirish shart emas. Kod soatiga ro'yxatdan o'tish avtomatik ravishda
+    Code.org hisobini yaratmaydi.
+  hoc_how_to_resources_heading_educators: O'qituvchilar uchun boshqa Dasturlash soati
+    manbalari
+  hoc_how_to_resources_promo_heading: Reklama manbalari
+  hoc_how_to_resources_promo_desc: Kod soatiga e'tiborni jalb qilish uchun kerakli
+    barcha resurslarni toping - bosma va raqamli.
+  hoc_how_to_resources_discover_heading: Faoliyatlarni kashf eting
+  hoc_how_to_resources_discover_desc: 45 dan ortiq tillarda barcha yoshlar uchun mo'ljallangan
+    bir soatlik qo'llanmalarning keng tanlovini o'rganing.
+  hoc_how_to_step_label_plan: Kod soatingizni qaerda va qachon bajarishingizni rejalashtiring
+  hoc_how_to_step_label_choose_activity: Faoliyatingizni tanlang
+  hoc_how_to_step_label_test_activity: Faoliyatingizni sinab ko'ring
+  hoc_how_to_step_label_register_event: Tadbiringizni ro'yxatdan o'tkazing
+  hoc_how_to_step_label_tell: O'quvchilaringizga, maktabingizga va jamoangizga ayting
+  hoc_how_to_step_label_get_coding: Kodlashni oling!
+  hoc_how_to_step_label_celebrate: Nishonlang
+  hoc_how_to_step_label_beyond_hoc: Kod soatidan tashqarida
+  hoc_how_to_step_beyond_hoc_subhead: Bu erda tugamaydi!
+  hoc_how_to_step_beyond_hoc_desc: Kompyuter fanlari Kod soati bilan tugashi shart
+    emas! Ota-onalarning 90 foizi farzandining kompyuter fanini o'rganishini xohlasa-da,
+    aksariyat maktablar hali ham uni o'rgatmaydilar. Bugun bolangizning maktabiga
+    CSni qanday olib kelishni bilib oling.
+  hoc_how_to_step_01_educators_subhead: Sizda mavjud bo'lgan talabalar va qurilmalar
+    soni uchun ishlaydigan voqea vaqti va bo'sh joyini tanlang.
+  hoc_how_to_step_01_educators_desc_01: Kod soatini bajarish uchun qanday bo'sh joylar
+    mavjud? O'zingizning makoningizning texnologik imkoniyatlarini va talabalaringiz
+    qanday ishlashini kutgan qurilmalar turlarini ko'rib chiqing. Talabalar bitta
+    qurilmada o'quv qo'llanmalari ustida ishlashlari, birgalikda qurilma yordamida
+    navbat bilan o'tishlari yoki sinf taxtasida birgalikda o'quv qo'llanmasini sinab
+    ko'rishlari mumkin. Hatto hech qanday qurilmalar bilan bajarilishi mumkin bo'lgan
+    unplugged qo'llanmalar ham mavjud. Uzib qo'yilgan variantlarni har qanday joyda,
+    hatto ochiq havoda ham amalga oshirish mumkin!
+  hoc_how_to_step_01_educators_desc_02: Dunyo bo'ylab odamlar CS ta'lim haftaligida
+    eng so'nggi o'quv qo'llanmalari va tadbirlari chiqar %{campaign_date} ilganda
+    Kod soati bayramiga qo'shilishadi. Ammo siz yilning istalgan kunida kod soatini
+    qilishingiz mumkin!
+  hoc_how_to_step_02_educators_desc_01: Guruhingizning yoshi, tajribasi, qiziqishlari
+    va boshqalarga qarab faoliyatni o'rganing. Talabalar o'z-o'zidan boshqariladigan
+    o'quv qo'llanmalarini sinab ko'rishlari mashhur, ammo ko'plab tadbirlar o'qituvchilar
+    uchun munozarani boshqarish yoki faoliyatni kengaytirish uchun dars rejalarini
+    o'z ichiga oladi.
+  hoc_how_to_step_02_educators_desc_02: Agar siz barcha talabalaringiz uchun bitta
+    o'quv qo'llanmasini tanlashni xohlasangiz yoki har bir bolaga o'zlarini tanlasangiz,
+    oldindan qaror qiling.
+  hoc_how_to_step_02_educators_desc_03: Bu yil siz va o'quvchilaringiz [AI haqida
+    hamma narsani bilib olishlari] (%ai_url) darsliklar, dars rejalari va bizning
+    yangi Qanday AI ishlaydi video seriyamiz orqali.
+  hoc_how_to_step_03_educators_desc_01: Savollarga javob berishingiz uchun sinfga
+    kirishdan oldin o'quv qo'llanmasini o'zingiz sinab ko'ring!
+  hoc_how_to_step_03_educators_desc_02: Shuningdek, ovoz va videoni qo'llab-quvvatlashini
+    ta'minlash uchun talabalar kompyuterlari yoki qurilmalarida darsliklarni sinab
+    ko'rishingiz mumkin. Kam tarmoqli kengligi bormi? Sinfning old qismida videolarni
+    ko'rsatishni rejalashtiring, shuning uchun har bir talaba o'z videolarini yuklab
+    olmaydi.
+  hoc_how_to_step_03_educators_desc_03: Sizning sinfingiz uchun minigarniturani taqdim
+    qilishni o'ylab ko'ring yoki o'quvchilardan o'zlarini olib kelishlarini so'rang,
+    agar siz tanlagan o'quv qo'llanma ovoz bilan eng yaxshi ishlasa.
+  hoc_how_to_step_04_educators_desc_01: Kod soati tadbirini ro'yxatdan o'tkazganingizda,
+    siz muvaffaqiyatli kod soatini o'tkazish bo'yicha yangiliklar va maslahatlar bilan
+    foydali elektron pochta xabarlarini olasiz. Shuningdek, mahalliy ko'ngillilarga
+    sizning maktabingiz ishtirok etayotganini qanday qilib bildirishingiz mumkin.
+    Ko'ngillilar ajoyib manba bo'lib, sizning sinfingizga kompyuter fanlari haqida
+    gaplashishlari yoki talabalaringizga kod soati faoliyatida yordam berishlari mumkin.
+  hoc_how_to_step_05_educators_desc_01: Talabalaringizni [ilhomlantiruvchi videolar]
+    bilan baham ko'rish orqali tadbir uchun hayajonlaning (%{videos_url}) turli xil
+    odamlarni va kompyuter fanidan haqiqiy dunyoda foydalanish mumkin bo'lgan ijodiy
+    usullarni ta'kidlaydi.
+  hoc_how_to_step_05_educators_desc_02: Kod soati rejalaringizni o'yin-kulgiga qo'shilishni
+    xohlaydigan boshqa o'qituvchilar bilan baham ko'ring! Bu, shuningdek, maktabingizning
+    Ota-onalar o'qituvchilari talabalar uyushmasi bilan bog'lanish yoki ota-onalar
+    axborot byulletenlarida bo'lishish uchun ajoyib imkoniyatdir, ularga farzandlari
+    nimani o'rganayotganini bildiradi.
+  hoc_how_to_step_06_educators_desc_01: Talabalaringizni faoliyatga yo'naltiring,
+    ehtimol taxtadagi havolani baham ko'rish yoki sinfingizning o'rganishni boshqarish
+    tizimi orqali. Sizning talabalaringiz qiyinchiliklarga duch kelishlari mumkin
+    - bu yaxshi! Dasturni o'rganish yangi tilni o'rganishga o'xshaydi; siz darhol
+    ravon bilmaysiz. Agar siz javobni bilmasangiz, uni birgalikda tushunishingiz mumkin.
+  hoc_how_to_step_07_educators_desc_01: 'Muvaffaqiyatni nishonlashga ishonch hosil
+    qiling! Ijtimoiy tarmoqlarda “Kod soati” tadbirining fotosuratlari va videolarini
+    baham ko''ring. #HourOfCode va @codeorg dan foydalaning, shunda biz sizning muvaffaqiyatingizni
+    ham ta''kidlashimiz mumkin!'
+  hoc_how_to_step_07_educators_desc_02: Shuningdek, talabalaringiz o'z yutuqlarini
+    namoyish qilish uchun sertifikatlarni chop etishingiz mumkin!
   team_page_full_team_alt_text: Code.org saytining 100 ga yaqin xodimi ko'k va sariq
     futbolkalarga mos keladigan 2022 yilgi Codechella tadbiri uchun mehmonxonaning
     konferentsiya zalida suratga tushishadi.
@@ -14633,6 +14886,11 @@ uz:
   video_library_page_inspirational_video_title_11: Har kim o‘rganishi mumkin (1 daqiqa)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA kod soatini nishonlamoqda
+    (2 min)
+  video_library_page_inspirational_video_title_14: Bu o'yindan ham ko'proq (1 min)
+  video_library_page_inspirational_video_title_15: Kompyuter fanlari bilan yaratish
+    (1 min)
   video_library_page_not_hacked_video_title_1: 'Qanday qilib buzilmaslik kerak: Kirish'
   video_library_page_not_hacked_video_title_2: 'Qanday qilib buzilmaslik kerak: parollar'
   video_library_page_not_hacked_video_title_3: 'Qanday qilib buzilmaslik kerak: autentifikatsiya
@@ -14644,6 +14902,168 @@ uz:
     va yuklab olishlar'
   video_library_page_not_hacked_video_title_7: 'Qanday qilib buzilmaslik kerak: Yangilanishlarni
     o''rnating'
+  about_us_page_title: Biz haqimizda
+  about_us_page_hero_description: Code.org® - bu har bir maktabdagi har bir talaba
+    o'zlarining asosiy K-12 ta'limining bir qismi sifatida kompyuter fanlarini o'rganish
+    imkoniyatiga ega ekanligi haqidagi tasavvurga bag'ishlangan ta'lim innovatsion
+    notijorat tashkiloti. Biz maktablarda informatika fanidan foydalanish imkoniyatini
+    kengaytiramiz, bu esa yosh ayollar va boshqa kam vakili guruhlar o'quvchilarining
+    ishtirokini oshirishga e'tibor qaratamiz. Qo'shma Shtatlardagi eng yirik maktab
+    tumanlarida K-12 informatika o'quv dasturining etakchi provayderi bo'lgan Code.org,
+    shuningdek, dunyodagi barcha o'quvchilarning 15 foizdan ko'prog'ini jalb qilgan
+    yillik [Hour of Code] (%{hour_url}) aksiyasini tashkil qiladi. Code.org Microsoft,
+    Amazon, Google va [ko'plab boshqalar kabi saxiy donorlar tomonidan qo'llab-quvvatlanadi.]
+    ()%{others_url}
+  about_us_page_section_title_1: Code.org saytida 80 milliondan ortiq talaba va 2
+    million o'qituvchi
+  about_us_page_statistic_figcaption: 2021-2022 o'quv yilidan Code.org ishtiroki.
+    [Ajratilgan ma'lumotlarga qarang.] ()%{data_url}
+  about_us_page_statistic_description: Code.org kompyuter fanining xilma-xilligini
+    oshiradi, ular qaerda bo'lgan barcha kelib chiqadigan o'quvchilarga - ularning
+    mahorat darajasida, maktablarida va ularni o'rganishni davom ettirishga ilhomlantiradigan
+    usullar bilan. Code.org saytidagi talabalarning aksariyati tarixiy jihatdan informatika
+    fanida kam namoyish etilgan talabalar guruhlaridan. Kompyuter fanidagi xilma-xillikni
+    oshirish bizning ishimizning asosidir va [biz sizni sa'y-harakatlarimiz haqida
+    ko'proq o'qishga undaymiz] (%{diversity_url}).
+  about_us_page_section_title_2: Yangiliklarda Code.org
+  about_us_page_section_news_description: Barcha o'tmishdagi [yangiliklar va e'lonlar]
+    (%{news_url})
+  about_us_page_section_table: Bizning maqsadlarimiz va ko'rsatkichlarimiz
+  about_us_page_section_table_header_1: Code.org maqsadi
+  about_us_page_section_table_header_2: Muvaffaqiyat
+  abous_page_section_table_cell_1_1: CS xilma-xilligini yaxshilash* (AQSh talabalari)
+    *
+  abous_page_section_table_cell_1_2: Code.org talabalarining 45 foizi yosh ayollar,
+    50 foizi marginallashgan irqiy va etnik guruhlarning talabalari va AQShdagi talabalarning
+    46% yuqori ehtiyojli maktablarda. [Bizning xilma-xillikka yondashuvimiz.] haqida
+    ko'proq o'qing (%{diversity_url})
+  about_page_section_table_cell_2_1: Talabalarni ilhomlantiring
+  about_page_section_table_cell_2_2: O'nlab millionlab odamlar [Kod soati] (%{hour_url})
+    ni sinab ko'rishdi. (426,370,561 xizmat qildi. 49% ayol)
+  about_page_section_table_cell_3_1: Sinf xonalariga etib boring
+  about_page_section_table_cell_3_2: 591,636 o'qituvchi bizning kirish kurslarimizni
+    [Code Studio] (%{code_studio_url}) bo'yicha o'qitish uchun ro'yxatdan o'tgan va
+    19 177.297 talaba yozilgan.
+  about_page_section_table_cell_4_1: Yangi CS o'qituvchilarini tayyorlang
+  about_page_section_table_cell_4_2: Biz K-12-sinflar bo'yicha CS dars berish uchun
+    106 mingdan ortiq yangi o'qituvchilarni tayyorladik. Bizning [professional ta'lim
+    dasturlarimiz haqida bilib oling.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Maktab tuman o'quv dasturini o'zgartirish
+  about_page_section_table_cell_5_2: Biz [180+ eng yirik maktab tumanlari] (%{schoold_disctrict_url})
+    va 60 ta mintaqaviy sheriklar bilan hamkorlik qildik [maktab o'quv dasturiga CS
+    qo'shish] (%{cs_curriculum_url}). [Mintaqaviy sherik bo'lish haqida bilib oling.]
+    (%{regional_partner_url})
+  about_page_section_table_cell_6_1: CSni qo'llab-quvvatlash uchun siyosatni o'rnating
+  about_page_section_table_cell_6_2: "[AQShning 50 shtatida siyosat o'zgartirildi]
+    (%{states_url}) CS ta'lim standartlarini o'rnatish, CS kurslarini o'rta maktabni
+    bitirishga qadar hisoblash va boshqalar [(tafsilotlar)] (%{details_url})"
+  about_page_section_table_cell_7_1: Global o'ting
+  about_page_section_table_cell_7_2: Bizning kurslarimiz 180 dan ortiq mamlakatlarda
+    ishlatiladigan 67 dan ortiq tillarda mavjud.
+  about_page_section_table_under_label: 'Manba: Code Studio Activity va [ishtirokchi
+    o''qituvchilarning so''rovnomalari] (%{educators_url})'
+  about_page_section_title_3: Qo'shimcha ma'lumot, tarix va falsafa
+  about_page_section_more_description_1: '2013 yilda Code.org egizak aka-uka [Hadi](%{hadi_url})
+    va [Ali Partovi] () tomonidan kompyuter fanini targ''ib qiluvchi (%{partovi_url})
+    bilan [video]ishga tushir%{video_url}ildi. Ushbu video bir kun davomida YouTube-da
+    #1 bo''ldi va 15 ming maktab bizga yordam so''rab murojaat qildi. O''shandan beri
+    biz ko''ngillilarning bootstrapped xodimlaridan butun dunyo bo''ylab harakatni
+    qo''llab-quvvatlovchi to''liq tashkilotni qurdik. Biz sifatli kompyuter fanlari
+    ta''limi har bir bolaga ega bo''lishi kerak, deb hisoblaymiz, shunchaki omadli
+    ozgina emas.'
+  about_page_section_more_description_2: 'Maqsadimizni qo''llab-quvvatlash uchun biz
+    ta''lim spektri bo''ylab ishlaymiz: o''z kurslarimizni loyihalash yoki boshqalar
+    bilan hamkorlik qilish, o''qituvchilarni tayyorlash, yirik maktab tumanlari bilan
+    hamkorlik qilish, hukumat siyosatini o''zgartirishga yordam berish, hamkorlik
+    orqali xalqaro miqyosda kengaytirish va stereotiplarni buzish uchun marketing.'
+  about_page_section_more_description_3: Bizning ishimiz kompyuter fanlari ta'limini
+    tashkil etish, moliyalashtirish va tarqatishga yordam bergan son-sanoqsiz tashkilotlar
+    va shaxslar tomonidan o'nlab yillar davom etgan sa'y-harakatlarga asoslanadi.%{efforts_url}Biz
+    keng kompyuter fanlari ta'lim hamjamiyatining tinimsiz yordamidan foyda olganimizdan
+    minnatdormiz va [yillar davomida bizning ta'sirimizni qo'llab-quvvatlagan barcha
+    sheriklar va shaxslarga minnatdorchilik bildiramiz] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 yillik hisoboti] (%{report_url})
+    (O'tgan hisobotlar: [2020] [2019](%{past_url_1}%{past_url_2}), (), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Bizning asosiy qadriyatlarimiz va xabar almashish
+    bo'yicha ko'rsatmalarimiz] (%{core_url})"
+  about_page_section_more_list_3: "[Bizning o'quv dasturimiz va pedagogika falsafamiz]
+    (%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx asoschimiz Xadi Partovining kompyuter fanining
+    nima uchun hamma uchun ekanligi haqida suhbati (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Bo'linilgan dunyoda birlashtiruvchi yondashuv
+  about_page_section_specific_title_1: Bo'linilgan dunyoda birlashtiruvchi yondashuv
+  about_page_section_specific_title_2: Bizning mavjudlikka bo'lgan majburiyatimiz
+  about_page_section_specific_title_3: Bepul o‘quv rejalari va ochiq manbali texnologiyalarga
+    sodiqligimiz
+  about_page_section_specific_title_4: Code.org advokatlik koalitsiyasi
+  about_page_section_specific_title_5: K-12 kompyuter fanlari doirasi
+  about_page_section_specific_title_6: Code.org donorlari
+  about_page_section_specific_title_7: Bizni kuzatib boring
+  about_page_section_specific_title_8: Code.org xalqaro miqyosda
+  about_page_section_specific_description_1: Code.org ning K-12 kompyuter fanlari
+    harakatidagi global roli faqat biz turli xil va ko'pincha bo'linadigan manfaatdor
+    tomonlar o'rtasida birlashtiruvchi yondashuvni qo'llaganimiz uchun mumkin. Polarizatsiya
+    kuchayib borayotgan bir paytda, talabalar uchun imkoniyatni oshirish g'oyasi siyosiy
+    spektrdagi odamlarni birlashtiradi. Code.org jamoasi a'zolari, talabalari, o'qituvchilari
+    va tarafdorlari turli xil va turli xil nuqtai nazarlarga ega va ularning barchasi
+    bizning vazifamizda xush kelibsiz. [Ko'proq o'qing.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org kompyuter fanlari barcha talabalar
+    uchun asos deb hisoblaydi va biz tashkiliy jihatdan tenglik, kirish va imkoniyatlarga
+    sodiqmiz [values.](%{values_url}) Ushbu maqsadga erishish uchun biz talabalar
+    va o'qituvchilarning qo'shilishi va to'liq ishtirokiga to'sqinlik qiladigan to'siqlarni
+    aniqlash va yo'q qilish ustida ishlaymiz. nogiron. Bizning sa'y-harakatlarimiz
+    haqida ko'proq bilish uchun [mavjudlik bayonotimizga qarang.] (%{accessibility_url})
+  about_page_section_specific_description_3: Biz yozgan barcha o'quv resurslari va
+    o'quv qo'llanmalari abadiy foydalanish uchun bepul va ochiq litsenziyaga ega bo'ladi
+    [Creative Commons] (%{commons_url}) litsenziyasi ostida, boshqalarga notijorat
+    maqsadlarda lotin ta'lim resurslarini yaratishga imkon beradi. Agar siz bizning
+    materiallarimizni tijorat maqsadlarida litsenziyalashga qiziqsangiz, [biz bilan
+    bog'laning] (%{contact_us_url}). Bizning kurslarimiz butun dunyo bo'ylab foydalanish
+    uchun yoki turli tillarda so'zlashuvchilar tomonidan tarjima qilinadi. Bizning
+    texnologiyamiz [ochiq manba loyihasi.] sifatida ishlab chiqilgan (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
+    korporatsiyalar va notijorat tashkilotlarning ikki partiyali koalitsiyasi bo'lib,
+    ular K-12 informatika faniga kirishni kengaytirish va qo'llab-quvvatlash va sohada
+    ishtirok va xilma-xillikni kengaytirish bo'yicha AQSh federal va shtat siyosatini
+    o'rnatishga yordam berish uchun birgalikda ishlaydi. Biz [respublikachilar va
+    demokratik siyosiy rahbarlarni] (%{leaders_url}) birlashtiramiz, umumiy maqsadda
+    K-12 informatika fanlariga kirish va ishtirokni kengaytirishni qo'llab-quvvatlaymiz."
+  about_page_section_specific_description_5: Code.org - kompyuter fanlari ta'limini
+    amalga oshiruvchi shtatlar, tumanlar va tashkilotlar uchun yuqori darajadagi qo'llanma
+    - [K-12 Computer Science Framework] (%{framework_url}) ni yaratishga yordam bergan
+    boshqaruv qo'mitasining a'zosi. Framework yuzlab akademiklar, K-12 o'qituvchilari,
+    dasturiy ta'minot kompaniyalari, notijorat tashkilotlar va shtatlarning ko'magiga
+    sazovor bo'ldi.
+  about_page_section_specific_description_6: Code.org IRS shakli 990 uchun [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), (), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}) va [2021](%{irs_url_8}). [Xayriya siyosati.]
+    (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Status yangilanishlarini olish uchun
+    ro'yxatdan o'ting] (%{sign_up_url}) K-12 kompyuter fanlari harakatidagi taraqqiyot
+    va Code.org ishi haqida. Yoki ijtimoiy tarmoqlarda Code.org saytini kuzatib boring:"
+  about_page_section_specific_description_8: Bizning veb-saytimizning 40% dan ortig'i
+    Amerika Qo'shma Shtatlari tashqarisidan keladi va bu raqam ko'tarilishda davom
+    etmoqda. Kompyuter fanlariga global kirishni kengaytirish maqsadida bizning jamoamiz
+    [100 dan ortiq xalqaro hamkorlar] (%{partners_url}) bilan yaqindan hamkorlik qiladi,
+    ularga Kod soatini targ'ib qilish, siyosatni o'zgartirish tarafdori va o'qituvchilarni
+    o'qitishda yordam beradi. Biz butun dunyo bo'ylab ta'lim vazirliklari bilan hamkorlik
+    qilib, Iqtisodiy hamkorlik va taraqqiyot tashkiloti va Birlashgan Millatlar Tashkiloti
+    Ta'lim, Ilmiy va Madaniy Tashkiloti kabi xalqaro tashkilotlar bilan ishlash orqali
+    kompyuter fanini xalqaro ta'lim nutqining bir qismiga aylantiramiz.
+  about_page_section_donors_description_1: Code.org® - bu keng jamoatchilikning ko'magi
+    bilan ro'yxatdan o'tgan 501c3 notijorat tashkiloti. Biz bizning tasavvurimizni
+    qo'llab-quvvatlaydigan [shaxslar va tashkilotlar] (%{individuals_url}) dan olgan
+    saxovatli yordamimiz uchun minnatdormiz.
+  about_page_section_donors_description_2: Kodlar yutuqlari (yuqorida) bu dollarni
+    kuchli natijalarga erishish qobiliyatimizni ko'rsatadi. Ammo bizning notijorat
+    ishtiyoqimizni hisobga olgan holda, har bir maktabdagi har bir bola kompyuter
+    fanidan foydalanish imkoniyatiga ega bo'lishi kerak - bugungi raqamli dunyoda
+    savodli fuqaro bo'lish va ularning CSni martaba sifatida o'rganishga qiziqishlarini
+    sinab ko'rish - bizda mablag' yig'ish maqsadiga erishish uchun uzoq yo'l borishimiz
+    kerak. bu qarashni qo'llab-quvvatlaydigan maqsad.
+  about_page_donors_link_1: Xayr-ehson qiling
+  about_page_donors_link_2: "[donorlar ro'yxatiga qarang] (%{donors_url})"
   language_code:
     ar: Arab
     az: Ozarbayjoncha

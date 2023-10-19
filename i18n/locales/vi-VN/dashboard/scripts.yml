@@ -107,6 +107,10 @@ vi:
           description: thử những căn bản của khoa học máy tính với các đặc tính từ Angry bird và Plants vs zombies!
           description_short: Thử các nền tảng của khoa học máy tính với các đặc tính dãy kí tự vui nhộn!
           student_description: thử những căn bản của khoa học máy tính với các đặc tính từ Angry bird và Plants vs zombies!
+        CodeStudioPuzzleChallenge:
+          description_short: Thử thách bản thân!
+        Tutorial Video - Code Studio Puzzle Challenge:
+          description_short: Thử thách bản thân!
         text-compression:
           title: Nén văn bản
         algebraPD2a:
@@ -183,7 +187,7 @@ vi:
           description_short: Học cách lập trình droid và làm game Chiến tranh giữa các vì sao của riêng bạn ở một thiên hà xa rất xa.
           student_description: Học cách lập trình droid và làm game Chiến tranh giữa các vì sao của riêng bạn ở một thiên hà xa rất xa.
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Chuyến phiêu lưu
           description: Sử dụng các khối mã lệnh để dẫn Steve hoặc Alex trên cuộc phiêu lưu qua thế giới Minecraft này.
           description_short: Hãy khám phá thế giới Minecraft qua những đoạn mã
           student_description: Sử dụng các khối mã lệnh để dẫn Steve hoặc Alex trên cuộc phiêu lưu qua thế giới Minecraft này.
@@ -199,11 +203,13 @@ vi:
           description: Tìm hiểu lập trình chức năng thông qua đại số
           description_short: Tìm hiểu lập trình chức năng thông qua đại số
           student_description: Tìm hiểu lập trình chức năng thông qua đại số
+          name: AlgeBraA
         AlgebraB:
           title: 'Khoa học máy tính trong Đại số: Khoá học B'
           description: Tìm hiểu lập trình chức năng thông qua đại số
           description_short: Tìm hiểu lập trình chức năng thông qua đại số
           student_description: Tìm hiểu lập trình chức năng thông qua đại số
+          name: AlgebraB
         csp1-2017:
           title: Các Quy tắc KHMT Phần 1 - Mạng Internet ('17-'18)
           lesson_groups:
@@ -224,10 +230,14 @@ vi:
               display_name: Khảo sát
         csp3-2017:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp4-2017:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp5-2017:
@@ -633,6 +643,8 @@ vi:
           student_description: Hãy tìm hiểu kiến thức cơ bản về khoa học máy tính và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng tạo câu chuyện của riêng bạn để có thể chia sẻ.
         csp3-research-mxghyt:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         applab-intro:
@@ -683,6 +695,12 @@ vi:
               display_name: Dự án tổng kết khóa học
         colehoc2017:
           title: 'Giờ Lập trình - Cole '
+        csp3-staging:
+          lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
+        allthesurveys:
+          title: Tất cả các khảo sát
         hero:
           title: 'Minecraft: Hero''s Journey'
           description_short: Minecraft đã trở lại với hoạt động mới cho Giờ Lập Trình!
@@ -818,8 +836,14 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+        csp2-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
         csp3-2018:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp-explore-2018:
@@ -832,6 +856,8 @@ vi:
               display_name: Khảo sát
         csp4-2018:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp5-2018:
@@ -984,6 +1010,8 @@ vi:
           title: Minecraft Chuyến thám hiểm đại dương
           description_short: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Giờ Lập trình!
           name: dưới nước
+        dance-draft:
+          title: KHÔNG SỬ DỤNG
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1216,14 +1244,20 @@ vi:
               display_name: 'Chương 2: Phát minh mạng Internet'
         csp2-2019:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp3-2019:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp4-2019:
           lesson_groups:
+            cspAssessment:
+              display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
         csp5-2019:
@@ -1250,6 +1284,7 @@ vi:
             required:
               display_name: Tổng quan
         time4csdemo:
+          description_audience: Lớp 4
           lesson_groups:
             ramp_up:
               display_name: Chuẩn bị
@@ -1848,6 +1883,7 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+          name: csd1-2021
         csd2-2021:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong Kho Dữ liệu Web."
           lesson_groups:

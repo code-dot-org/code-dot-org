@@ -32,16 +32,17 @@ social:
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-%script{type: "text/javascript", src: webpack_asset_path('js/hourofcode.com/public/index.js')}
-
 
 #top
   #fullwidth
     = view :header
     %section.banner.homepage
       .wrapper
+        %p.hoc-label
+          =hoc_s(:hour_of_code)
         %h1=hoc_s(:hoc2023_header)
-        %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
+        %p.hero-desc
+          =hoc_s(:hoc2023_hero_desc_homepage)
         .button-wrapper
           %a.ctabuttonatag{href: resolve_url('/how-to')}
             %button.ctabutton
@@ -76,23 +77,12 @@ social:
   -# Map
   %section.map
     .wrapper
-      - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-        #maparea.full-width
-          -# Show a picture of the map unless it is currently the week of HOC.
-          -if hoc_mode != "actual-hoc"
-            = view :hoc_events_map
-            .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
-          -else
-            %a{href: resolve_url('/map')}
-              %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
-            .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
-
-  -# Join us
-  %section#join.join-us
-    .wrapper
-      %h2=hoc_s(:hoc_live_join_us)
-      %h3=hoc_s(:hoc_homepage_join_the_movement_description)
-      = view :home_signup, hoc_mode: hoc_mode
+      = view :map
+      %div.centered{style: "max-width: 640px; margin: 4rem auto 6rem"}
+        %p.body-two{style: "margin-bottom: 2rem"}
+          =hoc_s(:hoc_homepage_registration_desc)
+        %a.link-button{href: resolve_url("/events")}
+          =hoc_s(:call_to_action_register_your_hoc)
 
   -# What is HoC?
   -# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.
@@ -126,7 +116,6 @@ social:
         %img{src: '/images/code-dot-org-logo-40x40.svg'}
 
   = view 'popup_window.js'
-
 
 :javascript
 

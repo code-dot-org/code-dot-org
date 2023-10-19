@@ -14102,30 +14102,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Zajrzyj pod maskę**\n\nGdy udostępniasz link do swojej historii, udostępniasz również cały kod, który się za nim kryje. To jest świetny sposób nauki uczniów wzajemnie od siebie. \n\n-   Zamieść linki do kompletnych historii online.\n    -   Spraw, by historia stała się również Twoją historią, którą udostępnisz!\n-   Gdy uczniowie ładują link, niech klikną przycisk \"Jak to działa\", aby zobaczyć kod kryjący się za tą historią.\n-   Omów, jako grupa, różne sposoby, w jakie Twoi koledzy z klasy kodują swoje historie.\n-   Co Cię zaskoczyło?\n    -   Co chciałbyś wypróbować?\n-   Wybierz historię kogoś innego i kliknij \"Remiksuj\", aby na niej budować (Nie martw się, oryginalna historia będzie bezpieczna)."
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Ustawianie sceny",
-          "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_W tym ćwiczeniu będziemy dobrze się bawić tworząc interaktywny świat pełen zabawnych postaci zwanych duszkami. Będziesz w stanie sprawiać, by duszki mówiły różne rzeczy korzystając z \"dymków z wypowiedziami\", jakie można zobaczyć w komiksie lub w powieści graficznej i nauczysz się odpowiadać automatycznie, gdy Ty lub ktoś inny je klika._\n\n_Dzisiaj będziecie pisać \"kod\", oznaczający zestaw instrukcji, które komputer jest w stanie zrozumieć. Pisząc opowieść musisz uważnie dobierać słowa. Gdy będziesz pisał kod, musisz uważnie zastanawiać się nad tym, jakie instrukcje przekazujesz komputerowi_",
-          "tips": [
-            "Będziesz chciał poświęcić bardzo mało czasu na wstępne ładowanie lub wprowadzenie do swojej Godziny Kodowania. Zwłaszcza w przypadku młodych uczniów, najlepiej jest wskoczyć tak szybko, jak to możliwe."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Ogólne wsparcie",
-          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach][0].  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Witaj świecie"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn][0]."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Refleksja",
-          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki][0], aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych][1]."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -23510,7 +23486,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -23525,7 +23516,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -23536,13 +23537,33 @@
           ]
         },
         "41d1eda8-9490-4327-b931-c4760e5bebef": {
+          "name": "Gra oparta na współpracy",
           "tips": [
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
+        "75c2be17-6096-46dd-8550-4ae4928da3b0": {
+          "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Wykonaj to: \\*\\* Przeczytaj kartę indywidualnie. Karta ma również kilka pustych miejsc-możesz je wypełnić dodatkowymi informacjami o swojej fałszywej postaci, aby uczynić je własnymi!"
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
           "tips": [
             null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            "\\*\\*Poszerzanie wpływu: \\*\\* Uczniowie mogą z pasją odbierać zalety i wady generatywnej sztucznej inteligencji, a niektórzy mog być bardziej pod jej wpływem niż inni. Przypomnij uczniom, że są to _bieżące_ problemy, które muszą być jeszcze rozwiązane, i że ich opinie mają znaczenie. Możesz umożliwić uczniom napisanie do swoich ustawodawców o tym, czego się nauczyli."
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
+          "description": "-   Jakie było największe wyzwanie, które pomyślnie rozwiązałeś?\n-   Czyje potrzeby były najłatwiejsze do spełnienia?\n-   Z jakiego kompromisu jesteś najbardziej dumny?\n-   Wymień to, co uważałeś za najważniejsze obawy/potrzeby, które trzeba było zaspokoić.\n-   Jakie są Twoje największe obawy związane z rozwojem generatywnej sztucznej inteligencji?\n-   Jaka jest Twoja najbardziej ekscytująca nadzieja na rozwój generatywnej sztucznej inteligencji?\n-   W liście napisz porady dla firm i organizacji, aby współpracowały w kwestiach AI. Skorzystaj z tego, czego się dzisiaj nauczyłeś, i dołącz jeden artykuł.",
+          "tips": [
+            "\\*\\*Przedłużanie lekcji: \\*\\* Uczniowie mogą wrócić do domu i zajmować się generatywnymi narzędziami sztucznej inteligencji, testować swoje teorie lub eksperymentować z tym, czego się nauczyli. Zachęcaj uczniów do rozmów z rodziną i przyjaciółmi z podejściem zorientowanym na rozwiązania. Możesz poprowadzić uczniów pasjonatów w kierunku wielu karier w technologii AI!"
           ]
         },
         "04e8f7f8-668f-4eba-865e-6fe94028acd0": {
@@ -34912,7 +34933,7 @@
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Zrób to: \\*\\* Poleć uczniom wybrać wyrażenie, które chcą wyszkolić AI Bota, aby rozpoznawał, i zapisali te informacje w swoim Przewodniku po ćwiczeniach. Uczniowie powinni samodzielnie przechodzić przez poziom, rejestrując informacje w swoim przewodniku po aktywności. Na ostatnim ekranie poproś uczniów o naciśnięcie ikony informacji i zapisanie funkcji, których nauczył się AI Bot, były najważniejsze.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \\*\\*Krążyć: \\*\\* Sprawdź, czy uczniowie wypełniają swój przewodnik po ćwiczeniach, gdy kończą etapy. Zapytaj uczniów, na jakie funkcje patrzą, aby ustalić, czy ryba spełnia ich kryteria. Uczniowie prawdopodobnie powiedzą, że używają przede wszystkim oczu i ust do określenia ekspresji, ale kiedy klikną ikonę Informacje na ostatnim ekranie, AI Bot może używać dodatkowych funkcji, takich jak kolor i ciało, aby podjąć decyzję. Zachęcaj uczniów, aby zastanowili się, co o tym myślą i porównali to z ich osobistymi doświadczeniami - Na przykład, jeśli ktoś myślał, że jest „głupi” lub „zły” głównie na podstawie ich ubrania.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Wyświetlanie: \\*\\* Pokaż slajd AI Bot ucząc się rozpoznawać ryby jako „Zły”. Poproś uczniów o omówienie monitu na ekranie: \\_Patrząc na ten ekran, jak myślisz, dlaczego kolor pojawił się jako druga najważniejsza funkcja? \\_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Cel dyskusji: \\*\\* Uczniowie powinni zauważyć, że chociaż oczy i usta wydają się „wściekłe” na każdej rybie, na ekranie pojawia się również dużo fioletowych ryb. W rezultacie AI Bot może zacząć myśleć, że kolor „fioletowy” to kolejny sposób na stwierdzenie, czy ryba jest zła, czy nie."
         },
         "5b8653c5-26ef-405b-a0ae-b8839027a4b8": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Omów: \\*\\* \\_Czy uważasz, że można uznać rybę za „złą” ze względu na jej kolor? \\_"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Przedyskutuj:** _Czy uważasz, że można uważać rybę za „złą” ze względu na jej kolor?_"
         },
         "a70f681d-ab68-4296-a56c-30117dbee4c3": {
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Cel dyskusji: \\*\\* W pierwszej części pytania poproś uczniów, aby zauważyli, że na ekranie jest dużo fioletowych ryb, więc AI Bot może pomyśleć, że fioletowe ryby są bardziej narażone na gniew niż inne ryby.",
@@ -34935,11 +34956,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "316385e5-2df8-4e34-b964-6ee28ecc3e7f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "eb99e343-c072-48cd-84dd-49b6e56e8108": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "a7c37a28-46be-4a1a-b767-99482e8cf353": {
@@ -35077,11 +35098,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "17a1b7e1-7b2b-47ae-baa2-d3053ddea5dd": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "38017a5c-eb05-4397-b122-8711c1559789": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "5a1c68ad-e858-4aa4-8a9d-b9edaef7dfde": {
@@ -35216,11 +35237,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "96703b12-be00-4549-add6-28fffea6e76f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "fde8393e-139e-40ef-b275-1d93b32daf61": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "2913480b-0273-4c5a-95c8-23b002a842a0": {
@@ -35347,11 +35368,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "e1924cec-7b85-408e-b577-211abaf1f02f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "e22c70e5-cc6f-4d97-9eff-5736cbb0031a": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "57b4147e-478a-451f-8931-a3b624c15095": {
@@ -35449,11 +35470,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "5563b254-81f3-4d70-aa2a-c1551f9b8342": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "5da9894d-da25-4e52-9baa-3da9650a59b5": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "b4aa3386-cb77-4253-89c8-2c255a7d620f": {
@@ -35566,11 +35587,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "8eec1224-f52f-468c-95ef-a7bcb08099ca": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "3b11d58b-5f61-4c4e-8ba2-576cbf7d6c45": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "17bd5635-8ba9-4318-96e4-d1e3bedf918b": {
@@ -35619,11 +35640,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "086a57eb-d6b8-46d9-860c-cc3cd0dc9c52": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "8c9e0a32-aa02-41bc-b26d-131dea4ceac6": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "1b97cdf1-c60b-4103-9144-5414aa7a2183": {
@@ -35691,11 +35712,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "9f7f1bb2-91d4-4640-b226-7e511cd54e9b": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "6fcccbbf-5b1b-4d65-98bd-8c37c03da53b": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
@@ -36903,7 +36924,11 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Wstęp",
-          "description": "**Omówić:**\n\n- _Co wiemy o rozprzestrzenianiu się wirusa?_\n- _Co może powodować szybsze rozprzestrzenianie się wirusa w mieście?_\n- _Co może pomóc w spowolnieniu rozprzestrzeniania się wirusa?_\n\nCelem tej dyskusji jest umożliwienie uczniom uaktywnienia wcześniejszej wiedzy i ujrzenia ich pomysłów na tablicy. Jest to również okazją do zbadania niektórych błędnych przekonań na temat rozprzestrzeniania się wirusów."
+          "description": "**Omówić:**\n\n-   _Co wiemy o rozprzestrzenianiu się wirusa?_\n-   _Co może powodować szybsze rozprzestrzenianie się wirusa w mieście?_\n-   _Co może pomóc w spowolnieniu rozprzestrzeniania się wirusa?_\n\nCelem tej dyskusji jest umożliwienie uczniom uaktywnienia wcześniejszej wiedzy i ujrzenia ich pomysłów na tablicy. Jest to również okazją do zbadania niektórych błędnych przekonań na temat rozprzestrzeniania się wirusów."
+        },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Ogólne wsparcie",
+          "description": "**Wsparcie ogólne:** Rolą nauczyciela jest wspieranie uczniów w przerabianiu samouczka. Podajemy kilka wskazówek, które powinny pomóc uczniom bez względu na poziom, na jakim pracują.:\n\n-   Zachęcaj uczniów, aby przerabiaj różne \"dodatki\" w dowolnej, wybranej przez siebie kolejności.  Zawsze mogą cofnąć się do poziomu 1, aby ponownie zajrzeć do menu.\n\n**Współpracuj z sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy utkną. Ten samouczek obejmuje filmy wideo, więc uczniowie będą mieć założone słuchawki i mogą łatwo \"zamknąć się w bańce\". Pomóż w przełamywaniu tych barier, aktywnie łącząc uczniów w pary, jeśli odniesiesz wrażenie, że mogą potrzebować pomocy. W zależności od wieku i umiejętności swoich uczniów, zastanów się, czy nie łączyć ich w pary w trakcie nauki korzystania z samouczka [programowanie w parach](https://youtu.be/vgkahOzFH2Q)  \n\n-   **Czytaj instrukcje:** Instrukcje zwykle zawierają praktyczne porady, jak przejść określony poziom. Przed przejściem poziomu przez ucznia dopilnuj, aby uważnie przyjrzał się obrazkowi docelowemu i przeczytał cały, znajdujący się w nim tekst. \n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Utknąłeś? Sięgnij po wskazówki:** Każdy poziom zawiera wskazówkę, z dalszymi szczegółowymi instrukcjami, jak przejść poziom. Jeśli uczniowie starają się jak najszybciej przejść łamigłówki, może się okazać, że tak naprawdę powinni chwilę poczekać, aby zobaczyć, czy kod działa, zanim przejdą dalej. Wiele poziomów zawiera drugą wskazówkę z sugerowanymi sposobami wykazania się jeszcze większą kreatywnością przez poszerzenie zakresu zadania. - **Idź dalej i wracaj:** Czasem uczniowie więcej skorzystają na tym, że wrócą do trudnego poziomu. Wszystkie poziomy są od siebie niezależne, chociaż do pewnego stopnia wykorzystuje się w nich wprowadzone wcześniej koncepcje. Na tych poziomach nie ma dobrych ani złych odpowiedzi. (To jest zabawa dowolna!) - **Nie spiesz się i eksperymentuj.** Chociaż na pierwszych kilku poziomach dokładnie instruuje się uczniów, co mają zrobić, by go przejść, powinni również mieć poczucie, że mają prawo do wypróbowania własnych pomysłów.  Na tych poziomach nie ma dobrych ani złych odpowiedzi. (To są zabawy dowolne!)"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Epidemia",
@@ -36935,11 +36960,15 @@
           "description": "_Symulacje to świetny sposób na naukę o tym, co trudno zaobserwować w rzeczywistości. Pomagają naukowcom rozwiązywać problemy, przewidywać sposób ich rozwiązania oraz bezpiecznie i skutecznie testować nowe pomysły. Twoja symulacja to sposób na pokazanie, jak może wyglądać epidemia wirusa w Mieście Potworów._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Omówić:**\n\n- W jaki sposób symulacje mogą być pomocne w rzeczywistym świecie?\n- W jaki sposób symulacje mogą pomóc nam zrozumieć otaczający nas świat?\n- W jaki sposób symulacje mogą poprawić sposób sprawdzania pomysłów?\n\nCelem dyskusji jest zrozumienie przez uczniów, że symulacje są sposobem interaktywnego modelowania złożonych systemów. Powinni także zobaczyć, jak symulacje umożliwiają testowanie pomysłów szybko, tanio i bezpiecznie."
+          "description": "**Omówić:**\n\n-   W jaki sposób symulacje mogą być pomocne w rzeczywistym świecie?\n-   W jaki sposób symulacje mogą pomóc nam zrozumieć otaczający nas świat?\n-   W jaki sposób symulacje mogą poprawić sposób sprawdzania pomysłów?\n\nCelem dyskusji jest zrozumienie przez uczniów, że symulacje są sposobem interaktywnego modelowania złożonych systemów. Powinni także zobaczyć, jak symulacje umożliwiają testowanie pomysłów szybko, tanio i bezpiecznie."
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Refleksja",
-          "description": "**Monity:**\n\n- Jak ta symulacja przypomina prawdziwy świat? Czym się różni?\n- Co chciałbyś zmienić/dodać do swojej symulacji?"
+          "description": "**Monity:**\n\n-   Jak ta symulacja przypomina prawdziwy świat? Czym się różni?\n-   Co chciałbyś zmienić/dodać do swojej symulacji?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Świętuj",
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](http://code.org/certificates) z jego imieniem."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Ustawianie sceny",
@@ -37271,18 +37300,6 @@
           "name": "Właściwości elementów interfejsu graficznego",
           "progression_name": "Właściwości elementów interfejsu graficznego"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Rozgrzewka"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Główna aktywność (stara)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Główna aktywność (nowa)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Zakończenie"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Ankieta po kursie Odkrycia Informatyki",
           "progression_name": "Ankieta po kursie Odkrycia Informatyki"
@@ -37306,39 +37323,17 @@
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Refleksja"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Ustawianie sceny\n\nPowitaj uczniów na zajęciach i przedstaw aktywności tego dnia.",
-          "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie jesteś zaznajomiona z kodowaniem, jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj][1]."
-          ]
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Rozgrzewka"
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Dzisiaj wykorzystamy naszą kreatywność, ucząc się kodować. Jest wiele sposobów na bycie kreatywnym. W jaki sposób lubisz być kreatywny?"
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Główna aktywność (stara)"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Zachęć uczniów, aby podzielili się sposobami wyrażania kreatywności, takimi jak sztuka, taniec, muzyka lub pisanie. Dodatkowo zapytaj ich, czego używają do inspirowania kreatywności."
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Główna aktywność (nowa)"
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Czy wiesz, że informatyka może być bardzo kreatywna? W rzeczywistości możesz tworzyć dzieła sztuki za pomocą kodu. Przypominamy, że kod to zestaw instrukcji zrozumiałych dla komputera. Podobnie jak wybór kolorów farb, wybór kodu, który napiszesz, może być również okazją do wyrażenia swojej kreatywności!\n\nBędziemy dzisiaj używać poezji, aby zainspirować nasze kreatywne kodowanie. Czy ktoś wie, czym jest poezja? Masz ulubiony wiersz lub poetę?"
-        },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Czytajcie poezję razem:** Przeczytajcie [kilka wierszy][0] razem jako klasa i poćwiczcie nazywanie nastroju każdego wiersza. Zachęć uczniów, aby podzielili się swoją interpretacją, nawet jeśli różni się od innych."
-        },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Sztuka poezji ",
-          "description": "#### Ogólne wsparcie\n\nPod koniec tej aktywności uczniowie będą mieli animowany wiersz, który reprezentuje ich wizualną interpretację wybranego przez nich wiersza. Ta lekcja ma na celu umożliwić im majstrowania przy swoim kodzie i znalezienia efektów wizualnych, które najbardziej im się podobają.\n\nChodząc po klasie, doradzaj uczniom:\n\n- **Nie spiesz się:** Większość poziomów wymaga od uczniów znalezienia idealnych efektów pasujących do ich interpretacji nastroju wiersza. Pozostając na poziomie, zachęcamy majstrowania przy ich kodzie.\n\n- **Znajdź wiersz, który Ci się podoba:** Wiersz wyświetlany uczniowi na nowym poziomie to tylko sugestia. Na górze obszaru gry znajduje się rozwijane menu wierszy ze wstępnie załadowanymi wierszami. Poproś uczniów, aby przeczytali kilka i znaleźli taki, który do nich przemówi. Następnie mogą zacząć animować wybrany wiersz za pomocą kodu.\n\n- **Pochwal ukończone poziomy:** Każde całkowicie zielone oznaczenie poziomu oznacza, że ​​uczeń pomyślnie spełnił wszystkie wymagania dla tego poziomu. Poproś takich uczniów, aby kliknęli zielony dymek i pochwalili się tym, co stworzyli.\n\nW sytuacjach, w których uczeń czuje się zablokowany:\n\n- **Przeczytaj instrukcje:** Instrukcje składają się z punktów, jak ukończyć poziom. Jeśli uczeń czuje, że utknął, poproś go, aby przeczytał ci instrukcje na głos i poproś go, aby powtórzył to, co mówią instrukcje własnymi słowami.\n    - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Uczniowie mogą również kliknąć tę ikonę odczytania tekstu, aby usłyszeć odczytanie instrukcji.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Szukaj podpowiedzi**: Większość poziomów zawiera co najmniej jedną, bardziej szczegółową podpowiedź, jak przejść poziom.\n- **Celebruj błędy:** Zrobienie błędu w kodzie jest naturalną częścią procesu kodowania. Jeśli program nie robi tego, czego uczeń oczekiwał, poproś go, aby najpierw powiedział ci, co ma się wydarzyć, kliknij Uruchom, aby zaobserwować, co się właściwie dzieje, a następnie znajdź w kodzie miejsce, które spowodowało złe działanie. Pamiętaj, aby celebrować znalezienie błędu i jego naprawianie. Pojawienie się błędu oznacza, że ​​uczniowie wykonują świetną robotę, tworząc bardziej złożony program."
-        },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Wsparcie poziomami \n\n**Poziom 1:** Zachęć uczniów do przeczytania wiersza. Następnie poproś, aby znaleźli kolor lub efekt tła pasujący do tonu wybranego przez nich wiersza.\n\n**Poziom 2:** W tym przykładzie uczniowie powinni najpierw samodzielnie przeczytać wiersz, a następnie nacisnąć Uruchom. Możesz ich zapytać, czy dźwięk i efekty wybrane przez programistę pasują do ​​nastroju wiersza. Poproś, aby opracowali swoją odpowiedź.\n\n**Poziom 3:** Ten poziom wprowadza dźwięk, uczniowie mogą korzystać ze słuchawek, jeśli je mają.\n\n**Poziom 4:** Poproś uczniów, aby przeczytali wiersz i znaleźli w nim linię, w której zmienia się nastrój wiersza lub jeśli pojawia się nowy obraz, który wprowadził poeta. Użyj bloku zdarzeń, aby dodać odpowiednie efekty do zidentyfikowanych linii wiersza.\n\n**Poziom 5:** W tym przykładzie uczniowie powinni najpierw samodzielnie przeczytać wiersz, a następnie nacisnąć Uruchom. Zapytaj ich, czy obrazy pasują do słów wiersza. Poproś ich o rozwinięcie odpowiedzi.\n\n**Poziomy 6, 7, 8:** Zobacz „Celebruj błędy” w sekcji Ogólne wsparcie. Zachęć uczniów do tworzenia programów z więcej niż jednym przejściem za pomocą bloków zdarzeń.\n\n**Poziom 9:** Zachęć uczniów do przeczytania wszystkich wierszy z rozwijanego menu, aby znaleźć ten, który im się podoba. Powiedz im, że mogą podzielić się tym, co zrobili na tym ostatnim poziomie, ze swoimi przyjaciółmi i rodziną. Nadszedł czas, aby połączyć wszystkie umiejętności kodowania i ELA!"
-        },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Jeśli podobała Ci się dzisiejsza nauka kodowania, możesz kontynuować odwiedzając code.org/learn. Jeśli chcesz podzielić się tym, co zrobiłeś ze znajomymi i rodziną, kliknij przycisk „Udostępnij” i wyślij link do kogo chcesz!"
-        },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Opcjonalnie) Ocena: sprawdź zrozumienie (4 minuty)\n\nRozdaj każdemu uczniowi dwie karteczki samoprzylepne."
-        },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Masz dwie karteczki samoprzylepne. Na jednej napisz jedną rzecz, której nauczyłeś się dzisiaj o kodowaniu.\nPo drugie, napisz jedną rzecz, której nauczyłeś się dzisiaj o poezji.\n\nPodziel się z całą klasą, podnosząc rękę do góry, odpowiadając na pytanie: Czego jeszcze masz nadzieję mógłbyś się nauczyć o kodowaniu i informatyce?"
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Zakończenie"
         }
       }
     }

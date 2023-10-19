@@ -5452,7 +5452,7 @@ uz:
           description_short: Minecraft dunyosini kod orqali o'rganing.
           student_description: Stiv va Aleks Maynkraft olamida sayohat qilishlari
             uchun kod bloklaridan foydalaning.
-          title: Maynkraft Dasturlash soati
+          title: Minecraft Sarguzashtchi
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -6057,6 +6057,16 @@ uz:
               display_name: Kontent
             csd3_2:
               display_name: 'Chapter 2: Building Games'
+        virtual-pl-csa-summer-2024-day1:
+          title: 1-kun
+        virtual-pl-csa-summer-day1:
+          title: 1-kun
+        virtual-pl-csa-summer-day2:
+          title: 2-kun
+        virtual-pl-csa-summer-day3:
+          title: 3-kun
+        virtual-pl-csa-summer-day4:
+          title: 4-kun
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -6083,6 +6093,14 @@ uz:
           lessons:
             lesson-3:
               name: Baholash
+        virtual-pl-csp-summer-day1:
+          title: 1-kun
+        virtual-pl-csp-summer-day2:
+          title: 2-kun
+        virtual-pl-csp-summer-day3:
+          title: 3-kun
+        virtual-pl-csp-summer-day4:
+          title: 4-kun
         vpl-csa-2023-m1:
           title: Modul 1
         vpl-csa-2023-m2:

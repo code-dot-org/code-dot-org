@@ -238,7 +238,7 @@ it:
           description_short: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
           student_description: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
         mc:
-          title: L'Ora del Codice con Minecraft
+          title: Un'avventura con Minecraft
           description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex.
           description_short: Esplora il mondo di Minecraft attraverso il codice.
           student_description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex.
@@ -4485,3 +4485,23 @@ it:
           lessons:
             lesson-1:
               name: Il nostro codice etico sulla IA
+        virtual-pl-csa-summer-2024-day1:
+          title: 1° giorno
+        virtual-pl-csp-summer-day2:
+          title: 2° giorno
+        virtual-pl-csp-summer-day3:
+          title: 3° giorno
+        virtual-pl-csp-summer-day4:
+          title: 4° giorno
+        virtual-pl-csp-summer-day5:
+          title: Giorno 5
+        virtual-pl-csa-summer-day2:
+          title: 2° giorno
+        virtual-pl-csa-summer-day3:
+          title: 3° giorno
+        virtual-pl-csa-summer-day4:
+          title: 4° giorno
+        virtual-pl-csa-summer-day1:
+          title: 1° giorno
+        virtual-pl-csp-summer-day1:
+          title: 1° giorno

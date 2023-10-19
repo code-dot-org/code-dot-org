@@ -199,7 +199,7 @@ ko:
           description_short: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
           student_description: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
         mc:
-          title: 마인크래프트 Hour of Code
+          title: 마인크래프트 모험가
           description: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
           description_short: 코드를 이용해 마인크래프트 월드를 탐험해보세요.
           student_description: 이 마인크래프트 월드에서 코드 블록들을 사용해 스티브와 알렉스를 모험시켜주세요.
@@ -5120,3 +5120,23 @@ ko:
           title: 모듈 7
         vpl-csd-2023-m8:
           title: 모듈 8
+        virtual-pl-csa-summer-2024-day1:
+          title: 1 일차
+        virtual-pl-csp-summer-day2:
+          title: 2 일차
+        virtual-pl-csp-summer-day3:
+          title: 3일차
+        virtual-pl-csp-summer-day4:
+          title: 4일차
+        virtual-pl-csp-summer-day5:
+          title: 5일차
+        virtual-pl-csa-summer-day2:
+          title: 2 일차
+        virtual-pl-csa-summer-day3:
+          title: 3일차
+        virtual-pl-csa-summer-day4:
+          title: 4일차
+        virtual-pl-csa-summer-day1:
+          title: 1 일차
+        virtual-pl-csp-summer-day1:
+          title: 1 일차

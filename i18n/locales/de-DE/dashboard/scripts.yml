@@ -426,7 +426,7 @@ de:
           description_short: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
           student_description: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Abenteurer
           description: Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer durch die Minecraft-Welt zu begleiten.
           description_short: Erkunde eine Minecraft-Welt durch programmieren
           student_description: Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer durch die Minecraft-Welt zu begleiten.
@@ -5728,3 +5728,27 @@ de:
             lesson-1:
               name: Unser KI-Ethikkodex
         draft-hoc-dp: {}
+        genai-temp: {}
+        virtual-pl-csp-summer-day1-2024: {}
+        virtual-pl-csa-summer-2024-day1:
+          title: Tag 1
+        virtual-pl-csp-summer-day2:
+          title: Tag 2
+        virtual-pl-csp-summer-day3:
+          title: Tag 3
+        virtual-pl-csp-summer-day4:
+          title: Tag 4
+        virtual-pl-csp-summer-day5: {}
+        virtual-pl-csa-summer-day2:
+          title: Tag 2
+        virtual-pl-csa-summer-day3:
+          title: Tag 3
+        virtual-pl-csa-summer-day4:
+          title: Tag 4
+        virtual-pl-csa-summer-day5: {}
+        virtual-pl-csa-summer-day1:
+          title: Tag 1
+        virtual-pl-csp-summer-day1:
+          title: Tag 1
+        csa-postap-se-and-computer-vision-2023: {}
+        draft-hoc-dp-2: {}

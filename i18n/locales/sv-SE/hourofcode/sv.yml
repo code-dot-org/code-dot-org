@@ -36,6 +36,10 @@ sv:
   africa_campaign_date_full: 1 oktober - 18 december
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
+  hoc2023_header: Kreativitet med AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Vad kommer du att skapa?
+  hoc2023_social_creativity_with_ai_desc: Använd datavetenskap för att utforska och
+    lära dig om AI!
   hoc2022_header: Utforska, Lek, Skapa!
   social_hoc2022_explore_play_create: Använd datavetenskap till att utforska, leka
     och skapa!
@@ -163,6 +167,32 @@ sv:
   curriculum_launch_2023_desc: Uppdateringar av CSC, CSP, CSD, och mer - plus en ny
     läroplanskatalog och omdesignad Teach-sida för att hjälpa dig hitta allt!
   in_partnership_with: I samarbete med
+  shop_code_dot_org_heading: Handla Code.org
+  shop_code_dot_org_desc: Stöd vårt arbete och bär rörelsen med stolthet. Våra hattar
+    har bärts av president Obama och kändisar också.
+  spread_the_word_heading: Sprid ordet
+  spread_the_word_desc: Förstärk vår inverkan genom att dela Code.org med ditt nätverk.
+    Från sociala medier till e-postuppdateringar, upptäck hur du kan hjälpa oss att
+    nå fler lärare, studenter, och förespråkare.
+  follow_us_heading: Följ oss på sociala medier
+  follow_us_desc: Håll dig uppdaterad med oss på sociala medier och dela våra inlägg
+    med ditt nätverk för att hålla dig informerad och hjälpa till att öka medvetenheten.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: Linkedin
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Surfplatta
+  device_laptop: Bärbar dator
+  device_desktop_computer: Stationär dator
+  device_mobile_device: Mobil enhet
+  subscribe_to_emails_heading: Prenumerera på e-post
+  subscribe_to_emails_desc: Läs om vad som händer på Code.org och inom datavetenskaplig
+    utbildning genom kvartalsuppdateringar via vår e-postlista.
+  subscribe_to_emails_intl: Prenumerera på internationella uppdateringar
+  promote_code_dot_org_heading: Främja Code.org
+  promote_code_dot_org_desc: Främja datavetenskap i ditt område med hjälp av statistik,
+    citat, och videor.
   afe_partnership_logo_alt: Amazon Future Engineer-logo
   afe_partnership_thanks_desc: Amazon Future Engineer är ett omfattande program från
     barn till karriär för att inspirera, utbilda och utbilda låginkomsttagare och
@@ -181,19 +211,48 @@ sv:
   curricula_title_high: Läroplaner för gymnasiet
   curricula_desc_high: Bläddra bland de övertygande kurserna och aktiviteterna som
     inbjuder dig och dina gymnasieelever att gräva djupare i datavetenskap.
+  for_administrators_heading: För administratörer
+  for_administrators_desc: Gå med i de tusentals skolor som redan har införlivat datavetenskap
+    i sin läroplan.
+  for_parents_heading: För föräldrar
+  for_parents_desc: Du kan hjälpa till att uppmuntra din elevs skola att erbjuda eller
+    utöka datavetenskaplig utbildning.
+  for_educators_heading: För utbildare
+  for_educators_desc: Börja undervisa idag - ingen datavetenskaplig erfarenhet nödvändig
+    - med våra professionella inlärningsworkshops.
   students_label: Elever
   teachers_label: Lärare
+  educators_label: Utbildare
+  companies_label: Företag
+  districts_label: Distrikten
+  school_assemblies_label: Skolförsamlingar
+  parents_label: Föräldrar
+  public_officials_label: Offentliga tjänstemän
+  volunteers_label: Volontärer
+  virtual_events_label: Virtuella evenemang
   teacher_label_csf: CS Fundamentals Lärare
   teacher_label_csd: CS Discoveries Lärare
   teacher_label_csp: CS Principer Lärare
   teacher_label_csc: CS Connections Lärare
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Lärarforum
+  teacher_forum_desc: Besök Hour of Code Teacher Forum för att få råd, insikt och
+    stöd från andra lärare.
   required_materials: 'Nödvändiga material:'
   optional_materials: 'Valfria material:'
-  call_to_action_explore_roles: Utforska öppna roller
+  call_to_action_hold_an_event: Håll ett evenemang
+  call_to_action_register_event: Anmäl ditt evenemang
+  call_to_action_select_activity: Välj en aktivitet
+  call_to_action_start_activity: Starta en aktivitet
+  call_to_action_get_certificates: Skaffa certifikat
+  call_to_action_go_beyond_hoc: Gå bortom kodens timme
+  call_to_action_view_promo_resources: Visa kampanjresurser
   call_to_action_learn_more: Läs mer
   call_to_action_watch_now: Titta nu
   call_to_action_try_activity: Prova aktivitet
+  call_to_action_try_activities: Prova aktiviteter
+  call_to_action_explore_activities: Utforska aktiviteter
+  call_to_action_explore_ai: Utforska AI
   call_to_action_explore_unit: Utforska enheten
   call_to_action_explore_curriculum: Utforska läroplanen
   call_to_action_explore_curriculum_options: Utforska kursplanens alternativ
@@ -246,6 +305,7 @@ sv:
   call_to_action_find_self_paced_modules: Hitta moduler i egen takt
   call_to_action_join_teacher_forums: Gå med i lärarforum
   call_to_action_explore_teacher_forums: Utforska lärarforum
+  call_to_action_explore_teacher_forum: Utforska lärarforum
   call_to_action_explore_career_resources: Utforska karriärresurser
   call_to_action_watch_videos: Titta på videor
   call_to_action_download_posters: Ladda ner affischer
@@ -262,11 +322,32 @@ sv:
   call_to_action_notify_available: Meddela mig när det är tillgängligt
   call_to_action_register_early_access: Registrera dig för tidig åtkomst
   call_to_action_open_positions: Visa öppna positioner
+  call_to_action_explore_roles: Utforska öppna roller
   call_to_action_get_guide: Skaffa guiden
   call_to_action_donate_to_cdo: Donera till Code.org
   call_to_action_start_fundraiser: Starta en insamling
   call_to_action_view_donation_policy: Visa policy för donationer
   call_to_action_view_donate_bitpay: Donera med BitPay
+  call_to_action_make_a_donation: Gör en donation
+  call_to_action_other_ways_to_give: Andra sätt att ge
+  call_to_action_become_partner_usa: Bli partner i USA
+  call_to_action_become_partner_intl: Bli en internationell partner
+  call_to_action_become_a_volunteer: Bli volontär
+  call_to_action_start_translating: Börja översätta
+  call_to_action_learn_about_advocacy: Lär dig mer om vårt påverkansarbete
+  call_to_action_visit_store: Besök butiken
+  call_to_action_view_faqs: Visa fler vanliga frågor
+  aria_label_call_to_action_hoc_how_to_educators: Visa instruktionsguide för lärare
+  aria_label_call_to_action_hoc_how_to_companies: Visa instruktionsguide för företag
+  aria_label_call_to_action_hoc_how_to_districts: Visa instruktionsguide för distrikt
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Visa instruktionsguide för
+    skolförsamlingar
+  aria_label_call_to_action_hoc_how_to_parents: Visa instruktionsguide för föräldrar
+  aria_label_call_to_action_hoc_how_to_public_officials: Visa instruktionsguide för
+    offentliga tjänstemän
+  aria_label_call_to_action_hoc_how_to_volunteers: Visa instruktionsguide för volontärer
+  aria_label_call_to_action_hoc_how_to_virtual_events: Visa instruktionsguide för
+    virtuella evenemang
   aria_label_call_to_action_afe: Läs mer om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Starta programmet Undervisning Datavetenskap
     Fundamentals professionellt lärande
@@ -597,6 +678,7 @@ sv:
   heading_these_lessons_will: 'Dessa lektioner kommer att:'
   heading_explore_curriculum_catalog: Utforska alla våra kurser i läroplanskatalogen
   heading_csa_ai: Letar du efter saker att göra efter AP® -provet?
+  heading_bring_cs_to_students: Ta med datavetenskap till studenter
   professional_learning_section_desc: Få det stöd du behöver när du förbereder dig
     för att undervisa. Lärare älskar det, med över 90% rankar det som den bästa professionella
     utvecklingen någonsin!
@@ -864,6 +946,8 @@ sv:
     och använda AI-utbildningsverktyg, och utnyttja AI för studentbedömning. Med en
     rik blandning av teori, praktiska exempel och resurser syftar det till att ge
     lärare möjlighet att navigera i AI-landskapet och förbättra elevernas inlärningsupplevelser.
+  ai_pl_101_resources_5: Guide för att säkerställa ett ansvarsfullt förhållningssätt
+    till AI
   ai_pl_101_video_desc_6: 'Läs mer om den nya tekniken som driver de stora förändringarna
     inom AI, med två nya videor om stora språkmodeller (som ChatGPT) och generativ
     AI. Hör hur dessa nya tekniker fungerar direkt från experterna: Mira Murati, CTO
@@ -873,6 +957,8 @@ sv:
     ChatGPT, från nybörjare till avancerad. Inkluderar startmeddelanden för dem som
     bara doppar tårna i, samt avancerade verktyg för dem som vill maximera sin potential.
   ai_pl_101_resources_3: AI uppmanar till omvandling av studentinlärning
+  ai_pl_101_resources_section_title: Fler sätt att lära sig om AI
+  ai_pl_101_resources_guide: 'Ledsagare guide:'
   how_ai_works_hero_heading: Så här fungerar AI
   how_ai_works_hero_desc: Dyk in i AI-världen med ”Hur AI fungerar”, vår videoserie
     och tillhörande lektioner!
@@ -1707,6 +1793,29 @@ sv:
   donate_tabs_bitpay_desc: Omfamna framtiden för att ge med kryptovaluta. Genom BitPay
     kan din digitala valuta direkt stödja Code.orgs strävanden att utöka datavetenskaplig
     utbildning.
+  help_page_top_heading: Hur du kan hjälpa
+  help_page_top_desc: Stöd vårt uppdrag att göra datavetenskap tillgänglig för alla
+    barn, överallt. Dina ansträngningar hjälper oss att inspirera framtida innovatörer
+    och överbrygga klyftan inom teknisk utbildning.
+  help_page_top_subhead: Gör en donation till Code.org
+  help_page_top_desc_02: Vi arbetar för att ge varje elev möjlighet att lära sig datavetenskap
+    - både online OCH i skolor, där vi etablerar permanenta kurser och utbildar lärare.
+    För varje dollar du donerar introduceras ett barn till datavetenskap.
+  help_page_partners_heading: Bli en partner
+  help_page_partners_desc: Code.org arbetar med andra ideella organisationer som partners
+    för att hjälpa till att sprida datavetenskap på ett lokalt, hållbart sätt. Läs
+    mer om vårt program.
+  help_page_volunteer_heading: Volontär i ett klassrum
+  help_page_volunteer_desc: Volontär att undervisa Hour of Code eller vara gästtalare
+    i ett lokalt klassrum. Registrera dig för att höra om möjligheter nära dig.
+  help_page_translate_heading: Hjälp oss att översätta
+  help_page_translate_desc: Volontärer har översatt våra tutorials till över 45 språk.
+    Hjälp oss att fortsätta att utöka våra tutorials för studenter runt om i världen!
+  help_page_speak_for_cs_heading: Tala upp för datavetenskaplig utbildning
+  help_page_speak_for_cs_desc: 'Lär dig mer om Code.org: s förespråkande arbete över
+    hela USA och de tio policyer vi rekommenderar att stater antar för att göra datavetenskap
+    grundläggande för alla studenter. Plus, ta reda på hur du kan driva förändring
+    i ditt tillstånd.'
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Registrera dig för Hour of Code Live
   hoc_live_learn_title: Lär tillsammans med Hour of Code Live
@@ -13084,6 +13193,126 @@ sv:
   all: Alla
   dont_know: Jag vet inte
   language_label: Språk
+  before_hoc: Före Hour of Code
+  day_of_hoc: Dag för Hour of Code
+  after_hoc: Efter Hour of Code
+  step_01: Steg 1
+  step_02: Steg 2
+  step_03: Steg 3
+  step_04: Steg 4
+  step_05: Steg 5
+  step_06: Steg 6
+  step_07: Steg 7
+  step_08: Steg 8
+  hoc_how_to_top_heading: Din guide till Hour of Code
+  hoc_how_to_top_desc: Skräddarsydda instruktioner för den bästa Hour of Code-upplevelsen.
+  hoc_how_to_top_view_guide: Visa guide för
+  hoc_how_to_nav_main_aria_label: Välj en guide
+  hoc_how_to_nav_sidebar_aria_label: Sidebar navigering
+  hoc_how_to_educators_intro_heading: Hur du planerar Hour of Code
+  hoc_how_to_educators_intro_desc: The Hour of Code är en timmes introduktion till
+    datavetenskap, med roliga tutorials för att visa att vem som helst kan lära sig
+    grunderna. I år tar vi Hour of Code till nya höjder genom att erbjuda kodningsmöjligheter
+    som omfattar både artificiell intelligens (AI) och icke-AI-komponenter. Oavsett
+    om du eller dina elever är erfarna kodare eller om ni alla ger dig ut på din allra
+    första datavetenskapsexpedition, lovar denna Hour of Code en extraordinär resa.
+  hoc_how_to_faq_question_prerequisites: Vilka är förutsättningarna för att göra en
+    Hour of Code?
+  hoc_how_to_faq_answer_prerequisites: Hour of Code är enkel att köra - även för nybörjare.
+    Du behöver inte erfarenhet av datavetenskap eller undervisning för att inspirera
+    eleverna att utforska, skapa och lära sig något nytt.
+  hoc_how_to_faq_question_devices: Vilka enheter behöver jag för att köra en Hour
+    of Code?
+  hoc_how_to_faq_answer_devices_01: 'Enheter du kan använda:'
+  hoc_how_to_faq_answer_devices_02: Om enheter är begränsade eller otillgängliga,
+    prova [parprogrammering] (%{pair_url}) eller utforska våra [frånkopplade aktiviteter]
+    (%{unplugged_url}) för att lära dig utan några enheter alls!
+  hoc_how_to_faq_question_volunteer: Vem kan vara volontär?
+  hoc_how_to_faq_answer_volunteer: Alla som brinner för datavetenskaplig utbildning
+    och ökad mångfald inom teknik kan vara volontär! Vi skulle gärna se volontärer
+    med alla bakgrunder delta. Hour of Code har ett stort utbud av aktiviteter för
+    alla åldrar och färdighetsnivåer, så du behöver inte vara programmeringsexpert
+    för att volontärarbeta!
+  hoc_how_to_faq_question_full_hour: Kommer Hour of Code att ta en hel timme?
+  hoc_how_to_faq_answer_full_hour: Många studenter kommer att kunna avsluta sina aktiviteter
+    på mindre än en timme, och det är okej! Studenter kan fortsätta att lära sig medan
+    andra studenter slutför sin aktivitet.
+  hoc_how_to_faq_question_account: Behöver elever logga in med ett konto?
+  hoc_how_to_faq_answer_account: Ingen registrering eller inloggning krävs för att
+    studenter ska kunna prova Hour of Code. Att registrera sig för Hour of Code skapar
+    INTE automatiskt ett Code.org-konto.
+  hoc_how_to_resources_heading_educators: Andra Hour of Code-resurser för lärare
+  hoc_how_to_resources_promo_heading: Kampanjresurser
+  hoc_how_to_resources_promo_desc: Hitta alla resurser du behöver — tryckt och digitalt
+    — för att uppmärksamma din Hour of Code.
+  hoc_how_to_resources_discover_heading: Upptäck aktiviteter
+  hoc_how_to_resources_discover_desc: Utforska ett brett urval av en timmes självstudier
+    utformade för alla åldrar på över 45 språk.
+  hoc_how_to_step_label_plan: Planera var och när du ska göra din Hour of Code
+  hoc_how_to_step_label_choose_activity: Välj din aktivitet
+  hoc_how_to_step_label_test_activity: Testa din aktivitet
+  hoc_how_to_step_label_register_event: Anmäl ditt evenemang
+  hoc_how_to_step_label_tell: Berätta för dina elever, skola och samhälle
+  hoc_how_to_step_label_get_coding: Få kodning!
+  hoc_how_to_step_label_celebrate: Fira
+  hoc_how_to_step_label_beyond_hoc: Bortom Hour of Code
+  hoc_how_to_step_beyond_hoc_subhead: Det slutar inte här!
+  hoc_how_to_step_beyond_hoc_desc: Datavetenskap behöver inte sluta med Hour of Code!
+    Medan 90% av föräldrarna vill att deras barn ska lära sig datavetenskap, undervisar
+    de flesta skolor fortfarande inte det. Lär dig hur du tar med CS till ditt barns
+    skola idag.
+  hoc_how_to_step_01_educators_subhead: Välj en evenemangstid och ett utrymme som
+    fungerar för antalet studenter och enheter du har tillgängliga.
+  hoc_how_to_step_01_educators_desc_01: Vilka platser finns tillgängliga för dig att
+    göra din Hour of Code? Tänk på de tekniska funktionerna i ditt utrymme, och vilka
+    typer av enheter du förväntar dig att dina elever ska arbeta med. Eleverna kan
+    arbeta med självstudier på en enda enhet, turas om att använda en delad enhet
+    eller prova en handledning tillsammans på en whiteboard i klassrummet. Det finns
+    till och med urkopplade tutorials som kan slutföras utan några enheter alls. Okopplade
+    alternativ kan göras var som helst - även utomhus!
+  hoc_how_to_step_01_educators_desc_02: Människor runt om i världen deltar i Hour
+    of Code-firandet under CS Education Week %{campaign_date} när de senaste självstudierna
+    och aktiviteterna släpps. Men du kan göra en Hour of Code vilken dag som helst
+    på året!
+  hoc_how_to_step_02_educators_desc_01: Utforska aktiviteter baserat på din grupps
+    ålder, erfarenhet, intressen, och mer. Det är populärt för elever att prova självledda
+    handledning, även om många aktiviteter inkluderar lektionsplaner för lärare för
+    att vägleda diskussionen eller utöka aktiviteten också.
+  hoc_how_to_step_02_educators_desc_02: Bestäm i förväg om du vill välja en enda handledning
+    för alla dina elever, eller låt varje barn välja sin egen.
+  hoc_how_to_step_02_educators_desc_03: I år kan du och dina elever [lära dig allt
+    om AI] (%ai_url) genom självstudier, lektionsplaner och vår nya How AI Works videoserie.
+  hoc_how_to_step_03_educators_desc_01: Testa handledningen själv innan du går in
+    i klassrummet så att du kan svara på frågor!
+  hoc_how_to_step_03_educators_desc_02: Du kan också testa självstudier på studentdatorer
+    eller enheter för att säkerställa att de stöder ljud och video. Har du låg bandbredd?
+    Planera att visa videor längst fram i klassen, så att varje elev inte laddar ner
+    sina egna videor.
+  hoc_how_to_step_03_educators_desc_03: Överväg att tillhandahålla hörlurar till din
+    klass, eller be eleverna ta med sina egna, om den handledning du väljer fungerar
+    bäst med ljud.
+  hoc_how_to_step_04_educators_desc_01: När du registrerar ditt Hour of Code-evenemang
+    får du användbara e-postmeddelanden med nyheter och tips för att vara värd för
+    en framgångsrik Hour of Code. Det är också hur du kan låta lokala volontärer veta
+    att din skola deltar. Volontärer är en bra resurs och kan komma och prata med
+    din klass om datavetenskap eller hjälpa dina elever med Hour of Code-aktiviteter.
+  hoc_how_to_step_05_educators_desc_01: Få dina elever glada för evenemanget genom
+    att dela [inspirerande videor] (%{videos_url}) som lyfter fram olika människor
+    och kreativa sätt som datavetenskap kan användas i den verkliga världen.
+  hoc_how_to_step_05_educators_desc_02: Dela dina Hour of Code-planer med andra lärare
+    som kanske vill delta i det roliga! Detta är också ett utmärkt tillfälle att nå
+    ut till din skolas föräldralärarstudentförening eller dela i föräldrarnas nyhetsbrev,
+    låta dem veta vad deras barn lär sig.
+  hoc_how_to_step_06_educators_desc_01: Rikta dina elever till aktiviteten, kanske
+    genom att dela länken på tavlan eller genom klassrummets inlärningshanteringssystem.
+    Dina elever kan stöta på utmaningar - det är okej! Att lära sig att programmera
+    är som att lära sig ett nytt språk; du kommer inte att vara flytande direkt. Om
+    du inte vet svaret kan du räkna ut det tillsammans.
+  hoc_how_to_step_07_educators_desc_01: 'Var noga med att fira framgång! Dela foton
+    och videor från ditt Hour of Code-evenemang på sociala medier. Använd #HourOfCode
+    och @codeorg så att vi också kan lyfta fram din framgång!'
+  hoc_how_to_step_07_educators_desc_02: Du kan också skriva ut certifikat för dina
+    elever för att visa upp sina prestationer!
   team_page_full_team_alt_text: Nästan 100 Code.org-anställda i matchande blå och
     gula t-shirts poserar i ett hotellkonferensrum för företagets Codechella-evenemang
     sommaren 2022.
@@ -13588,6 +13817,9 @@ sv:
   video_library_page_inspirational_video_title_11: Vem som helst kan lära sig (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA firar Hour of Code (2 min)
+  video_library_page_inspirational_video_title_14: Det är mer än ett spel (1 min)
+  video_library_page_inspirational_video_title_15: Skapa med datavetenskap (1 min)
   video_library_page_not_hacked_video_title_1: 'Hur man inte blir hackad: Introduktion'
   video_library_page_not_hacked_video_title_2: 'Hur man inte blir hackad: Lösenord'
   video_library_page_not_hacked_video_title_3: 'Hur man inte blir hackad: Autentisering
@@ -13599,6 +13831,159 @@ sv:
     och nedladdningar'
   video_library_page_not_hacked_video_title_7: 'Hur man inte blir hackad: Installera
     uppdateringar'
+  about_us_page_title: Om oss
+  about_us_page_hero_description: Code.org® är en ideell organisation för utbildningsinnovation
+    dedikerad till visionen att varje elev i varje skola har möjlighet att lära sig
+    datavetenskap som en del av sin grundläggande K-12-utbildning. Vi utökar tillgången
+    till datavetenskap i skolorna, med fokus på att öka deltagandet av unga kvinnor
+    och studenter från andra underrepresenterade grupper. Den ledande leverantören
+    av K-12 datavetenskapliga läroplaner i de största skolområdena i USA, Code.org
+    organiserar också den årliga kampanjen [Hour of Code] (%{hour_url}), som har engagerat
+    mer än 15% av alla studenter i världen. Code.org stöds av generösa givare inklusive
+    Microsoft, Amazon, Google och [många andra] ()%{others_url}
+  about_us_page_section_title_1: Över 80 miljoner elever och 2 miljoner lärare på
+    Code.org
+  about_us_page_statistic_figcaption: Code.org deltagande från läsåret 2021-2022.
+    [Se uppdelade uppgifter.] ()%{data_url}
+  about_us_page_statistic_description: Code.org ökar mångfalden inom datavetenskap
+    genom att nå elever med alla bakgrunder där de är - på deras kompetensnivå, i
+    sina skolor och på sätt som inspirerar dem att fortsätta lära sig. Den stora majoriteten
+    av studenterna på Code.org kommer från studentgrupper som historiskt är underrepresenterade
+    inom datavetenskap. Ökad mångfald inom datavetenskap är grundläggande för vårt
+    arbete, och [vi uppmuntrar dig att läsa mer om våra ansträngningar] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org i nyheterna
+  about_us_page_section_news_description: Se alla tidigare [nyheter och tillkännagivanden]
+    (%{news_url})
+  about_us_page_section_table: Våra mål och mätvärden
+  about_us_page_section_table_header_1: Code.org-mål
+  about_us_page_section_table_header_2: Förverkligande
+  abous_page_section_table_cell_1_1: Förbättra mångfalden i CS * (amerikanska studenter)
+    *
+  abous_page_section_table_cell_1_2: 45% av Code.org-studenterna är unga kvinnor,
+    50% är studenter från marginaliserade ras- och etniska grupper, och 46% av amerikanska
+    studenter är i skolor med höga behov. Läs mer om [vår inställning till mångfald.]
+    (%{diversity_url})
+  about_page_section_table_cell_2_1: Inspirera eleverna
+  about_page_section_table_cell_2_2: Tiotals miljoner har provat [Hour of Code] (%{hour_url}).
+    (426 370 561 tjänade. 49% kvinnor)
+  about_page_section_table_cell_3_1: Nå klassrum
+  about_page_section_table_cell_3_2: 591 636 lärare har anmält sig för att undervisa
+    våra introkurser på [Code Studio] (%{code_studio_url}) och 19 177 297 studenter
+    är inskrivna.
+  about_page_section_table_cell_4_1: Förbered nya datalärare
+  about_page_section_table_cell_4_2: Vi har förberett mer än 106 000 nya lärare för
+    att undervisa i CS i årskurs K-12. Lär dig mer om våra [professionella inlärningsprogram.]
+    (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Ändra skoldistriktets läroplan
+  about_page_section_table_cell_5_2: Vi har samarbetat med [180+ av de största skoldistrikten]
+    (%{schoold_disctrict_url}) och 60 regionala partners för att [lägga till CS i
+    skolplanen] (%{cs_curriculum_url}). [Lär dig mer om att bli en regional partner.]
+    (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Ställa in policyer för att stödja CS
+  about_page_section_table_cell_6_2: "[Policyer ändrades i 50 amerikanska stater]
+    (%{states_url}) för att fastställa CS-utbildningsstandarder, få CS-kurser att
+    räknas till gymnasieexamen, etc. [(detaljer)] (%{details_url})"
+  about_page_section_table_cell_7_1: Gå globalt
+  about_page_section_table_cell_7_2: Våra kurser finns på över 67 språk, som används
+    i 180+ länder.
+  about_page_section_table_under_label: 'Källa: Code Studio Activity och [undersökningar
+    av deltagande lärare] (%{educators_url})'
+  about_page_section_title_3: Mer information, historia och filosofi
+  about_page_section_more_description_1: 'År 2013 lanserades Code.org av tvillingbröderna
+    [Hadi](%{hadi_url}) och [Ali Partovi] (%{partovi_url}) med en [video](%{video_url})
+    främjande av datavetenskap. Den här videon blev #1 på YouTube under en dag, och
+    15 000 skolor kontaktade oss för att få hjälp. Sedan dess har vi expanderat från
+    en uppstartad personal av volontärer för att bygga en fullständig organisation
+    som stöder en världsomspännande rörelse. Vi tror att en högkvalitativ datavetenskaplig
+    utbildning bör vara tillgänglig för alla barn, inte bara några lyckliga.'
+  about_page_section_more_description_2: 'För att stödja vårt mål arbetar vi över
+    hela utbildningsspektrumet: utformar våra egna kurser eller samarbetar med andra,
+    utbildar lärare, samarbetar med stora skoldistrikt, hjälper till att ändra regeringens
+    politik, expandera internationellt via partnerskap och marknadsföra för att bryta
+    stereotyper.'
+  about_page_section_more_description_3: Vårt arbete bygger på [årtionden av ansträngningar,
+    av otaliga organisationer och individer] (%{efforts_url}) som har hjälpt till
+    att etablera, finansiera och sprida datavetenskaplig utbildning. Vi är tacksamma
+    för att dra nytta av den outtröttliga hjälpen från det bredare datavetenskapliga
+    utbildningssamhället, och [vi tackar alla partners och individer som har stött
+    vår inverkan genom åren] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Våra kärnvärden och riktlinjer för meddelanden]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Vår läroplan och pedagogisk filosofi] (%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx-samtal av vår grundare Hadi Partovi om varför
+    datavetenskap är för alla (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Ett samlande förhållningssätt i en splittrad värld
+  about_page_section_specific_title_1: Ett samlande förhållningssätt i en splittrad
+    värld
+  about_page_section_specific_title_2: Vårt engagemang för tillgänglighet
+  about_page_section_specific_title_3: Vårt arbete för kostnadsfria läroplaner och
+    teknik med öppen källkod
+  about_page_section_specific_title_4: Code.org Advocacy Coalition
+  about_page_section_specific_title_5: K-12 datavetenskapligt ramverk
+  about_page_section_specific_title_6: Code.org Donatorer
+  about_page_section_specific_title_7: Följ oss
+  about_page_section_specific_title_8: Code.org:s internationella räckvidd
+  about_page_section_specific_description_1: 'Code.orgs globala roll i K-12 datavetenskapliga
+    rörelsen är bara möjlig eftersom vi använder ett enhetligt tillvägagångssätt för
+    olika och ofta delade intressenter. I en tid med ökande polarisering förenar idén
+    om att öka möjligheterna för studenter människor från hela det politiska spektrumet.
+    Code.org: s teammedlemmar, studenter, lärare och supportrar har olika och olika
+    synpunkter, och de är alla välkomna i vårt uppdrag. [Läs mer.] (%{read_more_url})'
+  about_page_section_specific_description_2: Code.org anser att datavetenskap är grundläggande
+    för alla studenter och vi är engagerade i rättvisa, tillgång och möjligheter i
+    vår organisation [values.](%{values_url}) För att uppnå detta mål arbetar vi för
+    att identifiera och eliminera hinder som förhindrar inkludering och fullt deltagande
+    av studenter och lärare med funktionsnedsättning. För att lära dig mer om våra
+    ansträngningar, se vår [tillgänglighetsförklaring]. (%{accessibility_url})
+  about_page_section_specific_description_3: Alla läroplanresurser och handledningar
+    som vi skriver kommer för alltid att vara fria att använda och öppet licensierade
+    under en [Creative Commons] (%{commons_url}) licens, så att andra kan göra härledda
+    utbildningsresurser för icke-kommersiella ändamål. Om du är intresserad av att
+    licensiera vårt material för kommersiella ändamål, [kontakta oss] (%{contact_us_url}).
+    Våra kurser översätts för världsomspännande användning eller av talare på olika
+    språk. Vår teknik är utvecklad som ett [open source-projekt.%{open_source_url}]
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
+    är en tvåpartisk koalition av företag och ideella organisationer som arbetar tillsammans
+    för att hjälpa till att upprätta USA: s federala och statliga policyer för att
+    utöka och upprätthålla tillgång till K-12 datavetenskap och för att bredda deltagande
+    och mångfald inom området. Vi samlar [Republikanska och demokratiska politiska
+    ledare] (%{leaders_url}) i gemensam sak som stöder utökad tillgång till och deltagande
+    i K-12 datavetenskap."
+  about_page_section_specific_description_5: Code.org är medlem i styrkommittén som
+    hjälpte till att upprätta [K-12 Computer Science Framework] (%{framework_url})
+    - en guide på hög nivå för stater, distrikt och organisationer som implementerar
+    datavetenskaplig utbildning. Ramverket har vunnit stöd från hundratals akademiker,
+    K-12-lärare, mjukvaruföretag, ideella organisationer, och stater.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Registrera dig för att få statusuppdateringar]
+    (%{sign_up_url}) om framsteg i K-12 datavetenskapliga rörelsen och om arbetet
+    med Code.org. Eller följ Code.org på sociala medier:"
+  about_page_section_specific_description_8: 'Över 40% av vår webbplatstrafik kommer
+    från länder utanför USA och det antalet fortsätter att stiga. För att utöka den
+    globala tillgången till datavetenskap arbetar vårt team nära med [mer än 100 internationella
+    partners] (%{partners_url}), hjälper dem att främja Hour of Code, förespråka policyförändringar
+    och utbilda lärare. Vi gör datavetenskap till en del av den internationella utbildningsdiskursen
+    genom att samarbeta med utbildningsministerier från hela världen och arbeta med
+    internationella organisationer som Organisationen för ekonomiskt samarbete och
+    utveckling och FN: s utbildnings-, vetenskapliga och kulturella organisation.'
+  about_page_section_donors_description_1: Code.org® är en registrerad offentlig 501c3
+    ideell organisation, med stöd från allmänheten. Vi är tacksamma för det generösa
+    stöd vi har fått från [individer och organisationer] (%{individuals_url}) som
+    stöder vår vision.
+  about_page_section_donors_description_2: Kodprestationer (ovan) visar vår förmåga
+    att utnyttja dessa dollar till starka resultat. Men med tanke på vår ideella ambition
+    att varje barn i varje skola ska ha tillgång till datavetenskap - att bli läskunniga
+    medborgare i dagens digitala värld och testa sina intressen för att utforska CS
+    ytterligare som en karriär - har vi en lång väg att gå för att uppnå ett insamlingsmål
+    som kommer att stödja den visionen.
+  about_page_donors_link_1: Gör en donation
+  about_page_donors_link_2: "[se vår lista över givare] (%{donors_url})"
   language_code:
     ar: arabiska
     az: azerbajdzjanska

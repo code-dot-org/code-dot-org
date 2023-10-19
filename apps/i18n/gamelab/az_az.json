@@ -57,6 +57,7 @@
   "dropletBlock_showMobileControls_param3": "Yalnız MobileOnly",
   "dropletBlock_showMobileControls_param3_description": "Directional pad və kosmik düyməsini yalnız mobil görünür doğru.",
   "dropletBlock_sprite.height_description": "Sprite hündürlüyü.",
+  "dropletBlock_sprite.height_signatureOverride": "[Sprite].hündürlük",
   "dropletBlock_sprite.width_description": "Sprite eni.",
   "dropletBlock_sprite.width_signatureOverride": "[Sprite]. Eni",
   "dropletBlock_x_description": "Sprite X koordinatı.",

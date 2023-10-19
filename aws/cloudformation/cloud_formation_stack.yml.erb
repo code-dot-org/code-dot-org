@@ -510,7 +510,9 @@ Resources:
       ResourceSignal:
         Timeout: PT4H
     Properties:
-      ImageId: <%=IMAGE_ID%>
+      # Temporarily hardcode the Ubuntu 20 image just for production-daemon, so we can gradually roll out the update.
+      # TODO (infra): finish updating all environments, and restore this line to always just use IMAGE_ID
+      ImageId: <%=rack_env?(:production) ? 'ami-0261755bbcb8c4a84' : IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
@@ -528,7 +530,7 @@ Resources:
           # upgrading everything to 256.
           default_volume_size = 64
           volume_size_overrides = {
-            production: 128,
+            production: 256,
             staging: 256,
             test: 256
           }
@@ -542,7 +544,7 @@ Resources:
           #!/bin/bash -x
           <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
-            node_name: '$STACK',
+            node_name: frontends ? '$ENVIRONMENT-daemon' : '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
             commit: nil, # track branch
             daemon: true
@@ -584,7 +586,9 @@ Resources:
     DeletionPolicy: Retain
     CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
     Properties:
-      ImageId: <%=IMAGE_ID%>
+      # Temporarily hardcode the Ubuntu 20 image just for this server, so we can gradually roll out the update.
+      # TODO (infra): finish updating all environments, and restore this line to again reference IMAGE_ID
+      ImageId: 'ami-0261755bbcb8c4a84'
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
@@ -593,7 +597,7 @@ Resources:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
-          Ebs: {VolumeSize: 64, VolumeType: gp2}
+          Ebs: {VolumeSize: 256, VolumeType: gp2}
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x

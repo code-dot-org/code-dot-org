@@ -56,7 +56,7 @@
     "@code-dot-org/artist": "0.2.1",
     "@code-dot-org/blockly": "4.0.14",
     "@code-dot-org/craft": "0.2.2",
-    "@code-dot-org/dance-party": "1.0.8",
+    "@code-dot-org/dance-party": "1.0.9",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
     "@code-dot-org/maze": "2.16.0",
     "@code-dot-org/ml-activities": "0.0.26",
@@ -310,6 +310,7 @@
     "selectize": "^0.12.4",
     "slate": "^0.81.0",
     "slate-react": "^0.81.0",
+    "source-map-loader": "^4.0.1",
     "stream-browserify": "^3.0.0",
     "survey-react": "^1.9.28",
     "timers-browserify": "^2.0.12",
@@ -318,5 +319,6 @@
     "usb": "^2.8.1",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }

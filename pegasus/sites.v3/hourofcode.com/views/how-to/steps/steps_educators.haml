@@ -1,0 +1,86 @@
+- steps_educators_index = 8
+
+- steps_educators_heading = [hoc_s(:hoc_how_to_step_label_plan), hoc_s(:hoc_how_to_step_label_choose_activity), hoc_s(:hoc_how_to_step_label_test_activity), hoc_s(:hoc_how_to_step_label_register_event), hoc_s(:hoc_how_to_step_label_tell), hoc_s(:hoc_how_to_step_label_get_coding), hoc_s(:hoc_how_to_step_label_celebrate), hoc_s(:hoc_how_to_step_label_beyond_hoc)]
+
+- steps_educators_subheading = [hoc_s(:hoc_how_to_step_01_educators_subhead), "", "", "", "", "", "", hoc_s(:hoc_how_to_step_beyond_hoc_subhead)]
+
+- steps_educators_desc = [hoc_s(:hoc_how_to_step_01_educators_desc_01), hoc_s(:hoc_how_to_step_02_educators_desc_01), hoc_s(:hoc_how_to_step_03_educators_desc_01), hoc_s(:hoc_how_to_step_04_educators_desc_01), "", hoc_s(:hoc_how_to_step_06_educators_desc_01), hoc_s(:hoc_how_to_step_07_educators_desc_01), hoc_s(:hoc_how_to_step_beyond_hoc_desc)]
+
+
+%section.steps
+  .wrapper
+    = view :"how-to/steps/side-nav/side_nav_educators"
+    %div.steps-wrapper
+      - steps_educators_index.times do |index|
+        .step{id: "step-0#{index + 1}", class:"#{'divider-accent' if index === 0 || index === 5 || index === 7}"}
+          .step-counter
+            %span
+              = index + 1
+          .step-content
+            %h3.heading-xl
+              = steps_educators_heading[index]
+            %p.heading-sm
+              = steps_educators_subheading[index]
+            %p
+              = steps_educators_desc[index]
+
+            -# Step 1 additional content
+            - if index === 0
+              %p.tag.day-of
+                =hoc_s(:before_hoc)
+              %p
+                =hoc_s(:hoc_how_to_step_01_educators_desc_02, locals: {campaign_date: campaign_date("full")})
+              %img{src: "/images/group_ipad.jpg", alt: ""}
+
+            -# Step 2 additional content
+            - if index === 1
+              %p
+                =hoc_s(:hoc_how_to_step_02_educators_desc_02)
+              %p
+                =hoc_s(:hoc_how_to_step_02_educators_desc_03, markdown: :inline, locals:{ai_url: "#"})
+              %img{src: "/images/activites_2023.jpg", alt: ""}
+              .button-wrapper
+                %a.link-button{href: "/learn"}
+                  =hoc_s(:call_to_action_select_activity)
+                %a.link-button.secondary{href: "#"}
+                  =hoc_s(:call_to_action_explore_ai)
+
+            -# Step 3 additional content
+            - if index === 2
+              %p
+                =hoc_s(:hoc_how_to_step_03_educators_desc_02)
+              %p
+                =hoc_s(:hoc_how_to_step_03_educators_desc_03)
+
+            -# Step 4 additional content
+            - if index === 3
+              %a.link-button{href: "/events"}
+                =hoc_s(:call_to_action_register_event)
+
+            -# Step 5 additional content
+            - if index === 4
+              %p
+                =hoc_s(:hoc_how_to_step_05_educators_desc_01, markdown: :inline, locals:{videos_url: "https://code.org/videos"})
+              %p
+                =hoc_s(:hoc_how_to_step_05_educators_desc_02)
+
+            -# Step 6 additional content
+            - if index === 5
+              %p.tag.day-of
+                =hoc_s(:day_of_hoc)
+              %a.link-button{href: "/learn"}
+                =hoc_s(:call_to_action_start_activity)
+
+            -# Step 7 additional content
+            - if index === 6
+              %p
+                =hoc_s(:hoc_how_to_step_07_educators_desc_02)
+              %a.link-button{href: "https://code.org/certificates"}
+                =hoc_s(:call_to_action_get_certificates)
+
+            -# Step 8 additional content
+            - if index === 7
+              %p.tag.day-of
+                =hoc_s(:after_hoc)
+              %a.link-button{href: "/beyond"}
+                =hoc_s(:call_to_action_go_beyond_hoc)

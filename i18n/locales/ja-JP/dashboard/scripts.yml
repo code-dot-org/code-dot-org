@@ -151,7 +151,7 @@ ja:
           description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
           student_description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
         mc:
-          title: Minecraft Hour of Code プログラミング入門
+          title: Minecraftアドベンチャー
           description: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
           description_short: プログラムを通して、Minecraftの世界を探検しましょう。
           student_description: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
@@ -5183,3 +5183,21 @@ ja:
           lessons:
             lesson-1:
               name: 当社のAI倫理規定
+        virtual-pl-csa-summer-2024-day1:
+          title: 1日目
+        virtual-pl-csp-summer-day2:
+          title: 2日目
+        virtual-pl-csp-summer-day3:
+          title: 3日目
+        virtual-pl-csp-summer-day4:
+          title: 4日目
+        virtual-pl-csa-summer-day2:
+          title: 2日目
+        virtual-pl-csa-summer-day3:
+          title: 3日目
+        virtual-pl-csa-summer-day4:
+          title: 4日目
+        virtual-pl-csa-summer-day1:
+          title: 1日目
+        virtual-pl-csp-summer-day1:
+          title: 1日目

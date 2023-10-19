@@ -626,6 +626,8 @@ es-MX:
           lessons:
             lesson-1:
               name: Partículas
+            lesson-4:
+              name: ecosistemas
         andrea-test:
           description: una descripción más larga en mi intento de crear un curso...
             aún preguntándome de dónde proviene la descripción, el contenido....
@@ -3536,6 +3538,11 @@ es-MX:
           title: CSC Cubiertalibro
         csc-ecosystems-2022:
           name: csc-ecosistemas-2022
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Programa tu Propio Ecosistema (2023)
+          title: Cómo simular un ecosistema marino (2023)
         csc-fables-2022:
           name: csc-fábulas-2022
         csc-function-machines-pilot:
@@ -10472,7 +10479,7 @@ es-MX:
           name: mc
           student_description: Utiliza bloques de código para llevar a Steve o Alex
             en una aventura a través del mundo de Minecraft.
-          title: Hora de Código de Minecraft
+          title: Aventurero de Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -12149,6 +12156,103 @@ es-MX:
               display_name: Contenido
             csd3_2:
               display_name: 'Capítulo 2: Desarrollo de juegos'
+        virtual-pl-csa-summer-2024-day1:
+          title: Día 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 1
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 3
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 4
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Síncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -12218,6 +12322,25 @@ es-MX:
           lessons:
             lesson-3:
               name: Evaluación
+          title: Día 5
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Síncronos Parte 2
+            lessonGroup-4:
+              display_name: Asíncronos Parte 1
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 1
+        virtual-pl-csp-summer-day2:
+          title: Día 2
+        virtual-pl-csp-summer-day3:
+          title: Día 3
+        virtual-pl-csp-summer-day4:
+          title: Día 4
+        virtual-pl-csp-summer-day5:
           title: Día 5
         virustest:
           description_short: 'Utiliza el Laboratorio de Sprite para crear una simulación

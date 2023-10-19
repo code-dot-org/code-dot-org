@@ -65,6 +65,7 @@ en:
         age: 'Age'
         gender: 'Gender'
         edit_header: 'Edit Account Details'
+        ai_settings_header: 'AI Settings'
         finish_sign_up_header: 'Finish creating your account'
         finish_sign_up_header_error: 'Please correct the following errors:'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
@@ -76,6 +77,7 @@ en:
           future: can't be in the future
         user_type: 'Account Type'
         us_state: 'State'
+        ai_rubrics_disabled: 'Disable AI Rubric Feature'
 
   beta: "beta"
   hello: "Hello world"

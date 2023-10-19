@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-19 17:25:48 UTC",
+    "serialized_at": "2023-10-17 17:11:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1601,6 +1601,22 @@
       }
     },
     {
+      "key": "ff0e3f3f-ecf1-4a8a-8fff-f719a7c7307a",
+      "position": 9,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<div style=\"column-count: 2; column-gap: 20px; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always; width: 180%\">\n     <b>Create Perfomance Task Written Response Practice</b>\n    </br>\n    </br>\n    In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n    </br>\n    </br>\n    Create PT Learning Objective: <i> Describe the purpose of a code segment or program by writing documentation.</i>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <img src=\"https://images.code.org/3f77c8efade39dc50d301f0751f767b7-writtenResponse3.png\" alt=\"\" style=\"display: block; margin: auto; float: right;\"/>\n    </p>\n</div>\n</br>\n<div style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g224b963ddf2_0_0\" target=\"_blank\">Unit Journal Template</a>\n</br>\nThis journal entry is practice for the Personalized Project Reference requirement. Students will snip a section of code and document its purpose.\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <b>Exemplar Response for Instructors</b>\n</br>\n<i> (Exemplars will be forthcoming with further College Board updates in Fall 2023)\n    </p>\n </div>"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ff0e3f3f-ecf1-4a8a-8fff-f719a7c7307a",
+        "lesson_activity.key": "e7fe7be7-a1e8-4eda-ba93-e6ca7852be4b"
+      }
+    },
+    {
       "key": "92ef01c7-b48f-4957-9e7c-60f96286d8ec",
       "position": 1,
       "properties": {
@@ -3032,7 +3048,7 @@
       "key": "ea7dcb25-25c8-4090-865a-6a31dbc8ccbf",
       "position": 3,
       "properties": {
-        "description": "####Plan the Decision Maker App\n**Level 1-2 - Explore:** Have students explore the two sample apps in levels 1 and 2. These apps should spark ideas in what the students can create for this project.\n\n**Sample App #1: Where Should I Eat?** \n\n* Recommends a restaurant to the user.\n* Inputs: text box for user name, drop down menu for restaurant type, up and down buttons to control the amount of dollars the user wants to spend.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, type of restaurant, dollar amount, output text\n* Conditional Logic: If the dollar amount within certain amounts, recommend different restaurants\n* Function: Update the screen every time the user changes an input. \n\n**Sample App #2: Activity Finder** \n\n* Recommends an activity to the user.\n* Inputs: text box for user name, drop down menu for time of day, drop down menu for activity level.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, time of day, activity level, output text\n* Conditional Logic: If the user selects certain times of day and activity levels, make targeted recommendations.  \n* Function: Update the screen every time the user changes an input. \n\n",
+        "description": "####Plan the Decision Maker App\n**Level 1-2 - Explore:** Have students explore the two sample apps in levels 1 and 2. These apps should spark ideas in what the students can create for this project.\n\n**Sample App #1: Where Should I Eat?** \n\n* Recommends a restaurant to the user.\n* Expected User: Someone looking for a place to eat.\n* Inputs: text box for user name, drop down menu for restaurant type, up and down buttons to control the amount of dollars the user wants to spend.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, type of restaurant, dollar amount, output text\n* Conditional Logic: If the dollar amount within certain amounts, recommend different restaurants\n* Function: Update the screen every time the user changes an input. \n\n**Sample App #2: Activity Finder** \n\n* Recommends an activity to the user.\n* Expected User: Someone who is looking for an activity.\n* Inputs: text box for user name, drop down menu for time of day, drop down menu for activity level.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, time of day, activity level, output text\n* Conditional Logic: If the user selects certain times of day and activity levels, make targeted recommendations.  \n* Function: Update the screen every time the user changes an input. \n\n",
         "duration": "40",
         "name": "Activity"
       },
@@ -3067,7 +3083,7 @@
       "key": "a32b507c-b729-4324-8b93-95d57dcc8d05",
       "position": 6,
       "properties": {
-        "description": "* *What does this app do?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
+        "description": "* *What does this app do?*\n* *Who is an expected user for this app?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "a32b507c-b729-4324-8b93-95d57dcc8d05",
@@ -6348,9 +6364,10 @@
     },
     {
       "name": "CSP Unit 4 - Slides",
-      "url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/copy",
+      "url": "https://docs.google.com/presentation/d/1PN_NJEC3mwa7-Ii1OP_6AV4Fle1CgXd26RIWZqH-Ip8/copy",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
+        "audience": "Teacher",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8409,6 +8426,13 @@
         "lesson.key": "Variables Practice",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "AAP-3.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.G.1"
       }
     },
     {

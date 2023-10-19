@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {EmText, Heading6} from '@cdo/apps/componentLibrary/typography';
+import {
+  EmText,
+  StrongText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
@@ -34,14 +38,22 @@ export default function AiAssessmentBox({
     });
   };
 
+  const aiConfidenceText = () => {
+    const confidenceLevels = [i18n.low(), i18n.medium(), i18n.high()];
+    const ratingText = confidenceLevels[aiConfidence - 1];
+    return i18n.aiConfidence({aiConfidence: ratingText});
+  };
+
   return (
     <div className={boxColor()}>
       {isAiAssessed && (
         <div>
-          <Heading6>{studentAchievment()}</Heading6>
+          <BodyThreeText>
+            <StrongText>{studentAchievment()}</StrongText>
+          </BodyThreeText>
           {aiConfidence && (
             <div>
-              <EmText>{i18n.aiConfidence({aiConfidence: aiConfidence})}</EmText>
+              <EmText>{aiConfidenceText()}</EmText>
               <span data-tip data-for="info-tip">
                 <FontAwesome icon="info-circle" className={style.infoTipIcon} />
               </span>

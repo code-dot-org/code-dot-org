@@ -25,11 +25,11 @@ module I18n
           private
 
           def dashboard_i18n_file_path(type, i18n_locale, extension)
-            CDO.dir("dashboard/config/locales/#{type}.#{i18n_locale}.#{extension}")
+            File.join(ORIGIN_I18N_DIR_PATH, "#{type}.#{i18n_locale}.#{extension}")
           end
 
           def restore_level_content(file_subpath, crowdin_file_path)
-            original_file_path = CDO.dir(I18N_ORIGINAL_DIR, DIR_NAME, file_subpath)
+            original_file_path = File.join(I18N_BACKUP_DIR_PATH, file_subpath)
             return false unless File.exist?(original_file_path)
 
             # Course content should be merged with existing content, so existing data doesn't get lost
@@ -146,7 +146,7 @@ module I18n
           end
 
           def distribute_localization_of(type, language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DASHBOARD_DIR_NAME, "#{type}.yml")
+            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             return unless File.exist?(crowdin_file_path)
 
             unless I18nScriptUtils.source_lang?(language)
@@ -154,7 +154,7 @@ module I18n
               I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
             end
 
-            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DASHBOARD_DIR_NAME, "#{type}.yml")
+            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
           end
         end

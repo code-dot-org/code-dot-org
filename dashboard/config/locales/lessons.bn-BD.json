@@ -149,6 +149,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "বানান মৌমাছি"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "চক্র"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "ঘটনাবলী"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "শর্তযুক্ত"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "ফাংশনগুলি"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "চলকগুলো"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ফর লুপ"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "আনন্দের মানচিত্র"
         },
@@ -298,12 +316,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "মাইনক্র্যাফট এক ঘণ্টার কোড"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "প্লে ল্যাব"

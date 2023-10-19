@@ -52,6 +52,7 @@ pl:
         age: 'Wiek'
         gender: 'Płeć'
         edit_header: 'Edytuj dane konta'
+        ai_settings_header: 'Ustawienia AI'
         finish_sign_up_header: 'Zakończ tworzenie swojego konta'
         finish_sign_up_header_error: 'Proszę poprawić następujące błędy:'
         finish_sign_up_subheader: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org dla <strong>%{email}</strong>.'
