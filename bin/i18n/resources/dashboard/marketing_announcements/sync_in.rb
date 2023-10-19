@@ -17,9 +17,11 @@ module I18n
 
           def prepare_marketing_announcements_data
             banners = I18nScriptUtils.parse_file(ORIGIN_I18N_FILE_PATH)['banners']
+
             banners.each_value do |banner|
               banner.slice!('title', 'body', 'buttonText')
             end
+
             I18nScriptUtils.write_json_file(I18N_SOURCE_FILE_PATH, {'banners' => banners})
           end
         end
