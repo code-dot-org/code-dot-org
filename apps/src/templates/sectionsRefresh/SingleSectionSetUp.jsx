@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGroup';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import moduleStyles from './sections-refresh.module.scss';
@@ -36,18 +35,6 @@ export default function SingleSectionSetUp({
           />
         </label>
       </div>
-      {/*{participantType === ParticipantAudience.student && (*/}
-      {/*  <div className={moduleStyles.containerWithMarginTop}>*/}
-      {/*    <MultiSelectGroup*/}
-      {/*      label={i18n.chooseGrades()}*/}
-      {/*      name="grades"*/}
-      {/*      required={true}*/}
-      {/*      options={gradeOptions}*/}
-      {/*      values={section.grade || []}*/}
-      {/*      setValues={g => updateSection('grade', g)}*/}
-      {/*    />*/}
-      {/*  </div>*/}
-      {/*)}*/}
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
           <Chips
