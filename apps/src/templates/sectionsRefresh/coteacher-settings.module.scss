@@ -18,23 +18,26 @@
   padding: 12px;
   border: 1px solid $light_gray_200;
   background: $neutral_light;
-}
 
-.addInput {
-  width: auto;
-  height: 34px;
-}
+  .input {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 0;
+    padding: 6px 6px
+  }
 
-.addLabel {
-  @include label-one;
-  font-size: 14px;
-  margin-bottom: 0;
-}
+  .container {
+    display: flex;
+    width: 100%;
+    max-height: 34px;
+    height: 34px;
+  }
 
-.addButton {
-  margin-top: 0;
-  padding-left: 16px;
-  padding-right: 16px;
+  .label {
+    @include label-one;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 }
 
 .table {

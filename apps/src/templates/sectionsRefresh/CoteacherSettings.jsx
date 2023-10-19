@@ -21,27 +21,27 @@ export default function CoteacherSettings({addCoteacher, coteachersToAdd}) {
     addCoteacher(newEmail);
     setInputValue('');
   };
-
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}
       <div className={styles.settings}>
         <div className={styles.add}>
-          <label className={styles.addLabel}>Email address</label>
-          <input
-            className={styles.addInput}
-            type="text"
-            value={inputValue}
-            onChange={handleInputChange}
-          />
-          <Button
-            className={styles.addButton}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            type="button"
-            text="Add co-teacher"
-            onClick={handleButtonClick}
-            disabled={inputValue === ''}
-          />
+          <label className={styles.label}>Email address</label>
+          <div className={styles.container}>
+            <input
+              className={styles.input}
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+            />
+            <Button
+              color={Button.ButtonColor.brandSecondaryDefault}
+              type="button"
+              text="Add co-teacher"
+              onClick={handleButtonClick}
+              disabled={inputValue === ''}
+            />
+          </div>
         </div>
         <div className={styles.table}>{coteachersToAdd}</div>
       </div>
