@@ -38,7 +38,7 @@ export interface ChipsProps {
  * ###  Status: ```Ready for dev```
  *
  * Design System: Chips Component.
- * Can be used to render chips or as a part of bigger/more complex components (e.g. some forms).
+ * Can be used to render chips or as a part of bigger/more complex components (e.g. forms).
  */
 const Chips: React.FunctionComponent<ChipsProps> = ({
   label,
