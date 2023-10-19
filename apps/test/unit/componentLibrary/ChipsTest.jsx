@@ -141,6 +141,93 @@ describe('Design System - Chips', () => {
     expect(spyOnChange).to.have.been.calledThrice;
   });
 
+  it('Chips - toggles required on click correctly', async () => {
+    const user = userEvent.setup();
+    const spyOnChange = sinon.spy();
+
+    let values = [];
+    const setValues = newValues => {
+      values = newValues;
+      spyOnChange(newValues);
+    };
+
+    const {rerender} = render(
+      <Chips
+        name="test-chips"
+        values={values}
+        options={options}
+        required={true}
+        setValues={setValues}
+        label="Chips label"
+      />
+    );
+
+    const chips = screen.getByTestId('chips-test-chips');
+    expect(chips).to.exist;
+
+    let chip1 = screen.getByDisplayValue('chip1');
+    let chip2 = screen.getByDisplayValue('chip2');
+    let chip3 = screen.getByDisplayValue('chip3');
+
+    expect(chip1.checked).to.be.false;
+    expect(chip1.required).to.be.true;
+    expect(chip2.checked).to.be.false;
+    expect(chip2.required).to.be.true;
+    expect(chip3.checked).to.be.false;
+    expect(chip3.required).to.be.true;
+
+    await user.click(chip1);
+
+    rerender(
+      <Chips
+        name="test-chips"
+        values={values}
+        options={options}
+        required={true}
+        setValues={setValues}
+        label="Chips label"
+      />
+    );
+
+    chip1 = screen.getByDisplayValue('chip1');
+    chip2 = screen.getByDisplayValue('chip2');
+    chip3 = screen.getByDisplayValue('chip3');
+
+    expect(chip1.checked).to.be.true;
+    expect(chip1.required).to.be.false;
+    expect(chip2.checked).to.be.false;
+    expect(chip2.required).to.be.false;
+    expect(chip3.checked).to.be.false;
+    expect(chip3.required).to.be.false;
+
+    expect(spyOnChange).to.have.been.calledOnce;
+
+    await user.click(chip1);
+
+    rerender(
+      <Chips
+        name="test-chips"
+        values={values}
+        options={options}
+        required={true}
+        setValues={setValues}
+        label="Chips label"
+      />
+    );
+
+    chip1 = screen.getByDisplayValue('chip1');
+    chip2 = screen.getByDisplayValue('chip2');
+    chip3 = screen.getByDisplayValue('chip3');
+
+    expect(chip1.checked).to.be.false;
+    expect(chip1.required).to.be.true;
+    expect(chip2.checked).to.be.false;
+    expect(chip2.required).to.be.true;
+    expect(chip3.checked).to.be.false;
+    expect(chip3.required).to.be.true;
+    expect(spyOnChange).to.have.been.calledTwice;
+  });
+
   it('Chips - doesn`t check chip on click if disabled', async () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
@@ -247,4 +334,62 @@ describe('Design System - Chips', () => {
     expect(chip3.checked).to.be.false;
     expect(spyOnChange).to.not.have.been.called;
   });
+  // it('toggles required on checkboxes correctly', () => {
+  //   const wrapper = mount(
+  //     <Chips
+  //       label="Pick at least one"
+  //       name="test_name"
+  //       required={true}
+  //       options={[
+  //         {
+  //           label: 'test 1',
+  //           value: 'test-value-1',
+  //         },
+  //         {
+  //           label: 'test 2',
+  //           value: 'test-value-2',
+  //         },
+  //       ]}
+  //     />
+  //   );
+  //
+  //   const checkbox1 = () => wrapper.find('input[type="checkbox"]').at(0);
+  //   const checkbox2 = () => wrapper.find('input[type="checkbox"]').at(1);
+  //   const check = checkbox =>
+  //     checkbox().simulate('change', {
+  //       target: {
+  //         setCustomValidity: () => {},
+  //         checked: true,
+  //       },
+  //     });
+  //   const uncheck = checkbox =>
+  //     checkbox().simulate('change', {
+  //       target: {
+  //         setCustomValidity: () => {},
+  //         checked: false,
+  //       },
+  //     });
+  //
+  //   expect(checkbox1().exists()).to.be.true;
+  //   expect(checkbox2().exists()).to.be.true;
+  //
+  //   expect(checkbox1().prop('required')).to.be.true;
+  //   expect(checkbox2().prop('required')).to.be.true;
+  //
+  //   check(checkbox1);
+  //   expect(checkbox1().prop('required')).to.be.false;
+  //   expect(checkbox2().prop('required')).to.be.false;
+  //
+  //   check(checkbox2);
+  //   expect(checkbox1().prop('required')).to.be.false;
+  //   expect(checkbox2().prop('required')).to.be.false;
+  //
+  //   uncheck(checkbox1);
+  //   expect(checkbox1().prop('required')).to.be.false;
+  //   expect(checkbox2().prop('required')).to.be.false;
+  //
+  //   uncheck(checkbox2);
+  //   expect(checkbox1().prop('required')).to.be.true;
+  //   expect(checkbox2().prop('required')).to.be.true;
+  // });
 });
