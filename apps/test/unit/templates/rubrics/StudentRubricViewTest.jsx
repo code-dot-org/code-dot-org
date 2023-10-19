@@ -65,8 +65,6 @@ describe('StudentRubricView', () => {
         ]}
       />
     );
-    //await new Promise(resolve => setTimeout(resolve, 0));
-    //wrapper.update();
 
     const renderedLearningGoals = wrapper.find('LearningGoal');
     expect(renderedLearningGoals).to.have.lengthOf(2);
