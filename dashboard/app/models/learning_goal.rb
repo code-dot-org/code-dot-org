@@ -56,6 +56,7 @@ class LearningGoal < ApplicationRecord
       position: position,
       learningGoal: learning_goal,
       aiEnabled: ai_enabled,
+      tips: tips,
       learningGoalEvidenceLevelsAttributes: learning_goal_evidence_levels.map(&:summarize_for_rubric_edit)
     }
   end
