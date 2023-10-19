@@ -26,7 +26,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     authorize! :manage, section
 
     begin
-      si = SectionInstructor.create_section(section, params.require(:email))
+      si = section.add_instructor(params.require(:email))
     rescue ArgumentError => exception
       render json: {error: exception.message}, status: :bad_request
     rescue RuntimeError

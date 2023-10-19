@@ -787,10 +787,18 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
       participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-      add_instructor_emails: [coteacher.email]
+      instructor_emails: [coteacher.email]
     }
     assert_response :success
     assert_equal 2, returned_section.section_instructors.size
+
+    # Assert that the teacher is an accepted instructor
+    teacher_instructor = returned_section.section_instructors.find_by(instructor_id: @teacher.id)
+    assert_equal 'active', teacher_instructor.status
+
+    # Assert that the coteacher is an invited instructor
+    coteacher_instructor = returned_section.section_instructors.find_by(instructor_id: coteacher.id)
+    assert_equal 'invited', coteacher_instructor.status
   end
 
   test 'creating a section adds teacher as instructor' do
@@ -911,7 +919,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section.id,
-      add_instructor_emails: [coteacher.email]
+      instructor_emails: [coteacher.email]
     }
     assert_response :success
     assert_equal 2, section.section_instructors.size
