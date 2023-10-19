@@ -266,6 +266,16 @@
       width: 100%;
     }
 
+    .explanationArea {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 280px;
+      top: 45px;
+      left: 0;
+    }
+
     .buttonsArea {
       height: 44px;
       margin-top: auto;

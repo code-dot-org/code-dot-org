@@ -2,6 +2,7 @@ import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
 import React, {useCallback, useEffect, useRef} from 'react';
 import ProgramExecutor from '../lab2/ProgramExecutor';
 import moduleStyles from './ai-visualization-preview.module.scss';
+import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 
 interface AiVisualizationPreviewProps {
   blocks: BlockSvg[];
