@@ -43,13 +43,21 @@ section.activities {
 
   .flex-container {
     margin: 3rem auto;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
+
+    @media screen and (max-width: $width-md) {
+      justify-content: center;
+    }
 
     img {
-      max-width: 250px;
+      max-width: 175px;
+
+      @media screen and (max-width: $width-md) {
+        max-width: 125px;
+      }
     }
   }
 }
@@ -59,6 +67,10 @@ section.activities {
 
   @media (max-width: 1279px) {
     overflow: hidden;
+  }
+
+  .slides {
+    position: relative !important;
   }
 
   .slide {
@@ -132,7 +144,7 @@ section.activities {
       }
 
       .slide {
-        height: 17.25rem;
+        height: 285px;
 
         .action-block {
           width: 48%;
@@ -170,11 +182,7 @@ section.activities {
       }
 
       #ai_101_videos & {
-        height: 500px;
-
-        @media screen and (max-width: $width-sm) {
-          height: 515px;
-        }
+        height: 530px;
 
         .content-footer p {
           margin-bottom: 0;
