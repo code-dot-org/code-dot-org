@@ -39,12 +39,12 @@ const curriculaData = [
       youngestGrade: '6',
       oldestGrade: '12',
     }),
-    title: i18n.marketingInitiativeCSC(),
+    title: 'How AI Works',
     image:
       'https://images.code.org/06319e2e67e4cb08b20ae238dfe47ee3-20hour.png',
     description:
       'These lessons supplement the video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos.',
-    link: 'https://studio.code.org/s/coursea-2023?viewAs=Instructor',
+    link: 'http://localhost-studio.code.org:3000/s/how-ai-works-2023?viewAs=Instructor',
   },
 ];
 
@@ -66,9 +66,9 @@ const professionalLearning = [
     link: '/professional-learning',
   },
   {
-    title: 'Professional Learning',
+    title: i18n.professionalLearning(),
     description: 'Description',
-    buttonText: 'Explore professional learning',
+    buttonText: i18n.exploreProfessionalLearning(),
     image:
       'https://images.code.org/8e4cdad41052c2cc5e7b11d6d79aa9aa-Intro%20to%20App%20Lab.png',
     link: '/professional-learning',

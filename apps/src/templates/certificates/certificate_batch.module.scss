@@ -60,8 +60,11 @@ $border-radius: 4px;
 }
 
 .continueBeyond {
-  background-color: $neutral_light;
   padding: 50px 0 20px 0;
+}
+
+.continueBeyond .actionBlock {
+  background-color: $neutral_light;
 }
 
 // Action blocks wrappers
