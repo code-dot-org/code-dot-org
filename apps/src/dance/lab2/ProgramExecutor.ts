@@ -117,10 +117,12 @@ export default class ProgramExecutor {
 
     this.hooks.runUserSetup();
 
-    // force preview draw to occur **after** any
-    // draw iterations already queued up
+    // Force preview draw to occur **after** any
+    // draw iterations already queued up.
+    // redraw() (rather than draw()) is p5's recommended way
+    // of drawing once.
     setTimeout(() => {
-      this.nativeAPI.p5_.draw();
+      this.nativeAPI.p5_.redraw();
       this.nativeAPI.setForegroundEffectsInPreviewMode(false);
     }, 0);
   }

@@ -487,10 +487,12 @@ Dance.prototype.preview = async function () {
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
 
-  // force preview draw to occur **after** any
-  // draw iterations already queued up
+  // Force preview draw to occur **after** any
+  // draw iterations already queued up.
+  // redraw() (rather than draw()) is p5's recommended way
+  // of drawing once.
   setTimeout(() => {
-    this.nativeAPI.p5_.draw();
+    this.nativeAPI.p5_.redraw();
     this.nativeAPI.setForegroundEffectsInPreviewMode(false);
   }, 0);
 };

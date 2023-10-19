@@ -43,7 +43,7 @@ describe('ProgramExecutor', () => {
       teardown: sinon.stub(),
       ensureSpritesAreLoaded: sinon.stub(),
       p5_: {
-        draw: sinon.stub(),
+        redraw: sinon.stub(),
       },
       setForegroundEffectsInPreviewMode: sinon.stub(),
     };
@@ -144,7 +144,7 @@ describe('ProgramExecutor', () => {
     const events = evalWithEvents.firstCall.args[1];
     expect(Object.keys(events)).to.have.members(expectedHooks.map(h => h.name));
     expect(runUserSetup).to.have.been.calledOnce;
-    expect(nativeAPI.p5_.draw).to.have.been.calledOnce;
+    expect(nativeAPI.p5_.redraw).to.have.been.calledOnce;
   });
 
   it('resets the native API on reset', () => {
