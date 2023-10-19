@@ -120,10 +120,9 @@ class RubricsController < ApplicationController
 
     submitted = submitted_at
     evaluated = ai_evaluated_at
-    can_evaluate = !!submitted && (!evaluated || submitted > evaluated)
     render json: {
-      canEvaluate: can_evaluate,
-      evaluatedAt: evaluated&.utc&.to_s,
+      submitted: !!submitted,
+      lastSubmissionEvaluated: !!submitted && !!evaluated && evaluated >= submitted
     }
   end
 
