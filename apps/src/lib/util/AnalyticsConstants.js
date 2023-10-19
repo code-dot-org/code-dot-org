@@ -84,6 +84,7 @@ const EVENTS = {
   TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'TA Rubric Learning Goal Collapsed',
   TA_RUBRIC_ON_STUDENT_WORK_LOADED: 'TA Rubric On Student Work Loaded',
   TA_RUBRIC_ON_STUDENT_WORK_UNLOADED: 'TA Rubric On Student Work Unloaded',
+  TA_RUBRIC_SUBMITTED: 'TA Rubric Submitted',
 
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
 };

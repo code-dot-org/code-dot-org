@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import '../../mixins.scss';
 
 @keyframes appear {
   0% {
@@ -11,7 +12,8 @@
 
 // Fade in for 1 seconds after a 1 second delay.
 @keyframes appear1 {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 0;
   }
   100% {
@@ -30,7 +32,8 @@
 
 // 0.5 second pause, then scan over 2.5 seconds
 @keyframes scan-left-to-right {
-  0%, 16.6% {
+  0%,
+  16.6% {
     left: calc(50% - 65px);
   }
   100% {
@@ -49,7 +52,7 @@
 
 @keyframes right-to-center {
   0% {
-    left: 83%
+    left: 83%;
   }
   100% {
     left: 45%;
@@ -92,6 +95,7 @@
         animation: appear1 2s;
 
         .item {
+          @include remove-button-styles;
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -287,12 +291,12 @@
       left: 0;
       width: 100%;
 
+      &Left {
+        margin-right: auto;
+      }
+
       .button {
         font-size: 16px;
-
-        &Left {
-          margin-right: auto;
-        }
       }
     }
   }
