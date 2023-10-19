@@ -88,7 +88,7 @@ const EVENTS = {
 
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
 
-  BATCH_CERTIFICATES_PAGE_VIEWED: 'Bacth Certificates Page Viewed',
+  BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
 };
 
 export {EVENTS};
