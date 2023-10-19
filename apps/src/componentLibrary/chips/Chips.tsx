@@ -29,13 +29,13 @@ export interface ChipsProps {
 
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
- * * (?) has storybook, covered with stories and documentation;
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/ChipsTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Wip```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Chips Component.
  * Can be used to render chips or as a part of bigger/more complex components (e.g. some forms).
