@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import {Heading1, Heading2} from '@cdo/apps/componentLibrary/typography';
+import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
 import experiments from '@cdo/apps/util/experiments';
 import style from './accessible-dialogue.module.scss';
 
@@ -33,7 +33,7 @@ function HourOfCodeGuideEmailDialog(signedIn) {
             <Heading1>{i18n.welcomeToDanceParty()}</Heading1>
           </div>
           <div className={style.middle}>
-            <Heading2>{i18n.learnHowToHost()}</Heading2>
+            <Heading3>{i18n.learnHowToHost()}</Heading3>
             {bodyText()}
           </div>
           <div className={style.buttonsBottom}>
