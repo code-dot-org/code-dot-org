@@ -6,29 +6,40 @@
  * these things change.
  */
 
-// Create an animation that delays for $delay seconds and then fades in
-// over the course of $duration seconds.
-@mixin appear($index) {
-  $name: appear-#{$index};
-  $delay: $index;
-  $duration: 1;
+// Create an animation that delays for $delay seconds and then fades from
+// $start_opacity to $end_opacity over $duration seconds.
+@mixin fade($delay, $duration, $start_opacity, $end_opacity) {
+  $name: fade-#{$delay}-#{$start_opacity}-#{$end_opacity};
 
   $start_percent: #{100 * ($delay / ($delay + $duration))};
 
   @keyframes #{$name} {
     0%, #{$start_percent}% {
-      opacity: 0;
+      opacity: $start_opacity;
     }
     100% {
-      opacity: 1;
+      opacity: $end_opacity;
     }
   }
 
   animation: #{$name} #{$delay + $duration}s;
 }
 
+@mixin appear($delay) {
+  @include fade($delay, 1, 0, 1);
+}
+
+@mixin disappear($delay) {
+  @include fade($delay, 1, 1, 0);
+}
+
 #ai-modal-inner-area {
-  #fade-in {
+  .generating {
+    // AI block
+    .blocklyBlockCanvas > g:nth-of-type(3) {
+      opacity: 0;
+    }
+
     // First block
     .blocklyWorkspace .blocklyPath {
       @include appear(0);
@@ -52,6 +63,39 @@
     // Second block's second text
     .blocklyBlockCanvas g .blocklyNonEditableText:nth-of-type(4) {
       @include appear(4);
+    }
+  }
+
+  .generating, .results {
+    // AI block
+    .blocklyBlockCanvas > g:nth-of-type(3) {
+      opacity: 0;
+    }
+  }
+
+  .leaving {
+    // AI block
+    .blocklyBlockCanvas > g:nth-of-type(3) {
+      @include fade(0, 3, 0, 1);
+    }
+
+    // non-AI blocks
+    .blocklyBlockCanvas > g:nth-of-type(2) {
+      @include fade(0, 3, 1, 0);
+      opacity: 0;
+    }
+  }
+
+  .arriving {
+    // AI block
+    .blocklyBlockCanvas > g:nth-of-type(3) {
+      @include fade(0, 3, 1, 0);
+      opacity: 0;
+    }
+
+    // non-AI blocks
+    .blocklyBlockCanvas > g:nth-of-type(2) {
+      @include fade(0, 3, 0, 1);
     }
   }
 
