@@ -20,22 +20,23 @@ export default function EvidenceLevelsForStudents({
       <Heading6>{i18n.rubricScores()}</Heading6>
       <div className={style.evidenceLevelSetHorizontal}>
         {evidenceLevels.map((evidenceLevel, index) => (
-          <div
-            key={evidenceLevel.id}
-            className={classNames(style.evidenceLevelOption, {
-              [style.submittedEvaluationEvidenceLevel]:
-                submittedEvaluation?.understanding ===
-                evidenceLevel.understanding,
-              [style.borderedBoxRight]: index < 3,
-            })}
-          >
-            {/*TODO: [DES-321] Label-two styles here*/}
-            <BodyThreeText>
-              <StrongText>
-                {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
-              </StrongText>
-            </BodyThreeText>
-            <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
+          <div className={style.evidenceLevelInnerDiv}>
+            <div
+              key={evidenceLevel.id}
+              className={classNames(style.evidenceLevelOption, {
+                [style.submittedEvaluationEvidenceLevel]:
+                  submittedEvaluation?.understanding ===
+                  evidenceLevel.understanding,
+              })}
+            >
+              {/*TODO: [DES-321] Label-two styles here*/}
+              <BodyThreeText>
+                <StrongText>
+                  {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
+                </StrongText>
+              </BodyThreeText>
+              <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
+            </div>
           </div>
         ))}
       </div>
