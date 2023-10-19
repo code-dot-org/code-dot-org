@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../../../../../dashboard/config/environment'
 require_relative '../../../i18n_script_utils'
 require_relative '../../../utils/sync_out_base'
 require_relative '../marketing_announcements'

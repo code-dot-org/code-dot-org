@@ -1,3 +1,6 @@
+require_relative '../../i18n_script_utils'
+require_relative '../dashboard'
+
 Dir[File.expand_path('../marketing_announcements/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
