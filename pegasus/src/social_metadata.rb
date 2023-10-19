@@ -17,6 +17,7 @@
 #   code.org/ai/how-ai-works
 #   code.org/videos
 #   code.org/10years
+#   code.org/youngwomen
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -67,6 +68,7 @@ def get_social_metadata_for_page(request)
     hoc_2023_social: {path: "/shared/images/social-media/hoc2023_social.png", width: 1200, height: 630},
     videos_page: {path: "/shared/images/social-media/videos-page.png", width: 1200, height: 630},
     ten_years: {path: "/shared/images/social-media/10years-social.png", width: 1200, height: 630},
+    young_women_in_cs: {path: "/shared/images/social-media/young-women-social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -240,6 +242,13 @@ def get_social_metadata_for_page(request)
         image: images[:ten_years]
       }
     },
+    "young_women_in_cs" => {
+      "default" => {
+        title: hoc_s(:yw_page_top_heading),
+        description: hoc_s(:yw_page_top_desc),
+        image: images[:young_women_in_cs]
+      }
+    },
     "ai_hoc" => {
       "default" => {
         title: hoc_s(:hoc2023_social_creativity_with_ai_title),
@@ -289,6 +298,8 @@ def get_social_metadata_for_page(request)
     page = "videos_page"
   elsif request.path == "/10years" && request.site == "code.org"
     page = "ten_years"
+  elsif request.path == "/youngwomen" && request.site == "code.org"
+    page = "young_women_in_cs"
   else
     return {}
   end

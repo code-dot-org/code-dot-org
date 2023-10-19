@@ -17,6 +17,8 @@ import LearningGoal from './LearningGoal';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -49,6 +51,10 @@ export default function RubricContent({
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
   const submitFeedbackToStudent = () => {
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
+      ...reportingData,
+      studentId: studentLevelInfo.user_id,
+    });
     setIsSubmittingToStudent(true);
     setErrorSubmitting(false);
     const body = JSON.stringify({
@@ -112,7 +118,7 @@ export default function RubricContent({
       const aiInfo = aiEvaluation.find(
         item => item.learning_goal_id === learningGoalId
       );
-      return aiInfo?.confidence;
+      return aiInfo?.ai_confidence;
     } else {
       return null;
     }
