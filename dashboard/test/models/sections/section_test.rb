@@ -539,7 +539,7 @@ class SectionTest < ActiveSupport::TestCase
     Timecop.freeze(Time.zone.now) do
       section = create :section
       coteacher_user = create :teacher
-      section.add_instructor(section, coteacher_user.email)
+      section.add_instructor(coteacher_user.email)
       section.reload
 
       expected = {
