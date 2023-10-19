@@ -165,6 +165,48 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     put :decline, params: {id: si.id}
     assert_response :forbidden
   end
+
+  test 'logged-out user cannot check email addresses' do
+    get :check, params: {email: @teacher2.email}
+    assert_response :forbidden
+  end
+
+  test 'teacher can check other teacher for eligibility' do
+    sign_in @teacher
+    get :check, params: {email: @teacher2.email}
+    assert_response :success
+  end
+
+  test 'teacher gets error checking own email address' do
+    sign_in @teacher
+    get :check, params: {email: @teacher.email}
+    assert_response :bad_request
+  end
+
+  test 'teacher gets error checking non-user email address' do
+    sign_in @teacher
+    get :check, params: {email: 'nonsense@nowhere.com'}
+    assert_response :not_found
+  end
+
+  test 'teacher can check teacher for existing section' do
+    sign_in @teacher
+    get :check, params: {email: @teacher3.email, section_id: @section2.id}
+    assert_response :success
+  end
+
+  test 'teacher gets error checking existing co-teacher' do
+    sign_in @teacher
+    get :check, params: {email: @teacher2.email, section_id: @section2.id}
+    assert_response :bad_request
+  end
+
+  test 'teacher cannot check adding to a section they do not teach' do
+    sign_in @teacher2
+    get :check, params: {email: @teacher3.email, section_id: @section.id}
+    assert_response :forbidden
+  end
+
   # Parsed JSON returned after the last request, for easy assertions.
   # Returned hash has string keys
   def returned_json

@@ -1,6 +1,9 @@
 class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   load_and_authorize_resource only: [:destroy, :accept, :decline]
 
+  # The co-teacher limit is 5 plus the main teacher for a total of 6 instructors
+  INSTRUCTOR_LIMIT = 6
+
   # Returns list of current user's SectionInstructor records
   # GET /section_instructors
   def index
@@ -25,9 +28,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     section = Section.find(params.require(:section_id))
     authorize! :manage, section
 
-    # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
-    # for a total of 6)
-    if SectionInstructor.where(section: section).count >= 6
+    if SectionInstructor.where(section: section).count >= INSTRUCTOR_LIMIT
       return render json: {error: 'section full'}, status: :bad_request
     end
 
@@ -83,5 +84,34 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     @section_instructor.save!
 
     render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
+  end
+
+  # GET /section_instructors/check
+  # Checks if the given email address corresponds to a user that could be added
+  # as an instructor. Optional section id parameter can be given to verify that
+  # the user is not already an instructor in the section.
+  def check
+    return head :forbidden unless current_user&.teacher?
+
+    instructor = User.find_by(email: params.require(:email), user_type: :teacher)
+    return head :not_found if instructor.blank?
+    if instructor == current_user
+      return render json: {error: 'inviting self'}, status: :bad_request
+    end
+
+    section = Section.find_by_id(params[:section_id])
+    if section.present?
+      authorize! :manage, section
+      if SectionInstructor.where(section: section).count >= INSTRUCTOR_LIMIT
+        return render json: {error: 'section full'}, status: :bad_request
+      end
+
+      si = SectionInstructor.find_by(instructor: instructor, section: section)
+      if si.present?
+        return render json: {error: 'already invited'}, status: :bad_request
+      end
+    end
+
+    head :no_content
   end
 end
