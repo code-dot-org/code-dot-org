@@ -22,9 +22,9 @@ module I18n
         RestrictedContent.sync_in
         Scripts.sync_in
         SharedFunctions.sync_in
+        Slides.sync_in
         Standards.sync_in
 
-        I18nScriptUtils.copy_file File.join(ORIGIN_I18N_DIR_PATH, 'slides.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'slides.yml')
         I18nScriptUtils.copy_file File.join(ORIGIN_I18N_DIR_PATH, 'unplugged.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'unplugged.yml')
       end
 
@@ -41,6 +41,7 @@ module I18n
         RestrictedContent.sync_out
         Scripts.sync_out
         SharedFunctions.sync_out
+        Slides.sync_out
         Standards.sync_out
       end
     end
