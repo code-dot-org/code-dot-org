@@ -96,7 +96,7 @@ paletteoutput = {'emojiAssociations': palettedict, 'output': palettes}
 bgoutput = {'emojiAssociations': bgdict, 'output': backgrounds}
 fgoutput = {'emojiAssociations': fgdict, 'output': foregrounds}
 
-# Modify output to reflect true file names
+# Modify output to reflect true file names as stored within our typescript codebase
 bgoutput['output'] = [
     'circles',
     'color_cycle',
