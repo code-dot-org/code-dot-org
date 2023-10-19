@@ -79,7 +79,8 @@ export default function SectionsSetUpContainer({
   sectionToBeEdited,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
-  const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
+  // TODO change back to false
+  const [isCoteacherOpen, setIsCoteacherOpen] = useState(true);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
   const [coteachersToAdd, setCoteachersToAdd] = useState([]);

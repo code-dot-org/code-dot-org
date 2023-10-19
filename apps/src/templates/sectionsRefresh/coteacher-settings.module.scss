@@ -1,0 +1,42 @@
+@import "color.scss";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+
+.expandedSection {
+  margin-top: 5px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.add {
+  padding: 12px;
+  border: 1px solid $light_gray_200;
+  background: $neutral_light;
+}
+
+.addInput {
+  width: auto;
+  height: 34px;
+}
+
+.addLabel {
+  @include label-one;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.addButton {
+  margin-top: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.table {
+  width: 100%;
+}
