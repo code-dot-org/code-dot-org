@@ -179,11 +179,19 @@ section.activities {
       }
 
       #how_ai_works_lessons & {
-        height: 570px;
+        height: 600px;
+
+        @media screen and (max-width: $width-sm) {
+          height: auto;
+        }
       }
 
       #ai_101_videos & {
         height: 530px;
+
+        @media screen and (max-width: $width-sm) {
+          height: auto;
+        }
 
         .content-footer p {
           margin-bottom: 0;
