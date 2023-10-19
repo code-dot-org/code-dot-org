@@ -53,13 +53,14 @@
 
       // Pressed styles
       &:active {
-        // changing padding to prevent chip from being resized,
-        // because on all the other states border width = 1px instead of 2px.
-        padding: 7px 11px;
-        border: 2px solid $light_black;
+        background-color: $light_primary_100;
+        outline: $light_primary_500 solid 2px;
+        outline-offset: -2px;
 
         &:has(input[type="checkbox"]:checked) {
-          border: 2px solid $light_primary_700;
+          background-color: $light_primary_700;
+          outline: $light_primary_500 solid 2px;
+          outline-offset: -2px;
         }
       }
 
@@ -79,10 +80,10 @@
           background-color: $light_white;
         }
 
-        //&:active {
-        //  padding: 8px 12px;
-        //  border: 1px solid $light_gray_200;
-        //}
+        &:active {
+          background-color: $light_white;
+          outline: none;
+        }
       }
 
       &:has(input[type="checkbox"]:disabled:checked) {

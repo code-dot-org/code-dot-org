@@ -24,7 +24,7 @@ export default function SingleSectionSetUp({
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
         <Heading2>{i18n.classSection()}</Heading2>
-        <label className={moduleStyles.typographyLabel}>
+        <label className={moduleStyles.typographyLabelTwo}>
           {i18n.className()}
           <input
             required
