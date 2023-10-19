@@ -1,0 +1,21 @@
+name 'virtual-pl-csd-summer-day3-UnderstandingContext3_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Addressing Unconscious Bias
+<br>
+<img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
+
+#### During the previous session we talked about the role unconscious bias can play in our classrooms and our teaching practice. While being aware of our biases is the first step in addressing the impact of these biases, we want to provide you with other steps you can take to address unconscious bias.
+
+---
+### To Do:
+#### 1. Read the article <a href="https://www.responsiveclassroom.org/wp-content/uploads/2017/10/Unconscious-Bias_Ed-Leadership.pdf">Unconscious Bias: When Good Intentions are not Enough</a>.
+#### 2. Consider the discussion prompt below and add your reflection to the discussion forum. We encourage you to add to the discussion by also replying to other participant posts when appropriate. What are the key takeaways from the article and previous video?
+<br>
+
+![](https://images.code.org/9defbab92b9b4a9a5ded7b2172d59c49-image-1684354553207.15.51 PM.png)
+
+
+MARKDOWN

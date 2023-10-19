@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-03 18:33:52 UTC",
+    "serialized_at": "2023-10-17 17:11:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1597,6 +1597,22 @@
       },
       "seeding_key": {
         "activity_section.key": "2027c395-38b3-4020-bcfc-a8aed1eb2838",
+        "lesson_activity.key": "e7fe7be7-a1e8-4eda-ba93-e6ca7852be4b"
+      }
+    },
+    {
+      "key": "ff0e3f3f-ecf1-4a8a-8fff-f719a7c7307a",
+      "position": 9,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<div style=\"column-count: 2; column-gap: 20px; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always; width: 180%\">\n     <b>Create Perfomance Task Written Response Practice</b>\n    </br>\n    </br>\n    In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n    </br>\n    </br>\n    Create PT Learning Objective: <i> Describe the purpose of a code segment or program by writing documentation.</i>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <img src=\"https://images.code.org/3f77c8efade39dc50d301f0751f767b7-writtenResponse3.png\" alt=\"\" style=\"display: block; margin: auto; float: right;\"/>\n    </p>\n</div>\n</br>\n<div style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g224b963ddf2_0_0\" target=\"_blank\">Unit Journal Template</a>\n</br>\nThis journal entry is practice for the Personalized Project Reference requirement. Students will snip a section of code and document its purpose.\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <b>Exemplar Response for Instructors</b>\n</br>\n<i> (Exemplars will be forthcoming with further College Board updates in Fall 2023)\n    </p>\n </div>"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ff0e3f3f-ecf1-4a8a-8fff-f719a7c7307a",
         "lesson_activity.key": "e7fe7be7-a1e8-4eda-ba93-e6ca7852be4b"
       }
     },
@@ -6348,9 +6364,10 @@
     },
     {
       "name": "CSP Unit 4 - Slides",
-      "url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/copy",
+      "url": "https://docs.google.com/presentation/d/1PN_NJEC3mwa7-Ii1OP_6AV4Fle1CgXd26RIWZqH-Ip8/copy",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
+        "audience": "Teacher",
         "type": "Slides"
       },
       "seeding_key": {
@@ -8409,6 +8426,13 @@
         "lesson.key": "Variables Practice",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "AAP-3.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.G.1"
       }
     },
     {
