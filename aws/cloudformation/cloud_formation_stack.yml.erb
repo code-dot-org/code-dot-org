@@ -512,7 +512,7 @@ Resources:
     Properties:
       # Temporarily hardcode the Ubuntu 20 image just for production-daemon, so we can gradually roll out the update.
       # TODO (infra): finish updating all environments, and restore this line to always just use IMAGE_ID
-      ImageId: <%=rack_env?(:production) ? 'ami-0261755bbcb8c4a84': IMAGE_ID%>
+      ImageId: <%=rack_env?(:production) ? 'ami-0261755bbcb8c4a84' : IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
