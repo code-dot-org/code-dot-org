@@ -2952,6 +2952,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kurkle/color@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "@kurkle/color@npm:0.3.2"
+  checksum: 79e97b31f8f6efb28c69d373f94b0c7480226fe8ec95221f518ac998e156444a496727ce47de6d728eb5c3369288e794cba82cae34253deb0d472d3bfe080e49
+  languageName: node
+  linkType: hard
+
 "@lezer/common@npm:^1.0.0":
   version: 1.0.0
   resolution: "@lezer/common@npm:1.0.0"
@@ -7715,6 +7722,7 @@ __metadata:
     chai-subset: 1.2.0
     chai-xml: ^0.3.2
     chalk: ^1.1.3
+    chart.js: ^4.4.0
     classnames: ^2.3.2
     codemirror: 5.5
     codemirror-spell-checker: ^1.1.2
@@ -7823,6 +7831,7 @@ __metadata:
     react-beautiful-dnd: ^13.1.0
     react-bootstrap: ^0.33.1
     react-bootstrap-2: "npm:react-bootstrap@^2.7.4"
+    react-chartjs-2: ^5.2.0
     react-color: ^2.17.3
     react-csv: ^2.0.3
     react-datepicker: 1.6.0
@@ -8881,6 +8890,15 @@ canvg@gabelerner/canvg:
     chartjs-color: ^2.1.0
     moment: ^2.10.2
   checksum: cbdc7abe2fa65e4838848e68b035ae6048ebcc512b9057d7cdb6d361e728400d39e3fde75e0b4da815ab43f7890c31787d8f80d4e6ab75a3e80fc75b47cd173c
+  languageName: node
+  linkType: hard
+
+"chart.js@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "chart.js@npm:4.4.0"
+  dependencies:
+    "@kurkle/color": ^0.3.0
+  checksum: 5ee2d99b78608025525b5790af17178fdaa5adc3294e082deba2718029b0496109ba124f1b08dd1e4c8a04d6e842be7f384f2cfe9a11df8d1c6fe884acece52b
   languageName: node
   linkType: hard
 
@@ -22700,6 +22718,16 @@ es6-shim@latest:
     react: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     react-dom: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
   checksum: c37b900cfc6fa25bb36c5fa0d918e473d61000375735c2c4c562258a70f5b708f5908987557f554cc62f7230bd44b6fd9a7b5db5653ff845b3ee3e59e669e68e
+  languageName: node
+  linkType: hard
+
+"react-chartjs-2@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "react-chartjs-2@npm:5.2.0"
+  peerDependencies:
+    chart.js: ^4.1.1
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: ace702185be1450e5888a8bcd8b5fc1995067e3b11d236764a67f5567a3d7c32ff16923b8d48d3d39bda6e45135da6c044c9b43fbe8e1978f95aca9d2c0ce348
   languageName: node
   linkType: hard
 
