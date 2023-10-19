@@ -40,7 +40,7 @@ function reorganizeAndWrapSlides(carouselId, cardsList) {
 
 function handleScreenSize(carouselId) {
   if (windowWidth > 639 && windowWidth < 799) {
-    reorganizeAndWrapSlides(carouselId, 0);
+    reorganizeAndWrapSlides(carouselId, 1);
     console.log("639 - 799");
   } else if (windowWidth > 799) {
     reorganizeAndWrapSlides(carouselId, 2);
@@ -57,7 +57,6 @@ $(document).ready(function () {
     prev: "#prev_1",
     next: "#next_1",
     responsive: true,
-    height: "490",
     scroll: 1,
     swipe: {
       onTouch: true,
@@ -73,7 +72,6 @@ $(document).ready(function () {
     next: "#next_2",
     responsive: true,
     width: "100%",
-    height: "490",
     scroll: 1,
     swipe: {
       onTouch: true,
@@ -88,7 +86,6 @@ $(document).ready(function () {
     prev: "#prev_3",
     next: "#next_3",
     responsive: true,
-    height: "490",
     scroll: 1,
     swipe: {
       onTouch: true,

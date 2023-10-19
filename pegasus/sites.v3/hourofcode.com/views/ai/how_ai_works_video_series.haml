@@ -44,7 +44,7 @@
       - video_item.each do |video_item|
         .slide
           .slide-content
-            %figure.video-responsive.video-wrapper.video-wrapper--one-col
+            %figure.video-responsive.video-wrapper
               %div.video-container
                 %iframe{allowfullscreen: "", frameborder: "0", src: "https://www.youtube-nocookie.com/embed/#{video_item[:embed_link]}"}
               %figcaption
