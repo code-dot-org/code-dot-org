@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
+import {CachedWeightsMapping} from './DanceAiClient';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
@@ -48,11 +49,6 @@ interface FieldObject {
   name: string;
   data: CachedWeightsMapping;
 }
-
-type CachedWeightsMapping = {
-  emojiAssociations: {[key: string]: {association: number[]}};
-  output: string[];
-};
 
 interface Fields {
   [FieldKey.BACKGROUND_EFFECT]: FieldObject;
@@ -123,7 +119,7 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
     .map((emojiId: string, index) => {
       return {
         label: emojiId,
-        data: emojiAssociations[emojiId].association,
+        data: emojiAssociations[emojiId],
         backgroundColor: colors[index],
       };
     });
