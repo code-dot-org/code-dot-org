@@ -2,7 +2,7 @@ import UntypedCachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-ba
 import UntypedCachedForegrounds from '@cdo/static/dance/ai/model/cached-spacy-foreground-map.json';
 import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 
-type CachedWeightsMapping = {
+export type CachedWeightsMapping = {
   emojiAssociations: {[key: string]: number[]};
   output: string[];
 };

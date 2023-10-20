@@ -4,9 +4,7 @@
 # In most cases, you will not run this script directly, but instead
 # use docker-compose to run using the unit-tests-compose.yml file in this directory. See instructions in that file.
 
-set -xe
-
-mispipe "echo 'Starting timestamp'" ts
+set -e
 
 export CI=true
 export RAILS_ENV=test
@@ -14,40 +12,32 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-mispipe "bundle install --verbose" ts
-
 # set up locals.yml
-set +x
 echo "
+build_apps: true
+build_dashboard: true
+build_i18n: true
+build_pegasus: true
 bundler_use_sudo: false
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
-ignore_eyes_mismatches: true
-disable_all_eyes_running: true
-use_my_apps: true
-build_dashboard: true
-build_pegasus: true
-build_apps: true
-build_i18n: true
-localize_apps: true
+dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_workers: 5
-skip_seed_all: true
-optimize_webpack_assets: false
-optimize_rails_assets: false
+disable_all_eyes_running: true
 google_maps_api_key: boguskey
-dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
+ignore_eyes_mismatches: true
+localize_apps: true
+optimize_rails_assets: false
+optimize_webpack_assets: false
+skip_seed_all: true
+use_my_apps: true
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
+
 set -x
 
-# name: rake install
-RAKE_VERBOSE=true mispipe "bundle exec rake install --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
-
-# name: rake build
-RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
-
-# unit tests
-bundle exec rake circle:run_tests --trace
-
-mispipe "echo 'Ending timestamp'" ts
+bundle install --quiet
+bundle exec rake install
+bundle exec rake build
+bundle exec rake circle:run_tests
