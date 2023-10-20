@@ -53,6 +53,7 @@ class AuthenticationOption < ApplicationRecord
 
   CREDENTIAL_TYPES = [
     EMAIL = 'email',
+    LTI_V1 = 'lti_v1',
     OAUTH_CREDENTIAL_TYPES,
   ].flatten.freeze
 
@@ -128,6 +129,10 @@ class AuthenticationOption < ApplicationRecord
     return if email.blank?
     self.hashed_email = AuthenticationOption.hash_email(email)
   end
+
+  # def email_required?
+  #   credential_type != LTI_V1
+  # end
 
   def data_hash
     column_value = read_attribute(:data)
