@@ -162,6 +162,15 @@ class EvaluateRubricJob < ApplicationJob
 
     # record the ai evaluations to the database
     # TODO: pass along and update the 'requester' to the correct id
+    # TODO: assign this to a variable and use it to create learning goal ai evaluations later
+    RubricAiEvaluation.create!(
+      user: user,
+      requester: user,
+      status: SharedContants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS],
+      project_id: project_id,
+      project_version: project_version,
+    )
+
     ActiveRecord::Base.transaction do
       ai_evaluations.each do |evaluation|
         learning_goal = rubric.learning_goals.all.find {|lg| lg.learning_goal == evaluation['Key Concept']}
