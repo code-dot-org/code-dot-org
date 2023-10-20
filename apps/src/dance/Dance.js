@@ -467,7 +467,7 @@ Dance.prototype.reset = function () {
  * image is displayed and sound is NOT played.
  */
 Dance.prototype.preview = async function () {
-  this.nativeAPI.setForegroundEffectsInPreviewMode(true);
+  this.nativeAPI.setEffectsInPreviewMode(true);
   this.nativeAPI.reset();
   const api = new DanceAPI(this.nativeAPI);
   const studentCode = this.studioApp_.getCode();
@@ -493,7 +493,7 @@ Dance.prototype.preview = async function () {
   // of drawing once.
   setTimeout(() => {
     this.nativeAPI.p5_.redraw();
-    this.nativeAPI.setForegroundEffectsInPreviewMode(false);
+    this.nativeAPI.setEffectsInPreviewMode(false);
   }, 0);
 };
 
