@@ -77,7 +77,7 @@ export function flyoutCategoryBlocks(workspace) {
   if (variableModelList.length > 0) {
     if (Blockly.Blocks['variables_get']) {
       variableModelList.sort(Blockly.VariableModel.compareByName);
-      for (let i = 0, variable; (variable = variableModelList[i]); i++) {
+      variableModelList.forEach(variable => {
         const block = {
           kind: 'block',
           type: 'variables_get',
@@ -89,7 +89,7 @@ export function flyoutCategoryBlocks(workspace) {
           },
         };
         blockList.push(block);
-      }
+      });
     }
     // New variables are added to the end of the variableModelList.
     const mostRecentVariable = variableModelList[variableModelList.length - 1];
@@ -126,40 +126,3 @@ export function flyoutCategoryBlocks(workspace) {
   }
   return blockList;
 }
-[
-  {
-    type: 'variables_set',
-    fields: {
-      VAR: {
-        id: '{i~K0[38l!xMM+u/O#.-',
-      },
-    },
-  },
-  {
-    type: 'variables_get',
-    fields: {
-      VAR: {
-        id: '{i~K0[38l!xMM+u/O#.-',
-      },
-    },
-  },
-  {
-    type: 'math_change',
-    fields: {
-      VAR: {
-        id: '{i~K0[38l!xMM+u/O#.-',
-      },
-    },
-    inputs: {
-      DELTA: {
-        shadow: {
-          type: 'math_number',
-          id: '~9T;lR*2}(m~=ETx!$pG',
-          fields: {
-            NUM: 1,
-          },
-        },
-      },
-    },
-  },
-];

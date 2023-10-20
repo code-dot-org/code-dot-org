@@ -398,8 +398,8 @@ export function getLevelToolboxBlocks(customCategory) {
 /**
  * Simplifies the state of blocks for a flyout by removing properties like x/y and id.
  * Also replaces variable IDs with variable names derived from the serialied variable map.
- * @param {object} serialization The full workspace serialization, including variables and blocks.
- * @returns {Array<object>} An array of simplified block objects, suitable for a flyout.
+ * @param {object} serialization The serialized block state.
+ * @returns {Array<object>} An array of simplified block objects.
  */
 export function getSimplifiedStateForFlyout(serialization) {
   const variableMap = {};
@@ -407,51 +407,55 @@ export function getSimplifiedStateForFlyout(serialization) {
     variableMap[variable.id] = variable.name;
   });
 
-  /**
-   * Processes a block to replace variable IDs with variable names.
-   * Recursively checks child blocks connected to inputs or next connections.
-   * @param {object} block The block to process.
-   * @returns {object} The processed block with variable names.
-   */
-  function processBlock(block) {
-    // Create a copy of the block so we can modify certain fields.
-    const result = {...block};
-
-    // For VAR fields, look up the name of the variable to use instead of the id.
-    if (block.fields && block.fields.VAR) {
-      result.fields.VAR = {
-        name: variableMap[block.fields.VAR.id] || '',
-        type: '',
-      };
-    }
-
-    // Recursively check nested blocks.
-    if (block.inputs) {
-      for (const inputKey in block.inputs) {
-        result.inputs[inputKey].block = processBlock(
-          block.inputs[inputKey].block
-        );
-      }
-    }
-    // Recursively check next block, if present.
-    if (block.next) {
-      result.next.block = processBlock(block.next.block);
-    }
-    // Remove unnecessary properties
-    delete result.id;
-    delete result.x;
-    delete result.y;
-
-    // Add 'kind' property
-    result.kind = 'block';
-
-    return result;
-  }
-
   const blocksList =
     serialization.blocks && serialization.blocks.blocks
-      ? serialization.blocks.blocks.map(processBlock)
+      ? serialization.blocks.blocks.map(block =>
+          simplifyBlockState(block, variableMap)
+        )
       : [];
 
   return blocksList;
+}
+
+/**
+ * Simplifies the state of a block by removing properties like x/y and id.
+ * Also replaces variable IDs with variable names derived from the specified variable map.
+ * @param {object} block The block to process.
+ * @param {object} variableMap A map of variable IDs to variable names.
+ * @returns {object} The processed block with variable names.
+ */
+function simplifyBlockState(block, variableMap) {
+  // Create a copy of the block so we can modify certain fields.
+  const result = {...block};
+
+  // For VAR fields, look up the name of the variable to use instead of the id.
+  if (block.fields && block.fields.VAR) {
+    result.fields.VAR = {
+      name: variableMap[block.fields.VAR.id] || '',
+      type: '',
+    };
+  }
+
+  // Recursively check nested blocks.
+  if (block.inputs) {
+    for (const inputKey in block.inputs) {
+      result.inputs[inputKey].block = simplifyBlockState(
+        block.inputs[inputKey].block,
+        variableMap
+      );
+    }
+  }
+  // Recursively check next block, if present.
+  if (block.next) {
+    result.next.block = simplifyBlockState(block.next.block, variableMap);
+  }
+  // Remove unnecessary properties
+  delete result.id;
+  delete result.x;
+  delete result.y;
+
+  // Add 'kind' property
+  result.kind = 'block';
+
+  return result;
 }
