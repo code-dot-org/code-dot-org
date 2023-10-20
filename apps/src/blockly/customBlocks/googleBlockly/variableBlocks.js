@@ -25,11 +25,12 @@ export function flyoutCategory(workspace) {
 
   blockList.push(...flyoutJson);
 
+  // The may include "change [var] by" blocks with custom default values.
+  // If any of these blocks are found, we can remove the auto-generated block.
   // Count the 'math_change' blocks in blockList.
   const mathChangeBlocksCount = blockList.filter(
     block => block.type === 'math_change'
   ).length;
-
   // If there is more than one, remove the first occurrence which was auto-generated.
   if (mathChangeBlocksCount > 1) {
     const firstMathChangeIndex = blockList.findIndex(
