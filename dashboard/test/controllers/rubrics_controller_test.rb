@@ -117,8 +117,10 @@ class RubricsControllerTest < ActionController::TestCase
 
     learning_goal1 = create :learning_goal, rubric: @rubric
     learning_goal2 = create :learning_goal, rubric: @rubric
+    # TODO: save this to a variable and use it to create learning goal ai evaluations
+    create :rubric_ai_evaluation, user: student, requester: teacher, status: 1
     ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, requester: @teacher, understanding: 1
-    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, requester: @teacher,  understanding: 2
+    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, requester: @teacher, understanding: 2
 
     get :get_ai_evaluations, params: {
       id: @rubric.id,

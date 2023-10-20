@@ -607,6 +607,16 @@ module SharedConstants
     }
   ).freeze
 
+  # These reflect the 'status' of an AI rubric evaluation
+  RUBRIC_AI_EVALUATION_STATUS = {
+    # Queued as a job
+    QUEUED: 0,
+    # Succeeded
+    SUCCESS: 1,
+    # General failure
+    FAILURE: 2,
+  }.freeze
+
   EMAIL_LINKS = OpenStruct.new(
     {
       PRIVACY_POLICY_URL: "https://code.org/privacy",
