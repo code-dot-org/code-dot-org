@@ -22,8 +22,18 @@ export default function CoteacherSettings({
 
   const handleButtonClick = () => {
     const newEmail = inputValue;
+    console.log(sectionInstructors);
     if (newEmail === '' || !newEmail.includes('@')) {
       setAddError(i18n.coteacherAddInvalidEmail({email: newEmail}));
+      return;
+    }
+    if (
+      sectionInstructors.some(
+        instructor => instructor.instructorEmail === newEmail
+      ) ||
+      coteachersToAdd.some(email => email === newEmail)
+    ) {
+      setAddError(i18n.coteacherAddAlreadyExists({email: newEmail}));
       return;
     }
 
@@ -88,7 +98,12 @@ export default function CoteacherSettings({
           </div>
           {getErrorOrCount}
         </div>
-        <div className={styles.table}>{coteachersToAdd}</div>
+        <div className={styles.table}>
+          {coteachersToAdd}
+          {sectionInstructors.map(
+            instructor => '   ' + instructor.instructorEmail
+          )}
+        </div>
       </div>
     </div>
   );
