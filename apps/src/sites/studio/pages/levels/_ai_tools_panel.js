@@ -8,20 +8,17 @@ import {getStore} from '@cdo/apps/redux';
 $(document).ready(initPage);
 
 function initPage() {
-  const script = document.querySelector('script[data-aitoolspanel]');
-  const aiToolsPanelData = JSON.parse(script.dataset.aitoolspanel);
-  
-  renderAIToolsPanel()
+  renderAIToolsPanel();
 }
 
 function renderAIToolsPanel() {
-    const div = document.createElement('div');
-    div.setAttribute('id', 'ai-tools-panel-container');
-    const store = getStore();   
+  const div = document.createElement('div');
+  div.setAttribute('id', 'ai-tools-panel-container');
+  const store = getStore();
 
   ReactDOM.render(
     <Provider store={store}>
-        <AIToolsPanel />
+      <AIToolsPanel />
     </Provider>,
     div
   );
