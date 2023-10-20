@@ -1,8 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {mount, shallow} from 'enzyme';
-import sinon from 'sinon';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import {shallow} from 'enzyme';
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
 
 describe('StudentRubricView', () => {
@@ -45,13 +43,14 @@ describe('StudentRubricView', () => {
       renderedLearningGoals.at(1).props().learningGoal.learningGoal
     ).to.equal('goal 2');
     expect(renderedLearningGoals.at(1).props().canProvideFeedback).to.be.false;
+    expect(renderedLearningGoals.at(1).props().isStudent).to.be.true;
   });
 
-  it('fetches evaluation and passes props down', async () => {
-    const fetchStub = sinon.stub(HttpClient, 'fetchJson');
-    fetchStub.returns(
-      Promise.resolve({
-        value: [
+  it('passes evaluation down to learning goals', async () => {
+    const wrapper = shallow(
+      <StudentRubricView
+        rubric={defaultRubric}
+        submittedEvaluation={[
           {
             id: 1,
             learning_goal_id: 1,
@@ -64,13 +63,9 @@ describe('StudentRubricView', () => {
             understanding: 3,
             feedback: 'feedback for learning goal 2',
           },
-        ],
-      })
+        ]}
+      />
     );
-
-    const wrapper = mount(<StudentRubricView rubric={defaultRubric} />);
-    await new Promise(resolve => setTimeout(resolve, 0));
-    wrapper.update();
 
     const renderedLearningGoals = wrapper.find('LearningGoal');
     expect(renderedLearningGoals).to.have.lengthOf(2);

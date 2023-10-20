@@ -4,7 +4,6 @@ module I18n
   module Resources
     module Dashboard
       DIR_NAME = 'dashboard'.freeze
-
       ORIGIN_I18N_DIR_PATH = CDO.dir('dashboard/config/locales').freeze
       I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze
       I18N_BACKUP_DIR_PATH = CDO.dir(I18N_ORIGINAL_DIR, DIR_NAME).freeze
@@ -19,6 +18,7 @@ module I18n
         DataContent.sync_in
         DeviseContent.sync_in
         Docs.sync_in
+        MarketingAnnouncements.sync_in
         RestrictedContent.sync_in
         Scripts.sync_in
         SharedFunctions.sync_in
@@ -38,6 +38,7 @@ module I18n
         DataContent.sync_out
         DeviseContent.sync_out
         Docs.sync_out
+        MarketingAnnouncements.sync_out
         RestrictedContent.sync_out
         Scripts.sync_out
         SharedFunctions.sync_out
