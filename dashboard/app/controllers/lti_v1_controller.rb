@@ -1,4 +1,7 @@
 require "base64"
+require "queries/lti"
+require "services/lti"
+require "concerns/partial_registration"
 
 class LtiV1Controller < ApplicationController
   # Don't require an authenticity token because LTI Platforms POST to this
@@ -81,8 +84,17 @@ class LtiV1Controller < ApplicationController
       message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
       return wrong_resource_type unless message_type == 'LtiResourceLinkRequest'
 
-      target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
-      redirect_to target_link_uri
+      user = Queries::Lti.get_user(decoded_jwt)
+
+      if user
+        sign_in user: user
+        target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
+        redirect_to target_link_uri
+      else
+        Services::Lti.partially_create_user(session, decoded_jwt)
+        # TODO: "https://purl.imsglobal.org/spec/lti/claim/target_link_uri" - After signup, redirect to target_link_uri
+      end
+
     else
       return unauthorized_status
     end
