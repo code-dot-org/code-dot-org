@@ -179,9 +179,15 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
 
   // Blockly supports XML or JSON, but not a combination of both.
   // We convert to JSON here because the behavior_get blocks are JSON.
-  const blocksJson = convertToolboxXmlToJson(
-    Blockly.cdoUtils.getCustomCategoryBlocksForFlyout('Behavior')
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
+  if (!levelToolboxBlocks) {
+    return;
+  }
+  const blocksConvertedJson = convertXmlToJson(
+    levelToolboxBlocks.documentElement
   );
+  const blocksJson =
+    Blockly.cdoUtils.getSimplifiedStateForFlyout(blocksConvertedJson);
   blockList.push(...blocksJson);
 
   // Workspaces to populate behaviors flyout category from
@@ -218,44 +224,6 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   });
 
   return blockList;
-}
-
-// Gets an array of simplified JSON blocks for flyout
-function convertToolboxXmlToJson(xmlList) {
-  const parser = new DOMParser();
-  const xmlRootElement = parser.parseFromString(
-    '<xml></xml>',
-    'application/xml'
-  );
-
-  // Iterate through each block element in xmlList
-  for (const blockElement of xmlList) {
-    // Append the block element to the xmlRootElement
-    xmlRootElement.documentElement.appendChild(blockElement);
-  }
-
-  const jsonBlocks = convertXmlToJson(xmlRootElement.documentElement);
-  const flyoutBlocks = jsonBlocks.blocks?.blocks?.map(
-    simplifyBlockStateForFlyout
-  );
-
-  return flyoutBlocks;
-}
-
-// Used to simplify block state for inclusion in the Behaviors category flyout
-function simplifyBlockStateForFlyout(block) {
-  // Clone the original block object to avoid modifying it directly
-  const modifiedBlock = {...block};
-
-  // Remove id, x, and y properties
-  delete modifiedBlock.id;
-  delete modifiedBlock.x;
-  delete modifiedBlock.y;
-
-  // Add kind property with value 'block'
-  modifiedBlock.kind = 'block';
-
-  return modifiedBlock;
 }
 
 const getNewBehaviorButtonWithCallback = (

@@ -358,30 +358,100 @@ export function partitionBlocksByType(
 }
 
 /**
- * Retrieves custom category blocks from the Blockly toolbox XML for display in a flyout.
- *
- * @param {string} category - The name of the custom category to retrieve blocks from.
- * @returns {HTMLCollection} - a collection of XML blocks for flyout, or an empty array
+ * Retrieves the toolbox blocks for a custom category from the level config.
+ * @param {string} customCategory The name of the custom category to retrieve blocks from. (Ex. 'VARIABLE', 'Behavior')
+ * @returns {Document} A new XML document containing the filtered blocks.
  */
-export function getCustomCategoryBlocksForFlyout(category) {
+export function getLevelToolboxBlocks(customCategory) {
   const parser = new DOMParser();
-  // TODO: Update this to use JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
+  // TODO: Update this to support JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
   const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
 
-  const categoryNodes = xmlDoc.getElementsByTagName('category');
-  for (const categoryNode of categoryNodes) {
-    const categoryCustom = categoryNode.getAttribute('custom');
+  // Find the category based on the custom attribute
+  const categories = xmlDoc.getElementsByTagName('category');
+  let foundCategory = null;
 
-    if (categoryCustom === category) {
-      const xmlList = document.createDocumentFragment();
-      const blockNodes = categoryNode.getElementsByTagName('block');
-      for (const blockNode of blockNodes) {
-        if (blockNode.parentElement === categoryNode) {
-          xmlList.appendChild(blockNode.cloneNode(true));
-        }
-      }
-      return xmlList.children;
+  for (const category of categories) {
+    if (category.getAttribute('custom') === customCategory) {
+      foundCategory = category;
+      break;
     }
   }
-  return [];
+
+  if (foundCategory) {
+    // Create a new XML document and append the child nodes of the category to it
+    const newXmlDocument = parser.parseFromString(
+      '<xml></xml>',
+      'application/xml'
+    );
+    for (const childNode of foundCategory.childNodes) {
+      // Clone the child node and append it to the new XML document
+      newXmlDocument.documentElement.appendChild(childNode.cloneNode(true));
+    }
+
+    return newXmlDocument;
+  } else {
+    return undefined;
+  }
+}
+
+/**
+ * Simplifies the state of blocks for a flyout by removing properties like x/y and id.
+ * Also replaces variable IDs with variable names derived from the serialied variable map.
+ * @param {object} serialization The full workspace serialization, including variables and blocks.
+ * @returns {Array<object>} An array of simplified block objects, suitable for a flyout.
+ */
+export function getSimplifiedStateForFlyout(serialization) {
+  const variableMap = {};
+  serialization.variables?.forEach(variable => {
+    variableMap[variable.id] = variable.name;
+  });
+
+  /**
+   * Processes a block to replace variable IDs with variable names.
+   * Recursively checks child blocks connected to inputs or next connections.
+   * @param {object} block The block to process.
+   * @returns {object} The processed block with variable names.
+   */
+  function processBlock(block) {
+    // Create a copy of the block so we can modify certain fields.
+    const result = {...block};
+
+    // For VAR fields, look up the name of the variable to use instead of the id.
+    if (block.fields && block.fields.VAR) {
+      result.fields.VAR = {
+        name: variableMap[block.fields.VAR.id] || '',
+        type: '',
+      };
+    }
+
+    // Recursively check nested blocks.
+    if (block.inputs) {
+      for (const inputKey in block.inputs) {
+        result.inputs[inputKey].block = processBlock(
+          block.inputs[inputKey].block
+        );
+      }
+    }
+    // Recursively check next block, if present.
+    if (block.next) {
+      result.next.block = processBlock(block.next.block);
+    }
+    // Remove unnecessary properties
+    delete result.id;
+    delete result.x;
+    delete result.y;
+
+    // Add 'kind' property
+    result.kind = 'block';
+
+    return result;
+  }
+
+  const blocksList =
+    serialization.blocks && serialization.blocks.blocks
+      ? serialization.blocks.blocks.map(processBlock)
+      : [];
+
+  return blocksList;
 }
