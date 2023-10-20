@@ -1,9 +1,6 @@
 class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   load_and_authorize_resource only: [:destroy, :accept, :decline]
 
-  # The co-teacher limit is 5 plus the main teacher for a total of 6 instructors
-  INSTRUCTOR_LIMIT = 6
-
   # Returns list of current user's SectionInstructor records
   # GET /section_instructors
   def index
@@ -30,12 +27,12 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
 
     begin
       si = section.add_instructor(params.require(:email))
+      render json: si, serializer: Api::V1::SectionInstructorSerializer
     rescue ArgumentError => exception
-      return render json: {error: exception.message}, status: :bad_request
+      render json: {error: exception.message}, status: :bad_request
     rescue ActiveRecord::RecordNotFound
-      return head :not_found
+      head :not_found
     end
-    render json: si, serializer: Api::V1::SectionInstructorSerializer
   end
 
   # Removes an instructor from the section (soft-deleting the record).
