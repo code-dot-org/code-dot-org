@@ -31,6 +31,7 @@ export default function StudentRubricView({rubric, submittedEvaluation}) {
           }
           /* TODO: [AITT-161] add reporting data for the student case */
           reportingData={{}}
+          isStudent={true}
         />
       ))}
     </div>
