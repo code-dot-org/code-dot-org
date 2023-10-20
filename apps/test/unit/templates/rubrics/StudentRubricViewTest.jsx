@@ -43,6 +43,7 @@ describe('StudentRubricView', () => {
       renderedLearningGoals.at(1).props().learningGoal.learningGoal
     ).to.equal('goal 2');
     expect(renderedLearningGoals.at(1).props().canProvideFeedback).to.be.false;
+    expect(renderedLearningGoals.at(1).props().isStudent).to.be.true;
   });
 
   it('passes evaluation down to learning goals', async () => {

@@ -192,6 +192,7 @@ export default function RubricContent({
             studentLevelInfo={studentLevelInfo}
             aiUnderstanding={getAiUnderstanding(lg.id)}
             aiConfidence={getAiConfidence(lg.id)}
+            isStudent={false}
           />
         ))}
       </div>

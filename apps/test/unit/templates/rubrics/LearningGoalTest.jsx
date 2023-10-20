@@ -272,4 +272,27 @@ describe('LearningGoal', () => {
       'Limited Evidence'
     );
   });
+
+  it('passes isStudent down to EvidenceLevels', () => {
+    const props = {
+      learningGoal: {
+        learningGoal: 'Testing',
+        evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+      },
+      submittedEvaluation: {
+        feedback: 'test feedback',
+        understanding: RubricUnderstandingLevels.LIMITED,
+      },
+      canProvideFeedback: false,
+      isStudent: true,
+    };
+    const wrapper = shallow(<LearningGoal {...props} />);
+    expect(wrapper.find('EvidenceLevels').props().isStudent).to.equal(true);
+    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).to.equal(
+      props.submittedEvaluation
+    );
+    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.equal(
+      props.learningGoal.evidenceLevels
+    );
+  });
 });
