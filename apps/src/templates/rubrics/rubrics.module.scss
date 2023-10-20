@@ -373,7 +373,7 @@ h2.studentName {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
   align-self: stretch;
   flex: 1;
 
@@ -502,4 +502,27 @@ p.errorMessage {
 
 .feedbackArea {
   flex: 1;
+}
+
+.infoAlert {
+  display: flex;
+  padding: 10px 12px;
+  gap: 10px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  background: $light_info_100;
+
+  p {
+    margin: 0;
+    line-height: 1.25;
+  }
+}
+
+i.infoAlertIcon {
+  color: $light-info-500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
 }
