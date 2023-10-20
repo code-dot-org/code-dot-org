@@ -257,8 +257,14 @@ function validateFields() {
     } else {
       $('#school-name-error').hide();
     }
+  }
 
-    if ($('#hoc-event-location').val() === '') {
+  if (
+    ['out_of_school', 'after_school'].includes($('#hoc-event-type').val()) ||
+    ($('#hoc-event-type').val() === 'in_school' &&
+      ($('#country').val() !== 'US' || schoolData.nces === SCHOOL_NOT_FOUND))
+  ) {
+    if ($('.mapboxgl-ctrl-geocoder--input').val() === '') {
       $('#event-location-error').show();
       return false;
     } else {
