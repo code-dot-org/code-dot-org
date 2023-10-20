@@ -1,12 +1,19 @@
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';
 import Button from '../Button';
+import {Figcaption} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '../FontAwesome';
 
-export default function CoteacherSettings({addCoteacher, coteachersToAdd}) {
+export default function CoteacherSettings({
+  sectionInstructors,
+  addCoteacher,
+  coteachersToAdd,
+}) {
   const [inputValue, setInputValue] = useState('');
+  const [addError, setAddError] = useState('');
 
   const handleInputChange = event => {
     setInputValue(event.target.value);
@@ -14,13 +21,33 @@ export default function CoteacherSettings({addCoteacher, coteachersToAdd}) {
 
   const handleButtonClick = () => {
     const newEmail = inputValue;
-    if (newEmail === '') {
+    if (newEmail === '' || !newEmail.includes('@')) {
+      setAddError(newEmail + ' is not a valid email address.');
       return;
     }
 
     addCoteacher(newEmail);
     setInputValue('');
   };
+
+  const getErrorOrCount = useMemo(() => {
+    if (addError) {
+      return (
+        <Figcaption className={styles.error}>
+          <FontAwesome icon="info-circle" />
+          {addError}
+        </Figcaption>
+      );
+    } else {
+      const count = sectionInstructors.length + coteachersToAdd.length;
+      return (
+        <Figcaption className={styles.count}>
+          {count}/5 co-teachers added
+        </Figcaption>
+      );
+    }
+  }, [addError, coteachersToAdd, sectionInstructors]);
+
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}
@@ -43,6 +70,7 @@ export default function CoteacherSettings({addCoteacher, coteachersToAdd}) {
               disabled={inputValue === ''}
             />
           </div>
+          {getErrorOrCount}
         </div>
         <div className={styles.table}>{coteachersToAdd}</div>
       </div>
@@ -51,6 +79,7 @@ export default function CoteacherSettings({addCoteacher, coteachersToAdd}) {
 }
 
 CoteacherSettings.propTypes = {
+  sectionInstructors: PropTypes.arrayOf(PropTypes.object),
   addCoteacher: PropTypes.func,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
 };
