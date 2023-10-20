@@ -1650,6 +1650,18 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
 
+  create_table "rubric_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "requester_id", null: false
+    t.integer "project_id", null: false
+    t.string "project_version"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["requester_id"], name: "rubric_ai_evaluation_requester_index"
+    t.index ["user_id"], name: "index_rubric_ai_evaluations_on_user_id"
+  end
+
   create_table "rubrics", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.integer "level_id", null: false
@@ -2319,6 +2331,8 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "queued_account_purges", "users"
+  add_foreign_key "rubric_ai_evaluations", "users"
+  add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
