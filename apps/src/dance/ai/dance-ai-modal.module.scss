@@ -4,6 +4,8 @@
 $ai-block-color: rgb(64 68 73);
 $ai-block-border-color: rgb(121 124 128);
 $ai-block-inputs-border-color: rgb(121 124 128);
+$ai-modal-header-height: 50px;
+$ai-modal-border-width: 8px;
 
 @keyframes appear {
   0% {
@@ -103,8 +105,11 @@ $ai-block-inputs-border-color: rgb(121 124 128);
   }
 
   .innerArea {
-    width: calc(100% - 16px);
-    height: calc(100% - 50px - 16px - 8px);
+    // There is a border on the left and right.
+    width: calc(100% - 2 * $ai-modal-border-width);
+    // There is a border at the top and bottom, and a third between the header
+    // and the inner area.
+    height: calc(100% - $ai-modal-header-height - 3 * $ai-modal-border-width);
     position: relative;
     user-select: none;
     padding: 10px;
