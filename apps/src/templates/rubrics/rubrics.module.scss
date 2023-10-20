@@ -248,7 +248,7 @@ button.rubricHeaderTab {
   border-bottom: 1px solid $neutral_dark40;
   min-height: 40px;
 
-  // Directly target the <summary> child with the correct class
+  // Directly target the <summary> child with the class
   .learningGoalHeader {
     display: flex;
     height: 40px;
@@ -257,11 +257,11 @@ button.rubricHeaderTab {
     align-items: center;
     align-self: stretch;
     line-height: 154%;
-    position: relative; // For absolute positioning of pseudo-elements
+    position: relative;
 
     // Common styles for the FontAwesome icons, regardless of state
     &::after {
-      font: var(--fa-font-solid); // Set once, no need to repeat
+      font: var(--fa-font-solid);
       position: absolute;
       left: 1rem;
       top: 50%;
@@ -269,12 +269,13 @@ button.rubricHeaderTab {
       padding-right: 10px;
       height: 16px;
       width: 16px;
-      content: "\f107"; // Default icon
+      // Icon for closed details
+      content: "\f107";
     }
     
     &:hover {
       background: none;
-      cursor: pointer; // Usually, clickable items indicate interactivity with a pointer cursor
+      cursor: pointer;
     }
 
     // Hide the default disclosure arrow for summary elements in Safari
@@ -285,7 +286,7 @@ button.rubricHeaderTab {
 
   // When the details are open, change the icon
   &[open] .learningGoalHeader::after {
-    content: "\f106"; // Icon for the open state
+    content: "\f106";
   }
 }
 
