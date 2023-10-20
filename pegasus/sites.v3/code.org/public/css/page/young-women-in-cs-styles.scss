@@ -112,6 +112,14 @@ section.cs-amb-do {
   }
 }
 
-ol.steps-list h3 > span {
-  line-height: 1.85;
+ol.steps-list {
+  h3 > span {
+    line-height: 1.85;
+  }
+
+  @media (min-width: $width-md) {
+    p {
+      width: 90%;
+    }
+  }
 }
