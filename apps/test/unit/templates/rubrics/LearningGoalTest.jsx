@@ -168,7 +168,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
@@ -178,7 +178,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
@@ -270,6 +270,29 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('BodyThreeText').props().children).to.equal(
       'Limited Evidence'
+    );
+  });
+
+  it('passes isStudent down to EvidenceLevels', () => {
+    const props = {
+      learningGoal: {
+        learningGoal: 'Testing',
+        evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+      },
+      submittedEvaluation: {
+        feedback: 'test feedback',
+        understanding: RubricUnderstandingLevels.LIMITED,
+      },
+      canProvideFeedback: false,
+      isStudent: true,
+    };
+    const wrapper = shallow(<LearningGoal {...props} />);
+    expect(wrapper.find('EvidenceLevels').props().isStudent).to.equal(true);
+    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).to.equal(
+      props.submittedEvaluation
+    );
+    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.equal(
+      props.learningGoal.evidenceLevels
     );
   });
 });

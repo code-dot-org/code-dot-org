@@ -1257,7 +1257,7 @@ export const sectionFromServerSection = serverSection => ({
     : null,
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
-  sectionInstructors: serverSection.sectionInstructors,
+  sectionInstructors: serverSection.section_instructors,
 });
 
 /**

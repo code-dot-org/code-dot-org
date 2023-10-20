@@ -122,7 +122,7 @@ export const setSong = createAsyncThunk(
     loadSong(songId, songData, async (status: number) => {
       if (status === 403) {
         // The cloudfront signed cookies may have expired.
-        await fetchSignedCookies();
+        await fetchSignedCookies(true);
         loadSong(songId, songData, (status: number) => {
           if (status === 403) {
             // Something is wrong, because we just re-fetched cloudfront credentials.

@@ -253,7 +253,7 @@ describe('RubricContent', () => {
   it('passes down aiUnderstanding and aiConfidence to the LearningGoal', async () => {
     const mockFetch = sinon.stub(global, 'fetch');
     const aiEvaluationsMock = [
-      {learning_goal_id: 2, understanding: 2, confidence: 70},
+      {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
     ];
     mockFetch.returns(
       Promise.resolve(new Response(JSON.stringify(aiEvaluationsMock)))
@@ -281,7 +281,7 @@ describe('RubricContent', () => {
       aiEvaluationsMock[0].understanding
     );
     expect(learningGoal2Wrapper.prop('aiConfidence')).to.equal(
-      aiEvaluationsMock[0].confidence
+      aiEvaluationsMock[0].ai_confidence
     );
 
     sinon.restore();
@@ -304,5 +304,25 @@ describe('RubricContent', () => {
     const learningGoal1Wrapper = wrapper.find('LearningGoal').at(0);
     expect(learningGoal1Wrapper.prop('aiUnderstanding')).to.equal(null);
     expect(learningGoal1Wrapper.prop('aiConfidence')).to.equal(null);
+  });
+
+  it('shows info alert when not viewing project level', () => {
+    const wrapper = shallow(
+      <RubricContent {...defaultProps} onLevelForEvaluation={false} />
+    );
+    expect(wrapper.find('InfoAlert').length).to.equal(1);
+    expect(wrapper.find('InfoAlert').props().text).to.equal(
+      'Rubrics can only be evaluated on project levels.'
+    );
+  });
+
+  it('shows info alert when not viewing student work', () => {
+    const wrapper = shallow(
+      <RubricContent {...defaultProps} studentLevelInfo={null} />
+    );
+    expect(wrapper.find('InfoAlert').length).to.equal(1);
+    expect(wrapper.find('InfoAlert').props().text).to.equal(
+      'Select a student from the Teacher Panel to view and evaluate their work.'
+    );
   });
 });

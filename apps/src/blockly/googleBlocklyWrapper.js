@@ -52,6 +52,7 @@ import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
@@ -690,12 +691,20 @@ function initializeBlocklyWrapper(blocklyInstance) {
       functionsFlyoutCategory
     );
     workspace.registerToolboxCategoryCallback(
+      'VARIABLE',
+      variablesFlyoutCategory
+    );
+
+    workspace.registerToolboxCategoryCallback(
       'Behavior',
       behaviorsFlyoutCategory
     );
 
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
+    // The hidden definition workspace is not rendered, so do not try to add
+    // svg frames around the definitions.
+    hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
 

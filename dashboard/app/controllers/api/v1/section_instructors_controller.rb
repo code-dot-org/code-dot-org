@@ -29,7 +29,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
       si = section.add_instructor(params.require(:email))
     rescue ArgumentError => exception
       render json: {error: exception.message}, status: :bad_request
-    rescue RuntimeError
+    rescue ActiveRecord::RecordNotFound
       return head :not_found
     end
     return si
