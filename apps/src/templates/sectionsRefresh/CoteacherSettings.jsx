@@ -35,6 +35,7 @@ export default function CoteacherSettings({addCoteacher, coteachersToAdd}) {
               onChange={handleInputChange}
             />
             <Button
+              className={styles.button}
               color={Button.ButtonColor.brandSecondaryDefault}
               type="button"
               text="Add co-teacher"
