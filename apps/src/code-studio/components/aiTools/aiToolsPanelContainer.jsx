@@ -23,15 +23,16 @@ export default class AIToolsPanelContainer extends React.Component {
 
   render() {
     return (
-      <div className={classNames('ai-tools-panel', {hidden: !this.state.open})}>
-        <div className="hide-handle">
-          <FontAwesome icon="chevron-right" onClick={this.hide} />
+      
+        <div className={classNames('ai-tools-panel', {hidden: !this.state.open})}>
+          <div className="hide-handle">
+            <FontAwesome icon="chevron-right" onClick={this.hide} />
+          </div>
+          <div className="show-handle">
+            <FontAwesome icon="chevron-left" onClick={this.show} />
+          </div>
+          {this.props.children}
         </div>
-        <div className="show-handle">
-          <FontAwesome icon="chevron-left" onClick={this.show} />
-        </div>
-        {this.props.children}
-      </div>
     );
   }
 }

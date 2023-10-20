@@ -1,43 +1,31 @@
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
-import {postOpenaiChatCompletion} from '@cdo/apps/aichat/chatApi';
-import {Role} from '@cdo/apps/aichat/types';
+import { askAITutor } from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import { useSelector, useDispatch } from 'react-redux';
 
 // AI Tutor feature that explains to students why their code did not compile. 
-export default class CompilationAssistant extends React.Component {
+const CompilationAssistant = ({
 
-    handleSend = async () => {
-        console.log("Ask Tutor clicked")
-        const systemPrompt = 'You are a tutor in a high school computer science class. Students in the class are studying Java and they would like to know in age-appropriate, clear language why their code does not compile.'
-        const studentCode = `public class NeighborhoodRunner {
-            public static void main(String[] args) {
-          
-              // Creates a Painter object
-              Painter silas = new Painter();
-          
-              // Moves forward three spaces
-              silas.move(
-              }
-            }`
-        const chatApiResponse = postOpenaiChatCompletion(
-            [   {role: Role.SYSTEM, content: systemPrompt},
-                {role: Role.USER, content: studentCode}
-            ]
-        );
-        console.log("chatApiResponse", chatApiResponse)
-      };
-
-  render() {
-    const {
-    } = this.props;
+}) => {
+    const dispatch = useDispatch();
+    const javalabState = useSelector((state) => state.javalabEditor)
+    const studentCode = javalabState.sources[javalabState.fileMetadata[javalabState.activeTabKey]].text
+    const aiTutorState = useSelector((state) => state.aiTutor)
+    
+    const handleSend = async (studentCode) => {
+        console.log("Ask Tutor clicked");
+        dispatch(askAITutor(studentCode));
+    };
 
     return (
         <div>
             <h4>Why didn't my code compile?</h4>
-            <Button onClick={() => this.handleSend()}>
+            <Button onClick={() => handleSend(studentCode)}>
                 Ask AI Tutor
             </Button>
+            <p id="ai-response">{aiTutorState.aiResponse}</p>
         </div>
     );
-  }
-}
+  };
+
+export default CompilationAssistant;
