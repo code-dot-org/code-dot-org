@@ -3,8 +3,9 @@ require 'test_helper'
 class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   setup do
     @teacher = create :teacher
-    @student = create :student
     sign_in @teacher
+
+    @student = create :student
 
     @script_level = create :script_level
     assert_equal @script_level.script, @script_level.lesson.script
@@ -20,18 +21,21 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
     @channel_id = channel_token.channel
 
-    @learning_goal_teacher_evaluation = create :learning_goal_teacher_evaluation, teacher_id: @teacher.id, user_id: @student.id, learning_goal_id: @learning_goal_1.id
-
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
+    stub_project_source_data(@channel_id)
+    _, @project_id = storage_decrypt_channel_id(@channel_id)
+    @version_id = "fake-version-id"
+
+    @learning_goal_teacher_evaluation = create :learning_goal_teacher_evaluation, teacher_id: @teacher.id, user_id: @student.id, learning_goal_id: @learning_goal_1.id, project_id: @project_id, project_version: @version_id
   end
 
-  test 'create learning goal evaluation' do
+  test 'create learning goal teacher evaluation' do
     user_id = @student.id
     teacher_id = @teacher.id
-    learning_goal_id = @learning_goal_1.id
-    understanding = 5
-    feedback = 'abc'
+    learning_goal_id = @learning_goal_2.id
+    understanding = 1
+    feedback = 'feedback'
 
     post :create, params: {
       userId: user_id,
@@ -56,13 +60,11 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
     user_id = @student.id
     teacher_id = @teacher.id
     learning_goal_id = @learning_goal_1.id
-    understanding = 6
-    feedback = 'ghi'
+    understanding = 2
+    feedback = 'kcabdeef'
 
     post :update, params: {
       id: id,
-      userId: user_id,
-      learningGoalId: learning_goal_id,
       understanding: understanding,
       feedback: feedback
     }
@@ -81,7 +83,6 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   test 'get_evaluation method' do
     get :get_evaluation, params: {
       userId: @learning_goal_teacher_evaluation.user_id,
-      teacherId: @learning_goal_teacher_evaluation.teacher_id,
       learningGoalId: @learning_goal_teacher_evaluation.learning_goal_id
     }
     assert_response :success
@@ -91,7 +92,6 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   end
 
   test 'get_or_create_evaluation method get' do
-    stub_project_source_data(@channel_id)
     post :get_or_create_evaluation, params: {
       userId: @learning_goal_teacher_evaluation.user_id,
       learningGoalId: @learning_goal_teacher_evaluation.learning_goal_id

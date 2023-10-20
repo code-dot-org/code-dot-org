@@ -39,7 +39,6 @@ class LearningGoalTeacherEvaluationsController < ApplicationController
     raise "channel token not found for user id #{learning_goal_teacher_evaluation_params[:user_id]} and script level id #{script_level.id}" unless channel_token
     _owner_id, project_id = storage_decrypt_channel_id(channel_token.channel)
     source_data = SourceBucket.new.get(channel_token.channel, "main.json")
-    puts source_data.inspect
     raise "main.json not found for channel id #{channel_id}" unless source_data[:status] == 'FOUND'
     version_id = source_data[:version_id]
 
