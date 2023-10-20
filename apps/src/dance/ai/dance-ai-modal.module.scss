@@ -1,6 +1,10 @@
 @import 'color.scss';
 @import '../../mixins.scss';
 
+$ai-block-color: rgb(64 68 73);
+$ai-block-border-color: rgb(121 124 128);
+$ai-block-inputs-border-color: rgb(121 124 128);
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -61,40 +65,53 @@
 
 .dialog {
   max-width: initial !important;
-  width: 800px !important;
-  height: 430px;
+  width: 824px !important;
+  height: 454px;
   padding: 0 !important;
-  border: solid 1px white;
+  border: solid 1px $ai-block-border-color;
+  background-color: $ai-block-color !important;
 
   .headerArea {
-    width: 100%;
+    width: calc(100% - 40px);
     height: 50px;
-    background-color: rgb(64 68 73);
+    background-color: $ai-block-color;
     color: white;
     font-size: 16px;
     display: flex;
     align-items: center;
     padding: 0 20px;
+    margin-top: 8px;
 
     .botImage {
       height: 40px;
       margin-right: 20px;
     }
 
-    .emojiSlot {
-      width: 35px;
-      height: 35px;
-      margin-right: 6px;
+    .inputsContainer {
+      display: flex;
+      padding: 5px;
+      border-radius: 4px;
+      gap: 6px;
+      border: solid 2px $ai-block-inputs-border-color;
+
+      .emojiSlot {
+        width: 35px;
+        height: 35px;
+        margin-right: 6px;
+      }
     }
   }
 
   .innerArea {
-    width: 100%;
-    height: calc(100% - 50px);
+    width: calc(100% - 16px);
+    height: calc(100% - 50px - 16px - 8px);
     position: relative;
     user-select: none;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
+    margin: 8px;
+    border-radius: 4px;
+    background-color: white;
 
     .textArea {
       position: absolute;
@@ -103,12 +120,12 @@
       bottom: 50px;
       left: 0;
       text-align: center;
-      font-size: 24px;
+      font-size: 18px;
     }
 
     .inputsArea {
       position: absolute;
-      width: calc(100% - 170px);
+      width: 550px;
       height: 190px;
       top: 22px;
       left: 170px;
@@ -293,7 +310,7 @@
     .generatingArea {
       position: absolute;
       top: 0;
-      width: 100%;
+      width: calc(100% - 20px)
     }
 
     .explanationArea {
@@ -324,6 +341,12 @@
       .button {
         font-size: 16px;
       }
+    }
+
+    .buttonsAreaTopRight {
+      position: absolute;
+      top: -55px;
+      right: -5px;
     }
   }
 }

@@ -301,16 +301,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
         <img src={aiBotBorder} className={moduleStyles.botImage} />
         generate &nbsp;
-        {Array.from(Array(SLOT_COUNT).keys()).map(index => (
-          <div
-            key={index}
-            style={{
-              backgroundImage: `url(${getImageUrl(inputs[index])}`,
-            }}
-            className={moduleStyles.emojiSlot}
-            title={getItemName(inputs[index])}
-          />
-        ))}
+        <div className={moduleStyles.inputsContainer}>
+          {Array.from(Array(SLOT_COUNT).keys()).map(index => (
+            <div
+              key={index}
+              style={{
+                backgroundImage:
+                  inputs[index] && `url(${getImageUrl(inputs[index])}`,
+              }}
+              className={moduleStyles.emojiSlot}
+              title={getItemName(inputs[index])}
+            />
+          ))}
+        </div>
         &nbsp; stage
       </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
@@ -559,19 +562,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               className={moduleStyles.button}
             />
           )}
-          {mode === Mode.RESULTS_FINAL && (
-            <Button
-              id="explanation-button"
-              text={'Explanation'}
-              onClick={handleExplanationClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
           {showConvertButton && (
             <Button
               id="convert-button"
-              text={'Convert'}
+              text={'Edit code'}
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -582,6 +576,21 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               id="use-button"
               text={'Use'}
               onClick={handleUseClick}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={moduleStyles.button}
+            />
+          )}
+        </div>
+
+        <div
+          id="buttons-area-top-right"
+          className={moduleStyles.buttonsAreaTopRight}
+        >
+          {mode === Mode.RESULTS_FINAL && (
+            <Button
+              id="explanation-button"
+              text={'Explanation'}
+              onClick={handleExplanationClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
