@@ -14,6 +14,8 @@ class EvaluateRubricJob < ApplicationJob
     raise
   end
 
+  S3_AI_BUCKET = 'cdo-ai'.freeze
+
   # 2D Map from unit name and level name, to the name of the lesson files in S3
   # which will be used for AI evaluation.
   # TODO: This is a temporary solution. After the pilot, we should at least make
@@ -35,14 +37,20 @@ class EvaluateRubricJob < ApplicationJob
 
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
-    channel_id = get_channel_id(user, script_level)
-    _code, project_version = read_user_code(channel_id)
-
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
-    ai_evaluations = get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
+    channel_id = get_channel_id(user, script_level)
+    code, project_version = read_user_code(channel_id)
 
-    write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
+    openai_params = get_openai_params(lesson_s3_name, code)
+    ai_evaluations = get_openai_evaluations(openai_params)
+
+    validate_evaluations(ai_evaluations, rubric)
+
+    ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
+    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+
+    write_ai_evaluations(user, merged_evaluations, rubric, channel_id, project_version)
   end
 
   def self.ai_enabled?(script_level)
@@ -53,6 +61,11 @@ class EvaluateRubricJob < ApplicationJob
   # needed to evaluate the rubric for the given script level.
   def self.get_lesson_s3_name(script_level)
     UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
+  end
+
+  # The client for s3 access made directly by this job, not via SourceBucket.
+  private def s3_client
+    @s3_client ||= AWS::S3.create_client
   end
 
   # get the channel id of the project which stores the user's code on this script level.
@@ -79,12 +92,66 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
-    rubric.learning_goals.map do |learning_goal|
-      {
-        'Key Concept' => learning_goal.learning_goal,
-        'Grade' => understanding_s
-      }
+  private def read_file_from_s3(lesson_s3_name, key_suffix)
+    key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
+    s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
+  end
+
+  private def read_examples(lesson_s3_name)
+    prefix = "teaching_assistant/lessons/#{lesson_s3_name}/examples/"
+    response = s3_client.list_objects_v2(bucket: S3_AI_BUCKET, prefix: prefix)
+    file_names = response.contents.map(&:key)
+    file_names = file_names.map {|name| name.gsub(prefix, '')}
+    js_files = file_names.select {|name| name.end_with?('.js')}
+    js_files.map do |file_name|
+      base_name = file_name.gsub('.js', '')
+      code = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{file_name}")[:body].read
+      response = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{base_name}.tsv")[:body].read
+      [code, response]
+    end
+  end
+
+  private def get_openai_params(lesson_s3_name, code)
+    params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
+    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
+    rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    examples = read_examples(lesson_s3_name)
+    params.merge(
+      "code" => code,
+      "prompt" => prompt,
+      "rubric" => rubric,
+      "examples" => examples.to_json,
+    )
+  end
+
+  private def get_openai_evaluations(openai_params)
+    uri = URI.parse("#{CDO.ai_proxy_origin}/assessment")
+    response = HTTParty.post(
+      uri,
+      body: URI.encode_www_form(openai_params),
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      timeout: 120
+    )
+
+    raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
+
+    JSON.parse(response.body)['data']
+  end
+
+  private def validate_evaluations(evaluations, rubric)
+    expected_learning_goals = rubric.learning_goals.map(&:learning_goal)
+    actual_learning_goals = evaluations.map {|evaluation| evaluation['Key Concept']}
+    unexpected_learning_goals = actual_learning_goals - expected_learning_goals
+    unless unexpected_learning_goals.empty?
+      raise "Unexpected learning goals: #{unexpected_learning_goals.inspect} (expected: #{expected_learning_goals.inspect})"
+    end
+  end
+
+  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+    ai_evaluations.map do |evaluation|
+      learning_goal = evaluation['Key Concept']
+      confidence_level = ai_confidence_levels[learning_goal]
+      evaluation.merge('Confidence' => confidence_s_to_i(confidence_level))
     end
   end
 
@@ -92,6 +159,7 @@ class EvaluateRubricJob < ApplicationJob
     _owner_id, project_id = storage_decrypt_channel_id(channel_id)
 
     # record the ai evaluations to the database
+    # TODO: pass along and update the 'requester' to the correct id
     ActiveRecord::Base.transaction do
       ai_evaluations.each do |evaluation|
         learning_goal = rubric.learning_goals.all.find {|lg| lg.learning_goal == evaluation['Key Concept']}
@@ -99,9 +167,11 @@ class EvaluateRubricJob < ApplicationJob
         LearningGoalAiEvaluation.create!(
           user_id: user.id,
           learning_goal_id: learning_goal.id,
+          requester_id: user.id,
           project_id: project_id,
           project_version: project_version,
-          understanding: understanding
+          understanding: understanding,
+          ai_confidence: evaluation['Confidence']
         )
       end
     end
@@ -120,5 +190,11 @@ class EvaluateRubricJob < ApplicationJob
     else
       raise "Unexpected understanding: #{understanding}"
     end
+  end
+
+  private def confidence_s_to_i(confidence_level)
+    confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
+    raise "Unexpected confidence level: #{confidence_level}" unless confidence_levels.include?(confidence_level)
+    LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
   end
 end
