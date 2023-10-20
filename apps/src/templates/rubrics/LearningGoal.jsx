@@ -199,7 +199,7 @@ export default function LearningGoal({
     <details className={style.learningGoalRow}>
       <summary className={style.learningGoalHeader} onClick={handleClick}>
         <div className={style.learningGoalHeaderLeftSide}>
-          {isOpen && (
+          {/* {isOpen && (
             <FontAwesome
               icon="angle-up"
               onClick={() => setIsOpen(false)}
@@ -212,7 +212,7 @@ export default function LearningGoal({
               onClick={() => setIsOpen(true)}
               className={style.arrowIcon}
             />
-          )}
+          )} */}
           {/*TODO: [DES-321] Label-two styles here*/}
           <span>{learningGoal.learningGoal}</span>
         </div>
