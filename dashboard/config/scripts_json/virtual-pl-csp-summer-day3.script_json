@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-18 21:08:49 UTC",
+    "serialized_at": "2023-10-19 17:17:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1570,15 +1570,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2"
-        ],
         "progression": "Unit 2 Connections and Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1586,7 +1583,7 @@
         "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context4_1_2"
+        "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
       ]
     },
     {
@@ -1786,9 +1783,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context4_1_2",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
