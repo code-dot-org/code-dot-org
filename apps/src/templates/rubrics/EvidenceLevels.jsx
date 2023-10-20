@@ -32,7 +32,6 @@ export default function EvidenceLevels({
         understanding={understanding}
         radioButtonCallback={radioButtonCallback}
         canProvideFeedback={canProvideFeedback}
-        submittedEvaluation={submittedEvaluation}
       />
     );
   }

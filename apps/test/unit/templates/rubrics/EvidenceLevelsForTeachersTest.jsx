@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   learningGoalKey: 'key-1',
 };
 
-describe('EvidenceLevels', () => {
+describe('EvidenceLevelsForTeachers', () => {
   it('renders evidence levels', () => {
     const wrapper = shallow(
       <EvidenceLevelsForTeachers {...DEFAULT_PROPS} canProvideFeedback={true} />

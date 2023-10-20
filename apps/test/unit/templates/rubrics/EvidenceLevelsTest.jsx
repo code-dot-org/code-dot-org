@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
 };
 
 describe('EvidenceLevels', () => {
-  it('renders teachers view of evidence levels when the user can provide feedback', () => {
+  it('renders teachers view of evidence levels when the user can not provide feedback', () => {
     const wrapper = shallow(<EvidenceLevels {...DEFAULT_PROPS} />);
     expect(wrapper.find('EvidenceLevelsForTeachers').length).to.equal(1);
     expect(

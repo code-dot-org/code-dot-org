@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {evidenceLevelShape, submittedEvaluationShape} from './rubricShapes';
+import {evidenceLevelShape} from './rubricShapes';
 import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
 import {
   BodyThreeText,
@@ -18,7 +18,6 @@ export default function EvidenceLevelsForTeachers({
   understanding,
   radioButtonCallback,
   canProvideFeedback,
-  submittedEvaluation,
 }) {
   const radioGroupName = `evidence-levels-${learningGoalKey}`;
   if (canProvideFeedback) {
@@ -58,14 +57,7 @@ export default function EvidenceLevelsForTeachers({
       <div className={style.evidenceLevelSet}>
         <Heading6>{i18n.rubricScores()}</Heading6>
         {evidenceLevels.map(evidenceLevel => (
-          <div
-            key={evidenceLevel.id}
-            className={classNames(style.evidenceLevelOption, {
-              [style.submittedEvaluationEvidenceLevel]:
-                submittedEvaluation?.understanding ===
-                evidenceLevel.understanding,
-            })}
-          >
+          <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
             {/*TODO: [DES-321] Label-two styles here*/}
             <BodyThreeText>
               <StrongText>
@@ -86,5 +78,4 @@ EvidenceLevelsForTeachers.propTypes = {
   understanding: PropTypes.number,
   radioButtonCallback: PropTypes.func,
   canProvideFeedback: PropTypes.bool,
-  submittedEvaluation: submittedEvaluationShape,
 };
