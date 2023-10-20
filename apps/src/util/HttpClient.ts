@@ -51,9 +51,7 @@ async function post(
   headers: Record<string, string> = {}
 ): Promise<Response> {
   if (useAuthenticityToken) {
-    console.log("useAuthenticityToken", useAuthenticityToken)
     const token = await getAuthenticityToken();
-    console.log("token", token)
     headers[AUTHENTICITY_TOKEN_HEADER] = token;
   }
   const response = await fetch(endpoint, {
