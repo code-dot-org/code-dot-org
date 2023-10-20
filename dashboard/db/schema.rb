@@ -638,19 +638,14 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
   end
 
   create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "learning_goal_id"
-    t.integer "project_id"
-    t.string "project_version"
+    t.bigint "rubric_ai_evaluation_id", null: false
+    t.bigint "learning_goal_id", null: false
     t.integer "understanding"
+    t.integer "ai_confidence"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "requester_id"
-    t.integer "ai_confidence"
-    t.integer "status", default: 0
     t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
-    t.index ["requester_id"], name: "index_learning_goal_ai_evaluations_on_requester_id"
-    t.index ["user_id"], name: "index_learning_goal_ai_evaluations_on_user_id"
+    t.index ["rubric_ai_evaluation_id"], name: "index_learning_goal_ai_evaluations_on_rubric_ai_evaluation_id"
   end
 
   create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -877,6 +872,22 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
     t.string "key", null: false
     t.index ["key"], name: "index_objectives_on_key", unique: true
     t.index ["lesson_id"], name: "index_objectives_on_lesson_id"
+  end
+
+  create_table "old_learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "learning_goal_id"
+    t.integer "project_id"
+    t.string "project_version"
+    t.integer "understanding"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "requester_id"
+    t.integer "ai_confidence"
+    t.integer "status", default: 0
+    t.index ["learning_goal_id"], name: "index_old_learning_goal_ai_evaluations_on_learning_goal_id"
+    t.index ["requester_id"], name: "index_old_learning_goal_ai_evaluations_on_requester_id"
+    t.index ["user_id"], name: "index_old_learning_goal_ai_evaluations_on_user_id"
   end
 
   create_table "paired_user_levels", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2309,11 +2320,13 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "learning_goal_ai_evaluations", "users", column: "requester_id", name: "index_learning_goal_ai_evaluations_on_requester_id"
+  add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
+  add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "lti_deployments", "lti_integrations"
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
+  add_foreign_key "old_learning_goal_ai_evaluations", "users", column: "requester_id", name: "index_learning_goal_ai_evaluations_on_requester_id"
   add_foreign_key "parental_permission_requests", "users"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"

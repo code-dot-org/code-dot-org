@@ -2,32 +2,22 @@
 #
 # Table name: learning_goal_ai_evaluations
 #
-#  id               :bigint           not null, primary key
-#  user_id          :integer
-#  learning_goal_id :integer
-#  project_id       :integer
-#  project_version  :string(255)
-#  understanding    :integer
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
-#  requester_id     :integer
-#  ai_confidence    :integer
-#  status           :integer          default(0)
+#  id                      :bigint           not null, primary key
+#  rubric_ai_evaluation_id :bigint           not null
+#  learning_goal_id        :bigint           not null
+#  understanding           :integer
+#  ai_confidence           :integer
+#  created_at              :datetime         not null
+#  updated_at              :datetime         not null
 #
 # Indexes
 #
-#  index_learning_goal_ai_evaluations_on_learning_goal_id  (learning_goal_id)
-#  index_learning_goal_ai_evaluations_on_requester_id      (requester_id)
-#  index_learning_goal_ai_evaluations_on_user_id           (user_id)
+#  index_learning_goal_ai_evaluations_on_learning_goal_id         (learning_goal_id)
+#  index_learning_goal_ai_evaluations_on_rubric_ai_evaluation_id  (rubric_ai_evaluation_id)
 #
 class LearningGoalAiEvaluation < ApplicationRecord
+  belongs_to :rubric_ai_evaluation
   belongs_to :learning_goal
-  has_one :rubric, through: :learning_goal
-  has_one :lesson, through: :rubric
-  has_one :level, through: :rubric
-
-  belongs_to :user
-  belongs_to :requester, class_name: 'User'
 
   AI_CONFIDENCE_LEVELS = {
     LOW: 1,
