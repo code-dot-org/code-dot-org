@@ -29,10 +29,8 @@ mysql_defaults: &mysql_defaults
   # `MYSQL_OPT_CONNECT_TIMEOUT`: The connect timeout in seconds.
   connect_timeout: 2
 
-  # `MYSQL_OPT_RECONNECT`: Enable or disable automatic reconnection to the server if the connection is found to have
-  # been lost. Reconnect is off by default; this option provides a way to set reconnection behavior explicitly.
-  # See https://dev.mysql.com/doc/refman/5.7/en/c-api-auto-reconnect.html
-  reconnect: true
+  # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
+  reconnect: false
 
   # `MYSQL_OPT_READ_TIMEOUT`: The timeout in seconds for each attempt to read from the server.
   # There are retries if necessary, so the total effective timeout value is three times the option value.
