@@ -5185,5 +5185,19 @@ ja:
               name: 当社のAI倫理規定
         virtual-pl-csa-summer-2024-day1:
           title: 1日目
+        virtual-pl-csp-summer-day2:
+          title: 2日目
+        virtual-pl-csp-summer-day3:
+          title: 3日目
+        virtual-pl-csp-summer-day4:
+          title: 4日目
         virtual-pl-csa-summer-day2:
           title: 2日目
+        virtual-pl-csa-summer-day3:
+          title: 3日目
+        virtual-pl-csa-summer-day4:
+          title: 4日目
+        virtual-pl-csa-summer-day1:
+          title: 1日目
+        virtual-pl-csp-summer-day1:
+          title: 1日目

@@ -196,6 +196,7 @@
 
   call_to_action_hold_an_event: "Hold an event"
   call_to_action_register_event: "Register your event"
+  call_to_action_register_your_hoc: "Register your Hour of Code"
   call_to_action_select_activity: "Select an activity"
   call_to_action_start_activity: "Start an activity"
   call_to_action_get_certificates: "Get certificates"
@@ -568,7 +569,7 @@
   cs_ambassador_steps_list_title_02: "Experience in a CS Course"
   cs_ambassador_steps_list_title_03: "School that offers CS"
   cs_ambassador_steps_list_desc_01: "A passion for encouraging young women at your school to take computer science classes"
-  cs_ambassador_steps_list_desc_02: "Have taken a year-long computer science class in the 2022-23 school year or earlier (recommended: CS Principles or AP® CSA)"
+  cs_ambassador_steps_list_desc_02: "Have completed or is currently enrolled in a year-long computer science class (recommended: CS Principles or AP® CSA)"
   cs_ambassador_steps_list_desc_03: "Attend a high school that regularly offers a year-long computer science course (recommended: CS Principles or AP® CSA)"
 
   cs_ambassador_benefits_heading: "Program benefits"
@@ -1515,9 +1516,13 @@
   hoc_homepage_join_the_movement_description: 'Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October.'
   hoc_homepage_what_is_hoc_subhead: 'One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round.'
   hoc_homepage_what_is_hoc_description: 'The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This grassroots campaign is supported by over 400 partners and 200,000 educators worldwide.'
+  hoc_homepage_registration_desc: "Your class or group can join millions around the world doing the Hour of Code! Registration for the annual Computer Science Education Week celebration begins in October. Though, Hour of Code is available year-round."
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url}) to plan an event for your class."
   hoc_homepage_highlights_heading: 'Hour of Code highlights'
   hoc_homepage_organized_by: 'The Hour of Code is organized by [Code.org](%{codeorg_url}).'
+
+  hoc_events_heading: "Register to Host an Hour of Code"
+  hoc_events_jump_to_map: "Jump to the Hour of Code map"
 
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
@@ -1537,7 +1542,7 @@
   signup_event_entire_school_label: 'My entire school is participating'
   signup_event_location_label: 'Event location'
   signup_event_location_error: 'Event location is required.'
-  signup_special_event_flag_label: 'My event will involve an entire district, members of the community, and/or other special plans to go beyond an hour'
+  signup_special_event_flag_label: 'My event will involve an entire district, an entire organization, members of the community, and/or other special plans to go beyond an hour'
   signup_special_event_details_label: 'Apply to be highlighted as a special event'
   signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only, while supplies last)'
   signup_send_posters_address_label: 'Address of school or organization'
@@ -1598,6 +1603,7 @@
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
   map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header_count_year_so_far: '%{event_count} events registered so far in %{year}'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
   map_header_country: '# in %{country}'
@@ -1609,6 +1615,7 @@
   map_legend_cs_tech_jam: 'Special Event'
   map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   map_warning_markdown: "A full list of the events can be viewed on the [events page.](%{events_url})"
+  map_view_all_events: "See a full list of Hour of Code events [here](%{events_url})."
 
   meta_tag_og_title: 'Hour of Code: Join the Movement'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
@@ -1662,7 +1669,7 @@
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
   hoc_faq_keep_learning_a_markdown: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to [our resources](%{promote}) for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
-  hoc_faq_certificates_a_markdown: "Go to our [certificates page](%{certificates_url}/certificates) where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_answer_markdown: "Go to our [certificates page](%{certificates_url}) where you can print certificates for your entire class ahead of time."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
   hoc_faq_logo_a_markdown: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see [these guidelines for usage](%{logo_url})."
   hoc_faq_bug_q: "I found a bug in an Hour of Code activity! What should I do?"
@@ -8672,6 +8679,64 @@
   thank_you_page_teachers_students_title: "Thank you to the students and teachers quoted in this report:"
   thank_you_page_teachers_students_description: "Tess Campion, Willa Campion, Jamie Delerme, Cindy Noriega, Tara Vodopich"
 
+  about_us_page_title: "About Us"
+  about_us_page_hero_description: "Code.org® is an education innovation nonprofit dedicated to the vision that every student in every school has the opportunity to learn computer science as part of their core K-12 education. We expand access to computer science in schools, with a focus on increasing participation by young women and students from other underrepresented groups.  The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also organizes the annual [Hour of Code](%{hour_url}) campaign, which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Microsoft, Amazon, Google and [many others.](%{others_url})"
+  about_us_page_section_title_1: "Over 80 million students and 2 million teachers on Code.org"
+  about_us_page_statistic_figcaption: "Code.org participation from the 2021-2022 school year. [See disaggregated data.](%{data_url})"
+  about_us_page_statistic_description: "Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. The vast majority of the students on Code.org are from student groups historically underrepresented in computer science. Increasing diversity in computer science is foundational to our work, and [we encourage you to read more about our efforts](%{diversity_url})."
+  about_us_page_section_title_2: "Code.org in the News"
+  about_us_page_section_news_description: "See all past [news and announcements](%{news_url})"
+  about_us_page_section_table: "Our goals and metrics"
+  about_us_page_section_table_header_1: "Code.org Goal"
+  about_us_page_section_table_header_2: "Accomplishment"
+  abous_page_section_table_cell_1_1: "Improve diversity in CS *(US students)*"
+  abous_page_section_table_cell_1_2: "45% of Code.org students are young women, 50% are students from marginalized racial and ethnic groups, and 46% of US students are in high needs schools. Read more about [our approach to diversity.](%{diversity_url})"
+  about_page_section_table_cell_2_1: "Inspire students"
+  about_page_section_table_cell_2_2: "Tens of millions have tried the [Hour of Code](%{hour_url}). (426,370,561 served. 49% female)"
+  about_page_section_table_cell_3_1: "Reach classrooms"
+  about_page_section_table_cell_3_2: "591,636 teachers have signed up to teach our intro courses on [Code Studio](%{code_studio_url}) and 19,177,297 students are enrolled."
+  about_page_section_table_cell_4_1: "Prep new CS teachers"
+  about_page_section_table_cell_4_2: "We've prepared more than 106,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs.](%{learning_programs_url})"
+  about_page_section_table_cell_5_1: "Change school district curriculum"
+  about_page_section_table_cell_5_2: "We've partnered with [180+ of the largest school districts](%{schoold_disctrict_url}) and 60 regional partners to [add CS to school curriculum](%{cs_curriculum_url}). [Learn about becoming a regional partner.](%{regional_partner_url})"
+  about_page_section_table_cell_6_1: "Set up policies to support CS"
+  about_page_section_table_cell_6_2: "[Policies changed in 50 U.S. states](%{states_url}) to establish CS education standards, make CS courses count towards high school graduation, etc. [(details)](%{details_url})"
+  about_page_section_table_cell_7_1: "Go global"
+  about_page_section_table_cell_7_2: "Our courses are available in over 67 languages, used in 180+ countries."
+  about_page_section_table_under_label: "Source: Code Studio Activity and [surveys of participating educators](%{educators_url})"
+  about_page_section_title_3: "More information, history, and philosophy"
+  about_page_section_more_description_1: "In 2013, Code.org was launched by twin brothers [Hadi](%{hadi_url}) and [Ali Partovi](%{partovi_url}) with a [video](%{video_url}) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few."
+  about_page_section_more_description_2: "To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes."
+  about_page_section_more_description_3: "Our work builds upon [decades of effort, by countless organizations and individuals](%{efforts_url}) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and [we thank all the partners and individuals who have supported our impact over the years](%{partners_url}))."
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Our core values and messaging guidelines](%{core_url})"
+  about_page_section_more_list_3: "[Our curriculum and pedagogy philosophy](%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](%{tedx_url})"
+  about_page_section_title_4: "A unifying approach in a divided world"
+  about_page_section_specific_title_1: "A unifying approach in a divided world"
+  about_page_section_specific_title_2: "Our commitment to accessibility"
+  about_page_section_specific_title_3: "Our commitment to free curriculum and open source technology"
+  about_page_section_specific_title_4: "Code.org Advocacy Coalition"
+  about_page_section_specific_title_5: "K-12 Computer Science Framework"
+  about_page_section_specific_title_6: "Code.org Donors"
+  about_page_section_specific_title_7: "Follow us"
+  about_page_section_specific_title_8: "Code.org's International Reach"
+  about_page_section_specific_description_1: "Code.org's global role in the K-12 computer science movement is only possible because we use a unifying approach across diverse and often divided stakeholders. At a time of increasing polarization, the idea of increasing opportunity for students unites people from across the political spectrum. Code.org's team members, students, teachers, and supporters have diverse and diverging viewpoints, and they are all welcome in our mission. [Read more.](%{read_more_url})"
+  about_page_section_specific_description_2: "Code.org believes computer science is foundational for all students and we are committed to equity, access, and opportunity in our organizational [values.](%{values_url}) To achieve this goal, we work to identify and eliminate barriers that prevent the inclusion and full participation of students and educators with disabilities. To learn more about our efforts, see our [accessibility statement.](%{accessibility_url})"
+  about_page_section_specific_description_3: "All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](%{commons_url}) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](%{contact_us_url}). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project.](%{open_source_url})"
+  about_page_section_specific_description_4: "The [Code.org Advocacy Coalition](%{advocacy_url}) is a bipartisan coalition of corporations and nonprofits that work together to help establish US federal and state policies to expand and sustain access to K-12 computer science and to broaden participation and diversity in the field. We bring together [Republican and Democratic political leaders](%{leaders_url}) in common cause supporting expanding access to and participation in K-12 computer science."
+  about_page_section_specific_description_5: "Code.org is a member of the steering committee that helped establish the [K-12 Computer Science Framework](%{framework_url}) - a high-level guide for states, districts, and organizations implementing computer science education. The Framework has won the support of hundreds of academics, K-12 educators, software companies, nonprofits, and states."
+  about_page_section_specific_description_6: "Code.org IRS form 990 for [2014](%{irs_url_1}), [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}), [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation Policy.](%{donation_policy_url})"
+  about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url}) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:"
+  about_page_section_specific_description_8: "Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](%{partners_url}), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organization for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization."
+  about_page_section_donors_description_1: "Code.org® is a registered public 501c3 nonprofit, with support from the general public. We are grateful for the generous support we've received from [individuals and organizations](%{individuals_url}) who support our vision."
+  about_page_section_donors_description_2: "Codes accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
+  about_page_donors_link_1: "Make a donations"
+  about_page_donors_link_2: "[see our list of donors](%{donors_url})"
+
+  teach_ai_title: "Real-world Examples. Practical Resources."
+  teach_ai_description: "The AI Guidance for Schools Toolkit is a resource for policymakers, school leaders, and staff to develop initial guidance on AI in their schools."
+  teach_ai_button_label: "View the Toolkit"
 
   language_code:
     ar: "Arabic"

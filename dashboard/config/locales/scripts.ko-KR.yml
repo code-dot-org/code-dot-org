@@ -5670,8 +5670,14 @@ ko:
               display_name: '챕터 2: 게임 만들기'
         virtual-pl-csa-summer-2024-day1:
           title: 1 일차
+        virtual-pl-csa-summer-day1:
+          title: 1 일차
         virtual-pl-csa-summer-day2:
           title: 2 일차
+        virtual-pl-csa-summer-day3:
+          title: 3일차
+        virtual-pl-csa-summer-day4:
+          title: 4일차
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -5698,6 +5704,16 @@ ko:
           lessons:
             lesson-3:
               name: 평가
+          title: 5일차
+        virtual-pl-csp-summer-day1:
+          title: 1 일차
+        virtual-pl-csp-summer-day2:
+          title: 2 일차
+        virtual-pl-csp-summer-day3:
+          title: 3일차
+        virtual-pl-csp-summer-day4:
+          title: 4일차
+        virtual-pl-csp-summer-day5:
           title: 5일차
         virustest:
           description_short: '스프라이트 랩을 사용하여 바이러스 발생 시뮬레이션을 만드세요. '

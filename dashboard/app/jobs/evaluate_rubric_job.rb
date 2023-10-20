@@ -35,6 +35,7 @@ class EvaluateRubricJob < ApplicationJob
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
 
+    raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
@@ -42,15 +43,15 @@ class EvaluateRubricJob < ApplicationJob
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
 
-    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
-    ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    examples = read_examples(lesson_s3_name)
-
-    ai_evaluations = get_openai_evaluations(code, prompt, ai_rubric, examples)
+    openai_params = get_openai_params(lesson_s3_name, code)
+    ai_evaluations = get_openai_evaluations(openai_params)
 
     validate_evaluations(ai_evaluations, rubric)
 
-    write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
+    ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
+    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+
+    write_ai_evaluations(user, merged_evaluations, rubric, channel_id, project_version)
   end
 
   def self.ai_enabled?(script_level)
@@ -111,22 +112,25 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def get_openai_evaluations(code, prompt, rubric, examples)
+  private def get_openai_params(lesson_s3_name, code)
+    params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
+    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
+    rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    examples = read_examples(lesson_s3_name)
+    params.merge(
+      'code' => code,
+      'prompt' => prompt,
+      'rubric' => rubric,
+      'examples' => examples.to_json,
+      'api-key' => CDO.openai_evaluate_rubric_api_key,
+    )
+  end
+
+  private def get_openai_evaluations(openai_params)
     uri = URI.parse("#{CDO.ai_proxy_origin}/assessment")
-    form_data = {
-      "model" => "gpt-4-0613",
-      "code" => code,
-      "prompt" => prompt,
-      "rubric" => rubric,
-      "examples" => examples.to_json,
-      "remove-comments" => "1",
-      "num-responses" => "3",
-      "num-passing-grades" => "2",
-      "temperature" => "0.2"
-    }
     response = HTTParty.post(
       uri,
-      body: URI.encode_www_form(form_data),
+      body: URI.encode_www_form(openai_params),
       headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
       timeout: 120
     )
@@ -145,6 +149,14 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+    ai_evaluations.map do |evaluation|
+      learning_goal = evaluation['Key Concept']
+      confidence_level = ai_confidence_levels[learning_goal]
+      evaluation.merge('Confidence' => confidence_s_to_i(confidence_level))
+    end
+  end
+
   private def write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
     _owner_id, project_id = storage_decrypt_channel_id(channel_id)
 
@@ -160,7 +172,8 @@ class EvaluateRubricJob < ApplicationJob
           requester_id: user.id,
           project_id: project_id,
           project_version: project_version,
-          understanding: understanding
+          understanding: understanding,
+          ai_confidence: evaluation['Confidence']
         )
       end
     end
@@ -179,5 +192,11 @@ class EvaluateRubricJob < ApplicationJob
     else
       raise "Unexpected understanding: #{understanding}"
     end
+  end
+
+  private def confidence_s_to_i(confidence_level)
+    confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
+    raise "Unexpected confidence level: #{confidence_level}" unless confidence_levels.include?(confidence_level)
+    LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
   end
 end

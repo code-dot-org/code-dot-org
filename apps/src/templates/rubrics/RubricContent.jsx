@@ -4,6 +4,7 @@ import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
 import {
   BodyThreeText,
+  BodyTwoText,
   Heading2,
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
@@ -16,6 +17,9 @@ import {
 import LearningGoal from './LearningGoal';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import classnames from 'classnames';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -35,11 +39,11 @@ export default function RubricContent({
   studentLevelInfo,
   rubric,
   teacherHasEnabledAi,
-  currentLevelName,
+  canProvideFeedback,
+  onLevelForEvaluation,
   reportingData,
+  visible,
 }) {
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
-  const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
@@ -48,6 +52,10 @@ export default function RubricContent({
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
   const submitFeedbackToStudent = () => {
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
+      ...reportingData,
+      studentId: studentLevelInfo.user_id,
+    });
     setIsSubmittingToStudent(true);
     setErrorSubmitting(false);
     const body = JSON.stringify({
@@ -111,14 +119,26 @@ export default function RubricContent({
       const aiInfo = aiEvaluation.find(
         item => item.learning_goal_id === learningGoalId
       );
-      return aiInfo?.confidence;
+      return aiInfo?.ai_confidence;
     } else {
       return null;
     }
   };
 
+  let infoText = null;
+  if (!onLevelForEvaluation) {
+    infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
+  } else if (!studentLevelInfo) {
+    infoText = i18n.selectAStudentToEvaluateAlert();
+  }
   return (
-    <div className={style.rubricContent}>
+    <div
+      className={classnames(style.rubricContent, {
+        [style.visibleRubricContent]: visible,
+        [style.hiddenRubricContent]: !visible,
+      })}
+    >
+      {infoText && <InfoAlert text={infoText} />}
       <div>
         {!!studentLevelInfo && (
           <Heading2 className={style.studentName}>
@@ -180,6 +200,7 @@ export default function RubricContent({
             studentLevelInfo={studentLevelInfo}
             aiUnderstanding={getAiUnderstanding(lg.id)}
             aiConfidence={getAiConfidence(lg.id)}
+            isStudent={false}
           />
         ))}
       </div>
@@ -213,9 +234,24 @@ export default function RubricContent({
 }
 
 RubricContent.propTypes = {
-  currentLevelName: PropTypes.string,
+  onLevelForEvaluation: PropTypes.bool,
+  canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
+  visible: PropTypes.bool,
+};
+
+const InfoAlert = ({text}) => {
+  return (
+    <div className={style.infoAlert}>
+      <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+      <BodyTwoText>{text}</BodyTwoText>
+    </div>
+  );
+};
+
+InfoAlert.propTypes = {
+  text: PropTypes.string.isRequired,
 };

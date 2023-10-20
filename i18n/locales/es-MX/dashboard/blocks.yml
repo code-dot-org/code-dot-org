@@ -4,6 +4,12 @@ es-MX:
     blocks:
       AmysBlocks_addTarget:
         text: "{TARGET} {OPT} {SPRITE} "
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"too much"': demasiado
+            '"just right"': suficiente
+            '"too little"': muy poco
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -1745,6 +1751,8 @@ es-MX:
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatorio
+      Mikelab_destroy:
+        text: eliminar {SPRITE}
       Mikelab_getNext:
         text: obtener siguiente objeto
       Mikelab_getProp:
@@ -2631,6 +2639,16 @@ es-MX:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      ecosystems_catchMe:
+        text: atrapar {THIS}
+      ecosystems_eat:
+        text: comer {THIS}
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"too much"': demasiado
+            '"just right"': suficiente
+            '"too little"': muy poco
       ecosystems_int10:
         text: "{VALUE}"
         options:
@@ -2645,6 +2663,18 @@ es-MX:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+            "{x1:0, x2:400, y1:150, y2:250}": Centro
+            "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+            "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
       storylab_clearHeadings:
         text: eliminar títulos
       storylab_printText:

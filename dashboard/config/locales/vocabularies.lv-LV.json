@@ -278,14 +278,6 @@
         "debugging/minecraft/unversioned": {
           "word": "Atkļūdošana"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Atkļūdošana"
         },
@@ -303,26 +295,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Atkļūdošana"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kods",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
         }
       }
     }

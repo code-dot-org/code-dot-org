@@ -27,7 +27,7 @@
       width: 100%;
       height: 100%;
       background-image: url("/images/banners/banner-bg-mesh-dots-light.png"), url("/images/yw-page-top.png");
-      background-position: center, 90% bottom;
+      background-position: center, 82% bottom;
       background-repeat: repeat, no-repeat;
       background-size: contain, 580px;
       z-index: 2;
@@ -36,7 +36,7 @@
         transform: scaleX(-1);
       }
 
-      @media screen and (min-width: $width-xl) {
+      @media screen and (min-width: 1605px) {
         background-position: center, 70% bottom;
       }
 
@@ -112,6 +112,14 @@ section.cs-amb-do {
   }
 }
 
-ol.steps-list h3 > span {
-  line-height: 1.85;
+ol.steps-list {
+  h3 > span {
+    line-height: 1.85;
+  }
+
+  @media (min-width: $width-md) {
+    p {
+      width: 90%;
+    }
+  }
 }

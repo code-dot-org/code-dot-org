@@ -16,6 +16,8 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
+
+    CDO.stubs(:openai_evaluate_rubric_api_key).returns('fake-api-key')
   end
 
   test "job succeeds on ai-enabled level" do
@@ -102,9 +104,22 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   # stub out the s3 calls made from the job via read_file_from_s3 and read_examples.
   private def stub_lesson_s3_data
     s3_client = Aws::S3::Client.new(stub_responses: true)
+    fake_confidence_levels = {
+      'learning-goal-1': "MEDIUM",
+      'learning-goal-2': "MEDIUM",
+    }.to_json
+    fake_params = {
+      'model' => 'gpt-4-0613',
+      'remove-comments' => '1',
+      'num-responses' => '3',
+      'num-passing-grades' => '2',
+      'temperature' => '0.2'
+    }.to_json
     bucket = {
       'teaching_assistant/lessons/fake-lesson-s3-name/system_prompt.txt' => 'fake-system-prompt',
       'teaching_assistant/lessons/fake-lesson-s3-name/standard_rubric.csv' => 'fake-standard-rubric',
+      'teaching_assistant/lessons/fake-lesson-s3-name/params.json' => fake_params,
+      'teaching_assistant/lessons/fake-lesson-s3-name/confidence.json' => fake_confidence_levels,
       'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.js' => 'fake-code-1',
       'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.tsv' => 'fake-response-1',
       'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.js' => 'fake-code-2',
@@ -138,14 +153,15 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     ]
     expected_form_data = {
       "model" => "gpt-4-0613",
+      "remove-comments" => "1",
+      "num-responses" => "3",
+      "num-passing-grades" => "2",
+      "temperature" => "0.2",
       "code" => 'fake-code',
       "prompt" => 'fake-system-prompt',
       "rubric" => 'fake-standard-rubric',
       "examples" => expected_examples.to_json,
-      "remove-comments" => "1",
-      "num-responses" => "3",
-      "num-passing-grades" => "2",
-      "temperature" => "0.2"
+      'api-key' => 'fake-api-key',
     }
     fake_ai_evaluations = [
       {
@@ -182,6 +198,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       assert_equal expected_understanding, ai_eval.understanding
       assert_equal project_id, ai_eval.project_id
       assert_equal version_id, ai_eval.project_version
+      assert_equal LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM], ai_eval.ai_confidence
     end
   end
 end

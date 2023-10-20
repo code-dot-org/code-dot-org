@@ -1570,6 +1570,11 @@ pt:
           title: Suporte com programação baseada em texto
         csa-pl-test:
           name: csa-pl-teste
+        csa-postap-se-and-computer-vision-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Visão Computacional'
+          title: Engenharia de Software e Visão Computacional
         csa-self-paced-pl:
           description: "Este módulo foi projetado para orientar o usuário no uso das
             ferramentas que serão utilizadas em apoio à aprendizagem dos alunos ao
@@ -2468,7 +2473,7 @@ pt:
           description_short: " Aprenda a criar seu próprio site no Web Lab."
           lesson_groups:
             csd2_1v2:
-              display_name: 'Capítulo 1: Criando Páginas da Web'
+              display_name: 'Capítulo 1: Criando Páginas Web'
             csd2_2v2:
               display_name: 'Capítulo 2: Sites com Várias Páginas'
             cspSurvey:
@@ -2477,7 +2482,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Desenvolvimento Web ('22-'23)
         csd2-2023:
           description: |-
@@ -2531,7 +2536,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
         csd2-dlp:
           description: Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para
@@ -6520,7 +6525,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
         focus-on-coding3-2023:
           description: |-
@@ -6812,7 +6817,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
         focus-on-creativity3-2023:
           description: |-
@@ -7341,7 +7346,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
         focus-on-design-with-purpose3-2023:
           description: "A unidade de Processo de Design faz com que os alunos deixem
@@ -9310,8 +9315,14 @@ pt:
               display_name: 'Capítulo 2: Construindo Jogos'
         virtual-pl-csa-summer-2024-day1:
           title: Dia 1
+        virtual-pl-csa-summer-day1:
+          title: Dia 1
         virtual-pl-csa-summer-day2:
           title: Dia 2
+        virtual-pl-csa-summer-day3:
+          title: Dia 3
+        virtual-pl-csa-summer-day4:
+          title: Dia 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -9338,6 +9349,14 @@ pt:
           lessons:
             lesson-3:
               name: Avaliação
+        virtual-pl-csp-summer-day1:
+          title: Dia 1
+        virtual-pl-csp-summer-day2:
+          title: Dia 2
+        virtual-pl-csp-summer-day3:
+          title: Dia 3
+        virtual-pl-csp-summer-day4:
+          title: Dia 4
         virustest:
           description_short: 'Use o Sprite Lab para criar uma simulação de epidemia
             de vírus. '
@@ -9690,7 +9709,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
         workshop-maker:
           description: Essa progressão de nível destina-se a acompanhar um workshop
             presencial do Maker Toolkit. O objetivo não é ensinar a ferramenta ou

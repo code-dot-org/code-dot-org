@@ -63,6 +63,7 @@ const SET_SHOW_LOCK_SECTION_FIELD =
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
+const SET_COTEACHER_INVITE = 'teacherDashboard/SET_COTEACHER_INVITE';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
@@ -440,6 +441,30 @@ export const asyncLoadSectionData = id => dispatch => {
     });
 };
 
+/**
+ * Load coteacher invites
+ */
+
+export const setCoteacherInvite = coteacherInvite => ({
+  type: SET_COTEACHER_INVITE,
+  coteacherInvite,
+});
+
+export const asyncLoadCoteacherInvite = () => dispatch => {
+  fetchJSON('/api/v1/section_instructors')
+    .then(sectionInstructors => {
+      // Find the oldest invite.
+      const coteacherInvite = sectionInstructors.find(
+        instructor => instructor.status === 'invited'
+      );
+
+      dispatch(setCoteacherInvite(coteacherInvite));
+    })
+    .catch(err => {
+      console.error(err.message);
+    });
+};
+
 function fetchJSON(url, params) {
   return new Promise((resolve, reject) => {
     $.getJSON(url, params)
@@ -724,6 +749,13 @@ export default function teacherSections(state = initialState, action) {
         ...state.sections,
         ..._.keyBy(sections, 'id'),
       },
+    };
+  }
+
+  if (action.type === SET_COTEACHER_INVITE) {
+    return {
+      ...state,
+      coteacherInvite: action.coteacherInvite,
     };
   }
 
@@ -1225,6 +1257,7 @@ export const sectionFromServerSection = serverSection => ({
     : null,
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
+  sectionInstructors: serverSection.section_instructors,
 });
 
 /**

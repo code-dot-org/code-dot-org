@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -130,6 +130,22 @@ describe('LearningGoal', () => {
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
+  it('does not show AI token after teacher has submitted evaluation', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.LIMITED,
+        }}
+      />
+    );
+    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+  });
+
   it('shows down arrow when closed and up arrow when open', () => {
     const wrapper = shallow(
       <LearningGoal
@@ -152,7 +168,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
@@ -162,7 +178,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
@@ -171,6 +187,40 @@ describe('LearningGoal', () => {
       }
     );
     sendEventSpy.restore();
+  });
+
+  it('displays Evaluate when AI is disabled and no understanding has been selected', () => {
+    const wrapper = mount(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: false,
+          evidenceLevels: [],
+        }}
+        teacherHasEnabledAi
+        canProvideFeedback
+      />
+    );
+    wrapper.update();
+    expect(wrapper.find('BodyThreeText').text()).to.include('Evaluate');
+    wrapper.unmount();
+  });
+
+  it('displays Approve when AI is enabled and no understanding has been selected', () => {
+    const wrapper = mount(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: true,
+          evidenceLevels: [],
+        }}
+        teacherHasEnabledAi
+        canProvideFeedback
+      />
+    );
+    wrapper.update();
+    expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
+    wrapper.unmount();
   });
 
   it('shows feedback in disabled textbox when available', () => {
@@ -220,6 +270,29 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('BodyThreeText').props().children).to.equal(
       'Limited Evidence'
+    );
+  });
+
+  it('passes isStudent down to EvidenceLevels', () => {
+    const props = {
+      learningGoal: {
+        learningGoal: 'Testing',
+        evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+      },
+      submittedEvaluation: {
+        feedback: 'test feedback',
+        understanding: RubricUnderstandingLevels.LIMITED,
+      },
+      canProvideFeedback: false,
+      isStudent: true,
+    };
+    const wrapper = shallow(<LearningGoal {...props} />);
+    expect(wrapper.find('EvidenceLevels').props().isStudent).to.equal(true);
+    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).to.equal(
+      props.submittedEvaluation
+    );
+    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.equal(
+      props.learningGoal.evidenceLevels
     );
   });
 });
