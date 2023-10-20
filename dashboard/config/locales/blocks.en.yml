@@ -652,6 +652,65 @@ en:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Warm
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          set background effect
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"blooming_petals"': Blooming Petals
+            '"circles"': Circles
+            '"clouds"': Clouds
+            '"frosted_grid"': Frosted Grid
+            '"quads"': Angles
+            '"color_cycle"': Colors
+            '"diamonds"': Diamonds
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"flowers"': Flowers
+            '"growing_stars"': Growing Stars
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Snow
+            '"text"': Song Names
+            '"squiggles"': Squiggles
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Squares
+            '"stars"': Stars
+            '"starburst"': Starburst
+            '"music_wave"': Waves
+          PALETTE:
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Warm
+            '"grayscale"': Grayscale
+            '"sky"': Sky
+            '"ocean"': Ocean
+            '"sunrise"': Sunrise
+            '"sunset"': Sunset
+            '"spring"': Spring
+            '"summer"': Summer
+            '"autumn"': Autumn
+            '"winter"': Winter
+            '"twinkling"': Twinkling
+            '"rainbow"': Rainbow
+            '"roses"': Roses
       Dancelab_setDanceSpeed:
         text: set {SPRITE} dance speed to {SPEED}
         options:
