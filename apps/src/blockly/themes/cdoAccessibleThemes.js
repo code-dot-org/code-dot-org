@@ -7,11 +7,26 @@ import {
   tritanopiaBlockStyles,
 } from './cdoAccessibleStyles';
 
+const protanopiaBlockStylesWithAi = {
+  ...protanopiaBlockStyles,
+  ai_blocks: {colourPrimary: '#566065'},
+};
+
+const deuteranopiaBlockStylesWithAi = {
+  ...deuteranopiaBlockStyles,
+  ai_blocks: {colourPrimary: '#566065'},
+};
+
+const tritanopiaBlockStylesWithAi = {
+  ...tritanopiaBlockStyles,
+  ai_blocks: {colourPrimary: '#566065'},
+};
+
 export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
   Themes.PROTANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
-    blockStyles: protanopiaBlockStyles,
+    blockStyles: protanopiaBlockStylesWithAi,
     categoryStyles: {},
     componentStyles: {
       toolboxBackgroundColour: '#DDDDDD',
@@ -28,7 +43,7 @@ export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
   Themes.DEUTERANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
-    blockStyles: deuteranopiaBlockStyles,
+    blockStyles: deuteranopiaBlockStylesWithAi,
     categoryStyles: {},
     componentStyles: {
       toolboxBackgroundColour: '#DDDDDD',
@@ -45,7 +60,7 @@ export const CdoTritanopiaTheme = GoogleBlockly.Theme.defineTheme(
   Themes.TRITANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
-    blockStyles: tritanopiaBlockStyles,
+    blockStyles: tritanopiaBlockStylesWithAi,
     categoryStyles: {},
     componentStyles: {
       toolboxBackgroundColour: '#DDDDDD',

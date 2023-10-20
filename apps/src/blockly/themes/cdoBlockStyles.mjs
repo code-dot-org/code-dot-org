@@ -51,6 +51,10 @@ const labBlockStyles = {
     // Used in Sprite Lab, Dance, Poetry
     colourPrimary: '#5b5ba5'
   },
+  ai_blocks: {
+    // Used in Dance AI Edition
+    colourPrimary: '#566065',
+  },
   behavior_blocks: {
     // Used in Sprite Lab, Dance
     colourPrimary: '#20cc4e'
