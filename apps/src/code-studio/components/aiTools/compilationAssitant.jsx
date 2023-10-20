@@ -13,14 +13,18 @@ const CompilationAssistant = () => {
   const aiTutorState = useSelector(state => state.aiTutor);
 
   const handleSend = async studentCode => {
-    console.log('Ask Tutor clicked');
     dispatch(askAITutor(studentCode));
   };
 
   return (
     <div>
       <h4>Why didn't my code compile?</h4>
-      <Button onClick={() => handleSend(studentCode)}>Ask AI Tutor</Button>
+      <Button
+        text="Ask AI Tutor"
+        isPending={aiTutorState.isWaitingForAIResponse}
+        pendingText="waiting"
+        onClick={() => handleSend(studentCode)}
+      />
       <p id="ai-response">{aiTutorState.aiResponse}</p>
     </div>
   );
