@@ -52,6 +52,7 @@ fa:
         age: 'سن'
         gender: 'جنسیت'
         edit_header: 'ویرایش اطلاعات کاربری'
+        ai_settings_header: 'تنظیمات هوش مصنوعی'
         finish_sign_up_header: 'ساخت حساب کاربری خود را تمام کنید'
         finish_sign_up_header_error: 'لطفا خطاهای زیر را درست کنید:'
         finish_sign_up_subheader: 'اطلاعات زیر را پر کنید تا یک حساب Code.org برای <strong>%{email}</strong> ایجاد شود.'
@@ -82,31 +83,31 @@ fa:
   join_section:
     code:
       title: 'به بخشی در Code.org بپیوندید'
-      placeholder: "انتخاب کد (ABCDEF)"
+      placeholder: "کد بخش (ABCDEF)"
       instructions: "لطفاً کد 6 حرفی را که معلمتان با شما به اشتراک گذاشته است (به عنوان مثال: \"ABCDEF\") وارد کنید تا به بخش آنها بپیوندید."
       instructions_short: "کد بخش 6 حرفی خود را وارد کنید"
       submit: 'پیوستن'
   add_hint_form:
-    placeholder: 'لطفا پیشنهادتان را اینجا وارد کنید'
-    submit: 'افزودن پیشنهاد'
+    placeholder: 'لطفا راهنمایی خود را در اینجا وارد کنید'
+    submit: 'افزودن راهنمایی'
   appname: "Code.org"
   stage: "مرحله"
-  stage_number: "مرحله  %{number}"
-  puzzle: "پازل"
-  trophies: "جایزها"
-  courses: 'مراحل'
+  stage_number: "درس %{number}"
+  puzzle: "معما"
+  trophies: "جایزه‌ها"
+  courses: 'دوره‌ها'
   courses_page:
-    title_student: "در استودیو ی کد یاد بگیرید"
-    title_teacher: "آموزش علوم کامپیوتر"
+    title_student: "علوم کامپیوتر را بیاموزید"
+    title_teacher: "علوم کامپیوتر را آموزش دهید"
   unplugged_activity: 'فعالیت بدون کامپیوتر'
   of: "از"
   more: "بیشتر"
   less: "کمتر"
-  try_hoc: "برای انجام «ساعت کد» اینجا کلیک کنید >>"
-  try_k8intro: "دوره مقدماتی علوم کامپیوتر(k-8) ما را امتحان کنید"
-  k8intro: "دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)"
+  try_hoc: "برای انجام «ساعت کدنویسی» اینجا کلیک کنید >>"
+  try_k8intro: "دوره مقدماتی K-8 ما برای علوم کامپیوتر را امتحان کنید (15-25 ساعت)"
+  k8intro: "دوره مقدماتی K-8 برای علوم کامپیوتر (15-25 ساعت)"
   already_started: "قبلا شروع کرده‌اید؟ از اینجا ادامه بدهید >> "
-  demos: "مدیر: تمام نسخه‌های نمایشی"
+  demos: "ادمین: تمام نسخه‌های نمایشی"
   continue: 'ادامه'
   prize: 'جایزه'
   more_info: 'اطلاعات بیشتر'
@@ -114,23 +115,23 @@ fa:
     continue_with: 'ورود از طریق %{provider}'
     sign_in_with: 'ورود از طریق %{provider}'
     signed_in: 'وارد شدید!'
-    signed_out_markdown: '### شما از [Code.org] (%{url}) خارج شده اید.'
+    signed_out_markdown: '### شما از [Code.org] (%{url}) خارج شده‌اید.'
     sign_out_of_markdown: '#### شما از %{provider} برای ورود به سیستم استفاده کردید. [اینجا را کلیک کنید](%{url}) تا از %{provider} خارج شوید.'
     already_signedup: 'قبلا ثبت نام کرده‌اید؟'
-    notyet_signedup: "تا به حال شرکت نکرده‌اید؟"
+    notyet_signedup: "هنوز شرکت نکرده‌اید؟"
     google_oauth2: 'حساب گوگل'
-    twitter: 'توییتر'
+    twitter: 'حساب توییتر'
     facebook: 'حساب فیس‌بوک'
     windowslive: 'حساب مایکروسافت'
     microsoft_v2_auth: 'حساب مایکروسافت'
-    clever: 'Clever'
-    powerschool: 'مدرسه برق'
-    forgot_password: 'کلمه عبور خود را فراموش کرده اید؟'
-    migration_success: 'موفقیت! شما برای تجربه حساب کاربری جدید ما ، بروز شده اید.'
-    demigration_success: 'تجربه حساب جدید اکنون در حساب شما غیرفعال شده است.'
+    clever: 'باهوش'
+    powerschool: 'Powerschool'
+    forgot_password: 'رمز عبور خود را فراموش کرده‌اید؟'
+    migration_success: 'موفقیت‌آمیز بود! شما با تجربه جدید حساب کاربری ما به‌ روز رسانی شدید.'
+    demigration_success: 'در حال‌حاضر، تجربه حساب جدید در حساب شما غیرفعال شده است.'
     need_confirmation: "دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟"
     need_unlock: "دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟"
-    not_linked: "متأسفیم، حساب Code.org شما به %{provider} مرتبط نیست. شما باید با وارد کردن رمز عبور خود در زیر وارد شوید."
+    not_linked: "متأسفیم، حساب Code.org شما به %{provider} متصل نیست. شما می‌توانید با وارد کردن رمزعبور خود در زیر وارد شوید."
     use_clever: "متأسفیم، حساب Code.org شما به %{provider} مرتبط نیست. لطفاً به جای آن از طریق درگاه هوشمند خود وارد شوید."
     invalid_provider: "متأسفیم، حساب‌های %{provider} را نمی‌توان به حساب‌های Code.org متصل کرد."
     migration_required: "متأسفیم، نمی‌توانیم حساب‌هایی را که هنوز از تجربه حساب قدیمی استفاده می‌کنند، متصل یا قطع کنیم. لطفاً به تجربه حساب جدید به‌روزرسانی کنید."

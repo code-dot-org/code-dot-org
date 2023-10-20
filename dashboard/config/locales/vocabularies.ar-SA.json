@@ -1311,7 +1311,7 @@
           "definition": "الكائنات أو الأشكال التي تشترك في نفس المركز"
         },
         "comments/csc-starquilts/2023": {
-          "word": "تعليقات\n",
+          "word": "تعليقات",
           "definition": "ملاحظات لنفسك تشرح قسمًا من التعليمات البرمجية. فهي لا تغير البرنامج ولكنها تساعد في الحفاظ على التعليمات البرمجية الخاصة بك بالترتيب."
         },
         "event/csc-timecapsule/2023": {
@@ -1331,7 +1331,6 @@
           "definition": "صورة أو شخصية في برنامجك"
         },
         "time_capsule/csc-timecapsule/2023": {
-          "word": "",
           "definition": "مكان للاحتفاظ بالذكريات والأشياء اليومية التي تمثل يومًا في حياة شخص يعيش خلال فترة زمنية محددة. "
         },
         "code/poetry/2023": {
@@ -1367,84 +1366,20 @@
           "definition": "مساحة آمنة وإبداعية لاختبار القصائد الجديدة والحصول على تعليقات بناءة من الآخرين"
         },
         "computer/csd/2023": {
-          "word": "الكمبيوتر",
-          "definition": ""
+          "word": "الكمبيوتر"
         },
         "input/csd/2023": {
-          "word": "الإدخال",
-          "definition": ""
-        },
-        "output/csd/2023": {
-          "word": "",
-          "definition": ""
+          "word": "الإدخال"
         },
         "processing/csd/2023": {
-          "word": "المعالجة",
-          "definition": ""
-        },
-        "storage/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "html/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "html_element/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "html_tag/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "website_content/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "website_structure/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "heading/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "list/csd/2023": {
-          "word": "",
-          "definition": ""
+          "word": "المعالجة"
         },
         "digital_footprint/csd/2023": {
-          "word": "البصمة الرقمية",
-          "definition": ""
-        },
-        "css/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "css_selector/csd/2023": {
-          "word": "",
-          "definition": ""
+          "word": "البصمة الرقمية"
         },
         "copyright/csd/2023": {
           "word": "حقوق النسخ",
           "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح للآخرين بفعل نفس الشيء."
-        },
-        "relevant/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "search_engine/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "trustworthy/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "css_class/csd/2023": {
-          "word": "",
-          "definition": ""
         },
         "bug/csd/2023": {
           "word": "خلل",
@@ -1458,157 +1393,32 @@
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
-        "parameter/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
         "variable/csd/2023": {
           "word": "متغير",
           "definition": "اسم لجزء من المعلومات المستخدمة في البرنامج."
         },
         "sprite/csd/2023": {
-          "word": "كائن",
-          "definition": ""
-        },
-        "dot_notation/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "property/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "boolean_expression/csd/2023": {
-          "word": "",
-          "definition": ""
+          "word": "كائن"
         },
         "condition/csd/2023": {
-          "word": "الشرط",
-          "definition": ""
+          "word": "الشرط"
         },
         "conditionals/csd/2023": {
-          "word": "الجمل الشرطية",
-          "definition": ""
+          "word": "الجمل الشرطية"
         },
         "abstraction/csd/2023": {
-          "word": "خلاصة",
-          "definition": ""
+          "word": "خلاصة"
         },
         "function/csd/2023": {
-          "word": "وظيفة ",
-          "definition": ""
-        },
-        "empathy/csd/2023": {
-          "word": "",
-          "definition": ""
+          "word": "وظيفة "
         },
         "user/csd/2023": {
           "word": "مستخدم",
           "definition": "شخص يستخدم شيئاً، بما في ذلك البرامج والأجهزة."
         },
-        "usability/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "prototype/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "user_interface/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "feature/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "decode/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "encode/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "ascii/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "binary_system/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "bit/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "pixel/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "decrypt/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "encrypt/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "circuit/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "led/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
         "machine_learning/csd/2023": {
           "word": "التعلم الآلي",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
-        },
-        "features/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "label/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "model/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "supervised_learning/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "training/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "unsupervised_learning/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "categorical_data/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "classification/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "bias/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "numerical_data/csd/2023": {
-          "word": "",
-          "definition": ""
-        },
-        "ethics/csd/2023": {
-          "word": "",
-          "definition": ""
         },
         "algorithm/coursea/2023": {
           "word": "الخوارزمية",
@@ -2131,10 +1941,6 @@
           "word": "نموذج محاكاة اللغة الكبير (LLM)",
           "definition": "شكل من أشكال الذكاء الاصطناعي للأغراض العامة يتم تدريبه على مجموعة كبيرة جدًا من المعرفة"
         },
-        "model/how-ai-works/2023": {
-          "word": "",
-          "definition": ""
-        },
         "diffusion_ai/how-ai-works/2023": {
           "word": "الذكاء الاصطناعي للانتشار",
           "definition": "تحويل صورة إلى ضوضاء، وتدريب الذكاء الاصطناعي لعكس العملية"
@@ -2146,10 +1952,6 @@
         "artificial_intelligence/how-ai-works/2023": {
           "word": "الذكاء الاصطناعي",
           "definition": "قدرة الآلات على التعلم وحل المشكلات."
-        },
-        "ethics/how-ai-works/2023": {
-          "word": "",
-          "definition": ""
         },
         "code/aquatic/unversioned": {
           "word": "الكود",
@@ -2404,8 +2206,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "النماذج والمحاكاة",
+          "definition": "برنامج يكرر أو يحاكي السمات الرئيسية لحدث في العالم الحقيقي من أجل التحقيق في سلوكه دون تكلفة أو وقت أو خطر إجراء تجربة في الحياة الواقعية."
         },
         "code/playlab/unversioned": {
           "word": "الكود",
@@ -2482,26 +2284,6 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "الضغط بدون فقدان البيانات",
           "definition": "خوارزمية ضغط بيانات تسمح بإعادة إنشاء البيانات الأصلية بشكل مثالي من البيانات المضغوطة. تُستخدم في الغالب لضغط النص (مثل ضغط بتنسيق .zip)"
-        },
-        "code/poem-art/unversioned": {
-          "word": "البرمجة",
-          "definition": "(v) لكتابة إرشادات للكمبيوتر."
-        },
-        "event/poem-art/unversioned": {
-          "word": "الحدث",
-          "definition": "إجراء يتسبب في حدوث شيء ما."
-        },
-        "program/poem-art/unversioned": {
-          "word": "البرنامج",
-          "definition": "سلسلة من الخطوات التي تم تكويدها في شيء يمكن تشغيله من خلال ماكينة."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "الجو العام",
-          "definition": "التعبير عن الإحساس والشعور العام والمشاعر في الفن أو الكتابة."
-        },
-        "line/poem-art/unversioned": {
-          "word": "الخط",
-          "definition": "(الشعر) - قسم منشق من القصيدة وهو منظم في صف ينتهي في هامش اليد اليمنى."
         }
       }
     }

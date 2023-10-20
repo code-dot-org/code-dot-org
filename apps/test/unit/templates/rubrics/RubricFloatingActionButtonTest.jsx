@@ -9,7 +9,8 @@ import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloati
 describe('RubricFloatingActionButton', () => {
   it('begins closed when student level info is null', () => {
     const wrapper = shallow(<RubricFloatingActionButton />);
-    expect(wrapper.find('RubricContainer').length).to.equal(0);
+    expect(wrapper.find('RubricContainer').length).to.equal(1);
+    expect(wrapper.find('RubricContainer').props().open).to.equal(false);
   });
 
   it('begins open when student level info is provided', () => {

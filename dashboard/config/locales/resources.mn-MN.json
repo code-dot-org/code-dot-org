@@ -2357,7 +2357,6 @@
           "type": "Видео"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Видео"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
@@ -3357,6 +3356,9 @@
           "name": "Параметртэй функцүүд",
           "type": "Видео"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Функцүүд"
+        },
         "student_rubric_-_interactive_art/csd/2023": {
           "type": "Rubric"
         },
@@ -4158,11 +4160,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Видео"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

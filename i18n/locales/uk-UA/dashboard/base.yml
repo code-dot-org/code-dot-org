@@ -94,7 +94,7 @@ uk:
   stage_number: "Урок %{number}"
   puzzle: "Завдання"
   trophies: "трофеї"
-  courses: 'курси'
+  courses: 'Курси'
   courses_page:
     title_student: "Навчання у Студії коду"
     title_teacher: "Вчися зі Студією Коду"
@@ -364,6 +364,7 @@ uk:
       help_us: "Допомога нам"
       teach: "Вчити"
       about: "Про нас"
+      incubator: "Інкубатор"
       legal: "Конфіденційність та юридична інформація"
       legal_privacy: "Політика конфіденційності"
       legal_tos: "Умови надання послуг"
@@ -1092,11 +1093,19 @@ uk:
   courses_category: 'Всі курси'
   course_offering:
     headers:
+      favorites: 'Улюблені'
+      labs_and_skills: 'Лабораторії та навички'
       minecraft: 'Майнкрафт'
       hello_world: 'Привіт, світе'
+      popular_media: 'Популярні медіа'
       sports: 'Спорт'
+      express: 'Експрес'
       csf: 'Основи інформатики'
-      csc: 'Підключення CS'
+      csc: 'Інтеграція інформатики'
+      year_long: 'Річні курси'
+      csa_labs: 'Лабораторії CSA'
+      self_paced: 'Самостійний темп'
+      teacher_led: 'Під керівництвом вчителя'
   cookie_banner:
     more_information: "Переглянути політику конфіденційності в Code.org."
     accept: 'Погоджуюся'
