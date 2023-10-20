@@ -23,7 +23,7 @@ export default function CoteacherSettings({
   const handleButtonClick = () => {
     const newEmail = inputValue;
     if (newEmail === '' || !newEmail.includes('@')) {
-      setAddError(newEmail + ' is not a valid email address.');
+      setAddError(i18n.coteacherAddInvalidEmail({email: newEmail}));
       return;
     }
 
@@ -51,7 +51,7 @@ export default function CoteacherSettings({
     } else {
       return (
         <Figcaption className={styles.inputDescription}>
-          {numCoteachers}/5 co-teachers added
+          {i18n.coteacherCount({count: numCoteachers})}
         </Figcaption>
       );
     }
@@ -66,7 +66,7 @@ export default function CoteacherSettings({
       {i18n.coteacherAddInfo()}
       <div className={styles.settings}>
         <div className={styles.add}>
-          <label className={styles.label}>Email address</label>
+          <label className={styles.label}>{i18n.coteacherEmailAddress()}</label>
           <div className={styles.container}>
             <input
               className={classNames(
@@ -81,7 +81,7 @@ export default function CoteacherSettings({
               className={styles.button}
               color={Button.ButtonColor.brandSecondaryDefault}
               type="button"
-              text="Add co-teacher"
+              text={i18n.coteacherAddButton()}
               onClick={handleButtonClick}
               disabled={isAddDisabled}
             />
