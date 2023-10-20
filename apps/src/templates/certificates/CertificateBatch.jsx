@@ -4,7 +4,6 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import style from './certificate_batch.module.scss';
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 
 const curriculaData = [
   {
@@ -14,12 +13,12 @@ const curriculaData = [
       oldestGrade: '8',
     }),
     title: i18n.marketingInitiativeCSC(),
-    image:
-      'https://images.code.org/06319e2e67e4cb08b20ae238dfe47ee3-20hour.png',
-    description:
-      'Make connections between computer science (CS) and other subjects like math, language arts, science, and social studies.',
-    link: 'https://studio.code.org/s/coursea-2023?viewAs=Instructor',
+    image: '/../../../../shared/images/courses/logo_connections.jpg',
+    buttonText: i18n.exploreCsConnections(),
+    description: i18n.cscDescription(),
+    link: 'http://code.org/csc',
   },
+
   {
     grade: i18n.gradeRange({
       numGrades: ['K', '5'].length,
@@ -27,11 +26,10 @@ const curriculaData = [
       oldestGrade: '5',
     }),
     title: i18n.marketingInitiativeCSF(),
-    image:
-      'https://images.code.org/06319e2e67e4cb08b20ae238dfe47ee3-20hour.png',
-    description:
-      'Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world.',
-    link: 'https://studio.code.org/s/coursea-2023?viewAs=Instructor',
+    image: '/../../../../shared/images/courses/logo_csf.jpg',
+    buttonText: i18n.exploreCsFundamentals(),
+    description: i18n.csfDescriptionTeacher(),
+    link: 'http://code.org/csf',
   },
   {
     grade: i18n.gradeRange({
@@ -39,39 +37,36 @@ const curriculaData = [
       youngestGrade: '6',
       oldestGrade: '12',
     }),
-    title: 'How AI Works',
-    image:
-      'https://images.code.org/06319e2e67e4cb08b20ae238dfe47ee3-20hour.png',
-    description:
-      'These lessons supplement the video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos.',
-    link: 'http://localhost-studio.code.org:3000/s/how-ai-works-2023?viewAs=Instructor',
+    title: i18n.howAiWorks(),
+    image: 'https://code.org/images/ai/ai-curriculum-how-ai-works.png',
+    buttonText: i18n.exploreLessons(),
+    description: i18n.howAiWorksDescription(),
+    link: 'http://code.org/ai/how-ai-works',
   },
 ];
 
 const curriculumCatalogImages = [
-  'https://images.code.org/354488da87cbb925dcf2a2a40c29b598-AIML.png',
+  'https://code.org/images/ai/ai-curriclum-machine-learning.png',
   'https://images.code.org/11d83ab1d397cafda327782812e8988c-Book%20Covers.png',
-  'https://images.code.org/4d8ce599ad686237c78ef95f573f0685-Course%20D.png',
-  'https://images.code.org/b99996c584ab797bb9508a2c9987ea70-Microbit.png',
-  'https://images.code.org/8e4cdad41052c2cc5e7b11d6d79aa9aa-Intro%20to%20App%20Lab.png',
+  '/../../../../shared/images/courses/logo_csa.jpg',
+  '/../../../../shared/images/courses/logo_mobile.jpg',
+  '/../../../../shared/images/courses/logo_hardware.jpg',
 ];
 
 const professionalLearning = [
   {
-    title: 'Teach with Code.org',
-    description: 'Description',
-    buttonText: 'Teach with Code.org',
-    image:
-      'https://images.code.org/8e4cdad41052c2cc5e7b11d6d79aa9aa-Intro%20to%20App%20Lab.png',
-    link: '/professional-learning',
+    title: i18n.teachWithCodeOrg(),
+    description: i18n.teachWithCodeOrgDescription(),
+    buttonText: i18n.teachWithCodeOrg(),
+    image: 'https://code.org/images/teach-page-top.png',
+    link: 'code.org/teach',
   },
   {
-    title: i18n.professionalLearning(),
-    description: 'Description',
+    title: i18n.courseOfferingSelfPacedPl(),
+    description: i18n.selfPacedPlDescription(),
     buttonText: i18n.exploreProfessionalLearning(),
-    image:
-      'https://images.code.org/8e4cdad41052c2cc5e7b11d6d79aa9aa-Intro%20to%20App%20Lab.png',
-    link: '/professional-learning',
+    image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
+    link: 'code.org/educate/professional-development-online',
   },
 ];
 
@@ -101,7 +96,7 @@ export default function CertificateBatch({
         </div>
         <div className={style.entryContainer}>
           <span className={style.instructions}>
-            <Heading3>{i18n.createYourCertificate()}</Heading3>
+            <h3>{i18n.createYourCertificate()}</h3>
             <SafeMarkdown
               markdown={i18n.enterCertificateNames({courseTitle})}
             />
@@ -154,7 +149,7 @@ export default function CertificateBatch({
               </div>
               <div className={style.contentFooter}>
                 <a className={style.linkButton} href={item.link} aria-label="">
-                  Explore {item.title}
+                  {item.buttonText}
                 </a>
               </div>
             </div>
@@ -191,7 +186,11 @@ export default function CertificateBatch({
               key={index}
             >
               <div className={style.contentWrapper}>
-                <img src={item.image} alt="" />
+                <img
+                  src={item.image}
+                  alt=""
+                  className={style.professionalLearningImage}
+                />
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
