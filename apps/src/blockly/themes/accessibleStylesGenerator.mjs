@@ -9,7 +9,7 @@ import nearestColor from 'nearest-color';
 const themes = {
   PROTANOPIA: 'protanopia',
   DEUTERANOPIA: 'deuteranopia',
-  TRITANOPIA: 'tritanopia'
+  TRITANOPIA: 'tritanopia',
 };
 
 const accessiblePalettes = {
@@ -40,7 +40,7 @@ const accessiblePalettes = {
     color16Primary: '#003D30',
     color17Primary: '#005745',
     color18Primary: '#00735C',
-    color19Primary: '#009175'
+    color19Primary: '#009175',
   },
   [themes.DEUTERANOPIA]: {
     color01Primary: '#460B70',
@@ -69,7 +69,7 @@ const accessiblePalettes = {
     color13Secondary: '#00735C',
     color14Primary: '#D80D7B',
     color14Secondary: '#009175',
-    color15Primary: '#FF2E95'
+    color15Primary: '#FF2E95',
   },
   [themes.TRITANOPIA]: {
     color01Primary: '#004002',
@@ -98,8 +98,8 @@ const accessiblePalettes = {
     color12Primary: '#8E06CD',
     color13Primary: '#B40AFC',
     color14Primary: '#ED0DFD',
-    color15Primary: '#0079FA'
-  }
+    color15Primary: '#0079FA',
+  },
 };
 
 Object.values(themes).forEach(theme => {
