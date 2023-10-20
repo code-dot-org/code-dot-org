@@ -35,6 +35,7 @@ export default function LearningGoal({
   aiUnderstanding,
   aiConfidence,
   submittedEvaluation,
+  isStudent,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -282,6 +283,7 @@ export default function LearningGoal({
             understanding={displayUnderstanding}
             radioButtonCallback={radioButtonCallback}
             submittedEvaluation={submittedEvaluation}
+            isStudent={isStudent}
           />
           {learningGoal.tips && (
             <div>
@@ -307,6 +309,7 @@ LearningGoal.propTypes = {
   aiUnderstanding: PropTypes.number,
   aiConfidence: PropTypes.number,
   submittedEvaluation: submittedEvaluationShape,
+  isStudent: PropTypes.bool,
 };
 
 const AiToken = () => {
