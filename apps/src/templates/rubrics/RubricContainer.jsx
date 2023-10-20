@@ -80,6 +80,8 @@ export default function RubricContainer({
         canProvideFeedback={canProvideFeedback}
         teacherHasEnabledAi={teacherHasEnabledAi}
         updateTeacherAiSetting={setTeacherHasEnabledAi}
+        rubricId={rubric.id}
+        studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
         visible={selectedTab === TAB_NAMES.SETTINGS}
       />
     </div>

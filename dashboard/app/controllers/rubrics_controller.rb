@@ -122,7 +122,8 @@ class RubricsController < ApplicationController
     evaluated = ai_evaluated_at
     render json: {
       attempted: !!attempted,
-      lastAttemptEvaluated: !!attempted && !!evaluated && evaluated >= attempted
+      lastAttemptEvaluated: !!attempted && !!evaluated && evaluated >= attempted,
+      csrfToken: form_authenticity_token
     }
   end
 
