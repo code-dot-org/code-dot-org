@@ -200,7 +200,7 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "run ai evaluations for user calls EvaluateRubricJob" do
-    create :user_level, user: @student, script: @rubric.lesson.script, level: @level, submitted: true
+    create :user_level, user: @student, script: @rubric.lesson.script, level: @level
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
@@ -212,7 +212,7 @@ class RubricsControllerTest < ActionController::TestCase
       userId: @student.id,
     }
     assert_response :success
-    assert_equal({submitted: true, lastSubmissionEvaluated: false}.stringify_keys, JSON.parse(@response.body))
+    assert_equal({attempted: true, lastAttemptEvaluated: false}.stringify_keys, JSON.parse(@response.body))
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
@@ -233,7 +233,7 @@ class RubricsControllerTest < ActionController::TestCase
       userId: @student.id,
     }
     assert_response :success
-    assert_equal({submitted: false, lastSubmissionEvaluated: false}.stringify_keys, JSON.parse(@response.body))
+    assert_equal({attempted: false, lastAttemptEvaluated: false}.stringify_keys, JSON.parse(@response.body))
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
@@ -242,35 +242,13 @@ class RubricsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test "run ai evaluations returns bad request if attempted but not submitted" do
-    create :user_level, user: @student, script: @rubric.lesson.script, level: @level
-    sign_in @teacher
-
-    Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
-    EvaluateRubricJob.expects(:perform_later).never
-
-    post :ai_evaluation_status_for_user, params: {
-      id: @rubric.id,
-      userId: @student.id,
-    }
-    assert_response :success
-    assert_equal({submitted: false, lastSubmissionEvaluated: false}.stringify_keys, JSON.parse(@response.body))
-
-    post :run_ai_evaluations_for_user, params: {
-      id: @rubric.id,
-      userId: @student.id,
-    }
-    assert_response :bad_request
-  end
-
-  test "run ai evaluations returns bad request if submission already evaluated" do
+  test "run ai evaluations returns bad request if attempt already evaluated" do
     Timecop.freeze do
       learning_goal = create :learning_goal, rubric: @rubric
       # add an earlier evaluation to make sure we're covering the logic which tries to find the most recent evaluation
       create :learning_goal_ai_evaluation, user: @student, learning_goal: learning_goal, requester: @teacher
       Timecop.travel 1.minute
-      create :user_level, user: @student, script: @rubric.lesson.script, level: @level, submitted: true
+      create :user_level, user: @student, script: @rubric.lesson.script, level: @level
       Timecop.travel 1.minute
       create :learning_goal_ai_evaluation, user: @student, learning_goal: learning_goal, requester: @teacher
       Timecop.travel 1.minute
@@ -285,7 +263,7 @@ class RubricsControllerTest < ActionController::TestCase
         userId: @student.id,
       }
       assert_response :success
-      assert_equal({submitted: true, lastSubmissionEvaluated: true}.stringify_keys, JSON.parse(@response.body))
+      assert_equal({attempted: true, lastAttemptEvaluated: true}.stringify_keys, JSON.parse(@response.body))
 
       post :run_ai_evaluations_for_user, params: {
         id: @rubric.id,
@@ -295,12 +273,12 @@ class RubricsControllerTest < ActionController::TestCase
     end
   end
 
-  test "run ai evaluations succeeds if submission is more recent than evaluation" do
+  test "run ai evaluations succeeds if attempt is more recent than evaluation" do
     Timecop.freeze do
       learning_goal = create :learning_goal, rubric: @rubric
       create :learning_goal_ai_evaluation, user: @student, learning_goal: learning_goal, requester: @teacher
       Timecop.travel 1.minute
-      create :user_level, user: @student, script: @rubric.lesson.script, level: @level, submitted: true
+      create :user_level, user: @student, script: @rubric.lesson.script, level: @level
       sign_in @teacher
 
       Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
@@ -312,7 +290,7 @@ class RubricsControllerTest < ActionController::TestCase
         userId: @student.id,
       }
       assert_response :success
-      assert_equal({submitted: true, lastSubmissionEvaluated: false}.stringify_keys, JSON.parse(@response.body))
+      assert_equal({attempted: true, lastAttemptEvaluated: false}.stringify_keys, JSON.parse(@response.body))
 
       post :run_ai_evaluations_for_user, params: {
         id: @rubric.id,
