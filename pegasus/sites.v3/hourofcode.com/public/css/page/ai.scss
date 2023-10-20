@@ -30,7 +30,11 @@ section.banner {
   padding: 0;
 
   .wrapper {
-    max-width: 650px;
+    max-width: 690px;
+
+    p:last-child {
+      margin-bottom: 1rem;
+    }
   }
 }
 
