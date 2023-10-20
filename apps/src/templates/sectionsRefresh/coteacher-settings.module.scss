@@ -24,16 +24,16 @@
     margin-right: 10px;
     margin-bottom: 0;
     padding: 6px 12px;
-
   }
 
   .inputError {
     border: 1px solid $product_negative_default;
   }
 
-  .container {
+  .form {
     display: flex;
     width: 100%; 
+    margin: 0;
   }
 
   .label {
@@ -44,6 +44,7 @@
 
   .button {
     margin: 0;
+    min-width: 170px;
   }
 
   .error {

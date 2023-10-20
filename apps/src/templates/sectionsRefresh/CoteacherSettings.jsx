@@ -20,7 +20,8 @@ export default function CoteacherSettings({
     setInputValue(event.target.value);
   };
 
-  const handleButtonClick = () => {
+  const handleAddEmail = e => {
+    e.preventDefault();
     const newEmail = inputValue;
     console.log(sectionInstructors);
     if (newEmail === '' || !newEmail.includes('@')) {
@@ -77,7 +78,7 @@ export default function CoteacherSettings({
       <div className={styles.settings}>
         <div className={styles.add}>
           <label className={styles.label}>{i18n.coteacherEmailAddress()}</label>
-          <div className={styles.container}>
+          <form className={styles.form} onSubmit={handleAddEmail}>
             <input
               className={classNames(
                 styles.input,
@@ -90,12 +91,12 @@ export default function CoteacherSettings({
             <Button
               className={styles.button}
               color={Button.ButtonColor.brandSecondaryDefault}
-              type="button"
+              type="submit"
               text={i18n.coteacherAddButton()}
-              onClick={handleButtonClick}
+              onClick={handleAddEmail}
               disabled={isAddDisabled}
             />
-          </div>
+          </form>
           {getErrorOrCount}
         </div>
         <div className={styles.table}>
