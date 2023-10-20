@@ -27,7 +27,7 @@ class LearningGoalTeacherEvaluationsController < ApplicationController
 
   def get_or_create_evaluation
     learning_goal = LearningGoal.find(learning_goal_teacher_evaluation_params[:learning_goal_id])
-    @rubric = Rubric.find(learning_goal.rubric_id)
+    @rubric = learning_goal.rubric
 
     user_storage_id = storage_id_for_user_id(learning_goal_teacher_evaluation_params[:user_id])
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
