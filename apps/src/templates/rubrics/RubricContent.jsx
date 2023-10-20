@@ -123,7 +123,7 @@ export default function RubricContent({
   if (!onLevelForEvaluation) {
     infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
   } else if (!studentLevelInfo) {
-    infoText = infoText = i18n.selectAStudentToEvaluateAlert();
+    infoText = i18n.selectAStudentToEvaluateAlert();
   }
   return (
     <div
@@ -239,7 +239,7 @@ RubricContent.propTypes = {
 const InfoAlert = ({text}) => {
   return (
     <div className={style.infoAlert}>
-      <FontAwesome icon="info-circle" />
+      <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
       <BodyTwoText>{text}</BodyTwoText>
     </div>
   );

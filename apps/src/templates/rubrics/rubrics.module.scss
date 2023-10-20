@@ -497,5 +497,14 @@ p.errorMessage {
 
   p {
     margin: 0;
+    line-height: 1.25;
   }
+}
+
+i.infoAlertIcon {
+  color: $light-info-500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
 }
