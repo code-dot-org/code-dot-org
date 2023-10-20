@@ -7603,14 +7603,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bindings@npm:1.2.x":
-  version: 1.2.1
-  resolution: "bindings@npm:1.2.1"
-  checksum: fb542a5721cbeb0a75607a0447ac4d12e3ba8fe12ddf2adbe76814fa9cf3d1236a03ab51d55a7fef1b2d1d9917f4315e8b1cf8b74ff21a6cf9e722e7e363ba5f
-  languageName: node
-  linkType: hard
-
-"bindings@npm:^1.5.0":
+"bindings@npm:^1.3.1, bindings@npm:^1.5.0":
   version: 1.5.0
   resolution: "bindings@npm:1.5.0"
   dependencies:
@@ -18949,13 +18942,14 @@ es6-shim@latest:
   linkType: hard
 
 "microtime@npm:^2.1.0":
-  version: 2.1.2
-  resolution: "microtime@npm:2.1.2"
+  version: 2.1.9
+  resolution: "microtime@npm:2.1.9"
   dependencies:
-    bindings: 1.2.x
-    nan: 2.4.x
+    bindings: ^1.3.1
+    nan: 2.12.x
     node-gyp: latest
-  checksum: 6825e329116bdf17a29331f9bf0a66f973fb6958b4aeeea57a704fa2b6733d9ec9a0c331080288df69e3c43a01a915165c60fdba66b4167f7eba09683d7ee30d
+    prebuild-install: ^5.2.2
+  checksum: 15169cea16e049cabec04732455eb2e544041b73b0f72518e708a9e63d170fc1947a374f4f2c1a30199ae7fa6810dfbee32cde01cdeb75879f71d846360c6d45
   languageName: node
   linkType: hard
 
@@ -19545,12 +19539,12 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"nan@npm:2.4.x":
-  version: 2.4.0
-  resolution: "nan@npm:2.4.0"
+"nan@npm:2.12.x":
+  version: 2.12.1
+  resolution: "nan@npm:2.12.1"
   dependencies:
     node-gyp: latest
-  checksum: 662e77b96ca0f210c5d0947684360e186a6f1ea6b1a687cd61e9981c16bc823d92de028cedd0dda35d7106693cc26bdb0ef60032a053fb05dfb172d830b8ca28
+  checksum: 51e21868fb1332a7b3a3846cae5dda1e9cbe1f932dc3f8894528bbf72e9a50b442e6e748a658be9f1f5baa01a941afab2dfc0044723cd3a33f08c4151e9e62b2
   languageName: node
   linkType: hard
 
@@ -21814,7 +21808,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"prebuild-install@npm:^5.3.0":
+"prebuild-install@npm:^5.2.2, prebuild-install@npm:^5.3.0":
   version: 5.3.6
   resolution: "prebuild-install@npm:5.3.6"
   dependencies:

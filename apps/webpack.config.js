@@ -344,6 +344,8 @@ function createWebpackConfig({
       // When minifying, this generates a 20-hex-character hash.
       filename: `[name]${minify ? 'wp[contenthash].min.js' : '.js'}`,
     },
+    // Don't output >1000 lines of webpack build stats to the CI logs
+    stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
     watch,
     entry: addPollyfillsToEntryPoints(
