@@ -6,6 +6,7 @@ import styles from './coteacher-settings.module.scss';
 import Button from '../Button';
 import {Figcaption} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
+import classNames from 'classnames';
 
 export default function CoteacherSettings({
   sectionInstructors,
@@ -27,26 +28,38 @@ export default function CoteacherSettings({
     }
 
     addCoteacher(newEmail);
+    setAddError('');
     setInputValue('');
   };
+
+  // coteacher count is teachers to add + the existing teachers - the primary teacher.
+  const numCoteachers = useMemo(
+    () => sectionInstructors.length + coteachersToAdd.length - 1,
+    [sectionInstructors, coteachersToAdd]
+  );
 
   const getErrorOrCount = useMemo(() => {
     if (addError) {
       return (
-        <Figcaption className={styles.error}>
-          <FontAwesome icon="info-circle" />
+        <Figcaption
+          className={classNames(styles.error, styles.inputDescription)}
+        >
+          <FontAwesome icon="info-circle" className={styles.infoCircle} />
           {addError}
         </Figcaption>
       );
     } else {
-      const count = sectionInstructors.length + coteachersToAdd.length;
       return (
-        <Figcaption className={styles.count}>
-          {count}/5 co-teachers added
+        <Figcaption className={styles.inputDescription}>
+          {numCoteachers}/5 co-teachers added
         </Figcaption>
       );
     }
-  }, [addError, coteachersToAdd, sectionInstructors]);
+  }, [addError, numCoteachers]);
+
+  const isAddDisabled = useMemo(() => {
+    return inputValue === '' || numCoteachers >= 5;
+  }, [inputValue, numCoteachers]);
 
   return (
     <div className={styles.expandedSection}>
@@ -56,7 +69,10 @@ export default function CoteacherSettings({
           <label className={styles.label}>Email address</label>
           <div className={styles.container}>
             <input
-              className={styles.input}
+              className={classNames(
+                styles.input,
+                !!addError && styles.inputError
+              )}
               type="text"
               value={inputValue}
               onChange={handleInputChange}
@@ -67,7 +83,7 @@ export default function CoteacherSettings({
               type="button"
               text="Add co-teacher"
               onClick={handleButtonClick}
-              disabled={inputValue === ''}
+              disabled={isAddDisabled}
             />
           </div>
           {getErrorOrCount}

@@ -24,6 +24,11 @@
     margin-right: 10px;
     margin-bottom: 0;
     padding: 6px 12px;
+
+  }
+
+  .inputError {
+    border: 1px solid $product_negative_default;
   }
 
   .container {
@@ -39,6 +44,19 @@
 
   .button {
     margin: 0;
+  }
+
+  .error {
+    color: $product_negative_default;
+  }
+
+  .infoCircle {
+    margin-right: 5px;
+  }
+
+  .inputDescription {
+    margin-top: 2px;
+    margin-bottom: 0;
   }
 }
 
