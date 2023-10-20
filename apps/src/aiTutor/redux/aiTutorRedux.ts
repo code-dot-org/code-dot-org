@@ -6,10 +6,12 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AiTutorState {
   aiResponse: string | undefined;
+  isWaitingForAIResponse: boolean;
 }
 
 const initialState: AiTutorState = {
   aiResponse: '',
+  isWaitingForAIResponse: false,
 };
 
 // THUNKS
@@ -42,6 +44,21 @@ const aiTutorSlice = createSlice({
     addAIResponse: (state, action: PayloadAction<string | undefined>) => {
       state.aiResponse = action.payload;
     },
+    setIsWaitingForAIResponse: (state, action: PayloadAction<boolean>) => {
+      state.isWaitingForAIResponse = action.payload;
+    },
+  },
+  extraReducers: builder => {
+    builder.addCase(askAITutor.fulfilled, state => {
+      state.isWaitingForAIResponse = false;
+    });
+    builder.addCase(askAITutor.rejected, (state, action) => {
+      state.isWaitingForAIResponse = false;
+      console.error(action.error);
+    });
+    builder.addCase(askAITutor.pending, state => {
+      state.isWaitingForAIResponse = true;
+    });
   },
 });
 
