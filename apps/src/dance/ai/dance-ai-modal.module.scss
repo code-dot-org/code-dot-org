@@ -74,19 +74,19 @@ $ai-modal-border-width: 8px;
   background-color: $ai-block-color !important;
 
   .headerArea {
-    width: calc(100% - 40px);
+    width: calc(100% - 2 * $ai-modal-border-width);
     height: 50px;
     background-color: $ai-block-color;
     color: white;
     font-size: 16px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    margin-top: 8px;
+    padding: 0 $ai-modal-border-width;
+    margin-top: $ai-modal-border-width;
 
     .botImage {
-      height: 40px;
-      margin-right: 20px;
+      width: 24px;
+      margin: 0 18px 0 12px;
     }
 
     .inputsContainer {
@@ -102,9 +102,14 @@ $ai-modal-border-width: 8px;
         margin-right: 6px;
       }
     }
+
+    &Right {
+      margin-left: auto;
+    }
   }
 
   .innerArea {
+    margin: $ai-modal-border-width;
     // There is a border on the left and right.
     width: calc(100% - 2 * $ai-modal-border-width);
     // There is a border at the top and bottom, and a third between the header
@@ -114,7 +119,6 @@ $ai-modal-border-width: 8px;
     user-select: none;
     padding: 10px;
     box-sizing: border-box;
-    margin: 8px;
     border-radius: 4px;
     background-color: white;
 
@@ -342,16 +346,18 @@ $ai-modal-border-width: 8px;
       &Left {
         margin-right: auto;
       }
+    }
+  }
 
-      .button {
-        font-size: 16px;
-      }
+  .button {
+    font-size: 16px;
+
+    &NoMargin {
+      margin: 0;
     }
 
-    .buttonsAreaTopRight {
-      position: absolute;
-      top: -55px;
-      right: -5px;
+    &SmallText {
+      font-size: 12px;
     }
   }
 }

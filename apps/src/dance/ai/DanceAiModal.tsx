@@ -5,7 +5,6 @@ import Button from '@cdo/apps/templates/Button';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import {BlockSvg, Workspace} from 'blockly/core';
 import {doAi} from './utils';
@@ -315,6 +314,37 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           ))}
         </div>
         &nbsp; stage
+        <div
+          id="ai-modal-header-area-right"
+          className={moduleStyles.headerAreaRight}
+        >
+          {mode === Mode.RESULTS_FINAL && (
+            <Button
+              id="explanation-button"
+              text={'Explanation'}
+              onClick={handleExplanationClick}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonNoMargin,
+                moduleStyles.buttonSmallText
+              )}
+            />
+          )}
+          {mode === Mode.EXPLANATION && (
+            <Button
+              id="results-final-button"
+              text={'Back to Results'}
+              onClick={handleResultsFinalClick}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonNoMargin,
+                moduleStyles.buttonSmallText
+              )}
+            />
+          )}
+        </div>
       </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
         <div id="text-area" className={moduleStyles.textArea}>
@@ -576,30 +606,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               id="use-button"
               text={'Use'}
               onClick={handleUseClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
-        </div>
-
-        <div
-          id="buttons-area-top-right"
-          className={moduleStyles.buttonsAreaTopRight}
-        >
-          {mode === Mode.RESULTS_FINAL && (
-            <Button
-              id="explanation-button"
-              text={'Explanation'}
-              onClick={handleExplanationClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
-          {mode === Mode.EXPLANATION && (
-            <Button
-              id="results-final-button"
-              text={'Back to Results'}
-              onClick={handleResultsFinalClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
