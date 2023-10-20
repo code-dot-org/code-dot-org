@@ -24,7 +24,11 @@ export default function CoteacherSettings({
     e.preventDefault();
     const newEmail = inputValue;
     console.log(sectionInstructors);
-    if (newEmail === '' || !newEmail.includes('@')) {
+    if (newEmail === '') {
+      setAddError(i18n.coteacherAddNoEmail());
+      return;
+    }
+    if (!newEmail.includes('@')) {
       setAddError(i18n.coteacherAddInvalidEmail({email: newEmail}));
       return;
     }
@@ -69,8 +73,8 @@ export default function CoteacherSettings({
   }, [addError, numCoteachers]);
 
   const isAddDisabled = useMemo(() => {
-    return inputValue === '' || numCoteachers >= 5;
-  }, [inputValue, numCoteachers]);
+    return numCoteachers >= 5;
+  }, [numCoteachers]);
 
   return (
     <div className={styles.expandedSection}>
@@ -85,6 +89,7 @@ export default function CoteacherSettings({
                 !!addError && styles.inputError
               )}
               type="text"
+              disabled={isAddDisabled}
               value={inputValue}
               onChange={handleInputChange}
             />
