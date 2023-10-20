@@ -88,7 +88,8 @@ class RubricsController < ApplicationController
     learning_goals = LearningGoal.where(rubric_id: permitted_params[:id])
     # Get the most recent AI evaluation for each learning goal
     learning_goal_ai_evaluations =
-      LearningGoalAiEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goals.pluck(:id)).
+      # TODO: Update to the new table when the data is copied over
+      OldLearningGoalAiEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goals.pluck(:id)).
         group_by(&:learning_goal_id).
         map {|_, eval_list| eval_list.max_by(&:updated_at)}
     render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)

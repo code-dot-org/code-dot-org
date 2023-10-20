@@ -162,8 +162,7 @@ class EvaluateRubricJob < ApplicationJob
 
     # record the ai evaluations to the database
     # TODO: pass along and update the 'requester' to the correct id
-    # TODO: assign this to a variable and use it to create learning goal ai evaluations later
-    RubricAiEvaluation.create!(
+    rubric_ai_evaluation = RubricAiEvaluation.create!(
       user: user,
       requester: user,
       rubric: rubric,
@@ -176,12 +175,19 @@ class EvaluateRubricJob < ApplicationJob
       ai_evaluations.each do |evaluation|
         learning_goal = rubric.learning_goals.all.find {|lg| lg.learning_goal == evaluation['Key Concept']}
         understanding = understanding_s_to_i(evaluation['Grade'])
-        LearningGoalAiEvaluation.create!(
+        # TODO: remove the creation of the old record
+        OldLearningGoalAiEvaluation.create!(
           user_id: user.id,
           learning_goal_id: learning_goal.id,
           requester_id: user.id,
           project_id: project_id,
           project_version: project_version,
+          understanding: understanding,
+          ai_confidence: evaluation['Confidence']
+        )
+        LearningGoalAiEvaluation.create!(
+          rubric_ai_evaluation: rubric_ai_evaluation,
+          learning_goal: learning_goal,
           understanding: understanding,
           ai_confidence: evaluation['Confidence']
         )
