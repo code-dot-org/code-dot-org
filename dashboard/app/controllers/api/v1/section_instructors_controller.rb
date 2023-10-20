@@ -25,33 +25,14 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     section = Section.find(params.require(:section_id))
     authorize! :manage, section
 
-    # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
-    # for a total of 6)
-    if SectionInstructor.where(section: section).count >= 6
-      return render json: {error: 'section full'}, status: :bad_request
+    begin
+      si = section.add_instructor(params.require(:email))
+    rescue ArgumentError => exception
+      render json: {error: exception.message}, status: :bad_request
+    rescue ActiveRecord::RecordNotFound
+      return head :not_found
     end
-
-    instructor = User.find_by(email: params.require(:email), user_type: :teacher)
-    return head :not_found if instructor.blank?
-
-    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: section)
-
-    # Actually delete the instructor if they were soft-deleted so they can be re-invited.
-    if si&.deleted_at.present?
-      si.really_destroy!
-    # Can't re-add someone who is already an instructor (or invited/declined)
-    elsif si.present?
-      return render json: {error: 'already invited'}, status: :bad_request
-    end
-
-    si = SectionInstructor.create!(
-      section: section,
-      instructor: instructor,
-      status: :invited,
-      invited_by: current_user
-    )
-
-    render json: si, serializer: Api::V1::SectionInstructorSerializer
+    return si
   end
 
   # Removes an instructor from the section (soft-deleting the record).
