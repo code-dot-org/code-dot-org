@@ -27,5 +27,7 @@ class RubricAiEvaluation < ApplicationRecord
 
   has_many :learning_goal_ai_evaluations, inverse_of: :rubric_ai_evaluation
 
+  has_many :learning_goal_ai_evaluations, inverse_of: :rubric_ai_evaluation
+
   validates :status, inclusion: {in: SharedConstants::RUBRIC_AI_EVALUATION_STATUS.values}
 end
