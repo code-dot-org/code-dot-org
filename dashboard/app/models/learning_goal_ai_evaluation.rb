@@ -16,8 +16,15 @@
 #  index_learning_goal_ai_evaluations_on_rubric_ai_evaluation_id  (rubric_ai_evaluation_id)
 #
 class LearningGoalAiEvaluation < ApplicationRecord
-  belongs_to :rubric_ai_evaluation
+  belongs_to :rubric_ai_evaluation, inverse_of: :learning_goal_ai_evaluations
   belongs_to :learning_goal
+
+  has_one :user, through: :rubric_ai_evaluation
+  has_one :requester, through: :rubric_ai_evaluation
+  has_one :status, through: :rubric_ai_evaluation
+  has_one :rubric, through: :learning_goal
+  has_one :lesson, through: :rubric
+  has_one :level, through: :rubric
 
   AI_CONFIDENCE_LEVELS = {
     LOW: 1,
@@ -40,10 +47,10 @@ class LearningGoalAiEvaluation < ApplicationRecord
     script_level = rubric.get_script_level
     {
       id: id,
-      user_id: user_id,
+      user_id: rubric_ai_evaluation.user_id,
       script_level_id: script_level&.id,
-      username: user.username,
-      requester_username: requester&.username,
+      username: rubric_ai_evaluation.user.username,
+      requester_username: rubric_ai_evaluation.requester&.username,
       unit_name: script_level&.script&.name,
       lesson_position: lesson.absolute_position,
       level_name: level.name,
