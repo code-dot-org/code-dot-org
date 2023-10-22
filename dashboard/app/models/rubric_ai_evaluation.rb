@@ -22,7 +22,7 @@ require 'cdo/shared_constants'
 class RubricAiEvaluation < ApplicationRecord
   belongs_to :user
   belongs_to :requester, class_name: 'User'
-  belongs_to :project
+  belongs_to :project, optional: true
 
   validates :status, inclusion: {in: SharedConstants::RUBRIC_AI_EVALUATION_STATUS.values}
 end
