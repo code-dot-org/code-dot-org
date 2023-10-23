@@ -20,73 +20,6 @@
         "copyright/csd/2021": {
           "word": "Copyright"
         },
-        "bug/csd/2021": {
-          "word": "Bugg"
-        },
-        "debugging/csd/2021": {
-          "word": "Felsökning"
-        },
-        "program/csd/2021": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "parameter/csd/2021": {
-          "word": "Parameter"
-        },
-        "variable/csd/2021": {
-          "word": "Variabel"
-        },
-        "property/csd/2021": {
-          "word": "Egenskap"
-        },
-        "conditionals/csd/2021": {
-          "word": "Villkor"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstraktion"
-        },
-        "function/csd/2021": {
-          "word": "Funktion"
-        },
-        "user/csd/2021": {
-          "word": "Användare"
-        },
-        "prototype/csd/2021": {
-          "word": "Prototyp"
-        },
-        "feature/csd/2021": {
-          "word": "Funktion"
-        },
-        "ascii/csd/2021": {
-          "word": "ASCII"
-        },
-        "pixel/csd/2021": {
-          "word": "Pixel"
-        },
-        "analog/csd/2021": {
-          "word": "Analog"
-        },
-        "digital/csd/2021": {
-          "word": "Digital"
-        },
-        "circuit/csd/2021": {
-          "word": "Krets"
-        },
-        "features/csd/2021": {
-          "word": "Funktioner"
-        },
-        "label/csd/2021": {
-          "word": "Etikett"
-        },
-        "model/csd/2021": {
-          "word": "Modell"
-        },
-        "training/csd/2021": {
-          "word": "Träning"
-        },
-        "ethics/csd/2021": {
-          "word": "Etik"
-        },
         "algorithm/coursea/2021": {
           "word": "Algoritm"
         },
@@ -363,66 +296,11 @@
         "copyright/csd/2022": {
           "word": "Copyright"
         },
-        "bug/csd/2022": {
-          "word": "Bugg"
-        },
-        "debugging/csd/2022": {
-          "word": "Felsökning"
-        },
-        "program/csd/2022": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "parameter/csd/2022": {
-          "word": "Parameter"
-        },
-        "variable/csd/2022": {
-          "word": "Variabel"
-        },
-        "property/csd/2022": {
-          "word": "Egenskap"
-        },
-        "conditionals/csd/2022": {
-          "word": "Villkor"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstraktion"
-        },
-        "function/csd/2022": {
-          "word": "Funktion"
-        },
-        "user/csd/2022": {
-          "word": "Användare"
-        },
         "prototype/csd/2022": {
           "word": "Prototyp"
         },
-        "feature/csd/2022": {
-          "word": "Funktion"
-        },
-        "ascii/csd/2022": {
-          "word": "ASCII"
-        },
-        "pixel/csd/2022": {
-          "word": "Pixel"
-        },
         "circuit/csd/2022": {
           "word": "Krets"
-        },
-        "features/csd/2022": {
-          "word": "Funktioner"
-        },
-        "label/csd/2022": {
-          "word": "Etikett"
-        },
-        "model/csd/2022": {
-          "word": "Modell"
-        },
-        "training/csd/2022": {
-          "word": "Träning"
-        },
-        "ethics/csd/2022": {
-          "word": "Etik"
         },
         "algorithm/coursea/2022": {
           "word": "Algoritm"
@@ -684,71 +562,6 @@
         "behavior/csc-adaptations/2023": {
           "word": "Beteende"
         },
-        "event/csc-bookcovers/2023": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Program",
-          "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Kod"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Villkor"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "Händelse"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Variabel"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kod",
-          "definition": "(v) att skriva instruktioner för en dator."
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Karta"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Konstnären"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Loop"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Kommentarer"
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "Stämning"
-        },
-        "code/poetry/2023": {
-          "word": "Kod",
-          "definition": "(v) att skriva instruktioner för en dator."
-        },
-        "event/poetry/2023": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
-        "line/poetry/2023": {
-          "word": "Rad"
-        },
-        "mood/poetry/2023": {
-          "word": "Stämning"
-        },
-        "program/poetry/2023": {
-          "word": "Program",
-          "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
-        },
         "computer/csd/2023": {
           "word": "Dator"
         },
@@ -767,48 +580,8 @@
         "copyright/csd/2023": {
           "word": "Copyright"
         },
-        "bug/csd/2023": {
-          "word": "Bugg"
-        },
-        "debugging/csd/2023": {
-          "word": "Felsökning"
-        },
-        "program/csd/2023": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "parameter/csd/2023": {
-          "word": "Parameter"
-        },
-        "variable/csd/2023": {
-          "word": "Variabel"
-        },
-        "property/csd/2023": {
-          "word": "Egenskap"
-        },
-        "conditionals/csd/2023": {
-          "word": "Villkor"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstraktion"
-        },
-        "function/csd/2023": {
-          "word": "Funktion"
-        },
-        "user/csd/2023": {
-          "word": "Användare"
-        },
         "prototype/csd/2023": {
           "word": "Prototyp"
-        },
-        "feature/csd/2023": {
-          "word": "Funktion"
-        },
-        "ascii/csd/2023": {
-          "word": "ASCII"
-        },
-        "pixel/csd/2023": {
-          "word": "Pixel"
         },
         "circuit/csd/2023": {
           "word": "Krets"
@@ -1079,18 +852,6 @@
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
         },
-        "algorithm/how-ai-works/2023": {
-          "word": "Algoritm"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Nätverk"
-        },
-        "model/how-ai-works/2023": {
-          "word": "Modell"
-        },
-        "ethics/how-ai-works/2023": {
-          "word": "Etik"
-        },
         "code/aquatic/unversioned": {
           "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
@@ -1132,28 +893,6 @@
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
-        "code/dance-2019/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
         "code/dance-extras/unversioned": {
           "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
@@ -1173,83 +912,6 @@
           "definition": "En handling som gör att något händer."
         },
         "program/dance/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/flappy/unversioned": {
-          "word": "kod",
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/flappy/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/frozen/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/frozen/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/gumball/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/gumball/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/hero/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Felsökning"
-        },
-        "function/hero/unversioned": {
-          "word": "Funktion"
-        },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Kryptering"
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/iceage/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/iceage/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/infinity/unversioned": {
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
@@ -1284,36 +946,6 @@
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
         },
-        "code/playlab/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/playlab/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/poem-art/2021": {
-          "word": "Kod",
-          "definition": "(v) att skriva instruktioner för en dator."
-        },
-        "event/poem-art/2021": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
-        "line/poem-art/2021": {
-          "word": "Rad",
-          "definition": "(poesi) – en underavdelning av en dikt ordnad i en rad som slutar i högermarginalen."
-        },
-        "mood/poem-art/2021": {
-          "word": "Stämning",
-          "definition": "uttrycket av en känsla, atmosfär eller sinnesrörelse i konst eller skrift."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
-        },
         "code/sports/unversioned": {
           "word": "Kod"
         },
@@ -1325,26 +957,6 @@
           "definition": "En handling som gör att något händer."
         },
         "program/sports/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/starwars/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/starwars/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/starwarsblocks/unversioned": {
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         }
