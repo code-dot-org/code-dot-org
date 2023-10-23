@@ -18,52 +18,6 @@
           "word": "Telif Hakkı",
           "definition": "edebi, sanatsal veya müzikal materyali basmak, yayınlamak, icra etmek, filme almak veya kaydetmek ve başkalarına da aynısını yapma yetkisi vermek için münhasır yasal hak"
         },
-        "bug/csd/2021": {
-          "word": "Hata",
-          "definition": "Bir programın düzgün çalışmayan kısmı."
-        },
-        "debugging/csd/2021": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/csd/2021": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "variable/csd/2021": {
-          "word": "Değişken",
-          "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
-        },
-        "sprite/csd/2021": {
-          "word": "Hareketli nesne"
-        },
-        "condition/csd/2021": {
-          "word": "Koşul"
-        },
-        "conditionals/csd/2021": {
-          "word": "Koşullar"
-        },
-        "abstraction/csd/2021": {
-          "word": "Soyutlama"
-        },
-        "function/csd/2021": {
-          "word": "Fonksiyon"
-        },
-        "user/csd/2021": {
-          "word": "Kullanıcı",
-          "definition": "Yazılım ve donanım da dahil olmak üzere bir nesne kullanan biri."
-        },
-        "user_interface/csd/2021": {
-          "word": "Kullanıcı Arayüzü"
-        },
-        "for_loop/csd/2021": {
-          "word": "İçin Döngüsü",
-          "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Makine Öğrenimi",
-          "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
-        },
         "algorithm/coursea/2021": {
           "word": "Algoritma",
           "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
@@ -608,48 +562,6 @@
           "word": "Telif Hakkı",
           "definition": "edebi, sanatsal veya müzikal materyali basmak, yayınlamak, icra etmek, filme almak veya kaydetmek ve başkalarına da aynısını yapma yetkisi vermek için münhasır yasal hak"
         },
-        "bug/csd/2022": {
-          "word": "Hata",
-          "definition": "Bir programın düzgün çalışmayan kısmı."
-        },
-        "debugging/csd/2022": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/csd/2022": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "variable/csd/2022": {
-          "word": "Değişken",
-          "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
-        },
-        "sprite/csd/2022": {
-          "word": "Hareketli nesne"
-        },
-        "condition/csd/2022": {
-          "word": "Koşul"
-        },
-        "conditionals/csd/2022": {
-          "word": "Koşullar"
-        },
-        "abstraction/csd/2022": {
-          "word": "Soyutlama"
-        },
-        "function/csd/2022": {
-          "word": "Fonksiyon"
-        },
-        "user/csd/2022": {
-          "word": "Kullanıcı",
-          "definition": "Yazılım ve donanım da dahil olmak üzere bir nesne kullanan biri."
-        },
-        "user_interface/csd/2022": {
-          "word": "Kullanıcı Arayüzü"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Makine Öğrenimi",
-          "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
-        },
         "algorithm/coursea/2022": {
           "word": "Algoritma",
           "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
@@ -1182,9 +1094,6 @@
           "word": "Etkinlik",
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Yapay Zeka"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptasyon",
           "definition": "Çevresini daha iyi hayatta kalmak için bir organizmada değişiklik"
@@ -1212,42 +1121,6 @@
         "behavior/csc-adaptations/2023": {
           "word": "Davranış",
           "definition": "Hareketlilerin tekrar tekrar gerçekleştirmesini istediğiniz eylemler kümesi. "
-        },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "Kod (v)",
-          "definition": "bir bilgisayar için talimatlar yazmak için."
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "İstemi",
-          "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Hareketli nesne",
-          "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "Arka Plan",
-          "definition": "Ekrandaki ana şeylerin veya insanların arkasındaki görsel."
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "Karakter",
-          "definition": "Bir insan, hayvan, varlık, bir hikayedeki şeyin yaratığı."
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "Ayar",
-          "definition": "Bir hikayenin zamanı ve yeri (veya ne zaman ve nerede)."
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "Özet",
-          "definition": "Bir metnin en önemli kısımlarını kendi kelimelerinizle çok daha kısa bir şekilde anlatmak"
         },
         "code/csc-ecosystems/2023": {
           "word": "Kod",
@@ -1296,113 +1169,6 @@
         "food_chain/csc-ecosystems/2023": {
           "word": "Gıda Zinciri ",
           "definition": "Üreticilerden tüketicilere ve avdan avcılara kadar yedikleri yiyeceklerin sırasına göre birbirine bağlanan bir grup organizma."
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kod",
-          "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "Sembol yapı",
-          "definition": "Bir dönüm noktası, önemi olan veya bir yeri kolayca tanınabilir kılan bir nesnedir (doğal veya insan yapımı)."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Hareketli nesne",
-          "definition": "Programınızdaki bir resim veya karakter."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Harita",
-          "definition": "Fiziksel özellikleri gösteren bir kara veya deniz alanının temsili, şehirler, yollar, vb."
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "Desen",
-          "definition": "Düzenli ve tekrarlanan bir şekilde olan veya görünen bir şey"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "Eşkenar Dörtgen",
-          "definition": "Dört eşit kenarı olan bir çokgen, zıt taraflar paralel, zıt açılar eşittir"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "Yıldız Yorgan",
-          "definition": "Great Plains'ten Yerli Amerikalılar arasında geleneksel ve değerli bir hediye"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Sanatçı",
-          "definition": "Neredeyse her şeyi çizmesini sağlamak için kod yazabilirsiniz"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Döngü",
-          "definition": "Tekrarlanan bir kod dizisi"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "Nokta",
-          "definition": "Yıldız şeklinin bir kısmı"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "Satır",
-          "definition": "Bu durumda, düzenli bir eşkenar dörtgen hattı"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "Konsantrik",
-          "definition": "Aynı merkezi paylaşan nesneler veya şekiller"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Yorumlar",
-          "definition": "Kodun bir bölümünü açıklayan kendinize notlar. Programı değiştirmezler, ancak kodunuzu düzenli tutmaya yardımcı olurlar."
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "Görüntüler",
-          "definition": "Bir şiir veya hikaye tarafından üretilen zihinsel görüntüler"
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "Ruh hali",
-          "definition": "Sanatta veya yazmada bir duygu, atmosfer veya duygunun ifadesi."
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Hareketli nesne",
-          "definition": "Programınızdaki bir resim veya karakter"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "Belirli bir zaman diliminde yaşayan birinin hayatında bir günü temsil eden anıları ve günlük eşyaları saklayabileceğiniz bir yer. "
-        },
-        "code/poetry/2023": {
-          "word": "Kod",
-          "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
-        },
-        "event/poetry/2023": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "line/poetry/2023": {
-          "word": "Satır",
-          "definition": "(şiir) - sağ kenarda biten üst üste düzenlenmiş bir şiirin alt bölümü."
-        },
-        "mood/poetry/2023": {
-          "word": "Ruh hali",
-          "definition": "Sanatta veya yazmada bir duygu, atmosfer veya duygunun ifadesi."
-        },
-        "program/poetry/2023": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
-        },
-        "poem/poetry/2023": {
-          "word": "Şiir",
-          "definition": "Okuyucunun zihninde resimler, duygular ve fikirler oluşturmak için kelimeleri kullanan yazı satırları."
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "Yapıcı geribildirim",
-          "definition": "Birinin işini geliştirmesine yardımcı olan saygılı yorumlar"
-        },
-        "poetry_circle/poetry/2023": {
-          "word": "Şiir Çemberi",
-          "definition": "Yeni şiirleri test etmek ve başkalarından yapıcı geri bildirim almak için güvenli ve yaratıcı bir alan"
         },
         "computer/csd/2023": {
           "word": "Bilgisayar"
@@ -2074,30 +1840,6 @@
           "word": "Program",
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
-        "code/dance-2019/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
         "code/dance-extras/unversioned": {
           "word": "kod",
           "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
@@ -2119,118 +1861,6 @@
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "program/dance/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/flappy/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/flappy/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/frozen/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/frozen/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/gumball/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/gumball/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/hero/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "function/hero/unversioned": {
-          "word": "Fonksiyon",
-          "definition": "Tekrar tekrar kolaylıkla arayabileceğiniz bir kod parçası."
-        },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Sezar Şifreleme ",
-          "definition": "alfabeyi birkaç karakter kaydıran bir şifreleme tekniği"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Şifre",
-          "definition": "şifrelemeyi gerçekleştiren bir tekniğe (veya algoritma) yönelik gelen terim"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Şifrelemeyi kırma",
-          "definition": "Şifrenin tüm detaylarını bilmeden bir gizli mesajı çözmeye çalıştığınızda, şifrelemeyi kırmaya çalışırsınız."
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Şifre çözme",
-          "definition": "bir gizli mesajı alarak ve orijinal düz metin oluşturarak şifrelemeyi tersine çeviren bir işlem."
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Şifreleme",
-          "definition": "bunları gizli tutmak için mesajları şifreleme işlemi, bu yüzden yalnızca \"yetkili\" taraflar bunu okuyabilir."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Rastgele İkame Şifresi",
-          "definition": "Alfabenin her harfini, alfabenin rastgele seçilen diğer harfleri ile eşleştiren bir şifreleme tekniği."
-        },
-        "code/hourofcode/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/iceage/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/iceage/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/infinity/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/infinity/unversioned": {
           "word": "Program",
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
@@ -2266,10 +1896,6 @@
           "word": "Program",
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Makine Öğrenimi",
-          "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
-        },
         "event/outbreak/unversioned": {
           "word": "Etkinlik",
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
@@ -2277,38 +1903,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "Modeller ve Simülasyonlar",
           "definition": "deneyin gerçek hayatta ortaya çıkabilecek maliyeti, zamanı veya tehlikesi olmadan gerçek dünyadaki bir olayda olan davranışları araştırmak için o olayın temel özelliklerini kopyalayan veya taklit eden bir program."
-        },
-        "code/playlab/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/playlab/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/poem-art/2021": {
-          "word": "Kod",
-          "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
-        },
-        "event/poem-art/2021": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "line/poem-art/2021": {
-          "word": "Satır",
-          "definition": "(şiir) - sağ kenarda biten bir satırda düzenlenmiş bir şiirin alt bölümü. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Ruh hali",
-          "definition": "sanatta veya yazıda bir duygu, atmosfer veya hissin ifadesi."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
         },
         "code/sports/unversioned": {
           "word": "Kod",
@@ -2325,34 +1919,6 @@
         "program/sports/unversioned": {
           "word": "Program",
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/starwars/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/starwars/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "kod",
-          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Hata Ayıklama",
-          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Kayıpsız Sıkıştırma",
-          "definition": "orijinal verilerin sıkıştırılmış verilerden mükemmel bir şekilde yeniden yapılandırılmasına izin veren bir veri sıkıştırma algoritması. Genelde metin sıkıştırma için kullanılır (örneğin zip sıkıştırma)"
         }
       }
     }
