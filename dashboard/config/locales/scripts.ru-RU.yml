@@ -5153,6 +5153,17 @@ ru:
               display_name: Содержимое
             csd3_2:
               display_name: 'Глава 2: Создание игры'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Введение
+          lessons:
+            lesson-7:
+              name: Введение
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Введение
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -5175,6 +5186,10 @@ ru:
           lessons:
             lesson-3:
               name: Оценка
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Введение
         virustest:
           description_short: Используйте Sprite Lab для создания симулятора эпидемии
             вируса.
