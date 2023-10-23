@@ -1,5 +1,6 @@
 import {PROCEDURE_DEFINITION_TYPES} from '../constants';
-import {partitionBlocksByType} from './cdoUtils';
+import {partitionBlocksByType, splitBlocksByType} from './cdoUtils';
+import {ObservableProcedueModel} from '@blockly/block-shareable-procedures';
 
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
@@ -46,16 +47,38 @@ export default function initializeBlocklyXml(blocklyWrapper) {
    * @returns {Object[]} An array of objects containing the created blocks and their positions.
    */
   blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
-    const partitionedBlockElements = getPartitionedBlockElements(
+    const {prioritizedBlocks, remainingBlocks} = getSplitBlockElements(
       xml,
       PROCEDURE_DEFINITION_TYPES
     );
     const blocks = [];
+
+    for (const xmlFunctionBlock of prioritizedBlocks) {
+      console.log({xmlFunctionBlock});
+      // xml blocks will never have a procedure model id, so we need to create a new model
+      // and save that id in the appropriate place (mutation??).
+      let functionName = xmlFunctionBlock.nextElementSibling.getAttribute('id');
+      while (!Blockly.Procedures.isLegalName(functionName, workspace)) {
+        // Collision with another procedure.
+        const r = functionName.match(/^(.*?)(\d+)$/);
+        if (!r) {
+          functionName += '2';
+        } else {
+          functionName = r[1] + (parseInt(r[2]) + 1);
+        }
+      }
+      const model = new ObservableProcedueModel(workspace, functionName);
+      Blockly.Events.disable();
+      workspace.getProcedureMap().add(model);
+      Blockly.Events.enable();
+    }
+
+    const allBlocks = [...prioritizedBlocks, ...remainingBlocks];
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
-    partitionedBlockElements.forEach(xmlChild => {
+    allBlocks.forEach(xmlChild => {
       addMutationToMiniToolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
@@ -162,4 +185,25 @@ export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
     true
   );
   return partitionedBlockElements;
+}
+
+export function getSplitBlockElements(xml, prioritizedBlockTypes) {
+  // Convert XML to an array of block elements
+  const blockElements = Array.from(xml.childNodes).filter(
+    node => node.nodeName.toLowerCase() === 'block'
+  );
+
+  // Check if any block elements were found
+  if (blockElements.length === 0) {
+    return [];
+  }
+
+  // Procedure definitions should be loaded ahead of call
+  // blocks, so that the procedures map is updated correctly.
+  const {prioritizedBlocks, remainingBlocks} = splitBlocksByType(
+    blockElements,
+    prioritizedBlockTypes,
+    true
+  );
+  return {prioritizedBlocks, remainingBlocks};
 }

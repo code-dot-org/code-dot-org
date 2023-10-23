@@ -356,3 +356,21 @@ export function partitionBlocksByType(
 
   return [...prioritizedBlocks, ...remainingBlocks];
 }
+
+export function splitBlocksByType(
+  blocks = [],
+  prioritizedBlockTypes = [],
+  isBlockElements = true
+) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
+
+  blocks.forEach(block => {
+    const blockType = isBlockElements ? block.getAttribute('type') : block.type;
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
+  });
+
+  return {prioritizedBlocks, remainingBlocks};
+}
