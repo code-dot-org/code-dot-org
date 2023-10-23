@@ -5,18 +5,6 @@
         "input/csd/2021": {
           "word": "داخڵکردن"
         },
-        "variable/csd/2021": {
-          "word": "گۆڕاو"
-        },
-        "conditionals/csd/2021": {
-          "word": "مەرجیەکان"
-        },
-        "abstraction/csd/2021": {
-          "word": "پوختە"
-        },
-        "function/csd/2021": {
-          "word": "فرمان"
-        },
         "drop/coursea/2021": {
           "word": "درۆپ"
         },
@@ -61,18 +49,6 @@
         },
         "input/csd/2022": {
           "word": "داخڵکردن"
-        },
-        "variable/csd/2022": {
-          "word": "گۆڕاو"
-        },
-        "conditionals/csd/2022": {
-          "word": "مەرجیەکان"
-        },
-        "abstraction/csd/2022": {
-          "word": "پوختە"
-        },
-        "function/csd/2022": {
-          "word": "فرمان"
         },
         "drop/coursea/2022": {
           "word": "درۆپ"
@@ -119,38 +95,8 @@
         "code/csc-adaptations/2023": {
           "word": "کۆد"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "کۆد"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "مەرجیەکان"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "گۆڕاو"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "کۆد"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "سەرنجەکان"
-        },
-        "code/poetry/2023": {
-          "word": "کۆد"
-        },
         "input/csd/2023": {
           "word": "داخڵکردن"
-        },
-        "variable/csd/2023": {
-          "word": "گۆڕاو"
-        },
-        "conditionals/csd/2023": {
-          "word": "مەرجیەکان"
-        },
-        "abstraction/csd/2023": {
-          "word": "پوختە"
-        },
-        "function/csd/2023": {
-          "word": "فرمان"
         },
         "drop/coursea/2023": {
           "word": "درۆپ"
@@ -201,12 +147,6 @@
           "word": "گرێکان"
         },
         "code/artist/unversioned": {
-          "word": "کۆد"
-        },
-        "function/hero/unversioned": {
-          "word": "فرمان"
-        },
-        "code/poem-art/2021": {
           "word": "کۆد"
         },
         "code/sports/unversioned": {
