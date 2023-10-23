@@ -146,17 +146,6 @@ describe('LearningGoal', () => {
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
-  it('shows down arrow when closed and up arrow when open', () => {
-    const wrapper = shallow(
-      <LearningGoal
-        learningGoal={{learningGoal: 'Testing', evidenceLevels: []}}
-      />
-    );
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('angle-down');
-    wrapper.find('summary').simulate('click');
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('angle-up');
-  });
-
   it('sends event when closed and opened', () => {
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
@@ -238,7 +227,7 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('message');
   });
 
   it('shows editable textbox for feedback when the teacher can provide feedback', () => {
