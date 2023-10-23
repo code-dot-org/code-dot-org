@@ -11483,7 +11483,7 @@ sk-SK:
         description: Každú z týchto simulácií ekosystému je potrebné upraviť. Vyberte
           ekosystém, spustite simuláciu, aby ste problém pozorovali, a upravte kód
           tak, aby ste ho opravili.
-        display_name: Vyberte si ekosystém!
+        display_name: Vyber si ekosystém!
       csc_ecosystems_conditionals_overview:
         markdown: "#Podmienky  - príčina a následok \n\n</div>\n\n## Teraz pridáš
           kód na kontrolu množstva rias vo vode <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
@@ -21549,11 +21549,6 @@ sk-SK:
 
           ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSfQ0hr1uImhBjvqzv6wnyUaa-WDDgsub2O0vx15eqz7azICdA/viewform) a vyplň dotazník Odporúčanie topánok.
       ml-models-shoe survey_2022:
-        markdown: |
-          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
-
-          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSfQ0hr1uImhBjvqzv6wnyUaa-WDDgsub2O0vx15eqz7azICdA/viewform) a vyplň dotazník Odporúčanie topánok.
-      ml-models-shoe survey_2023:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
