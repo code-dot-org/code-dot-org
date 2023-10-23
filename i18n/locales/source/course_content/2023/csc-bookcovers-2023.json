@@ -3,7 +3,7 @@
     "display_name": "This is Sprite Lab"
   },
   "https://studio.code.org/s/csc-bookcovers-2023/lessons/1/levels/2": {
-    "long_instructions": "**This is an interactive digital book cover for _Wonder_ by R.J. Palacio!**\n\n-   Press <code style=\"color:black; background-color:#FFBD46\">Run</code>\n-   Click on each of the main characters.\n-   Then press the up arrow.\n-   What do you notice? \n\n_Click <code style=\"color:black; background-color:#FFBD46\">Finish</code> when you're ready to move on._",
+    "long_instructions": "**This is an interactive digital book cover for _Wonder_ by R.J. Palacio!**\n\n-   Press <code style=\"color:black; background-color:#FFBD46\">Run</code>\n-   Click on each of the main characters.\n-   Then press the up arrow.\n\n**What do you notice?** ",
     "authored_hints": {
       "hint1": "**Click on both** of the characters to see what they say!",
       "hint2": "Click the **up arrow** to see the book's summary."
