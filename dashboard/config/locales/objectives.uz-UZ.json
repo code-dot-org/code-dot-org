@@ -2,12 +2,6 @@
   "uz-UZ": {
     "data": {
       "objectives": {
-        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
-          "description": "Mashinani o‘rganish modelini o‘rgating va sinovdan o‘tkazing."
-        },
-        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
-          "description": "Mashinani o‘rganishda inson tarafkashligi qanday rol o‘ynashi haqida sabab."
-        },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "Internetdan uzoq joylarga tashrif buyurish va yangi narsalarni o'rganish uchun foydalanish mumkinligini bilib oling."
         },
@@ -982,12 +976,6 @@
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Ijodiy asarni boshqa talabalar bilan baham ko‘ring."
-        },
-        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
-          "description": "Mashinani o‘rganish modelini o‘rgating va sinovdan o‘tkazing."
-        },
-        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
-          "description": "Mashinani o‘rganishda inson tarafkashligi qanday rol o‘ynashi haqida sabab."
         },
         "086d6899-da60-486b-a9f7-89715397d81c": {
           "description": "Internetda xavfsiz sayohat qilish qoidalarini tushuntiring."
@@ -1967,210 +1955,6 @@
         "d0c5f886-4268-4eb7-b499-fa86868fda17": {
           "description": "Hayvonlarning atrof-muhitdagi o'zgarishlar natijasida qanday rivojlanishi va o'zgarishini ko'rsating."
         },
-        "46367e69-aa28-4aa2-b644-370d4720cb63": {
-          "description": "Raqamli kitob muqovasini yaratish uchun zarur bo'lgan kodlash tushunchalari va vositalarini o'rganing."
-        },
-        "f816d140-2662-4b07-838a-356b1341298f": {
-          "description": "Grafik dizayn tanlovlarining kuzatuvlari va talqinlarini sinf muhokamalari yoki yozma javoblar orqali ifodalang."
-        },
-        "be255442-649e-4cc4-849d-293d6e934e84": {
-          "description": "Kitobdagi belgilar va dasturdagi spritlar, shuningdek kitobdagi sozlamalar va dasturdagi fonlar o'rtasidagi bog'liqlikni tushuning."
-        },
-        "2779cb4f-6ca1-4a7f-ae2d-df66a9873fad": {
-          "description": "Hamkorga iliq va salqin fikr bildirish va olingan fikr-mulohazalarni o'z ishlarini qayta ko'rib chiqish uchun qo'llash orqali konstruktiv fikr-mulohazalarni taqdim etish va qabul qilish qobiliyatini namoyish eting."
-        },
-        "28a41551-e8f3-4421-8671-cc69e6cf6f05": {
-          "description": "Hikoyani samarali umumlashtirish, shu jumladan ikkita asosiy qahramon va ularning syujetdagi rollarini tanishtirish orqali umumlashtirish ko'nikmalarini rivojlantiring."
-        },
-        "62b336d6-02ad-446f-a4f9-54dc7bdfae1f": {
-          "description": "Kitobdagi belgilar va dasturdagi spritlar, shuningdek kitobdagi sozlamalar va dasturdagi fonlar o'rtasidagi bog'liqlikni tushuning."
-        },
-        "0849e0ca-6bc7-486b-b9e4-0ef588648f2b": {
-          "description": "Raqamli kitob muqovasi uchun kodlash tanlovlarini xabardor qilish uchun kitobning qahramonlari, sozlamalari va voqealari haqidagi tushunchalaridan foydalaning."
-        },
-        "59dc58ad-cbc8-4d27-928f-a06fa46e705a": {
-          "description": "Muayyan dizayn tanlovlari kitob muqovalarining umumiy ta'siri va xabariga qanday hissa qo'shishini muhokama qiling."
-        },
-        "ce3130a2-728b-4b6f-bd20-c7048c833388": {
-          "description": "Kitob muqovasi loyihasi uchun zarur bo'lgan kodlash bloklari va tushunchalarini aniqlang."
-        },
-        "8fbf7b5a-fbc1-42a1-b652-c99bd44dca4f": {
-          "description": "O'zlarining raqamli kitob muqovasi loyihalari haqida o'ylang va ular tanlagan dizayn elementlarini va bu tanlovlarning sabablarini aniqlang."
-        },
-        "d1945b16-3b38-443e-890a-dab7d81ec812": {
-          "description": "Birgalikda o'quv muhitini yaratib, ular boshdan kechirayotgan interaktiv kitob muqovasi ilovalari haqida konstruktiv fikr va mulohazalarni taqdim eting."
-        },
-        "4094e6da-1294-4686-aefc-b5363d35070a": {
-          "description": "Haddan tashqari baliq ovlashning suv ekotizimiga ta'siri simulyatsiyasini ishlab chiqing"
-        },
-        "fa9ae023-cf9e-40d1-9128-e260e85bb8c8": {
-          "description": "Tabiatdagi sabab va natija stsenariysini ko'rsatish uchun shartli bayonotlardan foydalaning."
-        },
-        "fc9e660e-7b37-4a84-b2a8-837fa31efbab": {
-          "description": "Dengiz ekotizimidagi juda ko'p, juda kam yoki kerakli miqdordagi suv o'tlarining ta'sirini tahlil qiling. "
-        },
-        "2523ed88-7219-4356-a342-5077931e97df": {
-          "description": "Haddan tashqari baliq ovlash simulyatsiyasiga ularning echimlarini yo'naltirish uchun kiritilgan ilmiy maqolaga murojaat qiling."
-        },
-        "8123b6d5-695d-49e4-8880-0d1f532656df": {
-          "description": "Dasturda o'zgaruvchan qiymatni kuzatib borish uchun o'zgaruvchini yarating va undan foydalaning."
-        },
-        "025c46ee-bcd9-47e3-afa6-10d849dcd120": {
-          "description": "Informatika simulyatsiyalari olimlar uchun qanday foydali bo'lishi mumkinligini tushuntiring. "
-        },
-        "621bdd35-b3ad-4df7-af0f-e8ba6e591131": {
-          "description": "Oziq-ovqat zanjirining bir qismidagi o'zgarishlar butun ekotizimga qanday ta'sir qilishi mumkinligini sinab ko'ring."
-        },
-        "977ebecc-d561-43b6-a4ad-33ff9807142a": {
-          "description": "Oziq-ovqat zanjiridagi o'simliklar va hayvonlar o'rtasidagi munosabatlarni va inson ta'sirining ta'sirini tahlil qiling."
-        },
-        "ba2554e5-0ad2-4d70-ab12-eab4d31d57e1": {
-          "description": "Yomg'ir o'rmonlari, cho'llar, arktika va botqoq erlar kabi ekotizimlarning har xil turlarida oziq-ovqat zanjirini aniqlang."
-        },
-        "f3e0667d-0843-4d41-ae79-7ec7911d5ea4": {
-          "description": "Muayyan turning kamayishi yoki boshqa turning ko'payishi kabi qiyinchiliklarga duch keladigan ekotizimdagi muvozanatni tiklash uchun simulyatsiyada kodni o'zgartiring."
-        },
-        "80a85b7e-ae26-4786-98ed-9632de96ea24": {
-          "description": "Turli komponentlarni ko'rsatadigan bir qator xaritalarni hisobga olgan holda, talabalar har bir xaritaning turli maqsadlarini tahlil qiladilar va taqqoslaydilar. "
-        },
-        "84fb7001-86ee-4932-8d58-b6122037e146": {
-          "description": "Sprite Lab asoslarini bir nechta spritlar yaratish, ularning joylashuvini o'zgartirish, o'lchamlarini belgilash, sprite-ni “gapirish”, xatti -harakatni belgilash va o'z dasturini interaktiv qilish uchun “qachon teginish” hodisasidan foydalanish orqali bilib oling."
-        },
-        "1a27b887-2aa2-4f1b-8137-85395c9d1db8": {
-          "description": "Xaritalarning maqsadi va qiymatini atrofdagi dunyoni tushunish vositasi sifatida chuqurroq baholashni rivojlantirish uchun xarita yaratuvchisining roli haqida o'ylang."
-        },
-        "fdb3a900-9efd-4710-8096-6108ed735cb6": {
-          "description": "Raqamli xaritalash diqqatga sazovor joylari loyihasini xarita loyihasini rejalashtirayotganda kichikroq vazifalarga bo'lish orqali parchadan foydalaning."
-        },
-        "98520886-dfc7-4343-a7ba-c32e0a8b043f": {
-          "description": "Talabalar o'zlarining raqamli xaritalash diqqatga sazovor joylari loyihasini kodlash bo'yicha qanday qadamlar qo'yadigan yozma rejani ishlab chiqadilar, jumladan, asosiy xususiyatlarni aniqlash, tartibni rejalashtirish va xaritasining maqsadini tavsiflash."
-        },
-        "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb": {
-          "description": "Xaritalar xaritalar ishlab chiqaruvchining qarorlariga qarab o'zgarishi mumkinligini aniqlang."
-        },
-        "46412626-979f-4311-a180-f4e43809b4db": {
-          "description": "Shaxsan tegishli va muhim diqqatga sazovor joylar bilan interaktiv xaritani kodlash orqali geografik bilimlarni, kodlash ko'nikmalarini va ijodkorlikni namoyish eting. "
-        },
-        "f625be86-4b66-4421-8a7c-f724fd230eb5": {
-          "description": "Belgilangan joylarning ahamiyatini etkazish uchun interaktiv xaritaga matnli tushuntirishlarni kiritish uchun kodlash ko'nikmalaridan foydalaning."
-        },
-        "829ee795-fac0-4509-8b25-cd11f443e52e": {
-          "description": "Xaritani interaktiv qilish, foydalanuvchilarni jalb qilish va geografik tushunishni yaxshilash uchun koddan foydalanish kuchini tushunishni namoyish eting. "
-        },
-        "ac701f5c-93be-48e3-b614-d5be26d5b11d": {
-          "description": "Muvaffaqiyatlar, qiyinchiliklar va olingan saboqlarni ta'kidlab, raqamli xaritani yaratish kodlash jarayoni haqida shaxsiy fikr yuriting. "
-        },
-        "ade6631d-16d1-43dd-a955-09eba7039e81": {
-          "description": "O'ylangan kuzatuvlarni yozing va tengdoshlar loyihalarini konstruktiv baholang, takomillashtirish bo'yicha fikr-mulohazalar va takliflarni taklif qiling. "
-        },
-        "f5a42772-0ecb-42e3-825f-81dc236b9151": {
-          "description": "Interfaol xaritani tengdoshlarga namoyish qilishda samarali taqdimot strategiyalarini mashq qiling, shu jumladan amalga oshirilgan xususiyatlar, loyihaning maqsadi va ahamiyati haqida aniq xabar bering. "
-        },
-        "9d012f97-41e4-4358-8970-f1be0bdb0254": {
-          "description": "Yulduzli ko'rpa yasash va sovg'a qilishning an'anaviy ahamiyatini tushuning"
-        },
-        "b3e48d93-ac56-49c0-ad15-6109d60a6c6b": {
-          "description": "Yulduzli choyshabdagi bir nechta takrorlanadigan naqshlarni aniqlang"
-        },
-        "e321a445-412d-447e-a8de-c78464723196": {
-          "description": "Qalam va qog'oz yordamida o'zlarining Star Quilt-ni loyihalashtiring"
-        },
-        "65af51b5-9269-4617-8e33-64e96072c136": {
-          "description": "Yulduzli yorgan dizaynini takrorlash uchun Artist kodlash vositasidan foydalaning"
-        },
-        "8a81dbf7-f967-408b-acf5-81304158f196": {
-          "description": "Ularning kodidagi naqshlarni aniqlang"
-        },
-        "96b5e04f-5a82-475f-9de3-4d81fa8d9c8f": {
-          "description": "Kodni yanada samarali qilish uchun ko'chadan foydalaning"
-        },
-        "c0741915-7e37-4bd0-8281-c716104a5185": {
-          "description": "Rassom burilish burchagi va yulduzda qancha nuqta borligi o'rtasidagi munosabatni tekshiring"
-        },
-        "1e3b8219-5cb5-4531-a0e3-4cb6cc2ddbcf": {
-          "description": "Rassomni tezroq joylashtirishga yordam berish uchun oldindan o'rnatilgan funktsiyalardan foydalaning"
-        },
-        "2686f662-8b36-49c8-bee7-1b81f1a3e328": {
-          "description": "O'z loyihalarini maxsus kishi bilan baham ko'ring"
-        },
-        "3ca06d70-09b5-4800-b634-5a70da493a14": {
-          "description": "Ularning kodlarini sharhlar bilan tartibga solingan holda saqlang"
-        },
-        "d5798a01-93fd-4e33-bbc1-fa94d5680493": {
-          "description": "Kodni yanada samarali qilish uchun ko'chadan foydalaning"
-        },
-        "3650e3e9-3d8b-4a16-b1ad-1435b57733c6": {
-          "description": "Hozirgi tarix haqida o'z vaqtining kapsulali she'ri uchun miya bo'roni g'oyalari"
-        },
-        "4baa81af-6866-4e2b-af12-293ed1109078": {
-          "description": " Kayfiyat va tasvirni aniqlang"
-        },
-        "cc4e38ec-858b-47c6-b5f7-58939e480ff5": {
-          "description": "Fon, matn effektlari, tovushlar, sprite va voqealarni o'rnatadigan bloklar yordamida mavjud vaqt kapsulasi she'rini jonlantiring"
-        },
-        "134a35e8-69f4-447d-a45a-aeb2884c7fe4": {
-          "description": "Rejalashtirish va o'z vaqt kapsula she'rlar yozish"
-        },
-        "925c11d6-1657-4f0a-b2ff-1e8749bcdc90": {
-          "description": "Vizual effektlar, tovushlar va tasvirlar tomoshabinning she'r tajribasini qanday oshirishini tushuntiring"
-        },
-        "978ca328-6255-4f50-8ea1-be477e9c668a": {
-          "description": "Vaqt kapsulasini aniqlang"
-        },
-        "e0806eaa-bf53-4836-a6df-93a1078130c9": {
-          "description": "Fon, matn effektlari, spritlar, tovushlar va voqealarni o'rnatadigan bloklar yordamida vaqt kapsulasi she'rini jonlantiring."
-        },
-        "1515d942-66bf-4bb5-9b0f-4d5505fed2ae": {
-          "description": "She'rlarida so'z tanlashni yaxshilash uchun mos rasm, tovush yoki effektni tanlang."
-        },
-        "84fd2102-a911-44a1-8445-c31014a978b7": {
-          "description": " Tarix qanday yozilishini va kuratorligini tushuning"
-        },
-        "9fcac90f-a22a-4e46-be89-2fff140dfbc4": {
-          "description": "Ilovalarini bir-birlari bilan baham ko'ring"
-        },
-        "d23e7686-3b3a-4f1a-abdc-f5d8830d10c1": {
-          "description": "O'z hikoyasini yozish qobiliyatining kuchini tushuning"
-        },
-        "4b7b140c-b345-48c6-b81b-eea3c37f2a0b": {
-          "description": "She'r kayfiyatidagi o'zgarishlarni jonlantirish uchun koddan foydalaning."
-        },
-        "a39a475f-a7c2-402f-abef-87340f6e4a45": {
-          "description": "She'rning ma'lum satrlarida sodir bo'ladigan harakatni boshlash uchun voqea bloklaridan foydalaning."
-        },
-        "2dfe199c-6e82-4979-a24f-0b20d8b14f2f": {
-          "description": "Vizual effektlar, tovushlar va tasvirlar tomoshabinning she'r tajribasini qanday oshirishini tushuntiring."
-        },
-        "521bc123-9d0a-4588-9b39-a3cc94229a64": {
-          "description": "O'z she'rlarini rejalashtirish va yozish."
-        },
-        "db6ecf8b-0374-46ea-b6cd-d59ac77879a1": {
-          "description": "O'quvchilardan kod va san'at yordamida o'z she'rlarini qanday tasvirlashni tanlashni talab qilib, tanqidiy fikrlash va muammolarni hal qilish ko'nikmalarini rivojlantiring."
-        },
-        "73f2fb47-8d56-4635-80b1-72a57c3c51d5": {
-          "description": "She'rlarida so'z tanlashni yaxshilash uchun tegishli rasmlar, tovushlar yoki effektlarni tanlang."
-        },
-        "9524e34c-35ef-4735-9404-b7ca08d80257": {
-          "description": "Fon, matn effektlari, spritlar, tovushlar va voqealarni o'rnatadigan bloklar yordamida she'rlarini jonlantiring."
-        },
-        "079c5cd4-3be3-44f1-9cf1-800dc8a2a86c": {
-          "description": "Matn va ushbu matnning vizual taqdimoti o'rtasida aloqa o'rnating, vizual tasvirlar matndagi aniq tavsiflarni qayerda aks ettirishini aniqlang."
-        },
-        "4903767c-89c4-4fbf-8879-93cf977803ae": {
-          "description": "Vizual va multimedia elementlari matnning ma'nosi, ohangi yoki go'zalligiga qanday hissa qo'shishini tasvirlab bering. "
-        },
-        "2ef99265-af55-4a2d-8719-58d4451f0610": {
-          "description": "Matnni jonlantirish uchun dasturlarni yozish qobiliyatining kuchini tushuning"
-        },
-        "a4fa2434-b9c5-4e36-819b-50398d230730": {
-          "description": "Ilovalarini bir-birlari bilan baham ko'ring"
-        },
-        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
-          "description": "Mashinani o‘rganish modelini o‘rgating va sinovdan o‘tkazing."
-        },
-        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
-          "description": "Mashinani o‘rganishda inson tarafkashligi qanday rol o‘ynashi haqida sabab."
-        },
         "706d588e-1af3-44f0-b4d8-7bffa52d45e8": {
           "description": "App Lab-da tugmachalar, matnlar, rasmlar, tovushlar va ekranlar kabi xususiyatlardan foydalangan holda o‘z dasturlaringizni yarating va o‘rtoqlashing."
         },
@@ -3116,36 +2900,6 @@
         "86f2847b-df75-4023-a828-61521c7bd71d": {
           "description": "Ijodiy asarni boshqa talabalar bilan baham ko‘ring."
         },
-        "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Kompyuterni ko'rish qanday qilib kichikroq komponentlarni yakuniy bashoratga birlashtirgan qatlamlardan qurilganligini tasvirlab bering"
-        },
-        "5bb33a90-28cb-40cb-9647-59a1818980b8": {
-          "description": "Tavsiya tizimlarini yaratishda turli istiqbollarga ehtiyoj borligini tushuntiring"
-        },
-        "bb862e7c-9808-4414-b027-fc747d58b6c0": {
-          "description": "Tavsiya tizimining chiqishini sozlash uchun sun'iy neyronning og'irliklaridan foydalaning"
-        },
-        "2b61407b-2812-4aa5-bdf0-661ae14b44d0": {
-          "description": "Ushbu modellarning ijobiy va salbiy yon ta'sirini muhokama qiling"
-        },
-        "941fa029-220b-4d04-880f-29d93c952a9d": {
-          "description": "Ijodiy matnli hujjat yaratish uchun AI bilan hamkorlik qiling"
-        },
-        "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "O'rganish uchun katta hajmdagi matnga ega bo'lish kompyuterlarga yozma shaklda aqlli ko'rinishga imkon berishini tasvirlab bering"
-        },
-        "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Ushbu modellar ijodiy yoki yo'qligini va bu tasvirlarga kim egalik qilishini muhokama qiling"
-        },
-        "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "AI diffuziya deb nomlanuvchi jarayon orqali juda real ko'rinadigan tasvirlarni yaratishi mumkinligini tasvirlab bering - bu erda model tafsilotlarni teskari o'zgartirish orqali tafsilotlarni chizishni o'rganadi."
-        },
-        "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "Vazifalarning qaysi turlari haqida algoritm bilan bajarilmasligi kerak"
-        },
-        "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
-          "description": "AI qanday ishlashini tushuntiring"
-        },
         "50b1fb31-4471-433d-a5f1-74e38886d49f": {
           "description": "App Lab-da tugmachalar, matnlar, rasmlar, tovushlar va ekranlar kabi xususiyatlardan foydalangan holda o‘z dasturlaringizni yarating va o‘rtoqlashing."
         },
@@ -3176,15 +2930,6 @@
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Ijodiy asarni boshqa talabalar bilan baham ko‘ring."
         },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish"
-        },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "foydalanuvchi ma'lumotlariga javob beradigan dasturlarni ishlab chiqish"
-        },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Kod bilan raqs animatsiyalari yarating"
-        },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
           "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish"
         },
@@ -3193,96 +2938,6 @@
         },
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Kod bilan raqs animatsiyalari yarating"
-        },
-        "6394fdc5-50c3-423e-8135-a64594824db3": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
-          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
-        },
-        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "303a2b74-af73-401c-8929-1fc1c5611f18": {
-          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
-        },
-        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
-          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
-        },
-        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": "Nima uchun shifrlash Internetdagi kundalik hayot uchun muhim ehtiyoj ekanligini tushuntiring."
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": "Qaysar shifrli vidjet yordamida Qaysar shifr bilan shifrlangan xabarni buzish"
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": "Frequency Analysis yordamida tasodifiy almashtirish bilan shifrlangan xabarni buzish"
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": "O‘zgartirish shifrlarining zaif va xavfsizlik nuqsonlarini tushuntiring"
-        },
-        "3e5eebcd-2140-4152-8654-410468108ab6": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
-          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
-        },
-        "59992d8c-d194-4063-82fa-001a0b6482d9": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "63be9575-1232-47a5-991c-8bd03ac7c949": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
-          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
-        },
-        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
         },
         "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
           "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
@@ -3302,30 +2957,6 @@
         "343631be-830a-44f6-a249-a6aa96ea38f0": {
           "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
         },
-        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
-          "description": "Sun'iy intellektni boshqarish hayotida o‘ynaydigan rolni ko‘rib chiqing."
-        },
-        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
-          "description": "Mashinani o‘rganish modelini o‘rgating va sinovdan o‘tkazing."
-        },
-        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
-          "description": "Mashinani o‘rganishda inson tarafkashligi qanday rol o‘ynashi haqida sabab."
-        },
-        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
-          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
-        },
-        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
-        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Kiritish hodisalari bilan bog‘liq harakatlarni aniqlang."
         },
@@ -3334,48 +2965,6 @@
         },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Ijodiy asarni boshqa talabalar bilan baham ko‘ring."
-        },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
-        },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
-          "description": "\"kodlash\" va \"informatika\" so‘zlariga ta'rif bering"
-        },
-        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
-          "description": "Informatika so‘z birikmalarini aniqlang"
-        },
-        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
-          "description": "Informatika tushunchalari va real dunyo o‘rtasidagi aloqalarni o‘rnatish"
-        },
-        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
-          "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": "Matnni siqish vidjeti (yo‘qotishsiz siqish sxemasi) yordamida matnni siqish muammosiga echim topish uchun tengdoshlar bilan hamkorlik qiling."
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": "Nima uchun siqishni optimal miqdorini aniqlash mumkin emasligini yoki \"qiyin ligini\" tushuntiring."
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": "Siqishni qiyinlashtiradigan ba'zi omillarni tushuntirib bering."
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": "Kayıpsız siqishni maqsadi va asoslarini aytib bering."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Talabalar kompyuter laboratoriyasiga o‘tishda nimani kutishlarini bilib oling."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Kompyuter sichqonchasi, trekpad yoki sensorli ekranga tegishli terminologiyadan foydalaning."
         }
       }
     }

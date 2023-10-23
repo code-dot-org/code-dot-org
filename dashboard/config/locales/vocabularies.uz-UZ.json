@@ -18,55 +18,6 @@
           "word": "Mualliflik huquqi",
           "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
         },
-        "bug/csd/2021": {
-          "word": "Bag",
-          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
-        },
-        "debugging/csd/2021": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/csd/2021": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "variable/csd/2021": {
-          "word": "O‘zgaruvchi",
-          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
-        },
-        "sprite/csd/2021": {
-          "word": "Sprait"
-        },
-        "condition/csd/2021": {
-          "word": "Shart"
-        },
-        "conditionals/csd/2021": {
-          "word": "Shartli bayonotlar"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstraksiya"
-        },
-        "function/csd/2021": {
-          "word": "Funksiya"
-        },
-        "user/csd/2021": {
-          "word": "Foydalanuvchi",
-          "definition": "Ob'ektni, shu jumladan dasturiy ta'minot va apparatni ishlatadigan kishi."
-        },
-        "user_interface/csd/2021": {
-          "word": "UI - Foydalanuvchi interfeysi"
-        },
-        "for_loop/csd/2021": {
-          "word": "For sikli",
-          "definition": "Boshlanish, tugash va o‘sish qadami (oralig‘i) oldindan belgilangan sikllar."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Mashinalar o‘rganishi",
-          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
-        },
-        "ethics/csd/2021": {
-          "word": "Etika"
-        },
         "algorithm/coursea/2021": {
           "word": "Algoritm",
           "definition": "Biror masalani yechish uchun qadamlar ro‘yxati."
@@ -605,51 +556,6 @@
           "word": "Mualliflik huquqi",
           "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
         },
-        "bug/csd/2022": {
-          "word": "Bag",
-          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
-        },
-        "debugging/csd/2022": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/csd/2022": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "variable/csd/2022": {
-          "word": "O‘zgaruvchi",
-          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
-        },
-        "sprite/csd/2022": {
-          "word": "Sprait"
-        },
-        "condition/csd/2022": {
-          "word": "Shart"
-        },
-        "conditionals/csd/2022": {
-          "word": "Shartli bayonotlar"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstraksiya"
-        },
-        "function/csd/2022": {
-          "word": "Funksiya"
-        },
-        "user/csd/2022": {
-          "word": "Foydalanuvchi",
-          "definition": "Ob'ektni, shu jumladan dasturiy ta'minot va apparatni ishlatadigan kishi."
-        },
-        "user_interface/csd/2022": {
-          "word": "UI - Foydalanuvchi interfeysi"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Mashinalar o‘rganishi",
-          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
-        },
-        "ethics/csd/2022": {
-          "word": "Etika"
-        },
         "algorithm/coursea/2022": {
           "word": "Algoritm",
           "definition": "Biror masalani yechish uchun qadamlar ro‘yxati."
@@ -1166,9 +1072,6 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Sun'iy Intellekt"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "Moslashuv",
           "definition": "Atrof-muhitdan yaxshiroq omon qolish uchun organizmdagi o'zgarish"
@@ -1197,189 +1100,6 @@
           "word": "Harakatlar/O‘zini tutish",
           "definition": "Sprite-ni qayta-qayta bajarishni istagan harakatlar to'plami. "
         },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "Kod (v)",
-          "definition": "kompyuter uchun ko'rsatmalar yozish uchun."
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Dastur"
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "Tez",
-          "definition": "Kompyuter ekranidagi foydalanuvchidan kirishni kutadigan xabar."
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Sprait",
-          "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "Fon",
-          "definition": "Ekrandagi asosiy narsalar yoki odamlar ortidagi ingl."
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "Belgilar",
-          "definition": "Hikoyadagi odam, hayvon, mavjudot, mavjudot."
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "Setting",
-          "definition": "Hikoyaning vaqti va joyi (yoki qachon va qaerda)."
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "Xulosa",
-          "definition": "Matnning eng muhim qismlarini, o'z so'zlaringiz bilan aytganda, ancha qisqa qilib aytib berish"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Kod",
-          "definition": "(v) Kompyuter uchun ko'rsatmalar yozish"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Shart",
-          "definition": "Biror narsa dastur biror harakatga ruxsat berishdan oldin uning to'g'riligini tekshiradi"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Shartli bayonotlar",
-          "definition": "Faqat ma'lum sharoitlarda ishlaydigan bayonotlar"
-        },
-        "ecosystem/csc-ecosystems/2023": {
-          "word": "Ekotizim",
-          "definition": "O'zaro ta'sir qiluvchi organizmlar va ularning muhitining biologik hamjamiyati"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo'lishiga olib keladigan harakat"
-        },
-        "overfishing/csc-ecosystems/2023": {
-          "word": "Ortiqcha baliq ovlash",
-          "definition": "Baliqlarni ko'paytirishdan ko'ra tezroq olib tashlash"
-        },
-        "simulation/csc-ecosystems/2023": {
-          "word": "Simulyatsiya",
-          "definition": "O'qish uchun kompyuter modeli."
-        },
-        "debug/csc-ecosystems/2023": {
-          "word": "Debug",
-          "definition": "Koddagi xatolar yoki muammolarni topish va tuzatish."
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "O‘zgaruvchi",
-          "definition": "Qiymatni saqlashi mumkin bo'lgan idish. "
-        },
-        "ecologist/csc-ecosystems/2023": {
-          "word": "Ekolog",
-          "definition": "Hayvonlar va o'simliklarning atrof-muhit bilan o'zaro ta'sirini o'rganadigan olim."
-        },
-        "energy/csc-ecosystems/2023": {
-          "word": "Energiya",
-          "definition": "Oziq-ovqat tarmoqlaridagi organizmlar o'rtasida ishlab chiqaruvchilardan iste'molchilarga o'tkaziladi. Energiya organizmlar tomonidan murakkab vazifalarni bajarish uchun ishlatiladi."
-        },
-        "food_chain/csc-ecosystems/2023": {
-          "word": "Oziq-ovqat zanjiri ",
-          "definition": "Ishlab chiqaruvchilardan iste'molchilarga va o'ljadan yirtqichlarga qadar iste'mol qilinadigan oziq-ovqat tartibida bog'langan organizmlar guruhi."
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kod"
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "Mo'ljal",
-          "definition": "Belgilangan joy - bu muhim ahamiyatga ega bo'lgan yoki joyni osongina tanib oladigan ob'ekt (tabiiy yoki sun'iy)."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Sprait",
-          "definition": "Dasturingizdagi rasm yoki belgi."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Xarita",
-          "definition": "Jismoniy xususiyatlar, shaharlar, yo'llar va boshqalarni ko'rsatadigan quruqlik yoki dengiz hududining tasviri."
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "Naqsh",
-          "definition": "Muntazam va takroriy tarzda sodir bo'ladigan yoki paydo bo'ladigan narsa"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "Romb",
-          "definition": "To'rtta teng qirrali, qarama-qarshi tomonlari parallel, qarama-qarshi burchaklari teng bo'lgan ko'pburchak"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "Yulduzli yorgan",
-          "definition": "Buyuk tekisliklardan kelgan tubjoy amerikaliklar orasida an'anaviy va qimmatbaho sovg'a"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Rassom",
-          "definition": "Siz uni deyarli hamma narsani chizish uchun kod yozishingiz mumkin"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Sikl",
-          "definition": "Takrorlanadigan kod ketma-ketligi"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "Nuqtai",
-          "definition": "Yulduz shaklining bir qismi"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "Qator",
-          "definition": "Bunday holda, tartibli romblar qatori"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "Konsentrik",
-          "definition": "Xuddi shu markazga ega bo'lgan ob'ektlar yoki shakllar"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Fikrlar",
-          "definition": "Kodning bir qismini tushuntiradigan o'zingizga eslatmalar. Ular dasturni o'zgartirmaydi, balki kodingizni tartibda saqlashga yordam beradi."
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "Tasvirlar",
-          "definition": "She'r yoki hikoya tomonidan yaratilgan aqliy tasvirlar"
-        },
-        "mood/csc-timecapsule/2023": {
-          "definition": "San'at yoki yozuvda tuyg'u, atmosfera yoki hissiyotning ifodasi."
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Sprait",
-          "definition": "Dasturingizdagi rasm yoki belgi"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "Muayyan vaqt oralig'ida yashagan odamning hayotidagi kunni ifodalovchi xotiralar va kundalik narsalarni saqlash uchun joy. "
-        },
-        "code/poetry/2023": {
-          "word": "Kod"
-        },
-        "event/poetry/2023": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "line/poetry/2023": {
-          "definition": "(she'r) - o'ng tomonda tugaydigan ketma-ket joylashtirilgan she'rning bo'linmasi."
-        },
-        "mood/poetry/2023": {
-          "definition": "San'at yoki yozuvda tuyg'u, atmosfera yoki hissiyotning ifodasi."
-        },
-        "program/poetry/2023": {
-          "word": "Dastur"
-        },
-        "poem/poetry/2023": {
-          "word": "She'r",
-          "definition": "O'quvchi ongida rasmlar, his -tuyg'ular va g'oyalarni yaratish uchun so'zlardan foydalanadigan yozuv chiziqlari."
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "Konstruktiv mulohazalar",
-          "definition": "Birovga o'z ishini yaxshilashga yordam beradigan hurmatli sharhlar"
-        },
-        "poetry_circle/poetry/2023": {
-          "definition": "Yangi she'rlarni sinab ko'rish va boshqalardan konstruktiv fikr olish uchun xavfsiz va ijodiy makon"
-        },
         "computer/csd/2023": {
           "word": "Kompyuter"
         },
@@ -1395,44 +1115,6 @@
         "copyright/csd/2023": {
           "word": "Mualliflik huquqi",
           "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
-        },
-        "bug/csd/2023": {
-          "word": "Bag",
-          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
-        },
-        "debugging/csd/2023": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/csd/2023": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "variable/csd/2023": {
-          "word": "O‘zgaruvchi",
-          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
-        },
-        "sprite/csd/2023": {
-          "word": "Sprait"
-        },
-        "condition/csd/2023": {
-          "word": "Shart"
-        },
-        "conditionals/csd/2023": {
-          "word": "Shartli bayonotlar"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstraksiya"
-        },
-        "function/csd/2023": {
-          "word": "Funksiya"
-        },
-        "user/csd/2023": {
-          "word": "Foydalanuvchi",
-          "definition": "Ob'ektni, shu jumladan dasturiy ta'minot va apparatni ishlatadigan kishi."
-        },
-        "user_interface/csd/2023": {
-          "word": "UI - Foydalanuvchi interfeysi"
         },
         "machine_learning/csd/2023": {
           "word": "Mashinalar o‘rganishi",
@@ -1952,37 +1634,6 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Mashinalar o‘rganishi",
-          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Algoritm",
-          "definition": "muammoni hal qilish yoki qaror qabul qilish uchun bir qator qadamlar"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Tarmoq",
-          "definition": "Bir-biriga bog'langan narsalar to'plami. Ushbu ulanishlarga rioya qilish algoritmdagi bosqichlarni, masalan, oqim sxemasi kabi ifodalashi mumkin."
-        },
-        "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Katta til modeli (LLM)",
-          "definition": "AIning umumiy maqsadli shakli bo'lib, u juda katta bilimlar asosida o'qitiladi"
-        },
-        "diffusion_ai/how-ai-works/2023": {
-          "word": "Diffuziya AI",
-          "definition": "tasvirni shovqinga aylantirish va jarayonni o'zgartirishga sun'iy intellektni o'rgatish"
-        },
-        "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (Generativ dushmanlik tarmog'i)",
-          "definition": "biror narsa yaratish uchun ikkita raqobatdosh AI modelidan foydalanish usuli"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "Sun'iy Intellekt",
-          "definition": "mashinalarning o'rganish va muammolarni hal qilish qobiliyati."
-        },
-        "ethics/how-ai-works/2023": {
-          "word": "Etika"
-        },
         "code/aquatic/unversioned": {
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },
@@ -2033,28 +1684,6 @@
           "word": "Dastur",
           "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
         },
-        "code/dance-2019/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
         "code/dance-extras/unversioned": {
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },
@@ -2074,112 +1703,6 @@
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "program/dance/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/flappy/unversioned": {
-          "word": "Kod",
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/flappy/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/frozen/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/frozen/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/gumball/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/gumball/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/hero/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "function/hero/unversioned": {
-          "word": "Funksiya",
-          "definition": "Siz osongina qayta-qayta chaqirishingiz mumkin bo‘lgan kod parchasi."
-        },
-        "program/hero/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Sezar Shifri ",
-          "definition": "Alifbo belgilarini biror songa siljitish yordamida shifrlash texnikasi"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Shifr",
-          "definition": "Shifrlashni amalga oshiradigan texnika (yoki algoritm) uchun umumiy atama"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Shifrlashni yechish",
-          "definition": "Shifrning barcha xususiyatlarini bilmasdan maxfiy xabarni dekodlashga urinayotganda, siz shifrlashni \"buzishga\" harakat qilasiz."
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Deshifrlash (Decryption)",
-          "definition": "shifrlashni teskari yo‘naltiradigan, maxfiy xabarni qabul qiladigan va asl matnni qayta tiklaydigan jarayon"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Encryption",
-          "definition": "xabarlarni ularni faqat \"vakolatli\" tomonlar o‘qiy olishi va maxfiy saqlash uchun kodlash jarayoni."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Tasodifiy almashtirish shifri",
-          "definition": "alifboning har bir harfini tasodifiy tanlangan boshqa alifbo harfiga mos qiladigan shifrlash texnikasi."
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/iceage/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/iceage/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/infinity/unversioned": {
           "word": "Dastur",
           "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
         },
@@ -2213,34 +1736,9 @@
           "word": "Dastur",
           "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Mashinalar o‘rganishi",
-          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
-        },
         "event/outbreak/unversioned": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "code/playlab/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/playlab/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/poem-art/2021": {
-          "word": "Kod"
-        },
-        "event/poem-art/2021": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "program/poem-art/2021": {
-          "word": "Dastur"
         },
         "code/sports/unversioned": {
           "word": "Kod"
@@ -2256,32 +1754,6 @@
         "program/sports/unversioned": {
           "word": "Dastur",
           "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/starwars/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/starwars/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Nosozliklarni bartaraf etish (Debugging)",
-          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Dastur",
-          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Lossless Compression",
-          "definition": "dastlabki ma'lumotlarni siqilgan ma'lumotlardan mukammal qayta tiklashga imkon beradigan ma'lumotlarni siqish algoritmi. Matnni siqish uchun eng ko'p ishlatiladi (masalan .zip siqish)"
         }
       }
     }
