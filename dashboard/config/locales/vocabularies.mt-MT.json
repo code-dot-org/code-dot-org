@@ -5,12 +5,6 @@
         "copyright/csd/2021": {
           "word": "Drittijiet tal-Awtur"
         },
-        "variable/csd/2021": {
-          "word": "Varjabbli"
-        },
-        "function/csd/2021": {
-          "word": "Funzjoni"
-        },
         "copyright/coursee/2021": {
           "word": "Drittijiet tal-Awtur"
         },
@@ -38,12 +32,6 @@
         "copyright/csd/2022": {
           "word": "Drittijiet tal-Awtur"
         },
-        "variable/csd/2022": {
-          "word": "Varjabbli"
-        },
-        "function/csd/2022": {
-          "word": "Funzjoni"
-        },
         "function/coursee/2022": {
           "word": "Funzjoni"
         },
@@ -68,17 +56,8 @@
         "define/express/2022": {
           "word": "Idefinixxi"
         },
-        "variable/csc-ecosystems/2023": {
-          "word": "Varjabbli"
-        },
         "copyright/csd/2023": {
           "word": "Drittijiet tal-Awtur"
-        },
-        "variable/csd/2023": {
-          "word": "Varjabbli"
-        },
-        "function/csd/2023": {
-          "word": "Funzjoni"
         },
         "function/coursee/2023": {
           "word": "Funzjoni"
@@ -103,9 +82,6 @@
         },
         "define/express/2023": {
           "word": "Idefinixxi"
-        },
-        "function/hero/unversioned": {
-          "word": "Funzjoni"
         }
       }
     }
