@@ -46,10 +46,30 @@ class RubricsController < ApplicationController
   def submit_evaluations
     return head :forbidden unless current_user&.teacher?
     permitted_params = params.permit(:id, :student_id)
+    rubric = Rubric.find(permitted_params[:id])
     learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
     evaluations = LearningGoalTeacherEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goal_ids, teacher_id: current_user.id)
+
+    # Get project_id and source_version for learning goal evaluations
+    user_storage_id = storage_id_for_user_id(permitted_params[:student_id])
+    script_level = rubric.lesson.script_levels.find {|sl| sl.levels.include?(rubric.level)}
+    channel_token = ChannelToken.find_channel_token(
+      script_level.level,
+      user_storage_id,
+      script_level.script_id
+    )
+    project_id = nil
+    version_id = nil
+    if channel_token
+      _owner_id, project_id = storage_decrypt_channel_id(channel_token.channel)
+      source_data = SourceBucket.new.get(channel_token.channel, "main.json")
+      if source_data[:status] == 'FOUND'
+        version_id = source_data[:version_id]
+      end
+    end
+
     submitted_at = Time.now
-    if evaluations.update_all(submitted_at: submitted_at)
+    if evaluations.update_all(submitted_at: submitted_at, project_id: project_id, project_version: version_id)
       render json: {submittedAt: submitted_at}
     else
       return head :bad_request
