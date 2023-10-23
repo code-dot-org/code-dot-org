@@ -12,52 +12,6 @@
           "word": "Copyright",
           "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
-        "bug/csd/2021": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/csd/2021": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/csd/2021": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "variable/csd/2021": {
-          "word": "Variable",
-          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
-        },
-        "sprite/csd/2021": {
-          "word": "Sprite"
-        },
-        "condition/csd/2021": {
-          "word": "Condició"
-        },
-        "conditionals/csd/2021": {
-          "word": "Condicionals"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstracció"
-        },
-        "function/csd/2021": {
-          "word": "Funció"
-        },
-        "user/csd/2021": {
-          "word": "Usuari",
-          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
-        },
-        "user_interface/csd/2021": {
-          "word": "Interfície d'usuari"
-        },
-        "for_loop/csd/2021": {
-          "word": "Bucle \"for\"",
-          "definition": "Bucles que tenen un inici, un final i un increment predeterminats (interval de pas)."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Aprenentatge automàtic",
-          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
-        },
         "algorithm/coursea/2021": {
           "word": "Algorisme",
           "definition": "Llista de passos necessaris per fer una tasca."
@@ -596,48 +550,6 @@
           "word": "Copyright",
           "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
-        "bug/csd/2022": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/csd/2022": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/csd/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "variable/csd/2022": {
-          "word": "Variable",
-          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
-        },
-        "sprite/csd/2022": {
-          "word": "Sprite"
-        },
-        "condition/csd/2022": {
-          "word": "Condició"
-        },
-        "conditionals/csd/2022": {
-          "word": "Condicionals"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstracció"
-        },
-        "function/csd/2022": {
-          "word": "Funció"
-        },
-        "user/csd/2022": {
-          "word": "Usuari",
-          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
-        },
-        "user_interface/csd/2022": {
-          "word": "Interfície d'usuari"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Aprenentatge automàtic",
-          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
-        },
         "algorithm/coursea/2022": {
           "word": "Algorisme",
           "definition": "Llista de passos necessaris per fer una tasca."
@@ -1149,9 +1061,6 @@
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Intel·ligència Artificial"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptació",
           "definition": "Un canvi en un organisme per sobreviure millor al seu entorn"
@@ -1180,197 +1089,6 @@
           "word": "Comportament",
           "definition": "Un conjunt d'accions que voleu que un sprite realitzi una vegada i una altra. "
         },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "Codi (v)",
-          "definition": "per escriure instruccions per a un ordinador."
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Programa",
-          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "Indicador o pregunta",
-          "definition": "Un missatge que apareix a la pantalla de l'ordinador i que espera que l'usuari hi introdueixi informació."
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Sprite",
-          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "Fons",
-          "definition": "El visual darrere de les principals coses o persones a la pantalla."
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "Caràcter",
-          "definition": "Una persona, animal, ésser, criatura de cosa en una història."
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "Configuració",
-          "definition": "El temps i el lloc (o quan i on) d'una història."
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "Resum",
-          "definition": "Explicar les parts més importants d'un text, amb les teves pròpies paraules, d'una manera molt més curta"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Codi",
-          "definition": "(v) Per escriure instruccions per a un ordinador"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Condició",
-          "definition": "Una cosa que un programa comprova per veure si és cert abans de permetre una acció"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Condicionals",
-          "definition": "Declaracions que només s'executen en determinades condicions"
-        },
-        "ecosystem/csc-ecosystems/2023": {
-          "word": "Ecosistema",
-          "definition": "Una comunitat biològica d'organismes que interactuen i el seu entorn"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa"
-        },
-        "overfishing/csc-ecosystems/2023": {
-          "word": "Sobrepesca",
-          "definition": "L'eliminació dels peixos més ràpid del que poden reproduir"
-        },
-        "simulation/csc-ecosystems/2023": {
-          "word": "Simulació",
-          "definition": "Un model informàtic amb la finalitat d'estudi."
-        },
-        "debug/csc-ecosystems/2023": {
-          "word": "Depuració",
-          "definition": "Trobar i solucionar errors o problemes en el codi."
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Variable",
-          "definition": "Un contenidor que pot emmagatzemar un valor. "
-        },
-        "ecologist/csc-ecosystems/2023": {
-          "word": "Ecologista",
-          "definition": "Científic que estudia com interactuen animals i plantes amb el seu entorn."
-        },
-        "energy/csc-ecosystems/2023": {
-          "word": "Energia",
-          "definition": "Transferit entre organismes en xarxes d'aliments de productors a consumidors. L'energia és utilitzada pels organismes per dur a terme tasques complexes."
-        },
-        "food_chain/csc-ecosystems/2023": {
-          "word": "Cadena d'Aliments ",
-          "definition": "Conjunt d'organismes vinculats per ordre dels aliments que mengen, des dels productors fins als consumidors, i des de les preses fins als depredadors."
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Codi",
-          "definition": "Escriure instruccions per a un ordinador."
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "Landmark",
-          "definition": "Un punt de referència és un objecte (natural o fet a mà) que té importància o fa que un lloc sigui fàcilment recognoscible."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Sprite",
-          "definition": "Una imatge o personatge en el seu programa."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Mapa",
-          "definition": "Representació d'una zona terrestre o marítima que mostra trets físics, ciutats, carreteres, etc."
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "Patró",
-          "definition": "Una cosa que passa o apareix de manera regular i repetida"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "Rombe",
-          "definition": "Un polígon amb quatre costats iguals, els costats oposats són paral·lels, els angles oposats són iguals"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "Cobrellit estrella",
-          "definition": "Un regal tradicional i valorat entre els nadius americans de les Grans Planes"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Artista",
-          "definition": "Vostè pot escriure codi per fer que dibuixi gairebé qualsevol cosa"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Bucle",
-          "definition": "Una seqüència de codi que es repeteix"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "Punt",
-          "definition": "Una part de la forma de l'estrella"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "Fila",
-          "definition": "En aquest cas, una línia ordenada de rombes"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "Concèntric",
-          "definition": "Objectes o formes que comparteixen el mateix centre"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Comentaris",
-          "definition": "Notes a tu mateix que expliquen una secció de codi. No alteren el programa però ajuden a mantenir el codi en ordre."
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "Imatges",
-          "definition": "Imatges mentals produïdes per un poema o conte"
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "Estat d'ànim",
-          "definition": "L'expressió d'un sentiment, atmosfera o emoció en l'art o l'escriptura."
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Sprite",
-          "definition": "Una imatge o personatge al vostre programa"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "Un lloc on contenir records i objectes quotidians que representen un dia de la vida d'algú que viu durant un període de temps concret. "
-        },
-        "code/poetry/2023": {
-          "word": "Codi",
-          "definition": "Escriure instruccions per a un ordinador."
-        },
-        "event/poetry/2023": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "line/poetry/2023": {
-          "word": "Línia",
-          "definition": "(poesia) - una subdivisió d'un poema disposat en una fila que acaba al marge dret."
-        },
-        "mood/poetry/2023": {
-          "word": "Estat d'ànim",
-          "definition": "L'expressió d'un sentiment, atmosfera o emoció en l'art o l'escriptura."
-        },
-        "program/poetry/2023": {
-          "word": "Programa",
-          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "poem/poetry/2023": {
-          "word": "Poema",
-          "definition": "Línies d'escriptura que utilitzen paraules per crear imatges, sentiments i idees en la ment del lector."
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "Retroalimentació constructiva",
-          "definition": "Comentaris respectuosos que ajuden a algú a millorar el seu treball"
-        },
-        "poetry_circle/poetry/2023": {
-          "word": "Cercle de Poesia",
-          "definition": "Un espai segur i creatiu per provar nous poemes i obtenir comentaris constructius d'altres"
-        },
         "computer/csd/2023": {
           "word": "Ordinador"
         },
@@ -1380,44 +1098,6 @@
         "copyright/csd/2023": {
           "word": "Copyright",
           "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
-        },
-        "bug/csd/2023": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/csd/2023": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/csd/2023": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "variable/csd/2023": {
-          "word": "Variable",
-          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
-        },
-        "sprite/csd/2023": {
-          "word": "Sprite"
-        },
-        "condition/csd/2023": {
-          "word": "Condició"
-        },
-        "conditionals/csd/2023": {
-          "word": "Condicionals"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstracció"
-        },
-        "function/csd/2023": {
-          "word": "Funció"
-        },
-        "user/csd/2023": {
-          "word": "Usuari",
-          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
-        },
-        "user_interface/csd/2023": {
-          "word": "Interfície d'usuari"
         },
         "machine_learning/csd/2023": {
           "word": "Aprenentatge automàtic",
@@ -1934,34 +1614,6 @@
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Aprenentatge automàtic",
-          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Algorisme",
-          "definition": "una sèrie de passos per resoldre un problema o prendre una decisió"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Xarxa",
-          "definition": "Una col·lecció d'articles connectats entre si. Seguint aquestes connexions es poden representar els passos en un algoritme, com un diagrama de flux."
-        },
-        "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Model d'idioma gran (LLM)",
-          "definition": "una forma de propòsit general d'IA que s'entrena en un cos molt, molt gran de coneixement"
-        },
-        "diffusion_ai/how-ai-works/2023": {
-          "word": "Difusió AI",
-          "definition": "convertir una imatge a soroll i entrenar una IA per revertir el procés"
-        },
-        "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (xarxa adversarial generativa)",
-          "definition": "una forma d'utilitzar dos models d'IA competidors per generar alguna cosa"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "Intel·ligència Artificial",
-          "definition": "la capacitat de les màquines per aprendre i resoldre problemes."
-        },
         "code/aquatic/unversioned": {
           "word": "Codificar o programar",
           "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
@@ -2014,30 +1666,6 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
-        "code/dance-2019/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
         "code/dance-extras/unversioned": {
           "word": "Codificar o programar",
           "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
@@ -2059,94 +1687,6 @@
           "definition": "Una acció que fa que passi alguna cosa."
         },
         "program/dance/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/flappy/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/flappy/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/frozen/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/frozen/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/gumball/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/gumball/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/hero/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "function/hero/unversioned": {
-          "word": "Funció",
-          "definition": "Un fragment de codi que es pot cridar fàcilment una vegada i una altra."
-        },
-        "program/hero/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/hourofcode/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/iceage/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/iceage/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/infinity/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/infinity/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
@@ -2182,10 +1722,6 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Aprenentatge automàtic",
-          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
-        },
         "event/outbreak/unversioned": {
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
@@ -2193,38 +1729,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "Models i simulacions",
           "definition": "Programes que repliquen o imiten característiques clau d'un esdeveniment del món real per tal d'investigar com es comporta sense el cost, el temps o el perill que implica executar un experiment a la vida real."
-        },
-        "code/playlab/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/playlab/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/poem-art/2021": {
-          "word": "Codi",
-          "definition": "Escriure instruccions per a un ordinador."
-        },
-        "event/poem-art/2021": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "line/poem-art/2021": {
-          "word": "Línia",
-          "definition": "(poesia) - La subdivisió d'un poema disposada en una fila que acaba al marge dret. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Estat d'ànim",
-          "definition": "L'expressió d'un sentiment, ambient o emoció a través de les arts visuals o escrites."
-        },
-        "program/poem-art/2021": {
-          "word": "Programa",
-          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
         },
         "code/sports/unversioned": {
           "word": "Codi"
@@ -2238,30 +1742,6 @@
           "definition": "Una acció que fa que passi alguna cosa."
         },
         "program/sports/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/starwars/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/starwars/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/starwarsblocks/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         }
