@@ -1732,3 +1732,18 @@ ur:
           lessons:
             lesson-1:
               name: ہمارے AI کا ضابطہ اخلاق
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: تعارف
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: تعارف
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: تعارف
+          lesson_groups:
+            lessonGroup-7:
+              display_name: تعارف

@@ -1648,6 +1648,17 @@ ur:
               display_name: ایونٹس/واقعات
             csf_loops:
               display_name: لوپس
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: تعارف
+          lessons:
+            lesson-7:
+              name: تعارف
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: تعارف
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -1670,6 +1681,10 @@ ur:
           lessons:
             lesson-3:
               name: تشخیصات
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: تعارف
         virustest:
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
             پھیلنے کا سیمیولیشن بنائیں.
