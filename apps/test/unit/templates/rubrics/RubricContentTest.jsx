@@ -305,4 +305,24 @@ describe('RubricContent', () => {
     expect(learningGoal1Wrapper.prop('aiUnderstanding')).to.equal(null);
     expect(learningGoal1Wrapper.prop('aiConfidence')).to.equal(null);
   });
+
+  it('shows info alert when not viewing project level', () => {
+    const wrapper = shallow(
+      <RubricContent {...defaultProps} onLevelForEvaluation={false} />
+    );
+    expect(wrapper.find('InfoAlert').length).to.equal(1);
+    expect(wrapper.find('InfoAlert').props().text).to.equal(
+      'Rubrics can only be evaluated on project levels.'
+    );
+  });
+
+  it('shows info alert when not viewing student work', () => {
+    const wrapper = shallow(
+      <RubricContent {...defaultProps} studentLevelInfo={null} />
+    );
+    expect(wrapper.find('InfoAlert').length).to.equal(1);
+    expect(wrapper.find('InfoAlert').props().text).to.equal(
+      'Select a student from the Teacher Panel to view and evaluate their work.'
+    );
+  });
 });
