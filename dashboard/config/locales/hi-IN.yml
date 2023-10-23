@@ -4,6 +4,7 @@ hi:
     attributes:
       user:
         age: उम्र
+        ai_settings_header: ए.आई. सेटिंग्स
         current_password: वर्तमान पासवर्ड
         edit_header: खाता विवरण संपादित करें
         email: ईमेल

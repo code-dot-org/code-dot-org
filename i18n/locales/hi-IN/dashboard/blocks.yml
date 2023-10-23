@@ -2,6 +2,15 @@
 hi:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': बहुत अधिक
+            '"just right"': बस ठीक
+            '"too little"': बहुत कम
       AmysBlocks_setPromptWithChoices:
         text: उपयोगकर्ता को {QUESTION} वेरिएबल {VAR} के लिए विकल्पों {A}{B}{C} के साथ सुझाव दें
       AmysBlocks_spriteSayVar:
@@ -2517,6 +2526,19 @@ hi:
           DIR:
             right: दाएं ↻
             left: बाएं ↺
+      ecosystems_catchMe:
+        text: पकड़ें {THIS}
+      ecosystems_eat:
+        text: खाएं {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': बहुत अधिक
+            '"just right"': बस ठीक
+            '"too little"': बहुत कम
       ecosystems_int10:
         options:
           VALUE:
@@ -2530,6 +2552,24 @@ hi:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: 'स्थान x: {X} y: {Y} के बीच नया {GROUP} बनाएं {N}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: "{LOCATION_GENERATOR} पर नया {ANIMATION_NAME} बनाएं {NUM}"
+      ecosystems_makeNumSpritesWithinRange:
+        text: "{RANGE} पर नया {ANIMATION_NAME} बनाएं {NUM}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": शीर्ष
+            "{x1:0, x2:400, y1:150, y2:250}": मध्य
+            "{x1:0, x2:400, y1:0, y2:200}": नीचे
+      ecosystems_randomLocationWithinRange:
+        text: x न्यूनतम{X1}x अधिकतम{X2}y न्यूनतम{Y1}y अधिकतम{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": शीर्ष
+            "{x1:0, x2:400, y1:0, y2:200}": नीचे
       storylab_printText:
         text: प्रिंट करें {TEXT}
       storylab_setForegroundEffect2:
