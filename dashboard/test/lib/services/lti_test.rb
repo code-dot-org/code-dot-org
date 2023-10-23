@@ -40,7 +40,7 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'partially_create_user should create User::TYPE_TEACHER when id_token contains teacher/admin roles' do
-    user = Services::Lti.partially_create_user(nil, id_token)
+    user = Services::Lti.partially_create_user(id_token)
     user.save
     assert user
     assert_equal user.user_type, User::TYPE_TEACHER
@@ -51,7 +51,7 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'partially_create_user should create User::TYPE_STUDENT when id_token contains student roles' do
-    student_user = Services::Lti.partially_create_user(nil, student_id_token)
+    student_user = Services::Lti.partially_create_user(student_id_token)
     student_user.save
     assert student_user
     assert_equal student_user.user_type, User::TYPE_STUDENT

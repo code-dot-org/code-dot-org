@@ -85,14 +85,16 @@ class LtiV1Controller < ApplicationController
       return wrong_resource_type unless message_type == 'LtiResourceLinkRequest'
 
       user = Queries::Lti.get_user(decoded_jwt)
+      target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
 
       if user
         sign_in user: user
-        target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
         redirect_to target_link_uri
       else
-        Services::Lti.partially_create_user(session, decoded_jwt)
-        # TODO: "https://purl.imsglobal.org/spec/lti/claim/target_link_uri" - After signup, redirect to target_link_uri
+        user = Services::Lti.partially_create_user(decoded_jwt)
+        PartialRegistration.persist_attributes(session, user)
+        session[:user_return_to] = target_link_uri
+        redirect_to new_user_registration_url
       end
 
     else

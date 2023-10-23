@@ -36,13 +36,7 @@ class Policies::Lti
   end
 
   # TODO: Nick, impliment the logic!
-  def self.lti?(user)
-    return true
-  end
-
-  def self.user_attributes_with_authentication_options(user)
-    attributes = user.attributes
-    authentication_options = user.authentication_options.map {|ao| ao.attributes.compact}
-    attributes.merge('authentication_options_attributes' => authentication_options).compact
-  end
+  # def self.lti?(user)
+  #   return true
+  # end
 end
