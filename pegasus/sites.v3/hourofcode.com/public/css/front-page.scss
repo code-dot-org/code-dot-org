@@ -69,412 +69,44 @@ section.map {
 
 // Stats
 section.stats {
-  padding-top: 0;
 
-  .wrapper {
-    padding-top: 6em;
-    border-top: 1px solid rgba($darkest_gray, .1);
+  .stats-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
 
-    @media screen and (max-width: $width-sm) {
-      padding-top: 3em;
+    @media (max-width: $width-md) {
+      justify-content: space-around;
     }
-  }
 
-  figure {
-    width: 26%;
-    text-align: center;
+    @media (max-width: $width-sm) {
+      justify-content: center;
+    }
 
-    @media screen and (max-width: $width-sm) {
-      margin: 0 auto;
-      width: 62%;
+    figure {
+      width: 65%;
 
-      &:not(:last-child){
-        margin-bottom: 4em;
+      @media (min-width: $width-sm) {
+        width: 25%;
       }
     }
 
     img {
-      width: 250px;
-
-      @media screen and (max-width: $width-lg) {
-        width: 100%;
-      }
+      width: 85%;
+      margin-bottom: 1.5rem;
     }
 
     figcaption {
-      text-align: center;
-      font-size: 18px;
-      margin-top: 1em;
-
-      @media screen and (max-width: $width-md) {
-        font-size: 16px;
-      }
+      font-weight: var(--regular-font-weight);
     }
   }
-}
 
-// Host an Hour
-section.host-an-hour {
-  text-align: center;
-  padding: 0 1em 3em;
-
-  button {
-    float: none !important; // removes inline styles on views/signup_button.haml
-    margin: 0 !important; // removes inline styles on views/signup_button.haml
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
-
-  p {
-    margin: 5em auto 1em;
-    font-size: 1.15em;
-  }
-}
-
-.ctabuttongroup {
-  text-align: center;
-  width: 75%;
-  margin: 0 auto 2em;
-}
-
-.ctabutton {
-  font-size: 16px;
-  height: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 5px 0px;
-}
-
-.ctabutton-white {
-  font-size: 16px;
-  height: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 5px 0px;
-  background-color: white;
-  border-color: $darkest_gray;
-  color: $darkest_gray;
-}
-
-.ctabutton-white-border {
-  font-size: 18px;
-  height: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 5px 0px;
-  background-color: white;
-  border-color: $darkest_gray;
-  color: $darkest_gray;
-}
-
-.ctabutton-white-inverse {
-  font-size: 16px;
-  height: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 5px 0px;
-  background-color: initial;
-  border-color: white;
-  color: white;
-}
-
-.ctabuttonatag {
-  text-decoration: none;
-}
-
-.ctatext {
-  display: inline-block;
-  font-size: 18px;
-
-  padding: 0px 4px;
-}
-
-.category-header {
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
-}
-
-.category-button {
-  background-color: #5b6770;
-  border-radius: 5px;
-  color: white;
-  font-family: var(--main-font);
-  font-weight: var(--regular-font-weight);
-  margin: 5px 0px;
-  padding: 8px;
-}
-
-a.category-link {
-  text-decoration: none;
-}
-
-.category-link .category-button:hover {
-  opacity: 0.7;
-}
-
-.robotics-providers {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.robotics-provider {
-  padding: 20px;
-  border: 1px solid #aaa;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  background-color: white;
-}
-
-.announcements-body {
-  background-color: #5c3f7f;
-  border-radius: 10px;
-  padding: 20px;
-  color: white;
-  max-width: 30%;
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
-// HoC Live Spanish banner
-.banner-box {
-  display: table;
-  max-width: 1170px;
-  max-height: 400px;
-  margin: 0 auto;
-
-  .banner-image-box {
-    display: table-cell;
-    float: none;
-    width: 50%;
-    height: auto;
-    background-color: #e0ffff;
-    text-align: center;
-    vertical-align: middle;
-    padding: 20px;
-  }
-
-  .banner-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-
-  .banner-message-box {
-    display: table-cell;
-    float: none;
-    width: 50%;
-    height: auto;
-    background-color: #00adbc;
-    text-align: left;
-    vertical-align: middle;
-    padding: 20px;
-  }
-
-  .banner-title {
-    font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
-    color: white;
-    line-height: 1.2;
-    margin: 0 auto 1em;
-  }
-
-  .banner-message {
-    color: white;
-    line-height: 1.2;
-  }
-
-  .ctabutton-white {
-    border: 0;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 600px) {
-  .announcements-body {
-    min-width: 100%;
-  }
-
-  .robotics-provider {
-    max-width: 45%;
-  }
-
-  .front-header-banner .front-header-title p {
-    font-size: 34px;
-    line-height: 34px;
-  }
-
-  .front-header-description {
-    font-size: 16px;
-    line-height: 18px;
-    margin-bottom: 20px;
-  }
-
-  .banner-title {
-    font-size: 16px;
-  }
-
-  .banner-message {
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1200px) {
-  .announcements-body {
-    min-width: 100%;
-  }
-
-  .robotics-provider {
-    max-width: 40%;
-  }
-
-  .front-header-banner .front-header-title p {
-    font-size: 44px;
-    line-height: 44px;
-  }
-
-  .front-header-description {
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 80px;
-  }
-
-  .banner-title {
-    font-size: 20px;
-  }
-
-  .banner-message {
-    font-size: 18px;
-  }
-}
-
-@media screen and (min-width: 1201px) {
-  .announcements-body {
-    min-width: 100%;
-  }
-
-  .robotics-provider {
-    width: 22%;
-  }
-
-  .front-header-banner .front-header-title p {
-    font-size: 44px;
-    line-height: 44px;
-  }
-
-  .front-header-description {
-    font-size: 24px;
-    margin-bottom: 80px;
-  }
-
-  .banner-title {
-    font-size: 24px;
-  }
-
-  .banner-message {
-    font-size: 20px;
-    line-height: 1.5
-  }
-}
-
-.purple-background {
-  background-color: #7665a0;
-}
-
-.cyan-background {
-  background-color: #0094ca;
-}
-
-.green-background {
-  background-color: #b9bf15;
-}
-
-.teal-background {
-  background-color: $teal;
-}
-
-#textbacking {
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-}
-
-.front-header-banner {
-  color: white;
-  margin-top: 0px;
-}
-
-.front-header-banner .front-header-title {
-  color: #00ADBC;
-  margin-top: 0px;
-  margin-bottom: 20px;
-}
-
-.front-header-banner .front-header-title p {
-  font-family: var(--main-font) !important;
-  font-weight: var(--semi-bold-font-weight);
-  margin-bottom: 0px;
-}
-
-.front-header-description {
-  color: #4d575f;
-  max-width: 800px;
-  display: inline-block;
-}
-
-.watch-video {
-  color:white;
-  text-shadow: 0px 0px 4px rgba(31, 31, 31, 1);
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding: 20px
-}
-
-#leftbutton {
-  position: absolute;
-  left: 0;
-  top: 0;
-  text-align: center;
-  width: 100%;
-}
-
-#leftbox {
-  position: relative;
-  margin-top: 60px;
-  padding-bottom: 20px;
-  height: 300px;
-}
-
-#leftvideo {
-  width: 100%;
-}
-
-#volunteer-signup {
-  text-align: center;
-  margin-top: 25px;
-  font-size: 16px;
-}
-
-#volunteer-signup a {
-  color: white;
-  font-family: var(--main-font);
-  font-weight: var(--regular-font-weight);
-  text-decoration: none;
-}
-
-.students-served {
-  font-size: 16px;
-  line-height: 16px;
-  padding-bottom: 15px;
-}
-
-.required-asterisk {
-  color: #008b9a;
-}
-
-/* Hiding this text snippet visually so the JS on the school census form will work */
-#join-us-header {
-  display: none;
 }

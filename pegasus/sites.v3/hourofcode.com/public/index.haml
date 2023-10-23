@@ -74,30 +74,6 @@ social:
         %a.link-button{href: resolve_url("/events")}
           =hoc_s(:call_to_action_register_your_hoc)
 
-
-
-  -# Highlights
-  %section.highlights
-    .wrapper
-      %h2=hoc_s(:highlights_header)
-      = view :home_highlights
-
-  -# Stats
-  %section.stats.bg-neutral-light
-    .wrapper
-      = view :home_stats
-      =view :signup_button
-
-  -# Organized by Code.org
-  %section{style: "margin-bottom: -4rem"}
-    .wrapper.centered
-      %p.body-two
-        =hoc_s(:hoc_homepage_organized_by, markdown: :inline, locals: {codeorg_url: resolve_url('https://code.org')})
-      %a{href: 'https://code.org'}
-        %img{src: '/images/code-dot-org-logo-40x40.svg'}
-
-  = view 'popup_window.js'
-
   -# HoC Live Spanish banner
   - if @language == 'es' || @language == 'la'
     #hoclivebanner
@@ -112,6 +88,33 @@ social:
           %a#signuplivebutton.ctabuttonatag{href: 'https://code.org/envivo'}
             %button.ctabutton-white
               = hoc_s(:hoc_live_learn_more)
+
+  -# Highlights
+  %section.highlights
+    .wrapper
+      %h2=hoc_s(:highlights_header)
+      = view :home_highlights
+
+  -# Stats
+  %section.stats.bg-neutral-light
+    .wrapper.centered
+      = view :home_stats
+      .button-wrapper
+        %a.link-button{href: resolve_url('/how-to')}
+          =hoc_s(:call_to_action_host_hoc)
+        %a.link-button.secondary{href: resolve_url('/learn')}
+          =hoc_s(:call_to_action_try_activities)
+
+  -# Organized by Code.org
+  %section{style: "margin-bottom: -4rem"}
+    .wrapper.centered
+      %p.body-two
+        =hoc_s(:hoc_homepage_organized_by, markdown: :inline, locals: {codeorg_url: resolve_url('https://code.org')})
+      %a{href: 'https://code.org'}
+        %img{src: '/images/code-dot-org-logo-40x40.svg'}
+
+  = view 'popup_window.js'
+
 
 :javascript
 
