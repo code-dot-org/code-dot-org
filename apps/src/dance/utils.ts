@@ -17,6 +17,9 @@ function computeCharactersReferenced(studentCode: string): string[] {
   // Special parsing for the JSON parameter to ai().
   const aiCharactersRegExp = new RegExp(/ai\(([^\)]*)/, 'gm');
   while ((match = aiCharactersRegExp.exec(studentCode))) {
+    if (match[1] === 'undefined') {
+      continue;
+    }
     try {
       const params = JSON.parse(match[1]);
       if (params.dancers && params.dancers.type) {
