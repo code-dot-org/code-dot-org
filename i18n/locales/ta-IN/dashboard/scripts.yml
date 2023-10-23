@@ -2849,3 +2849,18 @@ ta:
                 -   உங்கள் வகுப்பில் எந்த CS கண்டுபிடிப்புகளின் யூனிட்களை நீங்கள் கற்பிப்பீர்கள் என்பதைத் தீர்மானிக்கவும்.
 
                 **பரிந்துரைக்கப்பட்ட நேரம்:** 60 நிமிடங்கள்
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: அறிமுகம்
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: அறிமுகம்
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: அறிமுகம்
+          lesson_groups:
+            lessonGroup-7:
+              display_name: அறிமுகம்
