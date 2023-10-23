@@ -8,21 +8,6 @@
         "copyright/csd/2021": {
           "word": "Egile-eskubideak"
         },
-        "debugging/csd/2021": {
-          "word": "Arazketa"
-        },
-        "variable/csd/2021": {
-          "word": "Aldagaia"
-        },
-        "conditionals/csd/2021": {
-          "word": "Baldintzak"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstrakzioa"
-        },
-        "function/csd/2021": {
-          "word": "Funtzioa"
-        },
         "debugging/coursea/2021": {
           "word": "Arazketa"
         },
@@ -97,21 +82,6 @@
         },
         "copyright/csd/2022": {
           "word": "Egile-eskubideak"
-        },
-        "debugging/csd/2022": {
-          "word": "Arazketa"
-        },
-        "variable/csd/2022": {
-          "word": "Aldagaia"
-        },
-        "conditionals/csd/2022": {
-          "word": "Baldintzak"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstrakzioa"
-        },
-        "function/csd/2022": {
-          "word": "Funtzioa"
         },
         "debugging/coursea/2022": {
           "word": "Arazketa"
@@ -188,47 +158,11 @@
         "code/csc-adaptations/2023": {
           "word": "Kodea"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Kodea"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Baldintzak"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Aldagaia"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kodea"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Artista"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Iruzkinak"
-        },
-        "code/poetry/2023": {
-          "word": "Kodea"
-        },
         "input/csd/2023": {
           "word": "Sarrera"
         },
         "copyright/csd/2023": {
           "word": "Egile-eskubideak"
-        },
-        "debugging/csd/2023": {
-          "word": "Arazketa"
-        },
-        "variable/csd/2023": {
-          "word": "Aldagaia"
-        },
-        "conditionals/csd/2023": {
-          "word": "Baldintzak"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstrakzioa"
-        },
-        "function/csd/2023": {
-          "word": "Funtzioa"
         },
         "debugging/coursea/2023": {
           "word": "Arazketa"
@@ -320,52 +254,16 @@
         "debugging/basketball/unversioned": {
           "word": "Arazketa"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Arazketa"
-        },
-        "function/hero/unversioned": {
-          "word": "Funtzioa"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Arazketa"
-        },
         "debugging/mc/unversioned": {
           "word": "Arazketa"
         },
         "debugging/minecraft/unversioned": {
           "word": "Arazketa"
         },
-        "debugging/playlab/unversioned": {
-          "word": "Arazketa"
-        },
-        "code/poem-art/2021": {
-          "word": "Kodea"
-        },
         "code/sports/unversioned": {
           "word": "Kodea"
         },
         "debugging/sports/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Arazketa"
         }
       }
