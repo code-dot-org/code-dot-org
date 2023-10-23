@@ -96,7 +96,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
@@ -111,7 +111,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -126,7 +126,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
