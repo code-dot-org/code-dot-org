@@ -2,152 +2,8 @@
   "bn-BD": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/express/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/express/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/express/2020": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "পাঠ পরিকল্পনা"
-        },
         "lists/csd/2021": {
           "name": "তালিকা"
-        },
-        "variables_1/csd/2021": {
-          "name": "চলকগুলো"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "ফাংশনগুলি"
-        },
-        "functions_1/csd/2021": {
-          "name": "ফাংশনগুলি"
-        },
-        "design_mode/csd/2021": {
-          "name": "Design Mode"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Design Mode"
-        },
-        "functions_2/csd/2021": {
-          "name": "ফাংশনগুলি"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "ফর লুপ"
-        },
-        "for_loops/csd/2021": {
-          "name": "ফর লুপ"
         },
         "implementation_guide/coursea/2021": {
           "name": "বাস্তবায়নের নির্দেশ"
@@ -277,30 +133,6 @@
         },
         "lists/csd/2022": {
           "name": "তালিকা"
-        },
-        "variables/csd/2022": {
-          "name": "চলকগুলো"
-        },
-        "variables_3/csd/2022": {
-          "name": "চলকগুলো"
-        },
-        "text/csd/2022": {
-          "name": "পাঠ"
-        },
-        "conditionals/csd/2022": {
-          "name": "শর্তযুক্ত"
-        },
-        "functions/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "functions_1/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "functions_4/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "design_mode/csd/2022": {
-          "name": "Design Mode"
         },
         "variables_1/csd/2022": {
           "name": "চলকগুলো"
@@ -455,26 +287,11 @@
         "variables_1/csd/2023": {
           "name": "চলকগুলো"
         },
-        "variables_2/csd/2023": {
-          "name": "চলকগুলো"
-        },
-        "text/csd/2023": {
-          "name": "পাঠ"
-        },
-        "conditionals/csd/2023": {
-          "name": "শর্তযুক্ত"
-        },
         "functions/csd/2023": {
           "name": "ফাংশনগুলি"
         },
         "functions_1/csd/2023": {
           "name": "ফাংশনগুলি"
-        },
-        "functions_2/csd/2023": {
-          "name": "ফাংশনগুলি"
-        },
-        "design_mode/csd/2023": {
-          "name": "Design Mode"
         },
         "functions_with_parameters/csd/2023": {
           "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"

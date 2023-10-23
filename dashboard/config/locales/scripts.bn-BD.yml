@@ -1001,7 +1001,22 @@ bn:
               display_name: ঘটনাবলী
             csf_loops:
               display_name: চক্র
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ভূমিকা
+          lessons:
+            lesson-7:
+              name: ভূমিকা
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ভূমিকা
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: ভূমিকা
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: ভূমিকা

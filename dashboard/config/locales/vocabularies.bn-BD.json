@@ -5,18 +5,6 @@
         "copyright/csd/2021": {
           "word": "কপিরাইট"
         },
-        "variable/csd/2021": {
-          "word": "চলক"
-        },
-        "conditionals/csd/2021": {
-          "word": "শর্তযুক্ত"
-        },
-        "abstraction/csd/2021": {
-          "word": "অপসারণ"
-        },
-        "function/csd/2021": {
-          "word": "ফাংশন"
-        },
         "programming/coursea/2021": {
           "word": "প্রোগ্রামিং"
         },
@@ -76,18 +64,6 @@
         },
         "copyright/csd/2022": {
           "word": "কপিরাইট"
-        },
-        "variable/csd/2022": {
-          "word": "চলক"
-        },
-        "conditionals/csd/2022": {
-          "word": "শর্তযুক্ত"
-        },
-        "abstraction/csd/2022": {
-          "word": "অপসারণ"
-        },
-        "function/csd/2022": {
-          "word": "ফাংশন"
         },
         "programming/coursea/2022": {
           "word": "প্রোগ্রামিং"
@@ -149,38 +125,8 @@
         "code/csc-adaptations/2023": {
           "word": "কোড"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "কোড"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "শর্তযুক্ত"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "চলক"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "কোড"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "শিল্পী"
-        },
-        "code/poetry/2023": {
-          "word": "কোড"
-        },
         "copyright/csd/2023": {
           "word": "কপিরাইট"
-        },
-        "variable/csd/2023": {
-          "word": "চলক"
-        },
-        "conditionals/csd/2023": {
-          "word": "শর্তযুক্ত"
-        },
-        "abstraction/csd/2023": {
-          "word": "অপসারণ"
-        },
-        "function/csd/2023": {
-          "word": "ফাংশন"
         },
         "programming/coursea/2023": {
           "word": "প্রোগ্রামিং"
@@ -246,12 +192,6 @@
           "word": "চক্র"
         },
         "code/artist/unversioned": {
-          "word": "কোড"
-        },
-        "function/hero/unversioned": {
-          "word": "ফাংশন"
-        },
-        "code/poem-art/2021": {
           "word": "কোড"
         },
         "code/sports/unversioned": {
