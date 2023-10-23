@@ -5733,6 +5733,9 @@ de:
         virtual-pl-csa-summer-2024-day1:
           title: Tag 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Einführung
           title: Tag 2
         virtual-pl-csp-summer-day3:
           title: Tag 3
@@ -5742,11 +5745,20 @@ de:
         virtual-pl-csa-summer-day2:
           title: Tag 2
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Einführung
           title: Tag 3
         virtual-pl-csa-summer-day4:
           title: Tag 4
         virtual-pl-csa-summer-day5: {}
         virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Einführung
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Einführung
           title: Tag 1
         virtual-pl-csp-summer-day1:
           title: Tag 1
