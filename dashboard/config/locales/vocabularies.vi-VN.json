@@ -15,51 +15,9 @@
           "word": "Bản quyền",
           "definition": "quyền hợp pháp độc quyền để in, xuất bản, biểu diễn, quay phim hoặc ghi lại tài liệu văn học, nghệ thuật hoặc âm nhạc và cho phép người khác làm điều tương tự"
         },
-        "bug/csd/2021": {
-          "word": "Lỗi",
-          "definition": "Một phần của chương trình không hoạt động chính xác."
-        },
-        "debugging/csd/2021": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/csd/2021": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "variable/csd/2021": {
-          "word": "Biến",
-          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
-        },
-        "sprite/csd/2021": {
-          "word": "Nhân vật"
-        },
-        "condition/csd/2021": {
-          "word": "Điều kiện"
-        },
-        "conditionals/csd/2021": {
-          "word": "Điều kiện"
-        },
-        "abstraction/csd/2021": {
-          "word": "Trừu tượng"
-        },
-        "function/csd/2021": {
-          "word": "Hàm"
-        },
-        "user/csd/2021": {
-          "word": "Người dùng",
-          "definition": "Cá nhân sử dụng một đối tượng, bao gồm cả phần mềm và phần cứng."
-        },
-        "user_interface/csd/2021": {
-          "word": "Giao diện người dùng"
-        },
         "for_loop/csd/2021": {
           "word": "Vòng lặp for",
           "definition": "Các vòng lặp có điểm bắt đầu, kết thúc và gia số xác định trước (khoảng cách của bước nhảy)."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Học máy",
-          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
         },
         "algorithm/coursea/2021": {
           "word": "Thuật toán",
@@ -600,48 +558,6 @@
           "word": "Bản quyền",
           "definition": "quyền hợp pháp độc quyền để in, xuất bản, biểu diễn, quay phim hoặc ghi lại tài liệu văn học, nghệ thuật hoặc âm nhạc và cho phép người khác làm điều tương tự"
         },
-        "bug/csd/2022": {
-          "word": "Lỗi",
-          "definition": "Một phần của chương trình không hoạt động chính xác."
-        },
-        "debugging/csd/2022": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/csd/2022": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "variable/csd/2022": {
-          "word": "Biến",
-          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
-        },
-        "sprite/csd/2022": {
-          "word": "Nhân vật"
-        },
-        "condition/csd/2022": {
-          "word": "Điều kiện"
-        },
-        "conditionals/csd/2022": {
-          "word": "Điều kiện"
-        },
-        "abstraction/csd/2022": {
-          "word": "Trừu tượng"
-        },
-        "function/csd/2022": {
-          "word": "Hàm"
-        },
-        "user/csd/2022": {
-          "word": "Người dùng",
-          "definition": "Cá nhân sử dụng một đối tượng, bao gồm cả phần mềm và phần cứng."
-        },
-        "user_interface/csd/2022": {
-          "word": "Giao diện người dùng"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Học máy",
-          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
-        },
         "algorithm/coursea/2022": {
           "word": "Thuật toán",
           "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
@@ -1151,9 +1067,6 @@
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Trí tuệ nhân tạo"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "Thích ứng",
           "definition": "Một sự thay đổi trong một sinh vật để tồn tại tốt hơn trong môi trường của nó"
@@ -1181,165 +1094,6 @@
         "behavior/csc-adaptations/2023": {
           "word": "Hành vi",
           "definition": "Một tập hợp các hành động mà bạn muốn một sprite thực hiện lặp đi lặp lại. "
-        },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "Mã (v)",
-          "definition": "để viết hướng dẫn cho một máy tính."
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Sự kiện",
-          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Chương trình",
-          "definition": "Một loạt các bước đã được mã hóa thành một thứ gì đó có thể chạy bằng máy."
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "Lời nhắc",
-          "definition": "Thông báo trên màn hình máy tính chờ người dùng nhập dữ liệu đầu vào."
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Nhân vật",
-          "definition": "Yếu tố đồ họa trên màn hình có vị trí, kích thước và ngoại hình."
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "Bối cảnh",
-          "definition": "Hình ảnh đằng sau những thứ chính hoặc những người trên màn hình."
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "Nhân vật",
-          "definition": "Một người, động vật, sinh vật, sinh vật của sự vật trong một câu chuyện."
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "Cài đặt",
-          "definition": "Thời gian và địa điểm (hoặc khi nào và ở đâu) của một câu chuyện."
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "Tóm tắt",
-          "definition": "Kể những phần quan trọng nhất của văn bản, bằng lời nói của bạn, theo cách ngắn hơn nhiều"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Mã",
-          "definition": "(v) Viết hướng dẫn cho máy tính"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Điều kiện",
-          "definition": "Một cái gì đó một chương trình kiểm tra để xem nó có đúng không trước khi cho phép một hành động"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Điều kiện",
-          "definition": "Các câu lệnh chỉ chạy trong một số điều kiện nhất định"
-        },
-        "ecosystem/csc-ecosystems/2023": {
-          "word": "Hệ sinh thái",
-          "definition": "Một cộng đồng sinh học của các sinh vật tương tác và môi trường của chúng"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "Sự kiện",
-          "definition": "Một hành động gây ra điều gì đó xảy ra"
-        },
-        "overfishing/csc-ecosystems/2023": {
-          "word": "Đánh bắt quá mức",
-          "definition": "Loại bỏ cá nhanh hơn chúng có thể sinh sản"
-        },
-        "simulation/csc-ecosystems/2023": {
-          "word": "Mô phỏng",
-          "definition": "Một mô hình máy tính cho mục đích nghiên cứu."
-        },
-        "debug/csc-ecosystems/2023": {
-          "word": "Gỡ lỗi",
-          "definition": "Tìm và sửa lỗi hoặc sự cố trong mã."
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Biến",
-          "definition": "Một container có thể lưu trữ một giá trị. "
-        },
-        "ecologist/csc-ecosystems/2023": {
-          "word": "Nhà sinh thái học",
-          "definition": "Một nhà khoa học nghiên cứu cách động vật và thực vật tương tác với môi trường của chúng."
-        },
-        "energy/csc-ecosystems/2023": {
-          "word": "Năng lượng",
-          "definition": "Chuyển giữa các sinh vật trong lưới thức ăn từ người sản xuất sang người tiêu dùng. Năng lượng được sử dụng bởi các sinh vật để thực hiện các nhiệm vụ phức tạp."
-        },
-        "food_chain/csc-ecosystems/2023": {
-          "word": "Chuỗi thức ăn ",
-          "definition": "Một nhóm các sinh vật được liên kết theo thứ tự thức ăn mà chúng ăn, từ người sản xuất đến người tiêu dùng và từ con mồi đến động vật ăn thịt."
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Mã",
-          "definition": "(v) để viết hướng dẫn cho máy tính."
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Sự kiện",
-          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "Cột mốc",
-          "definition": "Một cột mốc là một vật thể (tự nhiên hoặc nhân tạo) có tầm quan trọng hoặc làm cho một địa điểm dễ nhận biết."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Nhân vật",
-          "definition": "Một hình ảnh hoặc nhân vật trong chương trình của bạn."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Bản đồ",
-          "definition": "Một đại diện của một khu vực đất hoặc biển thể hiện các đặc điểm vật lý, thành phố, đường xá, v.v."
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "Mẫu",
-          "definition": "Một cái gì đó xảy ra hoặc xuất hiện một cách thường xuyên và lặp đi lặp lại"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "Hình thoi",
-          "definition": "Một đa giác có bốn cạnh bằng nhau, các cạnh đối diện song song, các góc đối diện bằng nhau"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "Chăn sao",
-          "definition": "Một món quà truyền thống và có giá trị của người Mỹ bản địa từ Great Plains"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Họa sĩ",
-          "definition": "Bạn có thể viết mã để khiến anh ta vẽ hầu hết mọi thứ"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Vòng lặp",
-          "definition": "Một chuỗi mã được lặp lại"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "Điểm",
-          "definition": "Một phần của hình ngôi sao"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "Hàng",
-          "definition": "Trong trường hợp này, một dòng hình thoi có trật tự"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "Đồng tâm",
-          "definition": "Các đối tượng hoặc hình dạng có chung tâm"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Bình luận",
-          "definition": "Ghi chú cho chính bạn mà giải thích một phần của mã. Chúng không thay đổi chương trình nhưng giúp giữ mã của bạn theo thứ tự."
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Sự kiện",
-          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "Hình ảnh",
-          "definition": "Hình ảnh tinh thần được tạo ra bởi một bài thơ hoặc câu chuyện"
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "Tâm trạng",
-          "definition": "Biểu hiện của một cảm giác, bầu không khí hoặc cảm xúc trong nghệ thuật hoặc văn bản."
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Nhân vật",
-          "definition": "Một hình ảnh hoặc nhân vật trong chương trình của bạn"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "Một nơi để lưu giữ những kỷ niệm và các vật dụng hàng ngày đại diện cho một ngày trong cuộc sống của một người sống trong một khoảng thời gian cụ thể. "
         },
         "code/poetry/2023": {
           "word": "Mã",
@@ -1384,44 +1138,6 @@
         "copyright/csd/2023": {
           "word": "Bản quyền",
           "definition": "quyền hợp pháp độc quyền để in, xuất bản, biểu diễn, quay phim hoặc ghi lại tài liệu văn học, nghệ thuật hoặc âm nhạc và cho phép người khác làm điều tương tự"
-        },
-        "bug/csd/2023": {
-          "word": "Lỗi",
-          "definition": "Một phần của chương trình không hoạt động chính xác."
-        },
-        "debugging/csd/2023": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/csd/2023": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "variable/csd/2023": {
-          "word": "Biến",
-          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
-        },
-        "sprite/csd/2023": {
-          "word": "Nhân vật"
-        },
-        "condition/csd/2023": {
-          "word": "Điều kiện"
-        },
-        "conditionals/csd/2023": {
-          "word": "Điều kiện"
-        },
-        "abstraction/csd/2023": {
-          "word": "Trừu tượng"
-        },
-        "function/csd/2023": {
-          "word": "Hàm"
-        },
-        "user/csd/2023": {
-          "word": "Người dùng",
-          "definition": "Cá nhân sử dụng một đối tượng, bao gồm cả phần mềm và phần cứng."
-        },
-        "user_interface/csd/2023": {
-          "word": "Giao diện người dùng"
         },
         "machine_learning/csd/2023": {
           "word": "Học máy",
@@ -1936,34 +1652,6 @@
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Học máy",
-          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Thuật toán",
-          "definition": "một loạt các bước để giải quyết vấn đề hoặc đưa ra quyết định"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Mạng lưới",
-          "definition": "Một bộ sưu tập các mặt hàng được kết nối với nhau. Thực hiện theo các kết nối này có thể đại diện cho các bước trong một thuật toán, giống như một lưu đồ."
-        },
-        "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Mô hình ngôn ngữ lớn (LLM)",
-          "definition": "một dạng AI có mục đích chung được đào tạo trên một khối kiến thức rất, rất lớn"
-        },
-        "diffusion_ai/how-ai-works/2023": {
-          "word": "AI khuếch tán",
-          "definition": "chuyển đổi hình ảnh thành nhiễu và đào tạo AI để đảo ngược quá trình"
-        },
-        "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (Mạng đối thủ tổng hợp)",
-          "definition": "một cách sử dụng hai mô hình AI cạnh tranh để tạo ra một cái gì đó"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "Trí tuệ nhân tạo",
-          "definition": "khả năng của máy móc để học hỏi và giải quyết vấn đề."
-        },
         "code/aquatic/unversioned": {
           "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
@@ -2014,28 +1702,6 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
-        "code/dance-2019/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Sự kiện",
-          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Sự kiện",
-          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
         "code/dance-extras/unversioned": {
           "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
@@ -2055,112 +1721,6 @@
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "program/dance/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/flappy/unversioned": {
-          "word": "Viết mã lệnh",
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/flappy/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/frozen/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/frozen/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/gumball/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/gumball/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/hero/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "function/hero/unversioned": {
-          "word": "Hàm",
-          "definition": "Một đoạn mã lệnh mà bạn có thể dễ dàng khai báo nhiều lần."
-        },
-        "program/hero/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Mật mã Caesar ",
-          "definition": "kỹ thuật mã hóa nhằm thay đổi bảng chữ cái theo một số ký tự"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Mật mã",
-          "definition": "thuật ngữ chung cho một kỹ thuật (hoặc thuật toán) tiến hành mã hóa"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Bẻ khóa mã hóa",
-          "definition": "Khi bạn cố gắng bẻ khóa một thông điệp bí mật mà không biết tất cả thông tin cụ thể của mật mã, bạn đang cố gắng “bẻ khóa” phương thức mã hóa đó. "
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Giải mã",
-          "definition": "quy trình đảo ngược phương thức mã hóa, dùng một thông điệp bí mật và tái tạo văn bản thuần túy ban đầu"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Mã hóa",
-          "definition": "quy trình mã hóa thông điểm để giữ bí mật, sao cho chỉ những bên được “ủy quyền” mới có thể đọc được."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Mật mã thay thế ngẫu nhiên",
-          "definition": "kỹ thuật mã hóa thay thế từng chữ cái trong bảng chữ cái với một chữ cái khác được chọn ngẫu nhiên trong bảng chữ cái."
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/iceage/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/iceage/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/infinity/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/infinity/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
@@ -2194,10 +1754,6 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Học máy",
-          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
-        },
         "event/outbreak/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -2205,37 +1761,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "Mô hình và bản mô phỏng",
           "definition": "chương trình sao chép hoặc bắt chước các đặc điểm chính của một sự kiện trong thế giới thực để nghiên cứu kết quả của sự kiện đó mà không tốn chi phí, thời gian hoặc gặp nguy hiểm khi chạy thử nghiệm trong đời thực."
-        },
-        "code/playlab/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/playlab/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/poem-art/2021": {
-          "word": "Mã",
-          "definition": "(v) để viết hướng dẫn cho máy tính."
-        },
-        "event/poem-art/2021": {
-          "word": "Sự kiện",
-          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
-        },
-        "line/poem-art/2021": {
-          "word": "Dòng",
-          "definition": "(thơ) - một phần của bài thơ được sắp xếp thành một hàng, kết thúc ở lề bên phải."
-        },
-        "mood/poem-art/2021": {
-          "word": "Tâm trạng",
-          "definition": "sự thể hiện một cảm giác, bầu không khí hoặc cảm xúc trong nghệ thuật hoặc văn bản."
-        },
-        "program/poem-art/2021": {
-          "word": "Chương trình",
-          "definition": "Một loạt các bước đã được mã hóa thành một thứ gì đó có thể chạy bằng máy."
         },
         "code/sports/unversioned": {
           "word": "Mã",
@@ -2252,32 +1777,6 @@
         "program/sports/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/starwars/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/starwars/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Sửa lỗi",
-          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Chương trình",
-          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Nén dữ liệu không giảm chất lượng",
-          "definition": "thuật toán nén dữ liệu cho phép dữ liệu gốc được tái tạo hoàn hảo từ dữ liệu đã nén. Thường được sử dụng nhiều nhất để nén văn bản (ví dụ: nén .zip)"
         }
       }
     }
