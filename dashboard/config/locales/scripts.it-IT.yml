@@ -5984,10 +5984,19 @@ it:
         virtual-pl-csa-summer-2024-day1:
           title: 1° giorno
         virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduzione
+          lessons:
+            lesson-7:
+              name: Introduzione
           title: 1° giorno
         virtual-pl-csa-summer-day2:
           title: 2° giorno
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduzione
           title: 3° giorno
         virtual-pl-csa-summer-day4:
           title: 4° giorno
@@ -6021,6 +6030,9 @@ it:
         virtual-pl-csp-summer-day1:
           title: 1° giorno
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduzione
           title: 2° giorno
         virtual-pl-csp-summer-day3:
           title: 3° giorno
