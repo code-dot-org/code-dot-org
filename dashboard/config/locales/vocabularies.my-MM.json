@@ -2,12 +2,6 @@
   "my-MM": {
     "data": {
       "vocabularies": {
-        "variable/csd/2021": {
-          "word": "Variable"
-        },
-        "function/csd/2021": {
-          "word": "လုပ်ဆောင်ချက်"
-        },
         "function/coursee/2021": {
           "word": "လုပ်ဆောင်ချက်"
         },
@@ -28,12 +22,6 @@
         },
         "define/express/2021": {
           "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
-        },
-        "variable/csd/2022": {
-          "word": "Variable"
-        },
-        "function/csd/2022": {
-          "word": "လုပ်ဆောင်ချက်"
         },
         "function/coursee/2022": {
           "word": "လုပ်ဆောင်ချက်"
@@ -58,24 +46,6 @@
         },
         "code/csc-adaptations/2023": {
           "word": "Code"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Code"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Variable"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Code"
-        },
-        "code/poetry/2023": {
-          "word": "Code"
-        },
-        "variable/csd/2023": {
-          "word": "Variable"
-        },
-        "function/csd/2023": {
-          "word": "လုပ်ဆောင်ချက်"
         },
         "function/coursee/2023": {
           "word": "လုပ်ဆောင်ချက်"
@@ -102,12 +72,6 @@
           "word": "Loops"
         },
         "code/artist/unversioned": {
-          "word": "Code"
-        },
-        "function/hero/unversioned": {
-          "word": "လုပ်ဆောင်ချက်"
-        },
-        "code/poem-art/2021": {
           "word": "Code"
         },
         "code/sports/unversioned": {
