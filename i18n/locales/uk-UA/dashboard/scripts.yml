@@ -4172,6 +4172,9 @@ uk:
         virtual-pl-csa-summer-2024-day1:
           title: День 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Вступ
           title: День 2
         virtual-pl-csp-summer-day3:
           title: День 3
@@ -4182,10 +4185,19 @@ uk:
         virtual-pl-csa-summer-day2:
           title: День 2
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Вступ
           title: День 3
         virtual-pl-csa-summer-day4:
           title: День 4
         virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Вступ
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Вступ
           title: День 1
         virtual-pl-csp-summer-day1:
           title: День 1
