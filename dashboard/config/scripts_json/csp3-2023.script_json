@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-13 18:15:04 UTC",
+    "serialized_at": "2023-10-20 22:02:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -260,7 +260,7 @@
       "key": "83bc4e8c-57a0-4bc4-87b4-79591160bd28",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -288,7 +288,7 @@
       "key": "e80ed1d2-1120-43c0-b0d6-b2453d5c3a67",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -869,8 +869,8 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite / most used non-social media app. \nIn your Unit Journal, explore the function of the app, along with different inputs / outputs*\n* *Compare your journal with a partner and discuss common elements that both of your apps share*\n\n**Discussion Goal:** This prompt is designed to bring out students' prior experiences working with apps. If students aren't sure what app to choose, you can even ask them to pick to Code.org website. This discussion can pull out the fact that most apps contain images, buttons, and text that help users find and interact with information and content.\n",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "The [Unit 3 Journal](https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=sharing) provides a template/directions for how students can complete this in their journals. See an example below:\n\n![](https://images.code.org/af1f30136d351f121db352e137d441fc-Unit Journal 3 Templates.png)"
+            "type": "assessmentOpportunity",
+            "markdown": "<div style=\"column-count: 2; column-gap: 20px; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always; width: 180%\">\n     <b>Create Perfomance Task Written Response Practice</b>\n    </br>\n    </br>\n    In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n    </br>\n    </br>\n    Sample Prompt: <i> Examine the app that you have annotated here and analyze how might you improve the user experience by updating the input, output, and/or layout?\n.</i>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <img src=\"https://images.code.org/3f77c8efade39dc50d301f0751f767b7-writtenResponse3.png\" alt=\"\" style=\"display: block; margin: auto; float: right;\"/>\n    </p>\n</div>\n</br>\n<div style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/#slide=id.g22e15123a99_0_517\" target=\"_blank\">Unit Journal Template</a>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <b>Exemplar Response for Instructors</b>\n</br>\n<i> (Exemplars will be forthcoming with further College Board updates in Fall 2023)\n    </p>\n </div>\n</br>\n\n\n\n\n![](https://images.code.org/12964d461b13a57ef617b0385624b739-U3L2.png)"
           }
         ]
       },
@@ -1563,8 +1563,8 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Go through each vocabulary word (Program Statement, Program, Sequential Programming, Event Driven Programming) and give students a chance to record each piece of information.",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "**Reinforcing Vocabulary:** A lot of the vocabulary introduced here is taken straight from the AP framework. The images are designed to help connect the definitions to the experiences they had in this lesson. Help students make these connections by not only writing down definitions but talking through how it's connected to what they saw. The Unit 3 Journal includes a *Coding Breakdown* template designed to help students apply these terms to code snippets they saw in the lesson.\n\n\n![](https://images.code.org/056cc4cefb7a8208f7c85e4742edacdf-Unit%20Journal%203%20Templates%20(1).png)"
+            "type": "assessmentOpportunity",
+            "markdown": "<div style=\"column-count: 2; column-gap: 20px; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always; width: 180%\">\n     <b>Create Perfomance Task Written Response Practice</b>\n    </br>\n    </br>\n    In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n    </br>\n    </br>\n    Create Performance Task Learning Objective: <i>CRD-2.B: Explain how a program or code segment functions. </i>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <img src=\"https://images.code.org/3f77c8efade39dc50d301f0751f767b7-writtenResponse3.png\" alt=\"\" style=\"display: block; margin: auto; float: right;\"/>\n    </p>\n</div>\n</br>\n<div style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g22e15123a99_0_673\" target=\"_blank\">Unit Journal Template</a>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <b>Exemplar Response for Instructors</b>\n</br>\n<i> (Exemplars will be forthcoming with further College Board updates in Fall 2023)\n    </p>\n </div>\n</br>\n\n![](https://images.code.org/8e249891e0a3268e07d6ed61ccd3f7a2-U3L5.png)"
           }
         ]
       },
@@ -5023,6 +5023,27 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Design Mode",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Design Mode",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Design Mode",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "CRD-2.D.2"
       }

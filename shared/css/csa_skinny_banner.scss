@@ -1,6 +1,6 @@
+@import 'font';
+
 // Variables
-$font-regular: 'Gotham 4r', sans-serif;
-$font-bold: 'Gotham 7r', sans-serif;
 $width-md: 970px;
 $width-sm: 600px;
 $width-xs: 360px;
@@ -44,7 +44,7 @@ $width-xs: 360px;
     width: 370px;
 
     .header {
-      font-family: $font-bold;
+      @include main-font-bold;
       font-size: 1.65em;
       margin-bottom: 6px;
 
@@ -58,7 +58,7 @@ $width-xs: 360px;
     }
 
     .text {
-      font-family: $font-regular;
+      @include main-font-regular;
       font-size: 1.15em;
 
       @media screen and (max-width: $width-sm) {
@@ -87,7 +87,7 @@ $width-xs: 360px;
 
     button {
       height: unset;
-      font-family: $font-bold;
+      @include main-font-bold;
       color: white;
       background: #FFA400;
       margin: 0;
