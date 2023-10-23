@@ -7,6 +7,8 @@ import {
   StrongText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ReactTooltip from 'react-tooltip';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 
 export default function AiAssessmentBox({
@@ -49,10 +51,30 @@ export default function AiAssessmentBox({
           <BodyThreeText>
             <StrongText>{studentAchievment()}</StrongText>
           </BodyThreeText>
-          {aiConfidence && <EmText>{aiConfidenceText()}</EmText>}
+          {aiConfidence && (
+            <div>
+              <EmText>{aiConfidenceText()}</EmText>
+              <span data-tip data-for="info-tip">
+                <FontAwesome icon="info-circle" className={style.infoTipIcon} />
+              </span>
+              <ReactTooltip id="info-tip" effect="solid">
+                PLACEHOLDER TEXT FOR INFO TIP
+              </ReactTooltip>
+            </div>
+          )}
         </div>
       )}
-      {!isAiAssessed && <EmText>{i18n.aiCannotAssess()}</EmText>}
+      {!isAiAssessed && (
+        <div>
+          <EmText>{i18n.aiCannotAssess()}</EmText>
+          <span data-tip data-for="info-tip">
+            <FontAwesome icon="info-circle" className={style.infoTipIcon} />
+          </span>
+          <ReactTooltip id="info-tip" effect="solid">
+            PLACEHOLDER TEXT FOR INFO TIP
+          </ReactTooltip>
+        </div>
+      )}
     </div>
   );
 }
