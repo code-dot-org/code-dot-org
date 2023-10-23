@@ -2694,3 +2694,18 @@ bg:
               display_name: Променливи
             lessonGroup-7:
               display_name: Проект за Края на Курса
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Въведение
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Въведение
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Въведение
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Въведение

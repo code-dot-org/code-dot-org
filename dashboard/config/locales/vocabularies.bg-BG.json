@@ -8,52 +8,6 @@
         "copyright/csd/2021": {
           "word": "Авторско право"
         },
-        "debugging/csd/2021": {
-          "word": "Отстраняване на грешки"
-        },
-        "variable/csd/2021": {
-          "word": "Променлива"
-        },
-        "condition/csd/2021": {
-          "word": "Условие"
-        },
-        "conditionals/csd/2021": {
-          "word": "Условия"
-        },
-        "abstraction/csd/2021": {
-          "word": "Абстракция"
-        },
-        "function/csd/2021": {
-          "word": "Функция"
-        },
-        "empathy/csd/2021": {
-          "word": "Емпатия",
-          "definition": "В дизайнм обрищайте внимание към чувствата на потребителя когато правите дизайн на продукт."
-        },
-        "user/csd/2021": {
-          "word": "Потребител",
-          "definition": "Някой, който използва обект, включително софтуер и хардуер."
-        },
-        "usability/csd/2021": {
-          "word": "Ползваемост",
-          "definition": "Колко е лесно, ефективно, и удволетворяващо да използваш обект или устройство (включващо и софтуер) направен от друг човек."
-        },
-        "binary_system/csd/2021": {
-          "word": "Двоична Система",
-          "definition": "начин за представяне на информация, използвайки само две опции"
-        },
-        "ascii/csd/2021": {
-          "word": "ASCII",
-          "definition": "популярна система за представяне на текст двоичната система"
-        },
-        "bit/csd/2021": {
-          "word": "Бит",
-          "definition": "едно парче двоична информация"
-        },
-        "machine_learning/csd/2021": {
-          "word": "Машинно Обучение",
-          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
-        },
         "algorithm/coursea/2021": {
           "word": "Алгоритъм"
         },
@@ -220,52 +174,6 @@
         },
         "copyright/csd/2022": {
           "word": "Авторско право"
-        },
-        "debugging/csd/2022": {
-          "word": "Отстраняване на грешки"
-        },
-        "variable/csd/2022": {
-          "word": "Променлива"
-        },
-        "condition/csd/2022": {
-          "word": "Условие"
-        },
-        "conditionals/csd/2022": {
-          "word": "Условия"
-        },
-        "abstraction/csd/2022": {
-          "word": "Абстракция"
-        },
-        "function/csd/2022": {
-          "word": "Функция"
-        },
-        "empathy/csd/2022": {
-          "word": "Емпатия",
-          "definition": "В дизайнм обрищайте внимание към чувствата на потребителя когато правите дизайн на продукт."
-        },
-        "user/csd/2022": {
-          "word": "Потребител",
-          "definition": "Някой, който използва обект, включително софтуер и хардуер."
-        },
-        "usability/csd/2022": {
-          "word": "Ползваемост",
-          "definition": "Колко е лесно, ефективно, и удволетворяващо да използваш обект или устройство (включващо и софтуер) направен от друг човек."
-        },
-        "ascii/csd/2022": {
-          "word": "ASCII",
-          "definition": "популярна система за представяне на текст двоичната система"
-        },
-        "binary_system/csd/2022": {
-          "word": "Двоична Система",
-          "definition": "начин за представяне на информация, използвайки само две опции"
-        },
-        "bit/csd/2022": {
-          "word": "Бит",
-          "definition": "едно парче двоична информация"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Машинно Обучение",
-          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
         },
         "algorithm/coursea/2022": {
           "word": "Алгоритъм"
@@ -439,95 +347,17 @@
         "loop/pre-express/2022": {
           "word": "Цикъл"
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Изкуствен интелект"
-        },
         "code/csc-adaptations/2023": {
           "word": "Код"
         },
         "behavior/csc-adaptations/2023": {
           "word": "Поведение"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Код"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Условие"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Условия"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Променлива"
-        },
-        "energy/csc-ecosystems/2023": {
-          "word": "Енергия"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Код"
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Карта"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Художник"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Цикъл"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Коментари"
-        },
-        "code/poetry/2023": {
-          "word": "Код"
-        },
         "input/csd/2023": {
           "word": "Поле за въвеждане"
         },
         "copyright/csd/2023": {
           "word": "Авторско право"
-        },
-        "debugging/csd/2023": {
-          "word": "Отстраняване на грешки"
-        },
-        "variable/csd/2023": {
-          "word": "Променлива"
-        },
-        "condition/csd/2023": {
-          "word": "Условие"
-        },
-        "conditionals/csd/2023": {
-          "word": "Условия"
-        },
-        "abstraction/csd/2023": {
-          "word": "Абстракция"
-        },
-        "function/csd/2023": {
-          "word": "Функция"
-        },
-        "empathy/csd/2023": {
-          "word": "Емпатия",
-          "definition": "В дизайнм обрищайте внимание към чувствата на потребителя когато правите дизайн на продукт."
-        },
-        "user/csd/2023": {
-          "word": "Потребител",
-          "definition": "Някой, който използва обект, включително софтуер и хардуер."
-        },
-        "usability/csd/2023": {
-          "word": "Ползваемост",
-          "definition": "Колко е лесно, ефективно, и удволетворяващо да използваш обект или устройство (включващо и софтуер) направен от друг човек."
-        },
-        "ascii/csd/2023": {
-          "word": "ASCII",
-          "definition": "популярна система за представяне на текст двоичната система"
-        },
-        "binary_system/csd/2023": {
-          "word": "Двоична Система",
-          "definition": "начин за представяне на информация, използвайки само две опции"
-        },
-        "bit/csd/2023": {
-          "word": "Бит",
-          "definition": "едно парче двоична информация"
         },
         "machine_learning/csd/2023": {
           "word": "Машинно Обучение",
@@ -705,19 +535,6 @@
         "loop/pre-express/2023": {
           "word": "Цикъл"
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Машинно Обучение",
-          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Алгоритъм"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Мрежа"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "Изкуствен интелект"
-        },
         "condition/aquatic/unversioned": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
@@ -740,39 +557,6 @@
         "debugging/basketball/unversioned": {
           "word": "Отстраняване на грешки"
         },
-        "code/flappy/unversioned": {
-          "word": "Код",
-          "definition": "(v) да напишеш код или да напишеш инструкции за компютър."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Отстраняване на грешки",
-          "definition": "Намиране и управяна на проблеми в алгоритъм или програма"
-        },
-        "program/flappy/unversioned": {
-          "word": "Програма",
-          "definition": "Алгоритъм, който е бил написан на език който може да бъде разчет и изпълнен от машина."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "function/hero/unversioned": {
-          "word": "Функция"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
         "debugging/mc/unversioned": {
           "word": "Отстраняване на грешки"
         },
@@ -782,30 +566,11 @@
         "loop/minecraft/unversioned": {
           "word": "Цикъл"
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Машинно Обучение",
-          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "code/poem-art/2021": {
-          "word": "Код"
-        },
         "code/sports/unversioned": {
           "word": "Код"
         },
         "debugging/sports/unversioned": {
           "word": "Отстраняване на грешки"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "definition": "алгоритъм за компресиране, който позволява данните да бъдат перфектно възстановени от копмресираните данни. Най-често използвани за компресиране на текст(т.е. .zip компресия)"
         }
       }
     }
