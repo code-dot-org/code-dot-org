@@ -1,6 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 import {PROCEDURE_DEFINITION_TYPES} from '../constants';
-import {splitBlocksByType} from './cdoUtils';
+import {partitionBlocksByType} from './cdoUtils';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -21,20 +21,11 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
   load(stateToLoad, workspace) {
     // Procedure definitions should be loaded ahead of call blocks, so that the
     // procedures map is updated correctly.
-    const {prioritizedBlocks, remainingBlocks} = splitBlocksByType(
+    const blockStates = partitionBlocksByType(
       stateToLoad['blocks'],
       PROCEDURE_DEFINITION_TYPES,
       false
     );
-
-    // Pre-process procedure blocks and create their procedure models.
-    for (const functionBlock of prioritizedBlocks) {
-      console.log({functionBlock});
-      // if has procedure id, create procedure model with that id.
-      // otherwise create a fresh procedure model.
-    }
-
-    const blockStates = [...prioritizedBlocks, ...remainingBlocks];
 
     for (const blockState of blockStates) {
       try {

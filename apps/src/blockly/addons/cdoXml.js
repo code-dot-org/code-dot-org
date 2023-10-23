@@ -1,5 +1,5 @@
 import {PROCEDURE_DEFINITION_TYPES} from '../constants';
-import {partitionBlocksByType, splitBlocksByType} from './cdoUtils';
+import {splitBlocksByType} from './cdoUtils';
 import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
 
 export default function initializeBlocklyXml(blocklyWrapper) {
@@ -54,23 +54,22 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     const blocks = [];
 
     for (const xmlFunctionBlock of prioritizedBlocks) {
-      // xml blocks will never have a procedure model id, so we need to create a new model
-      // and save that id in the appropriate place (mutation??).
+      // Try to find the function name of the procedure definition block.
+      // If we find it, create a procedure model and add it to the map.
       let functionName = xmlFunctionBlock.children[1].textContent;
-      console.log(`[${functionName}] in domToBlockSpace`);
-      while (Blockly.Procedures.isNameUsed(functionName, workspace)) {
-        // Collision with another procedure.
-        const r = functionName.match(/^(.*?)(\d+)$/);
-        if (!r) {
-          functionName += '2';
-        } else {
-          functionName = r[1] + (parseInt(r[2]) + 1);
+      if (functionName) {
+        while (Blockly.Procedures.isNameUsed(functionName, workspace)) {
+          // Collision with another procedure.
+          const r = functionName.match(/^(.*?)(\d+)$/);
+          if (!r) {
+            functionName += '2';
+          } else {
+            functionName = r[1] + (parseInt(r[2]) + 1);
+          }
         }
+        const model = new ObservableProcedureModel(workspace, functionName);
+        workspace.getProcedureMap().add(model);
       }
-      const model = new ObservableProcedureModel(workspace, functionName);
-      Blockly.Events.disable();
-      workspace.getProcedureMap().add(model);
-      Blockly.Events.enable();
     }
 
     const allBlocks = [...prioritizedBlocks, ...remainingBlocks];
@@ -167,24 +166,11 @@ export function createBlockOrderMap(xml) {
  * @returns {Element[]} An array of partitioned block elements or an empty array if no blocks are present.
  */
 export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
-  // Convert XML to an array of block elements
-  const blockElements = Array.from(xml.childNodes).filter(
-    node => node.nodeName.toLowerCase() === 'block'
+  const {prioritizedBlocks, remainingBlocks} = getSplitBlockElements(
+    xml,
+    prioritizedBlockTypes
   );
-
-  // Check if any block elements were found
-  if (blockElements.length === 0) {
-    return [];
-  }
-
-  // Procedure definitions should be loaded ahead of call
-  // blocks, so that the procedures map is updated correctly.
-  const partitionedBlockElements = partitionBlocksByType(
-    blockElements,
-    prioritizedBlockTypes,
-    true
-  );
-  return partitionedBlockElements;
+  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 export function getSplitBlockElements(xml, prioritizedBlockTypes) {

@@ -62,7 +62,6 @@ export const behaviorDefMutator = {
    */
   domToMutation: function (xmlElement) {
     this.procedureName = xmlElement.nextElementSibling.getAttribute('id');
-    console.log(`[${this.procedureName}] in domToMutation`);
     this.findOrCreateProcedureModel();
     // We do not copy parameters because behavior parameters are a special case.
     // We manually create the "this sprite" parameter for each behavior,
@@ -121,12 +120,12 @@ export const behaviorDefMutator = {
     const procedureId = state['procedureId'];
     if (
       procedureId &&
-      procedureId !== this.model_.getId() &&
+      procedureId !== this.getProcedureModel().getId() &&
       map.has(procedureId) &&
       (this.isInsertionMarker() || this.noBlockHasClaimedModel_(procedureId))
     ) {
-      if (map.has(this.model_.getId())) {
-        map.delete(this.model_.getId());
+      if (map.has(this.getProcedureModel().getId())) {
+        map.delete(this.getProcedureModel().getId());
       }
       this.model_ = map.get(procedureId);
     }
