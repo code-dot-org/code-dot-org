@@ -84,8 +84,13 @@ const EVENTS = {
   TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'TA Rubric Learning Goal Collapsed',
   TA_RUBRIC_ON_STUDENT_WORK_LOADED: 'TA Rubric On Student Work Loaded',
   TA_RUBRIC_ON_STUDENT_WORK_UNLOADED: 'TA Rubric On Student Work Unloaded',
+  TA_RUBRIC_SUBMITTED: 'TA Rubric Submitted',
 
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
+
+  BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
+  TEACHER_HOC_CONGRATS_PAGE_VISITED:
+    'Teacher Hour of Code Congrats Page Visited ',
 };
 
 export {EVENTS};

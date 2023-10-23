@@ -53,9 +53,6 @@
           <field name="COSTUME">"ALIEN"</field>
           <field name="LOCATION">{x: 200, y: 100}</field>
         </block>
-        <block type="Dancelab_aiText" id="oI~{H6txi14$UD=w/d2:" x="32" y="114">
-          <field name="VALUE"/>
-        </block>
         <block type="Dancelab_ai" id="oI~{H6txi14$UD=w/d1:" x="32" y="114">
           <field name="VALUE"/>
         </block>

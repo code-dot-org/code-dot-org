@@ -59,6 +59,9 @@ const cdoCustomHighContrastStyles = {
   world_blocks: {
     colourPrimary: '#4A4A88',
   },
+  ai_blocks: {
+    colourPrimary: '#566065',
+  },
   ...spriteLabHighContrastStyles,
 };
 

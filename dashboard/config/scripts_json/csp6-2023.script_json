@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-16 12:46:00 UTC",
+    "serialized_at": "2023-10-19 16:14:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2292,7 +2292,7 @@
       "key": "10299e7c-970b-47ac-be8f-0228a8445d13",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n* **The goal:** The goal of this investigation is to give students an opportunity to make sense of how traversals and the datasets can be used together to create a working app.  It is important to note that the algorithms in this app have some of the same qualities as the algorithm students will need to develop for the Create PT.  \n    \n* **What to look for:** This project defines several different functions.  Help guide students particularly to how the lists are filled. Students should see a `listSetup` function.  This function calls the `filter` function.  `filter` is where the lists are being filled.  Use the questions listed in CodeStudio to help students make sense of this code. In particular, spend a little extra time discussing the question “How are these lists filled?”. This is an opportunity to go through the `filter` function line by line to understand how the function works.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n* **The goal:** The goal of this investigation is to give students an opportunity to make sense of how traversals and the datasets can be used together to create a working app.  It is important to note that the algorithms in this app have some of the same qualities as the algorithm students will need to develop for the Create PT.  \n    \n* **What to look for:** This project defines several different functions.  Help guide students particularly to how the lists are filled. Students should see a `listSetup` function.  This function calls the `filter` function.  `filter` is where the lists are being filled.  Use the questions listed in CodeStudio to help students make sense of this code. In particular, spend a little extra time discussing the question “How are these lists filled?”. This is an opportunity to go through the `filter` function line by line to understand how the function works.",
         "name": "Random Dog Picker Investigation",
         "progression_name": "Random Dog Picker Investigation",
         "tips": [
@@ -2311,7 +2311,7 @@
       "key": "2815843a-607d-421a-a710-a89ee57ae819",
       "position": 3,
       "properties": {
-        "description": "**Levels 5-6:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
+        "description": "**Levels 3-4:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
         "name": "Traversal Patterns",
         "progression_name": "Traversal Patterns"
       },
