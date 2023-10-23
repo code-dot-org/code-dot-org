@@ -71,7 +71,8 @@ class AuthenticationOption < ApplicationRecord
   # user, and instead to rely exclusively on authentication_id
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
-    POWERSCHOOL
+    POWERSCHOOL,
+    LTI_V1,
   ].freeze
 
   TRUSTED_EMAIL_CREDENTIAL_TYPES = (

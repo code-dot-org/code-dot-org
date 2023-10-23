@@ -3,7 +3,7 @@ require 'user'
 require 'authentication_option'
 
 class Services::Lti
-  def self.partially_create_user(session, id_token)
+  def self.partially_create_user(id_token)
     user_type = Policies::Lti.get_account_type(id_token)
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
@@ -11,23 +11,18 @@ class Services::Lti
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
       user.name = id_token[:name] || id_token[:given_name]
-    end
-    # user.name = id_token[:given_name] || id_token[:name]
-    if user_type == User::TYPE_STUDENT
+    else
       user.name = id_token[:given_name] || id_token[:name]
       user.family_name = id_token[:family_name]
-      user.age = "15" # TODO: remove
     end
     user.authentication_options = [
       AuthenticationOption.new(
         authentication_id: Policies::Lti.generate_auth_id(id_token),
-         credential_type: AuthenticationOption::LTI_V1,
-       )
+        credential_type: AuthenticationOption::LTI_V1,
+        email: id_token[:email],
+      )
     ]
-    # user.save!
-    user
 
-    # Session signup type
-    # Signup Tracking
+    user
   end
 end
