@@ -210,6 +210,7 @@
   call_to_action_explore_ai: "Explore AI"
   call_to_action_explore_unit: "Explore unit"
   call_to_action_explore_curriculum: "Explore curriculum"
+  call_to_action_explore_curricula: "Explore curricula"
   call_to_action_explore_curriculum_options: "Explore curriculum options"
   call_to_action_explore_lessons: "Explore lessons"
   call_to_action_explore_modules: "Explore modules"
@@ -8763,7 +8764,7 @@
   middle_high_page_make_your_own_card_title_2: "Game Lab"
   middle_high_page_make_your_own_card_title_3: "Web Lab"
   middle_high_page_make_your_own_card_descrpition_1: "App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, then share your app in seconds."
-  middle_high_page_make_your_own_card_descrpition_2: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. "
+  middle_high_page_make_your_own_card_descrpition_2: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
   middle_high_page_make_your_own_card_descrpition_3: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
   middle_high_page_make_your_own_card_link: "Learn more"
   middle_high_page_additional_resources_title: "Additional Resources"
@@ -8793,7 +8794,6 @@
   elementary_page_own_pace_card_title_1: "Pre-Reader Express Course"
   elementary_page_own_pace_card_title_2: "Express Course"
   elementary_page_own_pace_card_description_1: "Learn computer science at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers."
-  elementary_page_own_pace_card_description_2: "Learn computer science at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers."
   elementary_page_own_pace_link_1: "Start Pre-Reader Course"
   elementary_page_own_pace_link_2: "Start Express Course"
   elementary_page_make_your_own_games_title: "Make Your Own Animations and Games"
@@ -8806,7 +8806,6 @@
   elementary_page_computer_science_card_title_2: "Computer Science Connections"
   elementary_page_computer_science_description_1: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
   elementary_page_computer_science_description_2: "Make connections between computer science (CS) and other subjects like math, language arts, science, and social studies."
-  elementary_page_computer_science_link: "Explore curricula"
 
   language_code:
     ar: "Arabic"
