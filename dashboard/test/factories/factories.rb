@@ -1860,6 +1860,16 @@ FactoryBot.define do
     project_version {"1"}
   end
 
+  factory :old_learning_goal_ai_evaluation do
+    association :learning_goal
+    user {student}
+    project_id {789}
+    association :requester, factory: :teacher
+    status {1}
+    understanding {0}
+    ai_confidence {1}
+  end
+
   factory :learning_goal_ai_evaluation do
     association :learning_goal
     association :rubric_ai_evaluation
