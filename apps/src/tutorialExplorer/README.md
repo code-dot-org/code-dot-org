@@ -106,6 +106,7 @@ subject: science, math, history, la, art, cs-only
 activity_type: online-tutorial, lesson-plan
 length: 1hour, 1hour-follow, few-hours
 programming_language: blocks, typing, other
+accessibility: screenreader, tts, keyboard, captions, highcontrast
 ```
 
 **Important note:** In order to ensure satisfactory web performance, list these parameters in the order of the above list.  (This will allow each variant to be cached as one.)
