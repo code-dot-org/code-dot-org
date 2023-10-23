@@ -18,96 +18,6 @@
           "word": "저작권",
           "definition": "문학적, 예술적, 음악적 소재를 인쇄 또는 출판, 공연, 촬영, 기록하고 또한 다른 이에게 그렇게 하도록 허가할 배타적 법적 권리."
         },
-        "bug/csd/2021": {
-          "word": "버그",
-          "definition": "정상 작동하지 않는 프로그램 부분."
-        },
-        "debugging/csd/2021": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/csd/2021": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "variable/csd/2021": {
-          "word": "변수",
-          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
-        },
-        "sprite/csd/2021": {
-          "word": "스프라이트"
-        },
-        "condition/csd/2021": {
-          "word": "조건"
-        },
-        "conditionals/csd/2021": {
-          "word": "조건"
-        },
-        "abstraction/csd/2021": {
-          "word": "추상화"
-        },
-        "function/csd/2021": {
-          "word": "함수"
-        },
-        "user/csd/2021": {
-          "word": "사용자",
-          "definition": "소프트웨어 및 하드웨어를 포함하여, 객체를 사용하는 이"
-        },
-        "user_interface/csd/2021": {
-          "word": "사용자 인터페이스"
-        },
-        "for_loop/csd/2021": {
-          "word": "For 루프",
-          "definition": "사전에 결정된 시작 및 종류, 증분 (단계 간격)이 있는 루프."
-        },
-        "machine_learning/csd/2021": {
-          "word": "머신 러닝",
-          "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
-        },
-        "features/csd/2021": {
-          "word": "특징",
-          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
-        },
-        "label/csd/2021": {
-          "word": "라벨",
-          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
-        },
-        "model/csd/2021": {
-          "word": "모델",
-          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
-        },
-        "supervised_learning/csd/2021": {
-          "word": "지도형 학습",
-          "definition": "사람이 모델에게 예를 가지고 학습하도록 교육시킬 때"
-        },
-        "training/csd/2021": {
-          "word": "교육",
-          "definition": "모델이 학습할 수 있도록 모델에게 예를 제공"
-        },
-        "unsupervised_learning/csd/2021": {
-          "word": "비지도 학습",
-          "definition": "라벨이 없는 데이터에서 패턴 찾기"
-        },
-        "categorical_data/csd/2021": {
-          "word": "범주형 데이터",
-          "definition": "그룹으로 분리할 수 있는 데이터"
-        },
-        "classification/csd/2021": {
-          "word": "분류",
-          "definition": "다른 특징을 기반으로 카테고리 예측"
-        },
-        "bias/csd/2021": {
-          "word": "편향",
-          "definition": "결정이 어떤 것에는 유리하게 이루어지고 어떤 것에는 우선순위를 낮추거나 제외시키는 경우"
-        },
-        "numerical_data/csd/2021": {
-          "word": "수치 데이터",
-          "definition": "셀 수 있거나 또는 측정할 수 있는 데이터"
-        },
-        "ethics/csd/2021": {
-          "word": "윤리",
-          "definition": "좋은 행동을 위한 지침."
-        },
         "algorithm/coursea/2021": {
           "word": "알고리즘",
           "definition": "과제를 끝내기 위한 단계 목록. "
@@ -650,92 +560,6 @@
           "word": "저작권",
           "definition": "문학적, 예술적, 음악적 소재를 인쇄 또는 출판, 공연, 촬영, 기록하고 또한 다른 이에게 그렇게 하도록 허가할 배타적 법적 권리."
         },
-        "bug/csd/2022": {
-          "word": "버그",
-          "definition": "정상 작동하지 않는 프로그램 부분."
-        },
-        "debugging/csd/2022": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/csd/2022": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "variable/csd/2022": {
-          "word": "변수",
-          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
-        },
-        "sprite/csd/2022": {
-          "word": "스프라이트"
-        },
-        "condition/csd/2022": {
-          "word": "조건"
-        },
-        "conditionals/csd/2022": {
-          "word": "조건"
-        },
-        "abstraction/csd/2022": {
-          "word": "추상화"
-        },
-        "function/csd/2022": {
-          "word": "함수"
-        },
-        "user/csd/2022": {
-          "word": "사용자",
-          "definition": "소프트웨어 및 하드웨어를 포함하여, 객체를 사용하는 이"
-        },
-        "user_interface/csd/2022": {
-          "word": "사용자 인터페이스"
-        },
-        "machine_learning/csd/2022": {
-          "word": "머신 러닝",
-          "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
-        },
-        "features/csd/2022": {
-          "word": "특징",
-          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
-        },
-        "label/csd/2022": {
-          "word": "라벨",
-          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
-        },
-        "model/csd/2022": {
-          "word": "모델",
-          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
-        },
-        "supervised_learning/csd/2022": {
-          "word": "지도형 학습",
-          "definition": "사람이 모델에게 예를 가지고 학습하도록 교육시킬 때"
-        },
-        "training/csd/2022": {
-          "word": "교육",
-          "definition": "모델이 학습할 수 있도록 모델에게 예를 제공"
-        },
-        "unsupervised_learning/csd/2022": {
-          "word": "비지도 학습",
-          "definition": "라벨이 없는 데이터에서 패턴 찾기"
-        },
-        "categorical_data/csd/2022": {
-          "word": "범주형 데이터",
-          "definition": "그룹으로 분리할 수 있는 데이터"
-        },
-        "classification/csd/2022": {
-          "word": "분류",
-          "definition": "다른 특징을 기반으로 카테고리 예측"
-        },
-        "bias/csd/2022": {
-          "word": "편향",
-          "definition": "결정이 어떤 것에는 유리하게 이루어지고 어떤 것에는 우선순위를 낮추거나 제외시키는 경우"
-        },
-        "numerical_data/csd/2022": {
-          "word": "수치 데이터",
-          "definition": "셀 수 있거나 또는 측정할 수 있는 데이터"
-        },
-        "ethics/csd/2022": {
-          "word": "윤리",
-          "definition": "좋은 행동을 위한 지침."
-        },
         "algorithm/coursea/2022": {
           "word": "알고리즘",
           "definition": "과제를 끝내기 위한 단계 목록. "
@@ -1250,9 +1074,6 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "인공지능"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "적응",
           "definition": "환경에서 더 잘 살아남기 위한 유기체의 변화"
@@ -1421,56 +1242,6 @@
           "word": "의견",
           "definition": "코드 섹션을 설명하는 자신을 위한 메모프로그램을 변경하지는 않지만 코드를 순서대로 유지하는 데 도움이 됩니다."
         },
-        "event/csc-timecapsule/2023": {
-          "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "이미지",
-          "definition": "시나 이야기로 만들어지는 정신적 이미지"
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "분위기",
-          "definition": "예술이나 글에서 느낌, 분위기 또는 감정을 표현하는 것."
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "스프라이트",
-          "definition": "프로그램의 이미지 또는 캐릭터"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "특정 시대를 살아가는 누군가의 하루를 상징하는 추억과 일상용품을 보관하는 곳. "
-        },
-        "code/poetry/2023": {
-          "word": "코드",
-          "definition": "(동사) 컴퓨터용 명령문을 작성합니다."
-        },
-        "event/poetry/2023": {
-          "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
-        },
-        "line/poetry/2023": {
-          "word": "구절",
-          "definition": "(시) - 오른쪽 여백에서 끝나는 일렬로 배열된 시를 세분화한 것입니다."
-        },
-        "mood/poetry/2023": {
-          "word": "분위기",
-          "definition": "예술이나 글에서 느낌, 분위기 또는 감정을 표현하는 것."
-        },
-        "program/poetry/2023": {
-          "word": "프로그램 ",
-          "definition": "기계가 실행할 수 있는 것으로 코딩된 일련의 단계입니다."
-        },
-        "poem/poetry/2023": {
-          "word": "시",
-          "definition": "단어를 사용하여 독자의 마음 속에 그림, 느낌, 아이디어를 만들어내는 글의 줄."
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "건설적인 피드백",
-          "definition": "다른 사람의 업무 개선에 도움이 되는 존댓말"
-        },
-        "poetry_circle/poetry/2023": {
-          "definition": "새로운 시를 시험해보고 다른 사람들로부터 건설적인 피드백을 받을 수 있는 안전하고 창의적인 공간"
-        },
         "computer/csd/2023": {
           "word": "컴퓨터"
         },
@@ -1486,44 +1257,6 @@
         "copyright/csd/2023": {
           "word": "저작권",
           "definition": "문학적, 예술적, 음악적 소재를 인쇄 또는 출판, 공연, 촬영, 기록하고 또한 다른 이에게 그렇게 하도록 허가할 배타적 법적 권리."
-        },
-        "bug/csd/2023": {
-          "word": "버그",
-          "definition": "정상 작동하지 않는 프로그램 부분."
-        },
-        "debugging/csd/2023": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/csd/2023": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "variable/csd/2023": {
-          "word": "변수",
-          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
-        },
-        "sprite/csd/2023": {
-          "word": "스프라이트"
-        },
-        "condition/csd/2023": {
-          "word": "조건"
-        },
-        "conditionals/csd/2023": {
-          "word": "조건"
-        },
-        "abstraction/csd/2023": {
-          "word": "추상화"
-        },
-        "function/csd/2023": {
-          "word": "함수"
-        },
-        "user/csd/2023": {
-          "word": "사용자",
-          "definition": "소프트웨어 및 하드웨어를 포함하여, 객체를 사용하는 이"
-        },
-        "user_interface/csd/2023": {
-          "word": "사용자 인터페이스"
         },
         "machine_learning/csd/2023": {
           "word": "머신 러닝",
@@ -2087,42 +1820,6 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "머신 러닝",
-          "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "알고리즘",
-          "definition": "문제를 해결하거나 결정을 내리기 위한 일련의 단계"
-        },
-        "network/how-ai-works/2023": {
-          "word": "네트워크",
-          "definition": "서로 연결된 항목 모음입니다.이러한 연결을 따르는 것은 순서도와 같은 알고리즘의 단계를 나타낼 수 있습니다."
-        },
-        "large_language_model_llm_/how-ai-works/2023": {
-          "word": "대형 언어 모델 (LLM)",
-          "definition": "매우 방대한 지식을 바탕으로 훈련되는 범용 형태의 AI"
-        },
-        "model/how-ai-works/2023": {
-          "word": "모델",
-          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
-        },
-        "diffusion_ai/how-ai-works/2023": {
-          "word": "디퓨전 AI",
-          "definition": "이미지를 노이즈로 변환하고 프로세스를 역전시키도록 AI를 훈련시킵니다."
-        },
-        "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (생성적 적대 네트워크)",
-          "definition": "경쟁하는 두 AI 모델을 사용하여 무언가를 생성하는 방법"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "인공지능",
-          "definition": "학습하고 문제를 해결하는 기계의 능력."
-        },
-        "ethics/how-ai-works/2023": {
-          "word": "윤리",
-          "definition": "좋은 행동을 위한 지침."
-        },
         "code/aquatic/unversioned": {
           "word": "코드",
           "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 명령어를 만들다"
@@ -2174,28 +1871,6 @@
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
-        "code/dance-2019/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
         "code/dance-extras/unversioned": {
           "word": "코드",
           "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
@@ -2216,113 +1891,6 @@
           "definition": " 무언가를 일으키는 행위."
         },
         "program/dance/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/flappy/unversioned": {
-          "word": "코드",
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/flappy/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/frozen/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/frozen/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/gumball/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/gumball/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/hero/unversioned": {
-          "word": "코드",
-          "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 지시 사항을 만들다"
-        },
-        "debugging/hero/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "function/hero/unversioned": {
-          "word": "함수",
-          "definition": "손쉽게 계속해서 다시 호출할 수 있는 코드 조각"
-        },
-        "program/hero/unversioned": {
-          "word": "프로그램 ",
-          "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "시저 암호 ",
-          "definition": "영문자를 일정 문자 수 만큼 바꾸는 암호화 기법."
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "암호",
-          "definition": "암호화를 수행하는 기법 (또는 알고리즘)을 위한 일반 용어"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "암호 풀기",
-          "definition": "암호의 모든 세부사항을 알지 못하고 비밀 메시지를 해독하려고 시도할 때, 그것은 암호를 \"풀려고\" 시도하고 있는 것입니다. "
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "암호 해독",
-          "definition": "암호화와 반대되는 프로세스, 비밀 메시지를 가져 와 원래 평문으로 재생산."
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "암호화",
-          "definition": "비밀을 유지하여 \"허가된\" 이들만 읽을 수 있게 메시지를 암호화하는 프로세스."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "임의적 치환 암호",
-          "definition": "영문자의 각 글자를 임의적으로 선택한 다른 영문자 글자에 매핑하는 암호화 기법."
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/hourofcode/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/iceage/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/iceage/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/infinity/unversioned": {
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
@@ -2358,10 +1926,6 @@
           "word": "프로그램",
           "definition": "기계가 실행할 수 있는 무언가로 코딩된 알고리즘"
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "머신 러닝",
-          "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
-        },
         "event/outbreak/unversioned": {
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
@@ -2369,37 +1933,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "모델 및 시뮬레이션",
           "definition": "비용과 시간 또는 실제 세계에서 실험할 때의 위험 없이 행동을 조사하기 위해 실제 세계 이벤트의 주요 특징을 복제 또는 흉내내는 프로그램"
-        },
-        "code/playlab/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/playlab/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/poem-art/2021": {
-          "word": "코드",
-          "definition": "(동사) 컴퓨터용 명령문을 작성합니다."
-        },
-        "event/poem-art/2021": {
-          "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
-        },
-        "line/poem-art/2021": {
-          "word": "구절",
-          "definition": "(시) - 오른쪽 여백에서 끝나는 한 줄로 배열된 시의 한 부분입니다."
-        },
-        "mood/poem-art/2021": {
-          "word": "분위기",
-          "definition": "느낌이나 분위기, 감정이 예술 또는 글로 표현된 것입니다."
-        },
-        "program/poem-art/2021": {
-          "word": "프로그램 ",
-          "definition": "기계가 실행할 수 있는 것으로 코딩된 일련의 단계입니다."
         },
         "code/sports/unversioned": {
           "word": "코드",
@@ -2416,32 +1949,6 @@
         "program/sports/unversioned": {
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/starwars/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/starwars/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "무손실 압축",
-          "definition": "압축한 데이터에서 원래 데이터가 완벽하게 복원되게 하는 데이터 압축 알고리즘. 텍스트 압축용으로 가장 흔히 사용됨 (예. zip 압축)"
         }
       }
     }

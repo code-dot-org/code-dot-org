@@ -12,70 +12,70 @@
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "getGreen": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "getRed": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "putImageData": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setGreen": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
                     "imageData": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 }
@@ -99,28 +99,28 @@
                 "createRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "deleteRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "drawChart": {
                   "palette_params": {
                     "options": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
                     "options": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
@@ -141,14 +141,14 @@
                 "readRecords": {
                   "palette_params": {
                     "terms": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 },
                 "updateRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "객체로 이동합니다"
+                      "type": "대상"
                     }
                   }
                 }

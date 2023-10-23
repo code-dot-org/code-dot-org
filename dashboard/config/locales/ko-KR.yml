@@ -4,6 +4,7 @@ ko:
     attributes:
       user:
         age: 나이
+        ai_settings_header: AI 설정
         current_password: 현재 비밀번호
         edit_header: 계정 정보 수정
         email: 이메일
