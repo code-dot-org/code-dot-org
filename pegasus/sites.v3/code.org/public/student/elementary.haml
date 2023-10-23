@@ -7,12 +7,6 @@ theme: responsive
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/student/school-styles.css", rel: "stylesheet"}
 
-- js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: webpack_asset_path('js/code.org/public/student/middle-high.js')}
-%link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
-= view 'mobilecheck.js'
-
 %h1
   =hoc_s(:elemeentary_page_main_title)
 %p{style: "font-size: 20px;"}
