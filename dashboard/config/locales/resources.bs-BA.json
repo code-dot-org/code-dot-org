@@ -2,126 +2,6 @@
   "bs-BA": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/express/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/express/2020": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "Nastavni Plan"
-        },
         "app-proposal-project/csd/2021": {
           "name": "Aplikacije i riješavanje problema"
         },
@@ -136,36 +16,6 @@
         },
         "classes/csd/2021": {
           "name": "Razredi"
-        },
-        "variables_1/csd/2021": {
-          "name": "Varijable"
-        },
-        "velocity_1/csd/2021": {
-          "name": "Brzina"
-        },
-        "velocity_2/csd/2021": {
-          "name": "Brzina"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Funkcije"
-        },
-        "functions_1/csd/2021": {
-          "name": "Funkcije"
-        },
-        "design_mode/csd/2021": {
-          "name": "Način Dizajniranje"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Način Dizajniranje"
-        },
-        "functions_2/csd/2021": {
-          "name": "Funkcije"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Od-Do-Za Petlje"
-        },
-        "for_loops/csd/2021": {
-          "name": "Od-Do-Za Petlje"
         },
         "implementation_guide/coursea/2021": {
           "name": "Vodič za Implementaciju"
@@ -373,39 +223,6 @@
         },
         "classes/csd/2022": {
           "name": "Razredi"
-        },
-        "variables/csd/2022": {
-          "name": "Varijable"
-        },
-        "variables_3/csd/2022": {
-          "name": "Varijable"
-        },
-        "text/csd/2022": {
-          "name": "Tekst"
-        },
-        "conditionals/csd/2022": {
-          "name": "Uvjeti"
-        },
-        "velocity/csd/2022": {
-          "name": "Brzina"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Brzina"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Brzina"
-        },
-        "functions/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_1/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_4/csd/2022": {
-          "name": "Funkcije"
-        },
-        "design_mode/csd/2022": {
-          "name": "Način Dizajniranje"
         },
         "variables_1/csd/2022": {
           "name": "Varijable"
@@ -647,38 +464,14 @@
         "variables_1/csd/2023": {
           "name": "Varijable"
         },
-        "variables_2/csd/2023": {
-          "name": "Varijable"
-        },
-        "text/csd/2023": {
-          "name": "Tekst"
-        },
-        "conditionals/csd/2023": {
-          "name": "Uvjeti"
-        },
-        "velocity/csd/2023": {
-          "name": "Brzina"
-        },
-        "velocity_1/csd/2023": {
-          "name": "Brzina"
-        },
-        "velocity_2/csd/2023": {
-          "name": "Brzina"
+        "making_music/csd/2023": {
+          "name": "Pravljenje muzike"
         },
         "functions/csd/2023": {
           "name": "Funkcije"
         },
         "functions_1/csd/2023": {
           "name": "Funkcije"
-        },
-        "functions_2/csd/2023": {
-          "name": "Funkcije"
-        },
-        "design_mode/csd/2023": {
-          "name": "Način Dizajniranje"
-        },
-        "making_music/csd/2023": {
-          "name": "Pravljenje muzike"
         },
         "functions_with_parameters/csd/2023": {
           "name": "Funkcije sa Parametrima"
