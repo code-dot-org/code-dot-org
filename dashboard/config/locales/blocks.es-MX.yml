@@ -10,6 +10,9 @@ es-MX:
             '"just right"': suficiente
             '"too little"': muy poco
             '"too much"': demasiado
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -2010,6 +2013,9 @@ es-MX:
             '"just right"': suficiente
             '"too little"': muy poco
             '"too much"': demasiado
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:
@@ -2024,12 +2030,19 @@ es-MX:
             '8': '8'
             '9': '9'
         text: "{VALUE}"
+      ecosystems_makeNewSpriteBetween:
+        text: hacer {N} nuevo {GROUP} en ubicación x:{X} y:{Y}
+      ecosystems_makeNumSpritesAtLocation:
+        text: crear {NUM} nuevos {ANIMATION_NAME} sprites en {LOCATION_GENERATOR}
       ecosystems_makeNumSpritesWithinRange:
         options:
           RANGE:
             "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
             "{x1:0, x2:400, y1:150, y2:250}": Centro
             "{x1:0, x2:400, y1:200, y2:400}": Parte superior
+        text: crear {NUM} nuevos {ANIMATION_NAME} sprites en {RANGE}
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
       ecosystems_randomLocationWithinSelectedRange:
         options:
           RANGE:

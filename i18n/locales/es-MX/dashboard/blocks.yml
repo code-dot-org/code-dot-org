@@ -5,6 +5,9 @@ es-MX:
       AmysBlocks_addTarget:
         text: "{TARGET} {OPT} {SPRITE} "
       AmysBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
         options:
           CONDITION:
             '"too much"': demasiado
@@ -2644,6 +2647,9 @@ es-MX:
       ecosystems_eat:
         text: comer {THIS}
       ecosystems_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
         options:
           CONDITION:
             '"too much"': demasiado
@@ -2663,12 +2669,19 @@ es-MX:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: hacer {N} nuevo {GROUP} en ubicación x:{X} y:{Y}
+      ecosystems_makeNumSpritesAtLocation:
+        text: crear {NUM} nuevos {ANIMATION_NAME} sprites en {LOCATION_GENERATOR}
       ecosystems_makeNumSpritesWithinRange:
+        text: crear {NUM} nuevos {ANIMATION_NAME} sprites en {RANGE}
         options:
           RANGE:
             "{x1:0, x2:400, y1:200, y2:400}": Parte superior
             "{x1:0, x2:400, y1:150, y2:250}": Centro
             "{x1:0, x2:400, y1:0, y2:200}": Parte inferior
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
       ecosystems_randomLocationWithinSelectedRange:
         text: "{RANGE}"
         options:
