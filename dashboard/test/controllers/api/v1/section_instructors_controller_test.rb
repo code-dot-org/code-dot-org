@@ -15,6 +15,10 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     @former_instructor = create(:section_instructor, section: @section, instructor: @teacher2, status: :removed)
     @former_instructor.destroy!
     @si3 = create(:section_instructor, section: @section2, instructor: @teacher2, status: :active)
+    @full_section = create(:section, user: @teacher2, login_type: 'word')
+    (Section::INSTRUCTOR_LIMIT - 1).times do
+      create(:section_instructor, section: @full_section, instructor: create(:teacher), status: :active)
+    end
   end
 
   test 'logged out user has no section_instructors' do
@@ -77,12 +81,8 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
   end
 
   test 'instructor cannot add a new instructor to a full section' do
-    sign_in @teacher
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :active)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :invited)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :declined)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :active)
-    post :create, params: {section_id: @section2.id, email: @teacher3.email}
+    sign_in @teacher2
+    post :create, params: {section_id: @full_section.id, email: @teacher3.email}
 
     assert_response :bad_request
   end
@@ -205,6 +205,13 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     sign_in @teacher2
     get :check, params: {email: @teacher3.email, section_id: @section.id}
     assert_response :forbidden
+  end
+
+  test 'instructor gets error checking for a full section' do
+    sign_in @teacher2
+    get :check, params: {section_id: @full_section.id, email: @teacher3.email}
+
+    assert_response :bad_request
   end
 
   # Parsed JSON returned after the last request, for easy assertions.
