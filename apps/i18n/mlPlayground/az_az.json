@@ -225,6 +225,9 @@
         "element": {
           "id": "Element"
         },
+        "free time": {
+          "id": "boş vaxt"
+        },
         "personality": {
           "id": "Şəxsiyyət"
         }
@@ -298,6 +301,11 @@
       "name": "Peçenye"
     },
     "exoplanets": {
+      "fields": {
+        "Discovery year": {
+          "id": "kəşf ili"
+        }
+      },
       "name": "Ekzoplanetlər"
     },
     "global_happiness_raw": {
@@ -366,6 +374,9 @@
         },
         "Preference": {
           "id": "Tərcih"
+        },
+        "Waffle Cone": {
+          "id": "Vafli konusu "
         }
       }
     },
@@ -399,12 +410,14 @@
     "jeans": {
       "fields": {
         "Brand": {
+          "description": "Cins markası ",
           "id": "Brend"
         },
         "Style": {
           "id": "Stil"
         }
-      }
+      },
+      "name": "Cins ölçüləri "
     },
     "loneliness_interests": {
       "fields": {
@@ -1210,6 +1223,7 @@
           "id": "Qocalma"
         },
         "Alcohol": {
+          "description": "içmə vərdişləri",
           "id": "Spirt"
         },
         "Alternative": {
@@ -1226,8 +1240,14 @@
           "description": "Biologiya xoşuma gəlir",
           "id": "Biologiya"
         },
+        "Borrowed stuff": {
+          "id": "Borc alınmış əşyalar"
+        },
         "Cars": {
           "id": "Avtomobillər"
+        },
+        "Changing the past": {
+          "id": "Keçmişi dəyişdirmək"
         },
         "Charity": {
           "id": "Xeyriyyə"
@@ -1244,6 +1264,9 @@
         },
         "Country": {
           "id": "Ölkə"
+        },
+        "Criminal damage": {
+          "id": "Kriminal zərər"
         },
         "Daily events": {
           "id": "Gündəlik hadisələr"
@@ -1262,6 +1285,9 @@
           "description": "Qaranlıqdan qorxuram",
           "id": "Qaranlıq"
         },
+        "Decision making": {
+          "id": "Qərar qəbul etmək"
+        },
         "Dreams": {
           "id": "Xəyallar"
         },
@@ -1275,11 +1301,20 @@
         "Elections": {
           "id": "Seçkilər"
         },
+        "Energy levels": {
+          "id": "Enerji səviyyələri"
+        },
         "Fake": {
           "id": "saxta"
         },
         "Fantasy/Fairy tales": {
           "id": "Fantaziya/Nağıllar"
+        },
+        "Final judgement": {
+          "id": "Sonuncu mühakimə"
+        },
+        "Finances": {
+          "id": "Maliyyə"
         },
         "Flying": {
           "description": "Uçmaqdan qorxuram",
@@ -1297,6 +1332,9 @@
         },
         "Geography": {
           "id": "Coğrafiya"
+        },
+        "Getting up": {
+          "id": "Ayağa durmaq"
         },
         "Giving": {
           "id": "Verilmə"
@@ -1334,8 +1372,12 @@
           "description": "İnternetdən istifadə etməyi xoşlayıram",
           "id": "İnternet"
         },
+        "Internet usage": {
+          "id": "İnternet istifadəsi"
+        },
         "Keeping promises": {
-          "description": "Mən həmişə verdiyim sözlərə əməl edirəm."
+          "description": "Mən həmişə verdiyim sözlərə əməl edirəm.",
+          "id": "Sözünü tutmaq"
         },
         "Latino": {
           "description": "Mən Latın musiqisindən həzz alıram",
@@ -1344,8 +1386,14 @@
         "Law": {
           "id": "Hüquq"
         },
+        "Life struggles": {
+          "id": "Həyat mübarizələri"
+        },
         "Loneliness": {
           "id": "Yalnızlıq"
+        },
+        "Loss of interest": {
+          "id": "Maraq azlığı"
         },
         "Lying": {
           "id": "Yalan"
@@ -1375,6 +1423,9 @@
           "description": "Mən PC istifadə etməyi xoşlayıram",
           "id": "Şəxsi Kompüter"
         },
+        "Personality": {
+          "id": "Şəxsiyyət"
+        },
         "Pets": {
           "id": "Ev heyvanları"
         },
@@ -1392,6 +1443,13 @@
         "Psychology": {
           "description": "Psixologiyanı xoşlayıram",
           "id": "Psixologiya"
+        },
+        "Public speaking": {
+          "id": "İctimai danışma"
+        },
+        "Punctuality": {
+          "description": "Vaxt tutma",
+          "id": "dəqiqlik"
         },
         "Punk": {
           "description": "Mən Punk musiqisindən həzz alıram",
@@ -1428,6 +1486,7 @@
           "id": "Özünütənqid"
         },
         "Smoking": {
+          "description": "siqaret çəkmə vərdişi",
           "id": "Siqaret çəkmək"
         },
         "Snakes": {
@@ -1447,6 +1506,9 @@
         },
         "Theatre": {
           "id": "Teatr"
+        },
+        "Thinking ahead": {
+          "id": "Əvvəlcədən düşünmək"
         },
         "Thriller": {
           "id": "Triller"
@@ -1475,7 +1537,8 @@
           "id": "Yazı"
         },
         "Writing notes": {
-          "description": "Mən həmişə siyahı hazırlayıram ona görə də heç nəyi unutmuram."
+          "description": "Mən həmişə siyahı hazırlayıram ona görə də heç nəyi unutmuram.",
+          "id": "Qeydlər yazmaq"
         }
       }
     },
