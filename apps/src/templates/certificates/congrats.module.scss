@@ -11,7 +11,6 @@
 }
 
 .inputContainer {
-  width: 50%;
   background-color: $neutral_light;
   padding: 15px 15px 0 15px;
   border-radius: 5px;
@@ -19,4 +18,51 @@
 
 .certificateContainer {
   display: flex;
+  width: 100%;
+}
+
+.heading {
+  width: 100%;
+}
+
+.container {
+  margin-bottom: 50px;
+  float: left;
+}
+
+.mobileHeading {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.desktopHalf {
+  width: 50%;
+  float: left;
+}
+
+.mobileFull {
+  width: 100%;
+  float: left;
+}
+
+.nameInput {
+  height: 26px !important;
+  margin: 0 !important;
+  border: 1px solid $neutral_dark !important;
+  width: 75%;
+}
+
+.submit {
+  background: $light_secondary_500;
+  color: $neutral_white;
+  font-size: 16px;
+  padding: 9px 20px;
+}
+
+.confetti {
+  top: 100px;
+}
+.enterName {
+  font-weight: bold;
+  margin: 0;
 }
