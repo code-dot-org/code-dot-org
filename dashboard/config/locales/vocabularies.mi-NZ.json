@@ -8,18 +8,6 @@
         "copyright/csd/2021": {
           "word": "Manatārua"
         },
-        "variable/csd/2021": {
-          "word": "Taurangi"
-        },
-        "conditionals/csd/2021": {
-          "word": "Ngā Here"
-        },
-        "abstraction/csd/2021": {
-          "word": "Te Whakawaitara"
-        },
-        "function/csd/2021": {
-          "word": "Taumahi"
-        },
         "drop/coursea/2021": {
           "word": "Taka Iho"
         },
@@ -77,18 +65,6 @@
         "copyright/csd/2022": {
           "word": "Manatārua"
         },
-        "variable/csd/2022": {
-          "word": "Taurangi"
-        },
-        "conditionals/csd/2022": {
-          "word": "Ngā Here"
-        },
-        "abstraction/csd/2022": {
-          "word": "Te Whakawaitara"
-        },
-        "function/csd/2022": {
-          "word": "Taumahi"
-        },
         "drop/coursea/2022": {
           "word": "Taka Iho"
         },
@@ -143,41 +119,11 @@
         "code/csc-adaptations/2023": {
           "word": "Waehere"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Waehere"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Ngā Here"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Taurangi"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Waehere"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Rehetoi"
-        },
-        "code/poetry/2023": {
-          "word": "Waehere"
-        },
         "input/csd/2023": {
           "word": "Tāuru"
         },
         "copyright/csd/2023": {
           "word": "Manatārua"
-        },
-        "variable/csd/2023": {
-          "word": "Taurangi"
-        },
-        "conditionals/csd/2023": {
-          "word": "Ngā Here"
-        },
-        "abstraction/csd/2023": {
-          "word": "Te Whakawaitara"
-        },
-        "function/csd/2023": {
-          "word": "Taumahi"
         },
         "drop/coursea/2023": {
           "word": "Taka Iho"
@@ -230,9 +176,6 @@
         "drop/pre-express/2023": {
           "word": "Taka Iho"
         },
-        "network/how-ai-works/2023": {
-          "word": "Tūhononga"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Ngā Here"
         },
@@ -240,12 +183,6 @@
           "word": "Ngā Koromeke"
         },
         "code/artist/unversioned": {
-          "word": "Waehere"
-        },
-        "function/hero/unversioned": {
-          "word": "Taumahi"
-        },
-        "code/poem-art/2021": {
           "word": "Waehere"
         },
         "code/sports/unversioned": {
