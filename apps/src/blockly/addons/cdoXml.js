@@ -58,7 +58,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       // xml blocks will never have a procedure model id, so we need to create a new model
       // and save that id in the appropriate place (mutation??).
       let functionName = xmlFunctionBlock.nextElementSibling.getAttribute('id');
-      while (!Blockly.Procedures.isLegalName(functionName, workspace)) {
+      while (!Blockly.Procedures.isNameUsed(functionName, workspace)) {
         // Collision with another procedure.
         const r = functionName.match(/^(.*?)(\d+)$/);
         if (!r) {

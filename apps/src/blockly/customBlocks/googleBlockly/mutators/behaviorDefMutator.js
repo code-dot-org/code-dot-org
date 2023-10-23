@@ -61,6 +61,8 @@ export const behaviorDefMutator = {
    * @this {Blockly.Block}
    */
   domToMutation: function (xmlElement) {
+    this.procedureName = xmlElement.nextElementSibling.getAttribute('id');
+    this.findOrCreateProcedureModel();
     // We do not copy parameters because behavior parameters are a special case.
     // We manually create the "this sprite" parameter for each behavior,
     // (and don't want to treat it as a Blockly parameter).

@@ -59,7 +59,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     helpUrl: '%{BKY_PROCEDURES_DEFNORETURN_HELPURL}',
     tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
-      'procedure_def_get_def_mixin',
+      'cdo_procedure_def_get_def_mixin',
       'procedure_def_var_mixin',
       'procedure_def_update_shape_mixin',
       'procedure_def_onchange_mixin',
