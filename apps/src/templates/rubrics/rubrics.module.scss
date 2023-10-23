@@ -265,7 +265,7 @@ button.rubricHeaderTab {
       position: absolute;
       left: 1rem;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-35%);
       padding-right: 10px;
       height: 16px;
       width: 16px;
@@ -295,18 +295,9 @@ button.rubricHeaderTab {
   display: flex;
   align-items: center;
   gap: 16px;
-  width: 100%
-
-  // TODO: [DES-321] remove span styles
-  span {
-    font-size: 14px;
-    font-weight: 350;
-  }
-
-  .arrowIcon {
-    font-weight: 900;
-    font-size: 16px;
-  }
+  width: 100%;
+  font-size: 14px;
+  padding-left: 10px;
 }
 
 .learningGoalHeaderRightSide {

@@ -14,6 +14,7 @@ import {
   BodyThreeText,
   BodyFourText,
   ExtraStrongText,
+  StrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -201,7 +202,7 @@ export default function LearningGoal({
       <summary className={style.learningGoalHeader} onClick={handleClick}>
         <div className={style.learningGoalHeaderLeftSide}>
           {/*TODO: [DES-321] Label-two styles here*/}
-          <span>{learningGoal.learningGoal}</span>
+          <StrongText>{learningGoal.learningGoal}</StrongText>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && displayUnderstanding === invalidUnderstanding && (
