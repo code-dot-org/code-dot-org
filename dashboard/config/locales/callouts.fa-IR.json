@@ -184,7 +184,7 @@
         },
         "CourseF_outbreak2": {
           "minitoolbox": "برای گسترش بلوک، اینجا را کلیک کنید.",
-          "pointerlocation": "یک بلوک موضوع را به اینجا بکشید."
+          "pointerlocation": "بلوک موضوع را به اینجا بکشانید."
         },
         "CourseF_outbreak2_-2022-2": {
           "minitoolbox": "برای گسترش بلوک، اینجا را کلیک کنید.",
@@ -2004,10 +2004,10 @@
           "events_category": "برای باز کردن دسته «رویدادها»، اینجا را کلیک کنید."
         },
         "courseF_groups_size_-2022-2": {
-          "mini-toolbox-blue-button": "روی دکمه آبی کلیک کنید تا باز یا بسته شود."
+          "mini-toolbox-blue-button": "برای باز یا بسته‌کردن از کلید آبی استفاده کنید."
         },
         "courseF_groups_size_2023": {
-          "mini-toolbox-blue-button": "روی دکمه آبی کلیک کنید تا باز یا بسته شود."
+          "mini-toolbox-blue-button": "برای باز یا بسته‌کردن از کلید آبی استفاده کنید."
         },
         "courseF_label_predict": {
           "variablesPredict": "به کد زیر این نقطه دقت کنید."
