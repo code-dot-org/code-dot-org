@@ -1,6 +1,6 @@
 import {PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType, splitBlocksByType} from './cdoUtils';
-import {ObservableProcedueModel} from '@blockly/block-shareable-procedures';
+import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
 
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
@@ -54,11 +54,11 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     const blocks = [];
 
     for (const xmlFunctionBlock of prioritizedBlocks) {
-      console.log({xmlFunctionBlock});
       // xml blocks will never have a procedure model id, so we need to create a new model
       // and save that id in the appropriate place (mutation??).
-      let functionName = xmlFunctionBlock.nextElementSibling.getAttribute('id');
-      while (!Blockly.Procedures.isNameUsed(functionName, workspace)) {
+      let functionName = xmlFunctionBlock.children[1].textContent;
+      console.log(`[${functionName}] in domToBlockSpace`);
+      while (Blockly.Procedures.isNameUsed(functionName, workspace)) {
         // Collision with another procedure.
         const r = functionName.match(/^(.*?)(\d+)$/);
         if (!r) {
@@ -67,7 +67,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
           functionName = r[1] + (parseInt(r[2]) + 1);
         }
       }
-      const model = new ObservableProcedueModel(workspace, functionName);
+      const model = new ObservableProcedureModel(workspace, functionName);
       Blockly.Events.disable();
       workspace.getProcedureMap().add(model);
       Blockly.Events.enable();

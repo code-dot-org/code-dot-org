@@ -19,7 +19,11 @@ export default function () {
 
     findOrCreateProcedureModel() {
       this.creatingModel_ = true;
-      const procedureName = this.getFieldValue('NAME') || this.procedureName;
+      const procedureName = this.procedureName || this.getFieldValue('NAME');
+      console.log({
+        fieldValue: this.getFieldValue('NAME'),
+        procedureName: this.procedureName,
+      });
       const model = this.workspace
         .getProcedureMap()
         .getProcedures()
@@ -30,9 +34,6 @@ export default function () {
         this.model_ = model;
       } else {
         console.log(`creating new model for ${procedureName}`);
-        console.log({
-          legalName: Blockly.Procedures.findLegalName(procedureName, this),
-        });
         this.model_ = new ObservableProcedureModel(
           this.workspace,
           Blockly.Procedures.findLegalName(procedureName, this)

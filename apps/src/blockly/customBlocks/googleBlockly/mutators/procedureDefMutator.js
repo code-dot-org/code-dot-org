@@ -63,7 +63,9 @@ export const procedureDefMutator = {
    * @this {Blockly.Block}
    */
   domToMutation: function (xmlElement) {
-    this.procedureName = xmlElement.nextElementSibling.getAttribute('id');
+    console.log({xmlElement});
+    this.procedureName = xmlElement.nextElementSibling.textContent;
+    console.log(`[${this.procedureName}] in domToMutation`);
     this.findOrCreateProcedureModel();
     for (let i = 0; i < xmlElement.childNodes.length; i++) {
       const node = xmlElement.childNodes[i];
