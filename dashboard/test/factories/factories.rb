@@ -1854,7 +1854,7 @@ FactoryBot.define do
     end
 
     user {student}
-    project {create(:project, owner: student)}
+    project_id {789}
     association :requester, factory: :teacher
     status {1}
     project_version {"1"}
