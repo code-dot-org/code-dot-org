@@ -12,12 +12,6 @@ h2 {
   font-weight: var(--bold-font-weight);
 }
 
-#top {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
 section {
   padding: 7em 1em;
 
@@ -29,6 +23,12 @@ section {
     max-width: 960px;
     margin: 0 auto;
   }
+}
+
+#top {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 // What is HoC?
@@ -59,13 +59,6 @@ section.map {
     }
   }
 }
-
-
-
-
-
-
-
 
 // Stats
 section.stats {

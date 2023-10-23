@@ -78,6 +78,10 @@ section.banner.homepage {
     }
   }
 
+  i {
+    margin: 0 4px;
+  }
+
   .side-by-side-cta-wrapper {
     display: flex;
     justify-content: center;
@@ -85,7 +89,7 @@ section.banner.homepage {
     flex-wrap: wrap;
     gap: 2rem;
 
-    .cta-wrapper {
+    .flex-container {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
