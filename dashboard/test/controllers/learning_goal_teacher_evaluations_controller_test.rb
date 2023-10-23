@@ -83,7 +83,6 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
 
   test 'get_or_create_evaluation method creates evaluation if one does not exist' do
     new_student = create :student
-    
     user_id = new_student.id
     learning_goal_id = @learning_goal.id
 
