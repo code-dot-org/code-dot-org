@@ -126,6 +126,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleGenerateClick = () => {
+    startAi();
     setMode(Mode.GENERATING);
   };
 
@@ -142,7 +143,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleProcessClick = () => {
-    startAi();
     setMode(Mode.PROCESSING);
     setTimeout(() => {
       setProcessingDone(true);
