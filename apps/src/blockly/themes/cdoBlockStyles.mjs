@@ -63,16 +63,16 @@ const labBlockStyles = {
     // Formerly called dance_blocks, music_blocks
     colourPrimary: '#7435b2',
   },
-  ai_blocks: {
-    // Used in Dance AI Edition
-    colourPrimary: '#566065',
-  },
 };
 
 // The order of the properties in this object is intentional
 // as it gives priority to our most-used block styles when
 // remapping to nearest colors for our accessible themes.
 const cdoBlockStyles = {
+  ai_blocks: {
+    // Used in Dance AI Edition
+    colourPrimary: '#566065', // This color is consistent across all themes so will be matched with itself.
+  },
   ...commonBlockStyles,
   ...labBlockStyles,
 };
