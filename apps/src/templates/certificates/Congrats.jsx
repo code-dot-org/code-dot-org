@@ -1,30 +1,28 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Certificate from './Certificate';
-import StudentsBeyondHoc from './StudentsBeyondHoc';
-import TeachersBeyondHoc from './TeachersBeyondHoc';
-import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import styleConstants from '../../styleConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../../util/color';
-import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
+import style from './certificate_batch.module.scss';
+import i18n from '@cdo/locale';
 
 export default function Congrats(props) {
   /**
    * @param tutorial The specific tutorial the student completed i.e. 'dance', 'dance-2019', etc
    * @returns {string} The category type the specific tutorial belongs to i.e. 'dance', 'applab', etc
    */
-  const getTutorialType = tutorial =>
-    ({
-      dance: 'dance',
-      'dance-2019': 'dance',
-      'applab-intro': 'applab',
-      aquatic: '2018Minecraft',
-      hero: '2017Minecraft',
-      minecraft: 'pre2017Minecraft',
-      mc: 'pre2017Minecraft',
-      oceans: 'oceans',
-    }[tutorial] || 'other');
+  // const getTutorialType = tutorial =>
+  //   ({
+  //     dance: 'dance',
+  //     'dance-2019': 'dance',
+  //     'applab-intro': 'applab',
+  //     aquatic: '2018Minecraft',
+  //     hero: '2017Minecraft',
+  //     minecraft: 'pre2017Minecraft',
+  //     mc: 'pre2017Minecraft',
+  //     oceans: 'oceans',
+  //   }[tutorial] || 'other');
   /**
    * Renders links to certificate alternatives when there is a special event going on.
    * @param {string} language The language code related to the special event i.e. 'en', 'es', 'ko', etc
@@ -72,58 +70,205 @@ export default function Congrats(props) {
   const {
     tutorial,
     certificateId,
-    MCShareLink,
-    userType,
     under13,
     language,
     randomDonorTwitter,
     randomDonorName,
-    hideDancePartyFollowUp,
     initialCertificateImageUrl,
     isHocTutorial,
-    nextCourseScriptName,
-    nextCourseTitle,
-    nextCourseDesc,
   } = props;
 
-  const isEnglish = language === 'en';
-  const tutorialType = getTutorialType(tutorial);
+  // const isEnglish = language === 'en';
+  // const tutorialType = getTutorialType(tutorial);
+
+  const curriculaData = [
+    {
+      grade: i18n.gradeRange({
+        numGrades: ['3', '8'].length,
+        youngestGrade: '3',
+        oldestGrade: '8',
+      }),
+      title: i18n.marketingInitiativeCSC(),
+      image: '/../../../../shared/images/courses/logo_connections.jpg',
+      buttonText: i18n.exploreCsConnections(),
+      description: i18n.cscDescription(),
+      link: 'http://code.org/csc',
+    },
+
+    {
+      grade: i18n.gradeRange({
+        numGrades: ['K', '5'].length,
+        youngestGrade: 'K',
+        oldestGrade: '5',
+      }),
+      title: i18n.marketingInitiativeCSF(),
+      image: '/../../../../shared/images/courses/logo_csf.jpg',
+      buttonText: i18n.exploreCsFundamentals(),
+      description: i18n.csfDescriptionTeacher(),
+      link: 'http://code.org/csf',
+    },
+    {
+      grade: i18n.gradeRange({
+        numGrades: ['6', '12'].length,
+        youngestGrade: '6',
+        oldestGrade: '12',
+      }),
+      title: i18n.howAiWorks(),
+      image: 'https://code.org/images/ai/ai-curriculum-how-ai-works.png',
+      buttonText: i18n.exploreLessons(),
+      description: i18n.howAiWorksDescription(),
+      link: 'http://code.org/ai/how-ai-works',
+    },
+  ];
+
+  const curriculumCatalogImages = [
+    'https://code.org/images/ai/ai-curriclum-machine-learning.png',
+    'https://images.code.org/11d83ab1d397cafda327782812e8988c-Book%20Covers.png',
+    '/../../../../shared/images/courses/logo_csa.jpg',
+    '/../../../../shared/images/courses/logo_mobile.jpg',
+    '/../../../../shared/images/courses/logo_hardware.jpg',
+  ];
+
+  const professionalLearning = [
+    {
+      title: i18n.teachWithCodeOrg(),
+      description: i18n.teachWithCodeOrgDescription(),
+      buttonText: i18n.teachWithCodeOrg(),
+      image: 'https://code.org/images/teach-page-top.png',
+      link: 'code.org/teach',
+    },
+    {
+      title: i18n.courseOfferingSelfPacedPl(),
+      description: i18n.selfPacedPlDescription(),
+      buttonText: i18n.exploreProfessionalLearning(),
+      image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
+      link: 'code.org/educate/professional-development-online',
+    },
+  ];
 
   return (
-    <div style={styles.container}>
-      <Certificate
-        tutorial={tutorial}
-        certificateId={certificateId}
-        randomDonorTwitter={randomDonorTwitter}
-        randomDonorName={randomDonorName}
-        under13={under13}
-        initialCertificateImageUrl={initialCertificateImageUrl}
-        isHocTutorial={isHocTutorial}
-      >
-        {renderExtraCertificateLinks(language, tutorial)}
-      </Certificate>
-      {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
-      {isHocTutorial && (
-        <StudentsBeyondHoc
-          completedTutorialType={tutorialType}
-          MCShareLink={MCShareLink}
-          userType={userType}
+    <div className={style.wrapper}>
+      <div className={style.certificateContainer}>
+        <Certificate
+          tutorial={tutorial}
+          certificateId={certificateId}
+          randomDonorTwitter={randomDonorTwitter}
+          randomDonorName={randomDonorName}
           under13={under13}
-          isEnglish={isEnglish}
-          hideDancePartyFollowUp={hideDancePartyFollowUp}
-        />
-      )}
-      {!isHocTutorial && (
-        <GraduateToNextLevel
-          scriptName={nextCourseScriptName}
-          courseTitle={nextCourseTitle}
-          courseDesc={nextCourseDesc}
-        />
-      )}
-      {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
-      <hr style={styles.divider} />
-      <PetitionCallToAction tutorial={tutorial} />
+          initialCertificateImageUrl={initialCertificateImageUrl}
+          isHocTutorial={isHocTutorial}
+        >
+          {renderExtraCertificateLinks(language, tutorial)}
+        </Certificate>
+      </div>
+
+      <div className={style.continueBeyond}>
+        <h3 style={{textAlign: 'center'}}>{i18n.continueBeyondHourOfCode()}</h3>
+        <div
+          className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol}`}
+        >
+          {curriculaData.map((item, index) => (
+            <div
+              className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
+              key={index}
+            >
+              <div className={style.contentWrapper}>
+                <p className={style.overline}>{item.grade}</p>
+                <h3>{item.title}</h3>
+                <img src={item.image} alt="" />
+                <p>{item.description}</p>
+              </div>
+              <div className={style.contentFooter}>
+                <a className={style.linkButton} href={item.link} aria-label="">
+                  {item.buttonText}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+        <hr />
+
+        <div style={{textAlign: 'center'}}>
+          <h4>{i18n.discoverMore()}</h4>
+          <p>{i18n.discoverMoreCatalogText()}</p>
+          <div className={style.imageContainer}>
+            {curriculumCatalogImages.map((item, index) => (
+              <img key={index} src={item} alt={`Image ${index}`} />
+            ))}
+          </div>
+          <a
+            style={{marginTop: '20px', marginBottom: '40px'}}
+            className={style.linkButton}
+            href={'/catalog'}
+            aria-label=""
+          >
+            {i18n.viewCurriculumCatalog()}
+          </a>
+        </div>
+      </div>
+
+      <div className={style.professionalLearning}>
+        <div
+          className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
+        >
+          {professionalLearning.map((item, index) => (
+            <div
+              className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
+              key={index}
+            >
+              <div className={style.contentWrapper}>
+                <img
+                  src={item.image}
+                  alt=""
+                  className={style.professionalLearningImage}
+                />
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+              <div className={style.contentFooter}>
+                <a className={style.linkButton} href={item.link} aria-label="">
+                  {item.buttonText}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
+    // <div style={styles.container}>
+    //   <Certificate
+    //     tutorial={tutorial}
+    //     certificateId={certificateId}
+    //     randomDonorTwitter={randomDonorTwitter}
+    //     randomDonorName={randomDonorName}
+    //     under13={under13}
+    //     initialCertificateImageUrl={initialCertificateImageUrl}
+    //     isHocTutorial={isHocTutorial}
+    //   >
+    //     {renderExtraCertificateLinks(language, tutorial)}
+    //   </Certificate>
+    //   {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
+    //   {isHocTutorial && (
+    //     <StudentsBeyondHoc
+    //       completedTutorialType={tutorialType}
+    //       MCShareLink={MCShareLink}
+    //       userType={userType}
+    //       under13={under13}
+    //       isEnglish={isEnglish}
+    //       hideDancePartyFollowUp={hideDancePartyFollowUp}
+    //     />
+    //   )}
+    //   {!isHocTutorial && (
+    //     <GraduateToNextLevel
+    //       scriptName={nextCourseScriptName}
+    //       courseTitle={nextCourseTitle}
+    //       courseDesc={nextCourseDesc}
+    //     />
+    //   )}
+    //   {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
+    //   <hr style={styles.divider} />
+    //   <PetitionCallToAction tutorial={tutorial} />
+    // </div>
   );
 }
 

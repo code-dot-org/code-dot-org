@@ -9,6 +9,7 @@ import queryString from 'query-string';
 import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
+import style from './congrats.module.scss';
 
 /**
  * Without this, we get an error on the server "invalid byte sequence in UTF-8".
@@ -132,52 +133,58 @@ function Certificate(props) {
 
   return (
     <div style={styles.container}>
-      <h1 style={headingStyle}>{i18n.congratsCertificateHeading()}</h1>
+      <div className={style.headerContainer}>
+        <h1 style={headingStyle} className={style.header}>
+          {i18n.congratsCertificateHeading()}
+        </h1>
+      </div>
       {tutorial && (
         <LargeChevronLink
           link={`/s/${tutorial}`}
           linkText={i18n.backToActivity()}
         />
       )}
-      <div id="uitest-certificate" style={certificateStyle}>
-        <BackToFrontConfetti active={personalized} style={styles.confetti} />
-        <a href={certificateShareLink}>
-          <img src={imgSrc} />
-        </a>
-      </div>
-      <div style={certificateStyle}>
-        {tutorial && !personalized && (
-          <div>
-            <h2>{i18n.congratsCertificatePersonalize()}</h2>
-            <input
-              id="name"
-              type="text"
-              style={styles.nameInput}
-              placeholder={i18n.yourName()}
-              ref={nameInputRef}
-            />
-            <button
-              type="button"
-              style={styles.submit}
-              onClick={personalizeCertificate.bind(this, certificateId)}
-            >
-              {i18n.submit()}
-            </button>
-          </div>
-        )}
-        {tutorial && personalized && (
-          <div>
-            <h2 id="uitest-thanks">{i18n.congratsCertificateThanks()}</h2>
-            <p>{i18n.congratsCertificateContinue()}</p>
-          </div>
-        )}
-        <h2>{i18n.congratsCertificateShare()}</h2>
-        <SocialShare
-          facebook={facebook}
-          twitter={twitter}
-          print={print}
-          under13={under13}
-        />
+      <div className={style.certificateContainer}>
+        <div id="uitest-certificate" style={certificateStyle}>
+          <BackToFrontConfetti active={personalized} style={styles.confetti} />
+          <a href={certificateShareLink}>
+            <img src={imgSrc} />
+          </a>
+        </div>
+        <div style={certificateStyle} className={style.inputContainer}>
+          {tutorial && !personalized && (
+            <div>
+              <h2>{i18n.congratsCertificatePersonalize()}</h2>
+              <input
+                id="name"
+                type="text"
+                style={styles.nameInput}
+                placeholder={i18n.yourName()}
+                ref={nameInputRef}
+              />
+              <button
+                type="button"
+                style={styles.submit}
+                onClick={personalizeCertificate.bind(this, certificateId)}
+              >
+                {i18n.submit()}
+              </button>
+            </div>
+          )}
+          {tutorial && personalized && (
+            <div>
+              <h2 id="uitest-thanks">{i18n.congratsCertificateThanks()}</h2>
+              <p>{i18n.congratsCertificateContinue()}</p>
+            </div>
+          )}
+          <h2>{i18n.congratsCertificateShare()}</h2>
+          <SocialShare
+            facebook={facebook}
+            twitter={twitter}
+            print={print}
+            under13={under13}
+          />
+        </div>
       </div>
       {children}
     </div>

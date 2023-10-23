@@ -1,0 +1,22 @@
+@import 'phase1-design-system';
+@import 'color', 'font', 'typography', 'breakpoints',
+  'barlow-semi-condensed-font';
+
+.headerContainer {
+  margin-top: 50px;
+}
+
+.header {
+  color: $neutral_dark;
+}
+
+.inputContainer {
+  width: 50%;
+  background-color: $neutral_light;
+  padding: 15px 15px 0 15px;
+  border-radius: 5px;
+}
+
+.certificateContainer {
+  display: flex;
+}
