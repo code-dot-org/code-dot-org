@@ -18,55 +18,6 @@
           "word": "版權所有",
           "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
         },
-        "bug/csd/2021": {
-          "word": "程式錯誤（Bug）",
-          "definition": "程式中無法正確運作的部分。"
-        },
-        "debugging/csd/2021": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/csd/2021": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "variable/csd/2021": {
-          "word": "變數",
-          "definition": "放置可變更資訊的佔位符。"
-        },
-        "sprite/csd/2021": {
-          "word": "雪碧"
-        },
-        "condition/csd/2021": {
-          "word": "條件（Condition）"
-        },
-        "conditionals/csd/2021": {
-          "word": "條件判斷（Conditionals）"
-        },
-        "abstraction/csd/2021": {
-          "word": "抽象概念"
-        },
-        "function/csd/2021": {
-          "word": "函式"
-        },
-        "user/csd/2021": {
-          "word": "使用者",
-          "definition": "使用物件的人員，包括軟體和硬體。"
-        },
-        "user_interface/csd/2021": {
-          "word": "使用者介面"
-        },
-        "for_loop/csd/2021": {
-          "word": "計數/計次迴圈（For Loop）",
-          "definition": "有預先確定的開始、結束與增加幅度（階值）的迴圈。"
-        },
-        "machine_learning/csd/2021": {
-          "word": "機器學習",
-          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
-        },
-        "ethics/csd/2021": {
-          "word": "倫理"
-        },
         "algorithm/coursea/2021": {
           "word": "演算法（Algorithm）",
           "definition": "用於完成某項任務的步驟清單。"
@@ -611,51 +562,6 @@
           "word": "版權所有",
           "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
         },
-        "bug/csd/2022": {
-          "word": "程式錯誤（Bug）",
-          "definition": "程式中無法正確運作的部分。"
-        },
-        "debugging/csd/2022": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/csd/2022": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "variable/csd/2022": {
-          "word": "變數",
-          "definition": "放置可變更資訊的佔位符。"
-        },
-        "sprite/csd/2022": {
-          "word": "雪碧"
-        },
-        "condition/csd/2022": {
-          "word": "條件（Condition）"
-        },
-        "conditionals/csd/2022": {
-          "word": "條件判斷（Conditionals）"
-        },
-        "abstraction/csd/2022": {
-          "word": "抽象概念"
-        },
-        "function/csd/2022": {
-          "word": "函式"
-        },
-        "user/csd/2022": {
-          "word": "使用者",
-          "definition": "使用物件的人員，包括軟體和硬體。"
-        },
-        "user_interface/csd/2022": {
-          "word": "使用者介面"
-        },
-        "machine_learning/csd/2022": {
-          "word": "機器學習",
-          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
-        },
-        "ethics/csd/2022": {
-          "word": "倫理"
-        },
         "algorithm/coursea/2022": {
           "word": "演算法（Algorithm）",
           "definition": "用於完成某項任務的步驟清單。"
@@ -1167,9 +1073,6 @@
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "人工智能"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "適應",
           "definition": "生物體的改變，以更好地生存其環境"
@@ -1198,197 +1101,6 @@
           "word": "行為",
           "definition": "您希望 Sprite 反覆執行的一組動作。 "
         },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "代碼 (v)",
-          "definition": "寫一台計算機的說明。"
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "程式",
-          "definition": "一系列已編碼的步驟，可在設備上運行。"
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "提示",
-          "definition": "電腦螢幕上的訊息，等待來自使用者的輸入。"
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "雪碧",
-          "definition": "螢幕上具有位置、大小和外觀的圖形。"
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "背景",
-          "definition": "屏幕上主要事物或人物背後的視覺效果。"
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "人物",
-          "definition": "一個人，動物，存在，一個故事的東西的生物。"
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "設定",
-          "definition": "故事的時間和地點（或何時何地）。"
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "摘要",
-          "definition": "用你自己的話說出文本中最重要的部分，用更短的方式"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "代碼",
-          "definition": "(v) 為電腦撰寫指示"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "條件（Condition）",
-          "definition": "程序在允許操作之前檢查它是否為真"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "條件判斷（Conditionals）",
-          "definition": "僅在特定條件下執行的陳述式"
-        },
-        "ecosystem/csc-ecosystems/2023": {
-          "word": "生態系",
-          "definition": "交互作用生物及其環境的生物社區"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "事件（Event）",
-          "definition": "一個導致事情發生的動作"
-        },
-        "overfishing/csc-ecosystems/2023": {
-          "word": "過度捕撈",
-          "definition": "去除魚的速度比它們繁殖的速度更快"
-        },
-        "simulation/csc-ecosystems/2023": {
-          "word": "模擬",
-          "definition": "一種用於研究目的的的計算機模型。"
-        },
-        "debug/csc-ecosystems/2023": {
-          "word": "除錯",
-          "definition": "尋找並修正程式碼中的錯誤或問題。"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "變數",
-          "definition": "可以存儲值的容器。 "
-        },
-        "ecologist/csc-ecosystems/2023": {
-          "word": "生態學家",
-          "definition": "研究動物和植物如何與環境相互作用的科學家。"
-        },
-        "energy/csc-ecosystems/2023": {
-          "word": "能源",
-          "definition": "從生產者到消費者的食品網中的生物體之間轉移。能量被生物用於執行複雜的任務。"
-        },
-        "food_chain/csc-ecosystems/2023": {
-          "word": "食物鏈 ",
-          "definition": "從生產者到消費者，從獵物到捕食者，按照他們所吃的食物順序聯繫起來的一組生物。"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "代碼",
-          "definition": "（動詞）為電腦編寫指令。"
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "地標",
-          "definition": "地標是具有重要性或使地方容易識別的物體（天然或人造）。"
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "雪碧",
-          "definition": "程序中的圖像或字符。"
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "地圖",
-          "definition": "顯示物理特徵，城市，道路等的陸地或海洋區域的表示"
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "模式",
-          "definition": "以常規和重複的方式發生或出現的事情"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "菱形",
-          "definition": "具有四個相等邊的多邊形，相反的邊是平行的，相反的角度相等"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "星星被",
-          "definition": "來自大平原的美洲原住民的傳統和有價值的禮物"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "藝術家",
-          "definition": "您可以編寫代碼以使他幾乎繪製任何東西"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "迴圈",
-          "definition": "重複的程式碼序列"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "點",
-          "definition": "星形的一部分"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "行",
-          "definition": "在這種情況下，有序的菱形線"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "同心",
-          "definition": "共用相同中心的物件或形狀"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "註解",
-          "definition": "給自己解釋一段代碼的注意事項。他們不會改變程序，但有助於保持你的代碼井然有序。"
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "影像",
-          "definition": "詩或故事所產生的心理影像"
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "意境",
-          "definition": "藝術或寫作中的感覺，氛圍或情感的表達。"
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "雪碧",
-          "definition": "程序中的圖像或字符"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "一個存放回憶和日常用品的地方，代表生活在特定時間段內的某個人的生活中的一天。 "
-        },
-        "code/poetry/2023": {
-          "word": "代碼",
-          "definition": "（動詞）為電腦編寫指令。"
-        },
-        "event/poetry/2023": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
-        },
-        "line/poetry/2023": {
-          "word": "詩歌行",
-          "definition": "（詩）-一首詩的細分排列在右邊緣結束一排。"
-        },
-        "mood/poetry/2023": {
-          "word": "意境",
-          "definition": "藝術或寫作中的感覺，氛圍或情感的表達。"
-        },
-        "program/poetry/2023": {
-          "word": "程式",
-          "definition": "一系列已編碼的步驟，可在設備上運行。"
-        },
-        "poem/poetry/2023": {
-          "word": "詩",
-          "definition": "使用文字在讀者心中創造圖片，感受和想法的書寫行。"
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "建設性反饋",
-          "definition": "尊重的評論，幫助別人改善他們的工作"
-        },
-        "poetry_circle/poetry/2023": {
-          "word": "詩圈",
-          "definition": "一個安全而富有創意的空間，可以測試新詩並獲得他人的建設性反饋"
-        },
         "computer/csd/2023": {
           "word": "計算機"
         },
@@ -1404,44 +1116,6 @@
         "copyright/csd/2023": {
           "word": "版權所有",
           "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
-        },
-        "bug/csd/2023": {
-          "word": "程式錯誤（Bug）",
-          "definition": "程式中無法正確運作的部分。"
-        },
-        "debugging/csd/2023": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/csd/2023": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "variable/csd/2023": {
-          "word": "變數",
-          "definition": "放置可變更資訊的佔位符。"
-        },
-        "sprite/csd/2023": {
-          "word": "雪碧"
-        },
-        "condition/csd/2023": {
-          "word": "條件（Condition）"
-        },
-        "conditionals/csd/2023": {
-          "word": "條件判斷（Conditionals）"
-        },
-        "abstraction/csd/2023": {
-          "word": "抽象概念"
-        },
-        "function/csd/2023": {
-          "word": "函式"
-        },
-        "user/csd/2023": {
-          "word": "使用者",
-          "definition": "使用物件的人員，包括軟體和硬體。"
-        },
-        "user_interface/csd/2023": {
-          "word": "使用者介面"
         },
         "machine_learning/csd/2023": {
           "word": "機器學習",
@@ -2044,30 +1718,6 @@
           "word": "程式",
           "definition": "編碼為可以由電腦運行的演算法。"
         },
-        "code/dance-2019/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "event/dance-2019/unversioned": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
-        },
-        "program/dance-2019/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
         "code/dance-extras/unversioned": {
           "word": "代碼",
           "definition": "(v) 編寫程式碼或電腦指令。"
@@ -2089,118 +1739,6 @@
           "definition": "導致某些事情發生的操作。"
         },
         "program/dance/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/flappy/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/flappy/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/frozen/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/frozen/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/gumball/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/gumball/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/hero/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/hero/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "function/hero/unversioned": {
-          "word": "函式",
-          "definition": "你可輕鬆不斷呼叫的程式碼。"
-        },
-        "program/hero/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "凱撒密碼（Caesar Cipher）",
-          "definition": "一種加密技術，使用若干數目的字元來轉換字母"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "密碼（Cipher）",
-          "definition": "執行加密技術（或演算法）的通用詞彙"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "破解加密內容（Cracking encryption）",
-          "definition": "若你嘗試把秘密訊息解碼，而不知道密碼的詳情，這就表示你正在嘗試「破解」加密內容。"
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "解密（Decryption）",
-          "definition": "這種流程用於反轉加密程序，把秘密訊息重現成原始的純文字"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "加密",
-          "definition": "把訊息編碼的流程，讓訊息內容保密，只有得到「授權」的人士才可讀取。"
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "隨機替換式密碼（Random Substitution Cipher）",
-          "definition": "一種加密技術，把字母表的每個字母，配對至字母表中隨機選擇的其他字母。"
-        },
-        "code/hourofcode/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/hourofcode/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/iceage/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/iceage/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/infinity/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/infinity/unversioned": {
           "word": "程式",
           "definition": "編碼為可以由電腦運行的演算法。"
         },
@@ -2236,10 +1774,6 @@
           "word": "程式",
           "definition": "編碼為可以由電腦運行的演算法。"
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "機器學習",
-          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
-        },
         "event/outbreak/unversioned": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
@@ -2247,38 +1781,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "模型和模擬",
           "definition": "複製或模仿現實世界事件的關鍵特徵以研究其行為的程式，無需在現實生活中進行實驗的成本、時間或危險。"
-        },
-        "code/playlab/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/playlab/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/poem-art/2021": {
-          "word": "代碼",
-          "definition": "（動詞）為電腦編寫指令。"
-        },
-        "event/poem-art/2021": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
-        },
-        "line/poem-art/2021": {
-          "word": "詩歌行",
-          "definition": "（詩歌）- 一篇詩歌的組成部分，採用單行格式，在右側結束。 "
-        },
-        "mood/poem-art/2021": {
-          "word": "意境",
-          "definition": "藝術作品或文學作品所表達出某種感覺、氛圍或情感。"
-        },
-        "program/poem-art/2021": {
-          "word": "程式",
-          "definition": "一系列已編碼的步驟，可在設備上運行。"
         },
         "code/sports/unversioned": {
           "word": "代碼",
@@ -2295,34 +1797,6 @@
         "program/sports/unversioned": {
           "word": "程式",
           "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/starwars/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/starwars/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "代碼",
-          "definition": "(v) 編寫程式碼或電腦指令。"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "除錯",
-          "definition": "尋找並修復演算法或程式中的問題。"
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "程式",
-          "definition": "編碼為可以由電腦運行的演算法。"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "無損壓縮",
-          "definition": "一種資料壓縮演算法，可讓壓縮資料完美重建成原始資料。最常用於文字壓縮（例如 .zip 壓縮）"
         }
       }
     }
