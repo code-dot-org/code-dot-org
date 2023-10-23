@@ -2,197 +2,8 @@
   "sr-SP": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "План лекција"
-        },
-        "code_introduced/csd/2017": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "План лекција"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "План лекција"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "План лекција"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "План лекција"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "План лекција"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "План лекција"
-        },
-        "code_introduced/csd/2018": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "План лекција"
-        },
-        "code_introduced_1/csd/2018": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "План лекција"
-        },
-        "code_introduced_2/csd/2018": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "План лекција"
-        },
-        "code_introduced_3/csd/2018": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/express/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "План лекција"
-        },
-        "code_introduced/csd/2019": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "План лекција"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "План лекција"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "План лекција"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/express/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/express/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "План лекција"
-        },
         "lists/csd/2021": {
           "name": "Листе"
-        },
-        "variables_1/csd/2021": {
-          "name": "Променљиве"
-        },
-        "velocity_1/csd/2021": {
-          "name": "Брзина"
-        },
-        "velocity_2/csd/2021": {
-          "name": "Брзина"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Функције"
-        },
-        "functions_1/csd/2021": {
-          "name": "Функције"
-        },
-        "design_mode/csd/2021": {
-          "name": "Dizajn mod"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Dizajn mod"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "Bидео: Mашинско учење"
-        },
-        "functions_2/csd/2021": {
-          "name": "Функције"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Бројачке петље"
-        },
-        "for_loops/csd/2021": {
-          "name": "Бројачке петље"
         },
         "implementation_guide/coursea/2021": {
           "name": "Водич за имплементацију"
@@ -390,42 +201,6 @@
         },
         "lists/csd/2022": {
           "name": "Листе"
-        },
-        "variables/csd/2022": {
-          "name": "Променљиве"
-        },
-        "variables_3/csd/2022": {
-          "name": "Променљиве"
-        },
-        "text/csd/2022": {
-          "name": "текст"
-        },
-        "conditionals/csd/2022": {
-          "name": "Кондиционали"
-        },
-        "velocity/csd/2022": {
-          "name": "Брзина"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Брзина"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Брзина"
-        },
-        "functions/csd/2022": {
-          "name": "Функције"
-        },
-        "functions_1/csd/2022": {
-          "name": "Функције"
-        },
-        "functions_4/csd/2022": {
-          "name": "Функције"
-        },
-        "design_mode/csd/2022": {
-          "name": "Dizajn mod"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "Bидео: Mашинско учење"
         },
         "variables_1/csd/2022": {
           "name": "Променљиве"
@@ -648,38 +423,11 @@
         "variables_1/csd/2023": {
           "name": "Променљиве"
         },
-        "variables_2/csd/2023": {
-          "name": "Променљиве"
-        },
-        "text/csd/2023": {
-          "name": "текст"
-        },
-        "conditionals/csd/2023": {
-          "name": "Кондиционали"
-        },
-        "velocity/csd/2023": {
-          "name": "Брзина"
-        },
-        "velocity_1/csd/2023": {
-          "name": "Брзина"
-        },
-        "velocity_2/csd/2023": {
-          "name": "Брзина"
-        },
         "functions/csd/2023": {
           "name": "Функције"
         },
         "functions_1/csd/2023": {
           "name": "Функције"
-        },
-        "functions_2/csd/2023": {
-          "name": "Функције"
-        },
-        "design_mode/csd/2023": {
-          "name": "Dizajn mod"
-        },
-        "video_machine_learning/csd/2023": {
-          "name": "Bидео: Mашинско учење"
         },
         "functions_with_parameters/csd/2023": {
           "name": "Функције са параметрима"

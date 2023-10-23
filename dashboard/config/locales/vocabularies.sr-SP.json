@@ -8,21 +8,6 @@
         "copyright/csd/2021": {
           "word": "Ауторска права"
         },
-        "debugging/csd/2021": {
-          "word": "Отклањање грешака"
-        },
-        "variable/csd/2021": {
-          "word": "Променљива"
-        },
-        "conditionals/csd/2021": {
-          "word": "Кондиционали"
-        },
-        "abstraction/csd/2021": {
-          "word": "Апстракција"
-        },
-        "function/csd/2021": {
-          "word": "Функција"
-        },
         "debugging/coursea/2021": {
           "word": "Отклањање грешака"
         },
@@ -112,21 +97,6 @@
         },
         "copyright/csd/2022": {
           "word": "Ауторска права"
-        },
-        "debugging/csd/2022": {
-          "word": "Отклањање грешака"
-        },
-        "variable/csd/2022": {
-          "word": "Променљива"
-        },
-        "conditionals/csd/2022": {
-          "word": "Кондиционали"
-        },
-        "abstraction/csd/2022": {
-          "word": "Апстракција"
-        },
-        "function/csd/2022": {
-          "word": "Функција"
         },
         "debugging/coursea/2022": {
           "word": "Отклањање грешака"
@@ -218,47 +188,11 @@
         "behavior/csc-adaptations/2023": {
           "word": "Понашање"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Kod"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Кондиционали"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Променљива"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kod"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Уметник"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Коментари"
-        },
-        "code/poetry/2023": {
-          "word": "Kod"
-        },
         "input/csd/2023": {
           "word": "Унос"
         },
         "copyright/csd/2023": {
           "word": "Ауторска права"
-        },
-        "debugging/csd/2023": {
-          "word": "Отклањање грешака"
-        },
-        "variable/csd/2023": {
-          "word": "Променљива"
-        },
-        "conditionals/csd/2023": {
-          "word": "Кондиционали"
-        },
-        "abstraction/csd/2023": {
-          "word": "Апстракција"
-        },
-        "function/csd/2023": {
-          "word": "Функција"
         },
         "debugging/coursea/2023": {
           "word": "Отклањање грешака"
@@ -362,52 +296,16 @@
         "debugging/basketball/unversioned": {
           "word": "Отклањање грешака"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "function/hero/unversioned": {
-          "word": "Функција"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Отклањање грешака"
-        },
         "debugging/mc/unversioned": {
           "word": "Отклањање грешака"
         },
         "debugging/minecraft/unversioned": {
           "word": "Отклањање грешака"
         },
-        "debugging/playlab/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "code/poem-art/2021": {
-          "word": "Kod"
-        },
         "code/sports/unversioned": {
           "word": "Kod"
         },
         "debugging/sports/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Отклањање грешака"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Отклањање грешака"
         }
       }
