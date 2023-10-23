@@ -4,11 +4,7 @@
     "func": "ai",
     "inline": true,
     "blockText": "{IMAGE}generate {VALUE} stage",
-    "color": [
-      216,
-      0.13,
-      0.29
-    ],
+    "style": "ai_blocks",
     "args": [
       {
         "name": "IMAGE",
