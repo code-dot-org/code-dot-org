@@ -39,13 +39,6 @@
         "function/csd/2021": {
           "word": "Funksiya"
         },
-        "user/csd/2021": {
-          "word": "İstifadəçi",
-          "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
-        },
-        "user_interface/csd/2021": {
-          "word": "İstifadəçi interfeysi"
-        },
         "machine_learning/csd/2021": {
           "word": "Avtomatlaşdırılmış Öyrənmə",
           "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
@@ -1033,42 +1026,6 @@
           "word": "Davranış ",
           "definition": "Obrazın dəfələrlə yerinə yetirməsini istədiyiniz hərəkətlər toplusu. "
         },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "Kod (v)",
-          "definition": "kompüter üçün təlimatlar yazmaq."
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Hadisə",
-          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar."
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "cəld",
-          "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Sprayt",
-          "definition": "Yeri, ölçüsü və görünüşü ilə ekranda qrafik."
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "Arxa plan",
-          "definition": "Ekrandakı əsas şeylərin və ya insanların arxasındakı vizual görünüş."
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "Simvol",
-          "definition": "Bir hekayədə insan, heyvan, varlıq, bir şey varlığı."
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "Tənzimləmə",
-          "definition": "Bir hekayənin vaxtı və yeri (və ya nə vaxt və harada)."
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "İcmal",
-          "definition": "Bir mətnin ən vacib hissələrini öz sözlərinizlə daha qısa bir şəkildə izah edin"
-        },
         "code/csc-ecosystems/2023": {
           "word": "Kod",
           "definition": "(v) Kompüter üçün təlimatlar yazmaq"
@@ -1110,66 +1067,12 @@
           "definition": "Heyvanların və bitkilərin ətraf mühitlə necə qarşılıqlı əlaqəsini araşdıran bir alim."
         },
         "energy/csc-ecosystems/2023": {
+          "word": "Enerji",
           "definition": "Qida şəbəkələrindəki orqanizmlər arasında istehsalçılardan istehlakçılara ötürülür. Enerji orqanizmlər tərəfindən mürəkkəb tapşırıqları yerinə yetirmək üçün istifadə olunur."
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "Qida zənciri ",
           "definition": "İstehsalçılardan istehlakçılara, yırtıcılardan yırtıcılara və yırtıcılara qədər yedikləri qida sırasına görə əlaqəli bir qrup orqanizm."
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kod",
-          "definition": "(v) kompüter üçün təlimatlar yazmaq."
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Hadisə",
-          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "Əlamət",
-          "definition": "Əlamət əhəmiyyəti olan və ya bir yeri asanlıqla tanınan bir obyektdir (təbii və ya süni)."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Sprayt",
-          "definition": "Proqramınızdakı bir şəkil və ya xarakter."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Xəritə",
-          "definition": "Fiziki xüsusiyyətləri, şəhərləri, yolları və s. göstərən quru və ya dəniz sahəsinin təsviri."
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "Naxış",
-          "definition": "Müntəzəm və təkrarlanan bir şəkildə baş verən və ya görünən bir şey"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "Romb",
-          "definition": "Dörd bərabər tərəfi olan çoxbucaqlı, əks tərəfləri paralel, əks açıları bərabərdir"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "Ulduz yorğanı",
-          "definition": "Böyük Düzənliklərdən olan yerli amerikalılar arasında ənənəvi və qiymətli bir hədiyyə"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Rəssam",
-          "definition": "Demək olar ki, hər şeyi çəkdirmək üçün kod yaza bilərsiniz"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Dövr",
-          "definition": "Təkrarlanan kod ardıcıllığı"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "Nöqtə",
-          "definition": "Ulduz şəklinin bir hissəsi"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "Sətir",
-          "definition": "Bu vəziyyətdə, müntəzəm bir romb xətti"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "Konsentrik",
-          "definition": "Eyni mərkəzi paylaşan obyektlər və ya formalar"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Rəylər"
         },
         "event/csc-timecapsule/2023": {
           "word": "Hadisə",
@@ -1198,6 +1101,9 @@
         "program/poetry/2023": {
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar."
+        },
+        "poetry_circle/poetry/2023": {
+          "word": "Şeir dairəsi"
         },
         "input/csd/2023": {
           "word": "Giriş"
@@ -1238,13 +1144,6 @@
         },
         "function/csd/2023": {
           "word": "Funksiya"
-        },
-        "user/csd/2023": {
-          "word": "İstifadəçi",
-          "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
-        },
-        "user_interface/csd/2023": {
-          "word": "İstifadəçi interfeysi"
         },
         "machine_learning/csd/2023": {
           "word": "Avtomatlaşdırılmış Öyrənmə",
@@ -1760,28 +1659,6 @@
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
-        "code/dance-2019/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Hadisə",
-          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Hadisə",
-          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
         "code/dance-extras/unversioned": {
           "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
         },
@@ -1801,55 +1678,6 @@
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
         "program/dance/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/flappy/unversioned": {
-          "word": "kod",
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/flappy/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/frozen/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/frozen/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/gumball/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/gumball/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/hero/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "function/hero/unversioned": {
-          "word": "Funksiya",
-          "definition": "Dəfələrlə asanlıqla zəng edə biləcəyiniz kod parçası."
-        },
-        "program/hero/unversioned": {
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
@@ -1876,39 +1704,6 @@
         "random_substitution_cipher/hoc-encryption/unversioned": {
           "word": "Təsadüfi Əvəzetmə Şifrəsi",
           "definition": "əlifbanın hər hərfini təsadüfi seçilmiş digər əlifba hərfləri ilə əlaqələndirən şifrələmə texnikası."
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/iceage/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/iceage/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/infinity/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/infinity/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
         "code/mc/unversioned": {
           "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
@@ -1940,10 +1735,6 @@
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Avtomatlaşdırılmış Öyrənmə",
-          "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
-        },
         "event/outbreak/unversioned": {
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
@@ -1951,17 +1742,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "Modellər və Simulyasiyalar",
           "definition": "real həyatda eksperiment aparmaq üçün xərc, vaxt və ya təhlükə olmadan onun davranışını araşdırmaq üçün real dünya hadisəsinin əsas xüsusiyyətlərini təkrarlayan və ya təqlid edən proqram."
-        },
-        "code/playlab/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/playlab/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
         "code/poem-art/2021": {
           "word": "Kod",
@@ -1996,28 +1776,6 @@
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
         "program/sports/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/starwars/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/starwars/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/starwarsblocks/unversioned": {
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         }

@@ -665,6 +665,7 @@ az:
       playlab: Oyun labı
       playlab_k1: Play Lab (Pre-reader)
       poetry: Şeir
+      poetry_hoc: Şeir sənəti
       scratch: Cızıq
       settings: Hesab parametrləri
       signin: Daxil olun
@@ -1492,6 +1493,7 @@ az:
     poem-art:
       body: Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.
       image_alt: Səhnədə çıxış edən hipster kalamar.
+      title: Şeir sənəti
     pre-express:
       image_alt: Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu
         at.

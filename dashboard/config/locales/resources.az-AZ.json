@@ -2,18 +2,6 @@
   "az-AZ": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/csd/2017": {
-          "name": "Lüğət"
-        },
         "code_introduced/csd/2017": {
           "name": "Tanıtdırılmış kod.",
           "url": "https://curriculum.code.org/csd/unit2/code/"
@@ -52,33 +40,6 @@
           "name": "Lüğət",
           "url": "https://curriculum.code.org/csd/unit3/vocab/"
         },
-        "code_introduced_2/csd/2017": {
-          "name": "Tanıtdırılmış kod."
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "Lüğət"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "Lüğət"
-        },
         "code_introduced_3/csd/2017": {
           "name": "Tanıtdırılmış kod."
         },
@@ -92,18 +53,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary_5/csd/2017": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/csd/2018": {
           "name": "Lüğət"
         },
         "code_introduced/csd/2018": {
@@ -136,33 +85,6 @@
         "vocabulary_2/csd/2018": {
           "name": "Lüğət"
         },
-        "code_introduced_2/csd/2018": {
-          "name": "Tanıtdırılmış kod."
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_3/csd/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum_3/csd/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Lüğət"
-        },
         "code_introduced_3/csd/2018": {
           "name": "Tanıtdırılmış kod."
         },
@@ -176,54 +98,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary_5/csd/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/coursea/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/coursea/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/coursea/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/courseb/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/courseb/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/courseb/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/coursed/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/coursed/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/coursed/2018": {
           "name": "Lüğət"
         },
         "lesson_plans/coursee/2018": {
@@ -262,17 +136,8 @@
         "vocabulary/express/2018": {
           "name": "Lüğət"
         },
-        "lesson_plans/csd/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "Standart Eşlemeler"
-        },
         "teacher_forum/csd/2019": {
           "name": "Müəllim Forumu"
-        },
-        "vocabulary/csd/2019": {
-          "name": "Lüğət"
         },
         "code_introduced/csd/2019": {
           "name": "Tanıtdırılmış kod."
@@ -296,27 +161,6 @@
           "name": "Standart Eşlemeler"
         },
         "vocabulary_2/csd/2019": {
-          "name": "Lüğət"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "Tanıtdırılmış kod."
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "Standart Eşlemeler"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "Lüğət"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "Standart Eşlemeler"
-        },
-        "vocabulary_4/csd/2019": {
           "name": "Lüğət"
         },
         "code_introduced_3/csd/2019": {
@@ -344,21 +188,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary/coursea/2019": {
-          "name": "Lüğət"
-        },
-        "curriculum_guide/courseb/2019": {
-          "name": "Kurikulum Bələdçisi"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/courseb/2019": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/courseb/2019": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/courseb/2019": {
           "name": "Lüğət"
         },
         "curriculum_guide/coursec/2019": {
@@ -421,18 +250,6 @@
         "vocabulary/coursef/2019": {
           "name": "Lüğət"
         },
-        "lesson_plans/express/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/express/2019": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/express/2019": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/express/2019": {
-          "name": "Lüğət"
-        },
         "curriculum_guide/coursea/2020": {
           "name": "Kurikulum Bələdçisi"
         },
@@ -447,21 +264,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary/coursea/2020": {
-          "name": "Lüğət"
-        },
-        "curriculum_guide/courseb/2020": {
-          "name": "Kurikulum Bələdçisi"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/courseb/2020": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/courseb/2020": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/courseb/2020": {
           "name": "Lüğət"
         },
         "curriculum_guide/coursec/2020": {
@@ -522,31 +324,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary/coursef/2020": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/express/2020": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/express/2020": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/express/2020": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/express/2020": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/pre-express/2020": {
-          "name": "Standart Eşlemeler",
-          "url": "https://curriculum.code.org/csf-20/express/standards"
-        },
-        "teacher_forum/pre-express/2020": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/pre-express/2020": {
           "name": "Lüğət"
         },
         "teacher_forum/csd/2021": {
@@ -944,178 +721,6 @@
         "make_your_own_game/csd/2021": {
           "type": "sərlövhə"
         },
-        "all_resources_4/csd/2021": {
-          "name": "Bütün Resurslar"
-        },
-        "all_standards_4/csd/2021": {
-          "name": "Bütün Standartlar"
-        },
-        "all_vocabulary_4/csd/2021": {
-          "name": "Bütün Lüğət"
-        },
-        "unit-4-the-design-process/csd/2021": {
-          "type": "Slaydlar"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "Video"
-        },
-        "user-interface-screens/csd/2021": {
-          "type": "Mənbə"
-        },
-        "paper-prototype-sample-feedback/csd/2021": {
-          "type": "Mənbə"
-        },
-        "user-interviews/csd/2021": {
-          "type": "Mənbə"
-        },
-        "paper-prototypes/csd/2021": {
-          "type": "sərlövhə"
-        },
-        "market-research/csd/2021": {
-          "name": "Bazar Araşdırması"
-        },
-        "market_research/csd/2021": {
-          "name": "Bazar Araşdırması"
-        },
-        "design_mode/csd/2021": {
-          "name": "Dizayn Rejimi",
-          "type": "Mənbə"
-        },
-        "design_mode_elements/csd/2021": {
-          "name": "Dizayn rejimi elementləri",
-          "type": "Mənbə"
-        },
-        "whats-for-lunch-testing/csd/2021": {
-          "type": "Video"
-        },
-        "model-screen-design/csd/2021": {
-          "type": "Mənbə"
-        },
-        "intro_to_design_mode/csd/2021": {
-          "name": "Dizayn rejiminə giriş",
-          "type": "Video"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Dizayn Rejimi",
-          "type": "Mənbə"
-        },
-        "design_mode_elements_1/csd/2021": {
-          "name": "Dizayn rejimi elementləri",
-          "type": "Mənbə"
-        },
-        "changing_screens/csd/2021": {
-          "name": "Ekranların dəyişdirilməsi",
-          "type": "Mənbə"
-        },
-        "importing_screens/csd/2021": {
-          "name": "Ekranlar idxal olunur",
-          "type": "Mənbə"
-        },
-        "multi-screen_apps/csd/2021": {
-          "name": "Çox-ekranlı Tətbiqlər",
-          "type": "Mənbə"
-        },
-        "responding_to_user_input/csd/2021": {
-          "name": "İstifadəçi input-una cavab",
-          "type": "Mənbə"
-        },
-        "app-presentation/csd/2021": {
-          "name": "Proqram təqdimatı",
-          "type": "sərlövhə"
-        },
-        "app-presentation-exemplar/csd/2021": {
-          "name": "Proqram təqdimatı"
-        },
-        "all_resources_5/csd/2021": {
-          "name": "Bütün Resurslar"
-        },
-        "all_standards_5/csd/2021": {
-          "name": "Bütün Standartlar"
-        },
-        "all_vocabulary_5/csd/2021": {
-          "name": "Bütün Lüğət"
-        },
-        "unit-5-data-society/csd/2021": {
-          "type": "Slaydlar"
-        },
-        "meals-data-resource-2019/csd/2021": {
-          "type": "Mənbə"
-        },
-        "representing-information-1/csd/2021": {
-          "name": "Məlumatı təmsil edən"
-        },
-        "ascii-text/csd/2021": {
-          "type": "Mənbə"
-        },
-        "ascii_challenges/csd/2021": {
-          "type": "Cavab kitabcası"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "name": "İkili və məlumat",
-          "type": "Video"
-        },
-        "unit_5_data_society/csd/2021": {
-          "type": "Slaydlar"
-        },
-        "medical_records/csd/2021": {
-          "type": "Cavab kitabcası"
-        },
-        "unit_5_data_society_1/csd/2021": {
-          "type": "Slaydlar"
-        },
-        "create_a_representation/csd/2021": {
-          "type": "sərlövhə"
-        },
-        "interpreting-data-1/csd/2021": {
-          "type": "Mənbə"
-        },
-        "making-decisions-with-data/csd/2021": {
-          "name": "Data ilə bağlı qərar vermək"
-        },
-        "problem-solving-process-with-data/csd/2021": {
-          "type": "Mənbə"
-        },
-        "data-decisions-resource/csd/2021": {
-          "type": "Mənbə"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "Video"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "Video"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "Video"
-        },
-        "data-in-the-real-world-exemplar-2019/csd/2021": {
-          "name": "Data əsl dünyada"
-        },
-        "data-in-the-real-world/csd/2021": {
-          "name": "Data əsl dünyada"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "Video"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "Video: Maşın öyrənməsi",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "Video"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "Video"
-        },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "Həmyaşıd rəyi"
-        },
-        "make-a-recommendation-1/csd/2021": {
-          "type": "sərlövhə"
-        },
-        "solve-a-data-problem/csd/2021": {
-          "type": "Layihə Bələdçisi"
-        },
-        "unit_5_data_society_2/csd/2021": {
-          "type": "Slaydlar"
-        },
         "all_resources_6/csd/2021": {
           "name": "Bütün Resurslar"
         },
@@ -1147,7 +752,7 @@
           "type": "Mənbə"
         },
         "responding_to_user_input_1/csd/2021": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "how_computers_word_hardware_software/csd/2021": {
@@ -1178,6 +783,7 @@
           "type": "Mənbə"
         },
         "changing_sensor_scale/csd/2021": {
+          "name": "miqyas",
           "type": "Mənbə"
         },
         "date_and_change_events/csd/2021": {
@@ -1229,6 +835,7 @@
           "type": "Mənbə"
         },
         "modifying_arrays/csd/2021": {
+          "name": "Massivlərin dəyişdirilməsi",
           "type": "Mənbə"
         },
         "accelerometer_events/csd/2021": {
@@ -3266,7 +2873,7 @@
           "type": "Mənbə"
         },
         "design_mode_elements/csd/2022": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "build_a_paper_prototype/csd/2022": {
@@ -3299,19 +2906,19 @@
           "type": "Video"
         },
         "changing_screens/csd/2022": {
-          "name": "Ekranların dəyişdirilməsi",
+          "name": "Ekranların dəyişdirilməsi/",
           "type": "Mənbə"
         },
         "importing_screens/csd/2022": {
-          "name": "Ekranlar idxal olunur",
+          "name": "Ekranlar idxal olunur,",
           "type": "Mənbə"
         },
         "multi-screen_apps/csd/2022": {
-          "name": "Çox-ekranlı Tətbiqlər",
+          "name": "Çox-ekranlı Tətbiqlər,",
           "type": "Mənbə"
         },
         "responding_to_user_input/csd/2022": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "linking_prototype_screens/csd/2022": {
@@ -3375,7 +2982,7 @@
           "type": "Slaydlar"
         },
         "binary_and_data/csd/2022": {
-          "name": "İkili və məlumat",
+          "name": "İkili və məlumat.",
           "type": "Video"
         },
         "representing_numbers_1/csd/2022": {
@@ -3498,6 +3105,7 @@
           "type": "Video"
         },
         "circuits_and_logic/csd/2022": {
+          "name": "Sxemlər və məntiq",
           "type": "Video"
         },
         "circuit_playground/csd/2022": {
@@ -3614,6 +3222,7 @@
           "type": "Slaydlar"
         },
         "changing_sensor_scale/csd/2022": {
+          "name": "miqyas",
           "type": "Mənbə"
         },
         "date_and_change_events/csd/2022": {
@@ -3650,6 +3259,7 @@
           "type": "Mənbə"
         },
         "modifying_arrays/csd/2022": {
+          "name": "Massivlərin dəyişdirilməsi",
           "type": "Mənbə"
         },
         "functions_2/csd/2022": {
@@ -5072,89 +4682,6 @@
         "helpful_hints_2/csc-adaptations/2023": {
           "type": "Slaydlar"
         },
-        "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "KE əlaqələri açılış səhifəsi",
-          "url": "https://code.org/educate/csc",
-          "type": "Mənbə"
-        },
-        "helpful_hints_for_teachers_and_learners/csc-bookcovers/2023": {
-          "name": "Müəllimlər və tələbələr üçün faydalı göstərişlər",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
-          "type": "Mənbə"
-        },
-        "resource_list_for_all_lessons/csc-bookcovers/2023": {
-          "name": "Bütün Dərslər üçün Resurs Siyahısı",
-          "url": "/s/csc-bookcovers-2023/resurslar",
-          "type": "Mənbə"
-        },
-        "standards_in_coding_a_book_cover/csc-bookcovers/2023": {
-          "name": "Kitab örtüyünün kodlaşdırılmasında standartlar",
-          "url": "/s/csc-kitabçalar-2023/standartlar",
-          "type": "Mənbə"
-        },
-        "vocabulary_in_coding_a_book_cover/csc-bookcovers/2023": {
-          "name": "Kitab örtüyünün kodlaşdırılmasında lüğət",
-          "url": "/s/csc-kitabçalar-2023/vocab",
-          "type": "Mənbə"
-        },
-        "book_cover/csc-bookcovers/2023": {
-          "name": "Kitab üzlüyü",
-          "url": "https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview",
-          "type": "Slaydlar"
-        },
-        "book_guide/csc-bookcovers/2023": {
-          "name": "Kitab bələdçisi",
-          "url": "https://docs.google.com/document/d/1HRSqSLhdRt7O7yv2LN3Y9jOHykw2BvNrtZJRAi11U9k/template/preview",
-          "type": "Mənbə"
-        },
-        "helpful_hints/csc-bookcovers/2023": {
-          "type": "Slaydlar"
-        },
-        "create_your_own_book_cover/csc-bookcovers/2023": {
-          "name": "Planlaşdırma təlimatı",
-          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview"
-        },
-        "create_your_own_book_cover_key_/csc-bookcovers/2023": {
-          "name": "Planlaşdırma Təlimatı [Key] Möcüzə",
-          "url": "https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview",
-          "type": "Cavab kitabcası"
-        },
-        "book_cover_rubric/csc-bookcovers/2023": {
-          "name": "Kitab örtüyü rubrikası",
-          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
-          "type": "sərlövhə"
-        },
-        "planning_your_own_book_cover_-_answer_key/csc-bookcovers/2023": {
-          "name": "Planlaşdırma Bələdç [Key] Esperanza yüksəlişi",
-          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view?usp=sharing",
-          "type": "Cavab kitabcası"
-        },
-        "book_cover_1/csc-bookcovers/2023": {
-          "name": "Kitab üzlüyü",
-          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
-          "type": "sərlövhə"
-        },
-        "helpful_hints_2/csc-bookcovers/2023": {
-          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
-          "type": "Slaydlar"
-        },
-        "planning_guide/csc-bookcovers/2023": {
-          "name": "Planlaşdırma təlimatı",
-          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview"
-        },
-        "planning_guide_key_esperanza_rising/csc-bookcovers/2023": {
-          "name": "Planlaşdırma Bələdç [Key] Esperanza yüksəlişi",
-          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view",
-          "type": "Cavab kitabcası"
-        },
-        "_optional_gallery_walk_sticky_notes/csc-bookcovers/2023": {
-          "name": "[Optional] Qalereya Gəzinti Yapışqan Qeydlər",
-          "url": "https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview",
-          "type": "Mənbə"
-        },
-        "helpful_hints_1/csc-bookcovers/2023": {
-          "type": "Slaydlar"
-        },
         "cs_connections_landing_page/csc-ecosystems/2023": {
           "name": "KE əlaqələri açılış səhifəsi",
           "url": "https://code.org/educate/csc",
@@ -5192,127 +4719,6 @@
         "ecologist_s_notebook/csc-ecosystems/2023": {
           "name": "Ekoloqun dəftəri",
           "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
-        },
-        "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "KE əlaqələri açılış səhifəsi",
-          "url": "https://code.org/educate/csc",
-          "type": "Mənbə"
-        },
-        "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "CSC Genişləndirilmiş Əlaqələr Kitabı",
-          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
-          "type": "Mənbə"
-        },
-        "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
-          "name": "Müəllimlər və tələbələr üçün faydalı göstəriş\t",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
-          "type": "Mənbə"
-        },
-        "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
-          "name": "Bütün Dərslər üçün Resurs Siyahısı",
-          "url": "/s/csc-mappinglandmarks-2023/resurslar"
-        },
-        "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
-          "name": "Interaktiv xəritələrin kodlaşdırılmasında standartlar",
-          "url": "/s/csc-mapinglandmarks-2023/standartlar",
-          "type": "Mənbə"
-        },
-        "vocabulary_in_coding/csc-mappinglandmarks/2023": {
-          "name": "İnteraktiv Xəritələrin Kodlaşdırılmasında lüğət",
-          "url": "/s/csc-mappinglandmarks-2023/vocab"
-        },
-        "lesson_slides/csc-mappinglandmarks/2023": {
-          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
-          "type": "Slaydlar"
-        },
-        "helpful_hints/csc-mappinglandmarks/2023": {
-          "type": "Slaydlar"
-        },
-        "list_of_books_about_maps/csc-mappinglandmarks/2023": {
-          "name": "Xəritələr haqqında kitabların siyahısı",
-          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
-          "type": "Mənbə"
-        },
-        "activity_guide_planning/csc-mappinglandmarks/2023": {
-          "name": "Layihə Planı [Key]",
-          "url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview",
-          "type": "Cavab kitabcası"
-        },
-        "activity_guide_planning_1/csc-mappinglandmarks/2023": {
-          "name": "Layihə Planı",
-          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview"
-        },
-        "interactive_map_rubric/csc-mappinglandmarks/2023": {
-          "name": "Kodlaşdırma İnteraktiv Xəritələr Rubrikası",
-          "url": "https://docs.google.com/document/d/1Be6zwvr-gEbmHpkxg4vnyt-evuvuLAlB1Pl8oFA64nw/template/preview",
-          "type": "sərlövhə"
-        },
-        "books_about_maps_list/csc-mappinglandmarks/2023": {
-          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
-          "type": "Mənbə"
-        },
-        "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "KE əlaqələri açılış səhifəsi",
-          "url": "https://code.org/educate/csc",
-          "type": "Mənbə"
-        },
-        "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "CSC Genişləndirilmiş Əlaqələr Kitabı",
-          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
-          "type": "Mənbə"
-        },
-        "helpful_hints_for_teachers_and_learners/csc-starquilts/2023": {
-          "name": "Müəllimlər və tələbələr üçün faydalı göstərişlər",
-          "type": "Mənbə"
-        },
-        "resource_list_for_all_lessons/csc-starquilts/2023": {
-          "url": "/s/csc-starquilts-2023/resurslar",
-          "type": "Mənbə"
-        },
-        "standards_in_coding_a_star_quilt/csc-starquilts/2023": {
-          "name": "Ulduz yorğanının kodlaşdırılmasında standartlar",
-          "url": "/s/csc-starquilts-2023/standartlar",
-          "type": "Mənbə"
-        },
-        "vocabulary_in_coding_geometric_star_quilts/csc-starquilts/2023": {
-          "name": "Həndəsi ulduz yorğanlarının kodlaşdırılmasında lüğət",
-          "url": "/s/csc-starquilts-2023/vocab",
-          "type": "Mənbə"
-        },
-        "star_quilt_article/csc-starquilts/2023": {
-          "name": "Ulduz yorğan məqaləsi",
-          "url": "https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view",
-          "type": "Mənbə"
-        },
-        "star_quilts/csc-starquilts/2023": {
-          "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview",
-          "type": "Slaydlar"
-        },
-        "star_quilts_1/csc-starquilts/2023": {
-          "name": "War Bonnet Ulduz yorğanı",
-          "url": "https://youtu.be/Q210ko41yqo?t=90",
-          "type": "Video"
-        },
-        "star_quilts_worksheet/csc-starquilts/2023": {
-          "name": "Ulduz yorğanları iş səhifəsi",
-          "url": "https://docs.google.com/document/d/1vwfjAQ-OErpFcvzDTQuhimhMWjFhiPrtKTUHoEJLufM/template/preview"
-        },
-        "virtual_pattern_blocks_optional_/csc-starquilts/2023": {
-          "name": "Virtual Nümunə Blokları (İstəyə bağlı)",
-          "url": "https://mathigon.org/polypad#polygons",
-          "type": "Mənbə"
-        },
-        "helpful_hints/csc-starquilts/2023": {
-          "type": "Slaydlar"
-        },
-        "helpful_hints_1/csc-starquilts/2023": {
-          "type": "Slaydlar"
-        },
-        "virtual_pattern_blocks/csc-starquilts/2023": {
-          "type": "Mənbə"
-        },
-        "helpful_hints_2/csc-starquilts/2023": {
-          "type": "Slaydlar"
         },
         "all_resources/csc-timecapsule/2023": {
           "name": "Bütün Dərslər üçün Resurs Siyahısı",
@@ -5721,6 +5127,9 @@
           "name": "Veb saytınızın nəşri",
           "type": "Video"
         },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Mənbə"
+        },
         "websites_for_a_purpose/csd/2023": {
           "name": "Məqsəd üçün veb saytlar"
         },
@@ -5797,6 +5206,7 @@
           "type": "Cavab kitabcası"
         },
         "programming_for_a_purpose/csd/2023": {
+          "name": "Məqsəd üçün proqramlaşdırma",
           "type": "Slaydlar"
         },
         "animation_and_game_design_template/csd/2023": {
@@ -5893,21 +5303,32 @@
         },
         "sprite_properties_1/csd/2023": {
           "name": "Sprite Xüsusiyyətləri",
+          "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview",
           "type": "Slaydlar"
         },
         "sprite_properties_needs_updating_/csd/2023": {
           "name": "Sprite Xüsusiyyətləri",
+          "url": "https://www.youtube.com/watch?v=5Op72oHFUnc",
           "type": "Video"
         },
         "text/csd/2023": {
           "name": "mətn",
+          "url": "https://docs.google.com/presentation/d/1ovtVNX4feLKwx1ETO18kkTmRQRa7_SLjqdLUrzuEi5I/template/preview",
           "type": "Slaydlar"
         },
         "captioned_scenes/csd/2023": {
+          "url": "https://docs.google.com/document/d/1sry7ZwDwOM_lsIJ0kKkEYyqvhif8JQocYX7y3Gx4JKk/view",
           "type": "sərlövhə"
         },
         "mini-project_-_captioned_scenes/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1S843wg4O8Cxz12NagDW2nu8B0Taj1_pSvyvj4o85asc/template/preview",
           "type": "Slaydlar"
+        },
+        "mini_project_-_captioned_scenes/csd/2023": {
+          "url": "https://docs.google.com/document/d/1xzA9xataf6TwgdLM--JumBAhAXLjcYyZOiuaShcuOjE/view"
+        },
+        "sprite_scene_planning/csd/2023": {
+          "url": "https://docs.google.com/document/d/1Rukfe006wz8yYJPnKj5sKn7SK6KbL1X6Pd-c2BNy95E/view"
         },
         "flipbook_example_-_by_marnic_bos/csd/2023": {
           "type": "Video"
@@ -6066,287 +5487,6 @@
           "name": "Layihə - Oyun dizayn edin",
           "type": "Slaydlar"
         },
-        "all_resources_7/csd/2023": {
-          "name": "Bütün Resurslar"
-        },
-        "all_standards_7/csd/2023": {
-          "name": "Bütün Standartlar"
-        },
-        "all_vocabulary_7/csd/2023": {
-          "name": "Bütün Lüğət"
-        },
-        "designing_with_empathy_2/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "understanding_your_user/csd/2023": {
-          "name": "İstifadəçinizi Anlamaq",
-          "type": "Slaydlar"
-        },
-        "the_design_thinking_process/csd/2023": {
-          "type": "Video"
-        },
-        "user_centered_design_-_define_and_prepare/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "user_centered_design_-_try_and_reflect/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "user_interface_screens/csd/2023": {
-          "type": "Mənbə"
-        },
-        "user_interfaces/csd/2023": {
-          "name": "İstifadəçi Araüzü",
-          "type": "Slaydlar"
-        },
-        "feedback_and_testing/csd/2023": {
-          "name": "Əks-əlaqə və Sınaq",
-          "type": "Slaydlar"
-        },
-        "prototype_feedback/csd/2023": {
-          "type": "Mənbə"
-        },
-        "example_user_interviews/csd/2023": {
-          "type": "Mənbə"
-        },
-        "identifying_user_needs/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "paper_prototypes/csd/2023": {
-          "type": "sərlövhə"
-        },
-        "project_-_paper_prototype/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "designing_apps_for_good/csd/2023": {
-          "name": "Əmtəə üçün proqramların dizaynı",
-          "type": "Slaydlar"
-        },
-        "market_research/csd/2023": {
-          "name": "Bazar Araşdırması"
-        },
-        "market_research_-_research_areas/csd/2023": {
-          "type": "Mənbə"
-        },
-        "market_research_1/csd/2023": {
-          "name": "Bazar Araşdırması"
-        },
-        "market_research_2/csd/2023": {
-          "name": "Bazar Araşdırması",
-          "type": "Slaydlar"
-        },
-        "exploring_ui_elements/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "build_a_paper_prototype/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "design_mode/csd/2023": {
-          "name": "Dizayn Rejimi",
-          "type": "Mənbə"
-        },
-        "design_mode_elements/csd/2023": {
-          "name": "Dizayn rejimi elementləri",
-          "type": "Mənbə"
-        },
-        "prototype_testing/csd/2023": {
-          "name": "İlk Nümunə Testi",
-          "type": "Slaydlar"
-        },
-        "what_s_for_lunch_testing/csd/2023": {
-          "type": "Video"
-        },
-        "design_mode_in_app_lab/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "intro_to_design_mode/csd/2023": {
-          "name": "Dizayn rejiminə giriş",
-          "type": "Video"
-        },
-        "model_screen_design/csd/2023": {
-          "type": "Mənbə"
-        },
-        "build_a_digital_prototype/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "events_in_app_lab/csd/2023": {
-          "type": "Video"
-        },
-        "events_in_app_lab_1/csd/2023": {
-          "type": "Video"
-        },
-        "events_in_app_lab_2/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "changing_screens/csd/2023": {
-          "name": "Ekranların dəyişdirilməsi",
-          "type": "Mənbə"
-        },
-        "importing_screens/csd/2023": {
-          "name": "Ekranlar idxal olunur",
-          "type": "Mənbə"
-        },
-        "linking_prototype_screens/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "multi-screen_apps/csd/2023": {
-          "name": "Çox-ekranlı Tətbiqlər",
-          "type": "Mənbə"
-        },
-        "responding_to_user_input/csd/2023": {
-          "name": "İstifadəçi input-una cavab",
-          "type": "Mənbə"
-        },
-        "testing_the_app/csd/2023": {
-          "name": "Tətbiqi yoxlamaq",
-          "type": "Slaydlar"
-        },
-        "bugs_and_features_2/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "updating_your_prototype_1/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "app_presentation/csd/2023": {
-          "name": "Proqram təqdimatı",
-          "type": "sərlövhə"
-        },
-        "app_presentation_1/csd/2023": {
-          "name": "Proqram təqdimatı"
-        },
-        "project_-_app_presentation/csd/2023": {
-          "name": "Layihə - Proqram Təqdimatı",
-          "type": "Slaydlar"
-        },
-        "all_resources_3/csd/2023": {
-          "name": "Bütün Resurslar"
-        },
-        "all_standards_3/csd/2023": {
-          "name": "Bütün Standartlar"
-        },
-        "all_vocabulary_3/csd/2023": {
-          "name": "Bütün Lüğət"
-        },
-        "meals_data/csd/2023": {
-          "type": "Mənbə"
-        },
-        "representation_matters_2/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "patterns_and_representation/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "representing_information/csd/2023": {
-          "name": "Məlumatı təmsil edən"
-        },
-        "ascii_and_binary_representation/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "ascii_challenges_1/csd/2023": {
-          "type": "Cavab kitabcası"
-        },
-        "ascii_text/csd/2023": {
-          "type": "Mənbə"
-        },
-        "representing_images/csd/2023": {
-          "name": "Şəkilləri təmsil edir",
-          "type": "Slaydlar"
-        },
-        "binary_and_data/csd/2023": {
-          "name": "İkili və məlumat",
-          "type": "Video"
-        },
-        "representing_numbers_1/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "combining_representations/csd/2023": {
-          "name": "Nümayəndəlikləri birləşdirən",
-          "type": "Slaydlar"
-        },
-        "keeping_data_secret/csd/2023": {
-          "name": "Məlumatlar Gizli Saxlanır",
-          "type": "Slaydlar"
-        },
-        "medical_records_1/csd/2023": {
-          "type": "Cavab kitabcası"
-        },
-        "create_a_representation_2/csd/2023": {
-          "type": "sərlövhə"
-        },
-        "create_a_representation_3/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "problem_solving_with_data_2/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "structuring_data_1/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "interpreting_data_2/csd/2023": {
-          "type": "Mənbə"
-        },
-        "interpreting_data_3/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "making_decisions_with_data_1/csd/2023": {
-          "name": "Data ilə bağlı qərar vermək"
-        },
-        "making_decisions_with_data_2/csd/2023": {
-          "name": "Data ilə bağlı qərar vermək",
-          "type": "Slaydlar"
-        },
-        "problem_solving_process_with_data/csd/2023": {
-          "type": "Mənbə"
-        },
-        "automating_data_decisions_1/csd/2023": {
-          "type": "Mənbə"
-        },
-        "automating_data_decisions_3/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "amazon_and_data/csd/2023": {
-          "type": "Video"
-        },
-        "data_in_the_real_world/csd/2023": {
-          "name": "Data əsl dünyada"
-        },
-        "data_in_the_real_world_1/csd/2023": {
-          "name": "Data əsl dünyada"
-        },
-        "netflix_and_data/csd/2023": {
-          "type": "Video"
-        },
-        "problem_solving_with_big_data/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "waze_and_data/csd/2023": {
-          "type": "Video"
-        },
-        "data_and_machine_learning/csd/2023": {
-          "type": "Slaydlar"
-        },
-        "video_impact_on_society/csd/2023": {
-          "type": "Video"
-        },
-        "video_machine_learning/csd/2023": {
-          "name": "Video: Maşın öyrənməsi",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "Video"
-        },
-        "video_training_data_and_bias/csd/2023": {
-          "type": "Video"
-        },
-        "make_a_recommendation/csd/2023": {
-          "type": "Həmyaşıd rəyi"
-        },
-        "make_a_recommendation_1/csd/2023": {
-          "type": "sərlövhə"
-        },
-        "make_a_recommendation_2/csd/2023": {
-          "type": "Layihə Bələdçisi"
-        },
-        "project_-_make_a_recommendation/csd/2023": {
-          "type": "Slaydlar"
-        },
         "all_resources_4/csd/2023": {
           "name": "Bütün Resurslar"
         },
@@ -6366,6 +5506,7 @@
           "type": "Mənbə"
         },
         "circuits_and_logic/csd/2023": {
+          "name": "Sxemlər və məntiq",
           "type": "Video"
         },
         "physical_output/csd/2023": {
@@ -6373,6 +5514,10 @@
         },
         "the_circuit_playground/csd/2023": {
           "type": "Slaydlar"
+        },
+        "responding_to_user_input/csd/2023": {
+          "name": "İstifadəçi input-una cavab.",
+          "type": "Mənbə"
         },
         "designing_screens_with_code/csd/2023": {
           "name": "Kod ilə ekran dizaynı ",
@@ -6462,6 +5607,7 @@
           "type": "Slaydlar"
         },
         "changing_sensor_scale/csd/2023": {
+          "name": "miqyas",
           "type": "Mənbə"
         },
         "date_and_change_events/csd/2023": {
@@ -6491,6 +5637,7 @@
           "type": "Slaydlar"
         },
         "modifying_arrays/csd/2023": {
+          "name": "Massivlərin dəyişdirilməsi",
           "type": "Mənbə"
         },
         "playing_notes/csd/2023": {
@@ -6753,6 +5900,13 @@
         },
         "using_data_with_categorical_features/csd/2023": {
           "type": "Mənbə"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "name": "Dizayn rejiminə giriş",
+          "type": "Video"
         },
         "importing_a_model_in_app_lab/csd/2023": {
           "type": "Mənbə"
@@ -8029,14 +7183,6 @@
           "name": "Bounce-də hadisələr - Necə baş verir?",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
         },
-        "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Spotify Pleylist (bütün yaşlar)",
-          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
-        },
-        "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Spotify Pleylist (bütün yaşlar)",
-          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
-        },
         "dance-party-playlist/dance-extras/unversioned": {
           "name": "Spotify Pleylist (bütün yaşlar)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
@@ -8053,21 +7199,6 @@
         "hocencryption/hoc-encryption/unversioned": {
           "name": "Code Studio-da Şifrələmə Vidjetləri",
           "url": "https://studio.code.org/s/hoc-encryption"
-        },
-        "ai-ml/oceans/unversioned": {
-          "name": "Avtomatlaşdırılmış Öyrənmə",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "Video"
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "AI: Cəmiyyətə Təsir",
-          "url": "https://youtu.be/ng4c1g3COfs",
-          "type": "Video"
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "AI: Təlim məlumatları və qərəzlilik",
-          "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "Video"
         },
         "list_of_poems/poem-art/2021": {
           "name": "HoC Şeir Sənəti5",
@@ -8097,15 +7228,6 @@
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "Bounce-də hadisələr - Necə baş verir?",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "Fəaliyyət Bələdçisi - Mətnin sıxılması"
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "Mesajı deşifrə edin"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "Video"
         }
       }
     }

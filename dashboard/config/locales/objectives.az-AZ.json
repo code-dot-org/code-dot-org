@@ -14,12 +14,6 @@
         "1829ce9e-4e7e-451f-898e-692c3abb5ad6": {
           "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
         },
-        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
-          "description": "Maşın öyrənmə modelini hazırlayın və sınaqdan keçirin."
-        },
-        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
-          "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
-        },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "İnternetin uzaq yerləri səyahət etməkdə və yeni şeylər öyrənməkdə işlədilə biləcəyini kəşf edin."
         },
@@ -1103,39 +1097,6 @@
         "d0c5f886-4268-4eb7-b499-fa86868fda17": {
           "description": "Heyvanların ətraf mühitdəki dəyişikliklər nəticəsində necə inkişaf etdiyini və dəyişdiyini göstərin."
         },
-        "46367e69-aa28-4aa2-b644-370d4720cb63": {
-          "description": "Rəqəmsal kitab örtüyü yaratmaq üçün lazım olan kodlaşdırma anlayışlarını və vasitələrini öyrənin."
-        },
-        "f816d140-2662-4b07-838a-356b1341298f": {
-          "description": "Qrafik dizayn seçimlərinin müşahidələrini və şərhlərini sinif müzakirələri və ya yazılı cavablar vasitəsilə ifadə edin."
-        },
-        "be255442-649e-4cc4-849d-293d6e934e84": {
-          "description": "Kitabdakı personajlarla proqramdakı obrazlar, eləcə də kitabdakı parametrlər və proqramdakı arxa planlar arasındakı əlaqəni anlayın."
-        },
-        "2779cb4f-6ca1-4a7f-ae2d-df66a9873fad": {
-          "description": "Bir tərəfdaşa isti və sərin rəy verməklə və alınan rəyləri öz işlərini yenidən nəzərdən keçirmək üçün tətbiq etməklə konstruktiv rəy vermək və almaq qabiliyyətini nümayiş etdirin."
-        },
-        "28a41551-e8f3-4421-8671-cc69e6cf6f05": {
-          "description": "Bir hekayəni effektiv şəkildə ümumiləşdirməklə, o cümlədən iki əsas personaj və süjetdəki rollarını təqdim etməklə ümumiləşdirmə bacarıqlarını inkişaf etdirin."
-        },
-        "62b336d6-02ad-446f-a4f9-54dc7bdfae1f": {
-          "description": "Kitabdakı personajlarla proqramdakı obrazlar, eləcə də kitabdakı parametrlər və proqramdakı arxa planlar arasındakı əlaqəni anlayın."
-        },
-        "0849e0ca-6bc7-486b-b9e4-0ef588648f2b": {
-          "description": "Rəqəmsal kitab örtüyü üçün kodlaşdırma seçimlərini bildirmək üçün kitabın personajları, parametrləri və hadisələri haqqında anlayışlarından istifadə edin."
-        },
-        "59dc58ad-cbc8-4d27-928f-a06fa46e705a": {
-          "description": "Xüsusi dizayn seçimlərinin kitab örtüklərinin ümumi təsirinə və mesajına necə töhfə verdiyini müzakirə edin."
-        },
-        "ce3130a2-728b-4b6f-bd20-c7048c833388": {
-          "description": "Kitab qapağı layihəsi üçün lazım olan kodlaşdırma bloklarını və anlayışlarını müəyyənləşdirin."
-        },
-        "8fbf7b5a-fbc1-42a1-b652-c99bd44dca4f": {
-          "description": "Öz rəqəmsal kitab örtüyü layihələri üzərində düşünün və daxil etməyi seçdikləri dizayn elementlərini və bu seçimlərin səbəblərini müəyyənləşdirin."
-        },
-        "d1945b16-3b38-443e-890a-dab7d81ec812": {
-          "description": "Birgə öyrənmə mühitini təşviq edərək yaşadıqları interaktiv kitab örtüyü tətbiqləri haqqında konstruktiv rəy və düşüncələr verin."
-        },
         "4094e6da-1294-4686-aefc-b5363d35070a": {
           "description": "Həddindən artıq balıqçılığın su ekosisteminə təsirinin simulyasiyasını hazırlayın"
         },
@@ -1157,39 +1118,6 @@
         "f3e0667d-0843-4d41-ae79-7ec7911d5ea4": {
           "description": "Müəyyən bir növün azalması və ya başqa bir növün həddindən artıq böyüməsi kimi problemlə üzləşən ekosistemdə tarazlığı bərpa etmək üçün simulyasiyada kodu dəyişdirin."
         },
-        "1a27b887-2aa2-4f1b-8137-85395c9d1db8": {
-          "description": "Ətrafdakı dünyanı başa düşmək üçün vasitələr kimi xəritələrin məqsədi və dəyərini daha dərin qiymətləndirmək üçün xəritə istehsalçısının rolu üzərində düşünün."
-        },
-        "fdb3a900-9efd-4710-8096-6108ed735cb6": {
-          "description": "Xəritə layihəsini planlaşdırarkən rəqəmsal xəritələşdirmə işarələri layihəsini daha kiçik vəzifələrə bölərək parçalanmadan istifadə edin."
-        },
-        "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb": {
-          "description": "Xəritə istehsalçısının qərarlarına əsasən xəritələrin dəyişə biləcəyi yollarını müəyyənləşdirin."
-        },
-        "9d012f97-41e4-4358-8970-f1be0bdb0254": {
-          "description": "Ulduz yorğanı hazırlamaq və hədiyyə etməyin arxasındakı ənənəvi əhəmiyyəti anlayın"
-        },
-        "b3e48d93-ac56-49c0-ad15-6109d60a6c6b": {
-          "description": "Ulduz yorğanında çoxsaylı təkrarlanan nümunələri müəyyənləşdirin"
-        },
-        "e321a445-412d-447e-a8de-c78464723196": {
-          "description": "Qələm və kağızdan istifadə edərək öz ulduz yorğanlarını dizayn edin"
-        },
-        "65af51b5-9269-4617-8e33-64e96072c136": {
-          "description": "Onların Star Yorğan dizaynını təkrarlamaq üçün Rəssam kodlaşdırma alətindən istifadə edin"
-        },
-        "8a81dbf7-f967-408b-acf5-81304158f196": {
-          "description": "Kodlarında nümunələri müəyyənləşdirin"
-        },
-        "96b5e04f-5a82-475f-9de3-4d81fa8d9c8f": {
-          "description": "Kodlarını daha səmərəli etmək üçün döngələrdən istifadə edin"
-        },
-        "c0741915-7e37-4bd0-8281-c716104a5185": {
-          "description": "Rəssamın çevirdiyi bucaq ilə ulduzda neçə nöqtə olduğu arasındakı əlaqəni yoxlayın"
-        },
-        "d5798a01-93fd-4e33-bbc1-fa94d5680493": {
-          "description": "Kodlarını daha səmərəli etmək üçün döngələrdən istifadə edin"
-        },
         "1bd88170-e38e-4c5b-bd62-8107acd68567": {
           "description": "Mətndə məcazi və hərfi dili vurğula"
         },
@@ -1204,12 +1132,6 @@
         },
         "de97cb31-b410-455a-b8e2-3d66c782422b": {
           "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
-        },
-        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
-          "description": "Maşın öyrənmə modelini hazırlayın və sınaqdan keçirin."
-        },
-        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
-          "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
         },
         "706d588e-1af3-44f0-b4d8-7bffa52d45e8": {
           "description": "Düymələr, mətn, şəkillər, səs və ekranlar kimi funksiyalardan istifadə edərək App Lab-da öz proqramlarını yaradın və paylaşın."
@@ -1772,24 +1694,6 @@
         "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
           "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin."
         },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar hazırlayın"
-        },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "İstifadəçi inputuna cavab verən proqramlar hazırlayın"
-        },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Kodla rəqs animasiyaları yaradın"
-        },
-        "83f493e8-9941-4154-b2f4-f34836741746": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmi\"-ni müəyyən et"
-        },
-        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin."
-        },
-        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin."
-        },
         "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
           "description": "\"Kodlaşdırma\" və \"kompüter elmi\"-ni müəyyən et"
         },
@@ -1808,68 +1712,8 @@
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Kodla rəqs animasiyaları yaradın"
         },
-        "6394fdc5-50c3-423e-8135-a64594824db3": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
-          "description": "Kompüter elmi anlayışları ilə real dünya arasında əlaqə qurun"
-        },
-        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
-        },
-        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "303a2b74-af73-401c-8929-1fc1c5611f18": {
-          "description": "Kompüter elmi anlayışları ilə real dünya arasında əlaqə qurun"
-        },
-        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
-        },
-        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
-          "description": "Kompüter elmi anlayışları ilə real dünya arasında əlaqə qurun"
-        },
-        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
-        },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
-        },
         "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
           "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
-        },
-        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
         },
         "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
           "description": "Şifrələmənin nə üçün İnternetdə gündəlik həyat üçün vacib ehtiyac olduğunu izah edin."
@@ -1882,39 +1726,6 @@
         },
         "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
           "description": "Əvəzetmə şifrələrinin zəif tərəflərini və təhlükəsizlik qüsurlarını izah edin"
-        },
-        "3e5eebcd-2140-4152-8654-410468108ab6": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
-        },
-        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
-          "description": "Kompüter elmi anlayışları ilə real dünya arasında əlaqə qurun"
-        },
-        "59992d8c-d194-4063-82fa-001a0b6482d9": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
-        },
-        "63be9575-1232-47a5-991c-8bd03ac7c949": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
-          "description": "Kompüter elmi anlayışları ilə real dünya arasında əlaqə qurun"
-        },
-        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
         },
         "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
           "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
@@ -1932,27 +1743,6 @@
           "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
         },
         "343631be-830a-44f6-a249-a6aa96ea38f0": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
-        },
-        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
-          "description": "Süni intellektin onların həyatında oynadığı rolu müzakirə edin."
-        },
-        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
-          "description": "Maşın öyrənmə modelini hazırlayın və sınaqdan keçirin."
-        },
-        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
-          "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
-        },
-        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
-          "description": "Kompüter elmi anlayışları ilə real dünya arasında əlaqə qurun"
-        },
-        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
           "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
         },
         "6902d2bc-a266-487c-b0de-49de79f6fb98": {
@@ -1981,42 +1771,6 @@
         },
         "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
           "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin."
-        },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": "Kompüter elmi anlayışları ilə real dünya arasında əlaqə qurun"
-        },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
-        },
-        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
-          "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
-        },
-        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
-          "description": "Əsas kompüter elmləri lüğətini müəyyənləşdirin"
-        },
-        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
-          "description": "Kompüter elmi anlayışları ilə real dünya arasında əlaqə qurun"
-        },
-        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
-          "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": "Mətnin sıxılması vidjetindən (itkisiz sıxılma sxemi) istifadə edərək mətnin sıxılma probleminin həllini tapmaq üçün həmyaşıdınızla əməkdaşlıq edin."
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": "Optimal sıxılma miqdarının niyə qeyri-mümkün olduğunu və ya müəyyən edilməsinin “çətin” olduğunu izah edin."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Tələbələr kompüter laboratoriyasına keçdikdə nə gözlənildiyini dərk edin."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Kompüter siçanı, trackpad və ya toxunma ekranına istinad edərkən müvafiq terminologiyadan istifadə edin."
         }
       }
     }

@@ -106,6 +106,7 @@ az-AZ:
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
         - {}
+        title: Çox seçimli labirint
       2-3 Relay Programming Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
@@ -185,6 +186,7 @@ az-AZ:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        title: Rəssam uyğunluğu
       2-3 bee conditionals multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
@@ -442,6 +444,7 @@ az-AZ:
         content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: Hansı bloklar tapmacanı həll edir?
+        title: Çox seçimli labirint
       Begin planning your project:
         content1: Burada təsvir edin
       Begin planning your project_2018:
@@ -781,7 +784,7 @@ az-AZ:
         - {}
       CSD U1 MC Q3_2023:
         answers:
-        - text: Tətbiqlər
+        - text: Proqramlar
         - text: Şəkillər
         - text: Musiqi
         - text: Yer
@@ -823,7 +826,7 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
+        - text: Divarın rənglənməsi.
         - {}
         questions:
         - text: Hazırlamaq
@@ -834,7 +837,7 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
+        - text: Divarın rənglənməsi.
         - {}
         questions:
         - text: Hazırlamaq
@@ -845,7 +848,7 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
+        - text: Divarın rənglənməsi.
         - {}
         questions:
         - text: Hazırlamaq
@@ -3108,7 +3111,7 @@ az-AZ:
 
 
 
-          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?
+          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?l
       CSD U3 combining rep_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3120,7 +3123,7 @@ az-AZ:
 
 
 
-          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?
+          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?l
       CSD U3 drawSprites placement match:
         answers:
         - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -3221,6 +3224,12 @@ az-AZ:
             AM.png
         - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png
+      CSD U3 drawing challenges_2021:
+        display_name: 'Rəsm çətinlikləri '
+      CSD U3 drawing challenges_2022:
+        display_name: 'Rəsm çətinlikləri '
+      CSD U3 drawing challenges_2023:
+        display_name: 'Rəsm çətinlikləri '
       CSD U3 drawing practice choice_2021:
         display_name: Praktika
       CSD U3 drawing practice choice_2022:
@@ -3270,20 +3279,23 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Müsahibə zamanı bir istifadəçi ehtiyacı qeyd etdi: "Şəhərimiz həqiqətən
+            gözəldir, lakin son vaxtlar icmamızda zibil və zibilliklə bağlı bəzi problemlər
+            yaranıb". Aşağıdakılardan hansı istifadəçinin ehtiyaclarını ödəmək üçün
+            strategiya deyil?'
       CSD U4 MC Q4_2023:
         answers:
         - text: Düymə
         - {}
         - text: Açılan
-        - {}
+        - text: 'Radio düyməsi '
         - text: Onay qutusu
         questions:
         - {}
       CSD U4 MC Q5_2023:
         answers:
         - {}
-        - {}
+        - text: 'Növbəti ekrana keçın '
         - {}
         - {}
         - {}
@@ -3315,11 +3327,11 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Böyük mətn
+        - text: Çoxlu rənglər
+        - text: Səs xəbardarlıqları
+        - text: Parol kilidi
+        - text: Qara və ağ seçim
       CSD U4 test feature match_2021:
         answers:
         - {}
@@ -3328,11 +3340,11 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Böyük mətn
+        - text: Çoxlu rənglər
+        - text: Səs xəbardarlıqları
+        - text: Parol kilidi
+        - text: Qara və ağ seçim
       CSD U4 test feature match_2022:
         answers:
         - {}
@@ -3341,11 +3353,11 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Böyük mətn
+        - text: Çoxlu rənglər
+        - text: Səs xəbardarlıqları
+        - text: Parol kilidi
+        - text: Qara və ağ seçim
       CSD U4 test needs multi:
         answers:
         - {}
@@ -3561,12 +3573,12 @@ az-AZ:
 
           ! []
 
-          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png).
         teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
           Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
           biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
           nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
-          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)l"
       CSD U5 Encryption 1_2018:
         content1: Burada təsvir edin
         markdown: |-
@@ -3578,12 +3590,12 @@ az-AZ:
 
           ! []
 
-          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png).
         teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
           Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
           biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
           nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
-          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)l"
       CSD U5 Encryption 1_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3595,12 +3607,12 @@ az-AZ:
 
           ! []
 
-          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png).
         teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
           Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
           biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
           nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
-          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)l"
       CSD U5 Encryption 2:
         content1: Burada təsvir edin
         markdown: |-
@@ -3609,7 +3621,7 @@ az-AZ:
           ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
 
           * Bu ikili sətri deşifrə edə bilərsinizmi?
-          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?.
       CSD U5 Encryption 2_2018:
         content1: Burada təsvir edin
         markdown: |-
@@ -3618,7 +3630,7 @@ az-AZ:
           ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
 
           * Bu ikili sətri deşifrə edə bilərsinizmi?
-          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?.
       CSD U5 Encryption 2_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3627,7 +3639,7 @@ az-AZ:
           ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
 
           * Bu ikili sətri deşifrə edə bilərsinizmi?
-          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?.
       CSD U5 L13 SFLP Interpreting Data:
         content1: Burada təsvir edin
         markdown: |-
@@ -3660,8 +3672,10 @@ az-AZ:
         - {}
       CSD U5 MC Q3_2023:
         answers:
-        - {}
-        - {}
+        - text: Doğru
+        - text: |2-
+
+            Yanlış
         questions:
         - {}
       CSD U5 MC Q4_2023:
@@ -3684,11 +3698,11 @@ az-AZ:
         - {}
       CSD U5 MC Q6_2023:
         answers:
+        - text: Salam
+        - text: Hə
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Xeyr
+        - text: Bəlkə
         questions:
         - {}
       CSD U5 MC Q7_2023:
@@ -3740,7 +3754,7 @@ az-AZ:
 
           What if they were able to order two cakes with icing?
 
-          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?/
       CSD U5 crosstab warmup_2018:
         content1: Burada təsvir edin
         markdown: |-
@@ -3763,7 +3777,7 @@ az-AZ:
 
           What if they were able to order two cakes with icing?
 
-          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?/
       CSD U5 crosstab warmup_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3786,7 +3800,7 @@ az-AZ:
 
           What if they were able to order two cakes with icing?
 
-          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?/
       CSD U5 data visualization:
         content1: Burada təsvir edin
         markdown: |-
@@ -3797,7 +3811,7 @@ az-AZ:
 
 
           ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
-          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?/
       CSD U5 data visualization_2018:
         content1: Burada təsvir edin
         markdown: |-
@@ -3808,7 +3822,7 @@ az-AZ:
 
 
           ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
-          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?/
       CSD U5 data visualization_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3819,9 +3833,10 @@ az-AZ:
 
 
           ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
-          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?/
       CSD U5 student record:
         content1: Burada təsvir edin
+        markdown: "<h4>"
         teacher_markdown: |-
           [/key]
           **Bayt 0:** Şagird 9-cu sinifdədir.
@@ -3834,9 +3849,10 @@ az-AZ:
 
           [/key]
 
-          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.,
       CSD U5 student record_2018:
         content1: Burada təsvir edin
+        markdown: "<h4>"
         teacher_markdown: |-
           [/key]
           **Bayt 0:** Şagird 9-cu sinifdədir.
@@ -3849,9 +3865,10 @@ az-AZ:
 
           [/key]
 
-          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.,
       CSD U5 student record_2018_2019:
         content1: Burada təsvir edin
+        markdown: "<h4>"
         teacher_markdown: |-
           [/key]
           **Bayt 0:** Şagird 9-cu sinifdədir.
@@ -3864,7 +3881,7 @@ az-AZ:
 
           [/key]
 
-          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.,
       CSD U5 test:
         title: Məlumat və Cəmiyyət Layihədən Sonra Test
       CSD U5 test clean multi:
@@ -3896,7 +3913,10 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bir sinif sinif səfərinə hara getəcəyinə qərar vermək üçün bir sorğu
+            keçirdi və hər seçimin nə qədər populyar olduğunu görmək üçün bir cədvəl
+            hazırlamaq istəyirlər. Diaqram yaratmadan əvvəl məlumatlarda hər hansı
+            bir dəyişiklik etməlidirlərmi?
       CSD U5 test crosstab multi:
         answers:
         - text: it
@@ -4125,7 +4145,7 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
+        - text: İstilik sensoru
         - text: zil
         - {}
         questions:
@@ -4954,6 +4974,7 @@ az-AZ:
           # Araşdırmanıza Başlayın
 
           Tədqiqatınıza başlamaq üçün tövsiyə olunan veb-saytlar üçün müəlliminizlə əlaqə saxlayın. Xüsusi ideyalar üçün internetdə axtarışa başlamaq üçün yuxarıdakı bəzi açar sözlərdən də istifadə edə bilərsiniz. Misal üçün, hələ yerdən çıxmamış məhsulları görmək üçün müxtəlif kütləni maliyyələşdirən vebsaytlara (məsələn, Kickstarter və Indiegogo kimi) baxmağı düşünün.
+        teacher_markdown: istifadə etmək
       CSP PD Example Question 1:
         answers:
         - {}
@@ -5113,6 +5134,21 @@ az-AZ:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif">
 
           </div>
+      Design a Screen for your App_2018:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
+      Design a Screen for your App_2018_2019:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
+      Design a Screen for your App_2021:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
+      Design a Screen for your App_2022:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
+      Design a Screen for your App_2023:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |-
           # Əlçatanlıq üçün dizayn
@@ -5183,37 +5219,41 @@ az-AZ:
         - ''
         title: Mətn müqaviləsi
       Example App Types_2018:
-        markdown: "# Tətbiq növlərinə nümunə\n\nAşağıdakı səviyyələrdə bir neçə fərqli
-          tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər
-          üçün UI -nin (İstifadəçi İnterfeysi) necə görünə biləcəyi barədə sizə fikir
-          verəcəklər.\n\nHər bir nümunə tətbiq üçün:\n\n* Necə işlədiyini öyrənmək
-          üçün nümunəni klikləyin.\n* Fəaliyyət bələdçinizdə tapdığınız hər hansı
-          bir xüsusiyyəti və ya istifadəçi interfeysi elementlərini və onların nə
-          üçün istifadə edildiyini qeyd edin.\n* Qruplarınızla bu tətbiqin və hər
-          hansı bir UI xüsusiyyətinin seçdiyiniz mövzuya necə tətbiq oluna biləcəyini
-          müzakirə edin.\n\n# Funksionallıq haqqında bir qeyd\n\nBu tətbiqlər _prototypes_
-          dır; onlar bir istifadəçinin əsas funksionallıqdan narahat olmayaraq dizaynla
-          qarşılıqlı əlaqə qurmasına imkan verir. Məsələn, Sorğu-Sual Tətbiqindən
-          istifadə etdiyiniz zaman, hansı sualı seçməyinizdən asılı olmayaraq, hər
-          sual eyni şəkildə cavab verəcəkdir.\n\nİnteraktiv bir prototipə diqqət yetirməklə
-          əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji
-          sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. "
+        markdown: |-
+          # Tətbiq növlərinə nümunə
+
+          Aşağıdakı səviyyələrdə bir neçə fərqli tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər üçün UI -nin (İstifadəçi İnterfeysi) necə görünə biləcəyi barədə sizə fikir verəcəklər.
+
+          Hər bir nümunə tətbiq üçün:
+
+          * Necə işlədiyini öyrənmək üçün nümunəni klikləyin.
+          * Fəaliyyət bələdçinizdə tapdığınız hər hansı bir xüsusiyyəti və ya istifadəçi interfeysi elementlərini və onların nə üçün istifadə edildiyini qeyd edin.
+          * Qruplarınızla bu tətbiqin və hər hansı bir UI xüsusiyyətinin seçdiyiniz mövzuya necə tətbiq oluna biləcəyini müzakirə edin.
+
+          # Funksionallıq haqqında bir qeyd
+
+          Bu tətbiqlər _prototypes_ dır; onlar bir istifadəçinin əsas funksionallıqdan narahat olmayaraq dizaynla qarşılıqlı əlaqə qurmasına imkan verir. Məsələn, Sorğu-Sual Tətbiqindən istifadə etdiyiniz zaman, hansı sualı seçməyinizdən asılı olmayaraq, hər sual eyni şəkildə cavab verəcəkdir.
+
+          İnteraktiv bir prototipə diqqət yetirməklə əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. nümunənümunə
+        teacher_markdown: fəaliyyət
       Example App Types_2018_2019:
-        markdown: "# Tətbiq növlərinə nümunə\n\nAşağıdakı səviyyələrdə bir neçə fərqli
-          tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər
-          üçün UI -nin (İstifadəçi İnterfeysi) necə görünə biləcəyi barədə sizə fikir
-          verəcəklər.\n\nHər bir nümunə tətbiq üçün:\n\n* Necə işlədiyini öyrənmək
-          üçün nümunəni klikləyin.\n* Fəaliyyət bələdçinizdə tapdığınız hər hansı
-          bir xüsusiyyəti və ya istifadəçi interfeysi elementlərini və onların nə
-          üçün istifadə edildiyini qeyd edin.\n* Qruplarınızla bu tətbiqin və hər
-          hansı bir UI xüsusiyyətinin seçdiyiniz mövzuya necə tətbiq oluna biləcəyini
-          müzakirə edin.\n\n# Funksionallıq haqqında bir qeyd\n\nBu tətbiqlər _prototypes_
-          dır; onlar bir istifadəçinin əsas funksionallıqdan narahat olmayaraq dizaynla
-          qarşılıqlı əlaqə qurmasına imkan verir. Məsələn, Sorğu-Sual Tətbiqindən
-          istifadə etdiyiniz zaman, hansı sualı seçməyinizdən asılı olmayaraq, hər
-          sual eyni şəkildə cavab verəcəkdir.\n\nİnteraktiv bir prototipə diqqət yetirməklə
-          əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji
-          sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. "
+        markdown: |-
+          # Tətbiq növlərinə nümunə
+
+          Aşağıdakı səviyyələrdə bir neçə fərqli tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər üçün UI -nin (İstifadəçi İnterfeysi) necə görünə biləcəyi barədə sizə fikir verəcəklər.
+
+          Hər bir nümunə tətbiq üçün:
+
+          * Necə işlədiyini öyrənmək üçün nümunəni klikləyin.
+          * Fəaliyyət bələdçinizdə tapdığınız hər hansı bir xüsusiyyəti və ya istifadəçi interfeysi elementlərini və onların nə üçün istifadə edildiyini qeyd edin.
+          * Qruplarınızla bu tətbiqin və hər hansı bir UI xüsusiyyətinin seçdiyiniz mövzuya necə tətbiq oluna biləcəyini müzakirə edin.
+
+          # Funksionallıq haqqında bir qeyd
+
+          Bu tətbiqlər _prototypes_ dır; onlar bir istifadəçinin əsas funksionallıqdan narahat olmayaraq dizaynla qarşılıqlı əlaqə qurmasına imkan verir. Məsələn, Sorğu-Sual Tətbiqindən istifadə etdiyiniz zaman, hansı sualı seçməyinizdən asılı olmayaraq, hər sual eyni şəkildə cavab verəcəkdir.
+
+          İnteraktiv bir prototipə diqqət yetirməklə əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. nümunənümunə
+        teacher_markdown: fəaliyyət
       GettingLoopy-Unplugged:
         markdown: |-
           # Dövr Etmək
@@ -5766,9 +5806,35 @@ az-AZ:
 
           Funksiyaların təyin edilməsi və çağırılması haqqında öyrənmək üçün mahnıda xor anlayışından istifadə et.
       Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
-        teacher_markdown: müəllim
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələrinizin sorğunu tamamladıqları halda, müəllim sorğusunu tez doldurmağınızdan məmnun olarıq
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
       Student End of Unit Survey - Intro+TeacherMD_csd4_2023:
-        teacher_markdown: müəllim
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələrinizin sorğunu tamamladıqları halda, müəllim sorğusunu tez doldurmağınızdan məmnun olarıq
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+      Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələrinizin sorğunu tamamladıqları halda, müəllim sorğusunu tez doldurmağınızdan məmnun olarıq
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
+      Student End of Unit Survey - Intro+TeacherMD_csd5_2023:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələrinizin sorğunu tamamladıqları halda, müəllim sorğusunu tez doldurmağınızdan məmnun olarıq
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
+      Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
+        teacher_markdown: |-
+          **Müəllimlər üçün bölmənin sonu sorğuları:** Tələbələriniz sorğunu tamamladıqları halda, biz sizə qısa bir müəllim sorğusunu doldurduğunuz üçün təşəkkür edirik
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+      Student End of Unit Survey - Intro+TeacherMD_csd7_2023:
+        teacher_markdown: |-
+          **Müəllimlər üçün bölmənin sonu sorğuları:** Tələbələriniz sorğunu tamamladıqları halda, biz sizə qısa bir müəllim sorğusunu doldurduğunuz üçün təşəkkür edirik
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Q1_2022:
         answers:
         - {}
@@ -6169,7 +6235,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - {}
@@ -6180,7 +6246,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-ch1-pulse-survey-q1_2023:
         answers:
         - {}
@@ -6191,7 +6257,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - {}
@@ -6202,7 +6268,8 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-ch1-pulse-survey-q2_2022:
         answers:
         - {}
@@ -6213,7 +6280,8 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-ch1-pulse-survey-q2_2023:
         answers:
         - {}
@@ -6224,7 +6292,8 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - {}
@@ -6326,46 +6395,61 @@ az-AZ:
         - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       aiml-intro-pulse-survey-q1_2022:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       aiml-intro-pulse-survey-q1_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       aiml-intro-pulse-survey-q2_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Bu, AI və Maşın Öyrənməsi haqqında ilk öyrəndiyim şeydir
+        - text: 'Daha kiçik AI fəaliyyətləri etmişəm (məsələn: bir saat kod), amma
+            bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq AI və Machine Learning üzrə dərslər almışam və ya daha uzun
+            onlayn dərslər etmişəm
         questions:
-        - {}
+        - text: Süni intellekt və Maşın Öyrənmə ilə bağlı əvvəllər hansı təcrübələriniz
+            olub?
       aiml-intro-pulse-survey-q2_2022:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Bu, AI və Maşın Öyrənməsi haqqında ilk öyrəndiyim şeydir
+        - text: 'Daha kiçik AI fəaliyyətləri etmişəm (məsələn: bir saat kod), amma
+            bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq AI və Machine Learning üzrə dərslər almışam və ya daha uzun
+            onlayn dərslər etmişəm
         questions:
-        - {}
+        - text: Süni intellekt və Maşın Öyrənmə ilə bağlı əvvəllər hansı təcrübələriniz
+            olub?
       aiml-intro-pulse-survey-q2_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Bu, AI və Maşın Öyrənməsi haqqında ilk öyrəndiyim şeydir
+        - text: 'Daha kiçik AI fəaliyyətləri etmişəm (məsələn: bir saat kod), amma
+            bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq AI və Machine Learning üzrə dərslər almışam və ya daha uzun
+            onlayn dərslər etmişəm
         questions:
-        - {}
+        - text: Süni intellekt və Maşın Öyrənmə ilə bağlı əvvəllər hansı təcrübələriniz
+            olub?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - {}
@@ -6376,7 +6460,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - {}
@@ -6387,7 +6471,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-intro-pulse-survey-q3_2023:
         answers:
         - {}
@@ -6398,7 +6482,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - {}
@@ -6409,7 +6493,8 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-intro-pulse-survey-q4_2022:
         answers:
         - {}
@@ -6420,7 +6505,8 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-intro-pulse-survey-q4_2023:
         answers:
         - {}
@@ -6431,7 +6517,8 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - {}
@@ -6944,10 +7031,12 @@ az-AZ:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - feedback: Yanlış. Skrat palamuta çatmayacaq, çünki o, yanlış tərəfə dönür.
+        - feedback: Scrat palıd qozasına çatmayacaq, çünki o, səhv yola dönür.
           text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
-        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
-        - feedback: Yanlış. Skrat palamuta çatmayacaq, çünki o, yanlış tərəfə dönür.
+        - feedback: Düzgün! Scrat yanlış istiqamətə çevrilir və palıd qozasına çatmayacaq
+            çatmayacaq.
+          text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+        - feedback: Scrat palıd qozasına çatmayacaq, çünki o, səhv yola dönür.
           text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
             et" blokları yoxdur.
         - feedback: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
@@ -6957,10 +7046,12 @@ az-AZ:
             problem var?
       courseC_multi_maze_debugging8_predict12022_2023:
         answers:
-        - feedback: Yanlış. Skrat palamuta çatmayacaq, çünki o, yanlış tərəfə dönür.
+        - feedback: Scrat palıd qozasına çatmayacaq, çünki o, səhv yola dönür.
           text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
-        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
-        - feedback: Yanlış. Skrat palamuta çatmayacaq, çünki o, yanlış tərəfə dönür.
+        - feedback: Düzgün! Scrat yanlış istiqamətə çevrilir və palıd qozasına çatmayacaq
+            çatmayacaq.
+          text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+        - feedback: Scrat palıd qozasına çatmayacaq, çünki o, səhv yola dönür.
           text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
             et" blokları yoxdur.
         - feedback: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
@@ -8029,6 +8120,7 @@ az-AZ:
           text: Zombi dərhal sağa dönəcək və ilişib qalacaq.
         - feedback: Yanlış. Bu kodda, düz gedə biləcəyini görmək üçün * əvvəl * sağa
             dönmə axtarır. Bu səbəbdən tapmaca uğursuz olur.
+          text: Zombi onu günəbaxana aparacaq.
         - feedback: Yanlış. Zombi yalnız sağa dönmə və ya düz yol axtarır. Heç vaxt
             sola dönməyə baxmır, ona görə də dərhal ilişib qalır.
         - feedback: Bu kodda, düz gedə biləcəyini görmək üçün * əvvəl * sağa dönmə
@@ -8042,6 +8134,7 @@ az-AZ:
           text: Zombi düzgün yoldan keçəcək və daimii olaraq geri və irəli gedəcək.
         - feedback: Səhv. Zombi düzgün yoldan keçəcək və əbədi olaraq geri və irəli
             gedəcək.
+          text: Zombi onu günəbaxana aparacaq.
         - feedback: Səhv. Zombi düzgün yoldan keçəcək və əbədi olaraq geri və irəli
             gedəcək.
         - feedback: Bu kodda zombi düzgün yoldan keçəcək və əbədi olaraq irəli-geri
@@ -8054,6 +8147,7 @@ az-AZ:
           text: Zombi düzgün yoldan keçəcək və daimii olaraq geri və irəli gedəcək.
         - feedback: Səhv. Zombi düzgün yoldan keçəcək və əbədi olaraq geri və irəli
             gedəcək.
+          text: Zombi onu günəbaxana aparacaq.
         - feedback: Səhv. Zombi düzgün yoldan keçəcək və əbədi olaraq geri və irəli
             gedəcək.
         - feedback: Bu kodda zombi düzgün yoldan keçəcək və əbədi olaraq irəli-geri
@@ -8063,7 +8157,7 @@ az-AZ:
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - feedback: Düzgün!
-        - {}
+        - text: Zombi onu günəbaxana aparacaq.
         - {}
         - text: Bilmirəm.
         questions:
@@ -8071,7 +8165,7 @@ az-AZ:
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - feedback: Düzgün!
-        - {}
+        - text: Zombi onu günəbaxana aparacaq.
         - {}
         - text: Bilmirəm.
         questions:
@@ -8079,7 +8173,7 @@ az-AZ:
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
         - feedback: Düzgün!
-        - {}
+        - text: Zombi onu günəbaxana aparacaq.
         - {}
         - text: Bilmirəm.
         questions:
@@ -8088,7 +8182,7 @@ az-AZ:
         answers:
         - correct: true
           feedback: Düzgün!
-        - {}
+        - text: Zombi onu günəbaxana aparacaq.
         - {}
         - {}
         questions:
@@ -8331,72 +8425,72 @@ az-AZ:
       courseE_prediction_artistFunction1:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction12022:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_2018:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_2021:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_copy:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_dani:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
@@ -8510,6 +8604,12 @@ az-AZ:
           göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
           başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
         display_name: Tədqiqat - Nümunə Proqramlar
+      courseF_events_freeplay:
+        display_name: Tədbirlər - Pulsuz Oyun
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        display_name: Tədbirlər - Pulsuz Oyun
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
+        display_name: Tədbirlər - Pulsuz Oyun
       courseF_events_practice:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
@@ -9012,6 +9112,12 @@ az-AZ:
         content1: Test Markdown Dərslik Səhifəsi
       courseF_project_exemplars_2019_2020:
         content1: Test Markdown Dərslik Səhifəsi
+      courseF_sprites_freeplay:
+        display_name: Sprites - Pulsuz Oyun
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        display_name: Sprites - Pulsuz Oyun
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        display_name: Sprites - Pulsuz Oyun
       courseF_sprites_practice:
         description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
           çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
@@ -9559,7 +9665,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U2-I-learned:
@@ -9578,7 +9684,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U3-I-learned:
@@ -9597,7 +9703,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U4-I-learned:
@@ -9616,7 +9722,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U5-I-learned:
@@ -9635,7 +9741,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U6-I-learned:
@@ -9654,7 +9760,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-markdown-with-link-to-survey:
@@ -10029,7 +10135,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       csd-post-survey-unit1-preamble:
         content1: Burada təsvir edin
       csd-post-survey-unit2-preamble:
@@ -10052,6 +10158,8 @@ az-AZ:
         title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
       csd-pre-survey-levelgroup_21_22_2022:
         title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+      csd-pre-survey-levelgroup_21_22_2023:
+        title: Tələbələrin Kursqabağı Sorğusu
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - {}
@@ -13164,7 +13272,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyəndim.
       csp-post-survey-2017-q1_2018:
         answers:
         - {}
@@ -15281,46 +15389,58 @@ az-AZ:
         - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
       intro-pulse-survey-q1_csd1_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd2_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd3_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd4_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd5_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd6_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q2_csd1_2023:
         answers:
         - {}
@@ -15330,11 +15450,11 @@ az-AZ:
         - {}
       intro-pulse-survey-q2_csd2_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: birinci
+        - text: aktivitasiya
+        - text: sinif
         questions:
-        - {}
+        - text: nə
       intro-pulse-survey-q2_csd3_2023:
         answers:
         - {}
@@ -15373,7 +15493,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd2_2023:
         answers:
         - {}
@@ -15384,7 +15504,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd3_2023:
         answers:
         - {}
@@ -15395,7 +15515,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd4_2023:
         answers:
         - {}
@@ -15406,7 +15526,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd5_2023:
         answers:
         - {}
@@ -15417,7 +15537,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd6_2023:
         answers:
         - {}
@@ -15428,7 +15548,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd1_2023:
         answers:
         - {}
@@ -15439,7 +15559,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd2_2023:
         answers:
         - {}
@@ -15450,7 +15570,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd3_2023:
         answers:
         - {}
@@ -15461,7 +15581,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd4_2023:
         answers:
         - {}
@@ -15472,7 +15592,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd5_2023:
         answers:
         - {}
@@ -15483,7 +15603,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd6_2023:
         answers:
         - {}
@@ -15494,7 +15614,7 @@ az-AZ:
         - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q5_csd1_2023:
         answers:
         - {}
@@ -15561,6 +15681,8 @@ az-AZ:
         - {}
         questions:
         - {}
+      intro-pulse-survey_csd2_2023:
+        title: sorğu
       made-choices-about-assignments:
         answers:
         - text: Heç vaxt
@@ -15574,6 +15696,10 @@ az-AZ:
         display_name: Tətbiqinizi özəlləşdirin
       ml-club app-choice parent_2022:
         display_name: Tətbiqinizi özəlləşdirin
+        teacher_markdown: |
+          **Tələbələrə dəstək: ** Bu səviyyələr şagirdlərin əvvəlki dərslərdə tamamladığı oxşar fərdiləşdirmələrə bənzəyir. Şagirdlər ilişib qalırsa, onları bu əvvəlki dərslərə istinad etməyi düşünün:
+          - Hər bir xüsusiyyət üçün birdən çox ekran əlavə etmək: [Dərs 13 - Tətbiqlərin fərdiləşdirilməsi] (../.. /13/səviyyələr/2)
+          - Yaranan proqnoz üçün birdən çox ekran əlavə etmək: [Dərs 10 - App Laboratoriyasında Model Kartları] (../.. /10/səviyyələr/5)
       ml-club app-choice parent_2023:
         display_name: Tətbiqinizi özəlləşdirin
       ml-intro app lab-book recommender 5-2021:

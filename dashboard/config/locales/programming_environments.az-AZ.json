@@ -650,6 +650,9 @@
                 },
                 "createRecordSync": {
                   "palette_params": {
+                    "record": {
+                      "type": "əşya "
+                    },
                     "table": {
                       "type": "Simli"
                     }
@@ -705,6 +708,9 @@
                   "palette_params": {
                     "callback": {
                       "type": "Funksiya"
+                    },
+                    "data": {
+                      "type": "əşya "
                     },
                     "id": {
                       "type": "Simli"
@@ -1406,6 +1412,9 @@
                   "palette_params": {
                     "key": {
                       "type": "Simli"
+                    },
+                    "object": {
+                      "type": "əşya "
                     }
                   },
                   "return_value": "Heç biri"
@@ -1508,6 +1517,9 @@
                   "palette_params": {
                     "key": {
                       "type": "Simli"
+                    },
+                    "object": {
+                      "type": "əşya "
                     }
                   }
                 },
@@ -1998,6 +2010,13 @@
                     }
                   },
                   "return_value": "Qaytarılan dəyər yoxdur."
+                },
+                "drawSprites": {
+                  "palette_params": {
+                    "group": {
+                      "type": "əşya "
+                    }
+                  }
                 },
                 "keyDown": {
                   "examples": {
