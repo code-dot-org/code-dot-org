@@ -5475,6 +5475,9 @@ id:
         virtual-pl-csa-summer-2024-day1:
           title: Hari 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Pendahuluan
           title: Hari 2
         virtual-pl-csp-summer-day3:
           title: Hari 3
@@ -5483,10 +5486,19 @@ id:
         virtual-pl-csa-summer-day2:
           title: Hari 2
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Pendahuluan
           title: Hari 3
         virtual-pl-csa-summer-day4:
           title: Hari 4
         virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Pendahuluan
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Pendahuluan
           title: Hari 1
         virtual-pl-csp-summer-day1:
           title: Hari 1

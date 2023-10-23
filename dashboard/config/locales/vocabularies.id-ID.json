@@ -18,52 +18,6 @@
           "word": "Hak cipta",
           "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
         },
-        "bug/csd/2021": {
-          "word": "Bug",
-          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
-        },
-        "debugging/csd/2021": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/csd/2021": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "variable/csd/2021": {
-          "word": "Variabel",
-          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
-        },
-        "sprite/csd/2021": {
-          "word": "Sprite"
-        },
-        "condition/csd/2021": {
-          "word": "Kondisi"
-        },
-        "conditionals/csd/2021": {
-          "word": "Kondisi"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstraksi"
-        },
-        "function/csd/2021": {
-          "word": "Fungsi"
-        },
-        "user/csd/2021": {
-          "word": "Pengguna",
-          "definition": "Seseorang yang menggunakan objek, termasuk perangkat lunak dan perangkat keras."
-        },
-        "user_interface/csd/2021": {
-          "word": "Antarmuka Pengguna"
-        },
-        "for_loop/csd/2021": {
-          "word": "For Loop",
-          "definition": "Loop yang memiliki awal, akhir, dan nilai kenaikan yang telah ditentukan (interval langkah)."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Pembelajaran Mesin",
-          "definition": "Bagaimana komputer mengenali pola dan membuat keputusan tanpa diprogram secara eksplisit"
-        },
         "algorithm/coursea/2021": {
           "word": "Algoritma",
           "definition": "Daftar tahap untuk menyelesaikan tugas."
@@ -606,48 +560,6 @@
           "word": "Hak cipta",
           "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
         },
-        "bug/csd/2022": {
-          "word": "Bug",
-          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
-        },
-        "debugging/csd/2022": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/csd/2022": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "variable/csd/2022": {
-          "word": "Variabel",
-          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
-        },
-        "sprite/csd/2022": {
-          "word": "Sprite"
-        },
-        "condition/csd/2022": {
-          "word": "Kondisi"
-        },
-        "conditionals/csd/2022": {
-          "word": "Kondisi"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstraksi"
-        },
-        "function/csd/2022": {
-          "word": "Fungsi"
-        },
-        "user/csd/2022": {
-          "word": "Pengguna",
-          "definition": "Seseorang yang menggunakan objek, termasuk perangkat lunak dan perangkat keras."
-        },
-        "user_interface/csd/2022": {
-          "word": "Antarmuka Pengguna"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Pembelajaran Mesin",
-          "definition": "Bagaimana komputer mengenali pola dan membuat keputusan tanpa diprogram secara eksplisit"
-        },
         "algorithm/coursea/2022": {
           "word": "Algoritma",
           "definition": "Daftar tahap untuk menyelesaikan tugas."
@@ -1157,9 +1069,6 @@
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Kecerdasan Buatan"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptasi",
           "definition": "Perubahan organisme untuk bertahan hidup dengan lebih baik di lingkungannya"
@@ -1188,196 +1097,6 @@
           "word": "Perilaku",
           "definition": "Serangkaian tindakan yang Anda ingin sprite lakukan berulang kali. "
         },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "Kode (v)",
-          "definition": "untuk menulis instruksi untuk komputer."
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Program",
-          "definition": "Deretan langkah yang telah dikodekan ke sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "Prompt",
-          "definition": "Sebuah pesan di layar komputer yang menunggu input dari pengguna."
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Sprite",
-          "definition": "Sebuah benda grafis di layar dengan lokasi, ukuran, dan tampilan."
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "Latar Belakang",
-          "definition": "Visual di balik hal-hal utama atau orang-orang di layar."
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "Karakter",
-          "definition": "Seseorang, binatang, makhluk, makhluk dalam sebuah cerita."
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "Pengaturan",
-          "definition": "Waktu dan tempat (atau kapan dan di mana) sebuah cerita."
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "Ringkasan",
-          "definition": "Menceritakan bagian paling penting dari sebuah teks, dengan kata-kata Anda sendiri, dengan cara yang jauh lebih pendek"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "kode",
-          "definition": "(v) Menulis instruksi untuk komputer"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Kondisi",
-          "definition": "Sesuatu yang diperiksa oleh program untuk melihat apakah itu benar sebelum mengizinkan suatu tindakan"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Kondisi",
-          "definition": "Pernyataan yang hanya berjalan dalam kondisi tertentu"
-        },
-        "ecosystem/csc-ecosystems/2023": {
-          "word": "Ekosistem",
-          "definition": "Komunitas biologis organisme yang berinteraksi dan lingkungannya"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan sesuatu terjadi"
-        },
-        "overfishing/csc-ecosystems/2023": {
-          "word": "Penangkapan ikan berlebihan",
-          "definition": "Penghapusan ikan lebih cepat daripada yang bisa mereka reproduksi"
-        },
-        "simulation/csc-ecosystems/2023": {
-          "word": "Simulasi",
-          "definition": "Model komputer untuk tujuan studi."
-        },
-        "debug/csc-ecosystems/2023": {
-          "word": "Debug",
-          "definition": "Menemukan dan memperbaiki kesalahan atau masalah dalam kode."
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Variabel",
-          "definition": "Sebuah wadah yang dapat menyimpan nilai. "
-        },
-        "ecologist/csc-ecosystems/2023": {
-          "word": "Ahli ekologi",
-          "definition": "Seorang ilmuwan yang mempelajari bagaimana hewan dan tumbuhan berinteraksi dengan lingkungannya."
-        },
-        "energy/csc-ecosystems/2023": {
-          "word": "Energi",
-          "definition": "Ditransfer antar organisme dalam jaring makanan dari produsen ke konsumen. Energi digunakan oleh organisme untuk melakukan tugas-tugas kompleks."
-        },
-        "food_chain/csc-ecosystems/2023": {
-          "word": "Rantai Makanan ",
-          "definition": "Sekelompok organisme yang terhubung dalam urutan makanan yang mereka makan, dari produsen ke konsumen, dan dari mangsa ke predator."
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "kode",
-          "definition": "(v) menulis instruksi untuk sebuah komputer."
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "Tengara",
-          "definition": "Landmark adalah objek (alam atau buatan manusia) yang memiliki kepentingan atau membuat tempat mudah dikenali."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Sprite",
-          "definition": "Gambar atau karakter dalam program Anda."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Peta",
-          "definition": "Representasi area darat atau laut yang menunjukkan fitur fisik, kota, jalan, dll."
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "Pola",
-          "definition": "Sesuatu yang terjadi atau muncul secara teratur dan berulang"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "belah ketupat",
-          "definition": "Poligon dengan empat sisi yang sama, sisi berlawanan sejajar, sudut berlawanan sama"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "Selimut Bintang",
-          "definition": "Hadiah tradisional dan berharga di antara penduduk asli Amerika dari Great Plains"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Artis",
-          "definition": "Anda dapat menulis kode untuk membuatnya menggambar hampir semua hal"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Loop",
-          "definition": "Urutan kode yang diulang"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "Poin",
-          "definition": "Salah satu bagian dari bentuk bintang"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "Baris",
-          "definition": "Dalam hal ini, garis belah ketupat yang teratur"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "Konsentris",
-          "definition": "Objek atau bentuk yang berbagi pusat yang sama"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Komentar",
-          "definition": "Catatan untuk diri Anda sendiri yang menjelaskan bagian kode. Mereka tidak mengubah program tetapi membantu menjaga kode Anda tetap teratur."
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "Citra",
-          "definition": "Gambar mental yang dihasilkan oleh puisi atau cerita"
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "Mood",
-          "definition": "Ekspresi perasaan, suasana, atau emosi dalam seni atau tulisan."
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Sprite",
-          "definition": "Gambar atau karakter dalam program Anda"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "Tempat menyimpan kenangan dan barang sehari-hari yang mewakili hari dalam kehidupan seseorang yang hidup selama periode waktu tertentu. "
-        },
-        "code/poetry/2023": {
-          "word": "kode",
-          "definition": "(v) menulis instruksi untuk sebuah komputer."
-        },
-        "event/poetry/2023": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
-        "line/poetry/2023": {
-          "word": "Baris",
-          "definition": "(puisi) - subdivisi puisi yang disusun dalam baris yang berakhir di tepi kanan."
-        },
-        "mood/poetry/2023": {
-          "word": "Mood",
-          "definition": "Ekspresi perasaan, suasana, atau emosi dalam seni atau tulisan."
-        },
-        "program/poetry/2023": {
-          "word": "Program",
-          "definition": "Deretan langkah yang telah dikodekan ke sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "poem/poetry/2023": {
-          "word": "Puisi",
-          "definition": "Garis tulisan yang menggunakan kata-kata untuk menciptakan gambar, perasaan, dan ide dalam pikiran pembaca."
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "Umpan balik yang konstruktif",
-          "definition": "Komentar hormat yang membantu seseorang meningkatkan pekerjaan mereka"
-        },
-        "poetry_circle/poetry/2023": {
-          "definition": "Ruang yang aman dan kreatif untuk menguji puisi baru dan mendapatkan umpan balik yang konstruktif dari orang lain"
-        },
         "computer/csd/2023": {
           "word": "Komputer"
         },
@@ -1393,44 +1112,6 @@
         "copyright/csd/2023": {
           "word": "Hak cipta",
           "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
-        },
-        "bug/csd/2023": {
-          "word": "Bug",
-          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
-        },
-        "debugging/csd/2023": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/csd/2023": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "variable/csd/2023": {
-          "word": "Variabel",
-          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
-        },
-        "sprite/csd/2023": {
-          "word": "Sprite"
-        },
-        "condition/csd/2023": {
-          "word": "Kondisi"
-        },
-        "conditionals/csd/2023": {
-          "word": "Kondisi"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstraksi"
-        },
-        "function/csd/2023": {
-          "word": "Fungsi"
-        },
-        "user/csd/2023": {
-          "word": "Pengguna",
-          "definition": "Seseorang yang menggunakan objek, termasuk perangkat lunak dan perangkat keras."
-        },
-        "user_interface/csd/2023": {
-          "word": "Antarmuka Pengguna"
         },
         "machine_learning/csd/2023": {
           "word": "Pembelajaran Mesin",
@@ -2023,28 +1704,6 @@
           "word": "Program",
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
-        "code/dance-2019/unversioned": {
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
         "code/dance-extras/unversioned": {
           "word": "kode",
           "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
@@ -2065,116 +1724,6 @@
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
         "program/dance/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/flappy/unversioned": {
-          "word": "kode",
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/flappy/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/frozen/unversioned": {
-          "word": "kode",
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/frozen/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/gumball/unversioned": {
-          "word": "kode",
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/gumball/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/hero/unversioned": {
-          "word": "kode",
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "function/hero/unversioned": {
-          "word": "Fungsi",
-          "definition": "Sebuah kode yang dapat Anda panggil berulang kali dengan mudah."
-        },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Sandi Caesar",
-          "definition": "teknik enkripsi yang mengubah abjad dengan sejumlah karakter"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Sandi",
-          "definition": "istilah umum untuk teknik (atau algoritma) yang melakukan enkripsi"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Memecahkan enkripsi",
-          "definition": "Ketika Anda mencoba mendekode pesan rahasia tanpa mengetahui semua spesifikasi sandi, Anda mencoba \"meretas\" enkripsi. "
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Dekripsi",
-          "definition": "proses yang memutarbalikkan enkripsi, mengambil pesan rahasia, dan mereproduksi teks biasa yang asli"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Enkripsi",
-          "definition": "proses encoding pesan untuk merahasiakannya sehingga hanya pihak \"terotorisasi\" yang dapat membacanya."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Sandi Substitusi Acak",
-          "definition": "teknik enkripsi yang memetakan setiap huruf alfabet ke huruf alfabet lain yang dipilih secara acak."
-        },
-        "code/hourofcode/unversioned": {
-          "word": "kode",
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/iceage/unversioned": {
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/iceage/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/infinity/unversioned": {
           "word": "Program",
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
@@ -2209,10 +1758,6 @@
           "word": "Program",
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Pembelajaran Mesin",
-          "definition": "Bagaimana komputer mengenali pola dan membuat keputusan tanpa diprogram secara eksplisit"
-        },
         "event/outbreak/unversioned": {
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
@@ -2220,37 +1765,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "Model dan Simulasi",
           "definition": "program yang mereplika atau meniru ciri utama dari peristiwa dunia nyata guna menyelidiki perilakunya tanpa menghabiskan biaya, waktu, atau bahaya dalam menjalankan eksperimen di kehidupan nyata."
-        },
-        "code/playlab/unversioned": {
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/playlab/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/poem-art/2021": {
-          "word": "kode",
-          "definition": "(v) menulis instruksi untuk sebuah komputer."
-        },
-        "event/poem-art/2021": {
-          "word": "Event",
-          "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
-        },
-        "line/poem-art/2021": {
-          "word": "Baris",
-          "definition": "(puisi) - bagian dari sebuah puisi yang disusun dalam larik yang berakhir dengan batas kanan."
-        },
-        "mood/poem-art/2021": {
-          "word": "Mood",
-          "definition": "ungkapan perasaan, suasana jiwa, atau emosi dalam seni atau tulisan."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Deretan langkah yang telah dikodekan ke sesuatu yang dapat dijalankan oleh mesin."
         },
         "code/sports/unversioned": {
           "word": "kode",
@@ -2267,33 +1781,6 @@
         "program/sports/unversioned": {
           "word": "Program",
           "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/starwars/unversioned": {
-          "word": "kode",
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/starwars/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Debugging",
-          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Program",
-          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Lossless Compression",
-          "definition": "algoritma kompresi data yang memungkinkan data asli dipulihkan seperti semula secara sempurna dari data yang dikompresi. Paling umum digunakan untuk kompresi teks (yaitu, kompresi zip)"
         }
       }
     }
