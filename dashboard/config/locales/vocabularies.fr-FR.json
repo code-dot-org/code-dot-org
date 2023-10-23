@@ -30,49 +30,6 @@
         "relevant/csd/2021": {
           "word": "Pertinent"
         },
-        "bug/csd/2021": {
-          "word": "Bug",
-          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
-        },
-        "debugging/csd/2021": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/csd/2021": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "variable/csd/2021": {
-          "word": "Variable",
-          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
-        },
-        "sprite/csd/2021": {
-          "word": "Sprite"
-        },
-        "condition/csd/2021": {
-          "word": "Condition"
-        },
-        "conditionals/csd/2021": {
-          "word": "Instructions conditionnelles"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstraction"
-        },
-        "function/csd/2021": {
-          "word": "Fonction"
-        },
-        "user/csd/2021": {
-          "word": "Utilisateur",
-          "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
-        },
-        "for_loop/csd/2021": {
-          "word": "La Boucle « Pour »",
-          "definition": "Des boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
-        },
-        "machine_learning/csd/2021": {
-          "word": "L'Apprentissage Automatique",
-          "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
-        },
         "algorithm/coursea/2021": {
           "word": "Algorithme",
           "definition": "Une liste d'étapes pour terminer une tâche. "
@@ -629,45 +586,6 @@
         "relevant/csd/2022": {
           "word": "Pertinent"
         },
-        "bug/csd/2022": {
-          "word": "Bug",
-          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
-        },
-        "debugging/csd/2022": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/csd/2022": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "variable/csd/2022": {
-          "word": "Variable",
-          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
-        },
-        "sprite/csd/2022": {
-          "word": "Sprite"
-        },
-        "condition/csd/2022": {
-          "word": "Condition"
-        },
-        "conditionals/csd/2022": {
-          "word": "Instructions conditionnelles"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstraction"
-        },
-        "function/csd/2022": {
-          "word": "Fonction"
-        },
-        "user/csd/2022": {
-          "word": "Utilisateur",
-          "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
-        },
-        "machine_learning/csd/2022": {
-          "word": "L'Apprentissage Automatique",
-          "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
-        },
         "algorithm/coursea/2022": {
           "word": "Algorithme",
           "definition": "Une liste d'étapes pour terminer une tâche. "
@@ -1179,9 +1097,6 @@
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Intelligence artificielle"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptation",
           "definition": "Modification d'un organisme pour mieux survivre à son environnement"
@@ -1428,41 +1343,6 @@
         },
         "relevant/csd/2023": {
           "word": "Pertinent"
-        },
-        "bug/csd/2023": {
-          "word": "Bug",
-          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
-        },
-        "debugging/csd/2023": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/csd/2023": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "variable/csd/2023": {
-          "word": "Variable",
-          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
-        },
-        "sprite/csd/2023": {
-          "word": "Sprite"
-        },
-        "condition/csd/2023": {
-          "word": "Condition"
-        },
-        "conditionals/csd/2023": {
-          "word": "Instructions conditionnelles"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstraction"
-        },
-        "function/csd/2023": {
-          "word": "Fonction"
-        },
-        "user/csd/2023": {
-          "word": "Utilisateur",
-          "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
         },
         "machine_learning/csd/2023": {
           "word": "L'Apprentissage Automatique",
@@ -1979,34 +1859,6 @@
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "L'Apprentissage Automatique",
-          "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Algorithme",
-          "definition": "une série d'étapes pour résoudre un problème ou prendre une décision"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Réseau",
-          "definition": "Une collection d'objets connectés entre eux. Le fait de suivre ces connexions peut représenter les étapes d'un algorithme, comme un organigramme."
-        },
-        "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Modèle linguistique étendu (LLM)",
-          "definition": "une forme d'IA à usage général qui repose sur un très, très vaste ensemble de connaissances"
-        },
-        "diffusion_ai/how-ai-works/2023": {
-          "word": "IA de diffusion",
-          "definition": "convertir une image en bruit et entraîner une IA à inverser le processus"
-        },
-        "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (réseau antagoniste génératif)",
-          "definition": "une façon d'utiliser deux modèles d'IA concurrents pour générer quelque chose"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "Intelligence artificielle",
-          "definition": "la capacité des machines à apprendre et à résoudre des problèmes."
-        },
         "code/aquatic/unversioned": {
           "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
@@ -2059,30 +1911,6 @@
           "word": "Programme",
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
-        "code/dance-2019/unversioned": {
-          "word": "coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Évènement",
-          "definition": "Action qui provoque quelque chose."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Évènement",
-          "definition": "Action qui provoque quelque chose."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
         "code/dance-extras/unversioned": {
           "word": "Coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
@@ -2104,97 +1932,6 @@
           "definition": "Action qui provoque quelque chose."
         },
         "program/dance/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/flappy/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/flappy/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/frozen/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/frozen/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/gumball/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/gumball/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/hero/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "function/hero/unversioned": {
-          "word": "Fonction",
-          "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
-        },
-        "program/hero/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Chiffrement"
-        },
-        "code/hourofcode/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/iceage/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/iceage/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/infinity/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/infinity/unversioned": {
           "word": "Programme",
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
@@ -2230,10 +1967,6 @@
           "word": "Programme",
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "L'Apprentissage Automatique",
-          "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
-        },
         "event/outbreak/unversioned": {
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
@@ -2241,38 +1974,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "Modèles et simulations",
           "definition": "un programme qui reproduit ou imite des caractéristiques clés d'un événement du monde réel afin d'étudier son comportement en évitant le coût, le temps et le danger de mener une telle expérience dans la vie réelle. "
-        },
-        "code/playlab/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/playlab/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/poem-art/2021": {
-          "word": "Code",
-          "definition": "(v) écrire des instructions pour un ordinateur."
-        },
-        "event/poem-art/2021": {
-          "word": "Évènement",
-          "definition": "Action qui provoque quelque chose."
-        },
-        "line/poem-art/2021": {
-          "word": "Ligne",
-          "definition": "(poésie) - une subdivision d'un poème disposé en une rangée qui se termine à la marge de droite. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Humeur",
-          "definition": "l'expression d'un sentiment, d'une atmosphère ou d'une émotion dans l'art ou l'écriture."
-        },
-        "program/poem-art/2021": {
-          "word": "Programme",
-          "definition": "Une série d'étapes qui ont été codées dans quelque chose qui peut être exécuté par une machine."
         },
         "code/sports/unversioned": {
           "word": "Code"
@@ -2288,33 +1989,6 @@
         "program/sports/unversioned": {
           "word": "Programme",
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/starwars/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/starwars/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Compression Sans Perte"
         }
       }
     }

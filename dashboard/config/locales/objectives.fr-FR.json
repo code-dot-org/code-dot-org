@@ -2,12 +2,6 @@
   "fr-FR": {
     "data": {
       "objectives": {
-        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
-          "description": "Se former et tester un modèle d'apprentissage automatique."
-        },
-        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
-          "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
-        },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "Découvrez que l'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
         },
@@ -985,12 +979,6 @@
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Partager un artefact créatif avec d'autres élèves."
-        },
-        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
-          "description": "Se former et tester un modèle d'apprentissage automatique."
-        },
-        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
-          "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
         },
         "086d6899-da60-486b-a9f7-89715397d81c": {
           "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
@@ -2162,12 +2150,6 @@
         "a4fa2434-b9c5-4e36-819b-50398d230730": {
           "description": "Partagez leurs applications les uns avec les autres"
         },
-        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
-          "description": "Se former et tester un modèle d'apprentissage automatique."
-        },
-        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
-          "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
-        },
         "08121200-84b5-4a5a-bba6-4b562022d2dd": {
           "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
         },
@@ -3095,36 +3077,6 @@
         "86f2847b-df75-4023-a828-61521c7bd71d": {
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
-        "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Décrire comment la vision par ordinateur est construite à partir de couches qui combinent des composants plus petits dans une prédiction finale"
-        },
-        "5bb33a90-28cb-40cb-9647-59a1818980b8": {
-          "description": "Expliquer le besoin de perspectives diverses lors de la création de systèmes de recommandation"
-        },
-        "bb862e7c-9808-4414-b027-fc747d58b6c0": {
-          "description": "Utiliser les poids d'un neurone artificiel pour ajuster les sorties d'un système de recommandation"
-        },
-        "2b61407b-2812-4aa5-bdf0-661ae14b44d0": {
-          "description": "Discutez des effets secondaires positifs et négatifs de ces modèles"
-        },
-        "941fa029-220b-4d04-880f-29d93c952a9d": {
-          "description": "Collaborez avec l'IA pour créer un document texte créatif"
-        },
-        "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "Décrivez que le fait d'avoir une grande quantité de texte à partir duquel apprendre permet aux ordinateurs de paraître intelligents sous forme écrite"
-        },
-        "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Discutez si ces modèles sont créatifs ou non et à qui appartiennent ces images"
-        },
-        "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "Décrivez que l'IA peut générer des images assez réalistes grâce à un processus connu sous le nom de diffusion, dans le cadre duquel un modèle apprend à dessiner des détails en les inversant"
-        },
-        "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "La raison pour laquelle les types de tâches ne doivent pas être complétés par un algorithme"
-        },
-        "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
-          "description": "Expliquer le fonctionnement de l'IA"
-        },
         "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
           "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
         },
@@ -3146,24 +3098,6 @@
         "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
           "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
         },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Développer des programmes qui répondent aux événements chronométrés"
-        },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "Développer des programmes qui répondent aux commentaires des utilisateurs"
-        },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Créer des animations de danse avec du code"
-        },
-        "83f493e8-9941-4154-b2f4-f34836741746": {
-          "description": "Définir « codage » et « informatique »."
-        },
-        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
-          "description": "Identifier le vocabulaire informatique clé."
-        },
-        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
-          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
-        },
         "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
           "description": "Définir « codage » et « informatique »."
         },
@@ -3182,60 +3116,6 @@
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Créer des animations de danse avec du code"
         },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Créez une animation interactive en utilisant des sprites et des événements."
-        },
-        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Créez une animation interactive en utilisant des sprites et des événements."
-        },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
-        },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Créez une animation interactive en utilisant des sprites et des événements."
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Créez une animation interactive en utilisant des sprites et des événements."
-        },
-        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
-        },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Créez une animation interactive en utilisant des sprites et des événements."
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "Créez une animation interactive en utilisant des sprites et des événements."
-        },
-        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
-          "description": "Discutez du rôle que joue l'intelligence artificielle dans leur vie."
-        },
-        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
-          "description": "Se former et tester un modèle d'apprentissage automatique."
-        },
-        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
-          "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
-        },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Illustrer les changements d'humeur d'un poème."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Représenter le langage figuré et littéral dans un texte."
-        },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Développer des programmes qui répondent à des événements planifiés."
-        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identifier les actions qui aux événements d'entrée."
         },
@@ -3250,12 +3130,6 @@
         },
         "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
           "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
         }
       }
     }
