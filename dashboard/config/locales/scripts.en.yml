@@ -13608,3 +13608,30 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        draft-hoc-dp-2-a:
+          lessons: {}
+          lesson_groups: {}
+          name: draft-hoc-dp-2-a
+          title: 'Dance Party (October Pilot - Version A) '
+          description_audience: ''
+          description_short: All songs
+          description: All songs
+          student_description: ''
+        draft-hoc-dp-2-:
+          lessons: {}
+          lesson_groups: {}
+          name: draft-hoc-dp-2-
+          title: 'Dance Party (October Pilot - Version A) '
+          description_audience: ''
+          description_short: Scoped Songs
+          description: Scoped Songs
+          student_description: ''
+        draft-hoc-dp-2-b:
+          lessons: {}
+          lesson_groups: {}
+          name: draft-hoc-dp-2-b
+          title: 'Dance Party (October Pilot - Version B) '
+          description_audience: ''
+          description_short: ''
+          description: Scoped Songs
+          student_description: ''
