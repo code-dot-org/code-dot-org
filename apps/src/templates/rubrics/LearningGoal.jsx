@@ -138,7 +138,7 @@ export default function LearningGoal({
         })
         .catch(error => console.log(error));
     }
-  }, [studentLevelInfo, learningGoal]);
+  }, [studentLevelInfo, learningGoal, isOpen]);
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
