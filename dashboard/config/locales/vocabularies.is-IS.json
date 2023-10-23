@@ -11,30 +11,6 @@
         "copyright/csd/2021": {
           "word": "Höfundarréttur"
         },
-        "debugging/csd/2021": {
-          "word": "Villuleit"
-        },
-        "variable/csd/2021": {
-          "word": "Breyta"
-        },
-        "sprite/csd/2021": {
-          "word": "Kviki"
-        },
-        "conditionals/csd/2021": {
-          "word": "Skilyrði"
-        },
-        "abstraction/csd/2021": {
-          "word": "Útdráttur"
-        },
-        "function/csd/2021": {
-          "word": "Aðgerð"
-        },
-        "user/csd/2021": {
-          "word": "Notandi"
-        },
-        "machine_learning/csd/2021": {
-          "word": "Vélarnám"
-        },
         "algorithm/coursea/2021": {
           "word": "Algrím"
         },
@@ -173,30 +149,6 @@
         "copyright/csd/2022": {
           "word": "Höfundarréttur"
         },
-        "debugging/csd/2022": {
-          "word": "Villuleit"
-        },
-        "variable/csd/2022": {
-          "word": "Breyta"
-        },
-        "sprite/csd/2022": {
-          "word": "Kviki"
-        },
-        "conditionals/csd/2022": {
-          "word": "Skilyrði"
-        },
-        "abstraction/csd/2022": {
-          "word": "Útdráttur"
-        },
-        "function/csd/2022": {
-          "word": "Aðgerð"
-        },
-        "user/csd/2022": {
-          "word": "Notandi"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Vélarnám"
-        },
         "algorithm/coursea/2022": {
           "word": "Algrím"
         },
@@ -332,36 +284,6 @@
         "code/csc-adaptations/2023": {
           "word": "Kóði"
         },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Kviki"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Kóði"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Skilyrði"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Breyta"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kóði"
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Kviki"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Listamaður"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Athugasemdir"
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Kviki"
-        },
-        "code/poetry/2023": {
-          "word": "Kóði"
-        },
         "input/csd/2023": {
           "word": "Inntak"
         },
@@ -370,27 +292,6 @@
         },
         "copyright/csd/2023": {
           "word": "Höfundarréttur"
-        },
-        "debugging/csd/2023": {
-          "word": "Villuleit"
-        },
-        "variable/csd/2023": {
-          "word": "Breyta"
-        },
-        "sprite/csd/2023": {
-          "word": "Kviki"
-        },
-        "conditionals/csd/2023": {
-          "word": "Skilyrði"
-        },
-        "abstraction/csd/2023": {
-          "word": "Útdráttur"
-        },
-        "function/csd/2023": {
-          "word": "Aðgerð"
-        },
-        "user/csd/2023": {
-          "word": "Notandi"
         },
         "machine_learning/csd/2023": {
           "word": "Vélarnám"
@@ -527,15 +428,6 @@
         "programming/pre-express/2023": {
           "word": "Forritun"
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Vélarnám"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Algrím"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Netkerfi"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Skilyrði"
         },
@@ -554,55 +446,16 @@
         "debugging/basketball/unversioned": {
           "word": "Villuleit"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Villuleit"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Villuleit"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Villuleit"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Villuleit"
-        },
-        "function/hero/unversioned": {
-          "word": "Aðgerð"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Villuleit"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Villuleit"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Villuleit"
-        },
         "debugging/mc/unversioned": {
           "word": "Villuleit"
         },
         "debugging/minecraft/unversioned": {
           "word": "Villuleit"
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Vélarnám"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Villuleit"
-        },
-        "code/poem-art/2021": {
-          "word": "Kóði"
-        },
         "code/sports/unversioned": {
           "word": "Kóði"
         },
         "debugging/sports/unversioned": {
-          "word": "Villuleit"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Villuleit"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Villuleit"
         }
       }
