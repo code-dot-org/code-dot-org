@@ -3829,6 +3829,9 @@ mn:
         virtual-pl-csa-summer-2024-day1:
           title: 1-р өдөр
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Танилцуулга
           title: 2-р өдөр
         virtual-pl-csp-summer-day3:
           title: 3-р өдөр
@@ -3837,10 +3840,19 @@ mn:
         virtual-pl-csa-summer-day2:
           title: 2-р өдөр
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Танилцуулга
           title: 3-р өдөр
         virtual-pl-csa-summer-day4:
           title: 4-р өдөр
         virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Танилцуулга
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Танилцуулга
           title: 1-р өдөр
         virtual-pl-csp-summer-day1:
           title: 1-р өдөр
