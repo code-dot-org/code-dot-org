@@ -24,68 +24,6 @@
           "word": "Prawa autorskie",
           "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
         },
-        "bug/csd/2021": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/csd/2021": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/csd/2021": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "parameter/csd/2021": {
-          "word": "Parametr",
-          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
-        },
-        "variable/csd/2021": {
-          "word": "Zmienna",
-          "definition": "Etykieta informacji użyta w programie."
-        },
-        "property/csd/2021": {
-          "word": "Właściwość"
-        },
-        "sprite/csd/2021": {
-          "word": "Duszek"
-        },
-        "condition/csd/2021": {
-          "word": "Warunek"
-        },
-        "conditionals/csd/2021": {
-          "word": "Zdania z warunkami"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstrakcja"
-        },
-        "function/csd/2021": {
-          "word": "Funkcja"
-        },
-        "empathy/csd/2021": {
-          "word": "Empatia"
-        },
-        "user/csd/2021": {
-          "word": "Użytkownik",
-          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
-        },
-        "user_interface/csd/2021": {
-          "word": "Interfejs użytkownika"
-        },
-        "innovation/csd/2021": {
-          "word": "Innowacja"
-        },
-        "for_loop/csd/2021": {
-          "word": "Pętla \"dla\"",
-          "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Uczenie maszynowe",
-          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
-        },
-        "ethics/csd/2021": {
-          "word": "Etyka"
-        },
         "algorithm/coursea/2021": {
           "word": "Algorytm",
           "definition": "Lista działań pozwalających wykonać zadanie."
@@ -634,62 +572,8 @@
           "word": "Prawa autorskie",
           "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
         },
-        "bug/csd/2022": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/csd/2022": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/csd/2022": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "parameter/csd/2022": {
-          "word": "Parametr"
-        },
-        "variable/csd/2022": {
-          "word": "Zmienna",
-          "definition": "Etykieta informacji użyta w programie."
-        },
-        "property/csd/2022": {
-          "word": "Właściwość"
-        },
-        "sprite/csd/2022": {
-          "word": "Duszek"
-        },
-        "condition/csd/2022": {
-          "word": "Warunek"
-        },
-        "conditionals/csd/2022": {
-          "word": "Zdania z warunkami"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstrakcja"
-        },
-        "function/csd/2022": {
-          "word": "Funkcja"
-        },
-        "empathy/csd/2022": {
-          "word": "Empatia"
-        },
-        "user/csd/2022": {
-          "word": "Użytkownik",
-          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
-        },
-        "user_interface/csd/2022": {
-          "word": "Interfejs użytkownika"
-        },
         "innovation/csd/2022": {
           "word": "Innowacja"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Uczenie maszynowe",
-          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
-        },
-        "ethics/csd/2022": {
-          "word": "Etyka"
         },
         "algorithm/coursea/2022": {
           "word": "Algorytm",
@@ -1209,13 +1093,6 @@
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Sztuczna inteligencja"
-        },
-        "generative_ai/ai-ethics/2023": {
-          "word": "Generatywna AI",
-          "definition": "Rodzaj sztucznej inteligencji (AI), która wykorzystuje wzorce z istniejących treści do tworzenia nowych treści, takich jak nowy tekst lub nowe obrazy."
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "adaptacja",
           "definition": "Zmiana w organizmie, aby lepiej przetrwać jego środowisko"
@@ -1244,197 +1121,6 @@
           "word": "Zachowanie",
           "definition": "Zestaw działań, które duszek ma wykonywać w kółko. "
         },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "Kod (v)",
-          "definition": "pisać instrukcje dla komputera."
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Program",
-          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "Podpowiedź",
-          "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Duszek",
-          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "Tło",
-          "definition": "Wizualny za głównymi rzeczami lub osobami na ekranie."
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "Postać",
-          "definition": "Osoba, zwierzę, istota, istota rzeczy w opowieści."
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "Ustawienie",
-          "definition": "Czas i miejsce (lub kiedy i gdzie) opowieści."
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "Podsumowanie",
-          "definition": "Opowiadanie najważniejszych części tekstu własnymi słowami w znacznie krótszy sposób"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Kod",
-          "definition": "(v) Aby napisać instrukcje dla komputera"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Warunek",
-          "definition": "Coś, co program sprawdza, aby sprawdzić, czy to prawda, zanim zezwolisz na działanie"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Zdania z warunkami",
-          "definition": "Oświadczenia, które działają tylko pod pewnymi warunkami"
-        },
-        "ecosystem/csc-ecosystems/2023": {
-          "word": "Ekosystem",
-          "definition": "Biologiczna społeczność oddziałujących na siebie organizmów i ich środowiska"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje"
-        },
-        "overfishing/csc-ecosystems/2023": {
-          "word": "Przełowienie",
-          "definition": "Usuwanie ryb szybciej niż są w stanie się rozmnażać"
-        },
-        "simulation/csc-ecosystems/2023": {
-          "word": "Symulacja",
-          "definition": "Model komputerowy do celów badań."
-        },
-        "debug/csc-ecosystems/2023": {
-          "word": "Debugowanie",
-          "definition": "Znajdowanie i naprawianie błędów lub problemów w kodzie."
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Zmienna",
-          "definition": "Kontener, który może przechowywać wartość. "
-        },
-        "ecologist/csc-ecosystems/2023": {
-          "word": "Ekolog",
-          "definition": "Naukowiec, który bada, w jaki sposób zwierzęta i rośliny wchodzą w interakcje ze swoim środowiskiem."
-        },
-        "energy/csc-ecosystems/2023": {
-          "word": "Energia",
-          "definition": "Przenoszone między organizmami w sieciach pokarmowych od producentów do konsumentów. Energia jest wykorzystywana przez organizmy do wykonywania złożonych zadań."
-        },
-        "food_chain/csc-ecosystems/2023": {
-          "word": "Łańcuch żywności ",
-          "definition": "Grupa organizmów połączonych w kolejności spożywanego pokarmu, od producentów po konsumentów i od zdobyczy do drapieżników."
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kod",
-          "definition": "(v) pisać instrukcje dla komputera."
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "punkt orientacyjny",
-          "definition": "Punkt orientacyjny to obiekt (naturalny lub stworzony przez człowieka), który ma znaczenie lub sprawia, że miejsce jest łatwo rozpoznawalne."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Duszek",
-          "definition": "Obraz lub postać w twoim programie."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Mapa",
-          "definition": "Reprezentacja obszaru lądowego lub morskiego przedstawiająca cechy fizyczne, miasta, drogi, itp."
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "Wzór",
-          "definition": "Coś, co dzieje się lub pojawia się w regularny i powtarzalny sposób"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "Romb",
-          "definition": "Wielokąt o czterech równych bokach, przeciwległe boki są równoległe, przeciwne kąty są równe"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "kołdra gwiazda",
-          "definition": "Tradycyjny i ceniony prezent dla rdzennych Amerykanów z Wielkich Równin"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Artysta",
-          "definition": "Możesz napisać kod, aby narysował prawie wszystko"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Pętla",
-          "definition": "Sekwencja kodu, która jest powtarzana"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "Punkt",
-          "definition": "Jedna część kształtu gwiazdy"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "Wiersz",
-          "definition": "W tym przypadku uporządkowana linia rombów"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "Koncentryczny",
-          "definition": "Obiekty lub kształty, które mają ten sam środek"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Komentarze",
-          "definition": "Uwagi dla siebie, które wyjaśniają sekcję kodu. Nie zmieniają programu, ale pomagają utrzymać porządek w kodzie."
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "Zdjęcia",
-          "definition": "Obrazy mentalne wytworzone przez wiersz lub opowiadanie"
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "Nastrój",
-          "definition": "Wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Duszek",
-          "definition": "Obraz lub postać w twoim programie"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "Miejsce do przechowywania wspomnień i przedmiotów codziennego użytku, które reprezentują dzień z życia kogoś żyjącego w określonym czasie. "
-        },
-        "code/poetry/2023": {
-          "word": "Kod",
-          "definition": "(v) pisać instrukcje dla komputera."
-        },
-        "event/poetry/2023": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "line/poetry/2023": {
-          "word": "Wiersz",
-          "definition": "(poezja) - podział wiersza ułożony w rzędzie, który kończy się na prawym marginesie."
-        },
-        "mood/poetry/2023": {
-          "word": "Nastrój",
-          "definition": "Wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
-        },
-        "program/poetry/2023": {
-          "word": "Program",
-          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
-        },
-        "poem/poetry/2023": {
-          "word": "Wiersz",
-          "definition": "Linie pisania, które wykorzystują słowa do tworzenia obrazów, uczuć i pomysłów w umyśle czytelnika."
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "Konstruktywna informacja zwrotna",
-          "definition": "Pełne szacunku komentarze, które pomagają komuś ulepszyć jego pracę"
-        },
-        "poetry_circle/poetry/2023": {
-          "word": "Koło poezji",
-          "definition": "Bezpieczna i kreatywna przestrzeń do testowania nowych wierszy i uzyskiwania konstruktywnych informacji zwrotnych od innych"
-        },
         "computer/csd/2023": {
           "word": "Komputer"
         },
@@ -1456,53 +1142,6 @@
         "copyright/csd/2023": {
           "word": "Prawa autorskie",
           "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
-        },
-        "bug/csd/2023": {
-          "word": "Błąd",
-          "definition": "Część programu, która nie działa poprawnie."
-        },
-        "debugging/csd/2023": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/csd/2023": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "parameter/csd/2023": {
-          "word": "Parametr"
-        },
-        "variable/csd/2023": {
-          "word": "Zmienna",
-          "definition": "Etykieta informacji użyta w programie."
-        },
-        "sprite/csd/2023": {
-          "word": "Duszek"
-        },
-        "property/csd/2023": {
-          "word": "Właściwość"
-        },
-        "condition/csd/2023": {
-          "word": "Warunek"
-        },
-        "conditionals/csd/2023": {
-          "word": "Zdania z warunkami"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstrakcja"
-        },
-        "function/csd/2023": {
-          "word": "Funkcja"
-        },
-        "empathy/csd/2023": {
-          "word": "Empatia"
-        },
-        "user/csd/2023": {
-          "word": "Użytkownik",
-          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
-        },
-        "user_interface/csd/2023": {
-          "word": "Interfejs użytkownika"
         },
         "machine_learning/csd/2023": {
           "word": "Uczenie maszynowe",
@@ -2029,37 +1668,6 @@
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Uczenie maszynowe",
-          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Algorytm",
-          "definition": "szereg kroków w celu rozwiązania problemu lub podjęcia decyzji"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Sieć",
-          "definition": "Zbiór elementów połączonych ze sobą. Podążanie za tymi połączeniami może reprezentować kroki w algorytmie, jak schemat blokowy."
-        },
-        "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Model dużego języka (LLM)",
-          "definition": "uniwersalna forma sztucznej inteligencji, która jest szkolona na bardzo, bardzo dużym zasobie wiedzy"
-        },
-        "diffusion_ai/how-ai-works/2023": {
-          "word": "Dyfuzja AI",
-          "definition": "przekształcanie obrazu na szum i szkolenie sztucznej inteligencji w celu odwrócenia procesu"
-        },
-        "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (Generatywna Sieć Przeciwników)",
-          "definition": "sposób wykorzystania dwóch konkurencyjnych modeli sztucznej inteligencji do wygenerowania czegoś"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "Sztuczna inteligencja",
-          "definition": "zdolność maszyn do uczenia się i rozwiązywania problemów."
-        },
-        "ethics/how-ai-works/2023": {
-          "word": "Etyka"
-        },
         "code/aquatic/unversioned": {
           "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
@@ -2112,30 +1720,6 @@
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
-        "code/dance-2019/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
         "code/dance-extras/unversioned": {
           "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
@@ -2157,118 +1741,6 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "program/dance/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/flappy/unversioned": {
-          "word": "koduj",
-          "definition": "(v) napisać kod lub instrukcje dla komputera."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/flappy/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/frozen/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/frozen/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/gumball/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/gumball/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/hero/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "function/hero/unversioned": {
-          "word": "Funkcja",
-          "definition": "Część kodu, który można łatwo przywoływać bez końca."
-        },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Szyfr Cezara",
-          "definition": "technika szyfrowania, która przesuwa alfabet o pewną liczby znaków"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Szyfrowanie",
-          "definition": "termin ogólny dla techniki (lub algorytmu), wykonującej szyfrowanie"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Łamanie szyfru",
-          "definition": "Kiedy próbuje się odkodować tajną wiadomość nie znając wszystkich tajników szyfru, próbuje się \"złamać\" szyfr."
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Odszyfrowywanie",
-          "definition": "proces, który odwraca szyfrowanie, poprzez przyjęcie tajnej wiadomości oraz odtworzenie oryginalnego, czytelnego tekstu"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Szyfrowanie",
-          "definition": "proces kodowania wiadomości, aby utrzymać je w tajemnicy tak, aby mogły ją odczytać tylko \"uprawnione\" strony."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Szyfr zastępowania losowego",
-          "definition": "technika szyfrowania, która odwzorowuje każdą literę alfabetu na losowo wybrane inne litery alfabetu."
-        },
-        "code/hourofcode/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/iceage/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/iceage/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/infinity/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/infinity/unversioned": {
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
@@ -2304,10 +1776,6 @@
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Uczenie maszynowe",
-          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
-        },
         "event/outbreak/unversioned": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
@@ -2315,38 +1783,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "Modele i symulacje",
           "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
-        },
-        "code/playlab/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/playlab/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/poem-art/2021": {
-          "word": "Kod",
-          "definition": "(v) pisać instrukcje dla komputera."
-        },
-        "event/poem-art/2021": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "line/poem-art/2021": {
-          "word": "Wiersz",
-          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
-        },
-        "mood/poem-art/2021": {
-          "word": "Nastrój",
-          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
         },
         "code/sports/unversioned": {
           "word": "Kod",
@@ -2363,34 +1799,6 @@
         "program/sports/unversioned": {
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/starwars/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/starwars/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Kompresja bezstratna",
-          "definition": "algorytm kompresji danych, który pozwala na perfekcyjne odtworzenie oryginalnych danych ze skompresowanych danych. Najczęściej używany na potrzeby kompresji tekstu (np. kompresja zip)"
         }
       }
     }
