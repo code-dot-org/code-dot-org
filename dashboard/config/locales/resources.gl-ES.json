@@ -2,246 +2,6 @@
   "gl-ES": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/csd/2017": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/csd/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_2/csd/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_5/csd/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursea/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/courseb/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursed/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursee/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursef/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/express/2018": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/express/2018": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/csd/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursec/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/express/2019": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursea/2020": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/courseb/2020": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursec/2020": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursed/2020": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursee/2020": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/coursef/2020": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/express/2020": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/express/2020": {
-          "name": "Vocabulario"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "Planificación da lección"
-        },
-        "vocabulary/pre-express/2020": {
-          "name": "Vocabulario"
-        },
         "problem-solving-process-1/csd/2021": {
           "type": "Vídeo"
         },
@@ -291,146 +51,6 @@
           "type": "Vídeo"
         },
         "how-search-works-video/csd/2021": {
-          "type": "Vídeo"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "Vídeo"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "Vídeo"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "Vídeo"
-        },
-        "variables_1/csd/2021": {
-          "name": "Variables"
-        },
-        "introduction_to_sprites/csd/2021": {
-          "type": "Vídeo"
-        },
-        "the_animation_tab/csd/2021": {
-          "type": "Vídeo"
-        },
-        "youtube-flipbook/csd/2021": {
-          "type": "Vídeo"
-        },
-        "introduction_to_the_draw_loop/csd/2021": {
-          "type": "Vídeo"
-        },
-        "animating-sprites/csd/2021": {
-          "type": "Vídeo"
-        },
-        "boolean_expressions/csd/2021": {
-          "type": "Vídeo"
-        },
-        "conditional_statements/csd/2021": {
-          "type": "Vídeo"
-        },
-        "if_else_statements/csd/2021": {
-          "type": "Vídeo"
-        },
-        "velocity_1/csd/2021": {
-          "type": "Vídeo"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Funcións",
-          "type": "Vídeo"
-        },
-        "functions_1/csd/2021": {
-          "name": "Funcións"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "Vídeo"
-        },
-        "whats-for-lunch-testing/csd/2021": {
-          "type": "Vídeo"
-        },
-        "intro_to_design_mode/csd/2021": {
-          "type": "Vídeo"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "Vídeo"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "Vídeo"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "Vídeo"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "Vídeo"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "Vídeo"
-        },
-        "video_machine_learning/csd/2021": {
-          "type": "Vídeo"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "Vídeo"
-        },
-        "internet-of-things-video/csd/2021": {
-          "type": "Vídeo"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "type": "Vídeo"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "type": "Vídeo"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "Vídeo"
-        },
-        "functions_2/csd/2021": {
-          "name": "Funcións"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "type": "Vídeo"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Bucles \"Para\" (For)",
-          "type": "Vídeo"
-        },
-        "for_loops/csd/2021": {
-          "name": "Bucles \"Para\" (For)"
-        },
-        "circuits-logic-video/csd/2021": {
-          "type": "Vídeo"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
-          "type": "Vídeo"
-        },
-        "seeing_ai/csd/2021": {
-          "type": "Vídeo"
-        },
-        "finding_patterns_in_data/csd/2021": {
-          "type": "Vídeo"
-        },
-        "introduction_to_ai_lab_1/csd/2021": {
-          "type": "Vídeo"
-        },
-        "training_and_testing_in_ai_lab/csd/2021": {
-          "type": "Vídeo"
-        },
-        "ai_training_data_bias/csd/2021": {
-          "type": "Vídeo"
-        },
-        "model_cards_in_ai_lab/csd/2021": {
-          "type": "Vídeo"
-        },
-        "if-statements_in_app_lab/csd/2021": {
-          "type": "Vídeo"
-        },
-        "numerical_data_in_ai_lab_2/csd/2021": {
-          "type": "Vídeo"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "Vídeo"
-        },
-        "cleaning_survey_data/csd/2021": {
-          "type": "Vídeo"
-        },
-        "view_and_download_survey_data/csd/2021": {
           "type": "Vídeo"
         },
         "implementation_guide/coursea/2021": {
@@ -766,97 +386,6 @@
         "video_how_search_works/csd/2022": {
           "type": "Vídeo"
         },
-        "drawing_in_game_lab_-_part_1/csd/2022": {
-          "type": "Vídeo"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2022": {
-          "type": "Vídeo"
-        },
-        "introduction_to_variables/csd/2022": {
-          "type": "Vídeo"
-        },
-        "variables/csd/2022": {
-          "name": "Variables"
-        },
-        "variables_3/csd/2022": {
-          "name": "Variables"
-        },
-        "introduction_to_sprites/csd/2022": {
-          "type": "Vídeo"
-        },
-        "the_animation_tab/csd/2022": {
-          "type": "Vídeo"
-        },
-        "text/csd/2022": {
-          "name": "Texto"
-        },
-        "flipbook_example_-_by_marnic_bos/csd/2022": {
-          "type": "Vídeo"
-        },
-        "introduction_to_the_draw_loop/csd/2022": {
-          "type": "Vídeo"
-        },
-        "sprite_movement/csd/2022": {
-          "type": "Vídeo"
-        },
-        "boolean_expressions/csd/2022": {
-          "type": "Vídeo"
-        },
-        "conditional_statements/csd/2022": {
-          "type": "Vídeo"
-        },
-        "conditionals/csd/2022": {
-          "name": "Condicionais"
-        },
-        "if_else_statements/csd/2022": {
-          "type": "Vídeo"
-        },
-        "velocity/csd/2022": {
-          "type": "Vídeo"
-        },
-        "functions/csd/2022": {
-          "name": "Funcións",
-          "type": "Vídeo"
-        },
-        "functions_1/csd/2022": {
-          "name": "Funcións"
-        },
-        "functions_4/csd/2022": {
-          "name": "Funcións"
-        },
-        "the_design_thinking_process/csd/2022": {
-          "type": "Vídeo"
-        },
-        "what_s_for_lunch_testing/csd/2022": {
-          "type": "Vídeo"
-        },
-        "intro_to_design_mode/csd/2022": {
-          "type": "Vídeo"
-        },
-        "events_in_app_lab_1/csd/2022": {
-          "type": "Vídeo"
-        },
-        "binary_and_data/csd/2022": {
-          "type": "Vídeo"
-        },
-        "amazon_and_data/csd/2022": {
-          "type": "Vídeo"
-        },
-        "netflix_and_data/csd/2022": {
-          "type": "Vídeo"
-        },
-        "waze_and_data/csd/2022": {
-          "type": "Vídeo"
-        },
-        "video_impact_on_society/csd/2022": {
-          "type": "Vídeo"
-        },
-        "video_machine_learning/csd/2022": {
-          "type": "Vídeo"
-        },
-        "video_training_data_and_bias/csd/2022": {
-          "type": "Vídeo"
-        },
         "computer_science_is_changing_everything/csd/2022": {
           "type": "Vídeo"
         },
@@ -898,45 +427,6 @@
         },
         "functions_5/csd/2022": {
           "name": "Funcións"
-        },
-        "ai_what_is_machine_learning_/csd/2022": {
-          "type": "Vídeo"
-        },
-        "seeing_ai/csd/2022": {
-          "type": "Vídeo"
-        },
-        "finding_patterns_in_data/csd/2022": {
-          "type": "Vídeo"
-        },
-        "introduction_to_ai_lab_1/csd/2022": {
-          "type": "Vídeo"
-        },
-        "training_and_testing_in_ai_lab/csd/2022": {
-          "type": "Vídeo"
-        },
-        "ai_training_data_bias/csd/2022": {
-          "type": "Vídeo"
-        },
-        "model_cards_in_ai_lab/csd/2022": {
-          "type": "Vídeo"
-        },
-        "if-statements_in_app_lab/csd/2022": {
-          "type": "Vídeo"
-        },
-        "numerical_data_in_ai_lab_2/csd/2022": {
-          "type": "Vídeo"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
-          "type": "Vídeo"
-        },
-        "creating_a_survey_in_google_forms/csd/2022": {
-          "type": "Vídeo"
-        },
-        "cleaning_survey_data/csd/2022": {
-          "type": "Vídeo"
-        },
-        "view_and_download_survey_data/csd/2022": {
-          "type": "Vídeo"
         },
         "implementation_guide/coursea/2022": {
           "name": "Guía de implementación"
@@ -1198,63 +688,6 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Vídeo"
         },
-        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_large_language_models/ai-ethics/2023": {
-          "type": "Vídeo"
-        },
-        "star_quilts_1/csc-starquilts/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_1_-_introduction/csc-timecapsule/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_2_-_events/csc-timecapsule/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_3_-_imagery/csc-timecapsule/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_4_-_celebration/csc-timecapsule/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_events_video_optional_/csc-timecapsule/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_video_optional_/csc-timecapsule/2023": {
-          "type": "Vídeo"
-        },
-        "enter_your_own_poem/csc-timecapsule/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_1_-_introduction/poetry/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_2_-_events/poetry/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_3_-_imagery/poetry/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_4_-_celebration/poetry/2023": {
-          "type": "Vídeo"
-        },
-        "enter_your_own_poem/poetry/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_celebration_video_optional_/poetry/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_events_video_optional_/poetry/2023": {
-          "type": "Vídeo"
-        },
-        "poem_art_video_optional_/poetry/2023": {
-          "type": "Vídeo"
-        },
         "problem_solving_process_1/csd/2023": {
           "type": "Vídeo"
         },
@@ -1313,13 +746,10 @@
         "video_how_search_works/csd/2023": {
           "type": "Vídeo"
         },
-        "drawing_in_game_lab_-_part_1/csd/2023": {
+        "circuits_and_logic/csd/2023": {
           "type": "Vídeo"
         },
-        "drawing_in_game_lab_-_part_2/csd/2023": {
-          "type": "Vídeo"
-        },
-        "introduction_to_variables/csd/2023": {
+        "the_counter_pattern/csd/2023": {
           "type": "Vídeo"
         },
         "variables/csd/2023": {
@@ -1327,97 +757,6 @@
         },
         "variables_1/csd/2023": {
           "name": "Variables",
-          "type": "Vídeo"
-        },
-        "variables_2/csd/2023": {
-          "name": "Variables"
-        },
-        "introduction_to_sprites/csd/2023": {
-          "type": "Vídeo"
-        },
-        "the_animation_tab/csd/2023": {
-          "type": "Vídeo"
-        },
-        "sprite_properties_needs_updating_/csd/2023": {
-          "type": "Vídeo"
-        },
-        "text/csd/2023": {
-          "name": "Texto"
-        },
-        "flipbook_example_-_by_marnic_bos/csd/2023": {
-          "type": "Vídeo"
-        },
-        "introduction_to_the_draw_loop/csd/2023": {
-          "type": "Vídeo"
-        },
-        "sprite_movement/csd/2023": {
-          "type": "Vídeo"
-        },
-        "boolean_expressions/csd/2023": {
-          "type": "Vídeo"
-        },
-        "conditional_statements/csd/2023": {
-          "type": "Vídeo"
-        },
-        "conditionals/csd/2023": {
-          "name": "Condicionais"
-        },
-        "if_else_statements/csd/2023": {
-          "type": "Vídeo"
-        },
-        "velocity/csd/2023": {
-          "type": "Vídeo"
-        },
-        "functions/csd/2023": {
-          "name": "Funcións",
-          "type": "Vídeo"
-        },
-        "functions_1/csd/2023": {
-          "name": "Funcións"
-        },
-        "functions_2/csd/2023": {
-          "name": "Funcións"
-        },
-        "the_design_thinking_process/csd/2023": {
-          "type": "Vídeo"
-        },
-        "what_s_for_lunch_testing/csd/2023": {
-          "type": "Vídeo"
-        },
-        "intro_to_design_mode/csd/2023": {
-          "type": "Vídeo"
-        },
-        "events_in_app_lab/csd/2023": {
-          "type": "Vídeo"
-        },
-        "events_in_app_lab_1/csd/2023": {
-          "type": "Vídeo"
-        },
-        "binary_and_data/csd/2023": {
-          "type": "Vídeo"
-        },
-        "amazon_and_data/csd/2023": {
-          "type": "Vídeo"
-        },
-        "netflix_and_data/csd/2023": {
-          "type": "Vídeo"
-        },
-        "waze_and_data/csd/2023": {
-          "type": "Vídeo"
-        },
-        "video_impact_on_society/csd/2023": {
-          "type": "Vídeo"
-        },
-        "video_machine_learning/csd/2023": {
-          "type": "Vídeo"
-        },
-        "video_training_data_and_bias/csd/2023": {
-          "type": "Vídeo"
-        },
-        "circuits_and_logic/csd/2023": {
-          "type": "Vídeo"
-        },
-        "the_counter_pattern/csd/2023": {
           "type": "Vídeo"
         },
         "if_statements_1/csd/2023": {
@@ -1428,6 +767,13 @@
         },
         "introduction_to_arrays/csd/2023": {
           "type": "Vídeo"
+        },
+        "functions/csd/2023": {
+          "name": "Funcións",
+          "type": "Vídeo"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funcións"
         },
         "functions_with_parameters/csd/2023": {
           "name": "Funcións con parámetros",
@@ -1455,6 +801,12 @@
           "type": "Vídeo"
         },
         "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "intro_to_design_mode/csd/2023": {
           "type": "Vídeo"
         },
         "ai_training_data_bias/csd/2023": {
@@ -1739,84 +1091,6 @@
           "type": "Vídeo"
         },
         "pause_and_think_online/pre-express/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "what_a_neural_network_sees/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_-_societal_impact/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_introduction/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
-          "type": "Vídeo"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "Vídeo"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "Vídeo"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "Vídeo"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "Vídeo"
-        },
-        "poem_art_celebration/poem-art/2021": {
-          "type": "Vídeo"
-        },
-        "poem_art_events/poem-art/2021": {
-          "type": "Vídeo"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "Vídeo"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "type": "Vídeo"
-        },
-        "video-text-compression/text-compression/unversioned": {
           "type": "Vídeo"
         }
       }
