@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useMemo, useState} from 'react';
+import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';
@@ -7,6 +7,7 @@ import Button from '../Button';
 import {Figcaption} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
 import classNames from 'classnames';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
 export default function CoteacherSettings({
   sectionInstructors,
@@ -27,14 +28,15 @@ export default function CoteacherSettings({
       setAddError(i18n.coteacherAddNoEmail());
       return;
     }
-    if (!newEmail.includes('@')) {
+    if (!isEmail(newEmail)) {
       setAddError(i18n.coteacherAddInvalidEmail({email: newEmail}));
       return;
     }
     if (
-      sectionInstructors.some(
-        instructor => instructor.instructorEmail === newEmail
-      ) ||
+      (sectionInstructors &&
+        sectionInstructors.some(
+          instructor => instructor.instructorEmail === newEmail
+        )) ||
       coteachersToAdd.some(email => email === newEmail)
     ) {
       setAddError(i18n.coteacherAddAlreadyExists({email: newEmail}));
@@ -46,13 +48,23 @@ export default function CoteacherSettings({
     setInputValue('');
   };
 
-  // coteacher count is teachers to add + the existing teachers - the primary teacher.
-  const numCoteachers = useMemo(
-    () => sectionInstructors.length + coteachersToAdd.length - 1,
-    [sectionInstructors, coteachersToAdd]
-  );
+  const handleSubmitAddEmail = e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleAddEmail(e);
+    }
+  };
 
-  const getErrorOrCount = useMemo(() => {
+  // coteacher count is teachers to add + the existing teachers - the primary teacher.
+  // If sectionInstructors is empty, we still want to count the primary teacher.
+  const sectionInstructorsCount = sectionInstructors
+    ? sectionInstructors.length
+    : 1;
+  const numCoteachers = sectionInstructorsCount + coteachersToAdd.length - 1;
+
+  const isAddDisabled = numCoteachers >= 5;
+
+  const getErrorOrCount = () => {
     if (addError) {
       return (
         <Figcaption
@@ -69,11 +81,7 @@ export default function CoteacherSettings({
         </Figcaption>
       );
     }
-  }, [addError, numCoteachers]);
-
-  const isAddDisabled = useMemo(() => {
-    return numCoteachers >= 5;
-  }, [numCoteachers]);
+  };
 
   return (
     <div className={styles.expandedSection}>
@@ -81,7 +89,7 @@ export default function CoteacherSettings({
       <div className={styles.settings}>
         <div className={styles.add}>
           <label className={styles.label}>{i18n.coteacherEmailAddress()}</label>
-          <form className={styles.form} onSubmit={handleAddEmail}>
+          <div className={styles.form} onSubmit={handleAddEmail}>
             <input
               className={classNames(
                 styles.input,
@@ -91,6 +99,7 @@ export default function CoteacherSettings({
               disabled={isAddDisabled}
               value={inputValue}
               onChange={handleInputChange}
+              onKeyDown={handleSubmitAddEmail}
             />
             <Button
               className={styles.button}
@@ -100,14 +109,16 @@ export default function CoteacherSettings({
               onClick={handleAddEmail}
               disabled={isAddDisabled}
             />
-          </form>
-          {getErrorOrCount}
+          </div>
+          {getErrorOrCount()}
         </div>
         <div className={styles.table}>
           {coteachersToAdd}
-          {sectionInstructors.map(
-            instructor => '   ' + instructor.instructorEmail
-          )}
+          {sectionInstructors
+            ? sectionInstructors.map(
+                instructor => '   ' + instructor.instructorEmail
+              )
+            : null}
         </div>
       </div>
     </div>

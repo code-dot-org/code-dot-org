@@ -23,6 +23,19 @@ describe('CoteacherSettings', () => {
       '1/5 co-teachers added'
     );
   });
+  it('renders count if current sectionInstructors is null', () => {
+    const wrapper = shallow(
+      <CoteacherSettings
+        sectionInstructors={null}
+        addCoteacher={() => {}}
+        coteachersToAdd={[]}
+      />
+    );
+    expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
+    expect(wrapper.find('Figcaption').props().children).to.include(
+      '0/5 co-teachers added'
+    );
+  });
   it('renders count of existing coteachers and added', () => {
     const wrapper = shallow(
       <CoteacherSettings
