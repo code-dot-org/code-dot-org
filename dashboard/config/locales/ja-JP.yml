@@ -4,6 +4,7 @@ ja:
     attributes:
       user:
         age: 年齢
+        ai_settings_header: AI設定
         current_password: 現在のパスワード
         edit_header: アカウント詳細を編集する
         email: Eメール
