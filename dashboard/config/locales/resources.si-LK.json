@@ -2,126 +2,6 @@
   "si-LK": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/express/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/express/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/express/2020": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "පාඩම් සැලසුම්"
-        },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "type": "සමූහ විමර්ශනය"
         },
@@ -142,36 +22,6 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "සමූහ විමර්ශනය"
-        },
-        "variables_1/csd/2021": {
-          "name": "විචල්‍යන්"
-        },
-        "interactive-card-1-2-3-4/csd/2021": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "functions_1/csd/2021": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "make-your-own-game-1-2-3/csd/2021": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
-        },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "functions_2/csd/2021": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "ලූපයන් සඳහා"
-        },
-        "for_loops/csd/2021": {
-          "name": "ලූපයන් සඳහා"
         },
         "implementation_guide/coursea/2021": {
           "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
@@ -390,39 +240,6 @@
           "type": "සමූහ විමර්ශනය"
         },
         "website_for_a_purpose_1/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "variables/csd/2022": {
-          "name": "විචල්‍යන්"
-        },
-        "variables_3/csd/2022": {
-          "name": "විචල්‍යන්"
-        },
-        "text/csd/2022": {
-          "name": "පෙළ"
-        },
-        "conditionals/csd/2022": {
-          "name": "කන්ඩිෂනලස්"
-        },
-        "interactive_card_2/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "functions/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "functions_1/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "functions_4/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "make_your_own_game_2/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
-        },
-        "make_a_recommendation/csd/2022": {
           "type": "සමූහ විමර්ශනය"
         },
         "variables_1/csd/2022": {
@@ -656,29 +473,11 @@
         "variables_1/csd/2023": {
           "name": "විචල්‍යන්"
         },
-        "variables_2/csd/2023": {
-          "name": "විචල්‍යන්"
-        },
-        "text/csd/2023": {
-          "name": "පෙළ"
-        },
-        "conditionals/csd/2023": {
-          "name": "කන්ඩිෂනලස්"
-        },
         "functions/csd/2023": {
           "name": "ශ්‍රිතයන්"
         },
         "functions_1/csd/2023": {
           "name": "ශ්‍රිතයන්"
-        },
-        "functions_2/csd/2023": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "video_machine_learning/csd/2023": {
-          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
-        },
-        "make_a_recommendation/csd/2023": {
-          "type": "සමූහ විමර්ශනය"
         },
         "functions_with_parameters/csd/2023": {
           "name": "පරාමිතියන් සහිත ශ්‍රිත"
