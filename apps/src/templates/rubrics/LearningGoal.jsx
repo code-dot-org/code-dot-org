@@ -35,6 +35,7 @@ export default function LearningGoal({
   aiUnderstanding,
   aiConfidence,
   submittedEvaluation,
+  isStudent,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -45,6 +46,7 @@ export default function LearningGoal({
   const [displayUnderstanding, setDisplayUnderstanding] =
     useState(invalidUnderstanding);
   const teacherFeedback = useRef('');
+  const understandingLevel = useRef(invalidUnderstanding);
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
@@ -55,8 +57,8 @@ export default function LearningGoal({
 
   const handleClick = () => {
     const eventName = isOpen
-      ? EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
-      : EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
+      ? EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
+      : EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
     analyticsReporter.sendEvent(eventName, {
       ...(reportingData || {}),
       learningGoalKey: learningGoal.key,
@@ -86,7 +88,7 @@ export default function LearningGoal({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoal.id,
       feedback: teacherFeedback.current,
-      understanding: displayUnderstanding,
+      understanding: understandingLevel.current,
     });
     HttpClient.put(
       `${base_teacher_evaluation_endpoint}/${learningGoalEval.id}`,
@@ -131,8 +133,7 @@ export default function LearningGoal({
           }
           if (json.understanding >= 0 && json.understanding !== null) {
             setDisplayUnderstanding(json.understanding);
-          } else {
-            setDisplayUnderstanding(invalidUnderstanding);
+            understandingLevel.current = json.understanding;
           }
         })
         .catch(error => console.log(error));
@@ -142,6 +143,7 @@ export default function LearningGoal({
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
     setDisplayUnderstanding(radioButtonData);
+    understandingLevel.current = radioButtonData;
     if (!isAutosaving) {
       autosave();
     }
@@ -281,6 +283,7 @@ export default function LearningGoal({
             understanding={displayUnderstanding}
             radioButtonCallback={radioButtonCallback}
             submittedEvaluation={submittedEvaluation}
+            isStudent={isStudent}
           />
           {learningGoal.tips && (
             <div>
@@ -306,6 +309,7 @@ LearningGoal.propTypes = {
   aiUnderstanding: PropTypes.number,
   aiConfidence: PropTypes.number,
   submittedEvaluation: submittedEvaluationShape,
+  isStudent: PropTypes.bool,
 };
 
 const AiToken = () => {

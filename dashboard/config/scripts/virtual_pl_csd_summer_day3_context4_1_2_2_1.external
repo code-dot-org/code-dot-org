@@ -4,22 +4,11 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Code.org Platform Tour
-
-<br>
-
-
-#### Teachers get familiar with navigating the Code.org website, especially how you use it to manage a class.
 ----
 
+## To Do:
 
-<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+#### Set up a classroom section. Use the <a hreft ="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section">Creating a classroom section</a> article to help you as needed.
 
-#### To Do:
-
-<br>
-
-#### 1. Using the Creating A Classroom Section video, set up a classroom section.
-#### 2. Watch the Monitoring Student Work (3:14) video to learn how you will be able to see student progress and provide feedback.
-#### 3. Visit the Code.org Forum post How to use the CS Principles Forum to see a Code.org forum walkthrough.
-#### 4. Read through Code.org’s Community and Support page.
+![](https://images.code.org/801d9a3541dc3a1d6b82cdbdc8d38872-Screenshot 2023-10-20 at 1.34.57 PM.png)
 MARKDOWN

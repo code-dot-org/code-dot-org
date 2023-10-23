@@ -510,6 +510,7 @@ Resources:
       ResourceSignal:
         Timeout: PT4H
     Properties:
+      # Temporarily hardcode the Ubuntu 20 image just for production-daemon, so we can gradually roll out the update.
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
@@ -528,7 +529,7 @@ Resources:
           # upgrading everything to 256.
           default_volume_size = 64
           volume_size_overrides = {
-            production: 128,
+            production: 256,
             staging: 256,
             test: 256
           }
@@ -542,7 +543,7 @@ Resources:
           #!/bin/bash -x
           <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
-            node_name: '$STACK',
+            node_name: frontends ? '$ENVIRONMENT-daemon' : '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
             commit: nil, # track branch
             daemon: true
@@ -585,8 +586,7 @@ Resources:
     CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
     Properties:
       # Temporarily hardcode the Ubuntu 20 image just for this server, so we can gradually roll out the update.
-      # TODO (infra): finish updating all environments, and restore this line to again reference IMAGE_ID
-      ImageId: 'ami-0261755bbcb8c4a84'
+      ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
