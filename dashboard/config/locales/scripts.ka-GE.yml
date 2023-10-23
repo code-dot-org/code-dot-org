@@ -7660,6 +7660,17 @@ ka:
               display_name: შიგთავსი
             csd3_2:
               display_name: 'თავი 2: თამაშების შექმნა'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: შესავალი
+          lessons:
+            lesson-7:
+              name: შესავალი
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: შესავალი
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -7682,6 +7693,10 @@ ka:
           lessons:
             lesson-3:
               name: შეფასება
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: შესავალი
         virustest:
           description_short: 'გამოიყენეთ Sprite Lab ვირუსის გავრცელების სიმულაციის
             შესაქმნელად. '
