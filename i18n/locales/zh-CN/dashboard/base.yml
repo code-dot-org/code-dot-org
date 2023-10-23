@@ -52,6 +52,7 @@ zh-CN:
         age: '年龄'
         gender: '性别'
         edit_header: '编辑用户信息'
+        ai_settings_header: 'AI设置'
         finish_sign_up_header: '完成创建帐户'
         finish_sign_up_header_error: '请更正以下错误：'
         finish_sign_up_subheader: '填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。'

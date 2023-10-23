@@ -18,52 +18,6 @@
           "word": "版权",
           "definition": "版权：印刷、出版、表演、拍摄或记录文学、艺术或音乐材料并授权他人这样做的独家法律权利"
         },
-        "bug/csd/2021": {
-          "word": "Bug/错误",
-          "definition": "程序中不能正常工作的部分。"
-        },
-        "debugging/csd/2021": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/csd/2021": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "variable/csd/2021": {
-          "word": "变量",
-          "definition": "程序中使用的一段信息的标签。"
-        },
-        "sprite/csd/2021": {
-          "word": "精灵"
-        },
-        "condition/csd/2021": {
-          "word": "条件"
-        },
-        "conditionals/csd/2021": {
-          "word": "条件语句"
-        },
-        "abstraction/csd/2021": {
-          "word": "抽象化"
-        },
-        "function/csd/2021": {
-          "word": "函数"
-        },
-        "user/csd/2021": {
-          "word": "用户",
-          "definition": "使用某物（包括软件和硬件）的人。"
-        },
-        "user_interface/csd/2021": {
-          "word": "用户界面"
-        },
-        "for_loop/csd/2021": {
-          "word": "For循环",
-          "definition": "具有预定开始、结束和增量（步长间隔）的循环。"
-        },
-        "machine_learning/csd/2021": {
-          "word": "机器学习",
-          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
-        },
         "algorithm/coursea/2021": {
           "word": "算法",
           "definition": "完成某项任务的一系列步骤。 "
@@ -608,48 +562,6 @@
           "word": "版权",
           "definition": "版权：印刷、出版、表演、拍摄或记录文学、艺术或音乐材料并授权他人这样做的独家法律权利"
         },
-        "bug/csd/2022": {
-          "word": "Bug/错误",
-          "definition": "程序中不能正常工作的部分。"
-        },
-        "debugging/csd/2022": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/csd/2022": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "variable/csd/2022": {
-          "word": "变量",
-          "definition": "程序中使用的一段信息的标签。"
-        },
-        "sprite/csd/2022": {
-          "word": "精灵"
-        },
-        "condition/csd/2022": {
-          "word": "条件"
-        },
-        "conditionals/csd/2022": {
-          "word": "条件语句"
-        },
-        "abstraction/csd/2022": {
-          "word": "抽象化"
-        },
-        "function/csd/2022": {
-          "word": "函数"
-        },
-        "user/csd/2022": {
-          "word": "用户",
-          "definition": "使用某物（包括软件和硬件）的人。"
-        },
-        "user_interface/csd/2022": {
-          "word": "用户界面"
-        },
-        "machine_learning/csd/2022": {
-          "word": "机器学习",
-          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
-        },
         "algorithm/coursea/2022": {
           "word": "算法",
           "definition": "完成某项任务的一系列步骤。 "
@@ -1161,9 +1073,6 @@
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "人工智能"
-        },
         "adaptation/csc-adaptations/2023": {
           "word": "适应",
           "definition": "改变生物体以更好地在环境中生存"
@@ -1191,42 +1100,6 @@
         "behavior/csc-adaptations/2023": {
           "word": "行为",
           "definition": "你想让精灵一遍又一遍地执行的一组动作。 "
-        },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "代码 (v)",
-          "definition": "为计算机编写指令。"
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "程序",
-          "definition": "一系列已编码的步骤，可在设备上运行。"
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "提示符",
-          "definition": "计算机屏幕上等待用户输入的消息。"
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "精灵",
-          "definition": "屏幕上一种具有位置、大小和外观的图形。"
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "背景",
-          "definition": "屏幕上主要事物或人物背后的视觉效果。"
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "人物",
-          "definition": "一个人、动物、存在、故事中的生物。"
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "设定",
-          "definition": "故事的时间和地点（或时间和地点）。"
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "摘要",
-          "definition": "用你自己的话说，用更短的方式讲述文本中最重要的部分"
         },
         "code/csc-ecosystems/2023": {
           "word": "代码",
@@ -1276,113 +1149,6 @@
           "word": "食物链 ",
           "definition": "一组生物按照它们所吃食物的顺序联系在一起，从生产者到消费者，从猎物到捕食者。"
         },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "代码",
-          "definition": "（动词）为计算机编写指令。"
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "地标",
-          "definition": "地标是具有重要意义或使某个地方易于识别的物体（自然或人造）。"
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "精灵",
-          "definition": "程序中的图像或角色。"
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "地图",
-          "definition": "表示陆地或海洋区域，显示物理特征、城市、道路等。"
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "图案",
-          "definition": "以规律和重复的方式发生或出现的东西"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "菱形",
-          "definition": "四条边相等、对边平行、相反角度相等的多边形"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "星星被子",
-          "definition": "来自大平原的美洲原住民的传统和珍贵礼物"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "小艺术家",
-          "definition": "你可以写代码让他画几乎任何东西"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "循环",
-          "definition": "重复的代码序列"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "积分",
-          "definition": "星形的一部分"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "行",
-          "definition": "在本例中，一条有序的菱形线"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "同心",
-          "definition": "位于同一中心的对象或形状"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "评论",
-          "definition": "给自己的笔记，解释一段代码。它们不会更改程序，但有助于保持代码井然有序。"
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "影像",
-          "definition": "诗歌或故事产生的心理画面"
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "意境",
-          "definition": "在艺术或写作中对感觉、氛围或情感的表达。"
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "精灵",
-          "definition": "程序中的图像或角色"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "一个存放记忆和日常物品的地方，这些回忆和日常物品代表了生活在特定时期的人的生活中的一天。 "
-        },
-        "code/poetry/2023": {
-          "word": "代码",
-          "definition": "（动词）为计算机编写指令。"
-        },
-        "event/poetry/2023": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
-        "line/poetry/2023": {
-          "word": "诗歌行",
-          "definition": "（诗歌）-一首诗的细分，排成一排，以右边缘结尾。"
-        },
-        "mood/poetry/2023": {
-          "word": "意境",
-          "definition": "在艺术或写作中对感觉、氛围或情感的表达。"
-        },
-        "program/poetry/2023": {
-          "word": "程序",
-          "definition": "一系列已编码的步骤，可在设备上运行。"
-        },
-        "poem/poetry/2023": {
-          "word": "诗",
-          "definition": "使用文字在读者脑海中创造画面、感受和想法的写作台词。"
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "建设性反馈",
-          "definition": "尊重他人的评论可以帮助他人改进工作"
-        },
-        "poetry_circle/poetry/2023": {
-          "word": "诗歌圈",
-          "definition": "一个安全而富有创造力的空间，可以测试新诗并从他人那里获得建设性反馈"
-        },
         "computer/csd/2023": {
           "word": "计算机"
         },
@@ -1398,44 +1164,6 @@
         "copyright/csd/2023": {
           "word": "版权",
           "definition": "版权：印刷、出版、表演、拍摄或记录文学、艺术或音乐材料并授权他人这样做的独家法律权利"
-        },
-        "bug/csd/2023": {
-          "word": "Bug/错误",
-          "definition": "程序中不能正常工作的部分。"
-        },
-        "debugging/csd/2023": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/csd/2023": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "variable/csd/2023": {
-          "word": "变量",
-          "definition": "程序中使用的一段信息的标签。"
-        },
-        "sprite/csd/2023": {
-          "word": "精灵"
-        },
-        "condition/csd/2023": {
-          "word": "条件"
-        },
-        "conditionals/csd/2023": {
-          "word": "条件语句"
-        },
-        "abstraction/csd/2023": {
-          "word": "抽象化"
-        },
-        "function/csd/2023": {
-          "word": "函数"
-        },
-        "user/csd/2023": {
-          "word": "用户",
-          "definition": "使用某物（包括软件和硬件）的人。"
-        },
-        "user_interface/csd/2023": {
-          "word": "用户界面"
         },
         "machine_learning/csd/2023": {
           "word": "机器学习",
@@ -1952,34 +1680,6 @@
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "机器学习",
-          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "算法",
-          "definition": "解决问题或做出决定的一系列步骤"
-        },
-        "network/how-ai-works/2023": {
-          "word": "网络",
-          "definition": "连接在一起的物品的集合。遵循这些连接可以表示算法中的步骤，例如流程图。"
-        },
-        "large_language_model_llm_/how-ai-works/2023": {
-          "word": "大型语言模型 (LLM)",
-          "definition": "一种通用的人工智能形式，是在非常非常庞大的知识体系上训练的"
-        },
-        "diffusion_ai/how-ai-works/2023": {
-          "word": "扩散人工智能",
-          "definition": "将图像转换为噪点，并训练 AI 来逆转这一过程"
-        },
-        "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN（生成对抗网络）",
-          "definition": "一种使用两个相互竞争的人工智能模型生成东西的方法"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "人工智能",
-          "definition": "机器学习和解决问题的能力。"
-        },
         "code/aquatic/unversioned": {
           "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
@@ -2032,30 +1732,6 @@
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
-        "code/dance-2019/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "event/dance-2019/unversioned": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
-        "program/dance-2019/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
         "code/dance-extras/unversioned": {
           "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
@@ -2077,118 +1753,6 @@
           "definition": "导致某些事情发生的操作。"
         },
         "program/dance/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/flappy/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/flappy/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/frozen/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/frozen/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/gumball/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/gumball/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/hero/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/hero/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "function/hero/unversioned": {
-          "word": "函数",
-          "definition": "一段可以很容易地反复调用的代码。"
-        },
-        "program/hero/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "凯撒加密法 ",
-          "definition": "一种对字母表进行一定量位移的加密技术"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "加密法",
-          "definition": "实施加密的技术（或算法）的通用术语"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "破解加密",
-          "definition": "当你在不知道密码详情的情况下尝试解码密文时，就是在试图“破解”加密。 "
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "解密",
-          "definition": "加密的反向过程，获取密文并复制原始的纯文本"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "加密",
-          "definition": "一种对消息进行编码以使其保密的过程，因此只有“授权”方可以读取。"
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "随机替换加密法",
-          "definition": "将字母表中的每个字母映射到字母表中随机选择的其它字母的一种加密技术。"
-        },
-        "code/hourofcode/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/hourofcode/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/iceage/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/iceage/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/infinity/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/infinity/unversioned": {
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
@@ -2224,10 +1788,6 @@
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "机器学习",
-          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
-        },
         "event/outbreak/unversioned": {
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
@@ -2235,38 +1795,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "模型和模拟",
           "definition": "复制或模仿现实世界事件的关键特征以研究其行为的程序，无需在现实生活中进行实验的成本、时间或危险。"
-        },
-        "code/playlab/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/playlab/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/poem-art/2021": {
-          "word": "代码",
-          "definition": "（动词）为计算机编写指令。"
-        },
-        "event/poem-art/2021": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
-        "line/poem-art/2021": {
-          "word": "诗歌行",
-          "definition": "（诗歌）- 一篇诗歌的组成部分，采用单行格式，在右侧结束。 "
-        },
-        "mood/poem-art/2021": {
-          "word": "意境",
-          "definition": "艺术作品或文学作品所表达出某种感觉、氛围或情感。"
-        },
-        "program/poem-art/2021": {
-          "word": "程序",
-          "definition": "一系列已编码的步骤，可在设备上运行。"
         },
         "code/sports/unversioned": {
           "word": "代码",
@@ -2283,34 +1811,6 @@
         "program/sports/unversioned": {
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/starwars/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/starwars/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "代码",
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "无损压缩",
-          "definition": "允许从压缩的数据中完美地重建原始数据的一种数据压缩算法。最常用于文本压缩（例如zip压缩）"
         }
       }
     }

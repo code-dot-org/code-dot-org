@@ -4,6 +4,7 @@ zh-CN:
     attributes:
       user:
         age: 年龄
+        ai_settings_header: AI设置
         current_password: 当前密码
         edit_header: 编辑用户信息
         email: 电子邮件
