@@ -1602,3 +1602,18 @@ ne:
               display_name: Conditionals
             lessonGroup-5:
               display_name: Variables
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduction
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduction
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduction
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduction

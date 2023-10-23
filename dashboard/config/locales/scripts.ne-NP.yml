@@ -1613,9 +1613,24 @@ ne:
           lesson_groups:
             content:
               display_name: Content
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduction
+          lessons:
+            lesson-7:
+              name: Introduction
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduction
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Introduction
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Introduction
         vpl-csd-ci-1:
           description: |-
