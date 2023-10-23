@@ -2,21 +2,6 @@
   "lv-LV": {
     "data": {
       "vocabularies": {
-        "debugging/csd/2021": {
-          "word": "Atkļūdošana"
-        },
-        "variable/csd/2021": {
-          "word": "Mainīgais"
-        },
-        "conditionals/csd/2021": {
-          "word": "Sazarojumi"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstrakcija"
-        },
-        "function/csd/2021": {
-          "word": "Funkcija"
-        },
         "debugging/coursea/2021": {
           "word": "Atkļūdošana"
         },
@@ -70,21 +55,6 @@
         },
         "debugging/pre-express/2021": {
           "word": "Atkļūdošana"
-        },
-        "debugging/csd/2022": {
-          "word": "Atkļūdošana"
-        },
-        "variable/csd/2022": {
-          "word": "Mainīgais"
-        },
-        "conditionals/csd/2022": {
-          "word": "Sazarojumi"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstrakcija"
-        },
-        "function/csd/2022": {
-          "word": "Funkcija"
         },
         "debugging/coursea/2022": {
           "word": "Atkļūdošana"
@@ -142,39 +112,6 @@
         },
         "code/csc-adaptations/2023": {
           "word": "Kods"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Kods"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Sazarojumi"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Mainīgais"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kods"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Mākslinieks"
-        },
-        "code/poetry/2023": {
-          "word": "Kods"
-        },
-        "debugging/csd/2023": {
-          "word": "Atkļūdošana"
-        },
-        "variable/csd/2023": {
-          "word": "Mainīgais"
-        },
-        "conditionals/csd/2023": {
-          "word": "Sazarojumi"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstrakcija"
-        },
-        "function/csd/2023": {
-          "word": "Funkcija"
         },
         "debugging/coursea/2023": {
           "word": "Atkļūdošana"
@@ -248,52 +185,16 @@
         "debugging/basketball/unversioned": {
           "word": "Atkļūdošana"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "function/hero/unversioned": {
-          "word": "Funkcija"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Atkļūdošana"
-        },
         "debugging/mc/unversioned": {
           "word": "Atkļūdošana"
         },
         "debugging/minecraft/unversioned": {
           "word": "Atkļūdošana"
         },
-        "debugging/playlab/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "code/poem-art/2021": {
-          "word": "Kods"
-        },
         "code/sports/unversioned": {
           "word": "Kods"
         },
         "debugging/sports/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Atkļūdošana"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Atkļūdošana"
         }
       }
