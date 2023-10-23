@@ -8,24 +8,6 @@
         "copyright/csd/2021": {
           "word": "Cóipcheart"
         },
-        "debugging/csd/2021": {
-          "word": "Dífhabhtú"
-        },
-        "variable/csd/2021": {
-          "word": "Athróg"
-        },
-        "conditionals/csd/2021": {
-          "word": "Coinníollacha"
-        },
-        "abstraction/csd/2021": {
-          "word": "Teibíocht"
-        },
-        "function/csd/2021": {
-          "word": "Feidhm"
-        },
-        "machine_learning/csd/2021": {
-          "word": "Meaisínfhoghlaim"
-        },
         "debugging/coursea/2021": {
           "word": "Dífhabhtú"
         },
@@ -136,24 +118,6 @@
         },
         "copyright/csd/2022": {
           "word": "Cóipcheart"
-        },
-        "debugging/csd/2022": {
-          "word": "Dífhabhtú"
-        },
-        "variable/csd/2022": {
-          "word": "Athróg"
-        },
-        "conditionals/csd/2022": {
-          "word": "Coinníollacha"
-        },
-        "abstraction/csd/2022": {
-          "word": "Teibíocht"
-        },
-        "function/csd/2022": {
-          "word": "Feidhm"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Meaisínfhoghlaim"
         },
         "debugging/coursea/2022": {
           "word": "Dífhabhtú"
@@ -266,47 +230,11 @@
         "behavior/csc-adaptations/2023": {
           "word": "Iompar"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Cód"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Coinníollacha"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Athróg"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Cód"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Ealaíontóir"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Nótaí"
-        },
-        "code/poetry/2023": {
-          "word": "Cód"
-        },
         "input/csd/2023": {
           "word": "Ionchur"
         },
         "copyright/csd/2023": {
           "word": "Cóipcheart"
-        },
-        "debugging/csd/2023": {
-          "word": "Dífhabhtú"
-        },
-        "variable/csd/2023": {
-          "word": "Athróg"
-        },
-        "conditionals/csd/2023": {
-          "word": "Coinníollacha"
-        },
-        "abstraction/csd/2023": {
-          "word": "Teibíocht"
-        },
-        "function/csd/2023": {
-          "word": "Feidhm"
         },
         "machine_learning/csd/2023": {
           "word": "Meaisínfhoghlaim"
@@ -416,12 +344,6 @@
         "programming/pre-express/2023": {
           "word": "Códáil"
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Meaisínfhoghlaim"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Líonra"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Coinníollacha"
         },
@@ -440,58 +362,16 @@
         "debugging/basketball/unversioned": {
           "word": "Dífhabhtú"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "function/hero/unversioned": {
-          "word": "Feidhm"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Criptiú"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Dífhabhtú"
-        },
         "debugging/mc/unversioned": {
           "word": "Dífhabhtú"
         },
         "debugging/minecraft/unversioned": {
           "word": "Dífhabhtú"
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Meaisínfhoghlaim"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "code/poem-art/2021": {
-          "word": "Cód"
-        },
         "code/sports/unversioned": {
           "word": "Cód"
         },
         "debugging/sports/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Dífhabhtú"
         }
       }
