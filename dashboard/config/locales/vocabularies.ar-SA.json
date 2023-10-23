@@ -1946,7 +1946,7 @@
           "definition": "تحويل صورة إلى ضوضاء، وتدريب الذكاء الاصطناعي لعكس العملية"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (شبكة الخصومة التوليدية)",
+          "word": "GAN (الشبكة التوليدية المتنافسة)",
           "definition": "طريقة لاستخدام نموذجين متنافسين للذكاء الاصطناعي لتوليد شيء ما"
         },
         "artificial_intelligence/how-ai-works/2023": {
@@ -2005,30 +2005,6 @@
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
-        "code/dance-2019/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "event/dance-2019/unversioned": {
-          "word": "الحدث",
-          "definition": "إجراء يتسبب في حدوث شيء ما."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "الحدث",
-          "definition": "إجراء يتسبب في حدوث شيء ما."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
         "code/dance-extras/unversioned": {
           "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
@@ -2050,118 +2026,6 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "program/dance/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/flappy/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/flappy/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/frozen/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/frozen/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/gumball/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/gumball/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/hero/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/hero/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "function/hero/unversioned": {
-          "word": "وظيفة ",
-          "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
-        },
-        "program/hero/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "شفرة قيصر",
-          "definition": "تقنية للتشفير تستبدل حروف الأبجدية بعد إزاحتها عددًا من الأحرف"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "شفرة",
-          "definition": "مصطلح عام لتقنية (أو خوارزمية) تؤدي التشفير."
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "فكّ التشفير",
-          "definition": "عندما تحاول فك تشفير رسالة سرية دون معرفة جميع تفاصيل التشفير، فإنك تحاول \"كسر\" التشفير."
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "فك التشفير",
-          "definition": "عملية تعكس التشفير، فتأخذ رسالة سرية وتعيد إنتاج نصها الأصلي"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "التشفير",
-          "definition": "عملية ترميز الرسائل لإبقائها سرية، بحيث لا يقرأها إلا الأطراف \"المصرح لهم\" بذلك."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "شفرة الاستبدال العشوائية",
-          "definition": "تقنية تشفير تقوم بربط كل حرف من الأبجدية بأحرف أخرى تم اختيارها عشوائيًا من الأبجدية."
-        },
-        "code/hourofcode/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/iceage/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/iceage/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/infinity/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/infinity/unversioned": {
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
@@ -2209,18 +2073,6 @@
           "word": "النماذج والمحاكاة",
           "definition": "برنامج يكرر أو يحاكي السمات الرئيسية لحدث في العالم الحقيقي من أجل التحقيق في سلوكه دون تكلفة أو وقت أو خطر إجراء تجربة في الحياة الواقعية."
         },
-        "code/playlab/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/playlab/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
         "code/poem-art/2021": {
           "word": "البرمجة",
           "definition": "(v) لكتابة إرشادات للكمبيوتر."
@@ -2256,34 +2108,6 @@
         "program/sports/unversioned": {
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/starwars/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/starwars/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "الضغط بدون فقدان البيانات",
-          "definition": "خوارزمية ضغط بيانات تسمح بإعادة إنشاء البيانات الأصلية بشكل مثالي من البيانات المضغوطة. تُستخدم في الغالب لضغط النص (مثل ضغط بتنسيق .zip)"
         }
       }
     }
