@@ -4,11 +4,16 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import style from './certificate_batch.module.scss';
+import {
+  Heading1,
+  Heading3,
+  Heading4,
+} from '@cdo/apps/componentLibrary/typography';
 
 const curriculaData = [
   {
     grade: i18n.gradeRange({
-      numGrades: ['3', '8'].length,
+      numGrades: 6,
       youngestGrade: '3',
       oldestGrade: '8',
     }),
@@ -21,7 +26,7 @@ const curriculaData = [
 
   {
     grade: i18n.gradeRange({
-      numGrades: ['K', '5'].length,
+      numGrades: 6,
       youngestGrade: 'K',
       oldestGrade: '5',
     }),
@@ -33,7 +38,7 @@ const curriculaData = [
   },
   {
     grade: i18n.gradeRange({
-      numGrades: ['6', '12'].length,
+      numGrades: 7,
       youngestGrade: '6',
       oldestGrade: '12',
     }),
@@ -59,14 +64,14 @@ const professionalLearning = [
     description: i18n.teachWithCodeOrgDescription(),
     buttonText: i18n.teachWithCodeOrg(),
     image: 'https://code.org/images/teach-page-top.png',
-    link: 'code.org/teach',
+    link: 'https://code.org/teach',
   },
   {
     title: i18n.courseOfferingSelfPacedPl(),
     description: i18n.selfPacedPlDescription(),
     buttonText: i18n.exploreProfessionalLearning(),
     image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
-    link: 'code.org/educate/professional-development-online',
+    link: 'https://code.org/educate/professional-development-online',
   },
 ];
 
@@ -87,16 +92,18 @@ export default function CertificateBatch({
   return (
     <div className={style.wrapper}>
       <div className={style.headerContainer}>
-        <h1 className={style.header}>{i18n.printBatchCertificates()}</h1>
+        <Heading1 className={style.header}>
+          {i18n.printBatchCertificates()}
+        </Heading1>
       </div>
       <div className={style.certificateContainer}>
         <div className={style.imageWrapper}>
-          <img src={imageUrl} width={'100%'} />
+          <img src={imageUrl} width={'100%'} alt="" />
           <SafeMarkdown markdown={i18n.landscapeRecommendedCertificates()} />
         </div>
         <div className={style.entryContainer}>
           <span className={style.instructions}>
-            <h3>{i18n.createYourCertificate()}</h3>
+            <Heading3>{i18n.createYourCertificate()}</Heading3>
             <SafeMarkdown
               markdown={i18n.enterCertificateNames({courseTitle})}
             />
@@ -132,7 +139,9 @@ export default function CertificateBatch({
       </div>
 
       <div className={style.continueBeyond}>
-        <h3 style={{textAlign: 'center'}}>{i18n.continueBeyondHourOfCode()}</h3>
+        <Heading3 className={style.textCenter}>
+          {i18n.continueBeyondHourOfCode()}
+        </Heading3>
         <div
           className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol}`}
         >
@@ -143,12 +152,12 @@ export default function CertificateBatch({
             >
               <div className={style.contentWrapper}>
                 <p className={style.overline}>{item.grade}</p>
-                <h3>{item.title}</h3>
+                <Heading3>{item.title}</Heading3>
                 <img src={item.image} alt="" />
                 <p>{item.description}</p>
               </div>
               <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link} aria-label="">
+                <a className={style.linkButton} href={item.link}>
                   {item.buttonText}
                 </a>
               </div>
@@ -157,19 +166,17 @@ export default function CertificateBatch({
         </div>
         <hr />
 
-        <div style={{textAlign: 'center'}}>
-          <h4>{i18n.discoverMore()}</h4>
+        <div className={style.textCenter}>
+          <Heading4>{i18n.discoverMore()}</Heading4>
           <p>{i18n.discoverMoreCatalogText()}</p>
           <div className={style.imageContainer}>
             {curriculumCatalogImages.map((item, index) => (
-              <img key={index} src={item} alt={`Image ${index}`} />
+              <img key={index} src={item} alt="" />
             ))}
           </div>
           <a
-            style={{marginTop: '20px', marginBottom: '40px'}}
-            className={style.linkButton}
+            className={`${style.linkButton} ${style.catalogButton}`}
             href={'/catalog'}
-            aria-label=""
           >
             {i18n.viewCurriculumCatalog()}
           </a>
@@ -191,11 +198,11 @@ export default function CertificateBatch({
                   alt=""
                   className={style.professionalLearningImage}
                 />
-                <h3>{item.title}</h3>
+                <Heading3>{item.title}</Heading3>
                 <p>{item.description}</p>
               </div>
               <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link} aria-label="">
+                <a className={style.linkButton} href={item.link}>
                   {item.buttonText}
                 </a>
               </div>

@@ -256,6 +256,14 @@ a.linkButton {
 }
 
 .professionalLearningImage {
-  background-color: currentColor;
+  background-color: $neutral_dark;
   height: 270px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.catalogButton {
+  margin: 20px 0 40px 0 !important;
 }
