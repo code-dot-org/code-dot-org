@@ -3124,6 +3124,17 @@ th:
           lesson_groups:
             csd3_2:
               display_name: 'บทที่ 2: การสร้างเกม'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: บทเกริ่นนำ
+          lessons:
+            lesson-7:
+              name: บทเกริ่นนำ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: บทเกริ่นนำ
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3146,6 +3157,10 @@ th:
           lessons:
             lesson-3:
               name: การประเมิน
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: บทเกริ่นนำ
         virustest:
           description_short: 'ใช้แลปสไปรท์เพื่อสร้างการจำลองการระบาดของไวรัส '
           title: จำลองการระบาด

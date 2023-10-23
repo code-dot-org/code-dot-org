@@ -2933,3 +2933,18 @@ th:
           lessons:
             lesson-1:
               name: จรรยาบรรณ AI ของเรา
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: บทเกริ่นนำ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: บทเกริ่นนำ
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: บทเกริ่นนำ
+          lesson_groups:
+            lessonGroup-7:
+              display_name: บทเกริ่นนำ
