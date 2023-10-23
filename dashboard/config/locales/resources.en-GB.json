@@ -5,23 +5,11 @@
         "lists/csd/2021": {
           "name": "Lists"
         },
-        "variables_1/csd/2021": {
-          "name": "Variables"
-        },
         "variables_video/express/2021": {
           "name": "Variables"
         },
         "lists/csd/2022": {
           "name": "Lists"
-        },
-        "variables/csd/2022": {
-          "name": "Variables"
-        },
-        "variables_3/csd/2022": {
-          "name": "Variables"
-        },
-        "text/csd/2022": {
-          "name": "Text"
         },
         "variables_1/csd/2022": {
           "name": "Variables"
@@ -40,12 +28,6 @@
         },
         "variables_1/csd/2023": {
           "name": "Variables"
-        },
-        "variables_2/csd/2023": {
-          "name": "Variables"
-        },
-        "text/csd/2023": {
-          "name": "Text"
         },
         "variables/express/2023": {
           "name": "Variables"
