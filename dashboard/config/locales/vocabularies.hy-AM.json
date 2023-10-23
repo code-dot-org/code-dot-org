@@ -5,21 +5,6 @@
         "copyright/csd/2021": {
           "word": "հեղինակային իրավունք"
         },
-        "debugging/csd/2021": {
-          "word": "Debugging"
-        },
-        "variable/csd/2021": {
-          "word": "Փոփոխական"
-        },
-        "conditionals/csd/2021": {
-          "word": "conditionals"
-        },
-        "abstraction/csd/2021": {
-          "word": "աբստրակցիա"
-        },
-        "function/csd/2021": {
-          "word": "Ֆունկցիա"
-        },
         "debugging/coursea/2021": {
           "word": "Debugging"
         },
@@ -97,21 +82,6 @@
         },
         "copyright/csd/2022": {
           "word": "հեղինակային իրավունք"
-        },
-        "debugging/csd/2022": {
-          "word": "Debugging"
-        },
-        "variable/csd/2022": {
-          "word": "Փոփոխական"
-        },
-        "conditionals/csd/2022": {
-          "word": "conditionals"
-        },
-        "abstraction/csd/2022": {
-          "word": "աբստրակցիա"
-        },
-        "function/csd/2022": {
-          "word": "Ֆունկցիա"
         },
         "debugging/coursea/2022": {
           "word": "Debugging"
@@ -191,41 +161,8 @@
         "code/csc-adaptations/2023": {
           "word": "Կոդ"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Կոդ"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "conditionals"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Փոփոխական"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Կոդ"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Արտիստ"
-        },
-        "code/poetry/2023": {
-          "word": "Կոդ"
-        },
         "copyright/csd/2023": {
           "word": "հեղինակային իրավունք"
-        },
-        "debugging/csd/2023": {
-          "word": "Debugging"
-        },
-        "variable/csd/2023": {
-          "word": "Փոփոխական"
-        },
-        "conditionals/csd/2023": {
-          "word": "conditionals"
-        },
-        "abstraction/csd/2023": {
-          "word": "աբստրակցիա"
-        },
-        "function/csd/2023": {
-          "word": "Ֆունկցիա"
         },
         "debugging/coursea/2023": {
           "word": "Debugging"
@@ -320,52 +257,16 @@
         "debugging/basketball/unversioned": {
           "word": "Debugging"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Debugging"
-        },
-        "function/hero/unversioned": {
-          "word": "Ֆունկցիա"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Debugging"
-        },
         "debugging/mc/unversioned": {
           "word": "Debugging"
         },
         "debugging/minecraft/unversioned": {
           "word": "Debugging"
         },
-        "debugging/playlab/unversioned": {
-          "word": "Debugging"
-        },
-        "code/poem-art/2021": {
-          "word": "Կոդ"
-        },
         "code/sports/unversioned": {
           "word": "Կոդ"
         },
         "debugging/sports/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Debugging"
         }
       }
