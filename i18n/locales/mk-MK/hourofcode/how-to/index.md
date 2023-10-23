@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [Како да го започнете вашиот час на кодот силен](#how-to-start)
 - [Земете кодирање](#code)
 - [Прославете го успехот на вашите ученици](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Други ресурси за час на кодот за едукатори](#other-resources)
 
 * * *
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Печатете сертификати]({{ urls/certificates }}) за вашите студенти.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Споделете фотографии и видеа од вашиот настан Hour of Code на социјалните медиуми. Користете #HourOfCode и @codeorg за да можеме да го истакнеме вашиот успех, исто така!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Други ресурси на Часот на кодот за едукатори:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Прегледајте ги Најчесто [поставените прашања за Часот на ко](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)дот.
 
 ### What comes after the Hour of Code?
 

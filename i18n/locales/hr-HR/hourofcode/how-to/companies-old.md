@@ -57,9 +57,9 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Video [Sat koda diljem svijeta](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Predsjednik Obama poziva sve studente da uče informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Više inspirativnih videa pronađite [ovdje](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -67,7 +67,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- [Ovdje pogledajte savjete za zainteresiranje djevojaka za računarstvo]({{ urls/girls }}).
 
 ## 6. Code!
 **Direct participants to the activity**

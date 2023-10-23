@@ -59,7 +59,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
 - El [vídeo de l'Hora del Codi arreu del món](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [El president Obama fa una crida a tots els estudiants a aprendre informàtica](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Troba més vídeos inspiracionals [aquí](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
@@ -68,7 +68,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Consulteu consells per aconseguir que les nenes s'interessin en la informàtica [aquí]({{ urls/girls }}).
 
 ## 6. Code!
 **Direct participants to the activity**

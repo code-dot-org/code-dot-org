@@ -19,7 +19,7 @@ Kodēšanas stunda ir vienkāršs un jautrs veids, kā iepazīstināt studentus 
 - [Kā sākt savu kodēšanas stundu spēcīgu](#how-to-start)
 - [Iegūt kodēšanu](#code)
 - [Sviniet skolēnu panākumus](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Citi koda stundas resursi pedagogiem](#other-resources)
 
 * * *
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Izdrukājiet sertifik]({{ urls/certificates }}) ātus saviem studentiem.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Dalies ar sava Programmēšanas stundas pasākuma fotogrāfijām un video sociālajos medijos. Izmanto #HourOfCode un @codeorg, lai mēs arī varētu izcelt tavus panākumus!
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Citi Programmēšanas stundas resursi skolotājiem:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Pārskati [et koda stundas FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Kas nāk pēc "Programmēšanas stundas"?
 

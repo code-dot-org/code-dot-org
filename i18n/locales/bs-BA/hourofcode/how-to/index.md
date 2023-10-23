@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Ispišite potvrde]({{ urls/certificates }}) za svoje studente.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Podijelite fotografije i video zapise svog događaja Hour of Code na društvenim mrežama. Koristite #HourOfCode i @codeorg kako bismo mogli istaknuti i vaš uspjeh!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Ostala sredstva Časa Kodiranja za vaspitače:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Pregledajte č [esta pitanja o satu koda](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Šta dolazi poslije Časa Kodiranja?
 

@@ -6,7 +6,7 @@ title: Hour of Code How-To Guide for Volunteers
 
 ### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Inscríbase como voluntario</button>]({{ urls/volunteer }})
 
 * * *
 
@@ -52,7 +52,7 @@ Check out some testimonials from past volunteers:
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
 - “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Inscríbase como voluntario</button>]({{ urls/volunteer }})
 
 * * *
 
@@ -133,7 +133,7 @@ Work with the school or teacher to discuss what makes the most sense. We’ve se
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for your group.
 
 ### 3. Plan your technology needs
 
@@ -261,4 +261,4 @@ Teachers will be searching for volunteers on our [volunteer map](https://code.or
 When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Inscríbase como voluntario</button>]({{ urls/volunteer }})

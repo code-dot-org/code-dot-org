@@ -136,7 +136,7 @@ Mida teha, kui õpilane saab varem valmis?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Printige oma õpil]({{ urls/certificates }}) astele sertifikaadid.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Jagage KoodiTund ürituse fotosid ja videosid sotsiaalmeedias. Kasuta #HourOfCode ja @codeord, kes saaksime samuti teie edusamme jagada!
 

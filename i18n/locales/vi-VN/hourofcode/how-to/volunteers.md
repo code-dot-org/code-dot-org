@@ -133,7 +133,7 @@ Hãy làm việc với nhà trường hoặc giáo viên để thảo luận v�
 - Giải thích cách công nghệ tác động đến cuộc sống của chúng ta, nêu những ví dụ mà học sinh có xuất thân bất kỳ sẽ quan tâm - nói về công nghệ giúp cứu sống, giúp đỡ mọi người, kết nối mọi người.
 - Nếu bạn là một doanh nghiệp công nghệ, hãy giới thiệu những sản phẩm thú vị, sáng tạo mà doanh nghiệp bạn đang phát triển. Nếu bạn không phải là doanh nghiệp công nghệ, hãy thảo luận về cách doanh nghiệp của bạn sử dụng công nghệ để giải quyết vấn đề và hoàn thành mục tiêu.
 - Hãy mời các kỹ sư phần mềm đến từ doanh nghiệp của bạn nói về lý do họ quyết định nghiên cứu khoa học máy tính và các dự án mà họ làm việc.
-- Nếu bạn có một nhóm nhân viên sẽ hỗ trợ tiến hành sự kiện của bạn hoặc tình nguyện tại trường học địa phương, hãy cân nhắc đặt hàng [áo thun thiết kế theo yêu cầu](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) cho nhóm của bạn.
+- Nếu bạn có một nhóm nhân viên sẽ tạo điều kiện cho sự kiện của bạn hoặc tình nguyện với một trường học địa phương, hãy cân nhắc đặt áo phông [tùy chỉnh](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) cho nhóm của bạn.
 
 ### 3. Lập kế hoạch nhu cầu công nghệ của bạn
 

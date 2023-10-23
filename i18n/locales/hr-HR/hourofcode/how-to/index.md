@@ -19,7 +19,7 @@ Isprobavanje sata kodiranja jednostavan je i zabavan način da učenike upoznate
 - [Kako snažno započeti svoj Sat kodiranja](#how-to-start)
 - [Programirajte](#code)
 - [Proslavite uspjeh svojih učenika](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Ostali izvori Sat koda za nastavnike](#other-resources)
 
 * * *
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Ispišite certifikate]({{ urls/certificates }}) za svoje studente.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Podijelite fotografije i videozapise svog događaja Hour of Code na društvenim mrežama. Koristite #HourOfCode i @codeorg kako bismo mogli istaknuti i vaš uspjeh!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Drugi izvori Sata kodiranja za edukatore:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Pregledajte često [postavljana pitanja o satu koda](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Što poslije Sata Kodiranja?
 

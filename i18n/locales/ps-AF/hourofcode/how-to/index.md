@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [ستاسو د کوډ ساعت قوي پیل کولو څرنګوالی](#how-to-start)
 - [کوډینګ ترلاسه کړئ](#code)
 - [د خپلو زده کونکو بریا ولمانځئ](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [د ښوونکو لپاره د کوډ ساعتي نور سرچینې](#other-resources)
 
 * * *
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [ستاسو د محصلی]({{ urls/certificates }}) نو لپاره سندونه چاپ کړئ.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- په ټولنیزو رسنیو کې د خپل د ساعت د کوډ پیښې عکسونه او ویډیو شریک کړئ. #HourOfCode او @codeorg وکاروئ نو موږ کولی شو ستاسو بریالیتوب ته روښانه کړئ، هم!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## د ښوونکو لپاره د کوډ نور ساعت سرچینې:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- د کوډ ساع [تي سوالونه بیاکتنه](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کړئ.
 
 ### What comes after the Hour of Code?
 

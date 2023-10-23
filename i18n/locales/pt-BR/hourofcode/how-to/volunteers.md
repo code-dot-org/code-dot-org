@@ -133,7 +133,7 @@ Trabalhe em conjunto com o professor ou uma escola para debater os pontos mais c
 - Explique como a tecnologia afeta as nossas vidas de várias maneiras, com exemplos com os quais alunos de todas as origens se identificarão. Converse sobre tecnologias que salvam vidas, assim como ajudam e aproximam pessoas.
 - Se a sua empresa for da área da tecnologia, mostre os produtos divertidos e inovadores que estão sendo desenvolvidos. Caso contrário, faça um debate sobre como a empresa usa a tecnologia para solucionar problemas e atingir objetivos.
 - Convide engenheiros de software da sua empresa para falar sobre por que decidiram estudar ciência da computação e os projetos que estão desenvolvendo.
-- Se você tiver um grupo ou equipe que facilitem o evento ou se voluntariem em escola da região, pense em encomendar [camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para o seu grupo.
+- Se você tiver um grupo de funcionários que facilitará seu evento ou trabalhará como voluntário em uma escola local, considere comprar camisetas [](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) personalizadas para seu grupo.
 
 ### 3. Planeje suas necessidades tecnológicas
 

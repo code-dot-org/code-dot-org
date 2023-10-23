@@ -46,7 +46,7 @@ If you are unable to connect with a school, please [contact us](https://support.
 
 One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>داوطلبانو ته ثبت کړئ</button>]({{ urls/volunteer }})
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
@@ -66,17 +66,17 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### ۱. دا ویډیو وګورئ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Determine a date, format, and location for your event
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+موږ پیښې لیدلې چې مجا [زی](https://hourofcode.com/us/how-to/virtual) یا په شخصي ډول دي، د شرکت په دفتر کې یا په ټولنه کې ترسره شوي، او د ټولنې زده کونکو لپاره! تاسو کولی شئ دا څه وګورئ چې نور کار [پوری](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) ټ شریکان</a> او مرستون کي د ځینو متاثر نظرونو لپاره په پخوا کې ترسره کړې دي.</p> 
 
 <br />
 
 #### Sample Agenda:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? څه یا څوک تاسو ته الهام ورکړه تاسو څنګه په کمپیوټر ساینس کې لیوالتیا ولر ایا تاسو یو مشر لرلئ؟ زده کونکو څخه پوښتنې وپوښتئ او د Q&A لپاره وخت | |30-60 minutes | Code! که ستاسو پیښه په شخصي ډول وي، دا هغه وخت دی چې پوښتنو ته ځواب ورکړئ او زده کونکي د سختې پوهلو هڅه وکړئ چې دوی ته حل په سمه توګه نه ورکړئ، پرځای یې، د دوی د پوښتنو وپوښتلو هڅه وکړي ترڅو دوی کولی شي ځان ځان ځواب ورکړي چې څه غلط وو، او زده کونکي هڅ که تاسو په واقعیت کې داوطلبانه یاست، د ښوونکي سره کار وکړئ په هغه څه چې غوره تګلاره ممکن دا کیدای شي د غونډې په پای کې بیرته راستنئ نور معنی وکړي ترڅو وګورئ چې زده کونکي کوم پرمختګ | | |1-3 دقیقې | د هر څوک مننه وکړئ او د الهام بخش تقسیم کلمې شریک کړئ. ستاسو د شرکت کوم سویګ لاسوئ (سټیکر[ونه ز](#celebrate) ړه دي)! | | <br />
 
 #### Other ideas to add to your event
 
@@ -90,7 +90,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 #### Devices:
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! د غیر پلګ شوي فعالیتونو لپاره، په ساده ډول د کلاس کلاس ټیکنالوژۍ برخه فلټر کړئ ترڅو د «هیڅ کمپیوټر یا وسیله
 
 - **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
 - **Don't have enough devices?** Use pair programming. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
@@ -99,17 +99,17 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 #### Virtual Events:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+که ستاسو پیښه مجازی وي، نو تاسو به غواړئ ستاسو د کنفرانس پلیټ فارم کې پریکړه وکړئ (او ستاسو د پیښې څخه مخکې یې ازموینه کړئ دا ممکن د هغو زده کوونکو شمیر اغیزه وکړي چې تاسو یې د آرامانه ګډون احساس کوئ، نو دا غوره ده چې دا د کلاس ورکولو بلنه کولو یا ستاسو د پی د کوډ د ریموټ ساعت چلولو څنګه د نظرونو لپاره، د کوډ د مجازی ساعت پی [ښې لپاره زموږ لارښوونې ولول](https://hourofcode.com/us/how-to/virtual)ئ.
 
 ### 4. Choose an activity
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+موږ د ټولو عمر ډلو او د تجربې کچه لپاره د بېلابېلو تفریحي، د زده کونکو لارښودل دا د زده کونکو لپاره مشهور دی چې د ځان په مشرۍ سره تعلیمات هڅه وکړئ، که څه هم تاسو ممکن غواړئ د هر څوک لپاره د [یوځای لیدلو لپاره](https://hourofcode.com/us/promote/resources#videos) د الهام بخش ویډیو
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">فعالیتونه وګورئ</a> او د وخت مخکې پریکړه وکړئ که تاسو غواړئ ستاسو د ټولو میلمنو لپاره یو واحد تدریس غوره کړئ، یا هر ماشوم خپل ځان وټاکئ. **ټول ساعته د کوډ فعالیتونه د لږ** ترلږه وړتیب وخت ته اړتیا لري، او ځان لارښود دي - ګډونوالو ته اجازه ورکوي چې په خپل سرعت او مهارتونو کچه
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+یو ځل چې تاسو ستاسو د پیښې لپاره یو جامع رومیمپ لرئ، تاسو بیا کولی شئ د محصلینو، یو ښوونځي، یا لوی ټولنې بلنه موږ سپارښتنه کوو د سیمه ایزو ښوونځي سره پیل کول تاسو سره اړی [که لرئ یا ز](https://hourofcode.com/us/map) موږ نقشه د کوډ د ساعت پیښو
 
 <a id="celebrate"></a>
 
@@ -117,7 +117,7 @@ Once you have a solid roadmap for your event, you can then start inviting studen
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+وروسته چې زده کونکي یا میلمنو خپل ساعت د کوډ بشپړ کړي، دا وخت دی چې د دوی د بریالیتوب لمانځلو دلته ستاسو د پیښې نور تفریح کولو لپاره ځینې نظرونه دي:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
@@ -129,17 +129,17 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Promote the Hour of Code
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+د مرستې لپاره یو غوره لارې د کلمه خپرولو او د کوډ ساعته وده ورکول دي.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
 ### 1. Register Your Event
 
-کله چې تاسو د خپل ساعت کوډ پیښې [لاسلیک کړئ](/#join)، نو تاسو به د کوډ بریالي ساعت کوربه کولو لپاره خبرونو او لارښوونو سره ګټور بریښنالیک مخابرات ترلاسه کړئ. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+کله چې تاسو د خپل ساعت کوډ پیښې [لاسلیک کړئ](/#join)، نو تاسو به د کوډ بریالي ساعت کوربه کولو لپاره خبرونو او لارښوونو سره ګټور بریښنالیک مخابرات ترلاسه کړئ. دا هم دا ده چې تاسو څنګه کولی شئ ځایی ښوونځیو یا والدین ته اجازه ورکړئ چې تاسو د دوی ته نږدې یوه پیښې
 
 ### 2. Post on Social Media
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+د دې نمونې محتوا سره د کمپیوټر ساینس حرکت د پوهاوی لوړولو سره مرسته وکړئ ترڅو په ټولنیزو رسنیو کې پوسټ کړئ او
 
 #### Hour of Code general announcement
 
@@ -149,7 +149,7 @@ Help raise awareness of the computer science movement with this sample content t
 #### Stats
 
 - Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
+- په متحده ایالاتو کې، یوازې 26٪ د سافټویر مسلکونکي ښځې دي د کمپیوټر ساینس ته نور ځوان ښځان معرفي کړئ #HourOfCode https://hourofcode.com/
 - 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
 
 #### Create your own
@@ -179,6 +179,6 @@ Help raise awareness of the computer science movement with this sample content t
 - [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
 - [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+د Code.org او د کوډ ساعت د ملاتړ څنګه په اړه د نورو وړاندیزونو لپاره، د Code.org/help ملاتړ و [کړئ](https://code.org/help)
 
 {{ signup_button }}

@@ -46,7 +46,7 @@ If you are unable to connect with a school, please [contact us](https://support.
 
 One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>স্বেচ্ছাসেবকদের জন্য সাইন</button>]({{ urls/volunteer }})
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
@@ -66,17 +66,17 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### ১। এই কীভাবে ভিডিওটি দেখুন <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Determine a date, format, and location for your event
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+আমরা এমন ইভেন্টগুলি দেখেছি যা ভার্ [চুয়াল](https://hourofcode.com/us/how-to/virtual) বা ব্যক্তিগতভাবে, কোম্পানির অফিসে বা সম্প্রদায়ের মধ্যে অনুষ্ঠিত এবং সমস্ত বয়সের শিক্ষার্থীদের জন্য! কিছু অনুপ্রেরণামূলক ধারণার জন্য অতীতে অন্যান্য কর্ [পোরেট অং](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) [শী](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) দার এবং দাতারা কী করেছেন তাও আপনি একবার দেখতে পারেন।
 
 <br />
 
 #### Sample Agenda:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? কী বা কে আপনাকে অনুপ্রাণিত করেছে? আপনি কীভাবে কম্পিউটার বিজ্ঞানে আগ্রহী হয়েছেন? আপনার কি একজন পরামর্শদাতা ছিল? শিক্ষার্থীদের প্রশ্ন জিজ্ঞাসা করুন এবং Q&A এর জন্য সময় দিন। | |30-60 minutes | Code! যদি আপনার ইভেন্টটি ব্যক্তিগতভাবে হয় তবে এটি প্রশ্নের উত্তর দেওয়ার এবং কঠিন ধাঁধার মাধ্যমে শিক্ষার্থীদের গাইড করার সময়। তাদের সমাধান সরাসরি না দেওয়ার চেষ্টা করুন, পরিবর্তে, তাদের প্রশ্ন জিজ্ঞাসা করার চেষ্টা করুন যাতে তারা কী ভুল হয়েছে তার উত্তর দিতে পারে এবং শিক্ষার্থীদের যদি তাদের প্রশ্ন থাকে তবে একে অপরকে জিজ্ঞাসা করতে উত্সাহিত করুন। আপনি যদি কার্যত স্বেচ্ছাসেবী হন তবে সেরা পদ্ধতিটি কী হতে পারে সে সম্পর্কে শিক্ষকের সাথে কাজ করুন। শিক্ষার্থীরা কী অগ্রগতি করেছে তা দেখতে সেশনের শেষে ফিরে আসা আরও বোধগম্য হতে পারে। | | |1-3 মিনিট | সবাইকে ধন্যবাদ জানান এবং অনুপ্রেরণামূলক বিচ্ছেদের শব্দ ভাগ আপনার কোম্পানির যে কোনও সোয়াগ সরবরাহ করুন ([স্টিকার](#celebrate) গুলি দুর্দান্ত)! | | <br />
 
 #### Other ideas to add to your event
 
@@ -90,7 +90,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 #### Devices:
 
-কোড অভিজ্ঞতা শ্রেষ্ঠ ঘন্টা ইন্টারনেট সংযুক্ত কম্পিউটার অন্তর্ভুক্ত. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+কোড অভিজ্ঞতা শ্রেষ্ঠ ঘন্টা ইন্টারনেট সংযুক্ত কম্পিউটার অন্তর্ভুক্ত. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! আনপ্লাগ করা ক্রিয়াকলাপগুলির জন্য, “কোনও কম্পিউটার বা ডিভাইস নেই” এর বিকল্পগুলি দেখানোর জন্য কেবল ক্লাসরুম প্রযুক্তি বিভাগটি
 
 - **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
 - **Don't have enough devices?** Use pair programming. যখন ছাত্ররা অংশীদার হয়, তারা একে অপরকে সাহায্য করে এবং শিক্ষকের উপর নির্ভর করে. তারা দেখতে পাবে যে কম্পিউটার বিজ্ঞান সামাজিক এবং সহযোগী.
@@ -99,17 +99,17 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 #### Virtual Events:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+যদি আপনার ইভেন্টটি ভার্চুয়াল হতে চলেছে তবে আপনি আপনার ইভেন্টের আগে আপনার সম্মেলন প্ল্যাটফর্মের বিষয়ে সিদ্ধান্ত নিতে চাইবেন (এবং এটি পরীক্ষা করুন)। এটি আপনি যে শিক্ষার্থীদের আরামদায়ক বোধ করেন তার সংখ্যার প্রভাব ফেলতে পারে, তাই কোনও শ্রেণিকক্ষে আমন্ত্রণ জানানো বা আপনার ইভেন্টের প্রচার করার আগে এটি নির্ধারণ করা কোডের দূরবর্তী আওয়ার কীভাবে চালানো যায় সে সম্পর্কে ধারণার জন্য, ভার্চুয়াল আওয়ার অফ কোড ইভেন্টের জন্য আমাদের টিপস পড়ুন</a>। </p> 
 
 ### 4. Choose an activity
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+আমরা সমস্ত বয়স এবং অভিজ্ঞতার স্তরের জন্য বিভিন্ন মজাদার, শিক্ষার্থী-নির্দেশিত টিউটোরিয়াল সরবরাহ করি। শিক্ষার্থীদের স্ব-নেতৃত্বাধীন টিউটোরিয়ালগুলি চেষ্টা করা জনপ্রিয়, যদিও আপনি সবার একসাথে দেখার জন্য একটি অনুপ্রেরণামূলক [ভিডিও দিয়ে ইভেন্টটি](https://hourofcode.com/us/promote/resources#videos) শুরু করতে চাইতে পারেন।
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">ক্রিয়াকলাপগুলি অন্বেষণ করুন</a> এবং সময়ের আগে সিদ্ধান্ত নিন যদি আপনি আপনার সমস্ত অতিথির জন্য একটি একক টিউটোরিয়াল চয়ন করতে চান, বা প্রতিটি শিশুকে তাদের নিজস্ব বেছে নিতে দিন। ** কোডের সমস্ত ঘন্টা কার্যক্রম </ strong> কমপক্ষে প্রিপেইডের প্রয়োজন এবং স্ব-নির্দেশিত - অংশগ্রহণকারীদের তাদের নিজস্ব গতি এবং দক্ষতা পর্যায়ে কাজ করার অনুমতি প্রদান করে.</p> 
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+একবার আপনার ইভেন্টের জন্য একটি শক্ত রোডম্যাপ থাকলে, আপনি তারপরে শিক্ষার্থী, একটি স্কুল বা বৃহত্তর সম্প্রদায়কে আমন্ত্রণ জানাতে শুরু করতে পারেন। আমরা আপনার কোনও স্থানীয় স্কুলের সাথে আপনার সম্পর্ক রয়েছে বা আওয়ার অফ কোড ইভেন্টগুলির [মানচিত্রটি ব্র](https://hourofcode.com/us/map) াউজ করার পরামর্শ দিই।
 
 <a id="celebrate"></a>
 
@@ -117,7 +117,7 @@ Once you have a solid roadmap for your event, you can then start inviting studen
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+শিক্ষার্থী বা অতিথিরা তাদের আওয়ার অফ কোড সম্পন্ন করার পরে, তাদের সাফল্য উদযাপনের সময় এসেছে। আপনার ইভেন্টটিকে আরও মজাদার করার জন্য এখানে কিছু ধারণা দেওয়া হল:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
@@ -129,17 +129,17 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## হাওয়ার অফ কোড বিজ্ঞাপন করো
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+সাহায্যের অন্যতম সেরা উপায় হ'ল শব্দটি ছড়িয়ে দেওয়া এবং আওয়ার অফ কোডকে প্রচার করা।
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
 ### 1. Register Your Event
 
-আপনি যখন আপনার আওয়ার অফ কোড ইভেন্টটি [সাইন আপ করেন](/#join), তখন আপনি একটি সফল ঘন্টা অফ কোড হোস্ট করার জন্য খবর এবং টিপস সহ সহায়ক ইমেল যোগাযোগ পাবেন। It’s also how you can let local schools or parents know that you’re hosting an event near them.
+আপনি যখন আপনার আওয়ার অফ কোড ইভেন্টটি [সাইন আপ করেন](/#join), তখন আপনি একটি সফল ঘন্টা অফ কোড হোস্ট করার জন্য খবর এবং টিপস সহ সহায়ক ইমেল যোগাযোগ পাবেন। এছাড়াও আপনি স্থানীয় স্কুল বা পিতামাতাকে জানাতে পারেন যে আপনি তাদের কাছাকাছি একটি ইভেন্ট হোস্ট করছেন।
 
 ### 2. Post on Social Media
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+সোশ্যাল মিডিয়ায় পোস্ট করতে এবং আপনার কর্মীদের সাথে ভাগ করে নেওয়ার জন্য এই নমুনা সামগ্রীর সাথে কম্পিউটার বিজ্ঞান আন্দোলনের সচেতনতা বাড়া
 
 #### Hour of Code general announcement
 
@@ -149,7 +149,7 @@ Help raise awareness of the computer science movement with this sample content t
 #### Stats
 
 - Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
+- মার্কিন যুক্তরাষ্ট্রে, সফ্টওয়্যার পেশাদারদের মধ্যে মাত্র ২৬% নারী। কম্পিউটার বিজ্ঞানের সাথে আরও তরুণদের পরিচয় করিয়ে দিন #HourOfCode https://hourofcode.com/
 - 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
 
 #### Create your own
@@ -179,6 +179,6 @@ Help raise awareness of the computer science movement with this sample content t
 - [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
 - [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+Code.org এবং কোডের আওয়ার কীভাবে সমর্থন করবেন সে সম্পর্কে আরও পরামর্শের জন্য, Code.org/help দেখুন [](https://code.org/help)
 
 {{ signup_button }}

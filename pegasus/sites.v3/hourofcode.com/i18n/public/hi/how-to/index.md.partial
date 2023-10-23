@@ -21,7 +21,7 @@ nav: how_to_nav
 - [अपने ऑवर ऑफ़ कोड को मजबूती से कैसे शुरू करें](#how-to-start)
 - [कोडिंग प्राप्त करें](#code)
 - [अपने छात्र की सफलता की ख़ुशी मनाएं](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [शिक्षकों के लिए ऑवर ऑफ़ कोड के अन्य संसाधन](#other-resources)
 
 * * *
 
@@ -141,7 +141,7 @@ Direct students to the activity
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
+    - [अपने छात्रों]({{ urls/certificates }}) के लिए प्रमाणपत्र प्रिंट करें।
     - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
     - सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
     

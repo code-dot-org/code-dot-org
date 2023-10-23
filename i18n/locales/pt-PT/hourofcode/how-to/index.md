@@ -19,7 +19,7 @@ Experimentar uma Hora do Código é uma maneira simples e divertida de apresenta
 - [Como começar sua Hora do Código com força](#how-to-start)
 - [Obtenha a codificação](#code)
 - [Comemore o sucesso de seus alunos](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Outros recursos da Hora do Código para educadores](#other-resources)
 
 * * *
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Imprima certificados]({{ urls/certificates }}) para seus alunos.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Compartilhe fotos e vídeos do seu evento da Hora do Código nas redes sociais. Use #HourOfCode e @codeorg para que possamos destacar seu sucesso também!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Outros recursos da Hora do Código para educadores:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Leia as perguntas frequentes sobre a [Hora do Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### What comes after the Hour of Code?
 

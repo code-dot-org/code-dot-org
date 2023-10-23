@@ -66,7 +66,7 @@ Za više smjernica o volontiranju i primjere slanja poruka kako biste svoju tvrt
 
 Ako želite ići dalje, vaša tvrtka također može ugostiti događaj Sat kodiranja. Ne postoji posebna formula za organizaciju događaja pa vas potičemo da budete kreativni! S obzirom na to da je broj našeg osoblja malen (ali moćan!), Code.org nema tim posvećen koordiniranju događaja Sat kodiranja. Međutim, evo nekoliko savjeta za početak.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Pogledajte ovaj video s uputama <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Odredite datum, format i mjesto za svoj događaj
 

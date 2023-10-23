@@ -136,7 +136,7 @@ Bagaimana jika seorang siswa selesai lebih awal?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Cetak sertifikat]({{ urls/certificates }}) untuk siswa Anda.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
 

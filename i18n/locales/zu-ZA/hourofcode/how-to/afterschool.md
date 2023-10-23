@@ -34,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Plan your technology needs - computers are optional
 
-Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhumana ngakhompyutha aneinternet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhumana ngakhompyutha aneinternet. Kodwa wena **awu** dingi ikhompyutha eyodwa kungane, kanti futhi ungaze wenze iHora loKufingqwa ngaphandle kwekhompyutha.
 
 Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Nika ikilasi lakho ama-efoni, okanye ucele abafundi baziphathele awabo, uma imfundiso oyikhethile isebenza kahle ngomsindo.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Uma abafundi bebambisana, bathola ithuba lokusizana kanti futhi abathembeli kakhulu kuthisha. Bazobona futhi ukuba ikhompyutha sayensi iyabambisana futhi iyahlanganisa.
+**Izinto zokusebenza azilingani? ** Khetha uhlelo [ lwamaqembu](https://www.youtube.com/watch?v=vgkahOzFH2Q). Uma abafundi bebambisana, bathola ithuba lokusizana kanti futhi abathembeli kakhulu kuthisha. Bazobona futhi ukuba ikhompyutha sayensi iyabambisana futhi iyahlanganisa.
 
 ## 5. Start your Hour of Code off with an inspiring video
 
@@ -53,9 +53,9 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha iqhaza kanye noku xoxa ng
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Kulungile umuma umushasha kukhompyutha sayensi. Lapha kukhona amanye amasu okwazisa umsebenzi wakho weHora loKufingqwa:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Chaza izindlela ithekhinoloji enomthelela ngayo empilweni zethu, ngezibonelo amantombazane nabafana abazokhathala ngayo (Xoxa ngama epu kanye ngethekhinoloji esetshenziswa ukusindisa izimpilo, ukusiza abantu, ukuxhumana kwabantu njll).
 - Bala izinto ezisebenzisa ukufingqwa kumpilo yemihla ngemihla.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
@@ -73,18 +73,18 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha iqhaza kanye noku xoxa ng
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Order custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for participants.
 - Yabelana ngezithombe kanye namavidiyo omcimbi wakho weHora loKufingqwa kwezokusakaza. Sebenzisa #iHoraloKufingqwa kanye @codeorg ukuze sikwazi ukugqamisa ngempumelelo yakho, nawe!
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
+- Hlola [imikhuba emihle](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) evela kothisha beHora loKufingqwa eselidlule.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Vakashela [Iforamu leHora loKufingqwa](http://forum.code.org/c/plc/hour-of-code) ukuthola izeluleko, ukuqondisisa kanye nokusekelwa okuvela kwabanye abahleli.
 - Buyekeza i[ IMIBUZO EBUZWA NJALO kuHora loKufingqwa](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Kuyini okuza ngemva kweHora loKufingqwa?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+IHora loKufingqwa liyisi nyathelo sokuqala kuhambo lokufunda kabanzi ngokuba ithekhinoloji isebenza kanjani kanye nokuba ama aplikheyishini amasofthiwe adalwa kanjani. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

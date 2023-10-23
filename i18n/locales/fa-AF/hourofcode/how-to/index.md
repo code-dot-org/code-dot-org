@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [چگونه برای شروع ساعت خود را از کد قوی](#how-to-start)
 - [دریافت برنامه نویسی](#code)
 - [موفقیت دانش آموزان خود را جشن بگیرید](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [سایر منابع ساعت کد برای مربیان](#other-resources)
 
 * * *
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [گواهینامه ها را]({{ urls/certificates }}) برای دانش آموزان خود چاپ کنید
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- عکس ها و فیلم های رویداد Hour of Code خود را در رسانه های اجتماعی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا بتوانیم موفقیت شما را نیز برجسته کنیم!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## ساعت دیگر منابع کد برای مربیان:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- سوالات متداول [ساعت کد را مرور](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کنید.
 
 ### What comes after the Hour of Code?
 

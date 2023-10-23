@@ -136,7 +136,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- []({{ urls/certificates }}) 为您的学生打印证书。
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
 

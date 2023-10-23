@@ -21,7 +21,7 @@ Students today should learn how to create technology, not just use it.
 - [Код сағатын қалай күшті бастауға болады](#how-to-start)
 - [Кодтауды алыңыз](#code)
 - [Студенттеріңіздің жетістіктерін атап өтіңіз](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Тәрбиешілерге арналған код сағатының басқа ресурстары](#other-resources)
 
 * * *
 
@@ -141,7 +141,7 @@ Direct students to the activity
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
+    - [Студенттеріңізге сертификат]({{ urls/certificates }}) тарды басып шығарыңыз.
     - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
     - Әлеуметтік жүйелерге "Кодтау Сағатынан" жиналған суреттер мен видеоларды салып, біз де сіздің табысыңызды жариялауымыз үшін #HourOfCode хэштэгін, және де @codeorg аккаунтын белгілеңіз!
     

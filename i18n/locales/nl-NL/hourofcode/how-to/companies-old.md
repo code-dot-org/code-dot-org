@@ -57,9 +57,9 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 **Laat een inspirerende video zien:**
 
 - De originele Code.org lanceringsvideo, waarin Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh voorkomen (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Video over The [Hour of Code Worldwide](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama roept alle leerlingen op om zich te verdiepen in computerwetenschappen](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Meer inspirerende video's vind [je hier](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideeën om uw CodeUur activiteit te introduceren bij leerlingen:**
 
@@ -67,7 +67,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 - Als u van een tech bedrijf komt, demonstreer dan leuke, innovatieve producten waar uw bedrijf aan werkt.
 - Als u niet van een tech bedrijf komt, bespreek dan de manieren waarmee uw bedrijf gebruik maakt van technologie om problemen op te lossen en doelen te behalen.
 - Nodig software ingenieurs van uw bedrijf uit om te spreken over waarom zij hebben gekozen voor programmeren en aan wat voor projecten zij werken.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Bekijk [hier tips om meisjes te interesseren voor informatica]({{ urls/girls }}).
 
 ## 6. Code!
 **Betrek de deelnemers in de activiteit**

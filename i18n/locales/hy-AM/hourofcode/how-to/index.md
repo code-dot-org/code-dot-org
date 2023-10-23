@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [Ինչպես սկսել ձեր Hour Code ուժեղ](#how-to-start)
 - [Ստանալ կոդավորում](#code)
 - [Նշեք ձեր ուսանողների հաջողությունները](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Կոդի ժամի այլ ռեսուրսներ մանկավարժների համար](#other-resources)
 
 * * *
 
@@ -139,9 +139,9 @@ Direct students to the activity
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
+    - [Տպեք վկայագր]({{ urls/certificates }}) եր ձեր ուսանողների համար:
     - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-    - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+    - Կիսվեք ձեր Hour of Code միջոցառման լուսանկարներով և տեսանյութերով սոցիալական մեդիայում: Օգտագործեք #HourOfCode եւ @codeorg, որպեսզի մենք կարողանանք ընդգծել ձեր հաջողությունը, նույնպես!
     
     * * *
     
@@ -153,7 +153,7 @@ Direct students to the activity
     ## Ուսուցիչների համար կոդային ռեսուրսների այլ ժամ.
     
     - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-    - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+    - Վերանայեք “Կ [ոդի ժամի” FAQ-](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)ը:
     
     ### What comes after the Hour of Code?
     

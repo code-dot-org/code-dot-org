@@ -19,7 +19,7 @@ At prøve en Hour of Code er en enkel og sjov måde at introducere studerende ti
 - [Sådan starter du din Hour of Code stærk](#how-to-start)
 - [Få kodning](#code)
 - [Fejr dine studerendes succes](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Andre Hour of Code-ressourcer til undervisere](#other-resources)
 
 * * *
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Udskriv certifikater]({{ urls/certificates }}) til dine studerende.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Del billeder og video af jeres Hour of Code på sociale medier. Brug #HourOfCode og @codeorg så vi også kan dele jeres succes!
 

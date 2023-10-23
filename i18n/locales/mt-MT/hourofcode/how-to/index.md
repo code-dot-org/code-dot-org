@@ -19,7 +19,7 @@ Li tipprova Siegħa ta 'Kodiċi huwa mod sempliċi u divertenti biex tintroduċi
 - [Kif tibda Siegħa tiegħek ta 'Kodiċi qawwija](#how-to-start)
 - [Ikseb kodifikazzjoni](#code)
 - [Iċċelebra s-suċċess tal-istudenti tiegħek](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Riżorsi oħra tas-Siegħa tal-Kodiċi għall-edukaturi](#other-resources)
 
 * * *
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Istampa ċertifikati]({{ urls/certificates }}) għall-istudenti tiegħek.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Aqsam ritratti u vidjows tal-avveniment tas-Siegħa tal-Kodiċi tiegħek fuq il-midja soċjali. Uża #HourOfCode u @codeorg sabiex inkunu nistgħu nenfasizzaw is-suċċess tiegħek, ukoll!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Siegħa oħra ta 'riżorsi tal-Kodiċi għall-edukaturi:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Irrevedi l-FAQ [dwar is-Siegħa tal-Kodiċi](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### What comes after the Hour of Code?
 

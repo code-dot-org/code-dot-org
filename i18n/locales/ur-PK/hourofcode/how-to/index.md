@@ -136,7 +136,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 [/ Col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [اپنے طلباء کے]({{ urls/certificates }}) لئے سرٹیفکیٹ پرنٹ کریں۔
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - ! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
 

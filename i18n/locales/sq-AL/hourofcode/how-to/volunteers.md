@@ -116,7 +116,7 @@ Nese jeni udheheqesi i nje eventi me nje klase te caktuar, perdoreni kete agjend
 
 Nese jeni duke konsideruar mbajtjen e Ores se Kodit ne shtepi ose ne komunitet, ne ju rekomandojme qe t'i hidhni nje sy disa nga guidat tona me te hollesishme per prinderit dhe organizatat ose kompanite. 
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Shikoni këtë video si <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Përcaktoni një datë, format dhe vendndodhje për ngjarjen tuaj
 
@@ -133,7 +133,7 @@ Puno me shkollen dhe mesuesin per t'i diskutuar cka ka me shume kuptim. Ne kemi 
 - Shpjegoni menyrat se si tekonogjia ka impakt ne jeten tuaj, me shembuj qe do t'i interesojne te dy gjinive. Flisni se si teknologjia po shpeton jeterat e shume njerzve, po i ndohmon njerezit dhe po i lidhe ata me njeri tjetrin. 
 - Nese jeni nje kompani teknologjike, reklamoni produkte inovative ne te cilat eshte duke punuar kompania juaj. Nese nuk jeni kompani teknologjike, diskutoni menyra se si te perdoret teknologjia per te zgjithur probleme dhe per te permbushur qellimet tona.
 - Ftoni inxhinieret softuerik nga kompanija juaj to flesin rreth arsyejes se pse ata i studiojne shkencat kompjuterike, poashtu edhe projektet ne te cilat po punojne momentalisht. 
-- Nese e ke nje grup stafi qe do te persfhaq eventet tuaja ose nese eshte ndonje vullnetar ne ndonje shkolle lokale, konsideroni porositje e maicave te personalizuara per grupin tuaj. 
+- Nëse keni një grup stafi që do të lehtësojë ngjarjen tuaj ose vullnetarisht me një shkollë lokale, merrni parasysh porositjen e blu [zave me por](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) osi për grupin tuaj.
 
 ### 3. Planifikoni nevojat tuaja teknologjike
 
