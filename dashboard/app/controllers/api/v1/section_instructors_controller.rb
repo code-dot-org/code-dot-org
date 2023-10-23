@@ -25,33 +25,14 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     section = Section.find(params.require(:section_id))
     authorize! :manage, section
 
-    # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
-    # for a total of 6)
-    if SectionInstructor.where(section: section).count >= 6
-      return render json: {error: 'section full'}, status: :bad_request
+    begin
+      si = section.add_instructor(params.require(:email))
+      render json: si, serializer: Api::V1::SectionInstructorSerializer
+    rescue ArgumentError => exception
+      render json: {error: exception.message}, status: :bad_request
+    rescue ActiveRecord::RecordNotFound
+      head :not_found
     end
-
-    instructor = User.find_by(email: params.require(:email), user_type: :teacher)
-    return head :not_found if instructor.blank?
-
-    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: section)
-
-    # Actually delete the instructor if they were soft-deleted so they can be re-invited.
-    if si&.deleted_at.present?
-      si.really_destroy!
-    # Can't re-add someone who is already an instructor (or invited/declined)
-    elsif si.present?
-      return render json: {error: 'already invited'}, status: :bad_request
-    end
-
-    si = SectionInstructor.create!(
-      section: section,
-      instructor: instructor,
-      status: :invited,
-      invited_by: current_user
-    )
-
-    render json: si, serializer: Api::V1::SectionInstructorSerializer
   end
 
   # Removes an instructor from the section (soft-deleting the record).
@@ -83,5 +64,32 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     @section_instructor.save!
 
     render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
+  end
+
+  # GET /section_instructors/check
+  # Checks if the given email address corresponds to a user that could be added
+  # as an instructor. Optional section id parameter can be given to verify that
+  # the user is not already an instructor in the section.
+  def check
+    return head :forbidden unless current_user&.teacher?
+
+    instructor = User.find_by(email: params.require(:email), user_type: :teacher)
+    return head :not_found if instructor.blank?
+    if instructor == current_user
+      return render json: {error: 'inviting self'}, status: :bad_request
+    end
+
+    section = Section.find_by_id(params[:section_id])
+    if section.present?
+      authorize! :manage, section
+
+      begin
+        section.validate_instructor(instructor)
+      rescue ArgumentError => exception
+        return render json: {error: exception.message}, status: :bad_request
+      end
+    end
+
+    head :no_content
   end
 end

@@ -4,24 +4,25 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Applying Our Knowledge of Identity and Bias
-<br>
-<img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
 
-### Try It!
+---
+
 #### In the class, you have introduced the idea of “patterns” and places and together you talked about how there are four different patterns if you have just two places. Students are about to work in groups to list all possible three place value patterns, but with an added focus on the order of their patterns.
 #### These three students have been given one set of manipulatives and are placed in a group to accomplish this task. As you observe the group you overhear the following conversation.
 
-Simone takes out the manipulatives from the bag and starts re-arranging them.
+---
 
-James is writing down something on the paper
+### **Simone** takes out the manipulatives from the bag and starts re-arranging them.
 
-Miranda asks "Should we start by adding on to what we did with two patterns?"
+### **James** is writing down something on the paper
 
-James says "The answer is 16."
+### **Miranda** asks "Should we start by adding on to what we did with two patterns?"
 
-Miranda says "How did you get that?"
+### **James** says "The answer is 16."
 
-James says "2 times 2 times 2. It is combinatorics - I remember it from stats."
+### **Miranda** says "How did you get that?"
+
+### **James** says "2 times 2 times 2. It is combinatorics - I remember it from stats."
 
 
 MARKDOWN

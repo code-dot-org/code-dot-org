@@ -1,28 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, {useMemo} from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import style from './rubrics.module.scss';
-import {rubricShape} from './rubricShapes';
+import {rubricShape, submittedEvaluationShape} from './rubricShapes';
 import LearningGoal from './LearningGoal';
 
-export default function StudentRubricView({rubric}) {
-  const [evaluationsByLearningGoal, setEvaluationsByLearningGoal] =
-    useState(null);
-
-  useEffect(() => {
-    HttpClient.fetchJson(`/rubrics/${rubric.id}/get_teacher_evaluations`)
-      .then(response => {
-        const data = response.value;
-        const evaluationMap = {};
-        data.forEach(evaluation => {
-          evaluationMap[evaluation.learning_goal_id] = evaluation;
-        });
-        setEvaluationsByLearningGoal(evaluationMap);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, [rubric.id]);
+export default function StudentRubricView({rubric, submittedEvaluation}) {
+  const evaluationsByLearningGoal = useMemo(() => {
+    const evaluationMap = {};
+    submittedEvaluation?.forEach(evaluation => {
+      evaluationMap[evaluation.learning_goal_id] = evaluation;
+    });
+    return evaluationMap;
+  }, [submittedEvaluation]);
 
   return (
     <div
@@ -41,6 +31,7 @@ export default function StudentRubricView({rubric}) {
           }
           /* TODO: [AITT-161] add reporting data for the student case */
           reportingData={{}}
+          isStudent={true}
         />
       ))}
     </div>
@@ -49,4 +40,5 @@ export default function StudentRubricView({rubric}) {
 
 StudentRubricView.propTypes = {
   rubric: rubricShape.isRequired,
+  submittedEvaluation: PropTypes.arrayOf(submittedEvaluationShape),
 };
