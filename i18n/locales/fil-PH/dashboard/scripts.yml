@@ -3641,3 +3641,18 @@ fil:
           lessons:
             lesson-1:
               name: Ang aming Kodigo ng Etika sa AI.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Panimula
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Panimula
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Panimula
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Panimula

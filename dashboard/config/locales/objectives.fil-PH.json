@@ -2,12 +2,6 @@
   "fil-PH": {
     "data": {
       "objectives": {
-        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
-          "description": "Sanayin at subukan ang isang machine learning model."
-        },
-        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
-          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
-        },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "Tuklasin na ang internet ay maaaring gamitin upang bisitahin ang malalayong lugar at matuto ng mga bagong bagay."
         },
@@ -983,12 +977,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
         },
-        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
-          "description": "Sanayin at subukan ang isang machine learning model."
-        },
-        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
-          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
-        },
         "086d6899-da60-486b-a9f7-89715397d81c": {
           "description": "Ipaliwanag ang mga patakaran sa ligtas na paglalakbay sa internet."
         },
@@ -1933,15 +1921,6 @@
         },
         "33f3d6db-54e2-4c96-b11a-511672ae3be9": {
           "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
-        },
-        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
-          "description": "Ilarawan ang makasagisag at literal na wika sa text."
-        },
-        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
-          "description": "Sanayin at subukan ang isang machine learning model."
-        },
-        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
-          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
         },
         "706d588e-1af3-44f0-b4d8-7bffa52d45e8": {
           "description": "Bumuo at ibahagi ang sarili nilang mga app sa App Lab gamit ang mga feature tulad ng mga button, text, larawan, tunog, at mga screen."
@@ -2933,24 +2912,6 @@
         "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
           "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding."
         },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
-        },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "Bumuo ng mga programa na tumutugon sa input ng user"
-        },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Lumikha ng mga animation ng sayaw gamit ang code"
-        },
-        "83f493e8-9941-4154-b2f4-f34836741746": {
-          "description": "Bigyang-kahulugan ang \"coding\" at \"computer science\"."
-        },
-        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science."
-        },
-        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding."
-        },
         "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
           "description": "Bigyang-kahulugan ang \"coding\" at \"computer science\"."
         },
@@ -2968,132 +2929,6 @@
         },
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Lumikha ng mga animation ng sayaw gamit ang code"
-        },
-        "6394fdc5-50c3-423e-8135-a64594824db3": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
-          "description": "Gumawa ng mga koneksiyon sa pagitan ng mga konsepto ng computer science at ng totoong mundo"
-        },
-        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "303a2b74-af73-401c-8929-1fc1c5611f18": {
-          "description": "Gumawa ng mga koneksiyon sa pagitan ng mga konsepto ng computer science at ng totoong mundo"
-        },
-        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
-          "description": "Gumawa ng mga koneksiyon sa pagitan ng mga konsepto ng computer science at ng totoong mundo"
-        },
-        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
-        },
-        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
-        },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
-        },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
-        },
-        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
-        },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
-        },
-        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": "Ipaliwanag kung bakit ang pag-encrypt ay mahalagang pangangailangan sa pang-araw-araw na buhay sa Internet."
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": "I-crack ang mensaheng naka-encrypt sa Caesar cipher gamit ang Caesar Cipher Widget"
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": "I-crack ang mensaheng naka-encrypt na may random na pagpapalit gamit ang Frequency Analysis"
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": "Ipaliwanag ang mga kahinaan at mga depekto sa seguridad ng mga substitution cipher"
-        },
-        "3e5eebcd-2140-4152-8654-410468108ab6": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
-          "description": "Gumawa ng mga koneksiyon sa pagitan ng mga konsepto ng computer science at ng totoong mundo"
-        },
-        "59992d8c-d194-4063-82fa-001a0b6482d9": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "63be9575-1232-47a5-991c-8bd03ac7c949": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
-          "description": "Gumawa ng mga koneksiyon sa pagitan ng mga konsepto ng computer science at ng totoong mundo"
-        },
-        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
         },
         "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
           "description": "Bigyang-kahulugan ang “coding” at “computer science”"
@@ -3113,36 +2948,6 @@
         "343631be-830a-44f6-a249-a6aa96ea38f0": {
           "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
         },
-        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
-          "description": "Talakayin ang papel na ginagampanan ng artificial intelligence sa kanilang buhay."
-        },
-        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
-          "description": "Sanayin at subukan ang isang machine learning model."
-        },
-        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
-          "description": "Dahilan kung paano gumaganap ang bias ng tao sa machine learning."
-        },
-        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
-          "description": "Gumawa ng mga koneksiyon sa pagitan ng mga konsepto ng computer science at ng totoong mundo"
-        },
-        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Ilarawan ang mga pagbabago sa mood ng tula."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Ilarawan ang makasagisag at literal na wika sa text."
-        },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Bumuo ng mga program na tumutugon sa nakatakdang mga kaganapan."
-        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Tukuyin ang mga pagkilos na nauugnay sa mga event sa pag-input."
         },
@@ -3160,48 +2965,6 @@
         },
         "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
           "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding."
-        },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": "Gumawa ng mga koneksiyon sa pagitan ng mga konsepto ng computer science at ng totoong mundo"
-        },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
-          "description": "Bigyang-kahulugan ang “coding” at “computer science”"
-        },
-        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
-          "description": "Tukuyin ang pangunahing bokabularyo ng computer science"
-        },
-        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
-          "description": "Gumawa ng mga koneksiyon sa pagitan ng mga konsepto ng computer science at ng totoong mundo"
-        },
-        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
-          "description": "Tukuyin ang mga lugar na pupuntahan upang magpatuloy sa pag-aaral ng computer science at coding"
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": "Makipagtulungan sa kasamahan upang makahanap ng solusyon sa problema sa compression ng text gamit ang Text Compression Widget (lossless compression na scheme)."
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": "Ipaliwanag kung bakit imposible o \"mahirap\" tukuyin ang pinakamainam na dami ng compression."
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": "Ipaliwanag ang ilang mga kadahilanan kung bakit mahirap ang pag-compress."
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": "Ilarawan ang layunin at katwiran sa lossless compression."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Kilalanin kung ano ang inaasahan kapag lumipat ang mga mag-aaral sa computer lab."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
         }
       }
     }

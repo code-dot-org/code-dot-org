@@ -18,52 +18,6 @@
           "word": "Karapatang-ari",
           "definition": "ang eksklusibong legal na karapatan na mag-print, mag-publish, magtanghal, magpepelikula, o magrekord ng materyal na pampanitikan, masining, o musikal, at pahintulutan ang iba na gawin ang pareho"
         },
-        "bug/csd/2021": {
-          "word": "Bug",
-          "definition": "Bahagi ng program na hindi gumagana ng tama."
-        },
-        "debugging/csd/2021": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/csd/2021": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "variable/csd/2021": {
-          "word": "Variable",
-          "definition": "Isang label sa piraso ng impormasyong ginagamit sa program."
-        },
-        "sprite/csd/2021": {
-          "word": "Sprite"
-        },
-        "condition/csd/2021": {
-          "word": "Condition"
-        },
-        "conditionals/csd/2021": {
-          "word": "Mga conditional"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstraction"
-        },
-        "function/csd/2021": {
-          "word": "Function"
-        },
-        "user/csd/2021": {
-          "word": "User",
-          "definition": "Isang taong gumagamit ng isang bagay, kabilang ang software at hardware."
-        },
-        "user_interface/csd/2021": {
-          "word": "Interface ng User"
-        },
-        "for_loop/csd/2021": {
-          "word": "Para sa Loop",
-          "definition": "Mga loop na may paunang natukoy na simula, wakas, at pagtaas (step interval)."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Pag-Aaral Ng Makina",
-          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
-        },
         "algorithm/coursea/2021": {
           "word": "Algorithm",
           "definition": "Listahan ng mga hakbang upang tapusin ang task."
@@ -604,48 +558,6 @@
           "word": "Karapatang-ari",
           "definition": "ang eksklusibong legal na karapatan na mag-print, mag-publish, magtanghal, magpepelikula, o magrekord ng materyal na pampanitikan, masining, o musikal, at pahintulutan ang iba na gawin ang pareho"
         },
-        "bug/csd/2022": {
-          "word": "Bug",
-          "definition": "Bahagi ng program na hindi gumagana ng tama."
-        },
-        "debugging/csd/2022": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/csd/2022": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "variable/csd/2022": {
-          "word": "Variable",
-          "definition": "Isang label sa piraso ng impormasyong ginagamit sa program."
-        },
-        "sprite/csd/2022": {
-          "word": "Sprite"
-        },
-        "condition/csd/2022": {
-          "word": "Condition"
-        },
-        "conditionals/csd/2022": {
-          "word": "Mga conditional"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstraction"
-        },
-        "function/csd/2022": {
-          "word": "Function"
-        },
-        "user/csd/2022": {
-          "word": "User",
-          "definition": "Isang taong gumagamit ng isang bagay, kabilang ang software at hardware."
-        },
-        "user_interface/csd/2022": {
-          "word": "Interface ng User"
-        },
-        "machine_learning/csd/2022": {
-          "word": "Pag-Aaral Ng Makina",
-          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
-        },
         "algorithm/coursea/2022": {
           "word": "Algorithm",
           "definition": "Listahan ng mga hakbang upang tapusin ang task."
@@ -1174,9 +1086,6 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
-        "artificial_intelligence/ai-ethics/2023": {
-          "word": "Artificial Intelligence"
-        },
         "code/csc-adaptations/2023": {
           "word": "Code"
         },
@@ -1185,88 +1094,6 @@
         },
         "behavior/csc-adaptations/2023": {
           "word": "Paggawi"
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Event",
-          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Program",
-          "definition": "Serye ng mga hakbang na naka-code sa isang bagay na maaaring patakbuhin ng makina."
-        },
-        "prompt/csc-bookcovers/2023": {
-          "word": "Prompt",
-          "definition": "Isang mensahe sa screen ng computer na naghihintay ng input mula sa user."
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Sprite",
-          "definition": "Isang graphic sa screen na may lokasyon, laki, at hitsura."
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Code"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Condition"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Mga conditional"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "Event"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Variable"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Code",
-          "definition": "(v) upang magsulat ng mga tagubilin sa isang computer."
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Event",
-          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Sprite"
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Mapa"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Artista"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Loop"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Komento"
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Event",
-          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
-        },
-        "mood/csc-timecapsule/2023": {
-          "word": "Mood"
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Sprite"
-        },
-        "code/poetry/2023": {
-          "word": "Code",
-          "definition": "(v) upang magsulat ng mga tagubilin sa isang computer."
-        },
-        "event/poetry/2023": {
-          "word": "Event",
-          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
-        },
-        "line/poetry/2023": {
-          "word": "Linya"
-        },
-        "mood/poetry/2023": {
-          "word": "Mood"
-        },
-        "program/poetry/2023": {
-          "word": "Program",
-          "definition": "Serye ng mga hakbang na naka-code sa isang bagay na maaaring patakbuhin ng makina."
         },
         "computer/csd/2023": {
           "word": "Computer"
@@ -1283,44 +1110,6 @@
         "copyright/csd/2023": {
           "word": "Karapatang-ari",
           "definition": "ang eksklusibong legal na karapatan na mag-print, mag-publish, magtanghal, magpepelikula, o magrekord ng materyal na pampanitikan, masining, o musikal, at pahintulutan ang iba na gawin ang pareho"
-        },
-        "bug/csd/2023": {
-          "word": "Bug",
-          "definition": "Bahagi ng program na hindi gumagana ng tama."
-        },
-        "debugging/csd/2023": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/csd/2023": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "variable/csd/2023": {
-          "word": "Variable",
-          "definition": "Isang label sa piraso ng impormasyong ginagamit sa program."
-        },
-        "sprite/csd/2023": {
-          "word": "Sprite"
-        },
-        "condition/csd/2023": {
-          "word": "Condition"
-        },
-        "conditionals/csd/2023": {
-          "word": "Mga conditional"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstraction"
-        },
-        "function/csd/2023": {
-          "word": "Function"
-        },
-        "user/csd/2023": {
-          "word": "User",
-          "definition": "Isang taong gumagamit ng isang bagay, kabilang ang software at hardware."
-        },
-        "user_interface/csd/2023": {
-          "word": "Interface ng User"
         },
         "machine_learning/csd/2023": {
           "word": "Pag-Aaral Ng Makina",
@@ -1854,19 +1643,6 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Pag-Aaral Ng Makina",
-          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Algorithm"
-        },
-        "network/how-ai-works/2023": {
-          "word": "Network"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "word": "Artificial Intelligence"
-        },
         "code/aquatic/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
@@ -1917,28 +1693,6 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
-        "code/dance-2019/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Event",
-          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Event",
-          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
         "code/dance-extras/unversioned": {
           "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
@@ -1958,112 +1712,6 @@
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "program/dance/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/flappy/unversioned": {
-          "word": "code",
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/flappy/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/frozen/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/frozen/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/gumball/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/gumball/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/hero/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "function/hero/unversioned": {
-          "word": "Function",
-          "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
-        },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Caesar Cipher ",
-          "definition": "pamamaraan sa pag-encrypt na nagbabago ng alpabeto sa ilang bilang ng mga karakter"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Cipher",
-          "definition": "ang pangkalahatang termino sa pamamaraan (o algorithm) na nagsasagawa ng pag-encrypt"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Pag-crack ng naka-encrypt",
-          "definition": "Kapag sinubukan mong i-decode ang lihim na mensahe nang hindi nalalaman ang lahat ng mga detalye ng cipher, sinusubukan mong \"i-crack\" ang naka-encrypt."
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Decryption",
-          "definition": "proseso na binabaligtad ang pag-encrypt, pagkuha ng lihim na mensahe at paggawa ng orihinal na plain text"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Pag-Encrypt",
-          "definition": "proseso ng pag-encode ng mga mensahe upang panatilihing lihim ang mga ito, kaya ang mga \"awtorisadong\" partido lang ang makakabasa nito."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Random na Pagpapalit ng Cipher",
-          "definition": "diskarte sa pag-encrypt na nagmamapa sa bawat titik ng alpabeto sa random na piniling iba pang mga titik ng alpabeto."
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/iceage/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/iceage/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/infinity/unversioned": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
@@ -2097,10 +1745,6 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Pag-Aaral Ng Makina",
-          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
-        },
         "event/outbreak/unversioned": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
@@ -2108,37 +1752,6 @@
         "models_and_simulations/outbreak/unversioned": {
           "word": "Mga Modelo at Simulation",
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
-        },
-        "code/playlab/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/playlab/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/poem-art/2021": {
-          "word": "Code",
-          "definition": "(v) upang magsulat ng mga tagubilin sa isang computer."
-        },
-        "event/poem-art/2021": {
-          "word": "Event",
-          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
-        },
-        "line/poem-art/2021": {
-          "word": "Linya",
-          "definition": "(tula) - isang subdibisyon ng tula na nakaayos ng sunud-sunod na nagtatapos sa kanang gilid. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Mood",
-          "definition": "pagpapahayag ng damdamin, kapaligiran, o emosyon sa sining o pagsulat."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Serye ng mga hakbang na naka-code sa isang bagay na maaaring patakbuhin ng makina."
         },
         "code/sports/unversioned": {
           "word": "Code",
@@ -2155,32 +1768,6 @@
         "program/sports/unversioned": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/starwars/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/starwars/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Pagdedebug",
-          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Program",
-          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "Lossless Compression",
-          "definition": "isang data compression algorithm na nagbibigay-daan sa orihinal na data na ganap na mabuo mula sa naka-compress na data. Pinakakaraniwang ginagamit sa pag-compress ng text (hal. .zip compression)"
         }
       }
     }
