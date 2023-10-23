@@ -2594,7 +2594,17 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hyrje
+          lessons:
+            lesson-7:
+              name: Hyrje
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Hyrje
           title: Dita 3
         virtual-pl-csa-summer-day4:
           title: Dita 4
@@ -2623,6 +2633,10 @@ sq:
             lesson-3:
               name: Vlerësim
           title: Dita 5
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Hyrje
         virtual-pl-csp-summer-day3:
           title: Dita 3
         virtual-pl-csp-summer-day4:

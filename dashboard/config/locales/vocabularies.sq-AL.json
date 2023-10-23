@@ -130,78 +130,6 @@
           "word": "Funksion",
           "definition": "Një pjesë e emëruar e udhëzimeve të programimit."
         },
-        "user/csd/2021": {
-          "word": "Përdorues",
-          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
-        },
-        "innovation/csd/2021": {
-          "word": "Inovacioni",
-          "definition": "Një ide, pajisje, produkt, etj, i ri ose i përmirësuar ose zhvillimi i tij/saj"
-        },
-        "analog/csd/2021": {
-          "word": "Analog",
-          "definition": "Çdo sinjal që ndryshon vazhdimisht që nuk kufizohet në grupin e fundëm të vlerave. Për shembull, format valë të fjalëve të folura janë një sinjal analog."
-        },
-        "digital/csd/2021": {
-          "word": "Digjital",
-          "definition": "Të dhëna ose sinjale të përfaqësuara nga një numër i caktuar vlerash. Sinjalet analoge (të cilat mund të kenë vlera të pafundme) duhet të konvertohen në digjital në mënyrë që të llogariten me të."
-        },
-        "array/csd/2021": {
-          "word": "Varg",
-          "definition": "Një strukturë e të dhënave në JavaScript përdoret për të përfaqësuar një listë."
-        },
-        "circuit/csd/2021": {
-          "word": "Qark",
-          "definition": "Një pajisje që siguron një rrugë për rrjedhjen e një rryme elektrike, shpesh duke modifikuar atë rrymë. Në kompjuter, qarqet lejojnë operacione të thjeshta logjike dhe matematikore duke përdorur energji elektrike."
-        },
-        "machine_learning/csd/2021": {
-          "word": "Mësimi i Makinave",
-          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
-        },
-        "features/csd/2021": {
-          "word": "Karakteristikat",
-          "definition": "Inputet që një model përdor për të marrë vendime"
-        },
-        "label/csd/2021": {
-          "word": "Emërtimi",
-          "definition": "outputi që po përpiqeni të vendosni ose parashikoni me një model"
-        },
-        "model/csd/2021": {
-          "word": "Modeli",
-          "definition": "një program kompjuterik i dizajnuar për të marrë një vendim"
-        },
-        "supervised_learning/csd/2021": {
-          "word": "Të mësuarit me mbikëqyrje",
-          "definition": "Kur një njeri stërvit një model për të mësuar me shembuj"
-        },
-        "training/csd/2021": {
-          "word": "Trajnimi",
-          "definition": "dhënja e shembujve një modeli në mënyrë që të mund të mësojë"
-        },
-        "unsupervised_learning/csd/2021": {
-          "word": "Të mësuarit pa mbikëqyrje",
-          "definition": "Gjetja e modeleve në të dhëna që nuk kanë asnjë etiketë"
-        },
-        "categorical_data/csd/2021": {
-          "word": "Të dhëna kategorike",
-          "definition": "Të dhënat që mund të ndahen në grupe"
-        },
-        "classification/csd/2021": {
-          "word": "Klasifikimi",
-          "definition": "Parashikimi i një kategorie bazuar në karakteristika të tjera"
-        },
-        "bias/csd/2021": {
-          "word": "Njëanshmëria",
-          "definition": "Kur një vendim favorizon disa gjëra dhe i jep më pak prioritet ose përjashton të tjerat"
-        },
-        "numerical_data/csd/2021": {
-          "word": "Të dhëna numerike",
-          "definition": "të dhëna që mund të numërohen ose maten"
-        },
-        "ethics/csd/2021": {
-          "word": "Etika",
-          "definition": "udhëzime për sjellje të mirë"
-        },
         "algorithm/coursea/2021": {
           "word": "Algoritëm",
           "definition": "Një listë hapash për të përfunduar një detyrë."
@@ -824,10 +752,6 @@
           "word": "Funksion",
           "definition": "Një pjesë e emëruar e udhëzimeve të programimit."
         },
-        "user/csd/2022": {
-          "word": "Përdorues",
-          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
-        },
         "innovation/csd/2022": {
           "word": "Inovacioni",
           "definition": "Një ide, pajisje, produkt, etj, i ri ose i përmirësuar ose zhvillimi i tij/saj"
@@ -835,54 +759,6 @@
         "circuit/csd/2022": {
           "word": "Qark",
           "definition": "Një pajisje që siguron një rrugë për rrjedhjen e një rryme elektrike, shpesh duke modifikuar atë rrymë. Në kompjuter, qarqet lejojnë operacione të thjeshta logjike dhe matematikore duke përdorur energji elektrike."
-        },
-        "machine_learning/csd/2022": {
-          "word": "Mësimi i Makinave",
-          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
-        },
-        "features/csd/2022": {
-          "word": "Karakteristikat",
-          "definition": "Inputet që një model përdor për të marrë vendime"
-        },
-        "label/csd/2022": {
-          "word": "Emërtimi",
-          "definition": "outputi që po përpiqeni të vendosni ose parashikoni me një model"
-        },
-        "model/csd/2022": {
-          "word": "Modeli",
-          "definition": "një program kompjuterik i dizajnuar për të marrë një vendim"
-        },
-        "supervised_learning/csd/2022": {
-          "word": "Të mësuarit me mbikëqyrje",
-          "definition": "Kur një njeri stërvit një model për të mësuar me shembuj"
-        },
-        "training/csd/2022": {
-          "word": "Trajnimi",
-          "definition": "dhënja e shembujve një modeli në mënyrë që të mund të mësojë"
-        },
-        "unsupervised_learning/csd/2022": {
-          "word": "Të mësuarit pa mbikëqyrje",
-          "definition": "Gjetja e modeleve në të dhëna që nuk kanë asnjë etiketë"
-        },
-        "categorical_data/csd/2022": {
-          "word": "Të dhëna kategorike",
-          "definition": "Të dhënat që mund të ndahen në grupe"
-        },
-        "classification/csd/2022": {
-          "word": "Klasifikimi",
-          "definition": "Parashikimi i një kategorie bazuar në karakteristika të tjera"
-        },
-        "bias/csd/2022": {
-          "word": "Njëanshmëria",
-          "definition": "Kur një vendim favorizon disa gjëra dhe i jep më pak prioritet ose përjashton të tjerat"
-        },
-        "numerical_data/csd/2022": {
-          "word": "Të dhëna numerike",
-          "definition": "të dhëna që mund të numërohen ose maten"
-        },
-        "ethics/csd/2022": {
-          "word": "Etika",
-          "definition": "udhëzime për sjellje të mirë"
         },
         "algorithm/coursea/2022": {
           "word": "Algoritmi",
@@ -1421,184 +1297,6 @@
           "word": "Sjellja",
           "definition": "Një sërë veprimesh që dëshironi një sprite për të kryer pa pushim. "
         },
-        "code_v_/csc-bookcovers/2023": {
-          "word": "Kodi (v)",
-          "definition": "për të shkruar udhëzime për një kompjuter."
-        },
-        "event/csc-bookcovers/2023": {
-          "word": "Event",
-          "definition": "Një veprim që shkakton diçka të ndodhë."
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "Programi"
-        },
-        "sprite/csc-bookcovers/2023": {
-          "word": "Sprite",
-          "definition": "Një grafikë në ekran me një vendndodhje, madhësi dhe paraqitje."
-        },
-        "background/csc-bookcovers/2023": {
-          "word": "Historiku",
-          "definition": "Vizuale prapa gjërave kryesore ose njerëzit në ekran."
-        },
-        "character/csc-bookcovers/2023": {
-          "word": "Karakteri",
-          "definition": "Një person, kafshë, qenie, krijesë e një gjëje në një histori."
-        },
-        "setting/csc-bookcovers/2023": {
-          "word": "Vendosja",
-          "definition": "Koha dhe vendi (ose kur dhe ku) i një historie."
-        },
-        "summary/csc-bookcovers/2023": {
-          "word": "Përmbledhje",
-          "definition": "Tregoni pjesët më të rëndësishme të një teksti, me fjalët tuaja, në një mënyrë shumë më të shkurtër"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "Kod",
-          "definition": "(v) Për të shkruar udhëzime për një kompjuter"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Kusht",
-          "definition": "Diçka që një program kontrollon për të parë nëse është e vërtetë para se të lejojë një veprim"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Kushtet",
-          "definition": "Deklarata që funksionojnë vetëm në kushte të caktuara"
-        },
-        "ecosystem/csc-ecosystems/2023": {
-          "word": "Ekosistemi",
-          "definition": "Një komunitet biologjik i organizmave që ndërveprojnë dhe mjedisi i tyre"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "Event",
-          "definition": "Një veprim që shkakton diçka të ndodhë"
-        },
-        "overfishing/csc-ecosystems/2023": {
-          "word": "Mbipeshkimi",
-          "definition": "Heqja e peshkut më shpejt sesa mund të riprodhohet"
-        },
-        "simulation/csc-ecosystems/2023": {
-          "word": "Simulimi",
-          "definition": "Një model kompjuterik për qëllime studimi."
-        },
-        "debug/csc-ecosystems/2023": {
-          "word": "Korrigjim i gabimeve",
-          "definition": "Gjetja dhe rregullimi i gabimeve ose problemeve në kod."
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Variabël",
-          "definition": "Një enë që mund të ruajë një vlerë. "
-        },
-        "ecologist/csc-ecosystems/2023": {
-          "word": "Ekolog",
-          "definition": "Një shkencëtar që studion se si kafshët dhe bimët ndërveprojnë me mjedisin e tyre."
-        },
-        "energy/csc-ecosystems/2023": {
-          "definition": "Transferuar midis organizmave në rrjetat ushqimore nga prodhuesit tek konsumatorët. Energjia përdoret nga organizmat për të kryer detyra komplekse."
-        },
-        "food_chain/csc-ecosystems/2023": {
-          "word": "Zinxhiri ushqimor ",
-          "definition": "Një grup organizmash të lidhura në rendin e ushqimit që hanë, nga prodhuesit tek konsumatorët, dhe nga pre te grabitqarët."
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kod"
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "Event",
-          "definition": "Një veprim që shkakton diçka të ndodhë."
-        },
-        "landmark/csc-mappinglandmarks/2023": {
-          "word": "Pikë referimi",
-          "definition": "Një pikë referimi është një objekt (natyral ose i bërë nga njeriu) që ka rëndësi ose e bën një vend lehtësisht të njohur."
-        },
-        "sprite/csc-mappinglandmarks/2023": {
-          "word": "Sprite",
-          "definition": "Një imazh ose karakter në programin tuaj."
-        },
-        "map/csc-mappinglandmarks/2023": {
-          "word": "Harta",
-          "definition": "Një përfaqësim i një zone toke ose deti që tregon tiparet fizike, qytete, rrugë, etj."
-        },
-        "pattern/csc-starquilts/2023": {
-          "word": "Modeli",
-          "definition": "Diçka që ndodh ose shfaqet në mënyrë të rregullt dhe të përsëritur"
-        },
-        "rhombus/csc-starquilts/2023": {
-          "word": "Rombus",
-          "definition": "Një poligon me katër anët e barabarta, anët e kundërta janë paralele, kënde të kundërta janë të barabarta"
-        },
-        "star_quilt/csc-starquilts/2023": {
-          "word": "Jorgan yll",
-          "definition": "Një dhuratë tradicionale dhe e vlerësuar në mesin e amerikanëve vendas nga Rrafshinat e Mëdha"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Artisti",
-          "definition": "Ju mund të shkruani kodin për ta bërë atë të tërheqë pothuajse çdo gjë"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "Unazë përsëritëse",
-          "definition": "Një sekuencë kodi që përsëritet"
-        },
-        "point/csc-starquilts/2023": {
-          "word": "Pika",
-          "definition": "Një pjesë e formës së yllit"
-        },
-        "row/csc-starquilts/2023": {
-          "word": "Rresht",
-          "definition": "Në këtë rast, një linjë e rregullt e rombuseve"
-        },
-        "concentric/csc-starquilts/2023": {
-          "word": "koncentrik",
-          "definition": "Objekte ose forma që ndajnë të njëjtën qendër"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Komente",
-          "definition": "Shënime për veten tuaj që shpjegojnë një pjesë të kodit. Ata nuk ndryshojnë programin, por ndihmojnë në mbajtjen e kodit tuaj në rregull."
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "Event",
-          "definition": "Një veprim që shkakton diçka të ndodhë."
-        },
-        "imagery/csc-timecapsule/2023": {
-          "word": "Imazhet",
-          "definition": "Imazhe mendore të prodhuara nga një poemë ose histori"
-        },
-        "mood/csc-timecapsule/2023": {
-          "definition": "Shprehja e një ndjenje, atmosfere ose emocioni në art ose shkrim."
-        },
-        "sprite/csc-timecapsule/2023": {
-          "word": "Sprite",
-          "definition": "Një imazh ose karakter në programin tuaj"
-        },
-        "time_capsule/csc-timecapsule/2023": {
-          "definition": "Një vend për të mbajtur kujtime dhe sende të përditshme që përfaqësojnë një ditë në jetën e dikujt që jeton gjatë një periudhe të caktuar kohore. "
-        },
-        "code/poetry/2023": {
-          "word": "Kod"
-        },
-        "event/poetry/2023": {
-          "word": "Event",
-          "definition": "Një veprim që shkakton diçka të ndodhë."
-        },
-        "line/poetry/2023": {
-          "definition": "(poezi) - një nënndarje e një poeme të rregulluar në një rresht që përfundon në diferencën e djathtë."
-        },
-        "mood/poetry/2023": {
-          "definition": "Shprehja e një ndjenje, atmosfere ose emocioni në art ose shkrim."
-        },
-        "program/poetry/2023": {
-          "word": "Programi"
-        },
-        "poem/poetry/2023": {
-          "word": "Poemë",
-          "definition": "Rreshtat e shkrimit që përdorin fjalë për të krijuar fotografi, ndjenja dhe ide në mendjen e lexuesit."
-        },
-        "constructive_feedback/poetry/2023": {
-          "word": "Reagime konstruktive",
-          "definition": "Komentet e respektueshme që ndihmojnë dikë të përmirësojë punën e tij"
-        },
-        "poetry_circle/poetry/2023": {
-          "definition": "Një hapësirë e sigurt dhe krijuese për të provuar poezi të reja dhe për të marrë reagime konstruktive nga të tjerët"
-        },
         "computer/csd/2023": {
           "word": "Kompjuter",
           "definition": "Një makinë që punon me informacion."
@@ -1674,62 +1372,6 @@
         "css_class/csd/2023": {
           "word": "Klasa CSS",
           "definition": "Një identifikues që lejon elemente të shumta në një dokument HTML të stilohen në të njëjtën mënyrë"
-        },
-        "bug/csd/2023": {
-          "word": "Bug",
-          "definition": "Pjesë e një programi që nuk funksionon si duhet."
-        },
-        "debugging/csd/2023": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/csd/2023": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "parameter/csd/2023": {
-          "word": "Parametri",
-          "definition": "Informacion shtesë i dhënë si input në një bllok për të personalizuar funksionalitetin e tij"
-        },
-        "variable/csd/2023": {
-          "word": "Variabël",
-          "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
-        },
-        "sprite/csd/2023": {
-          "word": "Sprite",
-          "definition": "Një karakter në ekran me atributet që përshkruajnë vendndodhjen, lëvizjen dhe pamjen e tij."
-        },
-        "dot_notation/csd/2023": {
-          "word": "Pikë shënimi",
-          "definition": "mënyra se si atributet e sprites përdoren në Game Lab, duke lidhur sprite dhe atributin me një pikë."
-        },
-        "property/csd/2023": {
-          "word": "Parametrat",
-          "definition": "Një emërtim për një karakteristikë të një sprite, siç është vendndodhja dhe pamja e tij"
-        },
-        "boolean_expression/csd/2023": {
-          "word": "Shprehja Boolean",
-          "definition": "në programim, një shprehje që vlerëson të Vërtetë ose të Pavërtetën. "
-        },
-        "condition/csd/2023": {
-          "word": "Kusht",
-          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
-        },
-        "conditionals/csd/2023": {
-          "word": "Kushtet",
-          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstraksioni",
-          "definition": "një paraqitje i thjeshtuar e diçkaje më komplekse. Abstraksionet ju lejojnë të fshehni detaje për t'ju ndihmuar të menaxhoni kompleksitetin, të përqendroheni në konceptet përkatëse dhe të arsyetoni për problemet në një nivel më të lartë."
-        },
-        "function/csd/2023": {
-          "word": "Funksion",
-          "definition": "Një pjesë e emëruar e udhëzimeve të programimit."
-        },
-        "user/csd/2023": {
-          "word": "Përdorues",
-          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
         },
         "circuit/csd/2023": {
           "word": "Qark",
@@ -2266,40 +1908,6 @@
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
-        "machine_learning/how-ai-works/2023": {
-          "word": "Mësimi i Makinave",
-          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
-        },
-        "algorithm/how-ai-works/2023": {
-          "word": "Algoritëm",
-          "definition": "një sërë hapash për të zgjidhur një problem ose për të marrë një vendim"
-        },
-        "network/how-ai-works/2023": {
-          "definition": "Një koleksion artikujsh të lidhur së bashku. Ndjekja e këtyre lidhjeve mund të përfaqësojë hapat në një algoritëm, si një diagramë rrjedhëse."
-        },
-        "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Modeli i gjuhës së madhe (LLM)",
-          "definition": "një formë me qëllim të përgjithshëm të AI që trajnohet në një trup shumë, shumë të madh të njohurive"
-        },
-        "model/how-ai-works/2023": {
-          "word": "Modeli",
-          "definition": "një program kompjuterik i dizajnuar për të marrë një vendim"
-        },
-        "diffusion_ai/how-ai-works/2023": {
-          "word": "Difuzion AI",
-          "definition": "konvertimin e një imazhi në zhurmë, dhe trajnimin e një AI për të ndryshuar procesin"
-        },
-        "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (Rrjeti kundërshtar gjenerues)",
-          "definition": "një mënyrë për të përdorur dy modele konkurruese të AI për të gjeneruar diçka"
-        },
-        "artificial_intelligence/how-ai-works/2023": {
-          "definition": "aftësia e makinerive për të mësuar dhe për të zgjidhur problemet."
-        },
-        "ethics/how-ai-works/2023": {
-          "word": "Etika",
-          "definition": "udhëzime për sjellje të mirë"
-        },
         "code/aquatic/unversioned": {
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
@@ -2350,17 +1958,6 @@
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
-        "code/dance-2019/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Event",
-          "definition": "Një veprim që shkakton diçka të ndodhë."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
         "code/dance-extras-2019/unversioned": {
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
@@ -2394,112 +1991,6 @@
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
-        "code/flappy/unversioned": {
-          "word": "kod",
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/flappy/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "code/frozen/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/frozen/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "code/gumball/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/gumball/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "code/hero/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "function/hero/unversioned": {
-          "word": "Funksion",
-          "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
-        },
-        "program/hero/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Shifra e Cezarit",
-          "definition": "një teknikë për enkriptim që e zhvendos alfabetin me një numër karakteresh"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Shifra",
-          "definition": "termi i përgjithshëm për një teknikë (ose algoritëm) që kryen kriptim"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Kriptimi i çarjes",
-          "definition": "Kur përpiqeni të deshifroni një mesazh sekret pa i ditur të gjitha specifikat e shifrës, po përpiqeni të \"plasni\" enkriptimin."
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "Dekriptimi",
-          "definition": "një proces që kthen mbrapsht enkriptimin, duke marrë një mesazh sekret dhe duke riprodhuar tekstin origjinal të thjeshtë"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Enkriptimi",
-          "definition": "një proces i kodimit të mesazheve për t'i mbajtur ato sekrete, kështu që vetëm palët \"e autorizuara\" mund ta lexojnë atë."
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "Shifra e zëvendësimit të rastësishëm",
-          "definition": "një teknikë enkriptimi që harton secilën shkronjë të alfabetit me shkronjat e tjera të alfabetit të zgjedhura rastësisht."
-        },
-        "code/hourofcode/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "code/iceage/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/iceage/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "code/infinity/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/infinity/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
         "code/mc/unversioned": {
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
@@ -2530,27 +2021,12 @@
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
-        "machine_learning/oceans/unversioned": {
-          "word": "Mësimi i Makinave",
-          "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
-        },
         "event/outbreak/unversioned": {
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "models_and_simulations/outbreak/unversioned": {
           "word": "Modelet dhe Simulimet"
-        },
-        "code/playlab/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/playlab/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "code/poem-art/2021": {
           "word": "Kod"
@@ -2575,28 +2051,6 @@
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "program/sports/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "code/starwars/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/starwars/unversioned": {
-          "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
-        },
-        "code/starwarsblocks/unversioned": {
-          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Debugging",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
-        },
-        "program/starwarsblocks/unversioned": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         }

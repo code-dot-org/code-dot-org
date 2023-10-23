@@ -751,18 +751,18 @@
           "rubric_performance_level_4": "Aplikacioni nuk ka nisur"
         },
         "CSD U6 LED all_2019": {
-          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një larmi pajisjesh fizike.",
-          "rubric_performance_level_1": "Programi funksionon siç përshkruhet në udhëzimet, me butonat që shkaktojnë LED të ndizet, pulsohet, pulsohet ose fiket. Nuk ka kod të panevojshëm.",
+          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një sërë pajisjesh fizike.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet në udhëzimet, me butonat që shkaktojnë LED-in të ndizet, pulsohet ose fiket. Nuk ka kod të panevojshëm.",
           "rubric_performance_level_2": "Butonat e ndezjes dhe fikjes së programit funksionojnë, por mund të ketë kod të panevojshëm që nuk ndikon në funksionalitetin e atyre dy butonave.",
-          "rubric_performance_level_3": "Të paktën një nga butonat përveç butonit “on” punon, ose blloqet e sakta për të kontrolluar LED janë të përfshira në program, por nuk shkaktohen saktë nga një ngjarje.",
-          "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “on” punon, dhe nuk ka asnjë kod që mund të përdoret për të kontrolluar LED."
+          "rubric_performance_level_3": "Të paktën një nga butonat përveç butonit “on” punon, ose blloqet e sakta për të kontrolluar LED janë të përfshira në program, por nuk shkaktohen saktë nga një event.",
+          "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “on” punon, dhe nuk ka asnjë kod që mund të përdoret për të kontrolluar LED-in."
         },
         "CSD U6 LED all_2021": {
-          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një larmi pajisjesh fizike.",
-          "rubric_performance_level_1": "Programi funksionon siç përshkruhet në udhëzimet, me butonat që shkaktojnë LED të ndizet, pulsohet, pulsohet ose fiket. Nuk ka kod të panevojshëm.",
+          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një sërë pajisjesh fizike.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet në udhëzimet, me butonat që shkaktojnë LED-in të ndizet, pulsohet ose fiket. Nuk ka kod të panevojshëm.",
           "rubric_performance_level_2": "Butonat e ndezjes dhe fikjes së programit funksionojnë, por mund të ketë kod të panevojshëm që nuk ndikon në funksionalitetin e atyre dy butonave.",
-          "rubric_performance_level_3": "Të paktën një nga butonat përveç butonit “on” punon, ose blloqet e sakta për të kontrolluar LED janë të përfshira në program, por nuk shkaktohen saktë nga një ngjarje.",
-          "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “on” punon, dhe nuk ka asnjë kod që mund të përdoret për të kontrolluar LED."
+          "rubric_performance_level_3": "Të paktën një nga butonat përveç butonit “on” punon, ose blloqet e sakta për të kontrolluar LED janë të përfshira në program, por nuk shkaktohen saktë nga një event.",
+          "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “on” punon, dhe nuk ka asnjë kod që mund të përdoret për të kontrolluar LED-in."
         },
         "CSD U6 analog rgb 3_2019": {
           "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie hyrjesh harduerike, përfshirë ato që përdoruesi bën dhe nuk i kontrollon në mënyrë aktive. Njohin nevojën për lloje të ndryshme të hyrjes, si analoge ashtu edhe digkitale, dhe përfaqësojnë vlerat e atyre hyrjeve në mënyra të ndryshme.",
@@ -807,30 +807,30 @@
           "rubric_performance_level_4": "Programi nuk përfshin elemente të jashtëm ose elementet e jashtëm nuk mund të ndërveprojnë me pllakën."
         },
         "CSD U6 create LED app 2_2019": {
-          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një larmi pajisjesh fizike.",
+          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një sërë pajisjesh fizike.",
           "rubric_performance_level_1": "Programi lejon përdoruesin të kontrollojë LED në mënyra të shumta dhe të gjithë elementët interaktivë duket se funksionojnë siç është menduar.",
-          "rubric_performance_level_2": "Programi lejon përdoruesin të kontrollojë LED, por mund të ketë gabime të vogla në elementët interaktivë të aplikacionit.",
-          "rubric_performance_level_3": "Programi ka kod që lidhet me LED, por ka gabime të rëndësishme që e mbajnë përdoruesin nga kontrolli i LED sipas qëllimit.",
-          "rubric_performance_level_4": "Nuk ka asnjë kod që lidhet me kontrollin e LED në aplikacion."
+          "rubric_performance_level_2": "Programi lejon përdoruesin të kontrollojë LED-in, por mund të ketë gabime të vogla në elementët interaktivë të aplikacionit.",
+          "rubric_performance_level_3": "Programi ka kod që lidhet me LED-in, por ka gabime të rëndësishme që e mbajnë përdoruesin nga kontrolli i LED-it sipas qëllimit.",
+          "rubric_performance_level_4": "Nuk ka asnjë kod që lidhet me kontrollin e LED-it në aplikacion."
         },
         "CSD U6 create LED app 2_2021": {
-          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një larmi pajisjesh fizike.",
+          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një sërë pajisjesh fizike.",
           "rubric_performance_level_1": "Programi lejon përdoruesin të kontrollojë LED në mënyra të shumta dhe të gjithë elementët interaktivë duket se funksionojnë siç është menduar.",
-          "rubric_performance_level_2": "Programi lejon përdoruesin të kontrollojë LED, por mund të ketë gabime të vogla në elementët interaktivë të aplikacionit.",
-          "rubric_performance_level_3": "Programi ka kod që lidhet me LED, por ka gabime të rëndësishme që e mbajnë përdoruesin nga kontrolli i LED sipas qëllimit.",
-          "rubric_performance_level_4": "Nuk ka asnjë kod që lidhet me kontrollin e LED në aplikacion."
+          "rubric_performance_level_2": "Programi lejon përdoruesin të kontrollojë LED-in, por mund të ketë gabime të vogla në elementët interaktivë të aplikacionit.",
+          "rubric_performance_level_3": "Programi ka kod që lidhet me LED-in, por ka gabime të rëndësishme që e mbajnë përdoruesin nga kontrolli i LED-it sipas qëllimit.",
+          "rubric_performance_level_4": "Nuk ka asnjë kod që lidhet me kontrollin e LED-it në aplikacion."
         },
         "CSD U6 emotion machine 4_2019": {
-          "rubric_key_concept": "Përdorni mbajtësit e ngjarjeve për t'iu përgjigjur ndërveprimit të përdoruesit dhe përdorni cilësimet për të manipuluar vetitë e elementeve në një sistem.",
-          "rubric_performance_level_1": "Programi ka tre butona me etiketa të sakta, dhe kur klikohet një buton, shfaqet ikona e saktë dhe përshkrimi i emocioneve. ",
-          "rubric_performance_level_2": "Programi ka tre butona, dhe programi përgjigjet në një farë mënyre për çdo klikim butoni, por përgjigja mund të mos jetë saktësisht siç përshkruhet në udhëzimet.",
+          "rubric_key_concept": "Përdorni mbajtësit e eventeve për t'iu përgjigjur ndërveprimit të përdoruesit dhe përdorni cilësimet për të manipuluar vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Programi ka tre butona me etiketa të sakta dhe kur klikohet një buton, shfaqet ikona e saktë dhe përshkrimi i emocioneve. ",
+          "rubric_performance_level_2": "Programi ka tre butona dhe programi përgjigjet në një farë mënyre për çdo klikim butoni, por përgjigja mund të mos jetë saktësisht siç përshkruhet në udhëzimet.",
           "rubric_performance_level_3": "Të paktën një buton tjetër përveç butonit “Gëzuar” përgjigjet për t'u klikuar në një farë mënyre.",
           "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “Gëzuar” nuk përgjigjet nga klikimi."
         },
         "CSD U6 emotion machine 4_2021": {
-          "rubric_key_concept": "Përdorni mbajtësit e ngjarjeve për t'iu përgjigjur ndërveprimit të përdoruesit dhe përdorni cilësimet për të manipuluar vetitë e elementeve në një sistem.",
-          "rubric_performance_level_1": "Programi ka tre butona me etiketa të sakta, dhe kur klikohet një buton, shfaqet ikona e saktë dhe përshkrimi i emocioneve. ",
-          "rubric_performance_level_2": "Programi ka tre butona, dhe programi përgjigjet në një farë mënyre për çdo klikim butoni, por përgjigja mund të mos jetë saktësisht siç përshkruhet në udhëzimet.",
+          "rubric_key_concept": "Përdorni mbajtësit e eventeve për t'iu përgjigjur ndërveprimit të përdoruesit dhe përdorni cilësimet për të manipuluar vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Programi ka tre butona me etiketa të sakta dhe kur klikohet një buton, shfaqet ikona e saktë dhe përshkrimi i emocioneve. ",
+          "rubric_performance_level_2": "Programi ka tre butona dhe programi përgjigjet në një farë mënyre për çdo klikim butoni, por përgjigja mund të mos jetë saktësisht siç përshkruhet në udhëzimet.",
           "rubric_performance_level_3": "Të paktën një buton tjetër përveç butonit “Gëzuar” përgjigjet për t'u klikuar në një farë mënyre.",
           "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “Gëzuar” nuk përgjigjet nga klikimi."
         },
@@ -909,29 +909,29 @@
           "rubric_performance_level_4": "Programi nuk përfshin ndonjë funksion me parametra."
         },
         "CSD U6 setProperty hidden 2_2019": {
-          "rubric_key_concept": "Përdorin mbajtësit e ngjarjeve për t'iu përgjigjur ndërveprimit të përdoruesit",
-          "rubric_performance_level_1": "Kur shtypet “stopAlarmButton”, teksti i statusit ndryshon në “OFF” dhe butoni zhduket. Nuk ka kod shtesë në program.",
+          "rubric_key_concept": "Përdorni mbajtësit e eventeve për t'iu përgjigjur ndërveprimit të përdoruesit",
+          "rubric_performance_level_1": "Kur shtypet “Butoninealarmitstop”, teksti i statusit ndryshon në “OFF” dhe butoni zhduket. Nuk ka kod shtesë në program.",
           "rubric_performance_level_2": "Kur shtypet “stopAlarmButton”, programi përgjigjet në një farë mënyre, por jo domosdoshmërisht siç përshkruhet në udhëzimet, ose mund të ketë kod të panevojshëm të shkaktuar nga ngjarja.",
-          "rubric_performance_level_3": "Një ngjarje e dytë është krijuar, por mund të mos shkaktohet në kohë të përshtatshme, ose programi mund të ketë krijuar ngjarje të panevojshme.",
-          "rubric_performance_level_4": "Asnjë ngjarje e re nuk u krijua."
+          "rubric_performance_level_3": "Një event i dytë është krijuar, por mund të mos aktivizohet në kohë të përshtatshme, ose programi mund të ketë krijuar një event të panevojshme.",
+          "rubric_performance_level_4": "Asnjë event i ri nuk u krijua."
         },
         "CSD U6 setProperty hidden 2_2021": {
-          "rubric_key_concept": "Përdorin mbajtësit e ngjarjeve për t'iu përgjigjur ndërveprimit të përdoruesit",
-          "rubric_performance_level_1": "Kur shtypet “stopAlarmButton”, teksti i statusit ndryshon në “OFF” dhe butoni zhduket. Nuk ka kod shtesë në program.",
+          "rubric_key_concept": "Përdorni mbajtësit e eventeve për t'iu përgjigjur ndërveprimit të përdoruesit",
+          "rubric_performance_level_1": "Kur shtypet “Butoninealarmitstop”, teksti i statusit ndryshon në “OFF” dhe butoni zhduket. Nuk ka kod shtesë në program.",
           "rubric_performance_level_2": "Kur shtypet “stopAlarmButton”, programi përgjigjet në një farë mënyre, por jo domosdoshmërisht siç përshkruhet në udhëzimet, ose mund të ketë kod të panevojshëm të shkaktuar nga ngjarja.",
-          "rubric_performance_level_3": "Një ngjarje e dytë është krijuar, por mund të mos shkaktohet në kohë të përshtatshme, ose programi mund të ketë krijuar ngjarje të panevojshme.",
-          "rubric_performance_level_4": "Asnjë ngjarje e re nuk u krijua."
+          "rubric_performance_level_3": "Një event i dytë është krijuar, por mund të mos aktivizohet në kohë të përshtatshme, ose programi mund të ketë krijuar një event të panevojshme.",
+          "rubric_performance_level_4": "Asnjë event i ri nuk u krijua."
         },
         "CSD U6 setProperty xy_2019": {
-          "rubric_key_concept": "Përdorin përcaktuesit për të hyrë dhe manipuluar vetitë e elementeve në një sistem.",
-          "rubric_performance_level_1": "Drejtkëndëshi i kuq është në pozicionin e duhur dhe asnjë drejtkëndësh tjetër nuk është lëvizur. Programi përdor vetëm dy blloqe.",
+          "rubric_key_concept": "Përdorni përcaktuesit për të hyrë dhe manipuluar vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Drejtkëndëshi i kuq është në pozicionin e duhur dhe asnjë drejtkëndësh tjetër nuk është zhvendosur. Programi përdor vetëm dy blloqe.",
           "rubric_performance_level_2": "Drejtkëndëshi i kuq është zhvendosur, por mund të mos jetë në pozicionin e duhur, ose mund të ketë blloqe shtesë të kodit. Drejtkëndëshat e tjera janë në pozicionet e tyre origjinale.",
           "rubric_performance_level_3": "Disa drejtkëndëshe janë zhvendosur, por fotografia nuk duket e ngjashme me shembullin.",
           "rubric_performance_level_4": "Drejtkëndëshat nuk janë zhvendosur."
         },
         "CSD U6 setProperty xy_2021": {
-          "rubric_key_concept": "Përdorin përcaktuesit për të hyrë dhe manipuluar vetitë e elementeve në një sistem.",
-          "rubric_performance_level_1": "Drejtkëndëshi i kuq është në pozicionin e duhur dhe asnjë drejtkëndësh tjetër nuk është lëvizur. Programi përdor vetëm dy blloqe.",
+          "rubric_key_concept": "Përdorni përcaktuesit për të hyrë dhe manipuluar vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Drejtkëndëshi i kuq është në pozicionin e duhur dhe asnjë drejtkëndësh tjetër nuk është zhvendosur. Programi përdor vetëm dy blloqe.",
           "rubric_performance_level_2": "Drejtkëndëshi i kuq është zhvendosur, por mund të mos jetë në pozicionin e duhur, ose mund të ketë blloqe shtesë të kodit. Drejtkëndëshat e tjera janë në pozicionet e tyre origjinale.",
           "rubric_performance_level_3": "Disa drejtkëndëshe janë zhvendosur, por fotografia nuk duket e ngjashme me shembullin.",
           "rubric_performance_level_4": "Drejtkëndëshat nuk janë zhvendosur."
@@ -1078,17 +1078,17 @@
         },
         "CSDU6 - LED toggle buttonL up_2019": {
           "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie të hyrjes së harduerit.",
-          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me LED që ndizet kur përdoruesi shtypi butonin poshtë dhe fiket kur përdoruesi lëshon butonin. Nuk ka kod të panevojshëm.",
-          "rubric_performance_level_2": "Programi përdor një mbajtës ngjarjesh për të zbuluar lëshimin e butonit, por mund të mos përgjigjet siç përshkruhet, ose mund të ketë kod të panevojshëm të përfshirë në program.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me LED-in që ndizet kur përdoruesi shtypi butonin poshtë dhe fiket kur përdoruesi lëshon butonin. Nuk ka kod të panevojshëm.",
+          "rubric_performance_level_2": "Programi përdor një mbajtës eventesh për të zbuluar lëshimin e butonit, por mund të mos përgjigjet siç përshkruhet, ose mund të ketë kod të panevojshëm të përfshirë në program.",
           "rubric_performance_level_3": "Programi përdor një mbajtës të ngjarjeve të pllakës(board), por ka gabime mjaft të rëndësishme që programi nuk mund të zbulojë lëshimin e butonit.",
-          "rubric_performance_level_4": "Programi nuk përdor një mbajtës të ngjarjeve të pllakës."
+          "rubric_performance_level_4": "Programi nuk përdor një mbajtës të eventeve të pllakës."
         },
         "CSDU6 - LED toggle buttonL up_2021": {
           "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie të hyrjes së harduerit.",
-          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me LED që ndizet kur përdoruesi shtypi butonin poshtë dhe fiket kur përdoruesi lëshon butonin. Nuk ka kod të panevojshëm.",
-          "rubric_performance_level_2": "Programi përdor një mbajtës ngjarjesh për të zbuluar lëshimin e butonit, por mund të mos përgjigjet siç përshkruhet, ose mund të ketë kod të panevojshëm të përfshirë në program.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me LED-in që ndizet kur përdoruesi shtypi butonin poshtë dhe fiket kur përdoruesi lëshon butonin. Nuk ka kod të panevojshëm.",
+          "rubric_performance_level_2": "Programi përdor një mbajtës eventesh për të zbuluar lëshimin e butonit, por mund të mos përgjigjet siç përshkruhet, ose mund të ketë kod të panevojshëm të përfshirë në program.",
           "rubric_performance_level_3": "Programi përdor një mbajtës të ngjarjeve të pllakës(board), por ka gabime mjaft të rëndësishme që programi nuk mund të zbulojë lëshimin e butonit.",
-          "rubric_performance_level_4": "Programi nuk përdor një mbajtës të ngjarjeve të pllakës."
+          "rubric_performance_level_4": "Programi nuk përdor një mbajtës të eventeve të pllakës."
         },
         "CSDU6 arrays select variable_2019": {
           "rubric_key_concept": "Hyni në një element në një varg.",
