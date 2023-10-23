@@ -7,7 +7,6 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
 import {BlockSvg, Workspace} from 'blockly/core';
-import {doAi} from './utils';
 import AiGeneratingView from './AiGeneratingView';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {chooseEffects} from './DanceAiClient';
@@ -155,18 +154,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const startAi = async () => {
-    // Default to using cached response, otherwise contact OpenAI directly
-    let responseJsonString: string;
-    if (queryParams('ai-model') === 'llm') {
-      const inputNames = inputs.map(
-        input =>
-          inputLibrary.items.find((item: AiModalItem) => item.id === input).name
-      );
-      const request = `${promptString} ${inputNames.join(', ')}.`;
-      responseJsonString = await doAi(request);
-    } else {
-      responseJsonString = chooseEffects(inputs);
-    }
+    const responseJsonString = chooseEffects(inputs);
     const result = JSON.parse(responseJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
