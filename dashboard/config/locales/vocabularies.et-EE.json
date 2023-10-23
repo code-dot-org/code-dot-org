@@ -8,21 +8,6 @@
         "copyright/csd/2021": {
           "word": "Autoriõigus"
         },
-        "debugging/csd/2021": {
-          "word": "Debugimine"
-        },
-        "variable/csd/2021": {
-          "word": "Muutuja"
-        },
-        "conditionals/csd/2021": {
-          "word": "Tingimuslaused"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstraktsus"
-        },
-        "function/csd/2021": {
-          "word": "Funktsioon"
-        },
         "debugging/coursea/2021": {
           "word": "Debugimine"
         },
@@ -106,21 +91,6 @@
         },
         "copyright/csd/2022": {
           "word": "Autoriõigus"
-        },
-        "debugging/csd/2022": {
-          "word": "Debugimine"
-        },
-        "variable/csd/2022": {
-          "word": "Muutuja"
-        },
-        "conditionals/csd/2022": {
-          "word": "Tingimuslaused"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstraktsus"
-        },
-        "function/csd/2022": {
-          "word": "Funktsioon"
         },
         "debugging/coursea/2022": {
           "word": "Debugimine"
@@ -209,47 +179,11 @@
         "behavior/csc-adaptations/2023": {
           "word": "Käitumine"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Kood"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Tingimuslaused"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Muutuja"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Kood"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Kunstnik"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Kommentaarid"
-        },
-        "code/poetry/2023": {
-          "word": "Kood"
-        },
         "input/csd/2023": {
           "word": "Sisend"
         },
         "copyright/csd/2023": {
           "word": "Autoriõigus"
-        },
-        "debugging/csd/2023": {
-          "word": "Debugimine"
-        },
-        "variable/csd/2023": {
-          "word": "Muutuja"
-        },
-        "conditionals/csd/2023": {
-          "word": "Tingimuslaused"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstraktsus"
-        },
-        "function/csd/2023": {
-          "word": "Funktsioon"
         },
         "debugging/coursea/2023": {
           "word": "Debugimine"
@@ -350,52 +284,16 @@
         "debugging/basketball/unversioned": {
           "word": "Debugimine"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Debugimine"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Debugimine"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Debugimine"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Debugimine"
-        },
-        "function/hero/unversioned": {
-          "word": "Funktsioon"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Debugimine"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Debugimine"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Debugimine"
-        },
         "debugging/mc/unversioned": {
           "word": "Debugimine"
         },
         "debugging/minecraft/unversioned": {
           "word": "Debugimine"
         },
-        "debugging/playlab/unversioned": {
-          "word": "Debugimine"
-        },
-        "code/poem-art/2021": {
-          "word": "Kood"
-        },
         "code/sports/unversioned": {
           "word": "Kood"
         },
         "debugging/sports/unversioned": {
-          "word": "Debugimine"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Debugimine"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Debugimine"
         }
       }

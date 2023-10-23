@@ -2135,9 +2135,24 @@ et:
           lesson_groups:
             content:
               display_name: Sisu
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Sissejuhatus
+          lessons:
+            lesson-7:
+              name: Sissejuhatus
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Sissejuhatus
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Sissejuhatus
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Sissejuhatus
         web-development-2023:
           lesson_groups:
