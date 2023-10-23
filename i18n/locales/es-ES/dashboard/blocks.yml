@@ -2,6 +2,10 @@
 es:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -2608,6 +2612,10 @@ es:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      ecosystems_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         text: "{VALUE}"
         options:

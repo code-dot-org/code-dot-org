@@ -4,6 +4,7 @@ es:
     attributes:
       user:
         age: Edad
+        ai_settings_header: Los ajustes de IA
         current_password: Contraseña actual
         edit_header: Editar información de la cuenta
         email: Correo electrónico
