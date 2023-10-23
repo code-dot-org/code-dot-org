@@ -178,6 +178,9 @@ class Section < ApplicationRecord
   CSA = 'csa'.freeze
   CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
+  # A section can have five co-teachers, plus the owner, for a total of 6
+  INSTRUCTOR_LIMIT = 6
+
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
   end
@@ -582,23 +585,10 @@ class Section < ApplicationRecord
   before_validation :strip_emoji_from_name
 
   public def add_instructor(email)
-    # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
-    # for a total of 6)
-    if section_instructors.count >= 6
-      raise ArgumentError.new('section full')
-    end
-
     instructor = User.find_by!(email: email, user_type: :teacher)
 
-    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: self)
-
-    # Actually delete the instructor if they were soft-deleted so they can be re-invited.
-    if si&.deleted_at.present?
-      si.really_destroy!
-    # Can't re-add someone who is already an instructor (or invited/declined)
-    elsif si.present?
-      raise ArgumentError.new('already invited')
-    end
+    deleted_section_instructor = validate_instructor(instructor)
+    deleted_section_instructor&.really_destroy!
 
     SectionInstructor.create!(
       section: self,
@@ -606,5 +596,22 @@ class Section < ApplicationRecord
       status: :invited,
       invited_by: current_user
     )
+  end
+
+  # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
+  public def validate_instructor(instructor)
+    if section_instructors.count >= INSTRUCTOR_LIMIT
+      raise ArgumentError.new('section full')
+    end
+
+    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: self)
+
+    # Return the instructor for actual deletion if they were soft-deleted
+    if si&.deleted_at.present?
+      return si
+    # Can't re-add someone who is already an instructor (or invited/declined)
+    elsif si.present?
+      raise ArgumentError.new('already invited')
+    end
   end
 end
