@@ -33,6 +33,11 @@ export default function () {
       return this.model_;
     },
 
+    /**
+     * If there is already a procedure model in the procedure map for this procedure's name,
+     * assign that procedure to this.model_. Otherwise create a new procedure model and add it
+     * to the map.
+     */
     findOrCreateProcedureModel() {
       this.creatingModel_ = true;
       const procedureName = this.procedureName || this.getFieldValue('NAME');

@@ -62,6 +62,8 @@ export const behaviorDefMutator = {
    */
   domToMutation: function (xmlElement) {
     this.procedureName = xmlElement.nextElementSibling.getAttribute('id');
+    // Ensure we assign a procedure model to this block with the name this.procedureName.
+    // See procedureDefGetDefMixin.js for more details.
     this.findOrCreateProcedureModel();
     // We do not copy parameters because behavior parameters are a special case.
     // We manually create the "this sprite" parameter for each behavior,

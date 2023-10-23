@@ -64,6 +64,8 @@ export const procedureDefMutator = {
    */
   domToMutation: function (xmlElement) {
     this.procedureName = xmlElement.nextElementSibling.textContent;
+    // Ensure we assign a procedure model to this block with the name this.procedureName.
+    // See procedureDefGetDefMixin.js for more details.
     this.findOrCreateProcedureModel();
     for (let i = 0; i < xmlElement.childNodes.length; i++) {
       const node = xmlElement.childNodes[i];
