@@ -2,126 +2,6 @@
   "lt-LT": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/express/2018": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/express/2020": {
-          "name": "Pamokos planai"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "Pamokos planai"
-        },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "type": "Tarpusavio peržiūra"
         },
@@ -139,45 +19,6 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Tarpusavio peržiūra"
-        },
-        "variables_1/csd/2021": {
-          "name": "Kintamieji"
-        },
-        "interactive-card-1-2-3-4/csd/2021": {
-          "type": "Tarpusavio peržiūra"
-        },
-        "velocity_1/csd/2021": {
-          "name": "Greitis"
-        },
-        "velocity_2/csd/2021": {
-          "name": "Greitis"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Komandų kūrimas"
-        },
-        "functions_1/csd/2021": {
-          "name": "Komandų kūrimas"
-        },
-        "make-your-own-game-1-2-3/csd/2021": {
-          "type": "Tarpusavio peržiūra"
-        },
-        "design_mode/csd/2021": {
-          "name": "Dizaino režimas"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Dizaino režimas"
-        },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "Tarpusavio peržiūra"
-        },
-        "functions_2/csd/2021": {
-          "name": "Komandų kūrimas"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Kartojimas"
-        },
-        "for_loops/csd/2021": {
-          "name": "Kartojimas"
         },
         "implementation_guide/coursea/2021": {
           "name": "Diegimo vadovas"
@@ -378,48 +219,6 @@
           "type": "Tarpusavio peržiūra"
         },
         "website_for_a_purpose_1/csd/2022": {
-          "type": "Tarpusavio peržiūra"
-        },
-        "variables/csd/2022": {
-          "name": "Kintamieji"
-        },
-        "variables_3/csd/2022": {
-          "name": "Kintamieji"
-        },
-        "text/csd/2022": {
-          "name": "Tekstas"
-        },
-        "conditionals/csd/2022": {
-          "name": "Sąlyginiai sakiniai"
-        },
-        "interactive_card_2/csd/2022": {
-          "type": "Tarpusavio peržiūra"
-        },
-        "velocity/csd/2022": {
-          "name": "Greitis"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Greitis"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Greitis"
-        },
-        "functions/csd/2022": {
-          "name": "Komandų kūrimas"
-        },
-        "functions_1/csd/2022": {
-          "name": "Komandų kūrimas"
-        },
-        "functions_4/csd/2022": {
-          "name": "Komandų kūrimas"
-        },
-        "make_your_own_game_2/csd/2022": {
-          "type": "Tarpusavio peržiūra"
-        },
-        "design_mode/csd/2022": {
-          "name": "Dizaino režimas"
-        },
-        "make_a_recommendation/csd/2022": {
           "type": "Tarpusavio peržiūra"
         },
         "variables_1/csd/2022": {
@@ -650,38 +449,11 @@
         "variables_1/csd/2023": {
           "name": "Kintamieji"
         },
-        "variables_2/csd/2023": {
-          "name": "Kintamieji"
-        },
-        "text/csd/2023": {
-          "name": "Tekstas"
-        },
-        "conditionals/csd/2023": {
-          "name": "Sąlyginiai sakiniai"
-        },
-        "velocity/csd/2023": {
-          "name": "Greitis"
-        },
-        "velocity_1/csd/2023": {
-          "name": "Greitis"
-        },
-        "velocity_2/csd/2023": {
-          "name": "Greitis"
-        },
         "functions/csd/2023": {
           "name": "Komandų kūrimas"
         },
         "functions_1/csd/2023": {
           "name": "Komandų kūrimas"
-        },
-        "functions_2/csd/2023": {
-          "name": "Komandų kūrimas"
-        },
-        "design_mode/csd/2023": {
-          "name": "Dizaino režimas"
-        },
-        "make_a_recommendation/csd/2023": {
-          "type": "Tarpusavio peržiūra"
         },
         "functions_with_parameters/csd/2023": {
           "name": "Komandos su parametrais"
