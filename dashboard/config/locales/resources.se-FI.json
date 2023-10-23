@@ -39,51 +39,6 @@
         "website-for-a-purpose/csd/2021": {
           "type": "Eará Oahppi Árvvoštallan"
         },
-        "sprites_1/csd/2021": {
-          "name": "Sprite:at"
-        },
-        "animating-sprites/csd/2021": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "interactive-card-1-2-3-4/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "make-your-own-game-1-2-3/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "paper-prototypes/csd/2021": {
-          "name": "BáberPrototyhpat"
-        },
-        "market-research/csd/2021": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "market_research/csd/2021": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "design_mode/csd/2021": {
-          "name": "Designa Modus"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Designa Modus"
-        },
-        "data-in-the-real-world-exemplar-2019/csd/2021": {
-          "name": "Dáta Duohta Máilmmis"
-        },
-        "data-in-the-real-world/csd/2021": {
-          "name": "Dáta Duohta Máilmmis"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "Video: Oahpahit Mašiinna"
-        },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "name": "Láidehus Matrisaide"
-        },
-        "survey_planning/csd/2021": {
-          "name": "Designe Data Čoakkaldaga"
-        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Movttegis Kárttat"
         },
@@ -232,98 +187,11 @@
         "website_for_a_purpose_1/csd/2022": {
           "type": "Eará Oahppi Árvvoštallan"
         },
-        "programming_for_entertainment/csd/2022": {
-          "name": "Programmere Guoimmuheami"
-        },
-        "plotting_shapes/csd/2022": {
-          "name": "Plottet Hámiid"
-        },
-        "drawing_in_game_lab/csd/2022": {
-          "name": "Tevdnet SpeallanLáb:as"
-        },
-        "sprites/csd/2022": {
-          "name": "Sprite:at"
-        },
-        "sprites_1/csd/2022": {
-          "name": "Sprite:at"
-        },
-        "sprite_movement/csd/2022": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "sprite_movement_1/csd/2022": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "keyboard_input/csd/2022": {
-          "name": "Boallobeavddi Input"
-        },
-        "interactive_card_2/csd/2022": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "project_-_interactive_card/csd/2022": {
-          "name": "Prošeakta  - Interaktiivva Koarta"
-        },
-        "complex_sprite_movement/csd/2022": {
-          "name": "Kompleaksa Sprite Lihkastagat"
-        },
-        "collisions/csd/2022": {
-          "name": "Oktiibeaškkeheamit"
-        },
-        "the_game_design_process/csd/2022": {
-          "name": "Spealu Designa Proseassa"
-        },
-        "using_the_game_design_process/csd/2022": {
-          "name": "Geavat Spealu Designa Proseassa"
-        },
-        "make_your_own_game_2/csd/2022": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "project_-_design_a_game/csd/2022": {
-          "name": "Prošeakta  - Designe Spealu"
-        },
-        "understanding_your_user/csd/2022": {
-          "name": "Ipmirdit Du Geavaheaddji"
-        },
-        "paper_prototypes/csd/2022": {
-          "name": "BáberPrototyhpat"
-        },
-        "designing_apps_for_good/csd/2022": {
-          "name": "Designet App:aid Buorrin"
-        },
-        "market_research/csd/2022": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "market_research_1/csd/2022": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "market_research_2/csd/2022": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "design_mode/csd/2022": {
-          "name": "Designa Modus"
-        },
-        "prototype_testing/csd/2022": {
-          "name": "Prototyhpa Teasten"
-        },
-        "data_in_the_real_world/csd/2022": {
-          "name": "Dáta Duohta Máilmmis"
-        },
-        "data_in_the_real_world_1/csd/2022": {
-          "name": "Dáta Duohta Máilmmis"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "Video: Oahpahit Mašiinna"
-        },
-        "make_a_recommendation/csd/2022": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
         "introduction_to_arrays/csd/2022": {
           "name": "Láidehus Matrisaide"
         },
         "making_music/csd/2022": {
           "name": "Ráhkat Musihka"
-        },
-        "survey_planning/csd/2022": {
-          "name": "Designe Data Čoakkaldaga"
         },
         "happy_maps/coursea/2022": {
           "name": "Movttegis Kárttat"
@@ -453,81 +321,6 @@
           "name": "Klássat"
         },
         "website_for_a_purpose_1/csd/2023": {
-          "type": "Eará Oahppi Árvvoštallan"
-        },
-        "plotting_shapes/csd/2023": {
-          "name": "Plottet Hámiid"
-        },
-        "drawing_in_game_lab/csd/2023": {
-          "name": "Tevdnet SpeallanLáb:as"
-        },
-        "sprites/csd/2023": {
-          "name": "Sprite:at"
-        },
-        "sprites_1/csd/2023": {
-          "name": "Sprite:at"
-        },
-        "sprite_movement/csd/2023": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "sprite_movement_1/csd/2023": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "keyboard_input/csd/2023": {
-          "name": "Boallobeavddi Input"
-        },
-        "project_-_interactive_card/csd/2023": {
-          "name": "Prošeakta  - Interaktiivva Koarta"
-        },
-        "complex_sprite_movement/csd/2023": {
-          "name": "Kompleaksa Sprite Lihkastagat"
-        },
-        "collisions/csd/2023": {
-          "name": "Oktiibeaškkeheamit"
-        },
-        "the_game_design_process/csd/2023": {
-          "name": "Spealu Designa Proseassa"
-        },
-        "using_the_game_design_process/csd/2023": {
-          "name": "Geavat Spealu Designa Proseassa"
-        },
-        "project_-_design_a_game/csd/2023": {
-          "name": "Prošeakta  - Designe Spealu"
-        },
-        "understanding_your_user/csd/2023": {
-          "name": "Ipmirdit Du Geavaheaddji"
-        },
-        "paper_prototypes/csd/2023": {
-          "name": "BáberPrototyhpat"
-        },
-        "designing_apps_for_good/csd/2023": {
-          "name": "Designet App:aid Buorrin"
-        },
-        "market_research/csd/2023": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "market_research_1/csd/2023": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "market_research_2/csd/2023": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "design_mode/csd/2023": {
-          "name": "Designa Modus"
-        },
-        "prototype_testing/csd/2023": {
-          "name": "Prototyhpa Teasten"
-        },
-        "data_in_the_real_world/csd/2023": {
-          "name": "Dáta Duohta Máilmmis"
-        },
-        "data_in_the_real_world_1/csd/2023": {
-          "name": "Dáta Duohta Máilmmis"
-        },
-        "video_machine_learning/csd/2023": {
-          "name": "Video: Oahpahit Mašiinna"
-        },
-        "make_a_recommendation/csd/2023": {
           "type": "Eará Oahppi Árvvoštallan"
         },
         "introduction_to_arrays/csd/2023": {
