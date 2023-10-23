@@ -1012,6 +1012,8 @@ km:
         options:
           SIZE:
             '75': មធ្យម
+      gamelab_setPrompt:
+        text: prompt អ្នកប្រើប្រាស់ {QUESTION} សម្រាប់អថេរ {VAR}
       gamelab_setProp:
         text: កំណត់ {SPRITE} {PROPERTY} ទៅជា {VAL}
         options:
@@ -1075,6 +1077,8 @@ km:
             '"space"': space key
       gamelab_whenLeftArrow:
         text: នៅពេលចុចព្រួញខាងឆ្វេង
+      gamelab_whenPromptAnswered:
+        text: នៅពេលដែល {VAR} បានឆ្លើយ
       gamelab_whenRightArrow:
         text: នៅពេលចុចព្រួញស្តាំ
       gamelab_whenUpArrow:
@@ -1363,6 +1367,8 @@ km:
             '"spinning_right"': បង្វិលស្តាំ
             '"wandering"': វង្វេង
             '"wobbling"': អង្រួន
+      Poetry_whenPromptAnswered:
+        text: នៅពេលដែល {VAR} បានឆ្លើយ
       RyanLab_moveForward:
         text: ផ្លាស់ទីទៅមុខ
       RyanLab_turnLeft:

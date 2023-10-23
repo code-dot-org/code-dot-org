@@ -8,31 +8,6 @@
         "copyright/csd/2021": {
           "word": "រក្សាសិទ្ធ"
         },
-        "bug/csd/2021": {
-          "word": "កំហុស (Bug)",
-          "definition": " ផ្នែកនៃកម្មវិធីដែលមិនដំណើរការត្រឹមត្រូវ។"
-        },
-        "debugging/csd/2021": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/csd/2021": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "variable/csd/2021": {
-          "word": "អថេរ",
-          "definition": "ជាអថេរប្រើសម្រាប់ផ្ទុកទិន្នន័យ (អក្សរ លេខ ឃ្លា)ដែលប្រើក្នុងកម្មវិធី។"
-        },
-        "conditionals/csd/2021": {
-          "word": "លក្ខខណ្ឌ"
-        },
-        "function/csd/2021": {
-          "word": "អនុគមន៍ (Function)"
-        },
-        "for_loop/csd/2021": {
-          "definition": "គឺជាប្រតិបត្តិដដែលៗ (loop) ដែលបានកំណត់ទុកជាមុន ពីចំនុចចាប់ផ្ដើម ចំនុចបញ្ចប់ នឹងការរកើនចន្លោះពីចំនុចចាប់ផ្ដើមនឹងបញ្ចប់។​ "
-        },
         "algorithm/coursea/2021": {
           "word": "ក្បួនដោះស្រាយ (Algorithm)",
           "definition": "គឺជាបញ្ជី​​ ជំហាននៃពាក្យណែនាំ ឬពាក្យបញ្ជាដើម្បីបញ្ចប់ កិច្ចការមួយ។"
@@ -916,88 +891,11 @@
         "behavior/csc-adaptations/2023": {
           "word": "ឥរិយាបទ (Behavior)"
         },
-        "event/csc-bookcovers/2023": {
-          "word": "ព្រឹត្តិការណ៍ (Events)",
-          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
-        },
-        "program/csc-bookcovers/2023": {
-          "word": "កម្មវិធី (Program)"
-        },
-        "prompt/csc-bookcovers/2023": {
-          "definition": "សារបង្ហាញលើអេក្រង់កុំព្យូទ័រដែលរង់ចាំការបញ្ចូលទិន្នន័យពី អ្នកប្រើប្រាស់។"
-        },
-        "sprite/csc-bookcovers/2023": {
-          "definition": "រូបតំណាងណាមួយជាមួយនឹងទីតាំង ទំហំ និងរូបរាង។"
-        },
-        "code/csc-ecosystems/2023": {
-          "word": "កូដ"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "លក្ខខណ្ឌ"
-        },
-        "event/csc-ecosystems/2023": {
-          "word": "ព្រឹត្តិការណ៍ (Events)"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "អថេរ"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "កូដ"
-        },
-        "event/csc-mappinglandmarks/2023": {
-          "word": "ព្រឹត្តិការណ៍ (Events)",
-          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "វិចិត្រករ"
-        },
-        "loop/csc-starquilts/2023": {
-          "word": "ប្រតិបត្តិដដែលៗ (Loop)"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "មតិយោបល់"
-        },
-        "event/csc-timecapsule/2023": {
-          "word": "ព្រឹត្តិការណ៍ (Events)",
-          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
-        },
-        "code/poetry/2023": {
-          "word": "កូដ"
-        },
-        "event/poetry/2023": {
-          "word": "ព្រឹត្តិការណ៍ (Events)",
-          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
-        },
-        "program/poetry/2023": {
-          "word": "កម្មវិធី (Program)"
-        },
         "input/csd/2023": {
           "word": "ធាតុបញ្ចូល"
         },
         "copyright/csd/2023": {
           "word": "រក្សាសិទ្ធ"
-        },
-        "bug/csd/2023": {
-          "word": "កំហុស (Bug)",
-          "definition": " ផ្នែកនៃកម្មវិធីដែលមិនដំណើរការត្រឹមត្រូវ។"
-        },
-        "debugging/csd/2023": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/csd/2023": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "variable/csd/2023": {
-          "word": "អថេរ",
-          "definition": "ជាអថេរប្រើសម្រាប់ផ្ទុកទិន្នន័យ (អក្សរ លេខ ឃ្លា)ដែលប្រើក្នុងកម្មវិធី។"
-        },
-        "conditionals/csd/2023": {
-          "word": "លក្ខខណ្ឌ"
-        },
-        "function/csd/2023": {
-          "word": "អនុគមន៍ (Function)"
         },
         "algorithm/coursea/2023": {
           "word": "ក្បួនដោះស្រាយ (Algorithm)",
@@ -1415,9 +1313,6 @@
           "word": "ព្រឹត្តិការណ៍ (Events)",
           "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
         },
-        "algorithm/how-ai-works/2023": {
-          "word": "ក្បួនដោះស្រាយ (Algorithm)"
-        },
         "code/aquatic/unversioned": {
           "word": "កូដ (Code)"
         },
@@ -1463,28 +1358,6 @@
           "word": "កម្មវិធី (Program)",
           "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
         },
-        "code/dance-2019/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "event/dance-2019/unversioned": {
-          "word": "ព្រឹត្តិការណ៍ (Events)",
-          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
-        },
-        "program/dance-2019/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "ព្រឹត្តិការណ៍ (Events)",
-          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
         "code/dance-extras/unversioned": {
           "word": "កូដ (Code)"
         },
@@ -1504,87 +1377,6 @@
           "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
         },
         "program/dance/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/flappy/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/flappy/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/frozen/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/frozen/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/gumball/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/gumball/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/hero/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/hero/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "function/hero/unversioned": {
-          "word": "អនុគមន៍ (Function)",
-          "definition": "សំណុំកូដ ដែលអ្នកអាចហៅយកមកប្រើបានច្រើនដង។"
-        },
-        "program/hero/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/hourofcode/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/hourofcode/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/iceage/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/iceage/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/infinity/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/infinity/unversioned": {
           "word": "កម្មវិធី (Program)",
           "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
         },
@@ -1622,27 +1414,6 @@
           "word": "ព្រឹត្តិការណ៍ (Events)",
           "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
         },
-        "code/playlab/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/playlab/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/poem-art/2021": {
-          "word": "កូដ"
-        },
-        "event/poem-art/2021": {
-          "word": "ព្រឹត្តិការណ៍ (Events)",
-          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
-        },
-        "program/poem-art/2021": {
-          "word": "កម្មវិធី (Program)"
-        },
         "code/sports/unversioned": {
           "word": "កូដ"
         },
@@ -1655,28 +1426,6 @@
           "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
         },
         "program/sports/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/starwars/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/starwars/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "កូដ (Code)"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "ការបំបាត់កំហុស (Debugging)",
-          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
-        },
-        "program/starwarsblocks/unversioned": {
           "word": "កម្មវិធី (Program)",
           "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
         }
