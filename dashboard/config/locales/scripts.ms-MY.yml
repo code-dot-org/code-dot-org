@@ -3117,6 +3117,17 @@ ms:
               display_name: Jin
             ramp_up:
               display_name: Tingkatkan
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Pengenalan
+          lessons:
+            lesson-7:
+              name: Pengenalan
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Pengenalan
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3139,6 +3150,10 @@ ms:
           lessons:
             lesson-3:
               name: Penilaian
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Pengenalan
         virustest:
           description_short: Gunakan Makmal Jin untuk mencipta simulasi wabak virus.
           title: Mensimulasikan Wabak
