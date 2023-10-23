@@ -5,21 +5,6 @@
         "copyright/csd/2021": {
           "word": "Авторлық құқық"
         },
-        "debugging/csd/2021": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "variable/csd/2021": {
-          "word": "Айнымалы"
-        },
-        "conditionals/csd/2021": {
-          "word": "Шарттар"
-        },
-        "abstraction/csd/2021": {
-          "word": "Абстракция"
-        },
-        "function/csd/2021": {
-          "word": "Функция"
-        },
         "debugging/coursea/2021": {
           "word": "Бағдарламаны дұрыстау"
         },
@@ -97,21 +82,6 @@
         },
         "copyright/csd/2022": {
           "word": "Авторлық құқық"
-        },
-        "debugging/csd/2022": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "variable/csd/2022": {
-          "word": "Айнымалы"
-        },
-        "conditionals/csd/2022": {
-          "word": "Шарттар"
-        },
-        "abstraction/csd/2022": {
-          "word": "Абстракция"
-        },
-        "function/csd/2022": {
-          "word": "Функция"
         },
         "debugging/coursea/2022": {
           "word": "Бағдарламаны дұрыстау"
@@ -191,41 +161,8 @@
         "code/csc-adaptations/2023": {
           "word": "Код"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Код"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Шарттар"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Айнымалы"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Код"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Кейіпкер"
-        },
-        "code/poetry/2023": {
-          "word": "Код"
-        },
         "copyright/csd/2023": {
           "word": "Авторлық құқық"
-        },
-        "debugging/csd/2023": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "variable/csd/2023": {
-          "word": "Айнымалы"
-        },
-        "conditionals/csd/2023": {
-          "word": "Шарттар"
-        },
-        "abstraction/csd/2023": {
-          "word": "Абстракция"
-        },
-        "function/csd/2023": {
-          "word": "Функция"
         },
         "debugging/coursea/2023": {
           "word": "Бағдарламаны дұрыстау"
@@ -320,52 +257,16 @@
         "debugging/basketball/unversioned": {
           "word": "Бағдарламаны дұрыстау"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "function/hero/unversioned": {
-          "word": "Функция"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
         "debugging/mc/unversioned": {
           "word": "Бағдарламаны дұрыстау"
         },
         "debugging/minecraft/unversioned": {
           "word": "Бағдарламаны дұрыстау"
         },
-        "debugging/playlab/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "code/poem-art/2021": {
-          "word": "Код"
-        },
         "code/sports/unversioned": {
           "word": "Код"
         },
         "debugging/sports/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Бағдарламаны дұрыстау"
         }
       }
