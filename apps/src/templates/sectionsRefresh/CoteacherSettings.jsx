@@ -117,6 +117,6 @@ export default function CoteacherSettings({
 
 CoteacherSettings.propTypes = {
   sectionInstructors: PropTypes.arrayOf(PropTypes.object),
-  addCoteacher: PropTypes.func,
+  addCoteacher: PropTypes.func.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
 };
