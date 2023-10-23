@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/CoteacherSettings';
 import sinon from 'sinon';
@@ -11,7 +11,7 @@ const testSectionInstructors = [
 
 describe('CoteacherSettings', () => {
   it('renders count of existing coteachers', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
         addCoteacher={() => {}}
@@ -19,12 +19,12 @@ describe('CoteacherSettings', () => {
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
-    expect(wrapper.find('Figcaption').text()).to.include(
+    expect(wrapper.find('Figcaption').props().children).to.include(
       '1/5 co-teachers added'
     );
   });
   it('renders count of existing coteachers and added', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
         addCoteacher={() => {}}
@@ -32,7 +32,7 @@ describe('CoteacherSettings', () => {
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
-    expect(wrapper.find('Figcaption').text()).to.include(
+    expect(wrapper.find('Figcaption').props().children).to.include(
       '2/5 co-teachers added'
     );
   });
@@ -53,7 +53,7 @@ describe('CoteacherSettings', () => {
   });
   it('shows error when adding invalid email', () => {
     const addCoteacherSpy = sinon.spy();
-    const wrapper = mount(
+    const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
         addCoteacher={addCoteacherSpy}
@@ -61,17 +61,19 @@ describe('CoteacherSettings', () => {
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
-    expect(wrapper.find('Figcaption').text()).not.to.include('Invalid email');
+    expect(wrapper.find('Figcaption').props().children).not.to.include(
+      'not a valid email address'
+    );
     wrapper
       .find('input')
       .simulate('change', {target: {value: 'invalid-email'}});
     wrapper.find('form').simulate('submit', {preventDefault: () => {}});
-    expect(wrapper.find('Figcaption').text()).to.include(
+    expect(wrapper.find('Figcaption').props().children).to.include(
       'invalid-email is not a valid email address.'
     );
     const icon = wrapper.find('FontAwesome');
     expect(icon.props().icon).to.include('info-circle');
-    expect(addCoteacherSpy).to.have.not.been;
+    expect(addCoteacherSpy).to.have.not.been.called;
   });
   it('adds coteacher when valid email is added', () => {
     const addCoteacherSpy = sinon.spy();

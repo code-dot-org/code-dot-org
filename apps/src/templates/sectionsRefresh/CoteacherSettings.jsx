@@ -23,7 +23,6 @@ export default function CoteacherSettings({
   const handleAddEmail = e => {
     e.preventDefault();
     const newEmail = inputValue;
-    console.log(sectionInstructors);
     if (newEmail === '') {
       setAddError(i18n.coteacherAddNoEmail());
       return;
