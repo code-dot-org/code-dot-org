@@ -212,6 +212,21 @@
           "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
           "rubric_performance_level_4": "Não há tags de parágrafo no texto."
         },
+        "CSD U3 Movement Fish_2021": {
+          "rubric_key_concept": "Use o contrapadrão para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_3": "O contrapadrão é usado dentro do loop de desenho para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O contrapadrão foi usado fora do loop de desenho, ou não foi usado."
+        },
+        "CSD U3 Movement Fish_2022": {
+          "rubric_key_concept": "Use o contrapadrão para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_3": "O contrapadrão é usado dentro do loop de desenho para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O contrapadrão foi usado fora do loop de desenho, ou não foi usado."
+        },
+        "CSD U3 Movement Fish_2023": {
+          "rubric_key_concept": "Use o contrapadrão para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_3": "O contrapadrão é usado dentro do loop de desenho para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O contrapadrão foi usado fora do loop de desenho, ou não foi usado."
+        },
         "CSD U3 Random Debug Cloud_2018_2019": {
           "rubric_key_concept": "Use argumentos para alterar a forma como um método ou comando é executado. "
         },
@@ -231,6 +246,18 @@
           "rubric_performance_level_2": "Pressionar a tecla de seta direita uma vez faz com que o sprite dos peixes nade diretamente pela tela. O padrão do contador não é usado.",
           "rubric_performance_level_3": "Pressionar a tecla de seta direita uma vez faz com que o sprite do peixe se mova pela tela de alguma forma.",
           "rubric_performance_level_4": "Pressionar a tecla de seta não causa movimento, ou o movimento é interrompido assim que a tecla é solta."
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado."
+        },
+        "CSD U3 abstraction velocityX control_2022": {
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado."
+        },
+        "CSD U3 abstraction velocityX control_2023": {
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado."
         },
         "CSD U3 collisions flyman make it your own_2019": {
           "rubric_performance_level_1": "O personagem do jogador não consegue se mover pelo obstáculo, a moeda nunca aparece atrás do obstáculo e o tamanho e a forma do colisor acionam as colisões em momentos razoáveis. Há pelo menos uma nova interação com sprites da escolha do aluno.",

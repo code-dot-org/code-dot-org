@@ -788,44 +788,119 @@ pt-BR:
           **Pesquisas de Conclusão da Unidade para Professores: ** Enquanto seus alunos respondem à pesquisa, gostaríamos que você respondesse a uma outra rápida pesquisa para os professores
 
           ## [Clique aqui para ver a Pesquisa para Professores] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data unit_number =1)%5B%5D
+      CSD Games Parameters challenge_2021:
+        description: Confira um ou mais desses blocos extras que você pode usar para
+          tornar suas fotos mais interessantes.
+        display_name: Desafios de Formas e Parâmetros
+      CSD Games Parameters challenge_2022:
+        description: Confira um ou mais desses blocos extras que você pode usar para
+          tornar suas fotos mais interessantes.
+        display_name: Desafios de Formas e Parâmetros
+      CSD Games Parameters challenge_2023:
+        description: Confira um ou mais desses blocos extras que você pode usar para
+          tornar suas fotos mais interessantes.
+        display_name: Desafios de Formas e Parâmetros
+      CSD Games Properties challenge_2021:
+        description: Experimente esses novos desafios com propriedades de sprites
+        display_name: 'Desafios: Propriedades do Sprite'
+      CSD Games Properties challenge_2022:
+        description: Experimente esses novos desafios com propriedades de sprites
+        display_name: 'Desafios: Propriedades do Sprite'
+      CSD Games Properties challenge_2023:
+        description: Experimente esses novos desafios com propriedades de sprites
+        display_name: 'Desafios: Propriedades do Sprite'
       CSD Games Properties multi predict_2021:
         answers:
-        - {}
+        - text: um sprite de abelha no meio da tela
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: um sprite de abelha no canto inferior direito
+        - text: dois sprites de abelhas, um no meio e outro no canto inferior direito
+        - text: três sprites de abelhas, todos em lugares diferentes
+        - text: nada, haverá um erro
+        content1: Veja o código abaixo e preveja onde o sprite de abelha aparecerá.
         questions:
-        - {}
+        - text: O que o programa mostrará?
+        title: Posicionamento do Sprite de Abelha
       CSD Games Properties multi predict_2022:
         answers:
-        - {}
+        - text: um sprite de abelha no meio da tela
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: um sprite de abelha no canto inferior direito
+        - text: dois sprites de abelhas, um no meio e outro no canto inferior direito
+        - text: três sprites de abelhas, todos em lugares diferentes
+        - text: nada, haverá um erro
+        content1: Veja o código abaixo e preveja onde o sprite de abelha aparecerá.
         questions:
-        - {}
+        - text: O que o programa mostrará?
+        title: Posicionamento do Sprite de Abelha
       CSD Games Properties multi predict_2023:
         answers:
-        - {}
+        - text: um sprite de abelha no meio da tela
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: um sprite de abelha no canto inferior direito
+        - text: dois sprites de abelhas, um no meio e outro no canto inferior direito
+        - text: três sprites de abelhas, todos em lugares diferentes
+        - text: nada, haverá um erro
+        content1: Veja o código abaixo e preveja onde o sprite de abelha aparecerá.
         questions:
-        - {}
+        - text: O que o programa mostrará?
+        title: Posicionamento do Sprite de Abelha
       CSD Games Properties practice_2021:
+        description: Teste as propriedades de um sprite que você aprendeu aqui
         display_name: Propriedades do Sprite
       CSD Games Properties practice_2022:
+        description: Teste as propriedades de um sprite que você aprendeu aqui
         display_name: Propriedades do Sprite
       CSD Games Properties practice_2023:
+        description: Teste as propriedades de um sprite que você aprendeu aqui
         display_name: Propriedades do Sprite
+      CSD Games Sprites Challenges_2021:
+        description: Experimente esses desafios extras que ajudarão você a tornar
+          seus sprites ainda mais especiais.
+        display_name: 'Desafios: Sprites e Animações'
+      CSD Games Sprites Challenges_2022:
+        description: Experimente esses desafios extras que ajudarão você a tornar
+          seus sprites ainda mais especiais.
+        display_name: 'Desafios: Sprites e Animações'
+      CSD Games Sprites Challenges_2023:
+        description: Experimente esses desafios extras que ajudarão você a tornar
+          seus sprites ainda mais especiais.
+        display_name: 'Desafios: Sprites e Animações'
+      CSD Games Sprites practice_2021:
+        description: Use suas novas habilidades de sprite e animação para completar
+          esses níveis.
+        display_name: Criando Sprites e Animações
+      CSD Games Sprites practice_2022:
+        description: Use suas novas habilidades de sprite e animação para completar
+          esses níveis.
+        display_name: Criando Sprites e Animações
+      CSD Games Sprites practice_2023:
+        description: Use suas novas habilidades de sprite e animação para completar
+          esses níveis.
+        display_name: Criando Sprites e Animações
+      CSD Games parameters practice_2021:
+        display_name: Pratique com Parâmetros
+      CSD Games parameters practice_2022:
+        display_name: Pratique com Parâmetros
+      CSD Games parameters practice_2023:
+        display_name: Pratique com Parâmetros
+      CSD Games variables challenge_2021:
+        description: Expanda suas habilidades com variáveis com esses desafios.
+        display_name: Desafios de Variáveis
+      CSD Games variables challenge_2022:
+        description: Expanda suas habilidades com variáveis com esses desafios.
+        display_name: Desafios de Variáveis
+      CSD Games variables challenge_2023:
+        description: Expanda suas habilidades com variáveis com esses desafios.
+        display_name: Desafios de Variáveis
       CSD Games variables practice_2021:
+        description: Escolha entre as atividades a seguir para praticar o uso de variáveis.
         display_name: Prática de Variáveis
       CSD Games variables practice_2022:
+        description: Escolha entre as atividades a seguir para praticar o uso de variáveis.
         display_name: Prática de Variáveis
       CSD Games variables practice_2023:
+        description: Escolha entre as atividades a seguir para praticar o uso de variáveis.
         display_name: Prática de Variáveis
       CSD HTML project Lists_2021:
         description: Confira essas novas tags que permitem adicionar listas à sua
@@ -4084,7 +4159,7 @@ pt-BR:
         - text: Quando executado, onde o sprite <code> minhaSprite </code> será localizado?
       CSD U3 Test clean code:
         answers:
-        - {}
+        - text: Use o contrapadrão para aumentar a pontuação
         - correct: true
         - {}
         - correct: true
@@ -4094,7 +4169,7 @@ pt-BR:
         title: Questão 1
       CSD U3 Test clean code_pilot_2021:
         answers:
-        - {}
+        - text: Use o contrapadrão para aumentar a pontuação
         - correct: true
         - {}
         - correct: true
@@ -4104,7 +4179,7 @@ pt-BR:
         title: Questão 1
       CSD U3 Test clean code_pilot_2022:
         answers:
-        - {}
+        - text: Use o contrapadrão para aumentar a pontuação
         - correct: true
         - {}
         - correct: true
@@ -6420,18 +6495,60 @@ pt-BR:
         display_name: Desafios
       CSD games cake challenge choice_2023:
         display_name: Desafios
+      CSD games collisions practice choice_2021:
+        display_name: Prática de Colisões
+      CSD games collisions practice choice_2022:
+        display_name: Prática de Colisões
+      CSD games collisions practice choice_2023:
+        display_name: Prática de Colisões
       CSD games functions practice choice_2021:
         display_name: Prática de Funções
       CSD games functions practice choice_2022:
         display_name: Prática de Funções
       CSD games functions practice choice_2023:
         display_name: Prática de Funções
+      CSD games movement2 challenge choice_2021:
+        description: Experimente esses novos blocos e desafios com velocidade e o
+          contrapadrão.
+      CSD games movement2 challenge choice_2022:
+        description: Experimente esses novos blocos e desafios com velocidade e o
+          contrapadrão.
+      CSD games movement2 challenge choice_2023:
+        description: Experimente esses novos blocos e desafios com velocidade e o
+          contrapadrão.
+      CSD games movement2 practice choice_2021:
+        description: Pratique usando as novas formas de mover sprites.
+        display_name: Prática de Movimentação de Sprite
+      CSD games movement2 practice choice_2022:
+        description: Pratique usando as novas formas de mover sprites.
+        display_name: Prática de Movimentação de Sprite
+      CSD games movement2 practice choice_2023:
+        description: Pratique usando as novas formas de mover sprites.
+        display_name: Prática de Movimentação de Sprite
       CSD games platform challenge choice_2021:
         display_name: Desafios
       CSD games platform challenge choice_2022:
         display_name: Desafios
       CSD games platform challenge choice_2023:
         display_name: Desafios
+      CSD games random challenge_2021:
+        description: Experimente esses desafios extras com números aleatórios.
+        display_name: 'Desafios: Números Aleatórios'
+      CSD games random challenge_2022:
+        description: Experimente esses desafios extras com números aleatórios.
+        display_name: 'Desafios: Números Aleatórios'
+      CSD games random challenge_2023:
+        description: Experimente esses desafios extras com números aleatórios.
+        display_name: 'Desafios: Números Aleatórios'
+      CSD games random practice_2021:
+        description: Teste suas novas habilidades nesses níveis.
+        display_name: Pratique com Números Aleatórios
+      CSD games random practice_2022:
+        description: Teste suas novas habilidades nesses níveis.
+        display_name: Pratique com Números Aleatórios
+      CSD games random practice_2023:
+        description: Teste suas novas habilidades nesses níveis.
+        display_name: Pratique com Números Aleatórios
       CSD web classes challenge_2021:
         description: Experimente desafios extras ou aprenda um novo código.
         display_name: Usando Classes
@@ -6456,23 +6573,85 @@ pt-BR:
         display_name: Prática de Condicionais
       CSD web conditionals practice choice_2023:
         display_name: Prática de Condicionais
+      CSD web draw loop challenge choice_2021:
+        description: Experimente esses desafios de loop de desenho.
+        display_name: Desafios Loop de Desenhos
+      CSD web draw loop challenge choice_2022:
+        description: Experimente esses desafios de loop de desenho.
+        display_name: Desafios Loop de Desenhos
+      CSD web draw loop challenge choice_2023:
+        description: Experimente esses desafios de loop de desenho.
+        display_name: Desafios Loop de Desenhos
       CSD web draw loop practice choice_2021:
+        description: Experimente usar o loop de desenho com essas atividades.
         display_name: Prática
       CSD web draw loop practice choice_2022:
+        description: Experimente usar o loop de desenho com essas atividades.
         display_name: Prática
       CSD web draw loop practice choice_2023:
+        description: Experimente usar o loop de desenho com essas atividades.
         display_name: Prática
+      CSD web keyboard challenge choice_2021:
+        description: Experimente esses novos blocos e desafios com a entrada de teclado.
+        display_name: Desafios de Entrada do Teclado
+      CSD web keyboard challenge choice_2022:
+        description: Experimente esses novos blocos e desafios com a entrada de teclado.
+        display_name: Desafios de Entrada do Teclado
+      CSD web keyboard challenge choice_2023:
+        description: Experimente esses novos blocos e desafios com a entrada de teclado.
+        display_name: Desafios de Entrada do Teclado
+      CSD web mouse challenge choice_2021:
+        description: Experimente esses novos blocos e desafios com a entrada do mouse.
+        display_name: Desafios com o Mouse
+      CSD web mouse challenge choice_2022:
+        description: Experimente esses novos blocos e desafios com a entrada do mouse.
+        display_name: Desafios com o Mouse
+      CSD web mouse challenge choice_2023:
+        description: Experimente esses novos blocos e desafios com a entrada do mouse.
+        display_name: Desafios com o Mouse
+      CSD web mouse practice choice_2021:
+        description: Pratique a entrada do teclado e o uso do bloco if/else com essas
+          atividades.
+        display_name: Entrada do Mouse e a Prática do if/else
+      CSD web mouse practice choice_2022:
+        display_name: Entrada do Mouse e a Prática do if/else
+      CSD web mouse practice choice_2023:
+        display_name: Entrada do Mouse e a Prática do if/else
+      CSD web movement challenge choice_2021:
+        description: Adicione mais à sua cena de peixes ou crie algo novo.
+        display_name: Desafios de Movimentos de Sprite
+      CSD web movement challenge choice_2022:
+        description: Adicione mais à sua cena de peixes ou crie algo novo.
+        display_name: Desafios de Movimentos de Sprite
+      CSD web movement challenge choice_2023:
+        description: Adicione mais à sua cena de peixes ou crie algo novo.
+        display_name: Desafios de Movimentos de Sprite
       CSD web movement practice choice_2021:
+        description: Experimente usar o loop de desenho com essas atividades.
         display_name: Prática
       CSD web movement practice choice_2022:
+        description: Experimente usar o loop de desenho com essas atividades.
         display_name: Prática
       CSD web movement practice choice_2023:
+        description: Experimente usar o loop de desenho com essas atividades.
         display_name: Prática
+      CSD web text challenge choice_2021:
+        description: Experimente esses novos blocos e desafios.
+        display_name: Desafios de Texto
+      CSD web text challenge choice_2022:
+        description: Experimente esses novos blocos e desafios.
+        display_name: Desafios de Texto
+      CSD web text challenge choice_2023:
+        description: Experimente esses novos blocos e desafios.
+        display_name: Desafios de Texto
       CSD web text practice choice_2021:
+        description: Teste suas habilidades de texto nessas atividades.
         display_name: Prática
       CSD web text practice choice_2022:
+        description: Teste suas habilidades de texto nessas atividades.
         display_name: Prática
       CSD web text practice choice_2023:
+        description: Teste suas habilidades de texto nessas atividades.
         display_name: Prática
       CSD-U5-SFLP ASCII and Binary Representation:
         markdown: |
@@ -27429,11 +27608,6 @@ pt-BR:
 
           ## [Clique Aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder a pesquisa sobre o Recomendador de Sapatos
       ml-models-shoe survey_2022:
-        markdown: |
-          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
-
-          ## [Clique Aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder a pesquisa sobre o Recomendador de Sapatos
-      ml-models-shoe survey_2023:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 

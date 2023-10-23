@@ -119,66 +119,6 @@
         "4682c681-72e1-43df-8443-27ba6ff068de": {
           "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "b2682f90-e600-48aa-aef4-def3798b261d": {
-          "description": "Identifique como a ciência da computação é usada em um determinado campo de entretenimento"
-        },
-        "92707a88-4d6e-44a5-a1ba-e888e9ea27c8": {
-          "description": "Usar um sistema de coordenadas para inserir elementos na tela."
-        },
-        "d8f92cff-b148-455d-b1c9-690e0d8c3929": {
-          "description": "Sequenciar o código corretamente para sobrepor formas."
-        },
-        "1fc6f9a4-a172-4504-a702-e0f6b219e62c": {
-          "description": "Praticar e raciocinar sobre comandos de desenho com vários parâmetros"
-        },
-        "5fc17aef-b130-416f-8746-54fe3f0ed390": {
-          "description": "Identificar uma variável como uma forma de rotular e referenciar um valor em um programa"
-        },
-        "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca": {
-          "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
-        },
-        "40bde7b5-fc47-455e-9d21-5dc53330e8e8": {
-          "description": "Criar e usar um sprite"
-        },
-        "c61f1e5d-d728-499d-9729-a1ff2db8de64": {
-          "description": "Colocar o texto na tela usando um plano de coordenadas."
-        },
-        "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
-          "description": "Usar argumentos para controlar como o texto é exibido na tela."
-        },
-        "d6709c2c-76b3-495d-bb07-af8a4c772363": {
-          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
-        },
-        "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
-          "description": "Avaliar criticamente um objeto para verificar se seu design atende a um determinado conjunto de necessidades"
-        },
-        "5b050fa6-537c-42bd-ab68-8da930f96fc1": {
-          "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"
-        },
-        "c570aee0-75a6-4698-a3d7-b211adcd5ef8": {
-          "description": " Criticar um design pela perspectiva de um perfil de usuário."
-        },
-        "6b88c767-4b50-4334-8b24-fff5e79a467d": {
-          "description": " Aprimorar o design de um produto com base em um perfil de usuário."
-        },
-        "8885beeb-2915-4569-b3b2-2ceca9293597": {
-          "description": "Gerir várias estratégias para atender às necessidades do usuário."
-        },
-        "ce14b7c8-ae41-4118-9fa2-56086e2298a1": {
-          "description": "Organizar ideias e estratégias em categorias significativas."
-        },
-        "f86060e6-0c95-4d92-85c1-52fc82c32257": {
-          "description": "Apresentar informações técnicas de forma clara para usuários não técnicos"
-        },
-        "3f8b9c32-15fb-4b26-9360-9cb6fdfe7ed3": {
-          "description": "Refletir sobre o desenvolvimento de um projeto em andamento"
-        },
-        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
-          "description": "Treinar e testar um modelo de aprendizado de máquina."
-        },
-        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
-          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
-        },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "Descubra que a internet pode ser usada para visitar lugares distantes e aprender coisas novas."
         },
@@ -1277,75 +1217,6 @@
         "b50c5885-deac-4218-b87d-7a128401353d": {
           "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "216cb133-b606-43be-adb9-6cf77faa357f": {
-          "description": "Identificar como a Ciência da Computação é usada em um determinado campo de entretenimento"
-        },
-        "39ea0ee9-0bed-4684-b37f-78fb7585a784": {
-          "description": "Explicar  como desenhar uma imagem no Game Lab, levando em conta a forma, a posição, a cor e a ordem"
-        },
-        "772d2b7c-9863-42d1-8eb6-ec0520b19441": {
-          "description": "Pensar de forma lógica sobre as localizações na grade de coordenadas do Game Lab"
-        },
-        "530ec96a-34f8-4ebd-9ba3-13c2ba0926cd": {
-          "description": "Sequenciar o código corretamente para sobrepor formas."
-        },
-        "a2eaee21-e82f-4b0d-aae4-dc6ebc2280c0": {
-          "description": "Usar um sistema de coordenadas para inserir elementos na tela."
-        },
-        "43fc52a2-e27f-40b0-8b9b-77f757f6f764": {
-          "description": "Praticar e raciocinar sobre comandos de desenho com vários parâmetros"
-        },
-        "9d3158aa-110b-43d2-89c9-6510524bd9bb": {
-          "description": "Identificar uma variável como uma forma de rotular e referenciar um valor em um programa"
-        },
-        "c25b3f0d-dcfb-415a-a97f-89b4e89311a5": {
-          "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
-        },
-        "f94d8eca-cf05-40a8-acf0-8c5b1ed3868f": {
-          "description": "Criar e usar um sprite"
-        },
-        "9d865e75-6b5a-43d4-a145-17de9aee4ad3": {
-          "description": "Usar a notação de pontos para atualizar as propriedades de um sprite"
-        },
-        "411f894a-c802-41df-822e-41c4b8dd9a9d": {
-          "description": "Colocar o texto na tela usando um plano de coordenadas."
-        },
-        "72496109-18f7-4a09-84eb-3aabcc22ae92": {
-          "description": "Usar argumentos para controlar como o texto é exibido na tela."
-        },
-        "36566c25-03d9-4b33-9269-bf4155649445": {
-          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
-        },
-        "608b3d15-c429-49e9-84e0-26c7e151143c": {
-          "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"
-        },
-        "a623c1a7-f58d-44fd-80da-924e9ad6ec1c": {
-          "description": "Avaliar criticamente um objeto para verificar se seu design atende a um determinado conjunto de necessidades"
-        },
-        "28bcb96e-7769-49a0-a8f6-b183cce873e9": {
-          "description": " Criticar um design pela perspectiva de um perfil de usuário."
-        },
-        "52c71d11-1250-424c-a113-6c36c3083342": {
-          "description": " Aprimorar o design de um produto com base em um perfil de usuário."
-        },
-        "04151a07-8251-4216-a51e-e12e64b568aa": {
-          "description": "Organizar ideias e estratégias em categorias significativas."
-        },
-        "7dc164da-e876-45b2-94cc-360b92c7e2ee": {
-          "description": "Gerir várias estratégias para atender às necessidades do usuário."
-        },
-        "6381f927-324f-4efe-9e8b-a52c76750bc9": {
-          "description": "Refletir sobre o desenvolvimento de um projeto em andamento"
-        },
-        "9cffd1e7-8cf5-43a8-800e-2aab85f50f5b": {
-          "description": "Apresentar informações técnicas de forma clara para usuários não técnicos"
-        },
-        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
-          "description": "Treinar e testar um modelo de aprendizado de máquina."
-        },
-        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
-          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
-        },
         "086d6899-da60-486b-a9f7-89715397d81c": {
           "description": "Explique as regras para viajar com segurança pela internet."
         },
@@ -2315,39 +2186,6 @@
         "d0c5f886-4268-4eb7-b499-fa86868fda17": {
           "description": "Mostre como os animais evoluem e mudam como resultado das mudanças em seu ambiente."
         },
-        "46367e69-aa28-4aa2-b644-370d4720cb63": {
-          "description": "Aprenda conceitos e ferramentas de codificação necessários para criar uma capa de livro digital."
-        },
-        "f816d140-2662-4b07-838a-356b1341298f": {
-          "description": "Articule suas observações e interpretações das opções de design gráfico por meio de discussões em classe ou respostas escritas."
-        },
-        "be255442-649e-4cc4-849d-293d6e934e84": {
-          "description": "Compreenda a conexão entre personagens em um livro e sprites em um programa, bem como configurações em um livro e planos de fundo em um programa."
-        },
-        "2779cb4f-6ca1-4a7f-ae2d-df66a9873fad": {
-          "description": "Demonstre a capacidade de fornecer e receber feedback construtivo dando um feedback caloroso e simpático a um parceiro e aplicando o feedback recebido para revisar seu próprio trabalho."
-        },
-        "28a41551-e8f3-4421-8671-cc69e6cf6f05": {
-          "description": "Desenvolva habilidades de resumo resumindo efetivamente uma história, incluindo a introdução de dois personagens principais e seus papéis na trama."
-        },
-        "62b336d6-02ad-446f-a4f9-54dc7bdfae1f": {
-          "description": "Compreenda a conexão entre personagens em um livro e sprites em um programa, bem como configurações em um livro e planos de fundo em um programa."
-        },
-        "0849e0ca-6bc7-486b-b9e4-0ef588648f2b": {
-          "description": "Use sua compreensão dos personagens, do cenário e dos eventos do livro para informar suas escolhas de codificação para a capa do livro digital."
-        },
-        "59dc58ad-cbc8-4d27-928f-a06fa46e705a": {
-          "description": "Discuta como as escolhas específicas de design contribuem para o impacto geral e a mensagem das capas dos livros."
-        },
-        "ce3130a2-728b-4b6f-bd20-c7048c833388": {
-          "description": "Identifique os blocos de codificação e os conceitos necessários para o projeto da capa do livro."
-        },
-        "8fbf7b5a-fbc1-42a1-b652-c99bd44dca4f": {
-          "description": "Reflita sobre seus próprios projetos de capa de livro digital e identifique os elementos de design que eles escolheram incluir e os motivos por trás dessas escolhas."
-        },
-        "d1945b16-3b38-443e-890a-dab7d81ec812": {
-          "description": "Forneça feedback e reflexões construtivas sobre os aplicativos interativos de capa de livro que eles usam, promovendo um ambiente de aprendizado colaborativo."
-        },
         "4094e6da-1294-4686-aefc-b5363d35070a": {
           "description": "Desenvolva uma simulação dos efeitos da sobrepesca em um ecossistema aquático"
         },
@@ -2377,144 +2215,6 @@
         },
         "f3e0667d-0843-4d41-ae79-7ec7911d5ea4": {
           "description": "Modifique o código em uma simulação para restaurar o equilíbrio de um ecossistema que está enfrentando um desafio, como a diminuição de uma determinada espécie ou o crescimento excessivo de outra espécie."
-        },
-        "80a85b7e-ae26-4786-98ed-9632de96ea24": {
-          "description": "Com uma série de mapas mostrando diferentes componentes, os alunos analisarão e compararão os diferentes propósitos de cada mapa. "
-        },
-        "84fb7001-86ee-4932-8d58-b6122037e146": {
-          "description": "Aprenda o básico do Sprite Lab criando vários sprites, alterando sua localização, definindo sua propriedade de tamanho, fazendo o sprite “falar”, atribuindo um comportamento e usando o evento when touchs para tornar seu programa interativo."
-        },
-        "1a27b887-2aa2-4f1b-8137-85395c9d1db8": {
-          "description": "Reflita sobre o papel de um cartógrafo para desenvolver uma apreciação mais profunda do propósito e do valor dos mapas como ferramentas para entender o mundo ao seu redor."
-        },
-        "fdb3a900-9efd-4710-8096-6108ed735cb6": {
-          "description": "Use a decomposição dividindo seu projeto de pontos de referência de mapeamento digital em tarefas menores ao planejar seu projeto de mapa."
-        },
-        "98520886-dfc7-4343-a7ba-c32e0a8b043f": {
-          "description": "Os alunos desenvolverão um plano escrito descrevendo as etapas que tomarão para codificar seu projeto de pontos de referência de mapeamento digital, incluindo a identificação dos principais recursos, o planejamento do layout e a descrição da finalidade do mapa."
-        },
-        "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb": {
-          "description": "Identifique maneiras pelas quais os mapas podem variar com base nas decisões do cartógrafo."
-        },
-        "46412626-979f-4311-a180-f4e43809b4db": {
-          "description": "Demonstre conhecimento geográfico, habilidades de codificação e criatividade codificando um mapa interativo com pontos de referência pessoalmente relevantes e importantes. "
-        },
-        "f625be86-4b66-4421-8a7c-f724fd230eb5": {
-          "description": "Utilize habilidades de codificação para incorporar explicações de texto no mapa interativo para comunicar a importância dos pontos de referência."
-        },
-        "829ee795-fac0-4509-8b25-cd11f443e52e": {
-          "description": "Demonstre uma compreensão do poder do uso do código para tornar um mapa interativo, engajando os usuários e aprimorando a compreensão geográfica. "
-        },
-        "ac701f5c-93be-48e3-b614-d5be26d5b11d": {
-          "description": "Participe de uma reflexão pessoal sobre o processo de codificação da criação de um mapa digital, destacando sucessos, desafios e lições aprendidas. "
-        },
-        "ade6631d-16d1-43dd-a955-09eba7039e81": {
-          "description": "Escreva observações ponderadas e forneça avaliações construtivas de projetos de colegas, oferecendo feedback e sugestões de melhoria. "
-        },
-        "f5a42772-0ecb-42e3-825f-81dc236b9151": {
-          "description": "Pratique estratégias de apresentação eficazes ao mostrar o mapa interativo aos colegas, incluindo a comunicação clara dos recursos implementados, da finalidade e da importância do projeto. "
-        },
-        "9d012f97-41e4-4358-8970-f1be0bdb0254": {
-          "description": "Entenda o significado tradicional por trás de fazer e presentear uma colcha de estrelas"
-        },
-        "b3e48d93-ac56-49c0-ad15-6109d60a6c6b": {
-          "description": "Identifique vários padrões repetidos em um Star Quilt"
-        },
-        "e321a445-412d-447e-a8de-c78464723196": {
-          "description": "Crie seu próprio Star Quilt usando papel e caneta"
-        },
-        "65af51b5-9269-4617-8e33-64e96072c136": {
-          "description": "Use a ferramenta de codificação The Artist para replicar seu design Star Quilt"
-        },
-        "8a81dbf7-f967-408b-acf5-81304158f196": {
-          "description": "Identifique padrões em seu código"
-        },
-        "96b5e04f-5a82-475f-9de3-4d81fa8d9c8f": {
-          "description": "Use loops para tornar seu código mais eficiente"
-        },
-        "c0741915-7e37-4bd0-8281-c716104a5185": {
-          "description": "Inspecione a relação entre o ângulo que o artista gira e quantos pontos há em uma estrela"
-        },
-        "1e3b8219-5cb5-4531-a0e3-4cb6cc2ddbcf": {
-          "description": "Use funções predefinidas para ajudar a posicionar o artista mais rapidamente"
-        },
-        "2686f662-8b36-49c8-bee7-1b81f1a3e328": {
-          "description": "Compartilhe seus projetos com alguém especial"
-        },
-        "3ca06d70-09b5-4800-b634-5a70da493a14": {
-          "description": "Mantenha seu código organizado com comentários"
-        },
-        "d5798a01-93fd-4e33-bbc1-fa94d5680493": {
-          "description": "Use loops para tornar seu código mais eficiente"
-        },
-        "3650e3e9-3d8b-4a16-b1ad-1435b57733c6": {
-          "description": "Pense em ideias para seu próprio poema em cápsula do tempo sobre a história do agora"
-        },
-        "4baa81af-6866-4e2b-af12-293ed1109078": {
-          "description": " Defina o humor e as imagens"
-        },
-        "cc4e38ec-858b-47c6-b5f7-58939e480ff5": {
-          "description": "Anime um poema de cápsula do tempo existente usando blocos que definem o plano de fundo, efeitos de texto, sons, sprites e eventos"
-        },
-        "134a35e8-69f4-447d-a45a-aeb2884c7fe4": {
-          "description": "Planeje e escreva seus próprios poemas em cápsulas do tempo"
-        },
-        "925c11d6-1657-4f0a-b2ff-1e8749bcdc90": {
-          "description": "Explique como efeitos visuais, sons e imagens aprimoram a experiência de um espectador com um poema"
-        },
-        "978ca328-6255-4f50-8ea1-be477e9c668a": {
-          "description": "Defina uma cápsula do tempo"
-        },
-        "e0806eaa-bf53-4836-a6df-93a1078130c9": {
-          "description": "Anime seu poema de cápsula do tempo usando blocos que definem o plano de fundo, efeitos de texto, sprites, sons e eventos."
-        },
-        "1515d942-66bf-4bb5-9b0f-4d5505fed2ae": {
-          "description": "Escolha uma imagem, som ou efeito apropriado para aprimorar a escolha de palavras em seus poemas."
-        },
-        "84fd2102-a911-44a1-8445-c31014a978b7": {
-          "description": " Entenda como a história é escrita e curada"
-        },
-        "9fcac90f-a22a-4e46-be89-2fff140dfbc4": {
-          "description": "Compartilhe seus aplicativos uns com os outros"
-        },
-        "d23e7686-3b3a-4f1a-abdc-f5d8830d10c1": {
-          "description": "Entenda o poder de escrever sua própria história"
-        },
-        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
-          "description": "Represente a linguagem literal e a figurativa através de um texto"
-        },
-        "4b7b140c-b345-48c6-b81b-eea3c37f2a0b": {
-          "description": "Use código para animar mudanças no clima de um poema."
-        },
-        "a39a475f-a7c2-402f-abef-87340f6e4a45": {
-          "description": "Use blocos de eventos para acionar uma ação em linhas específicas do poema."
-        },
-        "2dfe199c-6e82-4979-a24f-0b20d8b14f2f": {
-          "description": "Explique como efeitos visuais, sons e imagens aprimoram a experiência do espectador com um poema."
-        },
-        "521bc123-9d0a-4588-9b39-a3cc94229a64": {
-          "description": "Planeje e escreva seus próprios poemas."
-        },
-        "db6ecf8b-0374-46ea-b6cd-d59ac77879a1": {
-          "description": "Desenvolva o pensamento crítico e as habilidades de resolução de problemas exigindo que os alunos façam escolhas sobre como representar seu poema usando código e arte."
-        },
-        "73f2fb47-8d56-4635-80b1-72a57c3c51d5": {
-          "description": "Escolha imagens, sons ou efeitos apropriados para aprimorar a escolha de palavras em seus poemas."
-        },
-        "9524e34c-35ef-4735-9404-b7ca08d80257": {
-          "description": "Anime seu poema usando blocos que definem o plano de fundo, efeitos de texto, sprites, sons e eventos."
-        },
-        "079c5cd4-3be3-44f1-9cf1-800dc8a2a86c": {
-          "description": "Faça conexões entre o texto e uma apresentação visual desse texto, identificando onde as representações visuais refletem descrições específicas no texto."
-        },
-        "4903767c-89c4-4fbf-8879-93cf977803ae": {
-          "description": "Descreva como os elementos visuais e multimídia contribuem para o significado, o tom ou a beleza de um texto. "
-        },
-        "2ef99265-af55-4a2d-8719-58d4451f0610": {
-          "description": "Entenda o poder de escrever programas para animar texto"
-        },
-        "a4fa2434-b9c5-4e36-819b-50398d230730": {
-          "description": "Compartilhe seus aplicativos uns com os outros"
         },
         "31c2522e-3835-49c6-b5f1-2493d8766486": {
           "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
@@ -2629,66 +2329,6 @@
         },
         "d2b026b0-8de2-4f0e-9014-e3a33d5c4896": {
           "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
-        },
-        "bb0518da-49ef-462c-8ba3-861489893fd9": {
-          "description": "Usar um sistema de coordenadas para inserir elementos na tela."
-        },
-        "cd7e6131-748c-4205-b2bd-4dff0b04e562": {
-          "description": "Sequenciar o código corretamente para sobrepor formas."
-        },
-        "e9f7548b-280a-4191-8376-d8562cb6edcd": {
-          "description": "Praticar e raciocinar sobre comandos de desenho com vários parâmetros"
-        },
-        "a30e4dc9-31e0-4299-826c-a79c68100aa0": {
-          "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
-        },
-        "fb1c91cd-2242-42e6-8157-6678425bc95e": {
-          "description": "Identificar uma variável como uma forma de rotular e referenciar um valor em um programa"
-        },
-        "03acfea1-e135-4363-970e-ae24d3a8aef0": {
-          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
-        },
-        "91c9026d-5107-4a92-80d7-440d6e3540c5": {
-          "description": "Criar e usar um sprite"
-        },
-        "a09ea05c-bb1b-40d3-8928-51241a53d441": {
-          "description": "Colocar o texto na tela usando um plano de coordenadas."
-        },
-        "f7045a46-2926-497c-975d-8a54fb9e9486": {
-          "description": "Usar argumentos para controlar como o texto é exibido na tela."
-        },
-        "859f9c2e-f9fa-4344-8c73-3fe3035b5fc9": {
-          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
-        },
-        "64f02372-bdc0-41d2-8504-1ad016a794d4": {
-          "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"
-        },
-        "e23e2085-4f1d-4ec3-93bd-757e1c0330dc": {
-          "description": "Avaliar criticamente um objeto para verificar se seu design atende a um determinado conjunto de necessidades"
-        },
-        "250da4cc-6b20-4e32-90f0-66f5c98b8603": {
-          "description": " Aprimorar o design de um produto com base em um perfil de usuário."
-        },
-        "cbd93ec7-5d1d-4dd9-b7e3-479131ae90cd": {
-          "description": " Criticar um design pela perspectiva de um perfil de usuário."
-        },
-        "1689c358-40d5-4279-880a-bc2d404be50a": {
-          "description": "Gerir várias estratégias para atender às necessidades do usuário."
-        },
-        "cdc9e841-969b-4444-9edc-8b6b5e086f37": {
-          "description": "Organizar ideias e estratégias em categorias significativas."
-        },
-        "6d28d0e7-da03-4b34-94e1-f3646871c0d3": {
-          "description": "Apresentar informações técnicas de forma clara para usuários não técnicos"
-        },
-        "9d709580-5531-4091-b287-3a48c529dfb6": {
-          "description": "Refletir sobre o desenvolvimento de um projeto em andamento"
-        },
-        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
-          "description": "Treinar e testar um modelo de aprendizado de máquina."
-        },
-        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
-          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
         },
         "706d588e-1af3-44f0-b4d8-7bffa52d45e8": {
           "description": "Criar e compartilhar seus próprios aplicativos no App Lab usando recursos como botões, textos, imagens, sons e telas."
@@ -3626,36 +3266,6 @@
         "86f2847b-df75-4023-a828-61521c7bd71d": {
           "description": "Compartilhar um artefato criativo com outros alunos."
         },
-        "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Descreva como a visão computacional é construída com camadas que combinam componentes menores em uma previsão final"
-        },
-        "5bb33a90-28cb-40cb-9647-59a1818980b8": {
-          "description": "Explique a necessidade de perspectivas diversas ao criar sistemas de recomendação"
-        },
-        "bb862e7c-9808-4414-b027-fc747d58b6c0": {
-          "description": "Use os pesos de um neurônio artificial para ajustar as saídas de um sistema de recomendação"
-        },
-        "2b61407b-2812-4aa5-bdf0-661ae14b44d0": {
-          "description": "Discuta os efeitos colaterais positivos e negativos desses modelos"
-        },
-        "941fa029-220b-4d04-880f-29d93c952a9d": {
-          "description": "Colabore com a IA para criar um documento de texto criativo"
-        },
-        "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "Descreva que ter uma grande quantidade de texto para aprender permite que os computadores pareçam inteligentes na forma escrita."
-        },
-        "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Discuta se esses modelos são criativos ou não e quem é o proprietário dessas imagens"
-        },
-        "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "Descreva que a IA pode gerar imagens com aparência bastante realista por meio de um processo conhecido como difusão, em que um modelo aprende a desenhar detalhes invertendo detalhes."
-        },
-        "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "O motivo pelo qual os tipos de tarefas não devem ser concluídos por um algoritmo"
-        },
-        "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
-          "description": "Explique como a IA funciona"
-        },
         "50b1fb31-4471-433d-a5f1-74e38886d49f": {
           "description": "Criar e compartilhar seus próprios aplicativos no App Lab usando recursos como botões, textos, imagens, sons e telas."
         },
@@ -3695,24 +3305,6 @@
         "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
           "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
         },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Desenvolver programas que respondam a eventos programados"
-        },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "Desenvolver programas que respondam à entrada do usuário"
-        },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Criar animações de dança utilizando código"
-        },
-        "83f493e8-9941-4154-b2f4-f34836741746": {
-          "description": "Definição de \"codificação\" e \"ciência da computação\"."
-        },
-        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
-          "description": "Identifique o vocabulário mais importante em ciência da computação."
-        },
-        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
-          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
-        },
         "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
           "description": "Definição de \"codificação\" e \"ciência da computação\"."
         },
@@ -3730,132 +3322,6 @@
         },
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Criar animações de dança utilizando código"
-        },
-        "6394fdc5-50c3-423e-8135-a64594824db3": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "303a2b74-af73-401c-8929-1fc1c5611f18": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": "Explicar por que a criptografia é uma necessidade importante no cotidiano da internet."
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": "Decifrar uma mensagem criptografada com a cifra de César, usando um widget para cifra de César"
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": "Decifrar uma mensagem criptografada por substituição aleatória usando a análise de frequência"
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": "Explicar os pontos fracos e falhas de segurança da criptografia por substituição"
-        },
-        "3e5eebcd-2140-4152-8654-410468108ab6": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "59992d8c-d194-4063-82fa-001a0b6482d9": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "63be9575-1232-47a5-991c-8bd03ac7c949": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
         },
         "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
           "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
@@ -3875,36 +3341,6 @@
         "343631be-830a-44f6-a249-a6aa96ea38f0": {
           "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
         },
-        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
-          "description": "Discutir o papel da inteligência artificial na vida deles."
-        },
-        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
-          "description": "Treinar e testar um modelo de aprendizado de máquina."
-        },
-        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
-          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
-        },
-        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Ilustre as mudanças no humor de um poema."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Represente a linguagem literal e a figurativa através de um texto"
-        },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Desenvolver programas que respondam a eventos temporizados."
-        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identificar ações que se correlacionem com eventos de entrada."
         },
@@ -3922,48 +3358,6 @@
         },
         "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
           "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
-        },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": "Colaborar com um colega para encontrar uma solução para um problema de compactação de texto usando o widget Text Compression (esquema de compactação sem perdas)."
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": "Explicar por que é difícil ou impossível identificar a quantidade ideal de compactação."
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": "Explicar alguns fatores que tornam a compactação desafiadora."
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": "Descrever o objetivo e o raciocínio da compactação sem perdas."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
         }
       }
     }

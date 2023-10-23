@@ -1927,6 +1927,30 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Questionário
+        csc-ecosystems-2023:
+          description: "## Trabalho prévio sugerido para este módulo. Alunos de\n\n\\*_Ciências_
+            devem simular um ecossistema de vida marinha nas Lições 1 e 2. Para desenvolver
+            familiaridade com esse ecossistema, recomendamos este [Vídeo sobre Animais
+            do Oceano](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutos).
+            \n\nNa Lição 2, os alunos vão codificar diversas práticas de pesca sustentável.
+            Eis aqui alguns textos para desenvolver conhecimentos sobre os fundamentos
+            e se aprofundar nas conexões com o mundo real: [Compreenda a Pesca Predatória](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)
+            (Artigo sobre o Aquário da Baía de Monterey), ou [Mw,kwa Talks to Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)
+            (livro infantil).\n\n \\*_Ciência da Computação:_ Neste módulo, os alunos
+            vão aprender novos conceitos de codificação que podem ser difíceis para
+            alunos novatos em ciência da computação. Se os alunos não estiverem familiarizados
+            com o laboratório de fadas do Code.org, recomendamos que experimentem
+            o [Peixes Nadando com o Laboratório de Fadas](https://studio.code.org/s/coursee-2022/lessons/3)
+            (55 minutos) para uma introdução básica à ferramenta. \n\nEste módulo
+            também utiliza um conceito avançado de CC conhecido como declarações condicionais.
+            Os alunos aprendem esse conceito de forma gradual, mas alguns podem se
+            beneficiar participando desta atividade introdutória offline sobre declarações
+            condicionais: [Declarações condicionais com cartas](https://studio.code.org/s/coursed-2022/lessons/12)
+            (50 minutos)."
+          lessons:
+            lesson-3:
+              name: Codifique seu próprio ecossistema (2023)
+          title: Simulação de um ecossistema marinho (2023)
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -9316,10 +9340,19 @@ pt:
         virtual-pl-csa-summer-2024-day1:
           title: Dia 1
         virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdução
+          lessons:
+            lesson-7:
+              name: Introdução
           title: Dia 1
         virtual-pl-csa-summer-day2:
           title: Dia 2
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdução
           title: Dia 3
         virtual-pl-csa-summer-day4:
           title: Dia 4
@@ -9352,6 +9385,9 @@ pt:
         virtual-pl-csp-summer-day1:
           title: Dia 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introdução
           title: Dia 2
         virtual-pl-csp-summer-day3:
           title: Dia 3

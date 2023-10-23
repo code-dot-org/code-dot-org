@@ -2,6 +2,13 @@
 pt:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': exato
+            '"too little"': muito pouco
+            '"too much"': em excesso
+        text: if {CONDITION}{SPRITE} {STATEMENT}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -1861,6 +1868,17 @@ pt:
             left: à esquerda ↺
             right: à direita ↻
         text: virar {DIR}
+      ecosystems_catchMe:
+        text: capture {THIS}
+      ecosystems_eat:
+        text: coma {THIS}
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': exato
+            '"too little"': muito pouco
+            '"too much"': em excesso
+        text: if {CONDITION}{SPRITE} {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:
@@ -1875,6 +1893,24 @@ pt:
             '8': '8'
             '9': '9'
         text: "{VALUE}"
+      ecosystems_makeNewSpriteBetween:
+        text: 'criar {N} novo {GROUP} entre o local x: {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: criar {NUM} novas {ANIMATION_NAME} fadas em {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": Inferior
+            "{x1:0, x2:400, y1:150, y2:250}": Central
+            "{x1:0, x2:400, y1:200, y2:400}": Superior
+        text: criar {NUM} novas {ANIMATION_NAME} fadas em {RANGE}
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": Inferior
+            "{x1:0, x2:400, y1:200, y2:400}": Superior
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       gamelab_addTarget:
