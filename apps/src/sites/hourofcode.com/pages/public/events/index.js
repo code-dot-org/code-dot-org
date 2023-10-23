@@ -238,15 +238,6 @@ function validateFields() {
     $('#event-type-error').hide();
   }
 
-  if (['out_of_school', 'after_school'].includes($('#hoc-event-type').val())) {
-    if ($('#organization-name').val() === '') {
-      $('#organization-name-error').show();
-      return false;
-    } else {
-      $('#organization-name-error').hide();
-    }
-  }
-
   if (
     $('#hoc-event-type').val() === 'in_school' &&
     ($('#country').val() !== 'US' || schoolData.nces === SCHOOL_NOT_FOUND)
@@ -259,8 +250,21 @@ function validateFields() {
     }
   }
 
+  const inOrAfterSchool = ['out_of_school', 'after_school'].includes(
+    $('#hoc-event-type').val()
+  );
+
+  if (inOrAfterSchool) {
+    if ($('#organization-name').val() === '') {
+      $('#organization-name-error').show();
+      return false;
+    } else {
+      $('#organization-name-error').hide();
+    }
+  }
+
   if (
-    ['out_of_school', 'after_school'].includes($('#hoc-event-type').val()) ||
+    inOrAfterSchool ||
     ($('#hoc-event-type').val() === 'in_school' &&
       ($('#country').val() !== 'US' || schoolData.nces === SCHOOL_NOT_FOUND))
   ) {
