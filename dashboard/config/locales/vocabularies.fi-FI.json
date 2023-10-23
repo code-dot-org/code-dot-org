@@ -8,24 +8,6 @@
         "copyright/csd/2021": {
           "word": "Copyright"
         },
-        "debugging/csd/2021": {
-          "word": "Virheen etsintä"
-        },
-        "variable/csd/2021": {
-          "word": "Muuttuja"
-        },
-        "condition/csd/2021": {
-          "word": "Ehtolause"
-        },
-        "conditionals/csd/2021": {
-          "word": "Ehtolausekkeet"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstraktio"
-        },
-        "function/csd/2021": {
-          "word": "Funktio"
-        },
         "debugging/coursea/2021": {
           "word": "Virheen etsintä"
         },
@@ -110,24 +92,6 @@
         "copyright/csd/2022": {
           "word": "Copyright"
         },
-        "debugging/csd/2022": {
-          "word": "Virheen etsintä"
-        },
-        "variable/csd/2022": {
-          "word": "Muuttuja"
-        },
-        "condition/csd/2022": {
-          "word": "Ehtolause"
-        },
-        "conditionals/csd/2022": {
-          "word": "Ehtolausekkeet"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstraktio"
-        },
-        "function/csd/2022": {
-          "word": "Funktio"
-        },
         "debugging/coursea/2022": {
           "word": "Virheen etsintä"
         },
@@ -209,53 +173,11 @@
         "code/csc-adaptations/2023": {
           "word": "Koodi"
         },
-        "code/csc-ecosystems/2023": {
-          "word": "Koodi"
-        },
-        "condition/csc-ecosystems/2023": {
-          "word": "Ehtolause"
-        },
-        "conditionals/csc-ecosystems/2023": {
-          "word": "Ehtolausekkeet"
-        },
-        "variable/csc-ecosystems/2023": {
-          "word": "Muuttuja"
-        },
-        "code/csc-mappinglandmarks/2023": {
-          "word": "Koodi"
-        },
-        "artist/csc-starquilts/2023": {
-          "word": "Taiteilija"
-        },
-        "comments/csc-starquilts/2023": {
-          "word": "Kommentit"
-        },
-        "code/poetry/2023": {
-          "word": "Koodi"
-        },
         "input/csd/2023": {
           "word": "Syöte"
         },
         "copyright/csd/2023": {
           "word": "Copyright"
-        },
-        "debugging/csd/2023": {
-          "word": "Virheen etsintä"
-        },
-        "variable/csd/2023": {
-          "word": "Muuttuja"
-        },
-        "condition/csd/2023": {
-          "word": "Ehtolause"
-        },
-        "conditionals/csd/2023": {
-          "word": "Ehtolausekkeet"
-        },
-        "abstraction/csd/2023": {
-          "word": "Abstraktio"
-        },
-        "function/csd/2023": {
-          "word": "Funktio"
         },
         "debugging/coursea/2023": {
           "word": "Virheen etsintä"
@@ -335,9 +257,6 @@
         "debugging/pre-express/2023": {
           "word": "Virheen etsintä"
         },
-        "network/how-ai-works/2023": {
-          "word": "Verkko"
-        },
         "condition/aquatic/unversioned": {
           "word": "Ehtolause"
         },
@@ -359,52 +278,16 @@
         "debugging/basketball/unversioned": {
           "word": "Virheen etsintä"
         },
-        "debugging/flappy/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "function/hero/unversioned": {
-          "word": "Funktio"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Virheen etsintä"
-        },
         "debugging/mc/unversioned": {
           "word": "Virheen etsintä"
         },
         "debugging/minecraft/unversioned": {
           "word": "Virheen etsintä"
         },
-        "debugging/playlab/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "code/poem-art/2021": {
-          "word": "Koodi"
-        },
         "code/sports/unversioned": {
           "word": "Koodi"
         },
         "debugging/sports/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/starwarsblocks/unversioned": {
           "word": "Virheen etsintä"
         }
       }
