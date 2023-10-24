@@ -40,7 +40,7 @@ module I18n
           private
 
           def tts_units
-            @tts_units ||= Unit.where('properties->"$.tts" IS TRUE')
+            @tts_units ||= Unit.tts_enabled
           end
 
           def sanitize_tts(text)
