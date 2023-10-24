@@ -557,6 +557,49 @@ nl:
         text: |-
           "achtergrondeffect
           {PALETTE} {EFFECT} instellen"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Tunnel
+            '"color_cycle"': Kleuren
+            '"diamonds"': Ruiten
+            '"disco"': Vierkanten
+            '"disco_ball"': Discobal
+            '"fireworks"': Vuurwerk
+            '"flowers"': Bloemen
+            '"galaxy"': Ruimte
+            '"growing_stars"': Groeiende sterren
+            '"kaleidoscope"': Caleidoscoop
+            '"lasers"': Laser-dansvloer
+            '"music_wave"': Golven
+            '"none"': Geen
+            '"quads"': Hoeken
+            '"rainbow"': Regenboog
+            '"rand"': "(Willekeurig)"
+            '"ripples"': Rimpelingen
+            '"ripples_random"': Willekeurige rimpelingen
+            '"snowflakes"': Sneeuw
+            '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
+            '"splatter"': Verfspetters
+            '"squiggles"': Kronkels
+            '"starburst"': Sterrenvorming
+            '"stars"': Sterren
+            '"text"': Titel van het lied
+          PALETTE:
+            '"cool"': Blauw
+            '"default"': Licht
+            '"electronic"': Elektronisch
+            '"iceCream"': Ijsco
+            '"neon"': Neon
+            '"rainbow"': Regenboog
+            '"rave"': Zwart-wit
+            '"tropical"': Tropisch
+            '"vintage"': Vintage
+            '"warm"': Rood
+        text: |-
+          "achtergrondeffect
+          {PALETTE} {EFFECT} instellen"
       Dancelab_setDanceSpeed:
         options:
           SPEED:

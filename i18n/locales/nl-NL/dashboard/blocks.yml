@@ -557,6 +557,49 @@ nl:
             '"tropical"': Tropisch
             '"vintage"': Vintage
             '"warm"': Rood
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "achtergrondeffect
+          {PALETTE} {EFFECT} instellen"
+        options:
+          EFFECT:
+            '"none"': Geen
+            '"rand"': "(Willekeurig)"
+            '"circles"': Tunnel
+            '"quads"': Hoeken
+            '"color_cycle"': Kleuren
+            '"diamonds"': Ruiten
+            '"disco_ball"': Discobal
+            '"fireworks"': Vuurwerk
+            '"flowers"': Bloemen
+            '"growing_stars"': Groeiende sterren
+            '"kaleidoscope"': Caleidoscoop
+            '"lasers"': Laser-dansvloer
+            '"splatter"': Verfspetters
+            '"rainbow"': Regenboog
+            '"ripples_random"': Willekeurige rimpelingen
+            '"ripples"': Rimpelingen
+            '"snowflakes"': Sneeuw
+            '"text"': Titel van het lied
+            '"squiggles"': Kronkels
+            '"galaxy"': Ruimte
+            '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
+            '"disco"': Vierkanten
+            '"starburst"': Sterrenvorming
+            '"stars"': Sterren
+            '"music_wave"': Golven
+          PALETTE:
+            '"rave"': Zwart-wit
+            '"cool"': Blauw
+            '"electronic"': Elektronisch
+            '"iceCream"': Ijsco
+            '"default"': Licht
+            '"neon"': Neon
+            '"rainbow"': Regenboog
+            '"tropical"': Tropisch
+            '"vintage"': Vintage
+            '"warm"': Rood
       Dancelab_setDanceSpeed:
         text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
