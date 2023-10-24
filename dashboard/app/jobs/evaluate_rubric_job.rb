@@ -30,7 +30,7 @@ class EvaluateRubricJob < ApplicationJob
     }
   }
 
-  def perform(user_id:, script_level_id:)
+  def perform(user_id:, script_level_id:, rubric_ai_evaluation_id:)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
@@ -38,7 +38,13 @@ class EvaluateRubricJob < ApplicationJob
     raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
+    # Find the rubric
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+    raise "ERROR: cannot find the rubric record" unless rubric
+
+    # Find the rubric evaluation record
+    rubric_ai_evaluation = RubricAiEvaluation.where(id: rubric_ai_evaluation_id)
+    raise "ERROR: cannot find the rubric ai evaluation record" unless rubric_ai_evaluation
 
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
@@ -51,7 +57,7 @@ class EvaluateRubricJob < ApplicationJob
     ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
     merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels)
 
-    write_ai_evaluations(user, merged_evaluations, rubric, channel_id, project_version)
+    write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation_id, project_version)
   end
 
   def self.ai_enabled?(script_level)
@@ -157,9 +163,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
-
+  private def write_ai_evaluations(user, ai_evaluations, rubric, rubric_ai_evaluation, project_version)
     # record the ai evaluations to the database
     # TODO: pass along and update the 'requester' to the correct id
     rubric_ai_evaluation = RubricAiEvaluation.create!(
@@ -170,28 +174,29 @@ class EvaluateRubricJob < ApplicationJob
       project_id: project_id,
       project_version: project_version,
     )
-
     ActiveRecord::Base.transaction do
-      ai_evaluations.each do |evaluation|
-        learning_goal = rubric.learning_goals.all.find {|lg| lg.learning_goal == evaluation['Key Concept']}
-        understanding = understanding_s_to_i(evaluation['Grade'])
-        # TODO: remove the creation of the old record
-        OldLearningGoalAiEvaluation.create!(
-          user_id: user.id,
-          learning_goal_id: learning_goal.id,
-          requester_id: user.id,
-          project_id: project_id,
-          project_version: project_version,
-          understanding: understanding,
-          ai_confidence: evaluation['Confidence']
-        )
-        LearningGoalAiEvaluation.create!(
-          rubric_ai_evaluation: rubric_ai_evaluation,
-          learning_goal: learning_goal,
-          understanding: understanding,
-          ai_confidence: evaluation['Confidence']
-        )
+      # Update the base rubric status
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+
+      # Record the version of the code we evaluated
+      rubric_ai_evaluation.project_version = project_version
+
+      # Write out all of the learning goal records
+      key_concepts = ai_evaluations.map {|ai_evaluation| ai_evaluation['Key Concept']}
+      learning_goal_ids = rubric.learning_goal_ai_evaluations.where(
+        learning_goal: key_concepts,
+      ).pluck(:id)
+
+      ai_evaluations.sort_by {|evaluation| evaluation['Key Concept']}.zip(
+        rubric_ai_evaluation.learning_goal_ai_evaluations.where(learning_goal_id: learning_goal_ids).order(learning_goal: :asc)
+      ) do |ai_evaluation, learning_goal_ai_evaluation|
+        understanding = understanding_s_to_i(ai_evaluation['Grade'])
+        learning_goal_ai_evaluation.understanding = understanding
+        learning_goal_ai_evaluation.ai_confidence = ai_evaluation['Confidence']
       end
+
+      # Save the rubric evaluation record
+      rubric_ai_evaluation.save!
     end
   end
 

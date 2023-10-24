@@ -85,13 +85,18 @@ class RubricsController < ApplicationController
     return head :not_found unless student
     return head :forbidden unless can?(:manage, student)
 
-    learning_goals = LearningGoal.where(rubric_id: permitted_params[:id])
-    # Get the most recent AI evaluation for each learning goal
-    learning_goal_ai_evaluations =
-      # TODO: Update to the new table when the data is copied over
-      OldLearningGoalAiEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goals.pluck(:id)).
-        group_by(&:learning_goal_id).
-        map {|_, eval_list| eval_list.max_by(&:updated_at)}
+    learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
+
+    # Get the most recent learning goals based on the most recent graded rubric
+    learning_goal_ai_evaluations = LearningGoalAiEvaluation.where(
+      learning_goal_id: learning_goal_ids,
+      rubric_ai_evaluation_id: RubricAiEvaluation.where(
+        id: LearningGoalAiEvaluation.where(
+          learning_goal_id: learning_goal_ids,
+        ).order(updated_at: :desc).limit(1).select(:rubric_ai_evaluation_id),
+        user_id: permitted_params[:student_id],
+      )
+    )
     render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)
   end
 
@@ -118,12 +123,34 @@ class RubricsController < ApplicationController
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
+    # Create a record of this work request
+    rubric_ai_evaluation = RubricAiEvaluation.create!(
+      user_id: user_id,
+      requester_id: current_user.id,
+      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
+      project_id: 0,
+    )
+
+    # Find the rubric (must have something to evaluate)
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+    return head :bad_request unless rubric
+
+    # Create a blank record of all the pending learning goal ai evaluations
+    rubric.learning_goals.each do |learning_goal|
+      LearningGoalAiEvaluation.create!(
+        rubric_ai_evaluation_id: rubric_ai_evaluation.id,
+        learning_goal_id: learning_goal.id,
+        understanding: RUBRIC_UNDERSTANDING_LEVELS[:UNKNOWN],
+        ai_confidence: 0,
+      )
+    end
+
     attempted = attempted_at
     return render status: :bad_request, json: {error: 'Not attempted'} unless attempted
     evaluated = ai_evaluated_at
     return render status: :bad_request, json: {error: 'Already evaluated'} if evaluated && attempted < evaluated
 
-    EvaluateRubricJob.perform_later(user_id: @user.id, script_level_id: script_level.id)
+    EvaluateRubricJob.perform_later(user_id: @user.id, script_level_id: script_level.id, rubric_ai_evaluation_id: rubric_ai_evaluation.id)
     return head :ok
   end
 
