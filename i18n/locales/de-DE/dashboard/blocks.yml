@@ -585,6 +585,48 @@ de:
             '"tropical"': Tropisch
             '"vintage"': Vintage
             '"warm"': Rots
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "hintergrundeffekt einstellen \n{PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Keiner
+            '"rand"': "(zufällig)"
+            '"circles"': Tunnel
+            '"quads"': Winkel
+            '"color_cycle"': Farben
+            '"diamonds"': Rauten
+            '"disco_ball"': Disco-Kugel
+            '"fireworks"': Feuerwerk
+            '"flowers"': Blumen
+            '"growing_stars"': Wachsende Sterne
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laser-Tanzfläche
+            '"splatter"': Farbspritzer
+            '"rainbow"': Regenbogen
+            '"ripples_random"': Zufällige Wellen
+            '"ripples"': Wellen
+            '"snowflakes"': Schnee
+            '"text"': Song-Titel
+            '"squiggles"': Schnörkel
+            '"galaxy"': Leerzeichen
+            '"sparkles"': Funkeln
+            '"spiral"': Spirale
+            '"disco"': Quadrate
+            '"starburst"': Starburst
+            '"stars"': Sterne
+            '"music_wave"': Wellen
+          PALETTE:
+            '"rave"': Schwarzweiß
+            '"cool"': Blaus
+            '"electronic"': Elektronisch
+            '"iceCream"': Eiscreme
+            '"default"': Hell
+            '"neon"': Neon
+            '"rainbow"': Regenbogen
+            '"tropical"': Tropisch
+            '"vintage"': Vintage
+            '"warm"': Rots
       Dancelab_setDanceSpeed:
         text: verändern Sie die {SPRITE} Tanzgeschwindigkeit zu {SPEED}
         options:
