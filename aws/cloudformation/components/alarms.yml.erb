@@ -26,8 +26,8 @@
       Dimensions:
         - {Name: InstanceId, Value: !Ref <%=daemon%>}
       EvaluationPeriods: 7
-      MetricName: MemoryUtilization
-      Namespace: 'System/Linux'
+      MetricName: mem_used_percent
+      Namespace: CWAgent
       Period: 60
       Statistic: Maximum
       Threshold: 87
