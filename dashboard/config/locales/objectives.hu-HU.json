@@ -457,54 +457,6 @@
         },
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Táncanimációk készítése kóddal"
-        },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
-        },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Egy vers hangulatváltozásának illusztrálása."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
         }
       }
     }

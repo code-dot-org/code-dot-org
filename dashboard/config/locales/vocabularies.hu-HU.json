@@ -1258,26 +1258,6 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
-        "code/poem-art/2021": {
-          "word": "Kód",
-          "definition": "(v) instrukciók írása számítógéphez."
-        },
-        "event/poem-art/2021": {
-          "word": "Esemény",
-          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
-        },
-        "line/poem-art/2021": {
-          "word": "Sor",
-          "definition": "(költészet) - egy vers kisebb, sorba rendezett egysége, amely a jobb lapszélen végződik."
-        },
-        "mood/poem-art/2021": {
-          "word": "Hangulat",
-          "definition": "érzés, atmoszféra vagy érzelem kifejezése művészetben vagy írásban"
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
-        },
         "code/sports/unversioned": {
           "word": "Kód"
         },
