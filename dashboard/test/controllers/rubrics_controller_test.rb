@@ -148,8 +148,8 @@ class RubricsControllerTest < ActionController::TestCase
 
     # Check for the understanding to match what we created
     # Note: The order is not guaranteed
-    id1 = json_response.map {|r| r['learning_goal_id']}.index(ai_evaluation1.id)
-    id2 = json_response.map {|r| r['learning_goal_id']}.index(ai_evaluation2.id)
+    id1 = json_response.map {|r| r['learning_goal_id']}.index(ai_evaluation1.learning_goal.id)
+    id2 = json_response.map {|r| r['learning_goal_id']}.index(ai_evaluation2.learning_goal.id)
     assert_equal ai_evaluation1.understanding, json_response[id1]['understanding']
     assert_equal ai_evaluation2.understanding, json_response[id2]['understanding']
   end
