@@ -2381,26 +2381,6 @@
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
-        "code/poem-art/2021": {
-          "word": "코드",
-          "definition": "(동사) 컴퓨터용 명령문을 작성합니다."
-        },
-        "event/poem-art/2021": {
-          "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
-        },
-        "line/poem-art/2021": {
-          "word": "구절",
-          "definition": "(시) - 오른쪽 여백에서 끝나는 한 줄로 배열된 시의 한 부분입니다."
-        },
-        "mood/poem-art/2021": {
-          "word": "분위기",
-          "definition": "느낌이나 분위기, 감정이 예술 또는 글로 표현된 것입니다."
-        },
-        "program/poem-art/2021": {
-          "word": "프로그램 ",
-          "definition": "기계가 실행할 수 있는 것으로 코딩된 일련의 단계입니다."
-        },
         "code/sports/unversioned": {
           "word": "코드",
           "definition": "(v) 코드 작성 또는 컴퓨터에게 내릴 지시사항 작성."

@@ -16314,11 +16314,6 @@ ko-KR:
           ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
           ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
-      ml-models-shoe survey_2023:
-        markdown: |
-          ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
-
-          ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
       ml-plan survey-copy form:
         markdown: |
           # Google 양식 복사
