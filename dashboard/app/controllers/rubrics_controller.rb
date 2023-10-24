@@ -93,7 +93,7 @@ class RubricsController < ApplicationController
       rubric_ai_evaluation_id: RubricAiEvaluation.where(
         id: LearningGoalAiEvaluation.where(
           learning_goal_id: learning_goal_ids,
-        ).order(updated_at: :desc).limit(1).select(:rubric_ai_evaluation_id),
+        ).order(updated_at: :desc).pick(:rubric_ai_evaluation_id),
         user_id: permitted_params[:student_id],
       )
     )
