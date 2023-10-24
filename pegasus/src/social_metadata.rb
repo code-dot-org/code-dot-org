@@ -22,6 +22,7 @@
 #   hourofcode.com/
 #   hourofcode.com/learn
 #   hourofcode.com/thanks
+#   hourofcode.com/ai
 
 def get_social_metadata_for_page(request)
   # Not currently used, but left here for reference in case we want to use videos again.
@@ -248,6 +249,13 @@ def get_social_metadata_for_page(request)
         image: images[:young_women_in_cs]
       }
     },
+    "ai_hoc" => {
+      "default" => {
+        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -266,6 +274,8 @@ def get_social_metadata_for_page(request)
     page = "thanks"
   elsif request.path == "/learn" && request.site == "hourofcode.com"
     page = "learn"
+  elsif request.path == "/ai" && request.site == "hourofcode.com"
+    page = "ai_hoc"
   elsif request.path == "/hourofcode/overview" && request.site == "code.org"
     page = "hoc-overview"
   elsif request.path == "/learn" && request.site == "code.org"
