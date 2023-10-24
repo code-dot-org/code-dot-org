@@ -2,589 +2,6 @@
   "fr-FR": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd/unit1"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd/unit1/standards/"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "Forum des enseignants",
-          "url": "https://forum.code.org/c/csd1"
-        },
-        "vocabulary/csd/2017": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd/unit1/vocab/"
-        },
-        "code_introduced/csd/2017": {
-          "name": "Code Introduit",
-          "url": "https://curriculum.code.org/csd/unit2/code/"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd/unit2/"
-        },
-        "standard_mappings_1/csd/2017": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd/unit2/standards/"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd/unit2/vocab/"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "Code Introduit",
-          "url": "https://curriculum.code.org/csd/unit3/code/"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd/unit3/"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd/unit3/standards/"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd/unit3/vocab/"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "Code Introduit",
-          "url": "https://curriculum.code.org/csd/unit4/code/"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd/unit4/"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd/unit4/standards/"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd/unit4/vocab/"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd/unit5/"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd/unit5/standards/"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd/unit5/vocab"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "Code Introduit",
-          "url": "https://curriculum.code.org/csd/unit6/code/"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd/unit6/"
-        },
-        "standard_mappings_5/csd/2017": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd/unit6/standards/"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd/unit6/vocab/"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "Forum des enseignants",
-          "url": "https://forum.code.org/c/csd1"
-        },
-        "vocabulary/csd/2018": {
-          "name": "Vocabulaire"
-        },
-        "code_introduced/csd/2018": {
-          "name": "Code Introduit"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings_1/csd/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum_1/csd/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "Vocabulaire"
-        },
-        "code_introduced_1/csd/2018": {
-          "name": "Code Introduit"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings_2/csd/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum_2/csd/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_2/csd/2018": {
-          "name": "Vocabulaire"
-        },
-        "code_introduced_2/csd/2018": {
-          "name": "Code Introduit"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings_3/csd/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum_3/csd/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Vocabulaire"
-        },
-        "code_introduced_3/csd/2018": {
-          "name": "Code Introduit"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings_5/csd/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum_5/csd/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary_5/csd/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursea/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursea/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursea/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/courseb/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/courseb/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/courseb/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursed/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursed/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursed/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursee/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursee/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursee/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursef/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursef/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursef/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/express/2018": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/express/2018": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/express/2018": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/express/2018": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd-19/unit1"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd-19/unit1/standards/"
-        },
-        "teacher_forum/csd/2019": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/csd/2019": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd-19/unit1/vocab/"
-        },
-        "code_introduced/csd/2019": {
-          "name": "Code Introduit",
-          "url": "https://curriculum.code.org/csd-19/unit2/code/"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd-19/unit2/"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd-19/unit2/standards/"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd-19/unit2/vocab/"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "Code Introduit",
-          "url": "https://curriculum.code.org/csd-19/unit3/code/"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd-19/unit3/"
-        },
-        "standard_mappings_2/csd/2019": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd-19/unit3/standards/"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd-19/unit3/vocab/"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "Code Introduit",
-          "url": "https://curriculum.code.org/csd-19/unit4/code/"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd-19/unit4/"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd-19/unit4/standards/"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd-19/unit4/vocab/"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd-19/unit5/"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd-19/unit5/standards/"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd-19/unit5/vocab"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "Code Introduit",
-          "url": "https://curriculum.code.org/csd-19/unit6/code/"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "Plans des Cours",
-          "url": "https://curriculum.code.org/csd-19/unit6/"
-        },
-        "standard_mappings_5/csd/2019": {
-          "name": "Mappages standard",
-          "url": "https://curriculum.code.org/csd-19/unit6/standards/"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "Vocabulaire",
-          "url": "https://curriculum.code.org/csd-19/unit6/vocab/"
-        },
-        "curriculum_guide/coursea/2019": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursea/2019": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursea/2019": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/courseb/2019": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/courseb/2019": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/courseb/2019": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursec/2019": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursec/2019": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursec/2019": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursec/2019": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursed/2019": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursed/2019": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursed/2019": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursee/2019": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursee/2019": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursee/2019": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursef/2019": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursef/2019": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/express/2019": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/express/2019": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/express/2019": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursea/2020": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursea/2020": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursea/2020": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursea/2020": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/courseb/2020": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/courseb/2020": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/courseb/2020": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/courseb/2020": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursec/2020": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursec/2020": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursec/2020": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursec/2020": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursed/2020": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursed/2020": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursed/2020": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursed/2020": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursee/2020": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursee/2020": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursee/2020": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursee/2020": {
-          "name": "Vocabulaire"
-        },
-        "curriculum_guide/coursef/2020": {
-          "name": "Guide Pédagogique"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/coursef/2020": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/coursef/2020": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/coursef/2020": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/express/2020": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/express/2020": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/express/2020": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/express/2020": {
-          "name": "Vocabulaire"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "Plans des Cours"
-        },
-        "standard_mappings/pre-express/2020": {
-          "name": "Mappages standard"
-        },
-        "teacher_forum/pre-express/2020": {
-          "name": "Forum des enseignants"
-        },
-        "vocabulary/pre-express/2020": {
-          "name": "Vocabulaire"
-        },
         "teacher_forum/csd/2021": {
           "name": "Forum des enseignants"
         },
@@ -5974,12 +5391,12 @@
           "type": "Diapositives"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-adaptations/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
@@ -6022,7 +5439,7 @@
           "type": "Diapositives"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
@@ -6112,17 +5529,17 @@
           "type": "Diapositives"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
         "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
-          "name": "Conseils utiles pour les enseignants et les apprenants\t",
+          "name": "Astuces utiles pour les enseignants et les élèves ",
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
           "type": "Ressource"
         },
@@ -6152,17 +5569,17 @@
           "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
         "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
-          "name": "Conseils utiles pour les enseignants et les apprenants\t",
+          "name": "Astuces utiles pour les enseignants et les élèves ",
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
           "type": "Ressource"
         },
@@ -6217,12 +5634,12 @@
           "type": "Ressource"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
@@ -6305,12 +5722,12 @@
           "url": "/s/csc-timecapsule-2023/vocab"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-timecapsule/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
@@ -6403,12 +5820,12 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
@@ -6849,6 +6266,9 @@
           "name": "Publiez votre site Web",
           "url": "https://youtu.be/2qcIlRtdpgE",
           "type": "Vidéo"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Ressource"
         },
         "websites_for_a_purpose_1/csd/2023": {
           "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit"
@@ -9647,24 +9067,6 @@
         "ai-training/oceans/unversioned": {
           "name": "IA : Les Données de Formation et la Déformation",
           "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "Vidéo"
-        },
-        "list_of_poems/poem-art/2021": {
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "Diapositives"
-        },
-        "poem_art_celebration/poem-art/2021": {
-          "type": "Vidéo"
-        },
-        "poem_art_events/poem-art/2021": {
-          "type": "Vidéo"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "Vidéo"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "name": "Art de la poésie 1 - Introduction",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "Vidéo"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {

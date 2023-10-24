@@ -7044,6 +7044,7 @@ fr:
             lesson-3:
               name: Codez votre propre écosystème (2023)
           title: Simulation d'un écosystème marin
+          description: "## Travaux préparatoires suggérés pour ce module\n\n**Science:**Les élèves simuleront un écosystème marin dans les cours 1 et 2. Pour se familiariser avec cet écosystème, nous vous invitons à consulter la [Vidéo sur les animaux marins](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nAu cours de la leçon 2, les élèves codifieront plusieurs pratiques de pêche durable. Ci-dessous quelques articles que nous vous invitons à lire pour acquérir des connaissances de base et mieux comprendre le monde réel : [Comprendre ce qu'est la surpêche](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (article sur l'Aquarium de la baie de Monterey), ou [Mw,kwa parle au huard](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (livre pour enfants).\n\n**Science informatique:** Dans ce module, les étudiants apprendront de nouvelles notions de codage potentiellement difficiles à assimiler pour ceux qui ne maîtrisent pas encore l'informatique. Si les participants ne maîtrisent pas Sprite Lab de Code.org, nous leur recommandons d'essayer [Swimming Fish de Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) pour une initiation à l'outil. \n\nCe module repose également sur un concept avancé de CS et les instructions conditionnelles. Les participants apprendront ce concept de façon structurée, mais certains d'entre eux pourraient tirer profit de cette activité d'introduction aux conditionnelles : [Conditionnelles avec des cartes](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes)."
         csc-adaptations-2023:
           lessons:
             lesson-2:
@@ -8262,15 +8263,57 @@ fr:
         virtual-pl-csa-summer-2024-day1:
           title: Jour 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduction
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
           title: Jour 2
         virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: Asynchrone, partie 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
           title: Jour 3
         virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
           title: Jour 4
+        virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-6:
+              name: Cérémonies de clôture
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
         virtual-pl-csa-summer-day2:
           lessons:
-            lesson-1:
-              name: Synchrone, partie 1
             lesson-2:
               name: Asynchrone, partie 1
             lesson-3:
@@ -8290,11 +8333,9 @@ fr:
         virtual-pl-csa-summer-day3:
           lessons:
             lesson-1:
-              name: Synchrone, partie 1
+              name: Introduction
             lesson-2:
               name: Asynchrone, partie 1
-            lesson-3:
-              name: Synchrone, partie 2
             lesson-4:
               name: Asynchrone, partie 2
           lesson_groups:
@@ -8309,14 +8350,12 @@ fr:
           title: Jour 3
         virtual-pl-csa-summer-day4:
           lessons:
-            lesson-1:
-              name: Synchrone, partie 1
             lesson-2:
               name: Asynchrone, partie 1
-            lesson-3:
-              name: Synchrone, partie 2
             lesson-4:
               name: Asynchrone, partie 2
+            lesson-5:
+              name: Ouverture de l'atelier
           lesson_groups:
             lessonGroup-2:
               display_name: Synchrone, partie 1
@@ -8330,11 +8369,17 @@ fr:
         virtual-pl-csa-summer-day5:
           lessons:
             lesson-1:
-              name: Synchrone, partie 1
+              name: Ouverture de l'atelier
+            lesson-2:
+              name: Asynchrone, partie 1
             lesson-3:
               name: Synchrone, partie 2
             lesson-4:
               name: Asynchrone, partie 2
+            lesson-13:
+              name: Cérémonies de clôture
+            lesson-16:
+              name: Cérémonies de clôture
           lesson_groups:
             lessonGroup-2:
               display_name: Synchrone, partie 1
@@ -8345,14 +8390,16 @@ fr:
           title: 'Jour 5 '
         virtual-pl-csa-summer-day1:
           lessons:
-            lesson-1:
-              name: Synchrone, partie 1
             lesson-2:
               name: Asynchrone, partie 1
             lesson-3:
               name: Synchrone, partie 2
             lesson-4:
               name: Asynchrone, partie 2
+            lesson-7:
+              name: Introduction
+            lesson-8:
+              name: Ouverture de l'atelier
           lesson_groups:
             lessonGroup-2:
               display_name: Synchrone, partie 1
@@ -8362,6 +8409,8 @@ fr:
               display_name: Synchrone, partie 2
             lessonGroup-5:
               display_name: Asynchrone, partie 2
+            lessonGroup-7:
+              display_name: Introduction
           title: Jour 1
         virtual-pl-csp-summer-day1:
           lesson_groups:

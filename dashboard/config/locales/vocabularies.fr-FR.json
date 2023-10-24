@@ -1188,11 +1188,11 @@
         },
         "code/csc-adaptations/2023": {
           "word": "Code",
-          "definition": "(v) Pour écrire des instructions pour un ordinateur"
+          "definition": "(v) Sert à écrire des instructions pour un ordinateur"
         },
         "event/csc-adaptations/2023": {
           "word": "Évènement",
-          "definition": "Une action qui fait bouger les choses"
+          "definition": "Une action qui provoque quelque chose"
         },
         "evolution/csc-adaptations/2023": {
           "word": "Évolution",
@@ -1248,11 +1248,11 @@
         },
         "code/csc-ecosystems/2023": {
           "word": "Code",
-          "definition": "(v) Pour écrire des instructions pour un ordinateur"
+          "definition": "(v) Sert à écrire des instructions pour un ordinateur"
         },
         "condition/csc-ecosystems/2023": {
           "word": "Condition",
-          "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action"
+          "definition": "Une chose qu'un programme vérifie pour voir si elle est véridique avant d'autoriser une action"
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "Instructions conditionnelles",
@@ -1260,11 +1260,11 @@
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "Écosystème",
-          "definition": "Une communauté biologique d'organismes en interaction avec leur environnement"
+          "definition": "Une communauté biologique d'organismes qui interagissent entre eux et avec leur environnement"
         },
         "event/csc-ecosystems/2023": {
           "word": "Évènement",
-          "definition": "Une action qui fait bouger les choses"
+          "definition": "Une action qui provoque quelque chose"
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "Surpêche",
@@ -2253,26 +2253,6 @@
         "program/playlab/unversioned": {
           "word": "Programme",
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
-        },
-        "code/poem-art/2021": {
-          "word": "Code",
-          "definition": "(v) écrire des instructions pour un ordinateur."
-        },
-        "event/poem-art/2021": {
-          "word": "Évènement",
-          "definition": "Action qui provoque quelque chose."
-        },
-        "line/poem-art/2021": {
-          "word": "Ligne",
-          "definition": "(poésie) - une subdivision d'un poème disposé en une rangée qui se termine à la marge de droite. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Humeur",
-          "definition": "l'expression d'un sentiment, d'une atmosphère ou d'une émotion dans l'art ou l'écriture."
-        },
-        "program/poem-art/2021": {
-          "word": "Programme",
-          "definition": "Une série d'étapes qui ont été codées dans quelque chose qui peut être exécuté par une machine."
         },
         "code/sports/unversioned": {
           "word": "Code"
