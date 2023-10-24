@@ -212,8 +212,123 @@
           "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
           "rubric_performance_level_4": "Não há tags de parágrafo no texto."
         },
+        "CSD U3 Draw Loop Plugged update your scene_2019": {
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como o sprite ou texto errado estando na frente. Pode haver outros erros, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2021": {
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como o sprite ou texto errado estando na frente. Pode haver outros erros, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2022": {
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como o sprite ou texto errado estando na frente. Pode haver outros erros, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2023": {
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como o sprite ou texto errado estando na frente. Pode haver outros erros, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2023": {
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra."
+        },
+        "CSD U3 Movement Fish_2021": {
+          "rubric_key_concept": "Use o contrapadrão para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_3": "O contrapadrão é usado dentro do loop de desenho para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O contrapadrão foi usado fora do loop de desenho, ou não foi usado."
+        },
+        "CSD U3 Movement Fish_2022": {
+          "rubric_key_concept": "Use o contrapadrão para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_3": "O contrapadrão é usado dentro do loop de desenho para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O contrapadrão foi usado fora do loop de desenho, ou não foi usado."
+        },
+        "CSD U3 Movement Fish_2023": {
+          "rubric_key_concept": "Use o contrapadrão para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_3": "O contrapadrão é usado dentro do loop de desenho para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O contrapadrão foi usado fora do loop de desenho, ou não foi usado."
+        },
         "CSD U3 Random Debug Cloud_2018_2019": {
-          "rubric_key_concept": "Use argumentos para alterar a forma como um método ou comando é executado. "
+          "rubric_key_concept": "Use argumentos para alterar a forma como um método ou comando é executado. ",
+          "rubric_performance_level_1": "O desenho programático aparece exatamente como no exemplo.",
+          "rubric_performance_level_2": "O desenho programático é aproximadamente o mesmo como na imagem, e a largura e a altura da nuvem foram alteradas.",
+          "rubric_performance_level_3": "A altura, a largura ou a posição da nuvem foram alteradas, mas ela pode não ser mais larga do que sua altura, ou pode ter sido movida para outro lugar na tela.",
+          "rubric_performance_level_4": "Nenhuma alteração foi feita no código ou as alterações não estão relacionadas às instruções."
+        },
+        "CSD U3 Random Debug Cloud_2021": {
+          "rubric_key_concept": "Use parâmetros para alterar a forma como um método ou comando é executado. ",
+          "rubric_performance_level_1": "O desenho programático aparece exatamente como no exemplo.",
+          "rubric_performance_level_2": "O desenho programático é aproximadamente o mesmo como na imagem, e a largura e a altura da nuvem foram alteradas.",
+          "rubric_performance_level_3": "A altura, a largura ou a posição da nuvem foram alteradas, mas ela pode não ser mais larga do que sua altura, ou pode ter sido movida para outro lugar na tela.",
+          "rubric_performance_level_4": "Nenhuma alteração foi feita no código ou as alterações não estão relacionadas às instruções."
+        },
+        "CSD U3 Random Debug Cloud_2022": {
+          "rubric_key_concept": "Use parâmetros para alterar a forma como um método ou comando é executado. ",
+          "rubric_performance_level_1": "O desenho programático aparece exatamente como no exemplo.",
+          "rubric_performance_level_2": "O desenho programático é aproximadamente o mesmo como na imagem, e a largura e a altura da nuvem foram alteradas.",
+          "rubric_performance_level_3": "A altura, a largura ou a posição da nuvem foram alteradas, mas ela pode não ser mais larga do que sua altura, ou pode ter sido movida para outro lugar na tela.",
+          "rubric_performance_level_4": "Nenhuma alteração foi feita no código ou as alterações não estão relacionadas às instruções."
+        },
+        "CSD U3 Random Debug Cloud_2023": {
+          "rubric_key_concept": "Use parâmetros para alterar a forma como um método ou comando é executado. ",
+          "rubric_performance_level_1": "O desenho programático aparece exatamente como no exemplo.",
+          "rubric_performance_level_2": "O desenho programático é aproximadamente o mesmo como na imagem, e a largura e a altura da nuvem foram alteradas.",
+          "rubric_performance_level_3": "A altura, a largura ou a posição da nuvem foram alteradas, mas ela pode não ser mais larga do que sua altura, ou pode ter sido movida para outro lugar na tela.",
+          "rubric_performance_level_4": "Nenhuma alteração foi feita no código ou as alterações não estão relacionadas às instruções."
+        },
+        "CSD U3 Random rainbow snake_2018_2019": {
+          "rubric_key_concept": "Gere e use números aleatórios em um programa, use argumentos para alterar a forma como um método ou comando é executado.",
+          "rubric_performance_level_1": "Todos os círculos têm posições horizontais razoáveis, cores diferentes e aparecem em posições verticais aleatórias, e alguns círculos têm um tamanho aleatório.",
+          "rubric_performance_level_2": "Todos os círculos têm posições horizontais razoáveis, cores diferentes e aparecem em posições verticais aleatórias",
+          "rubric_performance_level_3": "Pelo menos um círculo criado por um aluno tem uma nova cor, aparece em uma posição vertical aleatória e tem uma posição horizontal diferente de qualquer outro.",
+          "rubric_performance_level_4": "Nenhum aluno produziu círculos, ou quaisquer novos círculos compartilham uma cor ou posição horizontal com os círculos produzidos pelo código original."
+        },
+        "CSD U3 Random rainbow snake_2021": {
+          "rubric_key_concept": "Gere e use números aleatórios em um programa, use argumentos para alterar a forma como um método ou comando é executado.",
+          "rubric_performance_level_1": "Todos os círculos têm posições horizontais razoáveis, cores diferentes e aparecem em posições verticais aleatórias, e alguns círculos têm um tamanho aleatório.",
+          "rubric_performance_level_2": "Todos os círculos têm posições horizontais razoáveis, cores diferentes e aparecem em posições verticais aleatórias",
+          "rubric_performance_level_3": "Pelo menos um círculo criado por um aluno tem uma nova cor, aparece em uma posição vertical aleatória e tem uma posição horizontal diferente de qualquer outro.",
+          "rubric_performance_level_4": "Nenhum aluno produziu círculos, ou quaisquer novos círculos compartilham uma cor ou posição horizontal com os círculos produzidos pelo código original."
+        },
+        "CSD U3 Random rainbow snake_2022": {
+          "rubric_key_concept": "Gere e use números aleatórios em um programa, use argumentos para alterar a forma como um método ou comando é executado.",
+          "rubric_performance_level_1": "Todos os círculos têm posições horizontais razoáveis, cores diferentes e aparecem em posições verticais aleatórias, e alguns círculos têm um tamanho aleatório.",
+          "rubric_performance_level_2": "Todos os círculos têm posições horizontais razoáveis, cores diferentes e aparecem em posições verticais aleatórias",
+          "rubric_performance_level_3": "Pelo menos um círculo criado por um aluno tem uma nova cor, aparece em uma posição vertical aleatória e tem uma posição horizontal diferente de qualquer outro.",
+          "rubric_performance_level_4": "Nenhum aluno produziu círculos, ou quaisquer novos círculos compartilham uma cor ou posição horizontal com os círculos produzidos pelo código original."
+        },
+        "CSD U3 Random rainbow snake_2023": {
+          "rubric_key_concept": "Gere e use números aleatórios em um programa, use argumentos para alterar a forma como um método ou comando é executado.",
+          "rubric_performance_level_2": "Pelo menos um círculo criado por um aluno tem uma nova cor, aparece em uma posição vertical aleatória e tem uma posição horizontal diferente de qualquer outro.",
+          "rubric_performance_level_4": "Nenhum aluno produziu círculos, ou quaisquer novos círculos compartilham uma cor ou posição horizontal com os círculos produzidos pelo código original."
+        },
+        "CSD U3 Sprites assessment_2021": {
+          "rubric_key_concept": "Crie e use sprites.",
+          "rubric_performance_level_1": "Mais de dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes. Cada sprite tem um rótulo único e apropriado.",
+          "rubric_performance_level_2": "Pelo menos dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes.",
+          "rubric_performance_level_3": "Pelo menos um sprite foi criado com uma animação a qual é desenhada na tela.",
+          "rubric_performance_level_4": "Nenhum sprite foi criado ou foi criado sem uma animação - mostrada por um quadrado cinza."
+        },
+        "CSD U3 Sprites assessment_2022": {
+          "rubric_key_concept": "Crie e use sprites.",
+          "rubric_performance_level_1": "Mais de dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes. Cada sprite tem um rótulo único e apropriado.",
+          "rubric_performance_level_2": "Pelo menos dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes.",
+          "rubric_performance_level_3": "Pelo menos um sprite foi criado com uma animação a qual é desenhada na tela.",
+          "rubric_performance_level_4": "Nenhum sprite foi criado ou foi criado sem uma animação - mostrada por um quadrado cinza."
+        },
+        "CSD U3 Sprites assessment_2023": {
+          "rubric_key_concept": "Crie e use sprites.",
+          "rubric_performance_level_1": "Mais de dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes. Cada sprite tem um rótulo único e apropriado.",
+          "rubric_performance_level_2": "Pelo menos dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes.",
+          "rubric_performance_level_3": "Pelo menos um sprite foi criado com uma animação a qual é desenhada na tela.",
+          "rubric_performance_level_4": "Nenhum sprite foi criado ou foi criado sem uma animação - mostrada por um quadrado cinza."
         },
         "CSD U3 Sprites scene sprites_2019": {
           "rubric_performance_level_1": "Pelo menos um sprite é criado, recebe uma animação, é dimensionado para um bom tamanho e desenhado na tela. A variável sprite tem um nome razoável. `DrawSprites` é chamado após todas as propriedades do sprite terem sido atualizadas.",
@@ -221,9 +336,32 @@
           "rubric_performance_level_3": "Pelo menos um sprite foi criado e desenhado na tela. Pode haver problemas com a animação ou conflitos ao usar o mesmo nome de variável para vários sprites.",
           "rubric_performance_level_4": "Nenhum sprite é criado."
         },
+        "CSD U3 Variables assessment_2021": {
+          "rubric_key_concept": "Use variáveis para armazenar e atualizar informações",
+          "rubric_performance_level_1": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize, sem outras alterações inesperadas. O programa está livre de erros de sintaxe.",
+          "rubric_performance_level_2": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize. Outras alterações no código podem ter introduzido outros comportamentos inesperados ou pode haver pequenos erros de sintaxe que não impedem a execução do código.",
+          "rubric_performance_level_3": "A variável eyeSize foi usada em algum lugar do programa, mas não de forma que seja executada conforme as instruções.",
+          "rubric_performance_level_4": "Não há alterações no código, ou as alterações parecem não relacionadas às variáveis, ou as variáveis são usadas de forma que impedem a execução do programa."
+        },
+        "CSD U3 Variables assessment_2022": {
+          "rubric_key_concept": "Use variáveis para armazenar e atualizar informações",
+          "rubric_performance_level_1": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize, sem outras alterações inesperadas. O programa está livre de erros de sintaxe.",
+          "rubric_performance_level_2": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize. Outras alterações no código podem ter introduzido outros comportamentos inesperados ou pode haver pequenos erros de sintaxe que não impedem a execução do código.",
+          "rubric_performance_level_3": "A variável eyeSize foi usada em algum lugar do programa, mas não de forma que seja executada conforme as instruções.",
+          "rubric_performance_level_4": "Não há alterações no código, ou as alterações parecem não relacionadas às variáveis, ou as variáveis são usadas de forma que impedem a execução do programa."
+        },
+        "CSD U3 Variables assessment_2023": {
+          "rubric_key_concept": "Use variáveis para armazenar e atualizar informações",
+          "rubric_performance_level_1": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize, sem outras alterações inesperadas. O programa está livre de erros de sintaxe.",
+          "rubric_performance_level_2": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize. Outras alterações no código podem ter introduzido outros comportamentos inesperados ou pode haver pequenos erros de sintaxe que não impedem a execução do código.",
+          "rubric_performance_level_3": "A variável eyeSize foi usada em algum lugar do programa, mas não de forma que seja executada conforme as instruções.",
+          "rubric_performance_level_4": "Não há alterações no código, ou as alterações parecem não relacionadas às variáveis, ou as variáveis são usadas de forma que impedem a execução do programa."
+        },
         "CSD U3 Variables random with assignment_2019": {
+          "rubric_key_concept": "Use variáveis para armazenar e atualizar informações",
           "rubric_performance_level_1": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho aleatório conforme as instruções, sem outras alterações inesperadas.",
           "rubric_performance_level_2": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho aleatório, mas outras alterações no código podem ter introduzido outros comportamentos inesperados.",
+          "rubric_performance_level_3": "A variável eyeSize foi usada em algum lugar do programa, mas não de forma que seja executada conforme as instruções.",
           "rubric_performance_level_4": "Não há alterações no código, ou as alterações parecem não relacionadas à variável eyeSize, ou a variável é usada de uma forma que impede a execução do programa."
         },
         "CSD U3 abstraction velocityX control_2019": {
@@ -232,11 +370,50 @@
           "rubric_performance_level_3": "Pressionar a tecla de seta direita uma vez faz com que o sprite do peixe se mova pela tela de alguma forma.",
           "rubric_performance_level_4": "Pressionar a tecla de seta não causa movimento, ou o movimento é interrompido assim que a tecla é solta."
         },
+        "CSD U3 abstraction velocityX control_2021": {
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado."
+        },
+        "CSD U3 abstraction velocityX control_2022": {
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado."
+        },
+        "CSD U3 abstraction velocityX control_2023": {
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado."
+        },
         "CSD U3 collisions flyman make it your own_2019": {
           "rubric_performance_level_1": "O personagem do jogador não consegue se mover pelo obstáculo, a moeda nunca aparece atrás do obstáculo e o tamanho e a forma do colisor acionam as colisões em momentos razoáveis. Há pelo menos uma nova interação com sprites da escolha do aluno.",
           "rubric_performance_level_2": "O personagem do jogador não consegue passar pelo obstáculo e a moeda nunca aparece atrás do obstáculo.",
           "rubric_performance_level_3": "O personagem do jogador interage com o obstáculo de alguma forma, mas pode haver problemas, como o jogador mover o obstáculo ou, às vezes, a moeda aparecer atrás do obstáculo.",
           "rubric_performance_level_4": "Não há interações entre o personagem do jogador e o obstáculo."
+        },
+        "CSD U3 debug_2019": {
+          "rubric_key_concept": "Use um sistema de coordenadas para colocar elementos em uma tela, levando em conta o tamanho e a sobreposição do objeto.",
+          "rubric_performance_level_1": "O desenho programático é idêntico ao exemplo e está contido nas sete linhas de código.",
+          "rubric_performance_level_2": "O desenho programático é basicamente o mesmo que o desenho, mas pode haver alguns pequenos erros de posicionamento e pode haver linhas extras de código.",
+          "rubric_performance_level_3": "O quadrado foi movido, é roxo e aparece na frente dos círculos.",
+          "rubric_performance_level_4": "A imagem é a mesma ou as alterações parecem não estar relacionadas à tarefa."
+        },
+        "CSD U3 debug_2021": {
+          "rubric_key_concept": "Use um sistema de coordenadas para colocar elementos em uma tela, levando em conta o tamanho e a sobreposição do objeto.",
+          "rubric_performance_level_1": "O desenho programático é idêntico ao exemplo e está contido nas sete linhas de código.",
+          "rubric_performance_level_2": "O desenho programático é basicamente o mesmo que o desenho, mas pode haver alguns pequenos erros de posicionamento e pode haver linhas extras de código.",
+          "rubric_performance_level_3": "O quadrado foi movido, é roxo e aparece na frente dos círculos.",
+          "rubric_performance_level_4": "A imagem é a mesma ou as alterações parecem não estar relacionadas à tarefa."
+        },
+        "CSD U3 debug_2022": {
+          "rubric_key_concept": "Use um sistema de coordenadas para colocar elementos em uma tela, levando em conta o tamanho e a sobreposição do objeto.",
+          "rubric_performance_level_1": "O desenho programático é idêntico ao exemplo e está contido nas sete linhas de código.",
+          "rubric_performance_level_2": "O desenho programático é basicamente o mesmo que o desenho, mas pode haver alguns pequenos erros de posicionamento e pode haver linhas extras de código.",
+          "rubric_performance_level_3": "O quadrado foi movido, é roxo e aparece na frente dos círculos.",
+          "rubric_performance_level_4": "A imagem é a mesma ou as alterações parecem não estar relacionadas à tarefa."
+        },
+        "CSD U3 debug_2023": {
+          "rubric_key_concept": "Use um sistema de coordenadas para colocar elementos em uma tela, levando em conta o tamanho e a sobreposição do objeto.",
+          "rubric_performance_level_2": "O desenho programático é basicamente o mesmo que o desenho, mas pode haver alguns pequenos erros de posicionamento e pode haver linhas extras de código.",
+          "rubric_performance_level_3": "O quadrado foi movido, é roxo e aparece na frente dos círculos.",
+          "rubric_performance_level_4": "A imagem é a mesma ou as alterações parecem não estar relacionadas à tarefa."
         },
         "CSD U4 - Design Mode Project_2019": {
           "rubric_key_concept": "Crie um protótipo digital para a tela de um aplicativo.",
