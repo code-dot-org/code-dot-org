@@ -1,52 +1,61 @@
-// TODO: Once start working on Tags component - uncomment the code and use it as a template for Button component stories
+import React from 'react';
+import Tags, {TagsProps} from './index';
+import {Meta, Story} from '@storybook/react';
 
-// import React from 'react';
-// import Tags, {TagsProps} from './index';
-// import {Meta, Story} from '@storybook/react';
-// import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+export default {
+  title: 'DesignSystem/Tags Component',
+  component: Tags,
+} as Meta;
+
 //
-// export default {
-//   title: 'DesignSystem/Tags Component',
-//   component: Tags,
-// } as Meta;
+// TEMPLATE
 //
-// //
-// // TEMPLATE
-// //
-// // This is needed to fix children type error (passing string instead of React.ReactNode type)
-// // eslint-disable-next-line
-// const SingleTemplate: Story<ButtonProps> = args => <Button {...args} />;
-//
-// const MultipleTemplate: Story<{
-//   components: ButtonProps[];
-// }> = args => (
-//   <>
-//     {args.components?.map(componentArg => (
-//       // TODO: fix key
-//       <Button key={componentArg.size} {...componentArg} />
-//     ))}
-//   </>
-// );
-//
-// export const DefaultButton = SingleTemplate.bind({});
-// DefaultButton.args = {
-//   size: 'm',
-// };
-//
-// export const GroupOfSizesOfButtons = MultipleTemplate.bind({});
-// GroupOfSizesOfButtons.args = {
-//   components: [
-//     {
-//       size: 'xs',
-//     },
-//     {
-//       size: 's',
-//     },
-//     {
-//       size: 'm',
-//     },
-//     {
-//       size: 'l',
-//     },
-//   ],
-// };
+//  Using marginTop to separate components in storybook and prevent tooltip from hiding under the Storybook HUD.
+const SingleTemplate: Story<TagsProps> = args => (
+  <div style={{marginTop: 50}}>
+    <Tags {...args} />
+  </div>
+);
+
+const MultipleTemplate: Story<{
+  components: TagsProps[];
+}> = args => (
+  <>
+    {args.components?.map(componentArg => (
+      <div key={componentArg.size} style={{marginTop: 45}}>
+        <Tags {...componentArg} />
+      </div>
+    ))}
+  </>
+);
+
+export const DefaultTags = SingleTemplate.bind({});
+DefaultTags.args = {
+  tagsList: ['Math', 'Science', 'English'],
+  size: 'm',
+};
+
+export const DisabledTags = SingleTemplate.bind({});
+DisabledTags.args = {
+  tagsList: ['Math', 'Science', 'English'],
+  styleAsDisabled: true,
+  size: 'm',
+};
+
+export const GroupOfSizesOfTags = MultipleTemplate.bind({});
+GroupOfSizesOfTags.args = {
+  components: [
+    {
+      tagsList: ['Math S', 'Science S', 'English S'],
+      size: 's',
+    },
+    {
+      tagsList: ['Math M', 'Science M', 'English M'],
+      size: 'm',
+    },
+    {
+      tagsList: ['Math L', 'Science L', 'English L'],
+      size: 'l',
+    },
+  ],
+};
