@@ -550,6 +550,50 @@ ta:
         text: |-
           பின்னணி எஃபெக்டடை அமைக்கவும்
            {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': வட்டங்கள்
+            '"color_cycle"': வண்ணங்கள்
+            '"diamonds"': டயமன்ட்ஸ்
+            '"disco"': சதுரங்கள்
+            '"disco_ball"': டிஸ்கோ பால்
+            '"fireworks"': ஃபயர்ஒர்க்ஸ்
+            '"flowers"': மலர்கள்
+            '"galaxy"': ஸ்பேஸ்
+            '"growing_stars"': வளரும் நட்சத்திரங்கள்
+            '"kaleidoscope"': கெலைடோஸ்கோப்
+            '"lasers"': லேசர் டான்ஸ் தளம்
+            '"music_wave"': அலைகள்
+            '"none"': எதுவுமில்லை
+            '"quads"': கோணங்கள்
+            '"rainbow"': வானவில்
+            '"rand"': "(ரான்டம்)"
+            '"ripples"': சிற்றலைகள்
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
+            '"snowflakes"': பனி
+            '"sparkles"': ஜொலிப்புகள்
+            '"spiral"': ஸ்பைரல்
+            '"splatter"': பெயின்ட் ஸ்பலாட்டர்
+            '"squiggles"': சிறு வளை கோடுகள்
+            '"stars"': நட்சத்திரங்கள்
+            '"swirl"': ஹிப்னோ
+            '"text"': பாடல் பெயர்கள்
+          PALETTE:
+            '"cool"': கூல்
+            '"default"': லைட்
+            '"electronic"': எலக்ட்ரானிக்
+            '"iceCream"': ஐஸ்க்ரீம்
+            '"neon"': நியான்
+            '"ocean"': கடல்
+            '"rainbow"': வானவில்
+            '"rave"': கருப்பு வெள்ளை
+            '"tropical"': டிராபிகல்
+            '"vintage"': வின்டேஜ்
+            '"warm"': வ
+        text: |-
+          பின்னணி எஃபெக்டடை அமைக்கவும்
+           {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:

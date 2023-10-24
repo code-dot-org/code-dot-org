@@ -550,6 +550,50 @@ ta:
             '"tropical"': டிராபிகல்
             '"vintage"': வின்டேஜ்
             '"warm"': வ
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          பின்னணி எஃபெக்டடை அமைக்கவும்
+           {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': எதுவுமில்லை
+            '"rand"': "(ரான்டம்)"
+            '"circles"': வட்டங்கள்
+            '"quads"': கோணங்கள்
+            '"color_cycle"': வண்ணங்கள்
+            '"diamonds"': டயமன்ட்ஸ்
+            '"disco_ball"': டிஸ்கோ பால்
+            '"fireworks"': ஃபயர்ஒர்க்ஸ்
+            '"flowers"': மலர்கள்
+            '"growing_stars"': வளரும் நட்சத்திரங்கள்
+            '"swirl"': ஹிப்னோ
+            '"kaleidoscope"': கெலைடோஸ்கோப்
+            '"lasers"': லேசர் டான்ஸ் தளம்
+            '"splatter"': பெயின்ட் ஸ்பலாட்டர்
+            '"rainbow"': வானவில்
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
+            '"ripples"': சிற்றலைகள்
+            '"snowflakes"': பனி
+            '"text"': பாடல் பெயர்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
+            '"galaxy"': ஸ்பேஸ்
+            '"sparkles"': ஜொலிப்புகள்
+            '"spiral"': ஸ்பைரல்
+            '"disco"': சதுரங்கள்
+            '"stars"': நட்சத்திரங்கள்
+            '"music_wave"': அலைகள்
+          PALETTE:
+            '"rave"': கருப்பு வெள்ளை
+            '"cool"': கூல்
+            '"electronic"': எலக்ட்ரானிக்
+            '"iceCream"': ஐஸ்க்ரீம்
+            '"default"': லைட்
+            '"neon"': நியான்
+            '"ocean"': கடல்
+            '"rainbow"': வானவில்
+            '"tropical"': டிராபிகல்
+            '"vintage"': வின்டேஜ்
+            '"warm"': வ
       Dancelab_setDanceSpeed:
         text: "{SPRITE} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
