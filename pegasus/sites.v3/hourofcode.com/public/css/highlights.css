@@ -35,7 +35,8 @@
 
 .learnmore-link {
   color: white;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 .caption-headline {

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-25 20:23:18 UTC",
+    "serialized_at": "2023-10-09 17:38:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2319,7 +2319,7 @@
       "key": "45de1f5a-e699-4d78-9c45-49a6bf212ea8",
       "position": 3,
       "properties": {
-        "description": "**Circulate**: Give students time to explore the headings and discuss the questions on the level with their partner. \n\n**Prompt**: When would you use each of these headings? For example, which heading would you use for a web page title ... when might you use the H6 heading?\n\n**Discussion Goal**: Students should notice the H6 is the largest heading tag and should therefore be used for web page titles. The remaining heading tags are used for sub-titles and section/subsection titles. \n\n**Code Studio**: Have students continue to the next level in Code Studio",
+        "description": "**Circulate**: Give students time to explore the headings and discuss the questions on the level with their partner. \n\n**Prompt**: When would you use each of these headings? For example, which heading would you use for a web page title ... when might you use the H6 heading?\n\n**Discussion Goal**: Students should notice the H1 is the largest heading tag and should therefore be used for web page titles. The remaining heading tags are used for sub-titles and section/subsection titles. \n\n**Code Studio**: Have students continue to the next level in Code Studio",
         "progression_name": "Explore"
       },
       "seeding_key": {
@@ -4341,7 +4341,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2023] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [Extra Code in Challenge Levels](https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing) as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -10466,6 +10466,18 @@
       }
     },
     {
+      "name": "Web Development - Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing",
+      "key": "web_development_-_extra_code_in_challenge_levels",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_development_-_extra_code_in_challenge_levels"
+      }
+    },
+    {
       "name": "Website for a Purpose",
       "url": "https://docs.google.com/document/d/19ObCznDrFTz93q15fq3SMUkURiVgTuchLbFninlj3ww/edit",
       "key": "website_for_a_purpose",
@@ -11067,6 +11079,12 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "publishing_your_website"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "web_development_-_extra_code_in_challenge_levels"
       }
     },
     {

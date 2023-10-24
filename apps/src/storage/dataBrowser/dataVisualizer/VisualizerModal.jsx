@@ -15,6 +15,7 @@ import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
 import Snapshot from './Snapshot';
 import placeholderImage from './placeholder.png';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export const OperatorType = {
   EQUAL: 0,
@@ -141,6 +142,7 @@ class VisualizerModal extends React.Component {
         return chartType;
     }
   }
+
   getDisplayNameForOperator(operator) {
     switch (operator) {
       case OperatorType.GREATER_THAN:
@@ -461,7 +463,7 @@ const styles = {
     position: 'absolute',
     width: '100%',
     bottom: '50%',
-    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 20,
     color: color.dark_charcoal,
   },

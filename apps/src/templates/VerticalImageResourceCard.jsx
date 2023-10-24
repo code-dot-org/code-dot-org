@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '../util/color';
 import Button from './Button';
 
@@ -151,7 +152,7 @@ const styles = {
     height: 220,
   },
   text: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.charcoal,
   },
   title: {

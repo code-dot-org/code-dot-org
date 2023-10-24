@@ -1459,6 +1459,8 @@ az-AZ:
   hoc2022_cta_primary: Yeniliklərə baxın
   hoc2022_cta_secondary: Daha çox fəaliyyət sınayın
   hoc2022_landing_page_banner_alt_left: Kosmosda Saturnun yanında rəqs edən yadplanetli
+  hoc2022_landing_page_banner_alt_right: Uçan raketin qarşısında kosmosda futbol topu
+    ilə driblinq edən bir robot
   hoc2022_landing_page_create_description: Qəribə və gözəl bir şey edin!
   hoc2022_landing_page_create_title: Düzəlt
   hoc2022_landing_page_explore_description: Kompüter elmləri ilə yeni dünyalara qapılar
@@ -1481,6 +1483,13 @@ az-AZ:
   hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition adlı bu pulsuz
     kodlaşdırma dərsində gələcəyi xilas etmək üçün vaxtda geriyə səyahət edin.'
   hoc2022_mc_mee_title: Minecraft Qurtuluş Əmlakı
+  hoc2022_nasa_banner_description: NASA STEM-in YouTube kanalında dekabrın 5-də 10AM
+    ET premyerası.
+  hoc2022_nasa_banner_heading: Kosmosdakı kompüter elmləri ilə bağlı xüsusi Kod Saatı
+    xüsusiyyəti üçün NASA-ya qoşulun!
+  hoc2022_nasa_banner_heading_posthoc: Kosmosdakı kompüter elmləri ilə bağlı NASA-nın
+    xüsusi Kod Saatı xüsusiyyətini  yoxlayın !
+  hoc2022_nasa_webb_alt_text: NASA-nın James Webb teleskopunun təsviri
   hoc_is_here: "# HourOfCode 5-11 dekabr yenidən gəlir. https://youtu.be/KsOIlDT145A."
   hoc_leaderboards: Kod Saatı liderlər cədvəli
   hoc_overview_dance_2019_subtitle: Dostlarnızla paylaşmaq üçün rəqs şənliyini kodlaşdırarın.
@@ -2020,6 +2029,7 @@ az-AZ:
     simulyasiyası.
   outbreak_tile_subtitle: Monster Town-a virus yoluxdu! Bir epidemiya simulyatorunu
     kodlayın və Monster Town qonşularının başına nə gələcəyi barədə proqnozlar verin.
+  outbreak_tile_title: Yayılma
   page_not_available_button: İlk səhifəyə qayıt
   page_not_available_description: Üzr istəyirik, sorğu etdiyiniz səhifə artıq bu ünvanda
     mövcud deyil. Hələ də girişə ehtiyacınız varsa, [support@code.org](%{support_email_link})

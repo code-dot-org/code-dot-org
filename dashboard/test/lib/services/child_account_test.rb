@@ -16,8 +16,8 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       Services::ChildAccount.lock_out(user)
 
       assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, user.child_account_compliance_state
-      assert_not_nil user.child_account_compliance_state_last_updated
-      assert_not_nil user.child_account_compliance_lock_out_date
+      refute_nil user.child_account_compliance_state_last_updated
+      refute_nil user.child_account_compliance_lock_out_date
     end
 
     test 'given locked_out user does not update state' do
@@ -76,7 +76,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       Services::ChildAccount.update_compliance(user, new_state)
 
       assert_equal new_state, user.child_account_compliance_state
-      assert_not_nil user.child_account_compliance_state_last_updated
+      refute_nil user.child_account_compliance_state_last_updated
 
       last_updated = user.child_account_compliance_state_last_updated
       Timecop.travel 5.minutes
@@ -84,7 +84,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       Services::ChildAccount.update_compliance(user, new_state)
 
       assert_equal new_state, user.child_account_compliance_state
-      assert_not_equal last_updated, user.child_account_compliance_state_last_updated
+      refute_equal last_updated, user.child_account_compliance_state_last_updated
 
       last_updated = user.child_account_compliance_state_last_updated
       Timecop.travel 5.minutes
@@ -92,7 +92,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       Services::ChildAccount.update_compliance(user, new_state)
 
       assert_equal new_state, user.child_account_compliance_state
-      assert_not_equal last_updated, user.child_account_compliance_state_last_updated
+      refute_equal last_updated, user.child_account_compliance_state_last_updated
     end
   end
 
@@ -113,7 +113,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       end
       user.reload
       assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
-      assert_not_empty user.child_account_compliance_state_last_updated
+      refute_empty user.child_account_compliance_state_last_updated
     end
 
     test 'granting permission twice only makes changes once' do
@@ -126,7 +126,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
       last_updated = user.child_account_compliance_state_last_updated
       Timecop.travel 5.minutes
-      assert_not_empty last_updated
+      refute_empty last_updated
 
       # No emails should be sent
       assert_emails 0 do

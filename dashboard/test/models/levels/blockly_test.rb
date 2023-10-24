@@ -412,7 +412,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     localized_custom_block = level.localized_shared_blocks(custom_block)
 
-    assert_not_equal localized_custom_block, translated_block
+    refute_equal localized_custom_block, translated_block
   end
 
   test 'does not return translated strings when I18n translation does not exist' do
@@ -478,7 +478,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     localized_custom_block = level.localized_shared_blocks(custom_block)
 
-    assert_not_equal localized_custom_block, translated_block
+    refute_equal localized_custom_block, translated_block
   end
 
   test 'option that contains a period in the key is translated' do

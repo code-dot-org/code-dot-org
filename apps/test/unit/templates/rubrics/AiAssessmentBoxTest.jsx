@@ -17,7 +17,7 @@ describe('AiAssessmentBox', () => {
   it('renders AiAssessmentBox with student information if it is assessessed by AI', () => {
     const wrapper = shallow(<AiAssessmentBox {...props} />);
     expect(wrapper.find('EmText')).to.have.lengthOf(1);
-    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
+    expect(wrapper.find('BodyThreeText')).to.have.lengthOf(1);
     expect(wrapper.find('ReactTooltip')).to.have.lengthOf(1);
   });
 
@@ -28,7 +28,7 @@ describe('AiAssessmentBox', () => {
     };
     const wrapper = shallow(<AiAssessmentBox {...updatedProps} />);
     expect(wrapper.find('EmText')).to.have.lengthOf(0);
-    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
+    expect(wrapper.find('BodyThreeText')).to.have.lengthOf(1);
     expect(wrapper.find('ReactTooltip')).to.have.lengthOf(0);
   });
 
@@ -68,10 +68,9 @@ describe('AiAssessmentBox', () => {
   it('renders AiAssessmentBox with notice that AI Cannot be used to assess this box when the topic is to subjective to be evaluated', () => {
     const updatedProps = {...props, isAiAssessed: false};
     const wrapper = shallow(<AiAssessmentBox {...updatedProps} />);
-    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
+    expect(wrapper.find('BodyThreeText')).to.have.lengthOf(0);
     expect(wrapper.find('EmText')).to.have.lengthOf(1);
     expect(wrapper.html().includes(i18n.aiCannotAssess())).to.be.true;
-    expect(wrapper.find('ReactTooltip')).to.have.lengthOf(1);
     expect(wrapper.find('div').first().hasClass(style.noAiAssessment)).to.be
       .true;
   });

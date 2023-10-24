@@ -14,7 +14,7 @@ module Api::V1::Pd
 
     setup do
       @controller.stubs(:get_score_for_workshops)
-      AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
+      AWS::S3.stubs(:download_from_bucket).returns({@workshop.course.to_sym => {}}.to_json)
     end
 
     API = '/api/v1/pd/workshops'

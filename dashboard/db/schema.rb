@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_27_153604) do
+ActiveRecord::Schema.define(version: 2023_10_17_201252) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -461,6 +461,21 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
+  create_table "delayed_jobs", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
   create_table "donor_schools", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "nces_id"
@@ -630,24 +645,12 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.integer "understanding"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "requester_id"
+    t.integer "ai_confidence"
+    t.integer "status", default: 0
     t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
+    t.index ["requester_id"], name: "index_learning_goal_ai_evaluations_on_requester_id"
     t.index ["user_id"], name: "index_learning_goal_ai_evaluations_on_user_id"
-  end
-
-  create_table "learning_goal_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "teacher_id"
-    t.integer "unit_id"
-    t.integer "level_id"
-    t.integer "learning_goal_id"
-    t.boolean "ai_sourced"
-    t.date "prompt_version"
-    t.integer "understanding"
-    t.text "feedback"
-    t.text "context"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.datetime "submitted_at"
   end
 
   create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -1835,6 +1838,21 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id"
   end
 
+  create_table "section_instructors", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "instructor_id", null: false
+    t.integer "section_id", null: false
+    t.integer "invited_by_id"
+    t.datetime "deleted_at"
+    t.integer "status", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["deleted_at"], name: "index_section_instructors_on_deleted_at"
+    t.index ["instructor_id", "section_id"], name: "index_section_instructors_on_instructor_id_and_section_id", unique: true
+    t.index ["instructor_id"], name: "index_section_instructors_on_instructor_id"
+    t.index ["invited_by_id"], name: "index_section_instructors_on_invited_by_id"
+    t.index ["section_id"], name: "index_section_instructors_on_section_id"
+  end
+
   create_table "sections", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "name"
@@ -2275,6 +2293,7 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "learning_goal_ai_evaluations", "users", column: "requester_id", name: "index_learning_goal_ai_evaluations_on_requester_id"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "lti_deployments", "lti_integrations"
   add_foreign_key "lti_user_identities", "lti_integrations"
@@ -2302,6 +2321,8 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "section_instructors", "users", column: "instructor_id"
+  add_foreign_key "section_instructors", "users", column: "invited_by_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"

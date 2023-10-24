@@ -45,7 +45,7 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
 
   test 'cannot create CSF scholarship info with CSP-specific scholarship status' do
     csf_scholarship_info = build :pd_scholarship_info, course: COURSE_KEY_MAP[COURSE_CSF], scholarship_status: Pd::ScholarshipInfoConstants::YES_EIR
-    assert_not_nil csf_scholarship_info.errors[:scholarship_status]
+    refute_nil csf_scholarship_info.errors[:scholarship_status]
   end
 
   test 'can create CSP scholarship info with CSP-specific scholarship status' do

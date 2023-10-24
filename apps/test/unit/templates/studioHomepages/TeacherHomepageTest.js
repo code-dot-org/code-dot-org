@@ -109,7 +109,7 @@ describe('TeacherHomepage', () => {
     );
   });
 
-  it('renders a MarketingAnnouncementBanner if isEnglish and specialAnnouncement exists', () => {
+  it('renders a MarketingAnnouncementBanner specialAnnouncement exists', () => {
     const specialAnnouncement = {
       title: 'An announcement',
       image: '/image',
@@ -118,7 +118,6 @@ describe('TeacherHomepage', () => {
       buttonText: 'press me',
     };
     const wrapper = setUp({
-      isEnglish: true,
       specialAnnouncement,
     });
     assert(wrapper.find('MarketingAnnouncementBanner').exists());

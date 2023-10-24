@@ -137,7 +137,12 @@ class I18nScriptUtils
 
   # Used by get_level_from_url, for the script_level-specific case.
   def self.get_script_level(route_params, url)
-    script = Unit.get_from_cache(route_params[:script_id])
+    script = begin
+      Unit.get_from_cache(route_params[:script_id])
+    rescue ActiveRecord::RecordNotFound => _exception
+      nil
+    end
+
     unless script.present?
       error_class = 'Could not find script in get_script_level'
       error_message = "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
@@ -335,32 +340,28 @@ class I18nScriptUtils
     end
   end
 
-  def self.sanitize_data_and_write(data, dest_path)
-    sorted_data = sort_and_sanitize(data)
-
-    dest_data =
-      case File.extname(dest_path)
-      when '.yaml', '.yml'
-        sorted_data.to_yaml
-      when '.json'
-        JSON.pretty_generate(sorted_data)
-      else
-        raise "do not know how to serialize localization data to #{dest_path}"
-      end
-
-    FileUtils.mkdir_p(File.dirname(dest_path))
-    File.write(dest_path, dest_data)
+  def self.json_file?(file_path)
+    %w[.json].include?(File.extname(file_path).downcase)
   end
 
-  def self.parse_file(path)
-    case File.extname(path)
-    when '.yaml', '.yml'
-      YAML.load_file(path)
-    when '.json'
-      JSON.load_file(path)
-    else
-      raise "do not know how to parse file #{path.inspect}"
-    end
+  def self.yaml_file?(file_path)
+    %w[.yaml .yml].include?(File.extname(file_path).downcase)
+  end
+
+  def self.sanitize_data_and_write(data, dest_path)
+    dest_data = sort_and_sanitize(data)
+
+    dest_data = JSON.pretty_generate(dest_data) if json_file?(dest_path)
+    dest_data = YAML.dump(dest_data) if yaml_file?(dest_path)
+
+    write_file(dest_path, dest_data)
+  end
+
+  def self.parse_file(file_path)
+    return JSON.load_file(file_path) if json_file?(file_path)
+    return YAML.load_file(file_path) if yaml_file?(file_path)
+
+    raise "do not know how to parse file #{file_path.inspect}"
   end
 
   def self.sanitize_file_and_write(loc_path, dest_path)
@@ -383,6 +384,22 @@ class I18nScriptUtils
   def self.write_file(file_path, content)
     FileUtils.mkdir_p(File.dirname(file_path))
     File.write(file_path, content)
+  end
+
+  # Writes json file
+  #
+  # @param file_path [String] path to the file
+  # @param data [Hash] the file content
+  def self.write_json_file(file_path, data)
+    write_file file_path, JSON.pretty_generate(data)
+  end
+
+  # Writes yaml file
+  #
+  # @param file_path [String] path to the file
+  # @param data [Hash] the file content
+  def self.write_yaml_file(file_path, data)
+    write_file file_path, to_crowdin_yaml(data)
   end
 
   # Copies file
@@ -416,7 +433,7 @@ class I18nScriptUtils
   end
 
   def self.locale_dir(locale, *paths)
-    CDO.dir(File.join(I18N_LOCALES_DIR, locale, *paths))
+    CDO.dir(I18N_LOCALES_DIR, locale, *paths)
   end
 
   def self.remove_empty_dir(dir)

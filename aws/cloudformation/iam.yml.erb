@@ -542,14 +542,15 @@ roles.each do |name, config| %>
               - arn:aws:s3:::cdo-v3-assets/assets_development/*
               - arn:aws:s3:::cdo-v3-animations/animations_development/*
               - arn:aws:s3:::cdo-v3-files/files_development/*
-          - Sid: AllowListingToAnimationLibraryBucket
+          - Sid: AllowListingToLibraryBuckets
             Effect: Allow
             Action:
               - s3:ListBucket
               - s3:ListBucketVersions
             Resource:
               - arn:aws:s3:::cdo-animation-library
-          - Sid: AllowReadOnlyToAnimationLibraryBucket
+              - arn:aws:s3:::cdo-sound-library
+          - Sid: AllowReadOnlyToLibraryBuckets
             Effect: Allow
             Action:
               - s3:GetObject
@@ -560,6 +561,7 @@ roles.each do |name, config| %>
               - s3:GetObjectVersionTagging
             Resource:
               - arn:aws:s3:::cdo-animation-library/*
+              - arn:aws:s3:::cdo-sound-library/*
 
   DenySecretsPolicy:
     Type: AWS::IAM::ManagedPolicy

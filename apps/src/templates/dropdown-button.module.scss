@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color', 'font';
 
 .main {
   display: inline-block;
@@ -27,10 +27,10 @@
 a.anchor,
 a:link.anchor,
 a:visited.anchor {
+  @include main-font-semi-bold;
   padding: 10px;
   color: $charcoal;
   background-color: $white;
-  font-family: "Gotham 5r", sans-serif;
   display: block;
   text-decoration: none;
   line-height: 20px;
