@@ -6283,6 +6283,12 @@ tr:
             -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
 
             **Önerilen Süre:** 120 dakika
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Kendi Ekosisteminizi Kodlayın (2023)
+          title: Deniz Ekosistemi Simülasyonu (2023)
+          description: "## Bu Modül için Önerilen Ön Çalışma\n\n**Bilim:** Öğrenciler 1. ve 2. derslerde deniz yaşamı ekosistemini simüle edeceklerdir. Bu ekosisteme aşinalık oluşturmak için bu [Okyanus Hayvanları Videosunu](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 dakika) öneriyoruz. \n\n2.  derste öğrenciler birkaç sürdürülebilir balıkçılık uygulamasını kodlayacaklar. Biraz temel bilgi almak ve gerçek dünyayla daha rahat bağlantı kurmak için okunabilecek materyaller: [Aşırı Avlanmayı Anlama](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Monterey Bay Akvaryumu makalesi) veya [Mw, kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (Çocuk kitabı).\n\n**Bilgisayar Bilimi:** Bu modülde öğrenciler, yeni bilgisayar bilimleri öğrencileri için zor olabilecek yeni kodlama kavramlarını öğreneceklerdir. Öğrenciler Code.org'un Hareketli Nesne Laboratuvarı'na aşina değilse araca temel giriş için [Hareketli Nesne Laboratuvarı ile Yüzen Balıklar](https://studio.code.org/s/coursee-2022/lessons/3) (55 dakika) videosunu denemenizi öneririz. \n\nBu modül ayrıca koşullu ifadeler adı verilen gelişmiş bir CS kavramını kullanır. Öğrenciler bu kavramı rehberli bir şekilde öğrenirler ancak bazı öğrenciler için ilk önce, bağımsız koşullara giriş aktivitesine katılmak yararlı olabilir: [Kartlarla Koşullar](https://studio.code.org/s/coursed-2022/lessons/12) (50 dakika)."
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7247,15 +7253,54 @@ tr:
         virtual-pl-csa-summer-2024-day1:
           title: Gün 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Giriş
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
           title: Gün 2
         virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: Eşzamansız Bölüm 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
           title: Gün 3
         virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
           title: Gün 4
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
         virtual-pl-csa-summer-day2:
           lessons:
-            lesson-1:
-              name: Eşzamanlı Bölüm 1
             lesson-2:
               name: Eşzamansız Bölüm 1
             lesson-3:
@@ -7275,11 +7320,9 @@ tr:
         virtual-pl-csa-summer-day3:
           lessons:
             lesson-1:
-              name: Eşzamanlı Bölüm 1
+              name: Giriş
             lesson-2:
               name: Eşzamansız Bölüm 1
-            lesson-3:
-              name: Eşzamanlı Bölüm 2
             lesson-4:
               name: Eşzamansız Bölüm 2
           lesson_groups:
@@ -7294,12 +7337,8 @@ tr:
           title: Gün 3
         virtual-pl-csa-summer-day4:
           lessons:
-            lesson-1:
-              name: Eşzamanlı Bölüm 1
             lesson-2:
               name: Eşzamansız Bölüm 1
-            lesson-3:
-              name: Eşzamanlı Bölüm 2
             lesson-4:
               name: Eşzamansız Bölüm 2
           lesson_groups:
@@ -7314,8 +7353,8 @@ tr:
           title: Gün 4
         virtual-pl-csa-summer-day5:
           lessons:
-            lesson-1:
-              name: Eşzamanlı Bölüm 1
+            lesson-2:
+              name: Eşzamansız Bölüm 1
             lesson-3:
               name: Eşzamanlı Bölüm 2
             lesson-4:
@@ -7329,14 +7368,14 @@ tr:
               display_name: Eşzamansız Bölüm 2
         virtual-pl-csa-summer-day1:
           lessons:
-            lesson-1:
-              name: Eşzamanlı Bölüm 1
             lesson-2:
               name: Eşzamansız Bölüm 1
             lesson-3:
               name: Eşzamanlı Bölüm 2
             lesson-4:
               name: Eşzamansız Bölüm 2
+            lesson-7:
+              name: Giriş
           lesson_groups:
             lessonGroup-2:
               display_name: Eşzamanlı Bölüm 1
@@ -7346,6 +7385,8 @@ tr:
               display_name: Eşzamanlı Bölüm 2
             lessonGroup-5:
               display_name: Eşzamansız Bölüm 2
+            lessonGroup-7:
+              display_name: Giriş
           title: Gün 1
         virtual-pl-csp-summer-day1:
           lesson_groups:

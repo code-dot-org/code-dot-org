@@ -10,11 +10,11 @@ tr:
       AmysBlocks_goldilocks:
         options:
           CONDITION:
-            '"just right"': sadece doğru
+            '"just right"': harfi harfine
             '"too little"': çok az
             '"too much"': çok fazla
         text: |2-
-           eğer {CONDITION}{SPRITE}
+           if {CONDITION}{SPRITE}
           {STATEMENT}
       AmysBlocks_goldilocksElse:
         text: |2-
@@ -615,6 +615,50 @@ tr:
             '"electronic"': Elektronik
             '"iceCream"': Dondurma
             '"neon"': Neon
+            '"rave"': Siyah Beyaz
+            '"tropical"': Tropik
+            '"vintage"': Eski tip
+            '"warm"': Sıcak
+        text: arka plan efektini {PALETTE} {EFFECT} olarak ayarla
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Çemberler
+            '"color_cycle"': Renkler
+            '"diamonds"': Elmaslar
+            '"disco"': Kareler
+            '"disco_ball"': Disko Topu
+            '"fireworks"': Havai fişekler
+            '"flowers"': Çiçekler
+            '"galaxy"': Uzay
+            '"growing_stars"': Büyüyen Yıldızlar
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazer Dans Pisti
+            '"music_wave"': Dalgalar
+            '"none"': Hiçbiri
+            '"quads"': Açılar
+            '"rainbow"': Gökkuşağı
+            '"rand"': "(Rastgele)"
+            '"ripples"': Dalgalar
+            '"ripples_random"': Rastgele Dalgalar
+            '"snowflakes"': Kar
+            '"sparkles"': Kıvılcımlar
+            '"spiral"': Sarmal
+            '"splatter"': Boya Lekesi
+            '"squiggles"': Karalamalar
+            '"starburst"': Yıldız patlaması
+            '"stars"': Yıldızlar
+            '"swirl"': Hipnozcu
+            '"text"': Şarkı Adları
+          PALETTE:
+            '"cool"': Havalı
+            '"default"': Işık
+            '"electronic"': Elektronik
+            '"iceCream"': Dondurma
+            '"neon"': Neon
+            '"ocean"': Okyanus
+            '"rainbow"': Gökkuşağı
             '"rave"': Siyah Beyaz
             '"tropical"': Tropik
             '"vintage"': Eski tip
@@ -2059,17 +2103,17 @@ tr:
             right: sağa ↻
         text: dön {DIR}
       ecosystems_catchMe:
-        text: yakala {THIS}
+        text: 'yakala: {THIS}'
       ecosystems_eat:
-        text: ye {THIS}
+        text: 'ye: {THIS}'
       ecosystems_goldilocks:
         options:
           CONDITION:
-            '"just right"': sadece doğru
+            '"just right"': harfi harfine
             '"too little"': çok az
             '"too much"': çok fazla
         text: |2-
-           eğer {CONDITION}{SPRITE}
+           if {CONDITION}{SPRITE}
           {STATEMENT}
       ecosystems_int10:
         options:
@@ -2085,6 +2129,25 @@ tr:
             '8': '8'
             '9': '9'
         text: "{VALUE}"
+      ecosystems_makeNewSpriteBetween:
+        text: 'x: {X} y: {Y} konumu arasında {N} yeni {GROUP} yap'
+      ecosystems_makeNumSpritesAtLocation:
+        text: "{LOCATION_GENERATOR} konumunda {NUM} yeni {ANIMATION_NAME} hareketli
+          nesne yap"
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": Alt
+            "{x1:0, x2:400, y1:150, y2:250}": Orta
+            "{x1:0, x2:400, y1:200, y2:400}": Üst
+        text: "{RANGE} konumunda {NUM} yeni {ANIMATION_NAME} hareketli nesne yap"
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x maks{X2}y min{Y1}y maks{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": Alt
+            "{x1:0, x2:400, y1:200, y2:400}": Üst
       gamelab_addBehaviorSimple:
         text: hareket {SPRITE} Başlar {BEHAVIOR}
       gamelab_addTarget:

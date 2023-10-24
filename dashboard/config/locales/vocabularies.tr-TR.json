@@ -2290,26 +2290,6 @@
           "word": "Program",
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
-        "code/poem-art/2021": {
-          "word": "Kod",
-          "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
-        },
-        "event/poem-art/2021": {
-          "word": "Etkinlik",
-          "definition": "Bir şeylerin olmasına neden olan bir eylem."
-        },
-        "line/poem-art/2021": {
-          "word": "Satır",
-          "definition": "(şiir) - sağ kenarda biten bir satırda düzenlenmiş bir şiirin alt bölümü. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Ruh hali",
-          "definition": "sanatta veya yazıda bir duygu, atmosfer veya hissin ifadesi."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
-        },
         "code/sports/unversioned": {
           "word": "Kod",
           "definition": "(fiil) kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir."
