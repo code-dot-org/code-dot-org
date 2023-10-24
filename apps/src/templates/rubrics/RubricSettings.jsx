@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
@@ -38,7 +38,26 @@ export default function RubricSettings({
 }) {
   const [csrfToken, setCsrfToken] = useState('');
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
-  const polling = status === STATUS.EVALUATION_PENDING;
+  const polling = useMemo(() => status === STATUS.EVALUATION_PENDING, [status]);
+
+  const statusText = () => {
+    switch (status) {
+      case STATUS.INITIAL_LOAD:
+        return i18n.aiEvaluationStatus_initial_load();
+      case STATUS.NOT_ATTEMPTED:
+        return i18n.aiEvaluationStatus_not_attempted();
+      case STATUS.ALREADY_EVALUATED:
+        return i18n.aiEvaluationStatus_already_evaluated();
+      case STATUS.READY:
+        return null;
+      case STATUS.SUCCESS:
+        return i18n.aiEvaluationStatus_success();
+      case STATUS.EVALUATION_PENDING:
+        return i18n.aiEvaluationStatus_pending();
+      case STATUS.ERROR:
+        return i18n.aiEvaluationStatus_error();
+    }
+  };
 
   useEffect(() => {
     fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
@@ -125,7 +144,7 @@ export default function RubricSettings({
               <i className="fa fa-spinner fa-spin" />
             )}
           </Button>
-          <BodyTwoText>status: {status}</BodyTwoText>
+          {statusText() && <BodyTwoText>{statusText()}</BodyTwoText>}
         </div>
       )}
     </div>
