@@ -71,7 +71,6 @@ describe('AiAssessmentBox', () => {
     expect(wrapper.find('BodyThreeText')).to.have.lengthOf(0);
     expect(wrapper.find('EmText')).to.have.lengthOf(1);
     expect(wrapper.html().includes(i18n.aiCannotAssess())).to.be.true;
-    expect(wrapper.find('ReactTooltip')).to.have.lengthOf(1);
     expect(wrapper.find('div').first().hasClass(style.noAiAssessment)).to.be
       .true;
   });

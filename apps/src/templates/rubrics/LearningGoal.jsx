@@ -56,14 +56,16 @@ export default function LearningGoal({
   const saveAfter = 2000;
 
   const handleClick = () => {
-    const eventName = isOpen
-      ? EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
-      : EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
-    analyticsReporter.sendEvent(eventName, {
-      ...(reportingData || {}),
-      learningGoalKey: learningGoal.key,
-      learningGoal: learningGoal.learningGoal,
-    });
+    if (!isStudent) {
+      const eventName = isOpen
+        ? EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
+        : EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
+      analyticsReporter.sendEvent(eventName, {
+        ...(reportingData || {}),
+        learningGoalKey: learningGoal.key,
+        learningGoal: learningGoal.learningGoal,
+      });
+    }
     setIsOpen(!isOpen);
   };
 
@@ -285,7 +287,7 @@ export default function LearningGoal({
             submittedEvaluation={submittedEvaluation}
             isStudent={isStudent}
           />
-          {learningGoal.tips && (
+          {learningGoal.tips && !isStudent && (
             <div>
               <Heading6>{i18n.tipsForEvaluation()}</Heading6>
               <div className={style.learningGoalTips}>
