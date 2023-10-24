@@ -16,13 +16,11 @@ fa:
       locked: حساب شما قفل شده است.
       not_found_in_database: ایمیل یا رمز عبور نادرست.
       timeout: جلسه شما منقضی شده، لطفا جهت ادامه کار دوباره وارد شوید.
-      unauthenticated: قبل از ادامه کار شما باید به سیستم وارد شوید یا ثبت نام کنید.
+      unauthenticated: قبل از ادامه کار باید وارد سیستم شوید یا ثبت‌نام کنید.
       unconfirmed: ضروری است که قبل از ادامه کار، حساب کاربری خود را تایید کنید.
     mailer:
       confirmation_instructions:
         subject: دستورالعمل‌های تأیید در Code.org
-      reset_password_instructions:
-        subject: دستورالعمل‌های بازنشانی گذرواژه در Code.org
       unlock_instructions:
         subject: دستورالعمل نحوه برداشتن قفل
     omniauth_callbacks:
@@ -62,6 +60,28 @@ fa:
         مربوط به قفل گشایی آن را در چند دقیقه آینده دریافت می کنید.
       unlocked: حساب شما با موفقیت قفل گشایی شد. لطفا جهت ادامه به سیستم وارد شوید.
   errors:
+    invitations:
+      edit:
+        header: رمز عبورتان را تنظیم کنید
+        submit_button: رمز عبورم را تنظیم کن
+      invitation_removed: دعوتنامه شما حذف شد.
+      invitation_token_invalid: نمونه ی دعوتنامه ی ایجاد شده معتبر نیست!
+      new:
+        header: دعوتنامه بفرست
+        submit_button: یک دعوتنامه بفرست
+      no_invitations_remaining: هیچ دعوتنامه ای باقی نمانده
+      send_instructions: یک ایمیل دعوتنامه به ایمیل%{email} فرستاده شده است.
+      updated: رمز عبورتان با موفقیت تنظیم شد. شما در حال حاضر به سیستم وارد شدید.
+    mailer:
+      invitation_instructions:
+        accept: دعوت را قبول کن
+        hello: سلام ایمیل%{email}
+        ignore: اگر نمی خواهید دعوت را قبول کنید، لطفا این ایمیل را نادیده بگیرید.
+          <br /> حساب کاربری شما تا زمانی که شما به لینک بالا نروید و رمز عبورتان
+          را تعیین نکنید ایجاد نخواهد شد.
+        someone_invited_you: کسی شما را به %{url} دعوت کرده است. شما می توانید از
+          طریق لینک زیر دعوت را قبول کنید.
+        subject: دستورالعمل دعوتنامه
     messages:
       already_confirmed: قبلا تایید شده است. لطفا به سیستم وارد شوید
       confirmation_period_expired: نیاز به تایید در مدت %{period}، لطفا دوباره درخواست
@@ -69,28 +89,3 @@ fa:
       expired: منقضی شده است. دوباره درخواست کنید
       not_found: یافت نشد
       not_locked: قفل نشده بود
-      not_saved:
-        one: 'یک خطا از ذخیره سازی این %{resource} جلوگیری کرد:'
-        other: "%{count} خطا از دخیره سازی این %{resource} جلوگیری کرد:"
-    invitations:
-      send_instructions: یک ایمیل دعوتنامه به ایمیل%{email} فرستاده شده است.
-      invitation_token_invalid: نمونه ی دعوتنامه ی ایجاد شده معتبر نیست!
-      updated: رمز عبورتان با موفقیت تنظیم شد. شما در حال حاضر به سیستم وارد شدید.
-      no_invitations_remaining: هیچ دعوتنامه ای باقی نمانده
-      invitation_removed: دعوتنامه شما حذف شد.
-      new:
-        header: دعوتنامه بفرست
-        submit_button: یک دعوتنامه بفرست
-      edit:
-        header: رمز عبورتان را تنظیم کنید
-        submit_button: رمز عبورم را تنظیم کن
-    mailer:
-      invitation_instructions:
-        subject: دستورالعمل دعوتنامه
-        hello: سلام ایمیل%{email}
-        someone_invited_you: کسی شما را به %{url} دعوت کرده است. شما می توانید از
-          طریق لینک زیر دعوت را قبول کنید.
-        accept: دعوت را قبول کن
-        ignore: اگر نمی خواهید دعوت را قبول کنید، لطفا این ایمیل را نادیده بگیرید.
-          <br /> حساب کاربری شما تا زمانی که شما به لینک بالا نروید و رمز عبورتان
-          را تعیین نکنید ایجاد نخواهد شد.

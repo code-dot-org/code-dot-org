@@ -2,543 +2,6 @@
   "fa-IR": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/csd/2017": {
-          "name": "واژگان"
-        },
-        "code_introduced/csd/2017": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_1/csd/2017": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "واژگان"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "واژگان"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "واژگان"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "واژگان"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_5/csd/2017": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "واژگان"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/csd/2018": {
-          "name": "واژگان"
-        },
-        "code_introduced/csd/2018": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_1/csd/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_1/csd/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "واژگان"
-        },
-        "code_introduced_1/csd/2018": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_2/csd/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_2/csd/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_2/csd/2018": {
-          "name": "واژگان"
-        },
-        "code_introduced_2/csd/2018": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_3/csd/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_3/csd/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "واژگان"
-        },
-        "code_introduced_3/csd/2018": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_5/csd/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum_5/csd/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary_5/csd/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursea/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursea/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursea/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/courseb/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/courseb/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/courseb/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursed/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursed/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursed/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursee/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursee/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursee/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursef/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursef/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursef/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans/express/2018": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/express/2018": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/express/2018": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/express/2018": {
-          "name": "واژگان"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/csd/2019": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/csd/2019": {
-          "name": "واژگان"
-        },
-        "code_introduced/csd/2019": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "واژگان"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_2/csd/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "واژگان"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "واژگان"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "واژگان"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "کد معرفی گردید"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings_5/csd/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursea/2019": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursea/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursea/2019": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/courseb/2019": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/courseb/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/courseb/2019": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursec/2019": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursec/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursec/2019": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursec/2019": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursed/2019": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursed/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursed/2019": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursee/2019": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursee/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursee/2019": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursef/2019": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursef/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "واژگان"
-        },
-        "lesson_plans/express/2019": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/express/2019": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/express/2019": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/express/2019": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursea/2020": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursea/2020": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursea/2020": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursea/2020": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/courseb/2020": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/courseb/2020": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/courseb/2020": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/courseb/2020": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursec/2020": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursec/2020": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursec/2020": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursec/2020": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursed/2020": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursed/2020": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursed/2020": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursed/2020": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursee/2020": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursee/2020": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursee/2020": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursee/2020": {
-          "name": "واژگان"
-        },
-        "curriculum_guide/coursef/2020": {
-          "name": "راهنمای برنامه درسی"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/coursef/2020": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/coursef/2020": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/coursef/2020": {
-          "name": "واژگان"
-        },
-        "lesson_plans/express/2020": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/express/2020": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/express/2020": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/express/2020": {
-          "name": "واژگان"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "برنامه های درسی"
-        },
-        "standard_mappings/pre-express/2020": {
-          "name": "ارتباط های استانداردی"
-        },
-        "teacher_forum/pre-express/2020": {
-          "name": "انجمن استادان"
-        },
-        "vocabulary/pre-express/2020": {
-          "name": "واژگان"
-        },
         "teacher_forum/csd/2021": {
           "name": "انجمن استادان"
         },
@@ -1696,7 +1159,7 @@
         "feeling-faces-image/coursea/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "pair-programming/coursea/2021": {
           "name": "برنامه نویسی اشتراکی",
@@ -1894,7 +1357,7 @@
         "feeling-faces-image/courseb/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "jigsaw/courseb/2021": {
           "name": "تمرین کشیدن و رها کردن",
@@ -2420,7 +1883,7 @@
         "feeling-faces-image/coursed/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "لحظه‌ای صبر کرده و آنلاین فکر کنید",
@@ -3087,7 +2550,7 @@
         "feeling-faces-image/pre-express/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "برنامه نویسی اشتراکی ",
@@ -3095,7 +2558,7 @@
           "type": "ویدئوی دانش‌آموز"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "Wiggles - Go Noodle",
+          "name": "ویگلز - گو نودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدیو"
         },
@@ -4600,7 +4063,7 @@
         "feeling_faces/coursea/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "pair-programming/coursea/2022": {
           "name": "برنامه نویسی اشتراکی",
@@ -4765,7 +4228,7 @@
         "feeling_faces/courseb/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
           "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم"
@@ -5269,7 +4732,7 @@
         "feeling_faces/coursed/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "conditionals_with_cards/coursed/2022": {
           "name": "دستورهای شرطی با کمک کارت‌ها",
@@ -5761,7 +5224,7 @@
         "feeling_faces/pre-express/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "how_to_make_a_class_section_on_code_org/pre-express/2022": {
           "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم",
@@ -5774,7 +5237,7 @@
           "type": "ویدئوی دانش‌آموز"
         },
         "wiggles_-_go_noodle/pre-express/2022": {
-          "name": "Wiggles - Go Noodle",
+          "name": "ویگلز - گو نودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
         },
@@ -6657,6 +6120,9 @@
         "publishing_your_website/csd/2023": {
           "name": "انتشار وبسایت خود",
           "type": "ویدئو"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "منبع"
         },
         "websites_for_a_purpose_1/csd/2023": {
           "type": "راهنمای فعالیت"
@@ -8034,7 +7500,7 @@
         "feeling_faces/coursea/2023": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "pair-programming/coursea/2023": {
           "name": "برنامه نویسی اشتراکی",
@@ -8198,7 +7664,7 @@
         "feeling_faces/courseb/2023": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2023": {
           "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم"
@@ -8738,7 +8204,7 @@
         "feeling_faces/coursed/2023": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "conditionals_with_cards/coursed/2023": {
           "name": "دستورهای شرطی با کمک کارت‌ها",
@@ -9260,7 +8726,7 @@
         "feeling_faces/pre-express/2023": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر احساسات"
         },
         "how_to_make_a_class_section_on_code_org/pre-express/2023": {
           "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم",
@@ -9273,7 +8739,7 @@
           "type": "ویدئوی دانش‌آموز"
         },
         "wiggles_-_go_noodle/pre-express/2023": {
-          "name": "Wiggles - Go Noodle",
+          "name": "ویگلز - گو نودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
         },
@@ -9580,31 +9046,6 @@
         "ai-training/oceans/unversioned": {
           "name": "هوش مصنوعی: داده‌های آموزشی و بایاس",
           "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "ویدئو"
-        },
-        "list_of_poems/poem-art/2021": {
-          "name": "هنر شعر HoC",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "اسلایدها"
-        },
-        "poem_art_celebration/poem-art/2021": {
-          "name": "هنر شعر 4 - جشن",
-          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
-          "type": "ویدئو"
-        },
-        "poem_art_events/poem-art/2021": {
-          "name": "هنر شعر 2 - رویدادها",
-          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
-          "type": "ویدئو"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "name": "هنر شعر 3 - تصویرسازی",
-          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
-          "type": "ویدئو"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "name": "هنر شعر 1 - مقدمه",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "ویدئو"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {

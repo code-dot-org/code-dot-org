@@ -572,6 +572,49 @@ fa:
             '"vintage"': آنتیک (پالت)
             '"warm"': گرم (پالت)
         text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': دایره‌ها
+            '"color_cycle"': رنگ‌ها
+            '"diamonds"': لوزی‌ها
+            '"disco"': مربع (افکت)
+            '"disco_ball"': دسکو بال
+            '"fireworks"': آتش‌بازی
+            '"flowers"': گلها (افکت)
+            '"galaxy"': فضا  (افکت)
+            '"growing_stars"': ستاره‌های بزرگ شونده (افکت)
+            '"kaleidoscope"': هزار رنگ (افکت)
+            '"lasers"': نور لیزر سالن رقص (افکت)
+            '"music_wave"': امواج (افکت)
+            '"none"': هیچکدام
+            '"quads"': زاویه‌ (افکت)
+            '"rainbow"': رنگین‌کمان (افکت)
+            '"rand"': "(تصادفی)"
+            '"ripples"': شن (افکت)
+            '"ripples_random"': شنهای تصادفی (افکت)
+            '"snowflakes"': برف (افکت)
+            '"sparkles"': درخشش (افکت)
+            '"spiral"': مارپیچ (افکت)
+            '"splatter"': رنگ پاشی (افکت)
+            '"squiggles"': موج موج (افکت)
+            '"starburst"': استارباست (افکت)
+            '"stars"': ستاره  (افکت)
+            '"swirl"': هیپنو (افکت)
+            '"text"': اسم آواز (افکت)
+          PALETTE:
+            '"cool"': جالب (پالت رنگ)
+            '"default"': روشن (پالت)
+            '"electronic"': الکترونیکی (پالت)
+            '"iceCream"': بستنی (پالت)
+            '"neon"': نئون (پالت)
+            '"ocean"': اقیانوس
+            '"rainbow"': رنگین‌کمان (افکت)
+            '"rave"': سیاه و سفید (افکت)
+            '"tropical"': استوایی (پالت)
+            '"vintage"': آنتیک (پالت)
+            '"warm"': گرم (پالت)
+        text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:

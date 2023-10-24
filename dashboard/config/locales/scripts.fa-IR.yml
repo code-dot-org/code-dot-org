@@ -18,7 +18,7 @@ fa:
         2021drafting:
           lesson_groups:
             debugging:
-              display_name: رفع اشکال
+              display_name: رفع باگ
             introduction:
               display_name: مقدمه
             lessonGroup-3:
@@ -2130,6 +2130,7 @@ fa:
             بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله
             را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های
             خلاقانه‌ بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
+          title: دوره فشرده مقدماتی
         pre-express-2023:
           description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید!
             یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش
@@ -2252,6 +2253,17 @@ fa:
           description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
           student_description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
           title: امتحان قابل استفاده بودن
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: مقدمه
+          lessons:
+            lesson-7:
+              name: مقدمه
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: مقدمه
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2274,6 +2286,10 @@ fa:
           lessons:
             lesson-3:
               name: ارزیابی
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: مقدمه
         vpl-csd-ci-7:
           lesson_groups:
             lessonGroup-2:
