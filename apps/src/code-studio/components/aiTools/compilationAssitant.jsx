@@ -11,7 +11,7 @@ const CompilationAssistant = () => {
     javalabState.sources[javalabState.fileMetadata[javalabState.activeTabKey]]
       .text;
   const aiTutorState = useSelector(state => state.aiTutor);
-
+  
   const handleSend = async studentCode => {
     dispatch(askAITutor(studentCode));
   };
@@ -24,6 +24,7 @@ const CompilationAssistant = () => {
         isPending={aiTutorState.isWaitingForAIResponse}
         pendingText="waiting"
         onClick={() => handleSend(studentCode)}
+        disabled={!javalabState.hasCompilationError}
       />
       <p id="ai-response">{aiTutorState.aiResponse}</p>
     </div>
