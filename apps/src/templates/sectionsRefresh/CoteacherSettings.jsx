@@ -56,11 +56,11 @@ export default function CoteacherSettings({
   };
 
   // coteacher count is teachers to add + the existing teachers - the primary teacher.
-  // If sectionInstructors is empty, we still want to count the primary teacher.
-  const sectionInstructorsCount = sectionInstructors
-    ? sectionInstructors.length
-    : 1;
-  const numCoteachers = sectionInstructorsCount + coteachersToAdd.length - 1;
+  // If sectionInstructors is populated, we assume one of them is the primary teacher.
+  const existingCoteachers = sectionInstructors
+    ? sectionInstructors.length - 1
+    : 0;
+  const numCoteachers = existingCoteachers + coteachersToAdd.length - 1;
 
   const isAddDisabled = numCoteachers >= 5;
 
