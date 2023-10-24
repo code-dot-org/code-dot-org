@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-19 17:27:04 UTC",
+    "serialized_at": "2023-10-23 15:39:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -152,8 +152,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 55 minutes",
-        "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
+        "overview": "**Purpose:**\nIn this asynchronous module, you will continue exploring your identity and bias. You will also spend time working through Unit 3, Lesson 7 to prepare for tomorrow's TLOs.\n\n**Objectives:**\n\n* Participants apply their knowledge of identity and bias.\n* Participants learn about the debugging process.\n* Participants use the tools within App Lab to support debugging.\n\n**Suggested time:** 55 minutes",
+        "student_overview": "**You will:**\n\n* Applying your knowledge of identity and bias.\n* Learn about the debugging process.\n* Use the tools within App Lab to support debugging.\n"
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 1",
@@ -2102,14 +2102,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day4-UnderstandingContext2_2_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
         ],
         "progression": "Previously On...U3L7"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day4-UnderstandingContext2_2_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2117,7 +2117,7 @@
         "activity_section.key": "27b7fa52-9d6e-49bb-ab61-7689738609a1"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day4-UnderstandingContext2_2_2"
+        "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
       ]
     },
     {
@@ -2401,6 +2401,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_3"
+        ],
         "progression": "Recruiting And Retaining Students Gallery Walk"
       },
       "bonus": false,
@@ -2474,14 +2477,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-Context3_1_2_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
         ],
         "progression": "Unit 3 Connections And Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context3_1_2_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2489,7 +2492,7 @@
         "activity_section.key": "26539809-3c3c-44f4-87db-2609c917d726"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context3_1_2_2"
+        "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
       ]
     },
     {
@@ -2797,9 +2800,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day4-UnderstandingContext2_2_2",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day4-UnderstandingContext2_2_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2977,9 +2980,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context3_1_2_2",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context3_1_2_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",

@@ -41,7 +41,7 @@ section.banner {
 
   h1 {
     font-size: 4rem;
-    margin-top: 0;
+    margin: 0 auto 0.75rem;
     color: #00FFF5;
 
     @media screen and (max-width: $width-md) {
@@ -70,7 +70,7 @@ section.banner.homepage {
   padding: 0;
 
   .wrapper {
-    max-width: 770px;
+    max-width: 800px;
     padding: 2em 0 7em;
 
     @media screen and (max-width: $width-sm) {
