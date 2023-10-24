@@ -444,6 +444,24 @@ et:
             '"text"': Laulu pealkiri
             '"spiral"': Spiraal
             '"disco"': Ruudud
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          määra taustaefekt
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Mitte ükski
+            '"rand"': "(Juhuslik)"
+            '"color_cycle"': Värvid
+            '"diamonds"': Teemantid
+            '"swirl"': Hypno
+            '"rainbow"': Vikerkaar
+            '"snowflakes"': Lumi
+            '"text"': Laulu pealkiri
+            '"spiral"': Spiraal
+            '"disco"': Ruudud
+          PALETTE:
+            '"rainbow"': Vikerkaar
       Dancelab_setDanceSpeed:
         text: sea {SPRITE} tantsu kiirus {SPEED}
         options:
