@@ -24,7 +24,7 @@ section.banner {
     }
 
     @media screen and (max-width: $width-sm) {
-      padding: 1em 1em 4em;
+      padding: 1em 0 4em;
       width: 88%;
     }
   }
@@ -74,12 +74,16 @@ section.banner.homepage {
     padding: 2em 0 7em;
 
     @media screen and (max-width: $width-sm) {
-      padding: 3em 1em 5em;
+      padding: 3em 0 5em;
     }
   }
 
   i {
     margin: 0 4px;
+  }
+
+  h3 {
+    margin-top: 0;
   }
 
   .side-by-side-cta-wrapper {
