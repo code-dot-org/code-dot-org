@@ -76,17 +76,18 @@ social:
 
   -# HoC Live Spanish banner
   - if @language == 'es' || @language == 'la'
-    #hoclivebanner
-      .banner-box
-        .banner-image-box
-          %img.banner-image{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
-        .banner-message-box
-          %h2.banner-title
-            = hoc_s(:hoc_live_learn_title)
-          %p.banner-message
-            = hoc_s(:hoc_live_learn_message)
-          %a.link-button{href: 'https://code.org/envivo'}
-            = hoc_s(:hoc_live_learn_more)
+    %section.spanish-banner.no-padding-bottom
+      .wrapper
+        .action-block.action-block--two-col
+          %img{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
+          .content-wrapper
+            %h2.heading-lg
+              = hoc_s(:hoc_live_learn_title)
+            %p
+              = hoc_s(:hoc_live_learn_message)
+            %a.link-button{href: 'https://code.org/envivo'}
+              = hoc_s(:hoc_live_learn_more)
+        %hr
 
   -# Highlights
   %section.highlights.centered
