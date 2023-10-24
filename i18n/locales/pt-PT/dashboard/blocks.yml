@@ -564,6 +564,48 @@ pt:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Tons de vermelho
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: definir o efeito do plano de fundo {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nenhum
+            '"rand"': "(Aleatório)"
+            '"circles"': Túnel
+            '"quads"': Ângulos
+            '"color_cycle"': Cores
+            '"diamonds"': Diamantes
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Fogos de artifício
+            '"flowers"': Flores
+            '"growing_stars"': Estrelas em crescimento
+            '"swirl"': Hipno
+            '"kaleidoscope"': Caleidoscópio
+            '"lasers"': Laser de pista de dança
+            '"splatter"': Respingos de tinta
+            '"rainbow"': Arco-íris
+            '"ripples_random"': Ondulações Aleatórias
+            '"ripples"': Ondulação
+            '"snowflakes"': Neve
+            '"text"': Título da música
+            '"squiggles"': Rabiscos
+            '"galaxy"': Espaço
+            '"sparkles"': Brilhos
+            '"spiral"': Espiral
+            '"disco"': Quadrados
+            '"starburst"': Starburst
+            '"stars"': Estrelas
+            '"music_wave"': Ondas
+          PALETTE:
+            '"rave"': Preto e branco
+            '"cool"': Tons de azul
+            '"electronic"': Electrônica
+            '"iceCream"': Sorvete
+            '"default"': Claro
+            '"neon"': Néon
+            '"rainbow"': Arco-íris
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Tons de vermelho
       Dancelab_setDanceSpeed:
         text: alterar a velocidade da dança de {SPRITE} para {SPEED}
         options:
