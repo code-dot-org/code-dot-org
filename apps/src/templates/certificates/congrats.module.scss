@@ -47,16 +47,17 @@
 
 .nameInput {
   height: 26px !important;
-  margin: 0 !important;
   border: 1px solid $neutral_dark !important;
-  width: 75%;
+  flex: 2;
 }
 
 .submit {
   background: $light_secondary_500;
   color: $neutral_white;
   font-size: 16px;
-  padding: 9px 20px;
+  padding: 8px 20px;
+  margin: 0 5px;
+  height: 38px;
 }
 
 .confetti {
@@ -65,4 +66,8 @@
 .enterName {
   font-weight: bold;
   margin: 0;
+}
+
+.inputButtonContainer {
+  display: flex;
 }

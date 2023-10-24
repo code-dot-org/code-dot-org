@@ -163,20 +163,22 @@ function Certificate(props) {
             <div>
               <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
               <p className={style.enterName}>{i18n.enterYourName()}</p>
-              <input
-                id="name"
-                type="text"
-                className={style.nameInput}
-                placeholder={i18n.yourName()}
-                ref={nameInputRef}
-              />
-              <button
-                type="button"
-                className={style.submit}
-                onClick={personalizeCertificate.bind(this, certificateId)}
-              >
-                {i18n.submit()}
-              </button>
+              <div className={style.inputButtonContainer}>
+                <input
+                  id="name"
+                  type="text"
+                  className={style.nameInput}
+                  placeholder={i18n.yourName()}
+                  ref={nameInputRef}
+                />
+                <button
+                  type="button"
+                  className={style.submit}
+                  onClick={personalizeCertificate.bind(this, certificateId)}
+                >
+                  {i18n.submit()}
+                </button>
+              </div>
             </div>
           )}
           {tutorial && personalized && (

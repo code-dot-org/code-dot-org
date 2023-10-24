@@ -1,28 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Certificate from './Certificate';
-import styleConstants from '../../styleConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import color from '../../util/color';
 import style from './certificate_batch.module.scss';
 import i18n from '@cdo/locale';
+import {Heading3, Heading4} from '@cdo/apps/componentLibrary/typography';
 
 export default function Congrats(props) {
   /**
    * @param tutorial The specific tutorial the student completed i.e. 'dance', 'dance-2019', etc
    * @returns {string} The category type the specific tutorial belongs to i.e. 'dance', 'applab', etc
    */
-  // const getTutorialType = tutorial =>
-  //   ({
-  //     dance: 'dance',
-  //     'dance-2019': 'dance',
-  //     'applab-intro': 'applab',
-  //     aquatic: '2018Minecraft',
-  //     hero: '2017Minecraft',
-  //     minecraft: 'pre2017Minecraft',
-  //     mc: 'pre2017Minecraft',
-  //     oceans: 'oceans',
-  //   }[tutorial] || 'other');
+
   /**
    * Renders links to certificate alternatives when there is a special event going on.
    * @param {string} language The language code related to the special event i.e. 'en', 'es', 'ko', etc
@@ -54,11 +43,11 @@ export default function Congrats(props) {
       return;
     }
     return (
-      <div style={styles.extraLinkContainer}>
+      <div className={style.extraLinkContainer}>
         <a
           href={extraLinkUrl}
           target={'_blank'}
-          style={styles.extraLink}
+          className={style.extraLink}
           rel="noreferrer"
         >
           {extraLinkText}
@@ -70,6 +59,7 @@ export default function Congrats(props) {
   const {
     tutorial,
     certificateId,
+    userType,
     under13,
     language,
     randomDonorTwitter,
@@ -81,10 +71,10 @@ export default function Congrats(props) {
   // const isEnglish = language === 'en';
   // const tutorialType = getTutorialType(tutorial);
 
-  const curriculaData = [
+  const teacherCourses = [
     {
       grade: i18n.gradeRange({
-        numGrades: ['3', '8'].length,
+        numGrades: 6,
         youngestGrade: '3',
         oldestGrade: '8',
       }),
@@ -97,7 +87,7 @@ export default function Congrats(props) {
 
     {
       grade: i18n.gradeRange({
-        numGrades: ['K', '5'].length,
+        numGrades: 6,
         youngestGrade: 'K',
         oldestGrade: '5',
       }),
@@ -109,7 +99,7 @@ export default function Congrats(props) {
     },
     {
       grade: i18n.gradeRange({
-        numGrades: ['6', '12'].length,
+        numGrades: 7,
         youngestGrade: '6',
         oldestGrade: '12',
       }),
@@ -120,6 +110,51 @@ export default function Congrats(props) {
       link: 'http://code.org/ai/how-ai-works',
     },
   ];
+
+  const studentCourses = [
+    {
+      grade: i18n.gradeRange({
+        numGrades: 3,
+        youngestGrade: '3',
+        oldestGrade: '5',
+      }),
+      title: i18n.expressCourse(),
+      image:
+        'https://images.code.org/aaee14231592a91f7ca063867bc7454c-ExpressCourse.png',
+      buttonText: i18n.startCourse(),
+      description: i18n.expressCourseDescription(),
+      link: '/s/express',
+    },
+
+    {
+      grade: i18n.gradeRange({
+        numGrades: 7,
+        youngestGrade: '6',
+        oldestGrade: '12',
+      }),
+      title: i18n.introductionToGameLab(),
+      image: '/../../../../shared/images/courses/logo_intro_to_game_lab.jpg',
+      buttonText: i18n.startCourse(),
+      description: i18n.introductionToGameLabDescription(),
+      link: '/s/csd3-virtual',
+    },
+    {
+      grade: i18n.gradeRange({
+        numGrades: 7,
+        youngestGrade: '6',
+        oldestGrade: '12',
+      }),
+      title: i18n.turtleProgrammingInAppLab(),
+      image:
+        'https://images.code.org/0773c123ffe9bda234589984c4eb3634-Turtle%20Programming.png',
+      buttonText: i18n.startCourse(),
+      description: i18n.turtleProgrammingInAppLabDescription(),
+      link: '/s/csp3-virtual',
+    },
+  ];
+
+  const curriculaData =
+    userType === 'student' ? studentCourses : teacherCourses;
 
   const curriculumCatalogImages = [
     'https://code.org/images/ai/ai-curriclum-machine-learning.png',
@@ -135,14 +170,14 @@ export default function Congrats(props) {
       description: i18n.teachWithCodeOrgDescription(),
       buttonText: i18n.teachWithCodeOrg(),
       image: 'https://code.org/images/teach-page-top.png',
-      link: 'code.org/teach',
+      link: 'https://code.org/teach',
     },
     {
       title: i18n.courseOfferingSelfPacedPl(),
       description: i18n.selfPacedPlDescription(),
       buttonText: i18n.exploreProfessionalLearning(),
       image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
-      link: 'code.org/educate/professional-development-online',
+      link: 'https://code.org/educate/professional-development-online',
     },
   ];
 
@@ -163,9 +198,11 @@ export default function Congrats(props) {
       </div>
 
       <div className={style.continueBeyond}>
-        <h3 style={{textAlign: 'center'}}>{i18n.continueBeyondHourOfCode()}</h3>
+        <Heading3 className={style.textCenter}>
+          {i18n.continueBeyondHourOfCode()}
+        </Heading3>
         <div
-          className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol}`}
+          className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol} ${style.courseContainer}`}
         >
           {curriculaData.map((item, index) => (
             <div
@@ -174,12 +211,12 @@ export default function Congrats(props) {
             >
               <div className={style.contentWrapper}>
                 <p className={style.overline}>{item.grade}</p>
-                <h3>{item.title}</h3>
+                <Heading3>{item.title}</Heading3>
                 <img src={item.image} alt="" />
                 <p>{item.description}</p>
               </div>
               <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link} aria-label="">
+                <a className={style.linkButton} href={item.link}>
                   {item.buttonText}
                 </a>
               </div>
@@ -188,126 +225,84 @@ export default function Congrats(props) {
         </div>
         <hr />
 
-        <div style={{textAlign: 'center'}}>
-          <h4>{i18n.discoverMore()}</h4>
+        <div className={style.textCenter}>
+          <Heading4>{i18n.discoverMore()}</Heading4>
           <p>{i18n.discoverMoreCatalogText()}</p>
           <div className={style.imageContainer}>
             {curriculumCatalogImages.map((item, index) => (
-              <img key={index} src={item} alt={`Image ${index}`} />
+              <img key={index} src={item} alt="" />
             ))}
           </div>
-          <a
-            style={{marginTop: '20px', marginBottom: '40px'}}
-            className={style.linkButton}
-            href={'/catalog'}
-            aria-label=""
-          >
-            {i18n.viewCurriculumCatalog()}
-          </a>
+          {userType === 'student' ? (
+            <div className={style.studentButtonsContainer}>
+              <a
+                className={`${style.linkButton} ${style.catalogButton}`}
+                href={'https://code.org/student/elementary'}
+              >
+                {i18n.learningForAgesRange({
+                  youngestAge: '5',
+                  oldestAge: '11',
+                })}
+              </a>
+              <a
+                className={`${style.linkButton} ${style.catalogButton}`}
+                href={'https://code.org/student/middle-high'}
+              >
+                {i18n.learningForAgesPlus({age: '11'})}
+              </a>
+            </div>
+          ) : (
+            <a
+              className={`${style.linkButton} ${style.catalogButton}`}
+              href={'/catalog'}
+            >
+              {i18n.viewCurriculumCatalog()}
+            </a>
+          )}
         </div>
       </div>
 
-      <div className={style.professionalLearning}>
-        <div
-          className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
-        >
-          {professionalLearning.map((item, index) => (
-            <div
-              className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
-              key={index}
-            >
-              <div className={style.contentWrapper}>
-                <img
-                  src={item.image}
-                  alt=""
-                  className={style.professionalLearningImage}
-                />
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+      {userType !== 'student' && (
+        <div className={style.professionalLearning}>
+          <div
+            className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
+          >
+            {professionalLearning.map((item, index) => (
+              <div
+                className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
+                key={index}
+              >
+                <div className={style.contentWrapper}>
+                  <img
+                    src={item.image}
+                    alt=""
+                    className={style.professionalLearningImage}
+                  />
+                  <Heading3>{item.title}</Heading3>
+                  <p>{item.description}</p>
+                </div>
+                <div className={style.contentFooter}>
+                  <a className={style.linkButton} href={item.link}>
+                    {item.buttonText}
+                  </a>
+                </div>
               </div>
-              <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link} aria-label="">
-                  {item.buttonText}
-                </a>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
-    // <div style={styles.container}>
-    //   <Certificate
-    //     tutorial={tutorial}
-    //     certificateId={certificateId}
-    //     randomDonorTwitter={randomDonorTwitter}
-    //     randomDonorName={randomDonorName}
-    //     under13={under13}
-    //     initialCertificateImageUrl={initialCertificateImageUrl}
-    //     isHocTutorial={isHocTutorial}
-    //   >
-    //     {renderExtraCertificateLinks(language, tutorial)}
-    //   </Certificate>
-    //   {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
-    //   {isHocTutorial && (
-    //     <StudentsBeyondHoc
-    //       completedTutorialType={tutorialType}
-    //       MCShareLink={MCShareLink}
-    //       userType={userType}
-    //       under13={under13}
-    //       isEnglish={isEnglish}
-    //       hideDancePartyFollowUp={hideDancePartyFollowUp}
-    //     />
-    //   )}
-    //   {!isHocTutorial && (
-    //     <GraduateToNextLevel
-    //       scriptName={nextCourseScriptName}
-    //       courseTitle={nextCourseTitle}
-    //       courseDesc={nextCourseDesc}
-    //     />
-    //   )}
-    //   {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
-    //   <hr style={styles.divider} />
-    //   <PetitionCallToAction tutorial={tutorial} />
-    // </div>
   );
 }
 
 Congrats.propTypes = {
   certificateId: PropTypes.string,
   tutorial: PropTypes.string,
-  MCShareLink: PropTypes.string,
   userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
-  hideDancePartyFollowUp: PropTypes.bool,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
-  nextCourseScriptName: PropTypes.string,
-  nextCourseTitle: PropTypes.string,
-  nextCourseDesc: PropTypes.string,
-};
-
-const styles = {
-  container: {
-    width: '100%',
-    maxWidth: styleConstants['content-width'],
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-  divider: {
-    borderColor: color.lightest_gray,
-    borderWidth: '1px 0 0 0',
-    borderStyle: 'solid',
-    margin: '20px 0px 20px 0px',
-  },
-  extraLinkContainer: {
-    clear: 'both',
-    paddingTop: 20,
-  },
-  extraLink: {
-    color: color.teal,
-    fontSize: 14,
-  },
 };
