@@ -175,6 +175,7 @@ class ScriptLevelsController < ApplicationController
           attempts: viewing_user_level&.attempts,
           timeSpent: viewing_user_level&.time_spent,
           lastAttempt: viewing_user_level&.updated_at,
+          submitted: !!viewing_user_level&.submitted?,
         }
       end
     end

@@ -14,9 +14,13 @@ import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 export default function AiAssessmentBox({
   isAiAssessed,
   studentName,
-  aiUnderstandingLevel,
-  aiConfidence,
+  aiEvaluation,
+  studentSubmitted,
 }) {
+  const hasAiInfo = !!aiEvaluation;
+  const aiUnderstandingLevel = aiEvaluation?.understanding;
+  const aiConfidence = aiEvaluation?.ai_confidence;
+
   const boxColor = () => {
     if (isAiAssessed) {
       return aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
@@ -27,15 +31,21 @@ export default function AiAssessmentBox({
     }
   };
 
-  const studentAchievment = () => {
-    const assessment =
-      aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
-        ? i18n.aiAssessmentDoesMeet()
-        : i18n.aiAssessmentDoesNotMeet();
-    return i18n.aiStudentAssessment({
-      studentName: studentName,
-      understandingLevel: assessment,
-    });
+  const studentAchievement = () => {
+    if (hasAiInfo) {
+      const assessment =
+        aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
+          ? i18n.aiAssessmentDoesMeet()
+          : i18n.aiAssessmentDoesNotMeet();
+      return i18n.aiStudentAssessment({
+        studentName: studentName,
+        understandingLevel: assessment,
+      });
+    } else if (!studentSubmitted) {
+      return 'Student must submit project for evaluation.';
+    } else {
+      return 'AI Evaluation not run for this project.';
+    }
   };
 
   const aiConfidenceText = () => {
@@ -49,7 +59,7 @@ export default function AiAssessmentBox({
       {isAiAssessed && (
         <div>
           <BodyThreeText>
-            <StrongText>{studentAchievment()}</StrongText>
+            <StrongText>{studentAchievement()}</StrongText>
           </BodyThreeText>
           {aiConfidence && (
             <div>
@@ -74,6 +84,6 @@ export default function AiAssessmentBox({
 AiAssessmentBox.propTypes = {
   isAiAssessed: PropTypes.bool.isRequired,
   studentName: PropTypes.string,
-  aiUnderstandingLevel: PropTypes.number,
-  aiConfidence: PropTypes.number,
+  aiEvaluation: PropTypes.object,
+  studentSubmitted: PropTypes.bool,
 };
