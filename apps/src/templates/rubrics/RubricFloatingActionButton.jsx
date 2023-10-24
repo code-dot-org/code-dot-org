@@ -16,6 +16,7 @@ export default function RubricFloatingActionButton({
   studentLevelInfo,
   currentLevelName,
   reportingData,
+  aiEnabled,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -70,7 +71,7 @@ export default function RubricFloatingActionButton({
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
         currentLevelName={currentLevelName}
-        initialTeacherHasEnabledAi
+        initialTeacherHasEnabledAi={aiEnabled}
         open={isOpen}
         closeRubric={handleClick}
       />
@@ -83,4 +84,5 @@ RubricFloatingActionButton.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   currentLevelName: PropTypes.string,
   reportingData: reportingDataShape,
+  aiEnabled: PropTypes.bool,
 };

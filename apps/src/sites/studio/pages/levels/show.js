@@ -55,7 +55,10 @@ function initPage() {
     );
   }
 
-  if (experiments.isEnabled('ai-rubrics')) {
+  if (
+    experiments.isEnabled('ai-rubrics') ||
+    experiments.isEnabled('non-ai-rubrics')
+  ) {
     const rubricData = getScriptData('rubricdata');
     const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
@@ -75,6 +78,7 @@ function initPage() {
           studentLevelInfo={studentLevelInfo}
           reportingData={reportingData}
           currentLevelName={config.level_name}
+          aiEnabled={experiments.isEnabled('ai-rubrics')}
         />,
         rubricFabMountPoint
       );
