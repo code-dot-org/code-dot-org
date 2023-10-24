@@ -2,38 +2,6 @@
   "it-IT": {
     "data": {
       "announcements": {
-        "228f5294-78ec-4b7a-b6f6-76d6f92a01b4": {
-          "notice": "Il Sondaggio Post-Corso per Studenti È Ora Aperto!",
-          "details": "Insegnanti, vi preghiamo di chiedere ai vostri studenti di completare questo importante sondaggio. Richiede meno di 10 minuti. Date un'occhiata: potete trovare il collegamento al sondaggio in fondo alla pagina di quest'unità o cliccare sul pulsante Scopri di Più per accedervi direttamente. Cliccate il pulsante \"Visualizza Piano della Lezione\" affianco al sondaggio per le istruzioni. Grazie!"
-        },
-        "249e1d1d-7ed0-4042-8e57-17f5f2061a9f": {
-          "notice": "Il Sondaggio Post-Corso \"Scoperte CS\" per Studenti È Ora Aperto!",
-          "details": "Insegnanti, vi preghiamo di chiedere ai vostri studenti di completare questo importante sondaggio. Richiede meno di 10 minuti. Date un'occhiata: potete trovare il collegamento al sondaggio in fondo alla pagina di quest'unità o cliccare sul pulsante Scopri di Più per accedervi direttamente. Cliccate il pulsante \"Visualizza Piano della Lezione\" affianco al sondaggio per le istruzioni. Grazie!"
-        },
-        "d9b403ff-aa97-487a-a32d-df4da9967249": {
-          "notice": "Il Sondaggio Post-Corso \"Scoperte CS\" per Studenti È Ora Aperto!",
-          "details": "Insegnanti, vi preghiamo di chiedere ai vostri studenti di completare questo importante sondaggio. Richiede meno di 10 minuti. Date un'occhiata: potete trovare il collegamento al sondaggio in fondo alla pagina di quest'unità o cliccare sul pulsante Scopri di Più per accedervi direttamente. Cliccate il pulsante \"Visualizza Piano della Lezione\" affianco al sondaggio per le istruzioni. Grazie!"
-        },
-        "324c3312-b070-4ac4-8bde-4b97251b6760": {
-          "notice": "Il Sondaggio Post-Corso \"Scoperte CS\" per Studenti È Ora Aperto!",
-          "details": "Insegnanti, vi preghiamo di chiedere ai vostri studenti di completare questo importante sondaggio. Richiede meno di 10 minuti. Date un'occhiata: potete trovare il collegamento al sondaggio in fondo alla pagina di quest'unità o cliccare sul pulsante Scopri di Più per accedervi direttamente. Cliccate il pulsante \"Visualizza Piano della Lezione\" affianco al sondaggio per le istruzioni. Grazie!"
-        },
-        "4a6677f7-ef10-4b41-812a-7bfe1aff7b00": {
-          "notice": "Il Sondaggio Post-Corso \"Scoperte CS\" per Studenti È Ora Aperto!",
-          "details": "Insegnanti, vi preghiamo di chiedere ai vostri studenti di completare questo importante sondaggio. Richiede meno di 10 minuti. Date un'occhiata: potete trovare il collegamento al sondaggio in fondo alla pagina di quest'unità o cliccare sul pulsante Scopri di Più per accedervi direttamente. Cliccate il pulsante \"Visualizza Piano della Lezione\" affianco al sondaggio per le istruzioni. Grazie!"
-        },
-        "a5c79bfe-dc53-48e6-b535-cfbfb3eae114": {
-          "notice": "Novità: Scegli Quali Lezioni Mostrare o Nascondere per la Tua Sezione",
-          "details": "Clicca su \"Scopri di Più\" per leggere l'articolo di supporto su come mostrare e nascondere le lezioni."
-        },
-        "66984aed-46b1-4a2f-8d2f-c88c9f13ead0": {
-          "notice": "Novità: Scegli Quali Lezioni Mostrare o Nascondere per la Tua Sezione",
-          "details": "Clicca su \"Scopri di Più\" per leggere l'articolo di supporto su come mostrare e nascondere le lezioni."
-        },
-        "920785dd-41e4-4d34-a3af-3eadbec1c90e": {
-          "notice": "Consulta le nuove risorse di \"Scoperte CS\" per il 2019-2020!",
-          "details": "Leggi di più sulle nostre nuove guide per insegnanti. quadri d'apprendimento, Giornale OneNote e Libreria di Flipgrid Disco!"
-        },
         "12f743d3-19be-4f6e-be39-e61a9bfac4d6": {
           "notice": "Alla scoperta dell'informatica - Supporto al docente",
           "details": "Oltre al nostro piano di studi, Code.org offre corsi di apprendimento professionale per insegnanti autogestiti e guidati da facilitatori che desiderano implementare il corso \"Alla scoperta dell'informatica\" nelle proprie classi."
@@ -157,18 +125,6 @@
           "buttonText": "Ulteriori informazioni"
         },
         "488fc86d-7f7d-48fe-9bc2-0b8869fb6ae1": {
-          "buttonText": "Ulteriori informazioni"
-        },
-        "409174a0-d76d-4992-8486-cfd9801c329e": {
-          "buttonText": "Ulteriori informazioni"
-        },
-        "3c4621e3-cd67-459f-a4f7-2199b7ab5bcc": {
-          "buttonText": "Ulteriori informazioni"
-        },
-        "f503efed-1d08-4a36-b7ba-e64f583d5209": {
-          "buttonText": "Ulteriori informazioni"
-        },
-        "d79fdf44-5b59-4229-bca8-f8b4e2786ccb": {
           "buttonText": "Ulteriori informazioni"
         }
       }
