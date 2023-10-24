@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2023-10-20T22:26:00.000Z",
   "level_num": "custom",
@@ -65,11 +66,13 @@
       "upButton",
       "downButton"
     ],
-    "validation_code": "if(!World.validationState.startingStage){\r\n  World.validationState.startingStage={};\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 0.5) {\r\n  // If the AI block is in the user code but the parameters are not defined, fail immediately.\r\n  // Note that if the user adds the AI block to the 'after 4 measures' block and doesn't add params, this\r\n  // error will NOT be triggered. It is only triggered when the AI block is actually executed.\r\n  if (World.aiBlockHasInvalidParams) {\r\n    console.log('failed bc an AI block has undefined params.');\r\n    nativeAPI.fail(\"aiDanceFeedbackAiBlockNoParameters\");\r\n  }\r\n}\r\n\r\n// Get \"current\" stage at the beginning of the 1st measure\r\nif (nativeAPI.getTime(\"measures\") > 1){\r\n  if (World.validationState.startingStage[0] === undefined) {\r\n    World.validationState.startingStage[0] = World.bg_effect;\r\n    World.validationState.startingStage[1] = World.fg_effect;\r\n    World.validationState.startingStage[2] = nativeAPI.getCurrentPalette();\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 6) {\r\n  //check for new background after start of the 5th measure\r\n  if (World.validationState.startingStage[0] === World.bg_effect && World.validationState.startingStage[1] === World.fg_effect && World.validationState.startingStage[2] === nativeAPI.getCurrentPalette()) {\r\n    console.log('Failed bc you did not change the stage after 4 measures');\r\n    nativeAPI.fail(\"danceFeedbackNoBackground\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 8) {\r\n  //if you haven't failed yet, pass\r\n  nativeAPI.pass();\r\n}\r\n\r\n"
+    "validation_code": "if(!World.validationState.startingStage){\r\n  World.validationState.startingStage={};\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 0.5) {\r\n  // If the AI block is in the user code but the parameters are not defined, fail immediately.\r\n  // Note that if the user adds the AI block to the 'after 4 measures' block and doesn't add params, this\r\n  // error will NOT be triggered. It is only triggered when the AI block is actually executed.\r\n  if (World.aiBlockHasInvalidParams) {\r\n    console.log('failed bc an AI block has undefined params.');\r\n    nativeAPI.fail(\"aiDanceFeedbackAiBlockNoParametersOnEvent\");\r\n  }\r\n}\r\n\r\n// Get \"current\" stage at the beginning of the 1st measure\r\nif (nativeAPI.getTime(\"measures\") > 1){\r\n  if (World.validationState.startingStage[0] === undefined) {\r\n    World.validationState.startingStage[0] = World.bg_effect;\r\n    World.validationState.startingStage[1] = World.fg_effect;\r\n    World.validationState.startingStage[2] = nativeAPI.getCurrentPalette();\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 6) {\r\n  //check for new background after start of the 5th measure\r\n  if (World.validationState.startingStage[0] === World.bg_effect && World.validationState.startingStage[1] === World.fg_effect && World.validationState.startingStage[2] === nativeAPI.getCurrentPalette()) {\r\n    console.log('Failed bc you did not change the stage after 4 measures');\r\n    nativeAPI.fail(\"aiDanceStageChangeAfterMeasures\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 8) {\r\n  //if you haven't failed yet, pass\r\n  nativeAPI.pass();\r\n}\r\n\r\n",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-20T22:26:00.673+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-20T22:26:00.673+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2\"},{\"changed_at\":\"2023-10-23 23:31:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
