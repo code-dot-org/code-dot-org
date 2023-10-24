@@ -60,7 +60,7 @@ export default function CoteacherSettings({
   const existingCoteachers = sectionInstructors
     ? sectionInstructors.length - 1
     : 0;
-  const numCoteachers = existingCoteachers + coteachersToAdd.length - 1;
+  const numCoteachers = existingCoteachers + coteachersToAdd.length;
 
   const isAddDisabled = numCoteachers >= 5;
 
