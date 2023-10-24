@@ -597,6 +597,52 @@ id:
             '"tropical"': Tropis
             '"vintage"': Vintage
             '"warm"': Hangat
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          tetapkan efek latar belakang
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Tidak Ada
+            '"rand"': Acak
+            '"circles"': Lingkaran
+            '"quads"': Sudut
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Kembang Api
+            '"flowers"': Bunga
+            '"growing_stars"': Bintang Tumbuh
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Dansa Laser
+            '"splatter"': Percikan Cat
+            '"rainbow"': Pelangi
+            '"ripples_random"': Riak Acak
+            '"ripples"': Riak
+            '"snowflakes"': Salju
+            '"text"': Nama Lagu
+            '"squiggles"': Garis berlekuk
+            '"galaxy"': Spasi
+            '"sparkles"': Kilauan
+            '"spiral"': Spiral
+            '"disco"': Bujur sangkar
+            '"starburst"': Semburan bintang
+            '"stars"': Bintang
+            '"music_wave"': Gelombang
+          PALETTE:
+            '"rave"': Hitam dan Putih
+            '"cool"': Keren
+            '"electronic"': Elektronik
+            '"iceCream"': Es Krim
+            '"default"': Lampu
+            '"neon"': Neon
+            '"ocean"': Lautan
+            '"rainbow"': Pelangi
+            '"tropical"': Tropis
+            '"vintage"': Vintage
+            '"warm"': Hangat
       Dancelab_setDanceSpeed:
         text: tetapkan {SPRITE} kecepatan tari menjadi {SPEED}
         options:
