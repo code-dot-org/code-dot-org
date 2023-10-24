@@ -556,6 +556,50 @@ da:
         text: |-
           "indstil baggrundseffekt
           {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Tunnel
+            '"color_cycle"': Farver
+            '"diamonds"': Diamanter
+            '"disco"': Kvadrater
+            '"disco_ball"': Diskokugle
+            '"fireworks"': Fyrværkeri
+            '"flowers"': Blomster
+            '"galaxy"': Ydre rum
+            '"growing_stars"': Voksende stjerner
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansegulv
+            '"music_wave"': Bølger
+            '"none"': Ingen
+            '"quads"': Vinkler
+            '"rainbow"': Regnbue
+            '"rand"': "(Tilfældig)"
+            '"ripples"': Krusninger
+            '"ripples_random"': Tilfældige krusninger
+            '"snowflakes"': Sne
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"splatter"': Sprøjt af maling
+            '"squiggles"': Kruseduller
+            '"starburst"': Starburst
+            '"stars"': Stjerner
+            '"swirl"': Hypno
+            '"text"': Sangtitel
+          PALETTE:
+            '"cool"': Blå
+            '"default"': Lys
+            '"electronic"': Elektronik
+            '"iceCream"': Soft Ice
+            '"neon"': Neon
+            '"rainbow"': Regnbue
+            '"rave"': Sort og hvid
+            '"tropical"': Tropisk
+            '"vintage"': Vintage
+            '"warm"': Rød
+        text: |-
+          "indstil baggrundseffekt
+          {PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
           SPEED:

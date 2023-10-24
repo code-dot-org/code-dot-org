@@ -556,6 +556,50 @@ da:
             '"tropical"': Tropisk
             '"vintage"': Vintage
             '"warm"': Rød
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "indstil baggrundseffekt
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Tilfældig)"
+            '"circles"': Tunnel
+            '"quads"': Vinkler
+            '"color_cycle"': Farver
+            '"diamonds"': Diamanter
+            '"disco_ball"': Diskokugle
+            '"fireworks"': Fyrværkeri
+            '"flowers"': Blomster
+            '"growing_stars"': Voksende stjerner
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Sprøjt af maling
+            '"rainbow"': Regnbue
+            '"ripples_random"': Tilfældige krusninger
+            '"ripples"': Krusninger
+            '"snowflakes"': Sne
+            '"text"': Sangtitel
+            '"squiggles"': Kruseduller
+            '"galaxy"': Ydre rum
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"disco"': Kvadrater
+            '"starburst"': Starburst
+            '"stars"': Stjerner
+            '"music_wave"': Bølger
+          PALETTE:
+            '"rave"': Sort og hvid
+            '"cool"': Blå
+            '"electronic"': Elektronik
+            '"iceCream"': Soft Ice
+            '"default"': Lys
+            '"neon"': Neon
+            '"rainbow"': Regnbue
+            '"tropical"': Tropisk
+            '"vintage"': Vintage
+            '"warm"': Rød
       Dancelab_setDanceSpeed:
         text: sæt {SPRITE} danse hastighed til {SPEED}
         options:

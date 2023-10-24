@@ -3620,6 +3620,9 @@
         "706ae5f7-cfce-412e-92f7-1ecd0a91c034": {
           "name": "Opvarmning"
         },
+        "ca6b9610-b612-418d-87bf-bc1776fbd110": {
+          "name": "Aktivitet"
+        },
         "b2ed278d-0743-46d3-b237-72cb2f2c42b5": {
           "name": "Opvarmning"
         },
@@ -3770,24 +3773,6 @@
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
           "name": "Aktivitet"
         },
-        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
-          "name": "Opvarmning"
-        },
-        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
-          "name": "Opvarmning"
-        },
-        "a653c76e-8536-4e82-adad-98306fc15f07": {
-          "name": "Opvarmning"
-        },
-        "ad24912f-a30c-4821-83a5-77e20997a044": {
-          "name": "Opvarmning"
-        },
-        "372347a4-5034-4888-9232-160ad727c83d": {
-          "name": "Opvarmning"
-        },
-        "26cd3c8b-1ae7-4fd3-87c2-12cf2612d677": {
-          "name": "Opvarmning"
-        },
         "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
           "name": "Aktivitet"
         },
@@ -3803,9 +3788,6 @@
         "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
           "name": "Opvarmning"
         },
-        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
-          "name": "Opvarmning"
-        },
         "05180d31-d1ff-422e-8227-69f7d07884a6": {
           "name": "Opvarmning"
         },
@@ -3814,9 +3796,6 @@
         },
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Afslutning"
-        },
-        "f652e4d2-c712-4cff-a011-f1dcea192263": {
-          "name": "Opvarmning"
         }
       }
     }
