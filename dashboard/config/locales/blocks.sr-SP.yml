@@ -220,6 +220,10 @@ sr:
         options:
           EFFECT:
             '"rand"': "(Насумичан)"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"rand"': "(Насумичан)"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
