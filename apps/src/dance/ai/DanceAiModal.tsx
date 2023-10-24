@@ -8,7 +8,6 @@ import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
 import {BlockSvg, Workspace} from 'blockly/core';
 import AiGeneratingView from './AiGeneratingView';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
@@ -17,8 +16,6 @@ import {AiOutput} from '../types';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
-
-const promptString = 'Generate a scene using this mood:';
 
 enum Mode {
   SELECT_INPUTS = 'selectInputs',
@@ -146,7 +143,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleProcessClick = () => {
-    startAi();
     setMode(Mode.PROCESSING);
     setTimeout(() => {
       setProcessingDone(true);
