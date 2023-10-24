@@ -14,13 +14,14 @@ class Policies::Lti
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
-  TEACHER_ROLES = Set.new([
-                            'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
-                            'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
-                            'http://purl.imsglobal.org/vocab/lis/v2/membership#Administrator',
-                            'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
-                            'http://purl.imsglobal.org/vocab/lis/v2/system/person#Administrator',
-                          ]
+  TEACHER_ROLES = Set.new(
+    [
+      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
+      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
+      'http://purl.imsglobal.org/vocab/lis/v2/membership#Administrator',
+      'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
+      'http://purl.imsglobal.org/vocab/lis/v2/system/person#Administrator',
+    ]
 ).freeze
   LTI_ROLES_KEY = 'https://purl.imsglobal.org/spec/lti/claim/roles'.freeze
 
