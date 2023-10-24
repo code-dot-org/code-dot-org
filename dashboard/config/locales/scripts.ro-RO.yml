@@ -4311,6 +4311,17 @@ ro:
               display_name: Conţinut
             csd3_2:
               display_name: 'Capitolul 2: Cum facem jocuri'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introducere
+          lessons:
+            lesson-7:
+              name: Introducere
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introducere
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -4333,6 +4344,10 @@ ro:
           lessons:
             lesson-3:
               name: Evaluare
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introducere
         virustest:
           description_short: Folosește Sprite Lab pentru a creea o simulare dintr-o
             epidemie a unui virus.

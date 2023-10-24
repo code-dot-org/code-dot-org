@@ -570,6 +570,51 @@ ro:
             '"tropical"': Tropical
             '"vintage"': Vechi
             '"warm"': Cald
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          setează efectul de fundal la
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nici unul
+            '"rand"': Aleatoriu
+            '"circles"': Cercuri
+            '"quads"': Îngeri
+            '"color_cycle"': Culori
+            '"diamonds"': Diamante
+            '"disco_ball"': Glob de discotecă
+            '"fireworks"': Artificii
+            '"flowers"': Flori
+            '"growing_stars"': Stele crescânde
+            '"swirl"': Hipnotic
+            '"kaleidoscope"': Caleidoscope
+            '"lasers"': Ring de dans cu lasere
+            '"splatter"': Stropi de vopsea
+            '"rainbow"': Curcubeu
+            '"ripples_random"': Ondulații aleatorii
+            '"ripples"': Ondulații
+            '"snowflakes"': Zăpadă
+            '"text"': Nume cântec
+            '"squiggles"': Mâzgălituri
+            '"galaxy"': Spaţiu
+            '"sparkles"': Scântei
+            '"spiral"': Spirală
+            '"disco"': Pătrate
+            '"starburst"': Accelerare
+            '"stars"': Stele
+            '"music_wave"': Valuri
+          PALETTE:
+            '"rave"': Negru şi alb
+            '"cool"': Interesant
+            '"electronic"': Electronic
+            '"iceCream"': Îngheţată
+            '"default"': Lumină
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Curcubeu
+            '"tropical"': Tropical
+            '"vintage"': Vechi
+            '"warm"': Cald
       Dancelab_setDanceSpeed:
         text: setează {SPRITE} la viteza de dans {SPEED}
         options:
