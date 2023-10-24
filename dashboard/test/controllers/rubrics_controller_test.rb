@@ -9,10 +9,22 @@ class RubricsControllerTest < ActionController::TestCase
     @level = create(:level)
     @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
 
-    @student = create :student
     @teacher = create :teacher
+    @student = create :student
     create :follower, student_user: @student, user: @teacher
     @rubric = create :rubric, lesson: @lesson, level: @level
+
+    @fake_ip = '127.0.0.1'
+    @storage_id = create_storage_id_for_user(@student.id)
+
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    @channel_id = channel_token.channel
+
+    # Don't actually talk to S3 when running SourceBucket.new
+    AWS::S3.stubs :create_client
+    stub_project_source_data(@channel_id)
+    _, @project_id = storage_decrypt_channel_id(@channel_id)
+    @version_id = "fake-version-id"
   end
 
   # new page is levelbuilder only
@@ -76,42 +88,37 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test 'submits rubric evaluations of a student' do
-    student = create :student
-    teacher = create :teacher
     @rubric.destroy
-    rubric = create :rubric, :with_teacher_evaluations, lesson: @lesson, level: @level, num_evaluations_per_goal: 2, teacher: teacher, student: student
+    rubric = create :rubric, :with_teacher_evaluations, lesson: @lesson, level: @level, num_evaluations_per_goal: 2, teacher: @teacher, student: @student
 
-    sign_in teacher
-    post :submit_evaluations, params: {id: rubric.id, student_id: student.id}
+    sign_in @teacher
+    post :submit_evaluations, params: {id: rubric.id, student_id: @student.id}
     assert_response :success
-    assert_equal 2, LearningGoalTeacherEvaluation.where(user: student, teacher: teacher).where.not(submitted_at: nil).count
+    assert_equal 2, LearningGoalTeacherEvaluation.where(user: @student, teacher: @teacher).where.not(submitted_at: nil).count
   end
 
   test 'can only submit evaluations with same teacher_id as current_user' do
-    student = create :student
-    teacher = create :teacher
     another_teacher = create :teacher
-    create :learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: teacher, student: student
-    create :learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: another_teacher, student: student
+    create :learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: @teacher, student: @student
+    create :learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: another_teacher, student: @student
 
-    sign_in teacher
-    post :submit_evaluations, params: {id: @rubric.id, student_id: student.id}
+    sign_in @teacher
+    post :submit_evaluations, params: {id: @rubric.id, student_id: @student.id}
 
     assert_response :success
-    refute_nil LearningGoalTeacherEvaluation.find_by(user: student, teacher: teacher).submitted_at
-    assert_nil LearningGoalTeacherEvaluation.find_by(user: student, teacher: another_teacher).submitted_at
+    refute_nil LearningGoalTeacherEvaluation.find_by(user: @student, teacher: @teacher).submitted_at
+    assert_nil LearningGoalTeacherEvaluation.find_by(user: @student, teacher: another_teacher).submitted_at
   end
 
   test "gets ai evaluations for student and learning goal" do
     student = create :student
-    teacher = create :teacher
-    create :follower, student_user: student, user: teacher
-    sign_in teacher
+    create :follower, student_user: student, user: @teacher
+    sign_in @teacher
 
     learning_goal1 = create :learning_goal, rubric: @rubric
     learning_goal2 = create :learning_goal, rubric: @rubric
-    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, requester: teacher, understanding: 1
-    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, requester: teacher,  understanding: 2
+    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, requester: @teacher, understanding: 1
+    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, requester: @teacher,  understanding: 2
 
     get :get_ai_evaluations, params: {
       id: @rubric.id,
@@ -126,11 +133,10 @@ class RubricsControllerTest < ActionController::TestCase
 
   test "cannot get ai evaluations for student if not teacher of student" do
     student = create :student
-    teacher = create :teacher
-    sign_in teacher
+    sign_in @teacher
 
     learning_goal = create :learning_goal
-    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: @teacher
 
     get :get_ai_evaluations, params: {
       id: learning_goal.rubric.id,
@@ -142,14 +148,13 @@ class RubricsControllerTest < ActionController::TestCase
 
   test "only returns the most recent ai evaluation for student" do
     student = create :student
-    teacher = create :teacher
-    create :follower, student_user: student, user: teacher
-    sign_in teacher
+    create :follower, student_user: student, user: @teacher
+    sign_in @teacher
 
     learning_goal = create :learning_goal
-    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher, understanding: 1
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: @teacher, understanding: 1
     travel 1.minute do
-      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher, understanding: 2
+      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: @teacher, understanding: 2
     end
 
     get :get_ai_evaluations, params: {
@@ -330,5 +335,15 @@ class RubricsControllerTest < ActionController::TestCase
       userId: @student.id,
     }
     assert_response :forbidden
+  end
+
+  private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id
+    }
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 end

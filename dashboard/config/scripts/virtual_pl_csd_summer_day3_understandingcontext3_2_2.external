@@ -4,17 +4,9 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Applying Our Knowledge of Identity and Bias
-
-<br>
-<img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
-
-### Context
+---
 #### This situation takes place three days into the class. You will see three students interacting with one another during the Circle-Square lesson. These students are:
-James: James is a white male Senior who you had last year in pre-calc. In your class last year James earned high grades and mostly turned in his work on time. He tended to be a bit more of a “follower” when it came to group work in pre-calc.
 
-Simone: Simone is a Black female student who is also a Senior. You just met her this year.
-
-Miranda: Miranda is Latina female student and a Junior. You coached her on the track team for the last two years and finally convinced her to take CSP. You don’t know her much as a student in the classroom, but on the track team she is one of your fastest runners and someone the team looks up to.
-
+![](https://images.code.org/137ba5a7c1410d89dfffe872ae98c5e4-Screenshot 2023-10-20 at 12.53.09 PM.png)
 
 MARKDOWN

@@ -1,4 +1,11 @@
 @import 'color.scss';
+@import '../../mixins.scss';
+
+$ai-block-color: rgb(64 68 73);
+$ai-block-border-color: rgb(121 124 128);
+$ai-block-inputs-border-color: rgb(121 124 128);
+$ai-modal-header-height: 50px;
+$ai-modal-border-width: 8px;
 
 @keyframes appear {
   0% {
@@ -11,7 +18,8 @@
 
 // Fade in for 1 seconds after a 1 second delay.
 @keyframes appear1 {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 0;
   }
   100% {
@@ -30,7 +38,8 @@
 
 // 0.5 second pause, then scan over 2.5 seconds
 @keyframes scan-left-to-right {
-  0%, 16.6% {
+  0%,
+  16.6% {
     left: calc(50% - 65px);
   }
   100% {
@@ -49,7 +58,7 @@
 
 @keyframes right-to-center {
   0% {
-    left: 83%
+    left: 83%;
   }
   100% {
     left: 45%;
@@ -58,30 +67,76 @@
 
 .dialog {
   max-width: initial !important;
-  width: 800px !important;
-  height: 380px;
+  width: 824px !important;
+  height: 454px;
+  padding: 0 !important;
+  border: solid 1px $ai-block-border-color;
+  background-color: $ai-block-color !important;
+
+  .headerArea {
+    width: calc(100% - 2 * $ai-modal-border-width);
+    height: 50px;
+    background-color: $ai-block-color;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 $ai-modal-border-width;
+    margin-top: $ai-modal-border-width;
+
+    .botImage {
+      width: 24px;
+      margin: 0 18px 0 12px;
+    }
+
+    .inputsContainer {
+      display: flex;
+      padding: 5px;
+      border-radius: 4px;
+      gap: 6px;
+      border: solid 2px $ai-block-inputs-border-color;
+
+      .emojiSlot {
+        width: 35px;
+        height: 35px;
+        margin-right: 6px;
+      }
+    }
+
+    &Right {
+      margin-left: auto;
+    }
+  }
 
   .innerArea {
-    width: 100%;
-    height: 100%;
+    margin: $ai-modal-border-width;
+    // There is a border on the left and right.
+    width: calc(100% - 2 * $ai-modal-border-width);
+    // There is a border at the top and bottom, and a third between the header
+    // and the inner area.
+    height: calc(100% - $ai-modal-header-height - 3 * $ai-modal-border-width);
     position: relative;
     user-select: none;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
 
     .textArea {
       position: absolute;
       width: 100%;
       height: 20px;
-      top: 10px;
+      bottom: 50px;
       left: 0;
       text-align: center;
-      font-size: 24px;
+      font-size: 18px;
     }
 
     .inputsArea {
       position: absolute;
-      width: calc(100% - 170px);
+      width: 550px;
       height: 190px;
-      top: 72px;
+      top: 22px;
       left: 170px;
 
       .itemContainer {
@@ -92,6 +147,7 @@
         animation: appear1 2s;
 
         .item {
+          @include remove-button-styles;
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -113,7 +169,7 @@
       position: absolute;
       width: 100%;
       height: 70px;
-      top: 260px;
+      top: 210px;
       left: 0;
       pointer-events: none;
 
@@ -170,7 +226,7 @@
       position: absolute;
       width: 100%;
       height: 200px;
-      top: 60px;
+      top: 10px;
       left: 0;
       pointer-events: none;
       z-index: 1;
@@ -230,7 +286,7 @@
       justify-content: center;
       width: 100%;
       height: 270px;
-      top: 60px;
+      top: 10px;
       left: 0;
 
       .blockPreview {
@@ -252,7 +308,7 @@
 
     .previewArea {
       position: absolute;
-      height: 100%;
+      height: 200px;
       right: 5px;
       display: flex;
       align-items: center;
@@ -262,8 +318,18 @@
 
     .generatingArea {
       position: absolute;
-      top: 40px;
+      top: 0;
+      width: calc(100% - 20px)
+    }
+
+    .explanationArea {
+      position: absolute;
+      display: flex;
+      justify-content: center;
       width: 100%;
+      height: 280px;
+      top: 5px;
+      left: 0;
     }
 
     .buttonsArea {
@@ -277,13 +343,21 @@
       left: 0;
       width: 100%;
 
-      .button {
-        font-size: 16px;
-
-        &Left {
-          margin-right: auto;
-        }
+      &Left {
+        margin-right: auto;
       }
+    }
+  }
+
+  .button {
+    font-size: 16px;
+
+    &NoMargin {
+      margin: 0;
+    }
+
+    &SmallText {
+      font-size: 12px;
     }
   }
 }

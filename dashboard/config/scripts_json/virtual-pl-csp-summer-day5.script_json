@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-17 17:26:35 UTC",
+    "serialized_at": "2023-10-20 17:42:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -149,7 +149,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 37 minutes",
+        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 75 minutes",
         "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
       },
       "seeding_key": {
@@ -442,6 +442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-P2-Context1_2_2_1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -464,12 +467,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1"
+        ],
         "progression": "AP Scavenger Hunt"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2_2_1"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -477,7 +483,7 @@
         "activity_section.key": "ad507f7d-3b78-4b13-a57a-1b4f695eca5e"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context4_1_2_2_1"
+        "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1"
       ]
     },
     {
@@ -491,7 +497,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_5_1video"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -499,7 +505,76 @@
         "activity_section.key": "802632ee-892d-41ed-b6d7-0d4e9756fed1"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1"
+        "virtual-pl-csd-summer-day3-UnderstandingContext2_5_1video"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1_2_2_1"
+        ],
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1_2_2_1"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5",
+        "activity_section.key": "802632ee-892d-41ed-b6d7-0d4e9756fed1"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-Context4_1_2_2_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_7_video"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5",
+        "activity_section.key": "802632ee-892d-41ed-b6d7-0d4e9756fed1"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-UnderstandingContext2_7_video"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1_2_2_2"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5",
+        "activity_section.key": "802632ee-892d-41ed-b6d7-0d4e9756fed1"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-Context4_1_2_2_2"
       ]
     }
   ],
@@ -518,9 +593,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context4_1_2_2_1",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2_2_1"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
@@ -530,9 +605,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_5_1video",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2_1"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_5_1video"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5",
+        "activity_section.key": "802632ee-892d-41ed-b6d7-0d4e9756fed1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-Context4_1_2_2_1",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1_2_2_1"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5",
+        "activity_section.key": "802632ee-892d-41ed-b6d7-0d4e9756fed1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_7_video",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_7_video"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5",
+        "activity_section.key": "802632ee-892d-41ed-b6d7-0d4e9756fed1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-Context4_1_2_2_2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1_2_2_2"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-3",
