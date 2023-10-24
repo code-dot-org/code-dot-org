@@ -4409,6 +4409,9 @@ uz:
         virtual-pl-csa-summer-2024-day1:
           title: 1-kun
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kirish
           title: 2-kun
         virtual-pl-csp-summer-day3:
           title: 3-kun
@@ -4417,10 +4420,19 @@ uz:
         virtual-pl-csa-summer-day2:
           title: 2-kun
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kirish
           title: 3-kun
         virtual-pl-csa-summer-day4:
           title: 4-kun
         virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Kirish
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kirish
           title: 1-kun
         virtual-pl-csp-summer-day1:
           title: 1-kun

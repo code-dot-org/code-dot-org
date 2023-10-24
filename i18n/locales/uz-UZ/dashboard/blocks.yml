@@ -564,6 +564,50 @@ uz:
             '"tropical"': Tropik
             '"vintage"': Vintaj
             '"warm"': Iliq
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          orqa fon effektini
+          {PALETTE} {EFFECT} ga sozlash
+        options:
+          EFFECT:
+            '"none"': Hech biri
+            '"rand"': "(Tasodifiy)"
+            '"circles"': Aylanalar
+            '"quads"': Burchaklar
+            '"color_cycle"': Ranglar
+            '"diamonds"': Brilliantlar
+            '"disco_ball"': Disko to'p
+            '"fireworks"': Feyerverklar
+            '"flowers"': Gullar
+            '"growing_stars"': O'sib borayotgan yulduzlar
+            '"swirl"': Gipno
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazerli raqs maydonchasi
+            '"splatter"': Bo'yoq sachratmalari
+            '"rainbow"': Kamalak
+            '"ripples_random"': Tasodifiy to‘lqinlar
+            '"ripples"': To‘lqinlar
+            '"snowflakes"': Qor
+            '"text"': Qo'shiq nomlari
+            '"squiggles"': Siqilish (burmalar)
+            '"galaxy"': Qoinot
+            '"sparkles"': Uchqunlar
+            '"spiral"': Spiral
+            '"disco"': Kvadratlar
+            '"starburst"': Yulduzlar to'plami
+            '"stars"': Yulduzlar
+            '"music_wave"': Toʻlqinlar
+          PALETTE:
+            '"rave"': Qora va oq
+            '"cool"': Zo'r
+            '"electronic"': Elektronik
+            '"iceCream"': Muzqaymoq
+            '"default"': Chiroq
+            '"neon"': Neon
+            '"rainbow"': Kamalak
+            '"tropical"': Tropik
+            '"vintage"': Vintaj
+            '"warm"': Iliq
       Dancelab_setDanceSpeed:
         text: "{SPRITE} raqs tezligini {SPEED} belgilash"
         options:

@@ -3323,9 +3323,6 @@
         "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
           "description": "Informatika va kodlashni o‘rganishda davom etish uchun joylarni aniqlang"
         },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
-        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Kiritish hodisalari bilan bog‘liq harakatlarni aniqlang."
         },
@@ -3370,12 +3367,6 @@
         },
         "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
           "description": "Kayıpsız siqishni maqsadi va asoslarini aytib bering."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Talabalar kompyuter laboratoriyasiga o‘tishda nimani kutishlarini bilib oling."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Kompyuter sichqonchasi, trekpad yoki sensorli ekranga tegishli terminologiyadan foydalaning."
         }
       }
     }
