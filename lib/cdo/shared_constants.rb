@@ -603,7 +603,8 @@ module SharedConstants
       EXTENSIVE: 3,
       CONVINCING: 2,
       LIMITED: 1,
-      NONE: 0
+      NONE: 0,
+      UNKNOWN: -1,
     }
   ).freeze
 
