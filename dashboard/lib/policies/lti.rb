@@ -34,9 +34,4 @@ class Policies::Lti
   def self.generate_auth_id(id_token)
     "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
   end
-
-  # TODO: Nick, impliment the logic!
-  # def self.lti?(user)
-  #   return true
-  # end
 end

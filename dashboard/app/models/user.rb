@@ -740,9 +740,9 @@ class User < ApplicationRecord
     nil
   end
 
-  # validate :presence_of_email, if: :teacher_email_required?
-  # validate :presence_of_email_or_hashed_email, if:
-  #     :email_or_hashed_email_required?, on: :create
+  validate :presence_of_email, if: :teacher_email_required?
+  validate :presence_of_email_or_hashed_email, if:
+      :email_or_hashed_email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
