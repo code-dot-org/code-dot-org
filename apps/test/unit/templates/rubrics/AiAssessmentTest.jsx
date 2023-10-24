@@ -13,8 +13,10 @@ describe('AiAssessment', () => {
   const props = {
     isAiAssessed: true,
     studentName: 'Jane Doe',
-    aiUnderstandingLevel: 3,
-    aiConfidence: 70,
+    aiEvaluation: {
+      understanding: 3,
+      ai_confidence: 70,
+    },
     learningGoalKey: 'learning_goal',
     aiEvalInfo: mockAiInfo,
   };
@@ -29,11 +31,11 @@ describe('AiAssessment', () => {
       props.studentName
     );
     expect(
-      wrapper.find('AiAssessmentBox').props().aiUnderstandingLevel
-    ).to.equal(props.aiUnderstandingLevel);
-    expect(wrapper.find('AiAssessmentBox').props().aiConfidence).to.equal(
-      props.aiConfidence
-    );
+      wrapper.find('AiAssessmentBox').props().aiEvaluation.understanding
+    ).to.equal(props.aiEvaluation.understanding);
+    expect(
+      wrapper.find('AiAssessmentBox').props().aiEvaluation.ai_confidence
+    ).to.equal(props.aiEvaluation.ai_confidence);
   });
 
   it('render AIAssessmentFeedback element', () => {

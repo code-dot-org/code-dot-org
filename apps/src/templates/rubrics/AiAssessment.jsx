@@ -11,9 +11,9 @@ const icon = require('@cdo/static/ai-bot.png');
 export default function AiAssessment({
   isAiAssessed,
   studentName,
-  aiUnderstandingLevel,
-  aiConfidence,
-  aiEvalInfo,
+  aiEvaluation,
+  studentSubmitted,
+  learningGoalKey,
 }) {
   return (
     <div>
@@ -22,9 +22,9 @@ export default function AiAssessment({
         <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
         <AiAssessmentBox
           isAiAssessed={isAiAssessed}
-          aiUnderstandingLevel={aiUnderstandingLevel}
           studentName={studentName}
-          aiConfidence={aiConfidence}
+          studentSubmitted={studentSubmitted}
+          aiEvaluation={aiEvaluation}
         />
       </div>
       <div>
@@ -37,7 +37,7 @@ export default function AiAssessment({
 AiAssessment.propTypes = {
   isAiAssessed: PropTypes.bool.isRequired,
   studentName: PropTypes.string,
-  aiUnderstandingLevel: PropTypes.number,
-  aiConfidence: PropTypes.number,
-  aiEvalInfo: aiEvaluationShape,
+  aiEvaluation: PropTypes.object,
+  studentSubmitted: PropTypes.bool,
+  learningGoalKey: PropTypes.string,
 };

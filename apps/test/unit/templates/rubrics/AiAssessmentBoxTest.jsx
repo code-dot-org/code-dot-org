@@ -10,8 +10,10 @@ describe('AiAssessmentBox', () => {
   const props = {
     isAiAssessed: true,
     studentName: 'Jane Doe',
-    aiUnderstandingLevel: RubricUnderstandingLevels.CONVINCING,
-    aiConfidence: 70,
+    aiEvaluation: {
+      understanding: RubricUnderstandingLevels.CONVINCING,
+      ai_confidence: 1,
+    },
   };
 
   it('renders AiAssessmentBox with student information if it is assessessed by AI', () => {
@@ -24,7 +26,10 @@ describe('AiAssessmentBox', () => {
   it('renders AiAssessmentBox without AI confidence when unavailable', () => {
     const updatedProps = {
       ...props,
-      aiConfidence: null,
+      aiEvaluation: {
+        understanding: RubricUnderstandingLevels.CONVINCING,
+        ai_confidence: null,
+      },
     };
     const wrapper = shallow(<AiAssessmentBox {...updatedProps} />);
     expect(wrapper.find('EmText')).to.have.lengthOf(0);
@@ -49,7 +54,10 @@ describe('AiAssessmentBox', () => {
   it('should have red color and associated message for aiAssessed with limited understanding', () => {
     const updatedProps = {
       ...props,
-      aiUnderstandingLevel: RubricUnderstandingLevels.LIMITED,
+      aiEvaluation: {
+        understanding: RubricUnderstandingLevels.LIMITED,
+        ai_confidence: 1,
+      },
     };
     const wrapper = shallow(<AiAssessmentBox {...updatedProps} />);
     expect(wrapper.find('div').first().hasClass(style.redAiAssessment)).to.be

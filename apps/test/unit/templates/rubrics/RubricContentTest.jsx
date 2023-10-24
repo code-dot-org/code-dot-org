@@ -267,12 +267,7 @@ describe('RubricContent', () => {
     );
 
     const learningGoal2Wrapper = wrapper.find('LearningGoal').at(1);
-    expect(learningGoal2Wrapper.prop('aiUnderstanding')).to.equal(
-      aiEvaluations[0].understanding
-    );
-    expect(learningGoal2Wrapper.prop('aiConfidence')).to.equal(
-      aiEvaluations[0].ai_confidence
-    );
+    expect(learningGoal2Wrapper.prop('aiEvaluation')).to.eql(aiEvaluationsMock);
 
     sinon.restore();
   });
@@ -292,8 +287,7 @@ describe('RubricContent', () => {
     );
 
     const learningGoal1Wrapper = wrapper.find('LearningGoal').at(0);
-    expect(learningGoal1Wrapper.prop('aiUnderstanding')).to.equal(null);
-    expect(learningGoal1Wrapper.prop('aiConfidence')).to.equal(null);
+    expect(learningGoal1Wrapper.prop('aiEvaluation')).to.equal(null);
   });
 
   it('shows info alert when not viewing project level', () => {

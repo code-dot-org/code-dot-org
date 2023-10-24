@@ -196,8 +196,7 @@ export default function RubricContent({
             canProvideFeedback={canProvideFeedback}
             reportingData={reportingData}
             studentLevelInfo={studentLevelInfo}
-            aiUnderstanding={getAiUnderstanding(lg.id)}
-            aiConfidence={getAiConfidence(lg.id)}
+            aiEvaluation={aiEvaluations}
             isStudent={false}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}

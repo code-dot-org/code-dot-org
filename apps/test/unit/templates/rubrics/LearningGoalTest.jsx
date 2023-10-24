@@ -37,8 +37,10 @@ describe('LearningGoal', () => {
           aiEnabled: true,
         }}
         teacherHasEnabledAi={true}
-        aiConfidence={50}
-        aiUnderstanding={3}
+        aiEvaluation={{
+          understanding: 3,
+          ai_confidence: 1,
+        }}
         studentLevelInfo={studentLevelInfo}
         aiEvalInfo={{
           id: 2,
@@ -52,10 +54,12 @@ describe('LearningGoal', () => {
     expect(wrapper.find('AiAssessment').props().studentName).to.equal(
       studentLevelInfo.name
     );
-    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(50);
-    expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
-      3
-    );
+    expect(
+      wrapper.find('AiAssessment').props().aiEvaluation.ai_confidence
+    ).to.equal(1);
+    expect(
+      wrapper.find('AiAssessment').props().aiEvaluation.understanding
+    ).to.equal(3);
     expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
   });
 

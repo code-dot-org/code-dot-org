@@ -34,8 +34,7 @@ export default function LearningGoal({
   canProvideFeedback,
   reportingData,
   studentLevelInfo,
-  aiUnderstanding,
-  aiConfidence,
+  aiEvaluation,
   submittedEvaluation,
   isStudent,
   feedbackAdded,
@@ -266,20 +265,17 @@ export default function LearningGoal({
 
       {/*TODO: Pass through data to child component*/}
       <div>
-        {teacherHasEnabledAi &&
-          !!studentLevelInfo &&
-          !!aiEvalInfo &&
-          aiUnderstanding !== undefined && (
-            <div className={style.openedAiAssessment}>
-              <AiAssessment
-                isAiAssessed={learningGoal.aiEnabled}
-                studentName={studentLevelInfo.name}
-                aiConfidence={aiConfidence}
-                aiUnderstandingLevel={aiUnderstanding}
-                aiEvalInfo={aiEvalInfo}
-              />
-            </div>
-          )}
+        {teacherHasEnabledAi && !!studentLevelInfo && (
+          <div className={style.openedAiAssessment}>
+            <AiAssessment
+              isAiAssessed={learningGoal.aiEnabled}
+              studentName={studentLevelInfo.name}
+              aiEvaluation={aiEvaluation}
+              studentSubmitted={!!studentLevelInfo.submitted}
+              learningGoalKey={learningGoal.key}
+            />
+          </div>
+        )}
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
@@ -312,8 +308,7 @@ LearningGoal.propTypes = {
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
-  aiUnderstanding: PropTypes.number,
-  aiConfidence: PropTypes.number,
+  aiEvaluation: PropTypes.object,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
   feedbackAdded: PropTypes.bool,
