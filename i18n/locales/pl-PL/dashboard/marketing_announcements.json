@@ -1,0 +1,99 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "Dodaj nowy kurs informatyki, wygraj $10,000!",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "hoc-more": {
+      "title": "Ucz się dalej!",
+      "body": "Strona Godziny Kodowania zawiera ponad 500 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie.",
+      "buttonText": "Zobacz aktywności"
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": "Weź udział w ankiecie"
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dołącz do nas"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dołącz do nas"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Nominuj nauczyciela"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dołącz do nas"
+    },
+    "home-learning-2020": {
+      "title": "Pomysły na projekty do nauki w domu",
+      "body": "",
+      "buttonText": "Zobacz pomysły na projekty"
+    },
+    "soonhoc-2020": {
+      "title": "Nadchodzi Godzina Kodowania",
+      "body": "",
+      "buttonText": "Dołącz do nas"
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "ai-2020": {
+      "title": "Poznaj sztuczną inteligencję i uczenie maszynowe",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "congrats-certificate-share": {
+      "title": "Wypróbuj Godzinę Kodowania",
+      "body": "Każdy może się nauczyć!",
+      "buttonText": "Rozpocznij"
+    },
+    "coldplay": {
+      "title": "Koduj i tańcz z Coldplay",
+      "body": "",
+      "buttonText": "Wypróbuj"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    },
+    "ai-pl-launch-2023": {
+      "title": "AI 101 dla nauczycieli",
+      "body": "",
+      "buttonText": "Dowiedz się więcej"
+    }
+  }
+}

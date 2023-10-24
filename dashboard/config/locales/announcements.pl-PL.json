@@ -2,42 +2,6 @@
   "pl-PL": {
     "data": {
       "announcements": {
-        "487af7e8-d3dd-46c2-a0fa-936a4e58d977": {
-          "notice": "Czy zapisałeś się na egzamin AP?",
-          "details": "Nadszedł czas, aby się zarejestrować, by przystąpić do egzaminu AP z Zasad Informatyki! Zapytaj swojego nauczyciela o ostateczny termin rejestracji w szkole i zarejestruj się już dziś. Nie jesteś pewien, czy chcesz przystąpić do testu? Mamy SZEŚĆ powodów, dla których powinieneś. Sprawdź je!"
-        },
-        "228f5294-78ec-4b7a-b6f6-76d6f92a01b4": {
-          "notice": "Ankieta po kursie dla uczniów już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "249e1d1d-7ed0-4042-8e57-17f5f2061a9f": {
-          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "d9b403ff-aa97-487a-a32d-df4da9967249": {
-          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "324c3312-b070-4ac4-8bde-4b97251b6760": {
-          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "4a6677f7-ef10-4b41-812a-7bfe1aff7b00": {
-          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "a5c79bfe-dc53-48e6-b535-cfbfb3eae114": {
-          "notice": "Nowość: wybierz, które lekcje chcesz pokazać lub ukryć w swojej sekcji",
-          "details": "Kliknij „Dowiedz się więcej”, aby przeczytać artykuł dotyczący pokazywania i ukrywania lekcji."
-        },
-        "66984aed-46b1-4a2f-8d2f-c88c9f13ead0": {
-          "notice": "Nowość: wybierz, które lekcje chcesz pokazać lub ukryć w swojej sekcji",
-          "details": "Kliknij „Dowiedz się więcej”, aby przeczytać artykuł dotyczący pokazywania i ukrywania lekcji."
-        },
-        "920785dd-41e4-4d34-a3af-3eadbec1c90e": {
-          "notice": "Sprawdź nowe zasoby dla kursu Odkrycie Informatyki na lata 2019-2020!",
-          "details": "Przeczytaj więcej o naszych nowych przewodnikach dla nauczycieli, ramach edukacyjnych, OneNote Journal i bibliotece Flipgrid Disco!"
-        },
         "12f743d3-19be-4f6e-be39-e61a9bfac4d6": {
           "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
           "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
@@ -171,18 +135,6 @@
         "488fc86d-7f7d-48fe-9bc2-0b8869fb6ae1": {
           "notice": "Lekcje rozszerzeń z mikro:bitem",
           "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
-          "buttonText": "Dowiedz się więcej"
-        },
-        "409174a0-d76d-4992-8486-cfd9801c329e": {
-          "buttonText": "Dowiedz się więcej"
-        },
-        "3c4621e3-cd67-459f-a4f7-2199b7ab5bcc": {
-          "buttonText": "Dowiedz się więcej"
-        },
-        "f503efed-1d08-4a36-b7ba-e64f583d5209": {
-          "buttonText": "Dowiedz się więcej"
-        },
-        "d79fdf44-5b59-4229-bca8-f8b4e2786ccb": {
           "buttonText": "Dowiedz się więcej"
         }
       }

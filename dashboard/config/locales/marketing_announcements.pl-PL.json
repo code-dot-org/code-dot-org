@@ -1,0 +1,77 @@
+{
+  "pl-PL": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Dowiedz się więcej",
+            "title": "Poznaj sztuczną inteligencję i uczenie maszynowe"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Dowiedz się więcej"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Dowiedz się więcej",
+            "title": "AI 101 dla nauczycieli"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Dowiedz się więcej"
+          },
+          "class-schedule-survey": {
+            "buttonText": "Weź udział w ankiecie"
+          },
+          "codebytes-2020": {
+            "buttonText": "Dowiedz się więcej"
+          },
+          "coldplay": {
+            "buttonText": "Wypróbuj",
+            "title": "Koduj i tańcz z Coldplay"
+          },
+          "congrats-certificate-share": {
+            "body": "Każdy może się nauczyć!",
+            "buttonText": "Rozpocznij",
+            "title": "Wypróbuj Godzinę Kodowania"
+          },
+          "csjourneys": {
+            "buttonText": "Dowiedz się więcej"
+          },
+          "csjourneys-22": {
+            "buttonText": "Dowiedz się więcej"
+          },
+          "csleadersprize": {
+            "buttonText": "Dowiedz się więcej",
+            "title": "Dodaj nowy kurs informatyki, wygraj $10,000!"
+          },
+          "hoc-more": {
+            "body": "Strona Godziny Kodowania zawiera ponad 500 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie.",
+            "buttonText": "Zobacz aktywności",
+            "title": "Ucz się dalej!"
+          },
+          "home-learning-2020": {
+            "buttonText": "Zobacz pomysły na projekty",
+            "title": "Pomysły na projekty do nauki w domu"
+          },
+          "soonhoc-2020": {
+            "buttonText": "Dołącz do nas",
+            "title": "Nadchodzi Godzina Kodowania"
+          },
+          "superhero": {
+            "buttonText": "Dowiedz się więcej"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Dołącz do nas"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Nominuj nauczyciela"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Dołącz do nas"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Dołącz do nas"
+          }
+        }
+      }
+    }
+  }
+}

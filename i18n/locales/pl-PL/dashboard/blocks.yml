@@ -55,9 +55,7 @@ pl:
             '2.00': duży
             '3.00': bardzo duży
       Dancelab_ai:
-        text: użyj AI do {VALUE}
-      Dancelab_aiText:
-        text: użyj AI do {VALUE}
+        text: użyj AI do {IMAGE}
       Dancelab_alternateMoves:
         text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:
@@ -644,6 +642,58 @@ pl:
             '"tropical"': Tropikalne
             '"vintage"': Starocie
             '"warm"': Ciepły
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: ustaw efekt tła {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Żaden
+            '"rand"': "(Losowy)"
+            '"circles"': Kółka
+            '"quads"': Kąty
+            '"color_cycle"': Kolory
+            '"diamonds"': Diamenty
+            '"disco_ball"': Kula dyskotekowa
+            '"fireworks"': Fajerwerki
+            '"flowers"': Kwiaty
+            '"growing_stars"': Powiększające się gwiazdy
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserowy parkiet
+            '"splatter"': Rozpryski farby
+            '"rainbow"': Tęcza
+            '"ripples_random"': Losowe fale
+            '"ripples"': Fale
+            '"snowflakes"': Śnieg
+            '"text"': Tytuły piosenek
+            '"squiggles"': Pokręcone linie
+            '"galaxy"': Przestrzeń
+            '"sparkles"': Migotanie
+            '"spiral"': Spirala
+            '"disco"': Kwadraty
+            '"starburst"': Rozprysk
+            '"stars"': Gwiazdy
+            '"music_wave"': Fale
+          PALETTE:
+            '"autumn"': Jesień
+            '"rave"': Czarno-białe
+            '"cool"': Chłodny
+            '"electronic"': Elektroniczny
+            '"iceCream"': Lody
+            '"default"': Jasne
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Tęcza
+            '"roses"': Róże
+            '"sky"': Niebo
+            '"spring"': Wiosna
+            '"summer"': Lato
+            '"sunrise"': Wschód słońca
+            '"sunset"': Zachód słońca
+            '"tropical"': Tropikalne
+            '"vintage"': Starocie
+            '"warm"': Ciepły
+            '"winter"': Zima
       Dancelab_setDanceSpeed:
         text: ustaw prędkość tańca {SPRITE} na {SPEED}
         options:

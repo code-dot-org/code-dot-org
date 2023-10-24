@@ -2328,26 +2328,6 @@
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
-        "code/poem-art/2021": {
-          "word": "Kod",
-          "definition": "(v) pisać instrukcje dla komputera."
-        },
-        "event/poem-art/2021": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "line/poem-art/2021": {
-          "word": "Wiersz",
-          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
-        },
-        "mood/poem-art/2021": {
-          "word": "Nastrój",
-          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
-        },
-        "program/poem-art/2021": {
-          "word": "Program",
-          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
-        },
         "code/sports/unversioned": {
           "word": "Kod",
           "definition": "(v) napisać kod lub instrukcje dla komputera."
