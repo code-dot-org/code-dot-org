@@ -11,7 +11,7 @@ const CompilationAssistant = () => {
     javalabState.sources[javalabState.fileMetadata[javalabState.activeTabKey]]
       .text;
   const aiTutorState = useSelector(state => state.aiTutor);
-  
+
   const handleSend = async studentCode => {
     dispatch(askAITutor(studentCode));
   };
