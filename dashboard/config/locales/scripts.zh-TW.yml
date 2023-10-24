@@ -8368,15 +8368,19 @@ zh-TW:
               display_name: 同步部分 2
             lessonGroup-5:
               display_name: 非同步第 2 部分
+            lessonGroup-7:
+              display_name: 介紹
           lessons:
-            lesson-1:
-              name: 同步零件 1
             lesson-2:
               name: 非同步第 1 部分
             lesson-3:
               name: 同步部分 2
             lesson-4:
               name: 非同步第 2 部分
+            lesson-7:
+              name: 介紹
+            lesson-8:
+              name: 工坊揭幕戰
           title: 第 1 天
         virtual-pl-csa-summer-day2:
           lesson_groups:
@@ -8389,8 +8393,6 @@ zh-TW:
             lessonGroup-5:
               display_name: 非同步第 2 部分
           lessons:
-            lesson-1:
-              name: 同步零件 1
             lesson-2:
               name: 非同步第 1 部分
             lesson-3:
@@ -8410,11 +8412,9 @@ zh-TW:
               display_name: 非同步第 2 部分
           lessons:
             lesson-1:
-              name: 同步零件 1
+              name: 介紹
             lesson-2:
               name: 非同步第 1 部分
-            lesson-3:
-              name: 同步部分 2
             lesson-4:
               name: 非同步第 2 部分
           title: 第 3 天
@@ -8429,14 +8429,12 @@ zh-TW:
             lessonGroup-5:
               display_name: 非同步第 2 部分
           lessons:
-            lesson-1:
-              name: 同步零件 1
             lesson-2:
               name: 非同步第 1 部分
-            lesson-3:
-              name: 同步部分 2
             lesson-4:
               name: 非同步第 2 部分
+            lesson-5:
+              name: 工坊揭幕戰
           title: 第 4 天
         virtual-pl-csa-summer-day5:
           lesson_groups:
@@ -8448,7 +8446,13 @@ zh-TW:
               display_name: 非同步第 2 部分
           lessons:
             lesson-1:
-              name: 同步零件 1
+              name: 工坊揭幕戰
+            lesson-13:
+              name: 閉幕式
+            lesson-16:
+              name: 閉幕式
+            lesson-2:
+              name: 非同步第 1 部分
             lesson-3:
               name: 同步部分 2
             lesson-4:
@@ -8567,11 +8571,55 @@ zh-TW:
               display_name: 非同步第 2 部分
           title: 第 1 天
         virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          lessons:
+            lesson-5:
+              name: 介紹
           title: 第 2 天
         virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          lessons:
+            lesson-2:
+              name: 非同步第 1 部分
           title: 第 3 天
         virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
           title: 第 4 天
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+          lessons:
+            lesson-6:
+              name: 閉幕式
         virustest:
           description_short: '使用精靈圖實驗室創建一個病毒爆發模擬。 '
           lesson_groups:

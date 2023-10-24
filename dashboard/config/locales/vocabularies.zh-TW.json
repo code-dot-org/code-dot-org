@@ -2260,26 +2260,6 @@
           "word": "程式",
           "definition": "編碼為可以由電腦運行的演算法。"
         },
-        "code/poem-art/2021": {
-          "word": "代碼",
-          "definition": "（動詞）為電腦編寫指令。"
-        },
-        "event/poem-art/2021": {
-          "word": "事件（Event）",
-          "definition": "導致某些事情發生的操作。"
-        },
-        "line/poem-art/2021": {
-          "word": "詩歌行",
-          "definition": "（詩歌）- 一篇詩歌的組成部分，採用單行格式，在右側結束。 "
-        },
-        "mood/poem-art/2021": {
-          "word": "意境",
-          "definition": "藝術作品或文學作品所表達出某種感覺、氛圍或情感。"
-        },
-        "program/poem-art/2021": {
-          "word": "程式",
-          "definition": "一系列已編碼的步驟，可在設備上運行。"
-        },
         "code/sports/unversioned": {
           "word": "代碼",
           "definition": "(v) 編寫程式碼或電腦指令。"

@@ -588,6 +588,52 @@ zh-TW:
             '"tropical"': 熱帶
             '"vintage"': 復古
             '"warm"': 紅色
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "設置背景效果
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': 無
+            '"rand"': 隨機
+            '"circles"': 隧道
+            '"quads"': 角
+            '"color_cycle"': 色塊
+            '"diamonds"': 菱形
+            '"disco_ball"': 迪斯科球
+            '"fireworks"': 煙火
+            '"flowers"': 花朵
+            '"growing_stars"': 星星
+            '"higher_power"': Higher Power
+            '"swirl"': 催眠
+            '"kaleidoscope"': 萬花筒
+            '"lasers"': 鐳射舞池
+            '"splatter"': 飛濺油漆
+            '"rainbow"': 彩虹
+            '"ripples_random"': 隨機漣漪
+            '"ripples"': 漣漪
+            '"snowflakes"': 雪球
+            '"text"': 歌曲標題
+            '"squiggles"': 蜿曲線段
+            '"galaxy"': 太空
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"disco"': 正方形
+            '"starburst"': 星爆
+            '"stars"': 星星
+            '"music_wave"': 音浪
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 藍調
+            '"electronic"': 電子
+            '"iceCream"': 冰淇淋
+            '"default"': 光亮
+            '"neon"': 霓虹
+            '"ocean"': 海洋
+            '"rainbow"': 彩虹
+            '"tropical"': 熱帶
+            '"vintage"': 復古
+            '"warm"': 紅色
       Dancelab_setDanceSpeed:
         text: 角色 {SPRITE} 跳舞速度設為 {SPEED}
         options:
