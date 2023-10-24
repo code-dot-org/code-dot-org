@@ -4,16 +4,17 @@ require 'authentication_option'
 
 class Services::Lti
   def self.partially_create_user(id_token)
+    custom_claims = id_token["https://purl.imsglobal.org/spec/lti/claim/custom"]
     user_type = Policies::Lti.get_account_type(id_token)
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = user_type
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
-      user.name = id_token[:name] || id_token[:given_name]
+      user.name = custom_claims[:display_name] || custom_claims[:full_name] || custom_claims[:family_name] || custom_claims[:given_name]
     else
-      user.name = id_token[:given_name] || id_token[:name]
-      user.family_name = id_token[:family_name]
+      user.name = custom_claims[:display_name] || custom_claims[:full_name] || custom_claims[:given_name]
+      user.family_name = custom_claims[:family_name]
     end
     user.authentication_options = [
       AuthenticationOption.new(
