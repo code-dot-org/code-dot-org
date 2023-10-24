@@ -495,6 +495,49 @@ se:
         text: |-
           bija duogábeal-effeavtta
           {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Jorbbát
+            '"color_cycle"': Ivnnit
+            '"diamonds"': Diamánttat
+            '"disco"': Njealječiegagat
+            '"disco_ball"': Diskospábba
+            '"fireworks"': Dollarusonat
+            '"flowers"': Lieđit
+            '"galaxy"': Gomuvuohta
+            '"growing_stars"': Šaddi Násttit
+            '"kaleidoscope"': Kaleidoskohpa
+            '"lasers"': Laser Dánsenguolbi
+            '"music_wave"': Bárut
+            '"quads"': Čiegat
+            '"rainbow"': Arvedávgi
+            '"rand"': "(Sahtedohko)"
+            '"ripples"': Bárožat
+            '"ripples_random"': Sahtedohko Bárožat
+            '"snowflakes"': Muohta
+            '"sparkles"': Šelggonat
+            '"spiral"': Spirála
+            '"splatter"': Málá Goaikkanas
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Násttit
+            '"swirl"': Hypno
+            '"text"': Lávlagiid namat
+          PALETTE:
+            '"cool"': Čáffa
+            '"default"': Čuovga
+            '"electronic"': Elektrovnnalaš
+            '"iceCream"': LákcaJiekŋa
+            '"neon"': Neona
+            '"rainbow"': Arvedávgi
+            '"rave"': Čáhppes ja Vilges
+            '"tropical"': Trohpalaš
+            '"vintage"': Retro
+            '"warm"': Liekkus
+        text: |-
+          bija duogábeal-effeavtta
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
