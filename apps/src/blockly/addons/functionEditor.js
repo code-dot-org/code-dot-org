@@ -4,14 +4,14 @@ import {
 } from '@blockly/block-shareable-procedures';
 import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
+import msg from '@cdo/locale';
+import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
-import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import CdoMetricsManager from './cdoMetricsManager';
-import msg from '@cdo/locale';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -239,14 +239,16 @@ export default class FunctionEditor {
   };
 
   onDeletePressed() {
+    /// We use "delete" for cancel and "keep" for confirm so that the
+    // delete button is red and the keep button is purple.
     Blockly.customSimpleDialog({
       bodyText: msg.confirmDeleteFunctionWarning({
         functionName: this.block.getProcedureModel().getName(),
       }),
       cancelText: msg.delete(),
-      isDangerCancel: true,
+      isDangerCancel: true, // gives us a red button
       confirmText: msg.keep(),
-      onConfirm: null,
+      onConfirm: null, // No-op
       onCancel: this.onDeleteConfirmed.bind(this),
     });
   }
