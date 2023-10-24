@@ -191,7 +191,7 @@ class RubricsControllerTest < ActionController::TestCase
     rubric_ai_evaluation1 = create(
       :rubric_ai_evaluation,
       user: student,
-      requester: teacher,
+      requester: @teacher,
       status: 1
     )
     create(
@@ -204,7 +204,7 @@ class RubricsControllerTest < ActionController::TestCase
       rubric_ai_evaluation2 = create(
         :rubric_ai_evaluation,
         user: student,
-        requester: teacher,
+        requester: @teacher,
         status: 1
       )
       create(
