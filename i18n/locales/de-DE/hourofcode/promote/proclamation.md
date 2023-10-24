@@ -13,46 +13,46 @@ title: Beispiel für einen Aufruf zur Unterstüzung einer Informatikwoche und de
 #### **RESOLUTION**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Unterstützung der Ziele und Ideale der „Woche der Informatikausbildung“
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+In der Woche der Informatikausbildung wird die entscheidende Rolle hervorgehoben, die die Informatik bei der Transformation unserer Gesellschaft spielt, und darauf, wie Informatik Innovationen ermöglicht und wirtschaftliche Möglichkeiten eröffnet;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+in der Erwägung, dass Computertechnologie ein integraler Bestandteil der modernen Kultur ist und die Art und Weise, wie Menschen miteinander und mit der Welt um sie herum interagieren, verändert;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+in der Erwägung, dass die Informatik die Industrie verändert, neue Geschäftsfelder schafft, Innovationen in allen Bereichen der Wissenschaft vorantreibt und die Produktivität in etablierten Wirtschaftssektoren steigert;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+in der Erwägung, dass das Gebiet der Informatik ein Grundlagenfach ist, das den Informationstechnologiesektor unserer Wirtschaft untermauert, der einen erheblichen Beitrag zur Wirtschaftsleistung der Vereinigten Staaten leistet;
 
-Whereas the field of computer science is a foundational science for the digital age;
+In der Erwägung, dass sich Kenntnisse im Bereich der künstlichen Intelligenz auf die Kenntnisse, Fähigkeiten und Einstellungen beziehen, die mit der Funktionsweise künstlicher Intelligenz verbunden sind, einschließlich grundlegender Konzepte der Informatik und der sicheren, verantwortungsvollen und ethischen Nutzung künstlicher Intelligenz;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+in der Erwägung, dass es sich bei der Informatik, einschließlich künstlicher Intelligenz, um Technologien handelt, die in der Lage sind, fast alle Wirtschaftsbereiche der Vereinigten Staaten grundlegend zu verändern;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+in der Erwägung, dass die Technologieführerschaft in allen Bereichen der Informatik, einschließlich der künstlichen Intelligenz, für Wirtschaft und nationale Sicherheit unabdingbar ist;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+in der Erwägung, dass die Aussichten für Informatik-Jobs mit über 500.000 offenen Computerstellen im ganzen Land gut sind;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Studenten die Möglichkeit zu geben, an qualitativ hochwertigen Informatikaktivitäten teilzunehmen, macht sie mit den vielfältigen Möglichkeiten vertraut, die das Fachgebiet bietet, und vermittelt Fähigkeiten zum kritischen Denken, die ihnen ihr ganzes Leben lang dienen werden.
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Alle Schüler verdienen eine gründliche Vorbereitung auf den Informatikunterricht, einschließlich des Zugangs zu qualifizierten Lehrern, Technologien und altersgerechten Lehrplänen, die für das Erlernen der Informatik in der Grund- und Sekundarstufe erforderlich sind.
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+In der Erwägung, dass die Informatikausbildung vor Herausforderungen steht, die es zu bewältigen gilt, unter anderem die Verbesserung des Zugangs zu Informatikkursen für alle Studierenden und die berufliche Weiterbildung von Informatiklehrern.
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+In der Erwägung, dass die Teilnahme an einer Hour of Code während der Woche der Informatikausbildung dazu beitragen kann, das Fachgebiet Informatik zu entmystifizieren und mehr Studierende zu einem weiterführenden Informatikstudium zu bewegen.
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+in der Erwägung, dass im Bereich der Informatik erhebliche Hindernisse für Chancengleichheit überwunden werden müssen, einschließlich der Gewinnung und Bindung eines Feldes von Bewerbern unterschiedlicher Rasse, ethnischer Zugehörigkeit und Geschlecht auf allen Ebenen und Branchen;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+in der Erwägung, dass Grace Murray Hopper, eine der ersten Frauen auf dem Gebiet der Informatik, neue Programmiersprachen entwickelte und Pionierarbeit bei Standards für Computersysteme leistete, die den Grundstein für viele Fortschritte in der Informatik legten; und
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Während die Woche von {{ campaign_date/start_long }}, zu Ehren von Grace Hoppers Geburtstag, als „Computer Science Education Week“ bezeichnet wird: Nun also sei es <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Es wurde beschlossen, dass das (REPRÄSENTANTENHAUS ODER SENAT, BUNDESSTAAT, BEZIRK, STADT ODER SCHULBEHÖRDE) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) unterstützt die Ausrufung der Woche für den Informatikunterricht ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) ermutigt Schulen, Pädagogen, Eltern und politische Entscheidungsträger, an der Woche der Informatikausbildung teilzunehmen, indem ihren Schülern die Teilnahme an der Hour of Code ermöglicht wird;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) ermutigt Schulen, Lehrer, Forscher, Universitäten, Wirtschaftsführer und politische Entscheidungsträger, Mechanismen zu entwickeln, mit denen Lehrkräfte sich auf dem neuesten Stand der Technik weiterentwickeln können, um nachhaltige Lernerfahrungen im Bereich Informatik auf allen Bildungsebenen zu bieten und Schüler zu ermutigen, sich mit Informatikkonzepten auseinanderzusetzen;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) fördert Möglichkeiten, auch im Rahmen bestehender Programme, für Studentinnen und Studierende ethnischer Gruppen, die in der Informatik unterrepräsentiert sind.
 
 {{ signup_button }}

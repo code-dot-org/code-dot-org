@@ -833,6 +833,9 @@
         "functions_with_parameters/csd/2023": {
           "name": "Parametrilliset funktiot"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Funktiot"
+        },
         "functions_3/csd/2023": {
           "name": "Funktiot"
         },
@@ -1036,11 +1039,6 @@
         },
         "pair_programming/pre-express/2023": {
           "name": "Pariohjelmointi"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

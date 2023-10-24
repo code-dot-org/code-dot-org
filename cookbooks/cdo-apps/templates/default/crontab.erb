@@ -94,6 +94,10 @@
     end
 
 
+    # To facilitate the Ubuntu 20 upgrade, temporarily disable all cronjobs on
+    # the production daemon but still write them to the crontab. We can then
+    # easily reenable them on just the old server, so that we still have jobs
+    # running while the new server is under construction.
     if node.chef_environment == 'production' # production daemon
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')

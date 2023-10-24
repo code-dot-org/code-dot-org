@@ -4,55 +4,55 @@ title: Rún Samplach Tacúil le Seachtain Oideachais Ríomheolaíochta agus Uair
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Réiteach Samplach Seachtain Oideachais Ríomheolaíochta
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Anseo thíos tá teanga le haghaidh réiteach samplach a thacaíonn le Seachtain Oideachais na Ríomheolaíochta agus a spriocanna is féidir a úsáid ag reachtóirí stáit agus áitiúla.
 
 * * *
 
-#### **RESOLUTION**  
+#### **Rún**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Tacú le spriocanna agus idéalacha “Seachtain Oideachais na Ríomheolaíochta”
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+De bharr an méid a leagann Seachtain Oideachais na Ríomheolaíochta béim ar an ról ríthábhachtach atá ag an ríomheolaíocht chun ár sochaí a athrú agus an chaoi a gcuireann ríomheolaíocht ar chumas na nuálaíochta agus go gcruthaíonn sé deiseanna eacnamaíocha;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Cé gur cuid dhílis den chultúr nua-aimseartha í an teicneolaíocht ríomhaireachta agus tá sí ag athrú an chaoi a n-idirghníomhaíonn daoine lena chéile agus leis an domhan mórthimpeall orthu;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Cé go bhfuil eolaíocht ríomhaireachta ag athrú an tionscail, ag cruthú réimsí nua tráchtála, ag tiomáint nuálaíochta i ngach réimse den eolaíocht, agus táirgiúlacht a neartú in earnálacha eacnamaíocha bunaithe;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+De bharr an méid go bhfuil an réimse na heolaíochta ríomhaireachta ábhar foundational a thacaíonn leis an earnáil teicneolaíochta faisnéise ar ár ngeilleagar, a chuireann go mór le haschur eacnamaíoch na Stát Aontaithe;
 
-Whereas the field of computer science is a foundational science for the digital age;
+De bhrí go dtagraíonn litearthacht na hintleachta saorga don eolas, do na scileanna agus don dearcadh a bhaineann leis an gcaoi a n-oibríonn intleacht shaorga, lena n-áirítear coincheapa bunúsacha san eolaíocht ríomhaireachta, agus conas intleacht shaorga a úsáid go sábháilte, go freagrach agus go heiticiúil;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+De bharr an méid an réimse na heolaíochta ríomhaireachta, lena n-áirítear hintleachta saorga, tá teicneolaíochtaí a bhfuil an chumhacht a athrú go bunúsach beagnach gach earnáil den gheilleagar na Stát Aontaithe;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Cé go bhfuil ceannaireacht theicneolaíoch i ngach réimse den eolaíocht ríomhaireachta, lena n-áirítear intleacht shaorga, ina riachtanas slándála eacnamaíoch agus náisiúnta;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+De bharr an méid is é an dearcadh do phoist eolaíocht ríomhaireachta geal le níos mó ná 500,000 post ríomhaireachta oscailte ar fud na tíre;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+De bharr an méid a thugann deis do mhic léinn páirt a ghlacadh i ngníomhaíochtaí ríomhaireachta ar ardchaighdeán, nochtann sé na deiseanna saibhre a chuireann an réimse ar fáil dóibh agus go soláthraíonn sé scileanna smaointeoireachta criticiúla a fhreastalóidh orthu ar feadh a saoil;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Cé go bhfuil ullmhúchán críochnúil tuillte ag gach mac léinn san oideachas ríomhaireachta, lena n-áirítear rochtain ar na múinteoirí cáilithe, teicneolaíocht, agus curaclam atá oiriúnach d'aois a theastaíonn chun eolaíocht ríomhaireachta a fhoghlaim ag na bunleibhéil agus meánscoile oideachais;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+De bharr an méid go bhfuil dúshláin chun aghaidh a thabhairt ar oideachas eolaíocht ríomhaireachta, lena n-áirítear feabhas a chur ar rochtain ar chúrsaí eolaíochta ríomhaireachta do gach mac léinn, agus forbairt ghairmiúil do mhúinteoirí ríomheolaíochta;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+De bharr an méid is féidir páirt a ghlacadh i Uair an Chóid le linn Sheachtain Oideachais na Ríomheolaíochta a úsáid chun demystify an réimse na ríomheolaíochta agus níos mó mac léinn a spreagadh chun dul i mbun staidéir bhreise ar eolaíocht ríomhaireachta;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+De bharr an méid go bhfuil an réimse na heolaíochta ríomhaireachta bacainní cothromais suntasach chun aghaidh a thabhairt, lena n-áirítear a mhealladh agus a choinneáil réimse na n-iarrthóirí éagsúla i cine, eitneachas, agus inscne ag gach leibhéal agus brainsí;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+De bharr an méid Grace Murray Hopper, ar cheann de na chéad mhná i réimse na heolaíochta ríomhaireachta, innealtóireacht teangacha cláir nua agus caighdeáin ceannródaíoch do chórais ríomhaireachta a leag an bunús le haghaidh go leor dul chun cinn san eolaíocht ríomhaireachta; agus
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+De bharr an méid an tseachtain {{ campaign_date/start_long }}, in onóir lá breithe Grace Hopper ar, Tá ainmnithe mar 'Eolaíocht Ríomhaireachta Seachtain Oideachais': Anois, dá bhrí sin,, go mbeadh sé <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Réitithe, Go bhfuil an (TEACH NÓ SENATE, STÁIT, CONTAE, CATHRACH NÓ SCOILE BORD) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) tacaíonn sé le hainmniú Sheachtain Oideachais na Ríomheolaíochta ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) spreagann sé scoileanna, oideachasóirí, tuismitheoirí agus lucht déanta beartas chun páirt a ghlacadh i Seachtain Oideachais na Ríomheolaíochta trí chur ar chumas a gcuid mac léinn páirt a ghlacadh in Uair an Chóid;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) spreagann sé scoileanna, múinteoirí, taighdeoirí, ollscoileanna, ceannairí gnó agus lucht déanta beartas chun meicníochtaí a shainaithint le go bhfaighidh múinteoirí forbairt ghairmiúil cheannródaíoch chun eispéiris foghlama inbhuanaithe a sholáthar san eolaíocht ríomhaireachta ag gach leibhéal oideachais agus mic léinn a spreagadh le bheith nochta do choincheapa ríomheolaíochta;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) deiseanna a spreagadh, lena n-áirítear trí chláir atá ann cheana, do mhic léinn baineann agus do mhic léinn ó ghrúpaí ciníocha agus eitneacha nach bhfuil ionadaíocht acu sa ríomheolaíocht.
 
 {{ signup_button }}

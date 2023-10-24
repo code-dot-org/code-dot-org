@@ -1,8 +1,9 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
+  load_resource only: [:get_teacher_evaluations, :run_ai_evaluations_for_user]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -28,14 +29,14 @@ class RubricsController < ApplicationController
     end
   end
 
-  # TODO (Kaitie): Update the update action
   # TODO(KT) [AITT-163]: add notice that rubric was successfully updated
   # PATCH /rubrics/:rubric_id
   def update
     @rubric = Rubric.find(params[:id])
     @lesson = @rubric.lesson
     if @rubric.update(rubric_params)
-      render json: @rubric
+      @rubric.lesson.script.write_script_json
+      render json: @rubric.summarize_for_rubric_edit
     else
       render action: 'edit'
     end
@@ -46,9 +47,9 @@ class RubricsController < ApplicationController
     return head :forbidden unless current_user&.teacher?
     permitted_params = params.permit(:id, :student_id)
     learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
-    learning_goal_evaluations = LearningGoalEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goal_ids, teacher_id: current_user.id)
+    evaluations = LearningGoalTeacherEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goal_ids, teacher_id: current_user.id)
     submitted_at = Time.now
-    if learning_goal_evaluations.update_all(submitted_at: submitted_at)
+    if evaluations.update_all(submitted_at: submitted_at)
       render json: {submittedAt: submitted_at}
     else
       return head :bad_request
@@ -73,6 +74,33 @@ class RubricsController < ApplicationController
     render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)
   end
 
+  def get_teacher_evaluations
+    return head :bad_request unless current_user
+
+    learning_goal_ids = @rubric.learning_goals.pluck(:id)
+    teacher_evaluations =
+      LearningGoalTeacherEvaluation.where(user_id: current_user.id, learning_goal_id: learning_goal_ids).where.not(submitted_at: nil).
+        group_by(&:learning_goal_id).
+        map {|_, eval_list| eval_list.max_by(&:submitted_at)}
+    render json: teacher_evaluations.map(&:summarize_for_participant)
+  end
+
+  def run_ai_evaluations_for_user
+    user_id = params.transform_keys(&:underscore).require(:user_id)
+    user = User.find_by(id: user_id)
+    return head :forbidden unless user&.student_of?(current_user)
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
+    return head :forbidden unless is_ai_experiment_enabled
+
+    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    return head :bad_request unless is_level_ai_enabled
+
+    EvaluateRubricJob.perform_later(user_id: user.id, script_level_id: script_level.id)
+    return head :ok
+  end
+
   private
 
   def rubric_params
@@ -83,6 +111,7 @@ class RubricsController < ApplicationController
         :id,
         :learning_goal,
         :ai_enabled,
+        :tips,
         :position,
         :_destroy,
         {

@@ -57,6 +57,8 @@ pl:
         text: ustaw {SPRITE} woelkość na {SIZE}
       Dancelab_ai:
         text: użyj AI do {VALUE}
+      Dancelab_aiText:
+        text: użyj AI do {VALUE}
       Dancelab_alternateMoves:
         options:
           GROUP:

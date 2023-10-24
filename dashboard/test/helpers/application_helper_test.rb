@@ -65,7 +65,7 @@ class ApplicationHelperTest < ActionView::TestCase
         )
       )
     end
-    assert_not(browser.cdo_unsupported?)
+    refute(browser.cdo_unsupported?)
   end
 
   test "chrome 34 detected" do
@@ -126,24 +126,24 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'video_seen' do
-    assert_not client_state.videos_seen_for_test?
-    assert_not client_state.video_seen? 'foo'
+    refute client_state.videos_seen_for_test?
+    refute client_state.video_seen? 'foo'
 
     client_state.add_video_seen 'foo'
     client_state.add_video_seen 'bar'
     assert client_state.video_seen? 'foo'
     assert client_state.video_seen? 'bar'
-    assert_not client_state.video_seen? 'baz'
+    refute client_state.video_seen? 'baz'
 
     client_state.add_video_seen 'foo'
     assert client_state.video_seen? 'foo'
   end
 
   test 'callout_seen' do
-    assert_not client_state.callout_seen? 'callout'
+    refute client_state.callout_seen? 'callout'
     client_state.add_callout_seen 'callout'
     assert client_state.callout_seen? 'callout'
-    assert_not client_state.callout_seen? 'callout2'
+    refute client_state.callout_seen? 'callout2'
   end
 
   test 'client state with invalid cookie' do

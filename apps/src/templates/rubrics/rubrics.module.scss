@@ -8,6 +8,7 @@
 
   height: 60px;
   width: 60px;
+  background-size: 60px;
   padding: 0;
 
   border-width: 0;
@@ -22,9 +23,57 @@
   width: 760px;
 }
 
+.hiddenRubricContainer {
+  display: none;
+}
+
+.settings {
+  width: 724px;
+  min-height: 298px;
+  padding: 16px 16px 32px 16px;
+  gap: 16px;
+
+  border-radius: 0 0 4px 4px;
+  border-right: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  background: $neutral_light;
+  box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.settingsVisible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.settingsHidden {
+  display: none;
+}
+
+.aiAssessmentOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+  border-bottom: 1px solid $light_gray_200;
+  padding-bottom: 1rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
 .rubricContent {
   border-radius: 0 0 4px 4px;
-  border: 1px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
   background: $neutral_light;
   box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
 
@@ -33,11 +82,18 @@
   overflow-x: hidden;
   overflow-y: auto;
 
-  display: flex;
   padding: 16px;
+}
+
+.visibleRubricContent {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+}
+
+.hiddenRubricContent {
+  display: none;
 }
 
 .rubricContainerFooter {
@@ -99,25 +155,89 @@
 
 .learningGoalContainer {
   display: flex;
-  // padding: 0px 1px;
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
 
   border-radius: 4px;
-  border: 1px solid var(--light-gray-400, #a9acaf);
-  background: var(--light-white, #fff);
+  border: 1px solid $neutral_dark40;
+  background: $neutral_white;
 }
 
 .rubricHeader {
-  height: 21px;
   border-radius: 4px 4px 0 0;
   background: $neutral_dark;
   color: $neutral_white;
-  padding: 9px 15px 8px;
+  // padding: 9px 15px 8px;
 
+  border-top: 2px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.rubricHeaderLeftSide {
+  display: flex;
+  gap: 4px;
+  //height: 40px;
+  align-items: center;
+}
+
+.rubricHeaderRightSide {
+  display: flex;
+  // height: 40px;
+  // justify-content: flex-end;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+button.buttonStyle {
+  border-width: 0;
+  margin: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.closeButton {
+  display: flex;
+  padding: 11px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background-color: $neutral_dark;
+  color: $neutral_white;
+}
+
+button.rubricHeaderTab {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.selectedTab {
+  background: $neutral_light;
+  h6 {
+    line-height: 1.1875;
+    margin-bottom: 0;
+    color: $light_primary_700;
+  }
+}
+
+.unselectedTab {
+  background: $neutral_dark70;
   h6 {
     color: $neutral_white;
+    margin-bottom: 0;
     line-height: 1.1875;
   }
 }
@@ -143,10 +263,10 @@
 }
 
 .learningGoalHeaderLeftSide {
+  @include main-font-semi-bold;
   display: flex;
   align-items: center;
   gap: 16px;
-  font-family: $gotham-bold;
 
   // TODO: [DES-321] remove span styles
   span {
@@ -182,12 +302,12 @@
   gap: 4px;
 
   border-radius: 30px;
-  border: 1px solid $product_affirmative_default;
-  background: $light_affirmative_100;
+  border: 1px solid $product_information_default;
+  background: $lightest_cyan;
 }
 
 p.aiTokenText {
-  color: $product_affirmative_default;
+  color: $product_information_default;
   margin-bottom: 0;
 }
 
@@ -195,16 +315,23 @@ p.aiTokenText {
   color: $product_affirmative_default;
 }
 
-.expandedBorder {
-  border-top: 1px solid $neutral_dark40;
+h2.studentName {
+  margin-bottom: 8px;
+}
+
+.submittedEvaluation {
+  display: flex;
+  width: 170px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .learningGoalExpanded {
-  padding: 1.25rem 1rem;
-
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.25rem;
   align-self: stretch;
 }
 
@@ -217,42 +344,64 @@ p.aiTokenText {
   // This is body three styles but the typography components don't work well with markdown support
   // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
   div {
+    @include main-font-regular;
     color: $neutral-dark;
-    font-family: $gotham-regular, sans-serif;
     font-size: 0.875rem;
     line-height: 1.54;
   }
+}
+
+.evidenceLevelSetHorizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.evidenceLevelInnerDiv:first-child {
+  padding: 1em;
+  width: 100%;
+  border-left: 0;
+}
+
+.evidenceLevelInnerDiv {
+  padding: 1em;
+  border-left: 1px solid #a9acaf;
+  width: 100%
 }
 
 .evidenceLevelSet {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   align-self: stretch;
   flex: 1;
+
+  h6 {
+    margin-bottom: 0;
+  }
 }
 
 .evidenceLevelOption {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.25rem;
   align-self: stretch;
 
   span {
+    @include main-font-semi-bold;
     font-size: 0.875rem;
-    font-family: $gotham-bold;
     line-height: 154%;
   }
 
-  p {
+  p,
+  h6 {
     margin-bottom: 0;
   }
 }
 
 .evidenceLevelLabel {
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
@@ -260,6 +409,12 @@ p.aiTokenText {
 
 .evidenceLevelDescriptionIndented {
   padding-left: 2rem;
+}
+
+.submittedEvaluationEvidenceLevel {
+  border-radius: 4px;
+  background: $light_primary_100;
+  height: 100%;
 }
 
 .studentLearningGoalContainer {
@@ -281,7 +436,7 @@ p.errorMessage {
 }
 
 .openedAiAssessment {
-  padding: 1.25rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .aiAssessmentBlock {
@@ -289,6 +444,11 @@ p.errorMessage {
   display: flex;
   gap: 16px;
   position: relative;
+}
+
+.aiBotImg {
+  width: 42px;
+  height: 68px;
 }
 
 .greenAiAssessment {
@@ -342,4 +502,27 @@ p.errorMessage {
 
 .feedbackArea {
   flex: 1;
+}
+
+.infoAlert {
+  display: flex;
+  padding: 10px 12px;
+  gap: 10px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  background: $light_info_100;
+
+  p {
+    margin: 0;
+    line-height: 1.25;
+  }
+}
+
+i.infoAlertIcon {
+  color: $light-info-500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
 }

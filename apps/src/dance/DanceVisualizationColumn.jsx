@@ -12,7 +12,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
-import DanceAiModal from './DanceAiModal';
+import DanceAiModal from './ai/DanceAiModal';
 
 import clickToRunPNG from '@cdo/static/dance/click-to-run.png';
 

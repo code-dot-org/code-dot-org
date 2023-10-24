@@ -56,6 +56,7 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
@@ -65,7 +66,7 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import experiments from '@cdo/apps/util/experiments';
+import {disableOrphans} from './eventHandlers';
 
 const options = {
   contextMenu: true,
@@ -626,7 +627,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
   };
 
-  blocklyWrapper.inject = function (container, opt_options, opt_audioPlayer) {
+  blocklyWrapper.inject = function (container, opt_options) {
     const options = {
       ...opt_options,
       theme: cdoUtils.getUserTheme(opt_options.theme),
@@ -672,7 +673,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
-      workspace.addChangeListener(Blockly.Events.disableOrphans);
+      workspace.addChangeListener(disableOrphans);
     }
 
     document.dispatchEvent(
@@ -694,23 +695,28 @@ function initializeBlocklyWrapper(blocklyInstance) {
       functionsFlyoutCategory
     );
     workspace.registerToolboxCategoryCallback(
+      'VARIABLE',
+      variablesFlyoutCategory
+    );
+
+    workspace.registerToolboxCategoryCallback(
       'Behavior',
       behaviorsFlyoutCategory
     );
 
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
+    // The hidden definition workspace is not rendered, so do not try to add
+    // svg frames around the definitions.
+    hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
 
-    if (
-      options.useModalFunctionEditor &&
-      experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
-    ) {
-      // If the modal function editor is enabled for this level and
-      // the dcdo flag is on, initialize the modal function editor.
+    if (options.useModalFunctionEditor) {
+      // If the modal function editor is enabled for this level,
+      // initialize the modal function editor.
       blocklyWrapper.functionEditor = new FunctionEditor();
-      blocklyWrapper.functionEditor.init(opt_options);
+      blocklyWrapper.functionEditor.init(options);
     }
 
     return workspace;

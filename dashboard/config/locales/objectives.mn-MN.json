@@ -2,12 +2,6 @@
   "mn-MN": {
     "data": {
       "objectives": {
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": ""
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": ""
-        },
         "181321ab-df5f-438c-952d-10f818586439": {
           "description": "Биологийн дасан зохицох, хувьслын кодын загвар. "
         },
@@ -274,15 +268,6 @@
         },
         "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
           "description": "AI хэрхэн ажилладаг талаар тайлбарла"
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": ""
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": ""
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": ""
         }
       }
     }

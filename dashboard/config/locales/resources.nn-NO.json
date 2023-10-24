@@ -1996,6 +1996,9 @@
           "name": "Funksjonar med parameter",
           "type": "Video"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Funksjonar"
+        },
         "teacher_forum_1/csd/2023": {
           "name": "Lærarforum"
         },
@@ -2421,11 +2424,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

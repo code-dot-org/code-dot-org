@@ -2375,7 +2375,7 @@ fa:
         options:
           BEHAVIOR:
             draggable(): قابل کشیدن باشد
-            new Behavior(driving_with_arrow_keys, []): رانندگی با کلیدهای پیکان
+            new Behavior(driving_with_arrow_keys, []): رانندگی با کلیدهای جهت‌دار
             new Behavior(moving_with_arrow_keys, []): حرکت با کلیدهای جهت‌دار
         text: "{BEHAVIOR}"
       gamelab_pointInDirection:

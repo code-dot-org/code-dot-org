@@ -3423,7 +3423,7 @@ ro:
           description_short: Exploreaza o lume Minecraft prin cod.
           student_description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau
             Alex intr-o aventura in acest univers Minecraft.
-          title: Ora de Programare Minecraft
+          title: Minecraft Adventurer
         microbit-2023:
           lesson_groups:
             lessonGroup-5:

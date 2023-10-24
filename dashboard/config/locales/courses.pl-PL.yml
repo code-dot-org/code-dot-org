@@ -349,6 +349,19 @@ pl:
           title: tess-testing-focus-on-creativity-collection-2023
         time4cs-experiment:
           title: Time4cs (Eksperyment)
+        virtual-pl-csa-summer-2024:
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
+            do nauczania kursu informatyki A.\n-   Przećwiczysz kluczowe pojęcia z
+            programu nauczania kursu informatyki A.\n-   Zwiększysz zrozumienie sprawiedliwej
+            edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń uczniów.
+            \n-   Staniesz się elementem sieci nauczycieli, którzy wykonują podobną
+            pracę."
+          description_teacher: "\\*\\*Uczestnicy: \\*\\*\n\n-   Przygotują się do
+            nauczania kursu informatyki A.\n-   Przećwiczą kluczowe pojęcia z programu
+            nauczania kursu informatyki A.\n-   Zwiększą zrozumienie sprawiedliwej
+            edukacji informatycznej. \n-   Rozwiną empatię dla doświadczeń uczniów.
+            \n-   Staną się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+          title: virtual-pl-csa-summer-2024
         virtual-pl-csd-summer-2023:
           description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
             do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia
@@ -363,6 +376,19 @@ pl:
             uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
             podobną pracę."
           title: virtual-pl-csd-summer-2023
+        virtual-pl-csp-summer-2024:
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się
+            do nauczania zasad informatyki.\n-   Przećwiczysz kluczowe pojęcia z programu
+            nauczania zasad informatyki.\n-   Zwiększysz zrozumienie sprawiedliwej
+            edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń uczniów.
+            \n-   Staniesz się elementem sieci nauczycieli, którzy wykonują podobną
+            pracę."
+          description_teacher: "\\*\\*Uczestnicy: \\*\\*\n\n-   Przygotują się do
+            nauczania zasad informatyki.\n-   Przećwiczą kluczowe pojęcia z programu
+            nauczania zasad informatyki.\n-   Zwiększą zrozumienie sprawiedliwej edukacji
+            informatycznej. \n-   Rozwiną empatię dla doświadczeń uczniów. \n-   Staną
+            się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+          title: virtual-pl-csp-summer-2024
         vpl-csa-2023:
           title: CSA Wirtualne profesjonalne uczenie się
           version_title: '2023'

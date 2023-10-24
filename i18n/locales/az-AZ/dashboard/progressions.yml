@@ -31,6 +31,7 @@ az:
       'App Project: Bugs and Features': 'Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər'
       'App Project: Linking Screens': 'Tətbiq Layihəsi: Ekranları Bağlamaq'
       'App Project: Screen Design': 'Proqram Layihəsi: Ekran Dizaynı'
+      'App Project: Screen Import': 'Tətbiq Layihəsi: Ekran İdxalı'
       'App: Choose a Kid''s Movie': 'Tətbiq:Uşağın kinosunu seçin'
       'App: Friend Finder': 'Tətbiq: Dost tapan'
       'App: Guess the Number': 'Tətbiq: rəqəmi təxmin et '
@@ -97,8 +98,10 @@ az:
       Change: Dəyişmək
       Changing Screens: Ekranların dəyişdirilməsi
       Check Your Work: İşinizi Yoxlayın
+      Check for Understanding: Anlayışı yoxlayın
       Check-In Survey: "giriş sorğusu\n"
       Checking for a Winner: Qazananı yoxlamaq
+      Choice: Seçim
       'Choice Levels: Customize Your App': 'Seçim səviyyələri: Tətbiqinizi fərdiləşdirin'
       Choose Your Own Adventure: Öz macəranızı seçin
       Choosing Good IDs: Yaxşı şəxsiyyət vəsiqələrinin seçilməsi
@@ -184,6 +187,7 @@ az:
       'Exploration: Sample Programs': 'Tədqiqat: Nümunə Proqramlar'
       'Exploration: Sample Project': 'Tədqiqat: Nümunə Layihəsi'
       Explore HTML: HTML kəşf edin
+      Explore!: Kəşf edin!
       Exploring CS in Entertainment: Əyləncədə CS-ni araşdırın
       Exploring more CSS: Daha çox CSS-i araşdırın
       Extra: Əlavə
@@ -210,6 +214,7 @@ az:
       'Free Play: Make an Interactive Scene': 'Pulsuz Oyun: İnteraktiv bir səhnə yaradın'
       Functions: Funksiyalar
       Functions with Parameters: Parametrli funksiyalar
+      Geometric Sun: Həndəsi Günəş
       Get In Formation: Düzül
       Getting Properties: Xüsusiyyətləri əldə etmək
       Graph Paper Programming - Unplugged Activity: Qrafik Kağız Proqramlaşdırma - Unplugged Fəaliyyət
@@ -235,6 +240,7 @@ az:
       Innovation Research: Yenilik Araşdırması
       Input Examples: Giriş Nümunələri
       Input with If-Else: If-Else ilə daxil edin
+      Inspiration!: ilham
       InspirationalArtwork: İlham verən sənət əsəri
       Intro to Design Mode: Dizayn rejiminə giriş
       Intro to For Loops: For Loops-a giriş
@@ -416,6 +422,7 @@ az:
       Video - Variables: Video - Dəyişənlər
       'Video: "If/Else"': 'Video: "Əgər/Və_ya"'
       'Video: Conditional Statements': 'Video: Şərti Bəyanatlar'
+      'Video: Conditionals': 'Video: Şərti ifadələr'
       'Video: Conditionals: If Statements': 'Video: Şərti Bəyanatlar: İf Operatorları'
       'Video: Conditionals: If and If/Else Statements': 'Video: Şərti Bəyanatlar: İf və İf/Else Operatorları'
       'Video: Drawing in Game Lab - Part 1': 'Video: Oyun Laboratoriyasında Rəsm - Hissə 1'

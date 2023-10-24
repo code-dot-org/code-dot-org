@@ -1,6 +1,7 @@
 import {makeEnum} from '../utils';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
@@ -134,7 +135,11 @@ export default function currentUser(state = initialState, action) {
   }
   if (action.type === SET_INITIAL_DATA) {
     const {id, username, user_type, mute_music, under_13} = action.serverUser;
-    analyticsReport.setUserProperties(id, user_type, !!id);
+    analyticsReport.setUserProperties(
+      id,
+      user_type,
+      experiments.getEnabledExperiments()
+    );
     return {
       ...state,
       userId: id,

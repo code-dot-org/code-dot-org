@@ -156,15 +156,19 @@
           "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir."
         },
         "CourseD_Dance_2020_02": {
+          "challenges": "**Könüllü Çağırış**\n\nBirdən çox <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> blokdan istifadə edin.",
           "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
         },
         "CourseD_Dance_2020_022022": {
+          "challenges": "**Könüllü Çağırış**\n\nBirdən çox <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> blokdan istifadə edin.",
           "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
         },
         "CourseD_Dance_2020_02_2021": {
+          "challenges": "**Könüllü Çağırış**\n\nBirdən çox <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> blokdan istifadə edin.",
           "validation": "bu səviyyəni necə keçə bilərəm\n\nrəqqasə bir hərəkət etməlidir.\nbir ox düyməsini basmalısınız.\nbu səviyyə 4 tədbirdən sonra bitir."
         },
         "CourseD_Dance_2020_02_2023": {
+          "challenges": "**Könüllü Çağırış**\n\nBirdən çox <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> blokdan istifadə edin.",
           "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
         },
         "CourseD_Dance_2020_03": {
@@ -329,6 +333,7 @@
           "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir."
         },
         "Dance_2019_02": {
+          "challenges": "**Könüllü Çağırış**\n\nBirdən çox <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> blokdan istifadə edin.",
           "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
         },
         "Dance_2019_03": {
@@ -7016,6 +7021,20 @@
         "courseF_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_b": "Are you running out of `move forward` blocks?\nTry using a _second_ `for loop` in your main program."
         },
+        "courseF_collector_freeplay_-2022-2": {
+          "collector_score_block_hint": "toplamaq",
+          "collector_sound_block_hint": "qoşulmaq"
+        },
+        "courseF_collector_freeplay_2023": {
+          "collector_score_block_hint": "toplamaq",
+          "collector_sound_block_hint": "qoşulmaq"
+        },
+        "courseF_collector_score_-2022-2": {
+          "collector_time_events": "Proqram"
+        },
+        "courseF_collector_score_2023": {
+          "collector_time_events": "Proqram"
+        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "Siz həmçinin bu blok lazımdır:\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -7105,6 +7124,20 @@
           "courseF_playlab_variables_challenge2_b": "Ok düymələrindən birinə hər basıldıqda spritinizi nə qədər uzaqlaşdırdığınızı dəyişə bilərsiniz.",
           "courseF_playlab_variables_challenge2_c": "**Həlli:**\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_moveDistanceParams\" inline=\"true\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n        <value name=\"DISTANCE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">25</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">ADD</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">2</title>\n    <next>\n      <block type=\"studio_setScore\" inline=\"false\">\n        <value name=\"VALUE\">\n          <block type=\"math_arithmetic\" inline=\"true\">\n            <title name=\"OP\">MINUS</title>\n            <value name=\"A\">\n              <block type=\"studio_getScore\"/>\n            </value>\n            <value name=\"B\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
+        "courseF_variables2_click_-2022-2": {
+          "change_var_when_click_hint": "Sprite hər dəfə fərqli bir dəyər söyləməsi üçün bu bloku 'kliklənəndə' hadisə blokunun altına əlavə edin.\n\n<xml><block type=\"math_change\">\n      <field name=\"VAR\">???</field>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_variables2_click_2023": {
+          "change_var_when_click_hint": "Sprite hər dəfə fərqli bir dəyər söyləməsi üçün bu bloku 'kliklənəndə' hadisə blokunun altına əlavə edin.\n\n<xml><block type=\"math_change\">\n      <field name=\"VAR\">???</field>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <field name=\"NUM\">1</field>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_variables2_set_-2022-2": {
+          "say_variable_hint": "Siz sprite ilə dəyişənin qiymətini bu kimi deyə bilərsiniz:\n\n<xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>",
+          "set_block_hint": "Bu kimi dəyişən təyin edə bilərsiniz:\n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>"
+        },
+        "courseF_variables2_set_2023": {
+          "say_variable_hint": "Siz sprite ilə dəyişənin qiymətini bu kimi deyə bilərsiniz:\n\n<xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>",
+          "set_block_hint": "Bu kimi dəyişən təyin edə bilərsiniz:\n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>"
+        },
         "courseF_variables_chatbot_finish": {
           "chatbot_idea1": "İkinci (və ya üçüncü və ya dördüncü) dəvəti əlavə edə bilərsiniz, başqa bir dəyişəndən dəvətnamənin yeni bir blokunu \"cavab verərkən\"ilk hadisəsinə əlavə edə bilərsiniz.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Neçə yaşınız var?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">yaş</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
           "chatbot_idea4": "Proqramınızı ekran başlığı bloku ilə başa çatdırmaq üçün həyəcan verə bilərsiniz.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">The End</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Ünsiyyət üçün təşəkkür edirik!</title>\n        </block>\n      </value>\n      </block></xml>"
@@ -7165,6 +7198,9 @@
         "helloworld_animals_say": {
           "hello-world-first-solution-bear": "Ayıya bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
+        "helloworld_bunny_click_2023": {
+          "sprite_say": "Obrazın nəsə deməsi üçün kod bloklarını bu şəkildə birləşdirin:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
         "helloworld_emoji_click": {
           "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
         },
@@ -7185,6 +7221,12 @@
         },
         "helloworld_food_say": {
           "hello-world-first-solution-pizza": "Pizzaya bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\nblok"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Obrazın nəsə deməsi üçün kod bloklarını bu şəkildə birləşdirin:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Obrazın nəsə deməsi üçün kod bloklarını bu şəkildə birləşdirin:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_retro_click": {
           "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."

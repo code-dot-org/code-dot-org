@@ -986,12 +986,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Împărtășiți un artefact creativ cu alți elevi."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Creează noi personaje și atribuie-le costume și locații."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Creează o animație interactivă, utilizând personaje și evenimente."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Antrenați și testați un model de învățare automată."
         },
@@ -3448,15 +3442,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utilizați terminologia adecvată atunci când vă referiți la un mouse, trackpad sau ecranul tactil al computerului."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Dezvoltați programe care reacționează la evenimente cu limită de timp"
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Reprezentați modul în care se schimbă atmosfera unei poezii."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Reprezentați limbajul figurat și literal dintr-un text."
         }
       }
     }

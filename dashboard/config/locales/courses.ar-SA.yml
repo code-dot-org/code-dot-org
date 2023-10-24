@@ -134,6 +134,8 @@ ar:
         vpl-csa-2023:
           title: التعلم المهني الافتراضي CSA
     resources:
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: Pseudoloc-<https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view
       curriculum/csd/2017:
         name: المناهج
       curriculum/csd/2018:

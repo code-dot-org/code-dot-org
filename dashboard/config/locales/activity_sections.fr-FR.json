@@ -13754,30 +13754,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Utilisez ces activités pour améliorer l'apprentissage des élèves. Elles peuvent servir d'activités en dehors de la classe ou comme autre enrichissement.\n\n**L'envers du décor**\n\nLorsque vous partagez un lien vers votre histoire, vous partagez également tout le code qui se cache derrière. Ceci est un excellent moyen pour les élèves d'apprendre des uns des autres.\n\n-   Publiez des liens vers des histoires terminées en ligne.\n    -   Créez également votre propre histoire à partager !\n-   Lorsque les élèves vont visiter un lien, demandez-leur de cliquer sur la touche « Comment ça marche » pour voir le code derrière l'histoire.\n-   Discutez en groupe des différentes façons dont vos camarades de classe ont codé leurs histoires.\n    -   Qu'est-ce qui vous a surpris ?\n    -   Qu'aimeriez-vous essayer ?\n-   Choisissez l'histoire de quelqu'un d'autre et cliquez sur « Remixer » pour continuer. (Ne vous inquiétez pas, l'histoire originale sera en sécurité.)"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Installer la scène",
-          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "Au cours de cette activité, vous allez vous amuser à créer un monde interactif avec des personnages amusants que l'on appelle des sprites. Vous pourrez les faire parler à l'aide de bulles, comme dans une bande dessinée ou un roman graphique, et vous apprendrez à les faire réagir automatiquement lorsque vous ou quelqu'un d'autre clique sur eux.\n\nAujourd'hui, vous allez vous familiariser avec la programmation en utilisant les « code », c'est-à-dire un ensemble d'instructions qu'un ordinateur peut comprendre. Lorsque vous écrivez pour raconter une histoire, vous devez réfléchir soigneusement aux mots que vous utilisez. Lorsque vous programmez avec des codes, vous devez réfléchir soigneusement aux instructions que vous donnez à l'ordinateur.",
-          "tips": [
-            "Il est préférable de consacrer très peu de temps à la phase d'introduction de l'Heure du code. En particulier avec les jeunes apprenants, il est préférable de se lancer aussi vite que possible."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Soutien général",
-          "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n- Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme][0] pour suivre le tutoriel.  \n\n- Lisez les instructions :** Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png » style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n- Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Bonjour tout le monde !"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n- Quels autres sprites pourriez-vous ajouter à votre projet ?\n- Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n- Que pourriez-vous faire dire d'autre à vos sprites ?\n- Que devraient faire vos sprites lorsqu'on clique dessus ?\n- Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn][0]."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Réflexion",
-          "description": "#### Résumé\n\nDemandez aux élèves de réfléchir sur les activités de la journée. Qu'ont-ils appris sur le codage ? Les sprites ? Les événements ?\n\nQue pensent-ils de l'informatique et du codage après avoir passé une heure à les explorer ?\n\n#### Prochaines étapes\n\nFaites savoir aux élèves que s'ils ont apprécié l'activité d'aujourd'hui, ils ont de nombreuses possibilités pour continuer à coder. Visitez le site [Connexions CS][0] pour trouver des idées sur la façon d'intégrer l'informatique à d'autres matières ou pour en savoir plus sur nos [offres de cours destinées aux élèves du primaire][1]."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             "\\*\\*Les étapes suivantes sont également traitées dans une série de [r code_org_how-to_videos/csd/2022] disponibles sur le site Web de soutien aux enseignants de Code.org. Vous pouvez décider de regarder ces vidéos avant de lire les instructions ci-dessous."
@@ -22897,7 +22873,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -22912,7 +22903,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -22927,7 +22928,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -35658,11 +35674,15 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Introduction",
-          "description": "**Discussion :**\n\n- _Que sait-on au sujet de la propagation des virus ?_\n- _Qu'est-ce qui peut accélérer la propagation d'un virus dans une ville ?_\n- _Qu'est-ce qui peut aider à ralentir la propagation d'un virus ?_\n\nLe but de cette discussion est de donner l'occasion aux élèves de mobiliser leurs connaissances préalables et de voir leurs idées au tableau. C'est aussi l'occasion d'examiner certaines idées fausses sur la façon dont les virus se propagent. "
+          "description": "**Discussion :**\n\n-   _Que sait-on au sujet de la propagation des virus ?_\n-   _Qu'est-ce qui peut accélérer la propagation d'un virus dans une ville ?_\n-   _Qu'est-ce qui peut aider à ralentir la propagation d'un virus ?_\n\nLe but de cette discussion est de donner l'occasion aux élèves de mobiliser leurs connaissances préalables et de voir leurs idées au tableau. C'est aussi l'occasion d'examiner certaines idées fausses sur la façon dont les virus se propagent. "
+        },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Soutien général",
+          "description": "**Soutien général :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien compléter le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau :\n\n-   Incitez les élèves à naviguer les différentes sections « en plus » dans l'ordre qu'ils souhaitent. Ils peuvent toujours retourner au Niveau 1 pour revisiter le menu. \n\n-   **Collaborer avec ses voisins :** Incitez vos élèves à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n\n-   **Lire les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Chercher des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les casse-têtes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour être encore plus créatif en prolongeant la tâche. \n\n-   **Avancer et revenir :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts introduits lors des niveaux antérieurs. \n\n-   **Prendre son temps et essayer différentes choses.** Lisez le code attentivement. Même si les deux premiers niveaux indiquent aux élèves précisément ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées. Il n'y a pas de bonnes ou de mauvaises réponses dans ces niveaux. (Ils sont tous en jeu libre !)"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Épidémie",
-          "description": "_Dans la leçon d’aujourd’hui, tu vas aller à « Monstreville », ville qui est sur le point d'être frappée par une épidémie. Le Dr Monstre a besoin de ton aide pour ralentir la propagation du virus.________.\n\n_Tu devras créer un simulateur d’épidémie dans le Labo des Sprites, et l’utiliser pour comprendre comment un virus peut se propager. Tu aideras aussi à soigner tous les monstres !_ _",
+          "description": "\\_Dans la leçon d’aujourd’hui, tu vas aller à « Monstreville », ville qui est sur le point d'être frappée par une épidémie. Le Dr Monstre a besoin de ton aide pour ralentir la propagation du virus.**\\_\\_\\_\\_**.\n\n_Tu devras créer un simulateur d’épidémie dans le Labo des Sprites, et l’utiliser pour comprendre comment un virus peut se propager. Tu aideras aussi à soigner tous les monstres !_ \\_",
           "progression_name": "Épidémie"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
@@ -35677,11 +35697,11 @@
         },
         "df13fa93-37df-4188-837d-462c48179625": {
           "description": "**Faites ceci :** Faites passer les élèves à leurs ordinateurs et demandez-leur de commencer à suivre les instructions pour chaque niveau dans la section renforcement des compétences. S'ils ont fini avant, ils pourront continuer à jouer avec et peaufiner leur code dans le niveau 6 jusqu'à ce que toute la classe soit prête à passer à autre chose. ",
-          "progression_name": "Renforcement des compétences"
+          "progression_name": "Développement des Compétences"
         },
         "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "description": "**Faites ceci :** Remettez les élèves à leurs ordinateurs et demandez-leur de travailler sur les niveaux restants. Certains de ces niveaux proposent des défis facultatifs. Encouragez les élèves à lire attentivement les instructions et à jouer avec leurs simulations. ",
-          "progression_name": "Mini-projet : simulateur d'épidémie"
+          "progression_name": "Mini-projet : Simulateur d'Épidémie"
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Jeu libre"
@@ -35690,11 +35710,15 @@
           "description": "_Les simulations sont un excellent moyen d’apprendre des choses qui peuvent être difficiles à observer dans le monde réel. Elles aident les scientifiques à résoudre des problèmes, à les anticiper et à tester de nouvelles idées de manière sûre et efficace. Ta simulation est un moyen de savoir à quoi pourrait ressembler une épidémie de virus à Monstreville._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Discussion :**\n\n- En quoi les simulations sont-elles utiles en vrai ?\n- En quoi nous aident-elles à comprendre le monde qui nous entoure ?\n- En quoi peuvent-elles améliorer la manière dont nous testons nos idées ?\n\nL'objectif de cette discussion est de faire comprendre aux élèves que les simulations sont un moyen de modéliser des systèmes complexes de manière interactive. Ils devraient également voir comment les simulations permettent aux gens de tester des idées rapidement, à moindre coût et en toute sécurité. "
+          "description": "**Discussion :**\n\n-   En quoi les simulations sont-elles utiles en vrai ?\n-   En quoi nous aident-elles à comprendre le monde qui nous entoure ?\n-   En quoi peuvent-elles améliorer la manière dont nous testons nos idées ?\n\nL'objectif de cette discussion est de faire comprendre aux élèves que les simulations sont un moyen de modéliser des systèmes complexes de manière interactive. Ils devraient également voir comment les simulations permettent aux gens de tester des idées rapidement, à moindre coût et en toute sécurité. "
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Réflexion",
-          "description": "**Invitations à la réflexion :**\n\n- En quoi cette simulation ressemble-t-elle au monde réel ? En quoi est-elle différente ?\n- Que voudriez-vous y changer/ajouter ?"
+          "description": "**Invitations à la réflexion :**\n\n-   En quoi cette simulation ressemble-t-elle au monde réel ? En quoi est-elle différente ?\n-   Que voudriez-vous y changer/ajouter ?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Installer la scène"
@@ -35913,18 +35937,6 @@
         "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
           "progression_name": "setProperty"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Séance d’échauffement"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Activité principale (Ancien)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Activité principale (Nouveau)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Conclusion"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "CS Discoveries Enquête Post-Cours",
           "progression_name": "CS Discoveries Enquête Post-Cours"
@@ -35949,39 +35961,17 @@
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Réflexion"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### La mise en scène\n\nAccueillez les élèves en classe et présentez l'activité de la journée.",
-          "tips": [
-            "Une façon de présenter l'Heure de Code si vous n'êtes pas très familier avec le codage vous-même est de montrer l'une de [nos vidéos inspirantes][0]. Choisissez-en une que vos élèves trouveront inspirante et partagez-la maintenant. Pour les élèves des niveaux intermédiaires, nous suggérons [L'heure de code c’est ici][1]."
-          ]
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Séance d’échauffement"
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Aujourd'hui, nous allons utiliser notre créativité pendant que nous apprenons à coder. Il existe de nombreuses façons d'être créatif. De quelles manières aimez-vous être créatif ?"
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Activité principale (Ancien)"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Encouragez les élèves à partager les façons dont ils expriment leur créativité, par exemple avec l'art, la danse, la musique ou l'écriture. Comme question de suivi, demandez-leur ce qu'ils utilisent pour attiser leur créativité."
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Activité principale (Nouveau)"
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Saviez-vous que l'informatique peut être très créative ? En fait, vous pouvez faire de l'art avec du code. Pour rappel, le code est un ensemble d'instructions qu'un ordinateur peut comprendre. Tout comme choisir les couleurs de peinture à utiliser, choisir le code que vous écrivez peut aussi être l'occasion d'exprimer votre créativité !\n\nNous allons utiliser la poésie pour inspirer notre codage créatif aujourd'hui. Est-ce que quelqu'un sait ce qu'est la poésie ? Avez-vous un poème ou un poète préféré ?"
-        },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Lire de la poésie ensemble :** Lisez [quelques poèmes][0] ensemble en classe et entraînez-vous à nommer l'ambiance de chaque poème. Encouragez les élèves à partager leur interprétation, même si elle est différente de celle de quelqu'un d'autre. "
-        },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Art du poème",
-          "description": "#### Assistance générale\n\nÀ la fin de cette activité, les élèves auront un poème animé qui représente leur interprétation visuelle du poème qu'ils ont choisi. Cette leçon est conçue pour leur donner l'opportunité de bricoler leur code et de trouver les effets visuels qu'ils préfèrent.\n\nEn faisant le tour de la salle, encouragez les élèves :\n\n- **Prenez votre temps :** La plupart des niveaux demandent aux élèves de trouver les effets parfaits pour correspondre à leur interprétation de l'ambiance du poème. Rester à niveau et bricoler avec leur code est fortement encouragé.\n\n- **Trouvez un poème que vous aimez :** Le poème qui s'affiche pour un élève à un nouveau niveau n'est qu'une suggestion. Il y a un menu déroulant de poèmes avec des poèmes préchargés en haut de l'espace de jeu. Demandez aux élèves d'en lire quelques-uns et d'en trouver un qui leur parle. Ils peuvent alors commencer à animer le poème qu'ils ont choisi avec du code.\n\n- **Montrez un niveau terminé :** Toute bulle de niveau entièrement verte signifie que l'étudiant a rempli avec succès toutes les exigences de ce niveau. Demandez à un élève de cliquer sur une bulle verte pour montrer ce qu'il a créé.\n\nPour les moments où un élève se sent coincé :\n\n- ** Lisez les instructions : ** Les instructions sont des points à puces sur la façon de terminer le niveau. Si un élève se sent coincé, demandez-lui de vous lire les instructions à haute voix et demandez-lui de répéter ce que les instructions disent dans leurs propres mots.\n    - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG » style=\"height: 25px;\"> Ils peuvent également cliquer sur cette icône de synthèse vocale pour entendre le instructions lues à haute voix.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png » style=\"height: 35px;\"> **Recherchez des indices** : la plupart des niveaux incluent au moins un indice avec plus des détails explicites sur la façon de passer le niveau.\n- **Fêtez les bogues :** La détection d'un bug dans votre code fait naturellement partie du processus de codage. Si le programme ne fait pas ce qu'il attend, demandez à l'élève de vous dire d'abord ce qu'il veut qu'il se passe, cliquez sur Exécuter pour observer ce qui se passe réellement, puis trouvez l'endroit dans son code qui a causé l'écart. N'oubliez pas de fêter la découverte et la correction des bogues. Avoir un bug signifie que les élèves font un excellent travail en construisant un programme plus complexe. "
-        },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Assistance niveau par niveau\n\n**Niveau 1 :** Encouragez les élèves à lire le poème. Demandez-leur ensuite de trouver une couleur de fond ou un effet qui corresponde au ton du poème qu'ils ont choisi.\n\n**Niveau 2 :** Dans cet exemple, les élèves doivent d'abord lire le poème par eux-mêmes, puis appuyer sur Exécuter. Vous pouvez demander à un élève si le son et les effets choisis par le programmeur correspondent à l'ambiance du poème. Demandez-leur de développer leur réponse.\n\n**Niveau 3 :** Ce niveau introduit le son, les élèves peuvent utiliser des écouteurs s'ils en ont.\n\n**Niveau 4 :** Demandez aux élèves de lire le poème et de trouver la ligne où l'humeur du poème change ou s'il y a une nouvelle image que le poète introduit. Utilisez le bloc événement pour ajouter des effets correspondants aux lignes identifiées du poème.\n\n**Niveau 5 :** Dans cet exemple, les élèves doivent d'abord lire le poème par eux-mêmes, puis appuyer sur Exécuter. Demandez-leur si les images correspondent aux mots du poème. Demandez-leur de développer leur réponse.\n\n**Niveau 6, 7, 8 :** Voir « Célébrer les bogues » dans la section Assistance générale. Encouragez les élèves à créer des programmes avec plus d'une transition avec leurs blocs d'événements.\n\n**Niveau 9 :** Encouragez les élèves à lire tous les poèmes du menu déroulant pour en trouver un qu'ils aiment. Dites aux élèves qu'ils peuvent partager ce qu'ils font dans ce dernier niveau avec leurs amis et leur famille. Il est maintenant temps de rassembler toutes les compétences de codage et d'ELA !"
-        },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Si vous avez aimé apprendre à coder aujourd'hui, vous pouvez continuer à apprendre en visitant code.org/learn. Si vous souhaitez partager ce que vous avez fait avec vos amis et votre famille, cliquez sur le bouton « Partager » et envoyez le lien à qui vous voulez !"
-        },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Facultatif) Évaluation : Vérifier la compréhension (4 minutes)\n\nDistribuez deux autocollants par élève."
-        },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Vous avez deux autocollants. Sur un, écrivez ce que vous avez appris sur le codage aujourd'hui.\nSur le second, écrivez ce que vous avez appris sur la poésie aujourd'hui.\n\nPartageons avec toute la classe en levant la main pour répondre à cette question : qu'espérez-vous pouvoir apprendre d'autre sur le codage et l'informatique ensuite ?"
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Conclusion"
         }
       }
     }

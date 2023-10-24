@@ -215,6 +215,12 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Stavekonkurranse"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Grunnleggende informatikk"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "De Neste Trinnene"
+        },
         "csd2-2019/Lists": {
           "name": "Lister"
         },
@@ -292,6 +298,24 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Stavekonkurranse"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Løkker"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Hendelser"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Betingelser"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funksjoner"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabler"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For-løkker"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Glade Kart"
@@ -397,6 +421,12 @@
         },
         "express-2021/lesson-1": {
           "name": "Dansefest"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Grunnleggende informatikk"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "De Neste Trinnene"
         },
         "csd3-2022/Variables": {
           "name": "Variabler"
@@ -515,9 +545,6 @@
         "express-2023/Dance Party": {
           "name": "Dansefest"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kodetimen 2013"
-        },
         "artist/Artist": {
           "name": "Kunstner"
         },
@@ -553,12 +580,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Kodetimens Minecraft-designer"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Spill-lab"
@@ -910,6 +931,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstrem utfordring - Omfattende"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodetimen 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Puslespill"

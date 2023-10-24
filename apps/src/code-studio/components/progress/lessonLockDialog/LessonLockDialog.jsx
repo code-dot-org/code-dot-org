@@ -18,6 +18,7 @@ import {
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
 import _ from 'lodash';
+import fontConstants from '@cdo/apps/fontConstants';
 
 function LessonLockDialog({
   unitId,
@@ -322,8 +323,7 @@ const styles = {
     backgroundColor: color.teal,
     padding: 10,
     fontSize: '100%',
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-regular'],
   },
   descriptionText: {
     marginTop: 10,

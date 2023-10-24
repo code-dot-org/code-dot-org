@@ -2235,7 +2235,7 @@
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "event/outbreak/unversioned": {
-          "word": "Événement",
+          "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
         },
         "models_and_simulations/outbreak/unversioned": {
@@ -2315,26 +2315,6 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Compression Sans Perte"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Code",
-          "definition": "(v) écrire des instructions pour un ordinateur."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Évènement",
-          "definition": "Action qui provoque quelque chose."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Programme",
-          "definition": "Une série d'étapes qui ont été codées dans quelque chose qui peut être exécuté par une machine."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Humeur",
-          "definition": "l'expression d'un sentiment, d'une atmosphère ou d'une émotion dans l'art ou l'écriture."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Ligne",
-          "definition": "(poésie) - une subdivision d'un poème disposé en une rangée qui se termine à la marge de droite. "
         }
       }
     }

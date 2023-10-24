@@ -31,6 +31,7 @@ describe('LearningGoalItem', () => {
     expect(wrapper.find('input[type="checkbox"]').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(1);
     expect(wrapper.find('EvidenceDescriptions').length).to.equal(1);
+    expect(wrapper.find('textarea').length).to.equal(1);
   });
 
   it('disables editing of AI textboxes when unchecked', () => {
@@ -66,5 +67,25 @@ describe('LearningGoalItem', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
     wrapper.find('Button').simulate('click');
     expect(deleteLearningGoalSpy.calledOnce).to.be.true;
+  });
+
+  it('calls updateLearningGoal when tips text is changed', () => {
+    const updateLearningGoalSpy = sinon.spy();
+    const wrapper = shallow(
+      <LearningGoalItem
+        {...defaultProps}
+        updateLearningGoal={updateLearningGoalSpy}
+      />
+    );
+    wrapper
+      .find('textarea')
+      .simulate('change', {target: {value: 'Learning Goal Tip'}});
+    expect(
+      updateLearningGoalSpy.withArgs(
+        exisitingLearningGoalData.id,
+        'tips',
+        'Learning Goal Tip'
+      ).calledOnce
+    ).to.be.true;
   });
 });

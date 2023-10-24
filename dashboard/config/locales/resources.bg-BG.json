@@ -5485,6 +5485,9 @@
           "name": "Функции с параметри",
           "type": "Видео"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Функции"
+        },
         "project_guide_-_interactive_art/csd/2023": {
           "url": "https://docs.google.com/document/d/1LOGlXauYbwVj3b1G3Hfm67-1Y_5sGmlcWHmr7J5CKcA/view"
         },
@@ -6525,11 +6528,6 @@
           "name": "Видео: Компресиране на текст с Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Видео"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

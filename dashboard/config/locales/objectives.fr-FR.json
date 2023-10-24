@@ -986,12 +986,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Créez une animation interactive en utilisant des sprites et des événements."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Se former et tester un modèle d'apprentissage automatique."
         },
@@ -3262,15 +3256,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Développer des programmes qui répondent à des événements planifiés."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Illustrer les changements d'humeur d'un poème."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Représenter le langage figuré et littéral dans un texte."
         }
       }
     }

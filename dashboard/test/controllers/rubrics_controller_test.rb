@@ -5,9 +5,9 @@ class RubricsControllerTest < ActionController::TestCase
 
   setup do
     @levelbuilder = create :levelbuilder
-    @lesson = create(:lesson)
+    @lesson = create(:lesson, :with_lesson_group)
     @level = create(:level)
-    create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
+    @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
   end
 
   # new page is levelbuilder only
@@ -18,6 +18,11 @@ class RubricsControllerTest < ActionController::TestCase
 
   test "create Rubric and Learning Goals with valid params" do
     sign_in @levelbuilder
+
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{@lesson.script.name}.script_json" && contents.include?('learning goal example 1')
+    end.once
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     assert_creates(Rubric) do
       post :create, params: {
@@ -40,6 +45,30 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 2, learning_goals.length
   end
 
+  test 'updates rubric and learning goals with valid params' do
+    sign_in @levelbuilder
+
+    lesson = create :lesson, :with_lesson_group
+    level = create :level
+    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
+    rubric = create :rubric, lesson: lesson, level: level
+    learning_goal = create :learning_goal, rubric: rubric
+    unit_name = rubric.lesson.script.name
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && contents.include?(learning_goal.key)
+    end.once
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :update, params: {
+      id: rubric.id,
+      learning_goals_attributes: [
+        {id: learning_goal.id, learning_goal: 'updated learning goal', ai_enabled: true, position: 0},
+      ]
+    }
+    learning_goal.reload
+    assert_equal 'updated learning goal', learning_goal.learning_goal
+  end
+
   test 'submits rubric evaluations of a student' do
     student = create :student
     teacher = create :teacher
@@ -48,7 +77,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in teacher
     post :submit_evaluations, params: {id: rubric.id, student_id: student.id}
     assert_response :success
-    assert_equal 2, LearningGoalEvaluation.where(user: student, teacher: teacher).where.not(submitted_at: nil).count
+    assert_equal 2, LearningGoalTeacherEvaluation.where(user: student, teacher: teacher).where.not(submitted_at: nil).count
   end
 
   test 'can only submit evaluations with same teacher_id as current_user' do
@@ -63,8 +92,8 @@ class RubricsControllerTest < ActionController::TestCase
     post :submit_evaluations, params: {id: rubric.id, student_id: student.id}
 
     assert_response :success
-    refute_nil LearningGoalEvaluation.find_by(user: student, teacher: teacher).submitted_at
-    assert_nil LearningGoalEvaluation.find_by(user: student, teacher: another_teacher).submitted_at
+    refute_nil LearningGoalTeacherEvaluation.find_by(user: student, teacher: teacher).submitted_at
+    assert_nil LearningGoalTeacherEvaluation.find_by(user: student, teacher: another_teacher).submitted_at
   end
 
   test "gets ai evaluations for student and learning goal" do
@@ -76,8 +105,8 @@ class RubricsControllerTest < ActionController::TestCase
     rubric = create :rubric
     learning_goal1 = create :learning_goal, rubric: rubric
     learning_goal2 = create :learning_goal, rubric: rubric
-    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, understanding: 1
-    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, understanding: 2
+    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, requester: teacher, understanding: 1
+    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, requester: teacher,  understanding: 2
 
     get :get_ai_evaluations, params: {
       id: rubric.id,
@@ -96,7 +125,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in teacher
 
     learning_goal = create :learning_goal
-    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher
 
     get :get_ai_evaluations, params: {
       id: learning_goal.rubric.id,
@@ -113,9 +142,9 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in teacher
 
     learning_goal = create :learning_goal
-    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, understanding: 1
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher, understanding: 1
     travel 1.minute do
-      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, understanding: 2
+      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher, understanding: 2
     end
 
     get :get_ai_evaluations, params: {
@@ -126,5 +155,93 @@ class RubricsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal 1, json_response.length
     assert_equal 2, json_response[0]['understanding']
+  end
+
+  test "gets teacher evaluations for current user" do
+    student = create :student
+    sign_in student
+
+    rubric = create :rubric
+    learning_goal1 = create :learning_goal, rubric: rubric
+    learning_goal2 = create :learning_goal, rubric: rubric
+    teacher_evaluation1 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: Time.now, feedback: 'feedback1'
+    teacher_evaluation2 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+
+    get :get_teacher_evaluations, params: {
+      id: rubric.id,
+    }
+
+    assert_response :success
+    assert_equal 2, json_response.length
+    assert_equal teacher_evaluation1.feedback, json_response[0]['feedback']
+    assert_equal teacher_evaluation2.feedback, json_response[1]['feedback']
+  end
+
+  test "does not get unsubmmitted teacher evaluations for current user" do
+    student = create :student
+    sign_in student
+
+    rubric = create :rubric
+    learning_goal1 = create :learning_goal, rubric: rubric
+    learning_goal2 = create :learning_goal, rubric: rubric
+    create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: nil, feedback: 'feedback1'
+    submitted_teacher_evaluation = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+
+    get :get_teacher_evaluations, params: {
+      id: rubric.id,
+    }
+
+    assert_response :success
+    assert_equal 1, json_response.length
+    assert_equal submitted_teacher_evaluation.feedback, json_response[0]['feedback']
+  end
+
+  test "run ai evaluations for user calls EvaluateRubricJob" do
+    rubric = create :rubric, lesson: @lesson, level: @level
+    student = create :student
+    teacher = create :teacher
+    create :follower, student_user: student, user: teacher
+    sign_in teacher
+
+    Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(true)
+    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
+    EvaluateRubricJob.expects(:perform_later).with(user_id: student.id, script_level_id: @script_level.id).once
+
+    post :run_ai_evaluations_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :success
+  end
+
+  test "run ai evaluations for user does not call EvaluateRubricJob if ai experiment is disabled" do
+    rubric = create :rubric, lesson: @lesson, level: @level
+    student = create :student
+    teacher = create :teacher
+    create :follower, student_user: student, user: teacher
+    sign_in teacher
+
+    Experiment.stubs(:enabled?).with(user: teacher, experiment_name: 'ai-rubrics').returns(false)
+    EvaluateRubricJob.expects(:perform_later).never
+
+    post :run_ai_evaluations_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :forbidden
+  end
+
+  test "cannot run ai evaluations for user if not teacher of student" do
+    student = create :student
+    teacher = create :teacher
+    sign_in teacher
+
+    rubric = create :rubric, lesson: @lesson, level: @level
+
+    post :run_ai_evaluations_for_user, params: {
+      id: rubric.id,
+      userId: student.id,
+    }
+    assert_response :forbidden
   end
 end

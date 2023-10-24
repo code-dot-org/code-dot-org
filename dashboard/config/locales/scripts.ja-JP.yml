@@ -4251,7 +4251,7 @@ ja:
           description: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
           description_short: プログラムを通して、Minecraftの世界を探検しましょう。
           student_description: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
-          title: Minecraft Hour of Code プログラミング入門
+          title: Minecraftアドベンチャー
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -5170,6 +5170,16 @@ ja:
               display_name: 内容
             csd3_2:
               display_name: '第2章: ゲームを作る'
+        virtual-pl-csa-summer-2024-day1:
+          title: 1日目
+        virtual-pl-csa-summer-day1:
+          title: 1日目
+        virtual-pl-csa-summer-day2:
+          title: 2日目
+        virtual-pl-csa-summer-day3:
+          title: 3日目
+        virtual-pl-csa-summer-day4:
+          title: 4日目
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -5196,6 +5206,14 @@ ja:
           lessons:
             lesson-3:
               name: 評価
+        virtual-pl-csp-summer-day1:
+          title: 1日目
+        virtual-pl-csp-summer-day2:
+          title: 2日目
+        virtual-pl-csp-summer-day3:
+          title: 3日目
+        virtual-pl-csp-summer-day4:
+          title: 4日目
         vpl-csa-2023-m1:
           title: モジュール1
         vpl-csa-2023-m2:
