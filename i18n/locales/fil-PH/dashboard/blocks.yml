@@ -592,6 +592,50 @@ fil:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Warm
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "itakda ang background effect
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Wala
+            '"rand"': "(Random)"
+            '"circles"': Mga bilog
+            '"quads"': Mga Anggulo
+            '"color_cycle"': Mga Kulay
+            '"diamonds"': Diyamante
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"flowers"': Mga Bulaklak
+            '"growing_stars"': Growing Stars
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Isaboy ang Pintura
+            '"rainbow"': Bahaghari
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Niyebe
+            '"text"': Mga Pangalan ng Awit
+            '"squiggles"': Squiggles
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Mga kwadrado
+            '"starburst"': Starburst
+            '"stars"': Mga Bituin
+            '"music_wave"': Mga Alon
+          PALETTE:
+            '"rave"': Itim at Puti
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"iceCream"': Sorbetes
+            '"default"': Ilaw
+            '"neon"': Neon
+            '"ocean"': Dagat
+            '"rainbow"': Bahaghari
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Warm
       Dancelab_setDanceSpeed:
         text: itakda ang bilis ng {SPRITE} dance sa {SPEED}
         options:
