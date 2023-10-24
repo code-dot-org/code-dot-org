@@ -119,6 +119,11 @@ lv:
           EFFECT:
             '"color_cycle"': Krāsas
             '"disco"': Kvadrāti
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"color_cycle"': Krāsas
+            '"disco"': Kvadrāti
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
