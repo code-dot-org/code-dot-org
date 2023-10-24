@@ -65,3 +65,27 @@
   }
 }
 
+ul.dance-party-featured-artists {
+  margin: 2rem auto;
+
+  li {
+
+    @media (min-width: $width-sm) {
+      width: 14%;
+    }
+
+    &:nth-of-type(even) {
+      img { border: 4px solid var(--brand_primary_default); }
+    }
+
+    &:nth-of-type(odd) {
+      img { border: 4px solid var(--brand_secondary_default); }
+    }
+
+    img {
+      border-radius: 100%;
+      width: 100%;
+    }
+  }
+}
+

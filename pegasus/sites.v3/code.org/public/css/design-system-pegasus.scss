@@ -257,6 +257,21 @@ ul {
     @include body-three;
   }
 
+  // Clear spacing and list dots
+  &.clear-styles {
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0;
+      text-indent: 0;
+
+      &:before {
+        content: "";
+      }
+    }
+  }
+
   // Lists that use icons next to content
   &.icon-bullet-list {
     margin: 1rem 0;

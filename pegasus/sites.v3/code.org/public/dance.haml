@@ -14,7 +14,28 @@ theme: responsive_full_width
       %h1{style: "color: white"}
         =hoc_s(:dance_hero_heading)
     %figure
-      %img{src: "/images/banners/dance-party-characters-banner.png", alt: ""}
+      %img{src: "/images/dance-hoc/dance-party-characters-banner.png", alt: ""}
+
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s(:dance_featuring_songs_by)
+    = view :"dance/featured_artists"
+
+%section
+  .wrapper
+    DANCE PARTY ACTIVITES
+
+%section.bg-neutral-light
+  .wrapper
+    ARTISTS
+
+%section
+  .wrapper
+    FEATURED PROJECTS
+
+%section.bg-neutral-light
+  .wrapper
+    VIDEOS
 
 %section
   .wrapper
