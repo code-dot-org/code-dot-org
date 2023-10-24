@@ -472,6 +472,41 @@ ku:
         text: |-
           ئیفێکتی پاشبنەما دیاریبکە
           {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': بازنە
+            '"color_cycle"': ڕەنگ
+            '"diamonds"': ئەڵماس
+            '"disco"': چوارگۆشە
+            '"disco_ball"': تۆپی دیسکۆ
+            '"fireworks"': یاری ئاگرین
+            '"galaxy"': بۆشایی ئاسمان
+            '"kaleidoscope"': كالیدۆسکۆپ
+            '"lasers"': تەختەی سەمای لێزەری
+            '"rainbow"': پەلكەزێرینە
+            '"rand"': "(هەڕەمەکی)"
+            '"snowflakes"': بەفر
+            '"sparkles"': بریسکە
+            '"spiral"': لوولپێچی
+            '"splatter"': پڕژێنەری بۆیە
+            '"stars"': ئەستێرە
+            '"swirl"': هایپنۆ
+            '"text"': ناوی گۆرانیەکان
+          PALETTE:
+            '"cool"': تۆنی شین
+            '"default"': ڕووناکی
+            '"electronic"': ئەلکترۆنی
+            '"iceCream"': دۆندرمە
+            '"neon"': نیۆن
+            '"rainbow"': پەلكەزێرینە
+            '"rave"': ڕەش و سپی
+            '"tropical"': خولگەیی
+            '"vintage"': ڤینتەج
+            '"warm"': تۆنی سوور
+        text: |-
+          ئیفێکتی پاشبنەما دیاریبکە
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:

@@ -2,60 +2,6 @@
   "ku-IQ": {
     "data": {
       "activity_sections": {
-        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
-          "progression_name": "لیستەکان"
-        },
-        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
-          "progression_name": "گۆڕاوەکان"
-        },
-        "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
-          "progression_name": "فرمانەکان"
-        },
-        "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
-          "progression_name": "فرمانەکان"
-        },
-        "41a48a88-144d-417d-a903-a09df11b7f9c": {
-          "progression_name": "فەرمانی بە پێوەر"
-        },
-        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
-          "progression_name": "لیستەکان"
-        },
-        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
-          "progression_name": "گۆڕاوەکان"
-        },
-        "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
-          "progression_name": "فرمانەکان"
-        },
-        "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
-          "progression_name": "فرمانەکان"
-        },
-        "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
-          "progression_name": "فەرمانی بە پێوەر"
-        },
-        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
-          "progression_name": "لیستەکان"
-        },
-        "13d78339-15e3-4fa2-9b87-22412794083d": {
-          "progression_name": "گۆڕاوەکان"
-        },
-        "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
-          "progression_name": "فرمانەکان"
-        },
-        "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
-          "progression_name": "فرمانەکان"
-        },
-        "1ea8ae38-1276-4214-9baa-667d745ca47c": {
-          "progression_name": "فەرمانی بە پێوەر"
-        },
-        "4da75e07-81b7-447e-90d4-5253a241a850": {
-          "progression_name": "پێوانەکان"
-        },
-        "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
-          "progression_name": "خاسیەتەکان"
-        },
-        "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
-          "progression_name": "پوختەی بابەت"
-        },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
           "tips": [
             null
@@ -13581,36 +13527,6 @@
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "پاش كاژێری كۆدنووسی"
         },
-        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
-          "tips": [
-            null
-          ]
-        },
-        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
-          "tips": [
-            null
-          ]
-        },
-        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
-          "tips": [
-            null
-          ]
-        },
-        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
-          "tips": [
-            null
-          ]
-        },
-        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
-          "tips": [
-            null
-          ]
-        },
-        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
-          "tips": [
-            null
-          ]
-        },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
             null
@@ -13772,17 +13688,6 @@
         "8531cf05-6363-4654-b20a-455e85fa16a0": {
           "name": "پاش كاژێری كۆدنووسی"
         },
-        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
-          "tips": [
-            null
-          ]
-        },
-        "950807e2-afa0-4c26-9459-4682b3f49602": {
-          "progression_name": "نموونە"
-        },
-        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
-          "progression_name": "نموونە"
-        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "tips": [
             null
@@ -13835,19 +13740,6 @@
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
-          "tips": [
-            null
-          ]
-        },
-        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
-          "tips": [
-            null
-          ]
-        },
-        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "مەتەڵە وێنە"
-        },
-        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
           "tips": [
             null
           ]
