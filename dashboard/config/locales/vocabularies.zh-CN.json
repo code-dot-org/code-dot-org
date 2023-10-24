@@ -2248,26 +2248,6 @@
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
-        "code/poem-art/2021": {
-          "word": "代码",
-          "definition": "（动词）为计算机编写指令。"
-        },
-        "event/poem-art/2021": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
-        "line/poem-art/2021": {
-          "word": "诗歌行",
-          "definition": "（诗歌）- 一篇诗歌的组成部分，采用单行格式，在右侧结束。 "
-        },
-        "mood/poem-art/2021": {
-          "word": "意境",
-          "definition": "艺术作品或文学作品所表达出某种感觉、氛围或情感。"
-        },
-        "program/poem-art/2021": {
-          "word": "程序",
-          "definition": "一系列已编码的步骤，可在设备上运行。"
-        },
         "code/sports/unversioned": {
           "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"

@@ -3245,42 +3245,6 @@
         "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
           "description": "确定继续学习计算机科学和编码的地方"
         },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "使用精灵图和事件创建交互式动画。"
-        },
-        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": "创建新的精灵图并为他们分配服装和位置。"
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "使用精灵图和事件创建交互式动画。"
-        },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "创建新的精灵图并为他们分配服装和位置。"
-        },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "创建新的精灵图并为他们分配服装和位置。"
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "使用精灵图和事件创建交互式动画。"
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "使用精灵图和事件创建交互式动画。"
-        },
-        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": "创建新的精灵图并为他们分配服装和位置。"
-        },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "创建新的精灵图并为他们分配服装和位置。"
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "使用精灵图和事件创建交互式动画。"
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "创建新的精灵图并为他们分配服装和位置。"
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "使用精灵图和事件创建交互式动画。"
-        },
         "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
           "description": "定义“编码”和“计算机科学”"
         },
@@ -3374,15 +3338,6 @@
         "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
           "description": "确定继续学习计算机科学和编码的地方"
         },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "展示诗歌中的意境转换。"
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "代表文字的隐喻和字面含义。"
-        },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "开发响应定时事件的程序。"
-        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "识别与输入事件相关的操作。"
         },
@@ -3436,12 +3391,6 @@
         },
         "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
           "description": "描述无损压缩的目的和基本原理。"
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "了解学生进入计算机实验室后应该做什么。"
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "在提到电脑鼠标、触控板或触摸屏时使用适当的术语。"
         }
       }
     }

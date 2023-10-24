@@ -405,7 +405,7 @@
           "wandering": "徘徊"
         },
         "CourseF_outbreak4": {
-          "growing": "生长",
+          "growing": "放大",
           "jittering": "抖动",
           "moving east": "向右推动",
           "moving north": "向上移动\n",
@@ -477,7 +477,7 @@
           "wandering": "徘徊"
         },
         "CourseF_outbreak7": {
-          "growing": "生长",
+          "growing": "放大",
           "jittering": "抖动",
           "moving east": "向右推动",
           "moving left and right": "左右移动",
@@ -525,7 +525,7 @@
           "wandering": "徘徊"
         },
         "CourseF_outbreak8": {
-          "growing": "生长",
+          "growing": "放大",
           "jittering": "抖动",
           "moving east": "向右推动",
           "moving left and right": "左右移动",

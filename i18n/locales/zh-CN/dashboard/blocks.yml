@@ -2,6 +2,15 @@
 zh-CN:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': 太多
+            '"just right"': 恰到好处
+            '"too little"': 太少
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -592,6 +601,52 @@ zh-CN:
             '"iceCream"': 冰淇淋
             '"default"': 光
             '"neon"': 霓虹
+            '"tropical"': 热带
+            '"vintage"': 复古
+            '"warm"': 红色
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          设置背景效果
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"rand"': 随机
+            '"circles"': 隧道
+            '"quads"': 角度
+            '"color_cycle"': 颜色
+            '"diamonds"': 菱形
+            '"disco_ball"': 迪斯科球
+            '"fireworks"': 烟火
+            '"flowers"': 花朵
+            '"growing_stars"': 变大的星星
+            '"higher_power"': Higher Power
+            '"swirl"': 催眠
+            '"kaleidoscope"': 万花筒
+            '"lasers"': 激光舞池
+            '"splatter"': 气泡
+            '"rainbow"': 彩虹
+            '"ripples_random"': 随机波纹
+            '"ripples"': 波纹
+            '"snowflakes"': 雪
+            '"text"': 歌曲标题
+            '"squiggles"': 花体
+            '"galaxy"': 空间
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"disco"': 方形
+            '"starburst"': 星爆
+            '"stars"': 星星
+            '"music_wave"': 波浪
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 蓝色
+            '"electronic"': 电音
+            '"iceCream"': 冰淇淋
+            '"default"': 光
+            '"neon"': 霓虹
+            '"ocean"': 海洋
+            '"rainbow"': 彩虹
             '"tropical"': 热带
             '"vintage"': 复古
             '"warm"': 红色
@@ -2561,6 +2616,19 @@ zh-CN:
           DIR:
             right: 右 ↻
             left: 左 ↺
+      ecosystems_catchMe:
+        text: 抓{THIS}
+      ecosystems_eat:
+        text: 吃{THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': 太多
+            '"just right"': 恰到好处
+            '"too little"': 太少
       ecosystems_int10:
         text: "{VALUE}"
         options:
@@ -2575,6 +2643,24 @@ zh-CN:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: '在位置x: {X} y: {Y}之间制作{N}个新{GROUP}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: 在{LOCATION_GENERATOR}制作{NUM}个新{ANIMATION_NAME}精灵图
+      ecosystems_makeNumSpritesWithinRange:
+        text: 在{RANGE}制作{NUM}个新{ANIMATION_NAME}精灵图
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": 顶部
+            "{x1:0, x2:400, y1:150, y2:250}": 中间
+            "{x1:0, x2:400, y1:0, y2:200}": 底部
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": 顶部
+            "{x1:0, x2:400, y1:0, y2:200}": 底部
       storylab_printText:
         text: 打印 {TEXT}
       storylab_setForegroundEffect2:
