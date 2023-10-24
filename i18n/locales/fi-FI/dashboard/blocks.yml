@@ -549,6 +549,49 @@ fi:
             '"tropical"': Trooppinen
             '"vintage"': Vanhanaikainen
             '"warm"': Sydämellinen
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "määritä taustatehoste
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+            '"rand"': "(Satunnainen)"
+            '"circles"': Ympyrät
+            '"quads"': Kulmat
+            '"color_cycle"': Värit
+            '"diamonds"': Timantit
+            '"disco_ball"': Diskopallo
+            '"fireworks"': Ilotulitus
+            '"flowers"': Kukat
+            '"growing_stars"': Kasvavat tähdet
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskooppi
+            '"lasers"': Laser-tanssilattia
+            '"splatter"': Maaliroiskeet
+            '"rainbow"': Sateenkaari
+            '"ripples_random"': Satunnainen aaltoilu
+            '"ripples"': Aaltoilu
+            '"snowflakes"': Lumi
+            '"text"': Kappaleen nimet
+            '"galaxy"': Avaruus
+            '"sparkles"': Kimallus
+            '"spiral"': Kierre
+            '"disco"': Neliöt
+            '"starburst"': Tähtisäteet
+            '"stars"': Äänet
+            '"music_wave"': Aallot
+          PALETTE:
+            '"rave"': Mustavalkoinen
+            '"cool"': Kylmä
+            '"electronic"': Sähköinen
+            '"iceCream"': Jäätelö
+            '"default"': Vaalea
+            '"neon"': Neon
+            '"rainbow"': Sateenkaari
+            '"tropical"': Trooppinen
+            '"vintage"': Vanhanaikainen
+            '"warm"': Sydämellinen
       Dancelab_setDanceSpeed:
         text: muuta {SPRITE} tanssin nopeutta {SPEED}
         options:

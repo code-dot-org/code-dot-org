@@ -549,6 +549,49 @@ fi:
         text: |-
           "määritä taustatehoste
           {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Ympyrät
+            '"color_cycle"': Värit
+            '"diamonds"': Timantit
+            '"disco"': Neliöt
+            '"disco_ball"': Diskopallo
+            '"fireworks"': Ilotulitus
+            '"flowers"': Kukat
+            '"galaxy"': Avaruus
+            '"growing_stars"': Kasvavat tähdet
+            '"kaleidoscope"': Kaleidoskooppi
+            '"lasers"': Laser-tanssilattia
+            '"music_wave"': Aallot
+            '"none"': Ei mitään
+            '"quads"': Kulmat
+            '"rainbow"': Sateenkaari
+            '"rand"': "(Satunnainen)"
+            '"ripples"': Aaltoilu
+            '"ripples_random"': Satunnainen aaltoilu
+            '"snowflakes"': Lumi
+            '"sparkles"': Kimallus
+            '"spiral"': Kierre
+            '"splatter"': Maaliroiskeet
+            '"starburst"': Tähtisäteet
+            '"stars"': Äänet
+            '"swirl"': Hypno
+            '"text"': Kappaleen nimet
+          PALETTE:
+            '"cool"': Kylmä
+            '"default"': Vaalea
+            '"electronic"': Sähköinen
+            '"iceCream"': Jäätelö
+            '"neon"': Neon
+            '"rainbow"': Sateenkaari
+            '"rave"': Mustavalkoinen
+            '"tropical"': Trooppinen
+            '"vintage"': Vanhanaikainen
+            '"warm"': Sydämellinen
+        text: |-
+          "määritä taustatehoste
+          {PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
