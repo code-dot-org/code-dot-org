@@ -11,6 +11,7 @@ import {
 } from './functionEditorConstants';
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import CdoMetricsManager from './cdoMetricsManager';
+import msg from '@cdo/locale';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -73,7 +74,7 @@ export default class FunctionEditor {
     // Delete handler
     document
       .getElementById(MODAL_EDITOR_DELETE_ID)
-      .addEventListener('click', this.handleDelete.bind(this));
+      .addEventListener('click', this.onDeletePressed.bind(this));
 
     // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
@@ -237,7 +238,20 @@ export default class FunctionEditor {
     this.showForFunction(hiddenProcedure, procedureType);
   };
 
-  handleDelete() {
+  onDeletePressed() {
+    Blockly.customSimpleDialog({
+      bodyText: msg.confirmDeleteFunctionWarning({
+        functionName: this.block.getProcedureModel().getName(),
+      }),
+      cancelText: msg.delete(),
+      isDangerCancel: true,
+      confirmText: msg.keep(),
+      onConfirm: null,
+      onCancel: this.onDeleteConfirmed.bind(this),
+    });
+  }
+
+  onDeleteConfirmed() {
     // delete all caller blocks from the procedure workspace
     Blockly.Procedures.getCallers(
       this.block.getProcedureModel().getName(),
