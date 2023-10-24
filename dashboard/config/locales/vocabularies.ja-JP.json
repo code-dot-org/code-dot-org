@@ -2226,26 +2226,6 @@
           "word": "プログラム",
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
-        "code/poem-art/2021": {
-          "word": "コード",
-          "definition": "（v）コンピューター用の指示を書くこと。"
-        },
-        "event/poem-art/2021": {
-          "word": "イベント",
-          "definition": "何かを引き起こすアクション。"
-        },
-        "line/poem-art/2021": {
-          "word": "行",
-          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
-        },
-        "mood/poem-art/2021": {
-          "word": "ムード",
-          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
-        },
-        "program/poem-art/2021": {
-          "word": "プログラム",
-          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
-        },
         "code/sports/unversioned": {
           "word": "コード",
           "definition": "(v) は、コードやコンピュータの命令を記述します。"
