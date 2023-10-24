@@ -6,6 +6,7 @@ import experiments from '@cdo/apps/util/experiments';
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
+const SET_OVER_21 = 'currentUser/SET_OVER_21';
 const SET_USER_ROLE_IN_COURSE = 'currentUser/SET_USER_ROLE_IN_COURSE';
 const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
@@ -35,6 +36,10 @@ export const setUserType = (userType, under13) => ({
   type: SET_USER_TYPE,
   userType,
   under13,
+});
+export const setOver21 = over21 => ({
+  type: SET_OVER_21,
+  over21,
 });
 export const setUserRoleInCourse = userRoleInCourse => ({
   type: SET_USER_ROLE_IN_COURSE,
@@ -72,6 +77,7 @@ const initialState = {
   isSortedByFamilyName: false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
+  over21: false,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -100,6 +106,12 @@ export default function currentUser(state = initialState, action) {
       ...state,
       userType: action.userType,
       under13: action.under13,
+    };
+  }
+  if (action.type === SET_OVER_21) {
+    return {
+      ...state,
+      over21: action.over21,
     };
   }
   if (action.type === SET_USER_ROLE_IN_COURSE) {
@@ -134,7 +146,8 @@ export default function currentUser(state = initialState, action) {
     };
   }
   if (action.type === SET_INITIAL_DATA) {
-    const {id, username, user_type, mute_music, under_13} = action.serverUser;
+    const {id, username, user_type, mute_music, under_13, over_21} =
+      action.serverUser;
     analyticsReport.setUserProperties(
       id,
       user_type,
@@ -147,6 +160,7 @@ export default function currentUser(state = initialState, action) {
       userType: user_type,
       isBackgroundMusicMuted: mute_music,
       under13: under_13,
+      over21: over_21,
     };
   }
 

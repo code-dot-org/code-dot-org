@@ -10,6 +10,7 @@ import {
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
+import CdoMetricsManager from './cdoMetricsManager';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -50,6 +51,9 @@ export default class FunctionEditor {
           vertical: true,
         },
         wheel: true,
+      },
+      plugins: {
+        metricsManager: CdoMetricsManager,
       },
       renderer: options.renderer,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
@@ -313,8 +317,8 @@ export default class FunctionEditor {
   addEditorWorkspaceBlockConfig(blockConfig) {
     const returnValue = {
       ...blockConfig,
-      x: 50,
-      y: 50,
+      x: 20,
+      y: 20,
     };
     return returnValue;
   }

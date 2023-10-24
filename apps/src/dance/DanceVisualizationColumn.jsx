@@ -11,6 +11,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
+import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
 
@@ -70,6 +71,7 @@ class DanceVisualizationColumn extends React.Component {
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
+    over21: PropTypes.bool.isRequired,
     currentAiModalField: PropTypes.object,
   };
 
@@ -99,6 +101,7 @@ class DanceVisualizationColumn extends React.Component {
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
+        {this.props.over21 && <HourOfCodeGuideEmailDialog />}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
             <SongSelector
@@ -175,6 +178,7 @@ export default connect(state => ({
   selectedSong: state.dance.selectedSong,
   userType: state.currentUser.userType,
   under13: state.currentUser.under13,
+  over21: state.currentUser.over21,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
   currentAiModalField: state.dance.currentAiModalField,
