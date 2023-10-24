@@ -29,9 +29,6 @@ Feature: Using the YourSchool census page
     Then I press "#submit-button" using jQuery
     Then I wait until I am on "http://code.org/yourschool/thankyou"
 
-  # The google map on /yourschool is broken in production. We should stop skipping
-  # this test as soon as that page is fixed.
-  @skip
   @no_circle
   Scenario: Use census map to select school
     Given I am on "http://code.org/yourschool"
