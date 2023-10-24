@@ -126,6 +126,10 @@ my:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
       Dancelab_setDanceSpeed:
         options:
           SPEED:

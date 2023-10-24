@@ -2,89 +2,6 @@
   "my-MM": {
     "data": {
       "activity_sections": {
-        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
-          "progression_name": "စာရင်းများ"
-        },
-        "2af454bc-9b55-4205-b0fd-247af66b3d13": {
-          "progression_name": "ပုံ​ရေးဆွဲခြင်း"
-        },
-        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
-          "progression_name": "Variables"
-        },
-        "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
-          "progression_name": "ဖြစ်စဥ်များ"
-        },
-        "14876891-4b0e-4960-878d-f5c7b5771261": {
-          "progression_name": "ဖြစ်စဥ်များ"
-        },
-        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
-          "progression_name": "စာရင်းများ"
-        },
-        "b44b4f32-2417-442d-812d-10bba9a6edc0": {
-          "progression_name": "ပုံ​ရေးဆွဲခြင်း"
-        },
-        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
-          "progression_name": "Variables"
-        },
-        "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
-          "progression_name": "ဖြစ်စဥ်များ"
-        },
-        "90bc9191-8e68-41bd-b8e9-8291930dca38": {
-          "progression_name": "ဖြစ်စဥ်များ"
-        },
-        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
-          "progression_name": "စာရင်းများ"
-        },
-        "9c9cd7c5-d796-4eaa-9788-f6235478e387": {
-          "progression_name": "ပုံ​ရေးဆွဲခြင်း"
-        },
-        "13d78339-15e3-4fa2-9b87-22412794083d": {
-          "progression_name": "Variables"
-        },
-        "de9506b3-18cc-45c8-a490-9f9b49505977": {
-          "progression_name": "ဖြစ်စဥ်များ"
-        },
-        "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
-          "name": "သင်ခန်းစာအပို",
-          "progression_name": "သင်ခန်းစာအပို"
-        },
-        "345e2136-8d60-4513-a0d9-f7db80faff4a": {
-          "progression_name": "ဗီဒီယို"
-        },
-        "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
-          "progression_name": "ဗီဒီယို"
-        },
-        "22ed3900-dd2a-4eec-99c1-69f131286de6": {
-          "name": "Artist ပရောဂျက်",
-          "progression_name": "Artist ပရောဂျက်"
-        },
-        "71c84958-5cc4-467d-8c97-f2f63123c47d": {
-          "progression_name": "ဗီဒီယို"
-        },
-        "919ce65a-2a03-4e80-9108-6243b5dd733f": {
-          "name": "Artist ပရောဂျက်",
-          "progression_name": "Artist ပရောဂျက်"
-        },
-        "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
-          "name": "Artist ပရောဂျက်",
-          "progression_name": "Artist ပရောဂျက်"
-        },
-        "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
-          "name": "သင်ခန်းစာအပို",
-          "progression_name": "သင်ခန်းစာအပို"
-        },
-        "83b5ca79-12e5-4d68-a965-4bed0681e331": {
-          "progression_name": "ဖြစ်စဥ်များ"
-        },
-        "3d63e945-be66-4203-91e4-d4780e318ace": {
-          "progression_name": "ဗီဒီယို"
-        },
-        "b8c86684-ebd8-441f-ba6e-669457575120": {
-          "progression_name": "ဗီဒီယို"
-        },
-        "54fa7040-6612-4012-b595-1f4745f1479d": {
-          "progression_name": "ဗီဒီယို"
-        },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
           "tips": [
             null
@@ -14217,36 +14134,6 @@
             null
           ]
         },
-        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
-          "tips": [
-            null
-          ]
-        },
-        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
-          "tips": [
-            null
-          ]
-        },
-        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
-          "tips": [
-            null
-          ]
-        },
-        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
-          "tips": [
-            null
-          ]
-        },
-        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
-          "tips": [
-            null
-          ]
-        },
-        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
-          "tips": [
-            null
-          ]
-        },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
             null
@@ -14394,17 +14281,6 @@
             null
           ]
         },
-        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
-          "tips": [
-            null
-          ]
-        },
-        "950807e2-afa0-4c26-9459-4682b3f49602": {
-          "progression_name": "ဥပမာ"
-        },
-        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
-          "progression_name": "ဥပမာ"
-        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "tips": [
             null
@@ -14451,16 +14327,6 @@
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
-          "tips": [
-            null
-          ]
-        },
-        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
-          "tips": [
-            null
-          ]
-        },
-        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
           "tips": [
             null
           ]
