@@ -12027,15 +12027,19 @@ es:
               display_name: Síncronos Parte 2
             lessonGroup-5:
               display_name: Asíncronos Parte 2
+            lessonGroup-7:
+              display_name: Introducción
           lessons:
-            lesson-1:
-              name: Síncronos Parte 1
             lesson-2:
               name: Asíncronos Parte 1
             lesson-3:
               name: Síncronos Parte 2
             lesson-4:
               name: Asíncronos Parte 2
+            lesson-7:
+              name: Introducción
+            lesson-8:
+              name: Apertura del Taller
           title: Día 1
         virtual-pl-csa-summer-day2:
           lesson_groups:
@@ -12048,8 +12052,6 @@ es:
             lessonGroup-5:
               display_name: Asíncronos Parte 2
           lessons:
-            lesson-1:
-              name: Síncronos Parte 1
             lesson-2:
               name: Asíncronos Parte 1
             lesson-3:
@@ -12069,11 +12071,9 @@ es:
               display_name: Asíncronos Parte 2
           lessons:
             lesson-1:
-              name: Síncronos Parte 1
+              name: Introducción
             lesson-2:
               name: Asíncronos Parte 1
-            lesson-3:
-              name: Síncronos Parte 2
             lesson-4:
               name: Asíncronos Parte 2
           title: Día 3
@@ -12088,14 +12088,12 @@ es:
             lessonGroup-5:
               display_name: Asíncronos Parte 2
           lessons:
-            lesson-1:
-              name: Síncronos Parte 1
             lesson-2:
               name: Asíncronos Parte 1
-            lesson-3:
-              name: Síncronos Parte 2
             lesson-4:
               name: Asíncronos Parte 2
+            lesson-5:
+              name: Apertura del Taller
           title: Día 4
         virtual-pl-csa-summer-day5:
           lesson_groups:
@@ -12107,7 +12105,9 @@ es:
               display_name: Asíncronos Parte 2
           lessons:
             lesson-1:
-              name: Síncronos Parte 1
+              name: Apertura del Taller
+            lesson-2:
+              name: Asíncronos Parte 1
             lesson-3:
               name: Síncronos Parte 2
             lesson-4:
@@ -12193,11 +12193,52 @@ es:
               display_name: Asíncronos Parte 2
           title: Día 1
         virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-5:
+              name: Introducción
           title: Día 2
         virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
           title: Día 3
         virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
           title: Día 4
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
         virustest:
           description_short: 'Utiliza el Laboratorio de Sprite para crear una simulación
             de un brote de virus. '

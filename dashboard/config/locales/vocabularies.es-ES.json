@@ -2691,26 +2691,6 @@
           "word": "Programa",
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
-        "code/poem-art/2021": {
-          "word": "Código",
-          "definition": "(v) escribir instrucciones para un ordenador."
-        },
-        "event/poem-art/2021": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "line/poem-art/2021": {
-          "word": "Línea",
-          "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Estado de ánimo",
-          "definition": "la expresión de un sentimiento, una atmósfera o una emoción en el arte o la escritura."
-        },
-        "program/poem-art/2021": {
-          "word": "Programa",
-          "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
-        },
         "code/sports/unversioned": {
           "word": "Código",
           "definition": "(v) escribir código o escribir instrucciones para un ordenador."
