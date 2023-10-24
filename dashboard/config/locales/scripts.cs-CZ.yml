@@ -11115,15 +11115,19 @@ cs:
               display_name: Synchronní část 2
             lessonGroup-5:
               display_name: Asynchronní část 2
+            lessonGroup-7:
+              display_name: Úvod
           lessons:
-            lesson-1:
-              name: Synchronní část 1
             lesson-2:
               name: Asynchronní část 1
             lesson-3:
               name: Synchronní část 2
             lesson-4:
               name: Asynchronní část 2
+            lesson-7:
+              name: Úvod
+            lesson-8:
+              name: Workshop otvírák
         virtual-pl-csa-summer-day2:
           lesson_groups:
             lessonGroup-2:
@@ -11135,8 +11139,6 @@ cs:
             lessonGroup-5:
               display_name: Asynchronní část 2
           lessons:
-            lesson-1:
-              name: Synchronní část 1
             lesson-2:
               name: Asynchronní část 1
             lesson-3:
@@ -11155,11 +11157,9 @@ cs:
               display_name: Asynchronní část 2
           lessons:
             lesson-1:
-              name: Synchronní část 1
+              name: Úvod
             lesson-2:
               name: Asynchronní část 1
-            lesson-3:
-              name: Synchronní část 2
             lesson-4:
               name: Asynchronní část 2
         virtual-pl-csa-summer-day4:
@@ -11173,14 +11173,12 @@ cs:
             lessonGroup-5:
               display_name: Asynchronní část 2
           lessons:
-            lesson-1:
-              name: Synchronní část 1
             lesson-2:
               name: Asynchronní část 1
-            lesson-3:
-              name: Synchronní část 2
             lesson-4:
               name: Asynchronní část 2
+            lesson-5:
+              name: Workshop otvírák
         virtual-pl-csa-summer-day5:
           lesson_groups:
             lessonGroup-2:
@@ -11191,7 +11189,13 @@ cs:
               display_name: Asynchronní část 2
           lessons:
             lesson-1:
-              name: Synchronní část 1
+              name: Workshop otvírák
+            lesson-13:
+              name: Závěrečné ceremonie
+            lesson-16:
+              name: Závěrečné ceremonie
+            lesson-2:
+              name: Asynchronní část 1
             lesson-3:
               name: Synchronní část 2
             lesson-4:
@@ -11304,6 +11308,53 @@ cs:
               display_name: Asynchronní část 1
             lessonGroup-5:
               display_name: Asynchronní část 2
+        virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+          lessons:
+            lesson-5:
+              name: Úvod
+        virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+          lessons:
+            lesson-2:
+              name: Asynchronní část 1
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+          lessons:
+            lesson-6:
+              name: Závěrečné ceremonie
         virustest:
           description_short: 'Vytvořte ve Sprite Labu simulaci šíření viru. '
           lesson_groups:
