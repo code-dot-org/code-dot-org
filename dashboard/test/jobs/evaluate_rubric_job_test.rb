@@ -49,8 +49,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
     assert_includes exception.message, 'lesson_s3_name not found'
     assert_equal 0, RubricAiEvaluation.where(user_id: @student.id).count
-    # TODO: remove the old learning goal code
-    assert_equal 0, OldLearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
   test "job fails if channel token does not exist" do
@@ -61,8 +59,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
     assert_includes exception.message, 'channel token not found'
     assert_equal 0, RubricAiEvaluation.where(user_id: @student.id).count
-    # TODO: remove the old learning goal code
-    assert_equal 0, OldLearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
   test "job fails if project source code not found" do
@@ -79,8 +75,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
     assert_includes exception.message, 'main.json not found'
     assert_equal 0, RubricAiEvaluation.where(user_id: @student.id).count
-    # TODO: remove the old learning goal code
-    assert_equal 0, OldLearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
   test "job fails if rubric not found" do
@@ -92,8 +86,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
     assert_includes exception.message, "Couldn't find Rubric"
     assert_equal 0, RubricAiEvaluation.where(user_id: @student.id).count
-    # TODO: remove the old learning goal code
-    assert_equal 0, OldLearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
   # stub out the calls to fetch project data from S3. Because the call to S3
@@ -207,12 +199,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     rubric.learning_goals.each do |learning_goal|
       ai_eval = rubric_ai_eval.learning_goal_ai_evaluations.find_by(learning_goal_id: learning_goal.id)
       assert_equal expected_understanding, ai_eval.understanding
-      assert_equal LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM], ai_eval.ai_confidence
-      # TODO: remove the old learning goal code
-      ai_eval = OldLearningGoalAiEvaluation.find_by(user_id: user.id, learning_goal_id: learning_goal.id)
-      assert_equal expected_understanding, ai_eval.understanding
-      assert_equal project_id, ai_eval.project_id
-      assert_equal version_id, ai_eval.project_version
       assert_equal LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM], ai_eval.ai_confidence
     end
   end
