@@ -326,4 +326,10 @@ class TestController < ApplicationController
     User.find_by(name: params[:pm_name]).destroy
     head :ok
   end
+
+  def create_pilot
+    name = params.require(:pilot_name)
+    Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
+    head :ok
+  end
 end

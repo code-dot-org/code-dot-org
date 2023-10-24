@@ -8,6 +8,7 @@ import shapes from './shapes';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import {tableLayoutStyles} from '../tables/tableConstants';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class SectionsAsStudentTable extends React.Component {
   static propTypes = {
@@ -223,13 +224,13 @@ const styles = {
   },
   colText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     lineHeight: '22px',
   },
   link: {
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     textDecoration: 'none',
   },

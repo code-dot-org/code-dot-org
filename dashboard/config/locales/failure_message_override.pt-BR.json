@@ -1,2 +1,14 @@
 {
+  "pt-BR": {
+    "data": {
+      "failure_message_override": {
+        "courseC19_playLab_EOC3": "Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem.",
+        "courseC19_playLab_EOC32022": "Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem.",
+        "courseC19_playLab_EOC3_2020": "Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem.",
+        "courseC19_playLab_EOC3_2021": "Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem.",
+        "courseC19_playLab_EOC3_2023": "Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem.",
+        "courseE_playLab_scaffold3": "Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem."
+      }
+    }
+  }
 }

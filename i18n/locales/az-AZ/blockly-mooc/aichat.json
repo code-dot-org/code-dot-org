@@ -1,4 +1,14 @@
 {
+  "aichatWorkspaceHeader": "AI söhbəti",
+  "allMessagesSentAreRecorded": "Süni intellekt Söhbətinə göndərilən bütün mesajlar qeyd olunur.",
+  "anythingPersonalCanNotBeSubmitted": "Məxfiliyinizi qorumaq üçün şəxsi məlumat hesab edilən hər hansı bir şey (ad, telefon nömrəsi, ünvan və s.) süni intellekt söhbətinə təqdim edilməməlidir.",
   "continue": "Davam et",
-  "waitingForChatResponse": "Cavab gözləyirəm..."
+  "inappropriateMessagesAreFlagged": "Uyğun olmayan mesajlar bayraq ediləcək və müəlliminizə xəbərdar ediləcək.",
+  "inappropriateUserMessage": "Bu mesaj uyğun olmayan kimi qeyd edildi.",
+  "tooPersonalUserMessage": "Bu mesaj çox şəxsi olaraq qeyd edildi.",
+  "userChatMessagePlaceholder": "Söhbət mesajı əlavə edin...",
+  "waitingForChatResponse": "Cavab gözləyirəm...",
+  "warningModalHeader": "Məsuliyyətli söhbət etməyi unutmayın!",
+  "warningModalOkButtonText": "Söhbət etməyə başlayın",
+  "whatIsPersonalInformation": "Şəxsi məlumat nə hesab olunur?"
 }

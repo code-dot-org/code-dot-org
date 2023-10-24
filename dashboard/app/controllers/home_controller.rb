@@ -192,7 +192,7 @@ class HomeController < ApplicationController
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_open_application?
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:afeEligible] = afe_eligible
-      @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
+      @homepage_data[:specialAnnouncement] = Announcements.get_localized_announcement_for_page("/home")
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner

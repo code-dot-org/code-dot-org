@@ -13,6 +13,24 @@ function computeCharactersReferenced(studentCode: string): string[] {
     const characterName = match[2];
     charactersReferencedSet.add(characterName);
   }
+
+  // Special parsing for the JSON parameter to ai().
+  const aiCharactersRegExp = new RegExp(/ai\(([^\)]*)/, 'gm');
+  while ((match = aiCharactersRegExp.exec(studentCode))) {
+    if (match[1] === 'undefined') {
+      continue;
+    }
+    try {
+      const params = JSON.parse(match[1]);
+      if (params.dancers && params.dancers.type) {
+        const characterName = params.dancers.type.toUpperCase();
+        charactersReferencedSet.add(characterName);
+      }
+    } catch (e) {
+      console.log('Invalid JSON for ai() block.');
+    }
+  }
+
   return Array.from(charactersReferencedSet);
 }
 

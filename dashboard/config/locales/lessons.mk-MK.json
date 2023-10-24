@@ -95,6 +95,9 @@
         "pre-express-2018/Events: The Big Event": {
           "name": "Големиот настан Џуниор"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Компјутерски науки Основи"
+        },
         "csd2-2019/Lists": {
           "name": "Листи"
         },
@@ -178,6 +181,27 @@
         },
         "pre-express-2019/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Добредојдовте на “Предавање компјутерски науки - Основи”"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Разбирање на Курсевите за Основи на Компјутерските Науки"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Лупови"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Крај на курсот проекти"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Променливи"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Разгледување на вашите рефлексии"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Следни чекори"
         },
         "coursea-2020/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
@@ -314,6 +338,9 @@
         "pre-express-2021/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
         },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Компјутерски науки Основи"
+        },
         "csd3-2022/Variables": {
           "name": "Променливи"
         },
@@ -410,12 +437,6 @@
         "pre-express-2023/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "applab-1hour/Room Escape": {
           "name": "Соба бегство"
         },
@@ -424,54 +445,6 @@
         },
         "applab-2hour/Basic App Functionality": {
           "name": "Основна функционалност на апликацијата"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Фреквенција Анализа"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Почетни и крајни екрани"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Почетни и крајни екрани2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Колектор Час на кодот 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Преглед и упатства за поставување"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Испраќање битови на заедничка жица"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Испраќање броеви"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Испраќање броеви"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Емитување пораки"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Рутери и адреси"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Пакети и сигурност"
-        },
-        "netsim/Manual DNS": {
-          "name": "Прирачник DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Автоматски DNS јазол"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Интернет Симулатор Freeplay"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Студија за расположение"
-        },
-        "vigenere/Vigenere": {
-          "name": "Вигенере"
         },
         "course1/Jigsaw: Learn to drag and drop": {
           "name": "Сложувалка: Научете како да влечете и испуштите"
@@ -632,6 +605,48 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Дебагирање за CDEF едукатори"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Фреквенција Анализа"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Почетни и крајни екрани"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Почетни и крајни екрани2"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Колектор Час на кодот 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Преглед и упатства за поставување"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Испраќање битови на заедничка жица"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Испраќање броеви"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Испраќање броеви"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Емитување пораки"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Рутери и адреси"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Пакети и сигурност"
+        },
+        "netsim/Manual DNS": {
+          "name": "Прирачник DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Автоматски DNS јазол"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Интернет Симулатор Freeplay"
+        },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Црно-бело упатство за пикселација"
         },
@@ -646,6 +661,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Фриплеј на пикселација во боја"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Студија за расположение"
+        },
+        "vigenere/Vigenere": {
+          "name": "Вигенере"
         }
       }
     }

@@ -2261,26 +2261,6 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Bezeztrátová komprese",
           "definition": "algoritmus komprese dat, který umožňuje úplné obnovení původních dat z jejich komprimované podoby. Nejčastěji se používá ke kompresi textu (například komprese ve formátu .zip)"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kód",
-          "definition": "(v) zápis instrukcí pro počítač."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Událost",
-          "definition": "Akce, která způsobí, že se něco stane."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Program ",
-          "definition": "Řada kroků, které byly zakódovány do něčeho, co může být spuštěno strojem."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Atmosféra",
-          "definition": "vyjádření pocitu, nálady nebo emoce v umění nebo textu."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Verš",
-          "definition": "(poezie) – dílčí část básně, uspořádaná do řádku, který končí na pravém okraji. "
         }
       }
     }

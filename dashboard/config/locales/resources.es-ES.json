@@ -8196,7 +8196,6 @@
           "type": "Recurso"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Vídeo"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -10753,6 +10752,10 @@
           "url": "https://youtu.be/5UMKeMPCa7E",
           "type": "Vídeo"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Funciones",
+          "type": "Diapositivas"
+        },
         "exemplar_1_-_city_silhouette/csd/2023": {
           "name": "Ejemplo 1 - Silueta de Ciudad",
           "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
@@ -12820,7 +12823,7 @@
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "Red de visión artificial",
-          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
+          "url": "https://docs.google.com/document/d/1IozBvuIrH_bawlXIqQZHBiiUlM5orjvjsjjWn8FyOr4/view",
           "type": "Guía de Actividad"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
@@ -13142,11 +13145,6 @@
           "name": "Vídeo: Compresión de Texto con Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Vídeo"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Lista de Poemas",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "Diapositivas"
         }
       }
     }

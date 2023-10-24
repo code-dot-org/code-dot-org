@@ -2261,7 +2261,6 @@
           "type": "Βίντεο"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Βίντεο"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
@@ -3122,6 +3121,9 @@
           "name": "Συναρτήσεις με παραμέτρους",
           "type": "Βίντεο"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Συναρτήσεις"
+        },
         "student_rubric_-_interactive_art/csd/2023": {
           "type": "Κατάλογος"
         },
@@ -3955,11 +3957,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Βίντεο"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

@@ -117,7 +117,7 @@ mi:
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
         mc:
-          title: Hour of Code Mahimaina
+          title: Kiri Māia Mahimaina
           description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
           description_short: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
           student_description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
@@ -963,6 +963,8 @@ mi:
               display_name: Ihirangi
             lessonGroup-2:
               display_name: Ihirangi
+        dance-unplugged:
+          title: Te Pāti Kanikani Purukore
         spelling-bee:
           title: Ohu Takikupu
         csa5-exemplars:

@@ -6373,7 +6373,7 @@ sq-AL:
             4 herë 3 bënë 12!
           text: '20'
         questions:
-        - text: Shikoni nga afër kodin më poshtë. Sa kunguj do të mbledhë fermeri
+        - text: Shikoni nga afër kodin më poshtë. Sa kunguj do të mbledhë fermerja
             pasi të klikoni "Ekzekuto"?
       courseC_multi_maze_debugging8_predict1:
         answers:
@@ -6452,8 +6452,8 @@ sq-AL:
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - correct: true
-          feedback: E pasaktë. Së pari, Scrat kthen drejtimin e gabuar, pastaj scrat
-            nuk ecën përpara mjaftueshëm për të arritur te lajthia.
+          feedback: E pasaktë. Së pari, Scrat kthehet në drejtimin e gabuar, pastaj
+            Scrat nuk ecën përpara mjaftueshëm për të arritur te lajthia.
           text: Scrat do të arrijë te lajthia. Nuk ka gabime në kod.
         - correct: true
           feedback: E saktë! Së pari, Scrat kthehet në drejtimin e gabuar, pastaj
@@ -6537,16 +6537,16 @@ sq-AL:
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - correct: true
-          feedback: I pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
+          feedback: E pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
           text: Zogu do të përfundojë një hap më larg nga derri.
         - correct: true
           feedback: E saktë!
-          text: Zogu do të arrijë deri tek derri.
+          text: Zogu do të arrijë deri te derri.
         - correct: true
-          feedback: I pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
+          feedback: E pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
           text: Zogu do të vrapojë në TNT.
         - correct: true
-          feedback: I pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
+          feedback: E pasaktë. Ky kod e dërgon zogun në mënyrë perfekte te derri.
           text: Zogu do të vrapojë në mur.
         questions:
         - text: Lexoni me shumë kujdes kodin e mëposhtëm. Çfarë do të ndodhë kur klikoni
@@ -8388,9 +8388,9 @@ sq-AL:
         display_name: Praktika me evente
         teacher_markdown: |-
           # Përmbledhje e nivelit të zgjedhjes
-          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënëssit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) dëshirojnë.
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) dëshirojnë.
 
-          Ju mund të përdorni përshkrimet e mëposhtme për t'i ndihmuar studentët të zgjedhin vetë zgjedhjet, ose për të vendosur pritshmëri rreth numrit të nënniveleve që duhet të plotësojnë.
+          Ju mund të përdorni përshkrimet e mëposhtme për t'i ndihmuar nxënësit të zgjedhin vetë zgjedhjet, ose për të vendosur pritshmëri rreth numrit të nënniveleve që duhet të plotësojnë.
 
           |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Blast Off!|Mësoni të fluturoni|Bëni një rrotullim me fuçi|Tkurruni dhe Rrituni|Shfryni peshkun!|Pinguini në lëvizje|
           |-|-|-|-|-|-|-|

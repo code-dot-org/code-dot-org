@@ -83,7 +83,7 @@ sq:
       title: 'Bashkohu në sesion në Code.org'
       placeholder: "Kodi i Sesionit (ABCDEF)"
       instructions: "Ju lutemi shkruani kodin me 6 shkronja që mësimdhënësi juaj ndau me ju (shembull: “ABCDEF”) për t'u bashkuar me sesionin e tyre."
-      instructions_short: "Fut kodin e seksionit me 6 shkronja"
+      instructions_short: "Vendosni kodin tuaj të seksionit me 6 shkronja"
       submit: 'Bashkohu'
   add_hint_form:
     placeholder: 'Të lutem fut udhëzimin tënd këtu'
@@ -110,14 +110,14 @@ sq:
   prize: 'çmim'
   more_info: 'Më shumë informacion'
   auth:
-    continue_with: 'Hyr me %{provider}'
+    continue_with: 'Vazhdoni me %{provider}'
     sign_in_with: 'Logohu me %{provider}'
     signed_in: 'U loguat!'
     signed_out_markdown: '### Ju jeni ç''kyçur nga [Code.org](%{url}).'
     sign_out_of_markdown: '#### Ju keni përdorur %{provider} për t''u kyçur. <a href="%{url}">Klikoni këtu për tu ç''kyçur nga %{provider}.'
     already_signedup: 'Jeni regjistruar?'
     notyet_signedup: "Nuk jeni të regjistruar akoma?"
-    google_oauth2: 'Llogaria e Google'
+    google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
@@ -226,9 +226,9 @@ sq:
     school_organization_name: 'Emri i shkollës/organizatës'
     school_organization_zip: 'Kodi postar i shkollës/organizatës'
   signin_form:
-    title: 'Ke një llogari ekzistuese? Logohu'
+    title: 'Ke një llogari ekzistuese? Kyçu'
     login: 'Email'
-    login_username: 'Email-i ose emri i përdoruesit'
+    login_username: 'Email ose Emri i përdoruesit'
     password: 'Fjalëkalimi'
     remember: 'Më mbaj mend'
     submit: 'Kyçu'
@@ -373,9 +373,9 @@ sq:
       about_contact: "Na kontaktoni"
       about_faqs: "(FAQ) Pyetjet e shpeshta"
       learn: "Mëso"
-      stats: "statistikat"
+      stats: "Statistikat"
       help_us: "Na ndihmoni"
-      teach: "Mësoj"
+      teach: "Mësoni"
       about: "Rreth"
       incubator: "Inkubatori"
       legal: "Privatësia & Ligjore"
@@ -390,7 +390,7 @@ sq:
       my_projects: 'Projektet e mia'
       settings: 'Llogaria ime'
       logout: 'Dil'
-      signin: 'Futu'
+      signin: 'Kyçu'
       signup: 'Krijo një llogari'
       already_registered: 'Jeni i rregistruar?'
       pair_programming: 'Programimi në ekip'
@@ -618,7 +618,7 @@ sq:
       link: "Mëso më shumë"
       applab_unsupported_tablet: "App Lab punon më së miri në një kompjuter desktop ose laptop me një mouse dhe tastierë. Mund të hasni probleme duke përdorur këtë mjet në pajisjen tuaj aktuale."
       gamelab_unsupported_tablet: "Loja Lab punon më së miri në një kompjuter desktop ose laptop me një mouse dhe tastierë. Mund të hasni probleme duke përdorur këtë mjet në pajisjen tuaj aktuale."
-      weblab_unsupported_locale_storage: "Ju mund të hasni probleme duke përdorur Web Lab në modalitetin e Shfletimit Privat. Ju lutemi ringarkoni projektin tuaj në gjendje normal. Na vjen keq për shqetësimin."
+      weblab_unsupported_locale_storage: "Ju mund të hasni probleme duke përdorur Web Lab në modalitetin e shfletimit privat. Ju lutemi ringarkoni projektin tuaj në gjendje normal. Na vjen keq për shqetësimin."
   deprecation:
     algebra_lab: " Sjkencat Kompjuterike në kurrikulën dhe përmbajtjen e Algjebër po zhvlerësohet. Brenda disa muajve të ardhshëm, ky laborator nuk do të jetë më i disponueshëm. Ju lutem shikoni [Bootstrap: Algjebra] ()%{bootstrap_algebra_url}në vend të kësaj. [Mëso më shumë] (%{cs_algebra_url})."
   slow_loading: 'Kjo po zgjat më shumë seç duhet...'

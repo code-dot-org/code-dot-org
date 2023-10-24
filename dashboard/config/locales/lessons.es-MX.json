@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Concurso de Ortografía"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Primeros pasos"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de la informática"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Mirar hacia Adelante"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Dominio de los conceptos básicos: secuencias"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Dominio de los conceptos básicos: bucles"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Dominio de los conceptos básicos: condicionales"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Dominio de los conceptos básicos: funciones"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Dominio de los conceptos básicos: eventos"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Mejores prácticas para la enseñanza de ciencias de la computación"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planificación"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Próximos pasos"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introducción a la resolución de problemas"
         },
@@ -2281,6 +2314,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Una batalla real con eventos"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bienvenido a \"Cómo enseñar los Fundamentos de Ciencias de la Computación\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Cursos de comprensión de los Fundamentos de Ciencias de la Computación"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Secuencias"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionales"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Proyectos de fin de curso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funciones"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucles Para"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratorio de sprites"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Revisión de tus reflexiones"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Próximos pasos"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Seguridad en mi Vecindario de Internet"
@@ -4673,6 +4745,39 @@
           "preparation": "-   Realiza los desafíos para encontrar cualquier área potencialmente problemática para los estudiantes.\n-   (Opcional) Elige un par de desafíos para hacer en conjunto con la clase.\n-   Asegúrate de que cada estudiante tenga su Diario de apuntes.",
           "purpose": "En esta actividad en línea, los estudiantes aprenderán a usar eventos en Play Lab. Empezarán entrenando al\ncaballero para que se mueva cuando una flecha sea presionada y, finalmente, tendrán la oportunidad de mostrar el resto de las habilidades que han adquirido a lo largo de este curso, incluidas el uso de secuencias y bucles, como parte de un desafío libre.",
           "student_overview": "Usa los eventos para crear una historia o un juego interactivo."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Primeros pasos"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de la informática"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Mirar hacia Adelante"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Dominio de los conceptos básicos: secuencias"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Dominio de los conceptos básicos: bucles"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Dominio de los conceptos básicos: condicionales"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Dominio de los conceptos básicos: funciones"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Dominio de los conceptos básicos: eventos"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Mejores prácticas para la enseñanza de ciencias de la computación"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planificación"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Próximos pasos"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introducción a la resolución de problemas",
@@ -8492,9 +8597,6 @@
           "overview": "⚠️ Esta lección está pensada para aulas que quieran mostrar toda la [serie de videos Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) en un **solo día**. No se pretende que se imparten en secuencia con las demás lecciones de esta unidad, que introduce cada video un día a la vez.\n\nLos estudiantes siguen cada video haciendo coincidir el vocabulario del video, luego respondiendo una pregunta de reflexión sobre cada video. El plan de lección y las diapositivas son muy escasas y abiertas para permitir la improvisación y la personalización para adaptarse a su salón de clases.",
           "preparation": "-   Imprime la guía de actividades\n-   Proyecta las diapositivas en un proyector de video"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "La hora del código 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Introducción al Laboratorio de aplicaciones",
           "overview": "Este tutorial está diseñado para introducir rápidamente el entorno de programación del Laboratorio de Aplicaciones como una poderosa herramienta para construir y compartir aplicaciones. El propio tutorial enseña a los alumnos a crear y controlar botones, texto, imágenes, sonidos y pantallas en JavaScript utilizando bloques o texto. Al final del tutorial, los estudiantes tienen tiempo para ampliar el proyecto que empezaron a construir y convertirlo en una aplicación de \"Elige tu Propia Aventura\", \"Tarjeta de Felicitación\" o \"Test de Personalidad\". También pueden continuar construyendo más proyectos que aparecen en la página code.org/applab. \n\n¡Diviértete completando tu Hora del Código con el Laboratorio de Aplicaciones!\n\n**Edad Apropiada:** El tutorial está diseñado para estudiantes mayores de 13 años. Debido a que permite a los estudiantes cargar sonidos e imágenes personalizadas, los estudiantes jóvenes no deberían utilizarlo sin supervisión. Para proteger la privacidad de los estudiantes, si tus alumnos son menores de 13 años, no podrán utilizar este tutorial a menos que primero configures cuentas para ellos en una sección que administres.",
@@ -8671,9 +8773,10 @@
           "student_overview": "Resumen de la tutoría: En primer lugar, los alumnos clasifican los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, los alumnos deberán ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias etiquetas para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de etiquetar nuevas imágenes por sí mismo."
         },
         "outbreak/Outbreak": {
+          "name": "Como programar una simulación",
           "overview": "En esta lección, los alumnos crearán un simulador de brote epidémico utilizando sucesos. Los alumnos estudiarán la simulación para comprender la rapidez con la que puede propagarse un virus y lo que se puede hacer para frenar el contagio. ",
-          "preparation": "-  Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-  Asegúrate de que cada estudiante tenga un diario de reflexión.",
-          "purpose": "En la lección anterior, los alumnos recopilaron e interpretaron los datos de una simulación sencilla.  En esta lección, los alumnos seguirán las instrucciones para codificar su propio modelo de simulación. Los conocimientos previos de los alumnos sobre los brotes de virus en el mundo real se aplicarán a un escenario ficticio. ",
+          "preparation": "Una semana antes de la Hora del Código\n\n-   Revisa la [Guía del Educador de la Hora del Código](https://hourofcode.com/us/how-to) y las [Mejores Prácticas de Educadores Exitosos](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para comenzar a planear tu evento de la Hora del Código.\n\n-   Registra tu evento de La Hora del Código][2] si quieres obtener apoyo en el aula, carteles con descuento o participar en el sorteo de robótica (sólo en EE.UU.).\n\n-   Revisa y completa tú mismo el tutorial en línea: [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   Asegúrate de probarlo antes de pedir a tus alumnos que lo completen. \n\n-   Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.\n\n#### Un día antes de la Hora del Código\n\n-   Cada estudiante que complete la actividad debe recibir un [certificado](https://studio.code.org/certificates/batch). Imprime uno para cada alumno con antelación para facilitar la entrega al final de la Hora del Código.\n\n-   (opcional) Anima a los alumnos a traer auriculares para usarlos durante la actividad.",
+          "purpose": "En esta lección, los alumnos seguirán las instrucciones para codificar su propio modelo de simulación. Los conocimientos previos de los alumnos sobre los brotes de virus en el mundo real se aplicarán a un escenario ficticio. ",
           "student_overview": "¡Un virus ha llegado a Monster Town! Aprende a crear un simulador de virus y ayuda a los monstruos a volver a estar sanos."
         },
         "playlab/Play Lab": {
@@ -8716,72 +8819,6 @@
           "preparation": "-   Prueba el Widget de Compresión de Texto\n-   Revisa los consejos de enseñanza para decidir qué opciones quieres utilizar",
           "purpose": "El principio básico de la compresión es desarrollar un método o protocolo que permita utilizar menos bits para representar la información original. La forma en que representamos los datos comprimidos en esta lección, con un \"diccionario\" de patrones repetidos, es similar al [esquema de compresión LZW](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), pero hay que tener en cuenta que LZW es ligeramente diferente de lo que los alumnos hacen en esta lección.  Aquí los alumnos inventan su propio camino.  LZW se utiliza no sólo para el texto (archivos zip), sino también con el formato de archivo de imagen GIF.",
           "student_overview": "En algún momento llegamos a un límite físico de la velocidad a la que podemos enviar los bits y si queremos enviar una gran cantidad de información más rápido, tenemos que encontrar una manera de representar la misma información con menos bits: debemos comprimir los datos.  "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Sala de escape"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Diseño digital"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Programación orientada por eventos"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Funcionalidad básica de la aplicación"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters y setters"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Análisis de frecuencia"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Pantallas de inicio y fin"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Pantallas de inicio y fin2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Hora del Código de la Recolectora 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Instrucciones generales y de configuración"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Red de compañeros - Envío de bits en un cable compartido"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Red de compañeros - Envío de números"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Red de compañeros - Envío de Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Difusión de mensajes"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Enrutadores y direcciones"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Paquetes y confiabilidad"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS manual"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nodo DNS automático"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Juego libre de simulador de Internet"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget de cuentakilómetros"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Estudio de Humor"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Rompecabezas"
@@ -8920,6 +8957,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Música"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Sala de escape"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Diseño digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programación orientada por eventos"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcionalidad básica de la aplicación"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters y setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Encuesta de fin de curso para estudiantes de CSD ('18-'19)"
@@ -9230,12 +9282,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Depuración para educadores de CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Análisis de frecuencia"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Pantallas de inicio y fin"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Pantallas de inicio y fin2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "La hora del código 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Rompecabezas",
           "overview": "Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.",
           "preparation": "-   Consulta el sitio web de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para ver más contenidos sobre seguridad en línea.",
           "purpose": "El objetivo principal de esta lección es que los alumnos adquieran experiencia con los ordenadores. Al cubrir las funciones informáticas más básicas, como hacer clic, arrastrar y soltar, estamos creando un campo de juego más igualitario en la clase para futuros rompecabezas. Esta lección también ofrece una gran oportunidad para introducir la terminología básica del hardware del ordenador, incluyendo potencialmente \"ratón\", \"trackpad\" o \"pantalla táctil\", dependiendo de sus dispositivos.",
           "student_overview": "Haz clic y arrastra para terminar los desafíos."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hora del Código de la Recolectora 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Instrucciones generales y de configuración"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Red de compañeros - Envío de bits en un cable compartido"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Red de compañeros - Envío de números"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Red de compañeros - Envío de Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Difusión de mensajes"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Enrutadores y direcciones"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paquetes y confiabilidad"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS manual"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nodo DNS automático"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Juego libre de simulador de Internet"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget de cuentakilómetros"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Tutorial de pixelación en blanco y negro"
@@ -9251,6 +9351,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Juego libre de pixelación en color"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Estudio de Humor"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

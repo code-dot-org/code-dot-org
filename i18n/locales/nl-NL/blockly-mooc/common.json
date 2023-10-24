@@ -1198,6 +1198,8 @@
   "noneOfTheAbove": "Geen van allen",
   "note": "*Opmerking:",
   "notSaved": "Niet opgeslagen",
+  "notSignedInHeader": "Je bent niet ingelogd",
+  "notSignedInBody": "Je hebt geen account nodig om aan deze les te werken, maar als je je werk wilt opslaan, vergeet dan niet om je aan te melden of een account aan te maken voordat je begint.",
   "notStarted": "Niet gestart",
   "nPoints": "{numPoints, plural, one {1 point} other {# points}}",
   "numMultipleChoiceCorrect": "# multiple choice correct",

@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Soletrando"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Iniciando"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de Ciência da Computação"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Olhando para o futuro"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Dominando o básico: Sequenciamento"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Dominando o básico: Ciclos"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Dominando o básico: Condicionais"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Dominando o básico: Funções"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Dominando o básico: Eventos"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Melhores Práticas para o Ensino de Ciência da Computação"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planejamento"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Próximas etapas"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introdução a Resolução de problemas"
         },
@@ -2270,6 +2303,45 @@
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Um Battle Royal com eventos"
         },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bem-vindo ao \"Ensinando os Fundamentos da Ciência da Computação\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Compreendendo os cursos de Fundamentos de Ciência da Computação"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sequenciamento"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ciclos"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionais"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projetos de fim de curso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funções"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variáveis"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Ciclos \"for\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratório de Sprite"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Revendo suas reflexões"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Próximos passos"
+        },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "Aprenda a arrastar e soltar"
         },
@@ -2649,7 +2721,11 @@
           "name": "Um Battle Royal com eventos"
         },
         "csd1-2021/Intro to Problem Solving": {
-          "name": "Introdução a Resolução de problemas"
+          "name": "Introdução a Resolução de problemas",
+          "overview": "**Pergunta do dia: O que pode nos ajudar a trabalhar juntos e resolver problemas como uma equipe?**\n\nNesta lição, os alunos trabalham em grupos para projetar barcos de papel alumínio que suportem o máximo de centavos possível. Os grupos têm duas rodadas para trabalhar em seus barcos, com o objetivo de tentar manter mais centavos do que na rodada 1. A estrutura da atividade prenuncia diferentes etapas do processo de solução de problemas aos quais os alunos serão apresentados com mais detalhes na lição seguinte. No final da lição, os alunos refletem sobre suas experiências com a atividade e estabelecem conexões com os tipos de solução de problemas que farão pelo restante do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.**",
+          "preparation": "**Para cada grupo**\n\n-   2 lâminas de papel alumínio de 5x5 polegadas de comprimento cada\n-   1 recipiente que pode conter 3-5 polegadas de água \n-   Várias toalhas de papel ou trapos que podem ser colocados sob o recipiente \n-   15 centavos (em moedas de 1) \n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 recipiente que pode conter 3-5 polegadas de água \n-   50 centavos (em moedas de 1) \n-   Toalhas de papel ou trapos extras ",
+          "purpose": "Esta lição é uma introdução divertida à solução de problemas aberta, colaborativa e criativa que os alunos usarão no restante desta unidade e curso. O problema dos barcos de alumínio pode ser facilmente substituído por qualquer outro problema que exija que os alunos definam suas metas, elaborem um plano, tentem uma solução, avaliem seus resultados e, a partir daí, melhorem iterativamente. O fato de o problema escolhido ser “não computacional” é intencional. A ciência da computação é fundamentalmente uma disciplina de resolução de problemas e ficar longe dos problemas tradicionais da ciência da computação neste momento ajuda a enquadrar essa classe como uma aula sobre resolução de problemas de forma mais geral, sendo a ciência da computação uma nova “ferramenta” para ajudar a atacar certos tipos de problemas. ",
+          "student_overview": "\\*\\*Pergunta do dia: O que pode nos ajudar a trabalhar juntos e resolver problemas em equipe? \\*\\*\n\nVocê trabalhará com um grupo para projetar e testar um barco de papel alumínio que suportará o máximo de centavos possível. "
         },
         "csd1-2021/The Problem Solving Process": {
           "name": "O Processo de Resolução de Problemas"
@@ -3767,8 +3843,44 @@
           "purpose": "Nesta atividade on-line, os estudantes irão aprender a usar eventos no Play Lab. Eles começarão treinando o cavaleiro para se mover quando uma tecla de direção for pressionada, depois concluir com a oportunidade de demonstrar as outras habilidades aprendidas durante este curso, inclusive sequências e laços, como parte de seu quebra-cabeça livre.",
           "student_overview": "Use eventos para criar uma história ou criar um jogo interativo."
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Iniciando"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de Ciência da Computação"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Olhando para o futuro"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Dominando o básico: Sequenciamento"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Dominando o básico: Ciclos"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Dominando o básico: Condicionais"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Dominando o básico: Funções"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Dominando o básico: Eventos"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Melhores Práticas para o Ensino de Ciência da Computação"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planejamento"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Próximas etapas"
+        },
         "csd1-2022/Intro to Problem Solving": {
-          "name": "Introdução a Resolução de problemas"
+          "name": "Introdução a Resolução de problemas",
+          "overview": "**Pergunta do dia: O que pode nos ajudar a trabalhar juntos e resolver problemas como uma equipe?**\n\nNesta lição, os alunos trabalham em grupos para projetar barcos de papel alumínio que suportem o máximo de centavos possível. Os grupos têm duas rodadas para trabalhar em seus barcos, com o objetivo de tentar manter mais centavos do que na rodada 1. A estrutura da atividade prenuncia diferentes etapas do processo de solução de problemas aos quais os alunos serão apresentados com mais detalhes na lição seguinte. No final da lição, os alunos refletem sobre suas experiências com a atividade e estabelecem conexões com os tipos de solução de problemas que farão pelo restante do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.**",
+          "purpose": "Esta lição é uma introdução divertida à solução de problemas aberta, colaborativa e criativa que os alunos usarão no restante desta unidade e curso. O problema dos barcos de alumínio pode ser facilmente substituído por qualquer outro problema que exija que os alunos definam suas metas, elaborem um plano, tentem uma solução, avaliem seus resultados e, a partir daí, melhorem iterativamente. O fato de o problema escolhido ser “não computacional” é intencional. A ciência da computação é fundamentalmente uma disciplina de resolução de problemas e ficar longe dos problemas tradicionais da ciência da computação neste momento ajuda a enquadrar essa classe como uma aula sobre resolução de problemas de forma mais geral, sendo a ciência da computação uma nova “ferramenta” para ajudar a atacar certos tipos de problemas. ",
+          "student_overview": "\\*\\*Pergunta do dia: O que pode nos ajudar a trabalhar juntos e resolver problemas em equipe? \\*\\*\n\nVocê trabalhará com um grupo para projetar e testar um barco de papel alumínio que suportará o máximo de centavos possível. "
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "O Processo de Resolução de Problemas"
@@ -5999,9 +6111,6 @@
           "overview": "⚠️ Esta lição é destinada a salas de aula que desejam mostrar toda a [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) em um único dia\\*\\*. Não se destina a ser ensinado em sequência com as outras lições desta unidade, que apresenta cada vídeo um dia de cada vez.\n\nOs alunos acompanham cada vídeo combinando o vocabulário do vídeo e respondendo a uma pergunta de reflexão sobre cada vídeo. O plano de aula e os slides são muito esparsos e abertos para permitir a improvisação e a personalização de acordo com sua sala de aula.",
           "preparation": "-   Imprima o guia de atividades\n-   Projete os slides em um projetor de vídeo"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hora do Código 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Introdução Laboratório de Aplicativos",
           "student_overview": "Ao final do tutorial, você poderá expandir um projeto que há começou a desenvolver, transformando-o em um aplicativo de “Escolha sua própria aventura”, “Cartão de boas festas” ou “Teste de personalidade”. Você também poderá continuar e desenvolver mais projetos em destaque na página code.org/applab. \n\nDivirta-se no seu treinamento do Hour of Code com o Laboratório de Aplicativos!"
@@ -6120,10 +6229,7 @@
           "student_overview": "Resumo do Tutorial: primeiro os estudantes classificam objetos como \"peixe\" ou \"não peixe\" para tentar remover o lixo do oceano. Em seguida, eles precisarão expandir seu conjunto de dados para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, irão escolher suas próprias marcações para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que depois deve ser capaz de marcar novas imagens sozinho."
         },
         "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Codificação da simulação"
         },
         "playlab/Play Lab": {
           "name": "Laboratório",
@@ -6148,72 +6254,6 @@
         "text-compression/Text Compression": {
           "name": "Compressão de texto",
           "student_overview": "Em algum ponto, atingiremos o limite físico da velocidade com que podemos enviar bits, e se quisermos enviar um grande volume de informações mais rapidamente, teremos de encontrar um meio de representar essas informações com menos bits – teremos de compactar os dados. "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Fuga do quarto"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Design digital"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Programação Orientada a Eventos"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Funcionalidade básica do aplicativo"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters e Setters"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Análise de Freqüência"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Telas de início e fim"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Telas de início e fim 2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Hora do Código do Coletor 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Visão Geral e Instruções de Configuração"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Ponto a Ponto - Enviando Bits em um cabo compartilhado"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Ponto a Ponto - Enviando Números"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Ponto a Ponto - Enviando Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Transmitindo mensagens"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Rotas e endereços"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pacotes e Confiabilidade"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS Manual"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nó DNS Automático"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Simulador de Internet Gratuito"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget de hodômetro"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Estudo de ambiência"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenère"
         },
         "allthethings/Jigsaw": {
           "name": "Quebra-cabeças"
@@ -6349,6 +6389,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Música"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Fuga do quarto"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Design digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programação Orientada a Eventos"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcionalidade básica do aplicativo"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters e Setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD pesquisa pós-curso de estudantes ('18'19)"
@@ -6659,10 +6714,58 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Depuração para educadores da CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Análise de Freqüência"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Telas de início e fim"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Telas de início e fim 2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora do Código 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Quebra-cabeças",
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
           "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hora do Código do Coletor 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Visão Geral e Instruções de Configuração"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Ponto a Ponto - Enviando Bits em um cabo compartilhado"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Ponto a Ponto - Enviando Números"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Ponto a Ponto - Enviando Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Transmitindo mensagens"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Rotas e endereços"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pacotes e Confiabilidade"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS Manual"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nó DNS Automático"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulador de Internet Gratuito"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget de hodômetro"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Tutorial de pixelização em preto e branco"
@@ -6678,6 +6781,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Pixelização colorida gratuita"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Estudo de ambiência"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenère"
         }
       }
     }

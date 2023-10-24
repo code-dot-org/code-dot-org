@@ -35,6 +35,10 @@ is:
   africa_campaign_date_full: 1. október - 18. desember
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1. október 2022 - 18. desember 2022
+  hoc2023_header: Sköpun með AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Hvað ætlar þú að búa til?
+  hoc2023_social_creativity_with_ai_desc: Notaðu tölvunarfræði til að kanna og læra
+    um AI!
   hoc2022_header: Kannaðu, spilaðu, búðu til!
   social_hoc2022_explore_play_create: Notaðu tölvunarfræði til að kanna, spila og
     búa til!
@@ -173,6 +177,32 @@ is:
   curriculum_launch_2023_desc: Uppfærslur á CSC, CSP, CSD og fleira - auk nýrrar Curriculum
     Catalog og endurhannað Kenna síðu til að hjálpa þér að finna það allt!
   in_partnership_with: Í samstarfi við
+  shop_code_dot_org_heading: Verslaðu Code.org
+  shop_code_dot_org_desc: Styðjið starf okkar og klæðið hreyfingunni með stolti. Húfur
+    okkar hafa verið borinn af forseta Obama og orðstír líka.
+  spread_the_word_heading: Láta þetta berast
+  spread_the_word_desc: Magnaðu áhrif okkar með því að deila Code.org með netkerfinu
+    þínu. Uppgötvaðu hvernig þú getur hjálpað okkur að ná til fleiri kennara, nemenda
+    og talsmanna, allt frá samfélagsmiðlum til tölvupóstuppfærslna.
+  follow_us_heading: Fylgdu okkur á samfélagsmiðlum
+  follow_us_desc: Fylgstu með okkur á samfélagsmiðlum og deildu færslunum okkar með
+    netkerfinu þínu til að vera upplýst og hjálpa til við að vekja athygli.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tafla
+  device_laptop: fartölvu
+  device_desktop_computer: Skrifborð tölva
+  device_mobile_device: Farsími
+  subscribe_to_emails_heading: Gerast áskrifandi að tölvupósti
+  subscribe_to_emails_desc: Lestu um hvað er að gerast á Code.org og í tölvunarfræðikennslu
+    með ársfjórðungslegum uppfærslum í gegnum póstlistann okkar.
+  subscribe_to_emails_intl: Gerast áskrifandi að alþjóðlegum uppfærslum
+  promote_code_dot_org_heading: Efla Code.org
+  promote_code_dot_org_desc: Efla tölvunarfræði á þínu svæði með hjálp tölfræði, vitna,
+    og myndbönd.
   afe_partnership_logo_alt: Amazon Future Engineer merki
   afe_partnership_thanks_desc: Amazon Future Engineer alhliða barna-til-starfsferill
     program til að hvetja, mennta, og þjálfa lág-tekjur og önnur illa börn og ungt
@@ -190,19 +220,48 @@ is:
   curricula_title_high: High School námskrár
   curricula_desc_high: Skoðaðu sannfærandi námskeið og athafnir sem bjóða þér og framhaldsskólanemum
     þínum að grafa dýpra í tölvunarfræði.
+  for_administrators_heading: Fyrir stjórnendur
+  for_administrators_desc: Vertu með í þúsundum skóla sem þegar hafa tekið tölvunarfræði
+    inn í námskrá sína.
+  for_parents_heading: Fyrir foreldra
+  for_parents_desc: Þú getur hjálpað til við að hvetja skóla nemandans þíns til að
+    bjóða upp á eða auka tölvunarfræðinám.
+  for_educators_heading: Fyrir fræðara
+  for_educators_desc: Byrjaðu að kenna í dag - engin tölvunarfræði reynsla nauðsynleg
+    - með faglegum námskeiðum okkar.
   students_label: Nemendur
   teachers_label: Kennarar
+  educators_label: Menntamenn
+  companies_label: Fyrirtæki
+  districts_label: Hérað
+  school_assemblies_label: Skólaþing
+  parents_label: Foreldrar
+  public_officials_label: Opinber embættismenn
+  volunteers_label: Sjálfboðaliðar
+  virtual_events_label: Sýndarviðburðir
   teacher_label_csf: CS Undirstöðuatriði Kennari
   teacher_label_csd: CS Uppgötvanir Kennari
   teacher_label_csp: CS Meginreglur Kennari
   teacher_label_csc: CS Tengingar Kennari
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Vettvangur kennara
+  teacher_forum_desc: Heimsæktu Hour of Code Teacher Forum til að fá ráðgjöf, innsýn
+    og stuðning frá öðrum kennurum.
   required_materials: 'Nauðsynleg efni:'
   optional_materials: 'Valfrjálst efni:'
-  call_to_action_explore_roles: Kannaðu opin hlutverk
+  call_to_action_hold_an_event: Halda viðburð
+  call_to_action_register_event: Skráðu viðburðinn þinn
+  call_to_action_select_activity: Veldu virkni
+  call_to_action_start_activity: Byrjaðu virkni
+  call_to_action_get_certificates: Fáðu vottorð
+  call_to_action_go_beyond_hoc: Fara út fyrir klukkutíma kóðans
+  call_to_action_view_promo_resources: Skoða kynningarauðlindir
   call_to_action_learn_more: Nánar
   call_to_action_watch_now: Fylgstu með núna
   call_to_action_try_activity: Prófaðu virkni
+  call_to_action_try_activities: Prófaðu athafnir
+  call_to_action_explore_activities: Kannaðu starfsemi
+  call_to_action_explore_ai: Kannaðu AI
   call_to_action_explore_unit: Explore eining
   call_to_action_explore_curriculum: Skoða námskrá
   call_to_action_explore_curriculum_options: Kannaðu valkosti fyrir námskrá
@@ -255,6 +314,7 @@ is:
   call_to_action_find_self_paced_modules: Finndu sjálf-skref mát
   call_to_action_join_teacher_forums: Taktu þátt í umræðunum kennara
   call_to_action_explore_teacher_forums: Kannaðu ráðstefnur kennara
+  call_to_action_explore_teacher_forum: Kannaðu vettvang kennara
   call_to_action_explore_career_resources: Kannaðu auðlindir starfsferils
   call_to_action_watch_videos: Horfðu á myndbönd
   call_to_action_download_posters: Sækja veggspjöld
@@ -271,11 +331,31 @@ is:
   call_to_action_notify_available: Láttu mig vita þegar það er í boði
   call_to_action_register_early_access: Skráðu þig fyrir snemma aðgang
   call_to_action_open_positions: Skoða opnar stöður
+  call_to_action_explore_roles: Kannaðu opin hlutverk
   call_to_action_get_guide: Fáðu leiðarvísinn
   call_to_action_donate_to_cdo: Gefa til Code.org
   call_to_action_start_fundraiser: Hefja fjáröflun
   call_to_action_view_donation_policy: Skoða stefnu um framlag
   call_to_action_view_donate_bitpay: Gefðu með BitPay
+  call_to_action_make_a_donation: Gerðu framlag
+  call_to_action_other_ways_to_give: Aðrar leiðir til að gefa
+  call_to_action_become_partner_usa: Gerast samstarfsaðili Bandaríkjanna
+  call_to_action_become_partner_intl: Gerast alþjóðlegur samstarfsaðili
+  call_to_action_become_a_volunteer: Gerast sjálfboðaliði
+  call_to_action_start_translating: Byrjaðu að þýða
+  call_to_action_learn_about_advocacy: Lærðu um málsvörn okkar
+  call_to_action_visit_store: Heimsæktu verslunina
+  call_to_action_view_faqs: Skoða fleiri algengar spurningar
+  aria_label_call_to_action_hoc_how_to_educators: Skoða leiðbeiningar fyrir kennara
+  aria_label_call_to_action_hoc_how_to_companies: Skoða leiðbeiningar fyrir fyrirtæki
+  aria_label_call_to_action_hoc_how_to_districts: Skoða leiðbeiningar fyrir héruð
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Skoða leiðbeiningar fyrir
+    skólaþing
+  aria_label_call_to_action_hoc_how_to_parents: Skoða leiðbeiningar fyrir foreldra
+  aria_label_call_to_action_hoc_how_to_public_officials: Skoða leiðbeiningar fyrir
+    opinbera embættismenn
+  aria_label_call_to_action_hoc_how_to_volunteers: Skoða leiðbeiningar fyrir sjálfboðaliða
+  aria_label_call_to_action_hoc_how_to_virtual_events: Skoða leiðbeiningar fyrir sýndarviðburði
   aria_label_call_to_action_afe: Lærðu meira um Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Byrjaðu Kennsla Tölvunarfræði Undirstöðuatriði
     faglega nám program
@@ -599,6 +679,7 @@ is:
   heading_these_lessons_will: 'Þessar kennslustundir munu:'
   heading_explore_curriculum_catalog: Skoða öll námskeið okkar í Curriculum Catalog
   heading_csa_ai: Ertu að leita að hlutum til að gera eftir AP® prófið?
+  heading_bring_cs_to_students: Koma tölvunarfræði til nemenda
   professional_learning_section_desc: Fáðu þann stuðning sem þú þarft þegar þú býrð
     þig undir að kenna. Kennarar elska það, með yfir 90% röðun það besta faglega þróun
     alltaf!
@@ -862,6 +943,7 @@ is:
     AI fræðslutæki og nýta AI til námsmats. Með ríkri blöndu af kenningum, hagnýtum
     dæmum og úrræðum miðar það að því að styrkja kennara til að vafra um AI landslagið
     og auka námsreynslu nemenda.
+  ai_pl_101_resources_5: Leiðbeiningar um að tryggja ábyrga nálgun við gervigreind
   ai_pl_101_video_desc_6: 'Lærðu meira um nýju tæknina sem knýr fram miklar breytingar
     á AI, með tveimur nýjum myndböndum á Large Language Models (eins og ChatGPT) og
     Generative AI. Heyrðu hvernig þessi nýja tækni virkar beint frá sérfræðingunum:
@@ -872,6 +954,8 @@ is:
     þá bara að dýfa tánum í, auk háþróaður verkfæri fyrir þá sem leita að hámarka
     möguleika þeirra.
   ai_pl_101_resources_3: AI hvetja til að umbreyta námi nemenda
+  ai_pl_101_resources_section_title: Fleiri leiðir til að læra um AI
+  ai_pl_101_resources_guide: 'Félagi fylgja:'
   how_ai_works_hero_heading: Hvernig AI virkar
   how_ai_works_hero_desc: Kafa inn í heim AI með “Hvernig AI virkar,” myndbandsseríurnar
     okkar og meðfylgjandi kennslustundir!
@@ -1697,6 +1781,30 @@ is:
   donate_tabs_bitpay_title: Gefðu með Crypto í gegnum BitPay
   donate_tabs_bitpay_desc: Faðma framtíð gefa með cryptocurrency. Með BitPay getur
     stafrænn gjaldmiðill þinn beint stutt viðleitni Code.org við að auka tölvunarfræðimenntun.
+  help_page_top_heading: Hvernig þú getur hjálpað
+  help_page_top_desc: Styðja verkefni okkar til að gera tölvunarfræði aðgengileg fyrir
+    hvert barn, alls staðar. Viðleitni þín hjálpar okkur að hvetja frumkvöðla framtíðarinnar
+    og brúa bilið á tæknimenntun.
+  help_page_top_subhead: Gerðu framlag til Code.org
+  help_page_top_desc_02: Við erum að vinna að því að gefa öllum nemendum tækifæri
+    til að læra tölvunarfræði - bæði á netinu OG í skólum, þar sem við stofnum fasta
+    námskeið og þjálfum kennara. Fyrir hverja dollara sem þú gefur er eitt barn kynnt
+    tölvunarfræði.
+  help_page_partners_heading: Gerast félagi
+  help_page_partners_desc: Code.org vinnur með öðrum góðgerðasamtökum sem samstarfsaðilum
+    til að hjálpa til við að dreifa tölvunarfræði á staðbundinn, sjálfbæran hátt.
+    Frekari upplýsingar um áætlun okkar.
+  help_page_volunteer_heading: Sjálfboðaliði í kennslustofu
+  help_page_volunteer_desc: Sjálfboðaliði til að kenna Hour of Code eða vera gestafyrirlesari
+    í staðbundinni kennslustofu. Skráðu þig til að heyra um tækifæri nálægt þér.
+  help_page_translate_heading: Hjálpaðu okkur að þýða
+  help_page_translate_desc: Sjálfboðaliðar hafa þýtt námskeiðin okkar á yfir 45 tungumálum.
+    Hjálpaðu okkur að halda áfram að auka námskeið okkar fyrir nemendur um allan heim!
+  help_page_speak_for_cs_heading: Tala upp fyrir tölvunarfræði menntun
+  help_page_speak_for_cs_desc: Lærðu meira um málsvörn Code.org í Bandaríkjunum og
+    tíu stefnur sem við mælum með að ríki taki upp til að gera tölvunarfræði grundvallaratriði
+    fyrir alla nemendur. Auk þess skaltu finna út hvernig þú getur keyrt breytingar
+    á ástandi þínu.
   hoc_live: Klukkutími lifandi kóða
   hoc_live_sign_up_title: Skráðu þig fyrir klukkustund af kóða Live
   hoc_live_learn_title: Lærðu með klukkustund af kóða Live
@@ -12950,6 +13058,127 @@ is:
   all: Allt
   dont_know: Ég veit það ekki
   language_label: Tungumál
+  before_hoc: Fyrir klukkutíma kóðans
+  day_of_hoc: Dagur klukkutíma kóðans
+  after_hoc: Eftir klukkutíma kóðans
+  step_01: Skref 1
+  step_02: Skref 2
+  step_03: Skref 3
+  step_04: Skref 4
+  step_05: Skref 5
+  step_06: Skref 6
+  step_07: Skref 7
+  step_08: Skref 8
+  hoc_how_to_top_heading: Leiðbeiningar þínar um klukkustund kóðans
+  hoc_how_to_top_desc: Sérsniðin leiðbeiningar fyrir bestu upplifun Hour of Code.
+  hoc_how_to_top_view_guide: Skoða leiðbeiningar fyrir
+  hoc_how_to_nav_main_aria_label: Veldu leiðarvísir
+  hoc_how_to_nav_sidebar_aria_label: Stikka siglingar
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: The Hour of Code er einnar klukkustundar kynning
+    á tölvunarfræði og notar skemmtileg námskeið til að sýna að hver sem er getur
+    lært grunnatriðin. Á þessu ári erum við að taka Hour of Code í nýjar hæðir með
+    því að bjóða upp á kóðunarmöguleika sem taka bæði til gervigreindar (AI) og ekki
+    AI hluti. Hvort sem þú eða nemendur þínir eru reyndir coders eða þú allir eru
+    að setja út í fyrsta tölvunarfræði leiðangur þinn, þessi Hour of Code lofar ótrúlega
+    ferð.
+  hoc_how_to_faq_question_prerequisites: Hverjar eru forsendur fyrir því að gera klukkutíma
+    kóða?
+  hoc_how_to_faq_answer_prerequisites: Hour of Code er einfalt að keyra - jafnvel
+    fyrir byrjendur. Þú þarft ekki reynslu í tölvunarfræði eða kennslu til að hvetja
+    nemendur til að kanna, skapa og læra eitthvað nýtt.
+  hoc_how_to_faq_question_devices: Hvaða tæki þarf ég til að keyra klukkutíma kóða?
+  hoc_how_to_faq_answer_devices_01: 'Tæki sem þú getur notað:'
+  hoc_how_to_faq_answer_devices_02: Ef tæki eru takmörkuð eða ófáanleg skaltu prófa
+    [par forritun] (%{pair_url}) eða kanna [unplugged starfsemi] okkar (%{unplugged_url})
+    til að læra án tækja yfirleitt!
+  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_answer_volunteer: Allir sem hafa brennandi áhuga á tölvunarfræði
+    menntun og auka fjölbreytileika í tækni getur verið sjálfboðaliði! Við viljum
+    gjarnan sjá sjálfboðaliða af öllum bakgrunni taka þátt. The Hour of Code er með
+    mikið úrval af starfsemi fyrir alla aldurshópa og færnistig, svo þú þarft ekki
+    að vera forritunarsérfræðingur til að bjóða sig fram!
+  hoc_how_to_faq_question_full_hour: Mun stundin kóðans taka fullan klukkutíma?
+  hoc_how_to_faq_answer_full_hour: Margir nemendur munu geta klárað starfsemi sína
+    á innan við klukkutíma og það er allt í lagi! Nemendur geta haldið áfram að læra
+    á meðan aðrir nemendur ljúka starfsemi sinni.
+  hoc_how_to_faq_question_account: Þurfa nemendur að skrá sig inn með notendaupplýsingum?
+  hoc_how_to_faq_answer_account: Engin skráningu eða innskráningu er krafist til að
+    nemendur geti prófað Hour of Code. Að skrá þig í Hour of Code býr EKKI sjálfkrafa
+    til Code.org reikning.
+  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_promo_heading: Kynningarauðlindir
+  hoc_how_to_resources_promo_desc: Finndu öll úrræði sem þú þarft - prenta og stafræna
+    - til að vekja athygli á Hour of Code þinni.
+  hoc_how_to_resources_discover_heading: Uppgötvaðu starfsemi
+  hoc_how_to_resources_discover_desc: Kannaðu mikið úrval af einnar klukkustundar
+    námskeiðum sem eru hönnuð fyrir alla aldurshópa á yfir 45 tungumálum.
+  hoc_how_to_step_label_plan: Skipuleggðu hvar og hvenær þú munt gera klukkutímann
+    þinn
+  hoc_how_to_step_label_choose_activity: Veldu virkni þína
+  hoc_how_to_step_label_test_activity: Prófaðu virkni þína
+  hoc_how_to_step_label_register_event: Skráðu viðburðinn þinn
+  hoc_how_to_step_label_tell: Segðu nemendum þínum, skólanum og samfélaginu
+  hoc_how_to_step_label_get_coding: Fáðu kóðun!
+  hoc_how_to_step_label_celebrate: Fagnaðu
+  hoc_how_to_step_label_beyond_hoc: Fyrir utan klukkutíma kóðans
+  hoc_how_to_step_beyond_hoc_subhead: Það endar ekki hér!
+  hoc_how_to_step_beyond_hoc_desc: Tölvunarfræði þarf ekki að ljúka með Hour of Code!
+    Þó að 90% foreldra vilja að barnið þeirra læri tölvunarfræði, þá kenna flestir
+    skólar það samt ekki. Lærðu hvernig á að koma með CS í skóla barnsins þíns í dag.
+  hoc_how_to_step_01_educators_subhead: Veldu atburðartíma og rými sem virkar fyrir
+    fjölda nemenda og tækja sem þú hefur í boði.
+  hoc_how_to_step_01_educators_desc_01: Hvaða rými eru í boði fyrir þig til að gera
+    Hour of Code? Íhugaðu tæknigetu rýmis þíns og hvers konar tæki þú ætlast til að
+    nemendur þínir vinni á. Nemendur geta unnið að námskeiðum í einu tæki, tekið á
+    móti með því að nota samnýtt tæki eða prófað einkatími saman á hvítborði í kennslustofunni.
+    Það eru jafnvel unplugged námskeið sem hægt er að ljúka með engum tækjum yfirleitt.
+    Unplugged valkosti er hægt að gera hvar sem er - jafnvel utandyra!
+  hoc_how_to_step_01_educators_desc_02: Fólk um allan heim tekur þátt í Hour of Code
+    hátíðinni á CS Education Week %{campaign_date} þegar nýjustu námskeiðin og starfsemi
+    eru gefin út. En þú getur gert klukkutíma kóða hvaða dag ársins sem er!
+  hoc_how_to_step_02_educators_desc_01: Kannaðu starfsemi miðað við aldur hópsins,
+    reynslu, áhugamál og fleira. Það er vinsælt fyrir nemendur að prófa sjálfstýrt
+    námskeið, þó að margar athafnir feli í sér kennsluáætlanir fyrir kennara til að
+    leiðbeina umræðu eða lengja starfsemina líka.
+  hoc_how_to_step_02_educators_desc_02: Ákveðið fyrirfram hvort þú vilt velja eina
+    einkatími fyrir alla nemendur þína, eða láta hvert barn velja sitt eigið.
+  hoc_how_to_step_02_educators_desc_03: Á þessu ári geturðu og nemendur þínir [lært
+    allt um AI] (%ai_url) með námskeiðum, kennsluáætlunum og nýju myndbandseríunni
+    okkar Hvernig AI Works.
+  hoc_how_to_step_03_educators_desc_01: Prófaðu einkatímann sjálfur áður en þú kemst
+    inn í kennslustofuna svo þú getir svarað spurningum!
+  hoc_how_to_step_03_educators_desc_02: Þú getur einnig prófað námskeið á tölvum eða
+    tækjum nemenda til að tryggja að þau styðji hljóð og myndband. Hafa lágt bandbreidd?
+    Ætlið að sýna myndbönd framan í bekknum, svo hver nemandi sé ekki að hlaða niður
+    eigin myndböndum.
+  hoc_how_to_step_03_educators_desc_03: Íhugaðu að útvega heyrnartól fyrir bekkina
+    þína, eða biðjið nemendur að koma með sitt eigið, ef kennslan sem þú velur virkar
+    best með hljóði.
+  hoc_how_to_step_04_educators_desc_01: Þegar þú skráir Hour of Code atburðinn þinn
+    færðu gagnlegan tölvupóst með fréttum og ábendingum um að hýsa árangursríka Hour
+    of Code. Það er líka hvernig þú getur látið sjálfboðaliða sveitarfélaga vita að
+    skólinn þinn tekur þátt. Sjálfboðaliðar eru frábær úrræði og geta komið talað
+    við bekkina þína um tölvunarfræði eða hjálpað nemendum þínum með starfsemi Hour
+    of Code.
+  hoc_how_to_step_05_educators_desc_01: Fáðu nemendur þína spennt fyrir viðburðinum
+    með því að deila [inspirational videos] (%{videos_url}) sem varpa ljósi á fjölbreytt
+    fólk og skapandi leiðir sem hægt er að nota tölvunarfræði í hinum raunverulega
+    heimi.
+  hoc_how_to_step_05_educators_desc_02: Deildu Hour of Code áætlunum þínum með öðrum
+    kennurum sem gætu viljað taka þátt í skemmtuninni! Þetta er líka frábært tækifæri
+    til að ná til foreldrakennara nemendafélags skólans þíns eða deila í fréttabréfum
+    foreldra og láta þau vita hvað börnin þeirra eru að læra.
+  hoc_how_to_step_06_educators_desc_01: Beindu nemendum þínum að starfseminni, kannski
+    með því að deila tenglinum á borðinu eða í gegnum námsstjórnunarkerfi kennslustofunnar
+    þinnar. Nemendur þínir geta lent í áskorunum - það er allt í lagi! Að læra að
+    forrita er eins og að læra nýtt tungumál; þú munt ekki vera reiprennandi strax.
+    Ef þú veist ekki svarið geturðu fundið það saman.
+  hoc_how_to_step_07_educators_desc_01: 'Vertu viss um að fagna árangri! Deildu myndum
+    og myndböndum af Hour of Code atburðinum þínum á samfélagsmiðlum. Notaðu #HourOfCode
+    og @codeorg svo við getum varpað ljósi á árangur þinn líka!'
+  hoc_how_to_step_07_educators_desc_02: Þú getur líka prentað vottorð fyrir nemendur
+    þína til að sýna árangur sinn!
   team_page_full_team_alt_text: Næstum 100 starfsmenn Code.org í samsvarandi bláum
     og gulum bolum sitja í hótelráðstefnusal fyrir Codechella viðburð fyrirtækisins
     sumarið 2022.
@@ -13455,6 +13684,10 @@ is:
   video_library_page_inspirational_video_title_11: Allir geta lært (1 mín.)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 mín.)
+  video_library_page_inspirational_video_title_13: NASA fagnar klukkustund af kóða
+    (2 mín)
+  video_library_page_inspirational_video_title_14: Það er meira en leikur (1 mín)
+  video_library_page_inspirational_video_title_15: Búa með tölvunarfræði (1 mín)
   video_library_page_not_hacked_video_title_1: 'Hvernig ekki að fá tölvusnápur: Inngangur'
   video_library_page_not_hacked_video_title_2: 'Hvernig ekki að fá tölvusnápur: Lykilorð'
   video_library_page_not_hacked_video_title_3: 'Hvernig ekki að fá tölvusnápur: Auðkenning
@@ -13466,6 +13699,154 @@ is:
     og niðurhal'
   video_library_page_not_hacked_video_title_7: 'Hvernig ekki að fá tölvusnápur: Setja
     upp uppfærslur'
+  about_us_page_title: Um Okkur
+  about_us_page_hero_description: Code.org® er menntun nýsköpunarstofnun í hagnaðarskyni
+    tileinkað þeirri sýn að hver nemandi í hverjum skóla hefur tækifæri til að læra
+    tölvunarfræði sem hluta af kjarna K-12 menntun sinni. Við stækkum aðgengi að tölvunarfræði
+    í skólum, með áherslu á að auka þátttöku ungra kvenna og nemenda úr öðrum vanfulltrúum
+    hópum. Leiðandi veitandi K-12 tölvunarfræði námskrá í stærstu skólahverfum í Bandaríkjunum,
+    Code.org skipuleggur einnig árlega [Hour of Code] (%{hour_url}) herferð, sem hefur
+    stundað meira en 15% allra nemenda í heiminum. Code.org er studd af örlátum gjafa
+    þar á meðal Microsoft, Amazon, Google og [margir aðrir.] ()%{others_url}
+  about_us_page_section_title_1: Yfir 80 milljónir nemenda og 2 milljónir kennara
+    á Code.org
+  about_us_page_statistic_figcaption: Code.org þátttaka frá skólaárinu 2021-2022.
+    [Sjá sundurgreind gögn.] ()%{data_url}
+  about_us_page_statistic_description: Code.org eykur fjölbreytileika í tölvunarfræði
+    með því að ná til nemenda af öllum bakgrunni þar sem þeir eru - á hæfileikastigi
+    þeirra, í skólum sínum og á þann hátt sem hvetur þá til að halda áfram að læra.
+    Langflestir nemendurnir á Code.org eru úr nemendahópum sem sögulega eru vanfulltrúar
+    í tölvunarfræði. Að auka fjölbreytni í tölvunarfræði er grundvallaratriði í starfi
+    okkar og [við hvetjum ykkur til að lesa meira um viðleitni okkar] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org í fréttum
+  about_us_page_section_news_description: Sjá allar fortíðar [fréttir og tilkynningar]
+    (%{news_url})
+  about_us_page_section_table: Markmið okkar og mælikvarða
+  about_us_page_section_table_header_1: Code.org Markmið
+  about_us_page_section_table_header_2: Afrek
+  abous_page_section_table_cell_1_1: Bæta fjölbreytileika í CS* (bandarískir nemendur)
+    *
+  abous_page_section_table_cell_1_2: 45% nemenda Code.org eru ungar konur, 50% eru
+    nemendur úr jaðarsettum kynþátta- og þjóðernishópum og 46% bandarískra nemenda
+    eru í háþörfum skólum. Lestu meira um [nálgun okkar að fjölbreytileika.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Hvetja nemendur
+  about_page_section_table_cell_2_2: Tugir milljóna hafa reynt [Hour of Code] (%{hour_url}).
+    (426.370,561 þjónað. 49% kvenkyns)
+  about_page_section_table_cell_3_1: Náðu í kennslustofur
+  about_page_section_table_cell_3_2: 591.636 kennarar hafa skráð sig til að kenna
+    intro námskeiðin okkar á [Code Studio] (%{code_studio_url}) og 19.177.297 nemendur
+    eru skráðir.
+  about_page_section_table_cell_4_1: Undirbúa nýja CS kennara
+  about_page_section_table_cell_4_2: Við höfum undirbúið meira en 106.000 nýja kennara
+    til að kenna CS yfir bekk K-12. Lærðu um [fagleg námsáætlanir okkar.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Breyta námskrá skólahverfis
+  about_page_section_table_cell_5_2: Við höfum átt í samstarfi við [180+ af stærstu
+    skólahverfum] (%{schoold_disctrict_url}) og 60 svæðisbundnum samstarfsaðilum til
+    að [bæta CS við skólanámskrá] (%{cs_curriculum_url}). [Lærðu um að verða svæðisbundinn
+    samstarfsaðili.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Setja upp stefnu til að styðja CS
+  about_page_section_table_cell_6_2: "[Stefnum breytt í 50 bandarískum ríkjum] (%{states_url})
+    til að koma á CS menntunarstöðlum, gera CS námskeið telja gagnvart útskrift framhaldsskóla
+    o.s.frv. [(upplýsingar)] (%{details_url})"
+  about_page_section_table_cell_7_1: Farðu á heimsvísu
+  about_page_section_table_cell_7_2: Námskeiðin okkar eru fáanleg á yfir 67 tungumálum,
+    notuð í 180+ löndum.
+  about_page_section_table_under_label: 'Heimild: Code Studio Activity og [kannanir
+    þátttökufræðinga] (%{educators_url})'
+  about_page_section_title_3: Nánari upplýsingar, saga og heimspeki
+  about_page_section_more_description_1: 'Árið 2013 var Code.org hleypt af stokkunum
+    af tvíburabræðrum [Hadi](%{hadi_url}) og [Ali Partovi] (%{partovi_url}) með ()
+    stuðla að [video]tölv%{video_url}unarfræði. Þetta myndband varð #1 á YouTube í
+    einn dag og 15.000 skólar náðu til okkar um hjálp. Síðan þá höfum við stækkað
+    frá bootstrapped starfsfólki sjálfboðaliða til að byggja upp fulla stofnun sem
+    styðja hreyfingu um allan heim. Við teljum að vönduð tölvunarfræðimenntun eigi
+    að vera í boði fyrir hvert barn, ekki bara heppnum fáum.'
+  about_page_section_more_description_2: 'Til að styðja við markmið okkar vinnum við
+    yfir menntunarrófið: hanna eigin námskeið okkar eða í samstarfi við aðra, þjálfa
+    kennara, í samstarfi við stór skólahverfi, hjálpa til við að breyta stefnu stjórnvalda,
+    auka á alþjóðavettvangi með samstarfi og markaðssetningu til að brjóta staðalímyndir.'
+  about_page_section_more_description_3: Starf okkar byggir á [áratuga fyrirhöfn,
+    af óteljandi stofnunum og einstaklingum] (%{efforts_url}) sem hafa hjálpað til
+    við að koma á fót, fjármagna og dreifa tölvunarfræðimenntun. Við erum þakklát
+    fyrir að njóta góðs af óþreytandi hjálp víðtækara tölvunarfræðslusamfélagsins
+    og [við þökkum öllum þeim samstarfsaðilum og einstaklingum sem hafa stutt áhrif
+    okkar í gegnum árin] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 ársskýrsla] (%{report_url}) (Fyrri
+    skýrslur: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Grunngildi okkar og leiðbeiningar um skilaboð]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Námskrá okkar og kennslufræði heimspeki] (%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx tal stofnanda okkar Hadi Partovi um hvers
+    vegna tölvunarfræði er fyrir alla (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Sameinandi nálgun í skiptum heimi
+  about_page_section_specific_title_1: Sameinandi nálgun í skiptum heimi
+  about_page_section_specific_title_2: Skuldbinding okkar til aðgengis
+  about_page_section_specific_title_3: Skuldbinding okkar varðandi ókeypis námsefni
+    og ólæsta tækni
+  about_page_section_specific_title_4: Code.org málsvörn bandalag
+  about_page_section_specific_title_5: K-12 tölvunarfræði rammi
+  about_page_section_specific_title_6: Code.org Gjafar
+  about_page_section_specific_title_7: Vertu fylgjandi
+  about_page_section_specific_title_8: Alþjóðlegt starf Code.org
+  about_page_section_specific_description_1: Alþjóðlegt hlutverk Code.org í K-12 tölvunarfræðihreyfingunni
+    er aðeins mögulegt vegna þess að við notum sameinandi nálgun yfir fjölbreytta
+    og oft skipta hagsmunaaðila. Á þeim tíma sem vaxandi skautun sameinar hugmyndin
+    um að auka tækifæri fyrir nemendur fólk víðsvegar um pólitíska litrófið. Liðsmenn
+    Code.org, nemendur, kennarar og stuðningsmenn hafa fjölbreytt og frávik sjónarmið
+    og þeir eru allir velkomnir í verkefni okkar. [Lesa meira.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org telur tölvunarfræði vera grundvallaratriði
+    fyrir alla nemendur og við erum staðráðin í jafnræði, aðgengi og tækifæri í skipulagi
+    okkar [values.](%{values_url}) Til að ná þessu markmiði vinnum við að greina og
+    útrýma hindrunum sem koma í veg fyrir þátttöku og fulla þátttöku nemenda og kennara
+    með fötlun. Til að læra meira um viðleitni okkar, sjá [aðgengisyfirlýsingu okkar.]
+    (%{accessibility_url})
+  about_page_section_specific_description_3: Öll námskrárúrræði og námskeið sem við
+    höfundum verður að eilífu frjálst að nota og opinskátt leyfi samkvæmt [Creative
+    Commons] (%{commons_url}) leyfi, sem gerir öðrum kleift að gera afleidd menntunarúrræði
+    í viðskiptalegum tilgangi. Ef þú hefur áhuga á að leyfa efni okkar í viðskiptalegum
+    tilgangi, [hafðu samband] (%{contact_us_url}). Námskeiðin okkar eru þýdd til notkunar
+    um allan heim eða af hátalara á mismunandi tungumálum. Tæknin okkar er þróuð sem
+    [opinn uppspretta verkefni.] (%{open_source_url})
+  about_page_section_specific_description_4: The [Code.org Advocacy Coalition] (%{advocacy_url})
+    er tvíhliða bandalag fyrirtækja og sjálfseignarstofnana sem vinna saman að því
+    að hjálpa til við að koma bandarískum sambands- og ríkistefnum til að auka og
+    halda uppi aðgangi að K-12 tölvunarfræði og til að víkka þátttöku og fjölbreytileika
+    á þessu sviði. Við leggjum saman [stjórnmálaleiðtogar repúblikana og demókrata]
+    (%{leaders_url}) í sameiginlegum málstað sem styður auka aðgang að og þátttöku
+    í K-12 tölvunarfræði.
+  about_page_section_specific_description_5: Code.org er meðlimur í stýrinefndinni
+    sem hjálpaði til við að koma á [K-12 Computer Science Framework] (%{framework_url})
+    - háttsettum leiðbeiningum fyrir ríki, héruð og stofnanir sem innleiða tölvunarfræði
+    menntun. Ramminn hefur unnið stuðning hundruð fræðimanna, K-12 kennara, hugbúnaðarfyrirtækja,
+    sjálfseignarstofnana og ríkja.
+  about_page_section_specific_description_6: Code.org IRS eyðublað 990 fyrir [2014]
+    [2015](%{irs_url_1}%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}),
+    [2018](), (%{irs_url_5}) [2019]%{irs_url_6}), [2020](%{irs_url_7}) og [2021](%{irs_url_8}).
+    [Framlagsstefna.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Skráðu þig til að fá stöðuuppfærslur]
+    (%{sign_up_url}) um framfarir í K-12 tölvunarfræðihreyfingunni og um störf Code.org.
+    Eða fylgdu Code.org á samfélagsmiðlum:"
+  about_page_section_specific_description_8: Yfir 40% af umferð okkar á vefsíðu kemur
+    utan Bandaríkjanna og sú tala heldur áfram að klifra. Til þess að auka alþjóðlegt
+    aðgengi að tölvunarfræði vinnur teymið okkar náið með [meira en 100 alþjóðlegum
+    samstarfsaðilum] (%{partners_url}) og hjálpar þeim að kynna Stund kóðans, talsmaður
+    stefnubreytinga og þjálfa kennara. Við erum að gera tölvunarfræði hluti af alþjóðlegu
+    menntaumræðunni með því að eiga samstarf við menntamálaráðuneyti víðsvegar að
+    úr heiminum og vinna með alþjóðastofnunum eins og Efnahagssamvinnu- og þróunarstofnuninni
+    og Mennta-, vísinda- og menningarmálastofnun Sameinuðu þjóðanna.
+  about_page_section_donors_description_1: Code.org® er skráð opinber 501c3 hagnaðarskyni,
+    með stuðningi frá almenningi. Við erum þakklát fyrir þann örlátur stuðning sem
+    við höfum fengið frá [einstaklingum og samtökum] (%{individuals_url}) sem styðja
+    framtíðarsýn okkar.
+  about_page_section_donors_description_2: Afrek kóðar (hér að ofan) sýna fram á getu
+    okkar til að nýta þá dollara í sterkar niðurstöður. En í ljósi metnaðar okkar
+    í hagnaðarskyni að hvert barn í hverjum skóla ætti að hafa aðgang að tölvunarfræði
+    - til að verða læsir borgarar í stafrænu heimi nútímans og prófa hagsmuni sína
+    í að kanna CS frekar sem feril - höfum við langt að fara til að mæta fjáröflunarmarkmiði
+    sem mun styðja þá framtíðarsýn.
+  about_page_donors_link_1: Gerðu framlög
+  about_page_donors_link_2: "[sjá lista okkar yfir gjafa] (%{donors_url})"
   language_code:
     ar: Arabíska
     az: Aserska

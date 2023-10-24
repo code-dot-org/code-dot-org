@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "id": "poopy",
+      "name": "poopy"
+    },
+    {
+      "id": "romantic",
+      "name": "romantic"
+    },
+    {
+      "id": "party",
+      "name": "party"
+    },
+    {
+      "id": "silly",
+      "name": "silly"
+    },
+    {
+      "id": "sparkle",
+      "name": "sparkle"
+    },
+    {
+      "id": "happy",
+      "name": "happy"
+    },
+    {
+      "id": "magic",
+      "name": "magic"
+    },
+    {
+      "id": "spooky",
+      "name": "spooky"
+    },
+    {
+      "id": "cute",
+      "name": "cute"
+    },
+    {
+      "id": "funky",
+      "name": "funky"
+    },
+    {
+      "id": "wavy",
+      "name": "wavy"
+    },
+    {
+      "id": "lights",
+      "name": "lights"
+    },
+    {
+      "id": "rainbow",
+      "name": "rainbow"
+    },
+    {
+      "id": "robot",
+      "name": "robot"
+    },
+    {
+      "id": "chaotic",
+      "name": "chaotic"
+    },
+    {
+      "id": "disco",
+      "name": "disco"
+    },
+    {
+      "id": "zen",
+      "name": "zen"
+    },
+    {
+      "id": "fast",
+      "name": "fast"
+    },
+    {
+      "id": "evil",
+      "name": "evil"
+    },
+    {
+      "id": "cold",
+      "name": "cold"
+    },
+    {
+      "id": "cosmic",
+      "name": "cosmic"
+    },
+    {
+      "id": "sad",
+      "name": "sad"
+    },
+    {
+      "id": "black-and-white",
+      "name": "black & white"
+    },
+    {
+      "id": "warm",
+      "name": "warm"
+    },
+    {
+      "id": "cool",
+      "name": "cool"
+    }
+  ]
+}

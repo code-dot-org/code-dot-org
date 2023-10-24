@@ -5462,7 +5462,6 @@
           "type": "مصدر"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "فيديو"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -5483,7 +5482,7 @@
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
         },
         "resource_list_for_all_lessons/csc-adaptations/2023": {
-          "name": "قائمة الموارد لجميع الدروس",
+          "name": "قائمة المصادر لجميع الدروس",
           "url": "/s/csc-التكيفات -2023/الموارد",
           "type": "مصدر"
         },
@@ -5527,7 +5526,7 @@
           "type": "مصدر"
         },
         "resource_list_for_all_lessons/csc-bookcovers/2023": {
-          "name": "قائمة الموارد لجميع الدروس",
+          "name": "قائمة المصادر لجميع الدروس",
           "url": "/s/csc-أغلفة الكتب -2023/الموارد",
           "type": "مصدر"
         },
@@ -5622,14 +5621,14 @@
           "type": "مصدر"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
-          "name": "قائمة الموارد لجميع الدروس"
+          "name": "قائمة المصادر لجميع الدروس"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
           "name": "معايير محاكاة النظام البيئي البحري ",
           "type": "مصدر"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "المفردات في محاكاة النظام البيئي البحري",
+          "name": "مفردات في محاكاة النظام البيئي البحري",
           "type": "مصدر"
         },
         "ecosystems/csc-ecosystems/2023": {
@@ -5643,7 +5642,7 @@
           "type": "مصدر"
         },
         "ecologist_s_notebook/csc-ecosystems/2023": {
-          "name": "دفتر عالم البيئة",
+          "name": "دفتر ملاحظات عالم البيئة",
           "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
@@ -5662,7 +5661,7 @@
           "type": "مصدر"
         },
         "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
-          "name": "قائمة الموارد لجميع الدروس",
+          "name": "قائمة المصادر لجميع الدروس",
           "url": "/s/csc-رسم خرائط المعالم -2023/الموارد"
         },
         "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
@@ -5787,7 +5786,7 @@
           "type": "شرائح"
         },
         "all_resources/csc-timecapsule/2023": {
-          "name": "قائمة الموارد لجميع الدروس",
+          "name": "قائمة المصادر لجميع الدروس",
           "url": "/s/csc-كبسولة زمنية-2023/الموارد",
           "type": "مصدر"
         },
@@ -6999,6 +6998,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "الدوال والمعاملات",
           "type": "فيديو"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "دوال",
+          "type": "شرائح"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "شرائح"
@@ -8738,7 +8741,7 @@
           "type": "فيديو"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "كيف يعمل الذكاء الاصطناعي - ما هو التعلم الآلي؟",
+          "name": "كيف يعمل الذكاء الاصطناعي - ما هو تعلم الآلة؟",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "فيديو"
         },
@@ -8765,7 +8768,7 @@
           "type": "فيديو"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "شاشة عرض ذات سبعة أجزاء قابلة للتلاعب",
+          "name": "اداة التعلم التي تتكون من شاشة عرض ذات سبعة اجزاء ",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
@@ -8797,17 +8800,17 @@
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "ماجستير في القانون التوليدي",
+          "name": "نموذج محاكاة لغة كبير مُولّد",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "شرائح"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "name": "كيف يعمل الذكاء الاصطناعي: روبوتات المحادثة ونماذج اللغات الكبيرة (الجزء الأول)",
+          "name": "كيف يعمل الذكاء الاصطناعي: روبوتات المحادثة ونماذج محاكاة اللغات الكبيرة (الجزء الأول)",
           "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "فيديو"
         },
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
-          "name": "كيف يعمل الذكاء الاصطناعي: روبوتات المحادثة ونماذج اللغات الكبيرة (الجزء 2)",
+          "name": "كيف يعمل الذكاء الاصطناعي: روبوتات المحادثة ونماذج محاكاة اللغات الكبيرة (الجزء 2)",
           "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
           "type": "فيديو"
         },
@@ -8853,11 +8856,11 @@
           "type": "فيديو"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] نشاط الصورة الصاخبة",
+          "name": "[Exemplar] نشاط الصورة المشوشة",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "دليل نشاط أداة الصور الصاخبة",
+          "name": "دليل نشاط أداة الصور المشوشة",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
@@ -8885,7 +8888,7 @@
           "type": "مصدر"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
-          "name": "يقول تويتر إن خوارزمية اقتصاص الصور الخاصة به كانت متحيزة، لذا فهو يتخلى عنها (CNN)",
+          "name": "يقول تويتر إن خوارزمية قص الصور الخاصة به كانت متحيزة، لذا فهو يتخلى عنها (CNN)",
           "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "مصدر"
         },
@@ -8937,7 +8940,7 @@
           "type": "فيديو"
         },
         "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "كيف يعمل الذكاء الاصطناعي: ما هو التعلم الآلي؟",
+          "name": "كيف يعمل الذكاء الاصطناعي: ما هو تعلم الآلة؟",
           "url": "https://youtu.be/KHbwOetbmbs",
           "type": "فيديو"
         },
@@ -9068,11 +9071,6 @@
           "name": "فيديو: ضغط النص مع آلو بلاك",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "فيديو"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "قائمة القصائد.",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "شرائح"
         }
       }
     }

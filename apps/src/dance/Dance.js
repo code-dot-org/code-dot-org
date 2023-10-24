@@ -14,7 +14,13 @@ import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import danceMsg from './locale';
-import {reducers, setRunIsStarting, initSongs, setSong} from './danceRedux';
+import {
+  reducers,
+  setRunIsStarting,
+  initSongs,
+  setSong,
+  setAiOutput,
+} from './danceRedux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
@@ -107,6 +113,10 @@ Dance.prototype.init = function (config) {
   this.level.softButtons = this.level.softButtons || {};
   this.initialThumbnailCapture = true;
 
+  if (config.level.aiOutput) {
+    getStore().dispatch(setAiOutput(config.level.aiOutput));
+  }
+
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
   }.bind(this);
@@ -122,14 +132,16 @@ Dance.prototype.init = function (config) {
     this.studioApp_.init(config);
     this.currentCode = this.studioApp_.getCode();
     if (this.usesPreview) {
+      // rerender preview each time student code changes
       this.studioApp_.addChangeHandler(e => {
-        // We want to check if the workspace code changed only when a block has been moved or
-        // if a block has changed.
-        // A move event is fired when a block is dragged and then dropped.
         if (
-          e.type !== Blockly.Events.BLOCK_MOVE &&
+          e.type !== Blockly.Events.BLOCK_DRAG &&
           e.type !== Blockly.Events.BLOCK_CHANGE
         ) {
+          return;
+        }
+
+        if (e.type === Blockly.Events.BLOCK_DRAG && e.isStart) {
           return;
         }
 
@@ -455,6 +467,7 @@ Dance.prototype.reset = function () {
  * image is displayed and sound is NOT played.
  */
 Dance.prototype.preview = async function () {
+  this.nativeAPI.setForegroundEffectsInPreviewMode(true);
   this.nativeAPI.reset();
   const api = new DanceAPI(this.nativeAPI);
   const studentCode = this.studioApp_.getCode();
@@ -473,7 +486,15 @@ Dance.prototype.preview = async function () {
   const charactersReferenced = utils.computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
-  this.nativeAPI.p5_.draw();
+
+  // Force preview draw to occur **after** any
+  // draw iterations already queued up.
+  // redraw() (rather than draw()) is p5's recommended way
+  // of drawing once.
+  setTimeout(() => {
+    this.nativeAPI.p5_.redraw();
+    this.nativeAPI.setForegroundEffectsInPreviewMode(false);
+  }, 0);
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
@@ -618,12 +639,19 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
+  const userBlockTypes = Blockly.getMainWorkspace()
+    .getAllBlocks()
+    .map(block => block.type);
   return new Promise((resolve, reject) => {
-    this.nativeAPI.play(songMetadata, success => {
-      this.performanceData_.lastRunButtonDelay =
-        performance.now() - this.performanceData_.lastRunButtonClick;
-      success ? resolve() : reject();
-    });
+    this.nativeAPI.play(
+      songMetadata,
+      success => {
+        this.performanceData_.lastRunButtonDelay =
+          performance.now() - this.performanceData_.lastRunButtonClick;
+        success ? resolve() : reject();
+      },
+      userBlockTypes
+    );
   });
 };
 

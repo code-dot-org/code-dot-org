@@ -2264,26 +2264,6 @@
         "program/starwarsblocks/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/poem-art/unversioned": {
-          "word": "Codi",
-          "definition": "Escriure instruccions per a un ordinador."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Programa",
-          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Estat d'ànim",
-          "definition": "L'expressió d'un sentiment, ambient o emoció a través de les arts visuals o escrites."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Línia",
-          "definition": "(poesia) - La subdivisió d'un poema disposada en una fila que acaba al marge dret. "
         }
       }
     }

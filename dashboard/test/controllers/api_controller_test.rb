@@ -597,7 +597,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, user_level.locked
     assert_equal false, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
-    assert_not_nil user_level.send(:unlocked_at)
+    refute_nil user_level.send(:unlocked_at)
 
     # view_anwers for a user_level that does not yet exist
     user_level.really_destroy!
@@ -614,7 +614,7 @@ class ApiControllerTest < ActionController::TestCase
     user_level = UserLevel.find_by(user_level_data)
     assert_equal false, user_level.submitted?
     assert_equal true, user_level.readonly_answers?
-    assert_not_nil user_level.send(:unlocked_at)
+    refute_nil user_level.send(:unlocked_at)
 
     # multiple updates at once
     user_level.really_destroy!
@@ -637,13 +637,13 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, user_level.submitted?
     assert_equal false, user_level.locked
     assert_equal false, user_level.readonly_answers?
-    assert_not_nil user_level.send(:unlocked_at)
+    refute_nil user_level.send(:unlocked_at)
 
     user_level2 = UserLevel.find_by(user_level_data2)
     assert_equal false, user_level2.submitted?
     assert_equal false, user_level2.locked
     assert_equal false, user_level2.readonly_answers?
-    assert_not_nil user_level2.send(:unlocked_at)
+    refute_nil user_level2.send(:unlocked_at)
   end
 
   test "should update lockable state for existing levels" do
@@ -694,7 +694,7 @@ class ApiControllerTest < ActionController::TestCase
       assert_equal false, user_level.submitted?
       assert_equal false, user_level.locked
       assert_equal true, user_level.readonly_answers?
-      assert_not_nil user_level.send(:unlocked_at)
+      refute_nil user_level.send(:unlocked_at)
       assert_equal expected_updated_at, user_level.updated_at
 
       # update from readonly_answers to locked
@@ -736,7 +736,7 @@ class ApiControllerTest < ActionController::TestCase
       assert_equal false, user_level.submitted?
       assert_equal false, user_level.locked
       assert_equal false, user_level.readonly_answers?
-      assert_not_nil user_level.send(:unlocked_at)
+      refute_nil user_level.send(:unlocked_at)
       assert_equal expected_updated_at, user_level.updated_at
     end
   end

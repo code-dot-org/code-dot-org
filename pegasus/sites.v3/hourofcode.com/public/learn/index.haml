@@ -8,21 +8,12 @@ social:
   og:image:height: '630'
 ---
 
-:ruby
-  hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
-
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
 #fullwidth
   = view :header
-
-  - if ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
-    %section.banner.hoc-mode
-      = view :learn_banner_text
-
-  - else
-    %section.banner
-      = view :learn_banner_text
+  %section.banner
+    = view :learn_banner_text
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - locale_code = hoc_get_locale_code

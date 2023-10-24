@@ -6,28 +6,30 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Voorbeeld van een resolutie van de Computer Science Education Week
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Hieronder vindt u de taal voor een voorbeeldreolutie ter ondersteuning van de Computer Science Education Week en de doelstellingen ervan, die kan worden gebruikt door nationale en lokale wetgevers.
 
 * * *
 
-#### **RESOLUTION**  
+#### **RESOLUTIE**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Ondersteuning van de doelstellingen en idealen van de „Computer Science Education Week”
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+overwegende dat de Week van het Informatieonderwijs de cruciale rol benadrukt die informatica speelt bij de transformatie van onze samenleving en hoe informatica innovatie mogelijk maakt en economische kansen creëert;
 
 Waarbij programmeren een integraal onderdeel van de moderne cultuur is en de interactie tussen mensen en de wereld om hen heen verandert;
 
 Waarbij programmeren de industrie verandert, nieuwe handelsvelden creëert, innovatie aanstuurt op alle gebieden van de wetenschap, en de productiviteit in gevestigde economische sectoren versterkt;
 
-Waarbij programmeren de informatie technologiesector van onze economie ondersteunt, die een belangrijke bijdrage levert aan de economische output van de Verengde Staten;
+Overwegend dat de informatica een fundamenteel onderwerp is dat ten grondslag ligt aan de informatietechnologiesector van onze economie, die een belangrijke bijdrage levert aan de economische output van de Verenigde Staten;
 
-Waarbij programmeren een fundamentele wetenschap voor het digitale tijdperk is;
+overwegende dat geletterdheid op het gebied van kunstmatige intelligentie verwijst naar de kennis, vaardigheden en attitudes die verband houden met hoe kunstmatige intelligentie werkt, met inbegrip van fundamentele concepten in de informatica, en hoe kunstmatige intelligentie veilig, verantwoord en ethisch kan worden gebruikt;
 
-Waarbij de informatie technologiesector uniek is gepositioneerd om te helpen met het economisch herstel door middel van onderzoek en ontwikkeling van nieuwe innovaties;
+Overwegend dat de informatica, met inbegrip van kunstmatige intelligentie, technologieën zijn die in staat zijn om bijna alle sectoren van de Amerikaanse economie fundamenteel te transformeren;
+
+Overwegend dat technologisch leiderschap op alle gebieden van de informatica, met inbegrip van kunstmatige intelligentie, een vereiste is voor de economische en nationale veiligheid;
 
 Waarbij informatica banen een mooi vooruitzicht hebben met meer dan 500.000 open computer posities door heel het land;
 
@@ -35,26 +37,24 @@ Waarbij scholieren de kans aangeboden krijgen om deel te nemen in hoge kwalitati
 
 Waarbij alle leerlingen een grondige voorbereiding in programmeren verdienen, inclusief toegang tot gekwalificeerde leraren, technologie, en naar de leeftijd aangepaste curriculum die nodig is om programmeren op basis- en middelbare scholen te leren;
 
-Waarbij het programmeren onderwijs uitdagingen heeft om te adresseren, inclusief de eisen van programmeerlessen op het voortgezet onderwijs, en het verstrekken van professionele ontwikkeling voor programmering docenten;
+overwegende dat het informaticaonderwijs uitdagingen moet aangaan, waaronder het verbeteren van de toegang tot informatica-cursussen voor alle studenten en het bieden van professionele ontwikkeling voor informaticadocenten;
 
 Waarbij deelnemen aan een CodeUur evenement tijdens de week van programmeren kan dienen om programmeren te verhelderen en meer studenten aanmoedigt om verder te gaan met programmeren;
 
-Waarbij het gebied van programmeren in aanmerking komt met veel belemmeringen, inclusief het aantrekken van meer participatie van vrouwen en ondervertegenwoordigde minderheden op alle niveaus en branches;
+overwegende dat op het gebied van de informatica aanzienlijke barrières op het gebied van gelijkheid moeten worden aangepakt, waaronder het aantrekken en behouden van een aantal kandidaten met uiteenlopende rassen, etniciteit en geslacht op alle niveaus en branches;
 
 Waarbij Grace Murray Hopper, een van de eerste vrouwen op het gebied van programmeren, nieuwe programmeertalen ontwierp en normen voor computersystemen pionierde die de basis legden voor veel vooruitgang in programmering; en
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Terwijl de week van {{ campaign_date/start_long }}, ter ere van de verjaardag van Grace Hopper, wordt aangeduid als 'Computer Science Education Week': het zij nu dus <br />
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Vastbesloten, dat de (HUIS OF SENAAT, STAAT, PROVINCIE, STAD OF SCHOOLBESTUUR) --
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+(1) steunt de uitverkiezing van de Computer Science Education Week ({{ campaign_date/full }});
 
 (2) Moedigt scholen, docenten, ouders en beleidsmakers aan om deel te nemen aan de week van programmeren door de scholieren aan te zetten om ook deel te nemen aan het CodeUur;
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) moedigt scholen, leraren, onderzoekers, universiteiten, bedrijfsleiders en beleidsmakers aan om mechanismen te identificeren waarmee leraren geavanceerde professionele ontwikkeling kunnen krijgen om duurzame leerervaringen op het gebied van informatica op alle onderwijsniveaus te bieden en studenten aan te moedigen kennis te maken met computerwetenschappelijke concepten;
 
-(4) Moedigt beleidsmakers aan om belemmeringen te verwijderen die voorkomen dat programmering klassen worden gezien als wiskunde of wetenschap lessen als eis voor het diploma;
-
-(5) Biedt kansen voor vrouwen en ondervertegenwoordigde minderheden in programmeren, onder andere via bestaande programma's,.
+(4) stimuleert kansen, onder meer via bestaande programma's, voor vrouwelijke studenten en studenten uit raciale en etnische groepen die ondervertegenwoordigd zijn in de informatica.
 
 {{ signup_button }}

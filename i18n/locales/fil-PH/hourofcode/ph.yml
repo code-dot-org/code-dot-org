@@ -5,36 +5,40 @@ ph:
   language: Ingles
   front_title: Sumali sa pinakamalaking kaganapan ng pag-aaral sa kasaysayan, %{campaign_date}
   coming_soon: Malapit na
-  campaign_date_start_short: Dis. 5
-  campaign_date_start_long: Disyembre 5
-  campaign_date_short: Dis. 5-11
-  campaign_date_full: Disyembre 5-11
-  campaign_date_year: '2022'
-  campaign_date_full_year: Disyembre 5-11, 2022
+  campaign_date_start_short: Dis. 4
+  campaign_date_start_long: Disyembre 4
+  campaign_date_short: Dis. 4-10
+  campaign_date_full: Disyembre 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: Disyembre 4-10, 2023
   nonus_campaign_date_start_short: Sept. 5
   nonus_campaign_date_start_long: September 5
   nonus_campaign_date_short: Okt. 1 - Dis. 18
   nonus_campaign_date_full: Oktubre 1 - Disyembre 18
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
   latam_campaign_date_start_short: Sept. 5
   latam_campaign_date_start_long: September 5
   latam_campaign_date_short: Okt. 1 - Dis. 18
   latam_campaign_date_full: Oktubre 1 - Disyembre 18
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
   europe_campaign_date_start_short: Sept. 5
   europe_campaign_date_start_long: September 5
   europe_campaign_date_short: Okt. 1 - Dis. 18
   europe_campaign_date_full: Oktubre 1 - Disyembre 18
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
   africa_campaign_date_start_short: Sept. 5
   africa_campaign_date_start_long: September 5
   africa_campaign_date_short: Okt. 1 - Dis. 18
   africa_campaign_date_full: Oktubre 1 - Disyembre 18
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
+  hoc2023_header: Creativity with AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - What will you create?
+  hoc2023_social_creativity_with_ai_desc: Use computer science to explore and learn
+    about AI!
   hoc2022_header: Tumuklas, Maglaro, Gumawa!
   social_hoc2022_explore_play_create: Gamitin ang computer science upang tumuklas,
     maglaro, at gumawa!
@@ -185,6 +189,32 @@ ph:
     bagong Katalogo ng Kurikulum at muling dinisenyong pahina ng Ituro upang matulungan
     kang mahanap ang lahat!
   in_partnership_with: Sa pakikipagtulungan sa
+  shop_code_dot_org_heading: Shop Code.org
+  shop_code_dot_org_desc: Support our work and wear the movement with pride. Our hats
+    have been worn by President Obama and celebrities too.
+  spread_the_word_heading: Ipamalita ito
+  spread_the_word_desc: Amplify our impact by sharing Code.org with your network.
+    From social media to email updates, discover how you can help us reach more educators,
+    students, and advocates.
+  follow_us_heading: Follow us on social media
+  follow_us_desc: Stay up to date with us on social media and share our posts with
+    your network to stay informed and help drive awareness.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tablet
+  device_laptop: Laptop
+  device_desktop_computer: Desktop Computer
+  device_mobile_device: Mobile Device
+  subscribe_to_emails_heading: Subscribe to emails
+  subscribe_to_emails_desc: Read about what's happening at Code.org and in computer
+    science education through quarterly updates via our mailing list.
+  subscribe_to_emails_intl: Subscribe to international updates
+  promote_code_dot_org_heading: Promote Code.org
+  promote_code_dot_org_desc: Promote computer science in your area with the help of
+    stats, quotes, and videos.
   afe_partnership_logo_alt: Logo ng Amazon Future Engineer
   afe_partnership_thanks_desc: Ang Amazon Future Engineer ay komprehensibong programa
     mula pagkabata hanggang sa karera paglaki upang magbigay ng inspirasyon, edukasyon,
@@ -204,19 +234,48 @@ ph:
   curricula_title_high: High School Curricula
   curricula_desc_high: Browse the compelling courses and activities that invite you
     and your high school students to dig deeper into computer science.
+  for_administrators_heading: For administrators
+  for_administrators_desc: Join the thousands of schools who have already incorporated
+    computer science into their curriculum.
+  for_parents_heading: Para sa mga magulang
+  for_parents_desc: You can help encourage your student's school to offer or expand
+    computer science education.
+  for_educators_heading: Para sa mga tagapagturo
+  for_educators_desc: Start teaching today — no computer science experience necessary
+    — with our professional learning workshops.
   students_label: Studyante
   teachers_label: Guro
+  educators_label: Educators
+  companies_label: Companies
+  districts_label: Districts
+  school_assemblies_label: School Assemblies
+  parents_label: Parents
+  public_officials_label: Public Officials
+  volunteers_label: Volunteers
+  virtual_events_label: Virtual Events
   teacher_label_csf: Guro sa CS Fundamentals
   teacher_label_csd: Guro ng CS Discoveries
   teacher_label_csp: Guro sa Mga Prinsipyo ng CS
   teacher_label_csc: Guro sa Mga Koneksiyon sa CS
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Teacher Forum
+  teacher_forum_desc: Visit the Hour of Code Teacher Forum to get advice, insight
+    and support from other educators.
   required_materials: 'Kinakailangang Mga Materyales:'
   optional_materials: 'Opsyonal na Mga Materyales:'
-  call_to_action_explore_roles: Explore open roles
+  call_to_action_hold_an_event: Hold an event
+  call_to_action_register_event: Register your event
+  call_to_action_select_activity: Select an activity
+  call_to_action_start_activity: Start an activity
+  call_to_action_get_certificates: Get certificates
+  call_to_action_go_beyond_hoc: Go beyond the Hour of Code
+  call_to_action_view_promo_resources: View promo resources
   call_to_action_learn_more: Matuto ng higit pa
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
+  call_to_action_try_activities: Try activities
+  call_to_action_explore_activities: Explore activities
+  call_to_action_explore_ai: Explore AI
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
   call_to_action_explore_curriculum_options: Tuklasin ang mga opsyon sa kurikulum
@@ -269,6 +328,7 @@ ph:
   call_to_action_find_self_paced_modules: Hanapin ang mga sariling bilis na module
   call_to_action_join_teacher_forums: Sumali sa mga forum ng guro
   call_to_action_explore_teacher_forums: Tuklasin ang mga forum ng guro
+  call_to_action_explore_teacher_forum: Explore teacher forum
   call_to_action_explore_career_resources: Tuklasin ang mga mapagkukunan sa karera
   call_to_action_watch_videos: Manood ng mga video
   call_to_action_download_posters: I-download ang mga poster
@@ -285,11 +345,32 @@ ph:
   call_to_action_notify_available: Notify me when available
   call_to_action_register_early_access: Register for early access
   call_to_action_open_positions: View open positions
+  call_to_action_explore_roles: Explore open roles
   call_to_action_get_guide: Get the guide
   call_to_action_donate_to_cdo: Donate to Code.org
   call_to_action_start_fundraiser: Start a fundraiser
   call_to_action_view_donation_policy: View donation policy
   call_to_action_view_donate_bitpay: Donate with BitPay
+  call_to_action_make_a_donation: Make a donation
+  call_to_action_other_ways_to_give: Other ways to give
+  call_to_action_become_partner_usa: Become a United States partner
+  call_to_action_become_partner_intl: Become an international partner
+  call_to_action_become_a_volunteer: Become a volunteer
+  call_to_action_start_translating: Start translating
+  call_to_action_learn_about_advocacy: Learn about our advocacy
+  call_to_action_visit_store: Visit the store
+  call_to_action_view_faqs: View more FAQs
+  aria_label_call_to_action_hoc_how_to_educators: View how-to guide for Educators
+  aria_label_call_to_action_hoc_how_to_companies: View how-to guide for Companies
+  aria_label_call_to_action_hoc_how_to_districts: View how-to guide for Districts
+  aria_label_call_to_action_hoc_how_to_school_assemblies: View how-to guide for School
+    Assemblies
+  aria_label_call_to_action_hoc_how_to_parents: View how-to guide for Parents
+  aria_label_call_to_action_hoc_how_to_public_officials: View how-to guide for Public
+    Officials
+  aria_label_call_to_action_hoc_how_to_volunteers: View how-to guide for Volunteers
+  aria_label_call_to_action_hoc_how_to_virtual_events: View how-to guide for Virtual
+    Events
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -647,6 +728,7 @@ ph:
   heading_explore_curriculum_catalog: Explore all of our courses in the Curriculum
     Catalog
   heading_csa_ai: Looking for things to do after the AP® exam?
+  heading_bring_cs_to_students: Bring computer science to students
   professional_learning_section_desc: Kumuha ng suportang kailangan mo habang naghahanda
     ka upang magturo. Gustung-gusto ito ng mga guro, na may mahigit na 90% na pagraranggong
     pinakamahusay na propesyonal na pag-unlad kailanman!
@@ -915,14 +997,15 @@ ph:
   ai_pl_101_video_title_4: Ensuring a Responsible Approach to AI
   ai_pl_101_video_desc_4: Explore the ethical considerations and best practices for
     incorporating artificial intelligence in educational environments. This session
-    will provide concrete strategies, resources, and real-world examples, all aimed
-    at understanding the potential biases of AI, and the ethical considerations that
+    provides concrete strategies, resources, and real-world examples, all aimed at
+    understanding the potential biases of AI, and the ethical considerations that
     come with it.
   ai_pl_101_video_title_5: Bringing AI to the Classroom
   ai_pl_101_video_desc_5: This session focuses on teaching about AI, evaluating and
     utilizing AI educational tools, and leveraging AI for student assessment. With
     a rich blend of theory, practical examples, and resources, it aims to empower
     educators to navigate the AI landscape and enhance student learning experiences.
+  ai_pl_101_resources_5: Guide to Ensuring a Responsible Approach to AI
   ai_pl_101_video_desc_6: 'Learn more about the new technology driving the large changes
     in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
     AI. Hear how these new technologies work directly from the experts: Mira Murati,
@@ -933,6 +1016,8 @@ ph:
     dipping their toes in, as well as advanced tools for those looking to maximize
     their potential.
   ai_pl_101_resources_3: AI Prompts for Transforming Student Learning
+  ai_pl_101_resources_section_title: More ways to learn about AI
+  ai_pl_101_resources_guide: 'Companion guide:'
   how_ai_works_hero_heading: Paano Gumagana ang AI
   how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
     series and accompanying lessons!
@@ -1821,6 +1906,29 @@ ph:
   donate_tabs_bitpay_desc: Embrace the future of giving with cryptocurrency. Through
     BitPay, your digital currency can directly support Code.org's endeavors in expanding
     computer science education.
+  help_page_top_heading: How you can help
+  help_page_top_desc: Support our mission to make computer science accessible for
+    every child, everywhere. Your efforts help us inspire future innovators and bridge
+    the tech education gap.
+  help_page_top_subhead: Make a donation to Code.org
+  help_page_top_desc_02: We're working to give every student the opportunity to learn
+    computer science — both online AND in schools, where we establish permanent courses
+    and train teachers. For every dollar you donate, one child is introduced to computer
+    science.
+  help_page_partners_heading: Become a partner
+  help_page_partners_desc: Code.org works with other nonprofit organizations as partners
+    to help spread computer science in a local, sustainable fashion. Learn more about
+    our program.
+  help_page_volunteer_heading: Volunteer in a classroom
+  help_page_volunteer_desc: Volunteer to teach the Hour of Code or be a guest speaker
+    in a local classroom. Sign up to hear about opportunities near you.
+  help_page_translate_heading: Help us translate
+  help_page_translate_desc: Volunteers have translated our tutorials in over 45 languages.
+    Help us continue to expand our tutorials for students around the world!
+  help_page_speak_for_cs_heading: Speak up for computer science education
+  help_page_speak_for_cs_desc: Learn more about Code.org's advocacy work across the
+    U.S. and the ten policies we recommend states adopt to make computer science foundational
+    for all students. Plus, find out how you can drive change in your state.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -11908,7 +12016,7 @@ ph:
   tutorial_milnefunctions_name: Dash Joins a Dance Circle (with Functions)
   tutorial_sasmap_name: 'Show With Code: Features on a Map'
   tutorial_firstrobotics_name: FIRST Tech Challenge Simulator
-  tutorial_sasdata_name: Building Data Fundamentals
+  tutorial_sasdata_name: SAS DataFly
   tutorial_carnegiesensabot_name: Sensabot Challenge
   tutorial_robotical4_name: Hour of Code Activity 4 - Getting Started with MartyBlocks
   tutorial_kinderadd_name: Adding and Subtracting with KIBO
@@ -13686,6 +13794,126 @@ ph:
   all: Lahat
   dont_know: Hindi ko alam
   language_label: Language
+  before_hoc: Before Hour of Code
+  day_of_hoc: Day of Hour of Code
+  after_hoc: After Hour of Code
+  step_01: Step 1
+  step_02: Step 2
+  step_03: Step 3
+  step_04: Step 4
+  step_05: Step 5
+  step_06: Step 6
+  step_07: Step 7
+  step_08: Step 8
+  hoc_how_to_top_heading: Your guide to Hour of Code
+  hoc_how_to_top_desc: Tailored how-to guides for the best Hour of Code experience.
+  hoc_how_to_top_view_guide: View guide for
+  hoc_how_to_nav_main_aria_label: Choose a guide
+  hoc_how_to_nav_sidebar_aria_label: Sidebar navigation
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: The Hour of Code is a one-hour introduction to
+    computer science, using fun tutorials to show that anybody can learn the basics.  This
+    year, we're taking Hour of Code to new heights by offering coding opportunities
+    that encompass both artificial intelligence (AI) and non-AI components. Whether
+    you or your students are experienced coders or you all are setting out on your
+    very first computer science expedition, this Hour of Code promises an extraordinary
+    voyage.
+  hoc_how_to_faq_question_prerequisites: What are the prerequisites for doing an Hour
+    of Code?
+  hoc_how_to_faq_answer_prerequisites: The Hour of Code is simple to run — even for
+    beginners. You don't need experience in computer science or teaching in order
+    to inspire students to explore, create, and learn something new.
+  hoc_how_to_faq_question_devices: What devices do I need to run an Hour of Code?
+  hoc_how_to_faq_answer_devices_01: 'Devices you can use:'
+  hoc_how_to_faq_answer_devices_02: If devices are limited or unavailable, try [pair
+    programming](%{pair_url}) or explore our [unplugged activities](%{unplugged_url})
+    to learn without any devices at all!
+  hoc_how_to_faq_question_volunteer: Sino ang maaaring magboluntaryo?
+  hoc_how_to_faq_answer_volunteer: Anyone passionate about computer science education
+    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
+    of all backgrounds participate. The Hour of Code features a large variety of activities
+    for all ages and skill levels, so you don't need to be a programming expert to
+    volunteer!
+  hoc_how_to_faq_question_full_hour: Will the Hour of Code take a full hour?
+  hoc_how_to_faq_answer_full_hour: Many students will be able to finish their activities
+    in less than an hour, and that's okay! Students can continue to learn while other
+    students complete their activity.
+  hoc_how_to_faq_question_account: Kailangan ba ng mga mag-aaral na mag-log on gamit
+    ang isang account?
+  hoc_how_to_faq_answer_account: No signup or login is required for students to try
+    the Hour of Code. Signing up for the Hour of Code does NOT automatically create
+    a Code.org account.
+  hoc_how_to_resources_heading_educators: Iba pang pagkukunan ng Hour of Code para
+    sa mga tagapagturo
+  hoc_how_to_resources_promo_heading: Promotional Resources
+  hoc_how_to_resources_promo_desc: Find all the resources you need—print and digital—to
+    bring attention to your Hour of Code.
+  hoc_how_to_resources_discover_heading: Discover Activities
+  hoc_how_to_resources_discover_desc: Explore a wide selection of one-hour tutorials
+    designed for all ages in over 45 languages.
+  hoc_how_to_step_label_plan: Plan where and when you'll do your Hour of Code
+  hoc_how_to_step_label_choose_activity: Choose your activity
+  hoc_how_to_step_label_test_activity: Test out your activity
+  hoc_how_to_step_label_register_event: Register your event
+  hoc_how_to_step_label_tell: Tell your students, school, and community
+  hoc_how_to_step_label_get_coding: Get coding!
+  hoc_how_to_step_label_celebrate: Celebrate
+  hoc_how_to_step_label_beyond_hoc: Beyond Hour of Code
+  hoc_how_to_step_beyond_hoc_subhead: It doesn't end here!
+  hoc_how_to_step_beyond_hoc_desc: Computer science doesn't have to end with the Hour
+    of Code! While 90% of parents want their child to learn computer science, most
+    schools still don't teach it. Learn how to bring CS to your child's school today.
+  hoc_how_to_step_01_educators_subhead: Select an event time and space that works
+    for the number of students and devices you have available.
+  hoc_how_to_step_01_educators_desc_01: What spaces are available for you to do your
+    Hour of Code? Consider the tech capabilities of your space, and the kinds of devices
+    you expect your students to work on. Students can work on tutorials on a single
+    device, take turns using a shared device, or try a tutorial together on a classroom
+    whiteboard. There are even unplugged tutorials that can be completed with no devices
+    at all. Unplugged options can be done anywhere—even outdoors!
+  hoc_how_to_step_01_educators_desc_02: People around the world join the Hour of Code
+    celebration during CS Education Week %{campaign_date} when the latest tutorials
+    and activities are released. But you can do an Hour of Code any day of the year!
+  hoc_how_to_step_02_educators_desc_01: Explore activities based on your group's age,
+    experience, interests, and more. It's popular for students to try self-led tutorials,
+    though many activities include lesson plans for teachers to guide discussion or
+    extend the activity as well.
+  hoc_how_to_step_02_educators_desc_02: Decide ahead of time if you want to choose
+    a single tutorial for all of your students, or let each child pick their own.
+  hoc_how_to_step_02_educators_desc_03: This year, you and your students can [learn
+    all about AI](%ai_url) through tutorials, lesson plans, and our new How AI Works
+    video series.
+  hoc_how_to_step_03_educators_desc_01: Try out the tutorial yourself before you get
+    into the classroom so you can answer questions!
+  hoc_how_to_step_03_educators_desc_02: You can also test tutorials on student computers
+    or devices to ensure they support sound and video. Have low bandwidth? Plan to
+    show videos at the front of the class, so each student isn't downloading their
+    own videos.
+  hoc_how_to_step_03_educators_desc_03: Consider providing headphones for your class,
+    or ask students to bring their own, if the tutorial you choose works best with
+    sound.
+  hoc_how_to_step_04_educators_desc_01: When you register your Hour of Code event,
+    you'll receive helpful emails with news and tips for hosting a successful Hour
+    of Code. It's also how you can let local volunteers know your school is participating.
+    Volunteers are a great resource and can come speak to your class about computer
+    science or help your students with Hour of Code activities.
+  hoc_how_to_step_05_educators_desc_01: Get your students excited for the event by
+    sharing [inspirational videos](%{videos_url}) highlighting diverse people and
+    creative ways that computer science can be used in the real world.
+  hoc_how_to_step_05_educators_desc_02: Share your Hour of Code plans with other teachers
+    who may want to join in on the fun! This is also a great opportunity to reach
+    out to your school's Parent Teacher Student Association or share in parent newsletters,
+    letting them know what their children are learning.
+  hoc_how_to_step_06_educators_desc_01: Direct your students to the activity, maybe
+    by sharing the link on the board or through your classroom's learning management
+    system. Your students may encounter challenges—that's okay! Learning to program
+    is like learning a new language; you won't be fluent right away. If you don't
+    know the answer, you can figure it out together.
+  hoc_how_to_step_07_educators_desc_01: 'Be sure to celebrate success! Share photos
+    and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too!'
+  hoc_how_to_step_07_educators_desc_02: You can also print certificates for your students
+    to show off their achievement!
   team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
     yellow t-shirts pose in a hotel conference room for the company's summer 2022
     Codechella event.
@@ -14206,6 +14434,11 @@ ph:
   video_library_page_inspirational_video_title_11: Kahit sino pwede matuto (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA Celebrates Hour of Code (2
+    min)
+  video_library_page_inspirational_video_title_14: It's More Than A Game (1 min)
+  video_library_page_inspirational_video_title_15: Create With Computer Science (1
+    min)
   video_library_page_not_hacked_video_title_1: 'How Not To Get Hacked: Introduction'
   video_library_page_not_hacked_video_title_2: 'How Not To Get Hacked: Passwords'
   video_library_page_not_hacked_video_title_3: 'How Not To Get Hacked: Authentication
@@ -14216,6 +14449,150 @@ ph:
   video_library_page_not_hacked_video_title_6: 'How Not To Get Hacked: Messaging and
     Downloads'
   video_library_page_not_hacked_video_title_7: 'How Not To Get Hacked: Install Updates'
+  about_us_page_title: Tungkol Sa Amin
+  about_us_page_hero_description: Code.org® is an education innovation nonprofit dedicated
+    to the vision that every student in every school has the opportunity to learn
+    computer science as part of their core K-12 education. We expand access to computer
+    science in schools, with a focus on increasing participation by young women and
+    students from other underrepresented groups.  The leading provider of K-12 computer
+    science curriculum in the largest school districts in the United States, Code.org
+    also organizes the annual [Hour of Code](%{hour_url}) campaign, which has engaged
+    more than 15% of all students in the world. Code.org is supported by generous
+    donors including Microsoft, Amazon, Google and [many others.](%{others_url})
+  about_us_page_section_title_1: Over 80 million students and 2 million teachers on
+    Code.org
+  about_us_page_statistic_figcaption: Code.org participation from the 2021-2022 school
+    year. [See disaggregated data.](%{data_url})
+  about_us_page_statistic_description: Code.org increases diversity in computer science
+    by reaching students of all backgrounds where they are — at their skill-level,
+    in their schools, and in ways that inspire them to keep learning. The vast majority
+    of the students on Code.org are from student groups historically underrepresented
+    in computer science. Increasing diversity in computer science is foundational
+    to our work, and [we encourage you to read more about our efforts](%{diversity_url}).
+  about_us_page_section_title_2: Code.org in the News
+  about_us_page_section_news_description: See all past [news and announcements](%{news_url})
+  about_us_page_section_table: Our goals and metrics
+  about_us_page_section_table_header_1: Code.org Goal
+  about_us_page_section_table_header_2: Accomplishment
+  abous_page_section_table_cell_1_1: Improve diversity in CS *(US students)*
+  abous_page_section_table_cell_1_2: 45% of Code.org students are young women, 50%
+    are students from marginalized racial and ethnic groups, and 46% of US students
+    are in high needs schools. Read more about [our approach to diversity.](%{diversity_url})
+  about_page_section_table_cell_2_1: Inspire students
+  about_page_section_table_cell_2_2: Tens of millions have tried the [Hour of Code](%{hour_url}).
+    (426,370,561 served. 49% female)
+  about_page_section_table_cell_3_1: Reach classrooms
+  about_page_section_table_cell_3_2: 591,636 teachers have signed up to teach our
+    intro courses on [Code Studio](%{code_studio_url}) and 19,177,297 students are
+    enrolled.
+  about_page_section_table_cell_4_1: Prep new CS teachers
+  about_page_section_table_cell_4_2: We've prepared more than 106,000 new teachers
+    to teach CS across grades K-12. Learn about our [professional learning programs.](%{learning_programs_url})
+  about_page_section_table_cell_5_1: Change school district curriculum
+  about_page_section_table_cell_5_2: We've partnered with [180+ of the largest school
+    districts](%{schoold_disctrict_url}) and 60 regional partners to [add CS to school
+    curriculum](%{cs_curriculum_url}). [Learn about becoming a regional partner.](%{regional_partner_url})
+  about_page_section_table_cell_6_1: Set up policies to support CS
+  about_page_section_table_cell_6_2: "[Policies changed in 50 U.S. states](%{states_url})
+    to establish CS education standards, make CS courses count towards high school
+    graduation, etc. [(details)](%{details_url})"
+  about_page_section_table_cell_7_1: Go global
+  about_page_section_table_cell_7_2: Our courses are available in over 67 languages,
+    used in 180+ countries.
+  about_page_section_table_under_label: 'Source: Code Studio Activity and [surveys
+    of participating educators](%{educators_url})'
+  about_page_section_title_3: More information, history, and philosophy
+  about_page_section_more_description_1: 'In 2013, Code.org was launched by twin brothers
+    [Hadi](%{hadi_url}) and [Ali Partovi](%{partovi_url}) with a [video](%{video_url})
+    promoting computer science. This video became #1 on YouTube for a day, and 15,000
+    schools reached out to us for help. Since then, we''ve expanded from a bootstrapped
+    staff of volunteers to build a full organization supporting a worldwide movement.
+    We believe that a quality computer science education should be available to every
+    child, not just a lucky few.'
+  about_page_section_more_description_2: 'To support our goal, we do work across the
+    education spectrum: designing our own courses or partnering with others, training
+    teachers, partnering with large school districts, helping change government policies,
+    expanding internationally via partnerships, and marketing to break stereotypes.'
+  about_page_section_more_description_3: Our work builds upon [decades of effort,
+    by countless organizations and individuals](%{efforts_url}) who have helped establish,
+    fund, and spread computer science education. We're thankful to benefit from the
+    tireless help of the broader computer science education community, and [we thank
+    all the partners and individuals who have supported our impact over the years](%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Our core values and messaging guidelines](%{core_url})"
+  about_page_section_more_list_3: "[Our curriculum and pedagogy philosophy](%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx talk by our founder Hadi Partovi about why
+    computer science is for all (VIDEO)](%{tedx_url})"
+  about_page_section_title_4: A unifying approach in a divided world
+  about_page_section_specific_title_1: A unifying approach in a divided world
+  about_page_section_specific_title_2: Our commitment to accessibility
+  about_page_section_specific_title_3: Ang aming pangako sa libreng kurikulum at open
+    source na teknolohiya
+  about_page_section_specific_title_4: Code.org Advocacy Coalition
+  about_page_section_specific_title_5: K-12 Computer Science Framework
+  about_page_section_specific_title_6: Code.org Donors
+  about_page_section_specific_title_7: I-follow kami
+  about_page_section_specific_title_8: Internasyonal na Pag-abot ng Code.org
+  about_page_section_specific_description_1: Code.org's global role in the K-12 computer
+    science movement is only possible because we use a unifying approach across diverse
+    and often divided stakeholders. At a time of increasing polarization, the idea
+    of increasing opportunity for students unites people from across the political
+    spectrum. Code.org's team members, students, teachers, and supporters have diverse
+    and diverging viewpoints, and they are all welcome in our mission. [Read more.](%{read_more_url})
+  about_page_section_specific_description_2: Code.org believes computer science is
+    foundational for all students and we are committed to equity, access, and opportunity
+    in our organizational [values.](%{values_url}) To achieve this goal, we work to
+    identify and eliminate barriers that prevent the inclusion and full participation
+    of students and educators with disabilities. To learn more about our efforts,
+    see our [accessibility statement.](%{accessibility_url})
+  about_page_section_specific_description_3: All curriculum resources and tutorials
+    we author will forever be free to use and openly licensed under a [Creative Commons](%{commons_url})
+    license, allowing others to make derivative education resources for non-commercial
+    purposes. If you are interested in licensing our materials for commercial purposes,
+    [contact us](%{contact_us_url}). Our courses are translated for worldwide use
+    or by speakers of different languages. Our technology is developed as an [open
+    source project.](%{open_source_url})
+  about_page_section_specific_description_4: The [Code.org Advocacy Coalition](%{advocacy_url})
+    is a bipartisan coalition of corporations and nonprofits that work together to
+    help establish US federal and state policies to expand and sustain access to K-12
+    computer science and to broaden participation and diversity in the field. We bring
+    together [Republican and Democratic political leaders](%{leaders_url}) in common
+    cause supporting expanding access to and participation in K-12 computer science.
+  about_page_section_specific_description_5: Code.org is a member of the steering
+    committee that helped establish the [K-12 Computer Science Framework](%{framework_url})
+    - a high-level guide for states, districts, and organizations implementing computer
+    science education. The Framework has won the support of hundreds of academics,
+    K-12 educators, software companies, nonprofits, and states.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url})
+    about progress in the K-12 computer science movement and about the work of Code.org.
+    Or follow Code.org on social media:"
+  about_page_section_specific_description_8: Over 40% of our website traffic comes
+    from outside of the United States and that number continues to climb. In order
+    to expand global access to computer science, our team works closely with [more
+    than 100 international partners](%{partners_url}), helping them to promote the
+    Hour of Code, advocate for policy change, and train teachers. We are making computer
+    science part of the international education discourse by partnering with ministries
+    of education from around the world and working with international organizations
+    like the Organization for Economic Co-operation and Development and the United
+    Nations Educational, Scientific and Cultural Organization.
+  about_page_section_donors_description_1: Code.org® is a registered public 501c3
+    nonprofit, with support from the general public. We are grateful for the generous
+    support we've received from [individuals and organizations](%{individuals_url})
+    who support our vision.
+  about_page_section_donors_description_2: Codes accomplishments (above) demonstrate
+    our ability to leverage those dollars into strong outcomes. But given our nonprofit
+    ambition that every child in every school should have access to computer science
+    — to become literate citizens in today's digital world and to test their interests
+    in exploring CS further as a career — we have a long way to go to meet a fundraising
+    goal that will support that vision.
+  about_page_donors_link_1: Make a donations
+  about_page_donors_link_2: "[see our list of donors](%{donors_url})"
   language_code:
     ar: Arabic
     az: Azerbaijani

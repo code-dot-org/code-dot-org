@@ -983,12 +983,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Ibahagi ang isang malikhaing artifact sa ibang mag-aaral."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Gumawa ng mga bagong tiyanak at magtalaga sa kanila ng mga kasuotan at lokasyon."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Gumawa ng interactive na animation gamit ang mga tiyanak at event."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Sanayin at subukan ang isang machine learning model."
         },
@@ -3208,15 +3202,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Gumamit ng naaangkop na terminolohiya kapag tumutukoy sa isang computer mouse, trackpad, o touchscreen."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Bumuo ng mga program na tumutugon sa nakatakdang mga kaganapan."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Ilarawan ang mga pagbabago sa mood ng tula."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Ilarawan ang makasagisag at literal na wika sa text."
         }
       }
     }

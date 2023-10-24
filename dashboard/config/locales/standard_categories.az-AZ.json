@@ -50,6 +50,9 @@
         "CED": {
           "description": "Funksiyalar yaratmaq"
         },
+        "CL": {
+          "description": "Əməkdaşlıq"
+        },
         "CN": {
           "description": "Kompleks Ədədlər Sistemi"
         },
@@ -67,6 +70,12 @@
         },
         "CT": {
           "description": "Hesablama təfəkkürü"
+        },
+        "D2.Eco": {
+          "description": "İqtisadiyyat"
+        },
+        "D2.Geo": {
+          "description": "Coğrafiya"
         },
         "D2.His": {
           "description": "Tarix"
@@ -122,6 +131,9 @@
         "RST": {
           "description": "Elm/texniki oxumaq"
         },
+        "SL": {
+          "description": "Danışıq və dinləmə"
+        },
         "SP": {
           "description": "Statistika və Ehtimal"
         },
@@ -130,6 +142,9 @@
         },
         "TF": {
           "description": "Triqonometrik Funksiyalar"
+        },
+        "W": {
+          "description": "Yazı"
         }
       }
     }

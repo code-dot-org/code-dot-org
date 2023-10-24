@@ -1589,6 +1589,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Buchstabierwettbewerb"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Erste Schritte"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Informatik Grundlagen"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Nach vorne schauen"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Die Grundlagen beherrschen: Sequenzierung"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Die Grundlagen beherrschen: Schleifen"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Die Grundlagen beherrschen: Bedingungen"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Die Grundlagen beherrschen: Funktionen"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Die Grundlagen beherrschen: Ereignisse"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Bewährte Methoden für den Informatikunterricht"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planung"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Nächste Schritte"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Einführung in die Problemlösung"
         },
@@ -2272,6 +2305,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Royal Battle mit Ereignissen"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Willkommen bei \"Grundlagen der Informatik unterrichten\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Grundlagen der Informatik-Grundkurse verstehen"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sequencing"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Schleifen"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Ereignisse"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Bedingungen"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projekte am Ende des Kurses"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funktionen"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variablen"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Schleifen mit dem Wiederhol-Block"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Überprüfung Ihrer Reflexionen"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Nächste Schritte"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Sicherheit in meiner Online-Nachbarschaft"
@@ -3931,6 +4003,39 @@
           "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
           "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Erste Schritte"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Informatik Grundlagen"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Nach vorne schauen"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Die Grundlagen beherrschen: Sequenzierung"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Die Grundlagen beherrschen: Schleifen"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Die Grundlagen beherrschen: Bedingungen"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Die Grundlagen beherrschen: Funktionen"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Die Grundlagen beherrschen: Ereignisse"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Bewährte Methoden für den Informatikunterricht"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planung"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Nächste Schritte"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Einführung in die Problemlösung"
@@ -6389,9 +6494,6 @@
           "overview": "⚠️ Diese Lektion richtet sich an Klassenzimmer, die die gesamte Videoserie [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) an einem einzigen Tag\\*\\* zeigen möchten. Es ist nicht vorgesehen, dass es in der gleichen Reihenfolge wie die anderen Lektionen in dieser Einheit unterrichtet wird, in der jedes Video tageweise vorgestellt wird.\n\nDie Schüler folgen jedem Video, indem sie die Vokabeln aus dem Video abgleichen und dann zu jedem Video eine Reflexionsfrage beantworten. Der Unterrichtsplan und die Folien sind sehr spärlich und offen gehalten, sodass Improvisation und Anpassung an Ihr Klassenzimmer möglich sind.",
           "preparation": "-   Drucken Sie den Aktivitätsleitfaden aus\n-   Projizieren Sie die Folien auf einen Videoprojektor"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Einführung in AppLab",
           "overview": "Dieses Tutorial dient der schnellen Einführung in die App Lab Programmierumgebung als leistungsfähiges Werkzeug für die Erstellung und den Austausch von Apps. Im Tutorial lernen die SchülerInnen, Schaltflächen, Text, Bilder, Sounds und Bildschirme in JavaScript zu erstellen und zu steuern, indem sie entweder Blöcke oder Text verwenden. Am Ende des Tutorials haben die SchülerInnen die Möglichkeit, ein begonnenes Projekt zu einer \"Choose Your Own Adventure\"-, \"Greeting Card\"- oder \"Personality Quiz\"-App zu erweitern. Sie können auch damit fortfahren, weitere Projekte zu erstellen, die auf der Seite code.org/applab vorgestellt werden. \n\nViel Spaß bei Ihrer Hour of Code mit App Lab!\n\n**Alter:** Das Tutorial ist für Schüler ab 13 Jahren bestimmt. Die SchülerInnen können eigene Sounds und Bilder hochladen, deshalb sollten sie es nicht ohne Aufsicht benutzen. Zum Schutz der Privatsphäre der SchülerInnen dürfen sie das Tutorial nur verwenden, wenn Sie zuvor Konten für sie in einem von Ihnen verwalteten Bereich eingerichtet haben.",
@@ -6561,10 +6663,10 @@
           "student_overview": "Zunächst klassifizieren die SchülerInnen Objekte als \"Fisch\" oder \"nicht Fisch\", um zu versuchen, Müll aus dem Meer zu entfernen. Anschließend müssen sie ihren Übungsdatensatz erweitern und andere Meeresbewohner einbeziehen, die ins Wasser gehören. Im zweiten Teil der Übung wählen die SchülerInnen ihre eigenen Beschriftungen aus, die sie auf Bilder von zufällig generierten Fischen anwenden. Diese Übungsdaten nutzt ein maschinelles Lernmodell, das dann in der Lage sein wird, selbst neue Bilder zu beschriften."
         },
         "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "- Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
-          "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. ",
-          "student_overview": ""
+          "name": "Programmierung einer Simulation",
+          "overview": "In dieser Stunde machen Lernende aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Stunde kombiniert den Aufbau von **Fähigkeiten** rund um Ereignisse mit einem **Miniprojekt**, bei dem die SchülerInnen ihre eigene Computersimulation in Sprite Lab erstellen können. Sie werden die Simulation studieren, um zu verstehen, wie schnell sich ein Virus ausbreiten kann und wie die Ausbreitung verlangsamt werden kann. ",
+          "preparation": "#### Eine Woche vor Ihrer Hour of Code\n\n-   Lesen Sie in Vorbereitung Ihrer Planung der Veranstaltung [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) und [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466),. \n-   Registrieren Sie Ihre Hour of Code-Veranstaltung][2], wenn Sie Unterstützung für Ihr Klassenzimmer, ermäßigte Poster oder die Teilnahme an der Robotik-Verlosung wünschen (nur in den USA).\n-   Sehen Sie sich das Online-Tutorial an und schließen Sie es selbst ab:  [Outbreak](https://studio.code.org/s/outbreak/). \n-   Stellen Sie sicher, dass Sie es zuerst testen, bevor Sie Ihre SchülerInnen bitten, es abzuschließen. Überprüfen Sie, ob Sie vor der Code of Hour Fehler Ihrer Technik beheben müssen.\n\n### Ein Tag vor Ihrer Hour of Code\n\n-   Alle SchülerInnen, die diese Aktivität abschließen, erhalten eine [Zertifikat](https://studio.code.org/certificates/batch) erhalten. Drucken Sie für alle SchülerInnen im Voraus eine Urkunde aus, um sie am Ende Ihrer Hour of Code zur Hand zur haben.\n-   (optional) Bitten Sie die Schüler, Kopfhörer mitzubringen, die sie während der Aktivität benutzen können.",
+          "purpose": "In dieser Stunde erstellen die SchülerInnen mit der Programmieranleitung ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "
         },
         "playlab/Play Lab": {
           "name": "Spielelabor",
@@ -6605,72 +6707,6 @@
           "preparation": "-   Mache einen Test mit dem Text Compression Widget\n-   Überprüfe die Tipps für Lehrer, um zu entscheiden welche Optionen du benutzen möchtest",
           "purpose": "Das Grundprinzip hinter Komprimierung ist, die Entwicklung einer Methode oder eines Protokolls für die Nutzung von weniger Bits, für die Darstellung der ursprünglichen Information. Komprimierte Daten werden in dieser Lektion mit einem \"Wörterbuch“ von wiederholten Mustern dargestellt, was ähnlich ist zu [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), aber es sollte betont werden, dass LZW etwas anders ist, von dem was die Studenten in dieser Lektion tun. Hier finden die Studenten ihren eigenen Weg. LZW wird nicht nur für Text (ZIP-Dateien) benutzt, sondern auch mit Dateien in einem GIF-Format.",
           "student_overview": "Irgendwann erreichen wir eine physikalische Grenze, wie schnell wir Bits senden können, und wenn wir eine große Menge an Informationen schneller senden wollen, müssen wir eine Möglichkeit finden, die gleichen Informationen mit weniger Bits darzustellen, d. h. wir müssen die Daten komprimieren"
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Room Escape"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Digitaler Entwurf"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Ereignisgesteuerte Programmierung"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Grundlegende App-Funktionalität"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters und Setters"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Häufigkeitsanalyse"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Start- und Endbildschirme"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Start- und Endbildschirme2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Collector Hour of Code 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Übersicht und Installationsanweisungen"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Unter KlassenkameradInnen - Bits über eine gemeinsam genutzte Leitung senden"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Unter KlassenkameradInnen - Zahlen senden"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Unter KlassenkameradInnen - Ascii senden"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Ausstrahlung von Nachrichten"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Router und Adressen"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pakete und Zuverlässigkeit"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manuelles DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Automatischer DNS-Knoten"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Internet-Simulator - Freie Gestaltung"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Kilometerzähler-Widget"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Stimmungsstudie"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Puzzle"
@@ -6806,6 +6842,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Musik"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Room Escape"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Digitaler Entwurf"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Ereignisgesteuerte Programmierung"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Grundlegende App-Funktionalität"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters und Setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Erkenntnisse aus der Informatik Befragung der SchülerInnen nach dem Kurs ('18-'19)"
@@ -7116,12 +7167,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Debugging für CDEF-Pädagogen"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Häufigkeitsanalyse"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Start- und Endbildschirme"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Start- und Endbildschirme2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Puzzle",
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
           "preparation": "-   Auf der Website [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) finden Sie weitere Inhalte zur Online-Sicherheit.",
           "purpose": "Das Hauptziel dieser Stunde ist es, die Erfahrung der SchülerInnen mit Computern zu erweitern. Indem wir die grundlegenden Computerfunktionen wie Klicken, Ziehen und Ablegen behandeln, schaffen wir in der Klasse ein gleichberechtigtes Spielfeld für zukünftige Aufgaben. Diese Stunde bietet auch eine gute Gelegenheit, grundlegende Begriffe aus dem Bereich der Computerhardware einzuführen, z. B. \"Maus\", \"Trackpad\" oder \"Touchscreen\", je nach Gerät.",
           "student_overview": "Klicken und ziehen Sie, um die Aufgaben fertigzustellen."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Collector Hour of Code 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Übersicht und Installationsanweisungen"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Unter KlassenkameradInnen - Bits über eine gemeinsam genutzte Leitung senden"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Unter KlassenkameradInnen - Zahlen senden"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Unter KlassenkameradInnen - Ascii senden"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Ausstrahlung von Nachrichten"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Router und Adressen"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakete und Zuverlässigkeit"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuelles DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automatischer DNS-Knoten"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet-Simulator - Freie Gestaltung"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Kilometerzähler-Widget"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Schwarz-Weiß-Pixel - Tutorial"
@@ -7137,6 +7236,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Beispiele für Farben auf Pixelebene - Freie Gestaltung"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Stimmungsstudie"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

@@ -49,6 +49,7 @@ class UnitOverviewTopRow extends React.Component {
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     courseLink: PropTypes.string,
     participantAudience: PropTypes.string,
+    isUnitWithLevels: PropTypes.bool,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -142,6 +143,7 @@ class UnitOverviewTopRow extends React.Component {
       isProfessionalLearningCourse,
       publishedState,
       participantAudience,
+      isUnitWithLevels,
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -175,7 +177,7 @@ class UnitOverviewTopRow extends React.Component {
       <div style={styles.buttonRow} className="unit-overview-top-row">
         {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
-            {!completedProfessionalLearningCourse && (
+            {!completedProfessionalLearningCourse && isUnitWithLevels && (
               <Button
                 __useDeprecatedTag
                 href={`/s/${scriptName}/next`}

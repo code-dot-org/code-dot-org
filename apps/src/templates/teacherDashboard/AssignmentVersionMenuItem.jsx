@@ -7,6 +7,7 @@ import FontAwesome from './../FontAwesome';
 import color from '../../util/color';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default function AssignmentVersionMenuItem(props) {
   // Returns whether we should display this version as english-only.
@@ -102,8 +103,7 @@ const style = {
   titleColumn: {
     ...cellStyle,
     width: columnWidths.title,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-semi-bold'],
   },
   statusColumn: {
     ...cellStyle,

@@ -10739,7 +10739,7 @@ fr:
           description_short: Explore un monde Minecraft à travers son code.
           student_description: Utilise des blocs de code pour emmener Steve ou Alex
             vivre une aventure dans le monde de Minecraft.
-          title: Hour of Code Minecraft
+          title: Aventurier de Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-2:
@@ -12390,6 +12390,104 @@ fr:
               display_name: Contenu
             csd3_2:
               display_name: 'Chapitre 2 : Construction de Jeux'
+        virtual-pl-csa-summer-2024-day1:
+          title: Jour 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          title: Jour 1
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          title: Jour 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          title: Jour 3
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          title: Jour 4
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          lessons:
+            lesson-1:
+              name: Synchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          title: 'Jour 5 '
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -12491,6 +12589,23 @@ fr:
               name: Ateliers de prévisualisation de l'année scolaire
             lesson-9:
               name: Préparation pour l'année
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Synchrone, partie 2
+            lessonGroup-4:
+              display_name: Asynchrone, partie 1
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 1
+        virtual-pl-csp-summer-day2:
+          title: Jour 2
+        virtual-pl-csp-summer-day3:
+          title: Jour 3
+        virtual-pl-csp-summer-day4:
+          title: Jour 4
         virustest:
           description_short: Utilisez le Labo des Sprites pour créer une simulation
             à partir d'une épidémie de virus.
