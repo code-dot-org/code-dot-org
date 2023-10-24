@@ -297,6 +297,10 @@ ne:
         options:
           EFFECT:
             '"rand"': अनियमित
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"rand"': अनियमित
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
