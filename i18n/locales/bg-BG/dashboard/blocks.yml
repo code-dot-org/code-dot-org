@@ -618,6 +618,49 @@ bg:
             '"tropical"': Тропичен
             '"vintage"': Ретро
             '"warm"': Топъл
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          задай фоннов ефект
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Без
+            '"rand"': "(Случаен)"
+            '"circles"': Кръгове
+            '"quads"': Ъгли
+            '"color_cycle"': Цветове
+            '"diamonds"': Диаманти
+            '"disco_ball"': Диско Топка
+            '"fireworks"': Фойерверки
+            '"flowers"': Цветя
+            '"growing_stars"': Порастващи Звезди
+            '"swirl"': Хипно
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерен Дансинг
+            '"rainbow"': Дъга
+            '"ripples_random"': Слуачйни Вълни
+            '"ripples"': Вълни
+            '"snowflakes"': Сняг
+            '"text"': Имена на Песни
+            '"squiggles"': Драскулки
+            '"galaxy"': Космос
+            '"sparkles"': Искри
+            '"spiral"': Спирала
+            '"disco"': Квадрати
+            '"stars"': Звезди
+            '"music_wave"': Вълни
+          PALETTE:
+            '"rave"': Черно и Бяло
+            '"cool"': Готино
+            '"electronic"': Електроннен
+            '"iceCream"': Сладолед
+            '"default"': Светъл
+            '"neon"': Неон
+            '"ocean"': Океан
+            '"rainbow"': Дъга
+            '"tropical"': Тропичен
+            '"vintage"': Ретро
+            '"warm"': Топъл
       Dancelab_setDanceSpeed:
         text: задай танцовата скорост на {SPRITE} към {SPEED}
         options:
