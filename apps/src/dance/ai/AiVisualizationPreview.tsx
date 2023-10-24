@@ -1,5 +1,7 @@
-import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
+import {BlockSvg} from 'blockly';
 import React, {useCallback, useEffect, useRef} from 'react';
+import {useSelector} from 'react-redux';
+import {DanceState} from '../danceRedux';
 import ProgramExecutor from '../lab2/ProgramExecutor';
 import moduleStyles from './ai-visualization-preview.module.scss';
 
@@ -15,6 +17,10 @@ const PREVIEW_DIV_ID = 'ai-preview';
 const AiVisualizationPreview: React.FunctionComponent<
   AiVisualizationPreviewProps
 > = ({blocks}) => {
+  const songMetadata = useSelector(
+    (state: {dance: DanceState}) => state.dance.currentSongMetadata
+  );
+
   // Generate setup code for previewing the given blocks.
   const generateSetupCode = useCallback((): string => {
     if (blocks.length === 0) {
@@ -39,23 +45,25 @@ const AiVisualizationPreview: React.FunctionComponent<
   }, [blocks]);
 
   useEffect(() => {
+    if (songMetadata === undefined) {
+      return;
+    }
     // Create a new program executor whenever preview code changes
     // to ensure that P5 is destroyed and reloaded correctly.
     const executor: ProgramExecutor = new ProgramExecutor(
       PREVIEW_DIV_ID,
-      () => generateSetupCode(),
+      generateSetupCode,
       () => undefined, // no-op on puzzle complete
-      false, // isReadonly not used
+      true, // treat this as a readonly workspace
       false // no replay log
     );
-    executor.preview();
+    executor.preview(songMetadata);
     return () => {
       executor.destroy();
     };
-  }, [blocks, generateSetupCode]);
+  }, [blocks, generateSetupCode, songMetadata]);
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const blockPreviewContainerRef = useRef<HTMLDivElement>(null);
 
   // HACK: P5 Play hardcodes the canvas size to 400x400 no matter what the container
   // size is. This forces the canvas size to match the container size (200x200).

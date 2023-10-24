@@ -467,8 +467,8 @@ Dance.prototype.reset = function () {
  * image is displayed and sound is NOT played.
  */
 Dance.prototype.preview = async function () {
-  this.nativeAPI.setForegroundEffectsInPreviewMode(true);
   this.nativeAPI.reset();
+  this.nativeAPI.setForegroundEffectsInPreviewMode(true);
   const api = new DanceAPI(this.nativeAPI);
   const studentCode = this.studioApp_.getCode();
   const code = danceCode + studentCode;
@@ -487,14 +487,7 @@ Dance.prototype.preview = async function () {
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
 
-  // Force preview draw to occur **after** any
-  // draw iterations already queued up.
-  // redraw() (rather than draw()) is p5's recommended way
-  // of drawing once.
-  setTimeout(() => {
-    this.nativeAPI.p5_.redraw();
-    this.nativeAPI.setForegroundEffectsInPreviewMode(false);
-  }, 0);
+  this.nativeAPI.staticPreview();
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {

@@ -7,6 +7,18 @@ export type CachedWeightsMapping = {
   output: string[];
 };
 
+(window as any).setAi = (
+  backgroundEffect: string,
+  backgroundColor: string,
+  foregroundEffect: string
+) => {
+  (window as any).overrideAi = {
+    backgroundEffect,
+    backgroundColor,
+    foregroundEffect,
+  };
+};
+
 const CachedBackgrounds: CachedWeightsMapping = UntypedCachedBackgrounds;
 const CachedForegrounds: CachedWeightsMapping = UntypedCachedForegrounds;
 const CachedPalettes: CachedWeightsMapping = UntypedCachedPalettes;
@@ -40,6 +52,10 @@ export function chooseEffects(emojis: string[]) {
   const backgroundOptions: [number, string][] = outputOptions[0];
   const foregroundOptions: [number, string][] = outputOptions[1];
   const paletteOptions: [number, string][] = outputOptions[2];
+
+  if ((window as any).overrideAi) {
+    return JSON.stringify((window as any).overrideAi);
+  }
 
   // Choose random value from top scoring options
   const chosenEffects = {

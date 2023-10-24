@@ -35,6 +35,8 @@ export default class ProgramExecutor {
   private validationCode?: string;
   private onEventsChanged?: () => void;
 
+  private livePreviewActive = false;
+
   constructor(
     container: string,
     getCode: () => string,
@@ -47,6 +49,9 @@ export default class ProgramExecutor {
     nativeAPI: typeof DanceParty = undefined // For testing
   ) {
     this.hooks = {};
+    this.validationCode = validationCode;
+    this.onEventsChanged = onEventsChanged;
+    this.getCode = getCode;
     this.nativeAPI =
       nativeAPI ||
       new DanceParty({
@@ -64,9 +69,6 @@ export default class ProgramExecutor {
         i18n: danceMsg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
       });
-    this.validationCode = validationCode;
-    this.onEventsChanged = onEventsChanged;
-    this.getCode = getCode;
   }
 
   /**
@@ -102,9 +104,9 @@ export default class ProgramExecutor {
   /**
    * Preview the program. Compiles student code and calls on the native API to draw a frame.
    */
-  async preview() {
-    this.nativeAPI.setForegroundEffectsInPreviewMode(true);
+  async preview(songMetadata: SongMetadata) {
     this.reset();
+    this.nativeAPI.setForegroundEffectsInPreviewMode(true);
     this.hooks = await this.preloadSpritesAndCompileCode(
       this.getCode(),
       'runUserSetup'
@@ -116,20 +118,17 @@ export default class ProgramExecutor {
     }
 
     this.hooks.runUserSetup();
-
-    // Force preview draw to occur **after** any
-    // draw iterations already queued up.
-    // redraw() (rather than draw()) is p5's recommended way
-    // of drawing once.
-    setTimeout(() => {
-      this.nativeAPI.p5_.redraw();
-      this.nativeAPI.setForegroundEffectsInPreviewMode(false);
-    }, 0);
+    // TODO: We are calling livePreview() here since this is currently only used by
+    // the AI Dance modal. When this is integrated with Lab2, we should probably also
+    // support static previews.
+    this.nativeAPI.livePreview(songMetadata);
+    this.livePreviewActive = true;
   }
 
   reset() {
     Sounds.getSingleton().stopAllAudio();
     this.nativeAPI.reset();
+    this.livePreviewActive = false;
   }
 
   getReplayLog() {
@@ -204,6 +203,11 @@ export default class ProgramExecutor {
   }
 
   private handleEvents(currentFrameEvents: object[]) {
+    if (this.livePreviewActive) {
+      // We don't want to handle events while live preview is active.
+      return;
+    }
+
     if (!this.hooks.runUserEvents) {
       Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
       return;
