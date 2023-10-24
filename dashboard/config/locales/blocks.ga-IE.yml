@@ -550,6 +550,50 @@ ga:
         text: |-
           socraigh éifeacht an chúlra:
           {EFFECT} {PALETTE}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Ciorcail
+            '"color_cycle"': Dathanna
+            '"diamonds"': Diamaint
+            '"disco"': Cearnóga
+            '"disco_ball"': Liathróid Dioscó
+            '"fireworks"': Tinte ealaíne
+            '"flowers"': Bláthanna
+            '"galaxy"': An Spás
+            '"growing_stars"': Réaltaí ag fás
+            '"kaleidoscope"': Cailéideascóp
+            '"lasers"': Urlár Damhsa Léasair
+            '"music_wave"': Tonnta
+            '"none"': Dada
+            '"quads"': Uillinneacha
+            '"rainbow"': Tuar ceatha
+            '"rand"': "(Randamach)"
+            '"ripples"': Tonnáin
+            '"ripples_random"': Tonnáin Randamacha
+            '"snowflakes"': Sneachta
+            '"sparkles"': Drithlí
+            '"spiral"': Bís
+            '"splatter"': Steall Péinte
+            '"squiggles"': Caisirníní
+            '"starburst"': Pléascadh Réaltaí
+            '"stars"': Réaltaí
+            '"swirl"': Hiopnó
+            '"text"': Ainmneacha Amhráin
+          PALETTE:
+            '"cool"': Fionnuar
+            '"default"': Sorcha
+            '"electronic"': Leictreonach
+            '"iceCream"': Uachtair Reoite
+            '"neon"': Gléineach
+            '"rainbow"': Tuar ceatha
+            '"rave"': Dubh is Bán
+            '"tropical"': Trópaiceach
+            '"vintage"': Sean-Nóis
+            '"warm"': Teolaí
+        text: |-
+          socraigh éifeacht an chúlra:
+          {EFFECT} {PALETTE}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
