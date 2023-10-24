@@ -212,7 +212,9 @@ class RubricsControllerTest < ActionController::TestCase
       userId: @student.id,
     }
     assert_response :success
-    assert_equal({attempted: true, lastAttemptEvaluated: false}.stringify_keys, JSON.parse(@response.body))
+    response = JSON.parse(@response.body)
+    assert response['attempted']
+    refute response['lastAttemptEvaluated']
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
@@ -233,7 +235,9 @@ class RubricsControllerTest < ActionController::TestCase
       userId: @student.id,
     }
     assert_response :success
-    assert_equal({attempted: false, lastAttemptEvaluated: false}.stringify_keys, JSON.parse(@response.body))
+    response = JSON.parse(@response.body)
+    refute response['attempted']
+    refute response['lastAttemptEvaluated']
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
@@ -263,7 +267,9 @@ class RubricsControllerTest < ActionController::TestCase
         userId: @student.id,
       }
       assert_response :success
-      assert_equal({attempted: true, lastAttemptEvaluated: true}.stringify_keys, JSON.parse(@response.body))
+      response = JSON.parse(@response.body)
+      assert response['attempted']
+      assert response['lastAttemptEvaluated']
 
       post :run_ai_evaluations_for_user, params: {
         id: @rubric.id,
@@ -290,7 +296,9 @@ class RubricsControllerTest < ActionController::TestCase
         userId: @student.id,
       }
       assert_response :success
-      assert_equal({attempted: true, lastAttemptEvaluated: false}.stringify_keys, JSON.parse(@response.body))
+      response = JSON.parse(@response.body)
+      assert response['attempted']
+      refute response['lastAttemptEvaluated']
 
       post :run_ai_evaluations_for_user, params: {
         id: @rubric.id,
