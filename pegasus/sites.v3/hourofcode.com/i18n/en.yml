@@ -142,6 +142,17 @@
   device_desktop_computer: "Desktop Computer"
   device_mobile_device: "Mobile Device"
 
+  for_everyone: "For everyone"
+  for_students_teacher_led_learning: "For students: Teacher-led learning"
+  for_students_teacher_led_lessons: "For students: Teacher-led lessons"
+  professional_development: "Professional development"
+
+  how_ai_works_video_series: "How AI Works Video Series"
+  learn_how_ai_works: "Learn How AI Works"
+  ai_101_for_educators: "AI 101 for Educators"
+  learn_about_ai_impacts: "Learn about the Impacts of AI"
+  hoc_ai_activities: "Hour of Code AI Activities"
+
   subscribe_to_emails_heading: "Subscribe to emails"
   subscribe_to_emails_desc: "Read about what's happening at Code.org and in computer science education through quarterly updates via our mailing list."
   subscribe_to_emails_intl: "Subscribe to international updates"
@@ -206,6 +217,7 @@
   call_to_action_watch_now: "Watch now"
   call_to_action_try_activity: "Try activity"
   call_to_action_try_activities: "Try activities"
+  call_to_action_try_hoc_ai_activities: "Try Hour of Code AI activities"
   call_to_action_explore_activities: "Explore activities"
   call_to_action_explore_ai: "Explore AI"
   call_to_action_explore_unit: "Explore unit"
@@ -8420,6 +8432,13 @@
   hoc_how_to_step_06_educators_desc_01: "Direct your students to the activity, maybe by sharing the link on the board or through your classroom's learning management system. Your students may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. If you don't know the answer, you can figure it out together."
   hoc_how_to_step_07_educators_desc_01: "Be sure to celebrate success! Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!"
   hoc_how_to_step_07_educators_desc_02: "You can also print certificates for your students to show off their achievement!"
+
+  hoc_ai_top_desc: "Anyone can learn about AI, whether you're a student in the classroom or an educator unlocking the future of teaching with and about AI."
+  hoc_ai_how_ai_works_video_series_desc: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making."
+  hoc_ai_learn_how_ai_works_desc: "Dive into the world of AI with \"How AI Works,\" lessons paired with our video series introducing you to how AI works and why it matters."
+  hoc_ai_101_for_educators_desc: "Discover the groundbreaking world of artificial intelligence (AI) and its transformative potential in education with our foundational online learning series for teachers."
+  hoc_ai_impacts_desc: "Engage your classroom with  teacher-led lessons that explore the impacts of artificial intelligence and invite learners to think of solutions to some of AI's issues."
+  hoc_ai_activities_desc: "These all-new Hour of Code activities introduce users to the world of artificial intelligence in a fun, engaging way."
 
   team_page_full_team_alt_text: "Nearly 100 Code.org employees in matching blue and yellow t-shirts pose in a hotel conference room for the company's summer 2022 Codechella event."
   careers_page_code_pride_alt_text: "Two feminine-presenting employees smile while holding the ends of a Code.org-branded rainbow banner. Behind them, several people are wearing Code.org shirts and waving rainbow flags while walking alongside a multi-colored Volkswagen bug."
