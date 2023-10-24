@@ -600,6 +600,49 @@ ca:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Vermells
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: definir l'efecte de fons {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Cap
+            '"rand"': "(Aleatori)"
+            '"circles"': Túnel
+            '"quads"': Angles
+            '"color_cycle"': Colors
+            '"diamonds"': Diamants
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Focs artificials
+            '"flowers"': Flors
+            '"growing_stars"': Estrelles creixents
+            '"swirl"': Hipnosi
+            '"kaleidoscope"': Calidoscopi
+            '"lasers"': Zona de ball amb làser
+            '"splatter"': Esquitxades de pintura
+            '"rainbow"': Arc de Sant Martí
+            '"ripples_random"': Ones aleatòries
+            '"ripples"': Ones
+            '"snowflakes"': Neu
+            '"text"': Títol de la cançó
+            '"squiggles"': Guixots
+            '"galaxy"': Espai
+            '"sparkles"': Guspires
+            '"spiral"': Espiral
+            '"disco"': Requadres
+            '"starburst"': esclat d'estrelles
+            '"stars"': Estrelles
+            '"music_wave"': Onades
+          PALETTE:
+            '"rave"': Blanc i negre
+            '"cool"': Blues
+            '"electronic"': Electrònic
+            '"iceCream"': Gelat
+            '"default"': Llum
+            '"neon"': Neó
+            '"ocean"': Oceà
+            '"rainbow"': Arc de Sant Martí
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Vermells
       Dancelab_setDanceSpeed:
         text: canviar {SPRITE} velocitat de dansa a {SPEED}
         options:

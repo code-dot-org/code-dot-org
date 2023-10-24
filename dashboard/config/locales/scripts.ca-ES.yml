@@ -11520,15 +11520,19 @@ ca:
               display_name: Part 2 síncrona
             lessonGroup-5:
               display_name: Asíncrona Part 2
+            lessonGroup-7:
+              display_name: Introducció
           lessons:
-            lesson-1:
-              name: Part 1 síncrona
             lesson-2:
               name: Asíncrona Part 1
             lesson-3:
               name: Part 2 síncrona
             lesson-4:
               name: Asíncrona Part 2
+            lesson-7:
+              name: Introducció
+            lesson-8:
+              name: Taller Obridor
         virtual-pl-csa-summer-day2:
           lesson_groups:
             lessonGroup-2:
@@ -11540,8 +11544,6 @@ ca:
             lessonGroup-5:
               display_name: Asíncrona Part 2
           lessons:
-            lesson-1:
-              name: Part 1 síncrona
             lesson-2:
               name: Asíncrona Part 1
             lesson-3:
@@ -11560,11 +11562,9 @@ ca:
               display_name: Asíncrona Part 2
           lessons:
             lesson-1:
-              name: Part 1 síncrona
+              name: Introducció
             lesson-2:
               name: Asíncrona Part 1
-            lesson-3:
-              name: Part 2 síncrona
             lesson-4:
               name: Asíncrona Part 2
         virtual-pl-csa-summer-day4:
@@ -11578,14 +11578,12 @@ ca:
             lessonGroup-5:
               display_name: Asíncrona Part 2
           lessons:
-            lesson-1:
-              name: Part 1 síncrona
             lesson-2:
               name: Asíncrona Part 1
-            lesson-3:
-              name: Part 2 síncrona
             lesson-4:
               name: Asíncrona Part 2
+            lesson-5:
+              name: Taller Obridor
         virtual-pl-csa-summer-day5:
           lesson_groups:
             lessonGroup-2:
@@ -11596,7 +11594,13 @@ ca:
               display_name: Asíncrona Part 2
           lessons:
             lesson-1:
-              name: Part 1 síncrona
+              name: Taller Obridor
+            lesson-13:
+              name: Cerimònies de cloenda
+            lesson-16:
+              name: Cerimònies de cloenda
+            lesson-2:
+              name: Asíncrona Part 1
             lesson-3:
               name: Part 2 síncrona
             lesson-4:
@@ -11709,6 +11713,53 @@ ca:
               display_name: Asíncrona Part 1
             lessonGroup-5:
               display_name: Asíncrona Part 2
+        virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+          lessons:
+            lesson-5:
+              name: Introducció
+        virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+          lessons:
+            lesson-2:
+              name: Asíncrona Part 1
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+            lessonGroup-5:
+              display_name: Asíncrona Part 2
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Part 1 síncrona
+            lessonGroup-3:
+              display_name: Asíncrona Part 1
+            lessonGroup-4:
+              display_name: Part 2 síncrona
+          lessons:
+            lesson-6:
+              name: Cerimònies de cloenda
         virustest:
           description_short: 'Utilitzeu Sprite Lab per crear una simulació d''un brot
             de virus. '

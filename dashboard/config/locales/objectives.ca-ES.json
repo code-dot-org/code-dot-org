@@ -3281,15 +3281,6 @@
         "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
         },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Il·lustrar els canvis en l'estat d'ànim que transmet un poema."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Representar el llenguatge literal i figurat en un text."
-        },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Desenvolupar programes que responguin a esdeveniments cronometrats."
-        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identificar les accions que es correlacionen amb els esdeveniments d'entrada."
         },
@@ -3331,12 +3322,6 @@
         },
         "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
           "description": "Identificar llocs on anar per seguir aprenent informàtica i programació"
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Saber com s'han de comportar quan van al laboratori d'informàtica."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Fer servir la terminologia correcta per referir-se al ratolí, al ratolí tàctil o a la pantalla tàctil."
         }
       }
     }
