@@ -33,6 +33,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
   }.freeze
 
   validates :ai_confidence, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
+  validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}
 
   def summarize_for_instructor
     {
