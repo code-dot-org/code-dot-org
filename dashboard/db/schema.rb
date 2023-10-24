@@ -1653,12 +1653,14 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
   create_table "rubric_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "requester_id", null: false
+    t.bigint "rubric_id", null: false
     t.integer "project_id", null: false
     t.string "project_version"
     t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["requester_id"], name: "rubric_ai_evaluation_requester_index"
+    t.index ["rubric_id"], name: "rubric_ai_evaluation_rubric_index"
     t.index ["user_id"], name: "index_rubric_ai_evaluations_on_user_id"
   end
 
@@ -2331,6 +2333,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "queued_account_purges", "users"
+  add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
   add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"
   add_foreign_key "school_infos", "school_districts"
