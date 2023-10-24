@@ -28,7 +28,7 @@ export default function ModalFunctionEditor() {
             type="button"
             id={MODAL_EDITOR_DELETE_ID}
             onClick={emptyOnClick}
-            color={Button.ButtonColor.neutralDark}
+            color={Button.ButtonColor.brandSecondaryDefault}
             size={buttonSize}
           >
             {msg.delete()}
