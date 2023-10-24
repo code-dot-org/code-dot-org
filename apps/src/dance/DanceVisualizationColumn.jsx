@@ -96,12 +96,17 @@ class DanceVisualizationColumn extends React.Component {
     const enableSongSelection =
       !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
+    const isSignedIn =
+      this.props.userType === 'teacher' || this.props.userType === 'student';
+
     return (
       <div>
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
-        {this.props.over21 && <HourOfCodeGuideEmailDialog />}
+        {(this.props.over21 || this.props.userType === 'teacher') && (
+          <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
+        )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
             <SongSelector
