@@ -15,7 +15,7 @@ module Forms
     "#{column}->>'$.#{attribute}'".lit
   end
 
-  COUNTRY_CODE = json('processed_data.location_country_code_s')
+  COUNTRY_CODE = json('data.hoc_event_country_s')
   STATE_CODE = json('processed_data.location_state_code_s')
 
   class << self

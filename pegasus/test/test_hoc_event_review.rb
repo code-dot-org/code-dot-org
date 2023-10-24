@@ -60,8 +60,8 @@ class HocEventReviewTest < Minitest::Test
           with_form country: 'MX' do
             with_form country: 'IT' do
               expected = [
-                {country_code: 'IT', count: 1},
                 {country_code: 'MX', count: 2},
+                {country_code: 'IT', count: 1},
               ]
               actual = HocEventReview.event_counts_by_country
               assert_equal expected, actual
@@ -129,6 +129,7 @@ class HocEventReviewTest < Minitest::Test
       stubs(:request).returns(stub(ip: '1.2.3.4'))
 
       data = HocEventReviewTest.fake_data.merge(
+        hoc_event_country_s: country,
         special_event_flag_b: special_event
       )
 
