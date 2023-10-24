@@ -1812,7 +1812,7 @@ FactoryBot.define do
   factory :learning_goal do
     association :rubric
     position {0}
-    learning_goal {"Test Learning Goal"}
+    sequence(:learning_goal, 'a') {|c| "Learning Goal #{c}"}
     ai_enabled {false}
 
     trait :with_teacher_evaluations do

@@ -145,8 +145,13 @@ class RubricsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal 2, json_response.length
-    assert_equal ai_evaluation1.understanding, json_response[0]['understanding']
-    assert_equal ai_evaluation2.understanding, json_response[1]['understanding']
+
+    # Check for the understanding to match what we created
+    # Note: The order is not guaranteed
+    id1 = json_response.map {|r| r['learning_goal_id']}.index(ai_evaluation1.id)
+    id2 = json_response.map {|r| r['learning_goal_id']}.index(ai_evaluation2.id)
+    assert_equal ai_evaluation1.understanding, json_response[id1]['understanding']
+    assert_equal ai_evaluation2.understanding, json_response[id2]['understanding']
   end
 
   test "cannot get ai evaluations for student if not teacher of student" do
