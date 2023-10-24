@@ -579,6 +579,51 @@ uk:
         text: |-
           "установити фоновий ефект
           {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Коло
+            '"color_cycle"': Кольори
+            '"diamonds"': Ромби
+            '"disco"': Квадрати
+            '"disco_ball"': Дискокуля
+            '"fireworks"': Феєрверк
+            '"flowers"': Квіти
+            '"galaxy"': Відступ
+            '"growing_stars"': Зірки, які ростуть
+            '"higher_power"': Вища сила
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерний танцпол
+            '"music_wave"': Хвилі
+            '"none"': Немає
+            '"quads"': Кути
+            '"rainbow"': Веселка
+            '"rand"': "(Випадковий)"
+            '"ripples"': Брижі
+            '"ripples_random"': Випадкові брижі
+            '"snowflakes"': Сніг
+            '"sparkles"': Блискітки
+            '"spiral"': спіраль
+            '"splatter"': Бульбашки
+            '"squiggles"': Звивання
+            '"starburst"': Вибухаюча зірка
+            '"stars"': Зірки
+            '"swirl"': Гіпноз
+            '"text"': Назва пісні
+          PALETTE:
+            '"cool"': Холодний
+            '"default"': Світлий
+            '"electronic"': Електронний
+            '"iceCream"': Морозиво
+            '"neon"': Неоновий
+            '"rainbow"': Веселка
+            '"rave"': Чорний та білий
+            '"tropical"': Тропічний
+            '"vintage"': Вінтажний
+            '"warm"': Теплий
+        text: |-
+          "установити фоновий ефект
+          {PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
           SPEED:

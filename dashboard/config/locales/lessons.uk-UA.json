@@ -12,331 +12,16 @@
           "name": "Вхідні та вихідні дані"
         },
         "csd1-2017/Processing": {
-          "name": "Опрацювання"
+          "name": "Опрацювання даних"
         },
         "csd1-2017/Storage": {
-          "name": "Сховище"
+          "name": "Зберігання даних"
         },
         "csd1-2017/Apps and Problem Solving": {
           "name": "Застосунки та вирішення проблем"
         },
-        "csd2-2017/Exploring Websites": {
-          "name": "Дослідження вебсайтів"
-        },
-        "csd2-2017/Intro to HTML": {
-          "name": "Вступ до HTML"
-        },
-        "csd2-2017/Headings": {
-          "name": "Заголовки"
-        },
-        "csd2-2017/Digital Footprint": {
-          "name": "Цифровий слід"
-        },
-        "csd2-2017/Lists": {
-          "name": "Списки"
-        },
-        "csd2-2017/Styling Text with CSS": {
-          "name": "Зміна стилів тексту з використанням CSS"
-        },
-        "csd2-2017/Styling Elements with CSS": {
-          "name": "Зміна стилів елементів з використанням CSS"
-        },
-        "csd3-2017/Programming for Entertainment": {
-          "name": "Програмування для розваг"
-        },
-        "csd3-2017/Plotting Shapes": {
-          "name": "Побудова фігур"
-        },
-        "csd3-2017/Drawing in Game Lab": {
-          "name": "Малювання в Ігровій Лабораторії"
-        },
-        "csd3-2017/Variables": {
-          "name": "Змінні"
-        },
-        "csd3-2017/Sprites": {
-          "name": "Спрайти"
-        },
-        "csd3-2017/The Draw Loop": {
-          "name": "Цикл малювання"
-        },
-        "csd3-2017/Sprite Movement": {
-          "name": "Переміщення спрайтів"
-        },
-        "csd3-2017/Conditionals": {
-          "name": "Умови"
-        },
-        "csd3-2017/Keyboard Input": {
-          "name": "Введення з клавіатури"
-        },
-        "csd3-2017/Project - Interactive Card": {
-          "name": "Проєкт - Інтерактивна листівка"
-        },
-        "csd3-2017/Velocity": {
-          "name": "Швидкість"
-        },
-        "csd3-2017/Collision Detection": {
-          "name": "Виявлення зіткнень"
-        },
-        "csd3-2017/Complex Sprite Movement": {
-          "name": "Складні переміщення спрайтів"
-        },
-        "csd3-2017/Collisions": {
-          "name": "Зіткнення"
-        },
-        "csd3-2017/Functions": {
-          "name": "Функції"
-        },
-        "csd3-2017/The Game Design Process": {
-          "name": "Процес розробки ігор"
-        },
-        "csd3-2017/Using the Game Design Process": {
-          "name": "Використання процесу розробки ігор"
-        },
-        "csd3-2017/Project - Design a Game": {
-          "name": "Проєкт - Розробка гри"
-        },
-        "csd4-2017/Understanding Your User": {
-          "name": "Розуміння свого користувача"
-        },
-        "csd4-2017/User Interfaces": {
-          "name": "Інтерфейс користувача"
-        },
-        "csd4-2017/Feedback and Testing": {
-          "name": "Відгуки та тестування"
-        },
-        "csd4-2017/Identifying User Needs": {
-          "name": "Визначення потреб користувача"
-        },
-        "csd4-2017/Project - Paper Prototype": {
-          "name": "Проєкт - Паперовий прототип"
-        },
-        "csd4-2017/Designing Apps for Good": {
-          "name": "Створення застосунків для добра"
-        },
-        "csd4-2017/Market Research": {
-          "name": "Дослідження ринку"
-        },
-        "csd4-2017/Paper Prototypes": {
-          "name": "Паперові прототипи"
-        },
-        "csd4-2017/Prototype Testing": {
-          "name": "Тестування прототипів"
-        },
-        "csd4-2017/Testing the App": {
-          "name": "Тестування застосунку"
-        },
-        "csd4-2017/Project - App Presentation": {
-          "name": "Проєкт - Презентація застосунку"
-        },
-        "csd5-2017/Representation Matters": {
-          "name": "Кодування має значення"
-        },
-        "csd5-2017/Patterns and Representation": {
-          "name": "Шаблони та кодування"
-        },
-        "csd5-2017/ASCII and Binary Representation": {
-          "name": "ASCII та двійкове кодування"
-        },
-        "csd5-2017/Representing Images": {
-          "name": "Кодування зображень"
-        },
-        "csd5-2017/Representing Numbers": {
-          "name": "Кодування чисел"
-        },
-        "csd5-2017/Keeping Data Secret": {
-          "name": "Збереження даних у таємниці"
-        },
-        "csd5-2017/Combining Representations": {
-          "name": "Поєднання типів кодування"
-        },
-        "csd5-2017/Problem Solving and Data": {
-          "name": "Вирішення проблем і дані"
-        },
-        "csd5-2017/Problem Solving with Big Data": {
-          "name": "Вирішення проблем за допомогою великих даних"
-        },
-        "csd5-2017/Structuring Data": {
-          "name": "Структурування даних"
-        },
-        "csd5-2017/Making Decisions with Data": {
-          "name": "Прийняття рішень на основі даних"
-        },
-        "csd5-2017/Interpreting Data": {
-          "name": "Інтерпретація даних"
-        },
-        "csd5-2017/Automating Data Decisions": {
-          "name": "Автоматизація прийняття рішень на основі даних"
-        },
-        "csd6-2017/Innovations in Computing_": {
-          "name": "Інновації в комп'ютерних технологіях"
-        },
-        "csd6-2017/Designing Screens with Code_": {
-          "name": "Проєктування екранів за допомогою коду"
-        },
-        "csd6-2017/The Circuit Playground_": {
-          "name": "Плата Circuit Playground"
-        },
-        "csd6-2017/Input Unplugged_": {
-          "name": "Пристрої введення - Безмашинна вправа"
-        },
-        "csd6-2017/Board Events_": {
-          "name": "Події плати"
-        },
-        "csd6-2017/Getting Properties_": {
-          "name": "Зчитування властивостей"
-        },
-        "csd6-2017/Analog Input_": {
-          "name": "Аналоговий вхід"
-        },
-        "csd6-2017/The Program Design Process_": {
-          "name": "Процес розробки програми"
-        },
-        "csd6-2017/Arrays and Color LEDs__": {
-          "name": "Масиви та кольорові світлодіоди"
-        },
-        "csd6-2017/Making Music_": {
-          "name": "Створення музики"
-        },
-        "csd6-2017/Arrays and For Loops_": {
-          "name": "Масиви та цикли \"For\""
-        },
-        "csd6-2017/Accelerometer_": {
-          "name": "Акселерометр"
-        },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Функції з параметрами"
-        },
-        "csd6-2017/Circuits and Physical Prototypes_": {
-          "name": "Схеми та фізичні прототипи"
-        },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Життєві алгоритми: посадити насіння"
-        },
-        "coursea-2017/Loops in Artist": {
-          "name": "Художник - Цикли"
-        },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Життєві алгоритми: посадити насіння"
-        },
-        "courseb-2017/Programming: My Robotic Friends": {
-          "name": "Програмування: Мої друзі-роботи"
-        },
-        "courseb-2017/Programming with Rey and BB-8": {
-          "name": "Програмування з Рей та BB-8"
-        },
-        "courseb-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Цикли: Мої циклічні друзі-роботи "
-        },
-        "courseb-2017/Loops in Artist": {
-          "name": "Художник - Цикли"
-        },
-        "coursec-2017/Debugging in Maze": {
-          "name": "Налагодження у Лабіринті"
-        },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Життєві алгоритми: Паперові літачки"
-        },
-        "coursec-2017/Loops with Rey and BB-8": {
-          "name": "Цикли з Рей і BB-8"
-        },
-        "coursec-2017/Loops in Artist": {
-          "name": "Художник - Цикли"
-        },
-        "coursec-2017/Loops in Harvester": {
-          "name": "Цикли з Фермеркою"
-        },
-        "coursec-2017/Build a Flappy Game": {
-          "name": "Створення гри \"Пурх\""
-        },
-        "coursed-2017/Introduction": {
-          "name": "Вступ до онлайн-завдань"
-        },
-        "coursed-2017/Events in Bounce": {
-          "name": "Події у грі \"Відбивай\""
-        },
-        "coursed-2017/Nested Loops": {
-          "name": "Вкладені цикли"
-        },
-        "coursed-2017/While Loops in Farmer": {
-          "name": "Цикли \"поки\" з Фермеркою"
-        },
-        "coursee-2017/Programming: My Robotic Friends": {
-          "name": "Програмування: Мої друзі-роботи"
-        },
-        "coursee-2017/Building a Foundation": {
-          "name": "Закладання основ"
-        },
-        "coursee-2017/Debugging with Scrat": {
-          "name": "Налагодження зі Скретом"
-        },
-        "coursee-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Цикли: Мої циклічні друзі-роботи "
-        },
-        "coursee-2017/Loops in Artist": {
-          "name": "Художник - Цикли"
-        },
-        "coursee-2017/Nested Loops": {
-          "name": "Вкладені цикли"
-        },
-        "coursee-2017/Nested Loops with Frozen": {
-          "name": "Вкладені цикли із \"Крижаним серцем\""
-        },
-        "coursee-2017/Introduction": {
-          "name": "Вступ до онлайн-завдань"
-        },
-        "coursee-2017/Build a Star Wars Game": {
-          "name": "Створюємо гру «Зоряні війни»"
-        },
-        "coursee-2017/Determine the Concept": {
-          "name": "Визначаємося з поняттям"
-        },
-        "coursee-2017/Explore Project Ideas": {
-          "name": "Досліджуємо ідеї проєкту"
-        },
-        "coursee-2017/The Design Process": {
-          "name": "Процес проєктування"
-        },
-        "coursee-2017/Build Your Project": {
-          "name": "Виконуємо свій проєкт"
-        },
-        "coursee-2017/Present Your Project": {
-          "name": "Презентуємо свій проєкт"
-        },
-        "coursef-2017/Programming: My Robotic Friends": {
-          "name": "Програмування: Мої друзі-роботи"
-        },
-        "coursef-2017/Building a Foundation": {
-          "name": "Закладання основ"
-        },
-        "coursef-2017/Debugging with Scrat": {
-          "name": "Налагодження зі Скретом"
-        },
-        "coursef-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Цикли: Мої циклічні друзі-роботи "
-        },
-        "coursef-2017/Loops in Artist": {
-          "name": "Художник - Цикли"
-        },
-        "coursef-2017/Nested Loops with Frozen": {
-          "name": "Вкладені цикли із \"Крижаним серцем\""
-        },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Алгоритми: Танграми"
-        },
-        "coursef-2017/Introduction": {
-          "name": "Вступ до онлайн-завдань"
-        },
-        "coursef-2017/Explore Project Ideas": {
-          "name": "Досліджуємо ідеї проєкту"
-        },
-        "coursef-2017/The Design Process": {
-          "name": "Процес проєктування"
-        },
-        "coursef-2017/Build Your Project": {
-          "name": "Виконуємо свій проєкт"
-        },
-        "coursef-2017/Present Your Project": {
-          "name": "Презентуємо свій проєкт"
+        "csd1-2017/Project - Propose an App": {
+          "name": "Проєкт - запропонуй застосунок"
         },
         "express-2017/Introduction": {
           "name": "Вступ"
@@ -374,21 +59,6 @@
         "express-2017/Present Your Project": {
           "name": "Презентуємо свій проєкт"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Життєві алгоритми: посадити насіння"
-        },
-        "pre-express-2017/Programming: My Robotic Friends": {
-          "name": "Програмування: Мої друзі-роботи"
-        },
-        "pre-express-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Цикли: Мої циклічні друзі-роботи "
-        },
-        "pre-express-2017/Loops in Artist": {
-          "name": "Художник - Цикли"
-        },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Грамотна Бджілка"
-        },
         "csd1-2018/The Problem Solving Process": {
           "name": "Процес вирішення проблем"
         },
@@ -399,694 +69,10 @@
           "name": "Вхідні та вихідні дані"
         },
         "csd1-2018/Processing": {
-          "name": "Опрацювання"
+          "name": "Опрацювання даних"
         },
-        "csd2-2018/Exploring Websites": {
-          "name": "Дослідження вебсайтів"
-        },
-        "csd2-2018/Intro to HTML": {
-          "name": "Вступ до HTML"
-        },
-        "csd2-2018/Headings": {
-          "name": "Заголовки"
-        },
-        "csd2-2018/Digital Footprint": {
-          "name": "Цифровий слід"
-        },
-        "csd2-2018/Lists": {
-          "name": "Списки"
-        },
-        "csd2-2018/Styling Text with CSS": {
-          "name": "Зміна стилів тексту з використанням CSS"
-        },
-        "csd2-2018/Styling Elements with CSS": {
-          "name": "Зміна стилів елементів з використанням CSS"
-        },
-        "csd2-2018/CS Discoveries Post-Course Survey": {
-          "name": "Опитування після курсу CS Discoveries"
-        },
-        "csd3-2018/Programming for Entertainment": {
-          "name": "Програмування для розваг"
-        },
-        "csd3-2018/Plotting Shapes": {
-          "name": "Побудова фігур"
-        },
-        "csd3-2018/Drawing in Game Lab": {
-          "name": "Малювання в Ігровій Лабораторії"
-        },
-        "csd3-2018/Variables": {
-          "name": "Змінні"
-        },
-        "csd3-2018/Sprites": {
-          "name": "Спрайти"
-        },
-        "csd3-2018/The Draw Loop": {
-          "name": "Цикл малювання"
-        },
-        "csd3-2018/Sprite Movement": {
-          "name": "Переміщення спрайтів"
-        },
-        "csd3-2018/Conditionals": {
-          "name": "Умови"
-        },
-        "csd3-2018/Keyboard Input": {
-          "name": "Введення з клавіатури"
-        },
-        "csd3-2018/Project - Interactive Card": {
-          "name": "Проєкт - Інтерактивна листівка"
-        },
-        "csd3-2018/Velocity": {
-          "name": "Швидкість"
-        },
-        "csd3-2018/Collision Detection": {
-          "name": "Виявлення зіткнень"
-        },
-        "csd3-2018/Complex Sprite Movement": {
-          "name": "Складні переміщення спрайтів"
-        },
-        "csd3-2018/Collisions": {
-          "name": "Зіткнення"
-        },
-        "csd3-2018/Functions": {
-          "name": "Функції"
-        },
-        "csd3-2018/The Game Design Process": {
-          "name": "Процес розробки ігор"
-        },
-        "csd3-2018/Using the Game Design Process": {
-          "name": "Використання процесу розробки ігор"
-        },
-        "csd3-2018/Project - Design a Game": {
-          "name": "Проєкт - Розробка гри"
-        },
-        "csd3-2018/CS Discoveries Post-Course Survey": {
-          "name": "Опитування після курсу CS Discoveries"
-        },
-        "csd4-2018/Understanding Your User": {
-          "name": "Розуміння свого користувача"
-        },
-        "csd4-2018/User Interfaces": {
-          "name": "Інтерфейс користувача"
-        },
-        "csd4-2018/Feedback and Testing": {
-          "name": "Відгуки та тестування"
-        },
-        "csd4-2018/Identifying User Needs": {
-          "name": "Визначення потреб користувача"
-        },
-        "csd4-2018/Project - Paper Prototype": {
-          "name": "Проєкт - Паперовий прототип"
-        },
-        "csd4-2018/Designing Apps for Good": {
-          "name": "Створення застосунків для добра"
-        },
-        "csd4-2018/Market Research": {
-          "name": "Дослідження ринку"
-        },
-        "csd4-2018/Paper Prototypes": {
-          "name": "Паперові прототипи"
-        },
-        "csd4-2018/Prototype Testing": {
-          "name": "Тестування прототипів"
-        },
-        "csd4-2018/Testing the App": {
-          "name": "Тестування застосунку"
-        },
-        "csd4-2018/Project - App Presentation": {
-          "name": "Проєкт - Презентація застосунку"
-        },
-        "csd4-2018/CS Discoveries Post-Course Survey": {
-          "name": "Опитування після курсу CS Discoveries"
-        },
-        "csd5-2018/Representation Matters": {
-          "name": "Кодування має значення"
-        },
-        "csd5-2018/Patterns and Representation": {
-          "name": "Шаблони та кодування"
-        },
-        "csd5-2018/ASCII and Binary Representation": {
-          "name": "ASCII та двійкове кодування"
-        },
-        "csd5-2018/Representing Images": {
-          "name": "Кодування зображень"
-        },
-        "csd5-2018/Representing Numbers": {
-          "name": "Кодування чисел"
-        },
-        "csd5-2018/Keeping Data Secret": {
-          "name": "Збереження даних у таємниці"
-        },
-        "csd5-2018/Combining Representations": {
-          "name": "Поєднання типів кодування"
-        },
-        "csd5-2018/Problem Solving and Data": {
-          "name": "Вирішення проблем і дані"
-        },
-        "csd5-2018/Problem Solving with Big Data": {
-          "name": "Вирішення проблем за допомогою великих даних"
-        },
-        "csd5-2018/Structuring Data": {
-          "name": "Структурування даних"
-        },
-        "csd5-2018/Making Decisions with Data": {
-          "name": "Прийняття рішень на основі даних"
-        },
-        "csd5-2018/Interpreting Data": {
-          "name": "Інтерпретація даних"
-        },
-        "csd5-2018/Automating Data Decisions": {
-          "name": "Автоматизація прийняття рішень на основі даних"
-        },
-        "csd5-2018/CS Discoveries Post-Course Survey": {
-          "name": "Опитування після курсу CS Discoveries"
-        },
-        "csd6-2018/Innovations in Computing": {
-          "name": "Інновації в комп'ютерних технологіях"
-        },
-        "csd6-2018/Designing Screens with Code": {
-          "name": "Проєктування екранів за допомогою коду"
-        },
-        "csd6-2018/The Circuit Playground": {
-          "name": "Плата Circuit Playground"
-        },
-        "csd6-2018/Input Unplugged": {
-          "name": "Пристрої введення - Безмашинна вправа"
-        },
-        "csd6-2018/Board Events": {
-          "name": "Події плати"
-        },
-        "csd6-2018/Getting Properties": {
-          "name": "Зчитування властивостей"
-        },
-        "csd6-2018/Analog Input": {
-          "name": "Аналоговий вхід"
-        },
-        "csd6-2018/The Program Design Process": {
-          "name": "Процес розробки програми"
-        },
-        "csd6-2018/Arrays and Color LEDs": {
-          "name": "Масиви та кольорові світлодіоди"
-        },
-        "csd6-2018/Making Music": {
-          "name": "Створення музики"
-        },
-        "csd6-2018/Arrays and For Loops": {
-          "name": "Масиви та цикли \"For\""
-        },
-        "csd6-2018/Accelerometer": {
-          "name": "Акселерометр"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "Функції з параметрами"
-        },
-        "csd6-2018/Circuits and Physical Prototypes": {
-          "name": "Схеми та фізичні прототипи"
-        },
-        "csd6-2018/CS Discoveries Post-Course Survey": {
-          "name": "Опитування після курсу CS Discoveries"
-        },
-        "coursea-2018/Debugging: Unspotted Bugs": {
-          "name": "Баги"
-        },
-        "coursea-2018/Persistence & Frustration: Stevie and the Big Project": {
-          "name": "Стів і Великий проєкт"
-        },
-        "coursea-2018/Sequencing in Maze": {
-          "name": "Лінійні послідовності з Angry Birds"
-        },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Веселі карти"
-        },
-        "coursea-2018/Programming in Maze": {
-          "name": "Програмування з Angry Birds"
-        },
-        "coursea-2018/Programming in Harvester": {
-          "name": "Програмування з Фермеркою"
-        },
-        "coursea-2018/Going Places Safely": {
-          "name": "Безпечне добирання"
-        },
-        "coursea-2018/Loops: Happy Loops": {
-          "name": "Веселі цикли"
-        },
-        "coursea-2018/Loops in Harvester": {
-          "name": "Цикли з Фермеркою"
-        },
-        "coursea-2018/Loops in Collector": {
-          "name": "Цикли з Лорел"
-        },
-        "coursea-2018/Loops in Artist": {
-          "name": "Океан з циклами"
-        },
-        "coursea-2018/Events: The Big Event": {
-          "name": "Велика молодша подія"
-        },
-        "coursea-2018/Events in Play Lab": {
-          "name": "Рухаємось з подіями"
-        },
-        "courseb-2018/Move It, Move It": {
-          "name": "Рухайся, рухайся"
-        },
-        "courseb-2018/Sequencing with Scrat": {
-          "name": "Послідовності зі Скретом"
-        },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Твій цифровий слід"
-        },
-        "courseb-2018/Programming: My Robotic Friends": {
-          "name": "Мої молодші друзі-роботи"
-        },
-        "courseb-2018/Programming in Ice Age": {
-          "name": "Програмування зі Скретом"
-        },
-        "courseb-2018/Programming with Rey and BB-8": {
-          "name": "Програмування з Рей та BB-8"
-        },
-        "courseb-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Мої молодші друзі-роботи та цикли"
-        },
-        "courseb-2018/Loops in Ice Age": {
-          "name": "Цикли зі Скретом"
-        },
-        "courseb-2018/Loops in Collector": {
-          "name": "Цикли з Лорел"
-        },
-        "courseb-2018/Loops in Artist": {
-          "name": "Малюємо сади за допомогою циклів"
-        },
-        "courseb-2018/Events: The Big Event": {
-          "name": "Велика молодша подія"
-        },
-        "courseb-2018/Events in Play Lab": {
-          "name": "Королівська битва з подіями"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Закладання основ"
-        },
-        "coursec-2018/Programming in Maze": {
-          "name": "Програмування з Angry Birds"
-        },
-        "coursec-2018/Debugging in Maze": {
-          "name": "Налагодження у Лабіринті"
-        },
-        "coursec-2018/Programming in Collector": {
-          "name": "Збираємо скарби з Лорел!"
-        },
-        "coursec-2018/Programming in Artist": {
-          "name": "Творимо мистецтво за допомогою коду"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Зациклюємось"
-        },
-        "coursec-2018/Loops with Rey and BB-8": {
-          "name": "Цикли з Рей і BB-8"
-        },
-        "coursec-2018/Loops in Artist": {
-          "name": "Мистецтво створення наліпок з циклами"
-        },
-        "coursec-2018/Loops in Harvester": {
-          "name": "Збирання врожаю з використанням циклів"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Велика подія"
-        },
-        "coursec-2018/Build a Flappy Game": {
-          "name": "Створення гри \"Пурх\""
-        },
-        "coursec-2018/Events in Play Lab": {
-          "name": "Гра \"Квач\" з подіями"
-        },
-        "coursec-2018/Looking Ahead": {
-          "name": "Думаємо наперед з Minecraft"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Двійкові браслети"
-        },
-        "coursed-2018/Algorithms: Graph Paper Programming": {
-          "name": "Програмування по клітинках"
-        },
-        "coursed-2018/Introduction to Online Puzzles": {
-          "name": "Вступ до онлайн-завдань"
-        },
-        "coursed-2018/Relay Programming": {
-          "name": "Естафетне програмування"
-        },
-        "coursed-2018/Debugging in Collector": {
-          "name": "Налагодження із Лорел"
-        },
-        "coursed-2018/Events in Bounce": {
-          "name": "Події у грі \"Відбивай\""
-        },
-        "coursed-2018/Loops in Ice Age": {
-          "name": "Цикли в Льодовиковому періоді"
-        },
-        "coursed-2018/Loops in Artist": {
-          "name": "Малюємо фігури циклами"
-        },
-        "coursed-2018/Nested Loops in Bee": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursed-2018/Nested Loops in Artist": {
-          "name": "Вигадливі форми з вкладених циклів"
-        },
-        "coursed-2018/Nested Loops in Frozen": {
-          "name": "Сніжинки з Анною і Ельзою"
-        },
-        "coursed-2018/While Loops in Farmer": {
-          "name": "Цикли \"поки\" з Фермеркою"
-        },
-        "coursed-2018/Until Loops in Maze": {
-          "name": "Цикли \"повторити до\" у Лабіринті"
-        },
-        "coursed-2018/Conditionals with Cards": {
-          "name": "Умови з картами"
-        },
-        "coursed-2018/Conditionals in Bee": {
-          "name": "Якщо/Інакше з Бджілкою"
-        },
-        "coursed-2018/Conditionals & Loops in Harvester": {
-          "name": "Збір врожаю з умовними конструкціями"
-        },
-        "coursed-2018/Digital Citizenship": {
-          "name": "Цифрове громадянство"
-        },
-        "coursed-2018/Unplugged: Binary": {
-          "name": "Двійкові зображення"
-        },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Мої друзі-роботи"
-        },
-        "coursee-2018/Sequence in Maze": {
-          "name": "Кодування з коментарями"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Закладання основ"
-        },
-        "coursee-2018/Debugging with Scrat": {
-          "name": "Налагодження зі Скретом"
-        },
-        "coursee-2018/Programming in Artist": {
-          "name": "Творимо мистецтво за допомогою коду"
-        },
-        "coursee-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Мої циклічні друзі-роботи"
-        },
-        "coursee-2018/Loops in Artist": {
-          "name": "Малюємо фігури циклами"
-        },
-        "coursee-2018/Nested Loops": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursee-2018/Nested Loops with Frozen": {
-          "name": "Вкладені цикли із \"Крижаним серцем\""
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Умови з картами"
-        },
-        "coursee-2018/Conditionals": {
-          "name": "Умови з Фермеркою"
-        },
-        "coursee-2018/Private and Personal Information": {
-          "name": "Приватна та особиста інформація"
-        },
-        "coursee-2018/Build a Star Wars Game": {
-          "name": "Створюємо гру «Зоряні війни»"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Написання пісень"
-        },
-        "coursee-2018/Functions in Minecraft": {
-          "name": "Функції в Minecraft"
-        },
-        "coursee-2018/Functions in Harvester": {
-          "name": "Функції з Фермеркою"
-        },
-        "coursee-2018/Copyright and Creativity": {
-          "name": "Обмін та поширення онлайн"
-        },
-        "coursee-2018/Functions in Artist": {
-          "name": "Функції з Художником"
-        },
-        "coursee-2018/Determine the Concept": {
-          "name": "Визначаємося з поняттям"
-        },
-        "coursee-2018/Learning Sprites with Sprite Lab": {
-          "name": "Вивчаємо Спрайт Лабораторію"
-        },
-        "coursee-2018/Alien Dance Party with Sprite Lab": {
-          "name": "Іншопланетна танцювальна вечірка"
-        },
-        "coursee-2018/Pet Giraffe with Sprite Lab": {
-          "name": "Домашній жираф"
-        },
-        "coursee-2018/Explore Project Ideas": {
-          "name": "Досліджуємо ідеї проєкту"
-        },
-        "coursee-2018/The Design Process": {
-          "name": "Процес проєктування"
-        },
-        "coursee-2018/Build Your Project": {
-          "name": "Виконуємо свій проєкт"
-        },
-        "coursee-2018/Present Your Project": {
-          "name": "Презентуємо свій проєкт"
-        },
-        "coursee-2018/Internet": {
-          "name": "Інтернет"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Краудсорсинг"
-        },
-        "coursef-2018/Programming: My Robotic Friends": {
-          "name": "Мої друзі-роботи"
-        },
-        "coursef-2018/Sequence in Maze": {
-          "name": "Кодування з коментарями"
-        },
-        "coursef-2018/Building a Foundation": {
-          "name": "Закладання основ"
-        },
-        "coursef-2018/Debugging with Scrat": {
-          "name": "Налагодження зі Скретом"
-        },
-        "coursef-2018/Programming in Artist": {
-          "name": "Творимо мистецтво за допомогою коду"
-        },
-        "coursef-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Мої циклічні друзі-роботи"
-        },
-        "coursef-2018/Loops in Artist": {
-          "name": "Малюємо фігури циклами"
-        },
-        "coursef-2018/Nested Loops in Bee/Zombie": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursef-2018/Nested Loops with Frozen": {
-          "name": "Вкладені цикли із \"Крижаним серцем\""
-        },
-        "coursef-2018/Conditionals with Cards": {
-          "name": "Умови з картами"
-        },
-        "coursef-2018/Conditionals in Farmer": {
-          "name": "Умови з Фермеркою"
-        },
-        "coursef-2018/The Power of Words": {
-          "name": "Сила слова"
-        },
-        "coursef-2018/Envelope Variables": {
-          "name": "Конвертні змінні"
-        },
-        "coursef-2018/For Loop Fun": {
-          "name": "Ігри з циклами"
-        },
-        "coursef-2018/For Loops in Bee": {
-          "name": "Цикли \"для кожного\" з Бджілкою"
-        },
-        "coursef-2018/For Loops in Artist": {
-          "name": "Цикли \"для кожного\" з Художником"
-        },
-        "coursef-2018/Learning Sprites with Sprite Lab": {
-          "name": "Вивчаємо Спрайт Лабораторію"
-        },
-        "coursef-2018/Alien Dance Party with Sprite Lab": {
-          "name": "Іншопланетна танцювальна вечірка"
-        },
-        "coursef-2018/Pet Giraffe with Sprite Lab": {
-          "name": "Домашній жираф"
-        },
-        "coursef-2018/Explore Project Ideas": {
-          "name": "Досліджуємо ідеї проєкту"
-        },
-        "coursef-2018/The Design Process": {
-          "name": "Процес проєктування"
-        },
-        "coursef-2018/Build Your Project": {
-          "name": "Виконуємо свій проєкт"
-        },
-        "coursef-2018/Present Your Project": {
-          "name": "Презентуємо свій проєкт"
-        },
-        "express-2018/Graph Paper Programming": {
-          "name": "Програмування по клітинках"
-        },
-        "express-2018/Relay Programming": {
-          "name": "Естафетне програмування"
-        },
-        "express-2018/Debugging in Maze": {
-          "name": "Налагодження зі Скретом"
-        },
-        "express-2018/Programming in Collector": {
-          "name": "Збираємо скарби з Лорел!"
-        },
-        "express-2018/Programming in Artist": {
-          "name": "Творимо мистецтво за допомогою коду"
-        },
-        "express-2018/Loops: Getting Loopy": {
-          "name": "Зациклюємось"
-        },
-        "express-2018/Loops with Rey and BB-8": {
-          "name": "Цикли з Рей і BB-8"
-        },
-        "express-2018/Loops in Artist": {
-          "name": "Мистецтво створення наліпок з циклами"
-        },
-        "express-2018/Concept Practice with Minecraft ": {
-          "name": "Думаємо наперед з Minecraft"
-        },
-        "express-2018/Until Loops in Maze": {
-          "name": "Цикли \"повторити до\" у Лабіринті"
-        },
-        "express-2018/Conditionals with Cards": {
-          "name": "Умови з картами"
-        },
-        "express-2018/Conditionals in Bee": {
-          "name": "Якщо/Інакше з Бджілкою"
-        },
-        "express-2018/Conditionals & Loops in Harvester": {
-          "name": "Збір врожаю з умовними конструкціями"
-        },
-        "express-2018/Functions: Songwriting": {
-          "name": "Написання пісень"
-        },
-        "express-2018/Determine the Concept": {
-          "name": "Визначаємося з поняттям"
-        },
-        "express-2018/Events: The Big Event": {
-          "name": "Велика подія"
-        },
-        "express-2018/Build a Flappy Game": {
-          "name": "Створення гри \"Пурх\""
-        },
-        "express-2018/The Power of Words": {
-          "name": "Сила слова"
-        },
-        "express-2018/Envelope Variables": {
-          "name": "Конвертні змінні"
-        },
-        "express-2018/For Loop Fun": {
-          "name": "Ігри з циклами"
-        },
-        "express-2018/For Loops in Bee": {
-          "name": "Цикли \"для кожного\" з Бджілкою"
-        },
-        "express-2018/For Loops in Artist": {
-          "name": "Цикли \"для кожного\" з Художником"
-        },
-        "express-2018/Learning Sprites with Sprite Lab": {
-          "name": "Вивчаємо Спрайт Лабораторію"
-        },
-        "express-2018/Alien Dance Party with Sprite Lab": {
-          "name": "Іншопланетна танцювальна вечірка"
-        },
-        "express-2018/Pet Giraffe with Sprite Lab": {
-          "name": "Домашній жираф"
-        },
-        "express-2018/Explore Project Ideas": {
-          "name": "Досліджуємо ідеї проєкту"
-        },
-        "express-2018/The Design Process": {
-          "name": "Процес проєктування"
-        },
-        "express-2018/Build Your Project": {
-          "name": "Виконуємо свій проєкт"
-        },
-        "express-2018/Present Your Project": {
-          "name": "Презентуємо свій проєкт"
-        },
-        "express-2018/Binary Bracelets": {
-          "name": "Двійкові браслети"
-        },
-        "express-2018/Unplugged: Binary": {
-          "name": "Двійкові зображення"
-        },
-        "express-2018/Internet": {
-          "name": "Інтернет"
-        },
-        "express-2018/Crowdsourcing": {
-          "name": "Краудсорсинг"
-        },
-        "pre-express-2018/Debugging: Unspotted Bugs": {
-          "name": "Баги"
-        },
-        "pre-express-2018/Persistence & Frustration: Stevie and the Big Project": {
-          "name": "Стів і Великий проєкт"
-        },
-        "pre-express-2018/Move It, Move It": {
-          "name": "Рухайся, рухайся"
-        },
-        "pre-express-2018/Sequencing with Scrat": {
-          "name": "Послідовності зі Скретом"
-        },
-        "pre-express-2018/Your Digital Footprint": {
-          "name": "Твій цифровий слід"
-        },
-        "pre-express-2018/Programming: My Robotic Friends": {
-          "name": "Мої молодші друзі-роботи"
-        },
-        "pre-express-2018/Programming in Ice Age": {
-          "name": "Програмування зі Скретом"
-        },
-        "pre-express-2018/Programming with Rey and BB-8": {
-          "name": "Програмування з Рей та BB-8"
-        },
-        "pre-express-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Мої молодші друзі-роботи та цикли"
-        },
-        "pre-express-2018/Loops in Ice Age": {
-          "name": "Цикли зі Скретом"
-        },
-        "pre-express-2018/Loops in Collector": {
-          "name": "Цикли з Лорел"
-        },
-        "pre-express-2018/Loops in Artist": {
-          "name": "Малюємо сади за допомогою циклів"
-        },
-        "pre-express-2018/Events: The Big Event": {
-          "name": "Велика молодша подія"
-        },
-        "pre-express-2018/Events in Play Lab": {
-          "name": "Королівська битва з подіями"
-        },
-        "pre-express-2018/Spelling Bee": {
-          "name": "Грамотна Бджілка"
-        },
-        "K5-OnlinePD/Getting Started": {
-          "name": "Починаємо"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Основи інформатики"
-        },
-        "K5-OnlinePD/Looking Ahead": {
-          "name": "Дивлячись вперед"
-        },
-        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
-          "name": "Успішні методики викладання інформатики"
-        },
-        "K5-OnlinePD/Planning": {
-          "name": "Планування"
-        },
-        "K5-OnlinePD/Next Steps": {
-          "name": "Наступні Кроки"
+        "csd1-2018/Project - Propose an App": {
+          "name": "Проєкт - запропонуй застосунок"
         },
         "csd1-2019/The Problem Solving Process": {
           "name": "Процес вирішення проблем"
@@ -1098,958 +84,10 @@
           "name": "Вхідні та вихідні дані"
         },
         "csd1-2019/Processing": {
-          "name": "Опрацювання"
+          "name": "Опрацювання даних"
         },
-        "csd2-2019/Exploring Websites": {
-          "name": "Дослідження вебсайтів"
-        },
-        "csd2-2019/Intro to HTML": {
-          "name": "Вступ до HTML"
-        },
-        "csd2-2019/Headings": {
-          "name": "Заголовки"
-        },
-        "csd2-2019/Digital Footprint": {
-          "name": "Цифровий слід"
-        },
-        "csd2-2019/Lists": {
-          "name": "Списки"
-        },
-        "csd2-2019/Styling Text with CSS": {
-          "name": "Зміна стилів тексту з використанням CSS"
-        },
-        "csd2-2019/Styling Elements with CSS": {
-          "name": "Зміна стилів елементів з використанням CSS"
-        },
-        "csd3-2019/Programming for Entertainment": {
-          "name": "Програмування для розваг"
-        },
-        "csd3-2019/Plotting Shapes": {
-          "name": "Побудова фігур"
-        },
-        "csd3-2019/Drawing in Game Lab": {
-          "name": "Малювання в Ігровій Лабораторії"
-        },
-        "csd3-2019/Variables": {
-          "name": "Змінні"
-        },
-        "csd3-2019/Sprites": {
-          "name": "Спрайти"
-        },
-        "csd3-2019/The Draw Loop": {
-          "name": "Цикл малювання"
-        },
-        "csd3-2019/Sprite Movement": {
-          "name": "Переміщення спрайтів"
-        },
-        "csd3-2019/Conditionals": {
-          "name": "Умови"
-        },
-        "csd3-2019/Keyboard Input": {
-          "name": "Введення з клавіатури"
-        },
-        "csd3-2019/Project - Interactive Card": {
-          "name": "Проєкт - Інтерактивна листівка"
-        },
-        "csd3-2019/Velocity": {
-          "name": "Швидкість"
-        },
-        "csd3-2019/Collision Detection": {
-          "name": "Виявлення зіткнень"
-        },
-        "csd3-2019/Complex Sprite Movement": {
-          "name": "Складні переміщення спрайтів"
-        },
-        "csd3-2019/Collisions": {
-          "name": "Зіткнення"
-        },
-        "csd3-2019/Functions": {
-          "name": "Функції"
-        },
-        "csd3-2019/The Game Design Process": {
-          "name": "Процес розробки ігор"
-        },
-        "csd3-2019/Using the Game Design Process": {
-          "name": "Використання процесу розробки ігор"
-        },
-        "csd3-2019/Project - Design a Game": {
-          "name": "Проєкт - Розробка гри"
-        },
-        "csd4-2019/Understanding Your User": {
-          "name": "Розуміння свого користувача"
-        },
-        "csd4-2019/User Interfaces": {
-          "name": "Інтерфейс користувача"
-        },
-        "csd4-2019/Feedback and Testing": {
-          "name": "Відгуки та тестування"
-        },
-        "csd4-2019/Identifying User Needs": {
-          "name": "Визначення потреб користувача"
-        },
-        "csd4-2019/Project - Paper Prototype": {
-          "name": "Проєкт - Паперовий прототип"
-        },
-        "csd4-2019/Designing Apps for Good": {
-          "name": "Створення застосунків для добра"
-        },
-        "csd4-2019/Market Research": {
-          "name": "Дослідження ринку"
-        },
-        "csd4-2019/Paper Prototypes": {
-          "name": "Паперові прототипи"
-        },
-        "csd4-2019/Prototype Testing": {
-          "name": "Тестування прототипів"
-        },
-        "csd4-2019/Testing the App": {
-          "name": "Тестування застосунку"
-        },
-        "csd4-2019/Project - App Presentation": {
-          "name": "Проєкт - Презентація застосунку"
-        },
-        "csd5-2019/Representation Matters": {
-          "name": "Кодування має значення"
-        },
-        "csd5-2019/Patterns and Representation": {
-          "name": "Шаблони та кодування"
-        },
-        "csd5-2019/ASCII and Binary Representation": {
-          "name": "ASCII та двійкове кодування"
-        },
-        "csd5-2019/Representing Images": {
-          "name": "Кодування зображень"
-        },
-        "csd5-2019/Representing Numbers": {
-          "name": "Кодування чисел"
-        },
-        "csd5-2019/Keeping Data Secret": {
-          "name": "Збереження даних у таємниці"
-        },
-        "csd5-2019/Combining Representations": {
-          "name": "Поєднання типів кодування"
-        },
-        "csd5-2019/Problem Solving and Data": {
-          "name": "Вирішення проблем і дані"
-        },
-        "csd5-2019/Problem Solving with Big Data": {
-          "name": "Вирішення проблем за допомогою великих даних"
-        },
-        "csd5-2019/Structuring Data": {
-          "name": "Структурування даних"
-        },
-        "csd5-2019/Making Decisions with Data": {
-          "name": "Прийняття рішень на основі даних"
-        },
-        "csd5-2019/Interpreting Data": {
-          "name": "Інтерпретація даних"
-        },
-        "csd5-2019/Automating Data Decisions": {
-          "name": "Автоматизація прийняття рішень на основі даних"
-        },
-        "csd6-2019/Innovations in Computing": {
-          "name": "Інновації в комп'ютерних технологіях"
-        },
-        "csd6-2019/Designing Screens with Code": {
-          "name": "Проєктування екранів за допомогою коду"
-        },
-        "csd6-2019/The Circuit Playground": {
-          "name": "Плата Circuit Playground"
-        },
-        "csd6-2019/Input Unplugged": {
-          "name": "Пристрої введення - Безмашинна вправа"
-        },
-        "csd6-2019/Board Events": {
-          "name": "Події плати"
-        },
-        "csd6-2019/Getting Properties": {
-          "name": "Зчитування властивостей"
-        },
-        "csd6-2019/Analog Input": {
-          "name": "Аналоговий вхід"
-        },
-        "csd6-2019/The Program Design Process": {
-          "name": "Процес розробки програми"
-        },
-        "csd6-2019/Arrays and Color LEDs": {
-          "name": "Масиви та кольорові світлодіоди"
-        },
-        "csd6-2019/Making Music": {
-          "name": "Створення музики"
-        },
-        "csd6-2019/Arrays and For Loops": {
-          "name": "Масиви та цикли \"For\""
-        },
-        "csd6-2019/Accelerometer": {
-          "name": "Акселерометр"
-        },
-        "csd6-2019/Functions with Parameters": {
-          "name": "Функції з параметрами"
-        },
-        "csd6-2019/Circuits and Physical Prototypes": {
-          "name": "Схеми та фізичні прототипи"
-        },
-        "coursea-2019/Going Places Safely": {
-          "name": "Безпечне добирання"
-        },
-        "coursea-2019/Learn to Drag and Drop": {
-          "name": "Вчимося перетягувати"
-        },
-        "coursea-2019/Programming: Happy Maps": {
-          "name": "Веселі карти"
-        },
-        "coursea-2019/Sequencing with Scrat": {
-          "name": "Послідовності зі Скретом"
-        },
-        "coursea-2019/Programming in Ice Age": {
-          "name": "Програмування зі Скретом"
-        },
-        "coursea-2019/Programming with Rey and BB-8": {
-          "name": "Програмування з Рей та BB-8"
-        },
-        "coursea-2019/Loops: Happy Loops": {
-          "name": "Веселі цикли"
-        },
-        "coursea-2019/Loops in Ice Age": {
-          "name": "Цикли зі Скретом"
-        },
-        "coursea-2019/Loops in Collector": {
-          "name": "Цикли з Лорел"
-        },
-        "coursea-2019/Ocean Scene with Loops": {
-          "name": "Океан з циклами"
-        },
-        "coursea-2019/Events: The Big Event": {
-          "name": "Велика молодша подія"
-        },
-        "coursea-2019/Events in Play Lab": {
-          "name": "Рухаємось з подіями"
-        },
-        "courseb-2019/Your Digital Footprint": {
-          "name": "Твій цифровий слід"
-        },
-        "courseb-2019/Move It, Move It": {
-          "name": "Рухайся, рухайся"
-        },
-        "courseb-2019/Sequencing in Maze": {
-          "name": "Лінійні послідовності з Angry Birds"
-        },
-        "courseb-2019/Programming in Maze": {
-          "name": "Програмування з Angry Birds"
-        },
-        "courseb-2019/Programming in Harvester": {
-          "name": "Програмування з Фермеркою"
-        },
-        "courseb-2019/Loops: Getting Loopy": {
-          "name": "Зациклюємось"
-        },
-        "courseb-2019/Loops in Harvester": {
-          "name": "Цикли з Фермеркою"
-        },
-        "courseb-2019/Loops in Collector": {
-          "name": "Цикли з Лорел"
-        },
-        "courseb-2019/Loops in Artist": {
-          "name": "Малюємо сади за допомогою циклів"
-        },
-        "courseb-2019/The Right App": {
-          "name": "Ідеальний застосунок"
-        },
-        "courseb-2019/Events: The Big Event": {
-          "name": "Велика молодша подія"
-        },
-        "courseb-2019/Events in Play Lab": {
-          "name": "Королівська битва з подіями"
-        },
-        "coursec-2019/Programming: My Robotic Friends": {
-          "name": "Мої молодші друзі-роботи"
-        },
-        "coursec-2019/Programming in Maze": {
-          "name": "Програмування з Angry Birds"
-        },
-        "coursec-2019/Debugging in Maze": {
-          "name": "Налагодження у Лабіринті"
-        },
-        "coursec-2019/Programming in Collector": {
-          "name": "Збираємо скарби з Лорел!"
-        },
-        "coursec-2019/Programming in Artist": {
-          "name": "Творимо мистецтво за допомогою коду"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Двійкові браслети"
-        },
-        "coursec-2019/Loops: My Loopy Robotic Friends": {
-          "name": "Мої молодші друзі-роботи та цикли"
-        },
-        "coursec-2019/Loops with Rey and BB-8": {
-          "name": "Цикли з Рей і BB-8"
-        },
-        "coursec-2019/Loops in Harvester": {
-          "name": "Збирання врожаю з використанням циклів"
-        },
-        "coursec-2019/Looking Ahead": {
-          "name": "Думаємо наперед з Minecraft"
-        },
-        "coursec-2019/Sticker Art with Loops": {
-          "name": "Мистецтво створення наліпок з циклами"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Велика подія"
-        },
-        "coursec-2019/Build a Flappy Game": {
-          "name": "Створення гри \"Пурх\""
-        },
-        "coursec-2019/Events in Play Lab": {
-          "name": "Гра \"Квач\" з подіями"
-        },
-        "coursec-2019/Picturing Data": {
-          "name": "Структурування даних"
-        },
-        "coursec-2019/End of Course Project: Create a Play Lab Game": {
-          "name": "Проєкт"
-        },
-        "coursed-2019/Algorithms: Graph Paper Programming": {
-          "name": "Програмування по клітинках"
-        },
-        "coursed-2019/Introduction to Online Puzzles": {
-          "name": "Вступ до онлайн-завдань"
-        },
-        "coursed-2019/Relay Programming": {
-          "name": "Естафетне програмування"
-        },
-        "coursed-2019/Debugging in Collector": {
-          "name": "Налагодження із Лорел"
-        },
-        "coursed-2019/Events in Bounce": {
-          "name": "Події у грі \"Відбивай\""
-        },
-        "coursed-2019/Build a Star Wars Game": {
-          "name": "Створюємо гру «Зоряні війни»"
-        },
-        "coursed-2019/Loops in Ice Age": {
-          "name": "Цикли в Льодовиковому періоді"
-        },
-        "coursed-2019/Loops in Artist": {
-          "name": "Малюємо фігури циклами"
-        },
-        "coursed-2019/Nested Loops in Bee": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursed-2019/Conditionals with Cards": {
-          "name": "Умови з картами"
-        },
-        "coursed-2019/Conditionals in Bee": {
-          "name": "Якщо/Інакше з Бджілкою"
-        },
-        "coursed-2019/While Loops in Farmer": {
-          "name": "Цикли \"поки\" з Фермеркою"
-        },
-        "coursed-2019/Until Loops in Maze": {
-          "name": "Цикли \"повторити до\" у Лабіринті"
-        },
-        "coursed-2019/Conditionals & Loops in Harvester": {
-          "name": "Збір врожаю з умовними конструкціями"
-        },
-        "coursed-2019/Unplugged: Binary": {
-          "name": "Двійкові зображення"
-        },
-        "coursed-2019/Digital Citizenship": {
-          "name": "Цифрове громадянство"
-        },
-        "coursed-2019/Dance Party": {
-          "name": "Танцювальна вечірка"
-        },
-        "coursee-2019/Programming and Loops with the Artist": {
-          "name": "Малювання з циклами"
-        },
-        "coursee-2019/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Умови в Minecraft: Підводна подорож"
-        },
-        "coursee-2019/Conditionals": {
-          "name": "Умови з Фермеркою"
-        },
-        "coursee-2019/Learning Sprites with Sprite Lab": {
-          "name": "Плаваюча рибка з Спрайт Лабораторії"
-        },
-        "coursee-2019/Alien Dance Party with Sprite Lab": {
-          "name": "Інопланетна танцювальна вечірка зі Спрайт Лабораторією"
-        },
-        "coursee-2019/Private and Personal Information": {
-          "name": "Приватна та особиста інформація"
-        },
-        "coursee-2019/Access Ability": {
-          "name": "Проєктування для доступності"
-        },
-        "coursee-2019/Nested Loops in Bee": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursee-2019/Nested Loops in Artist": {
-          "name": "Вигадливі форми з вкладених циклів"
-        },
-        "coursee-2019/Nested Loops in Frozen": {
-          "name": "Вкладені цикли із \"Крижаним серцем\""
-        },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Написання пісень"
-        },
-        "coursee-2019/Functions in Minecraft": {
-          "name": "Функції в Minecraft"
-        },
-        "coursee-2019/Functions in Harvester": {
-          "name": "Функції з Фермеркою"
-        },
-        "coursee-2019/Functions in Artist": {
-          "name": "Функції з Художником"
-        },
-        "coursee-2019/End of Course Project": {
-          "name": "Проєкт"
-        },
-        "coursef-2019/Functions in Minecraft": {
-          "name": "Функції в Minecraft"
-        },
-        "coursef-2019/Learning Sprites with Sprite Lab": {
-          "name": "Плаваюча рибка з Спрайт Лабораторії"
-        },
-        "coursef-2019/Events with Sprite Lab": {
-          "name": "Інопланетна танцювальна вечірка зі Спрайт Лабораторією"
-        },
-        "coursef-2019/Loops with the Artist": {
-          "name": "Малювання з циклами"
-        },
-        "coursef-2019/Nested Loops in the Maze": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursef-2019/Envelope Variables": {
-          "name": "Конвертні змінні"
-        },
-        "coursef-2019/Simulating Experiments": {
-          "name": "Експерименти з моделюванням"
-        },
-        "coursef-2019/For Loop Fun": {
-          "name": "Ігри з циклами"
-        },
-        "coursef-2019/For Loops in Bee": {
-          "name": "Цикли \"для кожного\" з Бджілкою"
-        },
-        "coursef-2019/For Loops in Artist": {
-          "name": "Цикли \"для кожного\" з Художником"
-        },
-        "coursef-2019/Internet": {
-          "name": "Інтернет"
-        },
-        "coursef-2019/Virtual Pet": {
-          "name": "Віртуальний домашній улюбленець зі Спрайт Лабораторією"
-        },
-        "coursef-2019/The Power of Words": {
-          "name": "Сила слова"
-        },
-        "coursef-2019/Crowdsourcing": {
-          "name": "Краудсорсинг"
-        },
-        "coursef-2019/Digital Sharing": {
-          "name": "Обмін та поширення онлайн"
-        },
-        "coursef-2019/End of Course Project": {
-          "name": "Проєкт"
-        },
-        "express-2019/Dance Party": {
-          "name": "Танцювальна вечірка"
-        },
-        "express-2019/Programming in Maze": {
-          "name": "Програмування з Angry Birds"
-        },
-        "express-2019/Debugging in Maze": {
-          "name": "Налагодження зі Скретом"
-        },
-        "express-2019/Programming in Collector": {
-          "name": "Збираємо скарби з Лорел!"
-        },
-        "express-2019/Programming in Artist": {
-          "name": "Творимо мистецтво за допомогою коду"
-        },
-        "express-2019/Loops with Rey and BB-8": {
-          "name": "Цикли з Рей і BB-8"
-        },
-        "express-2019/Loops in Artist": {
-          "name": "Мистецтво створення наліпок з циклами"
-        },
-        "express-2019/Nested Loops in Bee": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "express-2019/Nested Loops in Frozen": {
-          "name": "Сніжинки з Анною і Ельзою"
-        },
-        "express-2019/Concept Practice with Minecraft ": {
-          "name": "Думаємо наперед з Minecraft"
-        },
-        "express-2019/Conditionals in Bee": {
-          "name": "Якщо/Інакше з Бджілкою"
-        },
-        "express-2019/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Умови в Minecraft: Підводна подорож"
-        },
-        "express-2019/Until Loops in Maze": {
-          "name": "Цикли \"повторити до\" у Лабіринті"
-        },
-        "express-2019/Conditionals & Loops in Harvester": {
-          "name": "Збір врожаю з умовними конструкціями"
-        },
-        "express-2019/Functions in Minecraft": {
-          "name": "Функції в Minecraft"
-        },
-        "express-2019/Functions in Harvester": {
-          "name": "Функції з Фермеркою"
-        },
-        "express-2019/Functions in Artist": {
-          "name": "Функції з Художником"
-        },
-        "express-2019/For Loops in Bee": {
-          "name": "Цикли \"для кожного\" з Бджілкою"
-        },
-        "express-2019/For Loops in Artist": {
-          "name": "Цикли \"для кожного\" з Художником"
-        },
-        "express-2019/Learning Sprites with Sprite Lab": {
-          "name": "Плаваюча рибка зі Спрайт Лабораторії"
-        },
-        "express-2019/Alien Dance Party with Sprite Lab": {
-          "name": "Іншопланетна танцювальна вечірка"
-        },
-        "express-2019/Virtual Pet with Sprite Lab": {
-          "name": "Віртуальний домашній улюбленець зі Спрайт Лабораторією"
-        },
-        "express-2019/Build A Project": {
-          "name": "Проєкт"
-        },
-        "pre-express-2019/Learn to Drag and Drop": {
-          "name": "Вчимося перетягувати"
-        },
-        "pre-express-2019/Sequencing with Scrat": {
-          "name": "Послідовності зі Скретом"
-        },
-        "pre-express-2019/Programming in Maze": {
-          "name": "Програмування з Angry Birds"
-        },
-        "pre-express-2019/Programming with Rey and BB-8": {
-          "name": "Програмування з Рей та BB-8"
-        },
-        "pre-express-2019/Programming in Harvester": {
-          "name": "Програмування з Фермеркою"
-        },
-        "pre-express-2019/Spelling Bee": {
-          "name": "Грамотна Бджілка"
-        },
-        "pre-express-2019/Loops in Ice Age": {
-          "name": "Цикли зі Скретом"
-        },
-        "pre-express-2019/Loops in Collector": {
-          "name": "Цикли з Лорел"
-        },
-        "pre-express-2019/Ocean Scene with Loops": {
-          "name": "Океан з циклами"
-        },
-        "pre-express-2019/Loops in Artist": {
-          "name": "Малюємо сади за допомогою циклів"
-        },
-        "pre-express-2019/Tell a Story in Play Lab": {
-          "name": "Рухаємось з подіями"
-        },
-        "pre-express-2019/Make a Game in Play Lab": {
-          "name": "Королівська битва з подіями"
-        },
-        "k5-onlinepd-2019/Sequencing": {
-          "name": "Послідовність дій"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Цикли"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Події"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Умови"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Функції"
-        },
-        "k5-onlinepd-2019/Variables": {
-          "name": "Змінні"
-        },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "Цикли For"
-        },
-        "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Спрайт Лабораторія"
-        },
-        "k5-onlinepd-2019/Next steps": {
-          "name": "Наступні кроки"
-        },
-        "coursea-2020/Safety in My Online Neighborhood": {
-          "name": "Безпека в моєму інтернет-районі"
-        },
-        "coursea-2020/Learn to Drag and Drop": {
-          "name": "Вчимося перетягувати"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Веселі карти"
-        },
-        "coursea-2020/Sequencing with Scrat": {
-          "name": "Послідовності зі Скретом"
-        },
-        "coursea-2020/Programming in Ice Age": {
-          "name": "Програмування зі Скретом"
-        },
-        "coursea-2020/Programming with Rey and BB-8": {
-          "name": "Програмування з Рей та BB-8"
-        },
-        "coursea-2020/Loops: Happy Loops": {
-          "name": "Веселі цикли"
-        },
-        "coursea-2020/Loops in Ice Age": {
-          "name": "Цикли зі Скретом"
-        },
-        "coursea-2020/Loops in Collector": {
-          "name": "Цикли з Лорел"
-        },
-        "coursea-2020/Ocean Scene with Loops": {
-          "name": "Океан з циклами"
-        },
-        "coursea-2020/Events: The Big Event": {
-          "name": "Велика молодша подія"
-        },
-        "coursea-2020/Events in Play Lab": {
-          "name": "Рухаємось з подіями"
-        },
-        "courseb-2020/Digital Trails": {
-          "name": "Цифрові стежки"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Рухайся, рухайся"
-        },
-        "courseb-2020/Sequencing in Maze": {
-          "name": "Лінійні послідовності з Angry Birds"
-        },
-        "courseb-2020/Programming in Maze": {
-          "name": "Програмування з Angry Birds"
-        },
-        "courseb-2020/Programming in Harvester": {
-          "name": "Програмування з Фермеркою"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Зациклюємось"
-        },
-        "courseb-2020/Loops in Harvester": {
-          "name": "Цикли з Фермеркою"
-        },
-        "courseb-2020/Loops in Collector": {
-          "name": "Цикли з Лорел"
-        },
-        "courseb-2020/Loops in Artist": {
-          "name": "Малюємо сади за допомогою циклів"
-        },
-        "courseb-2020/The Right App": {
-          "name": "Ідеальний застосунок"
-        },
-        "courseb-2020/Events: The Big Event": {
-          "name": "Велика молодша подія"
-        },
-        "courseb-2020/Events in Play Lab": {
-          "name": "Королівська битва з подіями"
-        },
-        "coursec-2020/Putting a STOP to Online Meanness": {
-          "name": "Зупиняємо образи в мережі"
-        },
-        "coursec-2020/Password Power-Up": {
-          "name": "Посилення пароля"
-        },
-        "coursec-2020/Programming: My Robotic Friends": {
-          "name": "Мої молодші друзі-роботи"
-        },
-        "coursec-2020/Programming in Maze": {
-          "name": "Програмування з Angry Birds"
-        },
-        "coursec-2020/Debugging in Maze": {
-          "name": "Налагодження у Лабіринті"
-        },
-        "coursec-2020/Programming in Collector": {
-          "name": "Збираємо скарби з Лорел!"
-        },
-        "coursec-2020/Programming in Artist": {
-          "name": "Творимо мистецтво за допомогою коду"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Двійкові браслети"
-        },
-        "coursec-2020/Loops: My Loopy Robotic Friends": {
-          "name": "Мої молодші друзі-роботи та цикли"
-        },
-        "coursec-2020/Loops with Rey and BB-8": {
-          "name": "Цикли з Рей і BB-8"
-        },
-        "coursec-2020/Loops in Harvester": {
-          "name": "Збирання врожаю з використанням циклів"
-        },
-        "coursec-2020/Looking Ahead": {
-          "name": "Думаємо наперед з Minecraft"
-        },
-        "coursec-2020/Sticker Art with Loops": {
-          "name": "Мистецтво створення наліпок з циклами"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Велика подія"
-        },
-        "coursec-2020/Build a Flappy Game": {
-          "name": "Створення гри \"Пурх\""
-        },
-        "coursec-2020/Events in Play Lab": {
-          "name": "Гра \"Квач\" з подіями"
-        },
-        "coursec-2020/Picturing Data": {
-          "name": "Структурування даних"
-        },
-        "coursec-2020/End of Course Project: Create a Play Lab Game": {
-          "name": "Проєкт"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Програмування по клітинках"
-        },
-        "coursed-2020/Introduction to Online Puzzles": {
-          "name": "Вступ до онлайн-завдань"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Естафетне програмування"
-        },
-        "coursed-2020/Debugging in Collector": {
-          "name": "Налагодження із Лорел"
-        },
-        "coursed-2020/Events in Bounce": {
-          "name": "Події у грі \"Відбивай\""
-        },
-        "coursed-2020/Build a Star Wars Game": {
-          "name": "Створюємо гру «Зоряні війни»"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Танцювальна вечірка"
-        },
-        "coursed-2020/Loops in Ice Age": {
-          "name": "Цикли в Льодовиковому періоді"
-        },
-        "coursed-2020/Loops in Artist": {
-          "name": "Малюємо фігури циклами"
-        },
-        "coursed-2020/Nested Loops in Bee": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Умови з картами"
-        },
-        "coursed-2020/Conditionals in Bee": {
-          "name": "Якщо/Інакше з Бджілкою"
-        },
-        "coursed-2020/While Loops in Farmer": {
-          "name": "Цикли \"поки\" з Фермеркою"
-        },
-        "coursed-2020/Until Loops in Maze": {
-          "name": "Цикли \"повторити до\" у Лабіринті"
-        },
-        "coursed-2020/Conditionals & Loops in Harvester": {
-          "name": "Збір врожаю з умовними конструкціями"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Двійкові зображення"
-        },
-        "coursed-2020/Be A Super Digital Citizen": {
-          "name": "Стань суперцифровим громадянином"
-        },
-        "coursed-2020/End of Course Project": {
-          "name": "Проєкт"
-        },
-        "coursee-2020/Programming and Loops with the Artist": {
-          "name": "Малювання з циклами"
-        },
-        "coursee-2020/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Умови в Minecraft: Підводна подорож"
-        },
-        "coursee-2020/Conditionals": {
-          "name": "Умови з Фермеркою"
-        },
-        "coursee-2020/Learning Sprites with Sprite Lab": {
-          "name": "Плаваюча рибка з Спрайт Лабораторії"
-        },
-        "coursee-2020/Alien Dance Party with Sprite Lab": {
-          "name": "Інопланетна танцювальна вечірка зі Спрайт Лабораторією"
-        },
-        "coursee-2020/Private and Personal Information": {
-          "name": "Приватна та особиста інформація"
-        },
-        "coursee-2020/Digital Sharing": {
-          "name": "Обмін та поширення онлайн"
-        },
-        "coursee-2020/Nested Loops in Bee": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursee-2020/Nested Loops in Artist": {
-          "name": "Вигадливі форми з вкладених циклів"
-        },
-        "coursee-2020/Nested Loops in Frozen": {
-          "name": "Вкладені цикли із \"Крижаним серцем\""
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Написання пісень"
-        },
-        "coursee-2020/Functions in Minecraft": {
-          "name": "Функції в Minecraft"
-        },
-        "coursee-2020/Functions in Harvester": {
-          "name": "Функції з Фермеркою"
-        },
-        "coursee-2020/Functions in Artist": {
-          "name": "Функції з Художником"
-        },
-        "coursee-2020/Designing for Accessibility": {
-          "name": "Проєктування для доступності"
-        },
-        "coursee-2020/End of Course Project": {
-          "name": "Проєкт"
-        },
-        "coursef-2020/Functions in Minecraft": {
-          "name": "Функції в Minecraft"
-        },
-        "coursef-2020/Learning Sprites with Sprite Lab": {
-          "name": "Плаваюча рибка з Спрайт Лабораторії"
-        },
-        "coursef-2020/Events with Sprite Lab": {
-          "name": "Інопланетна танцювальна вечірка зі Спрайт Лабораторією"
-        },
-        "coursef-2020/Loops with the Artist": {
-          "name": "Малювання з циклами"
-        },
-        "coursef-2020/Nested Loops in the Maze": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "coursef-2020/The Power of Words": {
-          "name": "Сила слова"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Конвертні змінні"
-        },
-        "coursef-2020/Simulating Experiments": {
-          "name": "Експерименти з моделюванням"
-        },
-        "coursef-2020/AI for Oceans": {
-          "name": "Штучний інтелект для океанів"
-        },
-        "coursef-2020/Internet": {
-          "name": "Інтернет"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "Ігри з циклами"
-        },
-        "coursef-2020/For Loops in Bee": {
-          "name": "Цикли \"для кожного\" з Бджілкою"
-        },
-        "coursef-2020/For Loops in Artist": {
-          "name": "Цикли \"для кожного\" з Художником"
-        },
-        "coursef-2020/Virtual Pet": {
-          "name": "Віртуальний домашній улюбленець зі Спрайт Лабораторією"
-        },
-        "coursef-2020/End of Course Project": {
-          "name": "Проєкт"
-        },
-        "express-2020/Dance Party": {
-          "name": "Танцювальна вечірка"
-        },
-        "express-2020/Programming with Angry Birds": {
-          "name": "Програмування з Angry Birds"
-        },
-        "express-2020/Debugging with Scrat": {
-          "name": "Налагодження зі Скретом"
-        },
-        "express-2020/Collecting Treasure with Laurel": {
-          "name": "Збираємо скарби з Лорел!"
-        },
-        "express-2020/Creating Art with Code": {
-          "name": "Творимо мистецтво за допомогою коду"
-        },
-        "express-2020/Loops with Rey and BB-8": {
-          "name": "Цикли з Рей і BB-8"
-        },
-        "express-2020/Sticker Art with Loops": {
-          "name": "Мистецтво створення наліпок з циклами"
-        },
-        "express-2020/Nested Loops in Maze": {
-          "name": "Вкладені цикли в Лабіринті"
-        },
-        "express-2020/Snowflakes with Anna and Elsa": {
-          "name": "Сніжинки з Анною і Ельзою"
-        },
-        "express-2020/If/Else with Bee": {
-          "name": "Якщо/Інакше з Бджілкою"
-        },
-        "express-2020/Conditionals in Minecraft: Voyage Aquatic": {
-          "name": "Умови в Minecraft: Підводна подорож"
-        },
-        "express-2020/Until Loops in Maze": {
-          "name": "Цикли \"повторити до\" у Лабіринті"
-        },
-        "express-2020/Harvesting with Conditionals": {
-          "name": "Збір врожаю з умовними конструкціями"
-        },
-        "express-2020/Functions in Minecraft": {
-          "name": "Функції в Minecraft"
-        },
-        "express-2020/Functions with Harvester": {
-          "name": "Функції з Фермеркою"
-        },
-        "express-2020/Functions with Artist": {
-          "name": "Функції з Художником"
-        },
-        "express-2020/For Loops with Bee": {
-          "name": "Цикли \"для кожного\" з Бджілкою"
-        },
-        "express-2020/For Loops with Artist": {
-          "name": "Цикли \"для кожного\" з Художником"
-        },
-        "express-2020/Swimming Fish in Sprite Lab": {
-          "name": "Плаваюча рибка зі Спрайт Лабораторії"
-        },
-        "express-2020/Alien Dance Party": {
-          "name": "Іншопланетна танцювальна вечірка"
-        },
-        "express-2020/Virtual Pet with Sprite Lab": {
-          "name": "Віртуальний домашній улюбленець зі Спрайт Лабораторією"
-        },
-        "express-2020/End of Course Project": {
-          "name": "Проєкт"
-        },
-        "pre-express-2020/Learn to Drag and Drop": {
-          "name": "Вчимося перетягувати"
-        },
-        "pre-express-2020/Sequencing with Scrat": {
-          "name": "Послідовності зі Скретом"
-        },
-        "pre-express-2020/Programming with Rey and BB-8": {
-          "name": "Програмування з Рей та BB-8"
-        },
-        "pre-express-2020/Loops with Scrat": {
-          "name": "Цикли зі Скретом"
-        },
-        "pre-express-2020/Loops with Laurel": {
-          "name": "Цикли з Лорел"
-        },
-        "pre-express-2020/Ocean Scene with Loops": {
-          "name": "Океан з циклами"
-        },
-        "pre-express-2020/Drawing Gardens with Loops": {
-          "name": "Малюємо сади за допомогою циклів"
-        },
-        "pre-express-2020/On the Move with Events": {
-          "name": "Рухаємось з подіями"
-        },
-        "pre-express-2020/A Royal Battle with Events": {
-          "name": "Королівська битва з подіями"
+        "csd1-2019/Project - Propose an App": {
+          "name": "Проєкт - запропонуй застосунок"
         },
         "csd1-2021/Intro to Problem Solving": {
           "name": "Вступ до вирішення проблем",
@@ -2065,14 +103,14 @@
           "overview": "**Питання дня: Які загальні етапи ми можемо використовувати для вирішення різних типів проблем?**\n\nЦей урок знайомить учнів з алгоритмом вирішення проблем, який вони будуть використовувати впродовж року: \"Визнач - Підготуйся - Спробуй - Поміркуй\". Урок починається з того, що учням пропонується обговорити різні типи задач, з якими вони стикаються у повсякденному житті, методом \"мозкового штурму\". Потім учням показують чотири етапи процесу вирішення проблем, і вони разом працюють над тим, щоб співвіднести ці абстрактні етапи з власним досвідом розв'язання задач. Спочатку учні пов'язують ці етапи з проблемними завданнями з попереднього уроку, потім з завданням, яке їм добре вдалося виконати, а потім із завданням, яке вони хочуть покращити. Наприкінці уроку учні складають список загальних корисних стратегій для кожного етапу процесу, щоб розмістити їх на плакатах, які будуть використовуватися впродовж вивчення розділу та року.",
           "preparation": "Для кожного учня \n\n-   Роздрукуйте копію Інструкції для завдання\n\nДля класу\n\n-   Папір для плакатів\n-   Маркери/кольорові олівці",
           "purpose": "Цей урок має на меті закріпити формальний процес вирішування проблем, який учні будуть використовувати впродовж усього курсу, на прикладі реального життєвого досвіду вирішування проблем, який вони вже мають. У наступних розділах курсу CSD будуть представлені задачі в контекстах, які можуть або не можуть бути знайомі учням. Структурований процес вирішення проблем стане важливим інструментом, який допоможе учням рухатися вперед, долаючи нові та складні виклики.",
-          "student_overview": "**Питання дня: Які загальні кроки ми можемо використовувати для вирішення різних типів проблем?**\n\nВи дізнаєтесь про процес вирішення проблем, який ми використовуємо в інформатиці, і зануритесь у кілька стратегій для реалізації кожного кроку."
+          "student_overview": "**Питання дня: Які загальні етапи ми можемо використовувати для вирішення різних типів проблем?**\n\nВи дізнаєтесь про процес вирішення проблем, який ми використовуємо в інформатиці, і зануритесь у кілька стратегій для реалізації кожного етапу."
         },
         "csd1-2021/Exploring Problem Solving": {
           "name": "Вивчаємо процес вирішення проблем",
           "assessment_opportunities": "1.  **Застосовувати процес вирішення проблем для підходу до різних завдань**.\n    На сторінці 5 інструкції до завдання перевірте таблицю, щоб переконатися, що учні виконують доцільні кроки для розв'язання кожної проблеми.\n\n2.  **Оцінювати, наскільки чітко визначена проблема, і використовувати стратегії для більш точного її визначення**.\n    Щодо останнього запитання на стор. 5 інструкції, переконайтеся, що учні мають принаймні одне запитання або стратегію, яка може бути ефективним способом краще визначити проблему.",
-          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного кроку. Вони розв'язуватимуть задачу на пошук слів, розсаджуватимуть гостей на день народження та перепланують класну кімнату. Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтовують включення кожного кроку та обговорюють питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим кроком.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Також доступні альтернативні версії цього уроку.** \n\n-   [Тема \"Тварини\"](/s/csd1-2021/lessons/12/)\n-   [Тема \"Ігри\"](/s/csd1-2021/lessons/13/)",
+          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного етапу. Вони розв'язуватимуть задачу на пошук слів, розсаджуватимуть гостей на день народження та перепланують класну кімнату. Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтовують включення кожного етапу та обговорюють питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим етапом.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Також доступні альтернативні версії цього уроку.** \n\n-   [Тема \"Тварини\"](/s/csd1-2021/lessons/12/)\n-   [Тема \"Ігри\"](/s/csd1-2021/lessons/13/)",
           "preparation": "-   Роздрукуйте інструкцію для кожного учня\n-   Використовуйте чернетку для вирішення проблеми \"День народження\"\n-   Плакат для запису стратегій визначення проблем під час підсумкового обговорення",
-          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим кроком. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
+          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим етапом. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
           "student_overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nСьогодні ви будете застосовувати процес вирішення проблем до трьох різних проблем, які будуть ставати дедалі складнішими!"
         },
         "csd1-2021/What is a Computer?": {
@@ -2092,14 +130,14 @@
           "student_overview": "\\*Питання дня: Як комп'ютери використовують введення та виведення даних, щоб отримувати та передавати інформацію, необхідну для вирішування проблем?\\*\\*.\n\nНа цьому уроці ви дізнаєтеся про те, як комп'ютери отримують та надають інформацію користувачеві за допомогою різних вхідних та вихідних даних."
         },
         "csd1-2021/Processing": {
-          "name": "Опрацювання",
+          "name": "Опрацювання даних",
           "assessment_opportunities": "1.  **Визначати, які типи опрацювання підходять для поширених обчислювальних задач**\n    Під час підсумкового обговорення переконайтеся, що учні навели кілька прикладів опрацювання та змогли пояснити, як це опрацювання перетворює вхідні дані на вихідні. Ви також можете зібрати індивідуальні відповіді на це запитання як вихідний квиток.",
           "overview": "**Питання дня: Якими способами комп'ютери можуть опрацьовувати інформацію?**\n\nЦей урок знайомить учнів з чотирма поширеними типами опрацювання даних: якщо/то (умовні інструкції), пошук збігів (пошук), підрахунок та порівняння. Спочатку учні знайомляться з цими типами опрацювання даних на прикладі кількох програм. Потім вони досліджують інші застосунки, щоб визначити, які типи опрацювання даних використовуються в кожному з них.  Потім вони створюють свій власний застосунок і вирішують, які типи опрацювання йому знадобляться для роботи.  Нарешті, вони обговорюють інші типи опрацювання, які можуть бути корисними, але не були включені в основний урок.",
           "purpose": "Цей урок знайомить з поняттям опрацювання даних в рамках розв'язування обчислювальних задач. Визначення опрацювання, представлене на цьому уроці, є навмисно доступним. Учні мають зрозуміти, що опрацювання - це все, що робить комп'ютер для перетворення вхідних даних на вихідні, і що існує багато різних способів виконання комп'ютером цього завдання. Мета цього уроку не в тому, щоб учні написали конкретні алгоритми для наведених прикладів застосунків.",
           "student_overview": "\\*\\*Питання дня: Як комп'ютери можуть опрацьовувати інформацію?\n\nНа цьому уроці ви дізнаєтеся про чотири типи опрацювання даних, які комп'ютери можуть використовувати для перетворення вхідних даних на вихідні."
         },
         "csd1-2021/Storage": {
-          "name": "Зберігання",
+          "name": "Зберігання даних",
           "assessment_opportunities": "1.  **Визначати, яку інформацію в обчислювальній задачі слід зберігати для подальшого використання**\n    В інструкції до завдання перевірте відповіді учнів та їхні міркування щодо того, яку інформацію слід зберігати.\n\n2.  **Ідентифікувати настанови щодо того, яку інформацію слід або не слід зберігати як частину обчислювального процесу**\n\n    Перевірте настанови, які кожна група написала разом.\n\n3.  **Використовувати модель введення-виведення-зберігання-опрацювання даних для опису обчислювального процесу.**.\n\n    У двох підказках до журналу після відео про модель введення-виведення-зберігання-опрацювання учні мають визначити різні частини IOSP у програмі, якою вони зазвичай користуються, та у смартфоні.",
           "overview": "**Питання дня: Чому пам'ять є важливою частиною обчислювального процесу?**\n\nЦей урок знайомить учнів з останнім компонентом моделі обчислень: сховищем.  Після того, як учні спробують програму \"підбір вбрання\", вони обговорять, яку інформацію слід зберігати в програмі, а яку - вводити щоразу під час запуску програми.  Потім вони розглянуть низку застосунків та використають свої рішення щодо того, яку інформацію слід зберігати для створення рекомендацій для прийняття рішень про інформацію, яку слід зберігати.  Потім вони розглянуть чотири компоненти моделі обчислень, описаної в цьому розділі: введення, виведення, зберігання та опрацювання даних.  Після цього учні мають останню можливість переглянути свої рішення щодо того, які предмети слід класифікувати як \"комп'ютер\", прийняті на початку розділу.  Урок закінчується обговоренням власних ідей щодо застосунків і того, як можна використовувати сховище даних.",
           "preparation": "-   Роздрукуйте копію інструкції до завдання для кожного учня",
@@ -2107,7 +145,7 @@
           "student_overview": "**Питання дня: Чому пам'ять є важливою частиною обчислювального процесу?**\n\nНа цьому уроці ви дізнаєтеся про останній критерій, який робить комп'ютер комп'ютером - пам'ять!"
         },
         "csd1-2021/Project - Propose an App": {
-          "name": "Проєкт - запропонувати застосунок",
+          "name": "Проєкт - запропонуй застосунок",
           "assessment_opportunities": "Використовуйте критерії проєкту, що додається до цього уроку, щоб оцінити, як учні досягли результатів навчання цієї теми. Ви також можете призначити післяпроєктний тест в Студії Коду.",
           "overview": "**Питання дня:  Як модель IOSP може допомогти нам розробити застосунок, який вирішує проблему?**\n\nНа завершення розгляду процесу вирішування проблем та моделі введення/виведення/зберігання/опрацювання даних комп'ютером, учні запропонують застосунок, призначений для розв'язування реальної задачі. Цей проєкт триватиме кілька днів і завершиться створенням плакату, що висвітлюватиме особливості учнівського застосунку, який вони презентуватимуть однокласникам. План проєкту містить покрокові інструкції для учнів та допомагає їм організувати свої ідеї. Проєкт призначений для виконання в парах, хоча його можна виконувати також індивідуально.",
           "preparation": "-   Роздрукуйте копію [r app-proposal-project/csd/2021] для кожної пари учнів\n-   Папір для плакатів, ручки, маркери та інше приладдя для виготовлення плакатів",
@@ -2139,19 +177,19 @@
           "student_overview": "**Питання дня: Що може допомогти нам взаємодіяти та вирішувати проблеми в команді?**\n\nНа цьому уроці ви разом з групою спроєктуєте, сконструюєте, протестуєте та проаналізуєте паперову вежу, яка має бути максимально високою."
         },
         "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
-          "name": "Вивчаємо вирішення проблем - тема Тварини (альтернативний урок 3)",
+          "name": "Вивчаємо процес вирішення проблем - тема Тварини (альтернативний урок 3)",
           "assessment_opportunities": "1.  **Застосовувати процес вирішення проблем для підходу до різних завдань**.\n    На сторінці 5 інструкції до завдання перевірте таблицю, щоб переконатися, що учні виконують доцільні кроки для розв'язання кожної проблеми.\n\n2.  **Оцінювати, наскільки чітко визначена проблема, і використовувати стратегії для більш точного її визначення**.\n    Щодо останнього запитання на стор. 5 інструкції, переконайтеся, що учні мають принаймні одне запитання або стратегію, яка може бути ефективним способом краще визначити проблему.",
-          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного кроку. Вони розв'язуватимуть танграми, обиратимуть домашнього улюбленця для кількох людей та плануватимуть захід з адаптації тварини.  Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтовують включення кожного кроку та обговорюють питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим кроком.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Доступне альтернативне завдання до розділу [Досліджуємо вирішування проблем](/s/csd1-2021/lessons/3/)**",
+          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного етапу. Вони розв'язуватимуть танграми, обиратимуть домашнього улюбленця для кількох людей та плануватимуть захід з прилаштування тварини.  Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтовують включення кожного етапу та обговорюють питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим етапом.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Доступне альтернативне завдання до розділу [Досліджуємо вирішування проблем](/s/csd1-2021/lessons/3/)**",
           "preparation": "-   Роздрукуйте інструкцію до завдання для кожного учня\n-   Підготуйте танграми для учнів або роздрукуйте один аркуш танграми та підготуйте ножиці для кожної групи.\n-   Плакат для запису стратегій визначення проблем у підсумкових обговореннях",
-          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим кроком. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
+          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим етапом. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
           "student_overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nСьогодні ви будете застосовувати метод вирішення проблем до кількох різних ситуацій, які будуть ставати дедалі складнішими! "
         },
         "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
-          "name": "Вивчаємо вирішення проблем - тема Ігри (альтернативний урок 3)",
+          "name": "Вивчаємо процес вирішення проблем - тема Ігри (альтернативний урок 3)",
           "assessment_opportunities": "1.  **Застосовувати процес вирішення проблем для підходу до різних завдань**.\n    На сторінці 5 інструкції до завдання перевірте таблицю, щоб переконатися, що учні виконують доцільні кроки для розв'язання кожної проблеми.\n\n2.  **Оцінювати, наскільки чітко визначена проблема, і використовувати стратегії для більш точного її визначення**.\n    Щодо останнього запитання на стор. 5 інструкції, переконайтеся, що учні мають принаймні одне запитання або стратегію, яка може бути ефективним способом краще визначити проблему.",
-          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного кроку. Вони вирішуватимуть лабіринт, організовуватимуть команду, щоб пробігти якнайшвидше, та розроблятимуть гру. Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтують включення кожного кроку та обговорять питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим кроком.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Доступне альтернативне завдання до розділу [Досліджуємо вирішування проблем](/s/csd1-2021/lessons/3/)**",
+          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного етапу. Вони вирішуватимуть лабіринт, організовуватимуть команду, щоб пробігти якнайшвидше, та розроблятимуть гру. Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтують включення кожного етапу та обговорять питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим етапом.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Доступне альтернативне завдання до розділу [Досліджуємо вирішування проблем](/s/csd1-2021/lessons/3/)**",
           "preparation": "-   Роздрукуйте інструкцію для кожного учня\n-   Використовуйте чернетку для вирішення проблеми \"Партнерські перегони\"\n-   Плакат для запису стратегій визначення проблем під час підсумкового обговорення",
-          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим кроком. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
+          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим етапом. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
           "student_overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nСьогодні ви будете застосовувати метод вирішення проблем до кількох різних ситуацій, які будуть ставати дедалі складнішими! "
         },
         "csd2-2021/Exploring Web Pages": {
@@ -2203,7 +241,7 @@
           "student_overview": "**Питання дня: Як змінити стиль тексту на вебсторінці?**\n\nНа цьому уроці ви дізнаєтеся, як використовувати CSS для стилізації елементів HTML на вебсторінці."
         },
         "csd2-2021/Mini-Project: Your Personal Style": {
-          "name": "Міні-проєкт: Ваш особистий стиль",
+          "name": "Міні-проєкт: Ообистий стиль",
           "assessment_opportunities": "Використовуйте критерії проєкту, що додаються до цього уроку, щоб оцінити, як учні досягли навчальних цілей.",
           "overview": "**Як можна виразити свій особистий стиль на вебсторінці?**\n\nУ цьому факультативному міні-проєкті учні використовують здобуті знання для створення власної стилізованої вебсторінки на обрану ними тему. Урок розпочинається з повторення вивченого про CSS. Потім учні починають роботу над проєктом, розробляючи дизайн вебсторінки та визначаючи, які властивості вони будуть використовувати для її реалізації. Учні створюють свої вебсторінки у Веб Лабораторії та діляться ними з іншими учнями. Після отримання відгуків вони вносять остаточні зміни до своїх вебсайтів, а потім обмірковують результати своєї роботи. Цей проєкт можна завершити за один день або розподілити на кілька днів, залежно від потреб класу та розкладу.",
           "preparation": "-   Роздрукуйте копію плану проєкту для кожного учня.",
@@ -2226,7 +264,7 @@
           "student_overview": "**Питання дня: Як ми можемо додавати зображення на наші вебсайти, не порушуючи при цьому жодних прав?**\n\nНа цьому уроці ви дізнаєтеся, як додавати зображення на свої вебсторінки, не забуваючи про авторські права та ліцензії Creative Commons."
         },
         "csd2-2021/Websites for Expression ": {
-          "name": "Вебсайти для вираження",
+          "name": "Вебсайти для самовираження",
           "assessment_opportunities": "1.  **Визначення вебсайту як форми особистого самовираження**\n\n    В інструкції до завдання та під час обговорення перевірте, чи учні чітко пояснили мету створення власних вебсторінок та чому ця мета має для них особисте значення.",
           "overview": "**Питання дня: Як ми можемо використовувати вебсайти для самовираження?**\n\nНа цьому уроці учні досліджують способи використання вебсайтів як засобу самовираження та складають список тем та інтересів, які вони хотіли б висвітлити на особистому вебсайті. Учні починають з обговорення різних способів, за допомогою яких люди виражають свої інтереси та ідеї і діляться ними. Потім учні переглядають кілька зразків вебсайтів, щоб визначити способи вираження ідей на них. Насамкінець учні обговорюють список тем та інтересів, які вони хотіли б висвітлити на особистому вебсайті; вони будуть звертатися до цього списку впродовж вивчення цього розділу.",
           "preparation": "-   Підготуйте зошити або, за бажанням, роздрукуйте копії інструкції до завдання.",
@@ -2264,7 +302,7 @@
           "student_overview": "**Питання дня: Чому люди створюють вебсайти?**\n\nНа цьому уроці ви дізнаєтеся про різні причини, чому люди створюють вебсайти, а також про задачі, які можна вирішити за допомогою власного вебсайту."
         },
         "csd2-2021/Team Problem Solving": {
-          "name": "Вирішення проблем у команді",
+          "name": "Командне вирішення проблеми",
           "assessment_opportunities": "**1. Здатність учнів працювати в команді**\n\nВикористовуйте короткі відповіді на другій сторінці інструкції до завдання, щоб оцінити, наскільки учні досягли навчальних цілей цього уроку.",
           "overview": "**Питання дня: Як ми можемо співпрацювати, щоб стати чудовою командою?**\n\nУчні працюють разом над встановленням правил групи та обговорюють, які функції вони хотіли б бачити на своїх вебсайтах. На початку заняття учасники згадують популярні команди в різних контекстах, а потім розмірковують над тим, що робить команди успішними. Потім учасники об'єднуються у власні команди та складають план, як вони будуть взаємодіяти та досягати успіху у власних проєктах. Після цього команди починають обговорення ідей для свого проєкту вебсайту.",
           "purpose": "На цьому уроці розглядаються проблеми, з якими учні можуть стикатися під час роботи в групі, і надається допомога в розробці плану подолання цих проблем.  Учні мають повертатися до цього уроку впродовж усього розділу, коли працюватимуть у групах над виконанням своїх проєктів.",
@@ -2308,7 +346,7 @@
           "student_overview": "**Питання дня: Які навички та практики допоможуть нам працювати разом, щоб створити чудовий вебсайт?**\n\nНа цьому уроці ваша команда нарешті буде кодувати сторінки, які ви запланували!"
         },
         "csd2-2021/Peer Review and Final Touches": {
-          "name": "Партнерське оцінювання та фінальні штрихи",
+          "name": "Взаємне оцінювання та фінальні штрихи",
           "assessment_opportunities": "Використовуйте рубрикатор проєкту, що додається до цього уроку, щоб оцінити досягнення учнів у вивченні цього розділу.  Можна також призначити післяпроєктний тест в Студії Коду.",
           "overview": "**Питання дня:  Як ми можемо використовувати відгуки, щоб зробити наші вебсайти кращими?**\n\nЦей урок зосереджується на цінності відгуків від інших учнів. Спочатку учні розмірковують над тим, чим вони пишаються, і про що вони хотіли б отримати відгук. Потім команди працюють з іншими учнями, щоб отримати відгук за допомогою структурованого процесу, який включає рубрику з критеріями проєкту. Після цього учні вирішують, як вони хочуть відреагувати на отримані відгуки, та вносять останні зміни у свої сайти. Після остаточного перегляду рубрикатора вони обмірковують свій процес. На завершення розділу вони поділяться своїми проєктами, а також описом процесу, який вони пройшли, щоб досягти остаточного дизайну.",
           "preparation": "-   Роздрукуйте копію інструкції з взаємо-оцінювання для кожного учня.",
@@ -2516,7 +554,7 @@
           "assessment_opportunities": "Використовуйте критерії проєкту, що додається до цього уроку, щоб оцінити, як учні досягли результатів навчання цієї теми. Ви також можете призначити післяпроєктний тест в Студії Коду.",
           "overview": "**Питання дня: Як п'ять практик інформатики  (вирішення проблем, наполегливість, комунікація, співпраця та творчість) можуть допомогти програмістам у виконанні великих проєктів?**\n\nУсні спланують і створять власну гру, використовуючи план проєкту з попередніх двох уроків. Працюючи індивідуально або в парах, учні спочатку визначаться з типом гри, яку вони хотіли б створити, надихнувшись набором зразків ігор. Потім вони заповнять порожній план проєкту, де опишуть поведінку гри та визначать змінні, спрайти та функції, які їм знадобляться для створення. У Студії Коду низка рівнів підкаже їм загальну послідовність дій, яку вони можуть використати для реалізації цього плану. Впродовж процесу учні ділитимуться своїми проєктами з однолітками для оцінювання та отримуватимуть зворотний зв'язок після завершення гри. Наприкінці уроку учні поділяться завершеними іграми зі своїми однокласниками. Цей проєкт охоплює кілька уроків і може легко зайняти 3-5 навчальних годин.",
           "preparation": "-   Роздрукуйте план проєкту, по одному примірнику для кожного учня / пари учнів\n-   Роздрукуйте примірники критеріїв проєкту, по одному для кожного учня / пари учнів\n-   Роздрукуйте інструкції до взаємного оцінювання, по одній для кожного учня / пари учнів\n-   Перегляньте приклади ігор у Студії Коду",
-          "purpose": "Цей урок є завершальним у Розділі 6 і дає учням можливість створити власний проєкт ігрової студії з нуля. Запропонована в плані проєкту структура та практика її використання мають на меті допомогти учням у визначенні обсягу їхніх проєктів та доведенні їхніх ідей до завершення. Цей проєкт дає можливість продемонструвати технічні навички, але учням також потрібно буде співпрацювати зі своїм партнером, забезпечувати конструктивний зворотний зв'язок та неодноразово використовувати процес вирішення проблем, коли вони зустрічатимуться з перешкодами на своєму шляху. Цей проєкт має бути керованим учнями, коли це можливо, і має стати надихаючим і незабутнім завершенням цього розділу \"Відкриття інформатики\".",
+          "purpose": "Цей урок є завершальним у Розділі 6 і дає учням можливість створити власний проєкт ігрової студії з нуля. Запропонована в плані проєкту структура та практика її використання мають на меті допомогти учням у визначенні обсягу їхніх проєктів та доведенні їхніх ідей до завершення. Цей проєкт дає можливість продемонструвати технічні навички, але учням також потрібно буде співпрацювати зі своїм партнером, забезпечувати конструктивний зворотний зв'язок та неодноразово використовувати процес вирішення проблем, коли вони зустрічатимуться з перешкодами на своєму шляху. Цей проєкт має бути керованим учнями, коли це можливо, і має стати надихаючим і незабутнім завершенням цього розділу \"Дослідження інформатики\".",
           "student_overview": "**Питання дня: Як п'ять практик інформатики (вирішення проблем, наполегливість, комунікація, співпраця та креативність) можуть допомогти програмістам завершувати великі проєкти?**\n\nНа цьому уроці ви використовуватимете процес вирішення проблем для планування та створення оригінальної гри!"
         },
         "csd3-2021/lesson-1": {
@@ -3097,7 +1135,7 @@
         "coursea-2021/Programming: Happy Maps": {
           "name": "Веселі карти",
           "overview": "Цей урок на **створення контексту** об'єднує команди з простим завданням: довести персонажа Флурба до фрукта. Учні попрактикуються у написанні точних інструкцій, працюючи над перетворенням інструкцій у надані символи.",
-          "preparation": "-   Видрукуйте один **\\*Робочий аркуш** та один набір **\\*Друкованих матеріалів** на кожну групу з 2-3 осіб.\n-   Переконайтеся, що у кожного учня є Зошит для рефлексії.",
+          "preparation": "-   Видрукуйте один **Робочий аркуш** та один набір **Друкованих матеріалів** на кожну групу з 2-3 осіб.\n-   Переконайтеся, що у кожного учня є Зошит для рефлексії.",
           "purpose": "Міст від алгоритмів до програмування може бути коротким, якщо учні зрозуміють різницю між плануванням послідовності дій і кодуванням цієї послідовності відповідною мовою.  Ця вправа допоможе учням набути досвіду читання та написання скороченого коду.",
           "student_overview": "Напишіть інструкцію, як довести Флурба до фрукта."
         },
@@ -4023,24 +2061,6 @@
           "purpose": "У цій онлайн-вправі учні дізнаються, як використовувати події в Ігровій студії. Вони почнуть з того, що навчать лицаря рухатися у разі натискання клавіші зі стрілкою, а потім отримають можливість продемонструвати решту навичок, які вони вивчили протягом цього курсу, включно з лінійною послідовністю і створенням циклів, як частину фінального завдання з вільної творчості.",
           "student_overview": "Використовуйте події для створення історії або інтерактивної гри."
         },
-        "kodea-pd-2021/Getting Started": {
-          "name": "Починаємо"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Основи інформатики"
-        },
-        "kodea-pd-2021/Looking Ahead": {
-          "name": "Дивлячись вперед"
-        },
-        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
-          "name": "Успішні методики викладання інформатики"
-        },
-        "kodea-pd-2021/Planning": {
-          "name": "Планування"
-        },
-        "kodea-pd-2021/Next Steps": {
-          "name": "Наступні Кроки"
-        },
         "csd1-2022/Intro to Problem Solving": {
           "assessment_opportunities": "1.  **Спілкуватися та співпрацювати з іншими учнями, щоб вирішити проблему**.\n    Під час обговорення підсумкового питання про співпрацю, перевірте, чи згадані переваги співпраці у вирішенні проблем, і можуть учні перерахувати відповідні стратегії для подолання труднощів.  Ця практика буде закріплюватися протягом усього розділу та курсу.\n2.  **Покращувати рішення завдання кілька разів**\n    В інструкції до завдання перевірте сильні та слабкі сторони учнівського оригінального дизайну та зв'язок з відповідними змінами для наступної ітерації проєкту.\n3.  **Ідентифікувати різні стратегії, що використовуються для вирішення проблем**\n    В інструкції до завдання перевірте стратегії подолання викликів. Ви також можете перевірити \"сильні сторони\" проєктів, які учні перерахували в рамках розробки свого плану на другій сторінці інструкції.",
           "overview": "**Питання дня: Що може допомогти нам працювати разом та вирішувати завдання в команді?**\n\nНа цьому уроці учні працюють у групах над створенням човнів з алюмінієвої фольги, які мають витримати якомога більше монет. Групи будуть проходити два етапи створення човнів, з метою спробувати втримати якомога більше монет на другому етапі, ніж на першому. Структура передбачає різні етапи процесу розв'язання завдання, з якими учні будуть більш детально знайомитися на наступному уроці. Наприкінці уроку учні обмірковують свій досвід виконання завдання та встановлюють зв'язок з типами вирішення завдань, з якими вони працюватимуть впродовж усього курсу.\n\n**Також доступні альтернативні версії цього уроку.** \n\n-   [Газетний столик](/s/csd1-2022/lessons/9/)\n-   [Міст зі спагеті](/s/csd1-2022/lessons/10/)\n-   [Паперова вежа](/s/csd1-2022/lessons/11/).",
@@ -4052,12 +2072,12 @@
           "assessment_opportunities": "1.  **Маючи проблему, визначати окремі дії, які підпадають під кожен крок процесу вирішення проблеми**.\n    На сторінці 2 інструкції до вправи перевірте, чи записали учні доцільні дії для кожного з чотирьох кроків проблеми, яку вони намагаються розв'язати.\n\n2.  **Визначати корисні стратегії на кожному кроці процесу вирішення проблеми**.\n    На завершення перевірте, чи учні запропонували ефективні стратегії для кожного кроку процесу.",
           "overview": "**Питання дня: Які загальні етапи ми можемо використовувати для вирішення різних типів проблем?**\n\nЦей урок знайомить учнів з алгоритмом вирішення проблем, який вони будуть використовувати впродовж року: \"Визнач - Підготуйся - Спробуй - Поміркуй\". Урок починається з того, що учням пропонується обговорити різні типи задач, з якими вони стикаються у повсякденному житті, методом \"мозкового штурму\". Потім учням показують чотири етапи процесу вирішення проблем, і вони разом працюють над тим, щоб співвіднести ці абстрактні етапи з власним досвідом розв'язання задач. Спочатку учні пов'язують ці етапи з проблемними завданнями з попереднього уроку, потім з завданням, яке їм добре вдалося виконати, а потім із завданням, яке вони хочуть покращити. Наприкінці уроку учні складають список загальних корисних стратегій для кожного етапу процесу, щоб розмістити їх на плакатах, які будуть використовуватися впродовж вивчення розділу та року.",
           "purpose": "Цей урок має на меті закріпити формальний процес вирішування проблем, який учні будуть використовувати впродовж усього курсу, на прикладі реального життєвого досвіду вирішування проблем, який вони вже мають. У наступних розділах курсу CSD будуть представлені задачі в контекстах, які можуть або не можуть бути знайомі учням. Структурований процес вирішення проблем стане важливим інструментом, який допоможе учням рухатися вперед, долаючи нові та складні виклики.",
-          "student_overview": "**Питання дня: Які загальні кроки ми можемо використовувати для вирішення різних типів проблем?**\n\nВи дізнаєтесь про процес вирішення проблем, який ми використовуємо в інформатиці, і зануритесь у кілька стратегій для реалізації кожного кроку."
+          "student_overview": "**Питання дня: Які загальні етапи ми можемо використовувати для вирішення різних типів проблем?**\n\nВи дізнаєтесь про процес вирішення проблем, який ми використовуємо в інформатиці, і зануритесь у кілька стратегій для реалізації кожного етапу."
         },
         "csd1-2022/Exploring Problem Solving": {
           "assessment_opportunities": "1.  **Застосовувати процес вирішення проблем для підходу до різних завдань**.\n    На сторінці 5 інструкції до завдання перевірте таблицю, щоб переконатися, що учні виконують доцільні кроки для розв'язання кожної проблеми.\n\n2.  **Оцінювати, наскільки чітко визначена проблема, і використовувати стратегії для більш точного її визначення**.\n    Щодо останнього запитання на стор. 5 інструкції, переконайтеся, що учні мають принаймні одне запитання або стратегію, яка може бути ефективним способом краще визначити проблему.",
-          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного кроку. Вони розв'язуватимуть задачу на пошук слів, розсаджуватимуть гостей на день народження та перепланують класну кімнату. Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтовують включення кожного кроку та обговорюють питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим кроком.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Також доступні альтернативні версії цього уроку.** \n\n-   [Тема \"Тварини\"](/s/csd1-2022/lessons/12/)\n-   [Тема \"Ігри\"](/s/csd1-2022/lessons/13/)",
-          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим кроком. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
+          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного етапу. Вони розв'язуватимуть задачу на пошук слів, розсаджуватимуть гостей на день народження та перепланують класну кімнату. Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтовують включення кожного етапу та обговорюють питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим етапом.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Також доступні альтернативні версії цього уроку.** \n\n-   [Тема \"Тварини\"](/s/csd1-2022/lessons/12/)\n-   [Тема \"Ігри\"](/s/csd1-2022/lessons/13/)",
+          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим етапом. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
           "student_overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nСьогодні ви будете застосовувати процес вирішення проблем до трьох різних проблем, які будуть ставати дедалі складнішими!"
         },
         "csd1-2022/What is a Computer?": {
@@ -4075,20 +2095,21 @@
           "student_overview": "\\*Питання дня: Як комп'ютери використовують введення та виведення даних, щоб отримувати та передавати інформацію, необхідну для вирішування проблем?\\*\\*.\n\nНа цьому уроці ви дізнаєтеся про те, як комп'ютери отримують та надають інформацію користувачеві за допомогою різних вхідних та вихідних даних."
         },
         "csd1-2022/Processing": {
-          "name": "Опрацювання",
+          "name": "Опрацювання даних",
           "assessment_opportunities": "1.  **Визначати, які типи опрацювання підходять для поширених обчислювальних задач**\n    Під час підсумкового обговорення переконайтеся, що учні навели кілька прикладів опрацювання та змогли пояснити, як це опрацювання перетворює вхідні дані на вихідні. Ви також можете зібрати індивідуальні відповіді на це запитання як вихідний квиток.",
           "overview": "**Питання дня: Якими способами комп'ютери можуть опрацьовувати інформацію?**\n\nЦей урок знайомить учнів з чотирма поширеними типами опрацювання даних: якщо/то (умовні інструкції), пошук збігів (пошук), підрахунок та порівняння. Спочатку учні знайомляться з цими типами опрацювання даних на прикладі кількох програм. Потім вони досліджують інші застосунки, щоб визначити, які типи опрацювання даних використовуються в кожному з них.  Потім вони створюють свій власний застосунок і вирішують, які типи опрацювання йому знадобляться для роботи.  Нарешті, вони обговорюють інші типи опрацювання, які можуть бути корисними, але не були включені в основний урок.",
           "purpose": "Цей урок знайомить з поняттям опрацювання даних в рамках розв'язування обчислювальних задач. Визначення опрацювання, представлене на цьому уроці, є навмисно доступним. Учні мають зрозуміти, що опрацювання - це все, що робить комп'ютер для перетворення вхідних даних на вихідні, і що існує багато різних способів виконання комп'ютером цього завдання. Мета цього уроку не в тому, щоб учні написали конкретні алгоритми для наведених прикладів застосунків.",
           "student_overview": "\\*\\*Питання дня: Як комп'ютери можуть опрацьовувати інформацію?\n\nНа цьому уроці ви дізнаєтеся про чотири типи опрацювання даних, які комп'ютери можуть використовувати для перетворення вхідних даних на вихідні."
         },
         "csd1-2022/Storage": {
-          "name": "Сховище",
+          "name": "Зберігання даних",
           "assessment_opportunities": "1.  **Визначати, яку інформацію в обчислювальній задачі слід зберігати для подальшого використання**\n    В інструкції до завдання перевірте відповіді учнів та їхні міркування щодо того, яку інформацію слід зберігати.\n\n2.  **Ідентифікувати настанови щодо того, яку інформацію слід або не слід зберігати як частину обчислювального процесу**\n\n    Перевірте настанови, які кожна група написала разом.\n\n3.  **Використовувати модель введення-виведення-зберігання-опрацювання даних для опису обчислювального процесу.**.\n\n    У двох підказках до журналу після відео про модель введення-виведення-зберігання-опрацювання учні мають визначити різні частини IOSP у програмі, якою вони зазвичай користуються, та у смартфоні.",
           "overview": "**Питання дня: Чому пам'ять є важливою частиною обчислювального процесу?**\n\nЦей урок знайомить учнів з останнім компонентом моделі обчислень: сховищем.  Після того, як учні спробують програму \"підбір вбрання\", вони обговорять, яку інформацію слід зберігати в програмі, а яку - вводити щоразу під час запуску програми.  Потім вони розглянуть низку застосунків та використають свої рішення щодо того, яку інформацію слід зберігати для створення рекомендацій для прийняття рішень про інформацію, яку слід зберігати.  Потім вони розглянуть чотири компоненти моделі обчислень, описаної в цьому розділі: введення, виведення, зберігання та опрацювання даних.  Після цього учні мають останню можливість переглянути свої рішення щодо того, які предмети слід класифікувати як \"комп'ютер\", прийняті на початку розділу.  Урок закінчується обговоренням власних ідей щодо застосунків і того, як можна використовувати сховище даних.",
           "purpose": "У першому розділі цього блоку учні розглянули процес вирішування проблем. У Розділі 2 учні дізналися, як комп'ютери допомагають вирішувати проблеми. На даний момент учні знають, що комп'ютери - це машини для опрацювання інформації, які можуть виконувати чотири дії з інформацією: вводити, виводити, зберігати та опрацьовувати дані.  На цьому останньому уроці перед виконанням модульного проєкту учні розглядають типи вхідних даних, які можуть знадобитися для розв'язування певної задачі, а також описують опрацювання та зберігання, які виконує комп'ютер для отримання бажаного результату.  Це має підготувати їх до розробки власного застосунку для розв'язання певної задачі та пояснення того, як цей застосунок працюватиме.",
           "student_overview": "**Питання дня: Чому пам'ять є важливою частиною обчислювального процесу?**\n\nНа цьому уроці ви дізнаєтеся про останній критерій, який робить комп'ютер комп'ютером - пам'ять!"
         },
         "csd1-2022/Project - Propose an App": {
+          "name": "Проєкт - запропонуй застосунок",
           "assessment_opportunities": "Використовуйте критерії проєкту, що додається до цього уроку, щоб оцінити, як учні досягли результатів навчання цієї теми. Ви також можете призначити післяпроєктний тест в Студії Коду.",
           "overview": "**Питання дня:  Як модель IOSP може допомогти нам розробити застосунок, який вирішує проблему?**\n\nНа завершення розгляду процесу вирішування проблем та моделі введення/виведення/зберігання/опрацювання даних комп'ютером, учні запропонують застосунок, призначений для розв'язування реальної задачі. Цей проєкт триватиме кілька днів і завершиться створенням плакату, що висвітлюватиме особливості учнівського застосунку, який вони презентуватимуть однокласникам. План проєкту містить покрокові інструкції для учнів та допомагає їм організувати свої ідеї. Проєкт призначений для виконання в парах, хоча його можна виконувати також індивідуально.",
           "purpose": "Цей проєкт поєднує дві основні теми Розділу 1: вирішування проблем та модель введення-виведення-зберігання-опрацювання даних. Цей проєкт пов'язує обидві теми з ширшою метою - визначити реальні задачі та знайти способи використання технологій для їх вирішення. Учні співпрацюють у створенні свого застосунку, а також беруть участь у структурованому процесі експертного оцінювання, до якого вони ще неодноразово долучатимуться впродовж курсу. Цей проєкт має бути цікавим та творчим досвідом, а також дає учням можливість пов'язати сферу комп'ютерних наук з їхніми власними інтересами та амбіціями.",
@@ -4116,17 +2137,17 @@
           "student_overview": "**Питання дня: Що може допомогти нам взаємодіяти та вирішувати проблеми в команді?**\n\nНа цьому уроці ви разом з групою спроєктуєте, сконструюєте, протестуєте та проаналізуєте паперову вежу, яка має бути максимально високою."
         },
         "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
-          "name": "Вивчаємо вирішення проблем - тема Тварини (альтернативний урок 3)",
+          "name": "Вивчаємо процес вирішення проблем - тема Тварини (альтернативний урок 3)",
           "assessment_opportunities": "1.  **Застосовувати процес вирішення проблем для підходу до різних завдань**.\n    На сторінці 5 інструкції до завдання перевірте таблицю, щоб переконатися, що учні виконують доцільні кроки для розв'язання кожної проблеми.\n\n2.  **Оцінювати, наскільки чітко визначена проблема, і використовувати стратегії для більш точного її визначення**.\n    Щодо останнього запитання на стор. 5 інструкції, переконайтеся, що учні мають принаймні одне запитання або стратегію, яка може бути ефективним способом краще визначити проблему.",
-          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного кроку. Вони розв'язуватимуть танграми, обиратимуть домашнього улюбленця для кількох людей та плануватимуть захід з адаптації тварини.  Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтовують включення кожного кроку та обговорюють питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим кроком.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Доступне альтернативне завдання до розділу [Досліджуємо вирішування проблем](/s/csd1-2022/lessons/3/)**",
-          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим кроком. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
+          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного етапу. Вони розв'язуватимуть танграми, обиратимуть домашнього улюбленця для кількох людей та плануватимуть захід з прилаштування тварини.  Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтовують включення кожного етапу та обговорюють питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим етапом.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Доступне альтернативне завдання до розділу [Досліджуємо вирішування проблем](/s/csd1-2022/lessons/3/)**",
+          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим етапом. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
           "student_overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nСьогодні ви будете застосовувати метод вирішення проблем до кількох різних ситуацій, які будуть ставати дедалі складнішими! "
         },
         "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
-          "name": "Вивчаємо вирішення проблем - тема Ігри (альтернативний урок 3)",
+          "name": "Вивчаємо процес вирішення проблем - тема Ігри (альтернативний урок 3)",
           "assessment_opportunities": "1.  **Застосовувати процес вирішення проблем для підходу до різних завдань**.\n    На сторінці 5 інструкції до завдання перевірте таблицю, щоб переконатися, що учні виконують доцільні кроки для розв'язання кожної проблеми.\n\n2.  **Оцінювати, наскільки чітко визначена проблема, і використовувати стратегії для більш точного її визначення**.\n    Щодо останнього запитання на стор. 5 інструкції, переконайтеся, що учні мають принаймні одне запитання або стратегію, яка може бути ефективним способом краще визначити проблему.",
-          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного кроку. Вони вирішуватимуть лабіринт, організовуватимуть команду, щоб пробігти якнайшвидше, та розроблятимуть гру. Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтують включення кожного кроку та обговорять питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим кроком.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Доступне альтернативне завдання до розділу [Досліджуємо вирішування проблем](/s/csd1-2022/lessons/3/)**",
-          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим кроком. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
+          "overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nНа цьому уроці учні застосують процес вирішення проблем до трьох різних проблем, щоб краще зрозуміти цінність кожного етапу. Вони вирішуватимуть лабіринт, організовуватимуть команду, щоб пробігти якнайшвидше, та розроблятимуть гру. Проблеми стають дедалі складнішими та погано визначеними, аби підкреслити, наскільки процес вирішення проблем є особливо корисним при вирішенні таких типів проблем. На завершення уроку учні обмірковують свій досвід застосування процесу вирішення проблем. Вони обґрунтують включення кожного етапу та обговорять питання або стратегії, які можуть допомогти їм краще визначати відкриті проблеми, оскільки це часто є найбільш важливим етапом.\n\nЦей урок, ймовірно, триватиме дві навчальні години або більше. Перші дві проблеми можна розглянути за один урок, але третю потрібно буде перенести на другий урок.\n\n**Доступне альтернативне завдання до розділу [Досліджуємо вирішування проблем](/s/csd1-2022/lessons/3/)**",
+          "purpose": "Цей урок дозволяє учням більше попрактикуватися у вирішенні проблем у різних контекстах. Він підкреслює той факт, що процес вирішення проблем є особливо корисним при підході до погано визначених проблем. Під час заключного обговорення уроку учням пропонуються деякі стратегії та запитання, які вони можуть поставити, щоб краще визначити проблему для себе, оскільки це досить часто є найбільш важливим етапом. Проблеми, розглянуті на цьому уроці, також допоможуть розпочати обговорення на наступному уроці про типи проблем, для вирішення яких добре підходять комп'ютери.",
           "student_overview": "**Питання дня: Як ми можемо застосувати процес вирішення проблем до багатьох різних типів проблем?**\n\nСьогодні ви будете застосовувати метод вирішення проблем до кількох різних ситуацій, які будуть ставати дедалі складнішими! "
         },
         "csd2-2022/Exploring Web Pages": {
@@ -4172,7 +2193,7 @@
           "student_overview": "**Питання дня: Як змінити стиль тексту на вебсторінці?**\n\nНа цьому уроці ви дізнаєтеся, як використовувати CSS для стилізації елементів HTML на вебсторінці."
         },
         "csd2-2022/Mini-Project: Your Personal Style": {
-          "name": "Міні-проєкт: Ваш особистий стиль",
+          "name": "Міні-проєкт: Ообистий стиль",
           "assessment_opportunities": "Використовуйте критерії проєкту, що додаються до цього уроку, щоб оцінити, як учні досягли навчальних цілей.",
           "overview": "**Як можна виразити свій особистий стиль на вебсторінці?**\n\nУ цьому факультативному міні-проєкті учні використовують здобуті знання для створення власної стилізованої вебсторінки на обрану ними тему. Урок розпочинається з повторення вивченого про CSS. Потім учні починають роботу над проєктом, розробляючи дизайн вебсторінки та визначаючи, які властивості вони будуть використовувати для її реалізації. Учні створюють свої вебсторінки у Веб Лабораторії та діляться ними з іншими учнями. Після отримання відгуків вони вносять остаточні зміни до своїх вебсайтів, а потім обмірковують результати своєї роботи. Цей проєкт можна завершити за один день або розподілити на кілька днів, залежно від потреб класу та розкладу.",
           "purpose": "Цей проєкт дає учням більше часу для практичного засвоєння матеріалу, який вони вже вивчили. Він навмисно відкритий та гнучкий, щоб дозволити проводити заняття впродовж одного або кількох днів, залежно від потреб учнів або шкільного календаря.",
@@ -4193,7 +2214,7 @@
           "student_overview": "**Питання дня: Як ми можемо додавати зображення на наші вебсайти, не порушуючи при цьому жодних прав?**\n\nНа цьому уроці ви дізнаєтеся, як додавати зображення на свої вебсторінки, не забуваючи про авторські права та ліцензії Creative Commons."
         },
         "csd2-2022/Websites for Expression": {
-          "name": "Вебсайти для вираження",
+          "name": "Вебсайти для самовираження",
           "assessment_opportunities": "1.  **Визначення вебсайту як форми особистого самовираження**\n\n    В інструкції до завдання та під час обговорення перевірте, чи учні чітко пояснили мету створення власних вебсторінок та чому ця мета має для них особисте значення.",
           "overview": "**Питання дня: Як ми можемо використовувати вебсайти для самовираження?**\n\nНа цьому уроці учні досліджують способи використання вебсайтів як засобу самовираження та складають список тем та інтересів, які вони хотіли б висвітлити на особистому вебсайті. Учні починають з обговорення різних способів, за допомогою яких люди виражають свої інтереси та ідеї і діляться ними. Потім учні переглядають кілька зразків вебсайтів, щоб визначити способи вираження ідей на них. Насамкінець учні обговорюють список тем та інтересів, які вони хотіли б висвітлити на особистому вебсайті; вони будуть звертатися до цього списку впродовж вивчення цього розділу.",
           "purpose": "На цьому уроці підкреслюється, що веб-розробка і, відповідно, інформатика - це шлях для самовираження. Під час розминки веб-розробка розглядається як ще один спосіб самовираження поряд з візуальним мистецтвом, танцями, музикою, модою, соціальними мережами та багатьма іншими способами самовираження, якими учні, ймовірно, вже користуються. Перегляд прикладів учнівських робіт допомагає учням визначитися з очікуваннями від власних вебсторінок. Завдання розглядає веб-розробку в рамках процесу вирішення проблем, а обговорення вмісту для власного вебсайту під час мозкового штурму дає учням можливість визначити способи самовираження, які вони хотіли б використати на своїх вебсторінках.",
@@ -4228,7 +2249,7 @@
           "student_overview": "**Питання дня: Чому люди створюють вебсайти?**\n\nНа цьому уроці ви дізнаєтеся про різні причини, чому люди створюють вебсайти, а також про задачі, які можна вирішити за допомогою власного вебсайту."
         },
         "csd2-2022/Team Problem Solving": {
-          "name": "Вирішення проблем у команді",
+          "name": "Командне вирішення проблеми",
           "assessment_opportunities": "**1. Здатність учнів працювати в команді**\n\nВикористовуйте короткі відповіді на другій сторінці інструкції до завдання, щоб оцінити, наскільки учні досягли навчальних цілей цього уроку.",
           "overview": "**Питання дня: Як ми можемо співпрацювати, щоб стати чудовою командою?**\n\nУчні працюють разом над встановленням правил групи та обговорюють, які функції вони хотіли б бачити на своїх вебсайтах. На початку заняття учасники згадують популярні команди в різних контекстах, а потім розмірковують над тим, що робить команди успішними. Потім учасники об'єднуються у власні команди та складають план, як вони будуть взаємодіяти та досягати успіху у власних проєктах. Після цього команди починають обговорення ідей для свого проєкту вебсайту.",
           "purpose": "На цьому уроці розглядаються проблеми, з якими учні можуть стикатися під час роботи в групі, і надається допомога в розробці плану подолання цих проблем.  Учні мають повертатися до цього уроку впродовж усього розділу, коли працюватимуть у групах над виконанням своїх проєктів.",
@@ -4269,7 +2290,7 @@
           "student_overview": "**Питання дня: Які навички та практики допоможуть нам працювати разом, щоб створити чудовий вебсайт?**\n\nНа цьому уроці ваша команда нарешті буде кодувати сторінки, які ви запланували!"
         },
         "csd2-2022/Peer Review and Final Touches": {
-          "name": "Партнерське оцінювання та фінальні штрихи",
+          "name": "Взаємне оцінювання та фінальні штрихи",
           "assessment_opportunities": "Використовуйте рубрикатор проєкту, що додається до цього уроку, щоб оцінити досягнення учнів у вивченні цього розділу.  Можна також призначити післяпроєктний тест в Студії Коду.",
           "overview": "**Питання дня:  Як ми можемо використовувати відгуки, щоб зробити наші вебсайти кращими?**\n\nЦей урок зосереджується на цінності відгуків від інших учнів. Спочатку учні розмірковують над тим, чим вони пишаються, і про що вони хотіли б отримати відгук. Потім команди працюють з іншими учнями, щоб отримати відгук за допомогою структурованого процесу, який включає рубрику з критеріями проєкту. Після цього учні вирішують, як вони хочуть відреагувати на отримані відгуки, та вносять останні зміни у свої сайти. Після остаточного перегляду рубрикатора вони обмірковують свій процес. На завершення розділу вони поділяться своїми проєктами, а також описом процесу, який вони пройшли, щоб досягти остаточного дизайну.",
           "purpose": "Взаємне оцінювання заохочує учнів використовувати своїх колег як ресурс та розвивати навички ефективної комунікації. Підсумкова рефлексія та презентація дозволяють учням попрактикуватись у спілкуванні щодо власної роботи.",
@@ -4463,7 +2484,7 @@
           "name": "Проєкт - Розробка гри",
           "assessment_opportunities": "Використовуйте критерії проєкту, що додається до цього уроку, щоб оцінити, як учні досягли результатів навчання цієї теми. Ви також можете призначити післяпроєктний тест в Студії Коду.",
           "overview": "**Питання дня: Як п'ять практик інформатики  (вирішення проблем, наполегливість, комунікація, співпраця та творчість) можуть допомогти програмістам у виконанні великих проєктів?**\n\nУсні спланують і створять власну гру, використовуючи план проєкту з попередніх двох уроків. Працюючи індивідуально або в парах, учні спочатку визначаться з типом гри, яку вони хотіли б створити, надихнувшись набором зразків ігор. Потім вони заповнять порожній план проєкту, де опишуть поведінку гри та визначать змінні, спрайти та функції, які їм знадобляться для створення. У Студії Коду низка рівнів підкаже їм загальну послідовність дій, яку вони можуть використати для реалізації цього плану. Впродовж процесу учні ділитимуться своїми проєктами з однолітками для оцінювання та отримуватимуть зворотний зв'язок після завершення гри. Наприкінці уроку учні поділяться завершеними іграми зі своїми однокласниками. Цей проєкт охоплює кілька уроків і може легко зайняти 3-5 навчальних годин.",
-          "purpose": "Цей урок є завершальним у Розділі 6 і дає учням можливість створити власний проєкт ігрової студії з нуля. Запропонована в плані проєкту структура та практика її використання мають на меті допомогти учням у визначенні обсягу їхніх проєктів та доведенні їхніх ідей до завершення. Цей проєкт дає можливість продемонструвати технічні навички, але учням також потрібно буде співпрацювати зі своїм партнером, забезпечувати конструктивний зворотний зв'язок та неодноразово використовувати процес вирішення проблем, коли вони зустрічатимуться з перешкодами на своєму шляху. Цей проєкт має бути керованим учнями, коли це можливо, і має стати надихаючим і незабутнім завершенням цього розділу \"Відкриття інформатики\".",
+          "purpose": "Цей урок є завершальним у Розділі 6 і дає учням можливість створити власний проєкт ігрової студії з нуля. Запропонована в плані проєкту структура та практика її використання мають на меті допомогти учням у визначенні обсягу їхніх проєктів та доведенні їхніх ідей до завершення. Цей проєкт дає можливість продемонструвати технічні навички, але учням також потрібно буде співпрацювати зі своїм партнером, забезпечувати конструктивний зворотний зв'язок та неодноразово використовувати процес вирішення проблем, коли вони зустрічатимуться з перешкодами на своєму шляху. Цей проєкт має бути керованим учнями, коли це можливо, і має стати надихаючим і незабутнім завершенням цього розділу \"Дослідження інформатики\".",
           "student_overview": "**Питання дня: Як п'ять практик інформатики (вирішення проблем, наполегливість, комунікація, співпраця та креативність) можуть допомогти програмістам завершувати великі проєкти?**\n\nНа цьому уроці ви використовуватимете процес вирішення проблем для планування та створення оригінальної гри!"
         },
         "csd3-2022/CS Discoveries Post-Course Survey": {
@@ -4908,7 +2929,7 @@
         "coursea-2022/Happy Maps": {
           "name": "Веселі карти",
           "overview": "Цей урок на **створення контексту** об'єднує команди з простим завданням: довести персонажа Флурба до фрукта. Учні попрактикуються у написанні точних інструкцій, працюючи над перетворенням інструкцій у надані символи.",
-          "preparation": "-   Видрукуйте один **\\*Робочий аркуш** та один набір **\\*Друкованих матеріалів** на кожну групу з 2-3 осіб.\n-   Переконайтеся, що у кожного учня є Зошит для рефлексії.",
+          "preparation": "-   Видрукуйте один **Робочий аркуш** та один набір **Друкованих матеріалів** на кожну групу з 2-3 осіб.\n-   Переконайтеся, що у кожного учня є Зошит для рефлексії.",
           "purpose": "Міст від алгоритмів до програмування може бути коротким, якщо учні зрозуміють різницю між плануванням послідовності дій і кодуванням цієї послідовності відповідною мовою.  Ця вправа допоможе учням набути досвіду читання та написання скороченого коду.",
           "student_overview": "Напишіть інструкцію, як довести Флурба до фрукта."
         },
@@ -5940,10 +3961,13 @@
           "name": "Вхідні та вихідні дані"
         },
         "csd1-2023/Processing": {
-          "name": "Опрацювання"
+          "name": "Опрацювання даних"
         },
         "csd1-2023/Storage": {
-          "name": "Сховище"
+          "name": "Зберігання даних"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Проєкт - запропонуй застосунок"
         },
         "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
           "name": "Вступ до вирішення проблем - журнальний столик (альтернативний урок 1)"
@@ -5955,11 +3979,11 @@
           "name": "Вступ до вирішення проблем - паперова вежа (альтернативний урок 1)"
         },
         "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
-          "name": "Вивчаємо вирішення проблем - тема Тварини (альтернативний урок 3)",
+          "name": "Вивчаємо процес вирішення проблем - тема Тварини (альтернативний урок 3)",
           "assessment_opportunities": "1.  **Застосовувати процес вирішення проблем для підходу до різних завдань**.\n    На сторінці 5 інструкції до завдання перевірте таблицю, щоб переконатися, що учні виконують доцільні кроки для розв'язання кожної проблеми.\n\n2.  **Оцінювати, наскільки чітко визначена проблема, і використовувати стратегії для більш точного її визначення**.\n    Щодо останнього запитання на стор. 5 інструкції, переконайтеся, що учні мають принаймні одне запитання або стратегію, яка може бути ефективним способом краще визначити проблему."
         },
         "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
-          "name": "Вивчаємо вирішення проблем - тема Ігри (альтернативний урок 3)"
+          "name": "Вивчаємо процес вирішення проблем - тема Ігри (альтернативний урок 3)"
         },
         "csd2-2023/Exploring Web Pages": {
           "name": "Дослідження вебсторінок"
@@ -5978,7 +4002,7 @@
           "name": "Зміна стилів тексту з використанням CSS"
         },
         "csd2-2023/Mini-Project: Your Personal Style": {
-          "name": "Міні-проєкт: Ваш особистий стиль"
+          "name": "Міні-проєкт: Ообистий стиль"
         },
         "csd2-2023/Intellectual Property": {
           "name": "Інтелектуальна власність"
@@ -5987,7 +4011,7 @@
           "name": "Використання зображень"
         },
         "csd2-2023/Websites for Expression": {
-          "name": "Вебсайти для вираження"
+          "name": "Вебсайти для самовираження"
         },
         "csd2-2023/Styling Elements with CSS": {
           "name": "Зміна стилів елементів з використанням CSS"
@@ -6002,7 +4026,7 @@
           "name": "Вебсайти для будь-якої цілі"
         },
         "csd2-2023/Team Problem Solving": {
-          "name": "Вирішення проблем у команді"
+          "name": "Командне вирішення проблеми"
         },
         "csd2-2023/Sources and Research": {
           "name": "Джерела та дослідження"
@@ -6017,7 +4041,7 @@
           "name": "Проєкт - вебсайт для певної мети"
         },
         "csd2-2023/Peer Review and Final Touches": {
-          "name": "Партнерське оцінювання та фінальні штрихи"
+          "name": "Взаємне оцінювання та фінальні штрихи"
         },
         "csd3-2023/Plotting Shapes": {
           "name": "Побудова фігур"
@@ -6362,7 +4386,7 @@
         "coursea-2023/Happy Maps": {
           "name": "Веселі карти",
           "overview": "Цей урок на **створення контексту** об'єднує команди з простим завданням: довести персонажа Флурба до фрукта. Учні попрактикуються у написанні точних інструкцій, працюючи над перетворенням інструкцій у надані символи.",
-          "preparation": "-   Видрукуйте один **\\*Робочий аркуш** та один набір **\\*Друкованих матеріалів** на кожну групу з 2-3 осіб.\n-   Переконайтеся, що у кожного учня є Зошит для рефлексії.",
+          "preparation": "-   Видрукуйте один **Робочий аркуш** та один набір **Друкованих матеріалів** на кожну групу з 2-3 осіб.\n-   Переконайтеся, що у кожного учня є Зошит для рефлексії.",
           "purpose": "Міст від алгоритмів до програмування може бути коротким, якщо учні зрозуміють різницю між плануванням послідовності дій і кодуванням цієї послідовності відповідною мовою.  Ця вправа допоможе учням набути досвіду читання та написання скороченого коду.",
           "student_overview": "Напишіть інструкцію, як довести Флурба до фрукта."
         },
@@ -7295,15 +5319,6 @@
         "gumball/Gumball Play Lab": {
           "name": "Ігрова студія Гамбола"
         },
-        "hello-world-animals-2021/Hello World": {
-          "name": "Привіт, світ: Тварини"
-        },
-        "hello-world-soccer-2022/Hello World: Food": {
-          "name": "Привіт, світ: Футбол"
-        },
-        "hello-world-space-2022/Hello World: Food": {
-          "name": "Привіт, світ: Космос"
-        },
         "hero/Minecraft Hour of Code": {
           "name": "Minecraft: Подорож героя"
         },
@@ -7333,9 +5348,6 @@
         },
         "playlab/Play Lab": {
           "name": "Ігрова студія"
-        },
-        "poem-art-2021/Poem Art": {
-          "name": "Мистецтво віршування"
         },
         "sports/Sports": {
           "name": "Створи код власної спортивної гри"
@@ -7383,7 +5395,7 @@
           "name": "Стиснення тексту"
         },
         "allthethings/Pixelation": {
-          "name": "Пікселізаціі"
+          "name": "Пікселізація"
         },
         "allthethings/AppLab": {
           "name": "Програмна лабораторія"
@@ -7408,312 +5420,6 @@
         },
         "allthethings/lesson-49": {
           "name": "Музика"
-        },
-        "20-hour/Introduction to Computer Science": {
-          "name": "Вступ до інформатики"
-        },
-        "20-hour/The Maze": {
-          "name": "Лабіринт"
-        },
-        "20-hour/Computational Thinking": {
-          "name": "Обчислювальне мислення"
-        },
-        "20-hour/Graph Paper Programming": {
-          "name": "Програмування по клітинках"
-        },
-        "20-hour/The Artist": {
-          "name": "Художник"
-        },
-        "20-hour/Algorithms": {
-          "name": "Алгоритми"
-        },
-        "20-hour/The Artist 2": {
-          "name": "Художник 2"
-        },
-        "20-hour/Functions": {
-          "name": "Функції"
-        },
-        "20-hour/The Farmer": {
-          "name": "Фермерка"
-        },
-        "20-hour/Conditionals": {
-          "name": "Умови"
-        },
-        "20-hour/The Artist 3": {
-          "name": "Художник 3"
-        },
-        "20-hour/Song Writing": {
-          "name": "Написання пісень"
-        },
-        "20-hour/The Farmer 2": {
-          "name": "Фермерка 2"
-        },
-        "20-hour/Abstraction": {
-          "name": "Абстракції"
-        },
-        "20-hour/The Artist 4": {
-          "name": "Художник 4"
-        },
-        "20-hour/Relay Programming": {
-          "name": "Естафетне програмування"
-        },
-        "20-hour/The Farmer 3": {
-          "name": "Фермерка 3"
-        },
-        "20-hour/The Internet": {
-          "name": "Інтернет"
-        },
-        "20-hour/The Artist 5": {
-          "name": "Художник 5"
-        },
-        "20-hour/Wrap-up": {
-          "name": "Підведення підсумків"
-        },
-        "course1/Happy Maps": {
-          "name": "Веселі карти"
-        },
-        "course1/Move it, Move it": {
-          "name": "Рухайся, рухайся"
-        },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Пазли: вчимося перетягувати"
-        },
-        "course1/Maze: Sequence": {
-          "name": "Лабіринт: послідовність"
-        },
-        "course1/Maze: Debugging": {
-          "name": "Лабіринт: налагодження"
-        },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Життєві алгоритми: посадити насіння"
-        },
-        "course1/Bee: Sequence": {
-          "name": "Бджілка: послідовність"
-        },
-        "course1/Artist: Sequence": {
-          "name": "Художник: послідовність"
-        },
-        "course1/Building a Foundation": {
-          "name": "Закладання основ"
-        },
-        "course1/Artist: Shapes": {
-          "name": "Художник: фігури"
-        },
-        "course1/Spelling Bee": {
-          "name": "Грамотна Бджілка"
-        },
-        "course1/Getting Loopy": {
-          "name": "Зациклюємось"
-        },
-        "course1/Maze: Loops": {
-          "name": "Лабіринт: цикли"
-        },
-        "course1/Bee: Loops": {
-          "name": "Бджола: цикли"
-        },
-        "course1/The Big Event": {
-          "name": "Велика подія"
-        },
-        "course1/Studio: Create a Story": {
-          "name": "Ігрова студія: Створення історії"
-        },
-        "course1/Going Places Safely": {
-          "name": "Безпечне добирання"
-        },
-        "course1/Artist: Loops": {
-          "name": "Художник: цикли"
-        },
-        "course2/Graph Paper Programming": {
-          "name": "Програмування по клітинках"
-        },
-        "course2/Real-life Algorithms: Paper Planes": {
-          "name": "Життєві алгоритми: Паперові літачки"
-        },
-        "course2/Maze: Sequence": {
-          "name": "Лабіринт: послідовність"
-        },
-        "course2/Artist: Sequence": {
-          "name": "Художник: послідовність"
-        },
-        "course2/Getting Loopy": {
-          "name": "Зациклюємось"
-        },
-        "course2/Maze: Loops": {
-          "name": "Лабіринт: цикли"
-        },
-        "course2/Artist: Loops": {
-          "name": "Художник: цикли"
-        },
-        "course2/Bee: Loops": {
-          "name": "Бджола: цикли"
-        },
-        "course2/Relay programming": {
-          "name": "Естафетне програмування"
-        },
-        "course2/Bee: Debugging": {
-          "name": "Бджола - налагодження"
-        },
-        "course2/Artist: Debugging": {
-          "name": "Художник: налагодження"
-        },
-        "course2/Conditionals": {
-          "name": "Умови"
-        },
-        "course2/Bee: Conditionals": {
-          "name": "Бджола - умови"
-        },
-        "course2/Binary Bracelets": {
-          "name": "Двійкові браслети"
-        },
-        "course2/The Big Event": {
-          "name": "Велика подія"
-        },
-        "course2/Flappy": {
-          "name": "Пурх"
-        },
-        "course2/Studio: Create a Story": {
-          "name": "Ігрова студія: Створення історії"
-        },
-        "course2/Your Digital Footprint": {
-          "name": "Твій цифровий слід"
-        },
-        "course2/Artist: Nested Loops": {
-          "name": "Художник - вкладені цикли"
-        },
-        "course3/Computational Thinking": {
-          "name": "Обчислювальне мислення"
-        },
-        "course3/Maze": {
-          "name": "Лабіринт"
-        },
-        "course3/Artist": {
-          "name": "Художник"
-        },
-        "course3/Functional Suncatchers": {
-          "name": "Функції для блискіток"
-        },
-        "course3/Artist: Functions": {
-          "name": "Художник - функції"
-        },
-        "course3/Bee: Functions": {
-          "name": "Бджілка - функції"
-        },
-        "course3/Bee: Conditionals": {
-          "name": "Бджола - умови"
-        },
-        "course3/Maze: Conditionals": {
-          "name": "Лабіринт - умови"
-        },
-        "course3/Songwriting": {
-          "name": "Написання пісень"
-        },
-        "course3/Dice Race": {
-          "name": "Гонка в кубики"
-        },
-        "course3/Artist: Nested Loops": {
-          "name": "Художник - вкладені цикли"
-        },
-        "course3/Farmer: While Loops": {
-          "name": "Фермерка - цикли \"поки\""
-        },
-        "course3/Bee: Nested Loops": {
-          "name": "Бджілка - вкладені цикли"
-        },
-        "course3/Bee: Debugging": {
-          "name": "Бджола - налагодження"
-        },
-        "course3/Bounce": {
-          "name": "Арканоід"
-        },
-        "course3/Studio: Create a Story": {
-          "name": "Ігрова студія: Створення історії"
-        },
-        "course3/Studio: Create a Game": {
-          "name": "Ігрова студія: Створення історії"
-        },
-        "course3/Internet": {
-          "name": "Інтернет"
-        },
-        "course3/Crowdsourcing": {
-          "name": "Краудсорсинг"
-        },
-        "course3/Digital Citizenship": {
-          "name": "Цифрове громадянство"
-        },
-        "course3/Artist: Patterns": {
-          "name": "Художник: візерунки"
-        },
-        "course4/Unplugged: Tangrams": {
-          "name": "Безмашинні вправи: танграм"
-        },
-        "course4/Maze and Bee": {
-          "name": "Бджілка у лабіринті"
-        },
-        "course4/Artist": {
-          "name": "Художник"
-        },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Безмашинні вправи: конвертні змінні"
-        },
-        "course4/Unplugged: Madlibs": {
-          "name": "Безмашинні вправи: пропуски"
-        },
-        "course4/Artist: Variables": {
-          "name": "Художник: змінні"
-        },
-        "course4/Play Lab: Variables": {
-          "name": "Ігрова лабораторія: змінні"
-        },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Безмашинні вправи: ігри з циклами"
-        },
-        "course4/Bee: For Loops": {
-          "name": "Бджілка - цикли з параметром"
-        },
-        "course4/Artist: For Loops": {
-          "name": "Художник - цикли з параметром"
-        },
-        "course4/Play Lab: For Loops": {
-          "name": "Ігрова лабораторія - цикли з параметром"
-        },
-        "course4/Artist: Functions": {
-          "name": "Художник - функції"
-        },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Безмашинні вправи: написання пісень з параметрами"
-        },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Художник: функції з параметрами"
-        },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Ігрова лабораторія: Функції з параметрами"
-        },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Бджілка: Функції з параметрами"
-        },
-        "course4/Unplugged: Binary": {
-          "name": "Безмашинні вправи: двійкова система"
-        },
-        "course4/Artist Binary": {
-          "name": "Художник: двійкова система"
-        },
-        "course4/Super Challenge - Variables": {
-          "name": "Супер завдання - Змінні"
-        },
-        "course4/Super Challenge - For Loops": {
-          "name": "Супер завдання - цикли Для"
-        },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Супер завдання - функції та параметри"
-        },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Екстремальний виклик - комплексний"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Година коду 2013"
-        },
-        "jigsaw/Jigsaw": {
-          "name": "Пазли"
         }
       }
     }
