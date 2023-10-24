@@ -35,16 +35,16 @@ class EvaluateRubricJob < ApplicationJob
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
 
+    # Find the rubric evaluation record
+    rubric_ai_evaluation = RubricAiEvaluation.where(id: rubric_ai_evaluation_id).first
+    raise "ERROR: cannot find the rubric ai evaluation record" unless rubric_ai_evaluation
+
     raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
     # Find the rubric
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
     raise "ERROR: cannot find the rubric record" unless rubric
-
-    # Find the rubric evaluation record
-    rubric_ai_evaluation = RubricAiEvaluation.where(id: rubric_ai_evaluation_id)
-    raise "ERROR: cannot find the rubric ai evaluation record" unless rubric_ai_evaluation
 
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
@@ -57,7 +57,16 @@ class EvaluateRubricJob < ApplicationJob
     ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
     merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels)
 
-    write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation_id, project_version)
+    write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
+  rescue => exception
+    # Write out error status
+    if rubric_ai_evaluation
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:FAILURE]
+      rubric_ai_evaluation.save!
+    end
+
+    # Re-raise
+    raise exception
   end
 
   def self.ai_enabled?(script_level)
@@ -182,17 +191,19 @@ class EvaluateRubricJob < ApplicationJob
       rubric_ai_evaluation.project_version = project_version
 
       # Write out all of the learning goal records
-      key_concepts = ai_evaluations.map {|ai_evaluation| ai_evaluation['Key Concept']}
-      learning_goal_ids = rubric.learning_goal_ai_evaluations.where(
-        learning_goal: key_concepts,
-      ).pluck(:id)
+      ai_mapping = {}
+      ai_evaluations.each do |ai_evaluation|
+        ai_mapping[ai_evaluation['Key Concept']] = ai_evaluation
+      end
 
-      ai_evaluations.sort_by {|evaluation| evaluation['Key Concept']}.zip(
-        rubric_ai_evaluation.learning_goal_ai_evaluations.where(learning_goal_id: learning_goal_ids).order(learning_goal: :asc)
-      ) do |ai_evaluation, learning_goal_ai_evaluation|
+      # Go through all of our learning goal evaluation records
+      rubric_ai_evaluation.learning_goal_ai_evaluations.includes(:learning_goal).order('learning_goals.learning_goal ASC').each do |learning_goal_ai_evaluation|
+        next unless ai_mapping.key?(learning_goal_ai_evaluation.learning_goal.learning_goal)
+        ai_evaluation = ai_mapping[learning_goal_ai_evaluation.learning_goal.learning_goal]
         understanding = understanding_s_to_i(ai_evaluation['Grade'])
         learning_goal_ai_evaluation.understanding = understanding
         learning_goal_ai_evaluation.ai_confidence = ai_evaluation['Confidence']
+        learning_goal_ai_evaluation.save!
       end
 
       # Save the rubric evaluation record
