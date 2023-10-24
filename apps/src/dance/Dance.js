@@ -496,7 +496,7 @@ Dance.prototype.preview = async function () {
     this.nativeAPI.setEffectsInPreviewMode(false);
   };
 
-  // Hack: this is the mechanism p5 uses to queue draws,
+  // This is the mechanism p5 uses to queue draws,
   // so we do the same so we end up after any queued draws.
   window.requestAnimationFrame(previewDraw);
 };
