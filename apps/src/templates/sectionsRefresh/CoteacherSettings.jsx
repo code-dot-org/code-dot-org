@@ -11,6 +11,7 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 
 export default function CoteacherSettings({
   sectionInstructors,
+  primaryInstructor,
   addCoteacher,
   coteachersToAdd,
 }) {
@@ -20,6 +21,8 @@ export default function CoteacherSettings({
   const handleInputChange = event => {
     setInputValue(event.target.value);
   };
+
+  React.useEffect(() => console.log(primaryInstructor), [primaryInstructor]);
 
   const handleAddEmail = e => {
     e.preventDefault();
@@ -83,6 +86,47 @@ export default function CoteacherSettings({
     }
   };
 
+  const getTableRow = (email, index, name = null, status = null) => {
+    return (
+      <tr key={index}>
+        <td>{email}</td>
+        <td>{name}</td>
+        <td>{status}</td>
+        <td>
+          <Button onClick={() => {}}>
+            <FontAwesome icon="trash" />
+          </Button>
+        </td>
+      </tr>
+    );
+  };
+
+  const getTable = (sectionInstructors, coteachersToAdd) => {
+    if (
+      (!sectionInstructors || sectionInstructors.length === 0) &&
+      coteachersToAdd.length === 0
+    ) {
+      return <div>You haven't added any co-teachers yet</div>;
+    }
+    return (
+      <table className={styles.table}>
+        <tbody>
+          {coteachersToAdd.map((email, id) => getTableRow(email, id))}
+          {sectionInstructors
+            ? sectionInstructors.map((instructor, id) =>
+                getTableRow(
+                  instructor.instructorEmail,
+                  id,
+                  instructor.instructorName,
+                  instructor.status
+                )
+              )
+            : null}
+        </tbody>
+      </table>
+    );
+  };
+
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}
@@ -113,14 +157,7 @@ export default function CoteacherSettings({
           </div>
           {getErrorOrCount()}
         </div>
-        <div className={styles.table}>
-          {coteachersToAdd}
-          {sectionInstructors
-            ? sectionInstructors.map(
-                instructor => '   ' + instructor.instructorEmail
-              )
-            : null}
-        </div>
+        {getTable(sectionInstructors, coteachersToAdd)}
       </div>
     </div>
   );
@@ -128,6 +165,7 @@ export default function CoteacherSettings({
 
 CoteacherSettings.propTypes = {
   sectionInstructors: PropTypes.arrayOf(PropTypes.object),
+  primaryInstructor: PropTypes.object,
   addCoteacher: PropTypes.func.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
 };

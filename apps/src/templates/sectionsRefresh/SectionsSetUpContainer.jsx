@@ -79,10 +79,13 @@ export default function SectionsSetUpContainer({
   sectionToBeEdited,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
-  const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
+  // TODO: set back to true
+  const [isCoteacherOpen, setIsCoteacherOpen] = useState(true);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
   const [coteachersToAdd, setCoteachersToAdd] = useState([]);
+
+  React.useEffect(() => console.log(sections), [sections]);
 
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
@@ -312,6 +315,7 @@ export default function SectionsSetUpContainer({
       () => (
         <CoteacherSettings
           sectionInstructors={sections[0].sectionInstructors}
+          primaryInstructor={sections[0].primaryInstructor}
           addCoteacher={newCoteacher =>
             setCoteachersToAdd(existing => [newCoteacher, ...existing])
           }
