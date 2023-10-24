@@ -1455,6 +1455,25 @@ class UserTest < ActiveSupport::TestCase
     assert user.under_13?
   end
 
+  test 'over 21' do
+    user = create :user
+    user.age = 15
+    refute user.over_21?
+    user.save!
+    refute user.over_21?
+
+    user.age = 21
+    assert user.over_21?
+    user.save!
+    assert user.over_21?
+
+    user = create :user
+    user.update_attribute(:birthday, nil) # cheating...
+    user = user.reload
+    assert user.age.nil?
+    refute user.over_21?
+  end
+
   test "reset_secrets calls generate_secret_picture and generate_secret_words" do
     user = create :user
 
