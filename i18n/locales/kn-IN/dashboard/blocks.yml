@@ -185,6 +185,12 @@ kn:
         options:
           EFFECT:
             '"none"': ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': ಯಾವುದೂ ಅಲ್ಲ
+          PALETTE:
+            '"ocean"': ಸಮುದ್ರ
       Dancelab_setDanceSpeed:
         options:
           SPEED:

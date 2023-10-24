@@ -1942,3 +1942,18 @@ kn:
           lessons:
             lesson-1:
               name: ನಮ್ಮ AI ನೀತಿ ಸಂಹಿತೆ
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ಪರಿಚಯ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ಪರಿಚಯ
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: ಪರಿಚಯ
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ಪರಿಚಯ

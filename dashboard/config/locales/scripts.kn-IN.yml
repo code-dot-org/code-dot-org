@@ -2104,6 +2104,17 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ಪರಿಚಯ
+          lessons:
+            lesson-7:
+              name: ಪರಿಚಯ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ಪರಿಚಯ
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2126,6 +2137,10 @@ kn:
           lessons:
             lesson-3:
               name: ಮೌಲ್ಯಮಾಪನ
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ಪರಿಚಯ
         virustest:
           description_short: ವೈರಸ್ ಔಟ್‌ಬ್ರೇಕ್‌ನಿಂದ ಸಿಮ್ಯುಲೇಶನ್ ರಚಿಸಲು ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್
             ಬಳಸಿ.
