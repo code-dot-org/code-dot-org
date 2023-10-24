@@ -547,6 +547,50 @@ mi:
             '"tropical"': Pārūrū
             '"vintage"': Tawhito
             '"warm"': Mahana
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          whakarite i te papamuri
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Kore
+            '"rand"': "(Poka noa)"
+            '"circles"': Porowhita
+            '"quads"': Ngā Anahera
+            '"color_cycle"': Tae
+            '"diamonds"': Taimona
+            '"disco_ball"': Pōro Whakaata
+            '"fireworks"': Pahū ahi
+            '"flowers"': Putiputi
+            '"growing_stars"': Ngā Whetū Tipu
+            '"swirl"': Whakamoe
+            '"kaleidoscope"': Takawhīwhiwhi
+            '"lasers"': Papakani Taiaho
+            '"splatter"': Peita Peita
+            '"rainbow"': Āniwaniwa
+            '"ripples_random"': Ngā Pungarungaru Matapōkere
+            '"ripples"': Ngā Pungarungaru
+            '"snowflakes"': Hukapapa
+            '"text"': Ingoa Waiata
+            '"squiggles"': Ngā Koropikopiko
+            '"galaxy"': Tuarangi
+            '"sparkles"': Wherokiroki
+            '"spiral"': Koropikopiko
+            '"disco"': Tapawha
+            '"starburst"': Pāpahu Whetū
+            '"stars"': Ngā Whetū
+            '"music_wave"': Ngaru
+          PALETTE:
+            '"rave"': Pango me te Mā
+            '"cool"': Kōangi
+            '"electronic"': Tāhiko
+            '"iceCream"': Aihikirīmi
+            '"default"': Rama
+            '"neon"': Haukura
+            '"rainbow"': Āniwaniwa
+            '"tropical"': Pārūrū
+            '"vintage"': Tawhito
+            '"warm"': Mahana
       Dancelab_setDanceSpeed:
         text: whakarite te haerenga tere o te kanikani a {SPRITE} ki te {SPEED}
         options:
