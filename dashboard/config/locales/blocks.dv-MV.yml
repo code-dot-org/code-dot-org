@@ -436,6 +436,47 @@ dv:
             '"vintage"': ވިންޓޭޖް
             '"warm"': ވޯރމް
         text: "{PALETTE} {EFFECT} އަށް ބެކްގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': ސަރކަލް (ވަށްބުރު)
+            '"color_cycle"': ކުލަ
+            '"diamonds"': ޑަޔަމަންޑް
+            '"disco"': ސްކޮޔަރ (ހަތަރެސްކަން)
+            '"disco_ball"': ޑިސްކޯ ބޯޅަ
+            '"fireworks"': ފަޔަރވޯކް (ހަވާ)
+            '"flowers"': ފްލާވަރ - މައު
+            '"galaxy"': ސްޕޭސް
+            '"growing_stars"': ބޮޑުވަމުންދާ ތަރި
+            '"kaleidoscope"': ކެލައިޑެސްކޯޕް
+            '"lasers"': ލޭޒަރ ޑާންސް ފްލޯ
+            '"music_wave"': ވޭވްސް
+            '"quads"': އެންޖެލްސް
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
+            '"ripples"': ރިޕްލްސް
+            '"ripples_random"': ރެންޑަމް ރިޕްލްސް
+            '"snowflakes"': ސްނޯ
+            '"sparkles"': ސްޕާކްލްސް
+            '"spiral"': ސްޕައިރަލް
+            '"splatter"': ޕެއިންޓް ސްޕްލެޓަރ
+            '"squiggles"': ސްކުއިގްލްސް
+            '"starburst"': ސްޓަރ ބަރސްޓް
+            '"stars"': ސްޓަރ - ތަރި
+            '"swirl"': ހިޕްނޯ
+            '"text"': ލަވައިގެ ނަން
+          PALETTE:
+            '"cool"': ކޫލް
+            '"default"': ލައިޓް - އަލި
+            '"electronic"': އެލެކްޓްރޯނިކް
+            '"iceCream"': އައިސްކްރީމް
+            '"neon"': ނިއޯން
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"rave"': ކަޅާއި ހުދު
+            '"tropical"': ޓްރޮޕިކަލް
+            '"vintage"': ވިންޓޭޖް
+            '"warm"': ވޯރމް
+        text: "{PALETTE} {EFFECT} އަށް ބެކްގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
