@@ -2,18 +2,6 @@
   "az-AZ": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/csd/2017": {
-          "name": "Lüğət"
-        },
         "code_introduced/csd/2017": {
           "name": "Tanıtdırılmış kod.",
           "url": "https://curriculum.code.org/csd/unit2/code/"
@@ -52,33 +40,6 @@
           "name": "Lüğət",
           "url": "https://curriculum.code.org/csd/unit3/vocab/"
         },
-        "code_introduced_2/csd/2017": {
-          "name": "Tanıtdırılmış kod."
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "Lüğət"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "Lüğət"
-        },
         "code_introduced_3/csd/2017": {
           "name": "Tanıtdırılmış kod."
         },
@@ -92,18 +53,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary_5/csd/2017": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/csd/2018": {
           "name": "Lüğət"
         },
         "code_introduced/csd/2018": {
@@ -136,33 +85,6 @@
         "vocabulary_2/csd/2018": {
           "name": "Lüğət"
         },
-        "code_introduced_2/csd/2018": {
-          "name": "Tanıtdırılmış kod."
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_3/csd/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum_3/csd/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Lüğət"
-        },
         "code_introduced_3/csd/2018": {
           "name": "Tanıtdırılmış kod."
         },
@@ -176,54 +98,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary_5/csd/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/coursea/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/coursea/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/coursea/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/courseb/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/courseb/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/courseb/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/coursed/2018": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/coursed/2018": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/coursed/2018": {
           "name": "Lüğət"
         },
         "lesson_plans/coursee/2018": {
@@ -262,17 +136,8 @@
         "vocabulary/express/2018": {
           "name": "Lüğət"
         },
-        "lesson_plans/csd/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "Standart Eşlemeler"
-        },
         "teacher_forum/csd/2019": {
           "name": "Müəllim Forumu"
-        },
-        "vocabulary/csd/2019": {
-          "name": "Lüğət"
         },
         "code_introduced/csd/2019": {
           "name": "Tanıtdırılmış kod."
@@ -296,27 +161,6 @@
           "name": "Standart Eşlemeler"
         },
         "vocabulary_2/csd/2019": {
-          "name": "Lüğət"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "Tanıtdırılmış kod."
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "Standart Eşlemeler"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "Lüğət"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "Standart Eşlemeler"
-        },
-        "vocabulary_4/csd/2019": {
           "name": "Lüğət"
         },
         "code_introduced_3/csd/2019": {
@@ -344,21 +188,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary/coursea/2019": {
-          "name": "Lüğət"
-        },
-        "curriculum_guide/courseb/2019": {
-          "name": "Kurikulum Bələdçisi"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/courseb/2019": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/courseb/2019": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/courseb/2019": {
           "name": "Lüğət"
         },
         "curriculum_guide/coursec/2019": {
@@ -421,18 +250,6 @@
         "vocabulary/coursef/2019": {
           "name": "Lüğət"
         },
-        "lesson_plans/express/2019": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/express/2019": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/express/2019": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/express/2019": {
-          "name": "Lüğət"
-        },
         "curriculum_guide/coursea/2020": {
           "name": "Kurikulum Bələdçisi"
         },
@@ -447,21 +264,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary/coursea/2020": {
-          "name": "Lüğət"
-        },
-        "curriculum_guide/courseb/2020": {
-          "name": "Kurikulum Bələdçisi"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/courseb/2020": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/courseb/2020": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/courseb/2020": {
           "name": "Lüğət"
         },
         "curriculum_guide/coursec/2020": {
@@ -522,31 +324,6 @@
           "name": "Müəllim Forumu"
         },
         "vocabulary/coursef/2020": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/express/2020": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/express/2020": {
-          "name": "Standart Eşlemeler"
-        },
-        "teacher_forum/express/2020": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/express/2020": {
-          "name": "Lüğət"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "Dərs Planları"
-        },
-        "standard_mappings/pre-express/2020": {
-          "name": "Standart Eşlemeler",
-          "url": "https://curriculum.code.org/csf-20/express/standards"
-        },
-        "teacher_forum/pre-express/2020": {
-          "name": "Müəllim Forumu"
-        },
-        "vocabulary/pre-express/2020": {
           "name": "Lüğət"
         },
         "teacher_forum/csd/2021": {
@@ -982,7 +759,7 @@
           "type": "Mənbə"
         },
         "design_mode_elements/csd/2021": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "whats-for-lunch-testing/csd/2021": {
@@ -1000,23 +777,23 @@
           "type": "Mənbə"
         },
         "design_mode_elements_1/csd/2021": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "changing_screens/csd/2021": {
-          "name": "Ekranların dəyişdirilməsi",
+          "name": "Ekranların dəyişdirilməsi/",
           "type": "Mənbə"
         },
         "importing_screens/csd/2021": {
-          "name": "Ekranlar idxal olunur",
+          "name": "Ekranlar idxal olunur,",
           "type": "Mənbə"
         },
         "multi-screen_apps/csd/2021": {
-          "name": "Çox-ekranlı Tətbiqlər",
+          "name": "Çox-ekranlı Tətbiqlər,",
           "type": "Mənbə"
         },
         "responding_to_user_input/csd/2021": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "app-presentation/csd/2021": {
@@ -1051,7 +828,7 @@
           "type": "Cavab kitabcası"
         },
         "how-computers-work-data-and-binary/csd/2021": {
-          "name": "İkili və məlumat",
+          "name": "İkili və məlumat.",
           "type": "Video"
         },
         "unit_5_data_society/csd/2021": {
@@ -1147,7 +924,7 @@
           "type": "Mənbə"
         },
         "responding_to_user_input_1/csd/2021": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "how_computers_word_hardware_software/csd/2021": {
@@ -1178,6 +955,7 @@
           "type": "Mənbə"
         },
         "changing_sensor_scale/csd/2021": {
+          "name": "miqyas",
           "type": "Mənbə"
         },
         "date_and_change_events/csd/2021": {
@@ -1229,6 +1007,7 @@
           "type": "Mənbə"
         },
         "modifying_arrays/csd/2021": {
+          "name": "Massivlərin dəyişdirilməsi",
           "type": "Mənbə"
         },
         "accelerometer_events/csd/2021": {
@@ -3266,7 +3045,7 @@
           "type": "Mənbə"
         },
         "design_mode_elements/csd/2022": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "build_a_paper_prototype/csd/2022": {
@@ -3299,19 +3078,19 @@
           "type": "Video"
         },
         "changing_screens/csd/2022": {
-          "name": "Ekranların dəyişdirilməsi",
+          "name": "Ekranların dəyişdirilməsi/",
           "type": "Mənbə"
         },
         "importing_screens/csd/2022": {
-          "name": "Ekranlar idxal olunur",
+          "name": "Ekranlar idxal olunur,",
           "type": "Mənbə"
         },
         "multi-screen_apps/csd/2022": {
-          "name": "Çox-ekranlı Tətbiqlər",
+          "name": "Çox-ekranlı Tətbiqlər,",
           "type": "Mənbə"
         },
         "responding_to_user_input/csd/2022": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "linking_prototype_screens/csd/2022": {
@@ -3375,7 +3154,7 @@
           "type": "Slaydlar"
         },
         "binary_and_data/csd/2022": {
-          "name": "İkili və məlumat",
+          "name": "İkili və məlumat.",
           "type": "Video"
         },
         "representing_numbers_1/csd/2022": {
@@ -3498,6 +3277,7 @@
           "type": "Video"
         },
         "circuits_and_logic/csd/2022": {
+          "name": "Sxemlər və məntiq",
           "type": "Video"
         },
         "circuit_playground/csd/2022": {
@@ -3614,6 +3394,7 @@
           "type": "Slaydlar"
         },
         "changing_sensor_scale/csd/2022": {
+          "name": "miqyas",
           "type": "Mənbə"
         },
         "date_and_change_events/csd/2022": {
@@ -3650,6 +3431,7 @@
           "type": "Mənbə"
         },
         "modifying_arrays/csd/2022": {
+          "name": "Massivlərin dəyişdirilməsi",
           "type": "Mənbə"
         },
         "functions_2/csd/2022": {
@@ -5721,6 +5503,9 @@
           "name": "Veb saytınızın nəşri",
           "type": "Video"
         },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Mənbə"
+        },
         "websites_for_a_purpose/csd/2023": {
           "name": "Məqsəd üçün veb saytlar"
         },
@@ -5797,6 +5582,7 @@
           "type": "Cavab kitabcası"
         },
         "programming_for_a_purpose/csd/2023": {
+          "name": "Məqsəd üçün proqramlaşdırma",
           "type": "Slaydlar"
         },
         "animation_and_game_design_template/csd/2023": {
@@ -5893,21 +5679,32 @@
         },
         "sprite_properties_1/csd/2023": {
           "name": "Sprite Xüsusiyyətləri",
+          "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview",
           "type": "Slaydlar"
         },
         "sprite_properties_needs_updating_/csd/2023": {
           "name": "Sprite Xüsusiyyətləri",
+          "url": "https://www.youtube.com/watch?v=5Op72oHFUnc",
           "type": "Video"
         },
         "text/csd/2023": {
           "name": "mətn",
+          "url": "https://docs.google.com/presentation/d/1ovtVNX4feLKwx1ETO18kkTmRQRa7_SLjqdLUrzuEi5I/template/preview",
           "type": "Slaydlar"
         },
         "captioned_scenes/csd/2023": {
+          "url": "https://docs.google.com/document/d/1sry7ZwDwOM_lsIJ0kKkEYyqvhif8JQocYX7y3Gx4JKk/view",
           "type": "sərlövhə"
         },
         "mini-project_-_captioned_scenes/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1S843wg4O8Cxz12NagDW2nu8B0Taj1_pSvyvj4o85asc/template/preview",
           "type": "Slaydlar"
+        },
+        "mini_project_-_captioned_scenes/csd/2023": {
+          "url": "https://docs.google.com/document/d/1xzA9xataf6TwgdLM--JumBAhAXLjcYyZOiuaShcuOjE/view"
+        },
+        "sprite_scene_planning/csd/2023": {
+          "url": "https://docs.google.com/document/d/1Rukfe006wz8yYJPnKj5sKn7SK6KbL1X6Pd-c2BNy95E/view"
         },
         "flipbook_example_-_by_marnic_bos/csd/2023": {
           "type": "Video"
@@ -6145,7 +5942,7 @@
           "type": "Mənbə"
         },
         "design_mode_elements/csd/2023": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "prototype_testing/csd/2023": {
@@ -6178,22 +5975,22 @@
           "type": "Slaydlar"
         },
         "changing_screens/csd/2023": {
-          "name": "Ekranların dəyişdirilməsi",
+          "name": "Ekranların dəyişdirilməsi/",
           "type": "Mənbə"
         },
         "importing_screens/csd/2023": {
-          "name": "Ekranlar idxal olunur",
+          "name": "Ekranlar idxal olunur,",
           "type": "Mənbə"
         },
         "linking_prototype_screens/csd/2023": {
           "type": "Slaydlar"
         },
         "multi-screen_apps/csd/2023": {
-          "name": "Çox-ekranlı Tətbiqlər",
+          "name": "Çox-ekranlı Tətbiqlər,",
           "type": "Mənbə"
         },
         "responding_to_user_input/csd/2023": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "testing_the_app/csd/2023": {
@@ -6252,7 +6049,7 @@
           "type": "Slaydlar"
         },
         "binary_and_data/csd/2023": {
-          "name": "İkili və məlumat",
+          "name": "İkili və məlumat.",
           "type": "Video"
         },
         "representing_numbers_1/csd/2023": {
@@ -6366,6 +6163,7 @@
           "type": "Mənbə"
         },
         "circuits_and_logic/csd/2023": {
+          "name": "Sxemlər və məntiq",
           "type": "Video"
         },
         "physical_output/csd/2023": {
@@ -6462,6 +6260,7 @@
           "type": "Slaydlar"
         },
         "changing_sensor_scale/csd/2023": {
+          "name": "miqyas",
           "type": "Mənbə"
         },
         "date_and_change_events/csd/2023": {
@@ -6491,6 +6290,7 @@
           "type": "Slaydlar"
         },
         "modifying_arrays/csd/2023": {
+          "name": "Massivlərin dəyişdirilməsi",
           "type": "Mənbə"
         },
         "playing_notes/csd/2023": {

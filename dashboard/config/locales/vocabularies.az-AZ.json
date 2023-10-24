@@ -1110,6 +1110,7 @@
           "definition": "Heyvanların və bitkilərin ətraf mühitlə necə qarşılıqlı əlaqəsini araşdıran bir alim."
         },
         "energy/csc-ecosystems/2023": {
+          "word": "Enerji",
           "definition": "Qida şəbəkələrindəki orqanizmlər arasında istehsalçılardan istehlakçılara ötürülür. Enerji orqanizmlər tərəfindən mürəkkəb tapşırıqları yerinə yetirmək üçün istifadə olunur."
         },
         "food_chain/csc-ecosystems/2023": {
@@ -1198,6 +1199,9 @@
         "program/poetry/2023": {
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar."
+        },
+        "poetry_circle/poetry/2023": {
+          "word": "Şeir dairəsi"
         },
         "input/csd/2023": {
           "word": "Giriş"

@@ -2,48 +2,6 @@
   "az-AZ": {
     "data": {
       "activity_sections": {
-        "cf87e421-b4e3-4640-a51f-45aa9189baad": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "85258b0c-6c4d-4620-ba2e-7ce446ffaa82": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "da3fea8c-db9e-44db-aaa1-dd5738881557": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "f22c7ed8-df75-4a9c-b662-2249a801534f": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "a5c9a563-cb58-48ed-9acd-21c6606c373b": {
-          "name": "Video: Kompüter, kompüter nə edir?",
-          "progression_name": "Video: Kompüter, kompüter nə edir?"
-        },
-        "e0c497c0-6ea2-40be-b50b-4e8392e5d659": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "b5a126a8-1a3c-4fc6-b10d-a0c7ec8a0ed1": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "e8e8a64f-6df6-4a3c-9dbc-193bbed5bc2c": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "5b8227da-9aab-4d49-80aa-688539a47b62": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "6cfd6d7c-10b3-4118-9e17-ed278adbab4a": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "dec8e91e-820f-47ce-928c-c6c4cc3da0b8": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
         "51ac2647-90fe-443e-a77b-48132f4b7680": {
           "progression_name": "Dərsin icmalı"
         },
@@ -397,6 +355,9 @@
         "3b02b34e-516a-4aad-8a54-2739e0c1de33": {
           "progression_name": "Dərsin icmalı"
         },
+        "372f8ade-5e9f-4420-a71b-00101ab6d765": {
+          "progression_name": "İzləyicilərlə sazlama"
+        },
         "fbea8a90-b621-4189-8f2f-5b5338d7ae09": {
           "progression_name": "öz animasiyanızı yaradın"
         },
@@ -484,6 +445,9 @@
         "42b7b5b9-af50-496f-924a-78551218dd1e": {
           "progression_name": "Video: Sürət"
         },
+        "98b5d2e7-ac67-456b-9fd9-0d916afa1f25": {
+          "progression_name": "Sprayt sürəti"
+        },
         "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
           "progression_name": "Sürət"
         },
@@ -506,6 +470,9 @@
         "6f39dc37-d877-443d-9495-3188eaf31c66": {
           "progression_name": "oyunlarda toqquşmalar"
         },
+        "316ff128-774b-4315-8559-7c7311820a18": {
+          "progression_name": "Toqquşmanın Aşkarlanması İcmalı"
+        },
         "53169820-0257-4ae6-9c9a-9bc618b8f16b": {
           "name": "Azad Oyna",
           "progression_name": "Azad Oyna"
@@ -522,6 +489,9 @@
         },
         "a809028d-5066-4fd4-bad2-6a3c0abe979f": {
           "progression_name": "Dərsin icmalı"
+        },
+        "58f5da81-795d-466d-99dd-9f0102089130": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "3403945d-a572-4b10-b27d-49e00450b1f5": {
           "progression_name": "Toqquşmalar"
@@ -541,6 +511,9 @@
         },
         "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
           "progression_name": "Kolleksiyaçı oyunu"
+        },
+        "d831e37b-1630-4982-99bc-4ea5ce219204": {
+          "progression_name": "Funksiyalara baxış"
         },
         "887f45bd-2611-4441-860d-ac358b2e0d04": {
           "name": "Azad Oyna",
@@ -594,204 +567,6 @@
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
         },
-        "f2b5d0ac-98f0-4ad6-8cba-c70d2053fac6": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "6198b0c4-29b7-43ec-a0e7-d5c3d0bd729b": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "d9761b72-84cb-4981-b4ea-06c2006e0a5a": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "54ff3bb8-d56f-40db-8ac2-c1590cd00cea": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "e592f5f2-366c-4356-9bc5-638d46d85467": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "657b952f-db9c-4c43-992b-3fbde501b39d": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "f65ab3ae-4788-4d17-b858-3d3793684aa7": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "9acd3b15-05fd-41a6-a995-2a23d4615c17": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "4586de08-093a-49de-ab6c-c0975178eb41": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "6f8f6475-93f8-4c8d-91e0-258ecf76ac6f": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "7e52b764-7b7d-47c6-9291-8a61a9f5cd22": {
-          "progression_name": "Nümunə Tətbiq Növləri"
-        },
-        "858107cb-9f3a-4a39-a845-057b8c45b744": {
-          "name": "Demo applikasiyalar",
-          "progression_name": "Demo applikasiyalar"
-        },
-        "a76af1db-3ebd-4dc2-a60d-a543f9986324": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "0a3bebfc-6c1f-457b-996d-ffd3365c45b2": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "8465de8f-0cf7-40ea-8ed2-d5e48e0d8ae4": {
-          "progression_name": "Dizayn rejimi turu"
-        },
-        "45ec05ff-a316-4da6-8857-f4e39c4f55a8": {
-          "progression_name": "Dizayn rejiminə giriş"
-        },
-        "9b0828bc-ccf8-466b-b351-5d9b0fcb4d9a": {
-          "progression_name": "Ekran qur"
-        },
-        "84dbdb28-4574-4fee-bbaa-2e5914ee2989": {
-          "progression_name": "Dizayn rejimi elementləri"
-        },
-        "ad8ad0ce-2019-4cf1-acca-0dde36b01d55": {
-          "progression_name": "Ekranı Bitirmək"
-        },
-        "616b0860-b4f6-4565-a269-a1b7539a834b": {
-          "progression_name": "Proqramınız üçün ekran dizayn edin"
-        },
-        "023b14b7-4298-426c-bbc3-2d60a52f08c1": {
-          "name": "Proqram Layihəsi: Ekran Dizaynı",
-          "progression_name": "Proqram Layihəsi: Ekran Dizaynı"
-        },
-        "8dcb2f89-a876-4734-ae35-72624eb8a806": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "86d32260-eb05-4162-a79e-f6d56995793c": {
-          "progression_name": "ekranlar əlavə etmək"
-        },
-        "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
-          "progression_name": "Tədbirlər"
-        },
-        "1a49089b-ba4d-434b-8d3d-34787313eb6a": {
-          "progression_name": "Tətbiq Layihəsi: Ekran İdxalı"
-        },
-        "02f87cde-8bfa-49d4-b42e-f54420ee6c9d": {
-          "name": "Tətbiq Layihəsi: Ekranları Bağlamaq",
-          "progression_name": "Tətbiq Layihəsi: Ekranları Bağlamaq"
-        },
-        "34608f70-83c4-4c03-899b-43b445955d50": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "75d12c32-b61b-4463-97cd-d625e9c775c7": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "19804dd8-e7ad-48f4-847f-9346ce424809": {
-          "name": "Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər",
-          "progression_name": "Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər"
-        },
-        "a89020d1-a341-4dc6-88b0-63cc0e160f5e": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "8d51b4d0-8689-45d2-ab63-037dced30a56": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "f27d38b3-9892-47dd-8bdb-e1442286128d": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "12c9917f-a60c-46d3-9f30-ed8281586c01": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "04a67b2e-496e-49bb-9134-ce6fb086560c": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "f3b6cfe0-5520-47a1-9eef-38bbecffeb2b": {
-          "name": "Şəkilləri təmsil edir",
-          "progression_name": "Şəkilləri təmsil edir"
-        },
-        "5873dc9a-474c-4f76-bab6-9c4795733165": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "ea794705-6489-44b1-a635-9a1a2249d4e5": {
-          "progression_name": "İkilik rəqəmlər"
-        },
-        "a2699212-b72a-4863-9d12-e8451b93f5c6": {
-          "name": "İkili və məlumat",
-          "progression_name": "İkili və məlumat"
-        },
-        "c4174fc9-a3ee-4295-9ebc-e7759cc27251": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "4de2b2a0-ec3e-4a79-95ab-65be21896a1f": {
-          "name": "Məlumatlar Gizli Saxlanır",
-          "progression_name": "Məlumatlar Gizli Saxlanır"
-        },
-        "095bd460-b24f-44b2-b807-acdf71759f73": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "90bc96dd-c98e-4ad8-a361-a51e2f1e060c": {
-          "name": "Nümayəndəlikləri birləşdirən",
-          "progression_name": "Nümayəndəlikləri birləşdirən"
-        },
-        "85e6dc1d-2751-4551-9624-c0e8c5b44984": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "47869dfd-2880-4471-a11b-c181a9f427e9": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "f51c0d31-75b2-4b97-a7f4-0ebfba1a962f": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "11c25022-a283-488e-9952-4d58bd243a7e": {
-          "progression_name": "Yekun"
-        },
-        "20b2a6ec-52cb-4968-b4d8-cc8ef920d6cb": {
-          "name": "Problemin həlli",
-          "progression_name": "Problemin həlli"
-        },
-        "54b046af-de7a-4f1c-96e8-8f35bc6ee2f3": {
-          "progression_name": "Yekun"
-        },
-        "ec02837d-e969-4b7d-b860-e2de8342483d": {
-          "name": "Məlumatların vizuallaşdırılması",
-          "progression_name": "Məlumatların vizuallaşdırılması"
-        },
-        "71a82859-6091-4931-8e65-9609a5248896": {
-          "name": "Yekun",
-          "progression_name": "Yekun"
-        },
-        "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
-          "progression_name": "Yekun"
-        },
-        "6ac2bf23-0b34-4e13-8023-c8c436048d54": {
-          "name": "Tort Sorğusu",
-          "progression_name": "Tort Sorğusu"
-        },
-        "45dd29f0-3c44-4c1c-b881-ec8b1dc8e1cf": {
-          "name": "Səviyyə İcmal",
-          "progression_name": "Səviyyə İcmal"
-        },
-        "b62f56a9-77ac-4198-9f78-add3df2dc0c3": {
-          "progression_name": "Səviyyə İcmal"
-        },
-        "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
         "3e00297e-2875-4c9e-bbaa-0fea483933a1": {
           "progression_name": "Dərsin icmalı"
         },
@@ -824,6 +599,9 @@
         "2d269667-75d0-44c5-866d-7d78bbf7256b": {
           "progression_name": "Kompüter Təchizatı və Proqram Təminatı"
         },
+        "88ac33a5-ac45-42ee-9c0a-50ccba0d8dee": {
+          "progression_name": "dövrə"
+        },
         "f7d0232d-3c01-4eab-b0a7-82ad772a5a97": {
           "name": "LED Proqramları",
           "progression_name": "LED Proqramları"
@@ -846,6 +624,9 @@
         },
         "9e2c3efe-f050-4a20-8a47-d447e5491a18": {
           "progression_name": "Düymələr və Keçid"
+        },
+        "8c557cf5-ede6-4b7b-a0d5-169aae6ca30a": {
+          "progression_name": "dövrə"
         },
         "072a90fc-f787-4ed0-bb98-ce490bc6b07d": {
           "name": "Buzzer",
@@ -891,8 +672,15 @@
         "1df7c224-ad17-46dd-b7a1-4b3218e64de1": {
           "progression_name": "Sensor hadisələri"
         },
+        "747b956f-af37-44f4-8ba0-daced20e17f6": {
+          "progression_name": "miqyas"
+        },
         "d45f9c8c-8c57-4dc4-9095-bf8263f167e2": {
           "progression_name": "Rənglərə Sensorlar"
+        },
+        "f9296c16-9bf6-4a14-a3a0-3cb09a013252": {
+          "name": "yaratmaq",
+          "progression_name": "yaratmaq"
         },
         "789a4fe7-cd01-4903-bdd7-a617734ac389": {
           "progression_name": "Dərsin icmalı"
@@ -959,6 +747,9 @@
         "02806b86-88b4-4d4f-b68b-b86c55443434": {
           "progression_name": "Dizilərin dəyişdirilməsi və yaradılması"
         },
+        "5ea7b453-c6f6-4e0b-a1a0-d1314f22de84": {
+          "progression_name": "Musiqi massivləri"
+        },
         "95ba2f08-53df-4209-ae9a-1600e23869d3": {
           "name": "Mahnıların hazırlanması",
           "progression_name": "Mahnıların hazırlanması"
@@ -991,8 +782,14 @@
         "33591236-075c-45a5-8e9c-4b54b002e8fa": {
           "progression_name": "oriyentasiya"
         },
+        "d4badbc3-3608-425c-bc1d-9802c778edc6": {
+          "progression_name": "akselerometr"
+        },
         "28ef0db8-d735-44ed-ae34-b62cb9c27a84": {
           "progression_name": "Akselerometr hadisələri"
+        },
+        "ce51f1a5-64ea-4927-84be-73c8a0c47a26": {
+          "progression_name": "sayğac"
         },
         "d0d2b68c-d439-452a-b0ae-4819284c34da": {
           "name": "Akselerometr hadisələri",
@@ -1013,6 +810,9 @@
         },
         "2f8b307a-66ba-4d70-be75-f0cd1a1cceb0": {
           "progression_name": "Dərsin icmalı"
+        },
+        "aaeed8b4-6281-4a41-91da-2a7c4ecf3bb2": {
+          "progression_name": "Sxemlər və məntiq"
         },
         "f3a7b31e-597e-444a-a788-ae800f63f177": {
           "progression_name": "Sadə sxemlər"
@@ -1045,30 +845,6 @@
         "6d0332f9-d670-4588-9e96-5975fb480945": {
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
-        },
-        "cf810bf2-e1cf-492f-bf3f-b7a337cfa8ff": {
-          "progression_name": "Kurs Layihələri"
-        },
-        "0c35e4c7-b63e-4e9b-b20c-c6cf6b8c689f": {
-          "progression_name": "Həndəsi Günəş"
-        },
-        "f147a0c8-7d8f-4acd-a8d7-feb39d52e0ab": {
-          "progression_name": "Yadplanteli mudafiyesi"
-        },
-        "32a51e92-3a93-420b-bd49-f21f36867c89": {
-          "name": "Sehrbazı tapın",
-          "progression_name": "Sehrbazı tapın"
-        },
-        "4db4c162-d334-4c10-99d1-cdd9aa2bdbb8": {
-          "name": "Layihənizi planlaşdırmağa başlayın",
-          "progression_name": "Layihənizi planlaşdırmağa başlayın"
-        },
-        "d3394e13-b9ef-4395-8873-711308f134d2": {
-          "progression_name": "Kurs E: Play Lab Layihəsi"
-        },
-        "4d8a8f77-c0d4-42d9-ab75-9273ed99562c": {
-          "name": "Prezentasiyasına hazırlaşın",
-          "progression_name": "Prezentasiyasına hazırlaşın"
         },
         "da39537c-01a9-4613-bc81-c20b9baf0747": {
           "progression_name": "Kurs Layihələri"
@@ -1149,44 +925,6 @@
         "8667bd82-fed3-4fa1-8d54-bb13b22370e3": {
           "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket",
           "progression_name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
-        },
-        "9efcf40a-96ec-411f-a949-f7fe6c1625d2": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "4833dc04-10ed-4ef8-9a5d-7b4cccd543dc": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "263c3f1e-aef0-426b-8156-f63c02ad2fec": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "bcb20113-8db3-41fd-8c84-9f89183d40c6": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "a4ef1044-88f1-4275-9e38-d5cfdbae11c6": {
-          "name": "Video: Kompüter, kompüter nə edir?",
-          "progression_name": "Video: Kompüter, kompüter nə edir?"
-        },
-        "d54996dd-6f8f-4988-b7c6-523f4f4e04a0": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "24d93d62-4797-475e-ba96-f89c1a4da2f5": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "830da5c9-473c-4d57-a398-b5855090a18c": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "26d8a252-c82a-4fa5-a3cc-bc6542f4eef0": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "1ae21f40-f50a-43a6-9a5d-9418ce1f461d": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
         },
         "a8669b83-40c9-4ca2-b06a-c9c8a84d3ce6": {
           "progression_name": "Dərsin icmalı"
@@ -1518,6 +1256,9 @@
         "527c1d13-d743-4279-9b52-a36c9f5ebb54": {
           "progression_name": "Dərsin icmalı"
         },
+        "f44576fa-da93-47cc-92c2-48f481338bbb": {
+          "progression_name": "İzləyicilərlə sazlama"
+        },
         "4077416b-c478-4152-89f5-488e727c32fb": {
           "progression_name": "öz animasiyanızı yaradın"
         },
@@ -1583,6 +1324,9 @@
         "ee3d1adc-422a-4894-8dd4-168545e1abb2": {
           "progression_name": "Video: Sürət"
         },
+        "1a160c3c-6d5d-475d-a32b-10beea6380cd": {
+          "progression_name": "Sprayt sürəti"
+        },
         "128361aa-1832-4581-a686-26ec8d72bc30": {
           "progression_name": "Sürət"
         },
@@ -1601,6 +1345,9 @@
         "75009fe6-06f3-4d0a-a68c-ef0f8c12e0e2": {
           "progression_name": "oyunlarda toqquşmalar"
         },
+        "8aa79bcf-1eb5-4505-8626-8caf1b99ae20": {
+          "progression_name": "Toqquşmanın Aşkarlanması İcmalı"
+        },
         "f6edd166-54e2-4bff-857f-be13d6cd7c67": {
           "progression_name": "Dərsin icmalı"
         },
@@ -1609,6 +1356,9 @@
         },
         "75a15f95-d9ab-486e-8ef5-7701fabe63a1": {
           "progression_name": "Dərsin icmalı"
+        },
+        "e2e981d3-4478-498c-969b-631482c788ce": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "39bb2754-5f8f-4a99-9de5-4d60ee128ae1": {
           "progression_name": "Toqquşmalar"
@@ -1624,6 +1374,9 @@
         },
         "d34707f5-3e1c-4448-b0e4-254a116ac2b7": {
           "progression_name": "Kolleksiyaçı oyunu"
+        },
+        "cf0e3aa7-6158-4763-928b-e8e1ea28c231": {
+          "progression_name": "Funksiyalara baxış"
         },
         "03859b57-0593-4ee9-8e02-bb71caba9c7f": {
           "progression_name": "Dərsin icmalı"
@@ -1673,211 +1426,6 @@
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
         },
-        "5c41d9b3-d4cc-4069-b143-2df7d9e2e91f": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "d12b6a27-450e-4303-aced-5b5afaa46ded": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "616ed9df-acfd-4d46-a31e-fa90d445a811": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "495e84b1-119a-44b8-bd88-00577d712cf8": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "c2a2092c-eb08-41b3-8ac9-84128ac8be50": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "6298ce64-0661-47f4-9791-13b6614d6e54": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "a4623595-d214-48e4-8ee3-f2b29355d3c3": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "b20a720d-b3ee-4431-a9ff-422a105447ee": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "cafa43d0-0778-487c-ba39-9a6863a2468b": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "c4cfb4a9-1174-486a-a636-b8c7d1e9aa0c": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "37c289c0-8359-41dd-a93c-ffc4ebbddc3d": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "c94f593e-4b76-4a2c-9e24-5b06f8c91a47": {
-          "progression_name": "Nümunə Tətbiq Növləri"
-        },
-        "75c655ea-684c-41b8-a9a6-5004023d49a7": {
-          "name": "Demo applikasiyalar",
-          "progression_name": "Demo applikasiyalar"
-        },
-        "693d0047-31b1-4f2d-814d-0a6be1d7f088": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "7e903fc5-cd8d-4a89-aa4f-c86e16782d30": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "f283a069-539e-4f66-ad52-61c90f444c68": {
-          "progression_name": "Dizayn rejimi turu"
-        },
-        "932f56f3-0737-4a5c-a254-4f71a2339b47": {
-          "progression_name": "Dizayn rejiminə giriş"
-        },
-        "dad0e2b6-695d-4d58-bf2b-0c88f27f06ac": {
-          "progression_name": "Ekran qur"
-        },
-        "0c50e3b4-a993-42ff-959b-6e197b358a9a": {
-          "progression_name": "Dizayn rejimi elementləri"
-        },
-        "c9aeae9b-309e-464f-a6b9-7ed39e5f3833": {
-          "progression_name": "Ekranı Bitirmək"
-        },
-        "0f071b2f-3a55-4d67-a3a9-1770c5c1456a": {
-          "progression_name": "Proqramınız üçün ekran dizayn edin"
-        },
-        "aae0a3cd-a0e4-4945-b7fb-f9b4e54cc9c4": {
-          "name": "Proqram Layihəsi: Ekran Dizaynı",
-          "progression_name": "Proqram Layihəsi: Ekran Dizaynı"
-        },
-        "ae32291b-bce5-4e45-ac78-5e24b891f867": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "b4f90851-d1cc-4d08-bf3e-b8713bb6331d": {
-          "progression_name": "ekranlar əlavə etmək"
-        },
-        "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
-          "progression_name": "Tədbirlər"
-        },
-        "2642ed48-46e8-44e6-afef-01360fa54be3": {
-          "progression_name": "Tətbiq Layihəsi: Ekran İdxalı"
-        },
-        "7e3cf269-0ebf-499e-b6d5-4da8b53a490b": {
-          "name": "Tətbiq Layihəsi: Ekranları Bağlamaq",
-          "progression_name": "Tətbiq Layihəsi: Ekranları Bağlamaq"
-        },
-        "f6b89fa1-ffd1-4383-8143-a88af48dd9a9": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "fdef8a20-922a-4fd6-932c-7892300881a0": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "a0caa3a2-3a18-41df-afcb-a782e93e48d1": {
-          "name": "Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər",
-          "progression_name": "Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər"
-        },
-        "fdff4065-d692-460e-bff6-c93c80bf58aa": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "86beda4f-2767-4c15-99e0-05219ac26008": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "0f9b16a0-ff0f-4201-afb3-463ca1e88103": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "89dafb9d-8470-4451-815d-4132f1235cd3": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "3c49856d-1ff0-4ef5-8b0d-3c568f3c529c": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "c11a9ba3-e60d-4788-8123-a230b936e92f": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "7b967905-5749-43d3-a59c-a0c38b12b3e9": {
-          "name": "Şəkilləri təmsil edir",
-          "progression_name": "Şəkilləri təmsil edir"
-        },
-        "5ebaa6a5-00fe-4fd1-9ea7-ff1b1e987f2a": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "8c2572d4-ae23-481b-9a2d-a82c1ca6c083": {
-          "progression_name": "İkilik rəqəmlər"
-        },
-        "039f881e-d9a5-42e0-add5-9780d8bdc15f": {
-          "name": "İkili və məlumat",
-          "progression_name": "İkili və məlumat"
-        },
-        "19d294ee-d319-4f1c-b2b1-6892c54a7118": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "afd0f5f8-6b73-479d-ae14-645ac8c79d62": {
-          "name": "Məlumatlar Gizli Saxlanır",
-          "progression_name": "Məlumatlar Gizli Saxlanır"
-        },
-        "6a46d21d-6961-486b-a56f-cbb94df0e318": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "f8979fd0-4649-466a-8e5f-f5f4a70eb355": {
-          "name": "Nümayəndəlikləri birləşdirən",
-          "progression_name": "Nümayəndəlikləri birləşdirən"
-        },
-        "54ac0f9e-97de-400c-9e06-30225b854909": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "d49dc1ea-f661-4801-a625-310f2ec35f9a": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "31f8c584-7b06-4c9e-9ea3-934ff86dd1bc": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "84094cea-b1f9-4ed8-8a56-6111ed7b3f64": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "8ef900e1-c2c4-444b-8af7-53168ac829e1": {
-          "name": "Problemin həlli",
-          "progression_name": "Problemin həlli"
-        },
-        "f0220f3d-8a24-434d-890e-db4ece0db768": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "703be3a8-c885-4df0-a652-60582b6a154e": {
-          "name": "Məlumatların vizuallaşdırılması",
-          "progression_name": "Məlumatların vizuallaşdırılması"
-        },
-        "c557c0e1-456c-4fa7-9d4b-aeb699b92982": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "053cd782-5fe7-4438-b780-a79fb441d383": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "9608412e-93a7-49c2-bb11-95906561502f": {
-          "name": "Tort Sorğusu",
-          "progression_name": "Tort Sorğusu"
-        },
-        "0b21869f-fed5-4d9a-ae12-336c623bf20f": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "f1461b1f-02bf-4335-83d4-24056f5bdfc3": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "3e60526e-3827-4efc-b233-519ef83ccc9e": {
-          "progression_name": "Nümunə Tətbiqlər"
-        },
-        "5707e98f-8fcf-43b9-8354-de0f584c610f": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
         "3713a54a-d7a0-43e5-9e78-6fd2938d98eb": {
           "progression_name": "Dərsin icmalı"
         },
@@ -1910,6 +1458,9 @@
         "fc180642-c1eb-4988-93de-f064f9de7d22": {
           "progression_name": "Kompüter Təchizatı və Proqram Təminatı"
         },
+        "bdc9e135-0201-44b1-bfa8-8820560157d8": {
+          "progression_name": "dövrə"
+        },
         "d522591a-79d0-4d0f-802a-7068802064a1": {
           "name": "LED Proqramları",
           "progression_name": "LED Proqramları"
@@ -1932,6 +1483,9 @@
         },
         "ae40b937-a438-41f6-a84c-2d68bd235ab0": {
           "progression_name": "Düymələr və Keçid"
+        },
+        "24c8e166-e670-4cbe-8f6f-4587eba2c234": {
+          "progression_name": "dövrə"
         },
         "62d04725-c145-4efa-9bb4-8568729dac71": {
           "progression_name": "Buzzer"
@@ -1974,6 +1528,9 @@
         },
         "2546c907-dc5c-4469-ad46-946209648c80": {
           "progression_name": "Sensor hadisələri"
+        },
+        "d9676f17-fe37-4bc7-983e-8dbb88f49f7d": {
+          "progression_name": "miqyas"
         },
         "2e41691b-7992-4ecf-8c00-5035d483e4a7": {
           "progression_name": "Rənglərə Sensorlar"
@@ -2043,6 +1600,12 @@
         "cd3cfb11-2ffa-4a78-8146-830f2398960a": {
           "progression_name": "Musiqi bəstələmək"
         },
+        "b96ad913-5d40-40cb-8207-282d010ee5ed": {
+          "progression_name": "Massivlərin dəyişdirilməsi"
+        },
+        "8e9f4322-d39c-41d9-b127-e6d662e25e6b": {
+          "progression_name": "Musiqi massivləri"
+        },
         "9888aaae-b04d-49fe-a398-d76af49b1472": {
           "progression_name": "Mahnıların hazırlanması"
         },
@@ -2067,8 +1630,14 @@
         "ba79cb03-7be0-4010-a187-437da656929e": {
           "progression_name": "oriyentasiya"
         },
+        "af0a4c12-47c0-4240-a233-cedf4c66e1e0": {
+          "progression_name": "akselerometr"
+        },
         "9602c704-6393-46ea-9ab9-96560faebed8": {
           "progression_name": "Akselerometr hadisələri"
+        },
+        "0c189d32-46e3-442b-a6c0-b8f13a280968": {
+          "progression_name": "sayğac"
         },
         "1f25bdc7-3dec-4d8e-8136-4d6f0a8763d0": {
           "name": "Akselerometr hadisələri",
@@ -2089,6 +1658,9 @@
         },
         "e54420ed-5a14-4b3c-837f-1b388f8f2e65": {
           "progression_name": "Dərsin icmalı"
+        },
+        "efa270cd-1ed8-4f99-966b-7550a3be5d91": {
+          "progression_name": "Sxemlər və məntiq"
         },
         "47ed3fdd-9b7f-450b-a57b-55b9f745f9fb": {
           "progression_name": "Sadə sxemlər"
@@ -2128,6 +1700,10 @@
         "99cf19cb-066b-46ef-a5aa-c94eaa15ed76": {
           "progression_name": "dovşan"
         },
+        "3afd6cca-331a-4ed9-942e-1c515fdebf89": {
+          "name": "Dogger nümunəsi",
+          "progression_name": "Dogger nümunəsi"
+        },
         "0b07efa7-6c6c-4daf-accf-ad349a19ce27": {
           "name": "Layihənizi planlaşdırmağa başlayın",
           "progression_name": "Layihənizi planlaşdırmağa başlayın"
@@ -2146,6 +1722,10 @@
         "91028fb5-cf2d-44b4-a3f7-fd2ffeecade0": {
           "progression_name": "Rəssamın layihəsini yenidən gözdən keçir"
         },
+        "a05654c9-8f8a-4b5e-8e6a-c233c7a95d62": {
+          "name": "Sprite Lab Layihəsini yenidən nəzərdən keçirin",
+          "progression_name": "Sprite Lab Layihəsini yenidən nəzərdən keçirin"
+        },
         "dec0c408-ccec-430d-8977-f320ce795ecf": {
           "name": "Təqdimatınızı hazırlayın.",
           "progression_name": "Təqdimatınızı hazırlayın."
@@ -2160,50 +1740,13 @@
         "e25773a7-d511-4a6a-b6f8-eab077b87f3f": {
           "progression_name": "Rəssamın layihəsini yenidən gözdən keçir"
         },
+        "3a296dd5-3095-472f-838f-501c3adccd7d": {
+          "name": "Sprite Lab Layihəsini yenidən nəzərdən keçirin",
+          "progression_name": "Sprite Lab Layihəsini yenidən nəzərdən keçirin"
+        },
         "f546cdd4-2f56-4082-89b6-84ebbfd19f93": {
           "name": "Təqdimatınızı hazırlayın.",
           "progression_name": "Təqdimatınızı hazırlayın."
-        },
-        "9c3c7a0c-9b29-42f2-bf0f-ce3676516542": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "4baf3e55-b479-405e-acfb-99bc0b8c9912": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
-          "name": "Video: Problemin Həll olunması prosesi",
-          "progression_name": "Video: Problemin Həll olunması prosesi"
-        },
-        "11df93d2-fda9-467b-bb01-71f213fe5346": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "61a58ec5-2c40-477b-a460-d1b997966a16": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
-          "name": "Video: Kompüter, kompüter nə edir?",
-          "progression_name": "Video: Kompüter, kompüter nə edir?"
-        },
-        "3a415e02-cd6f-4a28-9928-4d612a90fb22": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "f955d78f-49f5-4915-a28c-766c62ab277c": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "a09b7024-395a-4f08-aca7-58786551fdee": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "0ee5210f-6f63-46fc-a10b-aa23c7dc7528": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
         },
         "ad55ae28-5794-4f0d-8970-dafde8dd2281": {
           "progression_name": "Dərsin icmalı"
@@ -2538,6 +2081,9 @@
         "f64980e6-afa2-45c6-81f8-088e368e6b4d": {
           "progression_name": "Dərsin icmalı"
         },
+        "3e4020d5-71e5-4d49-921e-d444ec051bbc": {
+          "progression_name": "İzləyicilərlə sazlama"
+        },
         "91f98c4f-fc3c-4c0a-bb2e-af9d7a1f9270": {
           "progression_name": "öz animasiyanızı yaradın"
         },
@@ -2612,6 +2158,9 @@
         "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
           "progression_name": "Sürət"
         },
+        "af49e38b-3d80-44e9-ab3b-2c9572a7ba9b": {
+          "progression_name": "Sprayt sürəti"
+        },
         "d763a5fd-9781-4a36-89f5-6afd6bd25929": {
           "progression_name": "Yan Scroller"
         },
@@ -2627,6 +2176,9 @@
         "35b3d9b8-19bd-438a-bc1f-d7fe6f49aa33": {
           "progression_name": "oyunlarda toqquşmalar"
         },
+        "42407646-979a-4e6b-9b9f-6b92a4508c37": {
+          "progression_name": "Toqquşmanın Aşkarlanması İcmalı"
+        },
         "b6e4bb5f-1e91-4775-b76e-a5ebc30d8cde": {
           "progression_name": "Dərsin icmalı"
         },
@@ -2635,6 +2187,9 @@
         },
         "ee04a576-ec75-46c7-b9ec-1c34503b7215": {
           "progression_name": "Dərsin icmalı"
+        },
+        "4c8ea5f8-8077-4f3b-adb4-b5f3f23ca61d": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "760f3b31-7405-4e48-81a6-98a1ffc5eb31": {
           "progression_name": "Toqquşmalar"
@@ -2653,6 +2208,9 @@
         },
         "49c1d6b1-5bbb-41aa-a6a5-ab66992bbf72": {
           "progression_name": "Kolleksiyaçı oyunu"
+        },
+        "707a377a-3f80-4021-b0f2-65384b8a95c0": {
+          "progression_name": "Funksiyalara baxış"
         },
         "4f152c63-7605-4029-97f4-d9c319f0ff73": {
           "progression_name": "Dərsin icmalı"
@@ -2695,220 +2253,6 @@
           "progression_name": "Layihə - Son Toxunuşlar"
         },
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "718cfc6c-7248-4776-8567-743b410346fe": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "32c6086e-831b-4619-bdee-ba1148a43543": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "34de3b3b-5477-4d03-b4ba-becdbdf242cc": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "22c57f44-a6bb-4d3b-a340-29be0e0e37ec": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "58158f4d-dc55-4374-81fc-f409780c2c3b": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "2fbb1d6c-500e-4482-92b8-374a376b90c3": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "62719290-7600-46ad-9665-13d4025300b0": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "ce1c7bf6-fcdf-437a-8540-69f770a47813": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "0fd3f4c1-645b-42dd-95f4-c09144987e40": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "b1fd42fb-ce26-4f73-a86e-c28d04369c4e": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "278a92f7-2ba4-4bb6-9cbd-0b1a1b1c7a51": {
-          "progression_name": "Nümunə Tətbiq Növləri"
-        },
-        "b5785efd-9e8a-48d7-a5a4-8af4fb5cc2b1": {
-          "name": "Demo applikasiyalar",
-          "progression_name": "Demo applikasiyalar"
-        },
-        "93000ebc-e023-42b6-b4ea-2feaba1ad6a8": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "eff7ec16-202b-4aed-99e6-6ca40c40f67b": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "463ab77e-51c4-410e-80ff-f4e4e58ccbbe": {
-          "progression_name": "Dizayn rejiminə giriş"
-        },
-        "440973a7-6351-45b5-938f-17845fbd92c6": {
-          "progression_name": "Ekran qur"
-        },
-        "a2ef497e-7a9d-48aa-a188-412d082afd64": {
-          "progression_name": "Dizayn rejimi turu"
-        },
-        "1123a567-ee84-4a4b-b7b5-2f204c63df61": {
-          "progression_name": "Ekranı Bitirmək"
-        },
-        "66fe6772-18ed-429c-927a-b9a919198b60": {
-          "progression_name": "Dizayn rejimi elementləri"
-        },
-        "aeb5b7a3-d7e7-42e4-bc39-c447897cad40": {
-          "progression_name": "Proqramınız üçün ekran dizayn edin"
-        },
-        "9271144d-1d13-473d-99ba-96efd4b022ea": {
-          "name": "Proqram Layihəsi: Ekran Dizaynı",
-          "progression_name": "Proqram Layihəsi: Ekran Dizaynı"
-        },
-        "99d617bc-9759-4d6d-928e-948f53a627f8": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "1d83d565-21fa-499c-8a66-27f53423ea9b": {
-          "progression_name": "ekranlar əlavə etmək"
-        },
-        "351d0f3e-feee-4c78-8318-4666de043c40": {
-          "progression_name": "Çox-ekranlı Tətbiqlər"
-        },
-        "587dafe1-2705-4e56-bd87-a71ff5030db6": {
-          "progression_name": "Ekranlar idxal olunur"
-        },
-        "28a1debd-3867-4db1-89e9-435a5b18012c": {
-          "progression_name": "Hadisələr və Əlaqələndirici  Ekranlar"
-        },
-        "7d3f98a9-1e2a-4e35-8cfe-386edf3d35fc": {
-          "progression_name": "İstifadəçi input-una cavab"
-        },
-        "36870e60-3d59-4e7d-ae1f-8c9de61fbe2e": {
-          "progression_name": "Ekranların dəyişdirilməsi"
-        },
-        "04ffc416-c94c-4d8c-8866-75dfa8de8b96": {
-          "name": "Layihələri birləşdirmək",
-          "progression_name": "Layihələri birləşdirmək"
-        },
-        "ad21eed5-278f-403c-8dfb-128c30342dab": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "5da5c4dc-a023-4ff8-b528-e98ab11ef228": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "cf644e51-9e62-4c0f-bae0-e80fa3cd0b08": {
-          "name": "Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər",
-          "progression_name": "Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər"
-        },
-        "8b812433-4e2c-464c-ba2e-7924f27a68b7": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "758bff77-ce78-4c98-bc3a-d5968a9032d3": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "bffba681-eb9e-4dc3-8f57-893671e6c2c1": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "6f338ea8-0c2f-46bb-ad95-dc6541ff1cf9": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "a17f73b3-11f1-499b-873e-0543c661ec9b": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "40007e09-694e-460e-ab13-163957027c62": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "fea857ea-63be-405b-804a-7c6973defe5a": {
-          "name": "Şəkilləri təmsil edir",
-          "progression_name": "Şəkilləri təmsil edir"
-        },
-        "1bb8c5f5-a9e1-4a84-973d-a2ae89090b29": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "d9046a60-1bfa-40fd-bc94-4d9fb418cabf": {
-          "progression_name": "İkilik rəqəmlər"
-        },
-        "f6def880-27cc-4670-a83c-e3649b67f3aa": {
-          "name": "İkili və məlumat",
-          "progression_name": "İkili və məlumat"
-        },
-        "6201931c-36b8-45a1-8ce9-48c53f418a29": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "e18e2ae3-a793-4ee1-8387-45af93cf109c": {
-          "name": "Məlumatlar Gizli Saxlanır",
-          "progression_name": "Məlumatlar Gizli Saxlanır"
-        },
-        "682050de-bfb6-467f-9e31-3723a5ce0b70": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "2dcdc80f-1e16-4654-9660-acc51f191356": {
-          "name": "Nümayəndəlikləri birləşdirən",
-          "progression_name": "Nümayəndəlikləri birləşdirən"
-        },
-        "74a6211b-44bb-4dfa-8c12-1d20eb6c07ab": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "8bfda8a9-2f92-4cf9-8fcd-1c3009cc0e63": {
-          "name": "Əksetmə",
-          "progression_name": "Əksetmə"
-        },
-        "fd41d547-a8d5-4a2a-ba10-f0c1949f8615": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "ab754ae8-ecf8-4997-91c7-2b0223eab31e": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "0b9ac5aa-89ec-4e55-b443-994f8d459487": {
-          "name": "Problemin həlli",
-          "progression_name": "Problemin həlli"
-        },
-        "5e7a9580-cd1c-4700-a7d9-084b7b7eea02": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "45e83139-e1a4-46af-96d6-493834c94076": {
-          "name": "Məlumatların vizuallaşdırılması",
-          "progression_name": "Məlumatların vizuallaşdırılması"
-        },
-        "3f01a269-b29b-4fa9-a9a4-a332d5378dbf": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "7f64afe2-30a0-47d0-8c46-2a6451d392d7": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "50c39425-3842-4145-a778-7b2c59de2164": {
-          "name": "Tort Sorğusu",
-          "progression_name": "Tort Sorğusu"
-        },
-        "ed2725a9-55f8-4cc0-8004-c096461fd666": {
-          "name": "Dərsin icmalı",
-          "progression_name": "Dərsin icmalı"
-        },
-        "2828d915-f212-40c7-bd63-19ae9d2e9ac9": {
-          "progression_name": "Dərsin icmalı"
-        },
-        "6d338f9b-be35-4f30-bf3a-a9bdde4c9cd1": {
-          "progression_name": "Nümunə Tətbiqlər"
-        },
-        "40a3f261-c8e8-4724-83fd-10c3f539083f": {
           "name": "Əksetmə",
           "progression_name": "Əksetmə"
         },
@@ -2973,6 +2317,9 @@
         "033667c3-f4a7-4781-b14d-efe52102cb34": {
           "progression_name": "Buzzer"
         },
+        "453be854-ca10-4165-9f7a-c66e93ffcca8": {
+          "progression_name": "dövrə"
+        },
         "2b5ea015-46c5-43df-9f66-1ad8d9af2bfd": {
           "progression_name": "Dərsin icmalı"
         },
@@ -3011,6 +2358,9 @@
         },
         "bcf362aa-698c-4b44-a1e2-4ce211c2a29d": {
           "progression_name": "Səsvermə hadisəsi"
+        },
+        "5168da08-c555-47d2-9c54-376278e57dd3": {
+          "progression_name": "miqyas"
         },
         "e28e5463-4876-4025-9e19-7ee01340d6d3": {
           "progression_name": "Rənglərə Sensorlar"
@@ -3086,6 +2436,12 @@
         "3e8d7d32-0eed-40e7-8952-9b8fd06ba84f": {
           "progression_name": "Musiqi bəstələmək"
         },
+        "b1c8622f-8afd-43b0-a703-4c71555e6fc0": {
+          "progression_name": "Musiqi massivləri"
+        },
+        "957bab5f-1eb0-4ba6-949e-37b6c8fc3756": {
+          "progression_name": "Massivlərin dəyişdirilməsi"
+        },
         "da446a77-0458-4c4a-a4dc-f16345218f0f": {
           "progression_name": "Mahnıların hazırlanması"
         },
@@ -3117,6 +2473,12 @@
         "cfb7fdf7-acfd-49fd-a833-916fb604644f": {
           "progression_name": "Akselerometr hadisələri"
         },
+        "2790192d-f5e7-44f6-904e-f13f089f903f": {
+          "progression_name": "akselerometr"
+        },
+        "eb44a6ca-7af2-4589-8013-20c558a3f213": {
+          "progression_name": "sayğac"
+        },
         "cc461490-71ab-41a3-9b17-762e8e70be78": {
           "name": "Akselerometr hadisələri",
           "progression_name": "Akselerometr hadisələri"
@@ -3136,6 +2498,9 @@
         },
         "1897e82b-84c2-4f33-80bb-23c9392fdb3a": {
           "progression_name": "Dərsin icmalı"
+        },
+        "036fd485-3cfc-42be-bdb3-b6f115d1825a": {
+          "progression_name": "Sxemlər və məntiq"
         },
         "15628eef-e88e-4b09-817b-fe260bda88b3": {
           "progression_name": "Sadə sxemlər"
@@ -3272,104 +2637,8 @@
         "66dbbe49-0e5e-40f0-95c6-e5399acda145": {
           "progression_name": "Praktika"
         },
-        "b69124ec-a82e-4819-bbd7-2f1868e21990": {
-          "name": "Praktika",
-          "progression_name": "Praktika"
-        },
-        "282dad48-141f-46bb-9675-9f0629dab0fc": {
-          "progression_name": "Estafet proqramlaşdırması"
-        },
-        "e792415e-c2aa-4759-9388-1d1ccd20f307": {
-          "progression_name": "Praktika"
-        },
-        "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "938a26ab-bd9c-44b8-8cb9-63da1bcf591b": {
-          "progression_name": "Praktika"
-        },
-        "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
-          "progression_name": "Biçinçi"
-        },
-        "027a43ed-b9d6-48af-acb0-40514f563a5a": {
-          "progression_name": "Praktika"
-        },
-        "b906e69e-7205-43b6-939e-5bec300291e3": {
-          "progression_name": "Addım düyməsi ilə sazlama"
-        },
-        "cc04118b-a4f2-4860-a6b9-b91093ffab0b": {
-          "progression_name": "Praktika"
-        },
-        "4a9bb659-a861-4fae-8024-300307f55af4": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "d2407bf6-efea-4dc1-867f-1eeeeef7fe61": {
-          "name": "Praktika",
-          "progression_name": "Praktika"
-        },
-        "043cb991-0a9f-4100-a8ea-813969fb4c5c": {
-          "progression_name": "Praktika"
-        },
-        "06780a03-1f33-4284-80f6-401e8eeb5d8e": {
-          "progression_name": "Bloklari təkrar et"
-        },
-        "66bd8712-92c9-429f-b0ce-5d4baa04eef5": {
-          "progression_name": "Praktika"
-        },
-        "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "a6f30cbb-8fd6-46dc-91c5-ce07c73a5546": {
-          "name": "Praktika",
-          "progression_name": "Praktika"
-        },
-        "1143a138-dda6-4573-ab50-7d4fdaec58b0": {
-          "progression_name": "Kollektor"
-        },
-        "3d19ddeb-ca0c-4e1e-9af0-cd5cc2a5eabe": {
-          "progression_name": "Praktika"
-        },
-        "1509114f-e57a-4100-b4ec-665739adf403": {
-          "progression_name": "Dövr bloklarından istifadə etmək"
-        },
-        "f86d1539-d7e0-4872-997d-5064553f90ca": {
-          "progression_name": "Praktika"
-        },
-        "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "799b5fd3-48c4-42f6-843a-a60958fb2dcc": {
-          "progression_name": "Praktika"
-        },
-        "1f623a3d-9d90-4f66-a618-1a3086c2675f": {
-          "progression_name": "Code Studio-da Rəssam"
-        },
-        "69988473-a38f-47f5-83d6-d250a2de3cec": {
-          "progression_name": "Praktika"
-        },
-        "76162704-2e75-4d37-a02b-3c40c394a711": {
-          "progression_name": "Rəssamla blokları təkrarlayın"
-        },
-        "f58c823c-5cb6-446c-8097-0fd53e518613": {
-          "progression_name": "Praktika"
-        },
-        "99e3dad7-98a9-4f93-86a3-e78793215495": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "6cd0313d-20b7-41af-a555-f7a40a9dc6ea": {
-          "progression_name": "Praktika"
-        },
-        "ff0bdda6-cf62-4449-a308-76b365386a4c": {
-          "progression_name": "Azad Oyna"
-        },
-        "0c082796-a8ea-4cc9-afc7-0b1edb4d77ee": {
-          "progression_name": "Hekayə yarat"
-        },
-        "8eeabef8-20df-4bea-ba8d-10376953fb46": {
-          "progression_name": "Azad Oyna"
-        },
-        "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
-          "progression_name": "Azad Oyna"
+        "411f66e1-425a-4384-a1ff-281e2dde1e19": {
+          "progression_name": "Mini layihə: İt Xorxe"
         },
         "0e6d68c5-a708-47c8-85cf-b3e71a2ecca9": {
           "progression_name": "Praktika"
@@ -3509,6 +2778,9 @@
         "a55f8c00-2f22-41fd-81d6-7e4e0808427a": {
           "progression_name": "Praktika"
         },
+        "c5b3e4e2-d259-4fec-834e-080d28afc415": {
+          "progression_name": "Mini-Layihə: Klik Oyunu"
+        },
         "a4dd80f8-6d8c-4475-af2e-762cc3b7c8ed": {
           "progression_name": "Azad Oyna"
         },
@@ -3590,6 +2862,9 @@
         },
         "61c8a391-4881-4506-9663-0438a3f79593": {
           "progression_name": "Praktika"
+        },
+        "558aff7e-be0e-4c7a-be34-69b51c3a1561": {
+          "progression_name": "Arı ilə yuvalı döngələr"
         },
         "c0bdea37-e2dd-4669-89bd-d0a44a31d98f": {
           "progression_name": "Təxmin"
@@ -3786,8 +3061,15 @@
         "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
           "progression_name": "Azad Oyna"
         },
+        "1149d576-7d1e-4bd0-b17d-cbb82358303c": {
+          "name": "Mini layihə: İnteraktiv plakat",
+          "progression_name": "Mini layihə: İnteraktiv plakat"
+        },
         "83e4470f-32f9-4655-8cbb-46e64801fc3c": {
           "progression_name": "Praktika"
+        },
+        "e749c485-42f3-45f1-9a42-ec47a42947d7": {
+          "progression_name": "Arı ilə yuvalı döngələr"
         },
         "ff42e659-ef91-4890-85fc-5bae139c3368": {
           "progression_name": "Təxmin"
@@ -3939,6 +3221,9 @@
         "cef6aee2-72e0-4c46-bf57-3057e4fbe5b1": {
           "progression_name": "Praktika"
         },
+        "13e13a4d-03f1-45f6-8532-e69303f71086": {
+          "progression_name": "Arı ilə yuvalı döngələr"
+        },
         "4322df5e-caa4-4e99-bc51-e495a01a4781": {
           "progression_name": "Təxmin"
         },
@@ -3986,6 +3271,10 @@
         },
         "f20e0a43-d882-4449-975c-8e93e532cf29": {
           "progression_name": "Simulyasiya edin"
+        },
+        "7c7ef8a0-2eca-40ef-83c6-972c1aad2512": {
+          "name": "Simulyasiya dəyişənlərini",
+          "progression_name": "Simulyasiya dəyişənlərini"
         },
         "56e207a4-0ffb-4926-9887-7f9dc1b65c25": {
           "progression_name": "Praktika"
@@ -4046,16 +3335,6 @@
           "progression_name": "Sprite Laboratoriyası Layihəsi"
         },
         "919ce65a-2a03-4e80-9108-6243b5dd733f": {
-          "name": "Sənətçi Layihəsi",
-          "progression_name": "Sənətçi Layihəsi"
-        },
-        "7ac41e7f-cc21-4e84-ba6c-28b74d5eb12a": {
-          "progression_name": "Nümunə Layihələr"
-        },
-        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
-          "progression_name": "Sprite Laboratoriyası Layihəsi"
-        },
-        "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
           "name": "Sənətçi Layihəsi",
           "progression_name": "Sənətçi Layihəsi"
         },
@@ -4162,104 +3441,8 @@
         "1b6f4aee-cb66-406f-9478-1fb310b7eb1f": {
           "progression_name": "Praktika"
         },
-        "cf04f300-1bb8-4024-a77f-cfdeae97ccba": {
-          "name": "Praktika",
-          "progression_name": "Praktika"
-        },
-        "cef1dcf2-8240-4b77-b667-040c16bc6526": {
-          "progression_name": "Estafet proqramlaşdırması"
-        },
-        "86f6557c-2299-42b0-bf40-5d28c301fae9": {
-          "progression_name": "Praktika"
-        },
-        "26c63e40-009a-4255-bb94-f38466a11e15": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "b2137d87-9fc7-451a-aa66-5e88991ec216": {
-          "progression_name": "Praktika"
-        },
-        "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
-          "progression_name": "Biçinçi"
-        },
-        "e0c060eb-1f06-4f1d-a91e-edd961631883": {
-          "progression_name": "Praktika"
-        },
-        "e9192ef9-3709-448a-8247-bb8e9b9b4a69": {
-          "progression_name": "Addım düyməsi ilə sazlama"
-        },
-        "c5ddf193-ec3b-46f8-82ba-50fc4145cde3": {
-          "progression_name": "Praktika"
-        },
-        "27ded5c7-5ee2-4201-8278-9f66603558a1": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "7205c09f-44e9-4cdb-9b77-2bf0502f115d": {
-          "name": "Praktika",
-          "progression_name": "Praktika"
-        },
-        "db322cd3-928b-4545-a75b-fb16e126a1fc": {
-          "progression_name": "Praktika"
-        },
-        "010ef079-fe26-4b36-82a2-fca760059edf": {
-          "progression_name": "Bloklari təkrar et"
-        },
-        "78b304e2-9e21-466d-8f2f-a7726674f69b": {
-          "progression_name": "Praktika"
-        },
-        "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "6871601e-60a6-47e1-bcb7-f736524e44a1": {
-          "name": "Praktika",
-          "progression_name": "Praktika"
-        },
-        "473d4399-30ea-44ee-989e-438b2e42ec5a": {
-          "progression_name": "Kollektor"
-        },
-        "4a6e59ba-cdbe-4532-9b2e-d878f550ad8e": {
-          "progression_name": "Praktika"
-        },
-        "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
-          "progression_name": "Dövr bloklarından istifadə etmək"
-        },
-        "b2a36927-a878-4885-b769-ee48fec75770": {
-          "progression_name": "Praktika"
-        },
-        "46706589-fffc-42b0-9f99-580224a061e2": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "b9f568e3-b55e-4625-b9ab-3be854a43ef7": {
-          "progression_name": "Praktika"
-        },
-        "ef798505-1665-4e8a-9f81-256c614be3b7": {
-          "progression_name": "Code Studio-da Rəssam"
-        },
-        "c8c6f627-fb0e-4ead-818f-1be6a891b4a7": {
-          "progression_name": "Praktika"
-        },
-        "cd76f2ab-809c-439e-9e2e-924b6dc27428": {
-          "progression_name": "Rəssamla blokları təkrarlayın"
-        },
-        "0d10f1d5-0abe-40fc-88e5-229113a199e3": {
-          "progression_name": "Praktika"
-        },
-        "aff2e264-4572-45c0-a518-91d3a41145e3": {
-          "progression_name": "Çətin tapşırıq"
-        },
-        "4ed5644a-db0a-41e0-a07d-a0447e4c04d3": {
-          "progression_name": "Praktika"
-        },
-        "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
-          "progression_name": "Azad Oyna"
-        },
-        "9b7e88a6-ef85-4623-a3b0-53ace52b42da": {
-          "progression_name": "Hekayə yarat"
-        },
-        "fbfcd848-6942-4978-81d3-3a9c70938d3c": {
-          "progression_name": "Azad Oyna"
-        },
-        "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
-          "progression_name": "Azad Oyna"
+        "e856385e-9015-413f-bf6b-452a602c848c": {
+          "progression_name": "Mini layihə: İt Xorxe"
         },
         "3407f4a4-8db6-489c-98ef-0c8fd31c9017": {
           "progression_name": "Praktika"
@@ -4399,6 +3582,9 @@
         "6aa5ab41-9b0f-408b-b9ab-363316f3accb": {
           "progression_name": "Praktika"
         },
+        "d2b5ccfb-8e51-4ab0-9ab4-b05980e8c155": {
+          "progression_name": "Mini-Layihə: Klik Oyunu"
+        },
         "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
           "progression_name": "Azad Oyna"
         },
@@ -4498,6 +3684,9 @@
         },
         "000a60df-0e77-478b-8c4f-6392bca53467": {
           "progression_name": "Praktika"
+        },
+        "b4d6c23b-2f1e-40ff-9bbe-0839edb4c570": {
+          "progression_name": "Arı ilə yuvalı döngələr"
         },
         "0ecbcb6a-2c35-42eb-bc2d-970b29b51d25": {
           "progression_name": "Təxmin"
@@ -4693,8 +3882,15 @@
         "84c7f95c-006b-46bc-ba15-67e59c540a18": {
           "progression_name": "Azad Oyna"
         },
+        "09dc1358-e6b6-46e9-9995-78d64b507557": {
+          "name": "Mini layihə: İnteraktiv plakat",
+          "progression_name": "Mini layihə: İnteraktiv plakat"
+        },
         "f6d8f3c0-8cf3-4460-b9d7-73b9f4c16139": {
           "progression_name": "Praktika"
+        },
+        "9a52733e-7368-41eb-a0df-9c9ea52a10e1": {
+          "progression_name": "Arı ilə yuvalı döngələr"
         },
         "bd9fab2a-0d0b-4b4b-a9bc-170387e7a757": {
           "progression_name": "Təxmin"
@@ -4842,6 +4038,9 @@
         "2aa21e9a-2a8e-4b0b-a7a5-ad763d30b7fb": {
           "progression_name": "Praktika"
         },
+        "be1bd9ff-944b-466e-98ac-52290ef315b5": {
+          "progression_name": "Arı ilə yuvalı döngələr"
+        },
         "7ceeb1dd-826e-4089-b82a-e04dff173750": {
           "progression_name": "Təxmin"
         },
@@ -4889,6 +4088,9 @@
         },
         "bb1d2d36-2ac2-40c1-b5ff-797d844b5038": {
           "progression_name": "Simulyasiya edin"
+        },
+        "48e30687-be8d-4670-98a7-838f5778f5a8": {
+          "progression_name": "Simulyasiya dəyişənlərini"
         },
         "dd4176a7-321f-40c3-9d78-5fad27817669": {
           "progression_name": "Praktika"
@@ -4946,13 +4148,6 @@
           "progression_name": " nümunə layihələr"
         },
         "b1fc46a7-4dc0-42fd-a720-10e96229aa5f": {
-          "name": "Layihə yarat",
-          "progression_name": "Layihə yarat"
-        },
-        "9b57ac7e-ffb4-413e-9289-0799156ef3ef": {
-          "progression_name": "Nümunə Layihələr"
-        },
-        "4430b310-61e8-44d7-9033-9b5f7099ddb1": {
           "name": "Layihə yarat",
           "progression_name": "Layihə yarat"
         },
@@ -6765,8 +5960,14 @@
         "ef36eaf3-2930-44dd-a939-e0e614755352": {
           "progression_name": "Spritlərinizi yaradın"
         },
+        "c8d03646-3696-4a48-9ae9-b54fce33300e": {
+          "progression_name": "Oyunçu nəzarəti"
+        },
         "b763e8fd-b51e-4a15-b9be-7d675958d51c": {
           "progression_name": "İlmə"
+        },
+        "3d9ddc58-7bda-43a0-8944-fd8c622b3d70": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
@@ -6845,8 +6046,14 @@
         "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
           "progression_name": "Spraytlarınızı yaradın"
         },
+        "91ab7cf4-19a7-4424-b59e-c806057dbb65": {
+          "progression_name": "Oyunçu nəzarəti"
+        },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
           "progression_name": "Sprayt Hərəkəti"
+        },
+        "93c86b2f-aeb2-48d2-b34d-8213761ae09c": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -6912,6 +6119,9 @@
         },
         "f860c052-f4a5-4925-bed9-78bf6c24605b": {
           "progression_name": "oyunçunu idarə et"
+        },
+        "b38b9687-9ab2-490a-8306-5e0655d51863": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
           "tips": [
@@ -7692,7 +6902,7 @@
           "tips": [
             null
           ],
-          "progression_name": "İkili və məlumat"
+          "progression_name": "İkili və məlumat."
         },
         "5ab922e3-8512-4c62-83c7-e17aa282377d": {
           "tips": [
@@ -7981,7 +7191,7 @@
           ]
         },
         "84929552-ebfc-43ef-a97d-f1857609d4ae": {
-          "progression_name": "Nümunə Tətbiqlər"
+          "progression_name": "Nümunə Tətbiqlər?"
         },
         "ff9b8b39-860d-427b-9a2d-80c537bc539f": {
           "tips": [
@@ -8270,7 +7480,8 @@
         "4563c715-0a30-419a-9eca-d5b41089e165": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Musiqi massivləri"
         },
         "28fb99c8-886a-4ed6-859a-1fb1a813c484": {
           "tips": [
@@ -8684,7 +7895,8 @@
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Heyvan Tövsiyəçisi"
         },
         "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
           "tips": [
@@ -8694,7 +7906,11 @@
         "aedb156c-9f9c-4214-94aa-a664ce875b23": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Heyvan Tövsiyəçisi"
+        },
+        "757e3c3a-8354-4b41-9b54-ad138d99c341": {
+          "progression_name": "Heyvan Tövsiyəçisi"
         },
         "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
           "tips": [
@@ -9317,6 +8533,9 @@
         },
         "73856fdc-aee0-4543-b7ac-71a0cdc9f11c": {
           "progression_name": "Praktika"
+        },
+        "575eb58c-7d93-45b9-98f1-3362834db33f": {
+          "progression_name": "Mini layihə: İt Xorxe"
         },
         "40ddc694-3a85-4874-b3ad-71810e6a0474": {
           "progression_name": "Dərsə əlavələr"
@@ -10099,6 +9318,9 @@
         },
         "55ade85d-fedf-4c9d-9046-4d1e6d813638": {
           "progression_name": "Bacarıqların qurulması"
+        },
+        "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d": {
+          "progression_name": "Mini-Layihə: Klik Oyunu"
         },
         "a7a8c0ca-7507-4a7a-84da-2763a0e562a7": {
           "progression_name": "Azad Oyna"
@@ -11470,6 +10692,9 @@
         "2a282546-3943-4555-adae-45fe80b8207a": {
           "progression_name": "Simulyasiya edin"
         },
+        "a9361037-3164-409e-a061-748c4929e168": {
+          "progression_name": "Simulyasiya dəyişənlərini"
+        },
         "de52214d-6afd-4af7-90e5-3e85484e0877": {
           "name": "Əksetmə"
         },
@@ -12691,6 +11916,9 @@
         },
         "dd7a6bce-6e0d-4774-8588-76327c4315d6": {
           "progression_name": "Praktika"
+        },
+        "bf84d5a1-77c9-4769-9963-84b33df1e0b9": {
+          "progression_name": "Mini layihə: İt Xorxe"
         },
         "0a6abf88-92c8-455d-8d64-e8f61ae227ad": {
           "progression_name": "Dərsə əlavələr"
@@ -14692,8 +13920,14 @@
         "7fe6a5df-258c-4216-b86b-06f35f581a2c": {
           "progression_name": "Spritlərinizi yaradın"
         },
+        "e5df4242-c21c-4522-a2c0-4d36e1e14f50": {
+          "progression_name": "Oyunçu nəzarəti"
+        },
         "48d7047e-3572-449d-8233-061c968ad647": {
           "progression_name": "İlmə"
+        },
+        "35b59e9a-23f1-4aae-9a5a-854ac2dc740d": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "fb103c70-07e6-49be-a12a-ce480a70c199": {
           "tips": [
@@ -14787,8 +14021,14 @@
         "d5166021-114c-426a-b036-04fe7db2388e": {
           "progression_name": "Spraytlarınızı yaradın"
         },
+        "0d6b2687-6655-48d2-8504-dc29f2ab8431": {
+          "progression_name": "Oyunçu nəzarəti"
+        },
         "1f891879-1df5-43fa-8960-39d2465556c7": {
           "progression_name": "Sprayt Hərəkəti"
+        },
+        "919518c6-f1b0-4d16-94b0-7f83918ee250": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "ae1e06e8-299e-4d75-beba-a0c0bf96af15": {
           "tips": [
@@ -14854,6 +14094,9 @@
         },
         "958b3f4b-6672-4257-8c4e-937506c1134f": {
           "progression_name": "oyunçunu idarə et"
+        },
+        "bbe64b74-3e29-4ee8-af05-208748abd506": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "6261b5c2-3c97-43dc-943a-6e8b41340a20": {
           "tips": [
@@ -15668,7 +14911,7 @@
           "tips": [
             null
           ],
-          "progression_name": "İkili və məlumat"
+          "progression_name": "İkili və məlumat."
         },
         "4ca366db-9339-4717-8d57-e016c88c22e4": {
           "tips": [
@@ -15972,7 +15215,7 @@
           ]
         },
         "375bc2b0-7e2e-46ca-a9ca-d0ab73bad9d0": {
-          "progression_name": "Nümunə Tətbiqlər"
+          "progression_name": "Nümunə Tətbiqlər?"
         },
         "3965a4d3-9081-49cf-b5ec-16dcec0a1713": {
           "tips": [
@@ -16922,7 +16165,8 @@
         "0f10e599-ee9e-41db-b062-13b2451fadd4": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Heyvan Tövsiyəçisi"
         },
         "74cb2af2-07e0-47c7-9d1e-b7dd034f1488": {
           "tips": [
@@ -16932,7 +16176,11 @@
         "e7b2ce5f-e413-47e3-a322-d3c40c551321": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Heyvan Tövsiyəçisi"
+        },
+        "66381205-df75-49c3-941e-264b29ddf776": {
+          "progression_name": "Heyvan Tövsiyəçisi"
         },
         "00be23bf-0b85-4eb4-a7f4-bea96bb3ffc3": {
           "tips": [
@@ -17577,6 +16825,9 @@
         },
         "a7d05e68-da4d-411a-a07d-d53ba2e04e20": {
           "progression_name": "Praktika"
+        },
+        "1d818376-a876-4685-ade0-dd0c66a984f0": {
+          "progression_name": "Mini layihə: İt Xorxe"
         },
         "7091b047-7dd1-4622-abf4-477933f4e759": {
           "progression_name": "Dərsə əlavələr"
@@ -18377,6 +17628,9 @@
         },
         "ab11c643-bd9d-44fb-822b-1eda83be85fd": {
           "progression_name": "Bacarıqların qurulması"
+        },
+        "1b396a72-6c8e-4667-a4a5-8ef61ac9687f": {
+          "progression_name": "Mini-Layihə: Klik Oyunu"
         },
         "657133fd-6697-4f38-8ef7-8f53811eb2ef": {
           "progression_name": "Azad Oyna"
@@ -19650,6 +18904,9 @@
         "c5ce3765-d4c5-4159-8e5c-39035697517e": {
           "progression_name": "Simulyasiya edin"
         },
+        "a30085db-0943-45a2-87c4-6a1ef63df09c": {
+          "progression_name": "Simulyasiya dəyişənlərini"
+        },
         "65a5c77d-65a0-4744-b99b-26f05b60ebf2": {
           "name": "Əksetmə"
         },
@@ -20901,6 +20158,9 @@
         "55e22a45-8561-4471-a957-13667be5a15c": {
           "progression_name": "Praktika"
         },
+        "6b2e09f0-7a68-497a-ab27-da65bf20e45b": {
+          "progression_name": "Mini layihə: İt Xorxe"
+        },
         "8a9bb5d1-721a-426a-9002-318e30cdef0f": {
           "progression_name": "Dərsə əlavələr"
         },
@@ -21648,6 +20908,9 @@
             null
           ]
         },
+        "a758b35b-192c-4765-b0f7-f419f9d55a88": {
+          "name": "Bildiyinizi göstərin"
+        },
         "4b939bca-2465-429e-b32e-423d9e746f4a": {
           "tips": [
             null
@@ -21989,6 +21252,9 @@
             null
           ]
         },
+        "8850e4a1-b18f-4fc9-922d-ba85c7cf84e1": {
+          "progression_name": "Mənim Zaman Kapsulam"
+        },
         "7e59c185-497a-4224-8c4d-7c42621aa4c8": {
           "tips": [
             null
@@ -22046,6 +21312,9 @@
           "tips": [
             null
           ]
+        },
+        "1090d899-8702-44e4-8973-dfc66eaf2a4e": {
+          "name": "Şeir sənəti"
         },
         "5b6dd0fc-9786-4553-b7f6-44b6bb5ef3f0": {
           "tips": [
@@ -22151,6 +21420,7 @@
           ]
         },
         "36325512-9851-4e3b-9cdc-52c5d78cc8d7": {
+          "name": "Şeir dairəsi",
           "tips": [
             null
           ]
@@ -23278,6 +22548,12 @@
             null
           ]
         },
+        "8cc9f685-35dd-4cf2-a373-f904dc3bdd4a": {
+          "description": "Bu bölmədə biz interaktiv animasiyalar və oyunlar qurmağı öyrənəcəyik. Bu animasiyaları və oyunları yaratarkən bəzi problemlərlə qarşılaşa bilərsiniz. \"Problem\" sözü çoxlu müxtəlif vəziyyətlərə aid ola bilər - deyə bilərəm ki, mənim ev tapşırığı ilə bağlı problemim, qardaşımla problemim və maşınımla bağlı problemim var və hər üçü çox fərqli şeyləri ifadə edir."
+        },
+        "69154734-5b41-4f61-b1e4-b594d29dbcda": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Soruş:** Bu yaxınlarda həll etməli olduğunuz problemin nümunəsi hansıdır?\n\n**Dövlət et və payla:** Şagirdlərdən öz fikirlərini qonşusu ilə bölüşdürün. Dərs boyu nümunə kimi istifadə etməyə dəyər ola biləcək nümunələrə qulaq asın.\n\nŞagirdlər paylaşarkən, üzü aşağı baxaraq hər bir tələbəyə [r _warm_up_word_search_unit_3/csd/2023] nüsxəsini paylayın. Tələbələrin söz axtarışına vaxtından əvvəl başlamadığından əmin olun."
+        },
         "64c5abe6-12f3-492f-a248-d0cd37dd88f7": {
           "tips": [
             null
@@ -23299,15 +22575,32 @@
             null
           ]
         },
+        "250bd25f-afa4-4bf1-a8fb-bb2a706f02cc": {
+          "description": "Problemin həlli prosesi ilə tanış olduğumuza görə, gəlin animasiyalar və oyunlar hazırlayarkən ondan necə istifadə edə biləcəyimizi araşdıraq."
+        },
         "4e059912-6281-4c30-90e0-e7a72698f1da": {
           "tips": [
             null
           ]
         },
+        "1453b310-bcd2-40f0-adde-103053cb08b1": {
+          "description": "Bu bölmədə biz animasiyalar və oyunlar qurmağı öyrənəcəyik. Bu gün biz özümüzə Problem Həlli Prosesi haqqında xatırladacağıq və nəhayət bunu yaratdığımız animasiyalar və oyunlara tətbiq edəcəyik."
+        },
+        "17a48c0f-7b6a-4cd4-bffb-ebda8581cc72": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Problem:** Problemin Həlli Prosesi haqqında nə xatırlayırsınız?\n\n**Müzakirə Məqsədi:** Şagirdlərin cavablarına əsaslanaraq, müəllim tələbələri Problemin Həlli Prosesinin dörd addımı və hər bir addımda iştirak etməyi yadda saxladıqları barədə müzakirəyə aparmalıdır.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Soruş:** Problemin Həlli Prosesi haqqında bildiklərinizə əsasən, sizcə, hər bir addım nə kimi görünə bilər animasiya və ya oyun dizayn edərkən?\n\n**Müzakirə Məqsədi:** Tələbələr hələ animasiya və ya oyun tərtib etməsələr də, tələbələrə animasiya və ya oyun üçün ilk ilhamdan tutmuş onun yaradılmasına qədər olan mərhələləri təsəvvür etməyə istiqamətləndirin. Bəzi fikirlərə aşağıdakılar daxil ola bilər:\n\n-   Müəyyən edin: Animasiya və ya oyun üçün nə etmək istədiyinizə və ya onu kimin üçün etmək istədiyinizə qərar verin\n-   Hazırlayın: Oxşar animasiyalar və oyunlara baxmaq və hansı növ rənglərdən, şəkillərdən və ya simvollardan istifadə etmək istədiyinizə qərar vermək, ya da animasiya/oyun interfeysinin eskizini çəkmək və ya hətta animasiya/oyunu necə proqramlaşdırmağı planlaşdırmaq\n-   Sınayın: Animasiya/oyunun əsas versiyasını yaradın (hətta bütün xüsusiyyətlərə malik olmasa belə)\n-   Reflect: Rəy almaq və animasiya/oyun dizaynını təkmilləşdirmək üçün onu dostlara göstərmək\n\nŞagirdlər müzakirəni bitirdikdən sonra əsas fəaliyyətə keçin."
+        },
+        "8f1f8696-860e-47b7-bf09-6c3241c9c79b": {
+          "name": "Tövsiyə olunan animasiyalar və oyunlar",
+          "description": "Bu bölmədə biz kimin üçün animasiya və ya oyun yaratdığımızı düşünməklə başlayan animasiyalar və oyunlar yaratmağı öyrənəcəyik. Bəzən öz şəxsi maraqlarımızla bağlı animasiyalar və oyunlar düzəldirik, lakin onları başqa insanlar üçün dizayn etməyi də düşünməliyik. Nəhayət, animasiyalarımızı və oyunlarımızı proqramlaşdırmağımıza kömək etmək üçün problemin həlli prosesini tətbiq etmək barədə düşünəcəyik, lakin bu gün biz animasiyaların və oyunlarımızın ehtiyaclarını ödəmək üçün \\_dizayn edərkən problemin həlli prosesini necə tətbiq edəcəyimizə diqqət yetirəcəyik. istifadəçilər və özümüz."
+        },
         "691d3e87-b63b-4010-886e-9df4e9d7e2fd": {
+          "description": "**Qrup:** Şagirdləri cüt-cüt yerləşdirin.\n**Paylaşdırın:** Hər bir tələbəyə [r app_design_for_users/csd/2023] fəaliyyət bələdçisinin surətini verin.",
           "tips": [
             null
           ]
+        },
+        "3ede0a38-72eb-4dc6-853e-90db7ddd0c70": {
+          "description": "**İcmal:** Tələbələrdən fəaliyyət təlimatının birinci səhifəsindəki təlimatları oxumasını təmin edin. Bu fəaliyyətin birinci hissəsi tələbələrdən müxtəlif istifadəçiləri ehtiyaclarına uyğun animasiya və ya oyun şablonuna uyğunlaşdırmağı xahiş edir. Şablonlara baxmaq üçün tələbələr Code Studio-ya baş çəkməlidirlər.\n\n**Code Studio:** Tələbələri Code Studio-da \"Nümunə Animasiya və Oyunlar\" səviyyələrinə yönəldin."
         },
         "11c537ee-7543-4422-b6ce-ac3a31cb5662": {
           "tips": [
@@ -23315,16 +22608,19 @@
           ]
         },
         "700cff86-e325-4b4b-858a-2fd8b7912603": {
+          "description": "**Dəyişdirin:** Şagirdlərdən bu fəaliyyətlə cüt-cüt işləməsini təmin edin, onların hər bir şablonu niyə məhz niyə seçdikləri ilə bağlı müzakirələri təşviq edin. Bu, müxtəlif animasiya və oyun dizaynlarını və hər bir istifadəçinin ehtiyaclarını müzakirə etmək üçün əla yerdir.\n\nBu fəaliyyət təlimatı tələbələrdən insanların niyə animasiyalar və oyunlar yaratdıqlarını və onlarla hansı maraqların ifadə oluna biləcəyini düşünməyi xahiş edir.",
           "tips": [
-            null
+            "**Düzgünlük üzərində Dəyər Mühakiməsi:** Hər bir istifadəçi müəyyən bir şablon nəzərə alınmaqla hazırlanmışdır, lakin tələbələr şablonu istifadəçilərə tövsiyə edərkən öz mülahizələrini və məntiqlərini istifadə etməyə təşviq edilir. Tələbələrin əsaslandırmaları haqqında diqqətlə düşünmələri və seçimlərini əsaslandıra bildikləri müddətcə “açıq-aşkar” seçim etməmələri yaxşıdır.\n\nAnimasiyalar və oyunlar qəsdən sadədir, bu da tələbələrin bölmə ərzində yaradacaqları animasiyalar və oyunlar haqqında gözləntiləri təyin etməyə kömək edir."
           ]
         },
         "e60cec32-198f-4215-b92a-58eb39e4a7a2": {
+          "description": "**Paylaşın:** Tələbələri tam sinif müzakirəsinə gətirməzdən əvvəl kiçik qruplarda aşağıdakı sualları müzakirə edin:\n\n-   Hansı istifadəçilər üçün uyğunluq tapmaq daha asan idi?\n-   Hansı istifadəçilər üçün uyğunluq tapmaq daha çətin idi?\n\nDövriyyə zamanı müşahidələrinizə əsaslanaraq, siz həmçinin sinifdən müzakirə etməyi xahiş etmək üçün bir neçə xüsusi istifadəçini, xüsusən də birdən çox tələbənin həmin istifadəçi üçün müxtəlif şablonlar seçdiyi istifadəçiləri müəyyən etməlisiniz. Məntiqin seçimin özündən daha vacib olduğunu vurğulayaraq, tələbələri seçimləri üçün müxtəlif əsaslandırmaları eşitməyə həvəsləndirin.",
           "tips": [
-            null
+            "Tələbələr seçimləri ilə bağlı əsaslandırmalarını müzakirə edərkən onların müəyyən proqrama və ya oyuna üstünlük vermək üçün ümumi səbəblərdən daha çox, konkret istifadəçinin ehtiyaclarını və xüsusiyyətlərini müəyyən etmələrini yoxlayın. Siz tələbələrə öz ehtiyaclarını və üstünlüklərini təsvir olunan istifadəçilərin ehtiyaclarından fərqləndirmək istəyə bilərsiniz."
           ]
         },
         "94b8272d-94f8-4376-bdd6-24382bcc2f5c": {
+          "name": "Animasiya və ya oyun dizaynı",
           "tips": [
             null
           ]
@@ -23592,6 +22888,7 @@
           "progression_name": "Təxmin"
         },
         "018269af-e160-4502-9b18-15c10310dd92": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Slaydlarda tələbələrə [r sprite_properties_needs_updating_/csd/2023] videosunu göstərin.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Açar Lüğət:**\n\n-   **Əmlak:** Yeri və görünüşü kimi spritin xüsusiyyəti üçün etiket\n-   **Nöqtə qeydi:** Sprite və xassəni nöqtə ilə birləşdirərək, Oyun Laboratoriyasında spritlərin xassələrindən istifadə üsulu.",
           "tips": [
             null
           ]
@@ -23610,6 +22907,9 @@
         },
         "c9cb7767-98ce-4e02-9d64-56927deb319e": {
           "progression_name": "Əngəllər"
+        },
+        "3dd6be0e-613b-4345-b3e1-89debcbf05e5": {
+          "description": "**Müzakirə:** Bütün qrupla bölüşməzdən əvvəl tələbələrə cütlər və ya kiçik qruplar şəklində müzakirə etməyə icazə verin.\n\n**Müzakirə Məqsədi:** Şagirdlər qeyd edə bilər ki, sprite xassələri və dəyişənləri hər ikisi məlumatı saxladıqlarına görə oxşardır. Onlar fərqlidirlər ki, dəyişənlər hər hansı bir şey ola bilər, lakin spritlər ekranda müəyyən şəkildə istifadə olunan xüsusi xüsusiyyətlərə malikdir."
         },
         "8b5f1e8d-f5d9-4a46-bc96-51e8fcb159fe": {
           "tips": [
@@ -23634,8 +22934,17 @@
         "e7754777-fba0-4bbe-ac0d-b445c5d8b614": {
           "progression_name": "Əngəllər"
         },
+        "60ea7814-2565-49bf-a2b8-eb94f76ef03f": {
+          "description": "**Paylaşın:** Vaxtınız varsa, tələbələrə cavablarını paylaşmağa icazə verin.\n\n**Müzakirə məqsədi:** Tələbənin suala cavabları fərqli ola bilər, lakin bəzi oxşarlıqlar ondan ibarətdir ki, onlar \\[`drawSprites()`(#fff176) istifadə etməli olan spritlərdən fərqli olaraq hər ikisi koordinat müstəvisindən istifadə edirlər və avtomatik çəkilirlər. [0] əmri. Mümkün fərqlərdən biri budur ki, mətnin dəqiq ölçüsünə nəzarət etmək daha çətindir, çünki mətnin miqdarı və şrift ölçüsü hündürlük və genişlik parametrləri qədər spesifik deyil."
+        },
         "15074e76-ff77-420c-9fbb-b923641fd1e6": {
           "name": "Gözdən keçirmə"
+        },
+        "0c184c6e-48e0-4522-b4c2-a4e47f168772": {
+          "description": "**Paylaşın:** Tələbələrə qrup icmalı kimi yadda saxladıqlarını paylaşmağa icazə verin.\n\n**Müzakirə məqsədi:** Bu müzakirənin məqsədi tələbələrin öyrəndikləri müxtəlif blokları və bacarıqları nəzərdən keçirməkdir. Şagirdlər müxtəlif bloklar haqqında danışarkən, söhbəti onlardan yaradıcı şəkildə necə istifadə edilə biləcəyinə yönəltməyə, günün əsas mövzusu ilə əlaqələndirməyə çalışın."
+        },
+        "15c3f29a-35d7-4736-895b-ff4f44074b73": {
+          "description": "Siz Game Lab-dakı son mini-layihəmizdən bəri həqiqətən çox gözəl şeylər etməyi öyrəndiniz. Bu gün bütün dünya ilə bölüşmək üçün maraqlı bir səhnə yaratmaq üçün onların hamısını bir araya gətirmək şansınız olacaq. Bu o deməkdir ki, başqasının ideyasını yenidən yaratmağa çalışmaq əvəzinə, özünüzə məxsus bir ideya ilə çıxış edəcəksiniz, ona görə də yaradıcılıqla məşğul olmaq vaxtıdır!"
         },
         "13bd9594-e5de-4730-bbf7-4326e76008a5": {
           "tips": [
@@ -23643,14 +22952,24 @@
           ]
         },
         "5b65c9a6-26fd-43fb-a193-130f47faa6d3": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Paylaşdırın:** Fəaliyyət təlimatının nüsxələrini köçürün. Şagirdlər bu iş vərəqindən onlara Problemin Həlli Prosesində rəhbərlik etmək üçün istifadə etməli və bu dərsin sonunda yaratdıqları başlıqlı səhnəni planlaşdırmalıdırlar.\n\n**Könüllü keçid** Siz 1-ci səviyyədə başlıqlı səhnə nümunəsini görmək üçün tələbələri Code Studio-ya göndərməyi və ya nümunəni slaydlarda göstərməyi seçə bilərsiniz.",
           "tips": [
             null
           ]
         },
+        "3eef2299-d6d1-42e6-b21d-30dc030c6a46": {
+          "name": "Addım 1: Müəyyən edin - Səhnənizi təsvir edin",
+          "description": "**Dövlət:** Tələbələr yaratmaq istədikləri altyazılı səhnənin təsvirini doldurduqca, tələbələrdən fikirlərini soruşmaq üçün otağı gəzdirin və spritlərdən və mətndən necə istifadə edəcəklərini düşündüklərinə əmin olmaq üçün onlara rəhbərlik etməyə kömək edin. layihə tələblərinə cavab vermək"
+        },
         "9905f777-4587-4aba-b905-43bf06786bc0": {
+          "name": "Addım 2: Hazırlayın - Şəkilinizi Dizayn edin",
+          "description": "Şagirdlər öz altyazılı səhnələrinin dizaynı ilə bağlı suallara cavab verərkən, onların spritlər və mətni həyata keçirməyi düşündüklərindən əmin olun. Dizaynlarını tamamladıqdan sonra, onların səhnələrinin müxtəlif xüsusiyyətləri üçün hansı blokların lazım olacağını müəyyən edə bildiklərinə əmin olun",
           "tips": [
             null
           ]
+        },
+        "a2b32d26-8058-4bf9-bf5e-00cf0b56bfd6": {
+          "name": "Addım 3: Sınayın - Səhnənizi İnkişaf etdirin"
         },
         "cdcb79f2-7ba2-4f5f-9977-358fb177d4a5": {
           "tips": [
@@ -23658,11 +22977,12 @@
           ]
         },
         "df6bc462-7d49-49b2-a0fb-8f0f56c69c69": {
+          "description": "Dizaynları yoxladıqdan sonra tələbələrə Code Studio-ya daxil olmağa və proqramlarını kodlaşdırmağa icazə verin.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Keçid:** Tələbələri Code Studio-ya göndərin.",
           "progression_name": "Sprite səhnələri"
         },
         "4d0925fc-7ba5-4641-9379-87c8f18cb254": {
           "tips": [
-            null
+            "**İskelə Layihəsi:** Bu mini-layihə üçün tapşırıqlar hər səviyyədə layihənin müəyyən bir hissəsinə (fon, spritlər, mətn və s.) diqqət yetirən tələbələr üçün bölünür. Şagirdləri hər bir səviyyədəki təlimatlara əməl etməyə həvəsləndirin, diqqəti bir anda bir tapşırığa yönəldin."
           ],
           "progression_name": "arxa fon yarat"
         },
@@ -23681,12 +23001,23 @@
             null
           ]
         },
+        "b22ef3f7-70a2-4250-bd87-6b80729cf8cd": {
+          "description": "**Paylaşın:** Şagirdlərdən sinif yoldaşlarının layihələri haqqında bəyəndiklərini bölüşmələrini istəyin. Bu \"popkorn\" üslubunu etmək istəyə bilərsiniz, cavab verən hər bir tələbə paylaşacaq növbəti şəxsi seçir.\n\n**Müzakirə Məqsədi:** Bu müzakirə tələbələrin əldə etdiklərinin qeyd olunması kimi xidmət etməlidir. Şagirdlər gördüklərini bölüşərkən, onları bir-birlərindən öyrənməyə təşviq edin və bir şeyi necə edəcəyini bilmirlərsə, suallar verin. Şagirdlərin eyni alətlə necə çox fərqli şeylər edə bildiyini vurğulayın."
+        },
+        "d36078b3-45fe-43f0-b583-c483279fc72f": {
+          "description": "**Müzakirə edin:** Tələbələrdən öz fikirlərini müstəqil şəkildə yazmasını, sonra tərəfdaşlarla paylaşmasını, sonra bütün qrup olaraq paylaşmasını istəyin.\n\n**Müzakirə Məqsədi:** Bu müzakirə animasiya haqqında bəzi əsas anlayışları təqdim etməlidir. Şagirdlər başa düşməlidirlər ki, əsas bir az fərqli olan çoxlu şəkilləri ardıcıl görməkdir. \"Çərçivə\" lüğət sözünü bu çoxsaylı şəkillərdən biri kimi təqdim edin - animasiya daxilində tək bir şəkil. Sonra keçin ki, tezliklə tələbələr öz cizgi filmlərini yaradacaqlar."
+        },
         "91af4e95-88e2-457c-b6df-1d704404f2c8": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Şagirdlərə proqramda [r introduction_to_the_draw_loop/csd/2023] videosunu göstərin slaydlar.",
           "tips": [
             null
           ]
         },
+        "8fc8adb0-d3f0-48c5-be42-85c520487ec3": {
+          "description": "**Video ilə nəzərdən keçirilməli sual:**\n\n-   Çəkmə funksiyası nə edir?\n\n**Müzakirə Məqsədi:** Çəkiliş funksiyası eyni kodu döngədə təkrar-təkrar işlədir, buna görə də onu tez-tez “hesablama dövrəsi” adlandırırlar. Bu, çəkiliş funksiyası hər dəfə işlədiyi zaman çəkilənləri az miqdarda dəyişdirərək animasiya effekti yaradır. Bunu hər səhifədə bir qədər dəyişdirərək şəkli canlandıra bilən fiziki flip kitabla müqayisə etmək olar.\n\n**Yanlış təsəvvür xəbərdarlığı!**\n\nÇəkiliş döngəsi işləyərkən, o, əvvəlki çertyojı \"təmizləmir\", buna görə də yeni çəkiliş döngəsi ilə örtülməyən hər şeyi göstərməyə davam edəcək. Tələbələr çəkiliş dövrəsinin əvvəlinə \"fon\" əlavə etməsələr, onlar hələ də əvvəllər ekrana çəkilmiş bütün şəkilləri görəcəklər."
+        },
         "da217e24-6e2b-49a8-9e43-a6e3938fde30": {
+          "description": "**Video ilə nəzərdən keçirilməli sual:**\n\n-   Çəkmə funksiyası nə edir?\n\n**Müzakirə Məqsədi:** Çəkiliş funksiyası eyni kodu döngədə təkrar-təkrar işlədir, buna görə də onu tez-tez “hesablama dövrəsi” adlandırırlar. Bu, çəkiliş funksiyası hər dəfə işlədiyi zaman çəkilənləri az miqdarda dəyişdirərək animasiya effekti yaradır. Bunu hər səhifədə bir qədər dəyişdirərək şəkli canlandıra bilən fiziki flip kitabla müqayisə etmək olar.\n\n**Yanlış təsəvvür xəbərdarlığı!**\n\nÇəkiliş döngəsi işləyərkən, o, əvvəlki çertyojı \"təmizləmir\", buna görə də yeni çəkiliş döngəsi ilə örtülməyən hər şeyi göstərməyə davam edəcək. Tələbələr çəkiliş dövrəsinin əvvəlinə \"fon\" əlavə etməsələr, onlar hələ də əvvəllər ekrana çəkilmiş bütün şəkilləri görəcəklər.",
           "tips": [
             null
           ],
@@ -23696,8 +23027,9 @@
           "progression_name": "Bacarıqların qurulması"
         },
         "5b1985f6-d193-4456-865e-344495f2d52d": {
+          "description": "**Video ilə nəzərdən keçirilməli sual:**\n\n-   Çəkmə funksiyası nə edir?\n\n**Müzakirə Məqsədi:** Çəkiliş funksiyası eyni kodu döngədə təkrar-təkrar işlədir, buna görə də onu tez-tez “hesablama dövrəsi” adlandırırlar. Bu, çəkiliş funksiyası hər dəfə işlədiyi zaman çəkilənləri az miqdarda dəyişdirərək animasiya effekti yaradır. Bunu hər səhifədə bir qədər dəyişdirərək şəkli canlandıra bilən fiziki flip kitabla müqayisə etmək olar.\n\n**Yanlış təsəvvür xəbərdarlığı!**\n\nÇəkiliş döngəsi işləyərkən, o, əvvəlki çertyojı \"təmizləmir\", buna görə də yeni çəkiliş döngəsi ilə örtülməyən hər şeyi göstərməyə davam edəcək. Tələbələr çəkiliş dövrəsinin əvvəlinə \"fon\" əlavə etməsələr, onlar hələ də əvvəllər ekrana çəkilmiş bütün şəkilləri görəcəklər.",
           "tips": [
-            null
+            "**Yanlış təsəvvür xəbərdarlığı!**\n\nÇəkiliş döngəsi işləyərkən, o, əvvəlki çertyojı \"təmizləmir\", buna görə də yeni çəkiliş döngəsi ilə örtülməyən hər şeyi göstərməyə davam edəcək. Tələbələr çəkiliş dövrəsinin əvvəlinə \"fon\" əlavə etməsələr, onlar hələ də əvvəllər ekrana çəkilmiş bütün şəkilləri görəcəklər."
           ],
           "progression_name": "Proqnozlaşdır"
         },
@@ -23762,12 +23094,16 @@
             null
           ]
         },
+        "8af34b98-3edd-491d-a75f-8bfbae34204f": {
+          "name": "Addım 1: Müəyyən edin - Səhnənizi təsvir edin"
+        },
         "f2966304-a582-4fc1-81b9-1f171c3f87ee": {
           "tips": [
             null
           ]
         },
         "98112b16-adcb-48db-8aea-b650606ed7c6": {
+          "name": "Addım 3: Sınayın - Səhnənizi İnkişaf etdirin",
           "progression_name": "Səhnənizi Planlayın"
         },
         "b28fae22-403d-4a11-a924-cc1261b4d2ee": {
@@ -23776,6 +23112,7 @@
           ]
         },
         "acea648c-4d2c-4b65-9d06-812308ecad74": {
+          "description": "Dizaynları yoxladıqdan sonra tələbələrə Code Studio-ya daxil olmağa və proqramlarını kodlaşdırmağa icazə verin.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Keçid:** Tələbələri Code Studio-ya göndərin.",
           "tips": [
             null
           ],
@@ -23798,6 +23135,9 @@
             null,
             null
           ]
+        },
+        "080532d7-f628-404e-8985-3eaa96e7816a": {
+          "description": "**Paylaşın:** Şagirdlərdən sinif yoldaşlarının layihələri haqqında bəyəndiklərini bölüşmələrini istəyin. Bu \"popkorn\" üslubunu etmək istəyə bilərsiniz, cavab verən hər bir tələbə paylaşacaq növbəti şəxsi seçir.\n\n**Müzakirə Məqsədi:** Bu müzakirə tələbələrin əldə etdiklərinin qeyd olunması kimi xidmət etməlidir. Şagirdlər gördüklərini bölüşərkən, onları bir-birlərindən öyrənməyə təşviq edin və bir şeyi necə edəcəyini bilmirlərsə, suallar verin. Şagirdlərin eyni alətlə necə çox fərqli şeylər edə bildiyini vurğulayın."
         },
         "bcc371a0-b97f-4e0a-92f5-f27a15472014": {
           "tips": [
@@ -24032,8 +23372,14 @@
           ],
           "progression_name": "Spritlərinizi yaradın"
         },
+        "2c12b812-2b92-40f3-b116-f08602dd7f5c": {
+          "progression_name": "Oyunçu nəzarəti"
+        },
         "29654361-4d3a-49e0-95fd-a05491589d75": {
           "progression_name": "İlmə"
+        },
+        "c42f0c29-5a4d-4797-87a6-ad9a0b2ed694": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "2f4d7386-2ead-4655-8393-ec856d6ba1ff": {
           "tips": [
@@ -24121,10 +23467,14 @@
         "cf39e34c-9f1e-46c7-95aa-ec47f091b8e7": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Oyunçu nəzarəti"
         },
         "9f59f303-4fc6-4e21-a68f-7bb84427a90e": {
           "progression_name": "Sprayt Hərəkəti"
+        },
+        "f7e3dfc2-b577-4557-9826-de3f8d1d6dce": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "8132afd2-391e-4945-804c-75dc8a2a62d0": {
           "tips": [
@@ -24194,6 +23544,9 @@
         },
         "cc97e6a9-28bf-4535-8d63-a0213ee684f3": {
           "progression_name": "oyunçunu idarə et"
+        },
+        "25b5e0c4-35c9-43de-b1e1-79b740a60acd": {
+          "progression_name": "Sprayt qarşılıqlı təsirləri"
         },
         "99cd86be-4a3e-4ae1-a6be-af1fca62d57d": {
           "tips": [
@@ -24857,7 +24210,7 @@
           ]
         },
         "f4d471c8-b9e2-4aa5-b3e6-b399e5f356f9": {
-          "progression_name": "İkili və məlumat"
+          "progression_name": "İkili və məlumat."
         },
         "9b3005a7-f457-42c8-9d11-ffec10f6943f": {
           "tips": [
@@ -25059,7 +24412,7 @@
           ]
         },
         "ff21f3bf-5b8b-403c-902e-323b121d4780": {
-          "progression_name": "Nümunə Tətbiqlər"
+          "progression_name": "Nümunə Tətbiqlər?"
         },
         "2abc621b-a06d-43d9-9741-af4b6f3e707f": {
           "tips": [
@@ -26725,7 +26078,8 @@
         "e949af1c-b1ac-4766-b6e7-5f2aa4b7ebf4": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Heyvan Tövsiyəçisi"
         },
         "c1d5766a-89ca-47d5-b0ec-8ac4d082ed8a": {
           "tips": [
@@ -26735,7 +26089,11 @@
         "c4099370-0405-4a9b-b626-367920dc8233": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Heyvan Tövsiyəçisi"
+        },
+        "b1a9dc05-6696-46ea-9bd3-b079eaa13d8c": {
+          "progression_name": "Heyvan Tövsiyəçisi"
         },
         "343325f8-4730-44e5-a4e9-829569d7bd4c": {
           "tips": [
@@ -27428,6 +26786,9 @@
         },
         "31acadc3-cda1-48cb-adc9-49e0581aeb1c": {
           "progression_name": "Praktika"
+        },
+        "d46395e2-9219-441c-b190-3157e8bebf67": {
+          "progression_name": "Mini layihə: İt Xorxe"
         },
         "a9f76aef-5b2b-45ee-a1ad-a87d39a16f9e": {
           "progression_name": "Dərsə əlavələr"
@@ -28228,6 +27589,9 @@
         },
         "c257ec59-7e27-4122-8d3c-383f41745a7a": {
           "progression_name": "Bacarıqların qurulması"
+        },
+        "6c8822eb-6c40-403d-ba0b-e9aa1e33d44a": {
+          "progression_name": "Mini-Layihə: Klik Oyunu"
         },
         "9a3951f8-11fa-4eb8-a266-253ef293db2f": {
           "progression_name": "Azad Oyna"
@@ -29501,6 +28865,9 @@
         "f6bc3d4a-e061-4a8b-b55c-f48ad2d16751": {
           "progression_name": "Simulyasiya edin"
         },
+        "bd8f52e5-444c-419e-92b4-fb3497a01344": {
+          "progression_name": "Simulyasiya dəyişənlərini"
+        },
         "049bcab7-2040-455f-a5e3-679b9177b46d": {
           "name": "Əksetmə"
         },
@@ -30752,6 +30119,9 @@
         "d34874f9-c784-4dba-846d-0af12c3f14d2": {
           "progression_name": "Praktika"
         },
+        "d3bc5754-d205-48d3-9c7f-78936f0403f1": {
+          "progression_name": "Mini layihə: İt Xorxe"
+        },
         "57fa74a1-8cd1-4b16-9f46-2bb21638f671": {
           "progression_name": "Dərsə əlavələr"
         },
@@ -30941,6 +30311,9 @@
           "tips": [
             null
           ]
+        },
+        "0df81fc7-87d4-49c1-81e3-cef2c9051700": {
+          "progression_name": "Səs-küylü Şəkil Widgeti"
         },
         "73127e83-abb6-4b0a-be12-6bdcdccb3fc3": {
           "tips": [
@@ -31597,131 +30970,6 @@
           "name": "Kod Saatı bitəndən sonra",
           "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map](https://code.org/volunteer/local) bir neçə nəfərlə əlaqə saxlayın."
         },
-        "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
-          "name": "Səhnənin qurulması",
-          "description": "Şagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin."
-        },
-        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
-          "description": "_Bu fəaliyyətdə siz sprit adlanan əyləncəli personajlarla interaktiv dünya yaradaraq əylənəcəksiniz. Siz komiks və ya qrafik romanda gördüyünüz kimi spritlərə nitq qabarcıqları ilə hər şeyi deməyə vadar edə biləcəksiniz və siz və ya başqası onlara kliklədikdə onların avtomatik cavab verməsini öyrənəcəksiniz._\n\n_Bu gün siz \"kod\" yazacaqsınız, bu sadəcə kompüterin başa düşə biləcəyi bir sıra təlimatlar deməkdir. Hekayə yazarkən istifadə etdiyiniz sözlər üzərində diqqətlə düşünmək lazımdır. Kod yazarkən, kompüterinizə verdiyiniz təlimatları diqqətlə düşünməlisiniz._",
-          "tips": [
-            "Əvvəlcədən yükləməyə və ya Kod Saatınızı təqdim etməyə çox az vaxt sərf etmək istərdiniz. Xüsusilə gənc öyrənənlər üçün ən yaxşısı mümkün qədər tez tullanır."
-          ]
-        },
-        "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
-          "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
-        },
-        "893dba56-7c8e-4897-949b-de514de76011": {
-          "name": "Salam Dünya",
-          "progression_name": "Salam Dünya"
-        },
-        "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
-        },
-        "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
-          "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
-        },
-        "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
-          "name": "Səhnənin qurulması",
-          "description": "Şagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin."
-        },
-        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
-          "description": "_Bu fəaliyyətdə siz sprit adlanan əyləncəli personajlarla interaktiv dünya yaradaraq əylənəcəksiniz. Siz komiks və ya qrafik romanda gördüyünüz kimi spritlərə nitq qabarcıqları ilə hər şeyi deməyə vadar edə biləcəksiniz və siz və ya başqası onlara kliklədikdə onların avtomatik cavab verməsini öyrənəcəksiniz._\n\n_Bu gün siz \"kod\" yazacaqsınız, bu sadəcə kompüterin başa düşə biləcəyi bir sıra təlimatlar deməkdir. Hekayə yazarkən istifadə etdiyiniz sözlər üzərində diqqətlə düşünmək lazımdır. Kod yazarkən, kompüterinizə verdiyiniz təlimatları diqqətlə düşünməlisiniz._",
-          "tips": [
-            "Əvvəlcədən yükləməyə və ya Kod Saatınızı təqdim etməyə çox az vaxt sərf etmək istərdiniz. Xüsusilə gənc öyrənənlər üçün ən yaxşısı mümkün qədər tez tullanır."
-          ]
-        },
-        "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
-          "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
-        },
-        "f6a21949-1c94-4269-acae-98046f6a9052": {
-          "name": "Salam Dünya",
-          "progression_name": "Salam Dünya"
-        },
-        "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
-        },
-        "f95b4eed-639e-483e-bef7-ead9abf4808e": {
-          "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
-        },
-        "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
-          "name": "Səhnənin qurulması",
-          "description": "Şagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin."
-        },
-        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
-          "description": "_Bu fəaliyyətdə siz sprit adlanan əyləncəli personajlarla interaktiv dünya yaradaraq əylənəcəksiniz. Siz komiks və ya qrafik romanda gördüyünüz kimi spritlərə nitq qabarcıqları ilə hər şeyi deməyə vadar edə biləcəksiniz və siz və ya başqası onlara kliklədikdə onların avtomatik cavab verməsini öyrənəcəksiniz._\n\n_Bu gün siz \"kod\" yazacaqsınız, bu sadəcə kompüterin başa düşə biləcəyi bir sıra təlimatlar deməkdir. Hekayə yazarkən istifadə etdiyiniz sözlər üzərində diqqətlə düşünmək lazımdır. Kod yazarkən, kompüterinizə verdiyiniz təlimatları diqqətlə düşünməlisiniz._",
-          "tips": [
-            "Əvvəlcədən yükləməyə və ya Kod Saatınızı təqdim etməyə çox az vaxt sərf etmək istərdiniz. Xüsusilə gənc öyrənənlər üçün ən yaxşısı mümkün qədər tez tullanır."
-          ]
-        },
-        "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
-          "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
-        },
-        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
-          "name": "Salam Dünya",
-          "progression_name": "Salam Dünya"
-        },
-        "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
-        },
-        "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
-          "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
-        },
-        "9d3ef78a-4043-489e-898b-f407c914f698": {
-          "name": "Səhnənin qurulması",
-          "description": "Şagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin."
-        },
-        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
-          "description": "_Bu fəaliyyətdə siz sprit adlanan əyləncəli personajlarla interaktiv dünya yaradaraq əylənəcəksiniz. Siz komiks və ya qrafik romanda gördüyünüz kimi spritlərə nitq qabarcıqları ilə hər şeyi deməyə vadar edə biləcəksiniz və siz və ya başqası onlara kliklədikdə onların avtomatik cavab verməsini öyrənəcəksiniz._\n\n_Bu gün siz \"kod\" yazacaqsınız, bu sadəcə kompüterin başa düşə biləcəyi bir sıra təlimatlar deməkdir. Hekayə yazarkən istifadə etdiyiniz sözlər üzərində diqqətlə düşünmək lazımdır. Kod yazarkən, kompüterinizə verdiyiniz təlimatları diqqətlə düşünməlisiniz._",
-          "tips": [
-            "Əvvəlcədən yükləməyə və ya Kod Saatınızı təqdim etməyə çox az vaxt sərf etmək istərdiniz. Xüsusilə gənc öyrənənlər üçün ən yaxşısı mümkün qədər tez tullanır."
-          ]
-        },
-        "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
-          "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
-        },
-        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
-          "name": "Salam Dünya",
-          "progression_name": "Salam Dünya"
-        },
-        "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
-        },
-        "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
-          "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
-        },
-        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
-          "name": "Səhnənin qurulması",
-          "description": "Şagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin."
-        },
-        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
-          "description": "_Bu fəaliyyətdə siz sprit adlanan əyləncəli personajlarla interaktiv dünya yaradaraq əylənəcəksiniz. Siz komiks və ya qrafik romanda gördüyünüz kimi spritlərə nitq qabarcıqları ilə hər şeyi deməyə vadar edə biləcəksiniz və siz və ya başqası onlara kliklədikdə onların avtomatik cavab verməsini öyrənəcəksiniz._\n\n_Bu gün siz \"kod\" yazacaqsınız, bu sadəcə kompüterin başa düşə biləcəyi bir sıra təlimatlar deməkdir. Hekayə yazarkən istifadə etdiyiniz sözlər üzərində diqqətlə düşünmək lazımdır. Kod yazarkən, kompüterinizə verdiyiniz təlimatları diqqətlə düşünməlisiniz._",
-          "tips": [
-            "Əvvəlcədən yükləməyə və ya Kod Saatınızı təqdim etməyə çox az vaxt sərf etmək istərdiniz. Xüsusilə gənc öyrənənlər üçün ən yaxşısı mümkün qədər tez tullanır."
-          ]
-        },
-        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
-          "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
-        },
-        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
-          "name": "Salam Dünya",
-          "progression_name": "Salam Dünya"
-        },
-        "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
-        },
-        "f5756484-7296-4391-99e2-7b2678653934": {
-          "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
-        },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "Səhnənin qurulması",
           "description": "Şagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin."
@@ -31854,6 +31102,9 @@
         },
         "eaccf571-0358-4756-b0c7-2349901065d4": {
           "progression_name": "Terminologiya xülasəsi"
+        },
+        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
+          "progression_name": "Yeni Çağırış Giriş"
         },
         "9ad445d9-3385-460d-97f8-396f069b456d": {
           "progression_name": "Crack Təsadüfi Əvəzetmə"
@@ -32293,6 +31544,7 @@
           "description": "**Birlikdə şeir oxuyun:** Sinif olaraq birlikdə bir neçə [bir neçə şeir](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) oxuyun və hər bir şeirin əhval-ruhiyyəsini adlandırmağı məşq edin. Tələbələri başqasınınkindən fərqli olsa belə, öz şərhlərini bölüşməyə təşviq edin."
         },
         "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Şeir sənəti",
           "description": "#### Ümumi Dəstək\n\nBu fəaliyyətin sonunda tələbələr seçdikləri şeirin vizual təfsirini əks etdirən animasiyalı şeirə sahib olacaqlar. Bu dərs tələbələrə kodları ilə işləmək və ən çox bəyəndikləri vizual effektləri tapmaq imkanı vermək üçün nəzərdə tutulub.\n\nOtağın ətrafında dövrə vurarkən tələbələri təşviq edin:\n\n-   \\*\\* Vaxtınızı Alın: \\*\\* Səviyyələrin əksəriyyəti tələbələrdən şeirin əhval-ruhiyyəsini şərh etmək üçün mükəmməl effektlər tapmağı tələb edir. Bir səviyyədə qalmaq və onların kodları ilə işləmək çox təşviq olunur.\n\n-   **Bəyəndiyiniz şeiri tapın:** Tələbə üçün yeni səviyyədə nümayiş olunan şeir sadəcə bir təklifdir. Oyun sahəsinin yuxarı hissəsində əvvəlcədən yüklənmiş şeirləri olan şeir açılan menyusu var. Tələbələrdən bir neçəsini oxumağı və onlara danışan birini tapmağı xahiş edin. Daha sonra seçdikləri şeiri kodla canlandırmağa başlaya bilərlər.\n\n-   **Tamamlanmış səviyyəni göstərin:** Tamamilə yaşıl olan istənilən səviyyə qabarcığı tələbənin həmin səviyyə üçün bütün tələbləri uğurla yerinə yetirməsi deməkdir. Tələbədən nə yaratdıqlarını göstərmək üçün yaşıl qabarcığa vurmasını xahiş edin.\n\nTələbənin özünü sıxışdırdığı vaxtlar üçün:\n\n-   **Təlimatları oxuyun:** Təlimatlar səviyyəni necə başa çatdırmaq üçün işarələnmiş nöqtələrdir. Əgər tələbə ilişib qaldığını hiss edirsə, ondan təlimatları sizə yüksək səslə oxumalarını və təlimatların öz sözləri ilə dediklərini təkrar etmələrini xahiş edin.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Tələbələr həmçinin bu mətndən nitqə işarəsini klikləyə bilərlər. təlimatlar ucadan oxunur.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İpucu axtarın**: Əksər səviyyələrdə daha çox olan ən azı bir ipucu var səviyyəni necə keçmək barədə açıq təfərrüatlar.\n-   **Baqları qeyd edin:** Kodunuzda səhv əldə etmək kodlaşdırma prosesinin təbii hissəsidir. Proqram gözlədiklərini etmirsə, tələbədən əvvəlcə nə baş vermək istədiklərini söyləməsini xahiş edin, əslində nə baş verdiyini müşahidə etmək üçün qaçış düyməsini basın, sonra kodunda uyğunsuzluğa səbəb olan yeri tapın. Hataların tapılmasını və səhvlərin düzəldilməsini qeyd etməyi unutmayın. Səhv əldə etmək tələbələrin daha mürəkkəb proqram quraraq əla iş gördüyü anlamına gəlir."
         },
         "49994950-2fc5-4779-abd5-2369a402a750": {
@@ -32515,6 +31767,9 @@
         "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
           "progression_name": "Baxış: Şəkillər"
         },
+        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
+          "progression_name": "Ümumi baxış: Bəyanatlar If"
+        },
         "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
           "name": "Son otaqdan qaçış proqramı",
           "progression_name": "Son otaqdan qaçış proqramı"
@@ -32526,10 +31781,10 @@
           "progression_name": "Yaxşı şəxsiyyət vəsiqələrinin seçilməsi"
         },
         "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
-          "progression_name": "İstifadəçi input-una cavab"
+          "progression_name": "İstifadəçi input-una cavab."
         },
         "a81e104f-4588-40de-bce6-a309993c9bd4": {
-          "progression_name": "Çox-ekranlı Tətbiqlər"
+          "progression_name": "Çox-ekranlı Tətbiqlər,"
         },
         "432cf1e5-be20-4ba1-a6b5-617481522694": {
           "progression_name": "getNumber"
@@ -32541,55 +31796,6 @@
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket",
           "progression_name": "CS Kəşfləri Tələbə Kurs Öncəsi Anket"
-        },
-        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
-          "description": "#### Səhnənin qurulması\n\nŞagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin.\n\nDeyin: _Bu gün biz bir saat onlayn tapmacalarla işləməyə və kompüter laboratoriyasında davranış tərzini öyrənməyə sərf edəcəyik._\nBu müzakirənin məqsədi tələbələrə kompüter laboratoriyasına daxil olanda nə gözlədiklərini və necə davranacaqlarını öyrətməkdir."
-        },
-        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
-          "tips": [
-            "-   Laboratoriyada sakit bədənlərdən istifadə edin\n-   Saqqız və ya konfet çeynəməməyi unutmayın\n-   Əllərinizi dezinfeksiya edin\n-   Partnyorunuzla bir kompüterdə oturun\n-   İlk \"sürücü\"nün siçana çata bildiyinə əmin olun\n-   Əsəbləşdiyiniz zaman kompüteri və ya monitoru vurmayın və silkələməyin\n-   [20/20/20 Qaydaya](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35) əməl edin.\n-   Hər 20-30 dəqiqədən bir [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) ilə necə məşğul olmaq olar (GoNoodle-a pulsuz giriş tələb olunur).\n-   Müəllimdən soruşmazdan əvvəl yoldaşınızdan soruşun\n-   Səsi azaldın ki, hər kəs öz tərəfdaşlarını eşitsin\n-   Hissləri və həll yollarını izləmək üçün jurnalınızdan istifadə edin"
-          ]
-        },
-        "aa328958-bd87-4dbb-8585-cb33f905051f": {
-          "description": "**Müzakirə:**\nŞagirdlərin qaydaları başa düşdüyünə əmin olmaq üçün kompüter laboratoriyasının gözləntiləri ətrafında yaxşı müzakirə aparın. Bəzi müzakirə mövzularına aşağıdakılar daxil ola bilər:\n\n-   Kompüter laboratoriyasında işləmək yaxşıdır?\n-   Kompüter laboratoriyasında olarkən nə qədər yüksək səslə yeriməliyik?\n-   Tapmacada ilişib qalsanız nə etməli?\n-   Əsəbləşirsinizsə, kompüteri vurmağa kömək edəcəkmi?\n-   Kompüter laboratoriyasına getməyə hazırlaşanda necə hazırlaşmalıyıq?"
-        },
-        "95529f90-229b-4ce3-8f92-40528f8a7830": {
-          "description": "#### Onlayn Tapmacalara nəzər salın\n\nDərsdən tapmaca layihələndirin. Sinifə şəklin üzərinə klikləməyi və onu sürükləyib atmaqla düzgün yerə necə yerləşdirməyi göstərin. Arxa fona klikləmək və ya şəkli düzgün yerə qoymadan atmaq kimi məqsədyönlü səhvlərə yol verin. Bu problemlərlə qarşılaşdığınız zaman sinifdəki könüllülərdən kömək istəyin."
-        },
-        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "Mozaika",
-          "description": "_Məqsəd:_ Bu, tələbələrə onlayn tapmacaları tamamlamaq üçün Code.org-dan necə istifadə etməyi öyrədəcək.\n\nBu mərhələ tələbələrə əl-göz koordinasiyası, klikləmə və sürüklə və buraxma bacarıqlarını tətbiq etmək imkanı vermək üçün nəzərdə tutulmuşdur. Şagirdlər ardıcıllıqla da oynayacaqlar.\n\nTələbələrdən sürükləmə və endirmə addımlarını bölmələrini və onları lövhədə qeyd etmələrini düşünün. Misal üçün:\n\n1.  Oxu bloka köçürün.\n2.  Siçan düyməsini sıxıb saxlayın.\n3.  Siçanı hərəkət etdirin.\n4.  Düyməni buraxın.\n\nBunu etmək tələbələrə qarşıdakı dərslərdə tədqiq ediləcək bir _alqoritm_ yaratmaq təcrübəsi verəcəkdir."
-        },
-        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
-          "description": "Tələbələrə klikləmək, sürükləmək və buraxmaq üsullarını açıq şəkildə öyrətmək üçün bir az vaxt ayırın. Şagirdlərin tapmacalar üzərində işləyərkən istifadə edəcəkləri cihazların dilini təqdim edin. Planşetləriniz varsa, tələbələr _touch screen_ istifadə edəcəklər. Noutbuklarınız varsa, onlar çox güman ki, _trackpad_ istifadə edəcəklər. Laboratoriyada tapa biləcəyiniz kimi masaüstü kompüterlər _mouse_ istifadəsinə etibar edəcəklər."
-        },
-        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
-          "description": "Müəllimlər kompüter elmləri təhsilində mühüm rol oynayır və əməkdaşlıq və canlı sinif mühitini dəstəkləyir. Onlayn bulmacalar zamanı müəllimin rolu ilk növbədə həvəsləndirmə və dəstəkdir. Onlayn tapmacalar tələbə mərkəzli olmalıdır, ona görə də müəllimlər tələbələr ilişib qalanda müdaxilə etməməlidirlər. Bunu necə etmək barədə bəzi fikirlər bunlardır:",
-          "tips": [
-            "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
-          ]
-        },
-        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "Tələbələrinizə [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1) təlimatını tamamlamağa çağırın.\n\n-   Tələbələri sualları/çağırışları ilə tərəfdaşlarından soruşmaqla başlamağa təşviq edin.\n-   Cavabsız suallar həllini artıq bilən yaxınlıqdakı qrupa çatdırıla bilər.\n-   Şagirdlərdən gördükləri problemi təsvir edin. Nə etməli? Bu nə edir? Bu sizə nə deyir?\n-   Əsəbiləşmiş tələbələrə xatırladın ki, məyusluq öyrənmə yolunda bir addımdır və əzmkarlıq öz bəhrəsini verəcək.\n-   Əgər bütün bunlardan sonra tələbə hələ də ilişib qalırsa, tələbənin öz başına bir səhvi aşkar etməsi üçün aparıcı suallar verin."
-        },
-        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
-          "progression_name": "Səviyyələr"
-        },
-        "319eb690-ba34-4d34-9158-d30d777c4b05": {
-          "name": "Əksetmə",
-          "description": "Tələbələrinizə [Jigsaw][0] təlimatını tamamlamağa çağırın.\n\n-   Tələbələri sualları/çağırışları ilə tərəfdaşlarından soruşmaqla başlamağa təşviq edin.\n-   Cavabsız suallar həllini artıq bilən yaxınlıqdakı qrupa çatdırıla bilər.\n-   Şagirdlərdən gördükləri problemi təsvir edin. Nə etməli? Bu nə edir? Bu sizə nə deyir?\n-   Əsəbiləşmiş tələbələrə xatırladın ki, məyusluq öyrənmə yolunda bir addımdır və əzmkarlıq öz bəhrəsini verəcək.\n-   Əgər bütün bunlardan sonra tələbə hələ də ilişib qalırsa, tələbənin öz başına bir səhvi aşkar etməsi üçün aparıcı suallar verin."
-        },
-        "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "Hər bir tələbəyə [Çıxış Bileti](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Əsas Fəaliyyət (Köhnə)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Əsas Fəaliyyət (Yeni)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Yekun"
         }
       }
     }
