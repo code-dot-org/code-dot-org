@@ -89,7 +89,7 @@ export function fixPath(filename) {
   // image contains 'image://' in its filenmae.
   // We want to strip this starter asset prefix from the filename so that the correct
   // image file path is returned.
-  if (!state.pageConstants.isCurriculumLevel) {
+  if (!state.pageConstants?.isCurriculumLevel) {
     filename = filename.replace(STARTER_ASSET_PREFIX, '');
   }
   if (STARTER_ASSET_PREFIX_REGEX.test(filename)) {

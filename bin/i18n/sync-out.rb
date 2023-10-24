@@ -34,7 +34,6 @@ module I18n
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
-      Services::I18n::CurriculumSyncUtils.sync_out
       puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
       I18nScriptUtils.with_synchronous_stdout do
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
@@ -114,8 +113,8 @@ module I18n
 
       # Prepare some collection literals
       resource_and_vocab_paths = [
+        'i18n/locales/original/dashboard/courses.yml',
         'i18n/locales/original/dashboard/scripts.yml',
-        'i18n/locales/original/dashboard/courses.yml'
       ]
 
       Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
@@ -140,14 +139,11 @@ module I18n
             # Everything else is differentiated only by the plugins used
             plugins = []
             if resource_and_vocab_paths.include? original_path
-              plugins << 'resourceLink'
-              plugins << 'vocabularyDefinition'
+              next
             elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
-              plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+              next # moved to I18n::Resources::Dashboard::CurriculumContent::SyncOut#restore_file_content
             elsif original_path.starts_with? "i18n/locales/original/docs"
-              plugins << 'visualCodeBlock'
-              plugins << 'link'
-              plugins << 'resourceLink'
+              next # moved to I18n::Resources::Dashboard::Docs::SyncOut
             elsif I18n::Resources::Apps::Labs::REDACTABLE_LABS.include?(File.basename(original_path, '.json'))
               next # moved to I18n::Resources::Apps::Labs::SyncOut#restore_crawding_locale_files
             end
@@ -185,26 +181,6 @@ module I18n
       end
     end
 
-    # We provide URLs to the translators for Resources only; because
-    # the sync has a side effect of applying Markdown formatting to
-    # everything it encounters, we want to make sure to un-Markdownify
-    # these URLs
-    def self.postprocess_course_resources(locale, courses_source)
-      courses_yaml = YAML.load_file(courses_source)
-      lang_code = PegasusLanguages.get_code_by_locale(locale)
-      return if courses_yaml[lang_code].nil? # no processing of empty files
-      if courses_yaml[lang_code]['data']['resources']
-        courses_resources = courses_yaml[lang_code]['data']['resources']
-        courses_resources.each do |_key, resource|
-          next if resource['url'].blank?
-          resource['url'].strip!
-          resource['url'].delete_prefix!('<')
-          resource['url'].delete_suffix!('>')
-        end
-      end
-      File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
-    end
-
     # Distribute downloaded translations from i18n/locales
     # back to blockly, apps, pegasus, and dashboard.
     def self.distribute_translations
@@ -219,19 +195,26 @@ module I18n
 
         ### Dashboard
         Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
+          next if loc_file == File.join('i18n/locales', locale, "dashboard/#{locale}.yml")
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/blocks.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/course_offerings.json')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/block_categories.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/data_content.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/devise_content.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/parameter_names.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/progressions.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/variable_names.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/restricted_content.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/courses.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/scripts.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/shared_functions.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/slides.yml')
 
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
           next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           basename = File.basename(loc_file, ext)
-          postprocess_course_resources(locale, loc_file) if File.basename(loc_file) == 'courses.yml'
           # Special case the un-prefixed Yaml file.
           destination = (basename == "base") ?
                           "dashboard/config/locales/#{locale}#{ext}" :
@@ -245,76 +228,6 @@ module I18n
           else
             I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
           end
-        end
-
-        ### Docs
-        Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
-          # Each programming environment file gets merged into programming_environments.{locale}.json
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          loc_data = JSON.parse(File.read(loc_file))
-          next if loc_data.empty?
-
-          programming_env = File.basename(loc_file, '.json')
-          destination = "dashboard/config/locales/programming_environments.#{locale}.json"
-          programming_env_data = File.exist?(destination) ?
-                                   I18nScriptUtils.parse_file(destination).dig(locale, "data", "programming_environments") || {} :
-                                   {}
-          programming_env_data[programming_env] = loc_data[programming_env]
-          # JSON files in this directory need the root key to be set to the locale
-          programming_env_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'programming_environments', programming_env_data)
-          I18nScriptUtils.sanitize_data_and_write(programming_env_data, destination)
-        end
-
-        ### Standards
-        Dir.glob("i18n/locales/#{locale}/standards/*.json") do |loc_file|
-          # For every framework, we place the frameworks and categories in their
-          # respective places.
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          # These JSON files contain the framework name, a set of categories, and a
-          # set of standards.
-          loc_data = JSON.parse(File.read(loc_file))
-          framework = File.basename(loc_file, '.json')
-
-          # Frameworks
-          destination = "dashboard/config/locales/frameworks.#{locale}.json"
-          framework_data = File.exist?(destination) ?
-                             I18nScriptUtils.parse_file(destination).dig(locale, "data", "frameworks") || {} :
-                             {}
-          framework_data[framework] = {
-            "name" => loc_data["name"]
-          }
-          framework_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'frameworks', framework_data)
-          I18nScriptUtils.sanitize_data_and_write(framework_data, destination)
-
-          # Standard Categories
-          destination = "dashboard/config/locales/standard_categories.#{locale}.json"
-          category_data = File.exist?(destination) ?
-                            I18nScriptUtils.parse_file(destination).dig(locale, "data", "standard_categories") || {} :
-                            {}
-          (loc_data["categories"] || {}).keys.each do |category|
-            category_data[category] = {
-              "description" => loc_data["categories"][category]["description"]
-            }
-          end
-          category_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standard_categories', category_data)
-          I18nScriptUtils.sanitize_data_and_write(category_data, destination)
-
-          # Standards
-          destination = "dashboard/config/locales/standards.#{locale}.json"
-          standard_data = File.exist?(destination) ?
-                            I18nScriptUtils.parse_file(destination).dig(locale, "data", "standards") || {} :
-                            {}
-          (loc_data["standards"] || {}).keys.each do |standard|
-            standard_data[standard] = {
-              "description" => loc_data["standards"][standard]["description"]
-            }
-          end
-          standard_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standards', standard_data)
-          I18nScriptUtils.sanitize_data_and_write(standard_data, destination)
         end
       end
 

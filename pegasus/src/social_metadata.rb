@@ -15,6 +15,9 @@
 #   code.org/ai
 #   code.org/ai/pl/101
 #   code.org/ai/how-ai-works
+#   code.org/videos
+#   code.org/10years
+#   code.org/youngwomen
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -62,11 +65,16 @@ def get_social_metadata_for_page(request)
     ai_101: {path: "/shared/images/social-media/ai-101-social.png", width: 1200, height: 630},
     ai_how_ai_works: {path: "/shared/images/social-media/ai-how-ai-works-social.png", width: 1200, height: 630},
     hoc_2023_social: {path: "/shared/images/social-media/hoc2023_social.png", width: 1200, height: 630},
+    videos_page: {path: "/shared/images/social-media/videos-page.png", width: 1200, height: 630},
+    ten_years: {path: "/shared/images/social-media/10years-social.png", width: 1200, height: 630},
+    young_women_in_cs: {path: "/shared/images/social-media/young-women-social.png", width: 1200, height: 630},
   }
 
   # Important:
   #   - image should always come before video
   #   - description should always come before description_twitter
+  #   - to apply an image that shows up specifically on Twitter,
+  #     use the "image_twitter" key after the "image" key
   social_tags = {
     "code.org" => {
       "default" => {
@@ -219,6 +227,27 @@ def get_social_metadata_for_page(request)
         image: images[:ai_how_ai_works]
       }
     },
+    "videos_page" => {
+      "default" => {
+        title: hoc_s(:video_library_page_main_title),
+        description: hoc_s(:social_videos_desc),
+        image: images[:videos_page]
+      }
+    },
+    "ten_years" => {
+      "default" => {
+        title: hoc_s(:tenth_anniversary_top_heading),
+        description: hoc_s(:tenth_anniversary_top_desc),
+        image: images[:ten_years]
+      }
+    },
+    "young_women_in_cs" => {
+      "default" => {
+        title: hoc_s(:yw_page_top_heading),
+        description: hoc_s(:yw_page_top_desc),
+        image: images[:young_women_in_cs]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -255,6 +284,12 @@ def get_social_metadata_for_page(request)
     page = "ai_101"
   elsif request.path == "/ai/how-ai-works" && request.site == "code.org"
     page = "ai_how_ai_works"
+  elsif request.path == "/educate/resources/videos" && request.site == "code.org"
+    page = "videos_page"
+  elsif request.path == "/10years" && request.site == "code.org"
+    page = "ten_years"
+  elsif request.path == "/youngwomen" && request.site == "code.org"
+    page = "young_women_in_cs"
   else
     return {}
   end
@@ -286,10 +321,12 @@ def get_social_metadata_for_page(request)
     case name
     when :image
       output["og:image"] = "https://#{request.host}#{value[:path]}"
-      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
+      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}" unless social_tag_set.include?(:image_twitter)
       output["og:image:width"] = value[:width]
       output["og:image:height"] = value[:height]
       output["twitter:card"] = "photo"
+    when :image_twitter
+      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
     when :video
       output["og:video:url"] = "http://youtube.com/v/#{value[:youtube_key]}"
       output["og:video:secure_url"] = "https://youtube.com/v/#{value[:youtube_key]}"

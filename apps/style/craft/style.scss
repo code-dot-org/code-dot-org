@@ -546,11 +546,12 @@ $height-to-width: math.div(434, 477);
     @include pixelated;
     @include gray-button;
     @include mc-text-shadow;
+    @include main-font-semi-bold;
 
+    font-family: $main-font !important;
     color: $button-text-white !important;
     font-size: 26px;
     line-height: 26px;
-    font-family: $gotham-bold !important;
 
     display: inline-block;
     padding: 5px;
@@ -652,11 +653,12 @@ $height-to-width: math.div(434, 477);
     @include pixelated;
     @include gray-button;
     @include mc-text-shadow;
+    @include main-font-semi-bold;
 
+    font-family: $main-font !important;
     color: $button-text-white !important;
     font-size: 26px;
     line-height: 26px;
-    font-family: $gotham-bold !important;
 
     display: inline-block;
     padding: 5px;
@@ -815,11 +817,12 @@ $height-to-width: math.div(434, 477);
     @include pixelated;
     @include gray-button;
     @include mc-text-shadow;
+    @include main-font-semi-bold;
 
+    font-family: $main-font !important;
     color: $button-text-white !important;
     font-size: 26px;
     line-height: 26px;
-    font-family: $gotham-bold !important;
 
     display: inline-block;
     padding: 5px;
@@ -857,11 +860,12 @@ $height-to-width: math.div(434, 477);
     @include pixelated;
     @include gray-button;
     @include mc-text-shadow;
+    @include main-font-semi-bold;
 
+    font-family: $main-font !important;
     color: $button-text-white !important;
     font-size: 26px;
     line-height: 26px;
-    font-family: $gotham-bold !important;
 
     display: inline-block;
     padding: 5px;
@@ -1101,10 +1105,11 @@ $height-to-width: math.div(434, 477);
   }
 
   @include mc-text-shadow;
+  @include main-font-semi-bold;
 
+  font-family: $main-font !important;
   color: $button-text-white !important;
   font-size: 26px;
-  font-family: $gotham-bold !important;
 
   &#ok-button {
     background-color: inherit;
@@ -1162,6 +1167,10 @@ $height-to-width: math.div(434, 477);
     color: $lighter_gray;
   }
 
+  .show-code summary:hover {
+    color: $dark_charcoal;
+  }
+
   #show-code,
   #feedbackButtons,
   #puzzleRatingButtons,
@@ -1205,9 +1214,9 @@ $height-to-width: math.div(434, 477);
   }
 
   p {
-    line-height: 27px;
-    font-size: 24px;
-    color: $lightest_gray;
+    line-height: 27px !important;
+    font-size: 24px !important;
+    color: $lightest_gray !important;
   }
 
   span.thumbnail-warning {

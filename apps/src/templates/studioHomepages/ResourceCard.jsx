@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import fontConstants from '@cdo/apps/fontConstants';
 import Button from '../Button';
 import color from '../../util/color';
 import {connect} from 'react-redux';
@@ -116,7 +117,7 @@ const styles = {
   },
   title: {
     color: color.neutral_dark,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     fontSize: 27,
     lineHeight: '29px',
     boxSizing: 'border-box',
@@ -136,11 +137,11 @@ const styles = {
     flex: 'none',
     fontSize: 14,
     margin: '0px 8px',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.brand_accent_default,
   },
   description: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 14,
     lineHeight: '21px',
     height: 140,

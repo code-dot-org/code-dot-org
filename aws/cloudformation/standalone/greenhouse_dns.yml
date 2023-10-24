@@ -1,5 +1,10 @@
 # Greenhouse DNS Configuration
+# This template is deployed manually to the 'greenhouse-dns' stack.
 # See: https://support.greenhouse.io/hc/en-us/articles/201111684-Email-domain-verification
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: DNS Records for the Greenhouse applicant tracking system.
 
 Resources:
 

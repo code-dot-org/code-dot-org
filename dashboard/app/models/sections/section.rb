@@ -61,6 +61,10 @@ class Section < ApplicationRecord
   belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
+  has_many :section_instructors, dependent: :destroy
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
+  has_many :instructors, through: :active_section_instructors, class_name: 'User'
+
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 
@@ -221,6 +225,23 @@ class Section < ApplicationRecord
     end
   end
 
+  after_save :ensure_owner_is_active_instructor
+  def ensure_owner_is_active_instructor
+    return if user.blank?
+
+    si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
+    if si.blank?
+      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
+    elsif si.deleted?
+      si.restore
+      si.status = :active
+      si.save!
+    elsif si.status != 'active'
+      si.status = :active
+      si.save!
+    end
+  end
+
   # return a version of self.students in which all students' names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
@@ -375,11 +396,14 @@ class Section < ApplicationRecord
         students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+
       {
         id: id,
         name: name,
         createdAt: created_at,
         teacherName: teacher.name,
+        sectionInstructors: serialized_section_instructors,
         linkToProgress: "#{base_url}#{id}/progress",
         assignedTitle: title,
         linkToAssigned: link_to_assigned,
@@ -556,4 +580,31 @@ class Section < ApplicationRecord
     self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
   before_validation :strip_emoji_from_name
+
+  public def add_instructor(email)
+    # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
+    # for a total of 6)
+    if section_instructors.count >= 6
+      raise ArgumentError.new('section full')
+    end
+
+    instructor = User.find_by!(email: email, user_type: :teacher)
+
+    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: self)
+
+    # Actually delete the instructor if they were soft-deleted so they can be re-invited.
+    if si&.deleted_at.present?
+      si.really_destroy!
+    # Can't re-add someone who is already an instructor (or invited/declined)
+    elsif si.present?
+      raise ArgumentError.new('already invited')
+    end
+
+    SectionInstructor.create!(
+      section: self,
+      instructor: instructor,
+      status: :invited,
+      invited_by: current_user
+    )
+  end
 end

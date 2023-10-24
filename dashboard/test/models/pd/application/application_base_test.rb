@@ -278,7 +278,7 @@ module Pd::Application
       assert_equal application, email.application
       assert_equal 'test_email', email.email_type
       assert_equal application.status, email.application_status
-      assert_not_nil email.sent_at
+      refute_nil email.sent_at
     end
 
     test 'record status change with user' do

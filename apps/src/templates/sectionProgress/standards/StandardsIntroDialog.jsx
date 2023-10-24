@@ -9,6 +9,7 @@ import Button from '../../Button';
 import {connect} from 'react-redux';
 import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
 import {cstaStandardsURL} from './standardsConstants';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /*
 Dialog that show the first time a teacher goes to the
@@ -98,7 +99,7 @@ const styles = {
     color: color.dark_charcoal,
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   dialog: {
     paddingLeft: 20,
