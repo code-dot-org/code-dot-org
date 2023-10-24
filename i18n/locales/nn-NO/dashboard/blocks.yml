@@ -538,6 +538,43 @@ nn:
             '"tropical"': Tropisk
             '"vintage"': Retro
             '"warm"': Rødfarger
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          vel bakgrunnseffekt
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Tilfeldig)"
+            '"circles"': Tunnel
+            '"color_cycle"': Fargar
+            '"diamonds"': Diamantar
+            '"disco_ball"': Discokule
+            '"fireworks"': Fyrverkeri
+            '"growing_stars"': Voksande stjerner
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Rosa splætt
+            '"rainbow"': Regnboge
+            '"snowflakes"': Snø
+            '"text"': Sangtittel
+            '"galaxy"': Verdensrom
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"disco"': Kvadrat
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Svart-hvitt
+            '"cool"': Blåfarger
+            '"electronic"': Elektronisk
+            '"iceCream"': Iskrem
+            '"default"': Lys
+            '"neon"': Neon
+            '"rainbow"': Regnboge
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
       Dancelab_setDanceSpeed:
         text: endre dansefarten til {SPRITE} til {SPEED}
         options:
