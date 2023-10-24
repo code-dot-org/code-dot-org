@@ -45,10 +45,9 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     before do
-      Unit.delete_all
       Level.destroy_all
+      Unit.destroy_all
 
-      # Prepares DB data
       script_level = FactoryBot.create(:script_level, script: unit, levels: [level])
       FactoryBot.create(:lesson_group, script: script_level.script, lessons: [script_level.lesson])
 
