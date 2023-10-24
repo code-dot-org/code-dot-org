@@ -1430,6 +1430,9 @@
         "963e5afb-d350-4302-95ed-3a86c5744fa3": {
           "name": "Mat"
         },
+        "ca6b9610-b612-418d-87bf-bc1776fbd110": {
+          "name": "Verkefni"
+        },
         "433b0807-8054-40fe-adff-32ac9313556f": {
           "name": "Verkefni"
         },
@@ -1525,9 +1528,6 @@
         },
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Samantekt"
-        },
-        "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
-          "name": "Mat"
         }
       }
     }

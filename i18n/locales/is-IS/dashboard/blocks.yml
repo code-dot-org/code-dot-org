@@ -555,6 +555,48 @@ is:
             '"tropical"': Hitabelti
             '"vintage"': Klassískt
             '"warm"': Hlýlegt
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: stilla bakgrunn {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ekkert
+            '"rand"': "(Handahóf)"
+            '"circles"': Hringir
+            '"quads"': Horn
+            '"color_cycle"': Litir
+            '"diamonds"': Demantar
+            '"disco_ball"': Diskókúla
+            '"fireworks"': Flugeldar
+            '"flowers"': Blóm
+            '"growing_stars"': Vaxandi stjörnur
+            '"swirl"': Dáleiðsla
+            '"kaleidoscope"': Breytilegt mynstur
+            '"lasers"': Laser dansgólf
+            '"splatter"': Málningarslettur
+            '"rainbow"': Regnbogi
+            '"ripples_random"': Handahófsgárur
+            '"ripples"': Gárur
+            '"snowflakes"': Snjór
+            '"text"': Nöfn laga
+            '"squiggles"': Hrafnaspark
+            '"galaxy"': Geimur
+            '"sparkles"': Glitrandi
+            '"spiral"': Spírall
+            '"disco"': Reitir
+            '"starburst"': Stjörnublossi
+            '"stars"': Stjörnur
+            '"music_wave"': Bylgjur
+          PALETTE:
+            '"rave"': Svarthvítt
+            '"cool"': Svalt
+            '"electronic"': Rafmagnað
+            '"iceCream"': Rjómaís
+            '"default"': Ljós
+            '"neon"': Neon
+            '"rainbow"': Regnbogi
+            '"tropical"': Hitabelti
+            '"vintage"': Klassískt
+            '"warm"': Hlýlegt
       Dancelab_setDanceSpeed:
         text: stilla danshraða {SPRITE} á {SPEED}
         options:
