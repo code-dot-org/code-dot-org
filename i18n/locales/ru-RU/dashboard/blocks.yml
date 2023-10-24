@@ -597,6 +597,52 @@ ru:
             '"tropical"': Тропический
             '"vintage"': Винтаж
             '"warm"': Красный
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "установить фоновый эффект
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Нет
+            '"rand"': "(Случайный)"
+            '"circles"': Туннель
+            '"quads"': Углы
+            '"color_cycle"': Цвета
+            '"diamonds"': Алмазы
+            '"disco_ball"': Зеркальный шар
+            '"fireworks"': Фейерверк
+            '"flowers"': Цветы
+            '"growing_stars"': Растущие звезды
+            '"higher_power"': Higher Power
+            '"swirl"': Гипно
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерный танцпол
+            '"splatter"': Брызги краски
+            '"rainbow"': Радуга
+            '"ripples_random"': Случайные круги на воде
+            '"ripples"': Круги на воде
+            '"snowflakes"': Снег
+            '"text"': Название песни
+            '"squiggles"': Завитки
+            '"galaxy"': Космос
+            '"sparkles"': Блестки
+            '"spiral"': Спираль
+            '"disco"': Квадраты
+            '"starburst"': Вспышка звёздообразования
+            '"stars"': Звезды
+            '"music_wave"': Волны
+          PALETTE:
+            '"rave"': Черно-белый
+            '"cool"': Классный
+            '"electronic"': Электронный
+            '"iceCream"': Мороженое
+            '"default"': Свет
+            '"neon"': Неон
+            '"ocean"': Океан
+            '"rainbow"': Радуга
+            '"tropical"': Тропический
+            '"vintage"': Винтаж
+            '"warm"': Красный
       Dancelab_setDanceSpeed:
         text: измените скорость танца {SPRITE} на {SPEED}
         options:

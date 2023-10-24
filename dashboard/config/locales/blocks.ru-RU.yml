@@ -598,6 +598,52 @@ ru:
         text: |-
           "установить фоновый эффект
           {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Туннель
+            '"color_cycle"': Цвета
+            '"diamonds"': Алмазы
+            '"disco"': Квадраты
+            '"disco_ball"': Зеркальный шар
+            '"fireworks"': Фейерверк
+            '"flowers"': Цветы
+            '"galaxy"': Космос
+            '"growing_stars"': Растущие звезды
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерный танцпол
+            '"music_wave"': Волны
+            '"none"': Нет
+            '"quads"': Углы
+            '"rainbow"': Радуга
+            '"rand"': "(Случайный)"
+            '"ripples"': Круги на воде
+            '"ripples_random"': Случайные круги на воде
+            '"snowflakes"': Снег
+            '"sparkles"': Блестки
+            '"spiral"': Спираль
+            '"splatter"': Брызги краски
+            '"squiggles"': Завитки
+            '"starburst"': Вспышка звёздообразования
+            '"stars"': Звезды
+            '"swirl"': Гипно
+            '"text"': Название песни
+          PALETTE:
+            '"cool"': Классный
+            '"default"': Свет
+            '"electronic"': Электронный
+            '"iceCream"': Мороженое
+            '"neon"': Неон
+            '"ocean"': Океан
+            '"rainbow"': Радуга
+            '"rave"': Черно-белый
+            '"tropical"': Тропический
+            '"vintage"': Винтаж
+            '"warm"': Красный
+        text: |-
+          "установить фоновый эффект
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:

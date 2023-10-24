@@ -4387,3 +4387,18 @@ ru:
           lessons:
             lesson-1:
               name: Наш этический кодекс искусственного интеллекта
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Введение
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Введение
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Введение
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Введение
