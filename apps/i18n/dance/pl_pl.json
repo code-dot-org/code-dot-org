@@ -1,4 +1,6 @@
 {
+  "aiDanceFeedbackNoAiBlock": "Przeciągnij blok „użyj AI” z przybornika.",
+  "aiDanceFeedbackTinkerAiBlock": "Upewnij się, by wybrać nowe tło lub efekt pierwszego planu.",
   "danceFeedbackDidntPress": "Pamiętaj, aby naciskać klawisze strzałek podczas tańca.",
   "danceFeedbackKeyEvent": "Pamiętaj, aby dołączyć kod do bloku <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> i naciskaj klawisz podczas tańca.",
   "danceFeedbackNeedBackup": "Musisz utworzyć grupę tancerzy w tle za pomocą bloku <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">„circle”</title></block> </xml>.",

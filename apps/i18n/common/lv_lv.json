@@ -93,6 +93,7 @@
   "coursesCardAction": "Atrast kursu",
   "create": "Izveidot",
   "createBlocklyFunction": "Izveido funkciju",
+  "createBlocklyVariable": "Izveido mainīgo",
   "createSectionsInfo": "Izveido jaunas sadaļas un pievieno tām skolēnus. Sadaļas ļauj tev sakārtot skolēnus mazākās grupās, kurās vienkāršāk sekot līdzi skolēnu progresam un to kontu pārvaldībai.",
   "currentVersion": "Pašreizējā versija",
   "curriculum": "Mācību programmas",
