@@ -2,474 +2,6 @@
   "ar-SA": {
     "data": {
       "resources": {
-        "lesson_plans/csd/2017": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/csd/2017": {
-          "name": "المفردات"
-        },
-        "code_introduced/csd/2017": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_1/csd/2017": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "المفردات"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "المفردات"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "المفردات"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "المفردات"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_5/csd/2017": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "المفردات"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/csd/2018": {
-          "name": "المفردات"
-        },
-        "code_introduced/csd/2018": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_1/csd/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_1/csd/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "المفردات"
-        },
-        "code_introduced_1/csd/2018": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_2/csd/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_2/csd/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_2/csd/2018": {
-          "name": "المفردات"
-        },
-        "code_introduced_2/csd/2018": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_3/csd/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_3/csd/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "المفردات"
-        },
-        "code_introduced_3/csd/2018": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_5/csd/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum_5/csd/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary_5/csd/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans/coursea/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursea/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursea/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursea/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans/courseb/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/courseb/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/courseb/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/courseb/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursed/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursed/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursed/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursee/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursee/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursee/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursef/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursef/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursef/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans/express/2018": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/express/2018": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/express/2018": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/express/2018": {
-          "name": "المفردات"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/csd/2019": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/csd/2019": {
-          "name": "المفردات"
-        },
-        "code_introduced/csd/2019": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "المفردات"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_2/csd/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "المفردات"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "المفردات"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "المفردات"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "الكود البرمجي المقدَّم"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings_5/csd/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursea/2019": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursea/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursea/2019": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/courseb/2019": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/courseb/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/courseb/2019": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursec/2019": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursec/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursec/2019": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursec/2019": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursed/2019": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursed/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursed/2019": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursee/2019": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursee/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursee/2019": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursef/2019": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursef/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "المفردات"
-        },
-        "lesson_plans/express/2019": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/express/2019": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/express/2019": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/express/2019": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursea/2020": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursea/2020": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursea/2020": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursea/2020": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/courseb/2020": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/courseb/2020": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/courseb/2020": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/courseb/2020": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursec/2020": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursec/2020": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursec/2020": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursec/2020": {
-          "name": "المفردات"
-        },
         "curriculum_guide/coursed/2020": {
           "name": "دليل المقرر الدراسي"
         },
@@ -483,60 +15,6 @@
           "name": "منتدى المعلم"
         },
         "vocabulary/coursed/2020": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursee/2020": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursee/2020": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursee/2020": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursee/2020": {
-          "name": "المفردات"
-        },
-        "curriculum_guide/coursef/2020": {
-          "name": "دليل المقرر الدراسي"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/coursef/2020": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/coursef/2020": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/coursef/2020": {
-          "name": "المفردات"
-        },
-        "lesson_plans/express/2020": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/express/2020": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/express/2020": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/express/2020": {
-          "name": "المفردات"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "مخطّطات الدّروس"
-        },
-        "standard_mappings/pre-express/2020": {
-          "name": "تعيينات قياسية"
-        },
-        "teacher_forum/pre-express/2020": {
-          "name": "منتدى المعلم"
-        },
-        "vocabulary/pre-express/2020": {
           "name": "المفردات"
         },
         "teacher_forum/csd/2021": {
@@ -6255,6 +5733,9 @@
         "publishing_your_website/csd/2023": {
           "type": "فيديو"
         },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "مصدر"
+        },
         "websites_for_a_purpose_2/csd/2023": {
           "type": "شرائح"
         },
@@ -7064,74 +6545,117 @@
           "type": "مصدر"
         },
         "the_counter_pattern_2/csd/2023": {
+          "url": "https://youtu.be/GiHbeLq1ZkM",
           "type": "فيديو"
         },
         "variables_and_if_statements_1/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1nxYAq5N0SUwIjMXI7DANtbPf0HbxKNt8sga0FbDA2cg/template/preview",
           "type": "شرائح"
         },
         "mini-project_field_collector_app_1/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1cAzWPIsJ3xlJypJ__PpC85oab4ou287vKmxiFY6f38g/template/preview",
           "type": "شرائح"
         },
+        "project_guide_-_field_collector_app_1/csd/2023": {
+          "name": "دليل المشروع - تطبيق التجميع الميداني",
+          "url": "https://docs.google.com/document/d/1jpnyyyx5CeLVePSHUdC7VwGzNFEOx9JFzj8yk_9bVyA/edit"
+        },
         "rubric_-_field_collector_app_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1grIHAJg0yyzPswmJ18W5qS_HG0KaAWFOgDPxP0r6A78/view",
           "type": "نموذج التقييم"
         },
         "getting_screen_inputs_1/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1kOuNsrHcsJ-u4xnjDUC9M_L4URMQP-tMy-29FOldeIc/template/preview",
           "type": "شرائح"
         },
         "combining_inputs_and_outputs_1/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1DwdVM5oFfl7r7t3w2vJdGZOAVAOl0jOsLgtPOlxyeLc/template/preview",
           "type": "شرائح"
         },
         "peer_review_-_human_device_interaction_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1Gj33vBmGwTM8uVdNqLDYwdUJTaI832JqKJ8XyCW1Oz0/edit",
           "type": "مصدر"
         },
+        "project_guide_-_human_device_interaction_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1CT34CDDJBgKOSpL6khJ8iv6peIZB217s4fgVr6FXFHI/edit"
+        },
         "project_human_device_interaction_1/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1ulDC3qzvAbPFQSZs4L9LU0PdHCTFpadXqzdmrtvRFcw/template/preview",
           "type": "شرائح"
         },
         "rubric_-_human_device_interaction_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/12tyPbm7fUlFkQCy_pVjxTcoISKbgXuKxdQOlhtJoSdM/edit",
           "type": "نموذج التقييم"
         },
+        "student_checklist_-_human_device_interaction_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1V1CHdXq3_w5B6An2UZA5BXXE_ODfUvis7ZS50v1eDfo/edit"
+        },
         "board_sensors_1/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1E535RsY9XFDgMijU2huDu7_ZyRF49ZKkxPdqMBGAi5c/template/preview",
           "type": "شرائح"
         },
         "data_change_events/csd/2023": {
+          "name": "أحداث البيانات والتغيير البرمجية",
+          "url": "https://studio.code.org/courses/csd-2022/guides/data-and-change-events",
           "type": "مصدر"
         },
         "setting_sensor_scale/csd/2023": {
+          "name": "إعداد مقياس المستشعر",
+          "url": "https://studio.code.org/courses/csd-2022/guides/changing-sensor-scale",
           "type": "مصدر"
         },
         "the_micro_bit_sensors/csd/2023": {
+          "name": "مستشعرات المايكروبيت",
+          "url": "https://studio.code.org/courses/csd-2022/guides/microbit-sensors",
           "type": "مصدر"
         },
         "accelerometer_1/csd/2023": {
           "name": "مقياس التسارع",
+          "url": "https://docs.google.com/presentation/d/1V0MnN-LeOoyZw08DUDLzf5oGBmOb5hqxxjQG2xywnG0/template/preview",
           "type": "شرائح"
         },
         "accelerometer_events_1/csd/2023": {
+          "url": "https://studio.code.org/courses/csd-2022/guides/accelerometer-events",
           "type": "مصدر"
         },
         "the_micro_bit_accelerometer/csd/2023": {
+          "name": "مقياس تسارع المايكروبيت micro:bit ",
+          "url": "https://studio.code.org/courses/csd-2022/guides/the-accelerometer",
           "type": "مصدر"
         },
         "functions_3/csd/2023": {
           "name": "دوال",
+          "url": "https://docs.google.com/presentation/d/1Wl8SYLVhPeFlUKF1rINefVKxHl-KR48POPpG4eqMRiA/template/preview",
           "type": "شرائح"
         },
         "mini-project_interactive_pet/csd/2023": {
+          "name": "مشروع صغير: حيوان أليف تفاعلي",
+          "url": "https://docs.google.com/presentation/d/1ho2cU7mQIPHNZ2HpULzlxeXIZ5wLtcilSNp3rnzXhnU/template/preview",
           "type": "شرائح"
         },
+        "project_guide_-_interactive_pet/csd/2023": {
+          "name": "دليل المشروع - الحيوان التفاعلي الأليف",
+          "url": "https://docs.google.com/document/d/1X0NCzO8s-6kxCgGT5wC8GXkGJrVeaW7F4_zyImbjq9s/edit#"
+        },
         "student_rubric_-_interactive_pet/csd/2023": {
+          "name": "نموذج تقييم الطالب - الحيوان التفاعلي الأليف",
+          "url": "https://docs.google.com/document/d/1gHFFmcxnroXEHFyWYXR3sXzqoe7QMNL5kDkrZbgwsfE/edit#",
           "type": "نموذج التقييم"
         },
         "external_leds_on_a_micro_bit/csd/2023": {
+          "url": "https://studio.code.org/courses/csd-2022/guides/microbit-circuits-leds",
           "type": "مصدر"
         },
         "physical_outputs_and_leds_1/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1jIusEvaliAbQrCaGKpUpr9n9OFcunHaATRPik4TnXkw/template/preview",
           "type": "شرائح"
         },
         "external_buttons_on_a_micro_bit/csd/2023": {
+          "url": "https://studio.code.org/courses/csd-2022/guides/microbit-circuits-buttons",
           "type": "مصدر"
         },
         "physical_inputs_and_buttons_1/csd/2023": {
+          "url": "https://docs.google.com/presentation/d/1m2i8Wmynhanm4fDZwoLCff0Ad1uFcXUVw6HznAKlmKQ/template/preview><https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
           "type": "شرائح"
         },
         "project_prototype_an_innovation_1/csd/2023": {
@@ -8800,12 +8324,12 @@
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "نموذج محاكاة لغة كبير مُولّد",
+          "name": "النماذج اللغوية الكبيرة المولّدة",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "شرائح"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "name": "كيف يعمل الذكاء الاصطناعي: روبوتات المحادثة ونماذج محاكاة اللغات الكبيرة (الجزء الأول)",
+          "name": "كيف يعمل الذكاء الاصطناعي: روبوتات المحادثة والنماذج اللغوية الكبيرة (الجزء الأول)",
           "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "فيديو"
         },
@@ -8841,12 +8365,12 @@
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
         },
         "generative_images/how-ai-works/2023": {
-          "name": "صور توليدية",
+          "name": "صور مولّدة",
           "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
           "type": "شرائح"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] دليل نشاط الصور التوليدية",
+          "name": "[Key] دليل نشاط الصور المولّدة",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
           "type": "الحل النموذجي"
         },
@@ -8864,7 +8388,7 @@
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
-          "name": "دليل المستخدم: أداة صورة الضوضاء",
+          "name": "دليل المستخدم: واجهة تطبيق الصورة المشوشة",
           "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "مصدر"
         },
