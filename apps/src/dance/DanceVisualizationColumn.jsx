@@ -104,7 +104,7 @@ class DanceVisualizationColumn extends React.Component {
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
-        {this.props.over21 && (
+        {this.props.over21 && !isSignedIn && (
           <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
         )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
