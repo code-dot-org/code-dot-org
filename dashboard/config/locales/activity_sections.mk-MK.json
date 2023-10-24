@@ -2,39 +2,6 @@
   "mk-MK": {
     "data": {
       "activity_sections": {
-        "a5c9a563-cb58-48ed-9acd-21c6606c373b": {
-          "name": "Видео: Што го прави компјутерот, компјутер?",
-          "progression_name": "Видео: Што го прави компјутерот, компјутер?"
-        },
-        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
-          "progression_name": "Листи"
-        },
-        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
-          "progression_name": "Променливи"
-        },
-        "a4ef1044-88f1-4275-9e38-d5cfdbae11c6": {
-          "name": "Видео: Што го прави компјутерот, компјутер?",
-          "progression_name": "Видео: Што го прави компјутерот, компјутер?"
-        },
-        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
-          "progression_name": "Листи"
-        },
-        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
-          "progression_name": "Променливи"
-        },
-        "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
-          "name": "Видео: Што го прави компјутерот, компјутер?",
-          "progression_name": "Видео: Што го прави компјутерот, компјутер?"
-        },
-        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
-          "progression_name": "Листи"
-        },
-        "13d78339-15e3-4fa2-9b87-22412794083d": {
-          "progression_name": "Променливи"
-        },
-        "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
-          "progression_name": "Својства"
-        },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
           "tips": [
             null
@@ -13484,36 +13451,6 @@
             null
           ]
         },
-        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
-          "tips": [
-            null
-          ]
-        },
-        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
-          "tips": [
-            null
-          ]
-        },
-        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
-          "tips": [
-            null
-          ]
-        },
-        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
-          "tips": [
-            null
-          ]
-        },
-        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
-          "tips": [
-            null
-          ]
-        },
-        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
-          "tips": [
-            null
-          ]
-        },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
             null
@@ -13654,17 +13591,6 @@
             null
           ]
         },
-        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
-          "tips": [
-            null
-          ]
-        },
-        "950807e2-afa0-4c26-9459-4682b3f49602": {
-          "progression_name": "Пример"
-        },
-        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
-          "progression_name": "Пример"
-        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "tips": [
             null
@@ -13714,22 +13640,6 @@
           "tips": [
             null
           ]
-        },
-        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
-          "tips": [
-            null
-          ]
-        },
-        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
-          "tips": [
-            null
-          ]
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Главна активност (стара)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Главна активност (Нова)"
         }
       }
     }
