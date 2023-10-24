@@ -137,6 +137,10 @@ ky:
         options:
           EFFECT:
             '"none"': Жок
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': Жок
       Dancelab_setDanceSpeed:
         options:
           SPEED:
