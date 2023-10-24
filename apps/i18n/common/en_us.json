@@ -74,6 +74,7 @@
   "aiBot": "AI Bot",
   "aiCannotAssess": "This learning goal is too subjective for AI to evaluate.",
   "aiConfidence": "AI has {aiConfidence} confidence in this assessment",
+  "aiConfidenceTooltip": "The confidence score is calculated from how well the AI assessment worked for this learning goal on our training set of student projects. Pay extra attention to projects with medium or low confidence.",
   "aiStudentAssessment": "{studentName} has achieved {understandingLevel} for this learning goal.",
   "aiTrainedModels": "AI Trained Models",
   "aiTrainedModelsNoModels": "You have not trained any AI models yet.",

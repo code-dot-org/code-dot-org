@@ -68,7 +68,7 @@ describe('LearningGoal', () => {
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
   });
 
-  it('renders tips', () => {
+  it('renders tips for teachers', () => {
     const wrapper = shallow(
       <LearningGoal
         learningGoal={{
@@ -78,11 +78,28 @@ describe('LearningGoal', () => {
           tips: 'Tips',
         }}
         teacherHasEnabledAi
+        isStudent={false}
       />
     );
     expect(wrapper.find('Heading6')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
+  });
+
+  it('does not render tips for students', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: true,
+          evidenceLevels: [],
+          tips: 'Tips',
+        }}
+        isStudent={true}
+      />
+    );
+    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
+    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
   });
 
   it('shows AI token when AI is enabled', () => {
