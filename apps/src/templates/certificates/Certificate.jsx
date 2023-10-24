@@ -10,6 +10,8 @@ import LargeChevronLink from './LargeChevronLink';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 import style from './congrats.module.scss';
 import {
+  BodyTwoText,
+  BodyThreeText,
   Heading1,
   Heading2,
   Heading3,
@@ -162,7 +164,9 @@ function Certificate(props) {
           {tutorial && !personalized && (
             <div>
               <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
-              <p className={style.enterName}>{i18n.enterYourName()}</p>
+              <BodyThreeText className={style.enterName}>
+                {i18n.enterYourName()}
+              </BodyThreeText>
               <div className={style.inputButtonContainer}>
                 <input
                   id="name"
@@ -186,12 +190,14 @@ function Certificate(props) {
               <Heading2 id="uitest-thanks">
                 {i18n.congratsCertificateThanks()}
               </Heading2>
-              <p>{i18n.congratsCertificateContinue()}</p>
+              <BodyTwoText>{i18n.congratsCertificateContinue()}</BodyTwoText>
             </div>
           )}
           <hr />
           <Heading3>{i18n.congratsCertificateShare()}</Heading3>
-          <p>{i18n.congratsCertificateShareMessage()}</p>
+          <BodyThreeText>
+            {i18n.congratsCertificateShareMessage()}
+          </BodyThreeText>
           <SocialShare
             facebook={facebook}
             twitter={twitter}

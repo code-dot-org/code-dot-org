@@ -4,7 +4,11 @@ import Certificate from './Certificate';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import style from './certificate_batch.module.scss';
 import i18n from '@cdo/locale';
-import {Heading3, Heading4} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyTwoText,
+  Heading3,
+  Heading4,
+} from '@cdo/apps/componentLibrary/typography';
 
 export default function Congrats(props) {
   /**
@@ -67,9 +71,6 @@ export default function Congrats(props) {
     initialCertificateImageUrl,
     isHocTutorial,
   } = props;
-
-  // const isEnglish = language === 'en';
-  // const tutorialType = getTutorialType(tutorial);
 
   const teacherCourses = [
     {
@@ -210,10 +211,12 @@ export default function Congrats(props) {
               key={index}
             >
               <div className={style.contentWrapper}>
-                <p className={style.overline}>{item.grade}</p>
+                <BodyTwoText className={style.overline}>
+                  {item.grade}
+                </BodyTwoText>
                 <Heading3>{item.title}</Heading3>
                 <img src={item.image} alt="" />
-                <p>{item.description}</p>
+                <BodyTwoText>{item.description}</BodyTwoText>
               </div>
               <div className={style.contentFooter}>
                 <a className={style.linkButton} href={item.link}>
@@ -227,7 +230,7 @@ export default function Congrats(props) {
 
         <div className={style.textCenter}>
           <Heading4>{i18n.discoverMore()}</Heading4>
-          <p>{i18n.discoverMoreCatalogText()}</p>
+          <BodyTwoText>{i18n.discoverMoreCatalogText()}</BodyTwoText>
           <div className={style.imageContainer}>
             {curriculumCatalogImages.map((item, index) => (
               <img key={index} src={item} alt="" />
@@ -279,7 +282,7 @@ export default function Congrats(props) {
                     className={style.professionalLearningImage}
                   />
                   <Heading3>{item.title}</Heading3>
-                  <p>{item.description}</p>
+                  <BodyTwoText>{item.description}</BodyTwoText>
                 </div>
                 <div className={style.contentFooter}>
                   <a className={style.linkButton} href={item.link}>

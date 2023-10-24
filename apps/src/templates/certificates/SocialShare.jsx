@@ -85,7 +85,7 @@ const styles = {
   printButton: {
     backgroundColor: 'transparent',
     borderColor: color.black,
-    borderWidht: '1px',
+    borderWidth: '1px',
     padding: '10px 20px',
   },
 };
