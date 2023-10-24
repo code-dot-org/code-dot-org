@@ -9,7 +9,7 @@ import {
   clearConsoleLogs,
   closePhotoPrompter,
 } from './redux/consoleRedux';
-import { setHasCompilationError } from './redux/editorRedux';
+import {setHasCompilationError} from './redux/editorRedux';
 import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
@@ -18,7 +18,6 @@ import PaneHeader, {
 } from '@cdo/apps/templates/PaneHeader';
 import PhotoSelectionView from './components/PhotoSelectionView';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import msg from '@cdo/javalab/locale';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -65,20 +64,27 @@ class JavalabConsole extends React.Component {
   };
 
   hasCompilationError = log => {
-    return log.text && log.text.includes(msg.compilerError())
+    return log.text && log.text.includes(javalabMsg.compilerError());
   };
 
   hasCompilationSucces = log => {
-    return log.text && log.text.includes(msg.compilationSuccess())
-  }
+    return log.text && log.text.includes(javalabMsg.compilationSuccess());
+  };
 
   checkForCompilationError = consoleLogs => {
     const {setHasCompilationError} = this.props;
-    const logsSortedByRecency = consoleLogs.slice().reverse()
-    const indexOfMostRecentError = logsSortedByRecency.findIndex(this.hasCompilationError);
-    if (indexOfMostRecentError != -1) {
-      const logsAfterError = logsSortedByRecency.slice(0, indexOfMostRecentError)
-      const hasUnresolvedError = !logsAfterError.find(this.hasCompilationSucces)
+    const logsSortedByRecency = consoleLogs.slice().reverse();
+    const indexOfMostRecentError = logsSortedByRecency.findIndex(
+      this.hasCompilationError
+    );
+    if (indexOfMostRecentError !== -1) {
+      const logsAfterError = logsSortedByRecency.slice(
+        0,
+        indexOfMostRecentError
+      );
+      const hasUnresolvedError = !logsAfterError.find(
+        this.hasCompilationSucces
+      );
       setHasCompilationError(hasUnresolvedError);
     } else {
       setHasCompilationError(false);
@@ -88,8 +94,8 @@ class JavalabConsole extends React.Component {
   componentDidUpdate(prevProps) {
     const prevConsoleLogs = prevProps.consoleLogs;
     const consoleLogs = this.props.consoleLogs;
-    if (prevConsoleLogs != consoleLogs) {
-      this.checkForCompilationError(consoleLogs)
+    if (prevConsoleLogs !== consoleLogs) {
+      this.checkForCompilationError(consoleLogs);
     }
     const prevLogsLength = prevConsoleLogs.length;
     if (
@@ -99,10 +105,6 @@ class JavalabConsole extends React.Component {
       this.jumpToBottom();
     }
   }
-
-  // componentWillReceiveProps = (nextProps) => {
-  //   this.checkForCompilationError(nextProps.consoleLogs)
-  // }
 
   jumpToBottom = () => {
     this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
@@ -240,7 +242,7 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {displayTheme, style, bottomRow, clearConsoleLogs, editorFontSize, consoleLogs} =
+    const {displayTheme, style, bottomRow, clearConsoleLogs, editorFontSize} =
       this.props;
 
     return (
@@ -316,7 +318,8 @@ export default connect(
     appendInputLog: log => dispatch(appendInputLog(log)),
     clearConsoleLogs: () => dispatch(clearConsoleLogs()),
     closePhotoPrompter: () => dispatch(closePhotoPrompter()),
-    setHasCompilationError: hasCompilationError => dispatch(setHasCompilationError(hasCompilationError))
+    setHasCompilationError: hasCompilationError =>
+      dispatch(setHasCompilationError(hasCompilationError)),
   })
 )(JavalabConsole);
 
