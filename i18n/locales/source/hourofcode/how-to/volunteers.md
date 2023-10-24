@@ -169,7 +169,7 @@ One of the best ways to help is to spread the word and promote the Hour of Code.
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg">]({{ urls/learn }})
 
 ### 1. Register Your Event
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
 
 ### 2. Post on Social Media
 Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
