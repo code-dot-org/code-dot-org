@@ -139,6 +139,10 @@ lt:
         options:
           EFFECT:
             '"none"': Nė vienas
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': Nė vienas
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:

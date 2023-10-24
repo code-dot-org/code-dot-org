@@ -2,142 +2,6 @@
   "lt-LT": {
     "data": {
       "activity_sections": {
-        "322f42db-5491-4424-9d7b-b64af0b54703": {
-          "progression_name": "Programavimas poroje"
-        },
-        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
-          "progression_name": "Sąrašai"
-        },
-        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
-          "progression_name": "Kintamieji"
-        },
-        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
-          "progression_name": "Greitis"
-        },
-        "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
-          "progression_name": "Komandų kūrimas"
-        },
-        "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
-          "progression_name": "Įvykiai"
-        },
-        "ea794705-6489-44b1-a635-9a1a2249d4e5": {
-          "progression_name": "Dvejetainiai skaičiai"
-        },
-        "11c25022-a283-488e-9952-4d58bd243a7e": {
-          "progression_name": "Peržiūra"
-        },
-        "54b046af-de7a-4f1c-96e8-8f35bc6ee2f3": {
-          "progression_name": "Peržiūra"
-        },
-        "71a82859-6091-4931-8e65-9609a5248896": {
-          "name": "Peržiūra",
-          "progression_name": "Peržiūra"
-        },
-        "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
-          "progression_name": "Peržiūra"
-        },
-        "14876891-4b0e-4960-878d-f5c7b5771261": {
-          "progression_name": "Įvykiai"
-        },
-        "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
-          "progression_name": "Komandų kūrimas"
-        },
-        "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
-          "progression_name": "Kartojimas"
-        },
-        "2b5209d7-f495-4e26-b2af-8b639c085bca": {
-          "progression_name": "Kartojimas"
-        },
-        "41a48a88-144d-417d-a903-a09df11b7f9c": {
-          "progression_name": "Komandos su parametrais"
-        },
-        "bcc27c68-f369-4469-a472-2047c24ee541": {
-          "progression_name": "Programavimas poroje"
-        },
-        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
-          "progression_name": "Sąrašai"
-        },
-        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
-          "progression_name": "Kintamieji"
-        },
-        "128361aa-1832-4581-a686-26ec8d72bc30": {
-          "progression_name": "Greitis"
-        },
-        "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
-          "progression_name": "Komandų kūrimas"
-        },
-        "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
-          "progression_name": "Įvykiai"
-        },
-        "8c2572d4-ae23-481b-9a2d-a82c1ca6c083": {
-          "progression_name": "Dvejetainiai skaičiai"
-        },
-        "90bc9191-8e68-41bd-b8e9-8291930dca38": {
-          "progression_name": "Įvykiai"
-        },
-        "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
-          "progression_name": "Komandų kūrimas"
-        },
-        "bca84870-d563-4903-b1d9-51253cbbfc90": {
-          "progression_name": "Kartojimas"
-        },
-        "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
-          "progression_name": "Komandos su parametrais"
-        },
-        "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
-          "progression_name": "Programavimas poroje"
-        },
-        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
-          "progression_name": "Sąrašai"
-        },
-        "13d78339-15e3-4fa2-9b87-22412794083d": {
-          "progression_name": "Kintamieji"
-        },
-        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
-          "progression_name": "Greitis"
-        },
-        "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
-          "progression_name": "Komandų kūrimas"
-        },
-        "d9046a60-1bfa-40fd-bc94-4d9fb418cabf": {
-          "progression_name": "Dvejetainiai skaičiai"
-        },
-        "de9506b3-18cc-45c8-a490-9f9b49505977": {
-          "progression_name": "Įvykiai"
-        },
-        "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
-          "progression_name": "Komandų kūrimas"
-        },
-        "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
-          "progression_name": "Kartojimas"
-        },
-        "1ea8ae38-1276-4214-9baa-667d745ca47c": {
-          "progression_name": "Komandos su parametrais"
-        },
-        "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
-          "progression_name": "Programavimas poroje"
-        },
-        "282dad48-141f-46bb-9675-9f0629dab0fc": {
-          "progression_name": "Programavimas poroje"
-        },
-        "b6a63f32-8007-4b17-ae9b-718652243e78": {
-          "progression_name": "Menininkas: kintamieji"
-        },
-        "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
-          "progression_name": "Programavimas poroje"
-        },
-        "cef1dcf2-8240-4b77-b667-040c16bc6526": {
-          "progression_name": "Programavimas poroje"
-        },
-        "83b5ca79-12e5-4d68-a965-4bed0681e331": {
-          "progression_name": "Įvykiai"
-        },
-        "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
-          "progression_name": "Apibendrinimas"
-        },
-        "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
-          "progression_name": "Menininkas: kintamieji"
-        },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
           "tips": [
             null
@@ -14661,36 +14525,6 @@
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Užbaigus „Programavimo valandą“"
         },
-        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
-          "tips": [
-            null
-          ]
-        },
-        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
-          "tips": [
-            null
-          ]
-        },
-        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
-          "tips": [
-            null
-          ]
-        },
-        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
-          "tips": [
-            null
-          ]
-        },
-        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
-          "tips": [
-            null
-          ]
-        },
-        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
-          "tips": [
-            null
-          ]
-        },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
             null
@@ -14897,17 +14731,6 @@
         "8531cf05-6363-4654-b20a-455e85fa16a0": {
           "name": "Užbaigus „Programavimo valandą“"
         },
-        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
-          "tips": [
-            null
-          ]
-        },
-        "950807e2-afa0-4c26-9459-4682b3f49602": {
-          "progression_name": "Pavyzdys"
-        },
-        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
-          "progression_name": "Pavyzdys"
-        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Įvadas",
           "tips": [
@@ -14967,19 +14790,6 @@
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
-          "tips": [
-            null
-          ]
-        },
-        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
-          "tips": [
-            null
-          ]
-        },
-        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
-          "name": "Dėlionės"
-        },
-        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
           "tips": [
             null
           ]
