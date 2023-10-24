@@ -176,6 +176,11 @@ sq:
         options:
           EFFECT:
             '"none"': Asnjë
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': Asnjë
+            '"clouds"': Retë
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
