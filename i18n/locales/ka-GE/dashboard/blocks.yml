@@ -245,6 +245,14 @@ ka:
             '"none"': არცერთი
             '"diamonds"': ბრილიანტები
             '"rainbow"': ცისარტყელა
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': არცერთი
+            '"diamonds"': ბრილიანტები
+            '"rainbow"': ცისარტყელა
+          PALETTE:
+            '"rainbow"': ცისარტყელა
       Dancelab_setDanceSpeed:
         options:
           SPEED:
