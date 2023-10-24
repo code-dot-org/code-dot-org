@@ -89,3 +89,18 @@ ul.dance-party-featured-artists {
   }
 }
 
+// Adds an "!" after the phrase "and more"
+// for both LTR and RTL languages
+.and-more::after {
+  content: "!";
+  margin-left: -4px;
+}
+
+html[dir="rtl"] {
+  .and-more::after { content: "" }
+
+  .and-more::before {
+    content: "!";
+    margin-right: -4px;
+  }
+}
