@@ -5,21 +5,17 @@ import Button from '@cdo/apps/templates/Button';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import {BlockSvg, Workspace} from 'blockly/core';
-import {doAi} from './utils';
 import AiGeneratingView from './AiGeneratingView';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
+import AiExplanationView from './AiExplanationView';
 import {AiOutput} from '../types';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
-
-const promptString = 'Generate a scene using this mood:';
 
 enum Mode {
   SELECT_INPUTS = 'selectInputs',
@@ -27,6 +23,7 @@ enum Mode {
   GENERATING = 'generating',
   RESULTS = 'results',
   RESULTS_FINAL = 'resultsFinal',
+  EXPLANATION = 'explanation',
 }
 
 type AiModalItem = {
@@ -83,6 +80,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setResultJson(currentValue);
 
       setShowPreview(true);
+
+      setInputs(JSON.parse(currentValue).inputs);
     }
   }, [currentAiModalField]);
 
@@ -122,32 +121,36 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.RESULTS);
   };
 
-  const handleProcessClick = () => {
-    const inputNames = inputs.map(
-      input =>
-        inputLibrary.items.find((item: AiModalItem) => item.id === input).name
-    );
+  const handleResultsFinalClick = () => {
+    setMode(Mode.RESULTS_FINAL);
+  };
 
-    startAi(inputNames);
+  const handleGenerateClick = () => {
+    startAi();
+    setMode(Mode.GENERATING);
+  };
+
+  const handleRegenerateClick = () => {
+    // Reset state
+    setTypingDone(false);
+    setResultJson('');
+    setShowPreview(false);
+    setProcessingDone(false);
+    setGeneratingNodesDone(false);
+    setGeneratingDone(false);
+
+    handleGenerateClick();
+  };
+
+  const handleProcessClick = () => {
     setMode(Mode.PROCESSING);
     setTimeout(() => {
       setProcessingDone(true);
     }, 4000);
   };
 
-  const handleGenerateClick = () => {
-    setMode(Mode.GENERATING);
-  };
-
-  const startAi = async (inputNames: Array<string>) => {
-    const request = `${promptString} ${inputNames.join(', ')}.`;
-    let responseJsonString: string;
-    // Default to using cached response, otherwise contact OpenAI directly
-    if (queryParams('ai-model') === 'llm') {
-      responseJsonString = await doAi(request);
-    } else {
-      responseJsonString = chooseEffects(inputNames);
-    }
+  const startAi = async () => {
+    const responseJsonString = chooseEffects(inputs);
     const result = JSON.parse(responseJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
@@ -181,7 +184,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
       workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
-      workspace.newBlock('Dancelab_setBackgroundEffectWithPalette') as BlockSvg,
+      workspace.newBlock(
+        'Dancelab_setBackgroundEffectWithPaletteAI'
+      ) as BlockSvg,
     ];
 
     // Foreground block.
@@ -242,6 +247,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     dispatch(setCurrentAiModalField(undefined));
   };
 
+  const handleExplanationClick = () => {
+    setMode(Mode.EXPLANATION);
+  };
+
   const handleStartOverClick = () => {
     setMode(Mode.SELECT_INPUTS);
     setInputs([]);
@@ -272,26 +281,75 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       onClose={onClose}
       initialFocus={false}
     >
+      <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
+        <img src={aiBotBorder} className={moduleStyles.botImage} />
+        generate &nbsp;
+        <div className={moduleStyles.inputsContainer}>
+          {Array.from(Array(SLOT_COUNT).keys()).map(index => (
+            <div
+              key={index}
+              style={{
+                backgroundImage:
+                  inputs[index] && `url(${getImageUrl(inputs[index])}`,
+              }}
+              className={moduleStyles.emojiSlot}
+              title={getItemName(inputs[index])}
+            />
+          ))}
+        </div>
+        &nbsp; stage
+        <div
+          id="ai-modal-header-area-right"
+          className={moduleStyles.headerAreaRight}
+        >
+          {mode === Mode.RESULTS_FINAL && (
+            <Button
+              id="explanation-button"
+              text={'Explanation'}
+              onClick={handleExplanationClick}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonNoMargin,
+                moduleStyles.buttonSmallText
+              )}
+            />
+          )}
+          {mode === Mode.EXPLANATION && (
+            <Button
+              id="results-final-button"
+              text={'Back to Results'}
+              onClick={handleResultsFinalClick}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonNoMargin,
+                moduleStyles.buttonSmallText
+              )}
+            />
+          )}
+        </div>
+      </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
         <div id="text-area" className={moduleStyles.textArea}>
-          <StrongText>
-            {' '}
-            {mode === Mode.SELECT_INPUTS
-              ? 'Choose three emoji for the mood of the stage.'
-              : mode === Mode.PROCESSING && !processingDone
-              ? 'The AI is processing your input.'
-              : mode === Mode.PROCESSING && processingDone
-              ? 'The AI is ready to generate a stage!'
-              : mode === Mode.GENERATING
-              ? 'The AI is generating results.'
-              : mode === Mode.RESULTS && !typingDone
-              ? 'The AI is showing results.'
-              : mode === Mode.RESULTS && typingDone
-              ? 'This is the stage generated by the AI.'
-              : mode === Mode.RESULTS_FINAL
-              ? 'This was the stage generated by the AI.'
-              : undefined}
-          </StrongText>
+          {' '}
+          {mode === Mode.SELECT_INPUTS
+            ? 'Choose three emoji for the mood of the stage.'
+            : mode === Mode.PROCESSING && !processingDone
+            ? 'The AI is processing your input.'
+            : mode === Mode.PROCESSING && processingDone
+            ? 'The AI is ready to generate a stage!'
+            : mode === Mode.GENERATING
+            ? 'The AI is generating results.'
+            : mode === Mode.RESULTS && !typingDone
+            ? 'The AI is showing results.'
+            : mode === Mode.RESULTS && typingDone
+            ? 'This is the stage generated by the AI.'
+            : mode === Mode.RESULTS_FINAL
+            ? 'This was the stage generated by the AI.'
+            : mode === Mode.EXPLANATION
+            ? 'This is why AI chose the stage.'
+            : undefined}
         </div>
 
         <div
@@ -302,12 +360,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {mode === Mode.SELECT_INPUTS && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
               {getAllItems(currentInputSlot).map(
-                (item: AiModalReturnedItem, index: number) => {
+                (item: AiModalReturnedItem) => {
                   return (
-                    <div
-                      tabIndex={
-                        index === 0 && currentInputSlot === 0 ? 0 : undefined
-                      }
+                    <button
+                      type={'button'}
                       key={item.id}
                       onClick={() => item.available && handleItemClick(item.id)}
                       style={{
@@ -450,31 +506,50 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        {showPreview && (
-          <div id="preview-area" className={moduleStyles.previewArea}>
-            <AiVisualizationPreview
-              blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
+        {(mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL) &&
+          showPreview && (
+            <div id="preview-area" className={moduleStyles.previewArea}>
+              <AiVisualizationPreview
+                blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
+              />
+            </div>
+          )}
+
+        {mode === Mode.EXPLANATION && (
+          <div id="explanation-area" className={moduleStyles.explanationArea}>
+            <AiExplanationView
+              inputs={inputs}
+              result={JSON.parse(resultJson)}
             />
           </div>
         )}
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
           {mode === Mode.RESULTS_FINAL && (
-            <Button
-              id="start-over"
-              text={'Start over'}
-              onClick={handleStartOverClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonLeft
-              )}
-            />
+            <div
+              id="buttons-area-left"
+              className={moduleStyles.buttonsAreaLeft}
+            >
+              <Button
+                id="start-over-button"
+                text={'Start over'}
+                onClick={handleStartOverClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={classNames(moduleStyles.button)}
+              />
+              <Button
+                id="regenerate"
+                text={'Regenerate'}
+                onClick={handleRegenerateClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={classNames(moduleStyles.button)}
+              />
+            </div>
           )}
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
-              id="select-all-sections"
+              id="select-all-sections-button"
               text={'Process'}
               onClick={handleProcessClick}
               color={Button.ButtonColor.brandSecondaryDefault}
@@ -484,7 +559,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
           {mode === Mode.PROCESSING && processingDone && (
             <Button
-              id="done"
+              id="generate-button"
               text={'Generate'}
               onClick={handleGenerateClick}
               color={Button.ButtonColor.brandSecondaryDefault}
@@ -494,18 +569,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
           {mode === Mode.GENERATING && generatingDone && (
             <Button
-              id="done"
+              id="results-button"
               text={'View results'}
               onClick={handleResultsClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
           )}
-
           {showConvertButton && (
             <Button
-              id="convert"
-              text={'Convert'}
+              id="convert-button"
+              text={'Edit code'}
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -513,7 +587,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
           {showUseButton && (
             <Button
-              id="use"
+              id="use-button"
               text={'Use'}
               onClick={handleUseClick}
               color={Button.ButtonColor.brandSecondaryDefault}

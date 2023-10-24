@@ -12,16 +12,16 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::CourseOfferings.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Courses.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CurriculumContent.expects(:sync_in).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::DataContent.expects(:sync_in).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::DeviseContent.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Docs.expects(:sync_in).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::MarketingAnnouncements.expects(:sync_in).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::RestrictedContent.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Scripts.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::SharedFunctions.expects(:sync_in).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::Slides.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Standards.expects(:sync_in).in_sequence(execution_sequence)
-
-      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/data.en.yml'), CDO.dir('i18n/locales/source/dashboard/data.yml')).in_sequence(execution_sequence)
-      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/devise.en.yml'), CDO.dir('i18n/locales/source/dashboard/devise.yml')).in_sequence(execution_sequence)
-      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/restricted.en.yml'), CDO.dir('i18n/locales/source/dashboard/restricted.yml')).in_sequence(execution_sequence)
-      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/slides.en.yml'), CDO.dir('i18n/locales/source/dashboard/slides.yml')).in_sequence(execution_sequence)
-      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/unplugged.en.yml'), CDO.dir('i18n/locales/source/dashboard/unplugged.yml')).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::UnpluggedContent.expects(:sync_in).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_in
     end
@@ -37,10 +37,16 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::CourseOfferings.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Courses.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CurriculumContent.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::DataContent.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::DeviseContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Docs.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::MarketingAnnouncements.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::RestrictedContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Scripts.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::SharedFunctions.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::Slides.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Standards.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::UnpluggedContent.expects(:sync_out).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_out
     end

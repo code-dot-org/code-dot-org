@@ -80,7 +80,7 @@ module Cdo
       reset_if_forked
       timeout_at = now + timeout
       until (wait = timeout_at - now) < 0 || @buffer.empty?
-        @log.info "Flushing #{self.class}, waiting #{wait} seconds"
+        @log.debug "Flushing #{self.class}, waiting #{wait} seconds"
         schedule_flush(force: true)
         # Block until the pending flush is completed or timeout is reached.
         @task.wait(wait.infinite? ? nil : wait)

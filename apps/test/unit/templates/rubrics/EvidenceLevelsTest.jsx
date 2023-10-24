@@ -1,9 +1,7 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
+import {shallow} from 'enzyme';
 import EvidenceLevels from '@cdo/apps/templates/rubrics/EvidenceLevels';
-import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
 
 const DEFAULT_PROPS = {
   evidenceLevels: [
@@ -14,62 +12,28 @@ const DEFAULT_PROPS = {
 };
 
 describe('EvidenceLevels', () => {
-  it('renders evidence levels when feedback available', () => {
-    const wrapper = shallow(
-      <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback />
-    );
-    expect(wrapper.find('Heading6').length).to.equal(1);
-    expect(wrapper.find('Heading6').props().children).to.equal(
-      'Assign a Rubric Score'
-    );
-    expect(wrapper.find('Memo(RadioButton)').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length
-    );
-    expect(wrapper.find('BodyThreeText').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length
-    );
-    const lastEvidenceLevel =
-      DEFAULT_PROPS.evidenceLevels[DEFAULT_PROPS.evidenceLevels.length - 1];
-    expect(wrapper.find('BodyThreeText').at(0).props().children).to.equal(
-      lastEvidenceLevel.teacherDescription
-    );
-    expect(wrapper.find('Memo(RadioButton)').at(0).prop('label')).to.equal(
-      UNDERSTANDING_LEVEL_STRINGS[lastEvidenceLevel.understanding]
-    );
+  it('renders teachers view of evidence levels when the user can not provide feedback', () => {
+    const wrapper = shallow(<EvidenceLevels {...DEFAULT_PROPS} />);
+    expect(wrapper.find('EvidenceLevelsForTeachers').length).to.equal(1);
+    expect(
+      wrapper.find('EvidenceLevelsForTeachers').props().canProvideFeedback
+    ).to.equal(undefined);
   });
 
-  it('renders evidence levels when feedback not available', () => {
+  it('renders teachers view of evidence levels when the user can provide feedback', () => {
     const wrapper = shallow(
-      <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback={false} />
+      <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback={true} />
     );
-    expect(wrapper.find('Heading6').length).to.equal(1);
-    expect(wrapper.find('Heading6').props().children).to.equal('Rubric Scores');
-    expect(wrapper.find('Memo(RadioButton)').length).to.equal(0);
-    // Two BodyThreeText per evidence level
-    expect(wrapper.find('BodyThreeText').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length * 2
-    );
-    const lastEvidenceLevel =
-      DEFAULT_PROPS.evidenceLevels[DEFAULT_PROPS.evidenceLevels.length - 1];
-    expect(wrapper.find('StrongText').at(0).props().children).to.equal(
-      UNDERSTANDING_LEVEL_STRINGS[lastEvidenceLevel.understanding]
-    );
-    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
-      lastEvidenceLevel.teacherDescription
-    );
+    expect(wrapper.find('EvidenceLevelsForTeachers').length).to.equal(1);
+    expect(
+      wrapper.find('EvidenceLevelsForTeachers').props().canProvideFeedback
+    ).to.equal(true);
   });
 
-  it('calls radioButtonCallback when understanding is selected', () => {
-    const callback = sinon.stub();
-    const wrapper = mount(
-      <EvidenceLevels
-        {...DEFAULT_PROPS}
-        canProvideFeedback
-        radioButtonCallback={callback}
-      />
+  it('renders student view of evidence levels when student is viewing the rubric', () => {
+    const wrapper = shallow(
+      <EvidenceLevels {...DEFAULT_PROPS} isStudent={true} />
     );
-    wrapper.find('input').first().simulate('change');
-    sinon.assert.calledOnce(callback);
-    wrapper.unmount();
+    expect(wrapper.find('EvidenceLevelsForStudents').length).to.equal(1);
   });
 });
