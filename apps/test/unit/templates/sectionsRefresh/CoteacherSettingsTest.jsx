@@ -80,11 +80,13 @@ describe('CoteacherSettings', () => {
     wrapper
       .find('input')
       .simulate('change', {target: {value: 'invalid-email'}});
-    wrapper.find('form').simulate('submit', {preventDefault: () => {}});
+    wrapper
+      .find('Button[id="add-coteacher"]')
+      .simulate('click', {preventDefault: () => {}});
     expect(wrapper.find('Figcaption').props().children).to.include(
       'invalid-email is not a valid email address.'
     );
-    const icon = wrapper.find('FontAwesome');
+    const icon = wrapper.find('FontAwesome').first();
     expect(icon.props().icon).to.include('info-circle');
     expect(addCoteacherSpy).to.have.not.been.called;
   });
@@ -100,7 +102,9 @@ describe('CoteacherSettings', () => {
     wrapper
       .find('input')
       .simulate('change', {target: {value: 'new-email@code.org'}});
-    wrapper.find('form').simulate('submit', {preventDefault: () => {}});
+    wrapper
+      .find('Button[id="add-coteacher"]')
+      .simulate('click', {preventDefault: () => {}});
     expect(addCoteacherSpy).to.have.been.calledOnce;
     expect(addCoteacherSpy).to.have.been.calledWith('new-email@code.org');
   });

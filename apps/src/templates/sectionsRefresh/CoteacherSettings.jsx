@@ -104,6 +104,7 @@ export default function CoteacherSettings({
             <Button
               className={styles.button}
               color={Button.ButtonColor.brandSecondaryDefault}
+              id="add-coteacher"
               type="submit"
               text={i18n.coteacherAddButton()}
               onClick={handleAddEmail}
