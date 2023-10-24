@@ -520,6 +520,43 @@ mr:
         text: |-
           set background effect
           {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': वर्तुळे
+            '"color_cycle"': रंग
+            '"diamonds"': हिरे
+            '"disco"': चौरस
+            '"disco_ball"': डिस्को बॉल
+            '"fireworks"': फटाके
+            '"galaxy"': स्पेस
+            '"kaleidoscope"': कॅलिडोस्कोप
+            '"lasers"': लेसर डांस फ्लोर
+            '"none"': कुठलेच नाही
+            '"rainbow"': इंद्रधनुष्य
+            '"rand"': "(Previous)"
+            '"snowflakes"': हिमवर्षाव
+            '"sparkles"': स्पार्कल्स
+            '"spiral"': नागमोडी
+            '"splatter"': पेंट फवारणी
+            '"stars"': तारे
+            '"swirl"': हिप्नो
+            '"text"': गाण्यांची नावे
+          PALETTE:
+            '"cool"': मस्त
+            '"default"': प्रकाश
+            '"electronic"': इलेक्ट्रॉनिक
+            '"iceCream"': आईसक्रीम
+            '"neon"': निऑन
+            '"ocean"': समुद्र
+            '"rainbow"': इंद्रधनुष्य
+            '"rave"': काळा आणि पांढरा
+            '"tropical"': उष्णकटिबंधीय
+            '"vintage"': व्हिंटेज
+            '"warm"': उबदार
+        text: |-
+          set background effect
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
