@@ -1,7 +1,7 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
   load_resource only: [:get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
   load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
 
