@@ -36,6 +36,12 @@ et:
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1. oktoober 2022 - 18. detsember 2022
   hoc2023_header: Loovus tehisintellektiga
+  hoc2023_hero_desc_homepage: Liituge miljonitega üle kogu maailma, et korraldada
+    tunni kodeerimist, tehisintellektiga või ilma, ja õppige tehisintellekti toimimist.
+    Igaüks ja ükskõik kus saab seda teha. Kogemusi pole vaja.
+  hoc2023_hero_desc_learn_page: Sel aastal viime kooditunni uutesse kõrgustesse, pakkudes
+    kodeerimisvõimalusi, mis hõlmavad nii tehisintellekti (AI) kui ka mitte-tehisintellekti
+    komponente.
   hoc2023_social_creativity_with_ai_title: Kooditund - Mida te loote?
   hoc2023_social_creativity_with_ai_desc: Kasutage arvutiteadust, et uurida ja õppida
     AI!
@@ -168,6 +174,7 @@ et:
     miks see on oluline.
   social_ai_title: Lisateave tehisintellekti (AI) kohta | Code.org
   social_ai_desc: Tööriistad, mis aitavad õpilastel ja õpetajatel viia AI klassiruumi.
+  social_videos_desc: Kaasavad arvutiteaduse videod igas vanuses õppijatele.
   pl_superhero_title: Abi õpilastel saada superkangelased!
   pl_superhero_desc: Liitu meie väga toetav professionaalne õppe programm kesk- ja
     keskkooli õpetajatele.
@@ -254,6 +261,7 @@ et:
   optional_materials: 'Valikulised materjalid:'
   call_to_action_hold_an_event: Sündmuse hoidmine
   call_to_action_register_event: Registreeri oma üritus
+  call_to_action_register_your_hoc: Registreeri oma koodiaeg
   call_to_action_select_activity: Valige tegevus
   call_to_action_start_activity: Alustage tegevust
   call_to_action_get_certificates: Hankige sertifikaadid
@@ -349,6 +357,8 @@ et:
   call_to_action_learn_about_advocacy: Lugege meie propageerimise kohta
   call_to_action_visit_store: Külasta poodi
   call_to_action_view_faqs: Vaata veel KKK-d
+  call_to_action_applications_open: Rakendused on nüüd avatud
+  call_to_action_apply_cs_ambassador: Kandideerige CS suursaadikuks
   aria_label_call_to_action_hoc_how_to_educators: Vaadake õpetajate juhendit
   aria_label_call_to_action_hoc_how_to_companies: Vaadake ettevõtete juhendit
   aria_label_call_to_action_hoc_how_to_districts: Vaadake linnaosade juhendit
@@ -562,7 +572,7 @@ et:
   module_label_prerequisites: 'Eeldused:'
   module_label_level: 'Tase:'
   module_label_topics: 'Teemad:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Seadmed:'
   module_label_tools: 'Programmeerimise tööriistad:'
   module_label_professional_learning: 'Professionaalne õpe:'
   module_label_languages: 'Toetatud keeled:'
@@ -588,8 +598,10 @@ et:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Lasteaed
   module_grade_grade_01: 1. aste
@@ -686,6 +698,53 @@ et:
   heading_explore_curriculum_catalog: Tutvuge kõigi meie kursuste õppekavakataloogis
   heading_csa_ai: Kas otsite asju teha pärast AP® eksamit?
   heading_bring_cs_to_students: Tooge arvutiteadus õpilastele
+  heading_cs_ambassador_program: CS suursaadiku programm
+  cs_ambassador_subhead: Kui olete keskkooliõpilane, kes on kirglik julgustada rohkem
+    noori naisi oma koolis arvutiteadust õppima, siis vajame teid!
+  cs_ambassador_desc: Arvutiteadus puudutab kõiki valdkondi, sealhulgas meditsiini,
+    meelelahutust, sporti, haridust, äri, moodi ja ettevõtlust. Kuid ainult 5% keskkooliealistest
+    noortest naistest käib arvutiteaduse tundides. Suursaadikud saavad aidata seda
+    soolist erinevust vähendada, julgustades oma eakaaslasi arvutiteaduse tunnis osalema.
+  cs_ambassador_application_date: Taotlused on avatud 8. novembrini 2023
+  cs_ambassador_application_subhead: Töötage õpetajaga, et esitada oma avaldus juba
+    täna
+  cs_ambassador_application_questions: Küsimused? Palun võtke ühendust [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Mida CS-i suursaadikud teevad?
+  cs_ambassador_do_desc: CS-i saadikud julgustavad noori naisi seda teemat uurima,
+    ja tõstavad üksteist üles, kui nad taastavad oma koha arvutiteaduses. CS-saadikud
+    võtavad ühendust eakaaslastega, et jagada oma põnevust ja armastust arvutiteaduse
+    vastu. Nad külastavad klassiruume, korraldavad lõunasöögi ajal laudu ning räägivad
+    koosolekutel ja klubi koosolekutel. CS-i saadikud teevad koostööd õpetajate ja
+    kooliadministraatoritega, et murda stereotüüpe, mis noori naisi tagasi hoiavad.
+  cs_ambassador_steps_heading: Mida ma pean CS-i suursaadikuks saamiseks?
+  cs_ambassador_steps_list_title_01: Kirg
+  cs_ambassador_steps_list_title_02: Kogemus CS-kursusel
+  cs_ambassador_steps_list_title_03: Kool, mis pakub CS-i
+  cs_ambassador_steps_list_desc_01: Kirg julgustada oma kooli noori naisi arvutiteaduse
+    tundides osalema
+  cs_ambassador_steps_list_desc_02: 'Olete läbinud aastapikkuse arvutiteaduse tunnis
+    2022—23 õppeaastal või varem (soovitatav: CS Principles või AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Osalege keskkoolis, mis pakub regulaarselt aastapikkust
+    arvutiteaduse kursust (soovitatav: CS Principles või AP® CSA)'
+  cs_ambassador_benefits_heading: Programmi eelised
+  cs_ambassador_benefits_list_title_01: Rahvuslik kogukond
+  cs_ambassador_benefits_list_title_02: Ühiskondlik teenindus
+  cs_ambassador_benefits_list_title_03: Tunnustamine
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Sertifikaat
+  cs_ambassador_benefits_list_title_06: Kogemused
+  cs_ambassador_benefits_list_desc_01: Juurdepääs noorte juhtide riiklikule kogukonnale,
+    kes on pühendunud arvutiteaduse soolise lõhe kõrvaldamisele.
+  cs_ambassador_benefits_list_desc_02: Kogukonnatöö tunnid ja võimalus teenida [USA
+    presidendi vabatahtliku teenistuse auhind] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Tunnustus suursaadikuna 2023-2024 ja õigus
+    saada austamist Code.org suursaadiku kuulsuste saalis.
+  cs_ambassador_benefits_list_desc_04: Tunnistage CS-i suursaadikuks spetsiaalsete
+    Code.org kaubamärgiga rõivaste, kleebiste ja muu kaudu!
+  cs_ambassador_benefits_list_desc_05: Ametlik osalemistunnistus saidilt Code.org.
+  cs_ambassador_benefits_list_desc_06: Hankige kogemusi ja lugusid, mida jagada oma
+    kolledži taotluse, CV ja muu kohta!
   professional_learning_section_desc: Hankige toetus, mida vajate, kui valmistate
     õpetama. Õpetajad armastavad seda, üle 90% pingerida see parim professionaalne
     areng kunagi!
@@ -836,6 +895,12 @@ et:
   ai_curriculum_btn_aria_label_04: Avastage, kuidas AI töötab õppetunde
   ai_curriculum_grades_05: 'Hinne tasemed: 9-12'
   ai_curriculum_btn_aria_label_05: Tutvuge tarkvaratehnika ja arvuti nägemise mooduliga
+  ai_curriculum_title_06: Generatiivse tehisintellekti ühiskondlik mõju
+  ai_curriculum_desc_06: Uurige generatiivse tehisintellekti mõju erinevatest vaatenurkadest,
+    seejärel tehke meeskonnana koostööd, et pakkuda välja juhised, mis vastavad kõigi
+    osalejate kõige suurematele vajadustele.
+  ai_curriculum_btn_aria_label_06: Vaadake generatiivse tehisintellekti tunniplaani
+    ühiskondlikku mõju
   ai_carousel_heading: 'Mida õpetajad ütlevad AI kohta Code.org abil:'
   ai_carousel_quote_01: See õppetund andis ka minu õpilastele võimaluse näha, et klassifitseerimissüsteemides
     on olemas arvamuselement. Hiljem, kui hakkasime nägema, kuidas eelarvamusi tehisintellekti
@@ -1805,6 +1870,8 @@ et:
   help_page_speak_for_cs_desc: Lisateave Code.org propageerimise töö kohta kogu USAs
     ja kümne poliitika kohta, mida soovitame riikidel vastu võtta, et muuta arvutiteadus
     kõigile õpilastele aluseks. Plus, teada, kuidas saate sõita muutus oma riigi.
+  yw_page_top_heading: Noored naised arvutiteaduses
+  yw_page_top_desc: Hakka CS-i suursaadikuks ja osalege soolise lõhe kaotamisest arvutiteaduses.
   hoc_live: Tund kood Live
   hoc_live_sign_up_title: Registreeru kood Hour Live
   hoc_live_learn_title: Õppige kooditund Live
@@ -2165,10 +2232,15 @@ et:
   hoc_homepage_what_is_hoc_description: Kooditund on arvutiteaduse ühetunnine sissejuhatus,
     kasutades lõbusaid õpetusi, et näidata, et igaüks saab põhitõdesid õppida. Seda
     rohujuure kampaaniat toetavad üle 400 partneri ja 200 000 õpetaja üle maailma.
+  hoc_homepage_registration_desc: Teie klass või rühm võib liituda miljonitega üle
+    kogu maailma, tehes kooditunni! Registreerimine iga-aastasele arvutiteaduse haridusnädala
+    tähistamisele algab oktoobris. Kuigi, Koodiaeg on saadaval aastaringselt.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Loe meie juhend] (%{howto_guide_url})
     planeerida sündmus oma klassi."
   hoc_homepage_highlights_heading: Koodi esiletõstetud tund
   hoc_homepage_organized_by: Koodeksi tund on korraldatud [Code.org](%{codeorg_url}).
+  hoc_events_heading: Registreeruge kooditunni korraldamiseks
+  hoc_events_jump_to_map: Hüppa kooditunni kaardile
   signup_closed: Registreerimine KoodiTund üritusele on nüüd suletud. Palun vaadake
     uuesti oktoobris ning registreerige järgmisele KoodiTund üritusele.
   signup_registration_not_required: Osalemiseks ei pea registreerima! KooduTund tegevused
@@ -2271,6 +2343,8 @@ et:
   map_title: KoodiTund kaart
   map_header: "# registreeritud KoodiTund 2017 sündmused"
   map_header_count_year: "%{event_count} üritused registreeritud %{year}"
+  map_header_count_year_so_far: "%{event_count} seni registreeritud sündmused aastal
+    %{year}"
   see_all_events: Vaata kõiki sündmusi
   map_header_company: "# organiseerijad asutustes"
   map_header_country: "# riikides %{country}"
@@ -2284,6 +2358,7 @@ et:
     Kõiki registreeritud üritusi näeb <a href='%{events_url}'> ürituste leheküljelt.</a>
   map_warning_markdown: Sündmuste täielikku nimekirja saab vaadata [sündmuste lehel]
     (%{events_url})
+  map_view_all_events: Vaadake kooditunni sündmuste täielikku loen [here]dit (%{events_url}).
   meta_tag_og_title: 'KoodiTund: Liitu liikumisega'
   meta_tag_og_description: KoodiTund on globaalne liikumine, mis jõuab miljonite õpilasteni
     180+ riigis ning rohkem kui 45 erinevas keeles.
@@ -2304,14 +2379,6 @@ et:
     %{random_donor} toetamiseks @codeorg)'
   hoc_faq_title: Korduma kippuvad küsimused
   hoc_faq_what_is_hoc_q: 'Mis on Koodi Tund? '
-  hoc_faq_what_is_hoc_a: KoodiTund sai alguse kui tunnine sissejuhatus arvutiteadusesse
-    eesmärgiga murda müüt, et programmeerimine on raske. Soovisime näidata, et igaüks
-    võib õppida ära algtõed ning tegutseda arvutiteaduse valdkonnas. Tänaseks on KoodiTund
-    rahvusvaheline kampaania, millega tähistatakse arvutiteaduse olulisust. Alates
-    1-tunnistest programmeerimismängudest kuni erinevate kogukondlike üritusteni.
-    Vaata meie <a href='%{tutorials}'> juhendeid ja tegevusi</a>. Meie rohujuurekampaaniat
-    toetab üle<a href='%{partners}'> 400 partneri </a>ja 200 000 haridustöötaja üle
-    maailma.
   hoc_faq_what_is_hoc_a_markdown: Kooditund algas ühetunnise sissejuhatusena arvutiteadusele,
     mille eesmärk on demüstifitseerida „koodi”, näidata, et igaüks saab põhitõdesid
     õppida, ning laiendada osalemist arvutiteaduse valdkonnas. Sellest ajast alates
@@ -2321,80 +2388,40 @@ et:
     [400 partneri] (%{partners}) ja 200 000 õpetaja üle maailma.
   hoc_faq_last_year: Proovi juhendeid
   hoc_faq_when_is_hoc_q: Mis on KoodiTund (Hour of Code)?
-  hoc_faq_when_is_hoc_a: KoodiTund toimub iga aasta <a href='%{csedweek_url}'>Arvutiteaduse
-    hariduse nädala raames</a>. %{campaign_date_year} Arvutiteaduse hariduse nädal
-    toimub%{campaign_date_full}, kuid KoodiTund üritusi võib korraldada aastaringselt.
-    Arvutiteaduse hariduse nädal toimub iga aasta ja märgib arvutiteaduse algataja
-    <a href='%{grace_hopper}'> admiral Grace Murray Hopper</a> sünnipäeva (9. detsember
-    1906)
   hoc_faq_when_is_hoc_a_markdown: Koodeksi tund toimub igal aastal [[Arvutiteaduse
     haridusnädal]] ajal (%{csedweek_url}). %{campaign_date_year} Arvutiteaduse haridusnädal
     on %{campaign_date_full}, kuid saate kogu aastaringselt kooditund. Computer Science
     Education Week toimub igal aastal tunnustades sünnipäeva arvuti pioneer [admiral
     Grace Murray Hopper] (%{grace_hopper}) (9. detsember 1906).
   hoc_faq_why_cs_q: Miks just arvutiteadus?
-  hoc_faq_why_cs_a: "<i>Igal</i>õpilasel peaks olema võimalus arvutiteadusi õppida.
-    See aitab arendada probleemilahendusoskust, loogikat ja loovust. Kui alustada
-    varakult, on õpilastel head eeldused, et mistahes 21. sajandi ametis edukas olla.
-    Vaata statistikat <a href='%{stats_url}'>siit</a>."
   hoc_faq_why_cs_a_markdown: _Every_ üliõpilane peaks olema võimalus õppida infotehnoloogia.
     See aitab kasvatada probleemide lahendamise oskust, loogikat ja loovust. Alustades
     varakult, on õpilastel alus edule igal 21. sajandi karjääriteel. Vaata veel statistikaid
     [here](%{stats_url}).
   hoc_faq_how_participate_q: Kuidas saan KoodiTund kampaanias osaleda?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Alusta planeerimist siit</a> ja loe
-    meie juhendit. KoodiTund ürituse võid korraldada oma koolis või kodukohas &mdash;
-    kui koolivälise üritusena või ka töökohas. Või proovi ise KoodiTund läbi täna,
-    kui %{campaign_date} kätte jõuab."
   hoc_faq_how_participate_a_markdown: "[Alusta planeerimist siit] (%{howto}) vaadates
     meie juhend. Saate korraldada kooditunnise ürituse oma koolis või kogukonnas —
     näiteks koolivälises klubis, mittetulundusühingus või tööl. Või lihtsalt proovida
     seda ise, kui %{campaign_date} saabub."
   hoc_faq_behind_hoc_q: Mis on Koodi Tund?
-  hoc_faq_behind_hoc_a: KoodiTundi juhivad Hour of Code ja Computer Science Education
-    Week<a href='%{partner_url}'> nõustavad komiteed</a> ning paljud partnerid, kes
-    KoodiTundi &mdash; toetavad, sealhulgas Microsoft, Apple, Amazon, Boys and Girls
-    Clubs of America ja College Board.
   hoc_faq_behind_hoc_a_markdown: Kooditundi korraldab Code.org ja seda juhib kood
     Hour of Code Review Committee, samuti enneolematu koalitsioon [partners](%{partner_url}),
     mis on kokku tulnud, et toetada kooditund — sealhulgas Microsoft, Apple, Amazon,
     Boys and Girls Clubs of America ja College Board.
   hoc_faq_host_q: Ma ei tea programmeerimisest midagi. Kas ma saan siiski üritust
     korraldada?
-  hoc_faq_host_a: Loomulikult on KoodiTund tegevused koos selgitavate juhenditega.
-    Sina pead vaid<a href='%{codeorg_url}/learn'> proovima meie juhendeid</a>, valima
-    endale sobiva, võtma tunnikse &mdash; ja meie kanname ülejäänu eest hoolt. Meil
-    on valikud eri vanusegruppidele ja oskustasemetele alates lasteaiast. Alusta oma
-    ürituse planeerimist meie <a href='/how-to'> juhendi lugemisega</a>.
   hoc_faq_host_a_markdown: Muidugi. Tund Code tegevused on iseenesest juhitud. Kõik,
     mida pead tegema, on [proovige meie praeguseid õpetusi] (%{codeorg_url}/õpi),
     vali soovitud juhendaja ja vali tund — me hoolitseme ülejäänud eest. Meil on ka
     võimalusi igas vanuses ja kogemuste tasemel, alates lasteaiast ja kuni. Alusta
     oma sündmuse planeerimist, lugedes meie [kuidas suunata] (%{howto}).
   hoc_faq_devices_q: Milliseid seadmeid peaksid õpilased kasutama?
-  hoc_faq_devices_a: Code.org juhendid töötavad kõigis seadmetes ja veebilehitsejates.
-    Lisainfot Code.org tehniliste nõuete kohta leiad<a href='%{codeorg_url}/educate/it'>
-    siit</a>. Tehnilised nõuded Code.org partnerite poolt välja töötatud juhenditele
-    leiate <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>iga juhendi juures.
-    Lisaks pakume <a href='%{unplugged_url}'> arvutivabasid tegevusi</a>, kui kool
-    ei saa teisi tegevusi läbi viia!
   hoc_faq_devices_a_markdown: Code.org õpetused töötavad kõigis seadmetes ja brauseritega.
     Lisateavet Code.org õppetehniliste vajaduste [here]kohta (/educate/it) näete.%{codeorg_url}Non-Code.org
     õpetuste tehnilised vajadused leiate juhendaja spetsiifilisest kirjeldusest [%{partner_url}/learn]
     (%{codeorg_url}/learn). Ärge unustage, et pakume ka [unplugged tegevusi] (%{unplugged_url}),
     kui teie kool ei suuda õpetusi mahutada!
   hoc_faq_need_computers_q: Kas igal osalejal peab olema oma arvuti?
-  hoc_faq_need_computers_a: Ei. Meil on KoodiTund tegevusi, mis töötavad lauaarvutites,
-    tahvelarvutites, nutitelefonides ning mõned sellised, mis üldse arvutit ei vaja!
-    KoodiTundi saab läbi teha seega kõikjal ja mistahes seadmetega.<p><i> Siin on
-    mõned võimalused</i><br><ul><li><b> Tööta paarides.</b><a href='%{pair_programming_research}'>
-    Uuringud näitavad</a>, et õpilased õpivad paremini<a href='%{pair_programming_video}'>
-    paaris programmeerides</a>, jagades arvutit ja töötades koos. Julgustage õpilastel
-    paare moodustama. <li><b> Kasuta projektorit ja ekraani.</b> Kui projektor on
-    ühendatud internetiühendusega arvutiga, siis saab kogu grupp KoodiTund tegevuse
-    üheskoos läbi teha. Vaata videot koos ja lahendage mõistatusi või vastake küsimusi
-    kordamööda.<li><b> Tee arvutivabasid tegevusi.</b> Me pakume <a href='%{unplugged_url}'>
-    juhendeid tegevustele, mis </a>ei vaja üldse arvutit.</ul>
   hoc_faq_need_computers_a_markdown: |-
     Ei. Meil on Hour of Code õpetused, mis töötavad arvutid, nutitelefonid, tahvelarvutid, ja mõned, mis ei nõua arvuti üldse! Võite liituda kus iganes sa oled, mida iganes sul on.
 
@@ -2404,40 +2431,21 @@ et:
     - ** Kasutage prognoositud ekraani.** Kui teil on projektor ja ekraan veebiühendusega arvuti jaoks, saab kogu grupp teha kooditunni koos. Vaadake videoosi koos ja võtke kordamööda mõistatusi või vastates küsimustele.
     - **Mine unplugged.** Pakume [õpetused, mis ei nõua arvutit] () üldse.%{unplugged_url}
   hoc_faq_international_q: Asun riigis <country>. Kuidas saan rahvusvaheliselt osaleda?
-  hoc_faq_international_a: Igaüks saab korraldada KoodiTund ürituse üle maailma. Eelmisel
-    aastal liitusid KoodiTund üritusega õpilased üle maailma. Loe lähemalt <a href='/promote'>
-    siit</a>.
   hoc_faq_international_a_markdown: Igaüks võib korraldada kooditunnise sündmuse kõikjal
     maailmas. Eelmisel aastal ühinesid õpilased üle maailma Koodetund. Uuri rohkem
     [here](%{promote}).
   hoc_faq_tutorial_q: Kuidas saaksin KoodiTund juhendit koostada?
-  hoc_faq_tutorial_a: Kui soovid hakata partneriks juhendite valmistamisel, siis <a
-    href='/tutorial-guidelines'> vaata meie juhiseid ja instruktsioone</a>. Me soovime
-    pakkuda erinevaid võimalusi osalemiseks, kuid meie peamine eesmärk on pakkuda
-    kogemusi nendele õpilastele ja õpetajatele, kelle jaoks arvutiteadused on midagi
-    uut.
   hoc_faq_tutorial_a_markdown: Kui olete huvitatud õppepartneriks saamisest, [vaata
     meie juhiseid ja juhiseid] (%{tutorial_guidelines}). Soovime kasutada erinevaid
     huvitavaid võimalusi, kuid peamine eesmärk on optimeerida kogemusi õpilastele
     ja õpetajatele, kes on uued arvutiteaduses.
   hoc_faq_account_q: Kas tudengid peavad sisse logima või konto looma?
-  hoc_faq_account_a: Ei. KoodiTund tegevuste tegemiseks ei pea õpilased kontot looma
-    ega sisse logima. Enamik<a href='%{codeorg_url}/learn/beyond'> jätkukursuseid</a>
-    nõuavad konto loomist, et õpilaste tehtud töid salvestada. KoodiTunni üritusega
-    liitumine EI loo automaatselt Code Studio kontot. Kui soovid õpilastele kontosid
-    luua, palun jälgi neid <a href='https://youtu.be/_smelV_KISE'>soovitusi</a>.
   hoc_faq_account_a_markdown: Ei. Absoluutselt mingit registreerumist või sisselogimist
     on vaja õpilastele proovida kooditund. Enamik [jätkukursusi] (%{codeorg_url}/õppimine/kaugemale)
     nõuab õpilaste edenemise salvestamiseks konto loomist. Samuti ei loo kooditunni
     registreerimine automaatselt Code Studio kontot. Kui soovite oma õpilastele kontosid
     luua, järgige neid [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Millist tegevust peaksin keskkooliõpilastega proovima?
-  hoc_faq_high_school_a: Star Wars ja Minecraft õpetused sobivad hästi keskkooliõpilastele,
-    eriti Star Wars JavaScripti versioon ning tasuta mängu tase mõlema mängu puhul.
-    Alternatiivina soovitame proovida ühte meie algajate õpetustest <a href='%{codeorg_url}/learn'>%{partner_url}/õpi</a>,
-    et alustada. Näiteks mäng Angry Birds või Anna ja Elsa. Keskkooliõpilane peaks
-    ühe neist valmis saama 30 minutiga ning võib siis proovida keerulisemaid juhendeid,
-    mis kasutavad JavaScripti, nagu näiteks Khan Academy või CodeHS.
   hoc_faq_high_school_a_markdown: Meie Star Wars ja Minecraft õpetused on suurepärased
     keskkooliõpilastele, eriti Star Wars JavaScript versioon ja tasuta mängida tase
     nii õpetused. Alternatiivselt soovitame proovida üht algaja õpetust [%{partner_url}/learn]
@@ -2446,17 +2454,12 @@ et:
     proovida JavaScripti täiustatud juhendatut, näiteks Khan Academy või CodeHS.
   hoc_faq_scratch_q: Kasutan KoodiTunnis Scratchi, kuid mis saab siis kui õpilastel
     on sülearvutite asemel tahvelarvutid?
-  hoc_faq_scratch_a: Scratch ei tööta tahvelarvutis. Kui Teie õpilased on väikesed,
-    saavad nad kasutada ScratchJR rakendust iPadile (noortele lugejatele). Kui vaatad
-    juhendeid <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, leiad juhendeid,
-    mis on mõeldud iPadile veebilehtedelt Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch ei tööta tahvelarvutites. Kui teie õpilased
     on noored, saavad nad kasutada rakendust ScratchJR iPad (varajase lugeja jaoks).
     Kui vaatate õpetusi lehelt [%{partner_url}/learn] (%{codeorg_url}/learn), leiate
     muud õpetused, mis töötavad iPadidel - Code.org, Tynker, Lightbot või CodeSpark.
   hoc_faq_count_hoc_q: Kuidas te KoodiTunde arvestate?
   hoc_faq_map_q: Miks ei ole minu sündmuse linnukest kaardilt näha?
-  hoc_faq_map_a: Meiil on kahju, et Teie sündmust ei ole KoodiTunni kaardilt näha.
   hoc_faq_map_a_markdown: Meil on nii kahju, et te ei näe oma sündmust kooditunni
     kaardil. Kümnete tuhandete korraldajate tõttu, kes registreeruvad, koondab kaart
     andmed ja kuvab ühe punkti mitme sündmuse kohta. Kui klõpsate kaardi all oleval
@@ -2464,9 +2467,6 @@ et:
     riigi kaupa ja leiate oma sündmuse loetletud seal. Arvestades kooditundile registreeruvaid
     tuhandeid inimesi, kulub kaardi- ja sündmuste loendi uuendamiseks tavaliselt 48
     tundi. Kontrollige mõne päeva pärast tagasi!
-  hoc_faq_count_hoc_a: KoodiTund haldur ei ole täpne kasutuse mõõdik. Me ei loenda
-    unikaalseid õpilasi, sest me ei nõua kontot või registreerimist. Seega oleme osalejate
-    arvu nii üle- kui alahinnanud. Loe lähemalt<a href='%{codeorg_url}/loc'> siit</a>.
   hoc_faq_count_hoc_a_markdown: 'Me ei loe unikaalseid üliõpilaste ID-d täiuslikult,
     kui jälgime osalemist kooditunnil. Miks? Osaliselt seetõttu, et me ei taha hõõrdumist
     palutakse „login/register”, enne kui õpilane või klassiruum proovib esimest korda
@@ -2482,20 +2482,6 @@ et:
     Tund of Code tracker olla täpne mõõt kasutamine. See on kindlasti suunatud õige,
     ja näitab, et paljud kümned miljonid õpilased on osalenud.'
   hoc_faq_one_hour_q: Kui palju tunni ajaga jõuab õppida?
-  hoc_faq_one_hour_a: KoodiTund kampaania eesmärk ei ole muuta kedagi tunniga arvutiteadlaseks.
-    Kuid ühest tunnist piisab selleks, et teada saada, et arvutiteadus on lõbus ja
-    loov ning sobib kõigile õpilastele sõltumata nende vanusest või taustast. Kampaania
-    edu mõõdik ei ole see, kui palju arvutiteaduse alaseid teadmisi on õpilased omandanud.
-    Edu peegeldub hoopis selles, kui palju erinevas vanuses ja erineva taustaga osalejaid
-    kampaanias on. See omakorda tõstab mitmekesisust arvutiteaduse erialadel üldisemalt.
-    Miljonid osalenud õpilastest ja õpetajatest on otsustanud astuda sammu edasi ning
-    läbida terve kurus (või isegi minna eriala õppima kõrgkooli).<br/><br/>Lisaks
-    õpilastele õpivad ka haridustöötajad, kes näevad, et arvutiteaduse põhitõdede
-    õpetamine ei ole midagi keerulist ning selleks ei pea olema arvutiteadust õppinud.
-    Kümned tuhanded õpetajad on oma õppeteed jätkanud erinevate kursuste näol, mis
-    toimuvad kas koolides või veebis. Sama kehtib ka koolijuhtide kohta, kes näevad,
-    et nende õpilased soovivad arvutiteadust õppida ning et nad on selleks suutelised.<br/><br/>
-    Kõige rohkem õpime selle tunniga seda, et me saame sellega hakkama.
   hoc_faq_one_hour_a_markdown: |-
     Koodeksitunni eesmärk ei ole õpetada kedagi ühe tunni jooksul saama asjatundlikuks arvutiteadlaseks. Üks tund on ainult piisav, et teada saada, et arvutiteadus on lõbus ja loominguline, et see on kättesaadav igas vanuses, kõigile õpilastele, olenemata taustast. Selle kampaania edukuse meede ei ole selles, kui palju CS õpilased õpivad - edu kajastub lai osalemine sooliste, rassi/etniliste ja sotsiaalmajanduslike rühmade vahel ning sellest tulenev registreerumise ja osalemise suurenemine näeme CS-kursustel kõigil tasemetel. Miljonid osalevad õpetajad ja õpilased on otsustanud minna kaugemale ühe tunni - õppida terve päeva või terve nädala või kauem, ja paljud õpilased on otsustanud registreeruda kogu kursuse (või isegi kolledži suur) tulemusena.
 
@@ -2503,34 +2489,24 @@ et:
 
     Ennekõike, mida kõik osalejad saavad õppida tund on see, et me saame seda teha.
   hoc_faq_more_questions_q: Sul on veel küsimusi?
-  hoc_faq_more_questions_a: Proovi leida vastust meie <a href='http://support.code.org'>abi
-    foorumist</a>.
   hoc_faq_more_questions_a_markdown: Proovige leida vastus meie [tugifoorum] (http://support.code.org).
   hoc_faq_keep_learning_q: Kuidas pärast KoodiTundi edasi õppida?
-  hoc_faq_keep_learning_a: Igaüks võib korraldada KoodiTunni. Õpetused on kättesaadavad
-    aastaringselt. Kõik meie õpetused ja õppekavad on kodulehel pidevalt kättesaadavad.
-    Palun minge <a href='/promote'>materjalid</a>rubiiki, kust leiate abimaterjale,
-    kuidas KoodiTund edukalt läbi viia.
   hoc_faq_keep_learning_a_markdown: Igaüks võib igal ajal võõrustada kooditundi. Õpetused
     jääda kuni aastaringselt. Võite eeldada, et kõik meie õpetused ja õppekava on
     saadaval meie kodulehel igaveseks. Palun minge [meie ressursid] (%{promote}) ürituste
     juhendid ja muud ressursid, et aidata muuta oma kooditund sündmus edukaks.
   hoc_faq_certificates_q: Kust saan oma õpilastele tunnistused printida?
-  hoc_faq_certificates_a: Minge meie<a href='%{codeorg_url}/certificates'>tunnistused
-    lehele</a>, kus saate printida tunnistused kogu klassile juba ette. Samuti saata
-    printida<a href='%{codeorg_url}/certificates?course=mc'>eritunnustused</a>õpilastele,
-    kes on läbi teinud Minecrafti õpetuse.
-  hoc_faq_certificates_a_markdown: Minge meie [sertifikaatide lehele] (%{codeorg_url}/sertifikaadid),
-    kus saad enne tähtaega printida kogu klassi sertifikaate. Võite ka välja printida
-    [erisertifikaadid] (%{codeorg_url}/sertifikaadid? kursus=mc) õpilastele, kes teevad
-    Minecraft juhendaja.
+  hoc_faq_certificates_answer_markdown: Minge meie [sertifikaatide lehele] (%{certificates_url}),
+    kus saate kogu oma klassi sertifikaate enne tähtaega printida.
   hoc_faq_logo_q: Kas on piiranguid KoodiTund logo või nime kasutamisele?
-  hoc_faq_logo_a: Hour of Code (KoodiTund) on kaubamärk. Me ei soovi selle kasutamist
-    ära hoida, kuid soovime, et seda kasutataks teatud piirides. Palun lugege lähemalt<a
-    href='%{logo_url}'>kasutusreeglitest</a>.
   hoc_faq_logo_a_markdown: Kooditund on kaubamärgistatud. Me ei taha vältida selle
     kasutamist, kuid me tahame veenduda, et selle kasutamine sobib mõne piiranguga.
     Palun vaadake [käesolevad kasutusjuhised] (%{logo_url}).
+  hoc_faq_bug_q: Leidsin vea tegevusest Kooditunni tegevusest! Mida ma peaksin tegema?
+  hoc_faq_bug_a_markdown: |-
+    Oh ei! Kui olete kooditunni tegevuses kohanud viga, kontrollige kõigepealt toimuva tegevuse URL-i. Kui URL algab tähega studio.code.org, saab meie Code.org tugimeeskond aidata! Klõpsake ekraani paremas ülanurgas küsimärgi ikooni, seejärel valige rippmenüüst „Teata probleemist”.
+
+    Kui URL ei alga saidilt studio.code.org, töötate tõenäoliselt kolmanda osapoole tegevusega ja peate täiendava abi saamiseks pöörduma selle ettevõtte tugimeeskonna poole.
   stats_hoc_2013_image_alt: Algus 2013. aasta KoodiTund
   stats_growth: See oli kiireim jõudmaks 15 miljoni kasutajani.
   stats_i18n: Õpilased õpivad enam kui 45 keeles
@@ -12992,7 +12968,7 @@ et:
   hoc_how_to_faq_answer_devices_02: Kui seadmed on piiratud või pole saadaval, proovige
     [paari programmeerimine] (%{pair_url}) või uurige meie [ühendatud tegevused] (%{unplugged_url})
     õppida ilma seadmeteta üldse!
-  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_question_volunteer: Kes saab vabatahtlikuna?
   hoc_how_to_faq_answer_volunteer: Vabatahtlik võib olla igaüks, kes on kirglik arvutiteaduse
     hariduse ja tehnoloogia mitmekesisuse suurendamise vastu! Meile meeldiks näha,
     et osalevad igasuguse taustaga vabatahtlikud. Kooditund sisaldab palju erinevaid
@@ -13570,6 +13546,23 @@ et:
     ja allalaadimised'
   video_library_page_not_hacked_video_title_7: 'Kuidas mitte saada häkkinud: Installige
     värskendused'
+  thank_you_page_main_title: Täname, et aitasite liikumist üles ehitada
+  thank_you_page_description: Code.org Advocacy Coalition soovib tänada sadu tuhandeid
+    kohalikke meistreid ja advokaate, sealhulgas õpetajaid, kogukonna liikmeid, teadlasi,
+    mittetulundusühinguid, ülikoole, ettevõtteid ja valitsusasutusi, kes on toetanud
+    visiooni, et iga kooli õpilane väärib võimalust õppida arvutiteadust. Täname teid
+    selle liikumise toetamise eest.
+  thank_you_page_members_section_title: 'Ja kõigile Code.org advokaadikoalitsiooni
+    liikmetele:'
+  thank_you_page_individual_organization_title: 'Täname järgmisi isikuid ja organisatsioone
+    nende panuse eest sellesse aruandesse:'
+  thank_you_page_individual_organization_description: Arvutiteaduse hariduse juhendajad
+    igas riiklikus haridusagentuuris, kolledži nõukogu, Della Cronin, Stuart Dexler,
+    Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Tänan teid selles raportis tsiteeritud
+    õpilastele ja õpetajatele:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Meist
   about_us_page_hero_description: Code.org® on hariduse innovatsiooni mittetulundusühing,
     mis on pühendatud visioonile, et igal õpilasel igas koolis on võimalus õppida
@@ -13717,6 +13710,11 @@ et:
     raha kogumine eesmärk, mis toetab seda visiooni.
   about_page_donors_link_1: Tehke annetused
   about_page_donors_link_2: "[vaata meie doonorite nimekirja] (%{donors_url})"
+  teach_ai_title: Reaalse maailma näited. Praktilised ressursid.
+  teach_ai_description: Tehisintellekti juhendamise koolide tööriistakomplekt on poliitikakujundajatele,
+    koolijuhtidele ja töötajatele ressurss, et töötada välja esialgsed juhendid tehisintellekti
+    kohta oma koolides.
+  teach_ai_button_label: Vaadake tööriistakomplekti
   language_code:
     ar: araabia
     az: Aserbaidžaani

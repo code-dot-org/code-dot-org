@@ -37,6 +37,12 @@ mi:
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: September 5, 2023 - December 17, 2023
   hoc2023_header: Creativity with AI
+  hoc2023_hero_desc_homepage: Join millions across the globe in organizing an hour
+    of coding, with or without AI and learning how AI works. Anyone, anywhere can
+    do it. No experience needed.
+  hoc2023_hero_desc_learn_page: This year, we're taking Hour of Code to new heights
+    by offering coding opportunities that encompass both artificial intelligence (AI)
+    and non-AI components.
   hoc2023_social_creativity_with_ai_title: Hour of Code - What will you create?
   hoc2023_social_creativity_with_ai_desc: Use computer science to explore and learn
     about AI!
@@ -167,6 +173,7 @@ mi:
     it's important.
   social_ai_title: Learn about artificial intelligence (AI) | Code.org
   social_ai_desc: Tools to help students and teachers bring AI into the classroom.
+  social_videos_desc: Engaging computer science videos for learners of all ages.
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
@@ -251,6 +258,7 @@ mi:
   optional_materials: 'Optional Materials:'
   call_to_action_hold_an_event: Hold an event
   call_to_action_register_event: Register your event
+  call_to_action_register_your_hoc: Register your Hour of Code
   call_to_action_select_activity: Select an activity
   call_to_action_start_activity: Start an activity
   call_to_action_get_certificates: Get certificates
@@ -346,6 +354,8 @@ mi:
   call_to_action_learn_about_advocacy: Learn about our advocacy
   call_to_action_visit_store: Visit the store
   call_to_action_view_faqs: View more FAQs
+  call_to_action_applications_open: Applications now open
+  call_to_action_apply_cs_ambassador: Apply to be a CS Ambassador
   aria_label_call_to_action_hoc_how_to_educators: View how-to guide for Educators
   aria_label_call_to_action_hoc_how_to_companies: View how-to guide for Companies
   aria_label_call_to_action_hoc_how_to_districts: View how-to guide for Districts
@@ -595,8 +605,10 @@ mi:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Kindergarten
   module_grade_grade_01: Grade 1
@@ -693,6 +705,54 @@ mi:
     Catalog
   heading_csa_ai: Looking for things to do after the AP® exam?
   heading_bring_cs_to_students: Bring computer science to students
+  heading_cs_ambassador_program: CS Ambassador Program
+  cs_ambassador_subhead: If you're a high school student passionate about encouraging
+    more young women to take computer science at your school, then we need you!
+  cs_ambassador_desc: Every field, including medicine, entertainment, sports, education,
+    business, fashion, and entrepreneurship is touched by computer science. Yet only
+    5% of high school aged young women take computer science classes. Ambassadors
+    can help close this gender gap by encouraging their peers to take a computer science
+    class.
+  cs_ambassador_application_date: Applications open until November 8th, 2023
+  cs_ambassador_application_subhead: Work with a teacher to submit your application
+    today
+  cs_ambassador_application_questions: Questions? Please contact [youngwomen@code.org](%{email_url})
+  cs_ambassador_do_heading: What do CS Ambassadors do?
+  cs_ambassador_do_desc: CS Ambassadors encourage young women to explore the subject,
+    and lift each other up as they reclaim their place in computer science. CS Ambassadors
+    connect with their peers to share their excitement and love of computer science.
+    They visit classrooms, host tables at lunch, and speak at assemblies and club
+    meetings. CS Ambassadors work with teachers and school administrators to breakdown
+    stereotypes that hold young women back.
+  cs_ambassador_steps_heading: What do I need to become a CS Ambassador?
+  cs_ambassador_steps_list_title_01: Passion
+  cs_ambassador_steps_list_title_02: Experience in a CS Course
+  cs_ambassador_steps_list_title_03: School that offers CS
+  cs_ambassador_steps_list_desc_01: A passion for encouraging young women at your
+    school to take computer science classes
+  cs_ambassador_steps_list_desc_02: 'Have completed or is currently enrolled in a
+    year-long computer science class (recommended: CS Principles or AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Attend a high school that regularly offers a
+    year-long computer science course (recommended: CS Principles or AP® CSA)'
+  cs_ambassador_benefits_heading: Program benefits
+  cs_ambassador_benefits_list_title_01: National community
+  cs_ambassador_benefits_list_title_02: Community service
+  cs_ambassador_benefits_list_title_03: Recognition
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certificate
+  cs_ambassador_benefits_list_title_06: Experiences
+  cs_ambassador_benefits_list_desc_01: Access to a national community of young leaders
+    committed to closing the gender gap in computer science.
+  cs_ambassador_benefits_list_desc_02: Community service hours and the opportunity
+    to earn the [U.S. Presidential Volunteer Service Award](%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Recognition as a 2023-2024 Ambassador and eligible
+    to be honored in the Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Be identified as a CS Ambassador through special
+    Code.org branded apparel, stickers, and more!
+  cs_ambassador_benefits_list_desc_05: Official certificate of participation from
+    Code.org.
+  cs_ambassador_benefits_list_desc_06: Gain experiences and stories to share on your
+    college application, resume and more!
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
   professional_learning_section_desc_short: Get the support you need as you prepare
@@ -847,6 +907,11 @@ mi:
   ai_curriculum_grades_05: 'Grade Levels: 9-12'
   ai_curriculum_btn_aria_label_05: Explore the Software Engineering & Computer Vision
     module
+  ai_curriculum_title_06: Societal Impact of Generative AI
+  ai_curriculum_desc_06: Investigate the impact of generative AI from different perspectives,
+    then collaborate as a team to come up with guidelines that address the most needs
+    from all participants.
+  ai_curriculum_btn_aria_label_06: View Societal Impact of Generative AI lesson plan
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -1815,6 +1880,9 @@ mi:
   help_page_speak_for_cs_desc: Learn more about Code.org's advocacy work across the
     U.S. and the ten policies we recommend states adopt to make computer science foundational
     for all students. Plus, find out how you can drive change in your state.
+  yw_page_top_heading: Young Women in Computer Science
+  yw_page_top_desc: Become a CS Ambassador and be a part of closing the gender gap
+    in computer science.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -2186,10 +2254,15 @@ mi:
     to computer science, using fun tutorials to show that anybody can learn the basics.
     This grassroots campaign is supported by over 400 partners and 200,000 educators
     worldwide.
+  hoc_homepage_registration_desc: Your class or group can join millions around the
+    world doing the Hour of Code! Registration for the annual Computer Science Education
+    Week celebration begins in October. Though, Hour of Code is available year-round.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
     to plan an event for your class."
   hoc_homepage_highlights_heading: Hour of Code highlights
   hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  hoc_events_heading: Register to Host an Hour of Code
+  hoc_events_jump_to_map: Jump to the Hour of Code map
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -2299,6 +2372,7 @@ mi:
   map_title: Mahere Hour of Code
   map_header: "# ngā takunetanga Hour of Code puta noa i te ao"
   map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year_so_far: "%{event_count} events registered so far in %{year}"
   see_all_events: Tirohia ngā takunetanga katoa
   map_header_company: "# by company organizers"
   map_header_country: "# i %{country}"
@@ -2311,6 +2385,7 @@ mi:
   map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
     page.</a>
   map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_view_all_events: See a full list of Hour of Code events [here](%{events_url}).
   meta_tag_og_title: E tata mai ana te Hour of Code
   meta_tag_og_description: He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona
     pakeke katoa, kua horapa ki ngā whenua 180 neke atu, kua whakamāoritia hoki ki
@@ -2333,15 +2408,6 @@ mi:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: Ngā Pātai Auau (FAQ)
   hoc_faq_what_is_hoc_q: He aha te Hour of Code?
-  hoc_faq_what_is_hoc_a: I tīmata te Hour of Code hei whakamāramatanga o te pūtaiao
-    rorohiko kotahi haora te roa. Ko tāna he hiki i te kohu o te "waehere" ki te whakaatu
-    atu e taea ana e te katoa ngā waiwaitanga te ako ka tahi, ka rua ki te whakawhānui
-    hoki i te urunga mai o te tangata ki te ngā mahi o te pūtaiao rorohiko. Nō taua
-    wā kua tipu ia hei kawenga mā te ao ki te whakanui i te pūtaiao rorohiko mā te
-    tīmata ki ētahi ngohe whakawaehere 1-haora te roa, heo anō, kua tipu hoki ngā
-    āhuatanga tautoko a ngā hapori. Tirohia ngā <a href='%{tutorials}'>whakaakoranga
-    me ngā ngohe</a>. Kei te tautokotia tēnei whakamataaratanga e te <a href='%{partners}'>
-    400 hoa</a>, e te 200,000 kaiwhakaako puta noa i te ao.
   hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
     to computer science, designed to demystify "code", to show that anybody can learn
     the basics, and to broaden participation in the field of computer science. It
@@ -2351,13 +2417,6 @@ mi:
     supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Whakamātau i ngā whakaakoranga
   hoc_faq_when_is_hoc_q: Āhea tū ai te Hour of Code?
-  hoc_faq_when_is_hoc_a: Ka tū te Hour of Code i ia tau i te wā o<a href='%{csedweek_url}'>
-    Te Wiki o te Mātauranga Pūtaiao Rorohiko</a>. Ko te Wiki o te Mātauranga Pūtaiao
-    Rorohiko %{campaign_date_year} ka tū ā te %{campaign_date_full} heoi anō, ka taea
-    e koe tētahi takunetanga Hour of Code te taurima ahakoa te wāhanga o te tau. Ka
-    tū ai te Wiki o te Mātauranga Pūtaiao Rorohiko i ia te tau ki te whakamana i te
-    huritau o tētahi kaimātauranga rorohiko tuatahi <a href='%{grace_hopper}'>o Admiral
-    Grace Murray Hopper</a> (9 o Hakihea, 1906).
   hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
     Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
     Education Week will be %{campaign_date_full}, but you can host an Hour of Code
@@ -2365,77 +2424,34 @@ mi:
     of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
     (December 9, 1906).
   hoc_faq_why_cs_q: He aha te take me pūtaiao rorohiko?
-  hoc_faq_why_cs_a: E tika ana kia whai wāhi <i>ia</i> ākonga ki te ako e pā ana ki
-    te pūtaiao rorohiko. He mea whakatipu i ngā pūkenga whakaoti rapanga, te ararau
-    me te auahatanga. Mā te tīmata i te ririkitanga, ka rīrā te tūāpapa kia eke angitu
-    ai ngā ākonga i roto i ngā tū ara umanga o tēnei rau tau 21. Tirohia he tatauranga
-    atu anō<a href='%{stats_url}'>ki konei</a>.
   hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
     computer science. It helps nurture problem-solving skills, logic and creativity.
     By starting early, students will have a foundation for success in any 21st-century
     career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Mā hea ahau e uru atu ai ki te Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Me tīmata tō whakamahaere ki konei</a>
-    mā te arotake i tā mātou puka aratohu. Māu tētahi takunetanga Hour of Code e whakarite
-    i tō kura, i tō hapori rānei&mdash; i ngā wāhi ako o waho atu o te kura, i tētahi
-    umanga moni-huakore, i tō wāhi mahi rānei. Me whakamātau noa iho rānei i tōna
-    kuhunga mai %{campaign_date}."
   hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
     our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+    your community — like in an extracurricular club, non-profit, or at work."
   hoc_faq_behind_hoc_q: Ko wai ngā kaihāpai o Hour of Code?
-  hoc_faq_behind_hoc_a: He mea whakatere te Hour of Code e ngā <a href='%{partner_url}'>
-    Kōmiti Whakaruruhau, Arotake</a> hoki o Hour of Code me Te Wiki o te Mātauranga
-    Pūtaiao Rorohiko, ka mutu, tētahi kāhui hoa kua whakapiri mai ki te tautoko i
-    te Hour of Code &mdash; pēnei i Microsoft, Apple, Amazon, Ngā Karapu Tamatāne,
-    Tamahine hoki o Amerika me te Poari Kāreti.
   hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
     by the Hour of Code Review Committee as well as an unprecedented coalition of
     [partners](%{partner_url}) that have come together to support the Hour of Code
-    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America, and the
     College Board.
   hoc_faq_host_q: Kāore aku mōhiotanga ki tēnei mea te waehere. E whakaae tonu ana
     māku tētahi takunetanga e taurima?
-  hoc_faq_host_a: Āna. He mea ārahi-whaiaro ngā ngohe o Hour of Code. Ko tāu he<a
-    href='%{codeorg_url}/learn'>whakamātau i ngā whakaakoranga o te wā nei</a>, he
-    whiriwhiri i tāu e hiahia ana, me tētahi haora&mdash;, ā, mā mātou te toenga.
-    He kōwhiringa hoki ā mātou mā ngā tāngata katoa ahakoa te pakeke, ahakoa hoki
-    te taumata-mōhio, mai i te whare kōhungahunga piki ake. Me tīmata ki te whakamahere
-    i tō takunetanga mā te pānui i tā mātou <a href='/how-to'>puka aratohu</a>.
   hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+    you have to do is [try our current tutorials](%{learn_url}), pick the tutorial
+    you want, and pick an hour — we take care of the rest. We also have options for
+    every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how-to guide](%{howto_url}).
   hoc_faq_devices_q: Ko ēhea pūrere hei whakamahi māku me aku ākonga?
-  hoc_faq_devices_a: He mea whakahaere ngā whakaakoranga Code.org ki ngā pūrere me
-    ngā pūtirotiro katoa. He mōhiohio atu anō e wātea ana mō ngā hiahia ā-hangarau
-    mō ngā whakaakoranga Code.org <a href='%{codeorg_url}/educate/it'> ki konei</a>.
-    Ko ngā hiahia ā-hangarau mō ngā whakaakoranga ehara i te whakaakoranga Code.org
-    ka kitea i <a href='%{codeorg_url}/learn'>%{partner_url}/ako</a>ki ngā whakaahuatanga
-    motuhake o te whakaakoranga. Kaua hoki e wareware, ka whakaratoa hoki e mātou
-    ētahi <a href='%{unplugged_url}'>ngohe momotu</a>ki te kore e taea e tō kura ngā
-    whakaakoranga te whakahaere!
   hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    You can see more information about Code.org's tutorial tech needs [here](%{it_url}).
+    Tech needs for non-Code.org tutorials can be found on [hourofcode.com/learn](%{learn_url})
+    in a specific tutorial description. Don't forget we also offer [unplugged activities](%{unplugged_url})
     if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: E tika ana kia whai rorohiko te katoa o ngā kaiuru?
-  hoc_faq_need_computers_a: Kāore. He whakaakoranga Hour of Code ā mātou ka whakahaerehia
-    ki ngā rorohiko PC, ngā waea atamai, ngā paparorohiko, me ētahi atu anō hoki e
-    āhei ana me te kore rorohiko! Ka pai noa iho tō piri mai ahakoa ki hea, ahakoa
-    hoki tāu momo pūrere. <p><i>Anei ētahi kōwhiringa:</i><br><ul><li><b>Mahi takirua.</b><a
-    href='%{pair_programming_research}'>He mea whakaatu mai e te rangahau</a>ka pai
-    ake te ako a te ākonga mā roto mai i te <a href='%{pair_programming_video}'>papatonotanga
-    takirua</a>, mā te mahitahi ki tētahi rorohiko me te mahitahi ā-takirua. Me akiaki
-    i ngā ākonga ki te mahi takirua.<li><b>Whakamahia tētahi mata rauata.</b> Mēnā
-    he rauata, he mata hoki tāu mō tētahi rorohiko honohono ā-Tukutuku ka taea e te
-    katoa o te rōpū tētahi Hour of Code ā-rōpū. Mātakitaki ā-rōpū ngā wāhanga ataata,
-    ā, ka whai wāhi te katoa ki te whakaoti panga, ki te whakautu pātai rānei. <li><b>Me
-    uru momotu.</b>Ka whakaratoa e mātou<a href='%{unplugged_url}'>ētahi whakaakoranga
-    rorohiko kore</a>.</ul>
   hoc_faq_need_computers_a_markdown: |-
     No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
 
@@ -2445,86 +2461,47 @@ mi:
     - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
     - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Kei <country> ahau. Ka pēhea taku uru atu?
-  hoc_faq_international_a: Ka taea e wai rānei tētahi takunetanga Hour of Code te
-    whakarite puta noa i te ao. I tērā tau, i piri mai ngā ākonga nō ngā tōpito katoa
-    o te ao ki Houra of Code. Kimihia he mōhiohio anō <a href='/promote'>ki konei</a>.
   hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
     in the world. Last year, students worldwide joined together for the Hour of Code.
     Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Ka pēhea taku hanga i tētahi whakaakoranga Hour of Code?
-  hoc_faq_tutorial_a: Mēnā e whakaaro ana koe ka piri mai koe hei hoa whakaako<a href='/tutorial-guidelines'>tirohia
-    ā mātou aratohu, ā mātou tohutohu hoki</a>. E hiahia ana mātou ki te taurima i
-    ngā kōwhiringa whaitake maha, otirā, ko te whāinga matua ia ko te arotau i te
-    wheako mā ngā akonga me ngā pouako he tauhou rātou ki te pūtaiao rorohiko.
   hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
     [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
     a variety of engaging options, but the primary goal is to optimize the experience
     for students and teachers who are new to computer science.
   hoc_faq_account_q: Me takiuru ngā ākonga mā tētahi pūkei?
-  hoc_faq_account_a: Karekau noa iho he take mō te waitohu, te takiuru rānei o te
-    ākonga kia wātea ia ki te whakamātau i te Hour of Code. Ko te nuinga o<a href='%{codeorg_url}/learn/beyond'>ngā
-    akoranga ka whai atu</a>me mātua waihanga pūkei te ākonga kia pai ai tana tiaki
-    i āna mahi. Hei āpitinga, KĀORE tētahi pūkei Code Studio e waihanga aunoa i ngā
-    pūkei mā te waitohu ki Hour of Code. Ki te hiahia koe ki te waihanga pūkei mā
-    ngā ākonga. me whai i ēnei<a href='https://youtu.be/_smelV_KISE'>ngā tohutohu</a>.
   hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
+    to try the Hour of Code. Most of the [follow-on courses](%{beyond_url}) require
+    account creation to save student progress. Also, signing up for the Hour of Code
+    does NOT automatically create a Code Studio account. If you do want to create
+    accounts for your students, please follow these [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Me kawe ahau i tēhea ngohe me aku ākonga kura tuarua?
-  hoc_faq_high_school_a: He rawe te whakaakoranga Star Wars me te whakaakoranga Mahimaina
-    mā ngā ākonga kura tuarua. Kātahi te mea pai ko te Star Wars putanga JavaScript
-    me te taumata tākaro wātea kei ia whakaakoranga. Hei whakaaro atu anō, e taunaki
-    ana mātou me whakamātau i tētahi o ngā whakaakoranga tauhou kei <a href='%{codeorg_url}/learn'>%{partner_url}/ako</a>hei
-    tīmatanga, pēnei i te whakaakoranga Angry Birds, te whakaakoranga rānei me Anna
-    rāu ko Elsa. Tōna tikanga ka tutuki e te ākonga kura tuarua tēnei whakaakoranga
-    i te 30 miniti kātahi ka huri ki tētahi whakaakoranga taumata kē ki JavaScript
-    pēnei i Khan Academy, o CodeHS rānei.
   hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
     for high schoolers, especially the Star Wars JavaScript version and the free play
     level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    tutorials on [hourofcode.com/learn](%{learn_url}) to start, such as the tutorial
+    with Angry Birds or with Frozen's Anna and Elsa. A high school student should
     be able to finish one of these in 30 minutes and can then try a more advanced
     tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: E kawe ana ahau i te Scratch mō te Hour of Code, otirā, me aha
     ahau mēnā he īPapa noa iho ā rātou, arā, karekau ā rātou rorohiko pona?
-  hoc_faq_scratch_a: Tē taea te Scratch te whakahaerehia ki ngā paparorohiko. Mēnā
-    he nohinohi tonu ngā ākonga ka pai te taupānga īPapa ScratchJR (mō ngā tamariki
-    e ako ana ki te pānui). Ki te titiro koe ki ngā whakaakoranga kei<a href='%{codeorg_url}/learn'>%{partner_url}/ako</a>ka
-    kite i ētahi atu whakaakoranga e āhei ana te whakahaere i te īPapa - Tynker, Lightbot,
-    CodeSpark nō Code.org.
   hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
     young, they can use the ScratchJR iPad app (for early-readers). If you look at
     the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
     tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Ka pēhea te tatau i ngā Hours of Code?
   hoc_faq_map_q: He te take kāore au i te kite i taku tongi ki te mahere?
-  hoc_faq_map_a: Kia manawanui mai i te korenga o tō takunetanga ake i te mahere Hour
-    of Code. He manomano kaiwhakarite ka waitohu mai, ā, ko tā te mahere he whakahiato
-    i ngā raraunga me te whakaatu i tētahi tohu mō ngā takunetanga maha. Ki te pāwhiri
-    koe i te tau kei runga ake i te mahere ka tukuna koe ki tētahi rārangi o ngā takunetanga
-    katoa ā-rohe, ā, ka kitea tō takunetanga ki reira. Hei tāpiri atu, nā te mea he
-    manomano tāngata e waitohu ana ki Hour of Code ka pau te 48 haora kia whakahoutia
-    te mahere me te rārangi takunetanga. Hoki mai anō hei ngā rangi tata nei!
   hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
     of Code map. Because of the tens of thousands of organizers who sign up, the map
     aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
+    [events page](%{events_url}) link below the map, you will be directed to a list
     of all events by state and can find your event listed there. Additionally, given
     the thousands of people signing up for the Hour of Code, the map and event list
     usually takes 48 hours to update. Check back in a few days!
-  hoc_faq_count_hoc_a: Ehara te pūaruaru Hour of Code i te inenga whakamahinga pū.
-    Kāore mātou e tatautika i ngā ID ākonga i a mātou e aruaru ana i te nui o te kaiuru
-    ki Hour of Code, nā te mea tonu, kāore mātou i te tono ki ngā ākonga ki te takiuru,
-    ki te rēhita rānei. Nā reira, i ētahi wā ka nui-ake, i ētahi wā ka iti-ake hoki
-    te kaute o ngā kaiuru te hua. Pānuihia ngā taipitopito katoa<a href='%{codeorg_url}/loc'>ki
-    konei</a>.
   hoc_faq_count_hoc_a_markdown: 'We do not count unique student IDs perfectly when
     tracking participation in the Hour of Code. Why? Partly because we don''t want
     the friction of prompting to “login / register” before a student or classroom
-    tries learning for the first time, and partly because there are may activities
+    tries learning for the first time, and partly because there are many activities
     we cannot track online. We do take certain steps to reduce double-counting, but
     without a login prompt, this can''t work perfectly. At the same time, there are
     MANY student activities in the Hour of Code that aren''t tracked at all. For example:
@@ -2536,67 +2513,33 @@ mi:
     not view the Hour of Code tracker to be an exact measure of usage. It is certainly
     directionally correct, and shows that many tens of millions of students have participated.'
   hoc_faq_one_hour_q: He pēhea te nui o tā te tangata ako i te haora kotahi?
-  hoc_faq_one_hour_a: Kāore a Hour of Code e whai ana kia mātanga kaipūtaiao rorohiko
-    te tangata i roto i te kotahi haora. Ka taea noa iho, i taua haora kotahi, te
-    ako i te ngahau, i te auaha hoki o te mahi pūtaiao, ā, kia mōhio hoki i te wātea
-    ki te tangata ahakoa te pakeke, ki ngā ākonga katoa ahakoa te ahurea. Kāore hoki
-    te angitu o tēnei whakamataaratanga e inehia mā te nui o te pūtaiao rorohiko ka
-    akona, heoi anō tāna angitu he mea ka kitea i te whānuitanga o ngā kaiuru puta
-    noa i ngā ira, ngā iwi, me ngā pāpori katoa, ā, ko tona hua, ko te nui tonu o
-    te tangata ka uru atu, ka whai wāhi atu hoki ki ngā akoaranga pūtaiao rorohiko
-    i ngā taumata ako katoa. Kei ngā miriona te tokonui o ngā kaiuru pouako atu, ākonga
-    mai ki neke ki tua o te kotahi haora nei ki te ako i te roanga atu o te rā, o
-    te wiki, o te aha rānei, ā, ko te hua o tēnei ko te urunga o ngā ākonga ki ngā
-    akoranga wā kikī (te wahi rānei i te tohu whare wānanga).<br/><br/>Hāunga ngā
-    ākonga ko tērā atu momo "tauira" tērā ko te pouako kua māia i roto i te haora
-    kotahi ki te whakaako i te pūtaiao rorohiko ahakoa kāore pea i a rātou tētahi
-    tohu whare wānanga, ehara hoki rātou i te kaipūtaiao rorohiko. He manomano pouako
-    kua noho whakatau kia whāia tonuhia te pūtaiao rorohiko ki taumata kē atu mā te
-    uru ki tētahi ngaiotanga, mā te whakarato ngāiotanga ā-tuihino rānei, mā ngā mea
-    e rua rānei. E hāngai hoki ana ēnei kōrero ki ngā kaiwhakahaere kura i runga i
-    tō rātou mōhio ko te pūtaiao rorohiko tētahi marau e tino kaingākautia ana e ngā
-    ākonga, e tino taea ana hoki e ngā pouako. <br/><br/>Ko te mea nui, ko te mōhio
-    o ngā kaiuru ka taea e rātou tēnei te mahi i roto i te haora kotahi.
   hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender, racial/ethnic, and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, and that it's accessible at all ages and for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender, racial/ethnic, and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour - to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
 
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending professional development or follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
 
-    Above all, what all participants can learn in an hour is that we can do this.
+    Above all, what all participants can learn in an hour is that anyone can learn computer science!
   hoc_faq_more_questions_q: He pātai tonu āu?
-  hoc_faq_more_questions_a: Tērā pea ka kitea te whakautu ki tā mātou <a href='http://support.code.org'>wānanga
-    tautoko</a>.
   hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Ka pēhea taku ako tonu i muri atu i te Hour of Code?
-  hoc_faq_keep_learning_a: E āhei ana te tangata, ahakoa ko wai, tētahi Hour of Code
-    te taurima i te wā e hiahia ana. Ka noho tonu ngā whakaakoranga mō te roanga atu
-    o te tau. Ka wātea ngā whakaakoranga me te marautanga i tā mātou pae haere ake
-    nei, haere ake nei. Tēnā haere atu ki <a href='/promote'> ā mātou rauemi</a>kia
-    kitea ngā puka-aratohu takunetanga me ngā rauemi ka āwhina i a koe kia eke angitu
-    tō takunetanga Hour of Code.
   hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
     tutorials stay up year-round. You can expect all our tutorials and curriculum
     to be available on our site in perpetuity. Please go to [our resources](%{promote})
     for event how-to guides and other resources to help make your Hour of Code event
     a success.
   hoc_faq_certificates_q: Ki hea tāngia ai ngā tiwhitikete mō aku ākonga?
-  hoc_faq_certificates_a: Haere atu ki tā mātou <a href='%{codeorg_url}/certificates'>whārangi
-    tiwhikete</a>ki reira tāngia wawetia ai ngā tiwhikete mō tāu akomanga. E āhei
-    ana hoki ngā <a href='%{codeorg_url}/certificates?course=mc'> tiwhikete motuhake
-    te tā mā ngā ākonga e whai ana i te whakaakoranga Mahimaina.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_answer_markdown: Go to our [certificates page](%{certificates_url})
+    where you can print certificates for your entire class ahead of time.
   hoc_faq_logo_q: He here e whakatū ana i taku whakamahi i te moko, i te ingoa Hour
     of Code rānei?
-  hoc_faq_logo_a: Kua whai tohu te Hour of Code. kāore mātou i te hiahia ki te aukati
-    i tana whakamahinga, engari, e hiahia kē ana mātou kia tika te whakamahinga i
-    raro i ētahi ture iti noa iho nei. Tēnā tirohia ngā aratohu nei<a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
-    mō te whakamahinga</a>.
   hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
     usage, but we want to make sure its usage fits within a few limits. Please see
     [these guidelines for usage](%{logo_url}).
+  hoc_faq_bug_q: I found a bug in an Hour of Code activity! What should I do?
+  hoc_faq_bug_a_markdown: |-
+    Oh no! If you've come across a bug in an Hour of Code activity - first check the URL for the activity you are on. If the URL starts with studio.code.org, our Code.org Support team can help! Click the question mark icon in the upper right corner of your screen, then select "Report a problem" from the dropdown menu.
+
+    If the URL does not start with studio.code.org, you are likely working on a third party activity and will need to reach out to that company's support team for further assistance.
   stats_hoc_2013_image_alt: Ngā raraunga nō te Hour of Code 2013
   stats_growth: Ko ia te mea hohoro rawa ki te pā atu ki ngā kaiwhakamahi 15 miriona
     te nui.
@@ -13708,6 +13651,23 @@ mi:
   video_library_page_not_hacked_video_title_6: 'How Not To Get Hacked: Messaging and
     Downloads'
   video_library_page_not_hacked_video_title_7: 'How Not To Get Hacked: Install Updates'
+  thank_you_page_main_title: Thank You for Helping to Build a Movement
+  thank_you_page_description: The Code.org Advocacy Coalition wishes to thank the
+    hundreds of thousands of local champions and advocates, including teachers, community
+    members, researchers, nonprofits, universities, corporations, and government institutions
+    who have supported the vision that every student in every school deserves the
+    opportunity to learn computer science. Thank you for your support of this movement.
+  thank_you_page_members_section_title: 'And to all the members of the Code.org Advocacy
+    Coalition:'
+  thank_you_page_individual_organization_title: 'Thank you to the following individuals
+    and organizations for their contributions to this report:'
+  thank_you_page_individual_organization_description: Computer science education supervisors
+    at each state education agency, College Board, Della Cronin, Stuart Dexler, Katharine
+    Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Thank you to the students and teachers
+    quoted in this report:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: About Us
   about_us_page_hero_description: Code.org® is an education innovation nonprofit dedicated
     to the vision that every student in every school has the opportunity to learn
@@ -13852,6 +13812,10 @@ mi:
     goal that will support that vision.
   about_page_donors_link_1: Make a donations
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
+  teach_ai_title: Real-world Examples. Practical Resources.
+  teach_ai_description: The AI Guidance for Schools Toolkit is a resource for policymakers,
+    school leaders, and staff to develop initial guidance on AI in their schools.
+  teach_ai_button_label: View the Toolkit
   language_code:
     ar: Arabic
     az: Azerbaijani

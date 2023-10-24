@@ -18,8 +18,8 @@ nav: how_to_nav
 
 शुरू करने के लिए नीचे दिए गए चरण देखें, और ऑवर ऑफ़ कोड के बारे में अपनी कंपनी को उत्साहित करने के तरीके के बारे में अधिक जानकारी के लिए हमारी [कॉर्पोरेट भागीदारों के लिए मार्गदर्शिका](/files/hoc-corporate-toolkit.pdf) देखें।
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [किसी स्थानीय स्कूल से जुड़ें](#connect-with-a-school)
+- [कर्मचारियों को कक्षा में वालंटियर करने के लिए प्रोत्साहित करें](#encourage-employees)
 - [अपने ऑवर ऑफ़ कोड इवेंट को होस्ट करें](#host-hour-of-code)
 - [ऑवर ऑफ़ कोड को प्रमोट करें](#promote-hour-of-code)
 - [ऑवर ऑफ़ कोड का सपोर्ट करने के और तरीके](#support-hour-of-code)
@@ -28,31 +28,31 @@ nav: how_to_nav
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## किसी स्थानीय स्कूल से जुड़ें
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+स्थानीय स्तर पर शुरुआत करना हमेशा सबसे अच्छा होता है, उन स्कूलों के साथ, जिनसे आपका या आपके कर्मचारियों का मजबूत संबंध है, जैसे कि अल्मा मेटर, एक बच्चे का स्कूल, या एक स्थानीय संगठन या स्कूल जो कंप्यूटर विज्ञान में ऐतिहासिक रूप से कम प्रतिनिधित्व वाली आबादी की सेवा करने पर केंद्रित है।
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+वहां से, आप प्रिंसिपल, वाइस प्रिंसिपल, टेक्नोलॉजी या कंप्यूटर साइंस इंस्ट्रक्टर, या यहां तक कि स्कूल के पीटीएसए जैसे संपर्क करने के लिए उपयुक्त संपर्क खोजने के लिए स्कूल की वेबसाइट पर जा सकते हैं। आप किसी कार्यक्रम की सह-मेजबानी करने के लिए बॉयज़ & गर्ल्स क्लब ऑफ़ अमेरिका, वाईएमसीए शाखा और अन्य संगठनों के साथ भी साझेदारी कर सकते हैं।
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+यदि आप स्कूल से जुड़ने में असमर्थ हैं, तो कृपया [हमारे साथ संपर्क करें](https://support.code.org/hc/en-us/requests/new) और हम आपको संभव होने पर हमारे स्थानीय भागीदारों में से एक के साथ जोड़ेंगे।
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## कर्मचारियों को कक्षा में वालंटियर करने के लिए प्रोत्साहित करें
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+ऑवर ऑफ़ कोड में भाग लेने के सबसे संतोषजनक तरीकों में से एक या तो व्यक्तिगत रूप से या आभासी रूप से, स्थानीय कक्षा में स्वयंसेवा करना है। सबसे अच्छी बात यह है कि स्वयंसेवक बनने के लिए आपको इंजीनियर होने की आवश्यकता नहीं है। आप अभी भी अपने करियर के अनुभव और सीएस या तकनीक ने आपकी भूमिका को कैसे प्रभावित किया है, यह साझा करके छात्रों को एक सार्थक अनुभव प्रदान कर सकते हैं।
 
 [<button>वालंटियर बनने के लिए साइन अप करें</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+स्वयंसेवक पंजीकरण के बाद, शिक्षक हमारे [स्वयंसेवक मैप](https://code.org/volunteer/local) पर अपनी प्रोफ़ाइल की समीक्षा कर सकते हैं - इसलिए प्रोफ़ाइलें यथासंभव पूर्ण रूप से दर्ज की जानी चाहिए। यदि आप उनकी कक्षा के लिए उपयुक्त हैं, तो शिक्षक मंच के जरिए आपसे संपर्क करेगा (हम शिक्षक के साथ आपका ईमेल पता कभी साझा नहीं करेंगे)। फिर आप शिक्षक के साथ सीधे [अपनी कक्षा के साथ सर्वश्रेष्ठ स्वयंसेवक कैसे बनें](https://hourofcode.com/us/how-to/volunteers) के बारे में विवरण समन्वयित कर सकते हैं।
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+आपकी कंपनी को ऑवर ऑफ़ कोड के बारे में उत्साहित करने के लिए स्वयंसेवा और नमूना संदेश पर अधिक मार्गदर्शन के लिए, हमारी [कॉर्पोरेट भागीदारों के लिए मार्गदर्शिका]({{ localized_files/hoc_corporate_toolkit }}) देखें।
 
 * * *
 
@@ -141,7 +141,7 @@ For more guidance on volunteering and sample messaging to get your company excit
     
     ### 1. अपना इवेंट रजिस्टर करें
     
-    जब आप [अपने ऑवर ऑफ़ कोड ईवेंट पर साइन अप करते हैं](/#join), तो आपको एक सफल ऑवर ऑफ़ कोड की मेजबानी के लिए समाचार और सुझावों के साथ उपयोगी ईमेल संचार प्राप्त होंगे। यह भी है कि आप स्थानीय स्कूलों या छात्रों के माता-पिता को कैसे बता सकते हैं कि आप उनके आसपास एक कार्यक्रम को होस्ट कर रहे हैं।
+    जब आप अपने ऑवर ऑफ़ कोड इवेंट में [साइन अप करते हैं](/events), तो आपको एक सफल ऑवर ऑफ़ कोड होस्ट करने के लिए समाचार और सुझावों के साथ उपयोगी ईमेल संचार प्राप्त होंगे। यह भी है कि आप स्थानीय स्कूलों या छात्रों के माता-पिता को कैसे बता सकते हैं कि आप उनके आसपास एक कार्यक्रम को होस्ट कर रहे हैं।
     
     ### 2. सोशल मीडिया पर पोस्ट करें
     
@@ -170,7 +170,7 @@ For more guidance on volunteering and sample messaging to get your company excit
     
     
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">अपने समुदाय में अपने ईवेंट का प्रचार करने के लिए और अधिक</a> पोस्टर, वीडियो, स्टिकर और अन्य तरीके खोजें।
     
     * * *
     

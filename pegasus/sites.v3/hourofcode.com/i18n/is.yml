@@ -5,37 +5,43 @@ is:
   language: Enska
   front_title: Taktu þátt í stærsta námsviðburði sögunnar %{campaign_date}
   coming_soon: Á næsta leiti
-  campaign_date_start_short: 7. des.
-  campaign_date_start_long: 5. desember
-  campaign_date_short: 5. - 11. des.
-  campaign_date_full: 5. - 11. desember
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5.-11. desember 2022
-  nonus_campaign_date_start_short: 1. október
-  nonus_campaign_date_start_long: Október 1
-  nonus_campaign_date_short: 1. október - 18. des.
-  nonus_campaign_date_full: 1. október - 18. desember
-  nonus_campaign_date_year: '2022'
+  campaign_date_start_short: 4. des.
+  campaign_date_start_long: 4. desember
+  campaign_date_short: 4. - 10. des.
+  campaign_date_full: 4. - 10. desember
+  campaign_date_year: ۲۰۲۳
+  campaign_date_full_year: 4.-10. desember 2023
+  nonus_campaign_date_start_short: 5. sept.
+  nonus_campaign_date_start_long: 5. september
+  nonus_campaign_date_short: 5. sept. - 17. des.
+  nonus_campaign_date_full: 5. september - 17. desember
+  nonus_campaign_date_year: ۲۰۲۳
   nonus_campaign_date_full_year: 1. október 2022 - 18. desember 2022
-  latam_campaign_date_start_short: 1. október
-  latam_campaign_date_start_long: Október 1
-  latam_campaign_date_short: 1. október - 18. des.
-  latam_campaign_date_full: 1. október - 18. desember
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_start_short: 5. sept.
+  latam_campaign_date_start_long: 5. september
+  latam_campaign_date_short: 5. sept. - 17. des.
+  latam_campaign_date_full: 5. september - 17. desember
+  latam_campaign_date_year: ۲۰۲۳
   latam_campaign_date_full_year: 1. október 2022 - 18. desember 2022
-  europe_campaign_date_start_short: 1. október
-  europe_campaign_date_start_long: Október 1
-  europe_campaign_date_short: 1. október - 18. des.
-  europe_campaign_date_full: 1. október - 18. desember
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_start_short: 5. sept.
+  europe_campaign_date_start_long: 5. september
+  europe_campaign_date_short: 5. sept. - 17. des.
+  europe_campaign_date_full: 5. september - 17. desember
+  europe_campaign_date_year: ۲۰۲۳
   europe_campaign_date_full_year: 1. október 2022 - 18. desember 2022
-  africa_campaign_date_start_short: 1. október
-  africa_campaign_date_start_long: Október 1
-  africa_campaign_date_short: 1. október - 18. des.
-  africa_campaign_date_full: 1. október - 18. desember
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_start_short: 5. sept.
+  africa_campaign_date_start_long: 5. september
+  africa_campaign_date_short: 5. sept. - 17. des.
+  africa_campaign_date_full: 5. september - 17. desember
+  africa_campaign_date_year: ۲۰۲۳
   africa_campaign_date_full_year: 1. október 2022 - 18. desember 2022
   hoc2023_header: Sköpun með AI
+  hoc2023_hero_desc_homepage: Taktu þátt í milljónum um allan heim í að skipuleggja
+    klukkutíma kóðun, með eða án AI og læra hvernig AI virkar. Hver sem er, hvar sem
+    er getur gert það. Engin reynsla er þörf.
+  hoc2023_hero_desc_learn_page: Á þessu ári erum við að taka Hour of Code í nýjar
+    hæðir með því að bjóða upp á kóðunartækifæri sem taka bæði gervigreind (AI) og
+    hluti sem ekki eru AI.
   hoc2023_social_creativity_with_ai_title: Hour of Code - Hvað ætlar þú að búa til?
   hoc2023_social_creativity_with_ai_desc: Notaðu tölvunarfræði til að kanna og læra
     um AI!
@@ -167,6 +173,7 @@ is:
     og hvers vegna það er mikilvægt.
   social_ai_title: Lærðu um gervigreind (AI) | Code.org
   social_ai_desc: Verkfæri til að hjálpa nemendum og kennurum að koma AI inn í skólastofuna.
+  social_videos_desc: Grípandi tölvunarfræðimyndbönd fyrir nemendur á öllum aldri.
   pl_superhero_title: Hjálpaðu nemendum að verða ofurhetjur!
   pl_superhero_desc: Vertu með í mjög studdu faglegu námsáætlun okkar fyrir kennara
     í miðju og menntaskóla.
@@ -251,6 +258,7 @@ is:
   optional_materials: 'Valfrjálst efni:'
   call_to_action_hold_an_event: Halda viðburð
   call_to_action_register_event: Skráðu viðburðinn þinn
+  call_to_action_register_your_hoc: Skráðu þína Klukkustund kóðunar
   call_to_action_select_activity: Veldu virkni
   call_to_action_start_activity: Byrjaðu virkni
   call_to_action_get_certificates: Fáðu vottorð
@@ -346,6 +354,8 @@ is:
   call_to_action_learn_about_advocacy: Lærðu um málsvörn okkar
   call_to_action_visit_store: Heimsæktu verslunina
   call_to_action_view_faqs: Skoða fleiri algengar spurningar
+  call_to_action_applications_open: Umsóknir eru nú opnar
+  call_to_action_apply_cs_ambassador: Sækja um að vera CS sendiherra
   aria_label_call_to_action_hoc_how_to_educators: Skoða leiðbeiningar fyrir kennara
   aria_label_call_to_action_hoc_how_to_companies: Skoða leiðbeiningar fyrir fyrirtæki
   aria_label_call_to_action_hoc_how_to_districts: Skoða leiðbeiningar fyrir héruð
@@ -556,7 +566,7 @@ is:
   module_label_prerequisites: 'Forsendur:'
   module_label_level: 'Stig:'
   module_label_topics: 'Umræðuefni:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Tæki:'
   module_label_tools: 'Forritun Verkfæri:'
   module_label_professional_learning: 'Faglegt nám:'
   module_label_languages: 'Tungumál studd:'
@@ -582,8 +592,10 @@ is:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Leikskóli
   module_grade_grade_01: 1. bekkur
@@ -680,6 +692,54 @@ is:
   heading_explore_curriculum_catalog: Skoða öll námskeið okkar í Curriculum Catalog
   heading_csa_ai: Ertu að leita að hlutum til að gera eftir AP® prófið?
   heading_bring_cs_to_students: Koma tölvunarfræði til nemenda
+  heading_cs_ambassador_program: CS sendiherraáætlun
+  cs_ambassador_subhead: Ef þú ert menntaskólanemi ástríðufullur um að hvetja fleiri
+    ungar konur til að taka tölvunarfræði í skólanum þínum, þá þurfum við þig!
+  cs_ambassador_desc: Sérhvert svið, þar á meðal læknisfræði, skemmtun, íþróttir,
+    menntun, viðskipti, tíska og frumkvöðlastarf er snert af tölvunarfræði. Samt taka
+    aðeins 5% ungra kvenna á menntaskólaaldri í tölvunarfræðitíma. Sendiherrar geta
+    hjálpað til við að loka þessu kynjabil með því að hvetja jafnaldra sína til að
+    taka tölvunarfræðinám.
+  cs_ambassador_application_date: Umsóknir opnar til 8. nóvember 2023
+  cs_ambassador_application_subhead: Vinna með kennara til að senda inn umsókn þína
+    í dag
+  cs_ambassador_application_questions: Spurningar? Vinsamlegast hafðu samband við
+    [youngwomen@code.org] (%{email_url})
+  cs_ambassador_do_heading: Hvað gera CS sendiherrar?
+  cs_ambassador_do_desc: Sendiherrar CS hvetja ungar konur til að kanna viðfangsefnið,
+    og lyfta hver annarri upp þegar þær endurheimta sess sinn í tölvunarfræði. CS
+    sendiherrar tengjast jafningjum sínum til að deila spennu sinni og ást á tölvunarfræði.
+    Þeir heimsækja kennslustofur, hýsa borð í hádeginu og tala á þingum og klúbbfundum.
+    CS sendiherrar vinna með kennurum og skólastjórnendum að því að brjóta staðalímyndir
+    sem halda ungum konum aftur.
+  cs_ambassador_steps_heading: Hvað þarf ég til að verða CS sendiherra?
+  cs_ambassador_steps_list_title_01: Ástríða
+  cs_ambassador_steps_list_title_02: Reynsla í CS námskeiði
+  cs_ambassador_steps_list_title_03: Skóli sem býður upp á CS
+  cs_ambassador_steps_list_desc_01: Ástríða fyrir að hvetja ungar konur í skólanum
+    þínum til að taka tölvunarfræðinámskeið
+  cs_ambassador_steps_list_desc_02: 'Hef tekið árslanga tölvunarfræðinámskeið á skólaárinu
+    2022-23 eða fyrr (mælt með: CS Principles eða AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Sækja menntaskóla sem býður reglulega upp á árslangt
+    tölvunarfræðinámskeið (mælt með: CS Principles eða AP® CSA)'
+  cs_ambassador_benefits_heading: Ávinningur áætlunarinnar
+  cs_ambassador_benefits_list_title_01: Þjóðsamfélag
+  cs_ambassador_benefits_list_title_02: Samfélagsþjónusta
+  cs_ambassador_benefits_list_title_03: Viðurkenning
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Vottorð
+  cs_ambassador_benefits_list_title_06: Upplifanir
+  cs_ambassador_benefits_list_desc_01: Aðgangur að þjóðfélagi ungra leiðtoga sem skuldbundið
+    sig til að loka kynjabilið í tölvunarfræði.
+  cs_ambassador_benefits_list_desc_02: Þjónustutími í samfélaginu og tækifæri til
+    að vinna sér inn [verðlaun sjálfboðaliðaþjónustunnar Bandaríkjaforseta] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Viðurkenning sem 2023-2024 sendiherra og gjaldgengur
+    til að vera heiðraður í Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Vertu auðkenndur sem CS sendiherra í gegnum
+    sérstakan Code.org vörumerki fatnað, límmiða og fleira!
+  cs_ambassador_benefits_list_desc_05: Opinbert þátttökuvottorð frá Code.org.
+  cs_ambassador_benefits_list_desc_06: Fáðu reynslu og sögur til að deila á háskólaumsókninni
+    þinni, ferilskrá og fleira!
   professional_learning_section_desc: Fáðu þann stuðning sem þú þarft þegar þú býrð
     þig undir að kenna. Kennarar elska það, með yfir 90% röðun það besta faglega þróun
     alltaf!
@@ -831,6 +891,12 @@ is:
   ai_curriculum_grades_05: 'Stig Stig: 9-12'
   ai_curriculum_btn_aria_label_05: Kannaðu Software Engineering & Computer Vision
     mát
+  ai_curriculum_title_06: Samfélagsleg áhrif kynslóða AI
+  ai_curriculum_desc_06: Rannsaka áhrif kynslóð AI frá mismunandi sjónarhornum og
+    vinna síðan saman sem teymi til að koma með leiðbeiningar sem taka á flestum þörfum
+    frá öllum þátttakendum.
+  ai_curriculum_btn_aria_label_06: Skoða samfélagsleg áhrif kynslóðaáætlunar um kynslóð
+    AI
   ai_carousel_heading: 'Hvað kennarar segja um AI með Code.org:'
   ai_carousel_quote_01: Þessi kennslustund gaf nemendum mínum einnig tækifæri til
     að sjá að það er þáttur í skoðun í flokkunarkerfum. Seinna, þegar við byrjuðum
@@ -1805,6 +1871,9 @@ is:
     tíu stefnur sem við mælum með að ríki taki upp til að gera tölvunarfræði grundvallaratriði
     fyrir alla nemendur. Auk þess skaltu finna út hvernig þú getur keyrt breytingar
     á ástandi þínu.
+  yw_page_top_heading: Ungar konur í tölvunarfræði
+  yw_page_top_desc: Vertu sendiherra CS og vertu liður í því að loka kynjabilið í
+    tölvunarfræði.
   hoc_live: Klukkutími lifandi kóða
   hoc_live_sign_up_title: Skráðu þig fyrir klukkustund af kóða Live
   hoc_live_learn_title: Lærðu með klukkustund af kóða Live
@@ -2173,10 +2242,15 @@ is:
     á tölvunarfræði þar sem notuð eru skemmtileg námskeið til að sýna að hver sem
     er getur lært grunnatriðin. Þessi grasrótarherferð er studd af yfir 400 samstarfsaðilum
     og 200,000 kennurum um allan heim.
+  hoc_homepage_registration_desc: Bekkurinn þinn eða hópur getur tekið þátt í milljónum
+    um allan heim að gera Hour of Code! Skráning á hina árlegu hátíð tölvunarfræðsluvikunnar
+    hefst í október. Hins vegar er Hour of Code í boði allt árið.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lestu leiðbeiningar okkar um hvernig
     á að nota] (%{howto_guide_url}) til að skipuleggja viðburð fyrir bekkinn þinn."
   hoc_homepage_highlights_heading: Klukkustund af kóða hápunktum
   hoc_homepage_organized_by: Klukkustund kóðans er skipulögð af [Code.org](%{codeorg_url}).
+  hoc_events_heading: Skráðu þig til að hýsa Klukkustund kóðunar
+  hoc_events_jump_to_map: Hoppa á Hour of Code kortið
   signup_closed: Skráning fyrir Klukkstund kóðunar er nú lokuð. Athugaðu aftur í október
     fyrir næsta átak í Klukkustund kóðunar.
   signup_registration_not_required: Þú þarft ekki að skrá þig til að taka þátt! Verkefnin
@@ -2285,6 +2359,7 @@ is:
   map_title: Kort fyrir Klukkustund kóðunar
   map_header: "# Klukkustundir kóðunar um allan heim"
   map_header_count_year: "%{event_count} viðburðir skráðir árið %{year}"
+  map_header_count_year_so_far: "%{event_count} Viðburðir skráðir hingað til í %{year}"
   see_all_events: Sjá alla atburði
   map_header_company: "# af skipuleggjendum fyrirtækja"
   map_header_country: "# á %{country}"
@@ -2298,6 +2373,7 @@ is:
     Alla skráða viðburði með gilt heimilisfang má sjá á <a href='%{events_url}'>viðburðasíðunni.</a>
   map_warning_markdown: Hægt er að skoða heildarlista yfir atburðina á [atburðasíðunni.]
     (%{events_url})
+  map_view_all_events: Sjá heildarlista yfir atburði Hour of Code [here](%{events_url}).
   meta_tag_og_title: Klukkustund kóðunar er komin
   meta_tag_og_description: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga
     miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.
@@ -2319,9 +2395,6 @@ is:
     (Takk %{random_donor} fyrir að styðja @codeorg)'
   hoc_faq_title: Spurt & svarað
   hoc_faq_what_is_hoc_q: Hvað er Klukkustund kóðunar?
-  hoc_faq_what_is_hoc_a: Klukkustund kóðunar er einnar klukkustundar kynning á tölvunarfræði
-    sem er ætlað að svipta hulunni af forritun og sýna að allir geti lært grunnatriðin.
-    <a href='http://code.org/learn'>Skoða kennsluefnið</a>.
   hoc_faq_what_is_hoc_a_markdown: The Hour of Code byrjaði sem einnar klukkustundar
     kynning á tölvunarfræði, sem ætlað er að demystify “kóða”, til að sýna að hver
     sem er getur lært grunnatriði, og til að auka þátttöku á sviði tölvunarfræði.
@@ -2331,12 +2404,6 @@ is:
     af yfir [400 samstarfsaðilum] (%{partners}) og 200,000 kennurum um allan heim.
   hoc_faq_last_year: Prófa kennsluefnið
   hoc_faq_when_is_hoc_q: Hvenær er Klukkustund kóðunar?
-  hoc_faq_when_is_hoc_a: Það geta allir miðlað Klukkutíma kóðunar hvenær sem er, en
-    markmið grasrótarátaksins er fá tugir miljóna nemenda til að spreyta sig á einhverri
-    Klukkustund kóðunar vikuna %{campaign_date} í tengslum við <a href='http://csedweek.org'>Computer
-    Science Education Week</a> í USA. Er þetta ein tiltekin <i>klukkustund</i>? Nei.
-    Það er hægt að gera þetta hvenær sem er þessa viku. (Og ef það næst ekki, þá vikuna
-    á undan eða eftir).
   hoc_faq_when_is_hoc_a_markdown: The Hour of Code fer fram á hverju ári á [Computer
     Science Education Week] (%{csedweek_url}). The %{campaign_date_year} Computer
     Science Education Week verður %{campaign_date_full}, en þú getur hýst Hour of
@@ -2344,42 +2411,22 @@ is:
     á afmæli computing brautryðjandi [Admiral Grace Murray Hopper] (%{grace_hopper})
     (Desember 9, 1906).
   hoc_faq_why_cs_q: Hvers vegna tölvunarfræði?
-  hoc_faq_why_cs_a: "<i>Öllum</i> nemendum ætti að vera gefið tækifæri til að læra
-    tölvunarfræði. Það hjálpar til að þroska færni í að leysa vandamál, rökvísi og
-    sköpun. Með því að byrja snemma fá nemendur grunn til að ná árangri í störfum
-    21. aldarinnar. Meiri tölfræði má finna á <a href='http://code.org'>Code.org</a>."
   hoc_faq_why_cs_a_markdown: _Every_ nemandi ætti að hafa tækifæri til að læra tölvunarfræði.
     Það hjálpar hlúa að færni til að leysa vandamál, rökfræði og sköpunargáfu. Með
     því að byrja snemma munu nemendur hafa grunn að velgengni í hvaða 21 aldar starfsbraut
     sem er. Sjá fleiri tölfræði [here](%{stats_url}).
   hoc_faq_how_participate_q: Hvernig tek ég þátt í Klukkustund kóðunar?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Byrjaðu að skipuleggja
-    hér</a> með því að lesa leiðarvísi okkar. Þú getur haldið Klukkustund kóðunar
-    í skólanum þínum eða út í samfélaginu &mdash; svo sem í tómstundaklúbbi, félagi
-    eða í vinnunni. Eða bara prófað þetta sjálf/ur %{campaign_date}."
   hoc_faq_how_participate_a_markdown: "[Byrjaðu að skipuleggja hér] (%{howto}) með
     því að fara yfir leiðbeiningar okkar um hvernig á að gera. Þú getur skipulagt
     Hour of Code viðburð í skólanum þínum eða í samfélaginu þínu - eins og í félagsstörfum,
     non-gróði eða í vinnunni. Eða prófaðu það bara sjálfur þegar %{campaign_date}
     kemur."
   hoc_faq_behind_hoc_q: Hver stendur að baki Klukkustund kóðunar?
-  hoc_faq_behind_hoc_a: Klukkustund kóðunar er skipulögð af <a href='http://code.org'>Code.org</a>,
-    sem eru almenn óháð samtök sem hafa það að markmiði að auka þátttöku í tölvunarfræði
-    með því að gera hana aðgengilega í fleiri skólum, og að auka þátttöku kvenna og
-    minnihlutahópa. Fordæmalaust <a href='http://code.org/about/partners'>samstarf
-    hefur tekist</a> milli aðila hefur tekist til að styðja við Klukkustund kóðunar.
-    Þar má nefna Microsoft, Apple, Amazon, ungmennafélög og skólayfirvöld.
   hoc_faq_behind_hoc_a_markdown: The Hour of Code er skipulögð af Code.org og knúin
     áfram af Hour Code Review nefndarinnar auk ótal bandalag [partners](%{partner_url})
     sem hafa komið saman til að styðja Hour of Code - þar á meðal Microsoft, Apple,
     Amazon, Strákar og stelpur Clubs of America og College Board.
   hoc_faq_host_q: Ég veit ekkert um forritun. Get ég samt skipulagt viðburð?
-  hoc_faq_host_a: Að sjálfsögðu. Verkefni í Klukkustund kóðunar eru sjálfstýrð. Allt
-    sem þú þarft að gera er að <a href='%{codeorg_url}/learn'>prófa núverandi kennsluefni
-    okkar</a>, velja efnið sem þú vilt nota og velja stundina &mdash; við munum sjá
-    um afganginn. Við erum líka með valkosti fyrir alla aldurs- og reynsluhópa, frá
-    leikskólastigi og upp úr. Byrjaðu skipulagninguna á að lesa <a href='/how-to'>leiðarvísinn
-    okkar</a>.
   hoc_faq_host_a_markdown: Auðvitað. Klukkustund af Code starfsemi eru sjálf-leiðsögn.
     Allt sem þú þarft að gera er að [prófa núverandi námskeið okkar] (%{codeorg_url}/læra),
     veldu námskeiðið sem þú vilt og veldu klukkutíma - við sjáum um afganginn. Við
@@ -2387,26 +2434,12 @@ is:
     úr. Byrjaðu að skipuleggja viðburðinn þinn með því að lesa okkar [hvernig á að
     leiðbeina] (%{howto}).
   hoc_faq_devices_q: Hvaða tæki ætti ég að nota með nemendum mínum?
-  hoc_faq_devices_a: Kennsluefni Code.org virkar á öllum tækjum og vöfrum. Þú getur
-    séð meiri upplýsingar um tæknikröfur <a href='%{codeorg_url}/educate/it'>hér</a>.
-    Tæknikröfur kennsluefnis sem ekki er frá Code.org má finna á <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    í lýsingu kennsluefnisins. Ekki gleyma að við erum líka með <a href='%{unplugged_url}'>ótengd
-    verkefni</a> fyrir æfingar án nettengingar!
   hoc_faq_devices_a_markdown: Code.org námskeið vinna á öllum tækjum og vöfrum. Þú
     getur séð frekari upplýsingar um kennslutækni þarfir [here]Code.org er (/mennta/það).%{codeorg_url}Tækniþörf
     fyrir námskeið utan Code.org er að finna á [%{partner_url}/læra] (%{codeorg_url}/læra)
     í einkatími sérstaka lýsingu. Ekki gleyma að við bjóðum einnig upp á [ótengda
     starfsemi] (%{unplugged_url}) ef skólinn þinn rúmar ekki námskeiðin!
   hoc_faq_need_computers_q: Þarf ég tölvu fyrir hvern þátttakanda?
-  hoc_faq_need_computers_a: Nei. Við erum með kennsluefni fyrir Klukkustund kóðunar
-    sem virkar á tölvum, snjallsímum og spjaldtölvum og jafnvel án tölvu! Þú getur
-    tekið þátt sama hvar þú ert með því tæki sem þú hefur.<p><i>Hér eru nokkrir valkostir:</i><br><ul><li><b>Vinna
-    með félaga</b>Rannsóknir sýna að nemendur læra best að <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>forrita
-    með félaga</a> þar sem tveir nemendur deila tölvu og vinna saman. Hvettu nemendur
-    þína til að gera það.<li><b>Nota skjávarpa.</b>Með skjávarpa og internet-tengdri
-    tölvu getur heill hópur hjálpast að með Klukkustund kóðunar. Horft á myndskeiðin
-    saman og skipst á að leysa þrautir eða svara spurningum.<li><b>Vinna án tölvu.</b>Við
-    erum með verkefni sem gera ekki ráð fyrir tölvu.</ul>
   hoc_faq_need_computers_a_markdown: |-
     Nei. Við höfum Hour of Code námskeið sem vinna á tölvum, smartphones, töflur, og sumir sem þurfa enga tölvu á öllum! Þú getur tekið þátt hvar sem þú ert, með hvað sem þú hefur.
 
@@ -2417,38 +2450,21 @@ is:
     -** Fara unplugged.** Við bjóðum [námskeið sem þurfa enga tölvu] () yfirleitt.%{unplugged_url}
   hoc_faq_international_q: Ég er í landinu <country>. Hvernig er alþjóðlegri þátttöku
     háttað?
-  hoc_faq_international_a: Það geta allir skipulagt Klukkustund kóðunar, hvar sem
-    er í heiminum. Á síðasta ári komu nemendur um allan heim saman til að prófa Klukkustund
-    kóðunar. Nánari upplýsingar <a href='/promote'>hér</a>.
   hoc_faq_international_a_markdown: Hver sem er getur skipulagt Hour of Code atburð,
     hvar sem er í heiminum. Á síðasta ári, nemendur um allan heim byrjuðu saman fyrir
     Hour of Code. Finna út fleiri [here](%{promote}).
   hoc_faq_tutorial_q: Hvernig get ég búið til kennsluefni fyrir Klukkustund kóðunar?
-  hoc_faq_tutorial_a: Ef þú hefur áhuga á að gerast samstarfsaðili í gerð kennsluefnis,
-    þá mælum við með að þú kynnir þér <a href='target-tutorial-guidelines'>leiðarvísa
-    okkar og leiðbeiningar</a>. Við mundum vilja hýsa fjölmörg áhugaverð viðfangsefni,
-    en meginmarkmiðið er að hámarka upplifunina fyrir nemendur og kennara sem hafa
-    ekki fyrri reynslu af tölvunarfræði.
   hoc_faq_tutorial_a_markdown: Ef þú hefur áhuga á að gerast kennsluaðili, [sjá leiðbeiningar
     okkar og leiðbeiningar] (%{tutorial_guidelines}). Okkur langar til að hýsa margs
     konar grípandi valkosti, en aðal markmiðið er að hámarka reynslu nemenda og kennara
     sem eru nýir í tölvunarfræði.
   hoc_faq_account_q: Þurfa nemendur að skrá sig inn með notendaupplýsingum?
-  hoc_faq_account_a: Nei. Það er alls engin krafa að nemendur skrái sig eða skrái
-    sig inn til að prófa Klukkustund kóðunar. En flest <a href='http://code.org/learn/beyond'>námskeiðin
-    sem fara á eftir</a> gera kröfu um innskráningu til að geta varðveitt framvindu
-    nemenda.
   hoc_faq_account_a_markdown: Nei. Engin skráning eða innskráning er nauðsynleg fyrir
     nemendur til að prófa Hour of Code. Flest af [eftirfylgni námskeið] (%{codeorg_url}/læra/utan)
     þurfa reikning sköpun til að spara framfarir nemenda. Einnig, að skrá þig fyrir
     Hour of Code skapar EKKI sjálfkrafa Code Studio reikning. Ef þú vilt búa til reikninga
     fyrir nemendur þína skaltu fylgja þessum [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Hvaða verkefni ætti ég að nota með framhaldsskólanemendum?
-  hoc_faq_high_school_a: Fyrir alla aldurshópa mælum við með að prófa byrjendaefnið
-    á <a href='http://code.org/learn'>Code.org/learn</a> til að byrja með, svo sem
-    kennsluefnið með Angry Birds eða með Önnu og Elsu. Nemandi í framhaldsskóla ætti
-    að geta klárað svona efni á 30 mínútum og getur þá spreytt sig á ítarlegra efni
-    með JavaScript, svo sem hjá Khan Academy eða CodeHS.
   hoc_faq_high_school_a_markdown: Star Wars og Minecraft námskeiðin okkar eru frábær
     fyrir menntaskólafólk, sérstaklega Star Wars JavaScript útgáfan og ókeypis leikstigið
     á báðum námskeiðunum. Til skiptis mælum við með að prófa eitt af byrjendanámskeiðunum
@@ -2458,23 +2474,12 @@ is:
     Khan Academy eða CodeHS.
   hoc_faq_scratch_q: Ég er að gera Klukkustund kóðunar í Scratch en hvað ef nemendur
     mínir hafa iPad spjöld fremur en fartölvur?
-  hoc_faq_scratch_a: Scratch keyrir ekki á spjaldtölvum. Ef nemendur þínir eru ungir,
-    geta þeir notað ScratchJR iPad appið (fyrir byrjendur í lestri). Ef þú skoðar
-    kennsluefnið í boði á <a href='http://code.org/learn'>Code.org/learn</a>, munt
-    þú finna annað kennsluefni sem virkar á iPad - frá Code.org, Tynker, Lightbot
-    eða CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch keyrir ekki á töflum. Ef nemendur þínir eru
     ungir geta þeir notað ScratchJR iPad appið (fyrir snemma lesendur). Ef þú horfir
     á námskeið á [%{partner_url}/læra] (/%{codeorg_url}læra), getur þú fundið önnur
     námskeið sem vinna á iPads - frá Code.org, Tynker, Lightbot, eða CodeSpark.
   hoc_faq_count_hoc_q: Hvernig eru Klukkustundir kóðunar taldar?
   hoc_faq_map_q: Af hverju sé ég ekki punktinn minn á kortinu?
-  hoc_faq_map_a: Okkur finnst mjög leitt ef þú sérð ekki viðburðinn þinn á Klukkustund
-    kóðunar kortinu. En vegna þess að það eru tugir þúsunda sem skrá sig þá sameinar
-    kortið gögnin og sýnir einn punkt fyrir nokkra nálæga viðburði. Ef þú smellir
-    á töluna ofan við kortið færðu lista yfir alla viðburði eftir stað og ættir að
-    finna viðburðinn þinn þar. Auk þess, vegna fjöldans sem skráir sig, tekur kortið
-    yfirleitt 48 tíma að uppfærast. Athugaðu aftur eftir nokkra daga!
   hoc_faq_map_a_markdown: Við erum svo leitt að þú ert ekki að sjá atburði á Hour
     of Code kortinu. Vegna tugþúsunda skipuleggjenda sem skrá sig safnar kortið saman
     gögnum og birtir eitt stig fyrir nokkra viðburði. Ef þú smellir á [atburðasíðu]
@@ -2482,11 +2487,6 @@ is:
     viðburði eftir ríkjum og getur fundið viðburðinn þinn sem er skráður þar. Að auki,
     miðað við þúsundir manna sem skrá sig í Hour of Code, tekur kortið og atburðalistinn
     venjulega 48 klukkustundir að uppfæra. Athugaðu aftur eftir nokkra daga!
-  hoc_faq_count_hoc_a: Notendatalningin fyrir Klukkustund kóðunar er ekki hárnákvæm.
-    Við teljum ekki auðkenni nemenda þegar þátttakan í Klukkustund kóðunar er metin,
-    enda gerum við það ekki að skilyrði að nemendur skrái sig inn eða skrái sig yfirleitt.
-    Afleiðing af því er að við bæði ofteljum og vanteljum á sama tíma. Þú getur lesið
-    nánar um þetta <a href='http://code.org/loc'>hér</a>.
   hoc_faq_count_hoc_a_markdown: 'Við teljum ekki einstök auðkenni nemenda fullkomlega
     þegar fylgst er með þátttöku í Hour of Code. Af hverju? Að hluta til vegna þess
     að við viljum ekki núning hvetja til “innskráningu/ skrá” áður en nemandi eða
@@ -2503,22 +2503,6 @@ is:
     vera nákvæmur mælikvarði á notkun. Það er vissulega directionally rétt, og sýnir
     að margir tugir milljóna nemenda hafa tekið þátt.'
   hoc_faq_one_hour_q: Hve mikið er hægt að læra á klukkutíma?
-  hoc_faq_one_hour_a: Markmið Klukkustundar kóðunar er ekki að gera neinn að tölvusérfræðingi
-    á einni klukkustund. Ein klukkustund er þó nóg til að komast að því að tölvunarfræði
-    er skemmtileg og skapandi, að hún er aðgengileg fyrir alla aldurshópa og alla
-    nemendur óháð bakgrunni. Mælikvarðinn á árangur þessa átaks er ekki hve mikla
-    tölvunarfræði nemendur læra, heldur hin almenna þátttaka óháð kyni eða þjóðfélagshópi
-    og aukin skráning og þátttaka í tölvunarfræðinámi á öllum skólastigum. Miljónir
-    kennara og nemenda hafa ákveðið að halda áfram eftir klukkustundina - og lært
-    í heilan dag eða viku eða lengur og margir nemendur hafa skráð sig í heilan kúrs
-    eða valið tölvunarfræðibrautir í framhaldskóla.<br/><br/> Auk nemenda, bætist
-    við "nemandi" sem er sjálfur kennarinn sem öðlast það mikið sjálfstraust eftir
-    klukkustundina að hann treystir sér til að kenna tölvunarfræði án þess að hafa
-    háskólagráðu í faginu. Tugþúsundir kennara ákveða að læra meira í tölvunarfræði
-    -  á netinu eða með öðrum hætti. Og þetta á einnig við um skólastjórnendur sem
-    átta sig á því að nemendur þeirra vilja tölvunarfræði og að kennararnir geta kennt
-    hana.<br/><br/>Umfram allt geta allir þátttakendur lært það á klukkustund að þetta
-    er viðráðanlegt.
   hoc_faq_one_hour_a_markdown: |-
     Markmið Hour of Code er ekki að kenna neinum að verða sérfræðingur tölvunarfræðingur á einni klukkustund. Ein klukkustund er aðeins nóg til að læra að tölvunarfræði er skemmtilegt og skapandi, að það er aðgengilegt á öllum aldri, fyrir alla nemendur, óháð bakgrunni. Mælikvarðinn á árangri þessarar herferðar felst ekki í því hversu mikið CS nemendur læra - árangurinn endurspeglast í víðtækri þátttöku þvert á kyn-, kynþáttahatur/þjóðernis- og félagshagfræðilega hópa og aukningin sem leiðir til aukinnar innritunar og þátttöku sem við sjáum í CS námskeiðum á öllum stigum. Milljónir þátttökukennara og nemenda hafa ákveðið að fara út fyrir eina klukkustund - til að læra í heilan dag eða heila viku eða lengur og margir nemendur hafa ákveðið að skrá sig í heilt námskeið (eða jafnvel háskóli meiriháttar) vegna þess.
 
@@ -2526,39 +2510,27 @@ is:
 
     Umfram allt, það sem allir þátttakendur geta lært á klukkutíma er að við getum gert þetta.
   hoc_faq_more_questions_q: Er einhverjum spurningum ósvarað?
-  hoc_faq_more_questions_a: Gáðu hvort þú finnir svör á <a href='http://support.code.org'>stuðningsspjallvef
-    okkar</a>.
   hoc_faq_more_questions_a_markdown: Prófaðu að finna svar á okkar [stuðningsvettvangi]
     (http://support.code.org).
   hoc_faq_keep_learning_q: Hvernig get ég haldið áfram að læra eftir Klukkustund kóðunar?
-  hoc_faq_keep_learning_a: Allir geta séð um halda Klukkustund kóðunar hvenær sem
-    er. Kennsluefnið er aðgengilegt allt árið. Þú getur gengið að því vísu að allt
-    kennsluefnið verði tiltækt það sem eftir er. Farðu á síðuna <a href='/promote'>efniviður</a>
-    til að finna leiðbeiningar fyrir viðburði og annað efni sem getur hjálpað til
-    að þín Klukkustund kóðunar heppnist vel.
   hoc_faq_keep_learning_a_markdown: Hver sem er getur hýst klukkutíma kóða hvenær
     sem er. Námskeiðin haldast upp árið um kring. Þú getur búist við öllum námskeiðum
     okkar og námskrá til að vera í boði á síðunni okkar í perpetuity. Vinsamlegast
     farðu til [auðlindir okkar] (%{promote}) fyrir atburði hvernig-til leiðsögumenn
     og önnur úrræði til að hjálpa gera þinn Hour of Code atburður velgengni.
   hoc_faq_certificates_q: Hvar get ég prentað skírteini fyrir nemendur mína?
-  hoc_faq_certificates_a: Farðu á <a href='%{codeorg_url}/certificates'>skírteinasíðuna</a>
-    þar sem þú getur prentað skírteini fyrir allan bekkinn fyrirfram. Þú getur líka
-    prentað <a href='%{codeorg_url}/certificates?course=mc'>sérstök skírteini</a>
-    fyrir nemendur sem fara í Minecraft kennsluefnið.
-  hoc_faq_certificates_a_markdown: Farðu á [skírteinasíðuna okkar] (%{codeorg_url}/vottorð)
-    þar sem þú getur prentað vottorð fyrir allan bekkinn þinn fyrirfram. Þú getur
-    líka prentað út [sérstök vottorð] (%{codeorg_url}/vottorð? course=mc) fyrir nemendur
-    sem gera Minecraft einkatími.
+  hoc_faq_certificates_answer_markdown: Farðu á okkar [skírteini síðu] (%{certificates_url})
+    þar sem þú getur prentað skírteini fyrir allan bekkinn þinn á undan tíma.
   hoc_faq_logo_q: Eru takmörk á því hvernig ég má nota merki eða heiti Klukkustundar
     kóðunar (Hour of Code)?
-  hoc_faq_logo_a: Hour of Code er skrásett vörumerki. Við viljum ekki koma í veg fyrir
-    notkun þess, en við viljum að notkun þess sé háð nokkrum takmörkunum. Kynntu þér
-    <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>þennan
-    leiðarvísi um notkun</a>.
   hoc_faq_logo_a_markdown: Klukkustund kóðans er vörumerki. Við viljum ekki koma í
     veg fyrir notkun þess, en við viljum ganga úr skugga um að notkun þess passi innan
     nokkurra marka. Vinsamlegast sjáðu [þessar notkunarleiðbeiningar] (%{logo_url}).
+  hoc_faq_bug_q: Ég fann galla í Hour of Code virkni! Hvað ætti ég að gera?
+  hoc_faq_bug_a_markdown: |-
+    Ó nei! Ef þú hefur rekist á galla í virkni Hour of Code - athugaðu fyrst slóðina fyrir virkni sem þú ert á. Ef slóðin byrjar á studio.code.org getur stuðningsteymi okkar Code.org hjálpað! Smelltu á spurningarmerkistáknið efst í hægra horninu á skjánum þínum og veldu síðan “Tilkynna um vandamál” í fellilistanum.
+
+    Ef slóðin byrjar ekki með studio.code.org ertu líklega að vinna að starfsemi þriðja aðila og þarft að ná til stuðningsteymis þess fyrirtækis til að fá frekari aðstoð.
   stats_hoc_2013_image_alt: Tölur frá Klukkustund kóðunar 2013
   stats_growth: Fljótust að ná til 15 miljón notenda.
   stats_i18n: Nemendur eru að læra á 40 tungumálum
@@ -13092,7 +13064,7 @@ is:
   hoc_how_to_faq_answer_devices_02: Ef tæki eru takmörkuð eða ófáanleg skaltu prófa
     [par forritun] (%{pair_url}) eða kanna [unplugged starfsemi] okkar (%{unplugged_url})
     til að læra án tækja yfirleitt!
-  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_question_volunteer: Hver getur sjálfboðaliðað?
   hoc_how_to_faq_answer_volunteer: Allir sem hafa brennandi áhuga á tölvunarfræði
     menntun og auka fjölbreytileika í tækni getur verið sjálfboðaliði! Við viljum
     gjarnan sjá sjálfboðaliða af öllum bakgrunni taka þátt. The Hour of Code er með
@@ -13106,7 +13078,7 @@ is:
   hoc_how_to_faq_answer_account: Engin skráningu eða innskráningu er krafist til að
     nemendur geti prófað Hour of Code. Að skrá þig í Hour of Code býr EKKI sjálfkrafa
     til Code.org reikning.
-  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_heading_educators: Önnur Hour of Code auðlindir fyrir kennara
   hoc_how_to_resources_promo_heading: Kynningarauðlindir
   hoc_how_to_resources_promo_desc: Finndu öll úrræði sem þú þarft - prenta og stafræna
     - til að vekja athygli á Hour of Code þinni.
@@ -13699,6 +13671,22 @@ is:
     og niðurhal'
   video_library_page_not_hacked_video_title_7: 'Hvernig ekki að fá tölvusnápur: Setja
     upp uppfærslur'
+  thank_you_page_main_title: Þakka þér fyrir að hjálpa til við að byggja upp hreyfingu
+  thank_you_page_description: The Code.org Advocacy Coalition vill þakka hundruðum
+    þúsunda sveitarfélaga meistara og talsmanna, þar á meðal kennurum, meðlimum samfélagsins,
+    vísindamönnum, sjálfseignarstofnunum, háskólum, fyrirtækjum og ríkisstofnunum
+    sem hafa stutt framtíðarsýn að sérhver nemandi í hverjum skóla eigi skilið tækifæri
+    til að læra tölvunarfræði. Þakka þér fyrir stuðninginn við þessa hreyfingu.
+  thank_you_page_members_section_title: 'Og til allra meðlima Code.org Advocacy Coalition:'
+  thank_you_page_individual_organization_title: 'Þakkir til eftirfarandi einstaklinga
+    og samtaka fyrir framlag þeirra til þessarar skýrslu:'
+  thank_you_page_individual_organization_description: Umsjónarmenn tölvunarfræðikennslu
+    hjá hverri menntastofnun ríkisins, College Board, Della Cronin, Stuart Dexler,
+    Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Þökkum nemendum og kennurum sem vitnað
+    er til í þessari skýrslu:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Um Okkur
   about_us_page_hero_description: Code.org® er menntun nýsköpunarstofnun í hagnaðarskyni
     tileinkað þeirri sýn að hver nemandi í hverjum skóla hefur tækifæri til að læra
@@ -13847,6 +13835,10 @@ is:
     sem mun styðja þá framtíðarsýn.
   about_page_donors_link_1: Gerðu framlög
   about_page_donors_link_2: "[sjá lista okkar yfir gjafa] (%{donors_url})"
+  teach_ai_title: Dæmi í raunverulegum heimi. Hagnýt úrræði.
+  teach_ai_description: AI Guidance for Schools Toolkit er úrræði fyrir stefnumótendur,
+    leiðtoga skóla og starfsfólk til að þróa fyrstu leiðbeiningar um AI í skólum sínum.
+  teach_ai_button_label: Skoða verkfærasafnið
   language_code:
     ar: Arabíska
     az: Aserska

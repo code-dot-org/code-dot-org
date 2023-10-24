@@ -16,8 +16,8 @@ title: Hour of Code คู่มือวิธีดำเนินการส
 
 ดูขั้นตอนด้านล่างเพื่อเริ่มต้น และดู[คู่มือสำหรับพันธมิตรองค์กร](/files/hoc-corporate-toolkit.pdf)ของเรา สำหรับข้อมูลเพิ่มเติมเกี่ยวกับวิธีที่ทำให้บริษัทของคุณสนุกไปกับ Hour of Code
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [เชื่อมต่อกับโรงเรียนท้องถิ่น](#connect-with-a-school)
+- [ส่งเสริมให้พนักงานเป็นอาสาสมัครในชั้นเรียน](#encourage-employees)
 - [เป็นผู้จัดอีเวนต์ Hour of Code](#host-hour-of-code)
 - [โปรโมทกิจกรรมชั่วโมงเขียนโค้ด](#promote-hour-of-code)
 - [อีกหลากหลายวิธีในการสนับสนุน Hour of Code](#support-hour-of-code)
@@ -26,31 +26,31 @@ title: Hour of Code คู่มือวิธีดำเนินการส
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## เชื่อมต่อกับโรงเรียนท้องถิ่น
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+เป็นการดีที่สุดเสมอที่จะเริ่มต้นในท้องถิ่น โดยมีโรงเรียนที่คุณหรือพนักงานของคุณมีความเชื่อมโยงอย่างแข็งแกร่ง เช่น alma mater โรงเรียนของเด็ก หรือองค์กรหรือโรงเรียนในท้องถิ่นที่มุ่งเน้นไปที่การให้บริการประชากรที่มีการมีตัวแทนน้อยในด้านวิทยาการคอมพิวเตอร์ในอดีต
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+จากที่นั่นคุณสามารถเยี่ยมชมเว็บไซต์ของโรงเรียนเพื่อค้นหาผู้ติดต่อที่เหมาะสมเพื่อติดต่อได้ เช่น อาจารย์ใหญ่ รองครูใหญ่ อาจารย์ผู้สอนด้านเทคโนโลยีหรือวิทยาการคอมพิวเตอร์ หรือแม้แต่ PTSA ของโรงเรียน คุณยังสามารถเป็นพันธมิตรกับองค์กรเช่น Boys & Girls Club of America สาขา YMCA และอื่น ๆ เพื่อร่วมจัดอีเวนต์ได้
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+หากคุณไม่สามารถเชื่อมต่อกับโรงเรียนได้ โปรด [ติดต่อเรา](https://support.code.org/hc/en-us/requests/new) แล้วเราจะช่วยเชื่อมโยงคุณเข้ากับพันธมิตรท้องถิ่นของเรา
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## ส่งเสริมให้พนักงานเป็นอาสาสมัครในชั้นเรียน
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+วิธีที่ดีที่สุดในการเข้าร่วม Hour of Code คือการเข้าร่วมเป็นอาสาสมัครในชั้นเรียนท้องถิ่น ไม่ว่าจะแบบตัวต่อตัวหรือแบบเสมือนจริง ที่สำคัญคุณสามารถเป็นอาสาสมัครได้แม้ไม่ได้เป็นวิศวกร คุณยังสามารถมอบประสบการณ์ที่มีความหมายให้กับนักเรียนได้โดยแบ่งปันประสบการณ์อาชีพของคุณเองและวิธีที่ CS หรือเทคโนโลยีส่งผลกระทบต่อบทบาทของคุณอย่างไร
 
 [<button>ลงทะเบียนเป็นอาสาสมัคร</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+เมื่อมีผู้ลงทะเบียนเป็นอาสาสมัครแล้ว ผู้สอนจะสามารถดูประวัติได้ที่ [โครงข่ายอาสาสมัคร](https://code.org/volunteer/local) เพราะฉะนั้นควรส่งประวัติที่สมบูรณ์พร้อมใช้งานที่สุด หากคุณมีคุณสมบัติเหมาะสมกับชั้นเรียนของพวกเขา ผู้สอนจะทำการติดต่อกลับผ่านแพลตฟอร์ม (ผู้สอนจะไม่ทราบอีเมลของคุณ) จากนั้น คุณก็สามารถประสานงานรายละเอียดกับผู้สอนทุกคนได้ [วิธีการเป็นสุดยอดอาสาสมัครให้กับชั้นเรียน](https://hourofcode.com/us/how-to/volunteers)
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+สำหรับข้อมูลเพิ่มเติมในการเป็นอาสาสมัครและตัวอย่างข้อความที่จะช่วยสร้างแรงจูงใจในบริษัทของคุณเกี่ยวกับ Hour of Code โปรดดูที่ [คู่มือแนะนำสำหรับพันธมิตรองค์กร]({{ localized_files/hoc_corporate_toolkit }})
 
 * * *
 
@@ -136,7 +136,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 ### 1. ลงทะเบียนอีเวนต์
 
-เมื่อคุณ [ ลงทะเบียนกิจกรรม Hour of Code](/#join) คุณจะได้รับการสื่อสารที่เป็นประโยชน์ทางอีเมลพร้อมข่าวสารและเคล็ดลับสำหรับการจัดงาน Hour of Code ที่ประสบความสำเร็จ นอกจากนี้ คุณยังสามารถประชาสัมพันธ์ให้โรงเรียนหรือผู้ปกครองที่คุณรู้จักได้ทราบว่าคุณกำลังจะจัดอีเวนต์ซึ่งอยู่ไม่ไกล
+เมื่อคุณ [ลงทะเบียนอีเวนต์ Hour of Code ](/events), คุณจะได้รับการสื่อสารทางอีเมลที่มีประโยชน์พร้อมข่าวสารและเคล็ดลับในการจัดงาน Hour of Code ที่ประสบความสำเร็จ นอกจากนี้ คุณยังสามารถประชาสัมพันธ์ให้โรงเรียนหรือผู้ปกครองที่คุณรู้จักได้ทราบว่าคุณกำลังจะจัดอีเวนต์ซึ่งอยู่ไม่ไกล
 
 ### 2. โพสต์ลงบนโซเชียลมีเดีย
 
@@ -163,7 +163,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 - หากโค้ดบรรทัดแรกเคยเปลี่ยนแปลงชีวิตคุณมาแล้ว โปรดช่วยนักเรียนรอบๆตัวคุณเขียนโค้ดแรกของตัวเองใน #HourOfCode https://code.org/volunteer
 - ถ้าคุณเคยเรียนเขียนโค้ด คุณมีเรื่องเล่าไหม? เติมแรงบันดาลใจให้นักเรียนรอบตัวคุณผ่านการเขียนโค้ดตัวแรกใน #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">ค้นหา</a> โปสเตอร์ วิดีโอ สติกเกอร์ และวิธีอื่นๆ เพื่อโปรโมตกิจกรรมของคุณให้กับชุมชนของคุณ
 
 * * *
 

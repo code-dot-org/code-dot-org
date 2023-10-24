@@ -36,6 +36,8 @@ zh:
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   hoc2023_header: 人工智能創造力
+  hoc2023_hero_desc_homepage: 與全球數百萬人一起組織一小時的編碼，無論是否有 AI，並學習 AI 的運作方式。任何人，任何地方都可以做到。無需經驗。
+  hoc2023_hero_desc_learn_page: 今年，我們透過提供包括人工智能 (AI) 和非 AI 元件的編碼機會，將程式碼一小時提升到新的高度。
   hoc2023_social_creativity_with_ai_title: 一小時玩程式-你會創造什麼？
   hoc2023_social_creativity_with_ai_desc: 利用計算機科學探索和學習 AI！
   hoc2022_header: 探索，玩耍，創造！
@@ -118,6 +120,7 @@ zh:
   social_blockchain_desc: 探索什麼是區塊鏈以及為什麼它很重要的視頻和課程。
   social_ai_title: 瞭解有關人工智慧 (AI) 的資訊
   social_ai_desc: 協助學生和教師將 AI 帶入課堂的工具。
+  social_videos_desc: 適合所有年齡段學習者的引人入勝計算機科學視頻。
   pl_superhero_title: 幫助學生成為超級英雄！
   pl_superhero_desc: 加入我們為初中和高中教育工作者提供高度支持的專業學習計劃。
   teach_ai_homepage_banner_title: 面向世界的人工智能教育
@@ -184,6 +187,7 @@ zh:
   optional_materials: 可選材料：
   call_to_action_hold_an_event: 舉辦活動
   call_to_action_register_event: 註冊您的活動
+  call_to_action_register_your_hoc: 註冊您的代碼時間
   call_to_action_select_activity: 選擇活動
   call_to_action_start_activity: 開始活動
   call_to_action_get_certificates: 取得憑證
@@ -279,6 +283,8 @@ zh:
   call_to_action_learn_about_advocacy: 了解我們的倡導
   call_to_action_visit_store: 參觀商店
   call_to_action_view_faqs: 查看更多常見問題
+  call_to_action_applications_open: 現已開始申請
+  call_to_action_apply_cs_ambassador: 申請成為 CS 大使
   aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者的操作指南
   aria_label_call_to_action_hoc_how_to_companies: 查看公司的操作指南
   aria_label_call_to_action_hoc_how_to_districts: 查看區域的操作指南
@@ -443,8 +449,10 @@ zh:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 五至十二
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 七至十二
   module_grade_9_12: 9-12
   module_grade_kindergarten: 幼稚園
   module_grade_grade_01: 一年級
@@ -532,6 +540,35 @@ zh:
   heading_explore_curriculum_catalog: 在課程目錄中探索我們所有的課程
   heading_csa_ai: 尋找 AP® 考試後要做的事情嗎？
   heading_bring_cs_to_students: 將計算機科學帶給學生
+  heading_cs_ambassador_program: CS 大使計劃
+  cs_ambassador_subhead: 如果您是一名高中生，熱情鼓勵更多年輕女性在您的學校學習計算機科學，那麼我們需要您！
+  cs_ambassador_desc: 每個領域，包括醫學，娛樂，體育，教育，商業，時尚和創業，都受到計算機科學影響。然而，只有 5% 的高中年輕女性參加計算機科學課程。大使可以鼓勵同齡人參加計算機科學課程來幫助彌補這種性別差距。
+  cs_ambassador_application_date: 截止報名日期至二零二三年十一月八日
+  cs_ambassador_application_subhead: 立即與老師合作提交您的申請
+  cs_ambassador_application_questions: 有問題？請聯繫 [youngwomen@code.org]（%{email_url}）
+  cs_ambassador_do_heading: CS 大使做什麼？
+  cs_ambassador_do_desc: 資訊科技大使鼓勵年輕女性探索這個主題，並在他們重新獲得計算機科學的地位時，互相提升起來。CS 大使與同伴聯繫，分享他們對計算機科學的興奮和熱愛。他們參觀教室，在午餐時舉辦桌子，並在會議和俱樂部會議上發言。CS
+    大使與教師和學校行政人員合作，打破阻礙年輕女性的刻板印象。
+  cs_ambassador_steps_heading: 我需要什麼才能成為 CS 大使？
+  cs_ambassador_steps_list_title_01: 熱情
+  cs_ambassador_steps_list_title_02: CS 課程的經驗
+  cs_ambassador_steps_list_title_03: 提供 CS 的學校
+  cs_ambassador_steps_list_desc_01: 鼓勵學校的年輕女性參加計算機科學課程的熱情
+  cs_ambassador_steps_list_desc_02: 在 2022-23 學年或更早參加了一年的計算機科學課程（建議：CS 原則或 AP® CSA）
+  cs_ambassador_steps_list_desc_03: 參加一所定期提供一年的計算機科學課程的高中（建議：CS 原則或 AP® CSA）
+  cs_ambassador_benefits_heading: 計劃優惠
+  cs_ambassador_benefits_list_title_01: 國家社區
+  cs_ambassador_benefits_list_title_02: 社區服務
+  cs_ambassador_benefits_list_title_03: 認可
+  cs_ambassador_benefits_list_title_04: 斯瓦格
+  cs_ambassador_benefits_list_title_05: 證書
+  cs_ambassador_benefits_list_title_06: 體驗
+  cs_ambassador_benefits_list_desc_01: 訪問一個全國的年輕領袖社區，致力於消除計算機科學的性別差距。
+  cs_ambassador_benefits_list_desc_02: 社區服務時間和獲得 [美國總統志願服務獎] 的機會（%{award_url}）。
+  cs_ambassador_benefits_list_desc_03: 獲嘉許為 2023-2024 年大使，並獲得 Code.org 大使名人堂榮譽資格。
+  cs_ambassador_benefits_list_desc_04: 通過特殊的 Code.org 品牌服裝，貼紙等，被識別為 CS 大使！
+  cs_ambassador_benefits_list_desc_05: 來自 Code.org 的官方參與證書。
+  cs_ambassador_benefits_list_desc_06: 獲得經驗和故事以在您的大學申請，簡歷等中分享！
   professional_learning_section_desc: 在準備教學時獲得所需的支援。老師喜歡它，超過90％的老師將其評為有史以來最好的職業發展！
   professional_learning_section_desc_short: 在準備教學時獲得所需的支援。
   professional_learning_section_desc_self_paced: 及時的支持，讓你可以根據自己的日程安排充滿信心地準備教學。
@@ -626,6 +663,9 @@ zh:
   ai_curriculum_btn_aria_label_04: 探索 AI 如何運作課程
   ai_curriculum_grades_05: 年級等級：9 至 12 年級
   ai_curriculum_btn_aria_label_05: 探索軟體工程與電腦視覺模組
+  ai_curriculum_title_06: 生成人工智能的社會影響
+  ai_curriculum_desc_06: 從不同角度調查生成人工智能的影響，然後以團隊合作制定準則，以滿足所有參與者最多需求的指導方針。
+  ai_curriculum_btn_aria_label_06: 查看生成人工智能課程計劃的社會影響
   ai_carousel_heading: 老師對於人工智慧與 Code.org 的評論：
   ai_carousel_quote_01: 這節課還讓我的學生有機會看到分類系統中存在意見要素。後來，當我們開始看到偏見如何在 AI 中結束時，我能夠將它們拉回來並提醒他們，用於訓練模型的數據是基於選擇的。
   ai_carousel_quote_02: 我的學生了解到他們幾乎每天都在經歷的技術進步時，他們不必只是成為消費者。他們實際上可以是創作者！
@@ -1247,6 +1287,8 @@ zh:
   help_page_translate_desc: 志願者已經將我們的教程翻譯成超過 45 種語言。幫助我們繼續為世界各地的學生擴展我們的教程！
   help_page_speak_for_cs_heading: 講話, 為, 計算機科學, 教育
   help_page_speak_for_cs_desc: 深入瞭解 Code.org 在美國各地的倡導工作，以及我們建議各州採取的十項政策，讓所有學生都能獲得電腦科學基礎。另外，了解如何推動您所在州的變化。
+  yw_page_top_heading: 計算機科學的年輕女性
+  yw_page_top_desc: 成為 CS 大使，成為縮小計算機科學性別差距的一部分。
   hoc_live: 一小時玩程式直播
   hoc_live_sign_up_title: 註冊以取得「一小時玩程式」直播
   hoc_live_learn_title: 透過一小時玩程式直播來學習
@@ -1559,9 +1601,13 @@ zh:
   hoc_homepage_join_the_movement_description: 一小時玩程式全年都可參與，但每年12月，你的班級可以加入世界各地數百萬學生的行列，用一小時玩程式慶祝電腦科學教育周。一年一度的慶祝活動於每年10月開始註冊。
   hoc_homepage_what_is_hoc_subhead: 一小時的教程，超過45種語言。不需要經驗。一小時玩程式活動全年都可免費參與。
   hoc_homepage_what_is_hoc_description: 一小時玩程式是一個小時的電腦科學介紹，使用有趣的教程展示出任何人都可以學習基礎知識。這一基層運動得到全球逾400個合作夥伴和20萬名教育工作者的支持。
+  hoc_homepage_registration_desc: 您的班級或團隊可以加入世界各地的數百萬人參加編碼一小時！每年一度計算機科學教育週慶祝活動將於 10
+    月開始報名。儘管如此，代碼一小時全年都可用。
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[閱讀我們的操作指南](%{howto_guide_url})為你的班級計劃活動。"
   hoc_homepage_highlights_heading: 一小時玩程式亮點
   hoc_homepage_organized_by: 一小時玩程式由[Code.org](%{codeorg_url})組織。
+  hoc_events_heading: 註冊以主持一小時代碼
+  hoc_events_jump_to_map: 跳至程式碼時間地圖
   signup_closed: 程式碼小時注册現已關閉。請在十月再次檢查，以便為下一小時的程式碼注册。
   signup_registration_not_required: 您不需要註冊即可參加！一小時玩程式活動全年開放。 <a href='%{hoc_activities_url}'>嘗試活動</a>
     或閱讀我們的 <a href='%{howto_guide_url}'>操作指南</a> ，為您的班級計劃活動。
@@ -1641,6 +1687,7 @@ zh:
   map_title: 一小時玩程式的地圖
   map_header: "# 個一小時玩程式活動遍佈世界各地"
   map_header_count_year: "%{event_count} 註冊的事件 %{year}"
+  map_header_count_year_so_far: "%{event_count} 迄今為止註冊的活動 %{year}"
   see_all_events: 查看所有活動
   map_header_company: "# 由公司主辦"
   map_header_country: '在 %{country} 有 # 場'
@@ -1653,6 +1700,7 @@ zh:
   map_warning: Hour of Code的地圖只顯示首 200,000 起已註冊事件。要查看所有已註冊事件，請使用 <a href='%{events_url}'>
     事件頁面</a>
   map_warning_markdown: 事件的完整列表可以在 [活動頁面] 上查看 (%{events_url})
+  map_view_all_events: 請參閱程式碼一小時事件的完整清單 [here](%{events_url})。
   meta_tag_og_title: 一小時玩程式活動來囉
   meta_tag_og_description: 一小時玩程式是一個全球性的活動，觸及數千萬個來自 180 多個國家，30 多種語言，由 4 歲到 104 歲的學生。
   meta_tag_twitter_title: 一小時玩程式活動來囉
@@ -1668,45 +1716,24 @@ zh:
   twitter_default_text_donor: '我參加了今年的 #HourOfCode, 是嗎?（感謝 %{random_donor} 支持 @codeorg）'
   hoc_faq_title: 常見問答
   hoc_faq_what_is_hoc_q: "「一小時玩程式」是什麼？"
-  hoc_faq_what_is_hoc_a: Hour of Code 是個一小時介紹計算機科學的活動，希望在揭開程式設計的神秘面紗的同時，說明它是任何人都可以學習的基礎知識，期望能擴展人們在計算機科學領域的參與。查看<a
-    href='%{tutorials}'>教程和活動</a>。這個草根活動得到了<a href='%{partners}'>400 個合作夥伴</a>和來自世界
-    20 萬名教師的支持。
   hoc_faq_what_is_hoc_a_markdown: 一小時玩程式以一個小時的時間，介紹電腦科學，並讓人們快速瞭解程式設計，讓人們輕而易舉學習最基本的知識，更加廣泛地瞭解電腦科學。這是一項國際性活動，在一小時訓練營之外還有各種社區活動，慶祝電腦科學。查看我們的[教程和活動](%{tutorials})。感謝全球超過[400位夥伴](%{partners})和20萬教育工作者對這項草根活動的支持。
   hoc_faq_last_year: 試試教程
   hoc_faq_when_is_hoc_q: 何時舉辦一小時玩程式活動？
-  hoc_faq_when_is_hoc_a: 一小時學程式活動主要是在<a href='%{csedweek_url}'>計算機科學教育週</a>期間展開，%{campaign_date_year}計算機科學教育週是%{campaign_date_full}，但你還是可以隨時隨地舉辦一小時玩程式活動。每年舉辦的計算機科學教育週是為了紀念以紀念計算機先驅<a
-    href='%{grace_hopper}'>Grace Murray Hopper</a>的誕辰（1906 年 12 月 9 日）。
   hoc_faq_when_is_hoc_a_markdown: '每年 12 月初 的[電腦科學教育週](%{csedweek_url}) 期間，都會舉辦一小時玩程式活動。%{campaign_date_year}電腦科學教育週的時間為%{campaign_date_full}，但你全年都可以舉辦「一小時玩程式」活動。電腦科學教育週每年舉行一次，以紀念計算機先驅[Admiral
     Grace Murray Hopper](%{grace_hopper})的誕辰（1906 年 12 月 9 日）。  '
   hoc_faq_why_cs_q: 為何是資訊科學？
-  hoc_faq_why_cs_a: "<i>每個</i> 學生都應該有機會學習電腦科學。它有助於培養解決問題的技能、 邏輯和創造力。提早開始，學生將有在任何一個
-    21 世紀的職業生涯成功的基礎。在<a href='%{stats_url}'>這裏</a>查看更多統計資料。"
   hoc_faq_why_cs_a_markdown: '每個學生都應該有機會學習電腦科學。它有助於培養解決問題的技能、邏輯和創造力。儘早開始學習能幫助學生在 21
     世紀任何職業道路上的成功奠定基礎。可在[here](%{stats_url})檢視更多統計資料。  '
   hoc_faq_how_participate_q: 要如何參加一小時玩程式活動？
-  hoc_faq_how_participate_a: 觀看完我們的活動指引就可以<a href='/how-to'>開始在這裡計劃</a>。你能在你的學校或你的社區，組織個一小時玩程式活動&mdash;
-    就像在進行一個課外活動，非營利的活動或是一個工作。或者，在%{campaign_date} 到來之前自己先體驗。
   hoc_faq_how_participate_a_markdown: '檢視我們的指南，[按這裡開始規劃](%{howto})。你可以在你的學校或社群組織一次「一小時玩程式」活動——比如在課外俱樂部、非營利組織或工作場所。或者，當%{campaign_date}到來時，你也可以自己嘗試一下。  '
   hoc_faq_behind_hoc_q: 一小時玩程式活動是由誰支持的？
-  hoc_faq_behind_hoc_a: 一小時玩程式是由 Code. org 策劃，屬於 501c3 非營利組織，活動在<a href='%{partner_url}'>計算機科學教育週</a>展開，致力於在學校推廣計算機科學教育，並增加了女性和弱勢學生學習計算機的機會。同時，這是一個<a
-    href='Http://code. org/about/partners'>前所未有的夥伴聯盟</a>&mdash; 支持者包括微軟、蘋果、亞馬遜、Boys
-    and Girls Clubs of America 以及各大學理事會。
   hoc_faq_behind_hoc_a_markdown: "「一小時玩程式」由「一小時玩程式」和電腦科學教育週[諮詢和評審委員會](%{partner_url})
     推動，此外還有前所未有的合作伙伴聯盟共同支援「一小時玩程式」，包括微軟、Apple、亞馬遜、美國男孩女孩俱樂部和大學委員會等等。  "
   hoc_faq_host_q: 我對寫程式一無所知，這樣能舉辦活動嗎？
-  hoc_faq_host_a: 當然，「一小時玩程式活動」是可以自學得。你要做的就是<a href='%{codeorg_url}/learn'>體驗我們目前的教程</a>，挑選你想要的教程&mdash;
-    後續就放心的交給我們。我們為不同年齡不同程度的人，提供了許多選擇。先閱讀我們的 <a href='target-resources-how-to'>活動指引</a>，並開始規劃您的活動。
   hoc_faq_host_a_markdown: '當然。一小時玩程式活動側重於自我指導。你所要做的就是[嘗試我們當前的教程](%{codeorg_url}/learn)，選擇你想要的教程，並選擇一個小時的時間——其餘的事情我們會處理。我們還為幼兒園以上的每個不同年齡段和經驗水平的人提供了不同選擇。馬上閱讀我們的[指南](%{howto})，開始規劃你的活動。  '
   hoc_faq_devices_q: 我應該給我的學生使用什麼設備？
-  hoc_faq_devices_a: Code.org教學課程可以在所有的裝置跟瀏覽器上使用。您可以在<a href='%{codeorg_url}/educate/it'>這裏</a>找到關於Code.org教學課程的軟硬體需求詳情。關於非Code.org的教學課程的軟硬體需求，可以在<a
-    href='%{codeorg_url}/learn'>%{partner_url}/learn</a>的教學描述中。別忘了，如果您的學校沒有電腦或沒有相關的資源，我們也有不用電腦也可以進行的<a
-    href='%{unplugged_url}'>離線活動</a>！
   hoc_faq_devices_a_markdown: 'Code.org的教程可以在所有裝置和瀏覽器上使用。你可以在[here](%{codeorg_url}/educate/it)看到更多關於Code.org教程技術需求的資訊。非Code.org教程的技術需求可以在[%{partner_url}/learn](%{codeorg_url}/learn)的教程具體說明中找到。不要忘了，如果你的學校不能滿足教程的要求，我們還提供[離線活動](%{unplugged_url})！  '
   hoc_faq_need_computers_q: 我要給每個參與者提供電腦嗎？
-  hoc_faq_need_computers_a: 不需要，一小時玩程式活動可以在電腦、手機、平板上執行，有些活動甚至根本不需要計算機。無論你在哪裡，不管設備是什麼，你都可以參加。<p><i>這裡有幾個方式：</i>
-    <br><ul><li><b>兩兩合作。</b><a href='%{pair_programming_research}'>研究顯示</a>，學生在<a
-    href='%{pair_programming_video}'>合作編程</a>時的學習效果最好，透過在一台電腦上協同，也可以讓你的學生學習合作。<li><b>使用投影螢幕，</b>如果你有一部投影機和有可以電腦連線的大螢幕，你的整個團體就可以一起進行活動，一起觀看影片，輪流解決關卡或回答問題。<li><b>不插電活動，</b>我們提供了<a
-    href='%{unplugged_url}'>不需要電腦的教學內容</a>。</ul>
   hoc_faq_need_computers_a_markdown: |-
     不。我們的程式設計一小時教程可以在個人電腦、智慧手機、平板電腦使用，有些甚至不需要電腦！無論你在哪裡，無論你條件如何，你都可以加入。
 
@@ -1716,43 +1743,26 @@ zh:
     - **使用投影螢幕。**如果你有投影儀和螢幕供聯網的電腦使用，你的整個小組就可以一起進行“程式設計一小時”。一起觀看視頻部分，然後輪流解謎或回答問題。
     - **離線活動。**我們提供完全[不需要電腦的教程](%{unplugged_url})。
   hoc_faq_international_q: 我在<country>。我如何參與國際活動？
-  hoc_faq_international_a: 任何人都可以在任何一個地方舉辦一小時玩程式活動。去年，全世界有許多的學生共同參與了這個活動。<a href='target-resources'>進一步了解</a>。
   hoc_faq_international_a_markdown: 任何人在世界任何地方，都可以組織一小時玩程式活動。去年，全世界的學生一起參與程式設計一小時。在[here](%{promote})查看更多。
   hoc_faq_tutorial_q: 我該如何製作一小時玩程式的教程？
-  hoc_faq_tutorial_a: 如果您有興趣成為教程合作夥伴，請<a href='/tutorial-guidelines'>參閱我們的指南和說明</a>。
-    我們想要舉辦各種各樣有吸引力的選擇，但主要目標是優化對於計算機科學新手的學生和教師的體驗。
   hoc_faq_tutorial_a_markdown: '如果你有興趣成為教程合作伙伴，請[參見我們的指南和說明](%{tutorial_guidelines})。我們希望舉辦各種引人入勝的活動，但主要目標是為剛接觸電腦科學的學生和教師優化體驗。  '
   hoc_faq_account_q: 學生是否需要使用帳戶登錄？
-  hoc_faq_account_a: 不，學生體驗一小時玩程式的過程中，完全不需要註冊或登入。只有大多數<a href='%{codeorg_url}/learn/beyond'>後續課程</a>才需要建立帳戶以保存學生的學習進度。同時，一小時玩程式上註冊的帳戶並沒有自動與
-    Code Studio 的帳戶關聯。如果你想為你的學生建立帳戶，請參考<a href='https://youtu.be/_smelV_KISE'>這些指引</a>。
   hoc_faq_account_a_markdown: 不，學生完全不需要註冊或登入就可以嘗試「一小時玩程式」。大多數[後續課程](%{codeorg_url}/learn/beyond)則需要建立帳戶來儲存學生的學習進度。另外，註冊「一小時玩程式」並不會自動建立一個代碼工作室帳戶。如果你想為你的學生建立帳戶，請遵循以下[instructions](%{section_instructions_url})。
   hoc_faq_high_school_q: 我應該和高中生一起做哪些活動？
-  hoc_faq_high_school_a: 我們的《星際大戰》和《我的世界》教程對高中生來說是很好的的選擇，尤其是《星球大戰》的 JavaScript 版本和這兩個教程的自由發揮關卡。或者,
-    我們建議一開始可以在 <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 裡選個入門教程，比方說憤怒鳥，或安娜和艾莎公主。高中生應該能夠在
-    30 分鐘內完成其中一個，然後進行更進階的教程，比如汗學院或 CodeHS 的 JavaScript 相關課程。
   hoc_faq_high_school_a_markdown: 我們的《星際大戰》和《我的世界》教程對高中生來說是很好的的選擇，尤其是《星球大戰》的 JavaScript
     版本和這兩個教程的自由發揮級別。或者, 我們建議一開始可以在[%{partner_url}/learn](%{codeorg_url}/learn)裡選個入門教程，比方說憤怒鳥，或安娜和艾莎公主。高中生應該能夠在
     30 分鐘內完成其中一個，然後進行更進階的教程，比如汗學院或CodeHS的JavaScript相關課程。
   hoc_faq_scratch_q: 我正用 Scratch 辦一小時玩程式活動，但是如果我的學生有 iPad 而不是筆記型電腦，怎麼辦呢？
-  hoc_faq_scratch_a: Scratch無法在平板電腦上執行。如果你的學生年紀小，他們可以使用iPad應用程式ScratchJR（年幼閲讀者）。如果你查看<a
-    href='%{codeorg_url}/learn'>%{partner_url}/learn</a>上的教程，你可以找到其他在iPad可行的教程 - 來自Code.org、Tynker、Lightbot或CodeSpark。
   hoc_faq_scratch_a_markdown: Scratch不能在平板電腦上運行。如果你的學生都很小，他們可以使用ScratchJR iPad應用程式（年幼閱讀者）。如果你查看[%{partner_url}/learn](%{codeorg_url}/learn)上的教程，你可以找到在iPad運行的其他教程
     - 來自Code.org、Tynker、Lightbot或CodeSpark。
   hoc_faq_count_hoc_q: 你如何計算一小時玩程式？
   hoc_faq_map_q: 為什麼我在地圖上看不到我的點？
-  hoc_faq_map_a: '很抱歉，在「一小時玩程式」地圖上看不到你的活動。由於有成千上萬的組織者註冊，所以地圖彙總了所有資料，並在一個點上顯示多個活動。如果你點選地圖下方的<a
-    href=''%{events_url}''>活動頁面</a>連結，你會被引導到一個按州劃分的所有活動列表上，你可以在那裡找到你的活動列表。此外，由於有成千上萬的人報名參加「一小時玩程式」，地圖和活動列表通常需要
-    48 小時才能更新。請在幾天後再來檢視！  '
   hoc_faq_map_a_markdown: 很抱歉，在「一小時玩程式」地圖上看不到你的活動。由於有成千上萬的組織者註冊，所以地圖彙總了所有資料，並在一個點上顯示多個活動。如果你點選地圖下方的[活動頁面](%{events_url})
     連結，你會被引導到一個按州劃分的所有活動列表上，你可以在那裡找到你的活動列表。此外，由於有成千上萬的人報名參加「一小時玩程式」，地圖和活動列表通常需要 48
     小時才能更新。請在幾天後再來檢視！
-  hoc_faq_count_hoc_a: 一小時玩程式追蹤器並不能精確測量使用情況。當我們追蹤「一小時玩程式」的參與情況時，我們並不能完美地計算出唯一的學生 ID，特別是因為我們並不要求學生登入或註冊。因此，我們會同時多算和少算參與者。在<a
-    href='%{codeorg_url}/loc'>這裏</a>閱讀所有細節。
   hoc_faq_count_hoc_a_markdown: 一小時玩程式追蹤器並不能精確測量使用情況。當我們追蹤「一小時玩程式」的參與情況時，我們並不能完美地計算出唯一的學生
     ID，特別是因為我們並不要求學生登入或註冊。因此，我們會同時多算和少算參與者。在[here](%{codeorg_url}/loc)閱讀所有細節。
   hoc_faq_one_hour_q: 在一個小時內我們可以學到多少？
-  hoc_faq_one_hour_a: "「一小時的程式設計課程」目的並不是在一小時內把大家教成資訊科學的專家。一小時的時間是剛好讓大家瞭解到資訊科學是門有趣且有創意的學問，而且適合所有年紀、所有學生學習，不管是什麼背景。這個活動的成功不是以學生學了多少資訊科學的知識來衡量的，而是體現在參與族群、性別、經濟背景等的多元化，讓我們可以看到資訊科學在所有年齡層中遍地開花。上百萬的老師與學生在一小時的體驗之後決定繼續下去
-    -- 學習一整天、一整個星期甚至更長時間，而且有許多學生決定最後主修資訊科學。<br/><br/>除了學生之外，另一個「得到好處」的是老師們。因為有些老師並沒有資訊科學的學位，但經過這一小時的體驗之後，他們變得有自信，可以教好資訊科學相關的課程。也有成千上萬的老師決定再深入一點研究資訊科學，有些去參與線上課程，甚至有人去進修。有些學校的管理團隊也瞭解到，資訊科學是他們的學生與老師可以一起學習的課程。<br/><br/>總結來說，我們希望一小時的體驗能帶給大家更多未來的可能性。"
   hoc_faq_one_hour_a_markdown: |-
     一小時玩程式的目標不是讓任何人在一小時內成為電腦科學家或者專家。一個小時的時間只夠讓大家瞭解到電腦科學是有趣的、有創造力的，是所有年齡段、所有學生（無論什麼背景）都能接觸到的。衡量這項活動成功與否的標準並不在於學生學到了多少電腦科學知識，而在於讓不同性別、種族/民族和社會經濟群體廣泛參與，以及由此帶來的各年級電腦科學課程入學率和參與率的提高。數以百萬計的教師和學生參與活動之後都決定要超越一個小時：學習一整天或一整周或更長的時間，還有許多學生因此決定報讀一整門課程（甚至大學專業）。
 
@@ -1760,19 +1770,18 @@ zh:
 
     最重要的是，所有參與者在一小時內都能學到的是：我們可以做到。
   hoc_faq_more_questions_q: 還有疑問？
-  hoc_faq_more_questions_a: 請嘗試在<a href='http://support.code.org'>支援論壇</a>中找到答案。
   hoc_faq_more_questions_a_markdown: 嘗試在我們的[支持論壇](http://support.code.org)尋找答案。
   hoc_faq_keep_learning_q: 在一小時玩程式活動之後，我可以繼續學習什麼？
-  hoc_faq_keep_learning_a: 任何人、任何時間都可以舉辦一小時玩程式活動。所有的教程都會永久保留在網站上。請到<a href='/promote'>我們的資源</a>看看如何辦理活動的活動指引，還有相關的資源，幫助你辦理一場成功的活動。
   hoc_faq_keep_learning_a_markdown: '任何人在任何時候都可以舉辦「一小時玩程式」活動。教程全年不間斷。放心，我們所有的教程和課程都會在我們的網站上永久保留。請到[我們的資源](%{promote})檢視活動指南和其他資源，以幫助你的「一小時玩程式」活動獲得成功。  '
   hoc_faq_certificates_q: 我在哪裡可以為學生列印證書？
-  hoc_faq_certificates_a: 前往<a href='%{codeorg_url}/certificates'>證書頁面</a>，你就能在開始之前為全班列印證書。你也能給參加了《我的世界》教程的學生列印<a
-    href='%{codeorg_url}/certificates?course=mc'>特別證書</a>。
-  hoc_faq_certificates_a_markdown: 前往我們的[證書頁面](%{codeorg_url}/certificates)，在這裡你可以提前列印全班的證書。你也可以列印[特殊證書](%{codeorg_url}/certificates?course=mc)
-    給正在學習《我的世界》教程的學生。
+  hoc_faq_certificates_answer_markdown: 前往我們的 [證書頁] (%{certificates_url})，您可以提前列印整個課程的證書。
   hoc_faq_logo_q: 當我使用一小時玩程式的標誌或名稱時，有什麼限制嗎？
-  hoc_faq_logo_a: 程式設計一小時已進行商標註冊。我們不希望阻止它的使用，但我們想要確保它的使用符合限制。請參閱<a href='%{logo_url}'>使用指南</a>。
   hoc_faq_logo_a_markdown: 程式設計一小時已進行商標註冊。我們不希望阻止它的使用，但我們想要確保它的使用符合限制。請參閱[使用指南](%{logo_url})。
+  hoc_faq_bug_q: 我在一小時代碼活動中發現一個錯誤！我該怎麼辦？
+  hoc_faq_bug_a_markdown: |-
+    哦，不！如果您在一小時程式碼活動中遇到錯誤，請先檢查您正在進行的活動的 URL。如果網址以 studio.code.org 開頭，我們的 Code.org 支持團隊可以為您提供幫助！點擊屏幕右上角的問號圖標，然後從下拉菜單中選擇「報告問題」。
+
+    如果網址不是以 studio.code.org 開頭，則您可能正在進行第三方活動，並需要聯繫該公司的支持團隊以獲得進一步的幫助。
   stats_hoc_2013_image_alt: 2013 一小時玩程式的統計資料
   stats_growth: 活動在最快的時間內觸及了 1500 萬的使用者。
   stats_i18n: 支援超過 45 種語言
@@ -9443,6 +9452,13 @@ zh:
   video_library_page_not_hacked_video_title_5: 如何不被黑客攻擊：網站和 Wifi
   video_library_page_not_hacked_video_title_6: 如何不被黑客攻擊：消息傳遞和下載
   video_library_page_not_hacked_video_title_7: 如何不被黑客攻擊：安裝更新
+  thank_you_page_main_title: 感謝您幫助建立一個運動
+  thank_you_page_description: Code.org 倡導聯盟希望感謝數以千計的當地支持者和倡導者，包括教師、社區成員、研究人員、非營利組織、大學、企業和政府機構，他們支持每個學校的每個學生都應得學習計算機科學的願景。感謝您對這項運動的支持。
+  thank_you_page_members_section_title: 對於 Code.org 倡導聯盟的所有成員：
+  thank_you_page_individual_organization_title: 感謝以下個人和組織對此報告的貢獻：
+  thank_you_page_individual_organization_description: 每個州教育機構的計算機科學教育主管，大學委員會，德拉·克羅寧，斯圖爾特·德克斯勒，凱瑟琳·梅西斯，安東尼·歐文，肖恩·羅伯茨，凱爾·特洛伊恩，帕特永普拉迪特
+  thank_you_page_teachers_students_title: 感謝本報告中引用的學生和老師：
+  thank_you_page_teachers_students_description: 泰斯·坎皮翁、威拉·坎皮昂、傑米·德勒梅、辛迪·諾里加、塔拉·沃多皮奇
   about_us_page_title: Pseudoloc-诶比吾提吾丝
   about_us_page_hero_description: Code.org® 是一個教育創新非營利組織，致力於致力於每個學校的每個學生都有機會學習計算機科學作為他們核心
     K-12 教育的一部分。我們擴大學校使用計算機科學的機會，重點是增加來自其他代表性不足的群體的年輕女性和學生的參與。Code.org 是美國最大學校區的 K-12
@@ -9527,6 +9543,9 @@ zh:
     —— 在當今數位世界中成為知識的公民，並測試他們對於進一步探索 CS 作為職業的興趣 —— 我們還有很長的路要走，才能達成支持這一願景的籌款目標。
   about_page_donors_link_1: 進行捐款
   about_page_donors_link_2: "[查看我們的捐贈者列表]（%{donors_url}）"
+  teach_ai_title: 現實實例子。實用資源。
+  teach_ai_description: 學校人工智能指南工具包是政策制定者、學校領袖和教職員的資源，可以在學校制定有關人工智慧的初始指導。
+  teach_ai_button_label: 檢視工具包
   language_code:
     ar: 阿拉伯人
     az: 阿塞拜疆

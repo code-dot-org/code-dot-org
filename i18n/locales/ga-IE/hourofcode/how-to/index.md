@@ -8,7 +8,7 @@ title: Uair an Chóid Conas-chun Treoir
 
 ### Bí ar an ngluaiseacht agus cuir ríomheolaíocht in aithne do mhic léinn leis na céimeanna seo.
 
-Students today should learn how to create technology, not just use it.
+Ba chóir do mhic léinn inniu foghlaim conas teicneolaíocht a chruthú, ní amháin í a úsáid
 
 Bealach simplí agus spraíúil is ea Uair an Chóid a thriail chun eolaíocht ríomhaireachta a thabhairt isteach do mhic léinn, b'fhéidir den chéad uair riamh! Faigh gníomhaíocht a oireann do do shuíomh, cibé acu in-aicme nó iarscoile, go pearsanta nó fíorúil. Féach ar ár dtreoir [rannpháirtíochta má tá ceisteanna agat fós]({{ localized_files/participation_guide }}) tar éis duit na céimeanna thíos a sheiceáil:
 
@@ -19,7 +19,7 @@ Bealach simplí agus spraíúil is ea Uair an Chóid a thriail chun eolaíocht r
 - [Conas do Uair an Chóid a thosú go láidir](#how-to-start)
 - [Faigh códú](#code)
 - [Ceiliúradh a dhéanamh ar rath do mhic léinn](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Acmhainní eile Uair an Chód d'oideachasóirí](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Nuair a [chláraíonn tú do ócáid Uair an Chóid](/#join), beidh tú a fháil cumarsáide r-phost cabhrach le nuacht agus leideanna chun óstáil Uair rathúil de Chód. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Nuair a ch [láraíonn tú d'imeacht Uair an Chód](/events), gheobhaidh tú cumarsáid ríomhphoist cabhrach le nuacht agus leideanna chun Uair an Chód rathúil a óstáil. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Priontáil deimhni]({{ urls/certificates }}) the do do mhic léinn.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Roinn grianghraif agus físeáin de d'imeacht Uair an Chód ar na meáin shóisialta. Úsáid #HourOfCode agus @codeorg ionas gur féidir linn aird a tharraingt ar do rath freisin!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Acmhainní Uair Eile an Chóid d'oideachasóirí:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Déan athbhreith [niú ar na Ceisteanna Co](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)itianta
 
 ### What comes after the Hour of Code?
 

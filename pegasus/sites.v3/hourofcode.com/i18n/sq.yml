@@ -5,37 +5,43 @@ sq:
   language: Shqip
   front_title: Bashkohuni eventit më të madh në histori, %{campaign_date}
   coming_soon: Së shpejti
-  campaign_date_start_short: 6 dhjetor
-  campaign_date_start_long: Dhjetor 5
-  campaign_date_short: 5-11 dhjetor
-  campaign_date_full: 5-11 dhjetor
+  campaign_date_start_short: 4 dhjetor
+  campaign_date_start_long: 4 dhjetor
+  campaign_date_short: 4-10 dhjetor
+  campaign_date_full: 4-10 dhjetor
   campaign_date_year: '2023'
-  campaign_date_full_year: 5-11 Dhjetor, 2022
-  nonus_campaign_date_start_short: Tetor 1
-  nonus_campaign_date_start_long: Tetor 1
-  nonus_campaign_date_short: Tetor 1 - Dhjetor 18
-  nonus_campaign_date_full: 1 tetor - 18 dhjetor
+  campaign_date_full_year: 4-10 Dhjetor, 2023
+  nonus_campaign_date_start_short: 5 shtator
+  nonus_campaign_date_start_long: Shtator 5
+  nonus_campaign_date_short: 5 shtator - 17 dhjetor
+  nonus_campaign_date_full: 5 shtator - 17 dhjetor
   nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
-  latam_campaign_date_start_short: Tetor 1
-  latam_campaign_date_start_long: Tetor 1
-  latam_campaign_date_short: Tetor 1 - Dhjetor 18
-  latam_campaign_date_full: 1 tetor - 18 dhjetor
+  latam_campaign_date_start_short: 5 shtator
+  latam_campaign_date_start_long: Shtator 5
+  latam_campaign_date_short: 5 shtator - 17 dhjetor
+  latam_campaign_date_full: 5 shtator - 17 dhjetor
   latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
-  europe_campaign_date_start_short: Tetor 1
-  europe_campaign_date_start_long: Tetor 1
-  europe_campaign_date_short: Tetor 1 - Dhjetor 18
-  europe_campaign_date_full: 1 tetor - 18 dhjetor
+  europe_campaign_date_start_short: 5 shtator
+  europe_campaign_date_start_long: Shtator 5
+  europe_campaign_date_short: 5 shtator - 17 dhjetor
+  europe_campaign_date_full: 5 shtator - 17 dhjetor
   europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
-  africa_campaign_date_start_short: Tetor 1
-  africa_campaign_date_start_long: Tetor 1
-  africa_campaign_date_short: Tetor 1 - Dhjetor 18
-  africa_campaign_date_full: 1 tetor - 18 dhjetor
+  africa_campaign_date_start_short: 5 shtator
+  africa_campaign_date_start_long: Shtator 5
+  africa_campaign_date_short: 5 shtator - 17 dhjetor
+  africa_campaign_date_full: 5 shtator - 17 dhjetor
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
   hoc2023_header: Kreativiteti me AI
+  hoc2023_hero_desc_homepage: Bashkohuni me miliona njerëz në të gjithë globin në
+    organizimin e një ore kodimi, me ose pa AI dhe duke mësuar se si funksionon AI.
+    Çdokush, kudo mund ta bëjë atë. Nuk ka nevojë për përvojë.
+  hoc2023_hero_desc_learn_page: Këtë vit, ne po e çojmë Hour of Code në lartësi të
+    reja duke ofruar mundësi kodimi që përfshijnë si komponentët e inteligjencës artificiale
+    (AI) ashtu edhe jo-AI.
   hoc2023_social_creativity_with_ai_title: Ora e Kodimit - Çfarë do të krijoni?
   hoc2023_social_creativity_with_ai_desc: Përdorni shkencat kompjuterike për të eksploruar
     dhe mësuar rreth AI!
@@ -169,6 +175,8 @@ sq:
     dhe pse është e rëndësishme.
   social_ai_title: Mësoni rreth inteligjencës artificiale (AI) | Code.org
   social_ai_desc: Mjete për të ndihmuar studentët dhe mësuesit të sjellin AI në klasë.
+  social_videos_desc: Video tërheqëse të shkencave kompjuterike për nxënësit e të
+    gjitha moshave.
   pl_superhero_title: Ndihmoni studentët të bëhen superheronj!
   pl_superhero_desc: Bashkohuni me Programin tonë të Mësimit Profesional shumë mbështetës
     për edukatorët e shkollave të mesme dhe të mesme.
@@ -256,6 +264,7 @@ sq:
   optional_materials: 'Materialet opsionale:'
   call_to_action_hold_an_event: Mbajeni një ngjarje
   call_to_action_register_event: Regjistroni ngjarjen tuaj
+  call_to_action_register_your_hoc: Regjistroni Orën tuaj të Kodit
   call_to_action_select_activity: Zgjidhni një aktivitet
   call_to_action_start_activity: Filloni një aktivitet
   call_to_action_get_certificates: Merrni certifikata
@@ -351,6 +360,8 @@ sq:
   call_to_action_learn_about_advocacy: Mësoni rreth avokimit tonë
   call_to_action_visit_store: Vizitoni dyqanin
   call_to_action_view_faqs: Shikoni më shumë FAQ
+  call_to_action_applications_open: Aplikimet tashmë të hapura
+  call_to_action_apply_cs_ambassador: Aplikoni për të qenë ambasador i CS
   aria_label_call_to_action_hoc_how_to_educators: Shikoni udhëzuesin për edukatorët
   aria_label_call_to_action_hoc_how_to_companies: Shikoni udhëzuesin për kompanitë
   aria_label_call_to_action_hoc_how_to_districts: Shikoni udhëzuesin për rrethet
@@ -609,8 +620,10 @@ sq:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Kopshti
   module_grade_grade_01: Klasa 1
@@ -713,6 +726,57 @@ sq:
     e Kurrikulave
   heading_csa_ai: Duke kërkuar për gjëra për të bërë pas provimit AP®?
   heading_bring_cs_to_students: Sillni shkenca kompjuterike për studentët
+  heading_cs_ambassador_program: Programi i Ambasadorëve CS
+  cs_ambassador_subhead: Nëse jeni një nxënës i shkollës së mesme i pasionuar për
+    të inkurajuar më shumë gra të reja që të marrin shkenca kompjuterike në shkollën
+    tuaj, atëherë ne kemi nevojë për ju!
+  cs_ambassador_desc: Çdo fushë, duke përfshirë mjekësinë, argëtimin, sportin, arsimin,
+    biznesin, modën dhe sipërmarrjen, është prekur nga shkenca kompjuterike. Megjithatë,
+    vetëm 5% e grave të reja në shkollë të mesme marrin klasa të shkencave kompjuterike.
+    Ambasadorët mund të ndihmojnë në mbylljen e këtij hendeku gjinor duke inkurajuar
+    kolegët e tyre që të marrin një klasë
+  cs_ambassador_application_date: Aplikimet hapen deri më 8 nëntor 2023
+  cs_ambassador_application_subhead: Punoni me një mësues për të paraqitur aplikimin
+    tuaj sot
+  cs_ambassador_application_questions: Pyetje? Ju lutemi kontaktoni [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Çfarë bëjnë ambasadorët e CS?
+  cs_ambassador_do_desc: Ambasadorët e CS inkurajojnë gratë e reja që të eksplorojnë
+    këtë temë dhe të ngrijnë njëra-tjetrën ndërsa rifitojnë vendin e tyre në shkencat
+    kompjuterike. Ambasadorët e CS lidhen me kolegët e tyre për të ndarë eksitimin
+    dhe dashurinë e tyre për shkencat kompjuterike. Ata vizitojnë klasat, mbajnë tavolina
+    gjatë drekës dhe flasin në asamble dhe mbledhjet e klubit. Ambasadorët e CS punojnë
+    me mësuesit dhe administratorët e shkollave për të thyer stereotipet që i mbajnë
+    gratë e reja.
+  cs_ambassador_steps_heading: Çfarë duhet të bëhem ambasador i CS?
+  cs_ambassador_steps_list_title_01: Pasioni
+  cs_ambassador_steps_list_title_02: Përvoja në një kurs CS
+  cs_ambassador_steps_list_title_03: Shkolla që ofron CS
+  cs_ambassador_steps_list_desc_01: Një pasion për të inkurajuar gratë e reja në shkollën
+    tuaj për të marrë klasa të shkencave kompjuterike
+  cs_ambassador_steps_list_desc_02: 'Keni marrë një klasë vjetore të shkencave kompjuterike
+    në vitin shkollor 2022-23 ose më herët (rekomandohet: CS Principles ose AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Merrni pjesë në një shkollë të mesme që ofron
+    rregullisht një kurs vjetor të shkencave kompjuterike (rekomandohet: CS Principles
+    ose AP® CSA)'
+  cs_ambassador_benefits_heading: Përfitimet e programit
+  cs_ambassador_benefits_list_title_01: Komuniteti kombëtar
+  cs_ambassador_benefits_list_title_02: Shërbimi komunitar
+  cs_ambassador_benefits_list_title_03: Njohja
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certifikata
+  cs_ambassador_benefits_list_title_06: Përvojat
+  cs_ambassador_benefits_list_desc_01: Qasja në një komunitet kombëtar të liderëve
+    të rinj të përkushtuar për të mbyllur hendekun gjinor në shkencat kompjuterike
+  cs_ambassador_benefits_list_desc_02: Orët e shërbimit të komunitetit dhe mundësia
+    për të fituar [Çmimin e Shërbimit Vullnetar Presidencial të SHBA-së] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Njohja si Ambasador 2023-2024 dhe i drejtë
+    për t'u nderuar në Këndin e Famës së Ambasadorit Code.org.
+  cs_ambassador_benefits_list_desc_04: Identifikohuni si një Ambasador CS përmes veshjeve
+    speciale të markës Code.org, afisheve dhe më shumë!
+  cs_ambassador_benefits_list_desc_05: Certifikata zyrtare e pjesëmarrjes nga Code.org.
+  cs_ambassador_benefits_list_desc_06: Fitoni përvoja dhe histori për të ndarë në
+    aplikimin tuaj për kolegj, rezyme dhe më shumë!
   professional_learning_section_desc: Merrni mbështetjen që ju nevojitet ndërsa përgatiteni
     për të dhënë mësim. Mësuesit e duan atë, me mbi 90% duke e renditur atë zhvillimin
     më të mirë profesional ndonjëherë!
@@ -872,6 +936,12 @@ sq:
   ai_curriculum_grades_05: 'Nivelet e klasës: 9-12'
   ai_curriculum_btn_aria_label_05: Eksploroni modulin e Inxhinierisë Softuerike &
     Vizioni
+  ai_curriculum_title_06: Ndikimi shoqëror i AI gjeneruese
+  ai_curriculum_desc_06: Hetoni ndikimin e AI gjeneruese nga këndvështrime të ndryshme,
+    pastaj bashkëpunoni si një ekip për të dalë me udhëzime që adresojnë nevojat më
+    të mëdha nga të gjithë pjesëmarrësit.
+  ai_curriculum_btn_aria_label_06: Shikoni ndikimin shoqëror të planit të mësimit
+    gjenerativ të AI
   ai_carousel_heading: 'Çfarë thonë mësuesit për AI me Code.org:'
   ai_carousel_quote_01: Ky mësim gjithashtu u dha studentëve të mi mundësinë të shohin
     se ekziston një element i mendimit në sistemet e klasifikimit. Më vonë, kur filluam
@@ -1908,6 +1978,9 @@ sq:
     në të gjithë SHBA dhe dhjetë politikat që ne rekomandojmë që shtetet të miratojnë
     për t'i bërë shkencat kompjuterike themelore për të gjithë studentët. Plus, zbuloni
     se si mund të nxisni ndryshimin në gjendjen tuaj.
+  yw_page_top_heading: Gratë e reja në shkencat kompjuterike
+  yw_page_top_desc: Bëhuni ambasador i CS dhe bëhu pjesë e mbylljes së hendekut gjinor
+    në shkencat kompjuterike.
   hoc_live: Ora e kodit të drejtpërdrejtë
   hoc_live_sign_up_title: Regjistrohuni për Orën e Kodit Live
   hoc_live_learn_title: Mësoni me Orën e Kodit Live
@@ -2278,10 +2351,16 @@ sq:
     shkencat kompjuterike, duke përdorur mësime argëtuese për të treguar se çdokush
     mund të mësojë bazat. Kjo fushatë bazë mbështetet nga mbi 400 partnerë dhe 200,000
     edukatorë në mbarë botën.
+  hoc_homepage_registration_desc: Klasa ose grupi juaj mund të bashkohen me miliona
+    njerëz në të gjithë botën duke bërë Orën e Kodit! Regjistrimi për festimin vjetor
+    të Javës së Edukimit të Shkencave Kompjuterike fillon në tetor Megjithatë, Ora
+    e Kodit është në dispozicion gjatë gjithë vitit.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lexoni udhëzuesin tonë Si-për] (%{howto_guide_url})
     për të planifikuar një ngjarje për klasën tuaj."
   hoc_homepage_highlights_heading: Pikat kryesore të Orës së Kodimit
   hoc_homepage_organized_by: Ora e Kodimit organizohet nga [Code.org](%{codeorg_url}).
+  hoc_events_heading: Regjistrohuni për të organizuar një orë kodi
+  hoc_events_jump_to_map: Shko në hartën e Orës së Kodit
   signup_closed: Regjistrimi për Orën e Kodimit tani është mbyllur. Ju lutemi kontrolloni
     përsëri në tetor për t'u regjistruar në Orën tjetër të Kodimit.
   signup_registration_not_required: 'Nuk keni nevoje te regjistroheni ne menyre qe
@@ -2391,6 +2470,8 @@ sq:
   map_title: Harta e Orës së Kodimit
   map_header: "# evente Ora e Kodimit nëpër botë"
   map_header_count_year: "%{event_count} evente te regjistruara me %{year}"
+  map_header_count_year_so_far: "%{event_count} ngjarjet e regjistruara deri më tani
+    në %{year}"
   see_all_events: Shiko të gjitha eventet
   map_header_company: "# nga organizator kompanie"
   map_header_country: "# në %{country}"
@@ -2402,6 +2483,8 @@ sq:
   map_legend_cs_tech_jam: Evente speciale
   map_warning: 'Lista e plote e ngjarjeve mund te shikohet ne faqen e eventit. '
   map_warning_markdown: Lista e plote e eventeve mund te shikohet ne faqen e eventit.
+  map_view_all_events: Shihni një listë të plotë të ngjarjeve të Hour [here]of Code
+    (%{events_url}).
   meta_tag_og_title: Ora e Kodimit po vjen
   meta_tag_og_description: Ora e Kodimit është lëvizje globale që i përfshin dhjetëra
     miliona studentë në mbi 180 shtete dhe mbi 45 gjuhë.
@@ -2422,11 +2505,6 @@ sq:
     (Faleminderit %{random_donor} për mbështetjen @codeorg)'
   hoc_faq_title: PESH (Pyetjet e shpeshta)
   hoc_faq_what_is_hoc_q: Çfarë është Ora e Kodimit?
-  hoc_faq_what_is_hoc_a: Ora e Kodimit është prezantim një orësh për shkencat kompjuterike,
-    i dizenjuar të çmitizojë kodimin dhe të dëshmojë që çdo kush mund të mësojë gjërat
-    bazike. <a href='%{tutorials}'>Shikoni tutorialet dhe aktivitetet</a>.Kjo fushatë
-    bazë është mbështetur nga mbi <a href='%{partners}'> 400 partnerë </a> dhe 200.000
-    edukatorët në mbarë botën.
   hoc_faq_what_is_hoc_a_markdown: Ora e Kodimit është prezantim një orësh për shkencat
     kompjuterike, i dizenjuar të çmitizojë kodimin dhe të dëshmojë që çdo kush mund
     të mësojë gjërat bazike. <a href='%{tutorials}'>Shikoni tutorialet dhe aktivitetet</a>.Kjo
@@ -2434,12 +2512,6 @@ sq:
     dhe 200.000 edukatorët në mbarë botën.
   hoc_faq_last_year: Provo tutorialet
   hoc_faq_when_is_hoc_q: Kur mbahet Ora e Kodit?
-  hoc_faq_when_is_hoc_a: Kushdo mund të organizojë Orën e Kodimit, por qëllimi bazë
-    i fushatës është që dhjetëra miliona nxënës t'a provojnë Orën e Kodimit gjatë
-    %{campaign_date}, në mbështetje të <a href='http://csedweek.org'>Javës së Edukative
-    të Shkencës Kompjuterike</a>. A është një <i>orë</i> specifike? Jo. Orën e Kodimit
-    mund ta kryesh në çdo kohë gjatë kësaj jave. (Dhe nëse nuk mund ta bësh gjatë
-    asaj jave, kryeje në javën parardhëse apo më pas).
   hoc_faq_when_is_hoc_a_markdown: Kushdo mund të organizojë Orën e Kodimit, por qëllimi
     bazë i fushatës është që dhjetëra miliona nxënës t'a provojnë Orën e Kodimit gjatë
     %{campaign_date}, në mbështetje të <a href='http://csedweek.org'>Javës së Edukative
@@ -2447,32 +2519,17 @@ sq:
     mund ta kryesh në çdo kohë gjatë kësaj jave. (Dhe nëse nuk mund ta bësh gjatë
     asaj jave, kryeje në javën parardhëse apo më pas).
   hoc_faq_why_cs_q: Pse shkencat kompjuterike?
-  hoc_faq_why_cs_a: "<i>Çdo</i> nxënës duhet t'i jepet mundësia të mësojë shkencën
-    kompjuterike. Kjo ndihmon në aftësitë e zgjidhjes së problemave. logjikë dhe kreativitet.
-    Duke e nisur herët, studentët do të kenë bazat e suksesit për çdo karrierë në
-    shekullin e 21-të. Shikoni më shumë statistika në <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_why_cs_a_markdown: 'Cdo nxenes duhet te kete mundesine te mesoje shkenca
     kompjuterike. Mesimi ne kete fushe ndihmon ne zhvillimin e aftesive per zgjidhjen
     e problemeve, logjiken dhe kreativitetin. Duke filluar heret, nxenesit do te kene
     nje baze per sukses ne karrieren e shekullit 21. Shihni me shume statistika. '
   hoc_faq_how_participate_q: Si të marr pjesë në Orën e Kodit?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Fillo planifikimin këtu</a> duke rishikuar
-    udhëzuesit tanë. Mund të organizosh një Orë të Kodimit në shkollën tuaj ose në
-    komunitetin tuaj &mdash; si në një aktivitet ekstra kurikularë, organizata jo-fitimprurëse
-    ose në punë. Ose, thjeshtë provoje atë për vete kur të vijë data %{campaign_date}."
   hoc_faq_how_participate_a_markdown: "<a href='/how-to'>Fillo planifikimin këtu</a>
     duke rishikuar udhëzuesit tanë. Mund të organizosh një Orë të Kodimit në shkollën
     tuaj ose në komunitetin tuaj &mdash; si në një aktivitet ekstra kurikularë, organizata
     jo-fitimprurëse ose në punë. Ose, thjeshtë provoje atë për vete kur të vijë data
     %{campaign_date}."
   hoc_faq_behind_hoc_q: Kush është prapa Orës së Kodimit?
-  hoc_faq_behind_hoc_a: "Ora e Kodimit organizohet nga <a href='http://code.org'>Code.org</a>,
-    organizatë \njo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike
-    duke e bërë të disponueshme në më shumë shkolla dhe duke e rritur pjesëmarrjen
-    e femrave dhe nxënësve të pak-përfaqësuar me ngjyrë. Një <a href='%{codeorg_url}/about/partners'>koalicion
-    i paprecedent partnerësh</a> janë bashkuar ta përkrahin Orën e Kodimit &mdash;
-    duke përfshirë Microsoft, Apple, Amazon, Boys and Girls Clubs of America dhe College
-    Board."
   hoc_faq_behind_hoc_a_markdown: "Ora e Kodimit organizohet nga <a href='http://code.org'>Code.org</a>,
     organizatë \njo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike
     duke e bërë të disponueshme në më shumë shkolla dhe duke e rritur pjesëmarrjen
@@ -2481,12 +2538,6 @@ sq:
     duke përfshirë Microsoft, Apple, Amazon, Boys and Girls Clubs of America dhe College
     Board."
   hoc_faq_host_q: Nuk di asgjë për kodimin. A mund të jem organizator i ndonjë eventi?
-  hoc_faq_host_a: Sigurisht që mundeni. Aktivitetet e Orës së Kodimit janë të vetë-drejtuara.
-    Ajo çfarë duhet të bëni është <a href='%{codeorg_url}/learn'>të provoni tutorialet
-    tona aktuale</a>, të zgjidhni tutorialin që dëshironi dhe të zgjidhni një orë
-    &mdash; për të tjerat kujdesemi ne. Kemi zgjidhje për çdo moshë dhe nivel përvoje,
-    nga fëmijët e kopështit e tutje. Filloni të planifikoni eventin tuaj duke lexuar
-    <a href='/how-to'>udhëzuesin tonë</a>.
   hoc_faq_host_a_markdown: Sigurisht që mundeni. Aktivitetet e Orës së Kodimit janë
     të vetë-drejtuara. Ajo çfarë duhet të bëni është <a href='%{codeorg_url}/learn'>të
     provoni tutorialet tona aktuale</a>, të zgjidhni tutorialin që dëshironi dhe të
@@ -2494,13 +2545,6 @@ sq:
     dhe nivel përvoje, nga fëmijët e kopështit e tutje. Filloni të planifikoni eventin
     tuaj duke lexuar <a href='/how-to'>udhëzuesin tonë</a>.
   hoc_faq_devices_q: Çfarë pajisje duhet të përdor për studentët e mi?
-  hoc_faq_devices_a: Tutorialet e Code.org funksionojnë në të gjitha pajisjet dhe
-    shfletuesit. Ju mund të shikoni më shumë informacion rreth tutorialeve teknologjike
-    të Code.org <a href='%{codeorg_url}/educate/it'>këtu</a>.Nevojat teknologjike
-    për tutorialet e non-Code.org mund ti gjeni <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    në përshkrimet specifike të tutorialeve. Mos harroni ne gjithashtu ofrojmë <a
-    href='%{unplugged_url}'>aktivitete të shkëputur </a> në qoftë se shkolla juaj
-    nuk mund të përshtasë tutorialet!
   hoc_faq_devices_a_markdown: 'Udhezuesit e Code.org funksionojne ne te gjitha pajisjet
     dhe shfletuesit e internetit. Mund te shihni me shume informacion per udhezuesit
     e Code.org dhe nevojave teknologjike. Nevojat teknologjie per tutorialet qe nuk
@@ -2508,17 +2552,6 @@ sq:
     se ne poashtu ofrojme aktivitete te cilat nuk kane nevoje per kompjuter nese shkolla
     juaj nuk mund te akomodoje udhezuesit! '
   hoc_faq_need_computers_q: Më duhet të siguroj nga një kompjuter për secilin pjesëmarrës?
-  hoc_faq_need_computers_a: Jo. Ne kemi tutoriale të Orës së Kodimit që janë të përdorueshme
-    në kompjuter, telefona të mençur, tableta, madje dhe të tjera për të cilët nuk
-    nevojiten fare kompjuter! Mund të bashkoheni kudo që të jeni, me ato mjete që
-    keni. <p><i>Ja disa mundësi:</i> <br> <ul> <li><b>Punoni në grupe.</b> Studimet
-    tregojnë se studentët mësojnë më mirë <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programimin
-    nga dy</a>, duke drejtuar nga një kompjuter dhe duke punuar së bashku. Inkurajoni
-    studentët tuaj të punojnë në grup.<li><b>Përdorni projektorë.</b> Nëse keni projektor
-    dhe një ekran për një kompjuter të lidhur në internet, i gjithë grupi juaj mund
-    të zhvillojë një Orë të Kodimit së bashku. Ndiqni bashkarisht pjesë të videove
-    dhe kaloni radhën duke zgjidhur problema ose duke i'u përgjigjur pyetjeve. <li><b>Punoni
-    të shkëputur.</b> Ofrojmë tutoriale që nuk kërkojnë fare kompjuter.</ul>
   hoc_faq_need_computers_a_markdown: "Jo. Ne kemi udhezues te Ores se Kodit qe funksionojne
     ne kompjuteret personal, tableta, dhe disa per te cilet nuk duhet te keni kompjuter
     fare! Mund te kyqeni nga kudo qe jeni, me ckado qe keni. \n\nMe poshte jane disa
@@ -2530,37 +2563,21 @@ sq:
     probleme ose pergjigjuni pyetjeve. \n- Dilni offline: Ne ofrojme udhezues per
     te cilet nuk ju duhet kompjuter fare. "
   hoc_faq_international_q: Ndodhem në <country>. Si të marr pjesë?
-  hoc_faq_international_a: Çdokush mund të organizojë eventin Ora e Kodit, në çdo
-    vend të botës. Vitin e kaluar studentët në të gjithë botën iu bashkuan Orës së
-    Kodimit. Për më shumë klikoni <a href='/promote'>këtu</a>.
   hoc_faq_international_a_markdown: Çdokush mund të organizojë eventin Ora e Kodimit,
     në çdo vend të botës. Vitin e kaluar studentët në të gjithë botën iu bashkuan
     Orës së Kodimit. Për më shumë klikoni <a href='/promote'>këtu</a>.
   hoc_faq_tutorial_q: Si mund të zhvilloj një tutorial të Orës së Kodit?
-  hoc_faq_tutorial_a: Nëse jeni të interesuar të bëheni partner për tutoriale, <a
-    href='target-tutorial-guidelines'>ndiqni udhëzimet dhe instruksionet tona</a>.
-    Do të dëshironim të kishim një mori mundësish angazhimi, por qëllimi kryesor është
-    të optimiziohet përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike.
   hoc_faq_tutorial_a_markdown: Nëse jeni të interesuar të bëheni partner për tutoriale,
     [ndiqni udhëzimet dhe instruksionet tona](%{tutorial_guidelines}). Do të dëshironim
     të kishim një mori mundësish angazhimi, por qëllimi kryesor është të optimiziohet
     përvoja për studentët dhe mësimdhënësit e rinj në shkencat kompjuterike.
   hoc_faq_account_q: A duhet pjesëmarrësit të LOG ON kur përdorin një llogari?
-  hoc_faq_account_a: Jo. Absolutisht nuk nevojitet Regjistrim apo Login për nxënësit
-    për të provuar Orën e Kodimit. Shumica e <a href='http://%{codeorg_url}/learn/beyond'>kurseve</a>
-    kërkojnë krijimin e një llogarie për të ruajtur të dhënat që dëshmojnë progresin
-    e studentit.
   hoc_faq_account_a_markdown: Jo. Absolutisht nuk nevojitet Regjistrim apo Login për
     nxënësit për të provuar Orën e Kodimit. Shumica e <a href='http://%{codeorg_url}/learn/beyond'>kurseve</a>
     kërkojnë krijimin e një llogarie për të ruajtur të dhënat që dëshmojnë progresin
     e nxenesit.
   hoc_faq_high_school_q: Çfarë aktiviteteti  mundem ta realizoj me nxënësit e shkollës
     së mesme?
-  hoc_faq_high_school_a: Për të gjitha moshat, ne rekomandojmë të provoni një nga
-    tutorialet fillestare në <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
-    si tutoriali i Angry Birds ose me Anna dhe Elsa. Një student gjimnazi duhet të
-    jetë i aftë të përfundojë një nga këto në 30 minuta dhe më pas mund të provojë
-    një tutorial më të avancuar në JavaScript, si Khan Academy ose CodeHS.
   hoc_faq_high_school_a_markdown: Udhezuesit tane te cilet permbajne Star Wars dhe
     Minecraft jane shume tep ershtatshem per nxenesit e shkolles se mesme, veqanarisht
     versioni i StarWars ne JavaScript dhe niveli i luajtjes falas ne te dy udhezuesit.
@@ -2571,11 +2588,6 @@ sq:
     Academy ose CodeHS.
   hoc_faq_scratch_q: E realizoj Orën e Kodit përmes Scratch, por çfarë nëse nxënësit
     kanë iPad-e në vend të laptopëve?
-  hoc_faq_scratch_a: Scratch nuk funksionon tek tabletët. Nëse nxënësit tuaj janë
-    të rinj, ata mund të përdorin ScratchJR iPad app (for early-readers). Nëse shihni
-    tutorialet në <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, ju mund
-    të gjeni tutoriale të tjerë që funksionojnë në iPad - nga Code.org, Tynker, Lightbot
-    ose CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch nuk funksionon tek tabletët. Nëse nxënësit tuaj
     janë të rinj, ata mund të përdorin  ScratchJR iPad app (for early-readers). Nëse
     shihni tutorialet në <a href='http://code.org/learn'>Code.org/learn</a>, ju mund
@@ -2583,13 +2595,6 @@ sq:
     or CodeSpark.
   hoc_faq_count_hoc_q: Si i numëroni Orët e Kodimit?
   hoc_faq_map_q: Pse nuk mund ta shoh pikën time në hartë?
-  hoc_faq_map_a: Na vjen keq që ju nuk mund të shikoni eventin tuaj të Orës së kodimit
-    në hartë. Për shkak të dhjetëra mijëra organizatorëve që rregjistrohen, harta
-    përmbledh të dhënat dhe tregon një pikë për disa evente. Në qoftë se klikoni numrin
-    mbi hartë ju do të ridrejtoheni në një listë të të gjitha eventeve sipas shtetit
-    dhe ju mund ta gjeni eventin tuaj të listuar aty. Përveç kësaj, duke patur parasysh
-    mijëra personat që rregjistrohen në Orën e Kodimit, harta dhe eventet përditësohen
-    në listë pas 48 orësh. Kontrolloni sërish pas disa ditësh!
   hoc_faq_map_a_markdown: Na vjen keq që ju nuk mund të shikoni eventin tuaj të Orës
     së kodimit në hartë. Për shkak të dhjetëra mijëra organizatorëve që rregjistrohen,
     harta përmbledh të dhënat dhe tregon një pikë për disa evente. Në qoftë se klikoni
@@ -2597,12 +2602,6 @@ sq:
     shtetit dhe ju mund ta gjeni eventin tuaj të listuar aty. Përveç kësaj, duke patur
     parasysh mijëra personat që rregjistrohen në Orën e Kodimit, harta dhe eventet
     përditësohen në listë pas 48 orësh. Kontrolloni sërish pas disa ditësh!
-  hoc_faq_count_hoc_a: Ndjekësi i Orës së Kodimit nuk është një matës i saktë i përdorimit.
-    Ne nuk llogarisim Id unike të studentit në mënyrë perfekte kur marrin pjesë në
-    Orën e Kodimit, veçanërisht sepse ne nuk i kërkojmë studentëve që të hyjnë ose
-    të regjistrohen. Si rezultat, ne mbi-llogarisim dhe nën-llogarisim pjesëmarrësit
-    në të njëjtën kohë. Lexoni të gjitha detajet <a href='http://code.org/loc'>këtu
-    </a>.
   hoc_faq_count_hoc_a_markdown: Ndjekësi i Orës së Kodimit nuk është një matës i saktë
     i përdorimit. Ne nuk llogarisim Id unike të studentit në mënyrë perfekte kur marrin
     pjesë në Orën e Kodimit, veçanërisht sepse ne nuk i kërkojmë studentëve që të
@@ -2610,25 +2609,6 @@ sq:
     në të njëjtën kohë. Lexoni të gjitha detajet <a href='http://code.org/loc'>këtu
     </a>.
   hoc_faq_one_hour_q: Sa shumë mund të mësojë dikush në një orë?
-  hoc_faq_one_hour_a: Qëllimi i orës së Kodimit nuk është të mësojë dikë të bëhet
-    një ekspert në shkenca kompjuterike për një orë. Një orë është mjaftueshëm për
-    të mësuar që shkencat kompjuterike janë argëtuese dhe kreative, të aksesueshme
-    nga të gjitha moshat, të gjithë studentët, pavarësisht nivelit të njohurive të
-    tyre. Matja e suksesit të kësaj fushate nuk bëhet duke parë se sa mësojnë studentë
-    CS -suksesi reflektohet në pjesëmarrjen e gjerë të të gjitha gjinive, grupeve
-    etnike dhe social-ekonomike, dhe rritja rezulton në rregjistrimin dhe pjesëmarrjen
-    në të gjitha kurset CS të të gjitha niveleve. Miliona mësues dhe studentë pjesmarrës
-    kanë vendosur të shkojnë përtej një ore -për të mësuar një ditë, një javë apo
-    edhe më gjatë, dhe shumë studentë kanë vendosur të rregjistrohen në një kurs të
-    tërë(ose edhe një kolegj) si rezultat i kësaj.<br/><br/> Përveç studentëve një
-    tjetër "nxënës" është edukatori që fiton besimin pas një ore që ata mund të shpjegojnë
-    shkencat kompjuterike edhe pse ata nuk kanë një diplomë si inxhinierë informatike.
-    Dhjetëra mijëra  mësues vendosin të ndjekin më tej shkencat kompjuterike, të marrin
-    një PD ose të ofrojnë kurse që ndiqen online, ose të dyja. Dhe kjo vlen gjithashtu
-    edhe për administratorët e shkollave, të cilët kuptojnë që shkencat kompjuterike
-    janë diçka që studentët e tyre duan dhe që mësuesit janë të aftë të shpjegojnë.<br/><br/>
-    Mbi të gjitha, ajo çka të gjithë pjesëmarrësit mund të mësojnë në një orë është
-    që ne mund ta bëjmë këtë.
   hoc_faq_one_hour_a_markdown: Qëllimi i orës së Kodimit nuk është të mësojë dikë
     të bëhet një ekspert në shkenca kompjuterike për një orë. Një orë është mjaftueshëm
     për të mësuar që shkencat kompjuterike janë argëtuese dhe kreative, të aksesueshme
@@ -2649,38 +2629,27 @@ sq:
     Mbi të gjitha, ajo çka të gjithë pjesëmarrësit mund të mësojnë në një orë është
     që ne mund ta bëjmë këtë.
   hoc_faq_more_questions_q: Keni ende pyetje të tjera?
-  hoc_faq_more_questions_a: Provoni të gjeni përgjigjie në  <a href='http://support.code.org'>forumin
-    tonë përkrahës</a>.
   hoc_faq_more_questions_a_markdown: 'Gjeni pergjigjet ne forumin tone te supportit. '
   hoc_faq_keep_learning_q: Si mund të vazhdoj të mësoj pas Orës së Kodimit?
-  hoc_faq_keep_learning_a: Gjithsecili mund të zhvillojë një Orë Kodimi në cdo kohë.
-    Tutorialet janë të disponueshme për gjatë gjithë vitit. Ju mund të prisni që tutorialet
-    dhe kurrikulumi jonë të jenë të vlefshme në përjetësi. Ju lutem shkoni tek <a
-    href='/promote'>our resources</a> për një event udhëzues dhe burime të tjera që
-    ju ndihmojnë të zhvilloni Orën tuaj të Kodimit në mënyrë të suksesshme.
   hoc_faq_keep_learning_a_markdown: Gjithsecili mund të zhvillojë një Orë Kodimi në
     cdo kohë. Tutorialet janë të disponueshme për gjatë gjithë vitit. Ju mund të prisni
     që tutorialet dhe kurrikulumi jonë të jenë të vlefshme në përjetësi. Ju lutem
     shkoni tek <a href='/promote'>our resources</a> për një event udhëzues dhe burime
     të tjera që ju ndihmojnë të zhvilloni Orën tuaj të Kodimit në mënyrë të suksesshme.
   hoc_faq_certificates_q: Ku mund t'i printoj çertifikatat për studentët e mi?
-  hoc_faq_certificates_a: Shkoni tek <a href='%{codeorg_url}/certificates'> faqja
-    e certifikatave </a> ku ju mund të printoni certifikatat për të gjithë klasën
-    tuaj. Ju gjithashtu mund të printoni <a href='%{codeorg_url}/certificates?course=mc'>
-    certifikata të vecanta </a> për studentët gjatë tutorialit Minecraft.
-  hoc_faq_certificates_a_markdown: Shkoni tek <a href='%{codeorg_url}/certificates'>
-    faqja e certifikatave </a> ku ju mund të printoni certifikatat për të gjithë klasën
-    tuaj. Ju gjithashtu mund të printoni <a href='%{codeorg_url}/certificates?course=mc'>
-    certifikata të vecanta </a> për studentët gjatë tutorialit Minecraft.
+  hoc_faq_certificates_answer_markdown: Shkoni te [faqja e certifikatave] (%{certificates_url})
+    ku mund të printoni certifikatat për të gjithë klasën tuaj para kohe.
   hoc_faq_logo_q: A ka kufizime në lidhje me mënyrën e përdorimit të logos dhe emrit
     të Orës së Kodit?
-  hoc_faq_logo_a: Ora e Kodimit është markë e rregjistruar. Ne nuk duam të ndalojmë
-    përdorimin e saj, por duam të sigurohemi që përdorimi i saj përputhet me kushtet
-    tona. Ju lutem shikoni <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>kushtet
-    e përdorimit</a>.
   hoc_faq_logo_a_markdown: 'Ora e Kodit eshte marke e regjistruar. ne nuk duam ta
     parandalojme perdorimin e saj, mirpo ne deshirojme te sigurohemi se perdorimi
     i saj pershtatet me disa limite te paracaktuara. Ju lutem shihni rregullat e perdorimit. '
+  hoc_faq_bug_q: Kam gjetur një bug në një aktivitet të Hour of Code! Çfarë duhet
+    të bëj?
+  hoc_faq_bug_a_markdown: |-
+    Oh jo! Nëse keni hasur një bug në një aktivitet të Orës së Kodit - së pari kontrolloni URL-në për aktivitetin në të cilin jeni. Nëse URL fillon me studio.code.org, ekipi ynë i mbështetjes Code.org mund të ndihmojë! Klikoni ikonën e shenjës së pyetjes në këndin e sipërm të djathtë të ekranit tuaj, pastaj zgjidhni “Raporto një problem” nga menyja zbritëse.
+
+    Nëse URL nuk fillon me studio.code.org, ju ka të ngjarë të punoni në një aktivitet të palës së tretë dhe do të duhet të kontaktoni ekipin mbështetës të asaj kompanie për ndihmë të mëtejshme.
   stats_hoc_2013_image_alt: Statistikat nga Ora e Kodimit 2013
   stats_growth: Ishte më e shpejta për t'i arritur 15 milion përdorues.
   stats_i18n: Nxënësit mësojnë në mbi 45 gjuhë
@@ -14410,6 +14379,25 @@ sq:
     dhe Shkarkimet'
   video_library_page_not_hacked_video_title_7: 'Si të mos merrni Hacked: Instaloni
     përditësimet'
+  thank_you_page_main_title: Faleminderit që ndihmojnë në ndërtimin e një lëvizjeje
+  thank_you_page_description: Koalicioni i Avokimit Code.org dëshiron të falënderojë
+    qindra mijëra kampionë dhe avokatë lokalë, duke përfshirë mësuesit, anëtarët e
+    komunitetit, studiuesit, organizatat jofitimprurëse, universitetet, korporatat
+    dhe institucionet qeveritare që kanë mbështetur vizionin se çdo student në çdo
+    shkollë meriton mundësinë për të mësuar shkenca kompjuterike. Faleminderit për
+    mbështetjen tuaj ndaj kësaj lëvizjeje.
+  thank_you_page_members_section_title: 'Dhe për të gjithë anëtarët e Koalicionit
+    të Avokimit të Code.org:'
+  thank_you_page_individual_organization_title: 'Faleminderit individëve dhe organizatave
+    të mëposhtme për kontributin e tyre në këtë raport:'
+  thank_you_page_individual_organization_description: Mbikëqyrësit e arsimit të shkencave
+    kompjuterike në secilën agjenci shtetërore të arsimit, Bordi i Kolegjit, Della
+    Cronin, Stuart Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan,
+    Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Faleminderit studentëve dhe mësuesve të
+    cituar në këtë raport:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Rreth Nesh
   about_us_page_hero_description: Code.org® është një inovacion arsimor jofitimprurës
     kushtuar vizionit që çdo student në çdo shkollë ka mundësinë për të mësuar shkencat
@@ -14568,6 +14556,11 @@ sq:
     që do të mbështesë këtë vizion.
   about_page_donors_link_1: Bëni donacione
   about_page_donors_link_2: "[shihni listën tonë të donatorëve] (%{donors_url})"
+  teach_ai_title: Shembuj të botës reale. Burimet praktike.
+  teach_ai_description: Paketi i Udhëzimeve për Shkollat e AI është një burim për
+    politikëbërësit, udhëheqësit e shkollave dhe stafin për të zhvilluar udhëzime
+    fillestare mbi AI në shkollat e tyre.
+  teach_ai_button_label: Shikoni Toolkit
   language_code:
     ar: arabisht
     az: Azerbajxhanisht
