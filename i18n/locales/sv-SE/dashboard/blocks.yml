@@ -588,6 +588,51 @@ sv:
             '"tropical"': Tropisk
             '"vintage"': Vintage
             '"warm"': Röda
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          ställ in bakgrundseffekt
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Slumpad)"
+            '"circles"': Tunnel
+            '"quads"': Vinklar
+            '"color_cycle"': Färger
+            '"diamonds"': Diamanter
+            '"disco_ball"': Discokula
+            '"fireworks"': Fyrverkerier
+            '"flowers"': Blommor
+            '"growing_stars"': Växande Stjärnor
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansgolv
+            '"splatter"': Färgstänk
+            '"rainbow"': Regnbåge
+            '"ripples_random"': Slumpmässiga Krusningar
+            '"ripples"': Krusningar
+            '"snowflakes"': Snö
+            '"text"': Låttitel
+            '"squiggles"': Krumelurer
+            '"galaxy"': Rymd
+            '"sparkles"': Gnistror
+            '"spiral"': Spiral
+            '"disco"': Fyrkanter
+            '"starburst"': Stjärnfall
+            '"stars"': Stjärnor
+            '"music_wave"': Vågor
+          PALETTE:
+            '"rave"': Svartvitt
+            '"cool"': Blues
+            '"electronic"': Elektroniskt
+            '"iceCream"': Glass
+            '"default"': Ljus
+            '"neon"': Neon
+            '"ocean"': Hav
+            '"rainbow"': Regnbåge
+            '"tropical"': Tropisk
+            '"vintage"': Vintage
+            '"warm"': Röda
       Dancelab_setDanceSpeed:
         text: ändra danshastigheten av {SPRITE} till {SPEED}
         options:
