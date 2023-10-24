@@ -85,7 +85,7 @@ class RubricsController < ApplicationController
     return head :not_found unless student
     return head :forbidden unless can?(:manage, student)
 
-    learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
+    learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).select(:id)
 
     # Get the most recent learning goals based on the most recent graded rubric
     learning_goal_ai_evaluations = LearningGoalAiEvaluation.where(
