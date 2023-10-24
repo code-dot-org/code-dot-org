@@ -807,6 +807,12 @@ en:
         ai-ethis: Ethics & AI
         how-ai-works-lessons: 'How AI Works: Lessons Overview'
         se-cv-intro-to-lessons: 'Software Engineering and Computer Vision: Intro to Lessons'
+        PL_CSP_SummerAsync_U1ConnectionsConclusions: Unit 1 Connections and Conclusions
+        PL_CSP_SummerAsync_U3L7Debugging: Unit 3 Lesson 7 - Debugging
+        PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Unit 2: Conclusions and Connections'
+        PL_CSP_SummerAsync_U3L1Computers: Previously, On...Unit 3
+        PL_CSP_SummerAsync_Unit2Internet: Previously, On...Unit 2
+        PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Unit 3: Conclusions and Connections'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
