@@ -104,6 +104,10 @@ class EvaluateRubricJob < ApplicationJob
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
 
+    # Check for PII / sharing failures
+    share_failure = ShareFiltering.find_share_failure(code, user.locale)
+    raise "ShareFailure #{share_failure.type}" if share_failure
+
     openai_params = get_openai_params(lesson_s3_name, code)
     ai_evaluations = get_openai_evaluations(openai_params)
 
