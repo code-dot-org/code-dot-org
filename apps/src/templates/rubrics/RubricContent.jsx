@@ -49,7 +49,6 @@ export default function RubricContent({
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
-  //const [aiEvaluation, setAiEvaluations] = useState(null);
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
