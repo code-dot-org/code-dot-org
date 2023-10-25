@@ -265,6 +265,15 @@ module Cdo
       rack_env?(:test) && pegasus_hostname == 'test.code.org'
     end
 
+    # Identify whether we are executing within a web application server as most of our Ruby classes and modules
+    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb).
+    # Some components may operate differently within a web application server, such as using a database proxy to
+    # connect to the database. We use the `puma` web application server in most environments, except development, where
+    # we use `thin`.
+    def running_web_application?
+      File.basename($0) == 'puma' || File.basename($0) == 'thin'
+    end
+
     def shared_image_url(path)
       "/shared/images/#{path}"
     end
