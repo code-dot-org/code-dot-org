@@ -58,30 +58,6 @@ class Tutorials
     results
   end
 
-  def find_with_tag(tag)
-    results = {}
-    @contents.each do |i|
-      tags = CSV.parse_line(i[:tags].to_s)
-      next unless tags.include?(tag)
-      results[i[:code]] = i
-    end
-    results
-  end
-
-  def find_with_tag_and_language(tag, language)
-    results = {}
-    @contents.each do |i|
-      tags = CSV.parse_line(i[:tags].to_s)
-      next unless tags.include?(tag)
-
-      languages = CSV.parse_line(i[:languages_supported].to_s)
-      next unless languages.nil_or_empty? || languages.include?(language) || languages.include?(language[0, 2])
-
-      results[i[:code]] = i
-    end
-    results
-  end
-
   # return the first tutorial with a matching code
   def find_with_code(code)
     by_code = CDO.cache.fetch("Tutorials/#{@table}/by_code") {@contents.index_by {|row| row[:code]}}
