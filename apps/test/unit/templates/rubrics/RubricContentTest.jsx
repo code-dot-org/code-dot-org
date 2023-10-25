@@ -4,7 +4,6 @@ import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
-import {act} from 'react-dom/test-utils';
 
 describe('RubricContent', () => {
   const defaultRubric = {
@@ -251,14 +250,9 @@ describe('RubricContent', () => {
   });
 
   it('passes down aiUnderstanding and aiConfidence to the LearningGoal', async () => {
-    const mockFetch = sinon.stub(global, 'fetch');
-    const aiEvaluationsMock = [
+    const aiEvaluations = [
       {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
     ];
-    mockFetch.returns(
-      Promise.resolve(new Response(JSON.stringify(aiEvaluationsMock)))
-    );
-
     const wrapper = mount(
       <RubricContent
         {...defaultProps}
@@ -268,20 +262,16 @@ describe('RubricContent', () => {
           lastAttempt: '1980-07-31T00:00:00.000Z',
           attempts: 6,
         }}
+        aiEvaluations={aiEvaluations}
       />
     );
 
-    await act(async () => {
-      await Promise.resolve();
-    });
-    wrapper.update();
-
     const learningGoal2Wrapper = wrapper.find('LearningGoal').at(1);
     expect(learningGoal2Wrapper.prop('aiUnderstanding')).to.equal(
-      aiEvaluationsMock[0].understanding
+      aiEvaluations[0].understanding
     );
     expect(learningGoal2Wrapper.prop('aiConfidence')).to.equal(
-      aiEvaluationsMock[0].ai_confidence
+      aiEvaluations[0].ai_confidence
     );
 
     sinon.restore();

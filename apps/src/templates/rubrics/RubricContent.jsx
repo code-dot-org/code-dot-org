@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
@@ -10,6 +10,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
+  aiEvaluationShape,
   reportingDataShape,
   rubricShape,
   studentLevelInfoShape,
@@ -43,11 +44,12 @@ export default function RubricContent({
   onLevelForEvaluation,
   reportingData,
   visible,
+  aiEvaluations,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
-  const [aiEvaluation, setAiEvaluations] = useState(null);
+  //const [aiEvaluation, setAiEvaluations] = useState(null);
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
@@ -78,34 +80,9 @@ export default function RubricContent({
       });
   };
 
-  useEffect(() => {
-    if (!!studentLevelInfo && teacherHasEnabledAi) {
-      const studentId = studentLevelInfo.user_id;
-      const rubricId = rubric.id;
-      const dataUrl = `/rubrics/${rubricId}/get_ai_evaluations?student_id=${studentId}`;
-
-      fetch(dataUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          setAiEvaluations(data);
-        })
-        .catch(error => {
-          console.log(
-            'There was a problem with the fetch operation:',
-            error.message
-          );
-        });
-    }
-  }, [rubric.id, studentLevelInfo, teacherHasEnabledAi]);
-
   const getAiUnderstanding = learningGoalId => {
-    if (!!aiEvaluation) {
-      const aiInfo = aiEvaluation.find(
+    if (!!aiEvaluations) {
+      const aiInfo = aiEvaluations.find(
         item => item.learning_goal_id === learningGoalId
       );
       return aiInfo?.understanding;
@@ -115,8 +92,8 @@ export default function RubricContent({
   };
 
   const getAiConfidence = learningGoalId => {
-    if (!!aiEvaluation) {
-      const aiInfo = aiEvaluation.find(
+    if (!!aiEvaluations) {
+      const aiInfo = aiEvaluations.find(
         item => item.learning_goal_id === learningGoalId
       );
       return aiInfo?.ai_confidence;
@@ -241,6 +218,7 @@ RubricContent.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
   visible: PropTypes.bool,
+  aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
 };
 
 const InfoAlert = ({text}) => {

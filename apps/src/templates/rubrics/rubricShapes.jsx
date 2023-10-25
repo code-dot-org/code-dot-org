@@ -41,3 +41,9 @@ export const submittedEvaluationShape = PropTypes.shape({
   feedback: PropTypes.string,
   understanding: PropTypes.number,
 });
+
+export const aiEvaluationShape = PropTypes.shape({
+  learning_goal_id: PropTypes.number,
+  understanding: PropTypes.number,
+  ai_confidence: PropTypes.number,
+});

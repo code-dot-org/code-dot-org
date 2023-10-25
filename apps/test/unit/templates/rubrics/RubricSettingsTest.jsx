@@ -12,7 +12,6 @@ describe('RubricSettings', () => {
       <RubricSettings
         canProvideFeedback={true}
         teacherHasEnabledAi={true}
-        updateTeacherAiSetting={() => {}}
         visible
       />
     );
@@ -39,8 +38,9 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          updateTeacherAiSetting={() => {}}
           visible
+          rubricId={1}
+          studentUserId={10}
         />
       );
       await act(async () => {
@@ -63,7 +63,8 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          updateTeacherAiSetting={() => {}}
+          rubricId={1}
+          studentUserId={10}
           visible
         />
       );
@@ -87,7 +88,8 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          updateTeacherAiSetting={() => {}}
+          rubricId={1}
+          studentUserId={10}
           visible
         />
       );
@@ -108,6 +110,7 @@ describe('RubricSettings', () => {
         5. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
         6. Move clock forward 5 seconds
         7. Fetch returns a json object with puts AI Status into SUCCESS state
+        8. Calls refreshAiEvaluations
       */
 
       const clock = sinon.useFakeTimers();
@@ -143,11 +146,14 @@ describe('RubricSettings', () => {
 
       fetchStub.returns(Promise.resolve({ok: false}));
 
+      const refreshAiEvaluationsSpy = sinon.spy();
       const wrapper = mount(
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          updateTeacherAiSetting={() => {}}
+          rubricId={1}
+          studentUserId={10}
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
           visible
         />
       );
@@ -174,6 +180,7 @@ describe('RubricSettings', () => {
       wrapper.update();
       expect(wrapper.find('Button').props().disabled).to.be.true;
       expect(wrapper.text()).include(i18n.aiEvaluationStatus_success());
+      expect(refreshAiEvaluationsSpy).to.have.been.calledOnce;
     });
   });
 });
