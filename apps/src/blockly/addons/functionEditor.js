@@ -151,6 +151,7 @@ export default class FunctionEditor {
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
+      this.block.functionalSvg_.render(this.block.svgGroup_, this.block.RTL);
       Blockly.Events.enable();
     } else {
       // Otherwise, we need to create a new block from scratch.
@@ -318,7 +319,7 @@ export default class FunctionEditor {
     const returnValue = {
       ...blockConfig,
       x: 20,
-      y: 20,
+      y: 40,
     };
     return returnValue;
   }

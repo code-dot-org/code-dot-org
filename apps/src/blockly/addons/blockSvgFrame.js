@@ -18,6 +18,7 @@ export default class BlockSvgFrame {
     this.frameText_ = undefined;
 
     this.initChildren();
+    this.addBrowserResizeListener();
   }
 
   initChildren() {
@@ -96,6 +97,12 @@ export default class BlockSvgFrame {
     this.frameText_.appendChild(document.createTextNode(this.text));
   }
 
+  addBrowserResizeListener() {
+    window.addEventListener('resize', () => {
+      // Frame size can depend upon workspace size, so we re-render.
+      this.render(this.block_.svgGroup_, this.block_.RTL);
+    });
+  }
   getPadding() {
     return {
       top: frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT,
@@ -106,6 +113,9 @@ export default class BlockSvgFrame {
   }
 
   render(svgGroup, isRtl, minWidthAdjustment) {
+    if (!svgGroup) {
+      return;
+    }
     // Remove ourselves from the DOM and calculate the size of our
     // container, then insert ourselves into the container.
     // We do this because otherwise, the value returned by
@@ -135,6 +145,19 @@ export default class BlockSvgFrame {
       frameSizes.MARGIN_BOTTOM +
       frameSizes.HEADER_HEIGHT;
 
+    // Increase the frame size to the full workspace if it's the modal editor.
+    if (this.block_.workspace.id === Blockly.functionEditor.getWorkspaceId()) {
+      // Get the height and width of the rendered workspace, not including toolbox
+      const viewMetrics = this.block_.workspace
+        .getMetricsManager()
+        .getViewMetrics();
+      // Set the height and width based on the workspace size, unless the block content is bigger.
+      width = Math.max(width, viewMetrics.width - frameSizes.MARGIN_SIDE);
+      height = Math.max(
+        height,
+        viewMetrics.height - frameSizes.MARGIN_TOP - frameSizes.MARGIN_BOTTOM
+      );
+    }
     this.frameClipRect_.setAttribute('width', width);
     this.frameBase_.setAttribute('width', width);
     this.frameBase_.setAttribute('height', height);
