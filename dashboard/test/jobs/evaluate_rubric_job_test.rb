@@ -16,6 +16,8 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
+
+    CDO.stubs(:openai_evaluate_rubric_api_key).returns('fake-api-key')
   end
 
   test "job succeeds on ai-enabled level" do
@@ -159,6 +161,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "prompt" => 'fake-system-prompt',
       "rubric" => 'fake-standard-rubric',
       "examples" => expected_examples.to_json,
+      'api-key' => 'fake-api-key',
     }
     fake_ai_evaluations = [
       {

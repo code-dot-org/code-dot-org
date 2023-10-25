@@ -50,6 +50,7 @@ export default function RubricsContainer({
       learningGoal: '',
       aiEnabled: false,
       position: nextPosition,
+      tips: null,
       learningGoalEvidenceLevelsAttributes: [
         {
           teacherDescription: '',

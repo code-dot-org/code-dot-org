@@ -928,6 +928,7 @@ Dashboard::Application.routes.draw do
           end
         end
         get 'section_instructors/:section_id', to: 'section_instructors#show'
+        get 'section_instructors/check', to: 'section_instructors#check'
 
         resources :ml_models, only: [:show, :destroy] do
           collection do
@@ -1052,6 +1053,7 @@ Dashboard::Application.routes.draw do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
+        post 'run_ai_evaluations_for_user'
         post 'submit_evaluations'
       end
     end

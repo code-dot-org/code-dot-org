@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-13 15:34:26 UTC",
+    "serialized_at": "2023-10-17 14:16:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,7 +96,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break\n\n**Objectives**\n* Participants gain experience looking at authentic student work\n* Participants know how to consider code efficiency as they look at student work. \n\n**Suggested Time:** 15 minutes\n",
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break.\n\n**Objectives**\n* Participants gain experience looking at authentic student work\n* Participants know how to consider code efficiency as they look at student work \n\n**Suggested Time:** 15 minutes\n",
         "student_overview": "**You will**\n* Gain experience looking at authentic student work\n* Know how to consider code efficiency as they look at student work. "
       },
       "seeding_key": {
@@ -164,7 +164,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**Purpose:**\nThis is intended to give participants context for planning their year after lunch.  We want participants to understand what aspects of the PL program are in place for the upcoming year as well as what the full curriculum looks like in their classrooms. \n\n**Objectives**\n* Participants can describe how the content builds on itself between units.\n* Participants understand the structure of the PL program\n\n**Suggested Time:** 20 minutes\n",
+        "overview": "**Purpose:**\nThis is intended to give participants context for planning their year after lunch.  We want participants to understand what aspects of the PL program are in place for the upcoming year as well as what the full curriculum looks like in their classrooms. \n\n**Objectives**\n* Participants can describe how the content builds on itself between units\n* Participants understand the structure of the PL program\n\n**Suggested Time:** 20 minutes\n",
         "student_overview": "**You will**\n* Describe how the content builds on itself between units.\n* Understand the structure of the PL program"
       },
       "seeding_key": {
@@ -213,7 +213,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break\n\n**Objectives**\n* Participants have a plan for how they will use resources in their classroom.\n\n**Suggested Time:** 15 minutes",
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break.\n\n**Objectives**\n* Participants have a plan for how they will use resources in their classroom\n\n**Suggested Time:** 15 minutes",
         "student_overview": "**You will**\n* Create a plan for how you will use resources in their classroom."
       },
       "seeding_key": {
@@ -230,7 +230,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**Purpose:**\nTo help prepare participants for understanding later content in Unit 3, this session introduces participants to reading files in Java Lab. \n\n**Objectives**\n* Participants will be able to describe why and how data is used in Unit 3. \n* Participants understand how to read data from a text file in Java Lab.\n* Participants know how to use enhanced for loops. \n\n**Suggested Time:** 55 minutes\n",
+        "overview": "**Purpose:**\nTo help prepare participants for understanding later content in Unit 3, this session introduces participants to reading files in Java Lab. \n\n**Objectives**\n* Participants will be able to describe why and how data is used in Unit 3\n* Participants understand how to read data from a text file in Java Lab\n* Participants know how to use enhanced for loops\n\n**Suggested Time:** 55 minutes\n",
         "student_overview": "**You will**\n* Be able to describe why and how data is used in Unit 3. \n* Understand how to read data from a text file in Java Lab.\n* Know how to use enhanced for loops. "
       },
       "seeding_key": {
@@ -247,7 +247,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "**Purpose:**\nThis is our opportunity to be very clear on the role of the teacher in this course.  We know some participants will have experience with the idea of being the “lead learner”.  We want to clarify what this term might mean and help teachers get in the mindset of “being a CSA teacher”\n\n**Objectives**\n* Participants know their role before, during and after a lesson  \n\n**Suggested Time:** 30 minutes",
+        "overview": "**Purpose:**\nThis is our opportunity to be very clear on the role of the teacher in this course.  We know some participants will have experience with the idea of being the “lead learner”.  We want to clarify what this term might mean and help teachers get in the mindset of “being a CSA teacher.”\n\n**Objectives**\n* Participants know their role before, during and after a lesson  \n\n**Suggested Time:** 30 minutes",
         "student_overview": "**You will**\n* Know your role before, during and after a lesson  "
       },
       "seeding_key": {
@@ -587,6 +587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5-async1intro"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,
@@ -609,6 +612,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5_async1planning"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,
@@ -631,6 +637,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day5_async1nextSteps"
+        ],
         "progression": "Asynchronous Part 1"
       },
       "bonus": false,

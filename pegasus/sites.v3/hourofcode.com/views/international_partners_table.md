@@ -50,6 +50,7 @@
 |Kosovo|SHPIK|Bekim Kasumi|bekim.kasumi@shpik.org<br>www.shpik.org|
 |Latin America|Eidos Global|Marina Puente Pistarini|marina@eidosglobal.org<br>https://www.eidosglobal.org/|
 |Malaysia|Chumbaka|Nigel Sim|nigel@chumbaka.asia<br>www.chumbaka.asia|
+|Malaysia|Fondation Rolf Schnyder|Scott and Andrea Wong|scott.andrea@fondationrolfschnyder.org<br>www.fondationrolfschnyder.org|
 |Malaysia|Malaysia Digital Economy Corporation (MDEC)|Sofia Akmal Abu Bakar|sofia@mdec.com.my<br>https://mdec.my/|
 |Malaysia|Telebort|Chong Wei|mytelebort@gmail.com<br>https://www.telebort.com/|
 |Maldives|Women in Tech Maldives|Aishath Adnan|info@womenintechmv.org<br>https://www.womenintechmv.org/|
