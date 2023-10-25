@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Conditionals
+# Methods
 
 ##### In lesson 5, students explore methods in the Painter class and learn the syntax for calling methods in Java. 
 

@@ -3,12 +3,8 @@
   "config": {
     "func": "ai",
     "inline": true,
-    "blockText": "{IMAGE}generate {VALUE} stage",
-    "color": [
-      216,
-      0.13,
-      0.29
-    ],
+    "blockText": "{IMAGE}generate {VALUE} effects",
+    "style": "ai_blocks",
     "args": [
       {
         "name": "IMAGE",

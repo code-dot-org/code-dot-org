@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "draft-hoc-dp-2",
-    "serialized_at": "2023-10-06 21:15:12 UTC",
+    "serialized_at": "2023-10-18 17:16:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -35,7 +35,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Hour of Code (Draft 2)",
+      "name": "Hour of Code (October Pilot)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -124,10 +124,21 @@
       }
     },
     {
-      "key": "bd329388-e129-4f69-8457-631d39d3559a",
+      "key": "36eef143-b30d-414a-95c2-511729adec49",
       "position": 3,
       "properties": {
-        "progression_name": "Happy Song"
+        "progression_name": "Key Press Events 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "36eef143-b30d-414a-95c2-511729adec49",
+        "lesson_activity.key": "107bc1ea-18cd-4e70-9b39-70f8d600eca3"
+      }
+    },
+    {
+      "key": "bd329388-e129-4f69-8457-631d39d3559a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Generate with AI for Happy Song"
       },
       "seeding_key": {
         "activity_section.key": "bd329388-e129-4f69-8457-631d39d3559a",
@@ -136,9 +147,9 @@
     },
     {
       "key": "cad72776-9a03-4d9b-8ea3-90a5d4d70d94",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "progression_name": "Sad Song"
+        "progression_name": "Generate with AI for Sad Song"
       },
       "seeding_key": {
         "activity_section.key": "cad72776-9a03-4d9b-8ea3-90a5d4d70d94",
@@ -147,7 +158,7 @@
     },
     {
       "key": "ce36b1b8-3008-4228-93e8-d11455cc9500",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Video about AI"
       },
@@ -158,9 +169,9 @@
     },
     {
       "key": "66f8eed6-2ca0-4f7c-81f3-2a37ddc72932",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "progression_name": "Debug Happy Song"
+        "progression_name": "Generate with AI for a Song then edit code"
       },
       "seeding_key": {
         "activity_section.key": "66f8eed6-2ca0-4f7c-81f3-2a37ddc72932",
@@ -169,7 +180,7 @@
     },
     {
       "key": "caf4e725-75fa-4bc3-940d-759df050e96f",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Code A Dance Move"
       },
@@ -180,7 +191,7 @@
     },
     {
       "key": "25cfaca7-0200-4f0e-a633-0c3e6901011f",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Key Press Events Video"
       },
@@ -190,21 +201,10 @@
       }
     },
     {
-      "key": "36eef143-b30d-414a-95c2-511729adec49",
-      "position": 9,
-      "properties": {
-        "progression_name": "Key Press Events 1"
-      },
-      "seeding_key": {
-        "activity_section.key": "36eef143-b30d-414a-95c2-511729adec49",
-        "lesson_activity.key": "107bc1ea-18cd-4e70-9b39-70f8d600eca3"
-      }
-    },
-    {
       "key": "a2aed7b4-85c9-4300-b378-4e2bc522a7a4",
       "position": 10,
       "properties": {
-        "progression_name": "Key Press Events 2"
+        "progression_name": "On measure Events"
       },
       "seeding_key": {
         "activity_section.key": "a2aed7b4-85c9-4300-b378-4e2bc522a7a4",
@@ -240,6 +240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_video_intro"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -262,6 +265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_dancer"
+        ],
         "progression": "Code a Dancer and Moves"
       },
       "bonus": false,
@@ -284,7 +290,35 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Happy Song"
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_1"
+        ],
+        "progression": "Key Press Events 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "draft_ai_dance_party_key_press_events_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "36eef143-b30d-414a-95c2-511729adec49"
+      },
+      "level_keys": [
+        "draft_ai_dance_party_key_press_events_1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic"
+        ],
+        "progression": "Generate with AI for Happy Song"
       },
       "bonus": false,
       "seeding_key": {
@@ -301,12 +335,15 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sad Song"
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_sad"
+        ],
+        "progression": "Generate with AI for Sad Song"
       },
       "bonus": false,
       "seeding_key": {
@@ -323,34 +360,15 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Video about AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "draft_ai_dance_party_video_ai_intro"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "ce36b1b8-3008-4228-93e8-d11455cc9500"
-      },
-      "level_keys": [
-        "draft_ai_dance_party_video_ai_intro"
-      ]
-    },
-    {
       "chapter": 6,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debug Happy Song"
+        "level_keys": [
+          "draft_ai_dance_party_Drag_ai_happy_debug"
+        ],
+        "progression": "Generate with AI for a Song then edit code"
       },
       "bonus": false,
       "seeding_key": {
@@ -372,51 +390,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Key Press Events Video"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "draft_ai_dance_party_video_key_press_events"
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_2"
         ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "25cfaca7-0200-4f0e-a633-0c3e6901011f"
-      },
-      "level_keys": [
-        "draft_ai_dance_party_video_key_press_events"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Key Press Events 1"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "draft_ai_dance_party_key_press_events_1"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "36eef143-b30d-414a-95c2-511729adec49"
-      },
-      "level_keys": [
-        "draft_ai_dance_party_key_press_events_1"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Key Press Events 2"
+        "progression": "On measure Events"
       },
       "bonus": false,
       "seeding_key": {
@@ -433,11 +410,14 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_free_play"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -482,6 +462,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "draft_ai_dance_party_key_press_events_1",
+        "script_level.level_keys": [
+          "draft_ai_dance_party_key_press_events_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "36eef143-b30d-414a-95c2-511729adec49"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "draft_ai_dance_party_drag_ai_cosmic",
         "script_level.level_keys": [
           "draft_ai_dance_party_drag_ai_cosmic"
@@ -506,18 +498,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "draft_ai_dance_party_video_ai_intro",
-        "script_level.level_keys": [
-          "draft_ai_dance_party_video_ai_intro"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "ce36b1b8-3008-4228-93e8-d11455cc9500"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "draft_ai_dance_party_Drag_ai_happy_debug",
         "script_level.level_keys": [
           "draft_ai_dance_party_Drag_ai_happy_debug"
@@ -526,30 +506,6 @@
         "lesson_group.key": "",
         "script.name": "draft-hoc-dp-2",
         "activity_section.key": "66f8eed6-2ca0-4f7c-81f3-2a37ddc72932"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "draft_ai_dance_party_video_key_press_events",
-        "script_level.level_keys": [
-          "draft_ai_dance_party_video_key_press_events"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "25cfaca7-0200-4f0e-a633-0c3e6901011f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "draft_ai_dance_party_key_press_events_1",
-        "script_level.level_keys": [
-          "draft_ai_dance_party_key_press_events_1"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "36eef143-b30d-414a-95c2-511729adec49"
       }
     },
     {

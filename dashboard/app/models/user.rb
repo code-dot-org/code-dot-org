@@ -1506,6 +1506,10 @@ class User < ApplicationRecord
     age.nil? || age.to_i < 13
   end
 
+  def over_21?
+    !age.nil? && age.to_i >= 21
+  end
+
   def mute_music?
     !!mute_music
   end

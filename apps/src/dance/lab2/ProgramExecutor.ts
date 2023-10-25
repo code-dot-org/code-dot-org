@@ -100,9 +100,10 @@ export default class ProgramExecutor {
   }
 
   /**
-   * Preview the program. Compiles student code and calls on the native API to draw the first frame.
+   * Preview the program. Compiles student code and calls on the native API to draw a frame.
    */
   async preview() {
+    this.nativeAPI.setForegroundEffectsInPreviewMode(true);
     this.reset();
     this.hooks = await this.preloadSpritesAndCompileCode(
       this.getCode(),
@@ -115,7 +116,15 @@ export default class ProgramExecutor {
     }
 
     this.hooks.runUserSetup();
-    this.nativeAPI.p5_.draw();
+
+    // Force preview draw to occur **after** any
+    // draw iterations already queued up.
+    // redraw() (rather than draw()) is p5's recommended way
+    // of drawing once.
+    setTimeout(() => {
+      this.nativeAPI.p5_.redraw();
+      this.nativeAPI.setForegroundEffectsInPreviewMode(false);
+    }, 0);
   }
 
   reset() {

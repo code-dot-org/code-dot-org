@@ -10,9 +10,9 @@ After=network.target
 Type=notify
 WatchdogSec=10
 
-# Our servers can take a while to start up; wait five full minutes for them to
+# Our servers can take a while to start up; wait ten full minutes for them to
 # do so before giving up.
-TimeoutStartSec=300
+TimeoutStartSec=600
 
 User=<%= @user %>
 WorkingDirectory=<%= @app_root %>

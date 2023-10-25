@@ -190,7 +190,7 @@ Setup steps for macOS:
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) / Intel Mac when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### Ubuntu 18.04
 [Ubuntu 18.04 iso download][ubuntu-iso-url]
@@ -388,11 +388,27 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 ---
 ### Bundle Install Tips
 
-#### Apple Silicon (M1) bundle install steps
+#### Apple Silicon (M1) or Intel Mac bundle install steps
 
-On Apple Silicon, additional steps are required to get `bundle install` to work.
+On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
-In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0). Also update mini_racer to 0.4.0 (from 0.3.1):
+If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
+make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
+and run it if you haven't.
+
+<details>
+<summary>If that didn't help - do following:</summary>
+
+Simply run (if you're having issues only with part of gems in the command - you can run it with just needed gems)
+```
+bundle update libv8 mini_racer
+```
+To fix issues in one line. It will update the Gemfile.lock file for you in the same way as described below.
+
+OR
+
+In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0).
+Also update mini_racer to 0.4.0 (from 0.3.1):
 
 ```
 libv8-node (15.14.0.0)
@@ -400,6 +416,18 @@ libv8-node (15.14.0.0)
 mini_racer (0.4.0)
   libv8-node (~> 15.14.0.0)
 ```
+
+FINALLY
+
+To prevent Gemfile.lock changes from constantly appearing in your commits - run following commands:
+```
+git update-index --assume-unchanged Gemfile.lock
+git update-index --no-assume-unchanged Gemfile.lock
+git ls-files -v | grep '^[[:lower:]]'
+```
+</details>
+
+
 
 Then run the following commands to successfully complete a bundle install:
 
