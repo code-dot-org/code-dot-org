@@ -1,9 +1,9 @@
 require 'test_reporter'
 require 'rspec'
 
-if defined? ActiveRecord
-  ActiveRecord::Migration&.check_pending!
-end
+# if defined? ActiveRecord
+#   ActiveRecord::Migration&.check_pending!
+# end
 
 # This is a workaround for https://github.com/kern/minitest-reporters/issues/230
 Minitest.load_plugins
@@ -56,6 +56,9 @@ require 'testing/transactional_test_case'
 require 'testing/capture_queries'
 
 require 'parallel_tests/test/runtime_logger'
+
+require 'database_cleaner/active_record'
+DatabaseCleaner.strategy = :transaction
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -134,6 +137,8 @@ class ActiveSupport::TestCase
   include CaptureQueries
 
   setup_all do
+    DatabaseCleaner.start
+
     # Some of the functionality we're testing here relies on Scripts with
     # certain hardcoded names. In the old fixture-based model, this data was
     # all provided; in the new factory-based model, we need to do a little
@@ -172,6 +177,10 @@ class ActiveSupport::TestCase
         script_level.levels = [create(:level)]
       end
     end
+  end
+
+  teardown_all do
+    DatabaseCleaner.clean
   end
 
   def assert_creates(*args)
