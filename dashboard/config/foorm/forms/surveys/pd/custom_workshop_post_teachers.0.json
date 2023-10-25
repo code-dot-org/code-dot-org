@@ -14,6 +14,7 @@
           "type": "radiogroup",
           "name": "pd_content",
           "title": "What content was the focus of the PD workshop you participated in?",
+          "isRequired": true,
           "choices": [
             {
               "value": "csd_6_maker_microbit",
@@ -32,6 +33,14 @@
               "text": "I'm not sure"
             }
           ]
+        },
+        {
+          "type": "text",
+          "name": "workshop_date",
+          "title": "Please enter the date of the workshop you attended",
+          "isRequired": true,
+          "inputType": "date",
+          "min": "2023-10-24"
         },
         {
           "type": "radiogroup",
