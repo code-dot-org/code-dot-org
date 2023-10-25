@@ -58,10 +58,10 @@
 
   figure {
     width: 50%;
+    @media (max-width: $width-md) { width: 42%; }
+    @media (max-width: $width-sm) { width: 100%; }
 
-    img {
-      width: 100%;
-    }
+    img { width: 100%; }
   }
 }
 
@@ -70,10 +70,8 @@ ul.dance-party-featured-artists {
   margin: 2rem auto;
 
   li {
-
-    @media (min-width: $width-sm) {
-      width: 14%;
-    }
+    @media (min-width: $width-sm) { width: 14%; }
+    @media (max-width: $width-sm) { width: 30%; }
 
     &:nth-of-type(even) {
       img { border: 4px solid var(--brand_primary_default); }
@@ -110,6 +108,7 @@ ul.dance-party-featured-artists {
         .slides {
           width: 300%;
           height: 26rem;
+          position: relative !important;
         }
 
         .slide {
