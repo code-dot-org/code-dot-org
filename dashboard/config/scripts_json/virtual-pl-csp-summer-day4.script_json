@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-23 15:39:40 UTC",
+    "serialized_at": "2023-10-25 15:27:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -223,8 +223,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 55 minutes",
-        "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
+        "overview": "**Purpose:**\nParticipants will think about differentiating for computer science while considering what they've seen in Unit 3 so far.\n\n**Objectives:**\n\n* Participants will identify actions they might take as a teacher for CS Principles to influence, reduce, or eliminate barriers to recruiting students.\n* Participants will consider differentiation strategies.\n* Participants will wrap-up Unit 3.\n\n**Suggested time:** 55 minutes",
+        "student_overview": "**You will:**\n\n* Identify actions you might take as a teacher for CS Principles to influence, reduce, or eliminate barriers to recruiting students.\n* Consider differentiation strategies.\n* Wrap-up Unit 3.\n\n"
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 2",
