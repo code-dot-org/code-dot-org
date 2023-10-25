@@ -2745,11 +2745,9 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
 
-  console.log('startBlocks', startBlocks);
   let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
-    console.log('its xml!');
     // Only used in Calc/Eval, Craft, Maze, and Artist
     if (config.forceInsertTopBlock) {
       // Adds a 'when_run' or similar block to workspace, if there isn't one.
@@ -2765,7 +2763,6 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
         startBlocks,
         config.level.sharedFunctions
       );
-      console.log('after adding shared functions', startBlocks);
     }
     // Not needed if source is JSON, as these blocks will already have positions.
     startBlocks = this.arrangeBlockPosition(

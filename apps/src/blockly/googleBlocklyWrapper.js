@@ -154,7 +154,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    // TODO: Is this okay left as-is?
     let workspaceCode = Blockly.JavaScript.workspaceToCode(
       Blockly.mainBlockSpace
     );
