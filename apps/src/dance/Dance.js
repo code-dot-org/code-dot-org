@@ -467,8 +467,8 @@ Dance.prototype.reset = function () {
  * image is displayed and sound is NOT played.
  */
 Dance.prototype.preview = async function () {
-  this.nativeAPI.reset();
   this.nativeAPI.setForegroundEffectsInPreviewMode(true);
+  this.nativeAPI.reset();
   const api = new DanceAPI(this.nativeAPI);
   const studentCode = this.studioApp_.getCode();
   const code = danceCode + studentCode;
