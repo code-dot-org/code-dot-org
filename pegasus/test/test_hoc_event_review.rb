@@ -19,8 +19,8 @@ class HocEventReviewTest < Minitest::Test
           with_form country: 'US', state: 'OR' do
             with_form country: 'MX' do
               expected = [
-                {state_code: 'CA', count: 2},
                 {state_code: 'OR', count: 1},
+                {state_code: 'CA', count: 2},
               ]
               actual = HocEventReview.event_counts_by_state
               assert_equal expected, actual
