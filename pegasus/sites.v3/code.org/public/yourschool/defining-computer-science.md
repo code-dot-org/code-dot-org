@@ -43,8 +43,8 @@ includes courses that are coded as computer
 science.  
 
 Each school on our map fits into one of four possible categories:
-1. __Need information.__ We don’t have information yet for this school. If your school is in this category, please [fill out the survey](https://code.org/yourschool).
-1. __Offers a computer science class.__ We have data that indicates that this school offers a computer science class.
+1. __Need information.__ This means we don’t have information yet for this school. If your school is in this category, please [fill out the survey](https://code.org/yourschool).
+1. __Offers a computer science class.__ This means that we have data for this school that indicates that it offers a computer science class. 
 1. __Historically offered computer science.__ We have data that indicates that this school has taught CS in the past 2 years and we have not received updated information this year. 
-1. __Offers no computer science.__ We have data for this school indicating the school does not offer any computer science classes during the day that include minimum requirements as defined above. This school may offer other computing-related courses or computer science education opportunities, like after school programs, clubs, or Hour of Code events.
-1. __Historically did not offer computer science.__ We have data that indicates that this school did not offer CS in the past 2 years and we have not received updated information this year.
+1. __Offers no computer science.__ This means that we have data for this school indicating the school does not offer any computer science classes during the day that include minimum requirements as defined above. This school may offer other computer science education opportunities, like after school programs, clubs, or Hour of Code events.
+1. __Historically did not offer computer science.__ We have data that indicates that this school did not teach CS in the past 2 years and we have not received updated information this year.
