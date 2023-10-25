@@ -6,23 +6,12 @@
 .tags {
   display: flex;
   column-gap: 0.5em;
-  height: 1.5em;
 
   > div {
-    // font styles
-    @include main-font-semi-bold;
-    font-size: 0.75em;
-    line-height: 0.875em;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     color: $neutral-dark;
-
-    // label styles
-    padding: 0.6em 0.75em 0 0.75em;
+    padding: 0.13rem 0.5rem;
     background-color: $brand_primary_light;
-    border-radius: 1em;
-
-    // ellipsis overflow
+    border-radius: 6.25rem;;
     max-width: 15em;
     white-space: nowrap;
     overflow: hidden;
@@ -64,17 +53,20 @@
 .tags-l {
   > div {
     @include overline-one;
+    margin-bottom: 0;
   }
 }
 
 .tags-m {
   > div {
     @include overline-two;
+    margin-bottom: 0;
   }
 }
 
 .tags-s {
   > div {
     @include overline-three;
+    margin-bottom: 0;
   }
 }
