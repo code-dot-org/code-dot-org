@@ -3,7 +3,7 @@ import spacy
 import json
 
 # Load the spaCy natural language processing model - English tokenizer, tagger, parser and NER (named entity recognition)
-nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_lg")
 
 emoji_ids = ["poopy", "romantic", "party", "silly", "sparkle", "happy", "magic", "spooky", "cute", "funky", "wavy", "lights", "rainbow", "robot", "chaotic", "disco", "zen", "fast", "evil", "cold", "cosmic", "sad", "black-and-white", "warm", "cool"]
 
@@ -75,7 +75,7 @@ background_effects_map = {
 foreground_effects_map = {
     'bubbles': 'bubbles', # Bubbles
     'confetti': 'confetti', # Confetti
-    'red hearts': 'hearts_red', # Hearts
+    'heart': 'hearts_red', # Hearts
     'music notes': 'music_notes', # Music Notes
     'pineapple': 'pineapples', # Pineapples
     'pizza': 'pizzas', # Pizzas
@@ -87,7 +87,7 @@ foreground_effects_map = {
     'stage lights': 'color_lights', # Stage Lights
     'taco': 'raining_tacos', # Tacos
     'emojis': 'emojis', # Emojis
-    'colorful hearts': 'hearts_colorful', # Colorful Hearts
+    'hearts': 'hearts_colorful', # Colorful Hearts
     'stars': 'exploding_stars', # Starburst
     'rainbow paint': 'paint_drip', # Paint Drip
 }
