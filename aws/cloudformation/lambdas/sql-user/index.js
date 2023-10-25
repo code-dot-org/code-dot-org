@@ -58,17 +58,14 @@ exports.handler = async (event, context) => {
           password: dbCredentialSQLUser.password,
           privileges: props.Privileges,
         });
-        // Results from the CREATE USER query.
         console.log(
           "CREATE USER SQL Statement Execution Results:\n",
           results.createUser
         );
-        // Results from the UPDATE USER query.
         console.log(
           "UPDATE USER SQL Statement Execution Results:\n",
           results.updateUser
         );
-        // Array of results from each GRANT operation.
         console.log(
           "GRANT USER SQL Statement Execution Results:\n",
           results.grantResults
@@ -153,7 +150,7 @@ const deleteSQLUser = async (connection, { name, clientHost }) => {
   const dropUser = `DROP USER IF EXISTS '${name}'@'${clientHost}';`;
   return await queryPromise(connection, dropUser).catch((error) => {
     if (error.code === "ENOTFOUND") {
-      let databaseDeletedAlreadyMessage = `
+      const databaseDeletedAlreadyMessage = `
         Cannot connect to database to delete SQL user because the server name lookup failed. Assuming the database was
         already deleted by CloudFormation, so there's no need to delete the user. ${error}
        `;
