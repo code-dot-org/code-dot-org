@@ -42,9 +42,9 @@ export default function AiAssessmentBox({
         understandingLevel: assessment,
       });
     } else if (!studentSubmitted) {
-      return 'Student must submit project for evaluation.';
+      return i18n.aiEvaluation_student_must_submit();
     } else {
-      return 'AI Evaluation not run for this project.';
+      return i18n.aiEvaluation_not_run();
     }
   };
 
