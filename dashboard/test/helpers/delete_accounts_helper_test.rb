@@ -23,14 +23,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   NULL_STREAM = File.open File::NULL, 'w'
 
-  def run(*_args, &_block)
-    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) do
-      DASHBOARD_DB.transaction(rollback: :always, auto_savepoint: true) do
-        super
-      end
-    end
-  end
-
   def get_record_with_sql(select_attribute, table_name, selector)
     ActiveRecord::Base.connection.exec_query(
       "SELECT #{select_attribute} from `#{table_name}` WHERE `#{table_name}`.`#{selector.keys[0]}` = #{selector.values[0]}"
