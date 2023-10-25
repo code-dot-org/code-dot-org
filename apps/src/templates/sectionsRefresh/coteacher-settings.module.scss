@@ -63,4 +63,41 @@
 
 .table {
   width: 100%;
+  border-left: 1px solid $light_gray_200;
+  border-right: 1px solid $light_gray_200;
+  padding-bottom: 20px;
+
+  &Row {
+    display: flex;
+    padding: 12px;
+    min-height: 48px;
+    max-height: 48px;
+    border-bottom: 1px solid $light_gray_200;
+    align-items: center;
+  }
+
+  &InfoCell {
+    flex: 1;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &StatusCell {
+    background-color: $neutral_light;
+  }
+
+  &RemoveButton {
+    margin: 0;
+    border:  none;
+    background-color: $white;
+    color: $neutral_dark60;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+      color: $product_negative_default;
+      background: $product_negative_light;
+      box-shadow: none;
+    }
+  }
 }

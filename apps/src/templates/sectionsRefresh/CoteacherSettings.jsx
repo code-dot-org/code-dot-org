@@ -83,26 +83,28 @@ export default function CoteacherSettings({
 
   const getTableRow = (index, coteacher) => {
     return (
-      <tr key={index}>
-        <td>
+      <tr key={index} className={styles.tableRow}>
+        <td className={styles.tableInfoCell}>
           <div>
             {coteacher.instructorName ? (
-              <StrongText> {coteacher.instructorName}</StrongText>
+              <>
+                <StrongText> {coteacher.instructorName}</StrongText>
+                <br />
+              </>
             ) : null}
-            <br />
+
             {coteacher.instructorEmail}
           </div>
         </td>
         <td>{coteacher.status}</td>
         <td>
-          <Button
-            onClick={e => {
-              e.preventDefault();
-              setCoteacherToRemove(coteacher);
-            }}
+          <button
+            type="button"
+            onClick={() => setCoteacherToRemove(coteacher)}
+            className={styles.tableRemoveButton}
           >
-            <FontAwesome icon="trash" />
-          </Button>
+            <i className={classNames('fa-solid fa-trash', styles.trashIcon)} />
+          </button>
         </td>
       </tr>
     );
