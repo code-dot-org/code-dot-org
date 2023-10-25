@@ -5,11 +5,10 @@ import json
 # Load the spaCy natural language processing model - English tokenizer, tagger, parser and NER (named entity recognition)
 nlp = spacy.load("en_core_web_md")
 
-# Define your "emoji_id" (emojis) and foreground/background/palette lists
-# For items like background/foreground effects, certain values were adjusted to reflect the most context-rich but open-ended word within the phrase
-# e.g. "ripples_random" is adjusted to "ripples", "smiling_poop" -> "poop", etc.
-# This was done due to spacy interpreting underscored phrases as a unique word and phrases such as "smiling poop" not correlating highly with most anything within a internet scraped corpus
 emoji_ids = ["poopy", "romantic", "party", "silly", "sparkle", "happy", "magic", "spooky", "cute", "funky", "wavy", "lights", "rainbow", "robot", "chaotic", "disco", "zen", "fast", "evil", "cold", "cosmic", "sad", "black-and-white", "warm", "cool"]
+
+# We rename foreground/background effects and palettes to better reflect the
+# actual output of the effect or color. Below, we store them in a map (python_name: blockly_id).
 
 # color_palettes dictionary contains python name as key and blockly id as value.
 # User-facing name is added as a comment for each color palette.
