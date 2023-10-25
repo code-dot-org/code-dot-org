@@ -4,12 +4,14 @@ import {
 } from '@blockly/block-shareable-procedures';
 import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
+import msg from '@cdo/locale';
+import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
-import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
+import CdoMetricsManager from './cdoMetricsManager';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -51,6 +53,9 @@ export default class FunctionEditor {
         },
         wheel: true,
       },
+      plugins: {
+        metricsManager: CdoMetricsManager,
+      },
       renderer: options.renderer,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
       toolbox: options.toolbox,
@@ -69,7 +74,7 @@ export default class FunctionEditor {
     // Delete handler
     document
       .getElementById(MODAL_EDITOR_DELETE_ID)
-      .addEventListener('click', this.handleDelete.bind(this));
+      .addEventListener('click', this.onDeletePressed.bind(this));
 
     // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
@@ -97,6 +102,7 @@ export default class FunctionEditor {
   hide() {
     if (this.dom) {
       this.dom.style.display = 'none';
+      this.editorWorkspace.hideChaff();
     }
   }
 
@@ -232,7 +238,22 @@ export default class FunctionEditor {
     this.showForFunction(hiddenProcedure, procedureType);
   };
 
-  handleDelete() {
+  onDeletePressed() {
+    /// We use "delete" for cancel and "keep" for confirm so that the
+    // delete button is red and the keep button is purple.
+    Blockly.customSimpleDialog({
+      bodyText: msg.confirmDeleteFunctionWarning({
+        functionName: this.block.getProcedureModel().getName(),
+      }),
+      cancelText: msg.delete(),
+      isDangerCancel: true, // gives us a red button
+      confirmText: msg.keep(),
+      onConfirm: null, // No-op
+      onCancel: this.onDeleteConfirmed.bind(this),
+    });
+  }
+
+  onDeleteConfirmed() {
     // delete all caller blocks from the procedure workspace
     Blockly.Procedures.getCallers(
       this.block.getProcedureModel().getName(),
@@ -312,8 +333,8 @@ export default class FunctionEditor {
   addEditorWorkspaceBlockConfig(blockConfig) {
     const returnValue = {
       ...blockConfig,
-      x: 50,
-      y: 50,
+      x: 20,
+      y: 20,
     };
     return returnValue;
   }

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-16 17:36:32 UTC",
+    "serialized_at": "2023-10-18 11:28:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20437,6 +20437,19 @@
       }
     },
     {
+      "key": "1ef344d5-1605-4f14-af3d-d982e2ae6d75",
+      "position": 7,
+      "learning_goal": "Variables - Optional “Stretch” Feature",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "1ef344d5-1605-4f14-af3d-d982e2ae6d75",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
       "key": "209798cd-e25b-4b96-bf1b-699f090bdb77",
       "position": 4,
       "learning_goal": "Creating a Digital Artifact",
@@ -20506,7 +20519,7 @@
       "position": 1,
       "learning_goal": "Program Development - Peer Feedback",
       "ai_enabled": false,
-      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program and its starting elements (creating sprites, setting sprite properties that won’t change, etc). \n- Code inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.",
+      "tips": "",
       "seeding_key": {
         "learning_goal.key": "3a264bf8-ae90-4eba-8442-0adee5613bd1",
         "lesson.key": "Project - Interactive Card",
@@ -20607,7 +20620,7 @@
     },
     {
       "key": "7d31cf32-6a46-4118-885b-0bf347af51a6",
-      "position": 7,
+      "position": 6,
       "learning_goal": "Position and Movement",
       "ai_enabled": true,
       "tips": "(6) **Move in different ways**\n- Both types of the following movement should be used:\n  - Random movement using `randomNumber()`\n  - Smooth movement using the **counter pattern** `(sprite.x = sprite.x + 1)`",
@@ -20622,7 +20635,7 @@
       "key": "846752b3-e04d-466c-818b-1215a9d280ff",
       "position": 3,
       "learning_goal": "Position - Elements and the Coordinate System",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "846752b3-e04d-466c-818b-1215a9d280ff",
@@ -20752,7 +20765,7 @@
       "key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
       "position": 1,
       "learning_goal": "Program Development - Program Sequence",
-      "ai_enabled": true,
+      "ai_enabled": false,
       "tips": "(1) **Sequenced the program well**\nIf the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \nIn the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\nCode inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.\n",
       "seeding_key": {
         "learning_goal.key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
@@ -20844,7 +20857,7 @@
       "position": 2,
       "learning_goal": "Program Development - Program Sequence",
       "ai_enabled": false,
-      "tips": null,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program and its starting elements (creating sprites, setting sprite properties that won’t change, etc). \n- Code inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.",
       "seeding_key": {
         "learning_goal.key": "f7799b1e-f81e-46a3-a206-8b2ec055555e",
         "lesson.key": "Project - Interactive Card",
@@ -21020,6 +21033,54 @@
         "understanding": 3,
         "learning_goal.key": "0e77d5a5-1b7f-45c7-a88f-9ca19d8aff65",
         "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No non-sprite variables are created and used in the program",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "1ef344d5-1605-4f14-af3d-d982e2ae6d75",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 non-sprite variable is created and used in your program but does not update in the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "1ef344d5-1605-4f14-af3d-d982e2ae6d75",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 non-sprite variable is created and its value is updated in the draw loop and affects how the program runs.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "1ef344d5-1605-4f14-af3d-d982e2ae6d75",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 non-sprite variables are created and their values are updated in the draw loop and affect how the program runs. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "1ef344d5-1605-4f14-af3d-d982e2ae6d75",
+        "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }
@@ -21302,7 +21363,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You gave thoughtful feedback to peers and you responded to peer feedback by making appropriate changes to program.You sequenced the program well1  and properly separated code in and out of the draw loop2.\nYou property separated code in and out of the draw loop, however they have a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.\nYou have several sequencing errors, resulting in many elements unintentionally hidden or overlapping others. Some code is improperly placed in or out of the loop.\nErrors in program sequencing are significant enough to keep the output from resembling the intended scene or the Draw loop is not used to create animation\n\n",
+      "teacher_description": "You gave thoughtful feedback to peers and you responded to peer feedback by making appropriate changes to program.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22502,7 +22563,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control the player sprite’s jumping4 inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control the player sprite’s jumping (4) inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22550,7 +22611,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well1  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,

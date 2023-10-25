@@ -35,6 +35,7 @@ class EvaluateRubricJob < ApplicationJob
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
 
+    raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
@@ -117,10 +118,11 @@ class EvaluateRubricJob < ApplicationJob
     rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     examples = read_examples(lesson_s3_name)
     params.merge(
-      "code" => code,
-      "prompt" => prompt,
-      "rubric" => rubric,
-      "examples" => examples.to_json,
+      'code' => code,
+      'prompt' => prompt,
+      'rubric' => rubric,
+      'examples' => examples.to_json,
+      'api-key' => CDO.openai_evaluate_rubric_api_key,
     )
   end
 

@@ -23,6 +23,8 @@ class SectionsController < ApplicationController
       unit_id: existing_section.unit_group ? existing_section.script_id : nil
     }
 
+    @section['sectionInstructors'] = ActiveModelSerializers::SerializableResource.new(existing_section.section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+
     @section = @section.to_json.camelize
   end
 

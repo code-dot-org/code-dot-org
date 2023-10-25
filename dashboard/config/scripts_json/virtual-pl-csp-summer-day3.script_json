@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-16 19:37:01 UTC",
+    "serialized_at": "2023-10-23 15:26:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -93,7 +93,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session focuses on the “understanding self” portion of the equity framework. Now that participants have had more time to get to know one another and have done a decent amount of work in the curriculum, we are asking participants to dig a little deeper in understanding how their identity and the role unconscious bias plays in their teaching practice. \n\n**Objectives:**\n* Participants can describe how their identity, experiences, and beliefs shape how they see their role as a CS teacher.\n\n**Suggested Time:** 30 minutes",
+        "overview": "**Purpose:**\nThis session focuses on the “understanding self” portion of the equity framework. Now that participants have had more time to get to know one another and have done a decent amount of work in the curriculum, we are asking participants to dig a little deeper in understanding how their identity and the role unconscious bias plays in their teaching practice. \n\n**Objectives:**\n* Participants can describe how their identity, experiences, and beliefs shape how they see their role as a CS teacher.\n\n**Suggested Time:** 31 minutes",
         "student_overview": "**You will:**\n* Describe how their identity, experiences, and beliefs shape how they see their role as a CS teacher."
       },
       "seeding_key": {
@@ -142,12 +142,29 @@
       }
     },
     {
-      "key": "lesson-7",
-      "name": "Unconscious Bias Debrief",
+      "key": "lesson-2",
+      "name": "Asynchronous Part 1",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nPreviously spend time considering how identity and unconscious bias impact their classroom and teaching practice. Participants reflect on the role unconscious bias has played on their work and relationships with others.\n\n**Objectives:**\n\n* Participants can describe how their identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Participants are introduced to unconscious bias.\n* Participants will explore the 2-day project and a multiple choice assessment at the end of Unit 1.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Describe how your identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Be introduced to unconscious bias.\n* Explore the 2-day project and a multiple choice assessment at the end of Unit 1.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Unconscious Bias Debrief",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nPreviously participants spent time considering how identity and unconscious bias impact their classroom and teaching practice. Participants reflect on the role unconscious bias has played on their work and relationships with others.\n\n**Objectives:**\n* Participants can describe how their identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Participants are introduced to unconscious bias.\n\n**Suggested Time:** 10 minutes",
         "student_overview": "**You will:**\n* Describe how their identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Be introduced to unconscious bias."
@@ -161,10 +178,10 @@
     {
       "key": "lesson-4",
       "name": "Applying Our Knowledge of Identity and Bias",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "overview": "**Purpose:**\nEarlier in the day participants spent time considering how identity and unconscious bias impact their classroom and teaching practice. This scenario is intended to provide participants with a space to apply their learning about bias, identity, and inclusion to an everyday classroom scenario.\n\n**Objectives:**\n* Participants can describe how their identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Participants can describe the influence they have over culture and student success in a computer science classroom.\n\n**Suggested Time:** 40 minutes",
         "student_overview": "**You will:**\n* Describe how your identity, experiences, and beliefs shape how they see their role as a computer science teacher.\n* Describe the influence your have over culture and student success in a computer science classroom."
@@ -178,10 +195,10 @@
     {
       "key": "Routers and Redundancy",
       "name": "TLO #6: U2L4 - Routers and Redundancy",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Purpose:**\nParticipants see another layer of the internet.\n\n**Objectives:**\n* Participants understand the ways the purpose of and strategies for formative assessment may change throughout a lesson.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
@@ -197,13 +214,13 @@
     {
       "key": "Asynchronous Part 1",
       "name": "Asynchronous Part 2",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 37 minutes",
-        "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
+        "overview": "**Purpose:**\nDuring this asynchronous session, you will wrap up Unit 2 and begin to engage with Unit 3.\n\n**Objectives:**\n\n* Participants get an overview of what they didn’t cover in Unit 2.\n* Participants dive into Big Idea 4, Computer Systems and Networks.\n* Participants are introduced to Unit 3.\n\n**Suggested time:** 47 minutes",
+        "student_overview": "**You will:**\n\n* Get an overview of what you didn’t cover in Unit 2.\n* Dive into Big Idea 4, Computer Systems and Networks.\n* Be introduced to Unit 3.\n"
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 1",
@@ -318,6 +335,18 @@
         "lesson_activity.key": "d987d39a-71d1-4b41-9d74-daeecef1c1ad",
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day3"
+      }
+    },
+    {
+      "key": "c2d5bf5b-4b43-4a7c-860a-c34363b0aacf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2d5bf5b-4b43-4a7c-860a-c34363b0aacf",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "virtual-pl-csp-summer-day3"
       }
     },
@@ -864,6 +893,39 @@
       }
     },
     {
+      "key": "f701553f-e1c4-4997-9ecd-0f8353b1821f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f701553f-e1c4-4997-9ecd-0f8353b1821f",
+        "lesson_activity.key": "c2d5bf5b-4b43-4a7c-860a-c34363b0aacf"
+      }
+    },
+    {
+      "key": "7f66d31c-3d9d-48bd-84f9-f1f0fd027fb0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unconscious Bias"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f66d31c-3d9d-48bd-84f9-f1f0fd027fb0",
+        "lesson_activity.key": "c2d5bf5b-4b43-4a7c-860a-c34363b0aacf"
+      }
+    },
+    {
+      "key": "57a1a3e5-0276-415d-8df4-0950d562d8a7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Assessments in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "57a1a3e5-0276-415d-8df4-0950d562d8a7",
+        "lesson_activity.key": "c2d5bf5b-4b43-4a7c-860a-c34363b0aacf"
+      }
+    },
+    {
       "key": "8fd23bdb-3956-4d97-8ce6-c821f809d485",
       "position": 1,
       "properties": {
@@ -1127,6 +1189,28 @@
         "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf",
         "lesson_activity.key": "e7574344-6fcc-452f-9659-eec9d1f1b97f"
       }
+    },
+    {
+      "key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit 2 Connections and Conclusions"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b",
+        "lesson_activity.key": "e7574344-6fcc-452f-9659-eec9d1f1b97f"
+      }
+    },
+    {
+      "key": "e20d1d2c-68ee-43e4-981e-8c5c89f91727",
+      "position": 3,
+      "properties": {
+        "progression_name": "Previously, On...Unit 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "e20d1d2c-68ee-43e4-981e-8c5c89f91727",
+        "lesson_activity.key": "e7574344-6fcc-452f-9659-eec9d1f1b97f"
+      }
     }
   ],
   "script_levels": [
@@ -1237,6 +1321,131 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "virtual-pl-csp-summer-day3-Context1-2"
+        ],
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day3-Context1-2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "f701553f-e1c4-4997-9ecd-0f8353b1821f"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day3-Context1-2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+        ],
+        "progression": "Unconscious Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "7f66d31c-3d9d-48bd-84f9-f1f0fd027fb0"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_2"
+        ],
+        "progression": "Unconscious Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "7f66d31c-3d9d-48bd-84f9-f1f0fd027fb0"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-UnderstandingContext3_2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext4_2"
+        ],
+        "progression": "Assessments in Unit 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext4_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "57a1a3e5-0276-415d-8df4-0950d562d8a7"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-UnderstandingContext4_2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context5_2"
+        ],
+        "progression": "Assessments in Unit 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context5_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "57a1a3e5-0276-415d-8df4-0950d562d8a7"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-Context5_2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "U1L3 CSP Internet Simulator Routers_1"
         ],
         "progression": "Internet Simulator"
@@ -1256,7 +1465,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -1281,7 +1490,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -1306,11 +1515,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-P2-Context1_2"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1328,12 +1540,40 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 14,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+        ],
+        "progression": "Unit 2 Connections and Conclusions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
+      },
+      "level_keys": [
+        "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Asynchronous Overview"
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
+        ],
+        "progression": "Unit 2 Connections and Conclusions"
       },
       "bonus": false,
       "seeding_key": {
@@ -1343,54 +1583,60 @@
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day3",
-        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+        "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
       },
       "level_keys": [
         "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
       ]
     },
     {
-      "chapter": 10,
-      "position": 3,
+      "chapter": 16,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Asynchronous Overview"
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
+        ],
+        "progression": "Unit 2 Connections and Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day3",
-        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+        "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context4_1_2"
+        "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
       ]
     },
     {
-      "chapter": 11,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Asynchronous Overview"
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
+        ],
+        "progression": "Previously, On...Unit 3"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context3_1_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day3",
-        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+        "activity_section.key": "e20d1d2c-68ee-43e4-981e-8c5c89f91727"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context3_1_2"
+        "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
       ]
     }
   ],
@@ -1445,6 +1691,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day3-Context1-2",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day3-Context1-2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "f701553f-e1c4-4997-9ecd-0f8353b1821f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "7f66d31c-3d9d-48bd-84f9-f1f0fd027fb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "7f66d31c-3d9d-48bd-84f9-f1f0fd027fb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext4_2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext4_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "57a1a3e5-0276-415d-8df4-0950d562d8a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-Context5_2",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-Context5_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "57a1a3e5-0276-415d-8df4-0950d562d8a7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U1L3 CSP Internet Simulator Routers_1",
         "script_level.level_keys": [
           "U1L3 CSP Internet Simulator Routers_1"
@@ -1493,6 +1799,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video",
+        "script_level.level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day3",
+        "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2",
         "script_level.level_keys": [
           "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
@@ -1500,31 +1818,31 @@
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day3",
-        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+        "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
       }
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context4_1_2",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day3",
-        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+        "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
       }
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context3_1_2",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context3_1_2"
+          "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day3",
-        "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
+        "activity_section.key": "e20d1d2c-68ee-43e4-981e-8c5c89f91727"
       }
     }
   ],
