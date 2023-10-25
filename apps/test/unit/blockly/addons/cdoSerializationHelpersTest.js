@@ -1,8 +1,9 @@
 import {expect} from '../../../util/reconfiguredChai';
 import {
   addPositionsToState,
-  getNewLocation,
+  getCombinedSerialization,
   getCursorYAdjustment,
+  getNewLocation,
   isBlockLocationUnset,
 } from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 
@@ -151,5 +152,64 @@ describe('isBlockLocationUnset', () => {
 
     const result = isBlockLocationUnset(block);
     expect(result).to.be.false;
+  });
+});
+
+describe('getCombinedSerialization', () => {
+  it('should return mainSerialization if otherSerialization is empty', () => {
+    const mainSerialization = {
+      blocks: {blocks: [{id: 1}, {id: 2}]},
+      procedures: [{id: 3}, {id: 4}],
+    };
+    const otherSerialization = {};
+
+    const result = getCombinedSerialization(
+      mainSerialization,
+      otherSerialization
+    );
+
+    expect(result).to.deep.equal(mainSerialization);
+  });
+
+  it('should merge blocks and procedures based on id', () => {
+    const mainSerialization = {
+      blocks: {blocks: [{id: 1}, {id: 2}]},
+      procedures: [{id: 3}, {id: 4}],
+    };
+    const otherSerialization = {
+      blocks: {blocks: [{id: 2}, {id: 5}]},
+      procedures: [{id: 4}, {id: 6}],
+    };
+    const expected = {
+      blocks: {blocks: [{id: 1}, {id: 2}, {id: 5}]},
+      procedures: [{id: 3}, {id: 4}, {id: 6}],
+    };
+
+    const result = getCombinedSerialization(
+      mainSerialization,
+      otherSerialization
+    );
+
+    expect(result).to.deep.equal(expected);
+  });
+
+  it('should return references to new objects instead of mutating the original main serialization', () => {
+    const mainSerialization = {
+      blocks: {blocks: [{id: 1}, {id: 2}]},
+      procedures: [{id: 3}, {id: 4}],
+    };
+    const otherSerialization = {
+      blocks: {blocks: [{id: 2}, {id: 5}]},
+      procedures: [{id: 4}, {id: 6}],
+    };
+
+    const result = getCombinedSerialization(
+      mainSerialization,
+      otherSerialization
+    );
+
+    // Strict equality is true for Objects in Javascript when they refer to the same location in memory
+    // So this is checking that the input was copied and not mutated
+    expect(result).to.not.equal(mainSerialization);
   });
 });
