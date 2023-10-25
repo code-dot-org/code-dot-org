@@ -138,6 +138,7 @@ class ActiveSupport::TestCase
 
   setup_all do
     DatabaseCleaner.start
+    Unit.destroy_all
 
     # Some of the functionality we're testing here relies on Scripts with
     # certain hardcoded names. In the old fixture-based model, this data was
