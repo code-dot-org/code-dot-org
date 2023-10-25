@@ -7,7 +7,9 @@ import Button from '../Button';
 import {Figcaption, StrongText} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
 import classNames from 'classnames';
+import _ from 'lodash';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import AccessibleDialog from '../AccessibleDialog';
 
 export default function CoteacherSettings({
   sectionInstructors,
@@ -18,6 +20,7 @@ export default function CoteacherSettings({
   const [inputValue, setInputValue] = useState('');
   const [addError, setAddError] = useState('');
   const [removedCoteachers, setRemovedCoteacher] = useState([]);
+  const [coteacherToRemove, setCoteacherToRemove] = useState({});
 
   const addRemovedCoteacher = id => {
     setRemovedCoteacher([...removedCoteachers, id]);
@@ -41,6 +44,7 @@ export default function CoteacherSettings({
       return;
     }
     if (
+      //TODO check if email has been removed already
       (sectionInstructors &&
         sectionInstructors.some(
           instructor => instructor.instructorEmail === newEmail
@@ -68,7 +72,8 @@ export default function CoteacherSettings({
   const existingCoteachers = sectionInstructors
     ? sectionInstructors.length - 1
     : 0;
-  const numCoteachers = existingCoteachers + coteachersToAdd.length;
+  const numCoteachers =
+    existingCoteachers + coteachersToAdd.length - removedCoteachers.length;
 
   const isAddDisabled = numCoteachers >= 5;
 
@@ -91,24 +96,6 @@ export default function CoteacherSettings({
     }
   };
 
-  const handleRemove = (id, email) => e => {
-    e.preventDefault();
-
-    if (id === null) {
-      // remove from coteachersToAdd
-      coteachersToAdd.splice(coteachersToAdd.indexOf(email), 1);
-      return;
-    }
-    $.ajax({
-      url: `/api/v1/section_instructors/${id}`,
-      method: 'DELETE',
-    }).then(response => {
-      if (!response || response.status !== 'failure') {
-        addRemovedCoteacher(id);
-      }
-    });
-  };
-
   const getTableRow = (index, coteacher) => {
     return (
       <tr key={index}>
@@ -124,12 +111,53 @@ export default function CoteacherSettings({
         <td>{coteacher.status}</td>
         <td>
           <Button
-            onClick={handleRemove(coteacher.id, coteacher.instructorEmail)}
+            onClick={e => {
+              e.preventDefault();
+              setCoteacherToRemove(coteacher);
+            }}
           >
             <FontAwesome icon="trash" />
           </Button>
         </td>
       </tr>
+    );
+  };
+
+  const removeCoteacher = coteacher => e => {
+    e.preventDefault();
+    if (coteacher.id === null) {
+      // remove from coteachersToAdd
+      coteachersToAdd.splice(
+        coteachersToAdd.indexOf(coteacher.instructorEmail),
+        1
+      );
+      return;
+    }
+    $.ajax({
+      url: `/api/v1/section_instructors/${coteacher.id}`,
+      method: 'DELETE',
+    }).then(response => {
+      if (!response || response.status !== 'failure') {
+        addRemovedCoteacher(coteacher.id);
+      }
+      setCoteacherToRemove({});
+    });
+  };
+
+  const removePopup = coteacher => {
+    return (
+      <AccessibleDialog onClose={() => setCoteacherToRemove({})}>
+        <StrongText>
+          Remove {coteacher.instructorEmail} as a co-teacher?
+        </StrongText>
+        <br />
+        <div>
+          This teacher will lose their ability to manage or view student work
+          for this section.
+        </div>
+        <Button onClick={() => setCoteacherToRemove({})} text="Cancel" />
+        <Button onClick={removeCoteacher(coteacher)} text="Remove" />
+      </AccessibleDialog>
     );
   };
 
@@ -189,6 +217,7 @@ export default function CoteacherSettings({
           {getErrorOrCount()}
         </div>
         {getTable(sectionInstructors, coteachersToAdd)}
+        {!_.isEmpty(coteacherToRemove) && removePopup(coteacherToRemove)}
       </div>
     </div>
   );
