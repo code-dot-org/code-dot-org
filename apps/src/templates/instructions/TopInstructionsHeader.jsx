@@ -57,6 +57,7 @@ function TopInstructionsHeader(props) {
     ...(isRtl
       ? styles.collapserIcon.showHideButtonRtl
       : styles.collapserIcon.showHideButtonLtr),
+    ...(!isOldPurpleColor && styles.collapserIcon.newStylesColor),
     ...(teacherOnly && styles.collapserIcon.teacherOnlyColor),
   };
 
@@ -268,6 +269,9 @@ const styles = {
     },
     showHideButtonRtl: {
       right: 8,
+    },
+    newStylesColor: {
+      color: color.white,
     },
     teacherOnlyColor: {
       color: color.lightest_cyan,
