@@ -796,6 +796,8 @@ class User < ApplicationRecord
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params, session = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
+    # debug to log
+    Rails.logger.info "omniauth: #{auth.provider} #{auth.uid} #{auth.info.email} #{auth.info.name} #{auth.info.user_type}"
 
     unless omniauth_user
       omniauth_user = create
