@@ -7,6 +7,7 @@ require 'cdo/shared_constants'
 #  id              :bigint           not null, primary key
 #  user_id         :integer          not null
 #  requester_id    :integer          not null
+#  rubric_id       :bigint           not null
 #  project_id      :integer          not null
 #  project_version :string(255)
 #  status          :integer
@@ -17,6 +18,7 @@ require 'cdo/shared_constants'
 #
 #  index_rubric_ai_evaluations_on_user_id  (user_id)
 #  rubric_ai_evaluation_requester_index    (requester_id)
+#  rubric_ai_evaluation_rubric_index       (rubric_id)
 #
 class RubricAiEvaluation < ApplicationRecord
   belongs_to :user
