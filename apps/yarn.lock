@@ -2362,14 +2362,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/piskel@npm:0.13.0-cdo.12":
-  version: 0.13.0-cdo.12
-  resolution: "@code-dot-org/piskel@npm:0.13.0-cdo.12"
+"@code-dot-org/piskel@npm:0.13.0-cdo.13":
+  version: 0.13.0-cdo.13
+  resolution: "@code-dot-org/piskel@npm:0.13.0-cdo.13"
   dependencies:
     messageformat: ^2.3.0
   bin:
     piskel-root: misc/scripts/piskel-root
-  checksum: cb027ba26fa220eb1d442de536b26954864523317e526db5685b6428214af5830b9692c348d52fe6e6624624b35ee9e0ab350f39ecfd8ee0f563b22aaa3271f8
+  checksum: fb4280827c65fc8ea80151c3eaeacb656a821695ed464c2eb15f7f0b2bc97de96fd6fdd5836276e288d4a7bfb8ee1ed439383c3822d569835f3406c238a04a47
   languageName: node
   linkType: hard
 
@@ -7667,7 +7667,7 @@ __metadata:
     "@code-dot-org/ml-activities": 0.0.26
     "@code-dot-org/ml-playground": 0.0.47
     "@code-dot-org/p5.play": 1.3.21-cdo
-    "@code-dot-org/piskel": 0.13.0-cdo.12
+    "@code-dot-org/piskel": 0.13.0-cdo.13
     "@code-dot-org/redactable-markdown": 0.4.0
     "@code-dot-org/remark-plugins": ^1.3.0
     "@codemirror/autocomplete": ^6.1.0
