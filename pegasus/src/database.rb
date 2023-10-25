@@ -48,6 +48,16 @@ class Tutorials
     "http://#{api_domain}/api/hour/begin_learn/#{code}"
   end
 
+  def find_with_grade_level(gradelevel)
+    results = {}
+    @contents.each do |i|
+      #tag = CSV.parse_line(i[:gradeleveltag].to_s)
+      #next unless gradelevel == tag.to_s
+      results[i[:code]] = i
+    end
+    results
+  end
+
   def find_with_tag(tag)
     results = {}
     @contents.each do |i|
