@@ -55,20 +55,61 @@ module ShareFiltering
     find_failure(program_name, locale)
   end
 
-  def self.find_failure(text, locale, profanity_filter_replace_text_list = {})
-    return nil unless Gatekeeper.allows('webpurify', default: true)
-
+  # Searches for simple sources of PII (personal identifiable information)
+  # Returns both the error type and the offending text snippet.
+  #
+  # If the check is successful, and there were no offenses, the function
+  # will return `nil`.
+  #
+  # This will check for several things:
+  #
+  # * Emails
+  # * Phone Numbers
+  # * Street Addresses
+  #
+  # @param [String] text The text to search through.
+  # @return [ShareFailure, nil]
+  def self.find_pii_failure(text)
     email = RegexpUtils.find_potential_email(text)
     return ShareFailure.new(FailureType::EMAIL, email) if email
 
     phone_number = RegexpUtils.find_potential_phone_number(text)
     return ShareFailure.new(FailureType::PHONE, phone_number) if phone_number
 
-    expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
-    return ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
-
     street_address = Geocoder.find_potential_street_address(text)
     return ShareFailure.new(FailureType::ADDRESS, street_address) if street_address
+
+    nil
+  end
+
+  # Searches for all sources of offenses in text that might be worth flagging.
+  # Returns both the error type and the offending text snippet.
+  #
+  # If the check is successful, and there were no offenses, the function
+  # will return `nil`.
+  #
+  # This will check for several things:
+  #
+  # * Emails
+  # * Phone Numbers
+  # * Street Addresses
+  # * Profanity
+  #
+  # @param [String] text The text to search through.
+  # @param [String] locale a two-character ISO 639-1 language code
+  # @param [Hash] A set of text to replace before performing a profanity check.
+  # @return [ShareFailure, nil]
+  def self.find_failure(text, locale, profanity_filter_replace_text_list = {})
+    # We only fail programs when the webpurity service is enabled
+    return nil unless Gatekeeper.allows('webpurify', default: true)
+
+    # First, check for PII issues
+    pii_failure = find_pii_failure(text)
+    return pii_failure unless pii_failure.nil?
+
+    # Search for profanity
+    expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
+    return ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
 
     nil
   end
