@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';
 import Button from '../Button';
-import {Figcaption} from '@cdo/apps/componentLibrary/typography';
+import {Figcaption, StrongText} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
 import classNames from 'classnames';
 import {isEmail} from '@cdo/apps/util/formatValidation';
@@ -86,14 +86,23 @@ export default function CoteacherSettings({
     }
   };
 
+  const handleRemove = email => {
+    // TODO: implement
+  };
+
   const getTableRow = (email, index, name = null, status = null) => {
     return (
       <tr key={index}>
-        <td>{email}</td>
-        <td>{name}</td>
+        <td>
+          <div>
+            {name ? <StrongText> {name}</StrongText> : null}
+            <br />
+            {email}
+          </div>
+        </td>
         <td>{status}</td>
         <td>
-          <Button onClick={() => {}}>
+          <Button onClick={handleRemove}>
             <FontAwesome icon="trash" />
           </Button>
         </td>
@@ -102,26 +111,26 @@ export default function CoteacherSettings({
   };
 
   const getTable = (sectionInstructors, coteachersToAdd) => {
-    if (
-      (!sectionInstructors || sectionInstructors.length === 0) &&
-      coteachersToAdd.length === 0
-    ) {
+    const filteredInstructors = sectionInstructors
+      ? sectionInstructors.filter(
+          instructor => instructor.instructorEmail !== primaryInstructor.email
+        )
+      : [];
+    if (filteredInstructors.length === 0 && coteachersToAdd.length === 0) {
       return <div>You haven't added any co-teachers yet</div>;
     }
     return (
       <table className={styles.table}>
         <tbody>
           {coteachersToAdd.map((email, id) => getTableRow(email, id))}
-          {sectionInstructors
-            ? sectionInstructors.map((instructor, id) =>
-                getTableRow(
-                  instructor.instructorEmail,
-                  id,
-                  instructor.instructorName,
-                  instructor.status
-                )
-              )
-            : null}
+          {filteredInstructors.map((instructor, id) =>
+            getTableRow(
+              instructor.instructorEmail,
+              id,
+              instructor.instructorName,
+              instructor.status
+            )
+          )}
         </tbody>
       </table>
     );
