@@ -18,10 +18,8 @@
 
           -count = 0
           -items.each_pair do |key, tutorial|
-            -tags = tutorial[:gradelevel] + ' | ' + tutorial[:platformtext]
             -url = tutorials.launch_url_for(key,request.host_with_port)
             -url = url + "?company=#{company}" if company
-            -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
             -styling = "display:none" unless count == 0
             .slide.clear{:style=>styling}
               .slide-img<
@@ -29,19 +27,11 @@
                   %img{:src=>tutorial[:image].sub("/images/", CDO.code_org_url("/images/fit-520/")).sub(".png", ".jpg")}
               .slide-text
                 %a{:href=>url, :target=>'_blank'}<
+                .slide-tags= tutorial[:age]
                 %h2= tutorial[:name]
-                %h3= tutorial[:orgname]
-                %p.slide-longdescription!= tutorial[:longdescription]
-                %p.slide-shortdescription= tutorial[:shortdescription]
-                .slide-tags= tags
-                -unless short_url.nil_or_empty?
-                  .slide-shorturl-link
-                    %a{:href=>url, :target=>'_blank'}
-                      =short_url
+                .slide-tags= tutorial[:platformtext]
+                %p.slide-longdescription= tutorial[:longdescription]
               %a{:href=>url, :target=>'_blank'}<
-                -if tutorial[:code] == "codeorg"
-                  %img.scrat-standing.desktop-feature{:src=>"/images/scrat_standing.png", :style=>'width:60px; height:53px; position:absolute; right: 134px; bottom: 7px;'}
-                  %img.scrat-standing-blink.desktop-feature{:src=>"/images/scrat_standing_blink.png", :style=>'opacity:0; width:60px; height:53px; position:absolute; right: 134px; bottom: 7px;'}
                 .btn-carousel-slide=I18n.t(:go)
             -count += 1
 
