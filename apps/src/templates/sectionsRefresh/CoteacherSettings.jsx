@@ -30,6 +30,7 @@ export default function CoteacherSettings({
         ]
       : coteachersToAdd;
 
+    // Remove the primary instructor and any coteachers that have been removed
     return unfiltered.filter(
       instructor =>
         instructor.instructorEmail !== primaryInstructor.email &&
@@ -44,10 +45,6 @@ export default function CoteacherSettings({
 
   const addRemovedCoteacher = id => {
     setRemovedCoteacherIds([...removedCoteacherIds, id]);
-  };
-
-  const handleInputChange = event => {
-    setInputValue(event.target.value);
   };
 
   const handleAddEmail = e => {
@@ -73,31 +70,14 @@ export default function CoteacherSettings({
     setInputValue('');
   };
 
+  const handleInputChange = event => {
+    setInputValue(event.target.value);
+  };
+
   const handleSubmitAddEmail = e => {
     if (e.key === 'Enter') {
       e.preventDefault();
       handleAddEmail(e);
-    }
-  };
-
-  const isAddDisabled = coteachers.length >= 5;
-
-  const getErrorOrCount = () => {
-    if (addError) {
-      return (
-        <Figcaption
-          className={classNames(styles.error, styles.inputDescription)}
-        >
-          <FontAwesome icon="info-circle" className={styles.infoCircle} />
-          {addError}
-        </Figcaption>
-      );
-    } else {
-      return (
-        <Figcaption className={styles.inputDescription}>
-          {i18n.coteacherCount({count: coteachers.length})}
-        </Figcaption>
-      );
     }
   };
 
@@ -166,7 +146,7 @@ export default function CoteacherSettings({
     );
   };
 
-  const getTable = coteachers => {
+  const table = () => {
     if (coteachers.length === 0) {
       return <div>You haven't added any co-teachers yet</div>;
     }
@@ -179,37 +159,57 @@ export default function CoteacherSettings({
     );
   };
 
+  const getErrorOrCount = () => {
+    if (addError) {
+      return (
+        <Figcaption
+          className={classNames(styles.error, styles.inputDescription)}
+        >
+          <FontAwesome icon="info-circle" className={styles.infoCircle} />
+          {addError}
+        </Figcaption>
+      );
+    } else {
+      return (
+        <Figcaption className={styles.inputDescription}>
+          {i18n.coteacherCount({count: coteachers.length})}
+        </Figcaption>
+      );
+    }
+  };
+
+  const addForm = () => (
+    <div className={styles.add}>
+      <label className={styles.label}>{i18n.coteacherEmailAddress()}</label>
+      <div className={styles.form} onSubmit={handleAddEmail}>
+        <input
+          className={classNames(styles.input, !!addError && styles.inputError)}
+          type="text"
+          disabled={coteachers.length >= 5}
+          value={inputValue}
+          onChange={handleInputChange}
+          onKeyDown={handleSubmitAddEmail}
+        />
+        <Button
+          className={styles.button}
+          color={Button.ButtonColor.brandSecondaryDefault}
+          id="add-coteacher"
+          type="submit"
+          text={i18n.coteacherAddButton()}
+          onClick={handleAddEmail}
+          disabled={coteachers.length >= 5}
+        />
+      </div>
+      {getErrorOrCount()}
+    </div>
+  );
+
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}
       <div className={styles.settings}>
-        <div className={styles.add}>
-          <label className={styles.label}>{i18n.coteacherEmailAddress()}</label>
-          <div className={styles.form} onSubmit={handleAddEmail}>
-            <input
-              className={classNames(
-                styles.input,
-                !!addError && styles.inputError
-              )}
-              type="text"
-              disabled={isAddDisabled}
-              value={inputValue}
-              onChange={handleInputChange}
-              onKeyDown={handleSubmitAddEmail}
-            />
-            <Button
-              className={styles.button}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              id="add-coteacher"
-              type="submit"
-              text={i18n.coteacherAddButton()}
-              onClick={handleAddEmail}
-              disabled={isAddDisabled}
-            />
-          </div>
-          {getErrorOrCount()}
-        </div>
-        {getTable(coteachers)}
+        {addForm()}
+        {table()}
         {!_.isEmpty(coteacherToRemove) && removePopup(coteacherToRemove)}
       </div>
     </div>
