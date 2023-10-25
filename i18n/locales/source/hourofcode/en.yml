@@ -142,6 +142,17 @@
   device_desktop_computer: "Desktop Computer"
   device_mobile_device: "Mobile Device"
 
+  for_everyone: "For everyone"
+  for_students_teacher_led_learning: "For students: Teacher-led learning"
+  for_students_teacher_led_lessons: "For students: Teacher-led lessons"
+  professional_development: "Professional development"
+
+  how_ai_works_video_series: "How AI Works Video Series"
+  learn_how_ai_works: "Learn How AI Works"
+  ai_101_for_educators: "AI 101 for Educators"
+  learn_about_ai_impacts: "Learn about the Impacts of AI"
+  hoc_ai_activities: "Hour of Code AI Activities"
+
   subscribe_to_emails_heading: "Subscribe to emails"
   subscribe_to_emails_desc: "Read about what's happening at Code.org and in computer science education through quarterly updates via our mailing list."
   subscribe_to_emails_intl: "Subscribe to international updates"
@@ -196,6 +207,7 @@
 
   call_to_action_hold_an_event: "Hold an event"
   call_to_action_register_event: "Register your event"
+  call_to_action_register_your_hoc: "Register your Hour of Code"
   call_to_action_select_activity: "Select an activity"
   call_to_action_start_activity: "Start an activity"
   call_to_action_get_certificates: "Get certificates"
@@ -205,6 +217,7 @@
   call_to_action_watch_now: "Watch now"
   call_to_action_try_activity: "Try activity"
   call_to_action_try_activities: "Try activities"
+  call_to_action_try_hoc_ai_activities: "Try Hour of Code AI activities"
   call_to_action_explore_activities: "Explore activities"
   call_to_action_explore_ai: "Explore AI"
   call_to_action_explore_unit: "Explore unit"
@@ -568,7 +581,7 @@
   cs_ambassador_steps_list_title_02: "Experience in a CS Course"
   cs_ambassador_steps_list_title_03: "School that offers CS"
   cs_ambassador_steps_list_desc_01: "A passion for encouraging young women at your school to take computer science classes"
-  cs_ambassador_steps_list_desc_02: "Have taken a year-long computer science class in the 2022-23 school year or earlier (recommended: CS Principles or AP® CSA)"
+  cs_ambassador_steps_list_desc_02: "Have completed or is currently enrolled in a year-long computer science class (recommended: CS Principles or AP® CSA)"
   cs_ambassador_steps_list_desc_03: "Attend a high school that regularly offers a year-long computer science course (recommended: CS Principles or AP® CSA)"
 
   cs_ambassador_benefits_heading: "Program benefits"
@@ -1515,9 +1528,13 @@
   hoc_homepage_join_the_movement_description: 'Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October.'
   hoc_homepage_what_is_hoc_subhead: 'One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round.'
   hoc_homepage_what_is_hoc_description: 'The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This grassroots campaign is supported by over 400 partners and 200,000 educators worldwide.'
+  hoc_homepage_registration_desc: "Your class or group can join millions around the world doing the Hour of Code! Registration for the annual Computer Science Education Week celebration begins in October. Though, Hour of Code is available year-round."
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url}) to plan an event for your class."
   hoc_homepage_highlights_heading: 'Hour of Code highlights'
   hoc_homepage_organized_by: 'The Hour of Code is organized by [Code.org](%{codeorg_url}).'
+
+  hoc_events_heading: "Register to Host an Hour of Code"
+  hoc_events_jump_to_map: "Jump to the Hour of Code map"
 
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
@@ -1537,7 +1554,7 @@
   signup_event_entire_school_label: 'My entire school is participating'
   signup_event_location_label: 'Event location'
   signup_event_location_error: 'Event location is required.'
-  signup_special_event_flag_label: 'My event will involve an entire district, members of the community, and/or other special plans to go beyond an hour'
+  signup_special_event_flag_label: 'My event will involve an entire district, an entire organization, members of the community, and/or other special plans to go beyond an hour'
   signup_special_event_details_label: 'Apply to be highlighted as a special event'
   signup_send_posters_flag_label: 'Send <a href= "/resources/promote#posters">posters</a> to my school or organization (US only, while supplies last)'
   signup_send_posters_address_label: 'Address of school or organization'
@@ -1598,6 +1615,7 @@
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
   map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header_count_year_so_far: '%{event_count} events registered so far in %{year}'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
   map_header_country: '# in %{country}'
@@ -1609,6 +1627,7 @@
   map_legend_cs_tech_jam: 'Special Event'
   map_warning: "A full list of the events can be viewed on the <a href='%{events_url}'>events page.</a>"
   map_warning_markdown: "A full list of the events can be viewed on the [events page.](%{events_url})"
+  map_view_all_events: "See a full list of Hour of Code events [here](%{events_url})."
 
   meta_tag_og_title: 'Hour of Code: Join the Movement'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
@@ -1662,7 +1681,7 @@
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
   hoc_faq_keep_learning_a_markdown: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to [our resources](%{promote}) for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
-  hoc_faq_certificates_a_markdown: "Go to our [certificates page](%{certificates_url}/certificates) where you can print certificates for your entire class ahead of time."
+  hoc_faq_certificates_answer_markdown: "Go to our [certificates page](%{certificates_url}) where you can print certificates for your entire class ahead of time."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
   hoc_faq_logo_a_markdown: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see [these guidelines for usage](%{logo_url})."
   hoc_faq_bug_q: "I found a bug in an Hour of Code activity! What should I do?"
@@ -8411,6 +8430,13 @@
   hoc_how_to_step_07_educators_desc_01: "Be sure to celebrate success! Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!"
   hoc_how_to_step_07_educators_desc_02: "You can also print certificates for your students to show off their achievement!"
 
+  hoc_ai_top_desc: "Anyone can learn about AI, whether you're a student in the classroom or an educator unlocking the future of teaching with and about AI."
+  hoc_ai_how_ai_works_video_series_desc: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making."
+  hoc_ai_learn_how_ai_works_desc: "Dive into the world of AI with \"How AI Works,\" lessons paired with our video series introducing you to how AI works and why it matters."
+  hoc_ai_101_for_educators_desc: "Discover the groundbreaking world of artificial intelligence (AI) and its transformative potential in education with our foundational online learning series for teachers."
+  hoc_ai_impacts_desc: "Engage your classroom with  teacher-led lessons that explore the impacts of artificial intelligence and invite learners to think of solutions to some of AI's issues."
+  hoc_ai_activities_desc: "These all-new Hour of Code activities introduce users to the world of artificial intelligence in a fun, engaging way."
+
   team_page_full_team_alt_text: "Nearly 100 Code.org employees in matching blue and yellow t-shirts pose in a hotel conference room for the company's summer 2022 Codechella event."
   careers_page_code_pride_alt_text: "Two feminine-presenting employees smile while holding the ends of a Code.org-branded rainbow banner. Behind them, several people are wearing Code.org shirts and waving rainbow flags while walking alongside a multi-colored Volkswagen bug."
 
@@ -8726,6 +8752,10 @@
   about_page_section_donors_description_2: "Codes accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
+
+  teach_ai_title: "Real-world Examples. Practical Resources."
+  teach_ai_description: "The AI Guidance for Schools Toolkit is a resource for policymakers, school leaders, and staff to develop initial guidance on AI in their schools."
+  teach_ai_button_label: "View the Toolkit"
 
   language_code:
     ar: "Arabic"

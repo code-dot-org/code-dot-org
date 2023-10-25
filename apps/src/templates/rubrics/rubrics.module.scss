@@ -247,19 +247,47 @@ button.rubricHeaderTab {
   align-self: stretch;
   border-bottom: 1px solid $neutral_dark40;
   min-height: 40px;
-  summary:hover {
-    background: none;
-  }
-}
 
-.learningGoalHeader {
-  display: flex;
-  height: 40px;
-  padding: 0 16px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-  line-height: 154%;
+  // Directly target the <summary> child with the class
+  .learningGoalHeader {
+    display: flex;
+    height: 40px;
+    padding: 0 1rem 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    line-height: 154%;
+    position: relative;
+
+    // Common styles for the FontAwesome icons, regardless of state
+    &::after {
+      font: var(--fa-font-solid);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-35%);
+      padding-right: 10px;
+      height: 16px;
+      width: 16px;
+      // Icon for closed details
+      content: "\f107";
+    }
+    
+    &:hover {
+      background: none;
+      cursor: pointer;
+    }
+
+    // Hide the default disclosure arrow for summary elements in Safari
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  // When the details are open, change the icon
+  &[open] .learningGoalHeader::after {
+    content: "\f106";
+  }
 }
 
 .learningGoalHeaderLeftSide {
@@ -267,17 +295,8 @@ button.rubricHeaderTab {
   display: flex;
   align-items: center;
   gap: 16px;
-
-  // TODO: [DES-321] remove span styles
-  span {
-    font-size: 14px;
-    font-weight: 350;
-  }
-
-  .arrowIcon {
-    font-weight: 900;
-    font-size: 16px;
-  }
+  font-size: 14px;
+  padding-left: 10px;
 }
 
 .learningGoalHeaderRightSide {
@@ -373,7 +392,7 @@ h2.studentName {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
   align-self: stretch;
   flex: 1;
 
@@ -433,6 +452,10 @@ p.errorMessage {
   font-size: 18px;
   vertical-align: middle;
   color: gray;
+}
+
+.infoTipText {
+  max-width: 500px;
 }
 
 .openedAiAssessment {
@@ -502,4 +525,27 @@ p.errorMessage {
 
 .feedbackArea {
   flex: 1;
+}
+
+.infoAlert {
+  display: flex;
+  padding: 10px 12px;
+  gap: 10px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  background: $light_info_100;
+
+  p {
+    margin: 0;
+    line-height: 1.25;
+  }
+}
+
+i.infoAlertIcon {
+  color: $light-info-500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
 }

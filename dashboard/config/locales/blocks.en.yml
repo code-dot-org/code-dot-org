@@ -55,9 +55,7 @@ en:
             '2.00': large
             '3.00': extra large
       Dancelab_ai:
-        text: use AI {VALUE}
-      Dancelab_aiText:
-        text: use AI to {VALUE}
+        text: "{IMAGE}generate {VALUE} stage"
       Dancelab_alternateMoves:
         text: "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}"
         options:
@@ -103,6 +101,12 @@ en:
             MOVES.Rest: None
       Dancelab_atTimestamp:
         text: after {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        text: at {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': measures
@@ -660,16 +664,16 @@ en:
           EFFECT:
             '"none"': None
             '"rand"': "(Random)"
-            '"blooming_petals"': Blooming Petals
             '"circles"': Circles
-            '"clouds"': Clouds
-            '"frosted_grid"': Frosted Grid
             '"quads"': Angles
+            '"blooming_petals"': Blooming Petals
+            '"clouds"': Clouds
             '"color_cycle"': Colors
             '"diamonds"': Diamonds
             '"disco_ball"': Disco Ball
             '"fireworks"': Fireworks
             '"flowers"': Flowers
+            '"frosted_grid"': Frosted Grid
             '"growing_stars"': Growing Stars
             '"higher_power"': Higher Power
             '"swirl"': Hypno
@@ -686,31 +690,31 @@ en:
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Squares
-            '"stars"': Stars
             '"starburst"': Starburst
+            '"stars"': Stars
             '"music_wave"': Waves
           PALETTE:
+            '"autumn"': Autumn
             '"rave"': Black and White
             '"cool"': Cool
             '"electronic"': Electronic
+            '"grayscale"': Grayscale
             '"iceCream"': Ice Cream
             '"default"': Light
             '"neon"': Neon
-            '"tropical"': Tropical
-            '"vintage"': Vintage
-            '"warm"': Warm
-            '"grayscale"': Grayscale
-            '"sky"': Sky
             '"ocean"': Ocean
-            '"sunrise"': Sunrise
-            '"sunset"': Sunset
-            '"spring"': Spring
-            '"summer"': Summer
-            '"autumn"': Autumn
-            '"winter"': Winter
-            '"twinkling"': Twinkling
             '"rainbow"': Rainbow
             '"roses"': Roses
+            '"sky"': Sky
+            '"spring"': Spring
+            '"summer"': Summer
+            '"sunrise"': Sunrise
+            '"sunset"': Sunset
+            '"tropical"': Tropical
+            '"twinkling"': Twinkling
+            '"vintage"': Vintage
+            '"warm"': Warm
+            '"winter"': Winter
       Dancelab_setDanceSpeed:
         text: set {SPRITE} dance speed to {SPEED}
         options:

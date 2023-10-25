@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-13 18:15:04 UTC",
+    "serialized_at": "2023-10-25 19:50:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -260,7 +260,7 @@
       "key": "83bc4e8c-57a0-4bc4-87b4-79591160bd28",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -288,7 +288,7 @@
       "key": "e80ed1d2-1120-43c0-b0d6-b2453d5c3a67",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -869,8 +869,8 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite / most used non-social media app. \nIn your Unit Journal, explore the function of the app, along with different inputs / outputs*\n* *Compare your journal with a partner and discuss common elements that both of your apps share*\n\n**Discussion Goal:** This prompt is designed to bring out students' prior experiences working with apps. If students aren't sure what app to choose, you can even ask them to pick to Code.org website. This discussion can pull out the fact that most apps contain images, buttons, and text that help users find and interact with information and content.\n",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "The [Unit 3 Journal](https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=sharing) provides a template/directions for how students can complete this in their journals. See an example below:\n\n![](https://images.code.org/af1f30136d351f121db352e137d441fc-Unit Journal 3 Templates.png)"
+            "type": "assessmentOpportunity",
+            "markdown": " <b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i> Examine the app that you have annotated here and analyze how might you improve the user experience by updating the input, output, and/or layout?.</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/#slide=id.g22e15123a99_0_517\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n\n![](https://images.code.org/12964d461b13a57ef617b0385624b739-U3L2.png)"
           }
         ]
       },
@@ -1058,7 +1058,7 @@
       "key": "59c19415-bc50-4e17-b439-3cc0c992c584",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** [r app_development_planning_guide/csp/2023]. Students will be using the Planning Guide for the rest of the unit. Read the Project Description together and make sure students understand the requirements. Direct students to the \"Investigate\" section. \r\n\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1:** Brainstorm Topic Ideas\r\n\r\n* Students have a lot of freedom in choosing their topics. If they are struggling with ideas, they could create an app for another class, for example: an overview of the periodic table for science class.  \r\n    \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students into pairs."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** [<a href=\"https://docs.google.com/document/d/1JXIaQGRKzsw9UvZh58yLfkriV2QH7fTE51Omr8OJ1aM/edit?usp=sharing\" target=\"_blank\">App Development Planning Guide</a>] Students will be using the Planning Guide for the rest of the unit. Read the Project Description together and make sure students understand the requirements. Direct students to the \"Investigate\" section. \n\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1:** Brainstorm Topic Ideas\n\n* Students have a lot of freedom in choosing their topics. If they are struggling with ideas, they could create an app for another class, for example: an overview of the periodic table for science class.  \n    \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students into pairs."
       },
       "seeding_key": {
         "activity_section.key": "59c19415-bc50-4e17-b439-3cc0c992c584",
@@ -1131,8 +1131,24 @@
       }
     },
     {
-      "key": "b4b9a5ee-12e9-4b1d-8ab0-4f36f32060c6",
+      "key": "45e4a8ee-e637-4aa8-b532-30e32124217a",
       "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<div style=\"column-count: 2; column-gap: 20px; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always; width: 180%\">\n     <b>Create Perfomance Task Written Response Practice</b>\n    </br>\n    </br>\n    In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n    </br>\n    </br>\n    Sample Prompt: <i> Explore the user interface of an app with which you are familiar. What are some of the positive and negative design decisions that the developers made? What are some ways that this app meets your needs and some ways in which it falls short?</i>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <img src=\"https://images.code.org/3f77c8efade39dc50d301f0751f767b7-writtenResponse3.png\" alt=\"\" style=\"display: block; margin: auto; float: right;\"/>\n    </p>\n</div>\n</br>\n<div style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g22e15123a99_0_556\">Unit Journal Template</a>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <b>Exemplar Response for Instructors</b>\n</br>\n<i> (Exemplars will be forthcoming with further College Board updates in Fall 2023)\n    </p>\n </div>"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "45e4a8ee-e637-4aa8-b532-30e32124217a",
+        "lesson_activity.key": "aa51e124-07b2-41e6-b06c-9223afd095da"
+      }
+    },
+    {
+      "key": "b4b9a5ee-12e9-4b1d-8ab0-4f36f32060c6",
+      "position": 12,
       "properties": {
         "description": "---"
       },
@@ -1143,7 +1159,7 @@
     },
     {
       "key": "d17f3ba3-ad98-4c3d-b2e0-4e5850d3bc2f",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Match the term with the examples.",
         "name": "Assessment: Check For Understanding"
@@ -1563,8 +1579,8 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Go through each vocabulary word (Program Statement, Program, Sequential Programming, Event Driven Programming) and give students a chance to record each piece of information.",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "**Reinforcing Vocabulary:** A lot of the vocabulary introduced here is taken straight from the AP framework. The images are designed to help connect the definitions to the experiences they had in this lesson. Help students make these connections by not only writing down definitions but talking through how it's connected to what they saw. The Unit 3 Journal includes a *Coding Breakdown* template designed to help students apply these terms to code snippets they saw in the lesson.\n\n\n![](https://images.code.org/056cc4cefb7a8208f7c85e4742edacdf-Unit%20Journal%203%20Templates%20(1).png)"
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i> Explain the function of the sequential or event-driven code that you have created in this activity.\n</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g22e15123a99_0_673\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>"
           }
         ]
       },
@@ -2064,6 +2080,22 @@
       },
       "seeding_key": {
         "activity_section.key": "e3adf048-5668-4b49-93db-c4db40b794e7",
+        "lesson_activity.key": "e228f2dc-8acf-4493-a232-9aff7a864b5e"
+      }
+    },
+    {
+      "key": "1ac1bba8-b66b-4b52-b1ed-1e45ea2aae9f",
+      "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": " <b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>Describe the process you used to develop your program. Include the major stages and any challenges you faced.</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g29207375a28_127_0\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1ac1bba8-b66b-4b52-b1ed-1e45ea2aae9f",
         "lesson_activity.key": "e228f2dc-8acf-4493-a232-9aff7a864b5e"
       }
     },
@@ -5030,6 +5062,27 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Design Mode",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Design Mode",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Design Mode",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Design Mode",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-16"
       }
@@ -5179,6 +5232,20 @@
         "lesson.key": "Project   Designing an App Part 3",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "CRD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Designing an App Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Designing an App Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.E.2"
       }
     },
     {

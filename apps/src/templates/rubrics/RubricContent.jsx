@@ -4,6 +4,7 @@ import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
 import {
   BodyThreeText,
+  BodyTwoText,
   Heading2,
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
@@ -124,6 +125,12 @@ export default function RubricContent({
     }
   };
 
+  let infoText = null;
+  if (!onLevelForEvaluation) {
+    infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
+  } else if (!studentLevelInfo) {
+    infoText = i18n.selectAStudentToEvaluateAlert();
+  }
   return (
     <div
       className={classnames(style.rubricContent, {
@@ -131,6 +138,7 @@ export default function RubricContent({
         [style.hiddenRubricContent]: !visible,
       })}
     >
+      {infoText && <InfoAlert text={infoText} />}
       <div>
         {!!studentLevelInfo && (
           <Heading2 className={style.studentName}>
@@ -233,4 +241,17 @@ RubricContent.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
   visible: PropTypes.bool,
+};
+
+const InfoAlert = ({text}) => {
+  return (
+    <div className={style.infoAlert}>
+      <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+      <BodyTwoText>{text}</BodyTwoText>
+    </div>
+  );
+};
+
+InfoAlert.propTypes = {
+  text: PropTypes.string.isRequired,
 };
