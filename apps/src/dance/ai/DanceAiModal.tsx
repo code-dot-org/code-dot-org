@@ -297,7 +297,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           ))}
         </div>
-        &nbsp; stage
+        &nbsp; effects
         <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
@@ -334,11 +334,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         <div id="text-area" className={moduleStyles.textArea}>
           {' '}
           {mode === Mode.SELECT_INPUTS
-            ? 'Choose three emoji for the mood of the stage.'
+            ? 'Choose three emoji for the mood of the effects.'
             : mode === Mode.PROCESSING && !processingDone
             ? 'The AI is processing your input.'
             : mode === Mode.PROCESSING && processingDone
-            ? 'The AI is ready to generate a stage!'
+            ? 'The AI is ready to generate effects!'
             : mode === Mode.GENERATING
             ? 'The AI is generating code based on the emojis.'
             : mode === Mode.RESULTS && !typingDone
@@ -348,7 +348,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             : mode === Mode.RESULTS_FINAL
             ? 'A.I. generated code for your dance party!'
             : mode === Mode.EXPLANATION
-            ? ' These are the associations between the emojis and this effect.'
+            ? 'These are the associations between the emojis and this effect.'
             : undefined}
         </div>
 
