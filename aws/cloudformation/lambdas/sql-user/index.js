@@ -154,7 +154,7 @@ const deleteSQLUser = async (connection, { name, clientHost }) => {
   return await queryPromise(connection, dropUser).catch((error) => {
     if (error.code === "ENOTFOUND") {
       let databaseDeletedAlreadyMessage = `
-        Cannot connect to database to delete SQL user because the server name lookup failed. Assume the database was
+        Cannot connect to database to delete SQL user because the server name lookup failed. Assuming the database was
         already deleted by CloudFormation, so there's no need to delete the user. ${error}
        `;
       console.log(databaseDeletedAlreadyMessage);
