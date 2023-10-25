@@ -166,6 +166,7 @@ class EvaluateRubricJob < ApplicationJob
     RubricAiEvaluation.create!(
       user: user,
       requester: user,
+      rubric: rubric,
       status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS],
       project_id: project_id,
       project_version: project_version,
