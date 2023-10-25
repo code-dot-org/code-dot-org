@@ -41,6 +41,7 @@ Section.includes(:user).find_each(batch_size: BATCH_SIZE) do |section|
   rescue ActiveRecord::Rollback
     # Ignore these during the dry runs
   rescue => exception
+    CDO.log.error "Could not process section #{section.id}"
     CDO.log.error exception
     sections_not_processed += 1
   end
