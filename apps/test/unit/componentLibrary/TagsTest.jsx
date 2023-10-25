@@ -20,25 +20,25 @@ describe('Design System - Tags', () => {
     const user = userEvent.setup();
 
     // Initial render
-    const {rerender} = render(<Tags tagsList={['tag1', 'tag2']} />);
+    render(<Tags tagsList={['tag1', 'tag2']} />);
 
-    let tags = screen.getByTestId('tags');
+    const tags = screen.getByTestId('tags');
+    const tag1 = screen.getByText('tag1');
+    const plusOneTag = screen.getByText('+1');
+
     expect(tags).to.exist;
-    expect(screen.getByText('tag1')).to.exist;
-    expect(screen.getByText('+1')).to.exist;
-    expect(screen.queryByText('tag2')).to.not.exist;
+    expect(tag1).to.exist;
+    expect(plusOneTag).to.exist;
+    expect(screen.queryByText('tag2')).to.be.null;
 
-    await user.hover(screen.getByText('+1'));
-
-    // Re-render after user's hover
-    rerender(<Tags tagsList={['tag1', 'tag2']} />);
+    // Hover +1 to show the +1 tooltip
+    await user.hover(plusOneTag);
 
     expect(screen.queryByText('tag2')).to.exist;
 
-    await user.unhover(screen.getByText('+1'));
+    // Hover tag1 / unhover +1 to hide the +1 tooltip
+    await user.hover(tag1);
 
-    // Re-render after user's unhover
-    rerender(<Tags tagsList={['tag1', 'tag2']} />);
-    expect(screen.queryByText('tag2')).to.not.exist;
+    expect(screen.queryByText('tag2')).to.be.null;
   });
 });
