@@ -551,6 +551,28 @@ a.link-button.secondary:hover {
   background-color: var(--neutral_dark10);
 }
 
+a.link-button.secondary {
+  background: none;
+  border: 2px solid var(--brand_secondary_default);
+  color: var(--brand_secondary_default);
+}
+
+a.link-button.secondary:hover {
+  background-color: var(--neutral_dark10);
+}
+
+a.link-button.white {
+  background-color: var(--neutral_light);
+  border-color: var(--neutral_light);
+  color: var(--neutral_dark);
+}
+
+a.link-button.secondary.white {
+  background: none;
+  border-color: var(--neutral_white);
+  color: var(--neutral_white);
+}
+
 .continue-btn{
   background-color: rgb(255, 255, 255);
   border-color: var(--brand_secondary_default);
