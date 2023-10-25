@@ -612,10 +612,12 @@ module SharedConstants
   RUBRIC_AI_EVALUATION_STATUS = {
     # Queued as a job
     QUEUED: 0,
+    # Job is running
+    RUNNING: 1,
     # Succeeded
-    SUCCESS: 1,
+    SUCCESS: 2,
     # General failure
-    FAILURE: 2,
+    FAILURE: 3,
   }.freeze
 
   EMAIL_LINKS = OpenStruct.new(

@@ -7,13 +7,6 @@ class EvaluateRubricJob < ApplicationJob
   #    via `dashboard/bin/delayed_job restart` or rake build
   self.queue_adapter = :delayed_job
 
-  rescue_from(StandardError) do |exception|
-    if rack_env?(:development)
-      puts "EvaluateRubricJob Error: #{exception.full_message}"
-    end
-    raise
-  end
-
   S3_AI_BUCKET = 'cdo-ai'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files in S3
@@ -30,13 +23,75 @@ class EvaluateRubricJob < ApplicationJob
     }
   }
 
-  def perform(user_id:, script_level_id:, rubric_ai_evaluation_id:)
+  # Ensure that the RubricAiEvaluation exists as an argument to the job
+  private def pass_in_or_create_rubric_ai_evaluation(job)
+    # Get the first argument to perform() which is the hash of named arguments
+    options = job.arguments.first
+
+    # Get the level containing the rubric
+    script_level = ScriptLevel.find(options[:script_level_id])
+
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+    return nil unless rubric
+
+    user = User.find(options[:user_id])
+    channel_id = get_channel_id(user, script_level)
+    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+
+    # Create a queued record of this work request (if none were given)
+    rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]
+    rubric_ai_evaluation = (rubric_ai_evaluation_id && RubricAiEvaluation.find(rubric_ai_evaluation_id)) || RubricAiEvaluation.create!(
+      user_id: options[:user_id],
+      requester_id: options[:requester_id],
+      rubric: Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id),
+      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
+      project_id: project_id,
+    )
+
+    # Set it back so the job can reference it
+    options[:rubric_ai_evaluation_id] = rubric_ai_evaluation.id
+
+    # Return the Rubric
+    rubric_ai_evaluation
+  end
+
+  before_enqueue do |job|
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(job)
+    if rubric_ai_evaluation
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
+      rubric_ai_evaluation.save!
+    end
+  end
+
+  before_perform do |job|
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(job)
+    if rubric_ai_evaluation
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
+      rubric_ai_evaluation.save!
+    end
+  end
+
+  # Write out any general error status for any exception
+  rescue_from(StandardError) do |exception|
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    if rubric_ai_evaluation
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:FAILURE]
+      rubric_ai_evaluation.save!
+    end
+    if rack_env?(:development)
+      puts "EvaluateRubricJob Error: #{exception.full_message}"
+    end
+    raise exception
+  end
+
+  def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
 
     # Find the rubric evaluation record
-    rubric_ai_evaluation = RubricAiEvaluation.where(id: rubric_ai_evaluation_id).first
+    raise "ERROR: must provide rubric ai evaluation record id" unless rubric_ai_evaluation_id
+    rubric_ai_evaluation = RubricAiEvaluation.find(rubric_ai_evaluation_id)
     raise "ERROR: cannot find the rubric ai evaluation record" unless rubric_ai_evaluation
 
     raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
@@ -58,15 +113,6 @@ class EvaluateRubricJob < ApplicationJob
     merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels)
 
     write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
-  rescue => exception
-    # Write out error status
-    if rubric_ai_evaluation
-      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:FAILURE]
-      rubric_ai_evaluation.save!
-    end
-
-    # Re-raise
-    raise exception
   end
 
   def self.ai_enabled?(script_level)
@@ -173,16 +219,6 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   private def write_ai_evaluations(user, ai_evaluations, rubric, rubric_ai_evaluation, project_version)
-    # record the ai evaluations to the database
-    # TODO: pass along and update the 'requester' to the correct id
-    rubric_ai_evaluation = RubricAiEvaluation.create!(
-      user: user,
-      requester: user,
-      rubric: rubric,
-      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS],
-      project_id: project_id,
-      project_version: project_version,
-    )
     ActiveRecord::Base.transaction do
       # Update the base rubric status
       rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
@@ -196,14 +232,17 @@ class EvaluateRubricJob < ApplicationJob
         ai_mapping[ai_evaluation['Key Concept']] = ai_evaluation
       end
 
-      # Go through all of our learning goal evaluation records
-      rubric_ai_evaluation.learning_goal_ai_evaluations.includes(:learning_goal).order('learning_goals.learning_goal ASC').each do |learning_goal_ai_evaluation|
-        next unless ai_mapping.key?(learning_goal_ai_evaluation.learning_goal.learning_goal)
-        ai_evaluation = ai_mapping[learning_goal_ai_evaluation.learning_goal.learning_goal]
-        understanding = understanding_s_to_i(ai_evaluation['Grade'])
-        learning_goal_ai_evaluation.understanding = understanding
-        learning_goal_ai_evaluation.ai_confidence = ai_evaluation['Confidence']
-        learning_goal_ai_evaluation.save!
+      # For every learning goal in the rubric, find out if the AI has
+      # assessed it. If so, create a learning goal AI evaluation record.
+      rubric.learning_goals.each do |lg|
+        next unless ai_mapping.key?(lg.learning_goal)
+        ai_evaluation = ai_mapping[lg.learning_goal]
+        LearningGoalAiEvaluation.create!(
+          learning_goal_id: lg.id,
+          rubric_ai_evaluation_id: rubric_ai_evaluation.id,
+          understanding: understanding_s_to_i(ai_evaluation['Grade']),
+          ai_confidence: ai_evaluation['Confidence'],
+        )
       end
 
       # Save the rubric evaluation record
