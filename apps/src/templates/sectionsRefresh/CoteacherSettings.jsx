@@ -17,6 +17,11 @@ export default function CoteacherSettings({
 }) {
   const [inputValue, setInputValue] = useState('');
   const [addError, setAddError] = useState('');
+  const [removedCoteachers, setRemovedCoteacher] = useState([]);
+
+  const addRemovedCoteacher = id => {
+    setRemovedCoteacher([...removedCoteachers, id]);
+  };
 
   const handleInputChange = event => {
     setInputValue(event.target.value);
@@ -86,23 +91,41 @@ export default function CoteacherSettings({
     }
   };
 
-  const handleRemove = email => {
-    // TODO: implement
+  const handleRemove = (id, email) => e => {
+    e.preventDefault();
+
+    if (id === null) {
+      // remove from coteachersToAdd
+      coteachersToAdd.splice(coteachersToAdd.indexOf(email), 1);
+      return;
+    }
+    $.ajax({
+      url: `/api/v1/section_instructors/${id}`,
+      method: 'DELETE',
+    }).then(response => {
+      if (!response || response.status !== 'failure') {
+        addRemovedCoteacher(id);
+      }
+    });
   };
 
-  const getTableRow = (email, index, name = null, status = null) => {
+  const getTableRow = (index, coteacher) => {
     return (
       <tr key={index}>
         <td>
           <div>
-            {name ? <StrongText> {name}</StrongText> : null}
+            {coteacher.instructorName ? (
+              <StrongText> {coteacher.instructorName}</StrongText>
+            ) : null}
             <br />
-            {email}
+            {coteacher.instructorEmail}
           </div>
         </td>
-        <td>{status}</td>
+        <td>{coteacher.status}</td>
         <td>
-          <Button onClick={handleRemove}>
+          <Button
+            onClick={handleRemove(coteacher.id, coteacher.instructorEmail)}
+          >
             <FontAwesome icon="trash" />
           </Button>
         </td>
@@ -113,7 +136,9 @@ export default function CoteacherSettings({
   const getTable = (sectionInstructors, coteachersToAdd) => {
     const filteredInstructors = sectionInstructors
       ? sectionInstructors.filter(
-          instructor => instructor.instructorEmail !== primaryInstructor.email
+          instructor =>
+            instructor.instructorEmail !== primaryInstructor.email &&
+            !removedCoteachers.includes(instructor.id)
         )
       : [];
     if (filteredInstructors.length === 0 && coteachersToAdd.length === 0) {
@@ -122,14 +147,11 @@ export default function CoteacherSettings({
     return (
       <table className={styles.table}>
         <tbody>
-          {coteachersToAdd.map((email, id) => getTableRow(email, id))}
+          {coteachersToAdd.map((email, id) =>
+            getTableRow(id, {instructorEmail: email})
+          )}
           {filteredInstructors.map((instructor, id) =>
-            getTableRow(
-              instructor.instructorEmail,
-              id,
-              instructor.instructorName,
-              instructor.status
-            )
+            getTableRow(id, instructor)
           )}
         </tbody>
       </table>
