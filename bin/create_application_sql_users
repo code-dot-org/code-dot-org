@@ -2,48 +2,87 @@
 
 require_relative '../deployment'
 require 'mysql2'
+require 'json'
 
-client = Mysql2::Client.new(
-  host: CDO.db_endpoint_writer,
-  username: CDO.db_credential_admin['username'],
-  password: CDO.db_credential_admin['password'],
-  read_timeout: 300,
-  write_timeout: 300,
-  connect_timeout: 30
-)
+def create_or_update_sql_user(connection, name, client_host, password, privileges)
+  create_user_sql = <<-SQL
+    CREATE USER IF NOT EXISTS '#{name}'@'#{client_host}'#{' '}
+    IDENTIFIED WITH mysql_native_password BY '#{password}';
+  SQL
 
-create_writer_sql_user = <<-SQL
-  CREATE USER '#{CDO.db_credential_writer['username']}'@'%'
-  IDENTIFIED WITH mysql_native_password
-  BY '#{client.escape(CDO.db_credential_writer['password'])}';
-SQL
+  update_user_sql = <<-SQL
+    ALTER USER '#{name}'@'#{client_host}'#{' '}
+    IDENTIFIED WITH mysql_native_password BY '#{password}';
+  SQL
 
-grant_writer_privileges = <<-SQL
-  GRANT
-    SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, PROCESS, REFERENCES, INDEX, ALTER, SHOW DATABASES,
-    CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER
-  ON *.*
-  TO '#{CDO.db_credential_writer['username']}'@'%';
-SQL
+  databases = %w[pegasus dashboard]
 
-create_reader_sql_user = <<-SQL
-  CREATE USER '#{CDO.db_credential_reader['username']}'@'%'
-  IDENTIFIED WITH mysql_native_password
-  BY '#{client.escape(CDO.db_credential_reader['password'])}';
-SQL
+  create_user_results = connection.query(create_user_sql.strip)
+  update_user_results = connection.query(update_user_sql.strip)
+  grant_results = databases.map do |database|
+    grant_privileges_sql = <<-SQL
+      GRANT #{privileges.join(',')}
+      ON `#{database}%`.* TO '#{name}'@'#{client_host}';
+    SQL
 
-grant_reader_privileges = <<-SQL
-  GRANT
-    SELECT
-  ON *.*
-  TO '#{CDO.db_credential_reader['username']}'@'%';
-SQL
+    connection.query(grant_privileges_sql.strip)
+  end
+
+  {
+    create_user: create_user_results,
+    update_user: update_user_results,
+    grant_results: grant_results
+  }
+end
+
+WRITER_PRIVILEGES = [
+  'SELECT',
+  'INSERT',
+  'UPDATE',
+  'DELETE',
+  'CREATE',
+  'DROP',
+  'REFERENCES',
+  'INDEX',
+  'ALTER',
+  'CREATE TEMPORARY TABLES',
+  'LOCK TABLES',
+  'EXECUTE',
+  'CREATE VIEW',
+  'SHOW VIEW',
+  'CREATE ROUTINE',
+  'ALTER ROUTINE',
+  'EVENT',
+  'TRIGGER'
+].freeze
 
 begin
-  client.query(create_writer_sql_user)
-  client.query(grant_writer_privileges)
-  client.query(create_reader_sql_user)
-  client.query(grant_reader_privileges)
+  client = Mysql2::Client.new(
+    host: CDO.db_endpoint_writer,
+    username: CDO.db_credential_admin['username'],
+    password: CDO.db_credential_admin['password'],
+    read_timeout: 300,
+    write_timeout: 300,
+    connect_timeout: 30
+  )
+
+  create_writer_results = create_or_update_sql_user(
+    client,
+    CDO.db_credential_writer['username'],
+    '%',
+    CDO.db_credential_writer['password'],
+    WRITER_PRIVILEGES
+  )
+  puts create_writer_results
+
+  create_reader_results = create_or_update_sql_user(
+    client,
+    CDO.db_credential_reader['username'],
+    '%',
+    CDO.db_credential_reader['password'],
+    ['SELECT']
+  )
+  puts create_reader_results
 rescue StandardError => exception
   puts exception.message
 end
