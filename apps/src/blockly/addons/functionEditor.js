@@ -11,6 +11,9 @@ import {
 } from './functionEditorConstants';
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import CdoMetricsManager from './cdoMetricsManager';
+import WorkspaceSvgFrame from './workspaceSvgFrame';
+import msg from '@cdo/locale';
+import {BLOCK_TYPES} from '../constants';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -151,7 +154,20 @@ export default class FunctionEditor {
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
-      this.block.functionalSvg_.render(this.block.svgGroup_, this.block.RTL);
+
+      const type = procedureType || existingProcedureBlock.type;
+      const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+      const existingFrame = this.editorWorkspace.svgFrame_;
+      if (existingFrame) {
+        existingFrame.dispose();
+      }
+      this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
+        this.editorWorkspace,
+        isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+        'blocklyWorkspaceSvgFrame'
+      );
+      this.editorWorkspace.svgFrame_.render();
+
       Blockly.Events.enable();
     } else {
       // Otherwise, we need to create a new block from scratch.

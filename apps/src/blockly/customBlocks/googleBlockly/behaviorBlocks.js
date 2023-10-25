@@ -125,7 +125,7 @@ GoogleBlockly.Extensions.registerMutator(
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function editor is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
-  if (!this.workspace.noFunctionBlockFrame) {
+  if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
     this.functionalSvg_ = new BlockSvgFrame(
       this,
       msg.behaviorEditorHeader(),
