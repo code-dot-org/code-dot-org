@@ -117,13 +117,12 @@ class RubricsControllerTest < ActionController::TestCase
 
     learning_goal1 = create :learning_goal, rubric: @rubric
     learning_goal2 = create :learning_goal, rubric: @rubric
-    # TODO: save this to a variable and use it to create learning goal ai evaluations
+
     rubric_ai_evaluation = create(
       :rubric_ai_evaluation,
-      rubric: rubric,
+      rubric: @rubric,
       user: student,
       requester: @teacher,
-      rubric: @rubric,
       status: 1
     )
     ai_evaluation1 = create(
@@ -406,7 +405,7 @@ class RubricsControllerTest < ActionController::TestCase
 
       Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
       EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
-      EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, script_level_id: @script_level.id).once
+      EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
       post :ai_evaluation_status_for_user, params: {
         id: @rubric.id,

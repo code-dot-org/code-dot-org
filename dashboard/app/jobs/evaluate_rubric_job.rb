@@ -31,8 +31,8 @@ class EvaluateRubricJob < ApplicationJob
     # Get the level containing the rubric
     script_level = ScriptLevel.find(options[:script_level_id])
 
+    # Will raise an exception if the rubric does not exist
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
-    return nil unless rubric
 
     user = User.find(options[:user_id])
     channel_id = get_channel_id(user, script_level)
@@ -43,7 +43,7 @@ class EvaluateRubricJob < ApplicationJob
     rubric_ai_evaluation = (rubric_ai_evaluation_id && RubricAiEvaluation.find(rubric_ai_evaluation_id)) || RubricAiEvaluation.create!(
       user_id: options[:user_id],
       requester_id: options[:requester_id],
-      rubric: Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id),
+      rubric: rubric,
       status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
       project_id: project_id,
     )
@@ -57,30 +57,32 @@ class EvaluateRubricJob < ApplicationJob
 
   before_enqueue do |job|
     rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(job)
-    if rubric_ai_evaluation
-      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
-      rubric_ai_evaluation.save!
-    end
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
+    rubric_ai_evaluation.save!
   end
 
   before_perform do |job|
     rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(job)
-    if rubric_ai_evaluation
-      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
-      rubric_ai_evaluation.save!
-    end
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
+    rubric_ai_evaluation.save!
   end
 
   # Write out any general error status for any exception
   rescue_from(StandardError) do |exception|
-    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
-    if rubric_ai_evaluation
-      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:FAILURE]
-      rubric_ai_evaluation.save!
-    end
     if rack_env?(:development)
       puts "EvaluateRubricJob Error: #{exception.full_message}"
     end
+
+    # Record the failure, if we can
+    begin
+      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:FAILURE]
+      rubric_ai_evaluation.save!
+    rescue StandardError
+      # Ignore cascading errors when the rubric record does not exist
+    end
+
+    # Re-raise the original exception to track it elsewhere
     raise exception
   end
 
@@ -89,17 +91,15 @@ class EvaluateRubricJob < ApplicationJob
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
 
-    # Find the rubric evaluation record
+    # Find the rubric evaluation record (or raise RecordNotFound)
     raise "ERROR: must provide rubric ai evaluation record id" unless rubric_ai_evaluation_id
     rubric_ai_evaluation = RubricAiEvaluation.find(rubric_ai_evaluation_id)
-    raise "ERROR: cannot find the rubric ai evaluation record" unless rubric_ai_evaluation
 
     raise 'CDO.openai_evaluate_rubric_api_key not set' unless CDO.openai_evaluate_rubric_api_key
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
-    # Find the rubric
+    # Find the rubric (or raise RecordNotFound)
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
-    raise "ERROR: cannot find the rubric record" unless rubric
 
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
