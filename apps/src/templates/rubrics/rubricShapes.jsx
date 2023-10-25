@@ -43,7 +43,7 @@ export const submittedEvaluationShape = PropTypes.shape({
 });
 
 export const aiEvaluationShape = PropTypes.shape({
-  learning_goal_id: PropTypes.number,
-  understanding: PropTypes.number,
+  learning_goal_id: PropTypes.number.isRequired,
+  understanding: PropTypes.number.isRequired,
   ai_confidence: PropTypes.number,
 });
