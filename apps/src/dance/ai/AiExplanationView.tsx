@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
+import {MenuOption} from 'blockly/core';
 import {CachedWeightsMapping} from './DanceAiClient';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
@@ -39,11 +40,15 @@ type Result = {[key in FieldKey]: string};
 interface AiExplanationViewProps {
   inputs: string[];
   result: Result;
+  backgroundMapping: MenuOption[];
+  foregroundMapping: MenuOption[];
+  paletteMapping: MenuOption[];
 }
 
 interface FieldObject {
   name: string;
   data: CachedWeightsMapping;
+  labelTranslations: MenuOption[];
 }
 
 interface Fields {
@@ -52,13 +57,20 @@ interface Fields {
   [FieldKey.BACKGROUND_PALETTE]: FieldObject;
 }
 
+// block has translated values
+// keys from model results won't be translated (but are what are used here, i think, as labels
+
 /**
  * Presents some bar charts explaining how output values were chosen.
  */
 const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
   inputs,
   result,
+  backgroundMapping,
+  foregroundMapping,
+  paletteMapping,
 }) => {
+  console.log(backgroundMapping);
   const [currentFieldKey, setCurrentFieldKey] = useState(
     FieldKey.BACKGROUND_EFFECT
   );
@@ -67,14 +79,17 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
     [FieldKey.BACKGROUND_EFFECT]: {
       name: 'Background effect',
       data: CachedBackgrounds as CachedWeightsMapping,
+      labelTranslations: backgroundMapping,
     },
     [FieldKey.FOREGROUND_EFFECT]: {
       name: 'Foreground effect',
       data: CachedForegrounds as CachedWeightsMapping,
+      labelTranslations: foregroundMapping,
     },
     [FieldKey.BACKGROUND_PALETTE]: {
       name: 'Background palette',
       data: CachedPalettes as CachedWeightsMapping,
+      labelTranslations: paletteMapping,
     },
   };
 
@@ -89,7 +104,19 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
         stacked: true,
         ticks: {
           color: function (context) {
-            if (context.tick.label === result[currentFieldKey]) {
+            // result[currentFieldKey] => 'disco_ball'
+            // context.tick.label => Colors
+            // mapping between disco_ball -> colors only in currentField.labelTranslations
+            const translations = currentField.labelTranslations;
+            const translationTuple = translations.find(
+              translationMapping =>
+                translationMapping[1] === `"${result[currentFieldKey]}"`
+            );
+
+            if (
+              translationTuple &&
+              context.tick.label === translationTuple[0]
+            ) {
               return 'rgba(54, 162, 235, 1)';
             }
             return '#000000';
@@ -105,7 +132,20 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
     'rgb(53, 162, 235)',
   ];
 
-  const labels = currentField.data.output;
+  const labels = currentField.data.output.map(label => {
+    const translations = currentField.labelTranslations;
+    const translationTuple = translations.find(
+      translationMapping => translationMapping[1] === `"${label}"`
+    );
+
+    // if we can't find a translation for the key from the model,
+    // display the untranslated key
+    const translatedString = translationTuple ? translationTuple[0] : label;
+    return translatedString;
+  });
+
+  // to do: refactor into shared function
+  // const findTranslation = (value, mapping) => {};
 
   const emojiAssociations = currentField.data.emojiAssociations;
   const datasets = Object.keys(emojiAssociations)

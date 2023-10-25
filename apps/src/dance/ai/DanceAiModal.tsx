@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
-import {BlockSvg, Workspace} from 'blockly/core';
+import {BlockSvg, Workspace, FieldDropdown, MenuOption} from 'blockly/core';
 import AiGeneratingView from './AiGeneratingView';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
@@ -59,6 +59,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
+  const [backgroundMapping, setBackgroundMapping] = useState<MenuOption[]>([]);
+  const [foregroundMapping, setForegroundMapping] = useState<MenuOption[]>([]);
+  const [paletteMapping, setPaletteMapping] = useState<MenuOption[]>([]);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -174,7 +177,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   /**
-   * Generates blocks from the AI result in the main workspace, and attaches
+   * Generates blocks from the AI result, and attaches
    * them to each other.
    */
   const generateBlocksFromResult = (
@@ -195,6 +198,27 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     // Background block.
     blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
     blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
+
+    // is type from google ok (rather than wrapper)?
+    const foregroundFieldDropdown = blocksSvg[0].getField(
+      'EFFECT'
+    ) as FieldDropdown;
+    const backgroundFieldDropdown = blocksSvg[1].getField(
+      'EFFECT'
+    ) as FieldDropdown;
+    const paletteFieldDropdown = blocksSvg[1].getField(
+      'PALETTE'
+    ) as FieldDropdown;
+
+    if (!foregroundMapping.length) {
+      setForegroundMapping(foregroundFieldDropdown.getOptions());
+    }
+    if (!backgroundMapping.length) {
+      setBackgroundMapping(backgroundFieldDropdown.getOptions());
+    }
+    if (!paletteMapping.length) {
+      setPaletteMapping(paletteFieldDropdown.getOptions());
+    }
 
     // Connect the blocks.
     blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
@@ -520,6 +544,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <AiExplanationView
               inputs={inputs}
               result={JSON.parse(resultJson)}
+              backgroundMapping={backgroundMapping}
+              foregroundMapping={foregroundMapping}
+              paletteMapping={paletteMapping}
             />
           </div>
         )}
