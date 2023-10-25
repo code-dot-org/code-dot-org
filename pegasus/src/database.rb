@@ -51,8 +51,8 @@ class Tutorials
   def find_with_grade_level(gradelevel)
     results = {}
     @contents.each do |i|
-      #tag = CSV.parse_line(i[:gradeleveltag].to_s)
-      #next unless gradelevel == tag.to_s
+      tag = CSV.parse_line(i[:gradeleveltag].to_s)
+      next unless tag.include?(gradelevel)
       results[i[:code]] = i
     end
     results
