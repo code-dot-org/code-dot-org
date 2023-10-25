@@ -19,18 +19,36 @@ export default function CoteacherSettings({
 }) {
   const [inputValue, setInputValue] = useState('');
   const [addError, setAddError] = useState('');
-  const [removedCoteachers, setRemovedCoteacher] = useState([]);
+  const [removedCoteacherIds, setRemovedCoteacherIds] = useState([]);
   const [coteacherToRemove, setCoteacherToRemove] = useState({});
 
+  const coteachers = React.useMemo(() => {
+    const unfiltered = sectionInstructors
+      ? [
+          ...sectionInstructors,
+          ...coteachersToAdd.map(email => ({instructorEmail: email})),
+        ]
+      : coteachersToAdd;
+
+    return unfiltered.filter(
+      instructor =>
+        instructor.instructorEmail !== primaryInstructor.email &&
+        !removedCoteacherIds.includes(instructor.id)
+    );
+  }, [
+    sectionInstructors,
+    coteachersToAdd,
+    removedCoteacherIds,
+    primaryInstructor,
+  ]);
+
   const addRemovedCoteacher = id => {
-    setRemovedCoteacher([...removedCoteachers, id]);
+    setRemovedCoteacherIds([...removedCoteacherIds, id]);
   };
 
   const handleInputChange = event => {
     setInputValue(event.target.value);
   };
-
-  React.useEffect(() => console.log(primaryInstructor), [primaryInstructor]);
 
   const handleAddEmail = e => {
     e.preventDefault();
@@ -44,12 +62,7 @@ export default function CoteacherSettings({
       return;
     }
     if (
-      //TODO check if email has been removed already
-      (sectionInstructors &&
-        sectionInstructors.some(
-          instructor => instructor.instructorEmail === newEmail
-        )) ||
-      coteachersToAdd.some(email => email === newEmail)
+      coteachers.some(instructor => instructor.instructorEmail === newEmail)
     ) {
       setAddError(i18n.coteacherAddAlreadyExists({email: newEmail}));
       return;
@@ -67,15 +80,7 @@ export default function CoteacherSettings({
     }
   };
 
-  // coteacher count is teachers to add + the existing teachers - the primary teacher.
-  // If sectionInstructors is populated, we assume one of them is the primary teacher.
-  const existingCoteachers = sectionInstructors
-    ? sectionInstructors.length - 1
-    : 0;
-  const numCoteachers =
-    existingCoteachers + coteachersToAdd.length - removedCoteachers.length;
-
-  const isAddDisabled = numCoteachers >= 5;
+  const isAddDisabled = coteachers.length >= 5;
 
   const getErrorOrCount = () => {
     if (addError) {
@@ -90,7 +95,7 @@ export default function CoteacherSettings({
     } else {
       return (
         <Figcaption className={styles.inputDescription}>
-          {i18n.coteacherCount({count: numCoteachers})}
+          {i18n.coteacherCount({count: coteachers.length})}
         </Figcaption>
       );
     }
@@ -161,26 +166,14 @@ export default function CoteacherSettings({
     );
   };
 
-  const getTable = (sectionInstructors, coteachersToAdd) => {
-    const filteredInstructors = sectionInstructors
-      ? sectionInstructors.filter(
-          instructor =>
-            instructor.instructorEmail !== primaryInstructor.email &&
-            !removedCoteachers.includes(instructor.id)
-        )
-      : [];
-    if (filteredInstructors.length === 0 && coteachersToAdd.length === 0) {
+  const getTable = coteachers => {
+    if (coteachers.length === 0) {
       return <div>You haven't added any co-teachers yet</div>;
     }
     return (
       <table className={styles.table}>
         <tbody>
-          {coteachersToAdd.map((email, id) =>
-            getTableRow(id, {instructorEmail: email})
-          )}
-          {filteredInstructors.map((instructor, id) =>
-            getTableRow(id, instructor)
-          )}
+          {coteachers.map((instructor, id) => getTableRow(id, instructor))}
         </tbody>
       </table>
     );
@@ -216,7 +209,7 @@ export default function CoteacherSettings({
           </div>
           {getErrorOrCount()}
         </div>
-        {getTable(sectionInstructors, coteachersToAdd)}
+        {getTable(coteachers)}
         {!_.isEmpty(coteacherToRemove) && removePopup(coteacherToRemove)}
       </div>
     </div>
