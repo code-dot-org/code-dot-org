@@ -269,6 +269,7 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
       rouge (>= 1.0.0)
+    bigdecimal (3.1.4)
     bindata (2.4.10)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -810,7 +811,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sequel (5.67.0)
+    sequel (5.73.0)
+      bigdecimal
     set (1.0.3)
     shotgun (0.9.1)
       rack (>= 1.0)
@@ -1087,7 +1089,7 @@ DEPENDENCIES
   scss_lint
   sd_notify
   selenium-webdriver (~> 4.0)
-  sequel (~> 5.29)
+  sequel (~> 5.73)
   shotgun
   simplecov (~> 0.22.0)
   sinatra (= 2.2.3)

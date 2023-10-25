@@ -218,7 +218,7 @@ gem 'jwt', '~> 2.7.0'
 # https://github.com/twilio/twilio-ruby/blob/6.0.0/UPGRADE.md#2023-05-03-5xx-to-6xx
 gem 'twilio-ruby', '< 6.0'
 
-gem 'sequel', '~> 5.29'
+gem 'sequel', '~> 5.73'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
