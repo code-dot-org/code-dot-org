@@ -120,6 +120,7 @@ class RubricsControllerTest < ActionController::TestCase
     # TODO: save this to a variable and use it to create learning goal ai evaluations
     rubric_ai_evaluation = create(
       :rubric_ai_evaluation,
+      rubric: rubric,
       user: student,
       requester: @teacher,
       rubric: @rubric,
@@ -161,7 +162,7 @@ class RubricsControllerTest < ActionController::TestCase
     learning_goal = create :learning_goal
     rubric_ai_evaluation = create(
       :rubric_ai_evaluation,
-      rubric: @rubric,
+      rubric: learning_goal.rubric,
       user: student,
       requester: @teacher,
       status: 1
@@ -190,6 +191,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     rubric_ai_evaluation1 = create(
       :rubric_ai_evaluation,
+      rubric: learning_goal.rubric,
       user: student,
       requester: @teacher,
       status: 1
@@ -203,6 +205,7 @@ class RubricsControllerTest < ActionController::TestCase
     travel 1.minute do
       rubric_ai_evaluation2 = create(
         :rubric_ai_evaluation,
+        rubric: learning_goal.rubric,
         user: student,
         requester: @teacher,
         status: 1
@@ -268,7 +271,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
-    EvaluateRubricJob.expects(:perform_later).with(has_entries(rubric_ai_evaluation_id: anything, user_id: @student.id, script_level_id: @script_level.id)).once
+    EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
     post :ai_evaluation_status_for_user, params: {
       id: @rubric.id,

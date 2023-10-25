@@ -1856,6 +1856,7 @@ FactoryBot.define do
     user {student}
     project_id {789}
     association :requester, factory: :teacher
+    association :rubric
     status {1}
     project_version {"1"}
   end

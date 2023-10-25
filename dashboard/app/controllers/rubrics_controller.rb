@@ -85,18 +85,12 @@ class RubricsController < ApplicationController
     return head :not_found unless student
     return head :forbidden unless can?(:manage, student)
 
-    learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).select(:id)
+    # Get the latest rubric evaluation
+    rubric_ai_evaluation = RubricAiEvaluation.where(rubric_id: permitted_params[:id]).order(updated_at: :desc).first
 
     # Get the most recent learning goals based on the most recent graded rubric
-    learning_goal_ai_evaluations = LearningGoalAiEvaluation.where(
-      learning_goal_id: learning_goal_ids,
-      rubric_ai_evaluation_id: RubricAiEvaluation.where(
-        id: LearningGoalAiEvaluation.where(
-          learning_goal_id: learning_goal_ids,
-        ).order(updated_at: :desc).pick(:rubric_ai_evaluation_id),
-        user_id: permitted_params[:student_id],
-      )
-    )
+    learning_goal_ai_evaluations = rubric_ai_evaluation.learning_goal_ai_evaluations
+
     render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)
   end
 
@@ -123,14 +117,6 @@ class RubricsController < ApplicationController
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
-    # Create a record of this work request
-    rubric_ai_evaluation = RubricAiEvaluation.create!(
-      user_id: user_id,
-      requester_id: current_user.id,
-      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
-      project_id: 0,
-    )
-
     # Find the rubric (must have something to evaluate)
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
     return head :bad_request unless rubric
@@ -150,7 +136,12 @@ class RubricsController < ApplicationController
     evaluated = ai_evaluated_at
     return render status: :bad_request, json: {error: 'Already evaluated'} if evaluated && attempted < evaluated
 
-    EvaluateRubricJob.perform_later(user_id: @user.id, script_level_id: script_level.id, rubric_ai_evaluation_id: rubric_ai_evaluation.id)
+    EvaluateRubricJob.perform_later(
+      user_id: @user.id,
+      requester_id: current_user.id,
+      script_level_id: script_level.id,
+      rubric_ai_evaluation_id: rubric_ai_evaluation.id
+    )
     return head :ok
   end
 
