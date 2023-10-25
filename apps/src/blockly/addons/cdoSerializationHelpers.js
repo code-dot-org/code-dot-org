@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import BlockSvgUnused from './blockSvgUnused';
 import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
@@ -23,7 +24,7 @@ export function convertXmlToJson(xml) {
   //   x: the x attribute found in <block/> element
   //   y: the y attribute found in <block/> element
   const xmlBlocks = Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
-
+  console.log('xmlBlocks', xmlBlocks);
   const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
 
   if (xmlBlocks.length && stateToLoad.blocks) {
@@ -187,4 +188,26 @@ function reorderBlocks(blocks, blockOrderMap) {
   });
 
   return orderedBlocks;
+}
+
+export function getCombinedSerialization(
+  mainSerialization,
+  otherSerialization
+) {
+  if (_.isEmpty(otherSerialization)) {
+    return mainSerialization;
+  }
+
+  const combinedSerialization = _.cloneDeep(mainSerialization);
+  combinedSerialization.blocks.blocks = _.unionBy(
+    mainSerialization.blocks.blocks,
+    otherSerialization.blocks.blocks,
+    'id'
+  );
+  combinedSerialization.procedures = _.unionBy(
+    mainSerialization.procedures,
+    otherSerialization.procedures,
+    'id'
+  );
+  return combinedSerialization;
 }

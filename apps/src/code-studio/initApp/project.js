@@ -119,7 +119,6 @@ var currentSources = {
   selectedPoem: null,
   inRestrictedShareMode: false,
   teacherHasConfirmedUploadWarning: false,
-  hiddenDefinitions: null,
 };
 
 /**
@@ -137,6 +136,7 @@ function packSources() {
  * @param {boolean} data.makerAPIsEnabled
  */
 function unpackSources(data) {
+  // Combined sources should contain all visible blocks and all hidden blocks
   currentSources = {
     source: data.source,
     html: data.html,
@@ -147,7 +147,6 @@ function unpackSources(data) {
     libraries: data.libraries,
     inRestrictedShareMode: data.inRestrictedShareMode,
     teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
-    hiddenDefinitions: data.hiddenDefinitions,
   };
 }
 
@@ -724,11 +723,6 @@ var projects = (module.exports = {
           if (currentSources.source) {
             sourceHandler.setInitialLevelSource(currentSources.source);
           }
-          if (currentSources.hiddenDefinitions) {
-            sourceHandler.setInitialHiddenDefinitions(
-              currentSources.hiddenDefinitions
-            );
-          }
         } else {
           this.setName('My Project');
         }
@@ -774,11 +768,6 @@ var projects = (module.exports = {
         }
       } else if (current) {
         this.sourceHandler.setInitialLevelSource(currentSources.source);
-        if (currentSources.hiddenDefinitions) {
-          sourceHandler.setInitialHiddenDefinitions(
-            currentSources.hiddenDefinitions
-          );
-        }
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.legacyShareStyle && this.getStandaloneApp()) {
@@ -1061,7 +1050,7 @@ var projects = (module.exports = {
           try {
             this.saveSourceAndHtml_(
               sourceAndHtml,
-              (err, result) => (err ? reject(err) : resolve()),
+              err => (err ? reject(err) : resolve()),
               forceNewVersion,
               preparingRemix
             );
@@ -1210,7 +1199,6 @@ var projects = (module.exports = {
           // project's 'last saved' time shown in the UI may be inaccurate for
           // all projects that were saved while emergency mode was active.
           if (appOptions.reduceChannelUpdates && initialSaveComplete) {
-            console.log('Skipping channel metadata update');
             this.onUpdateChannel(callback, null, current);
           } else {
             this.updateChannels_(callback);
@@ -1332,7 +1320,6 @@ var projects = (module.exports = {
             this.sourceHandler.inRestrictedShareMode();
           const teacherHasConfirmedUploadWarning =
             this.sourceHandler.teacherHasConfirmedUploadWarning();
-          const hiddenDefinitions = this.sourceHandler.getHiddenDefinitions();
           callback({
             source,
             html,
@@ -1343,7 +1330,6 @@ var projects = (module.exports = {
             libraries,
             inRestrictedShareMode,
             teacherHasConfirmedUploadWarning,
-            hiddenDefinitions,
           });
         })
         .catch(error => callback({error}))
@@ -1914,7 +1900,14 @@ var projects = (module.exports = {
         .then(({data, jqXHR}) => {
           currentSourceVersionId =
             jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
-          unpackSources(data);
+          unpackSources(data, true);
+        })
+        .catch(err => {
+          this.logError_(
+            'unpack-sources-error',
+            null,
+            `unable to unpack source file: ${err}`
+          );
         });
     } else {
       // It's possible that we created a channel, but failed to save anything to
