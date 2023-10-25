@@ -3,7 +3,7 @@
   "config": {
     "func": "ai",
     "inline": true,
-    "blockText": "{IMAGE}generate {VALUE} stage",
+    "blockText": "{IMAGE}generate {VALUE} effects",
     "style": "ai_blocks",
     "args": [
       {
