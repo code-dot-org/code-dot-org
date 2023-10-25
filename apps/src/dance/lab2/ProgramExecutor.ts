@@ -106,7 +106,6 @@ export default class ProgramExecutor {
    */
   async preview(songMetadata: SongMetadata) {
     this.reset();
-    this.nativeAPI.setForegroundEffectsInPreviewMode(true);
     this.hooks = await this.preloadSpritesAndCompileCode(
       this.getCode(),
       'runUserSetup'
