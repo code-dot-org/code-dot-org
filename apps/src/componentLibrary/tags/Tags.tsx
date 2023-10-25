@@ -36,7 +36,6 @@ export interface TagsProps {
 }
 
 // TODO:
-// - connect&correct sizes
 // - connect icons
 // - refactor existing usages
 // - remove/refactor Card Labels
@@ -60,7 +59,10 @@ const Tags: React.FunctionComponent<TagsProps> = ({
   size = 'm',
 }) => {
   return (
-    <div className={classNames(moduleStyles.tags)} data-testid="tags">
+    <div
+      className={classNames(moduleStyles.tags, moduleStyles[`tags-${size}`])}
+      data-testid="tags"
+    >
       {tagsList.length > 0 && (
         <LabelOverlayTrigger
           overlay={(props: TooltipProps) => (
