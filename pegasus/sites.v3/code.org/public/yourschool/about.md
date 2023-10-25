@@ -21,9 +21,7 @@ We started with the definition of computer science developed by the [Computer Sc
 
 _Computer science is the study of computers and algorithms, including their principles, their hardware and software designs, their implementation, and their impact on society._
 
-Learning computer science means learning how to
-create new technologies, rather than just using
-them. 
+Learning computer science means learning how to create new technologies, rather than just using them. 
 
 Courses must meet the following two criteria to be included in the Access Report as foundational computer science:
 
