@@ -9,19 +9,21 @@
 // the original function was to remove a check on eventWorkspace.isDragging():
 // https://github.com/google/blockly/blob/1e3b5b4c76f24d2274ef4947c1fcf657f0058f11/core/events/utils.ts#L549
 
-// Second, we also run this event if a block change event fired for a field. This is
-// because of procedures. When we rename a procedure it triggers a field change
-// on the main workspace caller block. If that block was an orphan, it becomes enabled
-// because it gets an update from the other workspace which did not know it was previously
-// disabled, and therefore wipes the disabled status. We therefore need to check again
-// if it should be disabled.
+// Second, we also run this event if a block change event fired for a block going from
+// enabled to disabled. This is because of a bug in procedure renames.
+// When we rename a procedure it triggers all call blocks to be enabled, whether or not
+// they are orphans. The only event we have for this is the block change event from enabled
+// to disabled, so we run our check on that event to re-enable any orphaned call blocks.
+// This bug is tracked by the Blockly team:
+// https://github.com/google/blockly-samples/issues/2035
 export function disableOrphans(blockEvent) {
-  console.log({blockEvent});
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
     blockEvent.type === Blockly.Events.BLOCK_CREATE ||
     (blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
-      blockEvent.element === 'field')
+      blockEvent.element === 'disabled' &&
+      !blockEvent.newValue &&
+      blockEvent.oldValue)
   ) {
     if (!blockEvent.workspaceId) {
       return;
