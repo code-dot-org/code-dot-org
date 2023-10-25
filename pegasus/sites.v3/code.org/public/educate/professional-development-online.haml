@@ -201,21 +201,21 @@ theme: responsive_full_width
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline=hoc_s(:module_grade_6_10_teachers)
-          %h3=hoc_s(:module_label_teaching_animations)
+          %h3=hoc_s(:module_label_teaching_problem_solving)
           %img{src: "/images/self-paced-pl-tile-animations.png", alt: "", style: "width: 100%; height: 40%"}
           %p
             %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_animations)
+            =hoc_s(:curriculum_name_problem_solving)
           %p
             %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_tbd)
+            =hoc_s(:module_duration_2_hrs)
           %p
             %strong=hoc_s(:module_label_prerequisites)
             =hoc_s(:module_prerequisites_none)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csp)}}
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-unit1-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csp)}}
             =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("https://studio.code.org/s/interactive-games-animations"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csp)}}
+          %a.link-button.secondary{href: CDO.studio_url("https://studio.code.org/s/problem-solving-computing"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csp)}}
             =hoc_s(:call_to_action_explore_curriculum)
 
 %section.bg-neutral-light
