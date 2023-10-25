@@ -121,16 +121,6 @@ class RubricsController < ApplicationController
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
     return head :bad_request unless rubric
 
-    # Create a blank record of all the pending learning goal ai evaluations
-    rubric.learning_goals.each do |learning_goal|
-      LearningGoalAiEvaluation.create!(
-        rubric_ai_evaluation_id: rubric_ai_evaluation.id,
-        learning_goal_id: learning_goal.id,
-        understanding: RUBRIC_UNDERSTANDING_LEVELS[:UNKNOWN],
-        ai_confidence: 0,
-      )
-    end
-
     attempted = attempted_at
     return render status: :bad_request, json: {error: 'Not attempted'} unless attempted
     evaluated = ai_evaluated_at
@@ -140,7 +130,6 @@ class RubricsController < ApplicationController
       user_id: @user.id,
       requester_id: current_user.id,
       script_level_id: script_level.id,
-      rubric_ai_evaluation_id: rubric_ai_evaluation.id
     )
     return head :ok
   end
@@ -200,10 +189,9 @@ class RubricsController < ApplicationController
   end
 
   def ai_evaluated_at
-    learning_goal_ids = @rubric.learning_goals.pluck(:id)
-    OldLearningGoalAiEvaluation.
-      where(user_id: @user.id, learning_goal_id: learning_goal_ids).
-      order(created_at: :desc).
+    RubricAiEvaluation.
+      where(rubric_id: @rubric.id, user_id: @user.id).
+      order(updated_at: :desc).
       first&.
       created_at
   end
