@@ -83,7 +83,7 @@
   }
 
   &StatusCell {
-    background-color: $neutral_light;
+    min-width: 150px;
   }
 
   &RemoveButton {
@@ -99,5 +99,34 @@
       background: $product_negative_light;
       box-shadow: none;
     }
+  }
+
+  &Pill {
+    border-radius: 100px;
+    padding: 4px 8px;
+    margin-left: 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: $light_black;
+    width: fit-content;
+  }
+
+  &Active {
+    background-color: $light_affirmative_100;
+  }
+
+  &Pending{
+    background-color: $neutral_dark10;
+  }
+
+  &Declined{
+    background-color: $product_negative_light;}
+
+  &Error{
+    background-color: $neutral_dark10;
+  }
+
+  &PillIcon {
+    margin-right: 5px;
   }
 }

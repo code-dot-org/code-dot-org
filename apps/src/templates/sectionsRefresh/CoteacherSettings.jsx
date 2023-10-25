@@ -22,6 +22,17 @@ export default function CoteacherSettings({
   const [removedCoteacherIds, setRemovedCoteacherIds] = useState([]);
   const [coteacherToRemove, setCoteacherToRemove] = useState({});
 
+  const statusSortValue = coteacher => {
+    if (coteacher.status === 'invited') {
+      return 0;
+    } else if (coteacher.status === 'declined') {
+      return 1;
+    } else if (coteacher.status === 'active') {
+      return 2;
+    }
+    return 3;
+  };
+
   const coteachers = React.useMemo(() => {
     const unfiltered = sectionInstructors
       ? [
@@ -31,11 +42,13 @@ export default function CoteacherSettings({
       : coteachersToAdd;
 
     // Remove the primary instructor and any coteachers that have been removed
-    return unfiltered.filter(
-      instructor =>
-        instructor.instructorEmail !== primaryInstructor.email &&
-        !removedCoteacherIds.includes(instructor.id)
-    );
+    return unfiltered
+      .filter(
+        instructor =>
+          instructor.instructorEmail !== primaryInstructor.email &&
+          !removedCoteacherIds.includes(instructor.id)
+      )
+      .sort((a, b) => statusSortValue(a) - statusSortValue(b));
   }, [
     sectionInstructors,
     coteachersToAdd,
@@ -81,7 +94,30 @@ export default function CoteacherSettings({
     }
   };
 
-  const getTableRow = (index, coteacher) => {
+  const pill = (text, className, icon) => {
+    return (
+      <div className={classNames(className, styles.tablePill)}>
+        <StrongText>
+          <FontAwesome icon={icon} className={styles.tablePillIcon} />
+          {text}
+        </StrongText>
+      </div>
+    );
+  };
+
+  const statusPill = status => {
+    if (!status || status === 'invited') {
+      return pill('PENDING', styles.tablePending, 'ellipsis');
+    } else if (status === 'active') {
+      return pill('ACCEPTED', styles.tableActive, 'check');
+    } else if (status === 'declined') {
+      return pill('DECLINED', styles.tableDeclined, 'xmark');
+    } else {
+      return pill('ERROR', styles.tableError, 'xmark');
+    }
+  };
+
+  const tableRow = (index, coteacher) => {
     return (
       <tr key={index} className={styles.tableRow}>
         <td className={styles.tableInfoCell}>
@@ -96,7 +132,9 @@ export default function CoteacherSettings({
             {coteacher.instructorEmail}
           </div>
         </td>
-        <td>{coteacher.status}</td>
+        <td className={styles.tableStatusCell}>
+          {statusPill(coteacher.status)}
+        </td>
         <td>
           <button
             type="button"
@@ -155,7 +193,7 @@ export default function CoteacherSettings({
     return (
       <table className={styles.table}>
         <tbody>
-          {coteachers.map((instructor, id) => getTableRow(id, instructor))}
+          {coteachers.map((instructor, id) => tableRow(id, instructor))}
         </tbody>
       </table>
     );
