@@ -83,6 +83,8 @@
   "aiCannotAssess": "This learning goal is too subjective for AI to evaluate.",
   "aiConfidence": "AI has {aiConfidence} confidence in this assessment",
   "aiConfidenceTooltip": "The confidence score is calculated from how well the AI assessment worked for this learning goal on our training set of student projects. Pay extra attention to projects with medium or low confidence.",
+  "aiEvaluation_student_must_submit": "Student has not submitted project for evaluation. Run AI evaluation from the settings tab.",
+  "aiEvaluation_not_run": "AI evaluation not run for this project. Run from the settings tab or contact support.",
   "aiEvaluationStatus_initial_load": "Gathering AI Analysis",
   "aiEvaluationStatus_not_attempted": "Student has not attempted this level. No AI analysis available.",
   "aiEvaluationStatus_already_evaluated": "AI analysis already completed for this project.",
