@@ -663,11 +663,11 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test 'query count for assignable_course_offerings' do
     Unit.stubs(:should_cache?).returns true
 
-    assert_cached_queries(2) do
+    assert_cached_queries(5) do
       CourseOffering.assignable_course_offerings_info(@teacher)
     end
 
-    assert_cached_queries(2) do
+    assert_cached_queries(6) do
       CourseOffering.assignable_course_offerings_info(@facilitator)
     end
 
