@@ -79,21 +79,18 @@ function prepareSourcesForWorkspaces(source) {
  * @returns {parsedSource: Object, blockOrderMap: Object}
  */
 function parseSource(source) {
-  console.log('xml source', source);
   let isXml = stringIsXml(source);
   let parsedSource;
   let blockOrderMap;
 
   if (isXml) {
     const xml = parseXmlElement(source);
-    console.log('xml', xml);
     parsedSource = convertXmlToJson(xml);
     blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
   } else {
     parsedSource = JSON.parse(source);
   }
 
-  console.log('parsed source', parsedSource);
   return {parsedSource, blockOrderMap};
 }
 
@@ -276,23 +273,16 @@ export function getCode(workspace, getSourceAsJson) {
 
   const mainWorkspaceSerialization =
     Blockly.serialization.workspaces.save(workspace);
-
-  console.log('**** main workspace serialization', mainWorkspaceSerialization);
   const hiddenWorkspaceSerialization = Blockly.getHiddenDefinitionWorkspace()
     ? Blockly.serialization.workspaces.save(
         Blockly.getHiddenDefinitionWorkspace()
       )
     : null;
 
-  console.log(
-    '**** hidden workspace serialization',
-    hiddenWorkspaceSerialization
-  );
   const combinedSerialization = getCombinedSerialization(
     mainWorkspaceSerialization,
     hiddenWorkspaceSerialization
   );
-  console.log('**** combined serialization', combinedSerialization);
   return JSON.stringify(combinedSerialization);
 }
 

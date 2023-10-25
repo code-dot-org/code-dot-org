@@ -24,7 +24,6 @@ export function convertXmlToJson(xml) {
   //   x: the x attribute found in <block/> element
   //   y: the y attribute found in <block/> element
   const xmlBlocks = Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
-  console.log('xmlBlocks', xmlBlocks);
   const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
 
   if (xmlBlocks.length && stateToLoad.blocks) {
