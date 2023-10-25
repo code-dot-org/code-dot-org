@@ -2,80 +2,108 @@
 import spacy
 import json
 
-# Load the spaCy model
+# Load the spaCy natural language processing model - English tokenizer, tagger, parser and NER (named entity recognition)
 nlp = spacy.load("en_core_web_md")
 
-# Define your "id" (emojis) and foreground/background/palette lists
-# For items like backgrounds/foregrounds, certain values were adjusted to reflect the most context-rich but open-ended word within the phrase
+# Define your "emoji_id" (emojis) and foreground/background/palette lists
+# For items like background/foreground effects, certain values were adjusted to reflect the most context-rich but open-ended word within the phrase
 # e.g. "ripples_random" is adjusted to "ripples", "smiling_poop" -> "poop", etc.
 # This was done due to spacy interpreting underscored phrases as a unique word and phrases such as "smiling poop" not correlating highly with most anything within a internet scraped corpus
-id = ["poopy", "romantic", "party", "silly", "sparkle", "happy", "magic", "spooky", "cute", "funky", "wavy", "lights", "rainbow", "robot", "chaotic", "disco", "zen", "fast", "evil", "cold", "cosmic", "sad", "black-and-white", "warm", "cool"]
-palettes = ["cool", "electronic", "ice cream", "neon", 'rave', "tropical","vintage",'warm', 'greyscale', 'sky', 'ocean', 'sunrise', 'sunset', 'spring', 'summer', 'autumn', 'winter', 'twinkling', 'rainbow', 'roses']
-backgrounds = ['circles',
-    'color',
-    'diamonds',
-    'disco',
-    'fireworks',
-    'swirl',
-    'kaleidoscope',
-    'lasers',
-    'splatter',
-    'rainbow',
-    'snowflakes',
-    'text',
-    'galaxy',
-    'sparkles',
-    'spiral',
-    'disco',
-    'stars',
-    'music',
-    'ripples',
-    'random',
-    'quads',
-    'flowers',
-    'squiggles',
-    'stars',
-    'petals',
-    'clouds',
-    'grid',
-    'starburst',
-  ]
+emoji_ids = ["poopy", "romantic", "party", "silly", "sparkle", "happy", "magic", "spooky", "cute", "funky", "wavy", "lights", "rainbow", "robot", "chaotic", "disco", "zen", "fast", "evil", "cold", "cosmic", "sad", "black-and-white", "warm", "cool"]
 
-foregrounds = [
-    'bubbles',
-    'confetti',
-    'hearts',
-    'music',
-    'pineapples',
-    'pizzas',
-    'poop',
-    'rain',
-    'rainbows',
-    'smile',
-    'spotlight',
-    'lights',
-    'tacos',
-    'emojis',
-    'hearts',
-    'stars',
-    'paint',
-  ]
+# color_palettes dictionary contains python name as key and blockly id as value.
+color_palettes_map = {
+  'rainbow pastel': 'default',  
+  'green blue': 'cool',
+  'electronic': 'elecronic',
+  'creamy pastel': 'iceCream',
+  'neon': 'neon',
+  'black and white': 'rave',
+  'sweet candy rainbow': 'tropical',
+  'retro': 'vintage',
+  'red orange': 'warm',
+  'grayscale': 'grayscale',
+  'pink blue': 'sky',
+  'blue': 'ocean',
+  'coral': 'sunrise',
+  'purple': 'sunset',
+  'green': 'spring',
+  'flower': 'summer',
+  'autumn': 'autumn',
+  'icy blue': 'winter',
+  'orange': 'twinkling',
+  'bright rainbow': 'rainbow',
+  'roses': 'roses',
+}
+
+# background_effects_map contains python name as key and blockly id as value.
+background_effects_map = {
+    'pulse': 'circles',
+    'solid colors': 'color_cycle',
+    'diamonds': 'diamonds',
+    'disco':'disco_ball',
+    'firework': 'fireworks',
+    'swirl': 'swirl',
+    'kaleidoscope': 'kaleidoscope',
+    'laser beam': 'lasers',
+    'paint splatter': 'splatter',
+    'rainbow': 'rainbow',
+    'snow fall': 'snowflakes',
+    'words': 'text',
+    'galaxy': 'galaxy',
+    'sparkles': 'sparkles',
+    'spiral': 'spiral',
+    'squares': 'disco',
+    'twinkle': 'stars',
+    'sound wave': 'music_wave',
+    'circles': 'ripples',
+    'dots': 'ripples_random',
+    'moving shapes': 'quads',
+    'flowers': 'flowers',
+    'squiggles': 'squiggles',
+    'stars': 'growing_stars',
+    'flower petals': 'blooming_petals',
+    'clouds': 'clouds',
+    'light grid': 'frosted_grid',
+    'starburst': 'starburst',
+    'groovy shapes': 'higher_power',
+}
+
+foreground_effects = {
+    'bubbles': 'bubbles',
+    'confetti': 'confetti',
+    'red hearts': 'hearts_red',
+    'music notes': 'music_notes',
+    'pineapple': 'pineapples',
+    'pizza': 'pizzas',
+    'poop': 'smiling_poop',
+    'rain': 'rain',
+    'rainbow': 'floating_rainbows',
+    'smily face': 'smile_face',
+    'spotlight': 'spotlight',
+    'stage lights': 'color_lights',
+    'taco': 'raining_tacos',
+    'emojis': 'emojis',
+    'colorful hearts': 'hearts_colorful',
+    'stars': 'exploding_stars'
+    'rainbow paint': 'paint_drip',
+}
 
 palettedict = {}
 bgdict = {}
 fgdict = {}
 
 # Calculate and print similarity scores
-for id_word in id:
+for id_word in emoji_ids:
     palette_scores = []
-    for palette_word in palettes:
+    for palette_word in color_palettes:
         id_token = nlp(id_word)
         palette_token = nlp(palette_word)
         similarity_score = id_token.similarity(palette_token)
         palette_scores.append(round(similarity_score, 2))
     
     bg_scores = []
-    for bg_word in backgrounds:
+    for bg_word in background_effects:
         id_token = nlp(id_word)
         bg_token = nlp(bg_word)
         similarity_score = id_token.similarity(bg_token)
@@ -92,61 +120,13 @@ for id_word in id:
     bgdict[id_word] = bg_scores
     fgdict[id_word] = fg_scores
 
-paletteoutput = {'emojiAssociations': palettedict, 'output': palettes}
-bgoutput = {'emojiAssociations': bgdict, 'output': backgrounds}
+paletteoutput = {'emojiAssociations': palettedict, 'output': color_palettes}
+bgoutput = {'emojiAssociations': bgdict, 'output': background_effects}
 fgoutput = {'emojiAssociations': fgdict, 'output': foregrounds}
 
 # Modify output to reflect true file names as stored within our typescript codebase
-bgoutput['output'] = [
-    'circles',
-    'color_cycle',
-    'diamonds',
-    'disco_ball',
-    'fireworks',
-    'swirl',
-    'kaleidoscope',
-    'lasers',
-    'splatter',
-    'rainbow',
-    'snowflakes',
-    'text',
-    'galaxy',
-    'sparkles',
-    'spiral',
-    'disco',
-    'stars',
-    'music_wave',
-    'ripples',
-    'ripples_random',
-    'quads',
-    'flowers',
-    'squiggles',
-    'growing_stars',
-    'blooming_petals',
-    'clouds',
-    'frosted_grid',
-    'starburst',
-  ]
 
-fgoutput['output'] = [
-    'bubbles',
-    'confetti',
-    'hearts_red',
-    'music_notes',
-    'pineapples',
-    'pizzas',
-    'smiling_poop',
-    'rain',
-    'floating_rainbows',
-    'smile_face',
-    'spotlight',
-    'color_lights',
-    'raining_tacos',
-    'emojis',
-    'hearts_colorful',
-    'exploding_stars',
-    'paint_drip',
-]
+    
 
 with open("apps/static/dance/ai/model/cached-spacy-palette-map", "w") as json_file:
     json_file.write(json.dumps(paletteoutput))
