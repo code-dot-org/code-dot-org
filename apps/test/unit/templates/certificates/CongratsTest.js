@@ -3,10 +3,6 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
-import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
-import StudentsBeyondHoc from '@cdo/apps/templates/certificates/StudentsBeyondHoc';
-import TeachersBeyondHoc from '@cdo/apps/templates/certificates/TeachersBeyondHoc';
-import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
 describe('Congrats', () => {
   const userTypes = ['signedOut', 'teacher', 'student'];
@@ -23,45 +19,42 @@ describe('Congrats', () => {
       );
       expect(wrapper.find(Certificate).exists()).to.be.true;
     });
-
-    it(`renders a StudentsBeyondHoc for user type ${userType} for HOC course`, () => {
-      const wrapper = shallow(
-        <Congrats {...defaultProps} userType={userType} isHocTutorial />
-      );
-      expect(wrapper.find(StudentsBeyondHoc).exists()).to.be.true;
-    });
-
-    it(`renders a GraduateToNextLevel for user type ${userType} for CSF course`, () => {
-      const wrapper = shallow(
-        <Congrats {...defaultProps} userType={userType} isHocTutorial={false} />
-      );
-      expect(wrapper.find(GraduateToNextLevel).exists()).to.be.true;
-    });
-
-    it(`renders a PetitionCallToAction component with tutorial for user type ${userType}`, () => {
-      const wrapper = shallow(
-        <Congrats {...defaultProps} userType={userType} tutorial="coursea" />
-      );
-      expect(wrapper.find(PetitionCallToAction).exists()).to.be.true;
-      expect(wrapper.find(PetitionCallToAction).props().tutorial).to.not.be
-        .undefined;
-    });
   });
 
-  it('renders a TeachersBeyondHoc component, for teachers', () => {
+  it('renders curriculum catalog button, for teachers', () => {
     const wrapper = shallow(<Congrats {...defaultProps} userType="teacher" />);
-    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
+
+    wrapper.find('a[href="/catalog"]');
   });
 
-  it('renders a TeachersBeyondHoc component, for signed out', () => {
-    const wrapper = shallow(
-      <Congrats {...defaultProps} userType="signedOut" />
-    );
-    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
-  });
-
-  it('does not render a TeachersBeyondHoc component, for students', () => {
+  it('renders two learning for ages buttons, for students', () => {
     const wrapper = shallow(<Congrats {...defaultProps} userType="student" />);
-    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.false;
+
+    wrapper.find('a[href="https://code.org/student/elementary"]');
+    wrapper.find('a[href="https://code.org/student/middle-high"]');
+  });
+
+  it('renders a professional learning section, for teachers', () => {
+    const wrapper = shallow(<Congrats {...defaultProps} userType="teacher" />);
+
+    const congratsPageText = wrapper.text();
+
+    expect(congratsPageText).to.include('Teach with Code.org');
+    expect(congratsPageText).to.include('Professional Learning');
+  });
+
+  it('renders a professional learning section, for signed out', () => {
+    const wrapper = shallow(<Congrats {...defaultProps} userType="teacher" />);
+    const congratsPageText = wrapper.text();
+
+    expect(congratsPageText).to.include('Teach with Code.org');
+    expect(congratsPageText).to.include('Professional Learning');
+  });
+
+  it('does not render a professional learning section, for students', () => {
+    const wrapper = shallow(<Congrats {...defaultProps} userType="student" />);
+    const congratsPageText = wrapper.text();
+
+    expect(congratsPageText).to.not.include('Teach with Code.org');
   });
 });
