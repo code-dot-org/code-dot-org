@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
-import {MenuOption} from 'blockly/core';
 import {CachedWeightsMapping} from './DanceAiClient';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
@@ -40,15 +39,15 @@ type Result = {[key in FieldKey]: string};
 interface AiExplanationViewProps {
   inputs: string[];
   result: Result;
-  backgroundMapping: MenuOption[];
-  foregroundMapping: MenuOption[];
-  paletteMapping: MenuOption[];
+  backgroundMapping: [string, string][];
+  foregroundMapping: [string, string][];
+  paletteMapping: [string, string][];
 }
 
 interface FieldObject {
   name: string;
   data: CachedWeightsMapping;
-  labelTranslations: MenuOption[];
+  labelTranslations: [string, string][];
 }
 
 interface Fields {
@@ -110,7 +109,7 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
             const translations = currentField.labelTranslations;
             const translationTuple = translations.find(
               translationMapping =>
-                translationMapping[1] === `"${result[currentFieldKey]}"`
+                translationMapping[1] === result[currentFieldKey]
             );
 
             if (
@@ -135,7 +134,7 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
   const labels = currentField.data.output.map(label => {
     const translations = currentField.labelTranslations;
     const translationTuple = translations.find(
-      translationMapping => translationMapping[1] === `"${label}"`
+      translationMapping => translationMapping[1] === label
     );
 
     // if we can't find a translation for the key from the model,

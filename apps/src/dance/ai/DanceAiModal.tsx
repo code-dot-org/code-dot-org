@@ -59,9 +59,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
-  const [backgroundMapping, setBackgroundMapping] = useState<MenuOption[]>([]);
-  const [foregroundMapping, setForegroundMapping] = useState<MenuOption[]>([]);
-  const [paletteMapping, setPaletteMapping] = useState<MenuOption[]>([]);
+  const [backgroundMapping, setBackgroundMapping] = useState<
+    [string, string][]
+  >([]);
+  const [foregroundMapping, setForegroundMapping] = useState<
+    [string, string][]
+  >([]);
+  const [paletteMapping, setPaletteMapping] = useState<[string, string][]>([]);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -211,13 +215,31 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     ) as FieldDropdown;
 
     if (!foregroundMapping.length) {
-      setForegroundMapping(foregroundFieldDropdown.getOptions());
+      const translations = foregroundFieldDropdown
+        .getOptions()
+        .map(translation => {
+          translation[1] = translation[1].replace(/"/g, '');
+          return translation;
+        }) as [string, string][];
+      setForegroundMapping(translations);
     }
     if (!backgroundMapping.length) {
-      setBackgroundMapping(backgroundFieldDropdown.getOptions());
+      const translations = backgroundFieldDropdown
+        .getOptions()
+        .map(translation => {
+          translation[1] = translation[1].replace(/"/g, '');
+          return translation;
+        }) as [string, string][];
+      setBackgroundMapping(translations);
     }
     if (!paletteMapping.length) {
-      setPaletteMapping(paletteFieldDropdown.getOptions());
+      const translations = paletteFieldDropdown
+        .getOptions()
+        .map(translation => {
+          translation[1] = translation[1].replace(/"/g, '');
+          return translation;
+        }) as [string, string][];
+      setPaletteMapping(translations);
     }
 
     // Connect the blocks.
