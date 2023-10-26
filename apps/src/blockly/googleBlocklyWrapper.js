@@ -185,7 +185,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
-  blocklyWrapper.wrapReadOnlyProperty('config');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ConnectionType');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
