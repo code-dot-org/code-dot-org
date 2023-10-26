@@ -17,6 +17,7 @@ class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
   test 'summarize_debug' do
     rubric_ai_evaluation = create(
       :rubric_ai_evaluation,
+      rubric: @rubric,
       user: @student,
       requester: @student,
     )
