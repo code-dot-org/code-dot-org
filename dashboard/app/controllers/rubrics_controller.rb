@@ -183,7 +183,7 @@ class RubricsController < ApplicationController
 
   def ai_evaluated_at
     learning_goal_ids = @rubric.learning_goals.pluck(:id)
-    LearningGoalAiEvaluation.
+    OldLearningGoalAiEvaluation.
       where(user_id: @user.id, learning_goal_id: learning_goal_ids).
       order(created_at: :desc).
       first&.
