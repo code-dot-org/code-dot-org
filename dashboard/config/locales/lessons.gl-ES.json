@@ -42,12 +42,15 @@
           "name": "Algoritmos: Tangrams"
         },
         "express-2017/Introduction": {
+          "name": "Introdución",
           "name": "Introdución"
         },
         "express-2017/Building a Foundation": {
+          "name": "Construíndo unha base",
           "name": "Construíndo unha base"
         },
         "express-2017/Nested Loops": {
+          "name": "Bucles aniñados",
           "name": "Bucles aniñados"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -318,174 +321,230 @@
           "name": "Diversión con bucles \"para\" (for)"
         },
         "csd3-2021/Variables": {
+          "name": "Variables",
           "name": "Variables"
         },
         "csd3-2021/Text": {
+          "name": "Texto",
           "name": "Texto"
         },
         "csd3-2021/Conditionals": {
+          "name": "Condicionais",
           "name": "Condicionais"
         },
         "csd3-2021/Functions": {
+          "name": "Funcións",
           "name": "Funcións"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Funcións con parámetros",
           "name": "Funcións con parámetros"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Mapas Felices",
           "name": "Mapas Felices"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Creando camiños",
           "name": "Creando camiños"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Bucleándose",
           "name": "Bucleándose"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "O Gran Evento",
           "name": "O Gran Evento"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Pulseiras Binarias",
           "name": "Pulseiras Binarias"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado",
           "name": "Programación en Papel Cadriculado"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Programación por relevos",
           "name": "Programación por relevos"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Condicionais con cartas",
           "name": "Condicionais con cartas"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Composición",
           "name": "Composición"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Diversión con bucles \"para\" (for)",
           "name": "Diversión con bucles \"para\" (for)"
         },
         "coursef-2021/Internet": {
+          "name": "A Internet",
           "name": "A Internet"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Fundamentos de Informática"
         },
         "csd3-2022/Variables": {
+          "name": "Variables",
           "name": "Variables"
         },
         "csd3-2022/Text": {
+          "name": "Texto",
           "name": "Texto"
         },
         "csd3-2022/Conditionals": {
+          "name": "Condicionais",
           "name": "Condicionais"
         },
         "csd3-2022/Functions": {
+          "name": "Funcións",
           "name": "Funcións"
         },
         "csd6-2022/Functions": {
+          "name": "Funcións",
           "name": "Funcións"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Mapas Felices",
           "name": "Mapas Felices"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Creando camiños",
           "name": "Creando camiños"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Bucleándose",
           "name": "Bucleándose"
         },
         "coursec-2022/The Big Event": {
+          "name": "O Gran Evento",
           "name": "O Gran Evento"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Pulseiras Binarias",
           "name": "Pulseiras Binarias"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado",
           "name": "Programación en Papel Cadriculado"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Programación por relevos",
           "name": "Programación por relevos"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Condicionais con cartas",
           "name": "Condicionais con cartas"
         },
         "coursee-2022/Songwriting": {
+          "name": "Composición",
           "name": "Composición"
         },
         "coursef-2022/The Internet": {
+          "name": "A Internet",
           "name": "A Internet"
         },
         "csd3-2023/Variables": {
+          "name": "Variables",
           "name": "Variables"
         },
         "csd3-2023/Text": {
+          "name": "Texto",
           "name": "Texto"
         },
         "csd3-2023/Conditionals": {
+          "name": "Condicionais",
           "name": "Condicionais"
         },
         "csd3-2023/Functions": {
+          "name": "Funcións",
           "name": "Funcións"
         },
         "csd6a-2023/Functions": {
+          "name": "Funcións",
           "name": "Funcións"
         },
         "csd6b-2023/Functions": {
+          "name": "Funcións",
           "name": "Funcións"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Mapas Felices",
           "name": "Mapas Felices"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Creando camiños",
           "name": "Creando camiños"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Bucleándose",
           "name": "Bucleándose"
         },
         "coursec-2023/The Big Event": {
+          "name": "O Gran Evento",
           "name": "O Gran Evento"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Pulseiras Binarias",
           "name": "Pulseiras Binarias"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado",
           "name": "Programación en Papel Cadriculado"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Programación por relevos",
           "name": "Programación por relevos"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Condicionais con cartas",
           "name": "Condicionais con cartas"
         },
         "coursee-2023/Songwriting": {
+          "name": "Composición",
           "name": "Composición"
         },
         "coursef-2023/The Internet": {
+          "name": "A Internet",
           "name": "A Internet"
         },
         "artist/Artist": {
+          "name": "Artista",
           "name": "Artista"
         },
         "flappy/Flappy Code": {
+          "name": "Código do Flappy bird",
           "name": "Código do Flappy bird"
         },
         "frozen/Artist": {
+          "name": "Programa con Ana e Elsa",
           "name": "Programa con Ana e Elsa"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Laboratorio de xogo de Gumball",
           "name": "Laboratorio de xogo de Gumball"
         },
         "hourofcode/Maze": {
+          "name": "Labirinto",
           "name": "Labirinto"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "O xogo de laboratorio da Idade de xeo",
           "name": "O xogo de laboratorio da Idade de xeo"
         },
         "infinity/Infinity": {
+          "name": "Laboratorio de Xogo Disney Infinity",
           "name": "Laboratorio de Xogo Disney Infinity"
         },
         "mc/Hour of Code 2015": {
+          "name": "Hora do Código Minecraft",
           "name": "Hora do Código Minecraft"
         },
         "playlab/Play Lab": {
+          "name": "Laboratorio de Xogos",
           "name": "Laboratorio de Xogos"
         },
         "allthethings/Jigsaw": {
