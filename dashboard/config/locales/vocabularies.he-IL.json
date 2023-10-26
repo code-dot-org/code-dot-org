@@ -3,652 +3,897 @@
     "data": {
       "vocabularies": {
         "copyright/csd/2021": {
+          "word": "זכויות יוצרים",
           "word": "זכויות יוצרים"
         },
         "debugging/csd/2021": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "variable/csd/2021": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "sprite/csd/2021": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "conditionals/csd/2021": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "abstraction/csd/2021": {
+          "word": "הפשטה",
           "word": "הפשטה"
         },
         "function/csd/2021": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "machine_learning/csd/2021": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש",
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "debugging/coursea/2021": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "click/coursea/2021": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/coursea/2021": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/courseb/2021": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "click/courseb/2021": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/courseb/2021": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/coursec/2021": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "binary/coursec/2021": {
+          "word": "בינארי",
           "word": "בינארי"
         },
         "debugging/coursed/2021": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "conditionals/coursed/2021": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "behavior/coursee/2021": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "sprite/coursee/2021": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "copyright/coursee/2021": {
+          "word": "זכויות יוצרים",
           "word": "זכויות יוצרים"
         },
         "function/coursee/2021": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "conditionals/coursee/2021": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "define/coursee/2021": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "sprite/coursef/2021": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "behavior/coursef/2021": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "variable/coursef/2021": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "machine_learning/coursef/2021": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש",
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "dns/coursef/2021": {
+          "word": "DNS",
           "word": "DNS"
         },
         "internet/coursef/2021": {
+          "word": "אינטרנט",
           "word": "אינטרנט"
         },
         "url/coursef/2021": {
+          "word": "קישור",
           "word": "קישור"
         },
         "define/coursef/2021": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "debugging/express/2021": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "behavior/express/2021": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "sprite/express/2021": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "conditionals/express/2021": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "function/express/2021": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "variable/express/2021": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "define/express/2021": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "click/pre-express/2021": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/pre-express/2021": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/pre-express/2021": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "copyright/csd/2022": {
+          "word": "זכויות יוצרים",
           "word": "זכויות יוצרים"
         },
         "debugging/csd/2022": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "variable/csd/2022": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "sprite/csd/2022": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "conditionals/csd/2022": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "abstraction/csd/2022": {
+          "word": "הפשטה",
           "word": "הפשטה"
         },
         "function/csd/2022": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "machine_learning/csd/2022": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש",
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "debugging/coursea/2022": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "click/coursea/2022": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/coursea/2022": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/courseb/2022": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "click/courseb/2022": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/courseb/2022": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/coursec/2022": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "data/coursec/2022": {
+          "word": "נתונים",
           "word": "נתונים"
         },
         "binary/coursec/2022": {
+          "word": "בינארי",
           "word": "בינארי"
         },
         "debugging/coursed/2022": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "conditionals/coursed/2022": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "behavior/coursee/2022": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "sprite/coursee/2022": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "function/coursee/2022": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "conditionals/coursee/2022": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "copyright/coursee/2022": {
+          "word": "זכויות יוצרים",
           "word": "זכויות יוצרים"
         },
         "define/coursee/2022": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "sprite/coursef/2022": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "behavior/coursef/2022": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "variable/coursef/2022": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "machine_learning/coursef/2022": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש",
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "dns/coursef/2022": {
+          "word": "DNS",
           "word": "DNS"
         },
         "internet/coursef/2022": {
+          "word": "אינטרנט",
           "word": "אינטרנט"
         },
         "url/coursef/2022": {
+          "word": "קישור",
           "word": "קישור"
         },
         "define/coursef/2022": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "debugging/express/2022": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "behavior/express/2022": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "sprite/express/2022": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "conditionals/express/2022": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "function/express/2022": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "variable/express/2022": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "define/express/2022": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "click/pre-express/2022": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/pre-express/2022": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/pre-express/2022": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "artificial_intelligence/ai-ethics/2023": {
+          "word": "בינה מלאכותית",
           "word": "בינה מלאכותית"
         },
         "adaptation/csc-adaptations/2023": {
+          "word": "הסתגלות",
+          "definition": "שינוי באורגניזם כדי לשרוד טוב יותר את סביבתו",
           "word": "הסתגלות",
           "definition": "שינוי באורגניזם כדי לשרוד טוב יותר את סביבתו"
         },
         "code/csc-adaptations/2023": {
           "word": "קוד",
+          "definition": "(v) לכתוב הוראות למחשב",
+          "word": "קוד",
           "definition": "(v) לכתוב הוראות למחשב"
         },
         "event/csc-adaptations/2023": {
+          "definition": "פעולה שגורמת למשהו לקרות",
           "definition": "פעולה שגורמת למשהו לקרות"
         },
         "evolution/csc-adaptations/2023": {
+          "word": "אבולוציה",
+          "definition": "השינוי במאפייני המין לאורך כמה דורות",
           "word": "אבולוציה",
           "definition": "השינוי במאפייני המין לאורך כמה דורות"
         },
         "migration/csc-adaptations/2023": {
           "word": "הגירה",
+          "definition": "מהלך למרחקים ארוכים בעל חיים עושה חיפוש אחר סביבה טובה יותר",
+          "word": "הגירה",
           "definition": "מהלך למרחקים ארוכים בעל חיים עושה חיפוש אחר סביבה טובה יותר"
         },
         "camouflage/csc-adaptations/2023": {
+          "word": "הסוואה",
+          "definition": "מנגנון הגנה שאורגניזמים משתמשים בו כדי להסוות את המראה שלהם ולהשתלב עם סביבתם",
           "word": "הסוואה",
           "definition": "מנגנון הגנה שאורגניזמים משתמשים בו כדי להסוות את המראה שלהם ולהשתלב עם סביבתם"
         },
         "behavior/csc-adaptations/2023": {
           "word": "התנהגות",
+          "definition": "קבוצה של פעולות אתה רוצה ספרייט לבצע שוב ושוב. ",
+          "word": "התנהגות",
           "definition": "קבוצה של פעולות אתה רוצה ספרייט לבצע שוב ושוב. "
         },
         "code_v_/csc-bookcovers/2023": {
           "word": "קוד (v)",
+          "definition": "לכתוב הוראות למחשב.",
+          "word": "קוד (v)",
           "definition": "לכתוב הוראות למחשב."
         },
         "sprite/csc-bookcovers/2023": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "background/csc-bookcovers/2023": {
+          "word": "רקע",
+          "definition": "הוויזואלי מאחורי הדברים העיקריים או האנשים על המסך.",
           "word": "רקע",
           "definition": "הוויזואלי מאחורי הדברים העיקריים או האנשים על המסך."
         },
         "character/csc-bookcovers/2023": {
           "word": "אופי",
+          "definition": "אדם, חיה, ישות, יצור של דבר בסיפור.",
+          "word": "אופי",
           "definition": "אדם, חיה, ישות, יצור של דבר בסיפור."
         },
         "setting/csc-bookcovers/2023": {
+          "word": "הגדרה",
+          "definition": "הזמן והמקום (או מתי ואיפה) של סיפור.",
           "word": "הגדרה",
           "definition": "הזמן והמקום (או מתי ואיפה) של סיפור."
         },
         "summary/csc-bookcovers/2023": {
           "word": "סיכום",
+          "definition": "לספר את החלקים החשובים ביותר בטקסט, במילים שלך, בצורה הרבה יותר קצרה",
+          "word": "סיכום",
           "definition": "לספר את החלקים החשובים ביותר בטקסט, במילים שלך, בצורה הרבה יותר קצרה"
         },
         "code/csc-ecosystems/2023": {
           "word": "קוד",
+          "definition": "(v) לכתוב הוראות למחשב",
+          "word": "קוד",
           "definition": "(v) לכתוב הוראות למחשב"
         },
         "condition/csc-ecosystems/2023": {
+          "definition": "משהו שתוכנית בודקת כדי לראות אם זה נכון לפני שהיא מאפשרת פעולה",
           "definition": "משהו שתוכנית בודקת כדי לראות אם זה נכון לפני שהיא מאפשרת פעולה"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "תנאים",
+          "definition": "הצהרות הפועלות רק בתנאים מסוימים",
           "word": "תנאים",
           "definition": "הצהרות הפועלות רק בתנאים מסוימים"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "מערכת אקולוגית",
+          "definition": "קהילה ביולוגית של אורגניזמים המקיימים אינטראקציה וסביבתם",
+          "word": "מערכת אקולוגית",
           "definition": "קהילה ביולוגית של אורגניזמים המקיימים אינטראקציה וסביבתם"
         },
         "event/csc-ecosystems/2023": {
+          "definition": "פעולה שגורמת למשהו לקרות",
           "definition": "פעולה שגורמת למשהו לקרות"
         },
         "overfishing/csc-ecosystems/2023": {
+          "word": "דיג יתר",
+          "definition": "הסרת דגים מהר יותר ממה שהם יכולים להתרבות",
           "word": "דיג יתר",
           "definition": "הסרת דגים מהר יותר ממה שהם יכולים להתרבות"
         },
         "simulation/csc-ecosystems/2023": {
           "word": "סימולציה",
+          "definition": "מודל מחשב לצורך לימוד.",
+          "word": "סימולציה",
           "definition": "מודל מחשב לצורך לימוד."
         },
         "debug/csc-ecosystems/2023": {
+          "word": "ניפוי באגים",
+          "definition": "איתור ותיקון שגיאות או בעיות בקוד.",
           "word": "ניפוי באגים",
           "definition": "איתור ותיקון שגיאות או בעיות בקוד."
         },
         "variable/csc-ecosystems/2023": {
           "word": "משתנה",
+          "definition": "מיכל שיכול לאחסן ערך. ",
+          "word": "משתנה",
           "definition": "מיכל שיכול לאחסן ערך. "
         },
         "ecologist/csc-ecosystems/2023": {
+          "word": "אקולוג",
+          "definition": "מדען שחוקר כיצד בעלי חיים וצמחים מתקשרים עם סביבתם.",
           "word": "אקולוג",
           "definition": "מדען שחוקר כיצד בעלי חיים וצמחים מתקשרים עם סביבתם."
         },
         "energy/csc-ecosystems/2023": {
           "word": "אנרגיה",
+          "definition": "מועבר בין אורגניזמים בקורי מזון מיצרנים לצרכנים. האנרגיה משמשת אורגניזמים לביצוע משימות מורכבות.",
+          "word": "אנרגיה",
           "definition": "מועבר בין אורגניזמים בקורי מזון מיצרנים לצרכנים. האנרגיה משמשת אורגניזמים לביצוע משימות מורכבות."
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "שרשרת מזון ",
+          "definition": "קבוצה של אורגניזמים המקושרים לפי סדר המזון שהם אוכלים, מיצרנים לצרכנים, ומטרף לטורפים.",
+          "word": "שרשרת מזון ",
           "definition": "קבוצה של אורגניזמים המקושרים לפי סדר המזון שהם אוכלים, מיצרנים לצרכנים, ומטרף לטורפים."
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "קוד",
           "word": "קוד"
         },
         "landmark/csc-mappinglandmarks/2023": {
+          "word": "לנדמרק",
+          "definition": "ציון דרך הוא אובייקט (טבעי או מעשה ידי אדם) שיש לו חשיבות או הופך מקום לזיהוי בקלות.",
           "word": "לנדמרק",
           "definition": "ציון דרך הוא אובייקט (טבעי או מעשה ידי אדם) שיש לו חשיבות או הופך מקום לזיהוי בקלות."
         },
         "sprite/csc-mappinglandmarks/2023": {
           "word": "ספרייט",
+          "definition": "תמונה או דמות בתוכנית שלך.",
+          "word": "ספרייט",
           "definition": "תמונה או דמות בתוכנית שלך."
         },
         "map/csc-mappinglandmarks/2023": {
+          "word": "מפה",
+          "definition": "ייצוג של אזור יבשה או ים המציג מאפיינים פיזיים, ערים, כבישים וכו '.",
           "word": "מפה",
           "definition": "ייצוג של אזור יבשה או ים המציג מאפיינים פיזיים, ערים, כבישים וכו '."
         },
         "pattern/csc-starquilts/2023": {
           "word": "תבנית",
+          "definition": "משהו שקורה או מופיע בצורה קבועה וחוזרת על עצמה",
+          "word": "תבנית",
           "definition": "משהו שקורה או מופיע בצורה קבועה וחוזרת על עצמה"
         },
         "rhombus/csc-starquilts/2023": {
+          "word": "מעוין",
+          "definition": "מצולע עם ארבעה צדדים שווים, צדדים מנוגדים מקבילים, זוויות מנוגדות שוות",
           "word": "מעוין",
           "definition": "מצולע עם ארבעה צדדים שווים, צדדים מנוגדים מקבילים, זוויות מנוגדות שוות"
         },
         "star_quilt/csc-starquilts/2023": {
           "word": "שמיכת כוכב",
+          "definition": "מתנה מסורתית ומוערכת בקרב אינדיאנים מהמישורים הגדולים",
+          "word": "שמיכת כוכב",
           "definition": "מתנה מסורתית ומוערכת בקרב אינדיאנים מהמישורים הגדולים"
         },
         "artist/csc-starquilts/2023": {
           "word": "אומן",
+          "definition": "אתה יכול לכתוב קוד כדי לגרום לו לצייר כמעט כל דבר",
+          "word": "אומן",
           "definition": "אתה יכול לכתוב קוד כדי לגרום לו לצייר כמעט כל דבר"
         },
         "loop/csc-starquilts/2023": {
+          "definition": "רצף קוד שחוזר על עצמו",
           "definition": "רצף קוד שחוזר על עצמו"
         },
         "point/csc-starquilts/2023": {
+          "word": "נקודה",
+          "definition": "חלק אחד של צורת הכוכב",
           "word": "נקודה",
           "definition": "חלק אחד של צורת הכוכב"
         },
         "row/csc-starquilts/2023": {
           "word": "שורה",
+          "definition": "במקרה זה, קו מסודר של מעוין",
+          "word": "שורה",
           "definition": "במקרה זה, קו מסודר של מעוין"
         },
         "concentric/csc-starquilts/2023": {
+          "word": "קונצנטרי",
+          "definition": "אובייקטים או צורות שחולקים את אותו מרכז",
           "word": "קונצנטרי",
           "definition": "אובייקטים או צורות שחולקים את אותו מרכז"
         },
         "comments/csc-starquilts/2023": {
           "word": "תגובות",
+          "definition": "הערות לעצמך שמסבירות קטע קוד. הם לא משנים את התוכנית אלא עוזרים לשמור על הקוד שלך בסדר.",
+          "word": "תגובות",
           "definition": "הערות לעצמך שמסבירות קטע קוד. הם לא משנים את התוכנית אלא עוזרים לשמור על הקוד שלך בסדר."
         },
         "imagery/csc-timecapsule/2023": {
+          "word": "דימויים",
+          "definition": "דימויים מנטליים המיוצרים על ידי שיר או סיפור",
           "word": "דימויים",
           "definition": "דימויים מנטליים המיוצרים על ידי שיר או סיפור"
         },
         "mood/csc-timecapsule/2023": {
           "word": "אווירה",
+          "definition": "ביטוי של תחושה, אווירה או רגש באמנות או בכתיבה.",
+          "word": "אווירה",
           "definition": "ביטוי של תחושה, אווירה או רגש באמנות או בכתיבה."
         },
         "sprite/csc-timecapsule/2023": {
           "word": "ספרייט",
+          "definition": "תמונה או דמות בתוכנית שלך",
+          "word": "ספרייט",
           "definition": "תמונה או דמות בתוכנית שלך"
         },
         "time_capsule/csc-timecapsule/2023": {
+          "definition": "מקום להחזיק בו זיכרונות ופריטים יומיומיים המייצגים יום בחייו של מישהו שחי בתקופת זמן מסוימת. ",
           "definition": "מקום להחזיק בו זיכרונות ופריטים יומיומיים המייצגים יום בחייו של מישהו שחי בתקופת זמן מסוימת. "
         },
         "code/poetry/2023": {
+          "word": "קוד",
           "word": "קוד"
         },
         "line/poetry/2023": {
+          "definition": "(שירה) - חלוקת משנה של שיר המסודר בשורה המסתיימת בשוליים הימניים.",
           "definition": "(שירה) - חלוקת משנה של שיר המסודר בשורה המסתיימת בשוליים הימניים."
         },
         "mood/poetry/2023": {
+          "word": "אווירה",
+          "definition": "ביטוי של תחושה, אווירה או רגש באמנות או בכתיבה.",
           "word": "אווירה",
           "definition": "ביטוי של תחושה, אווירה או רגש באמנות או בכתיבה."
         },
         "poem/poetry/2023": {
           "word": "שיר",
+          "definition": "שורות כתיבה המשתמשות במילים ליצירת תמונות, רגשות ורעיונות במוחו של הקורא.",
+          "word": "שיר",
           "definition": "שורות כתיבה המשתמשות במילים ליצירת תמונות, רגשות ורעיונות במוחו של הקורא."
         },
         "constructive_feedback/poetry/2023": {
           "word": "משוב בונה",
+          "definition": "הערות מכבדות שעוזרות למישהו לשפר את עבודתו",
+          "word": "משוב בונה",
           "definition": "הערות מכבדות שעוזרות למישהו לשפר את עבודתו"
         },
         "poetry_circle/poetry/2023": {
+          "definition": "מרחב בטוח ויצירתי לבחון שירים חדשים ולקבל משוב בונה מאחרים",
           "definition": "מרחב בטוח ויצירתי לבחון שירים חדשים ולקבל משוב בונה מאחרים"
         },
         "copyright/csd/2023": {
+          "word": "זכויות יוצרים",
           "word": "זכויות יוצרים"
         },
         "debugging/csd/2023": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "variable/csd/2023": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "sprite/csd/2023": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "conditionals/csd/2023": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "abstraction/csd/2023": {
+          "word": "הפשטה",
           "word": "הפשטה"
         },
         "function/csd/2023": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "machine_learning/csd/2023": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש",
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "debugging/coursea/2023": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "click/coursea/2023": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/coursea/2023": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/courseb/2023": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "click/courseb/2023": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/courseb/2023": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/coursec/2023": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "data/coursec/2023": {
+          "word": "נתונים",
           "word": "נתונים"
         },
         "binary/coursec/2023": {
+          "word": "בינארי",
           "word": "בינארי"
         },
         "debugging/coursed/2023": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "conditionals/coursed/2023": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "behavior/coursee/2023": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "sprite/coursee/2023": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "function/coursee/2023": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "conditionals/coursee/2023": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "copyright/coursee/2023": {
+          "word": "זכויות יוצרים",
           "word": "זכויות יוצרים"
         },
         "define/coursee/2023": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "sprite/coursef/2023": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "behavior/coursef/2023": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "variable/coursef/2023": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "machine_learning/coursef/2023": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש",
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "dns/coursef/2023": {
+          "word": "DNS",
           "word": "DNS"
         },
         "internet/coursef/2023": {
+          "word": "אינטרנט",
           "word": "אינטרנט"
         },
         "url/coursef/2023": {
+          "word": "קישור",
           "word": "קישור"
         },
         "define/coursef/2023": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "debugging/express/2023": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "behavior/express/2023": {
+          "word": "התנהגות",
           "word": "התנהגות"
         },
         "sprite/express/2023": {
+          "word": "ספרייט",
           "word": "ספרייט"
         },
         "conditionals/express/2023": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "function/express/2023": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "variable/express/2023": {
+          "word": "משתנה",
           "word": "משתנה"
         },
         "define/express/2023": {
+          "word": "הגדר",
           "word": "הגדר"
         },
         "click/pre-express/2023": {
+          "word": "קליק",
           "word": "קליק"
         },
         "drop/pre-express/2023": {
+          "word": "דְרוֹפּ",
           "word": "דְרוֹפּ"
         },
         "debugging/pre-express/2023": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "machine_learning/how-ai-works/2023": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש",
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "algorithm/how-ai-works/2023": {
+          "definition": "סדרה של צעדים כדי לפתור בעיה או לקבל החלטה",
           "definition": "סדרה של צעדים כדי לפתור בעיה או לקבל החלטה"
         },
         "network/how-ai-works/2023": {
+          "word": "רשת",
+          "definition": "אוסף פריטים המחוברים זה לזה. בעקבות חיבורים אלה יכול לייצג את השלבים באלגוריתם, כמו תרשים זרימה.",
           "word": "רשת",
           "definition": "אוסף פריטים המחוברים זה לזה. בעקבות חיבורים אלה יכול לייצג את השלבים באלגוריתם, כמו תרשים זרימה."
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "מודל שפה גדולה (LLM)",
+          "definition": "צורה למטרות כלליות של AI המאומנת על גוף ידע מאוד מאוד גדול",
+          "word": "מודל שפה גדולה (LLM)",
           "definition": "צורה למטרות כלליות של AI המאומנת על גוף ידע מאוד מאוד גדול"
         },
         "diffusion_ai/how-ai-works/2023": {
+          "word": "דיפוזיה AI",
+          "definition": "המרת תמונה לרעש, והכשרת AI להפוך את התהליך",
           "word": "דיפוזיה AI",
           "definition": "המרת תמונה לרעש, והכשרת AI להפוך את התהליך"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
           "word": "GAN (רשת יריבה גנרית)",
+          "definition": "דרך להשתמש בשני דגמי AI מתחרים כדי ליצור משהו",
+          "word": "GAN (רשת יריבה גנרית)",
           "definition": "דרך להשתמש בשני דגמי AI מתחרים כדי ליצור משהו"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "בינה מלאכותית",
+          "definition": "היכולת של מכונות ללמוד ולפתור בעיות.",
+          "word": "בינה מלאכותית",
           "definition": "היכולת של מכונות ללמוד ולפתור בעיות."
         },
         "conditionals/aquatic/unversioned": {
+          "word": "תנאים",
           "word": "תנאים"
         },
         "debugging/aquatic/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "loops/aquatic/unversioned": {
+          "word": "חזרות",
           "word": "חזרות"
         },
         "code/artist/unversioned": {
+          "word": "קוד",
           "word": "קוד"
         },
         "debugging/artist/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/basketball/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/flappy/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/frozen/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/gumball/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/hero/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "function/hero/unversioned": {
+          "word": "פונקציה",
           "word": "פונקציה"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/iceage/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/infinity/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/mc/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/minecraft/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "machine_learning/oceans/unversioned": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש",
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "debugging/playlab/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "code/poem-art/2021": {
@@ -658,15 +903,19 @@
           "word": "אווירה"
         },
         "code/sports/unversioned": {
+          "word": "קוד",
           "word": "קוד"
         },
         "debugging/sports/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/starwars/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "מציאת טעויות",
           "word": "מציאת טעויות"
         }
       }
