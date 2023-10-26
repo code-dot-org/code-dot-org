@@ -3,399 +3,530 @@
     "data": {
       "vocabularies": {
         "input/csd/2021": {
+          "word": "Sisend",
           "word": "Sisend"
         },
         "copyright/csd/2021": {
+          "word": "Autoriõigus",
           "word": "Autoriõigus"
         },
         "debugging/csd/2021": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "variable/csd/2021": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "conditionals/csd/2021": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "abstraction/csd/2021": {
+          "word": "Abstraktsus",
           "word": "Abstraktsus"
         },
         "function/csd/2021": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "debugging/coursea/2021": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "drop/coursea/2021": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/courseb/2021": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "drop/courseb/2021": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/coursec/2021": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "binary/coursec/2021": {
+          "word": "Binaarne",
           "word": "Binaarne"
         },
         "debugging/coursed/2021": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "conditionals/coursed/2021": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "behavior/coursee/2021": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "copyright/coursee/2021": {
+          "word": "Autoriõigus",
           "word": "Autoriõigus"
         },
         "function/coursee/2021": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "conditionals/coursee/2021": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "define/coursee/2021": {
+          "word": "Määra",
           "word": "Määra"
         },
         "behavior/coursef/2021": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "variable/coursef/2021": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "input/coursef/2021": {
+          "word": "Sisend",
           "word": "Sisend"
         },
         "internet/coursef/2021": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2021": {
+          "word": "Määra",
           "word": "Määra"
         },
         "debugging/express/2021": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "behavior/express/2021": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "conditionals/express/2021": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "function/express/2021": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "variable/express/2021": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "define/express/2021": {
+          "word": "Määra",
           "word": "Määra"
         },
         "drop/pre-express/2021": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/pre-express/2021": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "input/csd/2022": {
+          "word": "Sisend",
           "word": "Sisend"
         },
         "copyright/csd/2022": {
+          "word": "Autoriõigus",
           "word": "Autoriõigus"
         },
         "debugging/csd/2022": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "variable/csd/2022": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "conditionals/csd/2022": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "abstraction/csd/2022": {
+          "word": "Abstraktsus",
           "word": "Abstraktsus"
         },
         "function/csd/2022": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "debugging/coursea/2022": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "drop/coursea/2022": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/courseb/2022": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "drop/courseb/2022": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/coursec/2022": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "data/coursec/2022": {
+          "word": "Andmed",
           "word": "Andmed"
         },
         "binary/coursec/2022": {
+          "word": "Binaarne",
           "word": "Binaarne"
         },
         "debugging/coursed/2022": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "conditionals/coursed/2022": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "behavior/coursee/2022": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "function/coursee/2022": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "conditionals/coursee/2022": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "copyright/coursee/2022": {
+          "word": "Autoriõigus",
           "word": "Autoriõigus"
         },
         "define/coursee/2022": {
+          "word": "Määra",
           "word": "Määra"
         },
         "behavior/coursef/2022": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "variable/coursef/2022": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "input/coursef/2022": {
+          "word": "Sisend",
           "word": "Sisend"
         },
         "internet/coursef/2022": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2022": {
+          "word": "Määra",
           "word": "Määra"
         },
         "debugging/express/2022": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "behavior/express/2022": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "conditionals/express/2022": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "function/express/2022": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "variable/express/2022": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "define/express/2022": {
+          "word": "Määra",
           "word": "Määra"
         },
         "drop/pre-express/2022": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/pre-express/2022": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "code/csc-adaptations/2023": {
+          "word": "Kood",
           "word": "Kood"
         },
         "behavior/csc-adaptations/2023": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Kood",
           "word": "Kood"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Kood",
           "word": "Kood"
         },
         "artist/csc-starquilts/2023": {
+          "word": "Kunstnik",
           "word": "Kunstnik"
         },
         "comments/csc-starquilts/2023": {
+          "word": "Kommentaarid",
           "word": "Kommentaarid"
         },
         "code/poetry/2023": {
+          "word": "Kood",
           "word": "Kood"
         },
         "input/csd/2023": {
+          "word": "Sisend",
           "word": "Sisend"
         },
         "copyright/csd/2023": {
+          "word": "Autoriõigus",
           "word": "Autoriõigus"
         },
         "debugging/csd/2023": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "variable/csd/2023": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "conditionals/csd/2023": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "abstraction/csd/2023": {
+          "word": "Abstraktsus",
           "word": "Abstraktsus"
         },
         "function/csd/2023": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "debugging/coursea/2023": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "drop/coursea/2023": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/courseb/2023": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "drop/courseb/2023": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/coursec/2023": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "data/coursec/2023": {
+          "word": "Andmed",
           "word": "Andmed"
         },
         "binary/coursec/2023": {
+          "word": "Binaarne",
           "word": "Binaarne"
         },
         "debugging/coursed/2023": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "conditionals/coursed/2023": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "behavior/coursee/2023": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "function/coursee/2023": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "conditionals/coursee/2023": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "copyright/coursee/2023": {
+          "word": "Autoriõigus",
           "word": "Autoriõigus"
         },
         "define/coursee/2023": {
+          "word": "Määra",
           "word": "Määra"
         },
         "behavior/coursef/2023": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "variable/coursef/2023": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "input/coursef/2023": {
+          "word": "Sisend",
           "word": "Sisend"
         },
         "internet/coursef/2023": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2023": {
+          "word": "Määra",
           "word": "Määra"
         },
         "debugging/express/2023": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "behavior/express/2023": {
+          "word": "Käitumine",
           "word": "Käitumine"
         },
         "conditionals/express/2023": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "function/express/2023": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "variable/express/2023": {
+          "word": "Muutuja",
           "word": "Muutuja"
         },
         "define/express/2023": {
+          "word": "Määra",
           "word": "Määra"
         },
         "drop/pre-express/2023": {
+          "word": "Kükita",
           "word": "Kükita"
         },
         "debugging/pre-express/2023": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Tingimuslaused",
           "word": "Tingimuslaused"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "loops/aquatic/unversioned": {
+          "word": "Tsüklid",
           "word": "Tsüklid"
         },
         "code/artist/unversioned": {
+          "word": "Kood",
           "word": "Kood"
         },
         "debugging/artist/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/basketball/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/flappy/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/frozen/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/gumball/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/hero/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "function/hero/unversioned": {
+          "word": "Funktsioon",
           "word": "Funktsioon"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/iceage/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/infinity/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/mc/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/minecraft/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/playlab/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "code/poem-art/2021": {
           "word": "Kood"
         },
         "code/sports/unversioned": {
+          "word": "Kood",
           "word": "Kood"
         },
         "debugging/sports/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/starwars/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Debugimine",
           "word": "Debugimine"
         }
       }

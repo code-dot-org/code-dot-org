@@ -3,57 +3,75 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "App Lab",
           "display_name": "App Lab"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Ülevaade",
           "display_name": "Ülevaade"
         },
         "csd-2022/css-overview": {
+          "display_name": "Ülevaade",
           "display_name": "Ülevaade"
         },
         "csd-2022/for-loops": {
+          "display_name": "For tsükkel",
           "display_name": "For tsükkel"
         },
         "csd-2022/functions": {
+          "display_name": "Funktsioonid",
           "display_name": "Funktsioonid"
         },
         "csd-2022/game-lab": {
+          "display_name": "Game Lab",
           "display_name": "Game Lab"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Ülevaade",
           "display_name": "Ülevaade"
         },
         "csd-2022/html-overview": {
+          "display_name": "Ülevaade",
           "display_name": "Ülevaade"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Ülevaade",
           "display_name": "Ülevaade"
         },
         "csd-2022/lists": {
+          "display_name": "Loendid",
           "display_name": "Loendid"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Ülevaade",
           "display_name": "Ülevaade"
         },
         "csd-2022/other": {
+          "display_name": "Muu",
           "display_name": "Muu"
         },
         "csd-2022/other-overview": {
+          "display_name": "Ülevaade",
           "display_name": "Ülevaade"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Ülevaade",
           "display_name": "Ülevaade"
         },
         "csd-2022/sprites": {
+          "display_name": "Spraidid",
           "display_name": "Spraidid"
         },
         "csd-2022/variables": {
+          "display_name": "Muutujad",
           "display_name": "Muutujad"
         },
         "csd-2022/velocity": {
+          "display_name": "Velocity",
           "display_name": "Velocity"
         }
       }

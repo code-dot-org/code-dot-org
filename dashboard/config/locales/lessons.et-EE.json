@@ -57,12 +57,15 @@
           "name": "Algoritmid: Tangrammid"
         },
         "express-2017/Introduction": {
+          "name": "Sissejuhatus",
           "name": "Sissejuhatus"
         },
         "express-2017/Building a Foundation": {
+          "name": "Vundamendi ehitus",
           "name": "Vundamendi ehitus"
         },
         "express-2017/Nested Loops": {
+          "name": "Korduvad tsüklid",
           "name": "Korduvad tsüklid"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -384,66 +387,87 @@
           "name": "Tantsuõhtu"
         },
         "csd3-2021/Variables": {
+          "name": "Muutujad",
           "name": "Muutujad"
         },
         "csd3-2021/Sprites": {
+          "name": "Spraidid",
           "name": "Spraidid"
         },
         "csd3-2021/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2021/Conditionals": {
+          "name": "Tingimuslaused",
           "name": "Tingimuslaused"
         },
         "csd3-2021/Velocity": {
+          "name": "Velocity",
           "name": "Velocity"
         },
         "csd3-2021/Functions": {
+          "name": "Funktsioonid",
           "name": "Funktsioonid"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Parameetritega funktsioonid",
           "name": "Parameetritega funktsioonid"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Happy Maps",
           "name": "Happy Maps"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Liiguta, liiguta",
           "name": "Liiguta, liiguta"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Muutub tsükliliseks",
           "name": "Muutub tsükliliseks"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Suursündmus",
           "name": "Suursündmus"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binaarsed käevõrud",
           "name": "Binaarsed käevõrud"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Millimeetripaberi programmeerimine",
           "name": "Millimeetripaberi programmeerimine"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Relee programmeerimine",
           "name": "Relee programmeerimine"
         },
         "coursed-2021/Dance Party": {
+          "name": "Tantsuõhtu",
           "name": "Tantsuõhtu"
         },
         "coursed-2021/Loops in Ice Age": {
+          "name": "Tsüklik - Jääaeg",
           "name": "Tsüklik - Jääaeg"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Tingimuslaused kaartidel",
           "name": "Tingimuslaused kaartidel"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Laulude kirjutamine",
           "name": "Laulude kirjutamine"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "For Loop Fun",
           "name": "For Loop Fun"
         },
         "coursef-2021/Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2021/lesson-1": {
+          "name": "Tantsuõhtu",
           "name": "Tantsuõhtu"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
@@ -453,168 +477,223 @@
           "name": "Järgmised sammud"
         },
         "csd3-2022/Variables": {
+          "name": "Muutujad",
           "name": "Muutujad"
         },
         "csd3-2022/Sprites": {
+          "name": "Spraidid",
           "name": "Spraidid"
         },
         "csd3-2022/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2022/Conditionals": {
+          "name": "Tingimuslaused",
           "name": "Tingimuslaused"
         },
         "csd3-2022/Velocity": {
+          "name": "Velocity",
           "name": "Velocity"
         },
         "csd3-2022/Functions": {
+          "name": "Funktsioonid",
           "name": "Funktsioonid"
         },
         "csd6-2022/Functions": {
+          "name": "Funktsioonid",
           "name": "Funktsioonid"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Happy Maps",
           "name": "Happy Maps"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Liiguta, liiguta",
           "name": "Liiguta, liiguta"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Muutub tsükliliseks",
           "name": "Muutub tsükliliseks"
         },
         "coursec-2022/The Big Event": {
+          "name": "Suursündmus",
           "name": "Suursündmus"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binaarsed käevõrud",
           "name": "Binaarsed käevõrud"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Millimeetripaberi programmeerimine",
           "name": "Millimeetripaberi programmeerimine"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Relee programmeerimine",
           "name": "Relee programmeerimine"
         },
         "coursed-2022/Dance Party": {
+          "name": "Tantsuõhtu",
           "name": "Tantsuõhtu"
         },
         "coursed-2022/Loops in Ice Age": {
+          "name": "Tsüklik - Jääaeg",
           "name": "Tsüklik - Jääaeg"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Tingimuslaused kaartidel",
           "name": "Tingimuslaused kaartidel"
         },
         "coursee-2022/Songwriting": {
+          "name": "Laulude kirjutamine",
           "name": "Laulude kirjutamine"
         },
         "coursef-2022/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2022/Dance Party": {
+          "name": "Tantsuõhtu",
           "name": "Tantsuõhtu"
         },
         "csd3-2023/Variables": {
+          "name": "Muutujad",
           "name": "Muutujad"
         },
         "csd3-2023/Sprites": {
+          "name": "Spraidid",
           "name": "Spraidid"
         },
         "csd3-2023/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2023/Conditionals": {
+          "name": "Tingimuslaused",
           "name": "Tingimuslaused"
         },
         "csd3-2023/Velocity": {
+          "name": "Velocity",
           "name": "Velocity"
         },
         "csd3-2023/Functions": {
+          "name": "Funktsioonid",
           "name": "Funktsioonid"
         },
         "csd6a-2023/Functions": {
+          "name": "Funktsioonid",
           "name": "Funktsioonid"
         },
         "csd6b-2023/Functions": {
+          "name": "Funktsioonid",
           "name": "Funktsioonid"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Happy Maps",
           "name": "Happy Maps"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Liiguta, liiguta",
           "name": "Liiguta, liiguta"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Muutub tsükliliseks",
           "name": "Muutub tsükliliseks"
         },
         "coursec-2023/The Big Event": {
+          "name": "Suursündmus",
           "name": "Suursündmus"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binaarsed käevõrud",
           "name": "Binaarsed käevõrud"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Millimeetripaberi programmeerimine",
           "name": "Millimeetripaberi programmeerimine"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Relee programmeerimine",
           "name": "Relee programmeerimine"
         },
         "coursed-2023/Dance Party": {
+          "name": "Tantsuõhtu",
           "name": "Tantsuõhtu"
         },
         "coursed-2023/Loops in Ice Age": {
+          "name": "Tsüklik - Jääaeg",
           "name": "Tsüklik - Jääaeg"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Tingimuslaused kaartidel",
           "name": "Tingimuslaused kaartidel"
         },
         "coursee-2023/Songwriting": {
+          "name": "Laulude kirjutamine",
           "name": "Laulude kirjutamine"
         },
         "coursef-2023/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2023/Dance Party": {
+          "name": "Tantsuõhtu",
           "name": "Tantsuõhtu"
         },
         "aquatic/Aquatic": {
+          "name": "Minecraft: Voyage Aquatic",
           "name": "Minecraft: Voyage Aquatic"
         },
         "artist/Artist": {
+          "name": "Kunstnik",
           "name": "Kunstnik"
         },
         "dance-2019/Dance Party": {
+          "name": "Tantsuõhtu",
           "name": "Tantsuõhtu"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy kood",
           "name": "Flappy kood"
         },
         "frozen/Artist": {
+          "name": "Kirjuta koodi Anna ja Elsa'ga",
           "name": "Kirjuta koodi Anna ja Elsa'ga"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumballi Play Lab",
           "name": "Gumballi Play Lab"
         },
         "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: Kangelase teekond",
           "name": "Minecraft: Kangelase teekond"
         },
         "hourofcode/Maze": {
+          "name": "Labürint",
           "name": "Labürint"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Jääaja Play Lab",
           "name": "Jääaja Play Lab"
         },
         "infinity/Infinity": {
+          "name": "Disney Infinity Play Lab",
           "name": "Disney Infinity Play Lab"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecrafti KoodiTund",
           "name": "Minecrafti KoodiTund"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "KoodiTund Minecraft Designer",
           "name": "KoodiTund Minecraft Designer"
         },
         "playlab/Play Lab": {
+          "name": "Play Lab",
           "name": "Play Lab"
         },
         "starwars/Hour of Code 2015": {
+          "name": "Star Wars: galaktika loomine koodiga – (JavaScript)",
           "name": "Star Wars: galaktika loomine koodiga – (JavaScript)"
         },
         "allthethings/Jigsaw": {
