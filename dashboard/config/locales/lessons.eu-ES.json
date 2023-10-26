@@ -63,15 +63,19 @@
           "name": "Algoritmoak: Tangramak"
         },
         "express-2017/Introduction": {
+          "name": "Sarrera",
           "name": "Sarrera"
         },
         "express-2017/Building a Foundation": {
+          "name": "Oinarri bat Eraikitzen",
           "name": "Oinarri bat Eraikitzen"
         },
         "express-2017/Loops in Artist": {
+          "name": "Begiztak Artistan",
           "name": "Begiztak Artistan"
         },
         "express-2017/Nested Loops": {
+          "name": "Kabiatutako begiztak",
           "name": "Kabiatutako begiztak"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -366,198 +370,263 @@
           "name": "Begizta jostarirako"
         },
         "csd3-2021/Variables": {
+          "name": "Aldagaiak",
           "name": "Aldagaiak"
         },
         "csd3-2021/Sprites": {
+          "name": "Pertsonaiak",
           "name": "Pertsonaiak"
         },
         "csd3-2021/Sprite Properties": {
+          "name": "Sprite-n Propietateak",
           "name": "Sprite-n Propietateak"
         },
         "csd3-2021/Text": {
+          "name": "Testua",
           "name": "Testua"
         },
         "csd3-2021/Conditionals": {
+          "name": "Baldintzak",
           "name": "Baldintzak"
         },
         "csd3-2021/Velocity": {
+          "name": "Abiadura",
           "name": "Abiadura"
         },
         "csd3-2021/Functions": {
+          "name": "Funtzioak",
           "name": "Funtzioak"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Parametrodun funtzioak",
           "name": "Parametrodun funtzioak"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Mapa Zoriontsuak",
           "name": "Mapa Zoriontsuak"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!",
           "name": "Mugi ezazu, mugi ezazu!"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Iteratzen",
           "name": "Iteratzen"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Gertaera Handia",
           "name": "Gertaera Handia"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak",
           "name": "Eskumuturreko bitarrak"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Paper grafiko programazioa",
           "name": "Paper grafiko programazioa"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Txandaka programatzen",
           "name": "Txandaka programatzen"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin",
           "name": "Baldintzak Txartelekin"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Musika idazten",
           "name": "Musika idazten"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Begizta jostarirako",
           "name": "Begizta jostarirako"
         },
         "coursef-2021/Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "csd3-2022/Variables": {
+          "name": "Aldagaiak",
           "name": "Aldagaiak"
         },
         "csd3-2022/Sprites": {
+          "name": "Pertsonaiak",
           "name": "Pertsonaiak"
         },
         "csd3-2022/Sprite Properties": {
+          "name": "Sprite-n Propietateak",
           "name": "Sprite-n Propietateak"
         },
         "csd3-2022/Text": {
+          "name": "Testua",
           "name": "Testua"
         },
         "csd3-2022/Conditionals": {
+          "name": "Baldintzak",
           "name": "Baldintzak"
         },
         "csd3-2022/Velocity": {
+          "name": "Abiadura",
           "name": "Abiadura"
         },
         "csd3-2022/Functions": {
+          "name": "Funtzioak",
           "name": "Funtzioak"
         },
         "csd6-2022/Functions": {
+          "name": "Funtzioak",
           "name": "Funtzioak"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Mapa Zoriontsuak",
           "name": "Mapa Zoriontsuak"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!",
           "name": "Mugi ezazu, mugi ezazu!"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Iteratzen",
           "name": "Iteratzen"
         },
         "coursec-2022/The Big Event": {
+          "name": "Gertaera Handia",
           "name": "Gertaera Handia"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak",
           "name": "Eskumuturreko bitarrak"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Paper grafiko programazioa",
           "name": "Paper grafiko programazioa"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Txandaka programatzen",
           "name": "Txandaka programatzen"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin",
           "name": "Baldintzak Txartelekin"
         },
         "coursee-2022/Songwriting": {
+          "name": "Musika idazten",
           "name": "Musika idazten"
         },
         "coursef-2022/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "csd3-2023/Variables": {
+          "name": "Aldagaiak",
           "name": "Aldagaiak"
         },
         "csd3-2023/Sprites": {
+          "name": "Pertsonaiak",
           "name": "Pertsonaiak"
         },
         "csd3-2023/Sprite Properties": {
+          "name": "Sprite-n Propietateak",
           "name": "Sprite-n Propietateak"
         },
         "csd3-2023/Text": {
+          "name": "Testua",
           "name": "Testua"
         },
         "csd3-2023/Conditionals": {
+          "name": "Baldintzak",
           "name": "Baldintzak"
         },
         "csd3-2023/Velocity": {
+          "name": "Abiadura",
           "name": "Abiadura"
         },
         "csd3-2023/Functions": {
+          "name": "Funtzioak",
           "name": "Funtzioak"
         },
         "csd6a-2023/Functions": {
+          "name": "Funtzioak",
           "name": "Funtzioak"
         },
         "csd6b-2023/Functions": {
+          "name": "Funtzioak",
           "name": "Funtzioak"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Mapa Zoriontsuak",
           "name": "Mapa Zoriontsuak"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!",
           "name": "Mugi ezazu, mugi ezazu!"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Iteratzen",
           "name": "Iteratzen"
         },
         "coursec-2023/The Big Event": {
+          "name": "Gertaera Handia",
           "name": "Gertaera Handia"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak",
           "name": "Eskumuturreko bitarrak"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Paper grafiko programazioa",
           "name": "Paper grafiko programazioa"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Txandaka programatzen",
           "name": "Txandaka programatzen"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin",
           "name": "Baldintzak Txartelekin"
         },
         "coursee-2023/Songwriting": {
+          "name": "Musika idazten",
           "name": "Musika idazten"
         },
         "coursef-2023/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "artist/Artist": {
+          "name": "Artista",
           "name": "Artista"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy Code",
           "name": "Flappy Code"
         },
         "frozen/Artist": {
+          "name": "Anna eta Elsarekin programatu",
           "name": "Anna eta Elsarekin programatu"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball joko laborategia",
           "name": "Gumball joko laborategia"
         },
         "hourofcode/Maze": {
+          "name": "Labirintoa",
           "name": "Labirintoa"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ice Age joku laborategia",
           "name": "Ice Age joku laborategia"
         },
         "infinity/Infinity": {
+          "name": "Disneyren Infinity Play Lab",
           "name": "Disneyren Infinity Play Lab"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft Kode Ordua",
           "name": "Minecraft Kode Ordua"
         },
         "playlab/Play Lab": {
+          "name": "Jolas Laborategia",
           "name": "Jolas Laborategia"
         },
         "allthethings/Jigsaw": {

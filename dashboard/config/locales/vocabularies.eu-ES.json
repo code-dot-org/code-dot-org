@@ -3,369 +3,490 @@
     "data": {
       "vocabularies": {
         "input/csd/2021": {
+          "word": "Sarrera",
           "word": "Sarrera"
         },
         "copyright/csd/2021": {
+          "word": "Egile-eskubideak",
           "word": "Egile-eskubideak"
         },
         "debugging/csd/2021": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "variable/csd/2021": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "conditionals/csd/2021": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "abstraction/csd/2021": {
+          "word": "Abstrakzioa",
           "word": "Abstrakzioa"
         },
         "function/csd/2021": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "debugging/coursea/2021": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "drop/coursea/2021": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/courseb/2021": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "drop/courseb/2021": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/coursec/2021": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "binary/coursec/2021": {
+          "word": "Bitarra",
           "word": "Bitarra"
         },
         "debugging/coursed/2021": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "conditionals/coursed/2021": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "copyright/coursee/2021": {
+          "word": "Egile-eskubideak",
           "word": "Egile-eskubideak"
         },
         "function/coursee/2021": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "conditionals/coursee/2021": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "define/coursee/2021": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "variable/coursef/2021": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "input/coursef/2021": {
+          "word": "Sarrera",
           "word": "Sarrera"
         },
         "internet/coursef/2021": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2021": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "debugging/express/2021": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "conditionals/express/2021": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "function/express/2021": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "variable/express/2021": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "define/express/2021": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "drop/pre-express/2021": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/pre-express/2021": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "input/csd/2022": {
+          "word": "Sarrera",
           "word": "Sarrera"
         },
         "copyright/csd/2022": {
+          "word": "Egile-eskubideak",
           "word": "Egile-eskubideak"
         },
         "debugging/csd/2022": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "variable/csd/2022": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "conditionals/csd/2022": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "abstraction/csd/2022": {
+          "word": "Abstrakzioa",
           "word": "Abstrakzioa"
         },
         "function/csd/2022": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "debugging/coursea/2022": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "drop/coursea/2022": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/courseb/2022": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "drop/courseb/2022": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/coursec/2022": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "data/coursec/2022": {
+          "word": "Datu",
           "word": "Datu"
         },
         "binary/coursec/2022": {
+          "word": "Bitarra",
           "word": "Bitarra"
         },
         "debugging/coursed/2022": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "conditionals/coursed/2022": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "function/coursee/2022": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "conditionals/coursee/2022": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "copyright/coursee/2022": {
+          "word": "Egile-eskubideak",
           "word": "Egile-eskubideak"
         },
         "define/coursee/2022": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "variable/coursef/2022": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "input/coursef/2022": {
+          "word": "Sarrera",
           "word": "Sarrera"
         },
         "internet/coursef/2022": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2022": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "debugging/express/2022": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "conditionals/express/2022": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "function/express/2022": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "variable/express/2022": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "define/express/2022": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "drop/pre-express/2022": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/pre-express/2022": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "code/csc-adaptations/2023": {
+          "word": "Kodea",
           "word": "Kodea"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Kodea",
           "word": "Kodea"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Kodea",
           "word": "Kodea"
         },
         "artist/csc-starquilts/2023": {
+          "word": "Artista",
           "word": "Artista"
         },
         "comments/csc-starquilts/2023": {
+          "word": "Iruzkinak",
           "word": "Iruzkinak"
         },
         "code/poetry/2023": {
+          "word": "Kodea",
           "word": "Kodea"
         },
         "input/csd/2023": {
+          "word": "Sarrera",
           "word": "Sarrera"
         },
         "copyright/csd/2023": {
+          "word": "Egile-eskubideak",
           "word": "Egile-eskubideak"
         },
         "debugging/csd/2023": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "variable/csd/2023": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "conditionals/csd/2023": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "abstraction/csd/2023": {
+          "word": "Abstrakzioa",
           "word": "Abstrakzioa"
         },
         "function/csd/2023": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "debugging/coursea/2023": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "drop/coursea/2023": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/courseb/2023": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "drop/courseb/2023": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/coursec/2023": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "data/coursec/2023": {
+          "word": "Datu",
           "word": "Datu"
         },
         "binary/coursec/2023": {
+          "word": "Bitarra",
           "word": "Bitarra"
         },
         "debugging/coursed/2023": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "conditionals/coursed/2023": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "function/coursee/2023": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "conditionals/coursee/2023": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "copyright/coursee/2023": {
+          "word": "Egile-eskubideak",
           "word": "Egile-eskubideak"
         },
         "define/coursee/2023": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "variable/coursef/2023": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "input/coursef/2023": {
+          "word": "Sarrera",
           "word": "Sarrera"
         },
         "internet/coursef/2023": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2023": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "debugging/express/2023": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "conditionals/express/2023": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "function/express/2023": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "variable/express/2023": {
+          "word": "Aldagaia",
           "word": "Aldagaia"
         },
         "define/express/2023": {
+          "word": "Zehaztu",
           "word": "Zehaztu"
         },
         "drop/pre-express/2023": {
+          "word": "Bota",
           "word": "Bota"
         },
         "debugging/pre-express/2023": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Baldintzak",
           "word": "Baldintzak"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "loops/aquatic/unversioned": {
+          "word": "Itzuliak",
           "word": "Itzuliak"
         },
         "code/artist/unversioned": {
+          "word": "Kodea",
           "word": "Kodea"
         },
         "debugging/artist/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/basketball/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/flappy/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/frozen/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/gumball/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/hero/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "function/hero/unversioned": {
+          "word": "Funtzioa",
           "word": "Funtzioa"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/iceage/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/infinity/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/mc/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/minecraft/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/playlab/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "code/poem-art/2021": {
           "word": "Kodea"
         },
         "code/sports/unversioned": {
+          "word": "Kodea",
           "word": "Kodea"
         },
         "debugging/sports/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/starwars/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Arazketa",
           "word": "Arazketa"
         }
       }
