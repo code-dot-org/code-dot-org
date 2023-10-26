@@ -3,231 +3,307 @@
     "data": {
       "resources": {
         "lists/csd/2021": {
+          "name": "لیستەکان",
           "name": "لیستەکان"
         },
         "variables_1/csd/2021": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "calling_and_defining_functions/csd/2021": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_1/csd/2021": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_2/csd/2021": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "unplugged-video-happy-maps/coursea/2021": {
+          "name": "نەخشەی دڵخۆش",
           "name": "نەخشەی دڵخۆش"
         },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "assessment-answer-graph-paper/coursed/2021": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph-paper-programming/coursed/2021": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "unplugged-video-graph-paper/coursed/2021": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay-assessment/coursed/2021": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "unplugged-video-relay-programming/coursed/2021": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "unplugged-video-internet/coursef/2021": {
+          "name": "ئینتەرنێت",
           "name": "ئینتەرنێت"
         },
         "variables_video/express/2021": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "lists/csd/2022": {
+          "name": "لیستەکان",
           "name": "لیستەکان"
         },
         "variables/csd/2022": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "variables_3/csd/2022": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "text/csd/2022": {
+          "name": "دەق",
           "name": "دەق"
         },
         "conditionals/csd/2022": {
+          "name": "مەرجیەکان",
           "name": "مەرجیەکان"
         },
         "functions/csd/2022": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_1/csd/2022": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_4/csd/2022": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "variables_1/csd/2022": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "variables_2/csd/2022": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "functions_2/csd/2022": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_3/csd/2022": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_with_parameters/csd/2022": {
+          "name": "فەرمانی بە پێوەر",
           "name": "فەرمانی بە پێوەر"
         },
         "functions_5/csd/2022": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "happy_maps/coursea/2022": {
+          "name": "نەخشەی دڵخۆش",
           "name": "نەخشەی دڵخۆش"
         },
         "graph_paper_programming/coursed/2022": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_1/coursed/2022": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_2/coursed/2022": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_3/coursed/2022": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_4/coursed/2022": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_5/coursed/2022": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "relay_programming/coursed/2022": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_1/coursed/2022": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_2/coursed/2022": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_3/coursed/2022": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_4/coursed/2022": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_5/coursed/2022": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "the_internet/coursef/2022": {
+          "name": "ئینتەرنێت",
           "name": "ئینتەرنێت"
         },
         "variables/express/2022": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "lists/csd/2023": {
+          "name": "لیستەکان",
           "name": "لیستەکان"
         },
         "variables/csd/2023": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "variables_1/csd/2023": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "variables_2/csd/2023": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         },
         "text/csd/2023": {
+          "name": "دەق",
           "name": "دەق"
         },
         "conditionals/csd/2023": {
+          "name": "مەرجیەکان",
           "name": "مەرجیەکان"
         },
         "functions/csd/2023": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_1/csd/2023": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_2/csd/2023": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_with_parameters/csd/2023": {
+          "name": "فەرمانی بە پێوەر",
           "name": "فەرمانی بە پێوەر"
         },
         "fucntions_devices/csd/2023": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "functions_3/csd/2023": {
+          "name": "فرمانەکان",
           "name": "فرمانەکان"
         },
         "happy_maps/coursea/2023": {
+          "name": "نەخشەی دڵخۆش",
           "name": "نەخشەی دڵخۆش"
         },
         "graph_paper_programming/coursed/2023": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_1/coursed/2023": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_2/coursed/2023": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_3/coursed/2023": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_4/coursed/2023": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "graph_paper_programming_5/coursed/2023": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری",
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
         "relay_programming/coursed/2023": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_1/coursed/2023": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_2/coursed/2023": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_3/coursed/2023": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_4/coursed/2023": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "relay_programming_5/coursed/2023": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ",
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
         "the_internet/coursef/2023": {
+          "name": "ئینتەرنێت",
           "name": "ئینتەرنێت"
         },
         "variables/express/2023": {
+          "name": "گۆڕاوەکان",
           "name": "گۆڕاوەکان"
         }
       }

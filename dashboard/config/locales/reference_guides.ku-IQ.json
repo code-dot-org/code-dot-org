@@ -3,21 +3,27 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "تاقیگەی ئاپ",
           "display_name": "تاقیگەی ئاپ"
         },
         "csd-2022/functions": {
+          "display_name": "فرمانەکان",
           "display_name": "فرمانەکان"
         },
         "csd-2022/game-lab": {
+          "display_name": "تاقیگەی یاری",
           "display_name": "تاقیگەی یاری"
         },
         "csd-2022/lists": {
+          "display_name": "لیستەکان",
           "display_name": "لیستەکان"
         },
         "csd-2022/other": {
+          "display_name": "هی تر",
           "display_name": "هی تر"
         },
         "csd-2022/variables": {
+          "display_name": "گۆڕاوەکان",
           "display_name": "گۆڕاوەکان"
         }
       }
