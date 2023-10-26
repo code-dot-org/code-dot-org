@@ -3,189 +3,251 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "Udalosti s akcelerometrom",
           "display_name": "Udalosti s akcelerometrom"
         },
         "csd-2022/accuracy-in-ai-lab": {
+          "display_name": "Presnosť AI Labe",
           "display_name": "Presnosť AI Labe"
         },
         "csd-2022/animation-tab": {
+          "display_name": "Karta Animácie",
           "display_name": "Karta Animácie"
         },
         "csd-2022/app-lab": {
+          "display_name": "App Lab",
           "display_name": "App Lab"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Prehľad",
           "display_name": "Prehľad"
         },
         "csd-2022/arrays": {
+          "display_name": "Rady",
           "display_name": "Rady"
         },
         "csd-2022/body-styling": {
+          "display_name": "Štýlovanie prvku „body“",
           "display_name": "Štýlovanie prvku „body“"
         },
         "csd-2022/booleans-and-comparison-operators": {
+          "display_name": "Logické výrazy a porovnávacie znamienka",
           "display_name": "Logické výrazy a porovnávacie znamienka"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "Circuit Playground: Prehľad",
           "display_name": "Circuit Playground: Prehľad"
         },
         "csd-2022/classes": {
+          "display_name": "Triedy",
           "display_name": "Triedy"
         },
         "csd-2022/collision-detection": {
+          "display_name": "Detekcia kolízie",
           "display_name": "Detekcia kolízie"
         },
         "csd-2022/creating-a-survey": {
+          "display_name": "Vytvorenie dotazníka",
           "display_name": "Vytvorenie dotazníka"
         },
         "csd-2022/creative-commons-search": {
+          "display_name": "Vyhľadávanie Creative Commons",
           "display_name": "Vyhľadávanie Creative Commons"
         },
         "csd-2022/css": {
+          "display_name": "CSS",
           "display_name": "CSS"
         },
         "csd-2022/css-overview": {
+          "display_name": "Prehľad",
           "display_name": "Prehľad"
         },
         "csd-2022/design-mode": {
+          "display_name": "Dizajnový mód",
           "display_name": "Dizajnový mód"
         },
         "csd-2022/design-mode-elements": {
+          "display_name": "Prvky dizajnového módu",
           "display_name": "Prvky dizajnového módu"
         },
         "csd-2022/drawing-shapes": {
+          "display_name": "Kreslenie tvarov",
           "display_name": "Kreslenie tvarov"
         },
         "csd-2022/editing-images": {
+          "display_name": "Úprava obrázkov",
           "display_name": "Úprava obrázkov"
         },
         "csd-2022/for-loops": {
+          "display_name": "Cykly \"Pre\"",
           "display_name": "Cykly \"Pre\""
         },
         "csd-2022/formatting-html": {
+          "display_name": "Formátovanie HTML",
           "display_name": "Formátovanie HTML"
         },
         "csd-2022/functions": {
+          "display_name": "Funkcie",
           "display_name": "Funkcie"
         },
         "csd-2022/game-lab": {
+          "display_name": "Game Lab",
           "display_name": "Game Lab"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Prehľad",
           "display_name": "Prehľad"
         },
         "csd-2022/headings-and-paragraphs": {
+          "display_name": "Nadpisy a odseky ",
           "display_name": "Nadpisy a odseky "
         },
         "csd-2022/html": {
+          "display_name": "HTML",
           "display_name": "HTML"
         },
         "csd-2022/html-overview": {
+          "display_name": "Prehľad",
           "display_name": "Prehľad"
         },
         "csd-2022/html-tags": {
+          "display_name": "HTML tag-y",
           "display_name": "HTML tag-y"
         },
         "csd-2022/hyperlinks": {
+          "display_name": "Hypertextové odkazy",
           "display_name": "Hypertextové odkazy"
         },
         "csd-2022/if-else-statements": {
+          "display_name": "Výroky \"If-Else\"",
           "display_name": "Výroky \"If-Else\""
         },
         "csd-2022/images-in-html": {
+          "display_name": "Obrázky v HTML",
           "display_name": "Obrázky v HTML"
         },
         "csd-2022/importing-a-model-in-app-lab": {
+          "display_name": "Importovanie modelu v App Labe",
           "display_name": "Importovanie modelu v App Labe"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Úvod do UI Labu",
           "display_name": "Úvod do UI Labu"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Prehľad",
           "display_name": "Prehľad"
         },
         "csd-2022/layout-properties": {
+          "display_name": "Vlastnosti rozloženia",
           "display_name": "Vlastnosti rozloženia"
         },
         "csd-2022/lists": {
+          "display_name": "Zoznamy",
           "display_name": "Zoznamy"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Výrobcovo náradie",
           "display_name": "Výrobcovo náradie"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Prehľad",
           "display_name": "Prehľad"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Modelové karty v AI Lab",
           "display_name": "Modelové karty v AI Lab"
         },
         "csd-2022/other": {
+          "display_name": "Iné",
           "display_name": "Iné"
         },
         "csd-2022/other-overview": {
+          "display_name": "Prehľad",
           "display_name": "Prehľad"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Prehľad",
           "display_name": "Prehľad"
         },
         "csd-2022/playing-notes": {
+          "display_name": "Hranie nôt",
           "display_name": "Hranie nôt"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "Postup riešenia problémov",
           "display_name": "Postup riešenia problémov"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "Postup riešenia problémov",
           "display_name": "Postup riešenia problémov"
         },
         "csd-2022/random-numbers": {
+          "display_name": "Náhodné čísla",
           "display_name": "Náhodné čísla"
         },
         "csd-2022/selecting-a-label": {
+          "display_name": "Výber označenia",
           "display_name": "Výber označenia"
         },
         "csd-2022/selecting-features": {
+          "display_name": "Výber vlastností",
           "display_name": "Výber vlastností"
         },
         "csd-2022/shapes-and-parameters": {
+          "display_name": "Tvary a parametre",
           "display_name": "Tvary a parametre"
         },
         "csd-2022/sprite-interactions": {
+          "display_name": "Interakcie sprajtov",
           "display_name": "Interakcie sprajtov"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Vlastnosti sprajtov",
           "display_name": "Vlastnosti sprajtov"
         },
         "csd-2022/sprites": {
+          "display_name": "Sprajty",
           "display_name": "Sprajty"
         },
         "csd-2022/style-sheets": {
+          "display_name": "Súbory štýlov",
           "display_name": "Súbory štýlov"
         },
         "csd-2022/text-properties": {
+          "display_name": "Textové vlastnosti",
           "display_name": "Textové vlastnosti"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "Cyklus kreslenia",
           "display_name": "Cyklus kreslenia"
         },
         "csd-2022/using-data-with-categorical-features": {
+          "display_name": "Používanie údajov s kategorickými vlastnosťami",
           "display_name": "Používanie údajov s kategorickými vlastnosťami"
         },
         "csd-2022/using-data-with-numerical-features": {
+          "display_name": "Používanie údajov s číselnými vlastnosťami",
           "display_name": "Používanie údajov s číselnými vlastnosťami"
         },
         "csd-2022/variables": {
+          "display_name": "Premenné",
           "display_name": "Premenné"
         },
         "csd-2022/velocity": {
+          "display_name": "Rýchlosť",
           "display_name": "Rýchlosť"
         },
         "csd-2022/web-lab": {
+          "display_name": "Web Lab",
           "display_name": "Web Lab"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
