@@ -1,7 +1,5 @@
 module EnvironmentAwareDynamicConfigHelper
   def self.create_datastore_cache(identifier)
-    cache_expiration = 5
-
     if rack_or_rails_env == 'test' && !running_web_application?
       # Use the memory adapter if we're running unit tests, but not if we're
       # running the web application server.
@@ -9,7 +7,6 @@ module EnvironmentAwareDynamicConfigHelper
     elsif rack_or_rails_env == 'production' || managed_test_server?
       # Production and the managed test system web application servers
       # (test.code.org / studio.code.org) use DynamoDB.
-      cache_expiration = 30
       adapter = DynamoDBAdapter.new(identifier)
     else
       # Everything else writes out to the local filesystem
@@ -17,7 +14,7 @@ module EnvironmentAwareDynamicConfigHelper
       adapter = JSONFileDatastoreAdapter.new(file_path)
     end
 
-    return DatastoreCache.new adapter, cache_expiration: cache_expiration
+    return DatastoreCache.new adapter
   end
 
   def self.rack_or_rails_env

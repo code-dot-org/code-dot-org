@@ -64,29 +64,53 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     refute listener2.changed
   end
 
-  test 'cache is refreshed after expiration time' do
-    key = "key"
-    value = "1, 2, 3"
+  test 'cache is refreshed on update' do
+    key = 'key'
 
-    @data_adapter.set(key, 'not the real value')
-    cache = DatastoreCache.new @data_adapter, cache_expiration: 0.01
+    starting_value = 'start'
+    updated_value = 'middle'
+    final_value = 'end'
+
+    @data_adapter.set(key, starting_value)
+    cache = DatastoreCache.new @data_adapter
 
     listener = FakeListener.new
     cache.add_change_listener(listener)
 
-    @data_adapter.set(key, value)
-    sleep 0.1
+    # If the underlying data changes directly, the cache is not updated.
+    @data_adapter.set(key, updated_value)
+    assert_equal starting_value, cache.get(key)
+    refute listener.changed, 'on_change should not be called after direct update'
 
-    assert_equal value, cache.get(key)
-    assert listener.changed, 'on_change should be called after polled updated'
+    # If the cache is updated, or a new cache it created, it fetches the new value.
+    cache.update_cache
+    assert_equal updated_value, cache.get(key)
+    assert listener.changed, 'on_change should be called after full update'
     listener.reset
-    sleep 0.1
-    refute listener.changed, 'on_change should not be called when polling detects no changes'
 
-    @data_adapter.set(key, 'new value')
-    sleep 0.1
-    assert_equal 'new value', cache.get(key)
-    assert listener.changed, 'on_change should be called after second polled updated'
+    # If the datastore cache is updated, the underlying value is updated.
+    cache.set(key, final_value)
+    assert_equal final_value, @data_adapter.get(key)
+    assert_equal final_value, cache.get(key)
+    assert listener.changed, 'on_change should be called after cache update'
+  end
+
+  test 'cache is shared' do
+    key = 'key'
+
+    starting_value = 'start'
+    updated_value = 'update'
+
+    @data_adapter.set(key, starting_value)
+
+    first_cache = DatastoreCache.new @data_adapter
+    second_cache = DatastoreCache.new @data_adapter
+
+    assert_equal starting_value, first_cache.get(key)
+    assert_equal starting_value, second_cache.get(key)
+
+    first_cache.set(key, updated_value)
+    assert_equal updated_value, second_cache.get(key)
   end
 
   test "set updates datastore and local cache" do

@@ -9,10 +9,8 @@ class DatastoreCache
   ALL_CACHED_KEYS = [CACHE_NAMESPACE, :all_keys].join('/')
 
   # @param datastore [Object] a datastore adapter
-  # @param cache_expiration [int] seconds after which a cached entry expires
-  def initialize(datastore, cache_expiration: 30)
+  def initialize(datastore)
     @datastore = datastore
-    @cache_expiration = cache_expiration
 
     # A list of change listeners.
     @listeners = []
@@ -83,12 +81,6 @@ class DatastoreCache
     CDO.shared_cache.write(ALL_CACHED_KEYS, Set.new)
     @datastore.clear
     notify_change_listeners
-  end
-
-  # When unicorn preload the app and then forks worker processes the update_thread
-  # doesn't make it to the other processes.  Restart it here
-  def after_fork
-    ## TODO: remove this method entirely, including all invocations
   end
 
   # Pulls all values from the datastore and populates the local cache
