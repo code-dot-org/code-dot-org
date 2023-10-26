@@ -187,8 +187,8 @@ function Certificate(props) {
           )}
           {tutorial && personalized && (
             <div>
-              <Heading2 id="uitest-thanks">
-                {i18n.congratsCertificateThanks()}
+              <Heading2>
+                <div id="uitest-thanks">{i18n.congratsCertificateThanks()}</div>
               </Heading2>
               <BodyTwoText>{i18n.congratsCertificateContinue()}</BodyTwoText>
             </div>
