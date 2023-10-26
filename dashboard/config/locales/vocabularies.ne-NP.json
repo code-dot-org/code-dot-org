@@ -3,372 +3,494 @@
     "data": {
       "vocabularies": {
         "copyright/csd/2021": {
+          "word": "प्रतिलिपि अधिकार",
           "word": "प्रतिलिपि अधिकार"
         },
         "debugging/csd/2021": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "variable/csd/2021": {
+          "word": "Variable",
           "word": "Variable"
         },
         "conditionals/csd/2021": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "abstraction/csd/2021": {
+          "word": "Abstraction",
           "word": "Abstraction"
         },
         "function/csd/2021": {
+          "word": "Function",
           "word": "Function"
         },
         "debugging/coursea/2021": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "drop/coursea/2021": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/courseb/2021": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "drop/courseb/2021": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/coursec/2021": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "binary/coursec/2021": {
+          "word": "Binary",
           "word": "Binary"
         },
         "debugging/coursed/2021": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "conditionals/coursed/2021": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "behavior/coursee/2021": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "copyright/coursee/2021": {
+          "word": "प्रतिलिपि अधिकार",
           "word": "प्रतिलिपि अधिकार"
         },
         "function/coursee/2021": {
+          "word": "Function",
           "word": "Function"
         },
         "conditionals/coursee/2021": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "define/coursee/2021": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "behavior/coursef/2021": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "variable/coursef/2021": {
+          "word": "Variable",
           "word": "Variable"
         },
         "internet/coursef/2021": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2021": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "debugging/express/2021": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "behavior/express/2021": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "conditionals/express/2021": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "function/express/2021": {
+          "word": "Function",
           "word": "Function"
         },
         "variable/express/2021": {
+          "word": "Variable",
           "word": "Variable"
         },
         "define/express/2021": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "drop/pre-express/2021": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/pre-express/2021": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "copyright/csd/2022": {
+          "word": "प्रतिलिपि अधिकार",
           "word": "प्रतिलिपि अधिकार"
         },
         "debugging/csd/2022": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "variable/csd/2022": {
+          "word": "Variable",
           "word": "Variable"
         },
         "conditionals/csd/2022": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "abstraction/csd/2022": {
+          "word": "Abstraction",
           "word": "Abstraction"
         },
         "function/csd/2022": {
+          "word": "Function",
           "word": "Function"
         },
         "debugging/coursea/2022": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "drop/coursea/2022": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/courseb/2022": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "drop/courseb/2022": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/coursec/2022": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "binary/coursec/2022": {
+          "word": "Binary",
           "word": "Binary"
         },
         "debugging/coursed/2022": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "conditionals/coursed/2022": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "behavior/coursee/2022": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "function/coursee/2022": {
+          "word": "Function",
           "word": "Function"
         },
         "conditionals/coursee/2022": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "copyright/coursee/2022": {
+          "word": "प्रतिलिपि अधिकार",
           "word": "प्रतिलिपि अधिकार"
         },
         "define/coursee/2022": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "behavior/coursef/2022": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "variable/coursef/2022": {
+          "word": "Variable",
           "word": "Variable"
         },
         "internet/coursef/2022": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2022": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "debugging/express/2022": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "behavior/express/2022": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "conditionals/express/2022": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "function/express/2022": {
+          "word": "Function",
           "word": "Function"
         },
         "variable/express/2022": {
+          "word": "Variable",
           "word": "Variable"
         },
         "define/express/2022": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "drop/pre-express/2022": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/pre-express/2022": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "code/csc-adaptations/2023": {
+          "word": "Code",
           "word": "Code"
         },
         "behavior/csc-adaptations/2023": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Code",
           "word": "Code"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Variable",
           "word": "Variable"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Code",
           "word": "Code"
         },
         "artist/csc-starquilts/2023": {
+          "word": "Artist",
           "word": "Artist"
         },
         "code/poetry/2023": {
+          "word": "Code",
           "word": "Code"
         },
         "copyright/csd/2023": {
+          "word": "प्रतिलिपि अधिकार",
           "word": "प्रतिलिपि अधिकार"
         },
         "debugging/csd/2023": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "variable/csd/2023": {
+          "word": "Variable",
           "word": "Variable"
         },
         "conditionals/csd/2023": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "abstraction/csd/2023": {
+          "word": "Abstraction",
           "word": "Abstraction"
         },
         "function/csd/2023": {
+          "word": "Function",
           "word": "Function"
         },
         "debugging/coursea/2023": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "drop/coursea/2023": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/courseb/2023": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "drop/courseb/2023": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/coursec/2023": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "binary/coursec/2023": {
+          "word": "Binary",
           "word": "Binary"
         },
         "debugging/coursed/2023": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "conditionals/coursed/2023": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "behavior/coursee/2023": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "function/coursee/2023": {
+          "word": "Function",
           "word": "Function"
         },
         "conditionals/coursee/2023": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "copyright/coursee/2023": {
+          "word": "प्रतिलिपि अधिकार",
           "word": "प्रतिलिपि अधिकार"
         },
         "define/coursee/2023": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "behavior/coursef/2023": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "variable/coursef/2023": {
+          "word": "Variable",
           "word": "Variable"
         },
         "internet/coursef/2023": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2023": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "debugging/express/2023": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "behavior/express/2023": {
+          "word": "व्यवहार",
           "word": "व्यवहार"
         },
         "conditionals/express/2023": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "function/express/2023": {
+          "word": "Function",
           "word": "Function"
         },
         "variable/express/2023": {
+          "word": "Variable",
           "word": "Variable"
         },
         "define/express/2023": {
+          "word": "परिभाषित गर्नुहोस्",
           "word": "परिभाषित गर्नुहोस्"
         },
         "drop/pre-express/2023": {
+          "word": "खसाल्नु",
           "word": "खसाल्नु"
         },
         "debugging/pre-express/2023": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Conditionals",
           "word": "Conditionals"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "loops/aquatic/unversioned": {
+          "word": "Loops",
           "word": "Loops"
         },
         "code/artist/unversioned": {
+          "word": "Code",
           "word": "Code"
         },
         "debugging/artist/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/basketball/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/flappy/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/frozen/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/gumball/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/hero/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "function/hero/unversioned": {
+          "word": "Function",
           "word": "Function"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/iceage/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/infinity/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/mc/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/minecraft/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/playlab/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "code/poem-art/2021": {
           "word": "Code"
         },
         "code/sports/unversioned": {
+          "word": "Code",
           "word": "Code"
         },
         "debugging/sports/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/starwars/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Debugging",
           "word": "Debugging"
         }
       }

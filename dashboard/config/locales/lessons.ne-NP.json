@@ -39,12 +39,15 @@
           "name": "Building a Foundation"
         },
         "express-2017/Introduction": {
+          "name": "Introduction",
           "name": "Introduction"
         },
         "express-2017/Building a Foundation": {
+          "name": "Building a Foundation",
           "name": "Building a Foundation"
         },
         "express-2017/Nested Loops": {
+          "name": "Nested Loops",
           "name": "Nested Loops"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -315,180 +318,239 @@
           "name": "For Loop Fun"
         },
         "csd3-2021/Variables": {
+          "name": "Variables",
           "name": "Variables"
         },
         "csd3-2021/Text": {
+          "name": "Text",
           "name": "Text"
         },
         "csd3-2021/Conditionals": {
+          "name": "Conditionals",
           "name": "Conditionals"
         },
         "csd3-2021/Functions": {
+          "name": "Functions",
           "name": "Functions"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Functions with Parameters",
           "name": "Functions with Parameters"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Happy Maps",
           "name": "Happy Maps"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Move It, Move It",
           "name": "Move It, Move It"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Graph Paper Programming",
           "name": "Graph Paper Programming"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Songwriting",
           "name": "Songwriting"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "For Loop Fun",
           "name": "For Loop Fun"
         },
         "coursef-2021/Internet": {
+          "name": "The Internet",
           "name": "The Internet"
         },
         "csd3-2022/Variables": {
+          "name": "Variables",
           "name": "Variables"
         },
         "csd3-2022/Text": {
+          "name": "Text",
           "name": "Text"
         },
         "csd3-2022/Conditionals": {
+          "name": "Conditionals",
           "name": "Conditionals"
         },
         "csd3-2022/Functions": {
+          "name": "Functions",
           "name": "Functions"
         },
         "csd6-2022/Functions": {
+          "name": "Functions",
           "name": "Functions"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Happy Maps",
           "name": "Happy Maps"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Move It, Move It",
           "name": "Move It, Move It"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "coursec-2022/The Big Event": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Graph Paper Programming",
           "name": "Graph Paper Programming"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "coursee-2022/Songwriting": {
+          "name": "Songwriting",
           "name": "Songwriting"
         },
         "coursef-2022/The Internet": {
+          "name": "The Internet",
           "name": "The Internet"
         },
         "csd3-2023/Variables": {
+          "name": "Variables",
           "name": "Variables"
         },
         "csd3-2023/Text": {
+          "name": "Text",
           "name": "Text"
         },
         "csd3-2023/Conditionals": {
+          "name": "Conditionals",
           "name": "Conditionals"
         },
         "csd3-2023/Functions": {
+          "name": "Functions",
           "name": "Functions"
         },
         "csd6a-2023/Functions": {
+          "name": "Functions",
           "name": "Functions"
         },
         "csd6b-2023/Functions": {
+          "name": "Functions",
           "name": "Functions"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Happy Maps",
           "name": "Happy Maps"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Move It, Move It",
           "name": "Move It, Move It"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "coursec-2023/The Big Event": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Graph Paper Programming",
           "name": "Graph Paper Programming"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "coursee-2023/Songwriting": {
+          "name": "Songwriting",
           "name": "Songwriting"
         },
         "coursef-2023/The Internet": {
+          "name": "The Internet",
           "name": "The Internet"
         },
         "artist/Artist": {
+          "name": "Artist",
           "name": "Artist"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy Code",
           "name": "Flappy Code"
         },
         "frozen/Artist": {
+          "name": "Code with Anna and Elsa",
           "name": "Code with Anna and Elsa"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Play Lab",
           "name": "Gumball Play Lab"
         },
         "hourofcode/Maze": {
+          "name": "Maze",
           "name": "Maze"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Play Lab",
           "name": "Ice Age Play Lab"
         },
         "infinity/Infinity": {
+          "name": "Disney Infinity Play Lab",
           "name": "Disney Infinity Play Lab"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code",
           "name": "Minecraft Hour of Code"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft Hour of Code Designer",
           "name": "Minecraft Hour of Code Designer"
         },
         "oceans/Oceans": {
+          "name": "महासागरका लागि A.I",
           "name": "महासागरका लागि A.I"
         },
         "playlab/Play Lab": {
+          "name": "Play Lab",
           "name": "Play Lab"
         },
         "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Building a Galaxy With Code (JavaScript)",
           "name": "Star Wars: Building a Galaxy With Code (JavaScript)"
         },
         "allthethings/Jigsaw": {
