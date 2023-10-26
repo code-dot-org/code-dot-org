@@ -319,6 +319,10 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
+When /^I wait for the video thumbnails to load$/ do
+  wait_until {@browser.execute_script('return $(".video-thumbnail-loaded").length == $(".video-thumbnail-wrapper").length')}
+end
+
 When /^I rotate to (landscape|portrait)$/ do |orientation|
   if ENV['BS_ROTATABLE'] == "true"
     $http_client.call(
