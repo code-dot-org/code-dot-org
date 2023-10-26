@@ -3,159 +3,211 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "İvmeölçer olayları",
           "display_name": "İvmeölçer olayları"
         },
         "csd-2022/app-lab": {
+          "display_name": "App Laboratuvarı",
           "display_name": "App Laboratuvarı"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Genel Bakış",
           "display_name": "Genel Bakış"
         },
         "csd-2022/arrays": {
+          "display_name": "Diziler",
           "display_name": "Diziler"
         },
         "csd-2022/board-events": {
+          "display_name": "Devre kartı Etkinlikleri",
           "display_name": "Devre kartı Etkinlikleri"
         },
         "csd-2022/booleans-and-comparison-operators": {
+          "display_name": "Boolean ve Karşılaştırma Operatörleri",
           "display_name": "Boolean ve Karşılaştırma Operatörleri"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "Devre Oyun Alanına Genel Bakış",
           "display_name": "Devre Oyun Alanına Genel Bakış"
         },
         "csd-2022/classes": {
+          "display_name": "Sınıflar",
           "display_name": "Sınıflar"
         },
         "csd-2022/collision-detection": {
+          "display_name": "Çarpışmanın algılanması",
           "display_name": "Çarpışmanın algılanması"
         },
         "csd-2022/creative-commons-search": {
+          "display_name": "Kamu Telif Hakkı Araması",
           "display_name": "Kamu Telif Hakkı Araması"
         },
         "csd-2022/css-overview": {
+          "display_name": "Genel Bakış",
           "display_name": "Genel Bakış"
         },
         "csd-2022/design-mode": {
+          "display_name": "Tasarım Modu",
           "display_name": "Tasarım Modu"
         },
         "csd-2022/designing-screens-with-code": {
+          "display_name": "Kod ile Ekranlar Tasarlama",
           "display_name": "Kod ile Ekranlar Tasarlama"
         },
         "csd-2022/drawing-shapes": {
+          "display_name": "Şekil Çizmek",
           "display_name": "Şekil Çizmek"
         },
         "csd-2022/editing-images": {
+          "display_name": "Resimleri Düzenleme",
           "display_name": "Resimleri Düzenleme"
         },
         "csd-2022/for-loops": {
+          "display_name": "For (İçin) Döngüleri",
           "display_name": "For (İçin) Döngüleri"
         },
         "csd-2022/formatting-html": {
+          "display_name": "HTML'de Biçimlendirme",
           "display_name": "HTML'de Biçimlendirme"
         },
         "csd-2022/functions": {
+          "display_name": "Fonksiyonlar",
           "display_name": "Fonksiyonlar"
         },
         "csd-2022/game-lab": {
+          "display_name": "Oyun Laboratuvarı",
           "display_name": "Oyun Laboratuvarı"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Genel Bakış",
           "display_name": "Genel Bakış"
         },
         "csd-2022/headings-and-paragraphs": {
+          "display_name": "Başıklar ve Paragraflar",
           "display_name": "Başıklar ve Paragraflar"
         },
         "csd-2022/html-overview": {
+          "display_name": "Genel Bakış",
           "display_name": "Genel Bakış"
         },
         "csd-2022/html-tags": {
+          "display_name": "HTML Etiketleri",
           "display_name": "HTML Etiketleri"
         },
         "csd-2022/hyperlinks": {
+          "display_name": "Köprü",
           "display_name": "Köprü"
         },
         "csd-2022/if-statements": {
+          "display_name": "Eğer (If) Durumları",
           "display_name": "Eğer (If) Durumları"
         },
         "csd-2022/if-statements-2": {
+          "display_name": "Eğer (If) Durumları",
           "display_name": "Eğer (If) Durumları"
         },
         "csd-2022/images-in-html": {
+          "display_name": "HTML'de Görseller",
           "display_name": "HTML'de Görseller"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş ",
           "display_name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş "
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Genel Bakış",
           "display_name": "Genel Bakış"
         },
         "csd-2022/lists": {
+          "display_name": "Listeler",
           "display_name": "Listeler"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Maker Araç Kutusu",
           "display_name": "Maker Araç Kutusu"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Genel Bakış",
           "display_name": "Genel Bakış"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "AI Laboratuvarında Model Kartları",
           "display_name": "AI Laboratuvarında Model Kartları"
         },
         "csd-2022/multi-screen-apps": {
+          "display_name": "Çoklu ekranlı Uygulamalar",
           "display_name": "Çoklu ekranlı Uygulamalar"
         },
         "csd-2022/naming-variables": {
+          "display_name": "Değişkenleri Adlandırma",
           "display_name": "Değişkenleri Adlandırma"
         },
         "csd-2022/other": {
+          "display_name": "Diğer",
           "display_name": "Diğer"
         },
         "csd-2022/other-overview": {
+          "display_name": "Genel Bakış",
           "display_name": "Genel Bakış"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Genel Bakış",
           "display_name": "Genel Bakış"
         },
         "csd-2022/playing-notes": {
+          "display_name": "Notaları çalma",
           "display_name": "Notaları çalma"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "Problem çözme süreci",
           "display_name": "Problem çözme süreci"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "Problem çözme süreci",
           "display_name": "Problem çözme süreci"
         },
         "csd-2022/random-numbers": {
+          "display_name": "Rastgele Sayılar",
           "display_name": "Rastgele Sayılar"
         },
         "csd-2022/shapes-and-parameters": {
+          "display_name": "Şekiller ve Parametreler",
           "display_name": "Şekiller ve Parametreler"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Nesne özellikleri",
           "display_name": "Nesne özellikleri"
         },
         "csd-2022/sprites": {
+          "display_name": "Hareketli Nesneler",
           "display_name": "Hareketli Nesneler"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "Döngü çiz",
           "display_name": "Döngü çiz"
         },
         "csd-2022/variables": {
+          "display_name": "Değişkenler",
           "display_name": "Değişkenler"
         },
         "csd-2022/velocity": {
+          "display_name": "Hız",
           "display_name": "Hız"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Hız ve Sayaç Deseni",
           "display_name": "Hız ve Sayaç Deseni"
         },
         "csd-2022/web-lab": {
+          "display_name": "Web Laboratuvarı",
           "display_name": "Web Laboratuvarı"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         }
       }
