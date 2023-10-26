@@ -161,7 +161,7 @@ describe('CoteacherSettings', () => {
     expect(cells.at(7).text()).to.include('ACCEPTED');
   });
   it('clicking remove opens dialog', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={() => {}}
@@ -174,11 +174,18 @@ describe('CoteacherSettings', () => {
     expect(cells).to.have.lengthOf(9);
     const button = cells.at(2).find('button');
     button.at(0).simulate('click', {preventDefault: () => {}});
-    console.log('up', wrapper.debug());
+
     wrapper.update();
+
     const dialog = wrapper.find('AccessibleDialog');
     expect(dialog).to.exist;
+
+    dialog.shallow();
+
     expect(dialog.find('Button')).to.have.lengthOf(2);
-    expect(dialog.text()).to.include('Remove coelophysis@code.org');
+    expect(dialog.find('StrongText').dive().text()).to.contain(
+      'Remove coelophysis@code.org'
+    );
   });
+  // TODO: remove dialog removes added and saved coteacher
 });

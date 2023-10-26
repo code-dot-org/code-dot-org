@@ -183,7 +183,7 @@ export default function CoteacherSettings({
         className={styles.removeDialog}
       >
         <StrongText className={styles.removeDialogTitle}>
-          {i18n.coteacherRemoveDialogHeader(coteacher.instructorEmail)}
+          {i18n.coteacherRemoveDialogHeader({email: coteacher.instructorEmail})}
         </StrongText>
         <div className={styles.removeDialogDescription}>
           {i18n.coteacherRemoveDialogDescription()}
