@@ -3,48 +3,63 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "Aplikāciju laborotorija",
           "display_name": "Aplikāciju laborotorija"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Pārskats",
           "display_name": "Pārskats"
         },
         "csd-2022/css-overview": {
+          "display_name": "Pārskats",
           "display_name": "Pārskats"
         },
         "csd-2022/for-loops": {
+          "display_name": "\"par\" cikli",
           "display_name": "\"par\" cikli"
         },
         "csd-2022/functions": {
+          "display_name": "Funkcijas",
           "display_name": "Funkcijas"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Pārskats",
           "display_name": "Pārskats"
         },
         "csd-2022/html-overview": {
+          "display_name": "Pārskats",
           "display_name": "Pārskats"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Pārskats",
           "display_name": "Pārskats"
         },
         "csd-2022/lists": {
+          "display_name": "Saraksti",
           "display_name": "Saraksti"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Pārskats",
           "display_name": "Pārskats"
         },
         "csd-2022/other": {
+          "display_name": "Citi",
           "display_name": "Citi"
         },
         "csd-2022/other-overview": {
+          "display_name": "Pārskats",
           "display_name": "Pārskats"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Pārskats",
           "display_name": "Pārskats"
         },
         "csd-2022/variables": {
+          "display_name": "Mainīgie",
           "display_name": "Mainīgie"
         },
         "csd-2022/velocity": {
+          "display_name": "Ātrums",
           "display_name": "Ātrums"
         }
       }

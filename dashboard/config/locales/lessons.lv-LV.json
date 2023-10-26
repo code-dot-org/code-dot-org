@@ -45,12 +45,15 @@
           "name": "Algoritmi: Tangrams"
         },
         "express-2017/Introduction": {
+          "name": "Ievads",
           "name": "Ievads"
         },
         "express-2017/Building a Foundation": {
+          "name": "Veidot pamatus",
           "name": "Veidot pamatus"
         },
         "express-2017/Nested Loops": {
+          "name": "Cikls ciklā",
           "name": "Cikls ciklā"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -324,168 +327,223 @@
           "name": "Jautrība ar \"For\" Cikliem"
         },
         "csd3-2021/Variables": {
+          "name": "Mainīgie",
           "name": "Mainīgie"
         },
         "csd3-2021/Text": {
+          "name": "Teksts",
           "name": "Teksts"
         },
         "csd3-2021/Conditionals": {
+          "name": "Sazarojumi",
           "name": "Sazarojumi"
         },
         "csd3-2021/Velocity": {
+          "name": "Ātrums",
           "name": "Ātrums"
         },
         "csd3-2021/Functions": {
+          "name": "Funkcijas",
           "name": "Funkcijas"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Funkcijas ar parametriem",
           "name": "Funkcijas ar parametriem"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Laimīgās kartes",
           "name": "Laimīgās kartes"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Ej, ej",
           "name": "Ej, ej"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Kļūst ciklisks",
           "name": "Kļūst ciklisks"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Lielais notikums",
           "name": "Lielais notikums"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binārās aproces",
           "name": "Binārās aproces"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana",
           "name": "Rūtiņpapīra programmēšana"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Releju programmēšana",
           "name": "Releju programmēšana"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm",
           "name": "nosacījumi ar kārtēm"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Dziesmu rakstīšana",
           "name": "Dziesmu rakstīšana"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Jautrība ar \"For\" Cikliem",
           "name": "Jautrība ar \"For\" Cikliem"
         },
         "coursef-2021/Internet": {
+          "name": "Internets",
           "name": "Internets"
         },
         "csd3-2022/Variables": {
+          "name": "Mainīgie",
           "name": "Mainīgie"
         },
         "csd3-2022/Text": {
+          "name": "Teksts",
           "name": "Teksts"
         },
         "csd3-2022/Conditionals": {
+          "name": "Sazarojumi",
           "name": "Sazarojumi"
         },
         "csd3-2022/Velocity": {
+          "name": "Ātrums",
           "name": "Ātrums"
         },
         "csd3-2022/Functions": {
+          "name": "Funkcijas",
           "name": "Funkcijas"
         },
         "csd6-2022/Functions": {
+          "name": "Funkcijas",
           "name": "Funkcijas"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Laimīgās kartes",
           "name": "Laimīgās kartes"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Ej, ej",
           "name": "Ej, ej"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Kļūst ciklisks",
           "name": "Kļūst ciklisks"
         },
         "coursec-2022/The Big Event": {
+          "name": "Lielais notikums",
           "name": "Lielais notikums"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binārās aproces",
           "name": "Binārās aproces"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana",
           "name": "Rūtiņpapīra programmēšana"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Releju programmēšana",
           "name": "Releju programmēšana"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm",
           "name": "nosacījumi ar kārtēm"
         },
         "coursee-2022/Songwriting": {
+          "name": "Dziesmu rakstīšana",
           "name": "Dziesmu rakstīšana"
         },
         "coursef-2022/The Internet": {
+          "name": "Internets",
           "name": "Internets"
         },
         "csd3-2023/Variables": {
+          "name": "Mainīgie",
           "name": "Mainīgie"
         },
         "csd3-2023/Text": {
+          "name": "Teksts",
           "name": "Teksts"
         },
         "csd3-2023/Conditionals": {
+          "name": "Sazarojumi",
           "name": "Sazarojumi"
         },
         "csd3-2023/Velocity": {
+          "name": "Ātrums",
           "name": "Ātrums"
         },
         "csd3-2023/Functions": {
+          "name": "Funkcijas",
           "name": "Funkcijas"
         },
         "csd6a-2023/Functions": {
+          "name": "Funkcijas",
           "name": "Funkcijas"
         },
         "csd6b-2023/Functions": {
+          "name": "Funkcijas",
           "name": "Funkcijas"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Laimīgās kartes",
           "name": "Laimīgās kartes"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Ej, ej",
           "name": "Ej, ej"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Kļūst ciklisks",
           "name": "Kļūst ciklisks"
         },
         "coursec-2023/The Big Event": {
+          "name": "Lielais notikums",
           "name": "Lielais notikums"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binārās aproces",
           "name": "Binārās aproces"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana",
           "name": "Rūtiņpapīra programmēšana"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Releju programmēšana",
           "name": "Releju programmēšana"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm",
           "name": "nosacījumi ar kārtēm"
         },
         "coursee-2023/Songwriting": {
+          "name": "Dziesmu rakstīšana",
           "name": "Dziesmu rakstīšana"
         },
         "coursef-2023/The Internet": {
+          "name": "Internets",
           "name": "Internets"
         },
         "artist/Artist": {
+          "name": "Mākslinieks",
           "name": "Mākslinieks"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy kods",
           "name": "Flappy kods"
         },
         "frozen/Artist": {
+          "name": "Programmē ar Annu un Elzu",
           "name": "Programmē ar Annu un Elzu"
         },
         "hourofcode/Maze": {
+          "name": "Labirints",
           "name": "Labirints"
         },
         "playlab/Play Lab": {
+          "name": "Spēles laboratorija",
           "name": "Spēles laboratorija"
         },
         "allthethings/Jigsaw": {

@@ -3,297 +3,394 @@
     "data": {
       "vocabularies": {
         "debugging/csd/2021": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "variable/csd/2021": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "conditionals/csd/2021": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "abstraction/csd/2021": {
+          "word": "Abstrakcija",
           "word": "Abstrakcija"
         },
         "function/csd/2021": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "debugging/coursea/2021": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/courseb/2021": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/coursec/2021": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "binary/coursec/2021": {
+          "word": "Binārie",
           "word": "Binārie"
         },
         "debugging/coursed/2021": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "conditionals/coursed/2021": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "function/coursee/2021": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "conditionals/coursee/2021": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "define/coursee/2021": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "variable/coursef/2021": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "internet/coursef/2021": {
+          "word": "Internets",
           "word": "Internets"
         },
         "define/coursef/2021": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "debugging/express/2021": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "conditionals/express/2021": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "function/express/2021": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "variable/express/2021": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "define/express/2021": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "debugging/pre-express/2021": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/csd/2022": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "variable/csd/2022": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "conditionals/csd/2022": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "abstraction/csd/2022": {
+          "word": "Abstrakcija",
           "word": "Abstrakcija"
         },
         "function/csd/2022": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "debugging/coursea/2022": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/courseb/2022": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/coursec/2022": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "binary/coursec/2022": {
+          "word": "Binārie",
           "word": "Binārie"
         },
         "debugging/coursed/2022": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "conditionals/coursed/2022": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "function/coursee/2022": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "conditionals/coursee/2022": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "define/coursee/2022": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "variable/coursef/2022": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "internet/coursef/2022": {
+          "word": "Internets",
           "word": "Internets"
         },
         "define/coursef/2022": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "debugging/express/2022": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "conditionals/express/2022": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "function/express/2022": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "variable/express/2022": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "define/express/2022": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "debugging/pre-express/2022": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "code/csc-adaptations/2023": {
+          "word": "Kods",
           "word": "Kods"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Kods",
           "word": "Kods"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Kods",
           "word": "Kods"
         },
         "artist/csc-starquilts/2023": {
+          "word": "Mākslinieks",
           "word": "Mākslinieks"
         },
         "code/poetry/2023": {
+          "word": "Kods",
           "word": "Kods"
         },
         "debugging/csd/2023": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "variable/csd/2023": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "conditionals/csd/2023": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "abstraction/csd/2023": {
+          "word": "Abstrakcija",
           "word": "Abstrakcija"
         },
         "function/csd/2023": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "debugging/coursea/2023": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/courseb/2023": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/coursec/2023": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "binary/coursec/2023": {
+          "word": "Binārie",
           "word": "Binārie"
         },
         "debugging/coursed/2023": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "conditionals/coursed/2023": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "function/coursee/2023": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "conditionals/coursee/2023": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "define/coursee/2023": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "variable/coursef/2023": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "internet/coursef/2023": {
+          "word": "Internets",
           "word": "Internets"
         },
         "define/coursef/2023": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "debugging/express/2023": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "conditionals/express/2023": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "function/express/2023": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "variable/express/2023": {
+          "word": "Mainīgais",
           "word": "Mainīgais"
         },
         "define/express/2023": {
+          "word": "Definēt",
           "word": "Definēt"
         },
         "debugging/pre-express/2023": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Sazarojumi",
           "word": "Sazarojumi"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "loops/aquatic/unversioned": {
+          "word": "Cikli",
           "word": "Cikli"
         },
         "code/artist/unversioned": {
+          "word": "Kods",
           "word": "Kods"
         },
         "debugging/artist/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/basketball/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/flappy/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/frozen/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/gumball/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/hero/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "function/hero/unversioned": {
+          "word": "Funkcija",
           "word": "Funkcija"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/iceage/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/infinity/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/mc/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/minecraft/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/playlab/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "code/poem-art/2021": {
           "word": "Kods"
         },
         "code/sports/unversioned": {
+          "word": "Kods",
           "word": "Kods"
         },
         "debugging/sports/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/starwars/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Atkļūdošana",
           "word": "Atkļūdošana"
         }
       }
