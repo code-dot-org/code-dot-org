@@ -3,138 +3,183 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "Accelerometer Event",
           "display_name": "Accelerometer Event"
         },
         "csd-2022/app-lab": {
+          "display_name": "Laboratorium Aplikasi",
           "display_name": "Laboratorium Aplikasi"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Tinjauan",
           "display_name": "Tinjauan"
         },
         "csd-2022/arrays": {
+          "display_name": "Array",
           "display_name": "Array"
         },
         "csd-2022/board-events": {
+          "display_name": "Event Papan",
           "display_name": "Event Papan"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "Circuit Playground Ikhtisar",
           "display_name": "Circuit Playground Ikhtisar"
         },
         "csd-2022/classes": {
+          "display_name": "Kelas",
           "display_name": "Kelas"
         },
         "csd-2022/collision-detection": {
+          "display_name": "Deteksi tumbukan",
           "display_name": "Deteksi tumbukan"
         },
         "csd-2022/creative-commons-search": {
+          "display_name": "Karya kreatif",
           "display_name": "Karya kreatif"
         },
         "csd-2022/css-overview": {
+          "display_name": "Tinjauan",
           "display_name": "Tinjauan"
         },
         "csd-2022/design-mode": {
+          "display_name": "Mode desain",
           "display_name": "Mode desain"
         },
         "csd-2022/designing-screens-with-code": {
+          "display_name": "Perancangan Layar dengan Kode",
           "display_name": "Perancangan Layar dengan Kode"
         },
         "csd-2022/for-loops": {
+          "display_name": "For Loop",
           "display_name": "For Loop"
         },
         "csd-2022/formatting-html": {
+          "display_name": "Format HTML",
           "display_name": "Format HTML"
         },
         "csd-2022/functions": {
+          "display_name": "fungsi",
           "display_name": "fungsi"
         },
         "csd-2022/game-lab": {
+          "display_name": "Game Lab",
           "display_name": "Game Lab"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Tinjauan",
           "display_name": "Tinjauan"
         },
         "csd-2022/headings-and-paragraphs": {
+          "display_name": "Heading dan Paragrap",
           "display_name": "Heading dan Paragrap"
         },
         "csd-2022/html-overview": {
+          "display_name": "Tinjauan",
           "display_name": "Tinjauan"
         },
         "csd-2022/html-tags": {
+          "display_name": "Tag HTML",
           "display_name": "Tag HTML"
         },
         "csd-2022/hyperlinks": {
+          "display_name": "Tautan",
           "display_name": "Tautan"
         },
         "csd-2022/images-in-html": {
+          "display_name": "Gambar dalam HTML",
           "display_name": "Gambar dalam HTML"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Pengantar Lab AI",
           "display_name": "Pengantar Lab AI"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Tinjauan",
           "display_name": "Tinjauan"
         },
         "csd-2022/layout-properties": {
+          "display_name": "Layout property",
           "display_name": "Layout property"
         },
         "csd-2022/lists": {
+          "display_name": "List",
           "display_name": "List"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Maker Toolkit",
           "display_name": "Maker Toolkit"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Tinjauan",
           "display_name": "Tinjauan"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Model kartu di Lab AI",
           "display_name": "Model kartu di Lab AI"
         },
         "csd-2022/multi-screen-apps": {
+          "display_name": "Aplikasi Multilayar",
           "display_name": "Aplikasi Multilayar"
         },
         "csd-2022/other": {
+          "display_name": "Lain",
           "display_name": "Lain"
         },
         "csd-2022/other-overview": {
+          "display_name": "Tinjauan",
           "display_name": "Tinjauan"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Tinjauan",
           "display_name": "Tinjauan"
         },
         "csd-2022/playing-notes": {
+          "display_name": "Catatan Permainan",
           "display_name": "Catatan Permainan"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "Proses Pemecahan Masalah",
           "display_name": "Proses Pemecahan Masalah"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "Proses Pemecahan Masalah",
           "display_name": "Proses Pemecahan Masalah"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Properti Sprite",
           "display_name": "Properti Sprite"
         },
         "csd-2022/sprites": {
+          "display_name": "Sprites",
           "display_name": "Sprites"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "Draw Loop",
           "display_name": "Draw Loop"
         },
         "csd-2022/variables": {
+          "display_name": "variabel",
           "display_name": "variabel"
         },
         "csd-2022/velocity": {
+          "display_name": "Percepatan",
           "display_name": "Percepatan"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Percepatan dan Pola Tandingan",
           "display_name": "Percepatan dan Pola Tandingan"
         },
         "csd-2022/web-lab": {
+          "display_name": "Web lab",
           "display_name": "Web lab"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
