@@ -24,9 +24,11 @@
           "name": "নেষ্টেড লুপ"
         },
         "express-2017/Introduction": {
+          "name": "ভূমিকা",
           "name": "ভূমিকা"
         },
         "express-2017/Nested Loops": {
+          "name": "নেষ্টেড লুপ",
           "name": "নেষ্টেড লুপ"
         },
         "pre-express-2017/Spelling Bee": {
@@ -192,132 +194,175 @@
           "name": "ইন্টারনেট"
         },
         "csd3-2021/Variables": {
+          "name": "চলকগুলো",
           "name": "চলকগুলো"
         },
         "csd3-2021/Text": {
+          "name": "পাঠ",
           "name": "পাঠ"
         },
         "csd3-2021/Conditionals": {
+          "name": "শর্তযুক্ত",
           "name": "শর্তযুক্ত"
         },
         "csd3-2021/Functions": {
+          "name": "ফাংশনগুলি",
           "name": "ফাংশনগুলি"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি",
           "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "আনন্দের মানচিত্র",
           "name": "আনন্দের মানচিত্র"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "বড় ঘটনা",
           "name": "বড় ঘটনা"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং",
           "name": "ছক-কাগজে প্রোগ্রামিং"
         },
         "coursed-2021/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং",
           "name": "রিলে-স্যুইচ প্রোগ্রামিং"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত",
           "name": "কার্ড সঙ্গে শর্ত"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "গান লিখা",
           "name": "গান লিখা"
         },
         "coursef-2021/Internet": {
+          "name": "ইন্টারনেট",
           "name": "ইন্টারনেট"
         },
         "csd3-2022/Variables": {
+          "name": "চলকগুলো",
           "name": "চলকগুলো"
         },
         "csd3-2022/Text": {
+          "name": "পাঠ",
           "name": "পাঠ"
         },
         "csd3-2022/Conditionals": {
+          "name": "শর্তযুক্ত",
           "name": "শর্তযুক্ত"
         },
         "csd3-2022/Functions": {
+          "name": "ফাংশনগুলি",
           "name": "ফাংশনগুলি"
         },
         "csd6-2022/Functions": {
+          "name": "ফাংশনগুলি",
           "name": "ফাংশনগুলি"
         },
         "coursea-2022/Happy Maps": {
+          "name": "আনন্দের মানচিত্র",
           "name": "আনন্দের মানচিত্র"
         },
         "coursec-2022/The Big Event": {
+          "name": "বড় ঘটনা",
           "name": "বড় ঘটনা"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং",
           "name": "ছক-কাগজে প্রোগ্রামিং"
         },
         "coursed-2022/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং",
           "name": "রিলে-স্যুইচ প্রোগ্রামিং"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত",
           "name": "কার্ড সঙ্গে শর্ত"
         },
         "coursee-2022/Songwriting": {
+          "name": "গান লিখা",
           "name": "গান লিখা"
         },
         "coursef-2022/The Internet": {
+          "name": "ইন্টারনেট",
           "name": "ইন্টারনেট"
         },
         "csd3-2023/Variables": {
+          "name": "চলকগুলো",
           "name": "চলকগুলো"
         },
         "csd3-2023/Text": {
+          "name": "পাঠ",
           "name": "পাঠ"
         },
         "csd3-2023/Conditionals": {
+          "name": "শর্তযুক্ত",
           "name": "শর্তযুক্ত"
         },
         "csd3-2023/Functions": {
+          "name": "ফাংশনগুলি",
           "name": "ফাংশনগুলি"
         },
         "csd6a-2023/Functions": {
+          "name": "ফাংশনগুলি",
           "name": "ফাংশনগুলি"
         },
         "csd6b-2023/Functions": {
+          "name": "ফাংশনগুলি",
           "name": "ফাংশনগুলি"
         },
         "coursea-2023/Happy Maps": {
+          "name": "আনন্দের মানচিত্র",
           "name": "আনন্দের মানচিত্র"
         },
         "coursec-2023/The Big Event": {
+          "name": "বড় ঘটনা",
           "name": "বড় ঘটনা"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং",
           "name": "ছক-কাগজে প্রোগ্রামিং"
         },
         "coursed-2023/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং",
           "name": "রিলে-স্যুইচ প্রোগ্রামিং"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত",
           "name": "কার্ড সঙ্গে শর্ত"
         },
         "coursee-2023/Songwriting": {
+          "name": "গান লিখা",
           "name": "গান লিখা"
         },
         "coursef-2023/The Internet": {
+          "name": "ইন্টারনেট",
           "name": "ইন্টারনেট"
         },
         "artist/Artist": {
+          "name": "শিল্পী",
           "name": "শিল্পী"
         },
         "flappy/Flappy Code": {
+          "name": "ফ্লাপি কোড",
           "name": "ফ্লাপি কোড"
         },
         "hoc-encryption/Simple Encryption": {
+          "name": "সাধারণ এনক্রিপশন",
           "name": "সাধারণ এনক্রিপশন"
         },
         "hourofcode/Maze": {
+          "name": "গোলকধাঁধা",
           "name": "গোলকধাঁধা"
         },
         "mc/Hour of Code 2015": {
+          "name": "মাইনক্র্যাফট এক ঘণ্টার কোড",
           "name": "মাইনক্র্যাফট এক ঘণ্টার কোড"
         },
         "playlab/Play Lab": {
+          "name": "প্লে ল্যাব",
           "name": "প্লে ল্যাব"
         },
         "allthethings/Jigsaw": {
