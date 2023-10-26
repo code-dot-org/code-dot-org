@@ -123,669 +123,891 @@
           "name": "Lesson Plans"
         },
         "lists/csd/2021": {
+          "name": "ցուցակները",
           "name": "ցուցակները"
         },
         "variables_1/csd/2021": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "calling_and_defining_functions/csd/2021": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_1/csd/2021": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_2/csd/2021": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "loops_in_app_lab/csd/2021": {
+          "name": "For Loops",
           "name": "For Loops"
         },
         "for_loops/csd/2021": {
+          "name": "For Loops",
           "name": "For Loops"
         },
         "implementation_guide/coursea/2021": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "pair-programming-vid/coursea/2021": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Ուրախ Քարտեզներ",
           "name": "Ուրախ Քարտեզներ"
         },
         "assessment-answer-big-event/coursea/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "csf-the-big-event-assessment/coursea/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "unplugged-video-big-event/coursea/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "implementation_guide/courseb/2021": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "mimi-activity/courseb/2021": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "mimi-debugging/courseb/2021": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "teacher-video-move-it/courseb/2021": {
+          "name": "Տեղափոխիր առարկան",
           "name": "Տեղափոխիր առարկան"
         },
         "pair-programming-vid/courseb/2021": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "assessment-answer-big-event/courseb/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "csf-the-big-event-assessment/courseb/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "unplugged-video-big-event/courseb/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "implementation_guide/coursec/2021": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "csf-mrf-symbol-key/coursec/2021": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "pair-programming-vid/coursec/2021": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "assessment-answer-big-event/coursec/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "csf-the-big-event-assessment/coursec/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "unplugged-video-big-event/coursec/2021": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "implementation_guide/coursed/2021": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph-paper-programming/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "pair-programming-vid/coursed/2021": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay-assessment/coursed/2021": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "implementation_guide/coursee/2021": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "implementation_guide/coursef/2021": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun",
           "name": "For Loop Fun"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "For Loop Fun",
           "name": "For Loop Fun"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For Loop Fun",
           "name": "For Loop Fun"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun",
           "name": "For Loop Fun"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For Loop Fun",
           "name": "For Loop Fun"
         },
         "assessment-answer-internet/coursef/2021": {
+          "name": "Internet",
           "name": "Internet"
         },
         "csf-internet-assessment/coursef/2021": {
+          "name": "Internet",
           "name": "Internet"
         },
         "unplugged-video-internet/coursef/2021": {
+          "name": "Համացանց",
           "name": "Համացանց"
         },
         "pair_programming/express/2021": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "variables_video/express/2021": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "pair-programming-vid/pre-express/2021": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "lists/csd/2022": {
+          "name": "ցուցակները",
           "name": "ցուցակները"
         },
         "variables/csd/2022": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "variables_3/csd/2022": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "text/csd/2022": {
+          "name": "տեքստ",
           "name": "տեքստ"
         },
         "conditionals/csd/2022": {
+          "name": "conditionals",
           "name": "conditionals"
         },
         "functions/csd/2022": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_1/csd/2022": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_4/csd/2022": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "variables_1/csd/2022": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "variables_2/csd/2022": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "functions_2/csd/2022": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_3/csd/2022": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_with_parameters/csd/2022": {
+          "name": "Գործառույթները պարամետրերով",
           "name": "Գործառույթները պարամետրերով"
         },
         "functions_5/csd/2022": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "implementation_guide/coursea/2022": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "pair_programming/coursea/2022": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "happy_maps/coursea/2022": {
+          "name": "Ուրախ Քարտեզներ",
           "name": "Ուրախ Քարտեզներ"
         },
         "the_big_event/coursea/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_1/coursea/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_2/coursea/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "implementation_guide/courseb/2022": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "move_it_move_it/courseb/2022": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "move_it_move_it_1/courseb/2022": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "move_it_move_it_2/courseb/2022": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "move_it_move_it_3/courseb/2022": {
+          "name": "Տեղափոխիր առարկան",
           "name": "Տեղափոխիր առարկան"
         },
         "pair_programming/courseb/2022": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "getting_loopy/courseb/2022": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "getting_loopy_1/courseb/2022": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "getting_loopy_2/courseb/2022": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "getting_loopy_3/courseb/2022": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "the_big_event/courseb/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_1/courseb/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_2/courseb/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "implementation_guide/coursec/2022": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "my_robotic_friends/coursec/2022": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "my_robotic_friends_1/coursec/2022": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "my_robotic_friends_2/coursec/2022": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "my_robotic_friends_3/coursec/2022": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "my_robotic_friends_4/coursec/2022": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "pair_programming/coursec/2022": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "the_big_event/coursec/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_1/coursec/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_2/coursec/2022": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "binary_bracelets/coursec/2022": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "binary_bracelets_1/coursec/2022": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "binary_bracelets_2/coursec/2022": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "binary_bracelets_3/coursec/2022": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "binary_bracelets_4/coursec/2022": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "implementation_guide/coursed/2022": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "graph_paper_programming/coursed/2022": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_1/coursed/2022": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_2/coursed/2022": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_3/coursed/2022": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_4/coursed/2022": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_5/coursed/2022": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "pair_programming/coursed/2022": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "relay_programming/coursed/2022": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_1/coursed/2022": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_2/coursed/2022": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_3/coursed/2022": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_4/coursed/2022": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_5/coursed/2022": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "conditionals_with_cards/coursed/2022": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals_with_cards_1/coursed/2022": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals_with_cards_2/coursed/2022": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals_with_cards_3/coursed/2022": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals_with_cards_4/coursed/2022": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "implementation_guide/coursee/2022": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "implementation_guide/coursef/2022": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "internet/coursef/2022": {
+          "name": "Internet",
           "name": "Internet"
         },
         "internet_1/coursef/2022": {
+          "name": "Internet",
           "name": "Internet"
         },
         "the_internet/coursef/2022": {
+          "name": "Համացանց",
           "name": "Համացանց"
         },
         "pair_programming/express/2022": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "variables/express/2022": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "pair_programming/pre-express/2022": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "pair_programming/csd/2023": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "lists/csd/2023": {
+          "name": "ցուցակները",
           "name": "ցուցակները"
         },
         "variables/csd/2023": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "variables_1/csd/2023": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "variables_2/csd/2023": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "text/csd/2023": {
+          "name": "տեքստ",
           "name": "տեքստ"
         },
         "conditionals/csd/2023": {
+          "name": "conditionals",
           "name": "conditionals"
         },
         "functions/csd/2023": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_1/csd/2023": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_2/csd/2023": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_with_parameters/csd/2023": {
+          "name": "Գործառույթները պարամետրերով",
           "name": "Գործառույթները պարամետրերով"
         },
         "fucntions_devices/csd/2023": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "functions_3/csd/2023": {
+          "name": "գործառույթները",
           "name": "գործառույթները"
         },
         "implementation_guide/coursea/2023": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "pair_programming/coursea/2023": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "happy_maps/coursea/2023": {
+          "name": "Ուրախ Քարտեզներ",
           "name": "Ուրախ Քարտեզներ"
         },
         "the_big_event/coursea/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_1/coursea/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_2/coursea/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "implementation_guide/courseb/2023": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "move_it_move_it/courseb/2023": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "move_it_move_it_1/courseb/2023": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "move_it_move_it_2/courseb/2023": {
+          "name": "Տեղափոխել այն, տեղափոխել այն",
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
         "move_it_move_it_3/courseb/2023": {
+          "name": "Տեղափոխիր առարկան",
           "name": "Տեղափոխիր առարկան"
         },
         "pair_programming/courseb/2023": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "getting_loopy/courseb/2023": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "getting_loopy_1/courseb/2023": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "getting_loopy_2/courseb/2023": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "getting_loopy_3/courseb/2023": {
+          "name": "Getting Loopy",
           "name": "Getting Loopy"
         },
         "the_big_event/courseb/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_1/courseb/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_2/courseb/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "implementation_guide/coursec/2023": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "my_robotic_friends/coursec/2023": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "my_robotic_friends_1/coursec/2023": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "my_robotic_friends_2/coursec/2023": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "my_robotic_friends_3/coursec/2023": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "my_robotic_friends_4/coursec/2023": {
+          "name": "My Robotic Friends",
           "name": "My Robotic Friends"
         },
         "pair_programming/coursec/2023": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "the_big_event/coursec/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_1/coursec/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "the_big_event_2/coursec/2023": {
+          "name": "The Big Event",
           "name": "The Big Event"
         },
         "binary_bracelets/coursec/2023": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "binary_bracelets_1/coursec/2023": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "binary_bracelets_2/coursec/2023": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "binary_bracelets_3/coursec/2023": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "binary_bracelets_4/coursec/2023": {
+          "name": "Binary Bracelets",
           "name": "Binary Bracelets"
         },
         "implementation_guide/coursed/2023": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "graph_paper_programming/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_1/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_2/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_3/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_4/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "graph_paper_programming_5/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում",
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
         "pair_programming/coursed/2023": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "relay_programming/coursed/2023": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_1/coursed/2023": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_2/coursed/2023": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_3/coursed/2023": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_4/coursed/2023": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "relay_programming_5/coursed/2023": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "conditionals_with_cards/coursed/2023": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals_with_cards_1/coursed/2023": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals_with_cards_2/coursed/2023": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals_with_cards_3/coursed/2023": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "conditionals_with_cards_4/coursed/2023": {
+          "name": "Conditionals with Cards",
           "name": "Conditionals with Cards"
         },
         "implementation_guide/coursee/2023": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "implementation_guide/coursef/2023": {
+          "name": "Implementation Guide",
           "name": "Implementation Guide"
         },
         "internet/coursef/2023": {
+          "name": "Internet",
           "name": "Internet"
         },
         "internet_1/coursef/2023": {
+          "name": "Internet",
           "name": "Internet"
         },
         "the_internet/coursef/2023": {
+          "name": "Համացանց",
           "name": "Համացանց"
         },
         "pair_programming/express/2023": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         },
         "variables/express/2023": {
+          "name": "փոփոխականների",
           "name": "փոփոխականների"
         },
         "pair_programming/pre-express/2023": {
+          "name": "Զույգ Ծրագրավորում",
           "name": "Զույգ Ծրագրավորում"
         }
       }
