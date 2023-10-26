@@ -66,12 +66,15 @@
           "name": "Algoritmer: Tangrams"
         },
         "express-2017/Introduction": {
+          "name": "Introduktion",
           "name": "Introduktion"
         },
         "express-2017/Building a Foundation": {
+          "name": "Bygga en grund",
           "name": "Bygga en grund"
         },
         "express-2017/Nested Loops": {
+          "name": "Kapslade slingor(loopar)",
           "name": "Kapslade slingor(loopar)"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -405,94 +408,126 @@
           "name": "Dansparty"
         },
         "csd1-2021/Processing": {
+          "name": "Bearbetar",
           "name": "Bearbetar"
         },
         "csd1-2021/Storage": {
+          "name": "Lagring",
           "name": "Lagring"
         },
         "csd2-2021/Intro to HTML": {
+          "name": "Introduktion till HTML",
           "name": "Introduktion till HTML"
         },
         "csd2-2021/Using Images": {
+          "name": "Använda bilder",
           "name": "Använda bilder"
         },
         "csd2-2021/CSS Classes": {
+          "name": "CSS-klasser",
           "name": "CSS-klasser"
         },
         "csd3-2021/Variables": {
+          "name": "variabler",
           "name": "variabler"
         },
         "csd3-2021/Text": {
+          "name": "text",
           "name": "text"
         },
         "csd3-2021/Conditionals": {
+          "name": "Villkor",
           "name": "Villkor"
         },
         "csd3-2021/Collisions": {
+          "name": "Kollisioner",
           "name": "Kollisioner"
         },
         "csd3-2021/Functions": {
+          "name": "funktioner",
           "name": "funktioner"
         },
         "csd5-2021/Representing Images": {
+          "name": "Representerar bilder",
           "name": "Representerar bilder"
         },
         "csd5-2021/Problem Solving and Data": {
+          "name": "Problemlösning och data",
           "name": "Problemlösning och data"
         },
         "csd5-2021/Automating Data Decisions": {
+          "name": "Automatisera databeslut",
           "name": "Automatisera databeslut"
         },
         "csd6-2021/Accelerometer": {
+          "name": "Accelerometer",
           "name": "Accelerometer"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Funktioner med parametrar",
           "name": "Funktioner med parametrar"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Glada kartor",
           "name": "Glada kartor"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Flytta det, flytta den",
           "name": "Flytta det, flytta den"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Att bli snurrig",
           "name": "Att bli snurrig"
         },
         "courseb-2021/The Right App": {
+          "name": "Den rätta appen",
           "name": "Den rätta appen"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Den stora händelsen",
           "name": "Den stora händelsen"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binära armband",
           "name": "Binära armband"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Kalkyleringsprogrammering",
           "name": "Kalkyleringsprogrammering"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Stafettprogrammering",
           "name": "Stafettprogrammering"
         },
         "coursed-2021/Dance Party": {
           "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
+          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Villkorssatser med kort",
           "name": "Villkorssatser med kort"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Låtskrivande",
           "name": "Låtskrivande"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "'För' loop skoj",
           "name": "'För' loop skoj"
         },
         "coursef-2021/lesson-5": {
+          "name": "Utbrott",
           "name": "Utbrott"
         },
         "coursef-2021/Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2021/lesson-1": {
+          "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
           "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
@@ -500,230 +535,309 @@
           "name": "Nästa steg"
         },
         "csd1-2022/Processing": {
+          "name": "Bearbetar",
           "name": "Bearbetar"
         },
         "csd1-2022/Storage": {
+          "name": "Lagring",
           "name": "Lagring"
         },
         "csd2-2022/Intro to HTML": {
+          "name": "Introduktion till HTML",
           "name": "Introduktion till HTML"
         },
         "csd2-2022/Using Images": {
+          "name": "Använda bilder",
           "name": "Använda bilder"
         },
         "csd2-2022/CSS Classes": {
+          "name": "CSS-klasser",
           "name": "CSS-klasser"
         },
         "csd3-2022/Variables": {
+          "name": "variabler",
           "name": "variabler"
         },
         "csd3-2022/Text": {
+          "name": "text",
           "name": "text"
         },
         "csd3-2022/Conditionals": {
+          "name": "Villkor",
           "name": "Villkor"
         },
         "csd3-2022/Collisions": {
+          "name": "Kollisioner",
           "name": "Kollisioner"
         },
         "csd3-2022/Functions": {
+          "name": "funktioner",
           "name": "funktioner"
         },
         "csd5-2022/Representing Images": {
+          "name": "Representerar bilder",
           "name": "Representerar bilder"
         },
         "csd5-2022/Automating Data Decisions": {
+          "name": "Automatisera databeslut",
           "name": "Automatisera databeslut"
         },
         "csd6-2022/Accelerometer": {
+          "name": "Accelerometer",
           "name": "Accelerometer"
         },
         "csd6-2022/Functions": {
+          "name": "funktioner",
           "name": "funktioner"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Glada kartor",
           "name": "Glada kartor"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Flytta det, flytta den",
           "name": "Flytta det, flytta den"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Att bli snurrig",
           "name": "Att bli snurrig"
         },
         "courseb-2022/The Right App": {
+          "name": "Den rätta appen",
           "name": "Den rätta appen"
         },
         "coursec-2022/The Big Event": {
+          "name": "Den stora händelsen",
           "name": "Den stora händelsen"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binära armband",
           "name": "Binära armband"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Kalkyleringsprogrammering",
           "name": "Kalkyleringsprogrammering"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Stafettprogrammering",
           "name": "Stafettprogrammering"
         },
         "coursed-2022/Dance Party": {
           "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
+          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Villkorssatser med kort",
           "name": "Villkorssatser med kort"
         },
         "coursee-2022/Songwriting": {
+          "name": "Låtskrivande",
           "name": "Låtskrivande"
         },
         "coursef-2022/Outbreak": {
+          "name": "Utbrott",
           "name": "Utbrott"
         },
         "coursef-2022/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2022/Dance Party": {
           "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
+          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "csd1-2023/Processing": {
+          "name": "Bearbetar",
           "name": "Bearbetar"
         },
         "csd1-2023/Storage": {
+          "name": "Lagring",
           "name": "Lagring"
         },
         "csd2-2023/Intro to HTML": {
+          "name": "Introduktion till HTML",
           "name": "Introduktion till HTML"
         },
         "csd2-2023/Using Images": {
+          "name": "Använda bilder",
           "name": "Använda bilder"
         },
         "csd2-2023/CSS Classes": {
+          "name": "CSS-klasser",
           "name": "CSS-klasser"
         },
         "csd3-2023/Variables": {
+          "name": "variabler",
           "name": "variabler"
         },
         "csd3-2023/Text": {
+          "name": "text",
           "name": "text"
         },
         "csd3-2023/Conditionals": {
+          "name": "Villkor",
           "name": "Villkor"
         },
         "csd3-2023/Collisions": {
+          "name": "Kollisioner",
           "name": "Kollisioner"
         },
         "csd3-2023/Functions": {
+          "name": "funktioner",
           "name": "funktioner"
         },
         "csd5-2023/Representing Images": {
+          "name": "Representerar bilder",
           "name": "Representerar bilder"
         },
         "csd5-2023/Automating Data Decisions": {
+          "name": "Automatisera databeslut",
           "name": "Automatisera databeslut"
         },
         "csd6a-2023/Accelerometer": {
+          "name": "Accelerometer",
           "name": "Accelerometer"
         },
         "csd6a-2023/Functions": {
+          "name": "funktioner",
           "name": "funktioner"
         },
         "csd6b-2023/Accelerometer": {
+          "name": "Accelerometer",
           "name": "Accelerometer"
         },
         "csd6b-2023/Functions": {
+          "name": "funktioner",
           "name": "funktioner"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Glada kartor",
           "name": "Glada kartor"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Flytta det, flytta den",
           "name": "Flytta det, flytta den"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Att bli snurrig",
           "name": "Att bli snurrig"
         },
         "courseb-2023/The Right App": {
+          "name": "Den rätta appen",
           "name": "Den rätta appen"
         },
         "coursec-2023/The Big Event": {
+          "name": "Den stora händelsen",
           "name": "Den stora händelsen"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binära armband",
           "name": "Binära armband"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Kalkyleringsprogrammering",
           "name": "Kalkyleringsprogrammering"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Stafettprogrammering",
           "name": "Stafettprogrammering"
         },
         "coursed-2023/Dance Party": {
           "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
+          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Villkorssatser med kort",
           "name": "Villkorssatser med kort"
         },
         "coursee-2023/Songwriting": {
+          "name": "Låtskrivande",
           "name": "Låtskrivande"
         },
         "coursef-2023/Outbreak": {
+          "name": "Utbrott",
           "name": "Utbrott"
         },
         "coursef-2023/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2023/Dance Party": {
           "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
+          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "aquatic/Aquatic": {
+          "name": "Minecraft: Resande vattenlevande",
           "name": "Minecraft: Resande vattenlevande"
         },
         "artist/Artist": {
+          "name": "Konstnären",
           "name": "Konstnären"
         },
         "dance-2019/Dance Party": {
           "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
+          "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "dance-extras/Dance Party - Go Further": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "dance/Dance Party": {
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block).",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
         "flappy/Flappy Code": {
+          "name": "Flappy kod",
           "name": "Flappy kod"
         },
         "frozen/Artist": {
+          "name": "Koda med Anna och Elsa",
           "name": "Koda med Anna och Elsa"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Play Lab",
           "name": "Gumball Play Lab"
         },
         "hourofcode/Maze": {
+          "name": "Labyrint",
           "name": "Labyrint"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Play Lab",
           "name": "Ice Age Play Lab"
         },
         "infinity/Infinity": {
+          "name": "Disney Infinity Play Lab",
           "name": "Disney Infinity Play Lab"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code",
           "name": "Minecraft Hour of Code"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft Hour of Code Designer",
           "name": "Minecraft Hour of Code Designer"
         },
         "outbreak/Outbreak": {
+          "name": "Koda en simulering",
           "name": "Koda en simulering"
         },
         "playlab/Play Lab": {
+          "name": "Spel-labb",
           "name": "Spel-labb"
         },
         "poem-art-2021/Poem Art": {
@@ -731,9 +845,11 @@
           "preparation": "-   Granska och slutför självstudien online själv: [Diktkonst](http://studio.code.org/s/poem-art).\n\n-   Prova alltid aktiviteterna själv innan du ber dina elever att utföra dem.\n\n-   Kontrollera din teknik och avgör om du behöver felsöka något i förväg.\n\n-   Vissa nivåer kräver ljud vid uppspelning. Dela ut hörlurar i förväg. \n\n-   [Valfritt] Två fästisar per elev till utvärderingen."
         },
         "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Bygg en galax med kod i JavaScript",
           "name": "Star Wars: Bygg en galax med kod i JavaScript"
         },
         "text-compression/Text Compression": {
+          "name": "Text komprimering",
           "name": "Text komprimering"
         },
         "allthethings/Jigsaw": {
