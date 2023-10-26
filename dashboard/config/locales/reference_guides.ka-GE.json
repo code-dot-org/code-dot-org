@@ -3,96 +3,127 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "App Lab",
           "display_name": "App Lab"
         },
         "csd-2022/applab-overview": {
+          "display_name": "მიმოხილვა",
           "display_name": "მიმოხილვა"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "მიკროსქემის სათამაშო მოედნის მიმოხილვა",
           "display_name": "მიკროსქემის სათამაშო მოედნის მიმოხილვა"
         },
         "csd-2022/classes": {
+          "display_name": "კლასები",
           "display_name": "კლასები"
         },
         "csd-2022/collision-detection": {
+          "display_name": "შეჯახების აღმოჩენა",
           "display_name": "შეჯახების აღმოჩენა"
         },
         "csd-2022/css-overview": {
+          "display_name": "მიმოხილვა",
           "display_name": "მიმოხილვა"
         },
         "csd-2022/design-mode": {
+          "display_name": "დიზაინის რეჟიმი",
           "display_name": "დიზაინის რეჟიმი"
         },
         "csd-2022/for-loops": {
+          "display_name": "\"მიზნისთვის\" ციკლები",
           "display_name": "\"მიზნისთვის\" ციკლები"
         },
         "csd-2022/functions": {
+          "display_name": "ფუნქციები",
           "display_name": "ფუნქციები"
         },
         "csd-2022/game-lab": {
+          "display_name": "თამაშების ლაბი",
           "display_name": "თამაშების ლაბი"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "მიმოხილვა",
           "display_name": "მიმოხილვა"
         },
         "csd-2022/html-overview": {
+          "display_name": "მიმოხილვა",
           "display_name": "მიმოხილვა"
         },
         "csd-2022/images-in-html": {
+          "display_name": "სურათები HTML-ში",
           "display_name": "სურათები HTML-ში"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "AI ლაბორატორიის შესავალი",
           "display_name": "AI ლაბორატორიის შესავალი"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "მიმოხილვა",
           "display_name": "მიმოხილვა"
         },
         "csd-2022/lists": {
+          "display_name": "სიები",
           "display_name": "სიები"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Maker ინსტრუმენტარიუმის",
           "display_name": "Maker ინსტრუმენტარიუმის"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "მიმოხილვა",
           "display_name": "მიმოხილვა"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "მოდელის ბარათები AI ლაბორატორიაში",
           "display_name": "მოდელის ბარათები AI ლაბორატორიაში"
         },
         "csd-2022/other": {
+          "display_name": "სხვა",
           "display_name": "სხვა"
         },
         "csd-2022/other-overview": {
+          "display_name": "მიმოხილვა",
           "display_name": "მიმოხილვა"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "მიმოხილვა",
           "display_name": "მიმოხილვა"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "პროებლემების გადაჭრის პროცესი",
           "display_name": "პროებლემების გადაჭრის პროცესი"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "პროებლემების გადაჭრის პროცესი",
           "display_name": "პროებლემების გადაჭრის პროცესი"
         },
         "csd-2022/sprites": {
+          "display_name": "სპრაიტები",
           "display_name": "სპრაიტები"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "ხატვის ციკლი",
           "display_name": "ხატვის ციკლი"
         },
         "csd-2022/variables": {
+          "display_name": "ცვლადები",
           "display_name": "ცვლადები"
         },
         "csd-2022/velocity": {
+          "display_name": "სიჩქარე",
           "display_name": "სიჩქარე"
         },
         "csd-2022/web-lab": {
+          "display_name": "ვებ ლაბორატორია",
           "display_name": "ვებ ლაბორატორია"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         }
       }
