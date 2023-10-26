@@ -155,19 +155,6 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
 
-      const type = procedureType || existingProcedureBlock.type;
-      const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
-      const existingFrame = this.editorWorkspace.svgFrame_;
-      if (existingFrame) {
-        existingFrame.dispose();
-      }
-      this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
-        this.editorWorkspace,
-        isBehavior ? msg.behaviorEditorHeader() : msg.function(),
-        'blocklyWorkspaceSvgFrame'
-      );
-      this.editorWorkspace.svgFrame_.render();
-
       Blockly.Events.enable();
     } else {
       // Otherwise, we need to create a new block from scratch.
@@ -183,11 +170,24 @@ export default class FunctionEditor {
         deletable: false,
         movable: false,
       };
+
       this.block = Blockly.serialization.blocks.append(
         this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
         this.editorWorkspace
       );
     }
+    const type = procedureType || existingProcedureBlock.type;
+    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+    const existingFrame = this.editorWorkspace.svgFrame_;
+    if (existingFrame) {
+      existingFrame.dispose();
+    }
+    this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
+      this.editorWorkspace,
+      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+      'blocklyWorkspaceSvgFrame'
+    );
+    this.editorWorkspace.svgFrame_.render();
   }
 
   /**
