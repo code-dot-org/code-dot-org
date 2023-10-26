@@ -85,7 +85,7 @@ const AiGeneratingView: React.FunctionComponent<AiGeneratingViewProps> = ({
     {start: 8, end: 9},
   ];
 
-  const gridOffsetX = 200;
+  const gridOffsetX = 300;
   const gridOffsetY = 40;
   const gridWidth = 90;
   const gridHeight = 35;

@@ -24,6 +24,7 @@ enum Mode {
   RESULTS = 'results',
   RESULTS_FINAL = 'resultsFinal',
   EXPLANATION = 'explanation',
+  CODE = 'code',
 }
 
 type AiModalItem = {
@@ -118,16 +119,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleResultsClick = () => {
-    setMode(Mode.RESULTS);
+    setMode(Mode.RESULTS_FINAL);
+    setShowPreview(true);
   };
 
-  const handleResultsFinalClick = () => {
-    setMode(Mode.RESULTS_FINAL);
+  const handleShowCode = () => {
+    setMode(Mode.CODE);
+    setTypingDone(false);
+  };
+
+  const handleExplanationClick = () => {
+    setMode(Mode.EXPLANATION);
   };
 
   const handleGenerateClick = () => {
     startAi();
     setMode(Mode.GENERATING);
+    setTimeout(() => {
+      setGeneratingDone(true);
+    }, 6000);
   };
 
   const handleRegenerateClick = () => {
@@ -247,8 +257,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     dispatch(setCurrentAiModalField(undefined));
   };
 
-  const handleExplanationClick = () => {
-    setMode(Mode.EXPLANATION);
+  const handleLeaveExplanation = () => {
+    setMode(Mode.CODE);
+    setTypingDone(false);
   };
 
   const handleStartOverClick = () => {
@@ -263,17 +274,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setGeneratingDone(false);
   };
 
-  let showConvertButton = false;
-  let showUseButton = false;
+  const showUseButton =
+    mode === Mode.RESULTS_FINAL &&
+    (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH);
 
-  if ((mode === Mode.RESULTS && typingDone) || mode === Mode.RESULTS_FINAL) {
-    if (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH) {
-      showConvertButton = true;
-    }
-    if (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH) {
-      showUseButton = true;
-    }
-  }
+  const showConvertButton =
+    (mode === Mode.RESULTS_FINAL || mode === Mode.CODE) &&
+    (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
   return (
     <AccessibleDialog
@@ -301,34 +308,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
-        >
-          {mode === Mode.RESULTS_FINAL && (
-            <Button
-              id="explanation-button"
-              text={'Explanation'}
-              onClick={handleExplanationClick}
-              color={Button.ButtonColor.white}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonNoMargin,
-                moduleStyles.buttonSmallText
-              )}
-            />
-          )}
-          {mode === Mode.EXPLANATION && (
-            <Button
-              id="results-final-button"
-              text={'Back to Results'}
-              onClick={handleResultsFinalClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonNoMargin,
-                moduleStyles.buttonSmallText
-              )}
-            />
-          )}
-        </div>
+        ></div>
       </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
         <div id="text-area" className={moduleStyles.textArea}>
@@ -336,19 +316,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {mode === Mode.SELECT_INPUTS
             ? 'Choose three emoji for the mood of the effects.'
             : mode === Mode.PROCESSING && !processingDone
-            ? 'The AI is processing your input.'
+            ? 'A.I. is processing your input.'
             : mode === Mode.PROCESSING && processingDone
-            ? 'The AI is ready to generate effects!'
+            ? 'A.I. is ready to generate effects!'
             : mode === Mode.GENERATING
-            ? 'The AI is generating code based on the emojis.'
-            : mode === Mode.RESULTS && !typingDone
-            ? ''
-            : mode === Mode.RESULTS && typingDone
-            ? 'A.I. generated code for your dance party!'
+            ? 'A.I. is generating effects based on the emojis.'
+            : mode === Mode.RESULTS
+            ? 'A.I. generated effects for your dance party!'
             : mode === Mode.RESULTS_FINAL
-            ? 'A.I. generated code for your dance party!'
+            ? 'A.I. generated effects for your dance party!'
             : mode === Mode.EXPLANATION
             ? 'These are the associations between the emojis and this effect.'
+            : mode === Mode.CODE
+            ? 'This is the internal code that A.I. generated.'
             : undefined}
         </div>
 
@@ -475,31 +455,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         </div>
 
         <div className={moduleStyles.outputsArea}>
-          {((mode === Mode.GENERATING && generatingNodesDone) ||
-            mode === Mode.RESULTS ||
-            mode === Mode.RESULTS_FINAL) && (
+          {mode === Mode.CODE && (
             <div
               id="generating-block-preview"
-              className={classNames(
-                moduleStyles.blockPreview,
-                mode === Mode.GENERATING
-                  ? moduleStyles.blockPreviewRight
-                  : mode === Mode.RESULTS
-                  ? moduleStyles.blockPreviewRightToCenter
-                  : undefined
-              )}
+              className={moduleStyles.blockPreview}
             >
               <AiBlockPreview
-                fadeIn={mode === Mode.GENERATING}
+                fadeIn={true}
                 generateBlocksFromResult={generateBlocksFromResult}
                 onComplete={() => {
-                  if (mode === Mode.GENERATING) {
-                    setGeneratingDone(true);
-                  } else if (mode === Mode.RESULTS) {
-                    setShowPreview(true);
-                    setMode(Mode.RESULTS_FINAL);
-                    setTypingDone(true);
-                  }
+                  setTypingDone(true);
                 }}
               />
             </div>
@@ -525,27 +490,46 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         )}
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
-          {mode === Mode.RESULTS_FINAL && (
-            <div
-              id="buttons-area-left"
-              className={moduleStyles.buttonsAreaLeft}
-            >
+          <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
+            {mode === Mode.RESULTS_FINAL && (
+              <div>
+                <Button
+                  id="start-over-button"
+                  text={'Start over'}
+                  onClick={handleStartOverClick}
+                  color={Button.ButtonColor.white}
+                  className={classNames(moduleStyles.button)}
+                />
+                <Button
+                  id="regenerate"
+                  text={'Regenerate'}
+                  onClick={handleRegenerateClick}
+                  color={Button.ButtonColor.white}
+                  className={classNames(moduleStyles.button)}
+                />
+              </div>
+            )}
+
+            {mode === Mode.CODE && (
               <Button
-                id="start-over-button"
-                text={'Start over'}
-                onClick={handleStartOverClick}
-                color={Button.ButtonColor.white}
+                id="back-to-effects"
+                text={'Back to effects'}
+                onClick={handleResultsClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 className={classNames(moduleStyles.button)}
               />
+            )}
+
+            {mode === Mode.EXPLANATION && (
               <Button
-                id="regenerate"
-                text={'Regenerate'}
-                onClick={handleRegenerateClick}
-                color={Button.ButtonColor.white}
-                className={classNames(moduleStyles.button)}
+                id="results-final-button"
+                text={'Back to Code'}
+                onClick={handleLeaveExplanation}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
               />
-            </div>
-          )}
+            )}
+          </div>
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
@@ -576,10 +560,30 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               className={moduleStyles.button}
             />
           )}
-          {showConvertButton && (
+          {showConvertButton && mode === Mode.RESULTS_FINAL && (
+            <Button
+              id="view-code-button"
+              text={'Show code'}
+              onClick={handleShowCode}
+              color={Button.ButtonColor.white}
+              className={moduleStyles.button}
+            />
+          )}
+
+          {mode === Mode.CODE && typingDone && (
+            <Button
+              id="explanation-button"
+              text={'Explanation'}
+              onClick={handleExplanationClick}
+              color={Button.ButtonColor.white}
+              className={moduleStyles.button}
+            />
+          )}
+
+          {showConvertButton && mode === Mode.CODE && typingDone && (
             <Button
               id="convert-button"
-              text={'Edit code'}
+              text={'Use this code'}
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -590,11 +594,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               id="use-button"
               text={'Use'}
               onClick={handleUseClick}
-              color={
-                showConvertButton
-                  ? Button.ButtonColor.white
-                  : Button.ButtonColor.brandSecondaryDefault
-              }
+              color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
           )}
