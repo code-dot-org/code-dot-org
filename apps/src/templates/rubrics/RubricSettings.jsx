@@ -35,6 +35,7 @@ export default function RubricSettings({
   rubricId,
   studentUserId,
   visible,
+  refreshAiEvaluations,
 }) {
   const [csrfToken, setCsrfToken] = useState('');
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
@@ -60,28 +61,30 @@ export default function RubricSettings({
   };
 
   useEffect(() => {
-    fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
-      if (!response.ok) {
-        setStatus(STATUS.ERROR);
-      } else {
-        response.json().then(data => {
-          if (!data.attempted) {
-            setStatus(STATUS.NOT_ATTEMPTED);
-          } else if (data.lastAttemptEvaluated) {
-            setStatus(STATUS.ALREADY_EVALUATED);
-          } else {
-            // we can't fetch the csrf token from the DOM because CSRF protection
-            // is disabled on script level pages.
-            setCsrfToken(data.csrfToken);
-            setStatus(STATUS.READY);
-          }
-        });
-      }
-    });
+    if (!!rubricId && !!studentUserId) {
+      fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
+        if (!response.ok) {
+          setStatus(STATUS.ERROR);
+        } else {
+          response.json().then(data => {
+            if (!data.attempted) {
+              setStatus(STATUS.NOT_ATTEMPTED);
+            } else if (data.lastAttemptEvaluated) {
+              setStatus(STATUS.ALREADY_EVALUATED);
+            } else {
+              // we can't fetch the csrf token from the DOM because CSRF protection
+              // is disabled on script level pages.
+              setCsrfToken(data.csrfToken);
+              setStatus(STATUS.READY);
+            }
+          });
+        }
+      });
+    }
   }, [rubricId, studentUserId]);
 
   useEffect(() => {
-    if (polling) {
+    if (polling && !!rubricId && !!studentUserId) {
       const intervalId = setInterval(() => {
         fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
           if (!response.ok) {
@@ -90,6 +93,7 @@ export default function RubricSettings({
             response.json().then(data => {
               if (data.lastAttemptEvaluated) {
                 setStatus(STATUS.SUCCESS);
+                refreshAiEvaluations();
               }
             });
           }
@@ -97,7 +101,7 @@ export default function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, studentUserId, polling]);
+  }, [rubricId, studentUserId, polling, refreshAiEvaluations]);
 
   const handleRunAiAssessment = () => {
     setStatus(STATUS.EVALUATION_PENDING);
@@ -158,4 +162,5 @@ RubricSettings.propTypes = {
   rubricId: PropTypes.number,
   studentUserId: PropTypes.number,
   visible: PropTypes.bool,
+  refreshAiEvaluations: PropTypes.func,
 };
