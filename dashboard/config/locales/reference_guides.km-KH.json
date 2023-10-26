@@ -3,87 +3,115 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "មន្ទីរពិសោធន៍កម្មវិធី​",
           "display_name": "មន្ទីរពិសោធន៍កម្មវិធី​"
         },
         "csd-2022/applab-overview": {
+          "display_name": "ទិដ្ឋភាពទូទៅ ",
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
         "csd-2022/collision-detection": {
+          "display_name": "ការរកឃើញការប៉ះទង្គិច",
           "display_name": "ការរកឃើញការប៉ះទង្គិច"
         },
         "csd-2022/css-overview": {
+          "display_name": "ទិដ្ឋភាពទូទៅ ",
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
         "csd-2022/designing-screens-with-code": {
+          "display_name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ",
           "display_name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
         },
         "csd-2022/drawing-shapes": {
+          "display_name": "គំនូរគូរជារាង",
           "display_name": "គំនូរគូរជារាង"
         },
         "csd-2022/functions": {
+          "display_name": "អនុ​គមន៍",
           "display_name": "អនុ​គមន៍"
         },
         "csd-2022/game-lab": {
+          "display_name": "មន្ទីរពិសោធន៍ហ្គេម",
           "display_name": "មន្ទីរពិសោធន៍ហ្គេម"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "ទិដ្ឋភាពទូទៅ ",
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
         "csd-2022/html-overview": {
+          "display_name": "ទិដ្ឋភាពទូទៅ ",
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "ទិដ្ឋភាពទូទៅ ",
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
         "csd-2022/lists": {
+          "display_name": "បញ្ជី",
           "display_name": "បញ្ជី"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "ទិដ្ឋភាពទូទៅ ",
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
         "csd-2022/naming-variables": {
+          "display_name": "ការដាក់ឈ្មោះអថេរ",
           "display_name": "ការដាក់ឈ្មោះអថេរ"
         },
         "csd-2022/other": {
+          "display_name": "ផ្សេងៗ",
           "display_name": "ផ្សេងៗ"
         },
         "csd-2022/other-overview": {
+          "display_name": "ទិដ្ឋភាពទូទៅ ",
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
         "csd-2022/patterns-overview": {
+          "display_name": "ទិដ្ឋភាពទូទៅ ",
           "display_name": "ទិដ្ឋភាពទូទៅ "
         },
         "csd-2022/random-numbers": {
+          "display_name": "លេខចៃដន្យ",
           "display_name": "លេខចៃដន្យ"
         },
         "csd-2022/shapes-and-parameters": {
+          "display_name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ",
           "display_name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
         },
         "csd-2022/sprite-interactions": {
+          "display_name": "Sprite អន្តរកម្ម",
           "display_name": "Sprite អន្តរកម្ម"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "លក្ខណៈសម្បត្តិនៃ sprite",
           "display_name": "លក្ខណៈសម្បត្តិនៃ sprite"
         },
         "csd-2022/sprites": {
+          "display_name": "Sprites",
           "display_name": "Sprites"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "ការគូររង្វិលជុំដដែលៗ",
           "display_name": "ការគូររង្វិលជុំដដែលៗ"
         },
         "csd-2022/variables": {
+          "display_name": "អ​ថេរ",
           "display_name": "អ​ថេរ"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "ល្បឿននិងលំនាំរាប់",
           "display_name": "ល្បឿននិងលំនាំរាប់"
         },
         "csd-2022/web-lab": {
+          "display_name": "បន្ទប់វេប",
           "display_name": "បន្ទប់វេប"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
