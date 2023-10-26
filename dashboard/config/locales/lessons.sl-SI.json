@@ -135,30 +135,39 @@
           "name": "Graditi temelje"
         },
         "express-2017/Algorithms: Graph Paper Programming": {
+          "name": "Programiranje: Programiranje na papirju",
           "name": "Programiranje: Programiranje na papirju"
         },
         "express-2017/Introduction": {
+          "name": "Uvod",
           "name": "Uvod"
         },
         "express-2017/Building a Foundation": {
+          "name": "Graditi temelje",
           "name": "Graditi temelje"
         },
         "express-2017/Nested Loops": {
+          "name": "Gnezdenje zank",
           "name": "Gnezdenje zank"
         },
         "express-2017/Nested Loops Project in Frozen": {
+          "name": "Vgnezdene zanke v Ledenem kraljestvu",
           "name": "Vgnezdene zanke v Ledenem kraljestvu"
         },
         "express-2017/Common Sense Education: Digital Citizenship": {
+          "name": "Digitalno državljanstvo: Vadba digitalnega državljanstva",
           "name": "Digitalno državljanstvo: Vadba digitalnega državljanstva"
         },
         "express-2017/Common Sense Education: Screen Out the Mean": {
+          "name": "Digitalno državljanstvo: Ne bodite nesramni",
           "name": "Digitalno državljanstvo: Ne bodite nesramni"
         },
         "express-2017/Events: The Big Event": {
+          "name": "Dogodki: Veliki dogodek",
           "name": "Dogodki: Veliki dogodek"
         },
         "express-2017/Conditionals & Loops in Harvester": {
+          "name": "Pogoji in zanke v Harvester",
           "name": "Pogoji in zanke v Harvester"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -540,89 +549,122 @@
           "name": "Nalepke z zankami"
         },
         "csd3-2021/Variables": {
+          "name": "Spremenljivke",
           "name": "Spremenljivke"
         },
         "csd3-2021/Sprites": {
+          "name": "liki",
           "name": "liki"
         },
         "csd3-2021/Text": {
+          "name": "Besedilo",
           "name": "Besedilo"
         },
         "csd3-2021/Conditionals": {
+          "name": "Pogoji",
           "name": "Pogoji"
         },
         "csd3-2021/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Funkcije s parametri",
           "name": "Funkcije s parametri"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Veseli zemljevidi",
           "name": "Veseli zemljevidi"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Premakni se, premakni",
           "name": "Premakni se, premakni"
         },
         "coursec-2021/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji Jr.",
           "name": "Moji robotski prijatelji Jr."
         },
         "coursec-2021/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu",
           "name": "Odpravljanje napak v labirintu"
         },
         "coursec-2021/Programming in Collector": {
           "name": "Zbiranje zaklada z Laurel",
+          "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!",
+          "name": "Zbiranje zaklada z Laurel",
           "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!"
         },
         "coursec-2021/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo",
           "name": "Ustvarjanje umetnosti s kodo"
         },
         "coursec-2021/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! ",
           "name": "Zanke z Rey in BB-8",
           "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
         },
         "coursec-2021/Loops in Harvester": {
           "name": "Obiranje pridelkov z zankami",
+          "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!",
+          "name": "Obiranje pridelkov z zankami",
           "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!"
         },
         "coursec-2021/Events: The Big Event": {
           "name": "Veliki dogodek",
+          "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. ",
+          "name": "Veliki dogodek",
           "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. "
         },
         "coursec-2021/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy",
           "name": "Zgradite igro Flappy"
         },
         "coursec-2021/Events in Play Lab": {
           "name": "Mini-projekt: Igra lovljenja",
+          "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!",
+          "name": "Mini-projekt: Igra lovljenja",
           "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke",
           "name": "Obarvajmo kvadratke"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Relejsko programiranje",
           "name": "Relejsko programiranje"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Pogojniki s kartami",
           "name": "Pogojniki s kartami"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Napiši pesem",
           "name": "Napiši pesem"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Zabava s \"for\" zankami",
           "name": "Zabava s \"for\" zankami"
         },
         "coursef-2021/Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2021/Debugging with Scrat": {
+          "name": "Odpravljanje napak v labirintu",
           "name": "Odpravljanje napak v labirintu"
         },
         "express-2021/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel",
           "name": "Zbiranje zaklada z Laurel"
         },
         "express-2021/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo",
           "name": "Ustvarjanje umetnosti s kodo"
         },
         "express-2021/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! ",
           "name": "Zanke z Rey in BB-8",
           "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
         },
@@ -630,211 +672,291 @@
           "name": "Osnove Računalništva"
         },
         "csd3-2022/Variables": {
+          "name": "Spremenljivke",
           "name": "Spremenljivke"
         },
         "csd3-2022/Sprites": {
+          "name": "liki",
           "name": "liki"
         },
         "csd3-2022/Text": {
+          "name": "Besedilo",
           "name": "Besedilo"
         },
         "csd3-2022/Conditionals": {
+          "name": "Pogoji",
           "name": "Pogoji"
         },
         "csd3-2022/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6-2022/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Veseli zemljevidi",
           "name": "Veseli zemljevidi"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Premakni se, premakni",
           "name": "Premakni se, premakni"
         },
         "coursec-2022/My Robotic Friends Jr": {
           "name": "Moji robotski prijatelji Jr.",
           "overview": "V učni uri \"postavljanja konteksta\" bodo učenci uporabljali nabor simbolov za izdelavo robota, ki bo zlagal lončke v različne vzorce. Učenci se bodo izmenjevali v vlogi robota, ki se bo odzval zgolj na algoritem, ki ga bodo določili sovrstniki.",
+          "preparation": "– Pripravi kup 20 papirnatih lončkov za vsako skupino 2–3 učencev.\n– Prikažite simbole iz **\\*Preglednice simbolov**, iz katere bodo učenci črpali med uro.\n– (Opcijsko) Natisnite eno \\*_\\\\_Idejo postavitve lončkov\\* za vsako skupino.",
+          "name": "Moji robotski prijatelji Jr.",
+          "overview": "V učni uri \"postavljanja konteksta\" bodo učenci uporabljali nabor simbolov za izdelavo robota, ki bo zlagal lončke v različne vzorce. Učenci se bodo izmenjevali v vlogi robota, ki se bo odzval zgolj na algoritem, ki ga bodo določili sovrstniki.",
           "preparation": "– Pripravi kup 20 papirnatih lončkov za vsako skupino 2–3 učencev.\n– Prikažite simbole iz **\\*Preglednice simbolov**, iz katere bodo učenci črpali med uro.\n– (Opcijsko) Natisnite eno \\*_\\\\_Idejo postavitve lončkov\\* za vsako skupino."
         },
         "coursec-2022/Programming with Angry Birds": {
+          "preparation": "-   Igrajte skozi uganke, da bi našli morebitna problematična področja za vaš razred.\n-   (Neobvezno) Izberite nekaj nalog, ki jih želite narediti kot skupina s svojim razredom. ",
           "preparation": "-   Igrajte skozi uganke, da bi našli morebitna problematična področja za vaš razred.\n-   (Neobvezno) Izberite nekaj nalog, ki jih želite narediti kot skupina s svojim razredom. "
         },
         "coursec-2022/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu",
           "name": "Odpravljanje napak v labirintu"
         },
         "coursec-2022/Collecting Treasure with Laurel": {
           "name": "Zbiranje zaklada z Laurel",
+          "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!",
+          "name": "Zbiranje zaklada z Laurel",
           "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!"
         },
         "coursec-2022/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo",
           "name": "Ustvarjanje umetnosti s kodo"
         },
         "coursec-2022/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! ",
           "name": "Zanke z Rey in BB-8",
           "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
         },
         "coursec-2022/Harvesting Crops with Loops": {
           "name": "Obiranje pridelkov z zankami",
+          "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!",
+          "name": "Obiranje pridelkov z zankami",
           "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!"
         },
         "coursec-2022/The Big Event": {
           "name": "Veliki dogodek",
+          "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. ",
+          "name": "Veliki dogodek",
           "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. "
         },
         "coursec-2022/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy",
           "name": "Zgradite igro Flappy"
         },
         "coursec-2022/Mini-Project: Chase Game": {
           "name": "Mini-projekt: Igra lovljenja",
+          "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!",
+          "name": "Mini-projekt: Igra lovljenja",
           "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke",
           "name": "Obarvajmo kvadratke"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Relejsko programiranje",
           "name": "Relejsko programiranje"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Pogojniki s kartami",
           "name": "Pogojniki s kartami"
         },
         "coursee-2022/Songwriting": {
+          "name": "Napiši pesem",
           "name": "Napiši pesem"
         },
         "coursef-2022/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2022/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu",
           "name": "Odpravljanje napak v labirintu"
         },
         "express-2022/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel",
           "name": "Zbiranje zaklada z Laurel"
         },
         "express-2022/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo",
           "name": "Ustvarjanje umetnosti s kodo"
         },
         "express-2022/Loops with Rey and BB-8": {
           "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! ",
+          "name": "Zanke z Rey in BB-8",
           "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
         },
         "express-2022/Snowflakes with Anna and Elsa": {
+          "purpose": "V tej seriji bodo učenci vadili gnezdene zanke, medtem ko bodo ustvarjali slike, ki jih bodo navdušeno delili.\n\nZačenši s peščico navodil se bodo učenci sami odločali, ko bodo ustvarjali modele za ponavljanje. Obračali jih bodo na različne načine in končali z umetnino, ki bo zares edinstvena. ",
           "purpose": "V tej seriji bodo učenci vadili gnezdene zanke, medtem ko bodo ustvarjali slike, ki jih bodo navdušeno delili.\n\nZačenši s peščico navodil se bodo učenci sami odločali, ko bodo ustvarjali modele za ponavljanje. Obračali jih bodo na različne načine in končali z umetnino, ki bo zares edinstvena. "
         },
         "csd3-2023/Variables": {
+          "name": "Spremenljivke",
           "name": "Spremenljivke"
         },
         "csd3-2023/Sprites": {
+          "name": "liki",
           "name": "liki"
         },
         "csd3-2023/Text": {
+          "name": "Besedilo",
           "name": "Besedilo"
         },
         "csd3-2023/Conditionals": {
+          "name": "Pogoji",
           "name": "Pogoji"
         },
         "csd3-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6a-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6b-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Veseli zemljevidi",
           "name": "Veseli zemljevidi"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Premakni se, premakni",
           "name": "Premakni se, premakni"
         },
         "coursec-2023/My Robotic Friends Jr": {
           "name": "Moji robotski prijatelji Jr.",
           "overview": "V učni uri \"postavljanja konteksta\" bodo učenci uporabljali nabor simbolov za izdelavo robota, ki bo zlagal lončke v različne vzorce. Učenci se bodo izmenjevali v vlogi robota, ki se bo odzval zgolj na algoritem, ki ga bodo določili sovrstniki.",
+          "preparation": "– Pripravi kup 20 papirnatih lončkov za vsako skupino 2–3 učencev.\n– Prikažite simbole iz **\\*Preglednice simbolov**, iz katere bodo učenci črpali med uro.\n– (Opcijsko) Natisnite eno \\*_\\\\_Idejo postavitve lončkov\\* za vsako skupino.",
+          "name": "Moji robotski prijatelji Jr.",
+          "overview": "V učni uri \"postavljanja konteksta\" bodo učenci uporabljali nabor simbolov za izdelavo robota, ki bo zlagal lončke v različne vzorce. Učenci se bodo izmenjevali v vlogi robota, ki se bo odzval zgolj na algoritem, ki ga bodo določili sovrstniki.",
           "preparation": "– Pripravi kup 20 papirnatih lončkov za vsako skupino 2–3 učencev.\n– Prikažite simbole iz **\\*Preglednice simbolov**, iz katere bodo učenci črpali med uro.\n– (Opcijsko) Natisnite eno \\*_\\\\_Idejo postavitve lončkov\\* za vsako skupino."
         },
         "coursec-2023/Programming with Angry Birds": {
+          "preparation": "-   Igrajte skozi uganke, da bi našli morebitna problematična področja za vaš razred.\n-   (Neobvezno) Izberite nekaj nalog, ki jih želite narediti kot skupina s svojim razredom. ",
           "preparation": "-   Igrajte skozi uganke, da bi našli morebitna problematična področja za vaš razred.\n-   (Neobvezno) Izberite nekaj nalog, ki jih želite narediti kot skupina s svojim razredom. "
         },
         "coursec-2023/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu",
           "name": "Odpravljanje napak v labirintu"
         },
         "coursec-2023/Collecting Treasure with Laurel": {
           "name": "Zbiranje zaklada z Laurel",
+          "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!",
+          "name": "Zbiranje zaklada z Laurel",
           "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!"
         },
         "coursec-2023/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo",
           "name": "Ustvarjanje umetnosti s kodo"
         },
         "coursec-2023/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! ",
           "name": "Zanke z Rey in BB-8",
           "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
         },
         "coursec-2023/Harvesting Crops with Loops": {
           "name": "Obiranje pridelkov z zankami",
+          "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!",
+          "name": "Obiranje pridelkov z zankami",
           "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!"
         },
         "coursec-2023/The Big Event": {
           "name": "Veliki dogodek",
+          "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. ",
+          "name": "Veliki dogodek",
           "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. "
         },
         "coursec-2023/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy",
           "name": "Zgradite igro Flappy"
         },
         "coursec-2023/Mini-Project: Chase Game": {
           "name": "Mini-projekt: Igra lovljenja",
+          "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!",
+          "name": "Mini-projekt: Igra lovljenja",
           "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke",
           "name": "Obarvajmo kvadratke"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Relejsko programiranje",
           "name": "Relejsko programiranje"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Pogojniki s kartami",
           "name": "Pogojniki s kartami"
         },
         "coursee-2023/Songwriting": {
+          "name": "Napiši pesem",
           "name": "Napiši pesem"
         },
         "coursef-2023/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2023/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu",
           "name": "Odpravljanje napak v labirintu"
         },
         "express-2023/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel",
           "name": "Zbiranje zaklada z Laurel"
         },
         "express-2023/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo",
           "name": "Ustvarjanje umetnosti s kodo"
         },
         "express-2023/Loops with Rey and BB-8": {
           "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! ",
+          "name": "Zanke z Rey in BB-8",
           "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
         },
         "express-2023/Snowflakes with Anna and Elsa": {
+          "purpose": "V tej seriji bodo učenci vadili gnezdene zanke, medtem ko bodo ustvarjali slike, ki jih bodo navdušeno delili.\n\nZačenši s peščico navodil se bodo učenci sami odločali, ko bodo ustvarjali modele za ponavljanje. Obračali jih bodo na različne načine in končali z umetnino, ki bo zares edinstvena. ",
           "purpose": "V tej seriji bodo učenci vadili gnezdene zanke, medtem ko bodo ustvarjali slike, ki jih bodo navdušeno delili.\n\nZačenši s peščico navodil se bodo učenci sami odločali, ko bodo ustvarjali modele za ponavljanje. Obračali jih bodo na različne načine in končali z umetnino, ki bo zares edinstvena. "
         },
         "artist/Artist": {
+          "name": "Umetnik",
           "name": "Umetnik"
         },
         "flappy/Flappy Code": {
+          "name": "Program za Plahutača (Flappyja)",
           "name": "Program za Plahutača (Flappyja)"
         },
         "frozen/Artist": {
+          "name": "Frozen (Ledeno kraljestvo) z Ano in Elso",
           "name": "Frozen (Ledeno kraljestvo) z Ano in Elso"
         },
         "hourofcode/Maze": {
+          "name": "Labirint",
           "name": "Labirint"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft Ura za kodo",
           "name": "Minecraft Ura za kodo"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft Ura za kodo Oblikovalec",
           "name": "Minecraft Ura za kodo Oblikovalec"
         },
         "playlab/Play Lab": {
+          "name": "Play Lab",
           "name": "Play Lab"
         },
         "allthethings/Jigsaw": {
