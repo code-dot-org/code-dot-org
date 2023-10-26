@@ -71,6 +71,11 @@ ur:
           UNIT:
             '"measures"': پیمائشیں
             '"seconds"': سیکنڈز
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': پیمائشیں
+            '"seconds"': سیکنڈز
       Dancelab_changeColorBy:
         text: "{COLOR} {METHOD} کو {AMOUNT} سے تبدیل کریں"
         options:
@@ -563,6 +568,49 @@ ur:
             '"iceCream"': آئس کریم
             '"default"': روشنی
             '"neon"': نیون
+            '"tropical"': منطقہ حارہ
+            '"vintage"': ونٹیج
+            '"warm"': گرم
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "پس منظر اثر \n{PALETTE} {EFFECT} سیٹ کریں"
+        options:
+          EFFECT:
+            '"none"': کوئی نہيں
+            '"rand"': "(بے ترتیبانہ)"
+            '"circles"': دائرے
+            '"quads"': زاویے
+            '"color_cycle"': رنگ
+            '"diamonds"': ہیرے
+            '"disco_ball"': ڈسکو بال
+            '"fireworks"': آتش بازی
+            '"flowers"': پھول
+            '"growing_stars"': ابھرتے ستارے
+            '"swirl"': نیند آور
+            '"kaleidoscope"': کیلیڈواسکوپ
+            '"lasers"': لیزر ڈانس فلور
+            '"splatter"': پینٹ سپلیٹر
+            '"rainbow"': قوس قزح
+            '"ripples_random"': بے ترتیبانہ ریپلز
+            '"ripples"': ریپلز
+            '"snowflakes"': برف
+            '"text"': گانا کے نام
+            '"squiggles"': سکویگلز
+            '"galaxy"': جگہ
+            '"sparkles"': پھلجھڑیاں
+            '"spiral"': مرغولہ
+            '"disco"': مربعے
+            '"starburst"': اسٹاربسٹ
+            '"stars"': ستارہ
+            '"music_wave"': لہریں
+          PALETTE:
+            '"rave"': ستارہ
+            '"cool"': زبردست
+            '"electronic"': الیکٹرونک
+            '"iceCream"': آئس کریم
+            '"default"': روشنی
+            '"neon"': نیون
+            '"ocean"': سمندر
+            '"rainbow"': قوس قزح
             '"tropical"': منطقہ حارہ
             '"vintage"': ونٹیج
             '"warm"': گرم
