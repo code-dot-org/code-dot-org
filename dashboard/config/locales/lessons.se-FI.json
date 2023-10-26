@@ -177,15 +177,19 @@
           "name": "Suokkardala ProšeaktaIdeaid"
         },
         "express-2017/Algorithms: Graph Paper Programming": {
+          "name": "Programmeren: Gráfa Bábir Programmeren",
           "name": "Programmeren: Gráfa Bábir Programmeren"
         },
         "express-2017/Building a Foundation": {
+          "name": "Hukset Vuođu",
           "name": "Hukset Vuođu"
         },
         "express-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Mohkit: Mu Mohkke Robota Olbmát",
           "name": "Mohkit: Mu Mohkke Robota Olbmát"
         },
         "express-2017/Explore Project Ideas": {
+          "name": "Suokkardala ProšeaktaIdeaid",
           "name": "Suokkardala ProšeaktaIdeaid"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -711,126 +715,167 @@
           "name": "Suohttasat Mohkiid váste"
         },
         "csd1-2021/Intro to Problem Solving": {
+          "name": "Láidehus ČuolbmaČoavdimii",
           "name": "Láidehus ČuolbmaČoavdimii"
         },
         "csd1-2021/Exploring Problem Solving": {
+          "name": "Vásihit ČuolbmaČoavdima",
           "name": "Vásihit ČuolbmaČoavdima"
         },
         "csd1-2021/Input and Output": {
+          "name": "Input ja Output",
           "name": "Input ja Output"
         },
         "csd1-2021/Processing": {
+          "name": "Gieđahallan",
           "name": "Gieđahallan"
         },
         "csd1-2021/Storage": {
+          "name": "Vuorká",
           "name": "Vuorká"
         },
         "csd1-2021/Project - Propose an App": {
+          "name": "Prošeakta - Evttohit App:a",
           "name": "Prošeakta - Evttohit App:a"
         },
         "csd2-2021/Intro to HTML": {
+          "name": "Láidehus HTML:ii",
           "name": "Láidehus HTML:ii"
         },
         "csd2-2021/Headings": {
+          "name": "Bajilčállagat",
           "name": "Bajilčállagat"
         },
         "csd2-2021/Digital Footprint": {
+          "name": "Digitála Luodda",
           "name": "Digitála Luodda"
         },
         "csd2-2021/Styling Text with CSS": {
+          "name": "Stylet Teavstta CSS:ain",
           "name": "Stylet Teavstta CSS:ain"
         },
         "csd2-2021/Styling Elements with CSS": {
+          "name": "Stylet Elemeanttaid CSS:ain",
           "name": "Stylet Elemeanttaid CSS:ain"
         },
         "csd3-2021/Programming for Entertainment": {
+          "name": "Programmere Guoimmuheami",
           "name": "Programmere Guoimmuheami"
         },
         "csd3-2021/Plotting Shapes": {
+          "name": "Plottet Hámiid",
           "name": "Plottet Hámiid"
         },
         "csd3-2021/Drawing in Game Lab": {
+          "name": "Tevdnet SpeallanLáb:as",
           "name": "Tevdnet SpeallanLáb:as"
         },
         "csd3-2021/Sprites": {
+          "name": "Sprite:at",
           "name": "Sprite:at"
         },
         "csd3-2021/Sprite Movement": {
+          "name": "Sprite Lihkadeapmi",
           "name": "Sprite Lihkadeapmi"
         },
         "csd3-2021/Keyboard Input": {
+          "name": "Boallobeavddi Input",
           "name": "Boallobeavddi Input"
         },
         "csd3-2021/Project - Interactive Card": {
+          "name": "Prošeakta  - Interaktiivva Koarta",
           "name": "Prošeakta  - Interaktiivva Koarta"
         },
         "csd3-2021/Complex Sprite Movement": {
+          "name": "Kompleaksa Sprite Lihkastagat",
           "name": "Kompleaksa Sprite Lihkastagat"
         },
         "csd3-2021/Collisions": {
+          "name": "Oktiibeaškkeheamit",
           "name": "Oktiibeaškkeheamit"
         },
         "csd3-2021/The Game Design Process": {
+          "name": "Spealu Designa Proseassa",
           "name": "Spealu Designa Proseassa"
         },
         "csd3-2021/Using the Game Design Process": {
+          "name": "Geavat Spealu Designa Proseassa",
           "name": "Geavat Spealu Designa Proseassa"
         },
         "csd3-2021/Project - Design a Game": {
+          "name": "Prošeakta  - Designe Spealu",
           "name": "Prošeakta  - Designe Spealu"
         },
         "csd4-2021/Understanding Your User": {
+          "name": "Ipmirdit Du Geavaheaddji",
           "name": "Ipmirdit Du Geavaheaddji"
         },
         "csd4-2021/Designing Apps for Good": {
+          "name": "Designet App:aid Buorrin",
           "name": "Designet App:aid Buorrin"
         },
         "csd4-2021/Market Research": {
+          "name": "MárkanIskkadeapmi",
           "name": "MárkanIskkadeapmi"
         },
         "csd4-2021/Prototype Testing": {
+          "name": "Prototyhpa Teasten",
           "name": "Prototyhpa Teasten"
         },
         "csd6-2021/Making Music": {
+          "name": "Ráhkat Musihka",
           "name": "Ráhkat Musihka"
         },
         "csd7-2021/Survey Planning": {
+          "name": "Designe Data Čoakkaldaga",
           "name": "Designe Data Čoakkaldaga"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Movttegis Kárttat",
           "name": "Movttegis Kárttat"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Šaddat Gáiggasin",
           "name": "Šaddat Gáiggasin"
         },
         "courseb-2021/The Right App": {
+          "name": "Dat Rievttes App:a",
           "name": "Dat Rievttes App:a"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Stuora Dáhpáhus",
           "name": "Stuora Dáhpáhus"
         },
         "coursec-2021/Picturing Data": {
+          "name": "Presenteret Dátaid",
           "name": "Presenteret Dátaid"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binára Giehtabáttit",
           "name": "Binára Giehtabáttit"
         },
         "coursed-2021/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu",
           "name": "Ráhkat Náste Soahti Spealu"
         },
         "coursee-2021/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut",
           "name": "Priváhta ja Persovnnlaš Dieđut"
         },
         "coursee-2021/Digital Sharing": {
+          "name": "Digitála Juohkin",
           "name": "Digitála Juohkin"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Lávlagiid čállit",
           "name": "Lávlagiid čállit"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Suohttasat Mohkiid váste",
           "name": "Suohttasat Mohkiid váste"
         },
         "coursef-2021/AI for Oceans": {
+          "name": "AI Mearaide",
           "name": "AI Mearaide"
         },
         "kodea-pd-2021/Getting Started": {
@@ -867,270 +912,359 @@
           "name": "Boahttevaš Lávkkit"
         },
         "csd1-2022/Intro to Problem Solving": {
+          "name": "Láidehus ČuolbmaČoavdimii",
           "name": "Láidehus ČuolbmaČoavdimii"
         },
         "csd1-2022/Exploring Problem Solving": {
+          "name": "Vásihit ČuolbmaČoavdima",
           "name": "Vásihit ČuolbmaČoavdima"
         },
         "csd1-2022/Input and Output": {
+          "name": "Input ja Output",
           "name": "Input ja Output"
         },
         "csd1-2022/Processing": {
+          "name": "Gieđahallan",
           "name": "Gieđahallan"
         },
         "csd1-2022/Storage": {
+          "name": "Vuorká",
           "name": "Vuorká"
         },
         "csd1-2022/Project - Propose an App": {
+          "name": "Prošeakta - Evttohit App:a",
           "name": "Prošeakta - Evttohit App:a"
         },
         "csd2-2022/Intro to HTML": {
+          "name": "Láidehus HTML:ii",
           "name": "Láidehus HTML:ii"
         },
         "csd2-2022/Headings": {
+          "name": "Bajilčállagat",
           "name": "Bajilčállagat"
         },
         "csd2-2022/Digital Footprint": {
+          "name": "Digitála Luodda",
           "name": "Digitála Luodda"
         },
         "csd2-2022/Styling Text with CSS": {
+          "name": "Stylet Teavstta CSS:ain",
           "name": "Stylet Teavstta CSS:ain"
         },
         "csd2-2022/Styling Elements with CSS": {
+          "name": "Stylet Elemeanttaid CSS:ain",
           "name": "Stylet Elemeanttaid CSS:ain"
         },
         "csd3-2022/Programming for Entertainment": {
+          "name": "Programmere Guoimmuheami",
           "name": "Programmere Guoimmuheami"
         },
         "csd3-2022/Plotting Shapes": {
+          "name": "Plottet Hámiid",
           "name": "Plottet Hámiid"
         },
         "csd3-2022/Drawing in Game Lab": {
+          "name": "Tevdnet SpeallanLáb:as",
           "name": "Tevdnet SpeallanLáb:as"
         },
         "csd3-2022/Sprites": {
+          "name": "Sprite:at",
           "name": "Sprite:at"
         },
         "csd3-2022/Sprite Movement": {
+          "name": "Sprite Lihkadeapmi",
           "name": "Sprite Lihkadeapmi"
         },
         "csd3-2022/Keyboard Input": {
+          "name": "Boallobeavddi Input",
           "name": "Boallobeavddi Input"
         },
         "csd3-2022/Project - Interactive Card": {
+          "name": "Prošeakta  - Interaktiivva Koarta",
           "name": "Prošeakta  - Interaktiivva Koarta"
         },
         "csd3-2022/Complex Sprite Movement": {
+          "name": "Kompleaksa Sprite Lihkastagat",
           "name": "Kompleaksa Sprite Lihkastagat"
         },
         "csd3-2022/Collisions": {
+          "name": "Oktiibeaškkeheamit",
           "name": "Oktiibeaškkeheamit"
         },
         "csd3-2022/The Game Design Process": {
+          "name": "Spealu Designa Proseassa",
           "name": "Spealu Designa Proseassa"
         },
         "csd3-2022/Using the Game Design Process": {
+          "name": "Geavat Spealu Designa Proseassa",
           "name": "Geavat Spealu Designa Proseassa"
         },
         "csd3-2022/Project - Design a Game": {
+          "name": "Prošeakta  - Designe Spealu",
           "name": "Prošeakta  - Designe Spealu"
         },
         "csd4-2022/Understanding Your User": {
+          "name": "Ipmirdit Du Geavaheaddji",
           "name": "Ipmirdit Du Geavaheaddji"
         },
         "csd4-2022/Designing Apps for Good": {
+          "name": "Designet App:aid Buorrin",
           "name": "Designet App:aid Buorrin"
         },
         "csd4-2022/Market Research": {
+          "name": "MárkanIskkadeapmi",
           "name": "MárkanIskkadeapmi"
         },
         "csd4-2022/Prototype Testing": {
+          "name": "Prototyhpa Teasten",
           "name": "Prototyhpa Teasten"
         },
         "csd6-2022/Making Music": {
+          "name": "Ráhkat Musihka",
           "name": "Ráhkat Musihka"
         },
         "csd7-2022/Survey Planning": {
+          "name": "Designe Data Čoakkaldaga",
           "name": "Designe Data Čoakkaldaga"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Movttegis Kárttat",
           "name": "Movttegis Kárttat"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Šaddat Gáiggasin",
           "name": "Šaddat Gáiggasin"
         },
         "courseb-2022/The Right App": {
+          "name": "Dat Rievttes App:a",
           "name": "Dat Rievttes App:a"
         },
         "coursec-2022/The Big Event": {
+          "name": "Stuora Dáhpáhus",
           "name": "Stuora Dáhpáhus"
         },
         "coursec-2022/Picturing Data": {
+          "name": "Presenteret Dátaid",
           "name": "Presenteret Dátaid"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binára Giehtabáttit",
           "name": "Binára Giehtabáttit"
         },
         "coursed-2022/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu",
           "name": "Ráhkat Náste Soahti Spealu"
         },
         "coursee-2022/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut",
           "name": "Priváhta ja Persovnnlaš Dieđut"
         },
         "coursee-2022/Songwriting": {
+          "name": "Lávlagiid čállit",
           "name": "Lávlagiid čállit"
         },
         "coursee-2022/Digital Sharing": {
+          "name": "Digitála Juohkin",
           "name": "Digitála Juohkin"
         },
         "coursef-2022/AI For Oceans": {
+          "name": "AI Mearaide",
           "name": "AI Mearaide"
         },
         "csd1-2023/Intro to Problem Solving": {
+          "name": "Láidehus ČuolbmaČoavdimii",
           "name": "Láidehus ČuolbmaČoavdimii"
         },
         "csd1-2023/Exploring Problem Solving": {
+          "name": "Vásihit ČuolbmaČoavdima",
           "name": "Vásihit ČuolbmaČoavdima"
         },
         "csd1-2023/Input and Output": {
+          "name": "Input ja Output",
           "name": "Input ja Output"
         },
         "csd1-2023/Processing": {
+          "name": "Gieđahallan",
           "name": "Gieđahallan"
         },
         "csd1-2023/Storage": {
+          "name": "Vuorká",
           "name": "Vuorká"
         },
         "csd1-2023/Project - Propose an App": {
+          "name": "Prošeakta - Evttohit App:a",
           "name": "Prošeakta - Evttohit App:a"
         },
         "csd2-2023/Intro to HTML": {
+          "name": "Láidehus HTML:ii",
           "name": "Láidehus HTML:ii"
         },
         "csd2-2023/Digital Footprint": {
+          "name": "Digitála Luodda",
           "name": "Digitála Luodda"
         },
         "csd2-2023/Styling Text with CSS": {
+          "name": "Stylet Teavstta CSS:ain",
           "name": "Stylet Teavstta CSS:ain"
         },
         "csd2-2023/Styling Elements with CSS": {
+          "name": "Stylet Elemeanttaid CSS:ain",
           "name": "Stylet Elemeanttaid CSS:ain"
         },
         "csd3-2023/Plotting Shapes": {
+          "name": "Plottet Hámiid",
           "name": "Plottet Hámiid"
         },
         "csd3-2023/Drawing in Game Lab": {
+          "name": "Tevdnet SpeallanLáb:as",
           "name": "Tevdnet SpeallanLáb:as"
         },
         "csd3-2023/Sprites": {
+          "name": "Sprite:at",
           "name": "Sprite:at"
         },
         "csd3-2023/Sprite Movement": {
+          "name": "Sprite Lihkadeapmi",
           "name": "Sprite Lihkadeapmi"
         },
         "csd3-2023/Keyboard Input": {
+          "name": "Boallobeavddi Input",
           "name": "Boallobeavddi Input"
         },
         "csd3-2023/Project - Interactive Card": {
+          "name": "Prošeakta  - Interaktiivva Koarta",
           "name": "Prošeakta  - Interaktiivva Koarta"
         },
         "csd3-2023/Complex Sprite Movement": {
+          "name": "Kompleaksa Sprite Lihkastagat",
           "name": "Kompleaksa Sprite Lihkastagat"
         },
         "csd3-2023/Collisions": {
+          "name": "Oktiibeaškkeheamit",
           "name": "Oktiibeaškkeheamit"
         },
         "csd3-2023/The Game Design Process": {
+          "name": "Spealu Designa Proseassa",
           "name": "Spealu Designa Proseassa"
         },
         "csd3-2023/Using the Game Design Process": {
+          "name": "Geavat Spealu Designa Proseassa",
           "name": "Geavat Spealu Designa Proseassa"
         },
         "csd3-2023/Project - Design a Game": {
+          "name": "Prošeakta  - Designe Spealu",
           "name": "Prošeakta  - Designe Spealu"
         },
         "csd4-2023/Understanding Your User": {
+          "name": "Ipmirdit Du Geavaheaddji",
           "name": "Ipmirdit Du Geavaheaddji"
         },
         "csd4-2023/Designing Apps for Good": {
+          "name": "Designet App:aid Buorrin",
           "name": "Designet App:aid Buorrin"
         },
         "csd4-2023/Market Research": {
+          "name": "MárkanIskkadeapmi",
           "name": "MárkanIskkadeapmi"
         },
         "csd4-2023/Prototype Testing": {
+          "name": "Prototyhpa Teasten",
           "name": "Prototyhpa Teasten"
         },
         "csd6a-2023/Making Music": {
+          "name": "Ráhkat Musihka",
           "name": "Ráhkat Musihka"
         },
         "csd7-2023/Survey Planning": {
+          "name": "Designe Data Čoakkaldaga",
           "name": "Designe Data Čoakkaldaga"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Movttegis Kárttat",
           "name": "Movttegis Kárttat"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Šaddat Gáiggasin",
           "name": "Šaddat Gáiggasin"
         },
         "courseb-2023/The Right App": {
+          "name": "Dat Rievttes App:a",
           "name": "Dat Rievttes App:a"
         },
         "coursec-2023/The Big Event": {
+          "name": "Stuora Dáhpáhus",
           "name": "Stuora Dáhpáhus"
         },
         "coursec-2023/Picturing Data": {
+          "name": "Presenteret Dátaid",
           "name": "Presenteret Dátaid"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binára Giehtabáttit",
           "name": "Binára Giehtabáttit"
         },
         "coursed-2023/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu",
           "name": "Ráhkat Náste Soahti Spealu"
         },
         "coursee-2023/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut",
           "name": "Priváhta ja Persovnnlaš Dieđut"
         },
         "coursee-2023/Songwriting": {
+          "name": "Lávlagiid čállit",
           "name": "Lávlagiid čállit"
         },
         "coursee-2023/Digital Sharing": {
+          "name": "Digitála Juohkin",
           "name": "Digitála Juohkin"
         },
         "coursef-2023/AI For Oceans": {
+          "name": "AI Mearaide",
           "name": "AI Mearaide"
         },
         "artist/Artist": {
+          "name": "Dáiddár",
           "name": "Dáiddár"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy Koda",
           "name": "Flappy Koda"
         },
         "frozen/Artist": {
+          "name": "Kode Annain ja Elsain",
           "name": "Kode Annain ja Elsain"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Speallan-lab",
           "name": "Gumball Speallan-lab"
         },
         "hourofcode/Maze": {
+          "name": "Labirynta",
           "name": "Labirynta"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Jiekŋaáiggi Speallan-lab",
           "name": "Jiekŋaáiggi Speallan-lab"
         },
         "infinity/Infinity": {
+          "name": "Disney Infinitiija Speallan-lab",
           "name": "Disney Infinitiija Speallan-lab"
         },
         "oceans/Oceans": {
+          "name": "AI Mearaide",
           "name": "AI Mearaide"
         },
         "playlab/Play Lab": {
+          "name": "Speallan-lab",
           "name": "Speallan-lab"
         },
         "starwars/Hour of Code 2015": {
+          "name": "Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)",
           "name": "Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)"
         },
         "text-compression/Text Compression": {
+          "name": "TeakstaKomprimeren",
           "name": "TeakstaKomprimeren"
         },
         "allthethings/Maze": {

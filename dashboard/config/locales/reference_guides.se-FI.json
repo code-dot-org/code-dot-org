@@ -3,21 +3,27 @@
     "data": {
       "reference_guides": {
         "csd-2022/classes": {
+          "display_name": "Klássat",
           "display_name": "Klássat"
         },
         "csd-2022/design-mode": {
+          "display_name": "Designa Modus",
           "display_name": "Designa Modus"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Ráhkadan Reaidokássa",
           "display_name": "Ráhkadan Reaidokássa"
         },
         "csd-2022/other": {
+          "display_name": "Eará",
           "display_name": "Eará"
         },
         "csd-2022/sprites": {
+          "display_name": "Sprite:at",
           "display_name": "Sprite:at"
         }
       }
