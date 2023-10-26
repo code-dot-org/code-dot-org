@@ -114,10 +114,15 @@ export default class ProgramExecutor {
       return;
     }
 
-    this.hooks.runUserSetup();
-
     const previewDraw = () => {
       this.nativeAPI.setEffectsInPreviewMode(true);
+
+      // the user setup hook initializes effects,
+      // needs to happen in preview mode for some effects (eg, tacos)
+      if (!this.hooks.runUserSetup) {
+        return;
+      }
+      this.hooks.runUserSetup();
 
       // redraw() (rather than draw()) is p5's recommended way
       // of drawing once.
