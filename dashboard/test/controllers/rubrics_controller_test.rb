@@ -316,6 +316,12 @@ class RubricsControllerTest < ActionController::TestCase
         learning_goal: learning_goal,
         requester: @teacher
       )
+      create(
+        :old_learning_goal_ai_evaluation,
+        user: @student,
+        learning_goal: learning_goal,
+        requester: @teacher
+      )
       Timecop.travel 1.minute
       create :user_level, user: @student, script: @rubric.lesson.script, level: @level
       Timecop.travel 1.minute
@@ -329,6 +335,12 @@ class RubricsControllerTest < ActionController::TestCase
       create(
         :learning_goal_ai_evaluation,
         rubric_ai_evaluation: rubric_ai_evaluation2,
+        user: @student,
+        learning_goal: learning_goal,
+        requester: @teacher
+      )
+      create(
+        :old_learning_goal_ai_evaluation,
         user: @student,
         learning_goal: learning_goal,
         requester: @teacher
