@@ -3,57 +3,75 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "Laboratorij za Aplikacije",
           "display_name": "Laboratorij za Aplikacije"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Pregled",
           "display_name": "Pregled"
         },
         "csd-2022/classes": {
+          "display_name": "Razredi",
           "display_name": "Razredi"
         },
         "csd-2022/css-overview": {
+          "display_name": "Pregled",
           "display_name": "Pregled"
         },
         "csd-2022/design-mode": {
+          "display_name": "Način Dizajniranje",
           "display_name": "Način Dizajniranje"
         },
         "csd-2022/for-loops": {
+          "display_name": "Od-Do-Za Petlje",
           "display_name": "Od-Do-Za Petlje"
         },
         "csd-2022/functions": {
+          "display_name": "Funkcije",
           "display_name": "Funkcije"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Pregled",
           "display_name": "Pregled"
         },
         "csd-2022/html-overview": {
+          "display_name": "Pregled",
           "display_name": "Pregled"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Pregled",
           "display_name": "Pregled"
         },
         "csd-2022/lists": {
+          "display_name": "Liste",
           "display_name": "Liste"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Pregled",
           "display_name": "Pregled"
         },
         "csd-2022/other": {
+          "display_name": "Ostalo",
           "display_name": "Ostalo"
         },
         "csd-2022/other-overview": {
+          "display_name": "Pregled",
           "display_name": "Pregled"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Pregled",
           "display_name": "Pregled"
         },
         "csd-2022/variables": {
+          "display_name": "Varijable",
           "display_name": "Varijable"
         },
         "csd-2022/velocity": {
+          "display_name": "Brzina",
           "display_name": "Brzina"
         }
       }

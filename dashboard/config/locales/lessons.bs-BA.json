@@ -63,18 +63,23 @@
           "name": "Predstavite Vaš projekat"
         },
         "express-2017/Introduction": {
+          "name": "Uvod",
           "name": "Uvod"
         },
         "express-2017/Building a Foundation": {
+          "name": "Izrada Temelja",
           "name": "Izrada Temelja"
         },
         "express-2017/Nested Loops": {
+          "name": "Ugniježdene Petlje",
           "name": "Ugniježdene Petlje"
         },
         "express-2017/Build Your Project": {
+          "name": "Napravite Vaš projekat",
           "name": "Napravite Vaš projekat"
         },
         "express-2017/Present Your Project": {
+          "name": "Predstavite Vaš projekat",
           "name": "Predstavite Vaš projekat"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -360,77 +365,103 @@
           "name": "Plesna zabava"
         },
         "csd3-2021/Variables": {
+          "name": "Varijable",
           "name": "Varijable"
         },
         "csd3-2021/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2021/Conditionals": {
+          "name": "Uvjeti",
           "name": "Uvjeti"
         },
         "csd3-2021/Velocity": {
+          "name": "Brzina",
           "name": "Brzina"
         },
         "csd3-2021/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6-2021/Making Music": {
+          "name": "Pravljenje muzike",
           "name": "Pravljenje muzike"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Funkcije sa Parametrima",
           "name": "Funkcije sa Parametrima"
         },
         "coursea-2021/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Vesele Mape",
           "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "name": "Vesele Mape",
+          "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
           "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu."
         },
         "coursea-2021/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Pomakni, Pomakni",
           "name": "Pomakni, Pomakni"
         },
         "courseb-2021/Sequencing in Maze": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Zapetljavanje",
           "name": "Zapetljavanje"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Veliki Događaj",
           "name": "Veliki Događaj"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binarne narukvice",
           "name": "Binarne narukvice"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Papirno Programiranje Grafikona",
           "name": "Papirno Programiranje Grafikona"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Prijenos programiranja",
           "name": "Prijenos programiranja"
         },
         "coursed-2021/Dance Party": {
+          "name": "Plesna zabava",
           "name": "Plesna zabava"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Uvjeti s Kartama",
           "name": "Uvjeti s Kartama"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Pisanje pjesama",
           "name": "Pisanje pjesama"
         },
         "coursef-2021/Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2021/lesson-1": {
+          "name": "Plesna zabava",
           "name": "Plesna zabava"
         },
         "pre-express-2021/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "pre-express-2021/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "kodea-pd-2021/Planning": {
@@ -440,184 +471,247 @@
           "name": "Slijedeći Koraci"
         },
         "csd3-2022/Variables": {
+          "name": "Varijable",
           "name": "Varijable"
         },
         "csd3-2022/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2022/Conditionals": {
+          "name": "Uvjeti",
           "name": "Uvjeti"
         },
         "csd3-2022/Velocity": {
+          "name": "Brzina",
           "name": "Brzina"
         },
         "csd3-2022/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6-2022/Making Music": {
+          "name": "Pravljenje muzike",
           "name": "Pravljenje muzike"
         },
         "csd6-2022/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "coursea-2022/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "coursea-2022/Happy Maps": {
           "name": "Vesele Mape",
           "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "name": "Vesele Mape",
+          "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
           "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu."
         },
         "coursea-2022/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Pomakni, Pomakni",
           "name": "Pomakni, Pomakni"
         },
         "courseb-2022/Sequencing with Angry Birds": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Zapetljavanje",
           "name": "Zapetljavanje"
         },
         "coursec-2022/The Big Event": {
+          "name": "Veliki Događaj",
           "name": "Veliki Događaj"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binarne narukvice",
           "name": "Binarne narukvice"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Papirno Programiranje Grafikona",
           "name": "Papirno Programiranje Grafikona"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Prijenos programiranja",
           "name": "Prijenos programiranja"
         },
         "coursed-2022/Dance Party": {
+          "name": "Plesna zabava",
           "name": "Plesna zabava"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Uvjeti s Kartama",
           "name": "Uvjeti s Kartama"
         },
         "coursee-2022/Songwriting": {
+          "name": "Pisanje pjesama",
           "name": "Pisanje pjesama"
         },
         "coursef-2022/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2022/Dance Party": {
+          "name": "Plesna zabava",
           "name": "Plesna zabava"
         },
         "pre-express-2022/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "pre-express-2022/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "csd3-2023/Variables": {
+          "name": "Varijable",
           "name": "Varijable"
         },
         "csd3-2023/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2023/Conditionals": {
+          "name": "Uvjeti",
           "name": "Uvjeti"
         },
         "csd3-2023/Velocity": {
+          "name": "Brzina",
           "name": "Brzina"
         },
         "csd3-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6a-2023/Making Music": {
+          "name": "Pravljenje muzike",
           "name": "Pravljenje muzike"
         },
         "csd6a-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6b-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "coursea-2023/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "coursea-2023/Happy Maps": {
           "name": "Vesele Mape",
           "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "name": "Vesele Mape",
+          "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
           "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu."
         },
         "coursea-2023/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Pomakni, Pomakni",
           "name": "Pomakni, Pomakni"
         },
         "courseb-2023/Sequencing with Angry Birds": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Zapetljavanje",
           "name": "Zapetljavanje"
         },
         "coursec-2023/The Big Event": {
+          "name": "Veliki Događaj",
           "name": "Veliki Događaj"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binarne narukvice",
           "name": "Binarne narukvice"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Papirno Programiranje Grafikona",
           "name": "Papirno Programiranje Grafikona"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Prijenos programiranja",
           "name": "Prijenos programiranja"
         },
         "coursed-2023/Dance Party": {
+          "name": "Plesna zabava",
           "name": "Plesna zabava"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Uvjeti s Kartama",
           "name": "Uvjeti s Kartama"
         },
         "coursee-2023/Songwriting": {
+          "name": "Pisanje pjesama",
           "name": "Pisanje pjesama"
         },
         "coursef-2023/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "express-2023/Dance Party": {
+          "name": "Plesna zabava",
           "name": "Plesna zabava"
         },
         "pre-express-2023/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "pre-express-2023/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.",
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
         "artist/Artist": {
+          "name": "Umjetnik",
           "name": "Umjetnik"
         },
         "dance-2019/Dance Party": {
+          "name": "Plesna zabava",
           "name": "Plesna zabava"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy kôd",
           "name": "Flappy kôd"
         },
         "frozen/Artist": {
+          "name": "Programiraj sa Anna i Elsa",
           "name": "Programiraj sa Anna i Elsa"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Slatkiši Play Lab",
           "name": "Slatkiši Play Lab"
         },
         "hourofcode/Maze": {
+          "name": "Labirint",
           "name": "Labirint"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ledeno doba Play Lab",
           "name": "Ledeno doba Play Lab"
         },
         "infinity/Infinity": {
+          "name": "Disney Beskonačni Laboratorij Igranja",
           "name": "Disney Beskonačni Laboratorij Igranja"
         },
         "mc/Hour of Code 2015": {
+          "name": "Sata Kodiranja Minecraft-a",
           "name": "Sata Kodiranja Minecraft-a"
         },
         "playlab/Play Lab": {
+          "name": "Play Lab",
           "name": "Play Lab"
         },
         "allthethings/Jigsaw": {
