@@ -73,6 +73,11 @@ fa:
           UNIT:
             '"measures"': اندازه‌ها
             '"seconds"': ثانیه
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': اندازه‌ها
+            '"seconds"': ثانیه
       Dancelab_changeColorBy:
         text: تغییر {COLOR}{METHOD} به اندازه {AMOUNT}
         options:
@@ -568,6 +573,49 @@ fa:
             '"iceCream"': بستنی (پالت)
             '"default"': روشن (پالت)
             '"neon"': نئون (پالت)
+            '"tropical"': استوایی (پالت)
+            '"vintage"': آنتیک (پالت)
+            '"warm"': گرم (پالت)
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
+        options:
+          EFFECT:
+            '"none"': هیچکدام
+            '"rand"': "(تصادفی)"
+            '"circles"': دایره‌ها
+            '"quads"': زاویه‌ (افکت)
+            '"color_cycle"': رنگ‌ها
+            '"diamonds"': لوزی‌ها
+            '"disco_ball"': دسکو بال
+            '"fireworks"': آتش‌بازی
+            '"flowers"': گلها (افکت)
+            '"growing_stars"': ستاره‌های بزرگ شونده (افکت)
+            '"swirl"': هیپنو (افکت)
+            '"kaleidoscope"': هزار رنگ (افکت)
+            '"lasers"': نور لیزر سالن رقص (افکت)
+            '"splatter"': رنگ پاشی (افکت)
+            '"rainbow"': رنگین‌کمان (افکت)
+            '"ripples_random"': شنهای تصادفی (افکت)
+            '"ripples"': شن (افکت)
+            '"snowflakes"': برف (افکت)
+            '"text"': اسم آواز (افکت)
+            '"squiggles"': موج موج (افکت)
+            '"galaxy"': فضا  (افکت)
+            '"sparkles"': درخشش (افکت)
+            '"spiral"': مارپیچ (افکت)
+            '"disco"': مربع (افکت)
+            '"starburst"': استارباست (افکت)
+            '"stars"': ستاره  (افکت)
+            '"music_wave"': امواج (افکت)
+          PALETTE:
+            '"rave"': سیاه و سفید (افکت)
+            '"cool"': جالب (پالت رنگ)
+            '"electronic"': الکترونیکی (پالت)
+            '"iceCream"': بستنی (پالت)
+            '"default"': روشن (پالت)
+            '"neon"': نئون (پالت)
+            '"ocean"': اقیانوس
+            '"rainbow"': رنگین‌کمان (افکت)
             '"tropical"': استوایی (پالت)
             '"vintage"': آنتیک (پالت)
             '"warm"': گرم (پالت)
