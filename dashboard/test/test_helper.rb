@@ -57,9 +57,6 @@ require 'testing/capture_queries'
 
 require 'parallel_tests/test/runtime_logger'
 
-require 'database_cleaner/active_record'
-DatabaseCleaner.strategy = :transaction
-
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
@@ -95,12 +92,9 @@ class ActiveSupport::TestCase
     # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
     AWS::S3.stubs(:exists_in_bucket).returns(true)
-
-    DatabaseCleaner.start
   end
 
   teardown do
-    DatabaseCleaner.clean
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test

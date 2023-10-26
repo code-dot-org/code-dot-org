@@ -21,6 +21,8 @@ module I18n
 
             progress_bar.total = tts_units.size
             tts_units.find_each do |unit|
+              next unless unit.text_to_speech_enabled?
+
               unit.levels.merge(Blockly.all).find_each do |level|
                 I18nScriptUtils.process_in_threads(TTS_LOCALES) do |locale|
                   upload_tts_short_instructions_l10n(level, locale)
