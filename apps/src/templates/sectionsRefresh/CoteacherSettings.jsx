@@ -23,14 +23,16 @@ export default function CoteacherSettings({
   const [coteacherToRemove, setCoteacherToRemove] = useState({});
 
   const statusSortValue = coteacher => {
-    if (coteacher.status === 'invited') {
+    if (!coteacher.status) {
       return 0;
-    } else if (coteacher.status === 'declined') {
+    } else if (coteacher.status === 'invited') {
       return 1;
-    } else if (coteacher.status === 'active') {
+    } else if (coteacher.status === 'declined') {
       return 2;
+    } else if (coteacher.status === 'active') {
+      return 3;
     }
-    return 3;
+    return 4;
   };
 
   const coteachers = React.useMemo(() => {
