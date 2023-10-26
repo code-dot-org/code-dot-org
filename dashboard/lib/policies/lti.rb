@@ -1,4 +1,5 @@
 require 'user'
+require 'authentication_option'
 
 class Policies::Lti
   module AccessTokenScopes
@@ -34,5 +35,18 @@ class Policies::Lti
 
   def self.generate_auth_id(id_token)
     "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
+  end
+
+  def self.lti?(user)
+    return !user.authentication_options.empty? && user.authentication_options.first.credential_type == AuthenticationOption::LTI_V1
+    false
+  end
+
+  def self.issuer(user)
+    auth_options = user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::LTI_V1}
+    if auth_options
+      return auth_options.authentication_id.split('|').first
+    end
+    nil
   end
 end

@@ -88,7 +88,7 @@ class LtiV1Controller < ApplicationController
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
 
       if user
-        sign_in user: user
+        sign_in user
         redirect_to target_link_uri
       else
         user = Services::Lti.partially_create_user(decoded_jwt)
