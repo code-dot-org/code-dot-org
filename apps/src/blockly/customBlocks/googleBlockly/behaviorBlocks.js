@@ -176,7 +176,18 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     blockList.push(newBehaviorButton);
   }
 
-  blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
+  // Blockly supports XML or JSON, but not a combination of both.
+  // We convert to JSON here because the behavior_get blocks are JSON.
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
+  if (!levelToolboxBlocks) {
+    return;
+  }
+  const blocksConvertedJson = convertXmlToJson(
+    levelToolboxBlocks.documentElement
+  );
+  const blocksJson =
+    Blockly.cdoUtils.getSimplifiedStateForFlyout(blocksConvertedJson);
+  blockList.push(...blocksJson);
 
   // Workspaces to populate behaviors flyout category from
   const workspaces = [
@@ -212,54 +223,6 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   });
 
   return blockList;
-}
-
-function getCustomCategoryBlocksForFlyout(category) {
-  const parser = new DOMParser();
-  // TODO: Update this to use JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
-  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
-
-  const categoryNodes = xmlDoc.getElementsByTagName('category');
-  for (const categoryNode of categoryNodes) {
-    const categoryCustom = categoryNode.getAttribute('custom');
-
-    if (categoryCustom === category) {
-      const xmlRootElement = xmlDoc.createElement('xml'); // Create a new <xml> root element
-
-      const blockNodes = categoryNode.getElementsByTagName('block');
-      for (const blockNode of blockNodes) {
-        if (blockNode.parentElement === categoryNode) {
-          xmlRootElement.appendChild(blockNode.cloneNode(true)); // Append cloned block nodes
-        }
-      }
-
-      const jsonBlocks = convertXmlToJson(xmlRootElement);
-      const flyoutBlocks = jsonBlocks.blocks.blocks.map(
-        simplifyBlockStateForFlyout
-      );
-
-      // Returns an array of simplified JSON blocks for flyout, or an empty array
-      // if the desired category is not found
-      return flyoutBlocks;
-    }
-  }
-  return [];
-}
-
-// Used to simplify block state for inclusion in the Behaviors category flyout
-function simplifyBlockStateForFlyout(block) {
-  // Clone the original block object to avoid modifying it directly
-  const modifiedBlock = {...block};
-
-  // Remove id, x, and y properties
-  delete modifiedBlock.id;
-  delete modifiedBlock.x;
-  delete modifiedBlock.y;
-
-  // Add kind property with value 'block'
-  modifiedBlock.kind = 'block';
-
-  return modifiedBlock;
 }
 
 const getNewBehaviorButtonWithCallback = (
