@@ -78,6 +78,7 @@ require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
+require 'policies/lti'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -212,6 +213,7 @@ class User < ApplicationRecord
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
+  accepts_nested_attributes_for :primary_contact_info
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -694,6 +696,16 @@ class User < ApplicationRecord
     migrated_user || User.find_by(hashed_email: hashed_email)
   end
 
+  def primary_contact_info
+    # TODO: Make sure this works?
+    return @primary_contact_info unless @primary_contact_info.nil?
+
+    ao_with_email = authentication_options.select {|ao| ao.email.present?}
+    return ao_with_email.first unless ao_with_email.empty?
+
+    nil
+  end
+
   # Locate an SSO user by SSO provider and associated user id.
   # @param [String] type A credential type / provider type.  In the future this
   #   should always be one of the valid credential types from AuthenticationOption
@@ -880,7 +892,8 @@ class User < ApplicationRecord
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
-      user.attributes = params
+      params = params.merge(user.attributes) {|_key, old_val, new_val| old_val.nil? ? new_val : old_val}
+      user.attributes = params.compact
     end
   end
 
@@ -940,6 +953,7 @@ class User < ApplicationRecord
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
+    return false if Policies::Lti.lti? self
     true
   end
 
@@ -2148,7 +2162,7 @@ class User < ApplicationRecord
   end
 
   def should_disable_user_type?
-    user_type.present? && oauth_provided_user_type
+    user_type.present? && (oauth_provided_user_type || Policies::Lti.lti?(self))
   end
 
   def oauth_provided_user_type
