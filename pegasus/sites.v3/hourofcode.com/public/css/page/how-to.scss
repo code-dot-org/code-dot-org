@@ -329,7 +329,7 @@ section.steps {
       border-radius: 100%;
       font-size: 1rem;
       text-align: center;
-      line-height: 2;
+      line-height: 2.1;
       font-family: var(--main-font);
       font-weight: var(--semi-bold-font-weight);
     }
@@ -341,6 +341,10 @@ section.steps {
     img {
       border-radius: $border-radius;
       width: 100%;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
     }
   }
 }
