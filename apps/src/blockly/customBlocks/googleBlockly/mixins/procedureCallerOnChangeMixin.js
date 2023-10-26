@@ -1,3 +1,7 @@
+// This is copied from
+// https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285
+// Once we upgrade to Blockly v10 we can go back to using the original mixin.
+// We needed a bug fix not present in our current version of the plugin.
 const procedureCallerOnChangeMixin = {
   /**
    * Procedure calls cannot exist without the corresponding procedure

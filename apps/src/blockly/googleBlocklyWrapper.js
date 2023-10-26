@@ -155,18 +155,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    let workspaceCode = '';
-    try {
-      workspaceCode = Blockly.JavaScript.workspaceToCode(
-        Blockly.mainBlockSpace
+    let workspaceCode = Blockly.JavaScript.workspaceToCode(
+      Blockly.mainBlockSpace
+    );
+    if (this.getHiddenDefinitionWorkspace()) {
+      workspaceCode += Blockly.JavaScript.workspaceToCode(
+        this.getHiddenDefinitionWorkspace()
       );
-      if (this.getHiddenDefinitionWorkspace()) {
-        workspaceCode += Blockly.JavaScript.workspaceToCode(
-          this.getHiddenDefinitionWorkspace()
-        );
-      }
-    } catch (e) {
-      console.warn('Error generating workspace code', e);
     }
     return workspaceCode;
   };

@@ -4,7 +4,7 @@ import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
-import procedureCallerOnChangeMixin from './mutators/procedureCallerOnChangeMixin';
+import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin';
 import {procedureCallerMutator} from './mutators/procedureCallerMutator';
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -88,11 +88,11 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
       'procedure_caller_context_menu_mixin',
-      'custom_procedure_caller_on_change_mixin',
+      'procedure_caller_on_change_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
       'modal_procedures_no_destroy',
     ],
-    mutator: 'custom_procedure_caller_mutator',
+    mutator: 'procedure_caller_mutator',
   },
 ]);
 
@@ -192,13 +192,17 @@ GoogleBlockly.Extensions.registerMutator(
   procedureDefMutator
 );
 
+// TODO: After updating to Blockly v10, use the original
+// procedure_caller_mutator and procedure_caller_on_change_mixin.
+GoogleBlockly.Extensions.unregister('procedure_caller_mutator');
 GoogleBlockly.Extensions.registerMutator(
-  'custom_procedure_caller_mutator',
+  'procedure_caller_mutator',
   procedureCallerMutator
 );
 
+GoogleBlockly.Extensions.unregister('procedure_caller_on_change_mixin');
 GoogleBlockly.Extensions.registerMixin(
-  'custom_procedure_caller_on_change_mixin',
+  'procedure_caller_on_change_mixin',
   procedureCallerOnChangeMixin
 );
 

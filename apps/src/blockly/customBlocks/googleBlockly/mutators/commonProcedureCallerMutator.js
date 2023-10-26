@@ -17,6 +17,7 @@ export const commonFunctions = {
     }
     return state;
   },
+
   /**
    * Applies the given state to this block.
    * @param state The state to apply to this block, ie the params and
@@ -25,6 +26,7 @@ export const commonFunctions = {
   loadExtraState: function (state) {
     this.deserialize_(state['name'], state['params'] || []);
   },
+
   /**
    * Applies the given name and params from the serialized state to the block.
    * @param name The name to apply to the block.
