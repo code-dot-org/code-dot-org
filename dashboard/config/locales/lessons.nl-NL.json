@@ -69,12 +69,15 @@
           "name": "Algoritmen: Tangrams"
         },
         "express-2017/Introduction": {
+          "name": "Introductie",
           "name": "Introductie"
         },
         "express-2017/Building a Foundation": {
+          "name": "Een Basis Bouwen",
           "name": "Een Basis Bouwen"
         },
         "express-2017/Nested Loops": {
+          "name": "Genestelde lussen",
           "name": "Genestelde lussen"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -438,91 +441,121 @@
           "name": "Dansfeest"
         },
         "csd1-2021/Storage": {
+          "name": "Opslag",
           "name": "Opslag"
         },
         "csd2-2021/Headings": {
+          "name": "Headings",
           "name": "Headings"
         },
         "csd2-2021/Intellectual Property": {
+          "name": "Intellectuele Eigendom",
           "name": "Intellectuele Eigendom"
         },
         "csd2-2021/Using Images": {
+          "name": "Afbeeldingen gebruiken",
           "name": "Afbeeldingen gebruiken"
         },
         "csd3-2021/Variables": {
+          "name": "Variabelen",
           "name": "Variabelen"
         },
         "csd3-2021/Sprites": {
+          "name": "Sprites",
           "name": "Sprites"
         },
         "csd3-2021/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2021/Conditionals": {
+          "name": "Voorwaardelijke instructies",
           "name": "Voorwaardelijke instructies"
         },
         "csd3-2021/Velocity": {
+          "name": "Snelheid",
           "name": "Snelheid"
         },
         "csd3-2021/Collision Detection": {
+          "name": "Botsingdetectie",
           "name": "Botsingdetectie"
         },
         "csd3-2021/Functions": {
+          "name": "Functies",
           "name": "Functies"
         },
         "csd5-2021/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen",
           "name": "Het voorstellen van afbeeldingen"
         },
         "csd5-2021/Representing Numbers": {
+          "name": "Het voorstellen van getallen",
           "name": "Het voorstellen van getallen"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Functies met Parameters",
           "name": "Functies met Parameters"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Vrolijke Routes",
           "name": "Vrolijke Routes"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "verplaats het, verplaats het",
           "name": "verplaats het, verplaats het"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Rondjes lopen",
           "name": "Rondjes lopen"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "De grote gebeurtenis",
           "name": "De grote gebeurtenis"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binaire armbanden",
           "name": "Binaire armbanden"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier",
           "name": "Programmeren op Ruitjespapier"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Estafette Programmeren",
           "name": "Estafette Programmeren"
         },
         "coursed-2021/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!",
           "name": "Bouw een Star Wars Spel!"
         },
         "coursed-2021/Dance Party": {
+          "name": "Dansfeest",
           "name": "Dansfeest"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Statements met Kaarten",
           "name": "Statements met Kaarten"
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Songwriting",
+          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  ",
+          "name": "Songwriting",
           "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
         },
         "coursef-2021/For Loop Fun": {
+          "name": "For Lus fun",
           "name": "For Lus fun"
         },
         "coursef-2021/lesson-5": {
+          "name": "Uitbraak",
           "name": "Uitbraak"
         },
         "coursef-2021/Internet": {
+          "name": "Het Internet",
           "name": "Het Internet"
         },
         "express-2021/lesson-1": {
+          "name": "Dansfeest",
           "name": "Dansfeest"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
@@ -535,213 +568,289 @@
           "name": "Volgende stappen"
         },
         "csd1-2022/Storage": {
+          "name": "Opslag",
           "name": "Opslag"
         },
         "csd2-2022/Headings": {
+          "name": "Headings",
           "name": "Headings"
         },
         "csd2-2022/Intellectual Property": {
+          "name": "Intellectuele Eigendom",
           "name": "Intellectuele Eigendom"
         },
         "csd2-2022/Using Images": {
+          "name": "Afbeeldingen gebruiken",
           "name": "Afbeeldingen gebruiken"
         },
         "csd3-2022/Variables": {
+          "name": "Variabelen",
           "name": "Variabelen"
         },
         "csd3-2022/Sprites": {
+          "name": "Sprites",
           "name": "Sprites"
         },
         "csd3-2022/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2022/Conditionals": {
+          "name": "Voorwaardelijke instructies",
           "name": "Voorwaardelijke instructies"
         },
         "csd3-2022/Velocity": {
+          "name": "Snelheid",
           "name": "Snelheid"
         },
         "csd3-2022/Collision Detection": {
+          "name": "Botsingdetectie",
           "name": "Botsingdetectie"
         },
         "csd3-2022/Functions": {
+          "name": "Functies",
           "name": "Functies"
         },
         "csd5-2022/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen",
           "name": "Het voorstellen van afbeeldingen"
         },
         "csd5-2022/Representing Numbers": {
+          "name": "Het voorstellen van getallen",
           "name": "Het voorstellen van getallen"
         },
         "csd6-2022/Functions": {
+          "name": "Functies",
           "name": "Functies"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Vrolijke Routes",
           "name": "Vrolijke Routes"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "verplaats het, verplaats het",
           "name": "verplaats het, verplaats het"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Rondjes lopen",
           "name": "Rondjes lopen"
         },
         "coursec-2022/The Big Event": {
+          "name": "De grote gebeurtenis",
           "name": "De grote gebeurtenis"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binaire armbanden",
           "name": "Binaire armbanden"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier",
           "name": "Programmeren op Ruitjespapier"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Estafette Programmeren",
           "name": "Estafette Programmeren"
         },
         "coursed-2022/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!",
           "name": "Bouw een Star Wars Spel!"
         },
         "coursed-2022/Dance Party": {
+          "name": "Dansfeest",
           "name": "Dansfeest"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Statements met Kaarten",
           "name": "Statements met Kaarten"
         },
         "coursee-2022/Hello World: Food": {
+          "name": "Hallo Wereld",
           "name": "Hallo Wereld"
         },
         "coursee-2022/Songwriting": {
           "name": "Songwriting",
+          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  ",
+          "name": "Songwriting",
           "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
         },
         "coursef-2022/Outbreak": {
+          "name": "Uitbraak",
           "name": "Uitbraak"
         },
         "coursef-2022/The Internet": {
+          "name": "Het Internet",
           "name": "Het Internet"
         },
         "express-2022/Dance Party": {
+          "name": "Dansfeest",
           "name": "Dansfeest"
         },
         "csd1-2023/Storage": {
+          "name": "Opslag",
           "name": "Opslag"
         },
         "csd2-2023/Intellectual Property": {
+          "name": "Intellectuele Eigendom",
           "name": "Intellectuele Eigendom"
         },
         "csd2-2023/Using Images": {
+          "name": "Afbeeldingen gebruiken",
           "name": "Afbeeldingen gebruiken"
         },
         "csd3-2023/Variables": {
+          "name": "Variabelen",
           "name": "Variabelen"
         },
         "csd3-2023/Sprites": {
+          "name": "Sprites",
           "name": "Sprites"
         },
         "csd3-2023/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2023/Conditionals": {
+          "name": "Voorwaardelijke instructies",
           "name": "Voorwaardelijke instructies"
         },
         "csd3-2023/Velocity": {
+          "name": "Snelheid",
           "name": "Snelheid"
         },
         "csd3-2023/Collision Detection": {
+          "name": "Botsingdetectie",
           "name": "Botsingdetectie"
         },
         "csd3-2023/Functions": {
+          "name": "Functies",
           "name": "Functies"
         },
         "csd5-2023/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen",
           "name": "Het voorstellen van afbeeldingen"
         },
         "csd5-2023/Representing Numbers": {
+          "name": "Het voorstellen van getallen",
           "name": "Het voorstellen van getallen"
         },
         "csd6a-2023/Functions": {
+          "name": "Functies",
           "name": "Functies"
         },
         "csd6b-2023/Functions": {
+          "name": "Functies",
           "name": "Functies"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Vrolijke Routes",
           "name": "Vrolijke Routes"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "verplaats het, verplaats het",
           "name": "verplaats het, verplaats het"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Rondjes lopen",
           "name": "Rondjes lopen"
         },
         "coursec-2023/The Big Event": {
+          "name": "De grote gebeurtenis",
           "name": "De grote gebeurtenis"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binaire armbanden",
           "name": "Binaire armbanden"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier",
           "name": "Programmeren op Ruitjespapier"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Estafette Programmeren",
           "name": "Estafette Programmeren"
         },
         "coursed-2023/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!",
           "name": "Bouw een Star Wars Spel!"
         },
         "coursed-2023/Dance Party": {
+          "name": "Dansfeest",
           "name": "Dansfeest"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Statements met Kaarten",
           "name": "Statements met Kaarten"
         },
         "coursee-2023/Hello World": {
+          "name": "Hallo Wereld",
           "name": "Hallo Wereld"
         },
         "coursee-2023/Songwriting": {
           "name": "Songwriting",
+          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  ",
+          "name": "Songwriting",
           "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
         },
         "coursef-2023/Outbreak": {
+          "name": "Uitbraak",
           "name": "Uitbraak"
         },
         "coursef-2023/The Internet": {
+          "name": "Het Internet",
           "name": "Het Internet"
         },
         "express-2023/Dance Party": {
+          "name": "Dansfeest",
           "name": "Dansfeest"
         },
         "applab-intro/Intro to App Lab": {
+          "student_overview": "Aan het einde van deze tutorial bent u in staat een project uit te breiden dat u begon met opbouwen tot een \"Kies uw eigen avontuur\", \"Wenskaart\" of \"Karakterquiz\" app. Tevens kunt u verder gaan met het creëren van meer project die te vinden zijn op de code.org/applab-pagina. ",
           "student_overview": "Aan het einde van deze tutorial bent u in staat een project uit te breiden dat u begon met opbouwen tot een \"Kies uw eigen avontuur\", \"Wenskaart\" of \"Karakterquiz\" app. Tevens kunt u verder gaan met het creëren van meer project die te vinden zijn op de code.org/applab-pagina. "
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Aquatische reis",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
+          "name": "Minecraft: Aquatische reis",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
         },
         "artist/Artist": {
+          "name": "Kunstenaar",
           "name": "Kunstenaar"
         },
         "dance-2019/Dance Party": {
+          "name": "Dansfeest",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
           "name": "Dansfeest",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
         },
         "dance-extras/Dance Party - Go Further": {
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
         },
         "dance/Dance Party": {
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren.",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is voor studenten van alle leeftijden ontworpen, maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid vereist aangezien het programma werd ontworpen om op muziek te reageren."
         },
         "flappy/Flappy Code": {
+          "name": "Flappy Code",
           "name": "Flappy Code"
         },
         "frozen/Artist": {
           "name": "Code met Anna en Elsa",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met programmeren en informatica. Deze les werd ontworpen voor studenten op de lagere school in de leeftijd van 10 tot 13 jaar, maar kan tevens wordne aangepast voor jongere of oudere studenten met door gebruik te maken van de onderscheidende suggesties. Studenten dienen basiskennis te hebben van eenvoudige geometrie en het tekenen in hoeken. ",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met programmeren en informatica. Deze les werd ontworpen voor studenten op de lagere school in de leeftijd van 10 tot 13 jaar, maar kan tevens wordne aangepast voor jongere of oudere studenten met door gebruik te maken van de onderscheidende suggesties. Studenten dienen basiskennis te hebben van eenvoudige geometrie en het tekenen in hoeken. ",
+          "name": "Code met Anna en Elsa",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met programmeren en informatica. Deze les werd ontworpen voor studenten op de lagere school in de leeftijd van 10 tot 13 jaar, maar kan tevens wordne aangepast voor jongere of oudere studenten met door gebruik te maken van de onderscheidende suggesties. Studenten dienen basiskennis te hebben van eenvoudige geometrie en het tekenen in hoeken. ",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met programmeren en informatica. Deze les werd ontworpen voor studenten op de lagere school in de leeftijd van 10 tot 13 jaar, maar kan tevens wordne aangepast voor jongere of oudere studenten met door gebruik te maken van de onderscheidende suggesties. Studenten dienen basiskennis te hebben van eenvoudige geometrie en het tekenen in hoeken. "
         },
         "gumball/Gumball Play Lab": {
+          "name": "Kauwgom Speel Lab",
           "name": "Kauwgom Speel Lab"
         },
         "hello-world-animals-2021/Hello World": {
@@ -780,9 +889,16 @@
           "name": "Minecraft: Heldenreis",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
           "preparation": "### Een week voor je Hour of Code\n\n-   Bekijk de [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) en [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) om te beginnen met het plannen van je Hour of Code-evenement. \n-   [Registreer je Hour of Code-evenement](http://hourofcode.com) als je ondersteuning in de klas wilt ontvangen.\n-   Bekijk en voltooi de online handleiding zelf: [Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1)\n-   Zorg ervoor dat je hem eerst test voordat je je leerlingen vraagt om hem af te maken. Controleer je technologie en beslis of je iets moet oplossen voordat je Hour of Code begint.\n\n### De dag voor de Hour of Code\n\n-   Druk een of meer van de [Exit Ticket-voorbeelden](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) aan het einde van dit lesplan af, of maak er zelf een. \n-   Elke student die de activiteit voltooit, krijgt een [certificate](https://studio.code.org/certificates/batch?course=bWM=). Print er van tevoren een voor elke student om dit makkelijker te maken aan het einde van je Hour of Code.",
+          "purpose": "Deze les introduceert de belangrijkste informatica concepten van coderen en programmeren (met behulp van blokken), evenals eenvoudige debugging technieken en hoe functies nuttig kunnen zijn.",
+          "name": "Minecraft: Heldenreis",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
+          "preparation": "### Een week voor je Hour of Code\n\n-   Bekijk de [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) en [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) om te beginnen met het plannen van je Hour of Code-evenement. \n-   [Registreer je Hour of Code-evenement](http://hourofcode.com) als je ondersteuning in de klas wilt ontvangen.\n-   Bekijk en voltooi de online handleiding zelf: [Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1)\n-   Zorg ervoor dat je hem eerst test voordat je je leerlingen vraagt om hem af te maken. Controleer je technologie en beslis of je iets moet oplossen voordat je Hour of Code begint.\n\n### De dag voor de Hour of Code\n\n-   Druk een of meer van de [Exit Ticket-voorbeelden](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) aan het einde van dit lesplan af, of maak er zelf een. \n-   Elke student die de activiteit voltooit, krijgt een [certificate](https://studio.code.org/certificates/batch?course=bWM=). Print er van tevoren een voor elke student om dit makkelijker te maken aan het einde van je Hour of Code.",
           "purpose": "Deze les introduceert de belangrijkste informatica concepten van coderen en programmeren (met behulp van blokken), evenals eenvoudige debugging technieken en hoe functies nuttig kunnen zijn."
         },
         "hoc-encryption/Simple Encryption": {
+          "name": "Eenvoudige versleuteling",
+          "overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   ",
+          "student_overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   ",
           "name": "Eenvoudige versleuteling",
           "overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   ",
           "student_overview": "In deze les maken studenten kennis met de noodzaak voor codering en eenvoudige technieken voor het breken (of kraken) van geheime berichten. De studenten proberen zelf een bericht dat met de klassieke Caesar Cipher en tevens een Random Substitution Cipher werd gecodeerd, te kraken. Studenten dienen goed vertrouwd te raken met het idee dat in een tijd van krachtige rekenprogramma's, de technieken van codering veel geavanceerder moeten zijn. Het belangrijkste aspect van deze les is te begrijpen hoe en waarom codering een rol speelt in al onze levens dagelijks op het Internet, en dat het creëren van een goede codering niet iets triviaals is. Studenten zullen langzaam kennis opdoen van de overwegingen die er zijn bij het creëren van een sterke codering in relatie tot krachtige rekenprogramma's die gebruikt kunnen worden om deze te kraken. De noodzaak tot geheimhouding bij het overzenden van bits is belangrijk voor iedereen die gebruik maakt van het Internet.   "
@@ -790,17 +906,27 @@
         "hourofcode/Maze": {
           "name": "Doolhof",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. ",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. ",
+          "name": "Doolhof",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. ",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is ontworpen voor jonge studenten in de leeftijd van 4 tot 10 jaar, maar kan tevens worden aangepast aan oudere studenten door gebruik te maken van de onderscheidende suggesties. "
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ijs tijd Speel Lab",
+          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode.",
           "name": "Ijs tijd Speel Lab",
           "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Play Lab",
+          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode.",
+          "name": "Disney Infinity Play Lab",
           "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft programmeer uur",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
           "name": "Minecraft programmeer uur",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
@@ -808,16 +934,24 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Minecraft Code Uur Code Ontwerper",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
+          "name": "Minecraft Code Uur Code Ontwerper",
+          "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen."
         },
         "oceans/Oceans": {
           "name": "AI voor oceanen",
+          "overview": "In deze les maken In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Eerst classificeren studenten objecten als \"vis' of \"niet vis\" in een poging het vuil uit de oceaan te verwijderen. Daarna moeten studenten hun dataset voor de training uitbreiden zodat ook andere zeedieren die in het water thuishoren worden inbegrepen. In het tweede deel van de activiteit, kiezen studenten hun eigen etiketten om toe te passen op willekeurig gegenereerde vissen. Deze data van de training wordt gebruik voor een model voor machinaal leren dat tegen die tijd in staat moet zijn om zelf etiketten op afbeeldingen te plakken. ",
+          "name": "AI voor oceanen",
           "overview": "In deze les maken In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Eerst classificeren studenten objecten als \"vis' of \"niet vis\" in een poging het vuil uit de oceaan te verwijderen. Daarna moeten studenten hun dataset voor de training uitbreiden zodat ook andere zeedieren die in het water thuishoren worden inbegrepen. In het tweede deel van de activiteit, kiezen studenten hun eigen etiketten om toe te passen op willekeurig gegenereerde vissen. Deze data van de training wordt gebruik voor een model voor machinaal leren dat tegen die tijd in staat moet zijn om zelf etiketten op afbeeldingen te plakken. "
         },
         "outbreak/Outbreak": {
+          "name": "Een simulatie programmeren",
           "name": "Een simulatie programmeren"
         },
         "playlab/Play Lab": {
+          "name": "Speel Lab",
+          "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode.",
           "name": "Speel Lab",
           "student_overview": "Deze les bevat een inleiding tot informatica en hier kunnen studenten een spel creëren met behulp van basic blokcode."
         },
@@ -827,12 +961,16 @@
           "preparation": "-   Bekijk en voltooi de online handleiding zelf: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Probeer de activiteiten eerst uit voordat je de leerlingen vraagt ze uit te voeren. \n\n-   Controleer je technologie en bepaal of je van tevoren iets moet oplossen.\n\n-   Sommige niveaus vereisen geluid om te spelen. Deel van tevoren koptelefoons uit. \n\n-   [Optioneel] 2 post-it’s per leerling voor de beoordeling."
         },
         "starwars/Hour of Code 2015": {
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. ",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. "
         },
         "starwarsblocks/Hour of Code 2015": {
+          "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. ",
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. "
         },
         "text-compression/Text Compression": {
+          "name": "Tekstcompressie",
+          "student_overview": "Op een bepaald moment bereiken we een fysieke limiet wat betreft de snelheid van het verzenden van bits, en als we een grote hoeveelheid informatie sneller willen verzenden, dan moeten we een manier vinden om dezelfde informatie weer te geven in minder bits - we moeten de data comprimeren.  ",
           "name": "Tekstcompressie",
           "student_overview": "Op een bepaald moment bereiken we een fysieke limiet wat betreft de snelheid van het verzenden van bits, en als we een grote hoeveelheid informatie sneller willen verzenden, dan moeten we een manier vinden om dezelfde informatie weer te geven in minder bits - we moeten de data comprimeren.  "
         },
