@@ -3,1258 +3,1800 @@
     "data": {
       "vocabularies": {
         "input/csd/2021": {
+          "word": "Bemenet",
           "word": "Bemenet"
         },
         "processing/csd/2021": {
+          "word": "Feldolgozás",
           "word": "Feldolgozás"
         },
         "digital_footprint/csd/2021": {
+          "word": "Digitális Lábnyom",
           "word": "Digitális Lábnyom"
         },
         "copyright/csd/2021": {
+          "word": "Szerzői jog",
           "word": "Szerzői jog"
         },
         "bug/csd/2021": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/csd/2021": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/csd/2021": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "variable/csd/2021": {
+          "word": "Változó",
           "word": "Változó"
         },
         "conditionals/csd/2021": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "abstraction/csd/2021": {
+          "word": "Absztrakció",
           "word": "Absztrakció"
         },
         "function/csd/2021": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "user_interface/csd/2021": {
+          "word": "Felhasználói felület",
           "word": "Felhasználói felület"
         },
         "algorithm/coursea/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "debugging/coursea/2021": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/coursea/2021": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "drag/coursea/2021": {
           "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
+          "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/coursea/2021": {
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
           "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "bug/coursea/2021": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "programming/coursea/2021": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
           "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "event/coursea/2021": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "algorithm/courseb/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/courseb/2021": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/courseb/2021": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "drag/courseb/2021": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
           "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/courseb/2021": {
           "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
+          "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "program/courseb/2021": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/courseb/2021": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/courseb/2021": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/courseb/2021": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "algorithm/coursec/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/coursec/2021": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursec/2021": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/coursec/2021": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/coursec/2021": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "event/coursec/2021": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "binary/coursec/2021": {
+          "word": "Bináris",
           "word": "Bináris"
         },
         "algorithm/coursed/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "program/coursed/2021": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "bug/coursed/2021": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursed/2021": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "programming/coursed/2021": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/coursed/2021": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/coursed/2021": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "code/coursed/2021": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "conditionals/coursed/2021": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "behavior/coursee/2021": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "event/coursee/2021": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "copyright/coursee/2021": {
+          "word": "Szerzői jog",
           "word": "Szerzői jog"
         },
         "function/coursee/2021": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "conditionals/coursee/2021": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "define/coursee/2021": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "behavior/coursef/2021": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "program/coursef/2021": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "event/coursef/2021": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "variable/coursef/2021": {
+          "word": "Változó",
           "word": "Változó"
         },
         "input/coursef/2021": {
+          "word": "Bemenet",
           "word": "Bemenet"
         },
         "models_and_simulations/coursef/2021": {
           "word": "Modellek és szimulációk",
+          "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket.",
+          "word": "Modellek és szimulációk",
           "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
         },
         "internet/coursef/2021": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2021": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "algorithm/express/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/express/2021": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/express/2021": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/express/2021": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/express/2021": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "behavior/express/2021": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "event/express/2021": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "conditionals/express/2021": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "function/express/2021": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "variable/express/2021": {
+          "word": "Változó",
           "word": "Változó"
         },
         "define/express/2021": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "drag/pre-express/2021": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
           "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/pre-express/2021": {
           "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
+          "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "algorithm/pre-express/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/pre-express/2021": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/pre-express/2021": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/pre-express/2021": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/pre-express/2021": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/pre-express/2021": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/pre-express/2021": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "input/csd/2022": {
+          "word": "Bemenet",
           "word": "Bemenet"
         },
         "processing/csd/2022": {
+          "word": "Feldolgozás",
           "word": "Feldolgozás"
         },
         "digital_footprint/csd/2022": {
+          "word": "Digitális Lábnyom",
           "word": "Digitális Lábnyom"
         },
         "copyright/csd/2022": {
+          "word": "Szerzői jog",
           "word": "Szerzői jog"
         },
         "bug/csd/2022": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/csd/2022": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/csd/2022": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "variable/csd/2022": {
+          "word": "Változó",
           "word": "Változó"
         },
         "conditionals/csd/2022": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "abstraction/csd/2022": {
+          "word": "Absztrakció",
           "word": "Absztrakció"
         },
         "function/csd/2022": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "user_interface/csd/2022": {
+          "word": "Felhasználói felület",
           "word": "Felhasználói felület"
         },
         "algorithm/coursea/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "debugging/coursea/2022": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/coursea/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "drag/coursea/2022": {
           "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
+          "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/coursea/2022": {
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
           "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "bug/coursea/2022": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "programming/coursea/2022": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
           "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "event/coursea/2022": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "algorithm/courseb/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/courseb/2022": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/courseb/2022": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "drag/courseb/2022": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
           "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/courseb/2022": {
           "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
+          "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "program/courseb/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/courseb/2022": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/courseb/2022": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/courseb/2022": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "algorithm/coursec/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/coursec/2022": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursec/2022": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/coursec/2022": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "persistence/coursec/2022": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "programming/coursec/2022": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
           "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "event/coursec/2022": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "data/coursec/2022": {
+          "word": "Adat",
           "word": "Adat"
         },
         "binary/coursec/2022": {
+          "word": "Bináris",
           "word": "Bináris"
         },
         "algorithm/coursed/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "program/coursed/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "bug/coursed/2022": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursed/2022": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "programming/coursed/2022": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/coursed/2022": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/coursed/2022": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "code/coursed/2022": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "conditionals/coursed/2022": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "behavior/coursee/2022": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "function/coursee/2022": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "conditionals/coursee/2022": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "copyright/coursee/2022": {
+          "word": "Szerzői jog",
           "word": "Szerzői jog"
         },
         "define/coursee/2022": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "behavior/coursef/2022": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "program/coursef/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "event/coursef/2022": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "variable/coursef/2022": {
+          "word": "Változó",
           "word": "Változó"
         },
         "input/coursef/2022": {
+          "word": "Bemenet",
           "word": "Bemenet"
         },
         "models_and_simulations/coursef/2022": {
           "word": "Modellek és szimulációk",
+          "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket.",
+          "word": "Modellek és szimulációk",
           "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
         },
         "internet/coursef/2022": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2022": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "algorithm/express/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/express/2022": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/express/2022": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/express/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/express/2022": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "behavior/express/2022": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "event/express/2022": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "conditionals/express/2022": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "function/express/2022": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "variable/express/2022": {
+          "word": "Változó",
           "word": "Változó"
         },
         "define/express/2022": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "drag/pre-express/2022": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
           "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/pre-express/2022": {
           "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
+          "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "algorithm/pre-express/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/pre-express/2022": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/pre-express/2022": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/pre-express/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/pre-express/2022": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/pre-express/2022": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/pre-express/2022": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "artificial_intelligence/ai-ethics/2023": {
+          "word": "Mesterséges intelligencia",
           "word": "Mesterséges intelligencia"
         },
         "adaptation/csc-adaptations/2023": {
+          "word": "Alkalmazkodás",
+          "definition": "Változás egy szervezetben a környezet jobb túlélése érdekében",
           "word": "Alkalmazkodás",
           "definition": "Változás egy szervezetben a környezet jobb túlélése érdekében"
         },
         "code/csc-adaptations/2023": {
           "word": "Kód",
+          "definition": "(v) Útmutató írása számítógéphez",
+          "word": "Kód",
           "definition": "(v) Útmutató írása számítógéphez"
         },
         "event/csc-adaptations/2023": {
+          "word": "Esemény",
+          "definition": "Olyan cselekvés, amely valami történését okozza",
           "word": "Esemény",
           "definition": "Olyan cselekvés, amely valami történését okozza"
         },
         "evolution/csc-adaptations/2023": {
           "word": "evolúció",
+          "definition": "Egy faj jellemzőinek változása több generáción keresztül",
+          "word": "evolúció",
           "definition": "Egy faj jellemzőinek változása több generáción keresztül"
         },
         "migration/csc-adaptations/2023": {
+          "word": "Migráció",
+          "definition": "Az állat távolsági mozgása jobb környezet keresését teszi lehetővé",
           "word": "Migráció",
           "definition": "Az állat távolsági mozgása jobb környezet keresését teszi lehetővé"
         },
         "camouflage/csc-adaptations/2023": {
           "word": "álcázás",
+          "definition": "Védelmi mechanizmus, amelyet az élőlények használnak megjelenésük leplezésére és a környezetükbe való beleolvadásra",
+          "word": "álcázás",
           "definition": "Védelmi mechanizmus, amelyet az élőlények használnak megjelenésük leplezésére és a környezetükbe való beleolvadásra"
         },
         "behavior/csc-adaptations/2023": {
+          "word": "Viselkedés",
+          "definition": "Olyan műveletek halmaza, amelyeket egy sprite újra és újra végrehajthat. ",
           "word": "Viselkedés",
           "definition": "Olyan műveletek halmaza, amelyeket egy sprite újra és újra végrehajthat. "
         },
         "code_v_/csc-bookcovers/2023": {
           "word": "Kód (v)",
+          "definition": "hogy írjon utasításokat egy számítógéphez.",
+          "word": "Kód (v)",
           "definition": "hogy írjon utasításokat egy számítógéphez."
         },
         "event/csc-bookcovers/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/csc-bookcovers/2023": {
           "word": "Program",
+          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható.",
+          "word": "Program",
           "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
         },
         "background/csc-bookcovers/2023": {
+          "word": "Háttér",
+          "definition": "A képernyőn megjelenő fő dolgok vagy emberek mögötti látvány.",
           "word": "Háttér",
           "definition": "A képernyőn megjelenő fő dolgok vagy emberek mögötti látvány."
         },
         "character/csc-bookcovers/2023": {
           "word": "Karakter",
+          "definition": "Egy személy, állat, lény, valami teremtménye egy történetben.",
+          "word": "Karakter",
           "definition": "Egy személy, állat, lény, valami teremtménye egy történetben."
         },
         "setting/csc-bookcovers/2023": {
+          "word": "Beállítás",
+          "definition": "A történet ideje és helye (vagy mikor és hol).",
           "word": "Beállítás",
           "definition": "A történet ideje és helye (vagy mikor és hol)."
         },
         "summary/csc-bookcovers/2023": {
           "word": "Összefoglaló",
+          "definition": "A szöveg legfontosabb részeinek elmondása saját szavaival, sokkal rövidebb módon",
+          "word": "Összefoglaló",
           "definition": "A szöveg legfontosabb részeinek elmondása saját szavaival, sokkal rövidebb módon"
         },
         "code/csc-ecosystems/2023": {
           "word": "Kód",
+          "definition": "(v) Útmutató írása számítógéphez",
+          "word": "Kód",
           "definition": "(v) Útmutató írása számítógéphez"
         },
         "condition/csc-ecosystems/2023": {
+          "definition": "Valami, amit egy program ellenőriz, hogy igaz-e, mielőtt engedélyezne egy műveletet",
           "definition": "Valami, amit egy program ellenőriz, hogy igaz-e, mielőtt engedélyezne egy műveletet"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Feltételek",
+          "definition": "Nyilatkozatok, amelyek csak bizonyos feltételek mellett futnak",
           "word": "Feltételek",
           "definition": "Nyilatkozatok, amelyek csak bizonyos feltételek mellett futnak"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "Ökoszisztéma",
+          "definition": "A kölcsönhatásban lévő szervezetek és környezetük biológiai közössége",
+          "word": "Ökoszisztéma",
           "definition": "A kölcsönhatásban lévő szervezetek és környezetük biológiai közössége"
         },
         "event/csc-ecosystems/2023": {
+          "word": "Esemény",
+          "definition": "Olyan cselekvés, amely valami történését okozza",
           "word": "Esemény",
           "definition": "Olyan cselekvés, amely valami történését okozza"
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "Túlhalászás",
+          "definition": "A halak gyorsabb eltávolítása, mint amennyit reprodukálni tudnak",
+          "word": "Túlhalászás",
           "definition": "A halak gyorsabb eltávolítása, mint amennyit reprodukálni tudnak"
         },
         "simulation/csc-ecosystems/2023": {
+          "word": "Szimuláció",
+          "definition": "Számítógépes modell tanulmányozás céljából.",
           "word": "Szimuláció",
           "definition": "Számítógépes modell tanulmányozás céljából."
         },
         "debug/csc-ecosystems/2023": {
           "word": "Hibakeresés",
+          "definition": "Hibák vagy problémák keresése és javítása a kódban.",
+          "word": "Hibakeresés",
           "definition": "Hibák vagy problémák keresése és javítása a kódban."
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Változó",
+          "definition": "Egy tároló, amely képes tárolni egy értéket. ",
           "word": "Változó",
           "definition": "Egy tároló, amely képes tárolni egy értéket. "
         },
         "ecologist/csc-ecosystems/2023": {
           "word": "Ökológus",
+          "definition": "Egy tudós, aki azt vizsgálja, hogy az állatok és növények hogyan hatnak a környezetükre.",
+          "word": "Ökológus",
           "definition": "Egy tudós, aki azt vizsgálja, hogy az állatok és növények hogyan hatnak a környezetükre."
         },
         "energy/csc-ecosystems/2023": {
+          "word": "Energia",
+          "definition": "Áthelyezve az élőlények között az élelmiszerhálózatokban a termelőktől a fogyasztókig. Az energiát az élőlények összetett feladatok elvégzésére használják fel.",
           "word": "Energia",
           "definition": "Áthelyezve az élőlények között az élelmiszerhálózatokban a termelőktől a fogyasztókig. Az energiát az élőlények összetett feladatok elvégzésére használják fel."
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "Élelmiszerlánc ",
+          "definition": "Az élőlények egy csoportja, amelyek az általuk fogyasztott ételek sorrendjében kapcsolódnak, a termelőktől a fogyasztókig, és a zsákmánytól a ragadozókig.",
+          "word": "Élelmiszerlánc ",
           "definition": "Az élőlények egy csoportja, amelyek az általuk fogyasztott ételek sorrendjében kapcsolódnak, a termelőktől a fogyasztókig, és a zsákmánytól a ragadozókig."
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Kód",
+          "definition": "(v) instrukciók írása számítógéphez.",
           "word": "Kód",
           "definition": "(v) instrukciók írása számítógéphez."
         },
         "event/csc-mappinglandmarks/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "landmark/csc-mappinglandmarks/2023": {
           "word": "Nevezetesség",
+          "definition": "A mérföldkő olyan tárgy (természetes vagy ember alkotta), amelynek jelentősége van, vagy könnyen felismerhetővé teszi a helyet.",
+          "word": "Nevezetesség",
           "definition": "A mérföldkő olyan tárgy (természetes vagy ember alkotta), amelynek jelentősége van, vagy könnyen felismerhetővé teszi a helyet."
         },
         "sprite/csc-mappinglandmarks/2023": {
+          "definition": "Kép vagy karakter a programban.",
           "definition": "Kép vagy karakter a programban."
         },
         "map/csc-mappinglandmarks/2023": {
+          "word": "Térkép",
+          "definition": "A szárazföldi vagy tengeri terület ábrázolása, amely fizikai adottságokkal, városokkal, utakkal stb.",
           "word": "Térkép",
           "definition": "A szárazföldi vagy tengeri terület ábrázolása, amely fizikai adottságokkal, városokkal, utakkal stb."
         },
         "pattern/csc-starquilts/2023": {
           "word": "Minta",
+          "definition": "Valami, ami rendszeresen és ismételten történik vagy jelenik meg",
+          "word": "Minta",
           "definition": "Valami, ami rendszeresen és ismételten történik vagy jelenik meg"
         },
         "rhombus/csc-starquilts/2023": {
+          "word": "Rombusz",
+          "definition": "Négy egyenlő oldalú sokszög, az ellentétes oldalak párhuzamosak, az ellentétes szögek egyenlőek",
           "word": "Rombusz",
           "definition": "Négy egyenlő oldalú sokszög, az ellentétes oldalak párhuzamosak, az ellentétes szögek egyenlőek"
         },
         "star_quilt/csc-starquilts/2023": {
           "word": "Csillag paplan",
+          "definition": "Hagyományos és értékes ajándék az alföldi indiánok körében",
+          "word": "Csillag paplan",
           "definition": "Hagyományos és értékes ajándék az alföldi indiánok körében"
         },
         "artist/csc-starquilts/2023": {
           "word": "Művész",
+          "definition": "Írhat kódot, hogy szinte bármit rajzoljon",
+          "word": "Művész",
           "definition": "Írhat kódot, hogy szinte bármit rajzoljon"
         },
         "loop/csc-starquilts/2023": {
+          "definition": "Ismétlődő kódsor",
           "definition": "Ismétlődő kódsor"
         },
         "point/csc-starquilts/2023": {
+          "word": "Pont",
+          "definition": "A csillag alakjának egyik része",
           "word": "Pont",
           "definition": "A csillag alakjának egyik része"
         },
         "row/csc-starquilts/2023": {
           "word": "Sor",
+          "definition": "Ebben az esetben a rombuszok rendezett sora",
+          "word": "Sor",
           "definition": "Ebben az esetben a rombuszok rendezett sora"
         },
         "concentric/csc-starquilts/2023": {
+          "word": "Koncentrikus",
+          "definition": "Objektumok vagy alakzatok, amelyek azonos középponttal rendelkeznek",
           "word": "Koncentrikus",
           "definition": "Objektumok vagy alakzatok, amelyek azonos középponttal rendelkeznek"
         },
         "comments/csc-starquilts/2023": {
           "word": "Megjegyzések",
+          "definition": "Megjegyzések magadnak, amelyek elmagyarázzák a kód egy részét. Nem változtatják meg a programot, de segítenek a kód rendben tartásában.",
+          "word": "Megjegyzések",
           "definition": "Megjegyzések magadnak, amelyek elmagyarázzák a kód egy részét. Nem változtatják meg a programot, de segítenek a kód rendben tartásában."
         },
         "event/csc-timecapsule/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "imagery/csc-timecapsule/2023": {
           "word": "Képek",
+          "definition": "Egy vers vagy történet által készített mentális képek",
+          "word": "Képek",
           "definition": "Egy vers vagy történet által készített mentális képek"
         },
         "mood/csc-timecapsule/2023": {
           "word": "Hangulat",
+          "definition": "Egy érzés, légkör vagy érzelem kifejezése a művészetben vagy az írásban.",
+          "word": "Hangulat",
           "definition": "Egy érzés, légkör vagy érzelem kifejezése a művészetben vagy az írásban."
         },
         "sprite/csc-timecapsule/2023": {
+          "definition": "Kép vagy karakter a programban",
           "definition": "Kép vagy karakter a programban"
         },
         "time_capsule/csc-timecapsule/2023": {
+          "definition": "Olyan hely, ahol emlékeket és mindennapi tárgyakat tárolhat, amelyek egy napot képviselnek egy adott időszakban élő személy életében. ",
           "definition": "Olyan hely, ahol emlékeket és mindennapi tárgyakat tárolhat, amelyek egy napot képviselnek egy adott időszakban élő személy életében. "
         },
         "code/poetry/2023": {
+          "word": "Kód",
+          "definition": "(v) instrukciók írása számítógéphez.",
           "word": "Kód",
           "definition": "(v) instrukciók írása számítógéphez."
         },
         "event/poetry/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "line/poetry/2023": {
+          "word": "Sor",
+          "definition": "(költészet) - egy sorban elrendezett vers felosztása, amely a jobb oldali margón végződik.",
           "word": "Sor",
           "definition": "(költészet) - egy sorban elrendezett vers felosztása, amely a jobb oldali margón végződik."
         },
         "mood/poetry/2023": {
           "word": "Hangulat",
+          "definition": "Egy érzés, légkör vagy érzelem kifejezése a művészetben vagy az írásban.",
+          "word": "Hangulat",
           "definition": "Egy érzés, légkör vagy érzelem kifejezése a művészetben vagy az írásban."
         },
         "program/poetry/2023": {
+          "word": "Program",
+          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható.",
           "word": "Program",
           "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
         },
         "poem/poetry/2023": {
           "word": "Vers",
+          "definition": "Írássorok, amelyek szavakkal képeket, érzéseket és ötleteket hoznak létre az olvasó fejében.",
+          "word": "Vers",
           "definition": "Írássorok, amelyek szavakkal képeket, érzéseket és ötleteket hoznak létre az olvasó fejében."
         },
         "constructive_feedback/poetry/2023": {
           "word": "Konstruktív visszajelzés",
+          "definition": "Tiszteletteljes megjegyzések, amelyek segítenek valakinek javítani a munkáját",
+          "word": "Konstruktív visszajelzés",
           "definition": "Tiszteletteljes megjegyzések, amelyek segítenek valakinek javítani a munkáját"
         },
         "poetry_circle/poetry/2023": {
+          "definition": "Biztonságos és kreatív tér új versek kipróbálására és konstruktív visszajelzések megszerzésére másoktól",
           "definition": "Biztonságos és kreatív tér új versek kipróbálására és konstruktív visszajelzések megszerzésére másoktól"
         },
         "input/csd/2023": {
+          "word": "Bemenet",
           "word": "Bemenet"
         },
         "processing/csd/2023": {
+          "word": "Feldolgozás",
           "word": "Feldolgozás"
         },
         "digital_footprint/csd/2023": {
+          "word": "Digitális Lábnyom",
           "word": "Digitális Lábnyom"
         },
         "copyright/csd/2023": {
+          "word": "Szerzői jog",
           "word": "Szerzői jog"
         },
         "bug/csd/2023": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/csd/2023": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/csd/2023": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "variable/csd/2023": {
+          "word": "Változó",
           "word": "Változó"
         },
         "conditionals/csd/2023": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "abstraction/csd/2023": {
+          "word": "Absztrakció",
           "word": "Absztrakció"
         },
         "function/csd/2023": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "user_interface/csd/2023": {
+          "word": "Felhasználói felület",
           "word": "Felhasználói felület"
         },
         "algorithm/coursea/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "debugging/coursea/2023": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/coursea/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "drag/coursea/2023": {
           "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
+          "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/coursea/2023": {
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
           "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "bug/coursea/2023": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "programming/coursea/2023": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
           "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "event/coursea/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "algorithm/courseb/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/courseb/2023": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/courseb/2023": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "drag/courseb/2023": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
           "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/courseb/2023": {
           "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
+          "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "program/courseb/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/courseb/2023": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/courseb/2023": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/courseb/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "algorithm/coursec/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/coursec/2023": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursec/2023": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/coursec/2023": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "persistence/coursec/2023": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "programming/coursec/2023": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
           "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "event/coursec/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "data/coursec/2023": {
+          "word": "Adat",
           "word": "Adat"
         },
         "binary/coursec/2023": {
+          "word": "Bináris",
           "word": "Bináris"
         },
         "algorithm/coursed/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "program/coursed/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "bug/coursed/2023": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursed/2023": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "programming/coursed/2023": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/coursed/2023": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/coursed/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "code/coursed/2023": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "conditionals/coursed/2023": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "behavior/coursee/2023": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "function/coursee/2023": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "conditionals/coursee/2023": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "copyright/coursee/2023": {
+          "word": "Szerzői jog",
           "word": "Szerzői jog"
         },
         "define/coursee/2023": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "behavior/coursef/2023": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "program/coursef/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "event/coursef/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "variable/coursef/2023": {
+          "word": "Változó",
           "word": "Változó"
         },
         "input/coursef/2023": {
+          "word": "Bemenet",
           "word": "Bemenet"
         },
         "models_and_simulations/coursef/2023": {
           "word": "Modellek és szimulációk",
+          "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket.",
+          "word": "Modellek és szimulációk",
           "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
         },
         "internet/coursef/2023": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2023": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "algorithm/express/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/express/2023": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/express/2023": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/express/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/express/2023": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "behavior/express/2023": {
+          "word": "Viselkedés",
           "word": "Viselkedés"
         },
         "event/express/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "conditionals/express/2023": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "function/express/2023": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "variable/express/2023": {
+          "word": "Változó",
           "word": "Változó"
         },
         "define/express/2023": {
+          "word": "Meghatározás",
           "word": "Meghatározás"
         },
         "drag/pre-express/2023": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed",
           "word": "Mozgatás",
           "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
         },
         "drop/pre-express/2023": {
           "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”",
+          "word": "Spárga",
           "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "algorithm/pre-express/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. ",
           "definition": "A feladat befejezéséhez szükséges lépések listája. "
         },
         "bug/pre-express/2023": {
           "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően.",
+          "word": "Hiba",
           "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/pre-express/2023": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/pre-express/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/pre-express/2023": {
           "word": "Programozás",
+          "definition": "A program létrehozásának művészete.",
+          "word": "Programozás",
           "definition": "A program létrehozásának művészete."
         },
         "persistence/pre-express/2023": {
+          "word": "Kitartás",
           "word": "Kitartás"
         },
         "event/pre-express/2023": {
           "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
+          "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "algorithm/how-ai-works/2023": {
+          "definition": "egy sor lépés a probléma megoldására vagy a döntés meghozatalára",
           "definition": "egy sor lépés a probléma megoldására vagy a döntés meghozatalára"
         },
         "network/how-ai-works/2023": {
+          "word": "Hálózat",
+          "definition": "Összekapcsolt elemek gyűjteménye. Ezeknek a kapcsolatoknak a követése ábrázolhatja az algoritmus lépéseit, mint egy folyamatábra.",
           "word": "Hálózat",
           "definition": "Összekapcsolt elemek gyűjteménye. Ezeknek a kapcsolatoknak a követése ábrázolhatja az algoritmus lépéseit, mint egy folyamatábra."
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Nagy nyelvi modell (LLM)",
+          "definition": "az AI általános célú formája, amelyet nagyon-nagyon nagy ismeretekre képeznek",
+          "word": "Nagy nyelvi modell (LLM)",
           "definition": "az AI általános célú formája, amelyet nagyon-nagyon nagy ismeretekre képeznek"
         },
         "diffusion_ai/how-ai-works/2023": {
+          "word": "Diffúziós AI",
+          "definition": "kép konvertálása zajra, és AI képzése a folyamat megfordítására",
           "word": "Diffúziós AI",
           "definition": "kép konvertálása zajra, és AI képzése a folyamat megfordítására"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
           "word": "GAN (Generatív kontradiktórius hálózat)",
+          "definition": "két versengő AI modell felhasználásának módja valami előállítására",
+          "word": "GAN (Generatív kontradiktórius hálózat)",
           "definition": "két versengő AI modell felhasználásának módja valami előállítására"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Mesterséges intelligencia",
+          "definition": "a gépek tanulási és problémamegoldási képessége.",
+          "word": "Mesterséges intelligencia",
           "definition": "a gépek tanulási és problémamegoldási képessége."
         },
         "code/aquatic/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Feltételek",
           "word": "Feltételek"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "loops/aquatic/unversioned": {
+          "word": "Ciklusok",
           "word": "Ciklusok"
         },
         "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/artist/unversioned": {
           "word": "Kód",
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
+          "word": "Kód",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/artist/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/artist/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/basketball/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/basketball/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "event/basketball/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/basketball/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/dance-2019/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "event/dance-2019/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/dance-2019/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/dance-extras-2019/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "event/dance-extras-2019/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/dance-extras-2019/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/dance-extras/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "event/dance-extras/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/dance-extras/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/dance/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "event/dance/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/dance/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/flappy/unversioned": {
           "word": "kódolás",
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
+          "word": "kódolás",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/flappy/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/flappy/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/frozen/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/frozen/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/frozen/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/gumball/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/gumball/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/gumball/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/hero/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/hero/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "function/hero/unversioned": {
+          "word": "Függvény",
           "word": "Függvény"
         },
         "program/hero/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/hourofcode/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/hourofcode/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/iceage/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/iceage/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/iceage/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/infinity/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/infinity/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/infinity/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/mc/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/mc/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/mc/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/minecraft/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/minecraft/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "event/minecraft/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/minecraft/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "event/outbreak/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "models_and_simulations/outbreak/unversioned": {
           "word": "Modellek és szimulációk",
+          "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket.",
+          "word": "Modellek és szimulációk",
           "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
         },
         "code/playlab/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/playlab/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/playlab/unversioned": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
@@ -1279,36 +1821,50 @@
           "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
         },
         "code/sports/unversioned": {
+          "word": "Kód",
           "word": "Kód"
         },
         "debugging/sports/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "event/sports/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza.",
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/sports/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/starwars/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/starwars/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/starwars/unversioned": {
           "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
+          "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/starwarsblocks/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek.",
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Hibakeresés",
           "word": "Hibakeresés"
         },
         "program/starwarsblocks/unversioned": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak.",
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         }

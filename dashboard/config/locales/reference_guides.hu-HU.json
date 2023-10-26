@@ -3,126 +3,167 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "Gyorsulást mérő események",
           "display_name": "Gyorsulást mérő események"
         },
         "csd-2022/app-lab": {
+          "display_name": "App Lab",
           "display_name": "App Lab"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Összefoglaló",
           "display_name": "Összefoglaló"
         },
         "csd-2022/board-events": {
+          "display_name": "Táblás események",
           "display_name": "Táblás események"
         },
         "csd-2022/creative-commons-search": {
+          "display_name": "Creative Commons keresés",
           "display_name": "Creative Commons keresés"
         },
         "csd-2022/css-overview": {
+          "display_name": "Összefoglaló",
           "display_name": "Összefoglaló"
         },
         "csd-2022/design-mode": {
+          "display_name": "Tervező mód",
           "display_name": "Tervező mód"
         },
         "csd-2022/drawing-shapes": {
+          "display_name": "Síkidomok rajzolása",
           "display_name": "Síkidomok rajzolása"
         },
         "csd-2022/editing-images": {
+          "display_name": "Képek szerkesztése",
           "display_name": "Képek szerkesztése"
         },
         "csd-2022/for-loops": {
+          "display_name": "Számláló ciklusok",
           "display_name": "Számláló ciklusok"
         },
         "csd-2022/formatting-html": {
+          "display_name": "HTML formázás",
           "display_name": "HTML formázás"
         },
         "csd-2022/functions": {
+          "display_name": "Függvények",
           "display_name": "Függvények"
         },
         "csd-2022/game-lab": {
+          "display_name": "Játék Labor",
           "display_name": "Játék Labor"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Összefoglaló",
           "display_name": "Összefoglaló"
         },
         "csd-2022/headings-and-paragraphs": {
+          "display_name": "Címsorok és bekezdések",
           "display_name": "Címsorok és bekezdések"
         },
         "csd-2022/html-overview": {
+          "display_name": "Összefoglaló",
           "display_name": "Összefoglaló"
         },
         "csd-2022/html-tags": {
+          "display_name": "HTML-címkék",
           "display_name": "HTML-címkék"
         },
         "csd-2022/hyperlinks": {
+          "display_name": "Hiperhivatkozások",
           "display_name": "Hiperhivatkozások"
         },
         "csd-2022/if-else-statements": {
+          "display_name": "Ha-egyébként nyilatkozatok",
           "display_name": "Ha-egyébként nyilatkozatok"
         },
         "csd-2022/if-statements": {
+          "display_name": "Ha nyilatkozatok",
           "display_name": "Ha nyilatkozatok"
         },
         "csd-2022/if-statements-2": {
+          "display_name": "Ha nyilatkozatok",
           "display_name": "Ha nyilatkozatok"
         },
         "csd-2022/images-in-html": {
+          "display_name": "Képek HTML-ben",
           "display_name": "Képek HTML-ben"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Összefoglaló",
           "display_name": "Összefoglaló"
         },
         "csd-2022/lists": {
+          "display_name": "Listák",
           "display_name": "Listák"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Készítés eszköztár",
           "display_name": "Készítés eszköztár"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Összefoglaló",
           "display_name": "Összefoglaló"
         },
         "csd-2022/other": {
+          "display_name": "Egyéb",
           "display_name": "Egyéb"
         },
         "csd-2022/other-overview": {
+          "display_name": "Összefoglaló",
           "display_name": "Összefoglaló"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Összefoglaló",
           "display_name": "Összefoglaló"
         },
         "csd-2022/playing-notes": {
+          "display_name": "Hangjegyek lejátszása",
           "display_name": "Hangjegyek lejátszása"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "A probléma-megoldási folyamat",
           "display_name": "A probléma-megoldási folyamat"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "A probléma-megoldási folyamat",
           "display_name": "A probléma-megoldási folyamat"
         },
         "csd-2022/random-numbers": {
+          "display_name": "Véletlen számok",
           "display_name": "Véletlen számok"
         },
         "csd-2022/sprite-interactions": {
+          "display_name": "Sprite interakciók",
           "display_name": "Sprite interakciók"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Sprite tulajdonságok",
           "display_name": "Sprite tulajdonságok"
         },
         "csd-2022/sprites": {
+          "display_name": "sprite-ok",
           "display_name": "sprite-ok"
         },
         "csd-2022/variables": {
+          "display_name": "változók",
           "display_name": "változók"
         },
         "csd-2022/velocity": {
+          "display_name": "Sebesség",
           "display_name": "Sebesség"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Sebesség és ellentétes mód",
           "display_name": "Sebesség és ellentétes mód"
         },
         "csd-2022/web-lab": {
+          "display_name": "Web-Lab",
           "display_name": "Web-Lab"
         }
       }
