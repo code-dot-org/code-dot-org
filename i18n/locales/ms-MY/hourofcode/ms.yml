@@ -36,6 +36,12 @@ ms:
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1-31 Oktober 2020
   hoc2023_header: Kreativiti dengan AI
+  hoc2023_hero_desc_homepage: Sertai berjuta-juta di seluruh dunia dalam mengatur
+    pengekodan selama satu jam, dengan atau tanpa AI dan belajar bagaimana AI berfungsi.
+    Sesiapa sahaja, di mana sahaja boleh melakukannya. Tiada pengalaman diperlukan.
+  hoc2023_hero_desc_learn_page: Tahun ini, kami membawa Hour of Code ke tahap baru
+    dengan menawarkan peluang pengekodan yang merangkumi kedua-dua komponen kecerdasan
+    buatan (AI) dan bukan AI.
   hoc2023_social_creativity_with_ai_title: Hour of Code - Apa yang akan anda buat?
   hoc2023_social_creativity_with_ai_desc: Gunakan sains komputer untuk meneroka dan
     belajar tentang AI!
@@ -177,6 +183,8 @@ ms:
     mengapa ia penting.
   social_ai_title: Ketahui mengenai kecerdasan buatan (AI) | Code.org
   social_ai_desc: Alat untuk membantu pelajar dan guru membawa AI ke dalam kelas.
+  social_videos_desc: Video sains komputer yang menarik untuk pelajar dari semua peringkat
+    umur.
   pl_superhero_title: Bantu pelajar menjadi wira-wira!
   pl_superhero_desc: Sertai Program Pembelajaran Profesional kami yang sangat menyokong
     untuk pendidik sekolah menengah dan menengah.
@@ -210,6 +218,16 @@ ms:
   device_laptop: Komputer riba
   device_desktop_computer: Komputer Desktop
   device_mobile_device: Peranti Mudah Alih
+  for_everyone: Untuk semua orang
+  for_students_teacher_led_learning: 'Untuk pelajar: Pembelajaran yang dipimpin oleh
+    guru'
+  for_students_teacher_led_lessons: 'Untuk pelajar: Pelajaran yang dipimpin oleh guru'
+  professional_development: Pembangunan profesional
+  how_ai_works_video_series: Bagaimana AI Berfungsi Siri Video
+  learn_how_ai_works: Ketahui Bagaimana AI Berfungsi
+  ai_101_for_educators: AI 101 untuk Pendidik
+  learn_about_ai_impacts: Ketahui tentang Kesan AI
+  hoc_ai_activities: Aktiviti AI Jam Kod
   subscribe_to_emails_heading: Langgan e-mel
   subscribe_to_emails_desc: Baca tentang apa yang berlaku di Code.org dan dalam pendidikan
     sains komputer melalui kemas kini suku tahunan melalui senarai mel kami.
@@ -268,6 +286,7 @@ ms:
   optional_materials: 'Bahan Pilihan:'
   call_to_action_hold_an_event: Pegang acara
   call_to_action_register_event: Daftar acara anda
+  call_to_action_register_your_hoc: Daftarkan Hour of Code anda
   call_to_action_select_activity: Pilih aktiviti
   call_to_action_start_activity: Mulakan aktiviti
   call_to_action_get_certificates: Dapatkan sijil
@@ -277,6 +296,7 @@ ms:
   call_to_action_watch_now: Tonton sekarang
   call_to_action_try_activity: Cuba aktiviti
   call_to_action_try_activities: Cuba aktiviti
+  call_to_action_try_hoc_ai_activities: Cuba aktiviti Hour of Code AI
   call_to_action_explore_activities: Terokai aktiviti
   call_to_action_explore_ai: Terokai AI
   call_to_action_explore_unit: Terokai unit
@@ -363,6 +383,8 @@ ms:
   call_to_action_learn_about_advocacy: Ketahui tentang advokasi kami
   call_to_action_visit_store: Lawati kedai
   call_to_action_view_faqs: Lihat lebih banyak Soalan Lazim
+  call_to_action_applications_open: Permohonan kini dibuka
+  call_to_action_apply_cs_ambassador: Memohon untuk menjadi Duta CS
   aria_label_call_to_action_hoc_how_to_educators: Lihat panduan cara untuk Pendidik
   aria_label_call_to_action_hoc_how_to_companies: Lihat panduan cara untuk Syarikat
   aria_label_call_to_action_hoc_how_to_districts: Lihat panduan cara untuk Daerah
@@ -613,8 +635,10 @@ ms:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Tadika
   module_grade_grade_01: Gred 1
@@ -717,6 +741,57 @@ ms:
   heading_explore_curriculum_catalog: Terokai semua kursus kami dalam Katalog Kurikulum
   heading_csa_ai: Mencari perkara yang perlu dilakukan selepas peperiksaan AP®?
   heading_bring_cs_to_students: Membawa sains komputer kepada pelajar
+  heading_cs_ambassador_program: Program Duta CS
+  cs_ambassador_subhead: Jika anda seorang pelajar sekolah menengah yang berminat
+    untuk menggalakkan lebih ramai wanita muda untuk mengambil sains komputer di sekolah
+    anda, maka kami memerlukan anda!
+  cs_ambassador_desc: Setiap bidang, termasuk perubatan, hiburan, sukan, pendidikan,
+    perniagaan, fesyen, dan keusahawanan disentuh oleh sains komputer. Namun hanya
+    5% wanita muda berusia sekolah menengah mengambil kelas sains komputer. Duta besar
+    boleh membantu menutup jurang jantina ini dengan menggalakkan rakan sebaya mereka
+    mengikuti kelas sains komputer.
+  cs_ambassador_application_date: Permohonan dibuka sehingga 8 November 2023
+  cs_ambassador_application_subhead: Bekerjasama dengan guru untuk mengemukakan permohonan
+    anda hari ini
+  cs_ambassador_application_questions: Soalan? Sila hubungi [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Apa yang dilakukan oleh Duta Besar CS?
+  cs_ambassador_do_desc: Duta CS menggalakkan wanita muda untuk meneroka subjek ini,
+    dan saling menaikkan diri ketika mereka mendapatkan kembali tempat mereka dalam
+    sains komputer. Duta CS berhubung dengan rakan sebaya mereka untuk berkongsi kegembiraan
+    dan cinta mereka terhadap sains komputer. Mereka melawat bilik darjah, menjadi
+    tuan rumah meja semasa makan tengah hari, dan bercakap di perhimpunan dan mesyuarat
+    kelab. Duta CS bekerjasama dengan guru dan pentadbir sekolah untuk memecahkan
+    stereotaip yang menahan wanita muda.
+  cs_ambassador_steps_heading: Apa yang saya perlukan untuk menjadi Duta CS?
+  cs_ambassador_steps_list_title_01: Semangat
+  cs_ambassador_steps_list_title_02: Pengalaman dalam Kursus CS
+  cs_ambassador_steps_list_title_03: Sekolah yang menawarkan CS
+  cs_ambassador_steps_list_desc_01: Semangat untuk menggalakkan wanita muda di sekolah
+    anda mengambil kelas sains komputer
+  cs_ambassador_steps_list_desc_02: 'Telah mengambil kelas sains komputer selama setahun
+    pada tahun persekolahan 2022-23 atau lebih awal (disyorkan: Prinsip CS atau AP®
+    CSA)'
+  cs_ambassador_steps_list_desc_03: 'Menghadiri sekolah menengah yang kerap menawarkan
+    kursus sains komputer sepanjang tahun (disyorkan: Prinsip CS atau AP® CSA)'
+  cs_ambassador_benefits_heading: Faedah program
+  cs_ambassador_benefits_list_title_01: Komuniti kebangsaan
+  cs_ambassador_benefits_list_title_02: Perkhidmatan masyarakat
+  cs_ambassador_benefits_list_title_03: Pengiktirafan
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Sijil
+  cs_ambassador_benefits_list_title_06: Pengalaman
+  cs_ambassador_benefits_list_desc_01: Akses kepada komuniti kebangsaan pemimpin muda
+    yang komited untuk menutup jurang jantina dalam sains komputer.
+  cs_ambassador_benefits_list_desc_02: Waktu perkhidmatan komuniti dan peluang untuk
+    mendapatkan [Anugerah Perkhidmatan Sukarelawan Presiden A.S.] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Pengiktirafan sebagai Duta Besar 2023-2024
+    dan layak diberi penghormatan di Dewan Kemasyhuran Duta Code.org.
+  cs_ambassador_benefits_list_desc_04: Dikenal pasti sebagai Duta CS melalui pakaian,
+    pelekat, dan banyak lagi berjenama Code.org khas!
+  cs_ambassador_benefits_list_desc_05: Sijil penyertaan rasmi dari Code.org.
+  cs_ambassador_benefits_list_desc_06: Dapatkan pengalaman dan cerita untuk dikongsi
+    mengenai permohonan kolej anda, resume dan banyak lagi!
   professional_learning_section_desc: Dapatkan sokongan yang anda perlukan semasa
     anda bersedia untuk mengajar. Guru menyukainya, dengan lebih daripada 90% kedudukannya
     sebagai pembangunan profesional terbaik yang pernah ada!
@@ -873,6 +948,11 @@ ms:
   ai_curriculum_btn_aria_label_04: Terokai pelajaran Bagaimana AI Berfungsi
   ai_curriculum_grades_05: 'Tahap Gred: 9-12'
   ai_curriculum_btn_aria_label_05: Terokai modul Kejuruteraan Perisian & Visi Komputer
+  ai_curriculum_title_06: Kesan Masyarakat AI Generatif
+  ai_curriculum_desc_06: Menyiasat kesan AI generatif dari perspektif yang berbeza,
+    kemudian bekerjasama sebagai satu pasukan untuk menghasilkan garis panduan yang
+    memenuhi keperluan paling banyak dari semua peserta.
+  ai_curriculum_btn_aria_label_06: Lihat Impak Masyarakat Pelan Pelajaran AI Generatif
   ai_carousel_heading: 'Apa yang guru katakan mengenai AI dengan Code.org:'
   ai_carousel_quote_01: Pelajaran ini juga memberi peluang kepada pelajar saya untuk
     melihat bahawa terdapat unsur pendapat dalam sistem klasifikasi. Kemudian, ketika
@@ -1903,6 +1983,9 @@ ms:
     di seluruh A.S. dan sepuluh dasar yang kami cadangkan negara pakai untuk menjadikan
     sains komputer asas untuk semua pelajar. Selain itu, ketahui bagaimana anda boleh
     memacu perubahan dalam keadaan anda.
+  yw_page_top_heading: Wanita Muda dalam Sains Komputer
+  yw_page_top_desc: Menjadi Duta CS dan menjadi sebahagian daripada menutup jurang
+    gender dalam sains komputer.
   hoc_live: Siaran Langsung Acara Jam Kod
   hoc_live_sign_up_title: Sila daftar untuk Siaran Langsung Jam Kod
   hoc_live_learn_title: Belajar dengan Siaran Langsung Acara Jam Kod
@@ -2285,10 +2368,16 @@ ms:
     komputer selama satu jam, menggunakan tutorial yang menyeronokkan untuk menunjukkan
     bahawa sesiapa sahaja boleh mempelajari asasnya. Kempen akar umbi ini disokong
     oleh lebih 400 rakan kongsi dan 200,000 pendidik di seluruh dunia.
+  hoc_homepage_registration_desc: Kelas atau kumpulan anda boleh menyertai berjuta-juta
+    di seluruh dunia melakukan Hour of Code! Pendaftaran untuk sambutan Minggu Pendidikan
+    Sains Komputer tahunan bermula pada bulan Oktober. Walaupun, Hour of Code tersedia
+    sepanjang tahun.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Baca Panduan kami](%{howto_guide_url})
     untuk merancang acara bagi kelas anda."
   hoc_homepage_highlights_heading: Sorotan acara Hour of Code
   hoc_homepage_organized_by: Hour of Code dianjurkan oleh [Code.org](%{codeorg_url}).
+  hoc_events_heading: Daftar untuk Menganjurkan Hour of Code
+  hoc_events_jump_to_map: Lompat ke peta Hour of Code
   signup_closed: Pendaftaran untuk Hour of Code kini telah ditutup. Sila semak semula
     pada bulan Oktober untuk mendaftarkan diri dalam Hour of Code yang akan datang.
   signup_registration_not_required: Anda tidak perlu mendaftar untuk menyertainya!
@@ -2403,6 +2492,8 @@ ms:
   map_title: Peta Hour of Code
   map_header: 'Acara # Hour of Code di seluruh dunia'
   map_header_count_year: "%{event_count} acara didaftarkan pada %{year}"
+  map_header_count_year_so_far: "%{event_count} acara yang didaftarkan setakat ini
+    di %{year}"
   see_all_events: Lihat kesemua senarai acara
   map_header_company: "# oleh syarikat penganjur"
   map_header_country: "# dalam %{country}"
@@ -2415,6 +2506,7 @@ ms:
   map_warning: Senarai lengkap acara boleh dilihat pada <a href='%{events_url}'>halaman
     acara.</a>
   map_warning_markdown: Senarai lengkap acara boleh dilihat pada [events page.](%{events_url})
+  map_view_all_events: Lihat senarai penuh acara Hour of Code [here](%{events_url}).
   meta_tag_og_title: Hour of Code akan datang
   meta_tag_og_description: Jam Kod ialah pergerakan global yang menjangkau puluhan
     juta pelajar daripada semua peringkat umur di 180+ negara dan lebih daripada 45
@@ -2437,15 +2529,6 @@ ms:
     adakah anda? (Terima kasih %{random_donor} kerana menyokong @codeorg)'
   hoc_faq_title: Soalan Lazim
   hoc_faq_what_is_hoc_q: Apakah Hour of Code?
-  hoc_faq_what_is_hoc_a: Acara Hour of Code bermula sebagai pengenalan kepada sains
-    komputer yang disampaikan selama satu jam, direka bentuk bertujuan untuk menjadikan
-    "kod" lebih mudah difahami, untuk menunjukkan sesiapa sahaja boleh mempelajari
-    asasnya dan meluaskan penyertaan di dalam bidang sains komputer. Sejak itu, ia
-    telah menjadi usaha sedunia untuk meraikan sains komputer, bermula dengan aktiviti
-    pengekodan selama 1 jam tetapi berkembang kepada pelbagai jenis usaha komuniti.
-    Cubalah lihat <a href='%{tutorials}'> tutorial dan aktiviti</a>. Kempen akar umbi
-    ini disokong oleh lebih daripada <a href='%{partners}'>400 rakan kongsi</a> dan
-    200,000 pendidik di seluruh dunia.
   hoc_faq_what_is_hoc_a_markdown: Hour of Code dimulakan sebagai pengenalan satu jam
     kepada sains komputer, yang direka bentuk bertujuan memudahkan "kod", untuk menunjukkan
     bahawa sesiapa sahaja boleh mempelajari asasnya dan meluaskan penyertaan di dalam
@@ -2456,12 +2539,6 @@ ms:
     dan 200,000 pendidik di seluruh dunia.
   hoc_faq_last_year: Cuba tutorial itu
   hoc_faq_when_is_hoc_q: Bilakah acara Hour of Code diadakan?
-  hoc_faq_when_is_hoc_a: Acara Hour of Code diadakan pada setiap tahun semasa <a href='%{csedweek_url}'>
-    Minggu Pendidikan Sains Komputer</a>. Minggu Pendidikan Sains Kumputer %{campaign_date_year}
-    akan diadakan pada %{campaign_date_full}, tetapi anda boleh menganjurkan acara
-    Jam Kod sepanjang tahun. Minggu Pendidikan Sains Komputer akan diadakan secara
-    tahunan sebagai pengiktirafan hari ulangtahun perintis pengkomputeran <a href='%{grace_hopper}'>Laksamana
-    Grace Murray Hopper</a> (9 Disember 1906).
   hoc_faq_when_is_hoc_a_markdown: Acara Hour of Code diadakan pada setiap tahun semasa
     [Computer Science Education Week](%{csedweek_url}). Minggu Pendidikan Sains Kumputer
     %{campaign_date_year} akan diadakan pada %{campaign_date_full}, tetapi anda boleh
@@ -2469,33 +2546,18 @@ ms:
     akan diadakan secara tahunan sebagai pengiktirafan hari ulangtahun perintis pengkomputeran
     [Admiral Grace Murray Hopper](%{grace_hopper}) (9 Disember 1906).
   hoc_faq_why_cs_q: Mengapakah sains komputer?
-  hoc_faq_why_cs_a: "<i>Setiap</i> pelajar perlu diberikan peluang untuk mempelajari
-    sains komputer. Ini boleh membantu memupuk kemahiran, logik dan kreativiti penyelesaian
-    masalah. Apabila bermula awal, pelajar akan memperoleh asas untuk kejayaan di
-    dalam mana-mana laluan kerjaya pada abad ke-21. Sila lihat lebih banyak statistik
-    <a href='%{stats_url}'>di sini</a>."
   hoc_faq_why_cs_a_markdown: _Setiap_ pelajar perlu diberikan peluang untuk mempelajari
     sains komputer. Ini boleh membantu memupuk kemahiran, logik dan kreativiti penyelesaian
     masalah. Apabila bermula awal, pelajar akan memperoleh asas untuk kejayaan di
     dalam mana-mana laluan kerjaya pada abad ke-21. Sila lihat lebih banyak statistik
     [here](%{stats_url}).
   hoc_faq_how_participate_q: Bagaimanakah saya boleh menyertai acara Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Mula merancang di sini</a> dengan
-    mengkaji panduan cara yang disediakan. Anda boleh menganjurkan acara Hour of Code
-    di sekolah anda atau di dalam komuniti anda &mdash; seperti di dalam kelab kurikulum
-    tambahan, pertubuhan bukan berasaskan keuntungan atau di tempat kerja. Atau, anda
-    boleh cuba sendiri apabila tiba %{campaign_date}."
   hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) dengan mengkaji
     panduan cara yang disediakan. Anda boleh menganjurkan acara Hour of Code di sekolah
     anda atau di dalam komuniti anda — seperti di dalam kelab kurikulum tambahan,
     pertubuhan bukan berasaskan keuntungan atau di tempat kerja. Atau, anda boleh
     cuba sendiri apabila tiba %{campaign_date}. "
   hoc_faq_behind_hoc_q: Siapakah di sebalik acara Hour of Code?
-  hoc_faq_behind_hoc_a: Acara Hour of Code didorong oleh Hour of Code dan Minggu Pendidikan
-    Sains Komputer <a href='%{partner_url}'>Jawatankuasa Penasihat dan Penilaian</a>
-    serta gabungan rakan kongsi yang belum pernah diadakan sebelum ini bekerjasama
-    menyokong acara Hour of Code &mdash; termasuk Microsoft, Apple, Amazon, Boys and
-    Girls Clubs of America dan Lembaga Pentadbir Kolej.
   hoc_faq_behind_hoc_a_markdown: Acara Hour of Code didorong oleh Hour of Code dan
     Minggu Pendidikan Sains Komputer [Advisory and Review Committees](%{partner_url})
     serta gabungan rakan kongsi yang belum pernah diadakan sebelum ini bekerjasama
@@ -2503,12 +2565,6 @@ ms:
     Clubs of America dan Lembaga Pentadbir Kolej.
   hoc_faq_host_q: Saya tidak tahu apa-apa mengenai pengekodan. Adakah saya masih boleh
     menganjurkan acara?
-  hoc_faq_host_a: Sudah tentu. Aktiviti Hour of Code ialah aktiviti pandu diri. Perkara
-    yang perlu anda lakukan ialah <a href='%{codeorg_url}/learn'>mencuba tutorial
-    semasa kami</a>, pilih tutorial yang anda mahu dan luangkan satu jam &mdash; kami
-    uruskan yang selainnya. Kami juga mempunyai pilihan untuk setiap peringkat umur
-    dan tahap pengalaman, dari tadika dan ke atas. Mula merancang acara anda dengan
-    membaca <a href='/how-to'> panduan cara</a> kami.
   hoc_faq_host_a_markdown: Sudah tentu. Aktiviti Hour of Code ialah aktiviti pandu
     diri. Perkara yang perlu anda lakukan ialah [try our current tutorials](%{codeorg_url}/learn),
     pilih tutorial yang anda mahu dan luangkan satu jam — kami uruskan yang selainnya.
@@ -2516,12 +2572,6 @@ ms:
     dari tadika dan ke atas. Mula merancang acara anda dengan membaca [how to guide](%{howto})
     kami.
   hoc_faq_devices_q: Apakah peranti yang perlu saya gunakan untuk pelajar saya?
-  hoc_faq_devices_a: Tutorial Code.org berfungsi pada semua peranti dan pelayar. Anda
-    dapat lihat lebih banyak maklumat tentang keperluan teknologi tutorial Code.org
-    <a href='%{codeorg_url}/educate/it'>di sini</a>. Keperluan teknikal untuk tutorial
-    bukan-Code.org boleh didapati pada <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    di dalam huraian khusus tutorial. Jangan lupa bahawa kami juga menawarkan <a href='%{unplugged_url}'>aktiviti
-    nirplag</a> jika sekolah anda tidak dapat memuatkan tutorial!
   hoc_faq_devices_a_markdown: Tutorial Code.org berfungsi pada semua peranti dan pelayar.
     Anda dapat lihat lebih banyak maklumat tentang keperluan teknologi tutorial Code.org
     [here](%{codeorg_url}/educate/it). Keperluan teknikal untuk tutorial bukan-Code.org
@@ -2529,19 +2579,6 @@ ms:
     khusus tutorial. Jangan lupa bahawa kami juga menawarkan [unplugged activities](%{unplugged_url})
     jika sekolah anda tidak dapat memuatkan tutorial!
   hoc_faq_need_computers_q: Adakah saya memerlukan komputer untuk setiap penyertaan?
-  hoc_faq_need_computers_a: Tidak. Kami menyediakan tutorial Hour of Code yang boleh
-    dilakukan pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer
-    sama sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa
-    sahaja yang ada bersama anda. <p><i>Berikut ialah beberapa pilihan:</i> <br> <ul>
-    <li><b>Bekerja secara berpasangan.</b> <a href='%{pair_programming_research}'>Penyelidikan
-    menunjukkan</a> pelajar belajar dengan lebih baik apabila menggunakan <a href='%{pair_programming_video}'>pengaturcaraan
-    berpasangan</a>, berkongsi komputer dan berganding bahu. Menggalakkan pelajar
-    anda menggandakan usaha. <li><b>Gunakan skrin projektor.</b> Jika anda mempunyai
-    projektor dan skrin untuk komputer yang disambungkan ke Laman Web, seluruh kumpulan
-    anda boleh melakukan Jam Kod bersama. Tonton bahagian video bersama dan secara
-    bergilir menyelesaikan teka-teki atau menjawab soalan. <li><b>Laksanakan secara
-    nirplag.</b> Kami menawarkan tutorial <a href='%{unplugged_url}'> yang tidak memerlukan
-    komputer</a> sama sekali. </ul>
   hoc_faq_need_computers_a_markdown: |-
     Tidak. Kami menyediakan tutorial Hour of Code yang boleh dilakukan pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer sama sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa sahaja yang ada bersama anda.
 
@@ -2552,28 +2589,15 @@ ms:
     - **Laksanakan secara nirplag.** Kami menawarkan [tutorials that require no computer](%{unplugged_url}) sama sekali.
   hoc_faq_international_q: Saya berada di <country>. Bagaimanakah saya boleh menyertai
     pada peringkat antarabangsa?
-  hoc_faq_international_a: Sesiapa sahaja boleh menganjurkan acara Hour of Code, di
-    mana-mana sahaja di dunia. Pada tahun lepas, para pelajar dari seluruh dunia telah
-    bersama menyertai acara Hour of Code. Ketahui lebih lanjut <a href='/promote'>di
-    sini</a>.
   hoc_faq_international_a_markdown: Sesiapa sahaja boleh menganjurkan acara Hour of
     Code, di mana-mana sahaja di dunia. Pada tahun lepas, para pelajar dari seluruh
     dunia telah bersama menyertai acara Hour of Code. Ketahui lebih lanjut [here](%{promote}).
   hoc_faq_tutorial_q: Bagaimanakah saya boleh membuat tutorial Hour of Code?
-  hoc_faq_tutorial_a: Jika anda berminat menjadi rakan tutorial, <a href='/tutorial-guidelines'>lihat
-    garis panduan dan arahan kami</a>. Kami ingin menganjurkan pelbagai pilihan menarik,
-    tetapi matlamat utamanya ialah mengoptimumkan pengalaman untuk pelajar dan guru
-    yang baharu kepada sains komputer.
   hoc_faq_tutorial_a_markdown: Jika anda berminat menjadi rakan tutorial, [see our
     guidelines and instructions](%{tutorial_guidelines}). Kami ingin menganjurkan
     pelbagai pilihan menarik, tetapi matlamat utamanya ialah mengoptimumkan pengalaman
     untuk pelajar dan guru yang baharu kepada sains komputer.
   hoc_faq_account_q: Adakah pelajar perlu daftar masuk dengan menggunakan akaun?
-  hoc_faq_account_a: Tidak. Tiada pendaftaran atau daftar masuk diperlukan sama sekali
-    untuk pelajar mencuba Hour of Code. Kebanyakan <a href='%{codeorg_url}/learn/beyond'>kursus
-    susulan</a> memerlukan penciptaan akaun untuk menyimpan kemajuan pelajar. Pendaftaran
-    untuk Hour of Code juga TIDAK mencipta akaun Studio Kod secara automatik. Jika
-    anda mahu mencipta akaun untuk pelajar anda, sila ikuti arahan <a href='https://youtu.be/_smelV_KISE'>ini</a>.
   hoc_faq_account_a_markdown: Tidak. Tiada pendaftaran atau daftar masuk diperlukan
     sama sekali untuk pelajar mencuba Hour of Code. Kebanyakan [follow-on courses](%{codeorg_url}/learn/beyond)
     memerlukan penciptaan akaun untuk menyimpan kemajuan pelajar. Pendaftaran untuk
@@ -2582,14 +2606,6 @@ ms:
     ini.
   hoc_faq_high_school_q: Apakah aktiviti yang perlu saya lakukan dengan pelajar sekolah
     menengah?
-  hoc_faq_high_school_a: Tutorial Star Wars dan Minecraft kami sangat bagus untuk
-    pelajar sekolah menengah, terutamanya versi JavaScript Star Wars dan tahap permainan
-    bebas di dalam kedua-dua tutorial tersebut. Sebagai gantinya, kami menyarankan
-    supaya mencuba satu daripada tutorial untuk individu yang baru bermula pada <a
-    href='%{codeorg_url}/learn'>%{partner_url}/learn</a> untuk memulakan, seperti
-    tutorial bersama Angry Birds atau bersama Anna dan Elsa. Pelajar sekolah menengah
-    boleh menyelesaikan satu daripada ini dalam 30 minit dan kemudian boleh mencuba
-    tutorial lanjutan di dalam JavaScript, seperti Akademi Khan atau CodeHS.
   hoc_faq_high_school_a_markdown: Tutorial Star Wars dan Minecraft kami sangat bagus
     untuk pelajar sekolah menengah, terutamanya versi JavaScript Star Wars dan tahap
     permainan bebas di dalam kedua-dua tutorial tersebut. Sebagai gantinya, kami menyarankan
@@ -2600,11 +2616,6 @@ ms:
     Khan atau CodeHS.
   hoc_faq_scratch_q: Saya melakukan Scratch untuk Hour of Code, tetapi bagaimana jika
     pelajar saya mempunyai iPad dan bukannya komputer riba?
-  hoc_faq_scratch_a: Scratch tidak dijalankan pada tablet. Jika pelajar anda ialah
-    golongan muda, mereka boleh menggunakan aplikasi iPad ScratchJR (untuk pembaca
-    awal). Jika anda melihat tutorial pada <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
-    anda boleh menemui tutorial lain yang berfungsi dengan baik pada iPad - daripada
-    Code.org, Tynker, Lightbot, atau CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch tidak dapat dijalankan pada tablet. Jika pelajar
     anda ialah golongan muda, mereka boleh menggunakan aplikasi iPad ScratchJR (untuk
     pembaca awal). Jika anda melihat tutorial pada [%{partner_url}/learn](%{codeorg_url}/learn),
@@ -2612,14 +2623,6 @@ ms:
     Code.org, Tynker, Lightbot, atau CodeSpark.
   hoc_faq_count_hoc_q: Bagaimanakah anda mengira Hour of Code?
   hoc_faq_map_q: Mengapakah saya tidak dapat melihat titik saya di atas peta?
-  hoc_faq_map_a: Kami minta maaf anda tidak melihat acara anda pada peta Hour of Code.
-    Oleh kerana puluhan ribu penganjur mendaftar untuk acara ini, peta itu mengagregatkan
-    data dan memaparkan satu titik untuk beberapa acara. Jika anda klik pautan <a
-    href='%{events_url}'>halaman acara</a> di bawah peta, anda akan diarahkan ke senarai
-    semua acara mengikut negeri dan anda boleh menemui acara anda disenaraikan di
-    sana. Selain itu, memandangkan ribuan individu mendaftar untuk acara Hour of Code,
-    peta dan senarai acara kebiasaannya mengambil masa selama 48 jam untuk dikemas
-    kini. Sila semak semula dalam beberapa hari!
   hoc_faq_map_a_markdown: Kami minta maaf anda tidak melihat acara anda pada peta
     Hour of Code. Oleh kerana puluhan ribu penganjur mendaftar untuk acara ini, peta
     itu mengagregatkan data dan memaparkan satu titik untuk beberapa acara. Jika anda
@@ -2628,12 +2631,6 @@ ms:
     di sana. Selain itu, memandangkan ribuan individu mendaftar untuk acara Hour of
     Code, peta dan senarai acara kebiasaannya mengambil masa selama 48 jam untuk dikemas
     kini. Sila semak semula dalam beberapa hari!
-  hoc_faq_count_hoc_a: Penjejak Hour of Code bukan ukuran penggunaan yang tepat. Kami
-    tidak mengira ID pelajar yang unik dengan sempurna apabila menjejaki penyertaan
-    Hour of Code, terutamanya kerana kami tidak meminta pelajar daftar masuk atau
-    mendaftar. Disebabkan itu, kami sama-sama terlebih kira dan terkurang kira peserta
-    dalam masa yang sama. Sila baca semua butiran <a href='%{codeorg_url}/loc'>di
-    sini</a>.
   hoc_faq_count_hoc_a_markdown: Penjejak Hour of Code bukan ukuran penggunaan yang
     tepat. Kami tidak mengira ID pelajar yang unik dengan sempurna apabila menjejaki
     penyertaan Hour of Code, terutamanya kerana kami tidak meminta pelajar daftar
@@ -2641,27 +2638,6 @@ ms:
     kira peserta dalam masa yang sama. Sila baca semua butiran [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Berapa banyakkah seseorang individu boleh belajar dalam masa
     sejam?
-  hoc_faq_one_hour_a: Matlamat Hour of Code bukan bertujuan mengajar siapa pun untuk
-    menjadi pakar saintis komputer dalam tempoh sejam. Sejam hanya cukup untuk mengetahui
-    bahawa sains komputer menyeronokkan dan kreatif, bahawa ia boleh diakses pada
-    semua peringkat umur, untuk semua pelajar, tanpa mengambil kira latar belakang.
-    Ukuran kejayaan kempen ini bukan pada sebanyak mana yang dipelajari oleh pelajar
-    CS - kejayaannya ditunjukkan dalam penyertaan yang meluas di dalam seluruh kumpulan
-    jantina, etnik dan sosioekonomi, serta hasil peningkatan dalam pendaftaran dan
-    penyertaan yang kita lihat di dalam kursus CS pada semua peringkat gred. Jutaan
-    guru dan pelajar yang menyertai aktiviti ini telah memutuskan untuk menjangkau
-    melebihi sejam - untuk belajar selama sehari atau seminggu atau lebih lama dan
-    ramai pelajar telah memutuskan untuk mendaftar di dalam keseluruhan kursus (atau
-    malah jurusan kolej) sebagai hasilnya. <br/> <br/> Selain pelajar, "pelajar" lain
-    ialah pendidik yang memperoleh keyakinan selepas sejam bahawa mereka mereka boleh
-    mengajar sains komputer walaupun mereka mungkin tidak mempunyai ijazah kolej sebagai
-    saintis komputer. Puluhan ribu guru memutuskan untuk melanjutkan pelajaran dalam
-    bidang sains komputer, sama ada menghadiri PD atau menawarkan kursus susulan dalam
-    talian, atau kedua-duanya sekali. Dan ini juga diterima pakai kepada pentadbir
-    sekolah, yang menyedari bahawa sains komputer ialah sesuatu yang dikehendaki oleh
-    pelajar dan guru mereka berkebolehan melakukannya. <br/> <br/> Paling utama sekali,
-    perkara yang boleh dipelajari oleh semua peserta dalam satu jam, kita pun boleh
-    lakukannya.
   hoc_faq_one_hour_a_markdown: |-
     Matlamat Hour of Code bukan bertujuan mengajar siapa pun untuk menjadi pakar saintis komputer dalam tempoh sejam. Sejam hanya cukup untuk mengetahui bahawa sains komputer menyeronokkan dan kreatif, bahawa ia boleh diakses pada semua peringkat umur, untuk semua pelajar, tanpa mengambil kira latar belakang. Ukuran kejayaan kempen ini bukan pada sebanyak mana yang dipelajari oleh pelajar CS - kejayaannya ditunjukkan dalam penyertaan yang meluas di dalam seluruh kumpulan jantina, etnik dan sosioekonomi, serta hasil peningkatan dalam pendaftaran dan penyertaan yang kita lihat di dalam kursus CS pada semua peringkat gred. Jutaan guru dan pelajar yang menyertai aktiviti ini telah memutuskan untuk menjangkau melebihi sejam - untuk belajar selama sehari atau seminggu atau lebih lama dan ramai pelajar telah memutuskan untuk mendaftar di dalam keseluruhan kursus (atau malah jurusan kolej) sebagai hasilnya.
 
@@ -2669,39 +2645,29 @@ ms:
 
     Paling utama sekali, perkara yang boleh dipelajari oleh semua peserta dalam satu jam, kita pun boleh lakukannya.
   hoc_faq_more_questions_q: Ada soalan lagi?
-  hoc_faq_more_questions_a: Cuba dapatkan jawapan di dalam <a href='http://support.code.org'>forum
-    sokongan</a> kami.
   hoc_faq_more_questions_a_markdown: Cuba dapatkan jawapan di dalam [support forum](http://support.code.org)
     kami.
   hoc_faq_keep_learning_q: Bagaimanakah saya boleh terus pembelajaran selepas Hour
     of Code?
-  hoc_faq_keep_learning_a: Sesiapa sahaja boleh menganjurkan acara Hour of Code pada
-    bila-bila masa. Tutorialnya sentiasa berterusan sepanjang tahun. Anda boleh menjangkakan
-    semua tutorial dan kurikulum kami tersedia secara berkekalan pada laman web kami.
-    Sila pergi ke <a href='/promote'>sumber kami</a> untuk panduan cara dan sumber
-    lain acara bagi membantu menjayakan acara Hour of Code anda.
   hoc_faq_keep_learning_a_markdown: Sesiapa sahaja boleh menganjurkan acara Hour of
     Code pada bila-bila masa. Tutorialnya sentiasa berterusan sepanjang tahun. Anda
     boleh menjangkakan semua tutorial dan kurikulum kami tersedia secara berkekalan
     pada laman web kami. Sila pergi ke [our resources](%{promote}) untuk panduan cara
     dan sumber lain acara bagi membantu menjayakan acara Hour of Code anda.
   hoc_faq_certificates_q: Di manakah saya boleh mencetak sijil untuk pelajar saya?
-  hoc_faq_certificates_a: Pergi ke <a href='%{codeorg_url}/certificates'>halaman sijil</a>
-    kami bagi membolehkan anda mencetak sijil untuk seluruh kelas anda dengan lebih
-    awal. Anda juga boleh mencetak <a href='%{codeorg_url}/certificates?course=mc'>sijil
-    khas</a> untuk pelajar yang melakukan tutorial Minecraft.
-  hoc_faq_certificates_a_markdown: Pergi ke [certificates page](%{codeorg_url}/certificates)
-    kami bagi membolehkan anda mencetak sijil untuk seluruh kelas anda dengan lebih
-    awal. Anda juga boleh mencetak [special certificates](%{codeorg_url}/certificates?course=mc)
-    untuk pelajar yang melakukan tutorial Minecraft.
+  hoc_faq_certificates_answer_markdown: Pergi ke [halaman sijil] kami (%{certificates_url})
+    di mana anda boleh mencetak sijil untuk seluruh kelas anda lebih awal.
   hoc_faq_logo_q: Adakah terdapat pengehadan tentang cara saya boleh menggunakan logo
     atau nama Hour of Code?
-  hoc_faq_logo_a: Hour of Code sudah menjadi tanda dagangan. Kami tidak mahu menghalang
-    penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut had yang
-    ditentukan. Sila lihat  <a href='%{logo_url}'>garis panduan ini untuk penggunaan</a>.
   hoc_faq_logo_a_markdown: Hour of Code sudah menjadi tanda dagangan. Kami tidak mahu
     menghalang penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut
     had yang ditentukan. Sila lihat [these guidelines for usage](%{logo_url}).
+  hoc_faq_bug_q: Saya menemui bug dalam aktiviti Hour of Code! Apa yang perlu saya
+    lakukan?
+  hoc_faq_bug_a_markdown: |-
+    Oh tidak! Jika anda menemui bug dalam aktiviti Hour of Code - mula-mula periksa URL untuk aktiviti yang anda lakukan. Jika URL bermula dengan studio.code.org, pasukan Sokongan Code.org kami boleh membantu! Klik ikon tanda tanya di sudut kanan atas skrin anda, kemudian pilih “Laporkan masalah” dari menu dropdown.
+
+    Sekiranya URL tidak bermula dengan studio.code.org, anda mungkin mengusahakan aktiviti pihak ketiga dan perlu menghubungi pasukan sokongan syarikat itu untuk mendapatkan bantuan lanjut.
   stats_hoc_2013_image_alt: Statistik dari acara Hour of Code 2013
   stats_growth: Ia adalah yang paling cepat untuk mencapai 15 juta pengguna.
   stats_i18n: Pelajar belajar dalam lebih daripada 45 bahasa
@@ -13952,6 +13918,22 @@ ms:
     @codeorg supaya kami dapat menyerlahkan kejayaan anda juga!'
   hoc_how_to_step_07_educators_desc_02: Anda juga boleh mencetak sijil untuk pelajar
     anda untuk menunjukkan pencapaian mereka!
+  hoc_ai_top_desc: Sesiapa sahaja boleh belajar tentang AI, sama ada anda seorang
+    pelajar di dalam kelas atau pendidik yang membuka kunci masa depan pengajaran
+    dengan dan mengenai AI.
+  hoc_ai_how_ai_works_video_series_desc: Siri video pendek ini akan memperkenalkan
+    anda bagaimana kecerdasan buatan berfungsi dan mengapa ia penting. Kemudian menyelidiki
+    isu-isu seperti bias algoritma dan etika membuat keputusan AI.
+  hoc_ai_learn_how_ai_works_desc: Menyelami dunia AI dengan “Bagaimana AI berfungsi,”
+    pelajaran yang dipasangkan dengan siri video kami yang memperkenalkan anda tentang
+    cara AI berfungsi dan mengapa ia penting.
+  hoc_ai_101_for_educators_desc: Temukan potensi transformatif kecerdasan buatan (AI)
+    dalam pendidikan dengan siri pembelajaran dalam talian secara percuma untuk pendidik.
+  hoc_ai_impacts_desc: Libatkan kelas anda dengan pelajaran yang dipimpin oleh guru
+    yang meneroka kesan kecerdasan buatan dan menjemput pelajar untuk memikirkan penyelesaian
+    kepada beberapa isu AI.
+  hoc_ai_activities_desc: Aktiviti Hour of Code yang baru ini memperkenalkan pengguna
+    kepada dunia kecerdasan buatan dengan cara yang menyeronokkan dan menarik.
   team_page_full_team_alt_text: Hampir 100 pekerja Code.org dalam kemeja-t biru dan
     kuning yang sepadan berpose di bilik persidangan hotel untuk acara Codechella
     musim panas 2022 syarikat.
@@ -14509,6 +14491,23 @@ ms:
     dan Muat Turun'
   video_library_page_not_hacked_video_title_7: 'Bagaimana Untuk Tidak Digodam: Pasang
     Kemas Kini'
+  thank_you_page_main_title: Terima kasih kerana membantu membina gerakan
+  thank_you_page_description: Code.org Advocacy Coalition ingin mengucapkan terima
+    kasih kepada ratusan ribu juara dan penyokong tempatan, termasuk guru, ahli komuniti,
+    penyelidik, organisasi bukan untung, universiti, syarikat, dan institusi kerajaan
+    yang telah menyokong visi bahawa setiap pelajar di setiap sekolah layak mendapat
+    peluang untuk belajar sains komputer. Terima kasih atas sokongan anda terhadap
+    gerakan ini.
+  thank_you_page_members_section_title: 'Dan kepada semua ahli Code.org Advocacy Coalition:'
+  thank_you_page_individual_organization_title: 'Terima kasih kepada individu dan
+    organisasi berikut atas sumbangan mereka kepada laporan ini:'
+  thank_you_page_individual_organization_description: Penyelia pendidikan sains komputer
+    di setiap agensi pendidikan negeri, Lembaga Kolej, Della Cronin, Stuart Dexler,
+    Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Terima kasih kepada pelajar dan guru yang
+    dipetik dalam laporan ini:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Tentang Kami
   about_us_page_hero_description: Code.org® adalah inovasi pendidikan bukan untung
     yang didedikasikan untuk visi bahawa setiap pelajar di setiap sekolah mempunyai
@@ -14666,6 +14665,11 @@ ms:
     pengumpulan dana yang akan menyokong visi itu.
   about_page_donors_link_1: Buat sumbangan
   about_page_donors_link_2: "[lihat senarai penderma kami] (%{donors_url})"
+  teach_ai_title: Contoh dunia sebenar. Sumber Praktikal.
+  teach_ai_description: Alat Panduan AI untuk Sekolah ialah sumber untuk pembuat dasar,
+    pemimpin sekolah, dan kakitangan untuk mengembangkan panduan awal mengenai AI
+    di sekolah mereka.
+  teach_ai_button_label: Lihat Toolkit
   language_code:
     ar: Bahasa Arab
     az: Azerbaijan

@@ -36,6 +36,12 @@ zu:
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: September 5, 2023 - December 17, 2023
   hoc2023_header: Creativity with AI
+  hoc2023_hero_desc_homepage: Join millions across the globe in organizing an hour
+    of coding, with or without AI and learning how AI works. Anyone, anywhere can
+    do it. No experience needed.
+  hoc2023_hero_desc_learn_page: This year, we're taking Hour of Code to new heights
+    by offering coding opportunities that encompass both artificial intelligence (AI)
+    and non-AI components.
   hoc2023_social_creativity_with_ai_title: Hour of Code - What will you create?
   hoc2023_social_creativity_with_ai_desc: Use computer science to explore and learn
     about AI!
@@ -166,6 +172,7 @@ zu:
     it's important.
   social_ai_title: Learn about artificial intelligence (AI) | Code.org
   social_ai_desc: Tools to help students and teachers bring AI into the classroom.
+  social_videos_desc: Engaging computer science videos for learners of all ages.
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
@@ -195,6 +202,15 @@ zu:
   device_laptop: Laptop
   device_desktop_computer: Desktop Computer
   device_mobile_device: Mobile Device
+  for_everyone: For everyone
+  for_students_teacher_led_learning: 'For students: Teacher-led learning'
+  for_students_teacher_led_lessons: 'For students: Teacher-led lessons'
+  professional_development: Professional development
+  how_ai_works_video_series: How AI Works Video Series
+  learn_how_ai_works: Learn How AI Works
+  ai_101_for_educators: AI 101 for Educators
+  learn_about_ai_impacts: Learn about the Impacts of AI
+  hoc_ai_activities: Hour of Code AI Activities
   subscribe_to_emails_heading: Subscribe to emails
   subscribe_to_emails_desc: Read about what's happening at Code.org and in computer
     science education through quarterly updates via our mailing list.
@@ -250,6 +266,7 @@ zu:
   optional_materials: 'Optional Materials:'
   call_to_action_hold_an_event: Hold an event
   call_to_action_register_event: Register your event
+  call_to_action_register_your_hoc: Register your Hour of Code
   call_to_action_select_activity: Select an activity
   call_to_action_start_activity: Start an activity
   call_to_action_get_certificates: Get certificates
@@ -259,6 +276,7 @@ zu:
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_try_activities: Try activities
+  call_to_action_try_hoc_ai_activities: Try Hour of Code AI activities
   call_to_action_explore_activities: Explore activities
   call_to_action_explore_ai: Explore AI
   call_to_action_explore_unit: Explore unit
@@ -345,6 +363,8 @@ zu:
   call_to_action_learn_about_advocacy: Learn about our advocacy
   call_to_action_visit_store: Visit the store
   call_to_action_view_faqs: View more FAQs
+  call_to_action_applications_open: Applications now open
+  call_to_action_apply_cs_ambassador: Apply to be a CS Ambassador
   aria_label_call_to_action_hoc_how_to_educators: View how-to guide for Educators
   aria_label_call_to_action_hoc_how_to_companies: View how-to guide for Companies
   aria_label_call_to_action_hoc_how_to_districts: View how-to guide for Districts
@@ -594,8 +614,10 @@ zu:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Kindergarten
   module_grade_grade_01: Grade 1
@@ -692,6 +714,54 @@ zu:
     Catalog
   heading_csa_ai: Looking for things to do after the AP® exam?
   heading_bring_cs_to_students: Bring computer science to students
+  heading_cs_ambassador_program: CS Ambassador Program
+  cs_ambassador_subhead: If you're a high school student passionate about encouraging
+    more young women to take computer science at your school, then we need you!
+  cs_ambassador_desc: Every field, including medicine, entertainment, sports, education,
+    business, fashion, and entrepreneurship is touched by computer science. Yet only
+    5% of high school aged young women take computer science classes. Ambassadors
+    can help close this gender gap by encouraging their peers to take a computer science
+    class.
+  cs_ambassador_application_date: Applications open until November 8th, 2023
+  cs_ambassador_application_subhead: Work with a teacher to submit your application
+    today
+  cs_ambassador_application_questions: Questions? Please contact [youngwomen@code.org](%{email_url})
+  cs_ambassador_do_heading: What do CS Ambassadors do?
+  cs_ambassador_do_desc: CS Ambassadors encourage young women to explore the subject,
+    and lift each other up as they reclaim their place in computer science. CS Ambassadors
+    connect with their peers to share their excitement and love of computer science.
+    They visit classrooms, host tables at lunch, and speak at assemblies and club
+    meetings. CS Ambassadors work with teachers and school administrators to breakdown
+    stereotypes that hold young women back.
+  cs_ambassador_steps_heading: What do I need to become a CS Ambassador?
+  cs_ambassador_steps_list_title_01: Passion
+  cs_ambassador_steps_list_title_02: Experience in a CS Course
+  cs_ambassador_steps_list_title_03: School that offers CS
+  cs_ambassador_steps_list_desc_01: A passion for encouraging young women at your
+    school to take computer science classes
+  cs_ambassador_steps_list_desc_02: 'Have completed or is currently enrolled in a
+    year-long computer science class (recommended: CS Principles or AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Attend a high school that regularly offers a
+    year-long computer science course (recommended: CS Principles or AP® CSA)'
+  cs_ambassador_benefits_heading: Program benefits
+  cs_ambassador_benefits_list_title_01: National community
+  cs_ambassador_benefits_list_title_02: Community service
+  cs_ambassador_benefits_list_title_03: Recognition
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certificate
+  cs_ambassador_benefits_list_title_06: Experiences
+  cs_ambassador_benefits_list_desc_01: Access to a national community of young leaders
+    committed to closing the gender gap in computer science.
+  cs_ambassador_benefits_list_desc_02: Community service hours and the opportunity
+    to earn the [U.S. Presidential Volunteer Service Award](%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Recognition as a 2023-2024 Ambassador and eligible
+    to be honored in the Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Be identified as a CS Ambassador through special
+    Code.org branded apparel, stickers, and more!
+  cs_ambassador_benefits_list_desc_05: Official certificate of participation from
+    Code.org.
+  cs_ambassador_benefits_list_desc_06: Gain experiences and stories to share on your
+    college application, resume and more!
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
   professional_learning_section_desc_short: Get the support you need as you prepare
@@ -846,6 +916,11 @@ zu:
   ai_curriculum_grades_05: 'Grade Levels: 9-12'
   ai_curriculum_btn_aria_label_05: Explore the Software Engineering & Computer Vision
     module
+  ai_curriculum_title_06: Societal Impact of Generative AI
+  ai_curriculum_desc_06: Investigate the impact of generative AI from different perspectives,
+    then collaborate as a team to come up with guidelines that address the most needs
+    from all participants.
+  ai_curriculum_btn_aria_label_06: View Societal Impact of Generative AI lesson plan
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -1814,6 +1889,9 @@ zu:
   help_page_speak_for_cs_desc: Learn more about Code.org's advocacy work across the
     U.S. and the ten policies we recommend states adopt to make computer science foundational
     for all students. Plus, find out how you can drive change in your state.
+  yw_page_top_heading: Young Women in Computer Science
+  yw_page_top_desc: Become a CS Ambassador and be a part of closing the gender gap
+    in computer science.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -2181,10 +2259,15 @@ zu:
     to computer science, using fun tutorials to show that anybody can learn the basics.
     This grassroots campaign is supported by over 400 partners and 200,000 educators
     worldwide.
+  hoc_homepage_registration_desc: Your class or group can join millions around the
+    world doing the Hour of Code! Registration for the annual Computer Science Education
+    Week celebration begins in October. Though, Hour of Code is available year-round.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
     to plan an event for your class."
   hoc_homepage_highlights_heading: Hour of Code highlights
   hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  hoc_events_heading: Register to Host an Hour of Code
+  hoc_events_jump_to_map: Jump to the Hour of Code map
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -2291,6 +2374,7 @@ zu:
   map_title: Imephu yeHora loKufingqwa
   map_header: "# Imicimbi yeHora loKufingqwa uhlaba wonke"
   map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year_so_far: "%{event_count} events registered so far in %{year}"
   see_all_events: Bona imicimbi yonke
   map_header_company: "# by company organizers"
   map_header_country: "# ku %{country}"
@@ -2303,6 +2387,7 @@ zu:
   map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
     page.</a>
   map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_view_all_events: See a full list of Hour of Code events [here](%{events_url}).
   meta_tag_og_title: Zonke izingane zifanelwe yithuba
   meta_tag_og_description: IHora loKufingqwa lingumjikelezo oyimbulunga ofinyelela
     amashumi ezigidi zabafundi kumazwe aphezulu ku-180 nezilimi eziphezu kuka 45.
@@ -2324,14 +2409,6 @@ zu:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: IMIBUZO EJWAYELEKE UKUBUZWA
   hoc_faq_what_is_hoc_q: Liyini iHora loKufingqwa?
-  hoc_faq_what_is_hoc_a: IHora loKufingqwa liqale njengehora elilodwa lokwazisa ikhompyutha
-    sayensi, elisongozele ukwenza ukufingqwa kubelula, ukubonisa ukuba yinoma ngubani
-    ongafunda okokuqala ezintweni eziyisisekelo, kanye nokunabisa ukuhlanganyela kwemikhakha
-    yekhompyutha sayensi. Ukusukela lapho ibengumzamo umhlaba wonke wokugubha ikhompyutha
-    sayensi, ukuqala ngehora elilodwa lwemisebenzi yokufingqwa kodwa enwebela kumizamo
-    eyomphakathi ehlukile. Bheka ku <a href='%{tutorials}'>izifundiso kanye nemisebenzi</a>.
-    Lesisekelo somnyakazo sisekelwe abadlulela ku<a href='%{partners}'>400 yabahlanganeli</a>
-    kanye 200,000 yothisha umhlaba wonke.
   hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
     to computer science, designed to demystify "code", to show that anybody can learn
     the basics, and to broaden participation in the field of computer science. It
@@ -2341,13 +2418,6 @@ zu:
     supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Zama lezifundiso
   hoc_faq_when_is_hoc_q: Linini iHora loKufingqwa?
-  hoc_faq_when_is_hoc_a: IHora loKufingqwa lithatha indawo nyaka munye ngesikhathi
-    <a href=%{csedweek_url}'>Iviki leMfundiso yeHora loKufingqwa</a>. I %{campaign_date_year}
-    iViki leMfundiso yeKhompyutha Sayensi lihlelelwe %{campaign_date_full}, kodwa
-    wena ungahlela iHora loKufingqwa unyaka wonke. iViki leMfundiso yeKhompyutha Sayensi
-    libanjwa njalo ngonyaka ukukhumbula usuku lokuzalwa loyena mqambi wezokukhompyutha
-    <a href='%{grace_hopper}'Ukhomando omkhulu uGrace Murray Hopper</a> (uZibandlela
-    9, 1906).
   hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
     Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
     Education Week will be %{campaign_date_full}, but you can host an Hour of Code
@@ -2355,74 +2425,33 @@ zu:
     of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
     (December 9, 1906).
   hoc_faq_why_cs_q: Yingani ikhompyutha sayensi?
-  hoc_faq_why_cs_a: "<i>Wonke</i> umfundi kufanele athole ithuba lokufunda ikhompyutha
-    sayensi. Kusiza ukwakha amakhono okuxazulula izinkunga, ukukhalipha kwengqondo
-    kanye nolwazi lokusongulula. Ngokuqala ebuncaneni, abafundi bazoba nesisekelo
-    ukuze baphumelele kunoma iyiphi inkombo yomsebenzi esikhathini samanje. Bona ulwazi
-    olugcwele <a href='%{stats_url}'>lapha</a>."
   hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
     computer science. It helps nurture problem-solving skills, logic and creativity.
     By starting early, students will have a foundation for success in any 21st-century
     career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Ngizibandakanya kanjani neHora loKufingqwa?
-  hoc_faq_how_participate_a: "<a href='/indlela'>Qala lapha ukulungiselela</a> ngoku
-    bhekisisa izindlela zethu zokuqondisa. Ungahlela umcimbi wakho weHora loKufingqwa
-    kusikole sakho okanye kumphakathi wakho &mdash; njengaku kilabhu yokufundisana,
-    okungenanzuzo okanye kumsebenzi. Okanye, yizame ngokwakho uma %{campaign_date}
-    lufika."
   hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
     our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+    your community — like in an extracurricular club, non-profit, or at work."
   hoc_faq_behind_hoc_q: Ngubani umphehli weHora loKufingqwa?
-  hoc_faq_behind_hoc_a: IHora loKufingqwa lihlelwe i <a href='httpe://Code.org'>Code.org</a>,
-    iyi 501c3 eyomphakathi engenanzuzo ezinikele ukukhulisa ukuzibandakanya kukhompyutha
-    sayensi ngokuyenza itholakale kuzikole eziningi, kanye nokuphakamisa ukuzibandaya
-    kwabesimame kanye nabafundi bombala abangamelwanga. I <a> href='%{codeorg_url}/mayelana/abalingani'>okungakaze
-    kube khona kwaba lingani</a> beze ngokubumbana ukuzoxhasa iHora loKufingqwa, kanye
-    &mdash; okubala iMicrosoft, Apple, Amazon, ikilabhu yabafana kanye namantombazane
-    yase Melika neBhodi yeKholiji.
   hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
     by the Hour of Code Review Committee as well as an unprecedented coalition of
     [partners](%{partner_url}) that have come together to support the Hour of Code
-    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America, and the
     College Board.
   hoc_faq_host_q: Angazi lutho ngoku fingqwa. Ngingakwazi ukuhlela umcimbi?
-  hoc_faq_host_a: Kunjalo. Izifundiso zeHora loKufingqwa uzihola ngokwakho. Konke
-    ekufuneka ukwenze ukuba <a href='%{codeorg_url}/funda'>linga izifundiso zethu
-    zamanje</a>, khetha isifundiso, ubese ukhetha ihora &mdash; sinakekela okulandelayo.
-    Sinazo izinhlobonhlobo zeminyaka yonke kanye nezinga lobungcweti, kusukela konkulisa
-    ukukhuphuka. Qalisa ukuhlela umcimbi wakho ngoku funda i <a href='/indlela'>indlela
-    yokwenza</a>.
   hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+    you have to do is [try our current tutorials](%{learn_url}), pick the tutorial
+    you want, and pick an hour — we take care of the rest. We also have options for
+    every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how-to guide](%{howto_url}).
   hoc_faq_devices_q: Yimaphi amadivayisi ekufanele abafundi bawasebenzise?
-  hoc_faq_devices_a: Izifundiso zeCode.org zisebenza kuwonke amadivayisi kanye neziphequluli.
-    Ukubona ulwazi olujulile ngezidingo zezifundiso zeCode.org <a href='%{codeorg_url}/fundisa/yona'>lapha</a>.
-    Izindingo zethekhi zezifundiso ezingabandakanyi iCode.org ungazithola ku <a hredf='%{codeorg_url}/funda'>%{partner_url}/funda</a>
-    kuncazelo yezifundiso. Ungakhohlwa ukuba sinikeza <a href='%{unplugged_url}'>imisebenzi
-    enqanyuliwe</a> uma isikole sakho singakwazi ukufaka izifundiso!
   hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    You can see more information about Code.org's tutorial tech needs [here](%{it_url}).
+    Tech needs for non-Code.org tutorials can be found on [hourofcode.com/learn](%{learn_url})
+    in a specific tutorial description. Don't forget we also offer [unplugged activities](%{unplugged_url})
     if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Ingabe wonke ohlanganyele udinga ikhompyutha yakhe eyedwa?
-  hoc_faq_need_computers_a: Cha. Sinezi fundiso zeHora loKufingqwa ezisebenza kumakhompyutha,
-    omakhala ekhukhwini bangamuva, amathebhulethi, nezinye ezinga dingi ikhompyutha.
-    Ungazibandakanya noma nini, nganoma yini onayo. <p><i>Nakhu okumbalwa ongakhetha
-    kuko:</i> <br> <ul> <li><b>Sebenzani ngababili.</b> <a href='%{pair_programming_research}'>Ucwaningo
-    lukhombisa</a> abafundi bafunda kangcono nge <a href='%{pair_programming_video}'ukuhlela
-    ngekhompyutha nisebenzisana</a>, nabelana ngekhompyutha niphinde nisebenzisane.
-    Khuthaza abafundi bakho ukuba basenenzisane. <li><b>Sebenzisa isihenqo sebhayisikobho.</b>
-    Uma unesihenqo sebhayisikobho esisebenzisa ikhompyutha engena ku -inthanethi,
-    iqembu lakho lonke lingenza iHora loKufingqwa ndawonye. Bukelani izingxenye zevidiyo
-    ndawonye nibese nishintshana ngokuxazulula amaphazili okanye ukuphendula imibuzo.<li><b>
-    Hamba noku nqanyuliwe.</b> Siphana <a href='%{unplugged_url}'>izifundiso ezingadingi
-    ikhompyutha?</a> kube konke. </ul>
   hoc_faq_need_computers_a_markdown: |-
     No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
 
@@ -2432,83 +2461,47 @@ zu:
     - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
     - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Ngise <izwe>. Ngizibandakanya kanjani nasemhlabeni wonke?
-  hoc_faq_international_a: Yinoma ngubani ongahlela umcimbi weHora loKufingqwa, nakuphi
-    emhlabeni. Kunyaka odlulile, abafundi umhlaba wonke bahlangene ndawonye ngeHora
-    loKufingqwa. Thola kabanzi <a href='/khuthaza'>lapha</a>.
   hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
     in the world. Last year, students worldwide joined together for the Hour of Code.
     Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Ngingasenza kanjani isifundiso seHora loKufingqwa?
-  hoc_faq_tutorial_a: Uma ulangazelela ukuba ngumlingani ngokwesifundiso, <a href='imithetho
-    yesifundiso'>bona imithetho kanye nemihlahlandlela yethu</a>. Singathanda ukuhola
-    izinhlobonhlobo zezinketho ezihehayo, kodwa umgomo ukwandisa isipiliyoni sabafundi
-    kanye nothisha abasha kukhompyutha sayensi.
   hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
     [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
     a variety of engaging options, but the primary goal is to optimize the experience
     for students and teachers who are new to computer science.
   hoc_faq_account_q: Ingabe abafundi badinga ukugnena akhawunti?
-  hoc_faq_account_a: Cha. Abafundi abadingi ukubhalisa okanye ukungena ngemvume ukuzama
-    iHora loKufingqwa. Iningi <a href='%{codeorg_url}'/funda/ngokudlulele'>landela
-    izifundo</a> kufuneka ukudala i-akhawuthi ukuze okwazi ukugcina ukuqhubeka kwabafundi.
-    Kanti futhi, ukubhalisela iHora loKufingqwa akuzidaleli i-akhawunti yekhodi studiyo.
-    Uma ufuna ukudalela abafundi bakho ama akhawunti, sicela ulandele nayi <a href='http://youtu.be/_smeIV_KISE'>imiyalelo</a>.
   hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
+    to try the Hour of Code. Most of the [follow-on courses](%{beyond_url}) require
+    account creation to save student progress. Also, signing up for the Hour of Code
+    does NOT automatically create a Code Studio account. If you do want to create
+    accounts for your students, please follow these [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Ngesiphi isifundiso engingasenza nabafundi bebenga elikhulu?
-  hoc_faq_high_school_a: Izifundiso zethu zeMinecraft kanye neStar Wars zihle kakhulu
-    kubafundi bebanga elikhulu, ikakhuluzaki ukuhumushela kweJavaScript kuStar Wars
-    kanye nezinga lokudlala mahhala kuzifundiso zombili, sincoma ukuba uzame izifundiso
-    zokuqala ku <a href='%{codeorg_url}/funda'>%{partner_url}/funda</a> ukuqalisa,
-    njenge zifundiso ezine Angry Birds okanye ezino Anna kanye noElsa. Umfundi osebangeni
-    eliphezulu angakwazi ukuqeda enye kulezi ngemizuzu engamashumi amathathu aphinde
-    azame isifundo esithuthukusiwe kuJavascript, njenge Khan Academy okanye iCodeHS.
   hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
     for high schoolers, especially the Star Wars JavaScript version and the free play
     level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    tutorials on [hourofcode.com/learn](%{learn_url}) to start, such as the tutorial
+    with Angry Birds or with Frozen's Anna and Elsa. A high school student should
     be able to finish one of these in 30 minutes and can then try a more advanced
     tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Ngenza iScratch kuHora loKufingqwa, kodwa kuthiwani uma abafundi
     bami banama iPads kunama laptops?
-  hoc_faq_scratch_a: iScratch asisebenzi kuma tablets. Uma abafundi bakho bebancane,
-    bangasebenzisa i-epu leScratchJR iPad (elalabo abaqalisa ukufunda). Uma uthatha
-    ukubheka izifundiso eziku <a href='%{codeorg_url}funda'>%{partner_url}/funda</a>,ungathola
-    izifundiso ezisebenza kuma iPads - ezivela kuCode.org, Lightnot, okanye CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
     young, they can use the ScratchJR iPad app (for early-readers). If you look at
     the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
     tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Ubala kanjani amaHora okuFingqwa?
   hoc_faq_map_q: Kungani ngingaboni idothi lami kumephu?
-  hoc_faq_map_a: Siyaxolisa uma ungaboni umcimbi wakho kumephu yeHora loKufingqwa.
-    Ngenxa yamashumi ezinkulungwane zabahleli ababhalisayo, imephu iboleka amadatha
-    ibese ibonisa iphizu elilodwa kumicimbi engaba yisikhombisa. Uma uchofoza lenombolo
-    engaphezulu kumephu uzoqondiswa kuhlu lwemicimbi yonke ngokwezwe kanti nawe ungathola
-    owakho umcimbi ubhaliwe lapho. Ukwengeza, kunikezwe kuzinkulungwane zabantu ababhalisela
-    iHora loKufingqwa, imephu kanye nesihlu somcimbi sivamise ukuthatha amahora ayishumi
-    nashagalombili ukubuyekeza. Bheka emva kwemizuzwana!
   hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
     of Code map. Because of the tens of thousands of organizers who sign up, the map
     aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
+    [events page](%{events_url}) link below the map, you will be directed to a list
     of all events by state and can find your event listed there. Additionally, given
     the thousands of people signing up for the Hour of Code, the map and event list
     usually takes 48 hours to update. Check back in a few days!
-  hoc_faq_count_hoc_a: Ithrekha yeHora loKufinghqwa akusona isilinganiso esiqondile
-    ekusebenzeni. Thina asibali amaID ahlukile abafundi ngokuphelele uma sithrekha
-    ukuzibandakanya kuHora loKufingqwa, ikakhulukazi ngoba asidingi abafundi ukuba
-    bangene ngokusemthethweni okanye babhalise. Ngenxa yalokho, sibala ngokudlulele
-    kanye nangaphansi kakhulu ukuzibandakanya ngesikhathi esifanayo. Funda imininingwane
-    yonke <a href='%{codeorg_url}/loc'>lapha</a>.
   hoc_faq_count_hoc_a_markdown: 'We do not count unique student IDs perfectly when
     tracking participation in the Hour of Code. Why? Partly because we don''t want
     the friction of prompting to “login / register” before a student or classroom
-    tries learning for the first time, and partly because there are may activities
+    tries learning for the first time, and partly because there are many activities
     we cannot track online. We do take certain steps to reduce double-counting, but
     without a login prompt, this can''t work perfectly. At the same time, there are
     MANY student activities in the Hour of Code that aren''t tracked at all. For example:
@@ -2520,66 +2513,33 @@ zu:
     not view the Hour of Code tracker to be an exact measure of usage. It is certainly
     directionally correct, and shows that many tens of millions of students have participated.'
   hoc_faq_one_hour_q: Umuntu angafunda kangakanani ngehora elilodwa?
-  hoc_faq_one_hour_a: Umgomo weHora loKufingqwa akusikona ukufundisa yinoma ngubani
-    ukuba ingcweti kukhompyutha sayensi ngehora elilodwa. Ihora elilodwa lilingene
-    ukufundisa ukuba ikhompyutha sayensi iyathokozisa kanti futhi inika ikhono lokusumbulula,
-    ukuba abantu bonke akuthaliseki iminyaka bangayi bangayithola, abafundi bonke,
-    akuthaliseki ingemuva labo. Isilinganiso salomkhankaso akusiko ukuba abafundi
-    bekhompyutha sayensi bafunda kangakanani - impumelelo iveziwa embikweni ebanzi
-    yokuzibandakanya kubulili bonkana kanye ngokohlanga  nangezokuhlalisana kwezomnotho,
-    kanye nomphumela wokwanda kokubhalisa nokuzibandakanya ukubonakala kuzifundiso
-    zekhompyutha sayensi kumabanga wonke. Izigidi zothisha nabafundi abamba iqhaza
-    baye banquma ukudlulela kuhora elilodwa - ukufunda usuku lonke okanye iviki lonke
-    okanye isikhathi esidlulele, kanti futhi abafundi abaningi banqume ukubhalisa
-    kusifundiso sonke (ngisho ekolishi sabakhulu) ngenxa yalokho. <br/><br/> Ngale
-    kokuthi abafundi, omunye "umfundi" ungumfundisi ozuza ukuzethemba emva kwehora
-    elilodwa ukuthi bangafundisa ikhompyutha sayensi nakuba kungenzeka ukuthi abanazo
-    iziqu zebanga elisezingeni eliphezulu njengo sosayensi wekhompyutha. Izinkulungwane
-    zamashumi zothisha bathethe isinqumo sokuqhubeka ngekhompyutha sayensi ukuya phambili,
-    noma ngokuthamela ama PD okanye ngokulandela izifundiso ku-inthanethi, noma kokubili.
-    Loku kusebenza kubalawuli esikoleni futhi, labo abaqaphela ukuba ikhompyutha sayensi
-    kuyinto abafundi babo abayifunayo kanti othisha babo abayaziyo. <br/><br/> Kukho
-    konke, into engafunda yilabo ababamba iqhaza kuhora ukuba singakwazi ukukwenza
-    lokhu.
   hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender, racial/ethnic, and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, and that it's accessible at all ages and for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender, racial/ethnic, and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour - to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
 
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending professional development or follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
 
-    Above all, what all participants can learn in an hour is that we can do this.
+    Above all, what all participants can learn in an hour is that anyone can learn computer science!
   hoc_faq_more_questions_q: Usenemibuzo ofuna ukuyibuza?
-  hoc_faq_more_questions_a: Zama ukuthola impendulo ku <a href='http://support.code.org'>foramu
-    yokusingathwa</a>.
   hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Ngiqhubeka kanjani ukufunda emva kweHora loKufingqwa?
-  hoc_faq_keep_learning_a: Yinoma ngubani ongahlela iHora loKufingqwa nganoma yisiphi
-    isikhathi. Izifundiso zitholakala nyaka wonke. Ungalindela ukuthola izifundiso
-    kanye nohlelo lwemfundiso kuwebhusayithi yethu ngaso sonke isikhathi. Sicela uye
-    ku <a href='/khuthaza'>izinsiza zethu</a> ngezindlela zokuqondisa umcimbi kanye
-    nezinye izinsiza zokusiza umcimbi wakho weHora loKufingqwa ube yimpumelelo.
   hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
     tutorials stay up year-round. You can expect all our tutorials and curriculum
     to be available on our site in perpetuity. Please go to [our resources](%{promote})
     for event how-to guides and other resources to help make your Hour of Code event
     a success.
   hoc_faq_certificates_q: Ngingaba phrintela kuphi izitifiketi abafundi bami?
-  hoc_faq_certificates_a: Iya ku <a href='%{codeorg_url}/izitifiketi'> ikhasi lezitifiketi</a>
-    lapho ungakwazi ukuphrinta izitifiketi zekilasi lakho lonke ngaphambi kwesikhathi.
-    Ungakwazi ukuphrinta <a href='%{codeorg_url}/izitifiketi?izifundiso=mc'>izitifiketi
-    ezikhethekile</a> ezabafundi abenza isifundiso seMinecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_answer_markdown: Go to our [certificates page](%{certificates_url})
+    where you can print certificates for your entire class ahead of time.
   hoc_faq_logo_q: Ingabe kukhona ukulinganiselwa ukuba ngingasebenzisa kanjani ilogo
     yeHora loKugingqwa okanye igama?
-  hoc_faq_logo_a: IHora loKufingqwa lihwebiwe. Asifuni ukuvimbela ukusetshenziswa
-    kwalo, kodwa sifuna ukuqiniseka ukuba ukusetshenziswa kwalo kungena kumingcele
-    embalwa. Sicela ubheke <a href='https://support.code.org/hc/en-us/articles/215831637-kukhona-ukulinganiselwa-kokuba-ngingasebenzisa-kanjani-ilogo-leHora-loKufingqwa->'lezi
-    yizihlahlandlela zokusetshenziswa</a>.
   hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
     usage, but we want to make sure its usage fits within a few limits. Please see
     [these guidelines for usage](%{logo_url}).
+  hoc_faq_bug_q: I found a bug in an Hour of Code activity! What should I do?
+  hoc_faq_bug_a_markdown: |-
+    Oh no! If you've come across a bug in an Hour of Code activity - first check the URL for the activity you are on. If the URL starts with studio.code.org, our Code.org Support team can help! Click the question mark icon in the upper right corner of your screen, then select "Report a problem" from the dropdown menu.
+
+    If the URL does not start with studio.code.org, you are likely working on a third party activity and will need to reach out to that company's support team for further assistance.
   stats_hoc_2013_image_alt: Izibalo kusukela iHora loKufingqwa lwango
   stats_growth: Kube ngesheshayo ufukika kubasebenzisi abayizigidi ezingamashumi nanhlanu.
   stats_i18n: Abafundi bafunda ngamalimi adlulele 45
@@ -13165,6 +13125,21 @@ zu:
     so we can highlight your success, too!'
   hoc_how_to_step_07_educators_desc_02: You can also print certificates for your students
     to show off their achievement!
+  hoc_ai_top_desc: Anyone can learn about AI, whether you're a student in the classroom
+    or an educator unlocking the future of teaching with and about AI.
+  hoc_ai_how_ai_works_video_series_desc: This series of short videos will introduce
+    you to how artificial intelligence works and why it matters. Then delve into issues
+    like algorithmic bias and the ethics of AI decision-making.
+  hoc_ai_learn_how_ai_works_desc: Dive into the world of AI with "How AI Works," lessons
+    paired with our video series introducing you to how AI works and why it matters.
+  hoc_ai_101_for_educators_desc: Discover the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education with our foundational online
+    learning series for teachers.
+  hoc_ai_impacts_desc: Engage your classroom with  teacher-led lessons that explore
+    the impacts of artificial intelligence and invite learners to think of solutions
+    to some of AI's issues.
+  hoc_ai_activities_desc: These all-new Hour of Code activities introduce users to
+    the world of artificial intelligence in a fun, engaging way.
   team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
     yellow t-shirts pose in a hotel conference room for the company's summer 2022
     Codechella event.
@@ -13687,6 +13662,23 @@ zu:
   video_library_page_not_hacked_video_title_6: 'How Not To Get Hacked: Messaging and
     Downloads'
   video_library_page_not_hacked_video_title_7: 'How Not To Get Hacked: Install Updates'
+  thank_you_page_main_title: Thank You for Helping to Build a Movement
+  thank_you_page_description: The Code.org Advocacy Coalition wishes to thank the
+    hundreds of thousands of local champions and advocates, including teachers, community
+    members, researchers, nonprofits, universities, corporations, and government institutions
+    who have supported the vision that every student in every school deserves the
+    opportunity to learn computer science. Thank you for your support of this movement.
+  thank_you_page_members_section_title: 'And to all the members of the Code.org Advocacy
+    Coalition:'
+  thank_you_page_individual_organization_title: 'Thank you to the following individuals
+    and organizations for their contributions to this report:'
+  thank_you_page_individual_organization_description: Computer science education supervisors
+    at each state education agency, College Board, Della Cronin, Stuart Dexler, Katharine
+    Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Thank you to the students and teachers
+    quoted in this report:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: About Us
   about_us_page_hero_description: Code.org® is an education innovation nonprofit dedicated
     to the vision that every student in every school has the opportunity to learn
@@ -13831,6 +13823,10 @@ zu:
     goal that will support that vision.
   about_page_donors_link_1: Make a donations
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
+  teach_ai_title: Real-world Examples. Practical Resources.
+  teach_ai_description: The AI Guidance for Schools Toolkit is a resource for policymakers,
+    school leaders, and staff to develop initial guidance on AI in their schools.
+  teach_ai_button_label: View the Toolkit
   language_code:
     ar: Arabic
     az: Azerbaijani

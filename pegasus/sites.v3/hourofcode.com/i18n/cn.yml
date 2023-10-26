@@ -36,6 +36,8 @@ cn:
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   hoc2023_header: 利用人工智能创造力
+  hoc2023_hero_desc_homepage: 加入全球数百万人的行列，组织开展一小时编程，无论有没有人工智能经验，并学习人工智能的工作原理。不需要任何经验，任何人、任何地方都可以组织。
+  hoc2023_hero_desc_learn_page: 今年，我们通过提供包含人工智能 (AI) 和非人工智能的编程机会，将《编程一小时》推向新高度。
   hoc2023_social_creativity_with_ai_title: 编程一小时——你会创作什么？
   hoc2023_social_creativity_with_ai_desc: 使用计算机科学来探索和学习 AI！
   hoc2022_header: 探索，玩耍，创造！
@@ -115,6 +117,7 @@ cn:
   social_blockchain_desc: 探讨什么是区块链及其重要性的视频和课程。
   social_ai_title: 了解人工智能 (AI) | Code.org
   social_ai_desc: 帮助学生和教师将 AI 带入课堂的工具。
+  social_videos_desc: 适合所有年龄学习的，引人入胜的计算机科学视频。
   pl_superhero_title: 帮助学生成为超级英雄！
   pl_superhero_desc: 加入我们为初中和高中教育工作者提供的高度支持的专业学习计划。
   teach_ai_homepage_banner_title: 面向世界的人工智能教育
@@ -137,6 +140,15 @@ cn:
   device_laptop: 笔记本电脑
   device_desktop_computer: 台式电脑
   device_mobile_device: 移动设备
+  for_everyone: 适合所有人
+  for_students_teacher_led_learning: 对于学生：教师主导的学习
+  for_students_teacher_led_lessons: 对于学生：教师主导的课程
+  professional_development: 专业发展
+  how_ai_works_video_series: AI 如何运作视频系列
+  learn_how_ai_works: 了解 AI 的工作原理
+  ai_101_for_educators: 面向教育工作者的 AI 101
+  learn_about_ai_impacts: 了解人工智能的影响
+  hoc_ai_activities: 编程一小时 AI 活动
   subscribe_to_emails_heading: 订阅电子邮件
   subscribe_to_emails_desc: 通过我们的邮件列表，通过季度更新，了解 Code.org 和计算机科学教育领域的最新动态。
   subscribe_to_emails_intl: 订阅国际更新
@@ -182,6 +194,7 @@ cn:
   optional_materials: 可选材料：
   call_to_action_hold_an_event: 举办活动
   call_to_action_register_event: 注册您的活动
+  call_to_action_register_your_hoc: 注册您的编程一小时
   call_to_action_select_activity: 选择一项活动
   call_to_action_start_activity: 开始一项活动
   call_to_action_get_certificates: 获取证书
@@ -191,6 +204,7 @@ cn:
   call_to_action_watch_now: 立即观看
   call_to_action_try_activity: 尝试活动
   call_to_action_try_activities: 尝试活动
+  call_to_action_try_hoc_ai_activities: 试试 “编程一小时” 人工智能活动
   call_to_action_explore_activities: 探索活动
   call_to_action_explore_ai: 探索人工智能
   call_to_action_explore_unit: 探索单元
@@ -277,6 +291,8 @@ cn:
   call_to_action_learn_about_advocacy: 了解我们的倡导活动
   call_to_action_visit_store: 访问商店
   call_to_action_view_faqs: 查看更多常见问题解答
+  call_to_action_applications_open: 现已开放申请
+  call_to_action_apply_cs_ambassador: 申请成为 CS 大使
   aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者操作指南
   aria_label_call_to_action_hoc_how_to_companies: 查看公司操作指南
   aria_label_call_to_action_hoc_how_to_districts: 查看各地区的操作指南
@@ -442,8 +458,10 @@ cn:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: 幼儿园
   module_grade_grade_01: 一年级
@@ -531,6 +549,35 @@ cn:
   heading_explore_curriculum_catalog: 在课程目录中浏览我们的所有课程
   heading_csa_ai: 想在 AP® 考试结束后做什么？
   heading_bring_cs_to_students: 将计算机科学带给学生
+  heading_cs_ambassador_program: CS 大使计划
+  cs_ambassador_subhead: 如果你是一名热衷于鼓励更多年轻女性在学校学习计算机科学的高中生，那么我们需要你！
+  cs_ambassador_desc: 计算机科学涉及每个领域，包括医学、娱乐、体育、教育、商业、时尚和创业。然而，只有5％的高中年龄年轻女性上计算机科学课。大使可以通过鼓励同龄人上计算机科学课来帮助缩小这种性别差距。
+  cs_ambassador_application_date: 申请截止日期为 2023 年 11 月 8 日
+  cs_ambassador_application_subhead: 立即与老师一起提交申请
+  cs_ambassador_application_questions: 有问题吗？请联系 [youngwomen@code.org] (%{email_url})
+  cs_ambassador_do_heading: CS 大使是做什么的？
+  cs_ambassador_do_desc: CS Ambassadors 鼓励年轻女性探索这个主题，并在重新获得计算机科学领域的地位时互相提升。CS 大使与同行交流，分享他们对计算机科学的兴奋和热爱。他们参观教室，在午餐时主持餐桌，并在集会和俱乐部会议上发言。CS大使与教师和学校管理人员合作，打破阻碍年轻女性前进的陈规定型观念。
+  cs_ambassador_steps_heading: 要成为 CS 大使，我需要什么？
+  cs_ambassador_steps_list_title_01: 激情
+  cs_ambassador_steps_list_title_02: CS 课程的经验
+  cs_ambassador_steps_list_title_03: 提供 CS 的学校
+  cs_ambassador_steps_list_desc_01: 热衷于鼓励学校的年轻女性上计算机科学课
+  cs_ambassador_steps_list_desc_02: 在 2022-23 学年或之前参加过为期一年的计算机科学课（推荐：CS Principles
+    或 AP® CSA）
+  cs_ambassador_steps_list_desc_03: 就读定期提供为期一年的计算机科学课程的高中（推荐：CS Principles 或 AP® CSA）
+  cs_ambassador_benefits_heading: 计划福利
+  cs_ambassador_benefits_list_title_01: 全国社区
+  cs_ambassador_benefits_list_title_02: 社区服务
+  cs_ambassador_benefits_list_title_03: 认可
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: 证书
+  cs_ambassador_benefits_list_title_06: 经历
+  cs_ambassador_benefits_list_desc_01: 加入一个由致力于缩小计算机科学领域性别差距的年轻领袖组成的全国性社区。
+  cs_ambassador_benefits_list_desc_02: 社区服务时间和获得 [美国总统志愿者服务奖] 的机会 (%{award_url})。
+  cs_ambassador_benefits_list_desc_03: 被认定为 2023-2024 年大使，有资格入选 Code.org 大使名人堂。
+  cs_ambassador_benefits_list_desc_04: 通过特殊的 Code.org 品牌服装、贴纸等被认定为 CS 大使！
+  cs_ambassador_benefits_list_desc_05: 来自 Code.org 的官方参与证书。
+  cs_ambassador_benefits_list_desc_06: 获取经验和故事，分享你的大学申请、简历等！
   professional_learning_section_desc: 在准备教学时获得所需的支持。老师们喜欢它，超过90％的老师将其评为有史以来最好的职业发展！
   professional_learning_section_desc_short: 在准备教学时获得所需的支持。
   professional_learning_section_desc_self_paced: 及时的支持，让你可以根据自己的日程安排自信地准备教学。
@@ -625,6 +672,9 @@ cn:
   ai_curriculum_btn_aria_label_04: 探索 AI 的工作原理课程
   ai_curriculum_grades_05: 年级等级：9-12
   ai_curriculum_btn_aria_label_05: 探索软件工程与计算机视觉模块
+  ai_curriculum_title_06: 生成式 AI 的社会影响
+  ai_curriculum_desc_06: 从不同的角度调查生成式人工智能的影响，然后作为一个团队合作，制定满足所有参与者最大需求的指导方针。
+  ai_curriculum_btn_aria_label_06: 查看生成式人工智能的社会影响课程计划
   ai_carousel_heading: 老师们对使用 Code.org 的人工智能的评价：
   ai_carousel_quote_01: 这节课还让我的学生有机会看到分类系统中有观点要素。后来，当我们开始看到偏见如何最终出现在人工智能中时，我得以将它们拉回来，提醒他们，用于训练模型的数据是基于选择的。
   ai_carousel_quote_02: 我的学生了解到，当涉及到他们几乎每天都在经历的技术进步时，他们不必只是消费者。他们实际上可以成为创作者！
@@ -1233,6 +1283,8 @@ cn:
   help_page_translate_desc: 志愿者已将我们的教程翻译成超过 45 种语言。帮助我们继续扩展面向世界各地学生的教程！
   help_page_speak_for_cs_heading: 为计算机科学教育大声疾呼
   help_page_speak_for_cs_desc: 详细了解 Code.org 在美国各地的宣传工作，以及我们建议各州采用的十项政策，使计算机科学成为所有学生的基础。另外，了解如何推动所在州的变革。
+  yw_page_top_heading: 计算机科学领域的年轻女性
+  yw_page_top_desc: 成为 CS 大使，参与缩小计算机科学领域的性别差距。
   hoc_live: 编程一小时直播
   hoc_live_sign_up_title: 报名编程一小时直播
   hoc_live_learn_title: 与编程一小时直播一起学习！
@@ -1547,9 +1599,12 @@ cn:
   hoc_homepage_join_the_movement_description: 编程一小时全年都可参与，但每年12月，你的班级可以加入世界各地数百万学生的行列，用编程一小时庆祝计算机科学教育周。一年一度的庆祝活动于每年10月开始注册。
   hoc_homepage_what_is_hoc_subhead: 一小时的教程，超过45种语言。不需要经验。编程一小时活动全年都可免费参与。
   hoc_homepage_what_is_hoc_description: 编程一小时是一个小时的计算机科学介绍，使用有趣的教程展示出任何人都可以学习基础知识。这一基层运动得到全球逾400个合作伙伴和20万名教育工作者的支持。
+  hoc_homepage_registration_desc: 你的班级或小组可以加入全球数百万人的行列，参加 “编程一小时”！一年一度的计算机科学教育周庆祝活动将于十月份开始报名。但是，《编程一小时》全年开放。
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[阅读我们的操作指南](%{howto_guide_url})为你的班级计划活动。"
   hoc_homepage_highlights_heading: 编程一小时亮点
   hoc_homepage_organized_by: 编程一小时由[Code.org](%{codeorg_url})组织。
+  hoc_events_heading: 注册举办 “编程一小时” 活动
+  hoc_events_jump_to_map: 跳转到 “编程一小时” 地图
   signup_closed: 编程一小时的注册已停止。请在10月再来查看报名下个编程一小时。
   signup_registration_not_required: 您无需注册，即可参加全年的编程一小时各项活动！ <a href='%{hoc_activities_url}'>尝试活动</a>
     或阅读我们的 <a href='%{howto_guide_url}'>操作指南</a> 为您所在的课堂筹备一次活动。
@@ -1626,6 +1681,7 @@ cn:
   map_title: 编程一小时地图
   map_header: 世界各地的《编程一小时》活动
   map_header_count_year: "%{year}年已有%{event_count}个已登记的编程一小时活动"
+  map_header_count_year_so_far: "%{event_count} 到目前为止注册的活动 %{year}"
   see_all_events: 查看所有事件
   map_header_company: "#公司组织"
   map_header_country: "#次在%{country}"
@@ -1637,6 +1693,7 @@ cn:
   map_legend_cs_tech_jam: 特别活动
   map_warning: 您可以在 <a href='%{events_url}'> 活动页面</a>上查看所有已注册的活动。
   map_warning_markdown: 事件的完整列表可以在 [活动页面] 上查看。(%{events_url})
+  map_view_all_events: 查看 “编程一小时” 活动的完整列表 [here](%{events_url})。
   meta_tag_og_title: 编程一小时活动即将开始
   meta_tag_og_description: 编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。
   meta_tag_twitter_title: 编程一小时活动即将开始
@@ -1651,43 +1708,24 @@ cn:
   twitter_default_text_donor: '我要参加今年的 #HourOfCode 了，是吗？（谢谢 %{random_donor} 的支持 @codeorg）'
   hoc_faq_title: 常见问题
   hoc_faq_what_is_hoc_q: 编程一小时是什么？
-  hoc_faq_what_is_hoc_a: 编程一小时以一个小时的时间开始，介绍计算机科学，并让人们快速了解编码。让人们轻而易举学习最基本的知识，让人们更加广泛了解计算机科学。这是一个国际运动，从一小时训练营开始到社区运动。查看<a
-    href='%{tutorials}'>教程和活动</a>。这草根活动被超过<a href='%{partners}'>400位伙伴</a>和200千全球工作者所支持。
   hoc_faq_what_is_hoc_a_markdown: 编程一小时以一个小时的时间，介绍计算机科学，并让人们快速了解编程，让人们轻而易举学习最基本的知识，更加广泛地了解计算机科学。这是一项国际性活动，在一小时训练营之外还有各种社区活动。查看我们的[教程和活动](%{tutorials})。感谢[400多位伙伴](%{partners})和20万全球工作者对这项草根活动的支持。
   hoc_faq_last_year: 尝试教程
   hoc_faq_when_is_hoc_q: 编程一小时活动将在什么时候举行？
-  hoc_faq_when_is_hoc_a: 编程一小时是每年在 <a href='%{csedweek_url}'> 计算机科学教育周</a> 期间举行的。%{campaign_date_year}
-    计算机科学教育周将在 %{campaign_date_full} 举办，但你一年四季都可以参与或者举办编程一小时活动。计算机科学教育周每年举行一次，以纪念计算机先驱<a
-    href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>的生日（1906年12月9日）。
   hoc_faq_when_is_hoc_a_markdown: 编程一小时每年在[计算机科学教育周](%{csedweek_url})期间举行。%{campaign_date_year}计算机科学教育周将在%{campaign_date_full}举办，但你全年都可以参与或举办编程一小时活动。计算机科学教育周每年举行一次，以纪念计算机先驱[Admiral
     Grace Murray Hopper](%{grace_hopper})的生日（1906年12月9日）。
   hoc_faq_why_cs_q: 为什么要学习计算机科学？
-  hoc_faq_why_cs_a: "<i>每一个</i>学生都应该获得学习计算机科学的机会。它有益于培养解决问题的能力，逻辑能力和创造性。通过早期的学习，学生们将为他们在21世纪的职业成功打下基础。在<a
-    href='http://code.org'>Code.org</a>上查看更多数据。"
   hoc_faq_why_cs_a_markdown: _每个_学生都应该有机会学习计算机科学。它有助于培养问题解决技能、逻辑能力和创造力。尽早开始学习能帮助学生在21世纪任何职业道路上奠定成功的基础。在[here](%{stats_url})查看更多统计数据。
   hoc_faq_how_participate_q: 我怎样才能参加编程一小时活动？
-  hoc_faq_how_participate_a: "<a href='/how-to'>点击这里阅读使用指南</a>，开启新的旅程！你可以在学校或者你所在的团体&mdash;，比如在课外兴趣小组、非营利性组织或是在工作圈子里组织《编程一小时》活动。当然，你自己也可以选择在%{campaign_date}
-    来一次自我挑战。"
   hoc_faq_how_participate_a_markdown: 查看我们的指南，[在这里开始规划](%{howto})。你可以在你的学校或社区组织编程一小时活动——比如在课外俱乐部、非营利组织或工作场所。或者，当%{campaign_date}到来时，你也可以自己尝试一下。
   hoc_faq_behind_hoc_q: 谁是编程一小时活动的组织者？
-  hoc_faq_behind_hoc_a: 编程一小时活动的组织者是<a href='http://code.org'>Code.org</a>, 它是一个面向公众的501c3公益组织，致力于在更多的学校推广计算机科学教育，并为女性和就业率低的有色人种学生学习计算机的机会。同时，一个<a
-    href='http://code.org/about/partners'>空前强大的合作伙伴联盟</a>也在支持着编程一小时活动。&mdash; 这些合作伙伴包括：微软公司,苹果公司,亚马逊公司,美国男孩女孩俱乐部和大学理事会。
   hoc_faq_behind_hoc_a_markdown: 编程一小时是由编程一小时和计算机科学教育周[咨询和审查委员会](%{partner_url})以及空前数量的编程一小时支持伙伴驱动
     — 包括微软、苹果、亚马逊,、美国男孩和女孩俱乐部以及大学委员会。
   hoc_faq_host_q: 我完全不懂编程。我也可以举办这个活动吗？
-  hoc_faq_host_a: 当然。代码一小时活动是自我引导的。你要做的就是 <a href='%{codeorg_url}/learn'> 尝试我们当前的教程</a>，挑选你想要的教程，并安排一个小时的时间
-    &mdash; 其余部分就交给我们。我们提供了适应每个年龄和经验水平的课程，从幼儿园到成年。阅读我们 <a href='/how-to'> 如何策划</a>，来开始规划您的编程一小时活动。
   hoc_faq_host_a_markdown: 当然。编程一小时活动侧重于自我指导。你所要做的就是[尝试我们当前的教程](%{codeorg_url}/learn)，选择你想要的教程，并选择一个小时的时间
     — 其余的事情我们会处理。我们还为幼儿园以上的每个不同年龄段和经验水平的人提供不同选择。马上阅读我们的[指南](%{howto})，开始规划你的活动。
   hoc_faq_devices_q: 我应该给我的学生用什么设备?
-  hoc_faq_devices_a: Code.org教程在所有设备和浏览器上都能使用。你可以点击<a href='%{codeorg_url}/educate/it'>这里</a>看到更多code.org教程的技术要求信息。非code.org教程的技术要求信息在
-    <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 的教程具体描述里。别忘了我们也提供了离线活动，如果你的学校不能使用这些教程！
   hoc_faq_devices_a_markdown: Code.org的教程可以在所有设备和浏览器上使用。你可以在[这里](%{codeorg_url}/educate/it)看到更多关于Code.org教程技术需求的信息。非Code.org教程的技术需求可以在[%{partner_url}/learn](%{codeorg_url}/learn)的教程具体说明中找到。不要忘了，如果你的学校不能满足教程的要求，我们还提供[离线活动](%{unplugged_url})！
   hoc_faq_need_computers_q: 我需要为所有的学生准备计算机吗？
-  hoc_faq_need_computers_a: 不。我们的编程一小时教程可以在电脑、智能手机、平板电脑上运行，也可以完全不用电脑来完成！无论你在哪里，有什么设备，都可以参加编程一小时的活动。<p><i>这里有一些参考选项：</i>
-    <br> <ul> <li><b>结对学习</b> <a href='%{pair_programming_research}'>研究表明</a>，学生在共享一台电脑并且共同工作的<a
-    href='%{pair_programming_video}'>结对编程</b>中学习效果最好，应当鼓励学生们结对互助。<li><b>使用投影设备</b>使用投影设备和连接互联网的电脑，通过一起观看视频，轮流解决谜题和回答问题，全体学员可以一起参加编程一小时活动。<li><b>离线活动。</b>我们提供<a
-    href='%{unplugged_url}'>完全</a>不需要电脑的教程。</ul>
   hoc_faq_need_computers_a_markdown: |-
     不。我们的编程一小时教程可以在个人电脑、智能手机、平板电脑使用，有些甚至不需要电脑！无论你在哪里，无论你条件如何，你都可以加入。
 
@@ -1697,35 +1735,22 @@ cn:
     - **使用投影屏幕。**如果你有投影仪和屏幕供联网的电脑使用，你的整个小组就可以一起进行“编程一小时”。一起观看视频部分，然后轮流解谜或回答问题。
     - **离线活动。**我们提供完全[不需要电脑的教程](%{unplugged_url})。
   hoc_faq_international_q: 我在<country>。我如何加入国际化的活动？
-  hoc_faq_international_a: 任何人在世界任何地方，都可以组织一个编程一小时活动。去年，全世界的学生一起参与编程一小时。查看更多<a href='/promote'>点击这里</a>。
   hoc_faq_international_a_markdown: 任何人在世界任何地方，都可以组织编程一小时活动。去年，全世界的学生一起参与编程一小时。请在[here](%{promote})查看更多。
   hoc_faq_tutorial_q: 我怎样才能编写编程一小时的教程？
-  hoc_faq_tutorial_a: 如果你有兴趣成为教程的合作伙伴，<a href='targetHOC'> 请参阅我们的指南和介绍</a>。我们需要各种引人入胜的项目，但主要目标是为那些不熟悉计算机科学的学生和教师提供更优化的体验。
   hoc_faq_tutorial_a_markdown: 如果你有兴趣成为教程合作伙伴，请[参见我们的指南和说明](%{tutorial_guidelines})。我们希望举办各种引人入胜的活动，但主要目标是为刚接触计算机科学的学生和教师优化体验。
   hoc_faq_account_q: 学生需要使用帐户登录吗?
-  hoc_faq_account_a: 不，学生尝试编程一小时完全不需要注册或登陆。大多数<a href='http://code.org/learn/beyond'>后续课程</a>需要创建账户以保存学生的学习进度。
   hoc_faq_account_a_markdown: 不，学生完全不需要注册或登入就可以尝试“编程一小时”。大多数[后续课程](%{codeorg_url}/learn/beyond)则需要建立账户来储存学生的学习进度。另外，注册“编程一小时”并不会自动建立一个代码工作室账户。如果你想为你的学生建立账户，请按照以下[instructions](%{section_instructions_url})操作。
   hoc_faq_high_school_q: 哪些活动适合高中生？
-  hoc_faq_high_school_a: 我们的星球大战和《我的世界》教程是非常适合高中生，特别是星球大战JavaScript版本和自由发挥级别的两个教程。另外，我们建议您尝试在<a
-    href='%{codeorg_url}/learn'>%{partner_url}/learn</a>入门教程，比如愤怒的小鸟或安娜和埃尔莎的教程。一个高中生应该能够在30分钟内完成其中的一个，然后可以在JavaScript尝试一个更高级教程，如可汗学院或CodeHS。
   hoc_faq_high_school_a_markdown: 我们的《星球大战》和《我的世界》教程很适合高中生，尤其是《星球大战》JavaScript版和两个教程上的自由发挥级别。另外，我们建议尝试从[%{partner_url}/learn](%{codeorg_url}/learn)上的某个初级教程开始，比如《愤怒的小鸟》或《安娜和艾尔莎》的教程。一个高中生应该可以在
     30 分钟内完成其中的一个教程，然后可以尝试更高阶的JavaScript教程，比如可汗学院或CodeHS。
   hoc_faq_scratch_q: 我正在为编程一小时制作简易程序，但是如果我的学生只有iPad没有笔记本电脑怎么办？
-  hoc_faq_scratch_a: Scratch不能在平板电脑上运行。如果你的学生都很小，他们可以使用ScratchJR iPad应用程序（早期阅读器）。如果你看一下<a
-    href='http://code.org/learn'> Code.org/learn</a>的教程，你可以找到在iPad可行的其他教程 - Code.org，Tynker，
-    Lightbot，或CodeSpark。
   hoc_faq_scratch_a_markdown: Scratch不能在平板电脑上运行。如果你的学生都很小，他们可以使用ScratchJR iPad应用程序（年幼阅读者）。如果你查看[%{partner_url}/learn](%{codeorg_url}/learn)上的教程，你可以找到在iPad运行的其他教程
     - 来自Code.org、Tynker、Lightbot或CodeSpark。
   hoc_faq_count_hoc_q: 你对《编程一小时》有多期待？
   hoc_faq_map_q: 为什么在地图上见不到我的小点?
-  hoc_faq_map_a: 非常抱歉，你不能在编程一小时地图上看到你的活动。因为有成千上万的组织者报名，地图会将活动都聚集起来，几个活动只会显示一个点。如果你点击地图下方<a
-    href='%{events_url}'>活动页面</a>链接，就会到达按照省/州组织的活动列表，这样就能在列表里看到你的活动了。另外，由于数千人都在报名编程一小时，地图和活动列表通常需要48小时来更新。过几天再来看吧！
   hoc_faq_map_a_markdown: 非常抱歉，你不能在编程一小时地图上看到你的活动。因为有成千上万的组织者报名，地图会将活动都聚集起来，几个活动只会显示一个点。如果你点击地图下方[活动页面](%{events_url})链接，就会到达按照省/州组织的活动列表，这样就能在列表里看到你的活动了。另外，由于数千人都在报名编程一小时，地图和活动列表通常需要48小时来更新。过几天再来看吧！
-  hoc_faq_count_hoc_a: "《编程一小时》跟踪器不会对使用情况进行准确测量。在学员参与《编程一小时》时，我们不会对学生的登录信息进行精准统计，特别是因为我们不需要学生注册或登陆。因此，高估和低估的情况会同时发生。<a
-    href='http://code.org/loc'>点击这里</a>阅读详细信息。"
   hoc_faq_count_hoc_a_markdown: 编程一小时跟踪器并不是对使用量的精确测量。在跟踪参与编程一小时的时候，我们并不会精确统计学生ID，特别是因为我们不要求学生登录或注册。因此，我们会过高过低的统计参与者的情况会同时发生。请在[这里](%{codeorg_url}/loc)阅读详细信息。
   hoc_faq_one_hour_q: 一小时能学到多少？
-  hoc_faq_one_hour_a: 编程一小时的目的不是让任何人在一小时内成为一个计算机科学的专家。一个小时只够用来了解计算机科学的趣味和创造力，它是可以被所有年龄，无论什么背景的学生使用的。这个运动成功的衡量标准不是有多少计算机科学的学生学习了，而是由有多广泛的跨性别，跨种族和社会经济组织的参与来反映，以及能够让更多的各个年级的学生愿意注册和参与计算机科学的课程。上百万参与过的老师和学生已经决定超越一小时——去学习一整天，一周或更长，并且很多学生已经决定报名参加整个课程（甚至大学专业）。<br/><br/>除了学生之外，另一种“学习者”是教育工作者，他们在这一小时后，虽然他们可能没有计算机科学的学位，也会有信心能够讲授计算机科学了。数万名教师决定进一步追寻计算机科学，提供进一步的在线课程和离线课程。学校的管理者也是一样，他们人知道了计算机科学是学生们需要的，也是老师能教的。<br/><br/>总之，这就是所有的参与者在一小时内得到的，也是我们所做的。
   hoc_faq_one_hour_a_markdown: |-
     编程一小时的目标不是让任何人在一小时内成为计算机科学家或者专家。一个小时的时间只够让大家了解到计算机科学是有趣的、有创造力的，是所有年龄段、所有学生（无论什么背景）都能接触到的。衡量这项活动成功与否的标准并不在于学生学到了多少计算机科学知识，而在于让不同性别、种族/民族和社会经济群体广泛参与，以及由此带来的各年级计算机科学课程入学率和参与率的提高。数以百万计的教师和学生参与活动之后都决定要超越一个小时：学习一整天或一整周或更长的时间，还有许多学生因此决定报读一整门课程（甚至大学专业）。
 
@@ -1733,21 +1758,18 @@ cn:
 
     最重要的是，所有参与者在一小时内都能学到的是：我们可以做到。
   hoc_faq_more_questions_q: 还有更多的问题吗？
-  hoc_faq_more_questions_a: 试着在我们的 <a href='http://support.code.org'> 支持论坛</a> 中找到答案。
   hoc_faq_more_questions_a_markdown: 尝试在我们的[支持论坛](http://support.code.org)寻找答案。
   hoc_faq_keep_learning_q: 我如何在一小时后还接着学习？
-  hoc_faq_keep_learning_a: 任何人在任何时候都可以组织编程一小时。这个指南是全年的。你可以认为我们的教程和课程是永远在线的。 请转到<a
-    href='/promote'>活动的资源</a>获得操作指南和其它资源来帮助你成功举办编程一小时活动。
   hoc_faq_keep_learning_a_markdown: 任何人在任何时候都可以组织编程一小时。这个指南是全年的。你可以认为我们的教程和课程是永远在线的。请前往[我们的资源](%{promote})获取操作指南和其他资源来帮助你成功举办编程一小时活动。
   hoc_faq_certificates_q: 在哪里可以为我的学生打印证书？
-  hoc_faq_certificates_a: 转到<a href='%{codeorg_url}/certificates'>证书页面</a>，你就能在开始之前为全班打印证书了。你也能给参加了《我的世界》教程的学生打印<a
-    href='%{codeorg_url}/certificates?course=mc'>特别证书</a>。
-  hoc_faq_certificates_a_markdown: 前往我们的[证书页面](%{codeorg_url}/certificates)，在这里你可以提前打印全班的证书。你也可以打印[特殊证书](%{codeorg_url}/certificates?course=mc)
-    给正在学习《我的世界》教程的学生。
+  hoc_faq_certificates_answer_markdown: 前往我们的 [证书页面] (%{certificates_url})，您可以提前为整个班级打印证书。
   hoc_faq_logo_q: 是否有我能否使用编程一小时标志或名称的限制？
-  hoc_faq_logo_a: 编程一小时已进行商标注册。我们不希望阻止它的使用，但我们想要确保它的使用符合限制。请参阅 <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
-    使用准则</a>。
   hoc_faq_logo_a_markdown: 编程一小时已进行商标注册。我们不希望阻止它的使用，但我们想要确保它的使用符合限制。请参阅[使用指南](%{logo_url})。
+  hoc_faq_bug_q: 我在 “编程一小时” 活动中发现了一个错误！我该怎么办？
+  hoc_faq_bug_a_markdown: |-
+    哦不！如果你在 “编程一小时” 活动中遇到了错误，请先检查你正在参加的活动的网址。如果网址以 studio.code.org 开头，我们的 Code.org 支持团队可以提供帮助！点击屏幕右上角的问号图标，然后从下拉菜单中选择 “报告问题”。
+
+    如果网址不是以 studio.code.org 开头，则您可能正在从事第三方活动，需要联系该公司的支持团队寻求进一步帮助。
   stats_hoc_2013_image_alt: 2013年开始编程一小时活动统计数据
   stats_growth: 它以最快的速度到达 1500 万用户。
   stats_i18n: 学生在用40种语言学习
@@ -9008,6 +9030,12 @@ cn:
   hoc_how_to_step_07_educators_desc_01: '一定要庆祝成功！在社交媒体上分享你的 “编程一小时” 活动的照片和视频。使用 #HourOfCode
     和 @codeorg 这样我们也可以重点介绍你的成功！'
   hoc_how_to_step_07_educators_desc_02: 您还可以为学生打印证书，以展示他们的成绩！
+  hoc_ai_top_desc: 无论你是课堂上的学生，还是开启人工智能教学未来的教育工作者，任何人都可以学习人工智能。
+  hoc_ai_how_ai_works_video_series_desc: 这一系列短视频将向您介绍人工智能的工作原理及其重要性。然后深入研究算法偏见和人工智能决策伦理等问题。
+  hoc_ai_learn_how_ai_works_desc: 通过 “人工智能的工作原理” 深入人工智能世界，课程与我们的视频系列相结合，向您介绍人工智能的工作原理及其重要性。
+  hoc_ai_101_for_educators_desc: 通过我们为教育工作者提供的免费线上学习系列，探索人工智能（AI）在教育中的变革潜力。
+  hoc_ai_impacts_desc: 让你的课堂参与教师主导的课程，探讨人工智能的影响，并邀请学习者思考一些人工智能问题的解决方案。
+  hoc_ai_activities_desc: 这些全新的编程一小时活动以一种有趣、引人入胜的方式向用户介绍人工智能世界。
   team_page_full_team_alt_text: 将近 100 名身穿相配的蓝色和黄色 T 恤的 Code.org 员工在酒店会议室里摆姿势，参加公司
     2022 年夏季的 Codechella 活动。
   careers_page_code_pride_alt_text: 两名展示女性气质的员工拿着 Code.org 品牌的彩虹横幅的末端微笑。在他们身后，有几个人穿着
@@ -9283,6 +9311,13 @@ cn:
   video_library_page_not_hacked_video_title_5: 如何不被黑客入侵：网站和 Wifi
   video_library_page_not_hacked_video_title_6: 如何不被黑客攻击：消息和下载
   video_library_page_not_hacked_video_title_7: 如何不被黑客攻击：安装更新
+  thank_you_page_main_title: 感谢你帮助发起一场运动
+  thank_you_page_description: Code.org倡导联盟希望感谢成千上万的当地倡导者和倡导者，包括教师、社区成员、研究人员、非营利组织、大学、企业和政府机构，他们支持每所学校的每个学生都应该有机会学习计算机科学的愿景。感谢您对这项运动的支持。
+  thank_you_page_members_section_title: 致Code.org倡导联盟的所有成员：
+  thank_you_page_individual_organization_title: 感谢以下个人和组织对本报告的贡献：
+  thank_you_page_individual_organization_description: 各州教育机构、大学理事会、德拉·克罗宁、斯图尔特·德克斯勒、凯瑟琳·梅西斯、安东尼·欧文、肖恩·罗伯茨、凯尔·特洛扬、帕特·永普拉迪特的计算机科学教育主管
+  thank_you_page_teachers_students_title: 感谢本报告中引用的学生和老师：
+  thank_you_page_teachers_students_description: 苔丝·坎皮恩、威拉·坎皮恩、杰米·德勒姆、辛迪·诺列加、塔拉·沃多皮奇
   about_us_page_title: 关于我们
   about_us_page_hero_description: Code.org® 是一家教育创新非营利组织，致力于实现这样的愿景，即每所学校的每个学生都有机会学习计算机科学，将其作为K-12核心教育的一部分。我们扩大学校对计算机科学的普及，重点是提高年轻女性和来自其他代表性不足群体的学生的参与度。作为美国最大的学区K-12计算机科学课程的领先提供商，Code.org还组织一年一度的
     [编程一小时] (%{hour_url}) 活动，该活动吸引了全球15％以上的学生。Code.org 得到了包括微软、亚马逊、谷歌和 [许多其他公司] 在内的慷慨捐助者的支持。()%{others_url}
@@ -9361,6 +9396,9 @@ cn:
   about_page_section_donors_description_2: 守则取得的成就（上图）证明了我们有能力利用这些资金取得强劲的成果。但是，鉴于我们的非营利性雄心壮志，即每所学校的每个孩子都应该有机会接触计算机科学——成为当今数字世界中的识字公民，并考验他们对进一步探索计算机科学作为职业的兴趣——我们还有很长的路要走，才能实现支持这一愿景的筹款目标。
   about_page_donors_link_1: 捐款
   about_page_donors_link_2: "[查看我们的捐赠者名单] (%{donors_url})"
+  teach_ai_title: 真实世界的例子。实用资源。
+  teach_ai_description: "《学校人工智能指导工具包》是决策者、学校领导和教职员工制定学校人工智能初步指南的资源。"
+  teach_ai_button_label: 查看工具包
   language_code:
     ar: 阿拉伯语
     az: 阿塞拜疆人

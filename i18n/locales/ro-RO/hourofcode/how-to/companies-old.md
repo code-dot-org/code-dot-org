@@ -9,7 +9,7 @@ title: Cum sa organizezi Hour of Code pentru companii
 
 ***
 
-## Ia legătura cu școli din zona ta și devino voluntar al Orei de cod
+## Ia legătura cu școli din zona ta și devino voluntar al Hour of Code
 Code.org oferă angajaților din organizație posibilitarea de a pune la dispoziție, ca voluntari, școlilor din comunitate ce organizează Ora de cod, cunoștințele lor în domeniu devenind o sursă de inspirație pentru tineri
 
 [<button>Devino voluntar!</button>]({{ urls/volunteer }})
@@ -57,8 +57,8 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 **Arată-le un filmulet inspirational:**
 
 - Filmul de prezentare al Code.org, îi are ca protagoniști pe Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh (sunt versiuni de 1, 5 și 9 minute)
-- [Videoclipul Ora de Cod la nivel mondial](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [ Preşedintele Obama invita pe toţi elevii să înveţe ştiinţa calculatoarelor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [Videoclipul Hour of Code la nivel mondial](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Preşedintele Obama îndeamnă toţi elevii să-și dezvolte competențele în domeniul tehnologiei](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Găsiţi mai multe videoclipuri inspiraționale [aici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Idei de introducere a Orei de cod elevilor:**
@@ -67,7 +67,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 - Dacă ești o companie producătoare de tehnologii, prezintă-le produsele
 - Dacă nu ești o companie producătoare de tehnologii, prezintă felul în care compania ta folosește tehnologia în rezolvarea problemelor și atingerea scopurilor.
 - Invită IT-iști din compania ta să vorbească despre motivul alegerii carierei lor și despre proiectele la care lucrează.
-- Consultă [această pagină]({{ urls/girls }}) pentru sfaturi cu privire la modul în care le poți convinge pe fete să fie interesate de știința calculatoarelor.
+- Consultă [această pagină]({{ urls/girls }}) pentru sfaturi cu privire la modul în care le poți motiva și convinge pe fete să fie interesate de programare.
 
 ## 6. Programează!
 **Directionati participanţii catre activitate**

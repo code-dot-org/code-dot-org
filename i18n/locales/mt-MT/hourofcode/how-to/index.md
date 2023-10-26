@@ -8,7 +8,7 @@ title: Siegħa tal-Kodiċi Kif-to Gwida
 
 ### Ingħaqad mal-moviment u introduċi lill-istudenti tiegħek għax-xjenza tal-kompjuter b'dawn il-passi.
 
-Students today should learn how to create technology, not just use it.
+L-istudenti llum għandhom jitgħallmu kif joħolqu t-teknoloġija, mhux biss jużawha.
 
 Li tipprova Siegħa ta 'Kodiċi huwa mod sempliċi u divertenti biex tintroduċi lill-istudenti għax-xjenza tal-kompjuter, forsi għall-ewwel darba! Sib attività li taqbel mal-issettjar tiegħek, kemm jekk fil-klassi jew wara l-iskola, personalment jew virtwali. Agħti ħarsa lejn il-gwida [tal-parteċipazzjoni tagħna jekk għad għandek mistoqsijiet]({{ localized_files/participation_guide }}) wara li tiċċekkja l-passi hawn taħt:
 
@@ -19,7 +19,7 @@ Li tipprova Siegħa ta 'Kodiċi huwa mod sempliċi u divertenti biex tintroduċi
 - [Kif tibda Siegħa tiegħek ta 'Kodiċi qawwija](#how-to-start)
 - [Ikseb kodifikazzjoni](#code)
 - [Iċċelebra s-suċċess tal-istudenti tiegħek](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Riżorsi oħra tas-Siegħa tal-Kodiċi għall-edukaturi](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Meta [tiffirma l-avveniment tas-Siegħa tal-Kodiċi tiegħek](/#join), tirċievi komunikazzjonijiet bl-email utli b'aħbarijiet u pariri biex tospita Siegħa ta 'Kodiċi ta' suċċess. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Meta [tiffirma l-avveniment tas-Siegħa tal-Kodiċi tiegħek](/events), int ser tirċievi komunikazzjonijiet bl-email utli b'aħbarijiet u pariri biex tospita Siegħa ta 'Kodiċi ta' suċċess. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Istampa ċertifikati]({{ urls/certificates }}) għall-istudenti tiegħek.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Aqsam ritratti u vidjows tal-avveniment tas-Siegħa tal-Kodiċi tiegħek fuq il-midja soċjali. Uża #HourOfCode u @codeorg sabiex inkunu nistgħu nenfasizzaw is-suċċess tiegħek, ukoll!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Siegħa oħra ta 'riżorsi tal-Kodiċi għall-edukaturi:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Irrevedi l-FAQ [dwar is-Siegħa tal-Kodiċi](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### What comes after the Hour of Code?
 

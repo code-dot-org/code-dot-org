@@ -7,35 +7,41 @@ fi:
   coming_soon: Tulossa pian
   campaign_date_start_short: 4. joulukuuta
   campaign_date_start_long: Joulukuu 4
-  campaign_date_short: Jou. 7-13
+  campaign_date_short: Joulukuu 4-10
   campaign_date_full: Joulukuu 4-10
-  campaign_date_year: '2021'
-  campaign_date_full_year: Joulukuu 6-12, 2021
-  nonus_campaign_date_start_short: Lok. 1
-  nonus_campaign_date_start_long: 1. Lokakuuta
-  nonus_campaign_date_short: Lok. 1 - Jou. 18
-  nonus_campaign_date_full: 1. Lokakuuta - 18. Joulukuuta
-  nonus_campaign_date_year: '2021'
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4. - 10. Joulukuu 2023
+  nonus_campaign_date_start_short: Syyskuu 5
+  nonus_campaign_date_start_long: Syyskuu 5
+  nonus_campaign_date_short: Syyskuu 5 - Joulu 17
+  nonus_campaign_date_full: 5. syyskuuta - 17. joulukuuta
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1. Lokakuuta 2020 - 18. Joulukuuta 2020
-  latam_campaign_date_start_short: Lok. 1
-  latam_campaign_date_start_long: 1. Lokakuuta
-  latam_campaign_date_short: Lok. 1 - Jou. 18
-  latam_campaign_date_full: 1. Lokakuuta - 18. Joulukuuta
-  latam_campaign_date_year: '2021'
+  latam_campaign_date_start_short: Syyskuu 5
+  latam_campaign_date_start_long: Syyskuu 5
+  latam_campaign_date_short: Syyskuu 5 - Joulu 17
+  latam_campaign_date_full: 5. syyskuuta - 17. joulukuuta
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1. Lokakuuta 2020 - 18. Joulukuuta 2020
   europe_campaign_date_start_short: Lok. 10
   europe_campaign_date_start_long: 10. Lokakuuta
   europe_campaign_date_short: Lok. 10-25
   europe_campaign_date_full: 10.-25. Lokakuuta
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 10.-25. Lokakuuta 2020
-  africa_campaign_date_start_short: Lok. 1
-  africa_campaign_date_start_long: 1. Lokakuuta
+  africa_campaign_date_start_short: Syyskuu 5
+  africa_campaign_date_start_long: Syyskuu 5
   africa_campaign_date_short: Lok. 1-31
   africa_campaign_date_full: 1.-31. Lokakuuta
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1.-31, Lokakuuta 2020
   hoc2023_header: Luovuus tekoälyn avulla
+  hoc2023_hero_desc_homepage: Liity miljoonien joukkoon ympäri maailmaa järjestämään
+    tunnin koodausta tekoälyn kanssa tai ilman, ja oppimaan tekoälyn toimintaa. Kuka
+    tahansa, missä tahansa voi tehdä sen. Kokemusta ei tarvita.
+  hoc2023_hero_desc_learn_page: Tänä vuonna nostamme Hour of Code uusille korkeuksille
+    tarjoamalla koodausmahdollisuuksia, jotka kattavat sekä tekoälyn (AI) että muut
+    komponentit.
   hoc2023_social_creativity_with_ai_title: Hour of Code - Mitä luot?
   hoc2023_social_creativity_with_ai_desc: Käytä tietojenkäsittelytiedettä tutkiaksesi
     ja oppiaksesi tekoälystä!
@@ -168,6 +174,8 @@ fi:
   social_ai_title: Lisätietoja tekoälystä (AI) | Code.org
   social_ai_desc: Työkalut, jotka auttavat oppilaita ja opettajia tuomaan tekoälyn
     luokkahuoneeseen.
+  social_videos_desc: Kiehtovia tietojenkäsittelytieteen videoita kaiken ikäisille
+    oppijoille.
   pl_superhero_title: Auta opiskelijoita tulemaan supersankareiksi!
   pl_superhero_desc: Liity erittäin tukevaan ammatillisen oppimisen ohjelmaamme keski-
     ja lukion opettajille.
@@ -198,6 +206,15 @@ fi:
   device_laptop: Kannettava tietokone
   device_desktop_computer: Pöytätietokone
   device_mobile_device: Mobiililaite
+  for_everyone: Kaikille
+  for_students_teacher_led_learning: 'Opiskelijoille: Opettajavetoinen oppiminen'
+  for_students_teacher_led_lessons: 'Opiskelijoille: Opettajan ohjaamat oppitunnit'
+  professional_development: Ammatillinen kehitys
+  how_ai_works_video_series: Kuinka tekoäly toimii Videosarja
+  learn_how_ai_works: Opi kuinka tekoäly toimii
+  ai_101_for_educators: AI 101 opettajille
+  learn_about_ai_impacts: Tutustu tekoälyn vaikutuksiin
+  hoc_ai_activities: Tunnin koodin tekoälytoiminnot
   subscribe_to_emails_heading: Tilaa sähköpostit
   subscribe_to_emails_desc: Lue Code.orgin tapahtumista ja tietojenkäsittelytieteen
     koulutuksesta neljännesvuosittaisten päivitysten kautta postituslistaltamme.
@@ -255,6 +272,7 @@ fi:
   optional_materials: 'Valinnaiset materiaalit:'
   call_to_action_hold_an_event: Tapahtuman pitäminen
   call_to_action_register_event: Rekisteröi tapahtumasi
+  call_to_action_register_your_hoc: Rekisteröi Hour of Code
   call_to_action_select_activity: Valitse aktiviteetti
   call_to_action_start_activity: Aloita toiminta
   call_to_action_get_certificates: Hanki sertifikaatit
@@ -264,6 +282,7 @@ fi:
   call_to_action_watch_now: Katso nyt
   call_to_action_try_activity: Kokeile toimintaa
   call_to_action_try_activities: Kokeile aktiviteetteja
+  call_to_action_try_hoc_ai_activities: Kokeile Hour of Code AI -aktiviteetteja
   call_to_action_explore_activities: Tutustu aktiviteetteihin
   call_to_action_explore_ai: Tutustu tekoälyyn
   call_to_action_explore_unit: Tutki yksikköä
@@ -350,6 +369,8 @@ fi:
   call_to_action_learn_about_advocacy: Lue lisää edunvalvonnastamme
   call_to_action_visit_store: Käy myymälässä
   call_to_action_view_faqs: Näytä lisää usein kysyttyjä kysymyksiä
+  call_to_action_applications_open: Hakemukset nyt auki
+  call_to_action_apply_cs_ambassador: Hae CS-lähettilääksi
   aria_label_call_to_action_hoc_how_to_educators: Katso opettajien ohjeopas
   aria_label_call_to_action_hoc_how_to_companies: Katso ohjeet yrityksille
   aria_label_call_to_action_hoc_how_to_districts: Katso piirien ohjeopas
@@ -567,7 +588,7 @@ fi:
   module_label_prerequisites: 'Edellytykset:'
   module_label_level: 'Taso:'
   module_label_topics: 'Aiheet:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Laitteet:'
   module_label_tools: 'Ohjelmointi Työkalut:'
   module_label_professional_learning: 'Ammatillinen oppiminen:'
   module_label_languages: 'Tuetut kielet:'
@@ -593,8 +614,10 @@ fi:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Lastentarha
   module_grade_grade_01: Luokka 1
@@ -696,6 +719,56 @@ fi:
   heading_explore_curriculum_catalog: Tutustu kaikkiin kursseihimme opetussuunnitelma-luettelossa
   heading_csa_ai: Etsitkö tekemistä AP® -kokeen jälkeen?
   heading_bring_cs_to_students: Tuo tietojenkäsittelytiede opiskelijoille
+  heading_cs_ambassador_program: CS-lähettiläsohjelma
+  cs_ambassador_subhead: Jos olet lukiolainen, joka on intohimoinen kannustamaan enemmän
+    nuoria naisia opiskelemaan tietojenkäsittelytiedettä koulussa, sitten tarvitsemme
+    sinua!
+  cs_ambassador_desc: Tietojenkäsittelytiede koskettaa jokaista alaa, mukaan lukien
+    lääketiede, viihde, urheilu, koulutus, liike-elämä, muoti ja yrittäjyys. Silti
+    vain 5% lukioikäisistä nuorista naisista käy tietojenkäsittelytieteen tunteja.
+    Suurlähettiläät voivat auttaa poistamaan tämän sukupuolten välisen eron kannustamalla
+    ikätovereitaan osallistumaan tietojenkäsittelytieteen luokkaan.
+  cs_ambassador_application_date: Hakemukset avoinna 8.11.2023 saakka
+  cs_ambassador_application_subhead: Lähetä hakemuksesi tänään yhdessä opettajan kanssa
+  cs_ambassador_application_questions: Kysymyksiä? Ota yhteyttä [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Mitä CS-lähettiläät tekevät?
+  cs_ambassador_do_desc: CS-lähettiläät kannustavat nuoria naisia tutkimaan aihetta,
+    ja nostavat toisiaan ylös, kun he palauttavat paikkansa tietojenkäsittelytieteessä.
+    CS-lähettiläät ovat yhteydessä ikätovereihinsa jakaakseen jännityksensä ja rakkautensa
+    tietojenkäsittelytieteeseen. He vierailevat luokkahuoneissa, isännöivät pöytiä
+    lounaalla ja puhuvat kokouksissa ja klubikokouksissa. CS-lähettiläät työskentelevät
+    opettajien ja koulujen ylläpitäjien kanssa murtaakseen stereotypioita, jotka pidättävät
+    nuoria naisia.
+  cs_ambassador_steps_heading: Mitä tarvitsen tullakseni CS-lähettilääksi?
+  cs_ambassador_steps_list_title_01: Intohimo
+  cs_ambassador_steps_list_title_02: Kokemus CS-kurssilla
+  cs_ambassador_steps_list_title_03: 'Koulu, joka tarjoaa CS: tä'
+  cs_ambassador_steps_list_desc_01: Intohimo rohkaista koulusi nuoria naisia osallistumaan
+    tietojenkäsittelytieteen tunneihin
+  cs_ambassador_steps_list_desc_02: 'Olet käynyt vuoden mittaisen tietojenkäsittelytieteen
+    luokan lukuvuonna 2022-23 tai aikaisemmin (suositus: CS Principles tai AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Osallistu lukioon, joka tarjoaa säännöllisesti
+    vuoden mittaisen tietojenkäsittelytieteen kurssin (suositeltava: CS Principles
+    tai AP® CSA)'
+  cs_ambassador_benefits_heading: Ohjelman edut
+  cs_ambassador_benefits_list_title_01: Kansallinen yhteisö
+  cs_ambassador_benefits_list_title_02: Yhteisöpalvelu
+  cs_ambassador_benefits_list_title_03: Tunnustus
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Todistus
+  cs_ambassador_benefits_list_title_06: Kokemuksia
+  cs_ambassador_benefits_list_desc_01: Pääsy nuorten johtajien kansalliseen yhteisöön,
+    joka on sitoutunut poistamaan sukupuolten välistä kuilua tietojenkäsittelytieteessä.
+  cs_ambassador_benefits_list_desc_02: Yhteisöpalvelutunnit ja mahdollisuus ansaita
+    [Yhdysvaltain presidentin vapaaehtoispalvelun palkinto] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Tunnustus vuosien 2023-2024 suurlähettilääksi
+    ja oikeutettu Code.org Ambassador Hall of Fameen.
+  cs_ambassador_benefits_list_desc_04: Tunnista CS-lähettilääksi erityisten Code.org-merkkituotteiden
+    vaatteiden, tarrojen ja muun avulla!
+  cs_ambassador_benefits_list_desc_05: Virallinen osallistumistodistus Code.org:lta.
+  cs_ambassador_benefits_list_desc_06: Hanki kokemuksia ja tarinoita jaettavaksi korkeakouluhakemuksessasi,
+    ansioluettelossasi ja muussa!
   professional_learning_section_desc: Hanki tarvitsemasi tuki valmistautuessasi opettamaan.
     Opettajat rakastavat sitä, sillä yli 90% on kaikkien aikojen paras ammatillinen
     kehitys!
@@ -849,6 +922,12 @@ fi:
   ai_curriculum_grades_05: 'Arvosana Tasot: 9-12'
   ai_curriculum_btn_aria_label_05: Tutustu Software Engineering & Computer Vision
     -moduuliin
+  ai_curriculum_title_06: Generatiivisen tekoälyn yhteiskunnallinen vaikutus
+  ai_curriculum_desc_06: Tutki generatiivisen tekoälyn vaikutuksia eri näkökulmista
+    ja tee sitten yhteistyötä tiiminä laatiaksesi ohjeita, jotka vastaavat kaikkien
+    osallistujien eniten tarpeita.
+  ai_curriculum_btn_aria_label_06: Näytä generatiivisen tekoälyn tuntisuunnitelman
+    yhteiskunnallinen vaikutus
   ai_carousel_heading: 'Mitä opettajat sanovat tekoälystä Code.org: n avulla:'
   ai_carousel_quote_01: Tämä oppitunti antoi myös opiskelijoilleni mahdollisuuden
     nähdä, että luokitusjärjestelmissä on mielipide. Myöhemmin, kun aloimme nähdä,
@@ -1850,6 +1929,9 @@ fi:
     Yhdysvalloissa ja kymmenestä käytännöstä, joita suosittelemme osavaltioita omaksumaan
     tietojenkäsittelytieteen perustamiseksi kaikille opiskelijoille. Plus, selvitä,
     kuinka voit ajaa muutosta osavaltiossasi.
+  yw_page_top_heading: Nuoret naiset tietojenkäsittelytieteessä
+  yw_page_top_desc: Ryhdy CS-lähettilääksi ja osallistu tietojenkäsittelytieteen sukupuolierojen
+    poistamiseen.
   hoc_live: 'Hour of Code Live
 
     '
@@ -2234,10 +2316,16 @@ fi:
     käyttämällä hauskoja opetusohjelmia osoittamaan, että kuka tahansa voi oppia perusasiat.
     Tätä ruohonjuuritason kampanjaa tukee yli 400 kumppania ja 200 000 opettajaa ympäri
     maailmaa.
+  hoc_homepage_registration_desc: Luokkasi tai ryhmäsi voi liittyä miljooniin ympäri
+    maailmaa tekemässä Hour of Code -tapahtumaa! Ilmoittautuminen vuosittaiseen tietojenkäsittelytieteen
+    koulutusviikon juhlaan alkaa lokakuussa. Hour of Code on kuitenkin saatavilla
+    ympäri vuoden.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lue oppaamme] (%{howto_guide_url})
     suunnitella tapahtuma luokallesi."
   hoc_homepage_highlights_heading: Hour of Code kohokohdat
   hoc_homepage_organized_by: Koodin tunnin järjestää [Code.org](%{codeorg_url}).
+  hoc_events_heading: Rekisteröidy isännöimään Hour of Code
+  hoc_events_jump_to_map: Siirry Hour of Code -karttaan
   signup_closed: Rekisteröinti tunnitunnille on nyt suljettu. Tarkista uudelleen lokakuussa
     ja kirjaudu seuraavaan tunnitunnukseen.
   signup_registration_not_required: Sinun ei tarvitse rekisteröityä osallistumiseen!
@@ -2344,6 +2432,8 @@ fi:
   map_title: "Hour of Code -kartta \n"
   map_header: "# Koodaustuntia ympäri maailman"
   map_header_count_year: "%{event_count} tapahtumaa rekisteröity vuonna %{year}"
+  map_header_count_year_so_far: "%{event_count} tähän mennessä rekisteröityjä tapahtumia
+    %{year}"
   see_all_events: Katso kaikki tapahtumat
   map_header_company: "# yrityksen järjestäjien johdosta"
   map_header_country: "# %{country}ssa"
@@ -2356,6 +2446,7 @@ fi:
   map_warning: Täydellinen luettelo tapahtumista on nähtävissä <a href='%{events_url}'>
     tapahtumasivulla.</a>
   map_warning_markdown: Täydellinen luettelo tapahtumista on nähtävissä [tapahtumasivulla.](%{events_url})
+  map_view_all_events: Katso täydellinen luettelo Hour of Code -tapahtumista [here](%{events_url}).
   meta_tag_og_title: Koodaustunti on täällä
   meta_tag_og_description: Koodaustunti on maailmanlaajuinen liike, joka tavoittaa
     kymmeniä miljoonia ihmisiä yli 180:ssä maassa ja yli 30 eri kielellä. Sopii 4
@@ -2377,9 +2468,6 @@ fi:
     sinä? (Kiitos %{random_donor} tuesta @codeorg)'
   hoc_faq_title: UKK
   hoc_faq_what_is_hoc_q: Mikä Koodaustunti oikein on?
-  hoc_faq_what_is_hoc_a: Kooditunti on yhden tunnin johdatus tietotekniikkaan, joka
-    on suunniteltu selventämään koodausta ja näyttämään, että jokainen voi oppia perusteet.
-    <a href='http://code.org/learn'>Katso oppituokiot</a>.
   hoc_faq_what_is_hoc_a_markdown: Hour of Code alkoi yhden tunnin johdantona tietojenkäsittelytieteelle,
     joka oli tarkoitettu "koodin" selvittämiseen, osoittamaan, että kuka tahansa voi
     oppia perusasiat, ja laajentaa osallistumista tietojenkäsittelytieteisiin. Sittemmin
@@ -2389,62 +2477,34 @@ fi:
     tukee yli [400 kumppania] (%{partners}) ja 200 000 kouluttajaa maailmanlaajuisesti.
   hoc_faq_last_year: Kokeile oppitunteja
   hoc_faq_when_is_hoc_q: Milloin Koodaustunti on?
-  hoc_faq_when_is_hoc_a: 'Tunti koodia tapahtuu joka vuosi <a href=''%{csedweek_url}''>Tietotekniikan
-    koulutusviikon aikana</a>. %{campaign_date_year} Tietotekniikan koulutusviikko
-    tapahtuu %{campaign_date_full}, mutta voit isännöidä tunti koodia koko vuoden.
-    Tietotekniikan koulutusviikko pidetään vuosittain, kun tietotekniikan pioneerin
-    syntymäpäivää muistetaan: <a href=''%{grace_hopper}''>Amiraali Grace Murray Hopper</a>
-    (9. joulukuuta 1906).'
   hoc_faq_when_is_hoc_a_markdown: Hour of Code järjestetään vuosittain [tietojenkäsittelyviikon
     aikana] (%{csedweek_url}). %{campaign_date_year} Tietojenkäsittelytieteen koulutusviikko
     on %{campaign_date_full}, mutta voit järjestää Hour of Coden ympäri vuoden. Tietojenkäsittelyviikko
     järjestetään vuosittain tietojenkäsittelytieteen edelläkävijän [amiraali Grace
     Murray Hopper] (%{grace_hopper} syntymäpäivän kunniaksi (9. joulukuuta 1906).
   hoc_faq_why_cs_q: Miksi tietojenkäsittelytiede?
-  hoc_faq_why_cs_a: "<i>Jokaisella</i> opiskelijalla tulisi olla mahdollisuus oppia
-    tietojenkäsittelytietettä. Se auttaa hoitamaan ongelmanratkaisutaitoja, logiikkaa
-    ja luovuutta. Aloittamalla aikaisin, opiskelijoilla on perusta menestykseen millä
-    tahansa 2000-luvun urapolulla. Katso lisää tilastoja <a href='%{stats_url}'>täältä</a>."
   hoc_faq_why_cs_a_markdown: Jokaisella opiskelijalla tulisi olla mahdollisuus tietojenkäsittelytieteiden
     oppimiseen. Se auttaa ongelmanratkaisutaitojen, logiikan ja luovuuden kehittämisessä.
     Aloittamalla aikaisin, opiskelijoilla on perusta menestykseen millä tahansa 2000-luvun
     urapolulla. Katso lisää tilastoja [täältä] (%{stats_url}).
   hoc_faq_how_participate_q: Kuinka voin osallistua?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Aloita suunnittelu täällä</a> tutustumalla
-    oppaaseen. Voit järjestää Hour of Code -tapahtuman koulussa tai yhteisössä &mdash;
-    kuten koulun ulkopuolisessa klubissa, voittoa tavoittelemattomassa järjestössä
-    tai työpaikalla. Tai kokeile vain itse, kun%{campaign_date} saapuu."
   hoc_faq_how_participate_a_markdown: "[Aloita suunnittelu täällä] (%{howto}) tutustumalla
     oppaaseen. Voit järjestää Hour of Code -tapahtuman koulussa tai yhteisössäsi -
     esimerkiksi koulun ulkopuolisessa kerhossa, voittoa tavoittelemattomassa järjestössä
     tai työpaikalla. Tai kokeile sitä itse %{campaign_date}."
   hoc_faq_behind_hoc_q: Kuka on Koodaustunnin takana?
-  hoc_faq_behind_hoc_a: Koodituntia ohjaavat tunnitunnus ja tietojenkäsittelykoulutuksen
-    viikko <a href='%{partner_url}'>neuvoa-antavat ja arviointikomiteat</a> sekä ennennäkemätön
-    kumppanikoalitio, joka on muodostunut tukemaan Tunnin koodi &mdash; mukaan lukien
-    Microsoft, Apple, Amazon, Amerikan poikien ja tyttöjen klubit ja College Board.
   hoc_faq_behind_hoc_a_markdown: Koodituntia ohjaavat Hour of Code ja Computer Science
     Education Week [neuvoa-antavat ja tarkastelukomiteat] (%{partner_url}) sekä ennennäkemätön
     yhdistelmä kumppaneita, jotka ovat yhdessä tukeneet Hour of Codea - mukaan lukien
     Microsoft, Applen, Amazonin, Amerikan poikien ja tyttöjen klubit ja kollegion
     hallitus.
   hoc_faq_host_q: En tiedä mitään koodauksesta. Voinko silti isännöidä tapahtumaa?
-  hoc_faq_host_a: Tietysti. Hour of Code -toiminta on itseohjattua. Sinun tarvitsee
-    vain <a href='%{codeorg_url}/learn'>kokeilla nykyisiä opetusohjelmiamme</a>, valita
-    haluamasi opetusohjelma ja valita tunti & mdash; me hoidamme loput. Meillä on
-    myös vaihtoehtoja jokaiselle iälle ja kokemustasolle, päiväkodista ylöspäin. Aloita
-    tapahtuman suunnittelu lukemalla<a href='/how-to'>ohjeet</a>.
   hoc_faq_host_a_markdown: Tietysti. Hour of Code -toiminta on itseohjattua. Sinun
     tarvitsee vain [kokeilla nykyisiä opetusohjelmiamme] (%{codeorg_url}/learn), valita
     haluamasi opetusohjelma ja valita tunti - me hoidamme loput. Löydät myös vaihtoehtoja
     jokaiselle iälle ja kokemustasolle, päiväkoti-ikäisestä ylöspäin. Aloita tapahtuman
     suunnittelu lukemalla [ohjeet] (%{howto}).
   hoc_faq_devices_q: Mitä laitteita minun pitäisi käyttää opiskelijoilleni?
-  hoc_faq_devices_a: Code.org-oppaat toimivat kaikilla laitteilla ja selaimilla. Näet
-    lisätietoja Code.org-ohjelman opetusohjelman teknisistä tarpeista<a href='%{codeorg_url}/educate/it'>täältä</a>.
-    Muiden kuin-Code.org-opetusohjelmien tekniset tarpeet löytyvät sivulta<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    opetusohjelmakohtaisesta kuvauksesta. Älä unohda, että tarjoamme myös <a href='%{unplugged_url}'>irrotettua
-    toimintaa</a>, jos koulusi ei mahdu opetusohjelmiin!
   hoc_faq_devices_a_markdown: Code.org-oppaat toimivat kaikilla laitteilla ja selaimilla.
     Katso lisätietoja Code.org-opetusohjelman teknisistä tarpeista [täältä] (%{codeorg_url}/educate/it).
     Non-Code.org-opetusohjelmien tekniset tarpeet löytyvät sivulta [%{partner_url}/learn]
@@ -2452,17 +2512,6 @@ fi:
     tarjoamme myös [offline aktiviteetteja] (%{unplugged_url}), jos Tietokone tekniikka
     ei mahdu koulun opetusohjelmiin!
   hoc_faq_need_computers_q: Tarvitsenko tietokoneita jokaiselle osallistujalle?
-  hoc_faq_need_computers_a: Ei. Meillä on Hour of Code -oppaat, jotka toimivat tietokoneissa,
-    älypuhelimissa, tableteissa ja joissain ei tarvita tietokonetta ollenkaan! Voit
-    liittyä mihin tahansa, missä tahansa oletkin. <p> <i> Tässä on muutama vaihtoehto:</i>
-    <br> <ul> <li> <b> Työskentele pareittain. </b> <a href='%{pair_programming_research}'>
-    Tutkimus osoittaa < / a> opiskelijat oppivat parhaiten <a href='%{pair_programming_video}'>
-    pariohjelmoinnilla </a>, jakamalla tietokonetta ja työskentelemällä yhdessä. Kannusta
-    oppilaitasi kaksinkertaistumaan. <li> <b> Käytä heijastettua näyttöä.</b> Jos
-    sinulla on projektori ja näyttö verkkoon liitetylle tietokoneelle, koko ryhmäsi
-    voi tehdä tunnin koodia yhdessä. Katso video-osia yhdessä ja ratkaise vuorotellen
-    pulmia tai vastaa kysymyksiin. <li><b> Mene irrotettuna. </b> Tarjoamme <a href='%{unplugged_url}'>
-    opetusohjelmia, jotka eivät vaadi tietokonetta </a>.</ul>
   hoc_faq_need_computers_a_markdown: |-
     Ei. Hour of Code -oppaamme toimivat tietokoneissa, älypuhelimissa, tableteissa ja joissain ei tarvita tietokonetta ollenkaan! Voit liittyä mihin tahansa, missä tahansa oletkin.
 
@@ -2472,28 +2521,15 @@ fi:
     - **Käytä heijastettua näyttöä.** Jos sinulla on projektori ja näyttö verkkoon liitetylle tietokoneelle, koko ryhmäsi voi osallistua yhdessä Hour of Codeen. Katso video-osia yhdessä ja ratkaise vuorotellen pulmia tai vastaa kysymyksiin.
     - **Offline.** Tarjoamme [oppaita, jotka eivät vaadi tietokonetta] (%{unplugged_url}).
   hoc_faq_international_q: Olen <country>ssa. Kuinka voin osallistua kansainvälisesti?
-  hoc_faq_international_a: Kuka tahansa voi järjestää Hour of Code -tapahtuman missä
-    tahansa päin maailmaa. Viime vuonna opiskelijat ympäri maailmaa liittyivät yhteen
-    Code of Hour -tapahtumaan. Lisätietoja <a href='/promote'>täältä</a>.
   hoc_faq_international_a_markdown: Kuka tahansa voi järjestää Hour of Code -tapahtuman
     missä tahansa päin maailmaa. Viime vuonna opiskelijat ympäri maailmaa liittyivät
     yhteen Code of Hour -tapahtumaan. Lisätietoja [here](%{promote}).
   hoc_faq_tutorial_q: Kuinka voin tehdä Hour of Code -opetusohjelman?
-  hoc_faq_tutorial_a: Jos haluat tulla opetusohjelman kumppaniksi, <a href='/tutorial-guidelines'>
-    katso ohjeita ja ohjeita </a>. Haluaisimme isännöidä erilaisia kiinnostavia vaihtoehtoja,
-    mutta ensisijaisena tavoitteena on optimoida kokemus opiskelijoille ja opettajille,
-    jotka ovat uusia tietojenkäsittelytieteessä.
   hoc_faq_tutorial_a_markdown: Jos haluat tulla opetuspartneriksi, [katso ohjeet](%{tutorial_guidelines}).
     Haluaisimme isännöidä erilaisia kiinnostavia vaihtoehtoja, mutta ensisijaisena
     tavoitteena on optimoida kokemus opiskelijoille ja opettajille, jotka ovat uusia
     tietojenkäsittelytieteessä.
   hoc_faq_account_q: Pitääkö opiskelijoiden kirjautua sisään tilillä?
-  hoc_faq_account_a: Ei. Rekisteröintiä tai sisäänkirjautumista ei vaadita, jotta
-    opiskelijat voivat kokeilla Tunnin koodia. Suurin osa <a href='%{codeorg_url}/learn/beyond'>
-    jatkokursseista </a> edellyttää tilin luomista opiskelijoiden edistymisen tallentamiseksi.
-    Rekisteröityminen tunnitunnille EI myöskään luo Code Studio -tiliä automaattisesti.
-    Jos haluat luoda tilejä opiskelijoille, noudata näitä <a href='https://youtu.be/_smelV_KISE'>
-    ohjeita </a>.
   hoc_faq_account_a_markdown: Ei. Rekisteröintiä tai sisäänkirjautumista ei vaadita
     ja opiskelijat voivat kokeilla Hour of Codea ongelmitta. Suurin osa [jatkokursseista]
     ](%{codeorg_url}/learn/beyond) vaatii tilin luomista opiskelijoiden edistymisen
@@ -2501,13 +2537,6 @@ fi:
     -tiliä automaattisesti. Jos haluat luoda tilejä opiskelijoille, seuraa näitä [ohjeita]
     (https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Mitä toimintaa minun pitäisi tehdä lukiolaisten kanssa?
-  hoc_faq_high_school_a: Tähtien sota- ja Minecraft-oppaamme ovat upeita lukiolaisille,
-    erityisesti Tähtien sota-JavaScript-versio ja molempien opetusohjelmien ilmainen
-    pelitaso. Vaihtoehtoisesti suosittelemme kokeilemaan yhtä aloittelijan oppaista
-    aloitusosassa <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, kuten Angry
-    Birdsin tai Anna ja Elsan kanssa. Lukion opiskelijan pitäisi pystyä suorittamaan
-    yksi näistä 30 minuutissa ja kokeilla sitten JavaScriptin edistyneempää opetusohjelmaa,
-    kuten Khan Academy tai CodeHS.
   hoc_faq_high_school_a_markdown: Tähtien sota- ja Minecraft-oppaamme ovat upeita
     lukiolaisille, erityisesti Tähtien sota-JavaScript-versio ja molempien opetusohjelmien
     ilmainen pelitaso. Vaihtoehtoisesti suosittelemme kokeilemaan yhtä aloitusoppaastamme
@@ -2517,24 +2546,12 @@ fi:
     kuten Khan Academy tai CodeHS.
   hoc_faq_scratch_q: Teen Scratch for Hour of Code -tapahtumaa, mutta entä jos opiskelijoillani
     on pikemminkin iPadit kuin kannettavat tietokoneet?
-  hoc_faq_scratch_a: Scratch ei toimi tableteilla. Jos opiskelijat ovat nuoria, he
-    voivat käyttää ScratchJR iPad -sovellusta (varhaisille lukijoille). Jos tarkastelet
-    <a href='%{codeorg_url}/learn'>%{partner_url} / learn </a> -oppaita, löydät muita
-    iPadien kanssa toimivia opetusohjelmia - osoitteista Code.org, Tynker, Lightbot,
-    tai CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch ei toimi tableteilla. Jos opiskelijat ovat nuoria,
     he voivat käyttää ScratchJR iPad -sovellusta (varhaisille lukijoille). Jos tarkastelet
     [%{partner_url}/learn](%{codeorg_url}/learn) -oppaita, löydät muita iPadien kanssa
     toimivia opetusohjelmia - Code.org, Tynker, Lightbot tai CodeSpark.
   hoc_faq_count_hoc_q: Kuinka lasket Hour of Coden?
   hoc_faq_map_q: Miksi en näe pistettäni kartalla?
-  hoc_faq_map_a: Olemme pahoillamme, ettet näe tapahtumaasi tunnitunnuksen kartalla.
-    Kymmenien tuhansien ilmoittautuneiden järjestäjien vuoksi kartta yhdistää tiedot
-    ja näyttää yhden pisteen useille tapahtumille. Jos napsautat kartan alla olevaa
-    <a href='%{events_url}'> tapahtumasivu </a> -linkkiä, sinut ohjataan kaikkien
-    tapahtumien luetteloon osavaltioittain ja löydät tapahtumasi siellä. Lisäksi kun
-    otetaan huomioon tuhannet tunnitunnukseen ilmoittautuneet ihmiset, kartan ja tapahtumaluettelon
-    päivittäminen kestää yleensä 48 tuntia. Tarkista uudelleen muutaman päivän kuluttua!
   hoc_faq_map_a_markdown: Olemme pahoillamme, ettet näe tapahtumaasi Hour of Coden
     kartalla. Kymmenien tuhansien ilmoittautuneiden järjestäjien vuoksi kartta yhdistää
     tiedot ja näyttää yhden pisteen useille tapahtumille. Jos napsautat kartan alla
@@ -2542,34 +2559,12 @@ fi:
     luetteloon osavaltioittain ja löydät tapahtumasi siellä. Lisäksi kun otetaan huomioon
     tuhannet Hour of Codeen ilmoittautuneet ihmiset, kartan ja tapahtumaluettelon
     päivittäminen kestää yleensä 48 tuntia. Tarkista uudelleen muutaman päivän kuluttua!
-  hoc_faq_count_hoc_a: Hour of Code -seuranta ei ole tarkka käytön mittaus. Emme laske
-    yksilöllisiä opiskelijakortteja täydellisesti seuratessasi osallistumista tunnitunnukseen,
-    varsinkin koska emme vaadi opiskelijoita kirjautumaan sisään tai rekisteröitymään.
-    Seurauksena on, että laskemme osallistujia liian paljon ja liian vähän samanaikaisesti.
-    Lue kaikki yksityiskohdat <a href='%{codeorg_url}/loc'> täältä </a>.
   hoc_faq_count_hoc_a_markdown: Hour of Code -trakkeri mittaa käyttöä tarkasti. Emme
     laske yksilöllisiä opiskelijatunnistuksia täydellisesti seuratessamme Hour of
     Coden osallistujia, varsinkin koska sisäänkirjatuminen ja rekisteröityminen eivät
     ole pakollisia. Seurauksena laskemme osallistujia liian paljon ja liian vähän
     samanaikaisesti. Lue kaikki yksityiskohdat [täältä] (%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Kuinka paljon voi oppia tunnissa?
-  hoc_faq_one_hour_a: 'Kooditunnin tavoitteena ei ole opettaa ketään tulemaan tietotekniikan
-    asiantuntijaksi tunnissa. Yksi tunti riittää vain oppimaan, että tietojenkäsittelytiede
-    on hauskaa ja luovaa, että siihen pääsee kaiken ikäisesti kaikille opiskelijoille
-    taustasta riippumatta. Tämän kampanjan onnistumisen mittari ei ole siinä, kuinka
-    paljon CS-opiskelijat oppivat - menestys heijastuu laajaan osallistumiseen sukupuolten
-    sekä etnisten ja sosioekonomisten ryhmien välillä, ja siitä johtuva ilmoittautumisen
-    ja osallistumisen kasvu näemme CS-kursseilla kaikilla tasoilla. Miljoonat osallistuvat
-    opettajat ja opiskelijat ovat päättäneet mennä yli tunnin - oppia koko päivän
-    tai koko viikon tai pidempään, ja monet opiskelijat ovat päättäneet ilmoittautua
-    koko kurssille (tai jopa yliopiston pääaineelle). <br/> <br/> Opiskelijoiden lisäksi
-    toinen "oppija" on kouluttaja, joka saa tunnin kuluttua luottamuksen opettaa tietojenkäsittelytieteitä,
-    vaikka heillä ei ehkä olisikaan korkeakoulututkintoa tietojenkäsittelytieteen
-    tutkijana. Kymmenet tuhannet opettajat päättävät jatkaa tietojenkäsittelytietoa
-    joko osallistumalla PD: hen tai tarjoamalla jatkokursseja tai molempia. Ja tämä
-    koskee myös kouluvastaavia, jotka ymmärtävät, että tietojenkäsittely on jotain,
-    mitä heidän oppilaansa haluavat ja opettajat kykenevät. <br/> <br/> Ennen kaikkea,
-    mitä kaikki osallistujat voivat oppia tunnissa, on se, että voimme tehdä tämän.'
   hoc_faq_one_hour_a_markdown: |-
     Hour of Coden tavoitteena ei ole opettaa ketään tulemaan tietotekniikan asiantuntijaksi tunnissa. Yksi tunti riittää vain opettamaan, miten hauskaa ja luovaa tietojenkäsittelytiede voi olla, ja että se sopii kaiken ikäisille taustasta riippumatta. Tämän kampanjan onnistumisen mittari ei ole siinä, kuinka paljon CS-opiskelijat oppivat - menestys heijastuu laajaan osallistumiseen sukupuolten sekä etnisten ja sosioekonomisten ryhmien välillä, ja siitä johtuva ilmoittautumisen ja osallistumisen kasvu näemme CS-kursseilla kaikilla tasoilla. Miljoonat osallistuvat opettajat ja opiskelijat ovat päättäneet mennä yli tunnin - oppia koko päivän tai koko viikon tai pidempään, ja monet opiskelijat ovat päättäneet ilmoittautua koko kurssille (tai jopa yliopiston pääaineelle).
 
@@ -2577,37 +2572,26 @@ fi:
 
     Ennen kaikkea kaikki osallistujat voivat oppia tunnissa on, että voimme tehdä tämän.
   hoc_faq_more_questions_q: Vielä lisää kysymyksiä?
-  hoc_faq_more_questions_a: Yritä löytää vastaus <a href='http://support.code.org'>
-    -tukifoorumiltamme </a>.
   hoc_faq_more_questions_a_markdown: Yritä löytää vastaus [tukifoorumiltamme] (http://support.code.org).
   hoc_faq_keep_learning_q: Kuinka jatkan oppimista Hour of Coden jälkeen?
-  hoc_faq_keep_learning_a: Kuka tahansa voi isännöidä tunnitunnusta milloin tahansa.
-    Oppaat pysyvät ajan tasalla ympäri vuoden. Voit odottaa, että kaikki opetusohjelmamme
-    ja opetussuunnitelmamme ovat jatkuvasti saatavilla sivustollamme. Käy <a href='/promote'>
-    resursseissamme </a> tapahtumien oppaita ja muita resursseja, joiden avulla Hour
-    of Code -tapahtuma onnistuu.
   hoc_faq_keep_learning_a_markdown: Kuka tahansa voi isännöidä Hour of Codea milloin
     tahansa. Oppaat pysyvät ajan tasalla ympäri vuoden. Voit luottaa, että kaikki
     opetusohjelmamme ja opetussuunnitelmamme ovat jatkuvasti saatavilla sivustollamme.
     Vieraile [resursseissamme] (%{promote}), jos haluat tietoja tapahtuman ohjekirjoista
     ja muista resursseista, joiden avulla Hour of Code -tapahtuma onnistuu.
   hoc_faq_certificates_q: Mistä voin tulostaa todistuksia opiskelijoille?
-  hoc_faq_certificates_a: Siirry <a href='%{codeorg_url}/certificates'> -sertifikaattisivulle
-    </a>, josta voit tulostaa koko luokan varmenteet etukäteen. Voit myös tulostaa
-    <a href='%{codeorg_url}/certificates?course=mc'> erikoisvarmenteet </a> Minecraft-opetusohjelman
-    opiskelijoille.
-  hoc_faq_certificates_a_markdown: Siirry [toristussivulle] (%{codeorg_url}/certificate,
-    josta voit tulostaa koko luokan varmenteet etukäteen. Voit myös tulostaa [erikoistodistukset]
-    (%{codeorg_url}/certificates?course=mc) Minecraft-opetusohjelmaa suorittaville
-    opiskelijoille.
+  hoc_faq_certificates_answer_markdown: Siirry [sertifikaattisivulle] (%{certificates_url}),
+    jossa voit tulostaa todistukset koko luokallesi etukäteen.
   hoc_faq_logo_q: Onko rajoituksia sille, kuinka voin käyttää Hour of Code -logoa
     tai nimeä?
-  hoc_faq_logo_a: Hour of Code on tavaramerkki. Emme halua estää sen käyttöä, mutta
-    haluamme varmistaa, että sen käyttö sopii muutamiin rajoihin. Katso <a href='%{logo_url}'>
-    nämä käyttöohjeet </a>.
   hoc_faq_logo_a_markdown: Hour of Code on tavaramerkki. Emme halua estää sen käyttöä,
     mutta haluamme varmistaa, että sitä käytetään tiettyjen rajojen sisäpuolella.
     Katso [nämä käyttöohjeet] (%{logo_url}).
+  hoc_faq_bug_q: Löysin virheen Hour of Code -toiminnassa! Mitä minun pitäisi tehdä?
+  hoc_faq_bug_a_markdown: |-
+    Voi ei! Jos olet törmännyt virheeseen Hour of Code -toiminnassa, tarkista ensin aktiviteetin URL-osoite. Jos URL-osoite alkaa studio.code.org, Code.org-tukitiimimme voi auttaa! Napsauta kysymysmerkki-kuvaketta näytön oikeassa yläkulmassa ja valitse sitten ”Ilmoita ongelmasta” avattavasta valikosta.
+
+    Jos URL-osoite ei ala osoitteella studio.code.org, työskentelet todennäköisesti kolmannen osapuolen toiminnassa ja sinun on otettava yhteyttä kyseisen yrityksen tukitiimiin saadaksesi lisätietoja.
   stats_hoc_2013_image_alt: Tilastoja vuoden 2013 koodaustunnista
   stats_growth: Se oli nopein tavoittaa 15 miljoonaa käyttäjää.
   stats_i18n: Opiskelijat oppivat yli 45 kielellä
@@ -13311,7 +13295,7 @@ fi:
   hoc_how_to_faq_answer_devices_02: Jos laitteita on rajoitetusti tai niitä ei ole
     käytettävissä, kokeile [pariohjelmointia] (%{pair_url}) tai tutustu [irrotettuihin
     toimintoihin] (%{unplugged_url}) oppiaksesi ilman laitteita ollenkaan!
-  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_question_volunteer: Kuka voi tehdä vapaaehtoistyötä?
   hoc_how_to_faq_answer_volunteer: Jokainen, joka on intohimoinen tietojenkäsittelytieteen
     koulutukseen ja tekniikan monimuotoisuuden lisäämiseen, voi olla vapaaehtoinen!
     Haluaisimme nähdä kaikentaustaisia vapaaehtoisia osallistumaan. Hour of Code sisältää
@@ -13325,7 +13309,7 @@ fi:
   hoc_how_to_faq_answer_account: Opiskelijat eivät vaadi rekisteröitymistä tai kirjautumista,
     jotta he voivat kokeilla Hour of Code -ohjelmaa. Rekisteröityminen Hour of Code
     -palveluun EI automaattisesti luo Code.org-tiliä.
-  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_heading_educators: Muut Hour of Code -resurssit opettajille
   hoc_how_to_resources_promo_heading: Kampanjaresurssit
   hoc_how_to_resources_promo_desc: Löydä kaikki tarvitsemasi resurssit - painetut
     ja digitaaliset - kiinnittääksesi huomiota Hour of Code -sovellukseesi.
@@ -13398,6 +13382,23 @@ fi:
     ja @codeorg, jotta voimme korostaa myös menestystäsi!'
   hoc_how_to_step_07_educators_desc_02: Voit myös tulostaa todistuksia opiskelijoillesi
     osoittaaksesi saavutuksiaan!
+  hoc_ai_top_desc: Kuka tahansa voi oppia tekoälystä, olitpa sitten luokkahuoneen
+    opiskelija tai opettaja, joka avaa opetuksen tulevaisuuden tekoälyn avulla ja
+    siitä.
+  hoc_ai_how_ai_works_video_series_desc: Tämä lyhyiden videoiden sarja esittelee sinulle,
+    miten tekoäly toimii ja miksi sillä on merkitystä. Tutki sitten kysymyksiä, kuten
+    algoritminen puolueellisuus ja tekoälyn päätöksenteon etiikka.
+  hoc_ai_learn_how_ai_works_desc: Sukella tekoälyn maailmaan ”How AI Works” -oppitunneilla,
+    jotka yhdistetään videosarjaamme, jossa esitellään tekoälyn toiminta ja miksi
+    sillä on merkitystä.
+  hoc_ai_101_for_educators_desc: Tutustu tekoälyn (AI) uraauurtavaan maailmaan ja
+    sen muutospotentiaaliin koulutuksessa perustavanlaatuisen verkko-oppimissarjamme
+    opettajille.
+  hoc_ai_impacts_desc: Ota luokkahuoneesi mukaan opettajien vetämillä oppitunneilla,
+    joissa tutkitaan tekoälyn vaikutuksia ja kehotetaan oppijoita miettimään ratkaisuja
+    joihinkin tekoälyn ongelmiin.
+  hoc_ai_activities_desc: Nämä täysin uudet Hour of Code -toiminnot tutustuttavat
+    käyttäjät tekoälyn maailmaan hauskalla ja kiinnostavalla tavalla.
   team_page_full_team_alt_text: Lähes 100 Code.org -työntekijää vastaavissa sinisissä
     ja keltaisissa t-paidoissa poseeraa hotellin kokoushuoneessa yrityksen kesän 2022
     Codechella -tapahtumaa varten.
@@ -13927,6 +13928,23 @@ fi:
     ja Wifi'
   video_library_page_not_hacked_video_title_6: 'Kuinka ei hakkeroitu: Viestit ja lataukset'
   video_library_page_not_hacked_video_title_7: 'Kuinka ei hakkeroitu: Asenna päivitykset'
+  thank_you_page_main_title: Kiitos, että autat rakentamaan liikettä
+  thank_you_page_description: Code.org Advocacy Coalition haluaa kiittää satojatuhansia
+    paikallisia mestareita ja kannattajia, mukaan lukien opettajia, yhteisön jäseniä,
+    tutkijoita, voittoa tavoittelemattomia järjestöjä, yliopistoja, yrityksiä ja valtion
+    laitoksia, jotka ovat tukeneet visiota siitä, että jokainen oppilas jokaisessa
+    koulussa ansaitsee mahdollisuuden oppia tietojenkäsittelytiedettä. Kiitos tuestasi
+    tälle liikkeelle.
+  thank_you_page_members_section_title: 'Ja kaikille Code.org Advocacy Coalition jäsenille:'
+  thank_you_page_individual_organization_title: 'Kiitos seuraaville henkilöille ja
+    organisaatioille heidän panoksestaan tähän raporttiin:'
+  thank_you_page_individual_organization_description: Tietojenkäsittelytieteen koulutuksen
+    valvojat kussakin valtion koulutusvirastossa, College Boardissa, Della Cronin,
+    Stuart Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Kiitos tässä raportissa mainituille opiskelijoille
+    ja opettajille:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Tietoa meistä
   about_us_page_hero_description: Code.org® on koulutusinnovaatioiden voittoa tavoittelematon
     järjestö, joka on omistautunut visioon siitä, että jokaisen koulun jokaisella
@@ -14085,6 +14103,11 @@ fi:
     tätä visiota.
   about_page_donors_link_1: Tee lahjoituksia
   about_page_donors_link_2: "[katso luettelo lahjoittajista] (%{donors_url})"
+  teach_ai_title: Reaalimaailman esimerkkejä. Käytännön resurssit.
+  teach_ai_description: AI Guidance for Schools Toolkit on resurssi päätöksentekijöille,
+    koulujen johtajille ja henkilökunnalle kehittääkseen alustavia ohjeita tekoälystä
+    kouluissaan.
+  teach_ai_button_label: Näytä työkalupakki
   language_code:
     ar: arabialainen
     az: Azerbaidžanin

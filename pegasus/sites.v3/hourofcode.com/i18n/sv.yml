@@ -6,37 +6,43 @@ sv:
   front_title: Delta i det största utbildningsevenemanget någonsin, 5-11 december
     2016
   coming_soon: Kommer snart
-  campaign_date_start_short: 5:e December
-  campaign_date_start_long: 5 december
-  campaign_date_short: 5-11 December
-  campaign_date_full: 6-12 december
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 december 2022
-  nonus_campaign_date_start_short: 1 oktober
-  nonus_campaign_date_start_long: 1 oktober
-  nonus_campaign_date_short: 1 oktober - 18 december
-  nonus_campaign_date_full: 1 oktober - 18 december
-  nonus_campaign_date_year: '2022'
+  campaign_date_start_short: 4:e December
+  campaign_date_start_long: 4 december
+  campaign_date_short: 4-10 december
+  campaign_date_full: 4-10 december
+  campaign_date_year: ۲۰۲۳
+  campaign_date_full_year: 4-10 december 2023
+  nonus_campaign_date_start_short: 5 september
+  nonus_campaign_date_start_long: 5 september
+  nonus_campaign_date_short: 5 september - 17 december
+  nonus_campaign_date_full: 5 september - 17 december
+  nonus_campaign_date_year: ۲۰۲۳
   nonus_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  latam_campaign_date_start_short: 1 oktober
-  latam_campaign_date_start_long: 1 oktober
-  latam_campaign_date_short: 1 oktober - 18 december
-  latam_campaign_date_full: 1 oktober - 18 december
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_start_short: 5 september
+  latam_campaign_date_start_long: 5 september
+  latam_campaign_date_short: 5 september - 17 december
+  latam_campaign_date_full: 5 september - 17 december
+  latam_campaign_date_year: ۲۰۲۳
   latam_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  europe_campaign_date_start_short: 1 oktober
-  europe_campaign_date_start_long: 1 oktober
-  europe_campaign_date_short: 1 oktober - 18 december
-  europe_campaign_date_full: 1 oktober - 18 december
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_start_short: 5 september
+  europe_campaign_date_start_long: 5 september
+  europe_campaign_date_short: 5 september - 17 december
+  europe_campaign_date_full: 5 september - 17 december
+  europe_campaign_date_year: ۲۰۲۳
   europe_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  africa_campaign_date_start_short: 1 oktober
-  africa_campaign_date_start_long: 1 oktober
-  africa_campaign_date_short: 1 oktober - 18 december
-  africa_campaign_date_full: 1 oktober - 18 december
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_start_short: 5 september
+  africa_campaign_date_start_long: 5 september
+  africa_campaign_date_short: 5 september - 17 december
+  africa_campaign_date_full: 5 september - 17 december
+  africa_campaign_date_year: ۲۰۲۳
   africa_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
   hoc2023_header: Kreativitet med AI
+  hoc2023_hero_desc_homepage: Gå med miljontals människor över hela världen för att
+    organisera en timmes kodning, med eller utan AI och lära dig hur AI fungerar.
+    Vem som helst, var som helst kan göra det. Ingen erfarenhet behövs.
+  hoc2023_hero_desc_learn_page: I år tar vi Hour of Code till nya höjder genom att
+    erbjuda kodningsmöjligheter som omfattar både artificiell intelligens (AI) och
+    icke-AI-komponenter.
   hoc2023_social_creativity_with_ai_title: Hour of Code - Vad kommer du att skapa?
   hoc2023_social_creativity_with_ai_desc: Använd datavetenskap för att utforska och
     lära dig om AI!
@@ -157,6 +163,7 @@ sv:
     varför det är viktigt.
   social_ai_title: Lär dig mer om artificiell intelligens (AI) | Code.org
   social_ai_desc: Verktyg för att hjälpa elever och lärare att ta med AI i klassrummet.
+  social_videos_desc: Engagerande datavetenskapliga videor för elever i alla åldrar.
   pl_superhero_title: Hjälp studenter bli superhjältar!
   pl_superhero_desc: Gå med i vårt mycket stödjande professionella inlärningsprogram
     för mellan- och gymnasielärare.
@@ -186,6 +193,15 @@ sv:
   device_laptop: Bärbar dator
   device_desktop_computer: Stationär dator
   device_mobile_device: Mobil enhet
+  for_everyone: För alla
+  for_students_teacher_led_learning: 'För studenter: Lärarstyrt lärande'
+  for_students_teacher_led_lessons: 'För studenter: Lärarledda lektioner'
+  professional_development: Professionell utveckling
+  how_ai_works_video_series: Hur AI fungerar videoserie
+  learn_how_ai_works: Lär dig hur AI fungerar
+  ai_101_for_educators: AI 101 för lärare
+  learn_about_ai_impacts: Läs om effekterna av AI
+  hoc_ai_activities: Hour of Code AI-aktiviteter
   subscribe_to_emails_heading: Prenumerera på e-post
   subscribe_to_emails_desc: Läs om vad som händer på Code.org och inom datavetenskaplig
     utbildning genom kvartalsuppdateringar via vår e-postlista.
@@ -242,6 +258,7 @@ sv:
   optional_materials: 'Valfria material:'
   call_to_action_hold_an_event: Håll ett evenemang
   call_to_action_register_event: Anmäl ditt evenemang
+  call_to_action_register_your_hoc: Registrera din Hour of Code
   call_to_action_select_activity: Välj en aktivitet
   call_to_action_start_activity: Starta en aktivitet
   call_to_action_get_certificates: Skaffa certifikat
@@ -251,6 +268,7 @@ sv:
   call_to_action_watch_now: Titta nu
   call_to_action_try_activity: Prova aktivitet
   call_to_action_try_activities: Prova aktiviteter
+  call_to_action_try_hoc_ai_activities: Prova Hour of Code AI-aktiviteter
   call_to_action_explore_activities: Utforska aktiviteter
   call_to_action_explore_ai: Utforska AI
   call_to_action_explore_unit: Utforska enheten
@@ -337,6 +355,8 @@ sv:
   call_to_action_learn_about_advocacy: Lär dig mer om vårt påverkansarbete
   call_to_action_visit_store: Besök butiken
   call_to_action_view_faqs: Visa fler vanliga frågor
+  call_to_action_applications_open: Ansökningar nu öppna
+  call_to_action_apply_cs_ambassador: Ansök om att bli CS-ambassadör
   aria_label_call_to_action_hoc_how_to_educators: Visa instruktionsguide för lärare
   aria_label_call_to_action_hoc_how_to_companies: Visa instruktionsguide för företag
   aria_label_call_to_action_hoc_how_to_districts: Visa instruktionsguide för distrikt
@@ -579,8 +599,10 @@ sv:
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Dagis
   module_grade_grade_01: Grad 1
@@ -679,6 +701,53 @@ sv:
   heading_explore_curriculum_catalog: Utforska alla våra kurser i läroplanskatalogen
   heading_csa_ai: Letar du efter saker att göra efter AP® -provet?
   heading_bring_cs_to_students: Ta med datavetenskap till studenter
+  heading_cs_ambassador_program: CS Ambassadörsprogram
+  cs_ambassador_subhead: Om du är en gymnasieelev som brinner för att uppmuntra fler
+    unga kvinnor att ta datavetenskap på din skola, då behöver vi dig!
+  cs_ambassador_desc: Varje område, inklusive medicin, underhållning, sport, utbildning,
+    företag, mode och entreprenörskap berörs av datavetenskap. Ändå tar bara 5% av
+    unga kvinnor i gymnasieåldern datavetenskapskurser. Ambassadörer kan hjälpa till
+    att minska denna könsskillnad genom att uppmuntra sina kamrater att ta en datavetenskapskurs.
+  cs_ambassador_application_date: Ansökningarna är öppna till den 8 november 2023
+  cs_ambassador_application_subhead: Arbeta med en lärare för att skicka in din ansökan
+    idag
+  cs_ambassador_application_questions: Frågor? Vänligen kontakta [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Vad gör CS-ambassadörer?
+  cs_ambassador_do_desc: CS-ambassadörer uppmuntrar unga kvinnor att utforska ämnet,
+    och lyfta varandra när de återtar sin plats inom datavetenskap. CS-ambassadörer
+    ansluter till sina kamrater för att dela sin spänning och kärlek till datavetenskap.
+    De besöker klassrum, är värd för bord vid lunch, och talar vid församlingar och
+    klubbmöten. CS-ambassadörer arbetar med lärare och skoladministratörer för att
+    bryta ner stereotyper som håller unga kvinnor tillbaka.
+  cs_ambassador_steps_heading: Vad behöver jag för att bli en CS-ambassadör?
+  cs_ambassador_steps_list_title_01: Passion
+  cs_ambassador_steps_list_title_02: Erfarenhet av en CS-kurs
+  cs_ambassador_steps_list_title_03: Skolan som erbjuder CS
+  cs_ambassador_steps_list_desc_01: En passion för att uppmuntra unga kvinnor på din
+    skola att ta datavetenskapskurser
+  cs_ambassador_steps_list_desc_02: 'Har gått en årslång datavetenskapskurs under
+    läsåret 2022-23 eller tidigare (rekommenderas: CS Principles eller AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Gå på en gymnasieskola som regelbundet erbjuder
+    en årslång datavetenskapskurs (rekommenderas: CS Principles eller AP® CSA)'
+  cs_ambassador_benefits_heading: Programförmåner
+  cs_ambassador_benefits_list_title_01: Nationellt samhälle
+  cs_ambassador_benefits_list_title_02: Samhällstjänst
+  cs_ambassador_benefits_list_title_03: Erkännande
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certifikat
+  cs_ambassador_benefits_list_title_06: Upplevelser
+  cs_ambassador_benefits_list_desc_01: Tillgång till en nationell gemenskap av unga
+    ledare som är engagerade i att minska könsgapet inom datavetenskap.
+  cs_ambassador_benefits_list_desc_02: Samhällstjänsttimmar och möjligheten att tjäna
+    [US Presidential Volunteer Service Award] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Erkännande som ambassadör 2023-2024 och berättigad
+    att hedras i Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Identifieras som en CS-ambassadör genom speciella
+    Code.org märkeskläder, klistermärken och mer!
+  cs_ambassador_benefits_list_desc_05: Officiellt intyg om deltagande från Code.org.
+  cs_ambassador_benefits_list_desc_06: Få erfarenheter och berättelser att dela på
+    din collegeansökan, CV och mer!
   professional_learning_section_desc: Få det stöd du behöver när du förbereder dig
     för att undervisa. Lärare älskar det, med över 90% rankar det som den bästa professionella
     utvecklingen någonsin!
@@ -831,6 +900,11 @@ sv:
   ai_curriculum_grades_05: 'Betygsnivåer: 9-12'
   ai_curriculum_btn_aria_label_05: Utforska modulen Software Engineering & Computer
     Vision
+  ai_curriculum_title_06: Samhällseffekt av generativ AI
+  ai_curriculum_desc_06: Undersök effekten av generativ AI från olika perspektiv,
+    samarbeta sedan som ett team för att komma med riktlinjer som tillgodoser de flesta
+    behov från alla deltagare.
+  ai_curriculum_btn_aria_label_06: Visa samhällspåverkan av generativ AI lektionsplan
   ai_carousel_heading: 'Vad lärare säger om AI med Code.org:'
   ai_carousel_quote_01: Denna lektion gav också mina elever möjlighet att se att det
     finns ett åsiktselement i klassificeringssystem. Senare, när vi började se hur
@@ -1816,6 +1890,9 @@ sv:
     hela USA och de tio policyer vi rekommenderar att stater antar för att göra datavetenskap
     grundläggande för alla studenter. Plus, ta reda på hur du kan driva förändring
     i ditt tillstånd.'
+  yw_page_top_heading: Unga kvinnor i datavetenskap
+  yw_page_top_desc: Bli en CS-ambassadör och vara en del av att minska könsgapet inom
+    datavetenskap.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Registrera dig för Hour of Code Live
   hoc_live_learn_title: Lär tillsammans med Hour of Code Live
@@ -2181,10 +2258,16 @@ sv:
     datavetenskap, med roliga tutorials för att visa att vem som helst kan lära sig
     grunderna. Denna gräsrotskampanj stöds av över 400 partners och 200 000 lärare
     över hela världen.
+  hoc_homepage_registration_desc: Din klass eller grupp kan gå med miljoner runt om
+    i världen för att göra Hour of Code! Anmälan till det årliga firandet av Computer
+    Science Education Week börjar i oktober. Hour of Code är dock tillgängligt året
+    runt.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Läs vår instruktionsguide] (%{howto_guide_url})
     för att planera ett evenemang för din klass."
   hoc_homepage_highlights_heading: Hour of Code höjdpunkter
   hoc_homepage_organized_by: Hour of Code är organiserad av [Code.org](%{codeorg_url}).
+  hoc_events_heading: Registrera dig för att vara värd för en Hour of Code
+  hoc_events_jump_to_map: Hoppa till Hour of Code-kartan
   signup_closed: Anmälan för Hour of Code är nu stängd. Kolla igen i oktober att anmäla
     dig till nästa Hour of Code.
   signup_registration_not_required: Du behöver inte registrera dig för att delta!
@@ -2292,6 +2375,8 @@ sv:
   map_title: Hour of Code kartan
   map_header: "# Hour of Code evenemang runt om i världen"
   map_header_count_year: "%{event_count} evenemang registrerade %{year}"
+  map_header_count_year_so_far: "%{event_count} händelser registrerade hittills i
+    %{year}"
   see_all_events: Se alla evenemang
   map_header_company: "# av företag"
   map_header_country: "# i %{country}"
@@ -2306,6 +2391,7 @@ sv:
     sidan händelser.</a>
   map_warning_markdown: En fullständig lista över händelserna kan ses på [evenemangssidan.]
     (%{events_url})
+  map_view_all_events: Se en fullständig lista över Hour of Code-händelser [here](%{events_url}).
   meta_tag_og_title: Alla barn bör få möjligheten
   meta_tag_og_description: Hour of Code är en global rörelse som når tiotals miljoner
     elever i 180+ länder och på över 45 språk. Åldrarna 4-104.
@@ -2325,13 +2411,6 @@ sv:
     för att stödja @codeorg)'
   hoc_faq_title: Vanliga frågor
   hoc_faq_what_is_hoc_q: Vad är Hour of Code?
-  hoc_faq_what_is_hoc_a: Hour of Code började som en timmes introduktion till datavetenskap,
-    med syftet att avdramatisera "att koda", att visa att alla kan lära sig grunderna,
-    och att öka mångfalden inom IT-branchen. Idag är det en världsomspännande satsning
-    på datavetenskap, där allt börjar med en timmes programmering men utvecklar sig
-    i en massa olika initiativ. Kolla in <a href='%{tutorials}'>guider och aktiviter</a>.
-    Denna gräsrotsrörelse stöttas av över <a href='%{partners}'> 400 partners </a>och
-    200000 lärare över hela världen.
   hoc_faq_what_is_hoc_a_markdown: The Hour of Code började som en entimmes introduktion
     till datavetenskap, designad för att avmystifiera "kod", för att visa att vem
     som helst kan lära sig grunderna och för att bredda deltagandet inom datavetenskap.
@@ -2341,12 +2420,6 @@ sv:
     stöds av över [400 partners](%{partners}) och 200 000 lärare över hela världen.
   hoc_faq_last_year: Prova handledningarna
   hoc_faq_when_is_hoc_q: När är Hour of Code?
-  hoc_faq_when_is_hoc_a: Hour of Code genomförs varje år under<a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. %{campaign_date_year} Computer Science Education Week
-    kommer att hållas %{campaign_date_full}, men du kan ha en Hour of Code när som
-    helst under året. Computer Science Education Week hålls årligen till minne av
-    datavetenskap-pionjären <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>s
-    födelsedag (9 december 1906).
   hoc_faq_when_is_hoc_a_markdown: "  Hour of Code äger rum varje år i samband med
     [Computer Science Education Week](%{csedweek_url}). %{campaign_date_year} kommer
     den särskilda veckan för datavetenskap och kodning att äga rum %{campaign_date_full}
@@ -2354,42 +2427,23 @@ sv:
     och kodning hålls varje år till minne av [Admiral Grace Murray Hopper](%{grace_hopper})
     (9 december 1906) som var en pionjär inom datavetenskap.  "
   hoc_faq_why_cs_q: Varför datavetenskap?
-  hoc_faq_why_cs_a: "<i>Alla</i> elever borde ges möjligheten att lära sig datavetenskap.
-    Det stöttar problemlösningsförmåga, logiskt tänkande och kreativitet. Genom att
-    starta tidigt kommer elever ges de färdigheter de behöver för en karriär under
-    2000-talet. Se mer statistik <a href='%{stats_url}'>här</a>."
   hoc_faq_why_cs_a_markdown: "  _Alla_ elever ska ges möjlighet att lära sig datavetenskap.
     Det bidrar till att utveckla färdigheter för problemlösning, logiskt tänkande
     och kreativitet. Genom att starta tidigt får eleverna de grunder som behövs för
     att lyckas inom olika karriärer på 2000-talet. Se mer statistik [here](%{stats_url}).
     \ "
   hoc_faq_how_participate_q: Hur deltar jag i Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/how-to'> Börja planera här</a> genom att titta
-    i vår så-gör-du guide. Du kan arrangera Hour of Code på din skola eller i ditt
-    område &mdash; i en skolklubb, ideellt eller på jobbet. Eller bara prova det själv
-    när %{campaign_date} kommer."
   hoc_faq_how_participate_a_markdown: "  [Start planning here](%{howto}) genom att
     gå igenom vårt handledningsmaterial. Du kan organisera en Hour of Code aktivitet
     på din skola eller i ditt område, som en klubb efter skolan, ett projekt för välgörande
     ändamål eller på arbetet. Eller prova själv den %{campaign_date}.  "
   hoc_faq_behind_hoc_q: Vem står bakom Hour of Code?
-  hoc_faq_behind_hoc_a: Hour of Code arrangeras av Hour of Code samt Computer Science
-    Education Week <a href='%{partner_url}'>Advisory and Review Committees</a>, med
-    en mängd olika partners som slutit samman för att stödja Hour of Code &mdash;
-    inklusive Microsoft, Apple, Amazon, Amerikanska scouterna och universitetsstyrelsen
-    i USA.
   hoc_faq_behind_hoc_a_markdown: "  Hour of Code drivs av organisationen bakom Hour
     of Code tillsammans med  Computer Science Education Week [Advisory and Review
     Committees](%{partner_url}) och en oöverträffad samling partners som samarbetar
     i sitt stöd för Hour of Code – inklusive Microsoft, Apple, Amazon, Boys and Girls
     Clubs of America och College Board.  "
   hoc_faq_host_q: Jag kan ingenting om kodning. Kan jag ändå hålla i ett event?
-  hoc_faq_host_a: Självklart. Kodtimmens aktiviteter är självinstruerande. Allt du
-    behöver göra är att <a href='%{codeorg_url}/learn'> prova våra aktuella övningar</a>,
-    välja den övning som du vill använda och välja en timme &mdash; vi tar hand om
-    resten. Vi har alternativ för alla åldrar och erfarenhets-nivåer, från förskolan
-    och uppåt. Börja planera ditt evenemang genom att läsa vår <a href='/how-to'>
-    så-gör-du guide</a>.
   hoc_faq_host_a_markdown: " Naturligtvis. Aktiviteterna i Hour of Code bygger på
     självstudier. Allt du behöver göra är att [try our current tutorials](%{codeorg_url}/learn),
     välja de lektioner du är intresserad av och bestämma en timme – vi tar hand om
@@ -2397,12 +2451,6 @@ sv:
     uppåt. Börja planeringen ditt event genom att läsa vår [how to guide](%{howto}).
     \ "
   hoc_faq_devices_q: Vilka enheter bör jag använda för mina elever?
-  hoc_faq_devices_a: Code.org:s handledningar fungerar på alla enheter och webbläsare.
-    Du kan se mer information om de tekniska kraven på Code.orgs handledningar <a
-    href='%{codeorg_url}/educate/it'> här</a>. Tekniska krav för icke Code.org:s handledningar
-    finns under <a href='%{codeorg_url}/learn'>%{partner_url}/lära sig</a> i övningens
-    beskrivning. Glöm inte att vi också erbjuder <a href='%{unplugged_url}'>unplugged
-    activities</a>om din skola inte kan tillgodose kraven för övningarna!
   hoc_faq_devices_a_markdown: "  Lektionerna från Code.org fungerar på alla enheter
     och webbläsare. Du hittar [here](%{codeorg_url}/educate/it) mer information om
     vilken teknik som behövs för lektionerna. Tekniska behov för Code.org:s handledning
@@ -2411,16 +2459,6 @@ sv:
     activities](%{unplugged_url}) om din skola inte kan tillmötesgå handledningen!
     \ "
   hoc_faq_need_computers_q: Behöver jag dator för varje deltagare?
-  hoc_faq_need_computers_a: Nej. Vi har Hour of Code handledning som fungerar på datorer,
-    smarttelefoner, surfplattor och en del som inte kräver dator alls! Du kan gå med
-    vart du än är, med vad du än har. <p><i>Här är några alternativ:</i> <br> <ul>
-    <li><b>Arbeta i par.</b> Forskning visar att elever lär sig bäst genom <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>par-programmering</a>,
-    att dela på en dator och arbeta tillsammans. Uppmuntra dina elever att jobba i
-    par. <li><b>Använda storbild.</b> Om du har en projektor som du kan koppla till
-    en uppkopplad dator, så kan hela gruppen arbeta med Hour of Code tillsammans.
-    Se delar av instruktionsfilmer tillsammans och turas om att lösa uppgifter eller
-    svara på frågor. <li><b>Jobba urkopplad.</b> Vi har handledning som inte kräver
-    dator alls. </ul>
   hoc_faq_need_computers_a_markdown: |-
     Nej. Vi har Hour of Code-handledningar som fungerar på datorer, smartphones, surfplattor och vissa som inte kräver någon dator alls! Du kan gå med var du än är, med vad du än har.
 
@@ -2430,27 +2468,15 @@ sv:
     - **Använd en projicerad skärm.** Om du har en projektor och skärm för en webbansluten dator kan hela din grupp göra en Hour of Code tillsammans. Titta på videodelar tillsammans och turas om att lösa pussel eller svara på frågor.
     - **Jobba urkopplad.** Vi erbjuder [tutorials that require no computer](%{unplugged_url}) alls.
   hoc_faq_international_q: Jag är i <country> . Hur deltar jag internationellt?
-  hoc_faq_international_a: Alla kan organisera en Hour of Code, vart som helst i världen.
-    Förra året var det elever från hela världen som tillsammans deltog i Hour of Code.
-    Läs mer <a href='/promote'>här</a>.
   hoc_faq_international_a_markdown: Vem som helst kan organisera ett Hour of Code-evenemang,
     var som helst i världen. Förra året gick studenter över hela världen tillsammans
     för Hour of Code. Läs mer [here](%{promote}).
   hoc_faq_tutorial_q: Hur gör jag för att skapa en Hour of Code handledning?
-  hoc_faq_tutorial_a: Om du är intresserad bli partner för handledning, <a href='/tutorial-guidelines'>
-    se våra riktlinjer och instruktioner</a>. Vi skulle vilja vara värdar för en mängd
-    olika engagerande alternativ, men det primära målet är att optimera upplevelsen
-    för studenter och lärare som datavetenskap är något nytt för.
   hoc_faq_tutorial_a_markdown: "  Om du är intresserad av att bli en av våra partner
     för lektioner, [see our guidelines and instructions](%{tutorial_guidelines}).
     Vi vill kunna erbjuda ett brett urval, men vårt huvudsakliga mål är att nå ut
     till elever och lärare som inte har varit i kontakt med datavetenskap förut.  "
   hoc_faq_account_q: Behöver elever logga in med ett konto?
-  hoc_faq_account_a: Nej. Ingen registrering eller inloggning krävs för att elever
-    ska kunna göra en Hour of Code. De flesta av <a href='%{codeorg_url}/learn/beyond'>fortsättnings-kurserna</a>
-    kräver att ett konto skapas för att kunna spara elevens framsteg. Om du skapar
-    ett Hour of Code-konto får du INTE automatiskt ett konto till Code Studio. Om
-    du vill skapa konton för alla dina elever, vänligen följ dessa <a href='https://youtu.be/_smelV_KISE'>instruktioner</a>.
   hoc_faq_account_a_markdown: "  Nej. Det behövs ingen registrering eller inloggning
     för elever som vill prova på Hour of Code. De flesta [follow-on courses](%{codeorg_url}/learn/beyond)
     kräver att man skapar ett konto för att kunna spara elevens projekt. När man registrerar
@@ -2458,13 +2484,6 @@ sv:
     skapa konton till dina elever, följ dessa [instructions](https://youtu.be/_smelV_KISE).
     \ "
   hoc_faq_high_school_q: Vilka aktiviteter lämpar sig för gymnasieelever?
-  hoc_faq_high_school_a: Vår Star Wars och Minecraft-handledningar lämpar sig väl
-    för gymnasiet, särskilt StarWars-handledningen i JavaScript och skapande-läget
-    i båda övningarna. Alternativt så rekommenderar vi att testa en av nybörjar-handledningarna
-    på <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> som start, som övningen
-    med Angry Birds eller Anna och Elsa. En mellanstadieelev bör kunna göra färdigt
-    en av dem på 30 minuter och kan sedan göra mer avancerade övningar i JavaScript,
-    på exempelvis Khan Academy eller CodeHS.
   hoc_faq_high_school_a_markdown: " Våra handledningar Star Wars och Minecraft är
     perfekta för högstadieelever, särskilt JavaScript-versionen av Star Wars och tillgången
     till gratis spelande i båda aktiviteterna. Alternativt rekommenderar vi att prova
@@ -2474,11 +2493,6 @@ sv:
     lektion i JavaScript, som Khan Academy eller CodeHS.  "
   hoc_faq_scratch_q: Jag har tänkt använda Scratch under Hour of Code, men vad gör
     jag om mina elever har iPads istället för datorer?
-  hoc_faq_scratch_a: Scratch finns inte till läsplattor. Om dina elever är unga, kan
-    de använda iPad-appen ScratchJr (passar barn som inte är läskunniga). Om du kollar
-    på de övningar som finns på <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
-    kan du hitta andra övningar som finns till iPads - från Code.org, Tynker, Lightbot,
-    eller CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch fungerar inte på surfplattor. Om dina elever
     är unga kan de använda ScratchJR iPad-appen (för tidiga läsare). Om du tittar
     på handledningarna på [%{partner_url}/learn](%{codeorg_url}/learn), kan du hitta
@@ -2486,14 +2500,6 @@ sv:
     CodeSpark.
   hoc_faq_count_hoc_q: Hur räknar ni Hours of Code?
   hoc_faq_map_q: Varför kan jag inte se min nål på kartan?
-  hoc_faq_map_a: Vi beklagar att du inte ser ditt evenemang på Hour of Code-kartan.
-    På grund av tiotusentals arrangörer som registrerar sig, så sammanfattas datan
-    så att kartan visar en nål för flertalet evenemang. Om du klickar på länken <a
-    href='%{events_url}'>händelsesidan</a> nedanför kartan kommer du att dirigeras
-    till en lista över alla evenemang per stat och kan hitta ditt evenemang listat
-    där. Dessutom, med tanke på de tusentals människor som registrerar sig för Hour
-    of Code, tar kartan och evenemangslistan vanligtvis 48 timmar att uppdatera. Kom
-    igen om några dagar!
   hoc_faq_map_a_markdown: "  Vi beklagar att du inte hittar ditt event på kartan över
     Hour of Code. Eftersom tiotusentals arrangörer registrerar event händer det att
     kartan aggregerar uppgifter och visar en plats för flera event. Om du klickar
@@ -2501,34 +2507,12 @@ sv:
     lista av alla event per stat och kan hitta din aktivitet där. Dessutom tar det
     oftast omkring 48 timmar för listan att uppdateras eftersom det är tusentals personer
     som registrerar aktiviteter löpande. Sök igen om några dagar!  "
-  hoc_faq_count_hoc_a: Hour of Code-räknaren är inte en exakt mätning. Vi räknar inte
-    varje elevs unika ID perfekt när vi räknar deltagande i Hour of Code, särskilt
-    eftersom vi inte kräver att elever loggar in eller registrerar sig. Som resultat
-    så både underskattar och överskattar vi antalet deltagare på samma gång. Läs alla
-    detaljer på <a href='%{codeorg_url}/loc'>här</a>.
   hoc_faq_count_hoc_a_markdown: " Hour of Code:s räknare mäter inte exakt användningstid.
     Eftersom vi inte kräver att eleverna loggar in eller registrerar sig kan vi inte
     mäta enskilda elevers deltagande med full precision. Det innebär att vi både över-
     och underskattar deltagares aktiva tid. Läs mer om detta [here](%{codeorg_url}/loc).
     \ "
   hoc_faq_one_hour_q: Hur mycket kan man lära sig på en timme?
-  hoc_faq_one_hour_a: Målet med Hour of Code är inte att lära någon bli en expert
-    på datavetenskap på en timme. En timme är endast tillräcklig för att lära sig
-    att datavetenskap är roligt och kreativt, och passar alla åldrar, för alla elever,
-    oavsett bakgrund. Hur framgångsrikt Hour of Code har varit mäts inte i hur mycket
-    om datavetenskap som elever lär sig - framgången visar sig i brett deltagande
-    oavsett kön och bakgrund, och hur många fler som vi ser deltar i datavetenskap-kurser
-    på alla skolnivåer. MIljoner av medverkande lärare och elever har bestämt sig
-    för att göra mer än en timme - för att lära sig en hel dag, eller en hel vecka,
-    eller längre. Många elever har bestämt sig för att gå en hel kurs (eller till
-    och med en universitetsutbildning) som resultat.<br/><br/> Förutom eleverna så
-    utbildas även läraren som får självförtroendet efter en timme att de kan lära
-    ut datavetenskap trots att de kanske inte har universitetsutbildning inom datavetenskap.
-    Tiotusentals lärare väljer att fördjupa sig i datavetenskap, antingen genom att
-    gå fysisk utbildning eller ta en online-kurs, eller båda. Detta gäller skoladministration
-    också, som inser att datavetenskap är något som elever vill ha och som deras lärare
-    är kapabla till. <br/><br/> Framför allt är vad alla deltagare lär sig på en timme,
-    är att det går.
   hoc_faq_one_hour_a_markdown: "  Målet med Hour of Code är inte att göra någon till
     expert på datavetenskap och kodning på en timme. En timme är tillräckligt för
     att lära sig att datavetenskap är roligt och kreativt, tillgängligt för alla åldrar
@@ -2549,38 +2533,26 @@ sv:
     framför allt kan lära sig på en timme är att detta är något som vi kan klara av.
     \ "
   hoc_faq_more_questions_q: Har du fortfarande fler frågor?
-  hoc_faq_more_questions_a: Se om svaret finns i vårt <a href='http://support.code.org'>support
-    forum</a>.
   hoc_faq_more_questions_a_markdown: Försök hitta ett svar i vårt [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Hur fortsätter jag lära mig efter Hour of Code?
-  hoc_faq_keep_learning_a: Vem som helst kan arrangera en Hour of Code när som helst.
-    Övningarna finns tillgängliga året om. Du kan förvänta dig att alla våra handledningar
-    och läroplaner finns tillgängliga på vår webbplats för evigt. Gå till <a href='/promote'>
-    våra resurser</a> för guider och andra resurser som hjälper dig att göra ditt
-    Hour of Code evenemang till en succé.
   hoc_faq_keep_learning_a_markdown: 'Vem som helst kan organisera en Hour of Code,
     när som helst. Lektionerna ligger uppe året runt. Du kan förvänta dig att våra
     handledningar och vår läroplan är tillgängliga på vår webbplats för all framtid.
     Väånligen gå till [our resources](%{promote}) för handledning om event och andra
     resurser som stöd för att din Hour of Code ska bli så bra som möjligt.  '
   hoc_faq_certificates_q: Var skriver jag ut diplom till mina elever?
-  hoc_faq_certificates_a: Gå till vår <a href='%{codeorg_url}/certificates'> diplomsida</a>
-    där kan du skriva ut diplom för hela klassen i förväg. Du kan också skriva ut
-    <a href='%{codeorg_url}/certificates?course=mc'> särskilda diplom</a> för elever
-    som gör Minecraft handledningen.
-  hoc_faq_certificates_a_markdown: 'Gå till vår [certificates page](%{codeorg_url}/certificates)
-    där du kan skriva ut certifikat till hela din klass på förhand. Du kan också skriva
-    ut [special certificates](%{codeorg_url}/certificates?course=mc) till elever som
-    tar Minecraft-handledningen.  '
+  hoc_faq_certificates_answer_markdown: Gå till vår [certifikatsida] (%{certificates_url})
+    där du kan skriva ut certifikat för hela din klass i förväg.
   hoc_faq_logo_q: Finns det begränsningar för hur jag kan använda Hour of Code-logotypen
     eller namnet?
-  hoc_faq_logo_a: Hour of Code är varumärkesskyddad. Vi vill inte förhindra dess användning,
-    men vi vill kontrollera att dess användning passar inom några gränser. Vänligen
-    se <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>dessa
-    riktlinjer för användning</a>.
   hoc_faq_logo_a_markdown: 'Hour of Code är varumärkesskyddad. Vi vill inte försvåra
     dess användning men däremot vill vi vara säkra på att den utnyttjas under vissa
     förutsättningar. Vänligen se [these guidelines for usage](%{logo_url}).  '
+  hoc_faq_bug_q: Jag hittade ett fel i en Hour of Code-aktivitet! Vad ska jag göra?
+  hoc_faq_bug_a_markdown: |-
+    Åh nej! Om du har stött på ett fel i en Hour of Code-aktivitet - kontrollera först webbadressen för aktiviteten du är på. Om webbadressen börjar med studio.code.org kan vårt Code.org supportteam hjälpa till! Klicka på frågetecknet i det övre högra hörnet på skärmen och välj sedan ”Rapportera ett problem” i rullgardinsmenyn.
+
+    Om webbadressen inte börjar med studio.code.org arbetar du sannolikt med en tredjepartsaktivitet och kommer att behöva kontakta företagets supportteam för ytterligare hjälp.
   stats_hoc_2013_image_alt: Statistik från Hour of Code 2013
   stats_growth: Nådde snabbast 15 miljoner användare.
   stats_i18n: Elever lär sig på över 45 olika språk
@@ -13313,6 +13285,22 @@ sv:
     och @codeorg så att vi också kan lyfta fram din framgång!'
   hoc_how_to_step_07_educators_desc_02: Du kan också skriva ut certifikat för dina
     elever för att visa upp sina prestationer!
+  hoc_ai_top_desc: Vem som helst kan lära sig om AI, oavsett om du är student i klassrummet
+    eller en lärare som låser upp framtiden för undervisning med och om AI.
+  hoc_ai_how_ai_works_video_series_desc: Denna serie korta videor kommer att introducera
+    dig till hur artificiell intelligens fungerar och varför det betyder något. Dyk
+    sedan in i frågor som algoritmisk partiskhet och etiken i AI-beslutsfattande.
+  hoc_ai_learn_how_ai_works_desc: Dyk in i AI-världen med ”Hur AI fungerar”, lektioner
+    i kombination med vår videoserie som introducerar dig till hur AI fungerar och
+    varför det betyder något.
+  hoc_ai_101_for_educators_desc: Upptäck den banbrytande världen av artificiell intelligens
+    (AI) och dess transformativa potential i utbildning med vår grundläggande online-inlärningsserie
+    för lärare.
+  hoc_ai_impacts_desc: Engagera ditt klassrum med lärarledda lektioner som utforskar
+    effekterna av artificiell intelligens och bjuder in eleverna att tänka på lösningar
+    på några av AI-problemen.
+  hoc_ai_activities_desc: Dessa helt nya Hour of Code-aktiviteter introducerar användare
+    till världen av artificiell intelligens på ett roligt och engagerande sätt.
   team_page_full_team_alt_text: Nästan 100 Code.org-anställda i matchande blå och
     gula t-shirts poserar i ett hotellkonferensrum för företagets Codechella-evenemang
     sommaren 2022.
@@ -13831,6 +13819,23 @@ sv:
     och nedladdningar'
   video_library_page_not_hacked_video_title_7: 'Hur man inte blir hackad: Installera
     uppdateringar'
+  thank_you_page_main_title: Tack för att du hjälper till att bygga en rörelse
+  thank_you_page_description: Code.org Advocacy Coalition vill tacka hundratusentals
+    lokala mästare och förespråkare, inklusive lärare, samhällsmedlemmar, forskare,
+    ideella organisationer, universitet, företag och statliga institutioner som har
+    stött visionen att varje elev i varje skola förtjänar möjligheten att lära sig
+    datavetenskap. Tack för ert stöd till denna rörelse.
+  thank_you_page_members_section_title: 'Och till alla medlemmar i Code.org Advocacy
+    Coalition:'
+  thank_you_page_individual_organization_title: 'Tack till följande personer och organisationer
+    för deras bidrag till denna rapport:'
+  thank_you_page_individual_organization_description: Handledare för datavetenskaplig
+    utbildning vid varje statlig utbildningsbyrå, College Board, Della Cronin, Stuart
+    Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Tack till eleverna och lärarna som citeras
+    i denna rapport:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Om oss
   about_us_page_hero_description: Code.org® är en ideell organisation för utbildningsinnovation
     dedikerad till visionen att varje elev i varje skola har möjlighet att lära sig
@@ -13984,6 +13989,11 @@ sv:
     som kommer att stödja den visionen.
   about_page_donors_link_1: Gör en donation
   about_page_donors_link_2: "[se vår lista över givare] (%{donors_url})"
+  teach_ai_title: Verkliga exempel. Praktiska resurser.
+  teach_ai_description: Verktygssatsen för AI-vägledning för skolor är en resurs för
+    beslutsfattare, skolledare, och personal att utveckla första vägledning om AI
+    i sina skolor.
+  teach_ai_button_label: Visa verktygslådan
   language_code:
     ar: arabiska
     az: azerbajdzjanska
