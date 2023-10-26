@@ -4,6 +4,7 @@
   language: 'English'
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'Coming Soon'
+  new: 'New'
   hours_of_code_served: "Hours of Code Served"
 
   hoc_stat_languages: "Students are learning in over 45 languages"
@@ -59,6 +60,7 @@
   hoc2022_codeorg_description: 'The 10th Hour of Code is out of this world! Come explore, play, and create with us.'
   social_hoc2022_dance: "Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's \"Encanto,\" and more!"
   social_hoc2023_dance: "Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's \"Encanto,\" and more!"
+  social_hoc2023_dance_v2: "It's time to strut your stuff! Create your own dance party featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía, and more!"
 
   social_hoc2021_cse: "During the #HourOfCode, we're celebrating #CSEverywhere. Discover the connections!"
 
@@ -222,6 +224,10 @@
   call_to_action_start_activity: "Start an activity"
   call_to_action_get_certificates: "Get certificates"
   call_to_action_go_beyond_hoc: "Go beyond the Hour of Code"
+  call_to_action_explore_all_hoc_activities: "Explore all Hour of Code activities from Code.org"
+  call_to_action_start_dance_party: "Start Dance Party"
+  call_to_action_start_part_02: "Start part two"
+  call_to_action_start_unplugged_activity: "Start unplugged activity"
   call_to_action_view_promo_resources: "View promo resources"
   call_to_action_learn_more: "Learn more"
   call_to_action_watch_now: "Watch now"
@@ -318,6 +324,7 @@
   call_to_action_view_faqs: "View more FAQs"
   call_to_action_applications_open: "Applications now open"
   call_to_action_apply_cs_ambassador: "Apply to be a CS Ambassador"
+  call_to_action_coming_soon: "Coming soon!"
   call_to_action_learn_how_ai_works: "Learn how AI works"
   call_to_action_learn_about_ai: "Learn about AI"
 
@@ -329,6 +336,9 @@
   aria_label_call_to_action_hoc_how_to_public_officials: "View how-to guide for Public Officials"
   aria_label_call_to_action_hoc_how_to_volunteers: "View how-to guide for Volunteers"
   aria_label_call_to_action_hoc_how_to_virtual_events: "View how-to guide for Virtual Events"
+  aria_label_call_to_action_dance_01: "Start the Dance Party activity"
+  aria_label_call_to_action_dance_02: "Start part two of the Dance Party activity"
+  aria_label_call_to_action_dance_unplugged: "Start the Dance Party unplugged activity"
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
   aria_label_call_to_action_teaching_csd: "Start the Teaching Computer Science Discoveries professional learning program"
@@ -411,11 +421,18 @@
   curriculum_name_creating_apps_with_devices: "Creating Apps with Devices"
   curriculum_name_poetry: "Coding with Poetry"
   curriculum_name_dance_party: "Dance Party"
+  curriculum_name_dance_party_02: "Keep On Dancing"
+  curriculum_name_dance_party_unplugged: "Dance Party Unplugged"
+  curriculum_name_dance_party_ai_edition: "Dance Party: AI Edition"
   curriculum_name_problem_solving_computing: "Problem Solving & Computing"
   curriculum_name_web_development: "Web Development"
   curriculum_name_interactive_animations_games: "Interactive Animations & Games"
   curriculum_name_design_process: "The Design Process"
   curriculum_name_data_society: "Data & Society"
+  curriculum_desc_dance_party_01: "In this introductory activity, use code to make a variety of colorful characters bust a move to animated backgrounds and upbeat music."
+  curriculum_desc_dance_party_02: "Go beyond the introductory tutorial with extended project ideas. Browse a library of examples of more complex dance parties."
+  curriculum_desc_dance_party_unplugged: "Get your groove on—no computer needed! Learn how coding concepts, like events, can be used to synchronize dancer choreography."
+  curriculum_desc_dance_party_ai_edition: "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. With dozens of songs to choose from, reach every student no matter their music taste. It's time to strut your stuff!"
   curriculum_desc_csf: "Free set of elementary curricula that introduces students to the foundational concepts of computer science."
   curriculum_desc_csf_express: "Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers."
   curriculum_desc_csf_express_pre_reader: "Learn the basics of drag-and-drop block coding by solving puzzles and creating animated scenes. Make art and simple games to share with friends, family, and teachers."
@@ -483,6 +500,8 @@
   module_grade_k_5: "K-5"
   module_grade_k_1: "K-1"
   module_grade_2_5: "2-5"
+  module_grade_2_8: "2-8"
+  module_grade_2_12: "2-12"
   module_grade_3_5: "3-5"
   module_grade_3_8: "3-8"
   module_grade_k_12: "K-12"
@@ -587,6 +606,8 @@
   heading_csa_ai: "Looking for things to do after the AP® exam?"
   heading_bring_cs_to_students: "Bring computer science to students"
   heading_cs_ambassador_program: "CS Ambassador Program"
+  heading_featured_student_projects: "Featured student projects"
+  heading_start_hoc_with_videos: "Start your Hour of Code with inspirational videos"
 
   cs_ambassador_subhead: "If you're a high school student passionate about encouraging more young women to take computer science at your school, then we need you!"
   cs_ambassador_desc: "Every field, including medicine, entertainment, sports, education, business, fashion, and entrepreneurship is touched by computer science. Yet only 5% of high school aged young women take computer science classes. Ambassadors can help close this gender gap by encouraging their peers to take a computer science class."
@@ -638,6 +659,13 @@
   subscribe_form_section_desc_csf: "Sign up to receive monthly emails about Code.org's Computer Science Fundamentals and get helpful reminders, tips, and updates sent right to your inbox."
   subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
   subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
+
+  dance_hero_heading: "Code a Dance Party"
+  dance_featuring_songs_by_short: "Featuring songs by:"
+  dance_featuring_songs_by_long: "Dance Party includes songs by:"
+  dance_and_more: "and more"
+  dance_choose_activity: "Choose your Dance Party"
+  dance_afe_disclaimer: "The artists whose music are used in this tutorial are not sponsoring or endorsing Amazon as part of licensing use of their music to Code.org."
 
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
