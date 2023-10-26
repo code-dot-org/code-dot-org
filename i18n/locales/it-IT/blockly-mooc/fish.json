@@ -67,7 +67,7 @@
     "newWord": "Nuova Parola",
     "finish": "Termina",
     "trainMore": "Addestra di Più",
-    "wordQuestionShort": "Per rilevare quale pesce desideri addestrare l'IA?",
+    "wordQuestionShort": "Che tipo di pesci vuoi che IA impari ad individuare?",
     "wordQuestionLong": "Scegli una nuova parola da insegnare all'IA",
     "isThisFish": "Questo pesce è {word}?",
     "isThisAFish": "Questo è un pesce?",
