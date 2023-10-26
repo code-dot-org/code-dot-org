@@ -584,7 +584,7 @@ class Section < ApplicationRecord
   end
   before_validation :strip_emoji_from_name
 
-  public def add_instructor(email)
+  public def add_instructor(email, current_user)
     instructor = User.find_by!(email: email, user_type: :teacher)
 
     deleted_section_instructor = validate_instructor(instructor)
