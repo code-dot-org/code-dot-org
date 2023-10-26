@@ -5,12 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching Problem Solving and Computing
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+##### Welcome! This free self-paced professional learning module is designed help you prepare to teach Code.org's s Problem Solving and Computing unit. 
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Welcome! This professional learning module is designed help you prepare to teach Code.org's Problem Solving and Computing unit. 
-</p></div>
-
-<img src="https://images.code.org/061813546d7208e471d1fd9e2336fdf1-image-1650060582414.09.21 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 20px 20px 20px 0;">
+<img src="https://images.code.org/061813546d7208e471d1fd9e2336fdf1-image-1650060582414.09.21 PM.png" alt="Diagram of the four steps of the problem-solving process, including Define, Prepare, Try, Reflect" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 20px 20px 20px 0;">
 
 
 ## In this module, you will:
@@ -19,8 +16,13 @@ markdown <<MARKDOWN
 * ##### Practice key concepts included in the unit.
 * ##### Explore end of chapter projects.
 
+## Take the pre-survey
 
-### **Suggested time:** 30 minutes
+##### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+
+### **Suggested time:** 40 minutes
 
 ## Let's get started!
 
