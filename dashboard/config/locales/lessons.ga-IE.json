@@ -48,12 +48,15 @@
           "name": "Algartaim: Tangraim"
         },
         "express-2017/Introduction": {
+          "name": "Réamhrá",
           "name": "Réamhrá"
         },
         "express-2017/Building a Foundation": {
+          "name": "Dúshraith a Leagan",
           "name": "Dúshraith a Leagan"
         },
         "express-2017/Nested Loops": {
+          "name": "Lúba Neadaithe",
           "name": "Lúba Neadaithe"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -462,333 +465,442 @@
           "name": "Peata Fíorúil i Saotharlann na Sprideanna"
         },
         "csd2-2021/Peer Review and Final Touches": {
+          "name": "Piarmheasúnú agus Bailchríoch",
           "name": "Piarmheasúnú agus Bailchríoch"
         },
         "csd3-2021/Variables": {
+          "name": "Athróga",
           "name": "Athróga"
         },
         "csd3-2021/Sprites": {
+          "name": "Sprideanna",
           "name": "Sprideanna"
         },
         "csd3-2021/Sprite Properties": {
+          "name": "Airíonna na Spride",
           "name": "Airíonna na Spride"
         },
         "csd3-2021/Text": {
+          "name": "Téacs",
           "name": "Téacs"
         },
         "csd3-2021/Conditionals": {
+          "name": "Coinníollacha",
           "name": "Coinníollacha"
         },
         "csd3-2021/Velocity": {
+          "name": "Treoluas",
           "name": "Treoluas"
         },
         "csd3-2021/Functions": {
+          "name": "Feidhmeanna",
           "name": "Feidhmeanna"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Feidhmeanna a ghlacann le Paraiméadair",
           "name": "Feidhmeanna a ghlacann le Paraiméadair"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Mapaí Meidhreacha",
           "name": "Mapaí Meidhreacha"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Bog é, Bog é",
           "name": "Bog é, Bog é"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Bí Lúbach",
           "name": "Bí Lúbach"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "An Teagmhas Mór",
           "name": "An Teagmhas Mór"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Bráisléid Dhénártha",
           "name": "Bráisléid Dhénártha"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar",
           "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Códáil Sealaíochta",
           "name": "Códáil Sealaíochta"
         },
         "coursed-2021/Dance Party": {
+          "name": "Cóisir Dhamhsa",
           "name": "Cóisir Dhamhsa"
         },
         "coursed-2021/Loops in Ice Age": {
+          "name": "Lúba in Ice Age",
           "name": "Lúba in Ice Age"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Coinníollacha le Cártaí",
           "name": "Coinníollacha le Cártaí"
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
+          "name": "Éisc ar snámh i Saotharlann na Sprideanna",
           "name": "Éisc ar snámh i Saotharlann na Sprideanna"
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
+          "name": "Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna",
           "name": "Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna"
         },
         "coursee-2021/About Me": {
+          "name": "Maidir Liomsa i Saotharlann na Sprideanna",
           "name": "Maidir Liomsa i Saotharlann na Sprideanna"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Ceapadh Ceoil",
           "name": "Ceapadh Ceoil"
         },
         "coursef-2021/lesson-6": {
+          "name": "Fáilte go dtí Saotharlann na Sprideanna",
           "name": "Fáilte go dtí Saotharlann na Sprideanna"
         },
         "coursef-2021/lesson-8": {
+          "name": "Sprideanna ar Obair",
           "name": "Sprideanna ar Obair"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Spraoi le Lúba",
           "name": "Spraoi le Lúba"
         },
         "coursef-2021/AI for Oceans": {
+          "name": "AI ar son an Aigéin",
           "name": "AI ar son an Aigéin"
         },
         "coursef-2021/Internet": {
+          "name": "An tIdirlíon",
           "name": "An tIdirlíon"
         },
         "express-2021/lesson-3": {
+          "name": "Sprideanna ar Obair",
           "name": "Sprideanna ar Obair"
         },
         "express-2021/Virtual Pet with Sprite Lab": {
+          "name": "Peata Fíorúil i Saotharlann na Sprideanna",
           "name": "Peata Fíorúil i Saotharlann na Sprideanna"
         },
         "express-2021/lesson-1": {
+          "name": "Cóisir Dhamhsa",
           "name": "Cóisir Dhamhsa"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Buntús na Ríomheolaíochta"
         },
         "csd2-2022/Peer Review and Final Touches": {
+          "name": "Piarmheasúnú agus Bailchríoch",
           "name": "Piarmheasúnú agus Bailchríoch"
         },
         "csd3-2022/Variables": {
+          "name": "Athróga",
           "name": "Athróga"
         },
         "csd3-2022/Sprites": {
+          "name": "Sprideanna",
           "name": "Sprideanna"
         },
         "csd3-2022/Sprite Properties": {
+          "name": "Airíonna na Spride",
           "name": "Airíonna na Spride"
         },
         "csd3-2022/Text": {
+          "name": "Téacs",
           "name": "Téacs"
         },
         "csd3-2022/Conditionals": {
+          "name": "Coinníollacha",
           "name": "Coinníollacha"
         },
         "csd3-2022/Velocity": {
+          "name": "Treoluas",
           "name": "Treoluas"
         },
         "csd3-2022/Functions": {
+          "name": "Feidhmeanna",
           "name": "Feidhmeanna"
         },
         "csd6-2022/Functions": {
+          "name": "Feidhmeanna",
           "name": "Feidhmeanna"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Mapaí Meidhreacha",
           "name": "Mapaí Meidhreacha"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Bog é, Bog é",
           "name": "Bog é, Bog é"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Bí Lúbach",
           "name": "Bí Lúbach"
         },
         "coursec-2022/The Big Event": {
+          "name": "An Teagmhas Mór",
           "name": "An Teagmhas Mór"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Bráisléid Dhénártha",
           "name": "Bráisléid Dhénártha"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar",
           "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Códáil Sealaíochta",
           "name": "Códáil Sealaíochta"
         },
         "coursed-2022/Dance Party": {
+          "name": "Cóisir Dhamhsa",
           "name": "Cóisir Dhamhsa"
         },
         "coursed-2022/Loops in Ice Age": {
+          "name": "Lúba in Ice Age",
           "name": "Lúba in Ice Age"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Coinníollacha le Cártaí",
           "name": "Coinníollacha le Cártaí"
         },
         "coursee-2022/Swimming Fish with Sprite Lab": {
+          "name": "Éisc ar snámh i Saotharlann na Sprideanna",
           "name": "Éisc ar snámh i Saotharlann na Sprideanna"
         },
         "coursee-2022/Mini-Project: About Me": {
+          "name": "Maidir Liomsa i Saotharlann na Sprideanna",
           "name": "Maidir Liomsa i Saotharlann na Sprideanna"
         },
         "coursee-2022/Songwriting": {
+          "name": "Ceapadh Ceoil",
           "name": "Ceapadh Ceoil"
         },
         "coursef-2022/Introducing Sprite Lab": {
+          "name": "Fáilte go dtí Saotharlann na Sprideanna",
           "name": "Fáilte go dtí Saotharlann na Sprideanna"
         },
         "coursef-2022/Sprites in Action": {
+          "name": "Sprideanna ar Obair",
           "name": "Sprideanna ar Obair"
         },
         "coursef-2022/AI For Oceans": {
+          "name": "AI ar son an Aigéin",
           "name": "AI ar son an Aigéin"
         },
         "coursef-2022/The Internet": {
+          "name": "An tIdirlíon",
           "name": "An tIdirlíon"
         },
         "express-2022/Sprites in Action": {
+          "name": "Sprideanna ar Obair",
           "name": "Sprideanna ar Obair"
         },
         "express-2022/Virtual Pet with Sprite Lab": {
+          "name": "Peata Fíorúil i Saotharlann na Sprideanna",
           "name": "Peata Fíorúil i Saotharlann na Sprideanna"
         },
         "express-2022/Dance Party": {
+          "name": "Cóisir Dhamhsa",
           "name": "Cóisir Dhamhsa"
         },
         "csd2-2023/Peer Review and Final Touches": {
+          "name": "Piarmheasúnú agus Bailchríoch",
           "name": "Piarmheasúnú agus Bailchríoch"
         },
         "csd3-2023/Variables": {
+          "name": "Athróga",
           "name": "Athróga"
         },
         "csd3-2023/Sprites": {
+          "name": "Sprideanna",
           "name": "Sprideanna"
         },
         "csd3-2023/Sprite Properties": {
+          "name": "Airíonna na Spride",
           "name": "Airíonna na Spride"
         },
         "csd3-2023/Text": {
+          "name": "Téacs",
           "name": "Téacs"
         },
         "csd3-2023/Conditionals": {
+          "name": "Coinníollacha",
           "name": "Coinníollacha"
         },
         "csd3-2023/Velocity": {
+          "name": "Treoluas",
           "name": "Treoluas"
         },
         "csd3-2023/Functions": {
+          "name": "Feidhmeanna",
           "name": "Feidhmeanna"
         },
         "csd6a-2023/Intro to App Lab": {
+          "name": "Buneolas ar an tSaotharlann Aipeanna",
           "name": "Buneolas ar an tSaotharlann Aipeanna"
         },
         "csd6a-2023/Functions": {
+          "name": "Feidhmeanna",
           "name": "Feidhmeanna"
         },
         "csd6b-2023/Intro to App Lab": {
+          "name": "Buneolas ar an tSaotharlann Aipeanna",
           "name": "Buneolas ar an tSaotharlann Aipeanna"
         },
         "csd6b-2023/Functions": {
+          "name": "Feidhmeanna",
           "name": "Feidhmeanna"
         },
         "csd7-2023/Intro to App Lab": {
+          "name": "Buneolas ar an tSaotharlann Aipeanna",
           "name": "Buneolas ar an tSaotharlann Aipeanna"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Mapaí Meidhreacha",
           "name": "Mapaí Meidhreacha"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Bog é, Bog é",
           "name": "Bog é, Bog é"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Bí Lúbach",
           "name": "Bí Lúbach"
         },
         "coursec-2023/The Big Event": {
+          "name": "An Teagmhas Mór",
           "name": "An Teagmhas Mór"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Bráisléid Dhénártha",
           "name": "Bráisléid Dhénártha"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar",
           "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Códáil Sealaíochta",
           "name": "Códáil Sealaíochta"
         },
         "coursed-2023/Dance Party": {
+          "name": "Cóisir Dhamhsa",
           "name": "Cóisir Dhamhsa"
         },
         "coursed-2023/Loops in Ice Age": {
+          "name": "Lúba in Ice Age",
           "name": "Lúba in Ice Age"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Coinníollacha le Cártaí",
           "name": "Coinníollacha le Cártaí"
         },
         "coursee-2023/Swimming Fish with Sprite Lab": {
+          "name": "Éisc ar snámh i Saotharlann na Sprideanna",
           "name": "Éisc ar snámh i Saotharlann na Sprideanna"
         },
         "coursee-2023/Mini-Project: About Me": {
+          "name": "Maidir Liomsa i Saotharlann na Sprideanna",
           "name": "Maidir Liomsa i Saotharlann na Sprideanna"
         },
         "coursee-2023/Songwriting": {
+          "name": "Ceapadh Ceoil",
           "name": "Ceapadh Ceoil"
         },
         "coursef-2023/Introducing Sprite Lab": {
+          "name": "Fáilte go dtí Saotharlann na Sprideanna",
           "name": "Fáilte go dtí Saotharlann na Sprideanna"
         },
         "coursef-2023/Sprites in Action": {
+          "name": "Sprideanna ar Obair",
           "name": "Sprideanna ar Obair"
         },
         "coursef-2023/AI For Oceans": {
+          "name": "AI ar son an Aigéin",
           "name": "AI ar son an Aigéin"
         },
         "coursef-2023/The Internet": {
+          "name": "An tIdirlíon",
           "name": "An tIdirlíon"
         },
         "express-2023/Sprites in Action": {
+          "name": "Sprideanna ar Obair",
           "name": "Sprideanna ar Obair"
         },
         "express-2023/Virtual Pet with Sprite Lab": {
+          "name": "Peata Fíorúil i Saotharlann na Sprideanna",
           "name": "Peata Fíorúil i Saotharlann na Sprideanna"
         },
         "express-2023/Dance Party": {
+          "name": "Cóisir Dhamhsa",
           "name": "Cóisir Dhamhsa"
         },
         "applab-intro/Intro to App Lab": {
+          "name": "Buneolas ar an tSaotharlann Aipeanna",
           "name": "Buneolas ar an tSaotharlann Aipeanna"
         },
         "artist/Artist": {
+          "name": "Ealaíontóir",
           "name": "Ealaíontóir"
         },
         "dance-2019/Dance Party": {
+          "name": "Cóisir Dhamhsa",
           "name": "Cóisir Dhamhsa"
         },
         "dance/Dance Party": {
+          "name": "Cóisir Dhamhsa (2018)",
           "name": "Cóisir Dhamhsa (2018)"
         },
         "flappy/Flappy Code": {
+          "name": "Cód Flappy",
           "name": "Cód Flappy"
         },
         "frozen/Artist": {
+          "name": "Códáil in éindí le hAnna agus Elsa",
           "name": "Códáil in éindí le hAnna agus Elsa"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Spraotharlann: Gumball",
           "name": "Spraotharlann: Gumball"
         },
         "hoc-encryption/Simple Encryption": {
+          "name": "Criptiú Simplí",
           "name": "Criptiú Simplí"
         },
         "hourofcode/Maze": {
+          "name": "Cathair Ghríobháin",
           "name": "Cathair Ghríobháin"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Spraotharlann: Ice Age",
           "name": "Spraotharlann: Ice Age"
         },
         "infinity/Infinity": {
+          "name": "Spraotharlann Disney Infinity",
           "name": "Spraotharlann Disney Infinity"
         },
         "mc/Hour of Code 2015": {
+          "name": "An Uair Chódála Minecraft",
           "name": "An Uair Chódála Minecraft"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Uair Chódála Minecraft - Dearthóir",
           "name": "Uair Chódála Minecraft - Dearthóir"
         },
         "oceans/Oceans": {
+          "name": "AI ar son an Aigéin",
           "name": "AI ar son an Aigéin"
         },
         "playlab/Play Lab": {
+          "name": "Spraotharlann",
           "name": "Spraotharlann"
         },
         "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)",
           "name": "Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)"
         },
         "allthethings/Jigsaw": {

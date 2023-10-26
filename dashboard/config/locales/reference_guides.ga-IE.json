@@ -3,66 +3,87 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "Saotharlann Aipeanna",
           "display_name": "Saotharlann Aipeanna"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Foramharc",
           "display_name": "Foramharc"
         },
         "csd-2022/css-overview": {
+          "display_name": "Foramharc",
           "display_name": "Foramharc"
         },
         "csd-2022/for-loops": {
+          "display_name": "Lúba \"Do Gach\"",
           "display_name": "Lúba \"Do Gach\""
         },
         "csd-2022/functions": {
+          "display_name": "Feidhmeanna",
           "display_name": "Feidhmeanna"
         },
         "csd-2022/game-lab": {
+          "display_name": "An tSaotharlann Cluichíochta",
           "display_name": "An tSaotharlann Cluichíochta"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Foramharc",
           "display_name": "Foramharc"
         },
         "csd-2022/html-overview": {
+          "display_name": "Foramharc",
           "display_name": "Foramharc"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Foramharc",
           "display_name": "Foramharc"
         },
         "csd-2022/lists": {
+          "display_name": "Liostaí",
           "display_name": "Liostaí"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Uirlisí do Dhéantóirí",
           "display_name": "Uirlisí do Dhéantóirí"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Foramharc",
           "display_name": "Foramharc"
         },
         "csd-2022/other": {
+          "display_name": "Eile",
           "display_name": "Eile"
         },
         "csd-2022/other-overview": {
+          "display_name": "Foramharc",
           "display_name": "Foramharc"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Foramharc",
           "display_name": "Foramharc"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Airíonna na Spride",
           "display_name": "Airíonna na Spride"
         },
         "csd-2022/sprites": {
+          "display_name": "Sprideanna",
           "display_name": "Sprideanna"
         },
         "csd-2022/variables": {
+          "display_name": "Athróga",
           "display_name": "Athróga"
         },
         "csd-2022/velocity": {
+          "display_name": "Treoluas",
           "display_name": "Treoluas"
         },
         "csd-2022/web-lab": {
+          "display_name": "Saotharlann an Ghréasáin",
           "display_name": "Saotharlann an Ghréasáin"
         }
       }
