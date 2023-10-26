@@ -85,8 +85,6 @@ export default function SectionsSetUpContainer({
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
   const [coteachersToAdd, setCoteachersToAdd] = useState([]);
 
-  React.useEffect(() => console.log(sections), [sections]);
-
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
 

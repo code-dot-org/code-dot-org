@@ -36,18 +36,18 @@ export default function CoteacherSettings({
   };
 
   const coteachers = React.useMemo(() => {
-    const unfiltered = sectionInstructors
-      ? [
-          ...sectionInstructors,
-          ...coteachersToAdd.map(email => ({instructorEmail: email})),
-        ]
-      : coteachersToAdd;
+    const additions = coteachersToAdd.map(email => ({instructorEmail: email}));
+
+    const unfiltered = !!sectionInstructors
+      ? [...sectionInstructors, ...additions]
+      : additions;
 
     // Remove the primary instructor and any coteachers that have been removed
     return unfiltered
       .filter(
         instructor =>
-          instructor.instructorEmail !== primaryInstructor.email &&
+          (!primaryInstructor ||
+            instructor.instructorEmail !== primaryInstructor.email) &&
           !removedCoteacherIds.includes(instructor.id)
       )
       .sort((a, b) => statusSortValue(a) - statusSortValue(b));
@@ -57,6 +57,8 @@ export default function CoteacherSettings({
     removedCoteacherIds,
     primaryInstructor,
   ]);
+
+  React.useEffect(() => console.log(coteachers), [coteachers]);
 
   const addRemovedCoteacher = id => {
     setRemovedCoteacherIds([...removedCoteacherIds, id]);
@@ -190,7 +192,11 @@ export default function CoteacherSettings({
 
   const table = () => {
     if (coteachers.length === 0) {
-      return <div>You haven't added any co-teachers yet</div>;
+      return (
+        <div className={styles.tableEmpty}>
+          You haven't added any co-teachers yet
+        </div>
+      );
     }
     return (
       <table className={styles.table}>

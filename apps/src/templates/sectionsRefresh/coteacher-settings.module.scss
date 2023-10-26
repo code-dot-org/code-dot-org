@@ -129,4 +129,15 @@
   &PillIcon {
     margin-right: 5px;
   }
+
+  &Empty {
+    border-left: 1px solid $light_gray_200;
+    border-right: 1px solid $light_gray_200;
+    display: flex;
+    padding: 12px;
+    min-height: 48px;
+    max-height: 48px;
+    border-bottom: 1px solid $light_gray_200;
+    align-items: center;
+  }
 }
