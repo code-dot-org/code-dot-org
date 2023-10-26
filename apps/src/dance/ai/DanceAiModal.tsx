@@ -336,11 +336,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {mode === Mode.SELECT_INPUTS
             ? 'Choose three emoji for the mood of the effects.'
             : mode === Mode.PROCESSING && !processingDone
-            ? 'The AI is processing your input.'
+            ? 'A.I. is processing your input.'
             : mode === Mode.PROCESSING && processingDone
-            ? 'The AI is ready to generate effects!'
+            ? 'A.I. is ready to generate effects!'
             : mode === Mode.GENERATING
-            ? 'The AI is generating code based on the emojis.'
+            ? 'A.I. is generating code based on the emojis.'
             : mode === Mode.RESULTS && !typingDone
             ? ''
             : mode === Mode.RESULTS && typingDone
