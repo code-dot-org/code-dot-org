@@ -3,63 +3,83 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "एक्सीलरोमीटर इव्हेंट्स",
           "display_name": "एक्सीलरोमीटर इव्हेंट्स"
         },
         "csd-2022/applab-overview": {
+          "display_name": "आढावा",
           "display_name": "आढावा"
         },
         "csd-2022/board-events": {
+          "display_name": "बोर्ड इव्हेंट्स",
           "display_name": "बोर्ड इव्हेंट्स"
         },
         "csd-2022/css-overview": {
+          "display_name": "आढावा",
           "display_name": "आढावा"
         },
         "csd-2022/design-mode": {
+          "display_name": "डिझाइन मोड",
           "display_name": "डिझाइन मोड"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "आढावा",
           "display_name": "आढावा"
         },
         "csd-2022/html-overview": {
+          "display_name": "आढावा",
           "display_name": "आढावा"
         },
         "csd-2022/javascript": {
+          "display_name": "जावास्क्रिप्ट",
           "display_name": "जावास्क्रिप्ट"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "आढावा",
           "display_name": "आढावा"
         },
         "csd-2022/lists": {
+          "display_name": "याद्या",
           "display_name": "याद्या"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "मेकर टूलकिट",
           "display_name": "मेकर टूलकिट"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "आढावा",
           "display_name": "आढावा"
         },
         "csd-2022/other": {
+          "display_name": "इतर",
           "display_name": "इतर"
         },
         "csd-2022/other-overview": {
+          "display_name": "आढावा",
           "display_name": "आढावा"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "आढावा",
           "display_name": "आढावा"
         },
         "csd-2022/playing-notes": {
+          "display_name": "प्लेइंग नोट्स ",
           "display_name": "प्लेइंग नोट्स "
         },
         "csd-2022/sprite-properties": {
+          "display_name": "स्प्राईट प्रॉपर्टीज",
           "display_name": "स्प्राईट प्रॉपर्टीज"
         },
         "csd-2022/variables": {
+          "display_name": "व्हेरीएबल्स",
           "display_name": "व्हेरीएबल्स"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "वेग आणि काउंटर पॅटर्न",
           "display_name": "वेग आणि काउंटर पॅटर्न"
         },
         "csd-2022/web-lab": {
+          "display_name": "वेब लॅब",
           "display_name": "वेब लॅब"
         }
       }
