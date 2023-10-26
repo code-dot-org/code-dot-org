@@ -14,7 +14,7 @@ import AccessibleDialog from '../AccessibleDialog';
 export default function CoteacherSettings({
   sectionInstructors,
   primaryInstructor,
-  addCoteacher,
+  setCoteachersToAdd,
   coteachersToAdd,
 }) {
   const [inputValue, setInputValue] = useState('');
@@ -58,8 +58,6 @@ export default function CoteacherSettings({
     primaryInstructor,
   ]);
 
-  React.useEffect(() => console.log(coteachers), [coteachers]);
-
   const addRemovedCoteacher = id => {
     setRemovedCoteacherIds([...removedCoteacherIds, id]);
   };
@@ -82,7 +80,7 @@ export default function CoteacherSettings({
       return;
     }
 
-    addCoteacher(newEmail);
+    setCoteachersToAdd(existing => [newEmail, ...existing]);
     setAddError('');
     setInputValue('');
   };
@@ -154,12 +152,19 @@ export default function CoteacherSettings({
 
   const removeCoteacher = coteacher => e => {
     e.preventDefault();
-    if (coteacher.id === null) {
+    console.log(coteacher);
+    if (!coteacher.id) {
       // remove from coteachersToAdd
-      coteachersToAdd.splice(
-        coteachersToAdd.indexOf(coteacher.instructorEmail),
-        1
+      const additions = coteachersToAdd.filter(
+        teacher => teacher !== coteacher.instructorEmail
       );
+      console.log(
+        additions,
+        coteachersToAdd.indexOf(coteacher.instructorEmail),
+        coteacher.instructorEmail
+      );
+      setCoteachersToAdd(additions);
+      setCoteacherToRemove({});
       return;
     }
     $.ajax({
@@ -175,17 +180,30 @@ export default function CoteacherSettings({
 
   const removePopup = coteacher => {
     return (
-      <AccessibleDialog onClose={() => setCoteacherToRemove({})}>
-        <StrongText>
+      <AccessibleDialog
+        onClose={() => setCoteacherToRemove({})}
+        className={styles.removeDialog}
+      >
+        <StrongText className={styles.removeDialogTitle}>
           Remove {coteacher.instructorEmail} as a co-teacher?
         </StrongText>
-        <br />
-        <div>
+        <div className={styles.removeDialogDescription}>
           This teacher will lose their ability to manage or view student work
           for this section.
         </div>
-        <Button onClick={() => setCoteacherToRemove({})} text="Cancel" />
-        <Button onClick={removeCoteacher(coteacher)} text="Remove" />
+        <div className={styles.removeDialogButtons}>
+          <Button
+            onClick={() => setCoteacherToRemove({})}
+            text="Cancel"
+            color={Button.ButtonColor.white}
+          />
+          <Button
+            onClick={removeCoteacher(coteacher)}
+            text="Remove"
+            color={Button.ButtonColor.red}
+            className={styles.removeDialogRemove}
+          />
+        </div>
       </AccessibleDialog>
     );
   };
@@ -193,7 +211,7 @@ export default function CoteacherSettings({
   const table = () => {
     if (coteachers.length === 0) {
       return (
-        <div className={styles.tableEmpty}>
+        <div className={classNames(styles.table, styles.tableRow)}>
           You haven't added any co-teachers yet
         </div>
       );
@@ -267,6 +285,6 @@ export default function CoteacherSettings({
 CoteacherSettings.propTypes = {
   sectionInstructors: PropTypes.arrayOf(PropTypes.object),
   primaryInstructor: PropTypes.object,
-  addCoteacher: PropTypes.func.isRequired,
+  setCoteachersToAdd: PropTypes.func.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
 };

@@ -314,9 +314,7 @@ export default function SectionsSetUpContainer({
         <CoteacherSettings
           sectionInstructors={sections[0].sectionInstructors}
           primaryInstructor={sections[0].primaryInstructor}
-          addCoteacher={newCoteacher =>
-            setCoteachersToAdd(existing => [newCoteacher, ...existing])
-          }
+          setCoteachersToAdd={setCoteachersToAdd}
           coteachersToAdd={coteachersToAdd}
         />
       ),
