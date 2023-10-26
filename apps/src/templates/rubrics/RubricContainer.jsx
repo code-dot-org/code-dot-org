@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
@@ -34,6 +34,36 @@ export default function RubricContainer({
   const [teacherHasEnabledAi, setTeacherHasEnabledAi] = useState(
     initialTeacherHasEnabledAi
   );
+  const [aiEvaluations, setAiEvaluations] = useState(null);
+
+  const fetchAiEvaluations = useCallback(() => {
+    if (!!studentLevelInfo && teacherHasEnabledAi) {
+      const studentId = studentLevelInfo.user_id;
+      const rubricId = rubric.id;
+      const dataUrl = `/rubrics/${rubricId}/get_ai_evaluations?student_id=${studentId}`;
+
+      fetch(dataUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          setAiEvaluations(data);
+        })
+        .catch(error => {
+          console.log(
+            'There was a problem with the fetch operation:',
+            error.message
+          );
+        });
+    }
+  }, [studentLevelInfo, teacherHasEnabledAi, rubric.id]);
+
+  useEffect(() => {
+    fetchAiEvaluations();
+  }, [fetchAiEvaluations]);
 
   return (
     <div
@@ -75,6 +105,7 @@ export default function RubricContainer({
         onLevelForEvaluation={onLevelForEvaluation}
         reportingData={reportingData}
         visible={selectedTab === TAB_NAMES.RUBRIC}
+        aiEvaluations={aiEvaluations}
       />
       <RubricSettings
         canProvideFeedback={canProvideFeedback}
@@ -83,6 +114,7 @@ export default function RubricContainer({
         rubricId={rubric.id}
         studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
         visible={selectedTab === TAB_NAMES.SETTINGS}
+        refreshAiEvaluations={fetchAiEvaluations}
       />
     </div>
   );
