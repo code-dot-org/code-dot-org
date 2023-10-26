@@ -104,20 +104,24 @@ export default class ProgramExecutor {
    */
   async preview() {
     this.reset();
-    this.hooks = await this.preloadSpritesAndCompileCode(
-      this.getCode(),
-      'runUserSetup'
-    );
+
+    await this.preloadSprites(this.getCode());
+    this.hooks = this.compileCode(this.getCode(), 'runUserSetup');
 
     if (!this.hooks.runUserSetup) {
       Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
       return;
     }
 
-    this.hooks.runUserSetup();
-
     const previewDraw = () => {
       this.nativeAPI.setEffectsInPreviewMode(true);
+
+      // the user setup hook initializes effects,
+      // needs to happen in preview mode for some effects (eg, tacos)
+      if (!this.hooks.runUserSetup) {
+        return;
+      }
+      this.hooks.runUserSetup();
 
       // redraw() (rather than draw()) is p5's recommended way
       // of drawing once.
@@ -145,7 +149,8 @@ export default class ProgramExecutor {
   }
 
   private async compileAllCode(studentCode: string) {
-    return this.preloadSpritesAndCompileCode(
+    await this.preloadSprites(studentCode);
+    return this.compileCode(
       studentCode,
       'runUserSetup',
       'getCueList',
@@ -154,20 +159,21 @@ export default class ProgramExecutor {
   }
 
   /**
-   * Prepares student code for execution. Preloads any sprites referenced in the code
-   * and compiles the program.
+   * Preloads any sprites referenced in the code.
+   */
+  private async preloadSprites(code: string) {
+    const charactersReferenced = utils.computeCharactersReferenced(code);
+    await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
+  }
+
+  /**
+   * Prepares student code for execution.
    *
    * @param code student code
    * @param eventNames events to generate hooks for
    * @returns Generated hooks for the compiled code.
    */
-  private async preloadSpritesAndCompileCode(
-    code: string,
-    ...eventNames: HookName[]
-  ) {
-    const charactersReferenced = utils.computeCharactersReferenced(code);
-    await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
-
+  private compileCode(code: string, ...eventNames: HookName[]) {
     const events: {[event in HookName]?: Handler} = {};
     eventNames.forEach(name => {
       events[name] = allEvents[name];
