@@ -3,120 +3,159 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "त्वरणमापी इवेंट्स",
           "display_name": "त्वरणमापी इवेंट्स"
         },
         "csd-2022/app-lab": {
+          "display_name": "ऐप लैब",
           "display_name": "ऐप लैब"
         },
         "csd-2022/applab-overview": {
+          "display_name": "रूपरेखा",
           "display_name": "रूपरेखा"
         },
         "csd-2022/arrays": {
+          "display_name": "श्रृंखला समूह",
           "display_name": "श्रृंखला समूह"
         },
         "csd-2022/board-events": {
+          "display_name": "बोर्ड इवेंट्स",
           "display_name": "बोर्ड इवेंट्स"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "सर्किट प्लेग्राउंड अवलोकन",
           "display_name": "सर्किट प्लेग्राउंड अवलोकन"
         },
         "csd-2022/classes": {
+          "display_name": "कक्षाएं",
           "display_name": "कक्षाएं"
         },
         "csd-2022/collision-detection": {
+          "display_name": "संघट्टन अभिज्ञान",
           "display_name": "संघट्टन अभिज्ञान"
         },
         "csd-2022/css-overview": {
+          "display_name": "रूपरेखा",
           "display_name": "रूपरेखा"
         },
         "csd-2022/design-mode": {
+          "display_name": "डिजाइन मोड",
           "display_name": "डिजाइन मोड"
         },
         "csd-2022/designing-screens-with-code": {
+          "display_name": "कोड के साथ स्क्रीन डिजाइन करना",
           "display_name": "कोड के साथ स्क्रीन डिजाइन करना"
         },
         "csd-2022/for-loops": {
+          "display_name": "फॉर लूप्स",
           "display_name": "फॉर लूप्स"
         },
         "csd-2022/functions": {
+          "display_name": "कार्य",
           "display_name": "कार्य"
         },
         "csd-2022/game-lab": {
+          "display_name": "गेम लैब",
           "display_name": "गेम लैब"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "रूपरेखा",
           "display_name": "रूपरेखा"
         },
         "csd-2022/html-overview": {
+          "display_name": "रूपरेखा",
           "display_name": "रूपरेखा"
         },
         "csd-2022/images-in-html": {
+          "display_name": "HTML में चित्र",
           "display_name": "HTML में चित्र"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "AI लैब का परिचय",
           "display_name": "AI लैब का परिचय"
         },
         "csd-2022/javascript": {
+          "display_name": "जावास्क्रिप्ट",
           "display_name": "जावास्क्रिप्ट"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "रूपरेखा",
           "display_name": "रूपरेखा"
         },
         "csd-2022/lists": {
+          "display_name": "सूचियाँ",
           "display_name": "सूचियाँ"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "मेकर टूलकिट",
           "display_name": "मेकर टूलकिट"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "रूपरेखा",
           "display_name": "रूपरेखा"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "AI लैब में मॉडल कार्ड",
           "display_name": "AI लैब में मॉडल कार्ड"
         },
         "csd-2022/multi-screen-apps": {
+          "display_name": "मल्टी-स्क्रीन ऐप्स",
           "display_name": "मल्टी-स्क्रीन ऐप्स"
         },
         "csd-2022/other": {
+          "display_name": "अन्य",
           "display_name": "अन्य"
         },
         "csd-2022/other-overview": {
+          "display_name": "रूपरेखा",
           "display_name": "रूपरेखा"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "रूपरेखा",
           "display_name": "रूपरेखा"
         },
         "csd-2022/playing-notes": {
+          "display_name": "नोट्स प्ले करना",
           "display_name": "नोट्स प्ले करना"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "सवाल हल करने की प्रक्रिया",
           "display_name": "सवाल हल करने की प्रक्रिया"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "सवाल हल करने की प्रक्रिया",
           "display_name": "सवाल हल करने की प्रक्रिया"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "स्प्राइट्स की विशेषताएं",
           "display_name": "स्प्राइट्स की विशेषताएं"
         },
         "csd-2022/sprites": {
+          "display_name": "स्प्राइट्स",
           "display_name": "स्प्राइट्स"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "ड्रा लूप",
           "display_name": "ड्रा लूप"
         },
         "csd-2022/variables": {
+          "display_name": "चर",
           "display_name": "चर"
         },
         "csd-2022/velocity": {
+          "display_name": "वेग",
           "display_name": "वेग"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "वेग और काउंटर पैटर्न",
           "display_name": "वेग और काउंटर पैटर्न"
         },
         "csd-2022/web-lab": {
+          "display_name": "वेब लैब",
           "display_name": "वेब लैब"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
