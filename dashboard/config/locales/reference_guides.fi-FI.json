@@ -3,60 +3,79 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "Sovelluslabra",
           "display_name": "Sovelluslabra"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Yleiskatsaus",
           "display_name": "Yleiskatsaus"
         },
         "csd-2022/css-overview": {
+          "display_name": "Yleiskatsaus",
           "display_name": "Yleiskatsaus"
         },
         "csd-2022/design-mode": {
+          "display_name": "Suunnittelutila",
           "display_name": "Suunnittelutila"
         },
         "csd-2022/for-loops": {
+          "display_name": "Silmukat",
           "display_name": "Silmukat"
         },
         "csd-2022/functions": {
+          "display_name": "Funktiot",
           "display_name": "Funktiot"
         },
         "csd-2022/game-lab": {
+          "display_name": "Pelilabra",
           "display_name": "Pelilabra"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Yleiskatsaus",
           "display_name": "Yleiskatsaus"
         },
         "csd-2022/html-overview": {
+          "display_name": "Yleiskatsaus",
           "display_name": "Yleiskatsaus"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Yleiskatsaus",
           "display_name": "Yleiskatsaus"
         },
         "csd-2022/lists": {
+          "display_name": "Listat",
           "display_name": "Listat"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Yleiskatsaus",
           "display_name": "Yleiskatsaus"
         },
         "csd-2022/other": {
+          "display_name": "Muut",
           "display_name": "Muut"
         },
         "csd-2022/other-overview": {
+          "display_name": "Yleiskatsaus",
           "display_name": "Yleiskatsaus"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Yleiskatsaus",
           "display_name": "Yleiskatsaus"
         },
         "csd-2022/variables": {
+          "display_name": "Muuttujat",
           "display_name": "Muuttujat"
         },
         "csd-2022/velocity": {
+          "display_name": "Nopeus",
           "display_name": "Nopeus"
         },
         "csd-2022/web-lab": {
+          "display_name": "Nettilabra",
           "display_name": "Nettilabra"
         }
       }
