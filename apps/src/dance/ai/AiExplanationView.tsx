@@ -19,7 +19,6 @@ import {
   Legend,
 } from 'chart.js';
 import {Bar} from 'react-chartjs-2';
-import Dropdown from '@cdo/apps/applab/designElements/dropdown';
 
 ChartJS.register(
   CategoryScale,
@@ -41,9 +40,9 @@ type Result = {[key in FieldKey]: string};
 interface AiExplanationViewProps {
   inputs: string[];
   result: Result;
-  backgroundMapping: DropdownTranslations;
-  foregroundMapping: DropdownTranslations;
-  paletteMapping: DropdownTranslations;
+  backgroundTranslations: DropdownTranslations;
+  foregroundTranslations: DropdownTranslations;
+  paletteTranslations: DropdownTranslations;
 }
 
 interface FieldObject {
@@ -67,9 +66,9 @@ interface Fields {
 const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
   inputs,
   result,
-  backgroundMapping,
-  foregroundMapping,
-  paletteMapping,
+  backgroundTranslations,
+  foregroundTranslations,
+  paletteTranslations,
 }) => {
   const [currentFieldKey, setCurrentFieldKey] = useState(
     FieldKey.BACKGROUND_EFFECT
@@ -79,17 +78,17 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
     [FieldKey.BACKGROUND_EFFECT]: {
       name: 'Background effect',
       data: CachedBackgrounds as CachedWeightsMapping,
-      labelTranslations: backgroundMapping,
+      labelTranslations: backgroundTranslations,
     },
     [FieldKey.FOREGROUND_EFFECT]: {
       name: 'Foreground effect',
       data: CachedForegrounds as CachedWeightsMapping,
-      labelTranslations: foregroundMapping,
+      labelTranslations: foregroundTranslations,
     },
     [FieldKey.BACKGROUND_PALETTE]: {
       name: 'Background palette',
       data: CachedPalettes as CachedWeightsMapping,
-      labelTranslations: paletteMapping,
+      labelTranslations: paletteTranslations,
     },
   };
 

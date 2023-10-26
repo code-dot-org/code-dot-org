@@ -13,7 +13,6 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
 import {AiOutput, TranslationTuple, DropdownTranslations} from '../types';
-import Dropdown from '@cdo/apps/applab/designElements/dropdown';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
@@ -60,13 +59,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
-  const [backgroundMapping, setBackgroundMapping] =
+  const [backgroundTranslations, setBackgroundTranslations] =
     useState<DropdownTranslations>([]);
-  const [foregroundMapping, setForegroundMapping] =
+  const [foregroundTranslations, setForegroundTranslations] =
     useState<DropdownTranslations>([]);
-  const [paletteMapping, setPaletteMapping] = useState<DropdownTranslations>(
-    []
-  );
+  const [paletteTranslations, setPaletteTranslations] =
+    useState<DropdownTranslations>([]);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -103,17 +101,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       const translationsForeground = getTranslationsFromField(
         blocksSvg[0].getField('EFFECT') as FieldDropdown
       );
-      setForegroundMapping(translationsForeground);
+      setForegroundTranslations(translationsForeground);
 
-      const translationsBackground = getTranslationsFromField(
+      const backgroundTranslations = getTranslationsFromField(
         blocksSvg[1].getField('EFFECT') as FieldDropdown
       );
-      setBackgroundMapping(translationsBackground);
+      setBackgroundTranslations(backgroundTranslations);
 
-      const translationsPalette = getTranslationsFromField(
+      const paletteTranslations = getTranslationsFromField(
         blocksSvg[1].getField('PALETTE') as FieldDropdown
       );
-      setPaletteMapping(translationsPalette);
+      setPaletteTranslations(paletteTranslations);
     }
   }, [resultJson]);
 
@@ -530,9 +528,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <AiExplanationView
               inputs={inputs}
               result={JSON.parse(resultJson)}
-              backgroundMapping={backgroundMapping}
-              foregroundMapping={foregroundMapping}
-              paletteMapping={paletteMapping}
+              backgroundTranslations={backgroundTranslations}
+              foregroundTranslations={foregroundTranslations}
+              paletteTranslations={paletteTranslations}
             />
           </div>
         )}
