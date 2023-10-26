@@ -8,10 +8,10 @@ import json
 nlp = spacy.load("en_core_web_lg")
 
 ai_inputs_file = open('apps/static/dance/ai/ai-inputs.json')
-emoji_data = json.load(ai_inputs_file)
+emojis_data = json.load(ai_inputs_file)
 emojis_map = {}
 emojis_list = []
-for emoji in emoji_data['items']:
+for emoji in emojis_data['items']:
     name = emoji['name']
     id = emoji['id']
     emojis_map[name] = id
