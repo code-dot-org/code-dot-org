@@ -111,34 +111,6 @@ export const TwoColumnActionBlock = connect(state => ({
   isRtl: state.isRtl,
 }))(UnconnectedTwoColumnActionBlock);
 
-export class LocalClassActionBlock extends Component {
-  static propTypes = {
-    showHeading: PropTypes.bool.isRequired,
-  };
-
-  render() {
-    const {showHeading} = this.props;
-    const heading = showHeading ? i18n.findLocalClassHeading() : '';
-
-    return (
-      <TwoColumnActionBlock
-        imageUrl={pegasus(
-          '/shared/images/fill-540x300/misc/beyond-local-map.png'
-        )}
-        heading={heading}
-        subHeading={i18n.findLocalClassSubheading()}
-        description={i18n.findLocalClassDescription()}
-        buttons={[
-          {
-            url: pegasus('/learn/local'),
-            text: i18n.findLocalClassButton(),
-          },
-        ]}
-      />
-    );
-  }
-}
-
 export class AdministratorResourcesActionBlock extends Component {
   render() {
     return (
