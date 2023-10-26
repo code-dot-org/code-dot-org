@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_17_201252) do
+ActiveRecord::Schema.define(version: 2023_10_26_194936) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1874,8 +1874,10 @@ ActiveRecord::Schema.define(version: 2023_10_17_201252) do
     t.boolean "restrict_section", default: false
     t.text "properties"
     t.string "participant_type", default: "student", null: false
+    t.bigint "lti_integration_id"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
+    t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
     t.index ["user_id"], name: "index_sections_on_user_id"
   end
 
@@ -2323,6 +2325,7 @@ ActiveRecord::Schema.define(version: 2023_10_17_201252) do
   add_foreign_key "schools", "school_districts"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"
+  add_foreign_key "sections", "lti_integrations"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
