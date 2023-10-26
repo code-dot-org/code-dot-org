@@ -12,7 +12,7 @@ import {
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import CdoMetricsManager from './cdoMetricsManager';
 import WorkspaceSvgFrame from './workspaceSvgFrame';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import {BLOCK_TYPES} from '../constants';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
@@ -184,7 +184,7 @@ export default class FunctionEditor {
     }
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
-      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+      isBehavior ? i18n.behaviorEditorHeader() : i18n.function(),
       'blocklyWorkspaceSvgFrame'
     );
     this.editorWorkspace.svgFrame_.render();
