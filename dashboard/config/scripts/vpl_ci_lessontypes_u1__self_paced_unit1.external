@@ -8,29 +8,32 @@ markdown <<MARKDOWN
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
-The Problem Solving and Computing unit is divided into <strong>two chapters.</strong> Each chapter includes several small activities that provide an opportunity for students to practice using the problem solving process. If you are short on time, you may choose to complete only the first chapter of the unit.
+The Problem Solving and Computing unit is divided into <strong>two chapters.</strong> Each chapter includes several lesson activities that provide an opportunity for students to practice using the problem solving process. If you are short on time, you may choose to complete only the first chapter of the unit.
 </p></div>
 
 ## Chapters
-
+###### Click on the arrows to expand each section.
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📘 Chapter 1: The Problem Solving Process</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">📘 Chapter 1: The Problem Solving Process (Lessons 1-3)</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
+    
 
 ##### <strong>Description:</strong> This chapter guides students to develop and adopt a more formal structured problem solving process by reflecting on problems they have problems they have encountered, both in the classroom and everyday life. By working through a diverse set of problems, such as logic puzzles, engineering challenges, and planning a trip, students learn to identify different classes of problems, decompose large problems, and develop their personal problem solving skills.
 
+#####<strong>Key Question:</strong>
 * ##### What strategies and processes can I use to become a more effective problem solver?
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📗 Chapter 2: Computers and Problem Solving</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">📗 Chapter 2: Computers and Problem Solving (Lessons 4-8)</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 ##### <strong>Description:</strong> This chapter presents computers as machines that solve information problems. Students begin by building a common definition for a computer that focuses on functionality instead of specific hardware. They then explore the ways that computers approach problems. For their final project, students propose an app that could be used to solve a problem of their choosing.
 
+#####<strong>Key Questions:</strong>
 * ##### How do computers help people to solve problems?
 * ##### How do people and computers approach problems differently?
 * ##### What does a computer need from people in order to solve problems effectively?
@@ -38,9 +41,11 @@ The Problem Solving and Computing unit is divided into <strong>two chapters.</st
 </details>
 
 ## Lessons
-##### Most lessons are designed for **45 minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
+##### Most lessons are designed for **45 minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan. 
 
-### Lesson components 
+##### The following lesson information applies to all CS Discoveries lessons, not just Unit 1 - Problem Solving and Computing.
+
+### Lesson components
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm up</summary>
