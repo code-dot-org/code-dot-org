@@ -26,11 +26,13 @@ import {parseElement as parseXmlElement} from '../../xml';
  * @param {[string]} hiddenDefinitions - hidden definitions serialization, in JSON. Only used in Google Blockly labs.
  */
 export function loadBlocksToWorkspace(workspace, source, hiddenDefinitions) {
+  console.log('beginning of loadBlocksToWorkspace');
   const {parsedSource, parsedHiddenDefinitions, blockOrderMap} =
     prepareSourcesForWorkspaces(source, hiddenDefinitions);
   Blockly.serialization.workspaces.load(parsedSource, workspace);
   positionBlocksOnWorkspace(workspace, blockOrderMap);
   loadHiddenDefinitionBlocksToWorkspace(parsedHiddenDefinitions);
+  console.log('end of loadBlocksToWorkspace');
 }
 
 /**
@@ -41,6 +43,7 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
   if (!Blockly.getHiddenDefinitionWorkspace() || !hiddenDefinitionSource) {
     return;
   }
+  console.log({hiddenDefinitionSource});
   Blockly.serialization.workspaces.load(
     hiddenDefinitionSource,
     Blockly.getHiddenDefinitionWorkspace()

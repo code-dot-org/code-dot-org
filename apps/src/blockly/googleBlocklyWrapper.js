@@ -155,8 +155,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    setTimeout(() => {
-      let workspaceCode = Blockly.JavaScript.workspaceToCode(
+    let workspaceCode = '';
+    try {
+      workspaceCode = Blockly.JavaScript.workspaceToCode(
         Blockly.mainBlockSpace
       );
       if (this.getHiddenDefinitionWorkspace()) {
@@ -164,8 +165,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
           this.getHiddenDefinitionWorkspace()
         );
       }
-      return workspaceCode;
-    }, 100);
+    } catch (e) {
+      console.warn('Error generating workspace code', e);
+    }
+    return workspaceCode;
   };
 
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
@@ -182,6 +185,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
+  blocklyWrapper.wrapReadOnlyProperty('config');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ConnectionType');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');

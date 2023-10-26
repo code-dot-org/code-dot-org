@@ -5,16 +5,18 @@ export const behaviorGetMutator = {
 
   domToMutation: function (element) {
     const name = element.nextElementSibling.textContent;
+    console.log({name: element.getAttribute('name'), actualName: name});
     this.behaviorId = element.nextElementSibling.getAttribute('id');
-    const model = this.findProcedureModel_(name);
-    if (model) {
-      this.model_ = model;
-      if (this.getProcedureModel()) {
-        this.initBlockWithProcedureModel_();
-      }
-    } else {
-      throw new Error(`Procedure model not found for behavior: ${name}`);
-    }
+    this.deserialize_(name, []);
+    // const model = this.findProcedureModel_(name);
+    // if (model) {
+    //   this.model_ = model;
+    //   if (this.getProcedureModel()) {
+    //     this.initBlockWithProcedureModel_();
+    //   }
+    // } else {
+    //   throw new Error(`Procedure model not found for behavior: ${name}`);
+    // }
   },
 
   // Only used to save in XML, but still required to exist by Blockly.
@@ -27,6 +29,9 @@ export const behaviorGetMutator = {
   saveExtraState: function () {
     const state = Object.create(null);
     const model = this.getProcedureModel();
+    if (!model) {
+      state['name'] = this.getFieldValue('NAME');
+    }
     if (!model) return state;
     state['name'] = model.getName();
     if (model.getParameters().length) {

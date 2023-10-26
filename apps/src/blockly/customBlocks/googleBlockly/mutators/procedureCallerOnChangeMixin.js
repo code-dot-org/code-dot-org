@@ -6,7 +6,13 @@ const procedureCallerOnChangeMixin = {
    * @this {Blockly.Block}
    */
   onchange: function (event) {
-    console.log({event});
+    //console.log(event.type);
+    if (event.type === Blockly.Events.BLOCK_CREATE) {
+      console.log({event, block: this});
+    }
+    if (event.type === Blockly.Events.FINISHED_LOADING) {
+      console.log({event});
+    }
     if (this.disposed || this.workspace.isFlyout) return;
     if (event.type === Blockly.Events.BLOCK_MOVE) this.updateArgsMap_(true);
     if (
@@ -21,10 +27,12 @@ const procedureCallerOnChangeMixin = {
     // Look for the case where a procedure call was created (usually through
     // paste) and there is no matching definition.  In this case, create
     // an empty definition block with the correct signature.
-    console.log('looking for def in onchange');
+    if (event.type === Blockly.Events.FINISHED_LOADING) {
+      console.log('looking for def in onchange');
+    }
     const name = this.getFieldValue('NAME');
     let def = Blockly.Procedures.getDefinition(name, this.workspace);
-    console.log({name, def});
+    console.log({name, def, block: this});
     if (!this.defMatches_(def)) def = null;
     if (!def) {
       // We have no def nor procedure model.

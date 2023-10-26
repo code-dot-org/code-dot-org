@@ -469,9 +469,9 @@ StudioApp.prototype.init = function (config) {
   // shared apps that are embedded in an iframe handle warnings in
   // startIFrameEmbeddedApp since they don't become "active" until the user
   // clicks on them.
-  if (config.shareWarningInfo && !config.level.iframeEmbed) {
-    showWarnings(config);
-  }
+  // if (config.shareWarningInfo && !config.level.iframeEmbed) {
+  //   showWarnings(config);
+  // }
 
   this.initProjectTemplateWorkspaceIconCallout();
 
