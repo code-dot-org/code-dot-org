@@ -26,7 +26,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     authorize! :manage, section
 
     begin
-      si = section.add_instructor(params.require(:email))
+      si = section.add_instructor(params.require(:email), current_user)
       render json: si, serializer: Api::V1::SectionInstructorSerializer
     rescue ArgumentError => exception
       render json: {error: exception.message}, status: :bad_request
