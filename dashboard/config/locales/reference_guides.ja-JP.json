@@ -3,108 +3,143 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "加速度計イベント",
           "display_name": "加速度計イベント"
         },
         "csd-2022/app-lab": {
+          "display_name": "アプリ ラボ",
           "display_name": "アプリ ラボ"
         },
         "csd-2022/applab-overview": {
+          "display_name": "概要",
           "display_name": "概要"
         },
         "csd-2022/board-events": {
+          "display_name": "ボードイベント",
           "display_name": "ボードイベント"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "サーキットプレイグラウンドの概要",
           "display_name": "サーキットプレイグラウンドの概要"
         },
         "csd-2022/classes": {
+          "display_name": "クラス",
           "display_name": "クラス"
         },
         "csd-2022/css-overview": {
+          "display_name": "概要",
           "display_name": "概要"
         },
         "csd-2022/design-mode": {
+          "display_name": "設計モード",
           "display_name": "設計モード"
         },
         "csd-2022/for-loops": {
+          "display_name": "ループ用",
           "display_name": "ループ用"
         },
         "csd-2022/functions": {
+          "display_name": "関数(かんすう) ",
           "display_name": "関数(かんすう) "
         },
         "csd-2022/game-lab": {
+          "display_name": "ゲーム ラボ",
           "display_name": "ゲーム ラボ"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "概要",
           "display_name": "概要"
         },
         "csd-2022/html-overview": {
+          "display_name": "概要",
           "display_name": "概要"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "AI ラボの紹介",
           "display_name": "AI ラボの紹介"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScriptの",
           "display_name": "JavaScriptの"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "概要",
           "display_name": "概要"
         },
         "csd-2022/lists": {
+          "display_name": "リスト",
           "display_name": "リスト"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Makerツールキット",
           "display_name": "Makerツールキット"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "概要",
           "display_name": "概要"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "AI ラボのモデルカード",
           "display_name": "AI ラボのモデルカード"
         },
         "csd-2022/multi-screen-apps": {
+          "display_name": "マルチスクリーンアプリ",
           "display_name": "マルチスクリーンアプリ"
         },
         "csd-2022/other": {
+          "display_name": "その他",
           "display_name": "その他"
         },
         "csd-2022/other-overview": {
+          "display_name": "概要",
           "display_name": "概要"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "概要",
           "display_name": "概要"
         },
         "csd-2022/playing-notes": {
+          "display_name": "音符で遊ぶ",
           "display_name": "音符で遊ぶ"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "The Problem Solving Process",
           "display_name": "The Problem Solving Process"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "The Problem Solving Process",
           "display_name": "The Problem Solving Process"
         },
         "csd-2022/responding-to-user-input": {
+          "display_name": "ユーザー情報に返答",
           "display_name": "ユーザー情報に返答"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "スプライトのプロパティ",
           "display_name": "スプライトのプロパティ"
         },
         "csd-2022/sprites": {
+          "display_name": "スプライト",
           "display_name": "スプライト"
         },
         "csd-2022/variables": {
+          "display_name": "変数（へんすう）",
           "display_name": "変数（へんすう）"
         },
         "csd-2022/velocity": {
+          "display_name": "速度",
           "display_name": "速度"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "速度とカウンターパターン",
           "display_name": "速度とカウンターパターン"
         },
         "csd-2022/web-lab": {
+          "display_name": "ウェッブ ラボ",
           "display_name": "ウェッブ ラボ"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
