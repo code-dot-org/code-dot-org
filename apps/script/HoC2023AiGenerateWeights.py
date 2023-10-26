@@ -7,11 +7,13 @@ nlp = spacy.load("en_core_web_lg")
 
 emoji_ids = ["poopy", "romantic", "party", "silly", "sparkle", "happy", "magic", "spooky", "cute", "funky", "wavy", "lights", "rainbow", "robot", "chaotic", "disco", "zen", "fast", "evil", "cold", "cosmic", "sad", "black-and-white", "warm", "cool"]
 
-# We rename foreground/background effects and palettes to better reflect the
-# actual output of the effect or color. Below, we store them in a map (python_name: blockly_id).
+# We rename foreground/background effects and palettes as their python_name
+# to better reflect the actual output of the effect or color.
+# Below, we store them in maps for which the key is the python_name and the
+# value is the corresponding blockly_id.
 
-# color_palettes dictionary contains python name as key and blockly id as value.
-# User-facing name is added as a comment for each color palette.
+# color_palettes dictionary contains python_name as key and blockly_id as value.
+# The user-facing name is added as a comment for each color palette.
 color_palettes_map = {
   'rainbow pastel': 'default', # Light
   'green blue': 'cool', # Cool
@@ -36,7 +38,7 @@ color_palettes_map = {
   'roses': 'roses', # Roses
 }
 
-# background_effects_map contains python name as key and blockly id as value.
+# background_effects_map contains python_name as key and blockly_id as value.
 # The user-facing name is added as a comment for each background effect.
 background_effects_map = {
     'pulse': 'circles', # Circles
@@ -70,7 +72,7 @@ background_effects_map = {
     'groovy shapes': 'higher_power', # Higher Power
 }
 
-# foreground_effects_map contains python name as key and blockly id as value.
+# foreground_effects_map contains python_name as key and blockly_id as value.
 # The user-facing name is added as a comment for each foreground effect.
 foreground_effects_map = {
     'bubbles': 'bubbles', # Bubbles
@@ -93,8 +95,8 @@ foreground_effects_map = {
 }
 
 palette_dict = {}
-bg_dict = {}
-fg_dict = {}
+background_dict = {}
+foreground_dict = {}
 
 # Create lists of python names from each map.
 color_palettes = list(color_palettes_map.keys())
@@ -128,12 +130,16 @@ for id_word in emoji_ids:
         foreground_scores.append(round(similarity_score, 2))
         
     palette_dict[id_word] = palette_scores
-    bg_dict[id_word] = background_scores
-    fg_dict[id_word] = foreground_scores
+    background_dict[id_word] = background_scores
+    foreground_dict[id_word] = foreground_scores
 
 palette_output = {'emojiAssociations': palette_dict, 'output': color_palettes}
-background_output = {'emojiAssociations': bg_dict, 'output': background_effects}
-foreground_output = {'emojiAssociations': fg_dict, 'output': foreground_effects}
+background_output = {'emojiAssociations': background_dict, 'output': background_effects}
+foreground_output = {'emojiAssociations': foreground_dict, 'output': foreground_effects}
+
+background_output['pythonNames'] = background_output['output']
+foreground_output['pythonNames'] = foreground_output['output']
+palette_output['pythonNames'] = palette_output['output']
 
 # Modify output to reflect blockly id names.
 background_output['output'] = [background_effects_map[bg] for bg in background_output['output']]
