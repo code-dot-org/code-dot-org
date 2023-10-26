@@ -1,13 +1,3 @@
-<%
-# TODO: Rails 4.1 may be able to be configured with the database url
-# instead of having to parse it here. Actually 4.0 can do that too but
-# it doesn't work with the way seamless_database_pool wants to
-# configure the read pool
-
-writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
-reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
-%>
-
 mysql_defaults: &mysql_defaults
   adapter: mysql2
   prepared_statements: false
@@ -48,22 +38,33 @@ mysql_defaults: &mysql_defaults
 environment_defaults: &environment_defaults
   primary:
     <<: *mysql_defaults
-    database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
-    host: <%= writer.host || 'localhost' %>
-    password: <%= writer.password || '' %>
-    port: <%= writer.port || 3306 %>
-    username: <%= writer.user || 'root' %>
-  <% if reader && reader != writer %>
+    <% if EnvironmentAwareDynamicConfigHelper.running_web_application? %>
+    host: <%= CDO.db_endpoint_proxy_writer %>
+    port: <%= CDO.db_endpoint_proxy_writer_port %>
+    <% else %>
+    # Connect directly to the database when not executing within a web application.
+    host: <%= CDO.db_endpoint_writer %>
+    port: <%= CDO.db_endpoint_writer_port %>
+    <% end %>
+    username: <%= CDO.db_credential_writer['username'] %>
+    password: <%= CDO.db_credential_writer['password'] %>
+    database: <%= CDO.dashboard_db_name %>
   primary_replica:
     replica: true
     <<: *mysql_defaults
-    database: <%= reader.path.sub(%r{^/},"") %>
-    host: <%= reader.host %>
-    password: <%= reader.password %>
-    port: <%= reader.port || 3306 %>
-    username: <%= reader.user %>
-  <% end %>
-
+    host: <%= CDO.db_endpoint_proxy_reader %>
+    port: <%= CDO.db_endpoint_proxy_reader_port %>
+    username: <%= CDO.db_credential_reader['username'] %>
+    password: <%= CDO.db_credential_reader['password'] %>
+    database: <%= CDO.dashboard_db_name %>
+  primary_reporting:
+    replica: true
+    <<: *mysql_defaults
+    host: <%= CDO.db_endpoint_proxy_reporting %>
+    port: <%= CDO.db_endpoint_proxy_reporting_port %>
+    username: <%= CDO.db_credential_reader['username'] %>
+    password: <%= CDO.db_credential_reader['password'] %>
+    database: <%= CDO.dashboard_db_name %>
 development:
   <<: *environment_defaults
 
@@ -86,12 +87,11 @@ test:
   # CI needs. To do that, we have to redefine the whole `primary` block
   primary:
     <<: *mysql_defaults
+    host: <%= CDO.db_endpoint_proxy_writer %>
+    port: <%= CDO.db_endpoint_proxy_writer_port %>
+    username: <%= CDO.db_credential_writer['username'] %>
+    password: <%= CDO.db_credential_writer['password'] %>
     database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
-    host: <%= writer.host || 'localhost' %>
-    password: <%= writer.password || '' %>
     pool: <%= ENV['CI'] ? 20 : 5 %>
-    port: <%= writer.port || 3306 %>
-    username: <%= writer.user || 'root' %>
-
 production:
   <<: *environment_defaults
