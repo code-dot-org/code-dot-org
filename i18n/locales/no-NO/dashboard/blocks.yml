@@ -55,6 +55,11 @@
           UNIT:
             '"measures"': takter
             '"seconds"': sekunder
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takter
+            '"seconds"': sekunder
       Dancelab_changeColorBy:
         text: endre {COLOR} {METHOD} av [AMOUNT]-[2]
         options:
@@ -505,6 +510,40 @@
             '"iceCream"': Iskrem
             '"default"': Lys
             '"neon"': Neon
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: velg bakgrunnseffekt {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Tilfeldig)"
+            '"circles"': Tunnel
+            '"color_cycle"': Farger
+            '"diamonds"': Diamanter
+            '"disco_ball"': Discokule
+            '"fireworks"': Fyrverkeri
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Rosa splætt
+            '"rainbow"': Regnbue
+            '"snowflakes"': Snø
+            '"text"': Sangtittel
+            '"galaxy"': Verdensrom
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"disco"': Kvadrater
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Svart-hvitt
+            '"cool"': Blåfarger
+            '"electronic"': Elektronisk
+            '"iceCream"': Iskrem
+            '"default"': Lys
+            '"neon"': Neon
+            '"rainbow"': Regnbue
             '"tropical"': Tropisk
             '"vintage"': Retro
             '"warm"': Rødfarger

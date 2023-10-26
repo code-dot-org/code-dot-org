@@ -51,15 +51,19 @@
           "name": "Betingelser i Minecraft"
         },
         "express-2017/Introduction": {
+          "name": "Introduksjon",
           "name": "Introduksjon"
         },
         "express-2017/Building a Foundation": {
+          "name": "Bygg ett grunnlag",
           "name": "Bygg ett grunnlag"
         },
         "express-2017/Nested Loops": {
+          "name": "Løkker i løkker",
           "name": "Løkker i løkker"
         },
         "express-2017/Conditionals in Minecraft": {
+          "name": "Betingelser i Minecraft",
           "name": "Betingelser i Minecraft"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -363,63 +367,83 @@
           "name": "Dansefest"
         },
         "csd3-2021/Variables": {
+          "name": "Variabler",
           "name": "Variabler"
         },
         "csd3-2021/Sprite Properties": {
+          "name": "Figuregenskaper",
           "name": "Figuregenskaper"
         },
         "csd3-2021/Text": {
+          "name": "tekst",
           "name": "tekst"
         },
         "csd3-2021/Conditionals": {
+          "name": "Betingelser",
           "name": "Betingelser"
         },
         "csd3-2021/Velocity": {
+          "name": "Hastighet",
           "name": "Hastighet"
         },
         "csd3-2021/Functions": {
+          "name": "Funksjoner",
           "name": "Funksjoner"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Funksjoner med parametre",
           "name": "Funksjoner med parametre"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Glade Kart",
           "name": "Glade Kart"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Flytt den, flytt den",
           "name": "Flytt den, flytt den"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Gå i spinn",
           "name": "Gå i spinn"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Den store begivenheten",
           "name": "Den store begivenheten"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binær armbånd",
           "name": "Binær armbånd"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Millimeterpapirprogrammering",
           "name": "Millimeterpapirprogrammering"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Relé programmering",
           "name": "Relé programmering"
         },
         "coursed-2021/Dance Party": {
+          "name": "Dansefest",
           "name": "Dansefest"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Betingelser med kort",
           "name": "Betingelser med kort"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Låtskriving",
           "name": "Låtskriving"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Morro med for løkker",
           "name": "Morro med for løkker"
         },
         "coursef-2021/Internet": {
+          "name": "Internett",
           "name": "Internett"
         },
         "express-2021/lesson-1": {
+          "name": "Dansefest",
           "name": "Dansefest"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
@@ -429,162 +453,215 @@
           "name": "De Neste Trinnene"
         },
         "csd3-2022/Variables": {
+          "name": "Variabler",
           "name": "Variabler"
         },
         "csd3-2022/Sprite Properties": {
+          "name": "Figuregenskaper",
           "name": "Figuregenskaper"
         },
         "csd3-2022/Text": {
+          "name": "tekst",
           "name": "tekst"
         },
         "csd3-2022/Conditionals": {
+          "name": "Betingelser",
           "name": "Betingelser"
         },
         "csd3-2022/Velocity": {
+          "name": "Hastighet",
           "name": "Hastighet"
         },
         "csd3-2022/Functions": {
+          "name": "Funksjoner",
           "name": "Funksjoner"
         },
         "csd6-2022/Functions": {
+          "name": "Funksjoner",
           "name": "Funksjoner"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Glade Kart",
           "name": "Glade Kart"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Flytt den, flytt den",
           "name": "Flytt den, flytt den"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Gå i spinn",
           "name": "Gå i spinn"
         },
         "coursec-2022/The Big Event": {
+          "name": "Den store begivenheten",
           "name": "Den store begivenheten"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binær armbånd",
           "name": "Binær armbånd"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Millimeterpapirprogrammering",
           "name": "Millimeterpapirprogrammering"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Relé programmering",
           "name": "Relé programmering"
         },
         "coursed-2022/Dance Party": {
+          "name": "Dansefest",
           "name": "Dansefest"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Betingelser med kort",
           "name": "Betingelser med kort"
         },
         "coursee-2022/Songwriting": {
+          "name": "Låtskriving",
           "name": "Låtskriving"
         },
         "coursef-2022/The Internet": {
+          "name": "Internett",
           "name": "Internett"
         },
         "express-2022/Dance Party": {
+          "name": "Dansefest",
           "name": "Dansefest"
         },
         "csd3-2023/Variables": {
+          "name": "Variabler",
           "name": "Variabler"
         },
         "csd3-2023/Sprite Properties": {
+          "name": "Figuregenskaper",
           "name": "Figuregenskaper"
         },
         "csd3-2023/Text": {
+          "name": "tekst",
           "name": "tekst"
         },
         "csd3-2023/Conditionals": {
+          "name": "Betingelser",
           "name": "Betingelser"
         },
         "csd3-2023/Velocity": {
+          "name": "Hastighet",
           "name": "Hastighet"
         },
         "csd3-2023/Functions": {
+          "name": "Funksjoner",
           "name": "Funksjoner"
         },
         "csd6a-2023/Functions": {
+          "name": "Funksjoner",
           "name": "Funksjoner"
         },
         "csd6b-2023/Functions": {
+          "name": "Funksjoner",
           "name": "Funksjoner"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Glade Kart",
           "name": "Glade Kart"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Flytt den, flytt den",
           "name": "Flytt den, flytt den"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Gå i spinn",
           "name": "Gå i spinn"
         },
         "coursec-2023/The Big Event": {
+          "name": "Den store begivenheten",
           "name": "Den store begivenheten"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binær armbånd",
           "name": "Binær armbånd"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Millimeterpapirprogrammering",
           "name": "Millimeterpapirprogrammering"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Relé programmering",
           "name": "Relé programmering"
         },
         "coursed-2023/Dance Party": {
+          "name": "Dansefest",
           "name": "Dansefest"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Betingelser med kort",
           "name": "Betingelser med kort"
         },
         "coursee-2023/Songwriting": {
+          "name": "Låtskriving",
           "name": "Låtskriving"
         },
         "coursef-2023/The Internet": {
+          "name": "Internett",
           "name": "Internett"
         },
         "express-2023/Dance Party": {
+          "name": "Dansefest",
           "name": "Dansefest"
         },
         "artist/Artist": {
+          "name": "Kunstner",
           "name": "Kunstner"
         },
         "dance-2019/Dance Party": {
+          "name": "Dansefest",
           "name": "Dansefest"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy kode",
           "name": "Flappy kode"
         },
         "frozen/Artist": {
+          "name": "Kode med Anna og Elsa",
           "name": "Kode med Anna og Elsa"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Spill-lab",
           "name": "Gumball Spill-lab"
         },
         "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: Heltens reise",
           "name": "Minecraft: Heltens reise"
         },
         "hoc-encryption/Simple Encryption": {
+          "name": "Enkel kryptering",
           "name": "Enkel kryptering"
         },
         "hourofcode/Maze": {
+          "name": "Labyrint",
           "name": "Labyrint"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Istid Spill-lab",
           "name": "Istid Spill-lab"
         },
         "infinity/Infinity": {
+          "name": "Disney Infinity Spill-Lab",
           "name": "Disney Infinity Spill-Lab"
         },
         "mc/Hour of Code 2015": {
+          "name": "Kodetimen med Minecraft",
           "name": "Kodetimen med Minecraft"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Kodetimens Minecraft-designer",
           "name": "Kodetimens Minecraft-designer"
         },
         "playlab/Play Lab": {
+          "name": "Spill-lab",
           "name": "Spill-lab"
         },
         "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Bygg en galakse med kode (JavaScript)",
           "name": "Star Wars: Bygg en galakse med kode (JavaScript)"
         },
         "allthethings/Jigsaw": {
