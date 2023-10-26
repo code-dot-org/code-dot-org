@@ -288,153 +288,202 @@
           "name": "Програмирање во Harvester"
         },
         "csd3-2021/Variables": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "csd3-2021/Sprites": {
+          "name": "Сприти",
           "name": "Сприти"
         },
         "csd3-2021/Text": {
+          "name": "Текст",
           "name": "Текст"
         },
         "coursea-2021/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat",
           "name": "Секвенционирање со Scrat"
         },
         "coursea-2021/Events: The Big Event": {
+          "name": "Големиот настан Џуниор",
           "name": "Големиот настан Џуниор"
         },
         "courseb-2021/Digital Trails": {
+          "name": "Дигитални патеки",
           "name": "Дигитални патеки"
         },
         "courseb-2021/The Right App": {
+          "name": "Вистинската апликација",
           "name": "Вистинската апликација"
         },
         "courseb-2021/Events: The Big Event": {
+          "name": "Големиот настан Џуниор",
           "name": "Големиот настан Џуниор"
         },
         "coursec-2021/Programming: My Robotic Friends": {
+          "name": "Моите роботски пријатели Џуниор",
           "name": "Моите роботски пријатели Џуниор"
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
+          "name": "Мој Loopy роботски пријатели Џуниор.",
           "name": "Мој Loopy роботски пријатели Џуниор."
         },
         "coursee-2021/Nested Loops in Artist": {
+          "name": "Фенси форми користејќи вгнездени јамки",
           "name": "Фенси форми користејќи вгнездени јамки"
         },
         "coursef-2021/lesson-2": {
+          "name": "Моќта на зборовите",
           "name": "Моќта на зборовите"
         },
         "coursef-2021/For Loops in Bee": {
+          "name": "За петелки со пчела",
           "name": "За петелки со пчела"
         },
         "coursef-2021/Simulating Experiments": {
+          "name": "Симулирање експерименти",
           "name": "Симулирање експерименти"
         },
         "express-2021/Swimming Fish in Sprite Lab": {
+          "name": "Пливачка риба во Sprite Lab",
           "name": "Пливачка риба во Sprite Lab"
         },
         "express-2021/For Loops with Bee": {
+          "name": "За петелки со пчела",
           "name": "За петелки со пчела"
         },
         "pre-express-2021/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat",
           "name": "Секвенционирање со Scrat"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "Компјутерски науки Основи"
         },
         "csd3-2022/Variables": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "csd3-2022/Sprites": {
+          "name": "Сприти",
           "name": "Сприти"
         },
         "csd3-2022/Text": {
+          "name": "Текст",
           "name": "Текст"
         },
         "coursea-2022/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat",
           "name": "Секвенционирање со Scrat"
         },
         "coursea-2022/The Big Event Jr": {
+          "name": "Големиот настан Џуниор",
           "name": "Големиот настан Џуниор"
         },
         "courseb-2022/Digital Trails": {
+          "name": "Дигитални патеки",
           "name": "Дигитални патеки"
         },
         "courseb-2022/The Right App": {
+          "name": "Вистинската апликација",
           "name": "Вистинската апликација"
         },
         "courseb-2022/The Big Event Jr": {
+          "name": "Големиот настан Џуниор",
           "name": "Големиот настан Џуниор"
         },
         "coursec-2022/My Robotic Friends Jr": {
+          "name": "Моите роботски пријатели Џуниор",
           "name": "Моите роботски пријатели Џуниор"
         },
         "coursec-2022/My Loopy Robotic Friends Jr": {
+          "name": "Мој Loopy роботски пријатели Џуниор.",
           "name": "Мој Loopy роботски пријатели Џуниор."
         },
         "coursee-2022/Fancy Shapes using Nested Loops": {
+          "name": "Фенси форми користејќи вгнездени јамки",
           "name": "Фенси форми користејќи вгнездени јамки"
         },
         "coursef-2022/The Power of Words": {
+          "name": "Моќта на зборовите",
           "name": "Моќта на зборовите"
         },
         "coursef-2022/Simulating Experiments": {
+          "name": "Симулирање експерименти",
           "name": "Симулирање експерименти"
         },
         "express-2022/Swimming Fish in Sprite Lab": {
+          "name": "Пливачка риба во Sprite Lab",
           "name": "Пливачка риба во Sprite Lab"
         },
         "express-2022/For Loops with Bee": {
+          "name": "За петелки со пчела",
           "name": "За петелки со пчела"
         },
         "pre-express-2022/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat",
           "name": "Секвенционирање со Scrat"
         },
         "csd3-2023/Variables": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "csd3-2023/Sprites": {
+          "name": "Сприти",
           "name": "Сприти"
         },
         "csd3-2023/Text": {
+          "name": "Текст",
           "name": "Текст"
         },
         "coursea-2023/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat",
           "name": "Секвенционирање со Scrat"
         },
         "coursea-2023/The Big Event Jr": {
+          "name": "Големиот настан Џуниор",
           "name": "Големиот настан Џуниор"
         },
         "courseb-2023/Digital Trails": {
+          "name": "Дигитални патеки",
           "name": "Дигитални патеки"
         },
         "courseb-2023/The Right App": {
+          "name": "Вистинската апликација",
           "name": "Вистинската апликација"
         },
         "courseb-2023/The Big Event Jr": {
+          "name": "Големиот настан Џуниор",
           "name": "Големиот настан Џуниор"
         },
         "coursec-2023/My Robotic Friends Jr": {
+          "name": "Моите роботски пријатели Џуниор",
           "name": "Моите роботски пријатели Џуниор"
         },
         "coursec-2023/My Loopy Robotic Friends Jr": {
+          "name": "Мој Loopy роботски пријатели Џуниор.",
           "name": "Мој Loopy роботски пријатели Џуниор."
         },
         "coursee-2023/Fancy Shapes using Nested Loops": {
+          "name": "Фенси форми користејќи вгнездени јамки",
           "name": "Фенси форми користејќи вгнездени јамки"
         },
         "coursef-2023/The Power of Words": {
+          "name": "Моќта на зборовите",
           "name": "Моќта на зборовите"
         },
         "coursef-2023/Simulating Experiments": {
+          "name": "Симулирање експерименти",
           "name": "Симулирање експерименти"
         },
         "express-2023/Swimming Fish in Sprite Lab": {
+          "name": "Пливачка риба во Sprite Lab",
           "name": "Пливачка риба во Sprite Lab"
         },
         "express-2023/For Loops with Bee": {
+          "name": "За петелки со пчела",
           "name": "За петелки со пчела"
         },
         "pre-express-2023/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat",
           "name": "Секвенционирање со Scrat"
         },
         "applab-1hour/Room Escape": {

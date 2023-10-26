@@ -3,15 +3,19 @@
     "data": {
       "reference_guides": {
         "csd-2022/game-lab": {
+          "display_name": "Работилница за апликации",
           "display_name": "Работилница за апликации"
         },
         "csd-2022/lists": {
+          "display_name": "Листи",
           "display_name": "Листи"
         },
         "csd-2022/sprites": {
+          "display_name": "Сприти",
           "display_name": "Сприти"
         },
         "csd-2022/variables": {
+          "display_name": "Променливи",
           "display_name": "Променливи"
         }
       }

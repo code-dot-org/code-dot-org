@@ -252,132 +252,175 @@
           "url": "https://curriculum.code.org/csf-20/express/vocab/"
         },
         "lists/csd/2021": {
+          "name": "Листи",
           "name": "Листи"
         },
         "variables_1/csd/2021": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "sprites_1/csd/2021": {
+          "name": "Сприти",
           "name": "Сприти"
         },
         "curriculum_guide_1/coursea/2021": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "curriculum_guide_1/courseb/2021": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "curriculum_guide_1/coursec/2021": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "curriculum_guide_1/coursed/2021": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "curriculum_guide_1/coursee/2021": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "curriculum_guide_1/coursef/2021": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "variables_video/express/2021": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "lists/csd/2022": {
+          "name": "Листи",
           "name": "Листи"
         },
         "variables/csd/2022": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "variables_3/csd/2022": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "sprites/csd/2022": {
+          "name": "Сприти",
           "name": "Сприти"
         },
         "sprites_1/csd/2022": {
+          "name": "Сприти",
           "name": "Сприти"
         },
         "text/csd/2022": {
+          "name": "Текст",
           "name": "Текст"
         },
         "variables_1/csd/2022": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "variables_2/csd/2022": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "all_resources/coursea/2022": {
+          "url": "/s/курс-2022/ресурси",
           "url": "/s/курс-2022/ресурси"
         },
         "all_standards/coursea/2022": {
+          "url": "/s/курс-2022/стандарди",
           "url": "/s/курс-2022/стандарди"
         },
         "all_vocabulary/coursea/2022": {
+          "url": "/s/курс-2022/вокаб",
           "url": "/s/курс-2022/вокаб"
         },
         "curriculum_guide/coursea/2022": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "virtual_lesson_modifications/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view",
           "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
         },
         "all_resources/courseb/2022": {
+          "url": "/s/курс-2022/ресурси",
           "url": "/s/курс-2022/ресурси"
         },
         "all_standards/courseb/2022": {
+          "url": "/s/курс-2022/стандарди",
           "url": "/s/курс-2022/стандарди"
         },
         "all_vocabulary/courseb/2022": {
+          "url": "/s/курс-2022/вокаб",
           "url": "/s/курс-2022/вокаб"
         },
         "curriculum_guide/courseb/2022": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "virtual_lesson_modifications/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view",
           "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
+          "url": "https://youtu.be/4Wugxc80fNU",
           "url": "https://youtu.be/4Wugxc80fNU"
         },
         "curriculum_guide/coursec/2022": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "curriculum_guide/coursed/2022": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "curriculum_guide/coursee/2022": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "curriculum_guide/coursef/2022": {
+          "name": "Наставна програма Водич",
           "name": "Наставна програма Водич"
         },
         "variables/express/2022": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "lists/csd/2023": {
+          "name": "Листи",
           "name": "Листи"
         },
         "variables/csd/2023": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "variables_1/csd/2023": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "variables_2/csd/2023": {
+          "name": "Променливи",
           "name": "Променливи"
         },
         "sprites/csd/2023": {
+          "name": "Сприти",
           "name": "Сприти"
         },
         "sprites_1/csd/2023": {
+          "name": "Сприти",
           "name": "Сприти"
         },
         "text/csd/2023": {
+          "name": "Текст",
           "name": "Текст"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2023": {
+          "url": "https://youtu.be/4Wugxc80fNU",
           "url": "https://youtu.be/4Wugxc80fNU"
         },
         "variables/express/2023": {
+          "name": "Променливи",
           "name": "Променливи"
         }
       }

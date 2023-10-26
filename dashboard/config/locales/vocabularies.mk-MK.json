@@ -3,141 +3,186 @@
     "data": {
       "vocabularies": {
         "input/csd/2021": {
+          "word": "Влез",
           "word": "Влез"
         },
         "variable/csd/2021": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "function/csd/2021": {
+          "word": "Функција",
           "word": "Функција"
         },
         "function/coursee/2021": {
+          "word": "Функција",
           "word": "Функција"
         },
         "define/coursee/2021": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "variable/coursef/2021": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "input/coursef/2021": {
+          "word": "Влез",
           "word": "Влез"
         },
         "define/coursef/2021": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "function/express/2021": {
+          "word": "Функција",
           "word": "Функција"
         },
         "variable/express/2021": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "define/express/2021": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "input/csd/2022": {
+          "word": "Влез",
           "word": "Влез"
         },
         "variable/csd/2022": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "function/csd/2022": {
+          "word": "Функција",
           "word": "Функција"
         },
         "data/coursec/2022": {
+          "word": "Податоци",
           "word": "Податоци"
         },
         "function/coursee/2022": {
+          "word": "Функција",
           "word": "Функција"
         },
         "define/coursee/2022": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "variable/coursef/2022": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "input/coursef/2022": {
+          "word": "Влез",
           "word": "Влез"
         },
         "define/coursef/2022": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "function/express/2022": {
+          "word": "Функција",
           "word": "Функција"
         },
         "variable/express/2022": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "define/express/2022": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "code/csc-adaptations/2023": {
+          "word": "Код",
           "word": "Код"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Код",
           "word": "Код"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Код",
           "word": "Код"
         },
         "comments/csc-starquilts/2023": {
+          "word": "Коментари",
           "word": "Коментари"
         },
         "code/poetry/2023": {
+          "word": "Код",
           "word": "Код"
         },
         "input/csd/2023": {
+          "word": "Влез",
           "word": "Влез"
         },
         "variable/csd/2023": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "function/csd/2023": {
+          "word": "Функција",
           "word": "Функција"
         },
         "data/coursec/2023": {
+          "word": "Податоци",
           "word": "Податоци"
         },
         "function/coursee/2023": {
+          "word": "Функција",
           "word": "Функција"
         },
         "define/coursee/2023": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "variable/coursef/2023": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "input/coursef/2023": {
+          "word": "Влез",
           "word": "Влез"
         },
         "define/coursef/2023": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "function/express/2023": {
+          "word": "Функција",
           "word": "Функција"
         },
         "variable/express/2023": {
+          "word": "Променлива",
           "word": "Променлива"
         },
         "define/express/2023": {
+          "word": "Дефинирајте",
           "word": "Дефинирајте"
         },
         "loops/aquatic/unversioned": {
+          "word": "Лупови",
           "word": "Лупови"
         },
         "code/artist/unversioned": {
+          "word": "Код",
           "word": "Код"
         },
         "function/hero/unversioned": {
+          "word": "Функција",
           "word": "Функција"
         },
         "code/poem-art/2021": {
           "word": "Код"
         },
         "code/sports/unversioned": {
+          "word": "Код",
           "word": "Код"
         }
       }
