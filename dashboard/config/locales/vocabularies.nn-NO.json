@@ -3,384 +3,510 @@
     "data": {
       "vocabularies": {
         "input/csd/2021": {
+          "word": "Inngang",
           "word": "Inngang"
         },
         "copyright/csd/2021": {
+          "word": "Opphavsrett",
           "word": "Opphavsrett"
         },
         "debugging/csd/2021": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "variable/csd/2021": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "conditionals/csd/2021": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "abstraction/csd/2021": {
+          "word": "Abstraksjon",
           "word": "Abstraksjon"
         },
         "function/csd/2021": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "debugging/coursea/2021": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "drop/coursea/2021": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/courseb/2021": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "drop/courseb/2021": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/coursec/2021": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "sequencing/coursec/2021": {
+          "word": "Sekvensiering",
           "word": "Sekvensiering"
         },
         "binary/coursec/2021": {
+          "word": "Binær",
           "word": "Binær"
         },
         "debugging/coursed/2021": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "conditionals/coursed/2021": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "copyright/coursee/2021": {
+          "word": "Opphavsrett",
           "word": "Opphavsrett"
         },
         "function/coursee/2021": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "conditionals/coursee/2021": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "define/coursee/2021": {
+          "word": "Definer",
           "word": "Definer"
         },
         "variable/coursef/2021": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "input/coursef/2021": {
+          "word": "Inngang",
           "word": "Inngang"
         },
         "internet/coursef/2021": {
+          "word": "Internett",
           "word": "Internett"
         },
         "define/coursef/2021": {
+          "word": "Definer",
           "word": "Definer"
         },
         "debugging/express/2021": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "sequencing/express/2021": {
+          "word": "Sekvensiering",
           "word": "Sekvensiering"
         },
         "conditionals/express/2021": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/express/2021": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "variable/express/2021": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "define/express/2021": {
+          "word": "Definer",
           "word": "Definer"
         },
         "drop/pre-express/2021": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/pre-express/2021": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "input/csd/2022": {
+          "word": "Inngang",
           "word": "Inngang"
         },
         "copyright/csd/2022": {
+          "word": "Opphavsrett",
           "word": "Opphavsrett"
         },
         "debugging/csd/2022": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "variable/csd/2022": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "conditionals/csd/2022": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "abstraction/csd/2022": {
+          "word": "Abstraksjon",
           "word": "Abstraksjon"
         },
         "function/csd/2022": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "debugging/coursea/2022": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "drop/coursea/2022": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/courseb/2022": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "drop/courseb/2022": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/coursec/2022": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "sequencing/coursec/2022": {
+          "word": "Sekvensiering",
           "word": "Sekvensiering"
         },
         "binary/coursec/2022": {
+          "word": "Binær",
           "word": "Binær"
         },
         "debugging/coursed/2022": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "conditionals/coursed/2022": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/coursee/2022": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "conditionals/coursee/2022": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "copyright/coursee/2022": {
+          "word": "Opphavsrett",
           "word": "Opphavsrett"
         },
         "define/coursee/2022": {
+          "word": "Definer",
           "word": "Definer"
         },
         "variable/coursef/2022": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "input/coursef/2022": {
+          "word": "Inngang",
           "word": "Inngang"
         },
         "internet/coursef/2022": {
+          "word": "Internett",
           "word": "Internett"
         },
         "define/coursef/2022": {
+          "word": "Definer",
           "word": "Definer"
         },
         "debugging/express/2022": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "sequencing/express/2022": {
+          "word": "Sekvensiering",
           "word": "Sekvensiering"
         },
         "conditionals/express/2022": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/express/2022": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "variable/express/2022": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "define/express/2022": {
+          "word": "Definer",
           "word": "Definer"
         },
         "drop/pre-express/2022": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/pre-express/2022": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "code/csc-adaptations/2023": {
+          "word": "Kode",
           "word": "Kode"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Kode",
           "word": "Kode"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Kode",
           "word": "Kode"
         },
         "artist/csc-starquilts/2023": {
+          "word": "Kunstnar",
           "word": "Kunstnar"
         },
         "comments/csc-starquilts/2023": {
+          "word": "Kommentar",
           "word": "Kommentar"
         },
         "code/poetry/2023": {
+          "word": "Kode",
           "word": "Kode"
         },
         "input/csd/2023": {
+          "word": "Inngang",
           "word": "Inngang"
         },
         "copyright/csd/2023": {
+          "word": "Opphavsrett",
           "word": "Opphavsrett"
         },
         "debugging/csd/2023": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "variable/csd/2023": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "conditionals/csd/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "abstraction/csd/2023": {
+          "word": "Abstraksjon",
           "word": "Abstraksjon"
         },
         "function/csd/2023": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "debugging/coursea/2023": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "drop/coursea/2023": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/courseb/2023": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "drop/courseb/2023": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/coursec/2023": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "sequencing/coursec/2023": {
+          "word": "Sekvensiering",
           "word": "Sekvensiering"
         },
         "binary/coursec/2023": {
+          "word": "Binær",
           "word": "Binær"
         },
         "debugging/coursed/2023": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "conditionals/coursed/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/coursee/2023": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "conditionals/coursee/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "copyright/coursee/2023": {
+          "word": "Opphavsrett",
           "word": "Opphavsrett"
         },
         "define/coursee/2023": {
+          "word": "Definer",
           "word": "Definer"
         },
         "variable/coursef/2023": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "input/coursef/2023": {
+          "word": "Inngang",
           "word": "Inngang"
         },
         "internet/coursef/2023": {
+          "word": "Internett",
           "word": "Internett"
         },
         "define/coursef/2023": {
+          "word": "Definer",
           "word": "Definer"
         },
         "debugging/express/2023": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "sequencing/express/2023": {
+          "word": "Sekvensiering",
           "word": "Sekvensiering"
         },
         "conditionals/express/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/express/2023": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "variable/express/2023": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "define/express/2023": {
+          "word": "Definer",
           "word": "Definer"
         },
         "drop/pre-express/2023": {
+          "word": "Dropp",
           "word": "Dropp"
         },
         "debugging/pre-express/2023": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "network/how-ai-works/2023": {
+          "word": "Nettverk",
           "word": "Nettverk"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "loops/aquatic/unversioned": {
+          "word": "Løkker",
           "word": "Løkker"
         },
         "code/artist/unversioned": {
+          "word": "Kode",
           "word": "Kode"
         },
         "debugging/artist/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/basketball/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/flappy/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/frozen/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/gumball/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/hero/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "function/hero/unversioned": {
+          "word": "Funksjon",
           "word": "Funksjon"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/iceage/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/infinity/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/mc/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/minecraft/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/playlab/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "code/poem-art/2021": {
           "word": "Kode"
         },
         "code/sports/unversioned": {
+          "word": "Kode",
           "word": "Kode"
         },
         "debugging/sports/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/starwars/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Feilsøking",
           "word": "Feilsøking"
         }
       }

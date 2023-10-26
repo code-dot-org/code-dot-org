@@ -3,72 +3,95 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "App-lab",
           "display_name": "App-lab"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Oversyn",
           "display_name": "Oversyn"
         },
         "csd-2022/css-overview": {
+          "display_name": "Oversyn",
           "display_name": "Oversyn"
         },
         "csd-2022/design-mode": {
+          "display_name": "Utformingsmodus",
           "display_name": "Utformingsmodus"
         },
         "csd-2022/for-loops": {
+          "display_name": "For-løkker",
           "display_name": "For-løkker"
         },
         "csd-2022/functions": {
+          "display_name": "Funksjonar",
           "display_name": "Funksjonar"
         },
         "csd-2022/game-lab": {
+          "display_name": "Spel-lab",
           "display_name": "Spel-lab"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Oversyn",
           "display_name": "Oversyn"
         },
         "csd-2022/html-overview": {
+          "display_name": "Oversyn",
           "display_name": "Oversyn"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Oversyn",
           "display_name": "Oversyn"
         },
         "csd-2022/lists": {
+          "display_name": "Lister",
           "display_name": "Lister"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Maker-verktøykasse",
           "display_name": "Maker-verktøykasse"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Oversyn",
           "display_name": "Oversyn"
         },
         "csd-2022/other": {
+          "display_name": "Anna",
           "display_name": "Anna"
         },
         "csd-2022/other-overview": {
+          "display_name": "Oversyn",
           "display_name": "Oversyn"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Oversyn",
           "display_name": "Oversyn"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Eigenskapar ved Sprite",
           "display_name": "Eigenskapar ved Sprite"
         },
         "csd-2022/sprites": {
+          "display_name": "Sprites",
           "display_name": "Sprites"
         },
         "csd-2022/variables": {
+          "display_name": "Variablar",
           "display_name": "Variablar"
         },
         "csd-2022/velocity": {
+          "display_name": "Fart",
           "display_name": "Fart"
         },
         "csd-2022/web-lab": {
+          "display_name": "Nett-lab",
           "display_name": "Nett-lab"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         }
       }
