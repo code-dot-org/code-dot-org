@@ -13,9 +13,9 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
 import {AiOutput} from '../types';
-
-const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
-const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
+import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
+import aiBotBorder from '@cdo/static/dance/ai/ai-bot-border.png';
+import aiBotBeam from '@cdo/static/dance/ai/blue-scanner.png';
 
 enum Mode {
   SELECT_INPUTS = 'selectInputs',
@@ -26,16 +26,12 @@ enum Mode {
   EXPLANATION = 'explanation',
 }
 
-type AiModalItem = {
-  id: string;
-  name: string;
-};
-
 type AiModalReturnedItem = {
   id: string;
   name: string;
   url: string;
   available: boolean;
+  emoji: string;
 };
 
 interface DanceAiProps {
@@ -46,9 +42,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const dispatch = useAppDispatch();
 
   const SLOT_COUNT = 3;
-
-  const inputLibraryFilename = 'ai-inputs';
-  const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
 
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
@@ -89,15 +82,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     return `/blockly/media/dance/ai/emoji/${id}.svg`;
   };
 
-  const getAllItems = (slotIndex: number) => {
+  const getAllItems = (slotIndex: number): AiModalReturnedItem[] => {
     if (slotIndex >= SLOT_COUNT) {
       return [];
     }
 
-    return inputLibrary.items.map((item: AiModalItem) => {
+    return inputLibraryJson.items.map(item => {
       return {
-        id: item.id,
-        name: item.name,
+        ...item,
         url: getImageUrl(item.id),
         available: !inputs.includes(item.id),
       };
@@ -105,9 +97,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const getItemName = (id: string) => {
-    return inputLibrary.items.find(
-      (item: AiModalReturnedItem) => item.id === id
-    )?.name;
+    return inputLibraryJson.items.find(item => item.id === id)?.name;
   };
 
   const handleItemClick = (id: string) => {
@@ -282,7 +272,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       initialFocus={false}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <img src={aiBotBorder} className={moduleStyles.botImage} />
+        <img
+          src={aiBotBorder}
+          className={moduleStyles.botImage}
+          alt="A.I. Bot"
+        />
         generate &nbsp;
         <div className={moduleStyles.inputsContainer}>
           {Array.from(Array(SLOT_COUNT).keys()).map(index => (
@@ -359,25 +353,23 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         >
           {mode === Mode.SELECT_INPUTS && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
-              {getAllItems(currentInputSlot).map(
-                (item: AiModalReturnedItem) => {
-                  return (
-                    <button
-                      type={'button'}
-                      key={item.id}
-                      onClick={() => item.available && handleItemClick(item.id)}
-                      style={{
-                        backgroundImage: `url(${item.url})`,
-                      }}
-                      className={classNames(
-                        moduleStyles.item,
-                        item.available && moduleStyles.itemAvailable
-                      )}
-                      title={item.name}
-                    />
-                  );
-                }
-              )}
+              {getAllItems(currentInputSlot).map(item => {
+                return (
+                  <button
+                    type={'button'}
+                    key={item.id}
+                    onClick={() => item.available && handleItemClick(item.id)}
+                    style={{
+                      backgroundImage: `url(${item.url})`,
+                    }}
+                    className={classNames(
+                      moduleStyles.item,
+                      item.available && moduleStyles.itemAvailable
+                    )}
+                    title={item.emoji}
+                  />
+                );
+              })}
             </div>
           )}
         </div>
@@ -454,8 +446,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       !processingDone &&
                       moduleStyles.beamImageVisible
                   )}
+                  alt="A.I. Bot Beam"
                 />
-                <img src={aiBotBorder} className={moduleStyles.image} />
+                <img
+                  src={aiBotBorder}
+                  className={moduleStyles.image}
+                  alt="A.I. Bot"
+                />
               </div>
             </div>
           )}
