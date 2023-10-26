@@ -279,6 +279,24 @@ describe('LearningGoal', () => {
     );
   });
 
+  it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.NONE,
+        }}
+      />
+    );
+    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+      'No Evidence'
+    );
+  });
+
   it('passes isStudent down to EvidenceLevels', () => {
     const props = {
       learningGoal: {

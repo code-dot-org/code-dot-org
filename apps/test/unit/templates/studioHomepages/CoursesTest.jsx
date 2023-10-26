@@ -35,7 +35,6 @@ describe('Courses', () => {
         'SpecialAnnouncement',
         'CourseBlocksWrapper',
         'CourseBlocksHoc',
-        'LocalClassActionBlock',
       ]);
     });
 
