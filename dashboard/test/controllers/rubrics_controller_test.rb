@@ -171,6 +171,7 @@ class RubricsControllerTest < ActionController::TestCase
     learning_goal = create :learning_goal
     rubric_ai_evaluation = create(
       :rubric_ai_evaluation,
+      rubric: @rubric,
       user: student,
       requester: @teacher,
       status: 1
@@ -301,11 +302,37 @@ class RubricsControllerTest < ActionController::TestCase
     Timecop.freeze do
       learning_goal = create :learning_goal, rubric: @rubric
       # add an earlier evaluation to make sure we're covering the logic which tries to find the most recent evaluation
-      create :learning_goal_ai_evaluation, user: @student, learning_goal: learning_goal, requester: @teacher
+      rubric_ai_evaluation = create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: 1
+      )
+      create(
+        :learning_goal_ai_evaluation,
+        rubric_ai_evaluation: rubric_ai_evaluation,
+        user: @student,
+        learning_goal: learning_goal,
+        requester: @teacher
+      )
       Timecop.travel 1.minute
       create :user_level, user: @student, script: @rubric.lesson.script, level: @level
       Timecop.travel 1.minute
-      create :learning_goal_ai_evaluation, user: @student, learning_goal: learning_goal, requester: @teacher
+      rubric_ai_evaluation2 = create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: 1
+      )
+      create(
+        :learning_goal_ai_evaluation,
+        rubric_ai_evaluation: rubric_ai_evaluation2,
+        user: @student,
+        learning_goal: learning_goal,
+        requester: @teacher
+      )
       Timecop.travel 1.minute
       sign_in @teacher
 
@@ -333,7 +360,20 @@ class RubricsControllerTest < ActionController::TestCase
   test "run ai evaluations succeeds if attempt is more recent than evaluation" do
     Timecop.freeze do
       learning_goal = create :learning_goal, rubric: @rubric
-      create :learning_goal_ai_evaluation, user: @student, learning_goal: learning_goal, requester: @teacher
+      rubric_ai_evaluation = create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: @student,
+        requester: @teacher,
+        status: 1
+      )
+      create(
+        :learning_goal_ai_evaluation,
+        rubric_ai_evaluation: rubric_ai_evaluation,
+        user: @student,
+        learning_goal: learning_goal,
+        requester: @teacher
+      )
       Timecop.travel 1.minute
       create :user_level, user: @student, script: @rubric.lesson.script, level: @level
       sign_in @teacher
