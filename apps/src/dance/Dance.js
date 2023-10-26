@@ -484,10 +484,12 @@ Dance.prototype.preview = async function () {
 
   const charactersReferenced = utils.computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
-  this.hooks.find(v => v.name === 'runUserSetup').func();
 
   const previewDraw = () => {
     this.nativeAPI.setEffectsInPreviewMode(true);
+
+    // initializes effects, need to happen in preview mode
+    this.hooks.find(v => v.name === 'runUserSetup').func();
 
     // redraw() (rather than draw()) is p5's recommended way
     // of drawing once.
