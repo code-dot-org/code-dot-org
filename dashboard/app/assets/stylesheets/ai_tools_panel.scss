@@ -6,7 +6,7 @@
   top: 85px;
   bottom: 20px;
   right: 0;
-  width: 200px;
+  width: 800px;
   transition: right 0.5s;
 
   background: $lightest_cyan;
@@ -25,7 +25,7 @@
     cursor: pointer;
     transition: right 0.5s;
     position: absolute;
-    right: 200px;
+    right: 800px;
     top: 50%;
     border-radius: 10px 0 0 10px;
     color: $white;
@@ -58,20 +58,14 @@
   }
 
   &.hidden {
-    right: -195px;
+    right: -795px;
     .hide-handle {
-      right: 200px;
+      right: 800px;
       display: none;
     }
     .show-handle {
-      right: 200px;
+      right: 800px;
       display: block;
     }
-  }
-
-  select {
-    width: 190px;
-    display: block;
-    margin: 5px;
   }
 }
