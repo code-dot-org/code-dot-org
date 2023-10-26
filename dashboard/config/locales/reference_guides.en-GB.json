@@ -3,9 +3,11 @@
     "data": {
       "reference_guides": {
         "csd-2022/lists": {
+          "display_name": "Lists",
           "display_name": "Lists"
         },
         "csd-2022/variables": {
+          "display_name": "Variables",
           "display_name": "Variables"
         }
       }
