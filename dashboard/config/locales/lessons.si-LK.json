@@ -39,12 +39,15 @@
           "name": "පදනමක් තැනීම"
         },
         "express-2017/Introduction": {
+          "name": "හැදින්වීම",
           "name": "හැදින්වීම"
         },
         "express-2017/Building a Foundation": {
+          "name": "පදනමක් තැනීම",
           "name": "පදනමක් තැනීම"
         },
         "express-2017/Nested Loops": {
+          "name": "නැවත නැවත සිදුවන ලුප",
           "name": "නැවත නැවත සිදුවන ලුප"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -315,177 +318,234 @@
           "name": "For ලුපයේ සතුට"
         },
         "csd3-2021/Variables": {
+          "name": "විචල්‍යන්",
           "name": "විචල්‍යන්"
         },
         "csd3-2021/Text": {
+          "name": "පෙළ",
           "name": "පෙළ"
         },
         "csd3-2021/Conditionals": {
+          "name": "කන්ඩිෂනලස්",
           "name": "කන්ඩිෂනලස්"
         },
         "csd3-2021/Functions": {
+          "name": "ශ්‍රිතයන්",
           "name": "ශ්‍රිතයන්"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "පරාමිතියන් සහිත ශ්‍රිත",
           "name": "පරාමිතියන් සහිත ශ්‍රිත"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "සතුටු සිතියම්",
           "name": "සතුටු සිතියම්"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න",
           "name": "එය ගෙන යන්න, ගෙන යන්න"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "ඔල්මාද වීම",
           "name": "ඔල්මාද වීම"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "විශාල සිදුවීම",
           "name": "විශාල සිදුවීම"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "ද්විමය වළලු",
           "name": "ද්විමය වළලු"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්",
           "name": "ප්‍රස්තාර රටා වැඩසටහන්"
         },
         "coursed-2021/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය",
           "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික",
           "name": "කාඩ්පත් සමඟ කොන්දේසික"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "ගීත ලිවීම",
           "name": "ගීත ලිවීම"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "For ලුපයේ සතුට",
           "name": "For ලුපයේ සතුට"
         },
         "coursef-2021/Internet": {
+          "name": "අන්තර්ජාලය",
           "name": "අන්තර්ජාලය"
         },
         "kodea-pd-2021/Next Steps": {
           "name": "ඉදිරි පියවර"
         },
         "csd3-2022/Variables": {
+          "name": "විචල්‍යන්",
           "name": "විචල්‍යන්"
         },
         "csd3-2022/Text": {
+          "name": "පෙළ",
           "name": "පෙළ"
         },
         "csd3-2022/Conditionals": {
+          "name": "කන්ඩිෂනලස්",
           "name": "කන්ඩිෂනලස්"
         },
         "csd3-2022/Functions": {
+          "name": "ශ්‍රිතයන්",
           "name": "ශ්‍රිතයන්"
         },
         "csd6-2022/Functions": {
+          "name": "ශ්‍රිතයන්",
           "name": "ශ්‍රිතයන්"
         },
         "coursea-2022/Happy Maps": {
+          "name": "සතුටු සිතියම්",
           "name": "සතුටු සිතියම්"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න",
           "name": "එය ගෙන යන්න, ගෙන යන්න"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "ඔල්මාද වීම",
           "name": "ඔල්මාද වීම"
         },
         "coursec-2022/The Big Event": {
+          "name": "විශාල සිදුවීම",
           "name": "විශාල සිදුවීම"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "ද්විමය වළලු",
           "name": "ද්විමය වළලු"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්",
           "name": "ප්‍රස්තාර රටා වැඩසටහන්"
         },
         "coursed-2022/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය",
           "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික",
           "name": "කාඩ්පත් සමඟ කොන්දේසික"
         },
         "coursee-2022/Songwriting": {
+          "name": "ගීත ලිවීම",
           "name": "ගීත ලිවීම"
         },
         "coursef-2022/The Internet": {
+          "name": "අන්තර්ජාලය",
           "name": "අන්තර්ජාලය"
         },
         "csd3-2023/Variables": {
+          "name": "විචල්‍යන්",
           "name": "විචල්‍යන්"
         },
         "csd3-2023/Text": {
+          "name": "පෙළ",
           "name": "පෙළ"
         },
         "csd3-2023/Conditionals": {
+          "name": "කන්ඩිෂනලස්",
           "name": "කන්ඩිෂනලස්"
         },
         "csd3-2023/Functions": {
+          "name": "ශ්‍රිතයන්",
           "name": "ශ්‍රිතයන්"
         },
         "csd6a-2023/Functions": {
+          "name": "ශ්‍රිතයන්",
           "name": "ශ්‍රිතයන්"
         },
         "csd6b-2023/Functions": {
+          "name": "ශ්‍රිතයන්",
           "name": "ශ්‍රිතයන්"
         },
         "coursea-2023/Happy Maps": {
+          "name": "සතුටු සිතියම්",
           "name": "සතුටු සිතියම්"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න",
           "name": "එය ගෙන යන්න, ගෙන යන්න"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "ඔල්මාද වීම",
           "name": "ඔල්මාද වීම"
         },
         "coursec-2023/The Big Event": {
+          "name": "විශාල සිදුවීම",
           "name": "විශාල සිදුවීම"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "ද්විමය වළලු",
           "name": "ද්විමය වළලු"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්",
           "name": "ප්‍රස්තාර රටා වැඩසටහන්"
         },
         "coursed-2023/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය",
           "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික",
           "name": "කාඩ්පත් සමඟ කොන්දේසික"
         },
         "coursee-2023/Songwriting": {
+          "name": "ගීත ලිවීම",
           "name": "ගීත ලිවීම"
         },
         "coursef-2023/The Internet": {
+          "name": "අන්තර්ජාලය",
           "name": "අන්තර්ජාලය"
         },
         "artist/Artist": {
+          "name": "කලාකරු",
           "name": "කලාකරු"
         },
         "flappy/Flappy Code": {
+          "name": "ෆ්ලැපි කේතය",
           "name": "ෆ්ලැපි කේතය"
         },
         "frozen/Artist": {
+          "name": "ඇනා සහ එල්සා සමඟ කේතනය කරන්න",
           "name": "ඇනා සහ එල්සා සමඟ කේතනය කරන්න"
         },
         "gumball/Gumball Play Lab": {
+          "name": "ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය",
           "name": "ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය"
         },
         "hourofcode/Maze": {
+          "name": "පැටලිලි සහිත මාර්ගය",
           "name": "පැටලිලි සහිත මාර්ගය"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය",
           "name": "අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය"
         },
         "infinity/Infinity": {
+          "name": "ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය",
           "name": "ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code",
           "name": "Minecraft Hour of Code"
         },
         "playlab/Play Lab": {
+          "name": "ක්‍රීඩා පරීක්ෂණාගාරය",
           "name": "ක්‍රීඩා පරීක්ෂණාගාරය"
         },
         "starwars/Hour of Code 2015": {
+          "name": "Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)",
           "name": "Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)"
         },
         "allthethings/Jigsaw": {

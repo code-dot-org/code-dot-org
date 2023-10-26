@@ -3,336 +3,446 @@
     "data": {
       "vocabularies": {
         "copyright/csd/2021": {
+          "word": "ප්‍රකාශන හිමිකම",
           "word": "ප්‍රකාශන හිමිකම"
         },
         "variable/csd/2021": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "conditionals/csd/2021": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "abstraction/csd/2021": {
+          "word": "ඇබ්ස්ට්‍රැක්ෂන්",
           "word": "ඇබ්ස්ට්‍රැක්ෂන්"
         },
         "function/csd/2021": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "programming/coursea/2021": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "programming/courseb/2021": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "programming/coursec/2021": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "binary/coursec/2021": {
+          "word": "ද්විමය",
           "word": "ද්විමය"
         },
         "programming/coursed/2021": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "code/coursed/2021": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "conditionals/coursed/2021": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "copyright/coursee/2021": {
+          "word": "ප්‍රකාශන හිමිකම",
           "word": "ප්‍රකාශන හිමිකම"
         },
         "function/coursee/2021": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "conditionals/coursee/2021": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "define/coursee/2021": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "variable/coursef/2021": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "internet/coursef/2021": {
+          "word": "අන්තර්ජාලය",
           "word": "අන්තර්ජාලය"
         },
         "define/coursef/2021": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "programming/express/2021": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "code/express/2021": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "conditionals/express/2021": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "function/express/2021": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "variable/express/2021": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "define/express/2021": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "programming/pre-express/2021": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "copyright/csd/2022": {
+          "word": "ප්‍රකාශන හිමිකම",
           "word": "ප්‍රකාශන හිමිකම"
         },
         "variable/csd/2022": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "conditionals/csd/2022": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "abstraction/csd/2022": {
+          "word": "ඇබ්ස්ට්‍රැක්ෂන්",
           "word": "ඇබ්ස්ට්‍රැක්ෂන්"
         },
         "function/csd/2022": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "programming/coursea/2022": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "programming/courseb/2022": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "programming/coursec/2022": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "data/coursec/2022": {
+          "word": "දත්ත",
           "word": "දත්ත"
         },
         "binary/coursec/2022": {
+          "word": "ද්විමය",
           "word": "ද්විමය"
         },
         "programming/coursed/2022": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "code/coursed/2022": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "conditionals/coursed/2022": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "function/coursee/2022": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "conditionals/coursee/2022": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "copyright/coursee/2022": {
+          "word": "ප්‍රකාශන හිමිකම",
           "word": "ප්‍රකාශන හිමිකම"
         },
         "define/coursee/2022": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "variable/coursef/2022": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "internet/coursef/2022": {
+          "word": "අන්තර්ජාලය",
           "word": "අන්තර්ජාලය"
         },
         "define/coursef/2022": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "programming/express/2022": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "code/express/2022": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "conditionals/express/2022": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "function/express/2022": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "variable/express/2022": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "define/express/2022": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "programming/pre-express/2022": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "code/csc-adaptations/2023": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/csc-ecosystems/2023": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "artist/csc-starquilts/2023": {
+          "word": "කලාකරු",
           "word": "කලාකරු"
         },
         "code/poetry/2023": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "copyright/csd/2023": {
+          "word": "ප්‍රකාශන හිමිකම",
           "word": "ප්‍රකාශන හිමිකම"
         },
         "variable/csd/2023": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "conditionals/csd/2023": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "abstraction/csd/2023": {
+          "word": "ඇබ්ස්ට්‍රැක්ෂන්",
           "word": "ඇබ්ස්ට්‍රැක්ෂන්"
         },
         "function/csd/2023": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "programming/coursea/2023": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "programming/courseb/2023": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "programming/coursec/2023": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "data/coursec/2023": {
+          "word": "දත්ත",
           "word": "දත්ත"
         },
         "binary/coursec/2023": {
+          "word": "ද්විමය",
           "word": "ද්විමය"
         },
         "programming/coursed/2023": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "code/coursed/2023": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "conditionals/coursed/2023": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "function/coursee/2023": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "conditionals/coursee/2023": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "copyright/coursee/2023": {
+          "word": "ප්‍රකාශන හිමිකම",
           "word": "ප්‍රකාශන හිමිකම"
         },
         "define/coursee/2023": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "variable/coursef/2023": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "internet/coursef/2023": {
+          "word": "අන්තර්ජාලය",
           "word": "අන්තර්ජාලය"
         },
         "define/coursef/2023": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "programming/express/2023": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "code/express/2023": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "conditionals/express/2023": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "function/express/2023": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "variable/express/2023": {
+          "word": "විචල්‍යය",
           "word": "විචල්‍යය"
         },
         "define/express/2023": {
+          "word": "අර්ථ දක්වන්න",
           "word": "අර්ථ දක්වන්න"
         },
         "programming/pre-express/2023": {
+          "word": "ක්‍රමලේඛනය",
           "word": "ක්‍රමලේඛනය"
         },
         "code/aquatic/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "කන්ඩිෂනලස්",
           "word": "කන්ඩිෂනලස්"
         },
         "loops/aquatic/unversioned": {
+          "word": "ලූපයන්",
           "word": "ලූපයන්"
         },
         "code/artist/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/basketball/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/dance-2019/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/dance-extras-2019/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/dance-extras/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/dance/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/flappy/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/frozen/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/gumball/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/hero/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "function/hero/unversioned": {
+          "word": "ශ්‍රිතය",
           "word": "ශ්‍රිතය"
         },
         "code/hourofcode/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/iceage/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/infinity/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/mc/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/minecraft/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/playlab/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/poem-art/2021": {
           "word": "කේතය"
         },
         "code/sports/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/starwars/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         },
         "code/starwarsblocks/unversioned": {
+          "word": "කේතය",
           "word": "කේතය"
         }
       }

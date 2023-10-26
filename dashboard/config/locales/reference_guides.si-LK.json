@@ -3,48 +3,63 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "මෘදුකාංග විද්‍යාගාරය",
           "display_name": "මෘදුකාංග විද්‍යාගාරය"
         },
         "csd-2022/applab-overview": {
+          "display_name": "දළ විශ්ලේෂණය",
           "display_name": "දළ විශ්ලේෂණය"
         },
         "csd-2022/css-overview": {
+          "display_name": "දළ විශ්ලේෂණය",
           "display_name": "දළ විශ්ලේෂණය"
         },
         "csd-2022/for-loops": {
+          "display_name": "ලූපයන් සඳහා",
           "display_name": "ලූපයන් සඳහා"
         },
         "csd-2022/functions": {
+          "display_name": "ශ්‍රිතයන්",
           "display_name": "ශ්‍රිතයන්"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "දළ විශ්ලේෂණය",
           "display_name": "දළ විශ්ලේෂණය"
         },
         "csd-2022/html-overview": {
+          "display_name": "දළ විශ්ලේෂණය",
           "display_name": "දළ විශ්ලේෂණය"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "දළ විශ්ලේෂණය",
           "display_name": "දළ විශ්ලේෂණය"
         },
         "csd-2022/lists": {
+          "display_name": "ලැයිස්තු",
           "display_name": "ලැයිස්තු"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "දළ විශ්ලේෂණය",
           "display_name": "දළ විශ්ලේෂණය"
         },
         "csd-2022/other": {
+          "display_name": "වෙනත්",
           "display_name": "වෙනත්"
         },
         "csd-2022/other-overview": {
+          "display_name": "දළ විශ්ලේෂණය",
           "display_name": "දළ විශ්ලේෂණය"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "දළ විශ්ලේෂණය",
           "display_name": "දළ විශ්ලේෂණය"
         },
         "csd-2022/variables": {
+          "display_name": "විචල්‍යන්",
           "display_name": "විචල්‍යන්"
         }
       }
