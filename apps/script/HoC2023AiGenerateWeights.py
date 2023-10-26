@@ -100,63 +100,63 @@ foreground_effects_map = {
     'rainbow paint': 'paint_drip', # Paint Drip
 }
 
-# palette_dict = {}
-# background_dict = {}
-# foreground_dict = {}
+palette_dict = {}
+background_dict = {}
+foreground_dict = {}
 
-# # Create lists of python names from each map.
-# color_palettes = list(color_palettes_map.keys())
-# background_effects = list(background_effects_map.keys())
-# foreground_effects = list(foreground_effects_map.keys())
-# print(color_palettes)
-# print(background_effects)
-# print(foreground_effects)
+# Create lists of python names from each map.
+color_palettes = list(color_palettes_map.keys())
+background_effects = list(background_effects_map.keys())
+foreground_effects = list(foreground_effects_map.keys())
+print(color_palettes)
+print(background_effects)
+print(foreground_effects)
 
-# # Calculate and print similarity scores
-# for id_word in emoji_ids:
-#     palette_scores = []
-#     for palette_word in color_palettes:
-#         id_token = nlp(id_word)
-#         palette_token = nlp(palette_word)
-#         similarity_score = id_token.similarity(palette_token)
-#         palette_scores.append(round(similarity_score, 2))
+# Calculate and print similarity scores
+for id_word in emoji_ids:
+    palette_scores = []
+    for palette_word in color_palettes:
+        id_token = nlp(id_word)
+        palette_token = nlp(palette_word)
+        similarity_score = id_token.similarity(palette_token)
+        palette_scores.append(round(similarity_score, 2))
     
-#     background_scores = []
-#     for bg_word in background_effects:
-#         id_token = nlp(id_word)
-#         bg_token = nlp(bg_word)
-#         similarity_score = id_token.similarity(bg_token)
-#         background_scores.append(round(similarity_score, 2))
+    background_scores = []
+    for bg_word in background_effects:
+        id_token = nlp(id_word)
+        bg_token = nlp(bg_word)
+        similarity_score = id_token.similarity(bg_token)
+        background_scores.append(round(similarity_score, 2))
         
-#     foreground_scores = []
-#     for fg_word in foreground_effects:
-#         id_token = nlp(id_word)
-#         fg_token = nlp(fg_word)
-#         similarity_score = id_token.similarity(fg_token)
-#         foreground_scores.append(round(similarity_score, 2))
+    foreground_scores = []
+    for fg_word in foreground_effects:
+        id_token = nlp(id_word)
+        fg_token = nlp(fg_word)
+        similarity_score = id_token.similarity(fg_token)
+        foreground_scores.append(round(similarity_score, 2))
         
-#     palette_dict[id_word] = palette_scores
-#     background_dict[id_word] = background_scores
-#     foreground_dict[id_word] = foreground_scores
+    palette_dict[id_word] = palette_scores
+    background_dict[id_word] = background_scores
+    foreground_dict[id_word] = foreground_scores
 
-# palette_output = {'emojiAssociations': palette_dict, 'output': color_palettes}
-# background_output = {'emojiAssociations': background_dict, 'output': background_effects}
-# foreground_output = {'emojiAssociations': foreground_dict, 'output': foreground_effects}
+palette_output = {'emojiAssociations': palette_dict, 'output': color_palettes}
+background_output = {'emojiAssociations': background_dict, 'output': background_effects}
+foreground_output = {'emojiAssociations': foreground_dict, 'output': foreground_effects}
 
-# background_output['pythonNames'] = background_output['output']
-# foreground_output['pythonNames'] = foreground_output['output']
-# palette_output['pythonNames'] = palette_output['output']
+background_output['pythonNames'] = background_output['output']
+foreground_output['pythonNames'] = foreground_output['output']
+palette_output['pythonNames'] = palette_output['output']
 
-# # Modify output to reflect blockly id names.
-# background_output['output'] = [background_effects_map[bg] for bg in background_output['output']]
-# foreground_output['output'] = [foreground_effects_map[fg] for fg in foreground_output['output']]
-# palette_output['output'] = [color_palettes_map[pal] for pal in palette_output['output']]
+# Modify output to reflect blockly id names.
+background_output['output'] = [background_effects_map[bg] for bg in background_output['output']]
+foreground_output['output'] = [foreground_effects_map[fg] for fg in foreground_output['output']]
+palette_output['output'] = [color_palettes_map[pal] for pal in palette_output['output']]
 
-# with open("apps/static/dance/ai/model/cached-spacy-palette-map.json", "w") as json_file:
-#     json_file.write(json.dumps(palette_output))
+with open("apps/static/dance/ai/model/cached-spacy-palette-map.json", "w") as json_file:
+    json_file.write(json.dumps(palette_output))
 
-# with open("apps/static/dance/ai/model/cached-spacy-background-map.json", "w") as json_file:
-#     json_file.write(json.dumps(background_output))
+with open("apps/static/dance/ai/model/cached-spacy-background-map.json", "w") as json_file:
+    json_file.write(json.dumps(background_output))
     
-# with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as json_file:
-#     json_file.write(json.dumps(foreground_output))
+with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as json_file:
+    json_file.write(json.dumps(foreground_output))
