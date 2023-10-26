@@ -17,13 +17,18 @@
 // This bug is tracked by the Blockly team:
 // https://github.com/google/blockly-samples/issues/2035
 export function disableOrphans(blockEvent) {
+  // This check is for when a block goes from disabled to enabled (value false is enabled).
+  // We need to run the check on this event due to the Blockly bug described above.
+  const isEnabledEvent =
+    blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
+    blockEvent.element === 'disabled' &&
+    !blockEvent.newValue &&
+    blockEvent.oldValue;
+
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
     blockEvent.type === Blockly.Events.BLOCK_CREATE ||
-    (blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
-      blockEvent.element === 'disabled' &&
-      !blockEvent.newValue &&
-      blockEvent.oldValue)
+    isEnabledEvent
   ) {
     if (!blockEvent.workspaceId) {
       return;
