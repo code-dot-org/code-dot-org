@@ -1287,6 +1287,17 @@ te:
               display_name: ఈవెంట్లు
             csf_loops:
               display_name: ఉచ్చులు
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: పరిచయం
+          lessons:
+            lesson-7:
+              name: పరిచయం
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: పరిచయం
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -1295,6 +1306,10 @@ te:
           lessons:
             lesson-3:
               name: అసెస్మెంట్
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: పరిచయం
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
