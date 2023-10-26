@@ -2,7 +2,7 @@
   "items": [
     {
       "id": "poopy",
-      "name": "poopy"
+      "name": "frustrated"
     },
     {
       "id": "romantic",
@@ -10,15 +10,15 @@
     },
     {
       "id": "party",
-      "name": "party"
+      "name": "cake"
     },
     {
       "id": "silly",
-      "name": "silly"
+      "name": "zany"
     },
     {
       "id": "sparkle",
-      "name": "sparkle"
+      "name": "tasty"
     },
     {
       "id": "happy",
@@ -26,15 +26,15 @@
     },
     {
       "id": "magic",
-      "name": "magic"
+      "name": "geometric"
     },
     {
       "id": "spooky",
-      "name": "spooky"
+      "name": "scared"
     },
     {
       "id": "cute",
-      "name": "cute"
+      "name": "beautiful"
     },
     {
       "id": "funky",
@@ -54,11 +54,11 @@
     },
     {
       "id": "robot",
-      "name": "robot"
+      "name": "angles"
     },
     {
       "id": "chaotic",
-      "name": "chaotic"
+      "name": "chaos"
     },
     {
       "id": "disco",
@@ -66,19 +66,19 @@
     },
     {
       "id": "zen",
-      "name": "zen"
+      "name": "meditative"
     },
     {
       "id": "fast",
-      "name": "fast"
+      "name": "light-speed"
     },
     {
       "id": "evil",
-      "name": "evil"
+      "name": "hungry"
     },
     {
       "id": "cold",
-      "name": "cold"
+      "name": "snowflake"
     },
     {
       "id": "cosmic",
@@ -86,19 +86,19 @@
     },
     {
       "id": "sad",
-      "name": "sad"
+      "name": "cry"
     },
     {
       "id": "black-and-white",
-      "name": "black & white"
+      "name": "beautiful"
     },
     {
       "id": "warm",
-      "name": "warm"
+      "name": "fire"
     },
     {
       "id": "cool",
-      "name": "cool"
+      "name": "sunglasses"
     }
   ]
 }
