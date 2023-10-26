@@ -95,9 +95,12 @@ class ActiveSupport::TestCase
     # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
     AWS::S3.stubs(:exists_in_bucket).returns(true)
+
+    DatabaseCleaner.start
   end
 
   teardown do
+    DatabaseCleaner.clean
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
@@ -137,9 +140,6 @@ class ActiveSupport::TestCase
   include CaptureQueries
 
   setup_all do
-    DatabaseCleaner.start
-    Unit.destroy_all
-
     # Some of the functionality we're testing here relies on Scripts with
     # certain hardcoded names. In the old fixture-based model, this data was
     # all provided; in the new factory-based model, we need to do a little
@@ -178,10 +178,6 @@ class ActiveSupport::TestCase
         script_level.levels = [create(:level)]
       end
     end
-  end
-
-  teardown_all do
-    DatabaseCleaner.clean
   end
 
   def assert_creates(*args)
